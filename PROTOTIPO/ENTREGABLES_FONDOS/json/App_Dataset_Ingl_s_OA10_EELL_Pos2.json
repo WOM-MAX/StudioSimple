@@ -1,0 +1,1350 @@
+{
+  "oa": {
+    "id": "110-7-ING-OA10",
+    "curso": "7° Básico",
+    "asignatura": "Inglés",
+    "eje": "Comprensión de lectura",
+    "oa": "OA 10",
+    "oaNumero": 10,
+    "inTemarioEELL": true,
+    "temarioPosicion": 2,
+    "isPriorityDemo": true,
+    "descripcion": "Demostrar comprensión de textos no literarios (como descripciones, instrucciones, procedimientos, avisos publicitarios, emails, diálogos, páginas web, biografías, gráficos) al identificar: > Ideas generales, información específica y detalles. > Relaciones de adición y secuencia entre ideas, diferencia hecho-opinión y causa- efecto. > Palabras y frases clave, expresiones de uso frecuente y vocabulario temático. > Conectores (first, second, finally, next, or, when, while, before, after, too, because) y palabras derivadas de otras por medio del prefijo un- y de los sufijos –ing, -ly.",
+    "indicadores": [
+      "Describen ideas generales de los textos relacionadas con sentimientos y estados de ánimo en forma oral o escrita.",
+      "Desarrollan una tarea de acuerdo a instrucciones y procedimientos de cuatro o cinco pasos.",
+      "Identifican información específica relacionada con sentimientos y estados de ánimo en los textos leídos.",
+      "Completan organizadores y esquemas de acuerdo a información explícita y detalles expuestos en los textos.",
+      "Identifican la secuencia de ideas o de eventos en descripciones, instrucciones y procedimientos: before-after.",
+      "Identifican relaciones de razones entre las ideas: why-because.",
+      "Identifican expresiones de uso frecuente y vocabulario asociados al tema del texto y las usan en nuevas oraciones y preguntas.",
+      "Escriben textos relacionados con los textos leídos (por ejemplo: una respuesta a un email) o agregan pasos a un procedimiento, usando oraciones simples y de acuerdo a un modelo."
+    ],
+    "conceptosClave": [
+      "Textos no literarios",
+      "Información específica",
+      "Conectores",
+      "Hecho-opinión",
+      "Causa-efecto"
+    ],
+    "leccionesSugeridas": 6,
+    "justificacionLecciones": "Contiene 8 indicadores de evaluación oficiales que exceden la carga cognitiva de 5 clases de 30 min."
+  },
+  "totalLessons": 6,
+  "lessons": [
+    {
+      "num": 1,
+      "title": "Marco inicial y punto de referencia",
+      "focoDidactico": "Introducción al fenómeno y delimitación conceptual de Textos no literarios",
+      "duracion": "30 Minutos",
+      "objetivoAdulto": "Acompañar al estudiante para que comprenda y aplique: Introducción al fenómeno y delimitación conceptual de Textos no literarios, modelando el pensamiento disciplinar sin prisas.",
+      "climaEmocional": "Crea un clima seguro: 'Aquí equivocarse es la mejor pista para entender cómo funciona la regla'.",
+      "situacionIntro": {
+        "dialogo": "Observa la situación de inicio de hoy. Estamos explorando Marco inicial y punto de referencia. ¿Qué observas a primera vista?",
+        "pregunta": "¿Cómo describirías esta situación con tus propias palabras?",
+        "respEsperada": "Una respuesta que identifique el concepto central de Introducción al fenómeno y delimitación conceptual de Textos no literarios.",
+        "pistaSocratica": "Pídele que compare lo que conoce con lo que aparece nuevo en el ejemplo."
+      },
+      "paso2_hook": {
+        "titulo": "Video Motivacional: El Desafío de Marco inicial y punto de referencia",
+        "fullPrompt": "Actúa como Diseñador Instruccional Senior y Creador de Presentaciones en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de GANCHO MOTIVACIONAL (Paso 2) para:\n- Asignatura: Inglés\n- Objetivo de Aprendizaje: OA 10\n- Clase: 1 (\"Marco inicial y punto de referencia\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS:\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Exactamente 7 diapositivas (slide1 a slide7).\n3. ESTILO ARTÍSTICO DE LAS IMÁGENES: Anime Moderno (Modern Anime Style, estética cinematográfica de alta gama, iluminación dinámica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).\n4. PROTAGONISTAS: Dúo co-protagónico de 13 años (una joven y un joven estudiantes-exploradores chilenos). ACTÚAN JUNTOS en cada escena, colaborando, investigando y resolviendo el desafío en equipo.\n5. REGLA VISUAL ANTI-MÁSCARAS: Imágenes Full-Bleed con espacio negativo para texto. Queda prohibido usar placas oscuras que tapen las caras de los personajes o la mitad de la lámina.\n6. NOTAS AL ORADOR (GUION CONTINUO): Cada diapositiva DEBE incluir únicamente el texto de narración oral continua (entre 15 y 22 palabras por lámina) sin marcas técnicas, encabezados ni duraciones, listo para ser leído por TTS en Google Vids.\n\nDETALLE DE LAS 7 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Apertura y Contexto) ---\n• Prompt de Imagen (16:9): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Marco inicial y punto de referencia (Inglés). Cinematic lighting, warm morning atmosphere, wide negative space in top third.\n• Texto en Pantalla (Overlay limpio): Misión 1: Marco inicial y punto de referencia\n• Notas al Orador (Locución Google Vids): \"Comienza una nueva expedición de aprendizaje. Nuestros dos exploradores se preparan para enfrentar un enigma fascinante en Inglés.\"\n\n--- DIAPOSITIVA 2 (Presentación del Escenario) ---\n• Prompt de Imagen (16:9): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Introducción al fenómeno y delimitación conceptual de Textos no literarios. High detail, clean lineart, soft depth of field, clear space on the left side.\n• Texto en Pantalla (Overlay limpio): Punto de Partida\n• Notas al Orador (Locución Google Vids): \"Al observar los datos iniciales, notan que para avanzar necesitan comprender con precisión cómo se relacionan estos elementos.\"\n\n--- DIAPOSITIVA 3 (Aparición del Conflicto / Misterio) ---\n• Prompt de Imagen (16:9): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes.\n• Texto en Pantalla (Overlay limpio): ¡Un obstáculo inesperado!\n• Notas al Orador (Locución Google Vids): \"De pronto, aparece una situación inesperada: los registros cambian y surge una duda que deben resolver juntos para continuar.\"\n\n--- DIAPOSITIVA 4 (Exploración de Pistas) ---\n• Prompt de Imagen (16:9): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition.\n• Texto en Pantalla (Overlay limpio): Buscando la clave\n• Notas al Orador (Locución Google Vids): \"Ambos comparan las pistas disponibles. Cada movimiento y cada dato entrega información valiosa sobre el comportamiento del fenómeno.\"\n\n--- DIAPOSITIVA 5 (El Momento Crítico) ---\n• Prompt de Imagen (16:9): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact.\n• Texto en Pantalla (Overlay limpio): Una decisión importante\n• Notas al Orador (Locución Google Vids): \"Para superar el reto no basta con adivinar: es indispensable aplicar un criterio claro y seguir un orden lógico.\"\n\n--- DIAPOSITIVA 6 (La Pregunta Detonante) ---\n• Prompt de Imagen (16:9): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection.\n• Texto en Pantalla (Overlay limpio): ¿Cómo podemos resolverlo?\n• Notas al Orador (Locución Google Vids): \"Ahora surge el verdadero desafío: ¿qué regla o procedimiento nos permitirá encontrar la respuesta exacta sin equivocarnos?\"\n\n--- DIAPOSITIVA 7 (Puente a la Lección) ---\n• Prompt de Imagen (16:9): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background.\n• Texto en Pantalla (Overlay limpio): StudioSimple · Inglés\n• Notas al Orador (Locución Google Vids): \"Existe una forma precisa de resolverlo paso a paso. ¡Descubrámosla juntos en la lección de hoy!\"\n\n",
+        "slides": [
+          {
+            "slideNumber": 1,
+            "tituloMomento": "Apertura y Contexto",
+            "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Marco inicial y punto de referencia (Inglés). Cinematic lighting, warm morning atmosphere, wide negative space in top third.",
+            "overlayText": "Misión 1: Marco inicial y punto de referencia",
+            "speakerNotes": "Comienza una nueva expedición de aprendizaje. Nuestros dos exploradores se preparan para enfrentar un enigma fascinante en Inglés.",
+            "palabrasAprox": 19,
+            "duracionSeg": 9
+          },
+          {
+            "slideNumber": 2,
+            "tituloMomento": "Presentación del Escenario",
+            "visualPrompt": "Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Introducción al fenómeno y delimitación conceptual de Textos no literarios. High detail, clean lineart, soft depth of field, clear space on the left side.",
+            "overlayText": "Punto de Partida",
+            "speakerNotes": "Al observar los datos iniciales, notan que para avanzar necesitan comprender con precisión cómo se relacionan estos elementos.",
+            "palabrasAprox": 18,
+            "duracionSeg": 9
+          },
+          {
+            "slideNumber": 3,
+            "tituloMomento": "Aparición del Conflicto / Misterio",
+            "visualPrompt": "Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes.",
+            "overlayText": "¡Un obstáculo inesperado!",
+            "speakerNotes": "De pronto, aparece una situación inesperada: los registros cambian y surge una duda que deben resolver juntos para continuar.",
+            "palabrasAprox": 19,
+            "duracionSeg": 9
+          },
+          {
+            "slideNumber": 4,
+            "tituloMomento": "Exploración de Pistas",
+            "visualPrompt": "Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition.",
+            "overlayText": "Buscando la clave",
+            "speakerNotes": "Ambos comparan las pistas disponibles. Cada movimiento y cada dato entrega información valiosa sobre el comportamiento del fenómeno.",
+            "palabrasAprox": 17,
+            "duracionSeg": 8
+          },
+          {
+            "slideNumber": 5,
+            "tituloMomento": "El Momento Crítico",
+            "visualPrompt": "Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact.",
+            "overlayText": "Una decisión importante",
+            "speakerNotes": "Para superar el reto no basta con adivinar: es indispensable aplicar un criterio claro y seguir un orden lógico.",
+            "palabrasAprox": 18,
+            "duracionSeg": 9
+          },
+          {
+            "slideNumber": 6,
+            "tituloMomento": "La Pregunta Detonante",
+            "visualPrompt": "Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection.",
+            "overlayText": "¿Cómo podemos resolverlo?",
+            "speakerNotes": "Ahora surge el verdadero desafío: ¿qué regla o procedimiento nos permitirá encontrar la respuesta exacta sin equivocarnos?",
+            "palabrasAprox": 17,
+            "duracionSeg": 8
+          },
+          {
+            "slideNumber": 7,
+            "tituloMomento": "Puente a la Lección",
+            "visualPrompt": "Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background.",
+            "overlayText": "StudioSimple · Inglés",
+            "speakerNotes": "Existe una forma precisa de resolverlo paso a paso. ¡Descubrámosla juntos en la lección de hoy!",
+            "palabrasAprox": 15,
+            "duracionSeg": 7
+          }
+        ],
+        "dileAntes": "Antes de ver el video, observa con atención lo que descubren los dos exploradores y qué pregunta queda planteada.",
+        "dileDespues": "Muy buena observación. Ahora conversaremos sobre lo que descubrieron en la expedición."
+      },
+      "paso3_recorrido": [
+        {
+          "context": "Punto de partida",
+          "question": "¿Cuál fue la pista principal que encontraron los exploradores al inicio del video?",
+          "expected": "Identificar el dato o escenario inicial.",
+          "success": "¡Muy bien! Identificaste el punto de partida exacto.",
+          "support": "Recuerda fijarte en el momento en que revisan los primeros instrumentos.",
+          "reveal": "El punto de partida fue el escenario inicial donde se registraron los primeros datos.",
+          "studentReveal": "El escenario inicial con los primeros datos."
+        },
+        {
+          "context": "El obstáculo",
+          "question": "¿Qué dificultad tuvieron que enfrentar juntos para no perderse?",
+          "expected": "Reconocer la diferencia o problema planteado.",
+          "success": "¡Excelente! Reconociste el desafío central del video.",
+          "support": "Piensa en qué cambió de repente en la pantalla de control.",
+          "reveal": "Tuvieron que resolver cómo registrar el cambio sin cometer errores en la dirección o valor.",
+          "studentReveal": "Tuvieron que registrar el cambio correctamente."
+        }
+      ],
+      "paso4_explicativo": {
+        "titulo": "Video Explicativo: Formalización de Marco inicial y punto de referencia",
+        "fullPrompt": "Actúa como Diseñador Pedagógico y Especialista en Didáctica Disciplinar en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de VIDEO EXPLICATIVO / FORMALIZACIÓN (Paso 4) para:\n- Asignatura: Inglés\n- Objetivo de Aprendizaje: OA 10\n- Clase: 1 (\"Marco inicial y punto de referencia\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS:\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Formato conciso de EXACTAMENTE 5 DIAPOSITIVAS (slide1 a slide5). Enfoque exclusivo en la regla/concepto y el ejemplo modelado.\n3. ESTILO ARTÍSTICO: Anime Moderno (Modern Anime Style, limpio, didáctico y luminoso).\n4. PROTAGONISTAS: Los mismos 2 jóvenes de 13 años (la chica y el chico) manipulando el modelo disciplinar, observando la fórmula o comprobando el paso a paso juntos.\n5. REGLA VISUAL ANTI-MÁSCARAS: Imagen limpia con espacio negativo. Overlays pequeños y localizados.\n6. NOTAS AL ORADOR: Guion explicativo continuo y pedagógico (entre 22 y 30 palabras por lámina) sin encabezados técnicos, optimizado para voz en off directa en Google Vids.\n\nDETALLE DE LAS 5 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Definición del Punto de Referencia / Concepto) ---\n• Prompt de Imagen (16:9): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Introducción al fenómeno y delimitación conceptual de Textos no literarios. High clarity, negative space for text.\n• Texto en Pantalla (Overlay limpio): Concepto Clave: Introducción al fenómeno y delimitación conceptual de Textos no literarios\n• Notas al Orador (Locución Google Vids): \"Para comprender este contenido, siempre necesitamos un punto de partida claro que nos permita comparar y medir cualquier cambio con exactitud.\"\n\n--- DIAPOSITIVA 2 (La Herramienta Disciplinar / Regla) ---\n• Prompt de Imagen (16:9): Modern anime style. The boy illustrating a step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting.\n• Texto en Pantalla (Overlay limpio): Regla Fundamental\n• Notas al Orador (Locución Google Vids): \"Esta es la regla universal: cada paso se ejecuta en un orden estricto, respetando las propiedades y el significado de cada símbolo.\"\n\n--- DIAPOSITIVA 3 (Modelado Visible del Ejemplo) ---\n• Prompt de Imagen (16:9): Modern anime style. Detailed split view showing a problem being solved step by step with arrows and callouts. The two young protagonists highlighting the correct calculation or evidence.\n• Texto en Pantalla (Overlay limpio): Ejemplo Resuelto Paso a Paso\n• Notas al Orador (Locución Google Vids): \"Observa cómo resolvemos este caso completo: primero identificamos los datos, luego aplicamos el procedimiento en orden y finalmente comprobamos el resultado.\"\n\n--- DIAPOSITIVA 4 (Contraste y Prevención de Errores) ---\n• Prompt de Imagen (16:9): Modern anime style. The girl explaining a common misconception with a friendly 'warning' symbol on the board, showing both the wrong trap and the right way.\n• Texto en Pantalla (Overlay limpio): ¡Cuidado con esta trampa!\n• Notas al Orador (Locución Google Vids): \"Un error muy frecuente es confundir este concepto con su opuesto. Para evitarlo, comprueba siempre qué representa cada valor dentro del contexto real.\"\n\n--- DIAPOSITIVA 5 (Síntesis y Puente a la Práctica) ---\n• Prompt de Imagen (16:9): Modern anime style. The two 13-year-olds smiling confidently, ready to hand over the challenge to the student with their physical notebooks open. Bright welcoming lighting.\n• Texto en Pantalla (Overlay limpio): ¡Ahora te toca a ti!\n• Notas al Orador (Locución Google Vids): \"Dominar este procedimiento te da el control total. Ahora es tu turno de ponerlo en práctica con el apoyo de tu mentor.\"\n\n",
+        "slides": [
+          {
+            "slideNumber": 1,
+            "tituloMomento": "Definición del Punto de Referencia / Concepto",
+            "visualPrompt": "Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Introducción al fenómeno y delimitación conceptual de Textos no literarios. High clarity, negative space for text.",
+            "overlayText": "Concepto Clave: Introducción al fenómeno y delimitación conceptual de Textos no literarios",
+            "speakerNotes": "Para comprender este contenido, siempre necesitamos un punto de partida claro que nos permita comparar y medir cualquier cambio con exactitud.",
+            "palabrasAprox": 23,
+            "duracionSeg": 12
+          },
+          {
+            "slideNumber": 2,
+            "tituloMomento": "La Herramienta Disciplinar / Regla",
+            "visualPrompt": "Modern anime style. The boy illustrating a step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting.",
+            "overlayText": "Regla Fundamental",
+            "speakerNotes": "Esta es la regla universal: cada paso se ejecuta en un orden estricto, respetando las propiedades y el significado de cada símbolo.",
+            "palabrasAprox": 22,
+            "duracionSeg": 12
+          },
+          {
+            "slideNumber": 3,
+            "tituloMomento": "Modelado Visible del Ejemplo",
+            "visualPrompt": "Modern anime style. Detailed split view showing a problem being solved step by step with arrows and callouts. The two young protagonists highlighting the correct calculation or evidence.",
+            "overlayText": "Ejemplo Resuelto Paso a Paso",
+            "speakerNotes": "Observa cómo resolvemos este caso completo: primero identificamos los datos, luego aplicamos el procedimiento en orden y finalmente comprobamos el resultado.",
+            "palabrasAprox": 23,
+            "duracionSeg": 13
+          },
+          {
+            "slideNumber": 4,
+            "tituloMomento": "Contraste y Prevención de Errores",
+            "visualPrompt": "Modern anime style. The girl explaining a common misconception with a friendly 'warning' symbol on the board, showing both the wrong trap and the right way.",
+            "overlayText": "¡Cuidado con esta trampa!",
+            "speakerNotes": "Un error muy frecuente es confundir este concepto con su opuesto. Para evitarlo, comprueba siempre qué representa cada valor dentro del contexto real.",
+            "palabrasAprox": 24,
+            "duracionSeg": 13
+          },
+          {
+            "slideNumber": 5,
+            "tituloMomento": "Síntesis y Puente a la Práctica",
+            "visualPrompt": "Modern anime style. The two 13-year-olds smiling confidently, ready to hand over the challenge to the student with their physical notebooks open. Bright welcoming lighting.",
+            "overlayText": "¡Ahora te toca a ti!",
+            "speakerNotes": "Dominar este procedimiento te da el control total. Ahora es tu turno de ponerlo en práctica con el apoyo de tu mentor.",
+            "palabrasAprox": 22,
+            "duracionSeg": 11
+          }
+        ],
+        "ideaClave": "Un procedimiento disciplinar claro permite resolver cualquier caso siguiendo un orden verificable paso a paso.",
+        "dileAntes": "Ahora veremos la explicación formal de la regla matemática/científica. Fíjate en el paso a paso del ejemplo."
+      },
+      "paso5_practica": [
+        {
+          "context": "Caso Guiado 1",
+          "question": "En esta primera situación, ¿cuál es el primer paso que debemos realizar según la regla aprendida?",
+          "expected": "Identificar los datos e incógnita del problema.",
+          "success": "¡Correcto! Siempre partimos identificando los datos principales.",
+          "support": "Revisa la primera diapositiva de la explicación formal: ¿por dónde comenzamos?",
+          "reveal": "El primer paso es registrar claramente los datos y saber qué nos están preguntando.",
+          "studentReveal": "Identificar los datos y la pregunta."
+        },
+        {
+          "context": "Caso Guiado 2",
+          "question": "Al aplicar el procedimiento a este nuevo caso, ¿qué resultado se obtiene y cómo lo justificas?",
+          "expected": "El resultado correcto con su unidad o fundamento.",
+          "success": "¡Exacto! Aplicaste la regla en el orden correcto.",
+          "support": "Sigue el modelo de los dos jóvenes exploradores paso a paso.",
+          "reveal": "El resultado correcto se obtiene aplicando la transformación en orden y comprobando con el contexto.",
+          "studentReveal": "El resultado obtenido tras aplicar la regla."
+        }
+      ],
+      "paso6_resumen": {
+        "ideaClave": "Para resolver problemas sobre Marco inicial y punto de referencia, aplicamos el procedimiento en orden, verificamos el resultado y explicamos su sentido.",
+        "sintesis": "Hoy dominaste la regla central de Introducción al fenómeno y delimitación conceptual de Textos no literarios junto a tus compañeros exploradores."
+      },
+      "paso7_miniquiz": [
+        {
+          "q": "¿Cuál es el propósito central de la regla aprendida hoy sobre Marco inicial y punto de referencia?",
+          "options": [
+            "A) Resolver situaciones con un criterio formal y comprobable",
+            "B) Memorizar números sin entender su significado",
+            "C) Adivinar el resultado más rápido"
+          ],
+          "correct": "A",
+          "fixExplain": "El objetivo de la lección es desarrollar un procedimiento lógico que se pueda comprobar en cualquier situación."
+        },
+        {
+          "q": "Al resolver un problema de este tipo, ¿qué error frecuente debemos evitar?",
+          "options": [
+            "A) Comprobar el resultado",
+            "B) Saltar pasos y omitir el significado en el contexto",
+            "C) Leer atentamente la pregunta"
+          ],
+          "correct": "B",
+          "fixExplain": "Saltar pasos u omitir el contexto suele llevar a confusiones entre conceptos parecidos."
+        },
+        {
+          "q": "¿Cómo podemos comprobar que nuestra respuesta final es razonable?",
+          "options": [
+            "A) Volviendo al contexto original y verificando la operación inversa",
+            "B) Cambiando la pregunta",
+            "C) Borrando el procedimiento"
+          ],
+          "correct": "A",
+          "fixExplain": "Una comprobación real siempre compara el número obtenido con la situación original."
+        }
+      ],
+      "paso8_cierre": {
+        "preguntaSintesis": "En tus propias palabras, ¿cómo le explicarías a otra persona el paso más importante que aprendimos hoy?",
+        "metacognicion": "¿Qué parte de la clase te pareció más entretenida o fácil de comprender?",
+        "celebracion": "¡Gran trabajo hoy! Has dominado la Clase 1. ¡Nos vemos en la próxima misión!"
+      }
+    },
+    {
+      "num": 2,
+      "title": "Representación y modelado disciplinar 1",
+      "focoDidactico": "Primera herramienta o proceso pictórico",
+      "duracion": "30 Minutos",
+      "objetivoAdulto": "Acompañar al estudiante para que comprenda y aplique: Primera herramienta o proceso pictórico, modelando el pensamiento disciplinar sin prisas.",
+      "climaEmocional": "Refuerza la autonomía: 'Tómate el tiempo para observar los datos antes de responder'.",
+      "situacionIntro": {
+        "dialogo": "Observa la situación de inicio de hoy. Estamos explorando Representación y modelado disciplinar 1. ¿Qué observas a primera vista?",
+        "pregunta": "¿Cómo describirías esta situación con tus propias palabras?",
+        "respEsperada": "Una respuesta que identifique el concepto central de Primera herramienta o proceso pictórico.",
+        "pistaSocratica": "Pídele que compare lo que conoce con lo que aparece nuevo en el ejemplo."
+      },
+      "paso2_hook": {
+        "titulo": "Video Motivacional: El Desafío de Representación y modelado disciplinar 1",
+        "fullPrompt": "Actúa como Diseñador Instruccional Senior y Creador de Presentaciones en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de GANCHO MOTIVACIONAL (Paso 2) para:\n- Asignatura: Inglés\n- Objetivo de Aprendizaje: OA 10\n- Clase: 2 (\"Representación y modelado disciplinar 1\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS:\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Exactamente 7 diapositivas (slide1 a slide7).\n3. ESTILO ARTÍSTICO DE LAS IMÁGENES: Anime Moderno (Modern Anime Style, estética cinematográfica de alta gama, iluminación dinámica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).\n4. PROTAGONISTAS: Dúo co-protagónico de 13 años (una joven y un joven estudiantes-exploradores chilenos). ACTÚAN JUNTOS en cada escena, colaborando, investigando y resolviendo el desafío en equipo.\n5. REGLA VISUAL ANTI-MÁSCARAS: Imágenes Full-Bleed con espacio negativo para texto. Queda prohibido usar placas oscuras que tapen las caras de los personajes o la mitad de la lámina.\n6. NOTAS AL ORADOR (GUION CONTINUO): Cada diapositiva DEBE incluir únicamente el texto de narración oral continua (entre 15 y 22 palabras por lámina) sin marcas técnicas, encabezados ni duraciones, listo para ser leído por TTS en Google Vids.\n\nDETALLE DE LAS 7 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Apertura y Contexto) ---\n• Prompt de Imagen (16:9): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Representación y modelado disciplinar 1 (Inglés). Cinematic lighting, warm morning atmosphere, wide negative space in top third.\n• Texto en Pantalla (Overlay limpio): Misión 2: Representación y modelado disciplinar 1\n• Notas al Orador (Locución Google Vids): \"Comienza una nueva expedición de aprendizaje. Nuestros dos exploradores se preparan para enfrentar un enigma fascinante en Inglés.\"\n\n--- DIAPOSITIVA 2 (Presentación del Escenario) ---\n• Prompt de Imagen (16:9): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Primera herramienta o proceso pictórico. High detail, clean lineart, soft depth of field, clear space on the left side.\n• Texto en Pantalla (Overlay limpio): Punto de Partida\n• Notas al Orador (Locución Google Vids): \"Al observar los datos iniciales, notan que para avanzar necesitan comprender con precisión cómo se relacionan estos elementos.\"\n\n--- DIAPOSITIVA 3 (Aparición del Conflicto / Misterio) ---\n• Prompt de Imagen (16:9): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes.\n• Texto en Pantalla (Overlay limpio): ¡Un obstáculo inesperado!\n• Notas al Orador (Locución Google Vids): \"De pronto, aparece una situación inesperada: los registros cambian y surge una duda que deben resolver juntos para continuar.\"\n\n--- DIAPOSITIVA 4 (Exploración de Pistas) ---\n• Prompt de Imagen (16:9): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition.\n• Texto en Pantalla (Overlay limpio): Buscando la clave\n• Notas al Orador (Locución Google Vids): \"Ambos comparan las pistas disponibles. Cada movimiento y cada dato entrega información valiosa sobre el comportamiento del fenómeno.\"\n\n--- DIAPOSITIVA 5 (El Momento Crítico) ---\n• Prompt de Imagen (16:9): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact.\n• Texto en Pantalla (Overlay limpio): Una decisión importante\n• Notas al Orador (Locución Google Vids): \"Para superar el reto no basta con adivinar: es indispensable aplicar un criterio claro y seguir un orden lógico.\"\n\n--- DIAPOSITIVA 6 (La Pregunta Detonante) ---\n• Prompt de Imagen (16:9): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection.\n• Texto en Pantalla (Overlay limpio): ¿Cómo podemos resolverlo?\n• Notas al Orador (Locución Google Vids): \"Ahora surge el verdadero desafío: ¿qué regla o procedimiento nos permitirá encontrar la respuesta exacta sin equivocarnos?\"\n\n--- DIAPOSITIVA 7 (Puente a la Lección) ---\n• Prompt de Imagen (16:9): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background.\n• Texto en Pantalla (Overlay limpio): StudioSimple · Inglés\n• Notas al Orador (Locución Google Vids): \"Existe una forma precisa de resolverlo paso a paso. ¡Descubrámosla juntos en la lección de hoy!\"\n\n",
+        "slides": [
+          {
+            "slideNumber": 1,
+            "tituloMomento": "Apertura y Contexto",
+            "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Representación y modelado disciplinar 1 (Inglés). Cinematic lighting, warm morning atmosphere, wide negative space in top third.",
+            "overlayText": "Misión 2: Representación y modelado disciplinar 1",
+            "speakerNotes": "Comienza una nueva expedición de aprendizaje. Nuestros dos exploradores se preparan para enfrentar un enigma fascinante en Inglés.",
+            "palabrasAprox": 19,
+            "duracionSeg": 9
+          },
+          {
+            "slideNumber": 2,
+            "tituloMomento": "Presentación del Escenario",
+            "visualPrompt": "Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Primera herramienta o proceso pictórico. High detail, clean lineart, soft depth of field, clear space on the left side.",
+            "overlayText": "Punto de Partida",
+            "speakerNotes": "Al observar los datos iniciales, notan que para avanzar necesitan comprender con precisión cómo se relacionan estos elementos.",
+            "palabrasAprox": 18,
+            "duracionSeg": 9
+          },
+          {
+            "slideNumber": 3,
+            "tituloMomento": "Aparición del Conflicto / Misterio",
+            "visualPrompt": "Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes.",
+            "overlayText": "¡Un obstáculo inesperado!",
+            "speakerNotes": "De pronto, aparece una situación inesperada: los registros cambian y surge una duda que deben resolver juntos para continuar.",
+            "palabrasAprox": 19,
+            "duracionSeg": 9
+          },
+          {
+            "slideNumber": 4,
+            "tituloMomento": "Exploración de Pistas",
+            "visualPrompt": "Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition.",
+            "overlayText": "Buscando la clave",
+            "speakerNotes": "Ambos comparan las pistas disponibles. Cada movimiento y cada dato entrega información valiosa sobre el comportamiento del fenómeno.",
+            "palabrasAprox": 17,
+            "duracionSeg": 8
+          },
+          {
+            "slideNumber": 5,
+            "tituloMomento": "El Momento Crítico",
+            "visualPrompt": "Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact.",
+            "overlayText": "Una decisión importante",
+            "speakerNotes": "Para superar el reto no basta con adivinar: es indispensable aplicar un criterio claro y seguir un orden lógico.",
+            "palabrasAprox": 18,
+            "duracionSeg": 9
+          },
+          {
+            "slideNumber": 6,
+            "tituloMomento": "La Pregunta Detonante",
+            "visualPrompt": "Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection.",
+            "overlayText": "¿Cómo podemos resolverlo?",
+            "speakerNotes": "Ahora surge el verdadero desafío: ¿qué regla o procedimiento nos permitirá encontrar la respuesta exacta sin equivocarnos?",
+            "palabrasAprox": 17,
+            "duracionSeg": 8
+          },
+          {
+            "slideNumber": 7,
+            "tituloMomento": "Puente a la Lección",
+            "visualPrompt": "Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background.",
+            "overlayText": "StudioSimple · Inglés",
+            "speakerNotes": "Existe una forma precisa de resolverlo paso a paso. ¡Descubrámosla juntos en la lección de hoy!",
+            "palabrasAprox": 15,
+            "duracionSeg": 7
+          }
+        ],
+        "dileAntes": "Antes de ver el video, observa con atención lo que descubren los dos exploradores y qué pregunta queda planteada.",
+        "dileDespues": "Muy buena observación. Ahora conversaremos sobre lo que descubrieron en la expedición."
+      },
+      "paso3_recorrido": [
+        {
+          "context": "Punto de partida",
+          "question": "¿Cuál fue la pista principal que encontraron los exploradores al inicio del video?",
+          "expected": "Identificar el dato o escenario inicial.",
+          "success": "¡Muy bien! Identificaste el punto de partida exacto.",
+          "support": "Recuerda fijarte en el momento en que revisan los primeros instrumentos.",
+          "reveal": "El punto de partida fue el escenario inicial donde se registraron los primeros datos.",
+          "studentReveal": "El escenario inicial con los primeros datos."
+        },
+        {
+          "context": "El obstáculo",
+          "question": "¿Qué dificultad tuvieron que enfrentar juntos para no perderse?",
+          "expected": "Reconocer la diferencia o problema planteado.",
+          "success": "¡Excelente! Reconociste el desafío central del video.",
+          "support": "Piensa en qué cambió de repente en la pantalla de control.",
+          "reveal": "Tuvieron que resolver cómo registrar el cambio sin cometer errores en la dirección o valor.",
+          "studentReveal": "Tuvieron que registrar el cambio correctamente."
+        }
+      ],
+      "paso4_explicativo": {
+        "titulo": "Video Explicativo: Formalización de Representación y modelado disciplinar 1",
+        "fullPrompt": "Actúa como Diseñador Pedagógico y Especialista en Didáctica Disciplinar en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de VIDEO EXPLICATIVO / FORMALIZACIÓN (Paso 4) para:\n- Asignatura: Inglés\n- Objetivo de Aprendizaje: OA 10\n- Clase: 2 (\"Representación y modelado disciplinar 1\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS:\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Formato conciso de EXACTAMENTE 5 DIAPOSITIVAS (slide1 a slide5). Enfoque exclusivo en la regla/concepto y el ejemplo modelado.\n3. ESTILO ARTÍSTICO: Anime Moderno (Modern Anime Style, limpio, didáctico y luminoso).\n4. PROTAGONISTAS: Los mismos 2 jóvenes de 13 años (la chica y el chico) manipulando el modelo disciplinar, observando la fórmula o comprobando el paso a paso juntos.\n5. REGLA VISUAL ANTI-MÁSCARAS: Imagen limpia con espacio negativo. Overlays pequeños y localizados.\n6. NOTAS AL ORADOR: Guion explicativo continuo y pedagógico (entre 22 y 30 palabras por lámina) sin encabezados técnicos, optimizado para voz en off directa en Google Vids.\n\nDETALLE DE LAS 5 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Definición del Punto de Referencia / Concepto) ---\n• Prompt de Imagen (16:9): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Primera herramienta o proceso pictórico. High clarity, negative space for text.\n• Texto en Pantalla (Overlay limpio): Concepto Clave: Primera herramienta o proceso pictórico\n• Notas al Orador (Locución Google Vids): \"Para comprender este contenido, siempre necesitamos un punto de partida claro que nos permita comparar y medir cualquier cambio con exactitud.\"\n\n--- DIAPOSITIVA 2 (La Herramienta Disciplinar / Regla) ---\n• Prompt de Imagen (16:9): Modern anime style. The boy illustrating a step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting.\n• Texto en Pantalla (Overlay limpio): Regla Fundamental\n• Notas al Orador (Locución Google Vids): \"Esta es la regla universal: cada paso se ejecuta en un orden estricto, respetando las propiedades y el significado de cada símbolo.\"\n\n--- DIAPOSITIVA 3 (Modelado Visible del Ejemplo) ---\n• Prompt de Imagen (16:9): Modern anime style. Detailed split view showing a problem being solved step by step with arrows and callouts. The two young protagonists highlighting the correct calculation or evidence.\n• Texto en Pantalla (Overlay limpio): Ejemplo Resuelto Paso a Paso\n• Notas al Orador (Locución Google Vids): \"Observa cómo resolvemos este caso completo: primero identificamos los datos, luego aplicamos el procedimiento en orden y finalmente comprobamos el resultado.\"\n\n--- DIAPOSITIVA 4 (Contraste y Prevención de Errores) ---\n• Prompt de Imagen (16:9): Modern anime style. The girl explaining a common misconception with a friendly 'warning' symbol on the board, showing both the wrong trap and the right way.\n• Texto en Pantalla (Overlay limpio): ¡Cuidado con esta trampa!\n• Notas al Orador (Locución Google Vids): \"Un error muy frecuente es confundir este concepto con su opuesto. Para evitarlo, comprueba siempre qué representa cada valor dentro del contexto real.\"\n\n--- DIAPOSITIVA 5 (Síntesis y Puente a la Práctica) ---\n• Prompt de Imagen (16:9): Modern anime style. The two 13-year-olds smiling confidently, ready to hand over the challenge to the student with their physical notebooks open. Bright welcoming lighting.\n• Texto en Pantalla (Overlay limpio): ¡Ahora te toca a ti!\n• Notas al Orador (Locución Google Vids): \"Dominar este procedimiento te da el control total. Ahora es tu turno de ponerlo en práctica con el apoyo de tu mentor.\"\n\n",
+        "slides": [
+          {
+            "slideNumber": 1,
+            "tituloMomento": "Definición del Punto de Referencia / Concepto",
+            "visualPrompt": "Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Primera herramienta o proceso pictórico. High clarity, negative space for text.",
+            "overlayText": "Concepto Clave: Primera herramienta o proceso pictórico",
+            "speakerNotes": "Para comprender este contenido, siempre necesitamos un punto de partida claro que nos permita comparar y medir cualquier cambio con exactitud.",
+            "palabrasAprox": 23,
+            "duracionSeg": 12
+          },
+          {
+            "slideNumber": 2,
+            "tituloMomento": "La Herramienta Disciplinar / Regla",
+            "visualPrompt": "Modern anime style. The boy illustrating a step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting.",
+            "overlayText": "Regla Fundamental",
+            "speakerNotes": "Esta es la regla universal: cada paso se ejecuta en un orden estricto, respetando las propiedades y el significado de cada símbolo.",
+            "palabrasAprox": 22,
+            "duracionSeg": 12
+          },
+          {
+            "slideNumber": 3,
+            "tituloMomento": "Modelado Visible del Ejemplo",
+            "visualPrompt": "Modern anime style. Detailed split view showing a problem being solved step by step with arrows and callouts. The two young protagonists highlighting the correct calculation or evidence.",
+            "overlayText": "Ejemplo Resuelto Paso a Paso",
+            "speakerNotes": "Observa cómo resolvemos este caso completo: primero identificamos los datos, luego aplicamos el procedimiento en orden y finalmente comprobamos el resultado.",
+            "palabrasAprox": 23,
+            "duracionSeg": 13
+          },
+          {
+            "slideNumber": 4,
+            "tituloMomento": "Contraste y Prevención de Errores",
+            "visualPrompt": "Modern anime style. The girl explaining a common misconception with a friendly 'warning' symbol on the board, showing both the wrong trap and the right way.",
+            "overlayText": "¡Cuidado con esta trampa!",
+            "speakerNotes": "Un error muy frecuente es confundir este concepto con su opuesto. Para evitarlo, comprueba siempre qué representa cada valor dentro del contexto real.",
+            "palabrasAprox": 24,
+            "duracionSeg": 13
+          },
+          {
+            "slideNumber": 5,
+            "tituloMomento": "Síntesis y Puente a la Práctica",
+            "visualPrompt": "Modern anime style. The two 13-year-olds smiling confidently, ready to hand over the challenge to the student with their physical notebooks open. Bright welcoming lighting.",
+            "overlayText": "¡Ahora te toca a ti!",
+            "speakerNotes": "Dominar este procedimiento te da el control total. Ahora es tu turno de ponerlo en práctica con el apoyo de tu mentor.",
+            "palabrasAprox": 22,
+            "duracionSeg": 11
+          }
+        ],
+        "ideaClave": "Un procedimiento disciplinar claro permite resolver cualquier caso siguiendo un orden verificable paso a paso.",
+        "dileAntes": "Ahora veremos la explicación formal de la regla matemática/científica. Fíjate en el paso a paso del ejemplo."
+      },
+      "paso5_practica": [
+        {
+          "context": "Caso Guiado 1",
+          "question": "En esta primera situación, ¿cuál es el primer paso que debemos realizar según la regla aprendida?",
+          "expected": "Identificar los datos e incógnita del problema.",
+          "success": "¡Correcto! Siempre partimos identificando los datos principales.",
+          "support": "Revisa la primera diapositiva de la explicación formal: ¿por dónde comenzamos?",
+          "reveal": "El primer paso es registrar claramente los datos y saber qué nos están preguntando.",
+          "studentReveal": "Identificar los datos y la pregunta."
+        },
+        {
+          "context": "Caso Guiado 2",
+          "question": "Al aplicar el procedimiento a este nuevo caso, ¿qué resultado se obtiene y cómo lo justificas?",
+          "expected": "El resultado correcto con su unidad o fundamento.",
+          "success": "¡Exacto! Aplicaste la regla en el orden correcto.",
+          "support": "Sigue el modelo de los dos jóvenes exploradores paso a paso.",
+          "reveal": "El resultado correcto se obtiene aplicando la transformación en orden y comprobando con el contexto.",
+          "studentReveal": "El resultado obtenido tras aplicar la regla."
+        }
+      ],
+      "paso6_resumen": {
+        "ideaClave": "Para resolver problemas sobre Representación y modelado disciplinar 1, aplicamos el procedimiento en orden, verificamos el resultado y explicamos su sentido.",
+        "sintesis": "Hoy dominaste la regla central de Primera herramienta o proceso pictórico junto a tus compañeros exploradores."
+      },
+      "paso7_miniquiz": [
+        {
+          "q": "¿Cuál es el propósito central de la regla aprendida hoy sobre Representación y modelado disciplinar 1?",
+          "options": [
+            "A) Resolver situaciones con un criterio formal y comprobable",
+            "B) Memorizar números sin entender su significado",
+            "C) Adivinar el resultado más rápido"
+          ],
+          "correct": "A",
+          "fixExplain": "El objetivo de la lección es desarrollar un procedimiento lógico que se pueda comprobar en cualquier situación."
+        },
+        {
+          "q": "Al resolver un problema de este tipo, ¿qué error frecuente debemos evitar?",
+          "options": [
+            "A) Comprobar el resultado",
+            "B) Saltar pasos y omitir el significado en el contexto",
+            "C) Leer atentamente la pregunta"
+          ],
+          "correct": "B",
+          "fixExplain": "Saltar pasos u omitir el contexto suele llevar a confusiones entre conceptos parecidos."
+        },
+        {
+          "q": "¿Cómo podemos comprobar que nuestra respuesta final es razonable?",
+          "options": [
+            "A) Volviendo al contexto original y verificando la operación inversa",
+            "B) Cambiando la pregunta",
+            "C) Borrando el procedimiento"
+          ],
+          "correct": "A",
+          "fixExplain": "Una comprobación real siempre compara el número obtenido con la situación original."
+        }
+      ],
+      "paso8_cierre": {
+        "preguntaSintesis": "En tus propias palabras, ¿cómo le explicarías a otra persona el paso más importante que aprendimos hoy?",
+        "metacognicion": "¿Qué parte de la clase te pareció más entretenida o fácil de comprender?",
+        "celebracion": "¡Gran trabajo hoy! Has dominado la Clase 2. ¡Nos vemos en la próxima misión!"
+      }
+    },
+    {
+      "num": 3,
+      "title": "Procedimiento formal del proceso 1",
+      "focoDidactico": "Algoritmo o análisis de causas del primer núcleo temático",
+      "duracion": "30 Minutos",
+      "objetivoAdulto": "Acompañar al estudiante para que comprenda y aplique: Algoritmo o análisis de causas del primer núcleo temático, modelando el pensamiento disciplinar sin prisas.",
+      "climaEmocional": "Refuerza la autonomía: 'Tómate el tiempo para observar los datos antes de responder'.",
+      "situacionIntro": {
+        "dialogo": "Observa la situación de inicio de hoy. Estamos explorando Procedimiento formal del proceso 1. ¿Qué observas a primera vista?",
+        "pregunta": "¿Cómo describirías esta situación con tus propias palabras?",
+        "respEsperada": "Una respuesta que identifique el concepto central de Algoritmo o análisis de causas del primer núcleo temático.",
+        "pistaSocratica": "Pídele que compare lo que conoce con lo que aparece nuevo en el ejemplo."
+      },
+      "paso2_hook": {
+        "titulo": "Video Motivacional: El Desafío de Procedimiento formal del proceso 1",
+        "fullPrompt": "Actúa como Diseñador Instruccional Senior y Creador de Presentaciones en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de GANCHO MOTIVACIONAL (Paso 2) para:\n- Asignatura: Inglés\n- Objetivo de Aprendizaje: OA 10\n- Clase: 3 (\"Procedimiento formal del proceso 1\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS:\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Exactamente 7 diapositivas (slide1 a slide7).\n3. ESTILO ARTÍSTICO DE LAS IMÁGENES: Anime Moderno (Modern Anime Style, estética cinematográfica de alta gama, iluminación dinámica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).\n4. PROTAGONISTAS: Dúo co-protagónico de 13 años (una joven y un joven estudiantes-exploradores chilenos). ACTÚAN JUNTOS en cada escena, colaborando, investigando y resolviendo el desafío en equipo.\n5. REGLA VISUAL ANTI-MÁSCARAS: Imágenes Full-Bleed con espacio negativo para texto. Queda prohibido usar placas oscuras que tapen las caras de los personajes o la mitad de la lámina.\n6. NOTAS AL ORADOR (GUION CONTINUO): Cada diapositiva DEBE incluir únicamente el texto de narración oral continua (entre 15 y 22 palabras por lámina) sin marcas técnicas, encabezados ni duraciones, listo para ser leído por TTS en Google Vids.\n\nDETALLE DE LAS 7 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Apertura y Contexto) ---\n• Prompt de Imagen (16:9): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Procedimiento formal del proceso 1 (Inglés). Cinematic lighting, warm morning atmosphere, wide negative space in top third.\n• Texto en Pantalla (Overlay limpio): Misión 3: Procedimiento formal del proceso 1\n• Notas al Orador (Locución Google Vids): \"Comienza una nueva expedición de aprendizaje. Nuestros dos exploradores se preparan para enfrentar un enigma fascinante en Inglés.\"\n\n--- DIAPOSITIVA 2 (Presentación del Escenario) ---\n• Prompt de Imagen (16:9): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Algoritmo o análisis de causas del primer núcleo temático. High detail, clean lineart, soft depth of field, clear space on the left side.\n• Texto en Pantalla (Overlay limpio): Punto de Partida\n• Notas al Orador (Locución Google Vids): \"Al observar los datos iniciales, notan que para avanzar necesitan comprender con precisión cómo se relacionan estos elementos.\"\n\n--- DIAPOSITIVA 3 (Aparición del Conflicto / Misterio) ---\n• Prompt de Imagen (16:9): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes.\n• Texto en Pantalla (Overlay limpio): ¡Un obstáculo inesperado!\n• Notas al Orador (Locución Google Vids): \"De pronto, aparece una situación inesperada: los registros cambian y surge una duda que deben resolver juntos para continuar.\"\n\n--- DIAPOSITIVA 4 (Exploración de Pistas) ---\n• Prompt de Imagen (16:9): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition.\n• Texto en Pantalla (Overlay limpio): Buscando la clave\n• Notas al Orador (Locución Google Vids): \"Ambos comparan las pistas disponibles. Cada movimiento y cada dato entrega información valiosa sobre el comportamiento del fenómeno.\"\n\n--- DIAPOSITIVA 5 (El Momento Crítico) ---\n• Prompt de Imagen (16:9): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact.\n• Texto en Pantalla (Overlay limpio): Una decisión importante\n• Notas al Orador (Locución Google Vids): \"Para superar el reto no basta con adivinar: es indispensable aplicar un criterio claro y seguir un orden lógico.\"\n\n--- DIAPOSITIVA 6 (La Pregunta Detonante) ---\n• Prompt de Imagen (16:9): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection.\n• Texto en Pantalla (Overlay limpio): ¿Cómo podemos resolverlo?\n• Notas al Orador (Locución Google Vids): \"Ahora surge el verdadero desafío: ¿qué regla o procedimiento nos permitirá encontrar la respuesta exacta sin equivocarnos?\"\n\n--- DIAPOSITIVA 7 (Puente a la Lección) ---\n• Prompt de Imagen (16:9): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background.\n• Texto en Pantalla (Overlay limpio): StudioSimple · Inglés\n• Notas al Orador (Locución Google Vids): \"Existe una forma precisa de resolverlo paso a paso. ¡Descubrámosla juntos en la lección de hoy!\"\n\n",
+        "slides": [
+          {
+            "slideNumber": 1,
+            "tituloMomento": "Apertura y Contexto",
+            "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Procedimiento formal del proceso 1 (Inglés). Cinematic lighting, warm morning atmosphere, wide negative space in top third.",
+            "overlayText": "Misión 3: Procedimiento formal del proceso 1",
+            "speakerNotes": "Comienza una nueva expedición de aprendizaje. Nuestros dos exploradores se preparan para enfrentar un enigma fascinante en Inglés.",
+            "palabrasAprox": 19,
+            "duracionSeg": 9
+          },
+          {
+            "slideNumber": 2,
+            "tituloMomento": "Presentación del Escenario",
+            "visualPrompt": "Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Algoritmo o análisis de causas del primer núcleo temático. High detail, clean lineart, soft depth of field, clear space on the left side.",
+            "overlayText": "Punto de Partida",
+            "speakerNotes": "Al observar los datos iniciales, notan que para avanzar necesitan comprender con precisión cómo se relacionan estos elementos.",
+            "palabrasAprox": 18,
+            "duracionSeg": 9
+          },
+          {
+            "slideNumber": 3,
+            "tituloMomento": "Aparición del Conflicto / Misterio",
+            "visualPrompt": "Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes.",
+            "overlayText": "¡Un obstáculo inesperado!",
+            "speakerNotes": "De pronto, aparece una situación inesperada: los registros cambian y surge una duda que deben resolver juntos para continuar.",
+            "palabrasAprox": 19,
+            "duracionSeg": 9
+          },
+          {
+            "slideNumber": 4,
+            "tituloMomento": "Exploración de Pistas",
+            "visualPrompt": "Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition.",
+            "overlayText": "Buscando la clave",
+            "speakerNotes": "Ambos comparan las pistas disponibles. Cada movimiento y cada dato entrega información valiosa sobre el comportamiento del fenómeno.",
+            "palabrasAprox": 17,
+            "duracionSeg": 8
+          },
+          {
+            "slideNumber": 5,
+            "tituloMomento": "El Momento Crítico",
+            "visualPrompt": "Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact.",
+            "overlayText": "Una decisión importante",
+            "speakerNotes": "Para superar el reto no basta con adivinar: es indispensable aplicar un criterio claro y seguir un orden lógico.",
+            "palabrasAprox": 18,
+            "duracionSeg": 9
+          },
+          {
+            "slideNumber": 6,
+            "tituloMomento": "La Pregunta Detonante",
+            "visualPrompt": "Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection.",
+            "overlayText": "¿Cómo podemos resolverlo?",
+            "speakerNotes": "Ahora surge el verdadero desafío: ¿qué regla o procedimiento nos permitirá encontrar la respuesta exacta sin equivocarnos?",
+            "palabrasAprox": 17,
+            "duracionSeg": 8
+          },
+          {
+            "slideNumber": 7,
+            "tituloMomento": "Puente a la Lección",
+            "visualPrompt": "Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background.",
+            "overlayText": "StudioSimple · Inglés",
+            "speakerNotes": "Existe una forma precisa de resolverlo paso a paso. ¡Descubrámosla juntos en la lección de hoy!",
+            "palabrasAprox": 15,
+            "duracionSeg": 7
+          }
+        ],
+        "dileAntes": "Antes de ver el video, observa con atención lo que descubren los dos exploradores y qué pregunta queda planteada.",
+        "dileDespues": "Muy buena observación. Ahora conversaremos sobre lo que descubrieron en la expedición."
+      },
+      "paso3_recorrido": [
+        {
+          "context": "Punto de partida",
+          "question": "¿Cuál fue la pista principal que encontraron los exploradores al inicio del video?",
+          "expected": "Identificar el dato o escenario inicial.",
+          "success": "¡Muy bien! Identificaste el punto de partida exacto.",
+          "support": "Recuerda fijarte en el momento en que revisan los primeros instrumentos.",
+          "reveal": "El punto de partida fue el escenario inicial donde se registraron los primeros datos.",
+          "studentReveal": "El escenario inicial con los primeros datos."
+        },
+        {
+          "context": "El obstáculo",
+          "question": "¿Qué dificultad tuvieron que enfrentar juntos para no perderse?",
+          "expected": "Reconocer la diferencia o problema planteado.",
+          "success": "¡Excelente! Reconociste el desafío central del video.",
+          "support": "Piensa en qué cambió de repente en la pantalla de control.",
+          "reveal": "Tuvieron que resolver cómo registrar el cambio sin cometer errores en la dirección o valor.",
+          "studentReveal": "Tuvieron que registrar el cambio correctamente."
+        }
+      ],
+      "paso4_explicativo": {
+        "titulo": "Video Explicativo: Formalización de Procedimiento formal del proceso 1",
+        "fullPrompt": "Actúa como Diseñador Pedagógico y Especialista en Didáctica Disciplinar en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de VIDEO EXPLICATIVO / FORMALIZACIÓN (Paso 4) para:\n- Asignatura: Inglés\n- Objetivo de Aprendizaje: OA 10\n- Clase: 3 (\"Procedimiento formal del proceso 1\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS:\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Formato conciso de EXACTAMENTE 5 DIAPOSITIVAS (slide1 a slide5). Enfoque exclusivo en la regla/concepto y el ejemplo modelado.\n3. ESTILO ARTÍSTICO: Anime Moderno (Modern Anime Style, limpio, didáctico y luminoso).\n4. PROTAGONISTAS: Los mismos 2 jóvenes de 13 años (la chica y el chico) manipulando el modelo disciplinar, observando la fórmula o comprobando el paso a paso juntos.\n5. REGLA VISUAL ANTI-MÁSCARAS: Imagen limpia con espacio negativo. Overlays pequeños y localizados.\n6. NOTAS AL ORADOR: Guion explicativo continuo y pedagógico (entre 22 y 30 palabras por lámina) sin encabezados técnicos, optimizado para voz en off directa en Google Vids.\n\nDETALLE DE LAS 5 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Definición del Punto de Referencia / Concepto) ---\n• Prompt de Imagen (16:9): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Algoritmo o análisis de causas del primer núcleo temático. High clarity, negative space for text.\n• Texto en Pantalla (Overlay limpio): Concepto Clave: Algoritmo o análisis de causas del primer núcleo temático\n• Notas al Orador (Locución Google Vids): \"Para comprender este contenido, siempre necesitamos un punto de partida claro que nos permita comparar y medir cualquier cambio con exactitud.\"\n\n--- DIAPOSITIVA 2 (La Herramienta Disciplinar / Regla) ---\n• Prompt de Imagen (16:9): Modern anime style. The boy illustrating a step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting.\n• Texto en Pantalla (Overlay limpio): Regla Fundamental\n• Notas al Orador (Locución Google Vids): \"Esta es la regla universal: cada paso se ejecuta en un orden estricto, respetando las propiedades y el significado de cada símbolo.\"\n\n--- DIAPOSITIVA 3 (Modelado Visible del Ejemplo) ---\n• Prompt de Imagen (16:9): Modern anime style. Detailed split view showing a problem being solved step by step with arrows and callouts. The two young protagonists highlighting the correct calculation or evidence.\n• Texto en Pantalla (Overlay limpio): Ejemplo Resuelto Paso a Paso\n• Notas al Orador (Locución Google Vids): \"Observa cómo resolvemos este caso completo: primero identificamos los datos, luego aplicamos el procedimiento en orden y finalmente comprobamos el resultado.\"\n\n--- DIAPOSITIVA 4 (Contraste y Prevención de Errores) ---\n• Prompt de Imagen (16:9): Modern anime style. The girl explaining a common misconception with a friendly 'warning' symbol on the board, showing both the wrong trap and the right way.\n• Texto en Pantalla (Overlay limpio): ¡Cuidado con esta trampa!\n• Notas al Orador (Locución Google Vids): \"Un error muy frecuente es confundir este concepto con su opuesto. Para evitarlo, comprueba siempre qué representa cada valor dentro del contexto real.\"\n\n--- DIAPOSITIVA 5 (Síntesis y Puente a la Práctica) ---\n• Prompt de Imagen (16:9): Modern anime style. The two 13-year-olds smiling confidently, ready to hand over the challenge to the student with their physical notebooks open. Bright welcoming lighting.\n• Texto en Pantalla (Overlay limpio): ¡Ahora te toca a ti!\n• Notas al Orador (Locución Google Vids): \"Dominar este procedimiento te da el control total. Ahora es tu turno de ponerlo en práctica con el apoyo de tu mentor.\"\n\n",
+        "slides": [
+          {
+            "slideNumber": 1,
+            "tituloMomento": "Definición del Punto de Referencia / Concepto",
+            "visualPrompt": "Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Algoritmo o análisis de causas del primer núcleo temático. High clarity, negative space for text.",
+            "overlayText": "Concepto Clave: Algoritmo o análisis de causas del primer núcleo temático",
+            "speakerNotes": "Para comprender este contenido, siempre necesitamos un punto de partida claro que nos permita comparar y medir cualquier cambio con exactitud.",
+            "palabrasAprox": 23,
+            "duracionSeg": 12
+          },
+          {
+            "slideNumber": 2,
+            "tituloMomento": "La Herramienta Disciplinar / Regla",
+            "visualPrompt": "Modern anime style. The boy illustrating a step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting.",
+            "overlayText": "Regla Fundamental",
+            "speakerNotes": "Esta es la regla universal: cada paso se ejecuta en un orden estricto, respetando las propiedades y el significado de cada símbolo.",
+            "palabrasAprox": 22,
+            "duracionSeg": 12
+          },
+          {
+            "slideNumber": 3,
+            "tituloMomento": "Modelado Visible del Ejemplo",
+            "visualPrompt": "Modern anime style. Detailed split view showing a problem being solved step by step with arrows and callouts. The two young protagonists highlighting the correct calculation or evidence.",
+            "overlayText": "Ejemplo Resuelto Paso a Paso",
+            "speakerNotes": "Observa cómo resolvemos este caso completo: primero identificamos los datos, luego aplicamos el procedimiento en orden y finalmente comprobamos el resultado.",
+            "palabrasAprox": 23,
+            "duracionSeg": 13
+          },
+          {
+            "slideNumber": 4,
+            "tituloMomento": "Contraste y Prevención de Errores",
+            "visualPrompt": "Modern anime style. The girl explaining a common misconception with a friendly 'warning' symbol on the board, showing both the wrong trap and the right way.",
+            "overlayText": "¡Cuidado con esta trampa!",
+            "speakerNotes": "Un error muy frecuente es confundir este concepto con su opuesto. Para evitarlo, comprueba siempre qué representa cada valor dentro del contexto real.",
+            "palabrasAprox": 24,
+            "duracionSeg": 13
+          },
+          {
+            "slideNumber": 5,
+            "tituloMomento": "Síntesis y Puente a la Práctica",
+            "visualPrompt": "Modern anime style. The two 13-year-olds smiling confidently, ready to hand over the challenge to the student with their physical notebooks open. Bright welcoming lighting.",
+            "overlayText": "¡Ahora te toca a ti!",
+            "speakerNotes": "Dominar este procedimiento te da el control total. Ahora es tu turno de ponerlo en práctica con el apoyo de tu mentor.",
+            "palabrasAprox": 22,
+            "duracionSeg": 11
+          }
+        ],
+        "ideaClave": "Un procedimiento disciplinar claro permite resolver cualquier caso siguiendo un orden verificable paso a paso.",
+        "dileAntes": "Ahora veremos la explicación formal de la regla matemática/científica. Fíjate en el paso a paso del ejemplo."
+      },
+      "paso5_practica": [
+        {
+          "context": "Caso Guiado 1",
+          "question": "En esta primera situación, ¿cuál es el primer paso que debemos realizar según la regla aprendida?",
+          "expected": "Identificar los datos e incógnita del problema.",
+          "success": "¡Correcto! Siempre partimos identificando los datos principales.",
+          "support": "Revisa la primera diapositiva de la explicación formal: ¿por dónde comenzamos?",
+          "reveal": "El primer paso es registrar claramente los datos y saber qué nos están preguntando.",
+          "studentReveal": "Identificar los datos y la pregunta."
+        },
+        {
+          "context": "Caso Guiado 2",
+          "question": "Al aplicar el procedimiento a este nuevo caso, ¿qué resultado se obtiene y cómo lo justificas?",
+          "expected": "El resultado correcto con su unidad o fundamento.",
+          "success": "¡Exacto! Aplicaste la regla en el orden correcto.",
+          "support": "Sigue el modelo de los dos jóvenes exploradores paso a paso.",
+          "reveal": "El resultado correcto se obtiene aplicando la transformación en orden y comprobando con el contexto.",
+          "studentReveal": "El resultado obtenido tras aplicar la regla."
+        }
+      ],
+      "paso6_resumen": {
+        "ideaClave": "Para resolver problemas sobre Procedimiento formal del proceso 1, aplicamos el procedimiento en orden, verificamos el resultado y explicamos su sentido.",
+        "sintesis": "Hoy dominaste la regla central de Algoritmo o análisis de causas del primer núcleo temático junto a tus compañeros exploradores."
+      },
+      "paso7_miniquiz": [
+        {
+          "q": "¿Cuál es el propósito central de la regla aprendida hoy sobre Procedimiento formal del proceso 1?",
+          "options": [
+            "A) Resolver situaciones con un criterio formal y comprobable",
+            "B) Memorizar números sin entender su significado",
+            "C) Adivinar el resultado más rápido"
+          ],
+          "correct": "A",
+          "fixExplain": "El objetivo de la lección es desarrollar un procedimiento lógico que se pueda comprobar en cualquier situación."
+        },
+        {
+          "q": "Al resolver un problema de este tipo, ¿qué error frecuente debemos evitar?",
+          "options": [
+            "A) Comprobar el resultado",
+            "B) Saltar pasos y omitir el significado en el contexto",
+            "C) Leer atentamente la pregunta"
+          ],
+          "correct": "B",
+          "fixExplain": "Saltar pasos u omitir el contexto suele llevar a confusiones entre conceptos parecidos."
+        },
+        {
+          "q": "¿Cómo podemos comprobar que nuestra respuesta final es razonable?",
+          "options": [
+            "A) Volviendo al contexto original y verificando la operación inversa",
+            "B) Cambiando la pregunta",
+            "C) Borrando el procedimiento"
+          ],
+          "correct": "A",
+          "fixExplain": "Una comprobación real siempre compara el número obtenido con la situación original."
+        }
+      ],
+      "paso8_cierre": {
+        "preguntaSintesis": "En tus propias palabras, ¿cómo le explicarías a otra persona el paso más importante que aprendimos hoy?",
+        "metacognicion": "¿Qué parte de la clase te pareció más entretenida o fácil de comprender?",
+        "celebracion": "¡Gran trabajo hoy! Has dominado la Clase 3. ¡Nos vemos en la próxima misión!"
+      }
+    },
+    {
+      "num": 4,
+      "title": "Modelado disciplinar del proceso 2",
+      "focoDidactico": "Segunda herramienta o proceso divergente",
+      "duracion": "30 Minutos",
+      "objetivoAdulto": "Acompañar al estudiante para que comprenda y aplique: Segunda herramienta o proceso divergente, modelando el pensamiento disciplinar sin prisas.",
+      "climaEmocional": "Refuerza la autonomía: 'Tómate el tiempo para observar los datos antes de responder'.",
+      "situacionIntro": {
+        "dialogo": "Observa la situación de inicio de hoy. Estamos explorando Modelado disciplinar del proceso 2. ¿Qué observas a primera vista?",
+        "pregunta": "¿Cómo describirías esta situación con tus propias palabras?",
+        "respEsperada": "Una respuesta que identifique el concepto central de Segunda herramienta o proceso divergente.",
+        "pistaSocratica": "Pídele que compare lo que conoce con lo que aparece nuevo en el ejemplo."
+      },
+      "paso2_hook": {
+        "titulo": "Video Motivacional: El Desafío de Modelado disciplinar del proceso 2",
+        "fullPrompt": "Actúa como Diseñador Instruccional Senior y Creador de Presentaciones en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de GANCHO MOTIVACIONAL (Paso 2) para:\n- Asignatura: Inglés\n- Objetivo de Aprendizaje: OA 10\n- Clase: 4 (\"Modelado disciplinar del proceso 2\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS:\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Exactamente 7 diapositivas (slide1 a slide7).\n3. ESTILO ARTÍSTICO DE LAS IMÁGENES: Anime Moderno (Modern Anime Style, estética cinematográfica de alta gama, iluminación dinámica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).\n4. PROTAGONISTAS: Dúo co-protagónico de 13 años (una joven y un joven estudiantes-exploradores chilenos). ACTÚAN JUNTOS en cada escena, colaborando, investigando y resolviendo el desafío en equipo.\n5. REGLA VISUAL ANTI-MÁSCARAS: Imágenes Full-Bleed con espacio negativo para texto. Queda prohibido usar placas oscuras que tapen las caras de los personajes o la mitad de la lámina.\n6. NOTAS AL ORADOR (GUION CONTINUO): Cada diapositiva DEBE incluir únicamente el texto de narración oral continua (entre 15 y 22 palabras por lámina) sin marcas técnicas, encabezados ni duraciones, listo para ser leído por TTS en Google Vids.\n\nDETALLE DE LAS 7 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Apertura y Contexto) ---\n• Prompt de Imagen (16:9): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Modelado disciplinar del proceso 2 (Inglés). Cinematic lighting, warm morning atmosphere, wide negative space in top third.\n• Texto en Pantalla (Overlay limpio): Misión 4: Modelado disciplinar del proceso 2\n• Notas al Orador (Locución Google Vids): \"Comienza una nueva expedición de aprendizaje. Nuestros dos exploradores se preparan para enfrentar un enigma fascinante en Inglés.\"\n\n--- DIAPOSITIVA 2 (Presentación del Escenario) ---\n• Prompt de Imagen (16:9): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Segunda herramienta o proceso divergente. High detail, clean lineart, soft depth of field, clear space on the left side.\n• Texto en Pantalla (Overlay limpio): Punto de Partida\n• Notas al Orador (Locución Google Vids): \"Al observar los datos iniciales, notan que para avanzar necesitan comprender con precisión cómo se relacionan estos elementos.\"\n\n--- DIAPOSITIVA 3 (Aparición del Conflicto / Misterio) ---\n• Prompt de Imagen (16:9): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes.\n• Texto en Pantalla (Overlay limpio): ¡Un obstáculo inesperado!\n• Notas al Orador (Locución Google Vids): \"De pronto, aparece una situación inesperada: los registros cambian y surge una duda que deben resolver juntos para continuar.\"\n\n--- DIAPOSITIVA 4 (Exploración de Pistas) ---\n• Prompt de Imagen (16:9): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition.\n• Texto en Pantalla (Overlay limpio): Buscando la clave\n• Notas al Orador (Locución Google Vids): \"Ambos comparan las pistas disponibles. Cada movimiento y cada dato entrega información valiosa sobre el comportamiento del fenómeno.\"\n\n--- DIAPOSITIVA 5 (El Momento Crítico) ---\n• Prompt de Imagen (16:9): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact.\n• Texto en Pantalla (Overlay limpio): Una decisión importante\n• Notas al Orador (Locución Google Vids): \"Para superar el reto no basta con adivinar: es indispensable aplicar un criterio claro y seguir un orden lógico.\"\n\n--- DIAPOSITIVA 6 (La Pregunta Detonante) ---\n• Prompt de Imagen (16:9): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection.\n• Texto en Pantalla (Overlay limpio): ¿Cómo podemos resolverlo?\n• Notas al Orador (Locución Google Vids): \"Ahora surge el verdadero desafío: ¿qué regla o procedimiento nos permitirá encontrar la respuesta exacta sin equivocarnos?\"\n\n--- DIAPOSITIVA 7 (Puente a la Lección) ---\n• Prompt de Imagen (16:9): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background.\n• Texto en Pantalla (Overlay limpio): StudioSimple · Inglés\n• Notas al Orador (Locución Google Vids): \"Existe una forma precisa de resolverlo paso a paso. ¡Descubrámosla juntos en la lección de hoy!\"\n\n",
+        "slides": [
+          {
+            "slideNumber": 1,
+            "tituloMomento": "Apertura y Contexto",
+            "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Modelado disciplinar del proceso 2 (Inglés). Cinematic lighting, warm morning atmosphere, wide negative space in top third.",
+            "overlayText": "Misión 4: Modelado disciplinar del proceso 2",
+            "speakerNotes": "Comienza una nueva expedición de aprendizaje. Nuestros dos exploradores se preparan para enfrentar un enigma fascinante en Inglés.",
+            "palabrasAprox": 19,
+            "duracionSeg": 9
+          },
+          {
+            "slideNumber": 2,
+            "tituloMomento": "Presentación del Escenario",
+            "visualPrompt": "Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Segunda herramienta o proceso divergente. High detail, clean lineart, soft depth of field, clear space on the left side.",
+            "overlayText": "Punto de Partida",
+            "speakerNotes": "Al observar los datos iniciales, notan que para avanzar necesitan comprender con precisión cómo se relacionan estos elementos.",
+            "palabrasAprox": 18,
+            "duracionSeg": 9
+          },
+          {
+            "slideNumber": 3,
+            "tituloMomento": "Aparición del Conflicto / Misterio",
+            "visualPrompt": "Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes.",
+            "overlayText": "¡Un obstáculo inesperado!",
+            "speakerNotes": "De pronto, aparece una situación inesperada: los registros cambian y surge una duda que deben resolver juntos para continuar.",
+            "palabrasAprox": 19,
+            "duracionSeg": 9
+          },
+          {
+            "slideNumber": 4,
+            "tituloMomento": "Exploración de Pistas",
+            "visualPrompt": "Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition.",
+            "overlayText": "Buscando la clave",
+            "speakerNotes": "Ambos comparan las pistas disponibles. Cada movimiento y cada dato entrega información valiosa sobre el comportamiento del fenómeno.",
+            "palabrasAprox": 17,
+            "duracionSeg": 8
+          },
+          {
+            "slideNumber": 5,
+            "tituloMomento": "El Momento Crítico",
+            "visualPrompt": "Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact.",
+            "overlayText": "Una decisión importante",
+            "speakerNotes": "Para superar el reto no basta con adivinar: es indispensable aplicar un criterio claro y seguir un orden lógico.",
+            "palabrasAprox": 18,
+            "duracionSeg": 9
+          },
+          {
+            "slideNumber": 6,
+            "tituloMomento": "La Pregunta Detonante",
+            "visualPrompt": "Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection.",
+            "overlayText": "¿Cómo podemos resolverlo?",
+            "speakerNotes": "Ahora surge el verdadero desafío: ¿qué regla o procedimiento nos permitirá encontrar la respuesta exacta sin equivocarnos?",
+            "palabrasAprox": 17,
+            "duracionSeg": 8
+          },
+          {
+            "slideNumber": 7,
+            "tituloMomento": "Puente a la Lección",
+            "visualPrompt": "Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background.",
+            "overlayText": "StudioSimple · Inglés",
+            "speakerNotes": "Existe una forma precisa de resolverlo paso a paso. ¡Descubrámosla juntos en la lección de hoy!",
+            "palabrasAprox": 15,
+            "duracionSeg": 7
+          }
+        ],
+        "dileAntes": "Antes de ver el video, observa con atención lo que descubren los dos exploradores y qué pregunta queda planteada.",
+        "dileDespues": "Muy buena observación. Ahora conversaremos sobre lo que descubrieron en la expedición."
+      },
+      "paso3_recorrido": [
+        {
+          "context": "Punto de partida",
+          "question": "¿Cuál fue la pista principal que encontraron los exploradores al inicio del video?",
+          "expected": "Identificar el dato o escenario inicial.",
+          "success": "¡Muy bien! Identificaste el punto de partida exacto.",
+          "support": "Recuerda fijarte en el momento en que revisan los primeros instrumentos.",
+          "reveal": "El punto de partida fue el escenario inicial donde se registraron los primeros datos.",
+          "studentReveal": "El escenario inicial con los primeros datos."
+        },
+        {
+          "context": "El obstáculo",
+          "question": "¿Qué dificultad tuvieron que enfrentar juntos para no perderse?",
+          "expected": "Reconocer la diferencia o problema planteado.",
+          "success": "¡Excelente! Reconociste el desafío central del video.",
+          "support": "Piensa en qué cambió de repente en la pantalla de control.",
+          "reveal": "Tuvieron que resolver cómo registrar el cambio sin cometer errores en la dirección o valor.",
+          "studentReveal": "Tuvieron que registrar el cambio correctamente."
+        }
+      ],
+      "paso4_explicativo": {
+        "titulo": "Video Explicativo: Formalización de Modelado disciplinar del proceso 2",
+        "fullPrompt": "Actúa como Diseñador Pedagógico y Especialista en Didáctica Disciplinar en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de VIDEO EXPLICATIVO / FORMALIZACIÓN (Paso 4) para:\n- Asignatura: Inglés\n- Objetivo de Aprendizaje: OA 10\n- Clase: 4 (\"Modelado disciplinar del proceso 2\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS:\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Formato conciso de EXACTAMENTE 5 DIAPOSITIVAS (slide1 a slide5). Enfoque exclusivo en la regla/concepto y el ejemplo modelado.\n3. ESTILO ARTÍSTICO: Anime Moderno (Modern Anime Style, limpio, didáctico y luminoso).\n4. PROTAGONISTAS: Los mismos 2 jóvenes de 13 años (la chica y el chico) manipulando el modelo disciplinar, observando la fórmula o comprobando el paso a paso juntos.\n5. REGLA VISUAL ANTI-MÁSCARAS: Imagen limpia con espacio negativo. Overlays pequeños y localizados.\n6. NOTAS AL ORADOR: Guion explicativo continuo y pedagógico (entre 22 y 30 palabras por lámina) sin encabezados técnicos, optimizado para voz en off directa en Google Vids.\n\nDETALLE DE LAS 5 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Definición del Punto de Referencia / Concepto) ---\n• Prompt de Imagen (16:9): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Segunda herramienta o proceso divergente. High clarity, negative space for text.\n• Texto en Pantalla (Overlay limpio): Concepto Clave: Segunda herramienta o proceso divergente\n• Notas al Orador (Locución Google Vids): \"Para comprender este contenido, siempre necesitamos un punto de partida claro que nos permita comparar y medir cualquier cambio con exactitud.\"\n\n--- DIAPOSITIVA 2 (La Herramienta Disciplinar / Regla) ---\n• Prompt de Imagen (16:9): Modern anime style. The boy illustrating a step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting.\n• Texto en Pantalla (Overlay limpio): Regla Fundamental\n• Notas al Orador (Locución Google Vids): \"Esta es la regla universal: cada paso se ejecuta en un orden estricto, respetando las propiedades y el significado de cada símbolo.\"\n\n--- DIAPOSITIVA 3 (Modelado Visible del Ejemplo) ---\n• Prompt de Imagen (16:9): Modern anime style. Detailed split view showing a problem being solved step by step with arrows and callouts. The two young protagonists highlighting the correct calculation or evidence.\n• Texto en Pantalla (Overlay limpio): Ejemplo Resuelto Paso a Paso\n• Notas al Orador (Locución Google Vids): \"Observa cómo resolvemos este caso completo: primero identificamos los datos, luego aplicamos el procedimiento en orden y finalmente comprobamos el resultado.\"\n\n--- DIAPOSITIVA 4 (Contraste y Prevención de Errores) ---\n• Prompt de Imagen (16:9): Modern anime style. The girl explaining a common misconception with a friendly 'warning' symbol on the board, showing both the wrong trap and the right way.\n• Texto en Pantalla (Overlay limpio): ¡Cuidado con esta trampa!\n• Notas al Orador (Locución Google Vids): \"Un error muy frecuente es confundir este concepto con su opuesto. Para evitarlo, comprueba siempre qué representa cada valor dentro del contexto real.\"\n\n--- DIAPOSITIVA 5 (Síntesis y Puente a la Práctica) ---\n• Prompt de Imagen (16:9): Modern anime style. The two 13-year-olds smiling confidently, ready to hand over the challenge to the student with their physical notebooks open. Bright welcoming lighting.\n• Texto en Pantalla (Overlay limpio): ¡Ahora te toca a ti!\n• Notas al Orador (Locución Google Vids): \"Dominar este procedimiento te da el control total. Ahora es tu turno de ponerlo en práctica con el apoyo de tu mentor.\"\n\n",
+        "slides": [
+          {
+            "slideNumber": 1,
+            "tituloMomento": "Definición del Punto de Referencia / Concepto",
+            "visualPrompt": "Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Segunda herramienta o proceso divergente. High clarity, negative space for text.",
+            "overlayText": "Concepto Clave: Segunda herramienta o proceso divergente",
+            "speakerNotes": "Para comprender este contenido, siempre necesitamos un punto de partida claro que nos permita comparar y medir cualquier cambio con exactitud.",
+            "palabrasAprox": 23,
+            "duracionSeg": 12
+          },
+          {
+            "slideNumber": 2,
+            "tituloMomento": "La Herramienta Disciplinar / Regla",
+            "visualPrompt": "Modern anime style. The boy illustrating a step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting.",
+            "overlayText": "Regla Fundamental",
+            "speakerNotes": "Esta es la regla universal: cada paso se ejecuta en un orden estricto, respetando las propiedades y el significado de cada símbolo.",
+            "palabrasAprox": 22,
+            "duracionSeg": 12
+          },
+          {
+            "slideNumber": 3,
+            "tituloMomento": "Modelado Visible del Ejemplo",
+            "visualPrompt": "Modern anime style. Detailed split view showing a problem being solved step by step with arrows and callouts. The two young protagonists highlighting the correct calculation or evidence.",
+            "overlayText": "Ejemplo Resuelto Paso a Paso",
+            "speakerNotes": "Observa cómo resolvemos este caso completo: primero identificamos los datos, luego aplicamos el procedimiento en orden y finalmente comprobamos el resultado.",
+            "palabrasAprox": 23,
+            "duracionSeg": 13
+          },
+          {
+            "slideNumber": 4,
+            "tituloMomento": "Contraste y Prevención de Errores",
+            "visualPrompt": "Modern anime style. The girl explaining a common misconception with a friendly 'warning' symbol on the board, showing both the wrong trap and the right way.",
+            "overlayText": "¡Cuidado con esta trampa!",
+            "speakerNotes": "Un error muy frecuente es confundir este concepto con su opuesto. Para evitarlo, comprueba siempre qué representa cada valor dentro del contexto real.",
+            "palabrasAprox": 24,
+            "duracionSeg": 13
+          },
+          {
+            "slideNumber": 5,
+            "tituloMomento": "Síntesis y Puente a la Práctica",
+            "visualPrompt": "Modern anime style. The two 13-year-olds smiling confidently, ready to hand over the challenge to the student with their physical notebooks open. Bright welcoming lighting.",
+            "overlayText": "¡Ahora te toca a ti!",
+            "speakerNotes": "Dominar este procedimiento te da el control total. Ahora es tu turno de ponerlo en práctica con el apoyo de tu mentor.",
+            "palabrasAprox": 22,
+            "duracionSeg": 11
+          }
+        ],
+        "ideaClave": "Un procedimiento disciplinar claro permite resolver cualquier caso siguiendo un orden verificable paso a paso.",
+        "dileAntes": "Ahora veremos la explicación formal de la regla matemática/científica. Fíjate en el paso a paso del ejemplo."
+      },
+      "paso5_practica": [
+        {
+          "context": "Caso Guiado 1",
+          "question": "En esta primera situación, ¿cuál es el primer paso que debemos realizar según la regla aprendida?",
+          "expected": "Identificar los datos e incógnita del problema.",
+          "success": "¡Correcto! Siempre partimos identificando los datos principales.",
+          "support": "Revisa la primera diapositiva de la explicación formal: ¿por dónde comenzamos?",
+          "reveal": "El primer paso es registrar claramente los datos y saber qué nos están preguntando.",
+          "studentReveal": "Identificar los datos y la pregunta."
+        },
+        {
+          "context": "Caso Guiado 2",
+          "question": "Al aplicar el procedimiento a este nuevo caso, ¿qué resultado se obtiene y cómo lo justificas?",
+          "expected": "El resultado correcto con su unidad o fundamento.",
+          "success": "¡Exacto! Aplicaste la regla en el orden correcto.",
+          "support": "Sigue el modelo de los dos jóvenes exploradores paso a paso.",
+          "reveal": "El resultado correcto se obtiene aplicando la transformación en orden y comprobando con el contexto.",
+          "studentReveal": "El resultado obtenido tras aplicar la regla."
+        }
+      ],
+      "paso6_resumen": {
+        "ideaClave": "Para resolver problemas sobre Modelado disciplinar del proceso 2, aplicamos el procedimiento en orden, verificamos el resultado y explicamos su sentido.",
+        "sintesis": "Hoy dominaste la regla central de Segunda herramienta o proceso divergente junto a tus compañeros exploradores."
+      },
+      "paso7_miniquiz": [
+        {
+          "q": "¿Cuál es el propósito central de la regla aprendida hoy sobre Modelado disciplinar del proceso 2?",
+          "options": [
+            "A) Resolver situaciones con un criterio formal y comprobable",
+            "B) Memorizar números sin entender su significado",
+            "C) Adivinar el resultado más rápido"
+          ],
+          "correct": "A",
+          "fixExplain": "El objetivo de la lección es desarrollar un procedimiento lógico que se pueda comprobar en cualquier situación."
+        },
+        {
+          "q": "Al resolver un problema de este tipo, ¿qué error frecuente debemos evitar?",
+          "options": [
+            "A) Comprobar el resultado",
+            "B) Saltar pasos y omitir el significado en el contexto",
+            "C) Leer atentamente la pregunta"
+          ],
+          "correct": "B",
+          "fixExplain": "Saltar pasos u omitir el contexto suele llevar a confusiones entre conceptos parecidos."
+        },
+        {
+          "q": "¿Cómo podemos comprobar que nuestra respuesta final es razonable?",
+          "options": [
+            "A) Volviendo al contexto original y verificando la operación inversa",
+            "B) Cambiando la pregunta",
+            "C) Borrando el procedimiento"
+          ],
+          "correct": "A",
+          "fixExplain": "Una comprobación real siempre compara el número obtenido con la situación original."
+        }
+      ],
+      "paso8_cierre": {
+        "preguntaSintesis": "En tus propias palabras, ¿cómo le explicarías a otra persona el paso más importante que aprendimos hoy?",
+        "metacognicion": "¿Qué parte de la clase te pareció más entretenida o fácil de comprender?",
+        "celebracion": "¡Gran trabajo hoy! Has dominado la Clase 4. ¡Nos vemos en la próxima misión!"
+      }
+    },
+    {
+      "num": 5,
+      "title": "Operaciones integradas y relaciones",
+      "focoDidactico": "Interacción combinada entre ambos procesos y prevención de errores",
+      "duracion": "30 Minutos",
+      "objetivoAdulto": "Acompañar al estudiante para que comprenda y aplique: Interacción combinada entre ambos procesos y prevención de errores, modelando el pensamiento disciplinar sin prisas.",
+      "climaEmocional": "Refuerza la autonomía: 'Tómate el tiempo para observar los datos antes de responder'.",
+      "situacionIntro": {
+        "dialogo": "Observa la situación de inicio de hoy. Estamos explorando Operaciones integradas y relaciones. ¿Qué observas a primera vista?",
+        "pregunta": "¿Cómo describirías esta situación con tus propias palabras?",
+        "respEsperada": "Una respuesta que identifique el concepto central de Interacción combinada entre ambos procesos y prevención de errores.",
+        "pistaSocratica": "Pídele que compare lo que conoce con lo que aparece nuevo en el ejemplo."
+      },
+      "paso2_hook": {
+        "titulo": "Video Motivacional: El Desafío de Operaciones integradas y relaciones",
+        "fullPrompt": "Actúa como Diseñador Instruccional Senior y Creador de Presentaciones en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de GANCHO MOTIVACIONAL (Paso 2) para:\n- Asignatura: Inglés\n- Objetivo de Aprendizaje: OA 10\n- Clase: 5 (\"Operaciones integradas y relaciones\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS:\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Exactamente 7 diapositivas (slide1 a slide7).\n3. ESTILO ARTÍSTICO DE LAS IMÁGENES: Anime Moderno (Modern Anime Style, estética cinematográfica de alta gama, iluminación dinámica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).\n4. PROTAGONISTAS: Dúo co-protagónico de 13 años (una joven y un joven estudiantes-exploradores chilenos). ACTÚAN JUNTOS en cada escena, colaborando, investigando y resolviendo el desafío en equipo.\n5. REGLA VISUAL ANTI-MÁSCARAS: Imágenes Full-Bleed con espacio negativo para texto. Queda prohibido usar placas oscuras que tapen las caras de los personajes o la mitad de la lámina.\n6. NOTAS AL ORADOR (GUION CONTINUO): Cada diapositiva DEBE incluir únicamente el texto de narración oral continua (entre 15 y 22 palabras por lámina) sin marcas técnicas, encabezados ni duraciones, listo para ser leído por TTS en Google Vids.\n\nDETALLE DE LAS 7 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Apertura y Contexto) ---\n• Prompt de Imagen (16:9): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Operaciones integradas y relaciones (Inglés). Cinematic lighting, warm morning atmosphere, wide negative space in top third.\n• Texto en Pantalla (Overlay limpio): Misión 5: Operaciones integradas y relaciones\n• Notas al Orador (Locución Google Vids): \"Comienza una nueva expedición de aprendizaje. Nuestros dos exploradores se preparan para enfrentar un enigma fascinante en Inglés.\"\n\n--- DIAPOSITIVA 2 (Presentación del Escenario) ---\n• Prompt de Imagen (16:9): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Interacción combinada entre ambos procesos y prevención de errores. High detail, clean lineart, soft depth of field, clear space on the left side.\n• Texto en Pantalla (Overlay limpio): Punto de Partida\n• Notas al Orador (Locución Google Vids): \"Al observar los datos iniciales, notan que para avanzar necesitan comprender con precisión cómo se relacionan estos elementos.\"\n\n--- DIAPOSITIVA 3 (Aparición del Conflicto / Misterio) ---\n• Prompt de Imagen (16:9): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes.\n• Texto en Pantalla (Overlay limpio): ¡Un obstáculo inesperado!\n• Notas al Orador (Locución Google Vids): \"De pronto, aparece una situación inesperada: los registros cambian y surge una duda que deben resolver juntos para continuar.\"\n\n--- DIAPOSITIVA 4 (Exploración de Pistas) ---\n• Prompt de Imagen (16:9): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition.\n• Texto en Pantalla (Overlay limpio): Buscando la clave\n• Notas al Orador (Locución Google Vids): \"Ambos comparan las pistas disponibles. Cada movimiento y cada dato entrega información valiosa sobre el comportamiento del fenómeno.\"\n\n--- DIAPOSITIVA 5 (El Momento Crítico) ---\n• Prompt de Imagen (16:9): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact.\n• Texto en Pantalla (Overlay limpio): Una decisión importante\n• Notas al Orador (Locución Google Vids): \"Para superar el reto no basta con adivinar: es indispensable aplicar un criterio claro y seguir un orden lógico.\"\n\n--- DIAPOSITIVA 6 (La Pregunta Detonante) ---\n• Prompt de Imagen (16:9): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection.\n• Texto en Pantalla (Overlay limpio): ¿Cómo podemos resolverlo?\n• Notas al Orador (Locución Google Vids): \"Ahora surge el verdadero desafío: ¿qué regla o procedimiento nos permitirá encontrar la respuesta exacta sin equivocarnos?\"\n\n--- DIAPOSITIVA 7 (Puente a la Lección) ---\n• Prompt de Imagen (16:9): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background.\n• Texto en Pantalla (Overlay limpio): StudioSimple · Inglés\n• Notas al Orador (Locución Google Vids): \"Existe una forma precisa de resolverlo paso a paso. ¡Descubrámosla juntos en la lección de hoy!\"\n\n",
+        "slides": [
+          {
+            "slideNumber": 1,
+            "tituloMomento": "Apertura y Contexto",
+            "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Operaciones integradas y relaciones (Inglés). Cinematic lighting, warm morning atmosphere, wide negative space in top third.",
+            "overlayText": "Misión 5: Operaciones integradas y relaciones",
+            "speakerNotes": "Comienza una nueva expedición de aprendizaje. Nuestros dos exploradores se preparan para enfrentar un enigma fascinante en Inglés.",
+            "palabrasAprox": 19,
+            "duracionSeg": 9
+          },
+          {
+            "slideNumber": 2,
+            "tituloMomento": "Presentación del Escenario",
+            "visualPrompt": "Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Interacción combinada entre ambos procesos y prevención de errores. High detail, clean lineart, soft depth of field, clear space on the left side.",
+            "overlayText": "Punto de Partida",
+            "speakerNotes": "Al observar los datos iniciales, notan que para avanzar necesitan comprender con precisión cómo se relacionan estos elementos.",
+            "palabrasAprox": 18,
+            "duracionSeg": 9
+          },
+          {
+            "slideNumber": 3,
+            "tituloMomento": "Aparición del Conflicto / Misterio",
+            "visualPrompt": "Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes.",
+            "overlayText": "¡Un obstáculo inesperado!",
+            "speakerNotes": "De pronto, aparece una situación inesperada: los registros cambian y surge una duda que deben resolver juntos para continuar.",
+            "palabrasAprox": 19,
+            "duracionSeg": 9
+          },
+          {
+            "slideNumber": 4,
+            "tituloMomento": "Exploración de Pistas",
+            "visualPrompt": "Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition.",
+            "overlayText": "Buscando la clave",
+            "speakerNotes": "Ambos comparan las pistas disponibles. Cada movimiento y cada dato entrega información valiosa sobre el comportamiento del fenómeno.",
+            "palabrasAprox": 17,
+            "duracionSeg": 8
+          },
+          {
+            "slideNumber": 5,
+            "tituloMomento": "El Momento Crítico",
+            "visualPrompt": "Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact.",
+            "overlayText": "Una decisión importante",
+            "speakerNotes": "Para superar el reto no basta con adivinar: es indispensable aplicar un criterio claro y seguir un orden lógico.",
+            "palabrasAprox": 18,
+            "duracionSeg": 9
+          },
+          {
+            "slideNumber": 6,
+            "tituloMomento": "La Pregunta Detonante",
+            "visualPrompt": "Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection.",
+            "overlayText": "¿Cómo podemos resolverlo?",
+            "speakerNotes": "Ahora surge el verdadero desafío: ¿qué regla o procedimiento nos permitirá encontrar la respuesta exacta sin equivocarnos?",
+            "palabrasAprox": 17,
+            "duracionSeg": 8
+          },
+          {
+            "slideNumber": 7,
+            "tituloMomento": "Puente a la Lección",
+            "visualPrompt": "Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background.",
+            "overlayText": "StudioSimple · Inglés",
+            "speakerNotes": "Existe una forma precisa de resolverlo paso a paso. ¡Descubrámosla juntos en la lección de hoy!",
+            "palabrasAprox": 15,
+            "duracionSeg": 7
+          }
+        ],
+        "dileAntes": "Antes de ver el video, observa con atención lo que descubren los dos exploradores y qué pregunta queda planteada.",
+        "dileDespues": "Muy buena observación. Ahora conversaremos sobre lo que descubrieron en la expedición."
+      },
+      "paso3_recorrido": [
+        {
+          "context": "Punto de partida",
+          "question": "¿Cuál fue la pista principal que encontraron los exploradores al inicio del video?",
+          "expected": "Identificar el dato o escenario inicial.",
+          "success": "¡Muy bien! Identificaste el punto de partida exacto.",
+          "support": "Recuerda fijarte en el momento en que revisan los primeros instrumentos.",
+          "reveal": "El punto de partida fue el escenario inicial donde se registraron los primeros datos.",
+          "studentReveal": "El escenario inicial con los primeros datos."
+        },
+        {
+          "context": "El obstáculo",
+          "question": "¿Qué dificultad tuvieron que enfrentar juntos para no perderse?",
+          "expected": "Reconocer la diferencia o problema planteado.",
+          "success": "¡Excelente! Reconociste el desafío central del video.",
+          "support": "Piensa en qué cambió de repente en la pantalla de control.",
+          "reveal": "Tuvieron que resolver cómo registrar el cambio sin cometer errores en la dirección o valor.",
+          "studentReveal": "Tuvieron que registrar el cambio correctamente."
+        }
+      ],
+      "paso4_explicativo": {
+        "titulo": "Video Explicativo: Formalización de Operaciones integradas y relaciones",
+        "fullPrompt": "Actúa como Diseñador Pedagógico y Especialista en Didáctica Disciplinar en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de VIDEO EXPLICATIVO / FORMALIZACIÓN (Paso 4) para:\n- Asignatura: Inglés\n- Objetivo de Aprendizaje: OA 10\n- Clase: 5 (\"Operaciones integradas y relaciones\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS:\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Formato conciso de EXACTAMENTE 5 DIAPOSITIVAS (slide1 a slide5). Enfoque exclusivo en la regla/concepto y el ejemplo modelado.\n3. ESTILO ARTÍSTICO: Anime Moderno (Modern Anime Style, limpio, didáctico y luminoso).\n4. PROTAGONISTAS: Los mismos 2 jóvenes de 13 años (la chica y el chico) manipulando el modelo disciplinar, observando la fórmula o comprobando el paso a paso juntos.\n5. REGLA VISUAL ANTI-MÁSCARAS: Imagen limpia con espacio negativo. Overlays pequeños y localizados.\n6. NOTAS AL ORADOR: Guion explicativo continuo y pedagógico (entre 22 y 30 palabras por lámina) sin encabezados técnicos, optimizado para voz en off directa en Google Vids.\n\nDETALLE DE LAS 5 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Definición del Punto de Referencia / Concepto) ---\n• Prompt de Imagen (16:9): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Interacción combinada entre ambos procesos y prevención de errores. High clarity, negative space for text.\n• Texto en Pantalla (Overlay limpio): Concepto Clave: Interacción combinada entre ambos procesos y prevención de errores\n• Notas al Orador (Locución Google Vids): \"Para comprender este contenido, siempre necesitamos un punto de partida claro que nos permita comparar y medir cualquier cambio con exactitud.\"\n\n--- DIAPOSITIVA 2 (La Herramienta Disciplinar / Regla) ---\n• Prompt de Imagen (16:9): Modern anime style. The boy illustrating a step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting.\n• Texto en Pantalla (Overlay limpio): Regla Fundamental\n• Notas al Orador (Locución Google Vids): \"Esta es la regla universal: cada paso se ejecuta en un orden estricto, respetando las propiedades y el significado de cada símbolo.\"\n\n--- DIAPOSITIVA 3 (Modelado Visible del Ejemplo) ---\n• Prompt de Imagen (16:9): Modern anime style. Detailed split view showing a problem being solved step by step with arrows and callouts. The two young protagonists highlighting the correct calculation or evidence.\n• Texto en Pantalla (Overlay limpio): Ejemplo Resuelto Paso a Paso\n• Notas al Orador (Locución Google Vids): \"Observa cómo resolvemos este caso completo: primero identificamos los datos, luego aplicamos el procedimiento en orden y finalmente comprobamos el resultado.\"\n\n--- DIAPOSITIVA 4 (Contraste y Prevención de Errores) ---\n• Prompt de Imagen (16:9): Modern anime style. The girl explaining a common misconception with a friendly 'warning' symbol on the board, showing both the wrong trap and the right way.\n• Texto en Pantalla (Overlay limpio): ¡Cuidado con esta trampa!\n• Notas al Orador (Locución Google Vids): \"Un error muy frecuente es confundir este concepto con su opuesto. Para evitarlo, comprueba siempre qué representa cada valor dentro del contexto real.\"\n\n--- DIAPOSITIVA 5 (Síntesis y Puente a la Práctica) ---\n• Prompt de Imagen (16:9): Modern anime style. The two 13-year-olds smiling confidently, ready to hand over the challenge to the student with their physical notebooks open. Bright welcoming lighting.\n• Texto en Pantalla (Overlay limpio): ¡Ahora te toca a ti!\n• Notas al Orador (Locución Google Vids): \"Dominar este procedimiento te da el control total. Ahora es tu turno de ponerlo en práctica con el apoyo de tu mentor.\"\n\n",
+        "slides": [
+          {
+            "slideNumber": 1,
+            "tituloMomento": "Definición del Punto de Referencia / Concepto",
+            "visualPrompt": "Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Interacción combinada entre ambos procesos y prevención de errores. High clarity, negative space for text.",
+            "overlayText": "Concepto Clave: Interacción combinada entre ambos procesos y prevención de errores",
+            "speakerNotes": "Para comprender este contenido, siempre necesitamos un punto de partida claro que nos permita comparar y medir cualquier cambio con exactitud.",
+            "palabrasAprox": 23,
+            "duracionSeg": 12
+          },
+          {
+            "slideNumber": 2,
+            "tituloMomento": "La Herramienta Disciplinar / Regla",
+            "visualPrompt": "Modern anime style. The boy illustrating a step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting.",
+            "overlayText": "Regla Fundamental",
+            "speakerNotes": "Esta es la regla universal: cada paso se ejecuta en un orden estricto, respetando las propiedades y el significado de cada símbolo.",
+            "palabrasAprox": 22,
+            "duracionSeg": 12
+          },
+          {
+            "slideNumber": 3,
+            "tituloMomento": "Modelado Visible del Ejemplo",
+            "visualPrompt": "Modern anime style. Detailed split view showing a problem being solved step by step with arrows and callouts. The two young protagonists highlighting the correct calculation or evidence.",
+            "overlayText": "Ejemplo Resuelto Paso a Paso",
+            "speakerNotes": "Observa cómo resolvemos este caso completo: primero identificamos los datos, luego aplicamos el procedimiento en orden y finalmente comprobamos el resultado.",
+            "palabrasAprox": 23,
+            "duracionSeg": 13
+          },
+          {
+            "slideNumber": 4,
+            "tituloMomento": "Contraste y Prevención de Errores",
+            "visualPrompt": "Modern anime style. The girl explaining a common misconception with a friendly 'warning' symbol on the board, showing both the wrong trap and the right way.",
+            "overlayText": "¡Cuidado con esta trampa!",
+            "speakerNotes": "Un error muy frecuente es confundir este concepto con su opuesto. Para evitarlo, comprueba siempre qué representa cada valor dentro del contexto real.",
+            "palabrasAprox": 24,
+            "duracionSeg": 13
+          },
+          {
+            "slideNumber": 5,
+            "tituloMomento": "Síntesis y Puente a la Práctica",
+            "visualPrompt": "Modern anime style. The two 13-year-olds smiling confidently, ready to hand over the challenge to the student with their physical notebooks open. Bright welcoming lighting.",
+            "overlayText": "¡Ahora te toca a ti!",
+            "speakerNotes": "Dominar este procedimiento te da el control total. Ahora es tu turno de ponerlo en práctica con el apoyo de tu mentor.",
+            "palabrasAprox": 22,
+            "duracionSeg": 11
+          }
+        ],
+        "ideaClave": "Un procedimiento disciplinar claro permite resolver cualquier caso siguiendo un orden verificable paso a paso.",
+        "dileAntes": "Ahora veremos la explicación formal de la regla matemática/científica. Fíjate en el paso a paso del ejemplo."
+      },
+      "paso5_practica": [
+        {
+          "context": "Caso Guiado 1",
+          "question": "En esta primera situación, ¿cuál es el primer paso que debemos realizar según la regla aprendida?",
+          "expected": "Identificar los datos e incógnita del problema.",
+          "success": "¡Correcto! Siempre partimos identificando los datos principales.",
+          "support": "Revisa la primera diapositiva de la explicación formal: ¿por dónde comenzamos?",
+          "reveal": "El primer paso es registrar claramente los datos y saber qué nos están preguntando.",
+          "studentReveal": "Identificar los datos y la pregunta."
+        },
+        {
+          "context": "Caso Guiado 2",
+          "question": "Al aplicar el procedimiento a este nuevo caso, ¿qué resultado se obtiene y cómo lo justificas?",
+          "expected": "El resultado correcto con su unidad o fundamento.",
+          "success": "¡Exacto! Aplicaste la regla en el orden correcto.",
+          "support": "Sigue el modelo de los dos jóvenes exploradores paso a paso.",
+          "reveal": "El resultado correcto se obtiene aplicando la transformación en orden y comprobando con el contexto.",
+          "studentReveal": "El resultado obtenido tras aplicar la regla."
+        }
+      ],
+      "paso6_resumen": {
+        "ideaClave": "Para resolver problemas sobre Operaciones integradas y relaciones, aplicamos el procedimiento en orden, verificamos el resultado y explicamos su sentido.",
+        "sintesis": "Hoy dominaste la regla central de Interacción combinada entre ambos procesos y prevención de errores junto a tus compañeros exploradores."
+      },
+      "paso7_miniquiz": [
+        {
+          "q": "¿Cuál es el propósito central de la regla aprendida hoy sobre Operaciones integradas y relaciones?",
+          "options": [
+            "A) Resolver situaciones con un criterio formal y comprobable",
+            "B) Memorizar números sin entender su significado",
+            "C) Adivinar el resultado más rápido"
+          ],
+          "correct": "A",
+          "fixExplain": "El objetivo de la lección es desarrollar un procedimiento lógico que se pueda comprobar en cualquier situación."
+        },
+        {
+          "q": "Al resolver un problema de este tipo, ¿qué error frecuente debemos evitar?",
+          "options": [
+            "A) Comprobar el resultado",
+            "B) Saltar pasos y omitir el significado en el contexto",
+            "C) Leer atentamente la pregunta"
+          ],
+          "correct": "B",
+          "fixExplain": "Saltar pasos u omitir el contexto suele llevar a confusiones entre conceptos parecidos."
+        },
+        {
+          "q": "¿Cómo podemos comprobar que nuestra respuesta final es razonable?",
+          "options": [
+            "A) Volviendo al contexto original y verificando la operación inversa",
+            "B) Cambiando la pregunta",
+            "C) Borrando el procedimiento"
+          ],
+          "correct": "A",
+          "fixExplain": "Una comprobación real siempre compara el número obtenido con la situación original."
+        }
+      ],
+      "paso8_cierre": {
+        "preguntaSintesis": "En tus propias palabras, ¿cómo le explicarías a otra persona el paso más importante que aprendimos hoy?",
+        "metacognicion": "¿Qué parte de la clase te pareció más entretenida o fácil de comprender?",
+        "celebracion": "¡Gran trabajo hoy! Has dominado la Clase 5. ¡Nos vemos en la próxima misión!"
+      }
+    },
+    {
+      "num": 6,
+      "title": "Simulador de problemas y evaluación sumativa",
+      "focoDidactico": "Ensayo formal de 8 preguntas tipo MINEDUC y síntesis del OA",
+      "duracion": "30 Minutos",
+      "objetivoAdulto": "Acompañar al estudiante para que comprenda y aplique: Ensayo formal de 8 preguntas tipo MINEDUC y síntesis del OA, modelando el pensamiento disciplinar sin prisas.",
+      "climaEmocional": "Refuerza la autonomía: 'Tómate el tiempo para observar los datos antes de responder'.",
+      "situacionIntro": {
+        "dialogo": "Observa la situación de inicio de hoy. Estamos explorando Simulador de problemas y evaluación sumativa. ¿Qué observas a primera vista?",
+        "pregunta": "¿Cómo describirías esta situación con tus propias palabras?",
+        "respEsperada": "Una respuesta que identifique el concepto central de Ensayo formal de 8 preguntas tipo MINEDUC y síntesis del OA.",
+        "pistaSocratica": "Pídele que compare lo que conoce con lo que aparece nuevo en el ejemplo."
+      },
+      "paso2_hook": {
+        "titulo": "Video Motivacional: El Desafío de Simulador de problemas y evaluación sumativa",
+        "fullPrompt": "Actúa como Diseñador Instruccional Senior y Creador de Presentaciones en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de GANCHO MOTIVACIONAL (Paso 2) para:\n- Asignatura: Inglés\n- Objetivo de Aprendizaje: OA 10\n- Clase: 6 (\"Simulador de problemas y evaluación sumativa\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS:\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Exactamente 7 diapositivas (slide1 a slide7).\n3. ESTILO ARTÍSTICO DE LAS IMÁGENES: Anime Moderno (Modern Anime Style, estética cinematográfica de alta gama, iluminación dinámica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).\n4. PROTAGONISTAS: Dúo co-protagónico de 13 años (una joven y un joven estudiantes-exploradores chilenos). ACTÚAN JUNTOS en cada escena, colaborando, investigando y resolviendo el desafío en equipo.\n5. REGLA VISUAL ANTI-MÁSCARAS: Imágenes Full-Bleed con espacio negativo para texto. Queda prohibido usar placas oscuras que tapen las caras de los personajes o la mitad de la lámina.\n6. NOTAS AL ORADOR (GUION CONTINUO): Cada diapositiva DEBE incluir únicamente el texto de narración oral continua (entre 15 y 22 palabras por lámina) sin marcas técnicas, encabezados ni duraciones, listo para ser leído por TTS en Google Vids.\n\nDETALLE DE LAS 7 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Apertura y Contexto) ---\n• Prompt de Imagen (16:9): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Simulador de problemas y evaluación sumativa (Inglés). Cinematic lighting, warm morning atmosphere, wide negative space in top third.\n• Texto en Pantalla (Overlay limpio): Misión 6: Simulador de problemas y evaluación sumativa\n• Notas al Orador (Locución Google Vids): \"Comienza una nueva expedición de aprendizaje. Nuestros dos exploradores se preparan para enfrentar un enigma fascinante en Inglés.\"\n\n--- DIAPOSITIVA 2 (Presentación del Escenario) ---\n• Prompt de Imagen (16:9): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Ensayo formal de 8 preguntas tipo MINEDUC y síntesis del OA. High detail, clean lineart, soft depth of field, clear space on the left side.\n• Texto en Pantalla (Overlay limpio): Punto de Partida\n• Notas al Orador (Locución Google Vids): \"Al observar los datos iniciales, notan que para avanzar necesitan comprender con precisión cómo se relacionan estos elementos.\"\n\n--- DIAPOSITIVA 3 (Aparición del Conflicto / Misterio) ---\n• Prompt de Imagen (16:9): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes.\n• Texto en Pantalla (Overlay limpio): ¡Un obstáculo inesperado!\n• Notas al Orador (Locución Google Vids): \"De pronto, aparece una situación inesperada: los registros cambian y surge una duda que deben resolver juntos para continuar.\"\n\n--- DIAPOSITIVA 4 (Exploración de Pistas) ---\n• Prompt de Imagen (16:9): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition.\n• Texto en Pantalla (Overlay limpio): Buscando la clave\n• Notas al Orador (Locución Google Vids): \"Ambos comparan las pistas disponibles. Cada movimiento y cada dato entrega información valiosa sobre el comportamiento del fenómeno.\"\n\n--- DIAPOSITIVA 5 (El Momento Crítico) ---\n• Prompt de Imagen (16:9): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact.\n• Texto en Pantalla (Overlay limpio): Una decisión importante\n• Notas al Orador (Locución Google Vids): \"Para superar el reto no basta con adivinar: es indispensable aplicar un criterio claro y seguir un orden lógico.\"\n\n--- DIAPOSITIVA 6 (La Pregunta Detonante) ---\n• Prompt de Imagen (16:9): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection.\n• Texto en Pantalla (Overlay limpio): ¿Cómo podemos resolverlo?\n• Notas al Orador (Locución Google Vids): \"Ahora surge el verdadero desafío: ¿qué regla o procedimiento nos permitirá encontrar la respuesta exacta sin equivocarnos?\"\n\n--- DIAPOSITIVA 7 (Puente a la Lección) ---\n• Prompt de Imagen (16:9): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background.\n• Texto en Pantalla (Overlay limpio): StudioSimple · Inglés\n• Notas al Orador (Locución Google Vids): \"Existe una forma precisa de resolverlo paso a paso. ¡Descubrámosla juntos en la lección de hoy!\"\n\n",
+        "slides": [
+          {
+            "slideNumber": 1,
+            "tituloMomento": "Apertura y Contexto",
+            "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Simulador de problemas y evaluación sumativa (Inglés). Cinematic lighting, warm morning atmosphere, wide negative space in top third.",
+            "overlayText": "Misión 6: Simulador de problemas y evaluación sumativa",
+            "speakerNotes": "Comienza una nueva expedición de aprendizaje. Nuestros dos exploradores se preparan para enfrentar un enigma fascinante en Inglés.",
+            "palabrasAprox": 19,
+            "duracionSeg": 9
+          },
+          {
+            "slideNumber": 2,
+            "tituloMomento": "Presentación del Escenario",
+            "visualPrompt": "Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Ensayo formal de 8 preguntas tipo MINEDUC y síntesis del OA. High detail, clean lineart, soft depth of field, clear space on the left side.",
+            "overlayText": "Punto de Partida",
+            "speakerNotes": "Al observar los datos iniciales, notan que para avanzar necesitan comprender con precisión cómo se relacionan estos elementos.",
+            "palabrasAprox": 18,
+            "duracionSeg": 9
+          },
+          {
+            "slideNumber": 3,
+            "tituloMomento": "Aparición del Conflicto / Misterio",
+            "visualPrompt": "Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes.",
+            "overlayText": "¡Un obstáculo inesperado!",
+            "speakerNotes": "De pronto, aparece una situación inesperada: los registros cambian y surge una duda que deben resolver juntos para continuar.",
+            "palabrasAprox": 19,
+            "duracionSeg": 9
+          },
+          {
+            "slideNumber": 4,
+            "tituloMomento": "Exploración de Pistas",
+            "visualPrompt": "Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition.",
+            "overlayText": "Buscando la clave",
+            "speakerNotes": "Ambos comparan las pistas disponibles. Cada movimiento y cada dato entrega información valiosa sobre el comportamiento del fenómeno.",
+            "palabrasAprox": 17,
+            "duracionSeg": 8
+          },
+          {
+            "slideNumber": 5,
+            "tituloMomento": "El Momento Crítico",
+            "visualPrompt": "Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact.",
+            "overlayText": "Una decisión importante",
+            "speakerNotes": "Para superar el reto no basta con adivinar: es indispensable aplicar un criterio claro y seguir un orden lógico.",
+            "palabrasAprox": 18,
+            "duracionSeg": 9
+          },
+          {
+            "slideNumber": 6,
+            "tituloMomento": "La Pregunta Detonante",
+            "visualPrompt": "Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection.",
+            "overlayText": "¿Cómo podemos resolverlo?",
+            "speakerNotes": "Ahora surge el verdadero desafío: ¿qué regla o procedimiento nos permitirá encontrar la respuesta exacta sin equivocarnos?",
+            "palabrasAprox": 17,
+            "duracionSeg": 8
+          },
+          {
+            "slideNumber": 7,
+            "tituloMomento": "Puente a la Lección",
+            "visualPrompt": "Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background.",
+            "overlayText": "StudioSimple · Inglés",
+            "speakerNotes": "Existe una forma precisa de resolverlo paso a paso. ¡Descubrámosla juntos en la lección de hoy!",
+            "palabrasAprox": 15,
+            "duracionSeg": 7
+          }
+        ],
+        "dileAntes": "Antes de ver el video, observa con atención lo que descubren los dos exploradores y qué pregunta queda planteada.",
+        "dileDespues": "Muy buena observación. Ahora conversaremos sobre lo que descubrieron en la expedición."
+      },
+      "paso3_recorrido": [
+        {
+          "context": "Punto de partida",
+          "question": "¿Cuál fue la pista principal que encontraron los exploradores al inicio del video?",
+          "expected": "Identificar el dato o escenario inicial.",
+          "success": "¡Muy bien! Identificaste el punto de partida exacto.",
+          "support": "Recuerda fijarte en el momento en que revisan los primeros instrumentos.",
+          "reveal": "El punto de partida fue el escenario inicial donde se registraron los primeros datos.",
+          "studentReveal": "El escenario inicial con los primeros datos."
+        },
+        {
+          "context": "El obstáculo",
+          "question": "¿Qué dificultad tuvieron que enfrentar juntos para no perderse?",
+          "expected": "Reconocer la diferencia o problema planteado.",
+          "success": "¡Excelente! Reconociste el desafío central del video.",
+          "support": "Piensa en qué cambió de repente en la pantalla de control.",
+          "reveal": "Tuvieron que resolver cómo registrar el cambio sin cometer errores en la dirección o valor.",
+          "studentReveal": "Tuvieron que registrar el cambio correctamente."
+        }
+      ],
+      "paso4_explicativo": {
+        "titulo": "Video Explicativo: Formalización de Simulador de problemas y evaluación sumativa",
+        "fullPrompt": "Actúa como Diseñador Pedagógico y Especialista en Didáctica Disciplinar en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de VIDEO EXPLICATIVO / FORMALIZACIÓN (Paso 4) para:\n- Asignatura: Inglés\n- Objetivo de Aprendizaje: OA 10\n- Clase: 6 (\"Simulador de problemas y evaluación sumativa\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS:\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Formato conciso de EXACTAMENTE 5 DIAPOSITIVAS (slide1 a slide5). Enfoque exclusivo en la regla/concepto y el ejemplo modelado.\n3. ESTILO ARTÍSTICO: Anime Moderno (Modern Anime Style, limpio, didáctico y luminoso).\n4. PROTAGONISTAS: Los mismos 2 jóvenes de 13 años (la chica y el chico) manipulando el modelo disciplinar, observando la fórmula o comprobando el paso a paso juntos.\n5. REGLA VISUAL ANTI-MÁSCARAS: Imagen limpia con espacio negativo. Overlays pequeños y localizados.\n6. NOTAS AL ORADOR: Guion explicativo continuo y pedagógico (entre 22 y 30 palabras por lámina) sin encabezados técnicos, optimizado para voz en off directa en Google Vids.\n\nDETALLE DE LAS 5 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Definición del Punto de Referencia / Concepto) ---\n• Prompt de Imagen (16:9): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Ensayo formal de 8 preguntas tipo MINEDUC y síntesis del OA. High clarity, negative space for text.\n• Texto en Pantalla (Overlay limpio): Concepto Clave: Ensayo formal de 8 preguntas tipo MINEDUC y síntesis del OA\n• Notas al Orador (Locución Google Vids): \"Para comprender este contenido, siempre necesitamos un punto de partida claro que nos permita comparar y medir cualquier cambio con exactitud.\"\n\n--- DIAPOSITIVA 2 (La Herramienta Disciplinar / Regla) ---\n• Prompt de Imagen (16:9): Modern anime style. The boy illustrating a step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting.\n• Texto en Pantalla (Overlay limpio): Regla Fundamental\n• Notas al Orador (Locución Google Vids): \"Esta es la regla universal: cada paso se ejecuta en un orden estricto, respetando las propiedades y el significado de cada símbolo.\"\n\n--- DIAPOSITIVA 3 (Modelado Visible del Ejemplo) ---\n• Prompt de Imagen (16:9): Modern anime style. Detailed split view showing a problem being solved step by step with arrows and callouts. The two young protagonists highlighting the correct calculation or evidence.\n• Texto en Pantalla (Overlay limpio): Ejemplo Resuelto Paso a Paso\n• Notas al Orador (Locución Google Vids): \"Observa cómo resolvemos este caso completo: primero identificamos los datos, luego aplicamos el procedimiento en orden y finalmente comprobamos el resultado.\"\n\n--- DIAPOSITIVA 4 (Contraste y Prevención de Errores) ---\n• Prompt de Imagen (16:9): Modern anime style. The girl explaining a common misconception with a friendly 'warning' symbol on the board, showing both the wrong trap and the right way.\n• Texto en Pantalla (Overlay limpio): ¡Cuidado con esta trampa!\n• Notas al Orador (Locución Google Vids): \"Un error muy frecuente es confundir este concepto con su opuesto. Para evitarlo, comprueba siempre qué representa cada valor dentro del contexto real.\"\n\n--- DIAPOSITIVA 5 (Síntesis y Puente a la Práctica) ---\n• Prompt de Imagen (16:9): Modern anime style. The two 13-year-olds smiling confidently, ready to hand over the challenge to the student with their physical notebooks open. Bright welcoming lighting.\n• Texto en Pantalla (Overlay limpio): ¡Ahora te toca a ti!\n• Notas al Orador (Locución Google Vids): \"Dominar este procedimiento te da el control total. Ahora es tu turno de ponerlo en práctica con el apoyo de tu mentor.\"\n\n",
+        "slides": [
+          {
+            "slideNumber": 1,
+            "tituloMomento": "Definición del Punto de Referencia / Concepto",
+            "visualPrompt": "Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Ensayo formal de 8 preguntas tipo MINEDUC y síntesis del OA. High clarity, negative space for text.",
+            "overlayText": "Concepto Clave: Ensayo formal de 8 preguntas tipo MINEDUC y síntesis del OA",
+            "speakerNotes": "Para comprender este contenido, siempre necesitamos un punto de partida claro que nos permita comparar y medir cualquier cambio con exactitud.",
+            "palabrasAprox": 23,
+            "duracionSeg": 12
+          },
+          {
+            "slideNumber": 2,
+            "tituloMomento": "La Herramienta Disciplinar / Regla",
+            "visualPrompt": "Modern anime style. The boy illustrating a step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting.",
+            "overlayText": "Regla Fundamental",
+            "speakerNotes": "Esta es la regla universal: cada paso se ejecuta en un orden estricto, respetando las propiedades y el significado de cada símbolo.",
+            "palabrasAprox": 22,
+            "duracionSeg": 12
+          },
+          {
+            "slideNumber": 3,
+            "tituloMomento": "Modelado Visible del Ejemplo",
+            "visualPrompt": "Modern anime style. Detailed split view showing a problem being solved step by step with arrows and callouts. The two young protagonists highlighting the correct calculation or evidence.",
+            "overlayText": "Ejemplo Resuelto Paso a Paso",
+            "speakerNotes": "Observa cómo resolvemos este caso completo: primero identificamos los datos, luego aplicamos el procedimiento en orden y finalmente comprobamos el resultado.",
+            "palabrasAprox": 23,
+            "duracionSeg": 13
+          },
+          {
+            "slideNumber": 4,
+            "tituloMomento": "Contraste y Prevención de Errores",
+            "visualPrompt": "Modern anime style. The girl explaining a common misconception with a friendly 'warning' symbol on the board, showing both the wrong trap and the right way.",
+            "overlayText": "¡Cuidado con esta trampa!",
+            "speakerNotes": "Un error muy frecuente es confundir este concepto con su opuesto. Para evitarlo, comprueba siempre qué representa cada valor dentro del contexto real.",
+            "palabrasAprox": 24,
+            "duracionSeg": 13
+          },
+          {
+            "slideNumber": 5,
+            "tituloMomento": "Síntesis y Puente a la Práctica",
+            "visualPrompt": "Modern anime style. The two 13-year-olds smiling confidently, ready to hand over the challenge to the student with their physical notebooks open. Bright welcoming lighting.",
+            "overlayText": "¡Ahora te toca a ti!",
+            "speakerNotes": "Dominar este procedimiento te da el control total. Ahora es tu turno de ponerlo en práctica con el apoyo de tu mentor.",
+            "palabrasAprox": 22,
+            "duracionSeg": 11
+          }
+        ],
+        "ideaClave": "Un procedimiento disciplinar claro permite resolver cualquier caso siguiendo un orden verificable paso a paso.",
+        "dileAntes": "Ahora veremos la explicación formal de la regla matemática/científica. Fíjate en el paso a paso del ejemplo."
+      },
+      "paso5_practica": [
+        {
+          "context": "Caso Guiado 1",
+          "question": "En esta primera situación, ¿cuál es el primer paso que debemos realizar según la regla aprendida?",
+          "expected": "Identificar los datos e incógnita del problema.",
+          "success": "¡Correcto! Siempre partimos identificando los datos principales.",
+          "support": "Revisa la primera diapositiva de la explicación formal: ¿por dónde comenzamos?",
+          "reveal": "El primer paso es registrar claramente los datos y saber qué nos están preguntando.",
+          "studentReveal": "Identificar los datos y la pregunta."
+        },
+        {
+          "context": "Caso Guiado 2",
+          "question": "Al aplicar el procedimiento a este nuevo caso, ¿qué resultado se obtiene y cómo lo justificas?",
+          "expected": "El resultado correcto con su unidad o fundamento.",
+          "success": "¡Exacto! Aplicaste la regla en el orden correcto.",
+          "support": "Sigue el modelo de los dos jóvenes exploradores paso a paso.",
+          "reveal": "El resultado correcto se obtiene aplicando la transformación en orden y comprobando con el contexto.",
+          "studentReveal": "El resultado obtenido tras aplicar la regla."
+        }
+      ],
+      "paso6_resumen": {
+        "ideaClave": "Para resolver problemas sobre Simulador de problemas y evaluación sumativa, aplicamos el procedimiento en orden, verificamos el resultado y explicamos su sentido.",
+        "sintesis": "Hoy dominaste la regla central de Ensayo formal de 8 preguntas tipo MINEDUC y síntesis del OA junto a tus compañeros exploradores."
+      },
+      "paso7_miniquiz": [
+        {
+          "q": "¿Cuál es el propósito central de la regla aprendida hoy sobre Simulador de problemas y evaluación sumativa?",
+          "options": [
+            "A) Resolver situaciones con un criterio formal y comprobable",
+            "B) Memorizar números sin entender su significado",
+            "C) Adivinar el resultado más rápido"
+          ],
+          "correct": "A",
+          "fixExplain": "El objetivo de la lección es desarrollar un procedimiento lógico que se pueda comprobar en cualquier situación."
+        },
+        {
+          "q": "Al resolver un problema de este tipo, ¿qué error frecuente debemos evitar?",
+          "options": [
+            "A) Comprobar el resultado",
+            "B) Saltar pasos y omitir el significado en el contexto",
+            "C) Leer atentamente la pregunta"
+          ],
+          "correct": "B",
+          "fixExplain": "Saltar pasos u omitir el contexto suele llevar a confusiones entre conceptos parecidos."
+        },
+        {
+          "q": "¿Cómo podemos comprobar que nuestra respuesta final es razonable?",
+          "options": [
+            "A) Volviendo al contexto original y verificando la operación inversa",
+            "B) Cambiando la pregunta",
+            "C) Borrando el procedimiento"
+          ],
+          "correct": "A",
+          "fixExplain": "Una comprobación real siempre compara el número obtenido con la situación original."
+        }
+      ],
+      "paso8_cierre": {
+        "preguntaSintesis": "En tus propias palabras, ¿cómo le explicarías a otra persona el paso más importante que aprendimos hoy?",
+        "metacognicion": "¿Qué parte de la clase te pareció más entretenida o fácil de comprender?",
+        "celebracion": "¡Felicitaciones! Has completado todo el Objetivo de Aprendizaje OA 10. ¡Excelente trabajo en equipo!"
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "studiosimple",
+  "version": "1.0.0",
+  "description": "EstudioSimple - Exámenes Libres MINEDUC Chile",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run dev --prefix \"Web Studio Simple\"",
+    "build": "npm run build --prefix \"Web Studio Simple\"",
+    "preview": "npm run preview --prefix \"Web Studio Simple\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "prisma": "^5.22.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "xlsx": "^0.18.5"
+  }
+}

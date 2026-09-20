@@ -1,0 +1,70 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Curso {
+  id          Int          @id @default(autoincrement())
+  grado       Int          @unique
+  nombre      String       
+  
+  oas         ObjetivoAprendizaje[]
+  clases      Clase[]
+}
+
+model Asignatura {
+  id          Int          @id @default(autoincrement())
+  nombre      String       @unique
+  
+  oas         ObjetivoAprendizaje[]
+  clases      Clase[]
+}
+
+model ObjetivoAprendizaje {
+  id              Int        @id @default(autoincrement())
+  codigo          String
+  descripcion     String
+  
+  // Guardamos las actividades sugeridas directamente como String JSON para facilitar su lectura
+  actividadesSugeridas String?
+  
+  cursoId         Int
+  curso           Curso      @relation(fields: [cursoId], references: [id], onDelete: Cascade)
+  
+  asignaturaId    Int
+  asignatura      Asignatura @relation(fields: [asignaturaId], references: [id], onDelete: Cascade)
+  
+  @@unique([codigo, cursoId, asignaturaId])
+}
+
+model Clase {
+  id              Int        @id @default(autoincrement())
+  numero          Int
+  titulo          String
+  unidad          String?
+  duracionMinutos Int        @default(30)
+  
+  cursoId         Int
+  curso           Curso      @relation(fields: [cursoId], references: [id], onDelete: Cascade)
+  
+  asignaturaId    Int
+  asignatura      Asignatura @relation(fields: [asignaturaId], references: [id], onDelete: Cascade)
+  
+  actividades     Actividad[]
+  
+  @@unique([numero, cursoId, asignaturaId])
+}
+
+model Actividad {
+  id              Int        @id @default(autoincrement())
+  tipo            String     // Ej: "OBJETIVO", "EXPLICACION_PRINCIPAL", "MINI_QUIZ"
+  contenido       String
+  orden           Int
+  
+  claseId         Int
+  clase           Clase      @relation(fields: [claseId], references: [id], onDelete: Cascade)
+}

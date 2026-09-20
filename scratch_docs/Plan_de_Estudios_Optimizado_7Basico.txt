@@ -1,0 +1,271 @@
+Plan de Estudios Estructurado y Optimizado
+Preparación Integral para Exámenes Libres (7° Año Básico)Adaptado para Estudiantes con Cortos Periodos de Atención y Alta Inteligencia
+Este documento presenta la reestructuración completa y detallada del temario oficial del Ministerio de Educación de Chile para rendir exámenes libres el próximo 21 de septiembre. El plan ha sido adaptado metodológicamente para optimizar los periodos de atención, maximizar el canal de aprendizaje oral-interactivo, suprimir la necesidad de escritura manual repetitiva e incorporar de forma estratégica las semanas colchón.
+Reglas Metodológicas del Perfil:• Duración de sesiones: 25 a 35 minutos máximos por clase.• Sin escritura manual forzada: Respuestas a través de pantallas, dictados, tarjetas u oralidad.• Mini Quizes de control: Evaluaciones directas al grano, interactivas y rápidas.• Uso de herramientas: Permitido y fomentado el uso de calculadora en matemática y diccionario impreso en inglés.
+Resumen y Ajuste de Carga Horaria
+Asignatura
+Clases Reajustadas
+Enfoque de Optimización Aplicado
+Matemática
+16 Clases
+Fusión de operaciones complejas y simplificación geométrica. Enfoque lógico.
+Ciencias Naturales
+15 Clases
+Condensación de microbiología, leyes de gases y sexualidad en bloques conceptuales.
+Historia y Geografía
+15 Clases
+Reducción del detalle memorístico enciclopédico. Foco en procesos macro y geografía.
+Lengua y Literatura
+16 Clases
+Integración de géneros literarios con ejercicios críticos visuales y argumentación oral.
+Idioma Extranjero: Inglés
+4 Clases
+Reducción de 14 sesiones redundantes por dominio nativo. Foco exclusivo en simulaciones.
+🧮 ASIGNATURA 1: MATEMÁTICA (16 Clases)
+______________________________________________________________________
+Unidad 1: Números y Operaciones
+Clase 1: Números Enteros (Z) en Contextos Reales
+• Contenido: Concepto de positivos y negativos vinculados a saldos de cuentas, temperaturas bajo cero, niveles de profundidad marina o líneas de tiempo. Ubicación en la recta numérica.
+• Video recomendado en YouTube: "Números enteros en la vida cotidiana - CuriosaMente"
+• Mini Quiz (Oral/Interactiva): Un submarino chileno está a -40 metros de profundidad y desciende otros 25 metros. ¿A qué profundidad queda de forma simbólica?
+Clase 2: Adición y Sustracción en Z
+• Contenido: Resolución de sumas y restas utilizando desplazamientos en la recta numérica. Diferenciación entre el signo del número y la operación.
+• Mini Quiz (Oral/Interactiva): Si el termómetro marca -3°C en la mañana y la temperatura sube 8°C al mediodía, ¿qué temperatura marca el termómetro?
+Clase 3: Multiplicación y División de Fracciones y Decimales Positivos (Unidades Fusionadas)
+• Contenido: Operaciones con números decimales y fracciones de manera simbólica y pictórica aplicando problemas cotidianos. Uso eficiente de la calculadora para comprobar.
+• Video recomendado en YouTube: "Multiplicación de fracciones - Math2me"
+• Mini Quiz (Oral/Interactiva): Si un cable mide 2,5 metros y se corta exactamente en partes de 0,5 metros, ¿cuántos trozos se obtienen? (Selección múltiple en pantalla)
+Clase 4: Concepto y Representación de Porcentajes
+• Contenido: Comprensión de porcentajes de forma pictórica. Relación directa con divisiones clave: calcular 50% es dividir por 2; 25% es dividir por 4; 10% es dividir por 10; 75% es dividir por 4 y multiplicar por 3.
+• Video recomendado en YouTube: "¿Qué son los porcentajes? - Daniel Carreón"
+• Mini Quiz (Oral/Interactiva): Si un juego digital cuesta $40.000 y tiene un 25% de descuento, ¿por qué número entero dividimos rápidamente de memoria para saber el ahorro?
+Clase 5: Resolución de Problemas con Porcentajes
+• Contenido: Aplicaciones de porcentajes en transacciones comerciales reales, cálculo de ofertas, recargo del IVA (19%) y presupuestos cotidianos.
+• Mini Quiz (Oral/Interactiva): Un producto cuesta $10.000 neto. Si le sumamos el 19% de IVA utilizando la calculadora, ¿cuál es el precio final?
+Unidad 2: Patrones y Álgebra
+Clase 6: Introducción al Lenguaje Algebraico
+• Contenido: Traducción de expresiones naturales cotidianas a términos algebraicos simbólicos (ej: 'el doble de un número' -> 2x, 'la mitad de un número' -> x/2) y relaciones con patrones numéricos.
+• Mini Quiz (Oral/Interactiva): ¿Cómo representarías algebraicamente la siguiente idea oral: 'El triple de un número aumentado en 10 unidades'?
+Clase 7: Resolución de Ecuaciones de Primer Grado
+• Contenido: Construcción y resolución de ecuaciones lineales sencillas utilizando el principio de equilibrio de la balanza en contextos cotidianos.
+• Mini Quiz (Oral/Interactiva): En la ecuación de la balanza 2x + 5 = 15, ¿cuál es el valor que esconde la incógnita x?
+Unidad 3: Relaciones de Proporcionalidad
+Clase 8: Proporcionalidad Directa
+• Contenido: Análisis de variables donde si una aumenta, la otra incrementa en la misma proporción. Construcción de tablas de valores y confección de gráficos en el plano lineal que parten desde el origen.
+• Mini Quiz (Oral/Interactiva): Si 2 bidones de agua cuestan $6.000, ¿cuánto costarán 4 bidones? ¿Su gráfica es una línea recta o una curva?
+Clase 9: Proporcionalidad Inversa
+• Contenido: Análisis de variables donde al aumentar una, la otra disminuye de forma proporcional. Reconocimiento de gráficos de proporcionalidad inversa (hipérbolas) y resolución de problemas cotidianos.
+• Video recomendado en YouTube: "Proporcionalidad directa e inversa - Profesora Espe"
+• Mini Quiz (Oral/Interactiva): Si 3 obreros tardan 4 días en armar una estructura metálica, ¿cuántos días tardarán 6 obreros trabajando al mismo ritmo?
+Unidad 4: Geometría y Medición
+Clase 10: El Círculo: Radio, Diámetro y Perímetro (Unidades Fusionadas)
+• Contenido: Identificación del círculo como lugar geométrico. Estudio de las relaciones métricas entre el radio (r) y el diámetro (d = 2r). Aplicación de la fórmula del perímetro (P = d * pi) usando la aproximación pi = 3,14.
+• Mini Quiz (Oral/Interactiva): Si una rueda tiene un radio medido de 10 cm, ¿cuánto mide la longitud total de su diámetro?
+Clase 11: Cálculo de Área de un Círculo
+• Contenido: Aplicación práctica de la fórmula del área (A = pi * r^2 con pi = 3,14) en la solución de problemas geométricos reales como la optimización del agua en cultivos circulares.
+• Mini Quiz (Oral/Interactiva): Calcula rápidamente con tu calculadora el área de un círculo cuyo radio es exactamente de 5 cm.
+Clase 12: El Plano Cartesiano y Vectores (Unidades Fusionadas)
+• Contenido: Identificación de coordenadas en los cuatro cuadrantes usando pares ordenados enteros (x, y). Uso de vectores de traslación de figuras geométricas 2D comprobando que sus formas se mantienen inalterables.
+• Mini Quiz (Oral/Interactiva): Si tenemos el punto (-2, 3) y lo trasladamos con el vector [3, 1], ¿en qué coordenadas queda el nuevo punto?
+Unidad 5: Datos y Probabilidades
+Clase 13: Tablas de Frecuencia y Gráficos Estadísticos
+• Contenido: Organización de datos cuantitativos en tablas de frecuencia absoluta y relativa. Lectura e interpretación de gráficos estadísticos convenientes, incluyendo diagramas de tallo y hojas.
+• Mini Quiz (Oral/Interactiva): Mirando un gráfico de tallo y hojas en pantalla con tallo 3 y hoja 7, ¿qué valor numérico exacto se está representando de la muestra?
+Clase 14: Introducción y Cálculo Intuitivo de Probabilidades
+• Contenido: Explicación de probabilidades de eventos obtenidos por medio de experimentos aleatorios manuales. Estimación intuitiva empleando frecuencias relativas registradas.
+• Mini Quiz (Oral/Interactiva): Al lanzar un dado normal de 6 caras, ¿es 'seguro', 'posible' o 'imposible' que salga el número 7?
+Clase 15: Expresión Formal de Probabilidades (Regla de Laplace)
+• Contenido: Establecimiento matemático de la probabilidad de un evento mediante razones, fracciones o expresiones porcentuales frente a un problema dado.
+• Mini Quiz (Oral/Interactiva): En una tómbola hay 4 bolitas negras y 1 bolita blanca. ¿Cuál es la probabilidad expresada en fracción de extraer la bolita blanca?
+Cierre y Evaluación General
+Clase 16: Ensayo General de Matemática
+• Contenido: Simulación oral e interactiva de 25 preguntas estilo examen oficial utilizando la calculadora. Diagnóstico final del manejo del tiempo (90 minutos).
+• Mini Quiz (Oral/Interactiva): Completar el set completo de 25 preguntas en pantalla de forma oral o con selección de alternativas sin transcribir.
+🧬 ASIGNATURA 2: CIENCIAS NATURALES (15 Clases)
+______________________________________________________________________
+Unidad 1: Biología (Sexualidad, Reproducción Humana y Microorganismos)
+Clase 1: Dimensiones de la Sexualidad Humana y Pubertad (Unidades Fusionadas)
+• Contenido: Integración de los aspectos biológicos, afectivos, psicológicos y sociales de la sexualidad basados en el respeto mutuo. Identificación de los cambios físicos y emocionales gatillados durante la pubertad.
+• Mini Quiz (Oral/Interactiva): Nombre un aspecto de la sexualidad humana que no pertenezca exclusivamente al ámbito físico-biológico.
+Clase 2: El Ciclo Menstrual y Fecundación
+• Contenido: Descripción detallada del ciclo menstrual (menstruación, ovulación, días fértiles) y su relación directa con la reproducción humana. Rol funcional de los gametos (espermatozoides y ovocitos) en la fecundación.
+• Mini Quiz (Oral/Interactiva): ¿Cómo se llama la célula que se forma inmediatamente cuando un espermatozoide fecunda a un ovocito?
+Clase 3: Métodos de Regulación de la Natalidad y Responsabilidad
+• Contenido: Caracterización y mecanismos de acción de métodos de control de la natalidad (naturales, de barrera, químicos). Análisis crítico sobre las implicancias de la paternidad y maternidad responsable en la adolescencia.
+• Mini Quiz (Oral/Interactiva): ¿Por qué los métodos de barrera como el preservativo tienen una doble función protectora en comparación con los métodos químicos?
+Clase 4: La Célula como Unidad Funcional: Eucarionte y Procarionte
+• Contenido: Comparación estructural y funcional entre células procariontes (sin núcleo celular definido, material genético disperso) y eucariontes (con núcleo celular y organelos endomembranosos).
+• Mini Quiz (Oral/Interactiva): Si observamos una célula de bacteria al microscopio y vemos que no presenta envoltura nuclear, ¿qué tipo de célula es?
+Clase 5: Microorganismos: Virus, Bacterias y Hongos (Unidades Fusionadas)
+• Contenido: Comparación de microorganismos en relación con su tamaño, forma, componentes estructurales y propiedades comunes de los seres vivos. Comprensión de por qué los virus no se consideran seres vivos autónomos.
+• Video recomendado en YouTube: "Los microorganismos - Aula365"
+• Mini Quiz (Oral/Interactiva): Nombre una diferencia estructural clave entre una bacteria (ser vivo procarionte) y un virus.
+Clase 6: Efectos de los Microorganismos en la Salud Humana
+• Contenido: Análisis de los efectos tanto negativos (patógenos) como positivos de los microorganismos en la salud, la biotecnología, la microbiota intestinal y los procesos industriales (yogur, pan, antibióticos).
+• Mini Quiz (Oral/Interactiva): ¿Qué tipo de microorganismo se utiliza de forma positiva para fermentar la masa en la industria panadera?
+Unidad 2: Física (Fuerzas en la Tierra y Tectónica de Placas)
+Clase 7: Efectos de las Fuerzas: Gravedad y Elástica
+• Contenido: Identificación y efectos de la fuerza gravitacional en situaciones cotidianas (diferencia entre masa y peso). Explicación del comportamiento de las fuerzas en elásticos y resortes (introducción intuitiva a la Ley de Hooke).
+• Mini Quiz (Oral/Interactiva): Si estiras un resorte con las manos y luego lo sueltas, ¿qué propiedad de la fuerza elástica se evidencia al volver a su estado inicial?
+Clase 8: La Fuerza de Roce o Fricción
+• Contenido: Descripción de la fuerza de roce en situaciones cotidianas: estática, cinética y fricción con el aire. Factores de los que depende (rugosidad de las superficies en contacto) y su efecto de oposición al movimiento.
+• Mini Quiz (Oral/Interactiva): ¿Por qué un auto de juguete frena mucho más rápido al rodar sobre una alfombra rugosa que sobre un piso liso de madera de la casa?
+Clase 9: Teoría de Tectónica de Placas y Dinámica del Manto
+• Contenido: El modelo de la tectónica de placas. Explicación de las corrientes de convección térmica en el manto terrestre como la causa fundamental del movimiento de los fragmentos litosféricos. Relación directa con la teoría de la deriva continental de Wegener.
+• Video recomendado en YouTube: "La tectónica de placas - Edumedia"
+• Mini Quiz (Oral/Interactiva): ¿Cuál es el motor o mecanismo interno térmico en el manto de la Tierra que hace que las placas tectónicas se muevan constantemente?
+Clase 10: Límites de Placas e Impacto Geológico en Chile
+• Contenido: Caracterización de las formas en que interactúan las placas tectónicas: límites convergentes (choque/subducción), divergentes (separación) y transformantes (desplazamiento lateral). Consecuencias sísmicas y volcánicas para Chile debido a la interacción de la Placa de Nazca y la Placa Sudamericana.
+• Mini Quiz (Oral/Interactiva): ¿Qué tipo de límite entre placas tectónicas provoca los grandes terremotos y la formación de la cordillera y volcanes en el territorio chileno?
+Unidad 3: Química (Comportamiento de los Gases y Clasificación de la Materia)
+Clase 11: Magnitudes de los Gases y Teoría Cinético-Molecular
+• Contenido: Descripción de las variables de presión (P), volumen (V) y temperatura (T) de los gases del entorno. Explicación del comportamiento molecular de los gases ideales y la compresibilidad de la materia según la teoría cinético-molecular.
+• Mini Quiz (Oral/Interactiva): Si encerramos gas dentro de una jeringa tapada y empujamos el émbolo reduciendo el espacio, ¿qué propiedad física de los gases estamos demostrando?
+Clase 12: Las Leyes de los Gases Ideales (Unidades Fusionadas)
+• Contenido: Identificación y modelamiento de las leyes de los gases en situaciones cotidianas: Ley de Boyle (relación inversa P-V), Ley de Charles (relación directa V-T) y Ley de Gay-Lussac (relación directa P-T).
+• Mini Quiz (Oral/Interactiva): Si dejamos un neumático inflado al sol y aumenta mucho su temperatura, ¿qué predice la Ley de Gay-Lussac que ocurrirá con la presión del aire en su interior?
+Clase 13: Clasificación de la Materia: Sustancias Puras y Mezclas
+• Contenido: Diferenciación y comparación de la materia: sustancias puras (elementos y compuestos) frente a mezclas de tipo homogéneas (disoluciones) y heterogéneas.
+• Mini Quiz (Oral/Interactiva): El agua mineral con gas embotellada donde se distinguen claramente las burbujas flotando separadas, ¿es una sustancia pura, una mezcla homogénea o una mezcla heterogénea?
+Clase 14: Procedimientos de Separación de Mezclas y Aplicación Industrial
+• Contenido: Identificación de métodos experimentales: decantación, filtración, tamizado y destilación. Relación directa con aplicaciones industriales críticas en Chile como la minería, la metalurgia y las plantas de potabilización o tratamiento de aguas servidas.
+• Mini Quiz (Oral/Interactiva): ¿Qué método físico de separación se utiliza en las plantas potabilizadoras para separar las partículas sólidas gruesas dejando caer el lodo pesado al fondo?
+Cierre y Conclusión
+Clase 15: Ensayo General de Ciencias Naturales
+• Contenido: Simulación interactiva de una evaluación de 25 preguntas escritas resueltas de manera puramente oral, cubriendo de forma equilibrada los tres ejes teóricos.
+• Mini Quiz (Oral/Interactiva): Responder de forma verbal el pool de preguntas tipo examen proyectado en pantalla.
+🏛️ ASIGNATURA 3: HISTORIA, GEOGRAFÍA Y CIENCIAS SOCIALES (15 Clases)
+______________________________________________________________________
+Unidad 1: De la Prehistoria a las Primeras Civilizaciones
+Clase 1: La Revolución Neolítica y el Origen del Sedentarismo
+• Contenido: El surgimiento histórico de la agricultura, la domesticación de animales y plantas como procesos de larga duración. Análisis de cómo transformaron la relación del ser humano con el espacio geográfico, permitiendo la sedentarización.
+• Mini Quiz (Oral/Interactiva): ¿Cuál fue el factor tecnológico y biológico clave que transformó a los seres humanos de nómadas cazadores en sedentarios?
+Clase 2: Excedentes Agrícolas, Comercio y Complejización Social
+• Contenido: Relación entre los avances técnicos de producción agrícola con la acumulación de bienes, excedentes alimentarios y el posterior desarrollo del comercio (trueque). División del trabajo y surgimiento de la estratificación social.
+• Mini Quiz (Oral/Interactiva): ¿Por qué la acumulación de alimentos sobrantes permitió que algunas personas dejaran de cultivar y se especializaran en otros oficios como la artesanía o la administración?
+Clase 3: Características Políticas de las Primeras Civilizaciones
+• Contenido: Análisis de los Estados organizados primitivos de carácter fluvial (Mesopotamia, Egipto) marcados por la centralización absoluta del poder político, la vida urbana y los sistemas religiosos complejos. El rol de la contabilidad y los primeros sistemas de escritura.
+• Mini Quiz (Oral/Interactiva): ¿Qué herramientas inventaron las primeras civilizaciones para poder llevar el control de los impuestos, la distribución de granos y la contabilidad del Estado?
+Unidad 2: El Mundo Clásico: Grecia y Roma
+Clase 4: La Democracia Ateniense y la Ciudadanía
+• Contenido: Análisis de las características principales de la democracia en la Atenas clásica. Definición de los rasgos de la ciudadanía antigua: los derechos políticos otorgados a los hombres libres frente a la exclusión de las mujeres, los extranjeros y los esclavos.
+• Video recomendado en YouTube: "La antigua Grecia en 15 minutos - Academia Play"
+• Mini Quiz (Oral/Interactiva): En la democracia directa de Atenas, ¿tenían las mujeres derecho a participar con su voz y voto en la plaza pública (Ágora)?
+Clase 5: La República Romana e Infraestructura
+• Contenido: Caracterización de la organización institucional de la República Romana y sus grandes aportes de orden público: el Derecho Romano escrito, el ejército profesional y la burocracia estatal. Importancia estratégica de su red de calzadas (caminos) e infraestructura urbana.
+• Mini Quiz (Oral/Interactiva): ¿Qué gran legado legal e institucional romano sigue vigente hoy en la organización de las leyes en Chile?
+Clase 6: El Imperio Romano: Expansión, Romanización y Cristianismo (Unidades Fusionadas)
+• Contenido: Extensión territorial del Imperio Romano alrededor del Mediterráneo sustentada en la fuerza del ejército. Explicación del proceso de aculturación o romanización de las provincias. Factores de difusión del cristianismo hasta convertirse en culto oficial del imperio.
+• Mini Quiz (Oral/Interactiva): ¿Cómo se llamaba el proceso mediante el cual los pueblos conquistados por Roma adoptaban su idioma latín, sus leyes y sus costumbres urbanas?
+Unidad 3: La Edad Media en Europa
+Clase 7: La Caída de Roma Occidental y la Síntesis Cultural Medieval
+• Contenido: Consecuencias geopolíticas de la fragmentación de la unidad imperial en el año 476 d.C. Explicación de la síntesis cultural europea a partir de la confluencia de tres grandes tradiciones históricas: la grecorromana, la judeocristiana y las costumbres germanas.
+• Mini Quiz (Oral/Interactiva): ¿Qué periodo de la historia universal se inicia inmediatamente después del colapso del Imperio Romano de Occidente?
+Clase 8: El Rol Político y Unificador de la Iglesia Católica
+• Contenido: Análisis del papel que ejerció la Iglesia Católica y el cristianismo como el único elemento institucional de unificación cultural en una Europa fragmentada y la legitimación divina del poder de los reyes medievales.
+• Mini Quiz (Oral/Interactiva): ¿Qué institución medieval centralizada poseía el poder de unificar espiritualmente a los reinos europeos y validar a sus monarcas?
+Clase 9: Transformaciones del Siglo XII: Ciudades y Universidades (Unidades Fusionadas)
+• Contenido: Renacimiento de la vida urbana en Europa provocado por innovaciones tecnológicas en agricultura y el desarrollo del comercio a gran escala. Surgimiento de las primeras universidades como centros de rescate de la cultura clásica.
+• Mini Quiz (Oral/Interactiva): ¿Qué instituciones de educación superior nacidas en la Baja Edad Media ayudaron a recuperar y difundir las obras del conocimiento clásico?
+Unidad 4: Civilizaciones Americanas Precolombinas y Legado Cultural
+Clase 10: La Civilización Maya y Azteca: Territorio y Tecnología Agrícola
+• Contenido: Ubicación geográfica y adaptación al entorno natural de mayas y aztecas en el área mesoamericana. Explicación del desarrollo tecnológico para transformar el territorio: las milpas (sistema de tala y roza) de los mayas y las chinampas (islas flotantes artificiales) de los aztecas.
+• Video recomendado en YouTube: "Imperio Azteca y las Chinampas - Exploradores de la Historia"
+• Mini Quiz (Oral/Interactiva): ¿Qué ingeniosa solución tecnológica crearon los aztecas para poder cultivar alimentos sobre las aguas del lago Texcoco?
+Clase 11: Sociedad, Comercio y Cosmología en Mesoamérica
+• Contenido: Impacto del desarrollo de una red comercial que vinculaba los mercados de Mesoamérica (intercambio de cacao, plumas y obsidiana). Características de la organización militar expansionista y las funciones sociales de la cosmología politeísta.
+• Mini Quiz (Oral/Interactiva): ¿Qué semilla natural altamente valorada utilizaban mayas y aztecas como sistema de intercambio comercial en sus redes de mercados?
+Clase 12: Legado del Mundo Clásico y Americano en nuestro Presente (Unidades Fusionadas)
+• Contenido: Reconocimiento en expresiones culturales latinoamericanas actuales del legado de múltiples civilizaciones. Continuidad de conceptos como República, democracia, senadores, patrimonio e infraestructura arquitectónica.
+• Mini Quiz (Oral/Interactiva): El hecho de que Chile esté organizado políticamente como una 'República' con un sistema de leyes escritas, ¿es herencia directa de qué cultura antigua?
+Clase 13: Convivencia, Conflicto y Diversidad Cultural
+• Contenido: Reconocimiento del valor de la diversidad cultural a través de ejemplos históricos del pasado medieval, destacando la influencia árabe en la lengua española actual (análisis de vocablos con prefijo 'al-') y las relaciones de frontera.
+• Mini Quiz (Oral/Interactiva): Palabras de nuestro uso cotidiano en Chile como almohada, alberca o álgebra, ¿de qué cultura medieval provienen directamente?
+Unidad 5: Geografía Humana y Medio Ambiente
+Clase 14: Relación Ser Humano y Medio Geográfico (Unidades Fusionadas)
+• Contenido: Factores geográficos que inciden de forma directa en el asentamiento de las sociedades humanas (cercanía a fuentes de agua dulce, zonas fértiles cultivables). Análisis del impacto de la acción humana sobre el paisaje (obras hidráulicas históricas, embalses, acueductos) y los riesgos de vulnerabilidad ambiental.
+• Mini Quiz (Oral/Interactiva): Nombre el recurso natural indispensable que ha determinado históricamente dónde decide asentarse una sociedad o fundarse una gran ciudad.
+Cierre y Evaluación General
+Clase 15: Ensayo General de Historia y Geografía
+• Contenido: Simulación oral evaluativa de 25 preguntas de selección múltiple con énfasis en la interpretación de procesos, causas y consecuencias.
+• Mini Quiz (Oral/Interactiva): Resolver oralmente el pool de alternativas de las 25 preguntas oficiales proyectadas.
+📚 ASIGNATURA 4: LENGUA Y LITERATURA (16 Clases)
+______________________________________________________________________
+Unidad 1: Lectura Crítica de Textos Narrativos
+Clase 1: El Conflicto Literario y la Comprensión de Narraciones
+• Contenido: Extracción de información explícita e implícita relevante dentro de textos literarios seleccionados. Análisis del núcleo central de la obra: identificación del conflicto de la historia.
+• Mini Quiz (Oral/Interactiva): Después de leer el microrrelato presentado en pantalla, ¿cuál es el problema principal o conflicto que enfrenta el protagonista?
+Clase 2: Personajes: Roles, Acciones y Efectos en el Relato
+• Contenido: Descripción de los personajes de una narración respecto de su rol específico en el conflicto (protagonista, antagonista) y análisis de cómo las acciones individuales afectan el curso de la historia.
+• Mini Quiz (Oral/Interactiva): Si el personaje secundario decide no entregar el mensaje al rey, ¿qué efecto directo provoca esa acción en el desarrollo del cuento?
+Clase 3: Voces Narrativas y Disposición Temporal de Hechos (Unidades Fusionadas)
+• Contenido: Distinción formal entre la voz del narrador y los diálogos directos de los personajes mediante marcas de puntuación (rayas, comillas). Análisis de la cronología interna del relato: orden lineal frente a anacronías o saltos temporales (flashback).
+• Mini Quiz (Oral/Interactiva): En el fragmento leído, ¿cómo sabemos textualmente que el narrador cedió la palabra directamente al protagonista?
+Clase 4: Interpretación Literaria: Dilemas Morales y Contexto
+• Contenido: Formulación de interpretaciones personales de las obras considerando los dilemas morales presentados. Vinculación de la obra con su contexto histórico de producción o la visión de mundo del autor.
+• Mini Quiz (Oral/Interactiva): Frente al dilema que enfrenta el protagonista en el capítulo, ¿cuál es tu postura personal y cómo crees que influye la época antigua en su decisión?
+Unidad 2: Análisis e Interpretación del Género Lírico
+Clase 5: Lenguaje Poético e Imágenes Sensoriales
+• Contenido: Análisis de cómo el lenguaje poético empleado por el autor apela intencionalmente a los sentidos (imágenes visuales, auditivas, táctiles), sugiere estados de ánimo y evoca emociones.
+• Video recomendado en YouTube: "Figuras literarias para niños - Smile and Learn"
+• Mini Quiz (Oral/Interactiva): En el poema presentado, el autor describe 'el viento silbando un lamento frío'. ¿A qué sentidos humanos está apelando?
+Clase 6: Lenguaje Figurado: Metáfora y Comparación (Unidades Fusionadas)
+• Contenido: Interpretación de significados profundos a partir del uso del lenguaje figurado presente en los textos líricos, analizando el funcionamiento de la metáfora pura y el recurso de la comparación formal.
+• Mini Quiz (Oral/Interactiva): Si el hablante lírico expresa que 'sus cabellos son hilos de plata', ¿qué transformación de significado está haciendo mediante esta metáfora?
+Clase 7: Lenguaje Figurado: Personificación e Hipérbole (Unidades Fusionadas)
+• Contenido: Análisis semántico de la personificación (atribuir conductas humanas a seres inanimados) y de la hipérbole (exageraciones poéticas de la realidad). Ritmo y sonoridad del poema al leerlo en voz alta.
+• Mini Quiz (Oral/Interactiva): El verso 'La tierra llora por la falta de lluvia', ¿qué figura literaria representa y qué sentimiento intenta transmitir?
+Unidad 3: Comprensión de Textos de Medios de Comunicación y Argumentativos
+Clase 8: Textos Argumentativos: Posturas y Argumentos
+• Contenido: Análisis y evaluación de columnas de opinión, discursos y cartas al director. Identificación de la tesis o postura del autor y las evidencias o argumentos lógicos que la sostienen.
+• Mini Quiz (Oral/Interactiva): En la columna leída sobre el reciclaje en Chile, ¿cuál es la opinión central que defiende el periodista?
+Clase 9: Distinción Crítica entre Hecho y Opinión
+• Contenido: Aplicación de estrategias analíticas para distinguir de forma impecable entre hechos objetivos comprobables y opiniones subjetivas expresadas dentro de textos argumentativos.
+• Mini Quiz (Oral/Interactiva): Identifica cuál de estas dos frases representa un hecho objetivo: A) 'El libro tiene 200 páginas' B) 'El libro es aburrido'
+Clase 10: Medios de Comunicación e Información Multimodal
+• Contenido: Análisis de textos de los medios de comunicación (noticias, reportajes, publicidad) buscando propósitos explícitos e implícitos. Interpretación de elementos gráficos adjuntos (imágenes, tablas, infografías).
+• Mini Quiz (Oral/Interactiva): Si la infografía de una noticia sobre energía solar muestra un dibujo gigante del Sol interactuando con paneles, ¿cuál es el propósito de ese elemento visual?
+Clase 11: Estereotipos y Prejuicios en los Medios
+• Contenido: Análisis crítico de la presencia de estereotipos sociales, de género y prejuicios culturales en los discursos de los medios de comunicación y la publicidad.
+• Mini Quiz (Oral/Interactiva): Al observar este anuncio publicitario antiguo, ¿qué estereotipo de roles de género tradicionales se está promoviendo en la imagen?
+Unidad 4: Escritura Guiada y Coherencia Comunicativa
+Clase 12: Planificación Adecuada al Contexto y Destinatario
+• Contenido: Pasos iniciales para la producción escrita: determinación del propósito comunicativo, recopilación de ideas, y adecuación del registro lingüístico (formal o informal) según el destinatario asignado.
+• Mini Quiz (Oral/Interactiva): Si vas a escribir una carta formal dirigida al alcalde, ¿es adecuado utilizar modismos o abreviaciones informales de redes sociales?
+Clase 13: Coherencia, Cohesión y Conectores Textuales (Unidades Fusionadas)
+• Contenido: Estrategias de organización textual a nivel oracional y de párrafo para asegurar la coherencia global del tema. Uso preciso de conectores lógicos para unir armónicamente las secciones de un escrito breve.
+• Mini Quiz (Oral/Interactiva): Une de forma oral estas dos ideas usando un conector de causa lógico: 'No salí a andar en bicicleta...' / 'Hacía demasiado frío'
+Clase 14: Normas Gramaticales y Concordancia
+• Contenido: Corrección de usos inadecuados en textos escritos: conjugaciones verbales correctas, uso apropiado de pronombres, y leyes de concordancia obligatorias (sujeto-verbo, artículo-sustantivo).
+• Mini Quiz (Oral/Interactiva): Corrige la concordancia de la siguiente frase errónea: 'Las computadoras modernos procesa rápido la información'
+Clase 15: Ortografía Literal, Puntual y Acentual
+• Contenido: Revisión y edición de textos breves aplicando normas básicas de ortografía literal, uso correcto de mayúsculas, puntos, y reglas generales de acentuación gráfica (agudas, graves, esdrújulas).
+• Mini Quiz (Oral/Interactiva): ¿Por qué la palabra 'árbol' debe llevar tilde de forma obligatoria según las reglas de acentuación de las palabras graves?
+Cierre y Evaluación General
+Clase 16: Ensayo General de Lengua y Literatura
+• Contenido: Simulación interactiva de comprensión lectora crítica y análisis textual con 25 preguntas estilo examen nacional.
+• Mini Quiz (Oral/Interactiva): Resolver las 25 preguntas de la prueba oficial de forma oral o con marcas directas en la pantalla.
+🇬🇧 ASIGNATURA 5: IDIOMA EXTRANJERO: INGLÉS (4 Clases)
+______________________________________________________________________
+Evaluación Estratégica y Adecuación Formal (Foco Reading & Writing)
+Clase 1: Simulación de Reading - Formato y Localización de Datos
+• Contenido: Práctica de lectura de textos informativos auténticos simples adaptados al nivel del examen chileno. Ejercicios para responder preguntas escritas en español que exigen la localización de datos explícitos específicos, evitando sesgos por conocimiento general.
+• Mini Quiz (Oral/Interactiva): According to the text, what specific equipment does a player need for karate? Indícame la línea exacta del texto en papel que demuestra tu respuesta.
+Clase 2: Simulación de Reading - Conectores y Relaciones Lógicas
+• Contenido: Identificación dentro de textos de las relaciones lógicas complejas de causa-efecto, hecho-opinión, adición o secuencia a través del uso de conectores normados (first, next, finally, because, when, while, if).
+• Mini Quiz (Oral/Interactiva): En la oración del texto: 'The match was suspended because it was raining', ¿cuál es la causa gramatical exacta y qué conector la introduce?
+Clase 3: Simulación de Writing - Expresión Escrita Estructurada
+• Contenido: Producción escrita guiada de textos breves informando sobre experiencias personales o problemas globales (medio ambiente). Uso obligatorio de las funciones requeridas: cuantificadores (there is/are), modales de obligación (must/mustn't) y adjetivos formales.
+• Mini Quiz (Oral/Interactiva): Redacta una opinión formal sobre el reciclaje en pantalla (máximo 4 líneas) utilizando de forma correcta el conector 'because' y el modal 'must'.
+Clase 4: Ensayo de Examen con Uso de Diccionario Físico
+• Contenido: Aplicación de un modelo de examen completo de inglés de 25 preguntas escritas con un tiempo límite de 90 minutos. Entrenamiento técnico en el hojeado rápido del diccionario impreso para resolver dudas puntuales de enunciados en español.
+• Mini Quiz (Oral/Interactiva): Completar la simulación de las 25 preguntas reales manejando eficientemente el diccionario físico autorizado.
+🗓️ CRONOGRAMA SEMANAL Y DISTRIBUCIÓN COLCHÓN
+Para garantizar un ritmo óptimo que proteja los periodos de atención sin saturar el procesamiento cognitivo, se implementará un esquema estructurado de máximo dos clases por día de lunes a viernes, distribuido de la siguiente forma general durante las semanas de estudio:
+Lunes: Matemática + Lengua y Literatura
+Martes: Ciencias Naturales + Historia y Geografía
+Miércoles: Matemática + Ciencias Naturales
+Jueves: Historia y Geografía + Lengua y Literatura
+Viernes: Clase única de Inglés (Semanas 1 a 4) / Bloque Colchón y Repaso Lúdico Interactivo (Semanas 5 a 12).
+🛡️ Operación de las Semanas Colchón (Amortiguación)
+El plan teórico consolidado consume exactamente 11 semanas efectivas de avance académico. Al proyectar el trabajo de lunes a viernes hasta el inicio de los exámenes el 21 de septiembre, se aseguran automáticamente 2 semanas completas como colchón libre de amortiguación, sumado a los espacios de amortiguación de todos los días viernes a partir de la quinta semana.Regla Dinámica: Cada tres semanas consecutivas de avance, si se observa fatiga, saturación o la necesidad de consolidar algún contenido de Matemática o Ciencias, se suspenderá la entrega de nuevos contenidos y se utilizará el bloque del viernes y los días correlativos de la semana siguiente exclusivamente para dinámicas de repaso oral o lúdico en pantalla. Si el estudiante asimila el objetivo de la sesión rápidamente, el plan permite acelerar el ritmo y acumular esos días como un colchón de descanso extendido al final del proceso.

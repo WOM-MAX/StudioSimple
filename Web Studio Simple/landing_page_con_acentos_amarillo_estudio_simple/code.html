@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en" style=""><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#123a72",
+                        "error-container": "#93000a",
+                        "error": "#ffb4ab",
+                        "primary-fixed": "#d7e2ff",
+                        "surface-tint": "#abc7ff",
+                        "surface-variant": "#323537",
+                        "on-background": "#e0e3e5",
+                        "secondary-container": "#f27a00",
+                        "tertiary": "#57d6f3",
+                        "surface": "#101415",
+                        "surface-container-high": "#272a2c",
+                        "on-tertiary-container": "#24b4d0",
+                        "outline-variant": "#434750",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary": "#003640",
+                        "primary-fixed-dim": "#abc7ff",
+                        "on-primary-container": "#85a6e4",
+                        "on-tertiary-fixed": "#001f26",
+                        "on-surface-variant": "#c3c6d1",
+                        "on-secondary-fixed-variant": "#723600",
+                        "background": "#0b0f10",
+                        "on-primary-fixed-variant": "#22467f",
+                        "on-secondary-container": "#542600",
+                        "on-error": "#690005",
+                        "surface-dim": "#101415",
+                        "surface-container": "#1d2022",
+                        "primary": "#abc7ff",
+                        "surface-container-highest": "#323537",
+                        "surface-bright": "#363a3b",
+                        "inverse-on-surface": "#2d3133",
+                        "inverse-primary": "#3c5e98",
+                        "secondary-fixed": "#ffdcc6",
+                        "on-secondary": "#502400",
+                        "on-primary": "#002f66",
+                        "on-secondary-fixed": "#311300",
+                        "surface-container-lowest": "#0b0f10",
+                        "inverse-surface": "#e0e3e5",
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "secondary": "#ffb786",
+                        "surface-container-low": "#191c1e",
+                        "tertiary-container": "#00414d",
+                        "secondary-fixed-dim": "#ffb786",
+                        "outline": "#8d909b",
+                        "tertiary-fixed": "#abedff",
+                        "on-surface": "#ffffff",
+                        "on-primary-fixed": "#001b3f",
+                        "tertiary-fixed-dim": "#57d6f3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "xl": "64px",
+                        "xs": "4px",
+                        "gutter": "24px",
+                        "lg": "40px",
+                        "margin-desktop": "48px",
+                        "md": "24px",
+                        "base": "8px",
+                        "sm": "12px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "label-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    }catch(_e){}</script></head><body class="bg-[#1C3257] text-on-surface font-body-md overflow-x-hidden selection:bg-tertiary/30" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 glass-nav border-b border-white/10 shadow-lg transition-transform" style="background-color: #F8AD22; backdrop-filter: none;">
+<div class="flex justify-between items-center px-margin-desktop max-w-7xl mx-auto py-6">
+<div class="flex items-center shrink-0"><img alt="Estudio Simple Logo" class="h-24 w-auto object-contain brightness-110 rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzITEOMUMDI_qo43GNMCOTU5eLGrbf47tRdh2joDgb3rdHjXeiQc0QvHeewzIKoGtJtEizBTOhScCvysYVo3uyskZ91QGQO0iHGk3lj6igUh2aiZVDZ1vzU_eRuzukBbVYwuLEPDFUvO2Ex0x_0qti8sgdofglbocsfk_gVmXu6oPzBkm4yqyTw1ARXT_rtKOfwQNbIXjTAjMUD4oVwQjMVj8PQBwbJcDxDWII14LHemq6yhru-CMw3dBd_pfhYRPFKzc"/></div>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="font-label-md text-label-md font-bold border-b-2 border-primary pb-1 hover:text-tertiary hover:-translate-y-0.5 transition-all duration-200 text-white" href="#home" style="color: #0A192F; font-family: 'Arial Rounded MT Bold', 'Arial Rounded', sans-serif;">Inicio</a>
+<a class="font-label-md text-label-md hover:text-tertiary hover:-translate-y-0.5 transition-all duration-200 text-white" href="#method" style="color: #0A192F; font-family: 'Arial Rounded MT Bold', 'Arial Rounded', sans-serif;">Salón de Clases Virtual</a>
+<a class="font-label-md text-label-md hover:text-tertiary hover:-translate-y-0.5 transition-all duration-200 text-white" href="#pricing" style="color: #0A192F; font-family: 'Arial Rounded MT Bold', 'Arial Rounded', sans-serif;">Precios</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="font-label-md text-label-md text-white hover:text-primary transition-colors duration-200" href="#login" style="color: #0A192F; font-family: 'Arial Rounded MT Bold', 'Arial Rounded', sans-serif;">Iniciar Sesión</a>
+<button aria-label="Toggle dark mode" class="text-white hover:text-tertiary transition-colors" id="theme-toggle" style="color: #0A192F; font-family: 'Arial Rounded MT Bold', 'Arial Rounded', sans-serif;">
+<span class="material-symbols-outlined text-[24px]">light_mode</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-40">
+<!-- Hero Section -->
+<section class="mx-auto py-24 relative animate-on-scroll is-visible" id="home">
+<div class="absolute inset-0 bg-primary-container/20 rounded-3xl blur-[120px] -z-10"></div>
+<div class="relative h-[600px] md:h-[700px] lg:h-[800px] w-full overflow-hidden">
+<div class="absolute bottom-0 left-0 p-margin-mobile md:p-margin-desktop z-20 max-w-3xl space-y-6 md:px-margin-desktop mb-4">
+<div class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-tertiary/10 font-label-md text-label-md border border-tertiary/30 shadow-[0_0_15px_rgba(87,214,243,0.15)] font-bold text-lg mt-8" style="color: rgb(18, 161, 164);"><span class="material-symbols-outlined text-[16px] mr-2">school</span><span class="font-bold" style="font-weight: 900;">Método Exclusivo 3º a 8º Básico</span></div>
+<h1 class="font-display-lg-mobile font-bold text-white leading-tight text-4xl md:text-5xl animate-hero-title" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>Prepara sus exámenes libres <span class="text-tertiary" style='color: rgb(18, 161, 164); font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>sin estrés.</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md text-lg" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>Tú pones la dedicación diaria, nosotros te damos las herramientas de un experto. </p>
+<div class="pt-6 flex flex-col gap-3">
+<button class="bg-secondary-container text-white px-8 py-4 rounded-[16px] font-headline-sm text-headline-sm cta-spring shadow-lg shadow-secondary-container/30 border border-secondary-container/50 hover:shadow-xl hover:scale-105 transition-all" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>
+                            Comenzar Prueba Gratis
+                        </button>
+</div>
+</div>
+<img alt="Hero Background" class="absolute inset-0 w-full h-full object-cover z-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRW2KXtTa8uVAqrgbcAbKuBLf1wivJM0N2uvsLx1YzyUtjaGmTuWESufTzMd78gt5yZ8z97wWgfkK3qE9e_yZjNYzTw_FeU-XWwRmqviZ_8gAKy9zXl30KPP9B_Y6IXlwupqP-IejLV7AXeGBILE4MJNRm_6JOSFhU7E6xwVzS3z3MnXWq3MKw2Bhah77uboJb6iznOaqEW2gmKVahZ2gDNpkNQXZa3IhBwYQHJYuVlVkzWiYdPSPODqn0kIYwq_3TeO4"/><div class="absolute inset-0 bg-gradient-to-tr from-[#1C3257]/90 via-[#1C3257]/40 to-transparent z-10"></div>
+</div>
+</section>
+<section class="px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto py-24">
+<div class="text-center mb-lg animate-on-scroll is-visible">
+<h2 class="font-display-lg-mobile text-white text-4xl md:text-5xl leading-tight" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>
+            ¿Cómo logramos el éxito académico?
+        </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1 -->
+<div class="animate-on-scroll delay-100 bg-white/5 border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:border-primary/40 is-visible">
+<div class="w-16 h-16 rounded-2xl bg-[#123a72] flex items-center justify-center mb-6 shadow-lg">
+<span class="material-symbols-outlined text-white text-3xl">grid_view</span>
+</div>
+<h3 class="font-headline-sm text-white mb-3" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>1. Bloques Independientes</h3>
+<p class="font-body-md text-on-surface-variant" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>Sesiones modulares de 30 minutos sin libros densos. Un formato paso a paso, visual y sin estrés para tu hijo.</p>
+</div>
+<!-- Card 2 -->
+<div class="animate-on-scroll delay-200 bg-white/5 border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:border-tertiary/40 is-visible">
+<div class="w-16 h-16 rounded-2xl bg-[#24b4d0] flex items-center justify-center mb-6 shadow-lg">
+<span class="material-symbols-outlined text-white text-3xl">menu_book</span>
+</div>
+<h3 class="font-headline-sm text-white mb-3" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>2. Temario MINEDUC</h3>
+<p class="font-body-md text-on-surface-variant" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>Ruta exacta de 3° a 8° Básico con el temario oficial del MINEDUC. Contenido directo, organizado y sin relleno. </p>
+</div>
+<!-- Card 3 -->
+<div class="animate-on-scroll delay-300 bg-white/5 border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:border-secondary/40 is-visible">
+<div class="w-16 h-16 rounded-2xl bg-[#f27a00] flex items-center justify-center mb-6 shadow-lg">
+<span class="material-symbols-outlined text-white text-3xl">gavel</span>
+</div>
+<h3 class="font-headline-sm text-white mb-3" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>3. Respaldo Legal</h3>
+<p class="font-body-md text-on-surface-variant" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>Nuestro sistema cumple estrictamente con los Decretos 2272 y 67 para certificar legalmente el año escolar.</p>
+</div>
+<!-- Card 4 -->
+<div class="animate-on-scroll delay-400 bg-white/5 border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:border-primary/40 is-visible">
+<div class="w-16 h-16 rounded-2xl bg-[#FFC107] flex items-center justify-center mb-6 shadow-lg">
+<span class="material-symbols-outlined text-[#001b3f] text-3xl">fact_check</span>
+</div>
+<h3 class="font-headline-sm text-white mb-3" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>4. Evaluación</h3>
+<p class="font-body-md text-on-surface-variant" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>Simulacros de examen idénticos a los oficiales para garantizar que lleguen con total seguridad.</p>
+</div>
+</div>
+</section>
+<!-- Method Tabs Section -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-5xl mx-auto py-24 animate-on-scroll is-visible" id="method">
+<div class="text-center mb-lg">
+<h2 class="font-headline-md text-headline-md text-white mb-4" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>Nuestro Método</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto text-lg" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>Organización visual para una claridad absoluta.</p>
+</div>
+<div class="bg-white/5 border border-white/10 rounded-2xl shadow-xl shadow-black/40 overflow-hidden hover:shadow-2xl transition-all duration-300 bg-[#1C3257]/50">
+<!-- Tab Navigation -->
+<div class="flex border-b border-white/10 min-h-[60px] relative bg-[#123a72]/30">
+<button class="tab-btn flex-1 py-4 px-6 text-center font-headline-sm text-sm transition-all duration-300 focus:outline-none text-white hover:brightness-110 font-bold bg-[#123a72] opacity-100 scale-105 z-10 shadow-lg" data-target="tab-1" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>Paso 1</button>
+<button class="tab-btn flex-1 py-4 px-6 text-center font-headline-sm text-sm transition-all duration-300 focus:outline-none bg-[#24b4d0] text-white hover:brightness-110 font-bold opacity-80" data-target="tab-2" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>Paso 2</button>
+<button class="tab-btn flex-1 py-4 px-6 text-center font-headline-sm text-sm transition-all duration-300 focus:outline-none bg-[#4ade80] text-[#001b3f] font-bold hover:brightness-110 opacity-80" data-target="tab-3" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>Paso 3</button>
+<button class="tab-btn flex-1 py-4 px-6 text-center font-headline-sm text-sm transition-all duration-300 focus:outline-none bg-[#f27a00] text-white font-bold hover:brightness-110 opacity-80" data-target="tab-4" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>Paso 4</button>
+</div>
+<!-- Tab Contents -->
+<div class="relative p-8 md:p-12 min-h-[300px]">
+<!-- Tab 1 -->
+<div class="tab-content flex-col md:flex-row gap-8 items-center gap-gutter" id="tab-1" style="display: flex;">
+<div class="flex-1 space-y-4">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary font-label-sm border border-primary/20">
+                    Estructura
+                </div>
+<h3 class="font-display-lg-mobile text-white" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>Guías de Estudio Estructuradas</h3>
+<p class="font-body-lg text-gray-300" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>Material diseñado para reducir la carga cognitiva. Cada unidad está dividida en módulos fáciles de digerir con objetivos claros diarios. Una metodología clara y estructurada.</p>
+</div>
+<div class="shrink-0 p-8 bg-primary/5 rounded-2xl border border-primary/10 shadow-inner md:ml-8">
+<span class="material-symbols-outlined text-8xl text-primary">menu_book</span>
+</div>
+</div>
+<!-- Tab 2 -->
+<div class="tab-content flex-col md:flex-row gap-8 items-center gap-gutter" id="tab-2" style="display: none;">
+<div class="flex-1 space-y-4">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-tertiary/10 text-tertiary font-label-sm border border-tertiary/20">
+                    Retención
+                </div>
+<h3 class="font-display-lg-mobile text-white" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>Recursos Visuales</h3>
+<p class="font-body-lg text-gray-300" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>Esquemas y resúmenes estilo Canva para mejorar la retención visual. Aprendizaje atractivo y fácil de procesar visualmente.</p>
+</div>
+<div class="shrink-0 p-8 bg-tertiary/5 rounded-2xl border border-tertiary/10 shadow-inner md:ml-8">
+<span class="material-symbols-outlined text-8xl text-tertiary">palette</span>
+</div>
+</div>
+<!-- Tab 3 -->
+<div class="tab-content flex-col md:flex-row gap-8 items-center gap-gutter" id="tab-3" style="display: none;">
+<div class="flex-1 space-y-4">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#4ade80]/10 text-[#4ade80] font-label-sm border border-[#4ade80]/20">
+                    Control
+                </div>
+<h3 class="font-display-lg-mobile text-white" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>Seguimiento</h3>
+<p class="font-body-lg text-gray-300" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>Trackers interactivos para que los padres vean el progreso en tiempo real. Mantén el control del avance de forma sencilla y clara.</p>
+</div>
+<div class="shrink-0 p-8 bg-[#4ade80]/5 rounded-2xl border border-[#4ade80]/10 shadow-inner md:ml-8">
+<span class="material-symbols-outlined text-8xl text-[#4ade80]">monitoring</span>
+</div>
+</div>
+<!-- Tab 4 -->
+<div class="tab-content flex-col md:flex-row gap-8 items-center gap-gutter" id="tab-4" style="display: none;">
+<div class="flex-1 space-y-4">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary/10 text-secondary font-label-sm border border-secondary/20">
+                    Oficial
+                </div>
+<h3 class="font-display-lg-mobile text-white" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>Cumplimiento MINEDUC</h3>
+<p class="font-body-lg text-gray-300" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>Nuestro temario está 100% alineado con las bases curriculares vigentes. Apoyamos el proceso bajo el marco normativo sobre exámenes de validación de estudios.</p>
+</div>
+<div class="shrink-0 p-8 bg-secondary/5 rounded-2xl border border-secondary/10 shadow-inner md:ml-8">
+<span class="material-symbols-outlined text-8xl text-secondary">gavel</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto py-24">
+<div class="text-center mb-lg animate-on-scroll is-visible">
+<h2 class="font-headline-md text-headline-md text-white mb-4" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>Lo que dicen las familias</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="animate-on-scroll delay-100 bg-white/5 border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:border-secondary-container/50 is-visible">
+<div class="flex mb-6 drop-shadow-[0_0_8px_rgba(242,122,0,0.3)] text-yellow-400">
+<span class="material-symbols-outlined text-xl">star</span>
+<span class="material-symbols-outlined text-xl">star</span>
+<span class="material-symbols-outlined text-xl">star</span>
+<span class="material-symbols-outlined text-xl">star</span>
+<span class="material-symbols-outlined text-xl">star</span>
+</div>
+<p class="font-body-md text-gray-300 mb-8 text-lg italic" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>"Estudio Simple nos devolvió la tranquilidad. El material es súper claro y mi hijo por fin disfruta aprender. Los exámenes libres ya no son un dolor de cabeza."</p>
+<div class="flex items-center gap-4 border-t border-white/10 pt-4">
+<div class="w-12 h-12 rounded-full bg-white/10 border border-white/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant">person</span>
+</div>
+<div>
+<div class="font-headline-sm text-sm text-white">María Fernanda P.</div>
+<div class="font-label-sm text-on-surface-variant">Mamá de alumno de 6º Básico</div>
+</div>
+</div>
+</div>
+<div class="animate-on-scroll delay-200 bg-white/5 border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:border-secondary-container/50 is-visible">
+<div class="flex mb-6 drop-shadow-[0_0_8px_rgba(242,122,0,0.3)] text-yellow-400">
+<span class="material-symbols-outlined text-xl">star</span>
+<span class="material-symbols-outlined text-xl">star</span>
+<span class="material-symbols-outlined text-xl">star</span>
+<span class="material-symbols-outlined text-xl">star</span>
+<span class="material-symbols-outlined text-xl">star</span>
+</div>
+<p class="font-body-md text-gray-300 mb-8 text-lg italic" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>"La plataforma es increíblemente intuitiva. Los trackers de progreso me ayudan a saber exactamente dónde estamos. Cumplimos con todo lo del MINEDUC sin problemas."</p>
+<div class="flex items-center gap-4 border-t border-white/10 pt-4">
+<div class="w-12 h-12 rounded-full bg-white/10 border border-white/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant">person</span>
+</div>
+<div>
+<div class="font-headline-sm text-sm text-white">Carlos R.</div>
+<div class="font-label-sm text-on-surface-variant">Papá de alumna de 8º Básico</div>
+</div>
+</div>
+</div>
+<div class="animate-on-scroll delay-300 bg-white/5 border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:border-secondary-container/50 is-visible">
+<div class="flex mb-6 drop-shadow-[0_0_8px_rgba(242,122,0,0.3)] text-yellow-400">
+<span class="material-symbols-outlined text-xl">star</span>
+<span class="material-symbols-outlined text-xl">star</span>
+<span class="material-symbols-outlined text-xl">star</span>
+<span class="material-symbols-outlined text-xl">star</span>
+<span class="material-symbols-outlined text-xl">star</span>
+</div>
+<p class="font-body-md text-gray-300 mb-8 text-lg italic" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>"Agradezco enormemente el diseño de los materiales. Mi hija, que se distraía fácilmente, ahora sigue las guías con entusiasmo y autonomía. ¡Recomendadísimo!"</p>
+<div class="flex items-center gap-4 border-t border-white/10 pt-4">
+<div class="w-12 h-12 rounded-full bg-white/10 border border-white/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant">person</span>
+</div>
+<div>
+<div class="font-headline-sm text-sm text-white">Andrea V.</div>
+<div class="font-label-sm text-on-surface-variant">Mamá de alumna de 4º Básico</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-4xl mx-auto py-24 animate-on-scroll is-visible">
+<div class="text-center mb-lg">
+<h2 class="font-headline-md text-headline-md text-white mb-4" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>Preguntas Frecuentes</h2>
+</div>
+<div class="space-y-4">
+<details class="group bg-white/5 rounded-xl border border-white/10 overflow-hidden hover:border-tertiary/40 transition-all duration-300 hover:scale-[1.01] hover:shadow-lg shadow-md">
+<summary class="font-headline-sm text-headline-sm text-white p-6 cursor-pointer flex justify-between items-center outline-none hover:bg-white/5 transition-colors gap-4">
+                ¿Cómo aseguran el cumplimiento con el MINEDUC?
+                <span class="material-symbols-outlined text-tertiary transition-transform duration-300 group-open:rotate-180 bg-tertiary/10 p-1.5 rounded-full">expand_more</span>
+</summary>
+<div class="details-content">
+<div class="px-6 pb-6 text-gray-300 font-body-md text-body-md text-lg border-t border-white/5 pt-4">
+                Todos nuestros temarios y materiales están rigurosamente alineados con las bases curriculares actuales del Ministerio de Educación (Decreto 2272 y 67), asegurando que tu hijo estudie exactamente lo que será evaluado.
+            </div>
+</div>
+</details>
+<details class="group bg-white/5 rounded-xl border border-white/10 overflow-hidden hover:border-tertiary/40 transition-all duration-300 hover:scale-[1.01] hover:shadow-lg shadow-md">
+<summary class="font-headline-sm text-headline-sm text-white p-6 cursor-pointer flex justify-between items-center outline-none hover:bg-white/5 transition-colors gap-4">
+                ¿Necesito ser profesor para enseñar a mi hijo?
+                <span class="material-symbols-outlined text-tertiary transition-transform duration-300 group-open:rotate-180 bg-tertiary/10 p-1.5 rounded-full">expand_more</span>
+</summary>
+<div class="details-content">
+<div class="px-6 pb-6 text-gray-300 font-body-md text-body-md text-lg border-t border-white/5 pt-4">
+                En absoluto. Nuestro material está diseñado con instrucciones claras "paso a paso" para que cualquier padre pueda guiar el proceso sin experiencia previa en pedagogía.
+            </div>
+</div>
+</details>
+<details class="group bg-white/5 rounded-xl border border-white/10 overflow-hidden hover:border-tertiary/40 transition-all duration-300 hover:scale-[1.01] hover:shadow-lg shadow-md">
+<summary class="font-headline-sm text-headline-sm text-white p-6 cursor-pointer flex justify-between items-center outline-none hover:bg-white/5 transition-colors gap-4">
+                ¿Qué pasa si tenemos dudas técnicas con la plataforma?
+                <span class="material-symbols-outlined text-tertiary transition-transform duration-300 group-open:rotate-180 bg-tertiary/10 p-1.5 rounded-full">expand_more</span>
+</summary>
+<div class="details-content">
+<div class="px-6 pb-6 text-gray-300 font-body-md text-body-md text-lg border-t border-white/5 pt-4">
+                Contamos con soporte técnico dedicado por correo electrónico y WhatsApp para resolver cualquier inconveniente rápidamente, asegurando que el estudio no se interrumpa.
+            </div>
+</div>
+</details>
+<details class="group bg-white/5 rounded-xl border border-white/10 overflow-hidden hover:border-tertiary/40 transition-all duration-300 hover:scale-[1.01] hover:shadow-lg shadow-md">
+<summary class="font-headline-sm text-headline-sm text-white p-6 cursor-pointer flex justify-between items-center outline-none hover:bg-white/5 transition-colors gap-4">
+                ¿Para qué edades/cursos está diseñado el método?
+                <span class="material-symbols-outlined text-tertiary transition-transform duration-300 group-open:rotate-180 bg-tertiary/10 p-1.5 rounded-full">expand_more</span>
+</summary>
+<div class="details-content">
+<div class="px-6 pb-6 text-gray-300 font-body-md text-body-md text-lg border-t border-white/5 pt-4">
+                Actualmente nuestro programa cubre exclusivamente desde 3º Básico hasta 8º Básico, enfocándonos en entregar la mejor calidad y adaptación curricular para estas etapas clave.
+            </div>
+</div>
+</details>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto py-24 animate-on-scroll is-visible">
+<div class="bg-gradient-to-br from-primary-container/60 to-tertiary-container/60 border border-primary/20 rounded-3xl p-12 md:p-20 text-center shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative overflow-hidden transition-all duration-500 hover:shadow-2xl">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(87,214,243,0.1)_0%,transparent_50%)] pointer-events-none"></div>
+<h2 class="font-display-lg-mobile md:text-5xl text-white mb-8 relative z-10 leading-tight max-w-3xl mx-auto" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>
+            ¡Comienza hoy mismo la transformación educativa de tus hijos!
+        </h2>
+<div class="relative z-10 mt-8">
+<button class="bg-secondary-container text-white px-10 py-5 rounded-[16px] font-headline-sm text-headline-sm cta-spring shadow-lg shadow-secondary-container/40 border border-secondary-container/50 hover:shadow-xl hover:scale-105 transition-all" style='font-family: "Arial Rounded MT Bold", "Arial Rounded", sans-serif;'>
+                Comenzar Prueba Gratis
+            </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="border-t border-white/10 py-xl relative w-full pt-xl animate-on-scroll shadow-[0_-10px_40px_rgba(0,0,0,0.5)] is-visible" style="background-color: #F8AD22;">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop max-w-7xl mx-auto text-white" style="color: #0A192F; font-family: 'Arial Rounded MT Bold', 'Arial Rounded', sans-serif;">
+<div class="text-white" style="color: #0A192F; font-family: 'Arial Rounded MT Bold', 'Arial Rounded', sans-serif;">
+<div class="mb-6 flex items-center gap-2 text-white" style="color: #0A192F; font-family: 'Arial Rounded MT Bold', 'Arial Rounded', sans-serif;">
+<img alt="Estudio Simple Logo" class="h-[40px] w-auto object-contain brightness-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYbtnqqiPiAGYfWv_IuIYW3lfcmfKnYo9ZEoYNVvVOLwPfKr92Fs9_4CLT4VrmMW-cO1bGBemMM4Q4-FyM4cPHPOXDDHKOtcWzCk3kJOyPzxU6DiBKShDWRDglkZ8cbxmg7GLUf1EonqMYHsBYoqlfqq-Apl7JpGTYKuhmlMZmWSJuyDnTPN02iO2_Bi3opGmNq2MRYdxfIl2HX1seFLUcVy2otFQTFCXbzBlFQ5saf0i2sFTm_OeFQriPhAMvK5ep3q8"/>
+</div>
+<p class="font-body-md text-body-md mb-6 max-w-xs text-white" style="color: #0A192F; font-family: 'Arial Rounded MT Bold', 'Arial Rounded', sans-serif;">Empoderando a las familias con educación guiada y clara.</p>
+<div class="font-label-sm text-label-sm text-white" style="color: #0A192F; font-family: 'Arial Rounded MT Bold', 'Arial Rounded', sans-serif;">© 2024 Estudio Simple. All rights reserved.</div>
+</div>
+<div class="flex flex-col gap-4 text-white" style="color: #0A192F; font-family: 'Arial Rounded MT Bold', 'Arial Rounded', sans-serif;">
+<a class="font-body-md text-body-md hover:text-tertiary hover:translate-x-1 transition-all duration-300 text-white" href="#" style="color: #0A192F; font-family: 'Arial Rounded MT Bold', 'Arial Rounded', sans-serif;">Política de Privacidad</a>
+<a class="font-body-md text-body-md hover:text-tertiary hover:translate-x-1 transition-all duration-300 text-white" href="#" style="color: #0A192F; font-family: 'Arial Rounded MT Bold', 'Arial Rounded', sans-serif;">Términos de Servicio</a>
+<a class="font-body-md text-body-md hover:text-tertiary hover:translate-x-1 transition-all duration-300 text-white" href="#" style="color: #0A192F; font-family: 'Arial Rounded MT Bold', 'Arial Rounded', sans-serif;">Soporte Técnico</a>
+</div>
+<div class="flex flex-col gap-4 text-white" style="color: #0A192F; font-family: 'Arial Rounded MT Bold', 'Arial Rounded', sans-serif;">
+<a class="font-body-md text-body-md hover:text-tertiary hover:translate-x-1 transition-all duration-300 flex items-center gap-3 text-white" href="#" style="color: #0A192F; font-family: 'Arial Rounded MT Bold', 'Arial Rounded', sans-serif;">
+<span class="material-symbols-outlined text-lg p-1.5 bg-white/5 rounded-full" style="color: #0A192F; font-family: 'Arial Rounded MT Bold', 'Arial Rounded', sans-serif;">link</span> Instagram
+                </a>
+<a class="font-body-md text-body-md hover:text-tertiary hover:translate-x-1 transition-all duration-300 flex items-center gap-3 text-white" href="#" style="color: #0A192F; font-family: 'Arial Rounded MT Bold', 'Arial Rounded', sans-serif;">
+<span class="material-symbols-outlined text-lg p-1.5 bg-white/5 rounded-full" style="color: #0A192F; font-family: 'Arial Rounded MT Bold', 'Arial Rounded', sans-serif;">link</span> LinkedIn
+                </a>
+</div>
+</div>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Theme Toggle Logic
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            const icon = themeToggle.querySelector('span');
+            if (html.classList.contains('dark')) {
+                icon.textContent = 'light_mode';
+            } else {
+                icon.textContent = 'dark_mode';
+            }
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach((elem) => {
+            observer.observe(elem);
+        });
+
+        // Tab System Logic
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Reset all buttons
+                tabBtns.forEach(b => {
+                    b.classList.remove('opacity-100', 'scale-105', 'z-10', 'shadow-lg');
+                    b.classList.add('opacity-80');
+                });
+                
+                // Hide all contents
+                tabContents.forEach(c => {
+                    c.style.display = 'none';
+                });
+
+                // Activate clicked button
+                btn.classList.add('opacity-100', 'scale-105', 'z-10', 'shadow-lg');
+                btn.classList.remove('opacity-80');
+                
+                // Show target content
+                const targetId = btn.getAttribute('data-target');
+                const targetContent = document.getElementById(targetId);
+                targetContent.style.display = 'flex';
+            });
+        });
+    });
+</script>
+</body></html>

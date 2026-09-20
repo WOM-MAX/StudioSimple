@@ -1,0 +1,330 @@
+ESTUDIOSIMPLE · ESPECIFICACION FUNCIONAL
+Mapa de flujo sincronizado
+Clase 1 · OA1 · Números enteros · Pantalla adulta y pantalla estudiante
+OBJETIVO DEL DOCUMENTO: Convertir las decisiones aprobadas para la pantalla adulta en una secuencia funcional sincronizada. La pantalla del estudiante se describe como propuesta operativa y deberá revisarse visualmente antes de programar el prototipo.
+Estado de definición
+Componente
+Estado
+Alcance
+Pantalla adulta
+APROBADA
+Textos, acciones, apoyos y reglas de aprobación acordados.
+Pantalla estudiante
+POR REVISAR
+Función derivada del flujo; faltan aprobar composicion, fondos y comportamiento visual.
+Recursos
+PENDIENTE
+Selección final de imagenes, video breve, miniquiz y banco de recuperación.
+Ruta funcional resumida
+Portada → preparación privada → ruta del ramo → ascensor → referencia cero → video submarino → conversación guiada → video explicativo → idea clave → práctica conjunta → miniquiz → revisión/recuperación → cierre oral → finalización.
+Reglas globales del prototipo
+Solo los recuadros DILE se leen al estudiante. HAZ identifica una acción del adulto en la plataforma.
+Toda pregunta oral ofrece, como mínimo, Respondió correctamente y Necesita apoyo. Las respuestas abiertas pueden incluir una ruta parcial.
+El apoyo siempre reconoce el intento, normaliza que está aprendiendo y entrega una pista concreta; nunca califica al estudiante.
+Los botones indican su alcance: ambas pantallas, solo estudiante o solo adulto. El ícono informativo explica el efecto antes de ejecutarlo.
+La pantalla adulta mantiene visible el estado Estudiante conectado y el acceso permanente ¿Cómo funciona?.
+Los términos internos de produccion no aparecen ante los usuarios. Gancho se reemplaza por Video o Desafío; Modelado por Explicación.
+La respuesta esperada y el feedback responden exactamente a la pregunta formulada; no se evalúan criterios ocultos.
+El miniquiz se aprueba con 2 de 3. La pregunta oral de cierre aparece solo después de alcanzar ese mínimo.
+Finalizar clase significa aprobada. Terminar por hoy cierra la sesión sin aprobar y deja la clase pendiente de refuerzo.
+Vocabulario visual de la pantalla adulta
+Etiqueta
+Función
+Regla
+DILE
+Texto oral
+El adulto lo lee tal como aparece.
+HAZ
+Acción
+El adulto presiona, muestra o reproduce; no se lee.
+ESCUCHA
+Evaluación oral
+Indica que debe esperar antes de seleccionar una ruta.
+RESPUESTA ESPERADA
+Pauta privada
+Nunca aparece en la pantalla del estudiante.
+AYUDA
+Apoyo graduado
+Aparece solo si el adulto selecciona Necesita apoyo.
+F01. Portada de la clase
+Etapa lateral: Preparación  |  Adulto aprobado · estudiante por revisar
+PANTALLA DEL ADULTO
+PANTALLA DEL ESTUDIANTE
+Contenido: Logo EstudioSimple; MATEMATICA · 7° BASICO; Objetivo de Aprendizaje 1; Números enteros; Clase 1 de 6; Posiciones respecto de un punto de referencia; duración aproximada 30–35 minutos.
+Botón: Comenzar clase.
+Propuesta: Pantalla de espera vinculada a la misma sesión, con identidad visual de la clase y mensaje La clase comenzará pronto.
+Estado: El estudiante aún no recibe instrucciones ni contenido pedagógico.
+CONTROL Y SINCRONIZACION
+Comenzar clase cambia solo la pantalla adulta y abre la preparación privada.
+La pantalla estudiante permanece en espera.
+F02. Antes de comenzar
+Etapa lateral: Preparación  |  Aprobado
+PANTALLA DEL ADULTO
+PANTALLA DEL ESTUDIANTE
+Tu objetivo: Guiar al estudiante para que comprenda que los números enteros representan posiciones respecto de un punto de referencia.
+Ruta de hoy: Ascensor → desafío del submarino → explicación de números enteros → práctica → miniquiz → cierre.
+¡Recuerda!: Sigue las indicaciones en pantalla, paso a paso. Haz cada pregunta y espera la respuesta. Si necesita apoyo, utiliza únicamente la ayuda que aparecerá en pantalla.
+Botón: Comencemos.
+Espera: Mantiene la pantalla inicial sin mostrar instrucciones privadas.
+CONTROL Y SINCRONIZACION
+Se conserva la barra lateral azul y el fondo gris palido.
+Comencemos inicia la experiencia sincronizada y lleva a la ruta del ramo.
+F03. Nuestra ruta de Matemática
+Etapa lateral: Conexión  |  Texto adulto aprobado · bloques de la ruta pendientes
+PANTALLA DEL ADULTO
+PANTALLA DEL ESTUDIANTE
+DILE: Hoy comenzamos la ruta de Matemática de 7° básico. Durante las próximas clases conoceremos distintos temas, los practicaremos paso a paso y comprobaremos lo que vamos aprendiendo. En la clase de hoy comenzaremos con los números enteros.
+HAZ: Muestra la ruta de Matemática.
+DILE: En esta primera clase aprenderemos a reconocer posiciones usando el cero como punto de referencia.
+Botón: Continuemos.
+Visual: Ruta resumida de Matemática 7° básico por grandes bloques, no listado completo de OA.
+Enfasis: Estamos aqui → Números enteros. Clase 1: Posiciones respecto de un punto de referencia.
+CONTROL Y SINCRONIZACION
+Mostrar ruta modifica la pantalla estudiante; la adulta conserva el texto que debe leer.
+Continuemos avanza ambas pantallas a la situación del ascensor.
+El ícono informativo explica que ambas pantallas avanzaran.
+F04. ¡Comencemos! · situación del ascensor
+Etapa lateral: Conexión  |  Aprobado · falta recuperar texto literal original del ascensor
+PANTALLA DEL ADULTO
+PANTALLA DEL ESTUDIANTE
+Solo para ti: Lee en voz alta únicamente el contenido de los recuadros DILE y espera la respuesta antes de continuar.
+DILE: Se conserva el texto aprobado del ascensor de la maqueta original.
+Respuesta esperada: −3.
+Selecciona: Respondió −3 / Respondió 3 / No respondió o no sabe / Dio otra respuesta.
+Visual: Tablero o corte del ascensor con nivel de calle 0, pisos superiores y estacionamientos bajo tierra.
+Durante la pregunta: No muestra la respuesta ni instrucciones privadas.
+CONTROL Y SINCRONIZACION
+El adulto registra manualmente la respuesta; el prototipo no usa reconocimiento de voz.
+La siguiente ayuda se revela sin abandonar la pantalla.
+BIFURCACIONES
+Si responde −3: se habilita Continuar con la validación.
+Si responde 3, no sabe u otra respuesta: DILE: Está bien, pensemos juntos. Tenemos un piso 3 sobre el nivel de la calle y un estacionamiento 3 bajo tierra. Si ambos se llamaran 3, ¿cómo podríamos diferenciarlos?
+Si aún no responde: Mostrar apoyo visual destaca el 0 y los niveles bajo tierra; se pregunta nuevamente.
+Si todavía necesita ayuda: se modela −3 porque está a tres niveles bajo el 0 y se comprueba que comprenda el signo menos.
+F05. Consolidar la respuesta y el punto de referencia
+Etapa lateral: Conexión  |  Aprobado
+PANTALLA DEL ADULTO
+PANTALLA DEL ESTUDIANTE
+Ruta según desempeño: Respuesta autónoma: Exacto… / con ayuda: Muy bien, ahora lo identificaste… / modelada: Acabamos de descubrir…
+DILE: En este edificio usamos el nivel de la calle como punto de referencia y lo representamos con el número 0.
+Pregunta: Entonces, ¿que representa el 0 en este edificio?
+Respuesta esperada: El nivel de la calle.
+Botón final: Ir al video.
+Visual: Ascensor con la línea del nivel de calle destacada y rotulada 0.
+Feedback: Refuerzo visual breve según el camino recorrido, sin mensajes de fracaso.
+CONTROL Y SINCRONIZACION
+Ir al video avanza ambas pantallas hasta el reproductor pausado; no inicia la reproduccion.
+Se elimina la advertencia teórica sobre que negativo no siempre significa bajar: el adulto solo lee lo indicado.
+BIFURCACIONES
+Si identifica el nivel de calle: feedback especifico y avance.
+Si necesita apoyo: se destaca visualmente la línea 0 y se formula una pista concreta.
+F06. El recorrido del submarino
+Etapa lateral: Video  |  Aprobado
+PANTALLA DEL ADULTO
+PANTALLA DEL ESTUDIANTE
+DILE: Antes de comenzar, observa dónde inicia el submarino y presta atención a cuánto baja y cuánto sube.
+Botón: Reproducir video.
+Estado durante reproduccion: Video en reproduccion en la pantalla del estudiante.
+Botón al terminar: Continuar.
+Antes: Fotograma inicial del video, pausado.
+Durante: Video completo del desafío del submarino.
+Después: Fotograma final o imagen del recorrido lista para conversar.
+CONTROL Y SINCRONIZACION
+Primero habla el adulto; luego reproduce; finalmente continua.
+Reproducir video controla el recurso del estudiante y muestra el estado en la pantalla adulta.
+Continuar aparece solo al finalizar el video.
+F07. Posición y movimiento · conversación guiada
+Etapa lateral: Conversacion  |  Aprobado
+PANTALLA DEL ADULTO
+PANTALLA DEL ESTUDIANTE
+Solo para ti: Harás cuatro preguntas, una por vez. Escucha la respuesta y selecciona Respondió correctamente o Necesita apoyo.
+DILE: Ahora vamos a conversar sobre lo que acabamos de ver en el video. Te haré algunas preguntas para que pensemos juntos en el recorrido del submarino.
+Botón: Comenzar las preguntas.
+Preguntas: 1) ¿Dónde esta el cero en esta historia? 2) ¿Qué significa que el submarino esté a −20 metros? 3) Bajar 15 metros, ¿indica una posición o un movimiento? 4) Subir 8 metros, ¿indica una posición o un movimiento?
+Secuencia: Una pregunta por vez, con progreso Pregunta 1 de 4.
+Visuales: Superficie del mar = 0; submarino a −20 m; flecha de descenso 15 m; flecha de ascenso 8 m.
+Feedback: Confirmación breve y conceptual; las ayudas se muestran solo cuando el adulto las activa.
+CONTROL Y SINCRONIZACION
+Las preguntas aparecen en orden; la siguiente se habilita tras resolver la actual.
+Botones por pregunta: Respondió correctamente / Necesita apoyo.
+Tras una ayuda: Ahora lo comprendió / Mostrar otra ayuda.
+BIFURCACIONES
+P1 esperada: superficie del mar. Apoyo: identificar el límite entre arriba y abajo del mar.
+P2 esperada: 20 m bajo la superficie. Apoyo: volver al 0 y al signo negativo.
+P3 esperada: movimiento. Apoyo: ¿indica un lugar exacto o un cambio?
+P4 esperada: movimiento. Apoyo: distinguir acción de ubicación.
+F08. Damos nombre a lo que descubrimos
+Etapa lateral: Explicación  |  Flujo aprobado · video y ubicación visual pendientes
+PANTALLA DEL ADULTO
+PANTALLA DEL ESTUDIANTE
+DILE: Ya descubrimos que una cosa es dónde está el submarino y otra distinta es cómo se mueve. Ahora veremos como las matemáticas representan estas ideas utilizando números enteros.
+HAZ: Reproduce el siguiente video. En el se explicarán formalmente las ideas que acaban de reconocer.
+Botón: Reproducir video.
+Comprobación: ¿Cuál es la diferencia entre estar a −20 metros y bajar 20 metros?
+Respuesta esperada: Estar a −20 m indica una posición; bajar 20 m indica un movimiento.
+Video: Pieza breve específica para Clase 1, reconstruida con el contenido útil de las diapositivas 3 a 7 y el estilo visual del padre.
+Consolidación visual: Comparación Posición / Movimiento: submarino detenido a −20 m versus submarino con flecha Baja 20 m.
+CONTROL Y SINCRONIZACION
+El video formaliza lo descubierto; no repite las cuatro preguntas ni adelanta adición/sustracción.
+Botones de la pregunta: Respondió correctamente / Necesita apoyo.
+La comparación visual se muestra a todos los estudiantes; falta definir su ubicación exacta en la secuencia.
+BIFURCACIONES
+Correcta: feedback que nombra posición y movimiento.
+Necesita apoyo: se distinguen las expresiones Está a… y Baja…, luego se pregunta nuevamente.
+Si aún necesita ayuda: se entrega la explicación completa y se muestra la comparación visual.
+F09. Idea clave · transferencia al ascensor
+Etapa lateral: Explicación  |  Aprobado
+PANTALLA DEL ADULTO
+PANTALLA DEL ESTUDIANTE
+DILE: Un número entero puede representar una posición respecto de un punto de referencia. El 0 marca ese punto de referencia. Una posición indica dónde está algo; un movimiento indica cómo cambia de lugar.
+Comprueba: El ascensor está en el piso −2 y después baja 3 pisos. ¿Cuál parte indica una posición y cuál indica un movimiento?
+Respuesta esperada: Está en el piso −2 = posición; baja 3 pisos = movimiento.
+Visual: Dos momentos del ascensor: ubicación fija en −2 y flecha de descenso de 3 pisos.
+Función: Trasladar la idea del submarino al contexto inicial del ascensor.
+CONTROL Y SINCRONIZACION
+Secuencia de recuadros conectados: DILE → COMPRUEBA → RESULTADO.
+Botones: Respondió correctamente / Necesita apoyo.
+BIFURCACIONES
+Correcta: feedback especifico sobre Está en y Baja.
+Apoyo: fijarse en las palabras Está en (lugar) y Baja (acción).
+Si aún no comprende: comparación visual y explicación completa.
+F10. Práctica conjunta · tres contextos
+Etapa lateral: Práctica  |  Aprobado
+PANTALLA DEL ADULTO
+PANTALLA DEL ESTUDIANTE
+DILE: Ahora aplicaremos lo que aprendimos en tres situaciones diferentes.
+Contexto 1: El termómetro marca 4 grados Celsius bajo cero. ¿Qué número entero representa la temperatura? Esperada: −4 °C.
+Contexto 2: El ascensor baja 5 pisos. ¿Esta frase describe una posición o un movimiento? Esperada: movimiento.
+Contexto 3: Un campamento está 120 metros bajo el mirador usado como referencia. ¿Qué número entero representa su ubicación? Esperada: −120 m.
+Secuencia: Un contexto por vez.
+Visuales: Termometro con 0 y −4; ascensor con flecha de descenso; mirador como 0 y campamento a −120 m.
+Feedback: Se muestra solo la información solicitada por la pregunta.
+CONTROL Y SINCRONIZACION
+Cada contexto usa Respondió correctamente / Necesita apoyo.
+No se muestra la respuesta del siguiente contexto hasta resolver el actual.
+No existe un bloque general Reglas de apoyo: la ayuda aparece según la ruta elegida.
+BIFURCACIONES
+Temperatura: recordar que bajo cero usa signo negativo.
+Ascensor: distinguir piso exacto de acción de bajar.
+Altura: mirador = 0; debajo del referente = signo negativo.
+F11. Miniquiz de la clase
+Etapa lateral: Miniquiz  |  Flujo aprobado · preguntas exactas pendientes
+PANTALLA DEL ADULTO
+PANTALLA DEL ESTUDIANTE
+DILE: Ahora responderás tres preguntas sobre lo que aprendimos hoy. Cuando termines, revisaremos juntos tus respuestas.
+HAZ: Permite que responda sin ayuda. Cuando envie el miniquiz, recibirás los resultados y las indicaciones para revisarlos.
+Botón: Iniciar miniquiz.
+Durante: Miniquiz en curso — el estudiante está respondiendo. No se muestra la pauta.
+Actividad: Tres preguntas en una sola página, separadas visualmente; se pueden responder en cualquier orden.
+Envio: Botón Enviar respuestas y confirmación ¿Terminaste de revisar tus respuestas? Sí, enviar / Volver a revisar.
+Después: ¡Listo! Ahora revisarán juntos tus respuestas.
+CONTROL Y SINCRONIZACION
+El sistema corrige automáticamente tras el envío.
+Durante el intento no muestra resultados ni ayudas.
+Criterio de aprobación: mínimo 2 respuestas correctas de 3.
+F12. Revisión del miniquiz
+Etapa lateral: Miniquiz  |  Aprobado
+PANTALLA DEL ADULTO
+PANTALLA DEL ESTUDIANTE
+Resultado: Puntaje general, respuesta del estudiante, respuesta correcta, concepto evaluado y texto para revisar cada ítem.
+Ruta aprobada: Si obtiene 2/3 o 3/3, se revisan brevemente las respuestas y se habilita la pregunta oral de cierre.
+Ruta no aprobada: Si obtiene 0/3 o 1/3, no aparece la pregunta oral; comienza la recuperación obligatoria.
+Revisión conjunta: Una pregunta por vez con feedback conceptual, sin cruces rojas agresivas.
+Estado: Aprobado o Necesitamos reforzar algunas ideas antes de cerrar.
+CONTROL Y SINCRONIZACION
+La plataforma decide si se habilita el cierre; el adulto no puede marcar como aprobada una clase bajo el mínimo.
+Las respuestas correctas del primer intento se conservan.
+F13. Recuperación obligatoria
+Etapa lateral: Miniquiz  |  Flujo aprobado · banco equivalente pendiente
+PANTALLA DEL ADULTO
+PANTALLA DEL ESTUDIANTE
+Proceso: Revisión guiada de cada error → apoyo especifico → una pregunta equivalente por cada respuesta incorrecta.
+Recálculo: La pregunta equivalente reemplaza funcionalmente el ítem incorrecto para determinar si alcanza 2/3.
+Si alcanza el mínimo: Se habilita la pregunta oral de cierre.
+Si no alcanza: Opciones Reforzar ahora / Terminar por hoy.
+Apoyo: Visual y explicación positiva para cada concepto no logrado.
+Segunda comprobación: Solo preguntas equivalentes a los conceptos fallados, no repetición literal.
+Si se termina: Mensaje de avance sin declarar la clase completada.
+CONTROL Y SINCRONIZACION
+Ejemplo: con 1/3, se recuperan dos conceptos; basta lograr uno para alcanzar 2/3.
+Con 0/3, se recuperan tres conceptos y necesita lograr al menos dos.
+Terminar por hoy registra Clase pendiente de refuerzo y no habilita Clase 2.
+F14. Cierre oral · explica lo aprendido
+Etapa lateral: Cierre  |  Aprobado
+PANTALLA DEL ADULTO
+PANTALLA DEL ESTUDIANTE
+Condición de entrada: Solo aparece cuando el estudiante ya alcanzo 2/3, en el primer intento o después de recuperación.
+DILE: Con tus palabras, ¿para qué sirven el cero y los signos positivo y negativo cuando queremos representar una situación real?
+Respuesta lograda si: 1) expresa que el cero funciona como punto de referencia; 2) explica que los signos indican dónde se encuentra un valor respecto de ese punto. Puede usar sus propias palabras o un ejemplo correcto.
+Selecciona: Explicó ambas ideas / Explicó solo una idea / Necesita apoyo.
+Visual: Resumen sobrio con 0 como referencia y ejemplos positivo/negativo; no muestra la pauta antes de responder.
+Tras resolver: Síntesis visual de la idea central.
+CONTROL Y SINCRONIZACION
+Si explica una sola idea, el adulto marca cuál y recibe solo la pregunta faltante.
+La distinción posición/movimiento ya fue evaluada antes; no se agrega como criterio oculto en esta pregunta.
+BIFURCACIONES
+Ambas ideas: feedback que reconoce punto de referencia y signos.
+Solo cero: preguntar para qué sirven positivo y negativo.
+Solo signos: preguntar qué punto debe establecerse antes.
+Necesita apoyo: volver al edificio, preguntar qué representaba 0 y cómo se diferenció el estacionamiento −3; luego pedir que lo explique nuevamente.
+F15. Finalización aprobada
+Etapa lateral: Cierre  |  Aprobado
+PANTALLA DEL ADULTO
+PANTALLA DEL ESTUDIANTE
+DILE: Muy bien, terminamos la clase de hoy. En la próxima clase construiremos una recta numerica para saber dónde se ubica cada entero y cual es mayor o menor.
+Botón: Finalizar clase.
+Registro: Clase aprobada; mínimo 2/3 alcanzado; cierre oral realizado; próxima clase habilitada.
+Resultado: Clase completada.
+Próxima clase: Ubicar y comparar enteros en la recta numerica.
+CONTROL Y SINCRONIZACION
+Finalizar clase aparece únicamente después del miniquiz aprobado y del cierre oral.
+El texto sobre la próxima clase está dentro de DILE; no aparece como un recuadro ambiguo junto al botón.
+F16. Terminar por hoy · clase pendiente
+Etapa lateral: Cierre alternativo  |  Regla aprobada · texto final por redactar
+PANTALLA DEL ADULTO
+PANTALLA DEL ESTUDIANTE
+Condición: El estudiante no alcanza 2/3 después de la recuperación y el adulto decide detener la sesión.
+Botón: Terminar por hoy.
+Registro: Clase pendiente de refuerzo; no aprobada; Clase 2 bloqueada.
+Mensaje: Reconoce el trabajo realizado y anticipa que retomarán estas ideas, sin mostrar fracaso.
+Estado: Pendiente de refuerzo.
+CONTROL Y SINCRONIZACION
+Terminar por hoy cierra la sesión, no la clase.
+Al reingresar, la experiencia comienza en la recuperación de los conceptos pendientes.
+Diagrama de decision de aprobación
+Estado
+Condición
+Siguiente acción
+Primer intento
+2/3 o 3/3
+Revisión breve → cierre oral.
+Primer intento
+0/3 o 1/3
+Revisión guiada → preguntas equivalentes.
+Recuperación
+Resultado acumulado llega a 2/3
+Cierre oral.
+Recuperación
+Sigue bajo 2/3
+Reforzar ahora o terminar por hoy.
+Cierre oral
+Completado
+Presentar próxima clase → Finalizar clase.
+Terminar por hoy
+Clase bajo 2/3
+Registrar pendiente; bloquear Clase 2.
+Reingreso
+Clase pendiente
+Retomar recuperación antes de avanzar.
+Pendientes antes de programar
+Revisar y aprobar visualmente la pantalla estudiante a partir de F01–F16.
+Definir los bloques oficiales que aparecerán en la ruta de Matemática 7° básico.
+Recuperar el texto literal definitivo de la situación del ascensor.
+Seleccionar fondos e imagenes del padre para cada estado de la pantalla estudiante.
+Crear el video breve de formalización reutilizando el contenido útil de las diapositivas 3 a 7.
+Redactar y validar las tres preguntas exactas del miniquiz.
+Crear una pregunta equivalente de recuperación por cada concepto evaluado.
+Definir el texto positivo de Terminar por hoy y el estado de reingreso.
+Validar el comportamiento responsive en computador, tablet y telefono.
+SIGUIENTE HITO
+Revisar la pantalla del estudiante siguiendo este flujo, estado por estado. No se recomienda corregir la antigua maqueta de forma aislada porque ya no contiene todas las bifurcaciones aprobadas.

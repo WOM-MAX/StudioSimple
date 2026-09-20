@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,700&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --hf-bg: #F8AD22;
+  --hf-text: #0A192F;
+
+  --sidebar-bg: #F8AD22;
+  --sidebar-text: #0A192F;
+  --sidebar-hover: rgba(0, 0, 0, 0.1);
+
+  --canvas-bg: #0A192F;
+  --canvas-text: #FFFFFF;
+  --bento-bg: rgba(28, 50, 87, 0.85);
+  --bento-border: rgba(255, 255, 255, 0.12);
+  --card-text: #FFFFFF;
+  --muted-text: rgba(255, 255, 255, 0.7);
+}
+
+/* HEADER & FOOTER GLOBALES (Vistas Públicas) */
+[data-hf-color="yellow"] {
+  --hf-bg: #F8AD22;
+  --hf-text: #0A192F;
+}
+[data-hf-color="orange"] {
+  --hf-bg: #EE751C;
+  --hf-text: #FFFFFF;
+}
+[data-hf-color="turquoise"] {
+  --hf-bg: #12A1A4;
+  --hf-text: #FFFFFF;
+}
+[data-hf-color="silver"] {
+  --hf-bg: #78909C;
+  --hf-text: #FFFFFF;
+}
+[data-hf-color="graphite"] {
+  --hf-bg: #263238;
+  --hf-text: #FFFFFF;
+}
+[data-hf-color="white"] {
+  --hf-bg: #FFFFFF;
+  --hf-text: #0A192F;
+}
+[data-hf-color="ice-blue"] {
+  --hf-bg: #F0F4F8;
+  --hf-text: #0A192F;
+}
+
+/* SIDEBAR INDEPENDIENTE (Dashboard) */
+[data-sidebar="yellow"] {
+  --sidebar-bg: #F8AD22;
+  --sidebar-text: #0A192F;
+  --sidebar-hover: rgba(0, 0, 0, 0.1);
+}
+[data-sidebar="orange"] {
+  --sidebar-bg: #EE751C;
+  --sidebar-text: #FFFFFF;
+  --sidebar-hover: rgba(255, 255, 255, 0.15);
+}
+[data-sidebar="turquoise"] {
+  --sidebar-bg: #12A1A4;
+  --sidebar-text: #FFFFFF;
+  --sidebar-hover: rgba(255, 255, 255, 0.15);
+}
+[data-sidebar="silver"] {
+  --sidebar-bg: #78909C;
+  --sidebar-text: #FFFFFF;
+  --sidebar-hover: rgba(255, 255, 255, 0.15);
+}
+[data-sidebar="graphite"] {
+  --sidebar-bg: #263238;
+  --sidebar-text: #FFFFFF;
+  --sidebar-hover: rgba(255, 255, 255, 0.15);
+}
+[data-sidebar="navy"] {
+  --sidebar-bg: #1C3257;
+  --sidebar-text: #FFFFFF;
+  --sidebar-hover: rgba(255, 255, 255, 0.15);
+}
+
+/* GLOBAL DARK MODE (🌙) */
+.dark, [data-theme="dark"] {
+  --canvas-bg: #0A192F;
+  --canvas-text: #FFFFFF;
+  --bento-bg: rgba(28, 50, 87, 0.85);
+  --bento-border: rgba(255, 255, 255, 0.12);
+  --card-text: #FFFFFF;
+  --muted-text: rgba(255, 255, 255, 0.7);
+}
+
+
+
+
+@layer base {
+  body {
+    font-family: "Arial Rounded MT Bold", "Arial Rounded", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--canvas-bg);
+    color: var(--canvas-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}
+
+.bento-card {
+  background: var(--bento-bg);
+  color: var(--card-text);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--bento-border);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+}
+
+.bento-card:hover {
+  transform: scale(1.015);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.plan-option {
+  background: var(--bento-bg);
+  color: var(--card-text);
+  border: 1px solid var(--bento-border);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.plan-option:hover, .plan-option.selected {
+  border-color: #57d6f3;
+  background: rgba(18, 58, 114, 0.2);
+}
+
+.input-field {
+  background: var(--bento-bg);
+  border: 1px solid var(--bento-border);
+  color: var(--card-text);
+  transition: border-color 0.2s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #57d6f3;
+  box-shadow: 0 0 0 2px rgba(87, 214, 243, 0.2);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--footer-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #323537;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8d909b;
+}
+
+@layer base {
+  body {
+    font-family: "Arial Rounded MT Bold", "Arial Rounded", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined' !important;
+  }
+}
+
+/* MARQUEE ANIMATION (Banner en movimiento continuo) */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

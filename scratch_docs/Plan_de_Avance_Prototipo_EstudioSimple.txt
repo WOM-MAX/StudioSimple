@@ -1,0 +1,276 @@
+PLAN DE TRABAJO
+Ruta para refinar, validar e implementar el prototipo
+Clase 1 del OA1 de Matemática · EstudioSimple
+Proyecto: EstudioSimple
+Alcance: Prototipo sincronizado: pantalla del adulto y pantalla del estudiante
+Unidad de validación: OA1 de Matemática, séptimo básico, Clase 1
+Estado: Primer prototipo funcional presentado y comprendido por el equipo
+Documento: Ruta completa de avance, entregables y puertas de aprobación
+DECISIÓN CENTRAL  La Clase 1 debe transformarse en la plantilla validada de EstudioSimple antes de programar las clases 2 a 6 o entregar instrucciones definitivas de construcción a Antigravity.
+Objetivo del documento
+Establecer un proceso ordenado para revisar el prototipo, corregirlo, validarlo, documentar su arquitectura y transferirlo a implementación técnica sin perder las decisiones pedagógicas, visuales y funcionales ya aprobadas.
+Resultado esperado
+Al finalizar esta ruta, EstudioSimple contará con una Clase 1 validada, una plantilla maestra reutilizable, un paquete de especificaciones para el equipo técnico, instrucciones claras para Antigravity y un método de control de calidad aplicable a las clases posteriores.
+Secuencia completa de trabajo
+Etapa
+Propósito
+Puerta de salida
+1. Auditoría
+Comprobar contenido, experiencia y lógica del prototipo actual.
+Lista maestra de hallazgos aprobada.
+2. Corrección
+Aplicar cambios y crear una segunda versión coherente.
+Prototipo corregido y trazable.
+3. Prueba interna
+Ejecutar todos los caminos con usuarios cercanos.
+Problemas evidentes eliminados.
+4. Plantilla maestra
+Extraer la estructura reutilizable de una clase.
+Contrato de clase aprobado.
+5. Paquete técnico
+Traducir decisiones a especificaciones e instrucciones.
+Handoff completo para Antigravity.
+6. Implementación y piloto
+Construir la versión técnica y probarla con usuarios reales.
+Versión 1 validada para escalar.
+Reglas que se aplican a toda la ruta
+Una clase primero; sus recursos y automatizaciones después.
+La pantalla del adulto controla la clase y la pantalla del estudiante responde de manera sincronizada.
+Las instrucciones privadas, respuestas esperadas y criterios pedagógicos nunca aparecen en la pantalla del estudiante.
+Toda respuesta del estudiante debe conducir a una ruta definida: correcta, necesita apoyo, no responde o entrega otra respuesta.
+Los cambios deben registrarse para evitar interpretaciones distintas o retrabajo.
+No se replica la estructura en otras clases mientras la plantilla de la Clase 1 no supere las puertas de aprobación.
+ETAPA 1
+Auditoría completa del prototipo actual
+PROPÓSITO  Revisar la clase funcionando como una experiencia sincronizada y detectar todo lo que debe corregirse antes de convertirla en plantilla.
+1.1 Revisión del contenido matemático
+Verificar la corrección conceptual de cada explicación, ejemplo, pregunta y retroalimentación.
+Confirmar la alineación con el OA1 y sus indicadores exigidos para séptimo básico.
+Comprobar que la progresión sea adecuada: punto de referencia, cero, positivos y negativos, posición y movimiento.
+Revisar la coherencia entre videos, conversación posterior, práctica, miniquiz, refuerzo y cierre.
+Detectar contenidos que sobren, se repitan, aparezcan demasiado pronto o todavía falten.
+Revisar que el miniquiz evalúe exclusivamente lo enseñado en esta clase y que el refuerzo use preguntas equivalentes, no idénticas.
+1.2 Revisión de la experiencia del adulto
+Confirmar que el adulto comprenda qué debe hacer, decir, preguntar, esperar y seleccionar en cada momento.
+Distinguir visualmente el contenido que debe leer en voz alta de la información que es solo para él.
+Comprobar que no necesite preparar previamente la materia ni improvisar explicaciones.
+Verificar que todas las posibles respuestas del estudiante tengan un apoyo correspondiente.
+Revisar que los botones indiquen con claridad qué ocurrirá y si avanzará una o ambas pantallas.
+Comprobar que el adulto pueda pausar, retomar o finalizar por hoy sin perder el estado de la clase.
+1.3 Revisión de la experiencia del estudiante
+Comprobar la correspondencia exacta entre lo que dice el adulto y lo que aparece en su pantalla.
+Revisar legibilidad, jerarquía, tamaño de textos, contraste y protagonismo de las imágenes.
+Evaluar ritmo, cantidad de información por pantalla y duración de los momentos de espera.
+Confirmar que nunca vea respuestas esperadas, pautas internas ni instrucciones dirigidas al adulto.
+Revisar que la retroalimentación sea positiva, clara y respetuosa, sin infantilizar al estudiante.
+Mantener el lenguaje visual aprobado: colores, tipografías, logos e ilustraciones desarrolladas para los videos.
+1.4 Revisión de la lógica del sistema
+Definir qué botones cambian únicamente la pantalla adulta y cuáles actualizan también la pantalla del estudiante.
+Probar los caminos de respuesta correcta, necesidad de apoyo, ausencia de respuesta y respuesta diferente.
+Comprobar qué sucede cuando el estudiante aprueba o reprueba el miniquiz.
+Verificar que el cierre oral aparezca solo después de aprobar el miniquiz o completar satisfactoriamente el refuerzo.
+Confirmar cuándo se habilita Finalizar clase y cuándo corresponde Terminar por hoy.
+Definir qué información se registra como lograda, en refuerzo o pendiente.
+Comprobar el comportamiento de los videos: inicio, término, continuidad y sincronización.
+Entregables
+Lista maestra única de observaciones, numerada y clasificada por contenido, adulto, estudiante, lógica y visual.
+Mapa de flujo marcado con los puntos que requieren modificación.
+Inventario de textos, imágenes, videos y preguntas que se conservan, corrigen o reemplazan.
+Criterio de aprobación de la etapa
+No quedan observaciones contradictorias ni decisiones sin responsable.
+Cada hallazgo indica dónde ocurre, qué problema genera y cuál es la corrección propuesta.
+Carla y su padre comprenden el mismo flujo y aprueban la lista que se utilizará para corregir.
+Responsabilidad propuesta: Carla lidera la decisión de producto; la revisión matemática se valida con criterio docente; el responsable técnico confirma la viabilidad sin rediseñar todavía la solución.
+ETAPA 2
+Corrección y segunda versión del prototipo
+PROPÓSITO  Aplicar de forma controlada las decisiones de la auditoría y generar una versión coherente que represente el producto que realmente se quiere construir.
+Actividades
+Priorizar primero errores de contenido y flujo; luego problemas de uso; finalmente ajustes visuales.
+Modificar las pantallas del adulto y del estudiante en pares sincronizados.
+Actualizar textos literales, opciones de respuesta, apoyos, retroalimentaciones y reglas de avance.
+Ajustar imágenes, fondos, jerarquía tipográfica, contraste, botones y transiciones sin alterar el contenido aprobado.
+Integrar correctamente los dos videos aprobados y comprobar sus estados de reproducción y término.
+Actualizar el miniquiz, la revisión guiada, las preguntas equivalentes de refuerzo y el cierre oral.
+Mantener un registro de cambios que conecte cada modificación con un hallazgo de la auditoría.
+Orden de prioridad
+Corrección conceptual y curricular.
+Flujo sincronizado y rutas de respuesta.
+Comprensión del adulto y del estudiante.
+Evaluación, refuerzo y cierre.
+Diseño visual, ritmo y transiciones.
+Entregables
+Prototipo funcional versión 2.
+Mapa de flujo actualizado para reflejar lo que efectivamente hace el prototipo.
+Registro de cambios con estado: aplicado, pendiente o descartado y su justificación.
+Criterio de aprobación de la etapa
+Todas las observaciones críticas y altas de la auditoría están resueltas.
+No existen diferencias entre el flujo documentado y el comportamiento real del prototipo.
+Las pantallas mantienen una relación uno a uno en cada momento sincronizado.
+Responsabilidad propuesta: La construcción puede ejecutarse con apoyo de IA; Carla aprueba las decisiones de producto y el equipo valida contenido y funcionamiento.
+ETAPA 3
+Prueba interna completa
+PROPÓSITO  Ejecutar la Clase 1 en condiciones cercanas al uso real para descubrir confusiones que no aparecen al revisar pantallas de manera aislada.
+Participantes sugeridos
+Carla: observa la fidelidad a la visión del producto y registra los problemas.
+Padre de Carla: prueba el flujo, revisa la consistencia pedagógica y evalúa la transferencia técnica.
+Luciano: realiza la experiencia como estudiante y entrega feedback sobre claridad, ritmo y atractivo.
+Escenarios que deben probarse
+Recorrido completo con respuestas correctas.
+Recorrido con respuestas incorrectas y uso de apoyos.
+Recorrido con ausencia de respuesta o respuesta distinta de las previstas.
+Miniquiz aprobado en el primer intento.
+Miniquiz reprobado, revisión guiada, refuerzo y segunda comprobación.
+Refuerzo no superado y opción Terminar por hoy.
+Cierre oral completo, parcial y con necesidad de apoyo.
+Pausa, recarga, reapertura y reinicio de la sesión.
+Qué se debe observar
+Momentos en que el adulto duda qué hacer o qué leer.
+Momentos en que el estudiante no entiende qué se le pide.
+Tiempos muertos, exceso de texto, repeticiones o cambios demasiado rápidos.
+Problemas de lectura, audio, botones, reproducción, sincronización o navegación.
+Reacciones espontáneas del usuario; no solo su opinión posterior.
+Duración real de la sesión completa y de cada bloque.
+Entregables
+Registro de prueba con fecha, participante, escenario, hallazgo, gravedad y acción propuesta.
+Lista final de correcciones internas.
+Versión candidata a plantilla después de resolver los problemas críticos.
+Criterio de aprobación de la etapa
+Todos los escenarios definidos pueden completarse sin bloqueos.
+El adulto puede conducir la clase sin explicación adicional externa.
+El estudiante entiende qué hacer y el recorrido dura aproximadamente lo planificado.
+Los problemas críticos detectados en la prueba fueron corregidos y vueltos a probar.
+Responsabilidad propuesta: Una persona conduce, otra responde como estudiante y una tercera observa cuando sea posible. La observación debe separarse de la conducción para no perder hallazgos.
+ETAPA 4
+Cierre de la plantilla maestra de clase
+PROPÓSITO  Extraer de la Clase 1 validada una estructura reutilizable que defina qué es una clase EstudioSimple, sin convertirla en un molde rígido para todos los contenidos.
+Componentes obligatorios de la plantilla
+Preparación privada: Objetivo del adulto, ruta de la sesión, recursos y recordatorios.
+Introducción: Ubicación de la clase dentro de la ruta de aprendizaje.
+Conexión inicial: Activación de conocimientos previos mediante una situación comprensible.
+Recurso audiovisual o visual: Video, ilustración o recurso seleccionado por su función pedagógica.
+Conversación guiada: Preguntas una por una, respuestas esperadas y apoyos.
+Formalización: Nombre matemático de las ideas que el estudiante ya reconoció.
+Práctica conjunta: Aplicación en situaciones graduadas con apoyo del adulto.
+Evaluación breve: Miniquiz alineado exclusivamente con el subobjetivo de la clase.
+Refuerzo: Revisión del error y preguntas equivalentes cuando no se alcanza el criterio.
+Cierre oral: Explicación del aprendizaje con palabras del estudiante.
+Registro del resultado: Clase aprobada, refuerzo pendiente o sesión pausada.
+Reglas de flexibilidad
+Los componentes son obligatorios cuando cumplen una función real, pero su duración y formato pueden variar según el contenido.
+El video no es obligatorio en todas las clases; es un recurso subordinado al objetivo de aprendizaje.
+La cantidad de preguntas y prácticas puede variar, siempre que exista evidencia suficiente de comprensión.
+Las rutas de apoyo deben responder al error específico y no limitarse a repetir la explicación.
+La autonomía del estudiante puede aumentar progresivamente, pero la pantalla adulta mantiene la conducción de la sesión.
+Entregables
+Contrato o ficha maestra de clase EstudioSimple.
+Estructura estándar de pantallas sincronizadas.
+Campos obligatorios y opcionales para crear nuevas clases.
+Criterios pedagógicos, funcionales y visuales que toda clase debe cumplir.
+Criterio de aprobación de la etapa
+La plantilla describe funciones, no copia mecánicamente la temática de la Clase 1.
+Permite construir las clases 2 a 6 sin volver a decidir la arquitectura desde cero.
+Carla y su padre aprueban por escrito qué elementos son obligatorios y cuáles flexibles.
+Responsabilidad propuesta: Carla aprueba la arquitectura de producto; el equipo docente valida la estructura pedagógica; el responsable técnico confirma que los componentes pueden implementarse y reutilizarse.
+ETAPA 5
+Paquete de transferencia para el equipo y Antigravity
+PROPÓSITO  Convertir la plantilla aprobada en instrucciones técnicas y verificables, reduciendo al mínimo la interpretación durante la construcción.
+El paquete debe incluir nueve elementos
+Mapa de flujo sincronizado definitivo: Estados, decisiones, bifurcaciones y regreso al flujo principal.
+Matriz de estados de ambas pantallas: Qué ve el adulto, qué ve el estudiante, qué controla el avance y qué queda registrado.
+Reglas funcionales y criterios de aprobación: Condiciones para avanzar, aprobar, reforzar, pausar y finalizar.
+Contenido literal de la Clase 1: Textos, preguntas, respuestas esperadas, apoyos, retroalimentaciones y cierres.
+Inventario de recursos: Videos, imágenes, logos, tipografías, colores, nombres de archivo, ubicación y momento de uso.
+Prompt maestro para Antigravity: Contexto, objetivo, restricciones, arquitectura obligatoria y resultado esperado.
+Instrucciones de ejecución por etapas: Orden de trabajo, archivos que debe revisar, módulos que debe crear y puntos de control.
+Lista de comprobación: Pruebas que deben superarse antes de considerar la construcción correcta.
+Registro de decisiones: Acuerdos vigentes, fecha, responsable y motivo para evitar reinterpretaciones.
+Estructura recomendada del sistema de prompts
+Módulo 1 - Contexto del producto: propósito, usuarios, propuesta de valor y límites.
+Módulo 2 - Arquitectura obligatoria: pantallas espejo, control adulto, rutas y estados.
+Módulo 3 - Datos de la clase: subobjetivo, contenidos, textos y recursos específicos.
+Módulo 4 - Reglas de construcción: componentes, navegación, persistencia, accesibilidad y estilo visual.
+Módulo 5 - Control de calidad: pruebas obligatorias y condiciones de aceptación.
+ADVERTENCIA  Un único prompt extenso no reemplaza las especificaciones. Antigravity debe recibir contexto, archivos, reglas, pasos de ejecución y criterios de prueba separados y coherentes.
+Instrucciones mínimas para ejecutar en Antigravity
+Leer primero todos los documentos de contexto y no comenzar a programar hasta resumir la arquitectura entendida.
+Confirmar la estructura de archivos, recursos disponibles y alcance de la versión que se construirá.
+Implementar por bloques pequeños: navegación base, sincronización, contenido, evaluación, refuerzo y cierre.
+Probar cada bloque antes de avanzar al siguiente.
+No modificar textos, reglas pedagógicas, identidad visual ni criterios de aprobación sin autorización.
+Entregar al final un informe de lo construido, decisiones técnicas, pruebas realizadas y pendientes.
+Entregables
+Carpeta de handoff completa y ordenada.
+Prompt maestro modular y prompts de ejecución.
+Documento de instrucciones para Antigravity.
+Checklist de aceptación técnica, pedagógica y visual.
+Criterio de aprobación de la etapa
+Una persona que no participó en las conversaciones puede comprender qué construir y cómo comprobarlo.
+No existen contradicciones entre mapa, contenido, recursos, reglas y prompt.
+Cada requisito importante tiene una prueba o criterio de aceptación asociado.
+Responsabilidad propuesta: Carla aprueba visión, contenido visible y criterios de producto; su padre lidera o supervisa la ejecución técnica; Antigravity ejecuta dentro del alcance documentado.
+ETAPA 6
+Implementación técnica y piloto con usuarios
+PROPÓSITO  Construir la versión técnica a partir del paquete aprobado y validarla con adultos y estudiantes reales antes de replicar el sistema.
+6.1 Implementación técnica
+Construir la versión utilizando la plantilla, el mapa y las reglas aprobadas.
+Mantener trazabilidad entre cada requisito y su implementación.
+Verificar sincronización, persistencia, reproducción audiovisual, navegación, evaluación y refuerzo.
+Realizar una revisión comparativa entre prototipo aprobado y versión construida.
+Corregir diferencias antes de invitar usuarios externos.
+6.2 Piloto externo
+Seleccionar adultos sin formación pedagógica y estudiantes del nivel correspondiente.
+Dar instrucciones de inicio mínimas para comprobar si el sistema se explica por sí mismo.
+Observar el uso completo de la clase sin intervenir salvo por un bloqueo real.
+Registrar comprensión, duración, errores, abandonos, necesidad de ayuda y percepción de utilidad.
+Separar problemas del contenido, problemas del producto y preferencias personales.
+Priorizar cambios que se repitan en varios usuarios o impidan cumplir el objetivo de la clase.
+6.3 Cierre de la versión 1
+Aplicar las correcciones justificadas por el piloto.
+Repetir las pruebas afectadas por los cambios.
+Congelar la versión 1 de la plantilla y conservar su historial.
+Autorizar recién entonces la construcción sistemática de las clases 2 a 6.
+Entregables
+Versión técnica funcional de la Clase 1.
+Informe de piloto con resultados y decisiones.
+Plantilla EstudioSimple versión 1 validada.
+Lista priorizada de mejoras futuras que no bloquean el escalamiento.
+Criterio de aprobación de la etapa
+El adulto puede conducir la clase sin preparación docente previa.
+El estudiante comprende las instrucciones y alcanza una evidencia medible de aprendizaje.
+La versión técnica reproduce las reglas del prototipo aprobado.
+Los problemas críticos del piloto están resueltos o existe una decisión explícita y justificada.
+El equipo autoriza formalmente usar la plantilla para las clases restantes.
+Responsabilidad propuesta: El equipo técnico implementa; Carla dirige la validación del producto; el equipo docente revisa aprendizaje y el piloto aporta evidencia de uso real.
+Gobernanza, control de cambios y versiones
+Documento único de decisiones
+Toda decisión aprobada debe registrarse en un solo documento o tablero. Las conversaciones, mensajes y observaciones individuales sirven como antecedentes, pero no deben competir como fuentes de verdad.
+Identificador de la decisión o cambio.
+Fecha y versión afectada.
+Descripción breve del problema.
+Decisión adoptada y motivo.
+Responsable de aplicarla y responsable de aprobarla.
+Estado: propuesta, aprobada, aplicada, probada o descartada.
+Nomenclatura mínima de versiones
+V1 - Primer prototipo funcional presentado.
+V2 - Prototipo corregido después de la auditoría.
+V3 - Candidato validado después de la prueba interna.
+Versión técnica 1.0 - Implementación lista para piloto externo.
+Plantilla 1.0 - Estructura aprobada después del piloto.
+Qué no debe hacerse todavía
+No construir las clases 2 a 6 sobre una plantilla aún no validada.
+No enviar a Antigravity un prompt definitivo basado en el prototipo actual sin auditar.
+No resolver problemas pedagógicos mediante decisiones técnicas improvisadas.
+No buscar perfección visual antes de comprobar comprensión y funcionamiento.
+No incorporar nuevas funciones que no sean necesarias para validar la propuesta central.
+Próximo paso inmediato
+ACCIÓN RECOMENDADA  Realizar la auditoría del prototipo actual de principio a fin y registrar todas las correcciones en una lista maestra única. Solo después se construye la versión 2 y se actualiza el mapa de flujo definitivo.
+Orden práctico para la próxima sesión de trabajo
+Abrir simultáneamente las vistas del adulto y del estudiante.
+Recorrer la clase completa siguiendo primero el camino correcto.
+Repetir los puntos de decisión usando las rutas de apoyo y no respuesta.
+Probar aprobación, reprobación, refuerzo, cierre y pausa.
+Registrar cada hallazgo sin corregirlo durante la observación.
+Clasificar y priorizar las observaciones al terminar.
+Aprobar la lista maestra antes de modificar el prototipo.
+Puerta final antes de escalar
+La Clase 1 estará lista para convertirse en modelo cuando el contenido sea correcto, el adulto pueda guiar sin preparación previa, el estudiante comprenda la experiencia, todas las rutas funcionen, la evaluación determine el avance y el paquete técnico permita reconstruirla sin reinterpretar las decisiones.

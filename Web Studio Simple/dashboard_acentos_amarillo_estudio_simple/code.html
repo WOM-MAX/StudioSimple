@@ -1,0 +1,307 @@
+<!DOCTYPE html><html class="dark" lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Estudio Simple - Student Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#123a72",
+                        "error-container": "#93000a",
+                        "error": "#ffb4ab",
+                        "primary-fixed": "#d7e2ff",
+                        "surface-tint": "#abc7ff",
+                        "surface-variant": "#323537",
+                        "on-background": "#e0e3e5",
+                        "secondary-container": "#f27a00",
+                        "tertiary": "#57d6f3",
+                        "surface": "#101415",
+                        "surface-container-high": "#272a2c",
+                        "on-tertiary-container": "#24b4d0",
+                        "outline-variant": "#434750",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary": "#003640",
+                        "primary-fixed-dim": "#abc7ff",
+                        "on-primary-container": "#85a6e4",
+                        "on-tertiary-fixed": "#001f26",
+                        "on-surface-variant": "#c3c6d1",
+                        "on-secondary-fixed-variant": "#723600",
+                        "background": "#101415",
+                        "on-primary-fixed-variant": "#22467f",
+                        "on-secondary-container": "#542600",
+                        "on-error": "#690005",
+                        "surface-dim": "#101415",
+                        "surface-container": "#1d2022",
+                        "primary": "#abc7ff",
+                        "surface-container-highest": "#323537",
+                        "surface-bright": "#363a3b",
+                        "inverse-on-surface": "#2d3133",
+                        "inverse-primary": "#3c5e98",
+                        "secondary-fixed": "#ffdcc6",
+                        "on-secondary": "#502400",
+                        "on-primary": "#002f66",
+                        "on-secondary-fixed": "#311300",
+                        "surface-container-lowest": "#0b0f10",
+                        "inverse-surface": "#e0e3e5",
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "secondary": "#ffb786",
+                        "surface-container-low": "#191c1e",
+                        "tertiary-container": "#00414d",
+                        "secondary-fixed-dim": "#ffb786",
+                        "outline": "#8d909b",
+                        "tertiary-fixed": "#abedff",
+                        "on-surface": "#e0e3e5",
+                        "on-primary-fixed": "#001b3f",
+                        "tertiary-fixed-dim": "#57d6f3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "xl": "64px",
+                        "xs": "4px",
+                        "gutter": "24px",
+                        "lg": "40px",
+                        "margin-desktop": "48px",
+                        "md": "24px",
+                        "base": "8px",
+                        "sm": "12px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Montserrat", "sans-serif"],
+                        "headline-md": ["Montserrat", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "display-lg-mobile": ["Montserrat", "sans-serif"],
+                        "display-lg": ["Montserrat", "sans-serif"],
+                        "label-md": ["Inter", "sans-serif"],
+                        "label-sm": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        /* Custom Scrollbar for sleekness */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: theme('colors.background');
+        }
+        ::-webkit-scrollbar-thumb {
+            background: theme('colors.surface-variant');
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: theme('colors.outline');
+        }
+        
+        .bento-card {
+            background: rgba(25, 28, 30, 0.7); /* surface-container-low with opacity */
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .bento-card:hover {
+            transform: scale(1.02);
+            box-shadow: inset 0 0 20px rgba(171, 199, 255, 0.05); /* primary subtle glow */
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen font-body-md selection:bg-primary-container selection:text-on-primary-container" style="font-family: &quot;Arial Rounded MT Bold&quot;, &quot;Arial Rounded&quot;, sans-serif;">
+<!-- TopNavBar (Mobile mainly, but structured for responsive) -->
+<header class="md:hidden fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-white/10 shadow-sm" style="background-color: rgb(18, 161, 164); color: white;">
+<div class="flex justify-between items-center px-margin-mobile py-4 max-w-full mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary text-white">Estudio Simple</div>
+<button class="text-primary p-2 text-white">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+<div class="flex h-screen pt-[72px] md:pt-0">
+<!-- SideNavBar (Desktop) -->
+<nav class="hidden md:flex flex-col h-full py-base border-r border-white/5 shadow-md fixed left-0 top-0 w-64 z-40 transition-all duration-300 group" id="sidebar" style="background-color: #F8AD22; color: #1A1C1E;">
+<div class="px-margin-desktop pt-lg pb-md">
+<div class="mb-2"><img alt="Estudio Simple Logo" class="h-[96px] w-auto object-contain rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8xOVhU5qPjEzqFeGORPAP8x7qdCsZCdP2mVC3YedS7ymf9-6n7GvFtcBK79svs6cPD-mkLzd1eIH1jjeEJhqHc_z63tP33D2QsfqUj4UPVBY-VCbMHiDaJdRZEsHrC-BOWCftGMFuGMHp1P8FhUT6OUQ_Rj5FP7ydAlK4jZX8BzNpuTl_0nK_FmXDFRWS4te40DQ9CAklT7WoEkR30FzOnLY4jjnE3FbUDS9oMc9lAVo4ek5Z0GPK4ZVss9b-wdtkkxc"></div>
+<div class="font-label-sm text-label-sm truncate text-on-secondary-fixed">Portal de Aprendizaje</div>
+</div>
+<div class="flex-1 overflow-y-auto mt-md">
+<ul class="space-y-sm">
+<li class="">
+<a class="bg-primary-container text-on-primary-container rounded-xl mx-2 flex items-center gap-3 p-3" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-md text-label-md">Salón de Clases Virtual</span>
+</a>
+</li>
+<li class="">
+<a class="flex items-center gap-3 p-3 mx-2 hover:bg-surface-variant/50 rounded-xl transition-all duration-200 text-on-secondary-fixed" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-label-md text-label-md">Mis Lecciones</span>
+</a>
+</li>
+<li class="">
+<a class="flex items-center gap-3 p-3 mx-2 hover:bg-surface-variant/50 rounded-xl transition-all duration-200 text-on-secondary-fixed" href="#">
+<span class="material-symbols-outlined" data-icon="insights">insights</span>
+<span class="font-label-md text-label-md">Progreso</span>
+</a>
+</li>
+<li class="">
+<a class="flex items-center gap-3 p-3 mx-2 hover:bg-surface-variant/50 rounded-xl transition-all duration-200 text-on-secondary-fixed" href="#">
+<span class="material-symbols-outlined" data-icon="folder_open">folder_open</span>
+<span class="font-label-md text-label-md">Recursos</span>
+</a>
+</li>
+<li class="">
+<a class="flex items-center gap-3 p-3 mx-2 hover:bg-surface-variant/50 rounded-xl transition-all duration-200 text-on-secondary-fixed" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-md text-label-md">Configuración</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="mt-auto px-md py-md border-t border-white/5">
+<button class="w-full bg-secondary-container text-white rounded-xl py-3 px-4 font-label-md text-label-md flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-lg shadow-secondary-container/20" style="background-color: rgb(18, 161, 164); color: white;">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                    Nueva Lección
+                </button>
+<div class="mt-md flex flex-col gap-2">
+<a class="flex items-center gap-3 p-2 hover:bg-surface-variant/50 rounded-lg transition-all duration-200 text-on-secondary-fixed" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="help">help</span>
+<span class="font-label-sm text-label-sm">Ayuda</span>
+</a>
+<a class="flex items-center gap-3 p-2 hover:bg-surface-variant/50 rounded-lg transition-all duration-200 text-on-secondary-fixed" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="logout">logout</span>
+<span class="font-label-sm text-label-sm">Cerrar Sesión</span>
+</a>
+</div>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-64 overflow-y-auto p-margin-mobile md:p-margin-desktop bg-background relative z-10 min-h-screen" style="background-color: rgb(28, 50, 87); color: white;">
+<!-- Context Header / Breadcrumbs (Cascading Concept) -->
+<div class="mb-lg">
+<div class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md mb-2">
+<span class="hover:text-primary cursor-pointer transition-colors">5° Básico</span>
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+<span class="hover:text-primary cursor-pointer transition-colors">Matemáticas</span>
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+<span class="text-primary">Fracciones</span>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface">Entendiendo las Fracciones</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2 max-w-2xl">Aprende a identificar, leer, escribir y representar fracciones de varias maneras.</p>
+</div>
+<!-- Dashboard Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-xl">
+<!-- Main Lesson Focus (Large Card) -->
+<div class="col-span-1 md:col-span-8 bento-card rounded-2xl p-lg flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 right-0 p-md opacity-20">
+<span class="material-symbols-outlined text-9xl text-primary" data-icon="pie_chart">pie_chart</span>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-md">
+<span class="bg-tertiary/10 text-tertiary px-3 py-1 rounded-full font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="star">star</span>
+                                Objetivo Actual
+                            </span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-sm">Visualizando Partes de un Todo</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg mb-lg">
+                            Hoy nos enfocaremos en entender cómo un objeto completo puede dividirse en partes iguales, y cómo escribir eso como una fracción matemática.
+                        </p>
+<div class="bg-surface-container-high rounded-xl p-md border border-white/5 mb-lg">
+<h3 class="font-label-md text-label-md text-on-surface mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="lightbulb">lightbulb</span>
+                                Concepto Clave
+                            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">El número de arriba (numerador) indica cuántas partes tenemos. El número de abajo (denominador) indica en cuántas partes se divide el todo.</p>
+</div>
+</div>
+<div class="relative z-10 flex gap-4 mt-auto">
+<button class="bg-secondary-container text-white px-6 py-3 rounded-xl font-label-md text-label-md hover:scale-105 transition-transform flex items-center gap-2">
+                            Comenzar Actividad
+                            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="bg-surface-container-highest text-on-surface px-6 py-3 rounded-xl font-label-md text-label-md hover:bg-surface-variant transition-colors">
+                            Ver Ejemplos
+                        </button>
+</div>
+</div>
+<!-- Progress & Quick Stats (Side column) -->
+<div class="col-span-1 md:col-span-4 flex flex-col gap-gutter">
+<!-- Progress Card -->
+<div class="bento-card rounded-2xl p-md">
+<div class="flex justify-between items-center mb-md">
+<h3 class="font-label-md text-label-md text-on-surface-variant">Progreso de la Unidad</h3>
+<span class="font-headline-sm text-headline-sm text-primary">65%</span>
+</div>
+<!-- Turquoise Progress Bar -->
+<div class="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 65%;"></div>
+</div>
+<div class="mt-sm font-label-sm text-label-sm text-on-surface-variant text-right">
+                            4 de 6 Objetivos Completados
+                        </div>
+</div>
+<!-- Mini Quiz Teaser -->
+<div class="bento-card rounded-2xl p-md border-l-4 border-l-secondary-container">
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Examen Rápido Listo</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Pon a prueba tus conocimientos sobre fracciones básicas antes de continuar.</p>
+</div>
+<div class="bg-surface-container p-2 rounded-lg">
+<span class="material-symbols-outlined text-secondary-container" data-icon="quiz">quiz</span>
+</div>
+</div>
+<button class="mt-md w-full bg-surface-container-highest text-on-surface py-2 rounded-lg font-label-md text-label-md hover:bg-outline-variant/30 transition-colors">
+                            Realizar Examen (5 mins)
+                        </button>
+</div>
+<!-- Parent Tip Accordion (Interactive) -->
+<div class="bento-card rounded-2xl p-md cursor-pointer group" onclick="this.classList.toggle('expanded')">
+<div class="flex items-center justify-between pointer-events-none">
+<div class="flex items-center gap-2 text-[#4ade80] font-label-md text-label-md">
+<span class="material-symbols-outlined text-sm" data-icon="family_home">family_home</span>
+                                Consejo para Padres
+                            </div>
+<span class="material-symbols-outlined transition-transform duration-300 group-[.expanded]:rotate-180 text-on-surface-variant" data-icon="expand_more">expand_more</span>
+</div>
+<div class="hidden group-[.expanded]:block mt-3 text-on-surface-variant font-body-sm text-sm border-t border-white/5 pt-3 animate-[slideDown_0.2s_ease-out]">
+                            ¡Intenta rebanar una manzana o una pizza esta noche en la cena y pídele a tu hijo que identifique las fracciones en voz alta! La aplicación en el mundo real refuerza el concepto.
+                        </div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<style>
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+
+
+</body></html>
