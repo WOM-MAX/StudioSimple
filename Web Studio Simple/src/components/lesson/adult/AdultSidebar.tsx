@@ -1,13 +1,13 @@
-﻿import React from 'react';
+import React from 'react';
 import { useLessonSync } from '../../../context/LessonSyncContext';
 import { LessonStage } from '../../../types/lesson';
 import { Check } from 'lucide-react';
 
 export const CANONICAL_STEPS = [
   'Inicio',
-  'Video Motivacional',
+  'Video',
   'Recorrido',
-  'Video Explicativo',
+  'Posición y movimiento',
   'Práctica',
   'Resumen',
   'Miniquiz',
@@ -15,9 +15,9 @@ export const CANONICAL_STEPS = [
 ];
 
 export function getStageStepIndex(stage: LessonStage): number {
-  if (stage === 'cover' || stage === 'prep') return 0;
+  if (stage === 'cover' || stage === 'prep' || stage === 'route' || stage === 'situation' || stage === 'reference') return 0;
   if (stage === 'hook') return 1;
-  if (['route', 'situation', 'reference', 'conversation'].includes(stage)) return 2;
+  if (stage === 'conversation') return 2;
   if (stage === 'formalization') return 3;
   if (stage === 'practice') return 4;
   if (stage === 'idea') return 5;

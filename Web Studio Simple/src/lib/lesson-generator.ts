@@ -126,6 +126,8 @@ export interface LessonData {
     slides: SlidePrompt[];
     dileAntes: string;
     dileDespues: string;
+    videoUrl?: string;
+    videoSrc?: string;
   };
   paso3_recorrido: GuidedItem[];
   paso4_explicativo: {
@@ -134,6 +136,8 @@ export interface LessonData {
     slides: SlidePrompt[];
     ideaClave: string;
     dileAntes: string;
+    videoUrl?: string;
+    videoSrc?: string;
   };
   paso5_practica: GuidedItem[];
   paso6_resumen: {
@@ -376,6 +380,7 @@ function getCanonicalClase1Matematica(): LessonData {
       titulo: "El recorrido del submarino",
       fullPrompt: buildHookPromptText("Matemática", "OA 1", 1, "Posiciones y movimientos respecto de un punto de referencia", hookSlides),
       slides: hookSlides,
+      videoUrl: "https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/MAT/MAT_OA01_L01_Motivacional.mp4",
       dileAntes: "Ahora veremos un video sobre el recorrido de un submarino. Mientras lo ves, fíjate en tres cosas: dónde comienza el submarino, cuánto baja y cuánto sube.",
       dileDespues: "Conversemos sobre lo que acabamos de ver. Te haré dos preguntas para que juntos comprendamos mejor el recorrido del submarino."
     },
@@ -403,6 +408,7 @@ function getCanonicalClase1Matematica(): LessonData {
       titulo: "Aprendamos sobre posición y movimiento",
       fullPrompt: buildExplicativoPromptText("Matemática", "OA 1", 1, "Posiciones y movimientos respecto de un punto de referencia", explicativoSlides),
       slides: explicativoSlides,
+      videoUrl: "https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/MAT/MAT_OA01_L01_Concepto.mp4",
       ideaClave: "Una posición indica dónde se encuentra algo respecto de un punto de referencia; un movimiento indica cómo cambia de lugar, hacia dónde se desplaza y qué distancia recorre.",
       dileAntes: "Ya identificamos el punto de referencia de este recorrido y comprendimos que menos veinte metros indica dónde se encuentra el submarino. A eso lo llamamos una posición. Ahora veremos un video para aprender qué es un movimiento y cómo distinguirlo de una posición."
     },

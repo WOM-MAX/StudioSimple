@@ -10,7 +10,7 @@ import {
   ExpectedAnswerBox,
   FeedbackBanner
 } from '../common/Cards';
-import { ArrowRight, Play, CheckCircle2, RotateCcw, HelpCircle, Sparkles, BookOpen, Clock } from 'lucide-react';
+import { ArrowRight, Play, CheckCircle2, RotateCcw, HelpCircle, Sparkles, BookOpen, Clock, ArrowDown } from 'lucide-react';
 
 export const AdultLessonView: React.FC = () => {
   const { session, lessonData, updateSession, setStage, setFeedback } = useLessonSync();
@@ -73,36 +73,70 @@ export const AdultLessonView: React.FC = () => {
 
           {/* STAGE: PREP */}
           {session.stage === 'prep' && (
-            <div>
-              <h1 className="text-2xl font-bold text-[#1c3257] mb-4">Antes de comenzar</h1>
-              <div className="space-y-4 mb-6">
-                <div className="bg-white border-l-4 border-l-[#4a964e] p-4 rounded-xl shadow-sm">
-                  <strong className="text-[#4a964e] text-xs uppercase tracking-wider block mb-1">Tu Objetivo</strong>
-                  <p className="text-[#334157] text-sm leading-relaxed">{lessonData.prep.adultObjective}</p>
+            <div className="animate-fadeIn max-w-2xl mx-auto">
+              <h1 className="text-2xl sm:text-3xl font-extrabold text-[#1c3257] mb-5">
+                Antes de comenzar
+              </h1>
+
+              <div className="flex flex-col items-center space-y-2 mb-6">
+                {/* 1. TU OBJETIVO */}
+                <div className="w-full bg-white border-l-4 border-l-[#38a169] p-5 rounded-2xl shadow-sm">
+                  <strong className="text-[#38a169] text-xs uppercase tracking-wider font-bold block mb-2">
+                    TU OBJETIVO
+                  </strong>
+                  <p className="text-[#2d3748] text-xs sm:text-sm leading-relaxed font-normal">
+                    {lessonData.prep.adultObjective}
+                  </p>
                 </div>
 
-                <div className="bg-white border-l-4 border-l-[#ee751c] p-4 rounded-xl shadow-sm">
-                  <strong className="text-[#ee751c] text-xs uppercase tracking-wider block mb-1">Ruta de Hoy</strong>
-                  <p className="text-[#334157] text-sm leading-relaxed">{lessonData.prep.routeToday}</p>
+                {/* Flecha conectora */}
+                <div className="flex justify-center text-[#a0aec0] py-0.5">
+                  <ArrowDown className="w-3.5 h-3.5" />
                 </div>
 
-                <div className="bg-white border-l-4 border-l-[#f8ad22] p-4 rounded-xl shadow-sm">
-                  <strong className="text-[#c87b00] text-xs uppercase tracking-wider block mb-1">¡Recuerda!</strong>
-                  <p className="text-[#334157] text-sm leading-relaxed">{lessonData.prep.mentorReminder}</p>
+                {/* 2. RUTA DE HOY */}
+                <div className="w-full bg-white border-l-4 border-l-[#dd6b20] p-5 rounded-2xl shadow-sm">
+                  <strong className="text-[#dd6b20] text-xs uppercase tracking-wider font-bold block mb-2">
+                    RUTA DE HOY
+                  </strong>
+                  <p className="text-[#2d3748] text-xs sm:text-sm leading-relaxed font-normal">
+                    {lessonData.prep.routeToday}
+                  </p>
                 </div>
 
-                <EmotionalTipBox>
-                  {lessonData.prep.emotionalTip}
-                </EmotionalTipBox>
+                {/* Flecha conectora */}
+                <div className="flex justify-center text-[#a0aec0] py-0.5">
+                  <ArrowDown className="w-3.5 h-3.5" />
+                </div>
+
+                {/* 3. ¡RECUERDA! */}
+                <div className="w-full bg-white border-l-4 border-l-[#d69e2e] p-5 rounded-2xl shadow-sm">
+                  <strong className="text-[#b7791f] text-xs uppercase tracking-wider font-bold block mb-2">
+                    ¡RECUERDA!
+                  </strong>
+                  {lessonData.prep.reminders && lessonData.prep.reminders.length > 0 ? (
+                    <ol className="list-decimal pl-5 space-y-1.5 text-xs sm:text-sm text-[#2d3748] leading-relaxed">
+                      {lessonData.prep.reminders.map((reminder, idx) => (
+                        <li key={idx} className="pl-1">
+                          {reminder}
+                        </li>
+                      ))}
+                    </ol>
+                  ) : (
+                    <p className="text-[#2d3748] text-xs sm:text-sm leading-relaxed font-normal">
+                      {lessonData.prep.mentorReminder}
+                    </p>
+                  )}
+                </div>
               </div>
 
-              <div className="flex justify-end pt-4">
+              <div className="flex justify-center pt-2">
                 <button
                   type="button"
-                  onClick={() => setStage('hook')}
-                  className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all"
+                  onClick={() => setStage('route')}
+                  className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-8 py-3.5 rounded-xl flex items-center gap-2 text-sm shadow-md hover:shadow-lg hover:scale-[1.01] transition-all cursor-pointer"
                 >
-                  <span>Iniciar gancho motivacional</span>
+                  <span>Comenzar con el estudiante</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
@@ -237,11 +271,11 @@ export const AdultLessonView: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => {
-                      updateSession({ stage: 'conversation', conversationIndex: 0, feedback: null });
+                      updateSession({ stage: 'hook', hookStarted: false, hookEnded: false, feedback: null });
                     }}
-                    className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all"
+                    className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md hover:shadow-lg transition-all cursor-pointer"
                   >
-                    <span>Continuar a las preguntas</span>
+                    <span>Seguir con el video</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
@@ -292,11 +326,11 @@ export const AdultLessonView: React.FC = () => {
                       <button
                         type="button"
                         onClick={() => {
-                          setStage('route');
+                          updateSession({ stage: 'conversation', conversationIndex: 0, feedback: null });
                         }}
-                        className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all"
+                        className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md hover:shadow-lg transition-all cursor-pointer"
                       >
-                        <span>Continuar a la ruta de aprendizaje</span>
+                        <span>Comprendamos el recorrido</span>
                         <ArrowRight className="w-4 h-4" />
                       </button>
                     </div>
@@ -601,77 +635,79 @@ export const AdultLessonView: React.FC = () => {
             </div>
           )}
 
-          {/* STAGE: RESULTS */}
+          {/* STAGE: RESULTS / REVIEW */}
           {session.stage === 'results' && (
             <div>
               {(() => {
+                const totalQ = lessonData.quiz.questions.length;
+                const qIndex = Math.min(Math.max(session.reviewIndex || 0, 0), totalQ - 1);
+                const currentQ = lessonData.quiz.questions[qIndex] || lessonData.quiz.questions[0];
+                const studentAns = session.miniAnswers[qIndex];
+                const isCorrect = studentAns === currentQ.correct;
+                const isLast = qIndex >= totalQ - 1;
                 const passed = session.miniScore >= lessonData.quiz.passScoreMin;
-                return (
-                  <div>
-                    <h1 className="text-2xl font-bold text-[#1c3257] mb-4">
-                      {passed ? 'Revisemos el resultado' : 'Reforcemos antes de cerrar'}
-                    </h1>
 
-                    <div className={`p-4 rounded-2xl flex items-center justify-between mb-6 ${
-                      passed ? 'bg-[#eaf4e8] text-[#255e29] border border-[#badcb8]' : 'bg-[#fff0e4] text-[#924814] border border-[#f5c49d]'
-                    }`}>
-                      <div>
-                        <span className="text-xs font-bold uppercase tracking-wider block">Resultado del Miniquiz</span>
-                        <strong className="text-2xl font-black">{session.miniScore} / {lessonData.quiz.questions.length}</strong>
-                      </div>
-                      <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-white shadow-sm">
-                        {passed ? 'Miniquiz Aprobado' : 'Requiere Refuerzo Guiado'}
+                return (
+                  <div className="animate-fadeIn">
+                    <div className="flex items-center justify-between mb-4">
+                      <h1 className="text-2xl font-bold text-[#1c3257]">
+                        Revisemos la respuesta {qIndex + 1} de {totalQ}
+                      </h1>
+                      <span className={`text-xs font-bold px-3 py-1 rounded-full ${
+                        isCorrect ? 'bg-[#eaf4e8] text-[#255e29]' : 'bg-[#fff0e4] text-[#ee751c]'
+                      }`}>
+                        {isCorrect ? 'Respuesta correcta' : 'Necesita apoyo'}
                       </span>
                     </div>
 
-                    {passed ? (
-                      <div>
-                        <PromptBox label="DILE" tone="teal">
-                          ¡Muy bien! Lograste el mínimo de la clase. Revisemos brevemente tus respuestas antes del cierre.
-                        </PromptBox>
+                    {/* Tarjeta PREGUNTA */}
+                    <div className="bg-white rounded-2xl p-5 border border-[#dce2e6] shadow-sm mb-4">
+                      <span className="text-[10px] uppercase font-bold tracking-widest text-[#748093] block mb-2">
+                        Pregunta
+                      </span>
+                      <p className="text-sm sm:text-base font-bold text-[#1c3257] mb-4 leading-snug">
+                        {currentQ.q}
+                      </p>
 
-                        <div className="space-y-3 my-4">
-                          {lessonData.quiz.questions.map((q, idx) => {
-                            const studentAns = session.miniAnswers[idx];
-                            const isCorrect = studentAns === q.correct;
-                            return (
-                              <div key={q.id} className="bg-white p-3.5 rounded-xl border border-[#dce2e6] text-xs">
-                                <div className="flex items-center justify-between mb-1">
-                                  <strong className="text-[#1c3257]">Pregunta {idx + 1}: {q.q}</strong>
-                                  <span className={`font-bold px-2 py-0.5 rounded ${
-                                    isCorrect ? 'bg-[#eaf4e8] text-[#255e29]' : 'bg-[#fff0e4] text-[#ee751c]'
-                                  }`}>
-                                    {isCorrect ? 'Correcta' : 'Para revisar'}
-                                  </span>
-                                </div>
-                                <p className="text-[#657185]">Tu respuesta: <b className="text-[#1c3257]">{studentAns}</b></p>
-                              </div>
-                            );
-                          })}
+                      <div className="flex flex-wrap items-center gap-4 pt-3 border-t border-[#f1f5f9] text-xs">
+                        <div className="flex items-center gap-1.5">
+                          <span className="text-[#748093]">Respondió:</span>
+                          <span className={`font-bold px-2.5 py-1 rounded-lg ${
+                            isCorrect ? 'bg-[#eaf4e8] text-[#255e29]' : 'bg-[#fff0e4] text-[#ee751c]'
+                          }`}>
+                            {studentAns || '(Sin respuesta)'}
+                          </span>
                         </div>
-
-                        <div className="flex justify-end mt-6">
-                          <button
-                            type="button"
-                            onClick={() => setStage('closing')}
-                            className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all"
-                          >
-                            <span>Ir al cierre oral y metacognición</span>
-                            <ArrowRight className="w-4 h-4" />
-                          </button>
+                        <div className="flex items-center gap-1.5">
+                          <span className="text-[#748093]">Respuesta correcta:</span>
+                          <span className="font-bold text-[#255e29] bg-[#eaf4e8] px-2.5 py-1 rounded-lg">
+                            {currentQ.correct}
+                          </span>
                         </div>
                       </div>
-                    ) : (
-                      <div>
-                        <PrivateBox>
-                          Revisarán cada concepto no logrado con una explicación guiada y una pregunta equivalente. Mantén siempre un clima positivo.
-                        </PrivateBox>
+                    </div>
 
-                        <PromptBox label="DILE">
-                          {lessonData.recovery.dileIntroError}
-                        </PromptBox>
+                    {/* Recuadro DILE con la explicación pedagógica */}
+                    <PromptBox label="DILE" tone="teal">
+                      {currentQ.explain}
+                    </PromptBox>
 
-                        <div className="flex gap-3 mt-6">
+                    {/* Navegación de revisión */}
+                    <div className="flex items-center justify-between mt-6 pt-4 border-t border-[#dce2e6]">
+                      {qIndex > 0 ? (
+                        <button
+                          type="button"
+                          onClick={() => updateSession({ reviewIndex: qIndex - 1 })}
+                          className="text-xs font-bold text-[#748093] hover:text-[#1c3257] flex items-center gap-1 px-3 py-2 rounded-xl border border-[#dce2e6] bg-white hover:bg-[#f8fafc] transition-all cursor-pointer"
+                        >
+                          <span>Volver a la anterior</span>
+                        </button>
+                      ) : (
+                        <div />
+                      )}
+
+                      <div className="flex items-center gap-2">
+                        {isLast && !passed && (
                           <button
                             type="button"
                             onClick={() => {
@@ -682,20 +718,28 @@ export const AdultLessonView: React.FC = () => {
                                 recoveryResults: []
                               });
                             }}
-                            className="flex-1 bg-[#1c3257] hover:bg-[#284773] text-white font-bold py-3 px-4 rounded-xl text-sm transition-all"
+                            className="bg-white hover:bg-[#fff0e4] text-[#ee751c] border border-[#f5c49d] font-bold px-4 py-3 rounded-xl text-xs sm:text-sm transition-all cursor-pointer"
                           >
-                            Comenzar refuerzo guiado
+                            Reforzar con preguntas guiadas
                           </button>
-                          <button
-                            type="button"
-                            onClick={() => setStage('paused')}
-                            className="bg-white hover:bg-[#f5f7f9] text-[#657185] border border-[#dce2e6] font-semibold py-3 px-4 rounded-xl text-sm transition-all"
-                          >
-                            Terminar por hoy
-                          </button>
-                        </div>
+                        )}
+
+                        <button
+                          type="button"
+                          onClick={() => {
+                            if (!isLast) {
+                              updateSession({ reviewIndex: qIndex + 1 });
+                            } else {
+                              setStage('closing');
+                            }
+                          }}
+                          className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md hover:shadow-lg transition-all cursor-pointer"
+                        >
+                          <span>{isLast ? 'Ir al cierre' : 'Siguiente respuesta'}</span>
+                          <ArrowRight className="w-4 h-4" />
+                        </button>
                       </div>
-                    )}
+                    </div>
                   </div>
                 );
               })()}

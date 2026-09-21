@@ -15,10 +15,18 @@ export const MATEMATICA_7B_OA01_CLASE01: LessonData = {
 
   // Paso 1: Portada y Preparación
   prep: {
-    adultObjective: 'Guiar al estudiante para que comprenda que los números enteros representan posiciones respecto de un punto de referencia y que el cero define ese origen.',
-    routeToday: 'Termómetro/Ascensor → Desafío del submarino → Explicación formal → Práctica guiada → Miniquiz → Cierre metacognitivo.',
-    mentorReminder: 'Sigue las indicaciones en pantalla paso a paso. Lee únicamente los recuadros DILE en voz alta y espera siempre la respuesta. Si tu hijo duda, utiliza el apoyo socrático sin dar la respuesta de inmediato.',
-    emotionalTip: 'Crear un clima seguro: Si notas tensión o temor al error, recuérdale con voz tranquila: "Aquí no buscamos rapidez; equivocarse es la forma en que el cerebro descubre nuevas pistas".'
+    adultObjective: 'Guiar al estudiante para que comprenda que los números enteros pueden representar la ubicación de algo en relación con un punto de referencia, que distinga entre posición y movimiento y que explique al menos una idea con sus propias palabras.',
+    routeToday: 'Introducción → conexión inicial → video introductorio → conversación guiada → video explicativo → práctica → comparación → estrategia para pensar → resumen → miniquiz → refuerzo si es necesario → cierre.',
+    mentorReminder: 'Sigue las indicaciones en pantalla paso a paso. Lee únicamente los recuadros DILE en voz alta y espera siempre la respuesta.',
+    reminders: [
+      'Sigue el orden indicado.',
+      'Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.',
+      'No leas los recuadros SOLO PARA TI ni AYUDA DE LECTURA.',
+      'Haz cada pregunta y espera la respuesta antes de seleccionar una opción.',
+      'Considera correcta una respuesta si expresa la idea matemática, aunque use palabras distintas.',
+      'Si el estudiante necesita apoyo, usa únicamente la ayuda que aparecerá.',
+      'Si propone otra explicación o no está de acuerdo, escúchalo completo y valora su razonamiento antes de guiarlo.'
+    ]
   },
 
   // Paso 2: Ruta y Situación Inicial
@@ -75,7 +83,7 @@ export const MATEMATICA_7B_OA01_CLASE01: LessonData = {
   hook: {
     dileIntro: 'Antes de comenzar a ver el video, observa con mucha atención dónde inicia el submarino y fíjate bien en cuánto baja y cuánto sube.',
     hazInstruction: 'Presiona el botón "Reproducir video" para activar la animación en la pantalla del estudiante.',
-    videoSrc: '/media/gancho-submarino.mp4',
+    videoSrc: 'https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/MAT/MAT_OA01_L01_Motivacional.mp4',
     posterSrc: '/visuals/desafio-submarino.png',
     dileAfterVideo: 'Excelente observación. Ahora conversaremos sobre lo que acabamos de ver en el recorrido del submarino.'
   },
@@ -120,7 +128,7 @@ export const MATEMATICA_7B_OA01_CLASE01: LessonData = {
   formalization: {
     dileIntro: 'Ya descubrimos que una cosa es dónde está el submarino y otra distinta es cómo se mueve. Ahora veremos cómo las matemáticas representan formalmente estas ideas usando números enteros.',
     hazInstruction: 'Reproduce la explicación visual para formalizar la diferencia entre Posición y Movimiento.',
-    videoSrc: '/media/formalizacion-enteros.mp4',
+    videoSrc: 'https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/MAT/MAT_OA01_L01_Concepto.mp4',
     graphicPoster: '/visuals/posicion-movimiento.png'
   },
 

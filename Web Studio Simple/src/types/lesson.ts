@@ -73,7 +73,8 @@ export interface LessonData {
     adultObjective: string;
     routeToday: string;
     mentorReminder: string;
-    emotionalTip: string;
+    reminders?: string[];
+    emotionalTip?: string;
   };
   // Paso 2: Ruta y Situación
   route: {

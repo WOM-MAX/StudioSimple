@@ -1,13 +1,54 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useLessonSync } from '../../../context/LessonSyncContext';
 import { StudentHeader } from './StudentHeader';
 import { StudentInteractiveThermo } from './StudentInteractiveThermo';
 import { StudentMiniquizView } from './StudentMiniquizView';
+import { StudentQuizReviewView } from './StudentQuizReviewView';
 import { StudentRecoveryView } from './StudentRecoveryView';
-import { Sparkles, CheckCircle2, Waves, ArrowDown, ArrowUp, Compass } from 'lucide-react';
+import { Sparkles, CheckCircle2, Waves, ArrowDown, ArrowUp, Compass, Play } from 'lucide-react';
 
 export const StudentLessonView: React.FC = () => {
   const { session, lessonData, updateSession } = useLessonSync();
+  const hookVideoRef = useRef<HTMLVideoElement | null>(null);
+  const formalVideoRef = useRef<HTMLVideoElement | null>(null);
+  const [hookAutoplayBlocked, setHookAutoplayBlocked] = useState(false);
+  const [formalAutoplayBlocked, setFormalAutoplayBlocked] = useState(false);
+
+  // Reproducción automática reactiva cuando el mentor presiona iniciar video en el Paso 2 (Gancho)
+  useEffect(() => {
+    if (session.stage === 'hook' && session.hookStarted && hookVideoRef.current) {
+      const vid = hookVideoRef.current;
+      const playPromise = vid.play();
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            setHookAutoplayBlocked(false);
+          })
+          .catch((err) => {
+            console.warn('Autoplay bloqueado por política de audio del navegador:', err);
+            setHookAutoplayBlocked(true);
+          });
+      }
+    }
+  }, [session.stage, session.hookStarted]);
+
+  // Reproducción automática reactiva cuando el mentor presiona iniciar video en el Paso 4 (Formalización)
+  useEffect(() => {
+    if (session.stage === 'formalization' && session.formalStarted && formalVideoRef.current) {
+      const vid = formalVideoRef.current;
+      const playPromise = vid.play();
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            setFormalAutoplayBlocked(false);
+          })
+          .catch((err) => {
+            console.warn('Autoplay formalización bloqueado:', err);
+            setFormalAutoplayBlocked(true);
+          });
+      }
+    }
+  }, [session.stage, session.formalStarted]);
 
   return (
     <div className="flex flex-col h-full min-h-[720px] bg-[#f5f4ef] rounded-2xl overflow-hidden border border-[#dce2e6] shadow-sm select-none">
@@ -143,23 +184,59 @@ export const StudentLessonView: React.FC = () => {
 
         {/* STAGE 3: VIDEO (Hook Submarine) */}
         {session.stage === 'hook' && (
-          <div className="max-w-2xl mx-auto w-full animate-fadeIn text-center">
+          <div className="max-w-4xl mx-auto w-full animate-fadeIn text-center">
             <span className="text-[#12a1a4] font-bold text-xs uppercase tracking-widest block mb-1">
               {lessonData.metadata.subject} : Desafío Inicial
             </span>
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-[#1c3257] mb-6">
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-[#1c3257] mb-4">
               {lessonData.metadata.lessonTitle}
             </h1>
 
-            <div className="bg-[#10223d] rounded-3xl p-8 sm:p-12 text-white shadow-xl flex flex-col items-center justify-center min-h-[340px] border border-[#233859]">
-              {lessonData.hook.videoSrc && lessonData.hook.videoSrc.startsWith('http') ? (
-                <div className="w-full aspect-video rounded-2xl overflow-hidden bg-black mb-4">
-                  <iframe
-                    src={lessonData.hook.videoSrc}
-                    title={lessonData.metadata.lessonTitle}
-                    className="w-full h-full"
-                    allowFullScreen
-                  />
+            <div className="bg-[#10223d] rounded-3xl p-3 sm:p-5 text-white shadow-xl flex flex-col items-center justify-center min-h-[340px] border border-[#233859] relative">
+              {lessonData.hook.videoSrc ? (
+                <div className="w-full aspect-video rounded-2xl overflow-hidden bg-black mb-3 shadow-2xl flex items-center justify-center relative">
+                  {lessonData.hook.videoSrc.endsWith('.mp4') || lessonData.hook.videoSrc.includes('.mp4') || lessonData.hook.videoSrc.includes('r2.dev') ? (
+                    <>
+                      <video
+                        ref={hookVideoRef}
+                        src={lessonData.hook.videoSrc}
+                        controls
+                        playsInline
+                        className="w-full h-full object-contain"
+                        onPlay={() => {
+                          updateSession({ hookStarted: true });
+                          setHookAutoplayBlocked(false);
+                        }}
+                        onEnded={() => updateSession({ hookEnded: true })}
+                      />
+                      {hookAutoplayBlocked && (
+                        <button
+                          type="button"
+                          onClick={() => {
+                            if (hookVideoRef.current) {
+                              hookVideoRef.current.play();
+                              setHookAutoplayBlocked(false);
+                            }
+                          }}
+                          className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center gap-3 text-white cursor-pointer z-20 hover:bg-black/50 transition-all"
+                        >
+                          <div className="w-16 h-16 rounded-full bg-[#ee751c] flex items-center justify-center shadow-xl hover:scale-110 transition-transform">
+                            <Play className="w-8 h-8 fill-white ml-1" />
+                          </div>
+                          <span className="text-xs font-bold bg-[#1c3257] px-4 py-2 rounded-xl border border-white/20">
+                            Presiona aquí para iniciar el video
+                          </span>
+                        </button>
+                      )}
+                    </>
+                  ) : (
+                    <iframe
+                      src={lessonData.hook.videoSrc}
+                      title={lessonData.metadata.lessonTitle}
+                      className="w-full h-full"
+                      allowFullScreen
+                    />
+                  )}
                 </div>
               ) : (
                 <>
@@ -174,7 +251,7 @@ export const StudentLessonView: React.FC = () => {
               )}
 
               {session.hookStarted && (
-                <div className="bg-white/10 border border-white/20 rounded-2xl p-4 flex items-center gap-3 text-xs font-semibold text-[#12a1a4] animate-pulse">
+                <div className="bg-white/10 border border-white/20 rounded-2xl p-3 flex items-center gap-3 text-xs font-semibold text-[#12a1a4] animate-pulse">
                   <span className="w-3 h-3 rounded-full bg-[#12a1a4]" />
                   <span>{session.hookEnded ? 'Desafío completado' : 'Observando atentamente con tu mentor...'}</span>
                 </div>
@@ -216,15 +293,62 @@ export const StudentLessonView: React.FC = () => {
 
         {/* STAGE 5: FORMALIZATION */}
         {session.stage === 'formalization' && (
-          <div className="max-w-2xl mx-auto w-full animate-fadeIn text-center">
+          <div className="max-w-4xl mx-auto w-full animate-fadeIn text-center">
             <span className="text-[#12a1a4] font-bold text-xs uppercase tracking-widest block mb-1">
               {lessonData.metadata.subject} : Formalización Conceptual
             </span>
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-[#1c3257] mb-6">
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-[#1c3257] mb-4">
               {lessonData.metadata.lessonTitle}
             </h1>
 
-            <div className="bg-white border border-[#dce2e6] rounded-3xl p-8 shadow-sm">
+            <div className="bg-white border border-[#dce2e6] rounded-3xl p-4 sm:p-6 shadow-sm text-left">
+              {lessonData.formalization.videoSrc ? (
+                <div className="w-full aspect-video rounded-2xl overflow-hidden bg-black mb-6 shadow-md flex items-center justify-center relative">
+                  {lessonData.formalization.videoSrc.endsWith('.mp4') || lessonData.formalization.videoSrc.includes('.mp4') || lessonData.formalization.videoSrc.includes('r2.dev') ? (
+                    <>
+                      <video
+                        ref={formalVideoRef}
+                        src={lessonData.formalization.videoSrc}
+                        controls
+                        playsInline
+                        className="w-full h-full object-contain"
+                        onPlay={() => {
+                          updateSession({ formalStarted: true });
+                          setFormalAutoplayBlocked(false);
+                        }}
+                        onEnded={() => updateSession({ formalEnded: true })}
+                      />
+                      {formalAutoplayBlocked && (
+                        <button
+                          type="button"
+                          onClick={() => {
+                            if (formalVideoRef.current) {
+                              formalVideoRef.current.play();
+                              setFormalAutoplayBlocked(false);
+                            }
+                          }}
+                          className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center gap-3 text-white cursor-pointer z-20 hover:bg-black/50 transition-all"
+                        >
+                          <div className="w-16 h-16 rounded-full bg-[#ee751c] flex items-center justify-center shadow-xl hover:scale-110 transition-transform">
+                            <Play className="w-8 h-8 fill-white ml-1" />
+                          </div>
+                          <span className="text-xs font-bold bg-[#1c3257] px-4 py-2 rounded-xl border border-white/20">
+                            Presiona aquí para iniciar el video
+                          </span>
+                        </button>
+                      )}
+                    </>
+                  ) : (
+                    <iframe
+                      src={lessonData.formalization.videoSrc}
+                      title="Formalización Conceptual"
+                      className="w-full h-full"
+                      allowFullScreen
+                    />
+                  )}
+                </div>
+              ) : null}
+
               <span className="bg-[#e9f2f8] text-[#1c3257] font-black text-xs px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-4">
                 Concepto Central
               </span>
@@ -297,32 +421,9 @@ export const StudentLessonView: React.FC = () => {
           <StudentMiniquizView />
         )}
 
-        {/* STAGE 7 (cont): RESULTS */}
+        {/* STAGE 7 (cont): RESULTS / REVIEW */}
         {session.stage === 'results' && (
-          <div className="max-w-xl mx-auto w-full animate-fadeIn text-center">
-            {(() => {
-              const passed = session.miniScore >= lessonData.quiz.passScoreMin;
-              return (
-                <div className={`p-8 rounded-3xl shadow-sm border ${
-                  passed
-                    ? 'bg-[#eaf4e8] border-[#badcb8] text-[#255e29]'
-                    : 'bg-[#fff0e4] border-[#f5c49d] text-[#924814]'
-                }`}>
-                  <strong className="text-4xl font-black block mb-2">
-                    {session.miniScore} / {lessonData.quiz.questions.length}
-                  </strong>
-                  <h1 className="text-2xl font-extrabold mb-2">
-                    {passed ? '¡Lograste el mínimo de la clase!' : 'Revisemos algunas ideas'}
-                  </h1>
-                  <p className="text-sm leading-relaxed max-w-sm mx-auto">
-                    {passed
-                      ? 'Ahora revisarán brevemente las respuestas junto a tu mentor.'
-                      : 'Equivocarse es parte natural del aprendizaje. Revisaremos los conceptos juntos.'}
-                  </p>
-                </div>
-              );
-            })()}
-          </div>
+          <StudentQuizReviewView />
         )}
 
         {/* STAGE 7 (cont): RECOVERY */}

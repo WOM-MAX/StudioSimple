@@ -58,6 +58,11 @@ export function adaptGeneratorLessonToPlayer(
 
   const activeColor = subjectColorMap[oa.asignatura] || 'navy';
 
+  const isMat7bOa01L01 =
+    Boolean(oa.oa && (oa.oa.includes('1') || oa.oa.includes('OA01') || oa.oa.includes('OA 1'))) &&
+    Boolean(oa.asignatura && oa.asignatura.toLowerCase().includes('mat')) &&
+    genLesson.num === 1;
+
   return {
     metadata: {
       grade: oa.curso,
@@ -75,6 +80,15 @@ export function adaptGeneratorLessonToPlayer(
       adultObjective: genLesson.objetivoAdulto,
       routeToday: genLesson.focoDidactico,
       mentorReminder: 'Sigue las indicaciones en pantalla paso a paso. Lee únicamente los recuadros DILE en voz alta y espera siempre la respuesta.',
+      reminders: [
+        'Sigue el orden indicado.',
+        'Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.',
+        'No leas los recuadros SOLO PARA TI ni AYUDA DE LECTURA.',
+        'Haz cada pregunta y espera la respuesta antes de seleccionar una opción.',
+        'Considera correcta una respuesta si expresa la idea matemática, aunque use palabras distintas.',
+        'Si el estudiante necesita apoyo, usa únicamente la ayuda que aparecerá.',
+        'Si propone otra explicación o no está de acuerdo, escúchalo completo y valora su razonamiento antes de guiarlo.'
+      ],
       emotionalTip: genLesson.climaEmocional
     },
 
@@ -112,7 +126,7 @@ export function adaptGeneratorLessonToPlayer(
     hook: {
       dileIntro: genLesson.paso2_hook.dileAntes,
       hazInstruction: 'Observa y reflexiona con las escenas del desafío visual.',
-      videoSrc: '',
+      videoSrc: (genLesson.paso2_hook as any).videoUrl || (genLesson.paso2_hook as any).videoSrc || (isMat7bOa01L01 ? 'https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/MAT/MAT_OA01_L01_Motivacional.mp4' : ''),
       posterSrc: '',
       dileAfterVideo: genLesson.paso2_hook.dileDespues
     },
@@ -134,7 +148,7 @@ export function adaptGeneratorLessonToPlayer(
     formalization: {
       dileIntro: genLesson.paso4_explicativo.dileAntes,
       hazInstruction: 'Revisemos la explicación formal y la idea clave.',
-      videoSrc: '',
+      videoSrc: (genLesson.paso4_explicativo as any).videoUrl || (genLesson.paso4_explicativo as any).videoSrc || (isMat7bOa01L01 ? 'https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/MAT/MAT_OA01_L01_Concepto.mp4' : ''),
       graphicPoster: ''
     },
 

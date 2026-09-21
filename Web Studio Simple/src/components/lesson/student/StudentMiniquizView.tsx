@@ -43,41 +43,53 @@ export const StudentMiniquizView: React.FC = () => {
       <div className="space-y-4">
         {lessonData.quiz.questions.map((q, idx) => {
           const selected = session.miniAnswers[idx];
+          const isCompact = q.options.length <= 3 && q.options.every((o) => o.length < 20);
+
           return (
-            <fieldset key={q.id} className="bg-white border border-[#dce2e6] rounded-2xl p-4 sm:p-5 shadow-sm">
-              <legend className="text-sm sm:text-base font-bold text-[#1c3257] px-2 flex items-center gap-2">
-                <span className="w-5 h-5 rounded-full bg-[#12a1a4] text-white text-xs flex items-center justify-center font-bold">
+            <div
+              key={q.id}
+              className="bg-white border border-[#dce2e6] rounded-2xl p-5 sm:p-6 shadow-sm hover:border-[#cbd5e1] transition-all"
+            >
+              {/* Enunciado completamente integrado dentro de la tarjeta */}
+              <div className="flex items-start gap-3 mb-4">
+                <span className="w-6 h-6 rounded-full bg-[#12a1a4] text-white text-xs flex items-center justify-center font-bold shrink-0 mt-0.5 shadow-sm">
                   {idx + 1}
                 </span>
-                <span>{q.q}</span>
-              </legend>
+                <h2 className="text-sm sm:text-base font-bold text-[#1c3257] leading-snug flex-1">
+                  {q.q}
+                </h2>
+              </div>
 
-              <div className="grid grid-cols-1 gap-2 mt-3">
+              {/* Opciones de respuesta refinadas */}
+              <div className={`grid gap-2.5 ${isCompact ? 'grid-cols-1 sm:grid-cols-3' : 'grid-cols-1'}`}>
                 {q.options.map((opt) => {
                   const isChecked = selected === opt;
                   return (
-                    <label
+                    <button
                       key={opt}
+                      type="button"
                       onClick={() => handleSelect(idx, opt)}
-                      className={`flex items-center gap-3 p-3 rounded-xl border text-xs sm:text-sm font-medium cursor-pointer transition-all ${
+                      className={`flex items-center gap-3 p-3.5 rounded-xl border text-left text-xs sm:text-sm transition-all cursor-pointer ${
                         isChecked
-                          ? 'bg-[#e9f8f8] border-[#12a1a4] text-[#1c3257] shadow-sm font-bold'
-                          : 'bg-white border-[#dce2e6] text-[#334157] hover:bg-[#f9fafb]'
+                          ? 'bg-[#eef9fa] border-[#12a1a4] text-[#1c3257] font-bold ring-2 ring-[#12a1a4]/20 shadow-sm'
+                          : 'bg-white border-[#dce2e6] text-[#334157] font-medium hover:bg-[#f8fafc] hover:border-[#12a1a4]/50'
                       }`}
                     >
-                      <input
-                        type="radio"
-                        name={`quiz_q_${idx}`}
-                        checked={isChecked}
-                        onChange={() => handleSelect(idx, opt)}
-                        className="w-4 h-4 text-[#12a1a4] focus:ring-[#12a1a4]"
-                      />
-                      <span>{opt}</span>
-                    </label>
+                      <div
+                        className={`w-4 h-4 rounded-full border flex items-center justify-center shrink-0 transition-colors ${
+                          isChecked
+                            ? 'border-[#12a1a4] bg-[#12a1a4]'
+                            : 'border-[#94a3b8] bg-white'
+                        }`}
+                      >
+                        {isChecked && <div className="w-1.5 h-1.5 rounded-full bg-white" />}
+                      </div>
+                      <span className="flex-1 leading-snug">{opt}</span>
+                    </button>
                   );
                 })}
               </div>
-            </fieldset>
+            </div>
           );
         })}
       </div>
@@ -89,7 +101,7 @@ export const StudentMiniquizView: React.FC = () => {
           onClick={handleSubmit}
           className={`px-8 py-3.5 rounded-xl font-bold text-sm flex items-center gap-2 shadow-md transition-all ${
             isAllAnswered
-              ? 'bg-[#1c3257] hover:bg-[#284773] text-white cursor-pointer hover:shadow-lg'
+              ? 'bg-[#1c3257] hover:bg-[#284773] text-white cursor-pointer hover:shadow-lg hover:scale-[1.01]'
               : 'bg-[#dce2e6] text-[#8da3c0] cursor-not-allowed'
           }`}
         >
