@@ -61,13 +61,23 @@ export const LessonSyncProvider: React.FC<{ children: React.ReactNode; initialLe
       try {
         const saved = localStorage.getItem(STORAGE_KEY);
         if (saved) {
-          return { ...INITIAL_LESSON_SESSION, ...JSON.parse(saved) };
+          const parsed = JSON.parse(saved);
+          if (
+            parsed.activeOa === initialLesson.metadata.oaCode &&
+            parsed.activeLessonNum === initialLesson.metadata.lessonNumber
+          ) {
+            return { ...INITIAL_LESSON_SESSION, ...parsed };
+          }
         }
       } catch (e) {
         console.error('Error reading saved session:', e);
       }
     }
-    return INITIAL_LESSON_SESSION;
+    return {
+      ...INITIAL_LESSON_SESSION,
+      activeOa: initialLesson.metadata.oaCode,
+      activeLessonNum: initialLesson.metadata.lessonNumber
+    };
   });
 
   const channelRef = useRef<BroadcastChannel | null>(null);
@@ -94,6 +104,27 @@ export const LessonSyncProvider: React.FC<{ children: React.ReactNode; initialLe
     }
   }, []);
 
+  // Reiniciar estado si cambia la leccion activa
+  useEffect(() => {
+    if (
+      session.activeOa !== initialLesson.metadata.oaCode ||
+      session.activeLessonNum !== initialLesson.metadata.lessonNumber
+    ) {
+      const cleanSession: LessonSessionState = {
+        ...INITIAL_LESSON_SESSION,
+        activeOa: initialLesson.metadata.oaCode,
+        activeLessonNum: initialLesson.metadata.lessonNumber
+      };
+      setSessionState(cleanSession);
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(cleanSession));
+        channelRef.current?.postMessage(cleanSession);
+      } catch (e) {
+        console.error('Error resetting session for new lesson:', e);
+      }
+    }
+  }, [initialLesson.metadata.oaCode, initialLesson.metadata.lessonNumber, session.activeOa, session.activeLessonNum]);
+
   const updateSession = useCallback((patch: Partial<LessonSessionState> | ((prev: LessonSessionState) => LessonSessionState)) => {
     setSessionState((prev) => {
       const updated = typeof patch === 'function' ? patch(prev) : { ...prev, ...patch };
@@ -108,8 +139,19 @@ export const LessonSyncProvider: React.FC<{ children: React.ReactNode; initialLe
   }, []);
 
   const resetSession = useCallback(() => {
-    updateSession(() => ({ ...INITIAL_LESSON_SESSION }));
-  }, [updateSession]);
+    const cleanSession: LessonSessionState = {
+      ...INITIAL_LESSON_SESSION,
+      activeOa: initialLesson.metadata.oaCode,
+      activeLessonNum: initialLesson.metadata.lessonNumber
+    };
+    setSessionState(cleanSession);
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(cleanSession));
+      channelRef.current?.postMessage(cleanSession);
+    } catch (e) {
+      console.error('Error resetting session:', e);
+    }
+  }, [initialLesson.metadata.oaCode, initialLesson.metadata.lessonNumber]);
 
   const setStage = useCallback((stage: LessonStage) => {
     updateSession({ stage, feedback: null });

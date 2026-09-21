@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { useLessonSync } from '../../../context/LessonSyncContext';
 import { LessonStage } from '../../../types/lesson';
 import { Check } from 'lucide-react';
@@ -32,7 +32,6 @@ export const AdultSidebar: React.FC = () => {
   return (
     <aside className="w-60 bg-[#1c3257] text-white p-5 flex flex-col justify-between shrink-0 shadow-lg select-none">
       <div>
-        {/* Brand & Context */}
         <div className="mb-6">
           <div className="flex items-center gap-2 mb-2">
             <div className="w-6 h-6 rounded-lg bg-[#f8ad22] flex items-center justify-center font-bold text-xs text-[#1c3257]">
@@ -41,7 +40,7 @@ export const AdultSidebar: React.FC = () => {
             <span className="font-extrabold text-sm tracking-tight">EstudioSimple</span>
           </div>
           <p className="text-[#b8c8dd] text-[10px] uppercase font-bold tracking-widest">
-            {lessonData.metadata.subject} · {lessonData.metadata.oaCode}
+            {lessonData.metadata.subject} : {lessonData.metadata.oaCode}
           </p>
           <h2 className="text-white text-base font-bold leading-tight mt-1">
             Clase {lessonData.metadata.lessonNumber}
@@ -51,15 +50,13 @@ export const AdultSidebar: React.FC = () => {
           </p>
         </div>
 
-        {/* Current Step Counter */}
         <div className="bg-white/10 rounded-lg px-3 py-2 mb-4 border border-white/10">
           <span className="text-[#f8ad22] text-[11px] font-bold uppercase tracking-wider block">Progreso de la sesión</span>
           <p className="text-white text-xs font-semibold mt-0.5">
-            Paso {currentStep + 1} de 8 · {CANONICAL_STEPS[currentStep]}
+            Paso {currentStep + 1} de 8 : {CANONICAL_STEPS[currentStep]}
           </p>
         </div>
 
-        {/* Step Navigation Tree */}
         <nav className="space-y-1">
           {CANONICAL_STEPS.map((stepName, idx) => {
             const isDone = idx < currentStep;
@@ -94,7 +91,6 @@ export const AdultSidebar: React.FC = () => {
         </nav>
       </div>
 
-      {/* Footer Info */}
       <div className="pt-4 border-t border-white/10 text-[11px] text-[#8da3c0]">
         <span>Duración: ~{lessonData.metadata.durationMinutes} min</span>
       </div>

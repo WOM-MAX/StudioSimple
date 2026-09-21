@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
 import { OFFICIAL_SUBJECTS, getSubjectOAs, CurricularOA } from '../../data/curriculumData';
+import { findInjectedLesson } from '../../lib/lesson-repository';
 import {
   Play,
   Lock,
@@ -25,7 +26,7 @@ import {
 const GRADES = ['3° Básico', '4° Básico', '5° Básico', '6° Básico', '7° Básico', '8° Básico'];
 
 export const ParentDashboard: React.FC = () => {
-  const { setViewMode, logout, parent, student, themeMode, toggleThemeMode } = useApp();
+  const { setViewMode, setActiveSynchronizedLesson, logout, parent, student, themeMode, toggleThemeMode } = useApp();
   const [selectedGrade, setSelectedGrade] = useState('7° Básico');
   const [selectedSubject, setSelectedSubject] = useState('Matemática');
   const [selectedOaIndex, setSelectedOaIndex] = useState(0);
@@ -342,7 +343,13 @@ export const ParentDashboard: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {activeOa.lessons.map((lesson) => {
-                  const isReady = lesson.status === 'ready';
+                  const injectedLesson = findInjectedLesson(
+                    selectedGrade,
+                    selectedSubject,
+                    activeOa.code,
+                    lesson.lessonNumber
+                  );
+                  const isReady = lesson.status === 'ready' || Boolean(injectedLesson);
                   const isCompleted = lesson.status === 'completed';
 
                   return (
@@ -401,7 +408,14 @@ export const ParentDashboard: React.FC = () => {
                         {isReady ? (
                           <button
                             type="button"
-                            onClick={() => setViewMode('lesson')}
+                            onClick={() => {
+                            if (injectedLesson) {
+                              setActiveSynchronizedLesson(injectedLesson);
+                            } else {
+                              setActiveSynchronizedLesson(null);
+                            }
+                            setViewMode('lesson');
+                          }}
                             className="w-full bg-gradient-to-r from-[#EE751C] to-[#E55B00] hover:from-[#E55B00] hover:to-[#CC4C00] text-white font-black text-xs py-3.5 px-4 rounded-2xl shadow-md shadow-orange-900/20 flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
                           >
                             <Play className="w-4 h-4 fill-white" />

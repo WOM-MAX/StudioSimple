@@ -11,7 +11,7 @@ import { SynchronizedLessonMaster } from './components/lesson/SynchronizedLesson
 import { PricingPage } from './components/pricing/PricingPage';
 
 const MainContent: React.FC = () => {
-  const { viewMode, authSession } = useApp();
+  const { viewMode, authSession, activeSynchronizedLesson } = useApp();
 
   const isAuthenticated = authSession?.isAuthenticated === true;
   const isAdmin = isAuthenticated && authSession?.role === 'admin';
@@ -20,7 +20,7 @@ const MainContent: React.FC = () => {
     if (!isAuthenticated) {
       return <LoginScreen />;
     }
-    return <SynchronizedLessonMaster />;
+    return <SynchronizedLessonMaster lessonData={activeSynchronizedLesson || undefined} />;
   }
 
   if (viewMode === 'admin') {

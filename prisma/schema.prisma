@@ -29,7 +29,6 @@ model ObjetivoAprendizaje {
   codigo          String
   descripcion     String
   
-  // Guardamos las actividades sugeridas directamente como String JSON para facilitar su lectura
   actividadesSugeridas String?
   
   cursoId         Int
@@ -37,6 +36,8 @@ model ObjetivoAprendizaje {
   
   asignaturaId    Int
   asignatura      Asignatura @relation(fields: [asignaturaId], references: [id], onDelete: Cascade)
+  
+  clases          Clase[]
   
   @@unique([codigo, cursoId, asignaturaId])
 }
@@ -47,12 +48,18 @@ model Clase {
   titulo          String
   unidad          String?
   duracionMinutos Int        @default(30)
+  focoDidactico   String?
+  
+  contenidoJson   String?
   
   cursoId         Int
   curso           Curso      @relation(fields: [cursoId], references: [id], onDelete: Cascade)
   
   asignaturaId    Int
   asignatura      Asignatura @relation(fields: [asignaturaId], references: [id], onDelete: Cascade)
+  
+  objetivoId      Int?
+  objetivo        ObjetivoAprendizaje? @relation(fields: [objetivoId], references: [id], onDelete: SetNull)
   
   actividades     Actividad[]
   
@@ -61,7 +68,7 @@ model Clase {
 
 model Actividad {
   id              Int        @id @default(autoincrement())
-  tipo            String     // Ej: "OBJETIVO", "EXPLICACION_PRINCIPAL", "MINI_QUIZ"
+  tipo            String
   contenido       String
   orden           Int
   

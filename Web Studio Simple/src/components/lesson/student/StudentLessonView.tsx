@@ -51,9 +51,9 @@ export const StudentLessonView: React.FC = () => {
         {session.stage === 'route' && (
           <div className="max-w-2xl mx-auto w-full animate-fadeIn py-6">
             <span className="text-[#12a1a4] font-bold text-xs uppercase tracking-widest block mb-1">
-              Nuestra ruta de Matemática
+              Ruta de Aprendizaje: {lessonData.metadata.subject}
             </span>
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-[#1c3257] mb-6">Cuatro grandes bloques</h1>
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-[#1c3257] mb-6">{lessonData.metadata.oaTitle}</h1>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {lessonData.route.blocks.map((b) => {
@@ -81,7 +81,7 @@ export const StudentLessonView: React.FC = () => {
             <div className="mt-6 bg-white border border-[#dce2e6] rounded-2xl p-4 flex items-center gap-3 shadow-sm">
               <Sparkles className="w-5 h-5 text-[#f8ad22]" />
               <span className="text-xs sm:text-sm font-bold text-[#1c3257]">
-                Hoy comenzamos con el Bloque 1: Números Enteros (Z)
+                Clase {lessonData.metadata.lessonNumber}: {lessonData.metadata.lessonTitle}
               </span>
             </div>
           </div>
@@ -89,35 +89,103 @@ export const StudentLessonView: React.FC = () => {
 
         {/* STAGE 2 (cont): SITUATION & REFERENCE (Thermometer) */}
         {(session.stage === 'situation' || session.stage === 'reference') && (
-          <StudentInteractiveThermo />
+          lessonData.metadata.subject === 'Matemática' &&
+          lessonData.metadata.oaCode === 'OA 1' &&
+          lessonData.metadata.lessonNumber === 1 ? (
+            <StudentInteractiveThermo />
+          ) : (
+            <div className="max-w-xl mx-auto w-full animate-fadeIn text-center">
+              <span className="text-[#12a1a4] font-bold text-xs uppercase tracking-widest block mb-1">
+                {lessonData.metadata.subject} : {session.stage === 'situation' ? 'Situación Inicial' : 'Punto de Referencia'}
+              </span>
+              <h1 className="text-2xl sm:text-3xl font-extrabold text-[#1c3257] mb-6">
+                {session.stage === 'situation' ? 'Observa la situación inicial' : 'Punto de referencia y contexto'}
+              </h1>
+
+              <div className="bg-white border border-[#dce2e6] rounded-3xl p-8 shadow-sm text-left">
+                {session.stage === 'situation' ? (
+                  <>
+                    <p className="text-base sm:text-lg font-semibold text-[#1c3257] leading-relaxed mb-6">
+                      {lessonData.situation.dilePrompt}
+                    </p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      {lessonData.situation.options.map((opt, i) => (
+                        <div
+                          key={i}
+                          className="bg-[#f8fafc] border border-[#dce2e6] rounded-2xl p-4 text-center text-sm font-bold text-[#1c3257]"
+                        >
+                          {opt.label}
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <p className="text-base sm:text-lg font-semibold text-[#1c3257] leading-relaxed mb-4">
+                      {lessonData.reference.question}
+                    </p>
+                    {session.feedback?.kind === 'success' ? (
+                      <div className="bg-[#eaf4e8] text-[#255e29] border border-[#badcb8] rounded-2xl p-4 text-sm font-bold flex items-center justify-center gap-2 shadow-sm animate-fadeIn">
+                        <CheckCircle2 className="w-5 h-5 text-[#255e29]" />
+                        <span>{lessonData.reference.feedbackSuccess}</span>
+                      </div>
+                    ) : (
+                      <p className="text-xs text-[#748093] text-center mt-2">
+                        Escucha la pregunta de tu mentor y responde oralmente.
+                      </p>
+                    )}
+                  </>
+                )}
+              </div>
+            </div>
+          )
         )}
 
         {/* STAGE 3: VIDEO (Hook Submarine) */}
         {session.stage === 'hook' && (
           <div className="max-w-2xl mx-auto w-full animate-fadeIn text-center">
             <span className="text-[#12a1a4] font-bold text-xs uppercase tracking-widest block mb-1">
-              Desafío de Observación
+              {lessonData.metadata.subject} : Desafío Inicial
             </span>
             <h1 className="text-2xl sm:text-3xl font-extrabold text-[#1c3257] mb-6">
-              El recorrido del submarino
+              {lessonData.metadata.lessonTitle}
             </h1>
 
-            <div className="bg-[#10223d] rounded-3xl p-8 sm:p-12 text-white shadow-xl flex flex-col items-center justify-center min-h-[360px] border border-[#233859]">
-              <Waves className="w-16 h-16 text-[#12a1a4] mb-4 animate-bounce" />
-              <h2 className="text-xl font-bold mb-2">Simulación del Submarino</h2>
-              <p className="text-xs text-[#9ab1ce] max-w-sm mb-6 leading-relaxed">
-                {session.hookStarted
-                  ? 'Observa dónde inicia el submarino, cuánto desciende y cuánto vuelve a subir.'
-                  : 'Esperando que el mentor inicie la reproducción del video...'}
-              </p>
+            <div className="bg-[#10223d] rounded-3xl p-8 sm:p-12 text-white shadow-xl flex flex-col items-center justify-center min-h-[340px] border border-[#233859]">
+              {lessonData.hook.videoSrc && lessonData.hook.videoSrc.startsWith('http') ? (
+                <div className="w-full aspect-video rounded-2xl overflow-hidden bg-black mb-4">
+                  <iframe
+                    src={lessonData.hook.videoSrc}
+                    title={lessonData.metadata.lessonTitle}
+                    className="w-full h-full"
+                    allowFullScreen
+                  />
+                </div>
+              ) : (
+                <>
+                  <Compass className="w-16 h-16 text-[#12a1a4] mb-4 animate-spin" style={{ animationDuration: '12s' }} />
+                  <h2 className="text-xl font-bold mb-2">Desafío de Observación</h2>
+                  <p className="text-sm text-[#9ab1ce] max-w-md mb-6 leading-relaxed">
+                    {session.hookStarted
+                      ? (lessonData.hook.hazInstruction || lessonData.hook.dileIntro)
+                      : 'Esperando que tu mentor inicie el desafío motivacional...'}
+                  </p>
+                </>
+              )}
 
               {session.hookStarted && (
                 <div className="bg-white/10 border border-white/20 rounded-2xl p-4 flex items-center gap-3 text-xs font-semibold text-[#12a1a4] animate-pulse">
                   <span className="w-3 h-3 rounded-full bg-[#12a1a4]" />
-                  <span>Reproduciendo video interactivo...</span>
+                  <span>{session.hookEnded ? 'Desafío completado' : 'Observando atentamente con tu mentor...'}</span>
                 </div>
               )}
             </div>
+
+            {session.hookEnded && lessonData.hook.dileAfterVideo && (
+              <div className="mt-4 bg-white border border-[#dce2e6] rounded-2xl p-4 text-xs font-semibold text-[#1c3257] shadow-sm animate-fadeIn">
+                {lessonData.hook.dileAfterVideo}
+              </div>
+            )}
           </div>
         )}
 
@@ -150,33 +218,21 @@ export const StudentLessonView: React.FC = () => {
         {session.stage === 'formalization' && (
           <div className="max-w-2xl mx-auto w-full animate-fadeIn text-center">
             <span className="text-[#12a1a4] font-bold text-xs uppercase tracking-widest block mb-1">
-              Formalización Matemática
+              {lessonData.metadata.subject} : Formalización Conceptual
             </span>
             <h1 className="text-2xl sm:text-3xl font-extrabold text-[#1c3257] mb-6">
-              Posición versus Movimiento
+              {lessonData.metadata.lessonTitle}
             </h1>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="bg-white border border-[#dce2e6] rounded-3xl p-6 shadow-sm">
-                <span className="bg-[#e9f2f8] text-[#1c3257] font-black text-xs px-3 py-1 rounded-full uppercase tracking-wider block mb-3">
-                  Posición (¿Dónde está?)
-                </span>
-                <strong className="text-3xl text-[#1c3257] font-black block my-2">−20 m</strong>
-                <p className="text-xs text-[#748093] leading-relaxed">
-                  Indica un lugar fijo respecto al punto cero de referencia (la superficie).
-                </p>
-              </div>
-
-              <div className="bg-white border border-[#dce2e6] rounded-3xl p-6 shadow-sm">
-                <span className="bg-[#fff0e4] text-[#ee751c] font-black text-xs px-3 py-1 rounded-full uppercase tracking-wider block mb-3">
-                  Movimiento (¿Cómo cambia?)
-                </span>
-                <strong className="text-3xl text-[#ee751c] font-black block my-2 flex items-center justify-center gap-1">
-                  <ArrowDown className="w-6 h-6" /> Baja 20 m
-                </strong>
-                <p className="text-xs text-[#748093] leading-relaxed">
-                  Indica una acción, traslado o cambio de lugar respecto a su posición previa.
-                </p>
+            <div className="bg-white border border-[#dce2e6] rounded-3xl p-8 shadow-sm">
+              <span className="bg-[#e9f2f8] text-[#1c3257] font-black text-xs px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-4">
+                Concepto Central
+              </span>
+              <p className="text-base sm:text-lg font-bold text-[#1c3257] leading-relaxed mb-4">
+                {lessonData.formalization.hazInstruction || lessonData.formalization.dileIntro}
+              </p>
+              <div className="bg-[#f8fafc] border border-[#e2e8f0] rounded-2xl p-4 text-xs sm:text-sm text-[#526177] leading-relaxed max-w-lg mx-auto">
+                {lessonData.formalization.dileIntro}
               </div>
             </div>
           </div>
@@ -186,25 +242,21 @@ export const StudentLessonView: React.FC = () => {
         {session.stage === 'idea' && (
           <div className="max-w-xl mx-auto w-full animate-fadeIn text-center">
             <span className="text-[#12a1a4] font-bold text-xs uppercase tracking-widest block mb-1">
-              Comprobemos
+              {lessonData.metadata.subject} : Comprobemos la Idea Central
             </span>
             <h1 className="text-2xl sm:text-3xl font-extrabold text-[#1c3257] mb-6">
-              El ascensor está en el piso −2 y después baja 3 pisos.
+              {lessonData.idea.checkQuestion}
             </h1>
 
             <div className="bg-white border border-[#dce2e6] rounded-3xl p-8 shadow-sm flex flex-col items-center">
-              <div className="flex items-center gap-4 text-base font-bold text-[#1c3257] mb-4">
-                <span className="bg-[#1c3257] text-white px-4 py-2 rounded-xl">−2</span>
-                <span className="text-[#748093]">→</span>
-                <span className="bg-[#ee751c] text-white px-4 py-2 rounded-xl flex items-center gap-1">
-                  Baja 3 pisos <ArrowDown className="w-4 h-4" />
-                </span>
-              </div>
+              <p className="text-xs text-[#748093] mb-4 font-semibold">
+                Explica tu respuesta a tu mentor antes de avanzar.
+              </p>
 
               {session.feedback?.kind === 'success' && (
-                <div className="bg-[#eaf4e8] text-[#255e29] border border-[#badcb8] rounded-2xl p-4 text-sm font-bold flex items-center justify-center gap-2 shadow-sm animate-fadeIn">
-                  <CheckCircle2 className="w-5 h-5 text-[#255e29]" />
-                  <span>−2 = Posición (ubicación fija) · Bajar 3 pisos = Movimiento (acción)</span>
+                <div className="bg-[#eaf4e8] text-[#255e29] border border-[#badcb8] rounded-2xl p-4 text-sm font-bold flex items-center justify-center gap-2 shadow-sm animate-fadeIn w-full">
+                  <CheckCircle2 className="w-5 h-5 text-[#255e29] shrink-0" />
+                  <span>{lessonData.idea.expectedAnswer}</span>
                 </div>
               )}
             </div>
@@ -282,16 +334,16 @@ export const StudentLessonView: React.FC = () => {
         {session.stage === 'closing' && (
           <div className="max-w-xl mx-auto w-full animate-fadeIn text-center">
             <div className="w-16 h-16 rounded-full bg-[#12a1a4] text-white flex items-center justify-center mx-auto mb-4 font-black text-2xl shadow-lg">
-              0
+              <Sparkles className="w-8 h-8" />
             </div>
             <span className="text-[#12a1a4] font-bold text-xs uppercase tracking-widest block mb-1">
-              Cierre y Reflexión
+              Cierre y Reflexión : {lessonData.metadata.subject}
             </span>
             <h1 className="text-2xl sm:text-3xl font-extrabold text-[#1c3257] mb-4">
-              ¿Para qué sirven el cero y los signos positivo y negativo en la vida real?
+              {lessonData.closing.metacognitionQuestion}
             </h1>
-            <p className="text-xs text-[#748093]">
-              Explícalo con tus propias palabras y ejemplos cotidianos a tu mentor.
+            <p className="text-xs text-[#748093] max-w-md mx-auto">
+              {lessonData.closing.transferQuestion}
             </p>
           </div>
         )}
@@ -303,11 +355,13 @@ export const StudentLessonView: React.FC = () => {
               <CheckCircle2 className="w-12 h-12" />
             </div>
             <span className="text-[#4a964e] font-bold text-xs uppercase tracking-widest block mb-1">
-              ¡Misión Completada!
+              Misión Completada
             </span>
-            <h1 className="text-3xl font-black text-[#1c3257] mb-3">¡Clase 1 Finalizada!</h1>
+            <h1 className="text-3xl font-black text-[#1c3257] mb-3">
+              Clase {lessonData.metadata.lessonNumber} Finalizada
+            </h1>
             <p className="text-sm text-[#657185] max-w-sm mx-auto mb-6 leading-relaxed">
-              Hoy aprendiste a usar el cero como punto de referencia y a reconocer posiciones con números enteros.
+              {lessonData.closing.dileFinalCelebration}
             </p>
             <div className="bg-[#e9f2f8] border border-[#bcd6ea] text-[#1c3257] p-4 rounded-2xl text-xs font-bold inline-block">
               Próxima clase: {lessonData.metadata.nextLessonTitle}

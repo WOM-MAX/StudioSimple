@@ -1,6 +1,8 @@
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import { ViewMode, StudentProfile, ParentUser, Lesson, BrandColorOption, ThemeMode, AuthSession, AuthRole, GradeLevel } from '../types';
 import { INITIAL_STUDENT, INITIAL_PARENT, SAMPLE_LESSON } from '../data/mockData';
+import { LessonData } from '../types/lesson';
+import { initializeInjectedLessons } from '../lib/lesson-repository';
 
 interface AppContextType {
   viewMode: ViewMode;
@@ -9,6 +11,8 @@ interface AppContextType {
   parent: ParentUser;
   activeLesson: Lesson;
   setActiveLesson: (lesson: Lesson) => void;
+  activeSynchronizedLesson: LessonData | null;
+  setActiveSynchronizedLesson: (lesson: LessonData | null) => void;
   isSensoryPauseOpen: boolean;
   setIsSensoryPauseOpen: (open: boolean) => void;
   themeMode: ThemeMode;
@@ -62,6 +66,11 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   });
 
   const [activeLesson, setActiveLesson] = useState<Lesson>(SAMPLE_LESSON);
+  const [activeSynchronizedLesson, setActiveSynchronizedLesson] = useState<LessonData | null>(null);
+
+  useEffect(() => {
+    initializeInjectedLessons().catch(console.error);
+  }, []);
   const [isSensoryPauseOpen, setIsSensoryPauseOpen] = useState<boolean>(false);
 
   const [themeMode, setThemeModeState] = useState<ThemeMode>(() => {
@@ -328,6 +337,8 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         verifyParentPassword,
         navigateWithAuth,
         updateEnrolledGrades,
+        activeSynchronizedLesson,
+        setActiveSynchronizedLesson,
       }}
     >
       {children}

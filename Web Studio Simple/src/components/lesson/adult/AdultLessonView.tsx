@@ -99,10 +99,10 @@ export const AdultLessonView: React.FC = () => {
               <div className="flex justify-end pt-4">
                 <button
                   type="button"
-                  onClick={() => setStage('route')}
+                  onClick={() => setStage('hook')}
                   className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all"
                 >
-                  <span>Comencemos</span>
+                  <span>Iniciar gancho motivacional</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
@@ -112,7 +112,7 @@ export const AdultLessonView: React.FC = () => {
           {/* STAGE: ROUTE */}
           {session.stage === 'route' && (
             <div>
-              <h1 className="text-2xl font-bold text-[#1c3257] mb-4">Nuestra ruta de Matemática</h1>
+              <h1 className="text-2xl font-bold text-[#1c3257] mb-4">Nuestra ruta de {lessonData.metadata.subject}</h1>
               <PromptBox label="DILE">
                 {lessonData.route.dileIntro}
               </PromptBox>
@@ -123,7 +123,7 @@ export const AdultLessonView: React.FC = () => {
 
               <div className="flex items-center justify-between mt-8 pt-4 border-t border-[#dce2e6]">
                 <p className="text-xs text-[#748093]">
-                  Al continuar avanzarán ambas pantallas a la situación del termómetro.
+                  Al continuar avanzarán ambas pantallas a la situación inicial.
                 </p>
                 <button
                   type="button"
@@ -236,10 +236,12 @@ export const AdultLessonView: React.FC = () => {
                 <div className="flex justify-end mt-6">
                   <button
                     type="button"
-                    onClick={() => setStage('hook')}
+                    onClick={() => {
+                      updateSession({ stage: 'conversation', conversationIndex: 0, feedback: null });
+                    }}
                     className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all"
                   >
-                    <span>Seguir con el video</span>
+                    <span>Continuar a las preguntas</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
@@ -250,7 +252,7 @@ export const AdultLessonView: React.FC = () => {
           {/* STAGE: HOOK (Video Submarino) */}
           {session.stage === 'hook' && (
             <div>
-              <h1 className="text-2xl font-bold text-[#1c3257] mb-2">El recorrido del submarino</h1>
+              <h1 className="text-2xl font-bold text-[#1c3257] mb-2">Desafío Inicial: {lessonData.metadata.lessonTitle}</h1>
               <PromptBox label="DILE">
                 {lessonData.hook.dileIntro}
               </PromptBox>
@@ -290,11 +292,11 @@ export const AdultLessonView: React.FC = () => {
                       <button
                         type="button"
                         onClick={() => {
-                          updateSession({ stage: 'conversation', conversationIndex: 0 });
+                          setStage('route');
                         }}
                         className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all"
                       >
-                        <span>Continuar a las preguntas</span>
+                        <span>Continuar a la ruta de aprendizaje</span>
                         <ArrowRight className="w-4 h-4" />
                       </button>
                     </div>
@@ -308,7 +310,7 @@ export const AdultLessonView: React.FC = () => {
           {session.stage === 'conversation' && (
             <div>
               <div className="flex items-center justify-between mb-2">
-                <h1 className="text-2xl font-bold text-[#1c3257]">Posición y movimiento</h1>
+                <h1 className="text-2xl font-bold text-[#1c3257]">Conversación Guiada: {lessonData.metadata.lessonTitle}</h1>
                 <span className="bg-[#e7edf4] text-[#1c3257] font-bold text-xs px-3 py-1 rounded-full">
                   Pregunta {session.conversationIndex + 1} de {lessonData.conversation.items.length}
                 </span>
@@ -406,7 +408,7 @@ export const AdultLessonView: React.FC = () => {
                 {!session.formalStarted ? (
                   <button
                     type="button"
-                    onClick={() => updateSession({ formalStarted: true, formalEnded: true })}
+                    onClick={() => updateSession({ formalStarted: true, formalEnded: false })}
                     className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all"
                   >
                     <Play className="w-4 h-4 fill-white" />
@@ -420,10 +422,10 @@ export const AdultLessonView: React.FC = () => {
                     <div className="flex justify-end">
                       <button
                         type="button"
-                        onClick={() => setStage('idea')}
+                        onClick={() => updateSession({ stage: 'practice', practiceIndex: 0, feedback: null })}
                         className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all"
                       >
-                        <span>Continuar</span>
+                        <span>Continuar a la práctica guiada</span>
                         <ArrowRight className="w-4 h-4" />
                       </button>
                     </div>
@@ -477,11 +479,11 @@ export const AdultLessonView: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => {
-                      updateSession({ stage: 'practice', practiceIndex: 0, feedback: null });
+                      updateSession({ stage: 'miniquiz', miniAnswers: ['', '', ''], miniScore: 0, feedback: null });
                     }}
                     className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all"
                   >
-                    <span>Practiquemos juntos</span>
+                    <span>Ir al Miniquiz</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
@@ -493,7 +495,7 @@ export const AdultLessonView: React.FC = () => {
           {session.stage === 'practice' && (
             <div>
               <div className="flex items-center justify-between mb-2">
-                <h1 className="text-2xl font-bold text-[#1c3257]">Apliquemos la misma idea</h1>
+                <h1 className="text-2xl font-bold text-[#1c3257]">Práctica Guiada: Apliquemos la idea</h1>
                 <span className="bg-[#e7edf4] text-[#1c3257] font-bold text-xs px-3 py-1 rounded-full">
                   Situación {session.practiceIndex + 1} de {lessonData.practice.items.length}
                 </span>
@@ -554,7 +556,7 @@ export const AdultLessonView: React.FC = () => {
                                 feedback: null
                               });
                             } else {
-                              setStage('miniquiz');
+                              updateSession({ stage: 'idea', feedback: null });
                             }
                           }}
                           className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all"
@@ -562,7 +564,7 @@ export const AdultLessonView: React.FC = () => {
                           <span>
                             {session.practiceIndex < lessonData.practice.items.length - 1
                               ? 'Siguiente situación'
-                              : 'Ir al Miniquiz'}
+                              : 'Ir al resumen de la clase'}
                           </span>
                           <ArrowRight className="w-4 h-4" />
                         </button>
