@@ -5,29 +5,61 @@ import { Check } from 'lucide-react';
 
 export const CANONICAL_STEPS = [
   'Inicio',
-  'Video',
+  'Video Motivacional',
   'Recorrido',
-  'Posición y movimiento',
+  'Video Explicativo',
   'Práctica',
   'Resumen',
   'Miniquiz',
   'Cierre'
 ];
 
-export function getStageStepIndex(stage: LessonStage): number {
-  if (stage === 'cover' || stage === 'prep' || stage === 'route' || stage === 'situation' || stage === 'reference') return 0;
+export const STAGE_STARTS: LessonStage[] = [
+  'routeOverview',
+  'hook',
+  'conversationIntro',
+  'formalization',
+  'practiceIntro',
+  'practiceSummary',
+  'miniquiz',
+  'closing'
+];
+
+export function stepFor(stage: LessonStage): number {
+  if (stage === 'cover' || stage === 'prep' || stage === 'landing' || stage === 'catalog') return -1;
+  if (stage === 'routeOverview' || stage === 'routeToday' || stage === 'thermo' || stage === 'thermoMeaning') return 0;
   if (stage === 'hook') return 1;
-  if (stage === 'conversation') return 2;
-  if (stage === 'formalization') return 3;
-  if (stage === 'practice') return 4;
-  if (stage === 'idea') return 5;
-  if (['miniquiz', 'results', 'recovery'].includes(stage)) return 6;
+  if (stage === 'conversationIntro' || stage === 'preQuestions') return 2;
+  if (stage === 'formalization' || stage === 'postIntro' || stage === 'postQuestions' || stage === 'summary') return 3;
+  if (stage === 'practiceIntro' || stage === 'practice' || stage === 'reasoningIntro' || stage === 'reasoning' || stage === 'challenge') return 4;
+  if (stage === 'strategy' || stage === 'practiceSummary') return 5;
+  if (stage === 'miniquiz' || stage === 'results' || stage === 'review' || stage === 'recoveryIntro' || stage === 'recovery') return 6;
   return 7;
 }
 
+export function isLocked(stage: LessonStage): boolean {
+  return ['results', 'review', 'recoveryIntro', 'recovery', 'closing', 'catalog', 'landing'].includes(stage);
+}
+
 export const AdultSidebar: React.FC = () => {
-  const { session, lessonData } = useLessonSync();
-  const currentStep = getStageStepIndex(session.stage);
+  const { session, lessonData, updateSession } = useLessonSync();
+  const currentStep = stepFor(session.stage);
+  const locked = isLocked(session.stage);
+
+  const handleJump = (i: number) => {
+    if (i <= currentStep && !locked) {
+      updateSession({
+        stage: STAGE_STARTS[i],
+        feedback: null,
+        attempt: 0,
+        video: {
+          ...session.video,
+          playing: false,
+          command: session.video.command + 1
+        }
+      });
+    }
+  };
 
   return (
     <aside className="w-60 bg-[#1c3257] text-white p-5 flex flex-col justify-between shrink-0 shadow-lg select-none">
@@ -53,7 +85,9 @@ export const AdultSidebar: React.FC = () => {
         <div className="bg-white/10 rounded-lg px-3 py-2 mb-4 border border-white/10">
           <span className="text-[#f8ad22] text-[11px] font-bold uppercase tracking-wider block">Progreso de la sesión</span>
           <p className="text-white text-xs font-semibold mt-0.5">
-            Paso {currentStep + 1} de 8 : {CANONICAL_STEPS[currentStep]}
+            {currentStep < 0
+              ? 'Antes de comenzar'
+              : `Etapa ${currentStep + 1} de 8 : ${CANONICAL_STEPS[currentStep]}`}
           </p>
         </div>
 
@@ -61,16 +95,20 @@ export const AdultSidebar: React.FC = () => {
           {CANONICAL_STEPS.map((stepName, idx) => {
             const isDone = idx < currentStep;
             const isCurrent = idx === currentStep;
+            const isDisabled = idx > currentStep || locked;
 
             return (
-              <div
+              <button
                 key={stepName}
-                className={`flex items-center gap-2.5 px-2.5 py-2 rounded-xl text-xs font-medium transition-all ${
+                type="button"
+                disabled={isDisabled}
+                onClick={() => handleJump(idx)}
+                className={`w-full flex items-center gap-2.5 px-2.5 py-2 rounded-xl text-xs font-medium transition-all text-left ${
                   isCurrent
                     ? 'bg-white/20 text-white font-bold shadow-sm'
                     : isDone
-                    ? 'text-[#c2e4cb]'
-                    : 'text-[#8da3c0]'
+                    ? 'text-[#c2e4cb] hover:bg-white/10 cursor-pointer'
+                    : 'text-[#8da3c0] cursor-not-allowed opacity-60'
                 }`}
               >
                 <div
@@ -85,7 +123,7 @@ export const AdultSidebar: React.FC = () => {
                   {isDone ? <Check className="w-3 h-3" /> : idx + 1}
                 </div>
                 <span className="truncate">{stepName}</span>
-              </div>
+              </button>
             );
           })}
         </nav>

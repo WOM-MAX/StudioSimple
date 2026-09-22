@@ -4,9 +4,9 @@ import { CheckCircle2, HelpCircle } from 'lucide-react';
 
 export const StudentQuizReviewView: React.FC = () => {
   const { session, lessonData } = useLessonSync();
-  const qIndex = session.reviewIndex || 0;
-  const totalQ = lessonData.quiz.questions.length;
-  const currentQ = lessonData.quiz.questions[qIndex] || lessonData.quiz.questions[0];
+  const qIndex = session.reviewQueue[session.reviewIndex] ?? 0;
+  const totalQ = session.reviewQueue.length || 3;
+  const currentQ = lessonData.mini[qIndex] ?? lessonData.mini[0];
   const studentAns = session.miniAnswers[qIndex];
   const isCorrect = studentAns === currentQ.correct;
 
@@ -15,7 +15,7 @@ export const StudentQuizReviewView: React.FC = () => {
       {/* Tarjeta de revisión de la respuesta */}
       <div className="bg-white border border-[#dce2e6] rounded-3xl p-6 sm:p-8 shadow-sm">
         <span className="text-[11px] font-bold uppercase tracking-widest text-[#12a1a4] block mb-2">
-          Recordemos la respuesta · Pregunta {qIndex + 1} de {totalQ}
+          Recordemos la respuesta · Pregunta {session.reviewIndex + 1} de {totalQ}
         </span>
 
         <h2 className="text-xl sm:text-2xl font-extrabold text-[#1c3257] leading-snug mb-6">
@@ -24,15 +24,17 @@ export const StudentQuizReviewView: React.FC = () => {
 
         {/* Comparación visual de respuestas */}
         <div className="space-y-3 mb-6">
-          <div className={`flex items-center justify-between p-3.5 rounded-2xl border text-xs sm:text-sm ${
-            isCorrect
-              ? 'bg-[#f4faf3] border-[#badcb8]'
-              : 'bg-[#fff5ee] border-[#f5c49d]'
-          }`}>
+          <div
+            className={`flex items-center justify-between p-3.5 rounded-2xl border text-xs sm:text-sm ${
+              isCorrect ? 'bg-[#f4faf3] border-[#badcb8]' : 'bg-[#fff5ee] border-[#f5c49d]'
+            }`}
+          >
             <span className="text-[#64748b] font-medium">Tu respuesta:</span>
-            <span className={`font-bold flex items-center gap-1.5 ${
-              isCorrect ? 'text-[#255e29]' : 'text-[#ee751c]'
-            }`}>
+            <span
+              className={`font-bold flex items-center gap-1.5 ${
+                isCorrect ? 'text-[#255e29]' : 'text-[#ee751c]'
+              }`}
+            >
               {isCorrect ? (
                 <CheckCircle2 className="w-4 h-4 text-[#255e29]" />
               ) : (
@@ -57,7 +59,7 @@ export const StudentQuizReviewView: React.FC = () => {
             Explicación pedagógica
           </span>
           <p className="text-xs sm:text-sm text-[#334157] leading-relaxed">
-            {currentQ.explain}
+            {currentQ.fixExplain}
           </p>
         </div>
 

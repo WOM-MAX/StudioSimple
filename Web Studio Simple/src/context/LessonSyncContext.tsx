@@ -10,18 +10,28 @@ export const INITIAL_LESSON_SESSION: LessonSessionState = {
   activeOa: 'OA 1',
   activeLessonNum: 1,
   feedback: null,
+  attempt: 0,
   conversationIndex: 0,
+  postIndex: 0,
   practiceIndex: 0,
+  summaryIdea: 0,
+  quizVisible: false,
   hookStarted: false,
   hookEnded: false,
   formalStarted: false,
   formalEnded: false,
+  video: { kind: null, playing: false, seek: 0, command: 0 },
   miniAnswers: ['', '', ''],
   miniScore: 0,
+  reviewQueue: [],
   reviewIndex: 0,
+  recoveryItems: [],
   recoveryIndex: 0,
   recoveryVisible: false,
-  recoveryResults: [],
+  recoveryAnswer: '',
+  supportCount: 0,
+  reasoningIndependent: false,
+  challengeCompleted: false,
   closureState: 'none',
   isOxygenPauseActive: false,
   studentConnected: true
@@ -36,7 +46,7 @@ interface LessonSyncContextType {
   resetSession: () => void;
   setStage: (stage: LessonStage) => void;
   toggleOxygenPause: () => void;
-  setFeedback: (feedback: { kind: 'success' | 'support' | 'info'; text: string } | null) => void;
+  setFeedback: (feedback: { kind: 'success' | 'support' | 'reveal' | 'info'; text: string } | null) => void;
   openNewWindow: (mode: 'adult' | 'student') => void;
 }
 
@@ -161,7 +171,7 @@ export const LessonSyncProvider: React.FC<{ children: React.ReactNode; initialLe
     updateSession((prev) => ({ ...prev, isOxygenPauseActive: !prev.isOxygenPauseActive }));
   }, [updateSession]);
 
-  const setFeedback = useCallback((feedback: { kind: 'success' | 'support' | 'info'; text: string } | null) => {
+  const setFeedback = useCallback((feedback: { kind: 'success' | 'support' | 'reveal' | 'info'; text: string } | null) => {
     updateSession({ feedback });
   }, [updateSession]);
 

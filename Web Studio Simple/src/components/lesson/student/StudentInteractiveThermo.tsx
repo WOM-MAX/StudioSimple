@@ -1,11 +1,11 @@
-﻿import React from 'react';
+import React from 'react';
 import { useLessonSync } from '../../../context/LessonSyncContext';
 import { CheckCircle2 } from 'lucide-react';
 
 export const StudentInteractiveThermo: React.FC = () => {
   const { session } = useLessonSync();
-  const isReferenceStage = session.stage === 'reference';
-  const isSuccess = session.feedback?.kind === 'success';
+  const isReferenceStage = session.stage === 'thermoMeaning';
+  const isSuccess = session.feedback?.kind === 'success' || session.feedback?.kind === 'reveal';
 
   return (
     <div className="flex flex-col items-center justify-center p-6 max-w-xl mx-auto text-center animate-fadeIn">
@@ -13,9 +13,9 @@ export const StudentInteractiveThermo: React.FC = () => {
         El cero como punto de referencia
       </span>
       <h1 className="text-2xl md:text-3xl font-extrabold text-[#1c3257] mb-6">
-        {session.stage === 'situation'
+        {session.stage === 'thermo'
           ? '¿Qué número representa tres grados bajo cero?'
-          : '¿Qué representa -3 °C?'}
+          : '¿Qué representa −3 °C?'}
       </h1>
 
       <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-[#dce2e6] flex items-center justify-center gap-8 w-full max-w-md">
@@ -49,12 +49,14 @@ export const StudentInteractiveThermo: React.FC = () => {
           </div>
 
           <div className="flex items-center gap-2">
-            <span className={`font-black text-base px-2.5 py-1 rounded-lg border transition-all ${
-              isSuccess || isReferenceStage
-                ? 'bg-[#eaf4e8] text-[#255e29] border-[#badcb8]'
-                : 'bg-[#f0f4f8] text-[#748093] border-[#dce2e6]'
-            }`}>
-              {isSuccess || isReferenceStage ? '-3 °C' : '?'}
+            <span
+              className={`font-black text-base px-2.5 py-1 rounded-lg border transition-all ${
+                isSuccess || isReferenceStage
+                  ? 'bg-[#eaf4e8] text-[#255e29] border-[#badcb8]'
+                  : 'bg-[#f0f4f8] text-[#748093] border-[#dce2e6]'
+              }`}
+            >
+              {isSuccess || isReferenceStage ? '−3 °C' : '?'}
             </span>
             <span className="text-xs text-[#748093] font-semibold">Bajo cero (frío)</span>
           </div>
@@ -64,7 +66,11 @@ export const StudentInteractiveThermo: React.FC = () => {
       {isSuccess && (
         <div className="mt-6 bg-[#eaf4e8] text-[#255e29] border border-[#badcb8] rounded-2xl p-4 flex items-center justify-center gap-2 text-sm font-bold shadow-sm animate-fadeIn">
           <CheckCircle2 className="w-5 h-5 text-[#255e29]" />
-          <span>-3 °C representa una posición de 3 grados bajo cero.</span>
+          <span>
+            {session.stage === 'thermo'
+              ? 'La respuesta es −3.'
+              : 'Representa tres grados Celsius bajo cero.'}
+          </span>
         </div>
       )}
     </div>

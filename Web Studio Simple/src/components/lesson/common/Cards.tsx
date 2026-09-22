@@ -1,8 +1,8 @@
 import React from 'react';
-import { Info, Check, HelpCircle, Heart, Sparkles, AlertCircle } from 'lucide-react';
+import { Info, Check, Sparkles, AlertCircle, Heart } from 'lucide-react';
 
 export const PromptBox: React.FC<{
-  label: 'DILE' | 'HAZ' | 'PREGUNTA' | 'COMPRUEBA';
+  label: string;
   tone?: 'green' | 'teal' | 'orange' | 'yellow';
   children: React.ReactNode;
 }> = ({ label, tone = 'green', children }) => {
@@ -50,7 +50,7 @@ export const SocraticTipBox: React.FC<{ children: React.ReactNode }> = ({ childr
     <div className="bg-[#f0fdf4] border border-[#bbf7d0] text-[#14532d] rounded-xl p-3.5 my-3 flex items-start gap-2.5 text-sm shadow-sm">
       <Sparkles className="w-4 h-4 text-[#16a34a] shrink-0 mt-0.5" />
       <div>
-        <strong className="text-[#16a34a] block text-xs uppercase tracking-wider mb-0.5">Diálogo Socrático (Guía sin dar la respuesta)</strong>
+        <strong className="text-[#16a34a] block text-xs uppercase tracking-wider mb-0.5">Diálogo Socrático</strong>
         <div className="text-[#14532d] leading-relaxed">{children}</div>
       </div>
     </div>
@@ -67,22 +67,27 @@ export const ExpectedAnswerBox: React.FC<{ children: React.ReactNode }> = ({ chi
 };
 
 export const FeedbackBanner: React.FC<{
-  feedback: { kind: 'success' | 'support' | 'info'; text: string } | null;
+  feedback: { kind: 'success' | 'support' | 'reveal' | 'info'; text: string } | null;
 }> = ({ feedback }) => {
   if (!feedback) return null;
 
   const isSuccess = feedback.kind === 'success';
+  const isReveal = feedback.kind === 'reveal';
 
   return (
     <div
       className={`rounded-xl p-3.5 my-3 flex items-start gap-2.5 text-sm transition-all animate-fadeIn ${
         isSuccess
           ? 'bg-[#eaf4e8] text-[#255e29] border border-[#badcb8]'
+          : isReveal
+          ? 'bg-[#f0f4f8] text-[#1c3257] border border-[#dce2e6]'
           : 'bg-[#fff0e4] text-[#794112] border border-[#f5c49d]'
       }`}
     >
       {isSuccess ? (
         <Check className="w-4 h-4 text-[#255e29] shrink-0 mt-0.5" />
+      ) : isReveal ? (
+        <Sparkles className="w-4 h-4 text-[#12a1a4] shrink-0 mt-0.5" />
       ) : (
         <AlertCircle className="w-4 h-4 text-[#ee751c] shrink-0 mt-0.5" />
       )}

@@ -1,9 +1,8 @@
 import {
   LessonData as PlayerLessonData,
-  SocraticConversationItem,
-  PracticeContextItem,
+  GuidedItem,
   QuizQuestion,
-  RecoveryQuestion
+  RecoveryItem
 } from '../types/lesson';
 import { LessonData as GeneratorLessonData } from './lesson-generator';
 
@@ -12,20 +11,34 @@ export function adaptGeneratorLessonToPlayer(
   oa: { curso: string; asignatura: string; oa: string; eje?: string; titulo?: string },
   totalLessons: number
 ): PlayerLessonData {
-  const conversationItems: SocraticConversationItem[] = (genLesson.paso3_recorrido || []).map((item) => ({
+  const preQuestions: GuidedItem[] = (genLesson.paso3_recorrido || []).map((item) => ({
+    context: item.context || 'Recorrido',
     question: item.question,
-    expectedAnswer: item.expected,
-    socraticGuidance: item.support || item.reveal,
-    studentVisualPrompt: item.studentReveal || item.context,
-    supportHelp: item.support
+    expected: item.expected,
+    success: item.success || '¡Muy bien!',
+    support: item.support || 'Recuerda observar los detalles principales.',
+    reveal: item.reveal || item.expected,
+    studentReveal: item.studentReveal || item.expected
   }));
 
-  const practiceItems: PracticeContextItem[] = (genLesson.paso5_practica || []).map((item) => ({
-    contextName: item.context || 'Situación Aplicada',
-    prompt: item.question,
-    expectedAnswer: item.expected,
-    socraticTip: item.support || item.reveal,
-    supportHelp: item.support
+  const postQuestions: GuidedItem[] = (genLesson.paso3_recorrido || []).slice(0, 2).map((item) => ({
+    context: item.context || 'Comprobación',
+    question: item.question,
+    expected: item.expected,
+    success: item.success || '¡Correcto!',
+    support: item.support || 'Observa la dirección y el cambio.',
+    reveal: item.reveal || item.expected,
+    studentReveal: item.studentReveal || item.expected
+  }));
+
+  const practiceItems: GuidedItem[] = (genLesson.paso5_practica || []).map((item) => ({
+    context: item.context || 'Situación Aplicada',
+    question: item.question,
+    expected: item.expected,
+    success: item.success || '¡Muy bien!',
+    support: item.support || 'Piensa en el punto de referencia y en el contexto.',
+    reveal: item.reveal || item.expected,
+    studentReveal: item.studentReveal || item.expected
   }));
 
   const quizQuestions: QuizQuestion[] = (genLesson.paso7_miniquiz || []).map((q, idx) => ({
@@ -33,19 +46,19 @@ export function adaptGeneratorLessonToPlayer(
     q: q.q,
     options: q.options,
     correct: q.correct,
+    fixExplain: q.fixExplain || 'Revisa la idea central con tu mentor.',
     concept: genLesson.title,
     explain: q.fixExplain
   }));
 
-  const recoveryQuestions: RecoveryQuestion[] = (genLesson.paso7b_recuperacion || []).map((r, idx) => ({
-    id: `rec_${idx + 1}`,
+  const recoveryItems: RecoveryItem[] = (genLesson.paso7b_recuperacion || []).map((r, idx) => ({
     title: r.title || `Refuerzo ${idx + 1}`,
-    concept: r.title || genLesson.title,
-    explain: r.explain,
-    socraticHint: r.fixText || 'Lee con atención la pregunta y busca la pista principal.',
+    explain: r.explain || 'Revisemos esta idea paso a paso.',
     q: r.q,
     options: r.options,
-    correct: r.correct
+    correct: r.correct,
+    correctText: r.correctText || '¡Eso es! Respuesta correcta.',
+    fixText: r.fixText || `La respuesta correcta es ${r.correct}.`
   }));
 
   const subjectColorMap: Record<string, 'navy' | 'orange' | 'yellow' | 'teal'> = {
@@ -99,7 +112,7 @@ export function adaptGeneratorLessonToPlayer(
         { id: 'b3', number: '03', title: 'Práctica', subtitle: 'Aplicación en situaciones reales', color: 'yellow' },
         { id: 'b4', number: '04', title: 'Evaluación', subtitle: 'Miniquiz formativo y síntesis', color: 'teal' }
       ],
-      dileIntro: `Hoy desarrollaremos la clase ${genLesson.num} de ${oa.asignatura}: "${genLesson.title}".`,
+      dileIntro: `Hoy comenzaremos la clase ${genLesson.num} de ${oa.asignatura}: "${genLesson.title}".`,
       dileObjective: genLesson.focoDidactico
     },
 
@@ -131,19 +144,17 @@ export function adaptGeneratorLessonToPlayer(
       dileAfterVideo: genLesson.paso2_hook.dileDespues
     },
 
-    conversation: {
-      dileIntro: 'Conversemos en base a las pistas y evidencias observadas.',
-      emotionalTip: 'Valora la justificación por sobre la rapidez.',
-      items: conversationItems.length > 0 ? conversationItems : [
-        {
-          question: genLesson.situacionIntro.pregunta,
-          expectedAnswer: genLesson.situacionIntro.respEsperada,
-          socraticGuidance: genLesson.situacionIntro.pistaSocratica,
-          studentVisualPrompt: genLesson.focoDidactico,
-          supportHelp: genLesson.situacionIntro.pistaSocratica
-        }
-      ]
-    },
+    preQuestions: preQuestions.length > 0 ? preQuestions : [
+      {
+        context: 'Situación Inicial',
+        question: genLesson.situacionIntro.pregunta,
+        expected: genLesson.situacionIntro.respEsperada,
+        success: '¡Excelente respuesta!',
+        support: genLesson.situacionIntro.pistaSocratica,
+        reveal: genLesson.situacionIntro.respEsperada,
+        studentReveal: genLesson.situacionIntro.respEsperada
+      }
+    ],
 
     formalization: {
       dileIntro: genLesson.paso4_explicativo.dileAntes,
@@ -152,59 +163,56 @@ export function adaptGeneratorLessonToPlayer(
       graphicPoster: ''
     },
 
-    idea: {
-      dilePrompt: `Fijemos la idea clave: ${genLesson.paso4_explicativo.ideaClave || genLesson.paso6_resumen.ideaClave}`,
-      checkQuestion: genLesson.paso6_resumen.sintesis || '¿Cuál es la conclusión principal de esta sesión?',
-      expectedAnswer: genLesson.paso4_explicativo.ideaClave || genLesson.focoDidactico,
-      socraticHint: 'Pídele explicar la idea con sus propias palabras antes de avanzar.',
-      feedbackSuccess: '¡Excelente! Has comprendido la idea clave de la lección.',
-      feedbackSupport: 'Revisemos juntos la idea clave para asegurar el concepto.'
-    },
+    postQuestions: postQuestions.length > 0 ? postQuestions : [
+      {
+        context: 'Concepto',
+        question: genLesson.paso4_explicativo.ideaClave || genLesson.situacionIntro.pregunta,
+        expected: genLesson.situacionIntro.respEsperada,
+        success: '¡Muy bien!',
+        support: 'Recuerda relacionar la posición con el movimiento.',
+        reveal: genLesson.situacionIntro.respEsperada,
+        studentReveal: genLesson.situacionIntro.respEsperada
+      }
+    ],
 
-    practice: {
-      dileIntro: 'Ahora practiquemos juntos con situaciones aplicadas.',
-      items: practiceItems.length > 0 ? practiceItems : [
-        {
-          contextName: 'Aplicación Directa',
-          prompt: genLesson.focoDidactico,
-          expectedAnswer: genLesson.situacionIntro.respEsperada,
-          socraticTip: genLesson.situacionIntro.pistaSocratica,
-          supportHelp: genLesson.situacionIntro.pistaSocratica
-        }
-      ]
-    },
+    practice: practiceItems.length > 0 ? practiceItems : [
+      {
+        context: 'Aplicación Directa',
+        question: genLesson.focoDidactico,
+        expected: genLesson.situacionIntro.respEsperada,
+        success: '¡Muy bien!',
+        support: genLesson.situacionIntro.pistaSocratica,
+        reveal: genLesson.situacionIntro.respEsperada,
+        studentReveal: genLesson.situacionIntro.respEsperada
+      }
+    ],
 
-    quiz: {
-      dileIntro: 'Ahora responderás tres preguntas sobre lo que aprendimos hoy de forma autónoma.',
-      hazInstruction: 'Permite que el estudiante responda con calma en su pantalla sin recibir ayuda.',
-      passScoreMin: 2,
-      questions: quizQuestions.length > 0 ? quizQuestions : [
-        {
-          id: 'q_1',
-          q: genLesson.situacionIntro.pregunta,
-          options: [genLesson.situacionIntro.respEsperada, 'Opción alternativa 1', 'Opción alternativa 2'],
-          correct: genLesson.situacionIntro.respEsperada,
-          concept: genLesson.title,
-          explain: genLesson.paso4_explicativo.ideaClave
-        }
-      ]
-    },
+    mini: quizQuestions.length > 0 ? quizQuestions : [
+      {
+        id: 'q_1',
+        q: genLesson.situacionIntro.pregunta,
+        options: [genLesson.situacionIntro.respEsperada, 'Opción alternativa 1', 'Opción alternativa 2'],
+        correct: genLesson.situacionIntro.respEsperada,
+        fixExplain: genLesson.paso4_explicativo.ideaClave || 'Revisa la idea central con tu mentor.'
+      }
+    ],
 
-    recovery: {
-      dileIntroError: 'Vamos a revisar las ideas clave con calma. El error nos muestra dónde poner más atención.',
-      dilePass: '¡Gran trabajo! Has consolidado los aprendizajes requeridos.',
-      dileNeedsMorePractice: 'Completaste la sesión con perseverancia. Estas ideas se afianzarán en la próxima clase.',
-      items: recoveryQuestions
-    },
+    recovery: recoveryItems.length > 0 ? recoveryItems : [
+      {
+        title: 'Idea Central',
+        explain: genLesson.paso4_explicativo.ideaClave || 'Comprobemos lo aprendido.',
+        q: genLesson.situacionIntro.pregunta,
+        options: [genLesson.situacionIntro.respEsperada, 'Opción alternativa'],
+        correct: genLesson.situacionIntro.respEsperada,
+        correctText: '¡Eso es! Respuesta correcta.',
+        fixText: `La respuesta correcta es ${genLesson.situacionIntro.respEsperada}.`
+      }
+    ],
 
-    closing: {
-      dileQuestion: genLesson.paso8_cierre.preguntaSintesis,
-      metacognitionQuestion: genLesson.paso8_cierre.metacognicion,
-      transferQuestion: 'Transferencia: ¿Dónde podrás aplicar o notar esto durante la semana?',
-      evaluationCriteria: `Criterio de logro: El estudiante demuestra comprensión de ${genLesson.focoDidactico}.`,
-      supportRefocus: genLesson.paso4_explicativo.ideaClave,
-      dileFinalCelebration: genLesson.paso8_cierre.celebracion,
-      dilePausedSave: 'Tu progreso de hoy ha quedado guardado exitosamente.'
-    }
+    summaryIdeas: [
+      ['1 · Punto de referencia', 'Identificamos un valor de referencia para comparar.'],
+      ['2 · Interpretación del contexto', genLesson.focoDidactico],
+      ['3 · Síntesis', genLesson.paso4_explicativo.ideaClave || genLesson.paso6_resumen.ideaClave]
+    ]
   };
 }
