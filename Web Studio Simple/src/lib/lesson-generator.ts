@@ -380,7 +380,7 @@ function getCanonicalClase1Matematica(): LessonData {
       titulo: "El recorrido del submarino",
       fullPrompt: buildHookPromptText("Matemática", "OA 1", 1, "Posiciones y movimientos respecto de un punto de referencia", hookSlides),
       slides: hookSlides,
-      videoUrl: "https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/MAT/MAT_OA01_L01_Motivacional.mp4",
+      videoUrl: "https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7-MAT-OA01-L01-MOTIVACIONAL_V9_LEGIBLE.mp4",
       dileAntes: "Ahora veremos un video sobre el recorrido de un submarino. Mientras lo ves, fíjate en tres cosas: dónde comienza el submarino, cuánto baja y cuánto sube.",
       dileDespues: "Conversemos sobre lo que acabamos de ver. Te haré dos preguntas para que juntos comprendamos mejor el recorrido del submarino."
     },
