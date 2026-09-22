@@ -230,5 +230,50 @@ export const MATEMATICA_7B_OA01_CLASE01: LessonData = {
       '3 · Posición y movimiento',
       'Una posición indica dónde se encuentra algo respecto del punto de referencia. Por su parte, un movimiento indica cómo ese objeto o valor cambia de lugar, hacia dónde se mueve y qué distancia recorre.'
     ]
-  ]
+  ],
+
+  // Desacoplamiento explícito de etapas pedagógicas
+  interactive: {
+    type: 'thermo',
+    title: 'El cero como punto de referencia'
+  },
+
+  summaryText: 'En este recorrido usamos la superficie del mar como punto de referencia y la representamos con el número cero. Una posición indica dónde se encuentra algo respecto de ese punto; por eso, menos veinte metros representa la posición inicial del submarino. Un movimiento indica cómo cambia de lugar, hacia dónde se mueve y qué distancia recorre; por eso, bajar quince metros y subir ocho metros representan movimientos.',
+
+  reasoning: {
+    title: 'Comparemos dos situaciones',
+    dileIntro: 'Antes de resumir, comparemos dos situaciones. No necesitas repetir una frase exacta: lo importante es que expliques la idea con tus propias palabras.',
+    question: 'En una temperatura de −4 °C y en un saldo de −$4.000 aparece el signo negativo. ¿Significa lo mismo en las dos situaciones? Explica qué representa en cada una.',
+    expectedAnswer: 'En −4 °C el signo indica una temperatura bajo cero y en −$4.000 indica una deuda.',
+    context1: { label: 'TEMPERATURA', value: '−4 °C', desc: 'Cuatro grados bajo cero' },
+    context2: { label: 'CUENTA BANCARIA', value: '−$4.000', desc: 'Un saldo negativo' },
+    successFeedback: '¡Excelente razonamiento! Reconociste que el mismo signo puede comunicar ideas diferentes según la situación.',
+    supportFeedback: 'Pensemos en cada situación por separado. En el termómetro, el cero separa temperaturas sobre y bajo cero. En la cuenta, el cero separa dinero disponible y deuda. Con esta pista, explica qué indica el signo negativo en cada caso.',
+    revealText: 'No significa exactamente lo mismo. En −4 °C indica una temperatura de cuatro grados bajo cero. En −$4.000 indica una deuda de cuatro mil pesos. El signo negativo se interpreta según el contexto.'
+  },
+
+  challenge: {
+    title: 'Desafío breve: Posición y movimiento',
+    question: 'Una temperatura está en −2 °C y luego sube cinco grados. ¿Qué parte representa una posición y qué parte representa un movimiento? Explica cómo lo sabes.',
+    expectedAnswer: '−2 °C representa la posición inicial; “sube cinco grados” representa el movimiento.',
+    item1: { label: '−2 °C', tag: 'Posición inicial' },
+    item2: { label: 'sube 5 grados', tag: 'Movimiento' },
+    successFeedback: '¡Muy bien! −2 °C indica la posición inicial de la temperatura respecto del cero; “sube cinco grados” indica el movimiento o cambio.',
+    supportFeedback: 'Revisémoslo juntos. −2 °C dice dónde está la temperatura al comenzar, por eso representa una posición. “Sube cinco grados” dice cómo cambia, por eso representa un movimiento.'
+  },
+
+  strategy: {
+    title: 'Cómo analizar una situación',
+    dileIntro: 'Cuando analices una situación con números enteros, puedes seguir tres pasos. Primero, identifica el punto de referencia. Luego, observa qué indica el signo en ese contexto. Finalmente, pregúntate si la información dice dónde se encuentra algo o cómo cambia.',
+    steps: [
+      { number: 1, title: 'Identifica', desc: '¿Cuál es el punto de referencia?' },
+      { number: 2, title: 'Interpreta', desc: '¿Qué indica el signo en este contexto?' },
+      { number: 3, title: 'Distingue', desc: '¿Dice dónde se encuentra algo o cómo cambia?' }
+    ]
+  },
+
+  closure: {
+    congratulations: '¡Felicitaciones! Hoy aprendiste que el cero puede funcionar como punto de referencia, que los signos positivo y negativo se interpretan de acuerdo con cada situación, y que una posición indica dónde se encuentra algo mientras un movimiento indica cómo cambia de lugar.',
+    nextClassPreview: 'En la próxima clase ubicaremos números enteros en la recta numérica para saber dónde está cada uno y compararlos.'
+  }
 };

@@ -1,6 +1,7 @@
 import { LessonData as PlayerLessonData } from '../types/lesson';
 import { GeneratedOAPackage, LessonData as GeneratorLessonData } from './lesson-generator';
 import { adaptGeneratorLessonToPlayer } from './lesson-adapter';
+import { MATEMATICA_7B_OA01_CLASE01, MATEMATICA_7B_OA01_CLASE02 } from '../data/lessons';
 
 const LOCAL_STORAGE_KEY = 'estudiosimple_injected_lessons';
 
@@ -66,22 +67,51 @@ export function registerGeneratedPackage(pkg: GeneratedOAPackage): void {
   }
 }
 
+function normalizeSubject(subject: string): string {
+  const clean = (subject || '')
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .trim();
+  if (clean.includes('mat')) return 'mat';
+  if (clean.includes('leng') || clean.includes('liter')) return 'len';
+  if (clean.includes('cien') || clean.includes('nat')) return 'cie';
+  if (clean.includes('hist') || clean.includes('geog') || clean.includes('soc')) return 'his';
+  if (clean.includes('ing') || clean.includes('eng')) return 'ing';
+  return clean;
+}
+
+function normalizeOa(oaCode: string): string {
+  const digits = (oaCode || '').replace(/[^0-9]/g, '');
+  return digits ? `oa${parseInt(digits, 10)}` : (oaCode || '').toLowerCase().trim();
+}
+
+function normalizeGrade(grade: string): string {
+  const digits = (grade || '').replace(/[^0-9]/g, '');
+  return digits || (grade || '').toLowerCase().trim();
+}
+
 export function findInjectedLesson(
   grade: string,
   subject: string,
   oaCode: string,
   lessonNumber: number
 ): PlayerLessonData | null {
-  const cleanStr = (s: string) => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
-  const cleanGrade = cleanStr(grade);
-  const cleanSubj = cleanStr(subject);
-  const cleanOa = cleanStr(oaCode);
+  const keyGrade = normalizeGrade(grade);
+  const keySubj = normalizeSubject(subject);
+  const keyOa = normalizeOa(oaCode);
+
+  // Sobrescrituras manuales curadas de alta fidelidad (Matematica 7B OA01)
+  if ((keyGrade === '7' || keyGrade.includes('7')) && keySubj === 'mat' && keyOa === 'oa1') {
+    if (lessonNumber === 1) return MATEMATICA_7B_OA01_CLASE01;
+    if (lessonNumber === 2) return MATEMATICA_7B_OA01_CLASE02;
+  }
 
   const foundPkg = cachedInjectedPackages.find(p => {
-    const matchGrade = cleanStr(p.curso).includes(cleanGrade) || cleanGrade.includes(cleanStr(p.curso));
-    const matchSubj = cleanStr(p.asignatura).includes(cleanSubj) || cleanSubj.includes(cleanStr(p.asignatura));
-    const matchOa = cleanStr(p.oaCodigo) === cleanOa || cleanOa.endsWith(cleanStr(p.oaCodigo).replace(/[^0-9]/g, ''));
-    return matchGrade && matchSubj && matchOa;
+    const pkgGrade = normalizeGrade(p.curso);
+    const pkgSubj = normalizeSubject(p.asignatura);
+    const pkgOa = normalizeOa(p.oaCodigo);
+    return pkgGrade === keyGrade && pkgSubj === keySubj && pkgOa === keyOa;
   });
 
   if (!foundPkg) return null;
@@ -98,6 +128,11 @@ export function findInjectedLesson(
     },
     foundPkg.totalLecciones
   );
+}
+
+// Inicializacion proactiva en runtime de navegador
+if (typeof window !== 'undefined') {
+  initializeInjectedLessons().catch(console.error);
 }
 
 export function getAllInjectedPackages(): InjectedOAPackage[] {

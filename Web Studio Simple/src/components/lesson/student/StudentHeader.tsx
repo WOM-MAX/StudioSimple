@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLessonSync } from '../../../context/LessonSyncContext';
 import { HeartPulse, Volume2, VolumeX } from 'lucide-react';
+import { getSubjectTheme } from '../../../lib/subject-theme';
 
 interface StudentHeaderProps {
   soundActive?: boolean;
@@ -14,17 +15,19 @@ export const StudentHeader: React.FC<StudentHeaderProps> = ({
   onToggleSound
 }) => {
   const { lessonData, session } = useLessonSync();
+  const theme = getSubjectTheme(lessonData.metadata.subject);
 
   return (
-    <header className="h-14 bg-white border-b border-[#dce2e6] px-4 sm:px-5 flex items-center justify-between text-xs shrink-0 select-none gap-3">
+    <header className="h-14 bg-white/95 backdrop-blur-xs border-b border-slate-200/80 px-4 sm:px-5 flex items-center justify-between text-xs shrink-0 select-none gap-3 relative z-10">
       <div className="flex items-center gap-2 min-w-0">
-        <span className="font-bold text-[#1c3257] shrink-0">Espacio Estudiante</span>
-        <span className="text-[#d7dce1] shrink-0">|</span>
-        <div className="flex items-center gap-1.5 text-[#7d8794] text-xs truncate">
-          <span className="hidden md:inline shrink-0">{lessonData.metadata.grade} :</span>
-          <span className="hidden sm:inline shrink-0">{lessonData.metadata.subject} :</span>
-          <span className="shrink-0">{lessonData.metadata.oaCode} :</span>
-          <strong className="text-[#1c3257] font-bold truncate">
+        <span className="font-extrabold text-[#1C3257] shrink-0">Espacio Estudiante</span>
+        <span className="text-slate-300 shrink-0">|</span>
+        <div className="flex items-center gap-1.5 text-slate-500 text-xs truncate">
+          <span className={`px-2 py-0.5 rounded-md font-bold text-[10px] ${theme.badgeBg} ${theme.badgeText} border ${theme.badgeBorder} shrink-0`}>
+            {lessonData.metadata.subject}
+          </span>
+          <span className="shrink-0 font-semibold">{lessonData.metadata.oaCode} ·</span>
+          <strong className="text-[#1C3257] font-bold truncate">
             Clase {lessonData.metadata.lessonNumber}: {lessonData.metadata.lessonTitle}
           </strong>
         </div>

@@ -65,12 +65,12 @@ export const AdultLessonView: React.FC = () => {
   const currentPracticeItem = lessonData.practice[session.practiceIndex] ?? lessonData.practice[0];
 
   return (
-    <div className="flex h-full min-h-[720px] bg-[#f5f4ef] rounded-2xl overflow-hidden border border-[#dce2e6] shadow-sm">
+    <div className="flex h-full min-h-[720px] bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-md shadow-slate-200/40">
       {/* 8-step Left Sidebar */}
       <AdultSidebar />
 
       {/* Main Content Area */}
-      <div className="flex-1 flex flex-col min-w-0 bg-[#f5f4ef]">
+      <div className="flex-1 flex flex-col min-w-0 bg-[#fafbfc]">
         <AdultHeader />
 
         <div className="flex-1 p-6 md:p-8 overflow-y-auto max-w-4xl mx-auto w-full">
@@ -179,7 +179,7 @@ export const AdultLessonView: React.FC = () => {
           {/* 3. STAGE: ROUTE OVERVIEW */}
           {session.stage === 'routeOverview' && (
             <div>
-              <h1 className="text-2xl font-bold text-[#1c3257] mb-4">Nuestra ruta de Matemática</h1>
+              <h1 className="text-2xl font-bold text-[#1c3257] mb-4">Nuestra ruta de {lessonData.metadata.subject}</h1>
               <PrivateBox>
                 Los títulos orientan la clase. Lee en voz alta solamente lo que aparezca en los recuadros DILE o PREGÚNTALE.
               </PrivateBox>
@@ -222,19 +222,25 @@ export const AdultLessonView: React.FC = () => {
           {/* 5. STAGE: THERMO */}
           {session.stage === 'thermo' && (
             <div>
-              <h1 className="text-2xl font-bold text-[#1c3257] mb-2">El cero como punto de referencia</h1>
-              <div className="text-xs text-[#64748b] bg-white p-3 rounded-xl border border-[#dce2e6] mb-4">
-                <strong>AYUDA DE LECTURA:</strong> 0 °C se lee “cero grados Celsius”. · 3 °C se lee “tres grados Celsius”. · +3 °C se lee “más tres grados Celsius”.
-              </div>
+              <h1 className="text-2xl font-bold text-[#1c3257] mb-2">
+                {lessonData.interactive?.title || 'Conexión inicial'}
+              </h1>
+              {lessonData.situation.socraticHint && (
+                <div className="text-xs text-[#64748b] bg-white p-3 rounded-xl border border-[#dce2e6] mb-4">
+                  <strong>AYUDA PEDAGÓGICA:</strong> {lessonData.situation.socraticHint}
+                </div>
+              )}
               <PromptBox label="DILE">
                 {lessonData.situation.dilePrompt}
               </PromptBox>
               <ExpectedAnswerBox>
                 {lessonData.situation.expectedAnswer}
               </ExpectedAnswerBox>
-              <div className="text-xs text-[#64748b] bg-white p-2.5 rounded-xl border border-[#dce2e6] mb-4">
-                <strong>AYUDA DE LECTURA:</strong> −3 se lee “menos tres”.
-              </div>
+              {lessonData.situation.emotionalTip && (
+                <div className="text-xs text-[#64748b] bg-white p-2.5 rounded-xl border border-[#dce2e6] mb-4">
+                  <strong>CLIMA EMOCIONAL:</strong> {lessonData.situation.emotionalTip}
+                </div>
+              )}
 
               <FeedbackBanner feedback={session.feedback} />
 
@@ -244,27 +250,45 @@ export const AdultLessonView: React.FC = () => {
                     ¿Qué respondió el estudiante?
                   </p>
                   <div className="grid grid-cols-1 gap-2">
-                    <button
-                      type="button"
-                      onClick={() => handleSuccess('¡Correcto! El número entero que representa esa temperatura es −3.')}
-                      className="text-left bg-white hover:bg-[#eefafb] border border-[#b8c4d0] hover:border-[#12a1a4] rounded-xl p-3.5 text-xs font-semibold text-[#1c3257] transition-all shadow-sm cursor-pointer"
-                    >
-                      Respondió −3
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => handleSupport('Estuviste cerca. El número 3 está correcto porque indica la cantidad de grados, pero falta el signo que indica que la temperatura está bajo cero. ¿Recuerdas qué signo utilizamos para representar una cantidad bajo cero?')}
-                      className="text-left bg-white hover:bg-[#fff9f0] border border-[#f5c49d] rounded-xl p-3.5 text-xs font-semibold text-[#794112] transition-all shadow-sm cursor-pointer"
-                    >
-                      Respondió 3
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => handleSupport('Vamos paso a paso. El número 3 indica la cantidad de grados. Como la temperatura está bajo cero necesitamos el signo que representa una cantidad bajo cero. ¿Cuál es ese signo?')}
-                      className="text-left bg-white hover:bg-[#fff9f0] border border-[#f5c49d] rounded-xl p-3.5 text-xs font-semibold text-[#794112] transition-all shadow-sm cursor-pointer"
-                    >
-                      No sabe o dio otra respuesta
-                    </button>
+                    {lessonData.situation.options && lessonData.situation.options.length > 0 ? (
+                      lessonData.situation.options.map((opt, idx) => (
+                        <button
+                          key={idx}
+                          type="button"
+                          onClick={() => {
+                            if (opt.kind === 'correct') {
+                              handleSuccess(opt.feedbackText);
+                            } else {
+                              handleSupport(opt.feedbackText);
+                            }
+                          }}
+                          className={`text-left bg-white rounded-xl p-3.5 text-xs font-semibold transition-all shadow-sm cursor-pointer border ${
+                            opt.kind === 'correct'
+                              ? 'hover:bg-[#eefafb] border-[#b8c4d0] hover:border-[#12a1a4] text-[#1c3257]'
+                              : 'hover:bg-[#fff9f0] border-[#f5c49d] text-[#794112]'
+                          }`}
+                        >
+                          {opt.label}
+                        </button>
+                      ))
+                    ) : (
+                      <>
+                        <button
+                          type="button"
+                          onClick={() => handleSuccess('¡Correcto! Respuesta esperada comprendida.')}
+                          className="text-left bg-white hover:bg-[#eefafb] border border-[#b8c4d0] hover:border-[#12a1a4] rounded-xl p-3.5 text-xs font-semibold text-[#1c3257] transition-all shadow-sm cursor-pointer"
+                        >
+                          Respondió correctamente: {lessonData.situation.expectedAnswer}
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => handleSupport(lessonData.situation.socraticHint || 'Observa la situación con atención.')}
+                          className="text-left bg-white hover:bg-[#fff9f0] border border-[#f5c49d] rounded-xl p-3.5 text-xs font-semibold text-[#794112] transition-all shadow-sm cursor-pointer"
+                        >
+                          Necesita apoyo
+                        </button>
+                      </>
+                    )}
                   </div>
                 </div>
               )}
@@ -274,27 +298,20 @@ export const AdultLessonView: React.FC = () => {
                   <p className="text-xs font-bold text-[#1c3257] uppercase tracking-wider mb-2">
                     ¿Qué respondió ahora?
                   </p>
-                  <div className="grid grid-cols-1 gap-2">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     <button
                       type="button"
-                      onClick={() => updateSession({ feedback: { kind: 'success', text: '¡Eso es! Utilizamos el signo negativo porque la temperatura está bajo cero. Por eso escribimos −3 °C.' }, attempt: 2 })}
+                      onClick={() => updateSession({ feedback: { kind: 'success', text: '¡Eso es! Se comprendió la idea con la ayuda.' }, attempt: 2 })}
                       className="text-left bg-white hover:bg-[#eaf4e8] border border-[#badcb8] rounded-xl p-3 text-xs font-bold text-[#255e29] transition-all cursor-pointer"
                     >
-                      Respondió signo negativo
+                      Respondió tras la pista
                     </button>
                     <button
                       type="button"
-                      onClick={() => handleReveal('El signo positivo representa una cantidad sobre cero. Como buscamos tres grados bajo cero, la respuesta es −3.')}
+                      onClick={() => handleReveal(`La respuesta esperada es: ${lessonData.situation.expectedAnswer}.`)}
                       className="text-left bg-white hover:bg-[#f8f9fa] border border-[#dce2e6] rounded-xl p-3 text-xs font-bold text-[#556376] transition-all cursor-pointer"
                     >
-                      Respondió signo positivo
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => handleReveal('La respuesta que buscábamos es −3. El signo menos indica que la temperatura está bajo cero.')}
-                      className="text-left bg-white hover:bg-[#f8f9fa] border border-[#dce2e6] rounded-xl p-3 text-xs font-bold text-[#556376] transition-all cursor-pointer"
-                    >
-                      Todavía no sabe
+                      Mostrar respuesta esperada
                     </button>
                   </div>
                 </div>
@@ -322,9 +339,11 @@ export const AdultLessonView: React.FC = () => {
               <PrivateBox>
                 {lessonData.reference.socraticHint}
               </PrivateBox>
-              <div className="text-xs text-[#64748b] bg-white p-2.5 rounded-xl border border-[#dce2e6] mb-4">
-                <strong>AYUDA DE LECTURA:</strong> −3 °C se lee “menos tres grados Celsius”.
-              </div>
+              {lessonData.reference.socraticHint && (
+                <div className="text-xs text-[#64748b] bg-white p-2.5 rounded-xl border border-[#dce2e6] mb-4">
+                  <strong>AYUDA PEDAGÓGICA:</strong> {lessonData.reference.socraticHint}
+                </div>
+              )}
               <PromptBox label="DILE">
                 {lessonData.reference.dilePrompt}
               </PromptBox>
@@ -376,10 +395,12 @@ export const AdultLessonView: React.FC = () => {
             </div>
           )}
 
-          {/* 7. STAGE: HOOK (Video Submarino) */}
+          {/* 7. STAGE: HOOK */}
           {session.stage === 'hook' && (
             <div>
-              <h1 className="text-2xl font-bold text-[#1c3257] mb-2">El recorrido del submarino</h1>
+              <h1 className="text-2xl font-bold text-[#1c3257] mb-2">
+                {lessonData.hook.titulo || lessonData.metadata.lessonTitle || 'Desafío y Exploración'}
+              </h1>
               {!session.hookStarted ? (
                 <div>
                   <PromptBox label="DILE">
@@ -438,7 +459,7 @@ export const AdultLessonView: React.FC = () => {
             <div>
               <h1 className="text-2xl font-bold text-[#1c3257] mb-4">Comprendamos el recorrido</h1>
               <PromptBox label="DILE">
-                Conversemos sobre lo que acabamos de ver. Voy a hacerte dos preguntas para que juntos comprendamos mejor el recorrido del submarino.
+                {lessonData.hook.dileAfterVideo || 'Conversemos sobre lo que acabamos de ver. Voy a hacerte dos preguntas para que juntos comprendamos mejor lo observado.'}
               </PromptBox>
               <div className="flex justify-end mt-8 pt-4 border-t border-[#dce2e6]">
                 <button
@@ -542,15 +563,19 @@ export const AdultLessonView: React.FC = () => {
           {/* 10. STAGE: FORMALIZATION (Video Explicativo) */}
           {session.stage === 'formalization' && (
             <div>
-              <h1 className="text-2xl font-bold text-[#1c3257] mb-2">Aprendamos sobre posición y movimiento</h1>
+              <h1 className="text-2xl font-bold text-[#1c3257] mb-2">
+                {lessonData.formalization.ideaClave || lessonData.metadata.lessonTitle || 'Explicación formal'}
+              </h1>
               {!session.formalStarted ? (
                 <div>
                   <PromptBox label="DILE">
                     {lessonData.formalization.dileIntro}
                   </PromptBox>
-                  <div className="text-xs text-[#64748b] bg-white p-2.5 rounded-xl border border-[#dce2e6] mb-4">
-                    <strong>AYUDA DE LECTURA:</strong> −20 m se lee “menos veinte metros”.
-                  </div>
+                  {lessonData.formalization.hazInstruction && (
+                    <div className="text-xs text-[#64748b] bg-white p-2.5 rounded-xl border border-[#dce2e6] mb-4">
+                      <strong>AYUDA PEDAGÓGICA:</strong> {lessonData.formalization.hazInstruction}
+                    </div>
+                  )}
                   <div className="mt-6 flex justify-center">
                     <button
                       type="button"
@@ -597,9 +622,11 @@ export const AdultLessonView: React.FC = () => {
           {/* 11. STAGE: POST INTRO */}
           {session.stage === 'postIntro' && (
             <div>
-              <h1 className="text-2xl font-bold text-[#1c3257] mb-4">Posición y movimiento</h1>
+              <h1 className="text-2xl font-bold text-[#1c3257] mb-4">
+                {lessonData.metadata.lessonTitle || 'Comprobemos lo aprendido'}
+              </h1>
               <PromptBox label="DILE">
-                Comprobemos que comprendiste la diferencia entre una posición y un movimiento. Te haré dos preguntas para comprobarlo.
+                Comprobemos lo que acabamos de revisar. Te haré dos preguntas para verificar las ideas centrales.
               </PromptBox>
               <div className="flex justify-end mt-8 pt-4 border-t border-[#dce2e6]">
                 <button
@@ -705,7 +732,7 @@ export const AdultLessonView: React.FC = () => {
             <div>
               <h1 className="text-2xl font-bold text-[#1c3257] mb-4">En resumen</h1>
               <PromptBox label="DILE">
-                En este recorrido usamos la superficie del mar como punto de referencia y la representamos con el número cero. Una posición indica dónde se encuentra algo respecto de ese punto; por eso, menos veinte metros representa la posición inicial del submarino. Un movimiento indica cómo cambia de lugar, hacia dónde se mueve y qué distancia recorre; por eso, bajar quince metros y subir ocho metros representan movimientos.
+                {lessonData.summaryText || lessonData.summaryIdeas?.[0]?.[1] || 'En este recorrido identificamos las ideas principales de la clase. Revisemos los conceptos clave antes de continuar.'}
               </PromptBox>
               <div className="flex justify-end mt-8 pt-4 border-t border-[#dce2e6]">
                 <button
@@ -726,16 +753,9 @@ export const AdultLessonView: React.FC = () => {
               <h1 className="text-2xl font-bold text-[#1c3257] mb-4">Practiquemos juntos</h1>
               <PromptBox label="DILE">
                 {session.practiceIndex === 0
-                  ? 'Ahora apliquemos lo que hemos aprendido en tres situaciones distintas. Para eso, te haré algunas preguntas y las resolveremos paso a paso.'
-                  : session.practiceIndex === 1
-                  ? 'Pasemos a la segunda situación. Ahora hablaremos de un ascensor.'
-                  : 'Vamos con la última situación. Esta vez veremos que el significado de un signo también depende del contexto.'}
+                  ? 'Ahora apliquemos lo que hemos aprendido en situaciones prácticas. Para eso, resolveremos algunos casos paso a paso.'
+                  : `Pasemos a la situación ${session.practiceIndex + 1}: ${currentPracticeItem.context || 'siguiente caso'}.`}
               </PromptBox>
-              {session.practiceIndex === 2 && (
-                <PromptBox label="DILE" tone="teal">
-                  En una cuenta bancaria, el cero indica que no hay dinero disponible ni deuda. Un saldo positivo representa dinero disponible y un saldo negativo representa una deuda.
-                </PromptBox>
-              )}
               <div className="flex justify-end mt-8 pt-4 border-t border-[#dce2e6]">
                 <button
                   type="button"
@@ -840,9 +860,11 @@ export const AdultLessonView: React.FC = () => {
           {/* 16. STAGE: REASONING INTRO */}
           {session.stage === 'reasoningIntro' && (
             <div>
-              <h1 className="text-2xl font-bold text-[#1c3257] mb-4">Comparemos dos situaciones</h1>
+              <h1 className="text-2xl font-bold text-[#1c3257] mb-4">
+                {lessonData.reasoning?.title || 'Comparemos dos situaciones'}
+              </h1>
               <PromptBox label="DILE">
-                Antes de resumir, comparemos dos situaciones. No necesitas repetir una frase exacta: lo importante es que expliques la idea con tus propias palabras.
+                {lessonData.reasoning?.dileIntro || 'Antes de resumir, comparemos dos situaciones. No necesitas repetir una frase exacta: lo importante es que expliques la idea con tus propias palabras.'}
               </PromptBox>
               <div className="flex justify-end mt-8 pt-4 border-t border-[#dce2e6]">
                 <button
@@ -860,12 +882,14 @@ export const AdultLessonView: React.FC = () => {
           {/* 17. STAGE: REASONING */}
           {session.stage === 'reasoning' && (
             <div>
-              <h1 className="text-2xl font-bold text-[#1c3257] mb-2">Comparemos dos situaciones</h1>
+              <h1 className="text-2xl font-bold text-[#1c3257] mb-2">
+                {lessonData.reasoning?.title || 'Comparemos dos situaciones'}
+              </h1>
               <PromptBox label="PREGÚNTALE">
-                En una temperatura de −4 °C y en un saldo de −$4.000 aparece el signo negativo. ¿Significa lo mismo en las dos situaciones? Explica qué representa en cada una.
+                {lessonData.reasoning?.question || 'Al comparar dos situaciones de la clase de hoy, ¿qué diferencias y semejanzas observas? Explica tu respuesta.'}
               </PromptBox>
               <ExpectedAnswerBox>
-                En −4 °C el signo indica una temperatura bajo cero y en −$4.000 indica una deuda.
+                {lessonData.reasoning?.expectedAnswer || 'Identificar cómo cambian los datos y qué significado tienen en cada contexto.'}
               </ExpectedAnswerBox>
 
               <FeedbackBanner feedback={session.feedback} />
@@ -879,7 +903,7 @@ export const AdultLessonView: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => updateSession({
-                        feedback: { kind: 'success', text: '¡Excelente razonamiento! Reconociste que el mismo signo puede comunicar ideas diferentes según la situación.' },
+                        feedback: { kind: 'success', text: lessonData.reasoning?.successFeedback || '¡Excelente razonamiento! Reconociste la idea central con claridad.' },
                         reasoningIndependent: true
                       })}
                       className="bg-white hover:bg-[#eaf4e8] border border-[#badcb8] rounded-xl p-3 text-xs font-bold text-[#255e29] transition-all cursor-pointer"
@@ -889,7 +913,7 @@ export const AdultLessonView: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => updateSession({
-                        feedback: { kind: 'support', text: 'Pensemos en cada situación por separado. En el termómetro, el cero separa temperaturas sobre y bajo cero. En la cuenta, el cero separa dinero disponible y deuda. Con esta pista, explica qué indica el signo negativo en cada caso.' },
+                        feedback: { kind: 'support', text: lessonData.reasoning?.supportFeedback || 'Pensemos en cada situación por separado y observa qué elementos las distinguen.' },
                         attempt: 1,
                         reasoningIndependent: false
                       })}
@@ -900,7 +924,7 @@ export const AdultLessonView: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => updateSession({
-                        feedback: { kind: 'support', text: 'Pensemos en cada situación por separado. En el termómetro, el cero separa temperaturas sobre y bajo cero. En la cuenta, el cero separa dinero disponible y deuda. Con esta pista, explica qué indica el signo negativo en cada caso.' },
+                        feedback: { kind: 'support', text: lessonData.reasoning?.supportFeedback || 'Pensemos en cada situación por separado y observa qué elementos las distinguen.' },
                         attempt: 1,
                         reasoningIndependent: false
                       })}
@@ -921,7 +945,7 @@ export const AdultLessonView: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => updateSession({
-                        feedback: { kind: 'success', text: '¡Excelente razonamiento! Reconociste que el mismo signo puede comunicar ideas diferentes según la situación.' },
+                        feedback: { kind: 'success', text: lessonData.reasoning?.successFeedback || '¡Excelente! Ahora explicó la idea con precisión.' },
                         reasoningIndependent: false
                       })}
                       className="bg-white hover:bg-[#eaf4e8] border border-[#badcb8] rounded-xl p-3.5 text-xs font-bold text-[#255e29] transition-all cursor-pointer"
@@ -931,7 +955,7 @@ export const AdultLessonView: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => updateSession({
-                        feedback: { kind: 'reveal', text: 'No significa exactamente lo mismo. En −4 °C indica una temperatura de cuatro grados bajo cero. En −$4.000 indica una deuda de cuatro mil pesos. El signo negativo se interpreta según el contexto.' },
+                        feedback: { kind: 'reveal', text: lessonData.reasoning?.revealText || (lessonData.reasoning?.expectedAnswer ? `La explicación esperada es: ${lessonData.reasoning.expectedAnswer}` : 'El análisis demuestra la importancia de considerar el contexto.') },
                         attempt: 2,
                         reasoningIndependent: false
                       })}
@@ -965,15 +989,17 @@ export const AdultLessonView: React.FC = () => {
           {/* 18. STAGE: CHALLENGE */}
           {session.stage === 'challenge' && (
             <div>
-              <h1 className="text-2xl font-bold text-[#1c3257] mb-2">Desafío breve</h1>
+              <h1 className="text-2xl font-bold text-[#1c3257] mb-2">
+                {lessonData.challenge?.title || 'Desafío breve'}
+              </h1>
               <PrivateBox>
                 Esta profundización aparece porque resolvió la comparación anterior sin apoyo. Valora su explicación aunque utilice palabras diferentes.
               </PrivateBox>
               <PromptBox label="PREGÚNTALE">
-                Una temperatura está en −2 °C y luego sube cinco grados. ¿Qué parte representa una posición y qué parte representa un movimiento? Explica cómo lo sabes.
+                {lessonData.challenge?.question || 'En esta situación de desafío, ¿cómo explicarías la relación entre los datos y el procedimiento? Explica tu respuesta.'}
               </PromptBox>
               <ExpectedAnswerBox>
-                −2 °C representa la posición inicial; “sube cinco grados” representa el movimiento.
+                {lessonData.challenge?.expectedAnswer || 'Explicar con precisión el procedimiento y fundamentar la respuesta.'}
               </ExpectedAnswerBox>
 
               <FeedbackBanner feedback={session.feedback} />
@@ -987,7 +1013,7 @@ export const AdultLessonView: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => updateSession({
-                        feedback: { kind: 'success', text: '¡Muy bien! −2 °C indica la posición inicial de la temperatura respecto del cero; “sube cinco grados” indica el movimiento o cambio.' },
+                        feedback: { kind: 'success', text: lessonData.challenge?.successFeedback || '¡Muy bien! Fundamentaste tu respuesta de forma correcta.' },
                         challengeCompleted: true
                       })}
                       className="bg-white hover:bg-[#eaf4e8] border border-[#badcb8] rounded-xl p-3.5 text-xs font-bold text-[#255e29] transition-all cursor-pointer"
@@ -997,7 +1023,7 @@ export const AdultLessonView: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => updateSession({
-                        feedback: { kind: 'support', text: 'Revisémoslo juntos. −2 °C dice dónde está la temperatura al comenzar, por eso representa una posición. “Sube cinco grados” dice cómo cambia, por eso representa un movimiento.' },
+                        feedback: { kind: 'support', text: lessonData.challenge?.supportFeedback || 'Revisémoslo juntos paso a paso para identificar la clave del problema.' },
                         challengeCompleted: true
                       })}
                       className="bg-white hover:bg-[#fff0e4] border border-[#f5c49d] rounded-xl p-3.5 text-xs font-bold text-[#794112] transition-all cursor-pointer"
@@ -1026,9 +1052,11 @@ export const AdultLessonView: React.FC = () => {
           {/* 19. STAGE: STRATEGY */}
           {session.stage === 'strategy' && (
             <div>
-              <h1 className="text-2xl font-bold text-[#1c3257] mb-4">Cómo analizar una situación</h1>
+              <h1 className="text-2xl font-bold text-[#1c3257] mb-4">
+                {lessonData.strategy?.title || 'Cómo analizar una situación'}
+              </h1>
               <PromptBox label="DILE">
-                Cuando analices una situación con números enteros, puedes seguir tres pasos. Primero, identifica el punto de referencia. Luego, observa qué indica el signo en ese contexto. Finalmente, pregúntate si la información dice dónde se encuentra algo o cómo cambia.
+                {lessonData.strategy?.dileIntro || 'Cuando analices una situación en esta lección, puedes seguir tres pasos clave: primero identifica los datos iniciales, luego aplica la regla correspondiente y finalmente comprueba tu resultado.'}
               </PromptBox>
               <div className="flex justify-end mt-8 pt-4 border-t border-[#dce2e6]">
                 <button
@@ -1299,10 +1327,10 @@ export const AdultLessonView: React.FC = () => {
             <div>
               <h1 className="text-2xl font-bold text-[#1c3257] mb-4">Terminamos por hoy</h1>
               <PromptBox label="DILE">
-                ¡Felicitaciones! Hoy aprendiste que el cero puede funcionar como punto de referencia, que los signos positivo y negativo se interpretan de acuerdo con cada situación, y que una posición indica dónde se encuentra algo mientras un movimiento indica cómo cambia de lugar.
+                {lessonData.closure?.congratulations || `¡Felicitaciones! Hoy completaste con éxito la clase "${lessonData.metadata.lessonTitle}". Has demostrado gran curiosidad y constancia en tu aprendizaje.`}
               </PromptBox>
               <PromptBox label="DILE" tone="teal">
-                En la próxima clase ubicaremos números enteros en la recta numérica para saber dónde está cada uno y compararlos.
+                {lessonData.closure?.nextClassPreview || (lessonData.metadata.nextLessonTitle ? `En la próxima clase trabajaremos: "${lessonData.metadata.nextLessonTitle}".` : '¡Nos vemos en la próxima sesión!')}
               </PromptBox>
 
               {/* Registro de la sesión */}
@@ -1344,10 +1372,10 @@ export const AdultLessonView: React.FC = () => {
                 <CheckCircle2 className="w-10 h-10" />
               </div>
               <h1 className="text-3xl font-extrabold text-[#1c3257] mb-2">
-                ¡Clase 1 completada con éxito!
+                ¡Clase {lessonData.metadata.lessonNumber} completada con éxito!
               </h1>
               <p className="text-sm text-[#526177] max-w-md mx-auto mb-8 leading-relaxed">
-                Has finalizado la primera sesión de Matemática con tu estudiante. Los avances han quedado registrados.
+                Has finalizado la clase de {lessonData.metadata.subject} con tu estudiante. Los avances han quedado registrados.
               </p>
               <button
                 type="button"
@@ -1396,6 +1424,36 @@ const AdultVideoPlayer: React.FC<AdultVideoPlayerProps> = ({ src, kind, session,
       video: { kind, playing, seek, command: session.video.command + 1 }
     });
   };
+
+  if (!src || src.trim() === '') {
+    return (
+      <div className="bg-white p-6 rounded-2xl border border-[#dce2e6] mt-4 text-center">
+        <div className="w-14 h-14 rounded-full bg-[#f0f4f8] text-[#1c3257] flex items-center justify-center mx-auto mb-3 border border-[#dce2e6]">
+          <Play className="w-6 h-6 text-[#12a1a4]" />
+        </div>
+        <h3 className="text-base font-bold text-[#1c3257] mb-1">
+          Cápsula audiovisual complementaria
+        </h3>
+        <p className="text-xs text-[#526177] max-w-md mx-auto mb-5 leading-relaxed">
+          Esta lección no incluye video pregrabado. Puedes avanzar directamente utilizando las preguntas guiadas y el material en pantalla.
+        </p>
+        <button
+          type="button"
+          onClick={() => {
+            if (kind === 'hook') {
+              updateSession({ hookStarted: true, hookEnded: true, video: { ...session.video, playing: false } });
+            } else {
+              updateSession({ formalStarted: true, formalEnded: true, video: { ...session.video, playing: false } });
+            }
+          }}
+          className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-2.5 rounded-xl text-xs flex items-center gap-2 mx-auto transition-all cursor-pointer shadow-sm"
+        >
+          <span>Continuar a la siguiente etapa</span>
+          <ArrowRight className="w-4 h-4" />
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-white p-5 rounded-2xl border border-[#dce2e6] mt-4">

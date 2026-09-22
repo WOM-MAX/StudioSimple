@@ -208,8 +208,8 @@ export const ParentDashboard: React.FC = () => {
         {/* TAB 1: LECCIONES DEL OBJETIVO */}
         {activeTab === 'lessons' && (
           <div className="space-y-6 animate-fadeIn">
-            {/* BARRA HORIZONTAL PROMINENTE DE LAS 5 ASIGNATURAS OFICIALES */}
-            <div className="space-y-2">
+            {/* TARJETAS BENTO VERTICALES PREMIUM DE LAS 5 ASIGNATURAS */}
+            <div className="space-y-3">
               <div className="flex items-center justify-between">
                 <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
                   Asignaturas Oficiales · Temario Exámenes Libres MINEDUC
@@ -219,38 +219,93 @@ export const ParentDashboard: React.FC = () => {
                 </span>
               </div>
 
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2.5">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
                 {OFFICIAL_SUBJECTS.map((sub) => {
                   const isSelected = selectedSubject.toLowerCase().includes(sub.id) || selectedSubject === sub.name;
+                  const subjectOAs = getSubjectOAs(selectedGrade, sub.name);
+                  const totalLessons = subjectOAs.reduce((acc, oa) => acc + oa.lessons.length, 0);
+                  const iconMap: Record<string, string> = {
+                    mat: 'calculate',
+                    len: 'auto_stories',
+                    cie: 'biotech',
+                    his: 'public',
+                    ing: 'translate'
+                  };
+                  const subIcon = iconMap[sub.id] || 'school';
                   return (
                     <button
                       key={sub.id}
                       type="button"
                       onClick={() => handleSubjectChange(sub.name)}
-                      className={`px-4 py-3 rounded-2xl font-bold text-xs transition-all flex flex-col items-start gap-1.5 border text-left shadow-xs cursor-pointer ${
+                      className={`relative rounded-2xl p-4 pt-5 pb-4 font-bold text-xs transition-all duration-300 flex flex-col items-center gap-2.5 border text-center cursor-pointer overflow-hidden group ${
                         isSelected
                           ? isDark
-                            ? 'bg-[#12A1A4] border-[#12A1A4] text-white shadow-md ring-2 ring-[#12A1A4]/40 scale-[1.02]'
-                            : 'bg-gradient-to-br from-[#1C3257] to-[#264475] border-[#1C3257] text-white shadow-md shadow-slate-900/15 ring-2 ring-[#1C3257]/20 scale-[1.02]'
+                            ? 'border-2 shadow-lg ring-1 ring-opacity-40 scale-[1.03]'
+                            : 'border-2 shadow-xl scale-[1.03]'
                           : isDark
-                          ? 'bg-[#10223D] border-[#1C3257] text-slate-400 hover:bg-[#1C3257] hover:text-white'
-                          : 'bg-white/85 backdrop-blur-xs border-slate-200/90 text-slate-700 hover:bg-white hover:border-slate-300 hover:shadow-sm'
+                          ? 'bg-[#10223D] border-[#1C3257] text-slate-400 hover:bg-[#1C3257]/60 hover:text-white hover:scale-[1.02]'
+                          : 'bg-white/90 backdrop-blur-xs border-slate-200/90 text-slate-600 hover:bg-white hover:border-slate-300 hover:shadow-md hover:scale-[1.02]'
                       }`}
+                      style={isSelected ? {
+                        borderColor: sub.color,
+                        backgroundColor: isDark ? `${sub.color}22` : `${sub.color}0A`,
+                        boxShadow: `0 8px 24px ${sub.color}25`,
+                        ['--tw-ring-color' as string]: `${sub.color}60`
+                      } : undefined}
                     >
-                      <div className="flex items-center justify-between w-full">
-                        <span className="text-[10px] uppercase font-black tracking-wider opacity-80">{sub.shortName}</span>
-                        {isSelected && <span className="w-2 h-2 rounded-full bg-[#F8AD22] shadow-xs" />}
+                      {/* Decorative top accent bar */}
+                      <div
+                        className="absolute top-0 left-0 right-0 h-1 rounded-t-2xl transition-opacity duration-300"
+                        style={{
+                          backgroundColor: sub.color,
+                          opacity: isSelected ? 1 : 0.15
+                        }}
+                      />
+
+                      {/* Subject icon */}
+                      <div
+                        className="w-11 h-11 rounded-xl flex items-center justify-center transition-all duration-300 shadow-sm"
+                        style={{
+                          backgroundColor: isSelected ? sub.color : `${sub.color}15`,
+                          color: isSelected ? '#FFFFFF' : sub.color
+                        }}
+                      >
+                        <span className="material-symbols-outlined text-xl">{subIcon}</span>
                       </div>
-                      <span className="text-xs sm:text-sm font-black truncate w-full">{sub.name}</span>
+
+                      {/* Subject name */}
+                      <span
+                        className="text-xs sm:text-sm font-black leading-tight"
+                        style={{ color: isSelected ? (isDark ? '#FFFFFF' : sub.color) : undefined }}
+                      >
+                        {sub.name}
+                      </span>
+
+                      {/* Lesson count pill */}
+                      <span
+                        className="text-[10px] font-bold px-2.5 py-0.5 rounded-full transition-colors duration-300"
+                        style={{
+                          backgroundColor: isSelected ? `${sub.color}20` : isDark ? '#0A192F' : '#F1F5F9',
+                          color: isSelected ? sub.color : isDark ? '#94A3B8' : '#64748B',
+                          border: isSelected ? `1px solid ${sub.color}30` : '1px solid transparent'
+                        }}
+                      >
+                        {totalLessons} clases · {subjectOAs.length} OAs
+                      </span>
+
+                      {/* Active indicator dot */}
+                      {isSelected && (
+                        <span className="absolute top-2.5 right-2.5 w-2.5 h-2.5 rounded-full bg-[#F8AD22] shadow-sm animate-pulse" />
+                      )}
                     </button>
                   );
                 })}
               </div>
             </div>
 
-            {/* NAVEGACIÓN DE OAs DE LA ASIGNATURA SELECCIONADA */}
+            {/* TARJETAS VERTICALES ELEGANTES DE OAs */}
             <div>
-              <div className="flex items-center justify-between mb-2">
+              <div className="flex items-center justify-between mb-3">
                 <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
                   Objetivos Priorizados de {selectedSubject}
                 </span>
@@ -259,26 +314,76 @@ export const ParentDashboard: React.FC = () => {
                 </span>
               </div>
 
-              <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                 {currentOAs.map((oa, index) => {
                   const isSelected = index === selectedOaIndex;
+                  const currentSub = OFFICIAL_SUBJECTS.find(
+                    (s) => selectedSubject.toLowerCase().includes(s.id) || selectedSubject === s.name
+                  );
+                  const oaColor = currentSub?.color || '#12A1A4';
                   return (
                     <button
                       key={oa.code}
                       type="button"
                       onClick={() => setSelectedOaIndex(index)}
-                      className={`px-4 py-2 rounded-xl font-bold text-xs whitespace-nowrap transition-all flex items-center gap-1.5 cursor-pointer shadow-xs ${
+                      className={`relative rounded-2xl p-4 transition-all duration-300 flex flex-col items-start gap-2 text-left cursor-pointer overflow-hidden group ${
                         isSelected
                           ? isDark
-                            ? 'bg-[#12A1A4] text-white shadow-md ring-2 ring-[#12A1A4]/30'
-                            : 'bg-[#1C3257] text-white shadow-md shadow-slate-900/15 ring-2 ring-[#1C3257]/20'
+                            ? 'border-2 shadow-lg'
+                            : 'border-2 shadow-lg'
                           : isDark
-                          ? 'bg-[#10223D] text-slate-400 border border-[#1C3257] hover:bg-[#1C3257]'
-                          : 'bg-white/90 text-slate-700 hover:bg-white hover:border-slate-300 border border-slate-200/90'
+                          ? 'bg-[#10223D] border border-[#1C3257] hover:bg-[#1C3257]/60'
+                          : 'bg-white/90 border border-slate-200/90 hover:bg-white hover:border-slate-300 hover:shadow-md'
                       }`}
+                      style={isSelected ? {
+                        borderColor: oaColor,
+                        backgroundColor: isDark ? `${oaColor}15` : `${oaColor}08`,
+                        boxShadow: `0 4px 16px ${oaColor}20`
+                      } : undefined}
                     >
-                      <span className="font-black">{oa.code}</span>
-                      <span className="font-normal opacity-85 truncate max-w-[140px]">· {oa.title}</span>
+                      {/* Top accent bar */}
+                      {isSelected && (
+                        <div
+                          className="absolute top-0 left-0 right-0 h-1"
+                          style={{ backgroundColor: oaColor }}
+                        />
+                      )}
+
+                      <div className="flex items-center justify-between w-full">
+                        <span
+                          className="text-[11px] font-black px-2.5 py-0.5 rounded-lg"
+                          style={{
+                            backgroundColor: isSelected ? oaColor : isDark ? '#1C3257' : '#F1F5F9',
+                            color: isSelected ? '#FFFFFF' : isDark ? '#94A3B8' : '#64748B'
+                          }}
+                        >
+                          {oa.code}
+                        </span>
+                        <span className={`text-[10px] font-bold ${
+                          isSelected
+                            ? 'text-emerald-600'
+                            : isDark ? 'text-slate-500' : 'text-slate-400'
+                        }`}>
+                          {oa.lessons.length} lecciones
+                        </span>
+                      </div>
+
+                      {/* Full title - no truncation */}
+                      <h4
+                        className="text-xs sm:text-sm font-bold leading-snug"
+                        style={{ color: isSelected ? (isDark ? '#FFFFFF' : oaColor) : isDark ? '#CBD5E1' : '#334155' }}
+                      >
+                        {oa.title}
+                      </h4>
+
+                      {/* Status indicator */}
+                      <span className={`text-[10px] font-bold ${
+                        index === 0
+                          ? 'text-emerald-600'
+                          : isDark ? 'text-slate-500' : 'text-slate-400'
+                      }`}>
+                        {index === 0 ? 'En curso' : 'Pendiente'}
+                      </span>
                     </button>
                   );
                 })}

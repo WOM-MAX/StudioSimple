@@ -57,6 +57,7 @@ export interface SiteConfig {
     footerTextColor?: string;
     footerHeadingsColor?: string;
     bentoCardBgColor?: string;
+    bentoCardTextColor?: string;
   };
   contacto: {
     horarioAtencion: string;

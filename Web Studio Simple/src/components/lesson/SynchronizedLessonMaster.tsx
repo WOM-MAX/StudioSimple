@@ -10,7 +10,7 @@ const SynchronizedLessonContainer: React.FC = () => {
   const { viewMode } = useLessonSync();
 
   return (
-    <div className="min-h-screen bg-[#e9ecef] p-3 sm:p-5 font-sans">
+    <div className="min-h-screen bg-gradient-to-b from-[#f8fafc] via-[#f1f5f9] to-[#e8edf2] p-3 sm:p-5 font-sans">
       {/* Dev and Testing Control Bar */}
       <TesterBar />
 

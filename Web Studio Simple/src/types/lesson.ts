@@ -87,6 +87,7 @@ export interface LessonData {
   // Paso 2: Ruta y Situación
   route: {
     blocks: Array<{ id: string; number: string; title: string; subtitle: string; color: 'navy' | 'orange' | 'yellow' | 'teal' }>;
+    keyQuestions?: Array<{ label: string; sub: string }>;
     dileIntro: string;
     dileObjective: string;
   };
@@ -107,6 +108,9 @@ export interface LessonData {
   };
   // Paso 3: Video Gancho
   hook: {
+    title?: string;
+    titulo?: string;
+    focusPoints?: string[];
     dileIntro: string;
     hazInstruction: string;
     videoSrc: string;
@@ -115,8 +119,13 @@ export interface LessonData {
   };
   // Paso 4: Conversación Guiada
   preQuestions: GuidedItem[];
+  conversationContext?: string;
   // Paso 5: Explicación e Idea Clave
   formalization: {
+    title?: string;
+    concept?: string;
+    summary?: string;
+    ideaClave?: string;
     dileIntro: string;
     hazInstruction: string;
     videoSrc?: string;
@@ -125,10 +134,46 @@ export interface LessonData {
   postQuestions: GuidedItem[];
   // Paso 6: Práctica Conjunta
   practice: GuidedItem[];
-  // Paso 7: Miniquiz y Recuperación
   mini: QuizQuestion[];
   recovery: RecoveryItem[];
   summaryIdeas: Array<[string, string]>;
+  // Opcionales para desacoplamiento pedagógico total
+  ambientAudioSrc?: string;
+  interactive?: {
+    type: 'thermo' | 'number_line' | 'hero_journey' | 'dimensions' | 'timeline' | 'story_arc' | 'general' | 'none';
+    title?: string;
+    [key: string]: any;
+  };
+  summaryText?: string;
+  reasoning?: {
+    title?: string;
+    dileIntro?: string;
+    question: string;
+    expectedAnswer: string;
+    context1: { label: string; value: string; desc: string };
+    context2: { label: string; value: string; desc: string };
+    successFeedback: string;
+    supportFeedback: string;
+    revealText: string;
+  };
+  challenge?: {
+    title?: string;
+    question: string;
+    expectedAnswer: string;
+    item1: { label: string; tag: string };
+    item2: { label: string; tag: string };
+    successFeedback: string;
+    supportFeedback: string;
+  };
+  strategy?: {
+    title?: string;
+    dileIntro?: string;
+    steps: Array<{ number: number; title: string; desc: string }>;
+  };
+  closure?: {
+    congratulations?: string;
+    nextClassPreview?: string;
+  };
 }
 
 export interface LessonSessionState {

@@ -855,6 +855,22 @@ export const ConfiguracionGeneralView: React.FC = () => {
                     helperText="Tono para los encabezados 'PLATAFORMA', 'TEMARIOS EVALUADOS' y 'FAMILIAS Y SOPORTE'."
                   />
                 </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                  <ColorPickerField
+                    label="Fondo de la Tarjeta Bento (Informativa)"
+                    value={config.footer.bentoCardBgColor || '#FFFFFF'}
+                    onChange={(hex) => updateFooter('bentoCardBgColor', hex)}
+                    helperText="Color de fondo de la tarjeta principal del footer con logo, misión y columnas."
+                  />
+
+                  <ColorPickerField
+                    label="Color de Texto de la Tarjeta Bento"
+                    value={config.footer.bentoCardTextColor || '#334155'}
+                    onChange={(hex) => updateFooter('bentoCardTextColor', hex)}
+                    helperText="Color del texto dentro de la tarjeta Bento blanca (debe contrastar con el fondo)."
+                  />
+                </div>
               </div>
             </div>
           </div>

@@ -51,28 +51,28 @@ export const MATEMATICA_7B_OAS: CurricularOA[] = [
         lessonNumber: 2,
         title: 'La recta numérica y orden en Z',
         durationMinutes: 30,
-        status: 'locked',
+        status: 'ready',
         focusSummary: 'Ubicación de positivos y negativos, relaciones de orden mayor y menor (> y <).'
       },
       {
         lessonNumber: 3,
         title: 'Valor absoluto y distancias al cero',
         durationMinutes: 30,
-        status: 'locked',
+        status: 'ready',
         focusSummary: 'Comprensión geométrica del valor absoluto como distancia sin signo.'
       },
       {
         lessonNumber: 4,
         title: 'Adición y sustracción en Z',
         durationMinutes: 30,
-        status: 'locked',
+        status: 'ready',
         focusSummary: 'Desplazamientos en la recta, suma de signos iguales/distintos y el opuesto aditivo.'
       },
       {
         lessonNumber: 5,
         title: 'Resolución de problemas cotidianos y síntesis',
         durationMinutes: 30,
-        status: 'locked',
+        status: 'ready',
         focusSummary: 'Aplicación en estados de cuenta bancarios, variaciones térmicas y miniquiz de maestría.'
       }
     ]
@@ -209,10 +209,10 @@ export const LENGUAJE_7B_OAS: CurricularOA[] = [
     completedLessons: 0,
     lessons: [
       { lessonNumber: 1, title: 'El conflicto narrativo y motivaciones del personaje', durationMinutes: 30, status: 'ready', focusSummary: 'Deseo del protagonista, antagonista y motor de la historia.' },
-      { lessonNumber: 2, title: 'Las etapas del viaje del héroe en el mito y cuento', durationMinutes: 30, status: 'locked', focusSummary: 'Llamado a la aventura, pruebas y regreso transformado.' },
-      { lessonNumber: 3, title: 'Visión de mundo y contexto sociocultural en la obra', durationMinutes: 30, status: 'locked', focusSummary: 'Valores, época histórica y costumbres en el relato.' },
-      { lessonNumber: 4, title: 'La voz narrativa: narrador protagonista, testigo y omnisciente', durationMinutes: 30, status: 'locked', focusSummary: 'Punto de vista y grado de conocimiento de los hechos.' },
-      { lessonNumber: 5, title: 'Ensayo de comprensión lectora narrativa y distractor', durationMinutes: 30, status: 'locked', focusSummary: 'Preguntas tipo MINEDUC con justificación de respuestas.' }
+      { lessonNumber: 2, title: 'Las etapas del viaje del héroe en el mito y cuento', durationMinutes: 30, status: 'ready', focusSummary: 'Llamado a la aventura, pruebas y regreso transformado.' },
+      { lessonNumber: 3, title: 'Visión de mundo y contexto sociocultural en la obra', durationMinutes: 30, status: 'ready', focusSummary: 'Valores, época histórica y costumbres en el relato.' },
+      { lessonNumber: 4, title: 'La voz narrativa: narrador protagonista, testigo y omnisciente', durationMinutes: 30, status: 'ready', focusSummary: 'Punto de vista y grado de conocimiento de los hechos.' },
+      { lessonNumber: 5, title: 'Ensayo de comprensión lectora narrativa y distractor', durationMinutes: 30, status: 'ready', focusSummary: 'Preguntas tipo MINEDUC con justificación de respuestas.' }
     ]
   },
   {
@@ -272,10 +272,10 @@ export const CIENCIAS_7B_OAS: CurricularOA[] = [
     completedLessons: 0,
     lessons: [
       { lessonNumber: 1, title: 'Dimensiones biológica, afectiva y social', durationMinutes: 30, status: 'ready', focusSummary: 'Visión integral del desarrollo humano en la adolescencia.' },
-      { lessonNumber: 2, title: 'Cambios físicos y maduración en la pubertad', durationMinutes: 30, status: 'locked', focusSummary: 'Caracteres sexuales primarios y secundarios.' },
-      { lessonNumber: 3, title: 'Relaciones afectivas, empatía y respeto mutuo', durationMinutes: 30, status: 'locked', focusSummary: 'Comunicación asertiva y consentimiento informado.' },
-      { lessonNumber: 4, title: 'Toma de decisiones informadas y autocuidado', durationMinutes: 30, status: 'locked', focusSummary: 'Protección personal, límites y canales de ayuda.' },
-      { lessonNumber: 5, title: 'Síntesis formativa y resolución de dilemas', durationMinutes: 30, status: 'locked', focusSummary: 'Evaluación formativa del OA 1.' }
+      { lessonNumber: 2, title: 'Cambios físicos y maduración en la pubertad', durationMinutes: 30, status: 'ready', focusSummary: 'Caracteres sexuales primarios y secundarios.' },
+      { lessonNumber: 3, title: 'Relaciones afectivas, empatía y respeto mutuo', durationMinutes: 30, status: 'ready', focusSummary: 'Comunicación asertiva y consentimiento informado.' },
+      { lessonNumber: 4, title: 'Toma de decisiones informadas y autocuidado', durationMinutes: 30, status: 'ready', focusSummary: 'Protección personal, límites y canales de ayuda.' },
+      { lessonNumber: 5, title: 'Síntesis formativa y resolución de dilemas', durationMinutes: 30, status: 'ready', focusSummary: 'Evaluación formativa del OA 1.' }
     ]
   },
   {
@@ -380,10 +380,10 @@ export const HISTORIA_7B_OAS: CurricularOA[] = [
     completedLessons: 0,
     lessons: [
       { lessonNumber: 1, title: 'El proceso de hominización y bipedismo', durationMinutes: 30, status: 'ready', focusSummary: 'Evolución biológica y uso de herramientas líticas.' },
-      { lessonNumber: 2, title: 'Sociedades cazadoras-recolectoras del Paleolítico', durationMinutes: 30, status: 'locked', focusSummary: 'Nomadismo, dominio del fuego y arte rupestre.' },
-      { lessonNumber: 3, title: 'La domesticación de plantas y animales', durationMinutes: 30, status: 'locked', focusSummary: 'El origen de la agricultura en la Media Luna Fértil.' },
-      { lessonNumber: 4, title: 'Sedentarismo, aldeas y división del trabajo', durationMinutes: 30, status: 'locked', focusSummary: 'Excedente alimentario, alfarería y tejidos.' },
-      { lessonNumber: 5, title: 'Ensayo histórico de la prehistoria', durationMinutes: 30, status: 'locked', focusSummary: 'Evaluación formativa del OA 2.' }
+      { lessonNumber: 2, title: 'Sociedades cazadoras-recolectoras del Paleolítico', durationMinutes: 30, status: 'ready', focusSummary: 'Nomadismo, dominio del fuego y arte rupestre.' },
+      { lessonNumber: 3, title: 'La domesticación de plantas y animales', durationMinutes: 30, status: 'ready', focusSummary: 'El origen de la agricultura en la Media Luna Fértil.' },
+      { lessonNumber: 4, title: 'Sedentarismo, aldeas y división del trabajo', durationMinutes: 30, status: 'ready', focusSummary: 'Excedente alimentario, alfarería y tejidos.' },
+      { lessonNumber: 5, title: 'Ensayo histórico de la prehistoria', durationMinutes: 30, status: 'ready', focusSummary: 'Evaluación formativa del OA 2.' }
     ]
   },
   {
@@ -578,10 +578,10 @@ export const INGLES_7B_OAS: CurricularOA[] = [
     completedLessons: 0,
     lessons: [
       { lessonNumber: 1, title: 'Main ideas and characters in adapted short stories', durationMinutes: 30, status: 'ready', focusSummary: 'Protagonists, settings, and main plot elements.' },
-      { lessonNumber: 2, title: 'Sequencing events with time connectors (First, Then, Finally)', durationMinutes: 30, status: 'locked', focusSummary: 'Chronological timeline and story arc.' },
-      { lessonNumber: 3, title: 'Character feelings, moods, and motivations', durationMinutes: 30, status: 'locked', focusSummary: 'Adjectives of emotion and physical traits.' },
-      { lessonNumber: 4, title: 'Context clues for unknown vocabulary', durationMinutes: 30, status: 'locked', focusSummary: 'Inferring word meanings without a dictionary.' },
-      { lessonNumber: 5, title: 'Reading comprehension assessment and review', durationMinutes: 30, status: 'locked', focusSummary: 'Multiple-choice questions with distractor analysis.' }
+      { lessonNumber: 2, title: 'Sequencing events with time connectors (First, Then, Finally)', durationMinutes: 30, status: 'ready', focusSummary: 'Chronological timeline and story arc.' },
+      { lessonNumber: 3, title: 'Character feelings, moods, and motivations', durationMinutes: 30, status: 'ready', focusSummary: 'Adjectives of emotion and physical traits.' },
+      { lessonNumber: 4, title: 'Context clues for unknown vocabulary', durationMinutes: 30, status: 'ready', focusSummary: 'Inferring word meanings without a dictionary.' },
+      { lessonNumber: 5, title: 'Reading comprehension assessment and review', durationMinutes: 30, status: 'ready', focusSummary: 'Multiple-choice questions with distractor analysis.' }
     ]
   },
   {

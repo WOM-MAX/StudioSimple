@@ -829,7 +829,7 @@ export const LandingPage: React.FC = () => {
             className="max-w-7xl mx-auto rounded-3xl p-8 md:p-12 shadow-2xl border border-black/10 transition-colors duration-300"
             style={{ 
               backgroundColor: siteConfig.footer?.bentoCardBgColor || '#FFFFFF',
-              color: siteConfig.footer?.footerTextColor || '#1E293B'
+              color: siteConfig.footer?.bentoCardTextColor || '#334155'
             }}
           >
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
@@ -850,16 +850,6 @@ export const LandingPage: React.FC = () => {
                 <p className="text-sm opacity-90 leading-relaxed font-medium max-w-sm">
                   {siteConfig.footer?.missionText || 'Plataforma pedagógica especializada en la preparación integral de exámenes libres MINEDUC para estudiantes de 3º a 8º Básico. Método paso a paso para aprender en familia.'}
                 </p>
-                <div className="flex flex-wrap items-center gap-2 pt-1">
-                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-bold">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                    <span>Temarios Oficiales MINEDUC 2026</span>
-                  </div>
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-blue-50 text-[#123A72] border border-blue-200 text-xs font-bold">
-                    <span className="material-symbols-outlined text-sm text-[#123A72]">verified</span>
-                    <span>Decretos 2272 y 67</span>
-                  </div>
-                </div>
               </div>
 
               {/* Columna 2: Plataforma y Navegación (2 cols) */}

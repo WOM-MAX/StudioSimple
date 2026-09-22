@@ -1,24 +1,28 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { useLessonSync } from '../../../context/LessonSyncContext';
 import { StudentHeader } from './StudentHeader';
-import { StudentInteractiveThermo } from './StudentInteractiveThermo';
+import { StudentDisciplineGraphic } from './StudentDisciplineGraphic';
 import { StudentMiniquizView } from './StudentMiniquizView';
 import { StudentQuizReviewView } from './StudentQuizReviewView';
 import { StudentRecoveryView } from './StudentRecoveryView';
+import { ConfettiEffect } from './ConfettiEffect';
+import { SupportHintCard } from './SupportHintCard';
+import { getSubjectTheme } from '../../../lib/subject-theme';
 import {
   Sparkles,
   Check,
-  CheckCircle2,
   CircleHelp,
-  Thermometer,
-  Waves,
-  Building2,
-  Banknote,
   ArrowRight,
   Play
 } from 'lucide-react';
 
-function marineAmbientActive(stage: string, hookStarted: boolean, hookEnded: boolean, formalStarted: boolean, formalEnded: boolean): boolean {
+function isAmbientActiveStage(
+  stage: string,
+  hookStarted: boolean,
+  hookEnded: boolean,
+  formalStarted: boolean,
+  formalEnded: boolean
+): boolean {
   if (['cover', 'prep'].includes(stage)) return true;
   if (['conversationIntro', 'preQuestions', 'postIntro', 'postQuestions', 'summary'].includes(stage)) return true;
   if (stage === 'hook') return !hookStarted || hookEnded;
@@ -27,12 +31,29 @@ function marineAmbientActive(stage: string, hookStarted: boolean, hookEnded: boo
 }
 
 export const StudentLessonView: React.FC = () => {
-  const { session, lessonData, updateSession } = useLessonSync();
+  const { session, lessonData } = useLessonSync();
+  const theme = getSubjectTheme(lessonData.metadata.subject);
   const audioRef = useRef<HTMLAudioElement>(null);
   const [soundOn, setSoundOn] = useState(true);
   const [blocked, setBlocked] = useState(false);
+  const [showConfetti, setShowConfetti] = useState(false);
+  const prevFeedbackRef = useRef<string | null>(null);
 
-  const isAmbientActive = marineAmbientActive(
+  // Trigger confetti on success/reveal feedback transitions
+  useEffect(() => {
+    const currentKind = session.feedback?.kind || null;
+    if (
+      (currentKind === 'success' || currentKind === 'reveal') &&
+      prevFeedbackRef.current !== currentKind
+    ) {
+      setShowConfetti(true);
+      const timer = setTimeout(() => setShowConfetti(false), 3000);
+      return () => clearTimeout(timer);
+    }
+    prevFeedbackRef.current = currentKind;
+  }, [session.feedback?.kind]);
+
+  const isAmbientActive = isAmbientActiveStage(
     session.stage,
     session.hookStarted,
     session.hookEnded,
@@ -44,7 +65,7 @@ export const StudentLessonView: React.FC = () => {
     const player = audioRef.current;
     if (!player) return;
     player.volume = 0.12;
-    if (isAmbientActive && soundOn) {
+    if (isAmbientActive && soundOn && lessonData.ambientAudioSrc) {
       player
         .play()
         .then(() => setBlocked(false))
@@ -53,7 +74,7 @@ export const StudentLessonView: React.FC = () => {
       player.pause();
       if (!isAmbientActive) player.currentTime = 0;
     }
-  }, [isAmbientActive, soundOn]);
+  }, [isAmbientActive, soundOn, lessonData.ambientAudioSrc]);
 
   const toggleSound = () => {
     if (soundOn && !blocked) {
@@ -62,7 +83,7 @@ export const StudentLessonView: React.FC = () => {
     }
     setSoundOn(true);
     const player = audioRef.current;
-    if (player) {
+    if (player && lessonData.ambientAudioSrc) {
       player.volume = 0.12;
       player
         .play()
@@ -76,88 +97,88 @@ export const StudentLessonView: React.FC = () => {
   const currentPracticeItem = lessonData.practice[session.practiceIndex] ?? lessonData.practice[0];
 
   return (
-    <div className="flex flex-col h-full min-h-[720px] bg-[#f5f4ef] rounded-2xl overflow-hidden border border-[#dce2e6] shadow-sm select-none">
-      {/* Audio ambiental marino */}
-      <audio ref={audioRef} src="/media/ambiente-submarino.mp3" loop preload="auto" />
+    <div className="flex flex-col h-full min-h-[720px] bg-gradient-to-br from-slate-50 via-white to-slate-100/70 rounded-2xl overflow-hidden border border-slate-200/90 shadow-md shadow-slate-200/40 select-none relative">
+      {/* Confetti on correct answers */}
+      <ConfettiEffect active={showConfetti} />
+
+      {/* Audio ambiental opcional */}
+      {lessonData.ambientAudioSrc && (
+        <audio ref={audioRef} src={lessonData.ambientAudioSrc} loop preload="auto" />
+      )}
+
+      {/* Dynamic Ambient Glow Auras for Visual Warmth and Vitality */}
+      <div className={`absolute -top-20 -right-20 w-80 h-80 rounded-full ${theme.glowColor} blur-3xl pointer-events-none transition-all duration-700`} />
+      <div className="absolute -bottom-20 -left-20 w-72 h-72 rounded-full bg-slate-200/30 blur-3xl pointer-events-none" />
 
       <StudentHeader
-        soundActive={isAmbientActive}
+        soundActive={isAmbientActive && Boolean(lessonData.ambientAudioSrc)}
         soundOn={soundOn && !blocked}
         onToggleSound={toggleSound}
       />
 
-      <div className="flex-1 p-6 md:p-8 overflow-y-auto flex flex-col justify-center max-w-4xl mx-auto w-full">
-        {/* 1. STAGE: COVER & PREP (Waiting Room) */}
+      <div className="flex-1 p-6 md:p-8 overflow-y-auto flex flex-col justify-center max-w-4xl mx-auto w-full relative z-10">
+        {/* 1. STAGE: COVER & PREP (Waiting Room - Clean Single-Elevation Card) */}
         {(session.stage === 'cover' || session.stage === 'prep') && (
-          <div className="max-w-2xl mx-auto w-full text-center animate-fadeIn">
-            <div className="relative rounded-3xl overflow-hidden bg-[#10223d] text-white shadow-xl min-h-[420px] flex flex-col items-center justify-center p-8 border border-[#233859]">
-              <div
-                className="absolute inset-0 opacity-40 bg-cover bg-center"
-                style={{ backgroundImage: "url('/visuals/mision-portada.png')" }}
-              />
-              <div className="relative z-10 bg-white/95 backdrop-blur-md rounded-3xl p-8 max-w-md w-full shadow-2xl border border-white/40 text-center">
-                <div className="flex items-center justify-center gap-2 text-[#12a1a4] font-bold text-xs uppercase tracking-widest mb-3">
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#12a1a4] animate-ping" />
-                  <span>Sala de Espera</span>
-                </div>
-                <h1 className="text-2xl font-extrabold text-[#1c3257] mb-2">
-                  La clase comenzará pronto
-                </h1>
-                <p className="text-xs text-[#748093] leading-relaxed">
-                  Tu mentor está preparando la sesión de hoy. Cuando comience, tu pantalla avanzará automáticamente.
-                </p>
-                <div className="mt-6 pt-4 border-t border-[#e2e8f0] text-left">
-                  <span className="text-[10px] text-[#748093] font-bold uppercase tracking-wider block">
-                    {lessonData.metadata.subject} · {lessonData.metadata.oaCode}
-                  </span>
-                  <strong className="text-sm text-[#1c3257] font-bold block mt-0.5">
-                    {lessonData.metadata.lessonTitle}
-                  </strong>
-                </div>
+          <div className="max-w-md mx-auto w-full text-center animate-fadeIn my-auto py-6">
+            <div className={`bg-white/95 backdrop-blur-md rounded-3xl p-8 shadow-xl shadow-slate-200/60 border ${theme.borderColor} text-center relative overflow-hidden transition-all duration-300 hover:shadow-2xl`}>
+              {/* Decorative top accent border */}
+              <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${theme.accentGradient}`} />
+
+              <div className={`inline-flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-full ${theme.badgeBg} ${theme.badgeText} border ${theme.badgeBorder} font-bold text-xs uppercase tracking-wider mb-4 shadow-xs`}>
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                </span>
+                <span>Sala de Espera · Sincronizado</span>
+              </div>
+
+              <h1 className="text-2xl font-black text-[#1C3257] mb-2 tracking-tight">
+                La clase comenzará pronto
+              </h1>
+              <p className="text-xs text-slate-500 leading-relaxed mb-6">
+                Tu mentor está preparando la sesión de hoy. Cuando comience, tu pantalla avanzará automáticamente.
+              </p>
+
+              <div className="pt-4 border-t border-slate-100 text-left bg-slate-50/70 -mx-8 -mb-8 p-6 rounded-b-3xl">
+                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">
+                  {lessonData.metadata.subject} · {lessonData.metadata.oaCode}
+                </span>
+                <strong className="text-sm text-[#1C3257] font-extrabold block mt-0.5">
+                  {lessonData.metadata.lessonTitle}
+                </strong>
               </div>
             </div>
           </div>
         )}
 
-        {/* 2. STAGE: ROUTE OVERVIEW (Cuatro grandes bloques) */}
+        {/* 2. STAGE: ROUTE OVERVIEW (Grandes bloques del curso) */}
         {session.stage === 'routeOverview' && (
           <div className="max-w-2xl mx-auto w-full animate-fadeIn py-4">
             <span className="text-[#12a1a4] font-bold text-xs uppercase tracking-widest block mb-1 text-center">
-              Nuestra ruta de Matemática
+              Nuestra ruta de {lessonData.metadata.subject}
             </span>
             <h1 className="text-2xl sm:text-3xl font-extrabold text-[#1c3257] mb-6 text-center">
-              Cuatro grandes bloques
+              {lessonData.route.blocks.length} grandes bloques
             </h1>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <article className="bg-[#1c3257] text-white rounded-2xl p-5 shadow-sm min-h-[110px] flex flex-col justify-between">
-                <span className="text-xs font-bold opacity-75">01</span>
-                <div>
-                  <h2 className="text-lg font-bold leading-tight mb-1">Números</h2>
-                  <p className="text-xs opacity-90 leading-snug">Enteros, fracciones y decimales</p>
-                </div>
-              </article>
-              <article className="bg-[#ee751c] text-white rounded-2xl p-5 shadow-sm min-h-[110px] flex flex-col justify-between">
-                <span className="text-xs font-bold opacity-75">02</span>
-                <div>
-                  <h2 className="text-lg font-bold leading-tight mb-1">Álgebra</h2>
-                  <p className="text-xs opacity-90 leading-snug">Patrones, relaciones y ecuaciones</p>
-                </div>
-              </article>
-              <article className="bg-[#f8ad22] text-[#1c3257] rounded-2xl p-5 shadow-sm min-h-[110px] flex flex-col justify-between">
-                <span className="text-xs font-bold opacity-75">03</span>
-                <div>
-                  <h2 className="text-lg font-bold leading-tight mb-1">Geometría</h2>
-                  <p className="text-xs opacity-90 leading-snug">Formas, medidas y transformaciones</p>
-                </div>
-              </article>
-              <article className="bg-[#12a1a4] text-white rounded-2xl p-5 shadow-sm min-h-[110px] flex flex-col justify-between">
-                <span className="text-xs font-bold opacity-75">04</span>
-                <div>
-                  <h2 className="text-lg font-bold leading-tight mb-1">Datos y azar</h2>
-                  <p className="text-xs opacity-90 leading-snug">Información, gráficos y probabilidades</p>
-                </div>
-              </article>
+              {lessonData.route.blocks.map((block, idx) => {
+                const colors = [
+                  'bg-[#1c3257] text-white',
+                  'bg-[#ee751c] text-white',
+                  'bg-[#f8ad22] text-[#1c3257]',
+                  'bg-[#12a1a4] text-white'
+                ];
+                return (
+                  <article key={block.id || block.number} className={`${colors[idx % colors.length]} rounded-2xl p-5 shadow-sm min-h-[110px] flex flex-col justify-between`}>
+                    <span className="text-xs font-bold opacity-75">{block.number}</span>
+                    <div>
+                      <h2 className="text-lg font-bold leading-tight mb-1">{block.title}</h2>
+                      <p className="text-xs opacity-90 leading-snug">{block.subtitle}</p>
+                    </div>
+                  </article>
+                );
+              })}
             </div>
           </div>
         )}
@@ -169,95 +190,95 @@ export const StudentLessonView: React.FC = () => {
               La clase de hoy
             </span>
             <h1 className="text-2xl sm:text-3xl font-extrabold text-[#1c3257] mb-6">
-              Números enteros
+              {lessonData.metadata.lessonTitle}
             </h1>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
-              <div className="bg-white border border-[#dce2e6] rounded-2xl p-5 shadow-sm flex flex-col items-center text-center">
-                <div className="w-10 h-10 rounded-full bg-[#e6f7f7] text-[#12a1a4] flex items-center justify-center mb-3">
-                  <Thermometer className="w-5 h-5" />
+              {lessonData.route.keyQuestions && lessonData.route.keyQuestions.length > 0 ? (
+                lessonData.route.keyQuestions.map((q, idx) => {
+                  const iconColors = [
+                    'bg-[#e6f7f7] text-[#12a1a4]',
+                    'bg-[#e9f2f8] text-[#1c3257]',
+                    'bg-[#fff0e4] text-[#ee751c]'
+                  ];
+                  return (
+                    <div key={idx} className="bg-white border border-[#dce2e6] rounded-2xl p-5 shadow-sm flex flex-col items-center text-center">
+                      <div className={`w-10 h-10 rounded-full ${iconColors[idx % iconColors.length]} flex items-center justify-center mb-3 font-bold text-sm`}>
+                        {idx + 1}
+                      </div>
+                      <strong className="text-sm font-bold text-[#1c3257] block mb-1">{q.label}</strong>
+                      <span className="text-xs text-[#748093]">{q.sub}</span>
+                    </div>
+                  );
+                })
+              ) : (
+                <div className="col-span-full bg-white border border-[#dce2e6] rounded-2xl p-6 shadow-sm text-center">
+                  <p className="text-sm text-[#1c3257] font-semibold">{lessonData.route.dileObjective}</p>
                 </div>
-                <strong className="text-sm font-bold text-[#1c3257] block mb-1">Temperaturas</strong>
-                <span className="text-xs text-[#748093]">Comparadas con cero grados</span>
-              </div>
-
-              <div className="bg-white border border-[#dce2e6] rounded-2xl p-5 shadow-sm flex flex-col items-center text-center">
-                <div className="w-10 h-10 rounded-full bg-[#e9f2f8] text-[#1c3257] flex items-center justify-center mb-3">
-                  <Waves className="w-5 h-5" />
-                </div>
-                <strong className="text-sm font-bold text-[#1c3257] block mb-1">Profundidades</strong>
-                <span className="text-xs text-[#748093]">Comparadas con la superficie</span>
-              </div>
-
-              <div className="bg-white border border-[#dce2e6] rounded-2xl p-5 shadow-sm flex flex-col items-center text-center">
-                <div className="w-10 h-10 rounded-full bg-[#fff0e4] text-[#ee751c] flex items-center justify-center mb-3">
-                  <ArrowRight className="w-5 h-5" />
-                </div>
-                <strong className="text-sm font-bold text-[#1c3257] block mb-1">Posición y movimiento</strong>
-                <span className="text-xs text-[#748093]">Dónde está y cómo cambia</span>
-              </div>
+              )}
             </div>
 
             <p className="text-xs sm:text-sm text-[#526177] max-w-lg mx-auto leading-relaxed bg-white border border-[#dce2e6] p-4 rounded-2xl">
-              Aprenderemos a representar ubicaciones y a explicar cómo llegamos a una respuesta.
+              {lessonData.route.dileObjective}
             </p>
           </div>
         )}
 
-        {/* 4. STAGE: THERMO & THERMO MEANING */}
+        {/* 4. STAGE: INTERACTIVE DISCIPLINE GRAPHIC (CPA) */}
         {(session.stage === 'thermo' || session.stage === 'thermoMeaning') && (
-          <StudentInteractiveThermo />
+          <div className="w-full flex flex-col items-center justify-center animate-fadeIn py-2">
+            <StudentDisciplineGraphic
+              interactiveType={lessonData.interactive?.type}
+              subject={lessonData.metadata.subject}
+              oaCode={lessonData.metadata.oaCode}
+              lessonNumber={lessonData.metadata.lessonNumber}
+            />
+          </div>
         )}
 
-        {/* 5. STAGE: HOOK (Video Submarino) */}
+        {/* 5. STAGE: HOOK */}
         {session.stage === 'hook' && (
           <div className="max-w-3xl mx-auto w-full animate-fadeIn text-center">
             {!session.hookStarted ? (
-              <div className="relative rounded-3xl overflow-hidden bg-[#10223d] text-white shadow-xl min-h-[400px] flex flex-col items-center justify-center p-8 border border-[#233859]">
-                <div
-                  className="absolute inset-0 opacity-40 bg-cover bg-center"
-                  style={{ backgroundImage: "url('/visuals/mision-portada.png')" }}
-                />
-                <div className="relative z-10 bg-white/95 backdrop-blur-md rounded-3xl p-8 max-w-md w-full shadow-2xl border border-white/40 text-left">
-                  <span className="text-[11px] font-bold uppercase tracking-widest text-[#12a1a4] block mb-2">
-                    El recorrido del submarino
-                  </span>
-                  <h1 className="text-xl sm:text-2xl font-extrabold text-[#1c3257] mb-4">
-                    Mientras observas, fíjate en…
-                  </h1>
+              <div className={`bg-white/95 backdrop-blur-md rounded-3xl p-8 max-w-md mx-auto w-full shadow-xl shadow-slate-200/50 border ${theme.borderColor} text-left relative overflow-hidden transition-all duration-300`}>
+                <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${theme.accentGradient}`} />
+                <span className={`text-[11px] font-bold uppercase tracking-widest ${theme.badgeText} block mb-2`}>
+                  {lessonData.hook.title || 'Video de inicio'}
+                </span>
+                <h1 className="text-xl sm:text-2xl font-extrabold text-[#1C3257] mb-4">
+                  Mientras observas, fíjate en...
+                </h1>
+                {lessonData.hook.focusPoints && lessonData.hook.focusPoints.length > 0 ? (
                   <ul className="space-y-2 text-xs sm:text-sm text-[#334157] font-semibold">
-                    <li className="flex items-center gap-2">
-                      <span className="w-5 h-5 rounded-full bg-[#12a1a4] text-white text-[11px] flex items-center justify-center font-bold">1</span>
-                      <span>Dónde comienza.</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-5 h-5 rounded-full bg-[#12a1a4] text-white text-[11px] flex items-center justify-center font-bold">2</span>
-                      <span>Cuánto baja.</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-5 h-5 rounded-full bg-[#12a1a4] text-white text-[11px] flex items-center justify-center font-bold">3</span>
-                      <span>Cuánto sube.</span>
-                    </li>
+                    {lessonData.hook.focusPoints.map((point, idx) => (
+                      <li key={idx} className="flex items-center gap-2">
+                        <span className={`w-5 h-5 rounded-full ${theme.badgeBg} ${theme.badgeText} border ${theme.badgeBorder} text-[11px] flex items-center justify-center font-bold`}>
+                          {idx + 1}
+                        </span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
                   </ul>
-                  <p className="text-[11px] text-[#748093] mt-6 pt-3 border-t border-[#e2e8f0]">
-                    El video se reproducirá cuando tu mentor lo indique.
+                ) : (
+                  <p className="text-xs text-[#526177]">
+                    Presta atención a los detalles principales que presentará el video.
                   </p>
-                </div>
+                )}
+                <p className="text-[11px] text-slate-400 mt-6 pt-3 border-t border-slate-100">
+                  El video se reproducirá cuando tu mentor lo indique.
+                </p>
               </div>
             ) : !session.hookEnded ? (
-              <SyncedStudentVideo src={lessonData.hook.videoSrc} kind="hook" session={session} />
+              <SyncedStudentVideo src={lessonData.hook.videoSrc} kind="hook" session={session} title={lessonData.hook.title} />
             ) : (
-              <div className="relative rounded-3xl overflow-hidden bg-[#10223d] text-white shadow-xl min-h-[380px] flex flex-col items-center justify-center p-8 border border-[#233859]">
-                <div
-                  className="absolute inset-0 opacity-40 bg-cover bg-center"
-                  style={{ backgroundImage: "url('/visuals/submarino-20.png')" }}
-                />
-                <div className="relative z-10 bg-white/95 backdrop-blur-md rounded-3xl p-8 max-w-md w-full shadow-2xl border border-white/40 text-center">
-                  <h1 className="text-2xl font-extrabold text-[#1c3257] mb-2">El recorrido continúa</h1>
-                  <p className="text-xs sm:text-sm text-[#526177] leading-relaxed">
-                    Ahora comprenderemos la información del video junto a tu mentor.
-                  </p>
-                </div>
+              <div className={`bg-white/95 backdrop-blur-md rounded-3xl p-8 max-w-md mx-auto w-full shadow-xl shadow-slate-200/50 border ${theme.borderColor} text-center relative overflow-hidden transition-all duration-300`}>
+                <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${theme.accentGradient}`} />
+                <h1 className="text-2xl font-extrabold text-[#1C3257] mb-2">
+                  {lessonData.hook.title || 'Observación completada'}
+                </h1>
+                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
+                  Ahora comprenderemos la información del video junto a tu mentor.
+                </p>
               </div>
             )}
           </div>
@@ -265,100 +286,79 @@ export const StudentLessonView: React.FC = () => {
 
         {/* 6. STAGE: CONVERSATION INTRO */}
         {session.stage === 'conversationIntro' && (
-          <div className="max-w-2xl mx-auto w-full animate-fadeIn text-center">
-            <div className="relative rounded-3xl overflow-hidden bg-[#10223d] text-white shadow-xl min-h-[380px] flex flex-col items-center justify-center p-8 border border-[#233859]">
-              <div
-                className="absolute inset-0 opacity-40 bg-cover bg-center"
-                style={{ backgroundImage: "url('/visuals/submarino-20.png')" }}
-              />
-              <div className="relative z-10 bg-white/95 backdrop-blur-md rounded-3xl p-8 max-w-md w-full shadow-2xl border border-white/40 text-center">
-                <span className="text-[11px] font-bold uppercase tracking-widest text-[#12a1a4] block mb-2">
-                  Comprendamos el recorrido
-                </span>
-                <h1 className="text-2xl font-extrabold text-[#1c3257] mb-2">Pensemos juntos</h1>
-                <p className="text-xs sm:text-sm text-[#526177] leading-relaxed">
-                  Primero identificaremos el punto de referencia y la posición inicial.
-                </p>
-              </div>
+          <div className="max-w-md mx-auto w-full animate-fadeIn text-center my-auto py-6">
+            <div className={`bg-white/95 backdrop-blur-md rounded-3xl p-8 shadow-xl shadow-slate-200/50 border ${theme.borderColor} text-center relative overflow-hidden transition-all duration-300`}>
+              <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${theme.accentGradient}`} />
+              <span className={`text-[11px] font-bold uppercase tracking-widest ${theme.badgeText} block mb-2`}>
+                Conversemos sobre lo observado
+              </span>
+              <h1 className="text-2xl font-extrabold text-[#1C3257] mb-2">Pensemos juntos</h1>
+              <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
+                {lessonData.conversationContext || 'Responderemos algunas preguntas sobre la situación presentada.'}
+              </p>
             </div>
           </div>
         )}
 
         {/* 7. STAGE: PRE QUESTIONS */}
         {session.stage === 'preQuestions' && (
-          <div className="max-w-2xl mx-auto w-full animate-fadeIn text-center">
-            <div className="relative rounded-3xl overflow-hidden bg-[#10223d] text-white shadow-xl min-h-[420px] flex flex-col items-center justify-center p-8 border border-[#233859]">
-              <div
-                className="absolute inset-0 opacity-40 bg-cover bg-center"
-                style={{ backgroundImage: "url('/visuals/submarino-20.png')" }}
+          <div className="max-w-lg mx-auto w-full animate-fadeIn text-center my-auto py-6">
+            <div className={`bg-white/95 backdrop-blur-md rounded-3xl p-8 shadow-xl shadow-slate-200/50 border ${theme.borderColor} text-center relative overflow-hidden transition-all duration-300`}>
+              <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${theme.accentGradient}`} />
+              <span className={`inline-flex px-3 py-1 rounded-full ${theme.badgeBg} ${theme.badgeText} border ${theme.badgeBorder} text-[11px] font-bold uppercase tracking-widest mb-3`}>
+                Pregunta {session.conversationIndex + 1} de {lessonData.preQuestions.length || 2}
+              </span>
+              <h1 className="text-xl sm:text-2xl font-extrabold text-[#1C3257] mb-4">
+                {currentPreItem.question}
+              </h1>
+
+              <SupportHintCard
+                visible={session.feedback?.kind === 'support'}
+                message="Presta atencion a la pista que te dara tu mentor."
               />
-              <div className="relative z-10 bg-white/95 backdrop-blur-md rounded-3xl p-8 max-w-lg w-full shadow-2xl border border-white/40 text-center">
-                <span className="text-[11px] font-bold uppercase tracking-widest text-[#12a1a4] block mb-2">
-                  Pregunta {session.conversationIndex + 1} de 2
-                </span>
-                <h1 className="text-xl sm:text-2xl font-extrabold text-[#1c3257] mb-4">
-                  {currentPreItem.question}
-                </h1>
 
-                {session.feedback?.kind === 'support' && (
-                  <div className="bg-[#fff9f0] border border-[#f5c49d] text-[#794112] p-3.5 rounded-2xl text-xs font-bold flex items-center justify-center gap-2 mb-4 animate-fadeIn">
-                    <CircleHelp className="w-4 h-4 text-[#ee751c]" />
-                    <span>¡Presta atención a la pista que te dará tu mentor!</span>
-                  </div>
-                )}
+              {(session.feedback?.kind === 'success' || session.feedback?.kind === 'reveal') && (
+                <div className="bg-emerald-50 border border-emerald-200 text-emerald-800 p-4 rounded-2xl text-sm font-bold flex items-center justify-center gap-2 shadow-xs animate-fadeIn">
+                  <Sparkles className="w-5 h-5 text-emerald-600 shrink-0" />
+                  <span>{currentPreItem.studentReveal}</span>
+                </div>
+              )}
 
-                {(session.feedback?.kind === 'success' || session.feedback?.kind === 'reveal') && (
-                  <div className="bg-[#eaf4e8] border border-[#badcb8] text-[#255e29] p-4 rounded-2xl text-sm font-bold flex items-center justify-center gap-2 shadow-sm animate-fadeIn">
-                    <Sparkles className="w-5 h-5 text-[#255e29]" />
-                    <span>{currentPreItem.studentReveal}</span>
-                  </div>
-                )}
-
-                {!session.feedback && (
-                  <p className="text-xs text-[#748093] mt-4">
-                    Responde en voz alta a tu mentor.
-                  </p>
-                )}
-              </div>
+              {!session.feedback && (
+                <p className="text-xs text-slate-400 mt-4">
+                  Responde en voz alta a tu mentor.
+                </p>
+              )}
             </div>
           </div>
         )}
-
-        {/* 8. STAGE: FORMALIZATION (Video Explicativo) */}
+        {/* 8. STAGE: FORMALIZATION */}
         {session.stage === 'formalization' && (
           <div className="max-w-3xl mx-auto w-full animate-fadeIn text-center">
             {!session.formalStarted ? (
-              <div className="relative rounded-3xl overflow-hidden bg-[#10223d] text-white shadow-xl min-h-[400px] flex flex-col items-center justify-center p-8 border border-[#233859]">
-                <div
-                  className="absolute inset-0 opacity-40 bg-cover bg-center"
-                  style={{ backgroundImage: "url('/visuals/posicion-movimiento.png')" }}
-                />
-                <div className="relative z-10 bg-white/95 backdrop-blur-md rounded-3xl p-8 max-w-md w-full shadow-2xl border border-white/40 text-center">
-                  <span className="text-[11px] font-bold uppercase tracking-widest text-[#12a1a4] block mb-2">
-                    Ahora aprenderemos
-                  </span>
-                  <h1 className="text-2xl font-extrabold text-[#1c3257] mb-2">
-                    Posición y movimiento
-                  </h1>
-                  <p className="text-xs sm:text-sm text-[#526177] leading-relaxed">
-                    Dónde se encuentra algo y cómo cambia de lugar.
-                  </p>
-                </div>
+              <div className={`bg-white/95 backdrop-blur-md rounded-3xl p-8 max-w-md mx-auto w-full shadow-xl shadow-slate-200/50 border ${theme.borderColor} text-center relative overflow-hidden transition-all duration-300`}>
+                <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${theme.accentGradient}`} />
+                <span className={`text-[11px] font-bold uppercase tracking-widest ${theme.badgeText} block mb-2`}>
+                  Ahora aprenderemos
+                </span>
+                <h1 className="text-2xl font-extrabold text-[#1C3257] mb-2">
+                  {lessonData.formalization.concept || 'Concepto clave'}
+                </h1>
+                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
+                  {lessonData.formalization.summary || 'Explicación del concepto fundamental de la clase.'}
+                </p>
               </div>
             ) : !session.formalEnded ? (
-              <SyncedStudentVideo src={lessonData.formalization.videoSrc ?? ''} kind="formal" session={session} />
+              <SyncedStudentVideo src={lessonData.formalization.videoSrc ?? ''} kind="formal" session={session} title={lessonData.formalization.concept} />
             ) : (
-              <div className="relative rounded-3xl overflow-hidden bg-[#10223d] text-white shadow-xl min-h-[380px] flex flex-col items-center justify-center p-8 border border-[#233859]">
-                <div
-                  className="absolute inset-0 opacity-40 bg-cover bg-center"
-                  style={{ backgroundImage: "url('/visuals/posicion-movimiento.png')" }}
-                />
-                <div className="relative z-10 bg-white/95 backdrop-blur-md rounded-3xl p-8 max-w-md w-full shadow-2xl border border-white/40 text-center">
-                  <h1 className="text-2xl font-extrabold text-[#1c3257] mb-2">Posición y movimiento</h1>
-                  <p className="text-xs sm:text-sm text-[#526177] leading-relaxed">
-                    Ahora comprobaremos lo aprendido con dos preguntas.
-                  </p>
-                </div>
+              <div className={`bg-white/95 backdrop-blur-md rounded-3xl p-8 max-w-md mx-auto w-full shadow-xl shadow-slate-200/50 border ${theme.borderColor} text-center relative overflow-hidden transition-all duration-300`}>
+                <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${theme.accentGradient}`} />
+                <h1 className="text-2xl font-extrabold text-[#1C3257] mb-2">
+                  {lessonData.formalization.concept || 'Concepto clave'}
+                </h1>
+                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
+                  Ahora comprobaremos lo aprendido con dos preguntas.
+                </p>
               </div>
             )}
           </div>
@@ -366,61 +366,51 @@ export const StudentLessonView: React.FC = () => {
 
         {/* 9. STAGE: POST INTRO */}
         {session.stage === 'postIntro' && (
-          <div className="max-w-2xl mx-auto w-full animate-fadeIn text-center">
-            <div className="relative rounded-3xl overflow-hidden bg-[#10223d] text-white shadow-xl min-h-[380px] flex flex-col items-center justify-center p-8 border border-[#233859]">
-              <div
-                className="absolute inset-0 opacity-40 bg-cover bg-center"
-                style={{ backgroundImage: "url('/visuals/posicion-movimiento.png')" }}
-              />
-              <div className="relative z-10 bg-white/95 backdrop-blur-md rounded-3xl p-8 max-w-md w-full shadow-2xl border border-white/40 text-center">
-                <span className="text-[11px] font-bold uppercase tracking-widest text-[#12a1a4] block mb-2">
-                  Comprobemos lo aprendido
-                </span>
-                <h1 className="text-2xl font-extrabold text-[#1c3257] mb-2">Posición y movimiento</h1>
-                <p className="text-xs sm:text-sm text-[#526177] leading-relaxed">
-                  Responderemos dos preguntas sobre el video.
-                </p>
-              </div>
+          <div className="max-w-md mx-auto w-full animate-fadeIn text-center my-auto py-6">
+            <div className={`bg-white/95 backdrop-blur-md rounded-3xl p-8 shadow-xl shadow-slate-200/50 border ${theme.borderColor} text-center relative overflow-hidden transition-all duration-300`}>
+              <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${theme.accentGradient}`} />
+              <span className={`text-[11px] font-bold uppercase tracking-widest ${theme.badgeText} block mb-2`}>
+                Comprobemos lo aprendido
+              </span>
+              <h1 className="text-2xl font-extrabold text-[#1C3257] mb-2">
+                {lessonData.formalization.concept || 'Ideas principales'}
+              </h1>
+              <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
+                Responderemos dos preguntas sobre lo aprendido en la explicación.
+              </p>
             </div>
           </div>
         )}
 
         {/* 10. STAGE: POST QUESTIONS */}
         {session.stage === 'postQuestions' && (
-          <div className="max-w-2xl mx-auto w-full animate-fadeIn text-center">
-            <div className="relative rounded-3xl overflow-hidden bg-[#10223d] text-white shadow-xl min-h-[420px] flex flex-col items-center justify-center p-8 border border-[#233859]">
-              <div
-                className="absolute inset-0 opacity-40 bg-cover bg-center"
-                style={{ backgroundImage: "url('/visuals/posicion-movimiento.png')" }}
+          <div className="max-w-lg mx-auto w-full animate-fadeIn text-center my-auto py-6">
+            <div className={`bg-white/95 backdrop-blur-md rounded-3xl p-8 shadow-xl shadow-slate-200/50 border ${theme.borderColor} text-center relative overflow-hidden transition-all duration-300`}>
+              <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${theme.accentGradient}`} />
+              <span className={`inline-flex px-3 py-1 rounded-full ${theme.badgeBg} ${theme.badgeText} border ${theme.badgeBorder} text-[11px] font-bold uppercase tracking-widest mb-3`}>
+                Pregunta {session.postIndex + 1} de {lessonData.postQuestions.length || 2}
+              </span>
+              <h1 className="text-xl sm:text-2xl font-extrabold text-[#1C3257] mb-4">
+                {currentPostItem.question}
+              </h1>
+
+              <SupportHintCard
+                visible={session.feedback?.kind === 'support'}
+                message="Presta atencion a la pista que te dara tu mentor."
               />
-              <div className="relative z-10 bg-white/95 backdrop-blur-md rounded-3xl p-8 max-w-lg w-full shadow-2xl border border-white/40 text-center">
-                <span className="text-[11px] font-bold uppercase tracking-widest text-[#12a1a4] block mb-2">
-                  Pregunta {session.postIndex + 1} de 2
-                </span>
-                <h1 className="text-xl sm:text-2xl font-extrabold text-[#1c3257] mb-4">
-                  {currentPostItem.question}
-                </h1>
 
-                {session.feedback?.kind === 'support' && (
-                  <div className="bg-[#fff9f0] border border-[#f5c49d] text-[#794112] p-3.5 rounded-2xl text-xs font-bold flex items-center justify-center gap-2 mb-4 animate-fadeIn">
-                    <CircleHelp className="w-4 h-4 text-[#ee751c]" />
-                    <span>¡Presta atención a la pista que te dará tu mentor!</span>
-                  </div>
-                )}
+              {(session.feedback?.kind === 'success' || session.feedback?.kind === 'reveal') && (
+                <div className="bg-emerald-50 border border-emerald-200 text-emerald-800 p-4 rounded-2xl text-sm font-bold flex items-center justify-center gap-2 shadow-xs animate-fadeIn">
+                  <Sparkles className="w-5 h-5 text-emerald-600 shrink-0" />
+                  <span>{currentPostItem.studentReveal}</span>
+                </div>
+              )}
 
-                {(session.feedback?.kind === 'success' || session.feedback?.kind === 'reveal') && (
-                  <div className="bg-[#eaf4e8] border border-[#badcb8] text-[#255e29] p-4 rounded-2xl text-sm font-bold flex items-center justify-center gap-2 shadow-sm animate-fadeIn">
-                    <Sparkles className="w-5 h-5 text-[#255e29]" />
-                    <span>{currentPostItem.studentReveal}</span>
-                  </div>
-                )}
-
-                {!session.feedback && (
-                  <p className="text-xs text-[#748093] mt-4">
-                    Responde en voz alta a tu mentor.
-                  </p>
-                )}
-              </div>
+              {!session.feedback && (
+                <p className="text-xs text-slate-400 mt-4">
+                  Responde en voz alta a tu mentor.
+                </p>
+              )}
             </div>
           </div>
         )}
@@ -432,57 +422,53 @@ export const StudentLessonView: React.FC = () => {
               En resumen
             </span>
             <h1 className="text-2xl sm:text-3xl font-extrabold text-[#1c3257] mb-6">
-              Posición y movimiento
+              {lessonData.formalization.concept || lessonData.formalization.title || lessonData.metadata.lessonTitle}
             </h1>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <article className="bg-white border-2 border-[#1c3257] rounded-3xl p-6 shadow-sm flex flex-col justify-between text-left">
-                <span className="text-xs font-extrabold uppercase tracking-wider text-[#12a1a4] block mb-2">
-                  POSICIÓN
-                </span>
-                <b className="text-base sm:text-lg font-bold text-[#1c3257] block mb-2">
-                  Dónde se encuentra
-                </b>
-                <strong className="text-xl sm:text-2xl font-black text-[#1c3257] block mt-4 bg-[#f0f4f8] p-3 rounded-xl text-center">
-                  −20 m
-                </strong>
-              </article>
+              {lessonData.summaryIdeas && lessonData.summaryIdeas.length > 0 ? (
+                lessonData.summaryIdeas.slice(0, 2).map(([title, desc], idx) => {
+                  const borderColors = ['border-[#1c3257]', 'border-[#ee751c]'];
+                  const tagColors = ['text-[#12a1a4]', 'text-[#ee751c]'];
 
-              <article className="bg-white border-2 border-[#ee751c] rounded-3xl p-6 shadow-sm flex flex-col justify-between text-left">
-                <span className="text-xs font-extrabold uppercase tracking-wider text-[#ee751c] block mb-2">
-                  MOVIMIENTO
-                </span>
-                <b className="text-base sm:text-lg font-bold text-[#1c3257] block mb-2">
-                  Cómo cambia de lugar
-                </b>
-                <strong className="text-base sm:text-lg font-bold text-[#ee751c] block mt-4 bg-[#fff5ee] p-3 rounded-xl text-center">
-                  Baja 15 m · Sube 8 m
-                </strong>
-              </article>
+                  return (
+                    <article key={title} className={`bg-white border-2 ${borderColors[idx % 2]} rounded-3xl p-6 shadow-sm flex flex-col justify-between text-left`}>
+                      <div>
+                        <span className={`text-xs font-extrabold uppercase tracking-wider ${tagColors[idx % 2]} block mb-2`}>
+                          {title}
+                        </span>
+                        <b className="text-base sm:text-lg font-bold text-[#1c3257] block mb-2">
+                          {desc}
+                        </b>
+                      </div>
+                    </article>
+                  );
+                })
+              ) : (
+                <div className="col-span-full bg-white border border-[#dce2e6] rounded-3xl p-6 shadow-sm text-left">
+                  <p className="text-sm text-[#1c3257]">{lessonData.formalization.summary || lessonData.summaryText || 'Revisamos los conceptos clave de la clase.'}</p>
+                </div>
+              )}
             </div>
           </div>
         )}
 
         {/* 12. STAGE: PRACTICE INTRO */}
         {session.stage === 'practiceIntro' && (() => {
-          const items = [
-            { icon: <Thermometer className="w-8 h-8 text-[#12a1a4]" />, title: 'Temperatura', text: 'Primera situación' },
-            { icon: <Building2 className="w-8 h-8 text-[#1c3257]" />, title: 'Ascensor', text: 'Segunda situación' },
-            { icon: <Banknote className="w-8 h-8 text-[#ee751c]" />, title: 'Saldo de una cuenta', text: 'Última situación' }
-          ];
-          const cur = items[session.practiceIndex] ?? items[0];
+          const ordinals = ['Primera situación', 'Segunda situación', 'Tercera situación', 'Siguiente situación'];
+          const textOrdinal = ordinals[session.practiceIndex] ?? `Situación ${session.practiceIndex + 1}`;
 
           return (
             <div className="max-w-xl mx-auto w-full animate-fadeIn text-center py-4">
               <div className="bg-white border border-[#dce2e6] rounded-3xl p-8 shadow-sm flex flex-col items-center">
-                <div className="w-16 h-16 rounded-full bg-[#f8fafc] border border-[#e2e8f0] flex items-center justify-center mb-4">
-                  {cur.icon}
+                <div className="w-16 h-16 rounded-full bg-[#f8fafc] border border-[#e2e8f0] flex items-center justify-center mb-4 text-[#12a1a4] font-extrabold text-xl">
+                  {session.practiceIndex + 1}
                 </div>
                 <span className="text-xs font-bold uppercase tracking-wider text-[#12a1a4] block mb-1">
-                  {cur.text}
+                  {textOrdinal}
                 </span>
                 <h1 className="text-2xl sm:text-3xl font-extrabold text-[#1c3257] mb-3">
-                  {cur.title}
+                  {currentPracticeItem?.context || 'Práctica guiada'}
                 </h1>
                 <p className="text-xs text-[#748093]">
                   Escucha la situación antes de responder.
@@ -496,19 +482,17 @@ export const StudentLessonView: React.FC = () => {
         {session.stage === 'practice' && (
           <div className="max-w-xl mx-auto w-full animate-fadeIn text-center py-4">
             <span className="text-[#12a1a4] font-bold text-xs uppercase tracking-widest block mb-1">
-              Situación {session.practiceIndex + 1} de 3 · {currentPracticeItem.context}
+              Situación {session.practiceIndex + 1} de {lessonData.practice.length || 3} : {currentPracticeItem.context}
             </span>
             <h1 className="text-xl sm:text-2xl font-extrabold text-[#1c3257] mb-6">
               {currentPracticeItem.question}
             </h1>
 
             <div className="bg-white border border-[#dce2e6] rounded-3xl p-8 shadow-sm">
-              {session.feedback?.kind === 'support' && (
-                <div className="bg-[#fff9f0] border border-[#f5c49d] text-[#794112] p-3.5 rounded-2xl text-xs font-bold flex items-center justify-center gap-2 mb-4 animate-fadeIn">
-                  <CircleHelp className="w-4 h-4 text-[#ee751c]" />
-                  <span>¡Presta atención a la pista que te dará tu mentor!</span>
-                </div>
-              )}
+              <SupportHintCard
+                visible={session.feedback?.kind === 'support'}
+                message="Presta atencion a la pista que te dara tu mentor."
+              />
 
               {(session.feedback?.kind === 'success' || session.feedback?.kind === 'reveal') && (
                 <div className="bg-[#eaf4e8] border border-[#badcb8] text-[#255e29] p-4 rounded-2xl text-base font-bold flex items-center justify-center gap-2 shadow-sm animate-fadeIn">
@@ -534,25 +518,33 @@ export const StudentLessonView: React.FC = () => {
             </span>
             <h1 className="text-xl sm:text-2xl font-extrabold text-[#1c3257] mb-6">
               {session.stage === 'reasoningIntro'
-                ? 'Una misma señal puede comunicar ideas distintas'
-                : '¿El signo negativo significa lo mismo?'}
+                ? (lessonData.reasoning?.title ?? 'Una misma idea puede comunicar sentidos distintos')
+                : (lessonData.reasoning?.question ?? 'Cómo interpretamos esta diferencia')}
             </h1>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
               <article className="bg-white border border-[#dce2e6] rounded-3xl p-6 shadow-sm text-left">
                 <span className="text-[11px] font-bold uppercase tracking-wider text-[#12a1a4] block mb-1">
-                  TEMPERATURA
+                  {lessonData.reasoning?.context1?.label ?? 'Caso 1'}
                 </span>
-                <strong className="text-2xl font-black text-[#1c3257] block mb-1">−4 °C</strong>
-                <p className="text-xs text-[#748093]">Cuatro grados bajo cero</p>
+                <strong className="text-2xl font-black text-[#1c3257] block mb-1">
+                  {lessonData.reasoning?.context1?.value ?? 'Ejemplo 1'}
+                </strong>
+                <p className="text-xs text-[#748093]">
+                  {lessonData.reasoning?.context1?.desc ?? ''}
+                </p>
               </article>
 
               <article className="bg-white border border-[#dce2e6] rounded-3xl p-6 shadow-sm text-left">
                 <span className="text-[11px] font-bold uppercase tracking-wider text-[#ee751c] block mb-1">
-                  CUENTA BANCARIA
+                  {lessonData.reasoning?.context2?.label ?? 'Caso 2'}
                 </span>
-                <strong className="text-2xl font-black text-[#1c3257] block mb-1">−$4.000</strong>
-                <p className="text-xs text-[#748093]">Un saldo negativo</p>
+                <strong className="text-2xl font-black text-[#1c3257] block mb-1">
+                  {lessonData.reasoning?.context2?.value ?? 'Ejemplo 2'}
+                </strong>
+                <p className="text-xs text-[#748093]">
+                  {lessonData.reasoning?.context2?.desc ?? ''}
+                </p>
               </article>
             </div>
 
@@ -563,26 +555,24 @@ export const StudentLessonView: React.FC = () => {
             ) : (
               <div className="bg-white border border-[#dce2e6] rounded-3xl p-6 shadow-sm">
                 <p className="text-sm sm:text-base font-bold text-[#1c3257] mb-4">
-                  Explica con tus palabras qué representa el signo negativo en cada situación.
+                  {lessonData.reasoning?.question ?? 'Explica con tus palabras la diferencia.'}
                 </p>
 
-                {session.feedback?.kind === 'support' && (
-                  <div className="bg-[#fff9f0] border border-[#f5c49d] text-[#794112] p-3.5 rounded-2xl text-xs font-bold flex items-center justify-center gap-2 animate-fadeIn">
-                    <CircleHelp className="w-4 h-4 text-[#ee751c]" />
-                    <span>¡Presta atención a la pista que te dará tu mentor!</span>
-                  </div>
-                )}
+                <SupportHintCard
+                  visible={session.feedback?.kind === 'support'}
+                  message="Presta atencion a la pista que te dara tu mentor."
+                />
 
                 {session.feedback?.kind === 'success' && (
                   <div className="bg-[#eaf4e8] border border-[#badcb8] text-[#255e29] p-4 rounded-2xl text-sm font-bold flex items-center justify-center gap-2 animate-fadeIn">
                     <Sparkles className="w-5 h-5 text-[#255e29]" />
-                    <span>¡Muy bien! El significado depende del contexto.</span>
+                    <span>{lessonData.reasoning?.successFeedback ?? 'Muy bien analizado.'}</span>
                   </div>
                 )}
 
                 {session.feedback?.kind === 'reveal' && (
                   <div className="bg-[#f8fafc] border border-[#dce2e6] text-[#334157] p-4 rounded-2xl text-xs sm:text-sm text-left animate-fadeIn">
-                    En la temperatura indica cuatro grados bajo cero; en la cuenta indica una deuda de cuatro mil pesos.
+                    {lessonData.reasoning?.revealText ?? ''}
                   </div>
                 )}
               </div>
@@ -597,32 +587,35 @@ export const StudentLessonView: React.FC = () => {
               Desafío breve
             </span>
             <h1 className="text-2xl font-extrabold text-[#1c3257] mb-6">
-              Posición y movimiento
+              {lessonData.challenge?.title ?? lessonData.metadata.lessonTitle}
             </h1>
 
             <div className="bg-white border border-[#dce2e6] rounded-3xl p-8 shadow-sm">
-              <div className="flex items-center justify-center gap-4 text-xl sm:text-2xl font-black text-[#1c3257] mb-6">
-                <span className="bg-[#e6f7f7] px-4 py-2 rounded-xl text-[#12a1a4]">−2 °C</span>
+              <div className="flex items-center justify-center gap-4 text-xl sm:text-2xl font-black text-[#1c3257] mb-6 flex-wrap">
+                <span className="bg-[#e6f7f7] px-4 py-2 rounded-xl text-[#12a1a4]">
+                  {lessonData.challenge?.item1?.label ?? 'Elemento A'}
+                </span>
                 <ArrowRight className="w-6 h-6 text-[#ee751c]" />
-                <span className="bg-[#fff0e4] px-4 py-2 rounded-xl text-[#ee751c]">sube 5 grados</span>
+                <span className="bg-[#fff0e4] px-4 py-2 rounded-xl text-[#ee751c]">
+                  {lessonData.challenge?.item2?.label ?? 'Elemento B'}
+                </span>
               </div>
 
               <p className="text-sm font-bold text-[#1c3257] mb-4">
-                ¿Qué parte representa una posición y qué parte representa un movimiento?
+                {lessonData.challenge?.question ?? 'Identifica la diferencia entre ambos elementos.'}
               </p>
 
               {session.feedback?.kind === 'success' && (
                 <div className="bg-[#eaf4e8] border border-[#badcb8] text-[#255e29] p-4 rounded-2xl text-sm font-bold flex items-center justify-center gap-2 animate-fadeIn">
                   <Sparkles className="w-5 h-5 text-[#255e29]" />
-                  <span>¡Muy bien explicado!</span>
+                  <span>Muy bien explicado.</span>
                 </div>
               )}
 
-              {session.feedback?.kind === 'support' && (
-                <div className="bg-[#f8fafc] border border-[#dce2e6] text-[#334157] p-4 rounded-2xl text-xs sm:text-sm text-left animate-fadeIn">
-                  <b>−2 °C</b> es la posición inicial. <b>Sube cinco grados</b> es el movimiento.
-                </div>
-              )}
+              <SupportHintCard
+                visible={session.feedback?.kind === 'support'}
+                message={lessonData.challenge?.supportFeedback ?? 'Tu mentor te dara una pista para resolver este desafio.'}
+              />
             </div>
           </div>
         )}
@@ -634,39 +627,30 @@ export const StudentLessonView: React.FC = () => {
               Una estrategia para pensar
             </span>
             <h1 className="text-2xl font-extrabold text-[#1c3257] mb-6">
-              Cómo analizar una situación
+              {lessonData.strategy?.title ?? 'Cómo analizar esta situación'}
             </h1>
 
             <div className="space-y-3 text-left">
-              <article className="bg-white border border-[#dce2e6] rounded-2xl p-5 shadow-sm flex items-start gap-4">
-                <span className="w-7 h-7 rounded-full bg-[#12a1a4] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
-                  1
-                </span>
-                <div>
-                  <strong className="text-sm font-bold text-[#1c3257] block mb-0.5">Identifica</strong>
-                  <p className="text-xs text-[#526177]">¿Cuál es el punto de referencia?</p>
+              {lessonData.strategy?.steps && lessonData.strategy.steps.length > 0 ? (
+                lessonData.strategy.steps.map((st, idx) => {
+                  const circleColors = ['bg-[#12a1a4]', 'bg-[#ee751c]', 'bg-[#1c3257]'];
+                  return (
+                    <article key={idx} className="bg-white border border-[#dce2e6] rounded-2xl p-5 shadow-sm flex items-start gap-4">
+                      <span className={`w-7 h-7 rounded-full ${circleColors[idx % circleColors.length]} text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5`}>
+                        {st.number || idx + 1}
+                      </span>
+                      <div>
+                        <strong className="text-sm font-bold text-[#1c3257] block mb-0.5">{st.title}</strong>
+                        <p className="text-xs text-[#526177]">{st.desc}</p>
+                      </div>
+                    </article>
+                  );
+                })
+              ) : (
+                <div className="bg-white border border-[#dce2e6] rounded-2xl p-5 shadow-sm text-center">
+                  <p className="text-xs text-[#526177]">Sigue los pasos indicados por tu mentor.</p>
                 </div>
-              </article>
-
-              <article className="bg-white border border-[#dce2e6] rounded-2xl p-5 shadow-sm flex items-start gap-4">
-                <span className="w-7 h-7 rounded-full bg-[#ee751c] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
-                  2
-                </span>
-                <div>
-                  <strong className="text-sm font-bold text-[#1c3257] block mb-0.5">Interpreta</strong>
-                  <p className="text-xs text-[#526177]">¿Qué indica el signo en este contexto?</p>
-                </div>
-              </article>
-
-              <article className="bg-white border border-[#dce2e6] rounded-2xl p-5 shadow-sm flex items-start gap-4">
-                <span className="w-7 h-7 rounded-full bg-[#1c3257] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
-                  3
-                </span>
-                <div>
-                  <strong className="text-sm font-bold text-[#1c3257] block mb-0.5">Distingue</strong>
-                  <p className="text-xs text-[#526177]">¿Dice dónde se encuentra algo o cómo cambia?</p>
-                </div>
-              </article>
+              )}
             </div>
           </div>
         )}
@@ -710,7 +694,7 @@ export const StudentLessonView: React.FC = () => {
                 </span>
                 <h1 className="text-xl font-bold text-[#1c3257] mb-2">El miniquiz comenzará pronto</h1>
                 <p className="text-xs text-[#748093]">
-                  El miniquiz aparecerá cuando el adulto lo indique.
+                  El miniquiz aparecerá cuando tu mentor lo indique.
                 </p>
               </div>
             </div>
@@ -734,9 +718,9 @@ export const StudentLessonView: React.FC = () => {
               </div>
               <h1 className="text-2xl font-black mb-2">
                 {session.miniScore === 3
-                  ? '¡Excelente trabajo!'
+                  ? 'Excelente trabajo'
                   : session.miniScore >= 2
-                  ? '¡Muy bien! Aprobaste la clase.'
+                  ? 'Muy bien, aprobaste la clase'
                   : 'Sigamos aprendiendo'}
               </h1>
               <p className="text-xs sm:text-sm leading-relaxed">
@@ -779,32 +763,27 @@ export const StudentLessonView: React.FC = () => {
 
         {/* 23. STAGE: CLOSING & COMPLETED */}
         {(session.stage === 'closing' || session.stage === 'completed') && (
-          <div className="max-w-lg mx-auto w-full animate-fadeIn text-center py-6">
-            <div className="relative rounded-3xl overflow-hidden bg-[#10223d] text-white shadow-xl min-h-[420px] flex flex-col items-center justify-center p-8 border border-[#233859]">
-              <div
-                className="absolute inset-0 opacity-40 bg-cover bg-center"
-                style={{ backgroundImage: "url('/visuals/mision-cierre.png')" }}
-              />
-              <div className="relative z-10 bg-white/95 backdrop-blur-md rounded-3xl p-8 max-w-md w-full shadow-2xl border border-white/40 text-center">
-                <div className="w-14 h-14 rounded-full bg-[#4a964e] text-white flex items-center justify-center mx-auto mb-3 shadow-md">
-                  <Check className="w-8 h-8" />
-                </div>
-                <span className="text-[11px] font-bold uppercase tracking-widest text-[#12a1a4] block mb-1">
-                  Terminamos por hoy
-                </span>
-                <h1 className="text-2xl font-black text-[#1c3257] mb-2">
-                  {session.miniScore === 3
-                    ? '¡Excelente trabajo!'
-                    : session.miniScore >= 2
-                    ? '¡Muy bien!'
-                    : '¡Buen trabajo!'}
-                </h1>
-                <p className="text-xs text-[#526177] mb-4">
-                  Completaste la clase de hoy con tu mentor.
-                </p>
-                <div className="bg-[#f0f4f8] text-[#1c3257] p-3.5 rounded-2xl text-xs font-bold border border-[#dce2e6]">
-                  Próxima clase: {lessonData.metadata.nextLessonTitle}
-                </div>
+          <div className="max-w-md mx-auto w-full animate-fadeIn text-center my-auto py-6">
+            <div className={`bg-white/95 backdrop-blur-md rounded-3xl p-8 shadow-xl shadow-slate-200/50 border ${theme.borderColor} text-center relative overflow-hidden transition-all duration-300`}>
+              <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${theme.accentGradient}`} />
+              <div className="w-14 h-14 rounded-full bg-emerald-500 text-white flex items-center justify-center mx-auto mb-3 shadow-md shadow-emerald-500/20">
+                <Check className="w-8 h-8" />
+              </div>
+              <span className={`text-[11px] font-bold uppercase tracking-widest ${theme.badgeText} block mb-1`}>
+                Terminamos por hoy
+              </span>
+              <h1 className="text-2xl font-black text-[#1C3257] mb-2 tracking-tight">
+                {session.miniScore === 3
+                  ? 'Excelente trabajo'
+                  : session.miniScore >= 2
+                  ? 'Muy bien'
+                  : 'Buen trabajo'}
+              </h1>
+              <p className="text-xs text-slate-500 mb-6">
+                Completaste la clase de hoy con tu mentor.
+              </p>
+              <div className="bg-slate-50 text-[#1C3257] p-3.5 rounded-2xl text-xs font-bold border border-slate-200/70">
+                Próxima clase: {lessonData.metadata.nextLessonTitle}
               </div>
             </div>
           </div>
@@ -815,12 +794,13 @@ export const StudentLessonView: React.FC = () => {
 };
 
 interface SyncedStudentVideoProps {
-  src: string;
+  src?: string;
   kind: 'hook' | 'formal';
   session: any;
+  title?: string;
 }
 
-const SyncedStudentVideo: React.FC<SyncedStudentVideoProps> = ({ src, kind, session }) => {
+const SyncedStudentVideo: React.FC<SyncedStudentVideoProps> = ({ src, kind, session, title }) => {
   const ref = useRef<HTMLVideoElement>(null);
   const [blocked, setBlocked] = useState(false);
 
@@ -838,6 +818,20 @@ const SyncedStudentVideo: React.FC<SyncedStudentVideoProps> = ({ src, kind, sess
       v.pause();
     }
   }, [kind, session.video]);
+
+  if (!src || src.trim() === '') {
+    return (
+      <div className="w-full aspect-video rounded-3xl overflow-hidden bg-gradient-to-br from-[#0F172A] to-[#1E293B] border border-slate-800 shadow-2xl flex flex-col items-center justify-center p-8 text-center text-white relative">
+        <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4 text-[#12A1A4] ring-1 ring-white/20">
+          <Play className="w-8 h-8 fill-current ml-1 opacity-80" />
+        </div>
+        <h3 className="text-lg font-black tracking-tight mb-2">{title || 'Video de la lección'}</h3>
+        <p className="text-xs text-slate-400 max-w-md">
+          Sigue las indicaciones de tu mentor para este momento de aprendizaje.
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div className="w-full aspect-video rounded-3xl overflow-hidden bg-black shadow-2xl flex items-center justify-center relative">

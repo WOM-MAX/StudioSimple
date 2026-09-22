@@ -77,7 +77,8 @@ export const INITIAL_SITE_CONFIG: SiteConfig = {
     footerBgColor: '#123A72',
     footerTextColor: '#BFDBFE',
     footerHeadingsColor: '#123A72',
-    bentoCardBgColor: '#FFFFFF'
+    bentoCardBgColor: '#FFFFFF',
+    bentoCardTextColor: '#334155'
   },
   contacto: {
     horarioAtencion: 'Lunes a Viernes: 09:00 a 18:00 hrs',
@@ -311,7 +312,8 @@ export function loadSiteConfig(): SiteConfig {
               ? parsed.footer.redesSociales
               : INITIAL_SITE_CONFIG.footer.redesSociales,
           footerHeadingsColor: parsed.footer?.footerHeadingsColor || INITIAL_SITE_CONFIG.footer.footerHeadingsColor,
-          bentoCardBgColor: parsed.footer?.bentoCardBgColor || INITIAL_SITE_CONFIG.footer.bentoCardBgColor
+          bentoCardBgColor: parsed.footer?.bentoCardBgColor || INITIAL_SITE_CONFIG.footer.bentoCardBgColor,
+          bentoCardTextColor: parsed.footer?.bentoCardTextColor || INITIAL_SITE_CONFIG.footer.bentoCardTextColor
         },
         contacto: { ...INITIAL_SITE_CONFIG.contacto, ...(parsed.contacto || {}) },
         cloudinary: {

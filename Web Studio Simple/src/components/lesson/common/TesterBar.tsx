@@ -2,11 +2,13 @@ import React from 'react';
 import { SyncViewMode } from '../../../types/lesson';
 import { useLessonSync } from '../../../context/LessonSyncContext';
 import { useApp } from '../../../context/AppContext';
+import { MATEMATICA_7B_OA01_CLASE01, MATEMATICA_7B_OA01_CLASE02 } from '../../../data/lessons';
+import { findInjectedLesson } from '../../../lib/lesson-repository';
 import { Monitor, UserRound, UsersRound, ExternalLink, RotateCcw, HeartPulse, ArrowLeft, Home, BookOpen } from 'lucide-react';
 
 export const TesterBar: React.FC = () => {
-  const { viewMode, setViewMode, resetSession, openNewWindow, session, toggleOxygenPause } = useLessonSync();
-  const { setViewMode: setAppViewMode } = useApp();
+  const { viewMode, setViewMode, resetSession, openNewWindow, session, toggleOxygenPause, lessonData } = useLessonSync();
+  const { setViewMode: setAppViewMode, setActiveSynchronizedLesson } = useApp();
 
   return (
     <header className="bg-white/95 border border-[#d9dde2] rounded-2xl flex items-center justify-between gap-4 max-w-[1800px] min-h-[62px] mx-auto mb-4 px-4 py-2 shadow-sm backdrop-blur-sm">
@@ -42,9 +44,113 @@ export const TesterBar: React.FC = () => {
           <span>Cursos</span>
         </button>
 
-        <div className="flex flex-col border-l border-[#dce2e6] pl-3">
-          <span className="text-[#1c3257] font-bold text-xs tracking-tight">EstudioSimple · Aula Sincronizada</span>
-          <span className="text-[#778395] text-[10px]">7° Básico · Matemática</span>
+        <div className="flex flex-col border-l border-slate-200 pl-3">
+          <span className="text-[#1C3257] font-extrabold text-xs tracking-tight">EstudioSimple · Aula Sincronizada</span>
+          <span className="text-slate-500 text-[10px]">
+            {lessonData.metadata.grade} : {lessonData.metadata.subject} : Clase {lessonData.metadata.lessonNumber}
+          </span>
+        </div>
+
+        {/* Quick Subject Switcher */}
+        <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-xl border border-slate-200 ml-2">
+          <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-500 px-1.5">
+            Materia:
+          </span>
+          <button
+            type="button"
+            onClick={() => {
+              const l = findInjectedLesson('7° Básico', 'Matemática', 'OA 1', 1);
+              if (l) setActiveSynchronizedLesson(l);
+            }}
+            className={`px-2 py-0.5 rounded-lg text-[11px] font-bold transition-all cursor-pointer ${
+              lessonData.metadata.subject.includes('Mat') ? 'bg-[#1C3257] text-white shadow-xs' : 'text-slate-600 hover:bg-white'
+            }`}
+            title="Matemática OA 01"
+          >
+            Mat
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              const l = findInjectedLesson('7° Básico', 'Lengua y Literatura', 'OA 3', 1);
+              if (l) setActiveSynchronizedLesson(l);
+            }}
+            className={`px-2 py-0.5 rounded-lg text-[11px] font-bold transition-all cursor-pointer ${
+              lessonData.metadata.subject.includes('Leng') ? 'bg-[#EE751C] text-white shadow-xs' : 'text-slate-600 hover:bg-white'
+            }`}
+            title="Lengua y Literatura OA 03"
+          >
+            Len
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              const l = findInjectedLesson('7° Básico', 'Ciencias Naturales', 'OA 1', 1);
+              if (l) setActiveSynchronizedLesson(l);
+            }}
+            className={`px-2 py-0.5 rounded-lg text-[11px] font-bold transition-all cursor-pointer ${
+              lessonData.metadata.subject.includes('Cien') ? 'bg-[#10B981] text-white shadow-xs' : 'text-slate-600 hover:bg-white'
+            }`}
+            title="Ciencias Naturales OA 01"
+          >
+            Cie
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              const l = findInjectedLesson('7° Básico', 'Historia, Geografía y Ciencias Sociales', 'OA 2', 1);
+              if (l) setActiveSynchronizedLesson(l);
+            }}
+            className={`px-2 py-0.5 rounded-lg text-[11px] font-bold transition-all cursor-pointer ${
+              lessonData.metadata.subject.includes('Hist') ? 'bg-[#8C52FF] text-white shadow-xs' : 'text-slate-600 hover:bg-white'
+            }`}
+            title="Historia y Geografía OA 02"
+          >
+            His
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              const l = findInjectedLesson('7° Básico', 'Idioma Extranjero Inglés', 'OA 9', 1);
+              if (l) setActiveSynchronizedLesson(l);
+            }}
+            className={`px-2 py-0.5 rounded-lg text-[11px] font-bold transition-all cursor-pointer ${
+              lessonData.metadata.subject.includes('Ing') ? 'bg-[#4A964E] text-white shadow-xs' : 'text-slate-600 hover:bg-white'
+            }`}
+            title="Inglés OA 09"
+          >
+            Ing
+          </button>
+        </div>
+
+        {/* Quick Lesson Switcher (Clases 1 a 5) */}
+        <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-xl border border-slate-200 ml-1">
+          <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-500 px-1.5">
+            Clase:
+          </span>
+          {[1, 2, 3, 4, 5].map((num) => (
+            <button
+              key={num}
+              type="button"
+              onClick={() => {
+                const l = findInjectedLesson(
+                  lessonData.metadata.grade,
+                  lessonData.metadata.subject,
+                  lessonData.metadata.oaCode,
+                  num
+                );
+                if (l) setActiveSynchronizedLesson(l);
+              }}
+              className={`px-2 py-0.5 rounded-lg text-[11px] font-bold transition-all cursor-pointer ${
+                lessonData.metadata.lessonNumber === num
+                  ? 'bg-[#1C3257] text-white shadow-xs'
+                  : 'text-slate-600 hover:bg-white'
+              }`}
+              title={`Clase ${num}`}
+            >
+              0{num}
+            </button>
+          ))}
         </div>
       </div>
 
