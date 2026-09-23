@@ -92,7 +92,8 @@ export const MATEMATICA_7B_OA01_CLASE01: LessonData = {
       success: '¡Muy bien! En este recorrido usamos la superficie del mar como punto de referencia y la representamos con el número cero.',
       support: 'Recuerda que la profundidad comienza a medirse desde la superficie del mar. Ese es el lugar desde donde contamos cuántos metros baja el submarino. Con esta pista, ¿qué lugar representa el cero?',
       reveal: 'En este recorrido, la superficie del mar representa el cero porque desde allí comenzamos a medir la profundidad.',
-      studentReveal: 'La superficie del mar representa el cero.'
+      studentReveal: 'La superficie del mar representa el cero.',
+      studentImage: '/images/lessons/clase1_submarino.jpg'
     },
     {
       context: 'Ubicación del submarino',
@@ -101,7 +102,8 @@ export const MATEMATICA_7B_OA01_CLASE01: LessonData = {
       success: '¡Exacto! Significa que el submarino se encuentra veinte metros bajo la superficie del mar, que usamos como punto de referencia. Como −20 m nos indica dónde se encuentra, decimos que representa una posición.',
       support: 'Recuerda que la superficie del mar representa el cero. En −20 m, el signo negativo indica que el submarino está debajo de ese punto y el número 20 indica la distancia desde el cero hasta el submarino. Con esta pista, ¿qué significa −20 m?',
       reveal: '−20 m significa que el submarino se encuentra veinte metros bajo la superficie del mar. Esta información representa su posición.',
-      studentReveal: 'El submarino está veinte metros bajo la superficie. Esa es su posición.'
+      studentReveal: 'El submarino está veinte metros bajo la superficie. Esa es su posición.',
+      studentImage: '/images/lessons/clase1_submarino.jpg'
     }
   ],
 
@@ -143,7 +145,8 @@ export const MATEMATICA_7B_OA01_CLASE01: LessonData = {
       success: '¡Muy bien! El número entero es −4. El signo negativo indica que la temperatura está bajo cero.',
       support: 'Recuerda que las cantidades bajo cero se representan con un signo negativo. Conservamos el número 4 y agregamos ese signo. Entonces, ¿qué número entero representa la temperatura?',
       reveal: 'El número entero es −4: el 4 indica la cantidad de grados y el signo negativo indica que están bajo cero.',
-      studentReveal: '−4'
+      studentReveal: '−4',
+      studentImage: '/images/lessons/clase1_termometro.jpg'
     },
     {
       context: 'Ascensor',
@@ -152,7 +155,8 @@ export const MATEMATICA_7B_OA01_CLASE01: LessonData = {
       success: '¡Genial! Representa un movimiento porque indica cómo cambia de lugar el ascensor.',
       support: 'Fíjate en la palabra “baja”: indica que el ascensor cambia de lugar. Con esta pista, responde la misma pregunta.',
       reveal: 'Representa un movimiento porque “baja cinco pisos” indica cómo cambia de lugar el ascensor.',
-      studentReveal: 'Un movimiento.'
+      studentReveal: 'Un movimiento.',
+      studentImage: '/images/lessons/clase1_ascensor.jpg'
     },
     {
       context: 'Saldo de una cuenta',
@@ -161,7 +165,8 @@ export const MATEMATICA_7B_OA01_CLASE01: LessonData = {
       success: '¡Excelente! En esta situación, el signo negativo indica que existe una deuda de cinco mil pesos.',
       support: 'En una cuenta bancaria, un saldo positivo indica dinero disponible y un saldo negativo indica una deuda. Con esta pista, ¿qué significa el signo negativo?',
       reveal: 'El signo negativo indica que existe una deuda de cinco mil pesos. Aquí su significado depende del contexto.',
-      studentReveal: 'Existe una deuda de $5.000.'
+      studentReveal: 'Existe una deuda de $5.000.',
+      studentImage: '/images/lessons/clase1_banco.jpg'
     }
   ],
 

@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { useLessonSync } from '../../../context/LessonSyncContext';
+import { useApp } from '../../../context/AppContext';
 import { AdultSidebar } from './AdultSidebar';
 import { AdultHeader } from './AdultHeader';
 import {
@@ -26,7 +27,8 @@ import {
   BookOpen,
   Clock,
   HelpCircle,
-  Info
+  Info,
+  Home
 } from 'lucide-react';
 
 function formatTime(seconds: number): string {
@@ -37,6 +39,7 @@ function formatTime(seconds: number): string {
 
 export const AdultLessonView: React.FC = () => {
   const { session, lessonData, updateSession, setStage, setFeedback } = useLessonSync();
+  const { setViewMode } = useApp();
 
   const handleSupport = (text: string) => {
     updateSession({ feedback: { kind: 'support', text }, attempt: 1, supportCount: session.supportCount + 1 });
@@ -623,10 +626,11 @@ export const AdultLessonView: React.FC = () => {
           {session.stage === 'postIntro' && (
             <div>
               <h1 className="text-2xl font-bold text-[#1c3257] mb-4">
-                {lessonData.metadata.lessonTitle || 'Comprobemos lo aprendido'}
+                Comprobemos lo aprendido
               </h1>
               <PromptBox label="DILE">
-                Comprobemos lo que acabamos de revisar. Te haré dos preguntas para verificar las ideas centrales.
+                {(lessonData.formalization as any)?.postDileIntro ||
+                  `Comprobemos lo que acabamos de revisar sobre ${lessonData.metadata.lessonTitle || 'la clase'}. Te haré dos preguntas para verificar las ideas centrales.`}
               </PromptBox>
               <div className="flex justify-end mt-8 pt-4 border-t border-[#dce2e6]">
                 <button
@@ -753,7 +757,8 @@ export const AdultLessonView: React.FC = () => {
               <h1 className="text-2xl font-bold text-[#1c3257] mb-4">Practiquemos juntos</h1>
               <PromptBox label="DILE">
                 {session.practiceIndex === 0
-                  ? 'Ahora apliquemos lo que hemos aprendido en situaciones prácticas. Para eso, resolveremos algunos casos paso a paso.'
+                  ? ((lessonData as any).practiceDileIntro ||
+                    `Ahora apliquemos lo que hemos aprendido sobre ${lessonData.metadata.lessonTitle || 'la clase'} en situaciones prácticas. Resolveremos cada caso paso a paso: primero ${currentPracticeItem?.context || 'la primera situación'}.`)
                   : `Pasemos a la situación ${session.practiceIndex + 1}: ${currentPracticeItem.context || 'siguiente caso'}.`}
               </PromptBox>
               <div className="flex justify-end mt-8 pt-4 border-t border-[#dce2e6]">
@@ -1377,14 +1382,24 @@ export const AdultLessonView: React.FC = () => {
               <p className="text-sm text-[#526177] max-w-md mx-auto mb-8 leading-relaxed">
                 Has finalizado la clase de {lessonData.metadata.subject} con tu estudiante. Los avances han quedado registrados.
               </p>
-              <button
-                type="button"
-                onClick={() => setStage('cover')}
-                className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
-              >
-                <span>Volver al inicio de la clase</span>
-                <RotateCcw className="w-4 h-4" />
-              </button>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                <button
+                  type="button"
+                  onClick={() => setViewMode('courses')}
+                  className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                >
+                  <span>Volver al panel de lecciones</span>
+                  <Home className="w-4 h-4" />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setStage('cover')}
+                  className="bg-white hover:bg-slate-50 text-[#1c3257] border border-slate-300 font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-sm transition-all cursor-pointer"
+                >
+                  <span>Repetir esta clase</span>
+                  <RotateCcw className="w-4 h-4" />
+                </button>
+              </div>
             </div>
           )}
         </div>

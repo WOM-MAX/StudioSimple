@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { useLessonSync } from '../../../context/LessonSyncContext';
+import { useApp } from '../../../context/AppContext';
 import { StudentHeader } from './StudentHeader';
 import { StudentDisciplineGraphic } from './StudentDisciplineGraphic';
 import { StudentMiniquizView } from './StudentMiniquizView';
@@ -13,7 +14,9 @@ import {
   Check,
   CircleHelp,
   ArrowRight,
-  Play
+  Play,
+  Home,
+  RotateCcw
 } from 'lucide-react';
 
 function isAmbientActiveStage(
@@ -31,7 +34,8 @@ function isAmbientActiveStage(
 }
 
 export const StudentLessonView: React.FC = () => {
-  const { session, lessonData } = useLessonSync();
+  const { session, lessonData, setStage } = useLessonSync();
+  const { setViewMode, setActiveSynchronizedLesson, markLessonCompleted } = useApp();
   const theme = getSubjectTheme(lessonData.metadata.subject);
   const audioRef = useRef<HTMLAudioElement>(null);
   const [soundOn, setSoundOn] = useState(true);
@@ -47,11 +51,25 @@ export const StudentLessonView: React.FC = () => {
       prevFeedbackRef.current !== currentKind
     ) {
       setShowConfetti(true);
+      prevFeedbackRef.current = currentKind;
       const timer = setTimeout(() => setShowConfetti(false), 3000);
       return () => clearTimeout(timer);
     }
+    // Always update ref so null->success->null->success triggers correctly
     prevFeedbackRef.current = currentKind;
   }, [session.feedback?.kind]);
+
+  // Reset feedback tracking ref when moving between stages or questions
+  useEffect(() => {
+    prevFeedbackRef.current = null;
+  }, [
+    session.stage,
+    session.conversationIndex,
+    session.postIndex,
+    session.practiceIndex,
+    session.reviewIndex,
+    session.recoveryIndex
+  ]);
 
   const isAmbientActive = isAmbientActiveStage(
     session.stage,
@@ -312,6 +330,16 @@ export const StudentLessonView: React.FC = () => {
                 {currentPreItem.question}
               </h1>
 
+              {currentPreItem.studentImage && (
+                <div className="mb-4 max-w-sm mx-auto rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm bg-slate-50">
+                  <img
+                    src={currentPreItem.studentImage}
+                    alt={currentPreItem.context || 'Imagen explicativa'}
+                    className="w-full h-auto max-h-56 object-contain mx-auto"
+                  />
+                </div>
+              )}
+
               <SupportHintCard
                 visible={session.feedback?.kind === 'support'}
                 message="Presta atencion a la pista que te dara tu mentor."
@@ -394,6 +422,16 @@ export const StudentLessonView: React.FC = () => {
                 {currentPostItem.question}
               </h1>
 
+              {currentPostItem.studentImage && (
+                <div className="mb-4 max-w-sm mx-auto rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm bg-slate-50">
+                  <img
+                    src={currentPostItem.studentImage}
+                    alt={currentPostItem.context || 'Imagen explicativa'}
+                    className="w-full h-auto max-h-56 object-contain mx-auto"
+                  />
+                </div>
+              )}
+
               <SupportHintCard
                 visible={session.feedback?.kind === 'support'}
                 message="Presta atencion a la pista que te dara tu mentor."
@@ -470,6 +508,15 @@ export const StudentLessonView: React.FC = () => {
                 <h1 className="text-2xl sm:text-3xl font-extrabold text-[#1c3257] mb-3">
                   {currentPracticeItem?.context || 'Práctica guiada'}
                 </h1>
+                {currentPracticeItem?.studentImage && (
+                  <div className="mb-4 max-w-sm mx-auto rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm bg-slate-50">
+                    <img
+                      src={currentPracticeItem.studentImage}
+                      alt={currentPracticeItem.context || 'Imagen de práctica'}
+                      className="w-full h-auto max-h-56 object-contain mx-auto"
+                    />
+                  </div>
+                )}
                 <p className="text-xs text-[#748093]">
                   Escucha la situación antes de responder.
                 </p>
@@ -487,6 +534,16 @@ export const StudentLessonView: React.FC = () => {
             <h1 className="text-xl sm:text-2xl font-extrabold text-[#1c3257] mb-6">
               {currentPracticeItem.question}
             </h1>
+
+            {currentPracticeItem.studentImage && (
+              <div className="mb-6 max-w-sm mx-auto rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm bg-slate-50">
+                <img
+                  src={currentPracticeItem.studentImage}
+                  alt={currentPracticeItem.context || 'Imagen de práctica'}
+                  className="w-full h-auto max-h-56 object-contain mx-auto"
+                />
+              </div>
+            )}
 
             <div className="bg-white border border-[#dce2e6] rounded-3xl p-8 shadow-sm">
               <SupportHintCard
@@ -782,9 +839,29 @@ export const StudentLessonView: React.FC = () => {
               <p className="text-xs text-slate-500 mb-6">
                 Completaste la clase de hoy con tu mentor.
               </p>
-              <div className="bg-slate-50 text-[#1C3257] p-3.5 rounded-2xl text-xs font-bold border border-slate-200/70">
+              <div className="bg-slate-50 text-[#1C3257] p-3.5 rounded-2xl text-xs font-bold border border-slate-200/70 mb-6">
                 Próxima clase: {lessonData.metadata.nextLessonTitle}
               </div>
+              {session.stage === 'completed' && (
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                  <button
+                    type="button"
+                    onClick={() => setViewMode('courses')}
+                    className="w-full sm:w-auto bg-[#1C3257] hover:bg-[#284773] text-white font-bold px-5 py-2.5 rounded-xl flex items-center justify-center gap-2 text-xs shadow-md transition-all cursor-pointer"
+                  >
+                    <span>Volver a lecciones</span>
+                    <Home className="w-4 h-4" />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setStage('cover')}
+                    className="w-full sm:w-auto bg-white hover:bg-slate-50 text-[#1C3257] border border-slate-300 font-bold px-5 py-2.5 rounded-xl flex items-center justify-center gap-2 text-xs shadow-sm transition-all cursor-pointer"
+                  >
+                    <span>Repetir esta clase</span>
+                    <RotateCcw className="w-4 h-4" />
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         )}

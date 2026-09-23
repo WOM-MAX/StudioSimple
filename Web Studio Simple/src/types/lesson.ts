@@ -40,6 +40,7 @@ export interface GuidedItem {
   support: string;
   reveal: string;
   studentReveal: string;
+  studentImage?: string;
 }
 
 export interface QuizQuestion {
