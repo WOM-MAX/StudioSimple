@@ -514,6 +514,7 @@ interface DisciplineContent {
     pregunta: string;
     respEsperada: string;
     pistaSocratica: string;
+    options?: Array<{ label: string; kind: 'correct' | 'needs_support' | 'no_answer' | 'other'; feedbackText: string }>;
   };
   recorrido: GuidedItem[];
   ideaClaveExplicativo: string;
@@ -551,9 +552,21 @@ function buildMathContent(
       : "Refuerza la autonomía: 'Tómate el tiempo necesario para ordenar los datos y verificar antes de escribir'.",
     situacionIntro: {
       dialogo: `Hoy exploramos '${item.title}'. En la vida real nos encontramos con situaciones donde necesitamos cuantificar y relacionar magnitudes con exactitud. Observa los datos del problema inicial en la pantalla:`,
-      pregunta: `¿Qué datos numéricos reconoces en este caso y qué relación crees que existe entre ellos?`,
-      respEsperada: `Una respuesta que identifique las cantidades dadas y el tipo de relación u operación matemática requerida.`,
-      pistaSocratica: `Pídele que señale qué representa cada número en el contexto antes de intentar calcular.`
+      pregunta: `¿Qué datos numéricos reconoces en este caso sobre ${item.focoDidactico} y qué relación matemática existe entre ellos?`,
+      respEsperada: `Identificar con precisión los valores conocidos de ${item.title} y explicar el procedimiento o relación para resolver el problema.`,
+      pistaSocratica: `Pídele que señale qué representa cada número en el contexto antes de intentar calcular.`,
+      options: [
+        {
+          label: `Identificó los datos numéricos y explicó la relación matemática correspondiente`,
+          kind: 'correct',
+          feedbackText: '¡Exacto! Reconoció los valores dados y el procedimiento matemático necesario.'
+        },
+        {
+          label: 'Mencionó solo los números sin explicar la relación ni la operación',
+          kind: 'needs_support',
+          feedbackText: 'Observa qué representa cada cantidad y qué operación se necesita para llegar a la respuesta.'
+        }
+      ]
     },
     recorrido: [
       {
@@ -675,10 +688,22 @@ function buildScienceContent(
       ? "Crea un clima de curiosidad científica: 'En ciencias, observar con atención y hacerse preguntas es el primer paso del descubrimiento'."
       : "Fomenta la indagación: 'Analiza las evidencias observables antes de formular una conclusión definitiva'.",
     situacionIntro: {
-      dialogo: `Hoy en Ciencias Naturales investigamos '${item.title}'. En nuestro entorno y en nuestro propio organismo ocurren procesos fascinantes regidos por principios biológicos y físicos. Observa la situación planteada en la pantalla:`,
-      pregunta: `¿Qué cambios o evidencias puedes observar en este fenómeno y cómo crees que se explican científicamente?`,
-      respEsperada: `Una respuesta que describa las observaciones directas y proponga una relación de causa y efecto preliminar.`,
-      pistaSocratica: `Guíalo para que observe qué componentes interactúan en este fenómeno y qué ocurre cuando las condiciones cambian.`
+      dialogo: `Hoy en Ciencias Naturales investigamos '${item.title}'. En nuestro entorno y en nuestro propio organismo ocurren procesos fascinantes regidos por principios biológicos y físicos. Observa la situación planteada en la pantalla sobre ${item.focoDidactico}:`,
+      pregunta: `¿Qué evidencias o procesos biológicos/físicos concretos puedes observar en este fenómeno sobre ${item.title}?`,
+      respEsperada: `Mencionar al menos dos características, estructuras o cambios observables directamente relacionados con ${item.title}.`,
+      pistaSocratica: `Pídele que señale elementos visibles en la pantalla: qué partes intervienen y qué transformaciones concretas se producen.`,
+      options: [
+        {
+          label: `Mencionó características o cambios biológicos concretos de ${item.title}`,
+          kind: 'correct',
+          feedbackText: '¡Exacto! Supo identificar las evidencias y estructuras del fenómeno analizado.'
+        },
+        {
+          label: 'Solo dio una opinión general sin basarse en las observaciones de la pantalla',
+          kind: 'needs_support',
+          feedbackText: 'Fíjate en las partes visibles en la pantalla y describe qué cambios físicos o biológicos ocurren.'
+        }
+      ]
     },
     recorrido: [
       {
@@ -800,10 +825,22 @@ function buildHistoryContent(
       ? "Crea un clima de exploración histórica: 'En historia no memorizamos fechas sueltas: comprendemos por qué las personas actuaron de determinada manera'."
       : "Fomenta la perspectiva histórica: 'Analiza los hechos considerando la época y el espacio geográfico en que ocurrieron'.",
     situacionIntro: {
-      dialogo: `Hoy en Historia y Ciencias Sociales nos situamos en '${item.title}'. Cada época histórica y cada territorio plantean desafíos que llevaron a las sociedades a organizarse, transformarse y crear cultura. Observa el escenario planteado en la pantalla:`,
-      pregunta: `¿Por qué crees que las personas o comunidades de esa época tomaron esas decisiones frente a su entorno geográfico y social?`,
-      respEsperada: `Una respuesta que reconozca las necesidades de subsistencia, la organización comunitaria o los ideales de la época.`,
-      pistaSocratica: `Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?`
+      dialogo: `Hoy en Historia y Ciencias Sociales nos situamos en '${item.title}'. Cada época histórica y cada territorio plantean desafíos que llevaron a las sociedades a organizarse, transformarse y crear cultura. Observa el escenario planteado en la pantalla sobre ${item.focoDidactico}:`,
+      pregunta: `¿Qué causas o necesidades fundamentales motivaron a las comunidades de esa época en relación con ${item.title}?`,
+      respEsperada: `Explicar las necesidades de subsistencia, recursos geográficos o motivos de organización comunitaria que impulsaron ${item.title}.`,
+      pistaSocratica: `Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?`,
+      options: [
+        {
+          label: `Explicó las necesidades de subsistencia, recursos o causas sociales de ${item.title}`,
+          kind: 'correct',
+          feedbackText: '¡Exacto! Comprendió las causas históricas y geográficas que motivaron a las personas de esa época.'
+        },
+        {
+          label: 'Solo mencionó hechos aislados sin explicar por qué ocurrieron',
+          kind: 'needs_support',
+          feedbackText: 'Pídele que piense en los desafíos del entorno: ¿por qué necesitaban organizarse de esa manera?'
+        }
+      ]
     },
     recorrido: [
       {
@@ -925,10 +962,22 @@ function buildLanguageContent(
       ? "Crea un clima de disfrute por la lectura: 'Leer nos permite viajar a otras épocas, sentir lo que otros sienten y encontrar nuestra propia voz'."
       : "Fomenta la interpretación personal: 'Cada texto ofrece pistas que podemos descubrir con atención y sensibilidad'.",
     situacionIntro: {
-      dialogo: `Hoy en Lengua y Literatura nos adentramos en '${item.title}'. Los textos literarios y no literarios nos comunican visiones de mundo, emociones e ideas que cobran vida al leer. Observa el fragmento inicial en la pantalla:`,
-      pregunta: `¿Qué impresión, emoción o idea principal te transmite este fragmento a primera vista?`,
-      respEsperada: `Una respuesta que identifique el conflicto, la emoción del hablante o el tema central del texto.`,
-      pistaSocratica: `Invítalo a releer la primera oración y a fijarse en los adjetivos y acciones de los personajes o del emisor.`
+      dialogo: `Hoy en Lengua y Literatura nos adentramos en '${item.title}'. Los textos literarios y no literarios nos comunican visiones de mundo, emociones e ideas que cobran vida al leer. Observa el fragmento inicial en la pantalla sobre ${item.focoDidactico}:`,
+      pregunta: `Al observar el texto sobre ${item.title}, ¿qué conflicto, emoción o idea principal comunica la obra?`,
+      respEsperada: `Identificar el conflicto central del relato, la emoción predominante o el tema principal en relación con ${item.title}.`,
+      pistaSocratica: `Invítalo a releer la primera oración y a fijarse en los adjetivos y acciones de los personajes o del emisor.`,
+      options: [
+        {
+          label: `Identificó el conflicto, la emoción del hablante o el tema central de ${item.title}`,
+          kind: 'correct',
+          feedbackText: '¡Muy bien! Reconoció con claridad el conflicto y el sentido del texto.'
+        },
+        {
+          label: 'Solo nombró detalles secundarios sin identificar el conflicto o emoción principal',
+          kind: 'needs_support',
+          feedbackText: 'Relee la primera oración: fíjate en qué problema enfrenta el personaje o qué emoción transmite.'
+        }
+      ]
     },
     recorrido: [
       {
@@ -1050,10 +1099,22 @@ function buildEnglishContent(
       ? "Crea un ambiente de confianza en inglés: 'Don't worry about making mistakes! In English, every attempt helps you build fluency and vocabulary'."
       : "Fomenta la confianza comunicativa: 'Listen, read the clues, and focus on the general meaning before translating every single word'.",
     situacionIntro: {
-      dialogo: `Hoy en nuestra sesión de English exploramos '${item.title}'. El apoderado guía la sesión en español, mientras que el estudiante lee y escucha en inglés. Lee la siguiente frase introductoria en voz alta:`,
+      dialogo: `Hoy en nuestra sesión de English exploramos '${item.title}'. El apoderado guía la sesión en español, mientras que el estudiante lee y escucha en inglés. Lee la siguiente frase introductoria en voz alta sobre ${item.focoDidactico}:`,
       pregunta: `"What is the main situation described in this English sentence? (¿Cuál es la situación principal descrita en la oración?)"`,
-      respEsperada: `An answer identifying the main action, setting, or characters in English or Spanish.`,
-      pistaSocratica: `Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general.`
+      respEsperada: `Identificar en español o inglés los personajes (characters), la acción o el lugar (setting) descritos en la oración sobre ${item.title}.`,
+      pistaSocratica: `Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general.`,
+      options: [
+        {
+          label: `Identificó a los personajes, la acción o el lugar de la oración en inglés`,
+          kind: 'correct',
+          feedbackText: '¡Very good! Supo reconocer los elementos clave de la oración en inglés.'
+        },
+        {
+          label: 'Tuvo dudas con el vocabulario o no identificó a los personajes ni el lugar',
+          kind: 'needs_support',
+          feedbackText: 'Busquen juntos palabras transparentes y guíalo para identificar quién realiza la acción.'
+        }
+      ]
     },
     recorrido: [
       {

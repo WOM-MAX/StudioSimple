@@ -121,10 +121,24 @@ export function adaptGeneratorLessonToPlayer(
       expectedAnswer: genLesson.situacionIntro.respEsperada,
       socraticHint: genLesson.situacionIntro.pistaSocratica,
       emotionalTip: genLesson.climaEmocional,
-      options: [
-        { label: genLesson.situacionIntro.respEsperada, kind: 'correct', feedbackText: '¡Exacto! Esa es la respuesta esperada.' },
-        { label: 'Otra respuesta o duda', kind: 'needs_support', feedbackText: genLesson.situacionIntro.pistaSocratica }
-      ]
+      options: (genLesson.situacionIntro as any).options && (genLesson.situacionIntro as any).options.length > 0
+        ? (genLesson.situacionIntro as any).options
+        : [
+            {
+              label: genLesson.situacionIntro.respEsperada.toLowerCase().startsWith('una respuesta que')
+                ? genLesson.situacionIntro.respEsperada.replace(/^una respuesta que /i, 'Mencionó o reconoció que ').slice(0, 95)
+                : (genLesson.situacionIntro.respEsperada.toLowerCase().startsWith('an answer')
+                  ? genLesson.situacionIntro.respEsperada.replace(/^an answer identifying /i, 'Identified ').slice(0, 95)
+                  : `Respondió correctamente: ${genLesson.situacionIntro.respEsperada.length > 80 ? genLesson.situacionIntro.respEsperada.slice(0, 77) + '...' : genLesson.situacionIntro.respEsperada}`),
+              kind: 'correct',
+              feedbackText: '¡Exacto! Comprendió la idea central esperada.'
+            },
+            {
+              label: 'Necesita apoyo o dio otra respuesta',
+              kind: 'needs_support',
+              feedbackText: genLesson.situacionIntro.pistaSocratica
+            }
+          ]
     },
 
     reference: {
@@ -325,19 +339,20 @@ function resolveInteractiveForDiscipline(
     };
   }
 
-  if (norm.includes('cien') || norm.includes('nat')) {
-    return {
-      type: 'dimensions',
-      title: 'Las 4 Dimensiones de la Sexualidad Humana',
-      description: 'Organizador gráfico del modelo integral de desarrollo personal.'
-    };
-  }
-
+  // Historia debe evaluarse antes de ciencias porque "Ciencias Sociales" contiene "ciencias"
   if (norm.includes('hist') || norm.includes('geog') || norm.includes('soc')) {
     return {
       type: 'timeline',
       title: 'Línea de Tiempo Histórica: De la Hominización a la Aldea',
       description: 'Organizador cronológico de la revolución agrícola y el modo de vida.'
+    };
+  }
+
+  if ((norm.includes('cien') && !norm.includes('soc')) || norm.includes('nat')) {
+    return {
+      type: 'dimensions',
+      title: 'Las 4 Dimensiones de la Sexualidad Humana',
+      description: 'Organizador gráfico del modelo integral de desarrollo personal.'
     };
   }
 

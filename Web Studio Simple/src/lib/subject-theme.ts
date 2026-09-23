@@ -38,8 +38,26 @@ export function getSubjectTheme(subjectName: string): SubjectTheme {
     };
   }
 
-  // 2. Ciencias Naturales (Verde Esmeralda / Aqua Vital)
-  if (norm.includes('cien') || norm.includes('nat')) {
+  // 2. Historia y Geografia (Purpura Imperial / Amatista)
+  if (norm.includes('hist') || norm.includes('geog') || norm.includes('soc')) {
+    return {
+      id: 'his',
+      name: 'Historia y Geografía',
+      primary: '#8C52FF',
+      secondary: '#6366F1',
+      badgeBg: 'bg-purple-50',
+      badgeText: 'text-[#6D28D9]',
+      badgeBorder: 'border-purple-200',
+      glowColor: 'bg-purple-400/20',
+      accentGradient: 'from-[#8C52FF] to-[#6366F1]',
+      borderColor: 'border-purple-200/90',
+      buttonGradient: 'from-[#8C52FF] to-[#7934E8]',
+      lightCardBg: 'bg-purple-50/40'
+    };
+  }
+
+  // 3. Ciencias Naturales (Verde Esmeralda / Aqua Vital)
+  if ((norm.includes('cien') && !norm.includes('soc')) || norm.includes('nat')) {
     return {
       id: 'cie',
       name: 'Ciencias Naturales',
@@ -53,24 +71,6 @@ export function getSubjectTheme(subjectName: string): SubjectTheme {
       borderColor: 'border-emerald-200/90',
       buttonGradient: 'from-[#10B981] to-[#059669]',
       lightCardBg: 'bg-emerald-50/40'
-    };
-  }
-
-  // 3. Historia y Geografia (Purpura Imperial / Amatista)
-  if (norm.includes('hist') || norm.includes('geog') || norm.includes('soc')) {
-    return {
-      id: 'his',
-      name: 'Historia y Geografía',
-      primary: '#8C52FF',
-      secondary: '#6366F1',
-      badgeBg: 'bg-purple-50',
-      badgeText: 'text-[#6D28D9]',
-      badgeBorder: 'border-purple-200',
-      glowColor: 'bg-purple-400/20',
-      accentGradient: 'from-[#8C52FF] to-[#6366F1]',
-      borderColor: 'border-purple-200/90',
-      buttonGradient: 'from-[#8C52FF] to-[#7C3AED]',
-      lightCardBg: 'bg-purple-50/40'
     };
   }
 

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad10" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#F1F5F9"/>
+    </linearGradient>
+    <linearGradient id="groundGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="600" height="380" rx="20" fill="url(#bgGrad10)"/>
+
+  <!-- Título pedagógico -->
+  <text x="300" y="38" font-family="Nunito, sans-serif" font-size="18" font-weight="900" fill="#1C3257" text-anchor="middle">Niveles Subterráneos de Estacionamiento</text>
+  <text x="300" y="58" font-family="Nunito, sans-serif" font-size="12" font-weight="700" fill="#64748B" text-anchor="middle">Subir hacia la superficie significa aumentar de nivel</text>
+
+  <!-- Corte del edificio a la izquierda -->
+  <g transform="translate(60, 75)">
+    <!-- Piso Calle (Piso 0) -->
+    <rect x="0" y="0" width="240" height="46" rx="8" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="2"/>
+    <text x="20" y="28" font-family="Nunito, sans-serif" font-size="14" font-weight="900" fill="#1E293B">PISO 0 · Calle</text>
+    <rect x="150" y="10" width="75" height="26" rx="6" fill="#F59E0B"/>
+    <text x="187" y="27" font-family="Nunito, sans-serif" font-size="11" font-weight="900" fill="#FFFFFF" text-anchor="middle">ORIGEN</text>
+
+    <!-- Línea divisoria de suelo -->
+    <line x1="-10" y1="46" x2="250" y2="46" stroke="#475569" stroke-width="3"/>
+
+    <!-- Subterráneo Piso -1 -->
+    <rect x="0" y="52" width="240" height="50" rx="8" fill="#F0FDF4" stroke="#86EFAC" stroke-width="2"/>
+    <text x="20" y="82" font-family="Nunito, sans-serif" font-size="15" font-weight="900" fill="#166534">PISO −1 · Subterráneo</text>
+    <rect x="175" y="65" width="55" height="24" rx="6" fill="#16A34A"/>
+    <text x="202" y="81" font-family="Nunito, sans-serif" font-size="11" font-weight="900" fill="#FFFFFF" text-anchor="middle">MAYOR</text>
+
+    <!-- Subterráneo Piso -2 -->
+    <rect x="0" y="108" width="240" height="50" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+    <text x="20" y="138" font-family="Nunito, sans-serif" font-size="13" font-weight="700" fill="#64748B">PISO −2 · Subterráneo</text>
+
+    <!-- Subterráneo Piso -3 -->
+    <rect x="0" y="164" width="240" height="50" rx="8" fill="#FEF2F2" stroke="#FECACA" stroke-width="2"/>
+    <text x="20" y="194" font-family="Nunito, sans-serif" font-size="15" font-weight="900" fill="#991B1B">PISO −3 · Subterráneo</text>
+    <rect x="175" y="177" width="55" height="24" rx="6" fill="#DC2626"/>
+    <text x="202" y="193" font-family="Nunito, sans-serif" font-size="11" font-weight="900" fill="#FFFFFF" text-anchor="middle">MENOR</text>
+
+    <!-- Flecha dinámica de subida desde -3 hasta -1 -->
+    <path d="M255,189 L255,77" fill="none" stroke="#16A34A" stroke-width="4.5"/>
+    <polygon points="255,67 246,80 264,80" fill="#16A34A"/>
+  </g>
+
+  <!-- Tarjeta explicativa pedagógica a la derecha -->
+  <g transform="translate(345, 80)">
+    <rect x="0" y="0" width="200" height="210" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+
+    <rect x="16" y="16" width="105" height="22" rx="6" fill="#F0FDF4"/>
+    <text x="68" y="31" font-family="Nunito, sans-serif" font-size="11" font-weight="900" fill="#16A34A" text-anchor="middle">DESPLAZAMIENTO</text>
+
+    <text x="16" y="65" font-family="Nunito, sans-serif" font-size="15" font-weight="900" fill="#1C3257">Subir de −3 a −1</text>
+
+    <text x="16" y="95" font-family="Nunito, sans-serif" font-size="12" font-weight="600" fill="#64748B">Al subir en el edificio nos</text>
+    <text x="16" y="115" font-family="Nunito, sans-serif" font-size="12" font-weight="600" fill="#64748B">acercamos a la calle (0).</text>
+    <text x="16" y="135" font-family="Nunito, sans-serif" font-size="12" font-weight="600" fill="#64748B">Subir significa avanzar</text>
+    <text x="16" y="155" font-family="Nunito, sans-serif" font-size="12" font-weight="600" fill="#64748B">hacia valores mayores.</text>
+
+    <rect x="16" y="168" width="168" height="32" rx="8" fill="#16A34A"/>
+    <text x="100" y="189" font-family="Nunito, sans-serif" font-size="12" font-weight="900" fill="#FFFFFF" text-anchor="middle">HACIA UN NIVEL MAYOR</text>
+  </g>
+
+  <!-- Conclusión inferior limpia -->
+  <rect x="60" y="315" width="480" height="44" rx="12" fill="#15803D"/>
+  <text x="300" y="342" font-family="Nunito, sans-serif" font-size="15" font-weight="900" fill="#FFFFFF" text-anchor="middle">El piso −1 es un nivel mayor que el piso −3 (−1 &gt; −3)</text>
+</svg>

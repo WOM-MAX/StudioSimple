@@ -35,7 +35,7 @@ function isAmbientActiveStage(
 
 export const StudentLessonView: React.FC = () => {
   const { session, lessonData, setStage } = useLessonSync();
-  const { setViewMode, setActiveSynchronizedLesson, markLessonCompleted } = useApp();
+  const { setViewMode, setActiveSynchronizedLesson, markLessonCompleted, authSession } = useApp();
   const theme = getSubjectTheme(lessonData.metadata.subject);
   const audioRef = useRef<HTMLAudioElement>(null);
   const [soundOn, setSoundOn] = useState(true);
@@ -846,7 +846,10 @@ export const StudentLessonView: React.FC = () => {
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                   <button
                     type="button"
-                    onClick={() => setViewMode('courses')}
+                    onClick={() => {
+                      const targetMode = authSession?.role === 'student' ? 'student' : 'parent';
+                      setViewMode(targetMode);
+                    }}
                     className="w-full sm:w-auto bg-[#1C3257] hover:bg-[#284773] text-white font-bold px-5 py-2.5 rounded-xl flex items-center justify-center gap-2 text-xs shadow-md transition-all cursor-pointer"
                   >
                     <span>Volver a lecciones</span>

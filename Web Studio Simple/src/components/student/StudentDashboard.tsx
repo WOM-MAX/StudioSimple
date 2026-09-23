@@ -231,7 +231,7 @@ export const StudentDashboard: React.FC = () => {
             Tus Clases del Objetivo
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
             {activeOa.lessons.map((lesson) => {
               const isReady = lesson.status === 'ready';
               const isCompleted = lesson.status === 'completed';
@@ -239,57 +239,65 @@ export const StudentDashboard: React.FC = () => {
               return (
                 <div
                   key={lesson.lessonNumber}
-                  className={`border rounded-2xl p-5 shadow-sm transition-all flex flex-col justify-between ${
+                  className={`border rounded-3xl p-5 shadow-sm transition-all flex flex-col justify-between h-full min-h-[350px] relative overflow-hidden ${
                     isReady
                       ? isDark
                         ? 'bg-[#10223D] border-[#12A1A4] ring-1 ring-[#12A1A4]/40 shadow-md'
-                        : 'bg-white border-[#12A1A4] ring-1 ring-[#12A1A4]/30 shadow-md'
+                        : 'bg-white border-[#12A1A4] ring-1 ring-[#12A1A4]/30 shadow-md hover:-translate-y-1'
                       : isDark
                       ? 'bg-[#0E1C33] border-[#1C3257] opacity-75'
                       : 'bg-white border-[#E2E8F0] opacity-80'
                   }`}
                 >
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-xs font-black text-[#12A1A4] uppercase tracking-wider">
+                  {isReady && (
+                    <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#12A1A4] to-[#EE751C]" />
+                  )}
+
+                  <div className="flex flex-col space-y-3">
+                    <div className="flex items-center justify-between gap-1.5">
+                      <span className="text-[11px] font-black text-[#12A1A4] bg-teal-50 border border-teal-200 px-2.5 py-1 rounded-lg uppercase tracking-wider">
                         Clase {lesson.lessonNumber} de 5
                       </span>
-                      <span className={`text-xs font-bold px-2 py-0.5 rounded-md flex items-center gap-1 ${
+                      <span className={`text-[11px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 ${
                         isDark ? 'bg-[#0A192F] text-[#94A3B8]' : 'bg-[#F5F4EF] text-[#748093]'
                       }`}>
                         <Clock className="w-3 h-3 text-[#EE751C]" />
-                        {lesson.durationMinutes} min
+                        {lesson.durationMinutes}m
                       </span>
                     </div>
 
-                    <h3 className={`text-base font-extrabold leading-snug mb-1.5 ${isDark ? 'text-white' : 'text-[#1C3257]'}`}>
+                    <div className="text-[10px] font-black uppercase tracking-wider text-[#12A1A4]">
+                      Fase {lesson.lessonNumber} · Secuencia 30m
+                    </div>
+
+                    <h3 className={`text-sm sm:text-base font-extrabold leading-snug tracking-tight ${isDark ? 'text-white' : 'text-[#1C3257]'}`}>
                       {lesson.title}
                     </h3>
-                    <p className={`text-xs leading-relaxed mb-4 ${isDark ? 'text-[#94A3B8]' : 'text-[#526177]'}`}>
+                    <p className={`text-xs leading-relaxed line-clamp-4 ${isDark ? 'text-[#94A3B8]' : 'text-[#526177]'}`}>
                       {lesson.focusSummary}
                     </p>
                   </div>
 
-                  <div className="pt-3 border-t border-current/10">
+                  <div className="pt-4 mt-auto border-t border-current/10">
                     {isReady ? (
                       <button
                         type="button"
                         onClick={() => setViewMode('lesson')}
-                        className="w-full bg-[#12A1A4] hover:bg-[#0e8b8e] text-white font-extrabold text-xs py-3 px-4 rounded-xl shadow-md flex items-center justify-center gap-2 transition-all hover:scale-[1.02]"
+                        className="w-full bg-[#12A1A4] hover:bg-[#0e8b8e] text-white font-extrabold text-xs py-3 px-3 rounded-2xl shadow-md flex items-center justify-center gap-1.5 transition-all hover:scale-[1.02] text-center"
                       >
-                        <Play className="w-4 h-4 fill-white" />
-                        <span>Entrar a la Sala de Espera</span>
+                        <Play className="w-3.5 h-3.5 fill-white shrink-0" />
+                        <span>Entrar a la Sala</span>
                       </button>
                     ) : isCompleted ? (
-                      <div className="w-full bg-[#EAF4E8] text-[#255E29] font-bold text-xs py-2.5 px-3 rounded-xl flex items-center justify-center gap-1.5 border border-[#BADCB8]">
-                        <CheckCircle2 className="w-4 h-4" />
+                      <div className="w-full bg-[#EAF4E8] text-[#255E29] font-bold text-xs py-2.5 px-3 rounded-2xl flex items-center justify-center gap-1.5 border border-[#BADCB8]">
+                        <CheckCircle2 className="w-4 h-4 shrink-0" />
                         <span>Completada</span>
                       </div>
                     ) : (
-                      <div className={`w-full font-semibold text-xs py-2.5 px-3 rounded-xl flex items-center justify-center gap-1.5 border ${
+                      <div className={`w-full font-semibold text-xs py-2.5 px-3 rounded-2xl flex items-center justify-center gap-1.5 border ${
                         isDark ? 'bg-[#0A192F] text-[#64748B] border-[#1C3257]' : 'bg-[#F5F4EF] text-[#8DA3C0] border-[#E2E8F0]'
                       }`}>
-                        <Lock className="w-3.5 h-3.5" />
+                        <Lock className="w-3.5 h-3.5 shrink-0" />
                         <span>Bloqueada</span>
                       </div>
                     )}

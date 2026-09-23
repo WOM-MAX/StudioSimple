@@ -446,7 +446,7 @@ export const ParentDashboard: React.FC = () => {
                 </span>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
                 {activeOa.lessons.map((lesson) => {
                   const injectedLesson = findInjectedLesson(
                     selectedGrade,
@@ -460,11 +460,11 @@ export const ParentDashboard: React.FC = () => {
                   return (
                     <div
                       key={lesson.lessonNumber}
-                      className={`rounded-3xl p-6 transition-all duration-300 flex flex-col justify-between relative overflow-hidden ${
+                      className={`rounded-3xl p-5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden h-full min-h-[350px] ${
                         isReady
                           ? isDark
                             ? 'bg-[#10223D] border-2 border-[#12A1A4] ring-1 ring-[#12A1A4]/40 shadow-lg'
-                            : 'bg-white border-2 border-[#12A1A4] ring-4 ring-[#12A1A4]/15 shadow-xl shadow-teal-900/10 hover:shadow-2xl hover:-translate-y-0.5'
+                            : 'bg-white border-2 border-[#12A1A4] ring-4 ring-[#12A1A4]/15 shadow-xl shadow-teal-900/10 hover:shadow-2xl hover:-translate-y-1'
                           : isDark
                           ? 'bg-[#0E1C33]/70 border border-[#1C3257] opacity-75'
                           : 'bg-white/80 backdrop-blur-xs border border-slate-200/90 shadow-sm hover:border-slate-300 hover:bg-white hover:shadow-md'
@@ -472,27 +472,31 @@ export const ParentDashboard: React.FC = () => {
                     >
                       {/* Borde superior de acento para la clase activa */}
                       {isReady && (
-                        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#12A1A4] to-[#EE751C]" />
+                        <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#12A1A4] to-[#EE751C]" />
                       )}
 
-                      <div className="space-y-2.5">
-                        <div className="flex items-center justify-between">
-                          <span className={`text-xs font-black uppercase tracking-wider px-2.5 py-0.5 rounded-md ${
+                      <div className="flex flex-col space-y-3">
+                        <div className="flex items-center justify-between gap-1.5">
+                          <span className={`text-[11px] font-black uppercase tracking-wider px-2.5 py-1 rounded-lg ${
                             isReady
                               ? 'bg-teal-50 text-[#0E8284] border border-teal-200'
                               : 'bg-slate-100 text-slate-500 border border-slate-200/70'
                           }`}>
                             Clase {lesson.lessonNumber} de 5
                           </span>
-                          <span className={`text-xs font-bold px-2.5 py-0.5 rounded-md flex items-center gap-1 ${
+                          <span className={`text-[11px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 ${
                             isDark ? 'bg-[#0A192F] text-slate-400' : 'bg-slate-100 text-slate-600 border border-slate-200/70'
                           }`}>
-                            <Clock className="w-3.5 h-3.5 text-[#EE751C]" />
-                            {lesson.durationMinutes} min
+                            <Clock className="w-3 h-3 text-[#EE751C]" />
+                            {lesson.durationMinutes}m
                           </span>
                         </div>
 
-                        <h3 className={`text-base font-black leading-snug tracking-tight ${
+                        <div className="text-[10px] font-black uppercase tracking-wider text-[#EE751C]">
+                          Fase {lesson.lessonNumber} · Secuencia 30m
+                        </div>
+
+                        <h3 className={`text-sm sm:text-base font-black leading-snug tracking-tight ${
                           isReady
                             ? isDark ? 'text-white' : 'text-[#1C3257]'
                             : isDark ? 'text-slate-300' : 'text-slate-700'
@@ -500,7 +504,7 @@ export const ParentDashboard: React.FC = () => {
                           {lesson.title}
                         </h3>
 
-                        <p className={`text-xs leading-relaxed ${
+                        <p className={`text-xs leading-relaxed line-clamp-4 ${
                           isReady
                             ? isDark ? 'text-slate-300' : 'text-slate-600'
                             : isDark ? 'text-slate-500' : 'text-slate-500'
@@ -509,36 +513,36 @@ export const ParentDashboard: React.FC = () => {
                         </p>
                       </div>
 
-                      <div className="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800">
+                      <div className="pt-4 mt-auto border-t border-slate-100 dark:border-slate-800">
                         {isReady ? (
                           <button
                             type="button"
                             onClick={() => {
-                            if (injectedLesson) {
-                              setActiveSynchronizedLesson(injectedLesson);
-                            } else {
-                              setActiveSynchronizedLesson(null);
-                            }
-                            setViewMode('lesson');
-                          }}
-                            className="w-full bg-gradient-to-r from-[#EE751C] to-[#E55B00] hover:from-[#E55B00] hover:to-[#CC4C00] text-white font-black text-xs py-3.5 px-4 rounded-2xl shadow-md shadow-orange-900/20 flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+                              if (injectedLesson) {
+                                setActiveSynchronizedLesson(injectedLesson);
+                              } else {
+                                setActiveSynchronizedLesson(null);
+                              }
+                              setViewMode('lesson');
+                            }}
+                            className="w-full bg-gradient-to-r from-[#EE751C] to-[#E55B00] hover:from-[#E55B00] hover:to-[#CC4C00] text-white font-black text-xs py-3 px-3 rounded-2xl shadow-md shadow-orange-900/20 flex items-center justify-center gap-1.5 transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer text-center"
                           >
-                            <Play className="w-4 h-4 fill-white" />
-                            <span>Iniciar Clase Sincronizada (Host)</span>
+                            <Play className="w-3.5 h-3.5 fill-white shrink-0" />
+                            <span>Iniciar Clase (Host)</span>
                           </button>
                         ) : isCompleted ? (
-                          <div className="w-full bg-emerald-50 text-emerald-800 font-bold text-xs py-3 px-3 rounded-2xl flex items-center justify-center gap-1.5 border border-emerald-200">
-                            <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                            <span>Clase Completada</span>
+                          <div className="w-full bg-emerald-50 text-emerald-800 font-bold text-xs py-2.5 px-3 rounded-2xl flex items-center justify-center gap-1.5 border border-emerald-200">
+                            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                            <span>Completada</span>
                           </div>
                         ) : (
-                          <div className={`w-full font-bold text-xs py-3 px-3 rounded-2xl flex items-center justify-center gap-1.5 border ${
+                          <div className={`w-full font-bold text-xs py-2.5 px-3 rounded-2xl flex items-center justify-center gap-1.5 border ${
                             isDark
                               ? 'bg-[#0A192F] text-slate-500 border-[#1C3257]'
                               : 'bg-slate-100 text-slate-400 border-slate-200/70'
                           }`}>
-                            <Lock className="w-3.5 h-3.5 text-slate-400" />
-                            <span>Bloqueada · Aprueba la clase anterior</span>
+                            <Lock className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+                            <span>Bloqueada</span>
                           </div>
                         )}
                       </div>

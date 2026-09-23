@@ -39,7 +39,7 @@ function formatTime(seconds: number): string {
 
 export const AdultLessonView: React.FC = () => {
   const { session, lessonData, updateSession, setStage, setFeedback } = useLessonSync();
-  const { setViewMode } = useApp();
+  const { setViewMode, authSession } = useApp();
 
   const handleSupport = (text: string) => {
     updateSession({ feedback: { kind: 'support', text }, attempt: 1, supportCount: session.supportCount + 1 });
@@ -1385,7 +1385,10 @@ export const AdultLessonView: React.FC = () => {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                 <button
                   type="button"
-                  onClick={() => setViewMode('courses')}
+                  onClick={() => {
+                    const targetMode = authSession?.role === 'student' ? 'student' : 'parent';
+                    setViewMode(targetMode);
+                  }}
                   className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
                 >
                   <span>Volver al panel de lecciones</span>

@@ -1,7 +1,14 @@
 import { LessonData as PlayerLessonData } from '../types/lesson';
 import { GeneratedOAPackage, LessonData as GeneratorLessonData } from './lesson-generator';
 import { adaptGeneratorLessonToPlayer } from './lesson-adapter';
-import { MATEMATICA_7B_OA01_CLASE01, MATEMATICA_7B_OA01_CLASE02 } from '../data/lessons';
+import {
+  MATEMATICA_7B_OA01_CLASE01,
+  MATEMATICA_7B_OA01_CLASE02,
+  CIENCIAS_7B_OA01_CLASE01,
+  LENGUA_7B_OA03_CLASE01,
+  HISTORIA_7B_OA02_CLASE01,
+  INGLES_7B_OA09_CLASE01
+} from '../data/lessons';
 
 const LOCAL_STORAGE_KEY = 'estudiosimple_injected_lessons';
 
@@ -75,8 +82,9 @@ function normalizeSubject(subject: string): string {
     .trim();
   if (clean.includes('mat')) return 'mat';
   if (clean.includes('leng') || clean.includes('liter')) return 'len';
-  if (clean.includes('cien') || clean.includes('nat')) return 'cie';
+  // Historia debe evaluarse antes de ciencias porque "Ciencias Sociales" contiene "ciencias"
   if (clean.includes('hist') || clean.includes('geog') || clean.includes('soc')) return 'his';
+  if ((clean.includes('cien') && !clean.includes('soc')) || clean.includes('nat')) return 'cie';
   if (clean.includes('ing') || clean.includes('eng')) return 'ing';
   return clean;
 }
@@ -105,6 +113,26 @@ export function findInjectedLesson(
   if ((keyGrade === '7' || keyGrade.includes('7')) && keySubj === 'mat' && keyOa === 'oa1') {
     if (lessonNumber === 1) return MATEMATICA_7B_OA01_CLASE01;
     if (lessonNumber === 2) return MATEMATICA_7B_OA01_CLASE02;
+  }
+
+  // Sobrescrituras manuales curadas de alta fidelidad (Ciencias Naturales 7B OA01)
+  if ((keyGrade === '7' || keyGrade.includes('7')) && keySubj === 'cie' && keyOa === 'oa1') {
+    if (lessonNumber === 1) return CIENCIAS_7B_OA01_CLASE01;
+  }
+
+  // Sobrescrituras manuales curadas de alta fidelidad (Lengua y Literatura 7B OA03)
+  if ((keyGrade === '7' || keyGrade.includes('7')) && keySubj === 'len' && (keyOa === 'oa3' || keyOa === 'oa03')) {
+    if (lessonNumber === 1) return LENGUA_7B_OA03_CLASE01;
+  }
+
+  // Sobrescrituras manuales curadas de alta fidelidad (Historia y Geografia 7B OA02)
+  if ((keyGrade === '7' || keyGrade.includes('7')) && keySubj === 'his' && (keyOa === 'oa2' || keyOa === 'oa02')) {
+    if (lessonNumber === 1) return HISTORIA_7B_OA02_CLASE01;
+  }
+
+  // Sobrescrituras manuales curadas de alta fidelidad (Ingles 7B OA09)
+  if ((keyGrade === '7' || keyGrade.includes('7')) && keySubj === 'ing' && (keyOa === 'oa9' || keyOa === 'oa09')) {
+    if (lessonNumber === 1) return INGLES_7B_OA09_CLASE01;
   }
 
   const foundPkg = cachedInjectedPackages.find(p => {

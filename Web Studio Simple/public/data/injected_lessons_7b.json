@@ -16,8 +16,20 @@
         "situacionIntro": {
           "dialogo": "Hoy en Ciencias Naturales investigamos 'La sexualidad como dimensión integral humana'. En nuestro entorno y en nuestro propio organismo ocurren procesos fascinantes regidos por principios biológicos y físicos. Observa la situación planteada en la pantalla:",
           "pregunta": "¿Qué cambios o evidencias puedes observar en este fenómeno y cómo crees que se explican científicamente?",
-          "respEsperada": "Una respuesta que describa las observaciones directas y proponga una relación de causa y efecto preliminar.",
-          "pistaSocratica": "Guíalo para que observe qué componentes interactúan en este fenómeno y qué ocurre cuando las condiciones cambian."
+          "respEsperada": "Mencionar al menos dos características o transformaciones observables sobre La sexualidad como dimensión integral humana.",
+          "pistaSocratica": "Guíalo para que observe qué componentes interactúan en este fenómeno y qué ocurre cuando las condiciones cambian.",
+          "options": [
+            {
+              "label": "Mencionó características o cambios biológicos/físicos sobre La sexualidad como dimensión integral humana",
+              "kind": "correct",
+              "feedbackText": "¡Exacto! Reconoció las evidencias y conceptos de la clase."
+            },
+            {
+              "label": "Mencionó solo una opinión general sin basarse en lo observado en pantalla",
+              "kind": "needs_support",
+              "feedbackText": "Guíalo para que observe qué componentes interactúan en este fenómeno y qué ocurre cuando las condiciones cambian."
+            }
+          ]
         },
         "paso2_hook": {
           "titulo": "Video Motivacional: El Desafío de La sexualidad como dimensión integral humana",
@@ -267,8 +279,20 @@
         "situacionIntro": {
           "dialogo": "Hoy en Ciencias Naturales investigamos 'Transformaciones físicas y emocionales en la pubertad'. En nuestro entorno y en nuestro propio organismo ocurren procesos fascinantes regidos por principios biológicos y físicos. Observa la situación planteada en la pantalla:",
           "pregunta": "¿Qué cambios o evidencias puedes observar en este fenómeno y cómo crees que se explican científicamente?",
-          "respEsperada": "Una respuesta que describa las observaciones directas y proponga una relación de causa y efecto preliminar.",
-          "pistaSocratica": "Guíalo para que observe qué componentes interactúan en este fenómeno y qué ocurre cuando las condiciones cambian."
+          "respEsperada": "Mencionar al menos dos características o transformaciones observables sobre Transformaciones físicas y emocionales en la pubertad.",
+          "pistaSocratica": "Guíalo para que observe qué componentes interactúan en este fenómeno y qué ocurre cuando las condiciones cambian.",
+          "options": [
+            {
+              "label": "Mencionó características o cambios biológicos/físicos sobre Transformaciones físicas y emocionales en la pubertad",
+              "kind": "correct",
+              "feedbackText": "¡Exacto! Reconoció las evidencias y conceptos de la clase."
+            },
+            {
+              "label": "Mencionó solo una opinión general sin basarse en lo observado en pantalla",
+              "kind": "needs_support",
+              "feedbackText": "Guíalo para que observe qué componentes interactúan en este fenómeno y qué ocurre cuando las condiciones cambian."
+            }
+          ]
         },
         "paso2_hook": {
           "titulo": "Video Motivacional: El Desafío de Transformaciones físicas y emocionales en la pubertad",
@@ -518,8 +542,20 @@
         "situacionIntro": {
           "dialogo": "Hoy en Ciencias Naturales investigamos 'Vínculos afectivos, respeto mutuo e intimidad'. En nuestro entorno y en nuestro propio organismo ocurren procesos fascinantes regidos por principios biológicos y físicos. Observa la situación planteada en la pantalla:",
           "pregunta": "¿Qué cambios o evidencias puedes observar en este fenómeno y cómo crees que se explican científicamente?",
-          "respEsperada": "Una respuesta que describa las observaciones directas y proponga una relación de causa y efecto preliminar.",
-          "pistaSocratica": "Guíalo para que observe qué componentes interactúan en este fenómeno y qué ocurre cuando las condiciones cambian."
+          "respEsperada": "Mencionar al menos dos características o transformaciones observables sobre Vínculos afectivos, respeto mutuo e intimidad.",
+          "pistaSocratica": "Guíalo para que observe qué componentes interactúan en este fenómeno y qué ocurre cuando las condiciones cambian.",
+          "options": [
+            {
+              "label": "Mencionó características o cambios biológicos/físicos sobre Vínculos afectivos, respeto mutuo e intimidad",
+              "kind": "correct",
+              "feedbackText": "¡Exacto! Reconoció las evidencias y conceptos de la clase."
+            },
+            {
+              "label": "Mencionó solo una opinión general sin basarse en lo observado en pantalla",
+              "kind": "needs_support",
+              "feedbackText": "Guíalo para que observe qué componentes interactúan en este fenómeno y qué ocurre cuando las condiciones cambian."
+            }
+          ]
         },
         "paso2_hook": {
           "titulo": "Video Motivacional: El Desafío de Vínculos afectivos, respeto mutuo e intimidad",
@@ -769,8 +805,20 @@
         "situacionIntro": {
           "dialogo": "Hoy en Ciencias Naturales investigamos 'Responsabilidad individual y toma de decisiones'. En nuestro entorno y en nuestro propio organismo ocurren procesos fascinantes regidos por principios biológicos y físicos. Observa la situación planteada en la pantalla:",
           "pregunta": "¿Qué cambios o evidencias puedes observar en este fenómeno y cómo crees que se explican científicamente?",
-          "respEsperada": "Una respuesta que describa las observaciones directas y proponga una relación de causa y efecto preliminar.",
-          "pistaSocratica": "Guíalo para que observe qué componentes interactúan en este fenómeno y qué ocurre cuando las condiciones cambian."
+          "respEsperada": "Mencionar al menos dos características o transformaciones observables sobre Responsabilidad individual y toma de decisiones.",
+          "pistaSocratica": "Guíalo para que observe qué componentes interactúan en este fenómeno y qué ocurre cuando las condiciones cambian.",
+          "options": [
+            {
+              "label": "Mencionó características o cambios biológicos/físicos sobre Responsabilidad individual y toma de decisiones",
+              "kind": "correct",
+              "feedbackText": "¡Exacto! Reconoció las evidencias y conceptos de la clase."
+            },
+            {
+              "label": "Mencionó solo una opinión general sin basarse en lo observado en pantalla",
+              "kind": "needs_support",
+              "feedbackText": "Guíalo para que observe qué componentes interactúan en este fenómeno y qué ocurre cuando las condiciones cambian."
+            }
+          ]
         },
         "paso2_hook": {
           "titulo": "Video Motivacional: El Desafío de Responsabilidad individual y toma de decisiones",
@@ -1020,8 +1068,20 @@
         "situacionIntro": {
           "dialogo": "Hoy en Ciencias Naturales investigamos 'Mitos, estereotipos y convivencia saludable'. En nuestro entorno y en nuestro propio organismo ocurren procesos fascinantes regidos por principios biológicos y físicos. Observa la situación planteada en la pantalla:",
           "pregunta": "¿Qué cambios o evidencias puedes observar en este fenómeno y cómo crees que se explican científicamente?",
-          "respEsperada": "Una respuesta que describa las observaciones directas y proponga una relación de causa y efecto preliminar.",
-          "pistaSocratica": "Guíalo para que observe qué componentes interactúan en este fenómeno y qué ocurre cuando las condiciones cambian."
+          "respEsperada": "Mencionar al menos dos características o transformaciones observables sobre Mitos, estereotipos y convivencia saludable.",
+          "pistaSocratica": "Guíalo para que observe qué componentes interactúan en este fenómeno y qué ocurre cuando las condiciones cambian.",
+          "options": [
+            {
+              "label": "Mencionó características o cambios biológicos/físicos sobre Mitos, estereotipos y convivencia saludable",
+              "kind": "correct",
+              "feedbackText": "¡Exacto! Reconoció las evidencias y conceptos de la clase."
+            },
+            {
+              "label": "Mencionó solo una opinión general sin basarse en lo observado en pantalla",
+              "kind": "needs_support",
+              "feedbackText": "Guíalo para que observe qué componentes interactúan en este fenómeno y qué ocurre cuando las condiciones cambian."
+            }
+          ]
         },
         "paso2_hook": {
           "titulo": "Video Motivacional: El Desafío de Mitos, estereotipos y convivencia saludable",
@@ -1271,8 +1331,20 @@
         "situacionIntro": {
           "dialogo": "Hoy en Ciencias Naturales investigamos 'Síntesis y simulación tipo Examen Libre'. En nuestro entorno y en nuestro propio organismo ocurren procesos fascinantes regidos por principios biológicos y físicos. Observa la situación planteada en la pantalla:",
           "pregunta": "¿Qué cambios o evidencias puedes observar en este fenómeno y cómo crees que se explican científicamente?",
-          "respEsperada": "Una respuesta que describa las observaciones directas y proponga una relación de causa y efecto preliminar.",
-          "pistaSocratica": "Guíalo para que observe qué componentes interactúan en este fenómeno y qué ocurre cuando las condiciones cambian."
+          "respEsperada": "Mencionar al menos dos características o transformaciones observables sobre Síntesis y simulación tipo Examen Libre.",
+          "pistaSocratica": "Guíalo para que observe qué componentes interactúan en este fenómeno y qué ocurre cuando las condiciones cambian.",
+          "options": [
+            {
+              "label": "Mencionó características o cambios biológicos/físicos sobre Síntesis y simulación tipo Examen Libre",
+              "kind": "correct",
+              "feedbackText": "¡Exacto! Reconoció las evidencias y conceptos de la clase."
+            },
+            {
+              "label": "Mencionó solo una opinión general sin basarse en lo observado en pantalla",
+              "kind": "needs_support",
+              "feedbackText": "Guíalo para que observe qué componentes interactúan en este fenómeno y qué ocurre cuando las condiciones cambian."
+            }
+          ]
         },
         "paso2_hook": {
           "titulo": "Video Motivacional: El Desafío de Síntesis y simulación tipo Examen Libre",
@@ -1531,8 +1603,20 @@
         "situacionIntro": {
           "dialogo": "Hoy en Historia y Ciencias Sociales nos situamos en 'El fin del nomadismo y el surgimiento agrícola'. Cada época histórica y cada territorio plantean desafíos que llevaron a las sociedades a organizarse, transformarse y crear cultura. Observa el escenario planteado en la pantalla:",
           "pregunta": "¿Por qué crees que las personas o comunidades de esa época tomaron esas decisiones frente a su entorno geográfico y social?",
-          "respEsperada": "Una respuesta que reconozca las necesidades de subsistencia, la organización comunitaria o los ideales de la época.",
-          "pistaSocratica": "Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?"
+          "respEsperada": "Explicar las necesidades de subsistencia, recursos o causas sociales de El fin del nomadismo y el surgimiento agrícola.",
+          "pistaSocratica": "Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?",
+          "options": [
+            {
+              "label": "Explicó las necesidades de subsistencia o motivos de la época para El fin del nomadismo y el surgimiento agrícola",
+              "kind": "correct",
+              "feedbackText": "¡Exacto! Comprendió las causas que motivaron a las personas de esa época."
+            },
+            {
+              "label": "Solo mencionó hechos aislados sin explicar por qué ocurrieron",
+              "kind": "needs_support",
+              "feedbackText": "Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?"
+            }
+          ]
         },
         "paso2_hook": {
           "titulo": "Video Motivacional: El Desafío de El fin del nomadismo y el surgimiento agrícola",
@@ -1782,8 +1866,20 @@
         "situacionIntro": {
           "dialogo": "Hoy en Historia y Ciencias Sociales nos situamos en 'Domesticación de animales y plantas en el Creciente Fértil'. Cada época histórica y cada territorio plantean desafíos que llevaron a las sociedades a organizarse, transformarse y crear cultura. Observa el escenario planteado en la pantalla:",
           "pregunta": "¿Por qué crees que las personas o comunidades de esa época tomaron esas decisiones frente a su entorno geográfico y social?",
-          "respEsperada": "Una respuesta que reconozca las necesidades de subsistencia, la organización comunitaria o los ideales de la época.",
-          "pistaSocratica": "Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?"
+          "respEsperada": "Explicar las necesidades de subsistencia, recursos o causas sociales de Domesticación de animales y plantas en el Creciente Fértil.",
+          "pistaSocratica": "Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?",
+          "options": [
+            {
+              "label": "Explicó las necesidades de subsistencia o motivos de la época para Domesticación de animales y plantas en el Creciente Fértil",
+              "kind": "correct",
+              "feedbackText": "¡Exacto! Comprendió las causas que motivaron a las personas de esa época."
+            },
+            {
+              "label": "Solo mencionó hechos aislados sin explicar por qué ocurrieron",
+              "kind": "needs_support",
+              "feedbackText": "Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?"
+            }
+          ]
         },
         "paso2_hook": {
           "titulo": "Video Motivacional: El Desafío de Domesticación de animales y plantas en el Creciente Fértil",
@@ -2033,8 +2129,20 @@
         "situacionIntro": {
           "dialogo": "Hoy en Historia y Ciencias Sociales nos situamos en 'Primeras aldeas sedentarias y división del trabajo'. Cada época histórica y cada territorio plantean desafíos que llevaron a las sociedades a organizarse, transformarse y crear cultura. Observa el escenario planteado en la pantalla:",
           "pregunta": "¿Por qué crees que las personas o comunidades de esa época tomaron esas decisiones frente a su entorno geográfico y social?",
-          "respEsperada": "Una respuesta que reconozca las necesidades de subsistencia, la organización comunitaria o los ideales de la época.",
-          "pistaSocratica": "Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?"
+          "respEsperada": "Explicar las necesidades de subsistencia, recursos o causas sociales de Primeras aldeas sedentarias y división del trabajo.",
+          "pistaSocratica": "Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?",
+          "options": [
+            {
+              "label": "Explicó las necesidades de subsistencia o motivos de la época para Primeras aldeas sedentarias y división del trabajo",
+              "kind": "correct",
+              "feedbackText": "¡Exacto! Comprendió las causas que motivaron a las personas de esa época."
+            },
+            {
+              "label": "Solo mencionó hechos aislados sin explicar por qué ocurrieron",
+              "kind": "needs_support",
+              "feedbackText": "Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?"
+            }
+          ]
         },
         "paso2_hook": {
           "titulo": "Video Motivacional: El Desafío de Primeras aldeas sedentarias y división del trabajo",
@@ -2284,8 +2392,20 @@
         "situacionIntro": {
           "dialogo": "Hoy en Historia y Ciencias Sociales nos situamos en 'Innovaciones tecnológicas del Neolítico'. Cada época histórica y cada territorio plantean desafíos que llevaron a las sociedades a organizarse, transformarse y crear cultura. Observa el escenario planteado en la pantalla:",
           "pregunta": "¿Por qué crees que las personas o comunidades de esa época tomaron esas decisiones frente a su entorno geográfico y social?",
-          "respEsperada": "Una respuesta que reconozca las necesidades de subsistencia, la organización comunitaria o los ideales de la época.",
-          "pistaSocratica": "Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?"
+          "respEsperada": "Explicar las necesidades de subsistencia, recursos o causas sociales de Innovaciones tecnológicas del Neolítico.",
+          "pistaSocratica": "Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?",
+          "options": [
+            {
+              "label": "Explicó las necesidades de subsistencia o motivos de la época para Innovaciones tecnológicas del Neolítico",
+              "kind": "correct",
+              "feedbackText": "¡Exacto! Comprendió las causas que motivaron a las personas de esa época."
+            },
+            {
+              "label": "Solo mencionó hechos aislados sin explicar por qué ocurrieron",
+              "kind": "needs_support",
+              "feedbackText": "Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?"
+            }
+          ]
         },
         "paso2_hook": {
           "titulo": "Video Motivacional: El Desafío de Innovaciones tecnológicas del Neolítico",
@@ -2535,8 +2655,20 @@
         "situacionIntro": {
           "dialogo": "Hoy en Historia y Ciencias Sociales nos situamos en 'Consecuencias históricas y síntesis de la Revolución Neolítica'. Cada época histórica y cada territorio plantean desafíos que llevaron a las sociedades a organizarse, transformarse y crear cultura. Observa el escenario planteado en la pantalla:",
           "pregunta": "¿Por qué crees que las personas o comunidades de esa época tomaron esas decisiones frente a su entorno geográfico y social?",
-          "respEsperada": "Una respuesta que reconozca las necesidades de subsistencia, la organización comunitaria o los ideales de la época.",
-          "pistaSocratica": "Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?"
+          "respEsperada": "Explicar las necesidades de subsistencia, recursos o causas sociales de Consecuencias históricas y síntesis de la Revolución Neolítica.",
+          "pistaSocratica": "Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?",
+          "options": [
+            {
+              "label": "Explicó las necesidades de subsistencia o motivos de la época para Consecuencias históricas y síntesis de la Revolución Neolítica",
+              "kind": "correct",
+              "feedbackText": "¡Exacto! Comprendió las causas que motivaron a las personas de esa época."
+            },
+            {
+              "label": "Solo mencionó hechos aislados sin explicar por qué ocurrieron",
+              "kind": "needs_support",
+              "feedbackText": "Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?"
+            }
+          ]
         },
         "paso2_hook": {
           "titulo": "Video Motivacional: El Desafío de Consecuencias históricas y síntesis de la Revolución Neolítica",
@@ -2795,8 +2927,20 @@
         "situacionIntro": {
           "dialogo": "Hoy en nuestra sesión de English exploramos 'Setting and Characters in Short Stories'. El apoderado guía la sesión en español, mientras que el estudiante lee y escucha en inglés. Lee la siguiente frase introductoria en voz alta:",
           "pregunta": "\"What is the main situation described in this English sentence? (¿Cuál es la situación principal descrita en la oración?)\"",
-          "respEsperada": "An answer identifying the main action, setting, or characters in English or Spanish.",
-          "pistaSocratica": "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general."
+          "respEsperada": "Identificar en español o inglés los personajes (characters), la acción o el lugar (setting) sobre Setting and Characters in Short Stories.",
+          "pistaSocratica": "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general.",
+          "options": [
+            {
+              "label": "Identificó a los personajes, la acción o el lugar de la oración en inglés",
+              "kind": "correct",
+              "feedbackText": "¡Very good! Supo reconocer los elementos clave de la oración en inglés."
+            },
+            {
+              "label": "Tuvo dudas con el vocabulario o no identificó a los personajes ni el lugar",
+              "kind": "needs_support",
+              "feedbackText": "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general."
+            }
+          ]
         },
         "paso2_hook": {
           "titulo": "Video Motivacional: El Desafío de Setting and Characters in Short Stories",
@@ -3046,8 +3190,20 @@
         "situacionIntro": {
           "dialogo": "Hoy en nuestra sesión de English exploramos 'Chronological Sequence and Time Connectors'. El apoderado guía la sesión en español, mientras que el estudiante lee y escucha en inglés. Lee la siguiente frase introductoria en voz alta:",
           "pregunta": "\"What is the main situation described in this English sentence? (¿Cuál es la situación principal descrita en la oración?)\"",
-          "respEsperada": "An answer identifying the main action, setting, or characters in English or Spanish.",
-          "pistaSocratica": "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general."
+          "respEsperada": "Identificar en español o inglés los personajes (characters), la acción o el lugar (setting) sobre Chronological Sequence and Time Connectors.",
+          "pistaSocratica": "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general.",
+          "options": [
+            {
+              "label": "Identificó a los personajes, la acción o el lugar de la oración en inglés",
+              "kind": "correct",
+              "feedbackText": "¡Very good! Supo reconocer los elementos clave de la oración en inglés."
+            },
+            {
+              "label": "Tuvo dudas con el vocabulario o no identificó a los personajes ni el lugar",
+              "kind": "needs_support",
+              "feedbackText": "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general."
+            }
+          ]
         },
         "paso2_hook": {
           "titulo": "Video Motivacional: El Desafío de Chronological Sequence and Time Connectors",
@@ -3297,8 +3453,20 @@
         "situacionIntro": {
           "dialogo": "Hoy en nuestra sesión de English exploramos 'Past Simple Tense: Regular and Irregular Verbs'. El apoderado guía la sesión en español, mientras que el estudiante lee y escucha en inglés. Lee la siguiente frase introductoria en voz alta:",
           "pregunta": "\"What is the main situation described in this English sentence? (¿Cuál es la situación principal descrita en la oración?)\"",
-          "respEsperada": "An answer identifying the main action, setting, or characters in English or Spanish.",
-          "pistaSocratica": "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general."
+          "respEsperada": "Identificar en español o inglés los personajes (characters), la acción o el lugar (setting) sobre Past Simple Tense: Regular and Irregular Verbs.",
+          "pistaSocratica": "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general.",
+          "options": [
+            {
+              "label": "Identificó a los personajes, la acción o el lugar de la oración en inglés",
+              "kind": "correct",
+              "feedbackText": "¡Very good! Supo reconocer los elementos clave de la oración en inglés."
+            },
+            {
+              "label": "Tuvo dudas con el vocabulario o no identificó a los personajes ni el lugar",
+              "kind": "needs_support",
+              "feedbackText": "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general."
+            }
+          ]
         },
         "paso2_hook": {
           "titulo": "Video Motivacional: El Desafío de Past Simple Tense: Regular and Irregular Verbs",
@@ -3548,8 +3716,20 @@
         "situacionIntro": {
           "dialogo": "Hoy en nuestra sesión de English exploramos 'Character Feelings, Dialogue, and Conflict'. El apoderado guía la sesión en español, mientras que el estudiante lee y escucha en inglés. Lee la siguiente frase introductoria en voz alta:",
           "pregunta": "\"What is the main situation described in this English sentence? (¿Cuál es la situación principal descrita en la oración?)\"",
-          "respEsperada": "An answer identifying the main action, setting, or characters in English or Spanish.",
-          "pistaSocratica": "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general."
+          "respEsperada": "Identificar en español o inglés los personajes (characters), la acción o el lugar (setting) sobre Character Feelings, Dialogue, and Conflict.",
+          "pistaSocratica": "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general.",
+          "options": [
+            {
+              "label": "Identificó a los personajes, la acción o el lugar de la oración en inglés",
+              "kind": "correct",
+              "feedbackText": "¡Very good! Supo reconocer los elementos clave de la oración en inglés."
+            },
+            {
+              "label": "Tuvo dudas con el vocabulario o no identificó a los personajes ni el lugar",
+              "kind": "needs_support",
+              "feedbackText": "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general."
+            }
+          ]
         },
         "paso2_hook": {
           "titulo": "Video Motivacional: El Desafío de Character Feelings, Dialogue, and Conflict",
@@ -3799,8 +3979,20 @@
         "situacionIntro": {
           "dialogo": "Hoy en nuestra sesión de English exploramos 'Práctica avanzada y modelamiento de OA 9 (Parte 1)'. El apoderado guía la sesión en español, mientras que el estudiante lee y escucha en inglés. Lee la siguiente frase introductoria en voz alta:",
           "pregunta": "\"What is the main situation described in this English sentence? (¿Cuál es la situación principal descrita en la oración?)\"",
-          "respEsperada": "An answer identifying the main action, setting, or characters in English or Spanish.",
-          "pistaSocratica": "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general."
+          "respEsperada": "Identificar en español o inglés los personajes (characters), la acción o el lugar (setting) sobre Práctica avanzada y modelamiento de OA 9 (Parte 1).",
+          "pistaSocratica": "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general.",
+          "options": [
+            {
+              "label": "Identificó a los personajes, la acción o el lugar de la oración en inglés",
+              "kind": "correct",
+              "feedbackText": "¡Very good! Supo reconocer los elementos clave de la oración en inglés."
+            },
+            {
+              "label": "Tuvo dudas con el vocabulario o no identificó a los personajes ni el lugar",
+              "kind": "needs_support",
+              "feedbackText": "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general."
+            }
+          ]
         },
         "paso2_hook": {
           "titulo": "Video Motivacional: El Desafío de Práctica avanzada y modelamiento de OA 9 (Parte 1)",
@@ -4050,8 +4242,20 @@
         "situacionIntro": {
           "dialogo": "Hoy en nuestra sesión de English exploramos 'Resolution, Moral of the Story, and Reading Test'. El apoderado guía la sesión en español, mientras que el estudiante lee y escucha en inglés. Lee la siguiente frase introductoria en voz alta:",
           "pregunta": "\"What is the main situation described in this English sentence? (¿Cuál es la situación principal descrita en la oración?)\"",
-          "respEsperada": "An answer identifying the main action, setting, or characters in English or Spanish.",
-          "pistaSocratica": "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general."
+          "respEsperada": "Identificar en español o inglés los personajes (characters), la acción o el lugar (setting) sobre Resolution, Moral of the Story, and Reading Test.",
+          "pistaSocratica": "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general.",
+          "options": [
+            {
+              "label": "Identificó a los personajes, la acción o el lugar de la oración en inglés",
+              "kind": "correct",
+              "feedbackText": "¡Very good! Supo reconocer los elementos clave de la oración en inglés."
+            },
+            {
+              "label": "Tuvo dudas con el vocabulario o no identificó a los personajes ni el lugar",
+              "kind": "needs_support",
+              "feedbackText": "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general."
+            }
+          ]
         },
         "paso2_hook": {
           "titulo": "Video Motivacional: El Desafío de Resolution, Moral of the Story, and Reading Test",
@@ -4310,8 +4514,20 @@
         "situacionIntro": {
           "dialogo": "Hoy en Lengua y Literatura nos adentramos en 'El conflicto narrativo y la trama de la historia'. Los textos literarios y no literarios nos comunican visiones de mundo, emociones e ideas que cobran vida al leer. Observa el fragmento inicial en la pantalla:",
           "pregunta": "¿Qué impresión, emoción o idea principal te transmite este fragmento a primera vista?",
-          "respEsperada": "Una respuesta que identifique el conflicto, la emoción del hablante o el tema central del texto.",
-          "pistaSocratica": "Invítalo a releer la primera oración y a fijarse en los adjetivos y acciones de los personajes o del emisor."
+          "respEsperada": "Identificar el conflicto central, la emoción del hablante o el tema principal de El conflicto narrativo y la trama de la historia.",
+          "pistaSocratica": "Invítalo a releer la primera oración y a fijarse en los adjetivos y acciones de los personajes o del emisor.",
+          "options": [
+            {
+              "label": "Identificó el conflicto, la emoción del hablante o el tema central de El conflicto narrativo y la trama de la historia",
+              "kind": "correct",
+              "feedbackText": "¡Muy bien! Reconoció con claridad el conflicto y el sentido del texto."
+            },
+            {
+              "label": "Solo nombró detalles secundarios sin identificar el conflicto o emoción principal",
+              "kind": "needs_support",
+              "feedbackText": "Invítalo a releer la primera oración y a fijarse en los adjetivos y acciones de los personajes o del emisor."
+            }
+          ]
         },
         "paso2_hook": {
           "titulo": "Video Motivacional: El Desafío de El conflicto narrativo y la trama de la historia",
@@ -4561,8 +4777,20 @@
         "situacionIntro": {
           "dialogo": "Hoy en Lengua y Literatura nos adentramos en 'Evolución y roles de los personajes'. Los textos literarios y no literarios nos comunican visiones de mundo, emociones e ideas que cobran vida al leer. Observa el fragmento inicial en la pantalla:",
           "pregunta": "¿Qué impresión, emoción o idea principal te transmite este fragmento a primera vista?",
-          "respEsperada": "Una respuesta que identifique el conflicto, la emoción del hablante o el tema central del texto.",
-          "pistaSocratica": "Invítalo a releer la primera oración y a fijarse en los adjetivos y acciones de los personajes o del emisor."
+          "respEsperada": "Identificar el conflicto central, la emoción del hablante o el tema principal de Evolución y roles de los personajes.",
+          "pistaSocratica": "Invítalo a releer la primera oración y a fijarse en los adjetivos y acciones de los personajes o del emisor.",
+          "options": [
+            {
+              "label": "Identificó el conflicto, la emoción del hablante o el tema central de Evolución y roles de los personajes",
+              "kind": "correct",
+              "feedbackText": "¡Muy bien! Reconoció con claridad el conflicto y el sentido del texto."
+            },
+            {
+              "label": "Solo nombró detalles secundarios sin identificar el conflicto o emoción principal",
+              "kind": "needs_support",
+              "feedbackText": "Invítalo a releer la primera oración y a fijarse en los adjetivos y acciones de los personajes o del emisor."
+            }
+          ]
         },
         "paso2_hook": {
           "titulo": "Video Motivacional: El Desafío de Evolución y roles de los personajes",
@@ -4812,8 +5040,20 @@
         "situacionIntro": {
           "dialogo": "Hoy en Lengua y Literatura nos adentramos en 'La voz del narrador y perspectivas'. Los textos literarios y no literarios nos comunican visiones de mundo, emociones e ideas que cobran vida al leer. Observa el fragmento inicial en la pantalla:",
           "pregunta": "¿Qué impresión, emoción o idea principal te transmite este fragmento a primera vista?",
-          "respEsperada": "Una respuesta que identifique el conflicto, la emoción del hablante o el tema central del texto.",
-          "pistaSocratica": "Invítalo a releer la primera oración y a fijarse en los adjetivos y acciones de los personajes o del emisor."
+          "respEsperada": "Identificar el conflicto central, la emoción del hablante o el tema principal de La voz del narrador y perspectivas.",
+          "pistaSocratica": "Invítalo a releer la primera oración y a fijarse en los adjetivos y acciones de los personajes o del emisor.",
+          "options": [
+            {
+              "label": "Identificó el conflicto, la emoción del hablante o el tema central de La voz del narrador y perspectivas",
+              "kind": "correct",
+              "feedbackText": "¡Muy bien! Reconoció con claridad el conflicto y el sentido del texto."
+            },
+            {
+              "label": "Solo nombró detalles secundarios sin identificar el conflicto o emoción principal",
+              "kind": "needs_support",
+              "feedbackText": "Invítalo a releer la primera oración y a fijarse en los adjetivos y acciones de los personajes o del emisor."
+            }
+          ]
         },
         "paso2_hook": {
           "titulo": "Video Motivacional: El Desafío de La voz del narrador y perspectivas",
@@ -5063,8 +5303,20 @@
         "situacionIntro": {
           "dialogo": "Hoy en Lengua y Literatura nos adentramos en 'Disposición temporal de los acontecimientos'. Los textos literarios y no literarios nos comunican visiones de mundo, emociones e ideas que cobran vida al leer. Observa el fragmento inicial en la pantalla:",
           "pregunta": "¿Qué impresión, emoción o idea principal te transmite este fragmento a primera vista?",
-          "respEsperada": "Una respuesta que identifique el conflicto, la emoción del hablante o el tema central del texto.",
-          "pistaSocratica": "Invítalo a releer la primera oración y a fijarse en los adjetivos y acciones de los personajes o del emisor."
+          "respEsperada": "Identificar el conflicto central, la emoción del hablante o el tema principal de Disposición temporal de los acontecimientos.",
+          "pistaSocratica": "Invítalo a releer la primera oración y a fijarse en los adjetivos y acciones de los personajes o del emisor.",
+          "options": [
+            {
+              "label": "Identificó el conflicto, la emoción del hablante o el tema central de Disposición temporal de los acontecimientos",
+              "kind": "correct",
+              "feedbackText": "¡Muy bien! Reconoció con claridad el conflicto y el sentido del texto."
+            },
+            {
+              "label": "Solo nombró detalles secundarios sin identificar el conflicto o emoción principal",
+              "kind": "needs_support",
+              "feedbackText": "Invítalo a releer la primera oración y a fijarse en los adjetivos y acciones de los personajes o del emisor."
+            }
+          ]
         },
         "paso2_hook": {
           "titulo": "Video Motivacional: El Desafío de Disposición temporal de los acontecimientos",
@@ -5314,8 +5566,20 @@
         "situacionIntro": {
           "dialogo": "Hoy en Lengua y Literatura nos adentramos en 'Práctica avanzada y modelamiento de OA 3 (Parte 1)'. Los textos literarios y no literarios nos comunican visiones de mundo, emociones e ideas que cobran vida al leer. Observa el fragmento inicial en la pantalla:",
           "pregunta": "¿Qué impresión, emoción o idea principal te transmite este fragmento a primera vista?",
-          "respEsperada": "Una respuesta que identifique el conflicto, la emoción del hablante o el tema central del texto.",
-          "pistaSocratica": "Invítalo a releer la primera oración y a fijarse en los adjetivos y acciones de los personajes o del emisor."
+          "respEsperada": "Identificar el conflicto central, la emoción del hablante o el tema principal de Práctica avanzada y modelamiento de OA 3 (Parte 1).",
+          "pistaSocratica": "Invítalo a releer la primera oración y a fijarse en los adjetivos y acciones de los personajes o del emisor.",
+          "options": [
+            {
+              "label": "Identificó el conflicto, la emoción del hablante o el tema central de Práctica avanzada y modelamiento de OA 3 (Parte 1)",
+              "kind": "correct",
+              "feedbackText": "¡Muy bien! Reconoció con claridad el conflicto y el sentido del texto."
+            },
+            {
+              "label": "Solo nombró detalles secundarios sin identificar el conflicto o emoción principal",
+              "kind": "needs_support",
+              "feedbackText": "Invítalo a releer la primera oración y a fijarse en los adjetivos y acciones de los personajes o del emisor."
+            }
+          ]
         },
         "paso2_hook": {
           "titulo": "Video Motivacional: El Desafío de Práctica avanzada y modelamiento de OA 3 (Parte 1)",
@@ -5565,8 +5829,20 @@
         "situacionIntro": {
           "dialogo": "Hoy en Lengua y Literatura nos adentramos en 'Interpretación global, visión de mundo y síntesis'. Los textos literarios y no literarios nos comunican visiones de mundo, emociones e ideas que cobran vida al leer. Observa el fragmento inicial en la pantalla:",
           "pregunta": "¿Qué impresión, emoción o idea principal te transmite este fragmento a primera vista?",
-          "respEsperada": "Una respuesta que identifique el conflicto, la emoción del hablante o el tema central del texto.",
-          "pistaSocratica": "Invítalo a releer la primera oración y a fijarse en los adjetivos y acciones de los personajes o del emisor."
+          "respEsperada": "Identificar el conflicto central, la emoción del hablante o el tema principal de Interpretación global, visión de mundo y síntesis.",
+          "pistaSocratica": "Invítalo a releer la primera oración y a fijarse en los adjetivos y acciones de los personajes o del emisor.",
+          "options": [
+            {
+              "label": "Identificó el conflicto, la emoción del hablante o el tema central de Interpretación global, visión de mundo y síntesis",
+              "kind": "correct",
+              "feedbackText": "¡Muy bien! Reconoció con claridad el conflicto y el sentido del texto."
+            },
+            {
+              "label": "Solo nombró detalles secundarios sin identificar el conflicto o emoción principal",
+              "kind": "needs_support",
+              "feedbackText": "Invítalo a releer la primera oración y a fijarse en los adjetivos y acciones de los personajes o del emisor."
+            }
+          ]
         },
         "paso2_hook": {
           "titulo": "Video Motivacional: El Desafío de Interpretación global, visión de mundo y síntesis",
@@ -5826,7 +6102,19 @@
           "dialogo": "Hoy comenzamos con los números enteros. Observa la situación del ascensor: el nivel de la calle se representa con el cero y los estacionamientos están bajo tierra.",
           "pregunta": "Si un vehículo se encuentra tres pisos bajo tierra, ¿qué número entero representa esa posición?",
           "respEsperada": "−3",
-          "pistaSocratica": "Tenemos un piso 3 sobre la calle y un piso 3 bajo tierra. Para diferenciarlos, a los niveles bajo tierra les colocamos un signo menos. ¿Qué número entero representa esa posición?"
+          "pistaSocratica": "Tenemos un piso 3 sobre la calle y un piso 3 bajo tierra. Para diferenciarlos, a los niveles bajo tierra les colocamos un signo menos. ¿Qué número entero representa esa posición?",
+          "options": [
+            {
+              "label": "Identificó los datos numéricos y explicó la relación matemática correspondiente",
+              "kind": "correct",
+              "feedbackText": "¡Exacto! Reconoció los valores dados y el procedimiento matemático necesario."
+            },
+            {
+              "label": "Mencionó solo los números sin explicar la relación ni la operación",
+              "kind": "needs_support",
+              "feedbackText": "Tenemos un piso 3 sobre la calle y un piso 3 bajo tierra. Para diferenciarlos, a los niveles bajo tierra les colocamos un signo menos. ¿Qué número entero representa esa posición?"
+            }
+          ]
         },
         "paso2_hook": {
           "titulo": "El recorrido del submarino",
@@ -6110,8 +6398,20 @@
         "situacionIntro": {
           "dialogo": "Hoy exploramos 'La recta numérica y orden en Z'. En la vida real nos encontramos con situaciones donde necesitamos cuantificar y relacionar magnitudes con exactitud. Observa los datos del problema inicial en la pantalla:",
           "pregunta": "¿Qué datos numéricos reconoces en este caso y qué relación crees que existe entre ellos?",
-          "respEsperada": "Una respuesta que identifique las cantidades dadas y el tipo de relación u operación matemática requerida.",
-          "pistaSocratica": "Pídele que señale qué representa cada número en el contexto antes de intentar calcular."
+          "respEsperada": "Identificar los datos numéricos y la operación o relación matemática correspondiente a La recta numérica y orden en Z.",
+          "pistaSocratica": "Pídele que señale qué representa cada número en el contexto antes de intentar calcular.",
+          "options": [
+            {
+              "label": "Identificó los datos numéricos y explicó la relación matemática correspondiente",
+              "kind": "correct",
+              "feedbackText": "¡Exacto! Reconoció los valores dados y el procedimiento matemático necesario."
+            },
+            {
+              "label": "Mencionó solo los números sin explicar la relación ni la operación",
+              "kind": "needs_support",
+              "feedbackText": "Pídele que señale qué representa cada número en el contexto antes de intentar calcular."
+            }
+          ]
         },
         "paso2_hook": {
           "titulo": "Video Motivacional: El Desafío de La recta numérica y orden en Z",
@@ -6361,8 +6661,20 @@
         "situacionIntro": {
           "dialogo": "Hoy exploramos 'Valor absoluto y números opuestos'. En la vida real nos encontramos con situaciones donde necesitamos cuantificar y relacionar magnitudes con exactitud. Observa los datos del problema inicial en la pantalla:",
           "pregunta": "¿Qué datos numéricos reconoces en este caso y qué relación crees que existe entre ellos?",
-          "respEsperada": "Una respuesta que identifique las cantidades dadas y el tipo de relación u operación matemática requerida.",
-          "pistaSocratica": "Pídele que señale qué representa cada número en el contexto antes de intentar calcular."
+          "respEsperada": "Identificar los datos numéricos y la operación o relación matemática correspondiente a Valor absoluto y números opuestos.",
+          "pistaSocratica": "Pídele que señale qué representa cada número en el contexto antes de intentar calcular.",
+          "options": [
+            {
+              "label": "Identificó los datos numéricos y explicó la relación matemática correspondiente",
+              "kind": "correct",
+              "feedbackText": "¡Exacto! Reconoció los valores dados y el procedimiento matemático necesario."
+            },
+            {
+              "label": "Mencionó solo los números sin explicar la relación ni la operación",
+              "kind": "needs_support",
+              "feedbackText": "Pídele que señale qué representa cada número en el contexto antes de intentar calcular."
+            }
+          ]
         },
         "paso2_hook": {
           "titulo": "Video Motivacional: El Desafío de Valor absoluto y números opuestos",
@@ -6612,8 +6924,20 @@
         "situacionIntro": {
           "dialogo": "Hoy exploramos 'Adición de enteros de igual y distinto signo'. En la vida real nos encontramos con situaciones donde necesitamos cuantificar y relacionar magnitudes con exactitud. Observa los datos del problema inicial en la pantalla:",
           "pregunta": "¿Qué datos numéricos reconoces en este caso y qué relación crees que existe entre ellos?",
-          "respEsperada": "Una respuesta que identifique las cantidades dadas y el tipo de relación u operación matemática requerida.",
-          "pistaSocratica": "Pídele que señale qué representa cada número en el contexto antes de intentar calcular."
+          "respEsperada": "Identificar los datos numéricos y la operación o relación matemática correspondiente a Adición de enteros de igual y distinto signo.",
+          "pistaSocratica": "Pídele que señale qué representa cada número en el contexto antes de intentar calcular.",
+          "options": [
+            {
+              "label": "Identificó los datos numéricos y explicó la relación matemática correspondiente",
+              "kind": "correct",
+              "feedbackText": "¡Exacto! Reconoció los valores dados y el procedimiento matemático necesario."
+            },
+            {
+              "label": "Mencionó solo los números sin explicar la relación ni la operación",
+              "kind": "needs_support",
+              "feedbackText": "Pídele que señale qué representa cada número en el contexto antes de intentar calcular."
+            }
+          ]
         },
         "paso2_hook": {
           "titulo": "Video Motivacional: El Desafío de Adición de enteros de igual y distinto signo",
@@ -6863,8 +7187,20 @@
         "situacionIntro": {
           "dialogo": "Hoy exploramos 'Sustracción en Z y la suma del inverso aditivo'. En la vida real nos encontramos con situaciones donde necesitamos cuantificar y relacionar magnitudes con exactitud. Observa los datos del problema inicial en la pantalla:",
           "pregunta": "¿Qué datos numéricos reconoces en este caso y qué relación crees que existe entre ellos?",
-          "respEsperada": "Una respuesta que identifique las cantidades dadas y el tipo de relación u operación matemática requerida.",
-          "pistaSocratica": "Pídele que señale qué representa cada número en el contexto antes de intentar calcular."
+          "respEsperada": "Identificar los datos numéricos y la operación o relación matemática correspondiente a Sustracción en Z y la suma del inverso aditivo.",
+          "pistaSocratica": "Pídele que señale qué representa cada número en el contexto antes de intentar calcular.",
+          "options": [
+            {
+              "label": "Identificó los datos numéricos y explicó la relación matemática correspondiente",
+              "kind": "correct",
+              "feedbackText": "¡Exacto! Reconoció los valores dados y el procedimiento matemático necesario."
+            },
+            {
+              "label": "Mencionó solo los números sin explicar la relación ni la operación",
+              "kind": "needs_support",
+              "feedbackText": "Pídele que señale qué representa cada número en el contexto antes de intentar calcular."
+            }
+          ]
         },
         "paso2_hook": {
           "titulo": "Video Motivacional: El Desafío de Sustracción en Z y la suma del inverso aditivo",
@@ -7114,8 +7450,20 @@
         "situacionIntro": {
           "dialogo": "Hoy exploramos 'Resolución de problemas cotidianos y síntesis oficial'. En la vida real nos encontramos con situaciones donde necesitamos cuantificar y relacionar magnitudes con exactitud. Observa los datos del problema inicial en la pantalla:",
           "pregunta": "¿Qué datos numéricos reconoces en este caso y qué relación crees que existe entre ellos?",
-          "respEsperada": "Una respuesta que identifique las cantidades dadas y el tipo de relación u operación matemática requerida.",
-          "pistaSocratica": "Pídele que señale qué representa cada número en el contexto antes de intentar calcular."
+          "respEsperada": "Identificar los datos numéricos y la operación o relación matemática correspondiente a Resolución de problemas cotidianos y síntesis oficial.",
+          "pistaSocratica": "Pídele que señale qué representa cada número en el contexto antes de intentar calcular.",
+          "options": [
+            {
+              "label": "Identificó los datos numéricos y explicó la relación matemática correspondiente",
+              "kind": "correct",
+              "feedbackText": "¡Exacto! Reconoció los valores dados y el procedimiento matemático necesario."
+            },
+            {
+              "label": "Mencionó solo los números sin explicar la relación ni la operación",
+              "kind": "needs_support",
+              "feedbackText": "Pídele que señale qué representa cada número en el contexto antes de intentar calcular."
+            }
+          ]
         },
         "paso2_hook": {
           "titulo": "Video Motivacional: El Desafío de Resolución de problemas cotidianos y síntesis oficial",

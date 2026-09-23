@@ -103,7 +103,7 @@ export const MATEMATICA_7B_OA01_CLASE02: LessonData = {
       support: 'Recuerda que a la derecha del cero van los positivos. ¿Hacia qué lado van los negativos?',
       reveal: 'Los números negativos se ubican siempre a la izquierda del cero.',
       studentReveal: 'A la izquierda del cero.',
-      studentImage: '/images/lessons/clase2_recta.jpg'
+      studentImage: '/images/lessons/clase2_recta_negativos_izquierda.svg'
     },
     {
       context: 'Cercanía al origen',
@@ -113,7 +113,7 @@ export const MATEMATICA_7B_OA01_CLASE02: LessonData = {
       support: 'Cuenta cuántos pasos hay desde el cero hasta el −1 y cuántos hasta el −4. ¿Cuál está más cerca?',
       reveal: 'El número −1 está más cerca del cero porque solo dista una unidad del origen.',
       studentReveal: 'El número −1 está más cerca del cero.',
-      studentImage: '/images/lessons/clase2_recta.jpg'
+      studentImage: '/images/lessons/clase2_cercania_cero.svg'
     }
   ],
 
@@ -139,7 +139,7 @@ export const MATEMATICA_7B_OA01_CLASE02: LessonData = {
       support: 'Recuerda la regla de oro: hacia la derecha los números aumentan de valor. Entonces, ¿cuál es mayor?',
       reveal: 'El número A es mayor porque en la recta numérica todo número a la derecha supera en valor al de la izquierda.',
       studentReveal: 'El número A es mayor porque está a la derecha.',
-      studentImage: '/images/lessons/clase2_recta.jpg'
+      studentImage: '/images/lessons/clase2_regla_derecha.svg'
     },
     {
       context: 'Comparación de negativos',
@@ -149,7 +149,7 @@ export const MATEMATICA_7B_OA01_CLASE02: LessonData = {
       support: 'Ubícalos mentalmente en la recta: el −2 está más cerca del cero y a la derecha del −5. ¿Cuál es mayor?',
       reveal: 'El −2 es mayor que el −5 porque en la recta numérica se encuentra más hacia la derecha.',
       studentReveal: 'El −2 es mayor porque está más a la derecha.',
-      studentImage: '/images/lessons/clase2_recta.jpg'
+      studentImage: '/images/lessons/clase2_comparacion_negativos.svg'
     }
   ],
 
@@ -163,7 +163,7 @@ export const MATEMATICA_7B_OA01_CLASE02: LessonData = {
       support: 'Piensa cuál de las dos temperaturas está más cerca del cero en el termómetro o en la recta: −3 está a la derecha de −8. ¿Cuál es mayor?',
       reveal: '−3 °C es mayor que −8 °C porque está más a la derecha en la escala térmica.',
       studentReveal: '−3 °C es mayor.',
-      studentImage: '/images/lessons/clase2_montana.jpg'
+      studentImage: '/images/lessons/clase2_temperaturas_montana.svg'
     },
     {
       context: 'Niveles de estacionamiento',
@@ -173,7 +173,7 @@ export const MATEMATICA_7B_OA01_CLASE02: LessonData = {
       support: 'Al subir te acercas a la calle (piso 0). Subir significa aumentar de nivel. ¿El nivel es mayor o menor?',
       reveal: 'Es un nivel mayor porque −1 > −3. Al subir avanzamos hacia valores mayores.',
       studentReveal: 'Hacia un nivel mayor.',
-      studentImage: '/images/lessons/clase2_estacionamiento.jpg'
+      studentImage: '/images/lessons/clase2_estacionamiento_subterraneo.svg'
     },
     {
       context: 'Orden de cuatro valores',
@@ -183,7 +183,7 @@ export const MATEMATICA_7B_OA01_CLASE02: LessonData = {
       support: 'Busca el número que esté más a la izquierda de todos en la recta: ese es el menor. Luego sigue hacia la derecha.',
       reveal: 'El orden de menor a mayor es: −6, −1, 0, +3.',
       studentReveal: '−6, −1, 0, +3',
-      studentImage: '/images/lessons/clase2_recta.jpg'
+      studentImage: '/images/lessons/clase2_orden_cuatro_valores.svg'
     }
   ],
 

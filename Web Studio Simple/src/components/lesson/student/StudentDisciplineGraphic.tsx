@@ -61,12 +61,12 @@ export const StudentDisciplineGraphic: React.FC<StudentDisciplineGraphicProps> =
     return <StudentHeroJourneyChart />;
   }
 
-  if (normSubject.includes('cien') || normSubject.includes('nat')) {
-    return <StudentDimensionsChart />;
-  }
-
   if (normSubject.includes('hist') || normSubject.includes('geog') || normSubject.includes('soc')) {
     return <StudentTimelineChart />;
+  }
+
+  if ((normSubject.includes('cien') && !normSubject.includes('soc')) || normSubject.includes('nat')) {
+    return <StudentDimensionsChart />;
   }
 
   if (normSubject.includes('ing') || normSubject.includes('eng')) {
