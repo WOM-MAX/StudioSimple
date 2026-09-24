@@ -19,6 +19,8 @@ import { PopupsView } from './cms/PopupsView';
 import { EventosView } from './cms/EventosView';
 import { MensajesView } from './cms/MensajesView';
 import { GaleriaView } from './cms/GaleriaView';
+import { LessonEditorView } from './cms/LessonEditorView';
+import { UserManagementView } from './cms/UserManagementView';
 import {
   LayoutDashboard,
   Files,
@@ -143,6 +145,7 @@ type AdminModule =
   | 'mensajes'
   | 'descargas'
   | 'eventos'
+  | 'lesson-editor'
   | 'generator'
   | 'catalog'
   | 'access'
@@ -184,9 +187,10 @@ const SIDEBAR_GROUPS: SidebarGroup[] = [
     name: 'Motor Pedagógico',
     accentColor: '#38BDF8',
     items: [
+      { id: 'lesson-editor', label: 'Editor de Lecciones', icon: BookOpenCheck },
       { id: 'generator', label: 'Generador DOCX', icon: BookOpen },
       { id: 'catalog', label: 'Catálogo EELL (227 OAs)', icon: Code },
-      { id: 'access', label: 'Control Familiar', icon: Users },
+      { id: 'access', label: 'Familias y RUN', icon: Users },
     ]
   },
   {
@@ -846,6 +850,9 @@ export const AdminDashboard: React.FC = () => {
           {/* 9. MÓDULO CONFIGURACIÓN GENERAL (HEADER / FOOTER) */}
           {activeModule === 'configuracion' && <ConfiguracionGeneralView />}
 
+          {/* 9.5. MÓDULO EDITOR DE LECCIONES */}
+          {activeModule === 'lesson-editor' && <LessonEditorView catalog={catalog} />}
+
           {/* 10. MÓDULO GENERADOR DOCX */}
           {activeModule === 'generator' && (
             <div className="space-y-6">
@@ -1317,66 +1324,8 @@ export const AdminDashboard: React.FC = () => {
             </div>
           )}
 
-          {/* 12. MÓDULO CONTROL FAMILIAR */}
-          {activeModule === 'access' && (
-            <div className="space-y-6">
-              <div className="bg-white border border-slate-200/90 rounded-2xl p-6 shadow-sm space-y-6">
-                <div>
-                  <h1 className="text-xl font-black text-slate-800 flex items-center gap-2">
-                    <Shield className="w-5 h-5 text-[#12A1A4]" />
-                    <span>Control de Cursos Habilitados por Familia</span>
-                  </h1>
-                  <p className="text-xs text-slate-500 mt-0.5">
-                    Activa o desactiva qué cursos tiene contratados la familia demo para validar el bloqueo en el Selector de Cursos.
-                  </p>
-                </div>
-
-                <div className="bg-slate-50 border border-slate-200 rounded-xl p-5">
-                  <div className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 pb-4 mb-4">
-                    <div>
-                      <span className="text-xs font-bold text-[#12A1A4] block">Familia Registrada (Cuenta de Prueba)</span>
-                      <strong className="text-sm text-slate-800">{parent.email}</strong>
-                      <span className="text-xs text-slate-500 block">Estudiante: Carla · Nivel actual: 7° Básico</span>
-                    </div>
-                    <div className="text-xs text-right">
-                      <span className="text-slate-400">Cursos Activos:</span>
-                      <strong className="text-slate-800 block">{(parent.enrolledGrades || []).length} de 6 niveles</strong>
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
-                    {ALL_GRADE_LEVELS.map((g) => {
-                      const isEnrolled = (parent.enrolledGrades || []).includes(g);
-                      return (
-                        <button
-                          key={g}
-                          type="button"
-                          onClick={() => toggleGradeForFamily(g)}
-                          className={`p-3 rounded-xl border text-center transition-all cursor-pointer ${
-                            isEnrolled
-                              ? 'bg-teal-50 border-[#12A1A4] text-slate-900 font-extrabold shadow-sm ring-1 ring-[#12A1A4]'
-                              : 'bg-white border-slate-200 text-slate-400 hover:border-slate-300'
-                          }`}
-                        >
-                          <div className="flex justify-center mb-1">
-                            {isEnrolled ? (
-                              <CheckCircle2 className="w-4 h-4 text-[#12A1A4]" />
-                            ) : (
-                              <Lock className="w-4 h-4 text-slate-300" />
-                            )}
-                          </div>
-                          <span className="text-xs block">{g}</span>
-                          <span className="text-[10px] opacity-75 block">
-                            {isEnrolled ? 'Comprado' : 'Bloqueado'}
-                          </span>
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
+          {/* 12. MÓDULO GESTIÓN DE FAMILIAS, SUSCRIPCIONES Y RUN */}
+          {activeModule === 'access' && <UserManagementView />}
 
           {/* 13. MÓDULO IDENTIDAD Y MARCA */}
           {activeModule === 'brand' && (

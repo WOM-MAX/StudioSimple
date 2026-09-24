@@ -122,14 +122,23 @@ export interface StudentProfile {
   completedLessons: string[];
   currentStreakDays: number;
   pin: string;
+  run?: string;
 }
 
 export interface ParentUser {
   id: string;
+  rut?: string;
   name: string;
   email: string;
-  password: string;
+  password?: string;
   studentId: string;
+  studentName?: string;
+  studentRun?: string;
+  studentPin?: string;
+  phone?: string;
+  status?: 'active' | 'suspended' | 'trial';
+  createdAt?: string;
+  lastLogin?: string;
   subscriptionActive: boolean;
   plan: 'mensual' | 'anual';
   enrolledGrades: GradeLevel[];

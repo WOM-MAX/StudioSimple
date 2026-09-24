@@ -78,6 +78,7 @@ export interface SlidePrompt {
   speakerNotes: string;
   palabrasAprox: number;
   duracionSeg: number;
+  imageUrl?: string;
 }
 
 export interface GuidedItem {
@@ -119,6 +120,11 @@ export interface LessonData {
     pregunta: string;
     respEsperada: string;
     pistaSocratica: string;
+    options?: Array<{
+      label: string;
+      kind: 'correct' | 'needs_support' | 'no_answer' | 'other';
+      feedbackText: string;
+    }>;
   };
   paso2_hook: {
     titulo: string;
@@ -128,6 +134,7 @@ export interface LessonData {
     dileDespues: string;
     videoUrl?: string;
     videoSrc?: string;
+    posterUrl?: string;
   };
   paso3_recorrido: GuidedItem[];
   paso4_explicativo: {
@@ -138,6 +145,7 @@ export interface LessonData {
     dileAntes: string;
     videoUrl?: string;
     videoSrc?: string;
+    posterUrl?: string;
   };
   paso5_practica: GuidedItem[];
   paso6_resumen: {

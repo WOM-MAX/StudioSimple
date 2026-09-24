@@ -8,7 +8,6 @@ import {
   TableCell,
   WidthType,
   AlignmentType,
-  BorderStyle,
   HeadingLevel,
   ShadingType
 } from "docx";
@@ -63,7 +62,7 @@ export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
             spacing: { after: 600 },
             children: [
               new TextRun({
-                text: `Desglose Instruccional en ${totalLessons} Lecciones de 30 Minutos\nIncluye Prompts para ChatGPT Work (Dúo Anime Moderno 13 Años) y Datos para la App`,
+                text: `Desglose Instruccional en ${totalLessons} Lecciones de 30 Minutos (8 Pasos Pedagógicos Oficiales)\nIncluye Enlaces a Videos en Cloudflare R2, Prompts Anime Moderno 16:9 y Ficha Técnica de Aula`,
                 italics: true,
                 size: 20,
                 color: "64748B",
@@ -139,7 +138,7 @@ export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
             ]
           }),
 
-          // ==================== DETALLE DE CADA CLASE ====================
+          // ==================== DETALLE DE CADA CLASE (8 PASOS CANÓNICOS) ====================
           ...lessons.flatMap((lesson) => [
             new Paragraph({
               text: `Clase ${lesson.num}: ${lesson.title}`,
@@ -152,13 +151,41 @@ export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
               children: [
                 new TextRun({ text: "Foco didáctico: ", bold: true }),
                 new TextRun({ text: lesson.focoDidactico }),
-                new TextRun({ text: " | Duración: 30 Minutos", italics: true })
+                new TextRun({ text: ` | Duración: ${lesson.duracion || "30 Minutos"}`, italics: true })
               ]
             }),
 
-            // PASO 1
+            // PASO 1: METADATOS Y PREPARACIÓN DEL MENTOR
             new Paragraph({
-              text: "Paso 1: Inicio y Aterrizaje Emocional",
+              text: "Paso 1: Metadatos y Preparación del Mentor",
+              heading: HeadingLevel.HEADING_2,
+              spacing: { before: 200, after: 100 }
+            }),
+            new Paragraph({
+              spacing: { after: 80 },
+              children: [
+                new TextRun({ text: "Objetivo para el Adulto / Mentor: ", bold: true, color: "0F766E" }),
+                new TextRun({ text: lesson.objetivoAdulto || "Acompañar y mediar el aprendizaje socrático." })
+              ]
+            }),
+            new Paragraph({
+              spacing: { after: 80 },
+              children: [
+                new TextRun({ text: "Clima Emocional y Acogida: ", bold: true, color: "0F766E" }),
+                new TextRun({ text: lesson.climaEmocional || "Generar un espacio de calma, curiosidad y confianza." })
+              ]
+            }),
+            new Paragraph({
+              spacing: { after: 160 },
+              children: [
+                new TextRun({ text: "Foco Curricular de la Sesión: ", bold: true, color: "0F766E" }),
+                new TextRun({ text: lesson.focoDidactico })
+              ]
+            }),
+
+            // PASO 2: RUTA Y SITUACIÓN INICIAL
+            new Paragraph({
+              text: "Paso 2: Ruta y Situación Inicial",
               heading: HeadingLevel.HEADING_2,
               spacing: { before: 200, after: 100 }
             }),
@@ -184,26 +211,87 @@ export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
               ]
             }),
             new Paragraph({
-              spacing: { after: 180 },
+              spacing: { after: 100 },
               children: [
                 new TextRun({ text: "[PISTA SOCRÁTICA]: ", bold: true, color: "D97706" }),
                 new TextRun({ text: lesson.situacionIntro.pistaSocratica })
               ]
             }),
+            ...(lesson.situacionIntro.options && lesson.situacionIntro.options.length > 0 ? [
+              new Paragraph({
+                spacing: { before: 60, after: 60 },
+                children: [
+                  new TextRun({ text: "Alternativas de Retroalimentación Formativa (Mentor):", bold: true, italics: true, color: "475569" })
+                ]
+              }),
+              ...lesson.situacionIntro.options.map((opt) =>
+                new Paragraph({
+                  spacing: { after: 40 },
+                  children: [
+                    new TextRun({
+                      text: `• [${opt.kind === 'correct' ? 'Acierto' : 'Requiere Apoyo'}] ${opt.label}: `,
+                      bold: true,
+                      color: opt.kind === 'correct' ? '047857' : 'B45309'
+                    }),
+                    new TextRun({ text: opt.feedbackText })
+                  ]
+                })
+              )
+            ] : []),
 
-            // PASO 2 (GANCHO CON PROMPT)
+            // PASO 3: VIDEO MOTIVACIONAL (CLOUDFLARE Y 7 SLIDES)
             new Paragraph({
-              text: "Paso 2: Video Motivacional (Prompt para ChatGPT Work: 7 Slides)",
+              text: "Paso 3: Video Motivacional",
               heading: HeadingLevel.HEADING_2,
-              spacing: { before: 200, after: 100 }
+              spacing: { before: 250, after: 100 }
             }),
             new Paragraph({
-              spacing: { after: 150 },
+              spacing: { after: 60 },
+              children: [
+                new TextRun({ text: "Título del Video: ", bold: true }),
+                new TextRun({ text: lesson.paso2_hook.titulo || "Desafío Motivacional" })
+              ]
+            }),
+            new Paragraph({
+              spacing: { after: 60 },
+              children: [
+                new TextRun({ text: "Enlace Oficial de Video (Cloudflare Stream / R2): ", bold: true, color: "8B5CF6" }),
+                new TextRun({
+                  text: lesson.paso2_hook.videoUrl || (lesson.paso2_hook as any).videoSrc || "Sin enlace asignado (pendiente carga a Cloudflare R2)",
+                  underline: {}
+                })
+              ]
+            }),
+            new Paragraph({
+              spacing: { after: 80 },
+              children: [
+                new TextRun({ text: "Imagen de Portada / Póster: ", bold: true }),
+                new TextRun({
+                  text: (lesson.paso2_hook as any).posterUrl || (lesson.paso2_hook.slides?.[0]?.imageUrl) || "Usar primer fotograma de Cloudflare R2"
+                })
+              ]
+            }),
+            new Paragraph({
+              spacing: { after: 60 },
+              children: [
+                new TextRun({ text: "[DILE antes del video]: ", bold: true, color: "0F766E" }),
+                new TextRun({ text: lesson.paso2_hook.dileAntes || "Observa con atención el video." })
+              ]
+            }),
+            new Paragraph({
+              spacing: { after: 120 },
+              children: [
+                new TextRun({ text: "[DILE después del video]: ", bold: true, color: "0F766E" }),
+                new TextRun({ text: lesson.paso2_hook.dileDespues || "Conversemos sobre lo observado." })
+              ]
+            }),
+            new Paragraph({
+              spacing: { after: 100 },
               children: [
                 new TextRun({
-                  text: "Instrucciones de Arte: Modern Anime Style. Dos protagonistas de 13 años (chica y chico) cooperando en equipo. Formato 16:9 con espacio negativo.",
+                  text: "Ficha Técnica y Guion Audiovisual (7 Diapositivas Anime 16:9 para Google Vids):",
+                  bold: true,
                   italics: true,
-                  size: 18,
                   color: "475569"
                 })
               ]
@@ -213,63 +301,112 @@ export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
               rows: [
                 new TableRow({
                   children: [
-                    createHeaderCell("Slide", 10),
-                    createHeaderCell("Prompt Visual (Anime 16:9)", 45),
-                    createHeaderCell("Texto en Pantalla", 20),
-                    createHeaderCell("Notas Orador (Google Vids)", 25)
+                    createHeaderCell("Slide", 8),
+                    createHeaderCell("Prompt Visual (Anime 16:9)", 42),
+                    createHeaderCell("Texto en Pantalla", 18),
+                    createHeaderCell("Notas Orador (Google Vids)", 22),
+                    createHeaderCell("Imagen / URL", 10)
                   ]
                 }),
                 ...lesson.paso2_hook.slides.map((s, idx) =>
                   new TableRow({
                     children: [
-                      createDataCell(`${s.slideNumber}`, 10, idx % 2 === 1),
-                      createDataCell(s.visualPrompt, 45, idx % 2 === 1),
-                      createDataCell(s.overlayText, 20, idx % 2 === 1),
-                      createDataCell(s.speakerNotes, 25, idx % 2 === 1)
+                      createDataCell(`${s.slideNumber}`, 8, idx % 2 === 1),
+                      createDataCell(s.visualPrompt, 42, idx % 2 === 1),
+                      createDataCell(s.overlayText, 18, idx % 2 === 1),
+                      createDataCell(s.speakerNotes, 22, idx % 2 === 1),
+                      createDataCell(s.imageUrl ? `URL:\n${s.imageUrl}` : "Por generar", 10, idx % 2 === 1)
                     ]
                   })
                 )
               ]
             }),
 
-            // PASO 3 (RECORRIDO SOCRÁTICO)
+            // PASO 4: CONVERSACIÓN GUIADA
             new Paragraph({
-              text: "Paso 3: Recorrido y Conversación Guiada",
+              text: "Paso 4: Conversación Guiada",
               heading: HeadingLevel.HEADING_2,
               spacing: { before: 300, after: 100 }
             }),
             ...lesson.paso3_recorrido.flatMap((item, idx) => [
               new Paragraph({
-                spacing: { before: 100, after: 50 },
+                spacing: { before: 80, after: 40 },
                 children: [
                   new TextRun({ text: `Pregunta ${idx + 1} (${item.context}): `, bold: true }),
                   new TextRun({ text: item.question })
                 ]
               }),
               new Paragraph({
-                spacing: { after: 100 },
+                spacing: { after: 40 },
                 children: [
                   new TextRun({ text: "• Respuesta esperada: ", bold: true, color: "0284C7" }),
                   new TextRun({ text: item.expected }),
                   new TextRun({ text: " | Pista socrática: ", bold: true, color: "D97706" }),
                   new TextRun({ text: item.support })
                 ]
+              }),
+              new Paragraph({
+                spacing: { after: 100 },
+                children: [
+                  new TextRun({ text: "• Texto revelado al estudiante: ", bold: true, color: "0F766E" }),
+                  new TextRun({ text: item.studentReveal || item.reveal })
+                ]
               })
             ]),
 
-            // PASO 4 (EXPLICATIVO CORTO CON PROMPT)
+            // PASO 5: VIDEO EXPLICATIVO E IDEA CLAVE
             new Paragraph({
-              text: "Paso 4: Video Explicativo / Formalización (Prompt para ChatGPT Work: 7 Slides)",
+              text: "Paso 5: Video Explicativo e Idea Clave",
               heading: HeadingLevel.HEADING_2,
-              spacing: { before: 200, after: 100 }
+              spacing: { before: 250, after: 100 }
             }),
             new Paragraph({
-              spacing: { after: 150 },
+              spacing: { after: 60 },
+              children: [
+                new TextRun({ text: "Título de la Formalización: ", bold: true }),
+                new TextRun({ text: lesson.paso4_explicativo.titulo || "Explicación Formal" })
+              ]
+            }),
+            new Paragraph({
+              spacing: { after: 60 },
+              children: [
+                new TextRun({ text: "Enlace Oficial de Video (Cloudflare Stream / R2): ", bold: true, color: "D97706" }),
+                new TextRun({
+                  text: lesson.paso4_explicativo.videoUrl || (lesson.paso4_explicativo as any).videoSrc || "Sin enlace asignado (pendiente carga a Cloudflare R2)",
+                  underline: {}
+                })
+              ]
+            }),
+            new Paragraph({
+              spacing: { after: 80 },
+              children: [
+                new TextRun({ text: "Imagen de Portada / Póster: ", bold: true }),
+                new TextRun({
+                  text: (lesson.paso4_explicativo as any).posterUrl || (lesson.paso4_explicativo.slides?.[0]?.imageUrl) || "Usar primer fotograma de Cloudflare R2"
+                })
+              ]
+            }),
+            new Paragraph({
+              spacing: { after: 80 },
+              children: [
+                new TextRun({ text: "Idea Clave Disciplinar: ", bold: true, color: "0F766E" }),
+                new TextRun({ text: lesson.paso4_explicativo.ideaClave || lesson.paso6_resumen?.ideaClave || "Concepto fundamental." })
+              ]
+            }),
+            new Paragraph({
+              spacing: { after: 120 },
+              children: [
+                new TextRun({ text: "[DILE antes de la explicación]: ", bold: true, color: "0F766E" }),
+                new TextRun({ text: lesson.paso4_explicativo.dileAntes || "Veamos juntos el modelo explicativo paso a paso." })
+              ]
+            }),
+            new Paragraph({
+              spacing: { after: 100 },
               children: [
                 new TextRun({
-                  text: "Presentación de 7 láminas siguiendo el principio de un cambio visual por cada paso mental. Foco en la regla y el modelado visible.",
+                  text: "Ficha Técnica y Guion de Formalización (7 Diapositivas con Principio de Cambio Visible):",
+                  bold: true,
                   italics: true,
-                  size: 18,
                   color: "475569"
                 })
               ]
@@ -279,34 +416,36 @@ export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
               rows: [
                 new TableRow({
                   children: [
-                    createHeaderCell("Slide", 10),
-                    createHeaderCell("Prompt Visual (Anime 16:9)", 45),
-                    createHeaderCell("Texto en Pantalla", 20),
-                    createHeaderCell("Notas Orador (Google Vids)", 25)
+                    createHeaderCell("Slide", 8),
+                    createHeaderCell("Prompt Visual (Anime 16:9)", 42),
+                    createHeaderCell("Texto en Pantalla", 18),
+                    createHeaderCell("Notas Orador (Google Vids)", 22),
+                    createHeaderCell("Imagen / URL", 10)
                   ]
                 }),
                 ...lesson.paso4_explicativo.slides.map((s, idx) =>
                   new TableRow({
                     children: [
-                      createDataCell(`${s.slideNumber}`, 10, idx % 2 === 1),
-                      createDataCell(s.visualPrompt, 45, idx % 2 === 1),
-                      createDataCell(s.overlayText, 20, idx % 2 === 1),
-                      createDataCell(s.speakerNotes, 25, idx % 2 === 1)
+                      createDataCell(`${s.slideNumber}`, 8, idx % 2 === 1),
+                      createDataCell(s.visualPrompt, 42, idx % 2 === 1),
+                      createDataCell(s.overlayText, 18, idx % 2 === 1),
+                      createDataCell(s.speakerNotes, 22, idx % 2 === 1),
+                      createDataCell(s.imageUrl ? `URL:\n${s.imageUrl}` : "Por generar", 10, idx % 2 === 1)
                     ]
                   })
                 )
               ]
             }),
 
-            // PASO 5 (PRÁCTICA)
+            // PASO 6: PRÁCTICA CONJUNTA
             new Paragraph({
-              text: "Paso 5: Práctica Guiada (Tres Contextos Reales)",
+              text: "Paso 6: Práctica Conjunta (Tres Contextos Reales)",
               heading: HeadingLevel.HEADING_2,
               spacing: { before: 300, after: 100 }
             }),
             ...lesson.paso5_practica.flatMap((p, idx) => [
               new Paragraph({
-                spacing: { before: 100, after: 50 },
+                spacing: { before: 80, after: 40 },
                 children: [
                   new TextRun({ text: `Ejercicio ${idx + 1} (${p.context}): `, bold: true }),
                   new TextRun({ text: p.question })
@@ -317,31 +456,17 @@ export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
                 children: [
                   new TextRun({ text: "• Respuesta esperada: ", bold: true, color: "16A34A" }),
                   new TextRun({ text: p.expected }),
-                  new TextRun({ text: " | Pista socrática: ", bold: true, color: "D97706" }),
+                  new TextRun({ text: " | Pista socrática de modelado: ", bold: true, color: "D97706" }),
                   new TextRun({ text: p.support })
                 ]
               })
             ]),
 
-            // PASO 6 (RESUMEN)
-            new Paragraph({
-              text: "Paso 6: Resumen e Idea Clave",
-              heading: HeadingLevel.HEADING_2,
-              spacing: { before: 250, after: 100 }
-            }),
-            new Paragraph({
-              spacing: { after: 100 },
-              children: [
-                new TextRun({ text: "Idea Clave: ", bold: true, color: "0F766E" }),
-                new TextRun({ text: lesson.paso6_resumen.ideaClave })
-              ]
-            }),
-
-            // PASO 7 (MINIQUIZ)
+            // PASO 7: MINIQUIZ Y RECUPERACIÓN FORMATIVA
             new Paragraph({
               text: "Paso 7: Miniquiz de Evaluación Formativa (Umbral de Aprobación: 2 de 3)",
               heading: HeadingLevel.HEADING_2,
-              spacing: { before: 200, after: 80 }
+              spacing: { before: 250, after: 80 }
             }),
             ...lesson.paso7_miniquiz.flatMap((q, idx) => [
               new Paragraph({
@@ -354,12 +479,12 @@ export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
                 spacing: { after: 60 },
                 children: [
                   new TextRun({ text: `Opciones: ${q.options.join(" | ")}\n` }),
-                  new TextRun({ text: `Respuesta correcta: ${q.correct} | Justificación: ${q.fixExplain}`, italics: true, color: "047857" })
+                  new TextRun({ text: `Respuesta correcta: ${q.correct} | Justificación formativa: ${q.fixExplain}`, italics: true, color: "047857" })
                 ]
               })
             ]),
 
-            // PASO 7B (RECUPERACIÓN FORMATIVA SI CORRESPONDE)
+            // PASO 7B: RECUPERACIÓN FORMATIVA (SI CORRESPONDE)
             ...(lesson.paso7b_recuperacion && lesson.paso7b_recuperacion.length > 0 ? [
               new Paragraph({
                 text: "Paso 7b: Módulo de Recuperación Formativa (Ítems Equivalentes)",
@@ -396,11 +521,11 @@ export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
               ])
             ] : []),
 
-            // PASO 8 (CIERRE)
+            // PASO 8: CIERRE Y METACOGNICIÓN
             new Paragraph({
               text: "Paso 8: Cierre y Metacognición",
               heading: HeadingLevel.HEADING_2,
-              spacing: { before: 200, after: 80 }
+              spacing: { before: 250, after: 80 }
             }),
             new Paragraph({
               spacing: { after: 60 },

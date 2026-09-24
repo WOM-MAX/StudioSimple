@@ -161,7 +161,7 @@ export function adaptGeneratorLessonToPlayer(
       dileIntro: genLesson.paso2_hook.dileAntes,
       hazInstruction: 'Observa y reflexiona con las escenas del desafío visual.',
       videoSrc: (genLesson.paso2_hook as any).videoUrl || (genLesson.paso2_hook as any).videoSrc || (isMat7bOa01L01 ? 'https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7-MAT-OA01-L01-MOTIVACIONAL_V9_LEGIBLE.mp4' : ''),
-      posterSrc: '',
+      posterSrc: (genLesson.paso2_hook as any).posterUrl || (genLesson.paso2_hook as any).posterSrc || (genLesson.paso2_hook.slides?.[0]?.imageUrl || ''),
       dileAfterVideo: genLesson.paso2_hook.dileDespues
     },
 
@@ -181,7 +181,7 @@ export function adaptGeneratorLessonToPlayer(
       dileIntro: genLesson.paso4_explicativo.dileAntes,
       hazInstruction: 'Revisemos la explicación formal y la idea clave.',
       videoSrc: (genLesson.paso4_explicativo as any).videoUrl || (genLesson.paso4_explicativo as any).videoSrc || (isMat7bOa01L01 ? 'https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/MAT/MAT_OA01_L01_Concepto.mp4' : ''),
-      graphicPoster: ''
+      graphicPoster: (genLesson.paso4_explicativo as any).posterUrl || (genLesson.paso4_explicativo as any).graphicPoster || (genLesson.paso4_explicativo.slides?.[0]?.imageUrl || '')
     },
 
     postQuestions: postQuestions.length > 0 ? postQuestions : [
