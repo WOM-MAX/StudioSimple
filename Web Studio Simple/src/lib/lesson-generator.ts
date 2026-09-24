@@ -162,7 +162,7 @@ export interface GeneratedOAPackage {
 /**
  * Helper to build the exact ChatGPT Work prompt for Step 2 (Gancho H.O.O.K. - 7 slides)
  */
-function buildHookPromptText(
+export function buildHookPromptText(
   asignatura: string,
   oa: string,
   claseNum: number,
@@ -196,7 +196,7 @@ function buildHookPromptText(
 /**
  * Helper to build the exact ChatGPT Work prompt for Step 4 (Video Explicativo / Formalización - 7 slides)
  */
-function buildExplicativoPromptText(
+export function buildExplicativoPromptText(
   asignatura: string,
   oa: string,
   claseNum: number,
@@ -230,7 +230,7 @@ function buildExplicativoPromptText(
 /**
  * Helper to build canonical Lesson 1 of Mathematics Grade 7 OA01 directly from the tested prototype
  */
-function getCanonicalClase1Matematica(): LessonData {
+export function getCanonicalClase1Matematica(): LessonData {
   const hookSlides: SlidePrompt[] = [
     {
       slideNumber: 1,
@@ -371,10 +371,10 @@ function getCanonicalClase1Matematica(): LessonData {
     objetivoAdulto: "Guiar al estudiante para que comprenda que los números enteros representan posiciones respecto de un punto de referencia y distinga entre posición y movimiento.",
     climaEmocional: "Crea un clima seguro: 'Aquí equivocarse es la mejor pista para entender cómo funciona la regla'.",
     situacionIntro: {
-      dialogo: "Hoy comenzamos con los números enteros. Observa la situación del ascensor: el nivel de la calle se representa con el cero y los estacionamientos están bajo tierra.",
-      pregunta: "Si un vehículo se encuentra tres pisos bajo tierra, ¿qué número entero representa esa posición?",
+      dialogo: "Observa este termómetro. Tomaremos 0 °C como punto de referencia. Una temperatura de tres grados sobre cero es positiva: podemos escribirla como 3 °C o, si queremos mostrar expresamente su signo, como +3 °C. Ahora pensemos: ¿qué número entero representa una temperatura de tres grados bajo cero?",
+      pregunta: "¿Qué número entero representa una temperatura de tres grados bajo cero?",
       respEsperada: "−3",
-      pistaSocratica: "Tenemos un piso 3 sobre la calle y un piso 3 bajo tierra. Para diferenciarlos, a los niveles bajo tierra les colocamos un signo menos. ¿Qué número entero representa esa posición?"
+      pistaSocratica: "0 °C se lee “cero grados Celsius”. El número 3 indica la cantidad de grados. Para representar que está bajo cero usamos el signo menos. ¿Qué número entero representa esa posición?"
     },
     paso2_hook: {
       titulo: "El recorrido del submarino",
@@ -498,6 +498,1068 @@ function getCanonicalClase1Matematica(): LessonData {
       preguntaSintesis: "En tus propias palabras, ¿qué diferencia hay entre dónde estás (posición) y hacia dónde te trasladas (movimiento)?",
       metacognicion: "¿Qué situación de la vida diaria te ayudó más a entender el punto de referencia cero: el termómetro, el ascensor o el submarino?",
       celebracion: "¡Felicitaciones! Has completado con éxito la primera clase de números enteros de 7° básico."
+    }
+  };
+}
+
+
+/**
+ * Helper to build canonical Lesson 1 of Lengua y Literatura Grade 7 OA03
+ */
+export function getCanonicalClase1Lengua(): LessonData {
+  const hookSlides: SlidePrompt[] = [
+    {
+      slideNumber: 1,
+      tituloMomento: "Apertura: El Mundo Ordinario",
+      visualPrompt: "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, studying in a quiet, sunlit village library filled with ancient scrolls and comfortable wooden desks. Warm morning light, negative space in upper third.",
+      overlayText: "Misión 1: Las 6 Etapas del Viaje del Héroe",
+      speakerNotes: "Toda gran historia comienza en la calma. Nuestro protagonista vive en un mundo conocido donde todo parece seguro y predecible.",
+      palabrasAprox: 20,
+      duracionSeg: 9
+    },
+    {
+      slideNumber: 2,
+      tituloMomento: "El Quiebre: La Llamada a la Aventura",
+      visualPrompt: "Modern anime style. The two companions looking startled as a mysterious glowing letter arrives on the table, surrounded by subtle wind swirls. Clean lineart, dramatic lighting, clear space on the left side.",
+      overlayText: "Etapa 2: La Llamada a la Aventura",
+      speakerNotes: "De pronto, la tranquilidad se rompe. Un suceso inesperado o una amenaza urgente obliga al héroe a tomar una decisión crucial.",
+      palabrasAprox: 21,
+      duracionSeg: 10
+    },
+    {
+      slideNumber: 3,
+      tituloMomento: "El Encuentro con el Mentor",
+      visualPrompt: "Modern anime style. A wise elderly librarian mentor handing the young protagonists an ancient compass and a leather-bound journal. Soft depth of field, warm candlelight.",
+      overlayText: "El Consejo del Mentor",
+      speakerNotes: "Sentir miedo es natural frente a lo desconocido. Un mentor experimentado entrega sabiduría y la herramienta clave para iniciar la expedición.",
+      palabrasAprox: 21,
+      duracionSeg: 10
+    },
+    {
+      slideNumber: 4,
+      tituloMomento: "El Cruce del Primer Umbral",
+      visualPrompt: "Modern anime style. The two young protagonists stepping across a stone archway into a mysterious twilight forest with glowing flora. Dramatic atmospheric lighting.",
+      overlayText: "Etapa 3: El Cruce del Umbral",
+      speakerNotes: "El héroe deja atrás su hogar seguro y cruza la frontera hacia un mundo nuevo donde las reglas del juego son desafiantes.",
+      palabrasAprox: 22,
+      duracionSeg: 10
+    },
+    {
+      slideNumber: 5,
+      tituloMomento: "Pruebas, Aliados y Obstáculos",
+      visualPrompt: "Modern anime style. The boy and girl working side by side with a loyal animal companion, deciphering a stone puzzle gate while rain falls softly. Vibrant colors, focused determination.",
+      overlayText: "Etapa 4: Pruebas y Aliados",
+      speakerNotes: "En el camino enfrentan dificultades crecientes, descubren quiénes son sus verdaderos aliados y aprenden a confiar en sus propias fortalezas.",
+      palabrasAprox: 20,
+      duracionSeg: 10
+    },
+    {
+      slideNumber: 6,
+      tituloMomento: "El Abismo: La Prueba Suprema",
+      visualPrompt: "Modern anime style. Dramatic confrontation in a cavern illuminated by a deep blue glowing crystal. High tension, expressive faces showing courage despite fear.",
+      overlayText: "Etapa 5: El Abismo / Prueba Suprema",
+      speakerNotes: "Llega el momento decisivo: enfrentar su mayor temor. De esta prueba suprema depende resolver el conflicto y salvar a su comunidad.",
+      palabrasAprox: 22,
+      duracionSeg: 10
+    },
+    {
+      slideNumber: 7,
+      tituloMomento: "El Regreso Transformado",
+      visualPrompt: "Modern anime style. Minimalist clean composition showing the StudioSimple emblem, the hero returning to the sunrise holding the light of knowledge, wiser and smiling.",
+      overlayText: "Etapa 6: El Regreso con el Elíxir",
+      speakerNotes: "El héroe no vuelve siendo el mismo: regresa transformado con una valiosa lección y sabiduría que enriquecerá a todos.",
+      palabrasAprox: 19,
+      duracionSeg: 9
+    }
+  ];
+
+  const explicativoSlides: SlidePrompt[] = [
+    {
+      slideNumber: 1,
+      tituloMomento: "El Conflicto como Motor Narrativo",
+      visualPrompt: "Modern anime style 16:9. The boy and girl standing before an interactive lightboard showing a dynamic balance scale: 'Equilibrio Inicial' vs 'Conflicto Detonante'. Clean typography.",
+      overlayText: "¿Qué es el Conflicto Narrativo?",
+      speakerNotes: "Para comprender un relato, debemos reconocer su motor: el conflicto narrativo es el problema o quiebre que obliga a los personajes a actuar.",
+      palabrasAprox: 22,
+      duracionSeg: 11
+    },
+    {
+      slideNumber: 2,
+      tituloMomento: "Fuerzas en Oposición",
+      visualPrompt: "Modern anime style. Split screen diagram: Left side shows the protagonist's goal; Right side shows the opposing obstacle or antagonist. High contrast, sharp clarity.",
+      overlayText: "Protagonista vs. Fuerza Opositora",
+      speakerNotes: "Toda trama enfrenta dos fuerzas: el deseo del protagonista por alcanzar una meta y los obstáculos que se interponen en su camino.",
+      palabrasAprox: 21,
+      duracionSeg: 10
+    },
+    {
+      slideNumber: 3,
+      tituloMomento: "Conflicto Externo",
+      visualPrompt: "Modern anime style. The young adventurers navigating a stormy sea in a wooden boat, facing natural forces. Callout box: 'Conflicto Externo: El Entorno'.",
+      overlayText: "Conflicto Externo: El Mundo",
+      speakerNotes: "El conflicto externo proviene del entorno: un monstruo, un villano, una tormenta o una injusticia social que el personaje debe enfrentar.",
+      palabrasAprox: 21,
+      duracionSeg: 10
+    },
+    {
+      slideNumber: 4,
+      tituloMomento: "Conflicto Interno",
+      visualPrompt: "Modern anime style. Close-up on the girl reflecting in front of a mirror, with subtle dual lighting representing doubt and courage. Callout box: 'Conflicto Interno: La Mente'.",
+      overlayText: "Conflicto Interno: Las Emociones",
+      speakerNotes: "El conflicto interno ocurre dentro del personaje: son sus dudas, culpas, temores o dilemas éticos que lo desafían a madurar.",
+      palabrasAprox: 20,
+      duracionSeg: 10
+    },
+    {
+      slideNumber: 5,
+      tituloMomento: "Progresión de la Tensión Dramática",
+      visualPrompt: "Modern anime style. The boy tracing a clean glowing narrative curve that rises from the Call to the Abyss and resolves at the Return.",
+      overlayText: "La Curva de Tensión Dramática",
+      speakerNotes: "A medida que el conflicto se intensifica, la tensión dramática sube hasta alcanzar el clímax en la prueba suprema del abismo.",
+      palabrasAprox: 21,
+      duracionSeg: 10
+    },
+    {
+      slideNumber: 6,
+      tituloMomento: "La Transformación del Personaje",
+      visualPrompt: "Modern anime style. Side-by-side comparison of the young explorer: before the journey (timid, insecure) and after (confident, noble, mature).",
+      overlayText: "La Huella de la Experiencia",
+      speakerNotes: "Las dificultades no solo entretienen: transforman al personaje. Al superar las pruebas, el héroe adquiere nueva madurez y valores.",
+      palabrasAprox: 18,
+      duracionSeg: 9
+    },
+    {
+      slideNumber: 7,
+      tituloMomento: "Síntesis y Aplicación en el Cuaderno",
+      visualPrompt: "Modern anime style. Both students with their open literature notebooks and fountain pens, smiling ready to analyze stories.",
+      overlayText: "¡A analizar relatos en el cuaderno!",
+      speakerNotes: "Ahora que conoces la estructura del viaje y el papel del conflicto, estás listo para analizar cualquier obra literaria junto a tu mentor.",
+      palabrasAprox: 22,
+      duracionSeg: 11
+    }
+  ];
+
+  return {
+    num: 1,
+    title: "Las 6 Etapas del Viaje del Héroe",
+    focoDidactico: "Identificar las 6 etapas del viaje del héroe y el conflicto narrativo como motor del relato",
+    duracion: "30-35 Minutos",
+    objetivoAdulto: "Acompañar al estudiante a reconocer la estructura de una narración a través de las 6 etapas del viaje del héroe, identificando cómo el conflicto narrativo impulsa las acciones de los personajes.",
+    climaEmocional: "Crea un clima de disfrute por la lectura: 'Leer nos permite viajar a otros mundos, comprender los desafíos de los personajes y descubrir cómo resuelven sus problemas'.",
+    situacionIntro: {
+      dialogo: "Hoy en Lengua y Literatura nos adentramos en 'El conflicto narrativo y la trama de la historia'. En la pantalla puedes ver el organizador gráfico 'Las 6 Etapas del Viaje del Héroe'. Observa la Etapa 1 (Mundo Ordinario) y la Etapa 2 (La Llamada a la Aventura). ¿Qué suceso o problema rompe la calma cotidiana del protagonista y lo obliga a iniciar su historia?",
+      pregunta: "¿Qué suceso rompe la calma del protagonista y lo obliga a salir a resolver el problema?",
+      respEsperada: "El conflicto narrativo (surge un problema, desafío, peligro o misterio inesperado que altera la tranquilidad normal).",
+      pistaSocratica: "Fíjate en la Etapa 2 en la pantalla: ¿qué aparece de repente para que el protagonista no pueda quedarse cómodo en su casa?"
+    },
+    paso2_hook: {
+      titulo: "Las 6 etapas del viaje del héroe",
+      fullPrompt: buildHookPromptText("Lengua y Literatura", "OA 3", 1, "Las 6 Etapas del Viaje del Héroe", hookSlides),
+      slides: hookSlides,
+      videoUrl: "",
+      dileAntes: "Vamos a explorar cómo los grandes relatos de la literatura universal comparten esta misma estructura dramática en 6 momentos a través del viaje del héroe.",
+      dileDespues: "Conversemos sobre lo observado. Te haré dos preguntas para comprobar cómo identificamos estas etapas en los relatos."
+    },
+    paso3_recorrido: [
+      {
+        context: "Mundo Ordinario vs La Llamada",
+        question: "En las dos primeras etapas, ¿qué diferencia la vida del héroe en su Mundo Ordinario respecto de cuando recibe La Llamada a la Aventura?",
+        expected: "En el Mundo Ordinario el personaje vive su rutina segura y conocida; con La Llamada recibe un desafío, peligro o misión que quiebra esa rutina y lo enfrenta a lo desconocido.",
+        success: "¡Muy bien! Distinguiste con precisión la tranquilidad inicial del suceso detonante que quiebra la rutina.",
+        support: "Piensa en cómo empieza una película o libro antes de que ocurra el incidente principal y qué pasa justo después.",
+        reveal: "El Mundo Ordinario muestra la normalidad del personaje; La Llamada es el incidente que rompe esa calma e inicia la trama.",
+        studentReveal: "El Mundo Ordinario muestra la rutina; La Llamada introduce el problema o misión que inicia la aventura."
+      },
+      {
+        context: "El Abismo y el Clímax Dramático",
+        question: "Observa la Etapa 5 en la pantalla: 'El Abismo'. ¿Por qué esta etapa representa el momento de mayor tensión en todo el relato?",
+        expected: "Porque es la crisis más grande o batalla decisiva donde el héroe enfrenta su mayor peligro, parece estar a punto de perder y debe vencer sus temores para triunfar.",
+        success: "¡Excelente análisis dramático! Identificaste el clímax donde se decide el destino del personaje.",
+        support: "Fíjate en la descripción de la Etapa 5: es el momento culminante donde todo está en riesgo antes de resolver el conflicto.",
+        reveal: "El Abismo es la prueba suprema del héroe: si fracasa allí, la historia termina en tragedia; si la supera, logra la transformación.",
+        studentReveal: "El Abismo es la prueba más difícil donde el héroe arriesga todo para superar el conflicto."
+      }
+    ],
+    paso4_explicativo: {
+      titulo: "El conflicto narrativo: motor de la historia",
+      fullPrompt: buildExplicativoPromptText("Lengua y Literatura", "OA 3", 1, "Las 6 Etapas del Viaje del Héroe", explicativoSlides),
+      slides: explicativoSlides,
+      videoUrl: "",
+      ideaClave: "El conflicto narrativo es el obstáculo o fuerza contraria que enfrenta al protagonista y lo obliga a actuar. Sin conflicto no hay trama, y a través de las pruebas el héroe se transforma.",
+      dileAntes: "Ahora formalizaremos la idea central sobre el conflicto narrativo y cómo estructura toda narración literaria."
+    },
+    paso5_practica: [
+      {
+        context: "Análisis de un Relato Conocido en el Cuaderno",
+        question: "Abre tu cuaderno de Lengua y Literatura. Elige una película, serie o libro que conozcas bien (por ejemplo Harry Potter, El Rey León, Moana o El Señor de los Anillos). Escribe el título y anota: 1) Su Mundo Ordinario, 2) Su Llamada a la Aventura (cuál fue el conflicto), y 3) Su momento de Abismo (la prueba más dura).",
+        expected: "Registro completo en el cuaderno con título y las 3 etapas identificadas con hechos concretos de la historia elegida.",
+        success: "¡Excelente trabajo en tu cuaderno! Aplicaste las etapas del viaje del héroe a una historia real con hechos específicos.",
+        support: "Escribe el nombre de la película y responde: ¿qué hacía al principio?, ¿qué problema lo obligó a salir de casa? y ¿cuál fue la batalla más difícil?",
+        reveal: "Al aplicar este esquema a historias reales comprobamos que casi todas las obras maestras siguen esta estructura universal.",
+        studentReveal: "Esquema de las 3 etapas del relato anotado con claridad en el cuaderno."
+      },
+      {
+        context: "Creación de un Conflicto Narrativo Breve en el Cuaderno",
+        question: "En tu cuaderno de Lengua, inventa un personaje original y redacta un párrafo de 4 a 5 líneas donde presentes su vida cotidiana y el momento exacto en que un conflicto inesperado interrumpe su día.",
+        expected: "Párrafo narrativo con redacción clara, que describe una rutina cotidiana y luego introduce un conflicto detonante explícito.",
+        success: "¡Gran creatividad narrativa! Creaste una tensión dramática muy clara que dan ganas de seguir leyendo.",
+        support: "Empieza describiendo qué hace el personaje en una mañana común, y usa un conector de quiebre como 'De pronto...' o 'Sin embargo, esa tarde...'.",
+        reveal: "Un buen inicio literario presenta la calma justo antes de quebrarla con un acontecimiento inesperado.",
+        studentReveal: "Párrafo narrativo propio con conflicto detonante redactado en el cuaderno."
+      }
+    ],
+    paso6_resumen: {
+      ideaClave: "El conflicto narrativo es el motor que impulsa toda la trama. Las narraciones avanzan a través de las 6 etapas del viaje del héroe, llevando al personaje desde la calma cotidiana hasta la transformación personal.",
+      sintesis: "Sin conflicto no hay historia. El obstáculo obliga al héroe a actuar, cruzar el umbral, superar el abismo y regresar con sabiduría."
+    },
+    paso7_miniquiz: [
+      {
+        q: "¿Cuál es la función principal del conflicto narrativo en un cuento o novela?",
+        options: [
+          "Describir el paisaje geográfico donde viven los personajes secundarios",
+          "Romper el equilibrio inicial y motivar las acciones y decisiones del protagonista",
+          "Enumerar los nombres de todos los autores que escribieron sobre el tema"
+        ],
+        correct: "Romper el equilibrio inicial y motivar las acciones y decisiones del protagonista",
+        fixExplain: "El conflicto narrativo quiebra la tranquilidad inicial y obliga al protagonista a actuar, poniendo en movimiento toda la trama."
+      },
+      {
+        q: "En el esquema del Viaje del Héroe, ¿qué sucede en la etapa de 'El Abismo'?",
+        options: [
+          "El protagonista descansa en su casa sin ninguna preocupación",
+          "El protagonista enfrenta su mayor peligro o temor en el momento de máxima tensión",
+          "El protagonista decide abandonar para siempre la aventura sin intentar nada"
+        ],
+        correct: "El protagonista enfrenta su mayor peligro o temor en el momento de máxima tensión",
+        fixExplain: "El Abismo representa el clímax o crisis máxima: es el momento más difícil donde el héroe debe darlo todo para vencer el conflicto."
+      },
+      {
+        q: "Si en un relato leemos que una capitana navega hacia una isla prohibida para rescatar a su tripulación secuestrada por piratas, ¿qué tipo de conflicto predomina en ese momento?",
+        options: [
+          "Un conflicto puramente gramatical sin personajes",
+          "Un conflicto externo donde enfrenta a piratas y al mar para cumplir su misión",
+          "La capitana no tiene ningún conflicto porque le gusta navegar"
+        ],
+        correct: "Un conflicto externo donde enfrenta a piratas y al mar para cumplir su misión",
+        fixExplain: "Los piratas y los peligros del mar son fuerzas externas del entorno que amenazan a la protagonista y sus compañeros."
+      }
+    ],
+    paso7b_recuperacion: [
+      {
+        title: "Refuerzo: El Incidente Detonante",
+        explain: "Toda historia necesita un suceso que cambie las cosas. Si Caperucita se queda en su casa comiendo sopa, no hay cuento. El conflicto surge cuando debe cruzar el bosque peligroso y se encuentra con el lobo.",
+        q: "¿Por qué la aparición del lobo en el camino de Caperucita es un conflicto narrativo?",
+        options: [
+          "Porque interrumpe su viaje seguro y genera un peligro directo que debe enfrentar",
+          "Porque el lobo era un personaje que no tenía diálogo"
+        ],
+        correct: "Porque interrumpe su viaje seguro y genera un peligro directo que debe enfrentar",
+        correctText: "¡Exacto! El lobo representa el obstáculo y la amenaza que crea la tensión de la historia.",
+        fixText: "La respuesta correcta es: el lobo altera su trayecto pacífico y crea el peligro que da vida al cuento."
+      }
+    ],
+    paso8_cierre: {
+      preguntaSintesis: "En tus propias palabras, ¿por qué decimos que sin un conflicto no habría historia que contar?",
+      metacognicion: "¿Qué película o libro conocido te ayudó a visualizar las 6 etapas del viaje del héroe?",
+      celebracion: "¡Felicitaciones! Has dominado la primera lección de estructura narrativa y viaje del héroe de 7° básico."
+    }
+  };
+}
+
+/**
+ * Helper to build canonical Lesson 1 of Ciencias Naturales Grade 7 OA01
+ */
+export function getCanonicalClase1Ciencias(): LessonData {
+  const hookSlides: SlidePrompt[] = [
+    {
+      slideNumber: 1,
+      tituloMomento: "Apertura: Más Allá de lo Biológico",
+      visualPrompt: "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining a glowing interactive holographic infographic of the 4 dimensions of human sexuality. Warm, inviting scientific atmosphere, negative space in top third.",
+      overlayText: "Misión 1: Las 4 Dimensiones Humanas",
+      speakerNotes: "La ciencia actual comprende la sexualidad como una vivencia integral que acompaña a la persona durante toda su vida.",
+      palabrasAprox: 19,
+      duracionSeg: 9
+    },
+    {
+      slideNumber: 2,
+      tituloMomento: "Dimensión 1: El Cuerpo Biológico",
+      visualPrompt: "Modern anime style. Clean anatomical growth chart showing developmental milestones of puberty, height markers, and secondary sexual characteristics. High clarity, medical illustration style.",
+      overlayText: "Dimensión Biológica: El Cuerpo",
+      speakerNotes: "Abarca nuestro cuerpo físico, el desarrollo puberal, los cambios hormonales y la maduración biológica.",
+      palabrasAprox: 14,
+      duracionSeg: 8
+    },
+    {
+      slideNumber: 3,
+      tituloMomento: "Dimensión 2: Sentimientos y Afectividad",
+      visualPrompt: "Modern anime style. Close-up of adolescents sharing a sincere laugh, icons of heart and brain softly illuminated. Warm morning light, emotional connection.",
+      overlayText: "Dimensión Afectiva: Emociones",
+      speakerNotes: "Reúne nuestras emociones, el cariño, la autoestima y la maravillosa capacidad de establecer lazos afectivos profundos.",
+      palabrasAprox: 16,
+      duracionSeg: 9
+    },
+    {
+      slideNumber: 4,
+      tituloMomento: "Dimensión 3: Convivencia y Sociedad",
+      visualPrompt: "Modern anime style. Diverse group of young students collaborating in a bright park, talking respectfully with families and friends. Crisp clean composition.",
+      overlayText: "Dimensión Social: Relaciones",
+      speakerNotes: "Se manifiesta en cómo nos relacionamos con la familia, los amigos y nuestra cultura en comunidad.",
+      palabrasAprox: 15,
+      duracionSeg: 8
+    },
+    {
+      slideNumber: 5,
+      tituloMomento: "Dimensión 4: Valores, Respeto y Ética",
+      visualPrompt: "Modern anime style. Balance scale emblem with glowing symbols of respect, personal limits, consent, and mutual dignity. Clear negative space.",
+      overlayText: "Dimensión Ética: Valores y Respeto",
+      speakerNotes: "Guía nuestras decisiones mediante el respeto a la dignidad ajena, el consentimiento y el cuidado mutuo.",
+      palabrasAprox: 15,
+      duracionSeg: 8
+    },
+    {
+      slideNumber: 6,
+      tituloMomento: "Interrelación de los 4 Cuadrantes",
+      visualPrompt: "Modern anime style. The four dimensions connecting dynamically with glowing energetic nodes around a human silhouette. High visual impact, harmony.",
+      overlayText: "Un Sistema Integral e Inseparable",
+      speakerNotes: "Ninguna dimensión actúa aislada: lo que sentimos influye en nuestro cuerpo y en nuestras relaciones sociales.",
+      palabrasAprox: 16,
+      duracionSeg: 9
+    },
+    {
+      slideNumber: 7,
+      tituloMomento: "Puente a la Conversación Diaria",
+      visualPrompt: "Modern anime style. Both explorers smiling, ready to investigate everyday cases with their science notebooks open. StudioSimple badge.",
+      overlayText: "StudioSimple · Ciencias Naturales",
+      speakerNotes: "Analicemos ahora juntos cómo estas cuatro dimensiones se manifiestan en situaciones reales de cada día.",
+      palabrasAprox: 15,
+      duracionSeg: 8
+    }
+  ];
+
+  const explicativoSlides: SlidePrompt[] = [
+    {
+      slideNumber: 1,
+      tituloMomento: "Definición del Enfoque Integral",
+      visualPrompt: "Modern anime style 16:9. The boy and girl standing before a clear 4-quadrant lightboard: 'Biológica', 'Afectiva', 'Social' y 'Ética'. Clean modern typography.",
+      overlayText: "Modelo Integral de la Sexualidad",
+      speakerNotes: "La sexualidad humana es una vivencia integral que comprende cuatro dimensiones inseparables presentes durante toda la vida.",
+      palabrasAprox: 17,
+      duracionSeg: 9
+    },
+    {
+      slideNumber: 2,
+      tituloMomento: "La Dimensión Biológica y Pubertad",
+      visualPrompt: "Modern anime style. The girl pointing at growth metrics, voice change diagrams, and cellular maturation charts. Clear clinical clarity.",
+      overlayText: "Cambios Biológicos de la Pubertad",
+      speakerNotes: "En la pubertad, las hormonas activan el crecimiento de estatura, el cambio de voz y los caracteres sexuales secundarios.",
+      palabrasAprox: 18,
+      duracionSeg: 10
+    },
+    {
+      slideNumber: 3,
+      tituloMomento: "La Dimensión Afectiva y Autoestima",
+      visualPrompt: "Modern anime style. The boy reflecting on emotional self-worth and family bonds with gentle warm ambient lighting. Negative space on left.",
+      overlayText: "Autoestima y Expresión de Afectos",
+      speakerNotes: "La dimensión afectiva comprende cómo aprendemos a querernos a nosotros mismos y a expresar sentimientos sinceros a los demás.",
+      palabrasAprox: 19,
+      duracionSeg: 10
+    },
+    {
+      slideNumber: 4,
+      tituloMomento: "La Dimensión Social y Convivencia",
+      visualPrompt: "Modern anime style. Young adolescents participating in school and family dialogues, showing open active listening. Soft depth of field.",
+      overlayText: "Amistad, Familia y Cultura",
+      speakerNotes: "Somos seres sociables: aprendemos a convivir con respeto en el hogar, en el colegio y con nuestro grupo de amigos.",
+      palabrasAprox: 20,
+      duracionSeg: 10
+    },
+    {
+      slideNumber: 5,
+      tituloMomento: "La Dimensión Ética y Consentimiento",
+      visualPrompt: "Modern anime style. Two hands shaking with dignity and mutual respect. Icon of personal boundaries and safety shield in glowing cyan.",
+      overlayText: "Límites Personales y Consentimiento",
+      speakerNotes: "La ética nos enseña a valorar la dignidad de cada persona, respetar sus límites y construir relaciones basadas en el consentimiento.",
+      palabrasAprox: 20,
+      duracionSeg: 10
+    },
+    {
+      slideNumber: 6,
+      tituloMomento: "Las Dimensiones se Conectan",
+      visualPrompt: "Modern anime style. Dynamic circular flowchart showing the feedback between body changes, emotions, social interactions, and moral values.",
+      overlayText: "Conexión Permanente entre Dimensiones",
+      speakerNotes: "Lo que experimenta nuestro cuerpo afecta nuestras emociones; y nuestros valores éticos guían cómo convivimos en sociedad.",
+      palabrasAprox: 17,
+      duracionSeg: 9
+    },
+    {
+      slideNumber: 7,
+      tituloMomento: "Síntesis y Cuaderno de Ciencias",
+      visualPrompt: "Modern anime style. Both students with their open science notebooks and colored pencils, ready to draw their 4-column organizer.",
+      overlayText: "¡A registrar en el cuaderno!",
+      speakerNotes: "Con el modelo de 4 dimensiones claro, abre tu cuaderno de Ciencias Naturales para analizar casos concretos junto a tu mentor.",
+      palabrasAprox: 20,
+      duracionSeg: 10
+    }
+  ];
+
+  return {
+    num: 1,
+    title: "Las 4 Dimensiones de la Sexualidad Humana",
+    focoDidactico: "Reconocer e interrelacionar las dimensiones biológica, afectiva, social y ética en la vida cotidiana",
+    duracion: "30-35 Minutos",
+    objetivoAdulto: "Guiar al estudiante a comprender que la sexualidad humana es una vivencia integral que comprende cuatro dimensiones inseparables: biológica, afectiva, social y ética, superando la visión reducida a lo estrictamente reproductivo.",
+    climaEmocional: "Aborda la pubertad y la sexualidad con serenidad, apertura y confianza. Es una etapa natural del desarrollo y el diálogo cercano refuerza su seguridad personal.",
+    situacionIntro: {
+      dialogo: "Hoy en Ciencias Naturales investigamos la sexualidad humana como una dimensión integral de la persona. En pantalla puedes ver el modelo de 4 dimensiones. Observa la primera dimensión destacada: la Dimensión Biológica. ¿Qué cambios físicos concretos ocurren en el cuerpo humano durante la pubertad?",
+      pregunta: "¿Qué cambios físicos concretos caracterizan la pubertad en la dimensión biológica?",
+      respEsperada: "Mencionar cambios corporales concretos como aumento de estatura, cambio de voz, vello corporal o desarrollo de caracteres sexuales.",
+      pistaSocratica: "Piensa en las transformaciones corporales que ocurren al pasar de la niñez a la adolescencia."
+    },
+    paso2_hook: {
+      titulo: "La persona en su totalidad: Las 4 dimensiones",
+      fullPrompt: buildHookPromptText("Ciencias Naturales", "OA 1", 1, "Las 4 Dimensiones de la Sexualidad Humana", hookSlides),
+      slides: hookSlides,
+      videoUrl: "",
+      dileAntes: "Vamos a ver cómo la ciencia moderna comprende la sexualidad a través de cuatro dimensiones inseparables.",
+      dileDespues: "Conversemos sobre lo observado. Te haré dos preguntas para comprobar cómo se interrelacionan estas 4 dimensiones."
+    },
+    paso3_recorrido: [
+      {
+        context: "Dimensión Afectiva y Vínculos",
+        question: "En la segunda dimensión, ¿qué elementos componen la dimensión afectiva de la sexualidad humana?",
+        expected: "Las emociones, los sentimientos, el cariño, la autoestima y la capacidad de amar y establecer vínculos afectivos.",
+        success: "¡Muy bien! La dimensión afectiva reúne cómo sentimos, cómo expresamos cariño y cómo cuidamos nuestra autoestima.",
+        support: "Piensa en lo que pasa en nuestro corazón y mente: cuando sentimos alegría por un amigo, afecto por la familia o aprendemos a querernos a nosotros mismos.",
+        reveal: "La dimensión afectiva integra las emociones, los sentimientos, el cariño y la capacidad de formar lazos profundos con los demás.",
+        studentReveal: "Las emociones, sentimientos, el amor, el cariño y los vínculos afectivos."
+      },
+      {
+        context: "Dimensiones Social y Ética",
+        question: "¿Por qué decimos que la sexualidad humana también tiene una dimensión social y una dimensión ética?",
+        expected: "Porque nos relacionamos con la familia y la sociedad (social), y debemos actuar con valores, respeto mutuo, responsabilidad y consentimiento (ética).",
+        success: "¡Exacto! Somos seres sociales que convivimos con otros, y la ética nos enseña a respetar la dignidad y los límites de cada persona.",
+        support: "Separa las dos palabras: 'social' tiene que ver con vivir en sociedad y convivir; 'ética' tiene que ver con valores, normas y tomar decisiones correctas.",
+        reveal: "La dimensión social abarca cómo convivimos en sociedad y familia, mientras que la ética guía nuestras decisiones con valores de respeto y cuidado.",
+        studentReveal: "Porque convivimos en sociedad (social) y debemos tratarnos con respeto, valores y responsabilidad (ética)."
+      }
+    ],
+    paso4_explicativo: {
+      titulo: "Modelo Integral de la Sexualidad Humana",
+      fullPrompt: buildExplicativoPromptText("Ciencias Naturales", "OA 1", 1, "Las 4 Dimensiones de la Sexualidad Humana", explicativoSlides),
+      slides: explicativoSlides,
+      videoUrl: "",
+      ideaClave: "La sexualidad humana es integral: une nuestro cuerpo biológico, nuestras emociones, nuestra convivencia social y nuestros valores éticos.",
+      dileAntes: "Ahora formalizaremos la idea central que debes recordar para siempre sobre la sexualidad en Ciencias Naturales."
+    },
+    paso5_practica: [
+      {
+        context: "Caso 1: Cuidado de la higiene y descanso",
+        question: "El hábito de bañarse diariamente, usar ropa limpia y dormir ocho horas para cuidar el cuerpo durante el crecimiento, ¿a qué dimensión corresponde?",
+        expected: "Corresponde a la dimensión biológica, ya que se relaciona con el cuidado y funcionamiento saludable del organismo.",
+        success: "¡Muy bien! Cuidar el cuerpo físico con higiene y descanso es parte de la dimensión biológica.",
+        support: "Piensa a qué parte de la persona beneficia directamente el descanso y la limpieza: ¿al cuerpo físico, a las leyes o a la economía?",
+        reveal: "Corresponde a la dimensión biológica porque promueve la salud, higiene y bienestar anatómico del cuerpo.",
+        studentReveal: "Dimensión biológica (salud y cuidado del cuerpo)."
+      },
+      {
+        context: "Caso 2: Expresión de afecto en la familia",
+        question: "Conversar con honestidad con los padres sobre los temores o dudas que surgen en la adolescencia, ¿qué dimensiones involucra?",
+        expected: "Involucra la dimensión afectiva (expresar emociones y confianza) y la dimensión social (el vínculo familiar).",
+        success: "¡Exacto! El diálogo familiar combina el cariño sincero (afectivo) con la convivencia dentro del hogar (social).",
+        support: "Piensa en las emociones compartidas (afecto) y en las personas con las que vives y convives (familia/social).",
+        reveal: "Involucra la dimensión afectiva (manejo de emociones y confianza) y la dimensión social (la relación de convivencia con la familia).",
+        studentReveal: "Dimensión afectiva (emociones) y dimensión social (familia)."
+      },
+      {
+        context: "Caso 3: Trabajo en el Cuaderno de Ciencias",
+        question: "Abre tu cuaderno de Ciencias Naturales. Dibuja un cuadro con cuatro columnas tituladas: Biológica, Afectiva, Social y Ética. Anota en la columna 'Ética' una acción que demuestre respeto hacia tus compañeros.",
+        expected: "Registrar una acción ética concreta (por ejemplo: no burlarse de los cambios de otros, pedir permiso antes de tocar pertenencias ajenas o respetar la privacidad).",
+        success: "¡Excelente registro en tu cuaderno! Anotaste una acción clara de respeto y valor ético.",
+        support: "Escribe una acción cotidiana donde se note el respeto hacia los demás: por ejemplo, no difundir secretos o no burlarse del cuerpo de otra persona.",
+        reveal: "Una acción ética fundamental es tratar a todas las personas con respeto y dignidad, valorando su individualidad y respetando sus límites.",
+        studentReveal: "Acción ética registrada en el cuaderno: respetar los límites y la dignidad de cada compañero."
+      }
+    ],
+    paso6_resumen: {
+      ideaClave: "La sexualidad humana es una vivencia integral que comprende cuatro dimensiones inseparables: biológica (cuerpo), afectiva (emociones), social (relaciones) y ética (valores y respeto).",
+      sintesis: "Todas las dimensiones interactúan permanentemente: lo que sentimos se refleja en nuestro cuerpo y en cómo convivimos en sociedad bajo principios éticos."
+    },
+    paso7_miniquiz: [
+      {
+        q: "¿Cuál de las siguientes afirmaciones define correctamente la sexualidad humana según la ciencia?",
+        options: [
+          "Es una dimensión integral presente a lo largo de toda la vida que une lo biológico, afectivo, social y ético.",
+          "Se reduce exclusivamente a la reproducción biológica y a los órganos del cuerpo humano.",
+          "Es un tema que únicamente involucra a los adultos y no tiene relación con las emociones ni los valores."
+        ],
+        correct: "Es una dimensión integral presente a lo largo de toda la vida que une lo biológico, afectivo, social y ético.",
+        fixExplain: "La sexualidad humana es integral: comprende el cuerpo biológico, los afectos, la convivencia social y los valores éticos durante toda la vida."
+      },
+      {
+        q: "El cambio en el tono de la voz y el crecimiento acelerado de estatura durante la pubertad corresponden a la dimensión:",
+        options: [
+          "Biológica",
+          "Social",
+          "Ética"
+        ],
+        correct: "Biológica",
+        fixExplain: "Los cambios corporales, hormonales y anatómicos forman parte de la dimensión biológica del ser humano."
+      },
+      {
+        q: "Aprender a decir 'no' con seguridad y respetar los límites y decisiones de los demás corresponde a la dimensión:",
+        options: [
+          "Ética y moral",
+          "Exclusivamente biológica",
+          "Únicamente climática"
+        ],
+        correct: "Ética y moral",
+        fixExplain: "Establecer límites personales, cuidar el consentimiento y valorar la dignidad propia y ajena son fundamentos de la dimensión ética."
+      }
+    ],
+    paso7b_recuperacion: [
+      {
+        title: "Recuperación: Las 4 Dimensiones de la Sexualidad",
+        explain: "Recuerda que la sexualidad humana se compone de 4 dimensiones esenciales: 1) Biológica (el cuerpo), 2) Afectiva (las emociones), 3) Social (la relación con otros) y 4) Ética (los valores y el respeto).",
+        q: "Si una persona siente cariño por sus amigos y comparte momentos felices con ellos, ¿qué dos dimensiones se manifiestan?",
+        options: [
+          "Las dimensiones afectiva (cariño) y social (amistades).",
+          "Únicamente la dimensión biológica anatómica."
+        ],
+        correct: "Las dimensiones afectiva (cariño) y social (amistades).",
+        correctText: "¡Exacto! El cariño representa la dimensión afectiva y compartir con amigos representa la dimensión social.",
+        fixText: "Recuerda que el cariño corresponde a la dimensión afectiva y la convivencia con amigos corresponde a la dimensión social."
+      }
+    ],
+    paso8_cierre: {
+      preguntaSintesis: "En tus propias palabras, ¿por qué decimos que la sexualidad involucra a la persona completa y no solo a la biología?",
+      metacognicion: "¿Cuál de las 4 dimensiones te parece más importante para cuidar tus relaciones con amigos y familia?",
+      celebracion: "¡Felicitaciones! Has completado con éxito la primera clase de Ciencias Naturales sobre las 4 dimensiones de la sexualidad humana."
+    }
+  };
+}
+
+/**
+ * Helper to build canonical Lesson 1 of Historia y Ciencias Sociales Grade 7 OA02
+ */
+export function getCanonicalClase1Historia(): LessonData {
+  const hookSlides: SlidePrompt[] = [
+    {
+      slideNumber: 1,
+      tituloMomento: "El Mundo Paleolítico Nómade",
+      visualPrompt: "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, watching from a ridge as a Paleolithic band moves across cold windswept plains carrying shelters and stone spears. Cinematic atmospheric lighting.",
+      overlayText: "Hace 15.000 años: La vida nómade",
+      speakerNotes: "Durante milenios, los seres humanos debían seguir las manadas y recolectar frutos silvestres para no morir de hambre.",
+      palabrasAprox: 17,
+      duracionSeg: 9
+    },
+    {
+      slideNumber: 2,
+      tituloMomento: "El Clima Cambia y Nace la Observación",
+      visualPrompt: "Modern anime style. Warm sunlight illuminating green valleys along a flowing river. Early hunter-gatherers observing wild wheat and barley growing naturally. Fresh spring atmosphere.",
+      overlayText: "El Clima Cambia y Florece la Tierra",
+      speakerNotes: "Al terminar la última glaciación, el clima se volvió más templado y las comunidades comenzaron a observar los ciclos de las plantas.",
+      palabrasAprox: 21,
+      duracionSeg: 10
+    },
+    {
+      slideNumber: 3,
+      tituloMomento: "La Invención de la Agricultura",
+      visualPrompt: "Modern anime style. Early Neolithic farmers carefully planting emmer and barley seeds into fertile soil near the Euphrates river with polished digging sticks. Golden morning light.",
+      overlayText: "La Revolución Agrícola",
+      speakerNotes: "Sembrar trigo, cebada y legumbres permitió producir alimento en un lugar permanente sin tener que trasladarse.",
+      palabrasAprox: 16,
+      duracionSeg: 8
+    },
+    {
+      slideNumber: 4,
+      tituloMomento: "La Domesticación Ganadera",
+      visualPrompt: "Modern anime style. Neolithic sheep and goats grazing peacefully in stone-fenced enclosures beside early mudbrick round houses. Clean lineart, soft depth of field.",
+      overlayText: "La Ganadería Neolítica",
+      speakerNotes: "La crianza controlada de ovejas y cabras aseguró leche, carne y lana constante durante todo el año.",
+      palabrasAprox: 16,
+      duracionSeg: 8
+    },
+    {
+      slideNumber: 5,
+      tituloMomento: "Primeras Aldeas Sedentarias",
+      visualPrompt: "Modern anime style. Panoramic view of an ancient settlement like Jericho or Catalhoyuk with square mudbrick dwellings, communal granaries, and children playing safely.",
+      overlayText: "Nacen las Primeras Aldeas Sedentarias",
+      speakerNotes: "Con comida almacenada en graneros, las familias levantaron viviendas duraderas y fundaron las primeras aldeas.",
+      palabrasAprox: 15,
+      duracionSeg: 8
+    },
+    {
+      slideNumber: 6,
+      tituloMomento: "Nuevas Herramientas y Oficios",
+      visualPrompt: "Modern anime style. Villagers shaping clay into storage pots, weaving woolen textiles, and polishing stone sickles beside a communal fire.",
+      overlayText: "Nuevas Herramientas y Oficios",
+      speakerNotes: "Al no necesitar que todos cazaran, nacieron artesanos de la alfarería, tejedores y constructores.",
+      palabrasAprox: 13,
+      duracionSeg: 7
+    },
+    {
+      slideNumber: 7,
+      tituloMomento: "Puente a la Conversación Histórica",
+      visualPrompt: "Modern anime style. The two 13-year-olds analyzing a glowing interactive map of the Fertile Crescent with timeline markers. StudioSimple emblem.",
+      overlayText: "StudioSimple · Historia 7° Básico",
+      speakerNotes: "Descubramos en nuestra línea de tiempo cómo este salto revolucionario dio origen a nuestras civilizaciones.",
+      palabrasAprox: 15,
+      duracionSeg: 8
+    }
+  ];
+
+  const explicativoSlides: SlidePrompt[] = [
+    {
+      slideNumber: 1,
+      tituloMomento: "De la Depredación a la Producción",
+      visualPrompt: "Modern anime style 16:9. The boy and girl standing before a sleek interactive lightboard contrasting two eras: 'Economía Depredadora (Paleolítico)' vs 'Economía Productora (Neolítico)'.",
+      overlayText: "La Gran Transformación Económica",
+      speakerNotes: "El Neolítico representa el salto decisivo: el ser humano dejó de recolectar pasivamente para convertirse en productor de su propio alimento.",
+      palabrasAprox: 20,
+      duracionSeg: 10
+    },
+    {
+      slideNumber: 2,
+      tituloMomento: "El Creciente Fértil y los Ríos",
+      visualPrompt: "Modern anime style. Map of the Middle East highlighting the green arc formed by the Tigris, Euphrates, and Nile rivers. Clear geographic labels.",
+      overlayText: "La Media Luna Fértil",
+      speakerNotes: "Esta revolución comenzó en el Creciente Fértil, donde los ríos aportaban agua constante y tierras ricas en nutrientes.",
+      palabrasAprox: 18,
+      duracionSeg: 9
+    },
+    {
+      slideNumber: 3,
+      tituloMomento: "La Acumulación de Excedentes",
+      visualPrompt: "Modern anime style. Large clay jars filled with golden wheat grains inside a cool, dry stone storage room. Warm ambient glow.",
+      overlayText: "El Excedente Alimentario",
+      speakerNotes: "Por primera vez en la historia, sobraba comida. El grano almacenado garantizaba sobrevivir en inviernos y sequías.",
+      palabrasAprox: 17,
+      duracionSeg: 9
+    },
+    {
+      slideNumber: 4,
+      tituloMomento: "La Cerámica como Tecnología Clave",
+      visualPrompt: "Modern anime style. Neolithic artisan shaping a ceramic vessel on a slow turntable, showing waterproof clay walls.",
+      overlayText: "Alfarería para Conservar Alimentos",
+      speakerNotes: "Las vasijas de barro cocido fueron indispensables para proteger las cosechas de la humedad y de los roedores.",
+      palabrasAprox: 17,
+      duracionSeg: 9
+    },
+    {
+      slideNumber: 5,
+      tituloMomento: "El Nacimiento del Sedentarismo",
+      visualPrompt: "Modern anime style. Families building permanent stone and adobe walls, settling near their irrigated crop fields.",
+      overlayText: "Sedentarismo: Quedarse en un Lugar Fijo",
+      speakerNotes: "Tener cultivos y animales requirió cuidar la tierra permanentemente, dando origen a la vida sedentaria.",
+      palabrasAprox: 15,
+      duracionSeg: 8
+    },
+    {
+      slideNumber: 6,
+      tituloMomento: "La División y Especialización del Trabajo",
+      visualPrompt: "Modern anime style. Split infographic showing 4 distinct roles: farmer tending fields, potter at wheel, weaver at loom, and builder with mudbricks.",
+      overlayText: "Nuevas Profesiones y Oficios",
+      speakerNotes: "Al haber excedente de comida, surgieron nuevos oficios especializados que impulsaron la tecnología y el comercio.",
+      palabrasAprox: 16,
+      duracionSeg: 8
+    },
+    {
+      slideNumber: 7,
+      tituloMomento: "Síntesis en el Cuaderno de Historia",
+      visualPrompt: "Modern anime style. Both explorers smiling with their open notebooks, drawing the comparative table between Paleolithic and Neolithic.",
+      overlayText: "¡A comparar en tu cuaderno!",
+      speakerNotes: "Ahora abre tu cuaderno de Historia y Ciencias Sociales para construir el cuadro comparativo junto a tu mentor.",
+      palabrasAprox: 18,
+      duracionSeg: 9
+    }
+  ];
+
+  return {
+    num: 1,
+    title: "El fin del nomadismo y el surgimiento agrícola",
+    focoDidactico: "Transición de la caza y recolección nómade a las primeras aldeas sedentarias productoras de alimentos",
+    duracion: "30-35 Minutos",
+    objetivoAdulto: "Acompañar al estudiante a comprender la gran transformación del Paleolítico al Neolítico: cómo el descubrimiento de la agricultura y la domesticación de animales transformó a los grupos humanos nómades en comunidades sedentarias.",
+    climaEmocional: "Crea un clima de exploración histórica: 'En historia no memorizamos fechas sueltas: comprendemos cómo las personas resolvieron sus necesidades básicas para construir nuestra civilización'.",
+    situacionIntro: {
+      dialogo: "Hoy en Historia y Ciencias Sociales nos situamos en 'El fin del nomadismo y el surgimiento agrícola'. En la pantalla puedes ver la línea de tiempo interactiva. Observa la etapa de la 'Revolución Neolítica' (hace unos 10.000 años a.C.). ¿Qué descubrimiento fundamental permitió a las familias humanas dejar de trasladarse todo el tiempo y fundar las primeras aldeas sedentarias?",
+      pregunta: "¿Qué descubrimiento fundamental permitió a los humanos dejar el nomadismo y fundar aldeas permanentes?",
+      respEsperada: "La agricultura (cultivo de plantas como trigo y cebada) y la domesticación de animales (ganadería), lo que permitió producir y almacenar alimento fijo.",
+      pistaSocratica: "Fíjate en el icono de la espiga de trigo: ¿qué empezaron a hacer en el Neolítico para tener alimento sin tener que viajar buscando caza?"
+    },
+    paso2_hook: {
+      titulo: "De cazadores a agricultores: La Revolución Neolítica",
+      fullPrompt: buildHookPromptText("Historia, Geografía y Ciencias Sociales", "OA 2", 1, "El fin del nomadismo y el surgimiento agrícola", hookSlides),
+      slides: hookSlides,
+      videoUrl: "",
+      dileAntes: "Durante más del 95% de la historia humana, nuestros antepasados fueron cazadores nómadas. Todo cambió cuando aprendieron a sembrar.",
+      dileDespues: "Conversemos sobre lo observado en la línea de tiempo. Te haré dos preguntas para comprobar esta transformación."
+    },
+    paso3_recorrido: [
+      {
+        context: "Vida Nómada vs Vida Sedentaria",
+        question: "¿Por qué las bandas humanas del Paleolítico estaban obligadas a ser nómadas y trasladarse constantemente de un lugar a otro?",
+        expected: "Porque dependían de la caza de animales que migraban y de la recolección de frutos silvestres; cuando los recursos se agotaban, debían moverse para no morir de hambre.",
+        success: "¡Muy bien! Comprendiste que el nomadismo era una necesidad estricta para sobrevivir buscando comida.",
+        support: "Piensa en una manada de animales: si los animales migran hacia el sur por el invierno, ¿qué tienen que hacer los cazadores?",
+        reveal: "Los nómadas no tenían cultivos propios; seguían las rutas migratorias de los animales y las estaciones de las plantas silvestres.",
+        studentReveal: "Eran nómadas porque dependían de la caza y recolección, y debían seguir a las manadas de animales."
+      },
+      {
+        context: "El Creciente Fértil y la Geografía",
+        question: "¿Por qué la Revolución Neolítica comenzó en regiones con ríos abundantes como la Media Luna Fértil (en Medio Oriente, junto a los ríos Tigris y Éufrates)?",
+        expected: "Porque los ríos proveían agua constante para regar los primeros campos cultivados y dejaban tierras húmedas y fértiles tras las crecidas.",
+        success: "¡Excelente análisis geográfico! Supiste vincular la presencia de agua dulce y suelos fértiles con el éxito de los primeros cultivos.",
+        support: "Fíjate en las condiciones que necesita una semilla para crecer: ¿por qué los desiertos secos no servían para empezar la agricultura?",
+        reveal: "El agua dulce de los ríos y los valles aluviales proporcionaron el entorno propicio para domesticar el trigo y la cebada.",
+        studentReveal: "Comenzó junto a los ríos porque aseguraban agua para el riego y tierras fértiles para los cultivos."
+      }
+    ],
+    paso4_explicativo: {
+      titulo: "La Revolución Neolítica y los excedentes alimentarios",
+      fullPrompt: buildExplicativoPromptText("Historia, Geografía y Ciencias Sociales", "OA 2", 1, "El fin del nomadismo y el surgimiento agrícola", explicativoSlides),
+      slides: explicativoSlides,
+      videoUrl: "",
+      ideaClave: "La Revolución Neolítica fue la transformación más profunda de la humanidad: al domesticar plantas y animales, las sociedades pasaron de la economía depredadora a la economía productora, naciendo las primeras aldeas sedentarias.",
+      dileAntes: "Revisemos la idea histórica formal: cómo el paso a la economía productora cambió la vida para siempre."
+    },
+    paso5_practica: [
+      {
+        context: "Cuadro Comparativo en el Cuaderno de Historia",
+        question: "Abre tu cuaderno de Historia. Dibuja una tabla de 2 columnas titulada: 'Paleolítico (Nómadas) vs Neolítico (Sedentarios)'. Completa al menos 3 diferencias: 1) Modo de conseguir comida, 2) Tipo de vivienda, y 3) Herramientas principales.",
+        expected: "Tabla ordenada en el cuaderno con 3 comparaciones claras: Caza/recolección vs Agricultura/ganadería; Cavernas/chozas desmontables vs Casas de barro y piedra; Piedra tallada vs Piedra pulida y cerámica.",
+        success: "¡Excelente sistematización histórica en tu cuaderno! Tu cuadro comparativo refleja con rigor las diferencias de cada período.",
+        support: "Escribe en la izquierda 'Paleolítico' (nómadas, caza, piedra tallada) y a la derecha 'Neolítico' (sedentarios, cultivo, cerámica y casas fijas).",
+        reveal: "Comparar ambos modos de vida permite apreciar el enorme salto de seguridad y organización que trajo el Neolítico.",
+        studentReveal: "Cuadro comparativo completo de 3 filas en el cuaderno de Historia y Ciencias Sociales."
+      },
+      {
+        context: "Consecuencias Sociales del Sedentarismo en el Cuaderno",
+        question: "En tu cuaderno, responde en 3 líneas: Al tener comida asegurada en la aldea, ya no todos tenían que salir a cazar todo el día. ¿Qué nuevos oficios o trabajos surgieron en las aldeas neolíticas?",
+        expected: "Mencionar al menos dos nuevos oficios: alfareros (cerámica), tejedores (textiles con lana de oveja), agricultores, constructores o artesanos de herramientas.",
+        success: "¡Muy buena deducción histórica! Identificaste la división y especialización del trabajo que dio origen a la vida urbana.",
+        support: "Piensa en las nuevas necesidades de la aldea: ¿quién hacía las vasijas de barro?, ¿quién tejía la ropa con lana de oveja?",
+        reveal: "El excedente de comida liberó a parte de la población para dedicarse a la alfarería, el tejido, la arquitectura y el liderazgo comunitario.",
+        studentReveal: "Mención en el cuaderno de la especialización del trabajo: alfareros, tejedores, agricultores y constructores."
+      }
+    ],
+    paso6_resumen: {
+      ideaClave: "La agricultura y la ganadería transformaron la economía depredadora en economía productora, permitiendo almacenar excedentes y fundar las primeras aldeas sedentarias.",
+      sintesis: "Al producir su propio alimento, los humanos abandonaron el nomadismo. Surgieron la cerámica, la piedra pulida y la especialización de oficios."
+    },
+    paso7_miniquiz: [
+      {
+        q: "¿Cuál fue la causa principal que permitió a los seres humanos abandonar la vida nómada y volverse sedentarios en el Neolítico?",
+        options: [
+          "La invención de barcos de guerra para navegar grandes océanos",
+          "La domesticación de plantas (agricultura) y animales (ganadería)",
+          "El enfriamiento brusco del clima polar en toda Europa"
+        ],
+        correct: "La domesticación de plantas (agricultura) y animales (ganadería)",
+        fixExplain: "Al producir su propio alimento en campos fijos, las familias ya no necesitaban desplazarse detrás de las manadas de caza."
+      },
+      {
+        q: "¿Por qué la invención de vasijas de cerámica fue indispensable para las primeras aldeas agrícolas?",
+        options: [
+          "Porque servían únicamente como adornos en los templos",
+          "Porque permitían almacenar excedentes de granos y líquidos protegiéndolos de roedores y humedad",
+          "Porque reemplazaron a las armas de fuego en las batallas"
+        ],
+        correct: "Porque permitían almacenar excedentes de granos y líquidos protegiéndolos de roedores y humedad",
+        fixExplain: "La cerámica permitió guardar cosechas durante meses, asegurando reservas contra el hambre y el invierno."
+      },
+      {
+        q: "En el período Paleolítico anterior a la agricultura, ¿cómo obtenían su sustento diario las bandas humanas?",
+        options: [
+          "Comprando alimentos en mercados organizados",
+          "Mediante la caza de animales, la pesca y la recolección de frutos silvestres",
+          "Cultivando grandes campos de trigo y maíz"
+        ],
+        correct: "Mediante la caza de animales, la pesca y la recolección de frutos silvestres",
+        fixExplain: "El Paleolítico se caracterizó por una economía depredadora basada exclusivamente en la caza y recolección silvestre."
+      }
+    ],
+    paso7b_recuperacion: [
+      {
+        title: "Recuperación: El Paso al Sedentarismo",
+        explain: "Recuerda que 'nómade' significa viajar continuamente buscando comida, mientras que 'sedentario' significa vivir en un lugar fijo porque produces tu propio alimento.",
+        q: "¿Qué actividad fue la base que permitió a los seres humanos ser sedentarios?",
+        options: [
+          "La agricultura y la ganadería en campos fijos.",
+          "La caza de ballenas en altamar."
+        ],
+        correct: "La agricultura y la ganadería en campos fijos.",
+        correctText: "¡Exacto! Producir alimentos en campos permanentes hizo posible el sedentarismo.",
+        fixText: "La respuesta correcta es la agricultura y ganadería: al tener comida estable, ya no necesitaban migrar."
+      }
+    ],
+    paso8_cierre: {
+      preguntaSintesis: "En tus propias palabras, ¿qué diferencia hay entre buscar alimento en la naturaleza y producirlo tú mismo?",
+      metacognicion: "¿Qué invento neolítico te llamó más la atención: la siembra, la ganadería o las vasijas de cerámica?",
+      celebracion: "¡Felicitaciones! Has completado con éxito la primera clase de Historia sobre el surgimiento de la agricultura."
+    }
+  };
+}
+
+/**
+ * Helper to build canonical Lesson 1 of Inglés Grade 7 OA09
+ */
+export function getCanonicalClase1Ingles(): LessonData {
+  const hookSlides: SlidePrompt[] = [
+    {
+      slideNumber: 1,
+      tituloMomento: "Welcome to the Story Arc",
+      visualPrompt: "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers standing before an illuminated holographic narrative mountain peak labeled Beginning, Rising Action, Climax, Falling Action, Resolution. Dynamic lighting, negative space on top.",
+      overlayText: "English 7th Grade · The Story Arc",
+      speakerNotes: "Every exciting story in English follows a narrative path called the Story Arc, from the beginning to the resolution.",
+      palabrasAprox: 19,
+      duracionSeg: 9
+    },
+    {
+      slideNumber: 2,
+      tituloMomento: "Step 1: The Setting (Where and When)",
+      visualPrompt: "Modern anime style. Panoramic view of a quiet mountain town at sunrise with pine trees, wooden houses, and distant snowy peaks. High atmospheric detail, calm feeling.",
+      overlayText: "Setting: Where and When",
+      speakerNotes: "The setting tells us where and when the story happens: a quiet town, a rainy night, or an ancient castle.",
+      palabrasAprox: 20,
+      duracionSeg: 10
+    },
+    {
+      slideNumber: 3,
+      tituloMomento: "Step 1: Characters (Who takes part)",
+      visualPrompt: "Modern anime style. Close-up of young Leo with a blue backpack and his adventurous younger sister holding a brass compass and field notebook. Expressive, friendly eyes.",
+      overlayText: "Characters: Who takes part",
+      speakerNotes: "Characters are the people or animals in the story. Meet Leo and his sister, who love exploring nature.",
+      palabrasAprox: 17,
+      duracionSeg: 9
+    },
+    {
+      slideNumber: 4,
+      tituloMomento: "The Time Connector: FIRST",
+      visualPrompt: "Modern anime style. Big stylized typography 'FIRST' with a golden directional arrow pointing to the opening scene of their adventure. Clean graphics.",
+      overlayText: "Time Connector: FIRST / In the beginning",
+      speakerNotes: "To start the narrative, English writers use signal words like 'First' or 'In the beginning'.",
+      palabrasAprox: 14,
+      duracionSeg: 8
+    },
+    {
+      slideNumber: 5,
+      tituloMomento: "Reading the Full Sentence",
+      visualPrompt: "Modern anime style. Clean textbook lightboard showing the sentence: 'First, Leo and his sister lived in a quiet town near the mountains.' Both explorers pointing at words.",
+      overlayText: "'First, Leo and his sister lived in a quiet town...'",
+      speakerNotes: "Listen to the complete sentence: First, Leo and his sister lived in a quiet town near the mountains.",
+      palabrasAprox: 17,
+      duracionSeg: 9
+    },
+    {
+      slideNumber: 6,
+      tituloMomento: "Characters vs. Setting Split",
+      visualPrompt: "Modern anime style. Split screen highlighting green box 'Leo and his sister' (Characters) and blue box 'a quiet town near the mountains' (Setting). Crystal clarity.",
+      overlayText: "Characters vs. Setting",
+      speakerNotes: "Notice how easily you can identify both elements: the characters and the peaceful setting.",
+      palabrasAprox: 14,
+      duracionSeg: 8
+    },
+    {
+      slideNumber: 7,
+      tituloMomento: "Ready for the Notebook Challenge",
+      visualPrompt: "Modern anime style. Minimalist clean composition showing StudioSimple emblem, the two explorers smiling with their English notebooks open, ready to write.",
+      overlayText: "StudioSimple · English 7th Grade",
+      speakerNotes: "Now let's practice together with your mentor and write your first sentences in your English notebook!",
+      palabrasAprox: 17,
+      duracionSeg: 9
+    }
+  ];
+
+  const explicativoSlides: SlidePrompt[] = [
+    {
+      slideNumber: 1,
+      tituloMomento: "Model Sentence Pattern",
+      visualPrompt: "Modern anime style 16:9. The boy and girl standing before a clear formula board: 'Time Connector + Subject (Character) + Past Verb + Setting'. Modern typography.",
+      overlayText: "The Narrative Sentence Formula",
+      speakerNotes: "To begin any narrative in English, we follow a simple formula that gives immediate clarity to the reader.",
+      palabrasAprox: 18,
+      duracionSeg: 9
+    },
+    {
+      slideNumber: 2,
+      tituloMomento: "The Time Connector (First)",
+      visualPrompt: "Modern anime style. The girl highlighting 'First,' with a comma on the digital board. Callout: 'Always add a comma after First'.",
+      overlayText: "Step 1: First, / In the beginning,",
+      speakerNotes: "Always place a comma after introductory time words: 'First,' signals the exact starting point of our story.",
+      palabrasAprox: 17,
+      duracionSeg: 9
+    },
+    {
+      slideNumber: 3,
+      tituloMomento: "The Subject Character (Who)",
+      visualPrompt: "Modern anime style. The boy illustrating different characters: 'two brave pilots', 'a clever detective', 'a lonely astronaut'. Vibrant badges.",
+      overlayText: "Step 2: Name the Characters",
+      speakerNotes: "Next, clearly introduce the main characters so the audience knows who will experience the upcoming adventure.",
+      palabrasAprox: 16,
+      duracionSeg: 8
+    },
+    {
+      slideNumber: 4,
+      tituloMomento: "The Action Verb in Past Simple (-ed)",
+      visualPrompt: "Modern anime style. Glowing linguistic breakdown showing the verb 'live' adding '-ed' to become 'lived', and 'travel' becoming 'traveled'.",
+      overlayText: "Step 3: Past Simple Verb (-ed)",
+      speakerNotes: "Stories happen in the past. Regular action verbs take the -ed ending, like 'lived' or 'explored'.",
+      palabrasAprox: 15,
+      duracionSeg: 8
+    },
+    {
+      slideNumber: 5,
+      tituloMomento: "The Setting Phrase (Place and Time)",
+      visualPrompt: "Modern anime style. Beautiful background callouts: 'in an ancient castle', 'in a futuristic laboratory', 'near the dark forest'.",
+      overlayText: "Step 4: Describe the Setting",
+      speakerNotes: "Finally, describe where and when the characters lived, creating an immersive setting for the reader.",
+      palabrasAprox: 15,
+      duracionSeg: 8
+    },
+    {
+      slideNumber: 6,
+      tituloMomento: "Common Mistakes: Missing Elements",
+      visualPrompt: "Modern anime style. A friendly contrast showing an incomplete phrase with a yellow alert symbol, and the full complete sentence in green.",
+      overlayText: "Avoid Incomplete Sentences",
+      speakerNotes: "Remember: never omit the setting or the connector. A complete opening sentence gives both context and action.",
+      palabrasAprox: 17,
+      duracionSeg: 9
+    },
+    {
+      slideNumber: 7,
+      tituloMomento: "Summary in English Notebook",
+      visualPrompt: "Modern anime style. Both explorers smiling confidently, holding their pencils and inviting the student to write their own story opening.",
+      overlayText: "Your Turn in the English Notebook!",
+      speakerNotes: "Now open your English notebook and write your own story opening using the pattern you just mastered!",
+      palabrasAprox: 18,
+      duracionSeg: 9
+    }
+  ];
+
+  return {
+    num: 1,
+    title: "Setting and Characters in Short Stories",
+    focoDidactico: "Identificar personajes (characters), ambientación (setting) y conector inicial (First) en textos narrativos en inglés",
+    duracion: "30-35 Minutos",
+    objetivoAdulto: "Guiar al estudiante en inglés a identificar los personajes (characters), el lugar y tiempo (setting) y el conector inicial (First / In the beginning) en oraciones narrativas breves.",
+    climaEmocional: "Crea un ambiente de confianza en inglés: 'No tengas miedo a equivocarte al pronunciar. En inglés cada intento suma vocabulario y seguridad'.",
+    situacionIntro: {
+      dialogo: "Hoy en nuestra sesión de English exploramos 'Setting and Characters in Short Stories'. En la pantalla del estudiante se muestra el organizador de la montaña narrativa. Observa el Paso 1: 'Beginning (Introduction)' y lee en voz alta la oración de ejemplo: 'First, Leo and his sister lived in a quiet town near the mountains.' ¿Quiénes son los personajes de la historia y en qué lugar viven?",
+      pregunta: "Who are the characters and what is the setting in this story?",
+      respEsperada: "Characters: Leo and his sister. Setting: a quiet town near the mountains (comenzando con 'First').",
+      pistaSocratica: "Fíjate en las palabras en inglés: 'Leo and his sister' indica quiénes son, y 'quiet town near the mountains' describe el pueblo y las montañas."
+    },
+    paso2_hook: {
+      titulo: "The Narrative Mountain: Story Arc & Time Connectors",
+      fullPrompt: buildHookPromptText("Idioma Extranjero: Inglés", "OA 9", 1, "Setting and Characters in Short Stories", hookSlides),
+      slides: hookSlides,
+      videoUrl: "",
+      dileAntes: "En los relatos en inglés, toda narración sigue una montaña de tensión dramática estructurada con conectores de tiempo clave.",
+      dileDespues: "Conversemos sobre el organizador. Te haré dos preguntas sobre los conectores y elementos que vimos en inglés."
+    },
+    paso3_recorrido: [
+      {
+        context: "Characters vs Setting in English",
+        question: "En un cuento en inglés leemos: 'The young astronaut landed on Mars in the year 2095.' ¿Cuál es el 'character' (personaje) y cuál es el 'setting' (lugar y tiempo)?",
+        expected: "El character es el joven astronauta ('the young astronaut') y el setting es Marte en el año 2095 ('Mars in the year 2095').",
+        success: "¡Very good! Identificaste con total exactitud al protagonista y las coordenadas de lugar y tiempo.",
+        support: "Busca quién realiza la acción (astronaut) y dónde y cuándo ocurre (Mars, year 2095).",
+        reveal: "'Character' responde a 'Who' (quién); 'Setting' responde a 'Where and When' (dónde y cuándo).",
+        studentReveal: "Character: The young astronaut. Setting: Mars in the year 2095."
+      },
+      {
+        context: "Time Connector: First",
+        question: "¿Qué función cumple la palabra 'First' o la frase 'In the beginning' al inicio de un párrafo narrativo?",
+        expected: "Indica el punto de partida temporal, señalando qué hecho ocurrió en primer lugar antes de todos los demás.",
+        success: "¡Excelente! 'First' marca el orden cronológico inicial de la historia.",
+        support: "Recuerda que First significa 'Primero'. Se usa siempre para abrir la secuencia de acciones.",
+        reveal: "'First' conecta el inicio del relato con la presentación de la rutina de los personajes.",
+        studentReveal: "'First' indica el primer hecho que ocurre al comenzar una historia en inglés."
+      }
+    ],
+    paso4_explicativo: {
+      titulo: "Model Sentence Pattern: Beginning a Story in English",
+      fullPrompt: buildExplicativoPromptText("Idioma Extranjero: Inglés", "OA 9", 1, "Setting and Characters in Short Stories", explicativoSlides),
+      slides: explicativoSlides,
+      videoUrl: "",
+      ideaClave: "Pattern: 'First, [Character] lived/worked in [Setting].' Example: 'First, two brave explorers traveled across the desert.'",
+      dileAntes: "Revisemos la estructura formal para iniciar una historia en inglés con conector, personaje, verbo en pasado y lugar."
+    },
+    paso5_practica: [
+      {
+        context: "Writing a Story Beginning in English Notebook",
+        question: "Abre tu cuaderno de inglés. Escribe el título: 'Story Arc: Step 1 Beginning'. Inventa y escribe 1 oración completa en inglés siguiendo el modelo aprendido: empieza con 'First,', luego nombra un personaje (ej. 'a brave girl', 'a curious dog', 'a clever scientist') y di dónde vivía usando 'lived in...'.",
+        expected: "Oración completa en inglés en el cuaderno con la estructura: 'First, [personaje] lived in [lugar].' (Por ejemplo: 'First, a brave girl lived in a magical forest.').",
+        success: "¡Great job in your notebook! Tu oración en inglés está correctamente estructurada con conector, personaje y lugar.",
+        support: "Copia este molde y complétalo: 'First, a young detective lived in Santiago.' o 'First, a lonely wizard lived in an old castle.'",
+        reveal: "Escribir oraciones completas en el cuaderno consolida la ortografía, la puntuación y el vocabulario en inglés.",
+        studentReveal: "Oración modelo escrita en el cuaderno: 'First, [Character] lived in [Setting].'"
+      },
+      {
+        context: "Translating Setting and Characters to Spanish",
+        question: "Debajo de tu oración en inglés en el cuaderno, escribe la traducción al español e indica al lado con dos flechas: ¿cuál es el Character (personaje) y cuál es el Setting (lugar)?",
+        expected: "Traducción correcta de su propia oración al español con identificación explícita del personaje y del lugar.",
+        success: "¡Excelente demostración bilingüe! Comprobaste que comprendes a fondo cada parte de lo que escribiste en inglés.",
+        support: "Escribe tu frase en español y encierra en un círculo el nombre del personaje y subraya el lugar donde vive.",
+        reveal: "Poder traducir y rotular los elementos demuestra dominio real del significado y no solo repetición mecánica.",
+        studentReveal: "Traducción al español en el cuaderno con Character y Setting claramente rotulados."
+      }
+    ],
+    paso6_resumen: {
+      ideaClave: "Todo inicio de relato en inglés presenta 'Characters' (quiénes participan) y 'Setting' (dónde y cuándo ocurre), articulados con el conector inicial 'First'.",
+      sintesis: "Fórmula de apertura: Time Connector ('First,') + Character + Past Verb ('lived in') + Setting ('a quiet town')."
+    },
+    paso7_miniquiz: [
+      {
+        q: "Read the sentence: 'First, an old sailor lived in a small lighthouse near the sea.' Who is the main character?",
+        options: [
+          "The sea",
+          "An old sailor",
+          "A small lighthouse"
+        ],
+        correct: "An old sailor",
+        fixExplain: "'An old sailor' (un viejo marinero) es la persona que realiza la acción y vive en el lugar."
+      },
+      {
+        q: "In the same sentence: 'First, an old sailor lived in a small lighthouse near the sea.' What is the setting (place)?",
+        options: [
+          "In a big airport",
+          "In an old sailor",
+          "In a small lighthouse near the sea"
+        ],
+        correct: "In a small lighthouse near the sea",
+        fixExplain: "'A small lighthouse near the sea' (un pequeño faro cerca del mar) es el lugar físico donde se ambienta la escena."
+      },
+      {
+        q: "Which time connector is best suited to start the very first sentence of a short story in English?",
+        options: [
+          "Finally,",
+          "First,",
+          "Because,"
+        ],
+        correct: "First,",
+        fixExplain: "'First,' (Primero) o 'In the beginning' son los conectores ideales para iniciar la narración cronológica."
+      }
+    ],
+    paso7b_recuperacion: [
+      {
+        title: "Recuperación: Characters and Setting",
+        explain: "Recuerda que 'Character' es la persona o animal de la historia, y 'Setting' es el lugar donde ocurre.",
+        q: "In 'First, a doctor worked in a hospital', what is the setting?",
+        options: [
+          "In a hospital (un hospital).",
+          "A doctor (un doctor)."
+        ],
+        correct: "In a hospital (un hospital).",
+        correctText: "¡Very good! 'In a hospital' es el lugar (setting).",
+        fixText: "The correct answer is: In a hospital (el hospital es el lugar físico)."
+      }
+    ],
+    paso8_cierre: {
+      preguntaSintesis: "In your own words, what is the difference between a character and a setting in an English short story?",
+      metacognicion: "¿Qué conector de tiempo en inglés te resultó más fácil de recordar para comenzar un relato?",
+      celebracion: "Congratulations! You have completed your first English lesson on Setting and Characters!"
     }
   };
 }
@@ -1262,10 +2324,28 @@ export function generateOAPackage(oa: OACatalogItem, totalLessons: number): Gene
     const isFirst = classNum === 1;
     const isLast = classNum === totalLessons;
 
-    // Si es la Clase 1 de Matemática de 7° Básico (OA01), inyectar la lección canónica sincronizada del prototipo
-    if (classNum === 1 && oa.oaNumero === 1 && oa.asignatura === "Matemática" && oa.curso.includes("7")) {
-      lessons.push(getCanonicalClase1Matematica());
-      return;
+    // Inyección canónica de lecciones sincronizadas para 7° Básico Clase 1 (las 5 asignaturas troncales)
+    if (classNum === 1 && oa.curso.includes("7")) {
+      if (oa.oaNumero === 1 && oa.asignatura === "Matemática") {
+        lessons.push(getCanonicalClase1Matematica());
+        return;
+      }
+      if (oa.oaNumero === 3 && (oa.asignatura.includes("Lengua") || oa.asignatura.includes("Lenguaje"))) {
+        lessons.push(getCanonicalClase1Lengua());
+        return;
+      }
+      if (oa.oaNumero === 1 && oa.asignatura.includes("Ciencias") && !oa.asignatura.includes("Sociales")) {
+        lessons.push(getCanonicalClase1Ciencias());
+        return;
+      }
+      if (oa.oaNumero === 2 && oa.asignatura.includes("Historia")) {
+        lessons.push(getCanonicalClase1Historia());
+        return;
+      }
+      if (oa.oaNumero === 9 && (oa.asignatura.includes("Inglés") || oa.asignatura.includes("Ingles"))) {
+        lessons.push(getCanonicalClase1Ingles());
+        return;
+      }
     }
 
     // Build Hook 7 Slides
@@ -1595,7 +2675,7 @@ function getRawLessonTitlesAndFocus(
   if (isCie) {
     if (oa.oaNumero === 1) {
       return [
-        { title: "La sexualidad como dimensión integral humana", focoDidactico: "Integración de aspectos biológicos, psicológicos, afectivos y sociales" },
+        { title: "Las 4 Dimensiones de la Sexualidad Humana", focoDidactico: "Comprender la sexualidad como experiencia integral que une las dimensiones biológica, afectiva, social y ética" },
         { title: "Transformaciones físicas y emocionales en la pubertad", focoDidactico: "Caracteres sexuales secundarios, cambios corporales y desarrollo" },
         { title: "Vínculos afectivos, respeto mutuo e intimidad", focoDidactico: "La comunicación empática y el cuidado en las relaciones interpersonales" },
         { title: "Responsabilidad individual y toma de decisiones", focoDidactico: "Autocuidado, consentimiento y discernimiento informado en adolescentes" },
@@ -1682,7 +2762,7 @@ function getRawLessonTitlesAndFocus(
   if (isLeng) {
     if (oa.oaNumero === 3) {
       return [
-        { title: "El conflicto narrativo y la trama de la historia", focoDidactico: "Identificación de fuerzas en oposición y nudo central del relato" },
+        { title: "Las 6 Etapas del Viaje del Héroe", focoDidactico: "Identificar las 6 etapas del viaje del héroe y el conflicto narrativo como motor del relato" },
         { title: "Evolución y roles de los personajes", focoDidactico: "Protagonistas, antagonistas y motivaciones que impulsan las acciones" },
         { title: "La voz del narrador y perspectivas", focoDidactico: "Distinción entre narrador omnisciente, protagonista y testigo" },
         { title: "Disposición temporal de los acontecimientos", focoDidactico: "Orden cronológico, saltos temporales (anacronías) y ritmo narrativo" },

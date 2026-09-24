@@ -1,77 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
-  <defs>
-    <linearGradient id="bgGrad5" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#F8FAFC"/>
-      <stop offset="100%" stop-color="#F1F5F9"/>
-    </linearGradient>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 240" width="100%" height="100%">
+  <rect x="0" y="0" width="600" height="240" rx="16" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
 
-  <rect x="0" y="0" width="600" height="380" rx="20" fill="url(#bgGrad5)"/>
+  <!-- Titulo minimalista neutro -->
+  <text x="300" y="42" font-family="Nunito, sans-serif" font-size="16" font-weight="800" fill="#1C3257" text-anchor="middle">Recta Numérica Horizontal</text>
+  <text x="300" y="64" font-family="Nunito, sans-serif" font-size="12" font-weight="600" fill="#64748B" text-anchor="middle">Eje de los números enteros con origen en cero</text>
 
-  <!-- Título pedagógico claro -->
-  <text x="300" y="55" font-family="Nunito, sans-serif" font-size="20" font-weight="900" fill="#1C3257" text-anchor="middle">Recta Numérica Horizontal</text>
-  <text x="300" y="80" font-family="Nunito, sans-serif" font-size="13" font-weight="600" fill="#64748B" text-anchor="middle">El cero divide los valores positivos y negativos</text>
+  <!-- Recta horizontal (Y=140) -->
+  <line x1="50" y1="140" x2="550" y2="140" stroke="#334155" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Flechas extremas -->
+  <polygon points="40,140 55,133 55,147" fill="#334155"/>
+  <polygon points="560,140 545,133 545,147" fill="#334155"/>
 
-  <!-- Zona destacada: Negativos a la izquierda -->
-  <rect x="30" y="110" width="240" height="150" rx="16" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.5" stroke-dasharray="4,4"/>
-  <rect x="45" y="125" width="210" height="28" rx="8" fill="#2563EB"/>
-  <text x="150" y="144" font-family="Nunito, sans-serif" font-size="12" font-weight="900" fill="#FFFFFF" text-anchor="middle">NÚMEROS NEGATIVOS</text>
-  <text x="150" y="170" font-family="Nunito, sans-serif" font-size="13" font-weight="800" fill="#1D4ED8" text-anchor="middle">← A la izquierda del cero</text>
+  <!-- Graduaciones y numeros -->
+  <!-- -5 -->
+  <line x1="85" y1="130" x2="85" y2="150" stroke="#64748B" stroke-width="2"/>
+  <text x="85" y="174" font-family="Nunito, sans-serif" font-size="15" font-weight="700" fill="#475569" text-anchor="middle">−5</text>
 
-  <!-- Zona: Positivos a la derecha -->
-  <rect x="330" y="110" width="240" height="150" rx="16" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1.5" stroke-dasharray="4,4"/>
-  <rect x="345" y="125" width="210" height="28" rx="8" fill="#16A34A"/>
-  <text x="450" y="144" font-family="Nunito, sans-serif" font-size="12" font-weight="900" fill="#FFFFFF" text-anchor="middle">NÚMEROS POSITIVOS</text>
-  <text x="450" y="170" font-family="Nunito, sans-serif" font-size="13" font-weight="800" fill="#15803D" text-anchor="middle">A la derecha del cero →</text>
-
-  <!-- Recta numérica horizontal (Y=210) -->
-  <!-- Flecha izquierda -->
-  <polygon points="35,210 50,203 50,217" fill="#2563EB"/>
-  <!-- Línea continua -->
-  <line x1="45" y1="210" x2="555" y2="210" stroke="#1E293B" stroke-width="4"/>
-  <!-- Flecha derecha -->
-  <polygon points="565,210 550,203 550,217" fill="#16A34A"/>
-
-  <!-- Graduaciones de la recta -->
   <!-- -4 -->
-  <line x1="90" y1="200" x2="90" y2="220" stroke="#2563EB" stroke-width="2.5"/>
-  <text x="90" y="244" font-family="Nunito, sans-serif" font-size="16" font-weight="900" fill="#2563EB" text-anchor="middle">−4</text>
+  <line x1="130" y1="130" x2="130" y2="150" stroke="#64748B" stroke-width="2"/>
+  <text x="130" y="174" font-family="Nunito, sans-serif" font-size="15" font-weight="700" fill="#475569" text-anchor="middle">−4</text>
 
   <!-- -3 -->
-  <line x1="145" y1="200" x2="145" y2="220" stroke="#2563EB" stroke-width="2.5"/>
-  <text x="145" y="244" font-family="Nunito, sans-serif" font-size="16" font-weight="900" fill="#2563EB" text-anchor="middle">−3</text>
+  <line x1="175" y1="130" x2="175" y2="150" stroke="#64748B" stroke-width="2"/>
+  <text x="175" y="174" font-family="Nunito, sans-serif" font-size="15" font-weight="700" fill="#475569" text-anchor="middle">−3</text>
 
   <!-- -2 -->
-  <line x1="200" y1="200" x2="200" y2="220" stroke="#2563EB" stroke-width="2.5"/>
-  <text x="200" y="244" font-family="Nunito, sans-serif" font-size="16" font-weight="900" fill="#2563EB" text-anchor="middle">−2</text>
+  <line x1="220" y1="130" x2="220" y2="150" stroke="#64748B" stroke-width="2"/>
+  <text x="220" y="174" font-family="Nunito, sans-serif" font-size="15" font-weight="700" fill="#475569" text-anchor="middle">−2</text>
 
   <!-- -1 -->
-  <line x1="250" y1="200" x2="250" y2="220" stroke="#2563EB" stroke-width="2.5"/>
-  <text x="250" y="244" font-family="Nunito, sans-serif" font-size="16" font-weight="900" fill="#2563EB" text-anchor="middle">−1</text>
+  <line x1="265" y1="130" x2="265" y2="150" stroke="#64748B" stroke-width="2"/>
+  <text x="265" y="174" font-family="Nunito, sans-serif" font-size="15" font-weight="700" fill="#475569" text-anchor="middle">−1</text>
 
-  <!-- 0 (Origen destacado) -->
-  <circle cx="300" cy="210" r="16" fill="#F59E0B" stroke="#B45309" stroke-width="3"/>
-  <text x="300" y="216" font-family="Nunito, sans-serif" font-size="16" font-weight="900" fill="#FFFFFF" text-anchor="middle">0</text>
-  <rect x="265" y="240" width="70" height="24" rx="6" fill="#FEF3C7"/>
-  <text x="300" y="256" font-family="Nunito, sans-serif" font-size="11" font-weight="900" fill="#92400E" text-anchor="middle">ORIGEN</text>
+  <!-- 0 Origen central -->
+  <circle cx="300" cy="140" r="14" fill="#F59E0B" stroke="#D97706" stroke-width="2.5"/>
+  <text x="300" y="145" font-family="Nunito, sans-serif" font-size="15" font-weight="900" fill="#FFFFFF" text-anchor="middle">0</text>
+  <text x="300" y="176" font-family="Nunito, sans-serif" font-size="11" font-weight="800" fill="#B45309" text-anchor="middle">ORIGEN</text>
 
   <!-- +1 -->
-  <line x1="350" y1="200" x2="350" y2="220" stroke="#16A34A" stroke-width="2.5"/>
-  <text x="350" y="244" font-family="Nunito, sans-serif" font-size="16" font-weight="900" fill="#16A34A" text-anchor="middle">+1</text>
+  <line x1="335" y1="130" x2="335" y2="150" stroke="#64748B" stroke-width="2"/>
+  <text x="335" y="174" font-family="Nunito, sans-serif" font-size="15" font-weight="700" fill="#475569" text-anchor="middle">+1</text>
 
   <!-- +2 -->
-  <line x1="400" y1="200" x2="400" y2="220" stroke="#16A34A" stroke-width="2.5"/>
-  <text x="400" y="244" font-family="Nunito, sans-serif" font-size="16" font-weight="900" fill="#16A34A" text-anchor="middle">+2</text>
+  <line x1="380" y1="130" x2="380" y2="150" stroke="#64748B" stroke-width="2"/>
+  <text x="380" y="174" font-family="Nunito, sans-serif" font-size="15" font-weight="700" fill="#475569" text-anchor="middle">+2</text>
 
   <!-- +3 -->
-  <line x1="455" y1="200" x2="455" y2="220" stroke="#16A34A" stroke-width="2.5"/>
-  <text x="455" y="244" font-family="Nunito, sans-serif" font-size="16" font-weight="900" fill="#16A34A" text-anchor="middle">+3</text>
+  <line x1="425" y1="130" x2="425" y2="150" stroke="#64748B" stroke-width="2"/>
+  <text x="425" y="174" font-family="Nunito, sans-serif" font-size="15" font-weight="700" fill="#475569" text-anchor="middle">+3</text>
 
   <!-- +4 -->
-  <line x1="510" y1="200" x2="510" y2="220" stroke="#16A34A" stroke-width="2.5"/>
-  <text x="510" y="244" font-family="Nunito, sans-serif" font-size="16" font-weight="900" fill="#16A34A" text-anchor="middle">+4</text>
+  <line x1="470" y1="130" x2="470" y2="150" stroke="#64748B" stroke-width="2"/>
+  <text x="470" y="174" font-family="Nunito, sans-serif" font-size="15" font-weight="700" fill="#475569" text-anchor="middle">+4</text>
 
-  <!-- Conclusión inferior limpia -->
-  <rect x="100" y="305" width="400" height="46" rx="12" fill="#1C3257"/>
-  <text x="300" y="333" font-family="Nunito, sans-serif" font-size="14" font-weight="900" fill="#FFFFFF" text-anchor="middle">Los números negativos se ubican a la izquierda del cero</text>
+  <!-- +5 -->
+  <line x1="515" y1="130" x2="515" y2="150" stroke="#64748B" stroke-width="2"/>
+  <text x="515" y="174" font-family="Nunito, sans-serif" font-size="15" font-weight="700" fill="#475569" text-anchor="middle">+5</text>
 </svg>

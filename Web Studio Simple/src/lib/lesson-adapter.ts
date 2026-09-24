@@ -112,6 +112,13 @@ export function adaptGeneratorLessonToPlayer(
         { id: 'b3', number: '03', title: 'Práctica', subtitle: 'Aplicación en situaciones reales', color: 'yellow' },
         { id: 'b4', number: '04', title: 'Evaluación', subtitle: 'Miniquiz formativo y síntesis', color: 'teal' }
       ],
+      keyQuestions: (genLesson as any).keyQuestions && (genLesson as any).keyQuestions.length > 0
+        ? (genLesson as any).keyQuestions
+        : [
+            { label: 'Exploración inicial', sub: genLesson.title },
+            { label: 'Idea clave', sub: genLesson.paso4_explicativo?.ideaClave ? genLesson.paso4_explicativo.ideaClave.slice(0, 60) : 'Concepto central del objetivo' },
+            { label: 'Práctica y aplicación', sub: 'Resolución guiada paso a paso' }
+          ],
       dileIntro: `Hoy comenzaremos la clase ${genLesson.num} de ${oa.asignatura}: "${genLesson.title}".`,
       dileObjective: genLesson.focoDidactico
     },

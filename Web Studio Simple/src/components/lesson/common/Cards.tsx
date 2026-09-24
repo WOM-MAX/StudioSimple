@@ -74,6 +74,12 @@ export const FeedbackBanner: React.FC<{
   const isSuccess = feedback.kind === 'success';
   const isReveal = feedback.kind === 'reveal';
 
+  const labelColor = isSuccess
+    ? 'text-[#255e29]'
+    : isReveal
+    ? 'text-[#1c3257]'
+    : 'text-[#794112]';
+
   return (
     <div
       className={`rounded-xl p-3.5 my-3 flex items-start gap-2.5 text-sm transition-all animate-fadeIn ${
@@ -91,7 +97,13 @@ export const FeedbackBanner: React.FC<{
       ) : (
         <AlertCircle className="w-4 h-4 text-[#ee751c] shrink-0 mt-0.5" />
       )}
-      <p className="m-0 leading-relaxed">{feedback.text}</p>
+      <div className="flex-1">
+        <strong className={`block text-xs uppercase tracking-wider font-extrabold mb-1 ${labelColor}`}>
+          DILE
+        </strong>
+        <p className="m-0 leading-relaxed font-medium">{feedback.text}</p>
+      </div>
     </div>
   );
 };
+

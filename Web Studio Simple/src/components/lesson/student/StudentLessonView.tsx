@@ -211,34 +211,38 @@ export const StudentLessonView: React.FC = () => {
               {lessonData.metadata.lessonTitle}
             </h1>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
-              {lessonData.route.keyQuestions && lessonData.route.keyQuestions.length > 0 ? (
-                lessonData.route.keyQuestions.map((q, idx) => {
-                  const iconColors = [
-                    'bg-[#e6f7f7] text-[#12a1a4]',
-                    'bg-[#e9f2f8] text-[#1c3257]',
-                    'bg-[#fff0e4] text-[#ee751c]'
-                  ];
-                  return (
-                    <div key={idx} className="bg-white border border-[#dce2e6] rounded-2xl p-5 shadow-sm flex flex-col items-center text-center">
-                      <div className={`w-10 h-10 rounded-full ${iconColors[idx % iconColors.length]} flex items-center justify-center mb-3 font-bold text-sm`}>
-                        {idx + 1}
+            {lessonData.route.keyQuestions && lessonData.route.keyQuestions.length > 0 ? (
+              <>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+                  {lessonData.route.keyQuestions.map((q, idx) => {
+                    const iconColors = [
+                      'bg-[#e6f7f7] text-[#12a1a4]',
+                      'bg-[#e9f2f8] text-[#1c3257]',
+                      'bg-[#fff0e4] text-[#ee751c]'
+                    ];
+                    return (
+                      <div key={idx} className="bg-white border border-[#dce2e6] rounded-2xl p-5 shadow-sm flex flex-col items-center text-center">
+                        <div className={`w-10 h-10 rounded-full ${iconColors[idx % iconColors.length]} flex items-center justify-center mb-3 font-bold text-sm`}>
+                          {idx + 1}
+                        </div>
+                        <strong className="text-sm font-bold text-[#1c3257] block mb-1">{q.label}</strong>
+                        <span className="text-xs text-[#748093]">{q.sub}</span>
                       </div>
-                      <strong className="text-sm font-bold text-[#1c3257] block mb-1">{q.label}</strong>
-                      <span className="text-xs text-[#748093]">{q.sub}</span>
-                    </div>
-                  );
-                })
-              ) : (
-                <div className="col-span-full bg-white border border-[#dce2e6] rounded-2xl p-6 shadow-sm text-center">
-                  <p className="text-sm text-[#1c3257] font-semibold">{lessonData.route.dileObjective}</p>
+                    );
+                  })}
                 </div>
-              )}
-            </div>
 
-            <p className="text-xs sm:text-sm text-[#526177] max-w-lg mx-auto leading-relaxed bg-white border border-[#dce2e6] p-4 rounded-2xl">
-              {lessonData.route.dileObjective}
-            </p>
+                <p className="text-xs sm:text-sm text-[#526177] max-w-lg mx-auto leading-relaxed bg-white border border-[#dce2e6] p-4 rounded-2xl">
+                  {lessonData.route.dileObjective}
+                </p>
+              </>
+            ) : (
+              <div className="max-w-lg mx-auto bg-white border border-[#dce2e6] rounded-2xl p-6 shadow-sm text-center">
+                <p className="text-sm sm:text-base text-[#1c3257] font-semibold leading-relaxed">
+                  {lessonData.route.dileObjective}
+                </p>
+              </div>
+            )}
           </div>
         )}
 

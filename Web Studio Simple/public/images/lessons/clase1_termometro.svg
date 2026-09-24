@@ -1,67 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
-  <defs>
-    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#F8FAFC"/>
-      <stop offset="100%" stop-color="#F1F5F9"/>
-    </linearGradient>
-    <linearGradient id="mercuryGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#38BDF8"/>
-      <stop offset="100%" stop-color="#0284C7"/>
-    </linearGradient>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 240" width="100%" height="100%">
+  <rect x="0" y="0" width="600" height="240" rx="16" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
 
-  <!-- Fondo suave y limpio -->
-  <rect x="0" y="0" width="600" height="380" rx="20" fill="url(#bgGrad)"/>
+  <!-- Titulo minimalista neutro -->
+  <text x="300" y="34" font-family="Nunito, sans-serif" font-size="16" font-weight="800" fill="#1C3257" text-anchor="middle">Escala Térmica</text>
+  <text x="300" y="52" font-family="Nunito, sans-serif" font-size="12" font-weight="600" fill="#64748B" text-anchor="middle">Observa la columna respecto a la marca de 0 °C</text>
 
-  <!-- Termómetro vertical estilizado -->
-  <!-- Tubo exterior de vidrio -->
-  <rect x="180" y="40" width="36" height="230" rx="18" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="3"/>
-  <!-- Bulbo inferior -->
-  <circle cx="198" cy="285" r="32" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="3"/>
+  <!-- Termometro vertical central -->
+  <g transform="translate(280, 65)">
+    <!-- Tubo exterior -->
+    <rect x="-10" y="0" width="20" height="110" rx="10" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+    <circle cx="0" cy="120" r="18" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
 
-  <!-- Columna de líquido hasta -4°C -->
-  <!-- Rango: 0°C en Y=130, cada grado = 10px. -4°C está en Y=170 -->
-  <rect x="190" y="170" width="16" height="100" rx="8" fill="url(#mercuryGrad)"/>
-  <circle cx="198" cy="285" r="24" fill="url(#mercuryGrad)"/>
+    <!-- Liquido hasta -4 °C (0 °C en Y=40, -4 °C en Y=68) -->
+    <rect x="-5" y="68" width="10" height="46" rx="5" fill="#0284C7"/>
+    <circle cx="0" cy="120" r="13" fill="#0284C7"/>
 
-  <!-- Escala y marcas graduadas -->
-  <!-- +10 °C -->
-  <line x1="222" y1="50" x2="238" y2="50" stroke="#94A3B8" stroke-width="2"/>
-  <text x="246" y="55" font-family="Nunito, sans-serif" font-size="13" font-weight="700" fill="#64748B">+10 °C</text>
+    <!-- Linea de 0 °C -->
+    <line x1="-30" y1="40" x2="30" y2="40" stroke="#0284C7" stroke-width="2"/>
+    <text x="38" y="44" font-family="Nunito, sans-serif" font-size="13" font-weight="900" fill="#0284C7">0 °C</text>
 
-  <!-- +5 °C -->
-  <line x1="222" y1="90" x2="234" y2="90" stroke="#94A3B8" stroke-width="2"/>
-  <text x="246" y="95" font-family="Nunito, sans-serif" font-size="13" font-weight="700" fill="#64748B">+5 °C</text>
-
-  <!-- 0 °C (Referencia) -->
-  <line x1="140" y1="130" x2="242" y2="130" stroke="#0EA5E9" stroke-width="3"/>
-  <text x="250" y="135" font-family="Nunito, sans-serif" font-size="16" font-weight="900" fill="#0284C7">0 °C</text>
-  <rect x="50" y="117" width="80" height="26" rx="8" fill="#E0F2FE"/>
-  <text x="90" y="134" font-family="Nunito, sans-serif" font-size="11" font-weight="800" fill="#0369A1" text-anchor="middle">ORIGEN</text>
-
-  <!-- -4 °C (Destacado) -->
-  <line x1="140" y1="170" x2="245" y2="170" stroke="#2563EB" stroke-width="3.5"/>
-  <circle cx="198" cy="170" r="5" fill="#2563EB"/>
-  <rect x="250" y="155" width="70" height="30" rx="8" fill="#2563EB"/>
-  <text x="285" y="176" font-family="Nunito, sans-serif" font-size="16" font-weight="900" fill="#FFFFFF" text-anchor="middle">−4 °C</text>
-
-  <!-- -10 °C -->
-  <line x1="222" y1="230" x2="238" y2="230" stroke="#94A3B8" stroke-width="2"/>
-  <text x="246" y="235" font-family="Nunito, sans-serif" font-size="13" font-weight="700" fill="#64748B">−10 °C</text>
-
-  <!-- Tarjeta explicativa lateral derecha -->
-  <g transform="translate(350, 80)">
-    <rect x="0" y="0" width="220" height="200" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
-    
-    <rect x="16" y="16" width="100" height="22" rx="6" fill="#EFF6FF"/>
-    <text x="66" y="32" font-family="Nunito, sans-serif" font-size="11" font-weight="800" fill="#2563EB" text-anchor="middle">TEMPERATURA</text>
-
-    <text x="16" y="70" font-family="Nunito, sans-serif" font-size="14" font-weight="800" fill="#1E293B">4 grados bajo cero</text>
-    
-    <text x="16" y="105" font-family="Nunito, sans-serif" font-size="12" font-weight="600" fill="#64748B">Se ubica por debajo</text>
-    <text x="16" y="125" font-family="Nunito, sans-serif" font-size="12" font-weight="600" fill="#64748B">del cero de referencia.</text>
-
-    <rect x="16" y="145" width="188" height="38" rx="10" fill="#0284C7"/>
-    <text x="110" y="169" font-family="Nunito, sans-serif" font-size="14" font-weight="900" fill="#FFFFFF" text-anchor="middle">Número entero: −4</text>
+    <!-- Marca de 4 grados bajo cero -->
+    <line x1="-30" y1="68" x2="30" y2="68" stroke="#EE751C" stroke-width="2"/>
+    <text x="38" y="72" font-family="Nunito, sans-serif" font-size="13" font-weight="900" fill="#EE751C">4 °C bajo cero</text>
   </g>
 </svg>

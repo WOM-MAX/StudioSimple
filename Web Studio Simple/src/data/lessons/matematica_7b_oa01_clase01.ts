@@ -37,6 +37,11 @@ export const MATEMATICA_7B_OA01_CLASE01: LessonData = {
       { id: 'b3', number: '03', title: 'Geometría', subtitle: 'Formas, medidas y transformaciones', color: 'yellow' },
       { id: 'b4', number: '04', title: 'Datos y azar', subtitle: 'Información, gráficos y probabilidades', color: 'teal' }
     ],
+    keyQuestions: [
+      { label: 'Punto de referencia', sub: 'El cero como origen de comparación' },
+      { label: 'Cantidades opuestas', sub: 'Valores sobre cero y bajo cero' },
+      { label: 'Posición vs Movimiento', sub: 'Ubicaciones fijas y desplazamientos' }
+    ],
     dileIntro: 'Hoy comenzamos la ruta de Matemática de séptimo básico. Durante este curso trabajaremos cuatro grandes bloques: Números, Álgebra, Geometría y Datos y azar. En cada bloque conoceremos distintos temas, los practicaremos paso a paso y comprobaremos lo que vamos aprendiendo.',
     dileObjective: 'En la clase de hoy comenzaremos con los números enteros. Aprenderemos a representar la ubicación de objetos o valores comparándolos con un punto de referencia, como una temperatura comparada con cero grados o la profundidad de un submarino comparada con la superficie del mar. También aprenderemos a distinguir una posición de un movimiento y a explicar cómo llegamos a una respuesta.'
   },

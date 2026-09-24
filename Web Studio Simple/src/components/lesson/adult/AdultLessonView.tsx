@@ -97,7 +97,7 @@ export const AdultLessonView: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setStage('prep')}
-                className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-8 py-3.5 rounded-xl flex items-center gap-2 text-base shadow-md hover:shadow-lg transition-all cursor-pointer"
+                className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-8 py-3.5 rounded-xl flex items-center gap-2 text-base shadow-md hover:shadow-lg transition-all cursor-pointer"
               >
                 <span>Comenzar clase</span>
                 <ArrowRight className="w-5 h-5" />
@@ -170,7 +170,7 @@ export const AdultLessonView: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setStage('routeOverview')}
-                  className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-8 py-3.5 rounded-xl flex items-center gap-2 text-sm shadow-md hover:shadow-lg hover:scale-[1.01] transition-all cursor-pointer"
+                  className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-8 py-3.5 rounded-xl flex items-center gap-2 text-sm shadow-md hover:shadow-lg hover:scale-[1.01] transition-all cursor-pointer"
                 >
                   <span>Comenzar con el estudiante</span>
                   <ArrowRight className="w-4 h-4" />
@@ -193,7 +193,7 @@ export const AdultLessonView: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setStage('routeToday')}
-                  className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                  className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
                 >
                   <span>Conozcamos el primer tema</span>
                   <ArrowRight className="w-4 h-4" />
@@ -213,7 +213,7 @@ export const AdultLessonView: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setStage('thermo')}
-                  className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                  className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
                 >
                   <span>Comencemos</span>
                   <ArrowRight className="w-4 h-4" />
@@ -325,7 +325,7 @@ export const AdultLessonView: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => updateSession({ stage: 'thermoMeaning', feedback: null, attempt: 0 })}
-                    className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                    className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
                   >
                     <span>Comprendamos la respuesta</span>
                     <ArrowRight className="w-4 h-4" />
@@ -388,7 +388,7 @@ export const AdultLessonView: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => updateSession({ stage: 'hook', feedback: null, hookStarted: false, hookEnded: false })}
-                    className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                    className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
                   >
                     <span>Seguir con el video</span>
                     <ArrowRight className="w-4 h-4" />
@@ -413,7 +413,7 @@ export const AdultLessonView: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => startVideo('hook')}
-                      className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-8 py-3.5 rounded-xl flex items-center gap-2 text-sm shadow-md hover:shadow-lg transition-all cursor-pointer"
+                      className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-8 py-3.5 rounded-xl flex items-center gap-2 text-sm shadow-md hover:shadow-lg transition-all cursor-pointer"
                     >
                       <Play className="w-4 h-4 fill-white" />
                       <span>Reproducir video</span>
@@ -446,7 +446,7 @@ export const AdultLessonView: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => updateSession({ stage: 'conversationIntro', video: { ...session.video, playing: false } })}
-                      className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                      className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
                     >
                       <span>Comprendamos el recorrido</span>
                       <ArrowRight className="w-4 h-4" />
@@ -468,7 +468,7 @@ export const AdultLessonView: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => updateSession({ stage: 'preQuestions', conversationIndex: 0, feedback: null, attempt: 0 })}
-                  className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                  className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
                 >
                   <span>Mostrar primera pregunta</span>
                   <ArrowRight className="w-4 h-4" />
@@ -553,7 +553,7 @@ export const AdultLessonView: React.FC = () => {
                         updateSession({ stage: 'formalization', feedback: null, attempt: 0, formalStarted: false, formalEnded: false });
                       }
                     }}
-                    className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                    className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
                   >
                     <span>Continuar</span>
                     <ArrowRight className="w-4 h-4" />
@@ -583,7 +583,7 @@ export const AdultLessonView: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => startVideo('formal')}
-                      className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-8 py-3.5 rounded-xl flex items-center gap-2 text-sm shadow-md hover:shadow-lg transition-all cursor-pointer"
+                      className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-8 py-3.5 rounded-xl flex items-center gap-2 text-sm shadow-md hover:shadow-lg transition-all cursor-pointer"
                     >
                       <Play className="w-4 h-4 fill-white" />
                       <span>Reproducir video explicativo</span>
@@ -612,7 +612,7 @@ export const AdultLessonView: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => updateSession({ stage: 'postIntro', video: { ...session.video, playing: false } })}
-                    className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                    className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
                   >
                     <span>Continuar</span>
                     <ArrowRight className="w-4 h-4" />
@@ -636,7 +636,7 @@ export const AdultLessonView: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => updateSession({ stage: 'postQuestions', postIndex: 0, feedback: null, attempt: 0 })}
-                  className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                  className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
                 >
                   <span>Mostrar primera pregunta</span>
                   <ArrowRight className="w-4 h-4" />
@@ -721,7 +721,7 @@ export const AdultLessonView: React.FC = () => {
                         updateSession({ stage: 'summary', feedback: null });
                       }
                     }}
-                    className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                    className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
                   >
                     <span>Continuar</span>
                     <ArrowRight className="w-4 h-4" />
@@ -742,7 +742,7 @@ export const AdultLessonView: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => updateSession({ stage: 'practiceIntro', practiceIndex: 0, feedback: null })}
-                  className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                  className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
                 >
                   <span>Practiquemos juntos</span>
                   <ArrowRight className="w-4 h-4" />
@@ -765,7 +765,7 @@ export const AdultLessonView: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => updateSession({ stage: 'practice', feedback: null, attempt: 0 })}
-                  className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                  className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
                 >
                   <span>
                     Mostrar {session.practiceIndex === 0 ? 'primera' : session.practiceIndex === 1 ? 'segunda' : 'última'} situación
@@ -852,7 +852,7 @@ export const AdultLessonView: React.FC = () => {
                         updateSession({ stage: 'reasoningIntro', feedback: null, attempt: 0 });
                       }
                     }}
-                    className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                    className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
                   >
                     <span>Continuar</span>
                     <ArrowRight className="w-4 h-4" />
@@ -875,7 +875,7 @@ export const AdultLessonView: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => updateSession({ stage: 'reasoning', feedback: null, attempt: 0, reasoningIndependent: false })}
-                  className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                  className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
                 >
                   <span>Mostrar comparación</span>
                   <ArrowRight className="w-4 h-4" />
@@ -981,7 +981,7 @@ export const AdultLessonView: React.FC = () => {
                       feedback: null,
                       attempt: 0
                     })}
-                    className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                    className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
                   >
                     <span>{session.reasoningIndependent ? 'Ir al desafío breve' : 'Ver estrategia para pensar'}</span>
                     <ArrowRight className="w-4 h-4" />
@@ -1044,7 +1044,7 @@ export const AdultLessonView: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => updateSession({ stage: 'strategy', feedback: null })}
-                    className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                    className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
                   >
                     <span>Ver estrategia para pensar</span>
                     <ArrowRight className="w-4 h-4" />
@@ -1067,7 +1067,7 @@ export const AdultLessonView: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => updateSession({ stage: 'practiceSummary', summaryIdea: 0, feedback: null })}
-                  className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                  className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
                 >
                   <span>Recordemos lo aprendido</span>
                   <ArrowRight className="w-4 h-4" />
@@ -1099,7 +1099,7 @@ export const AdultLessonView: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => updateSession({ summaryIdea: session.summaryIdea + 1 })}
-                    className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                    className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
                   >
                     <span>Mostrar idea {session.summaryIdea + 1}</span>
                     <ArrowRight className="w-4 h-4" />
@@ -1108,7 +1108,7 @@ export const AdultLessonView: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => updateSession({ stage: 'miniquiz', quizVisible: false })}
-                    className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                    className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
                   >
                     <span>Continuar al miniquiz</span>
                     <ArrowRight className="w-4 h-4" />
@@ -1131,7 +1131,7 @@ export const AdultLessonView: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => updateSession({ quizVisible: true })}
-                      className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                      className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
                     >
                       <span>Mostrar miniquiz</span>
                       <ArrowRight className="w-4 h-4" />
@@ -1181,7 +1181,7 @@ export const AdultLessonView: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => updateSession({ stage: 'review', reviewIndex: 0 })}
-                  className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                  className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
                 >
                   <span>Recordemos las respuestas</span>
                   <ArrowRight className="w-4 h-4" />
@@ -1231,7 +1231,7 @@ export const AdultLessonView: React.FC = () => {
                   <button
                     type="button"
                     onClick={handleNext}
-                    className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                    className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
                   >
                     <span>{isLast ? (session.miniScore >= 2 ? 'Ir al cierre' : 'Ir al refuerzo') : 'Siguiente respuesta'}</span>
                     <ArrowRight className="w-4 h-4" />
@@ -1252,7 +1252,7 @@ export const AdultLessonView: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => updateSession({ stage: 'recovery', recoveryIndex: 0, recoveryVisible: false, recoveryAnswer: '' })}
-                  className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                  className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
                 >
                   <span>Comenzar refuerzo</span>
                   <ArrowRight className="w-4 h-4" />
@@ -1295,7 +1295,7 @@ export const AdultLessonView: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => updateSession({ recoveryVisible: true })}
-                      className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                      className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
                     >
                       <span>Mostrar comprobación</span>
                       <ArrowRight className="w-4 h-4" />
@@ -1315,7 +1315,7 @@ export const AdultLessonView: React.FC = () => {
                       <button
                         type="button"
                         onClick={handleNext}
-                        className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                        className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
                       >
                         <span>{isLast ? 'Finalizar refuerzo' : 'Siguiente refuerzo'}</span>
                         <ArrowRight className="w-4 h-4" />
@@ -1361,7 +1361,7 @@ export const AdultLessonView: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => updateSession({ stage: 'completed' })}
-                  className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-8 py-3.5 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                  className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-8 py-3.5 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
                 >
                   <span>Finalizar clase</span>
                   <Check className="w-4 h-4" />
@@ -1389,7 +1389,7 @@ export const AdultLessonView: React.FC = () => {
                     const targetMode = authSession?.role === 'student' ? 'student' : 'parent';
                     setViewMode(targetMode);
                   }}
-                  className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                  className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
                 >
                   <span>Volver al panel de lecciones</span>
                   <Home className="w-4 h-4" />
@@ -1464,7 +1464,7 @@ const AdultVideoPlayer: React.FC<AdultVideoPlayerProps> = ({ src, kind, session,
               updateSession({ formalStarted: true, formalEnded: true, video: { ...session.video, playing: false } });
             }
           }}
-          className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold px-6 py-2.5 rounded-xl text-xs flex items-center gap-2 mx-auto transition-all cursor-pointer shadow-sm"
+          className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-2.5 rounded-xl text-xs flex items-center gap-2 mx-auto transition-all cursor-pointer shadow-sm"
         >
           <span>Continuar a la siguiente etapa</span>
           <ArrowRight className="w-4 h-4" />
@@ -1523,7 +1523,7 @@ const AdultVideoPlayer: React.FC<AdultVideoPlayerProps> = ({ src, kind, session,
           <button
             type="button"
             onClick={() => command(!session.video.playing)}
-            className="bg-[#1c3257] hover:bg-[#284773] text-white font-bold p-2.5 rounded-xl flex items-center justify-center cursor-pointer transition-all"
+            className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold p-2.5 rounded-xl flex items-center justify-center cursor-pointer transition-all"
             title={session.video.playing ? 'Pausar' : 'Continuar'}
           >
             {session.video.playing ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4 fill-white" />}
