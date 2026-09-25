@@ -1224,8 +1224,19 @@ export const AdultLessonView: React.FC = () => {
                 </div>
 
                 <PromptBox label="DILE">
-                  {currentItem.fixExplain}
+                  {currentItem.dileReview || currentItem.fixExplain}
                 </PromptBox>
+
+                {currentItem.dileReview && (
+                  <div className="bg-[#f8fafc] border border-[#e2e8f0] rounded-2xl p-4 mt-3">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#748093] block mb-1">
+                      Explicación Pedagógica en Pantalla del Estudiante
+                    </span>
+                    <p className="text-xs text-[#334157] leading-relaxed">
+                      {currentItem.fixExplain}
+                    </p>
+                  </div>
+                )}
 
                 <div className="flex justify-end mt-8 pt-4 border-t border-[#dce2e6]">
                   <button

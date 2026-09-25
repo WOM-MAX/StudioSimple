@@ -248,7 +248,8 @@ export const MATEMATICA_7B_OA01_CLASE02: LessonData = {
         'El número cero se ubica a la izquierda de todos los números'
       ],
       correct: 'Los números negativos se ubican a la izquierda del cero',
-      fixExplain: 'En la recta numérica horizontal, el cero está en el centro: a su derecha van los positivos y a su izquierda los negativos.'
+      fixExplain: 'En la recta numérica horizontal, el cero está en el centro: a su derecha van los positivos y a su izquierda los negativos.',
+      dileReview: 'Pídele al estudiante que señale con su dedo hacia qué lado del cero van los negativos en la recta horizontal.'
     },
     {
       id: 'q_2',
@@ -259,7 +260,8 @@ export const MATEMATICA_7B_OA01_CLASE02: LessonData = {
         'Son iguales porque ambos son negativos'
       ],
       correct: '−3',
-      fixExplain: 'El número −3 es mayor porque en la recta numérica está ubicado más hacia la derecha (más cerca del cero) que el −9.'
+      fixExplain: 'El número −3 es mayor porque en la recta numérica está ubicado más hacia la derecha (más cerca del cero) que el −9.',
+      dileReview: 'Pídele que ubique ambos números en la recta y recuerde cuál está más hacia la derecha.'
     },
     {
       id: 'q_3',
@@ -270,7 +272,8 @@ export const MATEMATICA_7B_OA01_CLASE02: LessonData = {
         '0, −2, +5, −7'
       ],
       correct: '−7, −2, 0, +5',
-      fixExplain: 'De menor a mayor se lee de izquierda a derecha en la recta: −7 es el más pequeño, luego −2, después 0 y finalmente +5.'
+      fixExplain: 'De menor a mayor se lee de izquierda a derecha en la recta: −7 es el más pequeño, luego −2, después 0 y finalmente +5.',
+      dileReview: 'Pídele que lea los números de izquierda a derecha para comprobar que van de menor a mayor.'
     }
   ],
 

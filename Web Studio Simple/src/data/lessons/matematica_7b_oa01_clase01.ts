@@ -181,19 +181,22 @@ export const MATEMATICA_7B_OA01_CLASE01: LessonData = {
       q: 'Un buzo se encuentra siete metros bajo la superficie del mar. Si la superficie representa el cero, ¿qué número entero representa la posición del buzo?',
       options: ['−7', '+7', '7'],
       correct: '−7',
-      fixExplain: 'La superficie representa el cero. Como el buzo está siete metros debajo, usamos el signo negativo: la respuesta es −7.'
+      fixExplain: 'La superficie representa el cero. Como el buzo está siete metros debajo, usamos el signo negativo: la respuesta es −7.',
+      dileReview: 'Pídele al estudiante que explique por qué eligió −7. Observen juntos que la superficie del mar es el cero y hacia abajo los valores llevan signo negativo.'
     },
     {
       q: 'Un ascensor sube seis pisos. Esta frase, ¿representa una posición o un movimiento?',
       options: ['Una posición', 'Un movimiento'],
       correct: 'Un movimiento',
-      fixExplain: 'La palabra “sube” indica que el ascensor cambia de lugar. Por eso representa un movimiento.'
+      fixExplain: 'La palabra “sube” indica que el ascensor cambia de lugar. Por eso representa un movimiento.',
+      dileReview: 'Pídele al estudiante que señale qué palabra de la frase indica que hay un cambio de lugar y no una posición fija.'
     },
     {
       q: 'En una cuenta bancaria aparece un saldo de −$8.000. ¿Qué situación representa ese saldo?',
       options: ['Hay $8.000 disponibles', 'Hay una deuda de $8.000', 'No hay dinero disponible ni una deuda'],
       correct: 'Hay una deuda de $8.000',
-      fixExplain: 'En este contexto, el signo negativo indica una deuda. Por eso −$8.000 representa una deuda de $8.000.'
+      fixExplain: 'En este contexto, el signo negativo indica una deuda. Por eso −$8.000 representa una deuda de $8.000.',
+      dileReview: 'Pídele al estudiante que justifique por qué un saldo negativo en el banco representa una deuda y no dinero disponible.'
     }
   ],
 

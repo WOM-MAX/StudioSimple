@@ -48,7 +48,8 @@ export function adaptGeneratorLessonToPlayer(
     correct: q.correct,
     fixExplain: q.fixExplain || 'Revisa la idea central con tu mentor.',
     concept: genLesson.title,
-    explain: q.fixExplain
+    explain: q.fixExplain,
+    dileReview: q.dileReview
   }));
 
   const recoveryItems: RecoveryItem[] = (genLesson.paso7b_recuperacion || []).map((r, idx) => ({
@@ -91,9 +92,9 @@ export function adaptGeneratorLessonToPlayer(
 
     prep: {
       adultObjective: genLesson.objetivoAdulto,
-      routeToday: genLesson.focoDidactico,
+      routeToday: genLesson.routeToday || genLesson.focoDidactico,
       mentorReminder: 'Sigue las indicaciones en pantalla paso a paso. Lee únicamente los recuadros DILE en voz alta y espera siempre la respuesta.',
-      reminders: [
+      reminders: genLesson.reminders && genLesson.reminders.length > 0 ? genLesson.reminders : [
         'Sigue el orden indicado.',
         'Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.',
         'No leas los recuadros SOLO PARA TI ni AYUDA DE LECTURA.',
@@ -112,14 +113,16 @@ export function adaptGeneratorLessonToPlayer(
         { id: 'b3', number: '03', title: 'Práctica', subtitle: 'Aplicación en situaciones reales', color: 'yellow' },
         { id: 'b4', number: '04', title: 'Evaluación', subtitle: 'Miniquiz formativo y síntesis', color: 'teal' }
       ],
-      keyQuestions: (genLesson as any).keyQuestions && (genLesson as any).keyQuestions.length > 0
-        ? (genLesson as any).keyQuestions
-        : [
-            { label: 'Exploración inicial', sub: genLesson.title },
-            { label: 'Idea clave', sub: genLesson.paso4_explicativo?.ideaClave ? genLesson.paso4_explicativo.ideaClave.slice(0, 60) : 'Concepto central del objetivo' },
-            { label: 'Práctica y aplicación', sub: 'Resolución guiada paso a paso' }
-          ],
-      dileIntro: `Hoy comenzaremos la clase ${genLesson.num} de ${oa.asignatura}: "${genLesson.title}".`,
+      keyQuestions: (genLesson.keyQuestions && genLesson.keyQuestions.length > 0)
+        ? genLesson.keyQuestions
+        : ((genLesson.routeCards && genLesson.routeCards.length > 0)
+          ? genLesson.routeCards
+          : [
+              { label: 'Exploración inicial', sub: genLesson.title },
+              { label: 'Idea clave', sub: genLesson.paso4_explicativo?.ideaClave ? genLesson.paso4_explicativo.ideaClave.slice(0, 60) : 'Concepto central del objetivo' },
+              { label: 'Práctica y aplicación', sub: 'Resolución guiada paso a paso' }
+            ]),
+      dileIntro: genLesson.routeIntro || `Hoy comenzaremos la clase ${genLesson.num} de ${oa.asignatura}: "${genLesson.title}".`,
       dileObjective: genLesson.focoDidactico
     },
 
@@ -158,11 +161,15 @@ export function adaptGeneratorLessonToPlayer(
     },
 
     hook: {
+      title: genLesson.paso2_hook?.titulo,
+      titulo: genLesson.paso2_hook?.titulo,
       dileIntro: genLesson.paso2_hook.dileAntes,
       hazInstruction: 'Observa y reflexiona con las escenas del desafío visual.',
       videoSrc: (genLesson.paso2_hook as any).videoUrl || (genLesson.paso2_hook as any).videoSrc || (isMat7bOa01L01 ? 'https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7-MAT-OA01-L01-MOTIVACIONAL_V9_LEGIBLE.mp4' : ''),
       posterSrc: (genLesson.paso2_hook as any).posterUrl || (genLesson.paso2_hook as any).posterSrc || (genLesson.paso2_hook.slides?.[0]?.imageUrl || ''),
-      dileAfterVideo: genLesson.paso2_hook.dileDespues
+      dileAfterVideo: genLesson.paso2_hook.dileDespues,
+      fullPrompt: genLesson.paso2_hook?.fullPrompt,
+      slides: genLesson.paso2_hook?.slides
     },
 
     preQuestions: preQuestions.length > 0 ? preQuestions : [
@@ -178,10 +185,15 @@ export function adaptGeneratorLessonToPlayer(
     ],
 
     formalization: {
+      title: genLesson.paso4_explicativo?.titulo,
+      concept: genLesson.paso4_explicativo?.titulo,
       dileIntro: genLesson.paso4_explicativo.dileAntes,
       hazInstruction: 'Revisemos la explicación formal y la idea clave.',
+      ideaClave: genLesson.paso4_explicativo.ideaClave,
       videoSrc: (genLesson.paso4_explicativo as any).videoUrl || (genLesson.paso4_explicativo as any).videoSrc || (isMat7bOa01L01 ? 'https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/MAT/MAT_OA01_L01_Concepto.mp4' : ''),
-      graphicPoster: (genLesson.paso4_explicativo as any).posterUrl || (genLesson.paso4_explicativo as any).graphicPoster || (genLesson.paso4_explicativo.slides?.[0]?.imageUrl || '')
+      graphicPoster: (genLesson.paso4_explicativo as any).posterUrl || (genLesson.paso4_explicativo as any).graphicPoster || (genLesson.paso4_explicativo.slides?.[0]?.imageUrl || ''),
+      fullPrompt: genLesson.paso4_explicativo?.fullPrompt,
+      slides: genLesson.paso4_explicativo?.slides
     },
 
     postQuestions: postQuestions.length > 0 ? postQuestions : [
@@ -375,4 +387,107 @@ function resolveInteractiveForDiscipline(
     type: 'number_line',
     title: 'Organizador visual de aprendizaje'
   };
+}
+
+/**
+ * Adapt a PlayerLessonData object into GeneratorLessonData format without data loss
+ */
+export function adaptPlayerLessonToGenerator(playerLesson: PlayerLessonData): GeneratorLessonData {
+  return {
+    num: playerLesson.metadata.lessonNumber,
+    title: playerLesson.metadata.lessonTitle,
+    focoDidactico: playerLesson.route.dileObjective || playerLesson.metadata.lessonTitle,
+    routeToday: playerLesson.prep.routeToday,
+    routeIntro: playerLesson.route.dileIntro,
+    routeCards: playerLesson.route.keyQuestions,
+    keyQuestions: playerLesson.route.keyQuestions,
+    routeBlocks: playerLesson.route.blocks,
+    reminders: playerLesson.prep.reminders,
+    duracion: `${playerLesson.metadata.durationMinutes || 30} Minutos`,
+    objetivoAdulto: playerLesson.prep.adultObjective,
+    climaEmocional: playerLesson.situation.emotionalTip || playerLesson.prep.mentorReminder || 'Refuerza la autonomía.',
+    situacionIntro: {
+      dialogo: playerLesson.situation.dilePrompt,
+      pregunta: playerLesson.situation.dilePrompt,
+      respEsperada: playerLesson.situation.expectedAnswer,
+      pistaSocratica: playerLesson.situation.socraticHint,
+      options: playerLesson.situation.options
+    },
+    reference: playerLesson.reference,
+    referencia: playerLesson.reference,
+    paso2_hook: {
+      titulo: playerLesson.hook.title || playerLesson.hook.titulo || 'Video Gancho',
+      fullPrompt: (playerLesson.hook as any).fullPrompt || '',
+      slides: (playerLesson.hook as any).slides || [],
+      focusPoints: playerLesson.hook.focusPoints || [],
+      hazInstruction: playerLesson.hook.hazInstruction || '',
+      dileAntes: playerLesson.hook.dileIntro,
+      dileDespues: playerLesson.hook.dileAfterVideo,
+      videoSrc: playerLesson.hook.videoSrc,
+      posterUrl: playerLesson.hook.posterSrc
+    },
+    paso3_recorrido: (playerLesson.preQuestions || []).map((q) => ({
+      context: q.context,
+      question: q.question,
+      expected: q.expected,
+      success: q.success,
+      support: q.support,
+      reveal: q.reveal,
+      studentReveal: q.studentReveal
+    })),
+    conversationContext: playerLesson.conversationContext,
+    paso4_explicativo: {
+      titulo: playerLesson.formalization.title || playerLesson.formalization.concept || 'Video Explicativo',
+      fullPrompt: (playerLesson.formalization as any).fullPrompt || '',
+      slides: (playerLesson.formalization as any).slides || [],
+      ideaClave: playerLesson.formalization.ideaClave || playerLesson.formalization.summary || '',
+      dileAntes: playerLesson.formalization.dileIntro,
+      hazInstruction: playerLesson.formalization.hazInstruction || '',
+      videoSrc: playerLesson.formalization.videoSrc,
+      posterUrl: playerLesson.formalization.graphicPoster
+    },
+    summaryText: playerLesson.summaryText,
+    postQuestions: playerLesson.postQuestions,
+    paso5_practica: (playerLesson.practice || []).map((p) => ({
+      context: p.context,
+      question: p.question,
+      expected: p.expected,
+      success: p.success,
+      support: p.support,
+      reveal: p.reveal,
+      studentReveal: p.studentReveal
+    })),
+    reasoning: playerLesson.reasoning,
+    challenge: playerLesson.challenge,
+    strategy: playerLesson.strategy,
+    summaryIdeas: playerLesson.summaryIdeas,
+    paso6_resumen: {
+      ideaClave: playerLesson.formalization.ideaClave || '',
+      sintesis: playerLesson.strategy?.dileIntro || playerLesson.summaryText || '',
+      estrategia: playerLesson.strategy?.steps
+        ? playerLesson.strategy.steps
+        : (playerLesson.summaryIdeas ? playerLesson.summaryIdeas.map((si, idx) => ({ number: idx + 1, title: si[0], desc: si[1] })) : [])
+    },
+    paso7_miniquiz: (playerLesson.mini || []).map((m) => ({
+      q: m.q,
+      options: m.options,
+      correct: m.correct,
+      fixExplain: m.fixExplain || m.explain || '',
+      dileReview: m.dileReview
+    })),
+    paso7b_recuperacion: (playerLesson.recovery || []).map((r) => ({
+      title: r.title,
+      explain: r.explain,
+      q: r.q,
+      options: r.options,
+      correct: r.correct,
+      correctText: r.correctText,
+      fixText: r.fixText
+    })),
+    paso8_cierre: {
+      preguntaSintesis: playerLesson.closure?.nextClassPreview || '',
+      metacognicion: playerLesson.closure?.congratulations || '',
+      celebracion: playerLesson.closure?.congratulations || '¡Felicitaciones! Has completado la clase.'
+    }
+  } as any;
 }

@@ -1,6 +1,6 @@
 import { LessonData as PlayerLessonData } from '../types/lesson';
 import { GeneratedOAPackage, LessonData as GeneratorLessonData } from './lesson-generator';
-import { adaptGeneratorLessonToPlayer } from './lesson-adapter';
+import { adaptGeneratorLessonToPlayer, adaptPlayerLessonToGenerator } from './lesson-adapter';
 import {
   MATEMATICA_7B_OA01_CLASE01,
   MATEMATICA_7B_OA01_CLASE02,
@@ -12,6 +12,7 @@ import {
 
 const LOCAL_STORAGE_KEY = 'estudiosimple_injected_lessons';
 const CUSTOM_STORAGE_KEY = 'estudiosimple_custom_lessons';
+export const CUSTOM_PLAYER_LESSONS_KEY = 'estudiosimple_custom_player_lessons';
 
 export interface InjectedOAPackage {
   oaId: string;
@@ -211,12 +212,101 @@ export function resetCustomLessonData(
   }
 }
 
+export function findCanonicalFactoryLesson(
+  grade: string,
+  subject: string,
+  oaCode: string,
+  lessonNumber: number
+): PlayerLessonData | null {
+  const keyGrade = normalizeGrade(grade);
+  const keySubj = normalizeSubject(subject);
+  const keyOa = normalizeOa(oaCode);
+
+  if ((keyGrade === '7' || keyGrade.includes('7')) && keySubj === 'mat' && keyOa === 'oa1') {
+    if (lessonNumber === 1) return MATEMATICA_7B_OA01_CLASE01;
+    if (lessonNumber === 2) return MATEMATICA_7B_OA01_CLASE02;
+  }
+  if ((keyGrade === '7' || keyGrade.includes('7')) && keySubj === 'cie' && keyOa === 'oa1') {
+    if (lessonNumber === 1) return CIENCIAS_7B_OA01_CLASE01;
+  }
+  if ((keyGrade === '7' || keyGrade.includes('7')) && keySubj === 'len' && (keyOa === 'oa3' || keyOa === 'oa03')) {
+    if (lessonNumber === 1) return LENGUA_7B_OA03_CLASE01;
+  }
+  if ((keyGrade === '7' || keyGrade.includes('7')) && keySubj === 'his' && (keyOa === 'oa2' || keyOa === 'oa02')) {
+    if (lessonNumber === 1) return HISTORIA_7B_OA02_CLASE01;
+  }
+  if ((keyGrade === '7' || keyGrade.includes('7')) && keySubj === 'ing' && (keyOa === 'oa9' || keyOa === 'oa09')) {
+    if (lessonNumber === 1) return INGLES_7B_OA09_CLASE01;
+  }
+  return null;
+}
+
+export function saveCustomPlayerLesson(
+  grade: string,
+  subject: string,
+  oaCode: string,
+  lessonNumber: number,
+  lessonData: PlayerLessonData
+): void {
+  if (typeof window === 'undefined') return;
+  const key = `${normalizeGrade(grade)}_${normalizeSubject(subject)}_${normalizeOa(oaCode)}_${lessonNumber}`;
+  try {
+    const raw = localStorage.getItem(CUSTOM_PLAYER_LESSONS_KEY);
+    const map = raw ? JSON.parse(raw) : {};
+    map[key] = lessonData;
+    localStorage.setItem(CUSTOM_PLAYER_LESSONS_KEY, JSON.stringify(map));
+  } catch (e) {
+    console.error('Error al guardar lección personalizada en localStorage:', e);
+  }
+}
+
+export function resetCustomPlayerLesson(
+  grade: string,
+  subject: string,
+  oaCode: string,
+  lessonNumber: number
+): void {
+  if (typeof window === 'undefined') return;
+  const key = `${normalizeGrade(grade)}_${normalizeSubject(subject)}_${normalizeOa(oaCode)}_${lessonNumber}`;
+  try {
+    const raw = localStorage.getItem(CUSTOM_PLAYER_LESSONS_KEY);
+    if (raw) {
+      const map = JSON.parse(raw);
+      delete map[key];
+      localStorage.setItem(CUSTOM_PLAYER_LESSONS_KEY, JSON.stringify(map));
+    }
+  } catch (e) {
+    console.error('Error al restablecer lección personalizada:', e);
+  }
+}
+
+export function isPlayerLessonCustomized(
+  grade: string,
+  subject: string,
+  oaCode: string,
+  lessonNumber: number
+): boolean {
+  if (typeof window === 'undefined') return false;
+  const key = `${normalizeGrade(grade)}_${normalizeSubject(subject)}_${normalizeOa(oaCode)}_${lessonNumber}`;
+  try {
+    const raw = localStorage.getItem(CUSTOM_PLAYER_LESSONS_KEY);
+    if (!raw) return false;
+    const map = JSON.parse(raw);
+    return Boolean(map[key]);
+  } catch {
+    return false;
+  }
+}
+
 export function isLessonCustomized(
   curso: string,
   asignatura: string,
   oaCodigo: string,
   lessonNum?: number
 ): boolean {
+  if (lessonNum !== undefined) {
+    if (isPlayerLessonCustomized(curso, asignatura, oaCodigo, lessonNum)) return true;
+  }
   const keyGrade = normalizeGrade(curso);
   const keySubj = normalizeSubject(asignatura);
   const keyOa = normalizeOa(oaCodigo);
@@ -235,37 +325,6 @@ export function isLessonCustomized(
   return targetPkg.lessons.some((l) => l.num === lessonNum);
 }
 
-export function getInjectedPackage(
-  curso: string,
-  asignatura: string,
-  oaCodigo: string
-): InjectedOAPackage | null {
-  const keyGrade = normalizeGrade(curso);
-  const keySubj = normalizeSubject(asignatura);
-  const keyOa = normalizeOa(oaCodigo);
-
-  return (
-    cachedInjectedPackages.find((p) => {
-      return (
-        normalizeGrade(p.curso) === keyGrade &&
-        normalizeSubject(p.asignatura) === keySubj &&
-        normalizeOa(p.oaCodigo) === keyOa
-      );
-    }) || null
-  );
-}
-
-export async function getInjectedPackageAsync(
-  curso: string,
-  asignatura: string,
-  oaCodigo: string
-): Promise<InjectedOAPackage | null> {
-  if (cachedInjectedPackages.length === 0) {
-    await initializeInjectedLessons();
-  }
-  return getInjectedPackage(curso, asignatura, oaCodigo);
-}
-
 export function findInjectedLesson(
   grade: string,
   subject: string,
@@ -275,8 +334,24 @@ export function findInjectedLesson(
   const keyGrade = normalizeGrade(grade);
   const keySubj = normalizeSubject(subject);
   const keyOa = normalizeOa(oaCode);
+  const customKey = `${keyGrade}_${keySubj}_${keyOa}_${lessonNumber}`;
 
-  // 1. REGLA PRIORITARIA: Si existe una versión personalizada por el usuario, esta toma precedencia absoluta
+  // 1. REGLA PRIORITARIA: Versión personalizada guardada por el usuario en localStorage
+  if (typeof window !== 'undefined') {
+    try {
+      const raw = localStorage.getItem(CUSTOM_PLAYER_LESSONS_KEY);
+      if (raw) {
+        const map = JSON.parse(raw);
+        if (map[customKey]) {
+          return map[customKey];
+        }
+      }
+    } catch (e) {
+      console.error('Error al leer custom player lesson:', e);
+    }
+  }
+
+  // Compatibilidad con almacenamiento anterior
   const customPkg = cachedInjectedPackages.find((p) => {
     if (!p.isCustomized) return false;
     return (
@@ -285,7 +360,6 @@ export function findInjectedLesson(
       normalizeOa(p.oaCodigo) === keyOa
     );
   });
-
   if (customPkg) {
     const customLesson = customPkg.lessons.find((l) => l.num === lessonNumber);
     if (customLesson) {
@@ -301,31 +375,9 @@ export function findInjectedLesson(
     }
   }
 
-  // 2. Sobrescrituras manuales curadas de alta fidelidad de fábrica (Matemática 7B OA01)
-  if ((keyGrade === '7' || keyGrade.includes('7')) && keySubj === 'mat' && keyOa === 'oa1') {
-    if (lessonNumber === 1) return MATEMATICA_7B_OA01_CLASE01;
-    if (lessonNumber === 2) return MATEMATICA_7B_OA01_CLASE02;
-  }
-
-  // Sobrescrituras manuales curadas de fábrica (Ciencias Naturales 7B OA01)
-  if ((keyGrade === '7' || keyGrade.includes('7')) && keySubj === 'cie' && keyOa === 'oa1') {
-    if (lessonNumber === 1) return CIENCIAS_7B_OA01_CLASE01;
-  }
-
-  // Sobrescrituras manuales curadas de fábrica (Lengua y Literatura 7B OA03)
-  if ((keyGrade === '7' || keyGrade.includes('7')) && keySubj === 'len' && (keyOa === 'oa3' || keyOa === 'oa03')) {
-    if (lessonNumber === 1) return LENGUA_7B_OA03_CLASE01;
-  }
-
-  // Sobrescrituras manuales curadas de fábrica (Historia y Geografía 7B OA02)
-  if ((keyGrade === '7' || keyGrade.includes('7')) && keySubj === 'his' && (keyOa === 'oa2' || keyOa === 'oa02')) {
-    if (lessonNumber === 1) return HISTORIA_7B_OA02_CLASE01;
-  }
-
-  // Sobrescrituras manuales curadas de fábrica (Inglés 7B OA09)
-  if ((keyGrade === '7' || keyGrade.includes('7')) && keySubj === 'ing' && (keyOa === 'oa9' || keyOa === 'oa09')) {
-    if (lessonNumber === 1) return INGLES_7B_OA09_CLASE01;
-  }
+  // 2. Sobrescrituras manuales curadas de alta fidelidad de fábrica
+  const canonical = findCanonicalFactoryLesson(grade, subject, oaCode, lessonNumber);
+  if (canonical) return canonical;
 
   // 3. Fallback canónico en los paquetes inyectados o generados
   const foundPkg = cachedInjectedPackages.find((p) => {
@@ -349,6 +401,62 @@ export function findInjectedLesson(
     },
     foundPkg.totalLecciones
   );
+}
+
+export function getInjectedPackage(
+  curso: string,
+  asignatura: string,
+  oaCodigo: string
+): InjectedOAPackage | null {
+  const keyGrade = normalizeGrade(curso);
+  const keySubj = normalizeSubject(asignatura);
+  const keyOa = normalizeOa(oaCodigo);
+
+  const basePkg = cachedInjectedPackages.find((p) => {
+    return (
+      normalizeGrade(p.curso) === keyGrade &&
+      normalizeSubject(p.asignatura) === keySubj &&
+      normalizeOa(p.oaCodigo) === keyOa
+    );
+  }) || null;
+
+  const total = basePkg?.totalLecciones || 5;
+  const lessons: GeneratorLessonData[] = [];
+
+  for (let num = 1; num <= total; num++) {
+    const playerLesson = findInjectedLesson(curso, asignatura, oaCodigo, num);
+    if (playerLesson) {
+      lessons.push(adaptPlayerLessonToGenerator(playerLesson));
+    } else if (basePkg) {
+      const gl = basePkg.lessons.find((l) => l.num === num);
+      if (gl) lessons.push(gl);
+    }
+  }
+
+  if (lessons.length > 0) {
+    return {
+      oaId: basePkg?.oaId || `${curso}_${asignatura}_${oaCodigo}`,
+      curso,
+      asignatura,
+      oaCodigo,
+      totalLecciones: total,
+      lessons,
+      isCustomized: lessons.some((l) => isPlayerLessonCustomized(curso, asignatura, oaCodigo, l.num))
+    };
+  }
+
+  return basePkg;
+}
+
+export async function getInjectedPackageAsync(
+  curso: string,
+  asignatura: string,
+  oaCodigo: string
+): Promise<InjectedOAPackage | null> {
+  if (cachedInjectedPackages.length === 0) {
+    await initializeInjectedLessons();
+  }
+  return getInjectedPackage(curso, asignatura, oaCodigo);
 }
 
 // Inicialización proactiva en runtime de navegador

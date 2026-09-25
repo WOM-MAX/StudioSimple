@@ -1,3 +1,8 @@
+import neonDataRaw from '../data/neonCurriculum.json';
+import { NeonCurriculumItem } from '../types';
+
+const neonCurriculum: NeonCurriculumItem[] = neonDataRaw as NeonCurriculumItem[];
+
 export interface OACatalogItem {
   id: string;
   curso: string;
@@ -96,6 +101,7 @@ export interface QuizQuestion {
   options: string[];
   correct: string;
   fixExplain: string;
+  dileReview?: string;
 }
 
 export interface RecoveryItem {
@@ -112,6 +118,12 @@ export interface LessonData {
   num: number;
   title: string;
   focoDidactico: string;
+  routeToday?: string;
+  routeIntro?: string;
+  routeCards?: Array<{ label: string; sub: string }>;
+  keyQuestions?: Array<{ label: string; sub: string }>;
+  routeBlocks?: Array<{ id: string; number: string; title: string; subtitle: string; color?: string }>;
+  reminders?: string[];
   duracion: string;
   objetivoAdulto: string;
   climaEmocional: string;
@@ -126,6 +138,14 @@ export interface LessonData {
       feedbackText: string;
     }>;
   };
+  reference?: {
+    dilePrompt: string;
+    question: string;
+    expectedAnswer: string;
+    socraticHint: string;
+    feedbackSuccess?: string;
+    feedbackSupport?: string;
+  };
   paso2_hook: {
     titulo: string;
     fullPrompt: string;
@@ -135,8 +155,11 @@ export interface LessonData {
     videoUrl?: string;
     videoSrc?: string;
     posterUrl?: string;
+    focusPoints?: string[];
+    hazInstruction?: string;
   };
   paso3_recorrido: GuidedItem[];
+  conversationContext?: string;
   paso4_explicativo: {
     titulo: string;
     fullPrompt: string;
@@ -146,12 +169,38 @@ export interface LessonData {
     videoUrl?: string;
     videoSrc?: string;
     posterUrl?: string;
+    hazInstruction?: string;
   };
+  summaryText?: string;
+  postQuestions?: GuidedItem[];
   paso5_practica: GuidedItem[];
+  reasoning?: {
+    title: string;
+    dileIntro?: string;
+    question: string;
+    expectedAnswer: string;
+    successFeedback?: string;
+    supportFeedback?: string;
+    revealText?: string;
+  };
+  challenge?: {
+    title: string;
+    question: string;
+    expectedAnswer: string;
+    successFeedback?: string;
+    supportFeedback?: string;
+  };
   paso6_resumen: {
     ideaClave: string;
     sintesis: string;
+    estrategia?: string | Array<{ number: number; title: string; desc: string }>;
   };
+  strategy?: {
+    title?: string;
+    dileIntro?: string;
+    steps?: Array<{ number: number; title: string; desc: string }>;
+  };
+  summaryIdeas?: Array<[string, string]>;
   paso7_miniquiz: QuizQuestion[];
   paso7b_recuperacion?: RecoveryItem[];
   paso8_cierre: {
@@ -375,6 +424,7 @@ export function getCanonicalClase1Matematica(): LessonData {
     num: 1,
     title: "Posiciones y movimientos respecto de un punto de referencia",
     focoDidactico: "Distinguir entre posición y movimiento usando el cero como punto de referencia",
+    routeToday: "Introducción → conexión inicial → video introductorio → conversación guiada → video explicativo → práctica → comparación → estrategia para pensar → resumen → miniquiz → refuerzo si es necesario → cierre.",
     duracion: "30-35 Minutos",
     objetivoAdulto: "Guiar al estudiante para que comprenda que los números enteros representan posiciones respecto de un punto de referencia y distinga entre posición y movimiento.",
     climaEmocional: "Crea un clima seguro: 'Aquí equivocarse es la mejor pista para entender cómo funciona la regla'.",
@@ -506,6 +556,294 @@ export function getCanonicalClase1Matematica(): LessonData {
       preguntaSintesis: "En tus propias palabras, ¿qué diferencia hay entre dónde estás (posición) y hacia dónde te trasladas (movimiento)?",
       metacognicion: "¿Qué situación de la vida diaria te ayudó más a entender el punto de referencia cero: el termómetro, el ascensor o el submarino?",
       celebracion: "¡Felicitaciones! Has completado con éxito la primera clase de números enteros de 7° básico."
+    }
+  };
+}
+
+/**
+ * Helper to build canonical Lesson 2 of Mathematics Grade 7 OA01 directly from the tested prototype
+ */
+export function getCanonicalClase2Matematica(): LessonData {
+  const hookSlides: SlidePrompt[] = [
+    {
+      slideNumber: 1,
+      tituloMomento: "Apertura en el Puesto de Mando",
+      visualPrompt: "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers examining a glowing digital navigation board on their vessel. Altitude and depth measurements appear on screen. Clear calm sea visible through windows.",
+      overlayText: "Misión 2: La recta numérica y orden en Z",
+      speakerNotes: "Los registros de navegación combinan alturas sobre el nivel del mar y profundidades marinas en una misma pantalla.",
+      palabrasAprox: 18,
+      duracionSeg: 9
+    },
+    {
+      slideNumber: 2,
+      tituloMomento: "El Desafío de Ordenar Datos",
+      visualPrompt: "Modern anime style. The girl pointing at conflicting numbers: +3 m, −6 m, 0 m, −1 m. High contrast, clean layout.",
+      overlayText: "El problema: ¿Qué valor es mayor?",
+      speakerNotes: "Al comparar números positivos y negativos, necesitamos un criterio único y seguro que evite confusiones.",
+      palabrasAprox: 17,
+      duracionSeg: 9
+    },
+    {
+      slideNumber: 3,
+      tituloMomento: "Trazando la Recta Numérica",
+      visualPrompt: "Modern anime style. The boy drawing a horizontal line with the zero glowing at the exact center. Arrows pointing both ways.",
+      overlayText: "La línea continua: El cero al centro",
+      speakerNotes: "Trazamos una recta numérica horizontal. El cero se ubica al centro como punto de partida indiscutible.",
+      palabrasAprox: 18,
+      duracionSeg: 9
+    },
+    {
+      slideNumber: 4,
+      tituloMomento: "Positivos a la Derecha",
+      visualPrompt: "Modern anime style. Warm orange markers glowing at +1, +2, +3 moving towards the right.",
+      overlayText: "Hacia la derecha: Valores positivos (+)",
+      speakerNotes: "A la derecha del cero se ubican los números positivos, aumentando su valor a medida que avanzamos.",
+      palabrasAprox: 18,
+      duracionSeg: 9
+    },
+    {
+      slideNumber: 5,
+      tituloMomento: "Negativos a la Izquierda",
+      visualPrompt: "Modern anime style. Cool cyan markers glowing at −1, −2, −3 extending towards the left.",
+      overlayText: "Hacia la izquierda: Valores negativos (−)",
+      speakerNotes: "A la izquierda del cero se ubican los números negativos, alejándose del centro con el signo menos.",
+      palabrasAprox: 18,
+      duracionSeg: 9
+    },
+    {
+      slideNumber: 6,
+      tituloMomento: "La Regla de Oro del Orden",
+      visualPrompt: "Modern anime style. Side-by-side comparison with a large glowing arrow pointing to the right: 'Mayor hacia la derecha'.",
+      overlayText: "Regla de Oro: Mayor hacia la derecha",
+      speakerNotes: "Cualquier número situado a la derecha de otro en la recta horizontal es siempre mayor que el de la izquierda.",
+      palabrasAprox: 19,
+      duracionSeg: 10
+    },
+    {
+      slideNumber: 7,
+      tituloMomento: "Listo para Comparar",
+      visualPrompt: "Modern anime style. Both explorers confident with their notebooks open and pencil ready to compare numbers.",
+      overlayText: "¡A comparar y ordenar en el cuaderno!",
+      speakerNotes: "Con la recta numérica clara, ahora puedes ordenar cualquier conjunto de números enteros sin dudar.",
+      palabrasAprox: 17,
+      duracionSeg: 8
+    }
+  ];
+
+  const explicativoSlides: SlidePrompt[] = [
+    {
+      slideNumber: 1,
+      tituloMomento: "La Recta Numérica Horizontal",
+      visualPrompt: "Modern anime style. A crisp horizontal line across the center of the whiteboard with zero marked prominently in teal.",
+      overlayText: "El cero divide la recta",
+      speakerNotes: "El cero divide la recta en dos semirrectas: a su derecha los enteros positivos y a su izquierda los enteros negativos.",
+      palabrasAprox: 21,
+      duracionSeg: 10
+    },
+    {
+      slideNumber: 2,
+      tituloMomento: "Sentido Creciente de la Recta",
+      visualPrompt: "Modern anime style. A gradient arrow flowing from left to right with the label 'Aumenta el valor'.",
+      overlayText: "El valor aumenta hacia la derecha",
+      speakerNotes: "La recta numérica avanza de menor a mayor de izquierda a derecha. Estar más a la derecha significa ser mayor.",
+      palabrasAprox: 19,
+      duracionSeg: 10
+    },
+    {
+      slideNumber: 3,
+      tituloMomento: "Comparando un Positivo y un Negativo",
+      visualPrompt: "Modern anime style. Comparing +2 and −4. Diagram highlights +2 on the right and −4 on the left.",
+      overlayText: "+2 está a la derecha de −4: +2 > −4",
+      speakerNotes: "Cualquier número positivo es siempre mayor que cualquier número negativo porque siempre está a la derecha del cero.",
+      palabrasAprox: 19,
+      duracionSeg: 10
+    },
+    {
+      slideNumber: 4,
+      tituloMomento: "Comparando Dos Negativos",
+      visualPrompt: "Modern anime style. Focus on −2 and −5. The distance to zero is visually measured.",
+      overlayText: "Comparando −2 y −5",
+      speakerNotes: "¿Qué número es mayor entre menos dos y menos cinco? Pensemos cuál de los dos se ubica más hacia la derecha.",
+      palabrasAprox: 20,
+      duracionSeg: 10
+    },
+    {
+      slideNumber: 5,
+      tituloMomento: "Cercanía al Cero en los Negativos",
+      visualPrompt: "Modern anime style. −2 is only 2 steps from zero, while −5 is 5 steps away. −2 is further to the right.",
+      overlayText: "−2 está más a la derecha que −5: −2 > −5",
+      speakerNotes: "Menos dos está más cerca del cero y a la derecha de menos cinco. Por la regla de la recta, menos dos es mayor.",
+      palabrasAprox: 22,
+      duracionSeg: 11
+    },
+    {
+      slideNumber: 6,
+      tituloMomento: "Estrategia en 3 Pasos",
+      visualPrompt: "Modern anime style. 3-step numbered infographic: 1. Ubica, 2. Compara, 3. Concluye.",
+      overlayText: "1. Ubica · 2. Compara · 3. Concluye",
+      speakerNotes: "Primero ubica los números, luego mira cuál está a la derecha, y finalmente concluye que el de la derecha es mayor.",
+      palabrasAprox: 20,
+      duracionSeg: 10
+    },
+    {
+      slideNumber: 7,
+      tituloMomento: "Síntesis al Cuaderno",
+      visualPrompt: "Modern anime style. Both students ready with notebook open showing the number line drawn cleanly.",
+      overlayText: "¡Dibuja tu recta en el cuaderno!",
+      speakerNotes: "Traza tu recta en el cuaderno y compruébalo tú mismo. ¡Todo número a la derecha es mayor!",
+      palabrasAprox: 17,
+      duracionSeg: 9
+    }
+  ];
+
+  return {
+    num: 2,
+    title: "La recta numérica y orden en Z",
+    focoDidactico: "Ordenar y comparar números enteros en la recta numérica usando la noción de distancia",
+    routeToday: "Introducción → conexión inicial → situación problema en la recta → conversación guiada → explicación formal del orden → práctica en tres situaciones → comparación de magnitudes → estrategia para ordenar → resumen → miniquiz formativo → refuerzo si es necesario → cierre.",
+    duracion: "30 Minutos",
+    objetivoAdulto: "Acompañar al estudiante a representar números enteros en la recta numérica horizontal y vertical, y a comparar y ordenar números enteros comprendiendo que todo número ubicado a la derecha de otro en la recta numérica horizontal es mayor.",
+    climaEmocional: "Refuerza la confianza: 'Ordenar números negativos puede parecer confuso al principio, pero la recta nunca miente'.",
+    situacionIntro: {
+      dialogo: "Imagina una recta numérica horizontal donde el centro es el número cero. A la derecha avanzan los números positivos (+1, +2, +3...) y a la izquierda avanzan los números negativos (−1, −2, −3...). Si te ubicas en el número −2 y caminas hacia el número −5, ¿te estás moviendo hacia la izquierda o hacia la derecha?",
+      pregunta: "¿Te estás moviendo hacia la izquierda o hacia la derecha al ir de −2 a −5?",
+      respEsperada: "Hacia la izquierda",
+      pistaSocratica: "Los números negativos se alejan del cero hacia la izquierda: −1, −2, −3, −4, −5. Para ir de −2 a −5 nos movemos hacia la izquierda.",
+      options: [
+        {
+          label: "Respondió hacia la izquierda",
+          kind: "correct",
+          feedbackText: "¡Correcto! Para ir desde −2 hasta −5 nos movemos hacia la izquierda, alejándonos del cero."
+        },
+        {
+          label: "Respondió hacia la derecha",
+          kind: "needs_support",
+          feedbackText: "Pensemos en el camino: el cero está en el centro. El −2 está dos pasos a la izquierda. Para llegar a −5 avanzamos más a la izquierda."
+        }
+      ]
+    },
+    paso2_hook: {
+      titulo: "La recta numérica y el orden de los números",
+      fullPrompt: buildHookPromptText("Matemática", "OA 1", 2, "La recta numérica y orden en Z", hookSlides),
+      slides: hookSlides,
+      dileAntes: "Hoy nuestros dos exploradores necesitan organizar registros de temperaturas y alturas en un tablero de navegación. Observa con atención cómo ordenan los números.",
+      dileDespues: "Conversemos sobre lo observado. Te haré dos preguntas para comprobar cómo organizamos los números en la recta."
+    },
+    paso3_recorrido: [
+      {
+        context: "Ubicación en la recta",
+        question: "En una recta numérica horizontal con el cero al centro, ¿hacia qué lado se ubican los números negativos?",
+        expected: "Hacia la izquierda del cero.",
+        success: "¡Muy bien! Los números negativos se ubican siempre a la izquierda del cero.",
+        support: "Recuerda que a la derecha del cero van los positivos. ¿Hacia qué lado van los negativos?",
+        reveal: "Los números negativos se ubican siempre a la izquierda del cero.",
+        studentReveal: "A la izquierda del cero."
+      },
+      {
+        context: "Cercanía al origen",
+        question: "Entre el número −1 y el número −4, ¿cuál de los dos se encuentra más cerca del cero?",
+        expected: "El número −1 está más cerca del cero.",
+        success: "¡Exacto! El −1 está a un solo paso del cero, mientras que el −4 está a cuatro pasos.",
+        support: "Cuenta cuántos pasos hay desde el cero hasta el −1 y cuántos hasta el −4. ¿Cuál está más cerca?",
+        reveal: "El número −1 está más cerca del cero porque solo dista una unidad del origen.",
+        studentReveal: "El número −1 está más cerca del cero."
+      }
+    ],
+    paso4_explicativo: {
+      titulo: "Criterio de orden en la recta numérica",
+      fullPrompt: buildExplicativoPromptText("Matemática", "OA 1", 2, "La recta numérica y orden en Z", explicativoSlides),
+      slides: explicativoSlides,
+      ideaClave: "Todo número ubicado a la derecha de otro en la recta numérica horizontal es mayor que él.",
+      dileAntes: "Ahora aprenderemos la regla fundamental para comparar cualquier pareja de números enteros: la regla de la derecha."
+    },
+    paso5_practica: [
+      {
+        context: "Temperaturas en la montaña",
+        question: "En un refugio cordillerano se registran dos temperaturas: −3 °C en la mañana y −8 °C en la noche. ¿Cuál de las dos temperaturas fue más alta (mayor)?",
+        expected: "−3 °C fue más alta porque −3 es mayor que −8.",
+        success: "¡Muy bien! −3 °C representa una temperatura mayor (menos fría) que −8 °C.",
+        support: "Piensa cuál de las dos temperaturas está más cerca del cero en la recta: −3 está a la derecha de −8. ¿Cuál es mayor?",
+        reveal: "−3 °C es mayor que −8 °C porque está más a la derecha en la escala térmica.",
+        studentReveal: "−3 °C es mayor."
+      },
+      {
+        context: "Niveles de estacionamiento",
+        question: "Un edificio tiene tres subterráneos: piso −1, piso −2 y piso −3. Si subes desde el piso −3 hasta el piso −1, ¿estás subiendo hacia un nivel mayor o menor?",
+        expected: "Hacia un nivel mayor, porque −1 es mayor que −3.",
+        success: "¡Genial! El piso −1 está más cerca de la superficie (cero) y es un nivel mayor que el piso −3.",
+        support: "Al subir te acercas a la calle (piso 0). Subir significa aumentar de nivel. ¿El nivel es mayor o menor?",
+        reveal: "Es un nivel mayor porque −1 > −3. Al subir avanzamos hacia valores mayores.",
+        studentReveal: "Hacia un nivel mayor."
+      },
+      {
+        context: "Orden de cuatro valores",
+        question: "Ordena de menor a mayor los siguientes cuatro números enteros: +3, −6, 0, −1.",
+        expected: "−6, −1, 0, +3",
+        success: "¡Excelente ordenamiento! Leíste los números de izquierda a derecha en la recta numérica.",
+        support: "Busca el número que esté más a la izquierda de todos en la recta: ese es el menor. Luego sigue hacia la derecha.",
+        reveal: "El orden de menor a mayor es: −6, −1, 0, +3.",
+        studentReveal: "−6, −1, 0, +3"
+      }
+    ],
+    paso6_resumen: {
+      ideaClave: "En la recta numérica, el cero se ubica al centro; los positivos avanzan a la derecha y los negativos a la izquierda. Todo número a la derecha es mayor.",
+      sintesis: "En esta clase aprendimos que la recta numérica organiza todos los números enteros en una sola dimensión continua. La regla principal establece que cualquier número situado más a la derecha siempre es mayor que los que están a su izquierda.",
+      estrategia: [
+        { number: 1, title: "Ubica", desc: "Sitúa cada número en la recta numérica tomando el cero como centro." },
+        { number: 2, title: "Compara", desc: "Observa cuál de los números se encuentra ubicado más hacia la derecha." },
+        { number: 3, title: "Concluye", desc: "El número que está a la derecha siempre es el mayor, sin importar sus signos." }
+      ]
+    },
+    paso7_miniquiz: [
+      {
+        q: "En una recta numérica horizontal, ¿dónde se ubican los números negativos?",
+        options: [
+          "A la izquierda del cero",
+          "A la derecha del cero",
+          "En el centro reemplazando al cero"
+        ],
+        correct: "A la izquierda del cero",
+        fixExplain: "En la recta numérica horizontal, el cero está en el centro: a su derecha van los positivos y a su izquierda los negativos."
+      },
+      {
+        q: "Al comparar los números −9 y −3, ¿cuál de ellos es el mayor?",
+        options: [
+          "−3",
+          "−9",
+          "Son iguales porque ambos son negativos"
+        ],
+        correct: "−3",
+        fixExplain: "El número −3 es mayor porque en la recta numérica está ubicado más hacia la derecha (más cerca del cero) que el −9."
+      },
+      {
+        q: "¿Cuál de las siguientes listas está correctamente ordenada de menor a mayor?",
+        options: [
+          "−7, −2, 0, +5",
+          "+5, 0, −2, −7",
+          "0, −2, +5, −7"
+        ],
+        correct: "−7, −2, 0, +5",
+        fixExplain: "De menor a mayor se lee de izquierda a derecha en la recta: −7 es el más pequeño, luego −2, después 0 y finalmente +5."
+      }
+    ],
+    paso7b_recuperacion: [
+      {
+        title: "Orden entre números negativos",
+        explain: "Entre dos números negativos, siempre es mayor el que se encuentra más cerca del cero en la recta numérica.",
+        q: "Entre −10 y −1, ¿cuál número es mayor?",
+        options: [
+          "−1",
+          "−10"
+        ],
+        correct: "−1",
+        correctText: "¡Eso es! El −1 es mayor porque está a solo un paso del cero, mucho más a la derecha que el −10.",
+        fixText: "La respuesta correcta es −1, porque en la recta numérica está ubicado más a la derecha que el −10."
+      }
+    ],
+    paso8_cierre: {
+      preguntaSintesis: "¿Por qué en los números negativos un número con mayor dígito (como −9) tiene menor valor que uno con dígito menor (como −3)?",
+      metacognicion: "¿Qué imagen mental te ayudó más hoy: el termómetro vertical, la recta horizontal o los pisos del edificio subterráneo?",
+      celebracion: "¡Excelente! Has dominado el orden de los números enteros en la recta numérica."
     }
   };
 }
@@ -1593,6 +1931,7 @@ interface DisciplineContent {
   resumen: {
     ideaClave: string;
     sintesis: string;
+    estrategia?: string;
   };
   miniquiz: QuizQuestion[];
   recuperacion: RecoveryItem[];
@@ -1600,6 +1939,85 @@ interface DisciplineContent {
     preguntaSintesis: string;
     metacognicion: string;
     celebracion: string;
+  };
+}
+
+/**
+ * Helper para buscar el ítem correspondiente en el currículum oficial de Neon
+ */
+function findCurriculumItem(oa: OACatalogItem): NeonCurriculumItem | undefined {
+  const norm = (s: string) => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+  const oaCursoDigits = norm(oa.curso).replace(/[^0-9]/g, "");
+  const oaAsig = norm(oa.asignatura);
+
+  return neonCurriculum.find(item => {
+    const itemCursoDigits = norm(item.curso).replace(/[^0-9]/g, "");
+    if (oaCursoDigits && itemCursoDigits && oaCursoDigits !== itemCursoDigits) return false;
+
+    const itemAsig = norm(item.asignatura);
+    const asigMatches =
+      itemAsig.includes(oaAsig) ||
+      oaAsig.includes(itemAsig) ||
+      (oaAsig.includes("mat") && itemAsig.includes("mat")) ||
+      (oaAsig.includes("leng") && itemAsig.includes("leng")) ||
+      (oaAsig.includes("cien") && itemAsig.includes("cien") && !itemAsig.includes("soc")) ||
+      (oaAsig.includes("hist") && itemAsig.includes("hist")) ||
+      (oaAsig.includes("ing") && itemAsig.includes("ing"));
+
+    if (!asigMatches) return false;
+
+    if (item.numero_oa) {
+      const num = parseInt(item.numero_oa.replace(/\D/g, ""), 10);
+      if (!isNaN(num) && num === oa.oaNumero) return true;
+    }
+
+    if (item.descripcion_oa && oa.descripcion) {
+      const d1 = norm(item.descripcion_oa).slice(0, 30);
+      const d2 = norm(oa.descripcion).slice(0, 30);
+      if (d1 === d2 || norm(item.descripcion_oa).includes(d2) || norm(oa.descripcion).includes(d1)) {
+        return true;
+      }
+    }
+
+    return false;
+  });
+}
+
+function parseCurriculumItem(c?: NeonCurriculumItem) {
+  if (!c) {
+    return {
+      conceptos: [] as string[],
+      indicadores: [] as string[],
+      errores: [] as string[],
+      actividadAplicar: "",
+      actividadEvaluar: "",
+      actividadComprender: "",
+      estrategiaMotivacion: ""
+    };
+  }
+  const conceptos = (c.conceptos_clave || "")
+    .split(/[,;•\n]/)
+    .map(s => s.trim())
+    .filter(s => s.length > 2);
+
+  const indicadores = (c.indicadores_evaluacion || "")
+    .split(/\n|•/)
+    .map(s => s.trim().replace(/^[-*•]\s*/, ""))
+    .filter(s => s.length > 5);
+
+  const errores = (c.errores_frecuentes || "")
+    .split(/[|\n]/)
+    .map(s => s.trim().replace(/^[-*•]\s*/, ""))
+    .filter(s => s.length > 5);
+
+  return {
+    conceptos,
+    indicadores,
+    errores,
+    actividadAplicar: c.actividad_aplicar || "",
+    actividadEvaluar: c.actividad_evaluar || "",
+    actividadComprender: c.actividad_comprender || "",
+    estrategiaMotivacion: c.estrategia_motivacion || ""
   };
 }
 
@@ -1614,20 +2032,24 @@ function buildMathContent(
 ): DisciplineContent {
   const isFirst = classNum === 1;
   const isLast = classNum === totalLessons;
+  const curr = parseCurriculumItem(findCurriculumItem(oa));
+  const concepto = curr.conceptos[(classNum - 1) % Math.max(1, curr.conceptos.length)] || item.focoDidactico;
+  const errorFrecuente = curr.errores[(classNum - 1) % Math.max(1, curr.errores.length)] || "Confundir el sentido de la operación o ignorar las unidades de medida";
+  const actividad = curr.actividadAplicar || "Resolver problemas contextualizados modelando la operación en el cuaderno";
 
   return {
-    objetivoAdulto: `Acompañar al estudiante a comprender y aplicar el procedimiento matemático de: ${item.title}, modelando el cálculo ordenado y la comprobación de resultados.`,
+    objetivoAdulto: `Acompañar al estudiante a comprender y aplicar el procedimiento matemático de: ${item.title}, formalizando el concepto de ${concepto} y modelando el cálculo en el cuaderno.`,
     climaEmocional: isFirst
       ? "Crea un clima seguro: 'En matemática, el error no es una falla: es la mejor pista para entender cómo funciona la regla'."
       : "Refuerza la autonomía: 'Tómate el tiempo necesario para ordenar los datos y verificar antes de escribir'.",
     situacionIntro: {
-      dialogo: `Hoy exploramos '${item.title}'. En la vida real nos encontramos con situaciones donde necesitamos cuantificar y relacionar magnitudes con exactitud. Observa los datos del problema inicial en la pantalla:`,
-      pregunta: `¿Qué datos numéricos reconoces en este caso sobre ${item.focoDidactico} y qué relación matemática existe entre ellos?`,
-      respEsperada: `Identificar con precisión los valores conocidos de ${item.title} y explicar el procedimiento o relación para resolver el problema.`,
+      dialogo: `Hoy exploramos '${item.title}'. En el currículum de Matemática, el foco de esta clase es comprender '${concepto}'. Observa la situación planteada en pantalla sobre ${item.focoDidactico}:`,
+      pregunta: `¿Qué datos numéricos reconoces en este caso y qué relación tienen con '${concepto}'?`,
+      respEsperada: `Identificar con precisión los valores conocidos de ${item.title} y vincularlos formalmente al concepto de ${concepto}.`,
       pistaSocratica: `Pídele que señale qué representa cada número en el contexto antes de intentar calcular.`,
       options: [
         {
-          label: `Identificó los datos numéricos y explicó la relación matemática correspondiente`,
+          label: `Identificó los datos numéricos y explicó la relación con ${concepto}`,
           kind: 'correct',
           feedbackText: '¡Exacto! Reconoció los valores dados y el procedimiento matemático necesario.'
         },
@@ -1640,31 +2062,31 @@ function buildMathContent(
     },
     recorrido: [
       {
-        context: "Identificación de Datos y Magnitudes",
-        question: "¿Cuáles son los datos conocidos que entrega el problema y cuál es la incógnita exacta que debemos determinar?",
-        expected: "Distinguir claramente los valores dados de la incógnita matemática que se busca calcular.",
-        success: "¡Muy bien! Identificaste con precisión los datos y la pregunta central del problema.",
-        support: "Relee el enunciado y fíjate en las unidades de medida: ¿qué valor conocemos y qué nos falta averiguar?",
-        reveal: "Los datos conocidos corresponden a las cantidades iniciales, y la incógnita es el valor que completará la igualdad o balance.",
-        studentReveal: "Los datos iniciales del problema y la incógnita a determinar."
+        context: `Estructura de Datos y ${concepto}`,
+        question: `Al observar el problema planteado, ¿de qué manera el concepto de '${concepto}' nos permite organizar los datos conocidos para encontrar la solución?`,
+        expected: `Explicar cómo ${concepto} estructura los datos y permite formular el planteamiento formal.`,
+        success: `¡Muy bien! Utilizaste ${concepto} para estructurar con claridad el problema.`,
+        support: `Observa el punto de referencia o la regla dada en pantalla: ¿cómo se aplica a estas cantidades?`,
+        reveal: `El concepto de ${concepto} permite asignar significado y orden a cada cantidad dentro del problema.`,
+        studentReveal: `La forma en que ${concepto} organiza los datos para plantear la solución.`
       },
       {
-        context: "Estrategia de Modelamiento Matemático",
-        question: "¿Qué operación o regla matemática permite relacionar estos datos para resolver la incógnita de forma verificable?",
-        expected: "Señalar la operación o procedimiento formal adecuado para el tipo de problema.",
-        success: "¡Excelente! Elegiste la estrategia matemática correcta para plantear la relación.",
-        support: "Piensa en el paso a paso del video: ¿qué transformación u operación conecta las dos cantidades?",
-        reveal: "La incógnita se resuelve aplicando la operación inversa o la regla de proporcionalidad correspondiente.",
-        studentReveal: "La operación o regla formal que conecta los datos con el resultado."
+        context: "Procedimiento y Prevención de Errores",
+        question: `Para resolver esta situación sin caer en el error de '${errorFrecuente}', ¿qué paso formal debemos realizar en el cálculo?`,
+        expected: `Describir el paso del procedimiento formal que evita la confusión o error frecuente.`,
+        success: `¡Excelente! Identificaste el procedimiento formal que asegura la precisión del resultado.`,
+        support: `Recuerda la regla explicada: opera en el orden debido y verifica siempre los signos o unidades.`,
+        reveal: `El procedimiento formal exige respetar el orden de las operaciones y verificar los datos en el contexto original.`,
+        studentReveal: `El paso a paso riguroso que evita errores y asegura el resultado exacto.`
       }
     ],
-    ideaClaveExplicativo: `Un procedimiento matemático claro permite resolver cualquier caso siguiendo un orden lógico y verificando con la operación inversa.`,
-    dileAntesExplicativo: `Ahora veremos la demostración matemática formal de la regla. Fíjate en el paso a paso del cálculo y en cómo se comprueba el resultado.`,
+    ideaClaveExplicativo: `Para dominar ${item.title}, aplicamos el algoritmo formal de ${concepto} verificando siempre con la operación inversa.`,
+    dileAntesExplicativo: `Ahora veremos la demostración matemática formal de ${item.title}. Fíjate en el paso a paso del cálculo y en cómo se comprueba el resultado.`,
     practica: [
       {
-        context: "Ejercicio 1 en Cuaderno: Cálculo Modelado",
-        question: `Abre tu cuaderno de notas. Escribe como título: '${item.title}'. Resuelve el siguiente ejercicio paso a paso: Registra los datos, escribe el planteamiento formal de la operación y calcula el resultado final simplificado.`,
-        expected: "Desarrollo ordenado en el cuaderno mostrando el planteamiento, cálculo y resultado verificado.",
+        context: "Ejercicio 1 en Cuaderno: Modelamiento Formal",
+        question: `Abre tu cuaderno de notas. Escribe como título: '${item.title}'. Con base en la actividad de aprendizaje (${actividad.slice(0, 90)}...), registra los datos ordenadamente, plantea la operación formal y calcula el resultado final.`,
+        expected: "Desarrollo ordenado en el cuaderno mostrando el planteamiento formal, cálculo y resultado verificado.",
         success: "¡Excelente trabajo en tu cuaderno! El desarrollo matemático está ordenado y el cálculo es exacto.",
         support: "Revisa la diapositiva de la regla: primero plantea los números en orden, resuelve la operación y comprueba.",
         reveal: "El resultado correcto se obtiene operando según la prioridad de cálculo y verificando que el valor tenga sentido.",
@@ -1672,7 +2094,7 @@ function buildMathContent(
       },
       {
         context: "Ejercicio 2 en Cuaderno: Problema de Aplicación Contextualizado",
-        question: `En tu cuaderno, resuelve el siguiente problema de la vida cotidiana: Modela la situación con una expresión matemática, calcula el resultado y redacta una respuesta completa indicando las unidades correspondientes.`,
+        question: `En tu cuaderno, resuelve el siguiente problema de la vida cotidiana sobre ${item.focoDidactico}: Modela la situación con una expresión matemática, calcula el resultado y redacta una respuesta completa indicando las unidades correspondientes.`,
         expected: "Resolución del problema verbal con planteamiento, cálculo y respuesta contextualizada.",
         success: "¡Muy bien! Tu respuesta en el cuaderno no es solo un número aislado: tiene significado y unidades en el contexto.",
         support: "Recuerda el método de 4 pasos: comprender el problema, planificar la operación, ejecutar el cálculo y comprobar.",
@@ -1681,57 +2103,61 @@ function buildMathContent(
       }
     ],
     resumen: {
-      ideaClave: `Para resolver problemas sobre ${item.title}, identificamos las magnitudes, aplicamos el algoritmo en orden y comprobamos el resultado en el contexto original.`,
-      sintesis: `Hoy dominaste la regla central de ${item.focoDidactico} con rigor matemático y práctica efectiva en tu cuaderno.`
+      ideaClave: `Para resolver problemas sobre ${item.title}, identificamos las magnitudes, aplicamos la regla de ${concepto} y comprobamos con la operación inversa.`,
+      sintesis: `Hoy dominaste ${item.focoDidactico} con rigor curricular y práctica efectiva en tu cuaderno físico.`,
+      estrategia: `1. Identificar datos y magnitudes · 2. Aplicar la regla formal de ${concepto} · 3. Comprobar el resultado en el contexto original.`
     },
     miniquiz: [
       {
-        q: `Al resolver una situación de ${item.title}, ¿cuál es el procedimiento correcto para asegurar que el resultado sea exacto?`,
+        q: `Al resolver una situación sobre ${item.title}, ¿cuál es la aplicación correcta del concepto de ${concepto}?`,
         options: [
-          `A) Identificar las cantidades dadas, aplicar la regla en orden y comprobar mediante la operación inversa`,
-          `B) Operar únicamente con el primer número que aparece sin verificar las condiciones del problema`,
-          `C) Invertir los signos de las variables de forma arbitraria sin justificación matemática`
+          `Aplicar el procedimiento de ${concepto} respetando el orden formal y comprobando el resultado con la operación inversa`,
+          `Operar de forma directa con los números sin considerar su sentido ni las condiciones del problema`,
+          `Invertir arbitrariamente los signos y las unidades sin justificación matemática`
         ],
-        correct: "A",
-        fixExplain: `La resolución matemática rigurosa exige identificar los datos, seguir el orden de las operaciones y verificar el resultado con el contexto original.`
+        correct: `Aplicar el procedimiento de ${concepto} respetando el orden formal y comprobando el resultado con la operación inversa`,
+        dileReview: "Pídele que señale por qué eligió esta respuesta y qué elemento clave de la pantalla confirma su validez.",
+        fixExplain: `En matemática formal, la aplicación rigurosa de ${concepto} asegura que el cálculo sea determinista y verificable.`
       },
       {
-        q: `Si al aplicar el procedimiento de ${item.focoDidactico} se obtiene un resultado contradictorio con el contexto real, ¿qué paso debemos revisar primero?`,
+        q: `Respecto al error frecuente detectado en este contenido (${errorFrecuente}), ¿qué criterio debemos aplicar para resolverlo correctamente?`,
         options: [
-          `A) Verificar el planteamiento de la operación y el signo o unidades de las magnitudes involucradas`,
-          `B) Cambiar los datos originales del problema para que coincidan con el cálculo obtenido`,
-          `C) Dar por válido el número sin considerar si tiene sentido en la situación práctica`
+          `Verificar el planteamiento inicial y las unidades de medida antes de ejecutar el algoritmo definitivo`,
+          `Asumir que cualquier resultado es válido sin verificar si tiene sentido en el contexto real`,
+          `Omitir el paso de comprobación para terminar el ejercicio con mayor rapidez`
         ],
-        correct: "A",
-        fixExplain: `Una discrepancia matemática casi siempre proviene de un error en el planteamiento inicial, en los signos o en las unidades de medida.`
+        correct: `Verificar el planteamiento inicial y las unidades de medida antes de ejecutar el algoritmo definitivo`,
+        dileReview: "Pregúntale: ¿cuál es la trampa frecuente en este paso y cómo la evitaste?",
+        fixExplain: `Atención con este error frecuente: ${errorFrecuente}. Siempre debemos verificar el planteamiento antes de dar el resultado por definitivo.`
       },
       {
-        q: `¿Qué propiedad matemática garantiza que podamos comprobar nuestro resultado final en este contenido?`,
+        q: `En la evaluación formativa de ${item.focoDidactico}, ¿qué propiedad garantiza que el resultado obtenido en el cuaderno sea matemáticamente válido?`,
         options: [
-          `A) La relación de equivalencia y la existencia de operaciones inversas que permiten retornar a los datos iniciales`,
-          `B) Que en matemática los resultados cambian según la opinión de quien resuelve el ejercicio`,
-          `C) Que las operaciones matemáticas no admiten ningún tipo de comprobación formal`
+          `La consistencia lógica de la operación inversa que permite verificar que la solución satisface el enunciado inicial`,
+          `Que el número obtenido sea de mayor magnitud que todos los datos iniciales del problema`,
+          `Que el resultado coincida con una suposición previa sin requerir verificación operativa`
         ],
-        correct: "A",
-        fixExplain: `Las operaciones matemáticas fundamentales poseen operaciones inversas que permiten verificar inequívocamente la exactitud de cualquier cálculo.`
+        correct: `La consistencia lógica de la operación inversa que permite verificar que la solución satisface el enunciado inicial`,
+        dileReview: "Pídele que te justifique con sus propias palabras cómo la operación inversa demuestra que el resultado no tiene error.",
+        fixExplain: "La verificación formal mediante la operación inversa es el estándar psicométrico y pedagógico que confirma el dominio del cálculo."
       }
     ],
     recuperacion: [
       {
         title: `Recuperación Matemática: ${item.title}`,
-        explain: `Al resolver problemas de ${item.focoDidactico}, recuerda ordenar los datos en tu cuaderno, aplicar el procedimiento en orden y comprobar siempre con la operación inversa.`,
-        q: `¿Cuál es el paso fundamental para validar un resultado matemático en este tema?`,
+        explain: `Al resolver situaciones de ${item.focoDidactico}, recuerda que ${concepto} requiere ordenar los datos en tu cuaderno y comprobar siempre con la operación inversa.`,
+        q: `¿Cuál es la regla fundamental para asegurar la validez de tu resultado en ${item.title}?`,
         options: [
-          `Reemplazar el valor obtenido en el problema original y verificar que cumpla la igualdad o condición`,
-          `Escribir el primer número que parezca correcto sin realizar la comprobación`
+          `Reemplazar el valor obtenido en las condiciones iniciales y comprobar con la operación inversa`,
+          `Quedarse con el primer valor numérico calculado sin realizar ninguna comprobación`
         ],
-        correct: "Reemplazar el valor obtenido en el problema original y verificar que cumpla la igualdad o condición",
+        correct: "Reemplazar el valor obtenido en las condiciones iniciales y comprobar con la operación inversa",
         correctText: "¡Correcto! Comprobar reemplazando en el problema original garantiza la maestría del procedimiento.",
         fixText: "Recuerda que comprobar es parte fundamental del quehacer matemático: verifica siempre que tu resultado satisfaga las condiciones iniciales."
       }
     ],
     cierre: {
-      preguntaSintesis: `En tus propias palabras, ¿cómo le explicarías a un compañero el paso a paso para resolver un problema de ${item.title}?`,
+      preguntaSintesis: `En tus propias palabras, ¿cómo le explicarías a tu familia la importancia de ${concepto} en ${item.title}?`,
       metacognicion: "¿Qué parte de la clase te pareció más desafiante y qué estrategia usaste para superarla?",
       celebracion: isLast
         ? `¡Felicitaciones! Has completado todas las lecciones del Objetivo de Aprendizaje ${oa.oa}. ¡Excelente trabajo matemático!`
@@ -1751,124 +2177,132 @@ function buildScienceContent(
 ): DisciplineContent {
   const isFirst = classNum === 1;
   const isLast = classNum === totalLessons;
+  const curr = parseCurriculumItem(findCurriculumItem(oa));
+  const concepto = curr.conceptos[(classNum - 1) % Math.max(1, curr.conceptos.length)] || item.focoDidactico;
+  const errorFrecuente = curr.errores[(classNum - 1) % Math.max(1, curr.errores.length)] || "Confundir una correlación circunstancial con una relación de causa y efecto comprobada";
+  const actividad = curr.actividadAplicar || "Investigar experimentalmente y registrar observaciones en esquemas y tablas";
 
   return {
-    objetivoAdulto: `Acompañar al estudiante a explorar e investigar el fenómeno natural o biológico de: ${item.title}, fomentando el pensamiento científico y el análisis basado en evidencias.`,
+    objetivoAdulto: `Guiar la observación y el análisis científico en torno a: ${item.title}, facilitando la comprensión de ${concepto} mediante evidencias empíricas.`,
     climaEmocional: isFirst
-      ? "Crea un clima de curiosidad científica: 'En ciencias, observar con atención y hacerse preguntas es el primer paso del descubrimiento'."
-      : "Fomenta la indagación: 'Analiza las evidencias observables antes de formular una conclusión definitiva'.",
+      ? "Despierta el asombro científico: 'En ciencias investigamos para entender cómo funciona la naturaleza a partir de evidencias'."
+      : "Estimula el rigor observacional: 'Un buen científico contrasta sus ideas con lo que los datos demuestran'.",
     situacionIntro: {
-      dialogo: `Hoy en Ciencias Naturales investigamos '${item.title}'. En nuestro entorno y en nuestro propio organismo ocurren procesos fascinantes regidos por principios biológicos y físicos. Observa la situación planteada en la pantalla sobre ${item.focoDidactico}:`,
-      pregunta: `¿Qué evidencias o procesos biológicos/físicos concretos puedes observar en este fenómeno sobre ${item.title}?`,
-      respEsperada: `Mencionar al menos dos características, estructuras o cambios observables directamente relacionados con ${item.title}.`,
-      pistaSocratica: `Pídele que señale elementos visibles en la pantalla: qué partes intervienen y qué transformaciones concretas se producen.`,
+      dialogo: `Hoy en Ciencias Naturales investigamos '${item.title}'. El fenómeno central del currículum se basa en '${concepto}'. Observa la evidencia o experimento inicial en la pantalla:`,
+      pregunta: `¿Qué fenómeno observable ocurre en este escenario de ${item.focoDidactico} y cómo se relaciona con '${concepto}'?`,
+      respEsperada: `Describir las estructuras, componentes o variables involucradas en el fenómeno de ${item.title} y vincularlas con ${concepto}.`,
+      pistaSocratica: `Pídele que señale qué elementos o condiciones cambian y qué permanece constante.`,
       options: [
         {
-          label: `Mencionó características o cambios biológicos concretos de ${item.title}`,
+          label: `Identificó las estructuras y explicó la relación con ${concepto}`,
           kind: 'correct',
-          feedbackText: '¡Exacto! Supo identificar las evidencias y estructuras del fenómeno analizado.'
+          feedbackText: '¡Excelente observación! Reconoció las variables y componentes centrales del fenómeno.'
         },
         {
-          label: 'Solo dio una opinión general sin basarse en las observaciones de la pantalla',
+          label: 'Describió solo un detalle superficial sin relacionar las causas con los efectos',
           kind: 'needs_support',
-          feedbackText: 'Fíjate en las partes visibles en la pantalla y describe qué cambios físicos o biológicos ocurren.'
+          feedbackText: 'Observa qué causa produce el cambio: ¿qué estructura o fuerza está actuando?'
         }
       ]
     },
     recorrido: [
       {
-        context: "Observación Científica de Evidencias",
-        question: "¿Cuáles son las evidencias observables que nos permiten entender cómo ocurre este proceso en la naturaleza o en el cuerpo humano?",
-        expected: "Identificar los signos, estructuras o variables que demuestran la existencia del fenómeno.",
-        success: "¡Muy bien! Identificaste con claridad las evidencias directas del proceso investigado.",
-        support: "Fíjate en las transformaciones que experimenta el sistema: ¿qué cambia y qué permanece constante?",
-        reveal: "Las evidencias científicas corresponden a los cambios de estado, estructuras visibles o registros de medición del sistema.",
-        studentReveal: "Las evidencias y transformaciones observables del fenómeno investigado."
+        context: `Estructura y Función de ${concepto}`,
+        question: `¿Qué función específica cumple '${concepto}' dentro del sistema natural o biológico que estamos investigando?`,
+        expected: `Explicar el rol funcional de ${concepto} y cómo interactúa con los demás componentes del sistema.`,
+        success: `¡Muy bien! Relacionaste con precisión la estructura con su función biológica o física.`,
+        support: `Piensa en el sistema como un equipo: ¿qué tarea indispensable realiza este componente?`,
+        reveal: `Cada componente del sistema cumple una función especializada que permite el equilibrio y funcionamiento del conjunto.`,
+        studentReveal: `La función especializada de ${concepto} y su interacción en el sistema.`
       },
       {
-        context: "Relación Causa y Consecuencia",
-        question: "Si alteramos una de las variables o condiciones de este sistema biológico/físico, ¿qué consecuencia se produce y por qué?",
-        expected: "Explicar la relación causal fundamentando con el concepto científico aprendido.",
-        success: "¡Excelente! Comprendiste la relación de causa y efecto que rige este fenómeno.",
-        support: "Piensa en el equilibrio del sistema: ¿qué ocurre si falta uno de los componentes esenciales?",
-        reveal: "Cada componente cumple una función específica; al alterarse una variable, el sistema responde modificando su estado o función.",
-        studentReveal: "La relación causal entre las variables y su impacto en el sistema."
+        context: "Evidencia Experimental y Prevención de Errores",
+        question: `Para no caer en el error de '${errorFrecuente}', ¿qué evidencia científica debemos comprobar antes de concluir?`,
+        expected: `Identificar la evidencia empírica u observación experimental que valida la conclusión científica.`,
+        success: `¡Exacto! El método científico exige basar las conclusiones en datos comprobables y no en suposiciones.`,
+        support: `Revisa los datos del experimento: ¿qué demuestran las mediciones u observaciones directas?`,
+        reveal: `La evidencia empírica comprobable es la única base legítima para formular explicaciones científicas válidas.`,
+        studentReveal: `La evidencia experimental que respalda la conclusión sin dejar lugar a suposiciones.`
       }
     ],
-    ideaClaveExplicativo: `Los fenómenos de la naturaleza se comprenden analizando sus estructuras, sus relaciones de causa-efecto y las evidencias que podemos comprobar experimentalmente.`,
-    dileAntesExplicativo: `Ahora veremos la explicación científica formal del proceso. Observa con atención el modelo visual y cómo interactúan los componentes.`,
+    ideaClaveExplicativo: `Los sistemas naturales funcionan mediante interacciones precisas entre sus componentes, donde '${concepto}' cumple un rol fundamental respaldado por evidencia observable.`,
+    dileAntesExplicativo: `Ahora veremos el video explicativo de ${item.title}. Presta atención al diagrama y a cómo se demuestra la función de ${concepto}.`,
     practica: [
       {
-        context: "Esquema Rotulado en Cuaderno de Ciencias",
-        question: `Abre tu cuaderno de Ciencias Naturales. Dibuja y rotula el esquema central de '${item.title}'. Identifica las estructuras o variables principales y escribe al lado la función o rol que cumple cada una.`,
-        expected: "Diagrama científico rotulado en el cuaderno con nombres exactos de estructuras y descripción de sus funciones.",
-        success: "¡Excelente dibujo científico en tu cuaderno! Las estructuras están correctamente rotuladas y explicadas.",
-        support: "Apóyate en el modelo visual del video explicativo para representar los componentes en orden.",
-        reveal: "El esquema debe mostrar con claridad la organización anatómica, celular o física del proceso estudiado.",
-        studentReveal: "Esquema científico rotulado y completo en el cuaderno de ciencias."
+        context: "Ejercicio 1 en Cuaderno: Esquema Rotulado de Investigación",
+        question: `Abre tu cuaderno de notas. Escribe como título: '${item.title}'. Dibuja un diagrama ordenado del sistema estudiado, rotula sus partes principales destacando '${concepto}' y describe brevemente la función de cada una (${actividad.slice(0, 80)}...).`,
+        expected: "Esquema científico en el cuaderno con rotulación precisa de estructuras y descripción de funciones.",
+        success: "¡Excelente esquema en tu cuaderno! Las etiquetas son precisas y las relaciones entre partes están claras.",
+        support: "Usa flechas para indicar el flujo o la interacción entre los componentes del diagrama.",
+        reveal: "El esquema rotulado permite visualizar con claridad la arquitectura del sistema y el rol de cada estructura.",
+        studentReveal: "Diagrama completo y rotulado en el cuaderno con las funciones de cada estructura."
       },
       {
-        context: "Análisis de Caso Experimental en Cuaderno",
-        question: `En tu cuaderno, analiza el siguiente caso de estudio o situación experimental sobre ${item.focoDidactico}: Registra qué variable se está observando y formula una conclusión científica fundamentada en los datos.`,
-        expected: "Conclusión científica registrada en el cuaderno vinculando la causa observada con el concepto del tema.",
-        success: "¡Muy buen análisis! Tu conclusión científica está sólidamente respaldada por las evidencias analizadas.",
-        support: "Pregúntate: ¿qué evidencia directa demuestra que la hipótesis inicial era correcta o incorrecta?",
-        reveal: "La conclusión científica se formula contrastando la hipótesis inicial con los resultados y evidencias verificadas.",
-        studentReveal: "Conclusión experimental registrada y fundamentada en el cuaderno."
+        context: "Ejercicio 2 en Cuaderno: Análisis de Caso o Causa-Efecto",
+        question: `En tu cuaderno, redacta una respuesta científica fundamentada: Si se alterara la condición o componente '${concepto}', ¿qué consecuencias inmediatas y a largo plazo se observarían en el sistema?`,
+        expected: "Explicación causal en el cuaderno anticipando las consecuencias ecológicas o fisiológicas con rigor científico.",
+        success: "¡Muy bien! Tu razonamiento de causa y efecto demuestra una profunda comprensión del equilibrio del sistema.",
+        support: "Piensa en cadena: si falla este componente, ¿qué otro proceso se detiene o se desequilibra?",
+        reveal: "La alteración de un componente clave rompe el equilibrio funcional del sistema natural.",
+        studentReveal: "Análisis de causa y efecto en el cuaderno fundamentado en evidencia científica."
       }
     ],
     resumen: {
-      ideaClave: `Para explicar ${item.title}, identificamos las estructuras involucradas, sus relaciones de causa-efecto y las evidencias científicas que fundamentan el proceso.`,
-      sintesis: `Hoy comprendiste a fondo el funcionamiento de ${item.focoDidactico} mediante observación científica y registro en tu cuaderno.`
+      ideaClave: `En ${item.title}, el funcionamiento armónico del sistema depende de ${concepto}, y toda afirmación debe estar respaldada por datos observables.`,
+      sintesis: `Hoy comprendiste ${item.focoDidactico} con rigor científico y registro visual en tu cuaderno de ciencias.`,
+      estrategia: `1. Observar las evidencias observables · 2. Relacionar estructura y función de ${concepto} · 3. Contrastar con datos experimentales.`
     },
     miniquiz: [
       {
-        q: `En el estudio de ${item.title}, ¿cuál de las siguientes afirmaciones describe con mayor precisión el mecanismo o función central del fenómeno?`,
+        q: `En el estudio científico de ${item.title}, ¿cuál de las siguientes afirmaciones describe con mayor precisión la función de ${concepto}?`,
         options: [
-          `A) El proceso ocurre mediante la interacción coordinada de sus componentes biológicos/físicos según leyes y funciones comprobables`,
-          `B) El fenómeno es totalmente aleatorio y no responde a ninguna causa biológica o ambiental identificable`,
-          `C) El proceso ocurre de manera instantánea sin que intervengan estructuras celulares o fuerzas del entorno`
+          `El proceso ocurre mediante la interacción coordinada de sus componentes según leyes naturales comprobables vinculadas a ${concepto}`,
+          `El fenómeno es completamente aleatorio y no responde a ninguna causa biológica o ambiental identificable`,
+          `El proceso ocurre de manera instantánea sin que intervengan estructuras celulares o fuerzas del entorno`
         ],
-        correct: "A",
-        fixExplain: `Todo proceso natural y biológico responde a mecanismos específicos donde cada estructura cumple un rol funcional determinado.`
+        correct: `El proceso ocurre mediante la interacción coordinada de sus componentes según leyes naturales comprobables vinculadas a ${concepto}`,
+        dileReview: "Pídele que explique en qué evidencia empírica se basa para seleccionar esta opción.",
+        fixExplain: `Todo proceso natural responde a mecanismos específicos donde cada estructura, como ${concepto}, cumple un rol funcional determinado.`
       },
       {
-        q: `Al analizar las evidencias científicas de ${item.focoDidactico}, ¿qué error de interpretación debemos evitar para no llegar a conclusiones falsas?`,
+        q: `Al analizar las evidencias científicas de ${item.focoDidactico}, ¿qué criterio previene el error frecuente de '${errorFrecuente}'?`,
         options: [
-          `A) Confundir una correlación circunstancial con una relación comprobada de causa y efecto`,
-          `B) Registrar cuidadosamente las observaciones en tablas y esquemas comparativos`,
-          `C) Contrastar las hipótesis con datos experimentales verificables`
+          `Verificar experimentalmente las relaciones de causa y efecto mediante datos reproducibles antes de formular una conclusión`,
+          `Aceptar la primera impresión visual sin contrastarla con observaciones ni registros controlados`,
+          `Asumir que si dos eventos ocurren al mismo tiempo uno es necesariamente la causa del otro`
         ],
-        correct: "A",
-        fixExplain: `En el método científico es fundamental verificar experimentalmente las relaciones de causa y efecto, evitando suposiciones sin sustento empírico.`
+        correct: `Verificar experimentalmente las relaciones de causa y efecto mediante datos reproducibles antes de formular una conclusión`,
+        dileReview: "Pregúntale: ¿cómo distingue un científico entre una simple coincidencia y una verdadera causa?",
+        fixExplain: `En el método científico es indispensable controlar variables y verificar datos antes de establecer causalidad.`
       },
       {
-        q: `¿De qué manera el conocimiento sobre ${item.title} contribuye al autocuidado, la salud humana o la protección del entorno?`,
+        q: `¿De qué manera el conocimiento sobre ${item.title} y ${concepto} contribuye al autocuidado, la salud o la sustentabilidad ambiental?`,
         options: [
-          `A) Permite tomar decisiones informadas y fundamentadas en evidencia para prevenir riesgos y mantener el equilibrio saludable`,
-          `B) Demuestra que las acciones humanas individuales no tienen ningún impacto en el organismo o en los ecosistemas`,
-          `C) Indica que basta con guiarse por creencias populares sin verificar la evidencia científica disponible`
+          `Permite tomar decisiones informadas y fundamentadas en evidencia para prevenir riesgos y mantener el equilibrio saludable`,
+          `Demuestra que las acciones humanas individuales no tienen ningún impacto en el organismo o en los ecosistemas`,
+          `Indica que basta con guiarse por creencias populares sin verificar la evidencia científica disponible`
         ],
-        correct: "A",
-        fixExplain: `La comprensión de los procesos biológicos y ambientales es la base para el autocuidado responsable, la prevención médica y la sustentabilidad.`
+        correct: `Permite tomar decisiones informadas y fundamentadas en evidencia para prevenir riesgos y mantener el equilibrio saludable`,
+        dileReview: "Pídele que mencione un ejemplo real de la vida cotidiana donde este conocimiento marque una diferencia.",
+        fixExplain: "La comprensión de los procesos biológicos y ambientales es la base para el autocuidado responsable, la prevención médica y la sustentabilidad."
       }
     ],
     recuperacion: [
       {
         title: `Recuperación Científica: ${item.title}`,
-        explain: `Al estudiar ${item.focoDidactico}, recuerda que todo sistema natural posee estructuras que cumplen funciones específicas que podemos verificar mediante evidencias.`,
-        q: `¿Cuál es el criterio científico fundamental para validar una explicación en este tema?`,
+        explain: `Al estudiar ${item.focoDidactico}, recuerda que ${concepto} cumple una función biológica o física específica que podemos verificar mediante evidencias.`,
+        q: `¿Cuál es el criterio científico fundamental para validar una explicación en ${item.title}?`,
         options: [
-          `Basar la conclusión en evidencias observables y en el funcionamiento comprobado de las estructuras del sistema`,
+          `Basar la conclusión en evidencias observables y en el funcionamiento comprobado de ${concepto}`,
           `Aceptar una afirmación sin requerir evidencias empíricas ni demostración experimental`
         ],
-        correct: "Basar la conclusión en evidencias observables y en el funcionamiento comprobado de las estructuras del sistema",
+        correct: `Basar la conclusión en evidencias observables y en el funcionamiento comprobado de ${concepto}`,
         correctText: "¡Correcto! El pensamiento científico siempre exige fundamentar las conclusiones en evidencias sólidas.",
         fixText: "Recuerda que en Ciencias Naturales la evidencia empírica es el pilar de toda explicación: observa los datos antes de concluir."
       }
     ],
     cierre: {
-      preguntaSintesis: `En tus propias palabras, ¿cómo le explicarías a tu familia el funcionamiento e importancia de ${item.title}?`,
+      preguntaSintesis: `En tus propias palabras, ¿cómo le explicarías a tu familia el funcionamiento e importancia de ${concepto} en ${item.title}?`,
       metacognicion: "¿Qué descubrimiento de la clase de hoy te llamó más la atención y por qué?",
       celebracion: isLast
         ? `¡Felicitaciones! Has completado todas las investigaciones del Objetivo de Aprendizaje ${oa.oa}. ¡Excelente labor científica!`
@@ -1888,20 +2322,24 @@ function buildHistoryContent(
 ): DisciplineContent {
   const isFirst = classNum === 1;
   const isLast = classNum === totalLessons;
+  const curr = parseCurriculumItem(findCurriculumItem(oa));
+  const concepto = curr.conceptos[(classNum - 1) % Math.max(1, curr.conceptos.length)] || item.focoDidactico;
+  const errorFrecuente = curr.errores[(classNum - 1) % Math.max(1, curr.errores.length)] || "Juzgar las acciones del pasado con valores contemporáneos sin considerar el contexto histórico (presentismo)";
+  const actividad = curr.actividadAplicar || "Analizar fuentes históricas primarias y secundarias contrastando perspectivas";
 
   return {
-    objetivoAdulto: `Acompañar al estudiante a contextualizar y comprender el proceso histórico, espacial o ciudadano de: ${item.title}, desarrollando el pensamiento crítico y la empatía histórica.`,
+    objetivoAdulto: `Acompañar al estudiante a contextualizar y comprender el proceso histórico o geográfico de: ${item.title}, desarrollando el pensamiento crítico y analizando ${concepto}.`,
     climaEmocional: isFirst
       ? "Crea un clima de exploración histórica: 'En historia no memorizamos fechas sueltas: comprendemos por qué las personas actuaron de determinada manera'."
       : "Fomenta la perspectiva histórica: 'Analiza los hechos considerando la época y el espacio geográfico en que ocurrieron'.",
     situacionIntro: {
-      dialogo: `Hoy en Historia y Ciencias Sociales nos situamos en '${item.title}'. Cada época histórica y cada territorio plantean desafíos que llevaron a las sociedades a organizarse, transformarse y crear cultura. Observa el escenario planteado en la pantalla sobre ${item.focoDidactico}:`,
-      pregunta: `¿Qué causas o necesidades fundamentales motivaron a las comunidades de esa época en relación con ${item.title}?`,
-      respEsperada: `Explicar las necesidades de subsistencia, recursos geográficos o motivos de organización comunitaria que impulsaron ${item.title}.`,
+      dialogo: `Hoy en Historia y Ciencias Sociales nos situamos en '${item.title}'. El concepto histórico central que abordamos es '${concepto}'. Observa el escenario histórico planteado en la pantalla sobre ${item.focoDidactico}:`,
+      pregunta: `¿Qué causas o necesidades motivaron a las comunidades de esa época en relación con '${concepto}'?`,
+      respEsperada: `Explicar las necesidades de subsistencia, recursos geográficos o motivos sociales vinculados con ${concepto}.`,
       pistaSocratica: `Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?`,
       options: [
         {
-          label: `Explicó las necesidades de subsistencia, recursos o causas sociales de ${item.title}`,
+          label: `Explicó las causas históricas y geográficas vinculadas con ${concepto}`,
           kind: 'correct',
           feedbackText: '¡Exacto! Comprendió las causas históricas y geográficas que motivaron a las personas de esa época.'
         },
@@ -1914,102 +2352,106 @@ function buildHistoryContent(
     },
     recorrido: [
       {
-        context: "Ubicación Temporal y Espacial",
-        question: "¿En qué coordenadas de tiempo y espacio geográfico se desarrollaron los acontecimientos analizados?",
-        expected: "Identificar el período histórico y el entorno geográfico (continente, ríos, mares, relieve) donde ocurrió el proceso.",
-        success: "¡Muy bien! Ubicaste con precisión el marco temporal y el espacio geográfico del proceso.",
-        support: "Observa las referencias del mapa y la cronología: ¿en qué siglo o milenio ocurrió y cerca de qué elementos geográficos?",
-        reveal: "El proceso se desarrolló en un entorno geográfico estratégico que condicionó los modos de vida y la organización humana.",
-        studentReveal: "El marco temporal y geográfico donde se desarrollaron los acontecimientos históricos."
+        context: `Contexto Temporal, Espacial y ${concepto}`,
+        question: `¿De qué manera el entorno geográfico y la época condicionaron el desarrollo de '${concepto}' en este proceso histórico?`,
+        expected: `Relacionar las características del espacio geográfico con la organización social y el desarrollo de ${concepto}.`,
+        success: `¡Muy bien! Ubicaste con precisión las coordenadas temporales y espaciales del proceso.`,
+        support: `Observa las referencias del mapa y la cronología: ¿qué recursos naturales o rutas influían en sus decisiones?`,
+        reveal: `El entorno geográfico y las condiciones de la época condicionaron profundamente los modos de vida y las instituciones humanas.`,
+        studentReveal: `La influencia del espacio geográfico y el tiempo histórico en ${concepto}.`
       },
       {
-        context: "Multicausalidad y Cambio Social",
-        question: "¿Qué diferentes causas (ambientales, económicas, políticas o culturales) se combinaron para generar esta gran transformación?",
-        expected: "Reconocer que los procesos históricos no tienen una sola causa, sino que combinan múltiples factores.",
-        success: "¡Excelente! Identificaste la multicausalidad del proceso sin reducirlo a una sola causa simple.",
-        support: "Distingue entre la causa detonante inmediata y las causas profundas que se venían gestando con el tiempo.",
-        reveal: "Las transformaciones históricas responden a la interacción entre necesidades materiales, innovaciones técnicas e ideales comunitarios.",
-        studentReveal: "La combinación de factores económicos, geográficos y sociales que impulsaron el cambio."
+        context: "Pensamiento Crítico y Prevención del Presentismo",
+        question: `Para evitar el error común de '${errorFrecuente}', ¿qué debemos considerar al analizar las decisiones tomadas por los actores históricos?`,
+        expected: `Evaluar las decisiones históricas desde la mentalidad, recursos y cosmovisión propia de la época estudiada.`,
+        success: `¡Excelente empatía histórica! Analizaste el pasado desde su propio contexto y no desde los prejuicios actuales.`,
+        support: `Piensa qué información y qué valores tenían en ese siglo: ¿podían prever las consecuencias de la misma forma que nosotros hoy?`,
+        reveal: `El rigor histórico exige comprender las razones de los protagonistas en su propio tiempo, evitando anacronismos.`,
+        studentReveal: `La comprensión del pasado desde el contexto propio de sus protagonistas.`
       }
     ],
-    ideaClaveExplicativo: `Comprender la historia exige analizar las fuentes del pasado, reconocer la influencia del medio geográfico y valorar cómo las decisiones humanas modelaron nuestra sociedad.`,
-    dileAntesExplicativo: `Ahora veremos la explicación histórica formal. Observa cómo se conectan las causas con las consecuencias y qué huellas perduran en nuestro presente.`,
+    ideaClaveExplicativo: `Los procesos históricos sobre ${item.title} responden a múltiples causas interconectadas, donde '${concepto}' explica cómo las sociedades resolvieron sus desafíos de convivencia y subsistencia.`,
+    dileAntesExplicativo: `Ahora veremos el video explicativo de ${item.title}. Observa el mapa conceptual y cómo se articula el concepto de ${concepto}.`,
     practica: [
       {
-        context: "Cuadro Comparativo o Línea de Tiempo en Cuaderno de Historia",
-        question: `Abre tu cuaderno de Historia. Elabora un cuadro comparativo o una línea de tiempo sobre: '${item.title}'. Registra: 1) El contexto espacial y temporal, 2) Dos causas fundamentales del proceso, y 3) Dos consecuencias para la sociedad.`,
-        expected: "Cuadro o línea de tiempo ordenada en el cuaderno con causas y consecuencias claramente diferenciadas.",
-        success: "¡Excelente sistematización histórica en tu cuaderno! Las relaciones temporales y causales quedaron muy claras.",
-        support: "Organiza tu cuaderno en tres secciones: Antecedentes, Desarrollo del proceso y Consecuencias a largo plazo.",
-        reveal: "La comprensión histórica se consolida al organizar los hechos cronológicamente y vincular causas con consecuencias.",
-        studentReveal: "Línea de tiempo o cuadro comparativo completo y ordenado en el cuaderno de historia."
+        context: "Ejercicio 1 en Cuaderno: Análisis de Fuentes y Cuadro Comparativo",
+        question: `Abre tu cuaderno de notas. Escribe como título: '${item.title}'. Con base en la actividad (${actividad.slice(0, 80)}...), dibuja un cuadro de doble entrada: en una columna registra los antecedentes geográficos y sociales, y en la otra explica el impacto de '${concepto}'.`,
+        expected: "Cuadro comparativo en el cuaderno con antecedentes históricos y análisis fundamentado del impacto de concepto.",
+        success: "¡Excelente análisis en tu cuaderno! Has sintetizado las múltiples causas con claridad y orden.",
+        support: "Revisa la línea de tiempo en pantalla: identifica qué ocurrió antes y qué transformaciones trajo este acontecimiento.",
+        reveal: "El cuadro comparativo permite distinguir causas estructurales de consecuencias inmediatas en el proceso histórico.",
+        studentReveal: "Cuadro comparativo completo en el cuaderno con causas y consecuencias analizadas."
       },
       {
-        context: "Análisis de Fuente Histórica en Cuaderno",
-        question: `En tu cuaderno, lee el siguiente testimonio o fragmento de fuente histórica sobre ${item.focoDidactico}: Identifica quién es el autor, de qué época data y qué visión o testimonio entrega sobre la vida en ese período.`,
-        expected: "Análisis de la fuente identificando autor, época, intención y testimonio histórico directo.",
-        success: "¡Muy buena lectura crítica de la fuente! Lograste extraer el testimonio directo de quienes vivieron la época.",
-        support: "Recuerda distinguir entre la fuente primaria (escrita en la misma época) y la interpretación de los historiadores.",
-        reveal: "Analizar fuentes históricas permite reconstruir el pasado a partir de los testimonios reales que dejaron sus protagonistas.",
-        studentReveal: "Análisis de la fuente histórica registrado con autor, época y testimonio central."
+        context: "Ejercicio 2 en Cuaderno: Reflexión de Ciudadanía y Continuidad",
+        question: `En tu cuaderno, responde con un breve texto argumentativo: ¿Qué elementos de '${concepto}' continúan presentes en nuestra sociedad actual y qué aspectos han cambiado sustancialmente?`,
+        expected: "Reflexión argumentada identificando elementos de cambio y continuidad histórica entre el pasado y el presente.",
+        success: "¡Muy buena argumentación! Conectaste el aprendizaje histórico con la realidad ciudadana actual.",
+        support: "Piensa en nuestras leyes, ciudades o costumbres: ¿qué heredamos de esa civilización o proceso?",
+        reveal: "La historia nos permite comprender el presente al identificar las raíces de nuestras instituciones contemporáneas.",
+        studentReveal: "Reflexión en el cuaderno sobre continuidades y transformaciones hacia el presente."
       }
     ],
     resumen: {
-      ideaClave: `Para comprender ${item.title}, analizamos el medio geográfico, identificamos la multicausalidad histórica y valoramos el legado cultural o institucional que heredamos.`,
-      sintesis: `Hoy comprendiste las claves históricas de ${item.focoDidactico} con rigor conceptual y trabajo analítico en tu cuaderno.`
+      ideaClave: `En ${item.title}, comprendemos que '${concepto}' es resultado de procesos multicausales donde el espacio, el tiempo y la acción humana interactúan.`,
+      sintesis: `Hoy dominaste ${item.focoDidactico} con pensamiento crítico y fuentes históricas en tu cuaderno.`,
+      estrategia: `1. Situar en tiempo y espacio · 2. Analizar múltiples causas en torno a ${concepto} · 3. Identificar cambios y continuidades hacia el presente.`
     },
     miniquiz: [
       {
-        q: `Al analizar el desarrollo histórico de ${item.title}, ¿cuál fue el factor determinante que impulsó la transformación de la sociedad en ese período?`,
+        q: `Al estudiar el proceso de ${item.title}, ¿cuál de las siguientes opciones describe con rigor histórico el rol de '${concepto}'?`,
         options: [
-          `A) La capacidad de las comunidades para adaptarse a su entorno, generar innovaciones tecnológicas y establecer nuevas formas de organización social`,
-          `B) Que las sociedades humanas permanecieron inalteradas sin interactuar con el medio natural ni con otros pueblos`,
-          `C) La desaparición completa de toda memoria, ley escrita o tradición en las generaciones posteriores`
+          `Constituyó un elemento articulador que permitió a la sociedad responder a sus necesidades de organización y territorio`,
+          `Fue un acontecimiento completamente aislado que no tuvo ninguna relación con el entorno social ni geográfico`,
+          `Ocurrió por decisión exclusiva de un único individuo sin influencia de la comunidad ni de la época`
         ],
-        correct: "A",
-        fixExplain: `Las grandes transformaciones históricas nacen de la adaptación creativa de los pueblos a su medio y de la creación de nuevas instituciones comunitarias.`
+        correct: `Constituyó un elemento articulador que permitió a la sociedad responder a sus necesidades de organización y territorio`,
+        dileReview: "Pídele que señale qué fuentes o evidencias históricas analizadas hoy justifican esta afirmación.",
+        fixExplain: `Los procesos históricos son colectivos y multicausales; ${concepto} responde a dinámicas sociales y territoriales profundas.`
       },
       {
-        q: `¿Por qué es fundamental analizar diversas fuentes históricas para comprender ${item.focoDidactico}?`,
+        q: `Para analizar críticamente este proceso sin caer en el error de '${errorFrecuente}', ¿qué actitud metodológica debemos adoptar?`,
         options: [
-          `A) Porque permite contrastar diferentes puntos de vista del pasado y reconstruir los procesos con mayor rigor y objetividad`,
-          `B) Porque una sola versión aislada siempre contiene la verdad completa y definitiva de la historia humana`,
-          `C) Porque en historia las fuentes escritas o materiales carecen de valor testimonial verificable`
+          `Evaluar las decisiones históricas considerando el contexto, las creencias y los recursos disponibles en su época`,
+          `Condenar inmediatamente las acciones del pasado aplicando únicamente los estándares de la sociedad actual`,
+          `Ignorar las fuentes primarias y basarse en opiniones espontáneas sin respaldo documental`
         ],
-        correct: "A",
-        fixExplain: `El método histórico exige contrastar diversas evidencias y testimonios para evitar visiones parciales o sesgadas sobre los hechos del pasado.`
+        correct: `Evaluar las decisiones históricas considerando el contexto, las creencias y los recursos disponibles en su época`,
+        dileReview: "Pregúntale: ¿por qué es injusto juzgar a personas del pasado como si tuvieran la tecnología y valores de hoy?",
+        fixExplain: `El presentismo distorsiona la comprensión histórica; la empatía histórica permite entender las motivaciones reales de los actores del pasado.`
       },
       {
-        q: `¿Qué relación de continuidad o legado cultural vincula este proceso histórico con las instituciones o valores de nuestra sociedad actual?`,
+        q: `¿Qué importancia tiene para la formación ciudadana actual el análisis de ${item.focoDidactico}?`,
         options: [
-          `A) El desarrollo de principios cívicos, modelos de organización territorial o aportes culturales que fundamentan nuestra vida democrática`,
-          `B) Que el mundo actual no guarda ninguna relación ni herencia cultural con las civilizaciones y procesos del pasado`,
-          `C) Que todas las instituciones políticas modernas fueron inventadas recientemente sin antecedentes históricos`
+          `Permite valorar los derechos humanos, la participación democrática y la diversidad cultural al comprender su evolución histórica`,
+          `Demuestra que el pasado no guarda ninguna relación con los problemas ni desafíos de la sociedad moderna`,
+          `Enseña que las leyes e instituciones humanas son inmutables y no han cambiado a lo largo de los siglos`
         ],
-        correct: "A",
-        fixExplain: `Nuestras leyes, lenguas, sistemas de regadío, conceptos de ciudadanía y democracia son herederos directos de los procesos históricos estudiados.`
+        correct: `Permite valorar los derechos humanos, la participación democrática y la diversidad cultural al comprender su evolución histórica`,
+        dileReview: "Pídele que mencione cómo lo aprendido hoy fortalece su rol como ciudadano responsable en su comunidad.",
+        fixExplain: "El aprendizaje histórico fortalece el juicio cívico y la convivencia democrática mediante el análisis crítico del pasado."
       }
     ],
     recuperacion: [
       {
         title: `Recuperación Histórica: ${item.title}`,
-        explain: `Al estudiar ${item.focoDidactico}, recuerda situar los hechos en su espacio geográfico y comprender que los cambios responden a múltiples causas humanas y ambientales.`,
-        q: `¿Cuál es el principio clave para explicar las transformaciones de las sociedades en este tema?`,
+        explain: `Al analizar ${item.focoDidactico}, recuerda situar siempre los acontecimientos en su espacio geográfico y comprender ${concepto} dentro de su época.`,
+        q: `¿Cuál es el principio metodológico central para interpretar un hecho histórico en ${item.title}?`,
         options: [
-          `Comprender las decisiones humanas y la adaptación al medio geográfico a partir de fuentes históricas contrastadas`,
-          `Memorizar acontecimientos aislados sin buscar la relación entre causas y consecuencias sociales`
+          `Analizar el hecho a partir de sus fuentes históricas y el contexto propio de ${concepto}`,
+          `Memorizar fechas aisladas sin considerar las causas ni las consecuencias del proceso`
         ],
-        correct: "Comprender las decisiones humanas y la adaptación al medio geográfico a partir de fuentes históricas contrastadas",
-        correctText: "¡Correcto! El pensamiento histórico consiste en conectar causas, decisiones humanas y consecuencias a lo largo del tiempo.",
-        fixText: "Recuerda que en Historia y Ciencias Sociales los hechos se explican por su contexto: busca siempre las causas y el legado que dejaron en el presente."
+        correct: `Analizar el hecho a partir de sus fuentes históricas y el contexto propio de ${concepto}`,
+        correctText: "¡Correcto! Comprender el contexto histórico es la base del pensamiento crítico en Ciencias Sociales.",
+        fixText: "Recuerda que la historia explica procesos humanos: busca siempre las causas y el entorno donde ocurrieron."
       }
     ],
     cierre: {
-      preguntaSintesis: `En tus propias palabras, ¿qué aprendizaje sobre las personas o la sociedad de esa época podemos aplicar a nuestro presente?`,
-      metacognicion: "¿Qué hecho o aspecto de la vida cotidiana en ese período te pareció más sorprendente?",
+      preguntaSintesis: `En tus propias palabras, ¿qué lección o reflexión para el presente nos deja el estudio de ${concepto} en ${item.title}?`,
+      metacognicion: "¿Qué estrategia te ayudó más a comprender la época estudiada: analizar el mapa o ponerte en el lugar de los protagonistas?",
       celebracion: isLast
-        ? `¡Felicitaciones! Has completado todas las investigaciones del Objetivo de Aprendizaje ${oa.oa}. ¡Excelente comprensión histórica!`
-        : `¡Gran trabajo hoy! Has dominado la Clase ${classNum}. ¡Nos vemos en la próxima misión histórica!`
+        ? `¡Felicitaciones! Has completado todas las investigaciones del Objetivo de Aprendizaje ${oa.oa}. ¡Excelente labor histórica!`
+        : `¡Gran trabajo hoy! Has dominado la Clase ${classNum}. ¡Nos vemos en la próxima expedición histórica!`
     }
   };
 }
@@ -2025,124 +2467,132 @@ function buildLanguageContent(
 ): DisciplineContent {
   const isFirst = classNum === 1;
   const isLast = classNum === totalLessons;
+  const curr = parseCurriculumItem(findCurriculumItem(oa));
+  const concepto = curr.conceptos[(classNum - 1) % Math.max(1, curr.conceptos.length)] || item.focoDidactico;
+  const errorFrecuente = curr.errores[(classNum - 1) % Math.max(1, curr.errores.length)] || "Quedarse en una lectura puramente literal sin inferir el sentido profundo ni la intención del autor";
+  const actividad = curr.actividadAplicar || "Analizar textos narrativos o poéticos identificando recursos literarios e indicios textuales";
 
   return {
-    objetivoAdulto: `Acompañar al estudiante a profundizar en la comprensión lectora, el análisis de recursos literarios y la expresión escrita en: ${item.title}, promoviendo el diálogo reflexivo sobre los textos.`,
+    objetivoAdulto: `Acompañar la lectura comprensiva e interpretativa de: ${item.title}, guiando al estudiante a inferir sentidos profundos en torno a '${concepto}' y dialogar sobre la obra.`,
     climaEmocional: isFirst
-      ? "Crea un clima de disfrute por la lectura: 'Leer nos permite viajar a otras épocas, sentir lo que otros sienten y encontrar nuestra propia voz'."
-      : "Fomenta la interpretación personal: 'Cada texto ofrece pistas que podemos descubrir con atención y sensibilidad'.",
+      ? "Invita al disfrute y la curiosidad literaria: 'Leer no es solo descifrar palabras: es descubrir nuevos mundos, emociones y puntos de vista'."
+      : "Estimula la voz propia: 'En literatura tu interpretación es valiosa siempre que encuentres pistas en el texto que la respalden'.",
     situacionIntro: {
-      dialogo: `Hoy en Lengua y Literatura nos adentramos en '${item.title}'. Los textos literarios y no literarios nos comunican visiones de mundo, emociones e ideas que cobran vida al leer. Observa el fragmento inicial en la pantalla sobre ${item.focoDidactico}:`,
-      pregunta: `Al observar el texto sobre ${item.title}, ¿qué conflicto, emoción o idea principal comunica la obra?`,
-      respEsperada: `Identificar el conflicto central del relato, la emoción predominante o el tema principal en relación con ${item.title}.`,
-      pistaSocratica: `Invítalo a releer la primera oración y a fijarse en los adjetivos y acciones de los personajes o del emisor.`,
+      dialogo: `Hoy en Lengua y Literatura nos sumergimos en '${item.title}'. El concepto literario clave que exploraremos es '${concepto}'. Observa el fragmento o situación inicial en la pantalla sobre ${item.focoDidactico}:`,
+      pregunta: `¿Qué conflicto, dilema humano o recurso expresivo identificas en este texto en relación con '${concepto}'?`,
+      respEsperada: `Identificar el tema central, conflicto del personaje o recurso literario vinculado con ${concepto}.`,
+      pistaSocratica: `Pídele que relea la primera frase y se fije en cómo se siente el protagonista o qué tono tiene el narrador.`,
       options: [
         {
-          label: `Identificó el conflicto, la emoción del hablante o el tema central de ${item.title}`,
+          label: `Identificó el conflicto central y lo vinculó con ${concepto}`,
           kind: 'correct',
-          feedbackText: '¡Muy bien! Reconoció con claridad el conflicto y el sentido del texto.'
+          feedbackText: '¡Excelente intuición lectora! Reconoció el dilema humano y el sentido de la situación.'
         },
         {
-          label: 'Solo nombró detalles secundarios sin identificar el conflicto o emoción principal',
+          label: 'Repitió palabras del texto sin interpretar lo que sienten los personajes',
           kind: 'needs_support',
-          feedbackText: 'Relee la primera oración: fíjate en qué problema enfrenta el personaje o qué emoción transmite.'
+          feedbackText: 'Pregúntale qué emoción transmite el personaje: ¿por qué actúa de esa forma?'
         }
       ]
     },
     recorrido: [
       {
-        context: "Comprensión Explícita e Inferencial",
-        question: "¿Qué hechos o datos se afirman explícitamente en el texto y qué motivos de los personajes podemos inferir a partir de sus acciones?",
-        expected: "Diferenciar la información textual literal de las deducciones válidas sustentadas en pistas del relato.",
-        success: "¡Muy bien! Supiste extraer la información explícita e interpretar con acierto las pistas implícitas.",
-        support: "Ubica la parte del texto donde se describe la acción: ¿qué palabras demuestran lo que siente o piensa el personaje?",
-        reveal: "La comprensión lectora profunda combina lo que el texto dice textualmente con lo que sugiere a través de sus indicios.",
-        studentReveal: "Los hechos explícitos del relato y las motivaciones inferidas a partir de las pistas del texto."
+        context: `Indicios Textuales y ${concepto}`,
+        question: `¿Qué palabras o pistas del texto nos permiten inferir la presencia e importancia de '${concepto}' en este relato?`,
+        expected: `Citar pistas textuales o acciones de los personajes que demuestran el sentido de ${concepto}.`,
+        success: `¡Muy bien! Tu interpretación se apoya directamente en evidencias del texto y no en suposiciones.`,
+        support: `Busca en el segundo párrafo: ¿qué palabras describen la atmósfera o la motivación del personaje?`,
+        reveal: `La comprensión profunda se construye rastreando las pistas explícitas e implícitas que el autor distribuye en la obra.`,
+        studentReveal: `Las pistas textuales que confirman la presencia y sentido de ${concepto}.`
       },
       {
-        context: "Recursos Literarios y Sentido Figurado",
-        question: "¿Qué figura literaria, recurso de estilo o conector utiliza el autor y qué efecto busca producir en el lector?",
-        expected: "Identificar el recurso retórico (metáfora, personificación, hipérbole, etc.) y explicar su sentido poético o narrativo.",
-        success: "¡Excelente! Reconociste el recurso literario y cómo enriquece el significado del texto.",
-        support: "Fíjate si las palabras se están usando en su sentido literal o si están creando una imagen figurada evocadora.",
-        reveal: "El lenguaje figurado transforma el significado cotidiano de las palabras para crear imágenes poéticas y despertar la imaginación.",
-        studentReveal: "El recurso literario identificado y su significado connotativo en el texto."
+        context: "Sentido Figurado y Prevención del Error Literal",
+        question: `Para no caer en el error de '${errorFrecuente}', ¿cómo debemos interpretar las expresiones en sentido figurado o simbólico de esta obra?`,
+        expected: `Distinguir el significado literal del sentido connotativo o metafórico que el autor busca evocar.`,
+        success: `¡Exacto! Lograste ver más allá de las palabras literales y descubriste la metáfora profunda del autor.`,
+        support: `Piensa qué imagen o sentimiento evoca esa frase: ¿busca describir un hecho físico o una emoción interior?`,
+        reveal: `El lenguaje literario utiliza recursos figurados para transmitir experiencias humanas universales que trascienden lo literal.`,
+        studentReveal: `La interpretación del sentido figurado y simbólico de la obra.`
       }
     ],
-    ideaClaveExplicativo: `Comprender e interpretar un texto exige analizar la estructura de la narración o del poema, reconocer los recursos del lenguaje y fundamentar las opiniones con citas textuales.`,
-    dileAntesExplicativo: `Ahora veremos la explicación formal del análisis textual. Fíjate en cómo desentrañamos el significado de cada estrofa o párrafo paso a paso.`,
+    ideaClaveExplicativo: `En ${item.title}, el autor utiliza '${concepto}' para construir una experiencia estética y reflexiva que interpela al lector en sus propias vivencias.`,
+    dileAntesExplicativo: `Ahora veremos el video explicativo de ${item.title}. Observa cómo se analiza el personaje y la función de ${concepto}.`,
     practica: [
       {
-        context: "Análisis de Cita y Vocabulario en Cuaderno",
-        question: `Abre tu cuaderno de Lengua y Literatura. Copia la cita del texto sobre '${item.title}'. Subraya dos palabras clave, explica su significado en el contexto y describe qué emoción o idea transmiten.`,
-        expected: "Cita copiada en el cuaderno con vocabulario analizado según el contexto y comentario de sentido figurado.",
-        success: "¡Excelente análisis textual en tu cuaderno! Tu interpretación del vocabulario respeta el sentido original de la lectura.",
-        support: "Relee la oración completa: las palabras vecinas son pistas directas para deducir el significado exacto del término.",
-        reveal: "El vocabulario en un texto literario cobra su verdadero sentido al analizar cómo se relaciona con el temple de ánimo de la obra.",
-        studentReveal: "Cita textual analizada y vocabulario contextual registrado en el cuaderno de lengua."
+        context: "Ejercicio 1 en Cuaderno: Ficha de Análisis Textual",
+        question: `Abre tu cuaderno de notas. Escribe como título: '${item.title}'. Con base en la actividad (${actividad.slice(0, 80)}...), escribe un breve párrafo analizando el rol de '${concepto}': cita una frase del texto, explica su significado implícito y menciona qué valor transmite.`,
+        expected: "Desarrollo en el cuaderno con cita textual, interpretación del significado implícito y reflexión sobre el valor o tema.",
+        success: "¡Excelente análisis literario en tu cuaderno! Tu interpretación está fundamentada con citas precisas.",
+        support: "Revisa la diapositiva: subraya la cita textual y escribe con tus palabras qué revela sobre el protagonista.",
+        reveal: "El análisis riguroso vincula la cita textual con la interpretación temática y el contexto de la obra.",
+        studentReveal: "Ficha de análisis completa en el cuaderno con cita e interpretación fundamentada."
       },
       {
-        context: "Taller de Escritura Guiada en Cuaderno",
-        question: `En tu cuaderno, redacta un texto breve (4 a 6 líneas) aplicando lo aprendido hoy sobre ${item.focoDidactico}: Utiliza lenguaje preciso, incluye al menos un recurso literario o conector adecuado y revisa ortografía y puntuación.`,
-        expected: "Párrafo breve escrito con coherencia temática, ortografía cuidada y aplicación del recurso disciplinar.",
-        success: "¡Muy buena producción escrita! Tu párrafo tiene voz propia, ideas conectadas y una redacción cuidada.",
-        support: "Recuerda el proceso de escritura: planifica qué quieres expresar, escribe el borrador y léelo en voz alta para corregir.",
-        reveal: "Escribir bien requiere planificar las ideas, conectar las oraciones con fluidez y revisar para pulir el estilo final.",
-        studentReveal: "Texto breve redactado, revisado y editado en el cuaderno de notas."
+        context: "Ejercicio 2 en Cuaderno: Producción Escrita Breve y Revisión",
+        question: `En tu cuaderno, redacta una breve continuación o respuesta reflexiva de 5 líneas aplicando '${concepto}'. Al finalizar, revisa tu texto cuidando la coherencia, el uso de conectores y la ortografía.`,
+        expected: "Micro-escritura creativa en el cuaderno con aplicación de concepto y revisión de cohesión y ortografía.",
+        success: "¡Muy buena producción escrita! Tu texto es coherente, expresivo y demuestra el dominio del concepto literario.",
+        support: "Lee tu borrador en voz alta: ¿las ideas se conectan con fluidez? Corrige las tildes antes de darlo por listo.",
+        reveal: "Escribir y revisar permite consolidar la apropiación del lenguaje y expresar ideas personales con rigor.",
+        studentReveal: "Texto breve producido y revisado en el cuaderno con coherencia y precisión."
       }
     ],
     resumen: {
-      ideaClave: `Para interpretar obras literarias sobre ${item.title}, analizamos la voz del narrador o hablante, identificamos las figuras literarias y respaldamos nuestra interpretación con el texto.`,
-      sintesis: `Hoy enriqueciste tu competencia lectora y escritora abordando ${item.focoDidactico} con sensibilidad y pensamiento crítico.`
+      ideaClave: `En ${item.title}, '${concepto}' nos abre la puerta a interpretar el sentido implícito de la obra y conectar con la experiencia humana del autor.`,
+      sintesis: `Hoy profundizaste en ${item.focoDidactico} con lectura analítica y escritura reflexiva en tu cuaderno.`,
+      estrategia: `1. Rastrear pistas explícitas e implícitas · 2. Interpretar el sentido figurado de ${concepto} · 3. Fundamentar la interpretación con el texto.`
     },
     miniquiz: [
       {
-        q: `Al interpretar un fragmento literario sobre ${item.title}, ¿cuál es el criterio fundamental para validar una inferencia sobre la lectura?`,
+        q: `Al interpretar el fragmento de ${item.title}, ¿cuál de las siguientes opciones expresa con mayor fidelidad el rol de '${concepto}'?`,
         options: [
-          `A) Que la interpretación esté sólidamente respaldada por pistas textuales, acciones de los personajes y el contexto de la obra`,
-          `B) Interpretar de forma libre cualquier idea aunque contradiga directamente lo que afirma el texto`,
-          `C) Limitarse a memorizar las palabras del autor sin reflexionar sobre su significado implícito`
+          `Permite develar la motivación profunda del personaje y el conflicto central a través de indicios textuales concretos`,
+          `Es un detalle puramente decorativo que no aporta ningún significado a la historia ni al mensaje del autor`,
+          `Demuestra que el texto literario carece de sentido implícito y solo debe leerse al pie de la letra`
         ],
-        correct: "A",
-        fixExplain: `Toda inferencia legítima en comprensión lectora debe basarse en evidencias textuales e indicios concretos proporcionados por la obra.`
+        correct: `Permite develar la motivación profunda del personaje y el conflicto central a través de indicios textuales concretos`,
+        dileReview: "Pídele que señale qué fragmento específico de la lectura justifica su respuesta.",
+        fixExplain: `Toda inferencia legítima en comprensión lectora debe apoyarse en pistas textuales e indicios entregados por la obra.`
       },
       {
-        q: `¿Qué función cumple el uso de recursos expresivos y lenguaje figurado en ${item.focoDidactico}?`,
+        q: `Para no cometer el error de '${errorFrecuente}', ¿qué estrategia de lectura comprensiva debemos emplear?`,
         options: [
-          `A) Transmitir emociones complejas, evocar imágenes sensibles y aportar matices que el lenguaje literal no logra expresar`,
-          `B) Dificultar innecesariamente la lectura para que el receptor no pueda comprender el mensaje`,
-          `C) Obligar al lector a entender todas las expresiones exactamente al pie de la letra sin matices`
+          `Distinguir el sentido literal del lenguaje figurado, relacionando las metáforas con las emociones de los personajes`,
+          `Asumir que cada palabra significa exclusivamente su definición de diccionario más simple y directa`,
+          `Saltarse los pasajes poéticos o descriptivos para centrarse únicamente en el desenlace final`
         ],
-        correct: "A",
-        fixExplain: `El lenguaje figurado enriquece la comunicación permitiendo que el lector experimente sensaciones, metáforas y significados más profundos.`
+        correct: `Distinguir el sentido literal del lenguaje figurado, relacionando las metáforas con las emociones de los personajes`,
+        dileReview: "Pregúntale: ¿cómo cambia el mensaje de un poema o relato cuando descubrimos el sentido figurado?",
+        fixExplain: `El lenguaje figurado transmite matices que el sentido literal no logra expresar; comprenderlo es la cumbre de la lectura crítica.`
       },
       {
-        q: `Durante el proceso de producción escrita sobre este contenido, ¿por qué es indispensable la etapa de revisión del borrador?`,
+        q: `Durante el proceso de análisis y escritura sobre ${item.focoDidactico}, ¿por qué es indispensable la etapa de revisión del borrador en el cuaderno?`,
         options: [
-          `A) Porque permite verificar la coherencia de las ideas, la precisión de los conectores y la correcta ortografía antes de la versión final`,
-          `B) Porque la primera versión de un texto nunca debe ser modificada bajo ninguna circunstancia`,
-          `C) Porque revisar un texto escrito carece de impacto en la claridad comunicativa ante el lector`
+          `Porque permite verificar la coherencia de las ideas, la precisión de los conectores y la correcta ortografía antes de la versión final`,
+          `Porque la primera versión de un texto nunca debe ser modificada bajo ninguna circunstancia`,
+          `Porque revisar un texto escrito carece de impacto en la claridad comunicativa ante el lector`
         ],
-        correct: "A",
-        fixExplain: `La revisión y edición es la fase culminante de la escritura que asegura que el mensaje se transmita con claridad, belleza y rigor gramatical.`
+        correct: `Porque permite verificar la coherencia de las ideas, la precisión de los conectores y la correcta ortografía antes de la versión final`,
+        dileReview: "Pídele que te muestre en su cuaderno qué ajustes u observaciones hizo al releer su escrito.",
+        fixExplain: "La revisión y edición es la fase fundamental de la escritura que asegura que el mensaje se transmita con claridad y rigor."
       }
     ],
     recuperacion: [
       {
         title: `Recuperación de Lengua y Literatura: ${item.title}`,
-        explain: `Al analizar ${item.focoDidactico}, recuerda buscar siempre las pistas explícitas e implícitas en el texto y distinguir el sentido literal del lenguaje figurado.`,
-        q: `¿Cuál es la estrategia clave para comprender el sentido de un fragmento literario en este tema?`,
+        explain: `Al analizar ${item.focoDidactico}, recuerda buscar siempre las pistas explícitas e implícitas en el texto y relacionar '${concepto}' con la intención del autor.`,
+        q: `¿Cuál es la estrategia clave para comprender el sentido profundo de una obra en ${item.title}?`,
         options: [
-          `Releer con atención el texto buscando las pistas contextuales que justifican la interpretación del mensaje`,
-          `Adivinar el tema central fijándose únicamente en el título sin leer el contenido de los párrafos`
+          `Releer con atención buscando las pistas contextuales que justifican la interpretación de '${concepto}'`,
+          `Adivinar el tema central fijándose únicamente en el título sin examinar el cuerpo del texto`
         ],
-        correct: "Releer con atención el texto buscando las pistas contextuales que justifican la interpretación del mensaje",
-        correctText: "¡Correcto! La relectura atenta guiada por pistas contextuales es la mejor herramienta de comprensión lectora.",
+        correct: `Releer con atención buscando las pistas contextuales que justifican la interpretación de '${concepto}'`,
+        correctText: "¡Correcto! La relectura atenta guiada por pistas textuales es la mejor herramienta de comprensión lectora.",
         fixText: "Recuerda que en Lengua y Literatura las respuestas están en el texto: vuelve siempre al fragmento para comprobar tu deducción."
       }
     ],
     cierre: {
-      preguntaSintesis: `En tus propias palabras, ¿qué personaje, verso o idea del texto leído hoy te pareció más significativo y por qué?`,
+      preguntaSintesis: `En tus propias palabras, ¿qué personaje, frase o idea de ${item.title} te pareció más significativa y por qué?`,
       metacognicion: "¿Qué estrategia de lectura te ayudó más a entender el sentido profundo del texto?",
       celebracion: isLast
         ? `¡Felicitaciones! Has completado todos los análisis del Objetivo de Aprendizaje ${oa.oa}. ¡Excelente dominio literario!`
@@ -2162,119 +2612,126 @@ function buildEnglishContent(
 ): DisciplineContent {
   const isFirst = classNum === 1;
   const isLast = classNum === totalLessons;
+  const curr = parseCurriculumItem(findCurriculumItem(oa));
+  const concepto = curr.conceptos[(classNum - 1) % Math.max(1, curr.conceptos.length)] || item.focoDidactico;
+  const errorFrecuente = curr.errores[(classNum - 1) % Math.max(1, curr.errores.length)] || "Traducir palabra por palabra en lugar de comprender el sentido comunicativo global";
 
   return {
-    objetivoAdulto: `Acompañar al estudiante en la inmersión del idioma inglés para: ${item.title}. Las instrucciones del apoderado son en español, mientras los textos, vocabulario y miniquiz se practican en inglés.`,
+    objetivoAdulto: `Acompañar al estudiante en la inmersión del idioma inglés para: ${item.title}. Las instrucciones del apoderado son en español, mientras los textos, vocabulario y miniquiz se practican en inglés con foco en '${concepto}'.`,
     climaEmocional: isFirst
       ? "Crea un ambiente de confianza en inglés: 'Don't worry about making mistakes! In English, every attempt helps you build fluency and vocabulary'."
       : "Fomenta la confianza comunicativa: 'Listen, read the clues, and focus on the general meaning before translating every single word'.",
     situacionIntro: {
-      dialogo: `Hoy en nuestra sesión de English exploramos '${item.title}'. El apoderado guía la sesión en español, mientras que el estudiante lee y escucha en inglés. Lee la siguiente frase introductoria en voz alta sobre ${item.focoDidactico}:`,
-      pregunta: `"What is the main situation described in this English sentence? (¿Cuál es la situación principal descrita en la oración?)"`,
-      respEsperada: `Identificar en español o inglés los personajes (characters), la acción o el lugar (setting) descritos en la oración sobre ${item.title}.`,
+      dialogo: `Hoy en nuestra sesión de English exploramos '${item.title}'. El foco comunicativo del currículum es '${concepto}'. El apoderado guía en español mientras que el estudiante lee y escucha en inglés. Lee la siguiente frase en voz alta sobre ${item.focoDidactico}:`,
+      pregunta: `"What is the main communicative situation described in this English sentence? (¿Cuál es la situación principal descrita en la oración?)"`,
+      respEsperada: `Identificar en español o inglés los personajes (characters), la acción o el propósito comunicativo vinculado con ${concepto}.`,
       pistaSocratica: `Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general.`,
       options: [
         {
-          label: `Identificó a los personajes, la acción o el lugar de la oración en inglés`,
+          label: `Identificó a los personajes, la acción o el propósito en inglés vinculado con ${concepto}`,
           kind: 'correct',
           feedbackText: '¡Very good! Supo reconocer los elementos clave de la oración en inglés.'
         },
         {
-          label: 'Tuvo dudas con el vocabulario o no identificó a los personajes ni el lugar',
+          label: 'Tuvo dudas con el vocabulario o no identificó la acción ni los personajes',
           kind: 'needs_support',
-          feedbackText: 'Busquen juntos palabras transparentes y guíalo para identificar quién realiza la acción.'
+          feedbackText: 'Busquen juntos palabras transparentes y guíalo para identificar el verbo principal de la acción.'
         }
       ]
     },
     recorrido: [
       {
-        context: "Vocabulary Spotting & Context Clues",
-        question: "Which English words in the text give you clear clues about the characters, the action, or the setting?",
-        expected: "Identify key English nouns, adjectives, or action verbs from the reading passage.",
+        context: `Key Vocabulary & Context Clues (${concepto})`,
+        question: "Which English words in the text give you clear clues about the communicative goal and the action?",
+        expected: "Identify key English nouns, action verbs or connectors related to the topic.",
         success: "Well done! You successfully identified the key English vocabulary from the context.",
         support: "Look for transparent words and descriptive adjectives: what words tell you what is happening?",
         reveal: "Context clues and key vocabulary help us understand the main message without needing an immediate dictionary translation.",
-        studentReveal: "Key English words identified from the context of the story or article."
+        studentReveal: "Key English words identified from the context of the communicative text."
       },
       {
-        context: "Grammar & Sentence Flow",
+        context: "Grammar & Communicative Flow",
         question: "Notice the verb tense or structure used in the sentences. How does the grammatical form tell us when or how the action happens?",
-        expected: "Recognize the verb form (e.g. Past Simple -ed / irregular, Present Simple, modal verbs) indicating time or function.",
+        expected: "Recognize the verb form or structure indicating time, function, or modality.",
         success: "Excellent! You connected the grammatical structure with its real communicative meaning.",
-        support: "Look at the ending of the verbs: do they show a completed past event, an everyday routine, or an ability/rule?",
-        reveal: "Grammatical structures like verb endings and connectors give precise temporal meaning and flow to the English language.",
-        studentReveal: "The verb tense and grammatical form that indicates time and function in English."
+        support: "Look at the ending of the verb or auxiliary words: does it talk about routine, past events or future plans?",
+        reveal: "Grammatical structures and verb tenses provide the timeline and conditions for natural English communication.",
+        studentReveal: "The verb tense and sentence structure that clarify the communicative intention."
       }
     ],
-    ideaClaveExplicativo: `Learning English involves recognizing key vocabulary in context, understanding grammatical patterns for communication, and building confidence in reading and writing.`,
-    dileAntesExplicativo: `Ahora veremos la formalización del vocabulario y la estructura gramatical en inglés. Fíjate en cómo se forman las oraciones modelo.`,
+    ideaClaveExplicativo: `In ${item.title}, we communicate effectively by using '${concepto}' in context, paying attention to verb tenses and avoiding word-for-word translation.`,
+    dileAntesExplicativo: `Ahora veremos el video explicativo de ${item.title}. Fíjate en la pronunciación y en cómo se utiliza '${concepto}' en una conversación real.`,
     practica: [
       {
-        context: "Vocabulary & Sentence Building in English Notebook",
-        question: `Open your English notebook. Write the title: '${item.title}'. Copy the 3 target vocabulary words and write one complete sentence in English for each word using the grammar pattern learned today.`,
-        expected: "Three complete, grammatically correct English sentences written in the notebook applying target vocabulary.",
-        success: "Great job in your notebook! Your English sentences are well-structured, clear, and accurate.",
-        support: "Follow the sentence model from the screen: Subject + Action Verb + Complement (e.g., 'The explorer discovered an ancient map').",
-        reveal: "Constructing complete sentences in English reinforces spelling, grammar patterns, and real communication.",
-        studentReveal: "Three complete English sentences written and checked in the notebook."
+        context: "Practice 1 in Notebook: Vocabulary & Model Sentences",
+        question: `Open your English notebook. Write as title: '${item.title}'. Copy the key vocabulary box, write 2 original sentences using '${concepto}', and translate their meaning into Spanish.`,
+        expected: "Accurate English sentences in the notebook with correct spelling, grammar agreement, and Spanish translation.",
+        success: "Great notebook work! Your English sentences are well structured and meaningful.",
+        support: "Check the slide model: Subject + Verb + Complement. Follow that pattern to write your sentences.",
+        reveal: "Writing model sentences consolidates vocabulary and internalizes the English syntactic order.",
+        studentReveal: "Original English sentences written and checked in the notebook."
       },
       {
-        context: "Short Reading & Guided Question in English Notebook",
-        question: `In your English notebook, read the short adapted text on ${item.focoDidactico} and answer the question in English: 'What did the protagonists decide to do next?' Write a full-sentence answer.`,
-        expected: "Written response in English providing evidence extracted directly from the short reading passage.",
-        success: "Excellent reading comprehension! You found the exact evidence in the English text and wrote a great response.",
-        support: "Scan the paragraph to locate the keywords from the question and find where the character's decision is described.",
-        reveal: "Skimming for the main idea and scanning for specific details are fundamental strategies for reading success in English.",
-        studentReveal: "Full-sentence answer in English answering the reading comprehension prompt."
+        context: "Practice 2 in Notebook: Short Dialogue or Message",
+        question: `In your notebook, write a short 3-line dialogue or message applying today's communicative goal (${item.focoDidactico}). Then read it aloud with your mentor.`,
+        expected: "Short dialogue written in English and read aloud with proper pronunciation and natural intonation.",
+        success: "Outstanding fluency! Writing and reading aloud activates both speaking and writing skills.",
+        support: "Use simple, direct phrases: Greeting, main message or question, and friendly closing.",
+        reveal: "Interactive dialogue practice is the cornerstone of foreign language fluency.",
+        studentReveal: "Short English dialogue written and practiced aloud with the mentor."
       }
     ],
     resumen: {
-      ideaClave: `To master ${item.title}, we practice target vocabulary in authentic contexts, identify sentence structures, and verify meaning through reading comprehension.`,
-      sintesis: `Today you expanded your English proficiency in ${item.focoDidactico} through authentic reading and active writing in your notebook.`
+      ideaClave: `Today in ${item.title}, we practiced communicating ideas using '${concepto}' with clear sentence structure and natural expressions.`,
+      sintesis: `Hoy dominaste ${item.focoDidactico} en inglés con práctica activa de vocabulario y escritura en tu cuaderno.`,
+      estrategia: `1. Spot context clues and cognates · 2. Apply the sentence structure of '${concepto}' · 3. Read aloud to confirm natural flow.`
     },
     miniquiz: [
       {
-        q: `Reading Comprehension: According to the passage studied today about ${item.title}, what was the main discovery or action taken by the protagonists?`,
+        q: `Reading Comprehension: What is the main communicative purpose of '${concepto}' in today's English lesson?`,
         options: [
-          `A) They identified the crucial evidence and applied a logical step to continue their expedition successfully`,
-          `B) They decided to stop the investigation because they could not find any useful English clues`,
-          `C) They completely ignored the written instructions on the map and got lost in the setting`
+          `To express clear ideas, actions, or descriptions in English using context clues and accurate sentence structure`,
+          `To translate words completely out of context without paying attention to meaning`,
+          `To memorize isolated lists of English words without applying them in real sentences`
         ],
-        correct: "A",
-        fixExplain: `The text describes how the characters collaborated to analyze the situation and find the correct solution.`
+        correct: `To express clear ideas, actions, or descriptions in English using context clues and accurate sentence structure`,
+        dileReview: "Pídele que señale la palabra o verbo en inglés que justifica su elección.",
+        fixExplain: `Context clues and functional structures allow English learners to communicate naturally and with confidence.`
       },
       {
-        q: `Vocabulary in Context: When reading English texts about ${item.focoDidactico}, what is the best strategy when you find an unfamiliar word?`,
+        q: `To avoid the common mistake of '${errorFrecuente}', what is the best strategy when reading an English text?`,
         options: [
-          `A) Use the surrounding context clues, transparent words, and the general topic of the sentence to deduce the meaning`,
-          `B) Stop reading completely and assume the entire paragraph cannot be understood`,
-          `C) Replace the unknown word with a random Spanish word that has a completely different meaning`
+          `Identify the general meaning and key cognates first, instead of trying to translate every single word`,
+          `Stop reading immediately whenever you find an unfamiliar English word`,
+          `Assume that English sentences must follow the exact same word order as Spanish`
         ],
-        correct: "A",
-        fixExplain: `Context clues allow English learners to deduce meanings naturally and maintain fluent reading comprehension.`
+        correct: `Identify the general meaning and key cognates first, instead of trying to translate every single word`,
+        dileReview: "Pregúntale: ¿cómo te ayudaron los cognados a entender la idea general sin usar diccionario?",
+        fixExplain: `Deducir el significado por contexto evita la frustración y construye fluidez en la comprensión lectora en inglés.`
       },
       {
-        q: `Language Structure: Which English sentence demonstrates the correct grammatical pattern for the communicative goal learned today?`,
+        q: `Language Structure: Which English sentence demonstrates the correct grammatical pattern for '${concepto}'?`,
         options: [
-          `A) The student carefully read the adapted text and wrote a complete response in the notebook`,
-          `B) The student carefully reading the text and write without grammatical agreement`,
-          `C) Yesterday the student will read the adapted text in the future tense by mistake`
+          `The student carefully read the text and wrote a complete response in the notebook`,
+          `The student carefully reading the text and write without agreement yesterday`,
+          `Yesterday the student will read the text in the future tense by mistake`
         ],
-        correct: "A",
+        correct: `The student carefully read the text and wrote a complete response in the notebook`,
+        dileReview: "Pídele que identifique el sujeto y el verbo principal de la oración correcta.",
         fixExplain: `A well-structured English sentence maintains proper subject-verb agreement and consistent tense usage.`
       }
     ],
     recuperacion: [
       {
         title: `English Recovery & Consolidation: ${item.title}`,
-        explain: `When reading and writing in English, always look for the main subject and the action verb in the correct tense, using context clues to guide your comprehension.`,
+        explain: `When reading and writing in English, always look for the main subject and the action verb in the correct tense, using context clues to guide your comprehension of '${concepto}'.`,
         q: `Which sentence correctly demonstrates clear English communication for this lesson?`,
         options: [
           `The team explored the setting and recorded their findings in the notebook`,
           `The team explore yesterday without any past tense marker`
         ],
         correct: "The team explored the setting and recorded their findings in the notebook",
-        correctText: "Correct! The sentence uses the proper past tense marker (-ed) to express a completed narrative action.",
+        correctText: "Correct! The sentence uses the proper past tense marker (-ed) to express a completed action.",
         fixText: "Remember that in English, regular verbs in the past tense take the -ed ending to signal completed events."
       }
     ],
@@ -2354,6 +2811,12 @@ export function generateOAPackage(oa: OACatalogItem, totalLessons: number): Gene
         lessons.push(getCanonicalClase1Ingles());
         return;
       }
+    }
+
+    // Inyección canónica de lecciones sincronizadas para 7° Básico Clase 2 (Matemática OA01)
+    if (classNum === 2 && oa.curso.includes("7") && oa.oaNumero === 1 && oa.asignatura === "Matemática") {
+      lessons.push(getCanonicalClase2Matematica());
+      return;
     }
 
     // Build Hook 7 Slides
@@ -2513,6 +2976,7 @@ export function generateOAPackage(oa: OACatalogItem, totalLessons: number): Gene
       num: classNum,
       title: item.title,
       focoDidactico: item.focoDidactico,
+      routeToday: `1. Inicio y activación · 2. Video de exploración · 3. Recorrido guiado · 4. Formalización y práctica en cuaderno · 5. Miniquiz y REVISAR · 6. Cierre metacognitivo`,
       duracion: "30 Minutos",
       objetivoAdulto: discContent.objetivoAdulto,
       climaEmocional: discContent.climaEmocional,

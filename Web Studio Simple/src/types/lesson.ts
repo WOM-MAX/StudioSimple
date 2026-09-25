@@ -51,6 +51,7 @@ export interface QuizQuestion {
   fixExplain: string;
   concept?: string;
   explain?: string;
+  dileReview?: string;
 }
 
 export interface RecoveryItem {
@@ -117,6 +118,8 @@ export interface LessonData {
     videoSrc: string;
     posterSrc?: string;
     dileAfterVideo: string;
+    fullPrompt?: string;
+    slides?: any[];
   };
   // Paso 4: Conversación Guiada
   preQuestions: GuidedItem[];
@@ -131,6 +134,8 @@ export interface LessonData {
     hazInstruction: string;
     videoSrc?: string;
     graphicPoster?: string;
+    fullPrompt?: string;
+    slides?: any[];
   };
   postQuestions: GuidedItem[];
   // Paso 6: Práctica Conjunta
