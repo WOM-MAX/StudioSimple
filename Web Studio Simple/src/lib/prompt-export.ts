@@ -1,4 +1,4 @@
-import { LessonData as PlayerLessonData } from '../types/lesson';
+import { LessonData as PlayerLessonData, SlidePrompt } from '../types/lesson';
 
 /**
  * Builds a structured, high-fidelity prompt text file containing the AI video generation
@@ -28,15 +28,30 @@ export function buildLessonPromptText(lesson: PlayerLessonData): string {
   out += `MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)\n`;
   out += `================================================================================\n\n`;
 
-  if (lesson.hook.fullPrompt && lesson.hook.fullPrompt.trim().length > 50) {
-    out += `${lesson.hook.fullPrompt.trim()}\n\n`;
-  } else if (lesson.hook.slides && lesson.hook.slides.length > 0) {
-    lesson.hook.slides.forEach((s: any) => {
-      out += `--- DIAPOSITIVA ${s.slideNumber || ''} (${s.tituloMomento || ''}) ---\n`;
-      out += `• Prompt de Imagen (16:9): ${s.visualPrompt || ''}\n`;
+  if (lesson.hook.slides && lesson.hook.slides.length > 0) {
+    out += `Titulo: ${lesson.hook.title || lesson.hook.titulo || 'El Desafio Inicial'}\n`;
+    out += `• DILE ANTES DEL VIDEO: "${lesson.hook.dileIntro}"\n`;
+    out += `• INSTRUCCION AL ESTUDIANTE: "${lesson.hook.hazInstruction}"\n`;
+    out += `• DILE DESPUES DEL VIDEO: "${lesson.hook.dileAfterVideo}"\n`;
+    if (lesson.hook.focusPoints && lesson.hook.focusPoints.length > 0) {
+      out += `• Puntos de foco visual al observar:\n`;
+      lesson.hook.focusPoints.forEach((fp, i) => {
+        out += `  ${i + 1}. ${fp}\n`;
+      });
+    }
+    out += `\nSECUENCIA DE ${lesson.hook.slides.length} DIAPOSITIVAS CANONICAS (PROMPTS DE IMAGEN 16:9 Y LOCUCION):\n\n`;
+    lesson.hook.slides.forEach((s: SlidePrompt, idx: number) => {
+      out += `--- DIAPOSITIVA ${s.slideNumber || idx + 1}: ${s.tituloMomento || ''} (${s.duracionSeg || 10} seg aprox) ---\n`;
+      out += `• Prompt de Imagen (16:9 Anime Moderno): ${s.visualPrompt || ''}\n`;
       out += `• Texto en Pantalla (Overlay limpio): ${s.overlayText || ''}\n`;
-      out += `• Notas al Orador (Locucion Google Vids): "${s.speakerNotes || ''}"\n\n`;
+      out += `• Notas al Orador (Locucion Google Vids): "${s.speakerNotes || ''}"\n`;
+      if (s.imageUrl) {
+        out += `• URL Imagen de Referencia: ${s.imageUrl}\n`;
+      }
+      out += `\n`;
     });
+  } else if (lesson.hook.fullPrompt && lesson.hook.fullPrompt.trim().length > 50) {
+    out += `${lesson.hook.fullPrompt.trim()}\n\n`;
   } else {
     out += `Titulo: ${lesson.hook.title || lesson.hook.titulo || 'El Desafio Inicial'}\n`;
     out += `• DILE ANTES DEL VIDEO: "${lesson.hook.dileIntro}"\n`;
@@ -55,18 +70,27 @@ export function buildLessonPromptText(lesson: PlayerLessonData): string {
   out += `MODULO 2: PROMPT VIDEO EXPLICATIVO CONCEPTUAL (PASO 4 - 7 DIAPOSITIVAS)\n`;
   out += `================================================================================\n\n`;
 
-  if (lesson.formalization.fullPrompt && lesson.formalization.fullPrompt.trim().length > 50) {
-    out += `${lesson.formalization.fullPrompt.trim()}\n\n`;
-  } else if (lesson.formalization.slides && lesson.formalization.slides.length > 0) {
-    lesson.formalization.slides.forEach((s: any) => {
-      out += `--- DIAPOSITIVA ${s.slideNumber || ''} (${s.tituloMomento || ''}) ---\n`;
-      out += `• Prompt de Imagen (16:9): ${s.visualPrompt || ''}\n`;
+  if (lesson.formalization.slides && lesson.formalization.slides.length > 0) {
+    out += `Titulo: ${lesson.formalization.title || lesson.formalization.concept || 'Formalizacion de la Idea Clave'}\n`;
+    out += `• Idea Clave: "${lesson.formalization.ideaClave || lesson.formalization.summary || ''}"\n`;
+    out += `• DILE ANTES DEL VIDEO: "${lesson.formalization.dileIntro}"\n`;
+    out += `• INSTRUCCION: "${lesson.formalization.hazInstruction}"\n\n`;
+    out += `SECUENCIA DE ${lesson.formalization.slides.length} DIAPOSITIVAS CANONICAS (PROMPTS DE IMAGEN 16:9 Y LOCUCION):\n\n`;
+    lesson.formalization.slides.forEach((s: SlidePrompt, idx: number) => {
+      out += `--- DIAPOSITIVA ${s.slideNumber || idx + 1}: ${s.tituloMomento || ''} (${s.duracionSeg || 10} seg aprox) ---\n`;
+      out += `• Prompt de Imagen (16:9 Anime Moderno): ${s.visualPrompt || ''}\n`;
       out += `• Texto en Pantalla (Overlay limpio): ${s.overlayText || ''}\n`;
-      out += `• Notas al Orador (Locucion Google Vids): "${s.speakerNotes || ''}"\n\n`;
+      out += `• Notas al Orador (Locucion Google Vids): "${s.speakerNotes || ''}"\n`;
+      if (s.imageUrl) {
+        out += `• URL Imagen de Referencia: ${s.imageUrl}\n`;
+      }
+      out += `\n`;
     });
+  } else if (lesson.formalization.fullPrompt && lesson.formalization.fullPrompt.trim().length > 50) {
+    out += `${lesson.formalization.fullPrompt.trim()}\n\n`;
   } else {
     out += `Titulo: ${lesson.formalization.title || lesson.formalization.concept || 'Formalizacion de la Idea Clave'}\n`;
-    out += `• Idea Clave: "${lesson.formalization.ideaClave || ''}"\n`;
+    out += `• Idea Clave: "${lesson.formalization.ideaClave || lesson.formalization.summary || ''}"\n`;
     out += `• DILE ANTES DEL VIDEO: "${lesson.formalization.dileIntro}"\n`;
     out += `• INSTRUCCION: "${lesson.formalization.hazInstruction}"\n\n`;
   }

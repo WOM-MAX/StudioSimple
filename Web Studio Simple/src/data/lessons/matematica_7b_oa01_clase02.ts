@@ -90,7 +90,72 @@ export const MATEMATICA_7B_OA01_CLASE02: LessonData = {
       'Hacia qué lado se ordenan los números positivos y negativos.',
       'Qué regla define qué número es mayor que otro.'
     ],
-    dileAfterVideo: 'Conversemos sobre lo observado. Te haré dos preguntas para comprobar cómo organizamos los números en la recta.'
+    dileAfterVideo: 'Conversemos sobre lo observado. Te haré dos preguntas para comprobar cómo organizamos los números en la recta.',
+    slides: [
+      {
+        slideNumber: 1,
+        tituloMomento: 'Apertura en el Puesto de Mando',
+        visualPrompt: 'Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers examining a glowing digital navigation board on their vessel. Altitude and depth measurements appear on screen. Clear calm sea visible through windows.',
+        overlayText: 'Misión 2: La recta numérica y orden en Z',
+        speakerNotes: 'Los registros de navegación combinan alturas sobre el nivel del mar y profundidades marinas en una misma pantalla.',
+        palabrasAprox: 18,
+        duracionSeg: 9
+      },
+      {
+        slideNumber: 2,
+        tituloMomento: 'El Desafío de Ordenar Datos',
+        visualPrompt: 'Modern anime style. The girl pointing at conflicting numbers: +3 metros, −6 metros, 0 metros, −1 metro. High contrast, clean layout.',
+        overlayText: 'El problema: ¿Qué valor es mayor?',
+        speakerNotes: 'Al comparar números positivos y negativos, necesitamos un criterio único y seguro que evite confusiones.',
+        palabrasAprox: 17,
+        duracionSeg: 9
+      },
+      {
+        slideNumber: 3,
+        tituloMomento: 'Trazando la Recta Numérica',
+        visualPrompt: 'Modern anime style. The boy drawing a horizontal line with the zero glowing at the exact center. Arrows pointing both ways.',
+        overlayText: 'La línea continua: El cero al centro',
+        speakerNotes: 'Trazamos una recta numérica horizontal. El cero se ubica al centro como punto de partida indiscutible.',
+        palabrasAprox: 18,
+        duracionSeg: 9
+      },
+      {
+        slideNumber: 4,
+        tituloMomento: 'Positivos a la Derecha',
+        visualPrompt: 'Modern anime style. Warm orange markers glowing at +1, +2, +3 moving towards the right.',
+        overlayText: 'Hacia la derecha: Valores positivos (+)',
+        speakerNotes: 'A la derecha del cero se ubican los números positivos, aumentando su valor a medida que avanzamos.',
+        palabrasAprox: 18,
+        duracionSeg: 9
+      },
+      {
+        slideNumber: 5,
+        tituloMomento: 'Negativos a la Izquierda',
+        visualPrompt: 'Modern anime style. Cool cyan markers glowing at −1, −2, −3 extending towards the left.',
+        overlayText: 'Hacia la izquierda: Valores negativos (−)',
+        speakerNotes: 'A la izquierda del cero se ubican los números negativos, alejándose del centro con el signo menos.',
+        palabrasAprox: 18,
+        duracionSeg: 9
+      },
+      {
+        slideNumber: 6,
+        tituloMomento: 'La Regla de Oro del Orden',
+        visualPrompt: 'Modern anime style. Side-by-side comparison with a large glowing arrow pointing to the right: \'Mayor hacia la derecha\'.',
+        overlayText: 'Regla de Oro: Mayor hacia la derecha',
+        speakerNotes: 'Cualquier número situado a la derecha de otro en la recta horizontal es siempre mayor que el de la izquierda.',
+        palabrasAprox: 19,
+        duracionSeg: 10
+      },
+      {
+        slideNumber: 7,
+        tituloMomento: 'Listo para Comparar',
+        visualPrompt: 'Modern anime style. Both explorers confident with their notebooks open and pencil ready to compare numbers.',
+        overlayText: '¡A comparar y ordenar en el cuaderno!',
+        speakerNotes: 'Con la recta numérica clara, ahora puedes ordenar cualquier conjunto de números enteros sin dudar.',
+        palabrasAprox: 17,
+        duracionSeg: 8
+      }
+    ]
   },
 
   // Paso 4: Conversación Guiada
@@ -127,7 +192,72 @@ export const MATEMATICA_7B_OA01_CLASE02: LessonData = {
     ideaClave: 'Todo número ubicado a la derecha de otro en la recta numérica es mayor que él.',
     dileIntro: 'Ahora aprenderemos la regla fundamental para comparar cualquier pareja de números enteros: la regla de la derecha.',
     hazInstruction: 'Presta atención a cómo la posición en la recta nos dice de inmediato qué número es mayor.',
-    videoSrc: ''
+    videoSrc: '',
+    slides: [
+      {
+        slideNumber: 1,
+        tituloMomento: 'La Recta Numérica Horizontal',
+        visualPrompt: 'Modern anime style. A crisp horizontal line across the center of the whiteboard with zero marked prominently in teal.',
+        overlayText: 'El cero divide la recta',
+        speakerNotes: 'El cero divide la recta en dos semirrectas: a su derecha los enteros positivos y a su izquierda los enteros negativos.',
+        palabrasAprox: 21,
+        duracionSeg: 10
+      },
+      {
+        slideNumber: 2,
+        tituloMomento: 'Sentido Creciente de la Recta',
+        visualPrompt: 'Modern anime style. A gradient arrow flowing from left to right with the label \'Aumenta el valor\'.',
+        overlayText: 'El valor aumenta hacia la derecha',
+        speakerNotes: 'La recta numérica avanza de menor a mayor de izquierda a derecha. Estar más a la derecha significa ser mayor.',
+        palabrasAprox: 19,
+        duracionSeg: 10
+      },
+      {
+        slideNumber: 3,
+        tituloMomento: 'Comparando un Positivo y un Negativo',
+        visualPrompt: 'Modern anime style. Comparing +2 and −4. Diagram highlights +2 on the right and −4 on the left.',
+        overlayText: '+2 está a la derecha de −4: +2 > −4',
+        speakerNotes: 'Cualquier número positivo es siempre mayor que cualquier número negativo porque siempre está a la derecha del cero.',
+        palabrasAprox: 19,
+        duracionSeg: 10
+      },
+      {
+        slideNumber: 4,
+        tituloMomento: 'Comparando Dos Negativos',
+        visualPrompt: 'Modern anime style. Focus on −2 and −5. The distance to zero is visually measured.',
+        overlayText: 'Comparando −2 y −5',
+        speakerNotes: '¿Qué número es mayor entre menos dos y menos cinco? Pensemos cuál de los dos se ubica más hacia la derecha.',
+        palabrasAprox: 20,
+        duracionSeg: 10
+      },
+      {
+        slideNumber: 5,
+        tituloMomento: 'Cercanía al Cero en los Negativos',
+        visualPrompt: 'Modern anime style. −2 is only 2 steps from zero, while −5 is 5 steps away. −2 is further to the right.',
+        overlayText: '−2 está más a la derecha que −5: −2 > −5',
+        speakerNotes: 'Menos dos está más cerca del cero y a la derecha de menos cinco. Por la regla de la recta, menos dos es mayor.',
+        palabrasAprox: 22,
+        duracionSeg: 11
+      },
+      {
+        slideNumber: 6,
+        tituloMomento: 'Estrategia en 3 Pasos',
+        visualPrompt: 'Modern anime style. 3-step numbered infographic: 1. Ubica, 2. Compara, 3. Concluye.',
+        overlayText: '1. Ubica · 2. Compara · 3. Concluye',
+        speakerNotes: 'Primero ubica los números, luego mira cuál está a la derecha, y finalmente concluye que el de la derecha es mayor.',
+        palabrasAprox: 20,
+        duracionSeg: 10
+      },
+      {
+        slideNumber: 7,
+        tituloMomento: 'Síntesis al Cuaderno',
+        visualPrompt: 'Modern anime style. Both students ready with notebook open showing the number line drawn cleanly.',
+        overlayText: '¡Dibuja tu recta en el cuaderno!',
+        speakerNotes: 'Traza tu recta en el cuaderno y compruébalo tú mismo. ¡Todo número a la derecha es mayor!',
+        palabrasAprox: 17,
+        duracionSeg: 9
+      }
+    ]
   },
 
   postQuestions: [

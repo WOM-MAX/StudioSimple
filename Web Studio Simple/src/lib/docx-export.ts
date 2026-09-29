@@ -408,13 +408,13 @@ export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
                     createHeaderCell("Imagen / URL", 10)
                   ]
                 }),
-                ...lesson.paso2_hook.slides.map((s, idx) =>
+                ...(Array.isArray(lesson.paso2_hook?.slides) ? lesson.paso2_hook.slides : []).map((s, idx) =>
                   new TableRow({
                     children: [
-                      createDataCell(`${s.slideNumber}`, 8, idx % 2 === 1),
-                      createDataCell(s.visualPrompt, 42, idx % 2 === 1),
-                      createDataCell(s.overlayText, 18, idx % 2 === 1),
-                      createDataCell(s.speakerNotes, 22, idx % 2 === 1),
+                      createDataCell(`${s.slideNumber || idx + 1}`, 8, idx % 2 === 1),
+                      createDataCell(s.visualPrompt || '', 42, idx % 2 === 1),
+                      createDataCell(s.overlayText || '', 18, idx % 2 === 1),
+                      createDataCell(s.speakerNotes || '', 22, idx % 2 === 1),
                       createDataCell(s.imageUrl ? `URL:\n${s.imageUrl}` : "Por generar", 10, idx % 2 === 1)
                     ]
                   })
@@ -541,13 +541,13 @@ export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
                     createHeaderCell("Imagen / URL", 10)
                   ]
                 }),
-                ...lesson.paso4_explicativo.slides.map((s, idx) =>
+                ...(Array.isArray(lesson.paso4_explicativo?.slides) ? lesson.paso4_explicativo.slides : []).map((s, idx) =>
                   new TableRow({
                     children: [
-                      createDataCell(`${s.slideNumber}`, 8, idx % 2 === 1),
-                      createDataCell(s.visualPrompt, 42, idx % 2 === 1),
-                      createDataCell(s.overlayText, 18, idx % 2 === 1),
-                      createDataCell(s.speakerNotes, 22, idx % 2 === 1),
+                      createDataCell(`${s.slideNumber || idx + 1}`, 8, idx % 2 === 1),
+                      createDataCell(s.visualPrompt || '', 42, idx % 2 === 1),
+                      createDataCell(s.overlayText || '', 18, idx % 2 === 1),
+                      createDataCell(s.speakerNotes || '', 22, idx % 2 === 1),
                       createDataCell(s.imageUrl ? `URL:\n${s.imageUrl}` : "Por generar", 10, idx % 2 === 1)
                     ]
                   })

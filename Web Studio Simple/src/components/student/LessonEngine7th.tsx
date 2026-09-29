@@ -13,8 +13,8 @@ const MathNumberLineSimulator: React.FC = () => {
     { id: 'm1', text: 'Deuda en el banco de $15.000', correctZone: 'negativo', placedZone: null as string | null },
     { id: 'm2', text: 'Temperatura de -8°C en Coyhaique', correctZone: 'negativo', placedZone: null as string | null },
     { id: 'm3', text: 'Depósito a favor de $50.000', correctZone: 'positivo', placedZone: null as string | null },
-    { id: 'm4', text: 'Altitud de +2.500m en la Cordillera', correctZone: 'positivo', placedZone: null as string | null },
-    { id: 'm5', text: 'Profundidad submarina de -300m', correctZone: 'negativo', placedZone: null as string | null },
+    { id: 'm4', text: 'Altitud de +2.500 metros en la Cordillera', correctZone: 'positivo', placedZone: null as string | null },
+    { id: 'm5', text: 'Profundidad submarina de -300 metros', correctZone: 'negativo', placedZone: null as string | null },
   ]);
 
   const handleClassify = (id: string, zone: 'negativo' | 'positivo') => {
@@ -170,7 +170,7 @@ const LESSONS_BY_SUBJECT: Record<string, typeof MOCK_LESSON_7TH> = {
           'd) -96 metros'
         ],
         correctIndex: 2,
-        explanation: '¡Correcto! (Opción c). Al descender 8 metros más desde -12 m, sumamos dos cantidades negativas: (-12) + (-8) = -20 metros.'
+        explanation: '¡Correcto! (Opción c). Al descender 8 metros más desde -12 metros, sumamos dos cantidades negativas: (-12) + (-8) = -20 metros.'
       },
       {
         id: 'qm3',
@@ -203,7 +203,7 @@ const LESSONS_BY_SUBJECT: Record<string, typeof MOCK_LESSON_7TH> = {
         { id: 'item-m1', text: 'Deuda bancaria de $15.000', targetGroup: 'nomada' },
         { id: 'item-m2', text: 'Depósito a favor de $50.000', targetGroup: 'sedentario' },
         { id: 'item-m3', text: 'Temperatura de -8°C', targetGroup: 'nomada' },
-        { id: 'item-m4', text: 'Altitud de +2.500m', targetGroup: 'sedentario' },
+        { id: 'item-m4', text: 'Altitud de +2.500 metros', targetGroup: 'sedentario' },
       ],
       copilotoQuestion: 'Pregunta guía: "¿Qué zona de la recta representa las situaciones de saldo a favor o elevación sobre el nivel del mar?"',
     },
@@ -1235,7 +1235,7 @@ export const LessonEngine7th: React.FC<LessonEngine7thProps> = ({ onComplete }) 
                       </div>
                       <div className="p-2.5 rounded-xl bg-black/40 border border-white/10 space-y-1">
                         <span className="text-blue-300 block font-bold">5. Altitud & Profundidad</span>
-                        <p className="text-white/70 text-[9px] leading-tight">Everest (+8848m) vs Mar Muerto (-423m).</p>
+                        <p className="text-white/70 text-[9px] leading-tight">Everest (+8848 metros) vs Mar Muerto (-423 metros).</p>
                       </div>
                       <div className="p-2.5 rounded-xl bg-black/40 border border-white/10 space-y-1">
                         <span className="text-amber-300 block font-bold">6. Edificio & Ascensor</span>

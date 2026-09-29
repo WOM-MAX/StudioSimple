@@ -163,8 +163,9 @@ export function adaptGeneratorLessonToPlayer(
     hook: {
       title: genLesson.paso2_hook?.titulo,
       titulo: genLesson.paso2_hook?.titulo,
+      focusPoints: (genLesson.paso2_hook as any)?.focusPoints || [],
       dileIntro: genLesson.paso2_hook.dileAntes,
-      hazInstruction: 'Observa y reflexiona con las escenas del desafío visual.',
+      hazInstruction: (genLesson.paso2_hook as any)?.hazInstruction || 'Observa y reflexiona con las escenas del desafío visual.',
       videoSrc: (genLesson.paso2_hook as any).videoUrl || (genLesson.paso2_hook as any).videoSrc || (isMat7bOa01L01 ? 'https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7-MAT-OA01-L01-MOTIVACIONAL_V9_LEGIBLE.mp4' : ''),
       posterSrc: (genLesson.paso2_hook as any).posterUrl || (genLesson.paso2_hook as any).posterSrc || (genLesson.paso2_hook.slides?.[0]?.imageUrl || ''),
       dileAfterVideo: genLesson.paso2_hook.dileDespues,

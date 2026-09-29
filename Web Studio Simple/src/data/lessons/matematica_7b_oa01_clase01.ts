@@ -81,11 +81,82 @@ export const MATEMATICA_7B_OA01_CLASE01: LessonData = {
 
   // Paso 3: Video Gancho
   hook: {
+    title: 'El recorrido del submarino',
+    focusPoints: [
+      'Dónde comienza el submarino respecto de la superficie.',
+      'Cuánto baja el submarino en su primera maniobra.',
+      'Cuánto sube el submarino al detectar la corriente.'
+    ],
     dileIntro: 'Ahora veremos un video sobre el recorrido de un submarino. Mientras lo ves, fíjate en tres cosas: dónde comienza el submarino, cuánto baja y cuánto sube.',
     hazInstruction: 'Presiona el botón para reproducir el video.',
     videoSrc: 'https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7-MAT-OA01-L01-MOTIVACIONAL_V9_LEGIBLE.mp4',
     posterSrc: '/visuals/desafio-submarino.png',
-    dileAfterVideo: 'La pregunta final queda planteada como desafío. No la respondas todavía.'
+    dileAfterVideo: 'La pregunta final queda planteada como desafío. No la respondas todavía.',
+    slides: [
+      {
+        slideNumber: 1,
+        tituloMomento: 'Apertura y Desafío Marino',
+        visualPrompt: 'Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing on the deck of a research vessel looking at an advanced yellow submarine. Clear calm sea, crisp morning light, negative space in the upper third.',
+        overlayText: 'Misión 1: El recorrido del submarino',
+        speakerNotes: 'Comienza una nueva expedición científica. Nuestro submarino de investigación oceanográfica se prepara para una inmersión en aguas profundas.',
+        palabrasAprox: 18,
+        duracionSeg: 9
+      },
+      {
+        slideNumber: 2,
+        tituloMomento: 'El Punto de Referencia Cero',
+        visualPrompt: 'Modern anime style. The submarine at the exact surface of the water, with a clean glowing horizontal dashed line labeled \'0 metros\'. Clear blue sky above and turquoise sea below. Digital measurement gauge on the side.',
+        overlayText: 'Punto de partida: Superficie del mar (0 metros)',
+        speakerNotes: 'La superficie del mar es nuestro punto de referencia fundamental. En esta expedición la representamos exactamente con el número cero.',
+        palabrasAprox: 19,
+        duracionSeg: 9
+      },
+      {
+        slideNumber: 3,
+        tituloMomento: 'Posición Inicial Bajo el Mar',
+        visualPrompt: 'Modern anime style. The submarine submerged deep underwater, stationary at twenty meters below the surface line. Soft rays of sunlight filtering through the water. Modern digital depth indicator reading −20 metros.',
+        overlayText: 'Posición inicial: −20 metros',
+        speakerNotes: 'El submarino desciende veinte metros bajo la superficie. Como se encuentra debajo del cero, decimos que su posición es menos veinte metros.',
+        palabrasAprox: 21,
+        duracionSeg: 10
+      },
+      {
+        slideNumber: 4,
+        tituloMomento: 'Primer Movimiento: Descenso',
+        visualPrompt: 'Modern anime style. The submarine maneuvering downward with bubbles and small directional arrows indicating descent of 15 meters from its previous depth. High clarity, beautiful underwater marine flora.',
+        overlayText: 'Maniobra 1: baja 15 metros',
+        speakerNotes: 'Para investigar una fosa marina, el submarino ejecuta una maniobra: desciende quince metros más hacia el fondo.',
+        palabrasAprox: 16,
+        duracionSeg: 8
+      },
+      {
+        slideNumber: 5,
+        tituloMomento: 'Segundo Movimiento: Ascenso',
+        visualPrompt: 'Modern anime style. The submarine adjusting ballast and propelling upward with light upward arrows indicating an ascent of 8 meters. School of colorful fish passing by in background.',
+        overlayText: 'Maniobra 2: sube 8 metros',
+        speakerNotes: 'Al detectar una corriente submarina intensa, el capitán ordena ascender: el submarino sube ocho metros.',
+        palabrasAprox: 15,
+        duracionSeg: 8
+      },
+      {
+        slideNumber: 6,
+        tituloMomento: 'El Desafío Central',
+        visualPrompt: 'Modern anime style. Inside the control cabin, the two 13-year-olds analyzing the navigation dashboard, pointing at the depth sensor with curiosity and focus. Clean lineart, expressive faces.',
+        overlayText: '¿Cuál es la posición final del submarino?',
+        speakerNotes: 'Ahora surge la gran pregunta: después de descender y subir, ¿en qué posición exacta respecto de la superficie se encuentra el submarino?',
+        palabrasAprox: 21,
+        duracionSeg: 10
+      },
+      {
+        slideNumber: 7,
+        tituloMomento: 'Puente a la Conversación',
+        visualPrompt: 'Modern anime style. Minimalist clean composition showing the StudioSimple emblem, the submarine resting at its final depth, and an invitation to analyze.',
+        overlayText: 'StudioSimple · Matemática 7° Básico',
+        speakerNotes: 'No respondas todavía. Vamos a pensar juntos en el recorrido para descubrir la respuesta exacta paso a paso.',
+        palabrasAprox: 18,
+        duracionSeg: 8
+      }
+    ]
   },
 
   // Paso 4: Conversación Guiada
@@ -102,11 +173,11 @@ export const MATEMATICA_7B_OA01_CLASE01: LessonData = {
     },
     {
       context: 'Ubicación del submarino',
-      question: '¿Qué significa que el submarino se encuentre a −20 m?',
+      question: '¿Qué significa que el submarino se encuentre a −20 metros?',
       expected: 'El submarino se encuentra veinte metros bajo la superficie del mar.',
-      success: '¡Exacto! Significa que el submarino se encuentra veinte metros bajo la superficie del mar, que usamos como punto de referencia. Como −20 m nos indica dónde se encuentra, decimos que representa una posición.',
-      support: 'Recuerda que la superficie del mar representa el cero. En −20 m, el signo negativo indica que el submarino está debajo de ese punto y el número 20 indica la distancia desde el cero hasta el submarino. Con esta pista, ¿qué significa −20 m?',
-      reveal: '−20 m significa que el submarino se encuentra veinte metros bajo la superficie del mar. Esta información representa su posición.',
+      success: '¡Exacto! Significa que el submarino se encuentra veinte metros bajo la superficie del mar, que usamos como punto de referencia. Como −20 metros nos indica dónde se encuentra, decimos que representa una posición.',
+      support: 'Recuerda que la superficie del mar representa el cero. En −20 metros, el signo negativo indica que el submarino está debajo de ese punto y el número 20 indica la distancia desde el cero hasta el submarino. Con esta pista, ¿qué significa −20 metros?',
+      reveal: '−20 metros significa que el submarino se encuentra veinte metros bajo la superficie del mar. Esta información representa su posición.',
       studentReveal: 'El submarino está veinte metros bajo la superficie. Esa es su posición.',
       studentImage: '/images/lessons/clase1_submarino.svg'
     }
@@ -114,10 +185,79 @@ export const MATEMATICA_7B_OA01_CLASE01: LessonData = {
 
   // Paso 5: Explicación y Formalización
   formalization: {
+    title: 'Posición y movimiento respecto de un punto de referencia',
+    concept: 'Posición y movimiento',
+    ideaClave: 'Una posición indica dónde se encuentra un objeto respecto del punto de referencia; un movimiento describe cómo cambia de lugar, la dirección y la distancia recorrida.',
+    summary: 'Una posición indica dónde se encuentra un objeto respecto del punto de referencia; un movimiento describe cómo cambia de lugar, la dirección y la distancia recorrida.',
     dileIntro: 'Ya identificamos el punto de referencia de este recorrido y comprendimos que menos veinte metros indica dónde se encuentra el submarino. A eso lo llamamos una posición. Ahora veremos un video para aprender qué es un movimiento y cómo distinguirlo de una posición.',
-    hazInstruction: '−20 m se lee “menos veinte metros”.',
+    hazInstruction: '−20 metros se lee “menos veinte metros”.',
     videoSrc: 'https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/MAT/MAT_OA01_L01_Concepto.mp4',
-    graphicPoster: '/visuals/posicion-movimiento.png'
+    graphicPoster: '/visuals/posicion-movimiento.png',
+    slides: [
+      {
+        slideNumber: 1,
+        tituloMomento: 'Definición de Posición y Movimiento',
+        visualPrompt: 'Modern anime style 16:9. The boy and girl standing before a sleek interactive lightboard with two clearly contrasting columns: \'Posición\' and \'Movimiento\'. Clean modern typography, soft teal and amber lighting.',
+        overlayText: '¿Posición o Movimiento?',
+        speakerNotes: 'Para comprender los números enteros, necesitamos distinguir con total claridad dos ideas fundamentales: qué es una posición y qué es un movimiento.',
+        palabrasAprox: 21,
+        duracionSeg: 11
+      },
+      {
+        slideNumber: 2,
+        tituloMomento: 'Qué es una Posición',
+        visualPrompt: 'Modern anime style. The girl pointing at a single illuminated dot at −20 metros on a vertical depth axis. Negative space for clean reading.',
+        overlayText: 'Posición: Dónde se encuentra un objeto',
+        speakerNotes: 'Una posición indica el lugar exacto donde se encuentra algo en relación con un punto de referencia fijo, como la superficie del mar.',
+        palabrasAprox: 22,
+        duracionSeg: 11
+      },
+      {
+        slideNumber: 3,
+        tituloMomento: 'Ejemplo Real de Posición',
+        visualPrompt: 'Modern anime style. Submarine static at twenty meters depth. Callout box pointing to it: \'Posición = −20 metros\'.',
+        overlayText: 'Ejemplo: El submarino está a −20 metros',
+        speakerNotes: 'Estar a menos veinte metros es una posición, porque nos dice dónde está el submarino sin que se esté moviendo en ese momento.',
+        palabrasAprox: 22,
+        duracionSeg: 11
+      },
+      {
+        slideNumber: 4,
+        tituloMomento: 'Qué es un Movimiento',
+        visualPrompt: 'Modern anime style. The boy illustrating a vertical arrow with motion lines, showing an active shift from one level to another.',
+        overlayText: 'Movimiento: Cómo cambia de lugar',
+        speakerNotes: 'Un movimiento indica una acción de cambio de lugar. Señala hacia dónde se traslada el objeto y qué distancia recorre.',
+        palabrasAprox: 20,
+        duracionSeg: 10
+      },
+      {
+        slideNumber: 5,
+        tituloMomento: 'Ejemplo Real de Movimiento',
+        visualPrompt: 'Modern anime style. Submarine moving downward with an active measurement arrow indicating \'Baja 15 metros\'.',
+        overlayText: 'Ejemplo: El submarino baja 15 metros',
+        speakerNotes: 'Bajar quince metros es un movimiento, porque describe un desplazamiento activo y una distancia recorrida desde un punto hacia otro.',
+        palabrasAprox: 19,
+        duracionSeg: 10
+      },
+      {
+        slideNumber: 6,
+        tituloMomento: 'Comparación Lado a Lado',
+        visualPrompt: 'Modern anime style. Split screen diagram: Left side shows \'Está a −20 metros (Ubicación)\'; Right side shows \'Baja 15 metros (Desplazamiento)\'. High contrast, crystal clarity.',
+        overlayText: 'Ubicación vs. Desplazamiento',
+        speakerNotes: 'Recuerda esta distinción: una posición dice \'dónde estás\'; un movimiento dice \'hacia dónde te mueves y cuánto avanzas\'.',
+        palabrasAprox: 17,
+        duracionSeg: 9
+      },
+      {
+        slideNumber: 7,
+        tituloMomento: 'Síntesis y Regla del Signo',
+        visualPrompt: 'Modern anime style. Both students with their open notebooks and pencils ready, smiling confidently in the bright classroom.',
+        overlayText: '¡Ahora a practicar en el cuaderno!',
+        speakerNotes: 'El cero marca el punto de partida. Con esta regla clara, estás listo para clasificar cualquier situación cotidiana junto a tu mentor.',
+        palabrasAprox: 20,
+        duracionSeg: 10
+      }
+    ]
   },
 
   postQuestions: [

@@ -1,5 +1,6 @@
 import neonDataRaw from '../data/neonCurriculum.json';
 import { NeonCurriculumItem } from '../types';
+import { SlidePrompt } from '../types/lesson';
 
 const neonCurriculum: NeonCurriculumItem[] = neonDataRaw as NeonCurriculumItem[];
 
@@ -75,16 +76,7 @@ export const TEXTBOOK_MAPPINGS: Record<string, { libro: string; unidad: string; 
   "110-7-ING-OA16": { libro: "English 7th Grade (Student's Book MINEDUC)", unidad: 'Unit 4: "World of Wonders"', leccion: 'Lesson 1: "Present Simple and Modal verbs"', paginas: "Páginas 56 a 72" }
 };
 
-export interface SlidePrompt {
-  slideNumber: number;
-  tituloMomento: string;
-  visualPrompt: string;
-  overlayText: string;
-  speakerNotes: string;
-  palabrasAprox: number;
-  duracionSeg: number;
-  imageUrl?: string;
-}
+export type { SlidePrompt };
 
 export interface GuidedItem {
   context: string;
@@ -302,7 +294,7 @@ export function getCanonicalClase1Matematica(): LessonData {
       slideNumber: 2,
       tituloMomento: "El Punto de Referencia Cero",
       visualPrompt: "Modern anime style. The submarine at the exact surface of the water, with a clean glowing horizontal dashed line labeled '0 metros'. Clear blue sky above and turquoise sea below. Digital measurement gauge on the side.",
-      overlayText: "Punto de partida: Superficie del mar (0 m)",
+      overlayText: "Punto de partida: Superficie del mar (0 metros)",
       speakerNotes: "La superficie del mar es nuestro punto de referencia fundamental. En esta expedición la representamos exactamente con el número cero.",
       palabrasAprox: 19,
       duracionSeg: 9
@@ -310,8 +302,8 @@ export function getCanonicalClase1Matematica(): LessonData {
     {
       slideNumber: 3,
       tituloMomento: "Posición Inicial Bajo el Mar",
-      visualPrompt: "Modern anime style. The submarine submerged deep underwater, stationary at twenty meters below the surface line. Soft rays of sunlight filtering through the water. Modern digital depth indicator reading −20 m.",
-      overlayText: "Posición inicial: −20 m",
+      visualPrompt: "Modern anime style. The submarine submerged deep underwater, stationary at twenty meters below the surface line. Soft rays of sunlight filtering through the water. Modern digital depth indicator reading −20 metros.",
+      overlayText: "Posición inicial: −20 metros",
       speakerNotes: "El submarino desciende veinte metros bajo la superficie. Como se encuentra debajo del cero, decimos que su posición es menos veinte metros.",
       palabrasAprox: 21,
       duracionSeg: 10
@@ -367,7 +359,7 @@ export function getCanonicalClase1Matematica(): LessonData {
     {
       slideNumber: 2,
       tituloMomento: "Qué es una Posición",
-      visualPrompt: "Modern anime style. The girl pointing at a single illuminated dot at −20 m on a vertical depth axis. Negative space for clean reading.",
+      visualPrompt: "Modern anime style. The girl pointing at a single illuminated dot at −20 metros on a vertical depth axis. Negative space for clean reading.",
       overlayText: "Posición: Dónde se encuentra un objeto",
       speakerNotes: "Una posición indica el lugar exacto donde se encuentra algo en relación con un punto de referencia fijo, como la superficie del mar.",
       palabrasAprox: 22,
@@ -376,8 +368,8 @@ export function getCanonicalClase1Matematica(): LessonData {
     {
       slideNumber: 3,
       tituloMomento: "Ejemplo Real de Posición",
-      visualPrompt: "Modern anime style. Submarine static at twenty meters depth. Callout box pointing to it: 'Posición = −20 m'.",
-      overlayText: "Ejemplo: El submarino está a −20 m",
+      visualPrompt: "Modern anime style. Submarine static at twenty meters depth. Callout box pointing to it: 'Posición = −20 metros'.",
+      overlayText: "Ejemplo: El submarino está a −20 metros",
       speakerNotes: "Estar a menos veinte metros es una posición, porque nos dice dónde está el submarino sin que se esté moviendo en ese momento.",
       palabrasAprox: 22,
       duracionSeg: 11
@@ -394,8 +386,8 @@ export function getCanonicalClase1Matematica(): LessonData {
     {
       slideNumber: 5,
       tituloMomento: "Ejemplo Real de Movimiento",
-      visualPrompt: "Modern anime style. Submarine moving downward with an active measurement arrow indicating 'Baja 15 m'.",
-      overlayText: "Ejemplo: El submarino baja 15 m",
+      visualPrompt: "Modern anime style. Submarine moving downward with an active measurement arrow indicating 'Baja 15 metros'.",
+      overlayText: "Ejemplo: El submarino baja 15 metros",
       speakerNotes: "Bajar quince metros es un movimiento, porque describe un desplazamiento activo y una distancia recorrida desde un punto hacia otro.",
       palabrasAprox: 19,
       duracionSeg: 10
@@ -403,7 +395,7 @@ export function getCanonicalClase1Matematica(): LessonData {
     {
       slideNumber: 6,
       tituloMomento: "Comparación Lado a Lado",
-      visualPrompt: "Modern anime style. Split screen diagram: Left side shows 'Está a −20 m (Ubicación)'; Right side shows 'Baja 15 m (Desplazamiento)'. High contrast, crystal clarity.",
+      visualPrompt: "Modern anime style. Split screen diagram: Left side shows 'Está a −20 metros (Ubicación)'; Right side shows 'Baja 15 metros (Desplazamiento)'. High contrast, crystal clarity.",
       overlayText: "Ubicación vs. Desplazamiento",
       speakerNotes: "Recuerda esta distinción: una posición dice 'dónde estás'; un movimiento dice 'hacia dónde te mueves y cuánto avanzas'.",
       palabrasAprox: 17,
@@ -454,11 +446,11 @@ export function getCanonicalClase1Matematica(): LessonData {
       },
       {
         context: "Ubicación del submarino",
-        question: "¿Qué significa que el submarino se encuentre a −20 m?",
+        question: "¿Qué significa que el submarino se encuentre a −20 metros?",
         expected: "El submarino se encuentra veinte metros bajo la superficie del mar.",
-        success: "¡Exacto! Significa que el submarino se encuentra veinte metros bajo la superficie del mar, que usamos como punto de referencia. Como −20 m nos indica dónde se encuentra, decimos que representa una posición.",
-        support: "Recuerda que la superficie del mar representa el cero. En −20 m, el signo negativo indica que el submarino está debajo de ese punto y el número 20 indica la distancia desde el cero hasta el submarino. Con esta pista, ¿qué significa −20 m?",
-        reveal: "−20 m significa que el submarino se encuentra veinte metros bajo la superficie del mar. Esta información representa su posición.",
+        success: "¡Exacto! Significa que el submarino se encuentra veinte metros bajo la superficie del mar, que usamos como punto de referencia. Como −20 metros nos indica dónde se encuentra, decimos que representa una posición.",
+        support: "Recuerda que la superficie del mar representa el cero. En −20 metros, el signo negativo indica que el submarino está debajo de ese punto y el número 20 indica la distancia desde el cero hasta el submarino. Con esta pista, ¿qué significa −20 metros?",
+        reveal: "−20 metros significa que el submarino se encuentra veinte metros bajo la superficie del mar. Esta información representa su posición.",
         studentReveal: "El submarino está veinte metros bajo la superficie. Esa es su posición."
       }
     ],
@@ -577,7 +569,7 @@ export function getCanonicalClase2Matematica(): LessonData {
     {
       slideNumber: 2,
       tituloMomento: "El Desafío de Ordenar Datos",
-      visualPrompt: "Modern anime style. The girl pointing at conflicting numbers: +3 m, −6 m, 0 m, −1 m. High contrast, clean layout.",
+      visualPrompt: "Modern anime style. The girl pointing at conflicting numbers: +3 metros, −6 metros, 0 metros, −1 metro. High contrast, clean layout.",
       overlayText: "El problema: ¿Qué valor es mayor?",
       speakerNotes: "Al comparar números positivos y negativos, necesitamos un criterio único y seguro que evite confusiones.",
       palabrasAprox: 17,

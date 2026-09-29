@@ -76,6 +76,17 @@ export interface LessonMetadata {
   nextLessonTitle: string;    // "La recta numérica y orden en Z"
 }
 
+export interface SlidePrompt {
+  slideNumber: number;
+  tituloMomento: string;
+  visualPrompt: string;
+  overlayText: string;
+  speakerNotes: string;
+  palabrasAprox?: number;
+  duracionSeg?: number;
+  imageUrl?: string;
+}
+
 export interface LessonData {
   metadata: LessonMetadata;
   // Paso 1: Preparación
@@ -119,7 +130,7 @@ export interface LessonData {
     posterSrc?: string;
     dileAfterVideo: string;
     fullPrompt?: string;
-    slides?: any[];
+    slides?: SlidePrompt[];
   };
   // Paso 4: Conversación Guiada
   preQuestions: GuidedItem[];
@@ -135,7 +146,7 @@ export interface LessonData {
     videoSrc?: string;
     graphicPoster?: string;
     fullPrompt?: string;
-    slides?: any[];
+    slides?: SlidePrompt[];
   };
   postQuestions: GuidedItem[];
   // Paso 6: Práctica Conjunta
