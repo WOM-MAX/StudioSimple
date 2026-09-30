@@ -42,23 +42,33 @@ async function exportDocx() {
   const buffer = await Packer.toBuffer(doc);
   console.log(`Buffer DOCX creado con éxito: ${buffer.length} bytes.`);
   
-  const destDir = 'D:\\OneDrive\\EstudioSimple-Contenido\\EstudioSimple_7B_Planes_Actualizados-29-09-2026';
-  const file1 = path.join(destDir, 'Plan_Maestro_7Básico_110-7-MAT-OA01_6Lecciones(5).docx');
-  const file2 = path.join(destDir, 'Plan_Maestro_7Básico_110-7-MAT-OA01_6Lecciones(4).docx');
-  const file3 = path.join(destDir, 'Plan_Maestro_7Básico_110-7-MAT-OA01_6Lecciones.docx');
-  
-  if (!fs.existsSync(destDir)) {
-    fs.mkdirSync(destDir, { recursive: true });
-  }
-  
-  fs.writeFileSync(file1, buffer);
-  console.log(`Guardado exitoso en: ${file1}`);
-  
-  fs.writeFileSync(file2, buffer);
-  console.log(`Guardado exitoso en: ${file2}`);
+  const userProfile = process.env.USERPROFILE || 'C:\\Users\\DELL';
+  const candidateDirs = [
+    path.join(userProfile, 'OneDrive', 'EstudioSimple-Contenido', 'EstudioSimple_7B_Planes_Actualizados-29-09-2026'),
+    'D:\\OneDrive\\EstudioSimple-Contenido\\EstudioSimple_7B_Planes_Actualizados-29-09-2026',
+    'C:\\Proyectos\\StudioSimple\\PLANES MAESTROS PRESENTACIONES\\Paquete_Maestro_EstudioSimple_7B\\04_PLANES_OA_Y_PROMPTS',
+    path.resolve(process.cwd(), 'dist', 'planes_actualizados')
+  ];
 
-  fs.writeFileSync(file3, buffer);
-  console.log(`Guardado exitoso en: ${file3}`);
+  for (const destDir of candidateDirs) {
+    try {
+      if (!fs.existsSync(destDir)) {
+        fs.mkdirSync(destDir, { recursive: true });
+      }
+      const file1 = path.join(destDir, 'Plan_Maestro_7Básico_110-7-MAT-OA01_6Lecciones(5).docx');
+      const file2 = path.join(destDir, 'Plan_Maestro_7Básico_110-7-MAT-OA01_6Lecciones(4).docx');
+      const file3 = path.join(destDir, 'Plan_Maestro_7Básico_110-7-MAT-OA01_6Lecciones.docx');
+      const file4 = path.join(destDir, 'Matematica_OA01_6Lecciones_v7.docx');
+
+      fs.writeFileSync(file1, buffer);
+      fs.writeFileSync(file2, buffer);
+      fs.writeFileSync(file3, buffer);
+      fs.writeFileSync(file4, buffer);
+      console.log(`Guardado exitoso en: ${destDir}`);
+    } catch (err: any) {
+      console.warn(`No se pudo escribir en ${destDir}: ${err.message}`);
+    }
+  }
 }
 
 exportDocx().catch((err) => {

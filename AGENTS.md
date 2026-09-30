@@ -106,10 +106,17 @@ El entregable y criterios de **Salida** son: Cumplimiento estricto del protocolo
 - **Límite de Destrucción:** Requiere confirmación humana explícita antes de ejecutar comandos `DELETE`, `DROP` o purgar **más de 50 registros** simultáneamente.
 - **Modificación de Configuración:** Modificaciones técnicas autorizadas de forma autónoma siempre que preserven la estabilidad del proyecto.
 - **Modo de Operación:** Autónomo (End-to-End Autonomous Execution). El agente tiene autorización para iniciar, estructurar, desarrollar, modularizar y validar tareas completas de principio a fin sin pausas ni interrupciones intermedias. Solo se detendrá ante comandos destructivos irreversibles (DROP / DELETE masivo).
-- **Norma Obligatoria de Análisis Autónomo y /goal:** Cada vez que el usuario pregunte o solicite analizar cualquier componente, archivo, flujo o estado del sistema, el agente debe generar automáticamente:
-  1. El análisis técnico y pedagógico objetivo con evidencia verificada.
-  2. El plan de acción o implementación técnica correspondiente.
-  3. Un prompt detallado y autosuficiente diseñado para ser ejecutado con el comando `/goal`, estructurado para que el agente trabaje con máxima autonomía de extremo a extremo sin requerir intervenciones intermedias del usuario.
+- **Delimitación de Misión (DOCX vs PPTX):** En el pipeline pedagógico de EstudioSimple, la misión de Antigravity es EXCLUSIVAMENTE generar y mantener el archivo DOCX oficial (Plan Maestro con lecciones, tablas didácticas y prompts limpios). Queda ESTRICTAMENTE PROHIBIDO generar o modificar presentaciones PPTX finales, ya que esa responsabilidad recae exclusivamente en ChatGPT Work en su propio entorno.
+- **Eficiencia en Terminal y Scripts:** Prohibido ejecutar comandos de búsqueda recursiva masiva que caigan a segundo plano o interrumpan la sesión. Todo script de automatización o procesamiento de datos debe desarrollarse en TypeScript y ejecutarse mediante `npx tsx scripts/[nombre].ts`, evitando scripts improvisados en Python que fallen por codificación (cp1252) en Windows.
+- **Circuito de Protección y Autocorrección:** Máximo 4 intentos iterativos de corrección ante un fallo de compilación antes de cambiar de enfoque estratégico, evitando bucles repetitivos infinitos.
+- **Control de Procesos Bloqueantes (Windows):** Identificar procesos bloqueantes (servidores dev o archivos tomados por el sistema con error EBUSY/EPERM) antes de ejecutar limpiezas o reemplazos de paquetes y archivos.
+- **Punto de Control y Reversibilidad:** Verificar el estado del repositorio (`git status`) antes de mutaciones extensas para garantizar la capacidad de restaurar a un estado limpio si una estrategia de solución resulta infructuosa.
+- **Doble Validación (Sintáctica y de Contenido):** El DoD exige código de salida 0 en compilación (`npm run build`) e inspección de integridad del contenido (archivos generados > 0 bytes y datos no corruptos).
+- **Persistencia de Progreso contra Compactación:** En tareas complejas de múltiples fases, volcar los hitos alcanzados en un archivo de estado local o bitácora en `memoria/` para resistir eventuales compactaciones del contexto por el sistema.
+- **Norma Obligatoria de Interacción, Autonomía y /goal:** Cada vez que el usuario consulte, pregunte, solicite analizar o pida ejecutar cualquier tarea, el agente debe generar obligatoriamente:
+  1. El análisis o diagnóstico técnico y pedagógico objetivo con evidencia verificada.
+  2. El plan de acción estructurado con pasos específicos, componentes afectados y criterios de validación.
+  3. Un prompt detallado y autosuficiente diseñado para ser ejecutado con el comando `/goal`, estructurado explícitamente según el estándar definido en [.agents/rules/analisis_autonomo_goal.md](file:///c:/Proyectos/StudioSimple/.agents/rules/analisis_autonomo_goal.md) para que el agente trabaje con máxima autonomía de extremo a extremo sin pausas, sin pedir confirmaciones intermedias, con bucle de autocorrección acotado ante fallos y sin solicitar interacción al usuario hasta que la totalidad de la tarea y su validación estén terminadas.
 
 ## 🧠 Protocolo de Escalada Arquitectónica
 - **Nivel AVISO:** Debilidades menores (ej. componente sin tipado estricto). Documentar con `// TODO [Agente]:` y continuar.

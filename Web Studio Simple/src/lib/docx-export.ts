@@ -458,7 +458,7 @@ export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
                         new Paragraph({
                           spacing: { after: 20 },
                           children: [
-                            new TextRun({ text: `Duración fija: ${s.duracionSeg || 8} s`, italics: true, color: "64748B", size: 17 })
+                            new TextRun({ text: `Duración asignada: ${s.duracionSeg || 8} s`, italics: true, color: "64748B", size: 17 })
                           ]
                         })
                       ], 16, idx % 2 === 1),
@@ -498,20 +498,9 @@ export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
                       ], 32, idx % 2 === 1),
                       createRichDataCell([
                         new Paragraph({
-                          spacing: { after: 60 },
+                          spacing: { after: 40 },
                           children: [
-                            new TextRun({ text: `"${s.speakerNotes || ''}"`, italics: true, size: 18, color: "1E293B" })
-                          ]
-                        }),
-                        new Paragraph({
-                          spacing: { after: 20 },
-                          children: [
-                            new TextRun({
-                              text: `[${s.speakerNotes ? s.speakerNotes.trim().split(/\s+/).length : 0} palabras · ${s.duracionSeg || 8} s comprobados]`,
-                              bold: true,
-                              size: 16,
-                              color: "047857"
-                            })
+                            new TextRun({ text: s.speakerNotes || '', italics: true, size: 18, color: "1E293B" })
                           ]
                         })
                       ], 24, idx % 2 === 1)
@@ -690,7 +679,7 @@ export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
                         new Paragraph({
                           spacing: { after: 20 },
                           children: [
-                            new TextRun({ text: `Duración fija: ${s.duracionSeg || (idx === 0 ? 12 : 13)} s`, italics: true, color: "64748B", size: 17 })
+                            new TextRun({ text: `Duración asignada: ${s.duracionSeg || (idx === 0 ? 12 : 13)} s`, italics: true, color: "64748B", size: 17 })
                           ]
                         })
                       ], 16, idx % 2 === 1),
@@ -730,20 +719,9 @@ export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
                       ], 32, idx % 2 === 1),
                       createRichDataCell([
                         new Paragraph({
-                          spacing: { after: 60 },
+                          spacing: { after: 40 },
                           children: [
-                            new TextRun({ text: `"${s.speakerNotes || ''}"`, italics: true, size: 18, color: "1E293B" })
-                          ]
-                        }),
-                        new Paragraph({
-                          spacing: { after: 20 },
-                          children: [
-                            new TextRun({
-                              text: `[${s.speakerNotes ? s.speakerNotes.trim().split(/\s+/).length : 0} palabras · ${s.duracionSeg || (idx === 0 ? 12 : 13)} s comprobados]`,
-                              bold: true,
-                              size: 16,
-                              color: "047857"
-                            })
+                            new TextRun({ text: s.speakerNotes || '', italics: true, size: 18, color: "1E293B" })
                           ]
                         })
                       ], 24, idx % 2 === 1)
@@ -1267,10 +1245,10 @@ function buildSectionStudent(lesson: any, oa?: any): Paragraph[] {
     ...(isMath ? [
       new Paragraph({
         alignment: AlignmentType.CENTER,
-        spacing: { before: 100, after: 100 },
+        spacing: { before: 120, after: 120 },
         children: [
           new TextRun({
-            text: "<-------------------|-------------------|-------------------|------------------->\n                   -5                   0                  +5",
+            text: "<-------|-------|-------|-------|-------|-------|-------|------->\n       -3      -2      -1       0      +1      +2      +3       ",
             bold: true,
             font: "Courier New",
             size: 20,
