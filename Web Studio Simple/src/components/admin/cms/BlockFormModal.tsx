@@ -92,11 +92,21 @@ export const BlockFormModal: React.FC<BlockFormModalProps> = ({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
+    let isActivo = section ? section.activo : true;
+    if (tipoBloque === 'CINTA_NOTICIAS') {
+      const siteConfig = loadSiteConfig();
+      if (section && typeof section.activo === 'boolean') {
+        isActivo = section.activo;
+      } else if (siteConfig.cintaNoticias && typeof siteConfig.cintaNoticias.activo === 'boolean') {
+        isActivo = siteConfig.cintaNoticias.activo;
+      }
+    }
+
     const savedSection: CmsSection = {
       id: section ? section.id : `sec-${Date.now()}`,
       tipoBloque,
       orden: section ? section.orden : defaultOrder,
-      activo: section ? section.activo : true,
+      activo: isActivo,
       titulo: titulo.trim() || getDefaultTitleForType(tipoBloque),
       subtitulo: subtitulo.trim(),
       configuracion: config
@@ -111,10 +121,12 @@ export const BlockFormModal: React.FC<BlockFormModalProps> = ({
             ...(siteConfig.cintaNoticias || {}),
             ...config,
             noticias: config.noticias || siteConfig.cintaNoticias?.noticias || [],
-            activo: savedSection.activo
+            activo: isActivo
           }
         });
-        window.dispatchEvent(new Event('storage'));
+        if (typeof window !== 'undefined') {
+          window.dispatchEvent(new Event('storage'));
+        }
       } catch (err) {
         console.error('Error sincronizando siteConfig desde BlockFormModal:', err);
       }

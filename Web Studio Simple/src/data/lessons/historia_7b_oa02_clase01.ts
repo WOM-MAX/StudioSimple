@@ -86,7 +86,107 @@ export const HISTORIA_7B_OA02_CLASE01: LessonData = {
       'Revolución Neolítica (10.000 a 4.000 a.C.): Invención de la agricultura, domesticación de ovejas y cabras, y piedra pulida.',
       'Primeras Aldeas (4.000 a.C. en adelante): Casas de adobe, cerámica para almacenar granos, división del trabajo y sedentarismo.'
     ],
-    dileAfterVideo: 'Conversemos sobre lo observado en la línea de tiempo. Te haré dos preguntas para comprobar cómo comprendemos esta transformación.'
+    dileAfterVideo: 'Conversemos sobre lo observado en la línea de tiempo. Te haré dos preguntas para comprobar cómo comprendemos esta transformación.',
+    slides: [
+      {
+        "slideNumber": 1,
+        "tituloMomento": "Apertura y Escenario",
+        "didacticPurpose": "Apertura y Escenario",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, watching from a ridge as a Paleolithic band moves across cold windswept plains carrying shelters and stone spears. Cinematic atmospheric lighting. No text drawn by AI.",
+        "overlayText": "Hace 15.000 años: La vida nómade",
+        "overlayTitle": "Hace 15.000 años: La vida nómade",
+        "overlaySubtitle": "Bandas de cazadores-recolectores del Paleolítico",
+        "vectorialOverlayPptx": "Línea temporal: Paleolítico superior (Clima glacial, refugios transitorios)",
+        "mathOverlayPptx": "Línea temporal: Paleolítico superior (Clima glacial, refugios transitorios)",
+        "speakerNotes": "Durante decenas de milenios, las bandas humanas debían desplazarse constantemente siguiendo las manadas de animales para sobrevivir en un clima glacial riguroso.",
+        "palabrasAprox": 21,
+        "duracionSeg": 9
+      },
+      {
+        "slideNumber": 2,
+        "tituloMomento": "El Clima Cambia",
+        "didacticPurpose": "El Clima Cambia",
+        "visualPrompt": "Modern anime style. Warm sunlight illuminating green valleys along a flowing river. Early hunter-gatherers observing wild wheat and barley growing naturally. Fresh spring atmosphere. No text drawn by AI.",
+        "overlayText": "El Clima Cambia y Florece la Tierra",
+        "overlayTitle": "El deshielo y el nuevo clima",
+        "overlaySubtitle": "Temperaturas más cálidas y valles verdes",
+        "vectorialOverlayPptx": "Vector de transición: Fin de la glaciación -> Nacimiento de cuencas fluviales fértiles",
+        "mathOverlayPptx": "Vector de transición: Fin de la glaciación -> Nacimiento de cuencas fluviales fértiles",
+        "speakerNotes": "Al finalizar la última glaciación, el calentamiento global permitió que las llanuras se cubrieran de cereales silvestres y las comunidades comenzaron a observar los ciclos vegetales.",
+        "palabrasAprox": 24,
+        "duracionSeg": 11
+      },
+      {
+        "slideNumber": 3,
+        "tituloMomento": "La Gran Invención",
+        "didacticPurpose": "La Gran Invención",
+        "visualPrompt": "Modern anime style. Early Neolithic farmers carefully planting emmer and barley seeds into fertile soil near the Euphrates river with polished digging sticks. Golden morning light. No text drawn by AI.",
+        "overlayText": "La Revolución Agrícola",
+        "overlayTitle": "La invención de la agricultura",
+        "overlaySubtitle": "Siembra deliberada y cosecha de granos",
+        "vectorialOverlayPptx": "Capa tecnológica: Bastones de siembra, semillas de trigo y cebada en suelo fértil",
+        "mathOverlayPptx": "Capa tecnológica: Bastones de siembra, semillas de trigo y cebada en suelo fértil",
+        "speakerNotes": "Aprender a sembrar trigo y cebada transformó la historia humana: ya no era necesario migrar para comer, pues el alimento brotaba en la propia tierra.",
+        "palabrasAprox": 23,
+        "duracionSeg": 10
+      },
+      {
+        "slideNumber": 4,
+        "tituloMomento": "Domesticación Animal",
+        "didacticPurpose": "Domesticación Animal",
+        "visualPrompt": "Modern anime style. Neolithic sheep and goats grazing peacefully in stone-fenced enclosures beside early mudbrick round houses. Clean lineart, soft depth of field. No text drawn by AI.",
+        "overlayText": "La Ganadería Neolítica",
+        "overlayTitle": "La ganadería neolítica",
+        "overlaySubtitle": "Crianza de rebaños y control de recursos",
+        "vectorialOverlayPptx": "Iconos productivos: Cercados de piedra con ovejas y cabras junto al río",
+        "mathOverlayPptx": "Iconos productivos: Cercados de piedra con ovejas y cabras junto al río",
+        "speakerNotes": "Al domesticar ovejas y cabras, las familias aseguraron carne, leche y lana constante, liberándose de la incertidumbre que imponía la cacería de animales salvajes.",
+        "palabrasAprox": 23,
+        "duracionSeg": 10
+      },
+      {
+        "slideNumber": 5,
+        "tituloMomento": "Nacimiento de Aldeas",
+        "didacticPurpose": "Nacimiento de Aldeas",
+        "visualPrompt": "Modern anime style. Panoramic view of an ancient settlement like Jericho or Catalhoyuk with square mudbrick dwellings, communal granaries, and children playing safely. No text drawn by AI.",
+        "overlayText": "Nacen las Primeras Aldeas Sedentarias",
+        "overlayTitle": "Las primeras aldeas",
+        "overlaySubtitle": "De campamentos temporales a viviendas de adobe",
+        "vectorialOverlayPptx": "Plano urbano primitivo: Asentamiento permanente de Jericó o Çatalhöyük con graneros",
+        "mathOverlayPptx": "Plano urbano primitivo: Asentamiento permanente de Jericó o Çatalhöyük con graneros",
+        "speakerNotes": "Con excedentes almacenados en silos y graneros, nacieron las primeras viviendas sólidas de adobe y piedra: el ser humano se convirtió en un habitante sedentario.",
+        "palabrasAprox": 23,
+        "duracionSeg": 10
+      },
+      {
+        "slideNumber": 6,
+        "tituloMomento": "División del Trabajo",
+        "didacticPurpose": "División del Trabajo",
+        "visualPrompt": "Modern anime style. Villagers shaping clay into storage pots, weaving woolen textiles, and polishing stone sickles beside a communal fire. No text drawn by AI.",
+        "overlayText": "Nuevas Herramientas y Oficios",
+        "overlayTitle": "Especialización de oficios",
+        "overlaySubtitle": "Alfareros, tejedores y constructores",
+        "vectorialOverlayPptx": "Red social de oficios: Excedente agrícola -> Alfarería, textilería y herramientas pulidas",
+        "mathOverlayPptx": "Red social de oficios: Excedente agrícola -> Alfarería, textilería y herramientas pulidas",
+        "speakerNotes": "Al no tener que salir todos a buscar alimento, surgieron artesanos que crearon la cerámica para conservar granos, telares para abrigo y herramientas de piedra pulida.",
+        "palabrasAprox": 24,
+        "duracionSeg": 11
+      },
+      {
+        "slideNumber": 7,
+        "tituloMomento": "Pregunta Detonante",
+        "didacticPurpose": "Pregunta Detonante",
+        "visualPrompt": "Modern anime style. The two 13-year-olds analyzing a glowing interactive map of the Fertile Crescent with timeline markers. StudioSimple emblem. No text drawn by AI.",
+        "overlayText": "StudioSimple · Historia 7° Básico",
+        "overlayTitle": "La gran pregunta histórica",
+        "overlaySubtitle": "¿Por qué el Neolítico cambió la humanidad?",
+        "vectorialOverlayPptx": "Pregunta detonante: ¿De qué manera la agricultura y la aldea transformaron la sociedad para siempre?",
+        "mathOverlayPptx": "Pregunta detonante: ¿De qué manera la agricultura y la aldea transformaron la sociedad para siempre?",
+        "speakerNotes": "Surge ahora la gran pregunta histórica: ¿cómo la revolución de la agricultura y la sedentarización sentó las bases de nuestras civilizaciones actuales?",
+        "palabrasAprox": 21,
+        "duracionSeg": 10
+      }
+    ]
   },
 
   preQuestions: [
@@ -115,7 +215,107 @@ export const HISTORIA_7B_OA02_CLASE01: LessonData = {
     dileIntro: 'Revisemos la idea histórica formal: la palabra Neolítico significa "piedra nueva o pulida", pero su verdadero impacto fue el nacimiento de la economía productora de alimentos.',
     hazInstruction: 'Lee con atención la idea clave en la pantalla y prepárate para anotarla en tu cuaderno de Historia.',
     ideaClave: 'La Revolución Neolítica fue la transformación más profunda de la humanidad: al domesticar plantas y animales, las sociedades pasaron de la economía depredadora (caza) a la economía productora (agricultura), naciendo las primeras aldeas sedentarias.',
-    graphicPoster: ''
+    graphicPoster: '',
+    slides: [
+      {
+        "slideNumber": 1,
+        "tituloMomento": "Objetivo de la Lección",
+        "didacticPurpose": "Objetivo de la Lección",
+        "visualPrompt": "Modern anime style 16:9. The boy and girl standing before a grand historical timeline comparing 'Vida Nómade (Paleolítico)' and 'Vida Sedentaria (Neolítico)'. Clean modern typography. No text drawn by AI.",
+        "overlayText": "La Gran Transformación del Neolítico",
+        "overlayTitle": "Objetivo de la lección",
+        "overlaySubtitle": "Explicar el impacto de la revolución agrícola",
+        "vectorialOverlayPptx": "Rótulo formal: OA 02 · De la Hominización a las Primeras Sociedades Agrícolas",
+        "mathOverlayPptx": "Rótulo formal: OA 02 · De la Hominización a las Primeras Sociedades Agrícolas",
+        "speakerNotes": "El objetivo de hoy es aprender cómo el descubrimiento de la agricultura, la domesticación de animales y la sedentarización revolucionaron la forma de vida humana en el Neolítico.",
+        "palabrasAprox": 26,
+        "duracionSeg": 12
+      },
+      {
+        "slideNumber": 2,
+        "tituloMomento": "El Creciente Fértil",
+        "didacticPurpose": "El Creciente Fértil",
+        "visualPrompt": "Modern anime style. Topographical map of the Fertile Crescent with glowing blue rivers (Tigris, Euphrates, Nile) and early crop cultivation zones. Clear cartographic style. No text drawn by AI.",
+        "overlayText": "El Creciente Fértil y los Ríos",
+        "overlayTitle": "El escenario geográfico",
+        "overlaySubtitle": "El Creciente Fértil y los grandes ríos",
+        "vectorialOverlayPptx": "Mapa histórico vectorial: Ríos Tigris, Éufrates, Jordán y Nilo formando el arco fértil",
+        "mathOverlayPptx": "Mapa histórico vectorial: Ríos Tigris, Éufrates, Jordán y Nilo formando el arco fértil",
+        "speakerNotes": "El proceso comenzó en el Creciente Fértil de Medio Oriente. La presencia de ríos caudalosos como el Tigris y el Éufrates proporcionó agua y limo enriquecido para los primeros cultivos.",
+        "palabrasAprox": 29,
+        "duracionSeg": 13
+      },
+      {
+        "slideNumber": 3,
+        "tituloMomento": "Excedente y Sedentarismo",
+        "didacticPurpose": "Excedente y Sedentarismo",
+        "visualPrompt": "Modern anime style. The girl explaining a diagram of agricultural surplus: grain sacks and ceramic jars stored in communal granaries. Crisp clean lighting. No text drawn by AI.",
+        "overlayText": "El Excedente que Permitió la Aldea",
+        "overlayTitle": "El excedente alimentario",
+        "overlaySubtitle": "Producir más de lo consumido en el día",
+        "vectorialOverlayPptx": "Diagrama económico: Cosecha abundante -> Almacenamiento en vasijas -> Seguridad alimentaria",
+        "mathOverlayPptx": "Diagrama económico: Cosecha abundante -> Almacenamiento en vasijas -> Seguridad alimentaria",
+        "speakerNotes": "El cambio fundamental fue el excedente: por primera vez las personas cosechaban más de lo que consumían en la jornada. Guardar alimento en vasijas de arcilla garantizó la supervivencia en invierno.",
+        "palabrasAprox": 28,
+        "duracionSeg": 13
+      },
+      {
+        "slideNumber": 4,
+        "tituloMomento": "Complejidad Social",
+        "didacticPurpose": "Complejidad Social",
+        "visualPrompt": "Modern anime style. Bustling village scene showing specialized craftsmen: potter at wheel, weaver at loom, builder carving mudbrick. Soft depth of field. No text drawn by AI.",
+        "overlayText": "Especialización del Trabajo y Roles",
+        "overlayTitle": "Especialización y jerarquía",
+        "overlaySubtitle": "Nuevos roles en la comunidad aldeana",
+        "vectorialOverlayPptx": "Estructura social: Agricultores, alfareros, constructores y primeros consejos de ancianos",
+        "mathOverlayPptx": "Estructura social: Agricultores, alfareros, constructores y primeros consejos de ancianos",
+        "speakerNotes": "La aldea neolítica exigió organización. Se crearon turnos de regadío, líderes para resolver conflictos y artesanos dedicados exclusivamente a perfeccionar la alfarería y la arquitectura.",
+        "palabrasAprox": 24,
+        "duracionSeg": 11
+      },
+      {
+        "slideNumber": 5,
+        "tituloMomento": "Piedra Pulida y Tecnología",
+        "didacticPurpose": "Piedra Pulida y Tecnología",
+        "visualPrompt": "Modern anime style. Close-up contrast: rough chipped stone blade of Paleolithic next to smooth, symmetrical polished stone axe and sickle of Neolithic. Crystal clarity. No text drawn by AI.",
+        "overlayText": "Tecnología de la Piedra Pulimentada",
+        "overlayTitle": "Revolución tecnológica",
+        "overlaySubtitle": "De la piedra tallada a la piedra pulimentada",
+        "vectorialOverlayPptx": "Comparación técnica: Cuchillo de sílex tallado (Paleolítico) vs Hacha y hoz pulida (Neolítico)",
+        "mathOverlayPptx": "Comparación técnica: Cuchillo de sílex tallado (Paleolítico) vs Hacha y hoz pulida (Neolítico)",
+        "speakerNotes": "El nombre Neolítico significa piedra nueva. Las herramientas ya no se tallaban por golpes toscos, sino que se pulían frotándolas con arena y agua, logrando filos duraderos y resistentes.",
+        "palabrasAprox": 27,
+        "duracionSeg": 12
+      },
+      {
+        "slideNumber": 6,
+        "tituloMomento": "Prevención del Error",
+        "didacticPurpose": "Prevención del Error",
+        "visualPrompt": "Modern anime style. Timeline graphic showing smooth gradual transition across centuries, with hunter-gatherer icons overlapping with farming icons. Clean infographic. No text drawn by AI.",
+        "overlayText": "Transición Gradual, no Repentina",
+        "overlayTitle": "Atención: Error habitual",
+        "overlaySubtitle": "La transición fue gradual, no inmediata",
+        "vectorialOverlayPptx": "Línea temporal extendida: Miles de años de coexistencia entre caza y cultivo experimental",
+        "mathOverlayPptx": "Línea temporal extendida: Miles de años de coexistencia entre caza y cultivo experimental",
+        "speakerNotes": "Un error habitual es creer que la revolución agrícola ocurrió de un día para otro. Fue un proceso de miles de años donde la recolección y el cultivo coexistieron pacientemente.",
+        "palabrasAprox": 28,
+        "duracionSeg": 13
+      },
+      {
+        "slideNumber": 7,
+        "tituloMomento": "Síntesis y Regla de Oro",
+        "didacticPurpose": "Síntesis y Regla de Oro",
+        "visualPrompt": "Modern anime style. StudioSimple emblem with golden banner summarizing the 3 pillars of Neolithic revolution: Sedentarismo, Excedente, Especialización. High elegance. No text drawn by AI.",
+        "overlayText": "Regla de Oro: El Triángulo Neolítico",
+        "overlayTitle": "Regla de Oro del Neolítico",
+        "overlaySubtitle": "Agricultura + Aldea + Excedente = Cuna de la Civilización",
+        "vectorialOverlayPptx": "Infografía de síntesis: Triángulo fundacional: Sedentarismo, Excedente y Especialización social",
+        "mathOverlayPptx": "Infografía de síntesis: Triángulo fundacional: Sedentarismo, Excedente y Especialización social",
+        "speakerNotes": "Recuerda la regla de oro: el excedente agrícola hizo posible la vida sedentaria y las ciudades. ¡Ahora comprobaremos este análisis histórico en las actividades interactivas de la plataforma!",
+        "palabrasAprox": 26,
+        "duracionSeg": 12
+      }
+    ]
   },
 
   postQuestions: [

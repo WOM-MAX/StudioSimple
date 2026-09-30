@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect, useMemo } from 'react';
 import { useLessonSync } from '../../../context/LessonSyncContext';
 import { useApp } from '../../../context/AppContext';
 import { StudentHeader } from './StudentHeader';
@@ -887,21 +887,59 @@ interface SyncedStudentVideoProps {
 const SyncedStudentVideo: React.FC<SyncedStudentVideoProps> = ({ src, kind, session, title }) => {
   const ref = useRef<HTMLVideoElement>(null);
   const [blocked, setBlocked] = useState(false);
+  const [isLocalPlaying, setIsLocalPlaying] = useState(false);
+
+  // Detección de servicios de streaming externos (YouTube, Vimeo, Cloudflare Stream iFrame)
+  const embedStreamUrl = useMemo(() => {
+    if (!src) return null;
+    if (src.includes('youtube.com/watch?v=')) {
+      return src.replace('watch?v=', 'embed/');
+    }
+    if (src.includes('youtu.be/')) {
+      return src.replace('youtu.be/', 'www.youtube.com/embed/');
+    }
+    if (src.includes('vimeo.com/') && !src.includes('player.vimeo.com')) {
+      const id = src.split('/').pop()?.split('?')[0];
+      return id ? `https://player.vimeo.com/video/${id}` : null;
+    }
+    if (src.includes('iframe.videodelivery.net')) {
+      return src;
+    }
+    return null;
+  }, [src]);
 
   useEffect(() => {
     const v = ref.current;
-    if (!v || session.video.kind !== kind) return;
+    if (!v || embedStreamUrl || session.video.kind !== kind) return;
+
     if (Math.abs(v.currentTime - session.video.seek) > 1.2) {
       v.currentTime = session.video.seek;
     }
+
     if (session.video.playing) {
       v.play()
-        .then(() => setBlocked(false))
-        .catch(() => setBlocked(true));
+        .then(() => {
+          setBlocked(false);
+          setIsLocalPlaying(true);
+        })
+        .catch(() => {
+          // Si el navegador bloquea el audio automático, reproducir silenciado y permitir desmutear con un clic
+          v.muted = true;
+          v.play()
+            .then(() => {
+              setBlocked(true);
+              setIsLocalPlaying(true);
+            })
+            .catch(() => {
+              setBlocked(true);
+              setIsLocalPlaying(false);
+            });
+        });
     } else {
       v.pause();
+      setIsLocalPlaying(false);
     }
-  }, [kind, session.video]);
+  }, [kind, session.video, embedStreamUrl]);
 
   if (!src || src.trim() === '') {
     return (
@@ -917,34 +955,97 @@ const SyncedStudentVideo: React.FC<SyncedStudentVideoProps> = ({ src, kind, sess
     );
   }
 
+  if (embedStreamUrl) {
+    return (
+      <div className="w-full aspect-video rounded-3xl overflow-hidden bg-black shadow-2xl flex items-center justify-center relative">
+        <iframe
+          src={embedStreamUrl}
+          title={title || 'Video de la lección'}
+          className="w-full h-full border-0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
+    );
+  }
+
+  const handleManualToggle = () => {
+    const v = ref.current;
+    if (!v) return;
+    if (v.paused) {
+      v.muted = false;
+      v.play()
+        .then(() => {
+          setBlocked(false);
+          setIsLocalPlaying(true);
+        })
+        .catch(() => {
+          v.muted = true;
+          v.play()
+            .then(() => {
+              setBlocked(true);
+              setIsLocalPlaying(true);
+            })
+            .catch(() => setBlocked(true));
+        });
+    } else {
+      v.pause();
+      setIsLocalPlaying(false);
+    }
+  };
+
+  const handleUnmute = () => {
+    const v = ref.current;
+    if (v) {
+      v.muted = false;
+      v.play().catch(() => undefined);
+      setBlocked(false);
+      setIsLocalPlaying(true);
+    }
+  };
+
   return (
-    <div className="w-full aspect-video rounded-3xl overflow-hidden bg-black shadow-2xl flex items-center justify-center relative">
+    <div className="w-full aspect-video rounded-3xl overflow-hidden bg-black shadow-2xl flex items-center justify-center relative group">
       <video
         ref={ref}
         src={src}
         playsInline
         preload="auto"
-        className="w-full h-full object-contain"
+        crossOrigin="anonymous"
+        onClick={handleManualToggle}
+        className="w-full h-full object-contain cursor-pointer"
       />
+
+      {/* Botón flotante para activar audio si el navegador bloqueó autoplay con sonido */}
       {blocked && (
         <button
           type="button"
-          onClick={() => {
-            if (ref.current) {
-              ref.current.play();
-              setBlocked(false);
-            }
-          }}
-          className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center gap-3 text-white cursor-pointer z-20"
+          onClick={handleUnmute}
+          className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center gap-3 text-white cursor-pointer z-20 backdrop-blur-xs transition-all hover:bg-black/70"
         >
-          <div className="w-16 h-16 rounded-full bg-[#ee751c] flex items-center justify-center shadow-xl">
+          <div className="w-16 h-16 rounded-full bg-[#ee751c] flex items-center justify-center shadow-xl animate-pulse">
             <Play className="w-8 h-8 fill-white ml-1" />
           </div>
-          <span className="text-xs font-bold bg-[#1c3257] px-4 py-2 rounded-xl border border-white/20">
+          <span className="text-xs font-bold bg-[#1c3257] px-4 py-2 rounded-xl border border-white/20 shadow-lg">
             Presiona para escuchar el video
           </span>
+        </button>
+      )}
+
+      {/* Controles de respaldo para pruebas individuales cuando el video no se está reproduciendo */}
+      {!isLocalPlaying && !session.video.playing && !blocked && (
+        <button
+          type="button"
+          onClick={handleManualToggle}
+          className="absolute inset-0 bg-black/30 flex items-center justify-center cursor-pointer z-10 opacity-70 hover:opacity-100 transition-opacity"
+          title="Reproducir video"
+        >
+          <div className="w-16 h-16 rounded-full bg-[#12a1a4] hover:bg-[#0e8284] text-white flex items-center justify-center shadow-2xl transition-transform hover:scale-110">
+            <Play className="w-8 h-8 fill-white ml-1" />
+          </div>
         </button>
       )}
     </div>
   );
 };
+

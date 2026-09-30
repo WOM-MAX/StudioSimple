@@ -87,7 +87,107 @@ export const INGLES_7B_OA09_CLASE01: LessonData = {
       'Step 4: Falling Action -> Conector: After that / Later on (La tensión baja y se busca la solución).',
       'Step 5: Resolution (Ending) -> Conector: Finally / In the end (Se resuelve el conflicto y concluye la historia).'
     ],
-    dileAfterVideo: 'Conversemos sobre el organizador. Te haré dos preguntas en español sobre los conectores y elementos que vimos en inglés.'
+    dileAfterVideo: 'Conversemos sobre el organizador. Te haré dos preguntas en español sobre los conectores y elementos que vimos en inglés.',
+    slides: [
+      {
+        "slideNumber": 1,
+        "tituloMomento": "Opening and Setting",
+        "didacticPurpose": "Opening and Setting",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a cozy wooden cabin in a sunny mountain forest. Warm inviting atmosphere, negative space in top third. No text drawn by AI.",
+        "overlayText": "Mission 1: The Mountain Cabin Story",
+        "overlayTitle": "Mission 1: The Mountain Cabin",
+        "overlaySubtitle": "Reading our first adventure story",
+        "vectorialOverlayPptx": "Narrative context: Leo and Sophia exploring an old wooden cabin in the woods",
+        "mathOverlayPptx": "Narrative context: Leo and Sophia exploring an old wooden cabin in the woods",
+        "speakerNotes": "Welcome to English class. Today we will read an engaging short story about two young explorers discovering an ancient mystery cabin in the mountains.",
+        "palabrasAprox": 24,
+        "duracionSeg": 10
+      },
+      {
+        "slideNumber": 2,
+        "tituloMomento": "Identifying Characters",
+        "didacticPurpose": "Identifying Characters",
+        "visualPrompt": "Modern anime style. The boy and girl examining an explorer backpack with notebook, magnifying glass and compass. Clean lineart, bright morning lighting. No text drawn by AI.",
+        "overlayText": "Meet the Characters: Leo & Sophia",
+        "overlayTitle": "Who is in the story?",
+        "overlaySubtitle": "Leo and his brave sister Sophia",
+        "vectorialOverlayPptx": "Character tags: Subject = 'Leo and his sister' (The protagonists)",
+        "mathOverlayPptx": "Character tags: Subject = 'Leo and his sister' (The protagonists)",
+        "speakerNotes": "First, look closely at the characters. Leo and his sister Sophia are thirteen years old and love finding ancient historical artifacts.",
+        "palabrasAprox": 21,
+        "duracionSeg": 9
+      },
+      {
+        "slideNumber": 3,
+        "tituloMomento": "Spotting the Setting",
+        "didacticPurpose": "Spotting the Setting",
+        "visualPrompt": "Modern anime style. Wide scenic view of the lush green mountain valley with a sparkling river and tall pine trees under a clear blue sky. High clarity. No text drawn by AI.",
+        "overlayText": "The Setting: Valley and Mountain Lake",
+        "overlayTitle": "Where does it happen?",
+        "overlaySubtitle": "A quiet green valley near the lake",
+        "vectorialOverlayPptx": "Setting labels: Location = 'in a quiet valley' | Time = 'one summer morning'",
+        "mathOverlayPptx": "Setting labels: Location = 'in a quiet valley' | Time = 'one summer morning'",
+        "speakerNotes": "Next, we observe the setting. The events take place in a quiet valley surrounded by tall pine trees on a sunny morning.",
+        "palabrasAprox": 21,
+        "duracionSeg": 9
+      },
+      {
+        "slideNumber": 4,
+        "tituloMomento": "The Action Begins",
+        "didacticPurpose": "The Action Begins",
+        "visualPrompt": "Modern anime style. The two companions walking along a stone path and opening the creaky wooden door of the cabin with curiosity and teamwork. No text drawn by AI.",
+        "overlayText": "Actions in the Past: walked and opened",
+        "overlayTitle": "Action verbs in past",
+        "overlaySubtitle": "They walked, opened and discovered",
+        "vectorialOverlayPptx": "Past Simple verbs: walk -> walked | open -> opened | find -> found",
+        "mathOverlayPptx": "Past Simple verbs: walk -> walked | open -> opened | find -> found",
+        "speakerNotes": "The narrative describes their actions using past simple verbs: they walked through the trees and opened an old wooden chest.",
+        "palabrasAprox": 20,
+        "duracionSeg": 9
+      },
+      {
+        "slideNumber": 5,
+        "tituloMomento": "The Mystery Clue",
+        "didacticPurpose": "The Mystery Clue",
+        "visualPrompt": "Modern anime style. Close-up on the two explorers holding an aged rolled parchment showing a compass rose and an intriguing hand-drawn trail map. Golden dust particles. No text drawn by AI.",
+        "overlayText": "The Clue: An Ancient Trail Map",
+        "overlayTitle": "The secret map",
+        "overlaySubtitle": "A strange message on yellow paper",
+        "vectorialOverlayPptx": "Visual evidence: Ancient parchment with compass rose and handwritten clue",
+        "mathOverlayPptx": "Visual evidence: Ancient parchment with compass rose and handwritten clue",
+        "speakerNotes": "Inside the chest, Sophia finds an old handwritten map with a secret message that points toward a forgotten hidden waterfall.",
+        "palabrasAprox": 20,
+        "duracionSeg": 9
+      },
+      {
+        "slideNumber": 6,
+        "tituloMomento": "Connecting the Sequence",
+        "didacticPurpose": "Connecting the Sequence",
+        "visualPrompt": "Modern anime style. An elegant chronological banner showing sequential comic panels of the story connected by glowing arrows. Crisp clean layout. No text drawn by AI.",
+        "overlayText": "Timeline Connectors: First -> Then",
+        "overlayTitle": "Connecting the sequence",
+        "overlaySubtitle": "First, Then, After that, Finally",
+        "vectorialOverlayPptx": "Timeline connectors: First -> Then -> Next -> Finally",
+        "mathOverlayPptx": "Timeline connectors: First -> Then -> Next -> Finally",
+        "speakerNotes": "To follow any good narrative, we use time sequence connectors to understand what happens in the beginning, middle, and end.",
+        "palabrasAprox": 20,
+        "duracionSeg": 9
+      },
+      {
+        "slideNumber": 7,
+        "tituloMomento": "Trigger Question",
+        "didacticPurpose": "Trigger Question",
+        "visualPrompt": "Modern anime style. Minimalist clean composition showing StudioSimple emblem, the two explorers smiling with their English notebooks open, ready to write. No text drawn by AI.",
+        "overlayText": "StudioSimple · English 7th Grade",
+        "overlayTitle": "The narrative challenge",
+        "overlaySubtitle": "How do we write story sentences?",
+        "vectorialOverlayPptx": "Detonating question: What is the golden sentence formula to describe narrative events in English?",
+        "mathOverlayPptx": "Detonating question: What is the golden sentence formula to describe narrative events in English?",
+        "speakerNotes": "Here is our trigger question: what formula allows us to write clear English sentences describing characters, actions and settings in the past?",
+        "palabrasAprox": 22,
+        "duracionSeg": 10
+      }
+    ]
   },
 
   preQuestions: [
@@ -116,7 +216,107 @@ export const INGLES_7B_OA09_CLASE01: LessonData = {
     dileIntro: 'Revisemos la estructura formal para iniciar una historia en inglés con conector, personaje, verbo en pasado y lugar.',
     hazInstruction: 'Observa la fórmula en pantalla: Time Connector + Subject (Character) + Verb (Past) + Setting (Place/Time).',
     ideaClave: 'Pattern: "First, [Character] lived/worked in [Setting]." Example: "First, two brave explorers traveled across the desert."',
-    graphicPoster: ''
+    graphicPoster: '',
+    slides: [
+      {
+        "slideNumber": 1,
+        "tituloMomento": "Lesson Objective",
+        "didacticPurpose": "Lesson Objective",
+        "visualPrompt": "Modern anime style 16:9. The boy and girl standing before a clear formula board: 'Time Connector + Subject (Character) + Past Verb + Setting'. Modern typography. No text drawn by AI.",
+        "overlayText": "The Narrative Sentence Formula",
+        "overlayTitle": "Lesson Objective",
+        "overlaySubtitle": "Master the Narrative Sentence Formula in English",
+        "vectorialOverlayPptx": "Formal heading: OA 09 · Narrative Reading Comprehension & Past Simple Sentences",
+        "mathOverlayPptx": "Formal heading: OA 09 · Narrative Reading Comprehension & Past Simple Sentences",
+        "speakerNotes": "Today our main objective is to learn the universal narrative sentence formula in English to describe characters, actions, and settings with precision.",
+        "palabrasAprox": 22,
+        "duracionSeg": 10
+      },
+      {
+        "slideNumber": 2,
+        "tituloMomento": "The 4-Part Formula",
+        "didacticPurpose": "The 4-Part Formula",
+        "visualPrompt": "Modern anime style. Four distinct color-coded modular blocks floating on an interactive board: Orange (Connector), Blue (Subject), Green (Verb), Purple (Setting). High contrast. No text drawn by AI.",
+        "overlayText": "Step 1: The 4 Sentence Building Blocks",
+        "overlayTitle": "The 4-Part Formula",
+        "overlaySubtitle": "Connector + Subject + Past Verb + Setting",
+        "vectorialOverlayPptx": "Color-coded formula: [Orange: Time Word,] + [Blue: Character] + [Green: Past Verb] + [Purple: Place Phrase]",
+        "mathOverlayPptx": "Color-coded formula: [Orange: Time Word,] + [Blue: Character] + [Green: Past Verb] + [Purple: Place Phrase]",
+        "speakerNotes": "Every narrative sentence in English follows a clean four-part structure: time connector with comma, followed by the subject, the past verb, and the setting phrase.",
+        "palabrasAprox": 25,
+        "duracionSeg": 11
+      },
+      {
+        "slideNumber": 3,
+        "tituloMomento": "Time Connectors",
+        "didacticPurpose": "Time Connectors",
+        "visualPrompt": "Modern anime style. The girl highlighting 'First,' with a glowing comma on the digital board. Callout: 'Always add a comma after First'. Crisp typography. No text drawn by AI.",
+        "overlayText": "Introductory Time Connectors with Comma",
+        "overlayTitle": "Step 1: Time Connectors",
+        "overlaySubtitle": "First, Then, After that, Finally,",
+        "vectorialOverlayPptx": "Linguistic rule: Always place a comma immediately after an introductory time connector",
+        "mathOverlayPptx": "Linguistic rule: Always place a comma immediately after an introductory time connector",
+        "speakerNotes": "Always place a comma after your introductory time word. Words like First, Then, and Finally tell the reader exactly where we are in the chronology.",
+        "palabrasAprox": 24,
+        "duracionSeg": 11
+      },
+      {
+        "slideNumber": 4,
+        "tituloMomento": "Past Regular Verbs",
+        "didacticPurpose": "Past Regular Verbs",
+        "visualPrompt": "Modern anime style. Glowing linguistic breakdown showing the verb 'live' adding '-ed' to become 'lived', and 'travel' becoming 'traveled'. Sharp clarity. No text drawn by AI.",
+        "overlayText": "Regular Past Simple Verbs (-ed)",
+        "overlayTitle": "Step 2: Action in the Past",
+        "overlaySubtitle": "Add -ed to regular verbs (lived, walked, explored)",
+        "vectorialOverlayPptx": "Morphology box: live + d = lived | walk + ed = walked | discover + ed = discovered",
+        "mathOverlayPptx": "Morphology box: live + d = lived | walk + ed = walked | discover + ed = discovered",
+        "speakerNotes": "Because the events already occurred, regular action verbs take the -ed ending. For example: Leo walked in the forest, and Sophia opened the door.",
+        "palabrasAprox": 24,
+        "duracionSeg": 11
+      },
+      {
+        "slideNumber": 5,
+        "tituloMomento": "Setting and Place",
+        "didacticPurpose": "Setting and Place",
+        "visualPrompt": "Modern anime style. The boy holding up cards with prepositional phrases: 'in the quiet cabin', 'near the mountain lake', 'under the stars'. Vibrant visuals. No text drawn by AI.",
+        "overlayText": "Prepositional Phrases for Setting",
+        "overlayTitle": "Step 3: Setting the Scene",
+        "overlaySubtitle": "Prepositional phrases: in the cabin, by the lake",
+        "vectorialOverlayPptx": "Location builders: [in + noun] | [near + noun] | [under + noun]",
+        "mathOverlayPptx": "Location builders: [in + noun] | [near + noun] | [under + noun]",
+        "speakerNotes": "Finish your sentence with a clear place description using prepositions like in, near, or by. This allows the reader to picture the exact environment.",
+        "palabrasAprox": 23,
+        "duracionSeg": 10
+      },
+      {
+        "slideNumber": 6,
+        "tituloMomento": "Common Mistake to Avoid",
+        "didacticPurpose": "Common Mistake to Avoid",
+        "visualPrompt": "Modern anime style. Contrast graphic: An incorrect sentence missing comma with subtle red outline; The corrected sentence glowing in vibrant teal. Clean infographic. No text drawn by AI.",
+        "overlayText": "Avoid Missing Commas and Wrong Tense",
+        "overlayTitle": "Common Mistake to Avoid",
+        "overlaySubtitle": "Never forget the comma after the time connector",
+        "vectorialOverlayPptx": "Visual contrast: [Red: First Leo lived...] vs [Teal: First, Leo lived... with checkmark]",
+        "mathOverlayPptx": "Visual contrast: [Red: First Leo lived...] vs [Teal: First, Leo lived... with checkmark]",
+        "speakerNotes": "A common mistake among beginners is forgetting the comma after First or Then, or forgetting to conjugate the verb into the past simple. Always check both.",
+        "palabrasAprox": 26,
+        "duracionSeg": 12
+      },
+      {
+        "slideNumber": 7,
+        "tituloMomento": "The Golden Narrative Rule",
+        "didacticPurpose": "The Golden Narrative Rule",
+        "visualPrompt": "Modern anime style. StudioSimple emblem with an elegant golden banner displaying the complete modeled sentence: 'First, Leo and Sophia explored the ancient cabin.' Inspiring atmosphere. No text drawn by AI.",
+        "overlayText": "Golden Rule: The Complete Narrative Sentence",
+        "overlayTitle": "The Golden Narrative Rule",
+        "overlaySubtitle": "Time, + Who + Did + Where = Clear English Story",
+        "vectorialOverlayPptx": "Summary infography: [First,] + [Leo and Sophia] + [explored] + [the old mountain cabin.]",
+        "mathOverlayPptx": "Summary infography: [First,] + [Leo and Sophia] + [explored] + [the old mountain cabin.]",
+        "speakerNotes": "Remember the golden rule: Time, subject, past verb, and place give you the perfect narrative sentence. Now let's practice this formula in the interactive platform!",
+        "palabrasAprox": 25,
+        "duracionSeg": 11
+      }
+    ]
   },
 
   postQuestions: [

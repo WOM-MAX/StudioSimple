@@ -433,6 +433,9 @@ export function loadCmsPages(): CmsPage[] {
 export function saveCmsPages(pages: CmsPage[]): void {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(pages));
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new Event('storage'));
+    }
   } catch (e) {
     console.error('Error al guardar páginas CMS en localStorage:', e);
   }

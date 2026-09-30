@@ -1484,6 +1484,53 @@ const AdultVideoPlayer: React.FC<AdultVideoPlayerProps> = ({ src, kind, session,
     );
   }
 
+  const embedStreamUrl = (() => {
+    if (!src) return null;
+    if (src.includes('youtube.com/watch?v=')) return src.replace('watch?v=', 'embed/');
+    if (src.includes('youtu.be/')) return src.replace('youtu.be/', 'www.youtube.com/embed/');
+    if (src.includes('vimeo.com/') && !src.includes('player.vimeo.com')) {
+      const id = src.split('/').pop()?.split('?')[0];
+      return id ? `https://player.vimeo.com/video/${id}` : null;
+    }
+    if (src.includes('iframe.videodelivery.net')) return src;
+    return null;
+  })();
+
+  if (embedStreamUrl) {
+    return (
+      <div className="bg-white p-5 rounded-2xl border border-[#dce2e6] mt-4">
+        <div className="text-xs text-[#748093] bg-[#f8fafc] p-2.5 rounded-xl border border-[#e2e8f0] mb-4">
+          Servicio de transmisión embebida. Puedes avanzar a la siguiente etapa al terminar la reproducción.
+        </div>
+        <div className="relative rounded-xl overflow-hidden bg-black aspect-video max-h-[360px] mx-auto flex items-center justify-center">
+          <iframe
+            src={embedStreamUrl}
+            title="Video lección"
+            className="w-full h-full border-0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
+        <div className="flex justify-end mt-4 pt-3 border-t border-[#f1f5f9]">
+          <button
+            type="button"
+            onClick={() => {
+              if (kind === 'hook') {
+                updateSession({ hookEnded: true, video: { ...session.video, playing: false } });
+              } else {
+                updateSession({ formalEnded: true, video: { ...session.video, playing: false } });
+              }
+            }}
+            className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-2.5 rounded-xl text-xs flex items-center gap-2 transition-all cursor-pointer shadow-sm"
+          >
+            <span>Finalizar video y continuar</span>
+            <ArrowRight className="w-4 h-4" />
+          </button>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="bg-white p-5 rounded-2xl border border-[#dce2e6] mt-4">
       <div className="text-xs text-[#748093] bg-[#f8fafc] p-2.5 rounded-xl border border-[#e2e8f0] mb-4">
@@ -1497,6 +1544,7 @@ const AdultVideoPlayer: React.FC<AdultVideoPlayerProps> = ({ src, kind, session,
           muted
           playsInline
           preload="auto"
+          crossOrigin="anonymous"
           className="w-full h-full object-contain"
           onTimeUpdate={(e) => {
             const current = e.currentTarget.currentTime;

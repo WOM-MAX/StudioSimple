@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
+import { findInjectedLesson } from '../../lib/lesson-repository';
 import { OFFICIAL_SUBJECTS, getSubjectOAs, CurricularOA } from '../../data/curriculumData';
 import { Play, Lock, CheckCircle2, Clock, Sparkles, LogOut, Shield, Sun, Moon, ArrowLeft, User } from 'lucide-react';
 
 export const StudentDashboard: React.FC = () => {
-  const { setViewMode, logout, verifyParentPassword, student, themeMode, toggleThemeMode } = useApp();
+  const { setViewMode, logout, verifyParentPassword, student, themeMode, toggleThemeMode, setActiveSynchronizedLesson } = useApp();
   const [selectedGrade, setSelectedGrade] = useState(student.grade || '7° Básico');
   const [selectedSubject, setSelectedSubject] = useState('Matemática');
   const [selectedOaIndex, setSelectedOaIndex] = useState(0);
@@ -233,7 +234,13 @@ export const StudentDashboard: React.FC = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
             {activeOa.lessons.map((lesson) => {
-              const isReady = lesson.status === 'ready';
+              const injectedLesson = findInjectedLesson(
+                selectedGrade,
+                selectedSubject,
+                activeOa.code,
+                lesson.lessonNumber
+              );
+              const isReady = lesson.status === 'ready' || Boolean(injectedLesson);
               const isCompleted = lesson.status === 'completed';
 
               return (
@@ -282,8 +289,15 @@ export const StudentDashboard: React.FC = () => {
                     {isReady ? (
                       <button
                         type="button"
-                        onClick={() => setViewMode('lesson')}
-                        className="w-full bg-[#12A1A4] hover:bg-[#0e8b8e] text-white font-extrabold text-xs py-3 px-3 rounded-2xl shadow-md flex items-center justify-center gap-1.5 transition-all hover:scale-[1.02] text-center"
+                        onClick={() => {
+                          if (injectedLesson) {
+                            setActiveSynchronizedLesson(injectedLesson);
+                          } else {
+                            setActiveSynchronizedLesson(null);
+                          }
+                          setViewMode('lesson');
+                        }}
+                        className="w-full bg-[#12A1A4] hover:bg-[#0e8b8e] text-white font-extrabold text-xs py-3 px-3 rounded-2xl shadow-md flex items-center justify-center gap-1.5 transition-all hover:scale-[1.02] text-center cursor-pointer"
                       >
                         <Play className="w-3.5 h-3.5 fill-white shrink-0" />
                         <span>Entrar a la Sala</span>
