@@ -20,9 +20,15 @@ export function buildLessonPromptText(lesson: PlayerLessonData): string {
   out += `DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:\n`;
   out += `1. Proporcion Widescreen 16:9 estricto (1920x1080).\n`;
   out += `2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).\n`;
-  out += `3. Protagonistas: Duo co-protagonico de 13 anos (una joven con trenzas y chaqueta verde y un joven con chaqueta cerceta) explorando y resolviendo el desafio juntos en cada escena.\n`;
-  out += `4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo para texto overlay. Prohibido usar placas oscuras que tapen los rostros.\n`;
-  out += `5. Locucion Continua (TTS / Google Vids): Cada diapositiva contiene entre 15 y 22 palabras de narracion oral continua, lista para voz en off sin marcas tecnicas.\n\n`;
+  out += `3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.\n`;
+  out += `4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.\n`;
+  out += `5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):\n`;
+  out += `   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).\n`;
+  out += `   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).\n`;
+  out += `   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.\n`;
+  out += `6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.\n`;
+  out += `7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.\n`;
+  out += `8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.\n\n`;
 
   out += `================================================================================\n`;
   out += `MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)\n`;
@@ -39,12 +45,15 @@ export function buildLessonPromptText(lesson: PlayerLessonData): string {
         out += `  ${i + 1}. ${fp}\n`;
       });
     }
-    out += `\nSECUENCIA DE ${lesson.hook.slides.length} DIAPOSITIVAS CANONICAS (PROMPTS DE IMAGEN 16:9 Y LOCUCION):\n\n`;
+    out += `\nSECUENCIA DE ${lesson.hook.slides.length} DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):\n\n`;
     lesson.hook.slides.forEach((s: SlidePrompt, idx: number) => {
       out += `--- DIAPOSITIVA ${s.slideNumber || idx + 1}: ${s.tituloMomento || ''} (${s.duracionSeg || 10} seg aprox) ---\n`;
-      out += `• Prompt de Imagen (16:9 Anime Moderno): ${s.visualPrompt || ''}\n`;
-      out += `• Texto en Pantalla (Overlay limpio): ${s.overlayText || ''}\n`;
-      out += `• Notas al Orador (Locucion Google Vids): "${s.speakerNotes || ''}"\n`;
+      out += `1. Propósito Didáctico: ${s.tituloMomento || ''}\n`;
+      out += `2. Título en Pantalla (64 pt): ${s.overlayTitle || s.overlayText || ''}\n`;
+      out += `3. Subtítulo en Pantalla (36 pt): ${s.overlaySubtitle || ''}\n`;
+      out += `4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): ${s.visualPrompt || ''}\n`;
+      out += `5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): ${s.vectorialOverlayPptx || s.mathOverlayPptx || s.overlayText || ''}\n`;
+      out += `6. Notas al Orador (Locución Google Vids): "${s.speakerNotes || ''}"\n`;
       if (s.imageUrl) {
         out += `• URL Imagen de Referencia: ${s.imageUrl}\n`;
       }
@@ -75,12 +84,15 @@ export function buildLessonPromptText(lesson: PlayerLessonData): string {
     out += `• Idea Clave: "${lesson.formalization.ideaClave || lesson.formalization.summary || ''}"\n`;
     out += `• DILE ANTES DEL VIDEO: "${lesson.formalization.dileIntro}"\n`;
     out += `• INSTRUCCION: "${lesson.formalization.hazInstruction}"\n\n`;
-    out += `SECUENCIA DE ${lesson.formalization.slides.length} DIAPOSITIVAS CANONICAS (PROMPTS DE IMAGEN 16:9 Y LOCUCION):\n\n`;
+    out += `SECUENCIA DE ${lesson.formalization.slides.length} DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):\n\n`;
     lesson.formalization.slides.forEach((s: SlidePrompt, idx: number) => {
       out += `--- DIAPOSITIVA ${s.slideNumber || idx + 1}: ${s.tituloMomento || ''} (${s.duracionSeg || 10} seg aprox) ---\n`;
-      out += `• Prompt de Imagen (16:9 Anime Moderno): ${s.visualPrompt || ''}\n`;
-      out += `• Texto en Pantalla (Overlay limpio): ${s.overlayText || ''}\n`;
-      out += `• Notas al Orador (Locucion Google Vids): "${s.speakerNotes || ''}"\n`;
+      out += `1. Propósito Didáctico: ${s.tituloMomento || ''}\n`;
+      out += `2. Título en Pantalla (64 pt): ${s.overlayTitle || s.overlayText || ''}\n`;
+      out += `3. Subtítulo en Pantalla (36 pt): ${s.overlaySubtitle || ''}\n`;
+      out += `4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): ${s.visualPrompt || ''}\n`;
+      out += `5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): ${s.vectorialOverlayPptx || s.mathOverlayPptx || s.overlayText || ''}\n`;
+      out += `6. Notas al Orador (Locución Google Vids): "${s.speakerNotes || ''}"\n`;
       if (s.imageUrl) {
         out += `• URL Imagen de Referencia: ${s.imageUrl}\n`;
       }

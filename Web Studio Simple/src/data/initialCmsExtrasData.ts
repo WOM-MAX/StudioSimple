@@ -115,7 +115,7 @@ export const INITIAL_JOURNAL_ARTICLES: JournalArticle[] = [
     categoria: 'MINEDUC',
     autor: 'Equipo Pedagógico EstudioSimple',
     fecha: '2026-09-10',
-    imagenPortadaUrl: '/images/journal-mineduc.webp',
+    imagenPortadaUrl: 'https://res.cloudinary.com/cpn5zq3g/image/upload/v1789760624/estudiosimple/journal/articulo_examenets_libres.webp',
     activo: true,
     destacado: true
   },
@@ -128,7 +128,7 @@ export const INITIAL_JOURNAL_ARTICLES: JournalArticle[] = [
     categoria: 'Cuaderno y Método',
     autor: 'Dirección Académica',
     fecha: '2026-09-12',
-    imagenPortadaUrl: '/images/journal-cuaderno.webp',
+    imagenPortadaUrl: 'https://res.cloudinary.com/cpn5zq3g/image/upload/v1789760645/estudiosimple/journal/pantalla_papel.webp',
     activo: true,
     destacado: false
   },
@@ -141,7 +141,7 @@ export const INITIAL_JOURNAL_ARTICLES: JournalArticle[] = [
     categoria: 'Neurodiversidad',
     autor: 'Psicología y Aprendizaje',
     fecha: '2026-09-15',
-    imagenPortadaUrl: '/images/journal-neuro.webp',
+    imagenPortadaUrl: 'https://res.cloudinary.com/cpn5zq3g/image/upload/v1789760658/estudiosimple/journal/paz.webp',
     activo: true,
     destacado: false
   }
@@ -353,7 +353,28 @@ export function saveSiteConfig(config: SiteConfig): void {
 export function loadJournalArticles(): JournalArticle[] {
   try {
     const saved = localStorage.getItem('estudiosimple_journal_articles');
-    if (saved) return JSON.parse(saved);
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      if (Array.isArray(parsed) && parsed.length > 0) {
+        let hasLegacy = false;
+        const upgraded = parsed.map((a: JournalArticle, idx: number) => {
+          if (a.id === 'art-1' && a.imagenPortadaUrl && a.imagenPortadaUrl.includes('paz.webp')) {
+            hasLegacy = true;
+            return { ...a, imagenPortadaUrl: INITIAL_JOURNAL_ARTICLES[0].imagenPortadaUrl };
+          }
+          if (a.imagenPortadaUrl && a.imagenPortadaUrl.startsWith('/images/journal-')) {
+            hasLegacy = true;
+            const fallback = INITIAL_JOURNAL_ARTICLES[idx]?.imagenPortadaUrl || INITIAL_JOURNAL_ARTICLES[0].imagenPortadaUrl;
+            return { ...a, imagenPortadaUrl: fallback };
+          }
+          return a;
+        });
+        if (hasLegacy) {
+          saveJournalArticles(upgraded);
+        }
+        return upgraded;
+      }
+    }
   } catch (e) {
     console.error('Error al cargar Journal:', e);
   }
@@ -363,6 +384,7 @@ export function loadJournalArticles(): JournalArticle[] {
 export function saveJournalArticles(items: JournalArticle[]): void {
   try {
     localStorage.setItem('estudiosimple_journal_articles', JSON.stringify(items));
+    window.dispatchEvent(new Event('storage'));
   } catch (e) {
     console.error('Error al guardar Journal:', e);
   }

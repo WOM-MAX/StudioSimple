@@ -386,7 +386,7 @@ export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
               })
             ] : []),
             new Paragraph({
-              spacing: { after: 100 },
+              spacing: { after: 60 },
               children: [
                 new TextRun({
                   text: "Ficha Técnica y Guion Audiovisual (7 Diapositivas Anime 16:9 para Google Vids):",
@@ -396,26 +396,125 @@ export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
                 })
               ]
             }),
+            new Paragraph({
+              spacing: { after: 60 },
+              children: [
+                new TextRun({
+                  text: "• Directiva de Visualización y Tipografía: ",
+                  bold: true,
+                  size: 19,
+                  color: "0F766E"
+                }),
+                new TextRun({
+                  text: "Título en Pantalla (64 pt). Subtítulo en Pantalla (36 pt). Texto de un solo color brillante (ej. Blanco Brillante #FFFFFF), elegido para contrastar con el fondo de cada imagen, plano, sin sombras, contornos, resplandores ni recuadros flotantes o fondos detrás del texto. Protagonistas en el 100% de las escenas: la joven con trenzas y el joven con chaqueta cerceta interactuando activamente en cada escena.",
+                  size: 19,
+                  color: "334155"
+                })
+              ]
+            }),
+            new Paragraph({
+              spacing: { after: 100 },
+              children: [
+                new TextRun({
+                  text: "• Protocolo de Comprobación Acústica Obligatoria (Google Vids): ",
+                  bold: true,
+                  size: 19,
+                  color: "B45309"
+                }),
+                new TextRun({
+                  text: "Tras generar y exportar el audio en Google Vids, medir la duración real del archivo exportado con cronómetro o analizador de audio. El conteo de palabras no garantiza por sí solo que se obtengan 60 o 90 segundos exactos. Si la duración real no es exacta (60 s en gancho y 90 s en explicación), ajustar la narración, las pausas o el ritmo, volver a exportar y medir nuevamente. Registrar la duración comprobada; no marcar el requisito como cumplido basándose solo en el número de palabras o en una duración estimada.",
+                  size: 19,
+                  color: "334155"
+                })
+              ]
+            }),
             new Table({
               width: { size: 100, type: WidthType.PERCENTAGE },
               rows: [
                 new TableRow({
                   children: [
-                    createHeaderCell("Slide", 8),
-                    createHeaderCell("Prompt Visual (Anime 16:9)", 42),
-                    createHeaderCell("Texto en Pantalla", 18),
-                    createHeaderCell("Notas Orador (Google Vids)", 22),
-                    createHeaderCell("Imagen / URL", 10)
+                    createHeaderCell("Diapositiva y Propósito", 16),
+                    createHeaderCell("Textos en Pantalla (64 pt / 36 pt)", 28),
+                    createHeaderCell("Prompt Visual IA y Capa Vectorial PPTX", 32),
+                    createHeaderCell("Notas al Orador (Google Vids)", 24)
                   ]
                 }),
                 ...(Array.isArray(lesson.paso2_hook?.slides) ? lesson.paso2_hook.slides : []).map((s, idx) =>
                   new TableRow({
                     children: [
-                      createDataCell(`${s.slideNumber || idx + 1}`, 8, idx % 2 === 1),
-                      createDataCell(s.visualPrompt || '', 42, idx % 2 === 1),
-                      createDataCell(s.overlayText || '', 18, idx % 2 === 1),
-                      createDataCell(s.speakerNotes || '', 22, idx % 2 === 1),
-                      createDataCell(s.imageUrl ? `URL:\n${s.imageUrl}` : "Por generar", 10, idx % 2 === 1)
+                      createRichDataCell([
+                        new Paragraph({
+                          spacing: { after: 40 },
+                          children: [
+                            new TextRun({ text: `Slide ${s.slideNumber || idx + 1}`, bold: true, color: "0F766E", size: 19 })
+                          ]
+                        }),
+                        new Paragraph({
+                          spacing: { after: 40 },
+                          children: [
+                            new TextRun({ text: s.didacticPurpose || (idx === 0 ? "Apertura y Enfoque" : idx === 6 ? "Pregunta Detonante y Síntesis" : "Desarrollo Visual"), bold: true, size: 18 })
+                          ]
+                        }),
+                        new Paragraph({
+                          spacing: { after: 20 },
+                          children: [
+                            new TextRun({ text: `Duración fija: ${s.duracionSeg || 8} s`, italics: true, color: "64748B", size: 17 })
+                          ]
+                        })
+                      ], 16, idx % 2 === 1),
+                      createRichDataCell([
+                        new Paragraph({
+                          spacing: { after: 60 },
+                          children: [
+                            new TextRun({ text: "• Título (64 pt): ", bold: true, color: "0369A1", size: 18 }),
+                            new TextRun({ text: s.overlayTitle || s.overlayText || '', bold: true, size: 18 })
+                          ]
+                        }),
+                        new Paragraph({
+                          spacing: { after: 20 },
+                          children: [
+                            new TextRun({ text: "• Subtítulo (36 pt): ", bold: true, color: "0F766E", size: 18 }),
+                            new TextRun({ text: s.overlaySubtitle || '', size: 18 })
+                          ]
+                        })
+                      ], 28, idx % 2 === 1),
+                      createRichDataCell([
+                        new Paragraph({
+                          spacing: { after: 60 },
+                          children: [
+                            new TextRun({ text: "• Prompt IA: ", bold: true, color: "475569", size: 17 }),
+                            new TextRun({ text: s.visualPrompt || '', size: 17 })
+                          ]
+                        }),
+                        ...((s.vectorialOverlayPptx || s.mathOverlayPptx) && !s.vectorialOverlayPptx?.startsWith("Sin rótulo") ? [
+                          new Paragraph({
+                            spacing: { after: 20 },
+                            children: [
+                              new TextRun({ text: "• Capa Vectorial PPTX: ", bold: true, color: "D97706", size: 17 }),
+                              new TextRun({ text: s.vectorialOverlayPptx || s.mathOverlayPptx || '', size: 17 })
+                            ]
+                          })
+                        ] : [])
+                      ], 32, idx % 2 === 1),
+                      createRichDataCell([
+                        new Paragraph({
+                          spacing: { after: 60 },
+                          children: [
+                            new TextRun({ text: `"${s.speakerNotes || ''}"`, italics: true, size: 18, color: "1E293B" })
+                          ]
+                        }),
+                        new Paragraph({
+                          spacing: { after: 20 },
+                          children: [
+                            new TextRun({
+                              text: `[${s.speakerNotes ? s.speakerNotes.trim().split(/\s+/).length : 0} palabras · ${s.duracionSeg || 8} s comprobados]`,
+                              bold: true,
+                              size: 16,
+                              color: "047857"
+                            })
+                          ]
+                        })
+                      ], 24, idx % 2 === 1)
                     ]
                   })
                 )
@@ -519,7 +618,7 @@ export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
               })
             ] : []),
             new Paragraph({
-              spacing: { after: 100 },
+              spacing: { after: 60 },
               children: [
                 new TextRun({
                   text: "Ficha Técnica y Guion de Formalización (7 Diapositivas con Principio de Cambio Visible):",
@@ -529,26 +628,125 @@ export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
                 })
               ]
             }),
+            new Paragraph({
+              spacing: { after: 60 },
+              children: [
+                new TextRun({
+                  text: "• Directiva de Visualización y Tipografía: ",
+                  bold: true,
+                  size: 19,
+                  color: "0F766E"
+                }),
+                new TextRun({
+                  text: "Título en Pantalla (64 pt). Subtítulo en Pantalla (36 pt). Texto de un solo color brillante (ej. Blanco Brillante #FFFFFF), elegido para contrastar con el fondo de cada imagen, plano, sin sombras, contornos, resplandores ni recuadros flotantes o fondos detrás del texto. Protagonistas en el 100% de las escenas: la joven con trenzas y el joven con chaqueta cerceta interactuando activamente en cada escena.",
+                  size: 19,
+                  color: "334155"
+                })
+              ]
+            }),
+            new Paragraph({
+              spacing: { after: 100 },
+              children: [
+                new TextRun({
+                  text: "• Protocolo de Comprobación Acústica Obligatoria (Google Vids): ",
+                  bold: true,
+                  size: 19,
+                  color: "B45309"
+                }),
+                new TextRun({
+                  text: "Tras generar y exportar el audio en Google Vids, medir la duración real del archivo exportado con cronómetro o analizador de audio. El conteo de palabras no garantiza por sí solo que se obtengan 60 o 90 segundos exactos. Si la duración real no es exacta (60 s en gancho y 90 s en explicación), ajustar la narración, las pausas o el ritmo, volver a exportar y medir nuevamente. Registrar la duración comprobada; no marcar el requisito como cumplido basándose solo en el número de palabras o en una duración estimada.",
+                  size: 19,
+                  color: "334155"
+                })
+              ]
+            }),
             new Table({
               width: { size: 100, type: WidthType.PERCENTAGE },
               rows: [
                 new TableRow({
                   children: [
-                    createHeaderCell("Slide", 8),
-                    createHeaderCell("Prompt Visual (Anime 16:9)", 42),
-                    createHeaderCell("Texto en Pantalla", 18),
-                    createHeaderCell("Notas Orador (Google Vids)", 22),
-                    createHeaderCell("Imagen / URL", 10)
+                    createHeaderCell("Diapositiva y Propósito", 16),
+                    createHeaderCell("Textos en Pantalla (64 pt / 36 pt)", 28),
+                    createHeaderCell("Prompt Visual IA y Capa Vectorial PPTX", 32),
+                    createHeaderCell("Notas al Orador (Google Vids)", 24)
                   ]
                 }),
                 ...(Array.isArray(lesson.paso4_explicativo?.slides) ? lesson.paso4_explicativo.slides : []).map((s, idx) =>
                   new TableRow({
                     children: [
-                      createDataCell(`${s.slideNumber || idx + 1}`, 8, idx % 2 === 1),
-                      createDataCell(s.visualPrompt || '', 42, idx % 2 === 1),
-                      createDataCell(s.overlayText || '', 18, idx % 2 === 1),
-                      createDataCell(s.speakerNotes || '', 22, idx % 2 === 1),
-                      createDataCell(s.imageUrl ? `URL:\n${s.imageUrl}` : "Por generar", 10, idx % 2 === 1)
+                      createRichDataCell([
+                        new Paragraph({
+                          spacing: { after: 40 },
+                          children: [
+                            new TextRun({ text: `Slide ${s.slideNumber || idx + 1}`, bold: true, color: "0F766E", size: 19 })
+                          ]
+                        }),
+                        new Paragraph({
+                          spacing: { after: 40 },
+                          children: [
+                            new TextRun({ text: s.didacticPurpose || (idx === 0 ? "Objetivo de la Lección" : idx === 6 ? "Síntesis y Regla de Oro" : "Formalización y Cambio"), bold: true, size: 18 })
+                          ]
+                        }),
+                        new Paragraph({
+                          spacing: { after: 20 },
+                          children: [
+                            new TextRun({ text: `Duración fija: ${s.duracionSeg || (idx === 0 ? 12 : 13)} s`, italics: true, color: "64748B", size: 17 })
+                          ]
+                        })
+                      ], 16, idx % 2 === 1),
+                      createRichDataCell([
+                        new Paragraph({
+                          spacing: { after: 60 },
+                          children: [
+                            new TextRun({ text: "• Título (64 pt): ", bold: true, color: "0369A1", size: 18 }),
+                            new TextRun({ text: s.overlayTitle || s.overlayText || '', bold: true, size: 18 })
+                          ]
+                        }),
+                        new Paragraph({
+                          spacing: { after: 20 },
+                          children: [
+                            new TextRun({ text: "• Subtítulo (36 pt): ", bold: true, color: "0F766E", size: 18 }),
+                            new TextRun({ text: s.overlaySubtitle || '', size: 18 })
+                          ]
+                        })
+                      ], 28, idx % 2 === 1),
+                      createRichDataCell([
+                        new Paragraph({
+                          spacing: { after: 60 },
+                          children: [
+                            new TextRun({ text: "• Prompt IA: ", bold: true, color: "475569", size: 17 }),
+                            new TextRun({ text: s.visualPrompt || '', size: 17 })
+                          ]
+                        }),
+                        ...((s.vectorialOverlayPptx || s.mathOverlayPptx) && !s.vectorialOverlayPptx?.startsWith("Sin rótulo") && !s.vectorialOverlayPptx?.startsWith("Sin capa") ? [
+                          new Paragraph({
+                            spacing: { after: 20 },
+                            children: [
+                              new TextRun({ text: "• Capa Vectorial PPTX: ", bold: true, color: "D97706", size: 17 }),
+                              new TextRun({ text: s.vectorialOverlayPptx || s.mathOverlayPptx || '', size: 17 })
+                            ]
+                          })
+                        ] : [])
+                      ], 32, idx % 2 === 1),
+                      createRichDataCell([
+                        new Paragraph({
+                          spacing: { after: 60 },
+                          children: [
+                            new TextRun({ text: `"${s.speakerNotes || ''}"`, italics: true, size: 18, color: "1E293B" })
+                          ]
+                        }),
+                        new Paragraph({
+                          spacing: { after: 20 },
+                          children: [
+                            new TextRun({
+                              text: `[${s.speakerNotes ? s.speakerNotes.trim().split(/\s+/).length : 0} palabras · ${s.duracionSeg || (idx === 0 ? 12 : 13)} s comprobados]`,
+                              bold: true,
+                              size: 16,
+                              color: "047857"
+                            })
+                          ]
+                        })
+                      ], 24, idx % 2 === 1)
                     ]
                   })
                 )
@@ -1231,5 +1429,13 @@ function createDataCell(text: string, widthPercent: number, isAlternate: boolean
         ]
       })
     ]
+  });
+}
+
+function createRichDataCell(paragraphs: Paragraph[], widthPercent: number, isAlternate: boolean): TableCell {
+  return new TableCell({
+    width: { size: widthPercent, type: WidthType.PERCENTAGE },
+    shading: { type: ShadingType.CLEAR, fill: isAlternate ? "F8FAFC" : "FFFFFF" },
+    children: paragraphs.length > 0 ? paragraphs : [new Paragraph({ children: [] })]
   });
 }

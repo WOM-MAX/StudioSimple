@@ -64,7 +64,9 @@ import {
 import {
   OACatalogItem,
   GeneratedOAPackage,
-  generateOAPackage
+  generateOAPackage,
+  buildHookPromptText,
+  buildExplicativoPromptText
 } from '../../lib/lesson-generator';
 import { exportOAPackageToDocx } from '../../lib/docx-export';
 
@@ -464,8 +466,30 @@ export const AdminDashboard: React.FC = () => {
     let allPrompts = `# Prompts ChatGPT Work: ${currentPackage.oa.asignatura} - ${currentPackage.oa.oa}\n\n`;
     currentPackage.lessons.forEach((l) => {
       allPrompts += `## Clase ${l.num}: ${l.title}\n\n`;
-      allPrompts += `### Paso 2: Video Motivacional (7 Slides)\n${l.paso2_hook.fullPrompt}\n\n`;
-      allPrompts += `### Paso 4: Video Explicativo (7 Slides)\n${l.paso4_explicativo.fullPrompt}\n\n`;
+      const hookText =
+        l.paso2_hook.fullPrompt ||
+        (l.paso2_hook.slides && l.paso2_hook.slides.length > 0
+          ? buildHookPromptText(
+              currentPackage.oa.asignatura,
+              currentPackage.oa.oa,
+              l.num,
+              l.title,
+              l.paso2_hook.slides
+            )
+          : '');
+      const expText =
+        l.paso4_explicativo.fullPrompt ||
+        (l.paso4_explicativo.slides && l.paso4_explicativo.slides.length > 0
+          ? buildExplicativoPromptText(
+              currentPackage.oa.asignatura,
+              currentPackage.oa.oa,
+              l.num,
+              l.title,
+              l.paso4_explicativo.slides
+            )
+          : '');
+      allPrompts += `### Paso 2: Video Motivacional (7 Slides)\n\n${hookText}\n\n`;
+      allPrompts += `### Paso 4: Video Explicativo (7 Slides)\n\n${expText}\n\n`;
     });
     await navigator.clipboard.writeText(allPrompts);
     setCopiedKey('prompts');

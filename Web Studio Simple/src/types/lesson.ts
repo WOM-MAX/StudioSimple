@@ -79,8 +79,13 @@ export interface LessonMetadata {
 export interface SlidePrompt {
   slideNumber: number;
   tituloMomento: string;
+  didacticPurpose?: string;
   visualPrompt: string;
   overlayText: string;
+  overlayTitle?: string;
+  overlaySubtitle?: string;
+  mathOverlayPptx?: string;
+  vectorialOverlayPptx?: string;
   speakerNotes: string;
   palabrasAprox?: number;
   duracionSeg?: number;

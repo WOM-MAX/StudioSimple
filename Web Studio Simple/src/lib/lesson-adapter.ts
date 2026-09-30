@@ -4,7 +4,11 @@ import {
   QuizQuestion,
   RecoveryItem
 } from '../types/lesson';
-import { LessonData as GeneratorLessonData } from './lesson-generator';
+import {
+  LessonData as GeneratorLessonData,
+  buildHookPromptText,
+  buildExplicativoPromptText
+} from './lesson-generator';
 
 export function adaptGeneratorLessonToPlayer(
   genLesson: GeneratorLessonData,
@@ -394,6 +398,33 @@ function resolveInteractiveForDiscipline(
  * Adapt a PlayerLessonData object into GeneratorLessonData format without data loss
  */
 export function adaptPlayerLessonToGenerator(playerLesson: PlayerLessonData): GeneratorLessonData {
+  const hookSlides = (playerLesson.hook as any).slides || [];
+  const explicativoSlides = (playerLesson.formalization as any).slides || [];
+
+  const hookFullPrompt =
+    (playerLesson.hook as any).fullPrompt ||
+    (hookSlides.length > 0
+      ? buildHookPromptText(
+          playerLesson.metadata.subject,
+          playerLesson.metadata.oaCode,
+          playerLesson.metadata.lessonNumber,
+          playerLesson.metadata.lessonTitle,
+          hookSlides
+        )
+      : '');
+
+  const explicativoFullPrompt =
+    (playerLesson.formalization as any).fullPrompt ||
+    (explicativoSlides.length > 0
+      ? buildExplicativoPromptText(
+          playerLesson.metadata.subject,
+          playerLesson.metadata.oaCode,
+          playerLesson.metadata.lessonNumber,
+          playerLesson.metadata.lessonTitle,
+          explicativoSlides
+        )
+      : '');
+
   return {
     num: playerLesson.metadata.lessonNumber,
     title: playerLesson.metadata.lessonTitle,
@@ -418,8 +449,8 @@ export function adaptPlayerLessonToGenerator(playerLesson: PlayerLessonData): Ge
     referencia: playerLesson.reference,
     paso2_hook: {
       titulo: playerLesson.hook.title || playerLesson.hook.titulo || 'Video Gancho',
-      fullPrompt: (playerLesson.hook as any).fullPrompt || '',
-      slides: (playerLesson.hook as any).slides || [],
+      fullPrompt: hookFullPrompt,
+      slides: hookSlides,
       focusPoints: playerLesson.hook.focusPoints || [],
       hazInstruction: playerLesson.hook.hazInstruction || '',
       dileAntes: playerLesson.hook.dileIntro,
@@ -439,8 +470,8 @@ export function adaptPlayerLessonToGenerator(playerLesson: PlayerLessonData): Ge
     conversationContext: playerLesson.conversationContext,
     paso4_explicativo: {
       titulo: playerLesson.formalization.title || playerLesson.formalization.concept || 'Video Explicativo',
-      fullPrompt: (playerLesson.formalization as any).fullPrompt || '',
-      slides: (playerLesson.formalization as any).slides || [],
+      fullPrompt: explicativoFullPrompt,
+      slides: explicativoSlides,
       ideaClave: playerLesson.formalization.ideaClave || playerLesson.formalization.summary || '',
       dileAntes: playerLesson.formalization.dileIntro,
       hazInstruction: playerLesson.formalization.hazInstruction || '',

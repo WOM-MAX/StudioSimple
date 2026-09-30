@@ -378,7 +378,7 @@ export const PricingPage: React.FC = () => {
             className="max-w-7xl mx-auto rounded-3xl p-8 md:p-12 shadow-2xl border border-black/10 transition-colors duration-300"
             style={{
               backgroundColor: siteConfig.footer?.bentoCardBgColor || '#FFFFFF',
-              color: siteConfig.footer?.footerTextColor || '#1E293B'
+              color: siteConfig.footer?.bentoCardTextColor || '#334155'
             }}
           >
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">

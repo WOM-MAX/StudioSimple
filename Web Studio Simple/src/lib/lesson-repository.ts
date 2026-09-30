@@ -4,6 +4,10 @@ import { adaptGeneratorLessonToPlayer, adaptPlayerLessonToGenerator } from './le
 import {
   MATEMATICA_7B_OA01_CLASE01,
   MATEMATICA_7B_OA01_CLASE02,
+  MATEMATICA_7B_OA01_CLASE03,
+  MATEMATICA_7B_OA01_CLASE04,
+  MATEMATICA_7B_OA01_CLASE05,
+  MATEMATICA_7B_OA01_CLASE06,
   CIENCIAS_7B_OA01_CLASE01,
   LENGUA_7B_OA03_CLASE01,
   HISTORIA_7B_OA02_CLASE01,
@@ -225,6 +229,10 @@ export function findCanonicalFactoryLesson(
   if ((keyGrade === '7' || keyGrade.includes('7')) && keySubj === 'mat' && keyOa === 'oa1') {
     if (lessonNumber === 1) return MATEMATICA_7B_OA01_CLASE01;
     if (lessonNumber === 2) return MATEMATICA_7B_OA01_CLASE02;
+    if (lessonNumber === 3) return MATEMATICA_7B_OA01_CLASE03;
+    if (lessonNumber === 4) return MATEMATICA_7B_OA01_CLASE04;
+    if (lessonNumber === 5) return MATEMATICA_7B_OA01_CLASE05;
+    if (lessonNumber === 6) return MATEMATICA_7B_OA01_CLASE06;
   }
   if ((keyGrade === '7' || keyGrade.includes('7')) && keySubj === 'cie' && keyOa === 'oa1') {
     if (lessonNumber === 1) return CIENCIAS_7B_OA01_CLASE01;

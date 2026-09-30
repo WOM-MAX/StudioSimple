@@ -106,6 +106,10 @@ El entregable y criterios de **Salida** son: Cumplimiento estricto del protocolo
 - **Límite de Destrucción:** Requiere confirmación humana explícita antes de ejecutar comandos `DELETE`, `DROP` o purgar **más de 50 registros** simultáneamente.
 - **Modificación de Configuración:** Modificaciones técnicas autorizadas de forma autónoma siempre que preserven la estabilidad del proyecto.
 - **Modo de Operación:** Autónomo (End-to-End Autonomous Execution). El agente tiene autorización para iniciar, estructurar, desarrollar, modularizar y validar tareas completas de principio a fin sin pausas ni interrupciones intermedias. Solo se detendrá ante comandos destructivos irreversibles (DROP / DELETE masivo).
+- **Norma Obligatoria de Análisis Autónomo y /goal:** Cada vez que el usuario pregunte o solicite analizar cualquier componente, archivo, flujo o estado del sistema, el agente debe generar automáticamente:
+  1. El análisis técnico y pedagógico objetivo con evidencia verificada.
+  2. El plan de acción o implementación técnica correspondiente.
+  3. Un prompt detallado y autosuficiente diseñado para ser ejecutado con el comando `/goal`, estructurado para que el agente trabaje con máxima autonomía de extremo a extremo sin requerir intervenciones intermedias del usuario.
 
 ## 🧠 Protocolo de Escalada Arquitectónica
 - **Nivel AVISO:** Debilidades menores (ej. componente sin tipado estricto). Documentar con `// TODO [Agente]:` y continuar.

@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import {
   BookOpen,
   Calendar,
@@ -57,7 +57,17 @@ export const JournalBlock: React.FC<JournalBlockProps> = ({
   onNavigateToPricing,
   onSelectArticle
 }) => {
-  const [articles] = useState<JournalArticle[]>(() => loadJournalArticles());
+  const [articles, setArticles] = useState<JournalArticle[]>(() => loadJournalArticles());
+
+  useEffect(() => {
+    const handleStorageChange = () => {
+      setArticles(loadJournalArticles());
+    };
+    window.addEventListener('storage', handleStorageChange);
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+    };
+  }, []);
   const [selectedCategoria, setSelectedCategoria] = useState<string>(
     configuracion.categoriaFiltro && configuracion.categoriaFiltro !== 'todas'
       ? configuracion.categoriaFiltro

@@ -1,6 +1,14 @@
 import neonDataRaw from '../data/neonCurriculum.json';
 import { NeonCurriculumItem } from '../types';
-import { SlidePrompt } from '../types/lesson';
+import { LessonData as PlayerLessonData, SlidePrompt } from '../types/lesson';
+import {
+  MATEMATICA_7B_OA01_CLASE01,
+  MATEMATICA_7B_OA01_CLASE02,
+  MATEMATICA_7B_OA01_CLASE03,
+  MATEMATICA_7B_OA01_CLASE04,
+  MATEMATICA_7B_OA01_CLASE05,
+  MATEMATICA_7B_OA01_CLASE06
+} from '../data/lessons';
 
 const neonCurriculum: NeonCurriculumItem[] = neonDataRaw as NeonCurriculumItem[];
 
@@ -223,20 +231,28 @@ export function buildHookPromptText(
   prompt += `- Asignatura: ${asignatura}\n`;
   prompt += `- Objetivo de Aprendizaje: ${oa}\n`;
   prompt += `- Clase: ${claseNum} ("${tema}")\n\n`;
-  prompt += `DIRECTIVAS DE DISEÑO OBLIGATORIAS:\n`;
+  prompt += `DIRECTIVAS DE DISEÑO OBLIGATORIAS (PLAN MAESTRO ACTUALIZACIÓN 29-09-2026):\n`;
   prompt += `1. Formato Widescreen 16:9 estricto (1920x1080).\n`;
   prompt += `2. Exactamente 7 diapositivas (slide1 a slide7).\n`;
-  prompt += `3. ESTILO ARTÍSTICO DE LAS IMÁGENES: Anime Moderno (Modern Anime Style, estética cinematográfica de alta gama, iluminación dinámica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).\n`;
-  prompt += `4. PROTAGONISTAS: Dúo co-protagónico de 13 años (una joven y un joven estudiantes-exploradores chilenos). ACTÚAN JUNTOS en cada escena, colaborando, investigando y resolviendo el desafío en equipo.\n`;
-  prompt += `5. REGLA VISUAL ANTI-MÁSCARAS: Imágenes Full-Bleed con espacio negativo para texto. Queda prohibido usar placas oscuras que tapen las caras de los personajes o la mitad de la lámina.\n`;
-  prompt += `6. NOTAS AL ORADOR (GUION CONTINUO): Cada diapositiva DEBE incluir únicamente el texto de narración oral continua (entre 15 y 22 palabras por lámina) sin marcas técnicas, encabezados ni duraciones, listo para ser leído por TTS en Google Vids.\n\n`;
+  prompt += `3. ESTILO ARTÍSTICO DE LAS IMÁGENES: Anime Moderno (Modern Anime Style, cinematográfico, iluminación dinámica, fondos limpios con espacio negativo real).\n`;
+  prompt += `4. PROTAGONISTAS FIJOS: Dúo co-protagónico de 13 años (la joven y el joven estudiantes-exploradores chilenos). ACTÚAN JUNTOS en cada escena, colaborando y resolviendo el desafío en equipo.\n`;
+  prompt += `5. REGLA VISUAL ANTI-MÁSCARAS Y FONDOS LIMPIOS: Imágenes Full-Bleed con espacio negativo para texto y vectores. Queda prohibido usar placas oscuras que tapen las caras de los personajes o la mitad de la lámina. PROHIBIDO dibujar números, letras o fórmulas dentro de la ilustración generada por IA.\n`;
+  prompt += `6. PRESUPUESTO TEMPORAL Y GUION CONTINUO (GANCHO - 60 SEGUNDOS / 130 PALABRAS TOTALES): Cada diapositiva DEBE incluir únicamente el texto de narración oral continua (8+8+8+9+9+9+9 segundos, totalizando exactamente ~130 palabras para 60 segundos de locución a 130 palabras por minuto en Google Vids/TTS), sin marcas técnicas, encabezados ni duraciones, listo para ser leído por voz en off.\n`;
+  prompt += `7. PROTOCOLO DE COMPROBACIÓN ACÚSTICA OBLIGATORIA (GOOGLE VIDS): Medir la duración real del archivo exportado con cronómetro o analizador de audio. El conteo de palabras no garantiza por sí solo 60 segundos exactos. Si la duración no es exacta, ajustar narración, pausas o ritmo, volver a exportar y registrar la duración comprobada oficial.\n`;
+  prompt += `8. ESTRUCTURA HEXAPARTITA POR DIAPOSITIVA:\n`;
+  prompt += `   • Toda diapositiva se define con: 1) Propósito, 2) Título en Pantalla (64 pt), 3) Subtítulo en Pantalla (36 pt), 4) Prompt de imagen IA sin texto, 5) Capa vectorial para PowerPoint, y 6) Notas al orador continuas.\n`;
+  prompt += `   • COLOR DE TEXTO: Un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.\n`;
+  prompt += `   • LOCUCIÓN COHERENTE: Narra con precisión lo que se observa en la imagen y lo que se sintetiza en la pantalla.\n\n`;
   prompt += `DETALLE DE LAS 7 DIAPOSITIVAS A CONSTRUIR:\n\n`;
 
   slides.forEach((s) => {
     prompt += `--- DIAPOSITIVA ${s.slideNumber} (${s.tituloMomento}) ---\n`;
-    prompt += `• Prompt de Imagen (16:9): ${s.visualPrompt}\n`;
-    prompt += `• Texto en Pantalla (Overlay limpio): ${s.overlayText}\n`;
-    prompt += `• Notas al Orador (Locución Google Vids): "${s.speakerNotes}"\n\n`;
+    prompt += `1. Propósito Didáctico: ${s.tituloMomento}\n`;
+    prompt += `2. Título en Pantalla (64 pt): ${s.overlayTitle || s.overlayText}\n`;
+    prompt += `3. Subtítulo en Pantalla (36 pt): ${s.overlaySubtitle || ''}\n`;
+    prompt += `4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): ${s.visualPrompt}\n`;
+    prompt += `5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): ${s.vectorialOverlayPptx || s.mathOverlayPptx || s.overlayText}\n`;
+    prompt += `6. Notas al Orador (Locución Continua Google Vids): "${s.speakerNotes}"\n\n`;
   });
 
   return prompt;
@@ -257,589 +273,45 @@ export function buildExplicativoPromptText(
   prompt += `- Asignatura: ${asignatura}\n`;
   prompt += `- Objetivo de Aprendizaje: ${oa}\n`;
   prompt += `- Clase: ${claseNum} ("${tema}")\n\n`;
-  prompt += `DIRECTIVAS DE DISEÑO OBLIGATORIAS:\n`;
+  prompt += `DIRECTIVAS DE DISEÑO OBLIGATORIAS (PLAN MAESTRO ACTUALIZACIÓN 29-09-2026):\n`;
   prompt += `1. Formato Widescreen 16:9 estricto (1920x1080).\n`;
-  prompt += `2. Formato de EXACTAMENTE 7 DIAPOSITIVAS (slide1 a slide7) siguiendo el principio de un cambio visual por cada movimiento mental.\n`;
-  prompt += `3. ESTILO ARTÍSTICO: Anime Moderno (Modern Anime Style, limpio, didáctico y luminoso).\n`;
-  prompt += `4. PROTAGONISTAS: Los mismos 2 jóvenes de 13 años (la chica y el chico) manipulando el modelo disciplinar, observando la fórmula o comprobando el paso a paso juntos.\n`;
-  prompt += `5. REGLA VISUAL ANTI-MÁSCARAS: Imagen limpia con espacio negativo. Overlays pequeños y localizados.\n`;
-  prompt += `6. NOTAS AL ORADOR: Guion explicativo continuo y pedagógico (entre 20 y 25 palabras por lámina) sin encabezados técnicos, optimizado para voz en off directa en Google Vids.\n\n`;
+  prompt += `2. Exactamente 7 diapositivas (slide1 a slide7) siguiendo el principio de un cambio visual por cada movimiento mental.\n`;
+  prompt += `3. DIAPOSITIVA 1 OBLIGATORIA CON OBJETIVO: La primera diapositiva declara como subtítulo (36 pt) el objetivo específico de la lección, sin repetir rótulos redundantes 'OA 01'.\n`;
+  prompt += `4. PROTAGONISTAS FIJOS EN EL 100% DE LAS ESCENAS: Los mismos 2 jóvenes de 13 años (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.\n`;
+  prompt += `5. REGLA VISUAL ANTI-MÁSCARAS Y FONDOS LIMPIOS: Imagen limpia con espacio negativo real. Prohibido que la IA intente dibujar números, rectas o letras. Todo elemento disciplinar se ensambla vectorialmente en PowerPoint.\n`;
+  prompt += `6. PRESUPUESTO TEMPORAL Y GUION PEDAGÓGICO (LECCIÓN EXPLICATIVA - 90 SEGUNDOS / 195 PALABRAS TOTALES): Guion explicativo continuo (12+13+13+13+13+13+13 segundos, totalizando exactamente ~195 palabras para 90 segundos a 130 palabras por minuto en Google Vids/TTS), sin marcas técnicas. Diapositiva 1 formula el objetivo; diapositivas 2 a 7 desarrollan el contenido sin repetirlo.\n`;
+  prompt += `7. PROTOCOLO DE COMPROBACIÓN ACÚSTICA OBLIGATORIA (GOOGLE VIDS): Medir la duración real del archivo exportado con cronómetro o analizador de audio. El conteo de palabras no garantiza por sí solo 90 segundos exactos. Si la duración no es exacta, ajustar narración, pausas o ritmo, volver a exportar y registrar la duración comprobada oficial.\n`;
+  prompt += `8. JERARQUÍA TIPOGRÁFICA Y COLOR DE TEXTO: Título en Pantalla (64 pt); Subtítulo en Pantalla (36 pt). Texto brillante de un solo color de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, contornos, resplandores ni recuadros flotantes o fondos detrás del texto. Especificar color en cada prompt.\n`;
+  prompt += `9. CIERRE SIN RETO EN EL VIDEO: La explicación concluye con la regla de oro y da el pase directo a la práctica en la plataforma web, sin proponer desafíos finales ni tareas en el cuaderno durante el video.\n`;
+  prompt += `10. ESTRUCTURA HEXAPARTITA POR DIAPOSITIVA (Propósito, Título 64 pt, Subtítulo 36 pt, Prompt Imagen IA, Capa Vectorial PPTX, Notas al Orador).\n\n`;
   prompt += `DETALLE DE LAS 7 DIAPOSITIVAS A CONSTRUIR:\n\n`;
 
   slides.forEach((s) => {
     prompt += `--- DIAPOSITIVA ${s.slideNumber} (${s.tituloMomento}) ---\n`;
-    prompt += `• Prompt de Imagen (16:9): ${s.visualPrompt}\n`;
-    prompt += `• Texto en Pantalla (Overlay limpio): ${s.overlayText}\n`;
-    prompt += `• Notas al Orador (Locución Google Vids): "${s.speakerNotes}"\n\n`;
+    prompt += `1. Propósito Didáctico: ${s.tituloMomento}\n`;
+    prompt += `2. Título en Pantalla (64 pt): ${s.overlayTitle || s.overlayText}\n`;
+    prompt += `3. Subtítulo en Pantalla (36 pt): ${s.overlaySubtitle || ''}\n`;
+    prompt += `4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): ${s.visualPrompt}\n`;
+    prompt += `5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): ${s.vectorialOverlayPptx || s.mathOverlayPptx || s.overlayText}\n`;
+    prompt += `6. Notas al Orador (Locución Continua Google Vids): "${s.speakerNotes}"\n\n`;
   });
 
   return prompt;
 }
 
 /**
- * Helper to build canonical Lesson 1 of Mathematics Grade 7 OA01 directly from the tested prototype
+ * Helper to build canonical Lesson 1 of Mathematics Grade 7 OA01 delegating to SSOT
  */
 export function getCanonicalClase1Matematica(): LessonData {
-  const hookSlides: SlidePrompt[] = [
-    {
-      slideNumber: 1,
-      tituloMomento: "Apertura y Desafío Marino",
-      visualPrompt: "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing on the deck of a research vessel looking at an advanced yellow submarine. Clear calm sea, crisp morning light, negative space in the upper third.",
-      overlayText: "Misión 1: El recorrido del submarino",
-      speakerNotes: "Comienza una nueva expedición científica. Nuestro submarino de investigación oceanográfica se prepara para una inmersión en aguas profundas.",
-      palabrasAprox: 18,
-      duracionSeg: 9
-    },
-    {
-      slideNumber: 2,
-      tituloMomento: "El Punto de Referencia Cero",
-      visualPrompt: "Modern anime style. The submarine at the exact surface of the water, with a clean glowing horizontal dashed line labeled '0 metros'. Clear blue sky above and turquoise sea below. Digital measurement gauge on the side.",
-      overlayText: "Punto de partida: Superficie del mar (0 metros)",
-      speakerNotes: "La superficie del mar es nuestro punto de referencia fundamental. En esta expedición la representamos exactamente con el número cero.",
-      palabrasAprox: 19,
-      duracionSeg: 9
-    },
-    {
-      slideNumber: 3,
-      tituloMomento: "Posición Inicial Bajo el Mar",
-      visualPrompt: "Modern anime style. The submarine submerged deep underwater, stationary at twenty meters below the surface line. Soft rays of sunlight filtering through the water. Modern digital depth indicator reading −20 metros.",
-      overlayText: "Posición inicial: −20 metros",
-      speakerNotes: "El submarino desciende veinte metros bajo la superficie. Como se encuentra debajo del cero, decimos que su posición es menos veinte metros.",
-      palabrasAprox: 21,
-      duracionSeg: 10
-    },
-    {
-      slideNumber: 4,
-      tituloMomento: "Primer Movimiento: Descenso",
-      visualPrompt: "Modern anime style. The submarine maneuvering downward with bubbles and small directional arrows indicating descent of 15 meters from its previous depth. High clarity, beautiful underwater marine flora.",
-      overlayText: "Maniobra 1: baja 15 metros",
-      speakerNotes: "Para investigar una fosa marina, el submarino ejecuta una maniobra: desciende quince metros más hacia el fondo.",
-      palabrasAprox: 16,
-      duracionSeg: 8
-    },
-    {
-      slideNumber: 5,
-      tituloMomento: "Segundo Movimiento: Ascenso",
-      visualPrompt: "Modern anime style. The submarine adjusting ballast and propelling upward with light upward arrows indicating an ascent of 8 meters. School of colorful fish passing by in background.",
-      overlayText: "Maniobra 2: sube 8 metros",
-      speakerNotes: "Al detectar una corriente submarina intensa, el capitán ordena ascender: el submarino sube ocho metros.",
-      palabrasAprox: 15,
-      duracionSeg: 8
-    },
-    {
-      slideNumber: 6,
-      tituloMomento: "El Desafío Central",
-      visualPrompt: "Modern anime style. Inside the control cabin, the two 13-year-olds analyzing the navigation dashboard, pointing at the depth sensor with curiosity and focus. Clean lineart, expressive faces.",
-      overlayText: "¿Cuál es la posición final del submarino?",
-      speakerNotes: "Ahora surge la gran pregunta: después de descender y subir, ¿en qué posición exacta respecto de la superficie se encuentra el submarino?",
-      palabrasAprox: 21,
-      duracionSeg: 10
-    },
-    {
-      slideNumber: 7,
-      tituloMomento: "Puente a la Conversación",
-      visualPrompt: "Modern anime style. Minimalist clean composition showing the StudioSimple emblem, the submarine resting at its final depth, and an invitation to analyze.",
-      overlayText: "StudioSimple · Matemática 7° Básico",
-      speakerNotes: "No respondas todavía. Vamos a pensar juntos en el recorrido para descubrir la respuesta exacta paso a paso.",
-      palabrasAprox: 18,
-      duracionSeg: 8
-    }
-  ];
-
-  const explicativoSlides: SlidePrompt[] = [
-    {
-      slideNumber: 1,
-      tituloMomento: "Definición de Posición y Movimiento",
-      visualPrompt: "Modern anime style 16:9. The boy and girl standing before a sleek interactive lightboard with two clearly contrasting columns: 'Posición' and 'Movimiento'. Clean modern typography, soft teal and amber lighting.",
-      overlayText: "¿Posición o Movimiento?",
-      speakerNotes: "Para comprender los números enteros, necesitamos distinguir con total claridad dos ideas fundamentales: qué es una posición y qué es un movimiento.",
-      palabrasAprox: 21,
-      duracionSeg: 11
-    },
-    {
-      slideNumber: 2,
-      tituloMomento: "Qué es una Posición",
-      visualPrompt: "Modern anime style. The girl pointing at a single illuminated dot at −20 metros on a vertical depth axis. Negative space for clean reading.",
-      overlayText: "Posición: Dónde se encuentra un objeto",
-      speakerNotes: "Una posición indica el lugar exacto donde se encuentra algo en relación con un punto de referencia fijo, como la superficie del mar.",
-      palabrasAprox: 22,
-      duracionSeg: 11
-    },
-    {
-      slideNumber: 3,
-      tituloMomento: "Ejemplo Real de Posición",
-      visualPrompt: "Modern anime style. Submarine static at twenty meters depth. Callout box pointing to it: 'Posición = −20 metros'.",
-      overlayText: "Ejemplo: El submarino está a −20 metros",
-      speakerNotes: "Estar a menos veinte metros es una posición, porque nos dice dónde está el submarino sin que se esté moviendo en ese momento.",
-      palabrasAprox: 22,
-      duracionSeg: 11
-    },
-    {
-      slideNumber: 4,
-      tituloMomento: "Qué es un Movimiento",
-      visualPrompt: "Modern anime style. The boy illustrating a vertical arrow with motion lines, showing an active shift from one level to another.",
-      overlayText: "Movimiento: Cómo cambia de lugar",
-      speakerNotes: "Un movimiento indica una acción de cambio de lugar. Señala hacia dónde se traslada el objeto y qué distancia recorre.",
-      palabrasAprox: 20,
-      duracionSeg: 10
-    },
-    {
-      slideNumber: 5,
-      tituloMomento: "Ejemplo Real de Movimiento",
-      visualPrompt: "Modern anime style. Submarine moving downward with an active measurement arrow indicating 'Baja 15 metros'.",
-      overlayText: "Ejemplo: El submarino baja 15 metros",
-      speakerNotes: "Bajar quince metros es un movimiento, porque describe un desplazamiento activo y una distancia recorrida desde un punto hacia otro.",
-      palabrasAprox: 19,
-      duracionSeg: 10
-    },
-    {
-      slideNumber: 6,
-      tituloMomento: "Comparación Lado a Lado",
-      visualPrompt: "Modern anime style. Split screen diagram: Left side shows 'Está a −20 metros (Ubicación)'; Right side shows 'Baja 15 metros (Desplazamiento)'. High contrast, crystal clarity.",
-      overlayText: "Ubicación vs. Desplazamiento",
-      speakerNotes: "Recuerda esta distinción: una posición dice 'dónde estás'; un movimiento dice 'hacia dónde te mueves y cuánto avanzas'.",
-      palabrasAprox: 17,
-      duracionSeg: 9
-    },
-    {
-      slideNumber: 7,
-      tituloMomento: "Síntesis y Regla del Signo",
-      visualPrompt: "Modern anime style. Both students with their open notebooks and pencils ready, smiling confidently in the bright classroom.",
-      overlayText: "¡Ahora a practicar en el cuaderno!",
-      speakerNotes: "El cero marca el punto de partida. Con esta regla clara, estás listo para clasificar cualquier situación cotidiana junto a tu mentor.",
-      palabrasAprox: 20,
-      duracionSeg: 10
-    }
-  ];
-
-  return {
-    num: 1,
-    title: "Posiciones y movimientos respecto de un punto de referencia",
-    focoDidactico: "Distinguir entre posición y movimiento usando el cero como punto de referencia",
-    routeToday: "Introducción → conexión inicial → video introductorio → conversación guiada → video explicativo → práctica → comparación → estrategia para pensar → resumen → miniquiz → refuerzo si es necesario → cierre.",
-    duracion: "30-35 Minutos",
-    objetivoAdulto: "Guiar al estudiante para que comprenda que los números enteros representan posiciones respecto de un punto de referencia y distinga entre posición y movimiento.",
-    climaEmocional: "Crea un clima seguro: 'Aquí equivocarse es la mejor pista para entender cómo funciona la regla'.",
-    situacionIntro: {
-      dialogo: "Observa este termómetro. Tomaremos 0 °C como punto de referencia. Una temperatura de tres grados sobre cero es positiva: podemos escribirla como 3 °C o, si queremos mostrar expresamente su signo, como +3 °C. Ahora pensemos: ¿qué número entero representa una temperatura de tres grados bajo cero?",
-      pregunta: "¿Qué número entero representa una temperatura de tres grados bajo cero?",
-      respEsperada: "−3",
-      pistaSocratica: "0 °C se lee “cero grados Celsius”. El número 3 indica la cantidad de grados. Para representar que está bajo cero usamos el signo menos. ¿Qué número entero representa esa posición?"
-    },
-    paso2_hook: {
-      titulo: "El recorrido del submarino",
-      fullPrompt: buildHookPromptText("Matemática", "OA 1", 1, "Posiciones y movimientos respecto de un punto de referencia", hookSlides),
-      slides: hookSlides,
-      videoUrl: "https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7-MAT-OA01-L01-MOTIVACIONAL_V9_LEGIBLE.mp4",
-      dileAntes: "Ahora veremos un video sobre el recorrido de un submarino. Mientras lo ves, fíjate en tres cosas: dónde comienza el submarino, cuánto baja y cuánto sube.",
-      dileDespues: "Conversemos sobre lo que acabamos de ver. Te haré dos preguntas para que juntos comprendamos mejor el recorrido del submarino."
-    },
-    paso3_recorrido: [
-      {
-        context: "Punto de referencia",
-        question: "En el recorrido del submarino, ¿qué lugar representa el cero?",
-        expected: "La superficie del mar representa el cero.",
-        success: "¡Muy bien! En este recorrido usamos la superficie del mar como punto de referencia y la representamos con el número cero.",
-        support: "Recuerda que la profundidad comienza a medirse desde la superficie del mar. Ese es el lugar desde donde contamos cuántos metros baja el submarino. Con esta pista, ¿qué lugar representa el cero?",
-        reveal: "En este recorrido, la superficie del mar representa el cero porque desde allí comenzamos a medir la profundidad.",
-        studentReveal: "La superficie del mar representa el cero."
-      },
-      {
-        context: "Ubicación del submarino",
-        question: "¿Qué significa que el submarino se encuentre a −20 metros?",
-        expected: "El submarino se encuentra veinte metros bajo la superficie del mar.",
-        success: "¡Exacto! Significa que el submarino se encuentra veinte metros bajo la superficie del mar, que usamos como punto de referencia. Como −20 metros nos indica dónde se encuentra, decimos que representa una posición.",
-        support: "Recuerda que la superficie del mar representa el cero. En −20 metros, el signo negativo indica que el submarino está debajo de ese punto y el número 20 indica la distancia desde el cero hasta el submarino. Con esta pista, ¿qué significa −20 metros?",
-        reveal: "−20 metros significa que el submarino se encuentra veinte metros bajo la superficie del mar. Esta información representa su posición.",
-        studentReveal: "El submarino está veinte metros bajo la superficie. Esa es su posición."
-      }
-    ],
-    paso4_explicativo: {
-      titulo: "Aprendamos sobre posición y movimiento",
-      fullPrompt: buildExplicativoPromptText("Matemática", "OA 1", 1, "Posiciones y movimientos respecto de un punto de referencia", explicativoSlides),
-      slides: explicativoSlides,
-      videoUrl: "https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/MAT/MAT_OA01_L01_Concepto.mp4",
-      ideaClave: "Una posición indica dónde se encuentra algo respecto de un punto de referencia; un movimiento indica cómo cambia de lugar, hacia dónde se desplaza y qué distancia recorre.",
-      dileAntes: "Ya identificamos el punto de referencia de este recorrido y comprendimos que menos veinte metros indica dónde se encuentra el submarino. A eso lo llamamos una posición. Ahora veremos un video para aprender qué es un movimiento y cómo distinguirlo de una posición."
-    },
-    paso5_practica: [
-      {
-        context: "Temperatura",
-        question: "Un termómetro marca cuatro grados Celsius bajo cero. ¿Qué número entero representa esa temperatura?",
-        expected: "−4",
-        success: "¡Muy bien! El número entero es −4. El signo negativo indica que la temperatura está bajo cero.",
-        support: "Recuerda que las cantidades bajo cero se representan con un signo negativo. Conservamos el número 4 y agregamos ese signo. Entonces, ¿qué número entero representa la temperatura?",
-        reveal: "El número entero es −4: el 4 indica la cantidad de grados y el signo negativo indica que están bajo cero.",
-        studentReveal: "−4"
-      },
-      {
-        context: "Ascensor",
-        question: "Un ascensor baja cinco pisos. En esta frase, ¿se está representando una posición o un movimiento?",
-        expected: "Un movimiento.",
-        success: "¡Genial! Representa un movimiento porque indica cómo cambia de lugar el ascensor.",
-        support: "Fíjate en la palabra “baja”: indica que el ascensor cambia de lugar. Con esta pista, responde la misma pregunta.",
-        reveal: "Representa un movimiento porque “baja cinco pisos” indica cómo cambia de lugar el ascensor.",
-        studentReveal: "Un movimiento."
-      },
-      {
-        context: "Saldo de una cuenta",
-        question: "Si una cuenta bancaria tiene un saldo de menos cinco mil pesos, ¿qué significa el signo negativo?",
-        expected: "Significa que existe una deuda de cinco mil pesos.",
-        success: "¡Excelente! En esta situación, el signo negativo indica que existe una deuda de cinco mil pesos.",
-        support: "En una cuenta bancaria, un saldo positivo indica dinero disponible y un saldo negativo indica una deuda. Con esta pista, ¿qué significa el signo negativo?",
-        reveal: "El signo negativo indica que existe una deuda de cinco mil pesos. Aquí su significado depende del contexto.",
-        studentReveal: "Existe una deuda de $5.000."
-      }
-    ],
-    paso6_resumen: {
-      ideaClave: "En este recorrido usamos la superficie del mar como punto de referencia y la representamos con el número cero. Una posición indica dónde se encuentra algo respecto de ese punto; un movimiento indica cómo cambia de lugar, hacia dónde se mueve y qué distancia recorre.",
-      sintesis: "El cero marca el punto de referencia. Las posiciones sobre o bajo cero se distinguen por el signo. Los movimientos indican desplazamientos."
-    },
-    paso7_miniquiz: [
-      {
-        q: "Un buzo se encuentra siete metros bajo la superficie del mar. Si la superficie representa el cero, ¿qué número entero representa la posición del buzo?",
-        options: ["−7", "+7", "7"],
-        correct: "−7",
-        fixExplain: "La superficie representa el cero. Como el buzo está siete metros debajo, usamos el signo negativo: la respuesta es −7."
-      },
-      {
-        q: "Un ascensor sube seis pisos. Esta frase, ¿representa una posición o un movimiento?",
-        options: ["Una posición", "Un movimiento"],
-        correct: "Un movimiento",
-        fixExplain: "La palabra “sube” indica que el ascensor cambia de lugar. Por eso representa un movimiento."
-      },
-      {
-        q: "En una cuenta bancaria aparece un saldo de −$8.000. ¿Qué situación representa ese saldo?",
-        options: ["Hay $8.000 disponibles", "Hay una deuda de $8.000", "No hay dinero disponible ni una deuda"],
-        correct: "Hay una deuda de $8.000",
-        fixExplain: "En este contexto, el signo negativo indica una deuda. Por eso −$8.000 representa una deuda de $8.000."
-      }
-    ],
-    paso7b_recuperacion: [
-      {
-        title: "Posiciones bajo el punto de referencia",
-        explain: "Cuando una posición está debajo del punto de referencia, utilizamos un número negativo.",
-        q: "Una entrada está cinco metros bajo el nivel de la calle, que representa el cero. ¿Qué entero representa su posición?",
-        options: ["−5", "+5"],
-        correct: "−5",
-        correctText: "¡Eso es! La posición se representa con −5.",
-        fixText: "La respuesta correcta es −5: el signo negativo indica que está bajo el punto de referencia."
-      },
-      {
-        title: "Posición y movimiento",
-        explain: "Una posición dice dónde está algo. Un movimiento dice cómo cambia de lugar.",
-        q: "Un globo sube cuatro metros. ¿Representa una posición o un movimiento?",
-        options: ["Una posición", "Un movimiento"],
-        correct: "Un movimiento",
-        correctText: "¡Eso es! Subir cuatro metros representa un movimiento.",
-        fixText: "La respuesta correcta es movimiento, porque “sube” indica un cambio de lugar."
-      },
-      {
-        title: "Significado del signo negativo",
-        explain: "El significado del signo depende del contexto. En una temperatura, puede indicar que está bajo cero.",
-        q: "Una temperatura de −2 °C está…",
-        options: ["Dos grados bajo cero", "Dos grados sobre cero"],
-        correct: "Dos grados bajo cero",
-        correctText: "¡Eso es! −2 °C significa dos grados bajo cero.",
-        fixText: "La respuesta correcta es dos grados bajo cero."
-      }
-    ],
-    paso8_cierre: {
-      preguntaSintesis: "En tus propias palabras, ¿qué diferencia hay entre dónde estás (posición) y hacia dónde te trasladas (movimiento)?",
-      metacognicion: "¿Qué situación de la vida diaria te ayudó más a entender el punto de referencia cero: el termómetro, el ascensor o el submarino?",
-      celebracion: "¡Felicitaciones! Has completado con éxito la primera clase de números enteros de 7° básico."
-    }
-  };
+  return playerLessonToGeneratorLesson(MATEMATICA_7B_OA01_CLASE01);
 }
 
 /**
- * Helper to build canonical Lesson 2 of Mathematics Grade 7 OA01 directly from the tested prototype
+ * Helper to build canonical Lesson 2 of Mathematics Grade 7 OA01 delegating to SSOT
  */
 export function getCanonicalClase2Matematica(): LessonData {
-  const hookSlides: SlidePrompt[] = [
-    {
-      slideNumber: 1,
-      tituloMomento: "Apertura en el Puesto de Mando",
-      visualPrompt: "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers examining a glowing digital navigation board on their vessel. Altitude and depth measurements appear on screen. Clear calm sea visible through windows.",
-      overlayText: "Misión 2: La recta numérica y orden en Z",
-      speakerNotes: "Los registros de navegación combinan alturas sobre el nivel del mar y profundidades marinas en una misma pantalla.",
-      palabrasAprox: 18,
-      duracionSeg: 9
-    },
-    {
-      slideNumber: 2,
-      tituloMomento: "El Desafío de Ordenar Datos",
-      visualPrompt: "Modern anime style. The girl pointing at conflicting numbers: +3 metros, −6 metros, 0 metros, −1 metro. High contrast, clean layout.",
-      overlayText: "El problema: ¿Qué valor es mayor?",
-      speakerNotes: "Al comparar números positivos y negativos, necesitamos un criterio único y seguro que evite confusiones.",
-      palabrasAprox: 17,
-      duracionSeg: 9
-    },
-    {
-      slideNumber: 3,
-      tituloMomento: "Trazando la Recta Numérica",
-      visualPrompt: "Modern anime style. The boy drawing a horizontal line with the zero glowing at the exact center. Arrows pointing both ways.",
-      overlayText: "La línea continua: El cero al centro",
-      speakerNotes: "Trazamos una recta numérica horizontal. El cero se ubica al centro como punto de partida indiscutible.",
-      palabrasAprox: 18,
-      duracionSeg: 9
-    },
-    {
-      slideNumber: 4,
-      tituloMomento: "Positivos a la Derecha",
-      visualPrompt: "Modern anime style. Warm orange markers glowing at +1, +2, +3 moving towards the right.",
-      overlayText: "Hacia la derecha: Valores positivos (+)",
-      speakerNotes: "A la derecha del cero se ubican los números positivos, aumentando su valor a medida que avanzamos.",
-      palabrasAprox: 18,
-      duracionSeg: 9
-    },
-    {
-      slideNumber: 5,
-      tituloMomento: "Negativos a la Izquierda",
-      visualPrompt: "Modern anime style. Cool cyan markers glowing at −1, −2, −3 extending towards the left.",
-      overlayText: "Hacia la izquierda: Valores negativos (−)",
-      speakerNotes: "A la izquierda del cero se ubican los números negativos, alejándose del centro con el signo menos.",
-      palabrasAprox: 18,
-      duracionSeg: 9
-    },
-    {
-      slideNumber: 6,
-      tituloMomento: "La Regla de Oro del Orden",
-      visualPrompt: "Modern anime style. Side-by-side comparison with a large glowing arrow pointing to the right: 'Mayor hacia la derecha'.",
-      overlayText: "Regla de Oro: Mayor hacia la derecha",
-      speakerNotes: "Cualquier número situado a la derecha de otro en la recta horizontal es siempre mayor que el de la izquierda.",
-      palabrasAprox: 19,
-      duracionSeg: 10
-    },
-    {
-      slideNumber: 7,
-      tituloMomento: "Listo para Comparar",
-      visualPrompt: "Modern anime style. Both explorers confident with their notebooks open and pencil ready to compare numbers.",
-      overlayText: "¡A comparar y ordenar en el cuaderno!",
-      speakerNotes: "Con la recta numérica clara, ahora puedes ordenar cualquier conjunto de números enteros sin dudar.",
-      palabrasAprox: 17,
-      duracionSeg: 8
-    }
-  ];
-
-  const explicativoSlides: SlidePrompt[] = [
-    {
-      slideNumber: 1,
-      tituloMomento: "La Recta Numérica Horizontal",
-      visualPrompt: "Modern anime style. A crisp horizontal line across the center of the whiteboard with zero marked prominently in teal.",
-      overlayText: "El cero divide la recta",
-      speakerNotes: "El cero divide la recta en dos semirrectas: a su derecha los enteros positivos y a su izquierda los enteros negativos.",
-      palabrasAprox: 21,
-      duracionSeg: 10
-    },
-    {
-      slideNumber: 2,
-      tituloMomento: "Sentido Creciente de la Recta",
-      visualPrompt: "Modern anime style. A gradient arrow flowing from left to right with the label 'Aumenta el valor'.",
-      overlayText: "El valor aumenta hacia la derecha",
-      speakerNotes: "La recta numérica avanza de menor a mayor de izquierda a derecha. Estar más a la derecha significa ser mayor.",
-      palabrasAprox: 19,
-      duracionSeg: 10
-    },
-    {
-      slideNumber: 3,
-      tituloMomento: "Comparando un Positivo y un Negativo",
-      visualPrompt: "Modern anime style. Comparing +2 and −4. Diagram highlights +2 on the right and −4 on the left.",
-      overlayText: "+2 está a la derecha de −4: +2 > −4",
-      speakerNotes: "Cualquier número positivo es siempre mayor que cualquier número negativo porque siempre está a la derecha del cero.",
-      palabrasAprox: 19,
-      duracionSeg: 10
-    },
-    {
-      slideNumber: 4,
-      tituloMomento: "Comparando Dos Negativos",
-      visualPrompt: "Modern anime style. Focus on −2 and −5. The distance to zero is visually measured.",
-      overlayText: "Comparando −2 y −5",
-      speakerNotes: "¿Qué número es mayor entre menos dos y menos cinco? Pensemos cuál de los dos se ubica más hacia la derecha.",
-      palabrasAprox: 20,
-      duracionSeg: 10
-    },
-    {
-      slideNumber: 5,
-      tituloMomento: "Cercanía al Cero en los Negativos",
-      visualPrompt: "Modern anime style. −2 is only 2 steps from zero, while −5 is 5 steps away. −2 is further to the right.",
-      overlayText: "−2 está más a la derecha que −5: −2 > −5",
-      speakerNotes: "Menos dos está más cerca del cero y a la derecha de menos cinco. Por la regla de la recta, menos dos es mayor.",
-      palabrasAprox: 22,
-      duracionSeg: 11
-    },
-    {
-      slideNumber: 6,
-      tituloMomento: "Estrategia en 3 Pasos",
-      visualPrompt: "Modern anime style. 3-step numbered infographic: 1. Ubica, 2. Compara, 3. Concluye.",
-      overlayText: "1. Ubica · 2. Compara · 3. Concluye",
-      speakerNotes: "Primero ubica los números, luego mira cuál está a la derecha, y finalmente concluye que el de la derecha es mayor.",
-      palabrasAprox: 20,
-      duracionSeg: 10
-    },
-    {
-      slideNumber: 7,
-      tituloMomento: "Síntesis al Cuaderno",
-      visualPrompt: "Modern anime style. Both students ready with notebook open showing the number line drawn cleanly.",
-      overlayText: "¡Dibuja tu recta en el cuaderno!",
-      speakerNotes: "Traza tu recta en el cuaderno y compruébalo tú mismo. ¡Todo número a la derecha es mayor!",
-      palabrasAprox: 17,
-      duracionSeg: 9
-    }
-  ];
-
-  return {
-    num: 2,
-    title: "La recta numérica y orden en Z",
-    focoDidactico: "Ordenar y comparar números enteros en la recta numérica usando la noción de distancia",
-    routeToday: "Introducción → conexión inicial → situación problema en la recta → conversación guiada → explicación formal del orden → práctica en tres situaciones → comparación de magnitudes → estrategia para ordenar → resumen → miniquiz formativo → refuerzo si es necesario → cierre.",
-    duracion: "30 Minutos",
-    objetivoAdulto: "Acompañar al estudiante a representar números enteros en la recta numérica horizontal y vertical, y a comparar y ordenar números enteros comprendiendo que todo número ubicado a la derecha de otro en la recta numérica horizontal es mayor.",
-    climaEmocional: "Refuerza la confianza: 'Ordenar números negativos puede parecer confuso al principio, pero la recta nunca miente'.",
-    situacionIntro: {
-      dialogo: "Imagina una recta numérica horizontal donde el centro es el número cero. A la derecha avanzan los números positivos (+1, +2, +3...) y a la izquierda avanzan los números negativos (−1, −2, −3...). Si te ubicas en el número −2 y caminas hacia el número −5, ¿te estás moviendo hacia la izquierda o hacia la derecha?",
-      pregunta: "¿Te estás moviendo hacia la izquierda o hacia la derecha al ir de −2 a −5?",
-      respEsperada: "Hacia la izquierda",
-      pistaSocratica: "Los números negativos se alejan del cero hacia la izquierda: −1, −2, −3, −4, −5. Para ir de −2 a −5 nos movemos hacia la izquierda.",
-      options: [
-        {
-          label: "Respondió hacia la izquierda",
-          kind: "correct",
-          feedbackText: "¡Correcto! Para ir desde −2 hasta −5 nos movemos hacia la izquierda, alejándonos del cero."
-        },
-        {
-          label: "Respondió hacia la derecha",
-          kind: "needs_support",
-          feedbackText: "Pensemos en el camino: el cero está en el centro. El −2 está dos pasos a la izquierda. Para llegar a −5 avanzamos más a la izquierda."
-        }
-      ]
-    },
-    paso2_hook: {
-      titulo: "La recta numérica y el orden de los números",
-      fullPrompt: buildHookPromptText("Matemática", "OA 1", 2, "La recta numérica y orden en Z", hookSlides),
-      slides: hookSlides,
-      dileAntes: "Hoy nuestros dos exploradores necesitan organizar registros de temperaturas y alturas en un tablero de navegación. Observa con atención cómo ordenan los números.",
-      dileDespues: "Conversemos sobre lo observado. Te haré dos preguntas para comprobar cómo organizamos los números en la recta."
-    },
-    paso3_recorrido: [
-      {
-        context: "Ubicación en la recta",
-        question: "En una recta numérica horizontal con el cero al centro, ¿hacia qué lado se ubican los números negativos?",
-        expected: "Hacia la izquierda del cero.",
-        success: "¡Muy bien! Los números negativos se ubican siempre a la izquierda del cero.",
-        support: "Recuerda que a la derecha del cero van los positivos. ¿Hacia qué lado van los negativos?",
-        reveal: "Los números negativos se ubican siempre a la izquierda del cero.",
-        studentReveal: "A la izquierda del cero."
-      },
-      {
-        context: "Cercanía al origen",
-        question: "Entre el número −1 y el número −4, ¿cuál de los dos se encuentra más cerca del cero?",
-        expected: "El número −1 está más cerca del cero.",
-        success: "¡Exacto! El −1 está a un solo paso del cero, mientras que el −4 está a cuatro pasos.",
-        support: "Cuenta cuántos pasos hay desde el cero hasta el −1 y cuántos hasta el −4. ¿Cuál está más cerca?",
-        reveal: "El número −1 está más cerca del cero porque solo dista una unidad del origen.",
-        studentReveal: "El número −1 está más cerca del cero."
-      }
-    ],
-    paso4_explicativo: {
-      titulo: "Criterio de orden en la recta numérica",
-      fullPrompt: buildExplicativoPromptText("Matemática", "OA 1", 2, "La recta numérica y orden en Z", explicativoSlides),
-      slides: explicativoSlides,
-      ideaClave: "Todo número ubicado a la derecha de otro en la recta numérica horizontal es mayor que él.",
-      dileAntes: "Ahora aprenderemos la regla fundamental para comparar cualquier pareja de números enteros: la regla de la derecha."
-    },
-    paso5_practica: [
-      {
-        context: "Temperaturas en la montaña",
-        question: "En un refugio cordillerano se registran dos temperaturas: −3 °C en la mañana y −8 °C en la noche. ¿Cuál de las dos temperaturas fue más alta (mayor)?",
-        expected: "−3 °C fue más alta porque −3 es mayor que −8.",
-        success: "¡Muy bien! −3 °C representa una temperatura mayor (menos fría) que −8 °C.",
-        support: "Piensa cuál de las dos temperaturas está más cerca del cero en la recta: −3 está a la derecha de −8. ¿Cuál es mayor?",
-        reveal: "−3 °C es mayor que −8 °C porque está más a la derecha en la escala térmica.",
-        studentReveal: "−3 °C es mayor."
-      },
-      {
-        context: "Niveles de estacionamiento",
-        question: "Un edificio tiene tres subterráneos: piso −1, piso −2 y piso −3. Si subes desde el piso −3 hasta el piso −1, ¿estás subiendo hacia un nivel mayor o menor?",
-        expected: "Hacia un nivel mayor, porque −1 es mayor que −3.",
-        success: "¡Genial! El piso −1 está más cerca de la superficie (cero) y es un nivel mayor que el piso −3.",
-        support: "Al subir te acercas a la calle (piso 0). Subir significa aumentar de nivel. ¿El nivel es mayor o menor?",
-        reveal: "Es un nivel mayor porque −1 > −3. Al subir avanzamos hacia valores mayores.",
-        studentReveal: "Hacia un nivel mayor."
-      },
-      {
-        context: "Orden de cuatro valores",
-        question: "Ordena de menor a mayor los siguientes cuatro números enteros: +3, −6, 0, −1.",
-        expected: "−6, −1, 0, +3",
-        success: "¡Excelente ordenamiento! Leíste los números de izquierda a derecha en la recta numérica.",
-        support: "Busca el número que esté más a la izquierda de todos en la recta: ese es el menor. Luego sigue hacia la derecha.",
-        reveal: "El orden de menor a mayor es: −6, −1, 0, +3.",
-        studentReveal: "−6, −1, 0, +3"
-      }
-    ],
-    paso6_resumen: {
-      ideaClave: "En la recta numérica, el cero se ubica al centro; los positivos avanzan a la derecha y los negativos a la izquierda. Todo número a la derecha es mayor.",
-      sintesis: "En esta clase aprendimos que la recta numérica organiza todos los números enteros en una sola dimensión continua. La regla principal establece que cualquier número situado más a la derecha siempre es mayor que los que están a su izquierda.",
-      estrategia: [
-        { number: 1, title: "Ubica", desc: "Sitúa cada número en la recta numérica tomando el cero como centro." },
-        { number: 2, title: "Compara", desc: "Observa cuál de los números se encuentra ubicado más hacia la derecha." },
-        { number: 3, title: "Concluye", desc: "El número que está a la derecha siempre es el mayor, sin importar sus signos." }
-      ]
-    },
-    paso7_miniquiz: [
-      {
-        q: "En una recta numérica horizontal, ¿dónde se ubican los números negativos?",
-        options: [
-          "A la izquierda del cero",
-          "A la derecha del cero",
-          "En el centro reemplazando al cero"
-        ],
-        correct: "A la izquierda del cero",
-        fixExplain: "En la recta numérica horizontal, el cero está en el centro: a su derecha van los positivos y a su izquierda los negativos."
-      },
-      {
-        q: "Al comparar los números −9 y −3, ¿cuál de ellos es el mayor?",
-        options: [
-          "−3",
-          "−9",
-          "Son iguales porque ambos son negativos"
-        ],
-        correct: "−3",
-        fixExplain: "El número −3 es mayor porque en la recta numérica está ubicado más hacia la derecha (más cerca del cero) que el −9."
-      },
-      {
-        q: "¿Cuál de las siguientes listas está correctamente ordenada de menor a mayor?",
-        options: [
-          "−7, −2, 0, +5",
-          "+5, 0, −2, −7",
-          "0, −2, +5, −7"
-        ],
-        correct: "−7, −2, 0, +5",
-        fixExplain: "De menor a mayor se lee de izquierda a derecha en la recta: −7 es el más pequeño, luego −2, después 0 y finalmente +5."
-      }
-    ],
-    paso7b_recuperacion: [
-      {
-        title: "Orden entre números negativos",
-        explain: "Entre dos números negativos, siempre es mayor el que se encuentra más cerca del cero en la recta numérica.",
-        q: "Entre −10 y −1, ¿cuál número es mayor?",
-        options: [
-          "−1",
-          "−10"
-        ],
-        correct: "−1",
-        correctText: "¡Eso es! El −1 es mayor porque está a solo un paso del cero, mucho más a la derecha que el −10.",
-        fixText: "La respuesta correcta es −1, porque en la recta numérica está ubicado más a la derecha que el −10."
-      }
-    ],
-    paso8_cierre: {
-      preguntaSintesis: "¿Por qué en los números negativos un número con mayor dígito (como −9) tiene menor valor que uno con dígito menor (como −3)?",
-      metacognicion: "¿Qué imagen mental te ayudó más hoy: el termómetro vertical, la recta horizontal o los pisos del edificio subterráneo?",
-      celebracion: "¡Excelente! Has dominado el orden de los números enteros en la recta numérica."
-    }
-  };
+  return playerLessonToGeneratorLesson(MATEMATICA_7B_OA01_CLASE02);
 }
-
 
 /**
  * Helper to build canonical Lesson 1 of Lengua y Literatura Grade 7 OA03
@@ -848,65 +320,93 @@ export function getCanonicalClase1Lengua(): LessonData {
   const hookSlides: SlidePrompt[] = [
     {
       slideNumber: 1,
-      tituloMomento: "Apertura: El Mundo Ordinario",
-      visualPrompt: "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, studying in a quiet, sunlit village library filled with ancient scrolls and comfortable wooden desks. Warm morning light, negative space in upper third.",
+      tituloMomento: "Apertura y Mundo Ordinario",
+      didacticPurpose: "Apertura y Mundo Ordinario",
+      visualPrompt: "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, studying in a quiet, sunlit village library filled with ancient scrolls and comfortable wooden desks. Warm morning light, negative space in upper third. No text drawn by AI.",
+      overlayTitle: "Misión 1: El viaje del héroe",
+      overlaySubtitle: "El mundo ordinario en la biblioteca",
       overlayText: "Misión 1: Las 6 Etapas del Viaje del Héroe",
-      speakerNotes: "Toda gran historia comienza en la calma. Nuestro protagonista vive en un mundo conocido donde todo parece seguro y predecible.",
-      palabrasAprox: 20,
+      vectorialOverlayPptx: "Esquema narrativo: Etapa 1 · Estado de calma y rutina conocida",
+      speakerNotes: "Toda gran narración comienza en la calma. Nuestro protagonista vive en un mundo seguro donde todo resulta familiar y predecible.",
+      palabrasAprox: 19,
       duracionSeg: 9
     },
     {
       slideNumber: 2,
-      tituloMomento: "El Quiebre: La Llamada a la Aventura",
-      visualPrompt: "Modern anime style. The two companions looking startled as a mysterious glowing letter arrives on the table, surrounded by subtle wind swirls. Clean lineart, dramatic lighting, clear space on the left side.",
+      tituloMomento: "Quiebre y Tensión",
+      didacticPurpose: "Quiebre y Tensión",
+      visualPrompt: "Modern anime style. The two companions looking startled as a mysterious glowing letter arrives on the table, surrounded by subtle wind swirls. Clean lineart, dramatic lighting, clear space on the left side. No text drawn by AI.",
+      overlayTitle: "La llamada a la aventura",
+      overlaySubtitle: "Un mensaje que altera la tranquilidad",
       overlayText: "Etapa 2: La Llamada a la Aventura",
-      speakerNotes: "De pronto, la tranquilidad se rompe. Un suceso inesperado o una amenaza urgente obliga al héroe a tomar una decisión crucial.",
-      palabrasAprox: 21,
-      duracionSeg: 10
+      vectorialOverlayPptx: "Vector de conflicto: Suceso inesperado -> Quiebre del equilibrio inicial",
+      speakerNotes: "De pronto, la tranquilidad se quiebra. Un mensaje misterioso sobre la mesa plantea un dilema que no puede ser ignorado.",
+      palabrasAprox: 19,
+      duracionSeg: 9
     },
     {
       slideNumber: 3,
-      tituloMomento: "El Encuentro con el Mentor",
-      visualPrompt: "Modern anime style. A wise elderly librarian mentor handing the young protagonists an ancient compass and a leather-bound journal. Soft depth of field, warm candlelight.",
+      tituloMomento: "Encuentro con el Mentor",
+      didacticPurpose: "Encuentro con el Mentor",
+      visualPrompt: "Modern anime style. A wise elderly librarian mentor handing the young protagonists an ancient compass and a leather-bound journal. Soft depth of field, warm candlelight. No text drawn by AI.",
+      overlayTitle: "El consejo del mentor",
+      overlaySubtitle: "Herramienta y sabiduría inicial",
       overlayText: "El Consejo del Mentor",
-      speakerNotes: "Sentir miedo es natural frente a lo desconocido. Un mentor experimentado entrega sabiduría y la herramienta clave para iniciar la expedición.",
-      palabrasAprox: 21,
+      vectorialOverlayPptx: "Icono de mediación: Guía experimentado entrega objeto clave y consejo",
+      speakerNotes: "Sentir temor es natural frente a lo desconocido. El sabio bibliotecario entrega un mapa y el consejo necesario para dar el primer paso.",
+      palabrasAprox: 22,
       duracionSeg: 10
     },
     {
       slideNumber: 4,
-      tituloMomento: "El Cruce del Primer Umbral",
-      visualPrompt: "Modern anime style. The two young protagonists stepping across a stone archway into a mysterious twilight forest with glowing flora. Dramatic atmospheric lighting.",
+      tituloMomento: "Cruce del Umbral",
+      didacticPurpose: "Cruce del Umbral",
+      visualPrompt: "Modern anime style. The two young protagonists stepping across a stone archway into a mysterious twilight forest with glowing flora. Dramatic atmospheric lighting. No text drawn by AI.",
+      overlayTitle: "El cruce del umbral",
+      overlaySubtitle: "Hacia el territorio de lo desconocido",
       overlayText: "Etapa 3: El Cruce del Umbral",
-      speakerNotes: "El héroe deja atrás su hogar seguro y cruza la frontera hacia un mundo nuevo donde las reglas del juego son desafiantes.",
-      palabrasAprox: 22,
+      vectorialOverlayPptx: "Frontera narrativa: Límite entre lo cotidiano y el mundo de los desafíos",
+      speakerNotes: "Nuestros protagonistas cruzan el arco de piedra hacia el bosque. Han dejado atrás la seguridad y se adentran en territorio de aventura.",
+      palabrasAprox: 21,
       duracionSeg: 10
     },
     {
       slideNumber: 5,
-      tituloMomento: "Pruebas, Aliados y Obstáculos",
-      visualPrompt: "Modern anime style. The boy and girl working side by side with a loyal animal companion, deciphering a stone puzzle gate while rain falls softly. Vibrant colors, focused determination.",
+      tituloMomento: "Pruebas y Aliados",
+      didacticPurpose: "Pruebas y Aliados",
+      visualPrompt: "Modern anime style. The boy and girl working side by side with a loyal animal companion, deciphering a stone puzzle gate while rain falls softly. Vibrant colors, focused determination. No text drawn by AI.",
+      overlayTitle: "Pruebas en el camino",
+      overlaySubtitle: "Obstáculos y fuerzas que se oponen",
       overlayText: "Etapa 4: Pruebas y Aliados",
-      speakerNotes: "En el camino enfrentan dificultades crecientes, descubren quiénes son sus verdaderos aliados y aprenden a confiar en sus propias fortalezas.",
-      palabrasAprox: 20,
+      vectorialOverlayPptx: "Esquema de progresión: Reto 1 -> Reto 2 -> Alianza con compañeros",
+      speakerNotes: "En el camino surgen dificultades crecientes. Cada obstáculo exige ingenio y pone a prueba el compromiso de mantenerse unidos frente a la adversidad.",
+      palabrasAprox: 21,
       duracionSeg: 10
     },
     {
       slideNumber: 6,
-      tituloMomento: "El Abismo: La Prueba Suprema",
-      visualPrompt: "Modern anime style. Dramatic confrontation in a cavern illuminated by a deep blue glowing crystal. High tension, expressive faces showing courage despite fear.",
+      tituloMomento: "Antesala del Conflicto Mayor",
+      didacticPurpose: "Antesala del Conflicto Mayor",
+      visualPrompt: "Modern anime style. Dramatic confrontation in a cavern illuminated by a deep blue glowing crystal. High tension, expressive faces showing courage despite fear. No text drawn by AI.",
+      overlayTitle: "La prueba suprema",
+      overlaySubtitle: "El núcleo del conflicto dramático",
       overlayText: "Etapa 5: El Abismo / Prueba Suprema",
-      speakerNotes: "Llega el momento decisivo: enfrentar su mayor temor. De esta prueba suprema depende resolver el conflicto y salvar a su comunidad.",
-      palabrasAprox: 22,
-      duracionSeg: 10
+      vectorialOverlayPptx: "Clímax narrativo: Protagonista frente a la fuerza antagónica principal",
+      speakerNotes: "Llegan a la caverna profunda. Están frente a la fuerza antagónica que amenaza su hogar, y no pueden retroceder.",
+      palabrasAprox: 18,
+      duracionSeg: 9
     },
     {
       slideNumber: 7,
-      tituloMomento: "El Regreso Transformado",
-      visualPrompt: "Modern anime style. Minimalist clean composition showing the StudioSimple emblem, the hero returning to the sunrise holding the light of knowledge, wiser and smiling.",
+      tituloMomento: "Pregunta Detonante",
+      didacticPurpose: "Pregunta Detonante",
+      visualPrompt: "Modern anime style. Minimalist clean composition showing the StudioSimple emblem, the hero returning to the sunrise holding the light of knowledge, wiser and smiling. No text drawn by AI.",
+      overlayTitle: "El enigma del relato",
+      overlaySubtitle: "¿Qué fuerza mueve toda historia?",
       overlayText: "Etapa 6: El Regreso con el Elíxir",
-      speakerNotes: "El héroe no vuelve siendo el mismo: regresa transformado con una valiosa lección y sabiduría que enriquecerá a todos.",
-      palabrasAprox: 19,
+      vectorialOverlayPptx: "Pregunta detonante: ¿Qué es el conflicto narrativo y por qué transforma al héroe?",
+      speakerNotes: "Ahora surge la gran pregunta detonante: ¿qué fuerza impulsa a actuar al personaje y hace que una historia exista de verdad?",
+      palabrasAprox: 20,
       duracionSeg: 9
     }
   ];
@@ -914,65 +414,93 @@ export function getCanonicalClase1Lengua(): LessonData {
   const explicativoSlides: SlidePrompt[] = [
     {
       slideNumber: 1,
-      tituloMomento: "El Conflicto como Motor Narrativo",
-      visualPrompt: "Modern anime style 16:9. The boy and girl standing before an interactive lightboard showing a dynamic balance scale: 'Equilibrio Inicial' vs 'Conflicto Detonante'. Clean typography.",
+      tituloMomento: "Objetivo de la Lección",
+      didacticPurpose: "Objetivo de la Lección",
+      visualPrompt: "Modern anime style 16:9. The boy and girl standing before an interactive lightboard showing a dynamic balance scale: 'Equilibrio Inicial' vs 'Conflicto Detonante'. Clean typography. No text drawn by AI.",
+      overlayTitle: "Objetivo de la lección",
+      overlaySubtitle: "Analizar el conflicto como motor de la narración",
       overlayText: "¿Qué es el Conflicto Narrativo?",
-      speakerNotes: "Para comprender un relato, debemos reconocer su motor: el conflicto narrativo es el problema o quiebre que obliga a los personajes a actuar.",
-      palabrasAprox: 22,
-      duracionSeg: 11
+      vectorialOverlayPptx: "Rótulo formal: OA 03 · Conflicto Narrativo y Etapas del Viaje del Héroe",
+      speakerNotes: "El objetivo de hoy es aprender a identificar el conflicto narrativo como motor de la historia y a reconocer cómo transforma a los personajes en el relato.",
+      palabrasAprox: 26,
+      duracionSeg: 12
     },
     {
       slideNumber: 2,
-      tituloMomento: "Fuerzas en Oposición",
-      visualPrompt: "Modern anime style. Split screen diagram: Left side shows the protagonist's goal; Right side shows the opposing obstacle or antagonist. High contrast, sharp clarity.",
+      tituloMomento: "Definición Conceptual",
+      didacticPurpose: "Definición Conceptual",
+      visualPrompt: "Modern anime style. Split screen diagram: Left side shows the protagonist's goal; Right side shows the opposing obstacle or antagonist. High contrast, sharp clarity. No text drawn by AI.",
+      overlayTitle: "El conflicto narrativo",
+      overlaySubtitle: "Oposición entre el deseo y el obstáculo",
       overlayText: "Protagonista vs. Fuerza Opositora",
-      speakerNotes: "Toda trama enfrenta dos fuerzas: el deseo del protagonista por alcanzar una meta y los obstáculos que se interponen en su camino.",
-      palabrasAprox: 21,
-      duracionSeg: 10
+      vectorialOverlayPptx: "Mapa Visual: Fuerza A (Meta del Protagonista) <---> Fuerza B (Obstáculo u Opositor)",
+      speakerNotes: "Toda historia nace cuando el equilibrio se rompe. El conflicto es la tensión constante entre lo que el protagonista desea alcanzar y los obstáculos que se lo impiden.",
+      palabrasAprox: 27,
+      duracionSeg: 12
     },
     {
       slideNumber: 3,
-      tituloMomento: "Conflicto Externo",
-      visualPrompt: "Modern anime style. The young adventurers navigating a stormy sea in a wooden boat, facing natural forces. Callout box: 'Conflicto Externo: El Entorno'.",
-      overlayText: "Conflicto Externo: El Mundo",
-      speakerNotes: "El conflicto externo proviene del entorno: un monstruo, un villano, una tormenta o una injusticia social que el personaje debe enfrentar.",
-      palabrasAprox: 21,
-      duracionSeg: 10
+      tituloMomento: "Modelamiento Textual",
+      didacticPurpose: "Modelamiento Textual",
+      visualPrompt: "Modern anime style. A prominent glowing parchment paper showing a clearly legible excerpt of an adventure story, with key sentences highlighted. Clear negative space. No text drawn by AI.",
+      overlayTitle: "Análisis del fragmento",
+      overlaySubtitle: "Localizar la evidencia en el texto",
+      overlayText: "Evidencia y Deseo del Protagonista",
+      vectorialOverlayPptx: "Fragmento fuente visible: Subrayado de la meta y encerrado del obstáculo detonante",
+      speakerNotes: "Observemos este fragmento: marcamos con color la meta del personaje y subrayamos la fuerza opuesta. Al contrastarlas, el conflicto central queda a la vista con total claridad.",
+      palabrasAprox: 26,
+      duracionSeg: 12
     },
     {
       slideNumber: 4,
-      tituloMomento: "Conflicto Interno",
-      visualPrompt: "Modern anime style. Close-up on the girl reflecting in front of a mirror, with subtle dual lighting representing doubt and courage. Callout box: 'Conflicto Interno: La Mente'.",
-      overlayText: "Conflicto Interno: Las Emociones",
-      speakerNotes: "El conflicto interno ocurre dentro del personaje: son sus dudas, culpas, temores o dilemas éticos que lo desafían a madurar.",
-      palabrasAprox: 20,
-      duracionSeg: 10
+      tituloMomento: "Tipos de Conflicto",
+      didacticPurpose: "Tipos de Conflicto",
+      visualPrompt: "Modern anime style. Side by side panels: Left shows hero facing a storm (external); Right shows hero in internal doubt looking in mirror (internal). No text drawn by AI.",
+      overlayTitle: "Interno vs Externo",
+      overlaySubtitle: "Lucha interior o desafío del entorno",
+      overlayText: "Conflictos Externos e Internos",
+      vectorialOverlayPptx: "Cuadro comparativo: Conflicto Interno (Miedo, culpa) vs Externo (Naturaleza, rival, sociedad)",
+      speakerNotes: "El conflicto puede ser externo, si el héroe enfrenta monstruos o tempestades; o interno, si debe vencer sus propios temores y dudas antes de tomar una decisión.",
+      palabrasAprox: 26,
+      duracionSeg: 12
     },
     {
       slideNumber: 5,
-      tituloMomento: "Progresión de la Tensión Dramática",
-      visualPrompt: "Modern anime style. The boy tracing a clean glowing narrative curve that rises from the Call to the Abyss and resolves at the Return.",
-      overlayText: "La Curva de Tensión Dramática",
-      speakerNotes: "A medida que el conflicto se intensifica, la tensión dramática sube hasta alcanzar el clímax en la prueba suprema del abismo.",
-      palabrasAprox: 21,
-      duracionSeg: 10
+      tituloMomento: "Evolución del Personaje",
+      didacticPurpose: "Evolución del Personaje",
+      visualPrompt: "Modern anime style. The progression of the protagonist across 3 stages: naive beginner, tested apprentice, and confident hero holding a lantern. Clean lightboard. No text drawn by AI.",
+      overlayTitle: "El cambio visible del héroe",
+      overlaySubtitle: "Superar el obstáculo transforma la identidad",
+      overlayText: "Evolución del Personaje en el Conflicto",
+      vectorialOverlayPptx: "Línea de transformación: Estado inicial (Inseguro) -> Prueba -> Estado final (Maduro y sabio)",
+      speakerNotes: "Al enfrentar las fuerzas opositoras, el personaje no solo avanza en el mapa: cambia su manera de pensar, supera sus límites y regresa con nueva sabiduría para su comunidad.",
+      palabrasAprox: 28,
+      duracionSeg: 13
     },
     {
       slideNumber: 6,
-      tituloMomento: "La Transformación del Personaje",
-      visualPrompt: "Modern anime style. Side-by-side comparison of the young explorer: before the journey (timid, insecure) and after (confident, noble, mature).",
-      overlayText: "La Huella de la Experiencia",
-      speakerNotes: "Las dificultades no solo entretienen: transforman al personaje. Al superar las pruebas, el héroe adquiere nueva madurez y valores.",
-      palabrasAprox: 18,
-      duracionSeg: 9
+      tituloMomento: "Prevención del Error",
+      didacticPurpose: "Prevención del Error",
+      visualPrompt: "Modern anime style. Contrast graphic: An incidental minor accident crossed out with subtle red; The central plot conflict illuminated with vibrant teal glow. No text drawn by AI.",
+      overlayTitle: "Atención: Error habitual",
+      overlaySubtitle: "No confundir problema secundario con conflicto central",
+      overlayText: "Problema Pasajero vs Conflicto Central",
+      vectorialOverlayPptx: "Alerta de lectura: Conflicto central (motiva toda la obra) ≠ Percance pasajero (se resuelve en un párrafo)",
+      speakerNotes: "Un error habitual consiste en confundir un tropiezo menor con el conflicto central. Pregúntate siempre: ¿cuál es el gran obstáculo que sostiene la trama desde el principio hasta el desenlace?",
+      palabrasAprox: 28,
+      duracionSeg: 13
     },
     {
       slideNumber: 7,
-      tituloMomento: "Síntesis y Aplicación en el Cuaderno",
-      visualPrompt: "Modern anime style. Both students with their open literature notebooks and fountain pens, smiling ready to analyze stories.",
-      overlayText: "¡A analizar relatos en el cuaderno!",
-      speakerNotes: "Ahora que conoces la estructura del viaje y el papel del conflicto, estás listo para analizar cualquier obra literaria junto a tu mentor.",
-      palabrasAprox: 22,
+      tituloMomento: "Síntesis y Regla de Oro",
+      didacticPurpose: "Síntesis y Regla de Oro",
+      visualPrompt: "Modern anime style. The two 13-year-olds pointing toward the StudioSimple emblem, with a dynamic infographic summarizing the narrative journey. Positive confident expressions. No text drawn by AI.",
+      overlayTitle: "Regla de Oro de la narrativa",
+      overlaySubtitle: "Sin conflicto no hay transformación ni historia",
+      overlayText: "Síntesis: El Conflicto como Motor",
+      vectorialOverlayPptx: "Esquema de síntesis: Equilibrio -> Quiebre (Conflicto) -> Acción -> Transformación",
+      speakerNotes: "Recuerda la regla de oro: sin conflicto no hay narración. ¡Ahora demostraremos lo aprendido aplicando este mapa en las lecturas interactivas de la plataforma!",
+      palabrasAprox: 24,
       duracionSeg: 11
     }
   ];
@@ -1111,132 +639,188 @@ export function getCanonicalClase1Ciencias(): LessonData {
   const hookSlides: SlidePrompt[] = [
     {
       slideNumber: 1,
-      tituloMomento: "Apertura: Más Allá de lo Biológico",
-      visualPrompt: "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining a glowing interactive holographic infographic of the 4 dimensions of human sexuality. Warm, inviting scientific atmosphere, negative space in top third.",
+      tituloMomento: "Apertura e Impacto",
+      didacticPurpose: "Apertura e Impacto",
+      visualPrompt: "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining a glowing interactive holographic infographic of the 4 dimensions of human sexuality. Warm, inviting scientific atmosphere, negative space in top third. No text drawn by AI.",
+      overlayTitle: "Misión 1: La sexualidad humana",
+      overlaySubtitle: "Mucho más que un fenómeno biológico",
       overlayText: "Misión 1: Las 4 Dimensiones Humanas",
-      speakerNotes: "La ciencia actual comprende la sexualidad como una vivencia integral que acompaña a la persona durante toda su vida.",
-      palabrasAprox: 19,
+      vectorialOverlayPptx: "Esquema integrador: Silueta humana y 4 nodos dimensionales interconectados",
+      speakerNotes: "Comienza una expedición fascinante en ciencias. La sexualidad humana es una vivencia integral que nos acompaña durante todas las etapas de nuestra vida.",
+      palabrasAprox: 21,
       duracionSeg: 9
     },
     {
       slideNumber: 2,
-      tituloMomento: "Dimensión 1: El Cuerpo Biológico",
-      visualPrompt: "Modern anime style. Clean anatomical growth chart showing developmental milestones of puberty, height markers, and secondary sexual characteristics. High clarity, medical illustration style.",
+      tituloMomento: "Dimensión Biológica",
+      didacticPurpose: "Dimensión Biológica",
+      visualPrompt: "Modern anime style. Clean anatomical growth chart showing developmental milestones of puberty, height markers, and secondary sexual characteristics. High clarity, medical illustration style. No text drawn by AI.",
+      overlayTitle: "Dimensión biológica",
+      overlaySubtitle: "El cuerpo físico y los cambios puberales",
       overlayText: "Dimensión Biológica: El Cuerpo",
-      speakerNotes: "Abarca nuestro cuerpo físico, el desarrollo puberal, los cambios hormonales y la maduración biológica.",
-      palabrasAprox: 14,
-      duracionSeg: 8
+      vectorialOverlayPptx: "Capa médica: Eje de maduración corporal, estirón y caracteres sexuales secundarios",
+      speakerNotes: "Comprende nuestro cuerpo material, la maduración celular y los cambios puberales que transforman nuestra estatura, voz y fisonomía.",
+      palabrasAprox: 18,
+      duracionSeg: 9
     },
     {
       slideNumber: 3,
-      tituloMomento: "Dimensión 2: Sentimientos y Afectividad",
-      visualPrompt: "Modern anime style. Close-up of adolescents sharing a sincere laugh, icons of heart and brain softly illuminated. Warm morning light, emotional connection.",
+      tituloMomento: "Dimensión Afectiva",
+      didacticPurpose: "Dimensión Afectiva",
+      visualPrompt: "Modern anime style. Close-up of adolescents sharing a sincere laugh, icons of heart and brain softly illuminated. Warm morning light, emotional connection. No text drawn by AI.",
+      overlayTitle: "Dimensión afectiva",
+      overlaySubtitle: "Emociones, cariño y autoestima",
       overlayText: "Dimensión Afectiva: Emociones",
-      speakerNotes: "Reúne nuestras emociones, el cariño, la autoestima y la maravillosa capacidad de establecer lazos afectivos profundos.",
-      palabrasAprox: 16,
+      vectorialOverlayPptx: "Iconografía emocional: Vínculos de apego, empatía y autoimagen positiva",
+      speakerNotes: "Reúne nuestros sentimientos, la autoestima personal, el cariño y la capacidad de establecer lazos de ternura y confianza profunda con otros.",
+      palabrasAprox: 20,
       duracionSeg: 9
     },
     {
       slideNumber: 4,
-      tituloMomento: "Dimensión 3: Convivencia y Sociedad",
-      visualPrompt: "Modern anime style. Diverse group of young students collaborating in a bright park, talking respectfully with families and friends. Crisp clean composition.",
+      tituloMomento: "Dimensión Social",
+      didacticPurpose: "Dimensión Social",
+      visualPrompt: "Modern anime style. Diverse group of young students collaborating in a bright park, talking respectfully with families and friends. Crisp clean composition. No text drawn by AI.",
+      overlayTitle: "Dimensión social",
+      overlaySubtitle: "Familia, amistades y cultura",
       overlayText: "Dimensión Social: Relaciones",
-      speakerNotes: "Se manifiesta en cómo nos relacionamos con la familia, los amigos y nuestra cultura en comunidad.",
-      palabrasAprox: 15,
-      duracionSeg: 8
+      vectorialOverlayPptx: "Red de interacción: Individuo en el centro rodeado por familia, escuela y comunidad",
+      speakerNotes: "Se manifiesta en cómo convivimos día a día, compartiendo experiencias con la familia, participando en el colegio y dialogando con nuestro grupo de amigos.",
+      palabrasAprox: 22,
+      duracionSeg: 10
     },
     {
       slideNumber: 5,
-      tituloMomento: "Dimensión 4: Valores, Respeto y Ética",
-      visualPrompt: "Modern anime style. Balance scale emblem with glowing symbols of respect, personal limits, consent, and mutual dignity. Clear negative space.",
+      tituloMomento: "Dimensión Ética",
+      didacticPurpose: "Dimensión Ética",
+      visualPrompt: "Modern anime style. Balance scale emblem with glowing symbols of respect, personal limits, consent, and mutual dignity. Clear negative space. No text drawn by AI.",
+      overlayTitle: "Dimensión ética",
+      overlaySubtitle: "Valores, consentimiento y dignidad",
       overlayText: "Dimensión Ética: Valores y Respeto",
-      speakerNotes: "Guía nuestras decisiones mediante el respeto a la dignidad ajena, el consentimiento y el cuidado mutuo.",
-      palabrasAprox: 15,
-      duracionSeg: 8
+      vectorialOverlayPptx: "Símbolos normativos: Escudo de límites personales y balanza de respeto mutuo",
+      speakerNotes: "Guía nuestras decisiones morales a través del respeto incondicional a la dignidad humana, la valoración de límites personales y el consentimiento mutuo.",
+      palabrasAprox: 20,
+      duracionSeg: 9
     },
     {
       slideNumber: 6,
-      tituloMomento: "Interrelación de los 4 Cuadrantes",
-      visualPrompt: "Modern anime style. The four dimensions connecting dynamically with glowing energetic nodes around a human silhouette. High visual impact, harmony.",
+      tituloMomento: "Interrelación de Dimensiones",
+      didacticPurpose: "Interrelación de Dimensiones",
+      visualPrompt: "Modern anime style. The four dimensions connecting dynamically with glowing energetic nodes around a human silhouette. High visual impact, harmony. No text drawn by AI.",
+      overlayTitle: "Un sistema inseparable",
+      overlaySubtitle: "Cuatro dimensiones que dialogan a la vez",
       overlayText: "Un Sistema Integral e Inseparable",
-      speakerNotes: "Ninguna dimensión actúa aislada: lo que sentimos influye en nuestro cuerpo y en nuestras relaciones sociales.",
-      palabrasAprox: 16,
+      vectorialOverlayPptx: "Diagrama dinámico de 4 cuadrantes con flechas de retroalimentación recíproca",
+      speakerNotes: "Ninguna dimensión funciona aislada de las demás. Lo que experimenta nuestro cuerpo repercute en nuestras emociones y moldea nuestras relaciones comunitarias.",
+      palabrasAprox: 20,
       duracionSeg: 9
     },
     {
       slideNumber: 7,
-      tituloMomento: "Puente a la Conversación Diaria",
-      visualPrompt: "Modern anime style. Both explorers smiling, ready to investigate everyday cases with their science notebooks open. StudioSimple badge.",
+      tituloMomento: "Pregunta Detonante",
+      didacticPurpose: "Pregunta Detonante",
+      visualPrompt: "Modern anime style. Both explorers smiling, ready to investigate everyday cases with their science notebooks open. StudioSimple badge. No text drawn by AI.",
+      overlayTitle: "El desafío científico",
+      overlaySubtitle: "¿Cómo actúan las 4 dimensiones juntas?",
       overlayText: "StudioSimple · Ciencias Naturales",
-      speakerNotes: "Analicemos ahora juntos cómo estas cuatro dimensiones se manifiestan en situaciones reales de cada día.",
-      palabrasAprox: 15,
-      duracionSeg: 8
+      vectorialOverlayPptx: "Pregunta detonante: ¿Cómo influyen los 4 aspectos en una decisión cotidiana real?",
+      speakerNotes: "Ahora surge la gran pregunta: cuando enfrentamos un cambio en nuestra adolescencia, ¿cómo interactúan estas cuatro dimensiones al mismo tiempo?",
+      palabrasAprox: 19,
+      duracionSeg: 9
     }
   ];
 
   const explicativoSlides: SlidePrompt[] = [
     {
       slideNumber: 1,
-      tituloMomento: "Definición del Enfoque Integral",
-      visualPrompt: "Modern anime style 16:9. The boy and girl standing before a clear 4-quadrant lightboard: 'Biológica', 'Afectiva', 'Social' y 'Ética'. Clean modern typography.",
+      tituloMomento: "Objetivo de la Lección",
+      didacticPurpose: "Objetivo de la Lección",
+      visualPrompt: "Modern anime style 16:9. The boy and girl standing before a clear 4-quadrant lightboard: 'Biológica', 'Afectiva', 'Social' y 'Ética'. Clean modern typography. No text drawn by AI.",
+      overlayTitle: "Objetivo de la lección",
+      overlaySubtitle: "Explicar las 4 dimensiones de la sexualidad humana",
       overlayText: "Modelo Integral de la Sexualidad",
-      speakerNotes: "La sexualidad humana es una vivencia integral que comprende cuatro dimensiones inseparables presentes durante toda la vida.",
-      palabrasAprox: 17,
-      duracionSeg: 9
+      vectorialOverlayPptx: "Rótulo formal: OA 01 · Modelo Integral de la Sexualidad Humana",
+      speakerNotes: "El objetivo de hoy es aprender a reconocer y explicar que la sexualidad humana está conformada por cuatro dimensiones inseparables: biológica, afectiva, social y ética.",
+      palabrasAprox: 24,
+      duracionSeg: 11
     },
     {
       slideNumber: 2,
-      tituloMomento: "La Dimensión Biológica y Pubertad",
-      visualPrompt: "Modern anime style. The girl pointing at growth metrics, voice change diagrams, and cellular maturation charts. Clear clinical clarity.",
+      tituloMomento: "Análisis Biológico",
+      didacticPurpose: "Análisis Biológico",
+      visualPrompt: "Modern anime style. The girl pointing at growth metrics, voice change diagrams, and cellular maturation charts. Clear clinical clarity. No text drawn by AI.",
+      overlayTitle: "Eje Biológico: La Pubertad",
+      overlaySubtitle: "Maduración fisiológica y sistema endocrino",
       overlayText: "Cambios Biológicos de la Pubertad",
-      speakerNotes: "En la pubertad, las hormonas activan el crecimiento de estatura, el cambio de voz y los caracteres sexuales secundarios.",
-      palabrasAprox: 18,
-      duracionSeg: 10
+      vectorialOverlayPptx: "Diagrama fisiológico: Glándula hipófisis -> Hormonas gonadales -> Caracteres secundarios",
+      speakerNotes: "En la pubertad, el sistema endocrino libera señales químicas que inician el estirón puberal, el desarrollo reproductivo y cambios visibles en la piel, masa muscular y voz.",
+      palabrasAprox: 25,
+      duracionSeg: 12
     },
     {
       slideNumber: 3,
-      tituloMomento: "La Dimensión Afectiva y Autoestima",
-      visualPrompt: "Modern anime style. The boy reflecting on emotional self-worth and family bonds with gentle warm ambient lighting. Negative space on left.",
+      tituloMomento: "Análisis Afectivo",
+      didacticPurpose: "Análisis Afectivo",
+      visualPrompt: "Modern anime style. The boy reflecting on emotional self-worth and family bonds with gentle warm ambient lighting. Negative space on left. No text drawn by AI.",
+      overlayTitle: "Eje Afectivo: Las Emociones",
+      overlaySubtitle: "Autoestima y gestión de los afectos",
       overlayText: "Autoestima y Expresión de Afectos",
-      speakerNotes: "La dimensión afectiva comprende cómo aprendemos a querernos a nosotros mismos y a expresar sentimientos sinceros a los demás.",
-      palabrasAprox: 19,
-      duracionSeg: 10
+      vectorialOverlayPptx: "Modelo de autovaloración: Identidad personal, autoaceptación y expresión sana de sentimientos",
+      speakerNotes: "El eje afectivo orienta cómo nos sentimos con nosotros mismos. Una autoestima sólida permite valorar el propio cuerpo y comunicar afectos de manera asertiva y respetuosa.",
+      palabrasAprox: 25,
+      duracionSeg: 12
     },
     {
       slideNumber: 4,
-      tituloMomento: "La Dimensión Social y Convivencia",
-      visualPrompt: "Modern anime style. Young adolescents participating in school and family dialogues, showing open active listening. Soft depth of field.",
+      tituloMomento: "Análisis Social",
+      didacticPurpose: "Análisis Social",
+      visualPrompt: "Modern anime style. Young adolescents participating in school and family dialogues, showing open active listening. Soft depth of field. No text drawn by AI.",
+      overlayTitle: "Eje Social: La Convivencia",
+      overlaySubtitle: "Pertenencia, roles y vida en sociedad",
       overlayText: "Amistad, Familia y Cultura",
-      speakerNotes: "Somos seres sociables: aprendemos a convivir con respeto en el hogar, en el colegio y con nuestro grupo de amigos.",
-      palabrasAprox: 20,
-      duracionSeg: 10
+      vectorialOverlayPptx: "Matriz sociocultural: Normas de convivencia escolar, dinámicas familiares y equidad",
+      speakerNotes: "En el entorno social aprendemos pautas culturales y construimos amistades. La dimensión social nos invita a convivir en igualdad de derechos sin discriminación ni estereotipos.",
+      palabrasAprox: 24,
+      duracionSeg: 11
     },
     {
       slideNumber: 5,
-      tituloMomento: "La Dimensión Ética y Consentimiento",
-      visualPrompt: "Modern anime style. Two hands shaking with dignity and mutual respect. Icon of personal boundaries and safety shield in glowing cyan.",
+      tituloMomento: "Análisis Ético",
+      didacticPurpose: "Análisis Ético",
+      visualPrompt: "Modern anime style. Two hands shaking with dignity and mutual respect. Icon of personal boundaries and safety shield in glowing cyan. No text drawn by AI.",
+      overlayTitle: "Eje Ético: El Consentimiento",
+      overlaySubtitle: "Dignidad humana y límites inviolables",
       overlayText: "Límites Personales y Consentimiento",
-      speakerNotes: "La ética nos enseña a valorar la dignidad de cada persona, respetar sus límites y construir relaciones basadas en el consentimiento.",
-      palabrasAprox: 20,
-      duracionSeg: 10
+      vectorialOverlayPptx: "Capa ética: Principio de consentimiento explícito y respeto a la privacidad del prójimo",
+      speakerNotes: "El eje ético establece que el cuerpo de cada individuo es inviolable. Toda relación humana sana se funda en la dignidad, la honestidad y el consentimiento libre y mutuo.",
+      palabrasAprox: 27,
+      duracionSeg: 13
     },
     {
       slideNumber: 6,
-      tituloMomento: "Las Dimensiones se Conectan",
-      visualPrompt: "Modern anime style. Dynamic circular flowchart showing the feedback between body changes, emotions, social interactions, and moral values.",
+      tituloMomento: "Casos Concretos",
+      didacticPurpose: "Casos Concretos",
+      visualPrompt: "Modern anime style. Dynamic circular flowchart showing the feedback between body changes, emotions, social interactions, and moral values. No text drawn by AI.",
+      overlayTitle: "Integración de los 4 ejes",
+      overlaySubtitle: "Análisis de una situación real cotidiana",
       overlayText: "Conexión Permanente entre Dimensiones",
-      speakerNotes: "Lo que experimenta nuestro cuerpo afecta nuestras emociones; y nuestros valores éticos guían cómo convivimos en sociedad.",
-      palabrasAprox: 17,
-      duracionSeg: 9
+      vectorialOverlayPptx: "Tabla de desglose de caso: Situación descrita -> Identificación de aportes de cada cuadrante",
+      speakerNotes: "Ante un dilema real, como la presión del grupo de amigos, la ética marca los límites, la emoción entrega empatía, la razón social evalúa el entorno y la biología experimenta la alerta.",
+      palabrasAprox: 30,
+      duracionSeg: 14
     },
     {
       slideNumber: 7,
-      tituloMomento: "Síntesis y Cuaderno de Ciencias",
-      visualPrompt: "Modern anime style. Both students with their open science notebooks and colored pencils, ready to draw their 4-column organizer.",
-      overlayText: "¡A registrar en el cuaderno!",
-      speakerNotes: "Con el modelo de 4 dimensiones claro, abre tu cuaderno de Ciencias Naturales para analizar casos concretos junto a tu mentor.",
-      palabrasAprox: 20,
-      duracionSeg: 10
+      tituloMomento: "Síntesis y Regla de Oro",
+      didacticPurpose: "Síntesis y Regla de Oro",
+      visualPrompt: "Modern anime style. StudioSimple emblem alongside a prominent balance diagram with all four dimensions working in dynamic equilibrium. Clean lines. No text drawn by AI.",
+      overlayTitle: "Regla de Oro de la sexualidad",
+      overlaySubtitle: "Biológica + Afectiva + Social + Ética = Salud Integral",
+      overlayText: "Regla de Oro: La Sexualidad es Integral",
+      vectorialOverlayPptx: "Infografía de síntesis: Las 4 dimensiones convergen en el bienestar integral de la persona",
+      speakerNotes: "Recuerda la regla de oro: la sexualidad es integral. ¡Ahora demostraremos lo aprendido aplicando este modelo en las situaciones prácticas de la plataforma interactiva!",
+      palabrasAprox: 23,
+      duracionSeg: 11
     }
   ];
 
@@ -1383,132 +967,188 @@ export function getCanonicalClase1Historia(): LessonData {
   const hookSlides: SlidePrompt[] = [
     {
       slideNumber: 1,
-      tituloMomento: "El Mundo Paleolítico Nómade",
-      visualPrompt: "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, watching from a ridge as a Paleolithic band moves across cold windswept plains carrying shelters and stone spears. Cinematic atmospheric lighting.",
+      tituloMomento: "Apertura y Escenario",
+      didacticPurpose: "Apertura y Escenario",
+      visualPrompt: "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, watching from a ridge as a Paleolithic band moves across cold windswept plains carrying shelters and stone spears. Cinematic atmospheric lighting. No text drawn by AI.",
+      overlayTitle: "Hace 15.000 años: La vida nómade",
+      overlaySubtitle: "Bandas de cazadores-recolectores del Paleolítico",
       overlayText: "Hace 15.000 años: La vida nómade",
-      speakerNotes: "Durante milenios, los seres humanos debían seguir las manadas y recolectar frutos silvestres para no morir de hambre.",
-      palabrasAprox: 17,
+      vectorialOverlayPptx: "Línea temporal: Paleolítico superior (Clima glacial, refugios transitorios)",
+      speakerNotes: "Durante decenas de milenios, las bandas humanas debían desplazarse constantemente siguiendo las manadas de animales para sobrevivir en un clima glacial riguroso.",
+      palabrasAprox: 21,
       duracionSeg: 9
     },
     {
       slideNumber: 2,
-      tituloMomento: "El Clima Cambia y Nace la Observación",
-      visualPrompt: "Modern anime style. Warm sunlight illuminating green valleys along a flowing river. Early hunter-gatherers observing wild wheat and barley growing naturally. Fresh spring atmosphere.",
+      tituloMomento: "El Clima Cambia",
+      didacticPurpose: "El Clima Cambia",
+      visualPrompt: "Modern anime style. Warm sunlight illuminating green valleys along a flowing river. Early hunter-gatherers observing wild wheat and barley growing naturally. Fresh spring atmosphere. No text drawn by AI.",
+      overlayTitle: "El deshielo y el nuevo clima",
+      overlaySubtitle: "Temperaturas más cálidas y valles verdes",
       overlayText: "El Clima Cambia y Florece la Tierra",
-      speakerNotes: "Al terminar la última glaciación, el clima se volvió más templado y las comunidades comenzaron a observar los ciclos de las plantas.",
-      palabrasAprox: 21,
-      duracionSeg: 10
+      vectorialOverlayPptx: "Vector de transición: Fin de la glaciación -> Nacimiento de cuencas fluviales fértiles",
+      speakerNotes: "Al finalizar la última glaciación, el calentamiento global permitió que las llanuras se cubrieran de cereales silvestres y las comunidades comenzaron a observar los ciclos vegetales.",
+      palabrasAprox: 24,
+      duracionSeg: 11
     },
     {
       slideNumber: 3,
-      tituloMomento: "La Invención de la Agricultura",
-      visualPrompt: "Modern anime style. Early Neolithic farmers carefully planting emmer and barley seeds into fertile soil near the Euphrates river with polished digging sticks. Golden morning light.",
+      tituloMomento: "La Gran Invención",
+      didacticPurpose: "La Gran Invención",
+      visualPrompt: "Modern anime style. Early Neolithic farmers carefully planting emmer and barley seeds into fertile soil near the Euphrates river with polished digging sticks. Golden morning light. No text drawn by AI.",
+      overlayTitle: "La invención de la agricultura",
+      overlaySubtitle: "Siembra deliberada y cosecha de granos",
       overlayText: "La Revolución Agrícola",
-      speakerNotes: "Sembrar trigo, cebada y legumbres permitió producir alimento en un lugar permanente sin tener que trasladarse.",
-      palabrasAprox: 16,
-      duracionSeg: 8
+      vectorialOverlayPptx: "Capa tecnológica: Bastones de siembra, semillas de trigo y cebada en suelo fértil",
+      speakerNotes: "Aprender a sembrar trigo y cebada transformó la historia humana: ya no era necesario migrar para comer, pues el alimento brotaba en la propia tierra.",
+      palabrasAprox: 23,
+      duracionSeg: 10
     },
     {
       slideNumber: 4,
-      tituloMomento: "La Domesticación Ganadera",
-      visualPrompt: "Modern anime style. Neolithic sheep and goats grazing peacefully in stone-fenced enclosures beside early mudbrick round houses. Clean lineart, soft depth of field.",
+      tituloMomento: "Domesticación Animal",
+      didacticPurpose: "Domesticación Animal",
+      visualPrompt: "Modern anime style. Neolithic sheep and goats grazing peacefully in stone-fenced enclosures beside early mudbrick round houses. Clean lineart, soft depth of field. No text drawn by AI.",
+      overlayTitle: "La ganadería neolítica",
+      overlaySubtitle: "Crianza de rebaños y control de recursos",
       overlayText: "La Ganadería Neolítica",
-      speakerNotes: "La crianza controlada de ovejas y cabras aseguró leche, carne y lana constante durante todo el año.",
-      palabrasAprox: 16,
-      duracionSeg: 8
+      vectorialOverlayPptx: "Iconos productivos: Cercados de piedra con ovejas y cabras junto al río",
+      speakerNotes: "Al domesticar ovejas y cabras, las familias aseguraron carne, leche y lana constante, liberándose de la incertidumbre que imponía la cacería de animales salvajes.",
+      palabrasAprox: 23,
+      duracionSeg: 10
     },
     {
       slideNumber: 5,
-      tituloMomento: "Primeras Aldeas Sedentarias",
-      visualPrompt: "Modern anime style. Panoramic view of an ancient settlement like Jericho or Catalhoyuk with square mudbrick dwellings, communal granaries, and children playing safely.",
+      tituloMomento: "Nacimiento de Aldeas",
+      didacticPurpose: "Nacimiento de Aldeas",
+      visualPrompt: "Modern anime style. Panoramic view of an ancient settlement like Jericho or Catalhoyuk with square mudbrick dwellings, communal granaries, and children playing safely. No text drawn by AI.",
+      overlayTitle: "Las primeras aldeas",
+      overlaySubtitle: "De campamentos temporales a viviendas de adobe",
       overlayText: "Nacen las Primeras Aldeas Sedentarias",
-      speakerNotes: "Con comida almacenada en graneros, las familias levantaron viviendas duraderas y fundaron las primeras aldeas.",
-      palabrasAprox: 15,
-      duracionSeg: 8
+      vectorialOverlayPptx: "Plano urbano primitivo: Asentamiento permanente de Jericó o Çatalhöyük con graneros",
+      speakerNotes: "Con excedentes almacenados en silos y graneros, nacieron las primeras viviendas sólidas de adobe y piedra: el ser humano se convirtió en un habitante sedentario.",
+      palabrasAprox: 23,
+      duracionSeg: 10
     },
     {
       slideNumber: 6,
-      tituloMomento: "Nuevas Herramientas y Oficios",
-      visualPrompt: "Modern anime style. Villagers shaping clay into storage pots, weaving woolen textiles, and polishing stone sickles beside a communal fire.",
+      tituloMomento: "División del Trabajo",
+      didacticPurpose: "División del Trabajo",
+      visualPrompt: "Modern anime style. Villagers shaping clay into storage pots, weaving woolen textiles, and polishing stone sickles beside a communal fire. No text drawn by AI.",
+      overlayTitle: "Especialización de oficios",
+      overlaySubtitle: "Alfareros, tejedores y constructores",
       overlayText: "Nuevas Herramientas y Oficios",
-      speakerNotes: "Al no necesitar que todos cazaran, nacieron artesanos de la alfarería, tejedores y constructores.",
-      palabrasAprox: 13,
-      duracionSeg: 7
+      vectorialOverlayPptx: "Red social de oficios: Excedente agrícola -> Alfarería, textilería y herramientas pulidas",
+      speakerNotes: "Al no tener que salir todos a buscar alimento, surgieron artesanos que crearon la cerámica para conservar granos, telares para abrigo y herramientas de piedra pulida.",
+      palabrasAprox: 24,
+      duracionSeg: 11
     },
     {
       slideNumber: 7,
-      tituloMomento: "Puente a la Conversación Histórica",
-      visualPrompt: "Modern anime style. The two 13-year-olds analyzing a glowing interactive map of the Fertile Crescent with timeline markers. StudioSimple emblem.",
+      tituloMomento: "Pregunta Detonante",
+      didacticPurpose: "Pregunta Detonante",
+      visualPrompt: "Modern anime style. The two 13-year-olds analyzing a glowing interactive map of the Fertile Crescent with timeline markers. StudioSimple emblem. No text drawn by AI.",
+      overlayTitle: "La gran pregunta histórica",
+      overlaySubtitle: "¿Por qué el Neolítico cambió la humanidad?",
       overlayText: "StudioSimple · Historia 7° Básico",
-      speakerNotes: "Descubramos en nuestra línea de tiempo cómo este salto revolucionario dio origen a nuestras civilizaciones.",
-      palabrasAprox: 15,
-      duracionSeg: 8
+      vectorialOverlayPptx: "Pregunta detonante: ¿De qué manera la agricultura y la aldea transformaron la sociedad para siempre?",
+      speakerNotes: "Surge ahora la gran pregunta histórica: ¿cómo la revolución de la agricultura y la sedentarización sentó las bases de nuestras civilizaciones actuales?",
+      palabrasAprox: 21,
+      duracionSeg: 10
     }
   ];
 
   const explicativoSlides: SlidePrompt[] = [
     {
       slideNumber: 1,
-      tituloMomento: "De la Depredación a la Producción",
-      visualPrompt: "Modern anime style 16:9. The boy and girl standing before a sleek interactive lightboard contrasting two eras: 'Economía Depredadora (Paleolítico)' vs 'Economía Productora (Neolítico)'.",
-      overlayText: "La Gran Transformación Económica",
-      speakerNotes: "El Neolítico representa el salto decisivo: el ser humano dejó de recolectar pasivamente para convertirse en productor de su propio alimento.",
-      palabrasAprox: 20,
-      duracionSeg: 10
+      tituloMomento: "Objetivo de la Lección",
+      didacticPurpose: "Objetivo de la Lección",
+      visualPrompt: "Modern anime style 16:9. The boy and girl standing before a grand historical timeline comparing 'Vida Nómade (Paleolítico)' and 'Vida Sedentaria (Neolítico)'. Clean modern typography. No text drawn by AI.",
+      overlayTitle: "Objetivo de la lección",
+      overlaySubtitle: "Explicar el impacto de la revolución agrícola",
+      overlayText: "La Gran Transformación del Neolítico",
+      vectorialOverlayPptx: "Rótulo formal: OA 02 · De la Hominización a las Primeras Sociedades Agrícolas",
+      speakerNotes: "El objetivo de hoy es aprender cómo el descubrimiento de la agricultura, la domesticación de animales y la sedentarización revolucionaron la forma de vida humana en el Neolítico.",
+      palabrasAprox: 26,
+      duracionSeg: 12
     },
     {
       slideNumber: 2,
-      tituloMomento: "El Creciente Fértil y los Ríos",
-      visualPrompt: "Modern anime style. Map of the Middle East highlighting the green arc formed by the Tigris, Euphrates, and Nile rivers. Clear geographic labels.",
-      overlayText: "La Media Luna Fértil",
-      speakerNotes: "Esta revolución comenzó en el Creciente Fértil, donde los ríos aportaban agua constante y tierras ricas en nutrientes.",
-      palabrasAprox: 18,
-      duracionSeg: 9
+      tituloMomento: "El Creciente Fértil",
+      didacticPurpose: "El Creciente Fértil",
+      visualPrompt: "Modern anime style. Topographical map of the Fertile Crescent with glowing blue rivers (Tigris, Euphrates, Nile) and early crop cultivation zones. Clear cartographic style. No text drawn by AI.",
+      overlayTitle: "El escenario geográfico",
+      overlaySubtitle: "El Creciente Fértil y los grandes ríos",
+      overlayText: "El Creciente Fértil y los Ríos",
+      vectorialOverlayPptx: "Mapa histórico vectorial: Ríos Tigris, Éufrates, Jordán y Nilo formando el arco fértil",
+      speakerNotes: "El proceso comenzó en el Creciente Fértil de Medio Oriente. La presencia de ríos caudalosos como el Tigris y el Éufrates proporcionó agua y limo enriquecido para los primeros cultivos.",
+      palabrasAprox: 29,
+      duracionSeg: 13
     },
     {
       slideNumber: 3,
-      tituloMomento: "La Acumulación de Excedentes",
-      visualPrompt: "Modern anime style. Large clay jars filled with golden wheat grains inside a cool, dry stone storage room. Warm ambient glow.",
-      overlayText: "El Excedente Alimentario",
-      speakerNotes: "Por primera vez en la historia, sobraba comida. El grano almacenado garantizaba sobrevivir en inviernos y sequías.",
-      palabrasAprox: 17,
-      duracionSeg: 9
+      tituloMomento: "Excedente y Sedentarismo",
+      didacticPurpose: "Excedente y Sedentarismo",
+      visualPrompt: "Modern anime style. The girl explaining a diagram of agricultural surplus: grain sacks and ceramic jars stored in communal granaries. Crisp clean lighting. No text drawn by AI.",
+      overlayTitle: "El excedente alimentario",
+      overlaySubtitle: "Producir más de lo consumido en el día",
+      overlayText: "El Excedente que Permitió la Aldea",
+      vectorialOverlayPptx: "Diagrama económico: Cosecha abundante -> Almacenamiento en vasijas -> Seguridad alimentaria",
+      speakerNotes: "El cambio fundamental fue el excedente: por primera vez las personas cosechaban más de lo que consumían en la jornada. Guardar alimento en vasijas de arcilla garantizó la supervivencia en invierno.",
+      palabrasAprox: 28,
+      duracionSeg: 13
     },
     {
       slideNumber: 4,
-      tituloMomento: "La Cerámica como Tecnología Clave",
-      visualPrompt: "Modern anime style. Neolithic artisan shaping a ceramic vessel on a slow turntable, showing waterproof clay walls.",
-      overlayText: "Alfarería para Conservar Alimentos",
-      speakerNotes: "Las vasijas de barro cocido fueron indispensables para proteger las cosechas de la humedad y de los roedores.",
-      palabrasAprox: 17,
-      duracionSeg: 9
+      tituloMomento: "Complejidad Social",
+      didacticPurpose: "Complejidad Social",
+      visualPrompt: "Modern anime style. Bustling village scene showing specialized craftsmen: potter at wheel, weaver at loom, builder carving mudbrick. Soft depth of field. No text drawn by AI.",
+      overlayTitle: "Especialización y jerarquía",
+      overlaySubtitle: "Nuevos roles en la comunidad aldeana",
+      overlayText: "Especialización del Trabajo y Roles",
+      vectorialOverlayPptx: "Estructura social: Agricultores, alfareros, constructores y primeros consejos de ancianos",
+      speakerNotes: "La aldea neolítica exigió organización. Se crearon turnos de regadío, líderes para resolver conflictos y artesanos dedicados exclusivamente a perfeccionar la alfarería y la arquitectura.",
+      palabrasAprox: 24,
+      duracionSeg: 11
     },
     {
       slideNumber: 5,
-      tituloMomento: "El Nacimiento del Sedentarismo",
-      visualPrompt: "Modern anime style. Families building permanent stone and adobe walls, settling near their irrigated crop fields.",
-      overlayText: "Sedentarismo: Quedarse en un Lugar Fijo",
-      speakerNotes: "Tener cultivos y animales requirió cuidar la tierra permanentemente, dando origen a la vida sedentaria.",
-      palabrasAprox: 15,
-      duracionSeg: 8
+      tituloMomento: "Piedra Pulida y Tecnología",
+      didacticPurpose: "Piedra Pulida y Tecnología",
+      visualPrompt: "Modern anime style. Close-up contrast: rough chipped stone blade of Paleolithic next to smooth, symmetrical polished stone axe and sickle of Neolithic. Crystal clarity. No text drawn by AI.",
+      overlayTitle: "Revolución tecnológica",
+      overlaySubtitle: "De la piedra tallada a la piedra pulimentada",
+      overlayText: "Tecnología de la Piedra Pulimentada",
+      vectorialOverlayPptx: "Comparación técnica: Cuchillo de sílex tallado (Paleolítico) vs Hacha y hoz pulida (Neolítico)",
+      speakerNotes: "El nombre Neolítico significa piedra nueva. Las herramientas ya no se tallaban por golpes toscos, sino que se pulían frotándolas con arena y agua, logrando filos duraderos y resistentes.",
+      palabrasAprox: 27,
+      duracionSeg: 12
     },
     {
       slideNumber: 6,
-      tituloMomento: "La División y Especialización del Trabajo",
-      visualPrompt: "Modern anime style. Split infographic showing 4 distinct roles: farmer tending fields, potter at wheel, weaver at loom, and builder with mudbricks.",
-      overlayText: "Nuevas Profesiones y Oficios",
-      speakerNotes: "Al haber excedente de comida, surgieron nuevos oficios especializados que impulsaron la tecnología y el comercio.",
-      palabrasAprox: 16,
-      duracionSeg: 8
+      tituloMomento: "Prevención del Error",
+      didacticPurpose: "Prevención del Error",
+      visualPrompt: "Modern anime style. Timeline graphic showing smooth gradual transition across centuries, with hunter-gatherer icons overlapping with farming icons. Clean infographic. No text drawn by AI.",
+      overlayTitle: "Atención: Error habitual",
+      overlaySubtitle: "La transición fue gradual, no inmediata",
+      overlayText: "Transición Gradual, no Repentina",
+      vectorialOverlayPptx: "Línea temporal extendida: Miles de años de coexistencia entre caza y cultivo experimental",
+      speakerNotes: "Un error habitual es creer que la revolución agrícola ocurrió de un día para otro. Fue un proceso de miles de años donde la recolección y el cultivo coexistieron pacientemente.",
+      palabrasAprox: 28,
+      duracionSeg: 13
     },
     {
       slideNumber: 7,
-      tituloMomento: "Síntesis en el Cuaderno de Historia",
-      visualPrompt: "Modern anime style. Both explorers smiling with their open notebooks, drawing the comparative table between Paleolithic and Neolithic.",
-      overlayText: "¡A comparar en tu cuaderno!",
-      speakerNotes: "Ahora abre tu cuaderno de Historia y Ciencias Sociales para construir el cuadro comparativo junto a tu mentor.",
-      palabrasAprox: 18,
-      duracionSeg: 9
+      tituloMomento: "Síntesis y Regla de Oro",
+      didacticPurpose: "Síntesis y Regla de Oro",
+      visualPrompt: "Modern anime style. StudioSimple emblem with golden banner summarizing the 3 pillars of Neolithic revolution: Sedentarismo, Excedente, Especialización. High elegance. No text drawn by AI.",
+      overlayTitle: "Regla de Oro del Neolítico",
+      overlaySubtitle: "Agricultura + Aldea + Excedente = Cuna de la Civilización",
+      overlayText: "Regla de Oro: El Triángulo Neolítico",
+      vectorialOverlayPptx: "Infografía de síntesis: Triángulo fundacional: Sedentarismo, Excedente y Especialización social",
+      speakerNotes: "Recuerda la regla de oro: el excedente agrícola hizo posible la vida sedentaria y las ciudades. ¡Ahora comprobaremos este análisis histórico en las actividades interactivas de la plataforma!",
+      palabrasAprox: 26,
+      duracionSeg: 12
     }
   ];
 
@@ -1646,132 +1286,188 @@ export function getCanonicalClase1Ingles(): LessonData {
   const hookSlides: SlidePrompt[] = [
     {
       slideNumber: 1,
-      tituloMomento: "Welcome to the Story Arc",
-      visualPrompt: "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers standing before an illuminated holographic narrative mountain peak labeled Beginning, Rising Action, Climax, Falling Action, Resolution. Dynamic lighting, negative space on top.",
-      overlayText: "English 7th Grade · The Story Arc",
-      speakerNotes: "Every exciting story in English follows a narrative path called the Story Arc, from the beginning to the resolution.",
-      palabrasAprox: 19,
-      duracionSeg: 9
-    },
-    {
-      slideNumber: 2,
-      tituloMomento: "Step 1: The Setting (Where and When)",
-      visualPrompt: "Modern anime style. Panoramic view of a quiet mountain town at sunrise with pine trees, wooden houses, and distant snowy peaks. High atmospheric detail, calm feeling.",
-      overlayText: "Setting: Where and When",
-      speakerNotes: "The setting tells us where and when the story happens: a quiet town, a rainy night, or an ancient castle.",
-      palabrasAprox: 20,
+      tituloMomento: "Opening and Setting",
+      didacticPurpose: "Opening and Setting",
+      visualPrompt: "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a cozy wooden cabin in a sunny mountain forest. Warm inviting atmosphere, negative space in top third. No text drawn by AI.",
+      overlayTitle: "Mission 1: The Mountain Cabin",
+      overlaySubtitle: "Reading our first adventure story",
+      overlayText: "Mission 1: The Mountain Cabin Story",
+      vectorialOverlayPptx: "Narrative context: Leo and Sophia exploring an old wooden cabin in the woods",
+      speakerNotes: "Welcome to English class. Today we will read an engaging short story about two young explorers discovering an ancient mystery cabin in the mountains.",
+      palabrasAprox: 24,
       duracionSeg: 10
     },
     {
+      slideNumber: 2,
+      tituloMomento: "Identifying Characters",
+      didacticPurpose: "Identifying Characters",
+      visualPrompt: "Modern anime style. The boy and girl examining an explorer backpack with notebook, magnifying glass and compass. Clean lineart, bright morning lighting. No text drawn by AI.",
+      overlayTitle: "Who is in the story?",
+      overlaySubtitle: "Leo and his brave sister Sophia",
+      overlayText: "Meet the Characters: Leo & Sophia",
+      vectorialOverlayPptx: "Character tags: Subject = 'Leo and his sister' (The protagonists)",
+      speakerNotes: "First, look closely at the characters. Leo and his sister Sophia are thirteen years old and love finding ancient historical artifacts.",
+      palabrasAprox: 21,
+      duracionSeg: 9
+    },
+    {
       slideNumber: 3,
-      tituloMomento: "Step 1: Characters (Who takes part)",
-      visualPrompt: "Modern anime style. Close-up of young Leo with a blue backpack and his adventurous younger sister holding a brass compass and field notebook. Expressive, friendly eyes.",
-      overlayText: "Characters: Who takes part",
-      speakerNotes: "Characters are the people or animals in the story. Meet Leo and his sister, who love exploring nature.",
-      palabrasAprox: 17,
+      tituloMomento: "Spotting the Setting",
+      didacticPurpose: "Spotting the Setting",
+      visualPrompt: "Modern anime style. Wide scenic view of the lush green mountain valley with a sparkling river and tall pine trees under a clear blue sky. High clarity. No text drawn by AI.",
+      overlayTitle: "Where does it happen?",
+      overlaySubtitle: "A quiet green valley near the lake",
+      overlayText: "The Setting: Valley and Mountain Lake",
+      vectorialOverlayPptx: "Setting labels: Location = 'in a quiet valley' | Time = 'one summer morning'",
+      speakerNotes: "Next, we observe the setting. The events take place in a quiet valley surrounded by tall pine trees on a sunny morning.",
+      palabrasAprox: 21,
       duracionSeg: 9
     },
     {
       slideNumber: 4,
-      tituloMomento: "The Time Connector: FIRST",
-      visualPrompt: "Modern anime style. Big stylized typography 'FIRST' with a golden directional arrow pointing to the opening scene of their adventure. Clean graphics.",
-      overlayText: "Time Connector: FIRST / In the beginning",
-      speakerNotes: "To start the narrative, English writers use signal words like 'First' or 'In the beginning'.",
-      palabrasAprox: 14,
-      duracionSeg: 8
+      tituloMomento: "The Action Begins",
+      didacticPurpose: "The Action Begins",
+      visualPrompt: "Modern anime style. The two companions walking along a stone path and opening the creaky wooden door of the cabin with curiosity and teamwork. No text drawn by AI.",
+      overlayTitle: "Action verbs in past",
+      overlaySubtitle: "They walked, opened and discovered",
+      overlayText: "Actions in the Past: walked and opened",
+      vectorialOverlayPptx: "Past Simple verbs: walk -> walked | open -> opened | find -> found",
+      speakerNotes: "The narrative describes their actions using past simple verbs: they walked through the trees and opened an old wooden chest.",
+      palabrasAprox: 20,
+      duracionSeg: 9
     },
     {
       slideNumber: 5,
-      tituloMomento: "Reading the Full Sentence",
-      visualPrompt: "Modern anime style. Clean textbook lightboard showing the sentence: 'First, Leo and his sister lived in a quiet town near the mountains.' Both explorers pointing at words.",
-      overlayText: "'First, Leo and his sister lived in a quiet town...'",
-      speakerNotes: "Listen to the complete sentence: First, Leo and his sister lived in a quiet town near the mountains.",
-      palabrasAprox: 17,
+      tituloMomento: "The Mystery Clue",
+      didacticPurpose: "The Mystery Clue",
+      visualPrompt: "Modern anime style. Close-up on the two explorers holding an aged rolled parchment showing a compass rose and an intriguing hand-drawn trail map. Golden dust particles. No text drawn by AI.",
+      overlayTitle: "The secret map",
+      overlaySubtitle: "A strange message on yellow paper",
+      overlayText: "The Clue: An Ancient Trail Map",
+      vectorialOverlayPptx: "Visual evidence: Ancient parchment with compass rose and handwritten clue",
+      speakerNotes: "Inside the chest, Sophia finds an old handwritten map with a secret message that points toward a forgotten hidden waterfall.",
+      palabrasAprox: 20,
       duracionSeg: 9
     },
     {
       slideNumber: 6,
-      tituloMomento: "Characters vs. Setting Split",
-      visualPrompt: "Modern anime style. Split screen highlighting green box 'Leo and his sister' (Characters) and blue box 'a quiet town near the mountains' (Setting). Crystal clarity.",
-      overlayText: "Characters vs. Setting",
-      speakerNotes: "Notice how easily you can identify both elements: the characters and the peaceful setting.",
-      palabrasAprox: 14,
-      duracionSeg: 8
+      tituloMomento: "Connecting the Sequence",
+      didacticPurpose: "Connecting the Sequence",
+      visualPrompt: "Modern anime style. An elegant chronological banner showing sequential comic panels of the story connected by glowing arrows. Crisp clean layout. No text drawn by AI.",
+      overlayTitle: "Connecting the sequence",
+      overlaySubtitle: "First, Then, After that, Finally",
+      overlayText: "Timeline Connectors: First -> Then",
+      vectorialOverlayPptx: "Timeline connectors: First -> Then -> Next -> Finally",
+      speakerNotes: "To follow any good narrative, we use time sequence connectors to understand what happens in the beginning, middle, and end.",
+      palabrasAprox: 20,
+      duracionSeg: 9
     },
     {
       slideNumber: 7,
-      tituloMomento: "Ready for the Notebook Challenge",
-      visualPrompt: "Modern anime style. Minimalist clean composition showing StudioSimple emblem, the two explorers smiling with their English notebooks open, ready to write.",
+      tituloMomento: "Trigger Question",
+      didacticPurpose: "Trigger Question",
+      visualPrompt: "Modern anime style. Minimalist clean composition showing StudioSimple emblem, the two explorers smiling with their English notebooks open, ready to write. No text drawn by AI.",
+      overlayTitle: "The narrative challenge",
+      overlaySubtitle: "How do we write story sentences?",
       overlayText: "StudioSimple · English 7th Grade",
-      speakerNotes: "Now let's practice together with your mentor and write your first sentences in your English notebook!",
-      palabrasAprox: 17,
-      duracionSeg: 9
+      vectorialOverlayPptx: "Detonating question: What is the golden sentence formula to describe narrative events in English?",
+      speakerNotes: "Here is our trigger question: what formula allows us to write clear English sentences describing characters, actions and settings in the past?",
+      palabrasAprox: 22,
+      duracionSeg: 10
     }
   ];
 
   const explicativoSlides: SlidePrompt[] = [
     {
       slideNumber: 1,
-      tituloMomento: "Model Sentence Pattern",
-      visualPrompt: "Modern anime style 16:9. The boy and girl standing before a clear formula board: 'Time Connector + Subject (Character) + Past Verb + Setting'. Modern typography.",
+      tituloMomento: "Lesson Objective",
+      didacticPurpose: "Lesson Objective",
+      visualPrompt: "Modern anime style 16:9. The boy and girl standing before a clear formula board: 'Time Connector + Subject (Character) + Past Verb + Setting'. Modern typography. No text drawn by AI.",
+      overlayTitle: "Lesson Objective",
+      overlaySubtitle: "Master the Narrative Sentence Formula in English",
       overlayText: "The Narrative Sentence Formula",
-      speakerNotes: "To begin any narrative in English, we follow a simple formula that gives immediate clarity to the reader.",
-      palabrasAprox: 18,
-      duracionSeg: 9
+      vectorialOverlayPptx: "Formal heading: OA 09 · Narrative Reading Comprehension & Past Simple Sentences",
+      speakerNotes: "Today our main objective is to learn the universal narrative sentence formula in English to describe characters, actions, and settings with precision.",
+      palabrasAprox: 22,
+      duracionSeg: 10
     },
     {
       slideNumber: 2,
-      tituloMomento: "The Time Connector (First)",
-      visualPrompt: "Modern anime style. The girl highlighting 'First,' with a comma on the digital board. Callout: 'Always add a comma after First'.",
-      overlayText: "Step 1: First, / In the beginning,",
-      speakerNotes: "Always place a comma after introductory time words: 'First,' signals the exact starting point of our story.",
-      palabrasAprox: 17,
-      duracionSeg: 9
+      tituloMomento: "The 4-Part Formula",
+      didacticPurpose: "The 4-Part Formula",
+      visualPrompt: "Modern anime style. Four distinct color-coded modular blocks floating on an interactive board: Orange (Connector), Blue (Subject), Green (Verb), Purple (Setting). High contrast. No text drawn by AI.",
+      overlayTitle: "The 4-Part Formula",
+      overlaySubtitle: "Connector + Subject + Past Verb + Setting",
+      overlayText: "Step 1: The 4 Sentence Building Blocks",
+      vectorialOverlayPptx: "Color-coded formula: [Orange: Time Word,] + [Blue: Character] + [Green: Past Verb] + [Purple: Place Phrase]",
+      speakerNotes: "Every narrative sentence in English follows a clean four-part structure: time connector with comma, followed by the subject, the past verb, and the setting phrase.",
+      palabrasAprox: 25,
+      duracionSeg: 11
     },
     {
       slideNumber: 3,
-      tituloMomento: "The Subject Character (Who)",
-      visualPrompt: "Modern anime style. The boy illustrating different characters: 'two brave pilots', 'a clever detective', 'a lonely astronaut'. Vibrant badges.",
-      overlayText: "Step 2: Name the Characters",
-      speakerNotes: "Next, clearly introduce the main characters so the audience knows who will experience the upcoming adventure.",
-      palabrasAprox: 16,
-      duracionSeg: 8
+      tituloMomento: "Time Connectors",
+      didacticPurpose: "Time Connectors",
+      visualPrompt: "Modern anime style. The girl highlighting 'First,' with a glowing comma on the digital board. Callout: 'Always add a comma after First'. Crisp typography. No text drawn by AI.",
+      overlayTitle: "Step 1: Time Connectors",
+      overlaySubtitle: "First, Then, After that, Finally,",
+      overlayText: "Introductory Time Connectors with Comma",
+      vectorialOverlayPptx: "Linguistic rule: Always place a comma immediately after an introductory time connector",
+      speakerNotes: "Always place a comma after your introductory time word. Words like First, Then, and Finally tell the reader exactly where we are in the chronology.",
+      palabrasAprox: 24,
+      duracionSeg: 11
     },
     {
       slideNumber: 4,
-      tituloMomento: "The Action Verb in Past Simple (-ed)",
-      visualPrompt: "Modern anime style. Glowing linguistic breakdown showing the verb 'live' adding '-ed' to become 'lived', and 'travel' becoming 'traveled'.",
-      overlayText: "Step 3: Past Simple Verb (-ed)",
-      speakerNotes: "Stories happen in the past. Regular action verbs take the -ed ending, like 'lived' or 'explored'.",
-      palabrasAprox: 15,
-      duracionSeg: 8
+      tituloMomento: "Past Regular Verbs",
+      didacticPurpose: "Past Regular Verbs",
+      visualPrompt: "Modern anime style. Glowing linguistic breakdown showing the verb 'live' adding '-ed' to become 'lived', and 'travel' becoming 'traveled'. Sharp clarity. No text drawn by AI.",
+      overlayTitle: "Step 2: Action in the Past",
+      overlaySubtitle: "Add -ed to regular verbs (lived, walked, explored)",
+      overlayText: "Regular Past Simple Verbs (-ed)",
+      vectorialOverlayPptx: "Morphology box: live + d = lived | walk + ed = walked | discover + ed = discovered",
+      speakerNotes: "Because the events already occurred, regular action verbs take the -ed ending. For example: Leo walked in the forest, and Sophia opened the door.",
+      palabrasAprox: 24,
+      duracionSeg: 11
     },
     {
       slideNumber: 5,
-      tituloMomento: "The Setting Phrase (Place and Time)",
-      visualPrompt: "Modern anime style. Beautiful background callouts: 'in an ancient castle', 'in a futuristic laboratory', 'near the dark forest'.",
-      overlayText: "Step 4: Describe the Setting",
-      speakerNotes: "Finally, describe where and when the characters lived, creating an immersive setting for the reader.",
-      palabrasAprox: 15,
-      duracionSeg: 8
+      tituloMomento: "Setting and Place",
+      didacticPurpose: "Setting and Place",
+      visualPrompt: "Modern anime style. The boy holding up cards with prepositional phrases: 'in the quiet cabin', 'near the mountain lake', 'under the stars'. Vibrant visuals. No text drawn by AI.",
+      overlayTitle: "Step 3: Setting the Scene",
+      overlaySubtitle: "Prepositional phrases: in the cabin, by the lake",
+      overlayText: "Prepositional Phrases for Setting",
+      vectorialOverlayPptx: "Location builders: [in + noun] | [near + noun] | [under + noun]",
+      speakerNotes: "Finish your sentence with a clear place description using prepositions like in, near, or by. This allows the reader to picture the exact environment.",
+      palabrasAprox: 23,
+      duracionSeg: 10
     },
     {
       slideNumber: 6,
-      tituloMomento: "Common Mistakes: Missing Elements",
-      visualPrompt: "Modern anime style. A friendly contrast showing an incomplete phrase with a yellow alert symbol, and the full complete sentence in green.",
-      overlayText: "Avoid Incomplete Sentences",
-      speakerNotes: "Remember: never omit the setting or the connector. A complete opening sentence gives both context and action.",
-      palabrasAprox: 17,
-      duracionSeg: 9
+      tituloMomento: "Common Mistake to Avoid",
+      didacticPurpose: "Common Mistake to Avoid",
+      visualPrompt: "Modern anime style. Contrast graphic: An incorrect sentence missing comma with subtle red outline; The corrected sentence glowing in vibrant teal. Clean infographic. No text drawn by AI.",
+      overlayTitle: "Common Mistake to Avoid",
+      overlaySubtitle: "Never forget the comma after the time connector",
+      overlayText: "Avoid Missing Commas and Wrong Tense",
+      vectorialOverlayPptx: "Visual contrast: [Red: First Leo lived...] vs [Teal: First, Leo lived... with checkmark]",
+      speakerNotes: "A common mistake among beginners is forgetting the comma after First or Then, or forgetting to conjugate the verb into the past simple. Always check both.",
+      palabrasAprox: 26,
+      duracionSeg: 12
     },
     {
       slideNumber: 7,
-      tituloMomento: "Summary in English Notebook",
-      visualPrompt: "Modern anime style. Both explorers smiling confidently, holding their pencils and inviting the student to write their own story opening.",
-      overlayText: "Your Turn in the English Notebook!",
-      speakerNotes: "Now open your English notebook and write your own story opening using the pattern you just mastered!",
-      palabrasAprox: 18,
-      duracionSeg: 9
+      tituloMomento: "The Golden Narrative Rule",
+      didacticPurpose: "The Golden Narrative Rule",
+      visualPrompt: "Modern anime style. StudioSimple emblem with an elegant golden banner displaying the complete modeled sentence: 'First, Leo and Sophia explored the ancient cabin.' Inspiring atmosphere. No text drawn by AI.",
+      overlayTitle: "The Golden Narrative Rule",
+      overlaySubtitle: "Time, + Who + Did + Where = Clear English Story",
+      overlayText: "Golden Rule: The Complete Narrative Sentence",
+      vectorialOverlayPptx: "Summary infography: [First,] + [Leo and Sophia] + [explored] + [the old mountain cabin.]",
+      speakerNotes: "Remember the golden rule: Time, subject, past verb, and place give you the perfect narrative sentence. Now let's practice this formula in the interactive platform!",
+      palabrasAprox: 25,
+      duracionSeg: 11
     }
   ];
 
@@ -2768,6 +2464,135 @@ function buildDisciplineContent(
 }
 
 /**
+ * Helper to convert PlayerLessonData to Generator LessonData structure without circular dependencies
+ */
+function playerLessonToGeneratorLesson(playerLesson: PlayerLessonData): LessonData {
+  const hookSlides = (playerLesson.hook as any).slides || [];
+  const explicativoSlides = (playerLesson.formalization as any).slides || [];
+
+  const hookFullPrompt =
+    (playerLesson.hook as any).fullPrompt ||
+    (hookSlides.length > 0
+      ? buildHookPromptText(
+          playerLesson.metadata.subject,
+          playerLesson.metadata.oaCode,
+          playerLesson.metadata.lessonNumber,
+          playerLesson.metadata.lessonTitle,
+          hookSlides
+        )
+      : '');
+
+  const explicativoFullPrompt =
+    (playerLesson.formalization as any).fullPrompt ||
+    (explicativoSlides.length > 0
+      ? buildExplicativoPromptText(
+          playerLesson.metadata.subject,
+          playerLesson.metadata.oaCode,
+          playerLesson.metadata.lessonNumber,
+          playerLesson.metadata.lessonTitle,
+          explicativoSlides
+        )
+      : '');
+
+  return {
+    num: playerLesson.metadata.lessonNumber,
+    title: playerLesson.metadata.lessonTitle,
+    focoDidactico: playerLesson.route.dileObjective || playerLesson.metadata.lessonTitle,
+    routeToday: playerLesson.prep.routeToday,
+    routeIntro: playerLesson.route.dileIntro,
+    routeCards: playerLesson.route.keyQuestions,
+    keyQuestions: playerLesson.route.keyQuestions,
+    routeBlocks: playerLesson.route.blocks,
+    reminders: playerLesson.prep.reminders,
+    duracion: `${playerLesson.metadata.durationMinutes || 30} Minutos`,
+    objetivoAdulto: playerLesson.prep.adultObjective,
+    climaEmocional: playerLesson.situation.emotionalTip || playerLesson.prep.mentorReminder || 'Refuerza la autonomia.',
+    situacionIntro: {
+      dialogo: playerLesson.situation.dilePrompt,
+      pregunta: playerLesson.situation.dilePrompt,
+      respEsperada: playerLesson.situation.expectedAnswer,
+      pistaSocratica: playerLesson.situation.socraticHint,
+      options: playerLesson.situation.options
+    },
+    reference: playerLesson.reference,
+    paso2_hook: {
+      titulo: playerLesson.hook.title || (playerLesson.hook as any).titulo || 'Video Gancho',
+      fullPrompt: hookFullPrompt,
+      slides: hookSlides,
+      focusPoints: playerLesson.hook.focusPoints || [],
+      hazInstruction: playerLesson.hook.hazInstruction || '',
+      dileAntes: playerLesson.hook.dileIntro,
+      dileDespues: playerLesson.hook.dileAfterVideo,
+      videoSrc: playerLesson.hook.videoSrc,
+      posterUrl: playerLesson.hook.posterSrc
+    },
+    paso3_recorrido: (playerLesson.preQuestions || []).map((q) => ({
+      context: q.context,
+      question: q.question,
+      expected: q.expected,
+      success: q.success,
+      support: q.support,
+      reveal: q.reveal,
+      studentReveal: q.studentReveal
+    })),
+    conversationContext: playerLesson.conversationContext,
+    paso4_explicativo: {
+      titulo: playerLesson.formalization.title || playerLesson.formalization.concept || 'Video Explicativo',
+      fullPrompt: explicativoFullPrompt,
+      slides: explicativoSlides,
+      ideaClave: playerLesson.formalization.ideaClave || playerLesson.formalization.summary || '',
+      dileAntes: playerLesson.formalization.dileIntro,
+      hazInstruction: playerLesson.formalization.hazInstruction || '',
+      videoSrc: playerLesson.formalization.videoSrc,
+      posterUrl: playerLesson.formalization.graphicPoster
+    },
+    summaryText: playerLesson.summaryText,
+    postQuestions: playerLesson.postQuestions,
+    paso5_practica: (playerLesson.practice || []).map((p) => ({
+      context: p.context,
+      question: p.question,
+      expected: p.expected,
+      success: p.success,
+      support: p.support,
+      reveal: p.reveal,
+      studentReveal: p.studentReveal
+    })),
+    reasoning: playerLesson.reasoning,
+    challenge: playerLesson.challenge,
+    strategy: playerLesson.strategy,
+    summaryIdeas: playerLesson.summaryIdeas,
+    paso6_resumen: {
+      ideaClave: playerLesson.formalization.ideaClave || '',
+      sintesis: playerLesson.strategy?.dileIntro || playerLesson.summaryText || '',
+      estrategia: playerLesson.strategy?.steps
+        ? playerLesson.strategy.steps
+        : (playerLesson.summaryIdeas ? playerLesson.summaryIdeas.map((si, idx) => ({ number: idx + 1, title: si[0], desc: si[1] })) : [])
+    },
+    paso7_miniquiz: (playerLesson.mini || []).map((m) => ({
+      q: m.q,
+      options: m.options,
+      correct: m.correct,
+      fixExplain: m.fixExplain || m.explain || '',
+      dileReview: m.dileReview
+    })),
+    paso7b_recuperacion: (playerLesson.recovery || []).map((r) => ({
+      title: r.title,
+      explain: r.explain,
+      q: r.q,
+      options: r.options,
+      correct: r.correct,
+      correctText: r.correctText,
+      fixText: r.fixText
+    })),
+    paso8_cierre: {
+      preguntaSintesis: playerLesson.closure?.nextClassPreview || '',
+      metacognicion: playerLesson.closure?.congratulations || '',
+      celebracion: playerLesson.closure?.congratulations || 'Has completado la clase con exito.'
+    }
+  } as any;
+}
+
+/**
  * Generador Completo de Paquete de Lecciones (DOCX y Datos de la App)
  */
 export function generateOAPackage(oa: OACatalogItem, totalLessons: number): GeneratedOAPackage {
@@ -2781,12 +2606,36 @@ export function generateOAPackage(oa: OACatalogItem, totalLessons: number): Gene
     const isFirst = classNum === 1;
     const isLast = classNum === totalLessons;
 
-    // Inyección canónica de lecciones sincronizadas para 7° Básico Clase 1 (las 5 asignaturas troncales)
-    if (classNum === 1 && oa.curso.includes("7")) {
-      if (oa.oaNumero === 1 && oa.asignatura === "Matemática") {
-        lessons.push(getCanonicalClase1Matematica());
+    // Inyección canónica de lecciones sincronizadas para 7° Básico Matemática OA01 (Clases 1 a 6)
+    if (oa.curso.includes("7") && oa.oaNumero === 1 && oa.asignatura === "Matemática") {
+      if (classNum === 1) {
+        lessons.push(playerLessonToGeneratorLesson(MATEMATICA_7B_OA01_CLASE01));
         return;
       }
+      if (classNum === 2) {
+        lessons.push(playerLessonToGeneratorLesson(MATEMATICA_7B_OA01_CLASE02));
+        return;
+      }
+      if (classNum === 3) {
+        lessons.push(playerLessonToGeneratorLesson(MATEMATICA_7B_OA01_CLASE03));
+        return;
+      }
+      if (classNum === 4) {
+        lessons.push(playerLessonToGeneratorLesson(MATEMATICA_7B_OA01_CLASE04));
+        return;
+      }
+      if (classNum === 5) {
+        lessons.push(playerLessonToGeneratorLesson(MATEMATICA_7B_OA01_CLASE05));
+        return;
+      }
+      if (classNum === 6) {
+        lessons.push(playerLessonToGeneratorLesson(MATEMATICA_7B_OA01_CLASE06));
+        return;
+      }
+    }
+
+    // Inyección canónica de lecciones sincronizadas para 7° Básico Clase 1 (resto de asignaturas troncales)
+    if (classNum === 1 && oa.curso.includes("7")) {
       if (oa.oaNumero === 3 && (oa.asignatura.includes("Lengua") || oa.asignatura.includes("Lenguaje"))) {
         lessons.push(getCanonicalClase1Lengua());
         return;
@@ -2805,76 +2654,193 @@ export function generateOAPackage(oa: OACatalogItem, totalLessons: number): Gene
       }
     }
 
-    // Inyección canónica de lecciones sincronizadas para 7° Básico Clase 2 (Matemática OA01)
-    if (classNum === 2 && oa.curso.includes("7") && oa.oaNumero === 1 && oa.asignatura === "Matemática") {
-      lessons.push(getCanonicalClase2Matematica());
-      return;
-    }
+    // Helper para generar la capa vectorial disciplinar dinamica
+    const isMat = oa.asignatura.includes("Matem");
+    const isHis = oa.asignatura.includes("Hist") || oa.asignatura.includes("Sociales");
+    const isCie = (oa.asignatura.includes("Cienc") || oa.asignatura.includes("Naturales")) && !isHis;
+    const isIng = oa.asignatura.includes("Ingl");
+
+    const getVectorialLayer = (type: 'hook' | 'expl', slideNum: number): string => {
+      if (isMat) {
+        if (type === 'hook') {
+          if (slideNum === 1) return `Cota inicial: Contexto formal de ${item.title}`;
+          if (slideNum === 6) return `Diagrama conceptual: Planteamiento del enigma matematico`;
+          if (slideNum === 7) return `Pregunta detonante: ¿Cual es la regla exacta para resolver ${item.title}?`;
+          return `Esquema CPA: Representacion de ${item.focoDidactico} con cotas y vectores`;
+        } else {
+          if (slideNum === 1) return `Rótulo formal: ${oa.oa} · ${item.title}`;
+          if (slideNum === 2) return `Algoritmo y convencion formal de ${item.focoDidactico}`;
+          if (slideNum === 3) return `Modelamiento paso a paso: desarrollo simbolico y justificacion`;
+          if (slideNum === 4) return `Alerta de error: confusion frecuente en signos o procedimientos`;
+          if (slideNum === 5) return `Comprobacion matematica y verificacion de consistencia`;
+          if (slideNum === 6) return `Estrategia mental: Identificar datos, aplicar regla y comprobar`;
+          return `Infografía de síntesis: Regla de Oro de ${item.title}`;
+        }
+      }
+      if (isCie) {
+        if (type === 'hook') {
+          if (slideNum === 1) return `Diagrama integrador: Fenomeno observable de ${item.title}`;
+          if (slideNum === 6) return `Esquema de variables: Interaccion de factores en observacion`;
+          if (slideNum === 7) return `Pregunta detonante: ¿Como interactuan los factores en ${item.title}?`;
+          return `Modelo de indagacion: ${item.focoDidactico} con flechas de proceso`;
+        } else {
+          if (slideNum === 1) return `Rótulo formal: ${oa.oa} · ${item.title}`;
+          if (slideNum === 2) return `Modelo cientifico y variables causales de ${item.focoDidactico}`;
+          if (slideNum === 3) return `Diagrama de proceso paso a paso con flechas de causalidad`;
+          if (slideNum === 4) return `Contraste experimental: error de interpretacion comun`;
+          if (slideNum === 5) return `Validacion de la evidencia cientifica y coherencia del modelo`;
+          if (slideNum === 6) return `Estrategia de pensamiento cientifico: Observar, modelar y contrastar`;
+          return `Infografía de síntesis: Principio cientifico de ${item.title}`;
+        }
+      }
+      if (isHis) {
+        if (type === 'hook') {
+          if (slideNum === 1) return `Coordenadas historicas: Linea temporal y contexto de ${item.title}`;
+          if (slideNum === 6) return `Dilema historico: Fuentes contrastadas frente al acontecimiento`;
+          if (slideNum === 7) return `Pregunta detonante: ¿Que consecuencias trajo ${item.title}?`;
+          return `Capa espacio-temporal: Mapa historico con vectores de ${item.focoDidactico}`;
+        } else {
+          if (slideNum === 1) return `Rótulo formal: ${oa.oa} · ${item.title}`;
+          if (slideNum === 2) return `Escenario historico y fuentes primarias de ${item.focoDidactico}`;
+          if (slideNum === 3) return `Diagrama multicausal: Factores economicos, sociales y culturales`;
+          if (slideNum === 4) return `Contraste temporal: cambios y continuidades historicas`;
+          if (slideNum === 5) return `Interpretacion historica justificada a partir de evidencias`;
+          if (slideNum === 6) return `Estrategia de analisis historico: Contexto, causas y consecuencias`;
+          return `Infografía de síntesis: Regla historica de ${item.title}`;
+        }
+      }
+      if (isIng) {
+        if (type === 'hook') {
+          if (slideNum === 1) return `Communicative context: Story scenario of ${item.title}`;
+          if (slideNum === 6) return `Language puzzle: Identifying narrative clues in English`;
+          if (slideNum === 7) return `Trigger question: How do we express ${item.title} accurately?`;
+          return `Vocabulary tags: Key expressions and setting of ${item.focoDidactico}`;
+        } else {
+          if (slideNum === 1) return `Formal heading: ${oa.oa} · ${item.title}`;
+          if (slideNum === 2) return `Sentence formula: Structure of ${item.focoDidactico}`;
+          if (slideNum === 3) return `Color-coded grammar blocks with modeled example`;
+          if (slideNum === 4) return `Error contrast: common grammar and punctuation pitfall`;
+          if (slideNum === 5) return `Meaning validation: verifying sentence cohesion`;
+          if (slideNum === 6) return `Memory strategy: Connector + Subject + Verb + Context`;
+          return `Summary infography: Golden rule of ${item.title}`;
+        }
+      }
+      // Lengua y Literatura (default)
+      if (type === 'hook') {
+        if (slideNum === 1) return `Mapa Visual: Situacion narrativa inicial de ${item.title}`;
+        if (slideNum === 6) return `Tension dramatica: Conflicto entre fuerzas del relato`;
+        if (slideNum === 7) return `Pregunta detonante: ¿Cual es el motor de la historia en ${item.title}?`;
+        return `Esquema de analisis: Texto fuente y pistas de ${item.focoDidactico}`;
+      } else {
+        if (slideNum === 1) return `Rótulo formal: ${oa.oa} · ${item.title}`;
+        if (slideNum === 2) return `Concepto disciplinar: ${item.focoDidactico}`;
+        if (slideNum === 3) return `Fragmento textual visible con marcas de evidencia literal e inferencias`;
+        if (slideNum === 4) return `Contraste analitico: distincion de elementos narrativos clave`;
+        if (slideNum === 5) return `Modelo de respuesta justificada con citas y evidencia textual`;
+        if (slideNum === 6) return `Estrategia de lectura: Localizar, interpretar y fundamentar`;
+        return `Infografía de síntesis: Regla de lectura de ${item.title}`;
+      }
+    };
 
     // Build Hook 7 Slides
     const hookSlides: SlidePrompt[] = [
       {
         slideNumber: 1,
         tituloMomento: "Apertura y Contexto",
-        visualPrompt: `Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to ${item.title} (${oa.asignatura}). Cinematic lighting, warm morning atmosphere, wide negative space in top third.`,
+        didacticPurpose: "Apertura y Contexto",
+        visualPrompt: `Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to ${item.title} (${oa.asignatura}). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.`,
+        overlayTitle: `Misión ${classNum}: ${item.title}`,
+        overlaySubtitle: `Exploración inicial en ${oa.asignatura}`,
         overlayText: `Misión ${classNum}: ${item.title}`,
-        speakerNotes: `Comienza una nueva expedición de aprendizaje. Nuestros dos exploradores se preparan para enfrentar un enigma fascinante en ${oa.asignatura}.`,
-        palabrasAprox: 19,
+        vectorialOverlayPptx: getVectorialLayer('hook', 1),
+        mathOverlayPptx: getVectorialLayer('hook', 1),
+        speakerNotes: `Comienza una nueva expedición de aprendizaje en ${oa.asignatura}. Nuestros dos exploradores analizan el desafío de ${item.title} para descubrir sus secretos.`,
+        palabrasAprox: 21,
         duracionSeg: 9
       },
       {
         slideNumber: 2,
         tituloMomento: "Presentación del Escenario",
-        visualPrompt: `Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of ${item.focoDidactico}. High detail, clean lineart, soft depth of field, clear space on the left side.`,
-        overlayText: "Punto de Partida",
-        speakerNotes: `Al observar los datos iniciales, notan que para avanzar necesitan comprender con precisión cómo se relacionan estos elementos.`,
-        palabrasAprox: 18,
+        didacticPurpose: "Presentación del Escenario",
+        visualPrompt: `Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of ${item.focoDidactico}. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.`,
+        overlayTitle: "Punto de partida",
+        overlaySubtitle: `${item.focoDidactico}`,
+        overlayText: `Punto de partida: ${item.focoDidactico}`,
+        vectorialOverlayPptx: getVectorialLayer('hook', 2),
+        mathOverlayPptx: getVectorialLayer('hook', 2),
+        speakerNotes: `Al observar los datos sobre ${item.focoDidactico}, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor.`,
+        palabrasAprox: 19,
         duracionSeg: 9
       },
       {
         slideNumber: 3,
         tituloMomento: "Aparición del Conflicto / Misterio",
-        visualPrompt: "Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes.",
-        overlayText: "¡Un obstáculo inesperado!",
-        speakerNotes: "De pronto, aparece una situación inesperada: los registros cambian y surge una duda que deben resolver juntos para continuar.",
-        palabrasAprox: 19,
+        didacticPurpose: "Aparición del Conflicto / Misterio",
+        visualPrompt: "Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.",
+        overlayTitle: "El enigma disciplinar",
+        overlaySubtitle: `Desafío en ${item.title}`,
+        overlayText: `El enigma disciplinar: ${item.title}`,
+        vectorialOverlayPptx: getVectorialLayer('hook', 3),
+        mathOverlayPptx: getVectorialLayer('hook', 3),
+        speakerNotes: `Surge un reto concreto sobre ${item.title}: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso.`,
+        palabrasAprox: 20,
         duracionSeg: 9
       },
       {
         slideNumber: 4,
         tituloMomento: "Exploración de Pistas",
-        visualPrompt: "Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition.",
-        overlayText: "Buscando la clave",
-        speakerNotes: "Ambos comparan las pistas disponibles. Cada movimiento y cada dato entrega información valiosa sobre el comportamiento del fenómeno.",
-        palabrasAprox: 17,
-        duracionSeg: 8
+        didacticPurpose: "Exploración de Pistas",
+        visualPrompt: "Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.",
+        overlayTitle: "Análisis de evidencias",
+        overlaySubtitle: `${item.focoDidactico}`,
+        overlayText: `Análisis de evidencias: ${item.focoDidactico}`,
+        vectorialOverlayPptx: getVectorialLayer('hook', 4),
+        mathOverlayPptx: getVectorialLayer('hook', 4),
+        speakerNotes: `Ambos comparan las pistas disponibles sobre ${item.focoDidactico}. Cada dato confirma cómo interactúan los elementos clave de la situación.`,
+        palabrasAprox: 19,
+        duracionSeg: 9
       },
       {
         slideNumber: 5,
         tituloMomento: "El Momento Crítico",
-        visualPrompt: "Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact.",
-        overlayText: "Una decisión importante",
-        speakerNotes: "Para superar el reto no basta con adivinar: es indispensable aplicar un criterio claro y seguir un orden lógico.",
-        palabrasAprox: 18,
+        didacticPurpose: "El Momento Crítico",
+        visualPrompt: "Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.",
+        overlayTitle: "Criterio de decisión",
+        overlaySubtitle: "Aplicar el método riguroso",
+        overlayText: "Criterio de decisión riguroso",
+        vectorialOverlayPptx: getVectorialLayer('hook', 5),
+        mathOverlayPptx: getVectorialLayer('hook', 5),
+        speakerNotes: `Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de ${item.title} con total precisión metodológica.`,
+        palabrasAprox: 20,
         duracionSeg: 9
       },
       {
         slideNumber: 6,
-        tituloMomento: "La Pregunta Detonante",
-        visualPrompt: "Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection.",
-        overlayText: "¿Cómo podemos resolverlo?",
-        speakerNotes: "Ahora surge el verdadero desafío: ¿qué regla o procedimiento nos permitirá encontrar la respuesta exacta sin equivocarnos?",
-        palabrasAprox: 17,
-        duracionSeg: 8
+        tituloMomento: "La Antesala de la Pregunta",
+        didacticPurpose: "La Antesala de la Pregunta",
+        visualPrompt: "Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.",
+        overlayTitle: "El dilema central",
+        overlaySubtitle: `¿Cómo resolver ${item.title}?`,
+        overlayText: `¿Cómo resolver ${item.title}?`,
+        vectorialOverlayPptx: getVectorialLayer('hook', 6),
+        mathOverlayPptx: getVectorialLayer('hook', 6),
+        speakerNotes: `Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje.`,
+        palabrasAprox: 20,
+        duracionSeg: 9
       },
       {
         slideNumber: 7,
-        tituloMomento: "Puente a la Lección",
-        visualPrompt: "Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background.",
-        overlayText: `StudioSimple · ${oa.asignatura}`,
-        speakerNotes: "Existe una forma precisa de resolverlo paso a paso. ¡Descubrámosla juntos en la lección de hoy!",
-        palabrasAprox: 15,
-        duracionSeg: 7
+        tituloMomento: "La Pregunta Detonante",
+        didacticPurpose: "La Pregunta Detonante",
+        visualPrompt: "Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.",
+        overlayTitle: "Pregunta detonante",
+        overlaySubtitle: `Regla y método de ${item.title}`,
+        overlayText: `Meta: Dominio de ${item.title}`,
+        vectorialOverlayPptx: getVectorialLayer('hook', 7),
+        mathOverlayPptx: getVectorialLayer('hook', 7),
+        speakerNotes: `Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!`,
+        palabrasAprox: 19,
+        duracionSeg: 9
       }
     ];
 
@@ -2882,66 +2848,115 @@ export function generateOAPackage(oa: OACatalogItem, totalLessons: number): Gene
     const explicativoSlides: SlidePrompt[] = [
       {
         slideNumber: 1,
-        tituloMomento: "Definición del Concepto Central",
-        visualPrompt: `Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing ${item.focoDidactico}. High clarity, negative space for text.`,
-        overlayText: `Concepto Clave: ${item.title}`,
-        speakerNotes: `Para comprender este contenido, siempre necesitamos un punto de partida claro que nos permita comparar y analizar con exactitud.`,
-        palabrasAprox: 21,
-        duracionSeg: 11
+        tituloMomento: "Objetivo de la Lección",
+        didacticPurpose: "Objetivo de la Lección",
+        visualPrompt: `Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing ${item.focoDidactico}. High clarity, negative space for text. No text drawn by AI.`,
+        overlayTitle: "Objetivo de la lección",
+        overlaySubtitle: isIng ? `Master ${item.title}: ${item.focoDidactico}` : `Dominar ${item.title}: ${item.focoDidactico}`,
+        overlayText: `Concepto clave: ${item.title}`,
+        vectorialOverlayPptx: getVectorialLayer('expl', 1),
+        mathOverlayPptx: getVectorialLayer('expl', 1),
+        speakerNotes: isIng
+          ? `Today our goal is to learn how to master ${item.focoDidactico.toLowerCase()}, applying clear disciplinary steps with total confidence.`
+          : `El objetivo de hoy es aprender a ${item.focoDidactico.toLowerCase()}, aplicando el método disciplinar paso a paso con total rigor y claridad.`,
+        palabrasAprox: 25,
+        duracionSeg: 12
       },
       {
         slideNumber: 2,
-        tituloMomento: "La Regla de Oro / Algoritmo",
-        visualPrompt: "Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting.",
-        overlayText: "El procedimiento formal",
-        speakerNotes: "El primer paso consiste en organizar la información disponible y seguir el método disciplinar en un orden riguroso.",
-        palabrasAprox: 20,
-        duracionSeg: 10
+        tituloMomento: "Definición del Concepto Central",
+        didacticPurpose: "Definición del Concepto Central",
+        visualPrompt: "Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.",
+        overlayTitle: "Concepto fundamental",
+        overlaySubtitle: `${item.focoDidactico}`,
+        overlayText: `Regla formal: ${item.focoDidactico}`,
+        vectorialOverlayPptx: getVectorialLayer('expl', 2),
+        mathOverlayPptx: getVectorialLayer('expl', 2),
+        speakerNotes: isIng
+          ? `To understand ${item.title}, we establish a clean conceptual foundation connecting the core definition with verifiable concrete evidence.`
+          : `Para comprender ${item.title}, establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación.`,
+        palabrasAprox: 26,
+        duracionSeg: 12
       },
       {
         slideNumber: 3,
         tituloMomento: "Demostración Modelada",
-        visualPrompt: "Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows.",
-        overlayText: "Caso aplicado",
-        speakerNotes: "Observa cómo se aplica la regla en este caso práctico: cada elemento tiene un propósito definido y comprobable.",
-        palabrasAprox: 19,
-        duracionSeg: 10
+        didacticPurpose: "Demostración Modelada",
+        visualPrompt: "Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.",
+        overlayTitle: "Modelamiento paso a paso",
+        overlaySubtitle: `Procedimiento de ${item.title}`,
+        overlayText: `Modelamiento paso a paso de ${item.title}`,
+        vectorialOverlayPptx: getVectorialLayer('expl', 3),
+        mathOverlayPptx: getVectorialLayer('expl', 3),
+        speakerNotes: isIng
+          ? `Observe how the procedure unfolds in this guided demonstration: every single change responds to an explicit disciplinary rule.`
+          : `Observa cómo se aplica el procedimiento en este caso guiado: cada transformación responde a una justificación disciplinar explícita y visible.`,
+        palabrasAprox: 26,
+        duracionSeg: 12
       },
       {
         slideNumber: 4,
         tituloMomento: "Prevención del Error Frecuente",
-        visualPrompt: "Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal.",
-        overlayText: "¡Cuidado con esta trampa!",
-        speakerNotes: "Un error habitual ocurre cuando nos apresuramos y omitimos el contexto. Siempre debemos verificar el procedimiento completo.",
-        palabrasAprox: 19,
-        duracionSeg: 10
+        didacticPurpose: "Prevención del Error Frecuente",
+        visualPrompt: "Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.",
+        overlayTitle: "Atención: Error habitual",
+        overlaySubtitle: "Confusión común que debemos evitar",
+        overlayText: "Atención: Error habitual a evitar",
+        vectorialOverlayPptx: getVectorialLayer('expl', 4),
+        mathOverlayPptx: getVectorialLayer('expl', 4),
+        speakerNotes: isIng
+          ? `A common pitfall happens when overlooking order or basic conventions. We always check each intermediate step before concluding.`
+          : `Un error frecuente ocurre al descuidar el orden o saltarse un paso de la convención establecida. Siempre comprobamos cada dato antes de continuar.`,
+        palabrasAprox: 27,
+        duracionSeg: 13
       },
       {
         slideNumber: 5,
         tituloMomento: "Comprobación del Resultado",
-        visualPrompt: "Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem.",
-        overlayText: "Comprobación del resultado",
-        speakerNotes: "Al comprobar nuestro resultado, confirmamos que la respuesta es coherente con el problema y no deja dudas.",
-        palabrasAprox: 18,
-        duracionSeg: 9
+        didacticPurpose: "Comprobación del Resultado",
+        visualPrompt: "Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.",
+        overlayTitle: "Validación del resultado",
+        overlaySubtitle: "Comprobar que la respuesta es consistente",
+        overlayText: "Comprobación y validación del resultado",
+        vectorialOverlayPptx: getVectorialLayer('expl', 5),
+        mathOverlayPptx: getVectorialLayer('expl', 5),
+        speakerNotes: isIng
+          ? `By contrasting the result with our initial scenario, we confirm that our solution is consistent, rigorous, and fully answers the question.`
+          : `Al contrastar el resultado con la situación inicial, confirmamos que la solución es consistente, rigurosa y responde plenamente a la pregunta.`,
+        palabrasAprox: 26,
+        duracionSeg: 12
       },
       {
         slideNumber: 6,
-        tituloMomento: "Estrategia Mnemotécnica / Regla Mental",
-        visualPrompt: "Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges.",
-        overlayText: "Los 3 pasos para pensar",
-        speakerNotes: "Recuerda siempre la estrategia en tres pasos: identificar los datos, aplicar el método en orden y comprobar el resultado.",
-        palabrasAprox: 20,
-        duracionSeg: 10
+        tituloMomento: "Estrategia Mnemotécnica",
+        didacticPurpose: "Estrategia Mnemotécnica",
+        visualPrompt: "Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.",
+        overlayTitle: "Estrategia de pensamiento",
+        overlaySubtitle: "1. Identificar · 2. Aplicar · 3. Comprobar",
+        overlayText: "Estrategia mental: Identificar, Aplicar y Verificar",
+        vectorialOverlayPptx: getVectorialLayer('expl', 6),
+        mathOverlayPptx: getVectorialLayer('expl', 6),
+        speakerNotes: isIng
+          ? `Always remember the three-step thinking strategy: identify the key data, apply the formal rule in order, and verify the final result.`
+          : `Recuerda siempre la estrategia en tres pasos: identificar la información clave, aplicar la regla en orden y comprobar el resultado final.`,
+        palabrasAprox: 26,
+        duracionSeg: 12
       },
       {
         slideNumber: 7,
-        tituloMomento: "Síntesis y Puente al Cuaderno",
-        visualPrompt: "Modern anime style. The two 13-year-olds smiling confidently with their notebooks open and pencils ready, inviting the student to replicate the method.",
-        overlayText: "¡Tu turno en el cuaderno!",
-        speakerNotes: "Ya dominas la regla y el método paso a paso. Ahora abre tu cuaderno y resuelve el siguiente ejercicio junto a tu mentor.",
-        palabrasAprox: 22,
-        duracionSeg: 11
+        tituloMomento: "Síntesis y Regla de Oro",
+        didacticPurpose: "Síntesis y Regla de Oro",
+        visualPrompt: "Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.",
+        overlayTitle: `Regla de Oro: ${item.title}`,
+        overlaySubtitle: "Método disciplinar validado",
+        overlayText: `Síntesis: ${item.title}`,
+        vectorialOverlayPptx: getVectorialLayer('expl', 7),
+        mathOverlayPptx: getVectorialLayer('expl', 7),
+        speakerNotes: isIng
+          ? `Now that you understand the golden rule and the procedure of ${item.title}, let us practice and prove our skills in the interactive platform!`
+          : `Ahora que dominas la regla fundamental y el procedimiento de ${item.title}, ¡vamos a demostrarlo en las actividades interactivas de la plataforma!`,
+        palabrasAprox: 25,
+        duracionSeg: 12
       }
     ];
 

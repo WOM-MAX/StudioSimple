@@ -1,0 +1,306 @@
+{
+  "L05": {
+    "gancho": [
+      {
+        "slideNumber": 1,
+        "overlayText": "DOS SITUACIONES",
+        "speakerNotes": "El submarino está a dos metros bajo la superficie. La joven anota su posición antes de cambiar la profundidad."
+      },
+      {
+        "slideNumber": 2,
+        "overlayText": "−2 METROS",
+        "speakerNotes": "Restar cinco metros positivos puede representar un descenso de cinco unidades desde ese lugar. El cero sigue fijo."
+      },
+      {
+        "slideNumber": 3,
+        "overlayText": "−2 − (+5)",
+        "speakerNotes": "La recta muestra el recorrido hacia abajo, pero el signo de la resta todavía necesita una interpretación."
+      },
+      {
+        "slideNumber": 4,
+        "overlayText": "−2 − (−5)",
+        "speakerNotes": "En otro registro, se elimina un descenso negativo. Esa operación parece contradictoria hasta pensar en el cambio inverso."
+      },
+      {
+        "slideNumber": 5,
+        "overlayText": "DOS SENTIDOS",
+        "speakerNotes": "Restar puede convertirse en sumar el opuesto. Así se explica por qué quitar una cantidad negativa lleva en dirección contraria."
+      },
+      {
+        "slideNumber": 6,
+        "overlayText": "¿CÓMO CAMBIA?",
+        "speakerNotes": "Los dos ejemplos comienzan en menos dos, aunque terminan en lugares distintos. La operación indica qué cambio se aplica."
+      },
+      {
+        "slideNumber": 7,
+        "overlayText": "UNA REGLA ÚTIL",
+        "speakerNotes": "En la lección, la pareja traducirá cada resta a una suma equivalente y comprobará el movimiento en la recta."
+      }
+    ],
+    "leccion": [
+      {
+        "slideNumber": 1,
+        "overlayText": "Transforma restas sumando el opuesto",
+        "speakerNotes": "El objetivo de hoy es transformar restas en sumas del opuesto. La joven y el joven modelan cada operación sobre una recta numérica y justifican el cambio en cada ejemplo."
+      },
+      {
+        "slideNumber": 2,
+        "overlayText": "a − b = a + (−b)",
+        "speakerNotes": "La regla general es a menos b igual a a más el opuesto de b. Se mantiene el primer número y cambia el signo del sustraendo. El opuesto conserva magnitud, salvo en cero."
+      },
+      {
+        "slideNumber": 3,
+        "overlayText": "−2 − (+5) = −2 + (−5)",
+        "speakerNotes": "Menos dos menos más cinco pasa a menos dos más menos cinco. Desde menos dos, avanzar cinco unidades a la izquierda termina en menos siete. No cambia el primer número."
+      },
+      {
+        "slideNumber": 4,
+        "overlayText": "−2 − (+5) = −7",
+        "speakerNotes": "Restar un positivo equivale a sumar su opuesto negativo. La recta confirma que el resultado queda más lejos del cero, hacia el lado negativo. El punto inicial se conserva."
+      },
+      {
+        "slideNumber": 5,
+        "overlayText": "−2 − (−5) = −2 + (+5)",
+        "speakerNotes": "Menos dos menos menos cinco se transforma en menos dos más más cinco. Ahora el recorrido avanza cinco unidades hacia la derecha."
+      },
+      {
+        "slideNumber": 6,
+        "overlayText": "−2 − (−5) = +3",
+        "speakerNotes": "El resultado es más tres. Quitar un descenso negativo revierte ese cambio y mueve la posición hacia la superficie en la recta. El cero mantiene la referencia."
+      },
+      {
+        "slideNumber": 7,
+        "overlayText": "CAMBIA EL SIGNO DEL SUSTRAENDO",
+        "speakerNotes": "En ambas restas, solo cambia el signo del sustraendo; después se aplica la regla de adición. La práctica usará esta equivalencia en nuevos contextos."
+      }
+    ]
+  },
+  "L06": {
+    "gancho": [
+      {
+        "slideNumber": 1,
+        "overlayText": "SALDO Y TEMPERATURA",
+        "speakerNotes": "En la estación marina, la joven y el joven revisan dos registros: un saldo bancario y una temperatura bajo cero."
+      },
+      {
+        "slideNumber": 2,
+        "overlayText": "−8.000 PESOS",
+        "speakerNotes": "El saldo parte en menos ocho mil pesos. Un depósito positivo modifica esa cantidad, aunque la cuenta comenzó bajo cero."
+      },
+      {
+        "slideNumber": 3,
+        "overlayText": "+12.000 PESOS",
+        "speakerNotes": "En el exterior, la medición marca menos tres grados Celsius. El sol aparece y la temperatura comienza a subir."
+      },
+      {
+        "slideNumber": 4,
+        "overlayText": "−3 °C",
+        "speakerNotes": "Ambos contextos usan enteros, pero el cero representa una referencia distinta: saldo equilibrado en uno, congelación en otro."
+      },
+      {
+        "slideNumber": 5,
+        "overlayText": "+5 °C",
+        "speakerNotes": "Un número puede señalar deuda o temperatura negativa. El contexto ayuda a interpretar qué significa el signo."
+      },
+      {
+        "slideNumber": 6,
+        "overlayText": "REFERENCIAS DISTINTAS",
+        "speakerNotes": "Registran un cambio positivo y comprueban dónde termina. La operación une cifra, signo y situación."
+      },
+      {
+        "slideNumber": 7,
+        "overlayText": "¿QUÉ INDICA AQUÍ?",
+        "speakerNotes": "En la lección, conectaremos el cálculo con su significado. Así sabremos si el resultado representa deuda, saldo a favor o calor."
+      }
+    ],
+    "leccion": [
+      {
+        "slideNumber": 1,
+        "overlayText": "Resuelve problemas con enteros",
+        "speakerNotes": "El objetivo es resolver situaciones cotidianas con números enteros. La joven y el joven comparan un saldo bancario y una temperatura."
+      },
+      {
+        "slideNumber": 2,
+        "overlayText": "DEFINE EL CERO",
+        "speakerNotes": "Primero definimos el cero según el contexto. En una cuenta, cero significa sin deuda ni saldo a favor; en la escala, cero grados separa temperaturas positivas y negativas. El contexto determina el sentido positivo."
+      },
+      {
+        "slideNumber": 3,
+        "overlayText": "−8.000 + 12.000 = +4.000 pesos",
+        "speakerNotes": "Una deuda de ocho mil pesos se representa con menos ocho mil. Un depósito de doce mil se representa con más doce mil. Los valores mantienen sus unidades en el cálculo."
+      },
+      {
+        "slideNumber": 4,
+        "overlayText": "+4.000 PESOS A FAVOR",
+        "speakerNotes": "Al sumar el depósito, la cuenta queda con cuatro mil pesos a favor: menos ocho mil más doce mil es más cuatro mil. El signo positivo identifica el saldo. La diferencia supera la deuda por cuatro mil."
+      },
+      {
+        "slideNumber": 5,
+        "overlayText": "−3 °C + 5 °C = +2 °C",
+        "speakerNotes": "En el termómetro, menos tres grados sube cinco grados. La operación es menos tres más cinco, que da más dos grados Celsius."
+      },
+      {
+        "slideNumber": 6,
+        "overlayText": "2 °C SOBRE CERO",
+        "speakerNotes": "El resultado se interpreta dentro de su contexto. Más dos grados está sobre cero; más cuatro mil pesos significa saldo positivo. Calcular y explicar van juntos."
+      },
+      {
+        "slideNumber": 7,
+        "overlayText": "SIGNO + CONTEXTO = SENTIDO",
+        "speakerNotes": "Para resolver, identificamos referencia, asignamos signos, calculamos e interpretamos. La práctica posterior aplicará estos pasos a nuevas situaciones del entorno con cuidado y sentido."
+      }
+    ]
+  },
+  "L04": {
+    "gancho": [
+      {
+        "slideNumber": 1,
+        "overlayText": "UNA UNIDAD CADA UNA",
+        "speakerNotes": "La joven y el joven clasifican fichas con signo para registrar el movimiento de un sumergible. Cada ficha representa una unidad."
+      },
+      {
+        "slideNumber": 2,
+        "overlayText": "−4",
+        "speakerNotes": "Cuatro fichas negativas representan un descenso previo. Después, siete positivas indican un avance hacia la superficie."
+      },
+      {
+        "slideNumber": 3,
+        "overlayText": "+7",
+        "speakerNotes": "Cada grupo tiene un sentido y una cantidad de pasos distintos. Juntarlos exige considerar ambos datos."
+      },
+      {
+        "slideNumber": 4,
+        "overlayText": "SUMAR AMBOS GRUPOS",
+        "speakerNotes": "En la recta, el recorrido empieza cuatro marcas bajo cero y luego avanza siete marcas hacia arriba."
+      },
+      {
+        "slideNumber": 5,
+        "overlayText": "4 FRENTE A 7",
+        "speakerNotes": "El resultado termina del lado positivo, pero la distancia exacta depende de comparar las magnitudes."
+      },
+      {
+        "slideNumber": 6,
+        "overlayText": "COMPARAR ES CLAVE",
+        "speakerNotes": "Si los signos fueran iguales, el recorrido tomaría otro criterio. La regla cambia según la combinación de signos y sus magnitudes."
+      },
+      {
+        "slideNumber": 7,
+        "overlayText": "SEGÚN SUS SIGNOS",
+        "speakerNotes": "En la explicación veremos cómo sumar enteros de igual y distinto signo, con una recta que muestra el sentido. Los signos indican direcciones contrarias."
+      }
+    ],
+    "leccion": [
+      {
+        "slideNumber": 1,
+        "overlayText": "Suma enteros según sus signos",
+        "speakerNotes": "El objetivo es sumar enteros con signos iguales o distintos. La joven y el joven usan fichas y una recta para seguir cada dirección."
+      },
+      {
+        "slideNumber": 2,
+        "overlayText": "(+4) + (+3) = +7",
+        "speakerNotes": "Cuando los signos son iguales, sumamos las magnitudes y conservamos el signo. Más cuatro más más tres da más siete. El signo común indica el sentido del resultado."
+      },
+      {
+        "slideNumber": 3,
+        "overlayText": "(−4) + (−3) = −7",
+        "speakerNotes": "Con dos negativos, se suman las distancias recorridas hacia la izquierda. Menos cuatro más menos tres es menos siete. El punto de partida no cambia la regla."
+      },
+      {
+        "slideNumber": 4,
+        "overlayText": "−8 + 5",
+        "speakerNotes": "Cuando los signos difieren, comparamos magnitudes y restamos la menor de la mayor. Menos ocho más cinco deja una diferencia de tres. Esa diferencia queda hacia el lado negativo."
+      },
+      {
+        "slideNumber": 5,
+        "overlayText": "8 − 5 = 3",
+        "speakerNotes": "El resultado conserva el signo del número con mayor valor absoluto. Como ocho supera a cinco, menos ocho más cinco es menos tres. El valor absoluto compara magnitudes sin confundirlas con el signo."
+      },
+      {
+        "slideNumber": 6,
+        "overlayText": "−8 + 5 = −3",
+        "speakerNotes": "En la recta, desde menos ocho avanzamos cinco unidades hacia la derecha y llegamos a menos tres. El desplazamiento confirma la operación y conecta el cálculo con posiciones concretas."
+      },
+      {
+        "slideNumber": 7,
+        "overlayText": "IGUALES: SUMA DISTINTOS: RESTA",
+        "speakerNotes": "Suma magnitudes con signos iguales; con signos distintos, resta magnitudes y conserva el signo de la mayor. Después podrás aplicar este criterio en la práctica."
+      }
+    ]
+  },
+  "L03": {
+    "gancho": [
+      {
+        "slideNumber": 1,
+        "overlayText": "−5 Y +5",
+        "speakerNotes": "En una estación, la joven y el joven comparan dos mediciones ubicadas a lados opuestos del cero. El signo indica dirección."
+      },
+      {
+        "slideNumber": 2,
+        "overlayText": "MISMA EN AMBOS",
+        "speakerNotes": "Una marca está en menos cinco y otra en más cinco. La distancia entre cada una y el origen parece igual."
+      },
+      {
+        "slideNumber": 3,
+        "overlayText": "LADOS OPUESTOS",
+        "speakerNotes": "Sus signos son distintos, pero la distancia al cero coincide. Esa distancia permite describir una propiedad común."
+      },
+      {
+        "slideNumber": 4,
+        "overlayText": "|−5| = 5",
+        "speakerNotes": "La pareja observa la recta: los puntos se reflejan alrededor del origen, como en un espejo."
+      },
+      {
+        "slideNumber": 5,
+        "overlayText": "EL SIGNO INDICA EL LADO",
+        "speakerNotes": "Una posición negativa no está más lejos automáticamente. El valor absoluto mide separación, no dirección."
+      },
+      {
+        "slideNumber": 6,
+        "overlayText": "NUNCA ES NEGATIVA",
+        "speakerNotes": "La notación con barras señala esa distancia. Así, el valor absoluto de menos cinco es cinco."
+      },
+      {
+        "slideNumber": 7,
+        "overlayText": "¿QUÉ COMPARTEN?",
+        "speakerNotes": "En la lección conectaremos valor absoluto y números opuestos, para entender qué comparten y en qué difieren. La distancia al cero es no negativa."
+      }
+    ],
+    "leccion": [
+      {
+        "slideNumber": 1,
+        "overlayText": "Asocia opuestos con el valor absoluto",
+        "speakerNotes": "El objetivo es asociar números opuestos con el valor absoluto. La joven y el joven ubican menos cinco y más cinco a igual distancia del cero sobre la misma recta numérica."
+      },
+      {
+        "slideNumber": 2,
+        "overlayText": "DISTANCIA AL CERO",
+        "speakerNotes": "El valor absoluto de un entero es la distancia entre su posición y el cero. Se escribe entre barras y nunca es negativa. Las barras indican medida, no una operación aparte."
+      },
+      {
+        "slideNumber": 3,
+        "overlayText": "|−5| = |+5| = 5",
+        "speakerNotes": "Por eso, el valor absoluto de menos cinco es cinco, y el de más cinco también es cinco. El signo cambia la ubicación, no la distancia."
+      },
+      {
+        "slideNumber": 4,
+        "overlayText": "MISMA DISTANCIA · SIGNO OPUESTO",
+        "speakerNotes": "Dos enteros opuestos están a la misma distancia del cero y en lados contrarios. Sus signos son distintos, aunque sus valores absolutos coinciden. Ambos puntos son diferentes salvo en cero."
+      },
+      {
+        "slideNumber": 5,
+        "overlayText": "ES SU PROPIO OPUESTO",
+        "speakerNotes": "El cero es su propio opuesto. Su distancia al cero es cero, así que el valor absoluto de cero también es cero."
+      },
+      {
+        "slideNumber": 6,
+        "overlayText": "−5 + (+5) = 0",
+        "speakerNotes": "Al sumar un número y su opuesto, se obtiene cero: menos cinco más cinco es cero. En la recta, ambos desplazamientos se cancelan."
+      },
+      {
+        "slideNumber": 7,
+        "overlayText": "DISTANCIA ≠ DIRECCIÓN",
+        "speakerNotes": "La idea central es leer dirección y distancia por separado. El valor absoluto mide distancia; el opuesto señala la posición simétrica. La práctica retomará esta relación y su representación en la recta."
+      }
+    ]
+  }
+}
