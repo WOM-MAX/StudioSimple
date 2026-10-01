@@ -170,7 +170,7 @@ export function adaptGeneratorLessonToPlayer(
       focusPoints: (genLesson.paso2_hook as any)?.focusPoints || [],
       dileIntro: genLesson.paso2_hook.dileAntes,
       hazInstruction: (genLesson.paso2_hook as any)?.hazInstruction || 'Observa y reflexiona con las escenas del desafío visual.',
-      videoSrc: (genLesson.paso2_hook as any).videoUrl || (genLesson.paso2_hook as any).videoSrc || (isMat7bOa01L01 ? 'https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7-MAT-OA01-L01-MOTIVACIONAL_V9_LEGIBLE.mp4' : ''),
+      videoSrc: (genLesson.paso2_hook as any).videoUrl || (genLesson.paso2_hook as any).videoSrc || (isMat7bOa01L01 ? 'https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/MAT/110-7-MAT-OA01-L01-GANCHO.mp4' : ''),
       posterSrc: (genLesson.paso2_hook as any).posterUrl || (genLesson.paso2_hook as any).posterSrc || (genLesson.paso2_hook.slides?.[0]?.imageUrl || ''),
       dileAfterVideo: genLesson.paso2_hook.dileDespues,
       fullPrompt: genLesson.paso2_hook?.fullPrompt,
@@ -195,7 +195,7 @@ export function adaptGeneratorLessonToPlayer(
       dileIntro: genLesson.paso4_explicativo.dileAntes,
       hazInstruction: 'Revisemos la explicación formal y la idea clave.',
       ideaClave: genLesson.paso4_explicativo.ideaClave,
-      videoSrc: (genLesson.paso4_explicativo as any).videoUrl || (genLesson.paso4_explicativo as any).videoSrc || (isMat7bOa01L01 ? 'https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/MAT/MAT_OA01_L01_Concepto.mp4' : ''),
+      videoSrc: (genLesson.paso4_explicativo as any).videoUrl || (genLesson.paso4_explicativo as any).videoSrc || (isMat7bOa01L01 ? 'https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/MAT/110-7-MAT-OA01-L01-EXPLICACION.mp4' : ''),
       graphicPoster: (genLesson.paso4_explicativo as any).posterUrl || (genLesson.paso4_explicativo as any).graphicPoster || (genLesson.paso4_explicativo.slides?.[0]?.imageUrl || ''),
       fullPrompt: genLesson.paso4_explicativo?.fullPrompt,
       slides: genLesson.paso4_explicativo?.slides

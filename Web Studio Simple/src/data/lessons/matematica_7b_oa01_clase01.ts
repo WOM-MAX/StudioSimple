@@ -89,7 +89,7 @@ export const MATEMATICA_7B_OA01_CLASE01: LessonData = {
     ],
     dileIntro: 'Ahora veremos un video sobre el recorrido de un submarino. Mientras lo ves, fíjate en tres cosas: dónde comienza el submarino, cuánto baja y cuánto sube.',
     hazInstruction: 'Presiona el botón para reproducir el video.',
-    videoSrc: 'https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7-MAT-OA01-L01-MOTIVACIONAL_V9_LEGIBLE.mp4',
+    videoSrc: 'https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/MAT/110-7-MAT-OA01-L01-GANCHO.mp4',
     posterSrc: '/visuals/desafio-submarino.png',
     dileAfterVideo: 'El video nos muestra cómo el submarino comienza en la superficie y realiza distintos cambios de profundidad en el mar. Pero antes de realizar cálculos formales con enteros, nuestro primer gran paso es aprender a distinguir con claridad qué es una posición y qué es un movimiento.',
     slides: [
