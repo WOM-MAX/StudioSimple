@@ -226,13 +226,13 @@ export const StudentDashboard: React.FC = () => {
           </p>
         </div>
 
-        {/* GRILLA DE LAS 5 LECCIONES */}
+        {/* GRILLA DE LECCIONES */}
         <div>
           <h2 className={`text-base font-extrabold mb-3 ${isDark ? 'text-white' : 'text-[#1C3257]'}`}>
             Tus Clases del Objetivo
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+          <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ${activeOa.lessons.length >= 6 ? 'xl:grid-cols-6' : 'xl:grid-cols-5'} gap-4`}>
             {activeOa.lessons.map((lesson) => {
               const injectedLesson = findInjectedLesson(
                 selectedGrade,
@@ -263,7 +263,7 @@ export const StudentDashboard: React.FC = () => {
                   <div className="flex flex-col space-y-3">
                     <div className="flex items-center justify-between gap-1.5">
                       <span className="text-[11px] font-black text-[#12A1A4] bg-teal-50 border border-teal-200 px-2.5 py-1 rounded-lg uppercase tracking-wider">
-                        Clase {lesson.lessonNumber} de 5
+                        Clase {lesson.lessonNumber} de {activeOa.totalLessons || activeOa.lessons.length}
                       </span>
                       <span className={`text-[11px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 ${
                         isDark ? 'bg-[#0A192F] text-[#94A3B8]' : 'bg-[#F5F4EF] text-[#748093]'

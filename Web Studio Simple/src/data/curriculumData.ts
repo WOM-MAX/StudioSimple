@@ -37,43 +37,50 @@ export const MATEMATICA_7B_OAS: CurricularOA[] = [
     number: 1,
     title: 'Números Enteros (Z)',
     shortDesc: 'Reconocer el cero como punto de referencia, representar enteros en la recta numérica, ordenarlos y aplicarlos en contextos reales.',
-    totalLessons: 5,
+    totalLessons: 6,
     completedLessons: 0,
     lessons: [
       {
         lessonNumber: 1,
-        title: 'Posiciones respecto de un punto de referencia',
+        title: 'Posiciones y movimientos respecto de un punto de referencia',
         durationMinutes: 30,
         status: 'ready',
-        focusSummary: 'El número cero como origen, temperaturas bajo cero, niveles de profundidad y ascensor.'
+        focusSummary: 'El número cero como origen de comparación, temperaturas sobre y bajo cero, niveles de profundidad y ascensor.'
       },
       {
         lessonNumber: 2,
         title: 'La recta numérica y orden en Z',
         durationMinutes: 30,
         status: 'ready',
-        focusSummary: 'Ubicación de positivos y negativos, relaciones de orden mayor y menor (> y <).'
+        focusSummary: 'Ubicación de positivos y negativos, relaciones de orden mayor y menor (> y <), y crecimiento hacia la derecha.'
       },
       {
         lessonNumber: 3,
-        title: 'Valor absoluto y distancias al cero',
+        title: 'Valor absoluto y números opuestos',
         durationMinutes: 30,
         status: 'ready',
-        focusSummary: 'Comprensión geométrica del valor absoluto como distancia sin signo.'
+        focusSummary: 'Comprensión geométrica del valor absoluto como distancia sin signo al cero y pares de opuestos aditivos.'
       },
       {
         lessonNumber: 4,
-        title: 'Adición y sustracción en Z',
+        title: 'Adición de enteros de igual y distinto signo',
         durationMinutes: 30,
         status: 'ready',
-        focusSummary: 'Desplazamientos en la recta, suma de signos iguales/distintos y el opuesto aditivo.'
+        focusSummary: 'Algoritmo formal para sumar enteros: signos iguales conservan signo y signos distintos restan valores absolutos.'
       },
       {
         lessonNumber: 5,
-        title: 'Resolución de problemas cotidianos y síntesis',
+        title: 'Sustracción en Z y la suma del inverso aditivo',
         durationMinutes: 30,
         status: 'ready',
-        focusSummary: 'Aplicación en estados de cuenta bancarios, variaciones térmicas y miniquiz de maestría.'
+        focusSummary: 'Transformación de la resta en suma del opuesto y modelamiento del vector de ascenso del submarino de −2 m a +3 m.'
+      },
+      {
+        lessonNumber: 6,
+        title: 'Resolución de problemas cotidianos y síntesis oficial',
+        durationMinutes: 30,
+        status: 'ready',
+        focusSummary: 'Aplicación en estados de cuenta bancarios, variaciones térmicas y síntesis para Exámenes Libres.'
       }
     ]
   },
@@ -205,14 +212,15 @@ export const LENGUAJE_7B_OAS: CurricularOA[] = [
     number: 3,
     title: 'Análisis de Narraciones y el Héroe',
     shortDesc: 'Analizar las narraciones leídas reconociendo el conflicto, motivaciones de los personajes, el viaje del héroe y la visión de mundo.',
-    totalLessons: 5,
+    totalLessons: 6,
     completedLessons: 0,
     lessons: [
-      { lessonNumber: 1, title: 'El conflicto narrativo y motivaciones del personaje', durationMinutes: 30, status: 'ready', focusSummary: 'Deseo del protagonista, antagonista y motor de la historia.' },
-      { lessonNumber: 2, title: 'Las etapas del viaje del héroe en el mito y cuento', durationMinutes: 30, status: 'ready', focusSummary: 'Llamado a la aventura, pruebas y regreso transformado.' },
-      { lessonNumber: 3, title: 'Visión de mundo y contexto sociocultural en la obra', durationMinutes: 30, status: 'ready', focusSummary: 'Valores, época histórica y costumbres en el relato.' },
-      { lessonNumber: 4, title: 'La voz narrativa: narrador protagonista, testigo y omnisciente', durationMinutes: 30, status: 'ready', focusSummary: 'Punto de vista y grado de conocimiento de los hechos.' },
-      { lessonNumber: 5, title: 'Ensayo de comprensión lectora narrativa y distractor', durationMinutes: 30, status: 'ready', focusSummary: 'Preguntas tipo MINEDUC con justificación de respuestas.' }
+      { lessonNumber: 1, title: 'Las 6 Etapas del Viaje del Héroe', durationMinutes: 30, status: 'ready', focusSummary: 'Estructura del viaje del héroe, llamado a la aventura, pruebas y transformación.' },
+      { lessonNumber: 2, title: 'Evolución y roles de los personajes', durationMinutes: 30, status: 'ready', focusSummary: 'Protagonista, antagonista, aliados y evolución de motivaciones en el relato.' },
+      { lessonNumber: 3, title: 'La voz del narrador y perspectivas', durationMinutes: 30, status: 'ready', focusSummary: 'Narrador protagonista, testigo y omnisciente; perspectiva y focalización.' },
+      { lessonNumber: 4, title: 'Disposición temporal de los acontecimientos', durationMinutes: 30, status: 'ready', focusSummary: 'Tiempo de la historia y tiempo del relato, anacronías (analepsis y prolepsis).' },
+      { lessonNumber: 5, title: 'Práctica avanzada y modelamiento de OA 3 (Parte 1)', durationMinutes: 30, status: 'ready', focusSummary: 'Lectura guiada, rastreo de evidencias textuales e inferencias complejas.' },
+      { lessonNumber: 6, title: 'Interpretación global, visión de mundo y síntesis', durationMinutes: 30, status: 'ready', focusSummary: 'Visión de mundo, valores socioculturales y síntesis de comprensión lectora tipo Examen Libre.' }
     ]
   },
   {
@@ -268,14 +276,15 @@ export const CIENCIAS_7B_OAS: CurricularOA[] = [
     number: 1,
     title: 'Sexualidad y Afectividad Integral',
     shortDesc: 'Explicar los aspectos biológicos, afectivos y sociales de la sexualidad, los cambios en la pubertad y la responsabilidad individual.',
-    totalLessons: 5,
+    totalLessons: 6,
     completedLessons: 0,
     lessons: [
-      { lessonNumber: 1, title: 'Dimensiones biológica, afectiva y social', durationMinutes: 30, status: 'ready', focusSummary: 'Visión integral del desarrollo humano en la adolescencia.' },
-      { lessonNumber: 2, title: 'Cambios físicos y maduración en la pubertad', durationMinutes: 30, status: 'ready', focusSummary: 'Caracteres sexuales primarios y secundarios.' },
-      { lessonNumber: 3, title: 'Relaciones afectivas, empatía y respeto mutuo', durationMinutes: 30, status: 'ready', focusSummary: 'Comunicación asertiva y consentimiento informado.' },
-      { lessonNumber: 4, title: 'Toma de decisiones informadas y autocuidado', durationMinutes: 30, status: 'ready', focusSummary: 'Protección personal, límites y canales de ayuda.' },
-      { lessonNumber: 5, title: 'Síntesis formativa y resolución de dilemas', durationMinutes: 30, status: 'ready', focusSummary: 'Evaluación formativa del OA 1.' }
+      { lessonNumber: 1, title: 'Las 4 Dimensiones de la Sexualidad Humana', durationMinutes: 30, status: 'ready', focusSummary: 'Dimensión biológica, afectiva, psicológica y social según MINEDUC.' },
+      { lessonNumber: 2, title: 'Transformaciones físicas y emocionales en la pubertad', durationMinutes: 30, status: 'ready', focusSummary: 'Caracteres sexuales primarios, secundarios y maduración biológica.' },
+      { lessonNumber: 3, title: 'Vínculos afectivos, respeto mutuo e intimidad', durationMinutes: 30, status: 'ready', focusSummary: 'Comunicación asertiva, empatía y límites personales.' },
+      { lessonNumber: 4, title: 'Responsabilidad individual y toma de decisiones', durationMinutes: 30, status: 'ready', focusSummary: 'Autocuidado, autonomía y canales de apoyo institucional.' },
+      { lessonNumber: 5, title: 'Mitos, estereotipos y convivencia saludable', durationMinutes: 30, status: 'ready', focusSummary: 'Análisis crítico de estereotipos sociales y relaciones respetuosas.' },
+      { lessonNumber: 6, title: 'Síntesis y simulación tipo Examen Libre', durationMinutes: 30, status: 'ready', focusSummary: 'Evaluación formativa y resolución de casos reales tipo MINEDUC.' }
     ]
   },
   {
@@ -379,11 +388,11 @@ export const HISTORIA_7B_OAS: CurricularOA[] = [
     totalLessons: 5,
     completedLessons: 0,
     lessons: [
-      { lessonNumber: 1, title: 'El proceso de hominización y bipedismo', durationMinutes: 30, status: 'ready', focusSummary: 'Evolución biológica y uso de herramientas líticas.' },
-      { lessonNumber: 2, title: 'Sociedades cazadoras-recolectoras del Paleolítico', durationMinutes: 30, status: 'ready', focusSummary: 'Nomadismo, dominio del fuego y arte rupestre.' },
-      { lessonNumber: 3, title: 'La domesticación de plantas y animales', durationMinutes: 30, status: 'ready', focusSummary: 'El origen de la agricultura en la Media Luna Fértil.' },
-      { lessonNumber: 4, title: 'Sedentarismo, aldeas y división del trabajo', durationMinutes: 30, status: 'ready', focusSummary: 'Excedente alimentario, alfarería y tejidos.' },
-      { lessonNumber: 5, title: 'Ensayo histórico de la prehistoria', durationMinutes: 30, status: 'ready', focusSummary: 'Evaluación formativa del OA 2.' }
+      { lessonNumber: 1, title: 'El fin del nomadismo y el surgimiento agrícola', durationMinutes: 30, status: 'ready', focusSummary: 'Evolución humana, cambio climático posglacial y transición al sedentarismo.' },
+      { lessonNumber: 2, title: 'Domesticación de animales y plantas en el Creciente Fértil', durationMinutes: 30, status: 'ready', focusSummary: 'Agricultura temprana, ganadería y transformación del entorno natural.' },
+      { lessonNumber: 3, title: 'Primeras aldeas sedentarias y división del trabajo', durationMinutes: 30, status: 'ready', focusSummary: 'Estructura social, excedentes alimentarios y especialización de oficios.' },
+      { lessonNumber: 4, title: 'Innovaciones tecnológicas del Neolítico', durationMinutes: 30, status: 'ready', focusSummary: 'Piedra pulida, alfarería, textilería y metalurgia incipiente.' },
+      { lessonNumber: 5, title: 'Consecuencias históricas y síntesis de la Revolución Neolítica', durationMinutes: 30, status: 'ready', focusSummary: 'Impacto en la civilización humana y ensayo tipo Examen Libre.' }
     ]
   },
   {
@@ -574,14 +583,15 @@ export const INGLES_7B_OAS: CurricularOA[] = [
     number: 9,
     title: 'Reading Comprehension of Literary Stories',
     shortDesc: 'Demostrar comprensión de ideas generales e información explícita en textos adaptados y auténticos breves.',
-    totalLessons: 5,
+    totalLessons: 6,
     completedLessons: 0,
     lessons: [
-      { lessonNumber: 1, title: 'Main ideas and characters in adapted short stories', durationMinutes: 30, status: 'ready', focusSummary: 'Protagonists, settings, and main plot elements.' },
-      { lessonNumber: 2, title: 'Sequencing events with time connectors (First, Then, Finally)', durationMinutes: 30, status: 'ready', focusSummary: 'Chronological timeline and story arc.' },
-      { lessonNumber: 3, title: 'Character feelings, moods, and motivations', durationMinutes: 30, status: 'ready', focusSummary: 'Adjectives of emotion and physical traits.' },
-      { lessonNumber: 4, title: 'Context clues for unknown vocabulary', durationMinutes: 30, status: 'ready', focusSummary: 'Inferring word meanings without a dictionary.' },
-      { lessonNumber: 5, title: 'Reading comprehension assessment and review', durationMinutes: 30, status: 'ready', focusSummary: 'Multiple-choice questions with distractor analysis.' }
+      { lessonNumber: 1, title: 'Setting and Characters in Short Stories', durationMinutes: 30, status: 'ready', focusSummary: 'Story elements, literary terminology, character descriptions and settings.' },
+      { lessonNumber: 2, title: 'Chronological Sequence and Time Connectors', durationMinutes: 30, status: 'ready', focusSummary: 'Time sequence markers (first, next, suddenly, finally) and event order.' },
+      { lessonNumber: 3, title: 'Past Simple Tense: Regular and Irregular Verbs', durationMinutes: 30, status: 'ready', focusSummary: 'Narrative past tense recognition in adapted stories.' },
+      { lessonNumber: 4, title: 'Character Feelings, Dialogue, and Conflict', durationMinutes: 30, status: 'ready', focusSummary: 'Direct speech, internal states, emotions and conflict resolution.' },
+      { lessonNumber: 5, title: 'Práctica avanzada y modelamiento de OA 9 (Parte 1)', durationMinutes: 30, status: 'ready', focusSummary: 'Reading strategies, inference and textual evidence tracking.' },
+      { lessonNumber: 6, title: 'Resolution, Moral of the Story, and Reading Test', durationMinutes: 30, status: 'ready', focusSummary: 'Story conclusion, theme interpretation and formal reading assessment.' }
     ]
   },
   {

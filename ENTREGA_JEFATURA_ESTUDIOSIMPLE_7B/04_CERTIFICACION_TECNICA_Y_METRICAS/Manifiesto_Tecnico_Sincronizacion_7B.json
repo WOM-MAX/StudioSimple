@@ -1,0 +1,78 @@
+{
+  "fechaGeneracion": "2026-10-01T21:30:00Z",
+  "version": "1.0.0-PROD-7B-SYNC",
+  "nivelValidado": "7° Básico (Educación General Básica Chile)",
+  "entorno": {
+    "framework": "React 18 + TypeScript + Vite + Tailwind CSS",
+    "hosting": "Railway Continuous Deployment",
+    "baseDatos": "Neon Serverless PostgreSQL (628 OAs catalogados)",
+    "almacenamientoCDN": "Cloudflare R2 Bucket (pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev)",
+    "videosMatematicaVerificados": 12
+  },
+  "asignaturasSincronizadas": [
+    {
+      "id": "110-7-MAT-OA01",
+      "asignatura": "Matemática",
+      "oa": "OA 1",
+      "titulo": "Números Enteros en la Vida Cotidiana",
+      "totalLecciones": 6,
+      "planMaestroDocx": "Matematica_OA01_6Lecciones_v7.docx",
+      "videosProducidos": {
+        "ganchoTotal": 6,
+        "explicativoTotal": 6,
+        "estado": "BLINDADOS Y CONCORDANTES"
+      }
+    },
+    {
+      "id": "110-7-LEN-OA03",
+      "asignatura": "Lengua y Literatura",
+      "oa": "OA 3",
+      "titulo": "Análisis de Narraciones y el Héroe",
+      "totalLecciones": 6,
+      "planMaestroDocx": "Lenguaje_OA03.docx",
+      "videosProducidos": {
+        "estado": "PROMPTS LIMPIOS 7+7 LISTOS"
+      }
+    },
+    {
+      "id": "110-7-CIE-OA01",
+      "asignatura": "Ciencias Naturales",
+      "oa": "OA 1",
+      "titulo": "Sexualidad y Afectividad Integral",
+      "totalLecciones": 6,
+      "planMaestroDocx": "Ciencias_OA01.docx",
+      "videosProducidos": {
+        "estado": "PROMPTS LIMPIOS 7+7 LISTOS"
+      }
+    },
+    {
+      "id": "110-7-HIS-OA02",
+      "asignatura": "Historia, Geografía y Ciencias Sociales",
+      "oa": "OA 2",
+      "titulo": "Hominización y Revolución Neolítica",
+      "totalLecciones": 5,
+      "planMaestroDocx": "Historia_OA02.docx",
+      "videosProducidos": {
+        "estado": "PROMPTS LIMPIOS 7+7 LISTOS"
+      }
+    },
+    {
+      "id": "110-7-ING-OA09",
+      "asignatura": "Inglés",
+      "oa": "OA 9",
+      "titulo": "Reading Comprehension of Literary Stories",
+      "totalLecciones": 6,
+      "planMaestroDocx": "Ingles_OA09.docx",
+      "videosProducidos": {
+        "estado": "PROMPTS LIMPIOS 7+7 LISTOS"
+      }
+    }
+  ],
+  "metricasGenerales": {
+    "totalAsignaturasTroncales": 5,
+    "totalClasesDisponibles": 29,
+    "tiempoPromedioClaseMinutos": 30,
+    "tiempoTotalFormacionHoras": 14.5,
+    "diapositivasPromptadasTotales": 406
+  }
+}
