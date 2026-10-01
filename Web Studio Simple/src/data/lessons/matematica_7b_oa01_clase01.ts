@@ -226,7 +226,7 @@ export const MATEMATICA_7B_OA01_CLASE01: LessonData = {
     summary: 'Una posición indica dónde se encuentra un objeto respecto del punto de referencia; un movimiento describe cómo cambia de lugar, la dirección y la distancia recorrida.',
     dileIntro: 'En el video observamos que el submarino parte en la superficie y realiza distintos desplazamientos bajo el mar. Ahora veremos la explicación formal para aprender a distinguir siempre qué es una posición fija y qué es un movimiento.',
     hazInstruction: '−20 metros se lee “menos veinte metros”.',
-    videoSrc: 'https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/MAT/MAT_OA01_L01_Concepto.mp4',
+    videoSrc: 'https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/MAT/110-7-MAT-OA01-L01-EXPLICACION.mp4',
     graphicPoster: '/visuals/posicion-movimiento.png',
     slides: [
       {

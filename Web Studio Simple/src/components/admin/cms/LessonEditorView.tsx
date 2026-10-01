@@ -57,6 +57,24 @@ import {
 } from '../../../lib/lesson-repository';
 import { downloadLessonPromptFile } from '../../../lib/prompt-export';
 
+function resolveVideoEmbedUrl(url?: string): string | null {
+  if (!url) return null;
+  if (url.includes('youtube.com/watch?v=')) {
+    return url.replace('watch?v=', 'embed/');
+  }
+  if (url.includes('youtu.be/')) {
+    return url.replace('youtu.be/', 'www.youtube.com/embed/');
+  }
+  if (url.includes('vimeo.com/') && !url.includes('player.vimeo.com')) {
+    const id = url.split('/').pop()?.split('?')[0];
+    return id ? `https://player.vimeo.com/video/${id}` : null;
+  }
+  if (url.includes('iframe.videodelivery.net')) {
+    return url;
+  }
+  return null;
+}
+
 interface LessonEditorViewProps {
   catalog?: OACatalogItem[];
 }
@@ -368,7 +386,53 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
   const handleTestInLivePlayer = () => {
     if (!lessonData || !currentOA) return;
     handleSaveLesson();
+
     const freshClone = JSON.parse(JSON.stringify(lessonData));
+
+    // Reiniciar estado de sesión residual en localStorage para que los videos e interacciones comiencen frescos
+    if (typeof window !== 'undefined') {
+      try {
+        let initialStage: any = 'cover';
+        if (activeStepId === 'paso2_hook') initialStage = 'hook';
+        if (activeStepId === 'paso4_explicativo') initialStage = 'formalization';
+
+        const cleanSession = {
+          stage: initialStage,
+          activeOa: lessonData.metadata.oaCode,
+          activeLessonNum: lessonData.metadata.lessonNumber,
+          feedback: null,
+          attempt: 0,
+          conversationIndex: 0,
+          postIndex: 0,
+          practiceIndex: 0,
+          summaryIdea: 0,
+          quizVisible: false,
+          hookStarted: false,
+          hookEnded: false,
+          formalStarted: false,
+          formalEnded: false,
+          video: { kind: null, playing: false, seek: 0, command: 0 },
+          miniAnswers: ['', '', ''],
+          miniScore: 0,
+          reviewQueue: [],
+          reviewIndex: 0,
+          recoveryItems: [],
+          recoveryIndex: 0,
+          recoveryVisible: false,
+          recoveryAnswer: '',
+          supportCount: 0,
+          reasoningIndependent: false,
+          challengeCompleted: false,
+          closureState: 'none',
+          isOxygenPauseActive: false,
+          studentConnected: true
+        };
+        localStorage.setItem('estudiosimple_active_lesson_session', JSON.stringify(cleanSession));
+      } catch (e) {
+        console.warn('Error reiniciando sesión en live test:', e);
+      }
+    }
+
     setActiveSynchronizedLesson(freshClone);
     setViewMode('lesson');
   };
@@ -1642,13 +1706,24 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
                 {/* Reproductor de Video en Vivo */}
                 {lessonData.hook.videoSrc ? (
                   <div className="rounded-2xl overflow-hidden border border-purple-200 bg-black aspect-video max-h-72 flex items-center justify-center shadow-inner">
-                    <video
-                      src={lessonData.hook.videoSrc}
-                      controls
-                      playsInline
-                      preload="metadata"
-                      className="w-full h-full object-contain"
-                    />
+                    {resolveVideoEmbedUrl(lessonData.hook.videoSrc) ? (
+                      <iframe
+                        src={resolveVideoEmbedUrl(lessonData.hook.videoSrc)!}
+                        title="Vista previa video motivacional"
+                        className="w-full h-full border-0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    ) : (
+                      <video
+                        src={lessonData.hook.videoSrc}
+                        controls
+                        playsInline
+                        preload="metadata"
+                        crossOrigin="anonymous"
+                        className="w-full h-full object-contain"
+                      />
+                    )}
                   </div>
                 ) : (
                   <div className="p-6 rounded-2xl border-2 border-dashed border-purple-200 bg-white/70 flex flex-col items-center justify-center text-center">
@@ -2272,13 +2347,24 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
                 {/* Reproductor de Video en Vivo */}
                 {lessonData.formalization.videoSrc ? (
                   <div className="rounded-2xl overflow-hidden border border-amber-200 bg-black aspect-video max-h-72 flex items-center justify-center shadow-inner">
-                    <video
-                      src={lessonData.formalization.videoSrc}
-                      controls
-                      playsInline
-                      preload="metadata"
-                      className="w-full h-full object-contain"
-                    />
+                    {resolveVideoEmbedUrl(lessonData.formalization.videoSrc) ? (
+                      <iframe
+                        src={resolveVideoEmbedUrl(lessonData.formalization.videoSrc)!}
+                        title="Vista previa video explicativo"
+                        className="w-full h-full border-0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    ) : (
+                      <video
+                        src={lessonData.formalization.videoSrc}
+                        controls
+                        playsInline
+                        preload="metadata"
+                        crossOrigin="anonymous"
+                        className="w-full h-full object-contain"
+                      />
+                    )}
                   </div>
                 ) : (
                   <div className="p-6 rounded-2xl border-2 border-dashed border-amber-200 bg-white/70 flex flex-col items-center justify-center text-center">

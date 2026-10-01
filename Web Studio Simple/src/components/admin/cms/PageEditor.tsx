@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   ArrowLeft,
   ArrowUp,
@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import { CmsPage, CmsSection, CmsBlockType } from '../../../types/cms';
 import { loadSiteConfig, saveSiteConfig } from '../../../data/initialCmsExtrasData';
+import { loadCmsPages } from '../../../data/initialCmsData';
 import { BlockFormModal } from './BlockFormModal';
 import { PageSettingsModal } from './PageSettingsModal';
 
@@ -32,6 +33,22 @@ export const PageEditor: React.FC<PageEditorProps> = ({ page, onBack, onSavePage
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const [saveSuccessMessage, setSaveSuccessMessage] = useState<string | null>(null);
+
+  useEffect(() => {
+    setCurrentPage(page);
+  }, [page]);
+
+  useEffect(() => {
+    const handleStorageChange = () => {
+      const pages = loadCmsPages();
+      const current = pages.find((p) => p.id === page.id || p.slug === page.slug);
+      if (current) {
+        setCurrentPage(current);
+      }
+    };
+    window.addEventListener('storage', handleStorageChange);
+    return () => window.removeEventListener('storage', handleStorageChange);
+  }, [page.id, page.slug]);
 
   const notifyChange = (updated: CmsPage, message: string) => {
     setCurrentPage(updated);
@@ -124,6 +141,26 @@ export const PageEditor: React.FC<PageEditorProps> = ({ page, onBack, onSavePage
     } else {
       updatedSections = [...currentPage.secciones, savedSection];
     }
+
+    if (savedSection.tipoBloque === 'CINTA_NOTICIAS') {
+      try {
+        const siteConfig = loadSiteConfig();
+        saveSiteConfig({
+          ...siteConfig,
+          cintaNoticias: {
+            ...(siteConfig.cintaNoticias || {}),
+            ...savedSection.configuracion,
+            activo: savedSection.activo
+          }
+        });
+        if (typeof window !== 'undefined') {
+          window.dispatchEvent(new Event('storage'));
+        }
+      } catch (e) {
+        console.error('Error sincronizando cinta en PageEditor handleSaveSection:', e);
+      }
+    }
+
     const updated: CmsPage = { ...currentPage, secciones: updatedSections };
     notifyChange(updated, `Bloque "${savedSection.titulo}" guardado exitosamente.`);
     setIsModalOpen(false);

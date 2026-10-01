@@ -235,6 +235,29 @@ export const AdminDashboard: React.FC = () => {
   const [cmsPages, setCmsPages] = useState<CmsPage[]>(() => loadCmsPages());
   const [selectedPageForEdit, setSelectedPageForEdit] = useState<CmsPage | null>(null);
 
+  // Sincronización reactiva del CMS de páginas contra localStorage y entre módulos
+  useEffect(() => {
+    const syncPages = () => {
+      const latest = loadCmsPages();
+      setCmsPages(latest);
+      if (selectedPageForEdit) {
+        const found = latest.find((p) => p.id === selectedPageForEdit.id);
+        if (found) {
+          setSelectedPageForEdit(found);
+        }
+      }
+    };
+    window.addEventListener('storage', syncPages);
+    return () => window.removeEventListener('storage', syncPages);
+  }, [selectedPageForEdit]);
+
+  // Al conmutar al módulo de páginas, forzar recarga del estado más reciente
+  useEffect(() => {
+    if (activeModule === 'paginas') {
+      setCmsPages(loadCmsPages());
+    }
+  }, [activeModule]);
+
   // Estado del Generador y Catálogo
   const [catalog, setCatalog] = useState<OACatalogItem[]>([]);
   const [selectedGrade, setSelectedGrade] = useState<string>('7° Básico');

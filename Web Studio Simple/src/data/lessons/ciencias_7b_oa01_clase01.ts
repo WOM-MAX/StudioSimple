@@ -88,7 +88,107 @@ export const CIENCIAS_7B_OA01_CLASE01: LessonData = {
       'Dimensión Social: convivencia familiar, amistades y cultura.',
       'Dimensión Ética: valores, respeto, cuidado mutuo y consentimiento.'
     ],
-    dileAfterVideo: 'Conversemos sobre lo observado. Te haré dos preguntas para comprobar cómo se interrelacionan estas 4 dimensiones.'
+    dileAfterVideo: 'Conversemos sobre lo observado. Te haré dos preguntas para comprobar cómo se interrelacionan estas 4 dimensiones.',
+    slides: [
+      {
+        "slideNumber": 1,
+        "tituloMomento": "Apertura e Impacto",
+        "didacticPurpose": "Apertura e Impacto",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining a glowing interactive holographic infographic of the 4 dimensions of human sexuality. Warm, inviting scientific atmosphere, negative space in top third. No text drawn by AI.",
+        "overlayText": "Misión 1: Las 4 Dimensiones Humanas",
+        "overlayTitle": "Misión 1: La sexualidad humana",
+        "overlaySubtitle": "Mucho más que un fenómeno biológico",
+        "vectorialOverlayPptx": "Esquema integrador: Silueta humana y 4 nodos dimensionales interconectados",
+        "mathOverlayPptx": "Esquema integrador: Silueta humana y 4 nodos dimensionales interconectados",
+        "speakerNotes": "Comienza una expedición fascinante en ciencias. La sexualidad humana es una vivencia integral que nos acompaña durante todas las etapas de nuestra vida.",
+        "palabrasAprox": 21,
+        "duracionSeg": 9
+      },
+      {
+        "slideNumber": 2,
+        "tituloMomento": "Dimensión Biológica",
+        "didacticPurpose": "Dimensión Biológica",
+        "visualPrompt": "Modern anime style. Clean anatomical growth chart showing developmental milestones of puberty, height markers, and secondary sexual characteristics. High clarity, medical illustration style. No text drawn by AI.",
+        "overlayText": "Dimensión Biológica: El Cuerpo",
+        "overlayTitle": "Dimensión biológica",
+        "overlaySubtitle": "El cuerpo físico y los cambios puberales",
+        "vectorialOverlayPptx": "Capa médica: Eje de maduración corporal, estirón y caracteres sexuales secundarios",
+        "mathOverlayPptx": "Capa médica: Eje de maduración corporal, estirón y caracteres sexuales secundarios",
+        "speakerNotes": "Comprende nuestro cuerpo material, la maduración celular y los cambios puberales que transforman nuestra estatura, voz y fisonomía.",
+        "palabrasAprox": 18,
+        "duracionSeg": 9
+      },
+      {
+        "slideNumber": 3,
+        "tituloMomento": "Dimensión Afectiva",
+        "didacticPurpose": "Dimensión Afectiva",
+        "visualPrompt": "Modern anime style. Close-up of adolescents sharing a sincere laugh, icons of heart and brain softly illuminated. Warm morning light, emotional connection. No text drawn by AI.",
+        "overlayText": "Dimensión Afectiva: Emociones",
+        "overlayTitle": "Dimensión afectiva",
+        "overlaySubtitle": "Emociones, cariño y autoestima",
+        "vectorialOverlayPptx": "Iconografía emocional: Vínculos de apego, empatía y autoimagen positiva",
+        "mathOverlayPptx": "Iconografía emocional: Vínculos de apego, empatía y autoimagen positiva",
+        "speakerNotes": "Reúne nuestros sentimientos, la autoestima personal, el cariño y la capacidad de establecer lazos de ternura y confianza profunda con otros.",
+        "palabrasAprox": 20,
+        "duracionSeg": 9
+      },
+      {
+        "slideNumber": 4,
+        "tituloMomento": "Dimensión Social",
+        "didacticPurpose": "Dimensión Social",
+        "visualPrompt": "Modern anime style. Diverse group of young students collaborating in a bright park, talking respectfully with families and friends. Crisp clean composition. No text drawn by AI.",
+        "overlayText": "Dimensión Social: Relaciones",
+        "overlayTitle": "Dimensión social",
+        "overlaySubtitle": "Familia, amistades y cultura",
+        "vectorialOverlayPptx": "Red de interacción: Individuo en el centro rodeado por familia, escuela y comunidad",
+        "mathOverlayPptx": "Red de interacción: Individuo en el centro rodeado por familia, escuela y comunidad",
+        "speakerNotes": "Se manifiesta en cómo convivimos día a día, compartiendo experiencias con la familia, participando en el colegio y dialogando con nuestro grupo de amigos.",
+        "palabrasAprox": 22,
+        "duracionSeg": 10
+      },
+      {
+        "slideNumber": 5,
+        "tituloMomento": "Dimensión Ética",
+        "didacticPurpose": "Dimensión Ética",
+        "visualPrompt": "Modern anime style. Balance scale emblem with glowing symbols of respect, personal limits, consent, and mutual dignity. Clear negative space. No text drawn by AI.",
+        "overlayText": "Dimensión Ética: Valores y Respeto",
+        "overlayTitle": "Dimensión ética",
+        "overlaySubtitle": "Valores, consentimiento y dignidad",
+        "vectorialOverlayPptx": "Símbolos normativos: Escudo de límites personales y balanza de respeto mutuo",
+        "mathOverlayPptx": "Símbolos normativos: Escudo de límites personales y balanza de respeto mutuo",
+        "speakerNotes": "Guía nuestras decisiones morales a través del respeto incondicional a la dignidad humana, la valoración de límites personales y el consentimiento mutuo.",
+        "palabrasAprox": 20,
+        "duracionSeg": 9
+      },
+      {
+        "slideNumber": 6,
+        "tituloMomento": "Interrelación de Dimensiones",
+        "didacticPurpose": "Interrelación de Dimensiones",
+        "visualPrompt": "Modern anime style. The four dimensions connecting dynamically with glowing energetic nodes around a human silhouette. High visual impact, harmony. No text drawn by AI.",
+        "overlayText": "Un Sistema Integral e Inseparable",
+        "overlayTitle": "Un sistema inseparable",
+        "overlaySubtitle": "Cuatro dimensiones que dialogan a la vez",
+        "vectorialOverlayPptx": "Diagrama dinámico de 4 cuadrantes con flechas de retroalimentación recíproca",
+        "mathOverlayPptx": "Diagrama dinámico de 4 cuadrantes con flechas de retroalimentación recíproca",
+        "speakerNotes": "Ninguna dimensión funciona aislada de las demás. Lo que experimenta nuestro cuerpo repercute en nuestras emociones y moldea nuestras relaciones comunitarias.",
+        "palabrasAprox": 20,
+        "duracionSeg": 9
+      },
+      {
+        "slideNumber": 7,
+        "tituloMomento": "Pregunta Detonante",
+        "didacticPurpose": "Pregunta Detonante",
+        "visualPrompt": "Modern anime style. Both explorers smiling, ready to investigate everyday cases with their science notebooks open. StudioSimple badge. No text drawn by AI.",
+        "overlayText": "StudioSimple · Ciencias Naturales",
+        "overlayTitle": "El desafío científico",
+        "overlaySubtitle": "¿Cómo actúan las 4 dimensiones juntas?",
+        "vectorialOverlayPptx": "Pregunta detonante: ¿Cómo influyen los 4 aspectos en una decisión cotidiana real?",
+        "mathOverlayPptx": "Pregunta detonante: ¿Cómo influyen los 4 aspectos en una decisión cotidiana real?",
+        "speakerNotes": "Ahora surge la gran pregunta: cuando enfrentamos un cambio en nuestra adolescencia, ¿cómo interactúan estas cuatro dimensiones al mismo tiempo?",
+        "palabrasAprox": 19,
+        "duracionSeg": 9
+      }
+    ]
   },
 
   // Paso 4: Conversación Guiada
@@ -123,7 +223,107 @@ export const CIENCIAS_7B_OA01_CLASE01: LessonData = {
     ideaClave: 'La sexualidad humana es integral: une nuestro cuerpo biológico, nuestras emociones, nuestra convivencia social y nuestros valores éticos.',
     dileIntro: 'Ahora formalizaremos la idea central que debes recordar para siempre sobre la sexualidad en Ciencias Naturales.',
     hazInstruction: 'Lee con atención la idea clave en pantalla y fíjate en cómo las cuatro dimensiones se conectan entre sí.',
-    videoSrc: ''
+    videoSrc: '',
+    slides: [
+      {
+        "slideNumber": 1,
+        "tituloMomento": "Objetivo de la Lección",
+        "didacticPurpose": "Objetivo de la Lección",
+        "visualPrompt": "Modern anime style 16:9. The boy and girl standing before a clear 4-quadrant lightboard: 'Biológica', 'Afectiva', 'Social' y 'Ética'. Clean modern typography. No text drawn by AI.",
+        "overlayText": "Modelo Integral de la Sexualidad",
+        "overlayTitle": "Objetivo de la lección",
+        "overlaySubtitle": "Explicar las 4 dimensiones de la sexualidad humana",
+        "vectorialOverlayPptx": "Rótulo formal: OA 01 · Modelo Integral de la Sexualidad Humana",
+        "mathOverlayPptx": "Rótulo formal: OA 01 · Modelo Integral de la Sexualidad Humana",
+        "speakerNotes": "El objetivo de hoy es aprender a reconocer y explicar que la sexualidad humana está conformada por cuatro dimensiones inseparables: biológica, afectiva, social y ética.",
+        "palabrasAprox": 24,
+        "duracionSeg": 11
+      },
+      {
+        "slideNumber": 2,
+        "tituloMomento": "Análisis Biológico",
+        "didacticPurpose": "Análisis Biológico",
+        "visualPrompt": "Modern anime style. The girl pointing at growth metrics, voice change diagrams, and cellular maturation charts. Clear clinical clarity. No text drawn by AI.",
+        "overlayText": "Cambios Biológicos de la Pubertad",
+        "overlayTitle": "Eje Biológico: La Pubertad",
+        "overlaySubtitle": "Maduración fisiológica y sistema endocrino",
+        "vectorialOverlayPptx": "Diagrama fisiológico: Glándula hipófisis -> Hormonas gonadales -> Caracteres secundarios",
+        "mathOverlayPptx": "Diagrama fisiológico: Glándula hipófisis -> Hormonas gonadales -> Caracteres secundarios",
+        "speakerNotes": "En la pubertad, el sistema endocrino libera señales químicas que inician el estirón puberal, el desarrollo reproductivo y cambios visibles en la piel, masa muscular y voz.",
+        "palabrasAprox": 25,
+        "duracionSeg": 12
+      },
+      {
+        "slideNumber": 3,
+        "tituloMomento": "Análisis Afectivo",
+        "didacticPurpose": "Análisis Afectivo",
+        "visualPrompt": "Modern anime style. The boy reflecting on emotional self-worth and family bonds with gentle warm ambient lighting. Negative space on left. No text drawn by AI.",
+        "overlayText": "Autoestima y Expresión de Afectos",
+        "overlayTitle": "Eje Afectivo: Las Emociones",
+        "overlaySubtitle": "Autoestima y gestión de los afectos",
+        "vectorialOverlayPptx": "Modelo de autovaloración: Identidad personal, autoaceptación y expresión sana de sentimientos",
+        "mathOverlayPptx": "Modelo de autovaloración: Identidad personal, autoaceptación y expresión sana de sentimientos",
+        "speakerNotes": "El eje afectivo orienta cómo nos sentimos con nosotros mismos. Una autoestima sólida permite valorar el propio cuerpo y comunicar afectos de manera asertiva y respetuosa.",
+        "palabrasAprox": 25,
+        "duracionSeg": 12
+      },
+      {
+        "slideNumber": 4,
+        "tituloMomento": "Análisis Social",
+        "didacticPurpose": "Análisis Social",
+        "visualPrompt": "Modern anime style. Young adolescents participating in school and family dialogues, showing open active listening. Soft depth of field. No text drawn by AI.",
+        "overlayText": "Amistad, Familia y Cultura",
+        "overlayTitle": "Eje Social: La Convivencia",
+        "overlaySubtitle": "Pertenencia, roles y vida en sociedad",
+        "vectorialOverlayPptx": "Matriz sociocultural: Normas de convivencia escolar, dinámicas familiares y equidad",
+        "mathOverlayPptx": "Matriz sociocultural: Normas de convivencia escolar, dinámicas familiares y equidad",
+        "speakerNotes": "En el entorno social aprendemos pautas culturales y construimos amistades. La dimensión social nos invita a convivir en igualdad de derechos sin discriminación ni estereotipos.",
+        "palabrasAprox": 24,
+        "duracionSeg": 11
+      },
+      {
+        "slideNumber": 5,
+        "tituloMomento": "Análisis Ético",
+        "didacticPurpose": "Análisis Ético",
+        "visualPrompt": "Modern anime style. Two hands shaking with dignity and mutual respect. Icon of personal boundaries and safety shield in glowing cyan. No text drawn by AI.",
+        "overlayText": "Límites Personales y Consentimiento",
+        "overlayTitle": "Eje Ético: El Consentimiento",
+        "overlaySubtitle": "Dignidad humana y límites inviolables",
+        "vectorialOverlayPptx": "Capa ética: Principio de consentimiento explícito y respeto a la privacidad del prójimo",
+        "mathOverlayPptx": "Capa ética: Principio de consentimiento explícito y respeto a la privacidad del prójimo",
+        "speakerNotes": "El eje ético establece que el cuerpo de cada individuo es inviolable. Toda relación humana sana se funda en la dignidad, la honestidad y el consentimiento libre y mutuo.",
+        "palabrasAprox": 27,
+        "duracionSeg": 13
+      },
+      {
+        "slideNumber": 6,
+        "tituloMomento": "Casos Concretos",
+        "didacticPurpose": "Casos Concretos",
+        "visualPrompt": "Modern anime style. Dynamic circular flowchart showing the feedback between body changes, emotions, social interactions, and moral values. No text drawn by AI.",
+        "overlayText": "Conexión Permanente entre Dimensiones",
+        "overlayTitle": "Integración de los 4 ejes",
+        "overlaySubtitle": "Análisis de una situación real cotidiana",
+        "vectorialOverlayPptx": "Tabla de desglose de caso: Situación descrita -> Identificación de aportes de cada cuadrante",
+        "mathOverlayPptx": "Tabla de desglose de caso: Situación descrita -> Identificación de aportes de cada cuadrante",
+        "speakerNotes": "Ante un dilema real, como la presión del grupo de amigos, la ética marca los límites, la emoción entrega empatía, la razón social evalúa el entorno y la biología experimenta la alerta.",
+        "palabrasAprox": 30,
+        "duracionSeg": 14
+      },
+      {
+        "slideNumber": 7,
+        "tituloMomento": "Síntesis y Regla de Oro",
+        "didacticPurpose": "Síntesis y Regla de Oro",
+        "visualPrompt": "Modern anime style. StudioSimple emblem alongside a prominent balance diagram with all four dimensions working in dynamic equilibrium. Clean lines. No text drawn by AI.",
+        "overlayText": "Regla de Oro: La Sexualidad es Integral",
+        "overlayTitle": "Regla de Oro de la sexualidad",
+        "overlaySubtitle": "Biológica + Afectiva + Social + Ética = Salud Integral",
+        "vectorialOverlayPptx": "Infografía de síntesis: Las 4 dimensiones convergen en el bienestar integral de la persona",
+        "mathOverlayPptx": "Infografía de síntesis: Las 4 dimensiones convergen en el bienestar integral de la persona",
+        "speakerNotes": "Recuerda la regla de oro: la sexualidad es integral. ¡Ahora demostraremos lo aprendido aplicando este modelo en las situaciones prácticas de la plataforma interactiva!",
+        "palabrasAprox": 23,
+        "duracionSeg": 11
+      }
+    ]
   },
 
   postQuestions: [

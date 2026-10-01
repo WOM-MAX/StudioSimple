@@ -1546,7 +1546,6 @@ const AdultVideoPlayer: React.FC<AdultVideoPlayerProps> = ({ src, kind, session,
       </div>
     );
   }
-
   if (hasError) {
     return (
       <div className="bg-amber-50/90 border border-amber-300 rounded-2xl p-6 mt-4 text-center shadow-sm">
@@ -1608,6 +1607,7 @@ const AdultVideoPlayer: React.FC<AdultVideoPlayerProps> = ({ src, kind, session,
             muted
             playsInline
             preload="auto"
+            crossOrigin="anonymous"
             className="w-full h-full object-contain"
             onError={(e) => {
               console.warn('Error al reproducir video en vista de adulto:', e);

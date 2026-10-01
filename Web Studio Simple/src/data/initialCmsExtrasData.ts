@@ -302,7 +302,10 @@ export function loadSiteConfig(): SiteConfig {
         },
         cintaNoticias: {
           ...INITIAL_SITE_CONFIG.cintaNoticias,
-          ...(parsed.cintaNoticias || {})
+          ...(parsed.cintaNoticias || {}),
+          activo: typeof parsed.cintaNoticias?.activo === 'boolean'
+            ? parsed.cintaNoticias.activo
+            : (INITIAL_SITE_CONFIG.cintaNoticias?.activo !== false)
         },
         footer: {
           ...INITIAL_SITE_CONFIG.footer,
@@ -345,6 +348,9 @@ export function getCloudinaryConfig() {
 export function saveSiteConfig(config: SiteConfig): void {
   try {
     localStorage.setItem('estudiosimple_site_config', JSON.stringify(config));
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new Event('storage'));
+    }
   } catch (e) {
     console.error('Error al guardar SiteConfig:', e);
   }

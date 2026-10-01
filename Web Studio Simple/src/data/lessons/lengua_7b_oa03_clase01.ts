@@ -88,7 +88,107 @@ export const LENGUA_7B_OA03_CLASE01: LessonData = {
       'Etapa 5: El Abismo (el clímax o prueba máxima donde todo parece perdido).',
       'Etapa 6: Regreso Transformado (vuelta a casa con una nueva sabiduría).'
     ],
-    dileAfterVideo: 'Conversemos sobre lo observado. Te haré dos preguntas para comprobar cómo identificamos estas etapas en los relatos que lees.'
+    dileAfterVideo: 'Conversemos sobre lo observado. Te haré dos preguntas para comprobar cómo identificamos estas etapas en los relatos que lees.',
+    slides: [
+      {
+        "slideNumber": 1,
+        "tituloMomento": "Apertura y Mundo Ordinario",
+        "didacticPurpose": "Apertura y Mundo Ordinario",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, studying in a quiet, sunlit village library filled with ancient scrolls and comfortable wooden desks. Warm morning light, negative space in upper third. No text drawn by AI.",
+        "overlayText": "Misión 1: Las 6 Etapas del Viaje del Héroe",
+        "overlayTitle": "Misión 1: El viaje del héroe",
+        "overlaySubtitle": "El mundo ordinario en la biblioteca",
+        "vectorialOverlayPptx": "Esquema narrativo: Etapa 1 · Estado de calma y rutina conocida",
+        "mathOverlayPptx": "Esquema narrativo: Etapa 1 · Estado de calma y rutina conocida",
+        "speakerNotes": "Toda gran narración comienza en la calma. Nuestro protagonista vive en un mundo seguro donde todo resulta familiar y predecible.",
+        "palabrasAprox": 19,
+        "duracionSeg": 9
+      },
+      {
+        "slideNumber": 2,
+        "tituloMomento": "Quiebre y Tensión",
+        "didacticPurpose": "Quiebre y Tensión",
+        "visualPrompt": "Modern anime style. The two companions looking startled as a mysterious glowing letter arrives on the table, surrounded by subtle wind swirls. Clean lineart, dramatic lighting, clear space on the left side. No text drawn by AI.",
+        "overlayText": "Etapa 2: La Llamada a la Aventura",
+        "overlayTitle": "La llamada a la aventura",
+        "overlaySubtitle": "Un mensaje que altera la tranquilidad",
+        "vectorialOverlayPptx": "Vector de conflicto: Suceso inesperado -> Quiebre del equilibrio inicial",
+        "mathOverlayPptx": "Vector de conflicto: Suceso inesperado -> Quiebre del equilibrio inicial",
+        "speakerNotes": "De pronto, la tranquilidad se quiebra. Un mensaje misterioso sobre la mesa plantea un dilema que no puede ser ignorado.",
+        "palabrasAprox": 19,
+        "duracionSeg": 9
+      },
+      {
+        "slideNumber": 3,
+        "tituloMomento": "Encuentro con el Mentor",
+        "didacticPurpose": "Encuentro con el Mentor",
+        "visualPrompt": "Modern anime style. A wise elderly librarian mentor handing the young protagonists an ancient compass and a leather-bound journal. Soft depth of field, warm candlelight. No text drawn by AI.",
+        "overlayText": "El Consejo del Mentor",
+        "overlayTitle": "El consejo del mentor",
+        "overlaySubtitle": "Herramienta y sabiduría inicial",
+        "vectorialOverlayPptx": "Icono de mediación: Guía experimentado entrega objeto clave y consejo",
+        "mathOverlayPptx": "Icono de mediación: Guía experimentado entrega objeto clave y consejo",
+        "speakerNotes": "Sentir temor es natural frente a lo desconocido. El sabio bibliotecario entrega un mapa y el consejo necesario para dar el primer paso.",
+        "palabrasAprox": 22,
+        "duracionSeg": 10
+      },
+      {
+        "slideNumber": 4,
+        "tituloMomento": "Cruce del Umbral",
+        "didacticPurpose": "Cruce del Umbral",
+        "visualPrompt": "Modern anime style. The two young protagonists stepping across a stone archway into a mysterious twilight forest with glowing flora. Dramatic atmospheric lighting. No text drawn by AI.",
+        "overlayText": "Etapa 3: El Cruce del Umbral",
+        "overlayTitle": "El cruce del umbral",
+        "overlaySubtitle": "Hacia el territorio de lo desconocido",
+        "vectorialOverlayPptx": "Frontera narrativa: Límite entre lo cotidiano y el mundo de los desafíos",
+        "mathOverlayPptx": "Frontera narrativa: Límite entre lo cotidiano y el mundo de los desafíos",
+        "speakerNotes": "Nuestros protagonistas cruzan el arco de piedra hacia el bosque. Han dejado atrás la seguridad y se adentran en territorio de aventura.",
+        "palabrasAprox": 21,
+        "duracionSeg": 10
+      },
+      {
+        "slideNumber": 5,
+        "tituloMomento": "Pruebas y Aliados",
+        "didacticPurpose": "Pruebas y Aliados",
+        "visualPrompt": "Modern anime style. The boy and girl working side by side with a loyal animal companion, deciphering a stone puzzle gate while rain falls softly. Vibrant colors, focused determination. No text drawn by AI.",
+        "overlayText": "Etapa 4: Pruebas y Aliados",
+        "overlayTitle": "Pruebas en el camino",
+        "overlaySubtitle": "Obstáculos y fuerzas que se oponen",
+        "vectorialOverlayPptx": "Esquema de progresión: Reto 1 -> Reto 2 -> Alianza con compañeros",
+        "mathOverlayPptx": "Esquema de progresión: Reto 1 -> Reto 2 -> Alianza con compañeros",
+        "speakerNotes": "En el camino surgen dificultades crecientes. Cada obstáculo exige ingenio y pone a prueba el compromiso de mantenerse unidos frente a la adversidad.",
+        "palabrasAprox": 21,
+        "duracionSeg": 10
+      },
+      {
+        "slideNumber": 6,
+        "tituloMomento": "Antesala del Conflicto Mayor",
+        "didacticPurpose": "Antesala del Conflicto Mayor",
+        "visualPrompt": "Modern anime style. Dramatic confrontation in a cavern illuminated by a deep blue glowing crystal. High tension, expressive faces showing courage despite fear. No text drawn by AI.",
+        "overlayText": "Etapa 5: El Abismo / Prueba Suprema",
+        "overlayTitle": "La prueba suprema",
+        "overlaySubtitle": "El núcleo del conflicto dramático",
+        "vectorialOverlayPptx": "Clímax narrativo: Protagonista frente a la fuerza antagónica principal",
+        "mathOverlayPptx": "Clímax narrativo: Protagonista frente a la fuerza antagónica principal",
+        "speakerNotes": "Llegan a la caverna profunda. Están frente a la fuerza antagónica que amenaza su hogar, y no pueden retroceder.",
+        "palabrasAprox": 18,
+        "duracionSeg": 9
+      },
+      {
+        "slideNumber": 7,
+        "tituloMomento": "Pregunta Detonante",
+        "didacticPurpose": "Pregunta Detonante",
+        "visualPrompt": "Modern anime style. Minimalist clean composition showing the StudioSimple emblem, the hero returning to the sunrise holding the light of knowledge, wiser and smiling. No text drawn by AI.",
+        "overlayText": "Etapa 6: El Regreso con el Elíxir",
+        "overlayTitle": "El enigma del relato",
+        "overlaySubtitle": "¿Qué fuerza mueve toda historia?",
+        "vectorialOverlayPptx": "Pregunta detonante: ¿Qué es el conflicto narrativo y por qué transforma al héroe?",
+        "mathOverlayPptx": "Pregunta detonante: ¿Qué es el conflicto narrativo y por qué transforma al héroe?",
+        "speakerNotes": "Ahora surge la gran pregunta detonante: ¿qué fuerza impulsa a actuar al personaje y hace que una historia exista de verdad?",
+        "palabrasAprox": 20,
+        "duracionSeg": 9
+      }
+    ]
   },
 
   preQuestions: [
@@ -117,7 +217,107 @@ export const LENGUA_7B_OA03_CLASE01: LessonData = {
     dileIntro: 'Revisemos la regla fundamental de la narrativa: todo relato literario tiene una situación inicial, un conflicto detonante que genera el nudo o desarrollo, y un desenlace.',
     hazInstruction: 'Lee con atención la idea clave en pantalla y prepárate para anotarla en tu cuaderno de Lengua.',
     ideaClave: 'El conflicto narrativo es el obstáculo o fuerza contraria que enfrenta al protagonista y lo obliga a actuar. Sin conflicto no hay trama, y a través de las pruebas el héroe se transforma.',
-    graphicPoster: ''
+    graphicPoster: '',
+    slides: [
+      {
+        "slideNumber": 1,
+        "tituloMomento": "Objetivo de la Lección",
+        "didacticPurpose": "Objetivo de la Lección",
+        "visualPrompt": "Modern anime style 16:9. The boy and girl standing before an interactive lightboard showing a dynamic balance scale: 'Equilibrio Inicial' vs 'Conflicto Detonante'. Clean typography. No text drawn by AI.",
+        "overlayText": "¿Qué es el Conflicto Narrativo?",
+        "overlayTitle": "Objetivo de la lección",
+        "overlaySubtitle": "Analizar el conflicto como motor de la narración",
+        "vectorialOverlayPptx": "Rótulo formal: OA 03 · Conflicto Narrativo y Etapas del Viaje del Héroe",
+        "mathOverlayPptx": "Rótulo formal: OA 03 · Conflicto Narrativo y Etapas del Viaje del Héroe",
+        "speakerNotes": "El objetivo de hoy es aprender a identificar el conflicto narrativo como motor de la historia y a reconocer cómo transforma a los personajes en el relato.",
+        "palabrasAprox": 26,
+        "duracionSeg": 12
+      },
+      {
+        "slideNumber": 2,
+        "tituloMomento": "Definición Conceptual",
+        "didacticPurpose": "Definición Conceptual",
+        "visualPrompt": "Modern anime style. Split screen diagram: Left side shows the protagonist's goal; Right side shows the opposing obstacle or antagonist. High contrast, sharp clarity. No text drawn by AI.",
+        "overlayText": "Protagonista vs. Fuerza Opositora",
+        "overlayTitle": "El conflicto narrativo",
+        "overlaySubtitle": "Oposición entre el deseo y el obstáculo",
+        "vectorialOverlayPptx": "Mapa Visual: Fuerza A (Meta del Protagonista) <---> Fuerza B (Obstáculo u Opositor)",
+        "mathOverlayPptx": "Mapa Visual: Fuerza A (Meta del Protagonista) <---> Fuerza B (Obstáculo u Opositor)",
+        "speakerNotes": "Toda historia nace cuando el equilibrio se rompe. El conflicto es la tensión constante entre lo que el protagonista desea alcanzar y los obstáculos que se lo impiden.",
+        "palabrasAprox": 27,
+        "duracionSeg": 12
+      },
+      {
+        "slideNumber": 3,
+        "tituloMomento": "Modelamiento Textual",
+        "didacticPurpose": "Modelamiento Textual",
+        "visualPrompt": "Modern anime style. A prominent glowing parchment paper showing a clearly legible excerpt of an adventure story, with key sentences highlighted. Clear negative space. No text drawn by AI.",
+        "overlayText": "Evidencia y Deseo del Protagonista",
+        "overlayTitle": "Análisis del fragmento",
+        "overlaySubtitle": "Localizar la evidencia en el texto",
+        "vectorialOverlayPptx": "Fragmento fuente visible: Subrayado de la meta y encerrado del obstáculo detonante",
+        "mathOverlayPptx": "Fragmento fuente visible: Subrayado de la meta y encerrado del obstáculo detonante",
+        "speakerNotes": "Observemos este fragmento: marcamos con color la meta del personaje y subrayamos la fuerza opuesta. Al contrastarlas, el conflicto central queda a la vista con total claridad.",
+        "palabrasAprox": 26,
+        "duracionSeg": 12
+      },
+      {
+        "slideNumber": 4,
+        "tituloMomento": "Tipos de Conflicto",
+        "didacticPurpose": "Tipos de Conflicto",
+        "visualPrompt": "Modern anime style. Side by side panels: Left shows hero facing a storm (external); Right shows hero in internal doubt looking in mirror (internal). No text drawn by AI.",
+        "overlayText": "Conflictos Externos e Internos",
+        "overlayTitle": "Interno vs Externo",
+        "overlaySubtitle": "Lucha interior o desafío del entorno",
+        "vectorialOverlayPptx": "Cuadro comparativo: Conflicto Interno (Miedo, culpa) vs Externo (Naturaleza, rival, sociedad)",
+        "mathOverlayPptx": "Cuadro comparativo: Conflicto Interno (Miedo, culpa) vs Externo (Naturaleza, rival, sociedad)",
+        "speakerNotes": "El conflicto puede ser externo, si el héroe enfrenta monstruos o tempestades; o interno, si debe vencer sus propios temores y dudas antes de tomar una decisión.",
+        "palabrasAprox": 26,
+        "duracionSeg": 12
+      },
+      {
+        "slideNumber": 5,
+        "tituloMomento": "Evolución del Personaje",
+        "didacticPurpose": "Evolución del Personaje",
+        "visualPrompt": "Modern anime style. The progression of the protagonist across 3 stages: naive beginner, tested apprentice, and confident hero holding a lantern. Clean lightboard. No text drawn by AI.",
+        "overlayText": "Evolución del Personaje en el Conflicto",
+        "overlayTitle": "El cambio visible del héroe",
+        "overlaySubtitle": "Superar el obstáculo transforma la identidad",
+        "vectorialOverlayPptx": "Línea de transformación: Estado inicial (Inseguro) -> Prueba -> Estado final (Maduro y sabio)",
+        "mathOverlayPptx": "Línea de transformación: Estado inicial (Inseguro) -> Prueba -> Estado final (Maduro y sabio)",
+        "speakerNotes": "Al enfrentar las fuerzas opositoras, el personaje no solo avanza en el mapa: cambia su manera de pensar, supera sus límites y regresa con nueva sabiduría para su comunidad.",
+        "palabrasAprox": 28,
+        "duracionSeg": 13
+      },
+      {
+        "slideNumber": 6,
+        "tituloMomento": "Prevención del Error",
+        "didacticPurpose": "Prevención del Error",
+        "visualPrompt": "Modern anime style. Contrast graphic: An incidental minor accident crossed out with subtle red; The central plot conflict illuminated with vibrant teal glow. No text drawn by AI.",
+        "overlayText": "Problema Pasajero vs Conflicto Central",
+        "overlayTitle": "Atención: Error habitual",
+        "overlaySubtitle": "No confundir problema secundario con conflicto central",
+        "vectorialOverlayPptx": "Alerta de lectura: Conflicto central (motiva toda la obra) ≠ Percance pasajero (se resuelve en un párrafo)",
+        "mathOverlayPptx": "Alerta de lectura: Conflicto central (motiva toda la obra) ≠ Percance pasajero (se resuelve en un párrafo)",
+        "speakerNotes": "Un error habitual consiste en confundir un tropiezo menor con el conflicto central. Pregúntate siempre: ¿cuál es el gran obstáculo que sostiene la trama desde el principio hasta el desenlace?",
+        "palabrasAprox": 28,
+        "duracionSeg": 13
+      },
+      {
+        "slideNumber": 7,
+        "tituloMomento": "Síntesis y Regla de Oro",
+        "didacticPurpose": "Síntesis y Regla de Oro",
+        "visualPrompt": "Modern anime style. The two 13-year-olds pointing toward the StudioSimple emblem, with a dynamic infographic summarizing the narrative journey. Positive confident expressions. No text drawn by AI.",
+        "overlayText": "Síntesis: El Conflicto como Motor",
+        "overlayTitle": "Regla de Oro de la narrativa",
+        "overlaySubtitle": "Sin conflicto no hay transformación ni historia",
+        "vectorialOverlayPptx": "Esquema de síntesis: Equilibrio -> Quiebre (Conflicto) -> Acción -> Transformación",
+        "mathOverlayPptx": "Esquema de síntesis: Equilibrio -> Quiebre (Conflicto) -> Acción -> Transformación",
+        "speakerNotes": "Recuerda la regla de oro: sin conflicto no hay narración. ¡Ahora demostraremos lo aprendido aplicando este mapa en las lecturas interactivas de la plataforma!",
+        "palabrasAprox": 24,
+        "duracionSeg": 11
+      }
+    ]
   },
 
   postQuestions: [

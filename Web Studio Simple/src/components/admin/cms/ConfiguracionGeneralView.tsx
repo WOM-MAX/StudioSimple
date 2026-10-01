@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Save,
   Globe,
@@ -34,8 +34,78 @@ import { getBorderStyles } from '../../common/borderStyles';
 export const ConfiguracionGeneralView: React.FC = () => {
   const [config, setConfig] = useState<SiteConfig>(() => loadSiteConfig());
   const [savedSuccess, setSavedSuccess] = useState(false);
+  const [cintaAutoSaveStatus, setCintaAutoSaveStatus] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<'header' | 'cinta' | 'footer' | 'contacto' | 'cloudinary' | 'colores'>('header');
   const [testResult, setTestResult] = useState<{ status: 'idle' | 'testing' | 'success' | 'error'; message?: string }>({ status: 'idle' });
+
+  useEffect(() => {
+    const handleStorageChange = () => {
+      setConfig(loadSiteConfig());
+    };
+    window.addEventListener('storage', handleStorageChange);
+    return () => window.removeEventListener('storage', handleStorageChange);
+  }, []);
+
+  const handleToggleCintaActivo = (activo: boolean) => {
+    const updatedConfig: SiteConfig = {
+      ...config,
+      cintaNoticias: {
+        ...(config.cintaNoticias || {
+          colorFondo: '#0B254D',
+          colorTexto: '#FFFFFF',
+          colorEtiqueta: '#12A1A4',
+          etiquetaPrincipal: 'MINEDUC AL DÍA',
+          mostrarIconoLive: true,
+          velocidad: 'normal',
+          activo: true,
+          noticias: []
+        }),
+        activo
+      }
+    };
+
+    setConfig(updatedConfig);
+    saveSiteConfig(updatedConfig);
+
+    // Sincronizar de forma atómica con el bloque CINTA_NOTICIAS en las páginas CMS
+    try {
+      const pages = loadCmsPages();
+      const updatedPages = pages.map((page) => {
+        if (page.slug === '/') {
+          return {
+            ...page,
+            secciones: page.secciones.map((sec) => {
+              if (sec.tipoBloque === 'CINTA_NOTICIAS') {
+                return {
+                  ...sec,
+                  activo,
+                  configuracion: {
+                    ...sec.configuracion,
+                    ...(updatedConfig.cintaNoticias || {}),
+                    activo
+                  }
+                };
+              }
+              return sec;
+            })
+          };
+        }
+        return page;
+      });
+      saveCmsPages(updatedPages);
+    } catch (err) {
+      console.error('Error sincronizando bloque Cinta de Noticias:', err);
+    }
+
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new Event('storage'));
+    }
+
+    setCintaAutoSaveStatus(activo ? 'Cinta activada y guardada' : 'Cinta desactivada y guardada');
+    setTimeout(() => {
+      setCintaAutoSaveStatus(null);
+    }, 2500);
+  };
 
   const updateEstilosGlobales = (key: keyof NonNullable<SiteConfig['estilosGlobales']>, value: any) => {
     setConfig((prev) => ({
@@ -494,15 +564,23 @@ export const ConfiguracionGeneralView: React.FC = () => {
                   Barra continua de avisos que se despliega inmediatamente debajo de la cabecera en la Landing Page.
                 </p>
               </div>
-              <label className="flex items-center gap-2 cursor-pointer select-none bg-slate-50 px-3 py-1.5 rounded-xl border border-slate-200 hover:bg-slate-100 transition-colors">
-                <input
-                  type="checkbox"
-                  checked={config.cintaNoticias?.activo !== false}
-                  onChange={(e) => updateCinta('activo', e.target.checked)}
-                  className="w-4 h-4 rounded text-[#12A1A4] focus:ring-[#12A1A4]"
-                />
-                <span className="text-xs font-bold text-slate-700">Mostrar Cinta en la Landing</span>
-              </label>
+              <div className="flex items-center gap-3">
+                {cintaAutoSaveStatus && (
+                  <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-lg flex items-center gap-1.5 animate-fadeIn">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                    <span>{cintaAutoSaveStatus}</span>
+                  </span>
+                )}
+                <label className="flex items-center gap-2 cursor-pointer select-none bg-slate-50 px-3 py-1.5 rounded-xl border border-slate-200 hover:bg-slate-100 transition-colors">
+                  <input
+                    type="checkbox"
+                    checked={config.cintaNoticias?.activo !== false}
+                    onChange={(e) => handleToggleCintaActivo(e.target.checked)}
+                    className="w-4 h-4 rounded text-[#12A1A4] focus:ring-[#12A1A4]"
+                  />
+                  <span className="text-xs font-bold text-slate-700">Mostrar Cinta en la Landing</span>
+                </label>
+              </div>
             </div>
 
             {/* Vista Previa Interactiva */}
