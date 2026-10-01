@@ -16,7 +16,8 @@ import {
   ArrowRight,
   Play,
   Home,
-  RotateCcw
+  RotateCcw,
+  AlertCircle
 } from 'lucide-react';
 
 function isAmbientActiveStage(
@@ -887,8 +888,16 @@ interface SyncedStudentVideoProps {
 const SyncedStudentVideo: React.FC<SyncedStudentVideoProps> = ({ src, kind, session, title }) => {
   const ref = useRef<HTMLVideoElement>(null);
   const [blocked, setBlocked] = useState(false);
+  const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
+    setHasError(false);
+  }, [src]);
+
+  const isIframe = Boolean(src && /iframe|videodelivery\.net|cloudflarestream\.com|youtube\.com|youtu\.be|vimeo\.com/i.test(src));
+
+  useEffect(() => {
+    if (isIframe) return;
     const v = ref.current;
     if (!v || session.video.kind !== kind) return;
     if (Math.abs(v.currentTime - session.video.seek) > 1.2) {
@@ -901,18 +910,45 @@ const SyncedStudentVideo: React.FC<SyncedStudentVideoProps> = ({ src, kind, sess
     } else {
       v.pause();
     }
-  }, [kind, session.video]);
+  }, [kind, session.video, isIframe]);
 
-  if (!src || src.trim() === '') {
+  if (!src || src.trim() === '' || hasError) {
     return (
-      <div className="w-full aspect-video rounded-3xl overflow-hidden bg-gradient-to-br from-[#0F172A] to-[#1E293B] border border-slate-800 shadow-2xl flex flex-col items-center justify-center p-8 text-center text-white relative">
+      <div className="w-full aspect-video rounded-3xl overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] border border-slate-800 shadow-2xl flex flex-col items-center justify-center p-8 text-center text-white relative">
         <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4 text-[#12A1A4] ring-1 ring-white/20">
-          <Play className="w-8 h-8 fill-current ml-1 opacity-80" />
+          {hasError ? (
+            <AlertCircle className="w-8 h-8 text-amber-400" />
+          ) : (
+            <Play className="w-8 h-8 fill-current ml-1 opacity-80" />
+          )}
         </div>
-        <h3 className="text-lg font-black tracking-tight mb-2">{title || 'Video de la lección'}</h3>
-        <p className="text-xs text-slate-400 max-w-md">
-          Sigue las indicaciones de tu mentor para este momento de aprendizaje.
+        <h3 className="text-lg font-black tracking-tight mb-2">
+          {title || (kind === 'hook' ? 'Momento de observación' : 'Concepto explicativo')}
+        </h3>
+        <p className="text-xs text-slate-300 max-w-md leading-relaxed">
+          {hasError
+            ? 'La cápsula de video no está disponible en este momento. Tu mentor continuará guiando la actividad y las preguntas de comprensión.'
+            : 'Sigue las indicaciones de tu mentor para este momento de aprendizaje.'}
         </p>
+        {hasError && (
+          <span className="mt-4 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-500/30">
+            Modo guiado por mentor
+          </span>
+        )}
+      </div>
+    );
+  }
+
+  if (isIframe) {
+    return (
+      <div className="w-full aspect-video rounded-3xl overflow-hidden bg-black shadow-2xl flex items-center justify-center relative">
+        <iframe
+          src={src}
+          className="w-full h-full border-0"
+          allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+          allowFullScreen
+          title={title || 'Video de la lección'}
+        />
       </div>
     );
   }
@@ -925,6 +961,10 @@ const SyncedStudentVideo: React.FC<SyncedStudentVideoProps> = ({ src, kind, sess
         playsInline
         preload="auto"
         className="w-full h-full object-contain"
+        onError={(e) => {
+          console.warn('Error al reproducir video en vista de estudiante:', e);
+          setHasError(true);
+        }}
       />
       {blocked && (
         <button

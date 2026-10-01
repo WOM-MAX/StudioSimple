@@ -368,7 +368,8 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
   const handleTestInLivePlayer = () => {
     if (!lessonData || !currentOA) return;
     handleSaveLesson();
-    setActiveSynchronizedLesson(lessonData);
+    const freshClone = JSON.parse(JSON.stringify(lessonData));
+    setActiveSynchronizedLesson(freshClone);
     setViewMode('lesson');
   };
 

@@ -28,7 +28,8 @@ import {
   Clock,
   HelpCircle,
   Info,
-  Home
+  Home,
+  AlertTriangle
 } from 'lucide-react';
 
 function formatTime(seconds: number): string {
@@ -421,12 +422,33 @@ export const AdultLessonView: React.FC = () => {
                   </div>
                 </div>
               ) : (
-                <AdultVideoPlayer
-                  src={lessonData.hook.videoSrc}
-                  kind="hook"
-                  session={session}
-                  updateSession={updateSession}
-                />
+                <div className="space-y-3">
+                  <AdultVideoPlayer
+                    src={lessonData.hook.videoSrc}
+                    kind="hook"
+                    session={session}
+                    updateSession={updateSession}
+                  />
+
+                  {/* Opcion de avance alternativo para el mentor */}
+                  <div className="flex justify-end pt-2">
+                    <button
+                      type="button"
+                      onClick={() =>
+                        updateSession({
+                          stage: 'conversationIntro',
+                          hookEnded: true,
+                          video: { ...session.video, playing: false }
+                        })
+                      }
+                      className="text-xs text-slate-500 hover:text-[#EE751C] font-semibold flex items-center gap-1.5 transition-colors cursor-pointer py-1.5 px-3 rounded-lg hover:bg-slate-100"
+                      title="Permite continuar a la siguiente etapa si el video ya se vio o no esta disponible"
+                    >
+                      <span>Continuar a la siguiente etapa</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                </div>
               )}
 
               {session.hookEnded && (
@@ -591,12 +613,33 @@ export const AdultLessonView: React.FC = () => {
                   </div>
                 </div>
               ) : (
-                <AdultVideoPlayer
-                  src={lessonData.formalization.videoSrc ?? ''}
-                  kind="formal"
-                  session={session}
-                  updateSession={updateSession}
-                />
+                <div className="space-y-3">
+                  <AdultVideoPlayer
+                    src={lessonData.formalization.videoSrc ?? ''}
+                    kind="formal"
+                    session={session}
+                    updateSession={updateSession}
+                  />
+
+                  {/* Opcion de avance alternativo para el mentor */}
+                  <div className="flex justify-end pt-2">
+                    <button
+                      type="button"
+                      onClick={() =>
+                        updateSession({
+                          stage: 'postIntro',
+                          formalEnded: true,
+                          video: { ...session.video, playing: false }
+                        })
+                      }
+                      className="text-xs text-slate-500 hover:text-[#EE751C] font-semibold flex items-center gap-1.5 transition-colors cursor-pointer py-1.5 px-3 rounded-lg hover:bg-slate-100"
+                      title="Permite avanzar a la comprobacion de aprendizaje si el video ya se vio o no esta disponible"
+                    >
+                      <span>Continuar a la siguiente etapa</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                </div>
               )}
 
               {session.formalEnded && (
@@ -1434,8 +1477,16 @@ const AdultVideoPlayer: React.FC<AdultVideoPlayerProps> = ({ src, kind, session,
   const lastSharedSecond = useRef(-1);
   const [time, setTime] = useState(0);
   const [duration, setDuration] = useState(0);
+  const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
+    setHasError(false);
+  }, [src]);
+
+  const isIframe = Boolean(src && /iframe|videodelivery\.net|cloudflarestream\.com|youtube\.com|youtu\.be|vimeo\.com/i.test(src));
+
+  useEffect(() => {
+    if (isIframe) return;
     const v = ref.current;
     if (!v || session.video.kind !== kind) return;
     if (Math.abs(v.currentTime - session.video.seek) > 1.2) {
@@ -1446,12 +1497,30 @@ const AdultVideoPlayer: React.FC<AdultVideoPlayerProps> = ({ src, kind, session,
     } else {
       v.pause();
     }
-  }, [kind, session.video]);
+  }, [kind, session.video, isIframe]);
 
   const command = (playing: boolean, seek = ref.current?.currentTime ?? 0) => {
     updateSession({
       video: { kind, playing, seek, command: session.video.command + 1 }
     });
+  };
+
+  const handleSkipOrComplete = () => {
+    if (kind === 'hook') {
+      updateSession({
+        hookStarted: true,
+        hookEnded: true,
+        stage: 'conversationIntro',
+        video: { ...session.video, playing: false }
+      });
+    } else {
+      updateSession({
+        formalStarted: true,
+        formalEnded: true,
+        stage: 'postIntro',
+        video: { ...session.video, playing: false }
+      });
+    }
   };
 
   if (!src || src.trim() === '') {
@@ -1468,18 +1537,51 @@ const AdultVideoPlayer: React.FC<AdultVideoPlayerProps> = ({ src, kind, session,
         </p>
         <button
           type="button"
-          onClick={() => {
-            if (kind === 'hook') {
-              updateSession({ hookStarted: true, hookEnded: true, video: { ...session.video, playing: false } });
-            } else {
-              updateSession({ formalStarted: true, formalEnded: true, video: { ...session.video, playing: false } });
-            }
-          }}
+          onClick={handleSkipOrComplete}
           className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-2.5 rounded-xl text-xs flex items-center gap-2 mx-auto transition-all cursor-pointer shadow-sm"
         >
           <span>Continuar a la siguiente etapa</span>
           <ArrowRight className="w-4 h-4" />
         </button>
+      </div>
+    );
+  }
+
+  if (hasError) {
+    return (
+      <div className="bg-amber-50/90 border border-amber-300 rounded-2xl p-6 mt-4 text-center shadow-sm">
+        <div className="w-12 h-12 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center mx-auto mb-3">
+          <AlertTriangle className="w-6 h-6" />
+        </div>
+        <h3 className="text-base font-bold text-amber-900 mb-1">
+          Video no disponible
+        </h3>
+        <p className="text-xs text-amber-700 max-w-md mx-auto mb-4 leading-relaxed">
+          No fue posible reproducir el archivo de video (posible recurso no encontrado o error de red). Puedes continuar con las actividades y preguntas guiadas sin problemas.
+        </p>
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          <button
+            type="button"
+            onClick={() => {
+              setHasError(false);
+              if (ref.current) {
+                ref.current.load();
+              }
+            }}
+            className="bg-white hover:bg-slate-50 text-slate-700 border border-slate-300 font-bold px-4 py-2 rounded-xl text-xs flex items-center gap-1.5 transition-all cursor-pointer"
+          >
+            <RotateCcw className="w-3.5 h-3.5" />
+            <span>Reintentar</span>
+          </button>
+          <button
+            type="button"
+            onClick={handleSkipOrComplete}
+            className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-5 py-2 rounded-xl text-xs flex items-center gap-2 transition-all cursor-pointer shadow-sm"
+          >
+            <span>Continuar a la siguiente etapa</span>
+            <ArrowRight className="w-4 h-4" />
+          </button>
+        </div>
       </div>
     );
   }
@@ -1491,93 +1593,120 @@ const AdultVideoPlayer: React.FC<AdultVideoPlayerProps> = ({ src, kind, session,
       </div>
 
       <div className="relative rounded-xl overflow-hidden bg-black aspect-video max-h-[360px] mx-auto flex items-center justify-center">
-        <video
-          ref={ref}
-          src={src}
-          muted
-          playsInline
-          preload="auto"
-          className="w-full h-full object-contain"
-          onTimeUpdate={(e) => {
-            const current = e.currentTarget.currentTime;
-            setTime(current);
-            const second = Math.floor(current);
-            if (session.video.playing && second !== lastSharedSecond.current) {
-              lastSharedSecond.current = second;
-              updateSession({
-                video: { ...session.video, kind, seek: current }
-              });
-            }
-          }}
-          onLoadedMetadata={(e) => setDuration(e.currentTarget.duration)}
-          onCanPlay={() => {
-            if (session.video.playing) ref.current?.play().catch(() => undefined);
-          }}
-          onEnded={() => {
-            updateSession(
-              kind === 'hook'
-                ? {
-                    hookEnded: true,
-                    video: { ...session.video, playing: false, seek: ref.current?.duration ?? session.video.seek }
-                  }
-                : {
-                    formalEnded: true,
-                    video: { ...session.video, playing: false, seek: ref.current?.duration ?? session.video.seek }
-                  }
-            );
-          }}
-        />
-      </div>
-
-      <div className="flex items-center justify-between gap-3 mt-4 pt-3 border-t border-[#f1f5f9]">
-        <div className="flex items-center gap-2">
-          <button
-            type="button"
-            onClick={() => command(!session.video.playing)}
-            className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold p-2.5 rounded-xl flex items-center justify-center cursor-pointer transition-all"
-            title={session.video.playing ? 'Pausar' : 'Continuar'}
-          >
-            {session.video.playing ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4 fill-white" />}
-          </button>
-          <button
-            type="button"
-            onClick={() => command(false, Math.max(0, (ref.current?.currentTime ?? 0) - 10))}
-            className="bg-white hover:bg-[#f8fafc] text-[#1c3257] border border-[#dce2e6] font-bold px-3 py-2 rounded-xl text-xs flex items-center gap-1 cursor-pointer transition-all"
-          >
-            <Rewind className="w-3.5 h-3.5" /> 10 s
-          </button>
-          <button
-            type="button"
-            onClick={() => command(false, Math.min(duration, (ref.current?.currentTime ?? 0) + 10))}
-            className="bg-white hover:bg-[#f8fafc] text-[#1c3257] border border-[#dce2e6] font-bold px-3 py-2 rounded-xl text-xs flex items-center gap-1 cursor-pointer transition-all"
-          >
-            10 s <FastForward className="w-3.5 h-3.5" />
-          </button>
-          <button
-            type="button"
-            onClick={() => command(false, 0)}
-            className="bg-white hover:bg-[#f8fafc] text-[#1c3257] border border-[#dce2e6] font-bold p-2 rounded-xl text-xs flex items-center justify-center cursor-pointer transition-all"
-            title="Reiniciar video"
-          >
-            <RotateCcw className="w-4 h-4" />
-          </button>
-        </div>
-
-        <div className="flex-1 flex items-center gap-3 max-w-xs">
-          <input
-            type="range"
-            min={0}
-            max={duration || 0}
-            step={0.1}
-            value={Math.min(time, duration || 0)}
-            onChange={(e) => command(false, Number(e.target.value))}
-            className="w-full h-1.5 bg-[#e2e8f0] rounded-lg appearance-none cursor-pointer accent-[#12a1a4]"
+        {isIframe ? (
+          <iframe
+            src={src}
+            className="w-full h-full border-0"
+            allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+            allowFullScreen
+            title="Video embebido"
           />
-          <span className="text-xs text-[#748093] font-mono shrink-0">
-            {formatTime(time)} / {formatTime(duration)}
-          </span>
-        </div>
+        ) : (
+          <video
+            ref={ref}
+            src={src}
+            muted
+            playsInline
+            preload="auto"
+            className="w-full h-full object-contain"
+            onError={(e) => {
+              console.warn('Error al reproducir video en vista de adulto:', e);
+              setHasError(true);
+            }}
+            onTimeUpdate={(e) => {
+              const current = e.currentTarget.currentTime;
+              setTime(current);
+              const second = Math.floor(current);
+              if (session.video.playing && second !== lastSharedSecond.current) {
+                lastSharedSecond.current = second;
+                updateSession({
+                  video: { ...session.video, kind, seek: current }
+                });
+              }
+            }}
+            onLoadedMetadata={(e) => setDuration(e.currentTarget.duration)}
+            onCanPlay={() => {
+              if (session.video.playing) ref.current?.play().catch(() => undefined);
+            }}
+            onEnded={() => {
+              updateSession(
+                kind === 'hook'
+                  ? {
+                      hookEnded: true,
+                      video: { ...session.video, playing: false, seek: ref.current?.duration ?? session.video.seek }
+                    }
+                  : {
+                      formalEnded: true,
+                      video: { ...session.video, playing: false, seek: ref.current?.duration ?? session.video.seek }
+                    }
+              );
+            }}
+          />
+        )}
       </div>
+
+      {!isIframe ? (
+        <div className="flex items-center justify-between gap-3 mt-4 pt-3 border-t border-[#f1f5f9]">
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={() => command(!session.video.playing)}
+              className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold p-2.5 rounded-xl flex items-center justify-center cursor-pointer transition-all"
+              title={session.video.playing ? 'Pausar' : 'Continuar'}
+            >
+              {session.video.playing ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4 fill-white" />}
+            </button>
+            <button
+              type="button"
+              onClick={() => command(false, Math.max(0, (ref.current?.currentTime ?? 0) - 10))}
+              className="bg-white hover:bg-[#f8fafc] text-[#1c3257] border border-[#dce2e6] font-bold px-3 py-2 rounded-xl text-xs flex items-center gap-1 cursor-pointer transition-all"
+            >
+              <Rewind className="w-3.5 h-3.5" /> 10 s
+            </button>
+            <button
+              type="button"
+              onClick={() => command(false, Math.min(duration, (ref.current?.currentTime ?? 0) + 10))}
+              className="bg-white hover:bg-[#f8fafc] text-[#1c3257] border border-[#dce2e6] font-bold px-3 py-2 rounded-xl text-xs flex items-center gap-1 cursor-pointer transition-all"
+            >
+              10 s <FastForward className="w-3.5 h-3.5" />
+            </button>
+            <button
+              type="button"
+              onClick={() => command(false, 0)}
+              className="bg-white hover:bg-[#f8fafc] text-[#1c3257] border border-[#dce2e6] font-bold p-2 rounded-xl text-xs flex items-center justify-center cursor-pointer transition-all"
+              title="Reiniciar video"
+            >
+              <RotateCcw className="w-4 h-4" />
+            </button>
+          </div>
+
+          <div className="flex-1 flex items-center gap-3 max-w-xs">
+            <input
+              type="range"
+              min={0}
+              max={duration || 0}
+              step={0.1}
+              value={Math.min(time, duration || 0)}
+              onChange={(e) => command(false, Number(e.target.value))}
+              className="w-full h-1.5 bg-[#e2e8f0] rounded-lg appearance-none cursor-pointer accent-[#12a1a4]"
+            />
+            <span className="text-xs text-[#748093] font-mono shrink-0">
+              {formatTime(time)} / {formatTime(duration)}
+            </span>
+          </div>
+        </div>
+      ) : (
+        <div className="flex items-center justify-end gap-3 mt-4 pt-3 border-t border-[#f1f5f9]">
+          <button
+            type="button"
+            onClick={handleSkipOrComplete}
+            className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-5 py-2 rounded-xl text-xs flex items-center gap-2 transition-all cursor-pointer shadow-sm"
+          >
+            <span>Marcar video como visto y continuar</span>
+            <ArrowRight className="w-4 h-4" />
+          </button>
+        </div>
+      )}
     </div>
   );
 };

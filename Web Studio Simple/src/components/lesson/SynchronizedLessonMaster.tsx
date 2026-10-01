@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { LessonSyncProvider, useLessonSync } from '../../context/LessonSyncContext';
 import { TesterBar } from './common/TesterBar';
 import { AdultLessonView } from './adult/AdultLessonView';
 import { StudentLessonView } from './student/StudentLessonView';
 import { LessonData } from '../../types/lesson';
 import { MATEMATICA_7B_OA01_CLASE01 } from '../../data/lessons/matematica_7b_oa01_clase01';
+import { findInjectedLesson } from '../../lib/lesson-repository';
 
 const SynchronizedLessonContainer: React.FC = () => {
   const { viewMode } = useLessonSync();
@@ -51,10 +52,25 @@ const SynchronizedLessonContainer: React.FC = () => {
 };
 
 export const SynchronizedLessonMaster: React.FC<{ lessonData?: LessonData }> = ({
-  lessonData = MATEMATICA_7B_OA01_CLASE01
+  lessonData
 }) => {
+  const resolvedLesson = useMemo(() => {
+    if (lessonData) return lessonData;
+    const defaultMeta = MATEMATICA_7B_OA01_CLASE01.metadata;
+    const injected = findInjectedLesson(
+      defaultMeta.grade,
+      defaultMeta.subject,
+      defaultMeta.oaCode,
+      defaultMeta.lessonNumber
+    );
+    return injected || MATEMATICA_7B_OA01_CLASE01;
+  }, [lessonData]);
+
+  // Dynamic key ensures that changing lessonData or its videoSrc completely resets and re-renders the Provider
+  const syncKey = `${resolvedLesson.metadata.grade}_${resolvedLesson.metadata.subject}_${resolvedLesson.metadata.oaCode}_${resolvedLesson.metadata.lessonNumber}_${resolvedLesson.hook.videoSrc || 'nohook'}_${resolvedLesson.formalization.videoSrc || 'noformal'}`;
+
   return (
-    <LessonSyncProvider initialLesson={lessonData}>
+    <LessonSyncProvider key={syncKey} initialLesson={resolvedLesson}>
       <SynchronizedLessonContainer />
     </LessonSyncProvider>
   );
