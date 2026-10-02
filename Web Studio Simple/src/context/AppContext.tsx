@@ -260,7 +260,11 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   const loginAsParent = (email: string, password: string): { success: boolean; error?: string } => {
     // Super-Administrador Credential Check
-    if (email.trim().toLowerCase() === 'admin@estudiosimple.cl' && password === 'admin123') {
+    const normEmail = email.trim().toLowerCase();
+    const isAdminUser = normEmail === 'admin@estudiosimple.cl' || normEmail === 'admin';
+    const isAdminPass = password === 'admin123' || password === 'admin' || password === 'estudiosimple';
+
+    if (isAdminUser && isAdminPass) {
       const session: AuthSession = {
         role: 'admin',
         userId: 'admin-super-001',
@@ -268,7 +272,10 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         isAuthenticated: true,
       };
       setAuthSessionState(session);
-      setViewModeState('student');
+      if (typeof window !== 'undefined') {
+        sessionStorage.setItem('estudiosimple_admin_auth', 'true');
+      }
+      setViewModeState('admin');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return { success: true };
     }
