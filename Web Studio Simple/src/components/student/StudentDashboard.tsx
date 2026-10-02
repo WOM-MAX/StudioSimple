@@ -226,6 +226,38 @@ export const StudentDashboard: React.FC = () => {
           </p>
         </div>
 
+        {/* BANNER ENSAYO ACUMULATIVO MINEDUC */}
+        <div className={`border rounded-3xl p-5 sm:p-6 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4 transition-all ${
+          isDark
+            ? 'bg-gradient-to-r from-[#10223D] to-[#1C3257] border-[#2A4365]'
+            : 'bg-gradient-to-r from-amber-50 to-orange-50 border-amber-200'
+        }`}>
+          <div className="space-y-1">
+            <div className="flex items-center gap-2">
+              <span className="px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wide bg-amber-500 text-white">
+                Evaluacion Oficial
+              </span>
+              <span className="text-xs font-bold text-[#748093]">
+                Estandar Examenes Libres MINEDUC
+              </span>
+            </div>
+            <h3 className={`text-base sm:text-lg font-extrabold ${isDark ? 'text-white' : 'text-[#1C3257]'}`}>
+              Simulador de Ensayo Acumulativo Formal
+            </h3>
+            <p className={`text-xs max-w-2xl leading-relaxed ${isDark ? 'text-slate-300' : 'text-slate-600'}`}>
+              30 preguntas de 4 alternativas con temporizador de 60 minutos, navegacion de respuestas y reporte diagnostico en escala 1.0 a 7.0 al 60% de exigencia oficial.
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={() => setViewMode('formal-exam')}
+            className="px-5 py-3 rounded-2xl bg-amber-500 hover:bg-amber-600 text-white font-extrabold text-xs shadow-md transition-all flex items-center justify-center gap-2 shrink-0 cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
+          >
+            <span>Rendir Ensayo Formal</span>
+            <ArrowLeft className="w-4 h-4 rotate-180" />
+          </button>
+        </div>
+
         {/* GRILLA DE LECCIONES */}
         <div>
           <h2 className={`text-base font-extrabold mb-3 ${isDark ? 'text-white' : 'text-[#1C3257]'}`}>

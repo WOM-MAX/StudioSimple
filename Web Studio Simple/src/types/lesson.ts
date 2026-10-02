@@ -132,6 +132,7 @@ export interface LessonData {
     dileIntro: string;
     hazInstruction: string;
     videoSrc: string;
+    videoUrl?: string;
     posterSrc?: string;
     dileAfterVideo: string;
     fullPrompt?: string;
@@ -149,6 +150,7 @@ export interface LessonData {
     dileIntro: string;
     hazInstruction: string;
     videoSrc?: string;
+    videoUrl?: string;
     graphicPoster?: string;
     fullPrompt?: string;
     slides?: SlidePrompt[];

@@ -1,4 +1,4 @@
-export type ViewMode = 'landing' | 'pricing' | 'checkout' | 'courses' | 'student' | 'parent' | 'login' | 'lesson' | 'admin';
+export type ViewMode = 'landing' | 'pricing' | 'checkout' | 'courses' | 'student' | 'parent' | 'login' | 'lesson' | 'admin' | 'formal-exam';
 
 export type ThemeMode = 'dark' | 'light';
 export type BrandColorOption = 'yellow' | 'orange' | 'turquoise' | 'silver' | 'graphite' | 'white' | 'ice-blue' | 'navy';

@@ -12,6 +12,7 @@ import {
   FeedbackBanner
 } from '../common/Cards';
 import { GuidedItem } from '../../../types/lesson';
+import { resolveVideoSource } from '../../../lib/video-utils';
 import {
   ArrowRight,
   ArrowLeft,
@@ -1483,7 +1484,8 @@ const AdultVideoPlayer: React.FC<AdultVideoPlayerProps> = ({ src, kind, session,
     setHasError(false);
   }, [src]);
 
-  const isIframe = Boolean(src && /iframe|videodelivery\.net|cloudflarestream\.com|youtube\.com|youtu\.be|vimeo\.com/i.test(src));
+  const videoInfo = resolveVideoSource(src);
+  const isIframe = videoInfo.isEmbed && Boolean(videoInfo.embedUrl);
 
   useEffect(() => {
     if (isIframe) return;
@@ -1523,7 +1525,7 @@ const AdultVideoPlayer: React.FC<AdultVideoPlayerProps> = ({ src, kind, session,
     }
   };
 
-  if (!src || src.trim() === '') {
+  if (!src || src.trim() === '' || !videoInfo.isValid) {
     return (
       <div className="bg-white p-6 rounded-2xl border border-[#dce2e6] mt-4 text-center">
         <div className="w-14 h-14 rounded-full bg-[#f0f4f8] text-[#1c3257] flex items-center justify-center mx-auto mb-3 border border-[#dce2e6]">
@@ -1588,13 +1590,15 @@ const AdultVideoPlayer: React.FC<AdultVideoPlayerProps> = ({ src, kind, session,
   return (
     <div className="bg-white p-5 rounded-2xl border border-[#dce2e6] mt-4">
       <div className="text-xs text-[#748093] bg-[#f8fafc] p-2.5 rounded-xl border border-[#e2e8f0] mb-4">
-        Este video está silenciado aquí para evitar audio duplicado. Los controles también actúan sobre la pantalla del estudiante.
+        {isIframe
+          ? 'Video en modalidad de transmisión externa. Puedes visualizarlo aquí y marcar como visto al terminar.'
+          : 'Este video está silenciado aquí para evitar audio duplicado. Los controles también actúan sobre la pantalla del estudiante.'}
       </div>
 
       <div className="relative rounded-xl overflow-hidden bg-black aspect-video max-h-[360px] mx-auto flex items-center justify-center">
-        {isIframe ? (
+        {isIframe && videoInfo.embedUrl ? (
           <iframe
-            src={src}
+            src={videoInfo.embedUrl}
             className="w-full h-full border-0"
             allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
             allowFullScreen
@@ -1603,11 +1607,10 @@ const AdultVideoPlayer: React.FC<AdultVideoPlayerProps> = ({ src, kind, session,
         ) : (
           <video
             ref={ref}
-            src={src}
+            src={videoInfo.cleanUrl}
             muted
             playsInline
             preload="auto"
-            crossOrigin="anonymous"
             className="w-full h-full object-contain"
             onError={(e) => {
               console.warn('Error al reproducir video en vista de adulto:', e);

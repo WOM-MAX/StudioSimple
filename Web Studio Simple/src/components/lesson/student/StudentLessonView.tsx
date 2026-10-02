@@ -9,6 +9,7 @@ import { StudentRecoveryView } from './StudentRecoveryView';
 import { ConfettiEffect } from './ConfettiEffect';
 import { SupportHintCard } from './SupportHintCard';
 import { getSubjectTheme } from '../../../lib/subject-theme';
+import { resolveVideoSource } from '../../../lib/video-utils';
 import {
   Sparkles,
   Check,
@@ -891,24 +892,9 @@ const SyncedStudentVideo: React.FC<SyncedStudentVideoProps> = ({ src, kind, sess
   const [hasError, setHasError] = useState(false);
   const [isLocalPlaying, setIsLocalPlaying] = useState(false);
 
-  // Detección de servicios de streaming externos (YouTube, Vimeo, Cloudflare Stream iFrame)
-  const embedStreamUrl = useMemo(() => {
-    if (!src) return null;
-    if (src.includes('youtube.com/watch?v=')) {
-      return src.replace('watch?v=', 'embed/');
-    }
-    if (src.includes('youtu.be/')) {
-      return src.replace('youtu.be/', 'www.youtube.com/embed/');
-    }
-    if (src.includes('vimeo.com/') && !src.includes('player.vimeo.com')) {
-      const id = src.split('/').pop()?.split('?')[0];
-      return id ? `https://player.vimeo.com/video/${id}` : null;
-    }
-    if (src.includes('iframe.videodelivery.net')) {
-      return src;
-    }
-    return null;
-  }, [src]);
+  // Resolucion canonica y unificada de la fuente de video
+  const videoInfo = useMemo(() => resolveVideoSource(src), [src]);
+  const embedStreamUrl = videoInfo.isEmbed ? videoInfo.embedUrl : null;
 
   useEffect(() => {
     setHasError(false);
@@ -947,7 +933,7 @@ const SyncedStudentVideo: React.FC<SyncedStudentVideoProps> = ({ src, kind, sess
     }
   }, [kind, session.video, embedStreamUrl]);
 
-  if (!src || src.trim() === '' || hasError) {
+  if (!src || src.trim() === '' || !videoInfo.isValid || hasError) {
     return (
       <div className="w-full aspect-video rounded-3xl overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] border border-slate-800 shadow-2xl flex flex-col items-center justify-center p-8 text-center text-white relative">
         <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4 text-[#12A1A4] ring-1 ring-white/20">
@@ -983,20 +969,6 @@ const SyncedStudentVideo: React.FC<SyncedStudentVideoProps> = ({ src, kind, sess
           allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
           allowFullScreen
           title={title || 'Video de la lección'}
-        />
-      </div>
-    );
-  }
-
-  if (embedStreamUrl) {
-    return (
-      <div className="w-full aspect-video rounded-3xl overflow-hidden bg-black shadow-2xl flex items-center justify-center relative">
-        <iframe
-          src={embedStreamUrl}
-          title={title || 'Video de la lección'}
-          className="w-full h-full border-0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
         />
       </div>
     );
@@ -1041,10 +1013,9 @@ const SyncedStudentVideo: React.FC<SyncedStudentVideoProps> = ({ src, kind, sess
     <div className="w-full aspect-video rounded-3xl overflow-hidden bg-black shadow-2xl flex items-center justify-center relative group">
       <video
         ref={ref}
-        src={src}
+        src={videoInfo.cleanUrl}
         playsInline
         preload="auto"
-        crossOrigin="anonymous"
         onClick={handleManualToggle}
         className="w-full h-full object-contain cursor-pointer"
         onError={(e) => {

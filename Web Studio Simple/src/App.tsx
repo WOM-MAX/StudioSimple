@@ -9,6 +9,7 @@ import { ParentDashboard } from './components/parent/ParentDashboard';
 import { LoginScreen } from './components/auth/LoginScreen';
 import { SynchronizedLessonMaster } from './components/lesson/SynchronizedLessonMaster';
 import { PricingPage } from './components/pricing/PricingPage';
+import { FormalExamSimulator } from './components/student/FormalExamSimulator';
 
 const MainContent: React.FC = () => {
   const { viewMode, authSession, activeSynchronizedLesson } = useApp();
@@ -36,6 +37,7 @@ const MainContent: React.FC = () => {
       {viewMode === 'login' && <LoginScreen />}
       {viewMode === 'student' && (isAuthenticated ? <StudentDashboard /> : <LoginScreen />)}
       {viewMode === 'parent' && (isAuthenticated ? <ParentDashboard /> : <LoginScreen />)}
+      {viewMode === 'formal-exam' && <FormalExamSimulator />}
     </div>
   );
 };

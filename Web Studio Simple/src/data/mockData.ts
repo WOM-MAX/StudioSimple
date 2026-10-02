@@ -12,6 +12,20 @@ export const INITIAL_STUDENT: StudentProfile = {
   pin: '123456',
 };
 
+export const INITIAL_STUDENT_2: StudentProfile = {
+  id: 'stu-102',
+  name: 'Sofía',
+  grade: '4° Básico',
+  avatar: '🦉',
+  curiosityPoints: 210,
+  gems: 8,
+  completedLessons: [],
+  currentStreakDays: 1,
+  pin: '654321',
+};
+
+export const INITIAL_STUDENTS: StudentProfile[] = [INITIAL_STUDENT, INITIAL_STUDENT_2];
+
 export const INITIAL_PARENT: ParentUser = {
   id: 'par-202',
   name: 'Carolina M.',

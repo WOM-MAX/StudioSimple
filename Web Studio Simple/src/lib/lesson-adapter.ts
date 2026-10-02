@@ -81,6 +81,17 @@ export function adaptGeneratorLessonToPlayer(
     Boolean(oa.asignatura && oa.asignatura.toLowerCase().includes('mat')) &&
     genLesson.num === 1;
 
+  const resolveLessonVideo = (
+    videoUrl?: string,
+    videoSrc?: string,
+    fallbackUrl?: string
+  ): string => {
+    if (typeof videoUrl === 'string' && videoUrl.trim() !== '') return videoUrl.trim();
+    if (typeof videoSrc === 'string' && videoSrc.trim() !== '') return videoSrc.trim();
+    if (typeof videoUrl === 'string' || typeof videoSrc === 'string') return '';
+    return fallbackUrl || '';
+  };
+
   return {
     metadata: {
       grade: oa.curso,
@@ -170,7 +181,16 @@ export function adaptGeneratorLessonToPlayer(
       focusPoints: (genLesson.paso2_hook as any)?.focusPoints || [],
       dileIntro: genLesson.paso2_hook.dileAntes,
       hazInstruction: (genLesson.paso2_hook as any)?.hazInstruction || 'Observa y reflexiona con las escenas del desafío visual.',
-      videoSrc: (genLesson.paso2_hook as any).videoUrl || (genLesson.paso2_hook as any).videoSrc || (isMat7bOa01L01 ? 'https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/MAT/110-7-MAT-OA01-L01-GANCHO.mp4' : ''),
+      videoSrc: resolveLessonVideo(
+        (genLesson.paso2_hook as any)?.videoUrl,
+        (genLesson.paso2_hook as any)?.videoSrc,
+        isMat7bOa01L01 ? 'https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/MAT/110-7-MAT-OA01-L01-GANCHO.mp4' : ''
+      ),
+      videoUrl: resolveLessonVideo(
+        (genLesson.paso2_hook as any)?.videoUrl,
+        (genLesson.paso2_hook as any)?.videoSrc,
+        isMat7bOa01L01 ? 'https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/MAT/110-7-MAT-OA01-L01-GANCHO.mp4' : ''
+      ),
       posterSrc: (genLesson.paso2_hook as any).posterUrl || (genLesson.paso2_hook as any).posterSrc || (genLesson.paso2_hook.slides?.[0]?.imageUrl || ''),
       dileAfterVideo: genLesson.paso2_hook.dileDespues,
       fullPrompt: genLesson.paso2_hook?.fullPrompt,
@@ -195,7 +215,16 @@ export function adaptGeneratorLessonToPlayer(
       dileIntro: genLesson.paso4_explicativo.dileAntes,
       hazInstruction: 'Revisemos la explicación formal y la idea clave.',
       ideaClave: genLesson.paso4_explicativo.ideaClave,
-      videoSrc: (genLesson.paso4_explicativo as any).videoUrl || (genLesson.paso4_explicativo as any).videoSrc || (isMat7bOa01L01 ? 'https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/MAT/110-7-MAT-OA01-L01-EXPLICACION.mp4' : ''),
+      videoSrc: resolveLessonVideo(
+        (genLesson.paso4_explicativo as any)?.videoUrl,
+        (genLesson.paso4_explicativo as any)?.videoSrc,
+        isMat7bOa01L01 ? 'https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/MAT/110-7-MAT-OA01-L01-EXPLICACION.mp4' : ''
+      ),
+      videoUrl: resolveLessonVideo(
+        (genLesson.paso4_explicativo as any)?.videoUrl,
+        (genLesson.paso4_explicativo as any)?.videoSrc,
+        isMat7bOa01L01 ? 'https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/MAT/110-7-MAT-OA01-L01-EXPLICACION.mp4' : ''
+      ),
       graphicPoster: (genLesson.paso4_explicativo as any).posterUrl || (genLesson.paso4_explicativo as any).graphicPoster || (genLesson.paso4_explicativo.slides?.[0]?.imageUrl || ''),
       fullPrompt: genLesson.paso4_explicativo?.fullPrompt,
       slides: genLesson.paso4_explicativo?.slides
@@ -455,7 +484,8 @@ export function adaptPlayerLessonToGenerator(playerLesson: PlayerLessonData): Ge
       hazInstruction: playerLesson.hook.hazInstruction || '',
       dileAntes: playerLesson.hook.dileIntro,
       dileDespues: playerLesson.hook.dileAfterVideo,
-      videoSrc: playerLesson.hook.videoSrc,
+      videoSrc: playerLesson.hook.videoSrc ?? '',
+      videoUrl: (playerLesson.hook as any).videoUrl ?? playerLesson.hook.videoSrc ?? '',
       posterUrl: playerLesson.hook.posterSrc
     },
     paso3_recorrido: (playerLesson.preQuestions || []).map((q) => ({
@@ -475,7 +505,8 @@ export function adaptPlayerLessonToGenerator(playerLesson: PlayerLessonData): Ge
       ideaClave: playerLesson.formalization.ideaClave || playerLesson.formalization.summary || '',
       dileAntes: playerLesson.formalization.dileIntro,
       hazInstruction: playerLesson.formalization.hazInstruction || '',
-      videoSrc: playerLesson.formalization.videoSrc,
+      videoSrc: playerLesson.formalization.videoSrc ?? '',
+      videoUrl: (playerLesson.formalization as any).videoUrl ?? playerLesson.formalization.videoSrc ?? '',
       posterUrl: playerLesson.formalization.graphicPoster
     },
     summaryText: playerLesson.summaryText,

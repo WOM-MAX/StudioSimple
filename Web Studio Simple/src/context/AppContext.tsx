@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import { ViewMode, StudentProfile, ParentUser, Lesson, BrandColorOption, ThemeMode, AuthSession, AuthRole, GradeLevel } from '../types';
-import { INITIAL_STUDENT, INITIAL_PARENT, SAMPLE_LESSON } from '../data/mockData';
+import { INITIAL_STUDENT, INITIAL_STUDENTS, INITIAL_PARENT, SAMPLE_LESSON } from '../data/mockData';
 import { LessonData } from '../types/lesson';
 import { initializeInjectedLessons } from '../lib/lesson-repository';
 
@@ -8,6 +8,10 @@ interface AppContextType {
   viewMode: ViewMode;
   setViewMode: (mode: ViewMode) => void;
   student: StudentProfile;
+  students: StudentProfile[];
+  activeStudentId: string;
+  switchActiveStudent: (studentId: string) => void;
+  addStudentProfile: (name: string, grade: GradeLevel) => void;
   parent: ParentUser;
   activeLesson: Lesson;
   setActiveLesson: (lesson: Lesson) => void;
@@ -45,6 +49,22 @@ function generatePin(): string {
 
 export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [viewMode, setViewModeState] = useState<ViewMode>('landing');
+
+  const [students, setStudents] = useState<StudentProfile[]>(() => {
+    const saved = localStorage.getItem('estudio_simple_students');
+    if (!saved) return INITIAL_STUDENTS;
+    try {
+      const parsed = JSON.parse(saved);
+      return Array.isArray(parsed) && parsed.length > 0 ? parsed : INITIAL_STUDENTS;
+    } catch {
+      return INITIAL_STUDENTS;
+    }
+  });
+
+  const [activeStudentId, setActiveStudentId] = useState<string>(() => {
+    const savedId = localStorage.getItem('estudio_simple_active_student_id');
+    return savedId || (INITIAL_STUDENTS[0] ? INITIAL_STUDENTS[0].id : 'stu-101');
+  });
 
   const [student, setStudent] = useState<StudentProfile>(() => {
     const saved = localStorage.getItem('estudio_simple_student');
@@ -96,6 +116,14 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   useEffect(() => {
     localStorage.setItem('estudio_simple_student', JSON.stringify(student));
   }, [student]);
+
+  useEffect(() => {
+    localStorage.setItem('estudio_simple_students', JSON.stringify(students));
+  }, [students]);
+
+  useEffect(() => {
+    localStorage.setItem('estudio_simple_active_student_id', activeStudentId);
+  }, [activeStudentId]);
 
   useEffect(() => {
     localStorage.setItem('estudio_simple_parent', JSON.stringify(parent));
@@ -274,6 +302,39 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     return newPin;
   };
 
+  const switchActiveStudent = useCallback((studentId: string) => {
+    const target = students.find((s) => s.id === studentId);
+    if (target) {
+      setActiveStudentId(target.id);
+      setStudent(target);
+      localStorage.setItem('estudio_simple_active_student_id', target.id);
+      localStorage.setItem('estudio_simple_student', JSON.stringify(target));
+    }
+  }, [students]);
+
+  const addStudentProfile = useCallback((name: string, grade: GradeLevel) => {
+    const newStudent: StudentProfile = {
+      id: `stu-${Date.now()}`,
+      name,
+      grade,
+      avatar: '🦉',
+      curiosityPoints: 100,
+      gems: 5,
+      completedLessons: [],
+      currentStreakDays: 1,
+      pin: generatePin()
+    };
+    setStudents((prev) => {
+      const updated = [...prev, newStudent];
+      localStorage.setItem('estudio_simple_students', JSON.stringify(updated));
+      return updated;
+    });
+    setActiveStudentId(newStudent.id);
+    setStudent(newStudent);
+    localStorage.setItem('estudio_simple_active_student_id', newStudent.id);
+    localStorage.setItem('estudio_simple_student', JSON.stringify(newStudent));
+  }, []);
+
   // Gamification
   const addCuriosityPoints = (points: number) => {
     setStudent(prev => ({
@@ -313,6 +374,10 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         viewMode,
         setViewMode,
         student,
+        students,
+        activeStudentId,
+        switchActiveStudent,
+        addStudentProfile,
         parent,
         activeLesson,
         setActiveLesson,

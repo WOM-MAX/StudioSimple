@@ -26,8 +26,8 @@ import {
 const GRADES = ['3° Básico', '4° Básico', '5° Básico', '6° Básico', '7° Básico', '8° Básico'];
 
 export const ParentDashboard: React.FC = () => {
-  const { setViewMode, setActiveSynchronizedLesson, logout, parent, student, themeMode, toggleThemeMode } = useApp();
-  const [selectedGrade, setSelectedGrade] = useState('7° Básico');
+  const { setViewMode, setActiveSynchronizedLesson, logout, parent, student, students, activeStudentId, switchActiveStudent, themeMode, toggleThemeMode } = useApp();
+  const [selectedGrade, setSelectedGrade] = useState<string>(student?.grade || '7° Básico');
   const [selectedSubject, setSelectedSubject] = useState('Matemática');
   const [selectedOaIndex, setSelectedOaIndex] = useState(0);
   const [activeTab, setActiveTab] = useState<'lessons' | 'analytics'>('lessons');
@@ -40,6 +40,12 @@ export const ParentDashboard: React.FC = () => {
     setSelectedSubject(subjectName);
     setSelectedOaIndex(0);
   };
+
+  React.useEffect(() => {
+    if (student?.grade) {
+      setSelectedGrade(student.grade);
+    }
+  }, [student?.grade]);
 
   return (
     <div className={`min-h-screen font-sans flex flex-col transition-colors duration-300 ${
@@ -92,10 +98,35 @@ export const ParentDashboard: React.FC = () => {
             </div>
           </div>
 
-          {/* Selectores de Curso y Asignatura */}
           <div className={`flex items-center gap-2 p-1 rounded-2xl border ${
             isDark ? 'bg-[#0A192F] border-[#1C3257]' : 'bg-slate-100/80 border-slate-200'
           }`}>
+            {/* Conmutador Multi-Estudiante de la Familia */}
+            <div className="relative">
+              <select
+                value={activeStudentId}
+                onChange={(e) => {
+                  const targetId = e.target.value;
+                  switchActiveStudent(targetId);
+                  const targetStudent = students.find((s) => s.id === targetId);
+                  if (targetStudent && targetStudent.grade) {
+                    setSelectedGrade(targetStudent.grade);
+                  }
+                }}
+                className={`appearance-none font-bold text-xs py-1.5 pl-3 pr-7 rounded-xl border focus:outline-none focus:border-[#12A1A4] cursor-pointer shadow-xs ${
+                  isDark ? 'bg-[#1C3257] text-[#F8AD22] border-[#2A4365]' : 'bg-amber-50 text-[#1C3257] border-amber-200'
+                }`}
+                title="Estudiante de la Familia Activo"
+              >
+                {students.map((s) => (
+                  <option key={s.id} value={s.id} className={isDark ? 'bg-[#10223D] text-white' : 'bg-white text-[#1C3257]'}>
+                    {s.avatar} {s.name} ({s.grade})
+                  </option>
+                ))}
+              </select>
+              <ChevronDown className="w-3.5 h-3.5 text-amber-500 absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none" />
+            </div>
+
             {/* Curso */}
             <div className="relative">
               <select
@@ -198,6 +229,18 @@ export const ParentDashboard: React.FC = () => {
           >
             <BarChart3 className="w-4 h-4" />
             <span>Estadísticas de Avance & Temario Exámenes Libres</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setViewMode('formal-exam')}
+            className={`py-3.5 px-3 text-xs font-bold border-b-2 border-transparent flex items-center gap-2 transition-all cursor-pointer ${
+              isDark ? 'text-amber-400 hover:text-amber-300' : 'text-amber-600 hover:text-amber-700'
+            }`}
+            title="Abrir Simulador de Examen Acumulativo MINEDUC"
+          >
+            <Award className="w-4 h-4" />
+            <span>Simulador de Ensayo Formal MINEDUC</span>
           </button>
         </div>
       </div>

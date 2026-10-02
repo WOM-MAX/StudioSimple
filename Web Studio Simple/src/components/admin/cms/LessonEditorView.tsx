@@ -56,24 +56,7 @@ import {
   isPlayerLessonCustomized
 } from '../../../lib/lesson-repository';
 import { downloadLessonPromptFile } from '../../../lib/prompt-export';
-
-function resolveVideoEmbedUrl(url?: string): string | null {
-  if (!url) return null;
-  if (url.includes('youtube.com/watch?v=')) {
-    return url.replace('watch?v=', 'embed/');
-  }
-  if (url.includes('youtu.be/')) {
-    return url.replace('youtu.be/', 'www.youtube.com/embed/');
-  }
-  if (url.includes('vimeo.com/') && !url.includes('player.vimeo.com')) {
-    const id = url.split('/').pop()?.split('?')[0];
-    return id ? `https://player.vimeo.com/video/${id}` : null;
-  }
-  if (url.includes('iframe.videodelivery.net')) {
-    return url;
-  }
-  return null;
-}
+import { resolveVideoSource } from '../../../lib/video-utils';
 
 interface LessonEditorViewProps {
   catalog?: OACatalogItem[];
@@ -1654,7 +1637,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
                             onClick={() => {
                               setLessonData({
                                 ...lessonData,
-                                hook: { ...lessonData.hook, videoSrc: '' }
+                                hook: { ...lessonData.hook, videoSrc: '', videoUrl: '' }
                               });
                             }}
                             className="text-[10px] font-bold text-rose-600 hover:underline cursor-pointer"
@@ -1672,7 +1655,8 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
                           ...lessonData,
                           hook: {
                             ...lessonData.hook,
-                            videoSrc: e.target.value
+                            videoSrc: e.target.value,
+                            videoUrl: e.target.value
                           }
                         })
                       }
@@ -1704,28 +1688,30 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
                 </div>
 
                 {/* Reproductor de Video en Vivo */}
-                {lessonData.hook.videoSrc ? (
-                  <div className="rounded-2xl overflow-hidden border border-purple-200 bg-black aspect-video max-h-72 flex items-center justify-center shadow-inner">
-                    {resolveVideoEmbedUrl(lessonData.hook.videoSrc) ? (
-                      <iframe
-                        src={resolveVideoEmbedUrl(lessonData.hook.videoSrc)!}
-                        title="Vista previa video motivacional"
-                        className="w-full h-full border-0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                      />
-                    ) : (
-                      <video
-                        src={lessonData.hook.videoSrc}
-                        controls
-                        playsInline
-                        preload="metadata"
-                        crossOrigin="anonymous"
-                        className="w-full h-full object-contain"
-                      />
-                    )}
-                  </div>
-                ) : (
+                {lessonData.hook.videoSrc ? (() => {
+                  const videoInfo = resolveVideoSource(lessonData.hook.videoSrc);
+                  return (
+                    <div className="rounded-2xl overflow-hidden border border-purple-200 bg-black aspect-video max-h-72 flex items-center justify-center shadow-inner">
+                      {videoInfo.isEmbed && videoInfo.embedUrl ? (
+                        <iframe
+                          src={videoInfo.embedUrl}
+                          title="Vista previa video motivacional"
+                          className="w-full h-full border-0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        />
+                      ) : (
+                        <video
+                          src={videoInfo.cleanUrl}
+                          controls
+                          playsInline
+                          preload="metadata"
+                          className="w-full h-full object-contain"
+                        />
+                      )}
+                    </div>
+                  );
+                })() : (
                   <div className="p-6 rounded-2xl border-2 border-dashed border-purple-200 bg-white/70 flex flex-col items-center justify-center text-center">
                     <Video size={28} className="text-purple-400 mb-2" />
                     <p className="text-xs font-bold text-slate-700">Sin video motivacional asignado</p>
@@ -2295,7 +2281,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
                             onClick={() => {
                               setLessonData({
                                 ...lessonData,
-                                formalization: { ...lessonData.formalization, videoSrc: '' }
+                                formalization: { ...lessonData.formalization, videoSrc: '', videoUrl: '' }
                               });
                             }}
                             className="text-[10px] font-bold text-rose-600 hover:underline cursor-pointer"
@@ -2313,7 +2299,8 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
                           ...lessonData,
                           formalization: {
                             ...lessonData.formalization,
-                            videoSrc: e.target.value
+                            videoSrc: e.target.value,
+                            videoUrl: e.target.value
                           }
                         })
                       }
@@ -2345,28 +2332,30 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
                 </div>
 
                 {/* Reproductor de Video en Vivo */}
-                {lessonData.formalization.videoSrc ? (
-                  <div className="rounded-2xl overflow-hidden border border-amber-200 bg-black aspect-video max-h-72 flex items-center justify-center shadow-inner">
-                    {resolveVideoEmbedUrl(lessonData.formalization.videoSrc) ? (
-                      <iframe
-                        src={resolveVideoEmbedUrl(lessonData.formalization.videoSrc)!}
-                        title="Vista previa video explicativo"
-                        className="w-full h-full border-0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                      />
-                    ) : (
-                      <video
-                        src={lessonData.formalization.videoSrc}
-                        controls
-                        playsInline
-                        preload="metadata"
-                        crossOrigin="anonymous"
-                        className="w-full h-full object-contain"
-                      />
-                    )}
-                  </div>
-                ) : (
+                {lessonData.formalization.videoSrc ? (() => {
+                  const videoInfo = resolveVideoSource(lessonData.formalization.videoSrc);
+                  return (
+                    <div className="rounded-2xl overflow-hidden border border-amber-200 bg-black aspect-video max-h-72 flex items-center justify-center shadow-inner">
+                      {videoInfo.isEmbed && videoInfo.embedUrl ? (
+                        <iframe
+                          src={videoInfo.embedUrl}
+                          title="Vista previa video explicativo"
+                          className="w-full h-full border-0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        />
+                      ) : (
+                        <video
+                          src={videoInfo.cleanUrl}
+                          controls
+                          playsInline
+                          preload="metadata"
+                          className="w-full h-full object-contain"
+                        />
+                      )}
+                    </div>
+                  );
+                })() : (
                   <div className="p-6 rounded-2xl border-2 border-dashed border-amber-200 bg-white/70 flex flex-col items-center justify-center text-center">
                     <Video size={28} className="text-amber-400 mb-2" />
                     <p className="text-xs font-bold text-slate-700">Sin video explicativo asignado</p>

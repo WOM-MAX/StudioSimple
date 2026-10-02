@@ -55,7 +55,10 @@ export async function initializeInjectedLessons(): Promise<InjectedOAPackage[]> 
   }
 
   try {
-    const res = await fetch('/data/injected_lessons_7b.json');
+    let res = await fetch('/data/injected_lessons_all_grades.json');
+    if (!res.ok) {
+      res = await fetch('/data/injected_lessons_7b.json');
+    }
     if (res.ok) {
       const remotePackages: InjectedOAPackage[] = await res.json();
       const map = new Map<string, InjectedOAPackage>();
