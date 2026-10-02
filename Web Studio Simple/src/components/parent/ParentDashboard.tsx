@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
 import { OFFICIAL_SUBJECTS, getSubjectOAs, CurricularOA } from '../../data/curriculumData';
-import { findInjectedLesson } from '../../lib/lesson-repository';
+import { findInjectedLesson, isLessonCompleted } from '../../lib/lesson-repository';
 import {
   Play,
   Lock,
@@ -20,7 +20,8 @@ import {
   TrendingUp,
   Target,
   ArrowLeft,
-  Home
+  Home,
+  RotateCcw
 } from 'lucide-react';
 
 const GRADES = ['3° Básico', '4° Básico', '5° Básico', '6° Básico', '7° Básico', '8° Básico'];
@@ -35,6 +36,14 @@ export const ParentDashboard: React.FC = () => {
   const currentOAs = getSubjectOAs(selectedGrade, selectedSubject);
   const activeOa: CurricularOA = currentOAs[selectedOaIndex] || currentOAs[0];
   const isDark = themeMode === 'dark';
+
+  const totalLessons = activeOa?.lessons?.length || 0;
+  const completedCount = activeOa?.lessons
+    ? activeOa.lessons.filter((l) =>
+        isLessonCompleted(student?.completedLessons, selectedGrade, selectedSubject, activeOa.code, l.lessonNumber)
+      ).length
+    : 0;
+  const progressPercent = totalLessons > 0 ? Math.round((completedCount / totalLessons) * 100) : 0;
 
   const handleSubjectChange = (subjectName: string) => {
     setSelectedSubject(subjectName);
@@ -469,15 +478,18 @@ export const ParentDashboard: React.FC = () => {
                 <div className="flex items-center gap-1.5">
                   <Layers className="w-4 h-4 text-[#EE751C]" />
                   <strong className="text-slate-700 dark:text-slate-300">Progresión:</strong>
-                  <span>0 de {activeOa.lessons.length} lecciones completadas</span>
+                  <span>{completedCount} de {totalLessons} lecciones completadas ({progressPercent}%)</span>
                 </div>
                 <div className="w-36 h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden border border-slate-200/60 dark:border-slate-700">
-                  <div className="h-full bg-[#12A1A4] w-0 transition-all duration-500" />
+                  <div
+                    className="h-full bg-[#12A1A4] transition-all duration-500"
+                    style={{ width: `${progressPercent}%` }}
+                  />
                 </div>
               </div>
             </div>
 
-            {/* GRILLA DE LAS 5 LECCIONES */}
+            {/* GRILLA DE LECCIONES DEL OBJETIVO */}
             <div>
               <div className="flex items-center justify-between mb-4">
                 <h2 className={`text-base font-black flex items-center gap-2 tracking-tight ${isDark ? 'text-white' : 'text-[#1C3257]'}`}>
@@ -485,11 +497,11 @@ export const ParentDashboard: React.FC = () => {
                   <span className="text-xs font-semibold text-slate-500">(Secuencia pedagógica de 30 min)</span>
                 </h2>
                 <span className="text-xs font-bold text-[#0E8284] bg-teal-50 px-2.5 py-0.5 rounded-full border border-teal-200">
-                  Secuencia de 5 Fases
+                  Secuencia de {totalLessons} Fases
                 </span>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+              <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ${totalLessons >= 6 ? 'xl:grid-cols-6' : 'xl:grid-cols-5'} gap-4`}>
                 {activeOa.lessons.map((lesson) => {
                   const injectedLesson = findInjectedLesson(
                     selectedGrade,
@@ -497,14 +509,24 @@ export const ParentDashboard: React.FC = () => {
                     activeOa.code,
                     lesson.lessonNumber
                   );
+                  const isCompleted = isLessonCompleted(
+                    student?.completedLessons,
+                    selectedGrade,
+                    selectedSubject,
+                    activeOa.code,
+                    lesson.lessonNumber
+                  ) || lesson.status === 'completed';
                   const isReady = lesson.status === 'ready' || Boolean(injectedLesson);
-                  const isCompleted = lesson.status === 'completed';
 
                   return (
                     <div
                       key={lesson.lessonNumber}
                       className={`rounded-3xl p-5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden h-full min-h-[350px] ${
-                        isReady
+                        isCompleted
+                          ? isDark
+                            ? 'bg-[#10223D] border-2 border-emerald-500 ring-1 ring-emerald-500/40 shadow-lg'
+                            : 'bg-white border-2 border-emerald-500 ring-4 ring-emerald-500/15 shadow-xl shadow-emerald-900/10 hover:shadow-2xl hover:-translate-y-1'
+                          : isReady
                           ? isDark
                             ? 'bg-[#10223D] border-2 border-[#12A1A4] ring-1 ring-[#12A1A4]/40 shadow-lg'
                             : 'bg-white border-2 border-[#12A1A4] ring-4 ring-[#12A1A4]/15 shadow-xl shadow-teal-900/10 hover:shadow-2xl hover:-translate-y-1'
@@ -513,19 +535,23 @@ export const ParentDashboard: React.FC = () => {
                           : 'bg-white/80 backdrop-blur-xs border border-slate-200/90 shadow-sm hover:border-slate-300 hover:bg-white hover:shadow-md'
                       }`}
                     >
-                      {/* Borde superior de acento para la clase activa */}
-                      {isReady && (
+                      {/* Borde superior de acento */}
+                      {isCompleted ? (
+                        <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-emerald-500 to-teal-400" />
+                      ) : isReady ? (
                         <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#12A1A4] to-[#EE751C]" />
-                      )}
+                      ) : null}
 
                       <div className="flex flex-col space-y-3">
                         <div className="flex items-center justify-between gap-1.5">
                           <span className={`text-[11px] font-black uppercase tracking-wider px-2.5 py-1 rounded-lg ${
-                            isReady
+                            isCompleted
+                              ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
+                              : isReady
                               ? 'bg-teal-50 text-[#0E8284] border border-teal-200'
                               : 'bg-slate-100 text-slate-500 border border-slate-200/70'
                           }`}>
-                            Clase {lesson.lessonNumber} de 5
+                            Clase {lesson.lessonNumber} de {totalLessons}
                           </span>
                           <span className={`text-[11px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 ${
                             isDark ? 'bg-[#0A192F] text-slate-400' : 'bg-slate-100 text-slate-600 border border-slate-200/70'
@@ -540,7 +566,7 @@ export const ParentDashboard: React.FC = () => {
                         </div>
 
                         <h3 className={`text-sm sm:text-base font-black leading-snug tracking-tight ${
-                          isReady
+                          isCompleted || isReady
                             ? isDark ? 'text-white' : 'text-[#1C3257]'
                             : isDark ? 'text-slate-300' : 'text-slate-700'
                         }`}>
@@ -548,7 +574,7 @@ export const ParentDashboard: React.FC = () => {
                         </h3>
 
                         <p className={`text-xs leading-relaxed line-clamp-4 ${
-                          isReady
+                          isCompleted || isReady
                             ? isDark ? 'text-slate-300' : 'text-slate-600'
                             : isDark ? 'text-slate-500' : 'text-slate-500'
                         }`}>
@@ -556,8 +582,30 @@ export const ParentDashboard: React.FC = () => {
                         </p>
                       </div>
 
-                      <div className="pt-4 mt-auto border-t border-slate-100 dark:border-slate-800">
-                        {isReady ? (
+                      <div className="pt-4 mt-auto border-t border-slate-100 dark:border-slate-800 space-y-2">
+                        {isCompleted ? (
+                          <>
+                            <div className="w-full bg-emerald-50 text-emerald-800 font-bold text-xs py-2 px-3 rounded-2xl flex items-center justify-center gap-1.5 border border-emerald-200 shadow-xs">
+                              <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                              <span>Completada</span>
+                            </div>
+                            <button
+                              type="button"
+                              onClick={() => {
+                                if (injectedLesson) {
+                                  setActiveSynchronizedLesson(injectedLesson);
+                                } else {
+                                  setActiveSynchronizedLesson(null);
+                                }
+                                setViewMode('lesson');
+                              }}
+                              className="w-full bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-[#1C3257] dark:text-slate-200 font-bold text-xs py-2.5 px-3 rounded-2xl flex items-center justify-center gap-1.5 transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer text-center border border-slate-200 dark:border-slate-700 shadow-xs"
+                            >
+                              <RotateCcw className="w-3.5 h-3.5 text-[#12A1A4] shrink-0" />
+                              <span>Repasar Clase (Host)</span>
+                            </button>
+                          </>
+                        ) : isReady ? (
                           <button
                             type="button"
                             onClick={() => {
@@ -573,11 +621,6 @@ export const ParentDashboard: React.FC = () => {
                             <Play className="w-3.5 h-3.5 fill-white shrink-0" />
                             <span>Iniciar Clase (Host)</span>
                           </button>
-                        ) : isCompleted ? (
-                          <div className="w-full bg-emerald-50 text-emerald-800 font-bold text-xs py-2.5 px-3 rounded-2xl flex items-center justify-center gap-1.5 border border-emerald-200">
-                            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                            <span>Completada</span>
-                          </div>
                         ) : (
                           <div className={`w-full font-bold text-xs py-2.5 px-3 rounded-2xl flex items-center justify-center gap-1.5 border ${
                             isDark

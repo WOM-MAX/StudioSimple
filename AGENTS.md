@@ -113,10 +113,12 @@ El entregable y criterios de **Salida** son: Cumplimiento estricto del protocolo
 - **Punto de Control y Reversibilidad:** Verificar el estado del repositorio (`git status`) antes de mutaciones extensas para garantizar la capacidad de restaurar a un estado limpio si una estrategia de solución resulta infructuosa.
 - **Doble Validación (Sintáctica y de Contenido):** El DoD exige código de salida 0 en compilación (`npm run build`) e inspección de integridad del contenido (archivos generados > 0 bytes y datos no corruptos).
 - **Persistencia de Progreso contra Compactación:** En tareas complejas de múltiples fases, volcar los hitos alcanzados en un archivo de estado local o bitácora en `memoria/` para resistir eventuales compactaciones del contexto por el sistema.
-- **Norma Obligatoria de Interacción, Autonomía y /goal:** Cada vez que el usuario consulte, pregunte, solicite analizar o pida ejecutar cualquier tarea, el agente debe generar obligatoriamente:
-  1. El análisis o diagnóstico técnico y pedagógico objetivo con evidencia verificada.
-  2. El plan de acción estructurado con pasos específicos, componentes afectados y criterios de validación.
-  3. Un prompt detallado y autosuficiente diseñado para ser ejecutado con el comando `/goal`, estructurado explícitamente según el estándar definido en [.agents/rules/analisis_autonomo_goal.md](file:///c:/Proyectos/StudioSimple/.agents/rules/analisis_autonomo_goal.md) para que el agente trabaje con máxima autonomía de extremo a extremo sin pausas, sin pedir confirmaciones intermedias, con bucle de autocorrección acotado ante fallos y sin solicitar interacción al usuario hasta que la totalidad de la tarea y su validación estén terminadas.
+- **Norma de Interacción, Autonomía y Ejecución Directa:**
+  1. **Ejecución Operativa y Comandos Directos (Cero Doble Paso):** Cuando el usuario ordene una acción directa (ej. "haz push", "haz pull", "corrige", "implementa", "actualiza", o ejecute un comando `/goal`), el agente tiene la obligación y autorización para **ejecutar de principio a fin de manera autónoma e inmediata**, realizando las mutaciones de código, operaciones git y validaciones sin detenerse a pedir confirmación ni generar prompts intermediarios de `/goal`.
+  2. **Consultas, Diagnósticos y Asesorías:** Exclusivamente cuando el usuario solicite una revisión exploratoria previa o asesoría abierta (ej. "¿cómo estructurar...?", "analiza y propón un plan"):
+     - Presentar el diagnóstico técnico o pedagógico objetivo con evidencia verificada.
+     - Presentar el plan de acción estructurado con componentes y pasos.
+     - Adjuntar opcionalmente un bloque `/goal` estructurado según [.agents/rules/analisis_autonomo_goal.md](file:///c:/Proyectos/StudioSimple/.agents/rules/analisis_autonomo_goal.md) para ejecuciones programadas.
 
 ## 🧠 Protocolo de Escalada Arquitectónica
 - **Nivel AVISO:** Debilidades menores (ej. componente sin tipado estricto). Documentar con `// TODO [Agente]:` y continuar.

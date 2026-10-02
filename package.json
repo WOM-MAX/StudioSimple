@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "npm run dev --prefix \"Web Studio Simple\"",
     "build": "npm run build --prefix \"Web Studio Simple\"",
+    "start": "node server.js",
     "preview": "npm run preview --prefix \"Web Studio Simple\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

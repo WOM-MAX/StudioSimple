@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
-import { findInjectedLesson } from '../../lib/lesson-repository';
+import { findInjectedLesson, isLessonCompleted } from '../../lib/lesson-repository';
 import { OFFICIAL_SUBJECTS, getSubjectOAs, CurricularOA } from '../../data/curriculumData';
-import { Play, Lock, CheckCircle2, Clock, Sparkles, LogOut, Shield, Sun, Moon, ArrowLeft, User } from 'lucide-react';
+import { Play, Lock, CheckCircle2, Clock, Sparkles, LogOut, Shield, Sun, Moon, ArrowLeft, User, RotateCcw, Layers } from 'lucide-react';
 
 export const StudentDashboard: React.FC = () => {
   const { setViewMode, logout, verifyParentPassword, student, themeMode, toggleThemeMode, setActiveSynchronizedLesson } = useApp();
@@ -16,6 +16,14 @@ export const StudentDashboard: React.FC = () => {
   const currentOAs = getSubjectOAs(selectedGrade, selectedSubject);
   const activeOa: CurricularOA = currentOAs[selectedOaIndex] || currentOAs[0];
   const isDark = themeMode === 'dark';
+
+  const totalLessons = activeOa?.lessons?.length || 0;
+  const completedCount = activeOa?.lessons
+    ? activeOa.lessons.filter((l) =>
+        isLessonCompleted(student?.completedLessons, selectedGrade, selectedSubject, activeOa.code, l.lessonNumber)
+      ).length
+    : 0;
+  const progressPercent = totalLessons > 0 ? Math.round((completedCount / totalLessons) * 100) : 0;
 
   const handleSubjectChange = (subjectName: string) => {
     setSelectedSubject(subjectName);
@@ -214,7 +222,7 @@ export const StudentDashboard: React.FC = () => {
 
             <div className="flex items-center gap-2 text-xs font-bold text-[#12A1A4] bg-[#E9F8F8] px-3 py-1 rounded-full border border-[#BCD6EA]">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>{activeOa.lessons.length} Clases de 30 min</span>
+              <span>{totalLessons} Clases de 30 min</span>
             </div>
           </div>
 
@@ -224,6 +232,20 @@ export const StudentDashboard: React.FC = () => {
           <p className={`text-sm leading-relaxed max-w-3xl mb-4 ${isDark ? 'text-[#94A3B8]' : 'text-[#526177]'}`}>
             {activeOa.shortDesc}
           </p>
+
+          <div className="flex flex-wrap items-center gap-4 text-xs text-slate-500 pt-3 border-t border-current/10">
+            <div className="flex items-center gap-1.5">
+              <Layers className="w-4 h-4 text-[#EE751C]" />
+              <strong className={isDark ? 'text-slate-300' : 'text-slate-700'}>Tu Progreso:</strong>
+              <span>{completedCount} de {totalLessons} lecciones completadas ({progressPercent}%)</span>
+            </div>
+            <div className={`w-36 h-2 rounded-full overflow-hidden border ${isDark ? 'bg-slate-800 border-slate-700' : 'bg-slate-100 border-slate-200'}`}>
+              <div
+                className="h-full bg-[#12A1A4] transition-all duration-500"
+                style={{ width: `${progressPercent}%` }}
+              />
+            </div>
+          </div>
         </div>
 
         {/* BANNER ENSAYO ACUMULATIVO MINEDUC */}
@@ -264,7 +286,7 @@ export const StudentDashboard: React.FC = () => {
             Tus Clases del Objetivo
           </h2>
 
-          <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ${activeOa.lessons.length >= 6 ? 'xl:grid-cols-6' : 'xl:grid-cols-5'} gap-4`}>
+          <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ${totalLessons >= 6 ? 'xl:grid-cols-6' : 'xl:grid-cols-5'} gap-4`}>
             {activeOa.lessons.map((lesson) => {
               const injectedLesson = findInjectedLesson(
                 selectedGrade,
@@ -272,14 +294,24 @@ export const StudentDashboard: React.FC = () => {
                 activeOa.code,
                 lesson.lessonNumber
               );
+              const isCompleted = isLessonCompleted(
+                student?.completedLessons,
+                selectedGrade,
+                selectedSubject,
+                activeOa.code,
+                lesson.lessonNumber
+              ) || lesson.status === 'completed';
               const isReady = lesson.status === 'ready' || Boolean(injectedLesson);
-              const isCompleted = lesson.status === 'completed';
 
               return (
                 <div
                   key={lesson.lessonNumber}
                   className={`border rounded-3xl p-5 shadow-sm transition-all flex flex-col justify-between h-full min-h-[350px] relative overflow-hidden ${
-                    isReady
+                    isCompleted
+                      ? isDark
+                        ? 'bg-[#10223D] border-emerald-500 ring-1 ring-emerald-500/40 shadow-md'
+                        : 'bg-white border-emerald-500 ring-2 ring-emerald-500/20 shadow-md hover:-translate-y-1'
+                      : isReady
                       ? isDark
                         ? 'bg-[#10223D] border-[#12A1A4] ring-1 ring-[#12A1A4]/40 shadow-md'
                         : 'bg-white border-[#12A1A4] ring-1 ring-[#12A1A4]/30 shadow-md hover:-translate-y-1'
@@ -288,14 +320,20 @@ export const StudentDashboard: React.FC = () => {
                       : 'bg-white border-[#E2E8F0] opacity-80'
                   }`}
                 >
-                  {isReady && (
+                  {isCompleted ? (
+                    <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-emerald-500 to-teal-400" />
+                  ) : isReady ? (
                     <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#12A1A4] to-[#EE751C]" />
-                  )}
+                  ) : null}
 
                   <div className="flex flex-col space-y-3">
                     <div className="flex items-center justify-between gap-1.5">
-                      <span className="text-[11px] font-black text-[#12A1A4] bg-teal-50 border border-teal-200 px-2.5 py-1 rounded-lg uppercase tracking-wider">
-                        Clase {lesson.lessonNumber} de {activeOa.totalLessons || activeOa.lessons.length}
+                      <span className={`text-[11px] font-black px-2.5 py-1 rounded-lg uppercase tracking-wider ${
+                        isCompleted
+                          ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
+                          : 'bg-teal-50 text-[#12A1A4] border border-teal-200'
+                      }`}>
+                        Clase {lesson.lessonNumber} de {totalLessons}
                       </span>
                       <span className={`text-[11px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 ${
                         isDark ? 'bg-[#0A192F] text-[#94A3B8]' : 'bg-[#F5F4EF] text-[#748093]'
@@ -317,8 +355,30 @@ export const StudentDashboard: React.FC = () => {
                     </p>
                   </div>
 
-                  <div className="pt-4 mt-auto border-t border-current/10">
-                    {isReady ? (
+                  <div className="pt-4 mt-auto border-t border-current/10 space-y-2">
+                    {isCompleted ? (
+                      <>
+                        <div className="w-full bg-[#EAF4E8] text-[#255E29] font-bold text-xs py-2 px-3 rounded-2xl flex items-center justify-center gap-1.5 border border-[#BADCB8]">
+                          <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600" />
+                          <span>Completada</span>
+                        </div>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            if (injectedLesson) {
+                              setActiveSynchronizedLesson(injectedLesson);
+                            } else {
+                              setActiveSynchronizedLesson(null);
+                            }
+                            setViewMode('lesson');
+                          }}
+                          className="w-full bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-[#1C3257] dark:text-slate-200 font-bold text-xs py-2.5 px-3 rounded-2xl flex items-center justify-center gap-1.5 transition-all hover:scale-[1.02] cursor-pointer text-center border border-slate-200 dark:border-slate-700 shadow-xs"
+                        >
+                          <RotateCcw className="w-3.5 h-3.5 text-[#12A1A4] shrink-0" />
+                          <span>Repasar Clase</span>
+                        </button>
+                      </>
+                    ) : isReady ? (
                       <button
                         type="button"
                         onClick={() => {
@@ -334,11 +394,6 @@ export const StudentDashboard: React.FC = () => {
                         <Play className="w-3.5 h-3.5 fill-white shrink-0" />
                         <span>Entrar a la Sala</span>
                       </button>
-                    ) : isCompleted ? (
-                      <div className="w-full bg-[#EAF4E8] text-[#255E29] font-bold text-xs py-2.5 px-3 rounded-2xl flex items-center justify-center gap-1.5 border border-[#BADCB8]">
-                        <CheckCircle2 className="w-4 h-4 shrink-0" />
-                        <span>Completada</span>
-                      </div>
                     ) : (
                       <div className={`w-full font-semibold text-xs py-2.5 px-3 rounded-2xl flex items-center justify-center gap-1.5 border ${
                         isDark ? 'bg-[#0A192F] text-[#64748B] border-[#1C3257]' : 'bg-[#F5F4EF] text-[#8DA3C0] border-[#E2E8F0]'

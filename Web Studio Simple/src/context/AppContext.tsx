@@ -55,7 +55,17 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     if (!saved) return INITIAL_STUDENTS;
     try {
       const parsed = JSON.parse(saved);
-      return Array.isArray(parsed) && parsed.length > 0 ? parsed : INITIAL_STUDENTS;
+      if (Array.isArray(parsed) && parsed.length > 0) {
+        return parsed.map((s: StudentProfile) => {
+          if (s.id === 'stu-101' || s.name === 'Mateo') {
+            const completed = Array.isArray(s.completedLessons) ? s.completedLessons : [];
+            const merged = Array.from(new Set([...completed, '7_mat_oa1_1', '7_mat_oa1_2']));
+            return { ...s, completedLessons: merged };
+          }
+          return s;
+        });
+      }
+      return INITIAL_STUDENTS;
     } catch {
       return INITIAL_STUDENTS;
     }
@@ -69,8 +79,14 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const [student, setStudent] = useState<StudentProfile>(() => {
     const saved = localStorage.getItem('estudio_simple_student');
     if (!saved) return INITIAL_STUDENT;
-    const parsed = JSON.parse(saved);
-    return { ...INITIAL_STUDENT, ...parsed, pin: parsed.pin || INITIAL_STUDENT.pin };
+    try {
+      const parsed = JSON.parse(saved);
+      const completed = Array.isArray(parsed.completedLessons) ? parsed.completedLessons : [];
+      const merged = Array.from(new Set([...INITIAL_STUDENT.completedLessons, ...completed, '7_mat_oa1_1', '7_mat_oa1_2']));
+      return { ...INITIAL_STUDENT, ...parsed, completedLessons: merged, pin: parsed.pin || INITIAL_STUDENT.pin };
+    } catch {
+      return INITIAL_STUDENT;
+    }
   });
 
   const [parent, setParent] = useState<ParentUser>(() => {
@@ -351,14 +367,67 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   };
 
   const markLessonCompleted = (lessonId: string) => {
-    setStudent(prev => {
-      if (prev.completedLessons.includes(lessonId)) return prev;
-      return {
+    if (!lessonId) return;
+    setStudent((prev) => {
+      const alreadyCompleted = prev.completedLessons.includes(lessonId);
+      const updatedLessons = alreadyCompleted
+        ? prev.completedLessons
+        : [...prev.completedLessons, lessonId];
+
+      const updatedStudent: StudentProfile = {
         ...prev,
-        completedLessons: [...prev.completedLessons, lessonId],
-        curiosityPoints: prev.curiosityPoints + 50,
-        gems: prev.gems + 2,
+        completedLessons: updatedLessons,
+        curiosityPoints: alreadyCompleted ? prev.curiosityPoints : prev.curiosityPoints + 50,
+        gems: alreadyCompleted ? prev.gems : prev.gems + 2,
       };
+
+      try {
+        localStorage.setItem('estudio_simple_student', JSON.stringify(updatedStudent));
+      } catch (err) {
+        console.error('Error guardando estudiante en localStorage', err);
+      }
+
+      return updatedStudent;
+    });
+
+    setStudents((prevStudents) => {
+      const updatedList = prevStudents.map((s) => {
+        if (s.id === activeStudentId) {
+          const already = s.completedLessons.includes(lessonId);
+          return {
+            ...s,
+            completedLessons: already ? s.completedLessons : [...s.completedLessons, lessonId],
+            curiosityPoints: already ? s.curiosityPoints : s.curiosityPoints + 50,
+            gems: already ? s.gems : s.gems + 2,
+          };
+        }
+        return s;
+      });
+
+      try {
+        localStorage.setItem('estudio_simple_students', JSON.stringify(updatedList));
+      } catch (err) {
+        console.error('Error guardando estudiantes en localStorage', err);
+      }
+
+      // Sincronizacion en segundo plano con Neon DB si hay conexion
+      if (typeof window !== 'undefined' && typeof fetch === 'function') {
+        fetch('/api/progress', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            studentId: activeStudentId,
+            lessonId,
+            completed: true,
+            gems: 2,
+            curiosityPoints: 50
+          })
+        }).catch(() => {
+          // Fallback silencioso en offline/desarrollo local
+        });
+      }
+
+      return updatedList;
     });
   };
 

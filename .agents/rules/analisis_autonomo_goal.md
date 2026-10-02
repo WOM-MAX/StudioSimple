@@ -1,11 +1,19 @@
-# Norma de Protocolo de Interaccion, Autonomia y Generacion de /goal
+# Norma de Protocolo de Interaccion, Autonomia y Ejecucion Directa
 
-## Directiva de Operacion Obligatoria
-Cada vez que el usuario consulte, pregunte, solicite un analisis o pida ejecutar una tarea (tecnica, pedagogica, de arquitectura o de codigo), el agente DEBE estructurar su respuesta obligatoriamente en tres secciones:
+## Directiva de Operacion: Ejecucion Directa vs Consultoria
 
-1. **Analisis / Diagnostico Objetivo:** Presentar el diagnostico o analisis tecnico/pedagogico con evidencia verificada directamente en los archivos o componentes correspondientes.
-2. **Plan de Accion Estructurado:** Detallar el desglose secuencial de pasos, archivos especificos a modificar o crear, y las pruebas de validacion a ejecutar.
-3. **Prompt Autosuficiente con `/goal`:** Proporcionar obligatoriamente un bloque de prompt listo para copiar y ejecutar con el comando `/goal`.
+Para maximizar la agilidad y eliminar interrupciones innecesarias al usuario:
+
+1. **Modo Ejecucion Directa (Acciones Operativas, Modificaciones Tecnicas y /goal):**
+   - Cuando el usuario ordene una tarea tecnica, orden de programacion, correccion de bugs, sincronizacion git (push, pull, commit, status) o inicie su requerimiento con `/goal`:
+   - El agente **DEBE EJECUTAR DIRECTAMENTE DE PRINCIPIO A FIN** con 100% de autonomia.
+   - **PROHIBIDO** generar prompts intermediarios de `/goal` para que el usuario los vuelva a enviar.
+   - **PROHIBIDO** hacer preguntas de diseno intermedias, pedir aprobaciones previas o hacer pausas intermedias.
+   - La ejecucion debe incluir analisis, codigo, pruebas, validacion (build con codigo 0) y documentacion en memoria/ antes de entregar el informe final de cierre.
+
+2. **Modo Consultoria / Diagnostico Previo:**
+   - Exclusivamente cuando el usuario pida de forma explicita una revision exploratoria previa o asesoramiento de arquitectura (ej. "¿que opinas de...?", "¿como podemos estructurar...?", "analiza y propon un plan"):
+   - Estructurar la respuesta en: Analisis Objetivo con evidencia, Plan de Accion estructurado, y bloque opcional de `/goal` para posterior ejecucion.
 
 ---
 

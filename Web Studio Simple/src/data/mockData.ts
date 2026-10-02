@@ -5,9 +5,9 @@ export const INITIAL_STUDENT: StudentProfile = {
   name: 'Mateo',
   grade: '7° Básico',
   avatar: '🦊',
-  curiosityPoints: 340,
-  gems: 12,
-  completedLessons: ['les-his-701'],
+  curiosityPoints: 440,
+  gems: 16,
+  completedLessons: ['les-his-701', '7_mat_oa1_1', '7_mat_oa1_2'],
   currentStreakDays: 3,
   pin: '123456',
 };

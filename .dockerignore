@@ -1,0 +1,25 @@
+node_modules
+Web Studio Simple/node_modules
+.git
+.env
+.env.local
+.agents
+scratch_docs
+memoria
+TEMARIOS EELL
+PLANES MAESTROS PRESENTACIONES
+LECCIONES
+MANUAL MAESTRO
+HERO
+IMÁGENES
+LOGOS
+PALETA DE COLORES
+PLANTILLAS
+PROMPT
+PROTOTIPO
+DESCARGA_LECCIONES
+ENTREGA_JEFATURA_ESTUDIOSIMPLE_7B
+*.docx
+*.mp4
+*.webm
+*.py

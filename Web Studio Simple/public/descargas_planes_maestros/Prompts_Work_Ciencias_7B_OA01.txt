@@ -1,0 +1,1991 @@
+================================================================================
+STUDIOSIMPLE - PAQUETE DE PROMPTS Y GUIONES OFICIALES PARA CHATGPT WORK
+ASIGNATURA: CIENCIAS NATURALES
+CURSO: 7° BASICO | OBJETIVO: OA 1 (Explicar los aspectos biológicos, afectivos y sociales que se integran en la sexualidad, considerando: > Los cambios físicos que ocurren durante la pubertad. > La relación afectiva entre dos personas en la intimidad y el respeto mutuo. > La responsabilidad individual.)
+TOTAL DE CLASES: 6 LECCIONES (14 DIAPOSITIVAS POR CLASE = 84 LAMINAS TOTALES)
+FORMATO: 7 DIAPOSITIVAS VIDEO GANCHO (60s) + 7 DIAPOSITIVAS VIDEO EXPLICATIVO (90s)
+================================================================================
+
+
+################################################################################
+### CLASE 1 DE 6: LAS 4 DIMENSIONES DE LA SEXUALIDAD HUMANA
+################################################################################
+
+================================================================================
+STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+================================================================================
+
+FICHA CURRICULAR:
+• Asignatura: Ciencias Naturales
+• Nivel / Curso: 7° Básico
+• Objetivo de Aprendizaje: OA 1 - Biología
+• Clase: 1 de 6 ("Las 4 Dimensiones de la Sexualidad Humana")
+• Duracion Estimada: 30 Minutos
+
+DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
+1. Proporcion Widescreen 16:9 estricto (1920x1080).
+2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
+3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
+4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
+5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
+   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
+   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
+7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
+8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
+
+================================================================================
+MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: La persona en su totalidad: Las 4 dimensiones
+• DILE ANTES DEL VIDEO: "Vamos a ver cómo la ciencia moderna comprende la sexualidad a través de cuatro dimensiones inseparables."
+• INSTRUCCION AL ESTUDIANTE: "Observa y reflexiona con las escenas del desafío visual."
+• DILE DESPUES DEL VIDEO: "Conversemos sobre lo observado. Te haré dos preguntas para comprobar cómo se interrelacionan estas 4 dimensiones."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Apertura e Impacto (9 seg aprox) ---
+1. Propósito Didáctico: Apertura e Impacto
+2. Título en Pantalla (64 pt): Misión 1: La sexualidad humana
+3. Subtítulo en Pantalla (36 pt): Mucho más que un fenómeno biológico
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining a glowing interactive holographic infographic of the 4 dimensions of human sexuality. Warm, inviting scientific atmosphere, negative space in top third. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema integrador: Silueta humana y 4 nodos dimensionales interconectados
+6. Notas al Orador (Locución Google Vids): "Comienza una expedición fascinante en ciencias. La sexualidad humana es una vivencia integral que nos acompaña durante todas las etapas de nuestra vida."
+
+--- DIAPOSITIVA 2: Dimensión Biológica (9 seg aprox) ---
+1. Propósito Didáctico: Dimensión Biológica
+2. Título en Pantalla (64 pt): Dimensión biológica
+3. Subtítulo en Pantalla (36 pt): El cuerpo físico y los cambios puberales
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Clean anatomical growth chart showing developmental milestones of puberty, height markers, and secondary sexual characteristics. High clarity, medical illustration style. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa médica: Eje de maduración corporal, estirón y caracteres sexuales secundarios
+6. Notas al Orador (Locución Google Vids): "Comprende nuestro cuerpo material, la maduración celular y los cambios puberales que transforman nuestra estatura, voz y fisonomía."
+
+--- DIAPOSITIVA 3: Dimensión Afectiva (9 seg aprox) ---
+1. Propósito Didáctico: Dimensión Afectiva
+2. Título en Pantalla (64 pt): Dimensión afectiva
+3. Subtítulo en Pantalla (36 pt): Emociones, cariño y autoestima
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up of adolescents sharing a sincere laugh, icons of heart and brain softly illuminated. Warm morning light, emotional connection. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Iconografía emocional: Vínculos de apego, empatía y autoimagen positiva
+6. Notas al Orador (Locución Google Vids): "Reúne nuestros sentimientos, la autoestima personal, el cariño y la capacidad de establecer lazos de ternura y confianza profunda con otros."
+
+--- DIAPOSITIVA 4: Dimensión Social (10 seg aprox) ---
+1. Propósito Didáctico: Dimensión Social
+2. Título en Pantalla (64 pt): Dimensión social
+3. Subtítulo en Pantalla (36 pt): Familia, amistades y cultura
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Diverse group of young students collaborating in a bright park, talking respectfully with families and friends. Crisp clean composition. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Red de interacción: Individuo en el centro rodeado por familia, escuela y comunidad
+6. Notas al Orador (Locución Google Vids): "Se manifiesta en cómo convivimos día a día, compartiendo experiencias con la familia, participando en el colegio y dialogando con nuestro grupo de amigos."
+
+--- DIAPOSITIVA 5: Dimensión Ética (9 seg aprox) ---
+1. Propósito Didáctico: Dimensión Ética
+2. Título en Pantalla (64 pt): Dimensión ética
+3. Subtítulo en Pantalla (36 pt): Valores, consentimiento y dignidad
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Balance scale emblem with glowing symbols of respect, personal limits, consent, and mutual dignity. Clear negative space. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Símbolos normativos: Escudo de límites personales y balanza de respeto mutuo
+6. Notas al Orador (Locución Google Vids): "Guía nuestras decisiones morales a través del respeto incondicional a la dignidad humana, la valoración de límites personales y el consentimiento mutuo."
+
+--- DIAPOSITIVA 6: Interrelación de Dimensiones (9 seg aprox) ---
+1. Propósito Didáctico: Interrelación de Dimensiones
+2. Título en Pantalla (64 pt): Un sistema inseparable
+3. Subtítulo en Pantalla (36 pt): Cuatro dimensiones que dialogan a la vez
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The four dimensions connecting dynamically with glowing energetic nodes around a human silhouette. High visual impact, harmony. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama dinámico de 4 cuadrantes con flechas de retroalimentación recíproca
+6. Notas al Orador (Locución Google Vids): "Ninguna dimensión funciona aislada de las demás. Lo que experimenta nuestro cuerpo repercute en nuestras emociones y moldea nuestras relaciones comunitarias."
+
+--- DIAPOSITIVA 7: Pregunta Detonante (9 seg aprox) ---
+1. Propósito Didáctico: Pregunta Detonante
+2. Título en Pantalla (64 pt): El desafío científico
+3. Subtítulo en Pantalla (36 pt): ¿Cómo actúan las 4 dimensiones juntas?
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Both explorers smiling, ready to investigate everyday cases with their science notebooks open. StudioSimple badge. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta detonante: ¿Cómo influyen los 4 aspectos en una decisión cotidiana real?
+6. Notas al Orador (Locución Google Vids): "Ahora surge la gran pregunta: cuando enfrentamos un cambio en nuestra adolescencia, ¿cómo interactúan estas cuatro dimensiones al mismo tiempo?"
+
+================================================================================
+MODULO 2: PROMPT VIDEO EXPLICATIVO CONCEPTUAL (PASO 4 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Modelo Integral de la Sexualidad Humana
+• Idea Clave: "La sexualidad humana es integral: une nuestro cuerpo biológico, nuestras emociones, nuestra convivencia social y nuestros valores éticos."
+• DILE ANTES DEL VIDEO: "Ahora formalizaremos la idea central que debes recordar para siempre sobre la sexualidad en Ciencias Naturales."
+• INSTRUCCION: "Revisemos la explicación formal y la idea clave."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Objetivo de la Lección (11 seg aprox) ---
+1. Propósito Didáctico: Objetivo de la Lección
+2. Título en Pantalla (64 pt): Objetivo de la lección
+3. Subtítulo en Pantalla (36 pt): Explicar las 4 dimensiones de la sexualidad humana
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The boy and girl standing before a clear 4-quadrant lightboard: 'Biológica', 'Afectiva', 'Social' y 'Ética'. Clean modern typography. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 01 · Modelo Integral de la Sexualidad Humana
+6. Notas al Orador (Locución Google Vids): "El objetivo de hoy es aprender a reconocer y explicar que la sexualidad humana está conformada por cuatro dimensiones inseparables: biológica, afectiva, social y ética."
+
+--- DIAPOSITIVA 2: Análisis Biológico (12 seg aprox) ---
+1. Propósito Didáctico: Análisis Biológico
+2. Título en Pantalla (64 pt): Eje Biológico: La Pubertad
+3. Subtítulo en Pantalla (36 pt): Maduración fisiológica y sistema endocrino
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl pointing at growth metrics, voice change diagrams, and cellular maturation charts. Clear clinical clarity. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama fisiológico: Glándula hipófisis -> Hormonas gonadales -> Caracteres secundarios
+6. Notas al Orador (Locución Google Vids): "En la pubertad, el sistema endocrino libera señales químicas que inician el estirón puberal, el desarrollo reproductivo y cambios visibles en la piel, masa muscular y voz."
+
+--- DIAPOSITIVA 3: Análisis Afectivo (12 seg aprox) ---
+1. Propósito Didáctico: Análisis Afectivo
+2. Título en Pantalla (64 pt): Eje Afectivo: Las Emociones
+3. Subtítulo en Pantalla (36 pt): Autoestima y gestión de los afectos
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy reflecting on emotional self-worth and family bonds with gentle warm ambient lighting. Negative space on left. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo de autovaloración: Identidad personal, autoaceptación y expresión sana de sentimientos
+6. Notas al Orador (Locución Google Vids): "El eje afectivo orienta cómo nos sentimos con nosotros mismos. Una autoestima sólida permite valorar el propio cuerpo y comunicar afectos de manera asertiva y respetuosa."
+
+--- DIAPOSITIVA 4: Análisis Social (11 seg aprox) ---
+1. Propósito Didáctico: Análisis Social
+2. Título en Pantalla (64 pt): Eje Social: La Convivencia
+3. Subtítulo en Pantalla (36 pt): Pertenencia, roles y vida en sociedad
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Young adolescents participating in school and family dialogues, showing open active listening. Soft depth of field. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Matriz sociocultural: Normas de convivencia escolar, dinámicas familiares y equidad
+6. Notas al Orador (Locución Google Vids): "En el entorno social aprendemos pautas culturales y construimos amistades. La dimensión social nos invita a convivir en igualdad de derechos sin discriminación ni estereotipos."
+
+--- DIAPOSITIVA 5: Análisis Ético (13 seg aprox) ---
+1. Propósito Didáctico: Análisis Ético
+2. Título en Pantalla (64 pt): Eje Ético: El Consentimiento
+3. Subtítulo en Pantalla (36 pt): Dignidad humana y límites inviolables
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Two hands shaking with dignity and mutual respect. Icon of personal boundaries and safety shield in glowing cyan. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa ética: Principio de consentimiento explícito y respeto a la privacidad del prójimo
+6. Notas al Orador (Locución Google Vids): "El eje ético establece que el cuerpo de cada individuo es inviolable. Toda relación humana sana se funda en la dignidad, la honestidad y el consentimiento libre y mutuo."
+
+--- DIAPOSITIVA 6: Casos Concretos (14 seg aprox) ---
+1. Propósito Didáctico: Casos Concretos
+2. Título en Pantalla (64 pt): Integración de los 4 ejes
+3. Subtítulo en Pantalla (36 pt): Análisis de una situación real cotidiana
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Dynamic circular flowchart showing the feedback between body changes, emotions, social interactions, and moral values. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Tabla de desglose de caso: Situación descrita -> Identificación de aportes de cada cuadrante
+6. Notas al Orador (Locución Google Vids): "Ante un dilema real, como la presión del grupo de amigos, la ética marca los límites, la emoción entrega empatía, la razón social evalúa el entorno y la biología experimenta la alerta."
+
+--- DIAPOSITIVA 7: Síntesis y Regla de Oro (11 seg aprox) ---
+1. Propósito Didáctico: Síntesis y Regla de Oro
+2. Título en Pantalla (64 pt): Regla de Oro de la sexualidad
+3. Subtítulo en Pantalla (36 pt): Biológica + Afectiva + Social + Ética = Salud Integral
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside a prominent balance diagram with all four dimensions working in dynamic equilibrium. Clean lines. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Infografía de síntesis: Las 4 dimensiones convergen en el bienestar integral de la persona
+6. Notas al Orador (Locución Google Vids): "Recuerda la regla de oro: la sexualidad es integral. ¡Ahora demostraremos lo aprendido aplicando este modelo en las situaciones prácticas de la plataforma interactiva!"
+
+================================================================================
+MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
+================================================================================
+
+[PREPARACION DEL ADULTO / MENTOR]
+• Objetivo del Adulto: Guiar al estudiante a comprender que la sexualidad humana es una vivencia integral que comprende cuatro dimensiones inseparables: biológica, afectiva, social y ética, superando la visión reducida a lo estrictamente reproductivo.
+• Ruta de Hoy: Reconocer e interrelacionar las dimensiones biológica, afectiva, social y ética en la vida cotidiana
+• Recordatorios Pedagogicos del Mentor:
+  1. Sigue el orden indicado.
+  2. Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.
+  3. No leas los recuadros SOLO PARA TI ni AYUDA DE LECTURA.
+  4. Haz cada pregunta y espera la respuesta antes de seleccionar una opción.
+  5. Considera correcta una respuesta si expresa la idea matemática, aunque use palabras distintas.
+  6. Si el estudiante necesita apoyo, usa únicamente la ayuda que aparecerá.
+  7. Si propone otra explicación o no está de acuerdo, escúchalo completo y valora su razonamiento antes de guiarlo.
+• Clima Emocional y Acogida: "Aborda la pubertad y la sexualidad con serenidad, apertura y confianza. Es una etapa natural del desarrollo y el diálogo cercano refuerza su seguridad personal."
+
+--------------------------------------------------------------------------------
+[PASO 1: INICIO (4 SUB-ETAPAS CANONICAS)]
+--------------------------------------------------------------------------------
+Sub-etapa 1: Nuestra Ruta de la Asignatura
+• DILE AL ESTUDIANTE (Apertura de la ruta): "Hoy comenzaremos la clase 1 de Ciencias Naturales: "Las 4 Dimensiones de la Sexualidad Humana"."
+• 4 Bloques Tematicos de la Asignatura:
+  Bloque 01: Ciencias Naturales (Las 4 Dimensiones de la Sexualidad Humana)
+  Bloque 02: Exploración (Gancho y Recorrido Guiado)
+  Bloque 03: Práctica (Aplicación en situaciones reales)
+  Bloque 04: Evaluación (Miniquiz formativo y síntesis)
+
+Sub-etapa 2: La Clase de Hoy
+• DILE AL ESTUDIANTE (Foco didactico): "Reconocer e interrelacionar las dimensiones biológica, afectiva, social y ética en la vida cotidiana"
+• 3 Tarjetas de Foco de la Pantalla del Estudiante:
+  Tarjeta 1: Exploración inicial -> Las 4 Dimensiones de la Sexualidad Humana
+  Tarjeta 2: Idea clave -> La sexualidad humana es integral: une nuestro cuerpo biológi
+  Tarjeta 3: Práctica y aplicación -> Resolución guiada paso a paso
+
+Sub-etapa 3: Situacion Inicial de Exploracion (Detonante)
+• DILE AL ESTUDIANTE (Situacion detonante): "Hoy en Ciencias Naturales investigamos la sexualidad humana como una dimensión integral de la persona. En pantalla puedes ver el modelo de 4 dimensiones. Observa la primera dimensión destacada: la Dimensión Biológica. ¿Qué cambios físicos concretos ocurren en el cuerpo humano durante la pubertad?"
+• RESPUESTA ESPERADA: Mencionar cambios corporales concretos como aumento de estatura, cambio de voz, vello corporal o desarrollo de caracteres sexuales.
+• PISTA SOCRATICA (SOLO PARA TI): "Piensa en las transformaciones corporales que ocurren al pasar de la niñez a la adolescencia."
+• CLIMA EMOCIONAL: "Aborda la pubertad y la sexualidad con serenidad, apertura y confianza. Es una etapa natural del desarrollo y el diálogo cercano refuerza su seguridad personal."
+• Pautas de Evaluacion Formativa del Mentor:
+  - [Acierto] Respondió correctamente: Mencionar cambios corporales concretos como aumento de estatura, cambio de vo... -> Feedback: "¡Exacto! Comprendió la idea central esperada."
+  - [Requiere Apoyo] Necesita apoyo o dio otra respuesta -> Feedback: "Piensa en las transformaciones corporales que ocurren al pasar de la niñez a la adolescencia."
+
+Sub-etapa 4: Comprendamos la Respuesta (Punto de Referencia)
+• DILE AL ESTUDIANTE (Formalizacion de referencia): "¿Qué cambios físicos concretos caracterizan la pubertad en la dimensión biológica?"
+• PREGUNTALE AL ESTUDIANTE: "¿Qué cambios físicos concretos caracterizan la pubertad en la dimensión biológica?"
+• RESPUESTA ESPERADA: Mencionar cambios corporales concretos como aumento de estatura, cambio de voz, vello corporal o desarrollo de caracteres sexuales.
+• PISTA SOCRATICA: "Piensa en las transformaciones corporales que ocurren al pasar de la niñez a la adolescencia."
+• FEEDBACK SI ACIERTA: "Muy bien. Observaste el detalle central con precisión."
+• FEEDBACK SI NECESITA APOYO: "Piensa en las transformaciones corporales que ocurren al pasar de la niñez a la adolescencia."
+
+--------------------------------------------------------------------------------
+[PASO 3: RECORRIDO - CONVERSACION GUIADA Y PREGUNTAS SOCRATICAS]
+--------------------------------------------------------------------------------
+Item 1 (Dimensión Afectiva y Vínculos):
+• Pregunta Socratica: "En la segunda dimensión, ¿qué elementos componen la dimensión afectiva de la sexualidad humana?"
+• Respuesta Esperada: Las emociones, los sentimientos, el cariño, la autoestima y la capacidad de amar y establecer vínculos afectivos.
+• Feedback de Exito: "¡Muy bien! La dimensión afectiva reúne cómo sentimos, cómo expresamos cariño y cómo cuidamos nuestra autoestima."
+• Pista de Apoyo Socratica: "Piensa en lo que pasa en nuestro corazón y mente: cuando sentimos alegría por un amigo, afecto por la familia o aprendemos a querernos a nosotros mismos."
+• Revelacion: "La dimensión afectiva integra las emociones, los sentimientos, el cariño y la capacidad de formar lazos profundos con los demás."
+
+Item 2 (Dimensiones Social y Ética):
+• Pregunta Socratica: "¿Por qué decimos que la sexualidad humana también tiene una dimensión social y una dimensión ética?"
+• Respuesta Esperada: Porque nos relacionamos con la familia y la sociedad (social), y debemos actuar con valores, respeto mutuo, responsabilidad y consentimiento (ética).
+• Feedback de Exito: "¡Exacto! Somos seres sociales que convivimos con otros, y la ética nos enseña a respetar la dignidad y los límites de cada persona."
+• Pista de Apoyo Socratica: "Separa las dos palabras: 'social' tiene que ver con vivir en sociedad y convivir; 'ética' tiene que ver con valores, normas y tomar decisiones correctas."
+• Revelacion: "La dimensión social abarca cómo convivimos en sociedad y familia, mientras que la ética guía nuestras decisiones con valores de respeto y cuidado."
+
+--------------------------------------------------------------------------------
+[PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
+--------------------------------------------------------------------------------
+• Cierre y Sintesis del Video Explicativo: "Todas las dimensiones interactúan permanentemente: lo que sentimos se refleja en nuestro cuerpo y en cómo convivimos en sociedad bajo principios éticos."
+
+Comprobacion 1 (Dimensión Afectiva y Vínculos):
+• Pregunta: "En la segunda dimensión, ¿qué elementos componen la dimensión afectiva de la sexualidad humana?"
+• Respuesta Esperada: Las emociones, los sentimientos, el cariño, la autoestima y la capacidad de amar y establecer vínculos afectivos.
+• Pista de Apoyo: "Piensa en lo que pasa en nuestro corazón y mente: cuando sentimos alegría por un amigo, afecto por la familia o aprendemos a querernos a nosotros mismos."
+• Revelacion: "Las emociones, sentimientos, el amor, el cariño y los vínculos afectivos."
+
+Comprobacion 2 (Dimensiones Social y Ética):
+• Pregunta: "¿Por qué decimos que la sexualidad humana también tiene una dimensión social y una dimensión ética?"
+• Respuesta Esperada: Porque nos relacionamos con la familia y la sociedad (social), y debemos actuar con valores, respeto mutuo, responsabilidad y consentimiento (ética).
+• Pista de Apoyo: "Separa las dos palabras: 'social' tiene que ver con vivir en sociedad y convivir; 'ética' tiene que ver con valores, normas y tomar decisiones correctas."
+• Revelacion: "Porque convivimos en sociedad (social) y debemos tratarnos con respeto, valores y responsabilidad (ética)."
+
+--------------------------------------------------------------------------------
+[PASO 5: PRACTICA EN EL CUADERNO FISICO]
+--------------------------------------------------------------------------------
+Ejercicio 1 (Caso 1: Cuidado de la higiene y descanso):
+• Enunciado de Aplicacion: "El hábito de bañarse diariamente, usar ropa limpia y dormir ocho horas para cuidar el cuerpo durante el crecimiento, ¿a qué dimensión corresponde?"
+• Respuesta Esperada: Corresponde a la dimensión biológica, ya que se relaciona con el cuidado y funcionamiento saludable del organismo.
+• Feedback de Exito: "¡Muy bien! Cuidar el cuerpo físico con higiene y descanso es parte de la dimensión biológica."
+• Pista de Apoyo Socratica: "Piensa a qué parte de la persona beneficia directamente el descanso y la limpieza: ¿al cuerpo físico, a las leyes o a la economía?"
+
+Ejercicio 2 (Caso 2: Expresión de afecto en la familia):
+• Enunciado de Aplicacion: "Conversar con honestidad con los padres sobre los temores o dudas que surgen en la adolescencia, ¿qué dimensiones involucra?"
+• Respuesta Esperada: Involucra la dimensión afectiva (expresar emociones y confianza) y la dimensión social (el vínculo familiar).
+• Feedback de Exito: "¡Exacto! El diálogo familiar combina el cariño sincero (afectivo) con la convivencia dentro del hogar (social)."
+• Pista de Apoyo Socratica: "Piensa en las emociones compartidas (afecto) y en las personas con las que vives y convives (familia/social)."
+
+Ejercicio 3 (Caso 3: Trabajo en el Cuaderno de Ciencias):
+• Enunciado de Aplicacion: "Abre tu cuaderno de Ciencias Naturales. Dibuja un cuadro con cuatro columnas tituladas: Biológica, Afectiva, Social y Ética. Anota en la columna 'Ética' una acción que demuestre respeto hacia tus compañeros."
+• Respuesta Esperada: Registrar una acción ética concreta (por ejemplo: no burlarse de los cambios de otros, pedir permiso antes de tocar pertenencias ajenas o respetar la privacidad).
+• Feedback de Exito: "¡Excelente registro en tu cuaderno! Anotaste una acción clara de respeto y valor ético."
+• Pista de Apoyo Socratica: "Escribe una acción cotidiana donde se note el respeto hacia los demás: por ejemplo, no difundir secretos o no burlarse del cuerpo de otra persona."
+
+Modulo: Comparemos dos situaciones (Comparemos dos situaciones)
+• DILE: "Antes de resumir, comparemos dos situaciones. No necesitas repetir una frase exacta: lo importante es que expliques la idea con tus propias palabras."
+• Pregunta: "Al comparar dos situaciones de Las 4 Dimensiones de la Sexualidad Humana, ¿cómo influye el contexto en la interpretación de los datos?"
+• Respuesta Esperada: El significado o resultado depende de las condiciones del contexto y del propósito de la situación.
+• Feedback si acierta: "¡Excelente razonamiento! Reconociste que el contexto orienta la interpretación de los datos."
+• Feedback si necesita apoyo: "Observa cada situación por separado y explica qué elementos las distinguen."
+
+Modulo: Desafio Breve (Desafío breve: Las 4 Dimensiones de la Sexualidad Humana)
+• Pregunta: "En Ciencias Naturales, ¿qué diferencia observas entre identificar los datos y aplicar el procedimiento? Explica tu razonamiento."
+• Respuesta Esperada: Identificar los datos determina el punto de partida; aplicar el procedimiento permite construir la respuesta.
+
+--------------------------------------------------------------------------------
+[PASO 6: RESUMEN Y ESTRATEGIA DE PENSAMIENTO]
+--------------------------------------------------------------------------------
+• Idea Clave: "La sexualidad humana es integral: une nuestro cuerpo biológico, nuestras emociones, nuestra convivencia social y nuestros valores éticos."
+• DILE AL ESTUDIANTE: "Cuando enfrentes un problema en Ciencias Naturales, puedes seguir estos tres pasos clave:"
+• Pasos de la Estrategia:
+  Paso 1: Identifica -> ¿Cuáles son los datos clave y cuál es la pregunta central?
+  Paso 2: Aplica -> ¿Qué regla o método disciplinar corresponde utilizar?
+  Paso 3: Comprueba -> ¿La conclusión o resultado responde con coherencia al problema?
+• 3 Ideas Clave Estructuradas de Sintesis:
+  - 1 · Concepto central: Identificamos los elementos y el punto de partida del análisis.
+  - 2 · Interpretación del contexto: Reconocer e interrelacionar las dimensiones biológica, afectiva, social y ética en la vida cotidiana
+  - 3 · Síntesis formal: La sexualidad humana es integral: une nuestro cuerpo biológico, nuestras emociones, nuestra convivencia social y nuestros valores éticos.
+
+--------------------------------------------------------------------------------
+[PASO 7: MINIQUIZ FORMATIVO Y FASE REVISAR]
+--------------------------------------------------------------------------------
+Pregunta 1: ¿Cuál de las siguientes afirmaciones define correctamente la sexualidad humana según la ciencia?
+  A) Es una dimensión integral presente a lo largo de toda la vida que une lo biológico, afectivo, social y ético. [CORRECTA]
+  B) Se reduce exclusivamente a la reproducción biológica y a los órganos del cuerpo humano. 
+  C) Es un tema que únicamente involucra a los adultos y no tiene relación con las emociones ni los valores. 
+• Explicacion Formativa del Error: "La sexualidad humana es integral: comprende el cuerpo biológico, los afectos, la convivencia social y los valores éticos durante toda la vida."
+
+Pregunta 2: El cambio en el tono de la voz y el crecimiento acelerado de estatura durante la pubertad corresponden a la dimensión:
+  A) Biológica [CORRECTA]
+  B) Social 
+  C) Ética 
+• Explicacion Formativa del Error: "Los cambios corporales, hormonales y anatómicos forman parte de la dimensión biológica del ser humano."
+
+Pregunta 3: Aprender a decir 'no' con seguridad y respetar los límites y decisiones de los demás corresponde a la dimensión:
+  A) Ética y moral [CORRECTA]
+  B) Exclusivamente biológica 
+  C) Únicamente climática 
+• Explicacion Formativa del Error: "Establecer límites personales, cuidar el consentimiento y valorar la dignidad propia y ajena son fundamentos de la dimensión ética."
+
+--------------------------------------------------------------------------------
+[PASO 7B: MODULO DE RECUPERACION FORMATIVA]
+--------------------------------------------------------------------------------
+Refuerzo 1 (Recuperación: Las 4 Dimensiones de la Sexualidad):
+• Explicacion Previa: "Recuerda que la sexualidad humana se compone de 4 dimensiones esenciales: 1) Biológica (el cuerpo), 2) Afectiva (las emociones), 3) Social (la relación con otros) y 4) Ética (los valores y el respeto)."
+• Pregunta: "Si una persona siente cariño por sus amigos y comparte momentos felices con ellos, ¿qué dos dimensiones se manifiestan?"
+• Opciones: Las dimensiones afectiva (cariño) y social (amistades). | Únicamente la dimensión biológica anatómica.
+• Respuesta Correcta: Las dimensiones afectiva (cariño) y social (amistades).
+• Refuerzo si falla: "Recuerda que el cariño corresponde a la dimensión afectiva y la convivencia con amigos corresponde a la dimensión social."
+
+--------------------------------------------------------------------------------
+[PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
+--------------------------------------------------------------------------------
+• Felicitacion Final: "¡Felicitaciones! Hoy completaste con éxito la clase "Las 4 Dimensiones de la Sexualidad Humana". Has demostrado constancia y rigor en tu aprendizaje."
+• Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Ciencias Naturales."
+
+
+
+################################################################################
+### CLASE 2 DE 6: TRANSFORMACIONES FÍSICAS Y EMOCIONALES EN LA PUBERTAD
+################################################################################
+
+================================================================================
+STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+================================================================================
+
+FICHA CURRICULAR:
+• Asignatura: Ciencias Naturales
+• Nivel / Curso: 7° Básico
+• Objetivo de Aprendizaje: OA 1 - Biología
+• Clase: 2 de 6 ("Transformaciones físicas y emocionales en la pubertad")
+• Duracion Estimada: 30 Minutos
+
+DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
+1. Proporcion Widescreen 16:9 estricto (1920x1080).
+2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
+3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
+4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
+5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
+   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
+   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
+7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
+8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
+
+================================================================================
+MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Video Motivacional: El Desafío de Transformaciones físicas y emocionales en la pubertad
+• DILE ANTES DEL VIDEO: "Antes de ver el video, observa con atención lo que descubren los dos exploradores y qué pregunta queda planteada."
+• INSTRUCCION AL ESTUDIANTE: "Observa y reflexiona con las escenas del desafío visual."
+• DILE DESPUES DEL VIDEO: "Muy buena observación. Ahora conversaremos sobre lo que descubrieron en la expedición."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Apertura y Contexto (9 seg aprox) ---
+1. Propósito Didáctico: Apertura y Contexto
+2. Título en Pantalla (64 pt): Misión 2: Transformaciones físicas y emocionales en la pubertad
+3. Subtítulo en Pantalla (36 pt): Exploración inicial en Ciencias Naturales
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Transformaciones físicas y emocionales en la pubertad (Ciencias Naturales). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama integrador: Fenomeno observable de Transformaciones físicas y emocionales en la pubertad
+6. Notas al Orador (Locución Google Vids): "Comienza una nueva expedición de aprendizaje en Ciencias Naturales. Nuestros dos exploradores analizan el desafío de Transformaciones físicas y emocionales en la pubertad para descubrir sus secretos."
+
+--- DIAPOSITIVA 2: Presentación del Escenario (9 seg aprox) ---
+1. Propósito Didáctico: Presentación del Escenario
+2. Título en Pantalla (64 pt): Punto de partida
+3. Subtítulo en Pantalla (36 pt): Caracteres sexuales secundarios, cambios corporales y desarrollo
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Caracteres sexuales secundarios, cambios corporales y desarrollo. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo de indagacion: Caracteres sexuales secundarios, cambios corporales y desarrollo con flechas de proceso
+6. Notas al Orador (Locución Google Vids): "Al observar los datos sobre Caracteres sexuales secundarios, cambios corporales y desarrollo, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor."
+
+--- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 seg aprox) ---
+1. Propósito Didáctico: Aparición del Conflicto / Misterio
+2. Título en Pantalla (64 pt): El enigma disciplinar
+3. Subtítulo en Pantalla (36 pt): Desafío en Transformaciones físicas y emocionales en la pubertad
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo de indagacion: Caracteres sexuales secundarios, cambios corporales y desarrollo con flechas de proceso
+6. Notas al Orador (Locución Google Vids): "Surge un reto concreto sobre Transformaciones físicas y emocionales en la pubertad: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso."
+
+--- DIAPOSITIVA 4: Exploración de Pistas (9 seg aprox) ---
+1. Propósito Didáctico: Exploración de Pistas
+2. Título en Pantalla (64 pt): Análisis de evidencias
+3. Subtítulo en Pantalla (36 pt): Caracteres sexuales secundarios, cambios corporales y desarrollo
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo de indagacion: Caracteres sexuales secundarios, cambios corporales y desarrollo con flechas de proceso
+6. Notas al Orador (Locución Google Vids): "Ambos comparan las pistas disponibles sobre Caracteres sexuales secundarios, cambios corporales y desarrollo. Cada dato confirma cómo interactúan los elementos clave de la situación."
+
+--- DIAPOSITIVA 5: El Momento Crítico (9 seg aprox) ---
+1. Propósito Didáctico: El Momento Crítico
+2. Título en Pantalla (64 pt): Criterio de decisión
+3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo de indagacion: Caracteres sexuales secundarios, cambios corporales y desarrollo con flechas de proceso
+6. Notas al Orador (Locución Google Vids): "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Transformaciones físicas y emocionales en la pubertad con total precisión metodológica."
+
+--- DIAPOSITIVA 6: La Antesala de la Pregunta (9 seg aprox) ---
+1. Propósito Didáctico: La Antesala de la Pregunta
+2. Título en Pantalla (64 pt): El dilema central
+3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Transformaciones físicas y emocionales en la pubertad?
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de variables: Interaccion de factores en observacion
+6. Notas al Orador (Locución Google Vids): "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje."
+
+--- DIAPOSITIVA 7: La Pregunta Detonante (9 seg aprox) ---
+1. Propósito Didáctico: La Pregunta Detonante
+2. Título en Pantalla (64 pt): Pregunta detonante
+3. Subtítulo en Pantalla (36 pt): Regla y método de Transformaciones físicas y emocionales en la pubertad
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta detonante: ¿Como interactuan los factores en Transformaciones físicas y emocionales en la pubertad?
+6. Notas al Orador (Locución Google Vids): "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!"
+
+================================================================================
+MODULO 2: PROMPT VIDEO EXPLICATIVO CONCEPTUAL (PASO 4 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Video Explicativo: Formalización de Transformaciones físicas y emocionales en la pubertad
+• Idea Clave: "Los sistemas naturales funcionan mediante interacciones precisas entre sus componentes, donde 'Pubertad' cumple un rol fundamental respaldado por evidencia observable."
+• DILE ANTES DEL VIDEO: "Ahora veremos el video explicativo de Transformaciones físicas y emocionales en la pubertad. Presta atención al diagrama y a cómo se demuestra la función de Pubertad."
+• INSTRUCCION: "Revisemos la explicación formal y la idea clave."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
+1. Propósito Didáctico: Objetivo de la Lección
+2. Título en Pantalla (64 pt): Objetivo de la lección
+3. Subtítulo en Pantalla (36 pt): Dominar Transformaciones físicas y emocionales en la pubertad: Caracteres sexuales secundarios, cambios corporales y desarrollo
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Caracteres sexuales secundarios, cambios corporales y desarrollo. High clarity, negative space for text. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 1 · Transformaciones físicas y emocionales en la pubertad
+6. Notas al Orador (Locución Google Vids): "El objetivo de hoy es aprender a caracteres sexuales secundarios, cambios corporales y desarrollo, aplicando el método disciplinar paso a paso con total rigor y claridad."
+
+--- DIAPOSITIVA 2: Definición del Concepto Central (12 seg aprox) ---
+1. Propósito Didáctico: Definición del Concepto Central
+2. Título en Pantalla (64 pt): Concepto fundamental
+3. Subtítulo en Pantalla (36 pt): Caracteres sexuales secundarios, cambios corporales y desarrollo
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo cientifico y variables causales de Caracteres sexuales secundarios, cambios corporales y desarrollo
+6. Notas al Orador (Locución Google Vids): "Para comprender Transformaciones físicas y emocionales en la pubertad, establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación."
+
+--- DIAPOSITIVA 3: Demostración Modelada (12 seg aprox) ---
+1. Propósito Didáctico: Demostración Modelada
+2. Título en Pantalla (64 pt): Modelamiento paso a paso
+3. Subtítulo en Pantalla (36 pt): Procedimiento de Transformaciones físicas y emocionales en la pubertad
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama de proceso paso a paso con flechas de causalidad
+6. Notas al Orador (Locución Google Vids): "Observa cómo se aplica el procedimiento en este caso guiado: cada transformación responde a una justificación disciplinar explícita y visible."
+
+--- DIAPOSITIVA 4: Prevención del Error Frecuente (13 seg aprox) ---
+1. Propósito Didáctico: Prevención del Error Frecuente
+2. Título en Pantalla (64 pt): Atención: Error habitual
+3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Contraste experimental: error de interpretacion comun
+6. Notas al Orador (Locución Google Vids): "Un error frecuente ocurre al descuidar el orden o saltarse un paso de la convención establecida. Siempre comprobamos cada dato antes de continuar."
+
+--- DIAPOSITIVA 5: Comprobación del Resultado (12 seg aprox) ---
+1. Propósito Didáctico: Comprobación del Resultado
+2. Título en Pantalla (64 pt): Validación del resultado
+3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Validacion de la evidencia cientifica y coherencia del modelo
+6. Notas al Orador (Locución Google Vids): "Al contrastar el resultado con la situación inicial, confirmamos que la solución es consistente, rigurosa y responde plenamente a la pregunta."
+
+--- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 seg aprox) ---
+1. Propósito Didáctico: Estrategia Mnemotécnica
+2. Título en Pantalla (64 pt): Estrategia de pensamiento
+3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Estrategia de pensamiento cientifico: Observar, modelar y contrastar
+6. Notas al Orador (Locución Google Vids): "Recuerda siempre la estrategia en tres pasos: identificar la información clave, aplicar la regla en orden y comprobar el resultado final."
+
+--- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 seg aprox) ---
+1. Propósito Didáctico: Síntesis y Regla de Oro
+2. Título en Pantalla (64 pt): Regla de Oro: Transformaciones físicas y emocionales en la pubertad
+3. Subtítulo en Pantalla (36 pt): Método disciplinar validado
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Infografía de síntesis: Principio cientifico de Transformaciones físicas y emocionales en la pubertad
+6. Notas al Orador (Locución Google Vids): "Ahora que dominas la regla fundamental y el procedimiento de Transformaciones físicas y emocionales en la pubertad, ¡vamos a demostrarlo en las actividades interactivas de la plataforma!"
+
+================================================================================
+MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
+================================================================================
+
+[PREPARACION DEL ADULTO / MENTOR]
+• Objetivo del Adulto: Guiar la observación y el análisis científico en torno a: Transformaciones físicas y emocionales en la pubertad, facilitando la comprensión de Pubertad mediante evidencias empíricas.
+• Ruta de Hoy: 1. Inicio y activación · 2. Video de exploración · 3. Recorrido guiado · 4. Formalización y práctica en cuaderno · 5. Miniquiz y REVISAR · 6. Cierre metacognitivo
+• Recordatorios Pedagogicos del Mentor:
+  1. Sigue el orden indicado.
+  2. Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.
+  3. No leas los recuadros SOLO PARA TI ni AYUDA DE LECTURA.
+  4. Haz cada pregunta y espera la respuesta antes de seleccionar una opción.
+  5. Considera correcta una respuesta si expresa la idea matemática, aunque use palabras distintas.
+  6. Si el estudiante necesita apoyo, usa únicamente la ayuda que aparecerá.
+  7. Si propone otra explicación o no está de acuerdo, escúchalo completo y valora su razonamiento antes de guiarlo.
+• Clima Emocional y Acogida: "Estimula el rigor observacional: 'Un buen científico contrasta sus ideas con lo que los datos demuestran'."
+
+--------------------------------------------------------------------------------
+[PASO 1: INICIO (4 SUB-ETAPAS CANONICAS)]
+--------------------------------------------------------------------------------
+Sub-etapa 1: Nuestra Ruta de la Asignatura
+• DILE AL ESTUDIANTE (Apertura de la ruta): "Hoy comenzaremos la clase 2 de Ciencias Naturales: "Transformaciones físicas y emocionales en la pubertad"."
+• 4 Bloques Tematicos de la Asignatura:
+  Bloque 01: Ciencias Naturales (Transformaciones físicas y emocionales en la pubertad)
+  Bloque 02: Exploración (Gancho y Recorrido Guiado)
+  Bloque 03: Práctica (Aplicación en situaciones reales)
+  Bloque 04: Evaluación (Miniquiz formativo y síntesis)
+
+Sub-etapa 2: La Clase de Hoy
+• DILE AL ESTUDIANTE (Foco didactico): "Caracteres sexuales secundarios, cambios corporales y desarrollo"
+• 3 Tarjetas de Foco de la Pantalla del Estudiante:
+  Tarjeta 1: Exploración inicial -> Transformaciones físicas y emocionales en la pubertad
+  Tarjeta 2: Idea clave -> Los sistemas naturales funcionan mediante interacciones prec
+  Tarjeta 3: Práctica y aplicación -> Resolución guiada paso a paso
+
+Sub-etapa 3: Situacion Inicial de Exploracion (Detonante)
+• DILE AL ESTUDIANTE (Situacion detonante): "Hoy en Ciencias Naturales investigamos 'Transformaciones físicas y emocionales en la pubertad'. El fenómeno central del currículum se basa en 'Pubertad'. Observa la evidencia o experimento inicial en la pantalla:"
+• RESPUESTA ESPERADA: Describir las estructuras, componentes o variables involucradas en el fenómeno de Transformaciones físicas y emocionales en la pubertad y vincularlas con Pubertad.
+• PISTA SOCRATICA (SOLO PARA TI): "Pídele que señale qué elementos o condiciones cambian y qué permanece constante."
+• CLIMA EMOCIONAL: "Estimula el rigor observacional: 'Un buen científico contrasta sus ideas con lo que los datos demuestran'."
+• Pautas de Evaluacion Formativa del Mentor:
+  - [Acierto] Identificó las estructuras y explicó la relación con Pubertad -> Feedback: "¡Excelente observación! Reconoció las variables y componentes centrales del fenómeno."
+  - [Requiere Apoyo] Describió solo un detalle superficial sin relacionar las causas con los efectos -> Feedback: "Observa qué causa produce el cambio: ¿qué estructura o fuerza está actuando?"
+
+Sub-etapa 4: Comprendamos la Respuesta (Punto de Referencia)
+• DILE AL ESTUDIANTE (Formalizacion de referencia): "¿Qué fenómeno observable ocurre en este escenario de Caracteres sexuales secundarios, cambios corporales y desarrollo y cómo se relaciona con 'Pubertad'?"
+• PREGUNTALE AL ESTUDIANTE: "¿Qué fenómeno observable ocurre en este escenario de Caracteres sexuales secundarios, cambios corporales y desarrollo y cómo se relaciona con 'Pubertad'?"
+• RESPUESTA ESPERADA: Describir las estructuras, componentes o variables involucradas en el fenómeno de Transformaciones físicas y emocionales en la pubertad y vincularlas con Pubertad.
+• PISTA SOCRATICA: "Pídele que señale qué elementos o condiciones cambian y qué permanece constante."
+• FEEDBACK SI ACIERTA: "Muy bien. Observaste el detalle central con precisión."
+• FEEDBACK SI NECESITA APOYO: "Pídele que señale qué elementos o condiciones cambian y qué permanece constante."
+
+--------------------------------------------------------------------------------
+[PASO 3: RECORRIDO - CONVERSACION GUIADA Y PREGUNTAS SOCRATICAS]
+--------------------------------------------------------------------------------
+Item 1 (Estructura y Función de Pubertad):
+• Pregunta Socratica: "¿Qué función específica cumple 'Pubertad' dentro del sistema natural o biológico que estamos investigando?"
+• Respuesta Esperada: Explicar el rol funcional de Pubertad y cómo interactúa con los demás componentes del sistema.
+• Feedback de Exito: "¡Muy bien! Relacionaste con precisión la estructura con su función biológica o física."
+• Pista de Apoyo Socratica: "Piensa en el sistema como un equipo: ¿qué tarea indispensable realiza este componente?"
+• Revelacion: "Cada componente del sistema cumple una función especializada que permite el equilibrio y funcionamiento del conjunto."
+
+Item 2 (Evidencia Experimental y Prevención de Errores):
+• Pregunta Socratica: "Para no caer en el error de 'Dificultad para diferenciar los cambios físicos de los emocionales y sociales durante la pubertad.', ¿qué evidencia científica debemos comprobar antes de concluir?"
+• Respuesta Esperada: Identificar la evidencia empírica u observación experimental que valida la conclusión científica.
+• Feedback de Exito: "¡Exacto! El método científico exige basar las conclusiones en datos comprobables y no en suposiciones."
+• Pista de Apoyo Socratica: "Revisa los datos del experimento: ¿qué demuestran las mediciones u observaciones directas?"
+• Revelacion: "La evidencia empírica comprobable es la única base legítima para formular explicaciones científicas válidas."
+
+--------------------------------------------------------------------------------
+[PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
+--------------------------------------------------------------------------------
+• Cierre y Sintesis del Video Explicativo: "Hoy comprendiste Caracteres sexuales secundarios, cambios corporales y desarrollo con rigor científico y registro visual en tu cuaderno de ciencias."
+
+Comprobacion 1 (Estructura y Función de Pubertad):
+• Pregunta: "¿Qué función específica cumple 'Pubertad' dentro del sistema natural o biológico que estamos investigando?"
+• Respuesta Esperada: Explicar el rol funcional de Pubertad y cómo interactúa con los demás componentes del sistema.
+• Pista de Apoyo: "Piensa en el sistema como un equipo: ¿qué tarea indispensable realiza este componente?"
+• Revelacion: "La función especializada de Pubertad y su interacción en el sistema."
+
+Comprobacion 2 (Evidencia Experimental y Prevención de Errores):
+• Pregunta: "Para no caer en el error de 'Dificultad para diferenciar los cambios físicos de los emocionales y sociales durante la pubertad.', ¿qué evidencia científica debemos comprobar antes de concluir?"
+• Respuesta Esperada: Identificar la evidencia empírica u observación experimental que valida la conclusión científica.
+• Pista de Apoyo: "Revisa los datos del experimento: ¿qué demuestran las mediciones u observaciones directas?"
+• Revelacion: "La evidencia experimental que respalda la conclusión sin dejar lugar a suposiciones."
+
+--------------------------------------------------------------------------------
+[PASO 5: PRACTICA EN EL CUADERNO FISICO]
+--------------------------------------------------------------------------------
+Ejercicio 1 (Ejercicio 1 en Cuaderno: Esquema Rotulado de Investigación):
+• Enunciado de Aplicacion: "Abre tu cuaderno de notas. Escribe como título: 'Transformaciones físicas y emocionales en la pubertad'. Dibuja un diagrama ordenado del sistema estudiado, rotula sus partes principales destacando 'Pubertad' y describe brevemente la función de cada una (Representa mediante un breve sketch una situación cotidiana donde se demuestre r...)."
+• Respuesta Esperada: Esquema científico en el cuaderno con rotulación precisa de estructuras y descripción de funciones.
+• Feedback de Exito: "¡Excelente esquema en tu cuaderno! Las etiquetas son precisas y las relaciones entre partes están claras."
+• Pista de Apoyo Socratica: "Usa flechas para indicar el flujo o la interacción entre los componentes del diagrama."
+
+Ejercicio 2 (Ejercicio 2 en Cuaderno: Análisis de Caso o Causa-Efecto):
+• Enunciado de Aplicacion: "En tu cuaderno, redacta una respuesta científica fundamentada: Si se alterara la condición o componente 'Pubertad', ¿qué consecuencias inmediatas y a largo plazo se observarían en el sistema?"
+• Respuesta Esperada: Explicación causal en el cuaderno anticipando las consecuencias ecológicas o fisiológicas con rigor científico.
+• Feedback de Exito: "¡Muy bien! Tu razonamiento de causa y efecto demuestra una profunda comprensión del equilibrio del sistema."
+• Pista de Apoyo Socratica: "Piensa en cadena: si falla este componente, ¿qué otro proceso se detiene o se desequilibra?"
+
+Modulo: Comparemos dos situaciones (Comparemos dos situaciones)
+• DILE: "Antes de resumir, comparemos dos situaciones. No necesitas repetir una frase exacta: lo importante es que expliques la idea con tus propias palabras."
+• Pregunta: "Al comparar dos situaciones de Transformaciones físicas y emocionales en la pubertad, ¿cómo influye el contexto en la interpretación de los datos?"
+• Respuesta Esperada: El significado o resultado depende de las condiciones del contexto y del propósito de la situación.
+• Feedback si acierta: "¡Excelente razonamiento! Reconociste que el contexto orienta la interpretación de los datos."
+• Feedback si necesita apoyo: "Observa cada situación por separado y explica qué elementos las distinguen."
+
+Modulo: Desafio Breve (Desafío breve: Transformaciones físicas y emocionales en la pubertad)
+• Pregunta: "En Ciencias Naturales, ¿qué diferencia observas entre identificar los datos y aplicar el procedimiento? Explica tu razonamiento."
+• Respuesta Esperada: Identificar los datos determina el punto de partida; aplicar el procedimiento permite construir la respuesta.
+
+--------------------------------------------------------------------------------
+[PASO 6: RESUMEN Y ESTRATEGIA DE PENSAMIENTO]
+--------------------------------------------------------------------------------
+• Idea Clave: "Los sistemas naturales funcionan mediante interacciones precisas entre sus componentes, donde 'Pubertad' cumple un rol fundamental respaldado por evidencia observable."
+• DILE AL ESTUDIANTE: "Cuando enfrentes un problema en Ciencias Naturales, puedes seguir estos tres pasos clave:"
+• Pasos de la Estrategia:
+  Paso 1: Identifica -> ¿Cuáles son los datos clave y cuál es la pregunta central?
+  Paso 2: Aplica -> ¿Qué regla o método disciplinar corresponde utilizar?
+  Paso 3: Comprueba -> ¿La conclusión o resultado responde con coherencia al problema?
+• 3 Ideas Clave Estructuradas de Sintesis:
+  - 1 · Concepto central: Identificamos los elementos y el punto de partida del análisis.
+  - 2 · Interpretación del contexto: Caracteres sexuales secundarios, cambios corporales y desarrollo
+  - 3 · Síntesis formal: Los sistemas naturales funcionan mediante interacciones precisas entre sus componentes, donde 'Pubertad' cumple un rol fundamental respaldado por evidencia observable.
+
+--------------------------------------------------------------------------------
+[PASO 7: MINIQUIZ FORMATIVO Y FASE REVISAR]
+--------------------------------------------------------------------------------
+Pregunta 1: En el estudio científico de Transformaciones físicas y emocionales en la pubertad, ¿cuál de las siguientes afirmaciones describe con mayor precisión la función de Pubertad?
+  A) El proceso ocurre mediante la interacción coordinada de sus componentes según leyes naturales comprobables vinculadas a Pubertad [CORRECTA]
+  B) El fenómeno es completamente aleatorio y no responde a ninguna causa biológica o ambiental identificable 
+  C) El proceso ocurre de manera instantánea sin que intervengan estructuras celulares o fuerzas del entorno 
+• Explicacion Formativa del Error: "Todo proceso natural responde a mecanismos específicos donde cada estructura, como Pubertad, cumple un rol funcional determinado."
+• Guion del Mentor (Fase REVISAR): "Pídele que explique en qué evidencia empírica se basa para seleccionar esta opción."
+
+Pregunta 2: Al analizar las evidencias científicas de Caracteres sexuales secundarios, cambios corporales y desarrollo, ¿qué criterio previene el error frecuente de 'Dificultad para diferenciar los cambios físicos de los emocionales y sociales durante la pubertad.'?
+  A) Verificar experimentalmente las relaciones de causa y efecto mediante datos reproducibles antes de formular una conclusión [CORRECTA]
+  B) Aceptar la primera impresión visual sin contrastarla con observaciones ni registros controlados 
+  C) Asumir que si dos eventos ocurren al mismo tiempo uno es necesariamente la causa del otro 
+• Explicacion Formativa del Error: "En el método científico es indispensable controlar variables y verificar datos antes de establecer causalidad."
+• Guion del Mentor (Fase REVISAR): "Pregúntale: ¿cómo distingue un científico entre una simple coincidencia y una verdadera causa?"
+
+Pregunta 3: ¿De qué manera el conocimiento sobre Transformaciones físicas y emocionales en la pubertad y Pubertad contribuye al autocuidado, la salud o la sustentabilidad ambiental?
+  A) Permite tomar decisiones informadas y fundamentadas en evidencia para prevenir riesgos y mantener el equilibrio saludable [CORRECTA]
+  B) Demuestra que las acciones humanas individuales no tienen ningún impacto en el organismo o en los ecosistemas 
+  C) Indica que basta con guiarse por creencias populares sin verificar la evidencia científica disponible 
+• Explicacion Formativa del Error: "La comprensión de los procesos biológicos y ambientales es la base para el autocuidado responsable, la prevención médica y la sustentabilidad."
+• Guion del Mentor (Fase REVISAR): "Pídele que mencione un ejemplo real de la vida cotidiana donde este conocimiento marque una diferencia."
+
+--------------------------------------------------------------------------------
+[PASO 7B: MODULO DE RECUPERACION FORMATIVA]
+--------------------------------------------------------------------------------
+Refuerzo 1 (Recuperación Científica: Transformaciones físicas y emocionales en la pubertad):
+• Explicacion Previa: "Al estudiar Caracteres sexuales secundarios, cambios corporales y desarrollo, recuerda que Pubertad cumple una función biológica o física específica que podemos verificar mediante evidencias."
+• Pregunta: "¿Cuál es el criterio científico fundamental para validar una explicación en Transformaciones físicas y emocionales en la pubertad?"
+• Opciones: Basar la conclusión en evidencias observables y en el funcionamiento comprobado de Pubertad | Aceptar una afirmación sin requerir evidencias empíricas ni demostración experimental
+• Respuesta Correcta: Basar la conclusión en evidencias observables y en el funcionamiento comprobado de Pubertad
+• Refuerzo si falla: "Recuerda que en Ciencias Naturales la evidencia empírica es el pilar de toda explicación: observa los datos antes de concluir."
+
+--------------------------------------------------------------------------------
+[PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
+--------------------------------------------------------------------------------
+• Felicitacion Final: "¡Felicitaciones! Hoy completaste con éxito la clase "Transformaciones físicas y emocionales en la pubertad". Has demostrado constancia y rigor en tu aprendizaje."
+• Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Ciencias Naturales."
+
+
+
+################################################################################
+### CLASE 3 DE 6: VÍNCULOS AFECTIVOS, RESPETO MUTUO E INTIMIDAD
+################################################################################
+
+================================================================================
+STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+================================================================================
+
+FICHA CURRICULAR:
+• Asignatura: Ciencias Naturales
+• Nivel / Curso: 7° Básico
+• Objetivo de Aprendizaje: OA 1 - Biología
+• Clase: 3 de 6 ("Vínculos afectivos, respeto mutuo e intimidad")
+• Duracion Estimada: 30 Minutos
+
+DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
+1. Proporcion Widescreen 16:9 estricto (1920x1080).
+2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
+3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
+4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
+5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
+   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
+   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
+7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
+8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
+
+================================================================================
+MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Video Motivacional: El Desafío de Vínculos afectivos, respeto mutuo e intimidad
+• DILE ANTES DEL VIDEO: "Antes de ver el video, observa con atención lo que descubren los dos exploradores y qué pregunta queda planteada."
+• INSTRUCCION AL ESTUDIANTE: "Observa y reflexiona con las escenas del desafío visual."
+• DILE DESPUES DEL VIDEO: "Muy buena observación. Ahora conversaremos sobre lo que descubrieron en la expedición."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Apertura y Contexto (9 seg aprox) ---
+1. Propósito Didáctico: Apertura y Contexto
+2. Título en Pantalla (64 pt): Misión 3: Vínculos afectivos, respeto mutuo e intimidad
+3. Subtítulo en Pantalla (36 pt): Exploración inicial en Ciencias Naturales
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Vínculos afectivos, respeto mutuo e intimidad (Ciencias Naturales). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama integrador: Fenomeno observable de Vínculos afectivos, respeto mutuo e intimidad
+6. Notas al Orador (Locución Google Vids): "Comienza una nueva expedición de aprendizaje en Ciencias Naturales. Nuestros dos exploradores analizan el desafío de Vínculos afectivos, respeto mutuo e intimidad para descubrir sus secretos."
+
+--- DIAPOSITIVA 2: Presentación del Escenario (9 seg aprox) ---
+1. Propósito Didáctico: Presentación del Escenario
+2. Título en Pantalla (64 pt): Punto de partida
+3. Subtítulo en Pantalla (36 pt): La comunicación empática y el cuidado en las relaciones interpersonales
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of La comunicación empática y el cuidado en las relaciones interpersonales. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo de indagacion: La comunicación empática y el cuidado en las relaciones interpersonales con flechas de proceso
+6. Notas al Orador (Locución Google Vids): "Al observar los datos sobre La comunicación empática y el cuidado en las relaciones interpersonales, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor."
+
+--- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 seg aprox) ---
+1. Propósito Didáctico: Aparición del Conflicto / Misterio
+2. Título en Pantalla (64 pt): El enigma disciplinar
+3. Subtítulo en Pantalla (36 pt): Desafío en Vínculos afectivos, respeto mutuo e intimidad
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo de indagacion: La comunicación empática y el cuidado en las relaciones interpersonales con flechas de proceso
+6. Notas al Orador (Locución Google Vids): "Surge un reto concreto sobre Vínculos afectivos, respeto mutuo e intimidad: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso."
+
+--- DIAPOSITIVA 4: Exploración de Pistas (9 seg aprox) ---
+1. Propósito Didáctico: Exploración de Pistas
+2. Título en Pantalla (64 pt): Análisis de evidencias
+3. Subtítulo en Pantalla (36 pt): La comunicación empática y el cuidado en las relaciones interpersonales
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo de indagacion: La comunicación empática y el cuidado en las relaciones interpersonales con flechas de proceso
+6. Notas al Orador (Locución Google Vids): "Ambos comparan las pistas disponibles sobre La comunicación empática y el cuidado en las relaciones interpersonales. Cada dato confirma cómo interactúan los elementos clave de la situación."
+
+--- DIAPOSITIVA 5: El Momento Crítico (9 seg aprox) ---
+1. Propósito Didáctico: El Momento Crítico
+2. Título en Pantalla (64 pt): Criterio de decisión
+3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo de indagacion: La comunicación empática y el cuidado en las relaciones interpersonales con flechas de proceso
+6. Notas al Orador (Locución Google Vids): "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Vínculos afectivos, respeto mutuo e intimidad con total precisión metodológica."
+
+--- DIAPOSITIVA 6: La Antesala de la Pregunta (9 seg aprox) ---
+1. Propósito Didáctico: La Antesala de la Pregunta
+2. Título en Pantalla (64 pt): El dilema central
+3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Vínculos afectivos, respeto mutuo e intimidad?
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de variables: Interaccion de factores en observacion
+6. Notas al Orador (Locución Google Vids): "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje."
+
+--- DIAPOSITIVA 7: La Pregunta Detonante (9 seg aprox) ---
+1. Propósito Didáctico: La Pregunta Detonante
+2. Título en Pantalla (64 pt): Pregunta detonante
+3. Subtítulo en Pantalla (36 pt): Regla y método de Vínculos afectivos, respeto mutuo e intimidad
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta detonante: ¿Como interactuan los factores en Vínculos afectivos, respeto mutuo e intimidad?
+6. Notas al Orador (Locución Google Vids): "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!"
+
+================================================================================
+MODULO 2: PROMPT VIDEO EXPLICATIVO CONCEPTUAL (PASO 4 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Video Explicativo: Formalización de Vínculos afectivos, respeto mutuo e intimidad
+• Idea Clave: "Los sistemas naturales funcionan mediante interacciones precisas entre sus componentes, donde 'Relación afectiva' cumple un rol fundamental respaldado por evidencia observable."
+• DILE ANTES DEL VIDEO: "Ahora veremos el video explicativo de Vínculos afectivos, respeto mutuo e intimidad. Presta atención al diagrama y a cómo se demuestra la función de Relación afectiva."
+• INSTRUCCION: "Revisemos la explicación formal y la idea clave."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
+1. Propósito Didáctico: Objetivo de la Lección
+2. Título en Pantalla (64 pt): Objetivo de la lección
+3. Subtítulo en Pantalla (36 pt): Dominar Vínculos afectivos, respeto mutuo e intimidad: La comunicación empática y el cuidado en las relaciones interpersonales
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing La comunicación empática y el cuidado en las relaciones interpersonales. High clarity, negative space for text. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 1 · Vínculos afectivos, respeto mutuo e intimidad
+6. Notas al Orador (Locución Google Vids): "El objetivo de hoy es aprender a la comunicación empática y el cuidado en las relaciones interpersonales, aplicando el método disciplinar paso a paso con total rigor y claridad."
+
+--- DIAPOSITIVA 2: Definición del Concepto Central (12 seg aprox) ---
+1. Propósito Didáctico: Definición del Concepto Central
+2. Título en Pantalla (64 pt): Concepto fundamental
+3. Subtítulo en Pantalla (36 pt): La comunicación empática y el cuidado en las relaciones interpersonales
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo cientifico y variables causales de La comunicación empática y el cuidado en las relaciones interpersonales
+6. Notas al Orador (Locución Google Vids): "Para comprender Vínculos afectivos, respeto mutuo e intimidad, establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación."
+
+--- DIAPOSITIVA 3: Demostración Modelada (12 seg aprox) ---
+1. Propósito Didáctico: Demostración Modelada
+2. Título en Pantalla (64 pt): Modelamiento paso a paso
+3. Subtítulo en Pantalla (36 pt): Procedimiento de Vínculos afectivos, respeto mutuo e intimidad
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama de proceso paso a paso con flechas de causalidad
+6. Notas al Orador (Locución Google Vids): "Observa cómo se aplica el procedimiento en este caso guiado: cada transformación responde a una justificación disciplinar explícita y visible."
+
+--- DIAPOSITIVA 4: Prevención del Error Frecuente (13 seg aprox) ---
+1. Propósito Didáctico: Prevención del Error Frecuente
+2. Título en Pantalla (64 pt): Atención: Error habitual
+3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Contraste experimental: error de interpretacion comun
+6. Notas al Orador (Locución Google Vids): "Un error frecuente ocurre al descuidar el orden o saltarse un paso de la convención establecida. Siempre comprobamos cada dato antes de continuar."
+
+--- DIAPOSITIVA 5: Comprobación del Resultado (12 seg aprox) ---
+1. Propósito Didáctico: Comprobación del Resultado
+2. Título en Pantalla (64 pt): Validación del resultado
+3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Validacion de la evidencia cientifica y coherencia del modelo
+6. Notas al Orador (Locución Google Vids): "Al contrastar el resultado con la situación inicial, confirmamos que la solución es consistente, rigurosa y responde plenamente a la pregunta."
+
+--- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 seg aprox) ---
+1. Propósito Didáctico: Estrategia Mnemotécnica
+2. Título en Pantalla (64 pt): Estrategia de pensamiento
+3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Estrategia de pensamiento cientifico: Observar, modelar y contrastar
+6. Notas al Orador (Locución Google Vids): "Recuerda siempre la estrategia en tres pasos: identificar la información clave, aplicar la regla en orden y comprobar el resultado final."
+
+--- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 seg aprox) ---
+1. Propósito Didáctico: Síntesis y Regla de Oro
+2. Título en Pantalla (64 pt): Regla de Oro: Vínculos afectivos, respeto mutuo e intimidad
+3. Subtítulo en Pantalla (36 pt): Método disciplinar validado
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Infografía de síntesis: Principio cientifico de Vínculos afectivos, respeto mutuo e intimidad
+6. Notas al Orador (Locución Google Vids): "Ahora que dominas la regla fundamental y el procedimiento de Vínculos afectivos, respeto mutuo e intimidad, ¡vamos a demostrarlo en las actividades interactivas de la plataforma!"
+
+================================================================================
+MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
+================================================================================
+
+[PREPARACION DEL ADULTO / MENTOR]
+• Objetivo del Adulto: Guiar la observación y el análisis científico en torno a: Vínculos afectivos, respeto mutuo e intimidad, facilitando la comprensión de Relación afectiva mediante evidencias empíricas.
+• Ruta de Hoy: 1. Inicio y activación · 2. Video de exploración · 3. Recorrido guiado · 4. Formalización y práctica en cuaderno · 5. Miniquiz y REVISAR · 6. Cierre metacognitivo
+• Recordatorios Pedagogicos del Mentor:
+  1. Sigue el orden indicado.
+  2. Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.
+  3. No leas los recuadros SOLO PARA TI ni AYUDA DE LECTURA.
+  4. Haz cada pregunta y espera la respuesta antes de seleccionar una opción.
+  5. Considera correcta una respuesta si expresa la idea matemática, aunque use palabras distintas.
+  6. Si el estudiante necesita apoyo, usa únicamente la ayuda que aparecerá.
+  7. Si propone otra explicación o no está de acuerdo, escúchalo completo y valora su razonamiento antes de guiarlo.
+• Clima Emocional y Acogida: "Estimula el rigor observacional: 'Un buen científico contrasta sus ideas con lo que los datos demuestran'."
+
+--------------------------------------------------------------------------------
+[PASO 1: INICIO (4 SUB-ETAPAS CANONICAS)]
+--------------------------------------------------------------------------------
+Sub-etapa 1: Nuestra Ruta de la Asignatura
+• DILE AL ESTUDIANTE (Apertura de la ruta): "Hoy comenzaremos la clase 3 de Ciencias Naturales: "Vínculos afectivos, respeto mutuo e intimidad"."
+• 4 Bloques Tematicos de la Asignatura:
+  Bloque 01: Ciencias Naturales (Vínculos afectivos, respeto mutuo e intimidad)
+  Bloque 02: Exploración (Gancho y Recorrido Guiado)
+  Bloque 03: Práctica (Aplicación en situaciones reales)
+  Bloque 04: Evaluación (Miniquiz formativo y síntesis)
+
+Sub-etapa 2: La Clase de Hoy
+• DILE AL ESTUDIANTE (Foco didactico): "La comunicación empática y el cuidado en las relaciones interpersonales"
+• 3 Tarjetas de Foco de la Pantalla del Estudiante:
+  Tarjeta 1: Exploración inicial -> Vínculos afectivos, respeto mutuo e intimidad
+  Tarjeta 2: Idea clave -> Los sistemas naturales funcionan mediante interacciones prec
+  Tarjeta 3: Práctica y aplicación -> Resolución guiada paso a paso
+
+Sub-etapa 3: Situacion Inicial de Exploracion (Detonante)
+• DILE AL ESTUDIANTE (Situacion detonante): "Hoy en Ciencias Naturales investigamos 'Vínculos afectivos, respeto mutuo e intimidad'. El fenómeno central del currículum se basa en 'Relación afectiva'. Observa la evidencia o experimento inicial en la pantalla:"
+• RESPUESTA ESPERADA: Describir las estructuras, componentes o variables involucradas en el fenómeno de Vínculos afectivos, respeto mutuo e intimidad y vincularlas con Relación afectiva.
+• PISTA SOCRATICA (SOLO PARA TI): "Pídele que señale qué elementos o condiciones cambian y qué permanece constante."
+• CLIMA EMOCIONAL: "Estimula el rigor observacional: 'Un buen científico contrasta sus ideas con lo que los datos demuestran'."
+• Pautas de Evaluacion Formativa del Mentor:
+  - [Acierto] Identificó las estructuras y explicó la relación con Relación afectiva -> Feedback: "¡Excelente observación! Reconoció las variables y componentes centrales del fenómeno."
+  - [Requiere Apoyo] Describió solo un detalle superficial sin relacionar las causas con los efectos -> Feedback: "Observa qué causa produce el cambio: ¿qué estructura o fuerza está actuando?"
+
+Sub-etapa 4: Comprendamos la Respuesta (Punto de Referencia)
+• DILE AL ESTUDIANTE (Formalizacion de referencia): "¿Qué fenómeno observable ocurre en este escenario de La comunicación empática y el cuidado en las relaciones interpersonales y cómo se relaciona con 'Relación afectiva'?"
+• PREGUNTALE AL ESTUDIANTE: "¿Qué fenómeno observable ocurre en este escenario de La comunicación empática y el cuidado en las relaciones interpersonales y cómo se relaciona con 'Relación afectiva'?"
+• RESPUESTA ESPERADA: Describir las estructuras, componentes o variables involucradas en el fenómeno de Vínculos afectivos, respeto mutuo e intimidad y vincularlas con Relación afectiva.
+• PISTA SOCRATICA: "Pídele que señale qué elementos o condiciones cambian y qué permanece constante."
+• FEEDBACK SI ACIERTA: "Muy bien. Observaste el detalle central con precisión."
+• FEEDBACK SI NECESITA APOYO: "Pídele que señale qué elementos o condiciones cambian y qué permanece constante."
+
+--------------------------------------------------------------------------------
+[PASO 3: RECORRIDO - CONVERSACION GUIADA Y PREGUNTAS SOCRATICAS]
+--------------------------------------------------------------------------------
+Item 1 (Estructura y Función de Relación afectiva):
+• Pregunta Socratica: "¿Qué función específica cumple 'Relación afectiva' dentro del sistema natural o biológico que estamos investigando?"
+• Respuesta Esperada: Explicar el rol funcional de Relación afectiva y cómo interactúa con los demás componentes del sistema.
+• Feedback de Exito: "¡Muy bien! Relacionaste con precisión la estructura con su función biológica o física."
+• Pista de Apoyo Socratica: "Piensa en el sistema como un equipo: ¿qué tarea indispensable realiza este componente?"
+• Revelacion: "Cada componente del sistema cumple una función especializada que permite el equilibrio y funcionamiento del conjunto."
+
+Item 2 (Evidencia Experimental y Prevención de Errores):
+• Pregunta Socratica: "Para no caer en el error de 'Subestimar la importancia de la responsabilidad individual y el consentimiento en las relaciones interpersonales.', ¿qué evidencia científica debemos comprobar antes de concluir?"
+• Respuesta Esperada: Identificar la evidencia empírica u observación experimental que valida la conclusión científica.
+• Feedback de Exito: "¡Exacto! El método científico exige basar las conclusiones en datos comprobables y no en suposiciones."
+• Pista de Apoyo Socratica: "Revisa los datos del experimento: ¿qué demuestran las mediciones u observaciones directas?"
+• Revelacion: "La evidencia empírica comprobable es la única base legítima para formular explicaciones científicas válidas."
+
+--------------------------------------------------------------------------------
+[PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
+--------------------------------------------------------------------------------
+• Cierre y Sintesis del Video Explicativo: "Hoy comprendiste La comunicación empática y el cuidado en las relaciones interpersonales con rigor científico y registro visual en tu cuaderno de ciencias."
+
+Comprobacion 1 (Estructura y Función de Relación afectiva):
+• Pregunta: "¿Qué función específica cumple 'Relación afectiva' dentro del sistema natural o biológico que estamos investigando?"
+• Respuesta Esperada: Explicar el rol funcional de Relación afectiva y cómo interactúa con los demás componentes del sistema.
+• Pista de Apoyo: "Piensa en el sistema como un equipo: ¿qué tarea indispensable realiza este componente?"
+• Revelacion: "La función especializada de Relación afectiva y su interacción en el sistema."
+
+Comprobacion 2 (Evidencia Experimental y Prevención de Errores):
+• Pregunta: "Para no caer en el error de 'Subestimar la importancia de la responsabilidad individual y el consentimiento en las relaciones interpersonales.', ¿qué evidencia científica debemos comprobar antes de concluir?"
+• Respuesta Esperada: Identificar la evidencia empírica u observación experimental que valida la conclusión científica.
+• Pista de Apoyo: "Revisa los datos del experimento: ¿qué demuestran las mediciones u observaciones directas?"
+• Revelacion: "La evidencia experimental que respalda la conclusión sin dejar lugar a suposiciones."
+
+--------------------------------------------------------------------------------
+[PASO 5: PRACTICA EN EL CUADERNO FISICO]
+--------------------------------------------------------------------------------
+Ejercicio 1 (Ejercicio 1 en Cuaderno: Esquema Rotulado de Investigación):
+• Enunciado de Aplicacion: "Abre tu cuaderno de notas. Escribe como título: 'Vínculos afectivos, respeto mutuo e intimidad'. Dibuja un diagrama ordenado del sistema estudiado, rotula sus partes principales destacando 'Relación afectiva' y describe brevemente la función de cada una (Representa mediante un breve sketch una situación cotidiana donde se demuestre r...)."
+• Respuesta Esperada: Esquema científico en el cuaderno con rotulación precisa de estructuras y descripción de funciones.
+• Feedback de Exito: "¡Excelente esquema en tu cuaderno! Las etiquetas son precisas y las relaciones entre partes están claras."
+• Pista de Apoyo Socratica: "Usa flechas para indicar el flujo o la interacción entre los componentes del diagrama."
+
+Ejercicio 2 (Ejercicio 2 en Cuaderno: Análisis de Caso o Causa-Efecto):
+• Enunciado de Aplicacion: "En tu cuaderno, redacta una respuesta científica fundamentada: Si se alterara la condición o componente 'Relación afectiva', ¿qué consecuencias inmediatas y a largo plazo se observarían en el sistema?"
+• Respuesta Esperada: Explicación causal en el cuaderno anticipando las consecuencias ecológicas o fisiológicas con rigor científico.
+• Feedback de Exito: "¡Muy bien! Tu razonamiento de causa y efecto demuestra una profunda comprensión del equilibrio del sistema."
+• Pista de Apoyo Socratica: "Piensa en cadena: si falla este componente, ¿qué otro proceso se detiene o se desequilibra?"
+
+Modulo: Comparemos dos situaciones (Comparemos dos situaciones)
+• DILE: "Antes de resumir, comparemos dos situaciones. No necesitas repetir una frase exacta: lo importante es que expliques la idea con tus propias palabras."
+• Pregunta: "Al comparar dos situaciones de Vínculos afectivos, respeto mutuo e intimidad, ¿cómo influye el contexto en la interpretación de los datos?"
+• Respuesta Esperada: El significado o resultado depende de las condiciones del contexto y del propósito de la situación.
+• Feedback si acierta: "¡Excelente razonamiento! Reconociste que el contexto orienta la interpretación de los datos."
+• Feedback si necesita apoyo: "Observa cada situación por separado y explica qué elementos las distinguen."
+
+Modulo: Desafio Breve (Desafío breve: Vínculos afectivos, respeto mutuo e intimidad)
+• Pregunta: "En Ciencias Naturales, ¿qué diferencia observas entre identificar los datos y aplicar el procedimiento? Explica tu razonamiento."
+• Respuesta Esperada: Identificar los datos determina el punto de partida; aplicar el procedimiento permite construir la respuesta.
+
+--------------------------------------------------------------------------------
+[PASO 6: RESUMEN Y ESTRATEGIA DE PENSAMIENTO]
+--------------------------------------------------------------------------------
+• Idea Clave: "Los sistemas naturales funcionan mediante interacciones precisas entre sus componentes, donde 'Relación afectiva' cumple un rol fundamental respaldado por evidencia observable."
+• DILE AL ESTUDIANTE: "Cuando enfrentes un problema en Ciencias Naturales, puedes seguir estos tres pasos clave:"
+• Pasos de la Estrategia:
+  Paso 1: Identifica -> ¿Cuáles son los datos clave y cuál es la pregunta central?
+  Paso 2: Aplica -> ¿Qué regla o método disciplinar corresponde utilizar?
+  Paso 3: Comprueba -> ¿La conclusión o resultado responde con coherencia al problema?
+• 3 Ideas Clave Estructuradas de Sintesis:
+  - 1 · Concepto central: Identificamos los elementos y el punto de partida del análisis.
+  - 2 · Interpretación del contexto: La comunicación empática y el cuidado en las relaciones interpersonales
+  - 3 · Síntesis formal: Los sistemas naturales funcionan mediante interacciones precisas entre sus componentes, donde 'Relación afectiva' cumple un rol fundamental respaldado por evidencia observable.
+
+--------------------------------------------------------------------------------
+[PASO 7: MINIQUIZ FORMATIVO Y FASE REVISAR]
+--------------------------------------------------------------------------------
+Pregunta 1: En el estudio científico de Vínculos afectivos, respeto mutuo e intimidad, ¿cuál de las siguientes afirmaciones describe con mayor precisión la función de Relación afectiva?
+  A) El proceso ocurre mediante la interacción coordinada de sus componentes según leyes naturales comprobables vinculadas a Relación afectiva [CORRECTA]
+  B) El fenómeno es completamente aleatorio y no responde a ninguna causa biológica o ambiental identificable 
+  C) El proceso ocurre de manera instantánea sin que intervengan estructuras celulares o fuerzas del entorno 
+• Explicacion Formativa del Error: "Todo proceso natural responde a mecanismos específicos donde cada estructura, como Relación afectiva, cumple un rol funcional determinado."
+• Guion del Mentor (Fase REVISAR): "Pídele que explique en qué evidencia empírica se basa para seleccionar esta opción."
+
+Pregunta 2: Al analizar las evidencias científicas de La comunicación empática y el cuidado en las relaciones interpersonales, ¿qué criterio previene el error frecuente de 'Subestimar la importancia de la responsabilidad individual y el consentimiento en las relaciones interpersonales.'?
+  A) Verificar experimentalmente las relaciones de causa y efecto mediante datos reproducibles antes de formular una conclusión [CORRECTA]
+  B) Aceptar la primera impresión visual sin contrastarla con observaciones ni registros controlados 
+  C) Asumir que si dos eventos ocurren al mismo tiempo uno es necesariamente la causa del otro 
+• Explicacion Formativa del Error: "En el método científico es indispensable controlar variables y verificar datos antes de establecer causalidad."
+• Guion del Mentor (Fase REVISAR): "Pregúntale: ¿cómo distingue un científico entre una simple coincidencia y una verdadera causa?"
+
+Pregunta 3: ¿De qué manera el conocimiento sobre Vínculos afectivos, respeto mutuo e intimidad y Relación afectiva contribuye al autocuidado, la salud o la sustentabilidad ambiental?
+  A) Permite tomar decisiones informadas y fundamentadas en evidencia para prevenir riesgos y mantener el equilibrio saludable [CORRECTA]
+  B) Demuestra que las acciones humanas individuales no tienen ningún impacto en el organismo o en los ecosistemas 
+  C) Indica que basta con guiarse por creencias populares sin verificar la evidencia científica disponible 
+• Explicacion Formativa del Error: "La comprensión de los procesos biológicos y ambientales es la base para el autocuidado responsable, la prevención médica y la sustentabilidad."
+• Guion del Mentor (Fase REVISAR): "Pídele que mencione un ejemplo real de la vida cotidiana donde este conocimiento marque una diferencia."
+
+--------------------------------------------------------------------------------
+[PASO 7B: MODULO DE RECUPERACION FORMATIVA]
+--------------------------------------------------------------------------------
+Refuerzo 1 (Recuperación Científica: Vínculos afectivos, respeto mutuo e intimidad):
+• Explicacion Previa: "Al estudiar La comunicación empática y el cuidado en las relaciones interpersonales, recuerda que Relación afectiva cumple una función biológica o física específica que podemos verificar mediante evidencias."
+• Pregunta: "¿Cuál es el criterio científico fundamental para validar una explicación en Vínculos afectivos, respeto mutuo e intimidad?"
+• Opciones: Basar la conclusión en evidencias observables y en el funcionamiento comprobado de Relación afectiva | Aceptar una afirmación sin requerir evidencias empíricas ni demostración experimental
+• Respuesta Correcta: Basar la conclusión en evidencias observables y en el funcionamiento comprobado de Relación afectiva
+• Refuerzo si falla: "Recuerda que en Ciencias Naturales la evidencia empírica es el pilar de toda explicación: observa los datos antes de concluir."
+
+--------------------------------------------------------------------------------
+[PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
+--------------------------------------------------------------------------------
+• Felicitacion Final: "¡Felicitaciones! Hoy completaste con éxito la clase "Vínculos afectivos, respeto mutuo e intimidad". Has demostrado constancia y rigor en tu aprendizaje."
+• Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Ciencias Naturales."
+
+
+
+################################################################################
+### CLASE 4 DE 6: RESPONSABILIDAD INDIVIDUAL Y TOMA DE DECISIONES
+################################################################################
+
+================================================================================
+STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+================================================================================
+
+FICHA CURRICULAR:
+• Asignatura: Ciencias Naturales
+• Nivel / Curso: 7° Básico
+• Objetivo de Aprendizaje: OA 1 - Biología
+• Clase: 4 de 6 ("Responsabilidad individual y toma de decisiones")
+• Duracion Estimada: 30 Minutos
+
+DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
+1. Proporcion Widescreen 16:9 estricto (1920x1080).
+2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
+3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
+4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
+5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
+   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
+   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
+7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
+8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
+
+================================================================================
+MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Video Motivacional: El Desafío de Responsabilidad individual y toma de decisiones
+• DILE ANTES DEL VIDEO: "Antes de ver el video, observa con atención lo que descubren los dos exploradores y qué pregunta queda planteada."
+• INSTRUCCION AL ESTUDIANTE: "Observa y reflexiona con las escenas del desafío visual."
+• DILE DESPUES DEL VIDEO: "Muy buena observación. Ahora conversaremos sobre lo que descubrieron en la expedición."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Apertura y Contexto (9 seg aprox) ---
+1. Propósito Didáctico: Apertura y Contexto
+2. Título en Pantalla (64 pt): Misión 4: Responsabilidad individual y toma de decisiones
+3. Subtítulo en Pantalla (36 pt): Exploración inicial en Ciencias Naturales
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Responsabilidad individual y toma de decisiones (Ciencias Naturales). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama integrador: Fenomeno observable de Responsabilidad individual y toma de decisiones
+6. Notas al Orador (Locución Google Vids): "Comienza una nueva expedición de aprendizaje en Ciencias Naturales. Nuestros dos exploradores analizan el desafío de Responsabilidad individual y toma de decisiones para descubrir sus secretos."
+
+--- DIAPOSITIVA 2: Presentación del Escenario (9 seg aprox) ---
+1. Propósito Didáctico: Presentación del Escenario
+2. Título en Pantalla (64 pt): Punto de partida
+3. Subtítulo en Pantalla (36 pt): Autocuidado, consentimiento y discernimiento informado en adolescentes
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Autocuidado, consentimiento y discernimiento informado en adolescentes. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo de indagacion: Autocuidado, consentimiento y discernimiento informado en adolescentes con flechas de proceso
+6. Notas al Orador (Locución Google Vids): "Al observar los datos sobre Autocuidado, consentimiento y discernimiento informado en adolescentes, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor."
+
+--- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 seg aprox) ---
+1. Propósito Didáctico: Aparición del Conflicto / Misterio
+2. Título en Pantalla (64 pt): El enigma disciplinar
+3. Subtítulo en Pantalla (36 pt): Desafío en Responsabilidad individual y toma de decisiones
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo de indagacion: Autocuidado, consentimiento y discernimiento informado en adolescentes con flechas de proceso
+6. Notas al Orador (Locución Google Vids): "Surge un reto concreto sobre Responsabilidad individual y toma de decisiones: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso."
+
+--- DIAPOSITIVA 4: Exploración de Pistas (9 seg aprox) ---
+1. Propósito Didáctico: Exploración de Pistas
+2. Título en Pantalla (64 pt): Análisis de evidencias
+3. Subtítulo en Pantalla (36 pt): Autocuidado, consentimiento y discernimiento informado en adolescentes
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo de indagacion: Autocuidado, consentimiento y discernimiento informado en adolescentes con flechas de proceso
+6. Notas al Orador (Locución Google Vids): "Ambos comparan las pistas disponibles sobre Autocuidado, consentimiento y discernimiento informado en adolescentes. Cada dato confirma cómo interactúan los elementos clave de la situación."
+
+--- DIAPOSITIVA 5: El Momento Crítico (9 seg aprox) ---
+1. Propósito Didáctico: El Momento Crítico
+2. Título en Pantalla (64 pt): Criterio de decisión
+3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo de indagacion: Autocuidado, consentimiento y discernimiento informado en adolescentes con flechas de proceso
+6. Notas al Orador (Locución Google Vids): "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Responsabilidad individual y toma de decisiones con total precisión metodológica."
+
+--- DIAPOSITIVA 6: La Antesala de la Pregunta (9 seg aprox) ---
+1. Propósito Didáctico: La Antesala de la Pregunta
+2. Título en Pantalla (64 pt): El dilema central
+3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Responsabilidad individual y toma de decisiones?
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de variables: Interaccion de factores en observacion
+6. Notas al Orador (Locución Google Vids): "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje."
+
+--- DIAPOSITIVA 7: La Pregunta Detonante (9 seg aprox) ---
+1. Propósito Didáctico: La Pregunta Detonante
+2. Título en Pantalla (64 pt): Pregunta detonante
+3. Subtítulo en Pantalla (36 pt): Regla y método de Responsabilidad individual y toma de decisiones
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta detonante: ¿Como interactuan los factores en Responsabilidad individual y toma de decisiones?
+6. Notas al Orador (Locución Google Vids): "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!"
+
+================================================================================
+MODULO 2: PROMPT VIDEO EXPLICATIVO CONCEPTUAL (PASO 4 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Video Explicativo: Formalización de Responsabilidad individual y toma de decisiones
+• Idea Clave: "Los sistemas naturales funcionan mediante interacciones precisas entre sus componentes, donde 'Respeto mutuo' cumple un rol fundamental respaldado por evidencia observable."
+• DILE ANTES DEL VIDEO: "Ahora veremos el video explicativo de Responsabilidad individual y toma de decisiones. Presta atención al diagrama y a cómo se demuestra la función de Respeto mutuo."
+• INSTRUCCION: "Revisemos la explicación formal y la idea clave."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
+1. Propósito Didáctico: Objetivo de la Lección
+2. Título en Pantalla (64 pt): Objetivo de la lección
+3. Subtítulo en Pantalla (36 pt): Dominar Responsabilidad individual y toma de decisiones: Autocuidado, consentimiento y discernimiento informado en adolescentes
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Autocuidado, consentimiento y discernimiento informado en adolescentes. High clarity, negative space for text. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 1 · Responsabilidad individual y toma de decisiones
+6. Notas al Orador (Locución Google Vids): "El objetivo de hoy es aprender a autocuidado, consentimiento y discernimiento informado en adolescentes, aplicando el método disciplinar paso a paso con total rigor y claridad."
+
+--- DIAPOSITIVA 2: Definición del Concepto Central (12 seg aprox) ---
+1. Propósito Didáctico: Definición del Concepto Central
+2. Título en Pantalla (64 pt): Concepto fundamental
+3. Subtítulo en Pantalla (36 pt): Autocuidado, consentimiento y discernimiento informado en adolescentes
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo cientifico y variables causales de Autocuidado, consentimiento y discernimiento informado en adolescentes
+6. Notas al Orador (Locución Google Vids): "Para comprender Responsabilidad individual y toma de decisiones, establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación."
+
+--- DIAPOSITIVA 3: Demostración Modelada (12 seg aprox) ---
+1. Propósito Didáctico: Demostración Modelada
+2. Título en Pantalla (64 pt): Modelamiento paso a paso
+3. Subtítulo en Pantalla (36 pt): Procedimiento de Responsabilidad individual y toma de decisiones
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama de proceso paso a paso con flechas de causalidad
+6. Notas al Orador (Locución Google Vids): "Observa cómo se aplica el procedimiento en este caso guiado: cada transformación responde a una justificación disciplinar explícita y visible."
+
+--- DIAPOSITIVA 4: Prevención del Error Frecuente (13 seg aprox) ---
+1. Propósito Didáctico: Prevención del Error Frecuente
+2. Título en Pantalla (64 pt): Atención: Error habitual
+3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Contraste experimental: error de interpretacion comun
+6. Notas al Orador (Locución Google Vids): "Un error frecuente ocurre al descuidar el orden o saltarse un paso de la convención establecida. Siempre comprobamos cada dato antes de continuar."
+
+--- DIAPOSITIVA 5: Comprobación del Resultado (12 seg aprox) ---
+1. Propósito Didáctico: Comprobación del Resultado
+2. Título en Pantalla (64 pt): Validación del resultado
+3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Validacion de la evidencia cientifica y coherencia del modelo
+6. Notas al Orador (Locución Google Vids): "Al contrastar el resultado con la situación inicial, confirmamos que la solución es consistente, rigurosa y responde plenamente a la pregunta."
+
+--- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 seg aprox) ---
+1. Propósito Didáctico: Estrategia Mnemotécnica
+2. Título en Pantalla (64 pt): Estrategia de pensamiento
+3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Estrategia de pensamiento cientifico: Observar, modelar y contrastar
+6. Notas al Orador (Locución Google Vids): "Recuerda siempre la estrategia en tres pasos: identificar la información clave, aplicar la regla en orden y comprobar el resultado final."
+
+--- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 seg aprox) ---
+1. Propósito Didáctico: Síntesis y Regla de Oro
+2. Título en Pantalla (64 pt): Regla de Oro: Responsabilidad individual y toma de decisiones
+3. Subtítulo en Pantalla (36 pt): Método disciplinar validado
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Infografía de síntesis: Principio cientifico de Responsabilidad individual y toma de decisiones
+6. Notas al Orador (Locución Google Vids): "Ahora que dominas la regla fundamental y el procedimiento de Responsabilidad individual y toma de decisiones, ¡vamos a demostrarlo en las actividades interactivas de la plataforma!"
+
+================================================================================
+MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
+================================================================================
+
+[PREPARACION DEL ADULTO / MENTOR]
+• Objetivo del Adulto: Guiar la observación y el análisis científico en torno a: Responsabilidad individual y toma de decisiones, facilitando la comprensión de Respeto mutuo mediante evidencias empíricas.
+• Ruta de Hoy: 1. Inicio y activación · 2. Video de exploración · 3. Recorrido guiado · 4. Formalización y práctica en cuaderno · 5. Miniquiz y REVISAR · 6. Cierre metacognitivo
+• Recordatorios Pedagogicos del Mentor:
+  1. Sigue el orden indicado.
+  2. Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.
+  3. No leas los recuadros SOLO PARA TI ni AYUDA DE LECTURA.
+  4. Haz cada pregunta y espera la respuesta antes de seleccionar una opción.
+  5. Considera correcta una respuesta si expresa la idea matemática, aunque use palabras distintas.
+  6. Si el estudiante necesita apoyo, usa únicamente la ayuda que aparecerá.
+  7. Si propone otra explicación o no está de acuerdo, escúchalo completo y valora su razonamiento antes de guiarlo.
+• Clima Emocional y Acogida: "Estimula el rigor observacional: 'Un buen científico contrasta sus ideas con lo que los datos demuestran'."
+
+--------------------------------------------------------------------------------
+[PASO 1: INICIO (4 SUB-ETAPAS CANONICAS)]
+--------------------------------------------------------------------------------
+Sub-etapa 1: Nuestra Ruta de la Asignatura
+• DILE AL ESTUDIANTE (Apertura de la ruta): "Hoy comenzaremos la clase 4 de Ciencias Naturales: "Responsabilidad individual y toma de decisiones"."
+• 4 Bloques Tematicos de la Asignatura:
+  Bloque 01: Ciencias Naturales (Responsabilidad individual y toma de decisiones)
+  Bloque 02: Exploración (Gancho y Recorrido Guiado)
+  Bloque 03: Práctica (Aplicación en situaciones reales)
+  Bloque 04: Evaluación (Miniquiz formativo y síntesis)
+
+Sub-etapa 2: La Clase de Hoy
+• DILE AL ESTUDIANTE (Foco didactico): "Autocuidado, consentimiento y discernimiento informado en adolescentes"
+• 3 Tarjetas de Foco de la Pantalla del Estudiante:
+  Tarjeta 1: Exploración inicial -> Responsabilidad individual y toma de decisiones
+  Tarjeta 2: Idea clave -> Los sistemas naturales funcionan mediante interacciones prec
+  Tarjeta 3: Práctica y aplicación -> Resolución guiada paso a paso
+
+Sub-etapa 3: Situacion Inicial de Exploracion (Detonante)
+• DILE AL ESTUDIANTE (Situacion detonante): "Hoy en Ciencias Naturales investigamos 'Responsabilidad individual y toma de decisiones'. El fenómeno central del currículum se basa en 'Respeto mutuo'. Observa la evidencia o experimento inicial en la pantalla:"
+• RESPUESTA ESPERADA: Describir las estructuras, componentes o variables involucradas en el fenómeno de Responsabilidad individual y toma de decisiones y vincularlas con Respeto mutuo.
+• PISTA SOCRATICA (SOLO PARA TI): "Pídele que señale qué elementos o condiciones cambian y qué permanece constante."
+• CLIMA EMOCIONAL: "Estimula el rigor observacional: 'Un buen científico contrasta sus ideas con lo que los datos demuestran'."
+• Pautas de Evaluacion Formativa del Mentor:
+  - [Acierto] Identificó las estructuras y explicó la relación con Respeto mutuo -> Feedback: "¡Excelente observación! Reconoció las variables y componentes centrales del fenómeno."
+  - [Requiere Apoyo] Describió solo un detalle superficial sin relacionar las causas con los efectos -> Feedback: "Observa qué causa produce el cambio: ¿qué estructura o fuerza está actuando?"
+
+Sub-etapa 4: Comprendamos la Respuesta (Punto de Referencia)
+• DILE AL ESTUDIANTE (Formalizacion de referencia): "¿Qué fenómeno observable ocurre en este escenario de Autocuidado, consentimiento y discernimiento informado en adolescentes y cómo se relaciona con 'Respeto mutuo'?"
+• PREGUNTALE AL ESTUDIANTE: "¿Qué fenómeno observable ocurre en este escenario de Autocuidado, consentimiento y discernimiento informado en adolescentes y cómo se relaciona con 'Respeto mutuo'?"
+• RESPUESTA ESPERADA: Describir las estructuras, componentes o variables involucradas en el fenómeno de Responsabilidad individual y toma de decisiones y vincularlas con Respeto mutuo.
+• PISTA SOCRATICA: "Pídele que señale qué elementos o condiciones cambian y qué permanece constante."
+• FEEDBACK SI ACIERTA: "Muy bien. Observaste el detalle central con precisión."
+• FEEDBACK SI NECESITA APOYO: "Pídele que señale qué elementos o condiciones cambian y qué permanece constante."
+
+--------------------------------------------------------------------------------
+[PASO 3: RECORRIDO - CONVERSACION GUIADA Y PREGUNTAS SOCRATICAS]
+--------------------------------------------------------------------------------
+Item 1 (Estructura y Función de Respeto mutuo):
+• Pregunta Socratica: "¿Qué función específica cumple 'Respeto mutuo' dentro del sistema natural o biológico que estamos investigando?"
+• Respuesta Esperada: Explicar el rol funcional de Respeto mutuo y cómo interactúa con los demás componentes del sistema.
+• Feedback de Exito: "¡Muy bien! Relacionaste con precisión la estructura con su función biológica o física."
+• Pista de Apoyo Socratica: "Piensa en el sistema como un equipo: ¿qué tarea indispensable realiza este componente?"
+• Revelacion: "Cada componente del sistema cumple una función especializada que permite el equilibrio y funcionamiento del conjunto."
+
+Item 2 (Evidencia Experimental y Prevención de Errores):
+• Pregunta Socratica: "Para no caer en el error de 'Confundir la sexualidad con el acto sexual o la reproducción exclusivamente.', ¿qué evidencia científica debemos comprobar antes de concluir?"
+• Respuesta Esperada: Identificar la evidencia empírica u observación experimental que valida la conclusión científica.
+• Feedback de Exito: "¡Exacto! El método científico exige basar las conclusiones en datos comprobables y no en suposiciones."
+• Pista de Apoyo Socratica: "Revisa los datos del experimento: ¿qué demuestran las mediciones u observaciones directas?"
+• Revelacion: "La evidencia empírica comprobable es la única base legítima para formular explicaciones científicas válidas."
+
+--------------------------------------------------------------------------------
+[PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
+--------------------------------------------------------------------------------
+• Cierre y Sintesis del Video Explicativo: "Hoy comprendiste Autocuidado, consentimiento y discernimiento informado en adolescentes con rigor científico y registro visual en tu cuaderno de ciencias."
+
+Comprobacion 1 (Estructura y Función de Respeto mutuo):
+• Pregunta: "¿Qué función específica cumple 'Respeto mutuo' dentro del sistema natural o biológico que estamos investigando?"
+• Respuesta Esperada: Explicar el rol funcional de Respeto mutuo y cómo interactúa con los demás componentes del sistema.
+• Pista de Apoyo: "Piensa en el sistema como un equipo: ¿qué tarea indispensable realiza este componente?"
+• Revelacion: "La función especializada de Respeto mutuo y su interacción en el sistema."
+
+Comprobacion 2 (Evidencia Experimental y Prevención de Errores):
+• Pregunta: "Para no caer en el error de 'Confundir la sexualidad con el acto sexual o la reproducción exclusivamente.', ¿qué evidencia científica debemos comprobar antes de concluir?"
+• Respuesta Esperada: Identificar la evidencia empírica u observación experimental que valida la conclusión científica.
+• Pista de Apoyo: "Revisa los datos del experimento: ¿qué demuestran las mediciones u observaciones directas?"
+• Revelacion: "La evidencia experimental que respalda la conclusión sin dejar lugar a suposiciones."
+
+--------------------------------------------------------------------------------
+[PASO 5: PRACTICA EN EL CUADERNO FISICO]
+--------------------------------------------------------------------------------
+Ejercicio 1 (Ejercicio 1 en Cuaderno: Esquema Rotulado de Investigación):
+• Enunciado de Aplicacion: "Abre tu cuaderno de notas. Escribe como título: 'Responsabilidad individual y toma de decisiones'. Dibuja un diagrama ordenado del sistema estudiado, rotula sus partes principales destacando 'Respeto mutuo' y describe brevemente la función de cada una (Representa mediante un breve sketch una situación cotidiana donde se demuestre r...)."
+• Respuesta Esperada: Esquema científico en el cuaderno con rotulación precisa de estructuras y descripción de funciones.
+• Feedback de Exito: "¡Excelente esquema en tu cuaderno! Las etiquetas son precisas y las relaciones entre partes están claras."
+• Pista de Apoyo Socratica: "Usa flechas para indicar el flujo o la interacción entre los componentes del diagrama."
+
+Ejercicio 2 (Ejercicio 2 en Cuaderno: Análisis de Caso o Causa-Efecto):
+• Enunciado de Aplicacion: "En tu cuaderno, redacta una respuesta científica fundamentada: Si se alterara la condición o componente 'Respeto mutuo', ¿qué consecuencias inmediatas y a largo plazo se observarían en el sistema?"
+• Respuesta Esperada: Explicación causal en el cuaderno anticipando las consecuencias ecológicas o fisiológicas con rigor científico.
+• Feedback de Exito: "¡Muy bien! Tu razonamiento de causa y efecto demuestra una profunda comprensión del equilibrio del sistema."
+• Pista de Apoyo Socratica: "Piensa en cadena: si falla este componente, ¿qué otro proceso se detiene o se desequilibra?"
+
+Modulo: Comparemos dos situaciones (Comparemos dos situaciones)
+• DILE: "Antes de resumir, comparemos dos situaciones. No necesitas repetir una frase exacta: lo importante es que expliques la idea con tus propias palabras."
+• Pregunta: "Al comparar dos situaciones de Responsabilidad individual y toma de decisiones, ¿cómo influye el contexto en la interpretación de los datos?"
+• Respuesta Esperada: El significado o resultado depende de las condiciones del contexto y del propósito de la situación.
+• Feedback si acierta: "¡Excelente razonamiento! Reconociste que el contexto orienta la interpretación de los datos."
+• Feedback si necesita apoyo: "Observa cada situación por separado y explica qué elementos las distinguen."
+
+Modulo: Desafio Breve (Desafío breve: Responsabilidad individual y toma de decisiones)
+• Pregunta: "En Ciencias Naturales, ¿qué diferencia observas entre identificar los datos y aplicar el procedimiento? Explica tu razonamiento."
+• Respuesta Esperada: Identificar los datos determina el punto de partida; aplicar el procedimiento permite construir la respuesta.
+
+--------------------------------------------------------------------------------
+[PASO 6: RESUMEN Y ESTRATEGIA DE PENSAMIENTO]
+--------------------------------------------------------------------------------
+• Idea Clave: "Los sistemas naturales funcionan mediante interacciones precisas entre sus componentes, donde 'Respeto mutuo' cumple un rol fundamental respaldado por evidencia observable."
+• DILE AL ESTUDIANTE: "Cuando enfrentes un problema en Ciencias Naturales, puedes seguir estos tres pasos clave:"
+• Pasos de la Estrategia:
+  Paso 1: Identifica -> ¿Cuáles son los datos clave y cuál es la pregunta central?
+  Paso 2: Aplica -> ¿Qué regla o método disciplinar corresponde utilizar?
+  Paso 3: Comprueba -> ¿La conclusión o resultado responde con coherencia al problema?
+• 3 Ideas Clave Estructuradas de Sintesis:
+  - 1 · Concepto central: Identificamos los elementos y el punto de partida del análisis.
+  - 2 · Interpretación del contexto: Autocuidado, consentimiento y discernimiento informado en adolescentes
+  - 3 · Síntesis formal: Los sistemas naturales funcionan mediante interacciones precisas entre sus componentes, donde 'Respeto mutuo' cumple un rol fundamental respaldado por evidencia observable.
+
+--------------------------------------------------------------------------------
+[PASO 7: MINIQUIZ FORMATIVO Y FASE REVISAR]
+--------------------------------------------------------------------------------
+Pregunta 1: En el estudio científico de Responsabilidad individual y toma de decisiones, ¿cuál de las siguientes afirmaciones describe con mayor precisión la función de Respeto mutuo?
+  A) El proceso ocurre mediante la interacción coordinada de sus componentes según leyes naturales comprobables vinculadas a Respeto mutuo [CORRECTA]
+  B) El fenómeno es completamente aleatorio y no responde a ninguna causa biológica o ambiental identificable 
+  C) El proceso ocurre de manera instantánea sin que intervengan estructuras celulares o fuerzas del entorno 
+• Explicacion Formativa del Error: "Todo proceso natural responde a mecanismos específicos donde cada estructura, como Respeto mutuo, cumple un rol funcional determinado."
+• Guion del Mentor (Fase REVISAR): "Pídele que explique en qué evidencia empírica se basa para seleccionar esta opción."
+
+Pregunta 2: Al analizar las evidencias científicas de Autocuidado, consentimiento y discernimiento informado en adolescentes, ¿qué criterio previene el error frecuente de 'Confundir la sexualidad con el acto sexual o la reproducción exclusivamente.'?
+  A) Verificar experimentalmente las relaciones de causa y efecto mediante datos reproducibles antes de formular una conclusión [CORRECTA]
+  B) Aceptar la primera impresión visual sin contrastarla con observaciones ni registros controlados 
+  C) Asumir que si dos eventos ocurren al mismo tiempo uno es necesariamente la causa del otro 
+• Explicacion Formativa del Error: "En el método científico es indispensable controlar variables y verificar datos antes de establecer causalidad."
+• Guion del Mentor (Fase REVISAR): "Pregúntale: ¿cómo distingue un científico entre una simple coincidencia y una verdadera causa?"
+
+Pregunta 3: ¿De qué manera el conocimiento sobre Responsabilidad individual y toma de decisiones y Respeto mutuo contribuye al autocuidado, la salud o la sustentabilidad ambiental?
+  A) Permite tomar decisiones informadas y fundamentadas en evidencia para prevenir riesgos y mantener el equilibrio saludable [CORRECTA]
+  B) Demuestra que las acciones humanas individuales no tienen ningún impacto en el organismo o en los ecosistemas 
+  C) Indica que basta con guiarse por creencias populares sin verificar la evidencia científica disponible 
+• Explicacion Formativa del Error: "La comprensión de los procesos biológicos y ambientales es la base para el autocuidado responsable, la prevención médica y la sustentabilidad."
+• Guion del Mentor (Fase REVISAR): "Pídele que mencione un ejemplo real de la vida cotidiana donde este conocimiento marque una diferencia."
+
+--------------------------------------------------------------------------------
+[PASO 7B: MODULO DE RECUPERACION FORMATIVA]
+--------------------------------------------------------------------------------
+Refuerzo 1 (Recuperación Científica: Responsabilidad individual y toma de decisiones):
+• Explicacion Previa: "Al estudiar Autocuidado, consentimiento y discernimiento informado en adolescentes, recuerda que Respeto mutuo cumple una función biológica o física específica que podemos verificar mediante evidencias."
+• Pregunta: "¿Cuál es el criterio científico fundamental para validar una explicación en Responsabilidad individual y toma de decisiones?"
+• Opciones: Basar la conclusión en evidencias observables y en el funcionamiento comprobado de Respeto mutuo | Aceptar una afirmación sin requerir evidencias empíricas ni demostración experimental
+• Respuesta Correcta: Basar la conclusión en evidencias observables y en el funcionamiento comprobado de Respeto mutuo
+• Refuerzo si falla: "Recuerda que en Ciencias Naturales la evidencia empírica es el pilar de toda explicación: observa los datos antes de concluir."
+
+--------------------------------------------------------------------------------
+[PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
+--------------------------------------------------------------------------------
+• Felicitacion Final: "¡Felicitaciones! Hoy completaste con éxito la clase "Responsabilidad individual y toma de decisiones". Has demostrado constancia y rigor en tu aprendizaje."
+• Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Ciencias Naturales."
+
+
+
+################################################################################
+### CLASE 5 DE 6: MITOS, ESTEREOTIPOS Y CONVIVENCIA SALUDABLE
+################################################################################
+
+================================================================================
+STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+================================================================================
+
+FICHA CURRICULAR:
+• Asignatura: Ciencias Naturales
+• Nivel / Curso: 7° Básico
+• Objetivo de Aprendizaje: OA 1 - Biología
+• Clase: 5 de 6 ("Mitos, estereotipos y convivencia saludable")
+• Duracion Estimada: 30 Minutos
+
+DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
+1. Proporcion Widescreen 16:9 estricto (1920x1080).
+2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
+3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
+4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
+5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
+   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
+   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
+7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
+8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
+
+================================================================================
+MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Video Motivacional: El Desafío de Mitos, estereotipos y convivencia saludable
+• DILE ANTES DEL VIDEO: "Antes de ver el video, observa con atención lo que descubren los dos exploradores y qué pregunta queda planteada."
+• INSTRUCCION AL ESTUDIANTE: "Observa y reflexiona con las escenas del desafío visual."
+• DILE DESPUES DEL VIDEO: "Muy buena observación. Ahora conversaremos sobre lo que descubrieron en la expedición."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Apertura y Contexto (9 seg aprox) ---
+1. Propósito Didáctico: Apertura y Contexto
+2. Título en Pantalla (64 pt): Misión 5: Mitos, estereotipos y convivencia saludable
+3. Subtítulo en Pantalla (36 pt): Exploración inicial en Ciencias Naturales
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Mitos, estereotipos y convivencia saludable (Ciencias Naturales). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama integrador: Fenomeno observable de Mitos, estereotipos y convivencia saludable
+6. Notas al Orador (Locución Google Vids): "Comienza una nueva expedición de aprendizaje en Ciencias Naturales. Nuestros dos exploradores analizan el desafío de Mitos, estereotipos y convivencia saludable para descubrir sus secretos."
+
+--- DIAPOSITIVA 2: Presentación del Escenario (9 seg aprox) ---
+1. Propósito Didáctico: Presentación del Escenario
+2. Título en Pantalla (64 pt): Punto de partida
+3. Subtítulo en Pantalla (36 pt): Análisis crítico de mitos culturales sobre la sexualidad y el género
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Análisis crítico de mitos culturales sobre la sexualidad y el género. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo de indagacion: Análisis crítico de mitos culturales sobre la sexualidad y el género con flechas de proceso
+6. Notas al Orador (Locución Google Vids): "Al observar los datos sobre Análisis crítico de mitos culturales sobre la sexualidad y el género, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor."
+
+--- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 seg aprox) ---
+1. Propósito Didáctico: Aparición del Conflicto / Misterio
+2. Título en Pantalla (64 pt): El enigma disciplinar
+3. Subtítulo en Pantalla (36 pt): Desafío en Mitos, estereotipos y convivencia saludable
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo de indagacion: Análisis crítico de mitos culturales sobre la sexualidad y el género con flechas de proceso
+6. Notas al Orador (Locución Google Vids): "Surge un reto concreto sobre Mitos, estereotipos y convivencia saludable: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso."
+
+--- DIAPOSITIVA 4: Exploración de Pistas (9 seg aprox) ---
+1. Propósito Didáctico: Exploración de Pistas
+2. Título en Pantalla (64 pt): Análisis de evidencias
+3. Subtítulo en Pantalla (36 pt): Análisis crítico de mitos culturales sobre la sexualidad y el género
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo de indagacion: Análisis crítico de mitos culturales sobre la sexualidad y el género con flechas de proceso
+6. Notas al Orador (Locución Google Vids): "Ambos comparan las pistas disponibles sobre Análisis crítico de mitos culturales sobre la sexualidad y el género. Cada dato confirma cómo interactúan los elementos clave de la situación."
+
+--- DIAPOSITIVA 5: El Momento Crítico (9 seg aprox) ---
+1. Propósito Didáctico: El Momento Crítico
+2. Título en Pantalla (64 pt): Criterio de decisión
+3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo de indagacion: Análisis crítico de mitos culturales sobre la sexualidad y el género con flechas de proceso
+6. Notas al Orador (Locución Google Vids): "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Mitos, estereotipos y convivencia saludable con total precisión metodológica."
+
+--- DIAPOSITIVA 6: La Antesala de la Pregunta (9 seg aprox) ---
+1. Propósito Didáctico: La Antesala de la Pregunta
+2. Título en Pantalla (64 pt): El dilema central
+3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Mitos, estereotipos y convivencia saludable?
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de variables: Interaccion de factores en observacion
+6. Notas al Orador (Locución Google Vids): "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje."
+
+--- DIAPOSITIVA 7: La Pregunta Detonante (9 seg aprox) ---
+1. Propósito Didáctico: La Pregunta Detonante
+2. Título en Pantalla (64 pt): Pregunta detonante
+3. Subtítulo en Pantalla (36 pt): Regla y método de Mitos, estereotipos y convivencia saludable
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta detonante: ¿Como interactuan los factores en Mitos, estereotipos y convivencia saludable?
+6. Notas al Orador (Locución Google Vids): "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!"
+
+================================================================================
+MODULO 2: PROMPT VIDEO EXPLICATIVO CONCEPTUAL (PASO 4 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Video Explicativo: Formalización de Mitos, estereotipos y convivencia saludable
+• Idea Clave: "Los sistemas naturales funcionan mediante interacciones precisas entre sus componentes, donde 'Responsabilidad individual' cumple un rol fundamental respaldado por evidencia observable."
+• DILE ANTES DEL VIDEO: "Ahora veremos el video explicativo de Mitos, estereotipos y convivencia saludable. Presta atención al diagrama y a cómo se demuestra la función de Responsabilidad individual."
+• INSTRUCCION: "Revisemos la explicación formal y la idea clave."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
+1. Propósito Didáctico: Objetivo de la Lección
+2. Título en Pantalla (64 pt): Objetivo de la lección
+3. Subtítulo en Pantalla (36 pt): Dominar Mitos, estereotipos y convivencia saludable: Análisis crítico de mitos culturales sobre la sexualidad y el género
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Análisis crítico de mitos culturales sobre la sexualidad y el género. High clarity, negative space for text. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 1 · Mitos, estereotipos y convivencia saludable
+6. Notas al Orador (Locución Google Vids): "El objetivo de hoy es aprender a análisis crítico de mitos culturales sobre la sexualidad y el género, aplicando el método disciplinar paso a paso con total rigor y claridad."
+
+--- DIAPOSITIVA 2: Definición del Concepto Central (12 seg aprox) ---
+1. Propósito Didáctico: Definición del Concepto Central
+2. Título en Pantalla (64 pt): Concepto fundamental
+3. Subtítulo en Pantalla (36 pt): Análisis crítico de mitos culturales sobre la sexualidad y el género
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo cientifico y variables causales de Análisis crítico de mitos culturales sobre la sexualidad y el género
+6. Notas al Orador (Locución Google Vids): "Para comprender Mitos, estereotipos y convivencia saludable, establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación."
+
+--- DIAPOSITIVA 3: Demostración Modelada (12 seg aprox) ---
+1. Propósito Didáctico: Demostración Modelada
+2. Título en Pantalla (64 pt): Modelamiento paso a paso
+3. Subtítulo en Pantalla (36 pt): Procedimiento de Mitos, estereotipos y convivencia saludable
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama de proceso paso a paso con flechas de causalidad
+6. Notas al Orador (Locución Google Vids): "Observa cómo se aplica el procedimiento en este caso guiado: cada transformación responde a una justificación disciplinar explícita y visible."
+
+--- DIAPOSITIVA 4: Prevención del Error Frecuente (13 seg aprox) ---
+1. Propósito Didáctico: Prevención del Error Frecuente
+2. Título en Pantalla (64 pt): Atención: Error habitual
+3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Contraste experimental: error de interpretacion comun
+6. Notas al Orador (Locución Google Vids): "Un error frecuente ocurre al descuidar el orden o saltarse un paso de la convención establecida. Siempre comprobamos cada dato antes de continuar."
+
+--- DIAPOSITIVA 5: Comprobación del Resultado (12 seg aprox) ---
+1. Propósito Didáctico: Comprobación del Resultado
+2. Título en Pantalla (64 pt): Validación del resultado
+3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Validacion de la evidencia cientifica y coherencia del modelo
+6. Notas al Orador (Locución Google Vids): "Al contrastar el resultado con la situación inicial, confirmamos que la solución es consistente, rigurosa y responde plenamente a la pregunta."
+
+--- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 seg aprox) ---
+1. Propósito Didáctico: Estrategia Mnemotécnica
+2. Título en Pantalla (64 pt): Estrategia de pensamiento
+3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Estrategia de pensamiento cientifico: Observar, modelar y contrastar
+6. Notas al Orador (Locución Google Vids): "Recuerda siempre la estrategia en tres pasos: identificar la información clave, aplicar la regla en orden y comprobar el resultado final."
+
+--- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 seg aprox) ---
+1. Propósito Didáctico: Síntesis y Regla de Oro
+2. Título en Pantalla (64 pt): Regla de Oro: Mitos, estereotipos y convivencia saludable
+3. Subtítulo en Pantalla (36 pt): Método disciplinar validado
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Infografía de síntesis: Principio cientifico de Mitos, estereotipos y convivencia saludable
+6. Notas al Orador (Locución Google Vids): "Ahora que dominas la regla fundamental y el procedimiento de Mitos, estereotipos y convivencia saludable, ¡vamos a demostrarlo en las actividades interactivas de la plataforma!"
+
+================================================================================
+MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
+================================================================================
+
+[PREPARACION DEL ADULTO / MENTOR]
+• Objetivo del Adulto: Guiar la observación y el análisis científico en torno a: Mitos, estereotipos y convivencia saludable, facilitando la comprensión de Responsabilidad individual mediante evidencias empíricas.
+• Ruta de Hoy: 1. Inicio y activación · 2. Video de exploración · 3. Recorrido guiado · 4. Formalización y práctica en cuaderno · 5. Miniquiz y REVISAR · 6. Cierre metacognitivo
+• Recordatorios Pedagogicos del Mentor:
+  1. Sigue el orden indicado.
+  2. Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.
+  3. No leas los recuadros SOLO PARA TI ni AYUDA DE LECTURA.
+  4. Haz cada pregunta y espera la respuesta antes de seleccionar una opción.
+  5. Considera correcta una respuesta si expresa la idea matemática, aunque use palabras distintas.
+  6. Si el estudiante necesita apoyo, usa únicamente la ayuda que aparecerá.
+  7. Si propone otra explicación o no está de acuerdo, escúchalo completo y valora su razonamiento antes de guiarlo.
+• Clima Emocional y Acogida: "Estimula el rigor observacional: 'Un buen científico contrasta sus ideas con lo que los datos demuestran'."
+
+--------------------------------------------------------------------------------
+[PASO 1: INICIO (4 SUB-ETAPAS CANONICAS)]
+--------------------------------------------------------------------------------
+Sub-etapa 1: Nuestra Ruta de la Asignatura
+• DILE AL ESTUDIANTE (Apertura de la ruta): "Hoy comenzaremos la clase 5 de Ciencias Naturales: "Mitos, estereotipos y convivencia saludable"."
+• 4 Bloques Tematicos de la Asignatura:
+  Bloque 01: Ciencias Naturales (Mitos, estereotipos y convivencia saludable)
+  Bloque 02: Exploración (Gancho y Recorrido Guiado)
+  Bloque 03: Práctica (Aplicación en situaciones reales)
+  Bloque 04: Evaluación (Miniquiz formativo y síntesis)
+
+Sub-etapa 2: La Clase de Hoy
+• DILE AL ESTUDIANTE (Foco didactico): "Análisis crítico de mitos culturales sobre la sexualidad y el género"
+• 3 Tarjetas de Foco de la Pantalla del Estudiante:
+  Tarjeta 1: Exploración inicial -> Mitos, estereotipos y convivencia saludable
+  Tarjeta 2: Idea clave -> Los sistemas naturales funcionan mediante interacciones prec
+  Tarjeta 3: Práctica y aplicación -> Resolución guiada paso a paso
+
+Sub-etapa 3: Situacion Inicial de Exploracion (Detonante)
+• DILE AL ESTUDIANTE (Situacion detonante): "Hoy en Ciencias Naturales investigamos 'Mitos, estereotipos y convivencia saludable'. El fenómeno central del currículum se basa en 'Responsabilidad individual'. Observa la evidencia o experimento inicial en la pantalla:"
+• RESPUESTA ESPERADA: Describir las estructuras, componentes o variables involucradas en el fenómeno de Mitos, estereotipos y convivencia saludable y vincularlas con Responsabilidad individual.
+• PISTA SOCRATICA (SOLO PARA TI): "Pídele que señale qué elementos o condiciones cambian y qué permanece constante."
+• CLIMA EMOCIONAL: "Estimula el rigor observacional: 'Un buen científico contrasta sus ideas con lo que los datos demuestran'."
+• Pautas de Evaluacion Formativa del Mentor:
+  - [Acierto] Identificó las estructuras y explicó la relación con Responsabilidad individual -> Feedback: "¡Excelente observación! Reconoció las variables y componentes centrales del fenómeno."
+  - [Requiere Apoyo] Describió solo un detalle superficial sin relacionar las causas con los efectos -> Feedback: "Observa qué causa produce el cambio: ¿qué estructura o fuerza está actuando?"
+
+Sub-etapa 4: Comprendamos la Respuesta (Punto de Referencia)
+• DILE AL ESTUDIANTE (Formalizacion de referencia): "¿Qué fenómeno observable ocurre en este escenario de Análisis crítico de mitos culturales sobre la sexualidad y el género y cómo se relaciona con 'Responsabilidad individual'?"
+• PREGUNTALE AL ESTUDIANTE: "¿Qué fenómeno observable ocurre en este escenario de Análisis crítico de mitos culturales sobre la sexualidad y el género y cómo se relaciona con 'Responsabilidad individual'?"
+• RESPUESTA ESPERADA: Describir las estructuras, componentes o variables involucradas en el fenómeno de Mitos, estereotipos y convivencia saludable y vincularlas con Responsabilidad individual.
+• PISTA SOCRATICA: "Pídele que señale qué elementos o condiciones cambian y qué permanece constante."
+• FEEDBACK SI ACIERTA: "Muy bien. Observaste el detalle central con precisión."
+• FEEDBACK SI NECESITA APOYO: "Pídele que señale qué elementos o condiciones cambian y qué permanece constante."
+
+--------------------------------------------------------------------------------
+[PASO 3: RECORRIDO - CONVERSACION GUIADA Y PREGUNTAS SOCRATICAS]
+--------------------------------------------------------------------------------
+Item 1 (Estructura y Función de Responsabilidad individual):
+• Pregunta Socratica: "¿Qué función específica cumple 'Responsabilidad individual' dentro del sistema natural o biológico que estamos investigando?"
+• Respuesta Esperada: Explicar el rol funcional de Responsabilidad individual y cómo interactúa con los demás componentes del sistema.
+• Feedback de Exito: "¡Muy bien! Relacionaste con precisión la estructura con su función biológica o física."
+• Pista de Apoyo Socratica: "Piensa en el sistema como un equipo: ¿qué tarea indispensable realiza este componente?"
+• Revelacion: "Cada componente del sistema cumple una función especializada que permite el equilibrio y funcionamiento del conjunto."
+
+Item 2 (Evidencia Experimental y Prevención de Errores):
+• Pregunta Socratica: "Para no caer en el error de 'Dificultad para diferenciar los cambios físicos de los emocionales y sociales durante la pubertad.', ¿qué evidencia científica debemos comprobar antes de concluir?"
+• Respuesta Esperada: Identificar la evidencia empírica u observación experimental que valida la conclusión científica.
+• Feedback de Exito: "¡Exacto! El método científico exige basar las conclusiones en datos comprobables y no en suposiciones."
+• Pista de Apoyo Socratica: "Revisa los datos del experimento: ¿qué demuestran las mediciones u observaciones directas?"
+• Revelacion: "La evidencia empírica comprobable es la única base legítima para formular explicaciones científicas válidas."
+
+--------------------------------------------------------------------------------
+[PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
+--------------------------------------------------------------------------------
+• Cierre y Sintesis del Video Explicativo: "Hoy comprendiste Análisis crítico de mitos culturales sobre la sexualidad y el género con rigor científico y registro visual en tu cuaderno de ciencias."
+
+Comprobacion 1 (Estructura y Función de Responsabilidad individual):
+• Pregunta: "¿Qué función específica cumple 'Responsabilidad individual' dentro del sistema natural o biológico que estamos investigando?"
+• Respuesta Esperada: Explicar el rol funcional de Responsabilidad individual y cómo interactúa con los demás componentes del sistema.
+• Pista de Apoyo: "Piensa en el sistema como un equipo: ¿qué tarea indispensable realiza este componente?"
+• Revelacion: "La función especializada de Responsabilidad individual y su interacción en el sistema."
+
+Comprobacion 2 (Evidencia Experimental y Prevención de Errores):
+• Pregunta: "Para no caer en el error de 'Dificultad para diferenciar los cambios físicos de los emocionales y sociales durante la pubertad.', ¿qué evidencia científica debemos comprobar antes de concluir?"
+• Respuesta Esperada: Identificar la evidencia empírica u observación experimental que valida la conclusión científica.
+• Pista de Apoyo: "Revisa los datos del experimento: ¿qué demuestran las mediciones u observaciones directas?"
+• Revelacion: "La evidencia experimental que respalda la conclusión sin dejar lugar a suposiciones."
+
+--------------------------------------------------------------------------------
+[PASO 5: PRACTICA EN EL CUADERNO FISICO]
+--------------------------------------------------------------------------------
+Ejercicio 1 (Ejercicio 1 en Cuaderno: Esquema Rotulado de Investigación):
+• Enunciado de Aplicacion: "Abre tu cuaderno de notas. Escribe como título: 'Mitos, estereotipos y convivencia saludable'. Dibuja un diagrama ordenado del sistema estudiado, rotula sus partes principales destacando 'Responsabilidad individual' y describe brevemente la función de cada una (Representa mediante un breve sketch una situación cotidiana donde se demuestre r...)."
+• Respuesta Esperada: Esquema científico en el cuaderno con rotulación precisa de estructuras y descripción de funciones.
+• Feedback de Exito: "¡Excelente esquema en tu cuaderno! Las etiquetas son precisas y las relaciones entre partes están claras."
+• Pista de Apoyo Socratica: "Usa flechas para indicar el flujo o la interacción entre los componentes del diagrama."
+
+Ejercicio 2 (Ejercicio 2 en Cuaderno: Análisis de Caso o Causa-Efecto):
+• Enunciado de Aplicacion: "En tu cuaderno, redacta una respuesta científica fundamentada: Si se alterara la condición o componente 'Responsabilidad individual', ¿qué consecuencias inmediatas y a largo plazo se observarían en el sistema?"
+• Respuesta Esperada: Explicación causal en el cuaderno anticipando las consecuencias ecológicas o fisiológicas con rigor científico.
+• Feedback de Exito: "¡Muy bien! Tu razonamiento de causa y efecto demuestra una profunda comprensión del equilibrio del sistema."
+• Pista de Apoyo Socratica: "Piensa en cadena: si falla este componente, ¿qué otro proceso se detiene o se desequilibra?"
+
+Modulo: Comparemos dos situaciones (Comparemos dos situaciones)
+• DILE: "Antes de resumir, comparemos dos situaciones. No necesitas repetir una frase exacta: lo importante es que expliques la idea con tus propias palabras."
+• Pregunta: "Al comparar dos situaciones de Mitos, estereotipos y convivencia saludable, ¿cómo influye el contexto en la interpretación de los datos?"
+• Respuesta Esperada: El significado o resultado depende de las condiciones del contexto y del propósito de la situación.
+• Feedback si acierta: "¡Excelente razonamiento! Reconociste que el contexto orienta la interpretación de los datos."
+• Feedback si necesita apoyo: "Observa cada situación por separado y explica qué elementos las distinguen."
+
+Modulo: Desafio Breve (Desafío breve: Mitos, estereotipos y convivencia saludable)
+• Pregunta: "En Ciencias Naturales, ¿qué diferencia observas entre identificar los datos y aplicar el procedimiento? Explica tu razonamiento."
+• Respuesta Esperada: Identificar los datos determina el punto de partida; aplicar el procedimiento permite construir la respuesta.
+
+--------------------------------------------------------------------------------
+[PASO 6: RESUMEN Y ESTRATEGIA DE PENSAMIENTO]
+--------------------------------------------------------------------------------
+• Idea Clave: "Los sistemas naturales funcionan mediante interacciones precisas entre sus componentes, donde 'Responsabilidad individual' cumple un rol fundamental respaldado por evidencia observable."
+• DILE AL ESTUDIANTE: "Cuando enfrentes un problema en Ciencias Naturales, puedes seguir estos tres pasos clave:"
+• Pasos de la Estrategia:
+  Paso 1: Identifica -> ¿Cuáles son los datos clave y cuál es la pregunta central?
+  Paso 2: Aplica -> ¿Qué regla o método disciplinar corresponde utilizar?
+  Paso 3: Comprueba -> ¿La conclusión o resultado responde con coherencia al problema?
+• 3 Ideas Clave Estructuradas de Sintesis:
+  - 1 · Concepto central: Identificamos los elementos y el punto de partida del análisis.
+  - 2 · Interpretación del contexto: Análisis crítico de mitos culturales sobre la sexualidad y el género
+  - 3 · Síntesis formal: Los sistemas naturales funcionan mediante interacciones precisas entre sus componentes, donde 'Responsabilidad individual' cumple un rol fundamental respaldado por evidencia observable.
+
+--------------------------------------------------------------------------------
+[PASO 7: MINIQUIZ FORMATIVO Y FASE REVISAR]
+--------------------------------------------------------------------------------
+Pregunta 1: En el estudio científico de Mitos, estereotipos y convivencia saludable, ¿cuál de las siguientes afirmaciones describe con mayor precisión la función de Responsabilidad individual?
+  A) El proceso ocurre mediante la interacción coordinada de sus componentes según leyes naturales comprobables vinculadas a Responsabilidad individual [CORRECTA]
+  B) El fenómeno es completamente aleatorio y no responde a ninguna causa biológica o ambiental identificable 
+  C) El proceso ocurre de manera instantánea sin que intervengan estructuras celulares o fuerzas del entorno 
+• Explicacion Formativa del Error: "Todo proceso natural responde a mecanismos específicos donde cada estructura, como Responsabilidad individual, cumple un rol funcional determinado."
+• Guion del Mentor (Fase REVISAR): "Pídele que explique en qué evidencia empírica se basa para seleccionar esta opción."
+
+Pregunta 2: Al analizar las evidencias científicas de Análisis crítico de mitos culturales sobre la sexualidad y el género, ¿qué criterio previene el error frecuente de 'Dificultad para diferenciar los cambios físicos de los emocionales y sociales durante la pubertad.'?
+  A) Verificar experimentalmente las relaciones de causa y efecto mediante datos reproducibles antes de formular una conclusión [CORRECTA]
+  B) Aceptar la primera impresión visual sin contrastarla con observaciones ni registros controlados 
+  C) Asumir que si dos eventos ocurren al mismo tiempo uno es necesariamente la causa del otro 
+• Explicacion Formativa del Error: "En el método científico es indispensable controlar variables y verificar datos antes de establecer causalidad."
+• Guion del Mentor (Fase REVISAR): "Pregúntale: ¿cómo distingue un científico entre una simple coincidencia y una verdadera causa?"
+
+Pregunta 3: ¿De qué manera el conocimiento sobre Mitos, estereotipos y convivencia saludable y Responsabilidad individual contribuye al autocuidado, la salud o la sustentabilidad ambiental?
+  A) Permite tomar decisiones informadas y fundamentadas en evidencia para prevenir riesgos y mantener el equilibrio saludable [CORRECTA]
+  B) Demuestra que las acciones humanas individuales no tienen ningún impacto en el organismo o en los ecosistemas 
+  C) Indica que basta con guiarse por creencias populares sin verificar la evidencia científica disponible 
+• Explicacion Formativa del Error: "La comprensión de los procesos biológicos y ambientales es la base para el autocuidado responsable, la prevención médica y la sustentabilidad."
+• Guion del Mentor (Fase REVISAR): "Pídele que mencione un ejemplo real de la vida cotidiana donde este conocimiento marque una diferencia."
+
+--------------------------------------------------------------------------------
+[PASO 7B: MODULO DE RECUPERACION FORMATIVA]
+--------------------------------------------------------------------------------
+Refuerzo 1 (Recuperación Científica: Mitos, estereotipos y convivencia saludable):
+• Explicacion Previa: "Al estudiar Análisis crítico de mitos culturales sobre la sexualidad y el género, recuerda que Responsabilidad individual cumple una función biológica o física específica que podemos verificar mediante evidencias."
+• Pregunta: "¿Cuál es el criterio científico fundamental para validar una explicación en Mitos, estereotipos y convivencia saludable?"
+• Opciones: Basar la conclusión en evidencias observables y en el funcionamiento comprobado de Responsabilidad individual | Aceptar una afirmación sin requerir evidencias empíricas ni demostración experimental
+• Respuesta Correcta: Basar la conclusión en evidencias observables y en el funcionamiento comprobado de Responsabilidad individual
+• Refuerzo si falla: "Recuerda que en Ciencias Naturales la evidencia empírica es el pilar de toda explicación: observa los datos antes de concluir."
+
+--------------------------------------------------------------------------------
+[PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
+--------------------------------------------------------------------------------
+• Felicitacion Final: "¡Felicitaciones! Hoy completaste con éxito la clase "Mitos, estereotipos y convivencia saludable". Has demostrado constancia y rigor en tu aprendizaje."
+• Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Ciencias Naturales."
+
+
+
+################################################################################
+### CLASE 6 DE 6: SÍNTESIS Y SIMULACIÓN TIPO EXAMEN LIBRE
+################################################################################
+
+================================================================================
+STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+================================================================================
+
+FICHA CURRICULAR:
+• Asignatura: Ciencias Naturales
+• Nivel / Curso: 7° Básico
+• Objetivo de Aprendizaje: OA 1 - Biología
+• Clase: 6 de 6 ("Síntesis y simulación tipo Examen Libre")
+• Duracion Estimada: 30 Minutos
+
+DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
+1. Proporcion Widescreen 16:9 estricto (1920x1080).
+2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
+3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
+4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
+5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
+   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
+   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
+7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
+8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
+
+================================================================================
+MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Video Motivacional: El Desafío de Síntesis y simulación tipo Examen Libre
+• DILE ANTES DEL VIDEO: "Antes de ver el video, observa con atención lo que descubren los dos exploradores y qué pregunta queda planteada."
+• INSTRUCCION AL ESTUDIANTE: "Observa y reflexiona con las escenas del desafío visual."
+• DILE DESPUES DEL VIDEO: "Muy buena observación. Ahora conversaremos sobre lo que descubrieron en la expedición."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Apertura y Contexto (9 seg aprox) ---
+1. Propósito Didáctico: Apertura y Contexto
+2. Título en Pantalla (64 pt): Misión 6: Síntesis y simulación tipo Examen Libre
+3. Subtítulo en Pantalla (36 pt): Exploración inicial en Ciencias Naturales
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Síntesis y simulación tipo Examen Libre (Ciencias Naturales). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama integrador: Fenomeno observable de Síntesis y simulación tipo Examen Libre
+6. Notas al Orador (Locución Google Vids): "Comienza una nueva expedición de aprendizaje en Ciencias Naturales. Nuestros dos exploradores analizan el desafío de Síntesis y simulación tipo Examen Libre para descubrir sus secretos."
+
+--- DIAPOSITIVA 2: Presentación del Escenario (9 seg aprox) ---
+1. Propósito Didáctico: Presentación del Escenario
+2. Título en Pantalla (64 pt): Punto de partida
+3. Subtítulo en Pantalla (36 pt): Evaluación formativa, análisis de dilemas y cierre del OA
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Evaluación formativa, análisis de dilemas y cierre del OA. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo de indagacion: Evaluación formativa, análisis de dilemas y cierre del OA con flechas de proceso
+6. Notas al Orador (Locución Google Vids): "Al observar los datos sobre Evaluación formativa, análisis de dilemas y cierre del OA, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor."
+
+--- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 seg aprox) ---
+1. Propósito Didáctico: Aparición del Conflicto / Misterio
+2. Título en Pantalla (64 pt): El enigma disciplinar
+3. Subtítulo en Pantalla (36 pt): Desafío en Síntesis y simulación tipo Examen Libre
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo de indagacion: Evaluación formativa, análisis de dilemas y cierre del OA con flechas de proceso
+6. Notas al Orador (Locución Google Vids): "Surge un reto concreto sobre Síntesis y simulación tipo Examen Libre: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso."
+
+--- DIAPOSITIVA 4: Exploración de Pistas (9 seg aprox) ---
+1. Propósito Didáctico: Exploración de Pistas
+2. Título en Pantalla (64 pt): Análisis de evidencias
+3. Subtítulo en Pantalla (36 pt): Evaluación formativa, análisis de dilemas y cierre del OA
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo de indagacion: Evaluación formativa, análisis de dilemas y cierre del OA con flechas de proceso
+6. Notas al Orador (Locución Google Vids): "Ambos comparan las pistas disponibles sobre Evaluación formativa, análisis de dilemas y cierre del OA. Cada dato confirma cómo interactúan los elementos clave de la situación."
+
+--- DIAPOSITIVA 5: El Momento Crítico (9 seg aprox) ---
+1. Propósito Didáctico: El Momento Crítico
+2. Título en Pantalla (64 pt): Criterio de decisión
+3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo de indagacion: Evaluación formativa, análisis de dilemas y cierre del OA con flechas de proceso
+6. Notas al Orador (Locución Google Vids): "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Síntesis y simulación tipo Examen Libre con total precisión metodológica."
+
+--- DIAPOSITIVA 6: La Antesala de la Pregunta (9 seg aprox) ---
+1. Propósito Didáctico: La Antesala de la Pregunta
+2. Título en Pantalla (64 pt): El dilema central
+3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Síntesis y simulación tipo Examen Libre?
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de variables: Interaccion de factores en observacion
+6. Notas al Orador (Locución Google Vids): "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje."
+
+--- DIAPOSITIVA 7: La Pregunta Detonante (9 seg aprox) ---
+1. Propósito Didáctico: La Pregunta Detonante
+2. Título en Pantalla (64 pt): Pregunta detonante
+3. Subtítulo en Pantalla (36 pt): Regla y método de Síntesis y simulación tipo Examen Libre
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta detonante: ¿Como interactuan los factores en Síntesis y simulación tipo Examen Libre?
+6. Notas al Orador (Locución Google Vids): "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!"
+
+================================================================================
+MODULO 2: PROMPT VIDEO EXPLICATIVO CONCEPTUAL (PASO 4 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Video Explicativo: Formalización de Síntesis y simulación tipo Examen Libre
+• Idea Clave: "Los sistemas naturales funcionan mediante interacciones precisas entre sus componentes, donde 'Sexualidad integral' cumple un rol fundamental respaldado por evidencia observable."
+• DILE ANTES DEL VIDEO: "Ahora veremos el video explicativo de Síntesis y simulación tipo Examen Libre. Presta atención al diagrama y a cómo se demuestra la función de Sexualidad integral."
+• INSTRUCCION: "Revisemos la explicación formal y la idea clave."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
+1. Propósito Didáctico: Objetivo de la Lección
+2. Título en Pantalla (64 pt): Objetivo de la lección
+3. Subtítulo en Pantalla (36 pt): Dominar Síntesis y simulación tipo Examen Libre: Evaluación formativa, análisis de dilemas y cierre del OA
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Evaluación formativa, análisis de dilemas y cierre del OA. High clarity, negative space for text. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 1 · Síntesis y simulación tipo Examen Libre
+6. Notas al Orador (Locución Google Vids): "El objetivo de hoy es aprender a evaluación formativa, análisis de dilemas y cierre del oa, aplicando el método disciplinar paso a paso con total rigor y claridad."
+
+--- DIAPOSITIVA 2: Definición del Concepto Central (12 seg aprox) ---
+1. Propósito Didáctico: Definición del Concepto Central
+2. Título en Pantalla (64 pt): Concepto fundamental
+3. Subtítulo en Pantalla (36 pt): Evaluación formativa, análisis de dilemas y cierre del OA
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo cientifico y variables causales de Evaluación formativa, análisis de dilemas y cierre del OA
+6. Notas al Orador (Locución Google Vids): "Para comprender Síntesis y simulación tipo Examen Libre, establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación."
+
+--- DIAPOSITIVA 3: Demostración Modelada (12 seg aprox) ---
+1. Propósito Didáctico: Demostración Modelada
+2. Título en Pantalla (64 pt): Modelamiento paso a paso
+3. Subtítulo en Pantalla (36 pt): Procedimiento de Síntesis y simulación tipo Examen Libre
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama de proceso paso a paso con flechas de causalidad
+6. Notas al Orador (Locución Google Vids): "Observa cómo se aplica el procedimiento en este caso guiado: cada transformación responde a una justificación disciplinar explícita y visible."
+
+--- DIAPOSITIVA 4: Prevención del Error Frecuente (13 seg aprox) ---
+1. Propósito Didáctico: Prevención del Error Frecuente
+2. Título en Pantalla (64 pt): Atención: Error habitual
+3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Contraste experimental: error de interpretacion comun
+6. Notas al Orador (Locución Google Vids): "Un error frecuente ocurre al descuidar el orden o saltarse un paso de la convención establecida. Siempre comprobamos cada dato antes de continuar."
+
+--- DIAPOSITIVA 5: Comprobación del Resultado (12 seg aprox) ---
+1. Propósito Didáctico: Comprobación del Resultado
+2. Título en Pantalla (64 pt): Validación del resultado
+3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Validacion de la evidencia cientifica y coherencia del modelo
+6. Notas al Orador (Locución Google Vids): "Al contrastar el resultado con la situación inicial, confirmamos que la solución es consistente, rigurosa y responde plenamente a la pregunta."
+
+--- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 seg aprox) ---
+1. Propósito Didáctico: Estrategia Mnemotécnica
+2. Título en Pantalla (64 pt): Estrategia de pensamiento
+3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Estrategia de pensamiento cientifico: Observar, modelar y contrastar
+6. Notas al Orador (Locución Google Vids): "Recuerda siempre la estrategia en tres pasos: identificar la información clave, aplicar la regla en orden y comprobar el resultado final."
+
+--- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 seg aprox) ---
+1. Propósito Didáctico: Síntesis y Regla de Oro
+2. Título en Pantalla (64 pt): Regla de Oro: Síntesis y simulación tipo Examen Libre
+3. Subtítulo en Pantalla (36 pt): Método disciplinar validado
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Infografía de síntesis: Principio cientifico de Síntesis y simulación tipo Examen Libre
+6. Notas al Orador (Locución Google Vids): "Ahora que dominas la regla fundamental y el procedimiento de Síntesis y simulación tipo Examen Libre, ¡vamos a demostrarlo en las actividades interactivas de la plataforma!"
+
+================================================================================
+MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
+================================================================================
+
+[PREPARACION DEL ADULTO / MENTOR]
+• Objetivo del Adulto: Guiar la observación y el análisis científico en torno a: Síntesis y simulación tipo Examen Libre, facilitando la comprensión de Sexualidad integral mediante evidencias empíricas.
+• Ruta de Hoy: 1. Inicio y activación · 2. Video de exploración · 3. Recorrido guiado · 4. Formalización y práctica en cuaderno · 5. Miniquiz y REVISAR · 6. Cierre metacognitivo
+• Recordatorios Pedagogicos del Mentor:
+  1. Sigue el orden indicado.
+  2. Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.
+  3. No leas los recuadros SOLO PARA TI ni AYUDA DE LECTURA.
+  4. Haz cada pregunta y espera la respuesta antes de seleccionar una opción.
+  5. Considera correcta una respuesta si expresa la idea matemática, aunque use palabras distintas.
+  6. Si el estudiante necesita apoyo, usa únicamente la ayuda que aparecerá.
+  7. Si propone otra explicación o no está de acuerdo, escúchalo completo y valora su razonamiento antes de guiarlo.
+• Clima Emocional y Acogida: "Estimula el rigor observacional: 'Un buen científico contrasta sus ideas con lo que los datos demuestran'."
+
+--------------------------------------------------------------------------------
+[PASO 1: INICIO (4 SUB-ETAPAS CANONICAS)]
+--------------------------------------------------------------------------------
+Sub-etapa 1: Nuestra Ruta de la Asignatura
+• DILE AL ESTUDIANTE (Apertura de la ruta): "Hoy comenzaremos la clase 6 de Ciencias Naturales: "Síntesis y simulación tipo Examen Libre"."
+• 4 Bloques Tematicos de la Asignatura:
+  Bloque 01: Ciencias Naturales (Síntesis y simulación tipo Examen Libre)
+  Bloque 02: Exploración (Gancho y Recorrido Guiado)
+  Bloque 03: Práctica (Aplicación en situaciones reales)
+  Bloque 04: Evaluación (Miniquiz formativo y síntesis)
+
+Sub-etapa 2: La Clase de Hoy
+• DILE AL ESTUDIANTE (Foco didactico): "Evaluación formativa, análisis de dilemas y cierre del OA"
+• 3 Tarjetas de Foco de la Pantalla del Estudiante:
+  Tarjeta 1: Exploración inicial -> Síntesis y simulación tipo Examen Libre
+  Tarjeta 2: Idea clave -> Los sistemas naturales funcionan mediante interacciones prec
+  Tarjeta 3: Práctica y aplicación -> Resolución guiada paso a paso
+
+Sub-etapa 3: Situacion Inicial de Exploracion (Detonante)
+• DILE AL ESTUDIANTE (Situacion detonante): "Hoy en Ciencias Naturales investigamos 'Síntesis y simulación tipo Examen Libre'. El fenómeno central del currículum se basa en 'Sexualidad integral'. Observa la evidencia o experimento inicial en la pantalla:"
+• RESPUESTA ESPERADA: Describir las estructuras, componentes o variables involucradas en el fenómeno de Síntesis y simulación tipo Examen Libre y vincularlas con Sexualidad integral.
+• PISTA SOCRATICA (SOLO PARA TI): "Pídele que señale qué elementos o condiciones cambian y qué permanece constante."
+• CLIMA EMOCIONAL: "Estimula el rigor observacional: 'Un buen científico contrasta sus ideas con lo que los datos demuestran'."
+• Pautas de Evaluacion Formativa del Mentor:
+  - [Acierto] Identificó las estructuras y explicó la relación con Sexualidad integral -> Feedback: "¡Excelente observación! Reconoció las variables y componentes centrales del fenómeno."
+  - [Requiere Apoyo] Describió solo un detalle superficial sin relacionar las causas con los efectos -> Feedback: "Observa qué causa produce el cambio: ¿qué estructura o fuerza está actuando?"
+
+Sub-etapa 4: Comprendamos la Respuesta (Punto de Referencia)
+• DILE AL ESTUDIANTE (Formalizacion de referencia): "¿Qué fenómeno observable ocurre en este escenario de Evaluación formativa, análisis de dilemas y cierre del OA y cómo se relaciona con 'Sexualidad integral'?"
+• PREGUNTALE AL ESTUDIANTE: "¿Qué fenómeno observable ocurre en este escenario de Evaluación formativa, análisis de dilemas y cierre del OA y cómo se relaciona con 'Sexualidad integral'?"
+• RESPUESTA ESPERADA: Describir las estructuras, componentes o variables involucradas en el fenómeno de Síntesis y simulación tipo Examen Libre y vincularlas con Sexualidad integral.
+• PISTA SOCRATICA: "Pídele que señale qué elementos o condiciones cambian y qué permanece constante."
+• FEEDBACK SI ACIERTA: "Muy bien. Observaste el detalle central con precisión."
+• FEEDBACK SI NECESITA APOYO: "Pídele que señale qué elementos o condiciones cambian y qué permanece constante."
+
+--------------------------------------------------------------------------------
+[PASO 3: RECORRIDO - CONVERSACION GUIADA Y PREGUNTAS SOCRATICAS]
+--------------------------------------------------------------------------------
+Item 1 (Estructura y Función de Sexualidad integral):
+• Pregunta Socratica: "¿Qué función específica cumple 'Sexualidad integral' dentro del sistema natural o biológico que estamos investigando?"
+• Respuesta Esperada: Explicar el rol funcional de Sexualidad integral y cómo interactúa con los demás componentes del sistema.
+• Feedback de Exito: "¡Muy bien! Relacionaste con precisión la estructura con su función biológica o física."
+• Pista de Apoyo Socratica: "Piensa en el sistema como un equipo: ¿qué tarea indispensable realiza este componente?"
+• Revelacion: "Cada componente del sistema cumple una función especializada que permite el equilibrio y funcionamiento del conjunto."
+
+Item 2 (Evidencia Experimental y Prevención de Errores):
+• Pregunta Socratica: "Para no caer en el error de 'Subestimar la importancia de la responsabilidad individual y el consentimiento en las relaciones interpersonales.', ¿qué evidencia científica debemos comprobar antes de concluir?"
+• Respuesta Esperada: Identificar la evidencia empírica u observación experimental que valida la conclusión científica.
+• Feedback de Exito: "¡Exacto! El método científico exige basar las conclusiones en datos comprobables y no en suposiciones."
+• Pista de Apoyo Socratica: "Revisa los datos del experimento: ¿qué demuestran las mediciones u observaciones directas?"
+• Revelacion: "La evidencia empírica comprobable es la única base legítima para formular explicaciones científicas válidas."
+
+--------------------------------------------------------------------------------
+[PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
+--------------------------------------------------------------------------------
+• Cierre y Sintesis del Video Explicativo: "Hoy comprendiste Evaluación formativa, análisis de dilemas y cierre del OA con rigor científico y registro visual en tu cuaderno de ciencias."
+
+Comprobacion 1 (Estructura y Función de Sexualidad integral):
+• Pregunta: "¿Qué función específica cumple 'Sexualidad integral' dentro del sistema natural o biológico que estamos investigando?"
+• Respuesta Esperada: Explicar el rol funcional de Sexualidad integral y cómo interactúa con los demás componentes del sistema.
+• Pista de Apoyo: "Piensa en el sistema como un equipo: ¿qué tarea indispensable realiza este componente?"
+• Revelacion: "La función especializada de Sexualidad integral y su interacción en el sistema."
+
+Comprobacion 2 (Evidencia Experimental y Prevención de Errores):
+• Pregunta: "Para no caer en el error de 'Subestimar la importancia de la responsabilidad individual y el consentimiento en las relaciones interpersonales.', ¿qué evidencia científica debemos comprobar antes de concluir?"
+• Respuesta Esperada: Identificar la evidencia empírica u observación experimental que valida la conclusión científica.
+• Pista de Apoyo: "Revisa los datos del experimento: ¿qué demuestran las mediciones u observaciones directas?"
+• Revelacion: "La evidencia experimental que respalda la conclusión sin dejar lugar a suposiciones."
+
+--------------------------------------------------------------------------------
+[PASO 5: PRACTICA EN EL CUADERNO FISICO]
+--------------------------------------------------------------------------------
+Ejercicio 1 (Ejercicio 1 en Cuaderno: Esquema Rotulado de Investigación):
+• Enunciado de Aplicacion: "Abre tu cuaderno de notas. Escribe como título: 'Síntesis y simulación tipo Examen Libre'. Dibuja un diagrama ordenado del sistema estudiado, rotula sus partes principales destacando 'Sexualidad integral' y describe brevemente la función de cada una (Representa mediante un breve sketch una situación cotidiana donde se demuestre r...)."
+• Respuesta Esperada: Esquema científico en el cuaderno con rotulación precisa de estructuras y descripción de funciones.
+• Feedback de Exito: "¡Excelente esquema en tu cuaderno! Las etiquetas son precisas y las relaciones entre partes están claras."
+• Pista de Apoyo Socratica: "Usa flechas para indicar el flujo o la interacción entre los componentes del diagrama."
+
+Ejercicio 2 (Ejercicio 2 en Cuaderno: Análisis de Caso o Causa-Efecto):
+• Enunciado de Aplicacion: "En tu cuaderno, redacta una respuesta científica fundamentada: Si se alterara la condición o componente 'Sexualidad integral', ¿qué consecuencias inmediatas y a largo plazo se observarían en el sistema?"
+• Respuesta Esperada: Explicación causal en el cuaderno anticipando las consecuencias ecológicas o fisiológicas con rigor científico.
+• Feedback de Exito: "¡Muy bien! Tu razonamiento de causa y efecto demuestra una profunda comprensión del equilibrio del sistema."
+• Pista de Apoyo Socratica: "Piensa en cadena: si falla este componente, ¿qué otro proceso se detiene o se desequilibra?"
+
+Modulo: Comparemos dos situaciones (Comparemos dos situaciones)
+• DILE: "Antes de resumir, comparemos dos situaciones. No necesitas repetir una frase exacta: lo importante es que expliques la idea con tus propias palabras."
+• Pregunta: "Al comparar dos situaciones de Síntesis y simulación tipo Examen Libre, ¿cómo influye el contexto en la interpretación de los datos?"
+• Respuesta Esperada: El significado o resultado depende de las condiciones del contexto y del propósito de la situación.
+• Feedback si acierta: "¡Excelente razonamiento! Reconociste que el contexto orienta la interpretación de los datos."
+• Feedback si necesita apoyo: "Observa cada situación por separado y explica qué elementos las distinguen."
+
+Modulo: Desafio Breve (Desafío breve: Síntesis y simulación tipo Examen Libre)
+• Pregunta: "En Ciencias Naturales, ¿qué diferencia observas entre identificar los datos y aplicar el procedimiento? Explica tu razonamiento."
+• Respuesta Esperada: Identificar los datos determina el punto de partida; aplicar el procedimiento permite construir la respuesta.
+
+--------------------------------------------------------------------------------
+[PASO 6: RESUMEN Y ESTRATEGIA DE PENSAMIENTO]
+--------------------------------------------------------------------------------
+• Idea Clave: "Los sistemas naturales funcionan mediante interacciones precisas entre sus componentes, donde 'Sexualidad integral' cumple un rol fundamental respaldado por evidencia observable."
+• DILE AL ESTUDIANTE: "Cuando enfrentes un problema en Ciencias Naturales, puedes seguir estos tres pasos clave:"
+• Pasos de la Estrategia:
+  Paso 1: Identifica -> ¿Cuáles son los datos clave y cuál es la pregunta central?
+  Paso 2: Aplica -> ¿Qué regla o método disciplinar corresponde utilizar?
+  Paso 3: Comprueba -> ¿La conclusión o resultado responde con coherencia al problema?
+• 3 Ideas Clave Estructuradas de Sintesis:
+  - 1 · Concepto central: Identificamos los elementos y el punto de partida del análisis.
+  - 2 · Interpretación del contexto: Evaluación formativa, análisis de dilemas y cierre del OA
+  - 3 · Síntesis formal: Los sistemas naturales funcionan mediante interacciones precisas entre sus componentes, donde 'Sexualidad integral' cumple un rol fundamental respaldado por evidencia observable.
+
+--------------------------------------------------------------------------------
+[PASO 7: MINIQUIZ FORMATIVO Y FASE REVISAR]
+--------------------------------------------------------------------------------
+Pregunta 1: En el estudio científico de Síntesis y simulación tipo Examen Libre, ¿cuál de las siguientes afirmaciones describe con mayor precisión la función de Sexualidad integral?
+  A) El proceso ocurre mediante la interacción coordinada de sus componentes según leyes naturales comprobables vinculadas a Sexualidad integral [CORRECTA]
+  B) El fenómeno es completamente aleatorio y no responde a ninguna causa biológica o ambiental identificable 
+  C) El proceso ocurre de manera instantánea sin que intervengan estructuras celulares o fuerzas del entorno 
+• Explicacion Formativa del Error: "Todo proceso natural responde a mecanismos específicos donde cada estructura, como Sexualidad integral, cumple un rol funcional determinado."
+• Guion del Mentor (Fase REVISAR): "Pídele que explique en qué evidencia empírica se basa para seleccionar esta opción."
+
+Pregunta 2: Al analizar las evidencias científicas de Evaluación formativa, análisis de dilemas y cierre del OA, ¿qué criterio previene el error frecuente de 'Subestimar la importancia de la responsabilidad individual y el consentimiento en las relaciones interpersonales.'?
+  A) Verificar experimentalmente las relaciones de causa y efecto mediante datos reproducibles antes de formular una conclusión [CORRECTA]
+  B) Aceptar la primera impresión visual sin contrastarla con observaciones ni registros controlados 
+  C) Asumir que si dos eventos ocurren al mismo tiempo uno es necesariamente la causa del otro 
+• Explicacion Formativa del Error: "En el método científico es indispensable controlar variables y verificar datos antes de establecer causalidad."
+• Guion del Mentor (Fase REVISAR): "Pregúntale: ¿cómo distingue un científico entre una simple coincidencia y una verdadera causa?"
+
+Pregunta 3: ¿De qué manera el conocimiento sobre Síntesis y simulación tipo Examen Libre y Sexualidad integral contribuye al autocuidado, la salud o la sustentabilidad ambiental?
+  A) Permite tomar decisiones informadas y fundamentadas en evidencia para prevenir riesgos y mantener el equilibrio saludable [CORRECTA]
+  B) Demuestra que las acciones humanas individuales no tienen ningún impacto en el organismo o en los ecosistemas 
+  C) Indica que basta con guiarse por creencias populares sin verificar la evidencia científica disponible 
+• Explicacion Formativa del Error: "La comprensión de los procesos biológicos y ambientales es la base para el autocuidado responsable, la prevención médica y la sustentabilidad."
+• Guion del Mentor (Fase REVISAR): "Pídele que mencione un ejemplo real de la vida cotidiana donde este conocimiento marque una diferencia."
+
+--------------------------------------------------------------------------------
+[PASO 7B: MODULO DE RECUPERACION FORMATIVA]
+--------------------------------------------------------------------------------
+Refuerzo 1 (Recuperación Científica: Síntesis y simulación tipo Examen Libre):
+• Explicacion Previa: "Al estudiar Evaluación formativa, análisis de dilemas y cierre del OA, recuerda que Sexualidad integral cumple una función biológica o física específica que podemos verificar mediante evidencias."
+• Pregunta: "¿Cuál es el criterio científico fundamental para validar una explicación en Síntesis y simulación tipo Examen Libre?"
+• Opciones: Basar la conclusión en evidencias observables y en el funcionamiento comprobado de Sexualidad integral | Aceptar una afirmación sin requerir evidencias empíricas ni demostración experimental
+• Respuesta Correcta: Basar la conclusión en evidencias observables y en el funcionamiento comprobado de Sexualidad integral
+• Refuerzo si falla: "Recuerda que en Ciencias Naturales la evidencia empírica es el pilar de toda explicación: observa los datos antes de concluir."
+
+--------------------------------------------------------------------------------
+[PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
+--------------------------------------------------------------------------------
+• Felicitacion Final: "¡Felicitaciones! Hoy completaste con éxito la clase "Síntesis y simulación tipo Examen Libre". Has demostrado constancia y rigor en tu aprendizaje."
+• Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Ciencias Naturales."
+
+

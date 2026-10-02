@@ -224,11 +224,22 @@ const getSubjectBadgeStyle = (subject: string): string => {
 
 export const AdminDashboard: React.FC = () => {
   const { setViewMode, parent, updateEnrolledGrades, headerFooterColor, setHeaderFooterColor } = useApp();
-  const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(false);
+  const [isAdminAuthenticated, setIsAdminAuthenticated] = useState<boolean>(() => {
+    if (typeof window !== 'undefined') {
+      return sessionStorage.getItem('estudiosimple_admin_auth') === 'true';
+    }
+    return false;
+  });
   const [passwordInput, setPasswordInput] = useState('');
   const [loginError, setLoginError] = useState('');
 
-  const [activeModule, setActiveModule] = useState<AdminModule>('dashboard');
+  const [activeModule, setActiveModule] = useState<AdminModule>(() => {
+    if (typeof window !== 'undefined') {
+      const saved = sessionStorage.getItem('estudiosimple_admin_active_module') as AdminModule;
+      if (saved) return saved;
+    }
+    return 'dashboard';
+  });
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   // Estado del CMS de Páginas
@@ -344,9 +355,10 @@ export const AdminDashboard: React.FC = () => {
   };
 
   useEffect(() => {
-    // Al entrar al portal se exige siempre autenticación por clave y se purga cualquier sesión residual
-    sessionStorage.removeItem('estudiosimple_admin_auth');
-  }, []);
+    if (typeof window !== 'undefined' && activeModule) {
+      sessionStorage.setItem('estudiosimple_admin_active_module', activeModule);
+    }
+  }, [activeModule]);
 
   useEffect(() => {
     async function loadCatalog() {
@@ -367,6 +379,9 @@ export const AdminDashboard: React.FC = () => {
     e.preventDefault();
     if (passwordInput === 'admin' || passwordInput === 'admin123' || passwordInput === 'estudiosimple') {
       setIsAdminAuthenticated(true);
+      if (typeof window !== 'undefined') {
+        sessionStorage.setItem('estudiosimple_admin_auth', 'true');
+      }
       setLoginError('');
     } else {
       setLoginError('Contraseña incorrecta. Intenta nuevamente.');
@@ -375,7 +390,10 @@ export const AdminDashboard: React.FC = () => {
 
   const handleAdminLogout = () => {
     setIsAdminAuthenticated(false);
-    sessionStorage.removeItem('estudiosimple_admin_auth');
+    if (typeof window !== 'undefined') {
+      sessionStorage.removeItem('estudiosimple_admin_auth');
+      sessionStorage.removeItem('estudiosimple_admin_active_module');
+    }
     setViewMode('landing');
   };
 

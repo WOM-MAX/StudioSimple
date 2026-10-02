@@ -10,6 +10,7 @@ import { ConfettiEffect } from './ConfettiEffect';
 import { SupportHintCard } from './SupportHintCard';
 import { getSubjectTheme } from '../../../lib/subject-theme';
 import { resolveVideoSource } from '../../../lib/video-utils';
+import { getLessonCanonicalKey } from '../../../lib/lesson-repository';
 import {
   Sparkles,
   Check,
@@ -44,6 +45,18 @@ export const StudentLessonView: React.FC = () => {
   const [blocked, setBlocked] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
   const prevFeedbackRef = useRef<string | null>(null);
+
+  useEffect(() => {
+    if (session.stage === 'completed' && lessonData?.metadata) {
+      const canonicalKey = getLessonCanonicalKey(
+        lessonData.metadata.grade,
+        lessonData.metadata.subject,
+        lessonData.metadata.oaCode,
+        lessonData.metadata.lessonNumber
+      );
+      markLessonCompleted(canonicalKey);
+    }
+  }, [session.stage, lessonData?.metadata, markLessonCompleted]);
 
   // Trigger confetti on success/reveal feedback transitions
   useEffect(() => {

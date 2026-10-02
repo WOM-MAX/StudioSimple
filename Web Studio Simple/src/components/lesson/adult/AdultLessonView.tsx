@@ -13,6 +13,7 @@ import {
 } from '../common/Cards';
 import { GuidedItem } from '../../../types/lesson';
 import { resolveVideoSource } from '../../../lib/video-utils';
+import { getLessonCanonicalKey } from '../../../lib/lesson-repository';
 import {
   ArrowRight,
   ArrowLeft,
@@ -41,7 +42,19 @@ function formatTime(seconds: number): string {
 
 export const AdultLessonView: React.FC = () => {
   const { session, lessonData, updateSession, setStage, setFeedback } = useLessonSync();
-  const { setViewMode, authSession } = useApp();
+  const { setViewMode, authSession, markLessonCompleted } = useApp();
+
+  useEffect(() => {
+    if (session.stage === 'completed' && lessonData?.metadata) {
+      const canonicalKey = getLessonCanonicalKey(
+        lessonData.metadata.grade,
+        lessonData.metadata.subject,
+        lessonData.metadata.oaCode,
+        lessonData.metadata.lessonNumber
+      );
+      markLessonCompleted(canonicalKey);
+    }
+  }, [session.stage, lessonData?.metadata, markLessonCompleted]);
 
   const handleSupport = (text: string) => {
     updateSession({ feedback: { kind: 'support', text }, attempt: 1, supportCount: session.supportCount + 1 });
@@ -1415,7 +1428,18 @@ export const AdultLessonView: React.FC = () => {
               <div className="flex justify-end mt-8 pt-4 border-t border-[#dce2e6]">
                 <button
                   type="button"
-                  onClick={() => updateSession({ stage: 'completed' })}
+                  onClick={() => {
+                    if (lessonData?.metadata) {
+                      const canonicalKey = getLessonCanonicalKey(
+                        lessonData.metadata.grade,
+                        lessonData.metadata.subject,
+                        lessonData.metadata.oaCode,
+                        lessonData.metadata.lessonNumber
+                      );
+                      markLessonCompleted(canonicalKey);
+                    }
+                    updateSession({ stage: 'completed' });
+                  }}
                   className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-8 py-3.5 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
                 >
                   <span>Finalizar clase</span>

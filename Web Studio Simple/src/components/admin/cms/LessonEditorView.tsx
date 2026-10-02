@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import React, { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import {
   BookOpen,
   BookOpenCheck,
@@ -53,7 +53,10 @@ import {
   findInjectedLesson,
   saveCustomPlayerLesson,
   resetCustomPlayerLesson,
-  isPlayerLessonCustomized
+  isPlayerLessonCustomized,
+  normalizeGrade,
+  normalizeSubject,
+  normalizeOa
 } from '../../../lib/lesson-repository';
 import { downloadLessonPromptFile } from '../../../lib/prompt-export';
 import { resolveVideoSource } from '../../../lib/video-utils';
@@ -115,11 +118,44 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
   const { setViewMode, setActiveSynchronizedLesson } = useApp();
 
   const [localCatalog, setLocalCatalog] = useState<OACatalogItem[]>(propCatalog || []);
-  const [selectedGrade, setSelectedGrade] = useState<string>('7° Básico');
-  const [selectedSubject, setSelectedSubject] = useState<string>('Matemática');
-  const [selectedOAId, setSelectedOAId] = useState<string>('');
-  const [selectedLessonNum, setSelectedLessonNum] = useState<number>(1);
-  const [activeStepId, setActiveStepId] = useState<EditorStepId>('prep');
+  const [selectedGrade, setSelectedGrade] = useState<string>(() => {
+    if (typeof window !== 'undefined') {
+      const saved = sessionStorage.getItem('estudiosimple_editor_grade');
+      if (saved) return saved;
+    }
+    return '7° Básico';
+  });
+  const [selectedSubject, setSelectedSubject] = useState<string>(() => {
+    if (typeof window !== 'undefined') {
+      const saved = sessionStorage.getItem('estudiosimple_editor_subject');
+      if (saved) return saved;
+    }
+    return 'Matemática';
+  });
+  const [selectedOAId, setSelectedOAId] = useState<string>(() => {
+    if (typeof window !== 'undefined') {
+      const saved = sessionStorage.getItem('estudiosimple_editor_oa_id');
+      if (saved) return saved;
+    }
+    return '';
+  });
+  const [selectedLessonNum, setSelectedLessonNum] = useState<number>(() => {
+    if (typeof window !== 'undefined') {
+      const saved = sessionStorage.getItem('estudiosimple_editor_lesson_num');
+      if (saved) {
+        const num = parseInt(saved, 10);
+        if (!isNaN(num) && num > 0) return num;
+      }
+    }
+    return 1;
+  });
+  const [activeStepId, setActiveStepId] = useState<EditorStepId>(() => {
+    if (typeof window !== 'undefined') {
+      const saved = sessionStorage.getItem('estudiosimple_editor_step_id') as EditorStepId;
+      if (saved && SIDEBAR_STEPS.some((s) => s.id === saved)) return saved;
+    }
+    return 'prep';
+  });
 
   // Estado nativo LessonData: única fuente de verdad isomórfica con el aula interactiva
   const [lessonData, setLessonData] = useState<LessonData | null>(null);
@@ -127,6 +163,46 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
   const [saveStatus, setSaveStatus] = useState<string | null>(null);
   const [copyFeedback, setCopyFeedback] = useState<string | null>(null);
   const [isExportingDocx, setIsExportingDocx] = useState<boolean>(false);
+  const [videoSaveFeedback, setVideoSaveFeedback] = useState<'hook' | 'formalization' | null>(null);
+
+  // Referencias para auto-guardado e inmunidad contra reactividad destructiva
+  const lessonDataRef = useRef<LessonData | null>(lessonData);
+  useEffect(() => {
+    lessonDataRef.current = lessonData;
+  }, [lessonData]);
+
+  const loadedLessonKeyRef = useRef<string>('');
+
+  // Persistir estado de navegación del editor en sessionStorage
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('estudiosimple_editor_grade', selectedGrade);
+    }
+  }, [selectedGrade]);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('estudiosimple_editor_subject', selectedSubject);
+    }
+  }, [selectedSubject]);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && selectedOAId) {
+      sessionStorage.setItem('estudiosimple_editor_oa_id', selectedOAId);
+    }
+  }, [selectedOAId]);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('estudiosimple_editor_lesson_num', String(selectedLessonNum));
+    }
+  }, [selectedLessonNum]);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('estudiosimple_editor_step_id', activeStepId);
+    }
+  }, [activeStepId]);
 
   // Cargar catálogo si no vino por props
   useEffect(() => {
@@ -160,6 +236,22 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
     }
   }, [availableOAs, selectedOAId]);
 
+  // Auto-guardado de seguridad al desmontar el editor
+  useEffect(() => {
+    return () => {
+      const curData = lessonDataRef.current;
+      if (curData && currentOA) {
+        saveCustomPlayerLesson(
+          selectedGrade,
+          selectedSubject,
+          currentOA.oa,
+          selectedLessonNum,
+          curData
+        );
+      }
+    };
+  }, [selectedGrade, selectedSubject, currentOA, selectedLessonNum]);
+
   const totalLessons = currentOA?.leccionesSugeridas || 5;
 
   const defaultReminders = useMemo(
@@ -176,8 +268,15 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
   );
 
   // Cargar lección nativa directamente sin conversiones degradantes
-  const loadLesson = useCallback(() => {
+  const loadLesson = useCallback((forceReload: boolean = false) => {
     if (!currentOA) return;
+
+    const currentKey = `${normalizeGrade(selectedGrade)}_${normalizeSubject(selectedSubject)}_${normalizeOa(currentOA.oa)}_${selectedLessonNum}`;
+    if (!forceReload && loadedLessonKeyRef.current === currentKey && lessonDataRef.current !== null) {
+      // Lección ya cargada en memoria; proteger contra sobreescritura reactiva del catálogo
+      return;
+    }
+    loadedLessonKeyRef.current = currentKey;
 
     // 1. Cargar directamente desde findInjectedLesson (revisa localStorage unificado, fábrica canónica curada)
     const playerLesson = findInjectedLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum);
@@ -322,19 +421,20 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
 
   // Guardar cambios directamente en el almacenamiento unificado de aula
   const handleSaveLesson = () => {
-    if (!lessonData || !currentOA) return;
+    const curData = lessonDataRef.current || lessonData;
+    if (!curData || !currentOA) return;
 
     saveCustomPlayerLesson(
       selectedGrade,
       selectedSubject,
       currentOA.oa,
       selectedLessonNum,
-      lessonData
+      curData
     );
 
     // Sincronizar en paralelo paquete para compatibilidad retroactiva
     try {
-      const genLesson = adaptPlayerLessonToGenerator(lessonData);
+      const genLesson = adaptPlayerLessonToGenerator(curData);
       saveCustomLessonData(
         selectedGrade,
         selectedSubject,
@@ -352,6 +452,125 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
     setTimeout(() => setSaveStatus(null), 3500);
   };
 
+  // Auto-guardado centralizado al conmutar entre clases / lecciones
+  const handleSwitchLesson = (targetNum: number) => {
+    if (targetNum === selectedLessonNum) return;
+
+    const curData = lessonDataRef.current || lessonData;
+    if (curData && currentOA) {
+      saveCustomPlayerLesson(
+        selectedGrade,
+        selectedSubject,
+        currentOA.oa,
+        selectedLessonNum,
+        curData
+      );
+
+      try {
+        const genLesson = adaptPlayerLessonToGenerator(curData);
+        saveCustomLessonData(
+          selectedGrade,
+          selectedSubject,
+          currentOA.oa,
+          currentOA.id,
+          genLesson,
+          totalLessons
+        );
+      } catch (e) {
+        console.warn('Error sincronizando paquete generator:', e);
+      }
+      setIsCustom(true);
+    }
+
+    setSelectedLessonNum(targetNum);
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('estudiosimple_editor_lesson_num', String(targetNum));
+    }
+  };
+
+  const handleSelectStep = (stepId: EditorStepId) => {
+    setActiveStepId(stepId);
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('estudiosimple_editor_step_id', stepId);
+    }
+  };
+
+  const handleGradeChange = (newGrade: string) => {
+    if (newGrade === selectedGrade) return;
+    const curData = lessonDataRef.current || lessonData;
+    if (curData && currentOA) {
+      saveCustomPlayerLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum, curData);
+    }
+    setSelectedGrade(newGrade);
+    setSelectedLessonNum(1);
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('estudiosimple_editor_grade', newGrade);
+      sessionStorage.setItem('estudiosimple_editor_lesson_num', '1');
+    }
+  };
+
+  const handleSubjectChange = (newSubject: string) => {
+    if (newSubject === selectedSubject) return;
+    const curData = lessonDataRef.current || lessonData;
+    if (curData && currentOA) {
+      saveCustomPlayerLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum, curData);
+    }
+    setSelectedSubject(newSubject);
+    setSelectedLessonNum(1);
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('estudiosimple_editor_subject', newSubject);
+      sessionStorage.setItem('estudiosimple_editor_lesson_num', '1');
+    }
+  };
+
+  const handleOAChange = (newOAId: string) => {
+    if (newOAId === selectedOAId) return;
+    const curData = lessonDataRef.current || lessonData;
+    if (curData && currentOA) {
+      saveCustomPlayerLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum, curData);
+    }
+    setSelectedOAId(newOAId);
+    setSelectedLessonNum(1);
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('estudiosimple_editor_oa_id', newOAId);
+      sessionStorage.setItem('estudiosimple_editor_lesson_num', '1');
+    }
+  };
+
+  // Guardado contextual directo para bloques audiovisuales
+  const handlePersistCurrentVideo = (stage: 'hook' | 'formalization') => {
+    const curData = lessonDataRef.current || lessonData;
+    if (!curData || !currentOA) return;
+
+    saveCustomPlayerLesson(
+      selectedGrade,
+      selectedSubject,
+      currentOA.oa,
+      selectedLessonNum,
+      curData
+    );
+
+    try {
+      const genLesson = adaptPlayerLessonToGenerator(curData);
+      saveCustomLessonData(
+        selectedGrade,
+        selectedSubject,
+        currentOA.oa,
+        currentOA.id,
+        genLesson,
+        totalLessons
+      );
+    } catch (e) {
+      console.warn('Error auto-sincronizando generador:', e);
+    }
+
+    setIsCustom(true);
+    setVideoSaveFeedback(stage);
+    setTimeout(() => {
+      setVideoSaveFeedback((prev) => (prev === stage ? null : prev));
+    }, 3000);
+  };
+
   // Restablecer a versión oficial canónica
   const handleResetLesson = () => {
     if (!currentOA) return;
@@ -359,7 +578,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
       resetCustomPlayerLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum);
       resetCustomLessonData(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum);
       setIsCustom(false);
-      loadLesson();
+      loadLesson(true);
       setSaveStatus('Lección restablecida a su versión canónica original.');
       setTimeout(() => setSaveStatus(null), 3500);
     }
@@ -616,7 +835,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
             </label>
             <select
               value={selectedGrade}
-              onChange={(e) => setSelectedGrade(e.target.value)}
+              onChange={(e) => handleGradeChange(e.target.value)}
               className="w-full px-3 py-2 rounded-xl bg-slate-50 border border-slate-300 text-xs font-bold text-slate-800 focus:outline-hidden focus:border-[#EE751C]"
             >
               {ALL_GRADE_LEVELS.map((g) => (
@@ -634,7 +853,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
             </label>
             <select
               value={selectedSubject}
-              onChange={(e) => setSelectedSubject(e.target.value)}
+              onChange={(e) => handleSubjectChange(e.target.value)}
               className="w-full px-3 py-2 rounded-xl bg-slate-50 border border-slate-300 text-xs font-bold text-slate-800 focus:outline-hidden focus:border-[#EE751C]"
             >
               {ALL_SUBJECTS.map((s) => (
@@ -652,7 +871,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
             </label>
             <select
               value={currentOA.id}
-              onChange={(e) => setSelectedOAId(e.target.value)}
+              onChange={(e) => handleOAChange(e.target.value)}
               className="w-full px-3 py-2 rounded-xl bg-slate-50 border border-slate-300 text-xs font-bold text-slate-800 focus:outline-hidden focus:border-[#EE751C]"
             >
               {availableOAs.map((oa) => (
@@ -673,7 +892,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
                 <button
                   key={num}
                   type="button"
-                  onClick={() => setSelectedLessonNum(num)}
+                  onClick={() => handleSwitchLesson(num)}
                   className={`flex-1 py-2 rounded-xl text-xs font-black transition-all cursor-pointer ${
                     selectedLessonNum === num
                       ? 'bg-[#1C3257] text-white shadow-xs'
@@ -745,7 +964,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
                   <button
                     key={step.id}
                     type="button"
-                    onClick={() => setActiveStepId(step.id)}
+                    onClick={() => handleSelectStep(step.id)}
                     className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-2xl text-left transition-all cursor-pointer ${
                       isActive
                         ? 'bg-white/15 text-white font-bold shadow-xs border border-white/20'
@@ -1617,13 +1836,21 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
                             const base = 'https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/';
                             const cur = lessonData.hook.videoSrc || '';
                             if (!cur.startsWith(base)) {
-                              setLessonData({
+                              const updatedLesson: LessonData = {
                                 ...lessonData,
                                 hook: {
                                   ...lessonData.hook,
-                                  videoSrc: `${base}${cur.replace(/^https?:\/\/[^/]+\//, '')}`
+                                  videoSrc: `${base}${cur.replace(/^https?:\/\/[^/]+\//, '')}`,
+                                  videoUrl: `${base}${cur.replace(/^https?:\/\/[^/]+\//, '')}`
                                 }
-                              });
+                              };
+                              setLessonData(updatedLesson);
+                              if (currentOA) {
+                                saveCustomPlayerLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum, updatedLesson);
+                                setIsCustom(true);
+                                setVideoSaveFeedback('hook');
+                                setTimeout(() => setVideoSaveFeedback(null), 3000);
+                              }
                             }
                           }}
                           className="text-[10px] font-black text-purple-700 hover:underline px-1.5 py-0.5 rounded-md bg-purple-100 cursor-pointer"
@@ -1635,10 +1862,17 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
                           <button
                             type="button"
                             onClick={() => {
-                              setLessonData({
+                              const updatedLesson: LessonData = {
                                 ...lessonData,
                                 hook: { ...lessonData.hook, videoSrc: '', videoUrl: '' }
-                              });
+                              };
+                              setLessonData(updatedLesson);
+                              if (currentOA) {
+                                saveCustomPlayerLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum, updatedLesson);
+                                setIsCustom(true);
+                                setVideoSaveFeedback('hook');
+                                setTimeout(() => setVideoSaveFeedback(null), 3000);
+                              }
                             }}
                             className="text-[10px] font-bold text-rose-600 hover:underline cursor-pointer"
                           >
@@ -1660,6 +1894,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
                           }
                         })
                       }
+                      onBlur={() => handlePersistCurrentVideo('hook')}
                       placeholder="https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/..."
                       className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs font-mono bg-white focus:outline-hidden focus:border-purple-600"
                     />
@@ -1682,9 +1917,32 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
                           }
                         })
                       }
+                      onBlur={() => handlePersistCurrentVideo('hook')}
                       className="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-xs font-bold bg-white"
                     />
                   </div>
+                </div>
+
+                {/* BARRA DE GUARDADO CONTEXTUAL DIRECTO */}
+                <div className="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-purple-200/80">
+                  <div className="text-[11px] text-purple-900/80">
+                    {videoSaveFeedback === 'hook' ? (
+                      <span className="font-bold text-emerald-700 flex items-center gap-1.5 animate-fadeIn">
+                        <CheckCircle2 size={14} className="text-emerald-600" />
+                        Video guardado con éxito en esta clase ({selectedLessonNum})
+                      </span>
+                    ) : (
+                      <span>El enlace se guarda automáticamente al cambiar de campo o de lección.</span>
+                    )}
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => handlePersistCurrentVideo('hook')}
+                    className="px-3.5 py-1.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white text-xs font-black flex items-center gap-1.5 shadow-sm transition-all cursor-pointer active:scale-95"
+                  >
+                    <Save size={13} />
+                    <span>Guardar Video Clase {selectedLessonNum}</span>
+                  </button>
                 </div>
 
                 {/* Reproductor de Video en Vivo */}
@@ -2261,13 +2519,21 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
                             const base = 'https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/';
                             const cur = lessonData.formalization.videoSrc || '';
                             if (!cur.startsWith(base)) {
-                              setLessonData({
+                              const updatedLesson: LessonData = {
                                 ...lessonData,
                                 formalization: {
                                   ...lessonData.formalization,
-                                  videoSrc: `${base}${cur.replace(/^https?:\/\/[^/]+\//, '')}`
+                                  videoSrc: `${base}${cur.replace(/^https?:\/\/[^/]+\//, '')}`,
+                                  videoUrl: `${base}${cur.replace(/^https?:\/\/[^/]+\//, '')}`
                                 }
-                              });
+                              };
+                              setLessonData(updatedLesson);
+                              if (currentOA) {
+                                saveCustomPlayerLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum, updatedLesson);
+                                setIsCustom(true);
+                                setVideoSaveFeedback('formalization');
+                                setTimeout(() => setVideoSaveFeedback(null), 3000);
+                              }
                             }
                           }}
                           className="text-[10px] font-black text-amber-800 hover:underline px-1.5 py-0.5 rounded-md bg-amber-100 cursor-pointer"
@@ -2279,10 +2545,17 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
                           <button
                             type="button"
                             onClick={() => {
-                              setLessonData({
+                              const updatedLesson: LessonData = {
                                 ...lessonData,
                                 formalization: { ...lessonData.formalization, videoSrc: '', videoUrl: '' }
-                              });
+                              };
+                              setLessonData(updatedLesson);
+                              if (currentOA) {
+                                saveCustomPlayerLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum, updatedLesson);
+                                setIsCustom(true);
+                                setVideoSaveFeedback('formalization');
+                                setTimeout(() => setVideoSaveFeedback(null), 3000);
+                              }
                             }}
                             className="text-[10px] font-bold text-rose-600 hover:underline cursor-pointer"
                           >
@@ -2304,6 +2577,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
                           }
                         })
                       }
+                      onBlur={() => handlePersistCurrentVideo('formalization')}
                       placeholder="https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/..."
                       className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs font-mono bg-white focus:outline-hidden focus:border-amber-600"
                     />
@@ -2326,9 +2600,32 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
                           }
                         })
                       }
+                      onBlur={() => handlePersistCurrentVideo('formalization')}
                       className="w-full px-3.5 py-1.5 rounded-xl border border-slate-300 text-xs font-bold bg-white text-slate-900"
                     />
                   </div>
+                </div>
+
+                {/* BARRA DE GUARDADO CONTEXTUAL DIRECTO */}
+                <div className="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-amber-200/80">
+                  <div className="text-[11px] text-amber-900/80">
+                    {videoSaveFeedback === 'formalization' ? (
+                      <span className="font-bold text-emerald-700 flex items-center gap-1.5 animate-fadeIn">
+                        <CheckCircle2 size={14} className="text-emerald-600" />
+                        Video guardado con éxito en esta clase ({selectedLessonNum})
+                      </span>
+                    ) : (
+                      <span>El enlace se guarda automáticamente al cambiar de campo o de lección.</span>
+                    )}
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => handlePersistCurrentVideo('formalization')}
+                    className="px-3.5 py-1.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs font-black flex items-center gap-1.5 shadow-sm transition-all cursor-pointer active:scale-95"
+                  >
+                    <Save size={13} />
+                    <span>Guardar Video Clase {selectedLessonNum}</span>
+                  </button>
                 </div>
 
                 {/* Reproductor de Video en Vivo */}

@@ -128,6 +128,34 @@ function persistUsers(users: ParentUser[]): void {
   }
 }
 
+function syncUserToNeon(user: ParentUser, grade?: GradeLevel): void {
+  if (typeof window !== 'undefined' && typeof fetch === 'function') {
+    fetch('/api/checkout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        rut: user.rut,
+        name: user.name,
+        email: user.email,
+        studentName: user.studentName,
+        studentRun: user.studentRun,
+        grade: grade || (user.enrolledGrades && user.enrolledGrades[0]),
+        plan: user.plan,
+        phone: user.phone
+      })
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success && data.user?.id) {
+          user.id = data.user.id;
+        }
+      })
+      .catch(() => {
+        // Fallback silencioso en modo local u offline
+      });
+  }
+}
+
 /**
  * Registra o actualiza un usuario que completó el Checkout.
  * Si el RUN ya existe, añade el nuevo curso y actualiza la suscripción sin duplicar la cuenta.
@@ -182,6 +210,7 @@ export function registerUserFromCheckout(params: {
 
     users[existingIdx] = updatedUser;
     persistUsers(users);
+    syncUserToNeon(updatedUser, params.grade);
     return { user: updatedUser, isNew: false };
   }
 
@@ -210,6 +239,7 @@ export function registerUserFromCheckout(params: {
 
   const updatedUsers = [newUser, ...users];
   persistUsers(updatedUsers);
+  syncUserToNeon(newUser, params.grade);
   return { user: newUser, isNew: true };
 }
 

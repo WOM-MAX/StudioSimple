@@ -102,7 +102,7 @@ export function registerGeneratedPackage(pkg: GeneratedOAPackage): void {
   }
 }
 
-function normalizeSubject(subject: string): string {
+export function normalizeSubject(subject: string): string {
   const clean = (subject || '')
     .toLowerCase()
     .normalize('NFD')
@@ -116,14 +116,41 @@ function normalizeSubject(subject: string): string {
   return clean;
 }
 
-function normalizeOa(oaCode: string): string {
+export function normalizeOa(oaCode: string): string {
   const digits = (oaCode || '').replace(/[^0-9]/g, '');
   return digits ? `oa${parseInt(digits, 10)}` : (oaCode || '').toLowerCase().trim();
 }
 
-function normalizeGrade(grade: string): string {
+export function normalizeGrade(grade: string): string {
   const digits = (grade || '').replace(/[^0-9]/g, '');
   return digits || (grade || '').toLowerCase().trim();
+}
+
+export function getLessonCanonicalKey(
+  grade: string,
+  subject: string,
+  oaCode: string,
+  lessonNumber: number
+): string {
+  return `${normalizeGrade(grade)}_${normalizeSubject(subject)}_${normalizeOa(oaCode)}_${lessonNumber}`;
+}
+
+export function isLessonCompleted(
+  completedLessons: string[] | undefined,
+  grade: string,
+  subject: string,
+  oaCode: string,
+  lessonNumber: number
+): boolean {
+  if (!completedLessons || completedLessons.length === 0) return false;
+  const canonicalKey = getLessonCanonicalKey(grade, subject, oaCode, lessonNumber);
+  const shortKey = `${normalizeOa(oaCode)}_${lessonNumber}`;
+  const legacyPrefix = `les-${normalizeSubject(subject)}-${normalizeGrade(grade)}${String(lessonNumber).padStart(2, '0')}`;
+  return (
+    completedLessons.includes(canonicalKey) ||
+    completedLessons.includes(shortKey) ||
+    completedLessons.includes(legacyPrefix)
+  );
 }
 
 export function saveCustomLessonData(

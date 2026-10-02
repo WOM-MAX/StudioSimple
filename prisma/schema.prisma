@@ -3,75 +3,100 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
-model Curso {
-  id          Int          @id @default(autoincrement())
-  grado       Int          @unique
-  nombre      String       
-  
-  oas         ObjetivoAprendizaje[]
-  clases      Clase[]
+// -----------------------------------------------------------------------------
+// TABLAS CURRICULARES OFICIALES NEON POSTGRESQL (628 OAs)
+// -----------------------------------------------------------------------------
+
+model learning_objectives {
+  id                     Int                @id @default(autoincrement())
+  curso                  String             @db.VarChar(50)
+  asignatura             String             @db.VarChar(100)
+  eje_curricular         String?            @db.VarChar(200)
+  numero_oa              String             @db.VarChar(50)
+  descripcion_oa         String
+  nivel_bloom            String?            @db.VarChar(50)
+  indicadores_evaluacion String?
+  conceptos_clave        String?
+  errores_frecuentes     String?
+  created_at             DateTime?          @default(now()) @db.Timestamp(6)
+  bloom_activities       bloom_activities[]
+  dua_strategies         dua_strategies[]
 }
 
-model Asignatura {
-  id          Int          @id @default(autoincrement())
-  nombre      String       @unique
-  
-  oas         ObjetivoAprendizaje[]
-  clases      Clase[]
+model bloom_activities {
+  id                   Int                  @id @default(autoincrement())
+  oa_id                Int?
+  actividad_recordar   String?
+  actividad_comprender String?
+  actividad_aplicar    String?
+  actividad_analizar   String?
+  actividad_evaluar    String?
+  actividad_crear      String?
+  learning_objectives  learning_objectives? @relation(fields: [oa_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
 }
 
-model ObjetivoAprendizaje {
-  id              Int        @id @default(autoincrement())
-  codigo          String
-  descripcion     String
-  
-  actividadesSugeridas String?
-  
-  cursoId         Int
-  curso           Curso      @relation(fields: [cursoId], references: [id], onDelete: Cascade)
-  
-  asignaturaId    Int
-  asignatura      Asignatura @relation(fields: [asignaturaId], references: [id], onDelete: Cascade)
-  
-  clases          Clase[]
-  
-  @@unique([codigo, cursoId, asignaturaId])
+model dua_strategies {
+  id                        Int                  @id @default(autoincrement())
+  oa_id                     Int?
+  estrategia_representacion String?
+  estrategia_expresion      String?
+  estrategia_motivacion     String?
+  learning_objectives       learning_objectives? @relation(fields: [oa_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
 }
 
-model Clase {
-  id              Int        @id @default(autoincrement())
-  numero          Int
-  titulo          String
-  unidad          String?
-  duracionMinutos Int        @default(30)
-  focoDidactico   String?
-  
-  contenidoJson   String?
-  
-  cursoId         Int
-  curso           Curso      @relation(fields: [cursoId], references: [id], onDelete: Cascade)
-  
-  asignaturaId    Int
-  asignatura      Asignatura @relation(fields: [asignaturaId], references: [id], onDelete: Cascade)
-  
-  objetivoId      Int?
-  objetivo        ObjetivoAprendizaje? @relation(fields: [objetivoId], references: [id], onDelete: SetNull)
-  
-  actividades     Actividad[]
-  
-  @@unique([numero, cursoId, asignaturaId])
+// -----------------------------------------------------------------------------
+// GESTION DE USUARIOS, PROGRESO Y CHECKOUT
+// -----------------------------------------------------------------------------
+
+model User {
+  id                 String    @id @default(uuid())
+  rut                String?   @unique
+  name               String
+  email              String    @unique
+  password           String?
+  phone              String?
+  status             String    @default("active")
+  subscriptionActive Boolean   @default(false)
+  plan               String    @default("mensual")
+  enrolledGrades     String[]  @default([])
+  studentId          String?   @unique
+  studentName        String?
+  studentRun         String?
+  studentPin         String?   @default("123456")
+  createdAt          DateTime  @default(now())
+  updatedAt          DateTime  @updatedAt
+  lastLogin          DateTime? @default(now())
 }
 
-model Actividad {
-  id              Int        @id @default(autoincrement())
-  tipo            String
-  contenido       String
-  orden           Int
-  
-  claseId         Int
-  clase           Clase      @relation(fields: [claseId], references: [id], onDelete: Cascade)
+model StudentProgress {
+  id              String    @id @default(uuid())
+  studentId       String
+  lessonId        String
+  completed       Boolean   @default(false)
+  completedAt     DateTime? @default(now())
+  score           Int?      @default(100)
+  gems            Int       @default(10)
+  curiosityPoints Int       @default(50)
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  @@unique([studentId, lessonId])
+}
+
+model SubscriptionOrder {
+  id                   String    @id @default(uuid())
+  orderNumber          String    @unique
+  userId               String
+  plan                 String
+  amount               Int
+  currency             String    @default("CLP")
+  status               String    @default("pending") // pending, paid, failed, cancelled
+  paymentMethod        String?   @default("simulated")
+  gatewayTransactionId String?
+  createdAt            DateTime  @default(now())
+  updatedAt            DateTime  @updatedAt
 }
