@@ -9,6 +9,7 @@ Para maximizar la agilidad y eliminar interrupciones innecesarias al usuario:
    - El agente **DEBE EJECUTAR DIRECTAMENTE DE PRINCIPIO A FIN** con 100% de autonomia.
    - **PROHIBIDO** generar prompts intermediarios de `/goal` para que el usuario los vuelva a enviar.
    - **PROHIBIDO** hacer preguntas de diseno intermedias, pedir aprobaciones previas o hacer pausas intermedias.
+   - **Sincronizacion Git y Push:** Toda orden de push debe resolverse ejecutando de forma inmediata y continua `git status`, `git add .`, `git commit -m` (si hay cambios pendientes) y `git push origin [rama]`, confirmando la entrega con codigo de salida 0.
    - La ejecucion debe incluir analisis, codigo, pruebas, validacion (build con codigo 0) y documentacion en memoria/ antes de entregar el informe final de cierre.
 
 2. **Modo Consultoria / Diagnostico Previo:**
