@@ -21,17 +21,58 @@ import {
   Target,
   ArrowLeft,
   Home,
-  RotateCcw
+  RotateCcw,
+  KeyRound,
+  Copy,
+  GraduationCap,
+  Shield
 } from 'lucide-react';
 
 const GRADES = ['3° Básico', '4° Básico', '5° Básico', '6° Básico', '7° Básico', '8° Básico'];
 
 export const ParentDashboard: React.FC = () => {
-  const { setViewMode, setActiveSynchronizedLesson, logout, parent, student, students, activeStudentId, switchActiveStudent, themeMode, toggleThemeMode } = useApp();
+  const {
+    setViewMode,
+    setActiveSynchronizedLesson,
+    logout,
+    parent,
+    student,
+    students,
+    activeStudentId,
+    switchActiveStudent,
+    themeMode,
+    toggleThemeMode,
+    generateStudentPin
+  } = useApp();
   const [selectedGrade, setSelectedGrade] = useState<string>(student?.grade || '7° Básico');
   const [selectedSubject, setSelectedSubject] = useState('Matemática');
   const [selectedOaIndex, setSelectedOaIndex] = useState(0);
-  const [activeTab, setActiveTab] = useState<'lessons' | 'analytics'>('lessons');
+  const [activeTab, setActiveTab] = useState<'lessons' | 'analytics' | 'credentials'>('lessons');
+  const [copiedPin, setCopiedPin] = useState(false);
+  const [pinFeedback, setPinFeedback] = useState<string | null>(null);
+
+  const handleCopyPin = () => {
+    if (typeof navigator !== 'undefined' && navigator.clipboard) {
+      navigator.clipboard.writeText(student.pin || parent.studentPin || '123456');
+      setCopiedPin(true);
+      setTimeout(() => setCopiedPin(false), 2500);
+    }
+  };
+
+  const handleRegeneratePin = () => {
+    const newPin = generateStudentPin();
+    setPinFeedback(`Nuevo PIN generado exitosamente: ${newPin}`);
+    setTimeout(() => setPinFeedback(null), 4000);
+  };
+
+  const handleSharePinWhatsApp = () => {
+    const pin = student.pin || parent.studentPin || '123456';
+    const sName = student.name || 'Estudiante';
+    const grade = student.grade || selectedGrade;
+    const text = `*ESTUDIOSIMPLE - ACCESO AL SALÓN DE CLASES*\n\nHola ${sName}, tu clave PIN oficial para estudiar ${grade} es: *${pin}*\n\nIngresa directamente en https://estudiosimple.cl digitando este PIN de 6 dígitos.`;
+    const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank');
+  };
 
   const currentOAs = getSubjectOAs(selectedGrade, selectedSubject);
   const activeOa: CurricularOA = currentOAs[selectedOaIndex] || currentOAs[0];
@@ -192,7 +233,15 @@ export const ParentDashboard: React.FC = () => {
               <span className={`text-xs font-bold ${isDark ? 'text-white' : 'text-[#1C3257]'}`}>
                 {parent.name || 'Apoderado'}
               </span>
-              <span className="text-[10px] text-slate-500">Pupilo: {student.name || 'Estudiante'}</span>
+              <button
+                type="button"
+                onClick={() => setActiveTab('credentials')}
+                className="text-[10px] text-amber-500 hover:underline flex items-center gap-1 cursor-pointer font-bold justify-end"
+                title="Ver y Gestionar PIN del Estudiante"
+              >
+                <KeyRound size={11} />
+                <span>PIN: {student.pin || parent.studentPin || '123456'}</span>
+              </button>
             </div>
 
             <button
@@ -238,6 +287,21 @@ export const ParentDashboard: React.FC = () => {
           >
             <BarChart3 className="w-4 h-4" />
             <span>Estadísticas de Avance & Temario Exámenes Libres</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setActiveTab('credentials')}
+            className={`py-3.5 px-3 text-xs font-bold border-b-2 flex items-center gap-2 transition-all cursor-pointer ${
+              activeTab === 'credentials'
+                ? isDark
+                  ? 'border-[#F8AD22] text-[#F8AD22]'
+                  : 'border-[#F8AD22] text-amber-700'
+                : 'border-transparent text-slate-500 hover:text-slate-800'
+            }`}
+          >
+            <KeyRound className="w-4 h-4" />
+            <span>PIN & Credenciales Familiares</span>
           </button>
 
           <button
@@ -751,6 +815,183 @@ export const ParentDashboard: React.FC = () => {
               </div>
             </div>
 
+          </div>
+        )}
+
+        {/* TAB 3: CREDENCIALES DE ACCESO & PIN FAMILIAR */}
+        {activeTab === 'credentials' && (
+          <div className="space-y-6">
+            {/* Header del Tab */}
+            <div className={`p-6 sm:p-8 rounded-3xl border ${
+              isDark ? 'bg-[#10223D] border-[#1C3257] shadow-xl' : 'bg-white/90 backdrop-blur-xs border-slate-200/90 shadow-sm'
+            }`}>
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div>
+                  <span className="text-[10px] font-black text-[#F8AD22] uppercase tracking-wider block mb-1">
+                    Seguridad y Control Familiar
+                  </span>
+                  <h2 className={`text-xl sm:text-2xl font-black ${isDark ? 'text-white' : 'text-[#1C3257]'}`}>
+                    Credenciales de Acceso y PIN del Estudiante
+                  </h2>
+                  <p className="text-xs text-slate-400 mt-1 max-w-2xl leading-relaxed">
+                    Gestiona los accesos de tu familia. Tu hijo/a no necesita contraseñas complejas: ingresa directamente al aula digitando su PIN numérico de 6 dígitos.
+                  </p>
+                </div>
+              </div>
+
+              {pinFeedback && (
+                <div className="mt-4 p-3 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 text-xs font-bold flex items-center gap-2">
+                  <CheckCircle2 size={16} />
+                  <span>{pinFeedback}</span>
+                </div>
+              )}
+            </div>
+
+            {/* Grid Dual: Estudiante vs Apoderado */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {/* Tarjeta del Estudiante */}
+              <div className={`p-6 sm:p-8 rounded-3xl border flex flex-col justify-between ${
+                isDark ? 'bg-[#0E1C33] border-[#F8AD22]/40 shadow-lg' : 'bg-white border-amber-200 shadow-sm'
+              }`}>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                    <div className="flex items-center gap-2 text-[#F8AD22] font-black text-xs uppercase tracking-wider">
+                      <GraduationCap size={18} />
+                      <span>Acceso del Estudiante (Aula Virtual)</span>
+                    </div>
+                    <span className="px-2.5 py-0.5 rounded-full bg-[#F8AD22]/20 text-[#F8AD22] text-[10px] font-extrabold uppercase">
+                      Activo
+                    </span>
+                  </div>
+
+                  <div className="space-y-3">
+                    <div>
+                      <span className="text-[11px] text-slate-400 block font-semibold">Nombre del Estudiante:</span>
+                      <strong className={`text-base font-black ${isDark ? 'text-white' : 'text-[#1C3257]'}`}>
+                        {student.name || 'Estudiante'} ({student.grade || selectedGrade})
+                      </strong>
+                    </div>
+
+                    <div>
+                      <span className="text-[11px] text-slate-400 block font-semibold mb-1">
+                        PIN Numérico de Ingreso Directo:
+                      </span>
+                      <div className="p-4 rounded-2xl bg-[#0A192F] border-2 border-[#F8AD22] flex items-center justify-between">
+                        <div>
+                          <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+                            Código de 6 dígitos
+                          </div>
+                          <div className="font-mono text-3xl font-black text-[#F8AD22] tracking-[0.25em] mt-0.5">
+                            {student.pin || parent.studentPin || '123456'}
+                          </div>
+                        </div>
+
+                        <button
+                          type="button"
+                          onClick={handleCopyPin}
+                          className="px-3.5 py-2 rounded-xl bg-[#F8AD22] hover:bg-[#e09b1f] text-[#0A192F] font-bold text-xs flex items-center gap-1.5 transition-all hover:scale-105 active:scale-95 cursor-pointer shadow-md"
+                          title="Copiar PIN"
+                        >
+                          {copiedPin ? <CheckCircle2 size={16} /> : <Copy size={16} />}
+                          <span>{copiedPin ? 'Copiado' : 'Copiar'}</span>
+                        </button>
+                      </div>
+                    </div>
+
+                    <p className="text-xs text-slate-400 leading-relaxed">
+                      El estudiante no necesita recordar correos ni contraseñas. Al abrir la plataforma, solo escribe este PIN y entra directo a sus clases.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pt-6 border-t border-white/10 mt-6 space-y-2.5">
+                  <div className="flex flex-col sm:flex-row gap-2.5">
+                    <button
+                      type="button"
+                      onClick={handleRegeneratePin}
+                      className="flex-1 py-2.5 px-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/15 text-xs font-bold text-white flex items-center justify-center gap-2 transition-all cursor-pointer"
+                    >
+                      <RotateCcw size={14} className="text-[#57d6f3]" />
+                      <span>Regenerar Nuevo PIN</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={handleSharePinWhatsApp}
+                      className="flex-1 py-2.5 px-3 rounded-xl bg-[#25D366]/20 hover:bg-[#25D366]/30 border border-[#25D366]/50 text-xs font-bold text-[#25D366] flex items-center justify-center gap-2 transition-all cursor-pointer"
+                    >
+                      <span>Enviar PIN por WhatsApp</span>
+                    </button>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setViewMode('student');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    className="w-full py-2.5 px-3 rounded-xl bg-[#12A1A4] hover:bg-[#0e8385] text-white font-extrabold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer shadow-md"
+                  >
+                    <Play size={14} />
+                    <span>Entrar al Aula como Alumno ({student.grade || selectedGrade})</span>
+                  </button>
+                </div>
+              </div>
+
+              {/* Tarjeta del Apoderado */}
+              <div className={`p-6 sm:p-8 rounded-3xl border flex flex-col justify-between ${
+                isDark ? 'bg-[#10223D] border-[#1C3257] shadow-lg' : 'bg-white border-slate-200 shadow-sm'
+              }`}>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                    <div className="flex items-center gap-2 text-[#57d6f3] font-black text-xs uppercase tracking-wider">
+                      <Shield size={18} />
+                      <span>Cuenta del Apoderado / Tutor Legal</span>
+                    </div>
+                    <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-[10px] font-extrabold uppercase">
+                      {parent.subscriptionActive !== false ? 'Suscripción Activa' : 'Prueba'}
+                    </span>
+                  </div>
+
+                  <div className="space-y-3 text-xs">
+                    <div>
+                      <span className="text-[11px] text-slate-400 block font-semibold">Titular Registrado:</span>
+                      <strong className={`text-sm font-black ${isDark ? 'text-white' : 'text-[#1C3257]'}`}>
+                        {parent.name || 'Apoderado'}
+                      </strong>
+                    </div>
+
+                    <div>
+                      <span className="text-[11px] text-slate-400 block font-semibold">RUN de Identificación:</span>
+                      <span className="font-mono font-bold text-white bg-black/20 px-3 py-1.5 rounded-lg border border-white/5 inline-block mt-0.5">
+                        {parent.rut || 'No especificado'}
+                      </span>
+                    </div>
+
+                    <div>
+                      <span className="text-[11px] text-slate-400 block font-semibold">Correo Electrónico:</span>
+                      <span className="font-mono font-bold text-white bg-black/20 px-3 py-1.5 rounded-lg border border-white/5 inline-block mt-0.5">
+                        {parent.email || 'No especificado'}
+                      </span>
+                    </div>
+
+                    <div>
+                      <span className="text-[11px] text-slate-400 block font-semibold">Cursos Habilitados:</span>
+                      <div className="flex flex-wrap gap-1.5 mt-1">
+                        {(parent.enrolledGrades || [student.grade || selectedGrade]).map(g => (
+                          <span key={g} className="px-2.5 py-1 rounded-lg bg-[#12A1A4]/20 border border-[#12A1A4]/40 text-[#57d6f3] font-bold text-xs">
+                            {g}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-6 border-t border-white/10 mt-6 text-[11px] text-slate-400 space-y-1">
+                  <p>Para cambiar el correo o gestionar la facturación, contacta a soporte oficial.</p>
+                  <p className="text-white/60">Soporte oficial: soporte@estudiosimple.cl</p>
+                </div>
+              </div>
+            </div>
           </div>
         )}
 

@@ -42,6 +42,7 @@ interface AppContextType {
   verifyParentPassword: (password: string) => boolean;
   navigateWithAuth: (targetMode: ViewMode) => void;
   updateEnrolledGrades: (grades: GradeLevel[]) => void;
+  activateSessionFromCheckout: (user: ParentUser, grade: GradeLevel) => void;
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -433,8 +434,78 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   const generateStudentPin = (): string => {
     const newPin = generatePin();
-    setStudent(prev => ({ ...prev, pin: newPin }));
+    setStudent(prev => {
+      const updated = { ...prev, pin: newPin };
+      localStorage.setItem('estudio_simple_student', JSON.stringify(updated));
+      return updated;
+    });
+    setParent(prev => {
+      const updated = { ...prev, studentPin: newPin };
+      localStorage.setItem('estudio_simple_parent', JSON.stringify(updated));
+      return updated;
+    });
+    const allUsers = getAllRegisteredUsers();
+    const idx = allUsers.findIndex(u => u.id === parent.id || (u.rut && parent.rut && u.rut === parent.rut));
+    if (idx >= 0) {
+      allUsers[idx].studentPin = newPin;
+      localStorage.setItem('estudiosimple_registered_users', JSON.stringify(allUsers));
+    }
+    recordAuditLog({
+      actorId: parent.id || 'parent',
+      actorName: parent.name || 'Apoderado',
+      actorRole: 'user',
+      action: 'REGENERATE_PIN',
+      target: 'PIN de Estudiante',
+      details: `Regeneración de PIN de estudiante a ${newPin}`
+    });
     return newPin;
+  };
+
+  const activateSessionFromCheckout = (user: ParentUser, grade: GradeLevel) => {
+    setParent(user);
+    localStorage.setItem('estudio_simple_parent', JSON.stringify(user));
+
+    const newStudent: StudentProfile = {
+      id: user.studentId || `stu-${user.id}`,
+      name: user.studentName || 'Estudiante',
+      grade: grade,
+      avatar: 'buho',
+      curiosityPoints: 120,
+      gems: 8,
+      completedLessons: ['7_mat_oa1_1', '7_mat_oa1_2'],
+      currentStreakDays: 2,
+      pin: user.studentPin || generatePin()
+    };
+    setStudent(newStudent);
+    localStorage.setItem('estudio_simple_student', JSON.stringify(newStudent));
+
+    setStudents(prev => {
+      const filtered = prev.filter(s => s.id !== newStudent.id);
+      const updated = [newStudent, ...filtered];
+      localStorage.setItem('estudio_simple_students', JSON.stringify(updated));
+      return updated;
+    });
+    setActiveStudentId(newStudent.id);
+    localStorage.setItem('estudio_simple_active_student_id', newStudent.id);
+
+    const session: AuthSession = {
+      role: 'parent',
+      userId: user.id,
+      enrolledGrades: user.enrolledGrades && user.enrolledGrades.length > 0 ? user.enrolledGrades : [grade],
+      isAuthenticated: true
+    };
+    setAuthSessionState(session);
+    localStorage.setItem('estudio_simple_auth_session', JSON.stringify(session));
+
+    recordAuditLog({
+      actorId: user.id,
+      actorName: user.name,
+      actorEmail: user.email,
+      actorRole: 'user',
+      action: 'AUTO_LOGIN_CHECKOUT',
+      target: 'Plataforma EstudioSimple',
+      details: `Auto-login inmediato post-compra para apoderado ${user.name} y estudiante ${newStudent.name} (${grade})`
+    });
   };
 
   const switchActiveStudent = useCallback((studentId: string) => {
@@ -591,6 +662,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         verifyParentPassword,
         navigateWithAuth,
         updateEnrolledGrades,
+        activateSessionFromCheckout,
         activeSynchronizedLesson,
         setActiveSynchronizedLesson,
       }}

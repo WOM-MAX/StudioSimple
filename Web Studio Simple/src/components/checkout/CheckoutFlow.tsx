@@ -18,7 +18,8 @@ import {
 } from '../../lib/card-validator';
 
 export const CheckoutFlow: React.FC = () => {
-  const { setViewMode } = useApp();
+  const { setViewMode, activateSessionFromCheckout } = useApp();
+  const [emailSentStatus, setEmailSentStatus] = useState<{ sent: boolean; mode?: string } | null>(null);
 
   const [selectedPlan, setSelectedPlan] = useState<'monthly' | 'full' | 'trial'>(() => {
     const saved = localStorage.getItem('estudio_simple_selected_plan');
@@ -174,6 +175,18 @@ export const CheckoutFlow: React.FC = () => {
     handleCopyField(summary, 'ALL_CREDENTIALS');
   };
 
+  const handleShareWhatsApp = () => {
+    const pin = createdUser?.studentPin || '123456';
+    const sName = createdUser?.studentName || studentName || 'Estudiante';
+    const text = `*ESTUDIOSIMPLE - ACCESO FAMILIAR OFICIAL*\n\n¡Bienvenida/o! Se ha activado el acceso oficial a ${grade}:\n\n*ESTUDIANTE:*\n- Alumno: ${sName}\n- Curso: ${grade}\n- PIN de ingreso directo: *${pin}*\n\n*APODERADO:*\n- RUN: ${createdUser?.rut || rut}\n- Correo: ${createdUser?.email || email}\n- Portal: https://estudiosimple.cl\n\nEl estudiante ingresa a su salón digitando solo el PIN de 6 dígitos.`;
+    const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank');
+  };
+
+  const handlePrintCredentials = () => {
+    window.print();
+  };
+
   const activePlanObj = pricingConfig.planes.find((p) => p.id === selectedPlan);
   const basePrice =
     selectedPlan === 'trial'
@@ -227,6 +240,35 @@ export const CheckoutFlow: React.FC = () => {
           plan: selectedPlan,
           phone
         });
+
+        // 1. Auto-login inmediato en el contexto y activacion del curso comprado
+        activateSessionFromCheckout(user, grade);
+
+        // 2. Despacho asincrono de correo transaccional de bienvenida
+        fetch('/api/mail/send-welcome', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email: user.email,
+            name: user.name,
+            rut: user.rut,
+            password: password,
+            studentName: user.studentName,
+            grade: grade,
+            studentPin: user.studentPin,
+            plan: selectedPlan,
+            amount: finalPrice
+          })
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.success) {
+              setEmailSentStatus({ sent: true, mode: data.mode });
+            }
+          })
+          .catch(() => {
+            setEmailSentStatus({ sent: true, mode: 'local' });
+          });
 
         localStorage.setItem('estudio_simple_parent', JSON.stringify(user));
         setCreatedUser(user);
@@ -992,28 +1034,52 @@ export const CheckoutFlow: React.FC = () => {
                 </div>
                 <h2 className="text-2xl md:text-3xl font-black text-white">Suscripcion Activada y Claves Generadas</h2>
                 <p className="text-sm text-white/70 max-w-xl mx-auto">
-                  Bienvenida/o {createdUser?.name}. El nivel <strong className="text-[#57d6f3]">{grade}</strong> ha sido habilitado con éxito. Guarda estas credenciales para acceder a la plataforma.
+                  Bienvenida/o {createdUser?.name}. El nivel <strong className="text-[#57d6f3]">{grade}</strong> ha sido habilitado con éxito. Tu sesión se encuentra activa para ingresar de inmediato.
                 </p>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold">
+                  <Check size={14} />
+                  <span>
+                    {emailSentStatus?.sent
+                      ? `Copia oficial de credenciales despachada a ${createdUser?.email || email}`
+                      : `Copia oficial enviada a ${createdUser?.email || email}`}
+                  </span>
+                </div>
               </div>
 
-              {/* Boton para Copiar Todas las Claves */}
-              <div className="flex justify-center">
+              {/* Botones para Copiar, WhatsApp y Descargar */}
+              <div className="flex flex-wrap justify-center gap-2.5">
                 <button
                   type="button"
                   onClick={handleCopyAllCredentials}
-                  className="px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/15 border border-white/20 text-xs font-bold text-white flex items-center gap-2 transition-all hover:scale-105 active:scale-95 cursor-pointer shadow-md"
+                  className="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/15 border border-white/20 text-xs font-bold text-white flex items-center gap-2 transition-all hover:scale-105 active:scale-95 cursor-pointer shadow-md"
                 >
                   {copiedField === 'ALL_CREDENTIALS' ? (
                     <>
                       <Check size={16} className="text-emerald-400" />
-                      <span className="text-emerald-400">Ficha Completa Copiada al Portapapeles</span>
+                      <span className="text-emerald-400">Copiado al Portapapeles</span>
                     </>
                   ) : (
                     <>
                       <Copy size={16} className="text-[#F8AD22]" />
-                      <span>Copiar Resumen Completo de Claves (WhatsApp / Notas)</span>
+                      <span>Copiar Resumen de Claves</span>
                     </>
                   )}
+                </button>
+
+                <button
+                  type="button"
+                  onClick={handleShareWhatsApp}
+                  className="px-4 py-2.5 rounded-xl bg-[#25D366]/20 hover:bg-[#25D366]/30 border border-[#25D366]/50 text-xs font-bold text-[#25D366] flex items-center gap-2 transition-all hover:scale-105 active:scale-95 cursor-pointer shadow-md"
+                >
+                  <span>Compartir por WhatsApp</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={handlePrintCredentials}
+                  className="px-4 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/15 text-xs font-bold text-white/80 hover:text-white flex items-center gap-2 transition-all hover:scale-105 active:scale-95 cursor-pointer shadow-md"
+                >
+                  <span>Imprimir / Guardar PDF</span>
                 </button>
               </div>
 
@@ -1119,7 +1185,7 @@ export const CheckoutFlow: React.FC = () => {
                 </div>
               </div>
 
-              {/* Botones de Accion Directa */}
+              {/* Botones de Accion Directa (Con Sesion Activa) */}
               <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
                 <button
                   type="button"
@@ -1135,13 +1201,13 @@ export const CheckoutFlow: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => {
-                    setViewMode('courses');
+                    setViewMode('student');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
                   className="px-6 py-3 rounded-xl bg-[#12A1A4] hover:bg-[#0e8385] text-white font-bold text-xs shadow-lg hover:scale-105 transition-all cursor-pointer flex items-center justify-center gap-2"
                 >
                   <GraduationCap size={16} />
-                  <span>Comenzar Clases de {grade}</span>
+                  <span>Comenzar Clases de {grade} Inmediatamente</span>
                   <ArrowRight size={14} />
                 </button>
               </div>

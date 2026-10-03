@@ -76,6 +76,14 @@ export const CourseSelector: React.FC = () => {
   const enrolledGrades: GradeLevel[] = authSession?.enrolledGrades || parent.enrolledGrades || ['7° Básico'];
 
   const handleSelectCourse = (grade: GradeLevel) => {
+    const saved = localStorage.getItem('estudio_simple_student');
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        parsed.grade = grade;
+        localStorage.setItem('estudio_simple_student', JSON.stringify(parsed));
+      } catch {}
+    }
     setViewMode('parent');
   };
 
