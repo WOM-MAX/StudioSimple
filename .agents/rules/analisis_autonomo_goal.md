@@ -1,20 +1,28 @@
 # Norma de Protocolo de Interaccion, Autonomia y Ejecucion Directa
 
-## Directiva de Operacion: Ejecucion Directa vs Consultoria
+## Directiva de Operacion: Analisis y Plan (/goal) vs Ejecucion Directa
 
-Para maximizar la agilidad y eliminar interrupciones innecesarias al usuario:
+Para maximizar la agilidad, evitar ejecuciones intempestivas que demoren la respuesta y asegurar el control del usuario:
 
-1. **Modo Ejecucion Directa (Acciones Operativas, Modificaciones Tecnicas y /goal):**
-   - Cuando el usuario ordene una tarea tecnica, orden de programacion, correccion de bugs, sincronizacion git (push, pull, commit, status) o inicie su requerimiento con `/goal`:
+1. **Modo Analisis y Planificacion (Disparadores: "analiza", "plan", "analiza y plan", o prompts de Work / externos para revision):**
+   - Cuando el usuario solicite analizar un requerimiento, revisar un prompt recibido de ChatGPT Work, planificar una tarea, o use expresiones como "analiza", "plan", "analiza y plan":
+   - **PROHIBIDO EJECUTAR MUTACIONES DE CODIGO O PROCESOS PESADOS EN TERMINAL.** El agente no debe modificar archivos fuente ni ejecutar compilaciones en este modo.
+   - **OBJETIVO Y ENTREGABLE MANDATORIO:**
+     1. Analisis objetivo del requerimiento con evidencia verificable.
+     2. Plan de accion estructurado y desglosado.
+     3. **PROMPT CANONICO `/goal` LISTO PARA EJECUTAR (OBLIGATORIO, NO OPCIONAL):** La finalidad expresa de "analiza y plan" es formular y entregar el bloque canonico `/goal` con las directivas de autonomia, rutas exactas y Definition of Done (DoD).
+   - Este bloque `/goal` permite al usuario revisar la solucion propuesta antes de iniciar la ejecucion autonoma.
+
+2. **Modo Ejecucion Directa (Disparadores: comando `/goal`, "ejecuta", "aplica", "haz push", "haz pull"):**
+   - Cuando el usuario envie un comando que inicie con `/goal`, o de una orden imperativa directa de ejecucion (ej. "ejecuta el plan", "aplica los cambios ahora", "haz push", "haz pull"):
    - El agente **DEBE EJECUTAR DIRECTAMENTE DE PRINCIPIO A FIN** con 100% de autonomia.
-   - **PROHIBIDO** generar prompts intermediarios de `/goal` para que el usuario los vuelva a enviar.
+   - **PROHIBIDO** generar prompts intermediarios de `/goal` en este modo (cero doble paso).
    - **PROHIBIDO** hacer preguntas de diseno intermedias, pedir aprobaciones previas o hacer pausas intermedias.
-   - **Sincronizacion Git y Push:** Toda orden de push debe resolverse ejecutando de forma inmediata y continua `git status`, `git add .`, `git commit -m` (si hay cambios pendientes) y `git push origin [rama]`, confirmando la entrega con codigo de salida 0.
    - La ejecucion debe incluir analisis, codigo, pruebas, validacion (build con codigo 0) y documentacion en memoria/ antes de entregar el informe final de cierre.
 
-2. **Modo Consultoria / Diagnostico Previo:**
-   - Exclusivamente cuando el usuario pida de forma explicita una revision exploratoria previa o asesoramiento de arquitectura (ej. "¿que opinas de...?", "¿como podemos estructurar...?", "analiza y propon un plan"):
-   - Estructurar la respuesta en: Analisis Objetivo con evidencia, Plan de Accion estructurado, y bloque opcional de `/goal` para posterior ejecucion.
+3. **Regla de Prevalencia ante Prompts Externos (Work / ChatGPT):**
+   - Cuando el usuario pegue un prompt generado por Work o terceros que contenga verbos imperativos (ej. "Corrige el plan...", "Actualiza..."), pero la intencion expresada o previa sea "analiza el prompt", "¿que le entrego?", o "analiza y plan":
+   - Prevalece estrictamente el **Modo Analisis y Planificacion**. No se ejecuta el codigo; se analiza el texto, se estructura el plan y se genera el bloque canonico `/goal`.
 
 ---
 
@@ -27,7 +35,7 @@ Queda estrictamente prohibido solicitar confirmaciones, hacer preguntas intermed
 Prohibido emitir mensajes intermedios de espera tipo "he lanzado la tarea y te avisare cuando termine": la ejecucion debe concluir de principio a fin antes del reporte final.
 
 ### 2. Prohibicion de Comandos Lentos y Busquedas Ciegas en Terminal
-Queda estrictamente prohibido ejecutar busquedas recursivas globales en la raiz del disco (`Get-ChildItem -Path "C:\" -Recurse...`) o comandos que superen los limites sincronos y caigan a segundo plano. Toda exploracion debe realizarse con rutas deterministas acotadas exclusivamente al repositorio local (`c:\Proyectos\StudioSimple\Web Studio Simple`) o a la carpeta de contenidos (`OneDrive\EstudioSimple-Contenido`).
+Queda estrictamente prohibido ejecutar busquedas recursivas globales en la raiz del disco (`Get-ChildItem -Path "C:\" -Recurse...`) o comandos que superen los limites sincronos y caigan a segundo plano. Toda exploracion debe realizarse con rutas deterministas acotadas exclusivamente al repositorio local (`d:\StudioSimple - Antigravity\Web Studio Simple`) o a la carpeta de contenidos (`d:\StudioSimple - Antigravity\PLANES MAESTROS PRESENTACIONES`).
 
 ### 3. Prioridad de TypeScript (npx tsx) sobre Python
 El entorno canonico de automatizacion del proyecto es TypeScript / Node.js. Queda prohibido improvisar scripts de Python en linea que fallen por dependencias ausentes o por problemas de codificacion de caracteres en la consola de Windows (cp1252 frente a caracteres como '−'). Todo script de datos, exportacion o verificacion debe escribirse en TypeScript y ejecutarse mediante `npx tsx scripts/[nombre].ts`.

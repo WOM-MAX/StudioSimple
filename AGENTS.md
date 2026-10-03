@@ -115,11 +115,14 @@ El entregable y criterios de **Salida** son: Cumplimiento estricto del protocolo
 - **Persistencia de Progreso contra Compactación:** En tareas complejas de múltiples fases, volcar los hitos alcanzados en un archivo de estado local o bitácora en `memoria/` para resistir eventuales compactaciones del contexto por el sistema.
 - **Edición Atómica Consolidada (Cero Micro-Diffs):** Cada modificación de archivo genera en el IDE una barra interactiva de revisión ('1 File With Changes / Accept all'). Queda estrictamente prohibido realizar micro-ediciones iterativas o sucesivas sobre el mismo archivo. Todo cambio en un archivo debe consolidarse en una única operación atómica por fichero.
 - **Norma de Interacción, Autonomía y Ejecución Directa:**
-  1. **Ejecución Operativa y Comandos Directos (Cero Doble Paso):** Cuando el usuario ordene una acción directa (ej. "haz push", "haz pull", "corrige", "implementa", "actualiza", o ejecute un comando `/goal`), el agente tiene la obligación y autorización para **ejecutar de principio a fin de manera autónoma e inmediata**, realizando las mutaciones de código, operaciones git y validaciones sin detenerse a pedir confirmación ni generar prompts intermediarios de `/goal`.
-  2. **Consultas, Diagnósticos y Asesorías:** Exclusivamente cuando el usuario solicite una revisión exploratoria previa o asesoría abierta (ej. "¿cómo estructurar...?", "analiza y propón un plan"):
-     - Presentar el diagnóstico técnico o pedagógico objetivo con evidencia verificada.
-     - Presentar el plan de acción estructurado con componentes y pasos.
-     - Adjuntar opcionalmente un bloque `/goal` estructurado según [.agents/rules/analisis_autonomo_goal.md](file:///c:/Proyectos/StudioSimple/.agents/rules/analisis_autonomo_goal.md) para ejecuciones programadas.
+  1. **Modo Análisis y Planificación (Disparadores: "analiza", "plan", "analiza y plan", o prompts de Work / externos para revisión):**
+     - El objetivo MANDATORIO de "analiza y plan" es entregar el diagnóstico objetivo con evidencia, el plan de acción estructurado y el bloque canónico `/goal`.
+     - **PROHIBIDO** iniciar mutaciones de código, modificar archivos o ejecutar compilaciones pesadas en este modo.
+     - El bloque `/goal` es **OBLIGATORIO** (no opcional), formulado con las 10 directivas de autonomía para que el usuario pueda revisarlo y detonarlo cuando decida.
+  2. **Modo Ejecución Directa (Disparadores: comando `/goal`, "ejecuta", "aplica", "haz push", "haz pull"):**
+     - Ejecución autónoma de principio a fin, sin pausas, sin preguntas intermedias y sin emitir prompts intermediarios, concluyendo con validación (código 0) y reporte final.
+  3. **Regla de Prevalencia ante Prompts Externos (Work / ChatGPT):**
+     - Si el usuario presenta un prompt generado por Work u otra fuente con verbos imperativos pero dentro del contexto de analizar, evaluar o "¿qué le entrego?", rige estrictamente el Modo Análisis y Planificación, produciendo el análisis, el plan y el prompt `/goal` correspondiente sin ejecutar cambios directos en el repositorio. Ver [.agents/rules/analisis_autonomo_goal.md](file:///d:/StudioSimple%20-%20Antigravity/.agents/rules/analisis_autonomo_goal.md).
 
 ## 🧠 Protocolo de Escalada Arquitectónica
 - **Nivel AVISO:** Debilidades menores (ej. componente sin tipado estricto). Documentar con `// TODO [Agente]:` y continuar.

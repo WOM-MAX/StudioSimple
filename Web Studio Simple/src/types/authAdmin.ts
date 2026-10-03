@@ -49,7 +49,8 @@ export type AuditActionType =
   | 'REVOKE_GUEST_PASS'
   | 'EXTEND_GUEST_PASS'
   | 'UPDATE_SITE_CONFIG'
-  | 'UPDATE_LESSON_CONTENT';
+  | 'UPDATE_LESSON_CONTENT'
+  | 'PAYMENT_MERCADOPAGO_SUCCESS';
 
 export interface AuditLogEntry {
   id: string;

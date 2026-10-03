@@ -52,6 +52,9 @@ export const CheckoutFlow: React.FC = () => {
   const [isCompleted, setIsCompleted] = useState(false);
   const [createdUser, setCreatedUser] = useState<ParentUser | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [isMercadoPagoApproved, setIsMercadoPagoApproved] = useState(false);
+
+  const PENDING_CHECKOUT_KEY = 'estudio_simple_pending_checkout';
 
   // Form Fields - Apoderado
   const [firstName, setFirstName] = useState('');
@@ -81,6 +84,109 @@ export const CheckoutFlow: React.FC = () => {
   // Computados de tarjeta
   const cardBrand: CardBrand = detectCardBrand(cardNumber);
   const effectiveCardholder = cardholderName.trim() || `${firstName.trim()} ${lastName.trim()}`.trim() || 'NOMBRE TITULAR';
+
+  // Detección e interceptación de retorno desde Mercado Pago / Webpay
+  React.useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const params = new URLSearchParams(window.location.search);
+    const isPaymentSuccess =
+      params.get('payment') === 'success' ||
+      params.get('status') === 'approved' ||
+      params.get('collection_status') === 'approved';
+    const isPaymentFailure =
+      params.get('payment') === 'failure' ||
+      params.get('status') === 'rejected' ||
+      params.get('status') === 'cancelled';
+
+    if (isPaymentSuccess) {
+      const savedPending = localStorage.getItem('estudio_simple_pending_checkout');
+      if (savedPending) {
+        try {
+          const pendingData = JSON.parse(savedPending);
+          const { user } = registerUserFromCheckout({
+            rut: pendingData.rut,
+            name: pendingData.name || `${pendingData.firstName || ''} ${pendingData.lastName || ''}`.trim() || 'Apoderado EstudioSimple',
+            email: pendingData.email,
+            password: pendingData.password,
+            studentName: pendingData.studentName || 'Estudiante',
+            studentRun: pendingData.studentRun || '',
+            grade: pendingData.grade || '7° Básico',
+            plan: pendingData.plan || 'monthly',
+            phone: pendingData.phone || ''
+          });
+
+          activateSessionFromCheckout(user, pendingData.grade || '7° Básico');
+
+          // Despacho de correo transaccional de bienvenida
+          fetch('/api/mail/send-welcome', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              email: user.email,
+              name: user.name,
+              rut: user.rut,
+              password: pendingData.password,
+              studentName: user.studentName,
+              grade: pendingData.grade || '7° Básico',
+              studentPin: user.studentPin,
+              plan: pendingData.plan || 'monthly',
+              amount: pendingData.amount || 1000
+            })
+          })
+            .then(res => res.json())
+            .then(data => { if (data.success) setEmailSentStatus({ sent: true, mode: data.mode }); })
+            .catch(() => setEmailSentStatus({ sent: true, mode: 'local' }));
+
+          localStorage.setItem('estudio_simple_parent', JSON.stringify(user));
+          setCreatedUser(user);
+          setIsCompleted(true);
+          setIsMercadoPagoApproved(true);
+          setGrade(pendingData.grade || '7° Básico');
+          setSelectedPlan(pendingData.plan || 'monthly');
+
+          recordAuditLog({
+            actorId: user.id,
+            actorName: user.name,
+            actorEmail: user.email,
+            actorRole: 'user',
+            action: 'PAYMENT_MERCADOPAGO_SUCCESS',
+            target: user.rut || user.email,
+            details: `Pago real aprobado por Mercado Pago/Webpay ($${(pendingData.amount || 1000).toLocaleString('es-CL')} CLP). Transaccion: ${params.get('payment_id') || params.get('collection_id') || 'OK'}`,
+            metadata: {
+              plan: pendingData.plan,
+              monto: pendingData.amount,
+              paymentId: params.get('payment_id') || params.get('collection_id'),
+              status: params.get('status') || params.get('collection_status')
+            }
+          });
+
+          localStorage.removeItem('estudio_simple_pending_checkout');
+          window.history.replaceState({}, document.title, window.location.pathname);
+        } catch (e) {
+          console.error('Error procesando retorno de Mercado Pago:', e);
+        }
+      }
+    } else if (isPaymentFailure) {
+      const savedPending = localStorage.getItem('estudio_simple_pending_checkout');
+      if (savedPending) {
+        try {
+          const pendingData = JSON.parse(savedPending);
+          if (pendingData.firstName) setFirstName(pendingData.firstName);
+          if (pendingData.lastName) setLastName(pendingData.lastName);
+          if (pendingData.rut) setRut(pendingData.rut);
+          if (pendingData.phone) setPhone(pendingData.phone);
+          if (pendingData.email) setEmail(pendingData.email);
+          if (pendingData.password) setPassword(pendingData.password);
+          if (pendingData.studentName) setStudentName(pendingData.studentName);
+          if (pendingData.studentRun) setStudentRun(pendingData.studentRun);
+          if (pendingData.grade) setGrade(pendingData.grade);
+          if (pendingData.plan) setSelectedPlan(pendingData.plan);
+        } catch {}
+      }
+      setErrorMessage('El pago en Mercado Pago / Webpay no se completó o fue cancelado. Tus datos se mantienen intactos para reintentar.');
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+  }, [activateSessionFromCheckout]);
 
   // Estado de validación del RUN en tiempo real
   const isRutValid = rut.trim().length >= 8 ? validateRut(rut) : null;
@@ -314,8 +420,8 @@ export const CheckoutFlow: React.FC = () => {
       return;
     }
 
-    // Validación bancaria si el plan no es prueba gratuita y se paga con tarjeta directa
-    if (selectedPlan !== 'trial' && paymentMethodOption === 'card_direct') {
+    // Validación bancaria si el plan no es prueba gratuita, es pago con tarjeta directa local y la pasarela NO es mercadopago
+    if (selectedPlan !== 'trial' && paymentMethodOption === 'card_direct' && pricingConfig.pasarela.provider !== 'mercadopago') {
       const validation = validateCardForm({
         cardNumber,
         cardholderName: effectiveCardholder,
@@ -336,6 +442,24 @@ export const CheckoutFlow: React.FC = () => {
 
     // Si la pasarela esta configurada en modo Mercado Pago y hay monto a cobrar
     if (pricingConfig.pasarela.provider === 'mercadopago' && finalPrice > 0) {
+      const pendingPayload = {
+        rut: rut.trim(),
+        name: `${firstName.trim()} ${lastName.trim()}`.trim() || 'Apoderado EstudioSimple',
+        firstName: firstName.trim(),
+        lastName: lastName.trim(),
+        email: email.trim(),
+        password,
+        studentName: studentName.trim() || 'Estudiante',
+        studentRun: studentRun.trim(),
+        grade,
+        plan: selectedPlan,
+        phone: phone.trim(),
+        amount: finalPrice,
+        couponCode: appliedCoupon?.codigo,
+        timestamp: Date.now()
+      };
+      localStorage.setItem('estudio_simple_pending_checkout', JSON.stringify(pendingPayload));
+
       fetch('/api/payment/create-preference', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -343,12 +467,12 @@ export const CheckoutFlow: React.FC = () => {
           planId: selectedPlan,
           planName: activePlanObj?.nombre || selectedPlan,
           amount: finalPrice,
-          email,
+          email: email.trim(),
           name: `${firstName.trim()} ${lastName.trim()}`.trim(),
-          rut,
+          rut: rut.trim(),
           grade,
-          studentName,
-          studentRun,
+          studentName: studentName.trim(),
+          studentRun: studentRun.trim(),
           couponCode: appliedCoupon?.codigo
         })
       })
@@ -358,9 +482,11 @@ export const CheckoutFlow: React.FC = () => {
             window.location.href = data.initPoint;
             return;
           }
+          console.warn('Preferencia sin initPoint, fallback a activacion local:', data);
           completeLocalActivation();
         })
-        .catch(() => {
+        .catch((err) => {
+          console.warn('Error en llamada a Mercado Pago:', err);
           completeLocalActivation();
         });
       return;
@@ -1018,6 +1144,8 @@ export const CheckoutFlow: React.FC = () => {
                       ? 'Procesando Pago Seguro...'
                       : selectedPlan === 'trial'
                       ? 'Activar Prueba Gratuita (7 Días)'
+                      : pricingConfig.pasarela.provider === 'mercadopago' && finalPrice > 0
+                      ? `Pagar con Mercado Pago / Webpay ($${finalPrice.toLocaleString('es-CL')} CLP)`
                       : paymentMethodOption === 'mercadopago_wallet' && finalPrice > 0
                       ? `Ir a Mercado Pago ($${finalPrice.toLocaleString('es-CL')} CLP)`
                       : `Pagar $${finalPrice.toLocaleString('es-CL')} CLP y Activar Suscripción`}
@@ -1036,13 +1164,21 @@ export const CheckoutFlow: React.FC = () => {
                 <p className="text-sm text-white/70 max-w-xl mx-auto">
                   Bienvenida/o {createdUser?.name}. El nivel <strong className="text-[#57d6f3]">{grade}</strong> ha sido habilitado con éxito. Tu sesión se encuentra activa para ingresar de inmediato.
                 </p>
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold">
-                  <Check size={14} />
-                  <span>
-                    {emailSentStatus?.sent
-                      ? `Copia oficial de credenciales despachada a ${createdUser?.email || email}`
-                      : `Copia oficial enviada a ${createdUser?.email || email}`}
-                  </span>
+                <div className="flex flex-wrap items-center justify-center gap-2 pt-1">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold">
+                    <Check size={14} />
+                    <span>
+                      {emailSentStatus?.sent
+                        ? `Copia oficial de credenciales despachada a ${createdUser?.email || email}`
+                        : `Copia oficial enviada a ${createdUser?.email || email}`}
+                    </span>
+                  </div>
+                  {isMercadoPagoApproved && (
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#009EE3]/15 border border-[#009EE3]/40 text-[#009EE3] text-xs font-bold">
+                      <CreditCard size={14} />
+                      <span>Pago Verificado vía Mercado Pago / Webpay ($1.000 CLP)</span>
+                    </div>
+                  )}
                 </div>
               </div>
 

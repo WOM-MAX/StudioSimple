@@ -22,63 +22,81 @@ Queda estrictamente prohibido dar por válida una alineación solo porque un doc
 2. **Codex (ChatGPT Work):**
    - Es el consumidor de los paquetes entregados. Audita independientemente las lecciones recibidas y asume la responsabilidad exclusiva de generar y validar las presentaciones PPTX en su propio entorno con Python.
 
-## 3. Matriz de Auditoría y Flujo de Revisión
+## 3. Matriz de Auditoria y Flujo de Revision
 
-El proceso de auditoría evalúa cuatro niveles de consistencia:
+El proceso de auditoria evalua la consistencia del paquete formativo mediante doce controles universales reutilizables:
 
-### Nivel 1: Coherencia Curricular y Progresión del OA
-- Contrastar el código, título, descripción e indicadores del OA contra `curriculum_catalog.json` y `neonCurriculum.json`.
-- Verificar que la secuencia de clases respete la progresión didáctica oficial (desde fundamentos conceptuales hasta la evaluación formal de síntesis).
-- Comprobar que los conceptos clave y la terminología disciplinar coincidan con los Textos Escolares del MINEDUC.
+### Control 1 (UNI-001): Estructura Bimodal de 14 Diapositivas
+- 7 diapositivas de Modulo 1 (Video Gancho Motivacional).
+- 7 diapositivas de Modulo 2 (Video Explicativo Conceptual).
+- Total inquebrantable: 14 laminas por leccion.
 
-### Nivel 2: Estructura de Lección y Calibración Temporal
-- Cada lección debe contener exactamente 14 diapositivas estructuradas:
-  - 7 diapositivas de Módulo 1 (Video Gancho Motivacional): presupuesto de 120 a 140 palabras en total (~130 palabras para 60 segundos de locución a ritmo estándar).
-  - 7 diapositivas de Módulo 2 (Video Explicativo Conceptual): presupuesto de 180 a 210 palabras en total (~195 palabras para 90 segundos de locución a ritmo estándar).
-- Duración total asignada: 150 segundos por clase.
-- Las notas del orador deben presentar texto continuo listo para locución por voz en off, sin encabezados técnicos ni marcas de tiempo en el cuerpo narrativo.
+### Control 2 (UNI-002): Calibracion Temporal de Locucion
+- Gancho motivacional (60 segundos): 120 a 145 palabras (~130 palabras).
+- Explicacion conceptual (90 segundos): 180 a 220 palabras (~195 palabras).
+- Duracion total asignada: 150 segundos por clase.
+- Texto continuo listo para voz en off sin marcas tecnicas ni tiempos en el cuerpo.
 
-### Nivel 3: Modelado Isomórfico Estricto (Diapositiva 6 vs Práctica 1)
-- La diapositiva 6 del video explicativo debe modelar con exactitud el ejercicio o caso número 1 de la práctica interactiva de la plataforma:
-  - Mismo contexto situacional.
-  - Mismos datos, variables o condiciones.
-  - Misma respuesta esperada y justificación conceptual.
-- No se admiten variantes desfasadas o ejercicios distintos entre el video y la plataforma.
+### Control 3 (UNI-003): Duo Co-protagonico Fijo de 13 Anos
+- Presencia explicita del duo en los prompts de imagen: joven mujer con trenzas y joven hombre con chaqueta cerceta, de 13 anos.
 
-### Nivel 4: Prompts Visuales y Reglas Anti-Alucinación
-- Protagonistas fijos: Presencia obligatoria del dúo de estudiantes-exploradores de 13 años (joven mujer con trenzas y joven hombre con chaqueta cerceta) en el 100% de los prompts de imagen.
-- Formato: Anime moderno 16:9 widescreen, iluminación cinematográfica, espacio negativo limpio para texto en pantalla.
-- Regla Anti-Texto: Inclusión obligatoria de la cláusula `No text drawn by AI` en cada prompt de ilustración.
-- Rótulos en pantalla: Títulos en 64 pt y subtítulos en 36 pt o 48 pt según la asignatura, con color plano de alto contraste sin sombras ni cajas oscuras superpuestas sobre los personajes.
+### Control 4 (UNI-004): Clausula Anti-Texto en Prompts de IA
+- Cada prompt visual debe concluir con la clausula 'No text drawn by AI'.
 
-### Nivel 5: Instrumento de Evaluación Formal (Lección Final)
-- La última lección del OA debe culminar con un ensayo o simulador formativo tipo Examen Libre MINEDUC con reactivos de 4 alternativas (A, B, C, D) y justificación psicométrica de distractores.
+### Control 5 (UNI-005): Isomorfismo Diapositiva 6 vs Practica 1
+- La diapositiva 6 del video explicativo debe modelar con exactitud el ejercicio o caso 1 de la practica interactiva: mismo contexto, mismos datos y misma resolucion.
+
+### Control 6 (UNI-006): Reactivo Oficial de 4 Alternativas en Cierre
+- La leccion final de sintesis del OA debe incluir reactivos psicometricos de 4 alternativas (A, B, C, D) con analisis de distractores.
+
+### Control 7 (UNI-007): Flujo Conceptual Completo y Progresion del OA
+- Auditar la secuencia completa del OA asegurando una progresion didactica coherente: fundamentacion conceptual basal, desarrollo y diferenciacion tematica, aplicacion cotidiana y etica, y evaluacion de sintesis formal.
+- Contrastar que todas las afirmaciones disciplinarias esten respaldadas en las Bases Curriculares y Textos Escolares Oficiales del MINEDUC.
+
+### Control 8 (UNI-008): Deteccion de Contradicciones Inter-Leccion y Respaldo Oficial
+- Detectar y reportar cualquier contradiccion entre lecciones sobre conceptos, categorias, definiciones y datos numericos (por ejemplo, rangos de edad o clasificaciones fisiologicas).
+- Comprobar que cualquier atribucion a fuentes oficiales (MINEDUC, OMS) cuente con respaldo documental verificado.
+
+### Control 9 (UNI-009): Reutilizacion Fiel en Revision Post-Video
+- Comparar la revision posterior al video (postQuestions y dialogos guiados inmediatos) con los ejercicios de la leccion completa.
+- Debe reutilizar estrictamente los mismos enunciados, datos, preguntas y alternativas del banco de practica interactiva, prohibiendo inventar ejercicios o preguntas no articuladas.
+
+### Control 10 (UNI-010): Estructura Teleologica de la Explicacion
+- Verificar que la primera diapositiva del video explicativo presente con total claridad el objetivo de aprendizaje de la leccion en su subtitulo formal.
+- Comprobar que la diapositiva final de la explicacion (diapositiva 14 del total) sintetice la Regla de Oro y de paso directo y limpio a la practica prevista en la plataforma web, sin agregar desafios nuevos, preguntas abiertas no resueltas ni tareas no contempladas.
+
+### Control 11 (UNI-011): Integridad de Pasos Obligatorios (Cero Bloques Vacios)
+- Inspeccionar los 8 pasos pedagogicos obligatorios de cada leccion (metadatos, preparacion, ruta, situacion inicial, video gancho, conversacion guiada, video explicativo, practica interactiva y evaluacion formal).
+- Detectar y rechazar cualquier seccion o paso obligatorio que se encuentre vacio, nulo, incompleto o con texto de relleno/plantilla (por ejemplo 'TODO', 'pendiente', 'lorem').
+
+### Control 12 (UNI-012): Preservacion Rigurosa de Criterios Visuales Universales
+- Comprobar que el 100% de los prompts visuales de cada diapositiva respete la totalidad de los criterios esteticos aprobados: formato 16:9 widescreen, estilo Anime Moderno con iluminacion cinematografica, presencia de ambos co-protagonistas de 13 anos colaborando, espacio negativo amplio para rotulos y la clausula 'No text drawn by AI'.
 
 ## 4. Formato Obligatorio de Hallazgos
 
 Por cada discrepancia detectada, el informe debe registrar:
-- **Código del problema:** Identificador único (ej. `ERR-CURR-001`, `ERR-ISOM-002`, `ERR-TIME-003`).
-- **Nivel de prioridad:** `Crítica` (bloquea entrega), `Alta` (requiere corrección antes de compilar), o `Media` (observación formal).
-- **Ubicación:** Archivo exacto, número de lección, número de diapositiva o bloque pedagógico.
-- **Fuente aprobada:** Cita o parámetro textual estipulado en las Bases Curriculares, Texto Oficial o Plan Maestro.
+- **Codigo del problema:** Identificador unico (ej. `ERR-CURR-001`, `ERR-ISOM-002`, `ERR-TIME-003`).
+- **Nivel de prioridad:** `Critica` (bloquea entrega), `Alta` (requiere correccion antes de compilar), o `Media` (observacion formal).
+- **Ubicacion:** Archivo exacto, numero de leccion, numero de diapositiva o bloque pedagogico.
+- **Fuente aprobada:** Cita o parametro textual estipulado en las Bases Curriculares, Texto Oficial o Plan Maestro.
 - **Material revisado:** Contenido real encontrado en el archivo inspeccionado.
-- **Causa de discrepancia:** Explicación técnica de la inconsistencia.
-- **Corrección concreta sugerida:** Acción textual o de código exacta para subsanar el error.
+- **Causa de discrepancia:** Explicacion tecnica de la inconsistencia.
+- **Correccion concreta sugerida:** Accion textual o de codigo exacta para subsanar el error.
 
-## 5. Estados de Cierre del Informe de Auditoría
+## 5. Estados de Cierre del Informe de Auditoria
 
 Todo informe debe concluir con uno de los siguientes cuatro estados formales:
 1. **Aprobado:** 0 discrepancias detectadas; 100% de cumplimiento con las reglas y fuentes.
-2. **Aprobado con observaciones:** Cumple con el 100% de las reglas críticas; existen notas menores no bloqueantes.
-3. **Requiere correcciones:** Se detectó al menos una brecha crítica o de isomorfismo que debe corregirse antes de generar artefactos.
+2. **Aprobado con observaciones:** Cumple con el 100% de las reglas criticas; existen notas menores no bloqueantes.
+3. **Requiere correcciones:** Se detecto al menos una brecha critica o de isomorfismo que debe corregirse antes de generar artefactos.
 4. **No evaluable por falta de fuentes:** Falta un documento oficial o fuente curricular indispensable para validar los contenidos.
 
-## 6. Persistencia y Prevención de Regresiones
+## 6. Persistencia, Prevencion de Regresiones y Delimitacion de Datos
 
 El auditor consulta y actualiza permanentemente:
-- `rules_catalog.json`: Catálogo de reglas con alcance diferenciado:
-  - `universal`: Aplica a todas las asignaturas y grados.
-  - `subject`: Aplica exclusivamente a una disciplina específica.
-  - `oa`: Aplica a un único objetivo de aprendizaje particular.
-- `regression_cases.json`: Registro de fallos previos confirmados (por ejemplo, discrepancias detectadas por Codex o en revisiones anteriores). Cada nuevo caso debe quedar documentado como prueba de regresión para garantizar que nunca vuelva a ocurrir.
-- Prohibición de sobregeneralización: Un error particular de un OA no se convierte en regla universal salvo que exista una directiva formal aprobada.
+- `rules_catalog.json`: Catalogo de reglas con alcance diferenciado:
+  - `universal`: Controles que aplican obligatoriamente a todas las asignaturas y grados (UNI-001 a UNI-012).
+  - `subject`: Reglas disciplinares especificas (ej. enfoque CPA en Matematica, indagacion en Ciencias, multicausalidad en Historia).
+  - `oa`: Criterios particulares de un unico objetivo curricular.
+- `regression_cases.json`: Registro inmutable de casos de regresion con descripcion de lo que debia detectar, ubicacion donde aparecio, correccion esperada y asercion de prueba.
+- Invariante de encapsulamiento: Los datos propios de un OA especifico (tales como conceptos disciplinarios, rangos de edad particulares, preguntas tematicas o detalles de contenido) deben quedar estrictamente encapsulados en el caso de regresion y en el plan de dicha asignatura, prohibiendo su generalizacion como reglas universales para otras disciplinas.

@@ -46,6 +46,16 @@
       "issue": "Reactivos de evaluacion final con solo 3 alternativas, insuficientes para preparar al estudiante frente al rigor psicometrico de 4 alternativas de los Examenes Libres oficiales del MINEDUC.",
       "resolution": "Estandarizacion de la clase de cierre con reactivo psicometrico de 4 alternativas (A, B, C, D) con analisis de distractores fundados en errores cognitivos frecuentes.",
       "test_assertion": "La ultima clase de cada OA debe contener en su evaluacion miniquiz opciones con al menos 4 alternativas."
+    },
+    {
+      "id": "REG-006",
+      "oaId": "110-7-CIE-OA01",
+      "reported_by": "Auditoria de Coherencia Agente Universal",
+      "date": "2026-10-03",
+      "issue": "Brechas de consistencia pedagogica, visual y curricular en Ciencias Naturales 7° Basico OA 01: 1) Omicion del duo co-protagonico fijo de 13 anos en 54 de 84 prompts visuales; 2) Contradiccion inter-leccion sobre rango cronologico de inicio puberal (Clase 2 indicaba 9 a 15 anos en diapositiva 6 y miniquiz, discrepando con Clase 5 y curvas OMS/MINEDUC de 10 a 16 anos); 3) Desalineacion en revision post-video (postQuestions con preguntas inventadas no isomórficas con los casos de practica); 4) Desviacion en notas de orador superando presupuestos de 145 y 220 palabras; 5) Diapositiva 14 con cierres difusos o tareas imprevistas en lugar de paso directo a practica.",
+      "where_appeared": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase01.ts y scripts/ciencias_data/clase02_data.ts a clase06_data.ts (84 diapositivas, postQuestions, miniquiz y notas del orador).",
+      "expected_correction": "1) Integrar al duo de 13 anos (joven mujer con trenzas y joven hombre con chaqueta cerceta) en el 100% de los prompts de imagen; 2) Unificar el rango cronologico oficial de inicio puberal a 10 a 16 anos en todo el OA 01; 3) Reutilizar fielmente los casos de practica en postQuestions sin inventar ejercicios; 4) Calibrar locucion a ~130 palabras en gancho y ~195 palabras en explicacion; 5) Asegurar diapositiva 1 con objetivo formal y diapositiva 14 con sintesis de Regla de Oro y pase directo a practica sin retos nuevos.",
+      "test_assertion": "El motor de auditoria debe comprobar que 100% de las 84 diapositivas incluyan al duo co-protagonico, que no existan discrepancias numericas entre lecciones del OA, que postQuestions coincida con los enunciados de practica, que la diapositiva 1 explicativa contenga el objetivo y la diapositiva 14 cierre directamente hacia la practica."
     }
   ]
 }

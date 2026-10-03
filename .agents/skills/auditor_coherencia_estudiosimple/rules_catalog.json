@@ -69,6 +69,75 @@
       "validation": {
         "final_lesson_quiz_min_options": 4
       }
+    },
+    {
+      "id": "UNI-007",
+      "name": "Auditoría de Flujo Conceptual y Progresión Didáctica del OA",
+      "scope": "universal",
+      "description": "El OA debe desplegar una secuencia de lecciones articulada y progresiva (desde fundamentos basales y diferenciación conceptual hasta aplicación ética/social y evaluación de síntesis formal), verificando que las afirmaciones disciplinarias estén respaldadas en las Bases Curriculares y Textos Escolares del MINEDUC.",
+      "source": "Bases Curriculares MINEDUC y Principios de Diseño Instruccional EstudioSimple",
+      "validation": {
+        "required_progression": ["fundamentacion", "desarrollo", "sintesis_evaluacion"],
+        "check_sources_supported": true
+      }
+    },
+    {
+      "id": "UNI-008",
+      "name": "Detección de Contradicciones Inter-Lección y Respaldo de Atribuciones Oficiales",
+      "scope": "universal",
+      "description": "Comprobar que no existan contradicciones ni discrepancias conceptuales, categoriales, de definiciones o datos numéricos entre lecciones del mismo OA. Toda atribución a normativas, decretos o fuentes oficiales (MINEDUC, OMS) debe contar con respaldo explícito verificado.",
+      "source": "Protocolo de Integridad Epistemológica y Curricular EstudioSimple",
+      "validation": {
+        "inter_lesson_consistency": true,
+        "official_attributions_backed": true
+      }
+    },
+    {
+      "id": "UNI-009",
+      "name": "Reutilización Fiel de Ejercicios en Revisión Post-Video (Cero Variantes Inventadas)",
+      "scope": "universal",
+      "description": "La revisión posterior al video explicativo (preguntas de retroalimentación inmediata / postQuestions y Diapositiva 6) debe reutilizar estrictamente los mismos enunciados, datos, preguntas y alternativas de la práctica interactiva de la lección, prohibiendo inventar variantes que rompan la coherencia pedagógica.",
+      "source": "Matriz de Coherencia Isomórfica EstudioSimple (Revisión Post-Video)",
+      "validation": {
+        "reuse_exact_exercise_data": true,
+        "zero_invented_exercises": true
+      }
+    },
+    {
+      "id": "UNI-010",
+      "name": "Estructura Teleológica de la Explicación (Objetivo en Diapositiva 1 y Cierre a Práctica sin Retos Nuevos)",
+      "scope": "universal",
+      "description": "La primera diapositiva del video explicativo conceptual (diapositiva 8 del total) DEBE presentar con claridad el objetivo formal de aprendizaje en el subtítulo (36 pt). La diapositiva final de la explicación (diapositiva 14 del total) DEBE sintetizar con la regla de oro y dar el pase directo a la práctica en la plataforma web, quedando prohibido introducir desafíos nuevos, preguntas abiertas no resueltas o tareas no previstas en el guion.",
+      "source": "Directiva de Arquitectura Audiovisual y Reducción de Sobrecarga Cognitiva",
+      "validation": {
+        "first_expl_slide_has_objective": true,
+        "last_expl_slide_clean_closing": true,
+        "prohibit_new_challenges_at_closing": true
+      }
+    },
+    {
+      "id": "UNI-011",
+      "name": "Integridad de Pasos Pedagógicos Obligatorios (Cero Bloques Vacíos o Incompletos)",
+      "scope": "universal",
+      "description": "Inspecciona los 8 pasos pedagógicos de cada lección (metadatos, preparación, ruta, situación inicial, video gancho, conversación guiada, video explicativo, práctica interactiva y evaluación formal), detectando y rechazando cualquier campo nulo, texto vacío (''), texto de plantilla ('TODO', 'pendiente', 'lorem') o colecciones vacías.",
+      "source": "Estándar de Calidad y Completitud Editorial EstudioSimple",
+      "validation": {
+        "mandatory_steps_count": 8,
+        "disallow_empty_or_placeholder_fields": true
+      }
+    },
+    {
+      "id": "UNI-012",
+      "name": "Preservación Rigurosa de Criterios Visuales Universales en Cada Escena",
+      "scope": "universal",
+      "description": "Verifica que el 100% de los prompts visuales de cada diapositiva cumpla los criterios estéticos aprobados: formato 16:9 widescreen, estilo Anime Moderno con iluminación y composición limpia, presencia explícita del dúo co-protagónico de 13 años (la joven y el joven estudiantes-exploradores), espacio negativo para texto y vectores, y la cláusula obligatoria 'No text drawn by AI'.",
+      "source": "Guía de Identidad Visual y Arte EstudioSimple 2026",
+      "validation": {
+        "widescreen_16_9": true,
+        "modern_anime_style": true,
+        "protagonists_in_100_percent_scenes": true,
+        "anti_text_clause_mandatory": true
+      }
     }
   ],
   "subject_rules": {

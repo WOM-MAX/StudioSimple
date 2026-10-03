@@ -12,7 +12,21 @@ import { PricingPage } from './components/pricing/PricingPage';
 import { FormalExamSimulator } from './components/student/FormalExamSimulator';
 
 const MainContent: React.FC = () => {
-  const { viewMode, authSession, activeSynchronizedLesson } = useApp();
+  const { viewMode, setViewMode, authSession, activeSynchronizedLesson } = useApp();
+
+  React.useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const search = window.location.search;
+      if (
+        search.includes('payment=success') ||
+        search.includes('payment=failure') ||
+        search.includes('status=approved') ||
+        search.includes('collection_status=approved')
+      ) {
+        setViewMode('checkout');
+      }
+    }
+  }, [setViewMode]);
 
   const isAuthenticated = authSession?.isAuthenticated === true;
   const isAdmin = isAuthenticated && authSession?.role === 'admin';

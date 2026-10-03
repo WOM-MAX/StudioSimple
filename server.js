@@ -478,7 +478,16 @@ const server = http.createServer(async (req, res) => {
 
         // Si Mercado Pago esta configurado con token activo
         if (pasarelaConfig.provider === 'mercadopago' && accessToken && accessToken.trim()) {
-          const origin = req.headers.origin || 'http://localhost:3000';
+          let origin = req.headers.origin;
+          if (!origin && req.headers.referer) {
+            try { origin = new URL(req.headers.referer).origin; } catch {}
+          }
+          if (!origin) origin = 'http://localhost:3000';
+
+          const isPublicHttps = origin.startsWith('https://');
+          const cleanAmount = Math.max(500, Math.round(Number(amount) || 1000));
+          const isSandbox = pasarelaConfig.sandbox === true || pasarelaConfig.modoSandbox === true;
+
           const preferencePayload = {
             items: [
               {
@@ -487,12 +496,12 @@ const server = http.createServer(async (req, res) => {
                 description: `Acceso oficial homeschooling EstudioSimple para ${studentName || 'Estudiante'}`,
                 quantity: 1,
                 currency_id: 'CLP',
-                unit_price: Number(amount)
+                unit_price: cleanAmount
               }
             ],
             payer: {
-              name: name || 'Apoderado',
-              email: email || 'cliente@estudiosimple.cl'
+              name: name || 'Apoderado EstudioSimple',
+              email: (email && email.includes('@')) ? email.trim() : 'cliente@estudiosimple.cl'
             },
             metadata: {
               rut,
@@ -503,13 +512,17 @@ const server = http.createServer(async (req, res) => {
               planId
             },
             back_urls: {
-              success: `${origin}/?payment=success&plan=${planId}&amount=${amount}`,
+              success: `${origin}/?payment=success&plan=${planId}&amount=${cleanAmount}`,
               failure: `${origin}/?payment=failure`,
               pending: `${origin}/?payment=pending`
             },
-            auto_return: 'approved',
-            notification_url: `${origin}/api/payment/webhook`
+            auto_return: 'approved'
           };
+
+          // Mercado Pago exige que notification_url sea HTTPS publica (no localhost)
+          if (isPublicHttps) {
+            preferencePayload.notification_url = `${origin}/api/payment/webhook`;
+          }
 
           const mpResponse = await fetch('https://api.mercadopago.com/checkout/preferences', {
             method: 'POST',
@@ -523,14 +536,21 @@ const server = http.createServer(async (req, res) => {
           const mpData = await mpResponse.json();
 
           if (mpData.id && (mpData.init_point || mpData.sandbox_init_point)) {
+            const selectedInitPoint = isSandbox
+              ? (mpData.sandbox_init_point || mpData.init_point)
+              : (mpData.init_point || mpData.sandbox_init_point);
+
             res.writeHead(200);
             res.end(JSON.stringify({
               success: true,
               mode: 'mercadopago',
+              isSandbox,
               preferenceId: mpData.id,
-              initPoint: (pasarelaConfig.sandbox || pasarelaConfig.modoSandbox) ? (mpData.sandbox_init_point || mpData.init_point) : mpData.init_point
+              initPoint: selectedInitPoint
             }));
             return;
+          } else {
+            console.error('Mercado Pago API error:', mpData);
           }
         }
 

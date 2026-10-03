@@ -82,17 +82,24 @@ async function main() {
       console.log(`Compilando DOCX oficial canónico para Ciencias OA 01 con buildOAPackageDocx...`);
       const doc = buildOAPackageDocx(pkg);
       docxBuffer = await Packer.toBuffer(doc);
-      // Guardar también en directorio de planes maestros fuente
+      if (!fs.existsSync(sourceDocxDir)) {
+        fs.mkdirSync(sourceDocxDir, { recursive: true });
+      }
       const srcDocxPath = path.join(sourceDocxDir, item.shortDocx);
       fs.writeFileSync(srcDocxPath, docxBuffer);
       console.log(`DOCX fuente actualizado: ${srcDocxPath} (${docxBuffer.length} bytes)`);
     } else {
       const srcDocxPath = path.join(sourceDocxDir, item.shortDocx);
-      if (!fs.existsSync(srcDocxPath)) {
-        throw new Error(`Archivo fuente DOCX no encontrado: ${srcDocxPath}`);
+      const fallbackPath = path.join(targetDescargasDir, item.shortDocx);
+      if (fs.existsSync(srcDocxPath)) {
+        docxBuffer = fs.readFileSync(srcDocxPath);
+        console.log(`Leido DOCX fuente: ${srcDocxPath} (${docxBuffer.length} bytes)`);
+      } else if (fs.existsSync(fallbackPath)) {
+        docxBuffer = fs.readFileSync(fallbackPath);
+        console.log(`Leido DOCX de respaldo: ${fallbackPath} (${docxBuffer.length} bytes)`);
+      } else {
+        throw new Error(`Archivo fuente DOCX no encontrado: ${srcDocxPath} ni ${fallbackPath}`);
       }
-      docxBuffer = fs.readFileSync(srcDocxPath);
-      console.log(`Leido DOCX fuente: ${srcDocxPath} (${docxBuffer.length} bytes)`);
     }
 
     // Guardar en DESCARGA_LECCIONES (ambos nombres: corto y canonico)
