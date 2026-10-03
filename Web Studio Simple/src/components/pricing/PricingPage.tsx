@@ -6,6 +6,8 @@ import { loadSiteConfig } from '../../data/initialCmsExtrasData';
 import { loadCmsPages } from '../../data/initialCmsData';
 import { SiteConfig } from '../../types/cmsExtras';
 import { CmsPage } from '../../types/cms';
+import { loadPricingConfig } from '../../lib/pricing-repository';
+import { PricingConfig, PricingPlan } from '../../types/pricing';
 
 export const PricingPage: React.FC = () => {
   const { setViewMode, headerFooterColor, authSession, logout } = useApp();
@@ -13,16 +15,22 @@ export const PricingPage: React.FC = () => {
 
   const [siteConfig, setSiteConfig] = useState<SiteConfig>(() => loadSiteConfig());
   const [cmsPages, setCmsPages] = useState<CmsPage[]>(() => loadCmsPages());
+  const [pricingConfig, setPricingConfig] = useState<PricingConfig>(() => loadPricingConfig());
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
     const refresh = () => {
       setSiteConfig(loadSiteConfig());
       setCmsPages(loadCmsPages());
+      setPricingConfig(loadPricingConfig(true));
     };
     refresh();
     window.addEventListener('storage', refresh);
-    return () => window.removeEventListener('storage', refresh);
+    window.addEventListener('pricing-config-updated', refresh);
+    return () => {
+      window.removeEventListener('storage', refresh);
+      window.removeEventListener('pricing-config-updated', refresh);
+    };
   }, []);
 
   const menuPages = useMemo(() => {
@@ -108,103 +116,138 @@ export const PricingPage: React.FC = () => {
         </div>
 
         {/* 3. GRILLA DE 3 TARJETAS DE PLANES */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-          
-          {/* Tarjeta 1: Plan Mensual */}
-          <div className="bg-[#16325C] rounded-3xl p-8 border border-white/10 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:shadow-xl shadow-lg">
-            <div>
-              <div className="text-xs font-bold uppercase tracking-wider text-[#57d6f3] mb-2">Flexibilidad Total</div>
-              <h2 className="text-2xl font-bold text-white mb-2">Plan Mensual</h2>
-              <p className="text-sm text-gray-300 mb-6">Ideal para avanzar mes a mes a tu propio ritmo con tranquilidad.</p>
-              
-              <div className="text-4xl font-black text-white mb-1">
-                $29.990 <span className="text-sm font-normal text-gray-300">/ mes</span>
+        {(() => {
+          const monthlyPlan = pricingConfig.planes.find(p => p.id === 'monthly') || {
+            precioNormal: 29990,
+            precioOferta: 1000,
+            enOferta: true,
+            etiquetaOferta: 'Oferta Prueba $1.000 CLP'
+          };
+          const fullPlan = pricingConfig.planes.find(p => p.id === 'full') || {
+            precioNormal: 199900,
+            precioOferta: 99900,
+            enOferta: true,
+            etiquetaOferta: 'Oferta Lanzamiento 50% DCTO'
+          };
+          const monthlyEffective = monthlyPlan.enOferta ? monthlyPlan.precioOferta : monthlyPlan.precioNormal;
+          const fullEffective = fullPlan.enOferta ? fullPlan.precioOferta : fullPlan.precioNormal;
+
+          return (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+              {/* Tarjeta 1: Plan Mensual */}
+              <div className="bg-[#16325C] rounded-3xl p-8 border border-white/10 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:shadow-xl shadow-lg relative">
+                {monthlyPlan.enOferta && (
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#57d6f3] text-[#0A192F] font-black text-xs px-4 py-0.5 rounded-full uppercase tracking-wider shadow-md">
+                    {monthlyPlan.etiquetaOferta || 'OFERTA ACTIVA'}
+                  </div>
+                )}
+                <div>
+                  <div className="text-xs font-bold uppercase tracking-wider text-[#57d6f3] mb-2">Flexibilidad Total</div>
+                  <h2 className="text-2xl font-bold text-white mb-2">Plan Mensual</h2>
+                  <p className="text-sm text-gray-300 mb-6">Ideal para avanzar mes a mes a tu propio ritmo con tranquilidad.</p>
+                  
+                  <div className="mb-1">
+                    {monthlyPlan.enOferta && (
+                      <span className="text-sm font-semibold text-white/50 line-through block">
+                        ${monthlyPlan.precioNormal.toLocaleString('es-CL')} CLP
+                      </span>
+                    )}
+                    <div className="text-4xl font-black text-white">
+                      ${monthlyEffective.toLocaleString('es-CL')} <span className="text-sm font-normal text-gray-300">/ mes</span>
+                    </div>
+                  </div>
+                  <div className="text-xs text-gray-400 mb-6">Renovación mensual cancelable cuando quieras sin penalización</div>
+
+                  <ul className="space-y-3.5 text-sm text-gray-200 border-t border-white/10 pt-6">
+                    <li className="flex items-center gap-2.5">
+                      <CheckCircle2 className="w-4 h-4 text-[#12A1A4] shrink-0" />
+                      <span>Acceso a las 5 asignaturas oficiales</span>
+                    </li>
+                    <li className="flex items-center gap-2.5">
+                      <CheckCircle2 className="w-4 h-4 text-[#12A1A4] shrink-0" />
+                      <span>Lecciones de 30 min y cuaderno guiado</span>
+                    </li>
+                    <li className="flex items-center gap-2.5">
+                      <CheckCircle2 className="w-4 h-4 text-[#12A1A4] shrink-0" />
+                      <span>Panel de seguimiento del apoderado</span>
+                    </li>
+                    <li className="flex items-center gap-2.5">
+                      <CheckCircle2 className="w-4 h-4 text-[#12A1A4] shrink-0" />
+                      <span>Diálogo socrático para guiar sin ser profesor</span>
+                    </li>
+                    <li className="flex items-center gap-2.5">
+                      <CheckCircle2 className="w-4 h-4 text-[#12A1A4] shrink-0" />
+                      <span>Soporte pedagógico vía WhatsApp y correo</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => handleSelectPlan('monthly')}
+                  className="w-full mt-8 py-4 px-4 rounded-2xl font-bold text-sm bg-white/10 hover:bg-white/20 text-white border border-white/20 transition-all flex items-center justify-center gap-2 shadow-md hover:scale-[1.02] cursor-pointer"
+                >
+                  <span>Seleccionar Plan Mensual</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
               </div>
-              <div className="text-xs text-gray-400 mb-6">Renovación mensual cancelable cuando quieras sin penalización</div>
 
-              <ul className="space-y-3.5 text-sm text-gray-200 border-t border-white/10 pt-6">
-                <li className="flex items-center gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-[#12A1A4] shrink-0" />
-                  <span>Acceso a las 5 asignaturas oficiales</span>
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-[#12A1A4] shrink-0" />
-                  <span>Lecciones de 30 min y cuaderno guiado</span>
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-[#12A1A4] shrink-0" />
-                  <span>Panel de seguimiento del apoderado</span>
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-[#12A1A4] shrink-0" />
-                  <span>Diálogo socrático para guiar sin ser profesor</span>
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-[#12A1A4] shrink-0" />
-                  <span>Soporte pedagógico vía WhatsApp y correo</span>
-                </li>
-              </ul>
-            </div>
+              {/* Tarjeta 2: Anual Exámenes Libres (Destacado) */}
+              <div className="bg-[#10223D] rounded-3xl p-8 border-2 border-[#F8AD22] shadow-2xl relative flex flex-col justify-between transition-all duration-300 hover:scale-[1.03]">
+                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#F8AD22] text-[#0A192F] font-black text-xs px-5 py-1 rounded-full uppercase tracking-wider shadow-md">
+                  {fullPlan.enOferta ? (fullPlan.etiquetaOferta || 'OFERTA EXCLUSIVA') : 'Más Recomendado'}
+                </div>
 
-            <button
-              type="button"
-              onClick={() => handleSelectPlan('monthly')}
-              className="w-full mt-8 py-4 px-4 rounded-2xl font-bold text-sm bg-white/10 hover:bg-white/20 text-white border border-white/20 transition-all flex items-center justify-center gap-2 shadow-md hover:scale-[1.02]"
-            >
-              <span>Seleccionar Plan Mensual</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
-          </div>
+                <div>
+                  <div className="text-xs font-bold uppercase tracking-wider text-[#F8AD22] mb-2">Preparación Integral</div>
+                  <h2 className="text-2xl font-bold text-white mb-2">Anual Exámenes Libres</h2>
+                  <p className="text-sm text-gray-300 mb-6">Acompañamiento completo durante todo el año escolar oficial.</p>
+                  
+                  <div className="mb-1">
+                    {fullPlan.enOferta && (
+                      <span className="text-sm font-semibold text-white/50 line-through block">
+                        ${fullPlan.precioNormal.toLocaleString('es-CL')} CLP
+                      </span>
+                    )}
+                    <div className="text-4xl font-black text-white">
+                      ${fullEffective.toLocaleString('es-CL')} <span className="text-sm font-normal text-gray-300">/ año</span>
+                    </div>
+                  </div>
+                  <div className="text-xs text-[#F8AD22] font-semibold mb-6">Ahorras más del 44% en comparación al pago mensual</div>
 
-          {/* Tarjeta 2: Anual Exámenes Libres (Destacado) */}
-          <div className="bg-[#10223D] rounded-3xl p-8 border-2 border-[#F8AD22] shadow-2xl relative flex flex-col justify-between transition-all duration-300 hover:scale-[1.03]">
-            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#F8AD22] text-[#0A192F] font-black text-xs px-5 py-1 rounded-full uppercase tracking-wider shadow-md">
-              Más Recomendado
-            </div>
+                  <ul className="space-y-3.5 text-sm text-gray-200 border-t border-white/10 pt-6">
+                    <li className="flex items-center gap-2.5 font-semibold text-white">
+                      <CheckCircle2 className="w-4 h-4 text-[#F8AD22] shrink-0" />
+                      <span>Todo lo incluido en el Plan Mensual</span>
+                    </li>
+                    <li className="flex items-center gap-2.5">
+                      <CheckCircle2 className="w-4 h-4 text-[#F8AD22] shrink-0" />
+                      <span>Simulacros de examen formal tipo MINEDUC</span>
+                    </li>
+                    <li className="flex items-center gap-2.5">
+                      <CheckCircle2 className="w-4 h-4 text-[#F8AD22] shrink-0" />
+                      <span>Cuadernillos imprimibles de ejercitación física</span>
+                    </li>
+                    <li className="flex items-center gap-2.5">
+                      <CheckCircle2 className="w-4 h-4 text-[#F8AD22] shrink-0" />
+                      <span>Garantía de actualización curricular 2026</span>
+                    </li>
+                    <li className="flex items-center gap-2.5">
+                      <CheckCircle2 className="w-4 h-4 text-[#F8AD22] shrink-0" />
+                      <span>Informes periódicos de avance para apoderados</span>
+                    </li>
+                  </ul>
+                </div>
 
-            <div>
-              <div className="text-xs font-bold uppercase tracking-wider text-[#F8AD22] mb-2">Preparación Integral</div>
-              <h2 className="text-2xl font-bold text-white mb-2">Anual Exámenes Libres</h2>
-              <p className="text-sm text-gray-300 mb-6">Acompañamiento completo durante todo el año escolar oficial.</p>
-              
-              <div className="text-4xl font-black text-white mb-1">
-                $199.900 <span className="text-sm font-normal text-gray-300">/ año</span>
+                <button
+                  type="button"
+                  onClick={() => handleSelectPlan('full')}
+                  className="w-full mt-8 py-4 px-4 rounded-2xl font-bold text-sm bg-[#EE751C] hover:bg-[#D66512] text-white shadow-xl transition-all flex items-center justify-center gap-2 hover:scale-[1.02] cursor-pointer"
+                >
+                  <span>Comenzar Plan Anual</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
               </div>
-              <div className="text-xs text-[#F8AD22] font-semibold mb-6">Ahorras más del 44% en comparación al pago mensual</div>
-
-              <ul className="space-y-3.5 text-sm text-gray-200 border-t border-white/10 pt-6">
-                <li className="flex items-center gap-2.5 font-semibold text-white">
-                  <CheckCircle2 className="w-4 h-4 text-[#F8AD22] shrink-0" />
-                  <span>Todo lo incluido en el Plan Mensual</span>
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-[#F8AD22] shrink-0" />
-                  <span>Simulacros de examen formal tipo MINEDUC</span>
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-[#F8AD22] shrink-0" />
-                  <span>Cuadernillos imprimibles de ejercitación física</span>
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-[#F8AD22] shrink-0" />
-                  <span>Garantía de actualización curricular 2026</span>
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-[#F8AD22] shrink-0" />
-                  <span>Informes periódicos de avance para apoderados</span>
-                </li>
-              </ul>
-            </div>
-
-            <button
-              type="button"
-              onClick={() => handleSelectPlan('full')}
-              className="w-full mt-8 py-4 px-4 rounded-2xl font-bold text-sm bg-[#EE751C] hover:bg-[#D66512] text-white shadow-xl transition-all flex items-center justify-center gap-2 hover:scale-[1.02]"
-            >
-              <span>Comenzar Plan Anual</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
-          </div>
 
           {/* Tarjeta 3: Prueba 7 Días */}
           <div className="bg-[#16325C] rounded-3xl p-8 border border-white/10 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:shadow-xl shadow-lg">
@@ -246,9 +289,10 @@ export const PricingPage: React.FC = () => {
               <span>Probar Gratis 7 Días</span>
               <ArrowRight className="w-4 h-4" />
             </button>
-          </div>
-
-        </div>
+              </div>
+            </div>
+          );
+        })()}
 
         {/* 4. TABLA COMPARATIVA DE ASIGNATURAS Y COBERTURA */}
         <section className="mb-24 bg-[#16325C] rounded-3xl p-8 md:p-12 border border-white/10 shadow-xl">

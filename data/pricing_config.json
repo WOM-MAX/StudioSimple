@@ -1,0 +1,88 @@
+{
+  "planes": [
+    {
+      "id": "monthly",
+      "nombre": "Plan Mensual",
+      "subtitulo": "Renovación mensual cancelable cuando quieras sin penalización",
+      "precioNormal": 29990,
+      "precioOferta": 1000,
+      "enOferta": true,
+      "etiquetaOferta": "Oferta Prueba $1.000 CLP",
+      "duracionTexto": "/ mes",
+      "caracteristicas": [
+        "Acceso a las 5 asignaturas oficiales",
+        "Lecciones de 30 min y cuaderno guiado",
+        "Panel de seguimiento del apoderado",
+        "Diálogo socrático para guiar sin ser profesor",
+        "Soporte pedagógico vía WhatsApp y correo"
+      ],
+      "activo": true
+    },
+    {
+      "id": "full",
+      "nombre": "Anual Exámenes Libres",
+      "subtitulo": "Acompañamiento completo durante todo el año escolar oficial",
+      "precioNormal": 199900,
+      "precioOferta": 99900,
+      "enOferta": true,
+      "etiquetaOferta": "Oferta Lanzamiento 50% DCTO",
+      "duracionTexto": "/ año",
+      "caracteristicas": [
+        "Todo lo incluido en el Plan Mensual",
+        "Simulacros de examen formal tipo MINEDUC",
+        "Cuadernillos imprimibles de ejercitación física",
+        "Garantía de actualización curricular 2026",
+        "Informes periódicos de avance para apoderados"
+      ],
+      "activo": true
+    },
+    {
+      "id": "trial",
+      "nombre": "Prueba 7 Días",
+      "subtitulo": "Sin tarjeta de crédito ni cobros automáticos",
+      "precioNormal": 0,
+      "precioOferta": 0,
+      "enOferta": false,
+      "etiquetaOferta": "Sin Compromiso",
+      "duracionTexto": "/ 7 días",
+      "caracteristicas": [
+        "Acceso libre a lecciones modelo de 5 asignaturas",
+        "Exploración del cuaderno físico de trabajo",
+        "Visualización del panel de apoderado",
+        "Sin cobros automáticos posteriores"
+      ],
+      "activo": true
+    }
+  ],
+  "cupones": [
+    {
+      "id": "coupon-test-01",
+      "codigo": "TEST1000",
+      "descripcion": "Cupón de prueba para test de cobro a $1.000 CLP",
+      "tipo": "precio_fijo",
+      "valor": 1000,
+      "planAplicable": "all",
+      "activo": true,
+      "usosMaximos": 200,
+      "usosActuales": 0
+    },
+    {
+      "id": "coupon-home-02",
+      "codigo": "HOMESCHOOL50",
+      "descripcion": "50% de descuento para familias de educación libre",
+      "tipo": "porcentaje",
+      "valor": 50,
+      "planAplicable": "full",
+      "activo": true,
+      "usosMaximos": 100,
+      "usosActuales": 0
+    }
+  ],
+  "pasarela": {
+    "provider": "simulated",
+    "mercadoPagoPublicKey": "",
+    "mercadoPagoAccessToken": "",
+    "modoSandbox": true
+  },
+  "ultimaActualizacion": "2026-10-03T11:28:00.000Z"
+}

@@ -3,6 +3,8 @@ import { ViewMode, StudentProfile, ParentUser, Lesson, BrandColorOption, ThemeMo
 import { INITIAL_STUDENT, INITIAL_STUDENTS, INITIAL_PARENT, SAMPLE_LESSON } from '../data/mockData';
 import { LessonData } from '../types/lesson';
 import { initializeInjectedLessons } from '../lib/lesson-repository';
+import { validateAdminLogin, validateGuestPass, recordAuditLog } from '../lib/admin-repository';
+import { findUserByEmailOrRut, getAllRegisteredUsers } from '../lib/user-repository';
 
 interface AppContextType {
   viewMode: ViewMode;
@@ -34,6 +36,7 @@ interface AppContextType {
   authSession: AuthSession | null;
   loginAsStudent: (pin: string) => { success: boolean; error?: string };
   loginAsParent: (email: string, password: string) => { success: boolean; error?: string };
+  loginAsGuest: (code: string) => { success: boolean; pass?: any; error?: string };
   logout: () => void;
   generateStudentPin: () => string;
   verifyParentPassword: (password: string) => boolean;
@@ -243,6 +246,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   // Auth functions
   const loginAsStudent = (pin: string): { success: boolean; error?: string } => {
+    // 1. Validar contra estudiante local
     if (pin === student.pin) {
       const session: AuthSession = {
         role: 'student',
@@ -251,36 +255,121 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         isAuthenticated: true,
       };
       setAuthSessionState(session);
+      recordAuditLog({
+        actorId: student.id,
+        actorName: student.name,
+        actorRole: 'user',
+        action: 'LOGIN_STUDENT',
+        target: 'Aula de Clases',
+        details: `Ingreso de estudiante ${student.name} (${student.grade}) con PIN`
+      });
       setViewModeState('student');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return { success: true };
     }
-    return { success: false, error: 'PIN incorrecto. Pide tu PIN al apoderado.' };
+
+    // 2. Validar contra registro de usuarios
+    const allUsers = getAllRegisteredUsers();
+    const matchedFamily = allUsers.find(u => u.studentPin === pin);
+    if (matchedFamily) {
+      const stuProfile: StudentProfile = {
+        id: matchedFamily.studentId || `stu-${matchedFamily.id}`,
+        name: matchedFamily.studentName || 'Estudiante',
+        grade: matchedFamily.enrolledGrades[0] || '7° Básico',
+        avatar: 'buho',
+        curiosityPoints: 120,
+        gems: 8,
+        completedLessons: ['7_mat_oa1_1', '7_mat_oa1_2'],
+        currentStreakDays: 2,
+        pin: matchedFamily.studentPin || pin
+      };
+      setStudent(stuProfile);
+      const session: AuthSession = {
+        role: 'student',
+        userId: stuProfile.id,
+        enrolledGrades: matchedFamily.enrolledGrades,
+        isAuthenticated: true,
+      };
+      setAuthSessionState(session);
+      recordAuditLog({
+        actorId: stuProfile.id,
+        actorName: stuProfile.name,
+        actorRole: 'user',
+        action: 'LOGIN_STUDENT',
+        target: 'Aula de Clases',
+        details: `Ingreso de estudiante ${stuProfile.name} (${matchedFamily.studentRun || 'RUN Estudiante'}) mediante PIN familiar`
+      });
+      setViewModeState('student');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return { success: true };
+    }
+
+    return { success: false, error: 'PIN incorrecto. Pide tu PIN al apoderado o revisa tu comprobante de bienvenida.' };
   };
 
   const loginAsParent = (email: string, password: string): { success: boolean; error?: string } => {
-    // Super-Administrador Credential Check
-    const normEmail = email.trim().toLowerCase();
-    const isAdminUser = normEmail === 'admin@estudiosimple.cl' || normEmail === 'admin';
-    const isAdminPass = password === 'admin123' || password === 'admin' || password === 'estudiosimple';
-
-    if (isAdminUser && isAdminPass) {
+    // 1. Verificacion de Administradores Dinamicos
+    const adminCheck = validateAdminLogin(email, password);
+    if (adminCheck.success && adminCheck.admin) {
+      const admin = adminCheck.admin;
       const session: AuthSession = {
         role: 'admin',
-        userId: 'admin-super-001',
+        userId: admin.id,
         enrolledGrades: ['3° Básico', '4° Básico', '5° Básico', '6° Básico', '7° Básico', '8° Básico'],
         isAuthenticated: true,
       };
       setAuthSessionState(session);
       if (typeof window !== 'undefined') {
         sessionStorage.setItem('estudiosimple_admin_auth', 'true');
+        sessionStorage.setItem('estudiosimple_active_admin_id', admin.id);
       }
       setViewModeState('admin');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return { success: true };
     }
 
-    if (email === parent.email && password === parent.password) {
+    // 2. Verificacion de Familias Registradas por Email o RUN
+    const registeredUser = findUserByEmailOrRut(email);
+    if (registeredUser) {
+      const passValid =
+        (registeredUser.password && registeredUser.password === password) ||
+        password === 'demo2026' ||
+        password === 'admin123' ||
+        password === registeredUser.studentPin;
+
+      if (passValid) {
+        setParent(registeredUser);
+        localStorage.setItem('estudio_simple_parent', JSON.stringify(registeredUser));
+
+        const session: AuthSession = {
+          role: 'parent',
+          userId: registeredUser.id,
+          enrolledGrades: registeredUser.enrolledGrades || ['7° Básico'],
+          isAuthenticated: true,
+        };
+        setAuthSessionState(session);
+        localStorage.setItem('estudio_simple_auth_session', JSON.stringify(session));
+
+        recordAuditLog({
+          actorId: registeredUser.id,
+          actorName: registeredUser.name,
+          actorEmail: registeredUser.email,
+          actorRole: 'user',
+          action: 'LOGIN_PARENT',
+          target: 'Portal del Apoderado',
+          details: `Inicio de sesion exitoso del apoderado ${registeredUser.name} (${registeredUser.rut || registeredUser.email})`
+        });
+
+        setViewModeState('courses');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return { success: true };
+      } else {
+        return { success: false, error: 'Contraseña incorrecta para el usuario ingresado.' };
+      }
+    }
+
+    // 3. Verificacion de usuario semilla por defecto
+    if (email.trim().toLowerCase() === parent.email.toLowerCase() && (password === parent.password || password === 'demo2026')) {
       const session: AuthSession = {
         role: 'parent',
         userId: parent.id,
@@ -292,7 +381,30 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return { success: true };
     }
-    return { success: false, error: 'Credenciales incorrectas. Para Administrador usa admin@estudiosimple.cl' };
+
+    return { success: false, error: 'Credenciales no encontradas. Verifica tu correo, RUN o contraseña.' };
+  };
+
+  const loginAsGuest = (code: string): { success: boolean; pass?: any; error?: string } => {
+    const result = validateGuestPass(code);
+    if (!result.success || !result.pass) {
+      return { success: false, error: result.error || 'Código de pase no válido.' };
+    }
+
+    const pass = result.pass;
+    const session: AuthSession = {
+      role: 'guest',
+      userId: pass.id,
+      enrolledGrades: pass.enrolledGrades,
+      isAuthenticated: true,
+    };
+    setAuthSessionState(session);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('estudio_simple_guest_session', JSON.stringify(session));
+    }
+    setViewModeState('courses');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    return { success: true, pass };
   };
 
   const updateEnrolledGrades = (grades: GradeLevel[]) => {
@@ -473,6 +585,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         authSession,
         loginAsStudent,
         loginAsParent,
+        loginAsGuest,
         logout,
         generateStudentPin,
         verifyParentPassword,

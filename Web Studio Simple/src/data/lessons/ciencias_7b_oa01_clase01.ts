@@ -7,10 +7,10 @@ export const CIENCIAS_7B_OA01_CLASE01: LessonData = {
     oaCode: 'OA 1',
     oaTitle: 'Sexualidad y Afectividad',
     lessonNumber: 1,
-    totalLessonsInOa: 5,
+    totalLessonsInOa: 6,
     lessonTitle: 'Las 4 Dimensiones de la Sexualidad Humana',
     durationMinutes: 30,
-    nextLessonTitle: 'Cambios físicos y hormonales de la pubertad'
+    nextLessonTitle: 'Transformaciones físicas y emocionales en la pubertad'
   },
 
   // Paso 1: Preparación
@@ -299,15 +299,15 @@ export const CIENCIAS_7B_OA01_CLASE01: LessonData = {
         "slideNumber": 6,
         "tituloMomento": "Casos Concretos",
         "didacticPurpose": "Casos Concretos",
-        "visualPrompt": "Modern anime style. Dynamic circular flowchart showing the feedback between body changes, emotions, social interactions, and moral values. No text drawn by AI.",
-        "overlayText": "Conexión Permanente entre Dimensiones",
-        "overlayTitle": "Integración de los 4 ejes",
-        "overlaySubtitle": "Análisis de una situación real cotidiana",
-        "vectorialOverlayPptx": "Tabla de desglose de caso: Situación descrita -> Identificación de aportes de cada cuadrante",
-        "mathOverlayPptx": "Tabla de desglose de caso: Situación descrita -> Identificación de aportes de cada cuadrante",
-        "speakerNotes": "Ante un dilema real, como la presión del grupo de amigos, la ética marca los límites, la emoción entrega empatía, la razón social evalúa el entorno y la biología experimenta la alerta.",
-        "palabrasAprox": 30,
-        "duracionSeg": 14
+        "visualPrompt": "Modern anime style 16:9. The boy and girl reviewing an illustrated daily hygiene, sleep schedule, and healthy meal chart on a study desk. Clean lineart, soft ambient lighting. No text drawn by AI.",
+        "overlayText": "Caso Modelado: Cuidado e Higiene",
+        "overlayTitle": "Caso Modelado: Higiene y Salud",
+        "overlaySubtitle": "Identificar la dimensión en una decisión real",
+        "vectorialOverlayPptx": "Desglose del caso: Hábitos de higiene y descanso -> Cuidado del cuerpo -> Dimensión Biológica",
+        "mathOverlayPptx": "Desglose del caso: Hábitos de higiene y descanso -> Cuidado del cuerpo -> Dimensión Biológica",
+        "speakerNotes": "Analicemos un caso concreto: mantener hábitos de higiene diaria, descanso de ocho horas y alimentación sana para cuidar el cuerpo durante el crecimiento, ¿a qué dimensión corresponde? Corresponde a la dimensión biológica, porque beneficia directamente la salud, anatomía y bienestar del organismo.",
+        "palabrasAprox": 45,
+        "duracionSeg": 20
       },
       {
         "slideNumber": 7,

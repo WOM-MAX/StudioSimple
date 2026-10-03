@@ -1,0 +1,170 @@
+{
+  "version": "1.0.0",
+  "updated_at": "2026-10-03T10:35:00-03:00",
+  "description": "Catalogo versionado de reglas de coherencia pedagogica y tecnica de EstudioSimple.",
+  "universal_rules": [
+    {
+      "id": "UNI-001",
+      "name": "Estructura Bimodal de 14 Diapositivas por Clase",
+      "scope": "universal",
+      "description": "Cada clase debe componerse exactamente de 7 diapositivas de gancho motivacional y 7 diapositivas de explicacion conceptual (14 laminas en total).",
+      "source": "Plan Maestro EstudioSimple (Actualizacion 29-09-2026)",
+      "validation": {
+        "hook_slides_count": 7,
+        "expl_slides_count": 7,
+        "total_slides_count": 14
+      }
+    },
+    {
+      "id": "UNI-002",
+      "name": "Calibracion Temporal de Locucion",
+      "scope": "universal",
+      "description": "El gancho motivacional debe tener una duracion estimada de 60 segundos (~130 palabras, rango 120-140 palabras). La explicacion conceptual debe tener una duracion estimada de 90 segundos (~195 palabras, rango 180-210 palabras). Duracion total: 150 segundos por clase.",
+      "source": "Plan Maestro EstudioSimple y Protocolo de Locucion Google Vids",
+      "validation": {
+        "hook_word_count_min": 120,
+        "hook_word_count_max": 145,
+        "expl_word_count_min": 175,
+        "expl_word_count_max": 220
+      }
+    },
+    {
+      "id": "UNI-003",
+      "name": "Duo Co-protagonico Fijo de 13 Anos",
+      "scope": "universal",
+      "description": "El 100% de los prompts de imagen debe incluir explicitamente al duo de exploradores: la joven mujer con trenzas y el joven hombre con chaqueta cerceta, colaborando en equipo.",
+      "source": "Manual de Identidad Visual y Diseno de Personajes EstudioSimple",
+      "validation": {
+        "required_keywords": ["girl with braided hair", "boy in a teal jacket", "13-year-old"]
+      }
+    },
+    {
+      "id": "UNI-004",
+      "name": "Clausula Anti-Texto en Prompts de IA",
+      "scope": "universal",
+      "description": "Todo prompt de ilustracion para IA debe incluir la clausula formal de exclusion 'No text drawn by AI' para evitar contaminacion visual con letras, numeros o marcas.",
+      "source": "Directiva Visual EstudioSimple Anti-Mascara",
+      "validation": {
+        "required_substring": "No text drawn by AI"
+      }
+    },
+    {
+      "id": "UNI-005",
+      "name": "Isomorfismo Estricto Diapositiva 6 vs Caso 1 de Practica",
+      "scope": "universal",
+      "description": "La diapositiva 6 del video explicativo conceptual debe modelar exactamente el ejercicio o caso numero 1 de la practica de la plataforma, compartiendo el mismo contexto, los mismos datos y la misma respuesta fundamentada.",
+      "source": "Matriz de Coherencia Isomorfica de Lecciones (Requerimiento 2026-10-02)",
+      "validation": {
+        "target_slide": 6,
+        "target_practice_item": 1,
+        "isomorphic_alignment": true
+      }
+    },
+    {
+      "id": "UNI-006",
+      "name": "Reactivo Oficial de 4 Alternativas en Clase de Cierre",
+      "scope": "universal",
+      "description": "La ultima clase de cada OA debe incluir una evaluacion formativa o simulador de Examen Libre MINEDUC con reactivos de 4 alternativas (A, B, C, D) y justificacion psicometrica de distractores.",
+      "source": "Estandar Evaluativo Examenes Libres MINEDUC",
+      "validation": {
+        "final_lesson_quiz_min_options": 4
+      }
+    }
+  ],
+  "subject_rules": {
+    "Matematica": [
+      {
+        "id": "SUB-MAT-001",
+        "name": "Enfoque Metodologico CPA Obligatorio",
+        "scope": "subject",
+        "subject": "Matemática",
+        "description": "La explicacion debe transitar ordenadamente desde lo concreto (objetos cotidianos), a lo pictorico (recta numerica, modelos de barras o fichas) y finalmente a lo simbolico (algoritmos numericos y propiedades algebraicas).",
+        "source": "Bases Curriculares MINEDUC Matemática 7° Básico"
+      },
+      {
+        "id": "SUB-MAT-002",
+        "name": "Estandarizacion de Unidades y Signos Matematicos",
+        "scope": "subject",
+        "subject": "Matemática",
+        "description": "Uso de 'metros' en lugar de metros cuadrados para distancias lineales, y separador decimal y signos de enteros explicitos en notacion formal.",
+        "source": "Acuerdo de Estandarizacion Matematica 29-09-2026"
+      }
+    ],
+    "Ciencias Naturales": [
+      {
+        "id": "SUB-CIE-001",
+        "name": "Enfoque de Indagacion y Multidimensionalidad",
+        "scope": "subject",
+        "subject": "Ciencias Naturales",
+        "description": "Abordar los fenomenos biologicos articulando observacion, explicacion causal y dimensiones de la persona humana (biologica, afectiva, psicologica, sociocultural y etica), evitando reduccionismos puramente mecanicos.",
+        "source": "Bases Curriculares MINEDUC Ciencias Naturales 7° Básico"
+      },
+      {
+        "id": "SUB-CIE-002",
+        "name": "Iconografia Respetuosa y Cientifica",
+        "scope": "subject",
+        "subject": "Ciencias Naturales",
+        "description": "Las representaciones anatomicas y del desarrollo puberal deben ser estrictamente cientificas, formativas, adecuadas para 7° basico y nunca sexualizadas.",
+        "source": "Protocolo Etico de Ciencias EstudioSimple"
+      }
+    ],
+    "Historia": [
+      {
+        "id": "SUB-HIS-001",
+        "name": "Analisis Multicausal y Trabajo con Fuentes",
+        "scope": "subject",
+        "subject": "Historia, Geografía y Ciencias Sociales",
+        "description": "La explicacion historica debe fundamentarse en multicausalidad (economica, politica, social y cultural) y en el contraste de fuentes primarias o evidencias arqueologicas.",
+        "source": "Bases Curriculares MINEDUC Historia 7° Básico"
+      }
+    ],
+    "Lengua y Literatura": [
+      {
+        "id": "SUB-LEN-001",
+        "name": "Evidencia Textual e Interpretacion Fundamentada",
+        "scope": "subject",
+        "subject": "Lengua y Literatura",
+        "description": "Toda conclusion sobre personajes, tramas o poemas debe respaldarse en marcas textuales explicitas y en la distincion entre autor real y voz ficticia.",
+        "source": "Bases Curriculares MINEDUC Lengua y Literatura 7° Básico"
+      }
+    ],
+    "Ingles": [
+      {
+        "id": "SUB-ING-001",
+        "name": "Ingles EFL Graduado y Comunicativo",
+        "scope": "subject",
+        "subject": "Inglés",
+        "description": "Lenguaje en ingles graduado segun estandar A1-A2 para 7° basico, con formulas oracionales claras y notas de orador en ingles para locucion.",
+        "source": "Bases Curriculares MINEDUC Idioma Extranjero Inglés 7° Básico"
+      }
+    ]
+  },
+  "oa_rules": {
+    "110-7-CIE-OA01": [
+      {
+        "id": "OA-CIE-01-001",
+        "name": "Cobertura Integral de las 6 Lecciones Tematicas",
+        "scope": "oa",
+        "oaId": "110-7-CIE-OA01",
+        "description": "El OA 1 debe desplegarse exactamente en 6 lecciones canónicas: 1. 4 Dimensiones; 2. Transformaciones Puberales; 3. Vínculos e Intimidad; 4. Responsabilidad y Consentimiento; 5. Mitos y Estereotipos; 6. Síntesis y Examen Libre.",
+        "source": "Temario Oficial EELL MINEDUC 7° Básico"
+      },
+      {
+        "id": "OA-CIE-01-002",
+        "name": "Los 4 Criterios Innegociables del Consentimiento",
+        "scope": "oa",
+        "oaId": "110-7-CIE-OA01",
+        "description": "La leccion 4 debe explicitar y evaluar que el consentimiento debe ser libre, informado, especifico y revocable.",
+        "source": "Texto del Estudiante MINEDUC Ciencias 7° Básico, Unidad 1"
+      },
+      {
+        "id": "OA-CIE-01-003",
+        "name": "Variabilidad Puberal como Hecho Biologico Normal",
+        "scope": "oa",
+        "oaId": "110-7-CIE-OA01",
+        "description": "La leccion 5 debe fundamentar que el inicio y ritmo puberal varia normalmente entre los 10 y los 16 anos debido a relojes geneticos, desmintiendo la exigencia de un crecimiento homogeneo.",
+        "source": "Curvas de Crecimiento OMS y MINEDUC"
+      }
+    ]
+  }
+}

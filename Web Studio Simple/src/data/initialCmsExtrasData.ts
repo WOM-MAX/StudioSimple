@@ -19,7 +19,7 @@ export const INITIAL_SITE_CONFIG: SiteConfig = {
     menuFontSize: 'sm'
   },
   cintaNoticias: {
-    activo: true,
+    activo: false,
     etiquetaPrincipal: 'MINEDUC AL DÍA',
     velocidad: 'normal',
     colorFondo: '#0B254D',
@@ -305,7 +305,7 @@ export function loadSiteConfig(): SiteConfig {
           ...(parsed.cintaNoticias || {}),
           activo: typeof parsed.cintaNoticias?.activo === 'boolean'
             ? parsed.cintaNoticias.activo
-            : (INITIAL_SITE_CONFIG.cintaNoticias?.activo !== false)
+            : false
         },
         footer: {
           ...INITIAL_SITE_CONFIG.footer,
@@ -350,6 +350,13 @@ export function saveSiteConfig(config: SiteConfig): void {
     localStorage.setItem('estudiosimple_site_config', JSON.stringify(config));
     if (typeof window !== 'undefined') {
       window.dispatchEvent(new Event('storage'));
+      if (typeof fetch !== 'undefined') {
+        fetch('/api/cms/site-config', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(config)
+        }).catch(() => {});
+      }
     }
   } catch (e) {
     console.error('Error al guardar SiteConfig:', e);

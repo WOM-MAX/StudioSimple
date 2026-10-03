@@ -1,0 +1,51 @@
+{
+  "version": "1.0.0",
+  "updated_at": "2026-10-03T10:35:00-03:00",
+  "cases": [
+    {
+      "id": "REG-001",
+      "oaId": "110-7-CIE-OA01",
+      "reported_by": "Codex / Coordinacion Pedagogica",
+      "date": "2026-10-02",
+      "issue": "Las lecciones 2 a 6 de Ciencias Naturales OA 01 se generaban con plantillas abstractas genericas ('metodo disciplinar', 'evidencia experimental') sin desarrollo de los contenidos reales de pubertad, afectividad, consentimiento y mitos.",
+      "resolution": "Redaccion e implementacion canonica de las 6 lecciones completas en ciencias_7b_oa01_clase0[1-6].ts con contenido disciplinar y contextualizacion curricular estricta.",
+      "test_assertion": "Cada leccion debe tener titulos, objetivos, situaciones, formalizaciones y practicas con conceptos medicos y biologicos explicitos, sin formulas comodin."
+    },
+    {
+      "id": "REG-002",
+      "oaId": "110-7-CIE-OA01",
+      "reported_by": "Auditoria de Coherencia Isomorfica",
+      "date": "2026-10-02",
+      "issue": "En la Clase 1 de Ciencias Naturales, la diapositiva 6 explicaba presion de grupo mientras que el Caso 1 de practica evaluaba higiene y descanso como manifestacion biologica, quebrando la coherencia pedagógica.",
+      "resolution": "Reescritura de la Diapositiva 6 para modelar exactamente el Caso 1 de higiene y descanso, garantizando coincidencia de enunciado, datos y respuesta.",
+      "test_assertion": "El texto del Caso 1 de practica debe coincidir en contexto, pregunta y respuesta esperada con el caso modelado en la diapositiva 6 del video explicativo."
+    },
+    {
+      "id": "REG-003",
+      "oaId": "GLOBAL-CMS",
+      "reported_by": "Usuario en pruebas moviles / web",
+      "date": "2026-10-03",
+      "issue": "La cinta de noticias (ticker) aparecia siempre activa en dispositivos moviles y navegadores web limpios porque el valor por defecto en initialCmsData.ts e initialCmsExtrasData.ts tenia activo: true.",
+      "resolution": "Modificacion del valor base a activo: false, creacion del endpoint /api/cms/site-config en server.js con persistencia fisica en data/site_config.json, y sincronizacion en LandingPage.tsx al montar el componente.",
+      "test_assertion": "El valor por defecto de cintaNoticias.activo debe ser false y el servidor debe responder con el estado persistido remoto."
+    },
+    {
+      "id": "REG-004",
+      "oaId": "UNIVERSAL",
+      "reported_by": "Codex / ChatGPT Work",
+      "date": "2026-09-29",
+      "issue": "Generacion de ilustraciones por IA con letras, numeros, diagramas o formulas dibujadas internamente de forma distorsionada.",
+      "resolution": "Inclusion obligatoria de la clausula 'No text drawn by AI' en el 100% de los prompts de imagen para que los textos sean montados exclusivamente como capas vectoriales en PowerPoint.",
+      "test_assertion": "Todo objeto visualPrompt debe contener exactamente la subcadena 'No text drawn by AI'."
+    },
+    {
+      "id": "REG-005",
+      "oaId": "UNIVERSAL",
+      "reported_by": "Auditoria MINEDUC",
+      "date": "2026-09-30",
+      "issue": "Reactivos de evaluacion final con solo 3 alternativas, insuficientes para preparar al estudiante frente al rigor psicometrico de 4 alternativas de los Examenes Libres oficiales del MINEDUC.",
+      "resolution": "Estandarizacion de la clase de cierre con reactivo psicometrico de 4 alternativas (A, B, C, D) con analisis de distractores fundados en errores cognitivos frecuentes.",
+      "test_assertion": "La ultima clase de cada OA debe contener en su evaluacion miniquiz opciones con al menos 4 alternativas."
+    }
+  ]
+}

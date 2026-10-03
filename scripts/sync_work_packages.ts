@@ -1,6 +1,8 @@
 import fs from 'fs';
 import path from 'path';
+import { Packer } from 'docx';
 import { generateOAPackage, OACatalogItem } from '../Web Studio Simple/src/lib/lesson-generator';
+import { buildOAPackageDocx } from '../Web Studio Simple/src/lib/docx-export';
 import { adaptGeneratorLessonToPlayer } from '../Web Studio Simple/src/lib/lesson-adapter';
 import { buildLessonPromptText } from '../Web Studio Simple/src/lib/prompt-export';
 
@@ -51,7 +53,7 @@ const targetDescargasDir = path.resolve('DESCARGA_LECCIONES');
 const targetTxtDir = path.resolve('DESCARGA_LECCIONES/PROMPTS_TXT_PARA_WORK');
 const publicDescargasDir = path.resolve('Web Studio Simple/public/descargas_planes_maestros');
 
-function main() {
+async function main() {
   console.log('=== SINCRONIZACION Y EMPAQUETADO PARA CHATGPT WORK ===');
   console.log('(Excluyendo Matematica OA01 segun directiva)\n');
 
@@ -66,14 +68,32 @@ function main() {
     console.log(`\n--------------------------------------------------------------`);
     console.log(`Procesando: ${item.subjectName} (${item.oaCode} - ${item.id})`);
 
-    // 1. Sincronizar DOCX oficiales
-    const srcDocxPath = path.join(sourceDocxDir, item.shortDocx);
-    if (!fs.existsSync(srcDocxPath)) {
-      throw new Error(`Archivo fuente DOCX no encontrado: ${srcDocxPath}`);
+    const catalogItem = catalog.find((c) => c.id === item.id);
+    if (!catalogItem) {
+      throw new Error(`Item ${item.id} no encontrado en curriculum_catalog.json`);
     }
 
-    const docxBuffer = fs.readFileSync(srcDocxPath);
-    console.log(`Leido DOCX fuente: ${srcDocxPath} (${docxBuffer.length} bytes)`);
+    const pkg = generateOAPackage(catalogItem, item.lecciones);
+    console.log(`Paquete generado con ${pkg.lessons.length} lecciones.`);
+
+    // 1. Sincronizar o compilar DOCX oficial
+    let docxBuffer: Buffer;
+    if (item.id === '110-7-CIE-OA01') {
+      console.log(`Compilando DOCX oficial canónico para Ciencias OA 01 con buildOAPackageDocx...`);
+      const doc = buildOAPackageDocx(pkg);
+      docxBuffer = await Packer.toBuffer(doc);
+      // Guardar también en directorio de planes maestros fuente
+      const srcDocxPath = path.join(sourceDocxDir, item.shortDocx);
+      fs.writeFileSync(srcDocxPath, docxBuffer);
+      console.log(`DOCX fuente actualizado: ${srcDocxPath} (${docxBuffer.length} bytes)`);
+    } else {
+      const srcDocxPath = path.join(sourceDocxDir, item.shortDocx);
+      if (!fs.existsSync(srcDocxPath)) {
+        throw new Error(`Archivo fuente DOCX no encontrado: ${srcDocxPath}`);
+      }
+      docxBuffer = fs.readFileSync(srcDocxPath);
+      console.log(`Leido DOCX fuente: ${srcDocxPath} (${docxBuffer.length} bytes)`);
+    }
 
     // Guardar en DESCARGA_LECCIONES (ambos nombres: corto y canonico)
     const destShort = path.join(targetDescargasDir, item.shortDocx);
@@ -94,13 +114,6 @@ function main() {
     console.log(`  -> ${item.fullDocx}`);
 
     // 2. Generar archivo consolidado de Prompts TXT para Work
-    const catalogItem = catalog.find((c) => c.id === item.id);
-    if (!catalogItem) {
-      throw new Error(`Item ${item.id} no encontrado en curriculum_catalog.json`);
-    }
-
-    const pkg = generateOAPackage(catalogItem, item.lecciones);
-    console.log(`Paquete generado con ${pkg.lessons.length} lecciones.`);
 
     let consolidatedTxt = '';
     consolidatedTxt += `================================================================================\n`;
@@ -179,4 +192,7 @@ Para cada clase, Work debe construir la presentación PPTX correspondiente respe
   console.log('\n=== SINCRONIZACION Y EMPAQUETADO FINALIZADOS CON EXITO ===');
 }
 
-main();
+main().catch((err) => {
+  console.error('Error en sync_work_packages:', err);
+  process.exit(1);
+});

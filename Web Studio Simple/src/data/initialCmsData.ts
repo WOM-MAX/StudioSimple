@@ -16,7 +16,7 @@ export const INITIAL_CMS_PAGES: CmsPage[] = [
         id: 'sec-cinta',
         tipoBloque: 'CINTA_NOTICIAS',
         orden: 0,
-        activo: true,
+        activo: false,
         titulo: 'Cinta Informativa de Exámenes Libres',
         subtitulo: 'Avisos oficiales y fechas ministeriales en tiempo real',
         configuracion: {

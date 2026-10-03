@@ -61,6 +61,12 @@ La tarea solo se considerara finalizada cuando:
 - Se actualice la bitacora en `memoria/` si hubo cambios arquitectonicos o de reglas.
 La entrega se realizara en un unico informe final de cierre al culminar la totalidad del trabajo.
 
+### 11. Clausula de Edicion Atomica Consolidada (Cero Micro-Diffs)
+En la interfaz del IDE, cada llamada a herramientas de edicion genera una barra interactiva de cambios pendientes ("1 File With Changes / Accept all"). Para erradicar la sobrecarga de aprobaciones manuales:
+- Esta estrictamente prohibido realizar micro-ediciones sucesivas o fragmentadas sobre el mismo archivo.
+- Todo cambio sobre un archivo debe planificarse y consolidarse en una unica operacion atomica integral por fichero.
+- Quedan prohibidos los ciclos de edicion y reversa inmediata (+0 -11); el reemplazo propuesto debe ser definitivo y autosuficiente desde el primer intento.
+
 ---
 
 ## Plantilla Canonica del Prompt /goal
@@ -78,6 +84,7 @@ DIRECTIVAS DE AUTONOMIA:
 7. Doble validacion: validar compilacion con codigo 0 y comprobar integridad real de los artefactos generados (tamano > 0 bytes y datos consistentes).
 8. Persistencia: registrar hitos en memoria/ para tareas complejas si existe riesgo de saturacion de contexto.
 9. Resuelve cualquier detalle tecnico o pedagogico no especificado aplicando los estandares de AGENTS.md y documenta la decision en el reporte final.
+10. Edicion atomica: consolidar todas las modificaciones de cada archivo en una unica operacion integral para eliminar diffs interactivos repetitivos.
 
 TAREA A EJECUTAR:
 [Descripcion detallada y determinista del requerimiento]

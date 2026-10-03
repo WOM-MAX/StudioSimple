@@ -9,6 +9,11 @@ import {
   MATEMATICA_7B_OA01_CLASE05,
   MATEMATICA_7B_OA01_CLASE06,
   CIENCIAS_7B_OA01_CLASE01,
+  CIENCIAS_7B_OA01_CLASE02,
+  CIENCIAS_7B_OA01_CLASE03,
+  CIENCIAS_7B_OA01_CLASE04,
+  CIENCIAS_7B_OA01_CLASE05,
+  CIENCIAS_7B_OA01_CLASE06,
   LENGUA_7B_OA03_CLASE01,
   HISTORIA_7B_OA02_CLASE01,
   INGLES_7B_OA09_CLASE01
@@ -266,6 +271,11 @@ export function findCanonicalFactoryLesson(
   }
   if ((keyGrade === '7' || keyGrade.includes('7')) && keySubj === 'cie' && keyOa === 'oa1') {
     if (lessonNumber === 1) return CIENCIAS_7B_OA01_CLASE01;
+    if (lessonNumber === 2) return CIENCIAS_7B_OA01_CLASE02;
+    if (lessonNumber === 3) return CIENCIAS_7B_OA01_CLASE03;
+    if (lessonNumber === 4) return CIENCIAS_7B_OA01_CLASE04;
+    if (lessonNumber === 5) return CIENCIAS_7B_OA01_CLASE05;
+    if (lessonNumber === 6) return CIENCIAS_7B_OA01_CLASE06;
   }
   if ((keyGrade === '7' || keyGrade.includes('7')) && keySubj === 'len' && (keyOa === 'oa3' || keyOa === 'oa03')) {
     if (lessonNumber === 1) return LENGUA_7B_OA03_CLASE01;

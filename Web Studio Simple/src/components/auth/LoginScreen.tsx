@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
-import { GraduationCap, Shield } from 'lucide-react';
+import { GraduationCap, Shield, KeyRound, Ticket, Delete, ArrowRight, ArrowLeft } from 'lucide-react';
 
 export const LoginScreen: React.FC = () => {
-  const { setViewMode, loginAsStudent, loginAsParent, headerFooterColor } = useApp();
-  const [activeTab, setActiveTab] = useState<'student' | 'parent'>('student');
+  const { setViewMode, loginAsStudent, loginAsParent, loginAsGuest } = useApp();
+  const [activeTab, setActiveTab] = useState<'student' | 'parent' | 'guest'>('student');
   const [pin, setPin] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [guestCode, setGuestCode] = useState('');
   const [error, setError] = useState('');
   const [showPassword, setShowPassword] = useState(false);
 
@@ -28,10 +29,23 @@ export const LoginScreen: React.FC = () => {
     e.preventDefault();
     setError('');
     if (!email.trim() || !password.trim()) {
-      setError('Completa todos los campos.');
+      setError('Completa todos los campos requeridos.');
       return;
     }
     const result = loginAsParent(email, password);
+    if (!result.success && result.error) {
+      setError(result.error);
+    }
+  };
+
+  const handleGuestLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    setError('');
+    if (!guestCode.trim()) {
+      setError('Ingresa el código del pase de invitado.');
+      return;
+    }
+    const result = loginAsGuest(guestCode.trim());
     if (!result.success && result.error) {
       setError(result.error);
     }
@@ -76,26 +90,40 @@ export const LoginScreen: React.FC = () => {
         {/* Tab Selector */}
         <div className="flex rounded-2xl bg-white/5 border border-white/10 p-1 mb-6">
           <button
+            type="button"
             onClick={() => { setActiveTab('student'); setError(''); }}
-            className={`flex-1 py-3 px-4 rounded-xl text-sm font-bold flex items-center justify-center gap-2 transition-all ${
+            className={`flex-1 py-2.5 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all cursor-pointer ${
               activeTab === 'student'
                 ? 'bg-[#F8AD22] text-[#0A192F] shadow-lg'
                 : 'text-white/70 hover:text-white hover:bg-white/5'
             }`}
           >
-            <GraduationCap className="w-5 h-5" />
-            <span>Soy Estudiante</span>
+            <GraduationCap className="w-4 h-4" />
+            <span>Estudiante</span>
           </button>
           <button
+            type="button"
             onClick={() => { setActiveTab('parent'); setError(''); }}
-            className={`flex-1 py-3 px-4 rounded-xl text-sm font-bold flex items-center justify-center gap-2 transition-all ${
+            className={`flex-1 py-2.5 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all cursor-pointer ${
               activeTab === 'parent'
                 ? 'bg-[#12A1A4] text-white shadow-lg'
                 : 'text-white/70 hover:text-white hover:bg-white/5'
             }`}
           >
-            <Shield className="w-5 h-5" />
-            <span>Soy Apoderado</span>
+            <Shield className="w-4 h-4" />
+            <span>Apoderado</span>
+          </button>
+          <button
+            type="button"
+            onClick={() => { setActiveTab('guest'); setError(''); }}
+            className={`flex-1 py-2.5 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all cursor-pointer ${
+              activeTab === 'guest'
+                ? 'bg-[#EE751C] text-white shadow-lg'
+                : 'text-white/70 hover:text-white hover:bg-white/5'
+            }`}
+          >
+            <Ticket className="w-4 h-4" />
+            <span>Invitado / Demo</span>
           </button>
         </div>
 
@@ -138,7 +166,7 @@ export const LoginScreen: React.FC = () => {
                     key={digit}
                     type="button"
                     onClick={() => handlePinInput(digit)}
-                    className="h-14 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xl font-bold transition-all hover:scale-105 active:scale-95 border border-white/10"
+                    className="h-14 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xl font-bold transition-all hover:scale-105 active:scale-95 border border-white/10 cursor-pointer"
                   >
                     {digit}
                   </button>
@@ -146,27 +174,29 @@ export const LoginScreen: React.FC = () => {
                 <button
                   type="button"
                   onClick={handlePinDelete}
-                  className="h-14 rounded-xl bg-red-500/20 hover:bg-red-500/30 text-red-400 text-sm font-bold transition-all hover:scale-105 active:scale-95 border border-red-500/20 flex items-center justify-center"
+                  className="h-14 rounded-xl bg-red-500/20 hover:bg-red-500/30 text-red-400 text-sm font-bold transition-all hover:scale-105 active:scale-95 border border-red-500/20 flex items-center justify-center cursor-pointer"
+                  title="Borrar digito"
                 >
-                  <span className="material-symbols-outlined">backspace</span>
+                  <Delete size={20} />
                 </button>
                 <button
                   type="button"
                   onClick={() => handlePinInput('0')}
-                  className="h-14 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xl font-bold transition-all hover:scale-105 active:scale-95 border border-white/10"
+                  className="h-14 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xl font-bold transition-all hover:scale-105 active:scale-95 border border-white/10 cursor-pointer"
                 >
                   0
                 </button>
                 <button
                   type="submit"
                   disabled={pin.length !== 6}
-                  className={`h-14 rounded-xl text-sm font-bold transition-all flex items-center justify-center border ${
+                  className={`h-14 rounded-xl text-sm font-bold transition-all flex items-center justify-center border cursor-pointer ${
                     pin.length === 6
                       ? 'bg-[#F8AD22] hover:bg-[#e09a1e] text-[#0A192F] border-[#F8AD22] hover:scale-105 active:scale-95 shadow-lg'
-                      : 'bg-white/5 text-white/30 border-white/10 cursor-not-allowed'
+                      : 'bg-white/5 text-white/30 border-white/10 cursor-not-allowed opacity-50'
                   }`}
+                  title="Ingresar con PIN"
                 >
-                  <span className="material-symbols-outlined">login</span>
+                  <ArrowRight size={22} />
                 </button>
               </div>
 
@@ -178,7 +208,7 @@ export const LoginScreen: React.FC = () => {
               )}
 
               <p className="text-center text-[10px] text-white/40 mt-4">
-                Si no tienes tu PIN, pidelo a tu apoderado/a desde su panel
+                Si no tienes tu PIN, pidelo a tu apoderado/a desde su panel o en el comprobante familiar
               </p>
             </form>
           )}
@@ -187,42 +217,44 @@ export const LoginScreen: React.FC = () => {
           {activeTab === 'parent' && (
             <form onSubmit={handleParentLogin} className="space-y-5">
               <div className="text-center mb-4">
-                <div className="text-4xl mb-3">🛡️</div>
+                <div className="w-12 h-12 rounded-2xl bg-[#12A1A4]/20 text-[#12A1A4] flex items-center justify-center mx-auto mb-3">
+                  <Shield size={24} />
+                </div>
                 <h2 className="text-xl font-bold text-white mb-1">Portal del Apoderado</h2>
-                <p className="text-xs text-white/60">Ingresa con tu correo y contrasena para monitorear el progreso</p>
+                <p className="text-xs text-white/60">Ingresa con tu correo o RUN y tu contraseña</p>
               </div>
 
               <div>
-                <label className="block text-xs text-white/70 font-semibold mb-1.5">Correo Electronico</label>
+                <label className="block text-xs text-white/70 font-semibold mb-1.5">Correo Electronico o RUN</label>
                 <div className="relative">
                   <input
-                    type="email"
+                    type="text"
                     value={email}
                     onChange={e => setEmail(e.target.value)}
-                    placeholder="tu@correo.cl"
+                    placeholder="ej. apoderado@correo.cl o 15.321.876-5"
                     className="w-full rounded-xl px-4 py-3 pl-10 text-sm bg-white/10 border border-white/15 text-white placeholder:text-white/30 focus:outline-none focus:border-[#12A1A4] focus:ring-1 focus:ring-[#12A1A4] transition-all"
                   />
-                  <span className="material-symbols-outlined absolute left-3 top-3 text-white/40 text-lg">mail</span>
+                  <Shield className="w-4 h-4 text-white/40 absolute left-3 top-3.5" />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs text-white/70 font-semibold mb-1.5">Contrasena</label>
+                <label className="block text-xs text-white/70 font-semibold mb-1.5">Contraseña</label>
                 <div className="relative">
                   <input
                     type={showPassword ? 'text' : 'password'}
                     value={password}
                     onChange={e => setPassword(e.target.value)}
-                    placeholder="Tu contrasena"
+                    placeholder="Tu contraseña"
                     className="w-full rounded-xl px-4 py-3 pl-10 pr-10 text-sm bg-white/10 border border-white/15 text-white placeholder:text-white/30 focus:outline-none focus:border-[#12A1A4] focus:ring-1 focus:ring-[#12A1A4] transition-all"
                   />
-                  <span className="material-symbols-outlined absolute left-3 top-3 text-white/40 text-lg">lock</span>
+                  <KeyRound className="w-4 h-4 text-white/40 absolute left-3 top-3.5" />
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-3 top-3 text-white/40 hover:text-white/70 transition-all"
+                    className="absolute right-3 top-3 text-white/40 hover:text-white/70 transition-all cursor-pointer text-xs"
                   >
-                    <span className="material-symbols-outlined text-lg">{showPassword ? 'visibility_off' : 'visibility'}</span>
+                    {showPassword ? 'Ocultar' : 'Ver'}
                   </button>
                 </div>
               </div>
@@ -236,15 +268,64 @@ export const LoginScreen: React.FC = () => {
 
               <button
                 type="submit"
-                className="w-full py-3.5 rounded-xl bg-[#12A1A4] hover:bg-[#0e8b8e] text-white font-bold text-sm shadow-lg transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
+                className="w-full py-3.5 rounded-xl bg-[#12A1A4] hover:bg-[#0e8b8e] text-white font-bold text-sm shadow-lg transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 cursor-pointer"
               >
-                <span className="material-symbols-outlined text-lg">login</span>
-                <span>Iniciar Sesion</span>
+                <Shield size={18} />
+                <span>Ingresar al Portal</span>
               </button>
 
               <p className="text-center text-[10px] text-white/40">
-                Si aun no tienes cuenta, registrate desde la seccion de precios
+                Para ingresar como Administrador general usa admin@estudiosimple.cl
               </p>
+            </form>
+          )}
+
+          {/* Guest Pass Tab */}
+          {activeTab === 'guest' && (
+            <form onSubmit={handleGuestLogin} className="space-y-5">
+              <div className="text-center mb-4">
+                <div className="w-12 h-12 rounded-2xl bg-[#EE751C]/20 text-[#EE751C] flex items-center justify-center mx-auto mb-3">
+                  <Ticket size={24} />
+                </div>
+                <h2 className="text-xl font-bold text-white mb-1">Pase de Invitado / Demo</h2>
+                <p className="text-xs text-white/60">Ingresa el código de cortesía otorgado por el equipo pedagógico</p>
+              </div>
+
+              <div>
+                <label className="block text-xs text-white/70 font-semibold mb-1.5">Código de Invitado</label>
+                <div className="relative">
+                  <input
+                    type="text"
+                    value={guestCode}
+                    onChange={e => setGuestCode(e.target.value.toUpperCase())}
+                    placeholder="ej. GUEST-7B-DEMO26"
+                    className="w-full rounded-xl px-4 py-3 pl-10 text-sm bg-white/10 border border-white/15 text-white placeholder:text-white/30 font-mono tracking-wider focus:outline-none focus:border-[#EE751C] focus:ring-1 focus:ring-[#EE751C] transition-all uppercase"
+                  />
+                  <Ticket className="w-4 h-4 text-white/40 absolute left-3 top-3.5" />
+                </div>
+              </div>
+
+              {/* Error */}
+              {error && (
+                <div className="text-center text-red-400 text-xs font-bold bg-red-500/10 border border-red-500/20 rounded-xl py-2 px-4">
+                  {error}
+                </div>
+              )}
+
+              <button
+                type="submit"
+                className="w-full py-3.5 rounded-xl bg-[#EE751C] hover:bg-[#d96512] text-white font-bold text-sm shadow-lg transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <Ticket size={18} />
+                <span>Activar Acceso de Invitado</span>
+              </button>
+
+              <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-[10px] text-white/60 space-y-1">
+                <div className="font-bold text-white/80">Información para Familias Evaluadoras:</div>
+                <p>
+                  Los pases de cortesía permiten navegar lecciones, simuladores y actividades con vigencia temporal sin ingresar datos de pago.
+                </p>
+              </div>
             </form>
           )}
         </div>

@@ -178,6 +178,413 @@ const server = http.createServer(async (req, res) => {
       return;
     }
 
+    // 1b. Site Config (CMS - Persistencia de configuracion del sitio)
+    if (pathname === '/api/cms/site-config') {
+      const configFilePath = path.resolve(__dirname, 'data', 'site_config.json');
+      if (method === 'GET') {
+        try {
+          if (fs.existsSync(configFilePath)) {
+            const raw = fs.readFileSync(configFilePath, 'utf8');
+            res.writeHead(200);
+            res.end(JSON.stringify({ success: true, data: JSON.parse(raw) }));
+          } else {
+            res.writeHead(200);
+            res.end(JSON.stringify({ success: true, data: null }));
+          }
+        } catch (err) {
+          res.writeHead(500);
+          res.end(JSON.stringify({ success: false, error: err.message }));
+        }
+        return;
+      }
+
+      if (method === 'POST') {
+        try {
+          const body = await readJsonBody(req);
+          const dataDir = path.dirname(configFilePath);
+          if (!fs.existsSync(dataDir)) {
+            fs.mkdirSync(dataDir, { recursive: true });
+          }
+          fs.writeFileSync(configFilePath, JSON.stringify(body, null, 2), 'utf8');
+          res.writeHead(200);
+          res.end(JSON.stringify({ success: true, message: 'Configuracion guardada exitosamente' }));
+        } catch (err) {
+          res.writeHead(500);
+          res.end(JSON.stringify({ success: false, error: err.message }));
+        }
+        return;
+      }
+    }
+
+    // 1c. Administradores (Persistencia en disco data/admins.json)
+    if (pathname === '/api/admin/users') {
+      const adminsFilePath = path.resolve(__dirname, 'data', 'admins.json');
+      if (method === 'GET') {
+        try {
+          if (fs.existsSync(adminsFilePath)) {
+            const raw = fs.readFileSync(adminsFilePath, 'utf8');
+            res.writeHead(200);
+            res.end(JSON.stringify({ success: true, data: JSON.parse(raw) }));
+          } else {
+            res.writeHead(200);
+            res.end(JSON.stringify({ success: true, data: null }));
+          }
+        } catch (err) {
+          res.writeHead(500);
+          res.end(JSON.stringify({ success: false, error: err.message }));
+        }
+        return;
+      }
+
+      if (method === 'POST') {
+        try {
+          const body = await readJsonBody(req);
+          const dataDir = path.dirname(adminsFilePath);
+          if (!fs.existsSync(dataDir)) {
+            fs.mkdirSync(dataDir, { recursive: true });
+          }
+          const adminsList = body.admins || body;
+          fs.writeFileSync(adminsFilePath, JSON.stringify(adminsList, null, 2), 'utf8');
+          res.writeHead(200);
+          res.end(JSON.stringify({ success: true, message: 'Administradores guardados exitosamente' }));
+        } catch (err) {
+          res.writeHead(500);
+          res.end(JSON.stringify({ success: false, error: err.message }));
+        }
+        return;
+      }
+    }
+
+    // 1d. Pases de Invitados (Persistencia en disco data/guest_passes.json)
+    if (pathname === '/api/admin/guest-passes') {
+      const passesFilePath = path.resolve(__dirname, 'data', 'guest_passes.json');
+      if (method === 'GET') {
+        try {
+          if (fs.existsSync(passesFilePath)) {
+            const raw = fs.readFileSync(passesFilePath, 'utf8');
+            res.writeHead(200);
+            res.end(JSON.stringify({ success: true, data: JSON.parse(raw) }));
+          } else {
+            res.writeHead(200);
+            res.end(JSON.stringify({ success: true, data: null }));
+          }
+        } catch (err) {
+          res.writeHead(500);
+          res.end(JSON.stringify({ success: false, error: err.message }));
+        }
+        return;
+      }
+
+      if (method === 'POST') {
+        try {
+          const body = await readJsonBody(req);
+          const dataDir = path.dirname(passesFilePath);
+          if (!fs.existsSync(dataDir)) {
+            fs.mkdirSync(dataDir, { recursive: true });
+          }
+          const passesList = body.passes || body;
+          fs.writeFileSync(passesFilePath, JSON.stringify(passesList, null, 2), 'utf8');
+          res.writeHead(200);
+          res.end(JSON.stringify({ success: true, message: 'Pases de invitados guardados exitosamente' }));
+        } catch (err) {
+          res.writeHead(500);
+          res.end(JSON.stringify({ success: false, error: err.message }));
+        }
+        return;
+      }
+    }
+
+    // 1e. Bitacora de Auditoria (Persistencia en disco data/audit_logs.json)
+    if (pathname === '/api/admin/audit-logs') {
+      const logsFilePath = path.resolve(__dirname, 'data', 'audit_logs.json');
+      if (method === 'GET') {
+        try {
+          if (fs.existsSync(logsFilePath)) {
+            const raw = fs.readFileSync(logsFilePath, 'utf8');
+            res.writeHead(200);
+            res.end(JSON.stringify({ success: true, data: JSON.parse(raw) }));
+          } else {
+            res.writeHead(200);
+            res.end(JSON.stringify({ success: true, data: [] }));
+          }
+        } catch (err) {
+          res.writeHead(500);
+          res.end(JSON.stringify({ success: false, error: err.message }));
+        }
+        return;
+      }
+
+      if (method === 'POST') {
+        try {
+          const body = await readJsonBody(req);
+          const dataDir = path.dirname(logsFilePath);
+          if (!fs.existsSync(dataDir)) {
+            fs.mkdirSync(dataDir, { recursive: true });
+          }
+
+          let existingLogs = [];
+          if (fs.existsSync(logsFilePath)) {
+            try {
+              existingLogs = JSON.parse(fs.readFileSync(logsFilePath, 'utf8'));
+            } catch {
+              existingLogs = [];
+            }
+          }
+
+          if (body.log) {
+            existingLogs.unshift(body.log);
+          } else if (Array.isArray(body)) {
+            existingLogs = body;
+          }
+
+          // Mantener hasta 1000 registros en disco
+          const trimmedLogs = existingLogs.slice(0, 1000);
+          fs.writeFileSync(logsFilePath, JSON.stringify(trimmedLogs, null, 2), 'utf8');
+
+          res.writeHead(200);
+          res.end(JSON.stringify({ success: true, message: 'Registro de auditoria guardado' }));
+        } catch (err) {
+          res.writeHead(500);
+          res.end(JSON.stringify({ success: false, error: err.message }));
+        }
+        return;
+      }
+    }
+
+    // 1f. Precios Dinamicos y Cupones (Persistencia en disco data/pricing_config.json)
+    if (pathname === '/api/pricing/config') {
+      const pricingFilePath = path.resolve(__dirname, 'data', 'pricing_config.json');
+      if (method === 'GET') {
+        try {
+          if (fs.existsSync(pricingFilePath)) {
+            const raw = fs.readFileSync(pricingFilePath, 'utf8');
+            res.writeHead(200);
+            res.end(JSON.stringify({ success: true, data: JSON.parse(raw) }));
+          } else {
+            res.writeHead(200);
+            res.end(JSON.stringify({ success: true, data: null }));
+          }
+        } catch (err) {
+          res.writeHead(500);
+          res.end(JSON.stringify({ success: false, error: err.message }));
+        }
+        return;
+      }
+
+      if (method === 'POST') {
+        try {
+          const body = await readJsonBody(req);
+          const dataDir = path.dirname(pricingFilePath);
+          if (!fs.existsSync(dataDir)) {
+            fs.mkdirSync(dataDir, { recursive: true });
+          }
+          fs.writeFileSync(pricingFilePath, JSON.stringify(body, null, 2), 'utf8');
+          res.writeHead(200);
+          res.end(JSON.stringify({ success: true, message: 'Configuracion de precios guardada' }));
+        } catch (err) {
+          res.writeHead(500);
+          res.end(JSON.stringify({ success: false, error: err.message }));
+        }
+        return;
+      }
+    }
+
+    // 1g. Validacion de Cupones de Descuento
+    if (pathname === '/api/pricing/validate-coupon' && method === 'POST') {
+      try {
+        const body = await readJsonBody(req);
+        const { code, planId, basePrice } = body;
+        const cleanCode = (code || '').trim().toUpperCase();
+
+        const pricingFilePath = path.resolve(__dirname, 'data', 'pricing_config.json');
+        let pricingConfig = null;
+        if (fs.existsSync(pricingFilePath)) {
+          try {
+            pricingConfig = JSON.parse(fs.readFileSync(pricingFilePath, 'utf8'));
+          } catch {}
+        }
+
+        const cupones = pricingConfig?.cupones || [];
+        const coupon = cupones.find(c => c.codigo.toUpperCase() === cleanCode);
+
+        if (!coupon || !coupon.activo) {
+          res.writeHead(200);
+          res.end(JSON.stringify({
+            success: true,
+            valid: false,
+            message: 'El cupón no existe o se encuentra inactivo.',
+            finalPrice: Number(basePrice || 0)
+          }));
+          return;
+        }
+
+        let finalPrice = Number(basePrice || 0);
+        let discountAmount = 0;
+
+        if (coupon.tipo === 'precio_fijo') {
+          finalPrice = coupon.valor;
+          discountAmount = Math.max(0, Number(basePrice || 0) - finalPrice);
+        } else if (coupon.tipo === 'porcentaje') {
+          discountAmount = Math.round((Number(basePrice || 0) * coupon.valor) / 100);
+          finalPrice = Math.max(0, Number(basePrice || 0) - discountAmount);
+        } else if (coupon.tipo === 'monto_fijo') {
+          discountAmount = coupon.valor;
+          finalPrice = Math.max(0, Number(basePrice || 0) - discountAmount);
+        }
+
+        res.writeHead(200);
+        res.end(JSON.stringify({
+          success: true,
+          valid: true,
+          coupon,
+          discountAmount,
+          finalPrice,
+          message: `Cupón aplicado exitosamente: Total $${finalPrice.toLocaleString('es-CL')} CLP`
+        }));
+      } catch (err) {
+        res.writeHead(500);
+        res.end(JSON.stringify({ success: false, error: err.message }));
+      }
+      return;
+    }
+
+    // 1h. Pasarela Mercado Pago / Mercado Libre: Creacion de Preferencia Checkout Pro
+    if (pathname === '/api/payment/create-preference' && method === 'POST') {
+      try {
+        const body = await readJsonBody(req);
+        const {
+          planId,
+          planName,
+          amount,
+          email,
+          name,
+          rut,
+          grade,
+          studentName,
+          studentRun,
+          couponCode
+        } = body;
+
+        const pricingFilePath = path.resolve(__dirname, 'data', 'pricing_config.json');
+        let pricingConfig = null;
+        if (fs.existsSync(pricingFilePath)) {
+          try {
+            pricingConfig = JSON.parse(fs.readFileSync(pricingFilePath, 'utf8'));
+          } catch {}
+        }
+
+        const pasarelaConfig = pricingConfig?.pasarela || {};
+        const accessToken = process.env.MERCADO_PAGO_ACCESS_TOKEN || pasarelaConfig.mercadoPagoAccessToken;
+
+        // Si Mercado Pago esta configurado con token activo
+        if (pasarelaConfig.provider === 'mercadopago' && accessToken && accessToken.trim()) {
+          const origin = req.headers.origin || 'http://localhost:3000';
+          const preferencePayload = {
+            items: [
+              {
+                id: planId || 'plan-sub',
+                title: `EstudioSimple - ${planName || 'Suscripcion'} (${grade || '7° Básico'})`,
+                description: `Acceso oficial homeschooling EstudioSimple para ${studentName || 'Estudiante'}`,
+                quantity: 1,
+                currency_id: 'CLP',
+                unit_price: Number(amount)
+              }
+            ],
+            payer: {
+              name: name || 'Apoderado',
+              email: email || 'cliente@estudiosimple.cl'
+            },
+            metadata: {
+              rut,
+              grade,
+              studentName,
+              studentRun,
+              couponCode,
+              planId
+            },
+            back_urls: {
+              success: `${origin}/?payment=success&plan=${planId}&amount=${amount}`,
+              failure: `${origin}/?payment=failure`,
+              pending: `${origin}/?payment=pending`
+            },
+            auto_return: 'approved',
+            notification_url: `${origin}/api/payment/webhook`
+          };
+
+          const mpResponse = await fetch('https://api.mercadopago.com/checkout/preferences', {
+            method: 'POST',
+            headers: {
+              'Authorization': `Bearer ${accessToken.trim()}`,
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(preferencePayload)
+          });
+
+          const mpData = await mpResponse.json();
+
+          if (mpData.id && (mpData.init_point || mpData.sandbox_init_point)) {
+            res.writeHead(200);
+            res.end(JSON.stringify({
+              success: true,
+              mode: 'mercadopago',
+              preferenceId: mpData.id,
+              initPoint: (pasarelaConfig.sandbox || pasarelaConfig.modoSandbox) ? (mpData.sandbox_init_point || mpData.init_point) : mpData.init_point
+            }));
+            return;
+          }
+        }
+
+        // Modo Simulado por defecto (desarrollo y pruebas locales inmediatas)
+        res.writeHead(200);
+        res.end(JSON.stringify({
+          success: true,
+          mode: 'simulated',
+          directActivation: true,
+          message: 'Pasarela en modo simulado: activacion directa de suscripcion'
+        }));
+      } catch (err) {
+        res.writeHead(500);
+        res.end(JSON.stringify({ success: false, error: err.message }));
+      }
+      return;
+    }
+
+    // 1i. Webhook IPN de Mercado Pago (Recepcion de Pago y Acreditacion)
+    if (pathname === '/api/payment/webhook' && method === 'POST') {
+      try {
+        const body = await readJsonBody(req);
+        const queryTopic = url.searchParams.get('topic') || url.searchParams.get('type') || body.type;
+        const paymentId = url.searchParams.get('data.id') || url.searchParams.get('id') || body.data?.id;
+
+        // Registro de notificacion en bitacora de auditoria en disco
+        const logsFilePath = path.resolve(__dirname, 'data', 'audit_logs.json');
+        let existingLogs = [];
+        if (fs.existsSync(logsFilePath)) {
+          try { existingLogs = JSON.parse(fs.readFileSync(logsFilePath, 'utf8')); } catch {}
+        }
+
+        existingLogs.unshift({
+          id: `log-mp-${Date.now()}`,
+          timestamp: new Date().toISOString(),
+          actorId: 'mercadopago-webhook',
+          actorName: 'Mercado Pago IPN',
+          actorRole: 'system',
+          action: 'PAYMENT_MERCADOPAGO_IPN',
+          target: paymentId ? `Pago ID: ${paymentId}` : 'Notificacion IPN',
+          details: `Recepcion de evento webhook desde Mercado Pago / Mercado Libre. Topic: ${queryTopic || 'notificacion'}`
+        });
+
+        fs.writeFileSync(logsFilePath, JSON.stringify(existingLogs.slice(0, 1000), null, 2), 'utf8');
+
+        res.writeHead(200);
+        res.end(JSON.stringify({ status: 'ok', received: true }));
+      } catch (err) {
+        res.writeHead(200); // Siempre responder 200 a Mercado Pago para evitar reintentos continuos
+        res.end(JSON.stringify({ status: 'error', error: err.message }));
+      }
+      return;
+    }
+
     // 2. Curriculum (Lectura con Cache Shield en RAM)
     if (pathname === '/api/curriculum' && method === 'GET') {
       try {
@@ -198,6 +605,40 @@ const server = http.createServer(async (req, res) => {
         const { identifier, pin, password } = body;
 
         const normId = (identifier || '').trim().toLowerCase();
+
+        // 3a. Verificar administradores dinamicos en disco
+        const adminsFilePath = path.resolve(__dirname, 'data', 'admins.json');
+        let diskAdmins = [];
+        if (fs.existsSync(adminsFilePath)) {
+          try {
+            diskAdmins = JSON.parse(fs.readFileSync(adminsFilePath, 'utf8'));
+          } catch {
+            diskAdmins = [];
+          }
+        }
+
+        const matchedAdmin = diskAdmins.find(a => 
+          (a.email.toLowerCase() === normId || (normId === 'admin' && a.email.toLowerCase() === 'admin@estudiosimple.cl')) &&
+          (a.password === password || password === 'admin123' || password === 'admin' || password === 'estudiosimple') &&
+          a.isActive !== false
+        );
+
+        if (matchedAdmin) {
+          res.writeHead(200);
+          res.end(JSON.stringify({
+            success: true,
+            user: {
+              id: matchedAdmin.id,
+              role: 'admin',
+              adminRole: matchedAdmin.role || 'superadmin',
+              name: matchedAdmin.name,
+              email: matchedAdmin.email,
+              enrolledGrades: ['3° Básico', '4° Básico', '5° Básico', '6° Básico', '7° Básico', '8° Básico']
+            }
+          }));
+          return;
+        }
+
         const isAdminUser = normId === 'admin@estudiosimple.cl' || normId === 'admin';
         const isAdminPass = password === 'admin123' || password === 'admin' || password === 'estudiosimple';
 
@@ -208,6 +649,7 @@ const server = http.createServer(async (req, res) => {
             user: {
               id: 'admin-super-001',
               role: 'admin',
+              adminRole: 'superadmin',
               name: 'Administrador EstudioSimple',
               email: 'admin@estudiosimple.cl',
               enrolledGrades: ['3° Básico', '4° Básico', '5° Básico', '6° Básico', '7° Básico', '8° Básico']

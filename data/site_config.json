@@ -1,0 +1,75 @@
+{
+  "header": {
+    "logoUrl": "/logos/Logo_cabecera.png",
+    "planesButtonText": "Planes y Precios",
+    "loginButtonText": "Iniciar Sesión",
+    "showWhatsAppQuick": true,
+    "activeLinkColor": "#12A1A4",
+    "activeLinkStyle": "underline",
+    "menuFontSize": "sm"
+  },
+  "cintaNoticias": {
+    "activo": false,
+    "etiquetaPrincipal": "MINEDUC AL DÍA",
+    "velocidad": "normal",
+    "colorFondo": "#0B254D",
+    "colorTexto": "#FFFFFF",
+    "colorEtiqueta": "#12A1A4",
+    "mostrarIconoLive": true,
+    "noticias": [
+      { "etiqueta": "URGENTE", "texto": "Inscripciones abiertas para la primera oportunidad de Exámenes Libres 2026 ante colegios sede." },
+      { "etiqueta": "DECRETOS", "texto": "Validez legal certificada bajo Decreto Exento N° 2272 y Decreto 67 del Ministerio de Educación." },
+      { "etiqueta": "TEMARIOS", "texto": "Nuevos temarios consolidados disponibles para descarga gratuita de 3° a 8° Básico." },
+      { "etiqueta": "MÉTODO", "texto": "Estudio guiado de 30 minutos diarios combinando pantalla interactiva y cuaderno análogo." }
+    ]
+  },
+  "footer": {
+    "logoUrl": "/logos/Logo con todo.png",
+    "missionText": "Plataforma pedagógica especializada en la preparación integral de exámenes libres MINEDUC para estudiantes de 3º a 8º Básico. Método paso a paso para aprender en familia.",
+    "decretoText": "Proceso de Validación de Estudios normado formalmente por el Decreto Exento N° 2272 y Decreto 67 del Ministerio de Educación de Chile.",
+    "whatsAppNumber": "+56 9 8765 4321",
+    "whatsAppLabel": "WhatsApp Apoderados",
+    "emailContacto": "contacto@estudiosimple.cl",
+    "instagramUrl": "https://instagram.com/estudiosimple.cl",
+    "youtubeUrl": "https://youtube.com/@estudiosimple",
+    "facebookUrl": "https://facebook.com/estudiosimple",
+    "redesSociales": [
+      {
+        "id": "red-instagram",
+        "red": "instagram",
+        "etiqueta": "Instagram Oficial",
+        "url": "https://instagram.com/estudiosimple.cl",
+        "activo": true
+      },
+      {
+        "id": "red-youtube",
+        "red": "youtube",
+        "etiqueta": "Canal Educativo YouTube",
+        "url": "https://youtube.com/@estudiosimple",
+        "activo": true
+      }
+    ]
+  },
+  "contacto": {
+    "titulo": "Contáctanos y Resuelve tus Dudas",
+    "subtitulo": "Nuestro equipo pedagógico te orientará en todo el proceso de inscripción y preparación para los exámenes libres.",
+    "emailPrincipal": "contacto@estudiosimple.cl",
+    "telefono": "+56 9 8765 4321",
+    "horarioAtencion": "Lunes a Viernes de 09:00 a 18:00 hrs (Horario de Chile)",
+    "direccion": "Santiago de Chile"
+  },
+  "cloudinary": {
+    "cloudName": "cpn5zq3g",
+    "apiKey": "979383715734283",
+    "uploadPreset": "estudiosimple",
+    "folder": "estudiosimple",
+    "enabled": true
+  },
+  "estilosGlobales": {
+    "colorBordeEtiquetas": "#12A1A4",
+    "colorBordeComentarios": "#F8AD22",
+    "colorBordeFaq": "#EE751C",
+    "colorAcentoFaq": "#57d6f3",
+    "colorEstrellas": "#F8AD22"
+  }
+}

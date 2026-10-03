@@ -19,6 +19,8 @@ import { PublicHeader } from '../common/PublicHeader';
 import { PopupWrapper } from '../common/PopupWrapper';
 import { getBorderStyles } from '../common/borderStyles';
 import { CmsPage } from '../../types/cms';
+import { loadPricingConfig } from '../../lib/pricing-repository';
+import { PricingConfig } from '../../types/pricing';
 
 const TESTIMONIALS = [
   {
@@ -160,16 +162,39 @@ export const LandingPage: React.FC = () => {
     mensaje: ''
   });
   const [contactSuccess, setContactSuccess] = useState(false);
+  const [pricingConfig, setPricingConfig] = useState<PricingConfig>(() => loadPricingConfig());
 
   useEffect(() => {
     const refreshData = () => {
       setSiteConfig(loadSiteConfig());
       setPopups(loadPopups());
       setCmsPages(loadCmsPages());
+      setPricingConfig(loadPricingConfig(true));
     };
     refreshData();
+
+    if (typeof fetch !== 'undefined') {
+      fetch('/api/cms/site-config')
+        .then((res) => (res.ok ? res.json() : null))
+        .then((payload) => {
+          if (payload?.success && payload?.data) {
+            setSiteConfig(payload.data);
+            try {
+              localStorage.setItem('estudiosimple_site_config', JSON.stringify(payload.data));
+            } catch {
+              // fallback
+            }
+          }
+        })
+        .catch(() => {});
+    }
+
     window.addEventListener('storage', refreshData);
-    return () => window.removeEventListener('storage', refreshData);
+    window.addEventListener('pricing-config-updated', refreshData);
+    return () => {
+      window.removeEventListener('storage', refreshData);
+      window.removeEventListener('pricing-config-updated', refreshData);
+    };
   }, []);
 
   const activePopup = useMemo(() => {
@@ -310,9 +335,20 @@ export const LandingPage: React.FC = () => {
     return null;
   }, [homeFaqSection]);
 
-  const goToPricing = () => {
-    setViewMode('pricing');
+  const handleSelectPlan = (plan: 'monthly' | 'full' | 'trial') => {
+    localStorage.setItem('estudio_simple_selected_plan', plan);
+    setViewMode('checkout');
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const goToPricing = () => {
+    const planesElem = document.getElementById('planes');
+    if (planesElem) {
+      planesElem.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      setViewMode('pricing');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   const comentariosBorderStyles = getBorderStyles(
@@ -718,22 +754,219 @@ export const LandingPage: React.FC = () => {
         </section>
         )}
 
-        {/* 7. BANNER FINAL HACIA PLANES Y PRECIOS */}
-        <section className="px-4 md:px-12 max-w-7xl mx-auto py-16">
-          <div className="bg-[#16325C] border border-[#abc7ff]/20 rounded-3xl p-8 md:p-12 text-center relative overflow-hidden transition-all duration-300 shadow-xl">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 relative z-10 leading-tight max-w-3xl mx-auto">
-              ¿Listo para transformar la educación de tus hijos con EstudioSimple?
-            </h3>
-            <p className="text-gray-300 max-w-xl mx-auto mb-6 text-sm md:text-base">
-              Únete a las familias que ya estudian con temarios oficiales MINEDUC sin estrés y con total respaldo curricular y legal.
+        {/* 7. SECCIÓN DE PLANES Y PRECIOS OFICIALES (OFERTAS DINÁMICAS) */}
+        <section id="planes" className="px-4 md:px-12 max-w-7xl mx-auto py-20 md:py-24 scroll-mt-24">
+          <div className="text-center mb-16 max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#12A1A4]/20 border border-[#12A1A4]/40 text-[#57d6f3] text-xs font-black uppercase tracking-wider mb-4">
+              <Sparkles className="w-4 h-4 text-[#57d6f3]" />
+              <span>Inversión Transparente · Sin Contratos Forzados</span>
+            </div>
+
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-4">
+              Planes Adaptados a Tu Familia
+            </h2>
+
+            <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+              Preparación integral para Exámenes Libres de 3° a 8° Básico con temario oficial MINEDUC, lecciones de 30 minutos y puente con cuaderno físico.
             </p>
-            <div className="relative z-10 flex justify-center mt-2">
+          </div>
+
+          {(() => {
+            const monthlyPlan = pricingConfig.planes.find(p => p.id === 'monthly') || {
+              precioNormal: 29990,
+              precioOferta: 1000,
+              enOferta: true,
+              etiquetaOferta: 'Oferta Prueba $1.000 CLP'
+            };
+            const fullPlan = pricingConfig.planes.find(p => p.id === 'full') || {
+              precioNormal: 199900,
+              precioOferta: 99900,
+              enOferta: true,
+              etiquetaOferta: 'Oferta Lanzamiento 50% DCTO'
+            };
+            const monthlyEffective = monthlyPlan.enOferta ? monthlyPlan.precioOferta : monthlyPlan.precioNormal;
+            const fullEffective = fullPlan.enOferta ? fullPlan.precioOferta : fullPlan.precioNormal;
+
+            return (
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                {/* Tarjeta 1: Plan Mensual */}
+                <div className="bg-[#16325C] rounded-3xl p-8 border border-white/10 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:shadow-xl shadow-lg relative">
+                  {monthlyPlan.enOferta && (
+                    <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#57d6f3] text-[#0A192F] font-black text-xs px-4 py-0.5 rounded-full uppercase tracking-wider shadow-md">
+                      {monthlyPlan.etiquetaOferta || 'OFERTA ACTIVA'}
+                    </div>
+                  )}
+                  <div>
+                    <div className="text-xs font-bold uppercase tracking-wider text-[#57d6f3] mb-2">Flexibilidad Total</div>
+                    <h3 className="text-2xl font-bold text-white mb-2">Plan Mensual</h3>
+                    <p className="text-sm text-gray-300 mb-6">Ideal para avanzar mes a mes a tu propio ritmo con tranquilidad.</p>
+                    
+                    <div className="mb-1">
+                      {monthlyPlan.enOferta && (
+                        <span className="text-sm font-semibold text-white/50 line-through block">
+                          ${monthlyPlan.precioNormal.toLocaleString('es-CL')} CLP
+                        </span>
+                      )}
+                      <div className="text-4xl font-black text-white">
+                        ${monthlyEffective.toLocaleString('es-CL')} <span className="text-sm font-normal text-gray-300">/ mes</span>
+                      </div>
+                    </div>
+                    <div className="text-xs text-gray-400 mb-6">Renovación mensual cancelable cuando quieras sin penalización</div>
+
+                    <ul className="space-y-3.5 text-sm text-gray-200 border-t border-white/10 pt-6">
+                      <li className="flex items-center gap-2.5">
+                        <CheckCircle2 className="w-4 h-4 text-[#12A1A4] shrink-0" />
+                        <span>Acceso a las 5 asignaturas oficiales</span>
+                      </li>
+                      <li className="flex items-center gap-2.5">
+                        <CheckCircle2 className="w-4 h-4 text-[#12A1A4] shrink-0" />
+                        <span>Lecciones de 30 min y cuaderno guiado</span>
+                      </li>
+                      <li className="flex items-center gap-2.5">
+                        <CheckCircle2 className="w-4 h-4 text-[#12A1A4] shrink-0" />
+                        <span>Panel de seguimiento del apoderado</span>
+                      </li>
+                      <li className="flex items-center gap-2.5">
+                        <CheckCircle2 className="w-4 h-4 text-[#12A1A4] shrink-0" />
+                        <span>Diálogo socrático para guiar sin ser profesor</span>
+                      </li>
+                      <li className="flex items-center gap-2.5">
+                        <CheckCircle2 className="w-4 h-4 text-[#12A1A4] shrink-0" />
+                        <span>Soporte pedagógico vía WhatsApp y correo</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={() => handleSelectPlan('monthly')}
+                    className="w-full mt-8 py-4 px-4 rounded-2xl font-bold text-sm bg-white/10 hover:bg-white/20 text-white border border-white/20 transition-all flex items-center justify-center gap-2 shadow-md hover:scale-[1.02] cursor-pointer"
+                  >
+                    <span>{monthlyPlan.enOferta ? `Elegir Plan Mensual ($${monthlyEffective.toLocaleString('es-CL')})` : 'Seleccionar Plan Mensual'}</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </div>
+
+                {/* Tarjeta 2: Anual Exámenes Libres (Destacado) */}
+                <div className="bg-[#10223D] rounded-3xl p-8 border-2 border-[#F8AD22] shadow-2xl relative flex flex-col justify-between transition-all duration-300 hover:scale-[1.03]">
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#F8AD22] text-[#0A192F] font-black text-xs px-5 py-1 rounded-full uppercase tracking-wider shadow-md">
+                    {fullPlan.enOferta ? (fullPlan.etiquetaOferta || 'OFERTA EXCLUSIVA') : 'Más Recomendado'}
+                  </div>
+
+                  <div>
+                    <div className="text-xs font-bold uppercase tracking-wider text-[#F8AD22] mb-2">Preparación Integral</div>
+                    <h3 className="text-2xl font-bold text-white mb-2">Anual Exámenes Libres</h3>
+                    <p className="text-sm text-gray-300 mb-6">Acompañamiento completo durante todo el año escolar oficial.</p>
+                    
+                    <div className="mb-1">
+                      {fullPlan.enOferta && (
+                        <span className="text-sm font-semibold text-white/50 line-through block">
+                          ${fullPlan.precioNormal.toLocaleString('es-CL')} CLP
+                        </span>
+                      )}
+                      <div className="text-4xl font-black text-white">
+                        ${fullEffective.toLocaleString('es-CL')} <span className="text-sm font-normal text-gray-300">/ año</span>
+                      </div>
+                    </div>
+                    <div className="text-xs text-[#F8AD22] font-semibold mb-6">Ahorras más del 44% en comparación al pago mensual</div>
+
+                    <ul className="space-y-3.5 text-sm text-gray-200 border-t border-white/10 pt-6">
+                      <li className="flex items-center gap-2.5 font-semibold text-white">
+                        <CheckCircle2 className="w-4 h-4 text-[#F8AD22] shrink-0" />
+                        <span>Todo lo incluido en el Plan Mensual</span>
+                      </li>
+                      <li className="flex items-center gap-2.5">
+                        <CheckCircle2 className="w-4 h-4 text-[#F8AD22] shrink-0" />
+                        <span>Simulacros de examen formal tipo MINEDUC</span>
+                      </li>
+                      <li className="flex items-center gap-2.5">
+                        <CheckCircle2 className="w-4 h-4 text-[#F8AD22] shrink-0" />
+                        <span>Cuadernillos imprimibles de ejercitación física</span>
+                      </li>
+                      <li className="flex items-center gap-2.5">
+                        <CheckCircle2 className="w-4 h-4 text-[#F8AD22] shrink-0" />
+                        <span>Garantía de actualización curricular 2026</span>
+                      </li>
+                      <li className="flex items-center gap-2.5">
+                        <CheckCircle2 className="w-4 h-4 text-[#F8AD22] shrink-0" />
+                        <span>Informes periódicos de avance para apoderados</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={() => handleSelectPlan('full')}
+                    className="w-full mt-8 py-4 px-4 rounded-2xl font-bold text-sm bg-[#EE751C] hover:bg-[#D66512] text-white shadow-xl transition-all flex items-center justify-center gap-2 hover:scale-[1.02] cursor-pointer"
+                  >
+                    <span>Comenzar Plan Anual</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </div>
+
+                {/* Tarjeta 3: Prueba 7 Días */}
+                <div className="bg-[#16325C] rounded-3xl p-8 border border-white/10 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:shadow-xl shadow-lg">
+                  <div>
+                    <div className="text-xs font-bold uppercase tracking-wider text-[#12A1A4] mb-2">Sin Compromiso</div>
+                    <h3 className="text-2xl font-bold text-white mb-2">Prueba 7 Días</h3>
+                    <p className="text-sm text-gray-300 mb-6">Comprueba cómo tu hijo aprende con autonomía y tranquilidad.</p>
+                    
+                    <div className="text-4xl font-black text-white mb-1">
+                      $0 <span className="text-sm font-normal text-gray-300">/ 7 días</span>
+                    </div>
+                    <div className="text-xs text-gray-400 mb-6">Sin tarjeta de crédito ni cobros automáticos</div>
+
+                    <ul className="space-y-3.5 text-sm text-gray-200 border-t border-white/10 pt-6">
+                      <li className="flex items-center gap-2.5">
+                        <CheckCircle2 className="w-4 h-4 text-[#12A1A4] shrink-0" />
+                        <span>Acceso a 3 lecciones modelo completas</span>
+                      </li>
+                      <li className="flex items-center gap-2.5">
+                        <CheckCircle2 className="w-4 h-4 text-[#12A1A4] shrink-0" />
+                        <span>Vista dual sincronizada (estudiante y apoderado)</span>
+                      </li>
+                      <li className="flex items-center gap-2.5">
+                        <CheckCircle2 className="w-4 h-4 text-[#12A1A4] shrink-0" />
+                        <span>Ejercicios prácticos en cuaderno físico</span>
+                      </li>
+                      <li className="flex items-center gap-2.5">
+                        <CheckCircle2 className="w-4 h-4 text-[#12A1A4] shrink-0" />
+                        <span>Sin cobros posteriores sin tu autorización</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={() => handleSelectPlan('trial')}
+                    className="w-full mt-8 py-4 px-4 rounded-2xl font-bold text-sm bg-white/10 hover:bg-white/20 text-white border border-white/20 transition-all flex items-center justify-center gap-2 shadow-md hover:scale-[1.02] cursor-pointer"
+                  >
+                    <span>Probar Gratis 7 Días</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+            );
+          })()}
+
+          {/* Banner de detalle hacia /planes */}
+          <div className="bg-[#16325C]/80 border border-[#abc7ff]/20 rounded-3xl p-8 md:p-10 text-center relative overflow-hidden transition-all duration-300 shadow-xl">
+            <h4 className="text-xl md:text-2xl font-bold text-white mb-3">
+              ¿Quieres revisar la comparativa detallada de asignaturas y garantías pedagógicas?
+            </h4>
+            <p className="text-gray-300 max-w-2xl mx-auto mb-6 text-sm md:text-base">
+              Conoce en detalle el desglose de cobertura de los 5 temarios oficiales MINEDUC y las preguntas frecuentes para apoderados.
+            </p>
+            <div className="flex justify-center">
               <button 
                 type="button"
-                onClick={goToPricing}
-                className="bg-[#EE751C] hover:bg-[#D66512] text-white px-8 py-4 rounded-2xl font-bold text-base shadow-lg hover:scale-105 transition-all flex items-center gap-2 cursor-pointer"
+                onClick={() => {
+                  setViewMode('pricing');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="bg-[#EE751C] hover:bg-[#D66512] text-white px-8 py-3.5 rounded-2xl font-bold text-sm md:text-base shadow-lg hover:scale-105 transition-all flex items-center gap-2 cursor-pointer"
               >
-                <span>Ver Planes y Precios Oficiales</span>
+                <span>Ver Comparativa Completa de Asignaturas</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
             </div>

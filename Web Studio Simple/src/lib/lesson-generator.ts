@@ -7,7 +7,13 @@ import {
   MATEMATICA_7B_OA01_CLASE03,
   MATEMATICA_7B_OA01_CLASE04,
   MATEMATICA_7B_OA01_CLASE05,
-  MATEMATICA_7B_OA01_CLASE06
+  MATEMATICA_7B_OA01_CLASE06,
+  CIENCIAS_7B_OA01_CLASE01,
+  CIENCIAS_7B_OA01_CLASE02,
+  CIENCIAS_7B_OA01_CLASE03,
+  CIENCIAS_7B_OA01_CLASE04,
+  CIENCIAS_7B_OA01_CLASE05,
+  CIENCIAS_7B_OA01_CLASE06
 } from '../data/lessons';
 
 const neonCurriculum: NeonCurriculumItem[] = neonDataRaw as NeonCurriculumItem[];
@@ -2634,14 +2640,38 @@ export function generateOAPackage(oa: OACatalogItem, totalLessons: number): Gene
       }
     }
 
+    // Inyección canónica de lecciones sincronizadas para 7° Básico Ciencias Naturales OA01 (Clases 1 a 6)
+    if (oa.curso.includes("7") && oa.oaNumero === 1 && oa.asignatura.includes("Ciencias") && !oa.asignatura.includes("Sociales")) {
+      if (classNum === 1) {
+        lessons.push(playerLessonToGeneratorLesson(CIENCIAS_7B_OA01_CLASE01));
+        return;
+      }
+      if (classNum === 2) {
+        lessons.push(playerLessonToGeneratorLesson(CIENCIAS_7B_OA01_CLASE02));
+        return;
+      }
+      if (classNum === 3) {
+        lessons.push(playerLessonToGeneratorLesson(CIENCIAS_7B_OA01_CLASE03));
+        return;
+      }
+      if (classNum === 4) {
+        lessons.push(playerLessonToGeneratorLesson(CIENCIAS_7B_OA01_CLASE04));
+        return;
+      }
+      if (classNum === 5) {
+        lessons.push(playerLessonToGeneratorLesson(CIENCIAS_7B_OA01_CLASE05));
+        return;
+      }
+      if (classNum === 6) {
+        lessons.push(playerLessonToGeneratorLesson(CIENCIAS_7B_OA01_CLASE06));
+        return;
+      }
+    }
+
     // Inyección canónica de lecciones sincronizadas para 7° Básico Clase 1 (resto de asignaturas troncales)
     if (classNum === 1 && oa.curso.includes("7")) {
       if (oa.oaNumero === 3 && (oa.asignatura.includes("Lengua") || oa.asignatura.includes("Lenguaje"))) {
         lessons.push(getCanonicalClase1Lengua());
-        return;
-      }
-      if (oa.oaNumero === 1 && oa.asignatura.includes("Ciencias") && !oa.asignatura.includes("Sociales")) {
-        lessons.push(getCanonicalClase1Ciencias());
         return;
       }
       if (oa.oaNumero === 2 && oa.asignatura.includes("Historia")) {

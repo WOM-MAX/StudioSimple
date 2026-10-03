@@ -3,7 +3,7 @@ export type ViewMode = 'landing' | 'pricing' | 'checkout' | 'courses' | 'student
 export type ThemeMode = 'dark' | 'light';
 export type BrandColorOption = 'yellow' | 'orange' | 'turquoise' | 'silver' | 'graphite' | 'white' | 'ice-blue' | 'navy';
 
-export type AuthRole = 'student' | 'parent' | 'admin';
+export type AuthRole = 'student' | 'parent' | 'admin' | 'guest';
 
 export interface AuthSession {
   role: AuthRole;

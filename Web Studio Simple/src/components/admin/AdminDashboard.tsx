@@ -192,7 +192,7 @@ const SIDEBAR_GROUPS: SidebarGroup[] = [
       { id: 'lesson-editor', label: 'Editor de Lecciones', icon: BookOpenCheck },
       { id: 'generator', label: 'Generador DOCX', icon: BookOpen },
       { id: 'catalog', label: 'Catálogo EELL (227 OAs)', icon: Code },
-      { id: 'access', label: 'Familias y RUN', icon: Users },
+      { id: 'access', label: 'Accesos y Seguridad', icon: Shield },
     ]
   },
   {
