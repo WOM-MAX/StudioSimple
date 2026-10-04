@@ -128,10 +128,10 @@ export const CheckoutFlow: React.FC = () => {
           const pendingData = JSON.parse(savedPending);
           const { user } = registerUserFromCheckout({
             rut: pendingData.rut,
-            name: pendingData.name || `${pendingData.firstName || ''} ${pendingData.lastName || ''}`.trim() || 'Apoderado EstudioSimple',
+            name: (pendingData.name || `${pendingData.firstName || ''} ${pendingData.lastName || ''}`.trim() || 'APODERADO ESTUDIOSIMPLE').toUpperCase(),
             email: pendingData.email,
             password: pendingData.password,
-            studentName: pendingData.studentName || 'Estudiante',
+            studentName: (pendingData.studentName || 'ESTUDIANTE').toUpperCase(),
             studentRun: pendingData.studentRun || '',
             grade: pendingData.grade || '7° Básico',
             plan: pendingData.plan || 'monthly',
@@ -373,10 +373,10 @@ export const CheckoutFlow: React.FC = () => {
       try {
         const { user } = registerUserFromCheckout({
           rut,
-          name: `${firstName.trim()} ${lastName.trim()}`.trim() || 'Apoderado EstudioSimple',
+          name: `${firstName.trim()} ${lastName.trim()}`.trim().toUpperCase() || 'APODERADO ESTUDIOSIMPLE',
           email,
           password,
-          studentName: studentName.trim() || 'Estudiante',
+          studentName: (`${studentFirstName.trim()} ${studentLastName.trim()}`.trim() || studentName.trim()).toUpperCase() || 'ESTUDIANTE',
           studentRun: studentRun.trim(),
           grade,
           plan: selectedPlan,
@@ -446,12 +446,12 @@ export const CheckoutFlow: React.FC = () => {
       return;
     }
 
-    if (studentRun.trim() && !validateRut(studentRun)) {
-      setErrorMessage('El RUN del estudiante ingresado no es válido. Verifica el dígito verificador.');
+    if (!studentRun.trim() || !validateRut(studentRun)) {
+      setErrorMessage('El RUN del estudiante es obligatorio y debe ser válido según el algoritmo oficial Módulo 11 (con guion y dígito verificador).');
       return;
     }
 
-    const finalStudentName = `${studentFirstName.trim()} ${studentLastName.trim()}`.trim() || studentName.trim();
+    const finalStudentName = `${studentFirstName.trim()} ${studentLastName.trim()}`.trim().toUpperCase() || studentName.trim().toUpperCase();
     if (!studentFirstName.trim() || !studentLastName.trim()) {
       setErrorMessage('Por favor completa tanto los nombres como los apellidos del estudiante para su registro y certificación oficial.');
       return;
@@ -470,14 +470,14 @@ export const CheckoutFlow: React.FC = () => {
     if (shouldUseMercadoPago) {
       const pendingPayload = {
         rut: rut.trim(),
-        name: `${firstName.trim()} ${lastName.trim()}`.trim() || 'Apoderado EstudioSimple',
-        firstName: firstName.trim(),
-        lastName: lastName.trim(),
+        name: `${firstName.trim()} ${lastName.trim()}`.trim().toUpperCase() || 'APODERADO ESTUDIOSIMPLE',
+        firstName: firstName.trim().toUpperCase(),
+        lastName: lastName.trim().toUpperCase(),
         email: email.trim(),
         password,
         studentName: finalStudentName,
-        studentFirstName: studentFirstName.trim(),
-        studentLastName: studentLastName.trim(),
+        studentFirstName: studentFirstName.trim().toUpperCase(),
+        studentLastName: studentLastName.trim().toUpperCase(),
         studentRun: studentRun.trim(),
         grade,
         plan: selectedPlan,
@@ -496,7 +496,7 @@ export const CheckoutFlow: React.FC = () => {
           planName: activePlanObj?.nombre || selectedPlan,
           amount: finalPrice,
           email: email.trim(),
-          name: `${firstName.trim()} ${lastName.trim()}`.trim(),
+          name: `${firstName.trim()} ${lastName.trim()}`.trim().toUpperCase(),
           rut: rut.trim(),
           grade,
           studentName: finalStudentName,
@@ -640,9 +640,9 @@ export const CheckoutFlow: React.FC = () => {
                       type="text"
                       required
                       value={firstName}
-                      onChange={(e) => setFirstName(e.target.value)}
-                      placeholder="Ej. Constanza"
-                      className="input-field w-full rounded-lg px-4 py-3 text-xs"
+                      onChange={(e) => setFirstName(e.target.value.toUpperCase())}
+                      placeholder="EJ. CONSTANZA"
+                      className="input-field w-full rounded-lg px-4 py-3 text-xs uppercase"
                     />
                   </div>
 
@@ -654,9 +654,9 @@ export const CheckoutFlow: React.FC = () => {
                       type="text"
                       required
                       value={lastName}
-                      onChange={(e) => setLastName(e.target.value)}
-                      placeholder="Ej. González Morales"
-                      className="input-field w-full rounded-lg px-4 py-3 text-xs"
+                      onChange={(e) => setLastName(e.target.value.toUpperCase())}
+                      placeholder="EJ. GONZÁLEZ MORALES"
+                      className="input-field w-full rounded-lg px-4 py-3 text-xs uppercase"
                     />
                   </div>
 
@@ -765,11 +765,12 @@ export const CheckoutFlow: React.FC = () => {
                       required
                       value={studentFirstName}
                       onChange={(e) => {
-                        setStudentFirstName(e.target.value);
-                        setStudentName(`${e.target.value.trim()} ${studentLastName.trim()}`.trim());
+                        const val = e.target.value.toUpperCase();
+                        setStudentFirstName(val);
+                        setStudentName(`${val.trim()} ${studentLastName.trim()}`.trim().toUpperCase());
                       }}
-                      placeholder="Ej. Luciano Andrés"
-                      className="input-field w-full rounded-lg px-4 py-3 text-xs"
+                      placeholder="EJ. LUCIANO ANDRÉS"
+                      className="input-field w-full rounded-lg px-4 py-3 text-xs uppercase"
                     />
                   </div>
 
@@ -782,29 +783,44 @@ export const CheckoutFlow: React.FC = () => {
                       required
                       value={studentLastName}
                       onChange={(e) => {
-                        setStudentLastName(e.target.value);
-                        setStudentName(`${studentFirstName.trim()} ${e.target.value.trim()}`.trim());
+                        const val = e.target.value.toUpperCase();
+                        setStudentLastName(val);
+                        setStudentName(`${studentFirstName.trim()} ${val.trim()}`.trim().toUpperCase());
                       }}
-                      placeholder="Ej. Hernández Orellana"
-                      className="input-field w-full rounded-lg px-4 py-3 text-xs"
+                      placeholder="EJ. HERNÁNDEZ ORELLANA"
+                      className="input-field w-full rounded-lg px-4 py-3 text-xs uppercase"
                     />
                   </div>
 
                   <div>
                     <div className="flex items-center justify-between mb-1">
                       <label className="text-xs text-white/70 font-semibold">
-                        RUN o IPE del Alumno (Opcional)
+                        RUN del Estudiante (con guion) *
                       </label>
                       {isStudentRunValid === true && (
-                        <span className="text-[10px] font-bold text-emerald-400">Válido</span>
+                        <span className="text-[10px] font-bold text-emerald-400 flex items-center gap-0.5">
+                          <Check size={12} /> RUN Válido
+                        </span>
+                      )}
+                      {isStudentRunValid === false && (
+                        <span className="text-[10px] font-bold text-rose-400 flex items-center gap-0.5">
+                          Dígito incorrecto
+                        </span>
                       )}
                     </div>
                     <input
                       type="text"
+                      required
                       value={studentRun}
                       onChange={(e) => setStudentRun(formatRutOnInput(e.target.value))}
                       placeholder="Ej. 24.102.394-K"
-                      className="input-field w-full rounded-lg px-4 py-3 text-xs font-mono"
+                      className={`input-field w-full rounded-lg px-4 py-3 text-xs font-mono tracking-wider ${
+                        isStudentRunValid === true
+                          ? 'border-emerald-500 ring-1 ring-emerald-500'
+                          : isStudentRunValid === false
+                          ? 'border-rose-500 ring-1 ring-rose-500'
+                          : ''
+                      }`}
                     />
                   </div>
 
