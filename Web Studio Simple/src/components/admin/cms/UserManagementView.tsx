@@ -50,7 +50,8 @@ import {
   updateUserStatus,
   generateTemporaryPassword,
   regenerateStudentPin,
-  registerUserFromCheckout
+  registerUserFromCheckout,
+  deleteUserPermanently
 } from '../../../lib/user-repository';
 import { cleanRut, formatRut, validateRut, formatRutOnInput } from '../../../lib/rut-validator';
 import {
@@ -97,6 +98,10 @@ export const UserManagementView: React.FC = () => {
   const [statusFilter, setStatusFilter] = useState<'all' | 'active' | 'trial' | 'suspended'>('all');
   const [gradeFilter, setGradeFilter] = useState<string>('all');
   const [visiblePins, setVisiblePins] = useState<Record<string, boolean>>({});
+
+  // Modal Eliminar Familia Permanente
+  const [deleteTargetUser, setDeleteTargetUser] = useState<ParentUser | null>(null);
+  const [isDeletingUser, setIsDeletingUser] = useState(false);
 
   // Modal Clave Temporal Familia
   const [tempPasswordModal, setTempPasswordModal] = useState<{
@@ -344,6 +349,30 @@ export const UserManagementView: React.FC = () => {
       details: `Modificacion de estado de suscripcion a ${newStatus.toUpperCase()} para ${userName}`
     });
     refreshAll();
+  };
+
+  const handleConfirmDeleteUser = async () => {
+    if (!deleteTargetUser) return;
+    setIsDeletingUser(true);
+    try {
+      const actor = activeAdminUser || { id: 'admin-001', name: 'Administrador', email: 'admin@estudiosimple.cl', role: 'admin' as AdminRole };
+      recordAuditLog({
+        actorId: actor.id,
+        actorName: actor.name,
+        actorEmail: actor.email,
+        actorRole: actor.role,
+        action: 'DELETE_USER_PERMANENT',
+        target: deleteTargetUser.rut || deleteTargetUser.email,
+        details: `Eliminacion definitiva y purga en cascada de cuenta y suscripcion para ${deleteTargetUser.name} (${deleteTargetUser.email})`
+      });
+      deleteUserPermanently(deleteTargetUser.id);
+      setDeleteTargetUser(null);
+      refreshAll();
+    } catch (err) {
+      console.error('Error al eliminar usuario permanentemente:', err);
+    } finally {
+      setIsDeletingUser(false);
+    }
   };
 
   const handleGradeToggle = (user: ParentUser, grade: GradeLevel) => {
@@ -944,15 +973,25 @@ export const UserManagementView: React.FC = () => {
                         </td>
 
                         <td className="py-3.5 px-4 text-right">
-                          <button
-                            type="button"
-                            onClick={() => handleGenerateTempPassword(user)}
-                            className="px-2.5 py-1.5 rounded-lg border border-slate-200 hover:border-[#12A1A4] text-slate-700 hover:text-[#12A1A4] text-[11px] font-bold transition-all cursor-pointer inline-flex items-center gap-1 shadow-2xs"
-                            title="Generar clave temporal de soporte"
-                          >
-                            <KeyRound className="w-3.5 h-3.5" />
-                            <span>Clave Soporte</span>
-                          </button>
+                          <div className="flex items-center justify-end gap-1.5">
+                            <button
+                              type="button"
+                              onClick={() => handleGenerateTempPassword(user)}
+                              className="px-2.5 py-1.5 rounded-lg border border-slate-200 hover:border-[#12A1A4] text-slate-700 hover:text-[#12A1A4] text-[11px] font-bold transition-all cursor-pointer inline-flex items-center gap-1 shadow-2xs"
+                              title="Generar clave temporal de soporte"
+                            >
+                              <KeyRound className="w-3.5 h-3.5" />
+                              <span>Clave Soporte</span>
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => setDeleteTargetUser(user)}
+                              className="p-1.5 rounded-lg border border-rose-200 hover:border-rose-400 bg-rose-50/50 hover:bg-rose-100 text-rose-600 hover:text-rose-700 transition-all cursor-pointer inline-flex items-center justify-center shadow-2xs"
+                              title="Eliminar suscripción y cuenta para siempre"
+                            >
+                              <Trash2 className="w-3.5 h-3.5" />
+                            </button>
+                          </div>
                         </td>
                       </tr>
                     ))
@@ -2329,6 +2368,90 @@ export const UserManagementView: React.FC = () => {
                 </button>
               </div>
             </form>
+          </div>
+        </div>
+      )}
+
+      {/* =======================================================================
+          MODAL 5: ELIMINAR SUSCRIPCIÓN Y CUENTA PARA SIEMPRE
+      ======================================================================= */}
+      {deleteTargetUser && (
+        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl border border-rose-100 space-y-4 animate-in fade-in zoom-in-95 duration-150">
+            <div className="flex items-start gap-3">
+              <div className="p-3 rounded-xl bg-rose-100 text-rose-600 shrink-0">
+                <Trash2 className="w-6 h-6" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-base font-black text-slate-900">
+                  Eliminar Suscripción y Cuenta para Siempre
+                </h3>
+                <p className="text-xs text-rose-600 font-semibold mt-0.5">
+                  Esta acción es crítica, destructiva e irreversible.
+                </p>
+              </div>
+            </div>
+
+            <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2 text-xs">
+              <div className="flex justify-between items-center py-0.5 border-b border-slate-200/60">
+                <span className="text-slate-500 font-medium">Apoderado:</span>
+                <span className="font-bold text-slate-900">{deleteTargetUser.name}</span>
+              </div>
+              <div className="flex justify-between items-center py-0.5 border-b border-slate-200/60">
+                <span className="text-slate-500 font-medium">RUN / Correo:</span>
+                <span className="font-mono font-semibold text-slate-800">
+                  {deleteTargetUser.rut || deleteTargetUser.email}
+                </span>
+              </div>
+              <div className="flex justify-between items-center py-0.5 border-b border-slate-200/60">
+                <span className="text-slate-500 font-medium">Estudiante:</span>
+                <span className="font-bold text-slate-900">{deleteTargetUser.studentName || 'Estudiante'}</span>
+              </div>
+              <div className="flex justify-between items-center py-0.5">
+                <span className="text-slate-500 font-medium">Estado actual:</span>
+                <span className="font-semibold uppercase tracking-wider text-[11px] text-slate-700">
+                  {deleteTargetUser.status} ({deleteTargetUser.plan || 'Plan'})
+                </span>
+              </div>
+            </div>
+
+            <div className="p-3 rounded-xl bg-rose-50/70 border border-rose-200/60 text-rose-800 text-[11px] leading-relaxed">
+              <p className="font-bold mb-1">Consecuencias inmediatas:</p>
+              <ul className="list-disc pl-4 space-y-0.5">
+                <li>Se cancela y revoca el acceso a la plataforma de inmediato.</li>
+                <li>Se purgan registros de progreso escolar y respuestas en base de datos.</li>
+                <li>Se eliminan órdenes de suscripción y credenciales asociadas.</li>
+              </ul>
+            </div>
+
+            <div className="flex justify-end gap-2.5 pt-2">
+              <button
+                type="button"
+                disabled={isDeletingUser}
+                onClick={() => setDeleteTargetUser(null)}
+                className="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition-all cursor-pointer disabled:opacity-50"
+              >
+                Cancelar
+              </button>
+              <button
+                type="button"
+                disabled={isDeletingUser}
+                onClick={handleConfirmDeleteUser}
+                className="px-5 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 active:bg-rose-800 text-white text-xs font-bold transition-all cursor-pointer shadow-md inline-flex items-center gap-2 disabled:opacity-50"
+              >
+                {isDeletingUser ? (
+                  <>
+                    <RefreshCw className="w-3.5 h-3.5 animate-spin" />
+                    <span>Eliminando...</span>
+                  </>
+                ) : (
+                  <>
+                    <Trash2 className="w-3.5 h-3.5" />
+                    <span>Sí, Eliminar Definitivamente</span>
+                  </>
+                )}
+              </button>
+            </div>
           </div>
         </div>
       )}

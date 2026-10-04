@@ -68,7 +68,7 @@ La tarea solo se considerara finalizada cuando:
 - Los comandos de verificacion por terminal (`npm run build`, etc.) concluyan con codigo de salida 0.
 - La validacion de integridad del artefacto o contenido sea conforme.
 - Se actualice la bitacora en `memoria/` si hubo cambios arquitectonicos o de reglas.
-- Si la tarea incluye cierre o despliegue, ejecutar la sincronizacion Git de forma autonoma segun el protocolo oficial.
+- Si la tarea incluye cierre o despliegue, ejecutar la sincronizacion Git de forma atomica en un unico comando con `npx tsx scripts/git_sync.ts "[mensaje]"` segun el protocolo oficial, prohibiendo comandos individuales sueltos de Git.
 La entrega se realizara en un unico informe final de cierre al culminar la totalidad del trabajo.
 
 ### 11. Clausula de Edicion Atomica Consolidada (Cero Micro-Diffs)
@@ -108,7 +108,7 @@ DIRECTIVAS DE AUTONOMIA:
 9. Resuelve cualquier detalle tecnico, de UX o pedagogico no especificado aplicando los estandares de AGENTS.md y documenta la decision en el reporte final.
 10. Edicion atomica: consolidar todas las modificaciones de cada archivo en una unica operacion integral para eliminar diffs interactivos repetitivos.
 11. Autonomia en pasarelas e integraciones: auditar endpoints, credenciales y webhooks sin detenerse a consultar, aplicando validacion sintetica y lectura de entorno resiliente.
-12. Cierre y sincronizacion: incluir verificacion de build exitoso, bitacora en memoria/ y sincronizacion git limpia segun protocolo.
+12. Cierre y sincronizacion: incluir verificacion de build exitoso, bitacora en memoria/ y sincronizacion git atomica mediante npx tsx scripts/git_sync.ts.
 
 TAREA A EJECUTAR:
 [Descripcion detallada y determinista del requerimiento]

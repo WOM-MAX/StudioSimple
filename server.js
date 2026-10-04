@@ -747,6 +747,87 @@ const server = http.createServer(async (req, res) => {
       return;
     }
 
+    // 1i-4. Eliminacion Definitiva de Familia y Suscripcion (Hard Delete Admin)
+    if (pathname === '/api/admin/family/delete' && method === 'POST') {
+      try {
+        const body = await readJsonBody(req);
+        const { userId, email, rut } = body;
+
+        if (!userId && !email && !rut) {
+          res.writeHead(400);
+          res.end(JSON.stringify({ success: false, message: 'Identificador de usuario requerido (userId, email o rut)' }));
+          return;
+        }
+
+        let deletedFromDb = false;
+        try {
+          await withPrisma(async (prisma) => {
+            const user = await prisma.user.findFirst({
+              where: {
+                OR: [
+                  userId ? { id: userId } : undefined,
+                  email ? { email } : undefined,
+                  rut ? { rut } : undefined
+                ].filter(Boolean)
+              }
+            });
+
+            if (user) {
+              // 1. Eliminar ordenes de suscripcion
+              await prisma.subscriptionOrder.deleteMany({
+                where: { userId: user.id }
+              });
+
+              // 2. Eliminar progresos de estudiante
+              await prisma.studentProgress.deleteMany({
+                where: { studentId: user.id }
+              });
+
+              // 3. Eliminar usuario permanente
+              await prisma.user.delete({
+                where: { id: user.id }
+              });
+
+              deletedFromDb = true;
+            }
+          });
+        } catch (dbErr) {
+          console.warn('[AdminDeleteFamily] Fallback Prisma DB:', dbErr.message);
+        }
+
+        // Registro de auditoria permanente
+        const logsFilePath = path.resolve(__dirname, 'data', 'audit_logs.json');
+        let existingLogs = [];
+        if (fs.existsSync(logsFilePath)) {
+          try { existingLogs = JSON.parse(fs.readFileSync(logsFilePath, 'utf8')); } catch {}
+        }
+
+        existingLogs.unshift({
+          id: `log-del-${Date.now()}`,
+          timestamp: new Date().toISOString(),
+          actorId: 'admin',
+          actorName: 'Administrador',
+          actorRole: 'admin',
+          action: 'DELETE_USER_PERMANENT',
+          target: email || rut || userId,
+          details: `Eliminacion definitiva e irreversible de la familia y suscripcion asociada. Base de datos: ${deletedFromDb ? 'Purgado' : 'Modo local'}`
+        });
+
+        fs.writeFileSync(logsFilePath, JSON.stringify(existingLogs.slice(0, 1000), null, 2), 'utf8');
+
+        res.writeHead(200);
+        res.end(JSON.stringify({
+          success: true,
+          deletedFromDb,
+          message: 'Usuario, estudiante y suscripción eliminados de forma definitiva'
+        }));
+      } catch (err) {
+        res.writeHead(500);
+        res.end(JSON.stringify({ success: false, error: err.message }));
+      }
+      return;
+    }
+
     // 1j. Envio de Correo Transaccional de Bienvenida y Credenciales
     if (pathname === '/api/mail/send-welcome' && method === 'POST') {
       try {

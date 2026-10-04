@@ -332,6 +332,35 @@ export function findUserByEmailOrRut(identifier: string): ParentUser | null {
   );
 }
 
+/**
+ * Elimina definitivamente un usuario y su suscripcion asociada de localStorage y del backend.
+ */
+export function deleteUserPermanently(userId: string): boolean {
+  const users = getAllRegisteredUsers();
+  const target = users.find((u) => u.id === userId);
+  if (!target) return false;
+
+  const filtered = users.filter((u) => u.id !== userId);
+  persistUsers(filtered);
+
+  // Despacho asincrono de purga a nivel servidor y base de datos Neon
+  if (typeof fetch !== 'undefined') {
+    fetch('/api/admin/family/delete', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        userId: target.id,
+        email: target.email,
+        rut: target.rut
+      })
+    }).catch((err) => {
+      console.warn('[UserRepository] Error al sincronizar eliminacion en backend:', err?.message);
+    });
+  }
+
+  return true;
+}
+
 // Inicialización automática
 if (typeof window !== 'undefined') {
   initializeUsersRegistry();

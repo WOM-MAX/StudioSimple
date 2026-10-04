@@ -234,6 +234,26 @@ export default defineConfig({
             return;
           }
 
+          if (url === '/api/admin/family/delete' && req.method === 'POST') {
+            let body = '';
+            req.on('data', chunk => { body += chunk; });
+            req.on('end', () => {
+              try {
+                res.setHeader('Content-Type', 'application/json');
+                return res.end(JSON.stringify({
+                  success: true,
+                  deletedFromDb: false,
+                  message: 'Usuario, estudiante y suscripción eliminados de forma definitiva (dev)'
+                }));
+              } catch (e: any) {
+                res.statusCode = 500;
+                res.setHeader('Content-Type', 'application/json');
+                return res.end(JSON.stringify({ success: false, error: e?.message }));
+              }
+            });
+            return;
+          }
+
           next();
         });
       }

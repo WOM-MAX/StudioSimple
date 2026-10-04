@@ -50,7 +50,8 @@ export type AuditActionType =
   | 'EXTEND_GUEST_PASS'
   | 'UPDATE_SITE_CONFIG'
   | 'UPDATE_LESSON_CONTENT'
-  | 'PAYMENT_MERCADOPAGO_SUCCESS';
+  | 'PAYMENT_MERCADOPAGO_SUCCESS'
+  | 'DELETE_USER_PERMANENT';
 
 export interface AuditLogEntry {
   id: string;

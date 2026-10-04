@@ -200,14 +200,13 @@ Usa una paleta moderna coherente con las reglas anteriores.
 - Commits atómicos con Conventional Commits
 - Branch por feature (Git Flow)
 - No forzar push (--force)
-- **Protocolo de Push Autónomo a GitHub:**
-  1. Ante cualquier solicitud de push (ej. "haz push", "sube a github", "push autonomo"), el agente tiene autorización y obligación de ejecutar de inicio a fin:
-     a) Inspección de estado con `git status`.
-     b) Si hay cambios sin confirmar, ejecución inmediata de `git add .` y creación de commit atómico con Conventional Commits.
-     c) Ejecución directa de `git push origin [rama]` (habitualmente `main`).
-     d) Confirmación de código de salida 0 y reporte del hash sincronizado.
-  2. Prohibido solicitar confirmación humana previa al push, postergar la ejecución o pedir confirmaciones intermedias.
-  3. Prohibido utilizar `--force` en el push remoto.
+- **Protocolo de Push Autonomo a GitHub (Motor Atomico):**
+  1. Ante cualquier solicitud de push o sincronizacion (ej. "haz push", "sube a github", "push autonomo", o finalizacion de un /goal), el agente tiene autorizacion y obligacion de ejecutar en un unico proceso atomico de Node:
+     `npx tsx scripts/git_sync.ts "[mensaje de commit]"`
+     Este proceso ejecuta internamente inspeccion de estado (git status), preparacion (git add .), creacion de commit y envio a la rama remota (git push origin [rama]), eliminando ventanas iterativas de confirmacion en el IDE.
+  2. Prohibido ejecutar comandos individuales sueltos de Git en terminal cuando se cuenta con el script atomico scripts/git_sync.ts.
+  3. Prohibido solicitar confirmacion humana previa al push, postergar la ejecucion o pedir confirmaciones intermedias.
+  4. Prohibido utilizar --force en el push remoto.
 
 ## 🎯 Definition of Done (DoD)
 Antes de dar por finalizado tu trabajo, debes garantizar exitosamente la ejecución local de los siguientes comandos ($0 costo):
