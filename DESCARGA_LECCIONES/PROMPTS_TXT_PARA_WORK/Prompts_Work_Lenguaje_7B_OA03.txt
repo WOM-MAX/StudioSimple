@@ -329,6 +329,9 @@ Refuerzo 1 (Refuerzo: El Incidente Detonante):
 --------------------------------------------------------------------------------
 [PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
 --------------------------------------------------------------------------------
+• Pregunta de Sintesis: "En tus propias palabras, ¿por qué decimos que sin un conflicto no habría historia que contar?"
+• Reflexion Metacognitiva: "¿Qué película o libro conocido te ayudó a visualizar las 6 etapas del viaje del héroe?"
+• Celebracion del Logro: "¡Felicitaciones! Has dominado la primera lección de estructura narrativa y viaje del héroe de 7° básico."
 • Felicitacion Final: "¡Felicitaciones! Hoy completaste con éxito la clase "Las 6 Etapas del Viaje del Héroe". Has demostrado constancia y rigor en tu aprendizaje."
 • Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Lengua y Literatura."
 
@@ -659,6 +662,9 @@ Refuerzo 1 (Recuperación de Lengua y Literatura: Evolución y roles de los pers
 --------------------------------------------------------------------------------
 [PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
 --------------------------------------------------------------------------------
+• Pregunta de Sintesis: "En tus propias palabras, ¿qué personaje, frase o idea de Evolución y roles de los personajes te pareció más significativa y por qué?"
+• Reflexion Metacognitiva: "¿Qué estrategia de lectura te ayudó más a entender el sentido profundo del texto?"
+• Celebracion del Logro: "¡Gran trabajo hoy! Has dominado la Clase 2. ¡Nos vemos en la siguiente misión de lectura!"
 • Felicitacion Final: "¡Felicitaciones! Hoy completaste con éxito la clase "Evolución y roles de los personajes". Has demostrado constancia y rigor en tu aprendizaje."
 • Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Lengua y Literatura."
 
@@ -989,6 +995,9 @@ Refuerzo 1 (Recuperación de Lengua y Literatura: La voz del narrador y perspect
 --------------------------------------------------------------------------------
 [PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
 --------------------------------------------------------------------------------
+• Pregunta de Sintesis: "En tus propias palabras, ¿qué personaje, frase o idea de La voz del narrador y perspectivas te pareció más significativa y por qué?"
+• Reflexion Metacognitiva: "¿Qué estrategia de lectura te ayudó más a entender el sentido profundo del texto?"
+• Celebracion del Logro: "¡Gran trabajo hoy! Has dominado la Clase 3. ¡Nos vemos en la siguiente misión de lectura!"
 • Felicitacion Final: "¡Felicitaciones! Hoy completaste con éxito la clase "La voz del narrador y perspectivas". Has demostrado constancia y rigor en tu aprendizaje."
 • Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Lengua y Literatura."
 
@@ -1319,6 +1328,9 @@ Refuerzo 1 (Recuperación de Lengua y Literatura: Disposición temporal de los a
 --------------------------------------------------------------------------------
 [PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
 --------------------------------------------------------------------------------
+• Pregunta de Sintesis: "En tus propias palabras, ¿qué personaje, frase o idea de Disposición temporal de los acontecimientos te pareció más significativa y por qué?"
+• Reflexion Metacognitiva: "¿Qué estrategia de lectura te ayudó más a entender el sentido profundo del texto?"
+• Celebracion del Logro: "¡Gran trabajo hoy! Has dominado la Clase 4. ¡Nos vemos en la siguiente misión de lectura!"
 • Felicitacion Final: "¡Felicitaciones! Hoy completaste con éxito la clase "Disposición temporal de los acontecimientos". Has demostrado constancia y rigor en tu aprendizaje."
 • Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Lengua y Literatura."
 
@@ -1649,6 +1661,9 @@ Refuerzo 1 (Recuperación de Lengua y Literatura: Práctica avanzada y modelamie
 --------------------------------------------------------------------------------
 [PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
 --------------------------------------------------------------------------------
+• Pregunta de Sintesis: "En tus propias palabras, ¿qué personaje, frase o idea de Práctica avanzada y modelamiento de OA 3 (Parte 1) te pareció más significativa y por qué?"
+• Reflexion Metacognitiva: "¿Qué estrategia de lectura te ayudó más a entender el sentido profundo del texto?"
+• Celebracion del Logro: "¡Gran trabajo hoy! Has dominado la Clase 5. ¡Nos vemos en la siguiente misión de lectura!"
 • Felicitacion Final: "¡Felicitaciones! Hoy completaste con éxito la clase "Práctica avanzada y modelamiento de OA 3 (Parte 1)". Has demostrado constancia y rigor en tu aprendizaje."
 • Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Lengua y Literatura."
 
@@ -1979,6 +1994,9 @@ Refuerzo 1 (Recuperación de Lengua y Literatura: Interpretación global, visió
 --------------------------------------------------------------------------------
 [PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
 --------------------------------------------------------------------------------
+• Pregunta de Sintesis: "En tus propias palabras, ¿qué personaje, frase o idea de Interpretación global, visión de mundo y síntesis te pareció más significativa y por qué?"
+• Reflexion Metacognitiva: "¿Qué estrategia de lectura te ayudó más a entender el sentido profundo del texto?"
+• Celebracion del Logro: "¡Felicitaciones! Has completado todos los análisis del Objetivo de Aprendizaje OA 3. ¡Excelente dominio literario!"
 • Felicitacion Final: "¡Felicitaciones! Hoy completaste con éxito la clase "Interpretación global, visión de mundo y síntesis". Has demostrado constancia y rigor en tu aprendizaje."
 • Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Lengua y Literatura."
 

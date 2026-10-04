@@ -161,7 +161,7 @@ export function buildClase03() {
         "slideNumber": 4,
         "tituloMomento": "El Territorio de la Intimidad",
         "didacticPurpose": "El Territorio de la Intimidad",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, holding a symbolic glowing blue emblem representing personal boundaries, intimacy, and family privacy, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, holding an illustrated symbolic boundary indicator representing personal boundaries, intimacy, and family privacy, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Intimidad Personal: Espacio Sagrado",
         "overlayTitle": "El valor de la intimidad",
         "overlaySubtitle": "Pensamientos, emociones y vivencias reservadas",
@@ -203,7 +203,7 @@ export function buildClase03() {
         "slideNumber": 7,
         "tituloMomento": "La Pregunta Detonante",
         "didacticPurpose": "La Pregunta Detonante",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, holding open science notebooks, ready to investigate interpersonal cases beside a StudioSimple badge, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, holding open science notebooks, ready to investigate interpersonal cases in a warm modern study room, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "StudioSimple · Ciencias Naturales",
         "overlayTitle": "El desafío afectivo",
         "overlaySubtitle": "¿Cómo cultivamos vínculos de respeto mutuo?",
@@ -277,7 +277,7 @@ export function buildClase03() {
         "slideNumber": 3,
         "tituloMomento": "Reciprocidad: Equilibrio en el Afecto",
         "didacticPurpose": "Reciprocidad: Equilibrio en el Afecto",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, keeping personal confidences safe beside a study desk with a glowing lock and diary emblem, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, keeping personal confidences safe beside a study desk with an illustrated lock and diary, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Reciprocidad: Cuidado Mutuo",
         "overlayTitle": "El principio de reciprocidad",
         "overlaySubtitle": "Afecto compartido en igualdad de condiciones",
@@ -333,7 +333,7 @@ export function buildClase03() {
         "slideNumber": 7,
         "tituloMomento": "Síntesis y Regla de Oro",
         "didacticPurpose": "Síntesis y Regla de Oro",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, presenting a three-pillar diagram of empathy, reciprocity, and intimacy beside a StudioSimple emblem, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, presenting a three-pillar diagram of empathy, reciprocity, and intimacy in a brightly lit study environment, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Regla de Oro: Vínculos Saludables",
         "overlayTitle": "Regla de Oro de los vínculos afectivos",
         "overlaySubtitle": "Empatía + Reciprocidad + Intimidad = Relaciones Sanas",
@@ -461,6 +461,11 @@ export function buildClase03() {
     "type": "dimensions",
     "title": "Vínculos Afectivos, Respeto e Intimidad",
     "description": "Organizador gráfico de los pilares de la convivencia y el cuidado de los afectos."
+  },
+  "paso8_cierre": {
+    "preguntaSintesis": "¿De qué manera la empatía y la reciprocidad protegen el espacio de intimidad y evitan relaciones basadas en la imposición?",
+    "metacognicion": "¿En qué momento de la lección identificaste con mayor claridad la importancia de resguardar la privacidad propia y ajena en el entorno digital?",
+    "celebracion": "¡Felicitaciones! Has completado con éxito la lección sobre vínculos afectivos, respeto mutuo e intimidad."
   }
 };
 }

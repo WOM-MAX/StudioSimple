@@ -13,7 +13,7 @@ export const CIENCIAS_7B_OA01_CLASE02: LessonData = {
     "nextLessonTitle": "Vínculos afectivos, respeto mutuo e intimidad"
   },
   "prep": {
-    "adultObjective": "Acompañar al estudiante a distinguir entre caracteres sexuales primarios y secundarios, reconociendo la acción del sistema endocrino en los cambios físicos y emocionales propios de la pubertad como un proceso biológico natural.",
+    "adultObjective": "Acompañar al estudiante a distinguir entre caracteres sexuales primarios y secundarios, reconociendo la acción del sistema endocrino en los cambios físicos y emocionales propios de la pubertad, diferenciando el inicio puberal (8 a 13 años en niñas y 9 a 14 en niños) del estirón puberal de estatura (10 a 14 en niñas y 12 a 16 en niños) según los estadios de Tanner (1962) y orientaciones del MINEDUC.",
     "routeToday": "Reconocer cómo las señales hormonales de la pubertad transforman nuestro cuerpo y nuestras emociones, diferenciando caracteres primarios de secundarios y valorando la diversidad en los ritmos de crecimiento.",
     "mentorReminder": "Sigue el guion leyendo en voz alta únicamente los recuadros DILE y PREGÚNTALE. El contenido pedagógico y las respuestas esperadas te indican con total precisión qué debe responder el estudiante.",
     "reminders": [
@@ -204,7 +204,7 @@ export const CIENCIAS_7B_OA01_CLASE02: LessonData = {
         "slideNumber": 7,
         "tituloMomento": "La Pregunta Detonante",
         "didacticPurpose": "La Pregunta Detonante",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, ready to classify developmental traits with their science notebooks open beside a StudioSimple badge, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, ready to classify developmental traits with their science notebooks open in an organized science study room, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "StudioSimple · Ciencias Naturales",
         "overlayTitle": "El desafío biológico",
         "overlaySubtitle": "¿Cómo clasificamos cada cambio con exactitud?",
@@ -298,9 +298,9 @@ export const CIENCIAS_7B_OA01_CLASE02: LessonData = {
         "overlaySubtitle": "Rasgos corporales activados en la pubertad",
         "vectorialOverlayPptx": "Capa puberal: Estirón estatural, cambio de voz, desarrollo mamario y vello corporal",
         "mathOverlayPptx": "Capa puberal: Estirón estatural, cambio de voz, desarrollo mamario y vello corporal",
-        "speakerNotes": "El ritmo de crecimiento varía entre personas. El estirón y la maduración ocurren entre los 10 y 16 años sin que existan diferencias de valor entre ritmos rápidos o lentos.",
-        "palabrasAprox": 30,
-        "duracionSeg": 14
+        "speakerNotes": "La pubertad inicia entre los 8 y 13 años en niñas y entre los 9 y 14 en niños, mientras que el estirón puberal ocurre entre los 10 y 14 en niñas y 12 a 16 en niños, según los estadios de Tanner (1962) y MINEDUC.",
+        "palabrasAprox": 39,
+        "duracionSeg": 17
       },
       {
         "slideNumber": 5,
@@ -312,9 +312,9 @@ export const CIENCIAS_7B_OA01_CLASE02: LessonData = {
         "overlaySubtitle": "Sentimientos, independencia y diálogo familiar",
         "vectorialOverlayPptx": "Esquema biopsicosocial: Cambios hormonales conectados con la autoimagen y la vida familiar",
         "mathOverlayPptx": "Esquema biopsicosocial: Cambios hormonales conectados con la autoimagen y la vida familiar",
-        "speakerNotes": "La maduración puberal también impacta las emociones. La búsqueda de autonomía y las variaciones del estado de ánimo requieren comunicación empática y diálogo cercano en el hogar.",
-        "palabrasAprox": 27,
-        "duracionSeg": 12
+        "speakerNotes": "La maduración puberal también impacta las emociones y la autonomía, requiriendo comunicación empática y diálogo cercano en el hogar.",
+        "palabrasAprox": 19,
+        "duracionSeg": 9
       },
       {
         "slideNumber": 6,
@@ -326,15 +326,15 @@ export const CIENCIAS_7B_OA01_CLASE02: LessonData = {
         "overlaySubtitle": "Identificación de caracteres con justificación biológica",
         "vectorialOverlayPptx": "Desglose del caso: Aumento de estatura y cambio de voz -> Aparecen en la pubertad -> Caracteres Secundarios",
         "mathOverlayPptx": "Desglose del caso: Aumento de estatura y cambio de voz -> Aparecen en la pubertad -> Caracteres Secundarios",
-        "speakerNotes": "Analicemos un caso concreto: identificar si el cambio en el tono de la voz y el aumento acelerado de estatura corresponden a caracteres primarios o secundarios, y justificarlo biológicamente. Corresponden a caracteres sexuales secundarios, porque se manifiestan durante la pubertad por estímulo de las hormonas sexuales y no están presentes desde el nacimiento.",
-        "palabrasAprox": 53,
-        "duracionSeg": 24
+        "speakerNotes": "Analicemos un caso concreto: el cambio de voz y el aumento de estatura corresponden a caracteres secundarios, ya que surgen en la pubertad por estímulo hormonal y no estaban al nacer.",
+        "palabrasAprox": 32,
+        "duracionSeg": 14
       },
       {
         "slideNumber": 7,
         "tituloMomento": "Síntesis y Regla de Oro",
         "didacticPurpose": "Síntesis y Regla de Oro",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, presenting a two-part diagram contrasting primary organs from birth with pubertal secondary traits beside a StudioSimple emblem, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, presenting a two-part diagram contrasting primary organs from birth with pubertal secondary traits in a bright science laboratory, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Regla de Oro: Primarios vs Secundarios",
         "overlayTitle": "Regla de Oro de los caracteres sexuales",
         "overlaySubtitle": "Nacimiento = Primarios | Pubertad = Secundarios",
@@ -462,5 +462,10 @@ export const CIENCIAS_7B_OA01_CLASE02: LessonData = {
     "type": "dimensions",
     "title": "Caracteres Sexuales Primarios y Secundarios",
     "description": "Organizador gráfico comparativo de transformaciones biológicas y hormonales en la pubertad."
+  },
+  "paso8_cierre": {
+    "preguntaSintesis": "¿Cuál es la diferencia biológica fundamental entre un carácter sexual primario y uno secundario, y qué sistema corporal activa su aparición?",
+    "metacognicion": "¿De qué manera comprender los estadios de maduración de Tanner y los ritmos individuales te ayuda a normalizar los cambios físicos que experimentas junto a tus compañeros?",
+    "celebracion": "¡Felicitaciones! Has completado con éxito la lección sobre transformaciones físicas y emocionales de la pubertad."
   }
 };

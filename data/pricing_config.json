@@ -79,10 +79,10 @@
     }
   ],
   "pasarela": {
-    "provider": "simulated",
+    "provider": "mercadopago",
     "mercadoPagoPublicKey": "",
     "mercadoPagoAccessToken": "",
-    "modoSandbox": true
+    "modoSandbox": false
   },
-  "ultimaActualizacion": "2026-10-03T11:28:00.000Z"
+  "ultimaActualizacion": "2026-10-04T12:05:00.000Z"
 }

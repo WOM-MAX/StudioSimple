@@ -2590,7 +2590,11 @@ function playerLessonToGeneratorLesson(playerLesson: PlayerLessonData): LessonDa
       correctText: r.correctText,
       fixText: r.fixText
     })),
-    paso8_cierre: {
+    paso8_cierre: playerLesson.paso8_cierre ? {
+      preguntaSintesis: playerLesson.paso8_cierre.preguntaSintesis,
+      metacognicion: playerLesson.paso8_cierre.metacognicion,
+      celebracion: playerLesson.paso8_cierre.celebracion
+    } : {
       preguntaSintesis: playerLesson.closure?.nextClassPreview || '',
       metacognicion: playerLesson.closure?.congratulations || '',
       celebracion: playerLesson.closure?.congratulations || 'Has completado la clase con exito.'

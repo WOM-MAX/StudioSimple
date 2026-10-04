@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
-import { ShieldCheck, CheckCircle2, AlertCircle, Check, KeyRound, Copy, GraduationCap, Shield, UserCheck, ArrowRight, Tag, Sparkles, CreditCard, HelpCircle, Lock } from 'lucide-react';
+import { ShieldCheck, CheckCircle2, AlertCircle, Check, KeyRound, Copy, GraduationCap, Shield, UserCheck, ArrowRight, Tag, Sparkles, CreditCard, HelpCircle, Lock, Eye, EyeOff } from 'lucide-react';
 import { GradeLevel, ParentUser } from '../../types';
 import { validateRut, formatRutOnInput } from '../../lib/rut-validator';
 import { registerUserFromCheckout } from '../../lib/user-repository';
@@ -16,6 +16,26 @@ import {
   validateExpiryDate,
   validateCVV
 } from '../../lib/card-validator';
+
+function formatChileanPhone(value: string): string {
+  const digits = value.replace(/\D/g, '');
+  if (!digits) return '';
+  let rest = digits;
+  if (rest.startsWith('56')) {
+    rest = rest.slice(2);
+  }
+  if (rest.startsWith('9')) {
+    rest = rest.slice(1);
+  }
+  rest = rest.slice(0, 8);
+  if (rest.length === 0) {
+    return '+56 9 ';
+  }
+  if (rest.length <= 4) {
+    return `+56 9 ${rest}`;
+  }
+  return `+56 9 ${rest.slice(0, 4)} ${rest.slice(4)}`;
+}
 
 export const CheckoutFlow: React.FC = () => {
   const { setViewMode, activateSessionFromCheckout } = useApp();
@@ -63,6 +83,7 @@ export const CheckoutFlow: React.FC = () => {
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
 
   // Form Fields - Estudiante
   const [studentName, setStudentName] = useState('');
@@ -440,8 +461,10 @@ export const CheckoutFlow: React.FC = () => {
 
     setIsProcessing(true);
 
-    // Si la pasarela esta configurada en modo Mercado Pago y hay monto a cobrar
-    if (pricingConfig.pasarela.provider === 'mercadopago' && finalPrice > 0) {
+    // Si la pasarela esta configurada en modo Mercado Pago o billetera y hay monto a cobrar
+    const shouldUseMercadoPago = (pricingConfig.pasarela.provider === 'mercadopago' || paymentMethodOption === 'mercadopago_wallet') && finalPrice > 0;
+
+    if (shouldUseMercadoPago) {
       const pendingPayload = {
         rut: rut.trim(),
         name: `${firstName.trim()} ${lastName.trim()}`.trim() || 'Apoderado EstudioSimple',
@@ -482,12 +505,13 @@ export const CheckoutFlow: React.FC = () => {
             window.location.href = data.initPoint;
             return;
           }
-          console.warn('Preferencia sin initPoint, fallback a activacion local:', data);
-          completeLocalActivation();
+          setIsProcessing(false);
+          setErrorMessage(data?.error || data?.message || 'No fue posible conectar con la pasarela segura de Mercado Pago / Webpay. Por favor reintenta o contacta a soporte.');
         })
         .catch((err) => {
-          console.warn('Error en llamada a Mercado Pago:', err);
-          completeLocalActivation();
+          console.error('Error en llamada a Mercado Pago:', err);
+          setIsProcessing(false);
+          setErrorMessage('Error de conexión con la pasarela de pagos. Por favor verifica tu red e intenta nuevamente.');
         });
       return;
     }
@@ -667,9 +691,9 @@ export const CheckoutFlow: React.FC = () => {
                     <input
                       type="tel"
                       value={phone}
-                      onChange={(e) => setPhone(e.target.value)}
+                      onChange={(e) => setPhone(formatChileanPhone(e.target.value))}
                       placeholder="+56 9 1234 5678"
-                      className="input-field w-full rounded-lg px-4 py-3 text-xs"
+                      className="input-field w-full rounded-lg px-4 py-3 text-xs font-mono"
                     />
                   </div>
 
@@ -691,14 +715,24 @@ export const CheckoutFlow: React.FC = () => {
                     <label className="block text-xs text-white/70 font-semibold mb-1">
                       Contraseña de tu Cuenta (Mínimo 8 caracteres) *
                     </label>
-                    <input
-                      type="password"
-                      required
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      placeholder="Crea una contraseña segura"
-                      className="input-field w-full rounded-lg px-4 py-3 text-xs"
-                    />
+                    <div className="relative">
+                      <input
+                        type={showPassword ? 'text' : 'password'}
+                        required
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        placeholder="Crea una contraseña segura"
+                        className="input-field w-full rounded-lg px-4 py-3 pr-10 text-xs"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => setShowPassword(!showPassword)}
+                        className="absolute right-3 top-1/2 -translate-y-1/2 text-white/50 hover:text-white transition-colors cursor-pointer p-1"
+                        title={showPassword ? 'Ocultar contraseña' : 'Ver contraseña'}
+                      >
+                        {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
+                      </button>
+                    </div>
                   </div>
                 </div>
               </section>

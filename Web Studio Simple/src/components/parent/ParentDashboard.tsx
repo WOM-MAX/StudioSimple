@@ -25,7 +25,9 @@ import {
   KeyRound,
   Copy,
   GraduationCap,
-  Shield
+  Shield,
+  AlertTriangle,
+  X
 } from 'lucide-react';
 
 const GRADES = ['3° Básico', '4° Básico', '5° Básico', '6° Básico', '7° Básico', '8° Básico'];
@@ -50,6 +52,47 @@ export const ParentDashboard: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'lessons' | 'analytics' | 'credentials'>('lessons');
   const [copiedPin, setCopiedPin] = useState(false);
   const [pinFeedback, setPinFeedback] = useState<string | null>(null);
+  const [showCancelModal, setShowCancelModal] = useState(false);
+  const [cancelReason, setCancelReason] = useState('');
+  const [isCancelling, setIsCancelling] = useState(false);
+  const [cancelMessage, setCancelMessage] = useState<string | null>(null);
+  const [isSubscriptionActive, setIsSubscriptionActive] = useState<boolean>(parent?.subscriptionActive !== false);
+
+  const handleCancelSubscription = async () => {
+    setIsCancelling(true);
+    try {
+      const res = await fetch('/api/subscription/cancel', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: parent?.email,
+          rut: parent?.rut,
+          reason: cancelReason || 'Cancelación voluntaria desde panel'
+        })
+      });
+      const data = await res.json();
+      if (data.success) {
+        setIsSubscriptionActive(false);
+        const savedParent = localStorage.getItem('estudio_simple_parent');
+        if (savedParent) {
+          try {
+            const parsed = JSON.parse(savedParent);
+            parsed.subscriptionActive = false;
+            localStorage.setItem('estudio_simple_parent', JSON.stringify(parsed));
+          } catch {}
+        }
+        setCancelMessage(data.message || 'Suscripción cancelada exitosamente.');
+        setShowCancelModal(false);
+      } else {
+        alert(data.message || 'No fue posible cancelar la suscripción.');
+      }
+    } catch (err) {
+      console.error('Error al cancelar suscripción:', err);
+      alert('Error de conexión al procesar la cancelación.');
+    } finally {
+      setIsCancelling(false);
+    }
+  };
 
   const handleCopyPin = () => {
     if (typeof navigator !== 'undefined' && navigator.clipboard) {
@@ -946,8 +989,10 @@ export const ParentDashboard: React.FC = () => {
                       <Shield size={18} />
                       <span>Cuenta del Apoderado / Tutor Legal</span>
                     </div>
-                    <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-[10px] font-extrabold uppercase">
-                      {parent.subscriptionActive !== false ? 'Suscripción Activa' : 'Prueba'}
+                    <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase ${
+                      isSubscriptionActive ? 'bg-emerald-500/20 text-emerald-400' : 'bg-amber-500/20 text-amber-400'
+                    }`}>
+                      {isSubscriptionActive ? 'Suscripción Activa' : 'Suscripción Cancelada'}
                     </span>
                   </div>
 
@@ -983,6 +1028,37 @@ export const ParentDashboard: React.FC = () => {
                         ))}
                       </div>
                     </div>
+
+                    {/* Estado y Acciones de Suscripcion */}
+                    <div className="pt-2 border-t border-white/10 space-y-2">
+                      <div className="flex items-center justify-between text-[11px]">
+                        <span className="text-slate-400 font-semibold">Estado del Servicio:</span>
+                        <span className="font-bold text-white">
+                          {isSubscriptionActive ? 'Plan Activo' : 'Dado de Baja (Sin cobro)'}
+                        </span>
+                      </div>
+
+                      {cancelMessage && (
+                        <div className="p-2.5 rounded-xl bg-amber-500/20 border border-amber-500/40 text-amber-300 text-xs font-semibold">
+                          {cancelMessage}
+                        </div>
+                      )}
+
+                      {isSubscriptionActive ? (
+                        <button
+                          type="button"
+                          onClick={() => setShowCancelModal(true)}
+                          className="w-full mt-2 py-2 px-3 rounded-xl bg-rose-500/10 hover:bg-rose-500/20 border border-rose-500/30 text-rose-400 hover:text-rose-300 font-bold text-xs flex items-center justify-center gap-1.5 transition-all cursor-pointer"
+                        >
+                          <AlertTriangle size={14} />
+                          <span>Cancelar / Dar de Baja Suscripción</span>
+                        </button>
+                      ) : (
+                        <p className="text-[10px] text-slate-400 italic">
+                          Tu suscripción fue cancelada. Mantendrás acceso a las lecciones hasta el término del ciclo en curso.
+                        </p>
+                      )}
+                    </div>
                   </div>
                 </div>
 
@@ -996,6 +1072,67 @@ export const ParentDashboard: React.FC = () => {
         )}
 
       </main>
+
+      {/* MODAL DE CONFIRMACION PARA CANCELAR SUSCRIPCION */}
+      {showCancelModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-xs">
+          <div className="bg-[#10223D] border border-white/20 rounded-3xl max-w-md w-full p-6 sm:p-8 space-y-5 shadow-2xl relative text-white">
+            <button
+              type="button"
+              onClick={() => setShowCancelModal(false)}
+              className="absolute right-4 top-4 p-1.5 text-white/50 hover:text-white rounded-lg transition-colors cursor-pointer"
+              title="Cerrar"
+            >
+              <X size={18} />
+            </button>
+
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-2xl bg-rose-500/20 border border-rose-500/40 flex items-center justify-center text-rose-400">
+                <AlertTriangle size={20} />
+              </div>
+              <div>
+                <h3 className="text-lg font-bold">Cancelar Suscripción</h3>
+                <p className="text-xs text-white/60">EstudioSimple Homeschooling</p>
+              </div>
+            </div>
+
+            <p className="text-xs text-slate-300 leading-relaxed">
+              ¿Estás segura/o de dar de baja tu suscripción? No se te realizarán cobros futuros. Tu hijo/a mantendrá acceso a las cápsulas y cuadernos hasta que concluya el período actual de facturación.
+            </p>
+
+            <div>
+              <label className="block text-[11px] text-white/70 font-semibold mb-1">
+                Motivo de cancelación (opcional):
+              </label>
+              <input
+                type="text"
+                value={cancelReason}
+                onChange={(e) => setCancelReason(e.target.value)}
+                placeholder="Ej. Terminé las lecciones requeridas..."
+                className="input-field w-full rounded-xl px-3 py-2 text-xs bg-black/30 border border-white/10"
+              />
+            </div>
+
+            <div className="flex gap-3 pt-2">
+              <button
+                type="button"
+                onClick={() => setShowCancelModal(false)}
+                className="flex-1 py-2.5 px-4 rounded-xl bg-white/10 hover:bg-white/20 text-xs font-bold text-white transition-all cursor-pointer"
+              >
+                No, mantener activa
+              </button>
+              <button
+                type="button"
+                onClick={handleCancelSubscription}
+                disabled={isCancelling}
+                className="flex-1 py-2.5 px-4 rounded-xl bg-rose-600 hover:bg-rose-700 text-xs font-bold text-white transition-all cursor-pointer disabled:opacity-50"
+              >
+                {isCancelling ? 'Cancelando...' : 'Confirmar Baja'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

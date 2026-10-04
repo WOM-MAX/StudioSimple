@@ -30,8 +30,8 @@ DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
 5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
    • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
    • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
-   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
-6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (48 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (48 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
 7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
 8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
 
@@ -49,7 +49,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 1: Apertura y Escenario (9 seg aprox) ---
 1. Propósito Didáctico: Apertura y Escenario
 2. Título en Pantalla (64 pt): Hace 15.000 años: La vida nómade
-3. Subtítulo en Pantalla (36 pt): Bandas de cazadores-recolectores del Paleolítico
+3. Subtítulo en Pantalla (48 pt): Bandas de cazadores-recolectores del Paleolítico
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, watching from a ridge as a Paleolithic band moves across cold windswept plains carrying shelters and stone spears. Cinematic atmospheric lighting. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Línea temporal: Paleolítico superior (Clima glacial, refugios transitorios)
 6. Notas al Orador (Locución Google Vids): "Durante decenas de milenios, las bandas humanas debían desplazarse constantemente siguiendo las manadas de animales para sobrevivir en un clima glacial riguroso."
@@ -57,7 +57,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 2: El Clima Cambia (11 seg aprox) ---
 1. Propósito Didáctico: El Clima Cambia
 2. Título en Pantalla (64 pt): El deshielo y el nuevo clima
-3. Subtítulo en Pantalla (36 pt): Temperaturas más cálidas y valles verdes
+3. Subtítulo en Pantalla (48 pt): Temperaturas más cálidas y valles verdes
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Warm sunlight illuminating green valleys along a flowing river. Early hunter-gatherers observing wild wheat and barley growing naturally. Fresh spring atmosphere. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vector de transición: Fin de la glaciación -> Nacimiento de cuencas fluviales fértiles
 6. Notas al Orador (Locución Google Vids): "Al finalizar la última glaciación, el calentamiento global permitió que las llanuras se cubrieran de cereales silvestres y las comunidades comenzaron a observar los ciclos vegetales."
@@ -65,7 +65,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 3: La Gran Invención (10 seg aprox) ---
 1. Propósito Didáctico: La Gran Invención
 2. Título en Pantalla (64 pt): La invención de la agricultura
-3. Subtítulo en Pantalla (36 pt): Siembra deliberada y cosecha de granos
+3. Subtítulo en Pantalla (48 pt): Siembra deliberada y cosecha de granos
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Early Neolithic farmers carefully planting emmer and barley seeds into fertile soil near the Euphrates river with polished digging sticks. Golden morning light. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa tecnológica: Bastones de siembra, semillas de trigo y cebada en suelo fértil
 6. Notas al Orador (Locución Google Vids): "Aprender a sembrar trigo y cebada transformó la historia humana: ya no era necesario migrar para comer, pues el alimento brotaba en la propia tierra."
@@ -73,7 +73,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 4: Domesticación Animal (10 seg aprox) ---
 1. Propósito Didáctico: Domesticación Animal
 2. Título en Pantalla (64 pt): La ganadería neolítica
-3. Subtítulo en Pantalla (36 pt): Crianza de rebaños y control de recursos
+3. Subtítulo en Pantalla (48 pt): Crianza de rebaños y control de recursos
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Neolithic sheep and goats grazing peacefully in stone-fenced enclosures beside early mudbrick round houses. Clean lineart, soft depth of field. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Iconos productivos: Cercados de piedra con ovejas y cabras junto al río
 6. Notas al Orador (Locución Google Vids): "Al domesticar ovejas y cabras, las familias aseguraron carne, leche y lana constante, liberándose de la incertidumbre que imponía la cacería de animales salvajes."
@@ -81,7 +81,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 5: Nacimiento de Aldeas (10 seg aprox) ---
 1. Propósito Didáctico: Nacimiento de Aldeas
 2. Título en Pantalla (64 pt): Las primeras aldeas
-3. Subtítulo en Pantalla (36 pt): De campamentos temporales a viviendas de adobe
+3. Subtítulo en Pantalla (48 pt): De campamentos temporales a viviendas de adobe
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Panoramic view of an ancient settlement like Jericho or Catalhoyuk with square mudbrick dwellings, communal granaries, and children playing safely. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Plano urbano primitivo: Asentamiento permanente de Jericó o Çatalhöyük con graneros
 6. Notas al Orador (Locución Google Vids): "Con excedentes almacenados en silos y graneros, nacieron las primeras viviendas sólidas de adobe y piedra: el ser humano se convirtió en un habitante sedentario."
@@ -89,7 +89,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 6: División del Trabajo (11 seg aprox) ---
 1. Propósito Didáctico: División del Trabajo
 2. Título en Pantalla (64 pt): Especialización de oficios
-3. Subtítulo en Pantalla (36 pt): Alfareros, tejedores y constructores
+3. Subtítulo en Pantalla (48 pt): Alfareros, tejedores y constructores
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Villagers shaping clay into storage pots, weaving woolen textiles, and polishing stone sickles beside a communal fire. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Red social de oficios: Excedente agrícola -> Alfarería, textilería y herramientas pulidas
 6. Notas al Orador (Locución Google Vids): "Al no tener que salir todos a buscar alimento, surgieron artesanos que crearon la cerámica para conservar granos, telares para abrigo y herramientas de piedra pulida."
@@ -97,7 +97,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 7: Pregunta Detonante (10 seg aprox) ---
 1. Propósito Didáctico: Pregunta Detonante
 2. Título en Pantalla (64 pt): La gran pregunta histórica
-3. Subtítulo en Pantalla (36 pt): ¿Por qué el Neolítico cambió la humanidad?
+3. Subtítulo en Pantalla (48 pt): ¿Por qué el Neolítico cambió la humanidad?
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-olds analyzing a glowing interactive map of the Fertile Crescent with timeline markers. StudioSimple emblem. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta detonante: ¿De qué manera la agricultura y la aldea transformaron la sociedad para siempre?
 6. Notas al Orador (Locución Google Vids): "Surge ahora la gran pregunta histórica: ¿cómo la revolución de la agricultura y la sedentarización sentó las bases de nuestras civilizaciones actuales?"
@@ -116,7 +116,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
 1. Propósito Didáctico: Objetivo de la Lección
 2. Título en Pantalla (64 pt): Objetivo de la lección
-3. Subtítulo en Pantalla (36 pt): Explicar el impacto de la revolución agrícola
+3. Subtítulo en Pantalla (48 pt): Explicar el impacto de la revolución agrícola
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The boy and girl standing before a grand historical timeline comparing 'Vida Nómade (Paleolítico)' and 'Vida Sedentaria (Neolítico)'. Clean modern typography. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 02 · De la Hominización a las Primeras Sociedades Agrícolas
 6. Notas al Orador (Locución Google Vids): "El objetivo de hoy es aprender cómo el descubrimiento de la agricultura, la domesticación de animales y la sedentarización revolucionaron la forma de vida humana en el Neolítico."
@@ -124,7 +124,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 2: El Creciente Fértil (13 seg aprox) ---
 1. Propósito Didáctico: El Creciente Fértil
 2. Título en Pantalla (64 pt): El escenario geográfico
-3. Subtítulo en Pantalla (36 pt): El Creciente Fértil y los grandes ríos
+3. Subtítulo en Pantalla (48 pt): El Creciente Fértil y los grandes ríos
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Topographical map of the Fertile Crescent with glowing blue rivers (Tigris, Euphrates, Nile) and early crop cultivation zones. Clear cartographic style. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Mapa histórico vectorial: Ríos Tigris, Éufrates, Jordán y Nilo formando el arco fértil
 6. Notas al Orador (Locución Google Vids): "El proceso comenzó en el Creciente Fértil de Medio Oriente. La presencia de ríos caudalosos como el Tigris y el Éufrates proporcionó agua y limo enriquecido para los primeros cultivos."
@@ -132,7 +132,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 3: Excedente y Sedentarismo (13 seg aprox) ---
 1. Propósito Didáctico: Excedente y Sedentarismo
 2. Título en Pantalla (64 pt): El excedente alimentario
-3. Subtítulo en Pantalla (36 pt): Producir más de lo consumido en el día
+3. Subtítulo en Pantalla (48 pt): Producir más de lo consumido en el día
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl explaining a diagram of agricultural surplus: grain sacks and ceramic jars stored in communal granaries. Crisp clean lighting. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama económico: Cosecha abundante -> Almacenamiento en vasijas -> Seguridad alimentaria
 6. Notas al Orador (Locución Google Vids): "El cambio fundamental fue el excedente: por primera vez las personas cosechaban más de lo que consumían en la jornada. Guardar alimento en vasijas de arcilla garantizó la supervivencia en invierno."
@@ -140,7 +140,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 4: Complejidad Social (11 seg aprox) ---
 1. Propósito Didáctico: Complejidad Social
 2. Título en Pantalla (64 pt): Especialización y jerarquía
-3. Subtítulo en Pantalla (36 pt): Nuevos roles en la comunidad aldeana
+3. Subtítulo en Pantalla (48 pt): Nuevos roles en la comunidad aldeana
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Bustling village scene showing specialized craftsmen: potter at wheel, weaver at loom, builder carving mudbrick. Soft depth of field. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Estructura social: Agricultores, alfareros, constructores y primeros consejos de ancianos
 6. Notas al Orador (Locución Google Vids): "La aldea neolítica exigió organización. Se crearon turnos de regadío, líderes para resolver conflictos y artesanos dedicados exclusivamente a perfeccionar la alfarería y la arquitectura."
@@ -148,7 +148,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 5: Piedra Pulida y Tecnología (12 seg aprox) ---
 1. Propósito Didáctico: Piedra Pulida y Tecnología
 2. Título en Pantalla (64 pt): Revolución tecnológica
-3. Subtítulo en Pantalla (36 pt): De la piedra tallada a la piedra pulimentada
+3. Subtítulo en Pantalla (48 pt): De la piedra tallada a la piedra pulimentada
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up contrast: rough chipped stone blade of Paleolithic next to smooth, symmetrical polished stone axe and sickle of Neolithic. Crystal clarity. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Comparación técnica: Cuchillo de sílex tallado (Paleolítico) vs Hacha y hoz pulida (Neolítico)
 6. Notas al Orador (Locución Google Vids): "El nombre Neolítico significa piedra nueva. Las herramientas ya no se tallaban por golpes toscos, sino que se pulían frotándolas con arena y agua, logrando filos duraderos y resistentes."
@@ -156,7 +156,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 6: Prevención del Error (13 seg aprox) ---
 1. Propósito Didáctico: Prevención del Error
 2. Título en Pantalla (64 pt): Atención: Error habitual
-3. Subtítulo en Pantalla (36 pt): La transición fue gradual, no inmediata
+3. Subtítulo en Pantalla (48 pt): La transición fue gradual, no inmediata
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Timeline graphic showing smooth gradual transition across centuries, with hunter-gatherer icons overlapping with farming icons. Clean infographic. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Línea temporal extendida: Miles de años de coexistencia entre caza y cultivo experimental
 6. Notas al Orador (Locución Google Vids): "Un error habitual es creer que la revolución agrícola ocurrió de un día para otro. Fue un proceso de miles de años donde la recolección y el cultivo coexistieron pacientemente."
@@ -164,7 +164,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 seg aprox) ---
 1. Propósito Didáctico: Síntesis y Regla de Oro
 2. Título en Pantalla (64 pt): Regla de Oro del Neolítico
-3. Subtítulo en Pantalla (36 pt): Agricultura + Aldea + Excedente = Cuna de la Civilización
+3. Subtítulo en Pantalla (48 pt): Agricultura + Aldea + Excedente = Cuna de la Civilización
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem with golden banner summarizing the 3 pillars of Neolithic revolution: Sedentarismo, Excedente, Especialización. High elegance. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Infografía de síntesis: Triángulo fundacional: Sedentarismo, Excedente y Especialización social
 6. Notas al Orador (Locución Google Vids): "Recuerda la regla de oro: el excedente agrícola hizo posible la vida sedentaria y las ciudades. ¡Ahora comprobaremos este análisis histórico en las actividades interactivas de la plataforma!"
@@ -329,6 +329,9 @@ Refuerzo 1 (Recuperación: El Paso al Sedentarismo):
 --------------------------------------------------------------------------------
 [PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
 --------------------------------------------------------------------------------
+• Pregunta de Sintesis: "En tus propias palabras, ¿qué diferencia hay entre buscar alimento en la naturaleza y producirlo tú mismo?"
+• Reflexion Metacognitiva: "¿Qué invento neolítico te llamó más la atención: la siembra, la ganadería o las vasijas de cerámica?"
+• Celebracion del Logro: "¡Felicitaciones! Has completado con éxito la primera clase de Historia sobre el surgimiento de la agricultura."
 • Felicitacion Final: "¡Felicitaciones! Hoy completaste con éxito la clase "El fin del nomadismo y el surgimiento agrícola". Has demostrado constancia y rigor en tu aprendizaje."
 • Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Historia, Geografía y Ciencias Sociales."
 
@@ -357,8 +360,8 @@ DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
 5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
    • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
    • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
-   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
-6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (48 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (48 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
 7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
 8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
 
@@ -376,7 +379,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 1: Apertura y Contexto (9 seg aprox) ---
 1. Propósito Didáctico: Apertura y Contexto
 2. Título en Pantalla (64 pt): Misión 2: Domesticación de animales y plantas en el Creciente Fértil
-3. Subtítulo en Pantalla (36 pt): Exploración inicial en Historia, Geografía y Ciencias Sociales
+3. Subtítulo en Pantalla (48 pt): Exploración inicial en Historia, Geografía y Ciencias Sociales
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Domesticación de animales y plantas en el Creciente Fértil (Historia, Geografía y Ciencias Sociales). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Coordenadas historicas: Linea temporal y contexto de Domesticación de animales y plantas en el Creciente Fértil
 6. Notas al Orador (Locución Google Vids): "Comienza una nueva expedición de aprendizaje en Historia, Geografía y Ciencias Sociales. Nuestros dos exploradores analizan el desafío de Domesticación de animales y plantas en el Creciente Fértil para descubrir sus secretos."
@@ -384,7 +387,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 2: Presentación del Escenario (9 seg aprox) ---
 1. Propósito Didáctico: Presentación del Escenario
 2. Título en Pantalla (64 pt): Punto de partida
-3. Subtítulo en Pantalla (36 pt): Selección artificial, ciclos de cultivo y almacenamiento de excedentes
+3. Subtítulo en Pantalla (48 pt): Selección artificial, ciclos de cultivo y almacenamiento de excedentes
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Selección artificial, ciclos de cultivo y almacenamiento de excedentes. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Selección artificial, ciclos de cultivo y almacenamiento de excedentes
 6. Notas al Orador (Locución Google Vids): "Al observar los datos sobre Selección artificial, ciclos de cultivo y almacenamiento de excedentes, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor."
@@ -392,7 +395,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 seg aprox) ---
 1. Propósito Didáctico: Aparición del Conflicto / Misterio
 2. Título en Pantalla (64 pt): El enigma disciplinar
-3. Subtítulo en Pantalla (36 pt): Desafío en Domesticación de animales y plantas en el Creciente Fértil
+3. Subtítulo en Pantalla (48 pt): Desafío en Domesticación de animales y plantas en el Creciente Fértil
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Selección artificial, ciclos de cultivo y almacenamiento de excedentes
 6. Notas al Orador (Locución Google Vids): "Surge un reto concreto sobre Domesticación de animales y plantas en el Creciente Fértil: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso."
@@ -400,7 +403,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 4: Exploración de Pistas (9 seg aprox) ---
 1. Propósito Didáctico: Exploración de Pistas
 2. Título en Pantalla (64 pt): Análisis de evidencias
-3. Subtítulo en Pantalla (36 pt): Selección artificial, ciclos de cultivo y almacenamiento de excedentes
+3. Subtítulo en Pantalla (48 pt): Selección artificial, ciclos de cultivo y almacenamiento de excedentes
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Selección artificial, ciclos de cultivo y almacenamiento de excedentes
 6. Notas al Orador (Locución Google Vids): "Ambos comparan las pistas disponibles sobre Selección artificial, ciclos de cultivo y almacenamiento de excedentes. Cada dato confirma cómo interactúan los elementos clave de la situación."
@@ -408,7 +411,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 5: El Momento Crítico (9 seg aprox) ---
 1. Propósito Didáctico: El Momento Crítico
 2. Título en Pantalla (64 pt): Criterio de decisión
-3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso
+3. Subtítulo en Pantalla (48 pt): Aplicar el método riguroso
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Selección artificial, ciclos de cultivo y almacenamiento de excedentes
 6. Notas al Orador (Locución Google Vids): "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Domesticación de animales y plantas en el Creciente Fértil con total precisión metodológica."
@@ -416,7 +419,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 6: La Antesala de la Pregunta (9 seg aprox) ---
 1. Propósito Didáctico: La Antesala de la Pregunta
 2. Título en Pantalla (64 pt): El dilema central
-3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Domesticación de animales y plantas en el Creciente Fértil?
+3. Subtítulo en Pantalla (48 pt): ¿Cómo resolver Domesticación de animales y plantas en el Creciente Fértil?
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Dilema historico: Fuentes contrastadas frente al acontecimiento
 6. Notas al Orador (Locución Google Vids): "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje."
@@ -424,7 +427,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 7: La Pregunta Detonante (9 seg aprox) ---
 1. Propósito Didáctico: La Pregunta Detonante
 2. Título en Pantalla (64 pt): Pregunta detonante
-3. Subtítulo en Pantalla (36 pt): Regla y método de Domesticación de animales y plantas en el Creciente Fértil
+3. Subtítulo en Pantalla (48 pt): Regla y método de Domesticación de animales y plantas en el Creciente Fértil
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta detonante: ¿Que consecuencias trajo Domesticación de animales y plantas en el Creciente Fértil?
 6. Notas al Orador (Locución Google Vids): "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!"
@@ -443,7 +446,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
 1. Propósito Didáctico: Objetivo de la Lección
 2. Título en Pantalla (64 pt): Objetivo de la lección
-3. Subtítulo en Pantalla (36 pt): Dominar Domesticación de animales y plantas en el Creciente Fértil: Selección artificial, ciclos de cultivo y almacenamiento de excedentes
+3. Subtítulo en Pantalla (48 pt): Dominar Domesticación de animales y plantas en el Creciente Fértil: Selección artificial, ciclos de cultivo y almacenamiento de excedentes
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Selección artificial, ciclos de cultivo y almacenamiento de excedentes. High clarity, negative space for text. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 2 · Domesticación de animales y plantas en el Creciente Fértil
 6. Notas al Orador (Locución Google Vids): "El objetivo de hoy es aprender a selección artificial, ciclos de cultivo y almacenamiento de excedentes, aplicando el método disciplinar paso a paso con total rigor y claridad."
@@ -451,7 +454,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 2: Definición del Concepto Central (12 seg aprox) ---
 1. Propósito Didáctico: Definición del Concepto Central
 2. Título en Pantalla (64 pt): Concepto fundamental
-3. Subtítulo en Pantalla (36 pt): Selección artificial, ciclos de cultivo y almacenamiento de excedentes
+3. Subtítulo en Pantalla (48 pt): Selección artificial, ciclos de cultivo y almacenamiento de excedentes
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Escenario historico y fuentes primarias de Selección artificial, ciclos de cultivo y almacenamiento de excedentes
 6. Notas al Orador (Locución Google Vids): "Para comprender Domesticación de animales y plantas en el Creciente Fértil, establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación."
@@ -459,7 +462,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 3: Demostración Modelada (12 seg aprox) ---
 1. Propósito Didáctico: Demostración Modelada
 2. Título en Pantalla (64 pt): Modelamiento paso a paso
-3. Subtítulo en Pantalla (36 pt): Procedimiento de Domesticación de animales y plantas en el Creciente Fértil
+3. Subtítulo en Pantalla (48 pt): Procedimiento de Domesticación de animales y plantas en el Creciente Fértil
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama multicausal: Factores economicos, sociales y culturales
 6. Notas al Orador (Locución Google Vids): "Observa cómo se aplica el procedimiento en este caso guiado: cada transformación responde a una justificación disciplinar explícita y visible."
@@ -467,7 +470,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 4: Prevención del Error Frecuente (13 seg aprox) ---
 1. Propósito Didáctico: Prevención del Error Frecuente
 2. Título en Pantalla (64 pt): Atención: Error habitual
-3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar
+3. Subtítulo en Pantalla (48 pt): Confusión común que debemos evitar
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Contraste temporal: cambios y continuidades historicas
 6. Notas al Orador (Locución Google Vids): "Un error frecuente ocurre al descuidar el orden o saltarse un paso de la convención establecida. Siempre comprobamos cada dato antes de continuar."
@@ -475,7 +478,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 5: Comprobación del Resultado (12 seg aprox) ---
 1. Propósito Didáctico: Comprobación del Resultado
 2. Título en Pantalla (64 pt): Validación del resultado
-3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente
+3. Subtítulo en Pantalla (48 pt): Comprobar que la respuesta es consistente
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Interpretacion historica justificada a partir de evidencias
 6. Notas al Orador (Locución Google Vids): "Al contrastar el resultado con la situación inicial, confirmamos que la solución es consistente, rigurosa y responde plenamente a la pregunta."
@@ -483,7 +486,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 seg aprox) ---
 1. Propósito Didáctico: Estrategia Mnemotécnica
 2. Título en Pantalla (64 pt): Estrategia de pensamiento
-3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar
+3. Subtítulo en Pantalla (48 pt): 1. Identificar · 2. Aplicar · 3. Comprobar
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Estrategia de analisis historico: Contexto, causas y consecuencias
 6. Notas al Orador (Locución Google Vids): "Recuerda siempre la estrategia en tres pasos: identificar la información clave, aplicar la regla en orden y comprobar el resultado final."
@@ -491,7 +494,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 seg aprox) ---
 1. Propósito Didáctico: Síntesis y Regla de Oro
 2. Título en Pantalla (64 pt): Regla de Oro: Domesticación de animales y plantas en el Creciente Fértil
-3. Subtítulo en Pantalla (36 pt): Método disciplinar validado
+3. Subtítulo en Pantalla (48 pt): Método disciplinar validado
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Infografía de síntesis: Regla historica de Domesticación de animales y plantas en el Creciente Fértil
 6. Notas al Orador (Locución Google Vids): "Ahora que dominas la regla fundamental y el procedimiento de Domesticación de animales y plantas en el Creciente Fértil, ¡vamos a demostrarlo en las actividades interactivas de la plataforma!"
@@ -659,6 +662,9 @@ Refuerzo 1 (Recuperación Histórica: Domesticación de animales y plantas en el
 --------------------------------------------------------------------------------
 [PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
 --------------------------------------------------------------------------------
+• Pregunta de Sintesis: "En tus propias palabras, ¿qué lección o reflexión para el presente nos deja el estudio de Domesticación en Domesticación de animales y plantas en el Creciente Fértil?"
+• Reflexion Metacognitiva: "¿Qué estrategia te ayudó más a comprender la época estudiada: analizar el mapa o ponerte en el lugar de los protagonistas?"
+• Celebracion del Logro: "¡Gran trabajo hoy! Has dominado la Clase 2. ¡Nos vemos en la próxima expedición histórica!"
 • Felicitacion Final: "¡Felicitaciones! Hoy completaste con éxito la clase "Domesticación de animales y plantas en el Creciente Fértil". Has demostrado constancia y rigor en tu aprendizaje."
 • Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Historia, Geografía y Ciencias Sociales."
 
@@ -687,8 +693,8 @@ DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
 5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
    • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
    • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
-   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
-6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (48 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (48 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
 7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
 8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
 
@@ -706,7 +712,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 1: Apertura y Contexto (9 seg aprox) ---
 1. Propósito Didáctico: Apertura y Contexto
 2. Título en Pantalla (64 pt): Misión 3: Primeras aldeas sedentarias y división del trabajo
-3. Subtítulo en Pantalla (36 pt): Exploración inicial en Historia, Geografía y Ciencias Sociales
+3. Subtítulo en Pantalla (48 pt): Exploración inicial en Historia, Geografía y Ciencias Sociales
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Primeras aldeas sedentarias y división del trabajo (Historia, Geografía y Ciencias Sociales). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Coordenadas historicas: Linea temporal y contexto de Primeras aldeas sedentarias y división del trabajo
 6. Notas al Orador (Locución Google Vids): "Comienza una nueva expedición de aprendizaje en Historia, Geografía y Ciencias Sociales. Nuestros dos exploradores analizan el desafío de Primeras aldeas sedentarias y división del trabajo para descubrir sus secretos."
@@ -714,7 +720,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 2: Presentación del Escenario (9 seg aprox) ---
 1. Propósito Didáctico: Presentación del Escenario
 2. Título en Pantalla (64 pt): Punto de partida
-3. Subtítulo en Pantalla (36 pt): Transformación del espacio geográfico y nuevas profesiones
+3. Subtítulo en Pantalla (48 pt): Transformación del espacio geográfico y nuevas profesiones
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Transformación del espacio geográfico y nuevas profesiones. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Transformación del espacio geográfico y nuevas profesiones
 6. Notas al Orador (Locución Google Vids): "Al observar los datos sobre Transformación del espacio geográfico y nuevas profesiones, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor."
@@ -722,7 +728,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 seg aprox) ---
 1. Propósito Didáctico: Aparición del Conflicto / Misterio
 2. Título en Pantalla (64 pt): El enigma disciplinar
-3. Subtítulo en Pantalla (36 pt): Desafío en Primeras aldeas sedentarias y división del trabajo
+3. Subtítulo en Pantalla (48 pt): Desafío en Primeras aldeas sedentarias y división del trabajo
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Transformación del espacio geográfico y nuevas profesiones
 6. Notas al Orador (Locución Google Vids): "Surge un reto concreto sobre Primeras aldeas sedentarias y división del trabajo: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso."
@@ -730,7 +736,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 4: Exploración de Pistas (9 seg aprox) ---
 1. Propósito Didáctico: Exploración de Pistas
 2. Título en Pantalla (64 pt): Análisis de evidencias
-3. Subtítulo en Pantalla (36 pt): Transformación del espacio geográfico y nuevas profesiones
+3. Subtítulo en Pantalla (48 pt): Transformación del espacio geográfico y nuevas profesiones
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Transformación del espacio geográfico y nuevas profesiones
 6. Notas al Orador (Locución Google Vids): "Ambos comparan las pistas disponibles sobre Transformación del espacio geográfico y nuevas profesiones. Cada dato confirma cómo interactúan los elementos clave de la situación."
@@ -738,7 +744,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 5: El Momento Crítico (9 seg aprox) ---
 1. Propósito Didáctico: El Momento Crítico
 2. Título en Pantalla (64 pt): Criterio de decisión
-3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso
+3. Subtítulo en Pantalla (48 pt): Aplicar el método riguroso
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Transformación del espacio geográfico y nuevas profesiones
 6. Notas al Orador (Locución Google Vids): "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Primeras aldeas sedentarias y división del trabajo con total precisión metodológica."
@@ -746,7 +752,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 6: La Antesala de la Pregunta (9 seg aprox) ---
 1. Propósito Didáctico: La Antesala de la Pregunta
 2. Título en Pantalla (64 pt): El dilema central
-3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Primeras aldeas sedentarias y división del trabajo?
+3. Subtítulo en Pantalla (48 pt): ¿Cómo resolver Primeras aldeas sedentarias y división del trabajo?
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Dilema historico: Fuentes contrastadas frente al acontecimiento
 6. Notas al Orador (Locución Google Vids): "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje."
@@ -754,7 +760,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 7: La Pregunta Detonante (9 seg aprox) ---
 1. Propósito Didáctico: La Pregunta Detonante
 2. Título en Pantalla (64 pt): Pregunta detonante
-3. Subtítulo en Pantalla (36 pt): Regla y método de Primeras aldeas sedentarias y división del trabajo
+3. Subtítulo en Pantalla (48 pt): Regla y método de Primeras aldeas sedentarias y división del trabajo
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta detonante: ¿Que consecuencias trajo Primeras aldeas sedentarias y división del trabajo?
 6. Notas al Orador (Locución Google Vids): "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!"
@@ -773,7 +779,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
 1. Propósito Didáctico: Objetivo de la Lección
 2. Título en Pantalla (64 pt): Objetivo de la lección
-3. Subtítulo en Pantalla (36 pt): Dominar Primeras aldeas sedentarias y división del trabajo: Transformación del espacio geográfico y nuevas profesiones
+3. Subtítulo en Pantalla (48 pt): Dominar Primeras aldeas sedentarias y división del trabajo: Transformación del espacio geográfico y nuevas profesiones
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Transformación del espacio geográfico y nuevas profesiones. High clarity, negative space for text. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 2 · Primeras aldeas sedentarias y división del trabajo
 6. Notas al Orador (Locución Google Vids): "El objetivo de hoy es aprender a transformación del espacio geográfico y nuevas profesiones, aplicando el método disciplinar paso a paso con total rigor y claridad."
@@ -781,7 +787,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 2: Definición del Concepto Central (12 seg aprox) ---
 1. Propósito Didáctico: Definición del Concepto Central
 2. Título en Pantalla (64 pt): Concepto fundamental
-3. Subtítulo en Pantalla (36 pt): Transformación del espacio geográfico y nuevas profesiones
+3. Subtítulo en Pantalla (48 pt): Transformación del espacio geográfico y nuevas profesiones
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Escenario historico y fuentes primarias de Transformación del espacio geográfico y nuevas profesiones
 6. Notas al Orador (Locución Google Vids): "Para comprender Primeras aldeas sedentarias y división del trabajo, establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación."
@@ -789,7 +795,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 3: Demostración Modelada (12 seg aprox) ---
 1. Propósito Didáctico: Demostración Modelada
 2. Título en Pantalla (64 pt): Modelamiento paso a paso
-3. Subtítulo en Pantalla (36 pt): Procedimiento de Primeras aldeas sedentarias y división del trabajo
+3. Subtítulo en Pantalla (48 pt): Procedimiento de Primeras aldeas sedentarias y división del trabajo
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama multicausal: Factores economicos, sociales y culturales
 6. Notas al Orador (Locución Google Vids): "Observa cómo se aplica el procedimiento en este caso guiado: cada transformación responde a una justificación disciplinar explícita y visible."
@@ -797,7 +803,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 4: Prevención del Error Frecuente (13 seg aprox) ---
 1. Propósito Didáctico: Prevención del Error Frecuente
 2. Título en Pantalla (64 pt): Atención: Error habitual
-3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar
+3. Subtítulo en Pantalla (48 pt): Confusión común que debemos evitar
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Contraste temporal: cambios y continuidades historicas
 6. Notas al Orador (Locución Google Vids): "Un error frecuente ocurre al descuidar el orden o saltarse un paso de la convención establecida. Siempre comprobamos cada dato antes de continuar."
@@ -805,7 +811,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 5: Comprobación del Resultado (12 seg aprox) ---
 1. Propósito Didáctico: Comprobación del Resultado
 2. Título en Pantalla (64 pt): Validación del resultado
-3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente
+3. Subtítulo en Pantalla (48 pt): Comprobar que la respuesta es consistente
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Interpretacion historica justificada a partir de evidencias
 6. Notas al Orador (Locución Google Vids): "Al contrastar el resultado con la situación inicial, confirmamos que la solución es consistente, rigurosa y responde plenamente a la pregunta."
@@ -813,7 +819,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 seg aprox) ---
 1. Propósito Didáctico: Estrategia Mnemotécnica
 2. Título en Pantalla (64 pt): Estrategia de pensamiento
-3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar
+3. Subtítulo en Pantalla (48 pt): 1. Identificar · 2. Aplicar · 3. Comprobar
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Estrategia de analisis historico: Contexto, causas y consecuencias
 6. Notas al Orador (Locución Google Vids): "Recuerda siempre la estrategia en tres pasos: identificar la información clave, aplicar la regla en orden y comprobar el resultado final."
@@ -821,7 +827,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 seg aprox) ---
 1. Propósito Didáctico: Síntesis y Regla de Oro
 2. Título en Pantalla (64 pt): Regla de Oro: Primeras aldeas sedentarias y división del trabajo
-3. Subtítulo en Pantalla (36 pt): Método disciplinar validado
+3. Subtítulo en Pantalla (48 pt): Método disciplinar validado
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Infografía de síntesis: Regla historica de Primeras aldeas sedentarias y división del trabajo
 6. Notas al Orador (Locución Google Vids): "Ahora que dominas la regla fundamental y el procedimiento de Primeras aldeas sedentarias y división del trabajo, ¡vamos a demostrarlo en las actividades interactivas de la plataforma!"
@@ -989,6 +995,9 @@ Refuerzo 1 (Recuperación Histórica: Primeras aldeas sedentarias y división de
 --------------------------------------------------------------------------------
 [PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
 --------------------------------------------------------------------------------
+• Pregunta de Sintesis: "En tus propias palabras, ¿qué lección o reflexión para el presente nos deja el estudio de Sedentarización en Primeras aldeas sedentarias y división del trabajo?"
+• Reflexion Metacognitiva: "¿Qué estrategia te ayudó más a comprender la época estudiada: analizar el mapa o ponerte en el lugar de los protagonistas?"
+• Celebracion del Logro: "¡Gran trabajo hoy! Has dominado la Clase 3. ¡Nos vemos en la próxima expedición histórica!"
 • Felicitacion Final: "¡Felicitaciones! Hoy completaste con éxito la clase "Primeras aldeas sedentarias y división del trabajo". Has demostrado constancia y rigor en tu aprendizaje."
 • Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Historia, Geografía y Ciencias Sociales."
 
@@ -1017,8 +1026,8 @@ DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
 5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
    • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
    • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
-   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
-6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (48 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (48 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
 7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
 8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
 
@@ -1036,7 +1045,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 1: Apertura y Contexto (9 seg aprox) ---
 1. Propósito Didáctico: Apertura y Contexto
 2. Título en Pantalla (64 pt): Misión 4: Innovaciones tecnológicas del Neolítico
-3. Subtítulo en Pantalla (36 pt): Exploración inicial en Historia, Geografía y Ciencias Sociales
+3. Subtítulo en Pantalla (48 pt): Exploración inicial en Historia, Geografía y Ciencias Sociales
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Innovaciones tecnológicas del Neolítico (Historia, Geografía y Ciencias Sociales). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Coordenadas historicas: Linea temporal y contexto de Innovaciones tecnológicas del Neolítico
 6. Notas al Orador (Locución Google Vids): "Comienza una nueva expedición de aprendizaje en Historia, Geografía y Ciencias Sociales. Nuestros dos exploradores analizan el desafío de Innovaciones tecnológicas del Neolítico para descubrir sus secretos."
@@ -1044,7 +1053,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 2: Presentación del Escenario (9 seg aprox) ---
 1. Propósito Didáctico: Presentación del Escenario
 2. Título en Pantalla (64 pt): Punto de partida
-3. Subtítulo en Pantalla (36 pt): Cerámica, tejido, piedra pulida y metalurgia incipiente
+3. Subtítulo en Pantalla (48 pt): Cerámica, tejido, piedra pulida y metalurgia incipiente
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Cerámica, tejido, piedra pulida y metalurgia incipiente. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Cerámica, tejido, piedra pulida y metalurgia incipiente
 6. Notas al Orador (Locución Google Vids): "Al observar los datos sobre Cerámica, tejido, piedra pulida y metalurgia incipiente, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor."
@@ -1052,7 +1061,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 seg aprox) ---
 1. Propósito Didáctico: Aparición del Conflicto / Misterio
 2. Título en Pantalla (64 pt): El enigma disciplinar
-3. Subtítulo en Pantalla (36 pt): Desafío en Innovaciones tecnológicas del Neolítico
+3. Subtítulo en Pantalla (48 pt): Desafío en Innovaciones tecnológicas del Neolítico
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Cerámica, tejido, piedra pulida y metalurgia incipiente
 6. Notas al Orador (Locución Google Vids): "Surge un reto concreto sobre Innovaciones tecnológicas del Neolítico: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso."
@@ -1060,7 +1069,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 4: Exploración de Pistas (9 seg aprox) ---
 1. Propósito Didáctico: Exploración de Pistas
 2. Título en Pantalla (64 pt): Análisis de evidencias
-3. Subtítulo en Pantalla (36 pt): Cerámica, tejido, piedra pulida y metalurgia incipiente
+3. Subtítulo en Pantalla (48 pt): Cerámica, tejido, piedra pulida y metalurgia incipiente
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Cerámica, tejido, piedra pulida y metalurgia incipiente
 6. Notas al Orador (Locución Google Vids): "Ambos comparan las pistas disponibles sobre Cerámica, tejido, piedra pulida y metalurgia incipiente. Cada dato confirma cómo interactúan los elementos clave de la situación."
@@ -1068,7 +1077,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 5: El Momento Crítico (9 seg aprox) ---
 1. Propósito Didáctico: El Momento Crítico
 2. Título en Pantalla (64 pt): Criterio de decisión
-3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso
+3. Subtítulo en Pantalla (48 pt): Aplicar el método riguroso
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Cerámica, tejido, piedra pulida y metalurgia incipiente
 6. Notas al Orador (Locución Google Vids): "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Innovaciones tecnológicas del Neolítico con total precisión metodológica."
@@ -1076,7 +1085,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 6: La Antesala de la Pregunta (9 seg aprox) ---
 1. Propósito Didáctico: La Antesala de la Pregunta
 2. Título en Pantalla (64 pt): El dilema central
-3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Innovaciones tecnológicas del Neolítico?
+3. Subtítulo en Pantalla (48 pt): ¿Cómo resolver Innovaciones tecnológicas del Neolítico?
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Dilema historico: Fuentes contrastadas frente al acontecimiento
 6. Notas al Orador (Locución Google Vids): "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje."
@@ -1084,7 +1093,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 7: La Pregunta Detonante (9 seg aprox) ---
 1. Propósito Didáctico: La Pregunta Detonante
 2. Título en Pantalla (64 pt): Pregunta detonante
-3. Subtítulo en Pantalla (36 pt): Regla y método de Innovaciones tecnológicas del Neolítico
+3. Subtítulo en Pantalla (48 pt): Regla y método de Innovaciones tecnológicas del Neolítico
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta detonante: ¿Que consecuencias trajo Innovaciones tecnológicas del Neolítico?
 6. Notas al Orador (Locución Google Vids): "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!"
@@ -1103,7 +1112,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
 1. Propósito Didáctico: Objetivo de la Lección
 2. Título en Pantalla (64 pt): Objetivo de la lección
-3. Subtítulo en Pantalla (36 pt): Dominar Innovaciones tecnológicas del Neolítico: Cerámica, tejido, piedra pulida y metalurgia incipiente
+3. Subtítulo en Pantalla (48 pt): Dominar Innovaciones tecnológicas del Neolítico: Cerámica, tejido, piedra pulida y metalurgia incipiente
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Cerámica, tejido, piedra pulida y metalurgia incipiente. High clarity, negative space for text. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 2 · Innovaciones tecnológicas del Neolítico
 6. Notas al Orador (Locución Google Vids): "El objetivo de hoy es aprender a cerámica, tejido, piedra pulida y metalurgia incipiente, aplicando el método disciplinar paso a paso con total rigor y claridad."
@@ -1111,7 +1120,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 2: Definición del Concepto Central (12 seg aprox) ---
 1. Propósito Didáctico: Definición del Concepto Central
 2. Título en Pantalla (64 pt): Concepto fundamental
-3. Subtítulo en Pantalla (36 pt): Cerámica, tejido, piedra pulida y metalurgia incipiente
+3. Subtítulo en Pantalla (48 pt): Cerámica, tejido, piedra pulida y metalurgia incipiente
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Escenario historico y fuentes primarias de Cerámica, tejido, piedra pulida y metalurgia incipiente
 6. Notas al Orador (Locución Google Vids): "Para comprender Innovaciones tecnológicas del Neolítico, establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación."
@@ -1119,7 +1128,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 3: Demostración Modelada (12 seg aprox) ---
 1. Propósito Didáctico: Demostración Modelada
 2. Título en Pantalla (64 pt): Modelamiento paso a paso
-3. Subtítulo en Pantalla (36 pt): Procedimiento de Innovaciones tecnológicas del Neolítico
+3. Subtítulo en Pantalla (48 pt): Procedimiento de Innovaciones tecnológicas del Neolítico
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama multicausal: Factores economicos, sociales y culturales
 6. Notas al Orador (Locución Google Vids): "Observa cómo se aplica el procedimiento en este caso guiado: cada transformación responde a una justificación disciplinar explícita y visible."
@@ -1127,7 +1136,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 4: Prevención del Error Frecuente (13 seg aprox) ---
 1. Propósito Didáctico: Prevención del Error Frecuente
 2. Título en Pantalla (64 pt): Atención: Error habitual
-3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar
+3. Subtítulo en Pantalla (48 pt): Confusión común que debemos evitar
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Contraste temporal: cambios y continuidades historicas
 6. Notas al Orador (Locución Google Vids): "Un error frecuente ocurre al descuidar el orden o saltarse un paso de la convención establecida. Siempre comprobamos cada dato antes de continuar."
@@ -1135,7 +1144,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 5: Comprobación del Resultado (12 seg aprox) ---
 1. Propósito Didáctico: Comprobación del Resultado
 2. Título en Pantalla (64 pt): Validación del resultado
-3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente
+3. Subtítulo en Pantalla (48 pt): Comprobar que la respuesta es consistente
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Interpretacion historica justificada a partir de evidencias
 6. Notas al Orador (Locución Google Vids): "Al contrastar el resultado con la situación inicial, confirmamos que la solución es consistente, rigurosa y responde plenamente a la pregunta."
@@ -1143,7 +1152,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 seg aprox) ---
 1. Propósito Didáctico: Estrategia Mnemotécnica
 2. Título en Pantalla (64 pt): Estrategia de pensamiento
-3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar
+3. Subtítulo en Pantalla (48 pt): 1. Identificar · 2. Aplicar · 3. Comprobar
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Estrategia de analisis historico: Contexto, causas y consecuencias
 6. Notas al Orador (Locución Google Vids): "Recuerda siempre la estrategia en tres pasos: identificar la información clave, aplicar la regla en orden y comprobar el resultado final."
@@ -1151,7 +1160,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 seg aprox) ---
 1. Propósito Didáctico: Síntesis y Regla de Oro
 2. Título en Pantalla (64 pt): Regla de Oro: Innovaciones tecnológicas del Neolítico
-3. Subtítulo en Pantalla (36 pt): Método disciplinar validado
+3. Subtítulo en Pantalla (48 pt): Método disciplinar validado
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Infografía de síntesis: Regla historica de Innovaciones tecnológicas del Neolítico
 6. Notas al Orador (Locución Google Vids): "Ahora que dominas la regla fundamental y el procedimiento de Innovaciones tecnológicas del Neolítico, ¡vamos a demostrarlo en las actividades interactivas de la plataforma!"
@@ -1319,6 +1328,9 @@ Refuerzo 1 (Recuperación Histórica: Innovaciones tecnológicas del Neolítico)
 --------------------------------------------------------------------------------
 [PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
 --------------------------------------------------------------------------------
+• Pregunta de Sintesis: "En tus propias palabras, ¿qué lección o reflexión para el presente nos deja el estudio de Neolítico en Innovaciones tecnológicas del Neolítico?"
+• Reflexion Metacognitiva: "¿Qué estrategia te ayudó más a comprender la época estudiada: analizar el mapa o ponerte en el lugar de los protagonistas?"
+• Celebracion del Logro: "¡Gran trabajo hoy! Has dominado la Clase 4. ¡Nos vemos en la próxima expedición histórica!"
 • Felicitacion Final: "¡Felicitaciones! Hoy completaste con éxito la clase "Innovaciones tecnológicas del Neolítico". Has demostrado constancia y rigor en tu aprendizaje."
 • Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Historia, Geografía y Ciencias Sociales."
 
@@ -1347,8 +1359,8 @@ DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
 5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
    • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
    • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
-   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
-6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (48 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (48 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
 7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
 8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
 
@@ -1366,7 +1378,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 1: Apertura y Contexto (9 seg aprox) ---
 1. Propósito Didáctico: Apertura y Contexto
 2. Título en Pantalla (64 pt): Misión 5: Consecuencias históricas y síntesis de la Revolución Neolítica
-3. Subtítulo en Pantalla (36 pt): Exploración inicial en Historia, Geografía y Ciencias Sociales
+3. Subtítulo en Pantalla (48 pt): Exploración inicial en Historia, Geografía y Ciencias Sociales
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Consecuencias históricas y síntesis de la Revolución Neolítica (Historia, Geografía y Ciencias Sociales). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Coordenadas historicas: Linea temporal y contexto de Consecuencias históricas y síntesis de la Revolución Neolítica
 6. Notas al Orador (Locución Google Vids): "Comienza una nueva expedición de aprendizaje en Historia, Geografía y Ciencias Sociales. Nuestros dos exploradores analizan el desafío de Consecuencias históricas y síntesis de la Revolución Neolítica para descubrir sus secretos."
@@ -1374,7 +1386,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 2: Presentación del Escenario (9 seg aprox) ---
 1. Propósito Didáctico: Presentación del Escenario
 2. Título en Pantalla (64 pt): Punto de partida
-3. Subtítulo en Pantalla (36 pt): Aparición de la propiedad, jerarquías y proyección al presente
+3. Subtítulo en Pantalla (48 pt): Aparición de la propiedad, jerarquías y proyección al presente
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Aparición de la propiedad, jerarquías y proyección al presente. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Aparición de la propiedad, jerarquías y proyección al presente
 6. Notas al Orador (Locución Google Vids): "Al observar los datos sobre Aparición de la propiedad, jerarquías y proyección al presente, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor."
@@ -1382,7 +1394,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 seg aprox) ---
 1. Propósito Didáctico: Aparición del Conflicto / Misterio
 2. Título en Pantalla (64 pt): El enigma disciplinar
-3. Subtítulo en Pantalla (36 pt): Desafío en Consecuencias históricas y síntesis de la Revolución Neolítica
+3. Subtítulo en Pantalla (48 pt): Desafío en Consecuencias históricas y síntesis de la Revolución Neolítica
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Aparición de la propiedad, jerarquías y proyección al presente
 6. Notas al Orador (Locución Google Vids): "Surge un reto concreto sobre Consecuencias históricas y síntesis de la Revolución Neolítica: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso."
@@ -1390,7 +1402,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 4: Exploración de Pistas (9 seg aprox) ---
 1. Propósito Didáctico: Exploración de Pistas
 2. Título en Pantalla (64 pt): Análisis de evidencias
-3. Subtítulo en Pantalla (36 pt): Aparición de la propiedad, jerarquías y proyección al presente
+3. Subtítulo en Pantalla (48 pt): Aparición de la propiedad, jerarquías y proyección al presente
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Aparición de la propiedad, jerarquías y proyección al presente
 6. Notas al Orador (Locución Google Vids): "Ambos comparan las pistas disponibles sobre Aparición de la propiedad, jerarquías y proyección al presente. Cada dato confirma cómo interactúan los elementos clave de la situación."
@@ -1398,7 +1410,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 5: El Momento Crítico (9 seg aprox) ---
 1. Propósito Didáctico: El Momento Crítico
 2. Título en Pantalla (64 pt): Criterio de decisión
-3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso
+3. Subtítulo en Pantalla (48 pt): Aplicar el método riguroso
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Aparición de la propiedad, jerarquías y proyección al presente
 6. Notas al Orador (Locución Google Vids): "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Consecuencias históricas y síntesis de la Revolución Neolítica con total precisión metodológica."
@@ -1406,7 +1418,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 6: La Antesala de la Pregunta (9 seg aprox) ---
 1. Propósito Didáctico: La Antesala de la Pregunta
 2. Título en Pantalla (64 pt): El dilema central
-3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Consecuencias históricas y síntesis de la Revolución Neolítica?
+3. Subtítulo en Pantalla (48 pt): ¿Cómo resolver Consecuencias históricas y síntesis de la Revolución Neolítica?
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Dilema historico: Fuentes contrastadas frente al acontecimiento
 6. Notas al Orador (Locución Google Vids): "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje."
@@ -1414,7 +1426,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 7: La Pregunta Detonante (9 seg aprox) ---
 1. Propósito Didáctico: La Pregunta Detonante
 2. Título en Pantalla (64 pt): Pregunta detonante
-3. Subtítulo en Pantalla (36 pt): Regla y método de Consecuencias históricas y síntesis de la Revolución Neolítica
+3. Subtítulo en Pantalla (48 pt): Regla y método de Consecuencias históricas y síntesis de la Revolución Neolítica
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta detonante: ¿Que consecuencias trajo Consecuencias históricas y síntesis de la Revolución Neolítica?
 6. Notas al Orador (Locución Google Vids): "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!"
@@ -1433,7 +1445,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
 1. Propósito Didáctico: Objetivo de la Lección
 2. Título en Pantalla (64 pt): Objetivo de la lección
-3. Subtítulo en Pantalla (36 pt): Dominar Consecuencias históricas y síntesis de la Revolución Neolítica: Aparición de la propiedad, jerarquías y proyección al presente
+3. Subtítulo en Pantalla (48 pt): Dominar Consecuencias históricas y síntesis de la Revolución Neolítica: Aparición de la propiedad, jerarquías y proyección al presente
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Aparición de la propiedad, jerarquías y proyección al presente. High clarity, negative space for text. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 2 · Consecuencias históricas y síntesis de la Revolución Neolítica
 6. Notas al Orador (Locución Google Vids): "El objetivo de hoy es aprender a aparición de la propiedad, jerarquías y proyección al presente, aplicando el método disciplinar paso a paso con total rigor y claridad."
@@ -1441,7 +1453,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 2: Definición del Concepto Central (12 seg aprox) ---
 1. Propósito Didáctico: Definición del Concepto Central
 2. Título en Pantalla (64 pt): Concepto fundamental
-3. Subtítulo en Pantalla (36 pt): Aparición de la propiedad, jerarquías y proyección al presente
+3. Subtítulo en Pantalla (48 pt): Aparición de la propiedad, jerarquías y proyección al presente
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Escenario historico y fuentes primarias de Aparición de la propiedad, jerarquías y proyección al presente
 6. Notas al Orador (Locución Google Vids): "Para comprender Consecuencias históricas y síntesis de la Revolución Neolítica, establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación."
@@ -1449,7 +1461,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 3: Demostración Modelada (12 seg aprox) ---
 1. Propósito Didáctico: Demostración Modelada
 2. Título en Pantalla (64 pt): Modelamiento paso a paso
-3. Subtítulo en Pantalla (36 pt): Procedimiento de Consecuencias históricas y síntesis de la Revolución Neolítica
+3. Subtítulo en Pantalla (48 pt): Procedimiento de Consecuencias históricas y síntesis de la Revolución Neolítica
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama multicausal: Factores economicos, sociales y culturales
 6. Notas al Orador (Locución Google Vids): "Observa cómo se aplica el procedimiento en este caso guiado: cada transformación responde a una justificación disciplinar explícita y visible."
@@ -1457,7 +1469,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 4: Prevención del Error Frecuente (13 seg aprox) ---
 1. Propósito Didáctico: Prevención del Error Frecuente
 2. Título en Pantalla (64 pt): Atención: Error habitual
-3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar
+3. Subtítulo en Pantalla (48 pt): Confusión común que debemos evitar
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Contraste temporal: cambios y continuidades historicas
 6. Notas al Orador (Locución Google Vids): "Un error frecuente ocurre al descuidar el orden o saltarse un paso de la convención establecida. Siempre comprobamos cada dato antes de continuar."
@@ -1465,7 +1477,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 5: Comprobación del Resultado (12 seg aprox) ---
 1. Propósito Didáctico: Comprobación del Resultado
 2. Título en Pantalla (64 pt): Validación del resultado
-3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente
+3. Subtítulo en Pantalla (48 pt): Comprobar que la respuesta es consistente
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Interpretacion historica justificada a partir de evidencias
 6. Notas al Orador (Locución Google Vids): "Al contrastar el resultado con la situación inicial, confirmamos que la solución es consistente, rigurosa y responde plenamente a la pregunta."
@@ -1473,7 +1485,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 seg aprox) ---
 1. Propósito Didáctico: Estrategia Mnemotécnica
 2. Título en Pantalla (64 pt): Estrategia de pensamiento
-3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar
+3. Subtítulo en Pantalla (48 pt): 1. Identificar · 2. Aplicar · 3. Comprobar
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Estrategia de analisis historico: Contexto, causas y consecuencias
 6. Notas al Orador (Locución Google Vids): "Recuerda siempre la estrategia en tres pasos: identificar la información clave, aplicar la regla en orden y comprobar el resultado final."
@@ -1481,7 +1493,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 seg aprox) ---
 1. Propósito Didáctico: Síntesis y Regla de Oro
 2. Título en Pantalla (64 pt): Regla de Oro: Consecuencias históricas y síntesis de la Revolución Neolítica
-3. Subtítulo en Pantalla (36 pt): Método disciplinar validado
+3. Subtítulo en Pantalla (48 pt): Método disciplinar validado
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Infografía de síntesis: Regla historica de Consecuencias históricas y síntesis de la Revolución Neolítica
 6. Notas al Orador (Locución Google Vids): "Ahora que dominas la regla fundamental y el procedimiento de Consecuencias históricas y síntesis de la Revolución Neolítica, ¡vamos a demostrarlo en las actividades interactivas de la plataforma!"
@@ -1649,6 +1661,9 @@ Refuerzo 1 (Recuperación Histórica: Consecuencias históricas y síntesis de l
 --------------------------------------------------------------------------------
 [PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
 --------------------------------------------------------------------------------
+• Pregunta de Sintesis: "En tus propias palabras, ¿qué lección o reflexión para el presente nos deja el estudio de Comercio en Consecuencias históricas y síntesis de la Revolución Neolítica?"
+• Reflexion Metacognitiva: "¿Qué estrategia te ayudó más a comprender la época estudiada: analizar el mapa o ponerte en el lugar de los protagonistas?"
+• Celebracion del Logro: "¡Felicitaciones! Has completado todas las investigaciones del Objetivo de Aprendizaje OA 2. ¡Excelente labor histórica!"
 • Felicitacion Final: "¡Felicitaciones! Hoy completaste con éxito la clase "Consecuencias históricas y síntesis de la Revolución Neolítica". Has demostrado constancia y rigor en tu aprendizaje."
 • Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Historia, Geografía y Ciencias Sociales."
 

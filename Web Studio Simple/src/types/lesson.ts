@@ -198,6 +198,11 @@ export interface LessonData {
     congratulations?: string;
     nextClassPreview?: string;
   };
+  paso8_cierre?: {
+    preguntaSintesis: string;
+    metacognicion: string;
+    celebracion: string;
+  };
 }
 
 export interface LessonSessionState {

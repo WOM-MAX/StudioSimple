@@ -176,7 +176,7 @@ export const CIENCIAS_7B_OA01_CLASE04: LessonData = {
         "slideNumber": 5,
         "tituloMomento": "Frente a la Presión de Grupo",
         "didacticPurpose": "Frente a la Presión de Grupo",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, holding a protective shield emblem safeguarding personal space and digital privacy against peer pressure, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, holding an illustrated protective symbolic boundary safeguarding personal space and digital privacy against peer pressure, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Autonomía frente a la Presión",
         "overlayTitle": "Resistir la presión social",
         "overlaySubtitle": "Priorizar el bienestar sobre la aprobación ajena",
@@ -204,7 +204,7 @@ export const CIENCIAS_7B_OA01_CLASE04: LessonData = {
         "slideNumber": 7,
         "tituloMomento": "La Pregunta Detonante",
         "didacticPurpose": "La Pregunta Detonante",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, holding open science notebooks, ready to evaluate ethical consent scenarios beside a StudioSimple badge, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, holding open science notebooks, ready to evaluate ethical consent scenarios in an organized study room, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "StudioSimple · Ciencias Naturales",
         "overlayTitle": "El desafío ético",
         "overlaySubtitle": "¿Cómo aplicamos el consentimiento día a día?",
@@ -334,7 +334,7 @@ export const CIENCIAS_7B_OA01_CLASE04: LessonData = {
         "slideNumber": 7,
         "tituloMomento": "Síntesis y Regla de Oro",
         "didacticPurpose": "Síntesis y Regla de Oro",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, presenting a protective shield with four gold stars representing the criteria of consent beside a StudioSimple emblem, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, presenting a protective shield with four gold stars representing the criteria of consent in a bright school setting, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Regla de Oro: Consentimiento y Autocuidado",
         "overlayTitle": "Regla de Oro del consentimiento",
         "overlaySubtitle": "Mi cuerpo, mis límites | Tu cuerpo, tus límites",
@@ -462,5 +462,10 @@ export const CIENCIAS_7B_OA01_CLASE04: LessonData = {
     "type": "dimensions",
     "title": "Responsabilidad, Autocuidado y Consentimiento",
     "description": "Organizador gráfico de los 4 criterios del consentimiento y la toma de decisiones informadas."
+  },
+  "paso8_cierre": {
+    "preguntaSintesis": "¿Cuáles son los cuatro criterios innegociables del consentimiento informado y por qué revocarlo en cualquier momento es un derecho fundamental?",
+    "metacognicion": "¿Qué estrategia aprendida en esta lección te entrega mayor seguridad para manifestar tus límites personales de forma asertiva ante la presión del entorno?",
+    "celebracion": "¡Felicitaciones! Has completado con éxito la lección sobre responsabilidad, autocuidado y consentimiento informado."
   }
 };

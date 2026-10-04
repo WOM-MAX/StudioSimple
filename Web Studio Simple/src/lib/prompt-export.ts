@@ -6,6 +6,8 @@ import { LessonData as PlayerLessonData, SlidePrompt } from '../types/lesson';
  */
 export function buildLessonPromptText(lesson: PlayerLessonData): string {
   const meta = lesson.metadata;
+  const isCiencias = (meta.subject || '').toLowerCase().includes('cien');
+  const subPt = isCiencias ? 48 : 36;
   let out = `================================================================================\n`;
   out += `STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA\n`;
   out += `================================================================================\n\n`;
@@ -25,8 +27,8 @@ export function buildLessonPromptText(lesson: PlayerLessonData): string {
   out += `5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):\n`;
   out += `   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).\n`;
   out += `   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).\n`;
-  out += `   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.\n`;
-  out += `6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.\n`;
+  out += `   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (${subPt} pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.\n`;
+  out += `6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (${subPt} pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.\n`;
   out += `7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.\n`;
   out += `8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.\n\n`;
 
@@ -50,7 +52,7 @@ export function buildLessonPromptText(lesson: PlayerLessonData): string {
       out += `--- DIAPOSITIVA ${s.slideNumber || idx + 1}: ${s.tituloMomento || ''} (${s.duracionSeg || 10} seg aprox) ---\n`;
       out += `1. Propósito Didáctico: ${s.tituloMomento || ''}\n`;
       out += `2. Título en Pantalla (64 pt): ${s.overlayTitle || s.overlayText || ''}\n`;
-      out += `3. Subtítulo en Pantalla (36 pt): ${s.overlaySubtitle || ''}\n`;
+      out += `3. Subtítulo en Pantalla (${subPt} pt): ${s.overlaySubtitle || ''}\n`;
       out += `4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): ${s.visualPrompt || ''}\n`;
       out += `5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): ${s.vectorialOverlayPptx || s.mathOverlayPptx || s.overlayText || ''}\n`;
       out += `6. Notas al Orador (Locución Google Vids): "${s.speakerNotes || ''}"\n`;
@@ -89,7 +91,7 @@ export function buildLessonPromptText(lesson: PlayerLessonData): string {
       out += `--- DIAPOSITIVA ${s.slideNumber || idx + 1}: ${s.tituloMomento || ''} (${s.duracionSeg || 10} seg aprox) ---\n`;
       out += `1. Propósito Didáctico: ${s.tituloMomento || ''}\n`;
       out += `2. Título en Pantalla (64 pt): ${s.overlayTitle || s.overlayText || ''}\n`;
-      out += `3. Subtítulo en Pantalla (36 pt): ${s.overlaySubtitle || ''}\n`;
+      out += `3. Subtítulo en Pantalla (${subPt} pt): ${s.overlaySubtitle || ''}\n`;
       out += `4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): ${s.visualPrompt || ''}\n`;
       out += `5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): ${s.vectorialOverlayPptx || s.mathOverlayPptx || s.overlayText || ''}\n`;
       out += `6. Notas al Orador (Locución Google Vids): "${s.speakerNotes || ''}"\n`;
@@ -293,6 +295,11 @@ export function buildLessonPromptText(lesson: PlayerLessonData): string {
   out += `--------------------------------------------------------------------------------\n`;
   out += `[PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]\n`;
   out += `--------------------------------------------------------------------------------\n`;
+  if (lesson.paso8_cierre) {
+    out += `• Pregunta de Sintesis: "${lesson.paso8_cierre.preguntaSintesis}"\n`;
+    out += `• Reflexion Metacognitiva: "${lesson.paso8_cierre.metacognicion}"\n`;
+    out += `• Celebracion del Logro: "${lesson.paso8_cierre.celebracion}"\n`;
+  }
   out += `• Felicitacion Final: "${lesson.closure?.congratulations || ''}"\n`;
   out += `• Vista Previa Proxima Clase: "${lesson.closure?.nextClassPreview || ''}"\n`;
 

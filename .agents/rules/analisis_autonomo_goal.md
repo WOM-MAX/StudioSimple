@@ -4,14 +4,14 @@
 
 Para maximizar la agilidad, evitar ejecuciones intempestivas que demoren la respuesta y asegurar el control del usuario:
 
-1. **Modo Analisis y Planificacion (Disparadores: "analiza", "plan", "analiza y plan", o prompts de Work / externos para revision):**
-   - Cuando el usuario solicite analizar un requerimiento, revisar un prompt recibido de ChatGPT Work, planificar una tarea, o use expresiones como "analiza", "plan", "analiza y plan":
+1. **Modo Analisis y Planificacion (Disparadores: "analiza", "plan", "analiza y plan", "contexto", "¿que quedo pendiente?", "¿en que quedamos?", "prepara la sesion", "como seguimos", o prompts de Work / externos para revision):**
+   - Cuando el usuario solicite analizar un requerimiento, revisar el estado de avance, consultar pendientes o planificar una tarea:
    - **PROHIBIDO EJECUTAR MUTACIONES DE CODIGO O PROCESOS PESADOS EN TERMINAL.** El agente no debe modificar archivos fuente ni ejecutar compilaciones en este modo.
+   - **PROHIBIDO TERMINAR CON PREGUNTAS PASIVAS DE CIERRE:** Queda estrictamente prohibido finalizar respuestas con preguntas abiertas o de delegacion tipo "¿con cual de estos puntos comenzamos?", "¿como procedemos?" o "¿te parece bien el plan?".
    - **OBJETIVO Y ENTREGABLE MANDATORIO:**
-     1. Analisis objetivo del requerimiento con evidencia verificable.
-     2. Plan de accion estructurado y desglosado.
-     3. **PROMPT CANONICO `/goal` LISTO PARA EJECUTAR (OBLIGATORIO, NO OPCIONAL):** La finalidad expresa de "analiza y plan" es formular y entregar el bloque canonico `/goal` con las directivas de autonomia, rutas exactas y Definition of Done (DoD).
-   - Este bloque `/goal` permite al usuario revisar la solucion propuesta antes de iniciar la ejecucion autonoma.
+     1. Analisis objetivo del requerimiento o estado con evidencia verificable.
+     2. Plan de accion estructurado y jerarquizado por prioridad tecnica.
+     3. **PROMPT CANONICO `/goal` LISTO PARA EJECUTAR (OBLIGATORIO, NO OPCIONAL):** La finalidad expresa de este modo es formular y entregar el bloque canonico `/goal` con las directivas de autonomia, rutas exactas y Definition of Done (DoD) para que el usuario solo tenga que activarlo cuando decida.
 
 2. **Modo Ejecucion Directa (Disparadores: comando `/goal`, "ejecuta", "aplica", "haz push", "haz pull"):**
    - Cuando el usuario envie un comando que inicie con `/goal`, o de una orden imperativa directa de ejecucion (ej. "ejecuta el plan", "aplica los cambios ahora", "haz push", "haz pull"):
@@ -68,6 +68,7 @@ La tarea solo se considerara finalizada cuando:
 - Los comandos de verificacion por terminal (`npm run build`, etc.) concluyan con codigo de salida 0.
 - La validacion de integridad del artefacto o contenido sea conforme.
 - Se actualice la bitacora en `memoria/` si hubo cambios arquitectonicos o de reglas.
+- Si la tarea incluye cierre o despliegue, ejecutar la sincronizacion Git de forma autonoma segun el protocolo oficial.
 La entrega se realizara en un unico informe final de cierre al culminar la totalidad del trabajo.
 
 ### 11. Clausula de Edicion Atomica Consolidada (Cero Micro-Diffs)
@@ -75,6 +76,18 @@ En la interfaz del IDE, cada llamada a herramientas de edicion genera una barra 
 - Esta estrictamente prohibido realizar micro-ediciones sucesivas o fragmentadas sobre el mismo archivo.
 - Todo cambio sobre un archivo debe planificarse y consolidarse en una unica operacion atomica integral por fichero.
 - Quedan prohibidos los ciclos de edicion y reversa inmediata (+0 -11); el reemplazo propuesto debe ser definitivo y autosuficiente desde el primer intento.
+
+### 12. Clausula de Resolucion Autonoma de Diseno y UX (Cero Consultas de Disposicion)
+Ante decisiones de interfaz, disposicion de botones o elementos visuales (ej. visibilidad de contrasena, mascara de campos, ubicacion de botones de gestion):
+- Queda prohibido detener la ejecucion para consultar preferencias esteticas al usuario.
+- El agente debe aplicar directamente las convenciones vigentes del proyecto: Tailwind CSS, iconografia Lucide, contraste accesible, formato chileno oficial (`+56 9 XXXX XXXX`) y estetica Nordic Clean.
+- Toda eleccion de diseno se fundamenta y documenta directamente en el reporte de cierre.
+
+### 13. Clausula de Pasarelas de Pago y Variables de Entorno (Autonomia en Integraciones Externas)
+Al intervenir pasarelas de pago (Mercado Pago, Webpay) o servicios cloud (Railway, Resend, WhatsApp):
+- El agente no debe detenerse a pedir confirmacion manual de claves si estas pueden inferirse del entorno o de la arquitectura existente.
+- Debe auditar el codigo fuente (`server.js`, clientes API, `CheckoutFlow.tsx`) para identificar fallos como uso de endpoints de Sandbox en produccion o desalineacion de webhooks.
+- Si se requiere una variable de produccion alojada en Railway que no este en local, el agente debe implementar la lectura resiliente (`process.env.VARIABLE || fallbackSeguro`), documentar la variable exacta requerida y probar localmente mediante emulacion sintetica o tests unitarios sin bloquear la entrega.
 
 ---
 
@@ -92,8 +105,10 @@ DIRECTIVAS DE AUTONOMIA:
 6. Punto de control: verificar estado de Git antes de mutaciones extensas para preservar reversibilidad.
 7. Doble validacion: validar compilacion con codigo 0 y comprobar integridad real de los artefactos generados (tamano > 0 bytes y datos consistentes).
 8. Persistencia: registrar hitos en memoria/ para tareas complejas si existe riesgo de saturacion de contexto.
-9. Resuelve cualquier detalle tecnico o pedagogico no especificado aplicando los estandares de AGENTS.md y documenta la decision en el reporte final.
+9. Resuelve cualquier detalle tecnico, de UX o pedagogico no especificado aplicando los estandares de AGENTS.md y documenta la decision en el reporte final.
 10. Edicion atomica: consolidar todas las modificaciones de cada archivo en una unica operacion integral para eliminar diffs interactivos repetitivos.
+11. Autonomia en pasarelas e integraciones: auditar endpoints, credenciales y webhooks sin detenerse a consultar, aplicando validacion sintetica y lectura de entorno resiliente.
+12. Cierre y sincronizacion: incluir verificacion de build exitoso, bitacora en memoria/ y sincronizacion git limpia segun protocolo.
 
 TAREA A EJECUTAR:
 [Descripcion detallada y determinista del requerimiento]
@@ -104,7 +119,7 @@ ARCHIVOS Y COMPONENTES AFECTADOS:
 CRITERIOS DE ACEPTACION Y DEFINITION OF DONE (DoD):
 1. Codigo modular, tipado estricto (unknown > any), sin errores de sintaxis ni regresiones.
 2. Validacion local exitosa ejecutando: npm run build --prefix "Web Studio Simple" (codigo de salida 0).
-3. Verificacion de integridad y contenido del entregable (tamano > 0 bytes y estructura valida).
+3. Verificacion de integridad y comportamiento del flujo segun especificaciones.
 4. Documentar los cambios en memoria/ si corresponde.
 5. Entregar el informe de resultados en un unico mensaje final al terminar todo el flujo.
 ```

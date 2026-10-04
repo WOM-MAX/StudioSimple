@@ -17,6 +17,8 @@ import { adaptPlayerLessonToGenerator } from "./lesson-adapter";
 
 export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
   const { oa, totalLessons, lessons } = pkg;
+  const isCiencias = (oa.asignatura || '').toLowerCase().includes('cien');
+  const subPt = isCiencias ? 48 : 36;
 
   const doc = new Document({
     sections: [
@@ -406,7 +408,7 @@ export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
                   color: "0F766E"
                 }),
                 new TextRun({
-                  text: "Título en Pantalla (64 pt). Subtítulo en Pantalla (36 pt). Texto de un solo color brillante (ej. Blanco Brillante #FFFFFF), elegido para contrastar con el fondo de cada imagen, plano, sin sombras, contornos, resplandores ni recuadros flotantes o fondos detrás del texto. Protagonistas en el 100% de las escenas: la joven con trenzas y el joven con chaqueta cerceta interactuando activamente en cada escena.",
+                  text: `Título en Pantalla (64 pt). Subtítulo en Pantalla (${subPt} pt). Texto de un solo color brillante (ej. Blanco Brillante #FFFFFF), elegido para contrastar con el fondo de cada imagen, plano, sin sombras, contornos, resplandores ni recuadros flotantes o fondos detrás del texto. Protagonistas en el 100% de las escenas: la joven con trenzas y el joven con chaqueta cerceta interactuando activamente en cada escena.`,
                   size: 19,
                   color: "334155"
                 })
@@ -434,7 +436,7 @@ export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
                 new TableRow({
                   children: [
                     createHeaderCell("Diapositiva y Propósito", 16),
-                    createHeaderCell("Textos en Pantalla (64 pt / 36 pt)", 28),
+                    createHeaderCell(`Textos en Pantalla (64 pt / ${subPt} pt)`, 28),
                     createHeaderCell("Prompt Visual IA y Capa Vectorial PPTX", 32),
                     createHeaderCell("Notas al Orador (Google Vids)", 24)
                   ]
@@ -473,7 +475,7 @@ export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
                         new Paragraph({
                           spacing: { after: 20 },
                           children: [
-                            new TextRun({ text: "• Subtítulo (36 pt): ", bold: true, color: "0F766E", size: 18 }),
+                            new TextRun({ text: `• Subtítulo (${subPt} pt): `, bold: true, color: "0F766E", size: 18 }),
                             new TextRun({ text: s.overlaySubtitle || '', size: 18 })
                           ]
                         })
@@ -627,7 +629,7 @@ export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
                   color: "0F766E"
                 }),
                 new TextRun({
-                  text: "Título en Pantalla (64 pt). Subtítulo en Pantalla (36 pt). Texto de un solo color brillante (ej. Blanco Brillante #FFFFFF), elegido para contrastar con el fondo de cada imagen, plano, sin sombras, contornos, resplandores ni recuadros flotantes o fondos detrás del texto. Protagonistas en el 100% de las escenas: la joven con trenzas y el joven con chaqueta cerceta interactuando activamente en cada escena.",
+                  text: `Título en Pantalla (64 pt). Subtítulo en Pantalla (${subPt} pt). Texto de un solo color brillante (ej. Blanco Brillante #FFFFFF), elegido para contrastar con el fondo de cada imagen, plano, sin sombras, contornos, resplandores ni recuadros flotantes o fondos detrás del texto. Protagonistas en el 100% de las escenas: la joven con trenzas y el joven con chaqueta cerceta interactuando activamente en cada escena.`,
                   size: 19,
                   color: "334155"
                 })
@@ -655,7 +657,7 @@ export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
                 new TableRow({
                   children: [
                     createHeaderCell("Diapositiva y Propósito", 16),
-                    createHeaderCell("Textos en Pantalla (64 pt / 36 pt)", 28),
+                    createHeaderCell(`Textos en Pantalla (64 pt / ${subPt} pt)`, 28),
                     createHeaderCell("Prompt Visual IA y Capa Vectorial PPTX", 32),
                     createHeaderCell("Notas al Orador (Google Vids)", 24)
                   ]
@@ -694,7 +696,7 @@ export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
                         new Paragraph({
                           spacing: { after: 20 },
                           children: [
-                            new TextRun({ text: "• Subtítulo (36 pt): ", bold: true, color: "0F766E", size: 18 }),
+                            new TextRun({ text: `• Subtítulo (${subPt} pt): `, bold: true, color: "0F766E", size: 18 }),
                             new TextRun({ text: s.overlaySubtitle || '', size: 18 })
                           ]
                         })

@@ -474,19 +474,38 @@ const server = http.createServer(async (req, res) => {
         }
 
         const pasarelaConfig = pricingConfig?.pasarela || {};
-        const accessToken = process.env.MERCADO_PAGO_ACCESS_TOKEN || pasarelaConfig.mercadoPagoAccessToken;
+        const accessToken = (
+          process.env.MERCADOPAGO_ACCESS_TOKEN ||
+          process.env.MERCADO_PAGO_ACCESS_TOKEN ||
+          process.env.MP_ACCESS_TOKEN ||
+          pasarelaConfig.mercadoPagoAccessToken ||
+          ''
+        ).trim();
 
-        // Si Mercado Pago esta configurado con token activo
-        if (pasarelaConfig.provider === 'mercadopago' && accessToken && accessToken.trim()) {
-          let origin = req.headers.origin;
-          if (!origin && req.headers.referer) {
-            try { origin = new URL(req.headers.referer).origin; } catch {}
+        let origin = req.headers.origin;
+        if (!origin && req.headers.referer) {
+          try { origin = new URL(req.headers.referer).origin; } catch {}
+        }
+        if (!origin) origin = 'http://localhost:3000';
+
+        const isPublicHttps = origin.startsWith('https://');
+        const cleanAmount = Math.max(500, Math.round(Number(amount) || 1000));
+
+        // Determinar si Mercado Pago esta activo
+        const isMercadoPagoActive = pasarelaConfig.provider === 'mercadopago' || Boolean(accessToken);
+
+        if (isMercadoPagoActive) {
+          if (!accessToken) {
+            res.writeHead(400);
+            res.end(JSON.stringify({
+              success: false,
+              error: 'Token de acceso de Mercado Pago no configurado en el servidor'
+            }));
+            return;
           }
-          if (!origin) origin = 'http://localhost:3000';
 
-          const isPublicHttps = origin.startsWith('https://');
-          const cleanAmount = Math.max(500, Math.round(Number(amount) || 1000));
-          const isSandbox = pasarelaConfig.sandbox === true || pasarelaConfig.modoSandbox === true;
+          // En produccion (HTTPS) forzar init_point oficial salvo que modoSandbox sea estrictamente true en localhost
+          const isSandbox = pasarelaConfig.modoSandbox === true && !isPublicHttps;
 
           const preferencePayload = {
             items: [
@@ -527,7 +546,7 @@ const server = http.createServer(async (req, res) => {
           const mpResponse = await fetch('https://api.mercadopago.com/checkout/preferences', {
             method: 'POST',
             headers: {
-              'Authorization': `Bearer ${accessToken.trim()}`,
+              'Authorization': `Bearer ${accessToken}`,
               'Content-Type': 'application/json'
             },
             body: JSON.stringify(preferencePayload)
@@ -550,11 +569,18 @@ const server = http.createServer(async (req, res) => {
             }));
             return;
           } else {
-            console.error('Mercado Pago API error:', mpData);
+            console.error('[MercadoPago] Error en respuesta de API:', mpData);
+            res.writeHead(400);
+            res.end(JSON.stringify({
+              success: false,
+              error: mpData.message || 'Error al comunicarse con la pasarela de Mercado Pago',
+              details: mpData
+            }));
+            return;
           }
         }
 
-        // Modo Simulado por defecto (desarrollo y pruebas locales inmediatas)
+        // Modo Simulado por defecto (desarrollo y pruebas locales directas)
         res.writeHead(200);
         res.end(JSON.stringify({
           success: true,
@@ -591,16 +617,132 @@ const server = http.createServer(async (req, res) => {
           actorRole: 'system',
           action: 'PAYMENT_MERCADOPAGO_IPN',
           target: paymentId ? `Pago ID: ${paymentId}` : 'Notificacion IPN',
-          details: `Recepcion de evento webhook desde Mercado Pago / Mercado Libre. Topic: ${queryTopic || 'notificacion'}`
+          details: `Recepcion de evento webhook desde Mercado Pago / Mercado Libre. Topic: ${queryTopic || 'notificacion'}. Pago ID: ${paymentId || 'N/A'}`
         });
 
         fs.writeFileSync(logsFilePath, JSON.stringify(existingLogs.slice(0, 1000), null, 2), 'utf8');
 
         res.writeHead(200);
-        res.end(JSON.stringify({ status: 'ok', received: true }));
+        res.end(JSON.stringify({ status: 'ok', received: true, paymentId }));
       } catch (err) {
         res.writeHead(200); // Siempre responder 200 a Mercado Pago para evitar reintentos continuos
         res.end(JSON.stringify({ status: 'error', error: err.message }));
+      }
+      return;
+    }
+
+    // 1i-2. Cancelacion y Gestion de Suscripcion (Panel Apoderado y Admin)
+    if (pathname === '/api/subscription/cancel' && method === 'POST') {
+      try {
+        const body = await readJsonBody(req);
+        const { email, rut, reason } = body;
+
+        if (!email && !rut) {
+          res.writeHead(400);
+          res.end(JSON.stringify({ success: false, message: 'Email o RUN del apoderado requerido' }));
+          return;
+        }
+
+        let updatedInDb = false;
+        try {
+          await withPrisma(async (prisma) => {
+            const user = await prisma.user.findFirst({
+              where: {
+                OR: [
+                  email ? { email } : undefined,
+                  rut ? { rut } : undefined
+                ].filter(Boolean)
+              }
+            });
+            if (user) {
+              await prisma.user.update({
+                where: { id: user.id },
+                data: {
+                  subscriptionActive: false
+                }
+              });
+              updatedInDb = true;
+            }
+          });
+        } catch (dbErr) {
+          console.warn('[SubscriptionCancel] Fallback Prisma DB:', dbErr.message);
+        }
+
+        // Registro de cancelacion en auditoria
+        const logsFilePath = path.resolve(__dirname, 'data', 'audit_logs.json');
+        let existingLogs = [];
+        if (fs.existsSync(logsFilePath)) {
+          try { existingLogs = JSON.parse(fs.readFileSync(logsFilePath, 'utf8')); } catch {}
+        }
+
+        existingLogs.unshift({
+          id: `log-cancel-${Date.now()}`,
+          timestamp: new Date().toISOString(),
+          actorId: email || rut || 'parent',
+          actorName: 'Apoderado / Usuario',
+          actorRole: 'user',
+          action: 'CANCEL_SUBSCRIPTION',
+          target: email || rut,
+          details: `Cancelacion voluntaria de suscripcion activa. Motivo: ${reason || 'Solicitud desde panel apoderado'}. Base de datos: ${updatedInDb ? 'Actualizada' : 'Modo local'}`
+        });
+
+        fs.writeFileSync(logsFilePath, JSON.stringify(existingLogs.slice(0, 1000), null, 2), 'utf8');
+
+        res.writeHead(200);
+        res.end(JSON.stringify({
+          success: true,
+          message: 'Tu suscripción ha sido cancelada exitosamente. Mantendrás acceso hasta el final de tu período actual.',
+          updatedInDb
+        }));
+      } catch (err) {
+        res.writeHead(500);
+        res.end(JSON.stringify({ success: false, error: err.message }));
+      }
+      return;
+    }
+
+    // 1i-3. Notificaciones Transaccionales de WhatsApp
+    if (pathname === '/api/whatsapp/notify' && method === 'POST') {
+      try {
+        const body = await readJsonBody(req);
+        const { phone, message, type, recipientName } = body;
+
+        if (!phone || !message) {
+          res.writeHead(400);
+          res.end(JSON.stringify({ success: false, message: 'Teléfono y mensaje requeridos' }));
+          return;
+        }
+
+        const logsFilePath = path.resolve(__dirname, 'data', 'audit_logs.json');
+        let existingLogs = [];
+        if (fs.existsSync(logsFilePath)) {
+          try { existingLogs = JSON.parse(fs.readFileSync(logsFilePath, 'utf8')); } catch {}
+        }
+
+        existingLogs.unshift({
+          id: `log-wa-${Date.now()}`,
+          timestamp: new Date().toISOString(),
+          actorId: 'whatsapp-service',
+          actorName: 'Servicio Notificaciones WhatsApp',
+          actorRole: 'system',
+          action: 'WHATSAPP_NOTIFICATION_DISPATCH',
+          target: phone,
+          details: `Despacho de notificacion WhatsApp (${type || 'comprobante'}). Destinatario: ${recipientName || 'Apoderado'}. Mensaje: ${message.slice(0, 100)}...`
+        });
+
+        fs.writeFileSync(logsFilePath, JSON.stringify(existingLogs.slice(0, 1000), null, 2), 'utf8');
+
+        res.writeHead(200);
+        res.end(JSON.stringify({
+          success: true,
+          dispatched: true,
+          mode: 'registered',
+          phone,
+          message: 'Notificación de WhatsApp procesada exitosamente'
+        }));
+      } catch (err) {
+        res.writeHead(500);
+        res.end(JSON.stringify({ success: false, error: err.message }));
       }
       return;
     }

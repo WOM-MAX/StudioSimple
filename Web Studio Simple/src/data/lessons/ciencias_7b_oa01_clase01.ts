@@ -13,7 +13,7 @@ export const CIENCIAS_7B_OA01_CLASE01: LessonData = {
     "nextLessonTitle": "Transformaciones físicas y emocionales en la pubertad"
   },
   "prep": {
-    "adultObjective": "Guiar al estudiante a comprender que la sexualidad humana es una vivencia integral que comprende cuatro dimensiones inseparables: biológica, afectiva, social y ética, superando la visión reducida a lo estrictamente reproductivo.",
+    "adultObjective": "Guiar al estudiante a comprender que la sexualidad humana es una vivencia integral que comprende cuatro dimensiones inseparables: biológica, afectiva, social y ética (Texto del Estudiante Ciencias Naturales 7° Básico MINEDUC, Unidad 1, Lección 1, pág. 16), superando la visión reducida a lo estrictamente reproductivo.",
     "routeToday": "Reconocer e interrelacionar las dimensiones biológica, afectiva, social y ética en situaciones reales de la vida cotidiana.",
     "mentorReminder": "Sigue el guion leyendo en voz alta únicamente los recuadros DILE y PREGÚNTALE. El contenido pedagógico y las respuestas esperadas te indican con total precisión qué debe responder el estudiante para que no tengas que estudiar previamente.",
     "reminders": [
@@ -172,7 +172,7 @@ export const CIENCIAS_7B_OA01_CLASE01: LessonData = {
         "slideNumber": 5,
         "tituloMomento": "Dimensión Ética",
         "didacticPurpose": "Dimensión Ética",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, observing a balanced scale emblem with glowing symbols of respect, personal limits, consent, and mutual dignity, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, observing a balanced scale illustration with glowing representations of respect, personal limits, consent, and mutual dignity, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Dimensión Ética: Valores y Respeto",
         "overlayTitle": "Dimensión ética",
         "overlaySubtitle": "Valores, consentimiento y dignidad",
@@ -200,7 +200,7 @@ export const CIENCIAS_7B_OA01_CLASE01: LessonData = {
         "slideNumber": 7,
         "tituloMomento": "Pregunta Detonante",
         "didacticPurpose": "Pregunta Detonante",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, smiling ready to investigate everyday cases with their science notebooks open beside a StudioSimple badge, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, smiling ready to investigate everyday cases with their science notebooks open in an organized study room, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "StudioSimple · Ciencias Naturales",
         "overlayTitle": "El desafío científico",
         "overlaySubtitle": "¿Cómo actúan las 4 dimensiones juntas?",
@@ -302,7 +302,7 @@ export const CIENCIAS_7B_OA01_CLASE01: LessonData = {
         "slideNumber": 5,
         "tituloMomento": "Análisis Ético",
         "didacticPurpose": "Análisis Ético",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, holding a glowing cyan emblem of mutual respect, personal boundaries, and dignity, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, holding a glowing cyan symbolic compass of mutual respect, personal boundaries, and dignity, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Límites Personales y Consentimiento",
         "overlayTitle": "Eje Ético: El Consentimiento",
         "overlaySubtitle": "Dignidad humana y límites inviolables",
@@ -316,21 +316,21 @@ export const CIENCIAS_7B_OA01_CLASE01: LessonData = {
         "slideNumber": 6,
         "tituloMomento": "Casos Concretos",
         "didacticPurpose": "Casos Concretos",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, reviewing an illustrated daily hygiene, sleep schedule, and healthy meal chart on a study desk with clean lineart, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, reviewing an illustrated daily hygiene and sleep schedule routine on a study desk with clean lineart, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Caso Modelado: Cuidado e Higiene",
         "overlayTitle": "Caso Modelado: Higiene y Salud",
         "overlaySubtitle": "Identificar la dimensión en una decisión real",
         "vectorialOverlayPptx": "Desglose del caso: Hábitos de higiene y descanso -> Cuidado del cuerpo -> Dimensión Biológica",
         "mathOverlayPptx": "Desglose del caso: Hábitos de higiene y descanso -> Cuidado del cuerpo -> Dimensión Biológica",
-        "speakerNotes": "Analicemos un caso concreto: mantener hábitos de higiene diaria, descanso de ocho horas y alimentación sana para cuidar el cuerpo durante el crecimiento, ¿a qué dimensión corresponde? Corresponde a la dimensión biológica, porque beneficia directamente la salud, anatomía y bienestar del organismo.",
-        "palabrasAprox": 42,
-        "duracionSeg": 19
+        "speakerNotes": "Analicemos un caso concreto: mantener hábitos de higiene diaria, ropa limpia y dormir ocho horas para cuidar el cuerpo durante el crecimiento, ¿a qué dimensión corresponde? Corresponde a la dimensión biológica, porque beneficia directamente la salud, anatomía y bienestar del organismo.",
+        "palabrasAprox": 40,
+        "duracionSeg": 18
       },
       {
         "slideNumber": 7,
         "tituloMomento": "Síntesis y Regla de Oro",
         "didacticPurpose": "Síntesis y Regla de Oro",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, presenting a prominent balance diagram with all four dimensions working in dynamic equilibrium beside a StudioSimple emblem, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, presenting a prominent balance diagram with all four dimensions working in dynamic equilibrium in a bright modern science laboratory, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Regla de Oro: La Sexualidad es Integral",
         "overlayTitle": "Regla de Oro de la sexualidad",
         "overlaySubtitle": "Biológica + Afectiva + Social + Ética = Salud Integral",
@@ -458,5 +458,10 @@ export const CIENCIAS_7B_OA01_CLASE01: LessonData = {
     "type": "dimensions",
     "title": "Las 4 Dimensiones de la Sexualidad Humana",
     "description": "Organizador gráfico del modelo integral de desarrollo personal."
+  },
+  "paso8_cierre": {
+    "preguntaSintesis": "¿Por qué decimos que la sexualidad humana involucra cuatro dimensiones inseparables y no solo los cambios biológicos del cuerpo?",
+    "metacognicion": "¿Qué dimensión de las cuatro te resultó más reveladora o te ayudó a comprender mejor los cambios que experimentas en esta etapa?",
+    "celebracion": "¡Felicitaciones! Has completado con éxito la primera clase sobre las 4 dimensiones de la sexualidad humana."
   }
 };

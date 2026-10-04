@@ -12,7 +12,7 @@ export function buildClase05() {
     "nextLessonTitle": "Síntesis Integral y Evaluación Tipo Examen Libre"
   },
   "prep": {
-    "adultObjective": "Guiar al estudiante a contrastar mitos y estereotipos sobre la pubertad y la afectividad con la evidencia científica, fomentando la empatía, la aceptación de la diversidad de ritmos biológicos y la convivencia libre de discriminación.",
+    "adultObjective": "Guiar al estudiante a contrastar mitos y estereotipos sobre la pubertad y la afectividad con la evidencia médica, comprendiendo que el estirón puberal de estatura ocurre normalmente entre los 10 y 16 años según los estadios de maduración de Tanner (1962) y curvas MINEDUC/OMS, y que cada cuerpo sigue su propio ritmo genético sin constituir una anomalía.",
     "routeToday": "Analizar falsas creencias sobre el cuerpo y los roles de género, comprender que cada organismo madura a su propio ritmo genético y promover una convivencia respetuosa y solidaria.",
     "mentorReminder": "Sigue el guion leyendo en voz alta únicamente los recuadros DILE y PREGÚNTALE. El contenido pedagógico y las respuestas esperadas te indican con total precisión qué debe responder el estudiante.",
     "reminders": [
@@ -203,7 +203,7 @@ export function buildClase05() {
         "slideNumber": 7,
         "tituloMomento": "Cierre y Preparación para el Rigor",
         "didacticPurpose": "Cierre y Preparación para el Rigor",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, holding open science notebooks, ready to debunk myths and analyze evidence beside a StudioSimple badge, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, holding open science notebooks, ready to debunk myths and analyze evidence in an organized study room, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Ciencia y Convivencia",
         "overlayTitle": "Hacia la comprensión científica",
         "overlaySubtitle": "Profundicemos en los fundamentos biológicos",
@@ -325,23 +325,23 @@ export function buildClase05() {
         "overlaySubtitle": "Descartar anomalías mediante evidencia científica",
         "vectorialOverlayPptx": "Desglose del caso: Inseguridad por diferencia de estatura a los 13 años -> Contraste con curvas OMS -> Confirmación de desarrollo normal",
         "mathOverlayPptx": "Desglose del caso: Inseguridad por diferencia de estatura a los 13 años -> Contraste con curvas OMS -> Confirmación de desarrollo normal",
-        "speakerNotes": "Analicemos un caso concreto: un estudiante de 13 años se angustia creyendo erróneamente que tiene una anomalía porque sus compañeros ya crecieron. La evidencia médica demuestra que el estirón puberal responde a relojes genéticos individuales que se manifiestan normalmente entre los 10 y 16 años.",
-        "palabrasAprox": 45,
-        "duracionSeg": 20
+        "speakerNotes": "Analicemos un caso concreto: un estudiante de 13 años se angustia creyendo erróneamente que tiene una anomalía porque sus compañeros ya crecieron. La evidencia médica demuestra que el estirón puberal responde a relojes genéticos individuales que se manifiestan normalmente entre los 10 y 16 años según los estadios de Tanner (1962) y curvas MINEDUC/OMS.",
+        "palabrasAprox": 52,
+        "duracionSeg": 23
       },
       {
         "slideNumber": 7,
         "tituloMomento": "Síntesis y Compromiso con la Convivencia",
         "didacticPurpose": "Síntesis y Compromiso con la Convivencia",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, presenting a golden emblem of scientific evidence breaking a chain of myths beside a StudioSimple badge, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, presenting an illustrated scientific evidence board dispelling common myths about puberty, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Síntesis: Ciencia, Respeto y Empatía",
         "overlayTitle": "Regla de Oro frente a los mitos",
         "overlaySubtitle": "Comprender la biología para convivir mejor",
         "vectorialOverlayPptx": "Infografía final: Conocimiento científico -> Eliminación de prejuicios -> Convivencia armónica",
         "mathOverlayPptx": "Infografía final: Conocimiento científico -> Eliminación de prejuicios -> Convivencia armónica",
-        "speakerNotes": "Recuerda la regla de oro: la ciencia desmiente prejuicios; cada cuerpo crece a su propio ritmo genético entre los 10 y 16 años. ¡Ahora pon a prueba lo aprendido resolviendo las actividades prácticas en la plataforma interactiva!",
-        "palabrasAprox": 37,
-        "duracionSeg": 17
+        "speakerNotes": "Recuerda la regla de oro: la ciencia desmiente prejuicios; cada cuerpo crece a su propio ritmo genético. ¡Ahora pon a prueba lo aprendido resolviendo las actividades prácticas en la plataforma interactiva!",
+        "palabrasAprox": 29,
+        "duracionSeg": 13
       }
     ]
   },
@@ -461,6 +461,11 @@ export function buildClase05() {
     "type": "dimensions",
     "title": "Mitos vs Realidad Científica",
     "description": "Explorador interactivo de variabilidad biológica y refutación de estereotipos de género."
+  },
+  "paso8_cierre": {
+    "preguntaSintesis": "¿Por qué la evidencia médica sobre los relojes genéticos y las curvas de crecimiento de la OMS desmiente que el estirón deba ocurrir simultáneamente en todos los adolescentes?",
+    "metacognicion": "¿De qué forma analizar críticamente los mitos y estereotipos de género te permite construir un trato más justo y empático hacia tus pares?",
+    "celebracion": "¡Felicitaciones! Has completado con éxito la lección sobre mitos, estereotipos y variabilidad en la pubertad."
   }
 };
 }

@@ -4,7 +4,7 @@
 - **Asignatura:** Ciencias Naturales
 - **Curso:** 7° Básico
 - **Total de Lecciones Auditadas:** 6
-- **Fecha de Auditoria:** 2026-10-03T22:42:13.393Z
+- **Fecha de Auditoria:** 2026-10-03T23:51:51.043Z
 - **ESTADO DE CIERRE:** **APROBADO**
 
 ## 1. Metricas Generales de Inspeccion (Controles UNI-001 a UNI-012)
@@ -21,8 +21,8 @@
 | Reutilizacion Fiel en Revision Post-Video (UNI-009) | 6 / 6 clases | 100% reutilizacion |
 | Estructura Teleologica (UNI-010: Objetivo en D1, Cierre a Practica) | 6 / 6 clases | 100% conforme |
 | Integridad de 8 Pasos Obligatorios (UNI-011) | 6 / 6 clases | 100% completos |
-| Promedio Palabras Gancho (UNI-002: Locucion 60s) | ~144 palabras | Rango 120-145 palabras |
-| Promedio Palabras Explicativo (UNI-002: Locucion 90s) | ~207 palabras | Rango 180-220 palabras |
+| Promedio Palabras Gancho (UNI-002: Locucion 60s) | ~143 palabras | Rango 120-145 palabras |
+| Promedio Palabras Explicativo (UNI-002: Locucion 90s) | ~206 palabras | Rango 180-220 palabras |
 
 ## 2. Detalle de Hallazgos y Discrepancias
 

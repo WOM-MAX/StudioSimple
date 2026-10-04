@@ -115,10 +115,11 @@ El entregable y criterios de **Salida** son: Cumplimiento estricto del protocolo
 - **Persistencia de Progreso contra Compactación:** En tareas complejas de múltiples fases, volcar los hitos alcanzados en un archivo de estado local o bitácora en `memoria/` para resistir eventuales compactaciones del contexto por el sistema.
 - **Edición Atómica Consolidada (Cero Micro-Diffs):** Cada modificación de archivo genera en el IDE una barra interactiva de revisión ('1 File With Changes / Accept all'). Queda estrictamente prohibido realizar micro-ediciones iterativas o sucesivas sobre el mismo archivo. Todo cambio en un archivo debe consolidarse en una única operación atómica por fichero.
 - **Norma de Interacción, Autonomía y Ejecución Directa:**
-  1. **Modo Análisis y Planificación (Disparadores: "analiza", "plan", "analiza y plan", o prompts de Work / externos para revisión):**
-     - El objetivo MANDATORIO de "analiza y plan" es entregar el diagnóstico objetivo con evidencia, el plan de acción estructurado y el bloque canónico `/goal`.
+  1. **Modo Análisis y Planificación (Disparadores: "analiza", "plan", "analiza y plan", "contexto", "¿qué quedó pendiente?", "¿en qué quedamos?", "prepara la sesión", "cómo seguimos", o prompts de Work / externos para revisión):**
+     - El objetivo MANDATORIO de este modo es entregar el diagnóstico objetivo con evidencia, el plan de acción estructurado y el bloque canónico `/goal`.
      - **PROHIBIDO** iniciar mutaciones de código, modificar archivos o ejecutar compilaciones pesadas en este modo.
-     - El bloque `/goal` es **OBLIGATORIO** (no opcional), formulado con las 10 directivas de autonomía para que el usuario pueda revisarlo y detonarlo cuando decida.
+     - **PROHIBIDO TERMINAR CON PREGUNTAS PASIVAS DE CIERRE:** Queda estrictamente prohibido finalizar respuestas con preguntas abiertas o de delegación tipo "¿con cuál empezamos?", "¿cómo procedemos?" o "¿te parece bien el plan?".
+     - El bloque `/goal` es **OBLIGATORIO** (no opcional), formulado con las 12 directivas de autonomía para que el usuario pueda revisarlo y detonarlo cuando decida.
   2. **Modo Ejecución Directa (Disparadores: comando `/goal`, "ejecuta", "aplica", "haz push", "haz pull"):**
      - Ejecución autónoma de principio a fin, sin pausas, sin preguntas intermedias y sin emitir prompts intermediarios, concluyendo con validación (código 0) y reporte final.
   3. **Regla de Prevalencia ante Prompts Externos (Work / ChatGPT):**

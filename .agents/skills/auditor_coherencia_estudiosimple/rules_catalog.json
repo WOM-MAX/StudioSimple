@@ -162,11 +162,11 @@
     "Ciencias Naturales": [
       {
         "id": "SUB-CIE-001",
-        "name": "Enfoque de Indagacion y Multidimensionalidad",
+        "name": "Enfoque de Indagacion y Marco de 4 Dimensiones",
         "scope": "subject",
         "subject": "Ciencias Naturales",
-        "description": "Abordar los fenomenos biologicos articulando observacion, explicacion causal y dimensiones de la persona humana (biologica, afectiva, psicologica, sociocultural y etica), evitando reduccionismos puramente mecanicos.",
-        "source": "Bases Curriculares MINEDUC Ciencias Naturales 7° Básico"
+        "description": "Abordar los fenomenos biologicos articulando observacion, explicacion causal y el marco canonico de exactamente cuatro dimensiones de la sexualidad humana (biologica, afectiva, social y etica) segun el Texto del Estudiante Ciencias Naturales 7° Basico MINEDUC (Unidad 1, Leccion 1, pag. 16), evitando reduccionismos y clasificaciones contradictorias.",
+        "source": "Texto del Estudiante Ciencias Naturales 7° Básico MINEDUC (pág. 16)"
       },
       {
         "id": "SUB-CIE-002",
@@ -228,11 +228,11 @@
       },
       {
         "id": "OA-CIE-01-003",
-        "name": "Variabilidad Puberal como Hecho Biologico Normal",
+        "name": "Diferenciacion Puberal Fisiologica y Variabilidad Normal",
         "scope": "oa",
         "oaId": "110-7-CIE-OA01",
-        "description": "La leccion 5 debe fundamentar que el inicio y ritmo puberal varia normalmente entre los 10 y los 16 anos debido a relojes geneticos, desmintiendo la exigencia de un crecimiento homogeneo.",
-        "source": "Curvas de Crecimiento OMS y MINEDUC"
+        "description": "Diferenciar el inicio de la pubertad (8 a 13 anos en ninas, 9 a 14 anos en ninos) del estiron puberal (10 a 14 anos en ninas, 12 a 16 anos en ninos) con respaldo cientifico de los estadios de Tanner (1962) y MINEDUC/OMS, sin presentar promedios como absolutos.",
+        "source": "Estadios de Tanner (1962), Curvas OMS y MINEDUC Ciencias 7° Básico"
       }
     ]
   }

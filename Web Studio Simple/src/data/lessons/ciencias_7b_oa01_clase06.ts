@@ -58,7 +58,7 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
     "keyQuestions": [
       {
         "label": "Multidimensionalidad de la sexualidad",
-        "sub": "Integración de las 5 dimensiones humanas fundamentales"
+        "sub": "Integración de las 4 dimensiones humanas fundamentales"
       },
       {
         "label": "Anatomía, fisiología y pubertad",
@@ -96,12 +96,12 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
     ]
   },
   "reference": {
-    "dilePrompt": "El Examen Libre del MINEDUC para 7° Básico evalúa no solo la memoria de nombres anatómicos, sino la comprensión profunda de cómo se interconectan los cambios corporales, las emociones, los valores éticos y el autocuidado en la vida real.",
+    "dilePrompt": "La evaluación formativa de Ciencias Naturales para 7° Básico evalúa no solo la memoria de nombres anatómicos, sino la comprensión profunda de cómo se interconectan los cambios corporales, las emociones, los valores éticos y el autocuidado en la vida real.",
     "question": "Con tus propias palabras: ¿por qué un reactivo de evaluación de ciencias califica como 'incorrecta' una opción que afirme que la sexualidad es solo biología?",
-    "expectedAnswer": "Porque las Bases Curriculares y la ciencia definen la sexualidad como un fenómeno integral constituido por cinco dimensiones inseparables (biológica, afectiva, psicológica, sociocultural y ética), por lo que reducirla solo a lo físico es incompleto y erróneo.",
+    "expectedAnswer": "Porque las Bases Curriculares y el Texto del Estudiante de Ciencias Naturales 7° Básico MINEDUC (pág. 16) definen la sexualidad como un fenómeno integral constituido por cuatro dimensiones inseparables (biológica, afectiva, social y ética), por lo que reducirla solo a lo físico es incompleto y erróneo.",
     "socraticHint": "Recuerda las dimensiones estudiadas desde la primera lección: ¿qué otros aspectos acompañan al cuerpo?",
     "feedbackSuccess": "¡Perfecto! Has captado la esencia del currículum nacional: la persona humana es una totalidad indivisible.",
-    "feedbackSupport": "Recuerda: la sexualidad incluye afectos, pensamientos, normas éticas y cultura, no únicamente órganos y hormonas."
+    "feedbackSupport": "Recuerda: la sexualidad incluye afectos, vínculos sociales y normas éticas, no únicamente órganos y hormonas."
   },
   "hook": {
     "title": "La prueba de maestría: Navegar el Examen Libre",
@@ -124,11 +124,11 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
         "overlayText": "Misión 6: Síntesis y Examen Libre MINEDUC",
         "overlayTitle": "Misión 6: Maestría en Ciencias",
         "overlaySubtitle": "Consolidación de aprendizajes y evaluación formativa",
-        "vectorialOverlayPptx": "Ruta de maestría: 5 Dimensiones -> Fisiología Puberal -> Autocuidado y Consentimiento -> Descarte Metódico",
-        "mathOverlayPptx": "Ruta de maestría: 5 Dimensiones -> Fisiología Puberal -> Autocuidado y Consentimiento -> Descarte Metódico",
-        "speakerNotes": "Comienza la clase de síntesis de Ciencias Naturales para el OA 1. Hoy consolidaremos todos los aprendizajes adquiridos a lo largo de esta unidad curricular.",
-        "palabrasAprox": 25,
-        "duracionSeg": 11
+        "vectorialOverlayPptx": "Ruta de maestría: 4 Dimensiones -> Fisiología Puberal -> Autocuidado y Consentimiento -> Descarte Metódico",
+        "mathOverlayPptx": "Ruta de maestría: 4 Dimensiones -> Fisiología Puberal -> Autocuidado y Consentimiento -> Descarte Metódico",
+        "speakerNotes": "Comienza la síntesis de Ciencias del OA 1. Consolidaremos todos los aprendizajes adquiridos en esta unidad.",
+        "palabrasAprox": 16,
+        "duracionSeg": 8
       },
       {
         "slideNumber": 2,
@@ -137,10 +137,10 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
         "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, in a high-tech science examination hall, with clean multiple-choice options A, B, C, D softly illuminated in cyan, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Mapa Conceptual Integral del OA 1",
         "overlayTitle": "La visión holística del ser humano",
-        "overlaySubtitle": "Cinco dimensiones articuladas e inseparables",
-        "vectorialOverlayPptx": "Matriz curricular: Dimensión biológica (cuerpo) + psicológica (identidad) + afectiva (vínculos) + social (cultura) + ética (valores)",
-        "mathOverlayPptx": "Matriz curricular: Dimensión biológica (cuerpo) + psicológica (identidad) + afectiva (vínculos) + social (cultura) + ética (valores)",
-        "speakerNotes": "Repasamos que la sexualidad humana es una vivencia integral que articula las dimensiones biológica, afectiva, social y ética durante toda la vida.",
+        "overlaySubtitle": "Cuatro dimensiones articuladas e inseparables",
+        "vectorialOverlayPptx": "Matriz curricular: Dimensión biológica (cuerpo) + afectiva (emociones) + social (cultura y convivencia) + ética (valores y respeto)",
+        "mathOverlayPptx": "Matriz curricular: Dimensión biológica (cuerpo) + afectiva (emociones) + social (cultura y convivencia) + ética (valores y respeto)",
+        "speakerNotes": "La sexualidad es una vivencia integral que articula las dimensiones biológica, afectiva, social y ética, según el Texto Oficial MINEDUC (pág. 16).",
         "palabrasAprox": 22,
         "duracionSeg": 10
       },
@@ -176,7 +176,7 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
         "slideNumber": 5,
         "tituloMomento": "El Hábito de la Justificación Rigurosa",
         "didacticPurpose": "El Hábito de la Justificación Rigurosa",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, holding an emblem of mutual dignity and consent with four interlocking glowing rings, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, observing four interlocking glowing rings representing mutual dignity, consent, and respect, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Justificar es Comprender de Verdad",
         "overlayTitle": "El valor del '¿por qué?'",
         "overlaySubtitle": "Argumentar científicamente cada elección",
@@ -204,7 +204,7 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
         "slideNumber": 7,
         "tituloMomento": "Cierre y Tránsito al Ensayo Guiado",
         "didacticPurpose": "Cierre y Tránsito al Ensayo Guiado",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, holding open science notebooks fully completed, smiling with triumphant focus beside a StudioSimple badge, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, holding open science notebooks fully completed, smiling with triumphant focus in an organized study room, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Hacia el Ensayo Demostrativo",
         "overlayTitle": "El momento de la verdad",
         "overlaySubtitle": "Modelaremos el análisis de un ítem real",
@@ -241,7 +241,7 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
     "title": "Modelado de Reactivos Psicométricos Tipo Examen Libre",
     "concept": "Técnicas de análisis, descarte de distractores y justificación epistemológica",
     "summary": "La evaluación en Ciencias Naturales bajo estándares del MINEDUC utiliza reactivos de cuatro alternativas con distractores verosímiles. El éxito radica en identificar el núcleo del objetivo de aprendizaje, contrastar las opciones con la evidencia científica y descartar aquellas incompletas o reduccionistas.",
-    "ideaClave": "Resolver reactivos oficiales con rigor exige identificar el distractor parcial y fundamentar la clave correcta mediante la integración de todas las dimensiones del OA 1.",
+    "ideaClave": "Resolver reactivos didácticos tipo MINEDUC con rigor exige identificar el distractor parcial y fundamentar la clave correcta mediante la integración de las 4 dimensiones del OA 1.",
     "dileIntro": "A continuación formalizaremos la técnica de resolución de ítems oficiales y analizaremos un caso modelado idéntico al primer desafío de tu práctica.",
     "hazInstruction": "Sigue con máxima atención el despiece del reactivo modelado en la lámina 6 y observa cómo se descarta cada opción incorrecta.",
     "videoSrc": "",
@@ -321,12 +321,12 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
         "tituloMomento": "Caso Modelado: Pregunta Oficial de 4 Alternativas",
         "didacticPurpose": "Caso Modelado: Pregunta Oficial de 4 Alternativas",
         "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing an official four-choice exam card on their desk, comparing reasoning notes before selecting option B, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Caso Modelado: Ítem Oficial Tipo MINEDUC",
+        "overlayText": "Caso Modelado: Reactivo Didáctico MINEDUC",
         "overlayTitle": "Caso Modelado: Multidimensionalidad de la sexualidad",
         "overlaySubtitle": "Análisis y descarte psicométrico de 4 alternativas",
-        "vectorialOverlayPptx": "Despiece del ítem: Enunciado: Estudiante afirma que la sexualidad es solo biología reproductiva -> Opción A (Falsa: reduccionista) · Opción B (CLAVE CORRECTA: 5 dimensiones integrales) · Opción C (Falsa: inicio tardío erróneo) · Opción D (Falsa: niega afecto en la niñez)",
-        "mathOverlayPptx": "Despiece del ítem: Enunciado: Estudiante afirma que la sexualidad es solo biología reproductiva -> Opción A (Falsa: reduccionista) · Opción B (CLAVE CORRECTA: 5 dimensiones integrales) · Opción C (Falsa: inicio tardío erróneo) · Opción D (Falsa: niega afecto en la niñez)",
-        "speakerNotes": "Analicemos un ítem modelado: un estudiante afirma que la sexualidad se limita exclusivamente a órganos y procreación. A partir del MINEDUC, ¿cuál opción refuta dicha postura? La opción B es correcta porque establece que la sexualidad es una dimensión integral que une lo biológico, afectivo, psicológico, sociocultural y ético durante toda la vida.",
+        "vectorialOverlayPptx": "Despiece del ítem: Enunciado: Estudiante afirma que la sexualidad es solo biología reproductiva -> Opción A (Falsa: reduccionista) · Opción B (CLAVE CORRECTA: 4 dimensiones integrales) · Opción C (Falsa: inicio tardío erróneo) · Opción D (Falsa: niega afecto en la niñez)",
+        "mathOverlayPptx": "Despiece del ítem: Enunciado: Estudiante afirma que la sexualidad es solo biología reproductiva -> Opción A (Falsa: reduccionista) · Opción B (CLAVE CORRECTA: 4 dimensiones integrales) · Opción C (Falsa: inicio tardío erróneo) · Opción D (Falsa: niega afecto en la niñez)",
+        "speakerNotes": "Analicemos un reactivo didáctico elaborado según estándar MINEDUC: un estudiante afirma que la sexualidad se limita exclusivamente a órganos y procreación. A partir del Texto Oficial MINEDUC (pág. 16), ¿cuál opción refuta dicha postura? La opción B es correcta porque establece que la sexualidad es una dimensión integral que une lo biológico, afectivo, social y ético durante toda la vida.",
         "palabrasAprox": 53,
         "duracionSeg": 24
       },
@@ -334,13 +334,13 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
         "slideNumber": 7,
         "tituloMomento": "Síntesis y Coronación del Aprendizaje",
         "didacticPurpose": "Síntesis y Coronación del Aprendizaje",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, presenting a golden laurel emblem of curricular mastery in Ciencias Naturales OA 01 beside a StudioSimple badge, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, presenting a completed scientific summary board of 7th grade Ciencias Naturales with bright confident smiles, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "¡Felicitaciones! OA 1 Consolidado",
         "overlayTitle": "Regla de Oro de la síntesis de ciencias",
-        "overlaySubtitle": "Preparados para el Examen Libre",
+        "overlaySubtitle": "Preparados para la evaluación formativa",
         "vectorialOverlayPptx": "Hito alcanzado: OA 1 completado con éxito · Dominio conceptual y evaluativo consolidado",
         "mathOverlayPptx": "Hito alcanzado: OA 1 completado con éxito · Dominio conceptual y evaluativo consolidado",
-        "speakerNotes": "Recuerda la regla de oro: la justificación científica y el descarte de distractores aseguran el éxito en el examen. ¡Ahora pon a prueba lo aprendido resolviendo las actividades prácticas en la plataforma interactiva!",
+        "speakerNotes": "Recuerda la regla de oro: la justificación científica y el descarte de distractores aseguran el éxito en la evaluación. ¡Ahora pon a prueba lo aprendido resolviendo las actividades prácticas en la plataforma interactiva!",
         "palabrasAprox": 33,
         "duracionSeg": 15
       }
@@ -348,8 +348,8 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
   },
   "postQuestions": [
     {
-      "context": "Caso 1: Ítem oficial de selección múltiple (Estándar MINEDUC)",
-      "question": "Un examen oficial presenta la siguiente pregunta de selección múltiple:\n'Durante una clase de Ciencias Naturales, los estudiantes debaten sobre la sexualidad humana. Uno de ellos afirma que la sexualidad se limita exclusivamente a los procesos biológicos de maduración de los órganos reproductores y a la capacidad de procrear.'\nA partir de las Bases Curriculares del MINEDUC, ¿cuál de las siguientes opciones refuta con mayor precisión científica y pedagógica dicha afirmación?\nA) La afirmación es correcta porque las hormonas y los caracteres sexuales primarios son las únicas variables medibles empíricamente.\nB) La afirmación es incompleta porque la sexualidad humana es una dimensión integral que involucra aspectos biológicos, afectivos, psicológicos, socioculturales y éticos a lo largo de toda la vida.\nC) La afirmación es incorrecta porque la sexualidad solo comienza en la adultez cuando se forman vínculos legales formales.\nD) La afirmación es válida únicamente para la etapa de la pubertad, pues en la niñez no existen influencias afectivas ni sociales.\n\nIndica la alternativa correcta y justifica por qué descartaste las otras tres opciones.",
+      "context": "Caso 1: Reactivo didáctico de selección múltiple (Estándar MINEDUC)",
+      "question": "A continuación se presenta un reactivo didáctico elaborado según estándar MINEDUC para 7° Básico:\n'Durante una clase de Ciencias Naturales, los estudiantes debaten sobre la sexualidad humana. Uno de ellos afirma que la sexualidad se limita exclusivamente a los procesos biológicos de maduración de los órganos reproductores y a la capacidad de procrear.'\nA partir de las Bases Curriculares y el Texto Oficial de Ciencias Naturales (pág. 16), ¿cuál de las siguientes opciones refuta con mayor precisión científica y pedagógica dicha afirmación?\nA) La afirmación es correcta porque las hormonas y los caracteres sexuales primarios son las únicas variables medibles empíricamente.\nB) La afirmación es incompleta porque la sexualidad humana es una dimensión integral que involucra aspectos biológicos, afectivos, sociales y éticos a lo largo de toda la vida.\nC) La afirmación es incorrecta porque la sexualidad solo comienza en la adultez cuando se forman vínculos legales formales.\nD) La afirmación es válida únicamente para la etapa de la pubertad, pues en la niñez no existen influencias afectivas ni sociales.\n\nIndica la alternativa correcta y justifica por qué descartaste las otras tres opciones.",
       "expected": "La alternativa correcta es la B. Se descarta la opción A porque es un reduccionismo biológico falso; se descarta la C porque la sexualidad se vive en todas las etapas del ciclo vital y no solo en la adultez; y se descarta la D porque las dimensiones afectivas y sociales están presentes desde la primera infancia.",
       "success": "¡Extraordinario desempeño evaluativo! Has seleccionado la clave B y justificado con rigor el descarte psicométrico de cada distractor.",
       "support": "Recuerda el caso modelado en el video: identifica la opción que describe la sexualidad como una vivencia integral y explica los fallos de las demás.",
@@ -368,8 +368,8 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
   ],
   "practice": [
     {
-      "context": "Caso 1: Ítem oficial de selección múltiple (Estándar MINEDUC)",
-      "question": "Un examen oficial presenta la siguiente pregunta de selección múltiple:\n'Durante una clase de Ciencias Naturales, los estudiantes debaten sobre la sexualidad humana. Uno de ellos afirma que la sexualidad se limita exclusivamente a los procesos biológicos de maduración de los órganos reproductores y a la capacidad de procrear.'\nA partir de las Bases Curriculares del MINEDUC, ¿cuál de las siguientes opciones refuta con mayor precisión científica y pedagógica dicha afirmación?\nA) La afirmación es correcta porque las hormonas y los caracteres sexuales primarios son las únicas variables medibles empíricamente.\nB) La afirmación es incompleta porque la sexualidad humana es una dimensión integral que involucra aspectos biológicos, afectivos, psicológicos, socioculturales y éticos a lo largo de toda la vida.\nC) La afirmación es incorrecta porque la sexualidad solo comienza en la adultez cuando se forman vínculos legales formales.\nD) La afirmación es válida únicamente para la etapa de la pubertad, pues en la niñez no existen influencias afectivas ni sociales.\n\nIndica la alternativa correcta y justifica por qué descartaste las otras tres opciones.",
+      "context": "Caso 1: Reactivo didáctico de selección múltiple (Estándar MINEDUC)",
+      "question": "A continuación se presenta un reactivo didáctico elaborado según estándar MINEDUC para 7° Básico:\n'Durante una clase de Ciencias Naturales, los estudiantes debaten sobre la sexualidad humana. Uno de ellos afirma que la sexualidad se limita exclusivamente a los procesos biológicos de maduración de los órganos reproductores y a la capacidad de procrear.'\nA partir de las Bases Curriculares y el Texto Oficial de Ciencias Naturales (pág. 16), ¿cuál de las siguientes opciones refuta con mayor precisión científica y pedagógica dicha afirmación?\nA) La afirmación es correcta porque las hormonas y los caracteres sexuales primarios son las únicas variables medibles empíricamente.\nB) La afirmación es incompleta porque la sexualidad humana es una dimensión integral que involucra aspectos biológicos, afectivos, sociales y éticos a lo largo de toda la vida.\nC) La afirmación es incorrecta porque la sexualidad solo comienza en la adultez cuando se forman vínculos legales formales.\nD) La afirmación es válida únicamente para la etapa de la pubertad, pues en la niñez no existen influencias afectivas ni sociales.\n\nIndica la alternativa correcta y justifica por qué descartaste las otras tres opciones.",
       "expected": "La alternativa correcta es la B. Se descarta la opción A porque es un reduccionismo biológico falso; se descarta la C porque la sexualidad se vive en todas las etapas del ciclo vital y no solo en la adultez; y se descarta la D porque las dimensiones afectivas y sociales están presentes desde la primera infancia.",
       "success": "¡Extraordinario desempeño evaluativo! Has seleccionado la clave B y justificado con rigor el descarte psicométrico de cada distractor.",
       "support": "Recuerda el caso modelado en el video: identifica la opción que describe la sexualidad como una vivencia integral y explica los fallos de las demás.",
@@ -387,7 +387,7 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
     },
     {
       "context": "Caso 3: Trabajo en el Cuaderno de Ciencias - Hoja de Examen",
-      "question": "Abre tu cuaderno de Ciencias Naturales en una página limpia. Escribe como título: 'Hoja de Respuestas y Síntesis Final OA 1'. Diseña un cuadro resumen con los 4 grandes ejes de la unidad: 1. Las 5 dimensiones humanas, 2. Órganos y hormonas de la pubertad, 3. Autocuidado y consentimiento, 4. Mitos derribados. Escribe dos conceptos clave para cada eje.",
+      "question": "Abre tu cuaderno de Ciencias Naturales en una página limpia. Escribe como título: 'Hoja de Respuestas y Síntesis Final OA 1'. Diseña un cuadro resumen con los 4 grandes ejes de la unidad: 1. Las 4 dimensiones humanas (biológica, afectiva, social y ética), 2. Órganos y hormonas de la pubertad, 3. Autocuidado y consentimiento, 4. Mitos derribados. Escribe dos conceptos clave para cada eje.",
       "expected": "Cuadro resumen completo en el cuaderno con los 4 ejes y sus conceptos clave (por ejemplo: Eje 1: Afecto y ética; Eje 2: Testosterona/Estrógenos y caracteres secundarios; Eje 3: Límites y asertividad; Eje 4: Variabilidad puberal y equidad de género).",
       "success": "¡Impecable portafolio de evidencias en tu cuaderno! Has consolidado todo el OA 1 en una síntesis maestra.",
       "support": "Revisa tus notas de las 6 clases y anota los dos términos científicos más representativos de cada uno de los cuatro ejes.",
@@ -430,27 +430,27 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
         "Solo las personas que presentan cambios tempranos logran una salud reproductiva adecuada"
       ],
       "correct": "Los relojes biológicos y factores genéticos determinan ventanas temporales amplias y saludables de maduración puberal",
-      "fixExplain": "La variabilidad cronológica en el inicio puberal (entre 9-13 años en niñas y 10-14 en niños) es una característica biológica normal."
+      "fixExplain": "La variabilidad cronológica en el inicio puberal (entre 8-13 años en niñas y 9-14 en niños según Tanner 1962 y MINEDUC) es una característica biológica normal."
     }
   ],
   "recovery": [
     {
       "title": "Recuperación: El Enfoque Integral del MINEDUC",
-      "explain": "El Ministerio de Educación de Chile enfatiza que la sexualidad no es únicamente un fenómeno de órganos y hormonas. Comprende cómo nos sentimos, cómo nos relacionamos con los demás, nuestros valores éticos y el respeto por los derechos humanos de cada individuo.",
-      "q": "¿Qué dimensiones integran la sexualidad humana de acuerdo a las Bases Curriculares?",
+      "explain": "El Ministerio de Educación de Chile enfatiza que la sexualidad no es únicamente un fenómeno de órganos y hormonas. Comprende cómo nos sentimos, cómo nos relacionamos con los demás, nuestros valores éticos y el respeto por los derechos humanos de cada individuo (Texto Oficial pág. 16).",
+      "q": "¿Qué dimensiones integran la sexualidad humana de acuerdo a las Bases Curriculares y el Texto Oficial (pág. 16)?",
       "options": [
-        "Biológica, afectiva, psicológica, sociocultural y ética a lo largo de toda la vida",
+        "Biológica, afectiva, social y ética a lo largo de toda la vida",
         "Únicamente la dimensión biológica y la reproducción en la etapa adulta"
       ],
-      "correct": "Biológica, afectiva, psicológica, sociocultural y ética a lo largo de toda la vida",
-      "correctText": "¡Exacto! La visión integral de cinco dimensiones es la base de todo el currículum de Ciencias Naturales.",
-      "fixText": "Recuerda que la sexualidad es un fenómeno integral con 5 dimensiones inseparables, no solo biología."
+      "correct": "Biológica, afectiva, social y ética a lo largo de toda la vida",
+      "correctText": "¡Exacto! La visión integral de cuatro dimensiones (biológica, afectiva, social y ética) según el Texto Oficial MINEDUC (pág. 16) es la base del currículum de Ciencias Naturales.",
+      "fixText": "Recuerda que la sexualidad es un fenómeno integral con 4 dimensiones inseparables, no solo biología."
     }
   ],
   "summaryIdeas": [
     [
       "1 · Visión Holística del OA 1",
-      "La sexualidad humana articula de forma inseparable las dimensiones biológica, afectiva, psicológica, social y ética durante toda la existencia."
+      "La sexualidad humana articula de forma inseparable las dimensiones biológica, afectiva, social y ética durante toda la existencia."
     ],
     [
       "2 · Fisiología, Autocuidado y Consentimiento",
@@ -465,5 +465,10 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
     "type": "dimensions",
     "title": "Simulador de Examen Libre MINEDUC - OA 1",
     "description": "Entrenador interactivo de resolución y descarte psicométrico para Ciencias Naturales 7° Básico."
+  },
+  "paso8_cierre": {
+    "preguntaSintesis": "¿Cómo se articulan las cuatro dimensiones de la sexualidad (biológica, afectiva, social y ética) para responder con rigor científico a preguntas y situaciones de la vida real?",
+    "metacognicion": "¿Qué estrategia de lectura analítica y descarte de distractores te resultó más efectiva para resolver reactivos de evaluación formal con confianza?",
+    "celebracion": "¡Felicitaciones! Has completado con éxito la unidad completa del OA 1 de Ciencias Naturales de 7° Básico."
   }
 };

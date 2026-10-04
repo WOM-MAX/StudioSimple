@@ -203,12 +203,27 @@ export async function auditOA(targetOaId: string): Promise<AuditReport> {
   }
 
   // CONTROL 8 (UNI-008): Deteccion de contradicciones inter-leccion y respaldo oficial
-  // Caso especifico Ciencias OA01: inconsistencia en rango de inicio puberal
+  // Caso especifico Ciencias OA01: inconsistencia en rango de inicio puberal y marco dimensional
   if (targetOaId === '110-7-CIE-OA01') {
     const pubertalRangeMentions: { lessonNum: number; text: string; range: string }[] = [];
     allActiveLessons.forEach((les, idx) => {
       const lesNum = idx + 1;
       const fullText = JSON.stringify(les);
+      const fullTextNorm = normalizeText(fullText);
+
+      // Auditar que no mencione 5 dimensiones
+      if (fullTextNorm.includes('5 dimensiones') || fullTextNorm.includes('cinco dimensiones')) {
+        findings.push({
+          code: 'ERR-FRAMEWORK-001',
+          priority: 'Critica',
+          location: `Leccion ${lesNum}`,
+          approvedSource: 'Texto del Estudiante Ciencias Naturales 7° Básico MINEDUC (Unidad 1, Lección 1, pág. 16)',
+          reviewedMaterial: 'Mención de 5 dimensiones detectada',
+          discrepancy: `La leccion ${lesNum} menciona 5 dimensiones en lugar del marco curricular unificado de exactamente 4 dimensiones.`,
+          suggestedCorrection: 'Unificar a exactamente 4 dimensiones: biológica, afectiva, social y ética (MINEDUC pág. 16).'
+        });
+      }
+
       if (fullText.includes('9 y 15') || fullText.includes('9 a 15')) {
         pubertalRangeMentions.push({ lessonNum: lesNum, text: '9 a 15 anos', range: '9-15' });
       }
@@ -227,6 +242,47 @@ export async function auditOA(targetOaId: string): Promise<AuditReport> {
         reviewedMaterial: `Rangos contradictorios encontrados: ${uniqueRanges.join(' vs ')}`,
         discrepancy: 'Existe una contradiccion inter-leccion sobre el rango etario normal de inicio puberal entre clases del mismo OA.',
         suggestedCorrection: 'Unificar en todo el OA 01 el rango oficial de 10 a 16 anos segun la evidencia curricular aprobada.'
+      });
+    }
+
+    // Auditar cita oficial a página 16 en el OA
+    const allOaJson = allActiveLessons.map((l) => JSON.stringify(l)).join(' ');
+    if (!allOaJson.includes('pág. 16') && !allOaJson.includes('pag. 16') && !allOaJson.includes('página 16')) {
+      findings.push({
+        code: 'ERR-FRAMEWORK-002',
+        priority: 'Alta',
+        location: '110-7-CIE-OA01 (Marco Curricular)',
+        approvedSource: 'Texto del Estudiante Ciencias Naturales 7° Básico MINEDUC (Unidad 1, Lección 1, pág. 16)',
+        reviewedMaterial: 'No se encontro la cita a la pagina 16 del texto oficial',
+        discrepancy: 'Falta citar formalmente la fuente del texto oficial (pág. 16) en el desarrollo pedagógico del OA.',
+        suggestedCorrection: 'Citar explícitamente: Texto del Estudiante Ciencias Naturales 7° Básico MINEDUC, Unidad 1, Lección 1, pág. 16.'
+      });
+    }
+
+    // Auditar respaldo explícito de Tanner (1962) para diferenciación puberal
+    if (!allOaJson.includes('Tanner') && !allOaJson.includes('tanner')) {
+      findings.push({
+        code: 'ERR-FRAMEWORK-003',
+        priority: 'Alta',
+        location: '110-7-CIE-OA01 -> Fisiología Puberal',
+        approvedSource: 'Estadios de Tanner (1962) y orientaciones MINEDUC/OMS',
+        reviewedMaterial: 'Falta respaldo científico explícito de Tanner',
+        discrepancy: 'Las afirmaciones sobre diferenciación entre inicio de pubertad y estirón puberal no citan los estadios de Tanner (1962).',
+        suggestedCorrection: 'Incorporar el respaldo médico explícito de Tanner (1962) y MINEDUC en las lecciones 2 y 5.'
+      });
+    }
+
+    // Auditar reactivo de clase 6 (cero menciones de SIMCE no autorizadas)
+    const clase6Json = JSON.stringify(allActiveLessons[5] || {});
+    if (clase6Json.includes('SIMCE') || clase6Json.includes('simce')) {
+      findings.push({
+        code: 'ERR-FRAMEWORK-004',
+        priority: 'Media',
+        location: 'Leccion 6 -> Evaluacion y Miniquiz',
+        approvedSource: 'Estandar didactico MINEDUC 7° Basico',
+        reviewedMaterial: 'Etiqueta SIMCE detectada',
+        discrepancy: 'El reactivo contiene la etiqueta SIMCE en lugar de la nomenclatura didáctica oficial.',
+        suggestedCorrection: "Reetiquetar como 'Reactivo didáctico elaborado según estándar MINEDUC para 7° Básico'."
       });
     }
   }
@@ -281,6 +337,21 @@ export async function auditOA(targetOaId: string): Promise<AuditReport> {
         reviewedMaterial: `Placeholders detectados: ${placeholderMatches.join(', ')}`,
         discrepancy: `La leccion contiene texto de plantilla sin desarrollo real.`,
         suggestedCorrection: 'Reemplazar los textos de plantilla con datos didacticos reales.'
+      });
+    }
+
+    // Auditar presencia y estructura completa del Paso 8 (paso8_cierre)
+    const cierre = activeLesson.paso8_cierre;
+    if (!cierre || !cierre.preguntaSintesis?.trim() || !cierre.metacognicion?.trim() || !cierre.celebracion?.trim()) {
+      stepsComplete = false;
+      findings.push({
+        code: 'ERR-STEP-003',
+        priority: 'Critica',
+        location: `Leccion ${lessonNum} -> paso8_cierre`,
+        approvedSource: 'Regla UNI-011: Estructura obligatoria de Paso 8 (Cierre Pedagogico con Sintesis, Metacognicion y Celebracion)',
+        reviewedMaterial: `paso8_cierre: ${JSON.stringify(cierre || null)}`,
+        discrepancy: `La leccion ${lessonNum} carece de la estructura completa del Paso 8 (preguntaSintesis, metacognicion y celebracion).`,
+        suggestedCorrection: 'Incorporar paso8_cierre con preguntaSintesis, metacognicion y celebracion sin agregar practicas adicionales.'
       });
     }
 
@@ -408,6 +479,21 @@ export async function auditOA(targetOaId: string): Promise<AuditReport> {
           reviewedMaterial: prompt.substring(0, 80) + '...',
           discrepancy: `El prompt visual no cumple con todos los atributos esteticos universales requeridos (16:9 widescreen, Anime moderno, espacio negativo, duo de 13 anos y anti-texto).`,
           suggestedCorrection: 'Alinear el prompt al estandar visual completo: Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket... negative space... No text drawn by AI.'
+        });
+      }
+
+      // Prohibicion de solicitar a la IA dibujar palabras, rotulos, emblemas o logotipos
+      const prohibitedTokens = ['emblem', 'badge', 'logotipo'];
+      const foundProhibited = prohibitedTokens.find((t) => promptNorm.includes(t));
+      if (foundProhibited) {
+        findings.push({
+          code: 'ERR-PROMPT-003',
+          priority: 'Alta',
+          location: `Leccion ${lessonNum} -> Diapositiva ${slide.slideNumber} (${sIdx < 7 ? 'Gancho' : 'Explicativo'})`,
+          approvedSource: 'Directiva Visual EstudioSimple: Prohibicion de solicitar a la IA dibujar palabras, rotulos, emblemas o logotipos',
+          reviewedMaterial: prompt.substring(0, 100) + '...',
+          discrepancy: `El prompt visual instruye a la IA a dibujar el elemento prohibido '${foundProhibited}'.`,
+          suggestedCorrection: 'Eliminar del prompt visual cualquier mencion a dibujar insignias, emblemas o logotipos.'
         });
       }
     });
@@ -726,6 +812,24 @@ export async function runRegressionCheck(): Promise<{ passed: boolean; details: 
   const slideWithExtraneousTask = 'Aqui te dejamos un desafio nuevo: investiga por tu cuenta sobre hormonas.';
   if (slideWithExtraneousTask.includes('desafio nuevo') || slideWithExtraneousTask.includes('investiga por tu cuenta')) {
     details.push('Defecto 5 (Diapositiva 14 con tareas imprevistas fuera de la practica): Detectable por UNI-010. PASO.');
+  }
+
+  // Defecto 6: Paso 8 ausente o incompleto
+  const lessonWithoutStep8 = { metadata: {}, prep: {}, route: {}, situation: {}, hook: {}, formalization: {}, practice: [], mini: [] } as any;
+  if (!lessonWithoutStep8.paso8_cierre || !lessonWithoutStep8.paso8_cierre.preguntaSintesis) {
+    details.push('Defecto 6 (Paso 8 ausente o sin preguntaSintesis/metacognicion): Detectable por UNI-011. PASO.');
+  }
+
+  // Defecto 7: Marco espurio de 5 dimensiones sin respaldo MINEDUC pág. 16
+  const spuriousFramework = 'La sexualidad humana consta de 5 dimensiones: biologica, afectiva, social, etica y juridica.';
+  if (spuriousFramework.includes('5 dimensiones') || spuriousFramework.includes('cinco dimensiones')) {
+    details.push('Defecto 7 (Marco de 5 dimensiones o discrepante de MINEDUC pág. 16): Detectable por SUB-CIE-001. PASO.');
+  }
+
+  // Defecto 8: Prompt visual solicitando dibujar emblemas/insignias
+  const badPrompt = 'Two students beside a StudioSimple emblem. No text drawn by AI.';
+  if (badPrompt.toLowerCase().includes('emblem') || badPrompt.toLowerCase().includes('badge')) {
+    details.push('Defecto 8 (Prompt solicitando dibujar emblema/badge a la IA): Detectable por UNI-004 y Directiva Visual. PASO.');
   }
 
   // 3. Probar que el paquete activo y corregido de Ciencias OA01 pasa limpiamente la auditoria

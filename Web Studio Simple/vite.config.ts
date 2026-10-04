@@ -97,9 +97,26 @@ export default defineConfig({
                 }
 
                 const pasarelaConfig = pricingConfig?.pasarela || {};
-                const accessToken = process.env.MERCADO_PAGO_ACCESS_TOKEN || pasarelaConfig.mercadoPagoAccessToken;
+                const accessToken = (
+                  process.env.MERCADOPAGO_ACCESS_TOKEN ||
+                  process.env.MERCADO_PAGO_ACCESS_TOKEN ||
+                  process.env.MP_ACCESS_TOKEN ||
+                  pasarelaConfig.mercadoPagoAccessToken ||
+                  ''
+                ).trim();
 
-                if (pasarelaConfig.provider === 'mercadopago' && accessToken && accessToken.trim()) {
+                const isMercadoPagoActive = pasarelaConfig.provider === 'mercadopago' || Boolean(accessToken);
+
+                if (isMercadoPagoActive) {
+                  if (!accessToken) {
+                    res.statusCode = 400;
+                    res.setHeader('Content-Type', 'application/json');
+                    return res.end(JSON.stringify({
+                      success: false,
+                      error: 'Token de acceso de Mercado Pago no configurado en el servidor'
+                    }));
+                  }
+
                   let origin = req.headers.origin;
                   if (!origin && req.headers.referer) {
                     try { origin = new URL(req.headers.referer).origin; } catch {}
@@ -148,7 +165,7 @@ export default defineConfig({
                   const mpResponse = await fetch('https://api.mercadopago.com/checkout/preferences', {
                     method: 'POST',
                     headers: {
-                      'Authorization': `Bearer ${accessToken.trim()}`,
+                      'Authorization': `Bearer ${accessToken}`,
                       'Content-Type': 'application/json'
                     },
                     body: JSON.stringify(preferencePayload)
@@ -169,10 +186,18 @@ export default defineConfig({
                       preferenceId: mpData.id,
                       initPoint: selectedInitPoint
                     }));
+                  } else {
+                    res.statusCode = 400;
+                    res.setHeader('Content-Type', 'application/json');
+                    return res.end(JSON.stringify({
+                      success: false,
+                      error: mpData.message || 'Error al comunicarse con la pasarela de Mercado Pago',
+                      details: mpData
+                    }));
                   }
                 }
 
-                // Fallback modo simulado en dev
+                // Fallback modo simulado en dev si provider === 'simulated' y no hay token
                 res.setHeader('Content-Type', 'application/json');
                 return res.end(JSON.stringify({
                   success: true,
@@ -184,6 +209,26 @@ export default defineConfig({
                 res.statusCode = 500;
                 res.setHeader('Content-Type', 'application/json');
                 return res.end(JSON.stringify({ success: false, error: err?.message || 'Error en preferencia' }));
+              }
+            });
+            return;
+          }
+
+          if (url === '/api/subscription/cancel' && req.method === 'POST') {
+            let body = '';
+            req.on('data', chunk => { body += chunk; });
+            req.on('end', () => {
+              try {
+                res.setHeader('Content-Type', 'application/json');
+                return res.end(JSON.stringify({
+                  success: true,
+                  message: 'Tu suscripción ha sido cancelada exitosamente en entorno de pruebas.',
+                  updatedInDb: false
+                }));
+              } catch (e: any) {
+                res.statusCode = 500;
+                res.setHeader('Content-Type', 'application/json');
+                return res.end(JSON.stringify({ success: false, error: e?.message }));
               }
             });
             return;
