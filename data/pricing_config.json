@@ -80,7 +80,7 @@
   ],
   "pasarela": {
     "provider": "mercadopago",
-    "mercadoPagoPublicKey": "",
+    "mercadoPagoPublicKey": "APP_USR-d44f14cd-7e1c-4bd8-a138-e78e1bcbcd44",
     "mercadoPagoAccessToken": "",
     "modoSandbox": false
   },
