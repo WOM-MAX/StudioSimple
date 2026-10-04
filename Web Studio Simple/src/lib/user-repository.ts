@@ -275,6 +275,40 @@ export function updateUserStatus(userId: string, status: 'active' | 'suspended' 
 }
 
 /**
+ * Actualiza la contraseña personalizada del apoderado, persiste localmente
+ * y sincroniza hacia Neon DB a traves de la API.
+ */
+export function updateUserPassword(userId: string, newPassword: string): void {
+  const users = getAllRegisteredUsers();
+  const idx = users.findIndex((u) => u.id === userId);
+  let targetUser: ParentUser | null = null;
+
+  if (idx >= 0) {
+    users[idx] = {
+      ...users[idx],
+      password: newPassword
+    };
+    targetUser = users[idx];
+    persistUsers(users);
+  }
+
+  if (typeof fetch !== 'undefined' && targetUser) {
+    fetch('/api/user/change-password', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        userId: targetUser.id,
+        email: targetUser.email,
+        rut: targetUser.rut,
+        newPassword
+      })
+    }).catch((err) => {
+      console.warn('[UserRepository] Error al sincronizar cambio de clave en backend:', err?.message);
+    });
+  }
+}
+
+/**
  * Genera una contraseña temporal de alta entropía para soporte técnico,
  * actualiza el repositorio local y sincroniza en Neon DB con notificación WhatsApp.
  */

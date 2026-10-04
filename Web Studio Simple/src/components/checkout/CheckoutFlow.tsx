@@ -86,6 +86,8 @@ export const CheckoutFlow: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   // Form Fields - Estudiante
+  const [studentFirstName, setStudentFirstName] = useState('');
+  const [studentLastName, setStudentLastName] = useState('');
   const [studentName, setStudentName] = useState('');
   const [studentRun, setStudentRun] = useState('');
   const [grade, setGrade] = useState<GradeLevel>('7° Básico');
@@ -198,7 +200,20 @@ export const CheckoutFlow: React.FC = () => {
           if (pendingData.phone) setPhone(pendingData.phone);
           if (pendingData.email) setEmail(pendingData.email);
           if (pendingData.password) setPassword(pendingData.password);
-          if (pendingData.studentName) setStudentName(pendingData.studentName);
+          if (pendingData.studentFirstName) setStudentFirstName(pendingData.studentFirstName);
+          if (pendingData.studentLastName) setStudentLastName(pendingData.studentLastName);
+          if (pendingData.studentName) {
+            setStudentName(pendingData.studentName);
+            if (!pendingData.studentFirstName) {
+              const parts = pendingData.studentName.trim().split(/\s+/);
+              if (parts.length > 1) {
+                setStudentFirstName(parts[0]);
+                setStudentLastName(parts.slice(1).join(' '));
+              } else {
+                setStudentFirstName(pendingData.studentName);
+              }
+            }
+          }
           if (pendingData.studentRun) setStudentRun(pendingData.studentRun);
           if (pendingData.grade) setGrade(pendingData.grade);
           if (pendingData.plan) setSelectedPlan(pendingData.plan);
@@ -436,33 +451,21 @@ export const CheckoutFlow: React.FC = () => {
       return;
     }
 
+    const finalStudentName = `${studentFirstName.trim()} ${studentLastName.trim()}`.trim() || studentName.trim();
+    if (!studentFirstName.trim() || !studentLastName.trim()) {
+      setErrorMessage('Por favor completa tanto los nombres como los apellidos del estudiante para su registro y certificación oficial.');
+      return;
+    }
+
     if (password.length < 8) {
       setErrorMessage('La contraseña debe contener al menos 8 caracteres para proteger tu cuenta.');
       return;
     }
 
-    // Validación bancaria si el plan no es prueba gratuita, es pago con tarjeta directa local y la pasarela NO es mercadopago
-    if (selectedPlan !== 'trial' && paymentMethodOption === 'card_direct' && pricingConfig.pasarela.provider !== 'mercadopago') {
-      const validation = validateCardForm({
-        cardNumber,
-        cardholderName: effectiveCardholder,
-        cardExpiry,
-        cardCvv,
-        cardType,
-        installments
-      }, true);
-      if (!validation.isValid) {
-        setCardErrors(validation.errors);
-        setErrorMessage('Por favor completa y corrige los campos de la tarjeta para continuar.');
-        return;
-      }
-      setCardErrors({});
-    }
-
     setIsProcessing(true);
 
-    // Si la pasarela esta configurada en modo Mercado Pago o billetera y hay monto a cobrar
-    const shouldUseMercadoPago = (pricingConfig.pasarela.provider === 'mercadopago' || paymentMethodOption === 'mercadopago_wallet') && finalPrice > 0;
+    // Todo plan con cobro redirige a la pasarela oficial de Mercado Pago / Webpay
+    const shouldUseMercadoPago = finalPrice > 0 && selectedPlan !== 'trial';
 
     if (shouldUseMercadoPago) {
       const pendingPayload = {
@@ -472,7 +475,9 @@ export const CheckoutFlow: React.FC = () => {
         lastName: lastName.trim(),
         email: email.trim(),
         password,
-        studentName: studentName.trim() || 'Estudiante',
+        studentName: finalStudentName,
+        studentFirstName: studentFirstName.trim(),
+        studentLastName: studentLastName.trim(),
         studentRun: studentRun.trim(),
         grade,
         plan: selectedPlan,
@@ -494,7 +499,7 @@ export const CheckoutFlow: React.FC = () => {
           name: `${firstName.trim()} ${lastName.trim()}`.trim(),
           rut: rut.trim(),
           grade,
-          studentName: studentName.trim(),
+          studentName: finalStudentName,
           studentRun: studentRun.trim(),
           couponCode: appliedCoupon?.codigo
         })
@@ -503,6 +508,10 @@ export const CheckoutFlow: React.FC = () => {
         .then((data) => {
           if (data.success && data.initPoint) {
             window.location.href = data.initPoint;
+            return;
+          }
+          if (data.success && data.directActivation) {
+            completeLocalActivation();
             return;
           }
           setIsProcessing(false);
@@ -746,17 +755,37 @@ export const CheckoutFlow: React.FC = () => {
                   <span>Datos del Estudiante y Curso a Inscribir</span>
                 </h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
                   <div>
                     <label className="block text-xs text-white/70 font-semibold mb-1">
-                      Nombre del Hijo/a (Estudiante) *
+                      Nombres del Estudiante *
                     </label>
                     <input
                       type="text"
                       required
-                      value={studentName}
-                      onChange={(e) => setStudentName(e.target.value)}
-                      placeholder="Ej. Mateo"
+                      value={studentFirstName}
+                      onChange={(e) => {
+                        setStudentFirstName(e.target.value);
+                        setStudentName(`${e.target.value.trim()} ${studentLastName.trim()}`.trim());
+                      }}
+                      placeholder="Ej. Luciano Andrés"
+                      className="input-field w-full rounded-lg px-4 py-3 text-xs"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs text-white/70 font-semibold mb-1">
+                      Apellidos del Estudiante *
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      value={studentLastName}
+                      onChange={(e) => {
+                        setStudentLastName(e.target.value);
+                        setStudentName(`${studentFirstName.trim()} ${e.target.value.trim()}`.trim());
+                      }}
+                      placeholder="Ej. Hernández Orellana"
                       className="input-field w-full rounded-lg px-4 py-3 text-xs"
                     />
                   </div>

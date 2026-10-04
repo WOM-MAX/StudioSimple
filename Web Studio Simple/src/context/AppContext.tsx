@@ -4,7 +4,7 @@ import { INITIAL_STUDENT, INITIAL_STUDENTS, INITIAL_PARENT, SAMPLE_LESSON } from
 import { LessonData } from '../types/lesson';
 import { initializeInjectedLessons } from '../lib/lesson-repository';
 import { validateAdminLogin, validateGuestPass, recordAuditLog } from '../lib/admin-repository';
-import { findUserByEmailOrRut, getAllRegisteredUsers } from '../lib/user-repository';
+import { findUserByEmailOrRut, getAllRegisteredUsers, updateUserPassword } from '../lib/user-repository';
 
 interface AppContextType {
   viewMode: ViewMode;
@@ -43,6 +43,7 @@ interface AppContextType {
   navigateWithAuth: (targetMode: ViewMode) => void;
   updateEnrolledGrades: (grades: GradeLevel[]) => void;
   activateSessionFromCheckout: (user: ParentUser, grade: GradeLevel) => void;
+  changeParentPassword: (newPassword: string) => Promise<{ success: boolean; error?: string }>;
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -61,10 +62,10 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       const parsed = JSON.parse(saved);
       if (Array.isArray(parsed) && parsed.length > 0) {
         return parsed.map((s: StudentProfile) => {
-          if (s.id === 'stu-101' || s.name === 'Mateo') {
+          if (s.id !== 'stu-101' && s.name !== 'Mateo') {
             const completed = Array.isArray(s.completedLessons) ? s.completedLessons : [];
-            const merged = Array.from(new Set([...completed, '7_mat_oa1_1', '7_mat_oa1_2']));
-            return { ...s, completedLessons: merged };
+            const sanitized = completed.filter((id: string) => id !== '7_mat_oa1_1' && id !== '7_mat_oa1_2');
+            return { ...s, completedLessons: sanitized };
           }
           return s;
         });
@@ -86,8 +87,11 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     try {
       const parsed = JSON.parse(saved);
       const completed = Array.isArray(parsed.completedLessons) ? parsed.completedLessons : [];
-      const merged = Array.from(new Set([...INITIAL_STUDENT.completedLessons, ...completed, '7_mat_oa1_1', '7_mat_oa1_2']));
-      return { ...INITIAL_STUDENT, ...parsed, completedLessons: merged, pin: parsed.pin || INITIAL_STUDENT.pin };
+      // Sanear lecciones mock para usuarios reales
+      const sanitized = (parsed.id !== 'stu-101' && parsed.name !== 'Mateo')
+        ? completed.filter((id: string) => id !== '7_mat_oa1_1' && id !== '7_mat_oa1_2')
+        : completed;
+      return { ...parsed, completedLessons: sanitized, pin: parsed.pin || INITIAL_STUDENT.pin };
     } catch {
       return INITIAL_STUDENT;
     }
@@ -278,10 +282,10 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         name: matchedFamily.studentName || 'Estudiante',
         grade: matchedFamily.enrolledGrades[0] || '7° Básico',
         avatar: 'buho',
-        curiosityPoints: 120,
-        gems: 8,
-        completedLessons: ['7_mat_oa1_1', '7_mat_oa1_2'],
-        currentStreakDays: 2,
+        curiosityPoints: 0,
+        gems: 0,
+        completedLessons: [],
+        currentStreakDays: 1,
         pin: matchedFamily.studentPin || pin
       };
       setStudent(stuProfile);
@@ -341,6 +345,45 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       if (passValid) {
         setParent(registeredUser);
         localStorage.setItem('estudio_simple_parent', JSON.stringify(registeredUser));
+
+        // Sincronizar y cargar el estudiante real asociado al apoderado
+        const targetStudentId = registeredUser.studentId || `stu-${registeredUser.id}`;
+        const targetStudentName = registeredUser.studentName || 'Estudiante';
+        const targetGrade = (registeredUser.enrolledGrades && registeredUser.enrolledGrades[0]) || '7° Básico';
+
+        setStudents((prev) => {
+          const existing = prev.find((s) => s.id === targetStudentId);
+          if (existing) {
+            const cleanCompleted = (existing.id !== 'stu-101' && existing.name !== 'Mateo')
+              ? existing.completedLessons.filter((id) => id !== '7_mat_oa1_1' && id !== '7_mat_oa1_2')
+              : existing.completedLessons;
+            const updated = { ...existing, name: targetStudentName, grade: targetGrade, completedLessons: cleanCompleted };
+            const nextList = prev.map((s) => (s.id === targetStudentId ? updated : s));
+            localStorage.setItem('estudio_simple_students', JSON.stringify(nextList));
+            setStudent(updated);
+            localStorage.setItem('estudio_simple_student', JSON.stringify(updated));
+            return nextList;
+          } else {
+            const newStu: StudentProfile = {
+              id: targetStudentId,
+              name: targetStudentName,
+              grade: targetGrade,
+              avatar: 'buho',
+              curiosityPoints: 0,
+              gems: 0,
+              completedLessons: [],
+              currentStreakDays: 1,
+              pin: registeredUser.studentPin || generatePin()
+            };
+            const nextList = [newStu, ...prev.filter((s) => s.id !== targetStudentId)];
+            localStorage.setItem('estudio_simple_students', JSON.stringify(nextList));
+            setStudent(newStu);
+            localStorage.setItem('estudio_simple_student', JSON.stringify(newStu));
+            return nextList;
+          }
+        });
+        setActiveStudentId(targetStudentId);
+        localStorage.setItem('estudio_simple_active_student_id', targetStudentId);
 
         const session: AuthSession = {
           role: 'parent',
@@ -461,6 +504,31 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     return newPin;
   };
 
+  const changeParentPassword = async (newPassword: string): Promise<{ success: boolean; error?: string }> => {
+    if (!newPassword || newPassword.trim().length < 6) {
+      return { success: false, error: 'La nueva contraseña debe tener al menos 6 caracteres.' };
+    }
+    const cleanPass = newPassword.trim();
+    setParent((prev) => {
+      const updated = { ...prev, password: cleanPass };
+      localStorage.setItem('estudio_simple_parent', JSON.stringify(updated));
+      return updated;
+    });
+
+    updateUserPassword(parent.id, cleanPass);
+
+    recordAuditLog({
+      actorId: parent.id || 'parent',
+      actorName: parent.name || 'Apoderado',
+      actorRole: 'user',
+      action: 'CHANGE_PASSWORD',
+      target: 'Cuenta del Apoderado',
+      details: `Cambio de contraseña exitoso para apoderado ${parent.name} (${parent.email})`
+    });
+
+    return { success: true };
+  };
+
   const activateSessionFromCheckout = (user: ParentUser, grade: GradeLevel) => {
     setParent(user);
     localStorage.setItem('estudio_simple_parent', JSON.stringify(user));
@@ -470,10 +538,10 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       name: user.studentName || 'Estudiante',
       grade: grade,
       avatar: 'buho',
-      curiosityPoints: 120,
-      gems: 8,
-      completedLessons: ['7_mat_oa1_1', '7_mat_oa1_2'],
-      currentStreakDays: 2,
+      curiosityPoints: 0,
+      gems: 0,
+      completedLessons: [],
+      currentStreakDays: 1,
       pin: user.studentPin || generatePin()
     };
     setStudent(newStudent);
@@ -663,6 +731,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         navigateWithAuth,
         updateEnrolledGrades,
         activateSessionFromCheckout,
+        changeParentPassword,
         activeSynchronizedLesson,
         setActiveSynchronizedLesson,
       }}

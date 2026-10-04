@@ -84,10 +84,10 @@ export const DEFAULT_PRICING_CONFIG: PricingConfig = {
     }
   ],
   pasarela: {
-    provider: 'simulated',
-    mercadoPagoPublicKey: '',
+    provider: 'mercadopago',
+    mercadoPagoPublicKey: 'APP_USR-d44f14cd-7e1c-4bd8-a138-e78e1bcbcd44',
     mercadoPagoAccessToken: '',
-    modoSandbox: true
+    modoSandbox: false
   },
   ultimaActualizacion: new Date().toISOString()
 };
@@ -104,9 +104,18 @@ export function loadPricingConfig(forceRefresh = false): PricingConfig {
     if (raw && !forceRefresh) {
       const parsed = JSON.parse(raw);
       const monthlyPlan = parsed?.planes?.find((p: any) => p.id === 'monthly');
-      // Si la versión en caché local tiene la oferta inactiva o desactualizada, restablecer con DEFAULT_PRICING_CONFIG
-      if (!monthlyPlan || monthlyPlan.enOferta !== true || monthlyPlan.precioOferta !== 1000) {
-        cachedPricingConfig = { ...DEFAULT_PRICING_CONFIG };
+      // Si la versión en caché local tiene la oferta inactiva, o la pasarela esta en simulated, migrar a mercadopago
+      if (!monthlyPlan || monthlyPlan.enOferta !== true || monthlyPlan.precioOferta !== 1000 || parsed?.pasarela?.provider === 'simulated') {
+        cachedPricingConfig = {
+          ...parsed,
+          planes: DEFAULT_PRICING_CONFIG.planes,
+          pasarela: {
+            ...DEFAULT_PRICING_CONFIG.pasarela,
+            ...(parsed?.pasarela || {}),
+            provider: 'mercadopago',
+            mercadoPagoPublicKey: 'APP_USR-d44f14cd-7e1c-4bd8-a138-e78e1bcbcd44'
+          }
+        };
         localStorage.setItem(LOCAL_STORAGE_PRICING_KEY, JSON.stringify(cachedPricingConfig));
       } else {
         cachedPricingConfig = parsed;

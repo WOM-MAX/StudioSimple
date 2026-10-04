@@ -44,7 +44,8 @@ export const ParentDashboard: React.FC = () => {
     switchActiveStudent,
     themeMode,
     toggleThemeMode,
-    generateStudentPin
+    generateStudentPin,
+    changeParentPassword
   } = useApp();
   const [selectedGrade, setSelectedGrade] = useState<string>(student?.grade || '7° Básico');
   const [selectedSubject, setSelectedSubject] = useState('Matemática');
@@ -57,6 +58,47 @@ export const ParentDashboard: React.FC = () => {
   const [isCancelling, setIsCancelling] = useState(false);
   const [cancelMessage, setCancelMessage] = useState<string | null>(null);
   const [isSubscriptionActive, setIsSubscriptionActive] = useState<boolean>(parent?.subscriptionActive !== false);
+
+  // Estados para cambio de clave del apoderado
+  const [showPasswordModal, setShowPasswordModal] = useState(false);
+  const [newPasswordInput, setNewPasswordInput] = useState('');
+  const [confirmPasswordInput, setConfirmPasswordInput] = useState('');
+  const [showNewPassword, setShowNewPassword] = useState(false);
+  const [isChangingPassword, setIsChangingPassword] = useState(false);
+  const [passwordChangeError, setPasswordChangeError] = useState<string | null>(null);
+  const [passwordChangeSuccess, setPasswordChangeSuccess] = useState(false);
+
+  const handleChangePassword = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setPasswordChangeError(null);
+    if (!newPasswordInput || newPasswordInput.trim().length < 6) {
+      setPasswordChangeError('La nueva contraseña debe tener al menos 6 caracteres.');
+      return;
+    }
+    if (newPasswordInput !== confirmPasswordInput) {
+      setPasswordChangeError('Las contraseñas no coinciden. Por favor verifícalas.');
+      return;
+    }
+    setIsChangingPassword(true);
+    try {
+      const res = await changeParentPassword(newPasswordInput.trim());
+      if (res.success) {
+        setPasswordChangeSuccess(true);
+        setTimeout(() => {
+          setShowPasswordModal(false);
+          setNewPasswordInput('');
+          setConfirmPasswordInput('');
+          setPasswordChangeSuccess(false);
+        }, 1800);
+      } else {
+        setPasswordChangeError(res.error || 'No fue posible actualizar la contraseña.');
+      }
+    } catch (err: any) {
+      setPasswordChangeError(err?.message || 'Error al actualizar la contraseña.');
+    } finally {
+      setIsChangingPassword(false);
+    }
+  };
 
   const handleCancelSubscription = async () => {
     setIsCancelling(true);
@@ -1029,6 +1071,24 @@ export const ParentDashboard: React.FC = () => {
                       </div>
                     </div>
 
+                    {/* Boton para cambiar clave del apoderado */}
+                    <div className="pt-2 border-t border-white/10">
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setNewPasswordInput('');
+                          setConfirmPasswordInput('');
+                          setPasswordChangeError(null);
+                          setPasswordChangeSuccess(false);
+                          setShowPasswordModal(true);
+                        }}
+                        className="w-full py-2.5 px-3 rounded-xl bg-[#12A1A4]/15 hover:bg-[#12A1A4]/25 border border-[#12A1A4]/40 text-[#57d6f3] hover:text-white font-bold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer shadow-xs"
+                      >
+                        <KeyRound size={15} />
+                        <span>Cambiar Contraseña / Clave de Acceso</span>
+                      </button>
+                    </div>
+
                     {/* Estado y Acciones de Suscripcion */}
                     <div className="pt-2 border-t border-white/10 space-y-2">
                       <div className="flex items-center justify-between text-[11px]">
@@ -1130,6 +1190,104 @@ export const ParentDashboard: React.FC = () => {
                 {isCancelling ? 'Cancelando...' : 'Confirmar Baja'}
               </button>
             </div>
+          </div>
+        </div>
+      )}
+      {/* MODAL DE CAMBIO DE CLAVE DEL APODERADO */}
+      {showPasswordModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-xs">
+          <div className="bg-[#10223D] border border-[#1C3257] rounded-3xl max-w-md w-full p-6 sm:p-8 space-y-5 shadow-2xl relative text-white">
+            <button
+              type="button"
+              onClick={() => setShowPasswordModal(false)}
+              className="absolute right-4 top-4 p-1.5 text-white/50 hover:text-white rounded-lg transition-colors cursor-pointer"
+              title="Cerrar"
+            >
+              <X size={18} />
+            </button>
+
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-2xl bg-[#12A1A4]/20 border border-[#12A1A4]/40 flex items-center justify-center text-[#57d6f3]">
+                <KeyRound size={20} />
+              </div>
+              <div>
+                <h3 className="text-lg font-bold">Cambiar Contraseña de Acceso</h3>
+                <p className="text-xs text-white/60">Portal del Apoderado EstudioSimple</p>
+              </div>
+            </div>
+
+            <p className="text-xs text-slate-300 leading-relaxed">
+              Define una nueva clave fácil de recordar para ingresar a tu cuenta familiar. Te recomendamos usar al menos 6 caracteres.
+            </p>
+
+            <form onSubmit={handleChangePassword} className="space-y-4">
+              <div>
+                <label className="block text-[11px] text-white/70 font-semibold mb-1">
+                  Nueva Contraseña *
+                </label>
+                <div className="relative">
+                  <input
+                    type={showNewPassword ? 'text' : 'password'}
+                    required
+                    value={newPasswordInput}
+                    onChange={(e) => setNewPasswordInput(e.target.value)}
+                    placeholder="Mínimo 6 caracteres"
+                    className="input-field w-full rounded-xl px-3 py-2.5 text-xs bg-black/30 border border-white/15 pr-14 text-white focus:outline-none focus:border-[#12A1A4]"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowNewPassword(!showNewPassword)}
+                    className="absolute right-3 top-2.5 text-white/40 hover:text-white text-[11px] font-semibold transition-colors"
+                  >
+                    {showNewPassword ? 'Ocultar' : 'Ver'}
+                  </button>
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-[11px] text-white/70 font-semibold mb-1">
+                  Confirmar Nueva Contraseña *
+                </label>
+                <input
+                  type={showNewPassword ? 'text' : 'password'}
+                  required
+                  value={confirmPasswordInput}
+                  onChange={(e) => setConfirmPasswordInput(e.target.value)}
+                  placeholder="Repite la nueva contraseña"
+                  className="input-field w-full rounded-xl px-3 py-2.5 text-xs bg-black/30 border border-white/15 text-white focus:outline-none focus:border-[#12A1A4]"
+                />
+              </div>
+
+              {passwordChangeError && (
+                <div className="p-2.5 rounded-xl bg-rose-500/20 border border-rose-500/40 text-rose-300 text-xs font-semibold">
+                  {passwordChangeError}
+                </div>
+              )}
+
+              {passwordChangeSuccess && (
+                <div className="p-2.5 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs font-bold flex items-center gap-2">
+                  <CheckCircle2 size={16} className="text-emerald-400 shrink-0" />
+                  <span>¡Contraseña actualizada exitosamente! Úsala en tu próximo acceso.</span>
+                </div>
+              )}
+
+              <div className="flex gap-3 pt-2">
+                <button
+                  type="button"
+                  onClick={() => setShowPasswordModal(false)}
+                  className="flex-1 py-2.5 px-4 rounded-xl bg-white/10 hover:bg-white/20 text-xs font-bold text-white transition-all cursor-pointer"
+                >
+                  Cancelar
+                </button>
+                <button
+                  type="submit"
+                  disabled={isChangingPassword || passwordChangeSuccess}
+                  className="flex-1 py-2.5 px-4 rounded-xl bg-[#12A1A4] hover:bg-[#0e8b8e] text-xs font-bold text-white transition-all cursor-pointer disabled:opacity-50 flex items-center justify-center gap-1.5"
+                >
+                  {isChangingPassword ? 'Guardando...' : 'Guardar Nueva Clave'}
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       )}

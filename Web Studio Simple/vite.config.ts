@@ -279,6 +279,87 @@ export default defineConfig({
             return;
           }
 
+          if (url === '/api/pricing/config' && req.method === 'GET') {
+            try {
+              const pricingFilePath = path.resolve(__dirname, '..', 'data', 'pricing_config.json');
+              let pricingConfig = null;
+              if (fs.existsSync(pricingFilePath)) {
+                try {
+                  pricingConfig = JSON.parse(fs.readFileSync(pricingFilePath, 'utf8'));
+                } catch {}
+              }
+              if (!pricingConfig) {
+                pricingConfig = {
+                  planes: [],
+                  cupones: [],
+                  pasarela: {
+                    provider: 'mercadopago',
+                    mercadoPagoPublicKey: 'APP_USR-d44f14cd-7e1c-4bd8-a138-e78e1bcbcd44',
+                    mercadoPagoAccessToken: '',
+                    modoSandbox: false
+                  }
+                };
+              }
+
+              res.setHeader('Content-Type', 'application/json');
+              return res.end(JSON.stringify({ success: true, data: pricingConfig }));
+            } catch (e: any) {
+              res.statusCode = 500;
+              res.setHeader('Content-Type', 'application/json');
+              return res.end(JSON.stringify({ success: false, error: e?.message }));
+            }
+          }
+
+          if (url === '/api/pricing/config' && req.method === 'POST') {
+            let body = '';
+            req.on('data', chunk => { body += chunk; });
+            req.on('end', () => {
+              try {
+                const pricingFilePath = path.resolve(__dirname, '..', 'data', 'pricing_config.json');
+                const dataDir = path.dirname(pricingFilePath);
+                if (!fs.existsSync(dataDir)) {
+                  fs.mkdirSync(dataDir, { recursive: true });
+                }
+                fs.writeFileSync(pricingFilePath, body, 'utf8');
+
+                res.setHeader('Content-Type', 'application/json');
+                return res.end(JSON.stringify({ success: true, message: 'Configuracion de precios actualizada (dev)' }));
+              } catch (e: any) {
+                res.statusCode = 500;
+                res.setHeader('Content-Type', 'application/json');
+                return res.end(JSON.stringify({ success: false, error: e?.message }));
+              }
+            });
+            return;
+          }
+
+          if (url === '/api/user/change-password' && req.method === 'POST') {
+            let body = '';
+            req.on('data', chunk => { body += chunk; });
+            req.on('end', () => {
+              try {
+                const parsed = JSON.parse(body || '{}');
+                if (!parsed.newPassword || parsed.newPassword.length < 6) {
+                  res.statusCode = 400;
+                  res.setHeader('Content-Type', 'application/json');
+                  return res.end(JSON.stringify({ success: false, message: 'La contraseña debe tener al menos 6 caracteres' }));
+                }
+
+                res.setHeader('Content-Type', 'application/json');
+                return res.end(JSON.stringify({
+                  success: true,
+                  updatedInDb: false,
+                  message: 'Contraseña actualizada exitosamente (dev)'
+                }));
+              } catch (e: any) {
+                res.statusCode = 500;
+                res.setHeader('Content-Type', 'application/json');
+                return res.end(JSON.stringify({ success: false, error: e?.message }));
+              }
+            });
+            return;
+          }
+
           next();
         });
       }
