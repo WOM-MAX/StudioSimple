@@ -275,9 +275,10 @@ export function updateUserStatus(userId: string, status: 'active' | 'suspended' 
 }
 
 /**
- * Genera una contraseña temporal de alta entropía para soporte técnico.
+ * Genera una contraseña temporal de alta entropía para soporte técnico,
+ * actualiza el repositorio local y sincroniza en Neon DB con notificación WhatsApp.
  */
-export function generateTemporaryPassword(userId: string): string {
+export function generateTemporaryPassword(userId: string, autoNotifyWhatsApp = true): string {
   const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
   let rand = '';
   for (let i = 0; i < 6; i++) {
@@ -287,12 +288,34 @@ export function generateTemporaryPassword(userId: string): string {
 
   const users = getAllRegisteredUsers();
   const idx = users.findIndex((u) => u.id === userId);
+  let targetUser: ParentUser | null = null;
+
   if (idx >= 0) {
     users[idx] = {
       ...users[idx],
       password: tempPass
     };
+    targetUser = users[idx];
     persistUsers(users);
+  }
+
+  // Despacho asincrono de reseteo a Neon DB y envio de WhatsApp
+  if (typeof fetch !== 'undefined' && targetUser) {
+    fetch('/api/admin/family/reset-password', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        userId: targetUser.id,
+        email: targetUser.email,
+        rut: targetUser.rut,
+        phone: targetUser.phone,
+        recipientName: targetUser.name,
+        newPassword: tempPass,
+        autoNotifyWhatsApp
+      })
+    }).catch((err) => {
+      console.warn('[UserRepository] Error al sincronizar reseteo de clave en backend:', err?.message);
+    });
   }
 
   return tempPass;

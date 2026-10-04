@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
-import { GraduationCap, Shield, KeyRound, Ticket, Delete, ArrowRight, ArrowLeft } from 'lucide-react';
+import { GraduationCap, Shield, KeyRound, Ticket, Delete, ArrowRight, ArrowLeft, ExternalLink } from 'lucide-react';
 
 export const LoginScreen: React.FC = () => {
   const { setViewMode, loginAsStudent, loginAsParent, loginAsGuest } = useApp();
@@ -273,6 +273,21 @@ export const LoginScreen: React.FC = () => {
                 <Shield size={18} />
                 <span>Ingresar al Portal</span>
               </button>
+
+              <div className="pt-1 text-center">
+                <a
+                  href={`https://wa.me/56984129012?text=${encodeURIComponent(
+                    `Hola equipo de EstudioSimple, necesito asistencia con el acceso a mi cuenta de apoderado (identificador: ${email.trim() || 'mi correo/RUN'}).`
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-white/70 hover:text-white underline decoration-white/30 hover:decoration-white transition-all inline-flex items-center gap-1.5"
+                  title="Contactar a soporte por WhatsApp"
+                >
+                  <span>¿Olvidaste tu contraseña o necesitas ayuda?</span>
+                  <ExternalLink size={12} className="opacity-70" />
+                </a>
+              </div>
 
               <p className="text-center text-[10px] text-white/40">
                 Para ingresar como Administrador general usa admin@estudiosimple.cl

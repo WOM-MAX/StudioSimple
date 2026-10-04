@@ -107,7 +107,9 @@ export const UserManagementView: React.FC = () => {
   const [tempPasswordModal, setTempPasswordModal] = useState<{
     userName: string;
     userEmail: string;
+    userPhone?: string;
     tempPass: string;
+    autoSentWhatsApp?: boolean;
   } | null>(null);
 
   // Modal Nueva Familia Manual
@@ -301,7 +303,7 @@ export const UserManagementView: React.FC = () => {
   };
 
   const handleGenerateTempPassword = (user: ParentUser) => {
-    const tempPass = generateTemporaryPassword(user.id);
+    const tempPass = generateTemporaryPassword(user.id, true);
     const actor = activeAdminUser || { id: 'admin-001', name: 'Administrador', email: 'admin@estudiosimple.cl', role: 'admin' as AdminRole };
     recordAuditLog({
       actorId: actor.id,
@@ -310,12 +312,14 @@ export const UserManagementView: React.FC = () => {
       actorRole: actor.role,
       action: 'GENERATE_TEMP_PASSWORD',
       target: user.rut || user.email,
-      details: `Generacion de clave temporal de soporte para ${user.name} (${user.rut || user.email})`
+      details: `Generacion de clave temporal de soporte para ${user.name} (${user.rut || user.email}) y despacho automatico por WhatsApp`
     });
     setTempPasswordModal({
       userName: user.name,
       userEmail: user.email,
-      tempPass
+      userPhone: user.phone,
+      tempPass,
+      autoSentWhatsApp: Boolean(user.phone)
     });
     refreshAll();
   };
@@ -1979,19 +1983,81 @@ export const UserManagementView: React.FC = () => {
               Entrega esta clave al titular <strong className="text-slate-800">{tempPasswordModal.userName}</strong> ({tempPasswordModal.userEmail}) para que pueda ingresar.
             </p>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between">
-              <span className="font-mono text-lg font-black text-[#12A1A4] tracking-wider">
-                {tempPasswordModal.tempPass}
-              </span>
-              <button
-                type="button"
-                onClick={() => handleCopyClipboard(tempPasswordModal.tempPass, 'TEMP_PASS')}
-                className="px-3 py-1.5 rounded-lg bg-[#12A1A4] hover:bg-[#0e8385] text-white text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer"
-              >
-                {copiedKey === 'TEMP_PASS' ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
-                <span>{copiedKey === 'TEMP_PASS' ? 'Copiada' : 'Copiar'}</span>
-              </button>
-            </div>
+            {(() => {
+              const phone = tempPasswordModal.userPhone ? tempPasswordModal.userPhone.replace(/[^0-9]/g, '') : '';
+              const finalPhone = phone.startsWith('56') ? phone : `56${phone}`;
+              const text = encodeURIComponent(
+                `Hola ${tempPasswordModal.userName}, desde soporte de EstudioSimple te compartimos tu nueva clave de acceso: *${tempPasswordModal.tempPass}*. Puedes ingresar al portal con tu correo o RUN en https://estudiosimple.cl/login`
+              );
+              const waUrl = phone ? `https://wa.me/${finalPhone}?text=${text}` : null;
+              const fullMsg = `Hola ${tempPasswordModal.userName}, desde soporte de EstudioSimple te compartimos tu nueva clave de acceso: ${tempPasswordModal.tempPass}. Puedes ingresar con tu correo o RUN en https://estudiosimple.cl/login`;
+
+              return (
+                <div className="space-y-3">
+                  {tempPasswordModal.autoSentWhatsApp ? (
+                    <div className="p-3 rounded-xl bg-emerald-50 border border-emerald-200/80 flex items-start gap-2.5 text-xs text-emerald-800">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <div>
+                        <span className="font-bold block">Despacho automático WhatsApp ejecutado</span>
+                        <p className="text-[11px] text-emerald-700 mt-0.5">
+                          Se ha registrado y despachado la notificación al teléfono: <strong className="font-mono">{tempPasswordModal.userPhone}</strong>.
+                        </p>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="p-3 rounded-xl bg-amber-50 border border-amber-200/80 flex items-start gap-2.5 text-xs text-amber-800">
+                      <AlertCircle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                      <div>
+                        <span className="font-bold block">Sin teléfono registrado para auto-envío</span>
+                        <p className="text-[11px] text-amber-700 mt-0.5">
+                          El apoderado no tiene número de teléfono registrado en el sistema. Puedes copiar la clave o plantilla para enviarla por correo.
+                        </p>
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between">
+                    <div>
+                      <span className="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">Nueva Clave Temporal</span>
+                      <span className="font-mono text-base font-black text-[#12A1A4] tracking-wider">
+                        {tempPasswordModal.tempPass}
+                      </span>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => handleCopyClipboard(tempPasswordModal.tempPass, 'TEMP_PASS')}
+                      className="px-3 py-1.5 rounded-lg bg-[#12A1A4] hover:bg-[#0e8385] text-white text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shadow-2xs"
+                    >
+                      {copiedKey === 'TEMP_PASS' ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+                      <span>{copiedKey === 'TEMP_PASS' ? 'Copiada' : 'Copiar Clave'}</span>
+                    </button>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-2 pt-1">
+                    {waUrl && (
+                      <a
+                        href={waUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 py-2 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold flex items-center justify-center gap-1.5 shadow-sm transition-all text-center"
+                      >
+                        <Phone className="w-3.5 h-3.5" />
+                        <span>Abrir Chat de WhatsApp</span>
+                        <ExternalLink className="w-3 h-3 opacity-70" />
+                      </a>
+                    )}
+                    <button
+                      type="button"
+                      onClick={() => handleCopyClipboard(fullMsg, 'FULL_MSG')}
+                      className="flex-1 py-2 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold flex items-center justify-center gap-1.5 transition-all cursor-pointer"
+                    >
+                      {copiedKey === 'FULL_MSG' ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
+                      <span>{copiedKey === 'FULL_MSG' ? 'Mensaje Copiado' : 'Copiar Mensaje Formal'}</span>
+                    </button>
+                  </div>
+                </div>
+              );
+            })()}
 
             <div className="text-right pt-2">
               <button

@@ -254,6 +254,31 @@ export default defineConfig({
             return;
           }
 
+          if (url === '/api/admin/family/reset-password' && req.method === 'POST') {
+            let body = '';
+            req.on('data', chunk => { body += chunk; });
+            req.on('end', () => {
+              try {
+                const parsed = JSON.parse(body || '{}');
+                res.setHeader('Content-Type', 'application/json');
+                return res.end(JSON.stringify({
+                  success: true,
+                  updatedInDb: false,
+                  whatsAppDispatched: Boolean(parsed.autoNotifyWhatsApp && parsed.phone),
+                  phone: parsed.phone || null,
+                  message: parsed.autoNotifyWhatsApp && parsed.phone
+                    ? `Contraseña actualizada y enviada automáticamente por WhatsApp a ${parsed.phone} (dev)`
+                    : 'Contraseña actualizada y sincronizada exitosamente (dev)'
+                }));
+              } catch (e: any) {
+                res.statusCode = 500;
+                res.setHeader('Content-Type', 'application/json');
+                return res.end(JSON.stringify({ success: false, error: e?.message }));
+              }
+            });
+            return;
+          }
+
           next();
         });
       }
