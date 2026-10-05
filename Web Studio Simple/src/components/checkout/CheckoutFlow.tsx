@@ -1,21 +1,12 @@
 import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
-import { ShieldCheck, CheckCircle2, AlertCircle, Check, KeyRound, Copy, GraduationCap, Shield, UserCheck, ArrowRight, Tag, Sparkles, CreditCard, HelpCircle, Lock, Eye, EyeOff } from 'lucide-react';
+import { ShieldCheck, CheckCircle2, AlertCircle, Check, KeyRound, Copy, GraduationCap, Shield, UserCheck, ArrowRight, Tag, Sparkles, CreditCard, HelpCircle, Lock, Eye, EyeOff, MessageCircle } from 'lucide-react';
 import { GradeLevel, ParentUser } from '../../types';
 import { validateRut, formatRutOnInput } from '../../lib/rut-validator';
 import { registerUserFromCheckout } from '../../lib/user-repository';
 import { recordAuditLog } from '../../lib/admin-repository';
 import { loadPricingConfig, validateCoupon } from '../../lib/pricing-repository';
-import { PricingConfig, DiscountCoupon, CardBrand } from '../../types/pricing';
-import {
-  detectCardBrand,
-  formatCardNumber,
-  formatExpiryDate,
-  validateCardForm,
-  validateLuhn,
-  validateExpiryDate,
-  validateCVV
-} from '../../lib/card-validator';
+import { PricingConfig, DiscountCoupon } from '../../types/pricing';
 
 function formatChileanPhone(value: string): string {
   const digits = value.replace(/\D/g, '');
@@ -35,6 +26,22 @@ function formatChileanPhone(value: string): string {
     return `+56 9 ${rest}`;
   }
   return `+56 9 ${rest.slice(0, 4)} ${rest.slice(4)}`;
+}
+
+function buildWhatsAppUrl(phoneStr: string, text: string): string {
+  const digits = (phoneStr || '').replace(/\D/g, '');
+  let targetDigits = digits;
+  if (digits.startsWith('56')) {
+    targetDigits = digits;
+  } else if (digits.startsWith('9') && digits.length === 9) {
+    targetDigits = `56${digits}`;
+  } else if (digits.length === 8) {
+    targetDigits = `569${digits}`;
+  }
+  const encoded = encodeURIComponent(text);
+  return targetDigits.length >= 8
+    ? `https://wa.me/${targetDigits}?text=${encoded}`
+    : `https://api.whatsapp.com/send?text=${encoded}`;
 }
 
 export const CheckoutFlow: React.FC = () => {
@@ -92,21 +99,7 @@ export const CheckoutFlow: React.FC = () => {
   const [studentRun, setStudentRun] = useState('');
   const [grade, setGrade] = useState<GradeLevel>('7° Básico');
 
-  // Estado del Pago Estandarizado
-  const [cardNumber, setCardNumber] = useState('');
-  const [cardholderName, setCardholderName] = useState('');
-  const [cardExpiry, setCardExpiry] = useState('');
-  const [cardCvv, setCardCvv] = useState('');
-  const [cardType, setCardType] = useState<'debito' | 'credito'>('debito');
-  const [installments, setInstallments] = useState<number>(1);
-  const [paymentMethodOption, setPaymentMethodOption] = useState<'card_direct' | 'mercadopago_wallet'>('card_direct');
-  const [cardErrors, setCardErrors] = useState<{ cardNumber?: string; cardholderName?: string; cardExpiry?: string; cardCvv?: string }>({});
-  const [showCvvHelp, setShowCvvHelp] = useState(false);
   const [copiedField, setCopiedField] = useState<string | null>(null);
-
-  // Computados de tarjeta
-  const cardBrand: CardBrand = detectCardBrand(cardNumber);
-  const effectiveCardholder = cardholderName.trim() || `${firstName.trim()} ${lastName.trim()}`.trim() || 'NOMBRE TITULAR';
 
   // Detección e interceptación de retorno desde Mercado Pago / Webpay
   React.useEffect(() => {
@@ -126,6 +119,11 @@ export const CheckoutFlow: React.FC = () => {
       if (savedPending) {
         try {
           const pendingData = JSON.parse(savedPending);
+          if (pendingData.phone) setPhone(pendingData.phone);
+          if (pendingData.password) setPassword(pendingData.password);
+          if (pendingData.rut) setRut(pendingData.rut);
+          if (pendingData.email) setEmail(pendingData.email);
+          if (pendingData.studentRun) setStudentRun(pendingData.studentRun);
           const { user } = registerUserFromCheckout({
             rut: pendingData.rut,
             name: (pendingData.name || `${pendingData.firstName || ''} ${pendingData.lastName || ''}`.trim() || 'APODERADO ESTUDIOSIMPLE').toUpperCase(),
@@ -228,69 +226,6 @@ export const CheckoutFlow: React.FC = () => {
   const isRutValid = rut.trim().length >= 8 ? validateRut(rut) : null;
   const isStudentRunValid = studentRun.trim().length >= 8 ? validateRut(studentRun) : null;
 
-  const handleCardNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const formatted = formatCardNumber(e.target.value);
-    setCardNumber(formatted);
-    if (cardErrors.cardNumber) {
-      setCardErrors((prev) => ({ ...prev, cardNumber: undefined }));
-    }
-  };
-
-  const handleCardNumberBlur = () => {
-    const digits = cardNumber.replace(/\D/g, '');
-    if (!digits) return;
-    const minLength = cardBrand === 'amex' ? 15 : 16;
-    if (digits.length < minLength) {
-      setCardErrors((prev) => ({
-        ...prev,
-        cardNumber: `El número debe tener al menos ${minLength} dígitos (ingresaste ${digits.length}).`
-      }));
-    } else if (!validateLuhn(digits)) {
-      setCardErrors((prev) => ({
-        ...prev,
-        cardNumber: 'Número de tarjeta inválido. Revisa que no haya errores de tipeo.'
-      }));
-    }
-  };
-
-  const handleExpiryChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const formatted = formatExpiryDate(e.target.value);
-    setCardExpiry(formatted);
-    if (cardErrors.cardExpiry) {
-      setCardErrors((prev) => ({ ...prev, cardExpiry: undefined }));
-    }
-  };
-
-  const handleExpiryBlur = () => {
-    if (!cardExpiry) return;
-    const res = validateExpiryDate(cardExpiry);
-    if (!res.isValid) {
-      setCardErrors((prev) => ({
-        ...prev,
-        cardExpiry: res.message || 'Fecha de expiración inválida.'
-      }));
-    }
-  };
-
-  const handleCvvChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const digits = e.target.value.replace(/\D/g, '').slice(0, cardBrand === 'amex' ? 4 : 3);
-    setCardCvv(digits);
-    if (cardErrors.cardCvv) {
-      setCardErrors((prev) => ({ ...prev, cardCvv: undefined }));
-    }
-  };
-
-  const handleCvvBlur = () => {
-    if (!cardCvv) return;
-    const res = validateCVV(cardCvv, cardBrand);
-    if (!res.isValid) {
-      setCardErrors((prev) => ({
-        ...prev,
-        cardCvv: res.message || 'Código CVV inválido.'
-      }));
-    }
-  };
-
   const handleCopyField = (text: string, fieldId: string) => {
     if (typeof navigator !== 'undefined' && navigator.clipboard) {
       navigator.clipboard.writeText(text);
@@ -317,11 +252,34 @@ export const CheckoutFlow: React.FC = () => {
     handleCopyField(summary, 'ALL_CREDENTIALS');
   };
 
+  const parentPhone = createdUser?.phone || phone;
+  const userRut = createdUser?.rut || rut || 'Sin RUN';
+  const userPass = createdUser?.password || password || 'Temp-123456!';
+  const userEmail = createdUser?.email || email || '';
+  const studentFull = createdUser?.studentName || studentName || 'Estudiante';
+  const pin = createdUser?.studentPin || '123456';
+  const targetGrade = grade || '7° Básico';
+
+  const waMessage = [
+    `*ESTUDIOSIMPLE - CREDENCIALES OFICIALES DE ACCESO*`,
+    ``,
+    `¡Hola! Tu suscripción para *${studentFull}* (${targetGrade}) ha sido activada con éxito. Guarda este mensaje con tus claves oficiales:`,
+    ``,
+    `*DATOS DEL APODERADO / TUTOR:*`,
+    `• Usuario (RUN): *${userRut}*`,
+    `• Correo: ${userEmail}`,
+    `• Contraseña: *${userPass}*`,
+    `• Portal del Apoderado: https://estudiosimple.cl`,
+    ``,
+    `*DATOS DEL ESTUDIANTE:*`,
+    `• Alumno: *${studentFull}* (${targetGrade})`,
+    `• PIN de Ingreso Directo: *${pin}*`,
+    ``,
+    `El estudiante ingresa a su salón de clases digitando únicamente su PIN de 6 dígitos en https://estudiosimple.cl`
+  ].join('\n');
+
   const handleShareWhatsApp = () => {
-    const pin = createdUser?.studentPin || '123456';
-    const sName = createdUser?.studentName || studentName || 'Estudiante';
-    const text = `*ESTUDIOSIMPLE - ACCESO FAMILIAR OFICIAL*\n\n¡Bienvenida/o! Se ha activado el acceso oficial a ${grade}:\n\n*ESTUDIANTE:*\n- Alumno: ${sName}\n- Curso: ${grade}\n- PIN de ingreso directo: *${pin}*\n\n*APODERADO:*\n- RUN: ${createdUser?.rut || rut}\n- Correo: ${createdUser?.email || email}\n- Portal: https://estudiosimple.cl\n\nEl estudiante ingresa a su salón digitando solo el PIN de 6 dígitos.`;
-    const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
+    const url = buildWhatsAppUrl(parentPhone, waMessage);
     window.open(url, '_blank');
   };
 
@@ -844,374 +802,121 @@ export const CheckoutFlow: React.FC = () => {
                 </div>
               </section>
 
-              {/* STEP 3: MÉTODO DE PAGO */}
-              <section className="bento-card p-6 md:p-8 rounded-2xl space-y-4">
-                <h2 className="text-xl font-bold text-[#57d6f3] flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <span className="bg-[#123a72] text-[#85a6e4] rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">
+              {/* STEP 3: MÉTODO DE PAGO Y CONFIRMACIÓN */}
+              <section className="bento-card p-6 md:p-8 rounded-2xl space-y-5">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-4">
+                  <h2 className="text-xl font-bold text-[#57d6f3] flex items-center gap-3">
+                    <span className="bg-[#123a72] text-[#85a6e4] rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold shrink-0">
                       3
                     </span>
-                    <span>Método de Pago Seguro (Webpay / Tarjeta)</span>
-                  </div>
-                  <div className="flex items-center gap-1.5 text-xs text-emerald-400 font-semibold bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
+                    <span>Método de Pago Seguro (Mercado Pago / Webpay)</span>
+                  </h2>
+                  <div className="flex items-center gap-1.5 text-xs text-emerald-400 font-semibold bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20 w-fit">
                     <Lock size={12} />
-                    <span>Encriptación SSL</span>
+                    <span>Conexión Encriptada SSL 256-bit</span>
                   </div>
-                </h2>
+                </div>
 
-                {/* Conmutador de modo si Mercado Pago está disponible */}
-                {pricingConfig.pasarela.provider === 'mercadopago' && finalPrice > 0 && (
-                  <div className="grid grid-cols-2 gap-3 p-1.5 bg-black/20 rounded-xl border border-white/10">
-                    <button
-                      type="button"
-                      onClick={() => setPaymentMethodOption('card_direct')}
-                      className={`py-2 px-3 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer ${
-                        paymentMethodOption === 'card_direct'
-                          ? 'bg-[#12A1A4] text-white shadow-md'
-                          : 'text-gray-300 hover:text-white'
-                      }`}
-                    >
-                      <CreditCard size={14} />
-                      <span>Tarjeta Débito / Crédito</span>
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setPaymentMethodOption('mercadopago_wallet')}
-                      className={`py-2 px-3 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer ${
-                        paymentMethodOption === 'mercadopago_wallet'
-                          ? 'bg-[#009EE3] text-white shadow-md'
-                          : 'text-gray-300 hover:text-white'
-                      }`}
-                    >
-                      <span>Mercado Pago / Saldo / Webpay</span>
-                    </button>
-                  </div>
-                )}
-
-                {/* VISTA PREVIA INTERACTIVA DE LA TARJETA (SOLO LECTURA) */}
-                <div className="space-y-1.5">
-                  <div className="flex items-center justify-between text-[11px] text-white/60 font-semibold px-1">
-                    <span>VISTA PREVIA DE TU TARJETA</span>
-                    <span className="text-[#57d6f3] uppercase font-bold tracking-wider">
-                      {cardBrand === 'visa'
-                        ? 'Visa'
-                        : cardBrand === 'mastercard'
-                        ? 'Mastercard'
-                        : cardBrand === 'amex'
-                        ? 'American Express'
-                        : cardBrand === 'diners'
-                        ? 'Diners Club'
-                        : 'Webpay Plus / Redcompra'}
-                    </span>
-                  </div>
-
-                  <div className="bg-gradient-to-br from-[#123a72] via-[#1a4484] to-[#1a2332] rounded-2xl p-6 border border-white/20 relative overflow-hidden shadow-2xl">
-                    <div className="absolute -right-10 -top-10 w-36 h-36 bg-[#57d6f3]/25 rounded-full blur-2xl pointer-events-none" />
-                    <div className="absolute -left-10 -bottom-10 w-32 h-32 bg-[#F8AD22]/15 rounded-full blur-2xl pointer-events-none" />
-
-                    {/* Fila Superior: Marca y Chip */}
-                    <div className="flex justify-between items-center mb-6 relative z-10">
-                      <div className="flex items-center gap-2.5">
-                        {/* Chip Metálico */}
-                        <div className="w-10 h-7 rounded-md bg-gradient-to-br from-amber-200 via-amber-300 to-amber-500 border border-amber-600/40 shadow-inner flex flex-col justify-around p-1">
-                          <div className="w-full h-px bg-amber-700/40" />
-                          <div className="w-full h-px bg-amber-700/40" />
-                        </div>
-                        <span className="text-white text-xs font-mono font-bold tracking-wider uppercase opacity-90">
-                          {cardType === 'debito' ? 'DÉBITO' : 'CRÉDITO'}
+                {/* Resumen Sobrio del Plan */}
+                <div className="bg-gradient-to-br from-[#123a72]/60 via-[#1a4484]/40 to-[#10223D] border border-white/15 rounded-2xl p-5 md:p-6 shadow-xl space-y-4">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-white/10">
+                    <div>
+                      <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#F8AD22] block mb-0.5">
+                        Total Final a Pagar Hoy
+                      </span>
+                      <div className="text-2xl md:text-3xl font-black text-white flex items-baseline gap-2">
+                        <span>${finalPrice.toLocaleString('es-CL')} CLP</span>
+                        <span className="text-xs font-semibold text-white/60">
+                          {selectedPlan === 'monthly' ? '(Mensualidad)' : selectedPlan === 'full' ? '(Acceso Anual Completo)' : '(Prueba Gratuita)'}
                         </span>
-                      </div>
-
-                      {/* Logotipo de Franquicia */}
-                      <div className="flex items-center">
-                        {cardBrand === 'mastercard' ? (
-                          <div className="flex items-center -space-x-2">
-                            <div className="w-7 h-7 rounded-full bg-[#EB001B] shadow-md" />
-                            <div className="w-7 h-7 rounded-full bg-[#F79E1B]/90 shadow-md" />
-                          </div>
-                        ) : cardBrand === 'visa' ? (
-                          <span className="text-white font-black italic text-xl tracking-tighter drop-shadow-md">
-                            VISA
-                          </span>
-                        ) : cardBrand === 'amex' ? (
-                          <span className="text-[#007AC1] bg-white font-black text-xs px-2 py-1 rounded-sm tracking-wider">
-                            AMEX
-                          </span>
-                        ) : (
-                          <div className="flex items-center gap-1.5 bg-black/30 px-2.5 py-1 rounded-md border border-white/10">
-                            <div className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
-                            <span className="text-[10px] font-bold text-white tracking-widest uppercase">
-                              WEBPAY PLUS
-                            </span>
-                          </div>
-                        )}
                       </div>
                     </div>
 
-                    {/* Número de Tarjeta en el Plástico */}
-                    <div className="font-mono text-xl sm:text-2xl text-white tracking-[0.18em] mb-6 relative z-10 opacity-95 drop-shadow-sm min-h-[32px] flex items-center">
-                      {cardNumber || '•••• •••• •••• ••••'}
+                    <div className="bg-[#009EE3]/15 border border-[#009EE3]/40 rounded-xl px-4 py-2 text-left sm:text-right">
+                      <span className="text-[10px] uppercase font-bold text-[#009EE3] block">Pasarela Oficial</span>
+                      <span className="text-xs font-extrabold text-white">Mercado Pago · Webpay Plus</span>
                     </div>
+                  </div>
 
-                    {/* Fila Inferior: Titular y Expiración */}
-                    <div className="flex justify-between items-end text-white/80 text-xs uppercase relative z-10 font-mono">
-                      <div className="max-w-[70%]">
-                        <span className="block opacity-60 text-[9px] font-sans font-semibold tracking-wider mb-0.5">
-                          TITULAR DE LA TARJETA
-                        </span>
-                        <span className="font-bold text-white tracking-wider truncate block">
-                          {effectiveCardholder.toUpperCase()}
-                        </span>
-                      </div>
-                      <div className="text-right">
-                        <span className="block opacity-60 text-[9px] font-sans font-semibold tracking-wider mb-0.5">
-                          EXPIRA
-                        </span>
-                        <span className="font-bold text-white tracking-wider">
-                          {cardExpiry || 'MM/AA'}
-                        </span>
-                      </div>
+                  {/* Beneficios Incluidos en el Pago */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-white/80">
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 size={15} className="text-emerald-400 shrink-0" />
+                      <span>Acceso 100% al curso completo de {grade}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 size={15} className="text-emerald-400 shrink-0" />
+                      <span>Todas las asignaturas del temario MINEDUC</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 size={15} className="text-emerald-400 shrink-0" />
+                      <span>Activación automática inmediata post-pago</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 size={15} className="text-emerald-400 shrink-0" />
+                      <span>Sin cobros ocultos ni letra chica</span>
                     </div>
                   </div>
                 </div>
 
-                {/* FORMULARIO ESTANDARIZADO DE ENTRADA DE DATOS */}
-                {paymentMethodOption === 'card_direct' ? (
-                  <div className="space-y-4 pt-2">
-                    {/* Campo 1: Número de Tarjeta */}
-                    <div>
-                      <div className="flex justify-between items-center mb-1">
-                        <label className="block text-xs text-white/80 font-bold">
-                          Número de Tarjeta (16 dígitos) *
-                        </label>
-                        <span className="text-[10px] text-[#57d6f3] font-semibold uppercase">
-                          {cardBrand !== 'generic' ? cardBrand.toUpperCase() : 'Débito o Crédito'}
-                        </span>
-                      </div>
-                      <div className="relative">
-                        <input
-                          type="text"
-                          inputMode="numeric"
-                          value={cardNumber}
-                          onChange={handleCardNumberChange}
-                          onBlur={handleCardNumberBlur}
-                          placeholder="4242 •••• •••• 4242"
-                          maxLength={cardBrand === 'amex' ? 17 : 19}
-                          className={`input-field w-full rounded-xl px-4 py-3.5 text-sm font-mono tracking-wider ${
-                            cardErrors.cardNumber ? 'border-rose-500 bg-rose-500/10' : ''
-                          }`}
-                        />
-                        <div className="absolute right-3.5 top-1/2 -translate-y-1/2 flex items-center gap-1.5 pointer-events-none">
-                          {cardBrand === 'mastercard' ? (
-                            <span className="text-[10px] font-black bg-[#F79E1B] text-[#0A192F] px-2 py-0.5 rounded-md">
-                              MC
-                            </span>
-                          ) : cardBrand === 'visa' ? (
-                            <span className="text-[10px] font-black bg-[#1a4484] text-white px-2 py-0.5 rounded-md">
-                              VISA
-                            </span>
-                          ) : cardBrand === 'amex' ? (
-                            <span className="text-[10px] font-black bg-[#007AC1] text-white px-2 py-0.5 rounded-md">
-                              AMEX
-                            </span>
-                          ) : (
-                            <CreditCard size={18} className="text-white/40" />
-                          )}
-                        </div>
-                      </div>
-                      {cardErrors.cardNumber && (
-                        <p className="text-[11px] text-rose-400 font-semibold mt-1">
-                          {cardErrors.cardNumber}
-                        </p>
-                      )}
+                {/* Medios de Pago Soportados */}
+                <div className="bg-black/20 border border-white/10 rounded-2xl p-4 md:p-5 space-y-3">
+                  <div className="text-[11px] font-bold text-white/70 uppercase tracking-wider">
+                    Medios de pago soportados a través de Mercado Pago:
+                  </div>
+
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                    {/* Débito Redcompra */}
+                    <div className="bg-white/5 border border-white/10 rounded-xl p-3 text-center flex flex-col items-center justify-center gap-1.5">
+                      <CreditCard size={20} className="text-[#57d6f3]" />
+                      <span className="text-xs font-bold text-white">Débito Redcompra</span>
+                      <span className="text-[10px] text-white/50">CuentaRUT y Bancos</span>
                     </div>
 
-                    {/* Campo 2: Nombre Impreso en la Tarjeta */}
-                    <div>
-                      <label className="block text-xs text-white/80 font-bold mb-1">
-                        Nombre Impreso en la Tarjeta *
-                      </label>
-                      <input
-                        type="text"
-                        value={cardholderName}
-                        onChange={(e) => {
-                          setCardholderName(e.target.value.toUpperCase());
-                          if (cardErrors.cardholderName) {
-                            setCardErrors((prev) => ({ ...prev, cardholderName: undefined }));
-                          }
-                        }}
-                        placeholder={`Ej: ${(firstName ? `${firstName} ${lastName}` : 'JUAN PÉREZ').toUpperCase()}`}
-                        className={`input-field w-full rounded-xl px-4 py-3.5 text-sm uppercase tracking-wide ${
-                          cardErrors.cardholderName ? 'border-rose-500 bg-rose-500/10' : ''
-                        }`}
-                      />
-                      {cardErrors.cardholderName && (
-                        <p className="text-[11px] text-rose-400 font-semibold mt-1">
-                          {cardErrors.cardholderName}
-                        </p>
-                      )}
-                      <p className="text-[10px] text-white/50 mt-1">
-                        Escribe el nombre tal como figura impreso en el plástico bancario.
-                      </p>
+                    {/* Tarjetas de Crédito */}
+                    <div className="bg-white/5 border border-white/10 rounded-xl p-3 text-center flex flex-col items-center justify-center gap-1.5">
+                      <CreditCard size={20} className="text-[#F8AD22]" />
+                      <span className="text-xs font-bold text-white">Tarjetas de Crédito</span>
+                      <span className="text-[10px] text-white/50">Visa, Mastercard, AMEX</span>
                     </div>
 
-                    {/* Fila 3: Expiración (MM/AA) y Código de Seguridad (CVV) */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      {/* Fecha de Vencimiento */}
-                      <div>
-                        <label className="block text-xs text-white/80 font-bold mb-1">
-                          Fecha de Vencimiento (MM / AA) *
-                        </label>
-                        <input
-                          type="text"
-                          inputMode="numeric"
-                          value={cardExpiry}
-                          onChange={handleExpiryChange}
-                          onBlur={handleExpiryBlur}
-                          placeholder="MM / AA"
-                          maxLength={5}
-                          className={`input-field w-full rounded-xl px-4 py-3.5 text-sm font-mono text-center tracking-widest ${
-                            cardErrors.cardExpiry ? 'border-rose-500 bg-rose-500/10' : ''
-                          }`}
-                        />
-                        {cardErrors.cardExpiry && (
-                          <p className="text-[11px] text-rose-400 font-semibold mt-1">
-                            {cardErrors.cardExpiry}
-                          </p>
-                        )}
-                      </div>
-
-                      {/* Código CVV */}
-                      <div>
-                        <div className="flex justify-between items-center mb-1">
-                          <label className="block text-xs text-white/80 font-bold">
-                            Código de Seguridad (CVV) *
-                          </label>
-                          <button
-                            type="button"
-                            onClick={() => setShowCvvHelp(!showCvvHelp)}
-                            className="text-[10px] text-[#57d6f3] hover:underline flex items-center gap-1 cursor-pointer"
-                          >
-                            <HelpCircle size={12} />
-                            <span>¿Dónde está?</span>
-                          </button>
-                        </div>
-                        <input
-                          type="password"
-                          inputMode="numeric"
-                          value={cardCvv}
-                          onChange={handleCvvChange}
-                          onBlur={handleCvvBlur}
-                          placeholder={cardBrand === 'amex' ? '4 dígitos' : '3 dígitos'}
-                          maxLength={cardBrand === 'amex' ? 4 : 3}
-                          className={`input-field w-full rounded-xl px-4 py-3.5 text-sm font-mono text-center tracking-widest ${
-                            cardErrors.cardCvv ? 'border-rose-500 bg-rose-500/10' : ''
-                          }`}
-                        />
-                        {cardErrors.cardCvv && (
-                          <p className="text-[11px] text-rose-400 font-semibold mt-1">
-                            {cardErrors.cardCvv}
-                          </p>
-                        )}
-                        {showCvvHelp && (
-                          <div className="p-2.5 rounded-lg bg-black/40 border border-white/10 text-[10px] text-gray-300 mt-1.5 leading-relaxed">
-                            Son los 3 dígitos ubicados en el reverso de la tarjeta sobre la franja de firma (o 4 dígitos en el frente para American Express).
-                          </div>
-                        )}
-                      </div>
+                    {/* Webpay Plus */}
+                    <div className="bg-white/5 border border-white/10 rounded-xl p-3 text-center flex flex-col items-center justify-center gap-1.5">
+                      <ShieldCheck size={20} className="text-emerald-400" />
+                      <span className="text-xs font-bold text-white">Webpay Plus</span>
+                      <span className="text-[10px] text-white/50">Transbank Oficial</span>
                     </div>
 
-                    {/* Fila 4: Tipo de Tarjeta y Cuotas */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
-                      <div>
-                        <label className="block text-xs text-white/80 font-bold mb-1">
-                          Tipo de Tarjeta
-                        </label>
-                        <select
-                          value={cardType}
-                          onChange={(e) => setCardType(e.target.value as 'debito' | 'credito')}
-                          className="input-field w-full rounded-xl px-4 py-3.5 text-xs font-semibold cursor-pointer"
-                        >
-                          <option value="debito" className="bg-[#10223D] text-white">
-                            Débito (Redcompra · 1 solo pago)
-                          </option>
-                          <option value="credito" className="bg-[#10223D] text-white">
-                            Crédito (Visa, Mastercard, AMEX)
-                          </option>
-                        </select>
-                      </div>
-
-                      {cardType === 'credito' ? (
-                        <div>
-                          <label className="block text-xs text-white/80 font-bold mb-1">
-                            Cantidad de Cuotas
-                          </label>
-                          <select
-                            value={installments}
-                            onChange={(e) => setInstallments(Number(e.target.value))}
-                            className="input-field w-full rounded-xl px-4 py-3.5 text-xs font-semibold cursor-pointer"
-                          >
-                            <option value={1} className="bg-[#10223D] text-white">
-                              1 cuota al contado (${finalPrice.toLocaleString('es-CL')} CLP)
-                            </option>
-                            <option value={3} className="bg-[#10223D] text-white">
-                              3 cuotas precio contado (${Math.round(finalPrice / 3).toLocaleString('es-CL')} CLP c/u)
-                            </option>
-                            <option value={6} className="bg-[#10223D] text-white">
-                              6 cuotas (${Math.round(finalPrice / 6).toLocaleString('es-CL')} CLP c/u)
-                            </option>
-                            <option value={12} className="bg-[#10223D] text-white">
-                              12 cuotas (${Math.round(finalPrice / 12).toLocaleString('es-CL')} CLP c/u)
-                            </option>
-                          </select>
-                        </div>
-                      ) : (
-                        <div className="flex items-center text-xs text-white/60 bg-white/5 rounded-xl px-4 py-3.5 border border-white/10">
-                          <span>Pago directo debitado inmediatamente de tu cuenta corriente o vista.</span>
-                        </div>
-                      )}
+                    {/* Mercado Pago Wallet */}
+                    <div className="bg-white/5 border border-white/10 rounded-xl p-3 text-center flex flex-col items-center justify-center gap-1.5">
+                      <Sparkles size={20} className="text-[#009EE3]" />
+                      <span className="text-xs font-bold text-white">Mercado Pago</span>
+                      <span className="text-[10px] text-white/50">Dinero en Cuenta</span>
                     </div>
                   </div>
-                ) : (
-                  /* Modo Mercado Pago Checkout Pro Wallet */
-                  <div className="p-6 rounded-2xl bg-[#009EE3]/10 border border-[#009EE3]/30 text-center space-y-3 pt-4">
-                    <div className="w-12 h-12 rounded-full bg-[#009EE3]/20 text-[#009EE3] flex items-center justify-center mx-auto">
-                      <CreditCard size={24} />
-                    </div>
-                    <h3 className="text-base font-bold text-white">
-                      Pago Oficial a través de Mercado Pago / Mercado Libre
-                    </h3>
-                    <p className="text-xs text-gray-300 max-w-md mx-auto leading-relaxed">
-                      Al presionar el botón inferior serás redirigido a la pasarela protegida de Mercado Pago para pagar con dinero en cuenta, Webpay, o tus tarjetas guardadas.
-                    </p>
-                  </div>
-                )}
 
-                {/* Sellos de Confianza y Seguridad Bancaria */}
-                <div className="grid grid-cols-3 gap-2 pt-2 border-t border-white/10 text-center text-[10px] text-white/60">
+                  <p className="text-[11px] text-white/50 leading-relaxed pt-1">
+                    Al presionar el botón de pago, serás transferido a la pantalla oficial y protegida de Mercado Pago para ingresar tus datos bancarios y autorizar la transacción de forma 100% segura. Tus datos financieros nunca son almacenados en nuestros servidores.
+                  </p>
+                </div>
+
+                {/* Sellos de Confianza y Cumplimiento Bancario */}
+                <div className="grid grid-cols-3 gap-2 pt-1 text-center text-[10px] text-white/60">
                   <div className="flex flex-col items-center gap-1 p-2 rounded-lg bg-white/5 border border-white/5">
                     <ShieldCheck size={16} className="text-emerald-400" />
-                    <span>SSL 256-bit</span>
+                    <span>SSL 256-bit Seguro</span>
                   </div>
                   <div className="flex flex-col items-center gap-1 p-2 rounded-lg bg-white/5 border border-white/5">
                     <Lock size={16} className="text-[#57d6f3]" />
-                    <span>Norma PCI-DSS</span>
+                    <span>Norma Bancaria PCI-DSS</span>
                   </div>
                   <div className="flex flex-col items-center gap-1 p-2 rounded-lg bg-white/5 border border-white/5">
                     <CheckCircle2 size={16} className="text-[#F8AD22]" />
-                    <span>Webpay / MP</span>
+                    <span>Webpay / Mercado Pago</span>
                   </div>
                 </div>
 
-                {Object.keys(cardErrors).length > 0 && (
-                  <div className="p-3.5 rounded-xl bg-rose-500/20 border border-rose-500/50 text-white text-xs font-semibold flex items-center gap-2.5 mt-2">
-                    <AlertCircle size={16} className="text-rose-400 shrink-0" />
-                    <span>
-                      {cardErrors.cardNumber || cardErrors.cardExpiry || cardErrors.cardCvv || cardErrors.cardholderName || 'Revisa los datos de la tarjeta marcados en rojo.'}
-                    </span>
-                  </div>
-                )}
-
+                {/* Botón de Acción Directa */}
                 <button
                   type="submit"
                   disabled={isProcessing}
@@ -1220,14 +925,10 @@ export const CheckoutFlow: React.FC = () => {
                   <ShieldCheck size={20} />
                   <span>
                     {isProcessing
-                      ? 'Procesando Pago Seguro...'
+                      ? 'Conectando con Mercado Pago...'
                       : selectedPlan === 'trial'
                       ? 'Activar Prueba Gratuita (7 Días)'
-                      : pricingConfig.pasarela.provider === 'mercadopago' && finalPrice > 0
-                      ? `Pagar con Mercado Pago / Webpay ($${finalPrice.toLocaleString('es-CL')} CLP)`
-                      : paymentMethodOption === 'mercadopago_wallet' && finalPrice > 0
-                      ? `Ir a Mercado Pago ($${finalPrice.toLocaleString('es-CL')} CLP)`
-                      : `Pagar $${finalPrice.toLocaleString('es-CL')} CLP y Activar Suscripción`}
+                      : `Pagar $${finalPrice.toLocaleString('es-CL')} CLP con Mercado Pago / Webpay`}
                   </span>
                 </button>
               </section>
@@ -1259,6 +960,37 @@ export const CheckoutFlow: React.FC = () => {
                     </div>
                   )}
                 </div>
+              </div>
+
+              {/* BANNER DESTACADO: DESPACHO DIRECTO A WHATSAPP */}
+              <div className="p-5 rounded-2xl bg-gradient-to-r from-[#25D366]/20 via-[#12A1A4]/15 to-transparent border-2 border-[#25D366]/50 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div className="flex items-center gap-3.5 text-center sm:text-left">
+                  <div className="w-12 h-12 rounded-xl bg-[#25D366] text-white flex items-center justify-center shrink-0 shadow-lg">
+                    <MessageCircle size={26} />
+                  </div>
+                  <div>
+                    <h3 className="text-sm md:text-base font-extrabold text-white">
+                      Recibe tus credenciales de acceso en tu WhatsApp
+                    </h3>
+                    <p className="text-xs text-white/70">
+                      Envía un respaldo automático con tu RUN, contraseña y PIN del estudiante a tu teléfono celular.
+                    </p>
+                  </div>
+                </div>
+
+                <a
+                  href={buildWhatsAppUrl(parentPhone, waMessage)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95 cursor-pointer shadow-lg shrink-0 border border-emerald-400/40"
+                >
+                  <MessageCircle size={16} />
+                  <span>
+                    {parentPhone
+                      ? `Enviar credenciales a mi WhatsApp (${parentPhone})`
+                      : 'Enviar credenciales a mi WhatsApp'}
+                  </span>
+                </a>
               </div>
 
               {/* Botones para Copiar, WhatsApp y Descargar */}
