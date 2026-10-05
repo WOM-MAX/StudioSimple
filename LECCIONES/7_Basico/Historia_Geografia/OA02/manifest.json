@@ -5,15 +5,51 @@
   "identificador_paquete": "110-7-HIS-OA02",
   "version": "1.4.0",
   "fecha_actualizacion": "2026-10-05",
-  "estado": "Oficial para Produccion y Work",
-  "archivo_oficial_docx": "Plan_Maestro_7Básico_110-7-HIS-OA02_5Lecciones.docx",
-  "archivo_alias_docx": "Historia_OA02.docx",
+  "estado": "Oficial y Certificado",
   "total_clases": 5,
-  "estructura_pedagogica": "8 etapas duales (Mentor / Estudiante)",
+  "fuente_oficial_unica_docx": {
+    "archivo": "Plan_Maestro_7Básico_110-7-HIS-OA02_5Lecciones.docx",
+    "rol": "Unica fuente oficial de produccion de lecciones y prompts",
+    "sha256": "6102209f960b4fae21913c01559b1092adf2d477556f1890c00fef5cfe2d81ea",
+    "bytes": 59282
+  },
+  "alias_docx": {
+    "archivo": "Historia_OA02.docx",
+    "generado_desde": "Plan_Maestro_7Básico_110-7-HIS-OA02_5Lecciones.docx",
+    "rol": "Copia alias para retrocompatibilidad con scripts legados",
+    "sha256": "6102209f960b4fae21913c01559b1092adf2d477556f1890c00fef5cfe2d81ea",
+    "bytes": 59282,
+    "validacion_divergencia": "0 bytes de diferencia / SHA256 identico verificado"
+  },
   "prompts_asociados": {
-    "tipo": "Archivo de texto plano (.txt) para generador Work",
-    "archivo_prompts": "Prompts_Work_Historia_7B_OA02.txt",
+    "archivo": "Prompts_Work_Historia_7B_OA02.txt",
+    "ruta_origen_zip_anterior": "DESCARGA_LECCIONES/PROMPTS_TXT_PARA_WORK/Prompts_Work_Historia_7B_OA02.txt",
     "total_laminas": 70,
-    "laminas_por_clase": 14
+    "laminas_por_clase": 14,
+    "perfil_evaluacion": "Perfil 7° Básico (14 láminas bimodales: 7 Gancho + 7 Explicación; reactivos de 4 alternativas en cierre)"
+  },
+  "fundamentacion_curricular": {
+    "temario_eell": {
+      "archivo": "TEMARIOS EELL/temario 7° basico.pdf",
+      "pagina": 11,
+      "seccion": "Eje Historia - Objetivo de Aprendizaje N° 2: Explicar que el surgimiento de la agricultura, la domesticación de animales, la sedentarización, la acumulación de bienes y el desarrollo del comercio fueron procesos que transformaron la vida humana.",
+      "plan_estudios_complementario": "TEMARIOS EELL/Septimo/Plan_de_Estudios_Optimizado_7Basico.docx",
+      "documento_detallado": "TEMARIOS EELL/Septimo/Historia/Clase_1_Historia_y_Geografia_Detallada.pdf"
+    },
+    "insumos_mineduc": {
+      "texto_estudiante_pdf": "INSUMOS/LIBROS DIGITALES Y GUÍAS/110-7/Historia, Geografía y Ciencias Sociales.pdf",
+      "unidad_y_paginas": "Unidad 1: Hacia las primeras civilizaciones, Lección 2: La revolución del Neolítico",
+      "banco_digital_actividades": "INSUMOS/LIBROS DIGITALES Y GUÍAS/110-7/BDA_HIS_7B/",
+      "resumen_oficial": "INSUMOS/RESUMENES/110-7/RESUMEN HISTORIA  GEOGRAFÍA Y CIENCIAS SOCIALES.pdf",
+      "ensayos_oficiales": "INSUMOS/ENSAYOS/110-7/HISTORIA Y GEOGRAFÍA Y CIENCIAS SOCIALES.pdf"
+    }
+  },
+  "resolucion_rutas_typescript": {
+    "raiz_repositorio": "d:/StudioSimple - Antigravity/",
+    "raiz_app_spa": "Web Studio Simple/",
+    "alias_tsconfig": "@/* -> ./src/* (definido en Web Studio Simple/tsconfig.json)",
+    "archivos_clases_ts": [
+      "Web Studio Simple/src/data/lessons/historia_7b_oa02_clase01.ts"
+    ]
   }
 }

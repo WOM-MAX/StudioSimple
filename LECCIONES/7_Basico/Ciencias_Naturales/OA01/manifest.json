@@ -5,15 +5,56 @@
   "identificador_paquete": "110-7-CIE-OA01",
   "version": "1.4.0",
   "fecha_actualizacion": "2026-10-05",
-  "estado": "Oficial para Produccion y Work",
-  "archivo_oficial_docx": "Plan_Maestro_7Básico_110-7-CIE-OA01_6Lecciones.docx",
-  "archivo_alias_docx": "Ciencias_OA01.docx",
+  "estado": "Oficial y Certificado",
   "total_clases": 6,
-  "estructura_pedagogica": "8 etapas duales (Mentor / Estudiante)",
+  "fuente_oficial_unica_docx": {
+    "archivo": "Plan_Maestro_7Básico_110-7-CIE-OA01_6Lecciones.docx",
+    "rol": "Unica fuente oficial de produccion de lecciones y prompts",
+    "sha256": "07a82f7119a7cba25982ac03d5c0841ac997dcdeef74f28629a207f1589e1780",
+    "bytes": 82152
+  },
+  "alias_docx": {
+    "archivo": "Ciencias_OA01.docx",
+    "generado_desde": "Plan_Maestro_7Básico_110-7-CIE-OA01_6Lecciones.docx",
+    "rol": "Copia alias para retrocompatibilidad con scripts legados",
+    "sha256": "07a82f7119a7cba25982ac03d5c0841ac997dcdeef74f28629a207f1589e1780",
+    "bytes": 82152,
+    "validacion_divergencia": "0 bytes de diferencia / SHA256 identico verificado"
+  },
   "prompts_asociados": {
-    "tipo": "Archivo de texto plano (.txt) para generador Work",
-    "archivo_prompts": "Prompts_Work_Ciencias_7B_OA01.txt",
+    "archivo": "Prompts_Work_Ciencias_7B_OA01.txt",
+    "ruta_origen_zip_anterior": "DESCARGA_LECCIONES/PROMPTS_TXT_PARA_WORK/Prompts_Work_Ciencias_7B_OA01.txt",
     "total_laminas": 84,
-    "laminas_por_clase": 14
+    "laminas_por_clase": 14,
+    "perfil_evaluacion": "Perfil 7° Básico (14 láminas bimodales: 7 Gancho + 7 Explicación; reactivos de 4 alternativas en cierre)"
+  },
+  "fundamentacion_curricular": {
+    "temario_eell": {
+      "archivo": "TEMARIOS EELL/temario 7° basico.pdf",
+      "pagina": 7,
+      "seccion": "Eje Biología - Objetivo de Aprendizaje N° 1: Explicar los aspectos biológicos, afectivos y sociales que se integran en la sexualidad humana.",
+      "plan_estudios_complementario": "TEMARIOS EELL/Septimo/Plan_de_Estudios_Optimizado_7Basico.docx",
+      "documento_detallado": "TEMARIOS EELL/Septimo/Ciencias/Clase_1_Ciencias_Naturales_Detallada.pdf"
+    },
+    "insumos_mineduc": {
+      "texto_estudiante_pdf": "INSUMOS/LIBROS DIGITALES Y GUÍAS/110-7/Ciencias Naturales.pdf",
+      "unidad_y_paginas": "Unidad 1: Sexualidad y Afectividad, Lección 1 (pág. 16 a 29)",
+      "banco_digital_actividades": "INSUMOS/LIBROS DIGITALES Y GUÍAS/110-7/BDA_CNA_7B/",
+      "resumen_oficial": "INSUMOS/RESUMENES/110-7/RESUMEN CIENCIAS NATURALES.pdf",
+      "ensayos_oficiales": "INSUMOS/ENSAYOS/110-7/CIENCIAS NATURALES.pdf"
+    }
+  },
+  "resolucion_rutas_typescript": {
+    "raiz_repositorio": "d:/StudioSimple - Antigravity/",
+    "raiz_app_spa": "Web Studio Simple/",
+    "alias_tsconfig": "@/* -> ./src/* (definido en Web Studio Simple/tsconfig.json)",
+    "archivos_clases_ts": [
+      "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase01.ts",
+      "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase02.ts",
+      "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase03.ts",
+      "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase04.ts",
+      "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase05.ts",
+      "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase06.ts"
+    ]
   }
 }

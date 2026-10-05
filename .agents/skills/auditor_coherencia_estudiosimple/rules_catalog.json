@@ -4,11 +4,11 @@
   "description": "Catalogo versionado de reglas de coherencia pedagogica y tecnica de EstudioSimple.",
   "universal_rules": [
     {
-      "id": "UNI-001",
-      "name": "Estructura Bimodal de 14 Diapositivas por Clase",
-      "scope": "universal",
-      "description": "Cada clase debe componerse exactamente de 7 diapositivas de gancho motivacional y 7 diapositivas de explicacion conceptual (14 laminas en total).",
-      "source": "Plan Maestro EstudioSimple (Actualizacion 29-09-2026)",
+      "id": "7B-001",
+      "name": "Estructura Bimodal de 14 Diapositivas por Clase (7° Básico)",
+      "scope": "7_basico",
+      "description": "Para el perfil de 7° Básico, cada clase debe componerse exactamente de 7 diapositivas de gancho motivacional y 7 diapositivas de explicacion conceptual (14 laminas en total). En otros niveles escolares el número se calibra según el andamiaje del curso.",
+      "source": "Plan Maestro EstudioSimple y Perfil Curricular 7° Básico",
       "validation": {
         "hook_slides_count": 7,
         "expl_slides_count": 7,
@@ -59,11 +59,11 @@
       }
     },
     {
-      "id": "UNI-006",
-      "name": "Reactivo Oficial de 4 Alternativas en Clase de Cierre",
-      "scope": "universal",
-      "description": "La ultima clase de cada OA debe incluir una evaluacion formativa o simulador de Examen Libre MINEDUC con reactivos de 4 alternativas (A, B, C, D) y justificacion psicometrica de distractores.",
-      "source": "Estandar Evaluativo Examenes Libres MINEDUC",
+      "id": "7B-006",
+      "name": "Reactivo Oficial de 4 Alternativas en Clase de Cierre (7° Básico)",
+      "scope": "7_basico",
+      "description": "Para el perfil de 7° Básico, la ultima clase de cada OA debe incluir una evaluacion formativa o simulador de Examen Libre MINEDUC con reactivos de 4 alternativas (A, B, C, D) y justificacion psicometrica de distractores acorde al segundo ciclo básico.",
+      "source": "Estandar Evaluativo Examenes Libres MINEDUC y Perfil 7° Básico",
       "validation": {
         "final_lesson_quiz_min_options": 4
       }

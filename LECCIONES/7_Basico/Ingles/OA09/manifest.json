@@ -5,15 +5,50 @@
   "identificador_paquete": "110-7-ING-OA09",
   "version": "1.8.0",
   "fecha_actualizacion": "2026-10-05",
-  "estado": "Oficial para Produccion y Work",
-  "archivo_oficial_docx": "Plan_Maestro_7Básico_110-7-ING-OA09_6Lecciones.docx",
-  "archivo_alias_docx": "Ingles_OA09.docx",
+  "estado": "Oficial y Certificado",
   "total_clases": 6,
-  "estructura_pedagogica": "8 etapas duales (Mentor / Estudiante)",
+  "fuente_oficial_unica_docx": {
+    "archivo": "Plan_Maestro_7Básico_110-7-ING-OA09_6Lecciones.docx",
+    "rol": "Unica fuente oficial de produccion de lecciones y prompts",
+    "sha256": "55e4832c21b4fc63e01295499ee241b1aba27d5e8838f64c5761ae3848c08d85",
+    "bytes": 66932
+  },
+  "alias_docx": {
+    "archivo": "Ingles_OA09.docx",
+    "generado_desde": "Plan_Maestro_7Básico_110-7-ING-OA09_6Lecciones.docx",
+    "rol": "Copia alias para retrocompatibilidad con scripts legados",
+    "sha256": "55e4832c21b4fc63e01295499ee241b1aba27d5e8838f64c5761ae3848c08d85",
+    "bytes": 66932,
+    "validacion_divergencia": "0 bytes de diferencia / SHA256 identico verificado"
+  },
   "prompts_asociados": {
-    "tipo": "Archivo de texto plano (.txt) para generador Work",
-    "archivo_prompts": "Prompts_Work_Ingles_7B_OA09.txt",
+    "archivo": "Prompts_Work_Ingles_7B_OA09.txt",
+    "ruta_origen_zip_anterior": "DESCARGA_LECCIONES/PROMPTS_TXT_PARA_WORK/Prompts_Work_Ingles_7B_OA09.txt",
     "total_laminas": 84,
-    "laminas_por_clase": 14
+    "laminas_por_clase": 14,
+    "perfil_evaluacion": "Perfil 7° Básico (14 láminas bimodales: 7 Gancho + 7 Explicación; reactivos de 4 alternativas en cierre)"
+  },
+  "fundamentacion_curricular": {
+    "temario_eell": {
+      "archivo": "TEMARIOS EELL/temario 7° basico.pdf",
+      "pagina": 15,
+      "seccion": "Eje Expresión Oral - Objetivo de Aprendizaje 9: Demostrar comprensión de textos orales adaptados y auténticos breves y simples relacionados con temas conocidos o de otras asignaturas.",
+      "plan_estudios_complementario": "TEMARIOS EELL/Septimo/Plan_de_Estudios_Optimizado_7Basico.docx"
+    },
+    "insumos_mineduc": {
+      "texto_estudiante_pdf": "INSUMOS/LIBROS DIGITALES Y GUÍAS/110-7/Inglés.pdf",
+      "unidad_y_paginas": "Unit 1: Feelings and Opinions / Unit 2: Healthy Habits",
+      "banco_digital_actividades": "INSUMOS/LIBROS DIGITALES Y GUÍAS/110-7/BDA_ING_7B/",
+      "resumen_oficial": "INSUMOS/RESUMENES/110-7/RESUMNE DE INGLÉS.pdf",
+      "ensayos_oficiales": "INSUMOS/ENSAYOS/110-7/INGLÉS.pdf"
+    }
+  },
+  "resolucion_rutas_typescript": {
+    "raiz_repositorio": "d:/StudioSimple - Antigravity/",
+    "raiz_app_spa": "Web Studio Simple/",
+    "alias_tsconfig": "@/* -> ./src/* (definido en Web Studio Simple/tsconfig.json)",
+    "archivos_clases_ts": [
+      "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase01.ts"
+    ]
   }
 }

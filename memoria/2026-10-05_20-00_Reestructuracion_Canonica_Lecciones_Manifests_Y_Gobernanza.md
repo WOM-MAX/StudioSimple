@@ -42,5 +42,29 @@
    - Se ajustaron `instructional_design_expert/SKILL.md`, `auditor_coherencia_estudiosimple/SKILL.md` y `rules_catalog.json` para reflejar esta delimitacion.
    - Se estructuro la jerarquia de reglas por alcance: Universal, Curso, Asignatura y OA.
 
-8. **Validacion:**
-   - Frontend `Web Studio Simple`: `npm run build` exitoso con codigo 0 (13.75s).
+## 2. Ajustes Finales y Verificaciones Empiricas Directas
+
+1. **Reubicacion de Alcance (Universal vs 7° Basico):**
+   - La regla de estructura bimodal de 14 diapositivas (7 Gancho + 7 Explicacion) y la regla de reactivos de 4 alternativas con distractores se trasladaron formalmente al Perfil de 7° Basico (controles `7B-001` y `7B-006` en `rules_catalog.json` y `SKILL.md`), reservando el nivel Universal exclusivamente para directivas transversales de 3° a 8° Basico (8 etapas duales, arte sin texto de IA, cuaderno fisico, honestidad epistemologica).
+
+2. **Delimitacion de Revision Acustica (Google Vids):**
+   - Se explicito en `AGENTS.md`, `SKILL.md` y `rules_catalog.json` que la duracion real y la sincronizacion acustica se verifican en Google Vids durante la produccion del video (grabacion y sintesis de voz), eliminando cualquier atribucion de medicion temporal estricta a Codex/Work o Antigravity.
+
+3. **Verificacion de Historial Git para Carpeta Bancaria:**
+   - Se audito el historial completo de commits (`git log --all --full-history -- "CUENTA VISTA*"` y `git log --all --diff-filter=A`).
+   - Evidencia directa: La carpeta `CUENTA VISTA MERCADO LIBRE WALTER` nunca estuvo registrada en ningun commit historico de Git. Era un directorio local no rastreado antes de su traslado a `C:\Users\walte\CUENTA VISTA MERCADO LIBRE WALTER`. El historial de Git esta completamente limpio de datos bancarios.
+
+4. **Verificacion de .env.example:**
+   - Se verifico con `git check-ignore -v .env.example` y `git ls-files .env.example`.
+   - Evidencia directa: `.env.example` no esta excluido por `.gitignore` y permanece activamente rastreado en Git como plantilla publica, mientras que `.env`, `.env.local` y `.env.production` estan efectivamente ignorados.
+
+5. **Fuente Oficial Unica DOCX e Identidad de Alias:**
+   - Se calculo el hash SHA256 de cada archivo oficial y su alias.
+   - Evidencia directa: Los archivos alias `Ciencias_OA01.docx`, `Historia_OA02.docx`, `Ingles_OA09.docx` y `Lenguaje_OA03.docx` son 100% identicos byte a byte a sus respectivos `Plan_Maestro_7Básico_...docx`. La divergencia es 0.
+
+6. **Fundamentacion Curricular en Manifests:**
+   - Se incorporaron las rutas exactas de `TEMARIOS EELL/temario 7° basico.pdf` (con numero de pagina y seccion), textos escolares MINEDUC en `INSUMOS/` y la resolucion de rutas TypeScript (raiz del repositorio `d:/StudioSimple - Antigravity/`, raiz SPA `Web Studio Simple/` y alias `@/*`).
+
+7. **Rutas de Origen Corregidas para Prompts TXT:**
+   - Se especifico la ruta de origen real del ZIP previo: `DESCARGA_LECCIONES/PROMPTS_TXT_PARA_WORK/Prompts_Work_...txt`.
+

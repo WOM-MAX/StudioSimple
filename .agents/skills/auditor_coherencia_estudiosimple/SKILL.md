@@ -20,36 +20,42 @@ Queda estrictamente prohibido dar por válida una alineación solo porque un doc
    - Queda estrictamente excluido de generar o modificar presentaciones PPTX finales.
    - Las reglas de Antigravity no incluyen conteo de palabras ni duración de videos. La locución se audita por fluidez pedagógica, claridad conceptual y ausencia de marcas técnicas.
 2. **Codex (ChatGPT Work):**
-   - Es el consumidor de los paquetes entregados. Audita el flujo audiovisual, calibra la duración de videos, supervisa el conteo de palabras según el sintetizador de voz y asume la responsabilidad exclusiva de generar y validar las presentaciones PPTX en su propio entorno con Python.
+   - Es el consumidor de los paquetes entregados. Adapta el guion a la maqueta de diapositivas y asume la responsabilidad exclusiva de generar y validar las presentaciones PPTX en su propio entorno con Python.
+3. **Producción Audiovisual (Google Vids):**
+   - La duración real y la sincronización acústica se revisan empíricamente en Google Vids durante la producción del video (síntesis de voz y renderizado). No se exige ni atribuye esa calibración temporal acústica a Codex/Work ni a Antigravity.
 
 ## 3. Matriz de Auditoria y Flujo de Revision
 
-El proceso de auditoria evalua la consistencia del paquete formativo mediante doce controles universales reutilizables:
+El proceso de auditoria evalua la consistencia del paquete formativo distinguiendo entre controles del perfil de curso y controles universales:
 
-### Control 1 (UNI-001): Estructura Bimodal de 14 Diapositivas
+### A. Controles del Perfil 7° Básico (Alcance por Curso)
+
+#### Control 1 (7B-001): Estructura Bimodal de 14 Diapositivas
 - 7 diapositivas de Modulo 1 (Video Gancho Motivacional).
 - 7 diapositivas de Modulo 2 (Video Explicativo Conceptual).
-- Total inquebrantable: 14 laminas por leccion.
+- Total estandarizado para 7° Básico: 14 laminas por leccion (en cursos de primer ciclo 3° a 6° Básico, el número de láminas se define según la progresión del nivel).
 
-### Control 2 (UNI-002): Fluidez Narrativa y Locución Limpia
+#### Control 6 (7B-006): Reactivo Oficial de 4 Alternativas
+- La leccion final de sintesis del OA en 7° Básico debe incluir reactivos psicometricos de 4 alternativas (A, B, C, D) con analisis de distractores según estándar MINEDUC para segundo ciclo básico.
+- Etiquetado honesto y preciso: los reactivos elaborados por el equipo deben rotularse como 'Reactivo didactico elaborado segun estandar MINEDUC para 7° Basico', prohibiendo atribuirlos de forma errónea a evaluaciones externas no verificables.
+
+### B. Controles Universales (Transversales 3° a 8° Básico)
+
+#### Control 2 (UNI-002): Fluidez Narrativa y Locución Limpia
 - Texto continuo listo para voz en off sin marcas tecnicas ni anotaciones de tiempos en el cuerpo.
-- Claridad conceptual, tono pedagógico estimulante y vocabulario adaptado al nivel escolar (3° a 8° Básico).
-- Exclusión explícita de restricciones de conteo de palabras o duración en segundos en el ámbito de Antigravity (delegado a Codex/Work).
+- Claridad conceptual, tono pedagógico estimulante y vocabulario adaptado al nivel escolar.
+- Las restricciones de conteo de palabras y duración de videos quedan fuera de Antigravity; la duración real se verifica en Google Vids durante la producción del video.
 
-### Control 3 (UNI-003): Duo Co-protagonico Fijo de 13 Anos
+#### Control 3 (UNI-003): Duo Co-protagonico Fijo de 13 Anos
 - Presencia explicita del duo en los prompts de imagen: joven mujer con trenzas y joven hombre con chaqueta cerceta, de 13 anos.
 
-### Control 4 (UNI-004): Clausula Anti-Texto y Purga de Marcas en Prompts de IA
+#### Control 4 (UNI-004): Clausula Anti-Texto y Purga de Marcas en Prompts de IA
 - Cada prompt visual debe concluir con la clausula 'No text drawn by AI'.
 - Prohibicion absoluta de instruir a la IA a dibujar palabras, rotulos, emblemas, insignias o logotipos (ej. 'StudioSimple emblem' o 'StudioSimple badge').
 - Los rotulos y titulos son montados exclusivamente como capas vectoriales en la diapositiva con la jerarquia tipografica aprobada (titulo 64 pt, subtitulo 48 pt para Ciencias y 36 pt para Matematica u otras asignaturas).
 
-### Control 5 (UNI-005): Isomorfismo Diapositiva 6 vs Practica 1
+#### Control 5 (UNI-005): Isomorfismo Diapositiva 6 vs Practica 1
 - La diapositiva 6 del video explicativo debe modelar con exactitud el ejercicio o caso 1 de la practica interactiva: mismo contexto, mismos datos y misma resolucion, sin anadir variables inexistentes en la practica (ej. quitar variables espurias o no evaluadas).
-
-### Control 6 (UNI-006): Reactivo Oficial de 4 Alternativas y Honestidad Epistemologica en Cierre
-- La leccion final de sintesis del OA debe incluir reactivos psicometricos de 4 alternativas (A, B, C, D) con analisis de distractores.
-- Etiquetado honesto y preciso: los reactivos elaborados por el equipo deben rotularse como 'Reactivo didactico elaborado segun estandar MINEDUC para 7° Basico', prohibiendo atribuirlos de forma errónea a evaluaciones externas no verificables.
 
 ### Control 7 (UNI-007): Flujo Conceptual Completo y Progresion del OA
 - Auditar la secuencia completa del OA asegurando una progresion didactica coherente: fundamentacion conceptual basal, desarrollo y diferenciacion tematica, aplicacion cotidiana y etica, y evaluacion de sintesis formal.

@@ -6,18 +6,52 @@
   "version": "1.0.0-certificada",
   "fecha_actualizacion": "2026-10-05",
   "estado": "Oficial y Certificado",
-  "archivo_oficial_docx": "Plan_Maestro_7Básico_110-7-MAT-OA01_6Lecciones.docx",
   "total_clases": 6,
-  "estructura_pedagogica": "8 etapas duales (Mentor / Estudiante)",
-  "prompts_asociados": {
-    "tipo": "Integrados en codigo TypeScript y DOCX",
-    "ubicacion_codigo": "src/data/lessons/matematica_7b_oa01_clase01.ts ... clase06.ts",
-    "tablas_en_docx": "Tablas de especificaciones visuales y locucion escena por escena"
+  "fuente_oficial_unica_docx": {
+    "archivo": "Plan_Maestro_7Básico_110-7-MAT-OA01_6Lecciones.docx",
+    "rol": "Unica fuente oficial de produccion de lecciones y prompts (6 lecciones completas)",
+    "sha256": "f53dcdb5f481ae288757db6fa858dacdc39bc235d2407347ceb99c9ec4ca0087",
+    "bytes": 40402
   },
   "archivos_referencia": [
     {
       "archivo": "referencias/OA01_Matematica_7Basico_Lecciones_Completas_y_Guiones.docx",
-      "funcion": "Borrador prototipo historico inicial (5 clases y 10 guiones, fecha 2026-09-01). Se conserva como documento de contexto y evolucion didactica, no como fuente de produccion."
+      "rol": "Borrador prototipo historico inicial (5 clases y 10 guiones, fecha 2026-09-01). Se conserva en carpeta aislada como antecedente conceptual e historico, no como fuente de produccion."
     }
-  ]
+  ],
+  "prompts_asociados": {
+    "tipo": "Integrados en codigo TypeScript y tablas formales de DOCX",
+    "tablas_en_docx": "Tablas de especificaciones visuales y locucion escena por escena en Plan Maestro oficial",
+    "perfil_evaluacion": "Perfil 7° Básico (14 láminas bimodales: 7 Gancho + 7 Explicación; reactivos de 4 alternativas en cierre)"
+  },
+  "fundamentacion_curricular": {
+    "temario_eell": {
+      "archivo": "TEMARIOS EELL/temario 7° basico.pdf",
+      "pagina": 5,
+      "seccion": "Eje Números y Operaciones - Objetivo de Aprendizaje N° 1: Mostrar que comprenden la adición y la sustracción de números enteros: representando los números enteros en la recta numérica; representándolas de manera concreta, pictórica y simbólica.",
+      "plan_estudios_complementario": "TEMARIOS EELL/Septimo/Plan_de_Estudios_Optimizado_7Basico.docx",
+      "documento_detallado": "TEMARIOS EELL/Septimo/Matematicas/Clase_1_Matematicas_Detallada.pdf",
+      "presentacion_referencia": "TEMARIOS EELL/Septimo/Matematicas/PPT CLASE MATEMATICA 1.pptx"
+    },
+    "insumos_mineduc": {
+      "texto_estudiante_pdf": "INSUMOS/LIBROS DIGITALES Y GUÍAS/110-7/Matemática.pdf",
+      "unidad_y_paginas": "Unidad 1: Números enteros, Tema 1: Números enteros y valor absoluto (pág. 12 a 23)",
+      "banco_digital_actividades": "INSUMOS/LIBROS DIGITALES Y GUÍAS/110-7/BDA_MAT_7B/",
+      "resumen_oficial": "INSUMOS/RESUMENES/110-7/RESUMEN MATEMÁTICA.pdf",
+      "ensayos_oficiales": "INSUMOS/ENSAYOS/110-7/MATEMÁTICA.pdf"
+    }
+  },
+  "resolucion_rutas_typescript": {
+    "raiz_repositorio": "d:/StudioSimple - Antigravity/",
+    "raiz_app_spa": "Web Studio Simple/",
+    "alias_tsconfig": "@/* -> ./src/* (definido en Web Studio Simple/tsconfig.json)",
+    "archivos_clases_ts": [
+      "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase01.ts",
+      "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase02.ts",
+      "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase03.ts",
+      "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase04.ts",
+      "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase05.ts",
+      "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase06.ts"
+    ]
+  }
 }
