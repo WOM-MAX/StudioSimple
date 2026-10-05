@@ -28,6 +28,9 @@ CUENTA VISTA MERCADO LIBRE WALTER/
 CONOCIMIENTO/
 INSUMOS/
 
+# Legacy Archives & Deprecated Files
+_archivo/
+
 # Cache & Logs
 logs/
 *.log
