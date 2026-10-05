@@ -1,0 +1,19 @@
+{
+  "curso": "7_Basico",
+  "asignatura": "Ciencias_Naturales",
+  "oa": "OA01",
+  "identificador_paquete": "110-7-CIE-OA01",
+  "version": "1.4.0",
+  "fecha_actualizacion": "2026-10-05",
+  "estado": "Oficial para Produccion y Work",
+  "archivo_oficial_docx": "Plan_Maestro_7Básico_110-7-CIE-OA01_6Lecciones.docx",
+  "archivo_alias_docx": "Ciencias_OA01.docx",
+  "total_clases": 6,
+  "estructura_pedagogica": "8 etapas duales (Mentor / Estudiante)",
+  "prompts_asociados": {
+    "tipo": "Archivo de texto plano (.txt) para generador Work",
+    "archivo_prompts": "Prompts_Work_Ciencias_7B_OA01.txt",
+    "total_laminas": 84,
+    "laminas_por_clase": 14
+  }
+}

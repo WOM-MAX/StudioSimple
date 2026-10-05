@@ -17,15 +17,13 @@
     },
     {
       "id": "UNI-002",
-      "name": "Calibracion Temporal de Locucion",
+      "name": "Fluidez Narrativa y Locucion Limpia",
       "scope": "universal",
-      "description": "El gancho motivacional debe tener una duracion estimada de 60 segundos (~130 palabras, rango 120-140 palabras). La explicacion conceptual debe tener una duracion estimada de 90 segundos (~195 palabras, rango 180-210 palabras). Duracion total: 150 segundos por clase.",
-      "source": "Plan Maestro EstudioSimple y Protocolo de Locucion Google Vids",
+      "description": "El guion de locucion para gancho motivacional y explicacion conceptual debe ser continuo, sin marcas tecnicas ni tiempos en el cuerpo. Las reglas de Antigravity no evaluan conteo de palabras ni duracion en segundos, delegando la calibracion audiovisual a Codex/Work.",
+      "source": "Plan Maestro EstudioSimple y Protocolo de Delegacion Codex/Work",
       "validation": {
-        "hook_word_count_min": 120,
-        "hook_word_count_max": 145,
-        "expl_word_count_min": 175,
-        "expl_word_count_max": 220
+        "disallow_technical_timestamps": true,
+        "require_clean_narration": true
       }
     },
     {

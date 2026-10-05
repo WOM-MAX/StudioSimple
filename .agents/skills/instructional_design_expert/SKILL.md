@@ -17,7 +17,6 @@ Toda clase está estrictamente estandarizada para completarse en **30 a 35 minut
    - Regla de lectura fonética de símbolos matemáticos o técnicos para evitar titubeos.
 
 2. **Fase 2: Video Motivacional / Gancho (Exactamente 7 Diapositivas)**
-   - Duración: 60 segundos aproximados.
    - Formato visual: Estilo Anime Moderno con dúo de personajes adolescentes (13 años) que plantean una intriga o desafío contextual.
    - No resuelve el problema; deja una pregunta abierta estimulante.
 
@@ -28,9 +27,8 @@ Toda clase está estrictamente estandarizada para completarse en **30 a 35 minut
    - Acepta respuestas en las propias palabras del estudiante siempre que contengan el núcleo conceptual.
 
 4. **Fase 4: Video Explicativo / Formalización (Exactamente 7 Diapositivas)**
-   - Duración: 60 a 90 segundos.
    - Regla de carga cognitiva: Exactamente un cambio visual o momento mental por diapositiva.
-   - Textos en pantalla mínimos (letreros delgados translúcidos, 20 a 25 palabras por diapositiva).
+   - Textos en pantalla mínimos y limpios (letreros delgados translúcidos con foco en el concepto clave).
    - Muestra el procedimiento formal paso a paso y su comprobación.
 
 5. **Fase 5: Práctica Guiada y Cuaderno Físico (El Puente Análogo-Digital)**

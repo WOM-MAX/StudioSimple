@@ -1,0 +1,2003 @@
+================================================================================
+STUDIOSIMPLE - PAQUETE DE PROMPTS Y GUIONES OFICIALES PARA CHATGPT WORK
+ASIGNATURA: INGLÉS
+CURSO: 7° BASICO | OBJETIVO: OA 9 (Demostrar comprensión de ideas generales e información explícita en textos adaptados y auténticos simples, en formato impreso o digital, acerca de temas variados (como experiencias personales, temas de otras asignaturas, del contexto inmediato, de actualidad e interés global o de otras culturas) y que contienen las funciones del año.)
+TOTAL DE CLASES: 6 LECCIONES (14 DIAPOSITIVAS POR CLASE = 84 LAMINAS TOTALES)
+FORMATO: 7 DIAPOSITIVAS VIDEO GANCHO (60s) + 7 DIAPOSITIVAS VIDEO EXPLICATIVO (90s)
+================================================================================
+
+
+################################################################################
+### CLASE 1 DE 6: SETTING AND CHARACTERS IN SHORT STORIES
+################################################################################
+
+================================================================================
+STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+================================================================================
+
+FICHA CURRICULAR:
+• Asignatura: Inglés
+• Nivel / Curso: 7° Básico
+• Objetivo de Aprendizaje: OA 9 - Comprensión de lectura
+• Clase: 1 de 6 ("Setting and Characters in Short Stories")
+• Duracion Estimada: 30 Minutos
+
+DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
+1. Proporcion Widescreen 16:9 estricto (1920x1080).
+2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
+3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
+4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
+5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
+   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
+   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
+7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
+8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
+
+================================================================================
+MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: The Narrative Mountain: Story Arc & Time Connectors
+• DILE ANTES DEL VIDEO: "En los relatos en inglés, toda narración sigue una montaña de tensión dramática estructurada con conectores de tiempo clave."
+• INSTRUCCION AL ESTUDIANTE: "Observa y reflexiona con las escenas del desafío visual."
+• DILE DESPUES DEL VIDEO: "Conversemos sobre el organizador. Te haré dos preguntas sobre los conectores y elementos que vimos en inglés."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Opening and Setting (10 seg aprox) ---
+1. Propósito Didáctico: Opening and Setting
+2. Título en Pantalla (64 pt): Mission 1: The Mountain Cabin
+3. Subtítulo en Pantalla (36 pt): Reading our first adventure story
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a cozy wooden cabin in a sunny mountain forest. Warm inviting atmosphere, negative space in top third. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Narrative context: Leo and Sophia exploring an old wooden cabin in the woods
+6. Notas al Orador (Locución Google Vids): "Welcome to English class. Today we will read an engaging short story about two young explorers discovering an ancient mystery cabin in the mountains."
+
+--- DIAPOSITIVA 2: Identifying Characters (9 seg aprox) ---
+1. Propósito Didáctico: Identifying Characters
+2. Título en Pantalla (64 pt): Who is in the story?
+3. Subtítulo en Pantalla (36 pt): Leo and his brave sister Sophia
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy and girl examining an explorer backpack with notebook, magnifying glass and compass. Clean lineart, bright morning lighting. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Character tags: Subject = 'Leo and his sister' (The protagonists)
+6. Notas al Orador (Locución Google Vids): "First, look closely at the characters. Leo and his sister Sophia are thirteen years old and love finding ancient historical artifacts."
+
+--- DIAPOSITIVA 3: Spotting the Setting (9 seg aprox) ---
+1. Propósito Didáctico: Spotting the Setting
+2. Título en Pantalla (64 pt): Where does it happen?
+3. Subtítulo en Pantalla (36 pt): A quiet green valley near the lake
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide scenic view of the lush green mountain valley with a sparkling river and tall pine trees under a clear blue sky. High clarity. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Setting labels: Location = 'in a quiet valley' | Time = 'one summer morning'
+6. Notas al Orador (Locución Google Vids): "Next, we observe the setting. The events take place in a quiet valley surrounded by tall pine trees on a sunny morning."
+
+--- DIAPOSITIVA 4: The Action Begins (9 seg aprox) ---
+1. Propósito Didáctico: The Action Begins
+2. Título en Pantalla (64 pt): Action verbs in past
+3. Subtítulo en Pantalla (36 pt): They walked, opened and discovered
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two companions walking along a stone path and opening the creaky wooden door of the cabin with curiosity and teamwork. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Past Simple verbs: walk -> walked | open -> opened | find -> found
+6. Notas al Orador (Locución Google Vids): "The narrative describes their actions using past simple verbs: they walked through the trees and opened an old wooden chest."
+
+--- DIAPOSITIVA 5: The Mystery Clue (9 seg aprox) ---
+1. Propósito Didáctico: The Mystery Clue
+2. Título en Pantalla (64 pt): The secret map
+3. Subtítulo en Pantalla (36 pt): A strange message on yellow paper
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two explorers holding an aged rolled parchment showing a compass rose and an intriguing hand-drawn trail map. Golden dust particles. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Visual evidence: Ancient parchment with compass rose and handwritten clue
+6. Notas al Orador (Locución Google Vids): "Inside the chest, Sophia finds an old handwritten map with a secret message that points toward a forgotten hidden waterfall."
+
+--- DIAPOSITIVA 6: Connecting the Sequence (9 seg aprox) ---
+1. Propósito Didáctico: Connecting the Sequence
+2. Título en Pantalla (64 pt): Connecting the sequence
+3. Subtítulo en Pantalla (36 pt): First, Then, After that, Finally
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant chronological banner showing sequential comic panels of the story connected by glowing arrows. Crisp clean layout. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Timeline connectors: First -> Then -> Next -> Finally
+6. Notas al Orador (Locución Google Vids): "To follow any good narrative, we use time sequence connectors to understand what happens in the beginning, middle, and end."
+
+--- DIAPOSITIVA 7: Trigger Question (10 seg aprox) ---
+1. Propósito Didáctico: Trigger Question
+2. Título en Pantalla (64 pt): The narrative challenge
+3. Subtítulo en Pantalla (36 pt): How do we write story sentences?
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist clean composition showing StudioSimple emblem, the two explorers smiling with their English notebooks open, ready to write. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Detonating question: What is the golden sentence formula to describe narrative events in English?
+6. Notas al Orador (Locución Google Vids): "Here is our trigger question: what formula allows us to write clear English sentences describing characters, actions and settings in the past?"
+
+================================================================================
+MODULO 2: PROMPT VIDEO EXPLICATIVO CONCEPTUAL (PASO 4 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Model Sentence Pattern: Beginning a Story in English
+• Idea Clave: "Pattern: 'First, [Character] lived/worked in [Setting].' Example: 'First, two brave explorers traveled across the desert.'"
+• DILE ANTES DEL VIDEO: "Revisemos la estructura formal para iniciar una historia en inglés con conector, personaje, verbo en pasado y lugar."
+• INSTRUCCION: "Revisemos la explicación formal y la idea clave."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Lesson Objective (10 seg aprox) ---
+1. Propósito Didáctico: Lesson Objective
+2. Título en Pantalla (64 pt): Lesson Objective
+3. Subtítulo en Pantalla (36 pt): Master the Narrative Sentence Formula in English
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The boy and girl standing before a clear formula board: 'Time Connector + Subject (Character) + Past Verb + Setting'. Modern typography. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Formal heading: OA 09 · Narrative Reading Comprehension & Past Simple Sentences
+6. Notas al Orador (Locución Google Vids): "Today our main objective is to learn the universal narrative sentence formula in English to describe characters, actions, and settings with precision."
+
+--- DIAPOSITIVA 2: The 4-Part Formula (11 seg aprox) ---
+1. Propósito Didáctico: The 4-Part Formula
+2. Título en Pantalla (64 pt): The 4-Part Formula
+3. Subtítulo en Pantalla (36 pt): Connector + Subject + Past Verb + Setting
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Four distinct color-coded modular blocks floating on an interactive board: Orange (Connector), Blue (Subject), Green (Verb), Purple (Setting). High contrast. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Color-coded formula: [Orange: Time Word,] + [Blue: Character] + [Green: Past Verb] + [Purple: Place Phrase]
+6. Notas al Orador (Locución Google Vids): "Every narrative sentence in English follows a clean four-part structure: time connector with comma, followed by the subject, the past verb, and the setting phrase."
+
+--- DIAPOSITIVA 3: Time Connectors (11 seg aprox) ---
+1. Propósito Didáctico: Time Connectors
+2. Título en Pantalla (64 pt): Step 1: Time Connectors
+3. Subtítulo en Pantalla (36 pt): First, Then, After that, Finally,
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl highlighting 'First,' with a glowing comma on the digital board. Callout: 'Always add a comma after First'. Crisp typography. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Linguistic rule: Always place a comma immediately after an introductory time connector
+6. Notas al Orador (Locución Google Vids): "Always place a comma after your introductory time word. Words like First, Then, and Finally tell the reader exactly where we are in the chronology."
+
+--- DIAPOSITIVA 4: Past Regular Verbs (11 seg aprox) ---
+1. Propósito Didáctico: Past Regular Verbs
+2. Título en Pantalla (64 pt): Step 2: Action in the Past
+3. Subtítulo en Pantalla (36 pt): Add -ed to regular verbs (lived, walked, explored)
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Glowing linguistic breakdown showing the verb 'live' adding '-ed' to become 'lived', and 'travel' becoming 'traveled'. Sharp clarity. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Morphology box: live + d = lived | walk + ed = walked | discover + ed = discovered
+6. Notas al Orador (Locución Google Vids): "Because the events already occurred, regular action verbs take the -ed ending. For example: Leo walked in the forest, and Sophia opened the door."
+
+--- DIAPOSITIVA 5: Setting and Place (10 seg aprox) ---
+1. Propósito Didáctico: Setting and Place
+2. Título en Pantalla (64 pt): Step 3: Setting the Scene
+3. Subtítulo en Pantalla (36 pt): Prepositional phrases: in the cabin, by the lake
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy holding up cards with prepositional phrases: 'in the quiet cabin', 'near the mountain lake', 'under the stars'. Vibrant visuals. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Location builders: [in + noun] | [near + noun] | [under + noun]
+6. Notas al Orador (Locución Google Vids): "Finish your sentence with a clear place description using prepositions like in, near, or by. This allows the reader to picture the exact environment."
+
+--- DIAPOSITIVA 6: Common Mistake to Avoid (12 seg aprox) ---
+1. Propósito Didáctico: Common Mistake to Avoid
+2. Título en Pantalla (64 pt): Common Mistake to Avoid
+3. Subtítulo en Pantalla (36 pt): Never forget the comma after the time connector
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Contrast graphic: An incorrect sentence missing comma with subtle red outline; The corrected sentence glowing in vibrant teal. Clean infographic. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Visual contrast: [Red: First Leo lived...] vs [Teal: First, Leo lived... with checkmark]
+6. Notas al Orador (Locución Google Vids): "A common mistake among beginners is forgetting the comma after First or Then, or forgetting to conjugate the verb into the past simple. Always check both."
+
+--- DIAPOSITIVA 7: The Golden Narrative Rule (11 seg aprox) ---
+1. Propósito Didáctico: The Golden Narrative Rule
+2. Título en Pantalla (64 pt): The Golden Narrative Rule
+3. Subtítulo en Pantalla (36 pt): Time, + Who + Did + Where = Clear English Story
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem with an elegant golden banner displaying the complete modeled sentence: 'First, Leo and Sophia explored the ancient cabin.' Inspiring atmosphere. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Summary infography: [First,] + [Leo and Sophia] + [explored] + [the old mountain cabin.]
+6. Notas al Orador (Locución Google Vids): "Remember the golden rule: Time, subject, past verb, and place give you the perfect narrative sentence. Now let's practice this formula in the interactive platform!"
+
+================================================================================
+MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
+================================================================================
+
+[PREPARACION DEL ADULTO / MENTOR]
+• Objetivo del Adulto: Guiar al estudiante en inglés a identificar los personajes (characters), el lugar y tiempo (setting) y el conector inicial (First / In the beginning) en oraciones narrativas breves.
+• Ruta de Hoy: Identificar personajes (characters), ambientación (setting) y conector inicial (First) en textos narrativos en inglés
+• Recordatorios Pedagogicos del Mentor:
+  1. Sigue el orden indicado.
+  2. Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.
+  3. No leas los recuadros SOLO PARA TI ni AYUDA DE LECTURA.
+  4. Haz cada pregunta y espera la respuesta antes de seleccionar una opción.
+  5. Considera correcta una respuesta si expresa la idea matemática, aunque use palabras distintas.
+  6. Si el estudiante necesita apoyo, usa únicamente la ayuda que aparecerá.
+  7. Si propone otra explicación o no está de acuerdo, escúchalo completo y valora su razonamiento antes de guiarlo.
+• Clima Emocional y Acogida: "Crea un ambiente de confianza en inglés: 'No tengas miedo a equivocarte al pronunciar. En inglés cada intento suma vocabulario y seguridad'."
+
+--------------------------------------------------------------------------------
+[PASO 1: INICIO (4 SUB-ETAPAS CANONICAS)]
+--------------------------------------------------------------------------------
+Sub-etapa 1: Nuestra Ruta de la Asignatura
+• DILE AL ESTUDIANTE (Apertura de la ruta): "Hoy comenzaremos la clase 1 de Inglés: "Setting and Characters in Short Stories"."
+• 4 Bloques Tematicos de la Asignatura:
+  Bloque 01: Inglés (Setting and Characters in Short Stories)
+  Bloque 02: Exploración (Gancho y Recorrido Guiado)
+  Bloque 03: Práctica (Aplicación en situaciones reales)
+  Bloque 04: Evaluación (Miniquiz formativo y síntesis)
+
+Sub-etapa 2: La Clase de Hoy
+• DILE AL ESTUDIANTE (Foco didactico): "Identificar personajes (characters), ambientación (setting) y conector inicial (First) en textos narrativos en inglés"
+• 3 Tarjetas de Foco de la Pantalla del Estudiante:
+  Tarjeta 1: Exploración inicial -> Setting and Characters in Short Stories
+  Tarjeta 2: Idea clave -> Pattern: 'First, [Character] lived/worked in [Setting].' Exa
+  Tarjeta 3: Práctica y aplicación -> Resolución guiada paso a paso
+
+Sub-etapa 3: Situacion Inicial de Exploracion (Detonante)
+• DILE AL ESTUDIANTE (Situacion detonante): "Hoy en nuestra sesión de English exploramos 'Setting and Characters in Short Stories'. En la pantalla del estudiante se muestra el organizador de la montaña narrativa. Observa el Paso 1: 'Beginning (Introduction)' y lee en voz alta la oración de ejemplo: 'First, Leo and his sister lived in a quiet town near the mountains.' ¿Quiénes son los personajes de la historia y en qué lugar viven?"
+• RESPUESTA ESPERADA: Characters: Leo and his sister. Setting: a quiet town near the mountains (comenzando con 'First').
+• PISTA SOCRATICA (SOLO PARA TI): "Fíjate en las palabras en inglés: 'Leo and his sister' indica quiénes son, y 'quiet town near the mountains' describe el pueblo y las montañas."
+• CLIMA EMOCIONAL: "Crea un ambiente de confianza en inglés: 'No tengas miedo a equivocarte al pronunciar. En inglés cada intento suma vocabulario y seguridad'."
+• Pautas de Evaluacion Formativa del Mentor:
+  - [Acierto] Respondió correctamente: Characters: Leo and his sister. Setting: a quiet town near the mountains (com... -> Feedback: "¡Exacto! Comprendió la idea central esperada."
+  - [Requiere Apoyo] Necesita apoyo o dio otra respuesta -> Feedback: "Fíjate en las palabras en inglés: 'Leo and his sister' indica quiénes son, y 'quiet town near the mountains' describe el pueblo y las montañas."
+
+Sub-etapa 4: Comprendamos la Respuesta (Punto de Referencia)
+• DILE AL ESTUDIANTE (Formalizacion de referencia): "Who are the characters and what is the setting in this story?"
+• PREGUNTALE AL ESTUDIANTE: "Who are the characters and what is the setting in this story?"
+• RESPUESTA ESPERADA: Characters: Leo and his sister. Setting: a quiet town near the mountains (comenzando con 'First').
+• PISTA SOCRATICA: "Fíjate en las palabras en inglés: 'Leo and his sister' indica quiénes son, y 'quiet town near the mountains' describe el pueblo y las montañas."
+• FEEDBACK SI ACIERTA: "Muy bien. Observaste el detalle central con precisión."
+• FEEDBACK SI NECESITA APOYO: "Fíjate en las palabras en inglés: 'Leo and his sister' indica quiénes son, y 'quiet town near the mountains' describe el pueblo y las montañas."
+
+--------------------------------------------------------------------------------
+[PASO 3: RECORRIDO - CONVERSACION GUIADA Y PREGUNTAS SOCRATICAS]
+--------------------------------------------------------------------------------
+Item 1 (Characters vs Setting in English):
+• Pregunta Socratica: "En un cuento en inglés leemos: 'The young astronaut landed on Mars in the year 2095.' ¿Cuál es el 'character' (personaje) y cuál es el 'setting' (lugar y tiempo)?"
+• Respuesta Esperada: El character es el joven astronauta ('the young astronaut') y el setting es Marte en el año 2095 ('Mars in the year 2095').
+• Feedback de Exito: "¡Very good! Identificaste con total exactitud al protagonista y las coordenadas de lugar y tiempo."
+• Pista de Apoyo Socratica: "Busca quién realiza la acción (astronaut) y dónde y cuándo ocurre (Mars, year 2095)."
+• Revelacion: "'Character' responde a 'Who' (quién); 'Setting' responde a 'Where and When' (dónde y cuándo)."
+
+Item 2 (Time Connector: First):
+• Pregunta Socratica: "¿Qué función cumple la palabra 'First' o la frase 'In the beginning' al inicio de un párrafo narrativo?"
+• Respuesta Esperada: Indica el punto de partida temporal, señalando qué hecho ocurrió en primer lugar antes de todos los demás.
+• Feedback de Exito: "¡Excelente! 'First' marca el orden cronológico inicial de la historia."
+• Pista de Apoyo Socratica: "Recuerda que First significa 'Primero'. Se usa siempre para abrir la secuencia de acciones."
+• Revelacion: "'First' conecta el inicio del relato con la presentación de la rutina de los personajes."
+
+--------------------------------------------------------------------------------
+[PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
+--------------------------------------------------------------------------------
+• Cierre y Sintesis del Video Explicativo: "Fórmula de apertura: Time Connector ('First,') + Character + Past Verb ('lived in') + Setting ('a quiet town')."
+
+Comprobacion 1 (Characters vs Setting in English):
+• Pregunta: "En un cuento en inglés leemos: 'The young astronaut landed on Mars in the year 2095.' ¿Cuál es el 'character' (personaje) y cuál es el 'setting' (lugar y tiempo)?"
+• Respuesta Esperada: El character es el joven astronauta ('the young astronaut') y el setting es Marte en el año 2095 ('Mars in the year 2095').
+• Pista de Apoyo: "Busca quién realiza la acción (astronaut) y dónde y cuándo ocurre (Mars, year 2095)."
+• Revelacion: "Character: The young astronaut. Setting: Mars in the year 2095."
+
+Comprobacion 2 (Time Connector: First):
+• Pregunta: "¿Qué función cumple la palabra 'First' o la frase 'In the beginning' al inicio de un párrafo narrativo?"
+• Respuesta Esperada: Indica el punto de partida temporal, señalando qué hecho ocurrió en primer lugar antes de todos los demás.
+• Pista de Apoyo: "Recuerda que First significa 'Primero'. Se usa siempre para abrir la secuencia de acciones."
+• Revelacion: "'First' indica el primer hecho que ocurre al comenzar una historia en inglés."
+
+--------------------------------------------------------------------------------
+[PASO 5: PRACTICA EN EL CUADERNO FISICO]
+--------------------------------------------------------------------------------
+Ejercicio 1 (Writing a Story Beginning in English Notebook):
+• Enunciado de Aplicacion: "Abre tu cuaderno de inglés. Escribe el título: 'Story Arc: Step 1 Beginning'. Inventa y escribe 1 oración completa en inglés siguiendo el modelo aprendido: empieza con 'First,', luego nombra un personaje (ej. 'a brave girl', 'a curious dog', 'a clever scientist') y di dónde vivía usando 'lived in...'."
+• Respuesta Esperada: Oración completa en inglés en el cuaderno con la estructura: 'First, [personaje] lived in [lugar].' (Por ejemplo: 'First, a brave girl lived in a magical forest.').
+• Feedback de Exito: "¡Great job in your notebook! Tu oración en inglés está correctamente estructurada con conector, personaje y lugar."
+• Pista de Apoyo Socratica: "Copia este molde y complétalo: 'First, a young detective lived in Santiago.' o 'First, a lonely wizard lived in an old castle.'"
+
+Ejercicio 2 (Translating Setting and Characters to Spanish):
+• Enunciado de Aplicacion: "Debajo de tu oración en inglés en el cuaderno, escribe la traducción al español e indica al lado con dos flechas: ¿cuál es el Character (personaje) y cuál es el Setting (lugar)?"
+• Respuesta Esperada: Traducción correcta de su propia oración al español con identificación explícita del personaje y del lugar.
+• Feedback de Exito: "¡Excelente demostración bilingüe! Comprobaste que comprendes a fondo cada parte de lo que escribiste en inglés."
+• Pista de Apoyo Socratica: "Escribe tu frase en español y encierra en un círculo el nombre del personaje y subraya el lugar donde vive."
+
+Modulo: Comparemos dos situaciones (Comparemos dos situaciones)
+• DILE: "Antes de resumir, comparemos dos situaciones. No necesitas repetir una frase exacta: lo importante es que expliques la idea con tus propias palabras."
+• Pregunta: "Al comparar dos situaciones de Setting and Characters in Short Stories, ¿cómo influye el contexto en la interpretación de los datos?"
+• Respuesta Esperada: El significado o resultado depende de las condiciones del contexto y del propósito de la situación.
+• Feedback si acierta: "¡Excelente razonamiento! Reconociste que el contexto orienta la interpretación de los datos."
+• Feedback si necesita apoyo: "Observa cada situación por separado y explica qué elementos las distinguen."
+
+Modulo: Desafio Breve (Desafío breve: Setting and Characters in Short Stories)
+• Pregunta: "En Inglés, ¿qué diferencia observas entre identificar los datos y aplicar el procedimiento? Explica tu razonamiento."
+• Respuesta Esperada: Identificar los datos determina el punto de partida; aplicar el procedimiento permite construir la respuesta.
+
+--------------------------------------------------------------------------------
+[PASO 6: RESUMEN Y ESTRATEGIA DE PENSAMIENTO]
+--------------------------------------------------------------------------------
+• Idea Clave: "Pattern: 'First, [Character] lived/worked in [Setting].' Example: 'First, two brave explorers traveled across the desert.'"
+• DILE AL ESTUDIANTE: "Cuando enfrentes un problema en Inglés, puedes seguir estos tres pasos clave:"
+• Pasos de la Estrategia:
+  Paso 1: Identifica -> ¿Cuáles son los datos clave y cuál es la pregunta central?
+  Paso 2: Aplica -> ¿Qué regla o método disciplinar corresponde utilizar?
+  Paso 3: Comprueba -> ¿La conclusión o resultado responde con coherencia al problema?
+• 3 Ideas Clave Estructuradas de Sintesis:
+  - 1 · Concepto central: Identificamos los elementos y el punto de partida del análisis.
+  - 2 · Interpretación del contexto: Identificar personajes (characters), ambientación (setting) y conector inicial (First) en textos narrativos en inglés
+  - 3 · Síntesis formal: Pattern: 'First, [Character] lived/worked in [Setting].' Example: 'First, two brave explorers traveled across the desert.'
+
+--------------------------------------------------------------------------------
+[PASO 7: MINIQUIZ FORMATIVO Y FASE REVISAR]
+--------------------------------------------------------------------------------
+Pregunta 1: Read the sentence: 'First, an old sailor lived in a small lighthouse near the sea.' Who is the main character?
+  A) The sea 
+  B) An old sailor [CORRECTA]
+  C) A small lighthouse 
+• Explicacion Formativa del Error: "'An old sailor' (un viejo marinero) es la persona que realiza la acción y vive en el lugar."
+
+Pregunta 2: In the same sentence: 'First, an old sailor lived in a small lighthouse near the sea.' What is the setting (place)?
+  A) In a big airport 
+  B) In an old sailor 
+  C) In a small lighthouse near the sea [CORRECTA]
+• Explicacion Formativa del Error: "'A small lighthouse near the sea' (un pequeño faro cerca del mar) es el lugar físico donde se ambienta la escena."
+
+Pregunta 3: Which time connector is best suited to start the very first sentence of a short story in English?
+  A) Finally, 
+  B) First, [CORRECTA]
+  C) Because, 
+• Explicacion Formativa del Error: "'First,' (Primero) o 'In the beginning' son los conectores ideales para iniciar la narración cronológica."
+
+--------------------------------------------------------------------------------
+[PASO 7B: MODULO DE RECUPERACION FORMATIVA]
+--------------------------------------------------------------------------------
+Refuerzo 1 (Recuperación: Characters and Setting):
+• Explicacion Previa: "Recuerda que 'Character' es la persona o animal de la historia, y 'Setting' es el lugar donde ocurre."
+• Pregunta: "In 'First, a doctor worked in a hospital', what is the setting?"
+• Opciones: In a hospital (un hospital). | A doctor (un doctor).
+• Respuesta Correcta: In a hospital (un hospital).
+• Refuerzo si falla: "The correct answer is: In a hospital (el hospital es el lugar físico)."
+
+--------------------------------------------------------------------------------
+[PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
+--------------------------------------------------------------------------------
+• Pregunta de Sintesis: "In your own words, what is the difference between a character and a setting in an English short story?"
+• Reflexion Metacognitiva: "¿Qué conector de tiempo en inglés te resultó más fácil de recordar para comenzar un relato?"
+• Celebracion del Logro: "Congratulations! You have completed your first English lesson on Setting and Characters!"
+• Felicitacion Final: "¡Felicitaciones! Hoy completaste con éxito la clase "Setting and Characters in Short Stories". Has demostrado constancia y rigor en tu aprendizaje."
+• Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Inglés."
+
+
+
+################################################################################
+### CLASE 2 DE 6: CHRONOLOGICAL SEQUENCE AND TIME CONNECTORS
+################################################################################
+
+================================================================================
+STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+================================================================================
+
+FICHA CURRICULAR:
+• Asignatura: Inglés
+• Nivel / Curso: 7° Básico
+• Objetivo de Aprendizaje: OA 9 - Comprensión de lectura
+• Clase: 2 de 6 ("Chronological Sequence and Time Connectors")
+• Duracion Estimada: 30 Minutos
+
+DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
+1. Proporcion Widescreen 16:9 estricto (1920x1080).
+2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
+3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
+4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
+5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
+   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
+   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
+7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
+8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
+
+================================================================================
+MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Video Motivacional: El Desafío de Chronological Sequence and Time Connectors
+• DILE ANTES DEL VIDEO: "Antes de ver el video, observa con atención lo que descubren los dos exploradores y qué pregunta queda planteada."
+• INSTRUCCION AL ESTUDIANTE: "Observa y reflexiona con las escenas del desafío visual."
+• DILE DESPUES DEL VIDEO: "Muy buena observación. Ahora conversaremos sobre lo que descubrieron en la expedición."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Apertura y Contexto (9 seg aprox) ---
+1. Propósito Didáctico: Apertura y Contexto
+2. Título en Pantalla (64 pt): Misión 2: Chronological Sequence and Time Connectors
+3. Subtítulo en Pantalla (36 pt): Exploración inicial en Inglés
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Chronological Sequence and Time Connectors (Inglés). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Communicative context: Story scenario of Chronological Sequence and Time Connectors
+6. Notas al Orador (Locución Google Vids): "Comienza una nueva expedición de aprendizaje en Inglés. Nuestros dos exploradores analizan el desafío de Chronological Sequence and Time Connectors para descubrir sus secretos."
+
+--- DIAPOSITIVA 2: Presentación del Escenario (9 seg aprox) ---
+1. Propósito Didáctico: Presentación del Escenario
+2. Título en Pantalla (64 pt): Punto de partida
+3. Subtítulo en Pantalla (36 pt): Using 'first', 'then', 'suddenly' to map narrative events
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Using 'first', 'then', 'suddenly' to map narrative events. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Using 'first', 'then', 'suddenly' to map narrative events
+6. Notas al Orador (Locución Google Vids): "Al observar los datos sobre Using 'first', 'then', 'suddenly' to map narrative events, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor."
+
+--- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 seg aprox) ---
+1. Propósito Didáctico: Aparición del Conflicto / Misterio
+2. Título en Pantalla (64 pt): El enigma disciplinar
+3. Subtítulo en Pantalla (36 pt): Desafío en Chronological Sequence and Time Connectors
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Using 'first', 'then', 'suddenly' to map narrative events
+6. Notas al Orador (Locución Google Vids): "Surge un reto concreto sobre Chronological Sequence and Time Connectors: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso."
+
+--- DIAPOSITIVA 4: Exploración de Pistas (9 seg aprox) ---
+1. Propósito Didáctico: Exploración de Pistas
+2. Título en Pantalla (64 pt): Análisis de evidencias
+3. Subtítulo en Pantalla (36 pt): Using 'first', 'then', 'suddenly' to map narrative events
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Using 'first', 'then', 'suddenly' to map narrative events
+6. Notas al Orador (Locución Google Vids): "Ambos comparan las pistas disponibles sobre Using 'first', 'then', 'suddenly' to map narrative events. Cada dato confirma cómo interactúan los elementos clave de la situación."
+
+--- DIAPOSITIVA 5: El Momento Crítico (9 seg aprox) ---
+1. Propósito Didáctico: El Momento Crítico
+2. Título en Pantalla (64 pt): Criterio de decisión
+3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Using 'first', 'then', 'suddenly' to map narrative events
+6. Notas al Orador (Locución Google Vids): "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Chronological Sequence and Time Connectors con total precisión metodológica."
+
+--- DIAPOSITIVA 6: La Antesala de la Pregunta (9 seg aprox) ---
+1. Propósito Didáctico: La Antesala de la Pregunta
+2. Título en Pantalla (64 pt): El dilema central
+3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Chronological Sequence and Time Connectors?
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Language puzzle: Identifying narrative clues in English
+6. Notas al Orador (Locución Google Vids): "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje."
+
+--- DIAPOSITIVA 7: La Pregunta Detonante (9 seg aprox) ---
+1. Propósito Didáctico: La Pregunta Detonante
+2. Título en Pantalla (64 pt): Pregunta detonante
+3. Subtítulo en Pantalla (36 pt): Regla y método de Chronological Sequence and Time Connectors
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Trigger question: How do we express Chronological Sequence and Time Connectors accurately?
+6. Notas al Orador (Locución Google Vids): "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!"
+
+================================================================================
+MODULO 2: PROMPT VIDEO EXPLICATIVO CONCEPTUAL (PASO 4 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Video Explicativo: Formalización de Chronological Sequence and Time Connectors
+• Idea Clave: "In Chronological Sequence and Time Connectors, we communicate effectively by using 'ideas generales' in context, paying attention to verb tenses and avoiding word-for-word translation."
+• DILE ANTES DEL VIDEO: "Ahora veremos el video explicativo de Chronological Sequence and Time Connectors. Fíjate en la pronunciación y en cómo se utiliza 'ideas generales' en una conversación real."
+• INSTRUCCION: "Revisemos la explicación formal y la idea clave."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
+1. Propósito Didáctico: Objetivo de la Lección
+2. Título en Pantalla (64 pt): Objetivo de la lección
+3. Subtítulo en Pantalla (36 pt): Master Chronological Sequence and Time Connectors: Using 'first', 'then', 'suddenly' to map narrative events
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Using 'first', 'then', 'suddenly' to map narrative events. High clarity, negative space for text. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Formal heading: OA 9 · Chronological Sequence and Time Connectors
+6. Notas al Orador (Locución Google Vids): "Today our goal is to learn how to master using 'first', 'then', 'suddenly' to map narrative events, applying clear disciplinary steps with total confidence."
+
+--- DIAPOSITIVA 2: Definición del Concepto Central (12 seg aprox) ---
+1. Propósito Didáctico: Definición del Concepto Central
+2. Título en Pantalla (64 pt): Concepto fundamental
+3. Subtítulo en Pantalla (36 pt): Using 'first', 'then', 'suddenly' to map narrative events
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Sentence formula: Structure of Using 'first', 'then', 'suddenly' to map narrative events
+6. Notas al Orador (Locución Google Vids): "To understand Chronological Sequence and Time Connectors, we establish a clean conceptual foundation connecting the core definition with verifiable concrete evidence."
+
+--- DIAPOSITIVA 3: Demostración Modelada (12 seg aprox) ---
+1. Propósito Didáctico: Demostración Modelada
+2. Título en Pantalla (64 pt): Modelamiento paso a paso
+3. Subtítulo en Pantalla (36 pt): Procedimiento de Chronological Sequence and Time Connectors
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Color-coded grammar blocks with modeled example
+6. Notas al Orador (Locución Google Vids): "Observe how the procedure unfolds in this guided demonstration: every single change responds to an explicit disciplinary rule."
+
+--- DIAPOSITIVA 4: Prevención del Error Frecuente (13 seg aprox) ---
+1. Propósito Didáctico: Prevención del Error Frecuente
+2. Título en Pantalla (64 pt): Atención: Error habitual
+3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Error contrast: common grammar and punctuation pitfall
+6. Notas al Orador (Locución Google Vids): "A common pitfall happens when overlooking order or basic conventions. We always check each intermediate step before concluding."
+
+--- DIAPOSITIVA 5: Comprobación del Resultado (12 seg aprox) ---
+1. Propósito Didáctico: Comprobación del Resultado
+2. Título en Pantalla (64 pt): Validación del resultado
+3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Meaning validation: verifying sentence cohesion
+6. Notas al Orador (Locución Google Vids): "By contrasting the result with our initial scenario, we confirm that our solution is consistent, rigorous, and fully answers the question."
+
+--- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 seg aprox) ---
+1. Propósito Didáctico: Estrategia Mnemotécnica
+2. Título en Pantalla (64 pt): Estrategia de pensamiento
+3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Memory strategy: Connector + Subject + Verb + Context
+6. Notas al Orador (Locución Google Vids): "Always remember the three-step thinking strategy: identify the key data, apply the formal rule in order, and verify the final result."
+
+--- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 seg aprox) ---
+1. Propósito Didáctico: Síntesis y Regla de Oro
+2. Título en Pantalla (64 pt): Regla de Oro: Chronological Sequence and Time Connectors
+3. Subtítulo en Pantalla (36 pt): Método disciplinar validado
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Summary infography: Golden rule of Chronological Sequence and Time Connectors
+6. Notas al Orador (Locución Google Vids): "Now that you understand the golden rule and the procedure of Chronological Sequence and Time Connectors, let us practice and prove our skills in the interactive platform!"
+
+================================================================================
+MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
+================================================================================
+
+[PREPARACION DEL ADULTO / MENTOR]
+• Objetivo del Adulto: Acompañar al estudiante en la inmersión del idioma inglés para: Chronological Sequence and Time Connectors. Las instrucciones del apoderado son en español, mientras los textos, vocabulario y miniquiz se practican en inglés con foco en 'ideas generales'.
+• Ruta de Hoy: 1. Inicio y activación · 2. Video de exploración · 3. Recorrido guiado · 4. Formalización y práctica en cuaderno · 5. Miniquiz y REVISAR · 6. Cierre metacognitivo
+• Recordatorios Pedagogicos del Mentor:
+  1. Sigue el orden indicado.
+  2. Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.
+  3. No leas los recuadros SOLO PARA TI ni AYUDA DE LECTURA.
+  4. Haz cada pregunta y espera la respuesta antes de seleccionar una opción.
+  5. Considera correcta una respuesta si expresa la idea matemática, aunque use palabras distintas.
+  6. Si el estudiante necesita apoyo, usa únicamente la ayuda que aparecerá.
+  7. Si propone otra explicación o no está de acuerdo, escúchalo completo y valora su razonamiento antes de guiarlo.
+• Clima Emocional y Acogida: "Fomenta la confianza comunicativa: 'Listen, read the clues, and focus on the general meaning before translating every single word'."
+
+--------------------------------------------------------------------------------
+[PASO 1: INICIO (4 SUB-ETAPAS CANONICAS)]
+--------------------------------------------------------------------------------
+Sub-etapa 1: Nuestra Ruta de la Asignatura
+• DILE AL ESTUDIANTE (Apertura de la ruta): "Hoy comenzaremos la clase 2 de Inglés: "Chronological Sequence and Time Connectors"."
+• 4 Bloques Tematicos de la Asignatura:
+  Bloque 01: Inglés (Chronological Sequence and Time Connectors)
+  Bloque 02: Exploración (Gancho y Recorrido Guiado)
+  Bloque 03: Práctica (Aplicación en situaciones reales)
+  Bloque 04: Evaluación (Miniquiz formativo y síntesis)
+
+Sub-etapa 2: La Clase de Hoy
+• DILE AL ESTUDIANTE (Foco didactico): "Using 'first', 'then', 'suddenly' to map narrative events"
+• 3 Tarjetas de Foco de la Pantalla del Estudiante:
+  Tarjeta 1: Exploración inicial -> Chronological Sequence and Time Connectors
+  Tarjeta 2: Idea clave -> In Chronological Sequence and Time Connectors, we communicat
+  Tarjeta 3: Práctica y aplicación -> Resolución guiada paso a paso
+
+Sub-etapa 3: Situacion Inicial de Exploracion (Detonante)
+• DILE AL ESTUDIANTE (Situacion detonante): "Hoy en nuestra sesión de English exploramos 'Chronological Sequence and Time Connectors'. El foco comunicativo del currículum es 'ideas generales'. El apoderado guía en español mientras que el estudiante lee y escucha en inglés. Lee la siguiente frase en voz alta sobre Using 'first', 'then', 'suddenly' to map narrative events:"
+• RESPUESTA ESPERADA: Identificar en español o inglés los personajes (characters), la acción o el propósito comunicativo vinculado con ideas generales.
+• PISTA SOCRATICA (SOLO PARA TI): "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general."
+• CLIMA EMOCIONAL: "Fomenta la confianza comunicativa: 'Listen, read the clues, and focus on the general meaning before translating every single word'."
+• Pautas de Evaluacion Formativa del Mentor:
+  - [Acierto] Identificó a los personajes, la acción o el propósito en inglés vinculado con ideas generales -> Feedback: "¡Very good! Supo reconocer los elementos clave de la oración en inglés."
+  - [Requiere Apoyo] Tuvo dudas con el vocabulario o no identificó la acción ni los personajes -> Feedback: "Busquen juntos palabras transparentes y guíalo para identificar el verbo principal de la acción."
+
+Sub-etapa 4: Comprendamos la Respuesta (Punto de Referencia)
+• DILE AL ESTUDIANTE (Formalizacion de referencia): ""What is the main communicative situation described in this English sentence? (¿Cuál es la situación principal descrita en la oración?)""
+• PREGUNTALE AL ESTUDIANTE: ""What is the main communicative situation described in this English sentence? (¿Cuál es la situación principal descrita en la oración?)""
+• RESPUESTA ESPERADA: Identificar en español o inglés los personajes (characters), la acción o el propósito comunicativo vinculado con ideas generales.
+• PISTA SOCRATICA: "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general."
+• FEEDBACK SI ACIERTA: "Muy bien. Observaste el detalle central con precisión."
+• FEEDBACK SI NECESITA APOYO: "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general."
+
+--------------------------------------------------------------------------------
+[PASO 3: RECORRIDO - CONVERSACION GUIADA Y PREGUNTAS SOCRATICAS]
+--------------------------------------------------------------------------------
+Item 1 (Key Vocabulary & Context Clues (ideas generales)):
+• Pregunta Socratica: "Which English words in the text give you clear clues about the communicative goal and the action?"
+• Respuesta Esperada: Identify key English nouns, action verbs or connectors related to the topic.
+• Feedback de Exito: "Well done! You successfully identified the key English vocabulary from the context."
+• Pista de Apoyo Socratica: "Look for transparent words and descriptive adjectives: what words tell you what is happening?"
+• Revelacion: "Context clues and key vocabulary help us understand the main message without needing an immediate dictionary translation."
+
+Item 2 (Grammar & Communicative Flow):
+• Pregunta Socratica: "Notice the verb tense or structure used in the sentences. How does the grammatical form tell us when or how the action happens?"
+• Respuesta Esperada: Recognize the verb form or structure indicating time, function, or modality.
+• Feedback de Exito: "Excellent! You connected the grammatical structure with its real communicative meaning."
+• Pista de Apoyo Socratica: "Look at the ending of the verb or auxiliary words: does it talk about routine, past events or future plans?"
+• Revelacion: "Grammatical structures and verb tenses provide the timeline and conditions for natural English communication."
+
+--------------------------------------------------------------------------------
+[PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
+--------------------------------------------------------------------------------
+• Cierre y Sintesis del Video Explicativo: "Hoy dominaste Using 'first', 'then', 'suddenly' to map narrative events en inglés con práctica activa de vocabulario y escritura en tu cuaderno."
+
+Comprobacion 1 (Key Vocabulary & Context Clues (ideas generales)):
+• Pregunta: "Which English words in the text give you clear clues about the communicative goal and the action?"
+• Respuesta Esperada: Identify key English nouns, action verbs or connectors related to the topic.
+• Pista de Apoyo: "Look for transparent words and descriptive adjectives: what words tell you what is happening?"
+• Revelacion: "Key English words identified from the context of the communicative text."
+
+Comprobacion 2 (Grammar & Communicative Flow):
+• Pregunta: "Notice the verb tense or structure used in the sentences. How does the grammatical form tell us when or how the action happens?"
+• Respuesta Esperada: Recognize the verb form or structure indicating time, function, or modality.
+• Pista de Apoyo: "Look at the ending of the verb or auxiliary words: does it talk about routine, past events or future plans?"
+• Revelacion: "The verb tense and sentence structure that clarify the communicative intention."
+
+--------------------------------------------------------------------------------
+[PASO 5: PRACTICA EN EL CUADERNO FISICO]
+--------------------------------------------------------------------------------
+Ejercicio 1 (Practice 1 in Notebook: Vocabulary & Model Sentences):
+• Enunciado de Aplicacion: "Open your English notebook. Write as title: 'Chronological Sequence and Time Connectors'. Copy the key vocabulary box, write 2 original sentences using 'ideas generales', and translate their meaning into Spanish."
+• Respuesta Esperada: Accurate English sentences in the notebook with correct spelling, grammar agreement, and Spanish translation.
+• Feedback de Exito: "Great notebook work! Your English sentences are well structured and meaningful."
+• Pista de Apoyo Socratica: "Check the slide model: Subject + Verb + Complement. Follow that pattern to write your sentences."
+
+Ejercicio 2 (Practice 2 in Notebook: Short Dialogue or Message):
+• Enunciado de Aplicacion: "In your notebook, write a short 3-line dialogue or message applying today's communicative goal (Using 'first', 'then', 'suddenly' to map narrative events). Then read it aloud with your mentor."
+• Respuesta Esperada: Short dialogue written in English and read aloud with proper pronunciation and natural intonation.
+• Feedback de Exito: "Outstanding fluency! Writing and reading aloud activates both speaking and writing skills."
+• Pista de Apoyo Socratica: "Use simple, direct phrases: Greeting, main message or question, and friendly closing."
+
+Modulo: Comparemos dos situaciones (Comparemos dos situaciones)
+• DILE: "Antes de resumir, comparemos dos situaciones. No necesitas repetir una frase exacta: lo importante es que expliques la idea con tus propias palabras."
+• Pregunta: "Al comparar dos situaciones de Chronological Sequence and Time Connectors, ¿cómo influye el contexto en la interpretación de los datos?"
+• Respuesta Esperada: El significado o resultado depende de las condiciones del contexto y del propósito de la situación.
+• Feedback si acierta: "¡Excelente razonamiento! Reconociste que el contexto orienta la interpretación de los datos."
+• Feedback si necesita apoyo: "Observa cada situación por separado y explica qué elementos las distinguen."
+
+Modulo: Desafio Breve (Desafío breve: Chronological Sequence and Time Connectors)
+• Pregunta: "En Inglés, ¿qué diferencia observas entre identificar los datos y aplicar el procedimiento? Explica tu razonamiento."
+• Respuesta Esperada: Identificar los datos determina el punto de partida; aplicar el procedimiento permite construir la respuesta.
+
+--------------------------------------------------------------------------------
+[PASO 6: RESUMEN Y ESTRATEGIA DE PENSAMIENTO]
+--------------------------------------------------------------------------------
+• Idea Clave: "In Chronological Sequence and Time Connectors, we communicate effectively by using 'ideas generales' in context, paying attention to verb tenses and avoiding word-for-word translation."
+• DILE AL ESTUDIANTE: "Cuando enfrentes un problema en Inglés, puedes seguir estos tres pasos clave:"
+• Pasos de la Estrategia:
+  Paso 1: Identifica -> ¿Cuáles son los datos clave y cuál es la pregunta central?
+  Paso 2: Aplica -> ¿Qué regla o método disciplinar corresponde utilizar?
+  Paso 3: Comprueba -> ¿La conclusión o resultado responde con coherencia al problema?
+• 3 Ideas Clave Estructuradas de Sintesis:
+  - 1 · Concepto central: Identificamos los elementos y el punto de partida del análisis.
+  - 2 · Interpretación del contexto: Using 'first', 'then', 'suddenly' to map narrative events
+  - 3 · Síntesis formal: In Chronological Sequence and Time Connectors, we communicate effectively by using 'ideas generales' in context, paying attention to verb tenses and avoiding word-for-word translation.
+
+--------------------------------------------------------------------------------
+[PASO 7: MINIQUIZ FORMATIVO Y FASE REVISAR]
+--------------------------------------------------------------------------------
+Pregunta 1: Reading Comprehension: What is the main communicative purpose of 'ideas generales' in today's English lesson?
+  A) To express clear ideas, actions, or descriptions in English using context clues and accurate sentence structure [CORRECTA]
+  B) To translate words completely out of context without paying attention to meaning 
+  C) To memorize isolated lists of English words without applying them in real sentences 
+• Explicacion Formativa del Error: "Context clues and functional structures allow English learners to communicate naturally and with confidence."
+• Guion del Mentor (Fase REVISAR): "Pídele que señale la palabra o verbo en inglés que justifica su elección."
+
+Pregunta 2: To avoid the common mistake of 'Dificultad para procesar el inglés hablado a una velocidad natural o casi natural.', what is the best strategy when reading an English text?
+  A) Identify the general meaning and key cognates first, instead of trying to translate every single word [CORRECTA]
+  B) Stop reading immediately whenever you find an unfamiliar English word 
+  C) Assume that English sentences must follow the exact same word order as Spanish 
+• Explicacion Formativa del Error: "Deducir el significado por contexto evita la frustración y construye fluidez en la comprensión lectora en inglés."
+• Guion del Mentor (Fase REVISAR): "Pregúntale: ¿cómo te ayudaron los cognados a entender la idea general sin usar diccionario?"
+
+Pregunta 3: Language Structure: Which English sentence demonstrates the correct grammatical pattern for 'ideas generales'?
+  A) The student carefully read the text and wrote a complete response in the notebook [CORRECTA]
+  B) The student carefully reading the text and write without agreement yesterday 
+  C) Yesterday the student will read the text in the future tense by mistake 
+• Explicacion Formativa del Error: "A well-structured English sentence maintains proper subject-verb agreement and consistent tense usage."
+• Guion del Mentor (Fase REVISAR): "Pídele que identifique el sujeto y el verbo principal de la oración correcta."
+
+--------------------------------------------------------------------------------
+[PASO 7B: MODULO DE RECUPERACION FORMATIVA]
+--------------------------------------------------------------------------------
+Refuerzo 1 (English Recovery & Consolidation: Chronological Sequence and Time Connectors):
+• Explicacion Previa: "When reading and writing in English, always look for the main subject and the action verb in the correct tense, using context clues to guide your comprehension of 'ideas generales'."
+• Pregunta: "Which sentence correctly demonstrates clear English communication for this lesson?"
+• Opciones: The team explored the setting and recorded their findings in the notebook | The team explore yesterday without any past tense marker
+• Respuesta Correcta: The team explored the setting and recorded their findings in the notebook
+• Refuerzo si falla: "Remember that in English, regular verbs in the past tense take the -ed ending to signal completed events."
+
+--------------------------------------------------------------------------------
+[PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
+--------------------------------------------------------------------------------
+• Pregunta de Sintesis: "In your own words, what was the most useful English word or phrase you learned in today's lesson?"
+• Reflexion Metacognitiva: "¿Qué técnica te ayudó más a entender el texto en inglés: buscar cognados o identificar los verbos principales?"
+• Celebracion del Logro: "Great job today! You have successfully mastered Lesson 2. See you in the next English adventure!"
+• Felicitacion Final: "¡Felicitaciones! Hoy completaste con éxito la clase "Chronological Sequence and Time Connectors". Has demostrado constancia y rigor en tu aprendizaje."
+• Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Inglés."
+
+
+
+################################################################################
+### CLASE 3 DE 6: PAST SIMPLE TENSE: REGULAR AND IRREGULAR VERBS
+################################################################################
+
+================================================================================
+STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+================================================================================
+
+FICHA CURRICULAR:
+• Asignatura: Inglés
+• Nivel / Curso: 7° Básico
+• Objetivo de Aprendizaje: OA 9 - Comprensión de lectura
+• Clase: 3 de 6 ("Past Simple Tense: Regular and Irregular Verbs")
+• Duracion Estimada: 30 Minutos
+
+DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
+1. Proporcion Widescreen 16:9 estricto (1920x1080).
+2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
+3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
+4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
+5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
+   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
+   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
+7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
+8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
+
+================================================================================
+MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Video Motivacional: El Desafío de Past Simple Tense: Regular and Irregular Verbs
+• DILE ANTES DEL VIDEO: "Antes de ver el video, observa con atención lo que descubren los dos exploradores y qué pregunta queda planteada."
+• INSTRUCCION AL ESTUDIANTE: "Observa y reflexiona con las escenas del desafío visual."
+• DILE DESPUES DEL VIDEO: "Muy buena observación. Ahora conversaremos sobre lo que descubrieron en la expedición."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Apertura y Contexto (9 seg aprox) ---
+1. Propósito Didáctico: Apertura y Contexto
+2. Título en Pantalla (64 pt): Misión 3: Past Simple Tense: Regular and Irregular Verbs
+3. Subtítulo en Pantalla (36 pt): Exploración inicial en Inglés
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Past Simple Tense: Regular and Irregular Verbs (Inglés). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Communicative context: Story scenario of Past Simple Tense: Regular and Irregular Verbs
+6. Notas al Orador (Locución Google Vids): "Comienza una nueva expedición de aprendizaje en Inglés. Nuestros dos exploradores analizan el desafío de Past Simple Tense: Regular and Irregular Verbs para descubrir sus secretos."
+
+--- DIAPOSITIVA 2: Presentación del Escenario (9 seg aprox) ---
+1. Propósito Didáctico: Presentación del Escenario
+2. Título en Pantalla (64 pt): Punto de partida
+3. Subtítulo en Pantalla (36 pt): Recognizing -ed endings and common irregular past actions in context
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Recognizing -ed endings and common irregular past actions in context. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Recognizing -ed endings and common irregular past actions in context
+6. Notas al Orador (Locución Google Vids): "Al observar los datos sobre Recognizing -ed endings and common irregular past actions in context, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor."
+
+--- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 seg aprox) ---
+1. Propósito Didáctico: Aparición del Conflicto / Misterio
+2. Título en Pantalla (64 pt): El enigma disciplinar
+3. Subtítulo en Pantalla (36 pt): Desafío en Past Simple Tense: Regular and Irregular Verbs
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Recognizing -ed endings and common irregular past actions in context
+6. Notas al Orador (Locución Google Vids): "Surge un reto concreto sobre Past Simple Tense: Regular and Irregular Verbs: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso."
+
+--- DIAPOSITIVA 4: Exploración de Pistas (9 seg aprox) ---
+1. Propósito Didáctico: Exploración de Pistas
+2. Título en Pantalla (64 pt): Análisis de evidencias
+3. Subtítulo en Pantalla (36 pt): Recognizing -ed endings and common irregular past actions in context
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Recognizing -ed endings and common irregular past actions in context
+6. Notas al Orador (Locución Google Vids): "Ambos comparan las pistas disponibles sobre Recognizing -ed endings and common irregular past actions in context. Cada dato confirma cómo interactúan los elementos clave de la situación."
+
+--- DIAPOSITIVA 5: El Momento Crítico (9 seg aprox) ---
+1. Propósito Didáctico: El Momento Crítico
+2. Título en Pantalla (64 pt): Criterio de decisión
+3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Recognizing -ed endings and common irregular past actions in context
+6. Notas al Orador (Locución Google Vids): "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Past Simple Tense: Regular and Irregular Verbs con total precisión metodológica."
+
+--- DIAPOSITIVA 6: La Antesala de la Pregunta (9 seg aprox) ---
+1. Propósito Didáctico: La Antesala de la Pregunta
+2. Título en Pantalla (64 pt): El dilema central
+3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Past Simple Tense: Regular and Irregular Verbs?
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Language puzzle: Identifying narrative clues in English
+6. Notas al Orador (Locución Google Vids): "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje."
+
+--- DIAPOSITIVA 7: La Pregunta Detonante (9 seg aprox) ---
+1. Propósito Didáctico: La Pregunta Detonante
+2. Título en Pantalla (64 pt): Pregunta detonante
+3. Subtítulo en Pantalla (36 pt): Regla y método de Past Simple Tense: Regular and Irregular Verbs
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Trigger question: How do we express Past Simple Tense: Regular and Irregular Verbs accurately?
+6. Notas al Orador (Locución Google Vids): "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!"
+
+================================================================================
+MODULO 2: PROMPT VIDEO EXPLICATIVO CONCEPTUAL (PASO 4 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Video Explicativo: Formalización de Past Simple Tense: Regular and Irregular Verbs
+• Idea Clave: "In Past Simple Tense: Regular and Irregular Verbs, we communicate effectively by using 'información explícita' in context, paying attention to verb tenses and avoiding word-for-word translation."
+• DILE ANTES DEL VIDEO: "Ahora veremos el video explicativo de Past Simple Tense: Regular and Irregular Verbs. Fíjate en la pronunciación y en cómo se utiliza 'información explícita' en una conversación real."
+• INSTRUCCION: "Revisemos la explicación formal y la idea clave."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
+1. Propósito Didáctico: Objetivo de la Lección
+2. Título en Pantalla (64 pt): Objetivo de la lección
+3. Subtítulo en Pantalla (36 pt): Master Past Simple Tense: Regular and Irregular Verbs: Recognizing -ed endings and common irregular past actions in context
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Recognizing -ed endings and common irregular past actions in context. High clarity, negative space for text. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Formal heading: OA 9 · Past Simple Tense: Regular and Irregular Verbs
+6. Notas al Orador (Locución Google Vids): "Today our goal is to learn how to master recognizing -ed endings and common irregular past actions in context, applying clear disciplinary steps with total confidence."
+
+--- DIAPOSITIVA 2: Definición del Concepto Central (12 seg aprox) ---
+1. Propósito Didáctico: Definición del Concepto Central
+2. Título en Pantalla (64 pt): Concepto fundamental
+3. Subtítulo en Pantalla (36 pt): Recognizing -ed endings and common irregular past actions in context
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Sentence formula: Structure of Recognizing -ed endings and common irregular past actions in context
+6. Notas al Orador (Locución Google Vids): "To understand Past Simple Tense: Regular and Irregular Verbs, we establish a clean conceptual foundation connecting the core definition with verifiable concrete evidence."
+
+--- DIAPOSITIVA 3: Demostración Modelada (12 seg aprox) ---
+1. Propósito Didáctico: Demostración Modelada
+2. Título en Pantalla (64 pt): Modelamiento paso a paso
+3. Subtítulo en Pantalla (36 pt): Procedimiento de Past Simple Tense: Regular and Irregular Verbs
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Color-coded grammar blocks with modeled example
+6. Notas al Orador (Locución Google Vids): "Observe how the procedure unfolds in this guided demonstration: every single change responds to an explicit disciplinary rule."
+
+--- DIAPOSITIVA 4: Prevención del Error Frecuente (13 seg aprox) ---
+1. Propósito Didáctico: Prevención del Error Frecuente
+2. Título en Pantalla (64 pt): Atención: Error habitual
+3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Error contrast: common grammar and punctuation pitfall
+6. Notas al Orador (Locución Google Vids): "A common pitfall happens when overlooking order or basic conventions. We always check each intermediate step before concluding."
+
+--- DIAPOSITIVA 5: Comprobación del Resultado (12 seg aprox) ---
+1. Propósito Didáctico: Comprobación del Resultado
+2. Título en Pantalla (64 pt): Validación del resultado
+3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Meaning validation: verifying sentence cohesion
+6. Notas al Orador (Locución Google Vids): "By contrasting the result with our initial scenario, we confirm that our solution is consistent, rigorous, and fully answers the question."
+
+--- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 seg aprox) ---
+1. Propósito Didáctico: Estrategia Mnemotécnica
+2. Título en Pantalla (64 pt): Estrategia de pensamiento
+3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Memory strategy: Connector + Subject + Verb + Context
+6. Notas al Orador (Locución Google Vids): "Always remember the three-step thinking strategy: identify the key data, apply the formal rule in order, and verify the final result."
+
+--- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 seg aprox) ---
+1. Propósito Didáctico: Síntesis y Regla de Oro
+2. Título en Pantalla (64 pt): Regla de Oro: Past Simple Tense: Regular and Irregular Verbs
+3. Subtítulo en Pantalla (36 pt): Método disciplinar validado
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Summary infography: Golden rule of Past Simple Tense: Regular and Irregular Verbs
+6. Notas al Orador (Locución Google Vids): "Now that you understand the golden rule and the procedure of Past Simple Tense: Regular and Irregular Verbs, let us practice and prove our skills in the interactive platform!"
+
+================================================================================
+MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
+================================================================================
+
+[PREPARACION DEL ADULTO / MENTOR]
+• Objetivo del Adulto: Acompañar al estudiante en la inmersión del idioma inglés para: Past Simple Tense: Regular and Irregular Verbs. Las instrucciones del apoderado son en español, mientras los textos, vocabulario y miniquiz se practican en inglés con foco en 'información explícita'.
+• Ruta de Hoy: 1. Inicio y activación · 2. Video de exploración · 3. Recorrido guiado · 4. Formalización y práctica en cuaderno · 5. Miniquiz y REVISAR · 6. Cierre metacognitivo
+• Recordatorios Pedagogicos del Mentor:
+  1. Sigue el orden indicado.
+  2. Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.
+  3. No leas los recuadros SOLO PARA TI ni AYUDA DE LECTURA.
+  4. Haz cada pregunta y espera la respuesta antes de seleccionar una opción.
+  5. Considera correcta una respuesta si expresa la idea matemática, aunque use palabras distintas.
+  6. Si el estudiante necesita apoyo, usa únicamente la ayuda que aparecerá.
+  7. Si propone otra explicación o no está de acuerdo, escúchalo completo y valora su razonamiento antes de guiarlo.
+• Clima Emocional y Acogida: "Fomenta la confianza comunicativa: 'Listen, read the clues, and focus on the general meaning before translating every single word'."
+
+--------------------------------------------------------------------------------
+[PASO 1: INICIO (4 SUB-ETAPAS CANONICAS)]
+--------------------------------------------------------------------------------
+Sub-etapa 1: Nuestra Ruta de la Asignatura
+• DILE AL ESTUDIANTE (Apertura de la ruta): "Hoy comenzaremos la clase 3 de Inglés: "Past Simple Tense: Regular and Irregular Verbs"."
+• 4 Bloques Tematicos de la Asignatura:
+  Bloque 01: Inglés (Past Simple Tense: Regular and Irregular Verbs)
+  Bloque 02: Exploración (Gancho y Recorrido Guiado)
+  Bloque 03: Práctica (Aplicación en situaciones reales)
+  Bloque 04: Evaluación (Miniquiz formativo y síntesis)
+
+Sub-etapa 2: La Clase de Hoy
+• DILE AL ESTUDIANTE (Foco didactico): "Recognizing -ed endings and common irregular past actions in context"
+• 3 Tarjetas de Foco de la Pantalla del Estudiante:
+  Tarjeta 1: Exploración inicial -> Past Simple Tense: Regular and Irregular Verbs
+  Tarjeta 2: Idea clave -> In Past Simple Tense: Regular and Irregular Verbs, we commun
+  Tarjeta 3: Práctica y aplicación -> Resolución guiada paso a paso
+
+Sub-etapa 3: Situacion Inicial de Exploracion (Detonante)
+• DILE AL ESTUDIANTE (Situacion detonante): "Hoy en nuestra sesión de English exploramos 'Past Simple Tense: Regular and Irregular Verbs'. El foco comunicativo del currículum es 'información explícita'. El apoderado guía en español mientras que el estudiante lee y escucha en inglés. Lee la siguiente frase en voz alta sobre Recognizing -ed endings and common irregular past actions in context:"
+• RESPUESTA ESPERADA: Identificar en español o inglés los personajes (characters), la acción o el propósito comunicativo vinculado con información explícita.
+• PISTA SOCRATICA (SOLO PARA TI): "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general."
+• CLIMA EMOCIONAL: "Fomenta la confianza comunicativa: 'Listen, read the clues, and focus on the general meaning before translating every single word'."
+• Pautas de Evaluacion Formativa del Mentor:
+  - [Acierto] Identificó a los personajes, la acción o el propósito en inglés vinculado con información explícita -> Feedback: "¡Very good! Supo reconocer los elementos clave de la oración en inglés."
+  - [Requiere Apoyo] Tuvo dudas con el vocabulario o no identificó la acción ni los personajes -> Feedback: "Busquen juntos palabras transparentes y guíalo para identificar el verbo principal de la acción."
+
+Sub-etapa 4: Comprendamos la Respuesta (Punto de Referencia)
+• DILE AL ESTUDIANTE (Formalizacion de referencia): ""What is the main communicative situation described in this English sentence? (¿Cuál es la situación principal descrita en la oración?)""
+• PREGUNTALE AL ESTUDIANTE: ""What is the main communicative situation described in this English sentence? (¿Cuál es la situación principal descrita en la oración?)""
+• RESPUESTA ESPERADA: Identificar en español o inglés los personajes (characters), la acción o el propósito comunicativo vinculado con información explícita.
+• PISTA SOCRATICA: "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general."
+• FEEDBACK SI ACIERTA: "Muy bien. Observaste el detalle central con precisión."
+• FEEDBACK SI NECESITA APOYO: "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general."
+
+--------------------------------------------------------------------------------
+[PASO 3: RECORRIDO - CONVERSACION GUIADA Y PREGUNTAS SOCRATICAS]
+--------------------------------------------------------------------------------
+Item 1 (Key Vocabulary & Context Clues (información explícita)):
+• Pregunta Socratica: "Which English words in the text give you clear clues about the communicative goal and the action?"
+• Respuesta Esperada: Identify key English nouns, action verbs or connectors related to the topic.
+• Feedback de Exito: "Well done! You successfully identified the key English vocabulary from the context."
+• Pista de Apoyo Socratica: "Look for transparent words and descriptive adjectives: what words tell you what is happening?"
+• Revelacion: "Context clues and key vocabulary help us understand the main message without needing an immediate dictionary translation."
+
+Item 2 (Grammar & Communicative Flow):
+• Pregunta Socratica: "Notice the verb tense or structure used in the sentences. How does the grammatical form tell us when or how the action happens?"
+• Respuesta Esperada: Recognize the verb form or structure indicating time, function, or modality.
+• Feedback de Exito: "Excellent! You connected the grammatical structure with its real communicative meaning."
+• Pista de Apoyo Socratica: "Look at the ending of the verb or auxiliary words: does it talk about routine, past events or future plans?"
+• Revelacion: "Grammatical structures and verb tenses provide the timeline and conditions for natural English communication."
+
+--------------------------------------------------------------------------------
+[PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
+--------------------------------------------------------------------------------
+• Cierre y Sintesis del Video Explicativo: "Hoy dominaste Recognizing -ed endings and common irregular past actions in context en inglés con práctica activa de vocabulario y escritura en tu cuaderno."
+
+Comprobacion 1 (Key Vocabulary & Context Clues (información explícita)):
+• Pregunta: "Which English words in the text give you clear clues about the communicative goal and the action?"
+• Respuesta Esperada: Identify key English nouns, action verbs or connectors related to the topic.
+• Pista de Apoyo: "Look for transparent words and descriptive adjectives: what words tell you what is happening?"
+• Revelacion: "Key English words identified from the context of the communicative text."
+
+Comprobacion 2 (Grammar & Communicative Flow):
+• Pregunta: "Notice the verb tense or structure used in the sentences. How does the grammatical form tell us when or how the action happens?"
+• Respuesta Esperada: Recognize the verb form or structure indicating time, function, or modality.
+• Pista de Apoyo: "Look at the ending of the verb or auxiliary words: does it talk about routine, past events or future plans?"
+• Revelacion: "The verb tense and sentence structure that clarify the communicative intention."
+
+--------------------------------------------------------------------------------
+[PASO 5: PRACTICA EN EL CUADERNO FISICO]
+--------------------------------------------------------------------------------
+Ejercicio 1 (Practice 1 in Notebook: Vocabulary & Model Sentences):
+• Enunciado de Aplicacion: "Open your English notebook. Write as title: 'Past Simple Tense: Regular and Irregular Verbs'. Copy the key vocabulary box, write 2 original sentences using 'información explícita', and translate their meaning into Spanish."
+• Respuesta Esperada: Accurate English sentences in the notebook with correct spelling, grammar agreement, and Spanish translation.
+• Feedback de Exito: "Great notebook work! Your English sentences are well structured and meaningful."
+• Pista de Apoyo Socratica: "Check the slide model: Subject + Verb + Complement. Follow that pattern to write your sentences."
+
+Ejercicio 2 (Practice 2 in Notebook: Short Dialogue or Message):
+• Enunciado de Aplicacion: "In your notebook, write a short 3-line dialogue or message applying today's communicative goal (Recognizing -ed endings and common irregular past actions in context). Then read it aloud with your mentor."
+• Respuesta Esperada: Short dialogue written in English and read aloud with proper pronunciation and natural intonation.
+• Feedback de Exito: "Outstanding fluency! Writing and reading aloud activates both speaking and writing skills."
+• Pista de Apoyo Socratica: "Use simple, direct phrases: Greeting, main message or question, and friendly closing."
+
+Modulo: Comparemos dos situaciones (Comparemos dos situaciones)
+• DILE: "Antes de resumir, comparemos dos situaciones. No necesitas repetir una frase exacta: lo importante es que expliques la idea con tus propias palabras."
+• Pregunta: "Al comparar dos situaciones de Past Simple Tense: Regular and Irregular Verbs, ¿cómo influye el contexto en la interpretación de los datos?"
+• Respuesta Esperada: El significado o resultado depende de las condiciones del contexto y del propósito de la situación.
+• Feedback si acierta: "¡Excelente razonamiento! Reconociste que el contexto orienta la interpretación de los datos."
+• Feedback si necesita apoyo: "Observa cada situación por separado y explica qué elementos las distinguen."
+
+Modulo: Desafio Breve (Desafío breve: Past Simple Tense: Regular and Irregular Verbs)
+• Pregunta: "En Inglés, ¿qué diferencia observas entre identificar los datos y aplicar el procedimiento? Explica tu razonamiento."
+• Respuesta Esperada: Identificar los datos determina el punto de partida; aplicar el procedimiento permite construir la respuesta.
+
+--------------------------------------------------------------------------------
+[PASO 6: RESUMEN Y ESTRATEGIA DE PENSAMIENTO]
+--------------------------------------------------------------------------------
+• Idea Clave: "In Past Simple Tense: Regular and Irregular Verbs, we communicate effectively by using 'información explícita' in context, paying attention to verb tenses and avoiding word-for-word translation."
+• DILE AL ESTUDIANTE: "Cuando enfrentes un problema en Inglés, puedes seguir estos tres pasos clave:"
+• Pasos de la Estrategia:
+  Paso 1: Identifica -> ¿Cuáles son los datos clave y cuál es la pregunta central?
+  Paso 2: Aplica -> ¿Qué regla o método disciplinar corresponde utilizar?
+  Paso 3: Comprueba -> ¿La conclusión o resultado responde con coherencia al problema?
+• 3 Ideas Clave Estructuradas de Sintesis:
+  - 1 · Concepto central: Identificamos los elementos y el punto de partida del análisis.
+  - 2 · Interpretación del contexto: Recognizing -ed endings and common irregular past actions in context
+  - 3 · Síntesis formal: In Past Simple Tense: Regular and Irregular Verbs, we communicate effectively by using 'información explícita' in context, paying attention to verb tenses and avoiding word-for-word translation.
+
+--------------------------------------------------------------------------------
+[PASO 7: MINIQUIZ FORMATIVO Y FASE REVISAR]
+--------------------------------------------------------------------------------
+Pregunta 1: Reading Comprehension: What is the main communicative purpose of 'información explícita' in today's English lesson?
+  A) To express clear ideas, actions, or descriptions in English using context clues and accurate sentence structure [CORRECTA]
+  B) To translate words completely out of context without paying attention to meaning 
+  C) To memorize isolated lists of English words without applying them in real sentences 
+• Explicacion Formativa del Error: "Context clues and functional structures allow English learners to communicate naturally and with confidence."
+• Guion del Mentor (Fase REVISAR): "Pídele que señale la palabra o verbo en inglés que justifica su elección."
+
+Pregunta 2: To avoid the common mistake of 'No reconocer vocabulario clave o estructuras gramaticales en el contexto oral.', what is the best strategy when reading an English text?
+  A) Identify the general meaning and key cognates first, instead of trying to translate every single word [CORRECTA]
+  B) Stop reading immediately whenever you find an unfamiliar English word 
+  C) Assume that English sentences must follow the exact same word order as Spanish 
+• Explicacion Formativa del Error: "Deducir el significado por contexto evita la frustración y construye fluidez en la comprensión lectora en inglés."
+• Guion del Mentor (Fase REVISAR): "Pregúntale: ¿cómo te ayudaron los cognados a entender la idea general sin usar diccionario?"
+
+Pregunta 3: Language Structure: Which English sentence demonstrates the correct grammatical pattern for 'información explícita'?
+  A) The student carefully read the text and wrote a complete response in the notebook [CORRECTA]
+  B) The student carefully reading the text and write without agreement yesterday 
+  C) Yesterday the student will read the text in the future tense by mistake 
+• Explicacion Formativa del Error: "A well-structured English sentence maintains proper subject-verb agreement and consistent tense usage."
+• Guion del Mentor (Fase REVISAR): "Pídele que identifique el sujeto y el verbo principal de la oración correcta."
+
+--------------------------------------------------------------------------------
+[PASO 7B: MODULO DE RECUPERACION FORMATIVA]
+--------------------------------------------------------------------------------
+Refuerzo 1 (English Recovery & Consolidation: Past Simple Tense: Regular and Irregular Verbs):
+• Explicacion Previa: "When reading and writing in English, always look for the main subject and the action verb in the correct tense, using context clues to guide your comprehension of 'información explícita'."
+• Pregunta: "Which sentence correctly demonstrates clear English communication for this lesson?"
+• Opciones: The team explored the setting and recorded their findings in the notebook | The team explore yesterday without any past tense marker
+• Respuesta Correcta: The team explored the setting and recorded their findings in the notebook
+• Refuerzo si falla: "Remember that in English, regular verbs in the past tense take the -ed ending to signal completed events."
+
+--------------------------------------------------------------------------------
+[PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
+--------------------------------------------------------------------------------
+• Pregunta de Sintesis: "In your own words, what was the most useful English word or phrase you learned in today's lesson?"
+• Reflexion Metacognitiva: "¿Qué técnica te ayudó más a entender el texto en inglés: buscar cognados o identificar los verbos principales?"
+• Celebracion del Logro: "Great job today! You have successfully mastered Lesson 3. See you in the next English adventure!"
+• Felicitacion Final: "¡Felicitaciones! Hoy completaste con éxito la clase "Past Simple Tense: Regular and Irregular Verbs". Has demostrado constancia y rigor en tu aprendizaje."
+• Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Inglés."
+
+
+
+################################################################################
+### CLASE 4 DE 6: CHARACTER FEELINGS, DIALOGUE, AND CONFLICT
+################################################################################
+
+================================================================================
+STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+================================================================================
+
+FICHA CURRICULAR:
+• Asignatura: Inglés
+• Nivel / Curso: 7° Básico
+• Objetivo de Aprendizaje: OA 9 - Comprensión de lectura
+• Clase: 4 de 6 ("Character Feelings, Dialogue, and Conflict")
+• Duracion Estimada: 30 Minutos
+
+DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
+1. Proporcion Widescreen 16:9 estricto (1920x1080).
+2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
+3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
+4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
+5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
+   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
+   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
+7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
+8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
+
+================================================================================
+MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Video Motivacional: El Desafío de Character Feelings, Dialogue, and Conflict
+• DILE ANTES DEL VIDEO: "Antes de ver el video, observa con atención lo que descubren los dos exploradores y qué pregunta queda planteada."
+• INSTRUCCION AL ESTUDIANTE: "Observa y reflexiona con las escenas del desafío visual."
+• DILE DESPUES DEL VIDEO: "Muy buena observación. Ahora conversaremos sobre lo que descubrieron en la expedición."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Apertura y Contexto (9 seg aprox) ---
+1. Propósito Didáctico: Apertura y Contexto
+2. Título en Pantalla (64 pt): Misión 4: Character Feelings, Dialogue, and Conflict
+3. Subtítulo en Pantalla (36 pt): Exploración inicial en Inglés
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Character Feelings, Dialogue, and Conflict (Inglés). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Communicative context: Story scenario of Character Feelings, Dialogue, and Conflict
+6. Notas al Orador (Locución Google Vids): "Comienza una nueva expedición de aprendizaje en Inglés. Nuestros dos exploradores analizan el desafío de Character Feelings, Dialogue, and Conflict para descubrir sus secretos."
+
+--- DIAPOSITIVA 2: Presentación del Escenario (9 seg aprox) ---
+1. Propósito Didáctico: Presentación del Escenario
+2. Título en Pantalla (64 pt): Punto de partida
+3. Subtítulo en Pantalla (36 pt): Identifying emotions and the main obstacle in narrative texts
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Identifying emotions and the main obstacle in narrative texts. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Identifying emotions and the main obstacle in narrative texts
+6. Notas al Orador (Locución Google Vids): "Al observar los datos sobre Identifying emotions and the main obstacle in narrative texts, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor."
+
+--- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 seg aprox) ---
+1. Propósito Didáctico: Aparición del Conflicto / Misterio
+2. Título en Pantalla (64 pt): El enigma disciplinar
+3. Subtítulo en Pantalla (36 pt): Desafío en Character Feelings, Dialogue, and Conflict
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Identifying emotions and the main obstacle in narrative texts
+6. Notas al Orador (Locución Google Vids): "Surge un reto concreto sobre Character Feelings, Dialogue, and Conflict: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso."
+
+--- DIAPOSITIVA 4: Exploración de Pistas (9 seg aprox) ---
+1. Propósito Didáctico: Exploración de Pistas
+2. Título en Pantalla (64 pt): Análisis de evidencias
+3. Subtítulo en Pantalla (36 pt): Identifying emotions and the main obstacle in narrative texts
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Identifying emotions and the main obstacle in narrative texts
+6. Notas al Orador (Locución Google Vids): "Ambos comparan las pistas disponibles sobre Identifying emotions and the main obstacle in narrative texts. Cada dato confirma cómo interactúan los elementos clave de la situación."
+
+--- DIAPOSITIVA 5: El Momento Crítico (9 seg aprox) ---
+1. Propósito Didáctico: El Momento Crítico
+2. Título en Pantalla (64 pt): Criterio de decisión
+3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Identifying emotions and the main obstacle in narrative texts
+6. Notas al Orador (Locución Google Vids): "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Character Feelings, Dialogue, and Conflict con total precisión metodológica."
+
+--- DIAPOSITIVA 6: La Antesala de la Pregunta (9 seg aprox) ---
+1. Propósito Didáctico: La Antesala de la Pregunta
+2. Título en Pantalla (64 pt): El dilema central
+3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Character Feelings, Dialogue, and Conflict?
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Language puzzle: Identifying narrative clues in English
+6. Notas al Orador (Locución Google Vids): "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje."
+
+--- DIAPOSITIVA 7: La Pregunta Detonante (9 seg aprox) ---
+1. Propósito Didáctico: La Pregunta Detonante
+2. Título en Pantalla (64 pt): Pregunta detonante
+3. Subtítulo en Pantalla (36 pt): Regla y método de Character Feelings, Dialogue, and Conflict
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Trigger question: How do we express Character Feelings, Dialogue, and Conflict accurately?
+6. Notas al Orador (Locución Google Vids): "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!"
+
+================================================================================
+MODULO 2: PROMPT VIDEO EXPLICATIVO CONCEPTUAL (PASO 4 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Video Explicativo: Formalización de Character Feelings, Dialogue, and Conflict
+• Idea Clave: "In Character Feelings, Dialogue, and Conflict, we communicate effectively by using 'textos audiovisuales' in context, paying attention to verb tenses and avoiding word-for-word translation."
+• DILE ANTES DEL VIDEO: "Ahora veremos el video explicativo de Character Feelings, Dialogue, and Conflict. Fíjate en la pronunciación y en cómo se utiliza 'textos audiovisuales' en una conversación real."
+• INSTRUCCION: "Revisemos la explicación formal y la idea clave."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
+1. Propósito Didáctico: Objetivo de la Lección
+2. Título en Pantalla (64 pt): Objetivo de la lección
+3. Subtítulo en Pantalla (36 pt): Master Character Feelings, Dialogue, and Conflict: Identifying emotions and the main obstacle in narrative texts
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Identifying emotions and the main obstacle in narrative texts. High clarity, negative space for text. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Formal heading: OA 9 · Character Feelings, Dialogue, and Conflict
+6. Notas al Orador (Locución Google Vids): "Today our goal is to learn how to master identifying emotions and the main obstacle in narrative texts, applying clear disciplinary steps with total confidence."
+
+--- DIAPOSITIVA 2: Definición del Concepto Central (12 seg aprox) ---
+1. Propósito Didáctico: Definición del Concepto Central
+2. Título en Pantalla (64 pt): Concepto fundamental
+3. Subtítulo en Pantalla (36 pt): Identifying emotions and the main obstacle in narrative texts
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Sentence formula: Structure of Identifying emotions and the main obstacle in narrative texts
+6. Notas al Orador (Locución Google Vids): "To understand Character Feelings, Dialogue, and Conflict, we establish a clean conceptual foundation connecting the core definition with verifiable concrete evidence."
+
+--- DIAPOSITIVA 3: Demostración Modelada (12 seg aprox) ---
+1. Propósito Didáctico: Demostración Modelada
+2. Título en Pantalla (64 pt): Modelamiento paso a paso
+3. Subtítulo en Pantalla (36 pt): Procedimiento de Character Feelings, Dialogue, and Conflict
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Color-coded grammar blocks with modeled example
+6. Notas al Orador (Locución Google Vids): "Observe how the procedure unfolds in this guided demonstration: every single change responds to an explicit disciplinary rule."
+
+--- DIAPOSITIVA 4: Prevención del Error Frecuente (13 seg aprox) ---
+1. Propósito Didáctico: Prevención del Error Frecuente
+2. Título en Pantalla (64 pt): Atención: Error habitual
+3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Error contrast: common grammar and punctuation pitfall
+6. Notas al Orador (Locución Google Vids): "A common pitfall happens when overlooking order or basic conventions. We always check each intermediate step before concluding."
+
+--- DIAPOSITIVA 5: Comprobación del Resultado (12 seg aprox) ---
+1. Propósito Didáctico: Comprobación del Resultado
+2. Título en Pantalla (64 pt): Validación del resultado
+3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Meaning validation: verifying sentence cohesion
+6. Notas al Orador (Locución Google Vids): "By contrasting the result with our initial scenario, we confirm that our solution is consistent, rigorous, and fully answers the question."
+
+--- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 seg aprox) ---
+1. Propósito Didáctico: Estrategia Mnemotécnica
+2. Título en Pantalla (64 pt): Estrategia de pensamiento
+3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Memory strategy: Connector + Subject + Verb + Context
+6. Notas al Orador (Locución Google Vids): "Always remember the three-step thinking strategy: identify the key data, apply the formal rule in order, and verify the final result."
+
+--- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 seg aprox) ---
+1. Propósito Didáctico: Síntesis y Regla de Oro
+2. Título en Pantalla (64 pt): Regla de Oro: Character Feelings, Dialogue, and Conflict
+3. Subtítulo en Pantalla (36 pt): Método disciplinar validado
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Summary infography: Golden rule of Character Feelings, Dialogue, and Conflict
+6. Notas al Orador (Locución Google Vids): "Now that you understand the golden rule and the procedure of Character Feelings, Dialogue, and Conflict, let us practice and prove our skills in the interactive platform!"
+
+================================================================================
+MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
+================================================================================
+
+[PREPARACION DEL ADULTO / MENTOR]
+• Objetivo del Adulto: Acompañar al estudiante en la inmersión del idioma inglés para: Character Feelings, Dialogue, and Conflict. Las instrucciones del apoderado son en español, mientras los textos, vocabulario y miniquiz se practican en inglés con foco en 'textos audiovisuales'.
+• Ruta de Hoy: 1. Inicio y activación · 2. Video de exploración · 3. Recorrido guiado · 4. Formalización y práctica en cuaderno · 5. Miniquiz y REVISAR · 6. Cierre metacognitivo
+• Recordatorios Pedagogicos del Mentor:
+  1. Sigue el orden indicado.
+  2. Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.
+  3. No leas los recuadros SOLO PARA TI ni AYUDA DE LECTURA.
+  4. Haz cada pregunta y espera la respuesta antes de seleccionar una opción.
+  5. Considera correcta una respuesta si expresa la idea matemática, aunque use palabras distintas.
+  6. Si el estudiante necesita apoyo, usa únicamente la ayuda que aparecerá.
+  7. Si propone otra explicación o no está de acuerdo, escúchalo completo y valora su razonamiento antes de guiarlo.
+• Clima Emocional y Acogida: "Fomenta la confianza comunicativa: 'Listen, read the clues, and focus on the general meaning before translating every single word'."
+
+--------------------------------------------------------------------------------
+[PASO 1: INICIO (4 SUB-ETAPAS CANONICAS)]
+--------------------------------------------------------------------------------
+Sub-etapa 1: Nuestra Ruta de la Asignatura
+• DILE AL ESTUDIANTE (Apertura de la ruta): "Hoy comenzaremos la clase 4 de Inglés: "Character Feelings, Dialogue, and Conflict"."
+• 4 Bloques Tematicos de la Asignatura:
+  Bloque 01: Inglés (Character Feelings, Dialogue, and Conflict)
+  Bloque 02: Exploración (Gancho y Recorrido Guiado)
+  Bloque 03: Práctica (Aplicación en situaciones reales)
+  Bloque 04: Evaluación (Miniquiz formativo y síntesis)
+
+Sub-etapa 2: La Clase de Hoy
+• DILE AL ESTUDIANTE (Foco didactico): "Identifying emotions and the main obstacle in narrative texts"
+• 3 Tarjetas de Foco de la Pantalla del Estudiante:
+  Tarjeta 1: Exploración inicial -> Character Feelings, Dialogue, and Conflict
+  Tarjeta 2: Idea clave -> In Character Feelings, Dialogue, and Conflict, we communicat
+  Tarjeta 3: Práctica y aplicación -> Resolución guiada paso a paso
+
+Sub-etapa 3: Situacion Inicial de Exploracion (Detonante)
+• DILE AL ESTUDIANTE (Situacion detonante): "Hoy en nuestra sesión de English exploramos 'Character Feelings, Dialogue, and Conflict'. El foco comunicativo del currículum es 'textos audiovisuales'. El apoderado guía en español mientras que el estudiante lee y escucha en inglés. Lee la siguiente frase en voz alta sobre Identifying emotions and the main obstacle in narrative texts:"
+• RESPUESTA ESPERADA: Identificar en español o inglés los personajes (characters), la acción o el propósito comunicativo vinculado con textos audiovisuales.
+• PISTA SOCRATICA (SOLO PARA TI): "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general."
+• CLIMA EMOCIONAL: "Fomenta la confianza comunicativa: 'Listen, read the clues, and focus on the general meaning before translating every single word'."
+• Pautas de Evaluacion Formativa del Mentor:
+  - [Acierto] Identificó a los personajes, la acción o el propósito en inglés vinculado con textos audiovisuales -> Feedback: "¡Very good! Supo reconocer los elementos clave de la oración en inglés."
+  - [Requiere Apoyo] Tuvo dudas con el vocabulario o no identificó la acción ni los personajes -> Feedback: "Busquen juntos palabras transparentes y guíalo para identificar el verbo principal de la acción."
+
+Sub-etapa 4: Comprendamos la Respuesta (Punto de Referencia)
+• DILE AL ESTUDIANTE (Formalizacion de referencia): ""What is the main communicative situation described in this English sentence? (¿Cuál es la situación principal descrita en la oración?)""
+• PREGUNTALE AL ESTUDIANTE: ""What is the main communicative situation described in this English sentence? (¿Cuál es la situación principal descrita en la oración?)""
+• RESPUESTA ESPERADA: Identificar en español o inglés los personajes (characters), la acción o el propósito comunicativo vinculado con textos audiovisuales.
+• PISTA SOCRATICA: "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general."
+• FEEDBACK SI ACIERTA: "Muy bien. Observaste el detalle central con precisión."
+• FEEDBACK SI NECESITA APOYO: "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general."
+
+--------------------------------------------------------------------------------
+[PASO 3: RECORRIDO - CONVERSACION GUIADA Y PREGUNTAS SOCRATICAS]
+--------------------------------------------------------------------------------
+Item 1 (Key Vocabulary & Context Clues (textos audiovisuales)):
+• Pregunta Socratica: "Which English words in the text give you clear clues about the communicative goal and the action?"
+• Respuesta Esperada: Identify key English nouns, action verbs or connectors related to the topic.
+• Feedback de Exito: "Well done! You successfully identified the key English vocabulary from the context."
+• Pista de Apoyo Socratica: "Look for transparent words and descriptive adjectives: what words tell you what is happening?"
+• Revelacion: "Context clues and key vocabulary help us understand the main message without needing an immediate dictionary translation."
+
+Item 2 (Grammar & Communicative Flow):
+• Pregunta Socratica: "Notice the verb tense or structure used in the sentences. How does the grammatical form tell us when or how the action happens?"
+• Respuesta Esperada: Recognize the verb form or structure indicating time, function, or modality.
+• Feedback de Exito: "Excellent! You connected the grammatical structure with its real communicative meaning."
+• Pista de Apoyo Socratica: "Look at the ending of the verb or auxiliary words: does it talk about routine, past events or future plans?"
+• Revelacion: "Grammatical structures and verb tenses provide the timeline and conditions for natural English communication."
+
+--------------------------------------------------------------------------------
+[PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
+--------------------------------------------------------------------------------
+• Cierre y Sintesis del Video Explicativo: "Hoy dominaste Identifying emotions and the main obstacle in narrative texts en inglés con práctica activa de vocabulario y escritura en tu cuaderno."
+
+Comprobacion 1 (Key Vocabulary & Context Clues (textos audiovisuales)):
+• Pregunta: "Which English words in the text give you clear clues about the communicative goal and the action?"
+• Respuesta Esperada: Identify key English nouns, action verbs or connectors related to the topic.
+• Pista de Apoyo: "Look for transparent words and descriptive adjectives: what words tell you what is happening?"
+• Revelacion: "Key English words identified from the context of the communicative text."
+
+Comprobacion 2 (Grammar & Communicative Flow):
+• Pregunta: "Notice the verb tense or structure used in the sentences. How does the grammatical form tell us when or how the action happens?"
+• Respuesta Esperada: Recognize the verb form or structure indicating time, function, or modality.
+• Pista de Apoyo: "Look at the ending of the verb or auxiliary words: does it talk about routine, past events or future plans?"
+• Revelacion: "The verb tense and sentence structure that clarify the communicative intention."
+
+--------------------------------------------------------------------------------
+[PASO 5: PRACTICA EN EL CUADERNO FISICO]
+--------------------------------------------------------------------------------
+Ejercicio 1 (Practice 1 in Notebook: Vocabulary & Model Sentences):
+• Enunciado de Aplicacion: "Open your English notebook. Write as title: 'Character Feelings, Dialogue, and Conflict'. Copy the key vocabulary box, write 2 original sentences using 'textos audiovisuales', and translate their meaning into Spanish."
+• Respuesta Esperada: Accurate English sentences in the notebook with correct spelling, grammar agreement, and Spanish translation.
+• Feedback de Exito: "Great notebook work! Your English sentences are well structured and meaningful."
+• Pista de Apoyo Socratica: "Check the slide model: Subject + Verb + Complement. Follow that pattern to write your sentences."
+
+Ejercicio 2 (Practice 2 in Notebook: Short Dialogue or Message):
+• Enunciado de Aplicacion: "In your notebook, write a short 3-line dialogue or message applying today's communicative goal (Identifying emotions and the main obstacle in narrative texts). Then read it aloud with your mentor."
+• Respuesta Esperada: Short dialogue written in English and read aloud with proper pronunciation and natural intonation.
+• Feedback de Exito: "Outstanding fluency! Writing and reading aloud activates both speaking and writing skills."
+• Pista de Apoyo Socratica: "Use simple, direct phrases: Greeting, main message or question, and friendly closing."
+
+Modulo: Comparemos dos situaciones (Comparemos dos situaciones)
+• DILE: "Antes de resumir, comparemos dos situaciones. No necesitas repetir una frase exacta: lo importante es que expliques la idea con tus propias palabras."
+• Pregunta: "Al comparar dos situaciones de Character Feelings, Dialogue, and Conflict, ¿cómo influye el contexto en la interpretación de los datos?"
+• Respuesta Esperada: El significado o resultado depende de las condiciones del contexto y del propósito de la situación.
+• Feedback si acierta: "¡Excelente razonamiento! Reconociste que el contexto orienta la interpretación de los datos."
+• Feedback si necesita apoyo: "Observa cada situación por separado y explica qué elementos las distinguen."
+
+Modulo: Desafio Breve (Desafío breve: Character Feelings, Dialogue, and Conflict)
+• Pregunta: "En Inglés, ¿qué diferencia observas entre identificar los datos y aplicar el procedimiento? Explica tu razonamiento."
+• Respuesta Esperada: Identificar los datos determina el punto de partida; aplicar el procedimiento permite construir la respuesta.
+
+--------------------------------------------------------------------------------
+[PASO 6: RESUMEN Y ESTRATEGIA DE PENSAMIENTO]
+--------------------------------------------------------------------------------
+• Idea Clave: "In Character Feelings, Dialogue, and Conflict, we communicate effectively by using 'textos audiovisuales' in context, paying attention to verb tenses and avoiding word-for-word translation."
+• DILE AL ESTUDIANTE: "Cuando enfrentes un problema en Inglés, puedes seguir estos tres pasos clave:"
+• Pasos de la Estrategia:
+  Paso 1: Identifica -> ¿Cuáles son los datos clave y cuál es la pregunta central?
+  Paso 2: Aplica -> ¿Qué regla o método disciplinar corresponde utilizar?
+  Paso 3: Comprueba -> ¿La conclusión o resultado responde con coherencia al problema?
+• 3 Ideas Clave Estructuradas de Sintesis:
+  - 1 · Concepto central: Identificamos los elementos y el punto de partida del análisis.
+  - 2 · Interpretación del contexto: Identifying emotions and the main obstacle in narrative texts
+  - 3 · Síntesis formal: In Character Feelings, Dialogue, and Conflict, we communicate effectively by using 'textos audiovisuales' in context, paying attention to verb tenses and avoiding word-for-word translation.
+
+--------------------------------------------------------------------------------
+[PASO 7: MINIQUIZ FORMATIVO Y FASE REVISAR]
+--------------------------------------------------------------------------------
+Pregunta 1: Reading Comprehension: What is the main communicative purpose of 'textos audiovisuales' in today's English lesson?
+  A) To express clear ideas, actions, or descriptions in English using context clues and accurate sentence structure [CORRECTA]
+  B) To translate words completely out of context without paying attention to meaning 
+  C) To memorize isolated lists of English words without applying them in real sentences 
+• Explicacion Formativa del Error: "Context clues and functional structures allow English learners to communicate naturally and with confidence."
+• Guion del Mentor (Fase REVISAR): "Pídele que señale la palabra o verbo en inglés que justifica su elección."
+
+Pregunta 2: To avoid the common mistake of 'Confundir las ideas generales con los detalles específicos en los textos orales.', what is the best strategy when reading an English text?
+  A) Identify the general meaning and key cognates first, instead of trying to translate every single word [CORRECTA]
+  B) Stop reading immediately whenever you find an unfamiliar English word 
+  C) Assume that English sentences must follow the exact same word order as Spanish 
+• Explicacion Formativa del Error: "Deducir el significado por contexto evita la frustración y construye fluidez en la comprensión lectora en inglés."
+• Guion del Mentor (Fase REVISAR): "Pregúntale: ¿cómo te ayudaron los cognados a entender la idea general sin usar diccionario?"
+
+Pregunta 3: Language Structure: Which English sentence demonstrates the correct grammatical pattern for 'textos audiovisuales'?
+  A) The student carefully read the text and wrote a complete response in the notebook [CORRECTA]
+  B) The student carefully reading the text and write without agreement yesterday 
+  C) Yesterday the student will read the text in the future tense by mistake 
+• Explicacion Formativa del Error: "A well-structured English sentence maintains proper subject-verb agreement and consistent tense usage."
+• Guion del Mentor (Fase REVISAR): "Pídele que identifique el sujeto y el verbo principal de la oración correcta."
+
+--------------------------------------------------------------------------------
+[PASO 7B: MODULO DE RECUPERACION FORMATIVA]
+--------------------------------------------------------------------------------
+Refuerzo 1 (English Recovery & Consolidation: Character Feelings, Dialogue, and Conflict):
+• Explicacion Previa: "When reading and writing in English, always look for the main subject and the action verb in the correct tense, using context clues to guide your comprehension of 'textos audiovisuales'."
+• Pregunta: "Which sentence correctly demonstrates clear English communication for this lesson?"
+• Opciones: The team explored the setting and recorded their findings in the notebook | The team explore yesterday without any past tense marker
+• Respuesta Correcta: The team explored the setting and recorded their findings in the notebook
+• Refuerzo si falla: "Remember that in English, regular verbs in the past tense take the -ed ending to signal completed events."
+
+--------------------------------------------------------------------------------
+[PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
+--------------------------------------------------------------------------------
+• Pregunta de Sintesis: "In your own words, what was the most useful English word or phrase you learned in today's lesson?"
+• Reflexion Metacognitiva: "¿Qué técnica te ayudó más a entender el texto en inglés: buscar cognados o identificar los verbos principales?"
+• Celebracion del Logro: "Great job today! You have successfully mastered Lesson 4. See you in the next English adventure!"
+• Felicitacion Final: "¡Felicitaciones! Hoy completaste con éxito la clase "Character Feelings, Dialogue, and Conflict". Has demostrado constancia y rigor en tu aprendizaje."
+• Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Inglés."
+
+
+
+################################################################################
+### CLASE 5 DE 6: PRÁCTICA AVANZADA Y MODELAMIENTO DE OA 9 (PARTE 1)
+################################################################################
+
+================================================================================
+STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+================================================================================
+
+FICHA CURRICULAR:
+• Asignatura: Inglés
+• Nivel / Curso: 7° Básico
+• Objetivo de Aprendizaje: OA 9 - Comprensión de lectura
+• Clase: 5 de 6 ("Práctica avanzada y modelamiento de OA 9 (Parte 1)")
+• Duracion Estimada: 30 Minutos
+
+DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
+1. Proporcion Widescreen 16:9 estricto (1920x1080).
+2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
+3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
+4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
+5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
+   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
+   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
+7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
+8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
+
+================================================================================
+MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Video Motivacional: El Desafío de Práctica avanzada y modelamiento de OA 9 (Parte 1)
+• DILE ANTES DEL VIDEO: "Antes de ver el video, observa con atención lo que descubren los dos exploradores y qué pregunta queda planteada."
+• INSTRUCCION AL ESTUDIANTE: "Observa y reflexiona con las escenas del desafío visual."
+• DILE DESPUES DEL VIDEO: "Muy buena observación. Ahora conversaremos sobre lo que descubrieron en la expedición."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Apertura y Contexto (9 seg aprox) ---
+1. Propósito Didáctico: Apertura y Contexto
+2. Título en Pantalla (64 pt): Misión 5: Práctica avanzada y modelamiento de OA 9 (Parte 1)
+3. Subtítulo en Pantalla (36 pt): Exploración inicial en Inglés
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Práctica avanzada y modelamiento de OA 9 (Parte 1) (Inglés). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Communicative context: Story scenario of Práctica avanzada y modelamiento de OA 9 (Parte 1)
+6. Notas al Orador (Locución Google Vids): "Comienza una nueva expedición de aprendizaje en Inglés. Nuestros dos exploradores analizan el desafío de Práctica avanzada y modelamiento de OA 9 (Parte 1) para descubrir sus secretos."
+
+--- DIAPOSITIVA 2: Presentación del Escenario (9 seg aprox) ---
+1. Propósito Didáctico: Presentación del Escenario
+2. Título en Pantalla (64 pt): Punto de partida
+3. Subtítulo en Pantalla (36 pt): Consolidación guiada de destrezas para Inglés
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Consolidación guiada de destrezas para Inglés. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Consolidación guiada de destrezas para Inglés
+6. Notas al Orador (Locución Google Vids): "Al observar los datos sobre Consolidación guiada de destrezas para Inglés, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor."
+
+--- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 seg aprox) ---
+1. Propósito Didáctico: Aparición del Conflicto / Misterio
+2. Título en Pantalla (64 pt): El enigma disciplinar
+3. Subtítulo en Pantalla (36 pt): Desafío en Práctica avanzada y modelamiento de OA 9 (Parte 1)
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Consolidación guiada de destrezas para Inglés
+6. Notas al Orador (Locución Google Vids): "Surge un reto concreto sobre Práctica avanzada y modelamiento de OA 9 (Parte 1): las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso."
+
+--- DIAPOSITIVA 4: Exploración de Pistas (9 seg aprox) ---
+1. Propósito Didáctico: Exploración de Pistas
+2. Título en Pantalla (64 pt): Análisis de evidencias
+3. Subtítulo en Pantalla (36 pt): Consolidación guiada de destrezas para Inglés
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Consolidación guiada de destrezas para Inglés
+6. Notas al Orador (Locución Google Vids): "Ambos comparan las pistas disponibles sobre Consolidación guiada de destrezas para Inglés. Cada dato confirma cómo interactúan los elementos clave de la situación."
+
+--- DIAPOSITIVA 5: El Momento Crítico (9 seg aprox) ---
+1. Propósito Didáctico: El Momento Crítico
+2. Título en Pantalla (64 pt): Criterio de decisión
+3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Consolidación guiada de destrezas para Inglés
+6. Notas al Orador (Locución Google Vids): "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Práctica avanzada y modelamiento de OA 9 (Parte 1) con total precisión metodológica."
+
+--- DIAPOSITIVA 6: La Antesala de la Pregunta (9 seg aprox) ---
+1. Propósito Didáctico: La Antesala de la Pregunta
+2. Título en Pantalla (64 pt): El dilema central
+3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Práctica avanzada y modelamiento de OA 9 (Parte 1)?
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Language puzzle: Identifying narrative clues in English
+6. Notas al Orador (Locución Google Vids): "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje."
+
+--- DIAPOSITIVA 7: La Pregunta Detonante (9 seg aprox) ---
+1. Propósito Didáctico: La Pregunta Detonante
+2. Título en Pantalla (64 pt): Pregunta detonante
+3. Subtítulo en Pantalla (36 pt): Regla y método de Práctica avanzada y modelamiento de OA 9 (Parte 1)
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Trigger question: How do we express Práctica avanzada y modelamiento de OA 9 (Parte 1) accurately?
+6. Notas al Orador (Locución Google Vids): "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!"
+
+================================================================================
+MODULO 2: PROMPT VIDEO EXPLICATIVO CONCEPTUAL (PASO 4 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Video Explicativo: Formalización de Práctica avanzada y modelamiento de OA 9 (Parte 1)
+• Idea Clave: "In Práctica avanzada y modelamiento de OA 9 (Parte 1), we communicate effectively by using 'comprensión oral' in context, paying attention to verb tenses and avoiding word-for-word translation."
+• DILE ANTES DEL VIDEO: "Ahora veremos el video explicativo de Práctica avanzada y modelamiento de OA 9 (Parte 1). Fíjate en la pronunciación y en cómo se utiliza 'comprensión oral' en una conversación real."
+• INSTRUCCION: "Revisemos la explicación formal y la idea clave."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
+1. Propósito Didáctico: Objetivo de la Lección
+2. Título en Pantalla (64 pt): Objetivo de la lección
+3. Subtítulo en Pantalla (36 pt): Master Práctica avanzada y modelamiento de OA 9 (Parte 1): Consolidación guiada de destrezas para Inglés
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Consolidación guiada de destrezas para Inglés. High clarity, negative space for text. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Formal heading: OA 9 · Práctica avanzada y modelamiento de OA 9 (Parte 1)
+6. Notas al Orador (Locución Google Vids): "Today our goal is to learn how to master consolidación guiada de destrezas para inglés, applying clear disciplinary steps with total confidence."
+
+--- DIAPOSITIVA 2: Definición del Concepto Central (12 seg aprox) ---
+1. Propósito Didáctico: Definición del Concepto Central
+2. Título en Pantalla (64 pt): Concepto fundamental
+3. Subtítulo en Pantalla (36 pt): Consolidación guiada de destrezas para Inglés
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Sentence formula: Structure of Consolidación guiada de destrezas para Inglés
+6. Notas al Orador (Locución Google Vids): "To understand Práctica avanzada y modelamiento de OA 9 (Parte 1), we establish a clean conceptual foundation connecting the core definition with verifiable concrete evidence."
+
+--- DIAPOSITIVA 3: Demostración Modelada (12 seg aprox) ---
+1. Propósito Didáctico: Demostración Modelada
+2. Título en Pantalla (64 pt): Modelamiento paso a paso
+3. Subtítulo en Pantalla (36 pt): Procedimiento de Práctica avanzada y modelamiento de OA 9 (Parte 1)
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Color-coded grammar blocks with modeled example
+6. Notas al Orador (Locución Google Vids): "Observe how the procedure unfolds in this guided demonstration: every single change responds to an explicit disciplinary rule."
+
+--- DIAPOSITIVA 4: Prevención del Error Frecuente (13 seg aprox) ---
+1. Propósito Didáctico: Prevención del Error Frecuente
+2. Título en Pantalla (64 pt): Atención: Error habitual
+3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Error contrast: common grammar and punctuation pitfall
+6. Notas al Orador (Locución Google Vids): "A common pitfall happens when overlooking order or basic conventions. We always check each intermediate step before concluding."
+
+--- DIAPOSITIVA 5: Comprobación del Resultado (12 seg aprox) ---
+1. Propósito Didáctico: Comprobación del Resultado
+2. Título en Pantalla (64 pt): Validación del resultado
+3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Meaning validation: verifying sentence cohesion
+6. Notas al Orador (Locución Google Vids): "By contrasting the result with our initial scenario, we confirm that our solution is consistent, rigorous, and fully answers the question."
+
+--- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 seg aprox) ---
+1. Propósito Didáctico: Estrategia Mnemotécnica
+2. Título en Pantalla (64 pt): Estrategia de pensamiento
+3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Memory strategy: Connector + Subject + Verb + Context
+6. Notas al Orador (Locución Google Vids): "Always remember the three-step thinking strategy: identify the key data, apply the formal rule in order, and verify the final result."
+
+--- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 seg aprox) ---
+1. Propósito Didáctico: Síntesis y Regla de Oro
+2. Título en Pantalla (64 pt): Regla de Oro: Práctica avanzada y modelamiento de OA 9 (Parte 1)
+3. Subtítulo en Pantalla (36 pt): Método disciplinar validado
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Summary infography: Golden rule of Práctica avanzada y modelamiento de OA 9 (Parte 1)
+6. Notas al Orador (Locución Google Vids): "Now that you understand the golden rule and the procedure of Práctica avanzada y modelamiento de OA 9 (Parte 1), let us practice and prove our skills in the interactive platform!"
+
+================================================================================
+MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
+================================================================================
+
+[PREPARACION DEL ADULTO / MENTOR]
+• Objetivo del Adulto: Acompañar al estudiante en la inmersión del idioma inglés para: Práctica avanzada y modelamiento de OA 9 (Parte 1). Las instrucciones del apoderado son en español, mientras los textos, vocabulario y miniquiz se practican en inglés con foco en 'comprensión oral'.
+• Ruta de Hoy: 1. Inicio y activación · 2. Video de exploración · 3. Recorrido guiado · 4. Formalización y práctica en cuaderno · 5. Miniquiz y REVISAR · 6. Cierre metacognitivo
+• Recordatorios Pedagogicos del Mentor:
+  1. Sigue el orden indicado.
+  2. Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.
+  3. No leas los recuadros SOLO PARA TI ni AYUDA DE LECTURA.
+  4. Haz cada pregunta y espera la respuesta antes de seleccionar una opción.
+  5. Considera correcta una respuesta si expresa la idea matemática, aunque use palabras distintas.
+  6. Si el estudiante necesita apoyo, usa únicamente la ayuda que aparecerá.
+  7. Si propone otra explicación o no está de acuerdo, escúchalo completo y valora su razonamiento antes de guiarlo.
+• Clima Emocional y Acogida: "Fomenta la confianza comunicativa: 'Listen, read the clues, and focus on the general meaning before translating every single word'."
+
+--------------------------------------------------------------------------------
+[PASO 1: INICIO (4 SUB-ETAPAS CANONICAS)]
+--------------------------------------------------------------------------------
+Sub-etapa 1: Nuestra Ruta de la Asignatura
+• DILE AL ESTUDIANTE (Apertura de la ruta): "Hoy comenzaremos la clase 5 de Inglés: "Práctica avanzada y modelamiento de OA 9 (Parte 1)"."
+• 4 Bloques Tematicos de la Asignatura:
+  Bloque 01: Inglés (Práctica avanzada y modelamiento de OA 9 (Parte 1))
+  Bloque 02: Exploración (Gancho y Recorrido Guiado)
+  Bloque 03: Práctica (Aplicación en situaciones reales)
+  Bloque 04: Evaluación (Miniquiz formativo y síntesis)
+
+Sub-etapa 2: La Clase de Hoy
+• DILE AL ESTUDIANTE (Foco didactico): "Consolidación guiada de destrezas para Inglés"
+• 3 Tarjetas de Foco de la Pantalla del Estudiante:
+  Tarjeta 1: Exploración inicial -> Práctica avanzada y modelamiento de OA 9 (Parte 1)
+  Tarjeta 2: Idea clave -> In Práctica avanzada y modelamiento de OA 9 (Parte 1), we co
+  Tarjeta 3: Práctica y aplicación -> Resolución guiada paso a paso
+
+Sub-etapa 3: Situacion Inicial de Exploracion (Detonante)
+• DILE AL ESTUDIANTE (Situacion detonante): "Hoy en nuestra sesión de English exploramos 'Práctica avanzada y modelamiento de OA 9 (Parte 1)'. El foco comunicativo del currículum es 'comprensión oral'. El apoderado guía en español mientras que el estudiante lee y escucha en inglés. Lee la siguiente frase en voz alta sobre Consolidación guiada de destrezas para Inglés:"
+• RESPUESTA ESPERADA: Identificar en español o inglés los personajes (characters), la acción o el propósito comunicativo vinculado con comprensión oral.
+• PISTA SOCRATICA (SOLO PARA TI): "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general."
+• CLIMA EMOCIONAL: "Fomenta la confianza comunicativa: 'Listen, read the clues, and focus on the general meaning before translating every single word'."
+• Pautas de Evaluacion Formativa del Mentor:
+  - [Acierto] Identificó a los personajes, la acción o el propósito en inglés vinculado con comprensión oral -> Feedback: "¡Very good! Supo reconocer los elementos clave de la oración en inglés."
+  - [Requiere Apoyo] Tuvo dudas con el vocabulario o no identificó la acción ni los personajes -> Feedback: "Busquen juntos palabras transparentes y guíalo para identificar el verbo principal de la acción."
+
+Sub-etapa 4: Comprendamos la Respuesta (Punto de Referencia)
+• DILE AL ESTUDIANTE (Formalizacion de referencia): ""What is the main communicative situation described in this English sentence? (¿Cuál es la situación principal descrita en la oración?)""
+• PREGUNTALE AL ESTUDIANTE: ""What is the main communicative situation described in this English sentence? (¿Cuál es la situación principal descrita en la oración?)""
+• RESPUESTA ESPERADA: Identificar en español o inglés los personajes (characters), la acción o el propósito comunicativo vinculado con comprensión oral.
+• PISTA SOCRATICA: "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general."
+• FEEDBACK SI ACIERTA: "Muy bien. Observaste el detalle central con precisión."
+• FEEDBACK SI NECESITA APOYO: "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general."
+
+--------------------------------------------------------------------------------
+[PASO 3: RECORRIDO - CONVERSACION GUIADA Y PREGUNTAS SOCRATICAS]
+--------------------------------------------------------------------------------
+Item 1 (Key Vocabulary & Context Clues (comprensión oral)):
+• Pregunta Socratica: "Which English words in the text give you clear clues about the communicative goal and the action?"
+• Respuesta Esperada: Identify key English nouns, action verbs or connectors related to the topic.
+• Feedback de Exito: "Well done! You successfully identified the key English vocabulary from the context."
+• Pista de Apoyo Socratica: "Look for transparent words and descriptive adjectives: what words tell you what is happening?"
+• Revelacion: "Context clues and key vocabulary help us understand the main message without needing an immediate dictionary translation."
+
+Item 2 (Grammar & Communicative Flow):
+• Pregunta Socratica: "Notice the verb tense or structure used in the sentences. How does the grammatical form tell us when or how the action happens?"
+• Respuesta Esperada: Recognize the verb form or structure indicating time, function, or modality.
+• Feedback de Exito: "Excellent! You connected the grammatical structure with its real communicative meaning."
+• Pista de Apoyo Socratica: "Look at the ending of the verb or auxiliary words: does it talk about routine, past events or future plans?"
+• Revelacion: "Grammatical structures and verb tenses provide the timeline and conditions for natural English communication."
+
+--------------------------------------------------------------------------------
+[PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
+--------------------------------------------------------------------------------
+• Cierre y Sintesis del Video Explicativo: "Hoy dominaste Consolidación guiada de destrezas para Inglés en inglés con práctica activa de vocabulario y escritura en tu cuaderno."
+
+Comprobacion 1 (Key Vocabulary & Context Clues (comprensión oral)):
+• Pregunta: "Which English words in the text give you clear clues about the communicative goal and the action?"
+• Respuesta Esperada: Identify key English nouns, action verbs or connectors related to the topic.
+• Pista de Apoyo: "Look for transparent words and descriptive adjectives: what words tell you what is happening?"
+• Revelacion: "Key English words identified from the context of the communicative text."
+
+Comprobacion 2 (Grammar & Communicative Flow):
+• Pregunta: "Notice the verb tense or structure used in the sentences. How does the grammatical form tell us when or how the action happens?"
+• Respuesta Esperada: Recognize the verb form or structure indicating time, function, or modality.
+• Pista de Apoyo: "Look at the ending of the verb or auxiliary words: does it talk about routine, past events or future plans?"
+• Revelacion: "The verb tense and sentence structure that clarify the communicative intention."
+
+--------------------------------------------------------------------------------
+[PASO 5: PRACTICA EN EL CUADERNO FISICO]
+--------------------------------------------------------------------------------
+Ejercicio 1 (Practice 1 in Notebook: Vocabulary & Model Sentences):
+• Enunciado de Aplicacion: "Open your English notebook. Write as title: 'Práctica avanzada y modelamiento de OA 9 (Parte 1)'. Copy the key vocabulary box, write 2 original sentences using 'comprensión oral', and translate their meaning into Spanish."
+• Respuesta Esperada: Accurate English sentences in the notebook with correct spelling, grammar agreement, and Spanish translation.
+• Feedback de Exito: "Great notebook work! Your English sentences are well structured and meaningful."
+• Pista de Apoyo Socratica: "Check the slide model: Subject + Verb + Complement. Follow that pattern to write your sentences."
+
+Ejercicio 2 (Practice 2 in Notebook: Short Dialogue or Message):
+• Enunciado de Aplicacion: "In your notebook, write a short 3-line dialogue or message applying today's communicative goal (Consolidación guiada de destrezas para Inglés). Then read it aloud with your mentor."
+• Respuesta Esperada: Short dialogue written in English and read aloud with proper pronunciation and natural intonation.
+• Feedback de Exito: "Outstanding fluency! Writing and reading aloud activates both speaking and writing skills."
+• Pista de Apoyo Socratica: "Use simple, direct phrases: Greeting, main message or question, and friendly closing."
+
+Modulo: Comparemos dos situaciones (Comparemos dos situaciones)
+• DILE: "Antes de resumir, comparemos dos situaciones. No necesitas repetir una frase exacta: lo importante es que expliques la idea con tus propias palabras."
+• Pregunta: "Al comparar dos situaciones de Práctica avanzada y modelamiento de OA 9 (Parte 1), ¿cómo influye el contexto en la interpretación de los datos?"
+• Respuesta Esperada: El significado o resultado depende de las condiciones del contexto y del propósito de la situación.
+• Feedback si acierta: "¡Excelente razonamiento! Reconociste que el contexto orienta la interpretación de los datos."
+• Feedback si necesita apoyo: "Observa cada situación por separado y explica qué elementos las distinguen."
+
+Modulo: Desafio Breve (Desafío breve: Práctica avanzada y modelamiento de OA 9 (Parte 1))
+• Pregunta: "En Inglés, ¿qué diferencia observas entre identificar los datos y aplicar el procedimiento? Explica tu razonamiento."
+• Respuesta Esperada: Identificar los datos determina el punto de partida; aplicar el procedimiento permite construir la respuesta.
+
+--------------------------------------------------------------------------------
+[PASO 6: RESUMEN Y ESTRATEGIA DE PENSAMIENTO]
+--------------------------------------------------------------------------------
+• Idea Clave: "In Práctica avanzada y modelamiento de OA 9 (Parte 1), we communicate effectively by using 'comprensión oral' in context, paying attention to verb tenses and avoiding word-for-word translation."
+• DILE AL ESTUDIANTE: "Cuando enfrentes un problema en Inglés, puedes seguir estos tres pasos clave:"
+• Pasos de la Estrategia:
+  Paso 1: Identifica -> ¿Cuáles son los datos clave y cuál es la pregunta central?
+  Paso 2: Aplica -> ¿Qué regla o método disciplinar corresponde utilizar?
+  Paso 3: Comprueba -> ¿La conclusión o resultado responde con coherencia al problema?
+• 3 Ideas Clave Estructuradas de Sintesis:
+  - 1 · Concepto central: Identificamos los elementos y el punto de partida del análisis.
+  - 2 · Interpretación del contexto: Consolidación guiada de destrezas para Inglés
+  - 3 · Síntesis formal: In Práctica avanzada y modelamiento de OA 9 (Parte 1), we communicate effectively by using 'comprensión oral' in context, paying attention to verb tenses and avoiding word-for-word translation.
+
+--------------------------------------------------------------------------------
+[PASO 7: MINIQUIZ FORMATIVO Y FASE REVISAR]
+--------------------------------------------------------------------------------
+Pregunta 1: Reading Comprehension: What is the main communicative purpose of 'comprensión oral' in today's English lesson?
+  A) To express clear ideas, actions, or descriptions in English using context clues and accurate sentence structure [CORRECTA]
+  B) To translate words completely out of context without paying attention to meaning 
+  C) To memorize isolated lists of English words without applying them in real sentences 
+• Explicacion Formativa del Error: "Context clues and functional structures allow English learners to communicate naturally and with confidence."
+• Guion del Mentor (Fase REVISAR): "Pídele que señale la palabra o verbo en inglés que justifica su elección."
+
+Pregunta 2: To avoid the common mistake of 'Dificultad para procesar el inglés hablado a una velocidad natural o casi natural.', what is the best strategy when reading an English text?
+  A) Identify the general meaning and key cognates first, instead of trying to translate every single word [CORRECTA]
+  B) Stop reading immediately whenever you find an unfamiliar English word 
+  C) Assume that English sentences must follow the exact same word order as Spanish 
+• Explicacion Formativa del Error: "Deducir el significado por contexto evita la frustración y construye fluidez en la comprensión lectora en inglés."
+• Guion del Mentor (Fase REVISAR): "Pregúntale: ¿cómo te ayudaron los cognados a entender la idea general sin usar diccionario?"
+
+Pregunta 3: Language Structure: Which English sentence demonstrates the correct grammatical pattern for 'comprensión oral'?
+  A) The student carefully read the text and wrote a complete response in the notebook [CORRECTA]
+  B) The student carefully reading the text and write without agreement yesterday 
+  C) Yesterday the student will read the text in the future tense by mistake 
+• Explicacion Formativa del Error: "A well-structured English sentence maintains proper subject-verb agreement and consistent tense usage."
+• Guion del Mentor (Fase REVISAR): "Pídele que identifique el sujeto y el verbo principal de la oración correcta."
+
+--------------------------------------------------------------------------------
+[PASO 7B: MODULO DE RECUPERACION FORMATIVA]
+--------------------------------------------------------------------------------
+Refuerzo 1 (English Recovery & Consolidation: Práctica avanzada y modelamiento de OA 9 (Parte 1)):
+• Explicacion Previa: "When reading and writing in English, always look for the main subject and the action verb in the correct tense, using context clues to guide your comprehension of 'comprensión oral'."
+• Pregunta: "Which sentence correctly demonstrates clear English communication for this lesson?"
+• Opciones: The team explored the setting and recorded their findings in the notebook | The team explore yesterday without any past tense marker
+• Respuesta Correcta: The team explored the setting and recorded their findings in the notebook
+• Refuerzo si falla: "Remember that in English, regular verbs in the past tense take the -ed ending to signal completed events."
+
+--------------------------------------------------------------------------------
+[PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
+--------------------------------------------------------------------------------
+• Pregunta de Sintesis: "In your own words, what was the most useful English word or phrase you learned in today's lesson?"
+• Reflexion Metacognitiva: "¿Qué técnica te ayudó más a entender el texto en inglés: buscar cognados o identificar los verbos principales?"
+• Celebracion del Logro: "Great job today! You have successfully mastered Lesson 5. See you in the next English adventure!"
+• Felicitacion Final: "¡Felicitaciones! Hoy completaste con éxito la clase "Práctica avanzada y modelamiento de OA 9 (Parte 1)". Has demostrado constancia y rigor en tu aprendizaje."
+• Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Inglés."
+
+
+
+################################################################################
+### CLASE 6 DE 6: RESOLUTION, MORAL OF THE STORY, AND READING TEST
+################################################################################
+
+================================================================================
+STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+================================================================================
+
+FICHA CURRICULAR:
+• Asignatura: Inglés
+• Nivel / Curso: 7° Básico
+• Objetivo de Aprendizaje: OA 9 - Comprensión de lectura
+• Clase: 6 de 6 ("Resolution, Moral of the Story, and Reading Test")
+• Duracion Estimada: 30 Minutos
+
+DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
+1. Proporcion Widescreen 16:9 estricto (1920x1080).
+2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
+3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
+4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
+5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
+   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
+   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
+7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
+8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
+
+================================================================================
+MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Video Motivacional: El Desafío de Resolution, Moral of the Story, and Reading Test
+• DILE ANTES DEL VIDEO: "Antes de ver el video, observa con atención lo que descubren los dos exploradores y qué pregunta queda planteada."
+• INSTRUCCION AL ESTUDIANTE: "Observa y reflexiona con las escenas del desafío visual."
+• DILE DESPUES DEL VIDEO: "Muy buena observación. Ahora conversaremos sobre lo que descubrieron en la expedición."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Apertura y Contexto (9 seg aprox) ---
+1. Propósito Didáctico: Apertura y Contexto
+2. Título en Pantalla (64 pt): Misión 6: Resolution, Moral of the Story, and Reading Test
+3. Subtítulo en Pantalla (36 pt): Exploración inicial en Inglés
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Resolution, Moral of the Story, and Reading Test (Inglés). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Communicative context: Story scenario of Resolution, Moral of the Story, and Reading Test
+6. Notas al Orador (Locución Google Vids): "Comienza una nueva expedición de aprendizaje en Inglés. Nuestros dos exploradores analizan el desafío de Resolution, Moral of the Story, and Reading Test para descubrir sus secretos."
+
+--- DIAPOSITIVA 2: Presentación del Escenario (9 seg aprox) ---
+1. Propósito Didáctico: Presentación del Escenario
+2. Título en Pantalla (64 pt): Punto de partida
+3. Subtítulo en Pantalla (36 pt): Reading comprehension synthesis, story mapping, and official test
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Reading comprehension synthesis, story mapping, and official test. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Reading comprehension synthesis, story mapping, and official test
+6. Notas al Orador (Locución Google Vids): "Al observar los datos sobre Reading comprehension synthesis, story mapping, and official test, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor."
+
+--- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 seg aprox) ---
+1. Propósito Didáctico: Aparición del Conflicto / Misterio
+2. Título en Pantalla (64 pt): El enigma disciplinar
+3. Subtítulo en Pantalla (36 pt): Desafío en Resolution, Moral of the Story, and Reading Test
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Reading comprehension synthesis, story mapping, and official test
+6. Notas al Orador (Locución Google Vids): "Surge un reto concreto sobre Resolution, Moral of the Story, and Reading Test: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso."
+
+--- DIAPOSITIVA 4: Exploración de Pistas (9 seg aprox) ---
+1. Propósito Didáctico: Exploración de Pistas
+2. Título en Pantalla (64 pt): Análisis de evidencias
+3. Subtítulo en Pantalla (36 pt): Reading comprehension synthesis, story mapping, and official test
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Reading comprehension synthesis, story mapping, and official test
+6. Notas al Orador (Locución Google Vids): "Ambos comparan las pistas disponibles sobre Reading comprehension synthesis, story mapping, and official test. Cada dato confirma cómo interactúan los elementos clave de la situación."
+
+--- DIAPOSITIVA 5: El Momento Crítico (9 seg aprox) ---
+1. Propósito Didáctico: El Momento Crítico
+2. Título en Pantalla (64 pt): Criterio de decisión
+3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Reading comprehension synthesis, story mapping, and official test
+6. Notas al Orador (Locución Google Vids): "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Resolution, Moral of the Story, and Reading Test con total precisión metodológica."
+
+--- DIAPOSITIVA 6: La Antesala de la Pregunta (9 seg aprox) ---
+1. Propósito Didáctico: La Antesala de la Pregunta
+2. Título en Pantalla (64 pt): El dilema central
+3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Resolution, Moral of the Story, and Reading Test?
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Language puzzle: Identifying narrative clues in English
+6. Notas al Orador (Locución Google Vids): "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje."
+
+--- DIAPOSITIVA 7: La Pregunta Detonante (9 seg aprox) ---
+1. Propósito Didáctico: La Pregunta Detonante
+2. Título en Pantalla (64 pt): Pregunta detonante
+3. Subtítulo en Pantalla (36 pt): Regla y método de Resolution, Moral of the Story, and Reading Test
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Trigger question: How do we express Resolution, Moral of the Story, and Reading Test accurately?
+6. Notas al Orador (Locución Google Vids): "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!"
+
+================================================================================
+MODULO 2: PROMPT VIDEO EXPLICATIVO CONCEPTUAL (PASO 4 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Video Explicativo: Formalización de Resolution, Moral of the Story, and Reading Test
+• Idea Clave: "In Resolution, Moral of the Story, and Reading Test, we communicate effectively by using 'ideas generales' in context, paying attention to verb tenses and avoiding word-for-word translation."
+• DILE ANTES DEL VIDEO: "Ahora veremos el video explicativo de Resolution, Moral of the Story, and Reading Test. Fíjate en la pronunciación y en cómo se utiliza 'ideas generales' en una conversación real."
+• INSTRUCCION: "Revisemos la explicación formal y la idea clave."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
+1. Propósito Didáctico: Objetivo de la Lección
+2. Título en Pantalla (64 pt): Objetivo de la lección
+3. Subtítulo en Pantalla (36 pt): Master Resolution, Moral of the Story, and Reading Test: Reading comprehension synthesis, story mapping, and official test
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Reading comprehension synthesis, story mapping, and official test. High clarity, negative space for text. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Formal heading: OA 9 · Resolution, Moral of the Story, and Reading Test
+6. Notas al Orador (Locución Google Vids): "Today our goal is to learn how to master reading comprehension synthesis, story mapping, and official test, applying clear disciplinary steps with total confidence."
+
+--- DIAPOSITIVA 2: Definición del Concepto Central (12 seg aprox) ---
+1. Propósito Didáctico: Definición del Concepto Central
+2. Título en Pantalla (64 pt): Concepto fundamental
+3. Subtítulo en Pantalla (36 pt): Reading comprehension synthesis, story mapping, and official test
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Sentence formula: Structure of Reading comprehension synthesis, story mapping, and official test
+6. Notas al Orador (Locución Google Vids): "To understand Resolution, Moral of the Story, and Reading Test, we establish a clean conceptual foundation connecting the core definition with verifiable concrete evidence."
+
+--- DIAPOSITIVA 3: Demostración Modelada (12 seg aprox) ---
+1. Propósito Didáctico: Demostración Modelada
+2. Título en Pantalla (64 pt): Modelamiento paso a paso
+3. Subtítulo en Pantalla (36 pt): Procedimiento de Resolution, Moral of the Story, and Reading Test
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Color-coded grammar blocks with modeled example
+6. Notas al Orador (Locución Google Vids): "Observe how the procedure unfolds in this guided demonstration: every single change responds to an explicit disciplinary rule."
+
+--- DIAPOSITIVA 4: Prevención del Error Frecuente (13 seg aprox) ---
+1. Propósito Didáctico: Prevención del Error Frecuente
+2. Título en Pantalla (64 pt): Atención: Error habitual
+3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Error contrast: common grammar and punctuation pitfall
+6. Notas al Orador (Locución Google Vids): "A common pitfall happens when overlooking order or basic conventions. We always check each intermediate step before concluding."
+
+--- DIAPOSITIVA 5: Comprobación del Resultado (12 seg aprox) ---
+1. Propósito Didáctico: Comprobación del Resultado
+2. Título en Pantalla (64 pt): Validación del resultado
+3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Meaning validation: verifying sentence cohesion
+6. Notas al Orador (Locución Google Vids): "By contrasting the result with our initial scenario, we confirm that our solution is consistent, rigorous, and fully answers the question."
+
+--- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 seg aprox) ---
+1. Propósito Didáctico: Estrategia Mnemotécnica
+2. Título en Pantalla (64 pt): Estrategia de pensamiento
+3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Memory strategy: Connector + Subject + Verb + Context
+6. Notas al Orador (Locución Google Vids): "Always remember the three-step thinking strategy: identify the key data, apply the formal rule in order, and verify the final result."
+
+--- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 seg aprox) ---
+1. Propósito Didáctico: Síntesis y Regla de Oro
+2. Título en Pantalla (64 pt): Regla de Oro: Resolution, Moral of the Story, and Reading Test
+3. Subtítulo en Pantalla (36 pt): Método disciplinar validado
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Summary infography: Golden rule of Resolution, Moral of the Story, and Reading Test
+6. Notas al Orador (Locución Google Vids): "Now that you understand the golden rule and the procedure of Resolution, Moral of the Story, and Reading Test, let us practice and prove our skills in the interactive platform!"
+
+================================================================================
+MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
+================================================================================
+
+[PREPARACION DEL ADULTO / MENTOR]
+• Objetivo del Adulto: Acompañar al estudiante en la inmersión del idioma inglés para: Resolution, Moral of the Story, and Reading Test. Las instrucciones del apoderado son en español, mientras los textos, vocabulario y miniquiz se practican en inglés con foco en 'ideas generales'.
+• Ruta de Hoy: 1. Inicio y activación · 2. Video de exploración · 3. Recorrido guiado · 4. Formalización y práctica en cuaderno · 5. Miniquiz y REVISAR · 6. Cierre metacognitivo
+• Recordatorios Pedagogicos del Mentor:
+  1. Sigue el orden indicado.
+  2. Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.
+  3. No leas los recuadros SOLO PARA TI ni AYUDA DE LECTURA.
+  4. Haz cada pregunta y espera la respuesta antes de seleccionar una opción.
+  5. Considera correcta una respuesta si expresa la idea matemática, aunque use palabras distintas.
+  6. Si el estudiante necesita apoyo, usa únicamente la ayuda que aparecerá.
+  7. Si propone otra explicación o no está de acuerdo, escúchalo completo y valora su razonamiento antes de guiarlo.
+• Clima Emocional y Acogida: "Fomenta la confianza comunicativa: 'Listen, read the clues, and focus on the general meaning before translating every single word'."
+
+--------------------------------------------------------------------------------
+[PASO 1: INICIO (4 SUB-ETAPAS CANONICAS)]
+--------------------------------------------------------------------------------
+Sub-etapa 1: Nuestra Ruta de la Asignatura
+• DILE AL ESTUDIANTE (Apertura de la ruta): "Hoy comenzaremos la clase 6 de Inglés: "Resolution, Moral of the Story, and Reading Test"."
+• 4 Bloques Tematicos de la Asignatura:
+  Bloque 01: Inglés (Resolution, Moral of the Story, and Reading Test)
+  Bloque 02: Exploración (Gancho y Recorrido Guiado)
+  Bloque 03: Práctica (Aplicación en situaciones reales)
+  Bloque 04: Evaluación (Miniquiz formativo y síntesis)
+
+Sub-etapa 2: La Clase de Hoy
+• DILE AL ESTUDIANTE (Foco didactico): "Reading comprehension synthesis, story mapping, and official test"
+• 3 Tarjetas de Foco de la Pantalla del Estudiante:
+  Tarjeta 1: Exploración inicial -> Resolution, Moral of the Story, and Reading Test
+  Tarjeta 2: Idea clave -> In Resolution, Moral of the Story, and Reading Test, we comm
+  Tarjeta 3: Práctica y aplicación -> Resolución guiada paso a paso
+
+Sub-etapa 3: Situacion Inicial de Exploracion (Detonante)
+• DILE AL ESTUDIANTE (Situacion detonante): "Hoy en nuestra sesión de English exploramos 'Resolution, Moral of the Story, and Reading Test'. El foco comunicativo del currículum es 'ideas generales'. El apoderado guía en español mientras que el estudiante lee y escucha en inglés. Lee la siguiente frase en voz alta sobre Reading comprehension synthesis, story mapping, and official test:"
+• RESPUESTA ESPERADA: Identificar en español o inglés los personajes (characters), la acción o el propósito comunicativo vinculado con ideas generales.
+• PISTA SOCRATICA (SOLO PARA TI): "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general."
+• CLIMA EMOCIONAL: "Fomenta la confianza comunicativa: 'Listen, read the clues, and focus on the general meaning before translating every single word'."
+• Pautas de Evaluacion Formativa del Mentor:
+  - [Acierto] Identificó a los personajes, la acción o el propósito en inglés vinculado con ideas generales -> Feedback: "¡Very good! Supo reconocer los elementos clave de la oración en inglés."
+  - [Requiere Apoyo] Tuvo dudas con el vocabulario o no identificó la acción ni los personajes -> Feedback: "Busquen juntos palabras transparentes y guíalo para identificar el verbo principal de la acción."
+
+Sub-etapa 4: Comprendamos la Respuesta (Punto de Referencia)
+• DILE AL ESTUDIANTE (Formalizacion de referencia): ""What is the main communicative situation described in this English sentence? (¿Cuál es la situación principal descrita en la oración?)""
+• PREGUNTALE AL ESTUDIANTE: ""What is the main communicative situation described in this English sentence? (¿Cuál es la situación principal descrita en la oración?)""
+• RESPUESTA ESPERADA: Identificar en español o inglés los personajes (characters), la acción o el propósito comunicativo vinculado con ideas generales.
+• PISTA SOCRATICA: "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general."
+• FEEDBACK SI ACIERTA: "Muy bien. Observaste el detalle central con precisión."
+• FEEDBACK SI NECESITA APOYO: "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general."
+
+--------------------------------------------------------------------------------
+[PASO 3: RECORRIDO - CONVERSACION GUIADA Y PREGUNTAS SOCRATICAS]
+--------------------------------------------------------------------------------
+Item 1 (Key Vocabulary & Context Clues (ideas generales)):
+• Pregunta Socratica: "Which English words in the text give you clear clues about the communicative goal and the action?"
+• Respuesta Esperada: Identify key English nouns, action verbs or connectors related to the topic.
+• Feedback de Exito: "Well done! You successfully identified the key English vocabulary from the context."
+• Pista de Apoyo Socratica: "Look for transparent words and descriptive adjectives: what words tell you what is happening?"
+• Revelacion: "Context clues and key vocabulary help us understand the main message without needing an immediate dictionary translation."
+
+Item 2 (Grammar & Communicative Flow):
+• Pregunta Socratica: "Notice the verb tense or structure used in the sentences. How does the grammatical form tell us when or how the action happens?"
+• Respuesta Esperada: Recognize the verb form or structure indicating time, function, or modality.
+• Feedback de Exito: "Excellent! You connected the grammatical structure with its real communicative meaning."
+• Pista de Apoyo Socratica: "Look at the ending of the verb or auxiliary words: does it talk about routine, past events or future plans?"
+• Revelacion: "Grammatical structures and verb tenses provide the timeline and conditions for natural English communication."
+
+--------------------------------------------------------------------------------
+[PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
+--------------------------------------------------------------------------------
+• Cierre y Sintesis del Video Explicativo: "Hoy dominaste Reading comprehension synthesis, story mapping, and official test en inglés con práctica activa de vocabulario y escritura en tu cuaderno."
+
+Comprobacion 1 (Key Vocabulary & Context Clues (ideas generales)):
+• Pregunta: "Which English words in the text give you clear clues about the communicative goal and the action?"
+• Respuesta Esperada: Identify key English nouns, action verbs or connectors related to the topic.
+• Pista de Apoyo: "Look for transparent words and descriptive adjectives: what words tell you what is happening?"
+• Revelacion: "Key English words identified from the context of the communicative text."
+
+Comprobacion 2 (Grammar & Communicative Flow):
+• Pregunta: "Notice the verb tense or structure used in the sentences. How does the grammatical form tell us when or how the action happens?"
+• Respuesta Esperada: Recognize the verb form or structure indicating time, function, or modality.
+• Pista de Apoyo: "Look at the ending of the verb or auxiliary words: does it talk about routine, past events or future plans?"
+• Revelacion: "The verb tense and sentence structure that clarify the communicative intention."
+
+--------------------------------------------------------------------------------
+[PASO 5: PRACTICA EN EL CUADERNO FISICO]
+--------------------------------------------------------------------------------
+Ejercicio 1 (Practice 1 in Notebook: Vocabulary & Model Sentences):
+• Enunciado de Aplicacion: "Open your English notebook. Write as title: 'Resolution, Moral of the Story, and Reading Test'. Copy the key vocabulary box, write 2 original sentences using 'ideas generales', and translate their meaning into Spanish."
+• Respuesta Esperada: Accurate English sentences in the notebook with correct spelling, grammar agreement, and Spanish translation.
+• Feedback de Exito: "Great notebook work! Your English sentences are well structured and meaningful."
+• Pista de Apoyo Socratica: "Check the slide model: Subject + Verb + Complement. Follow that pattern to write your sentences."
+
+Ejercicio 2 (Practice 2 in Notebook: Short Dialogue or Message):
+• Enunciado de Aplicacion: "In your notebook, write a short 3-line dialogue or message applying today's communicative goal (Reading comprehension synthesis, story mapping, and official test). Then read it aloud with your mentor."
+• Respuesta Esperada: Short dialogue written in English and read aloud with proper pronunciation and natural intonation.
+• Feedback de Exito: "Outstanding fluency! Writing and reading aloud activates both speaking and writing skills."
+• Pista de Apoyo Socratica: "Use simple, direct phrases: Greeting, main message or question, and friendly closing."
+
+Modulo: Comparemos dos situaciones (Comparemos dos situaciones)
+• DILE: "Antes de resumir, comparemos dos situaciones. No necesitas repetir una frase exacta: lo importante es que expliques la idea con tus propias palabras."
+• Pregunta: "Al comparar dos situaciones de Resolution, Moral of the Story, and Reading Test, ¿cómo influye el contexto en la interpretación de los datos?"
+• Respuesta Esperada: El significado o resultado depende de las condiciones del contexto y del propósito de la situación.
+• Feedback si acierta: "¡Excelente razonamiento! Reconociste que el contexto orienta la interpretación de los datos."
+• Feedback si necesita apoyo: "Observa cada situación por separado y explica qué elementos las distinguen."
+
+Modulo: Desafio Breve (Desafío breve: Resolution, Moral of the Story, and Reading Test)
+• Pregunta: "En Inglés, ¿qué diferencia observas entre identificar los datos y aplicar el procedimiento? Explica tu razonamiento."
+• Respuesta Esperada: Identificar los datos determina el punto de partida; aplicar el procedimiento permite construir la respuesta.
+
+--------------------------------------------------------------------------------
+[PASO 6: RESUMEN Y ESTRATEGIA DE PENSAMIENTO]
+--------------------------------------------------------------------------------
+• Idea Clave: "In Resolution, Moral of the Story, and Reading Test, we communicate effectively by using 'ideas generales' in context, paying attention to verb tenses and avoiding word-for-word translation."
+• DILE AL ESTUDIANTE: "Cuando enfrentes un problema en Inglés, puedes seguir estos tres pasos clave:"
+• Pasos de la Estrategia:
+  Paso 1: Identifica -> ¿Cuáles son los datos clave y cuál es la pregunta central?
+  Paso 2: Aplica -> ¿Qué regla o método disciplinar corresponde utilizar?
+  Paso 3: Comprueba -> ¿La conclusión o resultado responde con coherencia al problema?
+• 3 Ideas Clave Estructuradas de Sintesis:
+  - 1 · Concepto central: Identificamos los elementos y el punto de partida del análisis.
+  - 2 · Interpretación del contexto: Reading comprehension synthesis, story mapping, and official test
+  - 3 · Síntesis formal: In Resolution, Moral of the Story, and Reading Test, we communicate effectively by using 'ideas generales' in context, paying attention to verb tenses and avoiding word-for-word translation.
+
+--------------------------------------------------------------------------------
+[PASO 7: MINIQUIZ FORMATIVO Y FASE REVISAR]
+--------------------------------------------------------------------------------
+Pregunta 1: Reading Comprehension: What is the main communicative purpose of 'ideas generales' in today's English lesson?
+  A) To express clear ideas, actions, or descriptions in English using context clues and accurate sentence structure [CORRECTA]
+  B) To translate words completely out of context without paying attention to meaning 
+  C) To memorize isolated lists of English words without applying them in real sentences 
+• Explicacion Formativa del Error: "Context clues and functional structures allow English learners to communicate naturally and with confidence."
+• Guion del Mentor (Fase REVISAR): "Pídele que señale la palabra o verbo en inglés que justifica su elección."
+
+Pregunta 2: To avoid the common mistake of 'No reconocer vocabulario clave o estructuras gramaticales en el contexto oral.', what is the best strategy when reading an English text?
+  A) Identify the general meaning and key cognates first, instead of trying to translate every single word [CORRECTA]
+  B) Stop reading immediately whenever you find an unfamiliar English word 
+  C) Assume that English sentences must follow the exact same word order as Spanish 
+• Explicacion Formativa del Error: "Deducir el significado por contexto evita la frustración y construye fluidez en la comprensión lectora en inglés."
+• Guion del Mentor (Fase REVISAR): "Pregúntale: ¿cómo te ayudaron los cognados a entender la idea general sin usar diccionario?"
+
+Pregunta 3: Language Structure: Which English sentence demonstrates the correct grammatical pattern for 'ideas generales'?
+  A) The student carefully read the text and wrote a complete response in the notebook [CORRECTA]
+  B) The student carefully reading the text and write without agreement yesterday 
+  C) Yesterday the student will read the text in the future tense by mistake 
+• Explicacion Formativa del Error: "A well-structured English sentence maintains proper subject-verb agreement and consistent tense usage."
+• Guion del Mentor (Fase REVISAR): "Pídele que identifique el sujeto y el verbo principal de la oración correcta."
+
+--------------------------------------------------------------------------------
+[PASO 7B: MODULO DE RECUPERACION FORMATIVA]
+--------------------------------------------------------------------------------
+Refuerzo 1 (English Recovery & Consolidation: Resolution, Moral of the Story, and Reading Test):
+• Explicacion Previa: "When reading and writing in English, always look for the main subject and the action verb in the correct tense, using context clues to guide your comprehension of 'ideas generales'."
+• Pregunta: "Which sentence correctly demonstrates clear English communication for this lesson?"
+• Opciones: The team explored the setting and recorded their findings in the notebook | The team explore yesterday without any past tense marker
+• Respuesta Correcta: The team explored the setting and recorded their findings in the notebook
+• Refuerzo si falla: "Remember that in English, regular verbs in the past tense take the -ed ending to signal completed events."
+
+--------------------------------------------------------------------------------
+[PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
+--------------------------------------------------------------------------------
+• Pregunta de Sintesis: "In your own words, what was the most useful English word or phrase you learned in today's lesson?"
+• Reflexion Metacognitiva: "¿Qué técnica te ayudó más a entender el texto en inglés: buscar cognados o identificar los verbos principales?"
+• Celebracion del Logro: "Congratulations! You have completed all the English lessons for Objective OA 9. Outstanding language work!"
+• Felicitacion Final: "¡Felicitaciones! Hoy completaste con éxito la clase "Resolution, Moral of the Story, and Reading Test". Has demostrado constancia y rigor en tu aprendizaje."
+• Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Inglés."
+
+

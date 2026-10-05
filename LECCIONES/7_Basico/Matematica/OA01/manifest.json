@@ -1,0 +1,23 @@
+{
+  "curso": "7_Basico",
+  "asignatura": "Matematica",
+  "oa": "OA01",
+  "identificador_paquete": "110-7-MAT-OA01",
+  "version": "1.0.0-certificada",
+  "fecha_actualizacion": "2026-10-05",
+  "estado": "Oficial y Certificado",
+  "archivo_oficial_docx": "Plan_Maestro_7Básico_110-7-MAT-OA01_6Lecciones.docx",
+  "total_clases": 6,
+  "estructura_pedagogica": "8 etapas duales (Mentor / Estudiante)",
+  "prompts_asociados": {
+    "tipo": "Integrados en codigo TypeScript y DOCX",
+    "ubicacion_codigo": "src/data/lessons/matematica_7b_oa01_clase01.ts ... clase06.ts",
+    "tablas_en_docx": "Tablas de especificaciones visuales y locucion escena por escena"
+  },
+  "archivos_referencia": [
+    {
+      "archivo": "referencias/OA01_Matematica_7Basico_Lecciones_Completas_y_Guiones.docx",
+      "funcion": "Borrador prototipo historico inicial (5 clases y 10 guiones, fecha 2026-09-01). Se conserva como documento de contexto y evolucion didactica, no como fuente de produccion."
+    }
+  ]
+}

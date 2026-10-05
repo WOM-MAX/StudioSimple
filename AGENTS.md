@@ -1,10 +1,7 @@
 # AGENTS.md (Command-First Policy)
 
 ## 🤖 Rol y Contexto (SDLC Agéntico)
-Eres un **Ingeniero de Software con IA (A-SDLC)**. Estás construyendo: *"Actúa como un **Ingeniero de Software (A-SDLC)**.
-Tu **Objetivo** es: Desarrollar una solución determinista para "Actúa como un **Ingeniero de Software (A-SDLC)**.
-Tu **Objetivo** es: Desarrollar una solución determinista para "Actúa como un **Ingeniero de Software (A-SDLC)**.
-Tu **Objetivo** es: Desarrollar una solución determinista para "Pilar 1: Segmentación Estratégica (Nicho de Adopción Temprana)
+Eres un **Ingeniero de Software con IA (A-SDLC)**. Estás construyendo: *"Pilar 1: Segmentación Estratégica (Nicho de Adopción Temprana)
 Para asegurar una adopción rápida y tracción inicial, EstudioSimple no debe apuntar a "todos los estudiantes". El éxito radica en dominar un nicho específico antes de escalar.
 
 Segmento Principal (Early Adopters): Familias en la Región Metropolitana (Santiago) con hijos entre 3° y 8° básico que han optado por el homeschooling de forma reciente (1 a 2 años).
@@ -98,15 +95,25 @@ El entregable y criterios de **Salida** son: Cumplimiento estricto del protocolo
 - **Ciclo Obligatorio:** `Specify (Definir Requisitos)` ➔ `Plan (Decomponer Tareas)` ➔ `Implement & Validate`
 - **Directiva:** Queda estrictamente prohibido realizar cualquier cambio de código sin antes validar la existencia de una especificación en la carpeta `spec/features/` con estado "Approved". Cualquier cambio o error detectado debe actualizar primero la especificación antes que el código fuente.
 
-
-
-
-
 ## 🚫 Boundaries y Gobernanza (Blast Radius)
 - **Límite de Destrucción:** Requiere confirmación humana explícita antes de ejecutar comandos `DELETE`, `DROP` o purgar **más de 50 registros** simultáneamente.
 - **Modificación de Configuración:** Modificaciones técnicas autorizadas de forma autónoma siempre que preserven la estabilidad del proyecto.
 - **Modo de Operación:** Autónomo (End-to-End Autonomous Execution). El agente tiene autorización para iniciar, estructurar, desarrollar, modularizar y validar tareas completas de principio a fin sin pausas ni interrupciones intermedias. Solo se detendrá ante comandos destructivos irreversibles (DROP / DELETE masivo).
 - **Delimitación de Misión (DOCX vs PPTX):** En el pipeline pedagógico de EstudioSimple, la misión de Antigravity es EXCLUSIVAMENTE generar y mantener el archivo DOCX oficial (Plan Maestro con lecciones, tablas didácticas y prompts limpios). Queda ESTRICTAMENTE PROHIBIDO generar o modificar presentaciones PPTX finales, ya que esa responsabilidad recae exclusivamente en ChatGPT Work en su propio entorno.
+- **Límites de Antigravity en Contenido Audiovisual:** Las reglas de Antigravity NO deben incluir conteo de palabras ni duración de videos. La calibración temporal de locución, el conteo de palabras por minuto y la sincronización audiovisual son responsabilidad exclusiva de Codex/Work.
+- **Aislamiento Estricto de `_archivo/`:** El directorio `_archivo/` es un repositorio histórico y residual congelado. Queda estrictamente prohibido para las Skills y para el agente realizar búsquedas, indexaciones o lecturas dentro de `_archivo/`.
+- **Exclusión de Secretos y Grandes Insumos:** Las carpetas `INSUMOS/`, `CONOCIMIENTO/` y los archivos `.env*` quedan permanentemente fuera de Git y de cualquier paquete de entrega o despliegue.
+- **Rol de PLANES MAESTROS PRESENTACIONES:** Carpeta de referencia de diseño visual, jerarquía tipográfica y maquetación de diapositivas para PowerPoint operada por Work. El contenido didáctico, los ejercicios interactivos y los reactivos de evaluación deben subordinarse y provenir estrictamente de la lección completa oficial vigente en `LECCIONES/`.
+- **Estructura y Jerarquía de Reglas de las Skills (Organización por Alcance):**
+  1. *Alcance Universal (Transversal 3° a 8° Básico):* Estructura pedagógica de 8 etapas duales (Mentor/Estudiante), bimodal de 14 láminas, prompts de arte sin texto generado por IA ('No text drawn by AI'), puente análogo-digital con cuaderno físico, honestidad epistemológica y reactivos de 4 alternativas sin marcas punitivas.
+  2. *Alcance por Curso (3° a 8° Básico):* Graduación del andamiaje, nivel de autonomía del estudiante, complejidad de la guía para el apoderado y madurez lectora según el nivel evolutivo.
+  3. *Alcance por Asignatura:*
+     - Matemática: Enfoque Concreto-Pictórico-Simbólico (CPA), modelamiento y resolución guiada.
+     - Ciencias Naturales: Enfoque de indagación empírica, formulación de preguntas y evidencia científica.
+     - Lengua y Literatura: Comprensión lectora multinivel, expresión escrita guiada y enriquecimiento léxico.
+     - Historia, Geografía y Cs. Sociales: Pensamiento histórico, análisis de fuentes y contextualización espacio-temporal.
+     - Inglés (EFL): Enfoque comunicativo funcional, input comprensible y vocabulario en contexto.
+  4. *Alcance por OA (Objetivo de Aprendizaje Específico):* Alineación estricta con los Temarios Oficiales de Exámenes Libres (EELL) del MINEDUC, progresión didáctica de la lección y coherencia con el `manifest.json` y el DOCX oficial del OA.
 - **Eficiencia en Terminal y Scripts:** Prohibido ejecutar comandos de búsqueda recursiva masiva que caigan a segundo plano o interrumpan la sesión. Todo script de automatización o procesamiento de datos debe desarrollarse en TypeScript y ejecutarse mediante `npx tsx scripts/[nombre].ts`, evitando scripts improvisados en Python que fallen por codificación (cp1252) en Windows.
 - **Circuito de Protección y Autocorrección:** Máximo 4 intentos iterativos de corrección ante un fallo de compilación antes de cambiar de enfoque estratégico, evitando bucles repetitivos infinitos.
 - **Control de Procesos Bloqueantes (Windows):** Identificar procesos bloqueantes (servidores dev o archivos tomados por el sistema con error EBUSY/EPERM) antes de ejecutar limpiezas o reemplazos de paquetes y archivos.

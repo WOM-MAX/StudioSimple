@@ -16,11 +16,11 @@ Queda estrictamente prohibido dar por válida una alineación solo porque un doc
 ## 2. Límites y Fronteras de Responsabilidad
 
 1. **Antigravity:**
-   - Diseña, mantiene, compila y audita las lecciones completas (código fuente y datos en JSON/TS), los prompts detallados de diapositivas y los documentos oficiales DOCX (Plan Maestro).
-   - Queda estrictamente excluido de generar o auditar presentaciones PPTX finales.
-   - No certifica duraciones acústicas reales en Google Vids; verifica el presupuesto de palabras por lámina y marca los tiempos como estimaciones no verificadas acústicamente.
+   - Diseña, mantiene, compila y audita las lecciones completas (código fuente y datos en JSON/TS), los prompts limpios de diapositivas y los documentos oficiales DOCX (Plan Maestro).
+   - Queda estrictamente excluido de generar o modificar presentaciones PPTX finales.
+   - Las reglas de Antigravity no incluyen conteo de palabras ni duración de videos. La locución se audita por fluidez pedagógica, claridad conceptual y ausencia de marcas técnicas.
 2. **Codex (ChatGPT Work):**
-   - Es el consumidor de los paquetes entregados. Audita independientemente las lecciones recibidas y asume la responsabilidad exclusiva de generar y validar las presentaciones PPTX en su propio entorno con Python.
+   - Es el consumidor de los paquetes entregados. Audita el flujo audiovisual, calibra la duración de videos, supervisa el conteo de palabras según el sintetizador de voz y asume la responsabilidad exclusiva de generar y validar las presentaciones PPTX en su propio entorno con Python.
 
 ## 3. Matriz de Auditoria y Flujo de Revision
 
@@ -31,11 +31,10 @@ El proceso de auditoria evalua la consistencia del paquete formativo mediante do
 - 7 diapositivas de Modulo 2 (Video Explicativo Conceptual).
 - Total inquebrantable: 14 laminas por leccion.
 
-### Control 2 (UNI-002): Calibracion Temporal de Locucion
-- Gancho motivacional (60 segundos): 120 a 145 palabras (~130 palabras).
-- Explicacion conceptual (90 segundos): 180 a 220 palabras (~195 palabras).
-- Duracion total asignada: 150 segundos por clase.
-- Texto continuo listo para voz en off sin marcas tecnicas ni tiempos en el cuerpo.
+### Control 2 (UNI-002): Fluidez Narrativa y Locución Limpia
+- Texto continuo listo para voz en off sin marcas tecnicas ni anotaciones de tiempos en el cuerpo.
+- Claridad conceptual, tono pedagógico estimulante y vocabulario adaptado al nivel escolar (3° a 8° Básico).
+- Exclusión explícita de restricciones de conteo de palabras o duración en segundos en el ámbito de Antigravity (delegado a Codex/Work).
 
 ### Control 3 (UNI-003): Duo Co-protagonico Fijo de 13 Anos
 - Presencia explicita del duo en los prompts de imagen: joven mujer con trenzas y joven hombre con chaqueta cerceta, de 13 anos.
