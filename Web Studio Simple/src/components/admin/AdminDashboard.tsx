@@ -7,7 +7,8 @@ import {
   saveCmsPages,
   updateCmsPage,
   createCmsPage,
-  deleteCmsPage
+  deleteCmsPage,
+  syncCmsPagesFromBackend
 } from '../../data/initialCmsData';
 import { MetricCard } from './cms/MetricCard';
 import { PaginasTable } from './cms/PaginasTable';
@@ -262,10 +263,15 @@ export const AdminDashboard: React.FC = () => {
     return () => window.removeEventListener('storage', syncPages);
   }, [selectedPageForEdit]);
 
-  // Al conmutar al módulo de páginas, forzar recarga del estado más reciente
+  // Al conmutar al módulo de páginas, forzar recarga del estado más reciente tanto local como remoto
   useEffect(() => {
     if (activeModule === 'paginas') {
       setCmsPages(loadCmsPages());
+      syncCmsPagesFromBackend().then((remote) => {
+        if (remote && Array.isArray(remote)) {
+          setCmsPages(remote);
+        }
+      });
     }
   }, [activeModule]);
 

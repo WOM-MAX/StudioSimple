@@ -439,6 +439,44 @@ export function saveCmsPages(pages: CmsPage[]): void {
   } catch (e) {
     console.error('Error al guardar páginas CMS en localStorage:', e);
   }
+
+  // Persistir en servidor de Railway permanentemente
+  if (typeof fetch !== 'undefined') {
+    fetch('/api/cms/pages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(pages)
+    })
+      .then((res) => {
+        if (!res.ok) {
+          console.warn('[CMS] Advertencia guardando páginas en backend:', res.statusText);
+        }
+      })
+      .catch((err) => {
+        console.warn('[CMS] Fallo de red guardando páginas en backend:', err.message);
+      });
+  }
+}
+
+export async function syncCmsPagesFromBackend(): Promise<CmsPage[] | null> {
+  if (typeof fetch === 'undefined') return null;
+  try {
+    const res = await fetch('/api/cms/pages');
+    if (!res.ok) return null;
+    const payload = await res.json();
+    if (payload?.success && Array.isArray(payload.data) && payload.data.length > 0) {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(payload.data));
+        if (typeof window !== 'undefined') {
+          window.dispatchEvent(new Event('storage'));
+        }
+      } catch {}
+      return payload.data;
+    }
+  } catch (err) {
+    console.warn('[CMS] Error sincronizando páginas desde backend:', err);
+  }
+  return null;
 }
 
 export function getCmsPage(slug: string): CmsPage | undefined {

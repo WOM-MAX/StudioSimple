@@ -472,10 +472,54 @@ const server = http.createServer(async (req, res) => {
             fs.mkdirSync(dataDir, { recursive: true });
           }
           fs.writeFileSync(configFilePath, JSON.stringify(body, null, 2), 'utf8');
-          res.writeHead(200);
+          res.writeHead(200, { 'Content-Type': 'application/json' });
           res.end(JSON.stringify({ success: true, message: 'Configuracion guardada exitosamente' }));
         } catch (err) {
-          res.writeHead(500);
+          res.writeHead(500, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ success: false, error: err.message }));
+        }
+        return;
+      }
+    }
+
+    // 1b-1. CMS Pages (Persistencia permanente de páginas y secciones del sitio en disco)
+    if (pathname === '/api/cms/pages') {
+      const pagesFilePath = path.resolve(__dirname, 'data', 'cms_pages.json');
+      if (method === 'GET') {
+        try {
+          if (fs.existsSync(pagesFilePath)) {
+            const raw = fs.readFileSync(pagesFilePath, 'utf8');
+            res.writeHead(200, { 'Content-Type': 'application/json' });
+            res.end(JSON.stringify({ success: true, data: JSON.parse(raw) }));
+          } else {
+            res.writeHead(200, { 'Content-Type': 'application/json' });
+            res.end(JSON.stringify({ success: true, data: null }));
+          }
+        } catch (err) {
+          res.writeHead(500, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ success: false, error: err.message }));
+        }
+        return;
+      }
+
+      if (method === 'POST') {
+        try {
+          const body = await readJsonBody(req);
+          const pagesData = Array.isArray(body) ? body : (body && body.pages ? body.pages : null);
+          if (!pagesData) {
+            res.writeHead(400, { 'Content-Type': 'application/json' });
+            res.end(JSON.stringify({ success: false, message: 'Formato de páginas inválido' }));
+            return;
+          }
+          const dataDir = path.dirname(pagesFilePath);
+          if (!fs.existsSync(dataDir)) {
+            fs.mkdirSync(dataDir, { recursive: true });
+          }
+          fs.writeFileSync(pagesFilePath, JSON.stringify(pagesData, null, 2), 'utf8');
+          res.writeHead(200, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ success: true, message: 'Páginas guardadas exitosamente en disco', count: pagesData.length }));
+        } catch (err) {
+          res.writeHead(500, { 'Content-Type': 'application/json' });
           res.end(JSON.stringify({ success: false, error: err.message }));
         }
         return;

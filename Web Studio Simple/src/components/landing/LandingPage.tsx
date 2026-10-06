@@ -7,7 +7,7 @@ import {
 } from 'lucide-react';
 import { BrandColorOption } from '../../types';
 import { HeroScrollScrubber } from './HeroScrollScrubber';
-import { loadCmsPages } from '../../data/initialCmsData';
+import { loadCmsPages, syncCmsPagesFromBackend } from '../../data/initialCmsData';
 import { loadSiteConfig, loadPopups, addMensajeContacto } from '../../data/initialCmsExtrasData';
 import { SiteConfig, PopupBanner, JournalArticle, TipoRedSocial, RedSocialItem } from '../../types/cmsExtras';
 import { CintaNoticiasBlock } from '../common/CintaNoticiasBlock';
@@ -173,6 +173,13 @@ export const LandingPage: React.FC = () => {
     };
     refreshData();
 
+    // Sincronizar páginas CMS desde el backend de producción
+    syncCmsPagesFromBackend().then((remotePages) => {
+      if (remotePages && Array.isArray(remotePages)) {
+        setCmsPages(remotePages);
+      }
+    });
+
     if (typeof fetch !== 'undefined') {
       fetch('/api/cms/site-config')
         .then((res) => (res.ok ? res.json() : null))
@@ -275,6 +282,14 @@ export const LandingPage: React.FC = () => {
       .filter((p) => p.activo && p.mostrarEnMenu)
       .sort((a, b) => a.ordenMenu - b.ordenMenu);
   }, [cmsPages]);
+
+  // Si la página de inicio está inactiva y nos encontramos en '/', redirigir a '/planes' o la primera página activa
+  useEffect(() => {
+    if (homePage && homePage.activo === false && currentSlug === '/') {
+      const targetSlug = menuPages.find((p) => p.slug !== '/' && p.activo)?.slug || '/planes';
+      setCurrentSlug(targetSlug);
+    }
+  }, [homePage, currentSlug, menuPages]);
 
   const currentPage = useMemo(() => {
     return cmsPages.find((p) => p.slug === currentSlug) || homePage;
@@ -410,7 +425,7 @@ export const LandingPage: React.FC = () => {
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
           />
-        ) : currentSlug === '/' ? (
+        ) : (currentSlug === '/' && homePage?.activo !== false) ? (
           <>
             {/* 2. HERO INTERACTIVO CON SCROLL SCRUBBING */}
             <section id="home">
