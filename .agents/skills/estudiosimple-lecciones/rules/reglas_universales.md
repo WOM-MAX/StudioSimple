@@ -68,3 +68,17 @@ Al generar descripciones visuales para las diapositivas en ChatGPT Work o herram
 
 - Los reactivos de evaluación no deben transmitir frustración ni incorporar marcas punitivas agresivas.
 - Cada alternativa incorrecta (distractor) debe construirse a partir de un error conceptual plausible o brecha diagnóstica común, ofreciendo retroalimentación formativa inmediata orientada a la recuperación pedagógica.
+
+---
+
+## 6. Parámetro Estándar de Cobertura por Objetivo de Aprendizaje (OA)
+
+- **Estándar Normativo:** Se fija como parámetro normativo estándar **exactamente 6 lecciones completas por Objetivo de Aprendizaje (OA)**, adoptando formalmente la directriz y recomendación de ChatGPT Work.
+- **Distribución Pedagógica:** Las 6 clases deben distribuir equilibradamente la progresión didáctica del OA:
+  1. *Clase 1:* Activación previa, concepto fundacional y modelo concreto/pictórico.
+  2. *Clase 2:* Procedimientos formales, reglas y representaciones simbólicas.
+  3. *Clase 3:* Casos especiales, estrategias de cálculo mental o atajos cognitivos.
+  4. *Clase 4:* Algoritmos universales y resolución guiada de problemas.
+  5. *Clase 5:* Aplicaciones en la vida cotidiana, contextos interdisciplinares o toma de decisiones.
+  6. *Clase 6:* Síntesis integradora, preparación rigurosa para Exámenes Libres (EELL) del MINEDUC y evaluación psicométrica de cierre.
+- **Coherencia Isomórfica:** El paquete de 6 clases debe reflejarse con identidad total entre el DOCX oficial (`_6Lecciones.docx`), los prompts para Work (`.txt`) y los 6 módulos TypeScript en la plataforma web.

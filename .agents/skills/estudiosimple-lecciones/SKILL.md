@@ -37,6 +37,7 @@ Las directivas están estrictamente ordenadas por ámbito de aplicación en los 
 1. **Alcance Universal (Transversal 3° a 8° Básico):**
    Ver [rules/reglas_universales.md](file:///c:/Proyectos/StudioSimple/.agents/skills/estudiosimple-lecciones/rules/reglas_universales.md).
    - Estructura pedagógica de 8 etapas duales (Mentor / Estudiante).
+   - **Parámetro Estándar de Cobertura por OA:** Exactamente **6 lecciones completas por Objetivo de Aprendizaje (OA)** (fijado como parámetro estándar obligatorio según recomendación de Work).
    - Prompts de arte sin texto generado por IA (`No text drawn by AI`).
    - Puente análogo-digital con el cuaderno físico.
    - Honestidad epistemológica (atribución a fuentes oficiales).

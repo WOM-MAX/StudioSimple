@@ -3,22 +3,23 @@
   "asignatura": "Historia_Geografia",
   "oa": "OA02",
   "identificador_paquete": "110-7-HIS-OA02",
-  "version": "1.4.0",
+  "version": "2.0.0",
   "fecha_actualizacion": "2026-10-06",
   "estado": "EN_REVISION",
-  "total_clases": 5,
+  "total_clases": 6,
   "fuente_oficial_unica_docx": {
-    "archivo": "Plan_Maestro_7Básico_110-7-HIS-OA02_5Lecciones.docx",
-    "rol": "Unica fuente oficial de produccion de lecciones y prompts",
-    "sha256": "6102209f960b4fae21913c01559b1092adf2d477556f1890c00fef5cfe2d81ea",
-    "bytes": 59282
+    "archivo": "Plan_Maestro_7Básico_110-7-HIS-OA02_6Lecciones.docx",
+    "rol": "Unica fuente oficial de produccion de lecciones y prompts (6 lecciones completas)",
+    "sha256": "a884788757213cf0b8b9a68cd64560de0f99f6f6fcd595ced56c835643ba17a1",
+    "bytes": 69113
   },
   "prompts_asociados": {
     "archivo": "Prompts_Work_Historia_7B_OA02.txt",
-    "ruta_origen_zip_anterior": "DESCARGA_LECCIONES/PROMPTS_TXT_PARA_WORK/Prompts_Work_Historia_7B_OA02.txt",
-    "total_laminas": 70,
+    "total_laminas": 84,
     "laminas_por_clase": 14,
-    "perfil_evaluacion": "Perfil 7° Básico (14 láminas bimodales: 7 Gancho + 7 Explicación; reactivos de 4 alternativas en cierre)"
+    "perfil_evaluacion": "Perfil 7° Básico (14 láminas bimodales: 7 Gancho + 7 Explicación; reactivos de 4 alternativas en cierre)",
+    "sha256": "9010fd649c369f9d1129631c44658f9ea372b85266483e04d7fa4096d71dea8a",
+    "bytes": 210962
   },
   "fundamentacion_curricular": {
     "temario_eell": {

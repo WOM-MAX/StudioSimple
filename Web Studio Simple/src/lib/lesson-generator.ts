@@ -3236,7 +3236,8 @@ function getRawLessonTitlesAndFocus(
         { title: "Domesticación de animales y plantas en el Creciente Fértil", focoDidactico: "Selección artificial, ciclos de cultivo y almacenamiento de excedentes" },
         { title: "Primeras aldeas sedentarias y división del trabajo", focoDidactico: "Transformación del espacio geográfico y nuevas profesiones" },
         { title: "Innovaciones tecnológicas del Neolítico", focoDidactico: "Cerámica, tejido, piedra pulida y metalurgia incipiente" },
-        { title: "Consecuencias históricas y síntesis de la Revolución Neolítica", focoDidactico: "Aparición de la propiedad, jerarquías y proyección al presente" }
+        { title: "Consecuencias históricas y complejización social", focoDidactico: "Aparición de la propiedad, jerarquías y especialización del trabajo" },
+        { title: "De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo", focoDidactico: "Excedente alimentario, comercio, primeras ciudades en Mesopotamia y ensayo oficial tipo MINEDUC" }
       ];
     }
 

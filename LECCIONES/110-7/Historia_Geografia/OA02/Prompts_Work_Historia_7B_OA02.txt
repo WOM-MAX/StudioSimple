@@ -2,13 +2,13 @@
 STUDIOSIMPLE - PAQUETE DE PROMPTS Y GUIONES OFICIALES PARA CHATGPT WORK
 ASIGNATURA: HISTORIA, GEOGRAFÍA Y CIENCIAS SOCIALES
 CURSO: 7° BASICO | OBJETIVO: OA 2 (Explicar que el surgimiento de la agricultura, la domesticación de animales, la sedentarización, la acumulación de bienes y el desarrollo del comercio, fueron procesos de larga duración que revolucionaron la forma en que los seres humanos se relacionaron con el espacio geográfico.)
-TOTAL DE CLASES: 5 LECCIONES (14 DIAPOSITIVAS POR CLASE = 70 LAMINAS TOTALES)
+TOTAL DE CLASES: 6 LECCIONES (14 DIAPOSITIVAS POR CLASE = 84 LAMINAS TOTALES)
 FORMATO: 7 DIAPOSITIVAS VIDEO GANCHO (60s) + 7 DIAPOSITIVAS VIDEO EXPLICATIVO (90s)
 ================================================================================
 
 
 ################################################################################
-### CLASE 1 DE 5: EL FIN DEL NOMADISMO Y EL SURGIMIENTO AGRÍCOLA
+### CLASE 1 DE 6: EL FIN DEL NOMADISMO Y EL SURGIMIENTO AGRÍCOLA
 ################################################################################
 
 ================================================================================
@@ -19,7 +19,7 @@ FICHA CURRICULAR:
 • Asignatura: Historia, Geografía y Ciencias Sociales
 • Nivel / Curso: 7° Básico
 • Objetivo de Aprendizaje: OA 2 - Complejización de las primeras sociedades: de la hominización al surgimiento de las civilizaciones
-• Clase: 1 de 5 ("El fin del nomadismo y el surgimiento agrícola")
+• Clase: 1 de 6 ("El fin del nomadismo y el surgimiento agrícola")
 • Duracion Estimada: 30 Minutos
 
 DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
@@ -338,7 +338,7 @@ Refuerzo 1 (Recuperación: El Paso al Sedentarismo):
 
 
 ################################################################################
-### CLASE 2 DE 5: DOMESTICACIÓN DE ANIMALES Y PLANTAS EN EL CRECIENTE FÉRTIL
+### CLASE 2 DE 6: DOMESTICACIÓN DE ANIMALES Y PLANTAS EN EL CRECIENTE FÉRTIL
 ################################################################################
 
 ================================================================================
@@ -349,7 +349,7 @@ FICHA CURRICULAR:
 • Asignatura: Historia, Geografía y Ciencias Sociales
 • Nivel / Curso: 7° Básico
 • Objetivo de Aprendizaje: OA 2 - Complejización de las primeras sociedades: de la hominización al surgimiento de las civilizaciones
-• Clase: 2 de 5 ("Domesticación de animales y plantas en el Creciente Fértil")
+• Clase: 2 de 6 ("Domesticación de animales y plantas en el Creciente Fértil")
 • Duracion Estimada: 30 Minutos
 
 DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
@@ -671,7 +671,7 @@ Refuerzo 1 (Recuperación Histórica: Domesticación de animales y plantas en el
 
 
 ################################################################################
-### CLASE 3 DE 5: PRIMERAS ALDEAS SEDENTARIAS Y DIVISIÓN DEL TRABAJO
+### CLASE 3 DE 6: PRIMERAS ALDEAS SEDENTARIAS Y DIVISIÓN DEL TRABAJO
 ################################################################################
 
 ================================================================================
@@ -682,7 +682,7 @@ FICHA CURRICULAR:
 • Asignatura: Historia, Geografía y Ciencias Sociales
 • Nivel / Curso: 7° Básico
 • Objetivo de Aprendizaje: OA 2 - Complejización de las primeras sociedades: de la hominización al surgimiento de las civilizaciones
-• Clase: 3 de 5 ("Primeras aldeas sedentarias y división del trabajo")
+• Clase: 3 de 6 ("Primeras aldeas sedentarias y división del trabajo")
 • Duracion Estimada: 30 Minutos
 
 DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
@@ -1004,7 +1004,7 @@ Refuerzo 1 (Recuperación Histórica: Primeras aldeas sedentarias y división de
 
 
 ################################################################################
-### CLASE 4 DE 5: INNOVACIONES TECNOLÓGICAS DEL NEOLÍTICO
+### CLASE 4 DE 6: INNOVACIONES TECNOLÓGICAS DEL NEOLÍTICO
 ################################################################################
 
 ================================================================================
@@ -1015,7 +1015,7 @@ FICHA CURRICULAR:
 • Asignatura: Historia, Geografía y Ciencias Sociales
 • Nivel / Curso: 7° Básico
 • Objetivo de Aprendizaje: OA 2 - Complejización de las primeras sociedades: de la hominización al surgimiento de las civilizaciones
-• Clase: 4 de 5 ("Innovaciones tecnológicas del Neolítico")
+• Clase: 4 de 6 ("Innovaciones tecnológicas del Neolítico")
 • Duracion Estimada: 30 Minutos
 
 DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
@@ -1337,7 +1337,7 @@ Refuerzo 1 (Recuperación Histórica: Innovaciones tecnológicas del Neolítico)
 
 
 ################################################################################
-### CLASE 5 DE 5: CONSECUENCIAS HISTÓRICAS Y SÍNTESIS DE LA REVOLUCIÓN NEOLÍTICA
+### CLASE 5 DE 6: CONSECUENCIAS HISTÓRICAS Y COMPLEJIZACIÓN SOCIAL
 ################################################################################
 
 ================================================================================
@@ -1348,7 +1348,7 @@ FICHA CURRICULAR:
 • Asignatura: Historia, Geografía y Ciencias Sociales
 • Nivel / Curso: 7° Básico
 • Objetivo de Aprendizaje: OA 2 - Complejización de las primeras sociedades: de la hominización al surgimiento de las civilizaciones
-• Clase: 5 de 5 ("Consecuencias históricas y síntesis de la Revolución Neolítica")
+• Clase: 5 de 6 ("Consecuencias históricas y complejización social")
 • Duracion Estimada: 30 Minutos
 
 DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
@@ -1368,7 +1368,7 @@ DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
 MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
 ================================================================================
 
-Titulo: Video Motivacional: El Desafío de Consecuencias históricas y síntesis de la Revolución Neolítica
+Titulo: Video Motivacional: El Desafío de Consecuencias históricas y complejización social
 • DILE ANTES DEL VIDEO: "Antes de ver el video, observa con atención lo que descubren los dos exploradores y qué pregunta queda planteada."
 • INSTRUCCION AL ESTUDIANTE: "Observa y reflexiona con las escenas del desafío visual."
 • DILE DESPUES DEL VIDEO: "Muy buena observación. Ahora conversaremos sobre lo que descubrieron en la expedición."
@@ -1377,48 +1377,48 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
 --- DIAPOSITIVA 1: Apertura y Contexto (9 seg aprox) ---
 1. Propósito Didáctico: Apertura y Contexto
-2. Título en Pantalla (64 pt): Misión 5: Consecuencias históricas y síntesis de la Revolución Neolítica
+2. Título en Pantalla (64 pt): Misión 5: Consecuencias históricas y complejización social
 3. Subtítulo en Pantalla (48 pt): Exploración inicial en Historia, Geografía y Ciencias Sociales
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Consecuencias históricas y síntesis de la Revolución Neolítica (Historia, Geografía y Ciencias Sociales). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.
-5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Coordenadas historicas: Linea temporal y contexto de Consecuencias históricas y síntesis de la Revolución Neolítica
-6. Notas al Orador (Locución Google Vids): "Comienza una nueva expedición de aprendizaje en Historia, Geografía y Ciencias Sociales. Nuestros dos exploradores analizan el desafío de Consecuencias históricas y síntesis de la Revolución Neolítica para descubrir sus secretos."
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Consecuencias históricas y complejización social (Historia, Geografía y Ciencias Sociales). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Coordenadas historicas: Linea temporal y contexto de Consecuencias históricas y complejización social
+6. Notas al Orador (Locución Google Vids): "Comienza una nueva expedición de aprendizaje en Historia, Geografía y Ciencias Sociales. Nuestros dos exploradores analizan el desafío de Consecuencias históricas y complejización social para descubrir sus secretos."
 
 --- DIAPOSITIVA 2: Presentación del Escenario (9 seg aprox) ---
 1. Propósito Didáctico: Presentación del Escenario
 2. Título en Pantalla (64 pt): Punto de partida
-3. Subtítulo en Pantalla (48 pt): Aparición de la propiedad, jerarquías y proyección al presente
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Aparición de la propiedad, jerarquías y proyección al presente. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.
-5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Aparición de la propiedad, jerarquías y proyección al presente
-6. Notas al Orador (Locución Google Vids): "Al observar los datos sobre Aparición de la propiedad, jerarquías y proyección al presente, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor."
+3. Subtítulo en Pantalla (48 pt): Aparición de la propiedad, jerarquías y especialización del trabajo
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Aparición de la propiedad, jerarquías y especialización del trabajo. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Aparición de la propiedad, jerarquías y especialización del trabajo
+6. Notas al Orador (Locución Google Vids): "Al observar los datos sobre Aparición de la propiedad, jerarquías y especialización del trabajo, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor."
 
 --- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 seg aprox) ---
 1. Propósito Didáctico: Aparición del Conflicto / Misterio
 2. Título en Pantalla (64 pt): El enigma disciplinar
-3. Subtítulo en Pantalla (48 pt): Desafío en Consecuencias históricas y síntesis de la Revolución Neolítica
+3. Subtítulo en Pantalla (48 pt): Desafío en Consecuencias históricas y complejización social
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.
-5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Aparición de la propiedad, jerarquías y proyección al presente
-6. Notas al Orador (Locución Google Vids): "Surge un reto concreto sobre Consecuencias históricas y síntesis de la Revolución Neolítica: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso."
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Aparición de la propiedad, jerarquías y especialización del trabajo
+6. Notas al Orador (Locución Google Vids): "Surge un reto concreto sobre Consecuencias históricas y complejización social: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso."
 
 --- DIAPOSITIVA 4: Exploración de Pistas (9 seg aprox) ---
 1. Propósito Didáctico: Exploración de Pistas
 2. Título en Pantalla (64 pt): Análisis de evidencias
-3. Subtítulo en Pantalla (48 pt): Aparición de la propiedad, jerarquías y proyección al presente
+3. Subtítulo en Pantalla (48 pt): Aparición de la propiedad, jerarquías y especialización del trabajo
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.
-5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Aparición de la propiedad, jerarquías y proyección al presente
-6. Notas al Orador (Locución Google Vids): "Ambos comparan las pistas disponibles sobre Aparición de la propiedad, jerarquías y proyección al presente. Cada dato confirma cómo interactúan los elementos clave de la situación."
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Aparición de la propiedad, jerarquías y especialización del trabajo
+6. Notas al Orador (Locución Google Vids): "Ambos comparan las pistas disponibles sobre Aparición de la propiedad, jerarquías y especialización del trabajo. Cada dato confirma cómo interactúan los elementos clave de la situación."
 
 --- DIAPOSITIVA 5: El Momento Crítico (9 seg aprox) ---
 1. Propósito Didáctico: El Momento Crítico
 2. Título en Pantalla (64 pt): Criterio de decisión
 3. Subtítulo en Pantalla (48 pt): Aplicar el método riguroso
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.
-5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Aparición de la propiedad, jerarquías y proyección al presente
-6. Notas al Orador (Locución Google Vids): "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Consecuencias históricas y síntesis de la Revolución Neolítica con total precisión metodológica."
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Aparición de la propiedad, jerarquías y especialización del trabajo
+6. Notas al Orador (Locución Google Vids): "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Consecuencias históricas y complejización social con total precisión metodológica."
 
 --- DIAPOSITIVA 6: La Antesala de la Pregunta (9 seg aprox) ---
 1. Propósito Didáctico: La Antesala de la Pregunta
 2. Título en Pantalla (64 pt): El dilema central
-3. Subtítulo en Pantalla (48 pt): ¿Cómo resolver Consecuencias históricas y síntesis de la Revolución Neolítica?
+3. Subtítulo en Pantalla (48 pt): ¿Cómo resolver Consecuencias históricas y complejización social?
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Dilema historico: Fuentes contrastadas frente al acontecimiento
 6. Notas al Orador (Locución Google Vids): "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje."
@@ -1426,18 +1426,18 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 7: La Pregunta Detonante (9 seg aprox) ---
 1. Propósito Didáctico: La Pregunta Detonante
 2. Título en Pantalla (64 pt): Pregunta detonante
-3. Subtítulo en Pantalla (48 pt): Regla y método de Consecuencias históricas y síntesis de la Revolución Neolítica
+3. Subtítulo en Pantalla (48 pt): Regla y método de Consecuencias históricas y complejización social
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.
-5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta detonante: ¿Que consecuencias trajo Consecuencias históricas y síntesis de la Revolución Neolítica?
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta detonante: ¿Que consecuencias trajo Consecuencias históricas y complejización social?
 6. Notas al Orador (Locución Google Vids): "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!"
 
 ================================================================================
 MODULO 2: PROMPT VIDEO EXPLICATIVO CONCEPTUAL (PASO 4 - 7 DIAPOSITIVAS)
 ================================================================================
 
-Titulo: Video Explicativo: Formalización de Consecuencias históricas y síntesis de la Revolución Neolítica
-• Idea Clave: "Los procesos históricos sobre Consecuencias históricas y síntesis de la Revolución Neolítica responden a múltiples causas interconectadas, donde 'Comercio' explica cómo las sociedades resolvieron sus desafíos de convivencia y subsistencia."
-• DILE ANTES DEL VIDEO: "Ahora veremos el video explicativo de Consecuencias históricas y síntesis de la Revolución Neolítica. Observa el mapa conceptual y cómo se articula el concepto de Comercio."
+Titulo: Video Explicativo: Formalización de Consecuencias históricas y complejización social
+• Idea Clave: "Los procesos históricos sobre Consecuencias históricas y complejización social responden a múltiples causas interconectadas, donde 'Comercio' explica cómo las sociedades resolvieron sus desafíos de convivencia y subsistencia."
+• DILE ANTES DEL VIDEO: "Ahora veremos el video explicativo de Consecuencias históricas y complejización social. Observa el mapa conceptual y cómo se articula el concepto de Comercio."
 • INSTRUCCION: "Revisemos la explicación formal y la idea clave."
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
@@ -1445,23 +1445,23 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 --- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
 1. Propósito Didáctico: Objetivo de la Lección
 2. Título en Pantalla (64 pt): Objetivo de la lección
-3. Subtítulo en Pantalla (48 pt): Dominar Consecuencias históricas y síntesis de la Revolución Neolítica: Aparición de la propiedad, jerarquías y proyección al presente
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Aparición de la propiedad, jerarquías y proyección al presente. High clarity, negative space for text. No text drawn by AI.
-5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 2 · Consecuencias históricas y síntesis de la Revolución Neolítica
-6. Notas al Orador (Locución Google Vids): "El objetivo de hoy es aprender a aparición de la propiedad, jerarquías y proyección al presente, aplicando el método disciplinar paso a paso con total rigor y claridad."
+3. Subtítulo en Pantalla (48 pt): Dominar Consecuencias históricas y complejización social: Aparición de la propiedad, jerarquías y especialización del trabajo
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Aparición de la propiedad, jerarquías y especialización del trabajo. High clarity, negative space for text. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 2 · Consecuencias históricas y complejización social
+6. Notas al Orador (Locución Google Vids): "El objetivo de hoy es aprender a aparición de la propiedad, jerarquías y especialización del trabajo, aplicando el método disciplinar paso a paso con total rigor y claridad."
 
 --- DIAPOSITIVA 2: Definición del Concepto Central (12 seg aprox) ---
 1. Propósito Didáctico: Definición del Concepto Central
 2. Título en Pantalla (64 pt): Concepto fundamental
-3. Subtítulo en Pantalla (48 pt): Aparición de la propiedad, jerarquías y proyección al presente
+3. Subtítulo en Pantalla (48 pt): Aparición de la propiedad, jerarquías y especialización del trabajo
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.
-5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Escenario historico y fuentes primarias de Aparición de la propiedad, jerarquías y proyección al presente
-6. Notas al Orador (Locución Google Vids): "Para comprender Consecuencias históricas y síntesis de la Revolución Neolítica, establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación."
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Escenario historico y fuentes primarias de Aparición de la propiedad, jerarquías y especialización del trabajo
+6. Notas al Orador (Locución Google Vids): "Para comprender Consecuencias históricas y complejización social, establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación."
 
 --- DIAPOSITIVA 3: Demostración Modelada (12 seg aprox) ---
 1. Propósito Didáctico: Demostración Modelada
 2. Título en Pantalla (64 pt): Modelamiento paso a paso
-3. Subtítulo en Pantalla (48 pt): Procedimiento de Consecuencias históricas y síntesis de la Revolución Neolítica
+3. Subtítulo en Pantalla (48 pt): Procedimiento de Consecuencias históricas y complejización social
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama multicausal: Factores economicos, sociales y culturales
 6. Notas al Orador (Locución Google Vids): "Observa cómo se aplica el procedimiento en este caso guiado: cada transformación responde a una justificación disciplinar explícita y visible."
@@ -1492,18 +1492,18 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
 --- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 seg aprox) ---
 1. Propósito Didáctico: Síntesis y Regla de Oro
-2. Título en Pantalla (64 pt): Regla de Oro: Consecuencias históricas y síntesis de la Revolución Neolítica
+2. Título en Pantalla (64 pt): Regla de Oro: Consecuencias históricas y complejización social
 3. Subtítulo en Pantalla (48 pt): Método disciplinar validado
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.
-5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Infografía de síntesis: Regla historica de Consecuencias históricas y síntesis de la Revolución Neolítica
-6. Notas al Orador (Locución Google Vids): "Ahora que dominas la regla fundamental y el procedimiento de Consecuencias históricas y síntesis de la Revolución Neolítica, ¡vamos a demostrarlo en las actividades interactivas de la plataforma!"
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Infografía de síntesis: Regla historica de Consecuencias históricas y complejización social
+6. Notas al Orador (Locución Google Vids): "Ahora que dominas la regla fundamental y el procedimiento de Consecuencias históricas y complejización social, ¡vamos a demostrarlo en las actividades interactivas de la plataforma!"
 
 ================================================================================
 MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
 ================================================================================
 
 [PREPARACION DEL ADULTO / MENTOR]
-• Objetivo del Adulto: Acompañar al estudiante a contextualizar y comprender el proceso histórico o geográfico de: Consecuencias históricas y síntesis de la Revolución Neolítica, desarrollando el pensamiento crítico y analizando Comercio.
+• Objetivo del Adulto: Acompañar al estudiante a contextualizar y comprender el proceso histórico o geográfico de: Consecuencias históricas y complejización social, desarrollando el pensamiento crítico y analizando Comercio.
 • Ruta de Hoy: 1. Inicio y activación · 2. Video de exploración · 3. Recorrido guiado · 4. Formalización y práctica en cuaderno · 5. Miniquiz y REVISAR · 6. Cierre metacognitivo
 • Recordatorios Pedagogicos del Mentor:
   1. Sigue el orden indicado.
@@ -1519,22 +1519,22 @@ MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
 [PASO 1: INICIO (4 SUB-ETAPAS CANONICAS)]
 --------------------------------------------------------------------------------
 Sub-etapa 1: Nuestra Ruta de la Asignatura
-• DILE AL ESTUDIANTE (Apertura de la ruta): "Hoy comenzaremos la clase 5 de Historia, Geografía y Ciencias Sociales: "Consecuencias históricas y síntesis de la Revolución Neolítica"."
+• DILE AL ESTUDIANTE (Apertura de la ruta): "Hoy comenzaremos la clase 5 de Historia, Geografía y Ciencias Sociales: "Consecuencias históricas y complejización social"."
 • 4 Bloques Tematicos de la Asignatura:
-  Bloque 01: Historia, Geografía y Ciencias Sociales (Consecuencias históricas y síntesis de la Revolución Neolítica)
+  Bloque 01: Historia, Geografía y Ciencias Sociales (Consecuencias históricas y complejización social)
   Bloque 02: Exploración (Gancho y Recorrido Guiado)
   Bloque 03: Práctica (Aplicación en situaciones reales)
   Bloque 04: Evaluación (Miniquiz formativo y síntesis)
 
 Sub-etapa 2: La Clase de Hoy
-• DILE AL ESTUDIANTE (Foco didactico): "Aparición de la propiedad, jerarquías y proyección al presente"
+• DILE AL ESTUDIANTE (Foco didactico): "Aparición de la propiedad, jerarquías y especialización del trabajo"
 • 3 Tarjetas de Foco de la Pantalla del Estudiante:
-  Tarjeta 1: Exploración inicial -> Consecuencias históricas y síntesis de la Revolución Neolítica
-  Tarjeta 2: Idea clave -> Los procesos históricos sobre Consecuencias históricas y sín
+  Tarjeta 1: Exploración inicial -> Consecuencias históricas y complejización social
+  Tarjeta 2: Idea clave -> Los procesos históricos sobre Consecuencias históricas y com
   Tarjeta 3: Práctica y aplicación -> Resolución guiada paso a paso
 
 Sub-etapa 3: Situacion Inicial de Exploracion (Detonante)
-• DILE AL ESTUDIANTE (Situacion detonante): "Hoy en Historia y Ciencias Sociales nos situamos en 'Consecuencias históricas y síntesis de la Revolución Neolítica'. El concepto histórico central que abordamos es 'Comercio'. Observa el escenario histórico planteado en la pantalla sobre Aparición de la propiedad, jerarquías y proyección al presente:"
+• DILE AL ESTUDIANTE (Situacion detonante): "Hoy en Historia y Ciencias Sociales nos situamos en 'Consecuencias históricas y complejización social'. El concepto histórico central que abordamos es 'Comercio'. Observa el escenario histórico planteado en la pantalla sobre Aparición de la propiedad, jerarquías y especialización del trabajo:"
 • RESPUESTA ESPERADA: Explicar las necesidades de subsistencia, recursos geográficos o motivos sociales vinculados con Comercio.
 • PISTA SOCRATICA (SOLO PARA TI): "Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?"
 • CLIMA EMOCIONAL: "Fomenta la perspectiva histórica: 'Analiza los hechos considerando la época y el espacio geográfico en que ocurrieron'."
@@ -1570,7 +1570,7 @@ Item 2 (Pensamiento Crítico y Prevención del Presentismo):
 --------------------------------------------------------------------------------
 [PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
 --------------------------------------------------------------------------------
-• Cierre y Sintesis del Video Explicativo: "Hoy dominaste Aparición de la propiedad, jerarquías y proyección al presente con pensamiento crítico y fuentes históricas en tu cuaderno."
+• Cierre y Sintesis del Video Explicativo: "Hoy dominaste Aparición de la propiedad, jerarquías y especialización del trabajo con pensamiento crítico y fuentes históricas en tu cuaderno."
 
 Comprobacion 1 (Contexto Temporal, Espacial y Comercio):
 • Pregunta: "¿De qué manera el entorno geográfico y la época condicionaron el desarrollo de 'Comercio' en este proceso histórico?"
@@ -1588,7 +1588,7 @@ Comprobacion 2 (Pensamiento Crítico y Prevención del Presentismo):
 [PASO 5: PRACTICA EN EL CUADERNO FISICO]
 --------------------------------------------------------------------------------
 Ejercicio 1 (Ejercicio 1 en Cuaderno: Análisis de Fuentes y Cuadro Comparativo):
-• Enunciado de Aplicacion: "Abre tu cuaderno de notas. Escribe como título: 'Consecuencias históricas y síntesis de la Revolución Neolítica'. Con base en la actividad (Crea una línea de tiempo física en el aula, ordenando los procesos clave del Neo...), dibuja un cuadro de doble entrada: en una columna registra los antecedentes geográficos y sociales, y en la otra explica el impacto de 'Comercio'."
+• Enunciado de Aplicacion: "Abre tu cuaderno de notas. Escribe como título: 'Consecuencias históricas y complejización social'. Con base en la actividad (Crea una línea de tiempo física en el aula, ordenando los procesos clave del Neo...), dibuja un cuadro de doble entrada: en una columna registra los antecedentes geográficos y sociales, y en la otra explica el impacto de 'Comercio'."
 • Respuesta Esperada: Cuadro comparativo en el cuaderno con antecedentes históricos y análisis fundamentado del impacto de concepto.
 • Feedback de Exito: "¡Excelente análisis en tu cuaderno! Has sintetizado las múltiples causas con claridad y orden."
 • Pista de Apoyo Socratica: "Revisa la línea de tiempo en pantalla: identifica qué ocurrió antes y qué transformaciones trajo este acontecimiento."
@@ -1601,19 +1601,19 @@ Ejercicio 2 (Ejercicio 2 en Cuaderno: Reflexión de Ciudadanía y Continuidad):
 
 Modulo: Comparemos dos situaciones (Comparemos dos situaciones)
 • DILE: "Antes de resumir, comparemos dos situaciones. No necesitas repetir una frase exacta: lo importante es que expliques la idea con tus propias palabras."
-• Pregunta: "Al comparar dos situaciones de Consecuencias históricas y síntesis de la Revolución Neolítica, ¿cómo influye el contexto en la interpretación de los datos?"
+• Pregunta: "Al comparar dos situaciones de Consecuencias históricas y complejización social, ¿cómo influye el contexto en la interpretación de los datos?"
 • Respuesta Esperada: El significado o resultado depende de las condiciones del contexto y del propósito de la situación.
 • Feedback si acierta: "¡Excelente razonamiento! Reconociste que el contexto orienta la interpretación de los datos."
 • Feedback si necesita apoyo: "Observa cada situación por separado y explica qué elementos las distinguen."
 
-Modulo: Desafio Breve (Desafío breve: Consecuencias históricas y síntesis de la Revolución Neolítica)
+Modulo: Desafio Breve (Desafío breve: Consecuencias históricas y complejización social)
 • Pregunta: "En Historia, Geografía y Ciencias Sociales, ¿qué diferencia observas entre identificar los datos y aplicar el procedimiento? Explica tu razonamiento."
 • Respuesta Esperada: Identificar los datos determina el punto de partida; aplicar el procedimiento permite construir la respuesta.
 
 --------------------------------------------------------------------------------
 [PASO 6: RESUMEN Y ESTRATEGIA DE PENSAMIENTO]
 --------------------------------------------------------------------------------
-• Idea Clave: "Los procesos históricos sobre Consecuencias históricas y síntesis de la Revolución Neolítica responden a múltiples causas interconectadas, donde 'Comercio' explica cómo las sociedades resolvieron sus desafíos de convivencia y subsistencia."
+• Idea Clave: "Los procesos históricos sobre Consecuencias históricas y complejización social responden a múltiples causas interconectadas, donde 'Comercio' explica cómo las sociedades resolvieron sus desafíos de convivencia y subsistencia."
 • DILE AL ESTUDIANTE: "Cuando enfrentes un problema en Historia, Geografía y Ciencias Sociales, puedes seguir estos tres pasos clave:"
 • Pasos de la Estrategia:
   Paso 1: Identifica -> ¿Cuáles son los datos clave y cuál es la pregunta central?
@@ -1621,13 +1621,13 @@ Modulo: Desafio Breve (Desafío breve: Consecuencias históricas y síntesis de 
   Paso 3: Comprueba -> ¿La conclusión o resultado responde con coherencia al problema?
 • 3 Ideas Clave Estructuradas de Sintesis:
   - 1 · Concepto central: Identificamos los elementos y el punto de partida del análisis.
-  - 2 · Interpretación del contexto: Aparición de la propiedad, jerarquías y proyección al presente
-  - 3 · Síntesis formal: Los procesos históricos sobre Consecuencias históricas y síntesis de la Revolución Neolítica responden a múltiples causas interconectadas, donde 'Comercio' explica cómo las sociedades resolvieron sus desafíos de convivencia y subsistencia.
+  - 2 · Interpretación del contexto: Aparición de la propiedad, jerarquías y especialización del trabajo
+  - 3 · Síntesis formal: Los procesos históricos sobre Consecuencias históricas y complejización social responden a múltiples causas interconectadas, donde 'Comercio' explica cómo las sociedades resolvieron sus desafíos de convivencia y subsistencia.
 
 --------------------------------------------------------------------------------
 [PASO 7: MINIQUIZ FORMATIVO Y FASE REVISAR]
 --------------------------------------------------------------------------------
-Pregunta 1: Al estudiar el proceso de Consecuencias históricas y síntesis de la Revolución Neolítica, ¿cuál de las siguientes opciones describe con rigor histórico el rol de 'Comercio'?
+Pregunta 1: Al estudiar el proceso de Consecuencias históricas y complejización social, ¿cuál de las siguientes opciones describe con rigor histórico el rol de 'Comercio'?
   A) Constituyó un elemento articulador que permitió a la sociedad responder a sus necesidades de organización y territorio [CORRECTA]
   B) Fue un acontecimiento completamente aislado que no tuvo ninguna relación con el entorno social ni geográfico 
   C) Ocurrió por decisión exclusiva de un único individuo sin influencia de la comunidad ni de la época 
@@ -1641,7 +1641,7 @@ Pregunta 2: Para analizar críticamente este proceso sin caer en el error de 'No
 • Explicacion Formativa del Error: "El presentismo distorsiona la comprensión histórica; la empatía histórica permite entender las motivaciones reales de los actores del pasado."
 • Guion del Mentor (Fase REVISAR): "Pregúntale: ¿por qué es injusto juzgar a personas del pasado como si tuvieran la tecnología y valores de hoy?"
 
-Pregunta 3: ¿Qué importancia tiene para la formación ciudadana actual el análisis de Aparición de la propiedad, jerarquías y proyección al presente?
+Pregunta 3: ¿Qué importancia tiene para la formación ciudadana actual el análisis de Aparición de la propiedad, jerarquías y especialización del trabajo?
   A) Permite valorar los derechos humanos, la participación democrática y la diversidad cultural al comprender su evolución histórica [CORRECTA]
   B) Demuestra que el pasado no guarda ninguna relación con los problemas ni desafíos de la sociedad moderna 
   C) Enseña que las leyes e instituciones humanas son inmutables y no han cambiado a lo largo de los siglos 
@@ -1651,9 +1651,9 @@ Pregunta 3: ¿Qué importancia tiene para la formación ciudadana actual el aná
 --------------------------------------------------------------------------------
 [PASO 7B: MODULO DE RECUPERACION FORMATIVA]
 --------------------------------------------------------------------------------
-Refuerzo 1 (Recuperación Histórica: Consecuencias históricas y síntesis de la Revolución Neolítica):
-• Explicacion Previa: "Al analizar Aparición de la propiedad, jerarquías y proyección al presente, recuerda situar siempre los acontecimientos en su espacio geográfico y comprender Comercio dentro de su época."
-• Pregunta: "¿Cuál es el principio metodológico central para interpretar un hecho histórico en Consecuencias históricas y síntesis de la Revolución Neolítica?"
+Refuerzo 1 (Recuperación Histórica: Consecuencias históricas y complejización social):
+• Explicacion Previa: "Al analizar Aparición de la propiedad, jerarquías y especialización del trabajo, recuerda situar siempre los acontecimientos en su espacio geográfico y comprender Comercio dentro de su época."
+• Pregunta: "¿Cuál es el principio metodológico central para interpretar un hecho histórico en Consecuencias históricas y complejización social?"
 • Opciones: Analizar el hecho a partir de sus fuentes históricas y el contexto propio de Comercio | Memorizar fechas aisladas sin considerar las causas ni las consecuencias del proceso
 • Respuesta Correcta: Analizar el hecho a partir de sus fuentes históricas y el contexto propio de Comercio
 • Refuerzo si falla: "Recuerda que la historia explica procesos humanos: busca siempre las causas y el entorno donde ocurrieron."
@@ -1661,10 +1661,343 @@ Refuerzo 1 (Recuperación Histórica: Consecuencias históricas y síntesis de l
 --------------------------------------------------------------------------------
 [PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
 --------------------------------------------------------------------------------
-• Pregunta de Sintesis: "En tus propias palabras, ¿qué lección o reflexión para el presente nos deja el estudio de Comercio en Consecuencias históricas y síntesis de la Revolución Neolítica?"
+• Pregunta de Sintesis: "En tus propias palabras, ¿qué lección o reflexión para el presente nos deja el estudio de Comercio en Consecuencias históricas y complejización social?"
+• Reflexion Metacognitiva: "¿Qué estrategia te ayudó más a comprender la época estudiada: analizar el mapa o ponerte en el lugar de los protagonistas?"
+• Celebracion del Logro: "¡Gran trabajo hoy! Has dominado la Clase 5. ¡Nos vemos en la próxima expedición histórica!"
+• Felicitacion Final: "¡Felicitaciones! Hoy completaste con éxito la clase "Consecuencias históricas y complejización social". Has demostrado constancia y rigor en tu aprendizaje."
+• Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Historia, Geografía y Ciencias Sociales."
+
+
+
+################################################################################
+### CLASE 6 DE 6: DE LAS ALDEAS A LAS PRIMERAS CIUDADES: EL SURGIMIENTO DE LA CIVILIZACIÓN Y ENSAYO
+################################################################################
+
+================================================================================
+STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+================================================================================
+
+FICHA CURRICULAR:
+• Asignatura: Historia, Geografía y Ciencias Sociales
+• Nivel / Curso: 7° Básico
+• Objetivo de Aprendizaje: OA 2 - Complejización de las primeras sociedades: de la hominización al surgimiento de las civilizaciones
+• Clase: 6 de 6 ("De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo")
+• Duracion Estimada: 30 Minutos
+
+DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
+1. Proporcion Widescreen 16:9 estricto (1920x1080).
+2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
+3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
+4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
+5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
+   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
+   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (48 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (48 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
+7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
+8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
+
+================================================================================
+MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Video Motivacional: El Desafío de De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo
+• DILE ANTES DEL VIDEO: "Antes de ver el video, observa con atención lo que descubren los dos exploradores y qué pregunta queda planteada."
+• INSTRUCCION AL ESTUDIANTE: "Observa y reflexiona con las escenas del desafío visual."
+• DILE DESPUES DEL VIDEO: "Muy buena observación. Ahora conversaremos sobre lo que descubrieron en la expedición."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Apertura y Contexto (9 seg aprox) ---
+1. Propósito Didáctico: Apertura y Contexto
+2. Título en Pantalla (64 pt): Misión 6: De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo
+3. Subtítulo en Pantalla (48 pt): Exploración inicial en Historia, Geografía y Ciencias Sociales
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo (Historia, Geografía y Ciencias Sociales). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Coordenadas historicas: Linea temporal y contexto de De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo
+6. Notas al Orador (Locución Google Vids): "Comienza una nueva expedición de aprendizaje en Historia, Geografía y Ciencias Sociales. Nuestros dos exploradores analizan el desafío de De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo para descubrir sus secretos."
+
+--- DIAPOSITIVA 2: Presentación del Escenario (9 seg aprox) ---
+1. Propósito Didáctico: Presentación del Escenario
+2. Título en Pantalla (64 pt): Punto de partida
+3. Subtítulo en Pantalla (48 pt): Excedente alimentario, comercio, primeras ciudades en Mesopotamia y ensayo oficial tipo MINEDUC
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Excedente alimentario, comercio, primeras ciudades en Mesopotamia y ensayo oficial tipo MINEDUC. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Excedente alimentario, comercio, primeras ciudades en Mesopotamia y ensayo oficial tipo MINEDUC
+6. Notas al Orador (Locución Google Vids): "Al observar los datos sobre Excedente alimentario, comercio, primeras ciudades en Mesopotamia y ensayo oficial tipo MINEDUC, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor."
+
+--- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 seg aprox) ---
+1. Propósito Didáctico: Aparición del Conflicto / Misterio
+2. Título en Pantalla (64 pt): El enigma disciplinar
+3. Subtítulo en Pantalla (48 pt): Desafío en De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Excedente alimentario, comercio, primeras ciudades en Mesopotamia y ensayo oficial tipo MINEDUC
+6. Notas al Orador (Locución Google Vids): "Surge un reto concreto sobre De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso."
+
+--- DIAPOSITIVA 4: Exploración de Pistas (9 seg aprox) ---
+1. Propósito Didáctico: Exploración de Pistas
+2. Título en Pantalla (64 pt): Análisis de evidencias
+3. Subtítulo en Pantalla (48 pt): Excedente alimentario, comercio, primeras ciudades en Mesopotamia y ensayo oficial tipo MINEDUC
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Excedente alimentario, comercio, primeras ciudades en Mesopotamia y ensayo oficial tipo MINEDUC
+6. Notas al Orador (Locución Google Vids): "Ambos comparan las pistas disponibles sobre Excedente alimentario, comercio, primeras ciudades en Mesopotamia y ensayo oficial tipo MINEDUC. Cada dato confirma cómo interactúan los elementos clave de la situación."
+
+--- DIAPOSITIVA 5: El Momento Crítico (9 seg aprox) ---
+1. Propósito Didáctico: El Momento Crítico
+2. Título en Pantalla (64 pt): Criterio de decisión
+3. Subtítulo en Pantalla (48 pt): Aplicar el método riguroso
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Excedente alimentario, comercio, primeras ciudades en Mesopotamia y ensayo oficial tipo MINEDUC
+6. Notas al Orador (Locución Google Vids): "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo con total precisión metodológica."
+
+--- DIAPOSITIVA 6: La Antesala de la Pregunta (9 seg aprox) ---
+1. Propósito Didáctico: La Antesala de la Pregunta
+2. Título en Pantalla (64 pt): El dilema central
+3. Subtítulo en Pantalla (48 pt): ¿Cómo resolver De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo?
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Dilema historico: Fuentes contrastadas frente al acontecimiento
+6. Notas al Orador (Locución Google Vids): "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje."
+
+--- DIAPOSITIVA 7: La Pregunta Detonante (9 seg aprox) ---
+1. Propósito Didáctico: La Pregunta Detonante
+2. Título en Pantalla (64 pt): Pregunta detonante
+3. Subtítulo en Pantalla (48 pt): Regla y método de De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta detonante: ¿Que consecuencias trajo De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo?
+6. Notas al Orador (Locución Google Vids): "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!"
+
+================================================================================
+MODULO 2: PROMPT VIDEO EXPLICATIVO CONCEPTUAL (PASO 4 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Video Explicativo: Formalización de De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo
+• Idea Clave: "Los procesos históricos sobre De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo responden a múltiples causas interconectadas, donde 'Agricultura' explica cómo las sociedades resolvieron sus desafíos de convivencia y subsistencia."
+• DILE ANTES DEL VIDEO: "Ahora veremos el video explicativo de De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo. Observa el mapa conceptual y cómo se articula el concepto de Agricultura."
+• INSTRUCCION: "Revisemos la explicación formal y la idea clave."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
+1. Propósito Didáctico: Objetivo de la Lección
+2. Título en Pantalla (64 pt): Objetivo de la lección
+3. Subtítulo en Pantalla (48 pt): Dominar De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo: Excedente alimentario, comercio, primeras ciudades en Mesopotamia y ensayo oficial tipo MINEDUC
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Excedente alimentario, comercio, primeras ciudades en Mesopotamia y ensayo oficial tipo MINEDUC. High clarity, negative space for text. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 2 · De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo
+6. Notas al Orador (Locución Google Vids): "El objetivo de hoy es aprender a excedente alimentario, comercio, primeras ciudades en mesopotamia y ensayo oficial tipo mineduc, aplicando el método disciplinar paso a paso con total rigor y claridad."
+
+--- DIAPOSITIVA 2: Definición del Concepto Central (12 seg aprox) ---
+1. Propósito Didáctico: Definición del Concepto Central
+2. Título en Pantalla (64 pt): Concepto fundamental
+3. Subtítulo en Pantalla (48 pt): Excedente alimentario, comercio, primeras ciudades en Mesopotamia y ensayo oficial tipo MINEDUC
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Escenario historico y fuentes primarias de Excedente alimentario, comercio, primeras ciudades en Mesopotamia y ensayo oficial tipo MINEDUC
+6. Notas al Orador (Locución Google Vids): "Para comprender De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo, establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación."
+
+--- DIAPOSITIVA 3: Demostración Modelada (12 seg aprox) ---
+1. Propósito Didáctico: Demostración Modelada
+2. Título en Pantalla (64 pt): Modelamiento paso a paso
+3. Subtítulo en Pantalla (48 pt): Procedimiento de De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama multicausal: Factores economicos, sociales y culturales
+6. Notas al Orador (Locución Google Vids): "Observa cómo se aplica el procedimiento en este caso guiado: cada transformación responde a una justificación disciplinar explícita y visible."
+
+--- DIAPOSITIVA 4: Prevención del Error Frecuente (13 seg aprox) ---
+1. Propósito Didáctico: Prevención del Error Frecuente
+2. Título en Pantalla (64 pt): Atención: Error habitual
+3. Subtítulo en Pantalla (48 pt): Confusión común que debemos evitar
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Contraste temporal: cambios y continuidades historicas
+6. Notas al Orador (Locución Google Vids): "Un error frecuente ocurre al descuidar el orden o saltarse un paso de la convención establecida. Siempre comprobamos cada dato antes de continuar."
+
+--- DIAPOSITIVA 5: Comprobación del Resultado (12 seg aprox) ---
+1. Propósito Didáctico: Comprobación del Resultado
+2. Título en Pantalla (64 pt): Validación del resultado
+3. Subtítulo en Pantalla (48 pt): Comprobar que la respuesta es consistente
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Interpretacion historica justificada a partir de evidencias
+6. Notas al Orador (Locución Google Vids): "Al contrastar el resultado con la situación inicial, confirmamos que la solución es consistente, rigurosa y responde plenamente a la pregunta."
+
+--- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 seg aprox) ---
+1. Propósito Didáctico: Estrategia Mnemotécnica
+2. Título en Pantalla (64 pt): Estrategia de pensamiento
+3. Subtítulo en Pantalla (48 pt): 1. Identificar · 2. Aplicar · 3. Comprobar
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Estrategia de analisis historico: Contexto, causas y consecuencias
+6. Notas al Orador (Locución Google Vids): "Recuerda siempre la estrategia en tres pasos: identificar la información clave, aplicar la regla en orden y comprobar el resultado final."
+
+--- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 seg aprox) ---
+1. Propósito Didáctico: Síntesis y Regla de Oro
+2. Título en Pantalla (64 pt): Regla de Oro: De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo
+3. Subtítulo en Pantalla (48 pt): Método disciplinar validado
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Infografía de síntesis: Regla historica de De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo
+6. Notas al Orador (Locución Google Vids): "Ahora que dominas la regla fundamental y el procedimiento de De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo, ¡vamos a demostrarlo en las actividades interactivas de la plataforma!"
+
+================================================================================
+MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
+================================================================================
+
+[PREPARACION DEL ADULTO / MENTOR]
+• Objetivo del Adulto: Acompañar al estudiante a contextualizar y comprender el proceso histórico o geográfico de: De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo, desarrollando el pensamiento crítico y analizando Agricultura.
+• Ruta de Hoy: 1. Inicio y activación · 2. Video de exploración · 3. Recorrido guiado · 4. Formalización y práctica en cuaderno · 5. Miniquiz y REVISAR · 6. Cierre metacognitivo
+• Recordatorios Pedagogicos del Mentor:
+  1. Sigue el orden indicado.
+  2. Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.
+  3. No leas los recuadros SOLO PARA TI ni AYUDA DE LECTURA.
+  4. Haz cada pregunta y espera la respuesta antes de seleccionar una opción.
+  5. Considera correcta una respuesta si expresa la idea matemática, aunque use palabras distintas.
+  6. Si el estudiante necesita apoyo, usa únicamente la ayuda que aparecerá.
+  7. Si propone otra explicación o no está de acuerdo, escúchalo completo y valora su razonamiento antes de guiarlo.
+• Clima Emocional y Acogida: "Fomenta la perspectiva histórica: 'Analiza los hechos considerando la época y el espacio geográfico en que ocurrieron'."
+
+--------------------------------------------------------------------------------
+[PASO 1: INICIO (4 SUB-ETAPAS CANONICAS)]
+--------------------------------------------------------------------------------
+Sub-etapa 1: Nuestra Ruta de la Asignatura
+• DILE AL ESTUDIANTE (Apertura de la ruta): "Hoy comenzaremos la clase 6 de Historia, Geografía y Ciencias Sociales: "De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo"."
+• 4 Bloques Tematicos de la Asignatura:
+  Bloque 01: Historia, Geografía y Ciencias Sociales (De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo)
+  Bloque 02: Exploración (Gancho y Recorrido Guiado)
+  Bloque 03: Práctica (Aplicación en situaciones reales)
+  Bloque 04: Evaluación (Miniquiz formativo y síntesis)
+
+Sub-etapa 2: La Clase de Hoy
+• DILE AL ESTUDIANTE (Foco didactico): "Excedente alimentario, comercio, primeras ciudades en Mesopotamia y ensayo oficial tipo MINEDUC"
+• 3 Tarjetas de Foco de la Pantalla del Estudiante:
+  Tarjeta 1: Exploración inicial -> De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo
+  Tarjeta 2: Idea clave -> Los procesos históricos sobre De las aldeas a las primeras c
+  Tarjeta 3: Práctica y aplicación -> Resolución guiada paso a paso
+
+Sub-etapa 3: Situacion Inicial de Exploracion (Detonante)
+• DILE AL ESTUDIANTE (Situacion detonante): "Hoy en Historia y Ciencias Sociales nos situamos en 'De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo'. El concepto histórico central que abordamos es 'Agricultura'. Observa el escenario histórico planteado en la pantalla sobre Excedente alimentario, comercio, primeras ciudades en Mesopotamia y ensayo oficial tipo MINEDUC:"
+• RESPUESTA ESPERADA: Explicar las necesidades de subsistencia, recursos geográficos o motivos sociales vinculados con Agricultura.
+• PISTA SOCRATICA (SOLO PARA TI): "Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?"
+• CLIMA EMOCIONAL: "Fomenta la perspectiva histórica: 'Analiza los hechos considerando la época y el espacio geográfico en que ocurrieron'."
+• Pautas de Evaluacion Formativa del Mentor:
+  - [Acierto] Explicó las causas históricas y geográficas vinculadas con Agricultura -> Feedback: "¡Exacto! Comprendió las causas históricas y geográficas que motivaron a las personas de esa época."
+  - [Requiere Apoyo] Solo mencionó hechos aislados sin explicar por qué ocurrieron -> Feedback: "Pídele que piense en los desafíos del entorno: ¿por qué necesitaban organizarse de esa manera?"
+
+Sub-etapa 4: Comprendamos la Respuesta (Punto de Referencia)
+• DILE AL ESTUDIANTE (Formalizacion de referencia): "¿Qué causas o necesidades motivaron a las comunidades de esa época en relación con 'Agricultura'?"
+• PREGUNTALE AL ESTUDIANTE: "¿Qué causas o necesidades motivaron a las comunidades de esa época en relación con 'Agricultura'?"
+• RESPUESTA ESPERADA: Explicar las necesidades de subsistencia, recursos geográficos o motivos sociales vinculados con Agricultura.
+• PISTA SOCRATICA: "Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?"
+• FEEDBACK SI ACIERTA: "Muy bien. Observaste el detalle central con precisión."
+• FEEDBACK SI NECESITA APOYO: "Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?"
+
+--------------------------------------------------------------------------------
+[PASO 3: RECORRIDO - CONVERSACION GUIADA Y PREGUNTAS SOCRATICAS]
+--------------------------------------------------------------------------------
+Item 1 (Contexto Temporal, Espacial y Agricultura):
+• Pregunta Socratica: "¿De qué manera el entorno geográfico y la época condicionaron el desarrollo de 'Agricultura' en este proceso histórico?"
+• Respuesta Esperada: Relacionar las características del espacio geográfico con la organización social y el desarrollo de Agricultura.
+• Feedback de Exito: "¡Muy bien! Ubicaste con precisión las coordenadas temporales y espaciales del proceso."
+• Pista de Apoyo Socratica: "Observa las referencias del mapa y la cronología: ¿qué recursos naturales o rutas influían en sus decisiones?"
+• Revelacion: "El entorno geográfico y las condiciones de la época condicionaron profundamente los modos de vida y las instituciones humanas."
+
+Item 2 (Pensamiento Crítico y Prevención del Presentismo):
+• Pregunta Socratica: "Para evitar el error común de 'Dificultad para establecer relaciones de causa y efecto entre los diferentes procesos (ej., agricultura -> sedentarización -> acumulación -> comercio).', ¿qué debemos considerar al analizar las decisiones tomadas por los actores históricos?"
+• Respuesta Esperada: Evaluar las decisiones históricas desde la mentalidad, recursos y cosmovisión propia de la época estudiada.
+• Feedback de Exito: "¡Excelente empatía histórica! Analizaste el pasado desde su propio contexto y no desde los prejuicios actuales."
+• Pista de Apoyo Socratica: "Piensa qué información y qué valores tenían en ese siglo: ¿podían prever las consecuencias de la misma forma que nosotros hoy?"
+• Revelacion: "El rigor histórico exige comprender las razones de los protagonistas en su propio tiempo, evitando anacronismos."
+
+--------------------------------------------------------------------------------
+[PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
+--------------------------------------------------------------------------------
+• Cierre y Sintesis del Video Explicativo: "Hoy dominaste Excedente alimentario, comercio, primeras ciudades en Mesopotamia y ensayo oficial tipo MINEDUC con pensamiento crítico y fuentes históricas en tu cuaderno."
+
+Comprobacion 1 (Contexto Temporal, Espacial y Agricultura):
+• Pregunta: "¿De qué manera el entorno geográfico y la época condicionaron el desarrollo de 'Agricultura' en este proceso histórico?"
+• Respuesta Esperada: Relacionar las características del espacio geográfico con la organización social y el desarrollo de Agricultura.
+• Pista de Apoyo: "Observa las referencias del mapa y la cronología: ¿qué recursos naturales o rutas influían en sus decisiones?"
+• Revelacion: "La influencia del espacio geográfico y el tiempo histórico en Agricultura."
+
+Comprobacion 2 (Pensamiento Crítico y Prevención del Presentismo):
+• Pregunta: "Para evitar el error común de 'Dificultad para establecer relaciones de causa y efecto entre los diferentes procesos (ej., agricultura -> sedentarización -> acumulación -> comercio).', ¿qué debemos considerar al analizar las decisiones tomadas por los actores históricos?"
+• Respuesta Esperada: Evaluar las decisiones históricas desde la mentalidad, recursos y cosmovisión propia de la época estudiada.
+• Pista de Apoyo: "Piensa qué información y qué valores tenían en ese siglo: ¿podían prever las consecuencias de la misma forma que nosotros hoy?"
+• Revelacion: "La comprensión del pasado desde el contexto propio de sus protagonistas."
+
+--------------------------------------------------------------------------------
+[PASO 5: PRACTICA EN EL CUADERNO FISICO]
+--------------------------------------------------------------------------------
+Ejercicio 1 (Ejercicio 1 en Cuaderno: Análisis de Fuentes y Cuadro Comparativo):
+• Enunciado de Aplicacion: "Abre tu cuaderno de notas. Escribe como título: 'De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo'. Con base en la actividad (Crea una línea de tiempo física en el aula, ordenando los procesos clave del Neo...), dibuja un cuadro de doble entrada: en una columna registra los antecedentes geográficos y sociales, y en la otra explica el impacto de 'Agricultura'."
+• Respuesta Esperada: Cuadro comparativo en el cuaderno con antecedentes históricos y análisis fundamentado del impacto de concepto.
+• Feedback de Exito: "¡Excelente análisis en tu cuaderno! Has sintetizado las múltiples causas con claridad y orden."
+• Pista de Apoyo Socratica: "Revisa la línea de tiempo en pantalla: identifica qué ocurrió antes y qué transformaciones trajo este acontecimiento."
+
+Ejercicio 2 (Ejercicio 2 en Cuaderno: Reflexión de Ciudadanía y Continuidad):
+• Enunciado de Aplicacion: "En tu cuaderno, responde con un breve texto argumentativo: ¿Qué elementos de 'Agricultura' continúan presentes en nuestra sociedad actual y qué aspectos han cambiado sustancialmente?"
+• Respuesta Esperada: Reflexión argumentada identificando elementos de cambio y continuidad histórica entre el pasado y el presente.
+• Feedback de Exito: "¡Muy buena argumentación! Conectaste el aprendizaje histórico con la realidad ciudadana actual."
+• Pista de Apoyo Socratica: "Piensa en nuestras leyes, ciudades o costumbres: ¿qué heredamos de esa civilización o proceso?"
+
+Modulo: Comparemos dos situaciones (Comparemos dos situaciones)
+• DILE: "Antes de resumir, comparemos dos situaciones. No necesitas repetir una frase exacta: lo importante es que expliques la idea con tus propias palabras."
+• Pregunta: "Al comparar dos situaciones de De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo, ¿cómo influye el contexto en la interpretación de los datos?"
+• Respuesta Esperada: El significado o resultado depende de las condiciones del contexto y del propósito de la situación.
+• Feedback si acierta: "¡Excelente razonamiento! Reconociste que el contexto orienta la interpretación de los datos."
+• Feedback si necesita apoyo: "Observa cada situación por separado y explica qué elementos las distinguen."
+
+Modulo: Desafio Breve (Desafío breve: De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo)
+• Pregunta: "En Historia, Geografía y Ciencias Sociales, ¿qué diferencia observas entre identificar los datos y aplicar el procedimiento? Explica tu razonamiento."
+• Respuesta Esperada: Identificar los datos determina el punto de partida; aplicar el procedimiento permite construir la respuesta.
+
+--------------------------------------------------------------------------------
+[PASO 6: RESUMEN Y ESTRATEGIA DE PENSAMIENTO]
+--------------------------------------------------------------------------------
+• Idea Clave: "Los procesos históricos sobre De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo responden a múltiples causas interconectadas, donde 'Agricultura' explica cómo las sociedades resolvieron sus desafíos de convivencia y subsistencia."
+• DILE AL ESTUDIANTE: "Cuando enfrentes un problema en Historia, Geografía y Ciencias Sociales, puedes seguir estos tres pasos clave:"
+• Pasos de la Estrategia:
+  Paso 1: Identifica -> ¿Cuáles son los datos clave y cuál es la pregunta central?
+  Paso 2: Aplica -> ¿Qué regla o método disciplinar corresponde utilizar?
+  Paso 3: Comprueba -> ¿La conclusión o resultado responde con coherencia al problema?
+• 3 Ideas Clave Estructuradas de Sintesis:
+  - 1 · Concepto central: Identificamos los elementos y el punto de partida del análisis.
+  - 2 · Interpretación del contexto: Excedente alimentario, comercio, primeras ciudades en Mesopotamia y ensayo oficial tipo MINEDUC
+  - 3 · Síntesis formal: Los procesos históricos sobre De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo responden a múltiples causas interconectadas, donde 'Agricultura' explica cómo las sociedades resolvieron sus desafíos de convivencia y subsistencia.
+
+--------------------------------------------------------------------------------
+[PASO 7: MINIQUIZ FORMATIVO Y FASE REVISAR]
+--------------------------------------------------------------------------------
+Pregunta 1: Al estudiar el proceso de De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo, ¿cuál de las siguientes opciones describe con rigor histórico el rol de 'Agricultura'?
+  A) Constituyó un elemento articulador que permitió a la sociedad responder a sus necesidades de organización y territorio [CORRECTA]
+  B) Fue un acontecimiento completamente aislado que no tuvo ninguna relación con el entorno social ni geográfico 
+  C) Ocurrió por decisión exclusiva de un único individuo sin influencia de la comunidad ni de la época 
+• Explicacion Formativa del Error: "Los procesos históricos son colectivos y multicausales; Agricultura responde a dinámicas sociales y territoriales profundas."
+• Guion del Mentor (Fase REVISAR): "Pídele que señale qué fuentes o evidencias históricas analizadas hoy justifican esta afirmación."
+
+Pregunta 2: Para analizar críticamente este proceso sin caer en el error de 'Dificultad para establecer relaciones de causa y efecto entre los diferentes procesos (ej., agricultura -> sedentarización -> acumulación -> comercio).', ¿qué actitud metodológica debemos adoptar?
+  A) Evaluar las decisiones históricas considerando el contexto, las creencias y los recursos disponibles en su época [CORRECTA]
+  B) Condenar inmediatamente las acciones del pasado aplicando únicamente los estándares de la sociedad actual 
+  C) Ignorar las fuentes primarias y basarse en opiniones espontáneas sin respaldo documental 
+• Explicacion Formativa del Error: "El presentismo distorsiona la comprensión histórica; la empatía histórica permite entender las motivaciones reales de los actores del pasado."
+• Guion del Mentor (Fase REVISAR): "Pregúntale: ¿por qué es injusto juzgar a personas del pasado como si tuvieran la tecnología y valores de hoy?"
+
+Pregunta 3: ¿Qué importancia tiene para la formación ciudadana actual el análisis de Excedente alimentario, comercio, primeras ciudades en Mesopotamia y ensayo oficial tipo MINEDUC?
+  A) Permite valorar los derechos humanos, la participación democrática y la diversidad cultural al comprender su evolución histórica [CORRECTA]
+  B) Demuestra que el pasado no guarda ninguna relación con los problemas ni desafíos de la sociedad moderna 
+  C) Enseña que las leyes e instituciones humanas son inmutables y no han cambiado a lo largo de los siglos 
+• Explicacion Formativa del Error: "El aprendizaje histórico fortalece el juicio cívico y la convivencia democrática mediante el análisis crítico del pasado."
+• Guion del Mentor (Fase REVISAR): "Pídele que mencione cómo lo aprendido hoy fortalece su rol como ciudadano responsable en su comunidad."
+
+--------------------------------------------------------------------------------
+[PASO 7B: MODULO DE RECUPERACION FORMATIVA]
+--------------------------------------------------------------------------------
+Refuerzo 1 (Recuperación Histórica: De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo):
+• Explicacion Previa: "Al analizar Excedente alimentario, comercio, primeras ciudades en Mesopotamia y ensayo oficial tipo MINEDUC, recuerda situar siempre los acontecimientos en su espacio geográfico y comprender Agricultura dentro de su época."
+• Pregunta: "¿Cuál es el principio metodológico central para interpretar un hecho histórico en De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo?"
+• Opciones: Analizar el hecho a partir de sus fuentes históricas y el contexto propio de Agricultura | Memorizar fechas aisladas sin considerar las causas ni las consecuencias del proceso
+• Respuesta Correcta: Analizar el hecho a partir de sus fuentes históricas y el contexto propio de Agricultura
+• Refuerzo si falla: "Recuerda que la historia explica procesos humanos: busca siempre las causas y el entorno donde ocurrieron."
+
+--------------------------------------------------------------------------------
+[PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
+--------------------------------------------------------------------------------
+• Pregunta de Sintesis: "En tus propias palabras, ¿qué lección o reflexión para el presente nos deja el estudio de Agricultura en De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo?"
 • Reflexion Metacognitiva: "¿Qué estrategia te ayudó más a comprender la época estudiada: analizar el mapa o ponerte en el lugar de los protagonistas?"
 • Celebracion del Logro: "¡Felicitaciones! Has completado todas las investigaciones del Objetivo de Aprendizaje OA 2. ¡Excelente labor histórica!"
-• Felicitacion Final: "¡Felicitaciones! Hoy completaste con éxito la clase "Consecuencias históricas y síntesis de la Revolución Neolítica". Has demostrado constancia y rigor en tu aprendizaje."
+• Felicitacion Final: "¡Felicitaciones! Hoy completaste con éxito la clase "De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo". Has demostrado constancia y rigor en tu aprendizaje."
 • Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Historia, Geografía y Ciencias Sociales."
 
 

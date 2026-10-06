@@ -44,4 +44,5 @@ Cada clase de 7° básico se compone estrictamente de **14 diapositivas dividida
 
 ## 4. Cobertura de Clases por OA
 
-- Cada paquete de OA en 7° básico cubre de **5 a 6 lecciones completas** según el temario oficial de Exámenes Libres (ej: 110-7-MAT-OA01 cuenta con 6 clases; 110-7-HIS-OA02 cuenta con 5 clases).
+- **Parámetro Estándar Oficial:** Cada paquete de OA se estructura obligatoriamente en **exactamente 6 lecciones completas** como parámetro estándar normativo (recomendación y directriz de Work, alineado con el canon ejemplar de 110-7-MAT-OA01 y 110-7-CN-OA01).
+- Toda lección de 7° básico preserva la estructura bimodal de 14 láminas por clase (7 de gancho contextual + 7 de formalización rigurosa) y reactivos de 4 alternativas con análisis psicométrico de distractores.

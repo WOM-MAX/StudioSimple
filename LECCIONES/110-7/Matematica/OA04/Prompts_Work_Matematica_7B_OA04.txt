@@ -1,0 +1,1909 @@
+================================================================================
+STUDIOSIMPLE - PAQUETE COMPLETO DE PROMPTS Y GUIONES MAESTROS
+CURSO: 7° BASICO | ASIGNATURA: MATEMATICA | OA: 110-7-MAT-OA04 (PORCENTAJES)
+TOTAL DE CLASES: 6 CLASES CANONICAS BIMODALES (14 LAMINAS CADA UNA = 84 LAMINAS TOTALES)
+FORMATO: 7 DIAPOSITIVAS VIDEO GANCHO (60s) + 7 DIAPOSITIVAS VIDEO EXPLICATIVO (90s)
+DESTINATARIO: CHATGPT WORK / CODEX (MAQUETACION PPTX 16:9 EN PYTHON)
+================================================================================
+
+================================================================================
+STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+================================================================================
+
+FICHA CURRICULAR:
+• Asignatura: Matemática
+• Nivel / Curso: 7° Básico
+• Objetivo de Aprendizaje: OA 4 - Porcentajes
+• Clase: 1 de 6 ("Concepto de Porcentaje y Representación en Cuadrículas de 100")
+• Duracion Estimada: 30 Minutos
+
+DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
+1. Proporcion Widescreen 16:9 estricto (1920x1080).
+2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
+3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
+4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
+5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
+   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
+   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
+7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
+8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
+
+================================================================================
+MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: El Enigma del Panel Solar
+• DILE ANTES DEL VIDEO: "Acompañemos a Sofía y Lucas en el techo de su escuela, donde deben medir cuánta energía solar está capturando un nuevo panel compuesto por 100 celdas."
+• INSTRUCCION AL ESTUDIANTE: "Observa el video con atención y fíjate en cómo los personajes cuentan las celdas activas para determinar el porcentaje de energía."
+• DILE DESPUES DEL VIDEO: "¿Notaste cómo Sofía agrupó las celdas en filas de diez para contar más rápido? Veamos cómo se formaliza esta idea."
+• Puntos de foco visual al observar:
+  1. Observar la cuadrícula de 100 celdas fotovoltaicas en el techo de la escuela.
+  2. Identificar cuántas celdas capturan energía solar directamente.
+  3. Comprender por qué dividir en 100 partes facilita todas las comparaciones.
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Desafío Inicial: El panel solar escolar (8 seg aprox) ---
+1. Propósito Didáctico: Desafío Inicial: El panel solar escolar
+2. Título en Pantalla (64 pt): ¿QUÉ ES EL PORCENTAJE?
+3. Subtítulo en Pantalla (36 pt): El enigma de las 100 celdas solares
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing on a sunny school rooftop looking at a large square solar panel divided into a grid of 100 square cells. High contrast, bright sunny day, clean vector lines, ample negative space on the left. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Panel solar cuadrado dividido en cuadrícula de 10x10 celdas
+6. Notas al Orador (Locución Google Vids): "Sofía y Lucas subieron al techo de su escuela para revisar el nuevo panel solar. El profesor les explicó que el panel está formado exactamente por cien celdas idénticas."
+
+--- DIAPOSITIVA 2: Observación: Contando celdas activas (8 seg aprox) ---
+1. Propósito Didáctico: Observación: Contando celdas activas
+2. Título en Pantalla (64 pt): MEDIR SOBRE UN TOTAL DE 100
+3. Subtítulo en Pantalla (36 pt): Cada celda representa una parte igual
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old girl with braided hair pointing with a digital tablet at the solar panel grid, while the 13-year-old boy in a teal jacket counts illuminated blue cells. Clean modern anime aesthetic, bright flat saturated colors, generous negative space on top. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Ilustración esquemática de cuadrícula con celdas que brillan en color azul cian
+6. Notas al Orador (Locución Google Vids): "Al recibir la luz del sol, varias celdas comenzaron a brillar en color azul. Lucas notó que cada fila tenía diez celdas y que en total había diez filas completas."
+
+--- DIAPOSITIVA 3: Pregunta clave: La razón de cien (9 seg aprox) ---
+1. Propósito Didáctico: Pregunta clave: La razón de cien
+2. Título en Pantalla (64 pt): ¿POR QUÉ COMPARAMOS CON 100?
+3. Subtítulo en Pantalla (36 pt): El estándar universal de comparación
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The two 13-year-old students looking curiously at a digital display showing a glowing percent symbol. Thoughtful expressions, scientific classroom rooftop setting, sharp clean lines, negative space for layout. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Símbolo de porcentaje estilizado con flechas indicando proporción
+6. Notas al Orador (Locución Google Vids): "¿Por qué los científicos e ingenieros eligen comparar siempre con cien partes? Porque cien nos da una referencia estándar para comparar cualquier tamaño sin confusiones."
+
+--- DIAPOSITIVA 4: Visualización: Cuadrícula de 10x10 (9 seg aprox) ---
+1. Propósito Didáctico: Visualización: Cuadrícula de 10x10
+2. Título en Pantalla (64 pt): LA CUADRÍCULA DE 100 PARTES
+3. Subtítulo en Pantalla (36 pt): 10 filas de 10 cuadritos cada una
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old boy and girl examining a clear holographic 10 by 10 grid floating between them. Crisp vector aesthetic, bright turquoise and orange accents, clean white highlights, negative space. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Cuadrícula regular de 100 unidades con una celda destacada en amarillo
+6. Notas al Orador (Locución Google Vids): "Si el panel completo tiene cien celdas, cada celda individual representa exactamente una de cien partes. A esa unidad básica la llamamos uno por ciento."
+
+--- DIAPOSITIVA 5: Descubrimiento: Cuarenta celdas iluminadas (9 seg aprox) ---
+1. Propósito Didáctico: Descubrimiento: Cuarenta celdas iluminadas
+2. Título en Pantalla (64 pt): 40 DE CADA 100 PARTES
+3. Subtítulo en Pantalla (36 pt): Cuatro filas completas encendidas
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The two 13-year-old students happily observing four full rows of ten cells lighting up in bright energy glow on the panel. Cheerful collaborative atmosphere, negative space on the right. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Cuatro filas de diez celdas sombreadas en azul brillante
+6. Notas al Orador (Locución Google Vids): "A media mañana, el sensor indicó que cuatro filas completas estaban produciendo energía. Cuatro filas de diez celdas equivalen a cuarenta celdas activas de las cien."
+
+--- DIAPOSITIVA 6: Conexión Matemática: 40 por ciento (9 seg aprox) ---
+1. Propósito Didáctico: Conexión Matemática: 40 por ciento
+2. Título en Pantalla (64 pt): 40% DE ENERGÍA CAPTURADA
+3. Subtítulo en Pantalla (36 pt): Razón matemática: 40 sobre 100
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old girl with braided hair writing on her digital notebook while the boy in a teal jacket gives a thumbs up. Clean bright modern anime, high clarity, negative space for mathematical formulas. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Fórmula limpia: 40 de 100 = 40%
+6. Notas al Orador (Locución Google Vids): "Sofía anotó en su registro: cuarenta de cada cien partes significa que el panel está funcionando al cuarenta por ciento de su capacidad total."
+
+--- DIAPOSITIVA 7: Síntesis del Gancho: Pase a la formalización (8 seg aprox) ---
+1. Propósito Didáctico: Síntesis del Gancho: Pase a la formalización
+2. Título en Pantalla (64 pt): EL LENGUAJE DEL PORCENTAJE
+3. Subtítulo en Pantalla (36 pt): De la cuadrícula al cálculo matemático
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Both 13-year-old student explorers smiling confidently toward the camera, inviting the viewer into the mathematics laboratory. Sunlit morning, bright clean colors, spacious negative space. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Íconos limpios conectando cuadrícula, fracción y porcentaje
+6. Notas al Orador (Locución Google Vids): "Comprender la cuadrícula de cien es la llave maestra para entender todos los porcentajes. Ahora entremos al aula para aprender sus reglas y propiedades."
+
+================================================================================
+MODULO 2: PROMPT VIDEO EXPLICATIVO CONCEPTUAL (PASO 4 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Definición Formal de Porcentaje y Representación Pictórica
+• Idea Clave: ""
+• DILE ANTES DEL VIDEO: "Ahora formalizaremos la regla matemática en el cuaderno y revisaremos la explicación conceptual paso a paso."
+• INSTRUCCION: "Observa la explicación con atención y escribe la regla de oro en tu cuaderno de matemática."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Declaración del Objetivo: Concepto de Porcentaje (12 seg aprox) ---
+1. Propósito Didáctico: Declaración del Objetivo: Concepto de Porcentaje
+2. Título en Pantalla (64 pt): OBJETIVO DE LA LECCIÓN
+3. Subtítulo en Pantalla (36 pt): Comprender el porcentaje y su modelo pictórico en cuadrícula de 100
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old students, a girl with braided hair and a boy in a teal jacket, in a clean modern classroom looking at a digital blackboard. Generous negative space on the left. High contrast, bright flat colors. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Cuadro limpio con el Objetivo de Aprendizaje MINEDUC OA 4
+6. Notas al Orador (Locución Google Vids): "Hoy aprenderemos a representar y comprender el porcentaje como una razón de consecuente cien, utilizando cuadrículas de diez por diez para visualizar cada cantidad."
+
+--- DIAPOSITIVA 2: Definición: La razón respecto a 100 (13 seg aprox) ---
+1. Propósito Didáctico: Definición: La razón respecto a 100
+2. Título en Pantalla (64 pt): ¿QUÉ ES UN PORCENTAJE?
+3. Subtítulo en Pantalla (36 pt): Una razón matemática que compara con 100 partes
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old girl explaining with an open notebook, pointing to an illustrated ratio concept. Clean lines, bright cheerful classroom background, negative space on the right. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama conceptual: a% = a / 100
+6. Notas al Orador (Locución Google Vids): "Un porcentaje es una comparación por cociente donde el total siempre se divide en cien partes iguales. La expresión a por ciento representa a partes de cada cien."
+
+--- DIAPOSITIVA 3: La Unidad Básica: El 1 por ciento (13 seg aprox) ---
+1. Propósito Didáctico: La Unidad Básica: El 1 por ciento
+2. Título en Pantalla (64 pt): CADA CUADRITO ES UN 1%
+3. Subtítulo en Pantalla (36 pt): 1 de 100 partes = 1/100 = 1%
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. A close-up view of the 13-year-old boy in teal jacket highlighting a single colored square within a large 100-cell grid. Sharp focus, clean modern anime, negative space. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Un solo cuadrito coloreado en amarillo con la etiqueta 1% destacada
+6. Notas al Orador (Locución Google Vids): "En una cuadrícula de diez por diez, cada cuadrito representa exactamente una centésima del total. Por eso decimos que cada cuadrito sombreado equivale al uno por ciento."
+
+--- DIAPOSITIVA 4: Lectura y Escritura de Porcentajes (13 seg aprox) ---
+1. Propósito Didáctico: Lectura y Escritura de Porcentajes
+2. Título en Pantalla (64 pt): LECTURA Y ESCRITURA
+3. Subtítulo en Pantalla (36 pt): Símbolo % y su lectura verbal precisa
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Both 13-year-old students reviewing examples on an interactive tablet display. Clear lighting, neat classroom setup, negative space for mathematical notation. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Ejemplos claros: 15% se lee quince por ciento, 50% se lee cincuenta por ciento
+6. Notas al Orador (Locución Google Vids): "Escribimos el número seguido del símbolo de porcentaje. Se lee siempre diciendo el número y luego la frase por ciento, recordando que representa partes de cien."
+
+--- DIAPOSITIVA 5: La Totalidad: El 100 por ciento (13 seg aprox) ---
+1. Propósito Didáctico: La Totalidad: El 100 por ciento
+2. Título en Pantalla (64 pt): EL TOTAL ES EL 100%
+3. Subtítulo en Pantalla (36 pt): 100 cuadritos de 100 = Todo el conjunto
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The full 100-cell grid glowing completely in warm golden light while the two 13-year-old students smile in comprehension. Clean vibrant aesthetic, negative space on left. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Cuadrícula 10x10 totalmente iluminada con la igualdad 100/100 = 1 = 100%
+6. Notas al Orador (Locución Google Vids): "Cuando los cien cuadritos están coloreados, tenemos la totalidad del conjunto. Cien sobre cien es igual a un entero completo, lo que corresponde al cien por ciento."
+
+--- DIAPOSITIVA 6: Caso Isomórfico: Cuarenta cuadritos sombreados (13 seg aprox) ---
+1. Propósito Didáctico: Caso Isomórfico: Cuarenta cuadritos sombreados
+2. Título en Pantalla (64 pt): EJEMPLO MODELADO
+3. Subtítulo en Pantalla (36 pt): En una cuadrícula de 100 cuadritos, se colorean exactamente 40
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old girl and boy pointing together at a grid of 100 cells where exactly 40 blue cells are neatly colored. Perfect visual clarity, spacious negative space for practice step. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Cuadrícula 10x10 con exactamente 40 celdas coloreadas en azul: 40/100 = 40%
+6. Notas al Orador (Locución Google Vids): "Analicemos este caso: en una cuadrícula de cien cuadritos, coloreamos exactamente cuarenta. Al contar cuarenta de cien, el porcentaje representado es cuarenta por ciento."
+
+--- DIAPOSITIVA 7: Regla de Oro y Pase a la Práctica (13 seg aprox) ---
+1. Propósito Didáctico: Regla de Oro y Pase a la Práctica
+2. Título en Pantalla (64 pt): REGLA DE ORO DEL PORCENTAJE
+3. Subtítulo en Pantalla (36 pt): El porcentaje es una fracción de denominador 100
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The two 13-year-old student explorers holding their notebooks, ready to begin interactive exercises. Modern anime style, bright friendly expressions, negative space. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Regla de oro: Cantidad sobre 100 = Porcentaje directo. ¡A practicar!
+6. Notas al Orador (Locución Google Vids): "Regla de oro: cualquier cantidad comparada directamente con cien se convierte de inmediato en su porcentaje correspondiente. Ahora continuemos con la práctica interactiva."
+
+================================================================================
+MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
+================================================================================
+
+[PREPARACION DEL ADULTO / MENTOR]
+• Objetivo del Adulto: Acompañar al estudiante a comprender el porcentaje como una razón referida a 100 unidades, representándolo pictóricamente en cuadrículas de 10x10 y reconociendo que cada cuadrito corresponde al 1%.
+• Ruta de Hoy: Descubrir qué significa el símbolo %, representar cantidades sobre una cuadrícula de 100 partes y relacionar el porcentaje con situaciones cotidianas.
+• Recordatorios Pedagogicos del Mentor:
+  1. El concepto clave de hoy es que todo porcentaje compara una cantidad con un total de 100 partes iguales.
+  2. Lee en voz alta únicamente los textos con la etiqueta DILE o PREGÚNTALE.
+  3. Ten a mano el cuaderno de matemática para que el estudiante dibuje su propia cuadrícula de 10x10.
+  4. Valora la explicación conceptual del estudiante antes de exigir exactitud terminológica.
+• Clima Emocional y Acogida: "Los porcentajes están en todas partes: tiendas, baterías de celular y noticias. Conectar este contenido con su vida cotidiana despertará su interés natural."
+
+--------------------------------------------------------------------------------
+[PASO 1: INICIO (4 SUB-ETAPAS CANONICAS)]
+--------------------------------------------------------------------------------
+Sub-etapa 1: Nuestra Ruta de la Asignatura
+• DILE AL ESTUDIANTE (Apertura de la ruta): "Hoy comenzamos una nueva unidad en Matemática de 7° Básico: los porcentajes. Veremos cómo una idea muy simple nos permite comparar cantidades de forma clara y universal."
+• 4 Bloques Tematicos de la Asignatura:
+  Bloque 01: Números (Concepto de Porcentaje)
+  Bloque 02: Representación (Cuadrícula 10x10)
+  Bloque 03: Práctica (Modelamiento en Cuaderno)
+  Bloque 04: Evaluación (Miniquiz y Síntesis)
+
+Sub-etapa 2: La Clase de Hoy
+• DILE AL ESTUDIANTE (Foco didactico): "Comprender qué es un porcentaje, cómo se representa en una cuadrícula de 100 partes iguales y por qué el total siempre equivale al 100%."
+• 3 Tarjetas de Foco de la Pantalla del Estudiante:
+  Tarjeta 1: Razón respecto a 100 -> Por cada cien unidades de un total
+  Tarjeta 2: Símbolo % -> Lectura y significado matemático
+  Tarjeta 3: Modelo pictórico -> Cuadrícula de cien cuadritos iguales
+
+Sub-etapa 3: Situacion Inicial de Exploracion (Detonante)
+• DILE AL ESTUDIANTE (Situacion detonante): "Observa la batería de un teléfono inteligente cuando marca 40%. Si la carga completa de la batería representa 100 unidades de energía, ¿cuántas unidades de energía tiene disponibles el teléfono en ese momento?"
+• RESPUESTA ESPERADA: Tiene 40 unidades de energía de un total de 100.
+• PISTA SOCRATICA (SOLO PARA TI): "Recuerda que el símbolo % significa literalmente "por cada 100"."
+• CLIMA EMOCIONAL: "Felicita su razonamiento deductivo: relacionar el símbolo con la cantidad de partes es el primer paso para dominar este tema."
+• Pautas de Evaluacion Formativa del Mentor:
+  - [Acierto] Respondió 40 unidades de 100 -> Feedback: "¡Exacto! 40% significa exactamente 40 partes de cada 100."
+  - [Requiere Apoyo] Respondió solo 40 o no mencionó el 100 -> Feedback: "Son 40 partes, pero es fundamental recordar que se comparan con un total de 100 partes iguales."
+  - [Requiere Apoyo] No supo responder -> Feedback: "No te preocupes. Vamos a ver cómo una cuadrícula de 100 cuadritos lo deja completamente claro."
+
+Sub-etapa 4: Comprendamos la Respuesta (Punto de Referencia)
+• DILE AL ESTUDIANTE (Formalizacion de referencia): "En una cuadrícula de 100 cuadritos iguales, cada cuadrito individual representa el 1%. Si pintamos 40 cuadritos, ¿qué porcentaje de la cuadrícula hemos pintado?"
+• PREGUNTALE AL ESTUDIANTE: "¿Qué porcentaje representan 40 cuadritos de un total de 100?"
+• RESPUESTA ESPERADA: Representan el 40%.
+• PISTA SOCRATICA: "Si 1 cuadrito es 1%, 40 cuadritos son 40 veces 1%."
+• FEEDBACK SI ACIERTA: "¡Muy bien! 40 cuadritos pintados representan exactamente el 40% del total."
+• FEEDBACK SI NECESITA APOYO: "Cuenta los cuadritos: cada uno vale 1%. Por lo tanto, 40 cuadritos juntos equivalen al 40%."
+
+--------------------------------------------------------------------------------
+[PASO 3: RECORRIDO - CONVERSACION GUIADA Y PREGUNTAS SOCRATICAS]
+--------------------------------------------------------------------------------
+Item 1 (En el video, el panel solar de la escuela estaba dividido en una cuadrícula de 100 celdas iguales.):
+• Pregunta Socratica: "¿Cuántas celdas individuales forman una sola fila si hay 10 filas en total?"
+• Respuesta Esperada: 10 celdas en cada fila.
+• Feedback de Exito: "¡Excelente observación! Diez filas de diez celdas completan exactamente las 100 partes."
+• Pista de Apoyo Socratica: "Divide 100 entre 10: cada fila contiene exactamente 10 celdas."
+• Revelacion: "100 dividido por 10 filas nos da 10 celdas por fila."
+
+Item 2 (Si se iluminaron 4 filas completas de 10 celdas cada una.):
+• Pregunta Socratica: "¿Cuántas celdas activas hay en total y qué porcentaje del panel representan?"
+• Respuesta Esperada: Hay 40 celdas activas y representan el 40%.
+• Feedback de Exito: "¡Exacto! 4 filas de 10 son 40 celdas, lo que equivale al 40% del total."
+• Pista de Apoyo Socratica: "Multiplica 4 filas por 10 celdas: obtienes 40 celdas sobre un total de 100."
+• Revelacion: "4 x 10 = 40 celdas. Al ser de 100 totales, corresponde al 40%."
+
+--------------------------------------------------------------------------------
+[PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
+--------------------------------------------------------------------------------
+Comprobacion 1 (En el video explicativo analizamos una cuadrícula de 100 cuadritos con 40 celdas coloreadas.):
+• Pregunta: "¿Por qué 40 cuadritos de 100 representan directamente el 40%?"
+• Respuesta Esperada: Porque cada cuadrito es 1%, por lo que 40 cuadritos equivalen a 40%.
+• Pista de Apoyo: "Recuerda que el porcentaje expresa cuántas partes se toman de cada 100."
+• Revelacion: "Representa el 40% porque son 40 partes de un total de 100."
+
+--------------------------------------------------------------------------------
+[PASO 5: PRACTICA EN EL CUADERNO FISICO]
+--------------------------------------------------------------------------------
+Ejercicio 1 (En una cuadrícula de 100 cuadritos iguales, se colorean exactamente 40 cuadritos de color azul.):
+• Enunciado de Aplicacion: "¿Qué porcentaje de la cuadrícula está coloreado de azul?"
+• Respuesta Esperada: 40%
+• Feedback de Exito: "¡Correcto! 40 partes de 100 corresponden exactamente al 40%."
+• Pista de Apoyo Socratica: "Cuenta las partes pintadas sobre el total de 100 cuadritos."
+
+Ejercicio 2 (En un mosaico de 100 baldosas cuadradas en el patio de la escuela, 65 baldosas son de color verde y el resto son blancas.):
+• Enunciado de Aplicacion: "¿Qué porcentaje del mosaico está formado por baldosas verdes?"
+• Respuesta Esperada: 65%
+• Feedback de Exito: "¡Muy bien! 65 de 100 baldosas representan el 65%."
+• Pista de Apoyo Socratica: "El total de baldosas es 100. Compara las 65 verdes con ese total."
+
+Ejercicio 3 (Un estanque de agua para riego tiene una capacidad máxima de 100 litros y actualmente contiene 82 litros.):
+• Enunciado de Aplicacion: "¿Qué porcentaje de la capacidad total del estanque está lleno?"
+• Respuesta Esperada: 82%
+• Feedback de Exito: "¡Exacto! 82 litros de 100 litros equivalen al 82% de capacidad."
+• Pista de Apoyo Socratica: "Compara los 82 litros que tiene con los 100 litros que puede almacenar en total."
+
+--------------------------------------------------------------------------------
+[PASO 6: RESUMEN Y ESTRATEGIA DE PENSAMIENTO]
+--------------------------------------------------------------------------------
+• Idea Clave: ""
+• DILE AL ESTUDIANTE: "Sigue estos 3 pasos para identificar o representar cualquier porcentaje en una cuadrícula:"
+• Pasos de la Estrategia:
+  Paso 1: Comprobar el total -> Verifica que la cuadrícula o conjunto esté dividido exactamente en 100 partes iguales.
+  Paso 2: Contar las partes destacadas -> Cuenta cuántos cuadritos están coloreados o cuántos elementos cumplen la condición.
+  Paso 3: Escribir el porcentaje -> Escribe el número de partes contadas agregando el símbolo %.
+• 3 Ideas Clave Estructuradas de Sintesis:
+  - Porcentaje: Razón matemática que compara una cantidad con un total de 100 partes iguales.
+  - Modelo Pictórico: En una cuadrícula de 10x10 (100 cuadritos), cada cuadrito representa el 1% del total.
+  - Totalidad (100%): Tener el 100% significa tener las 100 partes completas, es decir, todo el conjunto.
+
+--------------------------------------------------------------------------------
+[PASO 7: MINIQUIZ FORMATIVO Y FASE REVISAR]
+--------------------------------------------------------------------------------
+Pregunta 1: En una biblioteca escolar con 100 libros de lectura, 25 libros corresponden a novelas gráficas. ¿Qué porcentaje del total representan las novelas gráficas?
+  A) 2,5% 
+  B) 25% [CORRECTA]
+  C) 50% 
+  D) 75% 
+• Explicacion Formativa del Error: "25 de cada 100 unidades equivale exactamente a la razón 25/100, lo que corresponde al 25%."
+
+Pregunta 2: Si en una cuadrícula de 100 cuadritos se colorean 7 cuadritos, ¿cuál es el porcentaje sombreado?
+  A) 70% 
+  B) 0,7% 
+  C) 7% [CORRECTA]
+  D) 14% 
+• Explicacion Formativa del Error: "Cada cuadrito es 1%. Si hay 7 cuadritos sombreados, representan 7/100 = 7% (no confundir con 70%, que requeriría 70 cuadritos)."
+
+Pregunta 3: ¿Qué representa el 100% en una cuadrícula de 100 partes iguales?
+  A) La mitad de la cuadrícula (50 cuadritos) 
+  B) 10 cuadritos de una fila 
+  C) La totalidad de la cuadrícula (100 cuadritos) [CORRECTA]
+  D) 1.000 cuadritos 
+• Explicacion Formativa del Error: "El 100% representa el total completo: 100 de 100 partes posibles, lo que equivale a la unidad entera."
+
+--------------------------------------------------------------------------------
+[PASO 7B: MODULO DE RECUPERACION FORMATIVA]
+--------------------------------------------------------------------------------
+Refuerzo 1 (Refuerzo de Porcentaje en Cuadrícula):
+• Explicacion Previa: "Un porcentaje compara siempre una cantidad con 100. Si tienes una cuadrícula de 100 partes y pintas 15, tienes 15 de 100, es decir, 15%."
+• Pregunta: "Si una cuadrícula tiene 100 cuadritos y pintas 30, ¿qué porcentaje está pintado?"
+• Opciones: 3% | 30% | 300% | 0,3%
+• Respuesta Correcta: 30%
+• Refuerzo si falla: "Recuerda: la cantidad pintada sobre 100 da el porcentaje directo: 30 de 100 = 30%."
+
+--------------------------------------------------------------------------------
+[PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
+--------------------------------------------------------------------------------
+• Pregunta de Sintesis: "¿Por qué decimos que un porcentaje es una razón respecto a 100?"
+• Reflexion Metacognitiva: "¿Cómo te ayudó imaginar la cuadrícula de 100 cuadritos para entender qué significa el 40%?"
+• Celebracion del Logro: "¡Felicitaciones! Has dominado el concepto fundamental de los porcentajes."
+• Felicitacion Final: "¡Gran trabajo hoy! Has comprendido el significado profundo del porcentaje y cómo visualizarlo con total claridad."
+• Vista Previa Proxima Clase: "En la próxima clase aprenderemos cómo transformar cualquier porcentaje en una fracción irreducible y en un número decimal."
+
+
+================================================================================
+STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+================================================================================
+
+FICHA CURRICULAR:
+• Asignatura: Matemática
+• Nivel / Curso: 7° Básico
+• Objetivo de Aprendizaje: OA 4 - Porcentajes
+• Clase: 2 de 6 ("Porcentajes como Fracción Irreductible y Número Decimal")
+• Duracion Estimada: 30 Minutos
+
+DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
+1. Proporcion Widescreen 16:9 estricto (1920x1080).
+2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
+3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
+4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
+5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
+   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
+   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
+7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
+8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
+
+================================================================================
+MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: La Receta del Pan Integral
+• DILE ANTES DEL VIDEO: "Acompañemos a Sofía y Lucas en el taller de gastronomía escolar, donde deben preparar una receta que mezcla porcentajes con medidas en tazas y balanzas decimales."
+• INSTRUCCION AL ESTUDIANTE: "Observa el video y fíjate en cómo los dos estudiantes logran medir la cantidad exacta traduciendo el porcentaje a fracción y a decimal."
+• DILE DESPUES DEL VIDEO: "¿Viste qué fácil es entender el porcentaje cuando lo vemos como una taza dividida en partes iguales? Ahora veamos el método formal."
+• Puntos de foco visual al observar:
+  1. Observar la balanza y tazas medidoras en la cocina escolar.
+  2. Identificar la equivalencia entre 25%, 1/4 y 0,25.
+  3. Comprender cómo mover la coma decimal al dividir por 100.
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Desafío Inicial: La receta en porcentajes (8 seg aprox) ---
+1. Propósito Didáctico: Desafío Inicial: La receta en porcentajes
+2. Título en Pantalla (64 pt): TRES CARAS DE UN MISMO NÚMERO
+3. Subtítulo en Pantalla (36 pt): Porcentaje, fracción y número decimal
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, in a bright home economics kitchen classroom looking at a recipe chalkboard. Clean kitchen counters, glass measuring cups, bright daylight, generous negative space on the left. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama triangular conectando: Porcentaje, Fracción y Decimal
+6. Notas al Orador (Locución Google Vids): "En el taller de cocina, la receta indicaba agregar el veinticinco por ciento de un litro de agua. Sofía y Lucas tenían una taza medidora graduada en fracciones y una balanza digital."
+
+--- DIAPOSITIVA 2: Observación: La taza medidora (8 seg aprox) ---
+1. Propósito Didáctico: Observación: La taza medidora
+2. Título en Pantalla (64 pt): ¿CÓMO MEDIR UN 25%?
+3. Subtítulo en Pantalla (36 pt): De la expresión porcentual a la medida real
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old girl holding a clear measuring cup showing liquid at the one-fourth mark, while the boy checks a digital scale. Modern anime style, bright flat saturated colors, negative space on top. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Taza medidora dividida en cuatro cuartos con 1/4 resaltado
+6. Notas al Orador (Locución Google Vids): "Para medir el veinticinco por ciento, Lucas recordó que veinticinco partes de cien equivalen a una de cuatro partes iguales, es decir, un cuarto de taza."
+
+--- DIAPOSITIVA 3: Pregunta clave: La balanza decimal (9 seg aprox) ---
+1. Propósito Didáctico: Pregunta clave: La balanza decimal
+2. Título en Pantalla (64 pt): ¿Y EN NÚMEROS DECIMALES?
+3. Subtítulo en Pantalla (36 pt): ¿Qué número muestra la pantalla electrónica?
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old boy in a teal jacket pointing to the digital scale display showing decimal numbers. Inquisitive expression, clean scientific aesthetic, negative space. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pantalla digital mostrando la conversión: 25 / 100 = 0,25
+6. Notas al Orador (Locución Google Vids): "Al colocar el agua en la balanza digital, la pantalla no mostró fracciones ni porcentajes, sino un número decimal. ¿Cuál fue el valor exacto que marcó la balanza?"
+
+--- DIAPOSITIVA 4: Visualización: La división por 100 (9 seg aprox) ---
+1. Propósito Didáctico: Visualización: La división por 100
+2. Título en Pantalla (64 pt): DIVIDIR ENTRE CIEN
+3. Subtítulo en Pantalla (36 pt): La coma se desplaza dos lugares a la izquierda
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Both 13-year-old students calculating on a digital whiteboard, showing the decimal point shifting two places to the left. Sharp focus, clean graphics, negative space on the right. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Visualización animada del desplazamiento decimal: 25,0 -> 0,25
+6. Notas al Orador (Locución Google Vids): "Como el porcentaje significa dividir entre cien, el número decimal se obtiene corriendo la coma dos lugares hacia la izquierda. Veinticinco dividido por cien es cero coma veinticinco."
+
+--- DIAPOSITIVA 5: Equivalencia confirmada: 25% = 1/4 = 0,25 (9 seg aprox) ---
+1. Propósito Didáctico: Equivalencia confirmada: 25% = 1/4 = 0,25
+2. Título en Pantalla (64 pt): LA TRIPLE IDENTIDAD
+3. Subtítulo en Pantalla (36 pt): Exactamente la misma cantidad matemática
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The two 13-year-old students smiling in agreement as the ingredients measure perfectly. Bright kitchen atmosphere, high contrast, clean vector overlays. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Fórmula central destacada: 25% = 25/100 = 1/4 = 0,25
+6. Notas al Orador (Locución Google Vids): "Veinticinco por ciento, un cuarto y cero coma veinticinco son tres formas diferentes de nombrar exactamente la misma cantidad de agua."
+
+--- DIAPOSITIVA 6: Desafío modelado: ¿Qué pasa con el 20%? (9 seg aprox) ---
+1. Propósito Didáctico: Desafío modelado: ¿Qué pasa con el 20%?
+2. Título en Pantalla (64 pt): CONVIRTIENDO EL 20%
+3. Subtítulo en Pantalla (36 pt): Simplificación y decimal correspondiente
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old girl writing a new problem in her notebook: 20%. The boy watches attentively. Clean lines, negative space for calculations. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Ecuación matemática en construcción: 20% = 20/100 = ?/5 = 0,?
+6. Notas al Orador (Locución Google Vids): "Lucas planteó un nuevo desafío: ¿cómo expresaríamos el veinte por ciento como fracción irreducible y como decimal? Vamos a resolverlo juntos."
+
+--- DIAPOSITIVA 7: Síntesis del Gancho: Pase a la formalización (8 seg aprox) ---
+1. Propósito Didáctico: Síntesis del Gancho: Pase a la formalización
+2. Título en Pantalla (64 pt): DOMINANDO LAS CONVERSIONES
+3. Subtítulo en Pantalla (36 pt): El método formal paso a paso
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Both 13-year-old students waving cheerfully in front of a neat blackboard filled with fraction and percent relations. Bright welcoming mood, spacious negative space. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Iconos conectando la flecha bidireccional entre %, Fracción y Decimal
+6. Notas al Orador (Locución Google Vids): "Aprender a cambiar de porcentaje a fracción y a decimal te dará una ventaja enorme para resolver problemas rápidamente. Entremos a formalizar el método."
+
+================================================================================
+MODULO 2: PROMPT VIDEO EXPLICATIVO CONCEPTUAL (PASO 4 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Procedimiento de Conversión entre Porcentajes, Fracciones y Decimales
+• Idea Clave: ""
+• DILE ANTES DEL VIDEO: "Revisemos ahora la regla formal en el cuaderno para convertir cualquier porcentaje sin errores."
+• INSTRUCCION: "Abre tu cuaderno de matemática y escribe la tabla de conversiones paso a paso."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Declaración del Objetivo: Conversión de Registros (12 seg aprox) ---
+1. Propósito Didáctico: Declaración del Objetivo: Conversión de Registros
+2. Título en Pantalla (64 pt): OBJETIVO DE LA LECCIÓN
+3. Subtítulo en Pantalla (36 pt): Convertir porcentajes a fracciones irreductibles y números decimales
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old students, a girl with braided hair and a boy in a teal jacket, standing beside a digital display in a bright classroom. Spacious negative space on left. Clean vector style. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Título de la lección y Objetivo de Aprendizaje oficial
+6. Notas al Orador (Locución Google Vids): "Hoy aprenderemos a transformar cualquier porcentaje en su fracción irreducible y en su número decimal correspondiente mediante procedimientos matemáticos directos."
+
+--- DIAPOSITIVA 2: Paso 1: De Porcentaje a Fracción (13 seg aprox) ---
+1. Propósito Didáctico: Paso 1: De Porcentaje a Fracción
+2. Título en Pantalla (64 pt): ESCRIBIR SOBRE 100
+3. Subtítulo en Pantalla (36 pt): El porcentaje se convierte en el numerador y 100 en el denominador
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old girl writing a fraction on a chalkboard. Clean neat numbers, bright daytime light, negative space on the right. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Fórmula: p% = p / 100
+6. Notas al Orador (Locución Google Vids): "El primer paso consiste en escribir el número del porcentaje en el numerador y colocar siempre el número cien en el denominador."
+
+--- DIAPOSITIVA 3: Paso 2: Simplificación Irreductible (13 seg aprox) ---
+1. Propósito Didáctico: Paso 2: Simplificación Irreductible
+2. Título en Pantalla (64 pt): SIMPLIFICAR AL MÁXIMO
+3. Subtítulo en Pantalla (36 pt): Dividir numerador y denominador por el máximo común divisor
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old boy demonstrating step-by-step division by common factors on a notebook. High contrast, clear diagrams, negative space. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Ejemplo paso a paso: 50/100 -> dividir por 50 -> 1/2
+6. Notas al Orador (Locución Google Vids): "El segundo paso es simplificar la fracción dividiendo el numerador y el denominador por su máximo común divisor hasta obtener una fracción irreducible."
+
+--- DIAPOSITIVA 4: Paso 3: De Porcentaje a Número Decimal (13 seg aprox) ---
+1. Propósito Didáctico: Paso 3: De Porcentaje a Número Decimal
+2. Título en Pantalla (64 pt): DIVISIÓN DECIMAL POR 100
+3. Subtítulo en Pantalla (36 pt): Mover la coma dos posiciones hacia la izquierda
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old students pointing at a number line with decimal steps. Bright clean graphics, negative space for decimal notation. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Regla: p% = p / 100 = 0,p (ej. 75% = 0,75; 8% = 0,08)
+6. Notas al Orador (Locución Google Vids): "Para obtener el número decimal, dividimos el porcentaje entre cien desplazando la coma dos lugares hacia la izquierda, agregando un cero si es necesario."
+
+--- DIAPOSITIVA 5: Tabla Canónica de Equivalencias (13 seg aprox) ---
+1. Propósito Didáctico: Tabla Canónica de Equivalencias
+2. Título en Pantalla (64 pt): EQUIVALENCIAS FUNDAMENTALES
+3. Subtítulo en Pantalla (36 pt): Valores de uso frecuente que debes memorizar
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. A tidy comparative chart floating in the classroom with clean columns for %, Fracción y Decimal. Ample negative space. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Tabla: 50% = 1/2 = 0,5 | 25% = 1/4 = 0,25 | 75% = 3/4 = 0,75 | 10% = 1/10 = 0,1
+6. Notas al Orador (Locución Google Vids): "Hay equivalencias que usarás toda tu vida: cincuenta por ciento es un medio y cero coma cinco; veinticinco por ciento es un cuarto y cero coma veinticinco."
+
+--- DIAPOSITIVA 6: Caso Isomórfico: Conversión del 20% (13 seg aprox) ---
+1. Propósito Didáctico: Caso Isomórfico: Conversión del 20%
+2. Título en Pantalla (64 pt): EJEMPLO MODELADO: 20%
+3. Subtítulo en Pantalla (36 pt): Fracción irreductible y decimal del 20%
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The two 13-year-old students solving the 20% case together on an interactive tablet. Clear, high contrast, negative space on the right. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Resolución: 20% = 20/100 = 1/5 (dividiendo por 20) | 20 : 100 = 0,2
+6. Notas al Orador (Locución Google Vids): "Resolvamos juntos el caso del veinte por ciento: como fracción es veinte sobre cien, que simplificado entre veinte nos da un quinto. Como decimal es cero coma dos."
+
+--- DIAPOSITIVA 7: Regla de Oro y Pase a la Práctica (13 seg aprox) ---
+1. Propósito Didáctico: Regla de Oro y Pase a la Práctica
+2. Título en Pantalla (64 pt): REGLA DE ORO DE LA CONVERSIÓN
+3. Subtítulo en Pantalla (36 pt): Todo porcentaje tiene su gemelo fraccionario y decimal
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old girl and boy smiling confidently, holding their pencils ready for practice. Bright classroom, negative space. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Regla de oro: p% = p/100 = p:100. ¡Ahora ponlo en práctica!
+6. Notas al Orador (Locución Google Vids): "Regla de oro: el porcentaje, la fracción irreducible y el decimal representan la misma cantidad en lenguajes distintos. Ahora practiquemos en la plataforma."
+
+================================================================================
+MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
+================================================================================
+
+[PREPARACION DEL ADULTO / MENTOR]
+• Objetivo del Adulto: Acompañar al estudiante a establecer equivalencias entre un porcentaje, su fracción irreductible y su expresión decimal correspondiente, transitando con soltura entre los tres registros de representación.
+• Ruta de Hoy: Convertir porcentajes a fracciones de denominador 100, simplificarlas al máximo y transformar la razón en un número decimal dividiendo por 100.
+• Recordatorios Pedagogicos del Mentor:
+  1. Un mismo valor matemático puede expresarse como porcentaje, fracción o decimal.
+  2. Lee en voz alta únicamente los textos con la etiqueta DILE o PREGÚNTALE.
+  3. Recuérdale al estudiante que simplificar una fracción significa dividir numerador y denominador por el mismo número.
+  4. Valora el procedimiento de simplificación en el cuaderno físico.
+• Clima Emocional y Acogida: "Ver que el 50% es exactamente lo mismo que un medio (1/2) o 0,5 genera una sensación de orden y control mental muy gratificante en los estudiantes."
+
+--------------------------------------------------------------------------------
+[PASO 1: INICIO (4 SUB-ETAPAS CANONICAS)]
+--------------------------------------------------------------------------------
+Sub-etapa 1: Nuestra Ruta de la Asignatura
+• DILE AL ESTUDIANTE (Apertura de la ruta): "En la clase anterior descubrimos que el porcentaje es una razón respecto a 100. Hoy aprenderemos a traducirlo a sus dos formas hermanas: las fracciones y los números decimales."
+• 4 Bloques Tematicos de la Asignatura:
+  Bloque 01: Números (La Triple Equivalencia)
+  Bloque 02: Fracción (Simplificación Irreductible)
+  Bloque 03: Decimal (División por 100)
+  Bloque 04: Evaluación (Miniquiz y Síntesis)
+
+Sub-etapa 2: La Clase de Hoy
+• DILE AL ESTUDIANTE (Foco didactico): "Aprender a transformar cualquier porcentaje en una fracción irreductible y en un número decimal, reconociendo que representan exactamente la misma cantidad."
+• 3 Tarjetas de Foco de la Pantalla del Estudiante:
+  Tarjeta 1: Porcentaje a fracción -> Denominador 100 y simplificación
+  Tarjeta 2: Porcentaje a decimal -> Desplazamiento de dos lugares a la izquierda
+  Tarjeta 3: Fracción irreductible -> Máxima simplificación por el MCD
+
+Sub-etapa 3: Situacion Inicial de Exploracion (Detonante)
+• DILE AL ESTUDIANTE (Situacion detonante): "En una receta de cocina, se indica que debemos agregar el 50% de una taza de leche. Si tuviéramos que medir esa cantidad usando fracciones, ¿qué fracción de taza de leche debemos agregar?"
+• RESPUESTA ESPERADA: Media taza (1/2 taza).
+• PISTA SOCRATICA (SOLO PARA TI): "Piensa en qué parte de 100 es 50: es exactamente la mitad."
+• CLIMA EMOCIONAL: "Conectar la cocina con las matemáticas ayuda a consolidar el sentido práctico de las fracciones y porcentajes."
+• Pautas de Evaluacion Formativa del Mentor:
+  - [Acierto] Respondió 1/2 taza o la mitad -> Feedback: "¡Perfecto! 50% equivale a 50/100, que simplificado es exactamente 1/2."
+  - [Requiere Apoyo] Respondió 50/100 taza -> Feedback: "Es correcto en valor, pero esa fracción se puede simplificar dividiendo por 50 para obtener 1/2."
+  - [Requiere Apoyo] No supo responder -> Feedback: "No te preocupes. Vamos a ver cómo simplificar fracciones paso a paso."
+
+Sub-etapa 4: Comprendamos la Respuesta (Punto de Referencia)
+• DILE AL ESTUDIANTE (Formalizacion de referencia): "Si tenemos el 25%, podemos escribirlo como 25/100. Si dividimos el numerador y el denominador por 25, ¿cuál es la fracción irreductible resultante?"
+• PREGUNTALE AL ESTUDIANTE: "¿Cuál es la fracción irreductible equivalente a 25%?"
+• RESPUESTA ESPERADA: 1/4
+• PISTA SOCRATICA: "25 dividido en 25 es 1, y 100 dividido en 25 es 4."
+• FEEDBACK SI ACIERTA: "¡Excelente! 25% equivale exactamente a la fracción 1/4 y al número decimal 0,25."
+• FEEDBACK SI NECESITA APOYO: "Divide 25 : 25 = 1 en el numerador, y 100 : 25 = 4 en el denominador. La fracción es 1/4."
+
+--------------------------------------------------------------------------------
+[PASO 3: RECORRIDO - CONVERSACION GUIADA Y PREGUNTAS SOCRATICAS]
+--------------------------------------------------------------------------------
+Item 1 (En la receta del video, los estudiantes comprobaron que 25% equivale a 25/100.):
+• Pregunta Socratica: "Si dividimos el numerador y el denominador por 25, ¿qué fracción obtenemos?"
+• Respuesta Esperada: 1/4
+• Feedback de Exito: "¡Excelente! 25 dividido por 25 es 1, y 100 dividido por 25 es 4. La fracción es 1/4."
+• Pista de Apoyo Socratica: "Divide 25 entre 25 para el numerador y 100 entre 25 para el denominador."
+• Revelacion: "25/100 dividido por 25 arriba y abajo da 1/4."
+
+Item 2 (Al dividir 25 entre 100 para escribirlo como número decimal.):
+• Pregunta Socratica: "¿Qué número decimal representa el 25%?"
+• Respuesta Esperada: 0,25
+• Feedback de Exito: "¡Exacto! La coma decimal se corre dos lugares hacia la izquierda, resultando 0,25."
+• Pista de Apoyo Socratica: "Divide 25 por 100: el resultado tiene dos cifras decimales."
+• Revelacion: "25 : 100 = 0,25."
+
+--------------------------------------------------------------------------------
+[PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
+--------------------------------------------------------------------------------
+Comprobacion 1 (En el video modelamos la conversión del 20%.):
+• Pregunta: "¿Por qué 20/100 se simplifica a 1/5 y no a 2/10 como resultado final?"
+• Respuesta Esperada: Porque 2/10 aún se puede simplificar dividiendo por 2, hasta llegar a la fracción irreducible 1/5.
+• Pista de Apoyo: "Recuerda que una fracción es irreductible cuando el numerador y el denominador ya no se pueden dividir por un factor común mayor que 1."
+• Revelacion: "Porque 1/5 es la fracción irreductible máxima."
+
+--------------------------------------------------------------------------------
+[PASO 5: PRACTICA EN EL CUADERNO FISICO]
+--------------------------------------------------------------------------------
+Ejercicio 1 (Queremos transformar el 20% en su expresión fraccionaria irreductible y en su número decimal correspondiente.):
+• Enunciado de Aplicacion: "¿Cuál es la fracción irreductible y el número decimal equivalente al 20%?"
+• Respuesta Esperada: Fracción: 1/5 y Decimal: 0,2
+• Feedback de Exito: "¡Excelente! 20/100 simplificado por 20 es 1/5, y 20 : 100 es 0,2."
+• Pista de Apoyo Socratica: "Escribe 20/100 y divide ambos términos por 20. Luego divide 20 por 100 para el decimal."
+
+Ejercicio 2 (Un estudiante desea expresar el 75% como fracción irreductible y como decimal.):
+• Enunciado de Aplicacion: "¿Cuáles son los valores correspondientes al 75%?"
+• Respuesta Esperada: Fracción: 3/4 y Decimal: 0,75
+• Feedback de Exito: "¡Muy bien! 75/100 simplificado por 25 es 3/4, y 75 : 100 es 0,75."
+• Pista de Apoyo Socratica: "Divide 75 y 100 por 25 para la fracción. Para el decimal, corre la coma dos lugares a la izquierda."
+
+Ejercicio 3 (Se tiene el número decimal 0,4 y se requiere transformarlo a porcentaje y fracción irreductible.):
+• Enunciado de Aplicacion: "¿A qué porcentaje y a qué fracción irreductible equivale el decimal 0,4?"
+• Respuesta Esperada: Porcentaje: 40% y Fracción: 2/5
+• Feedback de Exito: "¡Perfecto! 0,4 equivale al 40% y a 40/100, que simplificado por 20 es 2/5."
+• Pista de Apoyo Socratica: "Multiplica 0,4 por 100 para obtener el porcentaje. Luego simplifica 40/100."
+
+--------------------------------------------------------------------------------
+[PASO 6: RESUMEN Y ESTRATEGIA DE PENSAMIENTO]
+--------------------------------------------------------------------------------
+• Idea Clave: ""
+• DILE AL ESTUDIANTE: "Aplica estos pasos sistemáticos para no dudar jamás al convertir:"
+• Pasos de la Estrategia:
+  Paso 1: Formar la razón sobre 100 -> Elimina el símbolo % y escribe la cantidad como numerador con denominador 100.
+  Paso 2: Simplificar o dividir -> Para fracción: simplifica por 2, 5, 10, 20 o 25. Para decimal: corre la coma dos lugares a la izquierda.
+• 3 Ideas Clave Estructuradas de Sintesis:
+  - Porcentaje a Fracción: Se escribe sobre 100 y se simplifica dividiendo por factores comunes hasta hacerla irreducible.
+  - Porcentaje a Decimal: Se divide por 100, desplazando la coma decimal exactamente dos posiciones a la izquierda.
+  - Equivalencia: El porcentaje, la fracción y el decimal representan la misma parte del entero.
+
+--------------------------------------------------------------------------------
+[PASO 7: MINIQUIZ FORMATIVO Y FASE REVISAR]
+--------------------------------------------------------------------------------
+Pregunta 1: ¿Cuál es la fracción irreductible equivalente al 60%?
+  A) 6/10 
+  B) 3/5 [CORRECTA]
+  C) 12/20 
+  D) 60/100 
+• Explicacion Formativa del Error: "60% = 60/100. Al dividir numerador y denominador por su máximo común divisor (20), obtenemos 3/5. Las opciones 6/10 y 12/20 son equivalentes pero no son irreductibles."
+
+Pregunta 2: ¿Cuál es el número decimal equivalente a 8%?
+  A) 0,8 
+  B) 0,08 [CORRECTA]
+  C) 0,008 
+  D) 8,0 
+• Explicacion Formativa del Error: "Para convertir un porcentaje a decimal se divide entre 100: 8 : 100 = 0,08 (la coma se corre dos lugares; no confundir con 0,8 que representa 80%)."
+
+Pregunta 3: Si una fracción irreducible es 1/4, ¿qué porcentaje representa?
+  A) 20% 
+  B) 25% [CORRECTA]
+  C) 40% 
+  D) 50% 
+• Explicacion Formativa del Error: "1/4 amplificado por 25 da 25/100, lo que corresponde al 25% (o dividiendo 1 : 4 = 0,25 = 25%)."
+
+--------------------------------------------------------------------------------
+[PASO 7B: MODULO DE RECUPERACION FORMATIVA]
+--------------------------------------------------------------------------------
+Refuerzo 1 (Refuerzo de Conversión de Porcentajes):
+• Explicacion Previa: "Para pasar de porcentaje a fracción, escribe el número sobre 100 y simplifica. Para decimal, divide entre 100 corriendo la coma dos lugares."
+• Pregunta: "¿Cuál es la forma decimal del 15%?"
+• Opciones: 1,5 | 0,15 | 0,015 | 15,0
+• Respuesta Correcta: 0,15
+• Refuerzo si falla: "Recuerda: 15 : 100 = 0,15. La coma avanza dos posiciones a la izquierda."
+
+--------------------------------------------------------------------------------
+[PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
+--------------------------------------------------------------------------------
+• Pregunta de Sintesis: "¿Cómo explicarías con tus palabras por qué 50% es lo mismo que 0,5 y 1/2?"
+• Reflexion Metacognitiva: "¿Qué método te resulta más cómodo para convertir: simplificar la fracción o calcular el decimal?"
+• Celebracion del Logro: "¡Felicitaciones! Has dominado las conversiones fundamentales de los porcentajes."
+• Felicitacion Final: "¡Excelente avance! Ya eres capaz de traducir porcentajes a fracciones y decimales con total soltura."
+• Vista Previa Proxima Clase: "En la siguiente clase aprenderemos atajos matemáticos para calcular porcentajes mentalmente en segundos."
+
+
+================================================================================
+STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+================================================================================
+
+FICHA CURRICULAR:
+• Asignatura: Matemática
+• Nivel / Curso: 7° Básico
+• Objetivo de Aprendizaje: OA 4 - Porcentajes
+• Clase: 3 de 6 ("Cálculo Mental y Estrategias Rápidas de Porcentajes Notables")
+• Duracion Estimada: 30 Minutos
+
+DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
+1. Proporcion Widescreen 16:9 estricto (1920x1080).
+2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
+3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
+4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
+5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
+   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
+   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
+7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
+8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
+
+================================================================================
+MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: La Feria del Libro Escolar
+• DILE ANTES DEL VIDEO: "Acompañemos a Sofía y Lucas a la feria de libros de la escuela, donde deben calcular rápidamente los mejores descuentos antes de que se agoten las ofertas."
+• INSTRUCCION AL ESTUDIANTE: "Observa el video y descubre cómo Lucas calcula los descuentos en segundos usando divisiones mentales sin usar calculadora."
+• DILE DESPUES DEL VIDEO: "¿Viste qué rápido calculó Lucas el 25% dividiendo por cuatro? Ahora formalizaremos los cuatro atajos maestros."
+• Puntos de foco visual al observar:
+  1. Observar los carteles de descuento en los puestos de la feria.
+  2. Identificar por qué el 50% es dividir por 2 y el 25% es dividir por 4.
+  3. Descubrir cómo calcular el 20% dividiendo por 5 y el 10% dividiendo por 10.
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Desafío Inicial: Ofertas en la feria escolar (8 seg aprox) ---
+1. Propósito Didáctico: Desafío Inicial: Ofertas en la feria escolar
+2. Título en Pantalla (64 pt): CALCULAR MENTALMENTE
+3. Subtítulo en Pantalla (36 pt): El poder de los porcentajes notables
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old students, a girl with braided hair and a boy in a teal jacket, walking through a lively school book fair with colorful discount banners. High contrast, bright sunny afternoon, spacious negative space on the left. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Banners limpios con descuentos destacados: 50%, 25%, 20% y 10%
+6. Notas al Orador (Locución Google Vids): "Sofía y Lucas visitaron la feria del libro en el patio de su escuela. Cada puesto tenía carteles con descuentos llamativos: cincuenta, veinticinco, veinte y diez por ciento."
+
+--- DIAPOSITIVA 2: Observación: El atajo del 50% (8 seg aprox) ---
+1. Propósito Didáctico: Observación: El atajo del 50%
+2. Título en Pantalla (64 pt): 50% ES DIVIDIR POR 2
+3. Subtítulo en Pantalla (36 pt): La mitad exacta del valor original
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old girl pointing at an adventure novel marked at 8000 pesos with a 50 percent off sticker. Clean anime aesthetic, cheerful expression, negative space on top. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Operación mental destacada: $8.000 : 2 = $4.000
+6. Notas al Orador (Locución Google Vids): "Un libro de aventuras de ocho mil pesos tenía cincuenta por ciento de descuento. Sofía sonrió de inmediato: calcular el cincuenta por ciento es simplemente dividir entre dos."
+
+--- DIAPOSITIVA 3: El reto del 25%: La cuarta parte (9 seg aprox) ---
+1. Propósito Didáctico: El reto del 25%: La cuarta parte
+2. Título en Pantalla (64 pt): 25% ES DIVIDIR POR 4
+3. Subtítulo en Pantalla (36 pt): Un cuarto del total o la mitad de la mitad
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old boy in a teal jacket thinking with fingers on his chin looking at a 25 percent banner. Thought bubble with clean division diagram, negative space. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama de cuatro partes iguales: 100% / 4 = 25%
+6. Notas al Orador (Locución Google Vids): "En la mesa de cómics, el descuento era del veinticinco por ciento. Lucas recordó que veinticinco es la cuarta parte de cien, por lo que basta dividir el precio entre cuatro."
+
+--- DIAPOSITIVA 4: Los atajos del 10% y del 20% (9 seg aprox) ---
+1. Propósito Didáctico: Los atajos del 10% y del 20%
+2. Título en Pantalla (64 pt): 10% ES DIVIDIR POR 10 | 20% ES DIVIDIR POR 5
+3. Subtítulo en Pantalla (36 pt): La décima parte y la quinta parte
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Both 13-year-old students examining a science encyclopedia marked at 10 percent off. Clear lighting, neat book stalls, negative space for calculations. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de atajos rápidos: 10% -> :10 | 20% -> :5
+6. Notas al Orador (Locución Google Vids): "Para el diez por ciento, solo quitamos un cero o corremos la coma un lugar hacia la izquierda. Y para el veinte por ciento, dividimos directamente entre cinco."
+
+--- DIAPOSITIVA 5: La estrategia combinada: Mitad de la mitad (9 seg aprox) ---
+1. Propósito Didáctico: La estrategia combinada: Mitad de la mitad
+2. Título en Pantalla (64 pt): LA MITAD DE LA MITAD
+3. Subtítulo en Pantalla (36 pt): Un truco infalible para el 25%
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old girl showing the boy a mental trick with two quick hand gestures. Modern anime style, bright colors, generous negative space. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Paso 1: Mitad de $80 -> $40. Paso 2: Mitad de $40 -> $20
+6. Notas al Orador (Locución Google Vids): "Sofía le enseñó otro truco fantástico a Lucas: si dividir entre cuatro te cuesta, saca la mitad una vez y luego vuelve a sacar la mitad del resultado."
+
+--- DIAPOSITIVA 6: Desafío modelado: El 20% de 150 (9 seg aprox) ---
+1. Propósito Didáctico: Desafío modelado: El 20% de 150
+2. Título en Pantalla (64 pt): CALCULAR EL 20% DE 150
+3. Subtítulo en Pantalla (36 pt): División directa por 5 en segundos
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Both 13-year-old students calculating in their heads while looking at a sign indicating 150 pages with 20% already read. High contrast, clean vector overlays. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Cálculo limpio: 150 : 5 = 30 páginas
+6. Notas al Orador (Locución Google Vids): "Resolvamos este desafío: un libro tiene ciento cincuenta páginas y leíste el veinte por ciento. Como veinte por ciento es dividir entre cinco, ciento cincuenta entre cinco son treinta páginas."
+
+--- DIAPOSITIVA 7: Síntesis del Gancho: Pase a la formalización (8 seg aprox) ---
+1. Propósito Didáctico: Síntesis del Gancho: Pase a la formalización
+2. Título en Pantalla (64 pt): LAS 4 DIVISIONES MAESTRAS
+3. Subtítulo en Pantalla (36 pt): Guárdalas en tu memoria para siempre
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Both 13-year-old students standing proudly with their purchased books, ready to enter the classroom. Bright daylight, spacious negative space. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Resumen visual de los 4 atajos: :2, :4, :5, :10
+6. Notas al Orador (Locución Google Vids): "Con estas cuatro divisiones maestras, podrás calcular los porcentajes más importantes de la vida diaria en segundos. Ahora formalicemos cada atajo en el cuaderno."
+
+================================================================================
+MODULO 2: PROMPT VIDEO EXPLICATIVO CONCEPTUAL (PASO 4 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Formalización de los Atajos de Cálculo Mental de Porcentajes
+• Idea Clave: ""
+• DILE ANTES DEL VIDEO: "Anotemos en el cuaderno de matemática el cuadro maestro de los cuatro atajos de cálculo mental."
+• INSTRUCCION: "Copia en tu cuaderno la tabla con los 4 porcentajes notables y su división correspondiente."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Declaración del Objetivo: Cálculo Mental de Porcentajes (12 seg aprox) ---
+1. Propósito Didáctico: Declaración del Objetivo: Cálculo Mental de Porcentajes
+2. Título en Pantalla (64 pt): OBJETIVO DE LA LECCIÓN
+3. Subtítulo en Pantalla (36 pt): Calcular mentalmente porcentajes notables mediante divisiones exactas
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old students, a girl with braided hair and a boy in a teal jacket, in front of a modern smartboard displaying mental math icons. Clean classroom setting, ample negative space on the left. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Título y estándar curricular del cálculo mental con porcentajes
+6. Notas al Orador (Locución Google Vids): "Hoy aprenderemos a calcular mentalmente porcentajes de uso frecuente asociándolos de forma inmediata con las divisiones por dos, cuatro, cinco y diez."
+
+--- DIAPOSITIVA 2: Atajo 1: El 50% es la mitad (:2) (13 seg aprox) ---
+1. Propósito Didáctico: Atajo 1: El 50% es la mitad (:2)
+2. Título en Pantalla (64 pt): CALCULAR EL 50% -> DIVIDIR POR 2
+3. Subtítulo en Pantalla (36 pt): 50% = 1/2 del total | Mitad exacta
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old girl pointing to a circle divided in two halves. Bright contrast, clean lines, negative space on the right. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Regla: 50% de N = N : 2 (ej. 50% de 600 = 300)
+6. Notas al Orador (Locución Google Vids): "Cincuenta por ciento equivale a la fracción un medio. Para calcular el cincuenta por ciento de cualquier número, simplemente dividimos esa cantidad entre dos."
+
+--- DIAPOSITIVA 3: Atajo 2: El 25% es la cuarta parte (:4) (13 seg aprox) ---
+1. Propósito Didáctico: Atajo 2: El 25% es la cuarta parte (:4)
+2. Título en Pantalla (64 pt): CALCULAR EL 25% -> DIVIDIR POR 4
+3. Subtítulo en Pantalla (36 pt): 25% = 1/4 del total | Cuarta parte (mitad de la mitad)
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old boy demonstrating a square divided into four quarters. High clarity, negative space for formulas. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Regla: 25% de N = N : 4 (ej. 25% de 80 = 20)
+6. Notas al Orador (Locución Google Vids): "Veinticinco por ciento equivale a un cuarto. Para calcular el veinticinco por ciento, dividimos el número entre cuatro, o sacamos la mitad y volvemos a sacar la mitad."
+
+--- DIAPOSITIVA 4: Atajo 3: El 20% es la quinta parte (:5) (13 seg aprox) ---
+1. Propósito Didáctico: Atajo 3: El 20% es la quinta parte (:5)
+2. Título en Pantalla (64 pt): CALCULAR EL 20% -> DIVIDIR POR 5
+3. Subtítulo en Pantalla (36 pt): 20% = 1/5 del total | Quinta parte
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The two students reviewing a bar divided into five equal 20% segments. Clean graphics, negative space. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Regla: 20% de N = N : 5 (ej. 20% de 100 = 20)
+6. Notas al Orador (Locución Google Vids): "Veinte por ciento equivale a la fracción un quinto. Para calcular el veinte por ciento de cualquier cantidad, dividimos ese valor directamente entre cinco."
+
+--- DIAPOSITIVA 5: Atajo 4: El 10% es la décima parte (:10) (13 seg aprox) ---
+1. Propósito Didáctico: Atajo 4: El 10% es la décima parte (:10)
+2. Título en Pantalla (64 pt): CALCULAR EL 10% -> DIVIDIR POR 10
+3. Subtítulo en Pantalla (36 pt): 10% = 1/10 | Quitar un cero o desplazar la coma un lugar
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Close up of calculation steps showing a decimal point moving one spot to the left. Sharp focus, negative space. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Regla: 10% de N = N : 10 (ej. 10% de 340 = 34 | 10% de 85 = 8,5)
+6. Notas al Orador (Locución Google Vids): "Diez por ciento equivale a un décimo. Basta con dividir entre diez, lo que en números enteros con ceros significa simplemente eliminar el último cero."
+
+--- DIAPOSITIVA 6: Caso Isomórfico: El 20% de 150 (13 seg aprox) ---
+1. Propósito Didáctico: Caso Isomórfico: El 20% de 150
+2. Título en Pantalla (64 pt): EJEMPLO MODELADO: 20% DE 150
+3. Subtítulo en Pantalla (36 pt): Aplicando el atajo de la división por 5
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Both 13-year-old students solving the problem 20% of 150 on the tablet together. Clean and bright, spacious negative space on the right. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Resolución: 20% de 150 = 150 : 5 = 30
+6. Notas al Orador (Locución Google Vids): "Apliquemos el atajo al caso modelado: queremos calcular el veinte por ciento de ciento cincuenta. Como veinte por ciento es dividir entre cinco, calculamos ciento cincuenta entre cinco, que da exactamente treinta."
+
+--- DIAPOSITIVA 7: Regla de Oro y Pase a la Práctica (13 seg aprox) ---
+1. Propósito Didáctico: Regla de Oro y Pase a la Práctica
+2. Título en Pantalla (64 pt): REGLA DE ORO DEL CÁLCULO MENTAL
+3. Subtítulo en Pantalla (36 pt): Asocia el porcentaje con su división: 50%(:2), 25%(:4), 20%(:5), 10%(:10)
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The two 13-year-old student explorers smiling with thumbs up, ready to begin interactive practice. Bright anime aesthetic, negative space. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Cuadro resumen final con los 4 atajos maestros. ¡A practicar!
+6. Notas al Orador (Locución Google Vids): "Regla de oro: cada vez que veas cincuenta, veinticinco, veinte o diez por ciento, sustitúyelo mentalmente por su división correspondiente. Ahora es momento de practicar en la pantalla."
+
+================================================================================
+MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
+================================================================================
+
+[PREPARACION DEL ADULTO / MENTOR]
+• Objetivo del Adulto: Acompañar al estudiante a calcular mentalmente porcentajes de uso frecuente (50%, 25%, 20%, 10%) asociándolos a divisiones directas por 2, 4, 5 y 10, desarrollando agilidad y confianza en el cálculo numérico.
+• Ruta de Hoy: Descubrir las cuatro divisiones maestras para resolver porcentajes notables mentalmente sin calculadora y sin lápiz.
+• Recordatorios Pedagogicos del Mentor:
+  1. El cálculo mental fortalece el sentido numérico y la estimación en la vida diaria.
+  2. Lee en voz alta únicamente los textos con la etiqueta DILE o PREGÚNTALE.
+  3. Permite que el estudiante verbalice el paso intermedio: "para el 25% divido por 4".
+  4. Valora la rapidez y la estrategia utilizada por sobre el cálculo mecánico en papel.
+• Clima Emocional y Acogida: "Saber calcular descuentos mentalmente en una tienda hace que los estudiantes se sientan autónomos, inteligentes y capaces de tomar decisiones."
+
+--------------------------------------------------------------------------------
+[PASO 1: INICIO (4 SUB-ETAPAS CANONICAS)]
+--------------------------------------------------------------------------------
+Sub-etapa 1: Nuestra Ruta de la Asignatura
+• DILE AL ESTUDIANTE (Apertura de la ruta): "Hoy aprenderemos uno de los secretos más útiles de la matemática: cómo calcular porcentajes en tu cabeza en cuestión de segundos mediante atajos de división."
+• 4 Bloques Tematicos de la Asignatura:
+  Bloque 01: Números (Atajos de Cálculo Mental)
+  Bloque 02: Divisiones Clave (:2, :4, :5 y :10)
+  Bloque 03: Práctica (Agilidad sin Calculadora)
+  Bloque 04: Evaluación (Miniquiz y Síntesis)
+
+Sub-etapa 2: La Clase de Hoy
+• DILE AL ESTUDIANTE (Foco didactico): "Dominar las cuatro divisiones directas para calcular mentalmente el 50%, 25%, 20% y 10% de cualquier cantidad."
+• 3 Tarjetas de Foco de la Pantalla del Estudiante:
+  Tarjeta 1: 50% como mitad (:2) -> Dividir exactamente entre 2
+  Tarjeta 2: 25% como cuarta parte (:4) -> Dividir entre 4 o calcular la mitad de la mitad
+  Tarjeta 3: 20% y 10% (:5 y :10) -> Dividir entre 5 o correr la coma decimal
+
+Sub-etapa 3: Situacion Inicial de Exploracion (Detonante)
+• DILE AL ESTUDIANTE (Situacion detonante): "En una librería escolar, un juego de lápices cuesta $8.000 y tiene un letrero que dice "50% de descuento". ¿Cuánto dinero te descuentan sin necesidad de usar papel ni lápiz?"
+• RESPUESTA ESPERADA: $4.000
+• PISTA SOCRATICA (SOLO PARA TI): "Recuerda que el 50% es exactamente la mitad de una cantidad."
+• CLIMA EMOCIONAL: "Celebra su rapidez: identificar la mitad es la base de todo el cálculo mental con porcentajes."
+• Pautas de Evaluacion Formativa del Mentor:
+  - [Acierto] Respondió $4.000 -> Feedback: "¡Exacto! El 50% de $8.000 es la mitad, es decir, $4.000."
+  - [Requiere Apoyo] Intentó multiplicar en papel o dudó -> Feedback: "Para el 50% solo necesitas dividir el valor entre 2: $8.000 : 2 = $4.000."
+  - [Requiere Apoyo] No supo responder -> Feedback: "No te preocupes. Vamos a ver los 4 atajos maestros que hacen esto súper sencillo."
+
+Sub-etapa 4: Comprendamos la Respuesta (Punto de Referencia)
+• DILE AL ESTUDIANTE (Formalizacion de referencia): "Si para el 50% dividimos por 2, ¿por cuánto crees que debemos dividir para calcular el 25%?"
+• PREGUNTALE AL ESTUDIANTE: "¿Por qué número se divide una cantidad para calcular su 25%?"
+• RESPUESTA ESPERADA: Por 4.
+• PISTA SOCRATICA: "25% equivale a 1/4. Entonces corresponde a la cuarta parte."
+• FEEDBACK SI ACIERTA: "¡Muy bien! Para calcular el 25% se divide directamente por 4 (o se saca la mitad dos veces)."
+• FEEDBACK SI NECESITA APOYO: "Como 25% = 1/4, calcular el 25% de un número es exactamente igual a dividir ese número por 4."
+
+--------------------------------------------------------------------------------
+[PASO 3: RECORRIDO - CONVERSACION GUIADA Y PREGUNTAS SOCRATICAS]
+--------------------------------------------------------------------------------
+Item 1 (En la feria del libro del video, los estudiantes calcularon el 25% dividiendo por 4.):
+• Pregunta Socratica: "¿Por qué calcular el 25% de un número equivale a dividirlo por 4?"
+• Respuesta Esperada: Porque 25% equivale a la fracción 1/4 (la cuarta parte de 100).
+• Feedback de Exito: "¡Exacto! 100 dividido entre 25 es 4, por lo que 25% es la cuarta parte de cualquier total."
+• Pista de Apoyo Socratica: "Recuerda que 25/100 simplificado por 25 es exactamente 1/4."
+• Revelacion: "25% = 25/100 = 1/4. Tomar un cuarto de una cantidad es dividirla entre 4."
+
+Item 2 (Para calcular el 20% de una cantidad se utiliza la división entre 5.):
+• Pregunta Socratica: "¿Cuánto es el 20% de 150?"
+• Respuesta Esperada: 30
+• Feedback de Exito: "¡Excelente! 150 dividido entre 5 es exactamente 30."
+• Pista de Apoyo Socratica: "Divide 150 entre 5: 15 decenas divididas en 5 grupos son 3 decenas, es decir, 30."
+• Revelacion: "150 : 5 = 30."
+
+--------------------------------------------------------------------------------
+[PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
+--------------------------------------------------------------------------------
+Comprobacion 1 (En el video explicativo calculamos mentalmente el 20% de 150.):
+• Pregunta: "¿Qué división directa se realizó y cuál fue el resultado obtenido?"
+• Respuesta Esperada: Se dividió 150 entre 5, obteniendo 30.
+• Pista de Apoyo: "Recuerda cuál de las cuatro divisiones maestras corresponde al 20%."
+• Revelacion: "Se dividió 150 : 5 = 30."
+
+--------------------------------------------------------------------------------
+[PASO 5: PRACTICA EN EL CUADERNO FISICO]
+--------------------------------------------------------------------------------
+Ejercicio 1 (Se requiere calcular mentalmente el 20% de 150 utilizando la división directa por 5.):
+• Enunciado de Aplicacion: "¿Cuál es el 20% de 150?"
+• Respuesta Esperada: 30
+• Feedback de Exito: "¡Correcto! 150 dividido entre 5 es 30."
+• Pista de Apoyo Socratica: "Aplica el atajo del 20%: divide 150 entre 5."
+
+Ejercicio 2 (Un estudiante desea calcular mentalmente el 25% de 80 páginas de un folleto.):
+• Enunciado de Aplicacion: "¿Cuál es el 25% de 80?"
+• Respuesta Esperada: 20
+• Feedback de Exito: "¡Muy bien! 80 dividido entre 4 es 20 (o la mitad de 80 es 40, y la mitad de 40 es 20)."
+• Pista de Apoyo Socratica: "Aplica el atajo del 25%: divide 80 entre 4, o saca la mitad dos veces."
+
+Ejercicio 3 (En una biblioteca hay 340 libros y se desea apartar el 10% para renovación de portadas.):
+• Enunciado de Aplicacion: "¿Cuántos libros corresponden al 10% de 340?"
+• Respuesta Esperada: 34
+• Feedback de Exito: "¡Exacto! Para calcular el 10% de 340 dividimos entre 10, lo que da 34."
+• Pista de Apoyo Socratica: "Aplica el atajo del 10%: elimina el cero final de 340 dividiendo entre 10."
+
+--------------------------------------------------------------------------------
+[PASO 6: RESUMEN Y ESTRATEGIA DE PENSAMIENTO]
+--------------------------------------------------------------------------------
+• Idea Clave: ""
+• DILE AL ESTUDIANTE: "Cuando veas un porcentaje notable, identifica de inmediato su número divisor:"
+• Pasos de la Estrategia:
+  Paso 1: Identificar el porcentaje -> Observa si es 50%, 25%, 20% o 10%.
+  Paso 2: Asignar el divisor -> Asocia: 50% -> :2 | 25% -> :4 | 20% -> :5 | 10% -> :10.
+  Paso 3: Dividir mentalmente -> Ejecuta la división mental y enuncia el resultado con seguridad.
+• 3 Ideas Clave Estructuradas de Sintesis:
+  - Atajo del 50%: Dividir directamente entre 2 (la mitad).
+  - Atajo del 25%: Dividir directamente entre 4 (la mitad de la mitad).
+  - Atajos del 20% y 10%: Para el 20% se divide entre 5; para el 10% se divide entre 10.
+
+--------------------------------------------------------------------------------
+[PASO 7: MINIQUIZ FORMATIVO Y FASE REVISAR]
+--------------------------------------------------------------------------------
+Pregunta 1: Un estudiante desea calcular mentalmente el 25% de 240 páginas de un libro. ¿Qué operación directa debe realizar y cuál es el resultado?
+  A) Multiplicar 240 por 4, obteniendo 960 páginas 
+  B) Dividir 240 por 2, obteniendo 120 páginas 
+  C) Dividir 240 por 4, obteniendo 60 páginas [CORRECTA]
+  D) Restar 25 a 240, obteniendo 215 páginas 
+• Explicacion Formativa del Error: "Como 25% = 1/4, se divide 240 : 4 = 60 páginas (o sacando la mitad de 240 que es 120, y la mitad de 120 que es 60). Las demás alternativas aplican operaciones incorrectas."
+
+Pregunta 2: ¿Cuál es el 10% de 450?
+  A) 4,5 
+  B) 45 [CORRECTA]
+  C) 90 
+  D) 450 
+• Explicacion Formativa del Error: "Para calcular el 10% se divide entre 10: 450 : 10 = 45 (se suprime un cero)."
+
+Pregunta 3: Para calcular mentalmente el 50% de 1.800 metros en una pista de atletismo, ¿qué cálculo se realiza?
+  A) 1.800 : 5 = 360 metros 
+  B) 1.800 : 2 = 900 metros [CORRECTA]
+  C) 1.800 : 4 = 450 metros 
+  D) 1.800 x 0,5 = 9.000 metros 
+• Explicacion Formativa del Error: "El 50% es la mitad exacta de cualquier cantidad, por lo que se divide entre 2: 1.800 : 2 = 900 metros."
+
+--------------------------------------------------------------------------------
+[PASO 7B: MODULO DE RECUPERACION FORMATIVA]
+--------------------------------------------------------------------------------
+Refuerzo 1 (Refuerzo de Atajos de Cálculo Mental):
+• Explicacion Previa: "Recuerda las cuatro divisiones maestras: 50% divide entre 2; 25% divide entre 4; 20% divide entre 5; 10% divide entre 10."
+• Pregunta: "¿Cuál es el 20% de 50?"
+• Opciones: 5 | 10 | 20 | 25
+• Respuesta Correcta: 10
+• Refuerzo si falla: "Para el 20%, divide el número entre 5: 50 : 5 = 10."
+
+--------------------------------------------------------------------------------
+[PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
+--------------------------------------------------------------------------------
+• Pregunta de Sintesis: "¿Por qué calcular el 25% es lo mismo que sacar la mitad dos veces?"
+• Reflexion Metacognitiva: "¿Cuál de los cuatro atajos te pareció el más fácil de recordar y aplicar?"
+• Celebracion del Logro: "¡Felicitaciones! Has dominado el cálculo mental con porcentajes notables."
+• Felicitacion Final: "¡Increíble rapidez mental! Ahora puedes calcular porcentajes cotidianos en tu cabeza sin usar calculadora."
+• Vista Previa Proxima Clase: "En la siguiente clase aprenderemos cómo calcular cualquier porcentaje, incluso aquellos que no tienen atajos directos, usando decimales y proporciones."
+
+
+================================================================================
+STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+================================================================================
+
+FICHA CURRICULAR:
+• Asignatura: Matemática
+• Nivel / Curso: 7° Básico
+• Objetivo de Aprendizaje: OA 4 - Porcentajes
+• Clase: 4 de 6 ("Estrategias de Cálculo de Cualquier Porcentaje: Decimales y Proporciones")
+• Duracion Estimada: 30 Minutos
+
+DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
+1. Proporcion Widescreen 16:9 estricto (1920x1080).
+2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
+3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
+4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
+5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
+   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
+   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
+7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
+8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
+
+================================================================================
+MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: El Huerto Escolar y el 18%
+• DILE ANTES DEL VIDEO: "Acompañemos a Sofía y Lucas al huerto escolar, donde deben dosificar el agua de riego calculando el 18% de 500 litros."
+• INSTRUCCION AL ESTUDIANTE: "Observa el video y fíjate en cómo ambos estudiantes llegan al mismo número exacto usando dos métodos distintos."
+• DILE DESPUES DEL VIDEO: "¿Viste qué interesante? Lucas usó decimales y Sofía usó fracciones y ambos llegaron exactamente a 90 litros. Formalicemos ambos métodos."
+• Puntos de foco visual al observar:
+  1. Observar los estanques de agua de lluvia recolectada en el huerto escolar.
+  2. Identificar la necesidad de calcular el 18% sin un atajo mental directo.
+  3. Comparar los dos métodos: multiplicación decimal versus regla de proporcionalidad.
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Desafío Inicial: El agua del huerto escolar (8 seg aprox) ---
+1. Propósito Didáctico: Desafío Inicial: El agua del huerto escolar
+2. Título en Pantalla (64 pt): CALCULAR CUALQUIER PORCENTAJE
+3. Subtítulo en Pantalla (36 pt): El desafío del 18% de 500 litros
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old students, a girl with braided hair and a boy in a teal jacket, standing next to a large transparent rainwater tank with 500 liters marked on it in a green school garden. High contrast, sunny day, spacious negative space on the left. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Tanque graduado mostrando 500 L de agua con marcador en 18%
+6. Notas al Orador (Locución Google Vids): "En el huerto escolar, Sofía y Lucas debían separar el dieciocho por ciento de un estanque de quinientos litros de agua de lluvia para regar las hierbas aromáticas."
+
+--- DIAPOSITIVA 2: Observación: Sin atajo mental directo (8 seg aprox) ---
+1. Propósito Didáctico: Observación: Sin atajo mental directo
+2. Título en Pantalla (64 pt): ¿Y SI NO HAY UN ATAJO DIRECTO?
+3. Subtítulo en Pantalla (36 pt): 18% no es 50%, ni 25%, ni 20%, ni 10%
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old boy looking at his notebook noting that 18% does not divide by 2, 4, 5, or 10 directly. Thoughtful expression, garden background, negative space on top. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Signo de interrogación sobre el número 18% junto a los atajos conocidos
+6. Notas al Orador (Locución Google Vids): "Lucas observó que dieciocho no es un porcentaje notable directo. Para resolverlo se necesitan métodos matemáticos universales que funcionen con cualquier número."
+
+--- DIAPOSITIVA 3: Método 1 de Lucas: La multiplicación decimal (9 seg aprox) ---
+1. Propósito Didáctico: Método 1 de Lucas: La multiplicación decimal
+2. Título en Pantalla (64 pt): MÉTODO 1: MULTIPLICAR POR DECIMAL
+3. Subtítulo en Pantalla (36 pt): Convertir 18% a decimal: 0,18
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old boy in a teal jacket calculating on a digital tablet showing 500 multiplied by 0.18. Clear digital tablet glow, modern anime aesthetic, negative space. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Operación en pantalla: 500 x 0,18 = 90 litros
+6. Notas al Orador (Locución Google Vids): "Lucas propuso el primer método: transformar dieciocho por ciento en cero coma dieciocho y multiplicarlo directamente por quinientos. El resultado fue noventa."
+
+--- DIAPOSITIVA 4: Método 2 de Sofía: La regla de proporción (9 seg aprox) ---
+1. Propósito Didáctico: Método 2 de Sofía: La regla de proporción
+2. Título en Pantalla (64 pt): MÉTODO 2: REGLA DE PROPORCIÓN
+3. Subtítulo en Pantalla (36 pt): 18 por 500 dividido entre 100
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old girl with braided hair writing on a notepad showing a clean rule of three proportion. Bright daylight, garden greenery, negative space on the right. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Ecuación de proporción: (18 x 500) / 100 = 9.000 / 100 = 90 litros
+6. Notas al Orador (Locución Google Vids): "Sofía prefirió usar una proporción: dieciocho partes de cada cien multiplicado por quinientos. Al multiplicar dieciocho por quinientos y dividir por cien, también obtuvo noventa."
+
+--- DIAPOSITIVA 5: Comparación: Dos caminos, un mismo destino (9 seg aprox) ---
+1. Propósito Didáctico: Comparación: Dos caminos, un mismo destino
+2. Título en Pantalla (64 pt): ¡AMBOS CAMINOS SON CORRECTOS!
+3. Subtítulo en Pantalla (36 pt): 500 x 0,18 = (18 x 500) / 100 = 90
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Both 13-year-old students comparing their notebooks with big smiles of satisfaction. Two different calculations arriving at 90. Clear lighting, clean graphics, negative space. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Balanza matemática mostrando la equivalencia perfecta de ambos métodos
+6. Notas al Orador (Locución Google Vids): "Ambos caminos llegaron con exactitud a noventa litros. Esto demuestra que en matemática puedes elegir el método que te resulte más cómodo y rápido según los números."
+
+--- DIAPOSITIVA 6: Desafío modelado: El 35% de 40 estudiantes (9 seg aprox) ---
+1. Propósito Didáctico: Desafío modelado: El 35% de 40 estudiantes
+2. Título en Pantalla (64 pt): APLICANDO AL 35% DE 40
+3. Subtítulo en Pantalla (36 pt): ¿Cuántos estudiantes practican básquetbol?
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The two 13-year-old students looking at a school roster showing 40 students with 35% in basketball team. Clean vector overlays, high contrast. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Cálculo limpio: 40 x 0,35 = 14 estudiantes
+6. Notas al Orador (Locución Google Vids): "Practiquemos otro caso: en un curso de cuarenta estudiantes, el treinta y cinco por ciento practica básquetbol. Cuarenta por cero coma treinta y cinco nos da exactamente catorce estudiantes."
+
+--- DIAPOSITIVA 7: Síntesis del Gancho: Pase a la formalización (8 seg aprox) ---
+1. Propósito Didáctico: Síntesis del Gancho: Pase a la formalización
+2. Título en Pantalla (64 pt): LOS DOS ALGORITMOS MAESTROS
+3. Subtítulo en Pantalla (36 pt): Listos para resolver cualquier porcentaje
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Both 13-year-old students standing together with confidence, welcoming the viewer to the classroom board. Bright vibrant colors, generous negative space. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Iconos conectando la fórmula decimal y la fórmula fraccionaria
+6. Notas al Orador (Locución Google Vids): "Ahora que conoces los dos algoritmos universales, estás listo para calcular cualquier porcentaje sin importar su valor. Formalicemos las fórmulas en el cuaderno."
+
+================================================================================
+MODULO 2: PROMPT VIDEO EXPLICATIVO CONCEPTUAL (PASO 4 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Algoritmos Universales de Cálculo: Multiplicación Decimal y Proporción
+• Idea Clave: ""
+• DILE ANTES DEL VIDEO: "Anotemos en el cuaderno de matemática las dos fórmulas maestras para calcular cualquier porcentaje."
+• INSTRUCCION: "Escribe en tu cuaderno ambos métodos con el ejemplo resuelto paso a paso."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Declaración del Objetivo: Métodos Universales de Cálculo (12 seg aprox) ---
+1. Propósito Didáctico: Declaración del Objetivo: Métodos Universales de Cálculo
+2. Título en Pantalla (64 pt): OBJETIVO DE LA LECCIÓN
+3. Subtítulo en Pantalla (36 pt): Calcular cualquier porcentaje mediante multiplicación decimal o proporción directa
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old students, a girl with braided hair and a boy in a teal jacket, looking at a math display showing calculation formulas. Clean modern classroom, ample negative space on the left. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Título de la lección y Objetivo de Aprendizaje oficial
+6. Notas al Orador (Locución Google Vids): "Hoy aprenderemos a calcular cualquier porcentaje aplicando dos estrategias formales universales: la multiplicación por número decimal y la fórmula proporcional."
+
+--- DIAPOSITIVA 2: Método 1: Multiplicación por Número Decimal (13 seg aprox) ---
+1. Propósito Didáctico: Método 1: Multiplicación por Número Decimal
+2. Título en Pantalla (64 pt): MÉTODO 1: MULTIPLICAR POR DECIMAL
+3. Subtítulo en Pantalla (36 pt): Total x (Porcentaje : 100)
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old boy in a teal jacket pointing to the conversion from percent to decimal on a whiteboard. Clean lines, negative space on the right. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Fórmula: Valor = Total x Decimal (ej. 35% de 40 = 40 x 0,35 = 14)
+6. Notas al Orador (Locución Google Vids): "En el primer método convertimos el porcentaje a número decimal dividiéndolo por cien y luego multiplicamos ese decimal por el valor total."
+
+--- DIAPOSITIVA 3: Ejemplo del Método 1: Decimales con Cero (13 seg aprox) ---
+1. Propósito Didáctico: Ejemplo del Método 1: Decimales con Cero
+2. Título en Pantalla (64 pt): CUIDADO CON LOS PORCENTAJES MENORES A 10%
+3. Subtítulo en Pantalla (36 pt): El 8% es 0,08 (no 0,8)
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Close-up of notebook calculations showing 8% = 0.08 and 250 x 0.08 = 20. Clear mathematical notation, negative space. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Ejemplo de advertencia: 8% de 250 = 250 x 0,08 = 20
+6. Notas al Orador (Locución Google Vids): "Atención especial con los porcentajes de un solo dígito: ocho por ciento es cero coma cero ocho. Si multiplicas por cero coma ocho estarías calculando el ochenta por ciento."
+
+--- DIAPOSITIVA 4: Método 2: Regla de Proporcionalidad Directa (13 seg aprox) ---
+1. Propósito Didáctico: Método 2: Regla de Proporcionalidad Directa
+2. Título en Pantalla (64 pt): MÉTODO 2: REGLA DE PROPORCIONALIDAD
+3. Subtítulo en Pantalla (36 pt): Porcentaje / 100 = Parte / Total
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old girl setting up a 2x2 proportion table on a blackboard. Clear handwriting, negative space. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Fórmula cruzada: Parte = (Porcentaje x Total) / 100
+6. Notas al Orador (Locución Google Vids): "En el segundo método planteamos una proporción directa: el porcentaje es a cien como la parte desconocida es al total. Despejando, multiplicamos el porcentaje por el total y dividimos por cien."
+
+--- DIAPOSITIVA 5: Consejo Práctico: Simplificar antes de multiplicar (13 seg aprox) ---
+1. Propósito Didáctico: Consejo Práctico: Simplificar antes de multiplicar
+2. Título en Pantalla (64 pt): SIMPLIFICAR CEROS PRIMERO
+3. Subtítulo en Pantalla (36 pt): (18 x 500) / 100 = 18 x 5 = 90
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Both students simplifying numbers with slashes before multiplying. High clarity, modern anime, negative space. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Técnica de cancelación de ceros: 500 / 100 se convierte directamente en 5
+6. Notas al Orador (Locución Google Vids): "Un consejo de oro para el método proporcional: cuando el total termina en ceros, cancela los ceros con el cien primero. Quinientos entre cien es cinco, y dieciocho por cinco es noventa."
+
+--- DIAPOSITIVA 6: Caso Isomórfico: El 18% de 500 (13 seg aprox) ---
+1. Propósito Didáctico: Caso Isomórfico: El 18% de 500
+2. Título en Pantalla (64 pt): EJEMPLO MODELADO: 18% DE 500
+3. Subtítulo en Pantalla (36 pt): Por decimal: 500 x 0,18 = 90 | Por proporción: (18 x 500) / 100 = 90
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Both 13-year-old students solving 18% of 500 on an interactive tablet display. Clear numbers, spacious negative space on the right. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Resolución completa paso a paso con ambos algoritmos confirmando 90
+6. Notas al Orador (Locución Google Vids): "Resolvamos el caso modelado: dieciocho por ciento de quinientos. Multiplicando quinientos por cero coma dieciocho obtenemos noventa. Por proporción, dieciocho por quinientos entre cien también da noventa."
+
+--- DIAPOSITIVA 7: Regla de Oro y Pase a la Práctica (13 seg aprox) ---
+1. Propósito Didáctico: Regla de Oro y Pase a la Práctica
+2. Título en Pantalla (64 pt): REGLA DE ORO DEL CÁLCULO GENERAL
+3. Subtítulo en Pantalla (36 pt): Elige tu camino favorito: decimal o proporción
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The two 13-year-old student explorers smiling, pointing forward ready for exercises. Modern anime style, bright colors, negative space. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Resumen final de ambas fórmulas. ¡A practicar en la pantalla!
+6. Notas al Orador (Locución Google Vids): "Regla de oro: si tienes calculadora o multiplicas rápido con decimales, usa el método decimal; si los números tienen ceros fáciles de simplificar, usa la proporción. Ahora practiquemos."
+
+================================================================================
+MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
+================================================================================
+
+[PREPARACION DEL ADULTO / MENTOR]
+• Objetivo del Adulto: Acompañar al estudiante a dominar los dos métodos universales para calcular cualquier porcentaje de una cantidad: la multiplicación por su expresión decimal y la regla de proporcionalidad directa, evaluando cuál resulta más conveniente según los números involucrados.
+• Ruta de Hoy: Aprender los dos algoritmos universales para calcular porcentajes que no tienen atajos simples (como el 18% o el 35%), comprobando que ambos métodos entregan exactamente el mismo resultado.
+• Recordatorios Pedagogicos del Mentor:
+  1. Existen dos caminos universales: multiplicar por el decimal o aplicar la regla de proporcionalidad.
+  2. Lee en voz alta únicamente los textos con la etiqueta DILE o PREGÚNTALE.
+  3. Recuérdale al estudiante que en la regla de proporcionalidad se puede simplificar antes de multiplicar para facilitar los cálculos.
+  4. Valora la precisión en la multiplicación con números decimales.
+• Clima Emocional y Acogida: "Tener dos métodos diferentes para llegar a la misma respuesta da una gran sensación de seguridad y permite verificar los resultados de manera autónoma."
+
+--------------------------------------------------------------------------------
+[PASO 1: INICIO (4 SUB-ETAPAS CANONICAS)]
+--------------------------------------------------------------------------------
+Sub-etapa 1: Nuestra Ruta de la Asignatura
+• DILE AL ESTUDIANTE (Apertura de la ruta): "En la clase anterior aprendimos atajos para porcentajes notables. Hoy aprenderemos el método universal para calcular cualquier porcentaje, por difícil que parezca, como el 18% o el 35%."
+• 4 Bloques Tematicos de la Asignatura:
+  Bloque 01: Números (Métodos Universales)
+  Bloque 02: Método 1: Decimal (Multiplicación Directa)
+  Bloque 03: Método 2: Proporción (Regla de Tres Simple)
+  Bloque 04: Evaluación (Miniquiz y Síntesis)
+
+Sub-etapa 2: La Clase de Hoy
+• DILE AL ESTUDIANTE (Foco didactico): "Aprender a calcular cualquier porcentaje utilizando la multiplicación por decimal y la regla de proporcionalidad, eligiendo la estrategia más rápida para cada situación."
+• 3 Tarjetas de Foco de la Pantalla del Estudiante:
+  Tarjeta 1: Estrategia decimal -> Total multiplicado por p centésimos
+  Tarjeta 2: Estrategia proporcional -> p por Total dividido en 100
+  Tarjeta 3: Elección eficiente -> Seleccionar el camino más ágil según los datos
+
+Sub-etapa 3: Situacion Inicial de Exploracion (Detonante)
+• DILE AL ESTUDIANTE (Situacion detonante): "En un huerto escolar se han recolectado 500 litros de agua de lluvia. Para regar las plantas medicinales se debe utilizar exactamente el 18% del agua recolectada. ¿Cómo podríamos calcular cuántos litros de agua corresponden al 18% si no tenemos un atajo mental directo?"
+• RESPUESTA ESPERADA: Multiplicando 500 por 0,18 o multiplicando 18 por 500 y dividiendo entre 100.
+• PISTA SOCRATICA (SOLO PARA TI): "Recuerda que 18% es igual a 0,18 y también a 18/100."
+• CLIMA EMOCIONAL: "Felicita su iniciativa para proponer caminos de solución utilizando lo que ya aprendió en las clases anteriores."
+• Pautas de Evaluacion Formativa del Mentor:
+  - [Acierto] Propuso multiplicar por 0,18 o usar 18/100 -> Feedback: "¡Excelente! Ambos caminos son métodos universales totalmente válidos."
+  - [Requiere Apoyo] Dudó sobre qué operación realizar -> Feedback: "Recuerda que "el 18% de 500" significa matemáticamente multiplicar 500 por 18/100 o por 0,18."
+  - [Requiere Apoyo] No supo responder -> Feedback: "No te preocupes. Vamos a ver los dos métodos paso a paso en el video."
+
+Sub-etapa 4: Comprendamos la Respuesta (Punto de Referencia)
+• DILE AL ESTUDIANTE (Formalizacion de referencia): "Si multiplicamos 500 por 0,18, obtenemos exactamente la misma cantidad que si calculamos (18 x 500) : 100. ¿Cuál es el resultado de ese cálculo?"
+• PREGUNTALE AL ESTUDIANTE: "¿Cuántos litros corresponden al 18% de 500 litros?"
+• RESPUESTA ESPERADA: 90 litros.
+• PISTA SOCRATICA: "500 x 0,18: 500 x 18 = 9.000, y al correr dos ceros queda 90."
+• FEEDBACK SI ACIERTA: "¡Perfecto! El 18% de 500 litros es exactamente 90 litros."
+• FEEDBACK SI NECESITA APOYO: "Calcula: 18 x 5 = 90. Como 500 : 100 = 5, el resultado directo es 18 x 5 = 90 litros."
+
+--------------------------------------------------------------------------------
+[PASO 3: RECORRIDO - CONVERSACION GUIADA Y PREGUNTAS SOCRATICAS]
+--------------------------------------------------------------------------------
+Item 1 (En el video del huerto escolar, Lucas y Sofía calcularon el 18% de 500 litros de agua.):
+• Pregunta Socratica: "¿Qué resultado obtuvieron y por qué ambos métodos dieron exactamente la misma cifra?"
+• Respuesta Esperada: Obtuvieron 90 litros, porque multiplicar por 0,18 es matemáticamente idéntico a multiplicar por 18 y dividir por 100.
+• Feedback de Exito: "¡Excelente! Multiplicar por el decimal y aplicar la proporción son dos expresiones del mismo cálculo numérico."
+• Pista de Apoyo Socratica: "Recuerda: 0,18 es igual a 18/100. Multiplicar por 0,18 es multiplicar por 18 y dividir por 100."
+• Revelacion: "El resultado es 90 litros. 500 x 0,18 = 90 y (18 x 500) : 100 = 90."
+
+Item 2 (Para calcular el 35% de 40 estudiantes.):
+• Pregunta Socratica: "¿Qué operación decimal directa permite resolver el cálculo?"
+• Respuesta Esperada: 40 x 0,35 = 14 estudiantes.
+• Feedback de Exito: "¡Exacto! 40 multiplicado por 0,35 da 14 estudiantes."
+• Pista de Apoyo Socratica: "Transforma 35% a decimal (0,35) y multiplícalo por el total de 40 estudiantes."
+• Revelacion: "40 x 0,35 = 14."
+
+--------------------------------------------------------------------------------
+[PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
+--------------------------------------------------------------------------------
+Comprobacion 1 (En el video modelamos el cálculo del 18% de 500 usando ambos métodos.):
+• Pregunta: "¿Por qué simplificar los ceros en (18 x 500) / 100 hace que el cálculo sea tan rápido?"
+• Respuesta Esperada: Porque 500 dividido por 100 es 5, transformando la operación simplemente en 18 x 5 = 90.
+• Pista de Apoyo: "Divide 500 entre 100 primero: obtienes 5. Luego multiplica 18 por 5."
+• Revelacion: "Porque se simplifica 500/100 a 5, y 18 x 5 = 90."
+
+--------------------------------------------------------------------------------
+[PASO 5: PRACTICA EN EL CUADERNO FISICO]
+--------------------------------------------------------------------------------
+Ejercicio 1 (Se requiere calcular el 18% de 500 utilizando cualquiera de los dos métodos aprendidos.):
+• Enunciado de Aplicacion: "¿Cuál es el 18% de 500?"
+• Respuesta Esperada: 90
+• Feedback de Exito: "¡Correcto! 500 x 0,18 = 90 (o (18 x 500) : 100 = 90)."
+• Pista de Apoyo Socratica: "Multiplica 500 por 0,18 o calcula 18 x 5."
+
+Ejercicio 2 (En un curso de 40 estudiantes, el 35% practica básquetbol en las tardes.):
+• Enunciado de Aplicacion: "¿Cuántos estudiantes practican básquetbol?"
+• Respuesta Esperada: 14
+• Feedback de Exito: "¡Muy bien! 40 x 0,35 = 14 estudiantes (o (35 x 40) : 100 = 1.400 : 100 = 14)."
+• Pista de Apoyo Socratica: "Multiplica 40 por 0,35 o usa la proporción (35 x 40) : 100."
+
+Ejercicio 3 (Una cuota mensual de $25.000 tiene un recargo por servicio del 12%.):
+• Enunciado de Aplicacion: "¿A cuánto dinero asciende el recargo del 12%?"
+• Respuesta Esperada: $3.000
+• Feedback de Exito: "¡Exacto! $25.000 x 0,12 = $3.000 (o 12 x 250 = $3.000)."
+• Pista de Apoyo Socratica: "Multiplica 25.000 por 0,12 o simplifica 25.000 : 100 = 250 y multiplica 12 x 250."
+
+--------------------------------------------------------------------------------
+[PASO 6: RESUMEN Y ESTRATEGIA DE PENSAMIENTO]
+--------------------------------------------------------------------------------
+• Idea Clave: ""
+• DILE AL ESTUDIANTE: "Elige el camino más cómodo observando los ceros del número total:"
+• Pasos de la Estrategia:
+  Paso 1: Si el total termina en ceros -> Usa la proporción: cancela dos ceros del total y multiplica por el porcentaje.
+  Paso 2: Si el total no termina en ceros -> Usa el método decimal: convierte a decimal (ej. 0,18) y multiplica de forma estándar.
+• 3 Ideas Clave Estructuradas de Sintesis:
+  - Método Decimal: Multiplicar el total por el porcentaje dividido en 100: Total x 0,p.
+  - Método Proporcional: Multiplicar el porcentaje por el total y dividir por 100: (p x Total) : 100.
+  - Equivalencia Algorítmica: Ambos métodos producen exactamente el mismo resultado matemático.
+
+--------------------------------------------------------------------------------
+[PASO 7: MINIQUIZ FORMATIVO Y FASE REVISAR]
+--------------------------------------------------------------------------------
+Pregunta 1: En un colegio con 600 estudiantes en total, el 15% asiste al taller de robótica. ¿Cuántos estudiantes asisten al taller?
+  A) 60 estudiantes 
+  B) 90 estudiantes [CORRECTA]
+  C) 120 estudiantes 
+  D) 150 estudiantes 
+• Explicacion Formativa del Error: "Calculando por decimal: 600 x 0,15 = 90 estudiantes (o por proporción: 15 x 6 = 90 estudiantes)."
+
+Pregunta 2: Para calcular el 32% de 250 mediante multiplicación decimal, ¿qué operación exacta se realiza?
+  A) 250 x 3,2 
+  B) 250 x 0,32 [CORRECTA]
+  C) 250 x 32 
+  D) 250 : 0,32 
+• Explicacion Formativa del Error: "El 32% en forma decimal es 32 : 100 = 0,32. Por lo tanto, la operación correcta es 250 x 0,32."
+
+Pregunta 3: ¿Cuál es el 45% de 80?
+  A) 36 [CORRECTA]
+  B) 40 
+  C) 45 
+  D) 50 
+• Explicacion Formativa del Error: "80 x 0,45 = 36 (o (45 x 80) : 100 = 3.600 : 100 = 36)."
+
+--------------------------------------------------------------------------------
+[PASO 7B: MODULO DE RECUPERACION FORMATIVA]
+--------------------------------------------------------------------------------
+Refuerzo 1 (Refuerzo de Multiplicación Decimal de Porcentajes):
+• Explicacion Previa: "Para calcular cualquier porcentaje, convierte el porcentaje a decimal y multiplícalo por el número total."
+• Pregunta: "¿Cuánto es el 12% de 200?"
+• Opciones: 12 | 24 | 36 | 48
+• Respuesta Correcta: 24
+• Refuerzo si falla: "Recuerda: 200 x 0,12 = 24."
+
+--------------------------------------------------------------------------------
+[PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
+--------------------------------------------------------------------------------
+• Pregunta de Sintesis: "¿Por qué multiplicar por 0,18 es lo mismo que multiplicar por 18 y dividir por 100?"
+• Reflexion Metacognitiva: "¿Qué método te pareció más rápido: cancelar ceros en la proporción o multiplicar por decimal?"
+• Celebracion del Logro: "¡Felicitaciones! Has dominado los algoritmos generales de cálculo de porcentajes."
+• Felicitacion Final: "¡Sensacional! Ya tienes el poder de calcular cualquier porcentaje en el mundo real."
+• Vista Previa Proxima Clase: "En la última clase de esta unidad aplicaremos todo lo aprendido a problemas reales de compras, descuentos comerciales y el IVA de las boletas chilenas."
+
+
+================================================================================
+STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+================================================================================
+
+FICHA CURRICULAR:
+• Asignatura: Matemática
+• Nivel / Curso: 7° Básico
+• Objetivo de Aprendizaje: OA 4 - Porcentajes
+• Clase: 5 de 6 ("Resolución de Problemas Cotidianos: Descuentos Comerciales e IVA")
+• Duracion Estimada: 30 Minutos
+
+DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
+1. Proporcion Widescreen 16:9 estricto (1920x1080).
+2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
+3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
+4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
+5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
+   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
+   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
+7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
+8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
+
+================================================================================
+MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: El Desafío de la Feria Escolar
+• DILE ANTES DEL VIDEO: "Acompañemos a Sofía y Lucas en la feria escolar de fin de año, donde deben administrar el puesto de útiles escolares y calcular los precios con descuentos y boletas con IVA."
+• INSTRUCCION AL ESTUDIANTE: "Observa la animación y fíjate en la estrategia que utilizan para no confundir el ahorro con el valor final que deben cobrar."
+• DILE DESPUES DEL VIDEO: "¿Viste qué metódicos fueron? Primero calcularon el porcentaje y luego decidieron si correspondía sumar o restar. Veamos los fundamentos formales."
+• Puntos de foco visual al observar:
+  1. Analizar los carteles de liquidación y ofertas en los puestos de la feria.
+  2. Identificar la diferencia entre un descuento que disminuye el precio y un impuesto que lo incrementa.
+  3. Comprender por qué el IVA del 19% se aplica en todas las compras formales en Chile.
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Desafío Comercial: Las ofertas de la feria (8 seg aprox) ---
+1. Propósito Didáctico: Desafío Comercial: Las ofertas de la feria
+2. Título en Pantalla (64 pt): DESCUENTOS E IVA EN LA VIDA REAL
+3. Subtítulo en Pantalla (36 pt): Aplicación de porcentajes en compras cotidianas
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student organizers, a girl with braided hair holding a calculator and clipboard, and a boy in a teal jacket arranging items on a wooden school market stall. Bright banners with percentage signs in the background, warm natural daylight, clean vector aesthetic, ample negative space on the left. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Carteles promocionales con símbolos de % y etiquetas de precios
+6. Notas al Orador (Locución Google Vids): "Bienvenidos a la feria escolar. Hoy Sofía y Lucas tienen una misión de gran responsabilidad: calcular correctamente los cobros con descuentos promocionales y emitir boletas legales con el impuesto de IVA."
+
+--- DIAPOSITIVA 2: El Polerón en Liquidación (9 seg aprox) ---
+1. Propósito Didáctico: El Polerón en Liquidación
+2. Título en Pantalla (64 pt): ¿CUÁNTO AHORRAMOS Y CUÁNTO PAGAMOS?
+3. Subtítulo en Pantalla (36 pt): Polerón de $30.000 con 20% de descuento
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Close up of the school market stall counter where a warm blue hoodie is displayed with a large yellow tag showing an original price. Lucas is pointing at a notebook while Sofía checks the calculation, clear focused expressions, clean modern flat colors, ample negative space on the left. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Etiqueta de polerón: Precio de lista $30.000 - Oferta 20% OFF
+6. Notas al Orador (Locución Google Vids): "Un polerón institucional tiene un precio de lista de 30.000 pesos y un letrero anuncia 20% de descuento por liquidación de temporada. Un apoderado se acerca y pregunta cuál es el monto exacto a pagar."
+
+--- DIAPOSITIVA 3: La Trampa del Descuento (9 seg aprox) ---
+1. Propósito Didáctico: La Trampa del Descuento
+2. Título en Pantalla (64 pt): DESCUENTO NO ES EL PRECIO FINAL
+3. Subtítulo en Pantalla (36 pt): Distinguir entre ahorro y total a pagar
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Split visualization on a desk surface: on one side a stack of coins representing the discount savings, on the other side a larger stack representing the final payment amount. Sofía explaining with gestures to Lucas, vibrant educational palette, clean lines, ample negative space on the left. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema comparativo: Ahorro ($6.000) vs Pago final ($24.000)
+6. Notas al Orador (Locución Google Vids): "Muchos compradores cometen el error de pensar que el cálculo termina al encontrar el 20%. Pero el 20% es solo el ahorro. El precio final exige un paso adicional: restar esa rebaja del precio inicial."
+
+--- DIAPOSITIVA 4: El Impuesto al Valor Agregado: IVA 19% (9 seg aprox) ---
+1. Propósito Didáctico: El Impuesto al Valor Agregado: IVA 19%
+2. Título en Pantalla (64 pt): EL IMPUESTO OBLIGATORIO: IVA 19%
+3. Subtítulo en Pantalla (36 pt): Tributo legal que se agrega al valor neto
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Lucas examining an official Chilean shopping receipt or ticket under a magnifying glass, showing clear structured printed sections for net value, tax and total. Soft studio lighting, clean digital vector feel, ample negative space on the left. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Boleta de compra destacando secciones: Neto + IVA (19%) = Total Bruto
+6. Notas al Orador (Locución Google Vids): "Por otro lado, cuando compramos un bien o servicio con boleta formal en Chile, el Estado aplica el IVA, equivalente al 19% del valor neto. A diferencia del descuento, el IVA es un recargo que se suma al total."
+
+--- DIAPOSITIVA 5: Aumento vs Disminución Porcentual (9 seg aprox) ---
+1. Propósito Didáctico: Aumento vs Disminución Porcentual
+2. Título en Pantalla (64 pt): DOS OPERACIONES OPUESTAS
+3. Subtítulo en Pantalla (36 pt): Descuento resta | Impuesto suma
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Conceptual visual comparing two balance scales side by side: one scale showing a subtraction arrow pointing down labeled with a minus sign, the other showing an addition arrow pointing up. Sofía and Lucas collaborating peacefully, balanced modern layout, ample negative space on the left. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Flecha descendente verde (Descuento) vs Flecha ascendente azul (IVA)
+6. Notas al Orador (Locución Google Vids): "Porcentajes en acción: en el descuento restamos porque el precio disminuye; en el impuesto sumamos porque el precio aumenta. La estructura matemática es idéntica, cambia únicamente la operación de cierre."
+
+--- DIAPOSITIVA 6: El Desafío de la Caja Registradora (8 seg aprox) ---
+1. Propósito Didáctico: El Desafío de la Caja Registradora
+2. Título en Pantalla (64 pt): EXACTITUD Y RESPONSABILIDAD
+3. Subtítulo en Pantalla (36 pt): Operar sin errores en situaciones reales
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Sofía and Lucas standing behind the stall cash register with a line of enthusiastic students and parents waiting to buy. They look confident and focused, ready to aplicar las matemáticas con exactitud y rapidez, clean lines, ample negative space on the left. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Iconografía de boleta y calculadora indicando orden y método
+6. Notas al Orador (Locución Google Vids): "Para atender con rapidez y sin equivocarse, Lucas y Sofía necesitan un método estructurado de 3 pasos que funcione para cualquier precio, cualquier descuento y cualquier boleta con IVA."
+
+--- DIAPOSITIVA 7: El Puente: La regla de los 3 pasos (8 seg aprox) ---
+1. Propósito Didáctico: El Puente: La regla de los 3 pasos
+2. Título en Pantalla (64 pt): MÉTODO DE 3 PASOS EN ACCIÓN
+3. Subtítulo en Pantalla (36 pt): Paso 1: Base | Paso 2: Monto % | Paso 3: Operar
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. An open student notebook on the foreground desk with three clearly numbered structured bullet steps highlighted in cyan, orange and navy. Lucas holding a pen smiling warmly beside Sofía, bright inviting atmosphere, ample negative space on the left. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama de flujo de 3 pasos conectando hacia el cuaderno
+6. Notas al Orador (Locución Google Vids): "Vamos a ver cómo formular este método en el cuaderno de matemática para resolver problemas de comercio sin margen de error."
+
+================================================================================
+MODULO 2: PROMPT VIDEO EXPLICATIVO CONCEPTUAL (PASO 4 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Modelamiento de Problemas Comerciales: Descuentos e IVA
+• Idea Clave: ""
+• DILE ANTES DEL VIDEO: "Abre tu cuaderno de matemática en una página limpia. Vamos a registrar el método universal para calcular descuentos e impuestos con total precisión."
+• INSTRUCCION: "Observa la explicación y copia en tu cuaderno el procedimiento paso a paso del polerón de $30.000 con 20% de descuento."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Definición: Descuentos y Recargos (12 seg aprox) ---
+1. Propósito Didáctico: Definición: Descuentos y Recargos
+2. Título en Pantalla (64 pt): CONCEPTOS CLAVE DEL COMERCIO
+3. Subtítulo en Pantalla (36 pt): Descuento (rebaja) y Recargo/IVA (aumento)
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Clean educational infographic showing two clear mathematical formula banners: Discount formula in cyan and Tax formula in gold. Soft gradient background, bold crisp modern styling, ample negative space on the left. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Fórmulas maestras: P_final = P_orig - Descuento | P_bruto = P_neto + IVA
+6. Notas al Orador (Locución Google Vids): "Un descuento comercial es una reducción porcentual aplicada al precio original de un bien. Un recargo o impuesto es un incremento porcentual que se agrega al valor base o neto."
+
+--- DIAPOSITIVA 2: Paso 1: Identificar el 100% y el Porcentaje (13 seg aprox) ---
+1. Propósito Didáctico: Paso 1: Identificar el 100% y el Porcentaje
+2. Título en Pantalla (64 pt): PASO 1: IDENTIFICAR EL TOTAL BASE
+3. Subtítulo en Pantalla (36 pt): El valor inicial siempre representa el 100%
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Analytical blackboard diagram breaking down a real purchase into its components: Base Price represents 100%, and the Rate represents the percentage to be calculated. Lucas highlighting the variables with chalk, clean modern aesthetic, ample negative space on the left. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de partida: Base (100%) y Tasa porcentual (p%)
+6. Notas al Orador (Locución Google Vids): "El primer paso consiste en identificar cuál es la cantidad que representa el 100%. En un descuento, el 100% es el precio de lista original. En una boleta, el 100% es el valor neto sobre el cual se calcula el impuesto."
+
+--- DIAPOSITIVA 3: Paso 2: Calcular el Monto del Porcentaje (13 seg aprox) ---
+1. Propósito Didáctico: Paso 2: Calcular el Monto del Porcentaje
+2. Título en Pantalla (64 pt): PASO 2: CALCULAR EL MONTO
+3. Subtítulo en Pantalla (36 pt): Monto = Base x (Porcentaje : 100)
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Step by step numerical demonstration showing multiplication of a base quantity by a decimal percentage, with clear intermediate arrows pointing to the resulting monetary amount. Sofía writing notes diligently, ample negative space on the left. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Operación: Monto = Base x Decimal o Proporción cruzada
+6. Notas al Orador (Locución Google Vids): "El segundo paso es calcular el valor del porcentaje usando la estrategia más conveniente: ya sea multiplicando por el decimal correspondiente o aplicando la regla de proporcionalidad directa."
+
+--- DIAPOSITIVA 4: Paso 3: Operar Según la Situación (Sumar o Restar) (13 seg aprox) ---
+1. Propósito Didáctico: Paso 3: Operar Según la Situación (Sumar o Restar)
+2. Título en Pantalla (64 pt): PASO 3: SUMAR O RESTAR
+3. Subtítulo en Pantalla (36 pt): Resta en rebajas | Suma en impuestos y recargos
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Split visual layout showing two clear operations: on the left a green discount tag with a subtraction symbol leading to Final Price, on the right an official seal with an addition symbol leading to Gross Price. High contrast, clean vector art, ample negative space on the left. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Árbol de decisión: ¿Descuento? Restar. ¿IVA/Recargo? Sumar.
+6. Notas al Orador (Locución Google Vids): "El tercer paso es la operación final. Si el problema plantea un descuento o rebaja, restamos el monto al precio original. Si plantea un impuesto como el IVA del 19% o un recargo por mora, sumamos el monto al valor base."
+
+--- DIAPOSITIVA 5: Estrategia Abreviada: El Factor Directo (13 seg aprox) ---
+1. Propósito Didáctico: Estrategia Abreviada: El Factor Directo
+2. Título en Pantalla (64 pt): ATAJO: FACTOR DIRECTO
+3. Subtítulo en Pantalla (36 pt): Descuento 20% -> x 0,80 | IVA 19% -> x 1,19
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Modern computational infographic showing two shortcuts: multiplying by 0.80 to directly obtain an 80% price after 20% off, and multiplying by 1.19 to directly obtain the price with 19% IVA included. Minimalist aesthetic, ample negative space on the left. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Factores directos: 1 - 0,20 = 0,80 | 1 + 0,19 = 1,19
+6. Notas al Orador (Locución Google Vids): "Atajo experto: si te descuentan el 20%, pagas el 80% del valor, por lo que puedes multiplicar directamente por 0,80. Y para el IVA del 19%, el precio final corresponde al 119%, equivalente a multiplicar el valor neto por 1,19."
+
+--- DIAPOSITIVA 6: Modelamiento en Cuaderno: El Polerón de $30.000 (13 seg aprox) ---
+1. Propósito Didáctico: Modelamiento en Cuaderno: El Polerón de $30.000
+2. Título en Pantalla (64 pt): MODELAMIENTO EN CUADERNO
+3. Subtítulo en Pantalla (36 pt): Precio $30.000 - 20% Desc ($6.000) = $24.000
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Close up of a student notebook page neatly filled with pencil writing: Original price $30.000, 20% calculation equals $6.000, and final subtraction $30.000 minus $6.000 equals $24.000. Lucas and Sofía looking at the completed page with satisfaction, ample negative space on the left. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Resolución manuscrita: Descuento = $6.000, Total a pagar = $24.000
+6. Notas al Orador (Locución Google Vids): "Registremos en el cuaderno el caso del polerón: Precio de lista = 30.000 pesos. Descuento del 20%: calculamos 20 por 30.000 dividido en 100, lo que da 6.000 pesos de rebaja. Precio final a pagar: 30.000 menos 6.000 = 24.000 pesos."
+
+--- DIAPOSITIVA 7: Regla de Oro: Lee con Atención qué se Pregunta (12 seg aprox) ---
+1. Propósito Didáctico: Regla de Oro: Lee con Atención qué se Pregunta
+2. Título en Pantalla (64 pt): REGLA DE ORO DE LOS PROBLEMAS
+3. Subtítulo en Pantalla (36 pt): Verifica siempre si piden la rebaja o el precio final
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. A large golden badge on a clean background highlighting a glowing key icon. Sofía and Lucas pointing forward enthusiastically toward the practice exercises on the platform screen, bright vibrant lighting, ample negative space on the left. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Insignia dorada con la regla de oro: Distinguir monto vs precio final
+6. Notas al Orador (Locución Google Vids): "Regla de Oro: antes de responder, verifica siempre si la pregunta solicita el monto del descuento o impuesto, o bien el precio final a pagar. Ahora apliquemos este modelo en los ejercicios interactivos."
+
+================================================================================
+MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
+================================================================================
+
+[PREPARACION DEL ADULTO / MENTOR]
+• Objetivo del Adulto: Guiar al estudiante en la aplicación de porcentajes a situaciones reales del comercio y la economía cotidiana, calculando rebajas comerciales mediante restas del precio original y recargos impositivos como el IVA chileno (19%) mediante adiciones al valor neto.
+• Ruta de Hoy: Resolver problemas auténticos de compras y facturación, identificando cuándo un porcentaje representa un ahorro que se descuenta y cuándo representa un impuesto o recargo que se suma al valor base.
+• Recordatorios Pedagogicos del Mentor:
+  1. En problemas de descuento se calcula la rebaja y se resta del precio original: Precio Final = Precio Original - Descuento.
+  2. En problemas de IVA (19%) o recargo se calcula el impuesto y se suma al valor neto: Precio Bruto = Valor Neto + IVA.
+  3. Lee en voz alta únicamente los textos con la etiqueta DILE o PREGÚNTALE.
+  4. Asegúrate de que el estudiante distinga entre "el monto del descuento" y "el precio final a pagar".
+• Clima Emocional y Acogida: "Aprender a calcular descuentos e impuestos entrega autonomía real y despierta gran motivación porque el estudiante comprueba el poder práctico de la matemática en el mundo real."
+
+--------------------------------------------------------------------------------
+[PASO 1: INICIO (4 SUB-ETAPAS CANONICAS)]
+--------------------------------------------------------------------------------
+Sub-etapa 1: Nuestra Ruta de la Asignatura
+• DILE AL ESTUDIANTE (Apertura de la ruta): "Llegamos a la clase culminante de nuestra unidad de porcentajes en 7° Básico. Hoy aplicaremos todo lo aprendido a dos situaciones fundamentales de la vida diaria: los descuentos en tiendas y el cálculo del IVA en boletas y facturas."
+• 4 Bloques Tematicos de la Asignatura:
+  Bloque 01: Comercio (Descuentos e IVA)
+  Bloque 02: Descuento (Rebaja sobre Precio Original)
+  Bloque 03: IVA 19% (Impuesto al Valor Agregado)
+  Bloque 04: Evaluación (Miniquiz y Síntesis Final)
+
+Sub-etapa 2: La Clase de Hoy
+• DILE AL ESTUDIANTE (Foco didactico): "Aprender a calcular precios finales aplicando descuentos comerciales y recargos por impuestos como el IVA del 19%, distinguiendo con claridad el valor de la rebaja del total a pagar."
+• 3 Tarjetas de Foco de la Pantalla del Estudiante:
+  Tarjeta 1: Descuento comercial -> Monto de rebaja que se resta del precio original
+  Tarjeta 2: IVA chileno (19%) -> Impuesto que se adiciona al valor neto de un bien o servicio
+  Tarjeta 3: Estrategia en dos pasos -> Calcular el monto porcentual y operar con la base
+
+Sub-etapa 3: Situacion Inicial de Exploracion (Detonante)
+• DILE AL ESTUDIANTE (Situacion detonante): "Imagina que ves una polera con un precio de etiqueta de $10.000 y un cartel que anuncia 30% de descuento. ¿El cliente pagará $3.000 o pagará $7.000 en la caja?"
+• RESPUESTA ESPERADA: Pagará $7.000, porque los $3.000 corresponden al descuento que se le resta al precio original.
+• PISTA SOCRATICA (SOLO PARA TI): "Recuerda que un descuento es un beneficio económico: significa pagar menos que el valor de lista."
+• CLIMA EMOCIONAL: "Refuerza positivamente su respuesta: distinguir entre el dinero que se descuenta y el dinero que se desembolsa es la clave de todo consumidor informado."
+• Pautas de Evaluacion Formativa del Mentor:
+  - [Acierto] Respondió $7.000 explicando que se restan los $3.000 -> Feedback: "¡Excelente razonamiento! El 30% de $10.000 son $3.000 de rebaja, por lo que el precio final es $10.000 menos $3.000 = $7.000."
+  - [Requiere Apoyo] Confundió el monto de rebaja ($3.000) con el precio a pagar -> Feedback: "¡Cuidado! $3.000 es la rebaja que te ahorras. Para saber lo que pagas, debes restar esa rebaja del precio original."
+  - [Requiere Apoyo] No supo calcular el 30% -> Feedback: "No te preocupes. Recordemos que el 10% de $10.000 es $1.000, así que el 30% es $3.000. Ahora veremos el procedimiento paso a paso."
+
+Sub-etapa 4: Comprendamos la Respuesta (Punto de Referencia)
+• DILE AL ESTUDIANTE (Formalizacion de referencia): "Si un producto cuesta $20.000 y tiene un 10% de descuento, ¿cuánto dinero se descuenta y cuánto se paga finalmente?"
+• PREGUNTALE AL ESTUDIANTE: "¿Cuál es el descuento y cuál es el precio final?"
+• RESPUESTA ESPERADA: Se descuentan $2.000 y se pagan $18.000.
+• PISTA SOCRATICA: "Calcula el 10% dividiendo por 10, y luego resta ese resultado del precio inicial."
+• FEEDBACK SI ACIERTA: "¡Perfecto! El 10% de $20.000 es $2.000 de rebaja, y $20.000 menos $2.000 da exactamente $18.000."
+• FEEDBACK SI NECESITA APOYO: "Divide $20.000 en 10 partes para obtener el 10% ($2.000). Luego resta: $20.000 - $2.000 = $18.000."
+
+--------------------------------------------------------------------------------
+[PASO 3: RECORRIDO - CONVERSACION GUIADA Y PREGUNTAS SOCRATICAS]
+--------------------------------------------------------------------------------
+Item 1 (En el puesto de la feria escolar, un polerón de $30.000 tiene un 20% de descuento.):
+• Pregunta Socratica: "¿A cuánto dinero equivale el 20% de $30.000 y qué representa ese monto?"
+• Respuesta Esperada: Equivale a $6.000 y representa el ahorro o rebaja comercial.
+• Feedback de Exito: "¡Excelente! El 10% de $30.000 es $3.000, por lo que el 20% es $6.000 de rebaja."
+• Pista de Apoyo Socratica: "Calcula el 20% de 30.000: (20 x 30.000) : 100 = 6.000 pesos."
+• Revelacion: "20% de $30.000 = $6.000 de ahorro."
+
+Item 2 (Para saber cuánto paga el cliente por el polerón de $30.000.):
+• Pregunta Socratica: "¿Qué operación se debe realizar entre el precio original y el descuento calculado?"
+• Respuesta Esperada: Se debe restar: $30.000 - $6.000 = $24.000.
+• Feedback de Exito: "¡Exacto! Al restar la rebaja del precio inicial se obtiene el precio final a pagar."
+• Pista de Apoyo Socratica: "Descuento significa rebajar: resta los $6.000 del precio de lista de $30.000."
+• Revelacion: "$30.000 - $6.000 = $24.000."
+
+--------------------------------------------------------------------------------
+[PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
+--------------------------------------------------------------------------------
+Comprobacion 1 (En el video modelamos el cálculo del polerón de $30.000 con 20% de descuento.):
+• Pregunta: "¿Por qué responder $6.000 a la pregunta "¿cuánto se paga?" sería un error común?"
+• Respuesta Esperada: Porque $6.000 es solo la rebaja que se ahorra el cliente; para saber cuánto se paga se debe restar esa rebaja del precio original.
+• Pista de Apoyo: "Recuerda que $6.000 es el beneficio del descuento. El cliente debe pagar los $24.000 restantes."
+• Revelacion: "Porque $6.000 es el descuento y no el precio final."
+
+--------------------------------------------------------------------------------
+[PASO 5: PRACTICA EN EL CUADERNO FISICO]
+--------------------------------------------------------------------------------
+Ejercicio 1 (Un polerón escolar tiene un precio de lista de $30.000. Durante la liquidación de temporada se ofrece con un 20% de descuento.):
+• Enunciado de Aplicacion: "¿Cuánto dinero se descuenta y cuál es el precio final que se debe pagar por el polerón?"
+• Respuesta Esperada: Se descuentan $6.000 y el precio final es $24.000.
+• Feedback de Exito: "¡Excelente resolución! Calculaste el 20% de rebaja ($6.000) y lo restaste del precio original para obtener $24.000."
+• Pista de Apoyo Socratica: "Paso 1: Calcula el 20% de $30.000 (el 10% es $3.000, así que el 20% es $6.000). Paso 2: Resta esa rebaja a los $30.000 originales."
+
+Ejercicio 2 (Una librería vende una enciclopedia escolar a un valor neto de $10.000. Al momento de emitir la boleta de venta en Chile, se debe agregar el 19% correspondiente al Impuesto al Valor Agregado (IVA).):
+• Enunciado de Aplicacion: "¿A cuánto dinero asciende el impuesto de IVA y cuál es el precio bruto total con IVA incluido?"
+• Respuesta Esperada: El IVA es de $1.900 y el precio final con IVA es $11.900.
+• Feedback de Exito: "¡Muy bien! El 19% de $10.000 es $1.900 de impuesto, y al sumarlo al valor neto se obtiene un total bruto de $11.900."
+• Pista de Apoyo Socratica: "Paso 1: Calcula el 19% de $10.000 multiplicando 10.000 por 0,19. Paso 2: Suma ese valor tributario a los $10.000 netos iniciales."
+
+Ejercicio 3 (Una bicicleta tiene un precio original de $80.000. Por aniversario de la tienda, se publica una oferta con un 15% de descuento sobre el precio de lista.):
+• Enunciado de Aplicacion: "¿Cuánto dinero ahorra el comprador y cuál es el precio final que pagará por la bicicleta?"
+• Respuesta Esperada: Ahorra $12.000 y pagará $68.000.
+• Feedback de Exito: "¡Extraordinario trabajo! El 15% de $80.000 equivale a $12.000 de ahorro, por lo que el precio final resulta en $68.000."
+• Pista de Apoyo Socratica: "Calcula el 10% de $80.000 ($8.000) y el 5% ($4.000), sumando ambos obtienes el 15% ($12.000). Luego resta: $80.000 - $12.000."
+
+--------------------------------------------------------------------------------
+[PASO 6: RESUMEN Y ESTRATEGIA DE PENSAMIENTO]
+--------------------------------------------------------------------------------
+• Idea Clave: ""
+• DILE AL ESTUDIANTE: "Sigue esta guía sistemática para resolver cualquier problema de descuento o impuesto:"
+• Pasos de la Estrategia:
+  Paso 1: Identificar la Base y el Porcentaje -> Determina cuál es el 100% (precio original o valor neto) y cuál es la tasa porcentual involucrada.
+  Paso 2: Calcular el Monto Porcentual -> Multiplica la base por el decimal de la tasa o aplica la regla de proporcionalidad directa.
+  Paso 3: Operar según el Contexto -> Resta el monto obtenido si es un descuento comercial, o súmalo si corresponde a IVA o recargo.
+• 3 Ideas Clave Estructuradas de Sintesis:
+  - Descuento Comercial: Monto que se reduce del precio original. Se calcula el porcentaje y se resta: Precio Final = Precio Original - Descuento.
+  - Impuesto al Valor Agregado (IVA): Tributo chileno del 19% aplicado al valor neto. Se calcula el 19% y se suma: Precio Bruto = Valor Neto + IVA.
+  - Lectura Rigurosa del Enunciado: Es fundamental distinguir si una pregunta solicita el monto de la rebaja o recargo, o bien el valor total a cancelar.
+
+--------------------------------------------------------------------------------
+[PASO 7: MINIQUIZ FORMATIVO Y FASE REVISAR]
+--------------------------------------------------------------------------------
+Pregunta 1: Un par de zapatillas tiene un precio de lista de $40.000. Si la tienda ofrece un 25% de descuento, ¿cuál es el precio final que se paga en la caja?
+  A) $10.000 
+  B) $30.000 [CORRECTA]
+  C) $35.000 
+  D) $50.000 
+• Explicacion Formativa del Error: "El 25% de $40.000 es la cuarta parte: $40.000 / 4 = $10.000 de rebaja. El precio final a pagar es $40.000 - $10.000 = $30.000 ($10.000 es el monto del descuento, no el precio final; $50.000 resultaría de sumar el descuento)."
+
+Pregunta 2: Un taller mecánico emite una factura por un servicio cuyo valor neto es de $50.000. Si a este valor se le aplica el IVA del 19%, ¿cuál es el monto correspondiente únicamente al impuesto de IVA?
+  A) $950 
+  B) $9.500 [CORRECTA]
+  C) $19.000 
+  D) $59.500 
+• Explicacion Formativa del Error: "El IVA es el 19% de $50.000: 50.000 × 0,19 = $9.500. La alternativa $59.500 corresponde al precio bruto total con IVA incluido, no solo al monto del impuesto solicitado; $19.000 duplica el cálculo y $950 tiene un error posicional de coma decimal."
+
+Pregunta 3: Una tienda anuncia una rebaja general del 30% en todas sus mochilas. Si una mochila costaba originalmente $20.000, ¿qué porcentaje de su precio original terminará pagando el cliente?
+  A) 30% 
+  B) 50% 
+  C) 70% [CORRECTA]
+  D) 130% 
+• Explicacion Formativa del Error: "El precio original representa el 100%. Si se le descuenta el 30%, el cliente paga el porcentaje complementario: 100% - 30% = 70% del valor inicial (equivalente a 20.000 × 0,70 = $14.000)."
+
+--------------------------------------------------------------------------------
+[PASO 7B: MODULO DE RECUPERACION FORMATIVA]
+--------------------------------------------------------------------------------
+Refuerzo 1 (Refuerzo de Problemas de Descuento):
+• Explicacion Previa: "Para calcular el precio con descuento sigue siempre 2 pasos: primero calcula el dinero que te descuentan, y luego resta ese dinero del precio inicial que tenía el artículo."
+• Pregunta: "Un juego de mesa cuesta $10.000 y tiene un 20% de descuento. ¿Cuánto dinero cuesta finalmente el juego?"
+• Opciones: $2.000 | $8.000 | $12.000 | $9.800
+• Respuesta Correcta: $8.000
+• Refuerzo si falla: "Recuerda: $2.000 es lo que te ahorras. Para saber cuánto pagas debes restar: $10.000 - $2.000 = $8.000."
+
+--------------------------------------------------------------------------------
+[PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
+--------------------------------------------------------------------------------
+• Pregunta de Sintesis: "¿En qué se diferencian el procedimiento para aplicar un descuento del procedimiento para aplicar el IVA del 19%?"
+• Reflexion Metacognitiva: "¿Qué estrategia de cálculo de porcentajes sentiste que te resultó más cómoda y rápida a lo largo de esta unidad?"
+• Celebracion del Logro: "¡Felicitaciones! Has completado todas las lecciones del Objetivo de Aprendizaje OA 4 con excelencia."
+• Felicitacion Final: "¡Extraordinario logro! Has completado con éxito la unidad completa de Porcentajes de 7° Básico, dominando desde su concepto visual hasta su aplicación en el comercio real."
+• Vista Previa Proxima Clase: "Has adquirido una competencia matemática fundamental para toda tu vida ciudadana y académica. ¡Felicitaciones por tu dedicación!"
+
+
+================================================================================
+STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+================================================================================
+
+FICHA CURRICULAR:
+• Asignatura: Matemática
+• Nivel / Curso: 7° Básico
+• Objetivo de Aprendizaje: OA 4 - Porcentajes
+• Clase: 6 de 6 ("Síntesis Integradora y Ensayo de Evaluación Formativa: Porcentajes en Acción")
+• Duracion Estimada: 30 Minutos
+
+DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
+1. Proporcion Widescreen 16:9 estricto (1920x1080).
+2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
+3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
+4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
+5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
+   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
+   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
+7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
+8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
+
+================================================================================
+MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: La Gran Misión del Cierre Anual
+• DILE ANTES DEL VIDEO: "Acompañemos a Sofía y Lucas en la asamblea de fin de año del colegio, donde deben presentar el balance de proyectos frente a toda la comunidad estudiantil."
+• INSTRUCCION AL ESTUDIANTE: "Observa la animación y fíjate en la destreza con la que traducen los gráficos circulares a números concretos y desenmascaran los errores frecuentes."
+• DILE DESPUES DEL VIDEO: "¿Viste cómo resolvieron el enigma del gráfico circular y el cálculo del total? Ahora formalicemos estas estrategias maestras en nuestro cuaderno."
+• Puntos de foco visual al observar:
+  1. Interpretar los resultados de una encuesta escolar presentados en un gráfico circular.
+  2. Deducir el total de la comunidad escolar a partir de un porcentaje parcial conocido.
+  3. Analizar por qué dos descuentos sucesivos del 10% no son equivalentes a un 20% de descuento directo.
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: El Gran Balance del Cierre Escolar (8 seg aprox) ---
+1. Propósito Didáctico: El Gran Balance del Cierre Escolar
+2. Título en Pantalla (64 pt): SÍNTESIS INTEGRADORA: PORCENTAJES EN ACCIÓN
+3. Subtítulo en Pantalla (36 pt): Misión 6: Consolidación y Ensayo Final tipo MINEDUC
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student organizers, a girl with braided hair and a boy in a teal jacket, standing before a large wooden presentation board in a bright school auditorium. A colorful pie chart is pinned to the board, sunlight streaming through tall windows, clean vector aesthetic, ample negative space on the left. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Panel de asamblea escolar con gráfico circular de participación estudiantil
+6. Notas al Orador (Locución Google Vids): "Bienvenidos a la sesión final de nuestra unidad. Sofía y Lucas deben presentar el informe oficial de participación escolar ante la asamblea, interpretando datos porcentuales y calculando totales clave."
+
+--- DIAPOSITIVA 2: El Enigma del Gráfico Circular (9 seg aprox) ---
+1. Propósito Didáctico: El Enigma del Gráfico Circular
+2. Título en Pantalla (64 pt): ¿CÓMO LEER UN GRÁFICO CIRCULAR?
+3. Subtítulo en Pantalla (36 pt): El círculo completo equivale al 100% de la muestra
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Close up of the presentation board showing a large circular chart divided into three distinct colored slices: blue for 50%, yellow for 25%, and coral for 25%. Lucas is pointing with a wooden ruler while Sofía holds her notes, focused engaged expressions, clear clean lines, negative space on the left. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama circular con sectores: 50% (semicírculo), 25% (cuadrante) y 25% (cuadrante)
+6. Notas al Orador (Locución Google Vids): "El gráfico muestra las preferencias deportivas de los estudiantes. El sector azul ocupa la mitad del círculo, lo que equivale al 50%. Los dos sectores restantes ocupan un cuarto cada uno, correspondientes al 25%."
+
+--- DIAPOSITIVA 3: El Misterio del Total Desconocido (9 seg aprox) ---
+1. Propósito Didáctico: El Misterio del Total Desconocido
+2. Título en Pantalla (64 pt): CONOCIENDO LA PARTE, ENCONTRAMOS EL TOTAL
+3. Subtítulo en Pantalla (36 pt): Si el 10% son 15 estudiantes, ¿cuántos son el 100%?
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Sofía writing on a chalkboard with neat chalk figures, drawing a balance scale where one side shows 15 students and the other side shows a 10% tag. Lucas is calculating in his notebook, bright classroom ambiance, clean anime shading. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de proporción directa: 10% -> 15 | 100% -> X = (15 · 100) / 10 = 150
+6. Notas al Orador (Locución Google Vids): "El informe señala que 15 estudiantes eligieron ajedrez, representando exactamente el 10% del colegio. Sofía se pregunta: ¿cómo calculamos a cuántos estudiantes encuestaron en total?"
+
+--- DIAPOSITIVA 4: El Razonamiento Multiplicativo (9 seg aprox) ---
+1. Propósito Didáctico: El Razonamiento Multiplicativo
+2. Título en Pantalla (64 pt): EL 10% CABE 10 VECES EN EL 100%
+3. Subtítulo en Pantalla (36 pt): Multiplicamos 15 por 10 = 150 estudiantes en total
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Lucas showing his notebook to the audience with an enthusiastic smile, revealing a diagram with 10 identical blocks of 15 students lined up to form a large bar of 150. Crisp lineart, warm studio lighting, negative space on the left. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Barra modular de 10 bloques de 15 unidades: 10 · 15 = 150
+6. Notas al Orador (Locución Google Vids): "Lucas razona con rapidez: como el 10% cabe 10 veces en el 100%, multiplicamos 15 por 10. El colegio encuestó a 150 estudiantes en total. ¡Una deducción matemáticamente impecable!"
+
+--- DIAPOSITIVA 5: El Dilema de las Rebajas Sucesivas (8 seg aprox) ---
+1. Propósito Didáctico: El Dilema de las Rebajas Sucesivas
+2. Título en Pantalla (64 pt): ¿SUMAR DESCUENTOS ES LO MISMO?
+3. Subtítulo en Pantalla (36 pt): Comparando 20% directo versus 10% + 10% sucesivo
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two shop posters in a bookstore window: one claims 20% direct discount, and another claims 10% plus an additional 10% discount. Sofía and Lucas analyzing the difference with furrowed brows, dramatic curious expressions, clean lighting. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Comparación: Descuento 20% sobre $10.000 ($8.000) vs 10% sobre $10.000 y 10% sobre $9.000 ($8.100)
+6. Notas al Orador (Locución Google Vids): "Un puesto escolar anuncia una rebaja del 10% y luego otro 10% adicional. ¿Es lo mismo que una rebaja del 20% de una sola vez? Sofía advierte que hay una trampa sutil."
+
+--- DIAPOSITIVA 6: La Base Cambia en Cada Paso (9 seg aprox) ---
+1. Propósito Didáctico: La Base Cambia en Cada Paso
+2. Título en Pantalla (64 pt): EL SEGUNDO PORCENTAJE TIENE NUEVA BASE
+3. Subtítulo en Pantalla (36 pt): 10% de $10.000 = $1.000 | 10% de $9.000 = $900 | Total = $8.100
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Sofía and Lucas pointing at a comparison table on their chalkboard, showing that the second 10% se calcula sobre el nuevo precio rebajado de $9.000, resultando en $900 y no en $1.000. Clean modern flat colors, ample negative space. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Cálculo paso a paso: $10.000 - $1.000 = $9.000 -> $9.000 - $900 = $8.100 (Ahorro real: 19%)
+6. Notas al Orador (Locución Google Vids): "Al aplicar el segundo descuento, la base ya no es 10.000, sino 9.000 pesos. Por eso el segundo ahorro es de 900 pesos, pagando 8.100 en lugar de 8.000. ¡El porcentaje siempre depende de la base sobre la que actúa!"
+
+--- DIAPOSITIVA 7: Paso a la Consolidación Formal (8 seg aprox) ---
+1. Propósito Didáctico: Paso a la Consolidación Formal
+2. Título en Pantalla (64 pt): ¡LISTOS PARA EL ENSAYO OFICIAL!
+3. Subtítulo en Pantalla (36 pt): Dominamos las 4 operaciones y las estrategias de porcentajes
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Sofía and Lucas high-fiving in front of the finished presentation board, holding their study guides with proud smiles, warm golden afternoon glow entering the hall, tidy minimalist room. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Insignia de maestría: 100% de la unidad dominada
+6. Notas al Orador (Locución Google Vids): "Han resuelto todos los desafíos con rigor. Ahora pasemos a la formalización matemática y al ensayo tipo Examen Libre para consolidar tu maestría en porcentajes."
+
+================================================================================
+MODULO 2: PROMPT VIDEO EXPLICATIVO CONCEPTUAL (PASO 4 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Formalización y Síntesis: El Algoritmo Universal de Porcentajes
+• Idea Clave: ""
+• DILE ANTES DEL VIDEO: "Abre tu cuaderno de matemática en una página limpia. Vamos a registrar el método del cálculo inverso y el análisis de gráficos circulares con rigor."
+• INSTRUCCION: "Observa la explicación formal y copia en tu cuaderno la fórmula de cálculo inverso y la resolución del ejemplo modelado."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Formalización del Cálculo Inverso (12 seg aprox) ---
+1. Propósito Didáctico: Formalización del Cálculo Inverso
+2. Título en Pantalla (64 pt): CÁLCULO INVERSO: ENCONTRAR EL 100%
+3. Subtítulo en Pantalla (36 pt): Fórmula universal de proporcionalidad directa
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Classroom scene where teacher whiteboard shows clear mathematical formula highlighted in cyan: Total = (Parte · 100) / Porcentaje. Sofía and Lucas taking neat notes in their open grid notebooks, bright ambient light, clean lineart. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Fórmula formal en recuadro dorado: Total = (Parte · 100) / Porcentaje
+6. Notas al Orador (Locución Google Vids): "Cuando conocemos una cantidad parcial y el porcentaje que representa, podemos hallar el cien por ciento multiplicando la parte por cien y dividiendo por el porcentaje respectivo."
+
+--- DIAPOSITIVA 2: Ejemplo Modelado: Cálculo del Total (13 seg aprox) ---
+1. Propósito Didáctico: Ejemplo Modelado: Cálculo del Total
+2. Título en Pantalla (64 pt): MODELAMIENTO PASO A PASO
+3. Subtítulo en Pantalla (36 pt): 18 libros corresponden al 15% -> Total = 120 libros
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Detailed chalkboard split into three vertical sections demonstrating the calculation step by step: 15% -> 18 libros, 18 · 100 = 1.800, 1.800 : 15 = 120 libros. Lucas pointing to each step, calm organized atmosphere. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Resolución: X = (18 · 100) / 15 = 1.800 / 15 = 120 libros
+6. Notas al Orador (Locución Google Vids): "Observa la resolución: si dieciocho libros son el quince por ciento, multiplicamos dieciocho por cien, obteniendo mil ochocientos. Al dividir por quince, el resultado final es ciento veinte libros."
+
+--- DIAPOSITIVA 3: Interpretación de Gráficos de Sectores (13 seg aprox) ---
+1. Propósito Didáctico: Interpretación de Gráficos de Sectores
+2. Título en Pantalla (64 pt): LECTURA DE GRÁFICOS CIRCULARES
+3. Subtítulo en Pantalla (36 pt): La suma de todos los sectores siempre equivale al 100%
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Clean educational infographic style slide showing a 360-degree circle with protractor markings. Slices clearly labeled with fraction equivalents: 50% = 1/2, 25% = 1/4, 10% = 1/10. Sofía explaining with a pointer, bright colors. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Círculo trigonométrico de porcentajes: 360° = 100% | 180° = 50% | 90° = 25% | 36° = 10%
+6. Notas al Orador (Locución Google Vids): "En un gráfico de sectores circulares, la totalidad del círculo representa el cien por ciento. Cada sector equivale a una fracción del total, y la suma de todas las partes debe dar exactamente cien por ciento."
+
+--- DIAPOSITIVA 4: Variaciones Porcentuales y Descuentos Sucesivos (13 seg aprox) ---
+1. Propósito Didáctico: Variaciones Porcentuales y Descuentos Sucesivos
+2. Título en Pantalla (64 pt): VARIACIONES PORCENTUALES SUCESIVAS
+3. Subtítulo en Pantalla (36 pt): El porcentaje se aplica siempre sobre el saldo anterior
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Infographic comparison slide with a flow diagram showing two sequential arrows: from $10.000 minus 10% to $9.000, and from $9.000 minus 10% to $8.100. Lucas analyzing the flow, clean corporate aesthetic. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama de flujo: $10.000 -> -10% -> $9.000 -> -10% -> $8.100 (Rebaja efectiva: 19%)
+6. Notas al Orador (Locución Google Vids): "Recuerda que en aumentos o descuentos sucesivos, la base cambia en cada etapa. Por eso dos rebajas sucesivas del diez por ciento producen un descuento real del diecinueve por ciento, no del veinte."
+
+--- DIAPOSITIVA 5: Análisis del Error Típico en Evaluaciones (13 seg aprox) ---
+1. Propósito Didáctico: Análisis del Error Típico en Evaluaciones
+2. Título en Pantalla (64 pt): EVITA LA TRAMPA: ¿PARTE O TOTAL?
+3. Subtítulo en Pantalla (36 pt): Lee con atención si el número dado es la parte o el total
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Chalkboard showing a red alert icon next to a common error: calculating 20% OF 12 instead of solving for the total. Sofía crossing out the error with a gentle smile and writing the correct formula. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Cuadro comparativo: "Calcular el 20% de 12" = 2,4 vs "12 es el 20%" = 60
+6. Notas al Orador (Locución Google Vids): "El error más frecuente en los exámenes es calcular el porcentaje sobre el número dado cuando el enunciado indica que ese número ya es la parte porcentual. Pregúntate siempre: ¿este número es la parte o el total?"
+
+--- DIAPOSITIVA 6: Reactivo de Evaluación Formativa Oficial (13 seg aprox) ---
+1. Propósito Didáctico: Reactivo de Evaluación Formativa Oficial
+2. Título en Pantalla (64 pt): REACTIVO TIPO EXAMEN LIBRE (MINEDUC)
+3. Subtítulo en Pantalla (36 pt): Pregunta formal de 4 alternativas con análisis de distractores
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Sofía and Lucas in formal school uniforms, standing beside a projected sample test question with 4 multiple choice letters A, B, C, D clearly highlighted in clean boxes. Focused confident attitudes. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Reactivo formal: Si 14 estudiantes son el 28%, el total es: A) 50  B) 39  C) 3,92  D) 200
+6. Notas al Orador (Locución Google Vids): "En las evaluaciones oficiales de Exámenes Libres te enfrentarás a preguntas de cuatro alternativas. Aplica con calma tu procedimiento y descarta los distractores analizando el origen del error."
+
+--- DIAPOSITIVA 7: Cierre y Transición a la Práctica en Plataforma (13 seg aprox) ---
+1. Propósito Didáctico: Cierre y Transición a la Práctica en Plataforma
+2. Título en Pantalla (64 pt): ¡MAESTRÍA EN PORCENTAJES ALCANZADA!
+3. Subtítulo en Pantalla (36 pt): Ingresa al módulo interactivo para tu práctica final
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Both students smiling warmly at the camera from their study desks, laptop open showing the practice portal interface with green checkmarks. Clean bright study room, ample negative space. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Logotipo de EstudioSimple con botón: Iniciar Práctica Interactiva
+6. Notas al Orador (Locución Google Vids): "¡Has dominado los porcentajes en todas sus formas! Ahora estás plenamente preparado para ingresar al simulador interactivo de EstudioSimple y poner a prueba tus habilidades."
+
+================================================================================
+MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
+================================================================================
+
+[PREPARACION DEL ADULTO / MENTOR]
+• Objetivo del Adulto: Guiar al estudiante en la síntesis integradora de la unidad de porcentajes, consolidando el cálculo inverso (hallar el total conociendo el porcentaje), la interpretación de gráficos de sectores circulares y la resolución de reactivos psicométricos formales tipo Examen Libre MINEDUC con análisis crítico de distractores.
+• Ruta de Hoy: Integrar todas las estrategias aprendidas en las 5 clases previas para enfrentar problemas desafiantes y el ensayo de evaluación formativa oficial del MINEDUC con 4 alternativas y justificación de errores comunes.
+• Recordatorios Pedagogicos del Mentor:
+  1. En problemas inversos: si el P% de una cantidad es X, el total (100%) se calcula como Total = (X · 100) / P.
+  2. En gráficos circulares: el círculo completo representa el 100% y 360°, la mitad es 50% (180°) y un cuarto es 25% (90°).
+  3. Descuentos sucesivos NO se suman aritméticamente: dos descuentos del 10% no equivalen a un 20%, porque el segundo se aplica sobre el saldo rebajado.
+  4. Valida que el estudiante argumente por qué las alternativas incorrectas son erróneas.
+• Clima Emocional y Acogida: "Esta es la clase de coronación. Demuéstrale confianza: el estudiante ya posee todas las herramientas para resolver con maestría cualquier reactivo formal tipo MINEDUC."
+
+--------------------------------------------------------------------------------
+[PASO 1: INICIO (4 SUB-ETAPAS CANONICAS)]
+--------------------------------------------------------------------------------
+Sub-etapa 1: Nuestra Ruta de la Asignatura
+• DILE AL ESTUDIANTE (Apertura de la ruta): "¡Llegamos a la sexta y última clase de nuestra unidad de porcentajes! Hoy integraremos todo nuestro conocimiento para resolver el gran ensayo oficial tipo Examen Libre del MINEDUC."
+• 4 Bloques Tematicos de la Asignatura:
+  Bloque 01: Síntesis (Integración de Conceptos)
+  Bloque 02: Cálculo Inverso (Hallar el Total (100%))
+  Bloque 03: Gráficos y Datos (Sectores Circulares)
+  Bloque 04: Ensayo MINEDUC (Evaluación y Distractores)
+
+Sub-etapa 2: La Clase de Hoy
+• DILE AL ESTUDIANTE (Foco didactico): "Consolidar el dominio de porcentajes en situaciones complejas: calcular totales desconocidos, interpretar gráficos circulares y resolver preguntas psicométricas con análisis de distractores."
+• 3 Tarjetas de Foco de la Pantalla del Estudiante:
+  Tarjeta 1: Cálculo Inverso -> Hallar el 100% a partir de un valor parcial conocido
+  Tarjeta 2: Gráficos Circulares -> Lectura de distribución de datos en porcentajes
+  Tarjeta 3: Variaciones Sucesivas -> Comprensión de que el porcentaje depende de la base
+
+Sub-etapa 3: Situacion Inicial de Exploracion (Detonante)
+• DILE AL ESTUDIANTE (Situacion detonante): "En una biblioteca escolar, 12 libros de ciencias representan el 20% de los libros prestados durante la semana. ¿Cuántos libros se prestaron en total?"
+• RESPUESTA ESPERADA: Se prestaron 60 libros en total, porque si el 20% (la quinta parte) son 12, el 100% es 12 multiplicado por 5, lo que da 60.
+• PISTA SOCRATICA (SOLO PARA TI): "Recuerda que el 20% es equivalente a la fracción 1/5. Si un quinto son 12, ¿cuánto son los cinco quintos?"
+• CLIMA EMOCIONAL: "Celebra su razonamiento. Darse cuenta de que se puede "recorrer el camino al revés" para hallar el total es un hito de madurez matemática."
+• Pautas de Evaluacion Formativa del Mentor:
+  - [Acierto] Respondió 60 libros aplicando la proporción o multiplicando 12 por 5 -> Feedback: "¡Brillante! Si el 20% es 12, multiplicamos 12 por 5 y obtenemos el 100%, que equivale a 60 libros en total."
+  - [Requiere Apoyo] Calculó el 20% de 12 (obteniendo 2,4) -> Feedback: "¡Atención al enunciado! 12 no es el total; 12 es la parte que equivale al 20%. Debemos buscar un total mayor que 12."
+  - [Requiere Apoyo] Dijo 24 libros (confundió el 20% con el 50%) -> Feedback: "Revisemos juntos: el 20% cabe 5 veces en el 100%. Por lo tanto, 12 veces 5 es 60 libros."
+
+Sub-etapa 4: Comprendamos la Respuesta (Punto de Referencia)
+• DILE AL ESTUDIANTE (Formalizacion de referencia): "Si en una votación escolar una candidata obtuvo 45 votos, lo que corresponde al 50% de los votos emitidos, ¿cuántos estudiantes votaron en total?"
+• PREGUNTALE AL ESTUDIANTE: "¿Cuál fue el total de votos emitidos?"
+• RESPUESTA ESPERADA: Votaron 90 estudiantes en total, porque el 50% es la mitad, y el doble de 45 es 90.
+• PISTA SOCRATICA: "Si la mitad es 45, multiplica por 2 para encontrar el total completo."
+• FEEDBACK SI ACIERTA: "¡Exacto! El 50% es 1/2. Si un medio son 45 votos, los dos medios (100%) son 90 votos."
+• FEEDBACK SI NECESITA APOYO: "Como el 50% representa la mitad exacta, basta con duplicar los 45 votos: 45 · 2 = 90."
+
+--------------------------------------------------------------------------------
+[PASO 3: RECORRIDO - CONVERSACION GUIADA Y PREGUNTAS SOCRATICAS]
+--------------------------------------------------------------------------------
+Item 1 (En el balance escolar, 15 estudiantes que eligieron ajedrez representan el 10% de los encuestados.):
+• Pregunta Socratica: "¿Cuántas veces cabe el 10% en el 100% y cómo te ayuda eso a hallar el total?"
+• Respuesta Esperada: Cabe 10 veces, por lo que multiplicamos 15 por 10 para obtener 150 estudiantes.
+• Feedback de Exito: "¡Excelente deducción! Como 10% es 1/10, el total es 15 · 10 = 150 estudiantes."
+• Pista de Apoyo Socratica: "Divide 100 entre 10 para ver cuántas partes son (10). Luego multiplica 15 por 10 = 150."
+• Revelacion: "10% · 10 = 100% -> 15 · 10 = 150 estudiantes en total."
+
+Item 2 (En un gráfico circular que representa a toda la comunidad escolar (100%).):
+• Pregunta Socratica: "Si el 50% hace deportes y el 25% hace arte, ¿qué porcentaje de estudiantes queda para el resto de talleres?"
+• Respuesta Esperada: Queda un 25% (100% - 50% - 25% = 25%).
+• Feedback de Exito: "¡Exacto! 50% + 25% = 75%, y 100% - 75% = 25% restante."
+• Pista de Apoyo Socratica: "Suma los dos porcentajes conocidos (50 + 25 = 75) y réstalo de 100: 100 - 75 = 25%."
+• Revelacion: "100% - (50% + 25%) = 25%."
+
+--------------------------------------------------------------------------------
+[PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
+--------------------------------------------------------------------------------
+Comprobacion 1 (En el video formalizamos el cálculo inverso a partir de 18 libros equivalentes al 15%.):
+• Pregunta: "¿Por qué no debemos calcular el 15% de 18 para resolver este problema?"
+• Respuesta Esperada: Porque 18 no es el total completo; 18 es solo la parte del 15%, por lo que el total debe ser un número mucho mayor.
+• Pista de Apoyo: "Recuerda: 18 libros representan solo el 15%. Para encontrar el 100%, multiplicamos por 100 y dividimos por 15."
+• Revelacion: "Porque 18 es solo una parte y el total debe ser mayor."
+
+--------------------------------------------------------------------------------
+[PASO 5: PRACTICA EN EL CUADERNO FISICO]
+--------------------------------------------------------------------------------
+Ejercicio 1 (En una biblioteca pública, 18 libros de literatura juvenil representan el 15% del total de libros prestados este mes.):
+• Enunciado de Aplicacion: "¿Cuántos libros prestó la biblioteca en total?"
+• Respuesta Esperada: Se prestaron 120 libros en total.
+• Feedback de Exito: "¡Excelente! Planteaste la proporción con precisión: (18 · 100) / 15 = 120 libros."
+• Pista de Apoyo Socratica: "Multiplica la parte por 100 y divide por el porcentaje: (18 · 100) : 15 = 1.800 : 15 = 120."
+
+Ejercicio 2 (Un gráfico circular muestra las preferencias de 200 estudiantes: 40% Robótica, 35% Teatro y el resto Ajedrez.):
+• Enunciado de Aplicacion: "¿Cuántos estudiantes eligieron Ajedrez?"
+• Respuesta Esperada: 50 estudiantes eligieron Ajedrez (25% del total).
+• Feedback de Exito: "¡Perfecto! Identificaste que Ajedrez correspondía al 25% (la cuarta parte de 200 = 50)."
+• Pista de Apoyo Socratica: "Suma 40% + 35% = 75%. El resto es 100% - 75% = 25%. Luego calcula: 200 : 4 = 50."
+
+Ejercicio 3 (Un microscopio escolar tiene un precio neto de $50.000. Se aplica un 10% de descuento y luego se agrega el 19% de IVA sobre el valor resultante.):
+• Enunciado de Aplicacion: "¿Cuál es el valor final a pagar con el IVA incluido?"
+• Respuesta Esperada: El valor final a pagar es $53.550.
+• Feedback de Exito: "¡Extraordinario! Neto rebajado: $45.000. IVA (19%): $8.550. Total: $45.000 + $8.550 = $53.550."
+• Pista de Apoyo Socratica: "Paso 1: $50.000 - $5.000 = $45.000. Paso 2: IVA = 45.000 · 0,19 = $8.550. Paso 3: $45.000 + $8.550 = $53.550."
+
+--------------------------------------------------------------------------------
+[PASO 6: RESUMEN Y ESTRATEGIA DE PENSAMIENTO]
+--------------------------------------------------------------------------------
+• Idea Clave: ""
+• DILE AL ESTUDIANTE: "Aplica esta secuencia infalible en cada reactivo tipo Examen Libre:"
+• Pasos de la Estrategia:
+  Paso 1: Identificar la Incógnita -> Determina con precisión si el problema pide hallar la parte porcentual, la tasa o el total (100%).
+  Paso 2: Seleccionar la Estrategia -> Aplica fracción canónica (cálculo mental), multiplicación decimal directa o proporción cruzada.
+  Paso 3: Verificar y Descartar Distractores -> Comprueba la lógica de tu resultado y confirma por qué las demás alternativas son incorrectas.
+• 3 Ideas Clave Estructuradas de Sintesis:
+  - Cálculo Inverso del Total: Para hallar el 100%, multiplica la cantidad parcial por 100 y divide por el porcentaje: Total = (Parte · 100) / Porcentaje.
+  - Gráficos Circulares de Datos: El círculo completo representa siempre el 100% (360°). La suma de los sectores conocidos permite hallar el porcentaje faltante por sustracción.
+  - Variaciones Porcentuales Sucesivas: En aumentos o descuentos sucesivos, cada porcentaje se calcula sobre la base del saldo anterior y no se suman directamente.
+  - Resolución Crítica de Reactivos: En preguntas de evaluación formal tipo MINEDUC, distingue si te preguntan por la parte, el porcentaje o el total, descartando distractores por análisis de procedimiento.
+
+--------------------------------------------------------------------------------
+[PASO 7: MINIQUIZ FORMATIVO Y FASE REVISAR]
+--------------------------------------------------------------------------------
+Pregunta 1: En un taller de robótica, 14 estudiantes representan el 28% de los inscritos. ¿Cuál es la cantidad total de estudiantes inscritos en el taller?
+  A) 50 estudiantes [CORRECTA]
+  B) 39 estudiantes 
+  C) 3,92 estudiantes 
+  D) 200 estudiantes 
+• Explicacion Formativa del Error: "Total = (14 · 100) / 28 = 1.400 / 28 = 50 estudiantes (39 resulta de restar 28 - 14 equivocadamente; 3,92 resulta de calcular el 28% de 14 en vez de hallar el total)."
+
+Pregunta 2: Un gráfico circular muestra que el 60% de los libros de una biblioteca son de narrativa y el resto son de ciencias. Si la biblioteca tiene 400 libros en total, ¿cuántos libros son de ciencias?
+  A) 160 libros [CORRECTA]
+  B) 240 libros 
+  C) 40 libros 
+  D) 100 libros 
+• Explicacion Formativa del Error: "El porcentaje de ciencias es 100% - 60% = 40%. El 40% de 400 es 400 · 0,40 = 160 libros (240 corresponde a los libros de narrativa, no de ciencias; 40 confunde el porcentaje con la cantidad)."
+
+Pregunta 3: Un par de zapatillas tiene un precio de lista de $40.000. La tienda ofrece un 25% de descuento por liquidación. ¿Cuánto dinero se ahorra el comprador y cuánto paga finalmente?
+  A) Se ahorra $10.000 y paga $30.000 [CORRECTA]
+  B) Se ahorra $25.000 y paga $15.000 
+  C) Se ahorra $10.000 y paga $40.000 
+  D) Se ahorra $4.000 y paga $36.000 
+• Explicacion Formativa del Error: "El 25% de $40.000 es la cuarta parte: $40.000 / 4 = $10.000 de rebaja. El precio final es $40.000 - $10.000 = $30.000."
+
+--------------------------------------------------------------------------------
+[PASO 7B: MODULO DE RECUPERACION FORMATIVA]
+--------------------------------------------------------------------------------
+Refuerzo 1 (Refuerzo de Cálculo Inverso):
+• Explicacion Previa: "Para hallar el total (100%) cuando conoces una parte, multiplica la parte por 100 y divide por el porcentaje: Total = (Parte · 100) / Porcentaje."
+• Pregunta: "Si 9 personas representan el 30% de los asistentes a una reunión, ¿cuántas personas asisten en total?"
+• Opciones: 30 personas | 27 personas | 90 personas | 3 personas
+• Respuesta Correcta: 30 personas
+• Refuerzo si falla: "Recuerda: multiplica 9 por 100 (900) y divide por 30 = 30 personas."
+
+--------------------------------------------------------------------------------
+[PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
+--------------------------------------------------------------------------------
+• Pregunta de Sintesis: "¿Cómo le explicarías a otra persona la diferencia entre calcular el 20% de una cantidad y saber que una cantidad es el 20% del total?"
+• Reflexion Metacognitiva: "¿Qué herramienta te dio mayor seguridad en esta unidad: la representación gráfica, el cálculo mental o la proporción directa?"
+• Celebracion del Logro: "¡Felicitaciones! Has dominado el Objetivo de Aprendizaje OA 4 de 7° Básico en su totalidad con las 6 lecciones canónicas."
+• Felicitacion Final: "¡Felicitaciones! Has completado con total éxito las 6 clases de Porcentajes de 7° Básico, dominando todos los estándares curriculares del MINEDUC."
+• Vista Previa Proxima Clase: "Estás plenamente preparado para rendir tu Examen Libre oficial con excelencia."
+
+

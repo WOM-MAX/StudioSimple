@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "2.0.0",
+  "generatedAt": "2026-10-06T16:48:31.502Z",
+  "status": "EN_REVISION",
+  "oaIdentifier": "110-7-MAT-OA04",
+  "course": "7° Básico",
+  "subject": "Matemática",
+  "axis": "Números",
+  "mineducObjective": "Mostrar que comprenden el concepto de porcentaje de manera concreta, pictórica y simbólica, de forma manual y/o usando software educativo.",
+  "textbookSource": {
+    "title": "Matemática 7° Básico - Texto del Estudiante",
+    "publisher": "Santillana / Ministerio de Educación de Chile",
+    "unit": "Unidad 1: Números",
+    "lessonChapter": "Lección 3: Porcentajes",
+    "pages": "42-51",
+    "officialCurriculumAlignment": "Bases Curriculares Decreto N° 614/2013 y Temarios Oficiales de Exámenes Libres MINEDUC"
+  },
+  "totalLessons": 6,
+  "lessons": [
+    {
+      "lessonNumber": 1,
+      "title": "Concepto de Porcentaje y Representación en Cuadrículas de 100",
+      "focus": "Razón referida a 100 unidades y representación pictórica en cuadrículas 10x10",
+      "slidesHook": 7,
+      "slidesExplanation": 7,
+      "totalSlides": 14,
+      "durationMinutes": 30,
+      "tsFile": "matematica_7b_oa04_clase01.ts",
+      "tsHashSha256": "4dc82b0c1f80e78221286b83746e24f71055b5c5153e11186836dd26981b41f4"
+    },
+    {
+      "lessonNumber": 2,
+      "title": "Porcentajes como Fracción Irreductible y Número Decimal",
+      "focus": "Equivalencia triple: porcentaje, fracción simplificada y número decimal",
+      "slidesHook": 7,
+      "slidesExplanation": 7,
+      "totalSlides": 14,
+      "durationMinutes": 30,
+      "tsFile": "matematica_7b_oa04_clase02.ts",
+      "tsHashSha256": "0458b7b22c823170187dc1a174ebe1f44e5b3cb78774b00998bf7ab4c464e711"
+    },
+    {
+      "lessonNumber": 3,
+      "title": "Cálculo Mental de Porcentajes Notables: 50%, 25%, 20% y 10%",
+      "focus": "Estrategias de cálculo mental usando división por fracciones canónicas",
+      "slidesHook": 7,
+      "slidesExplanation": 7,
+      "totalSlides": 14,
+      "durationMinutes": 30,
+      "tsFile": "matematica_7b_oa04_clase03.ts",
+      "tsHashSha256": "f8c85a1f50ff39f38c72c33d5d465e861440f0425449c448715a7777724c6bd7"
+    },
+    {
+      "lessonNumber": 4,
+      "title": "Estrategias de Cálculo de Cualquier Porcentaje: Decimales y Proporciones",
+      "focus": "Algoritmos universales: multiplicación por decimal y regla de proporcionalidad directa",
+      "slidesHook": 7,
+      "slidesExplanation": 7,
+      "totalSlides": 14,
+      "durationMinutes": 30,
+      "tsFile": "matematica_7b_oa04_clase04.ts",
+      "tsHashSha256": "5d4f87ba7c6db718f0ded7d276e7f142105ddbd1667b286722fdad84cb8086ec"
+    },
+    {
+      "lessonNumber": 5,
+      "title": "Resolución de Problemas Cotidianos: Descuentos Comerciales e IVA",
+      "focus": "Aplicaciones contextuales: cálculo de rebajas comerciales e IVA 19% en boletas",
+      "slidesHook": 7,
+      "slidesExplanation": 7,
+      "totalSlides": 14,
+      "durationMinutes": 30,
+      "tsFile": "matematica_7b_oa04_clase05.ts",
+      "tsHashSha256": "14b495c1476ce68160fbb09363217908333a3d05db19b6252956b5f376b0ba83"
+    },
+    {
+      "lessonNumber": 6,
+      "title": "Síntesis Integradora y Ensayo de Evaluación Formativa: Porcentajes en Acción",
+      "focus": "Cálculo inverso del total, gráficos circulares, variaciones sucesivas y ensayo psicométrico tipo MINEDUC",
+      "slidesHook": 7,
+      "slidesExplanation": 7,
+      "totalSlides": 14,
+      "durationMinutes": 30,
+      "tsFile": "matematica_7b_oa04_clase06.ts",
+      "tsHashSha256": "ca762a0edb3b923febb3c42be8a34102f96df6d1f150e71b35e52e496ed3a47f"
+    }
+  ],
+  "artifacts": {
+    "docxMaster": {
+      "filename": "Plan_Maestro_7Básico_110-7-MAT-OA04_6Lecciones.docx",
+      "relativePath": "LECCIONES/110-7/Matematica/OA04/Plan_Maestro_7Básico_110-7-MAT-OA04_6Lecciones.docx",
+      "sizeBytes": 75578,
+      "sha256": "fb05172279352b8504a59ed8da686770ecce47be1e74c48178e167e168593cbf"
+    },
+    "promptsWorkTxt": {
+      "filename": "Prompts_Work_Matematica_7B_OA04.txt",
+      "relativePath": "LECCIONES/110-7/Matematica/OA04/Prompts_Work_Matematica_7B_OA04.txt",
+      "sizeBytes": 180167,
+      "sha256": "d4703a801211634ba8c3ab1494239c91117610be778d18a8769365a6e3106531"
+    }
+  },
+  "governance": {
+    "producedBy": "Antigravity (Ingeniero de Software IA)",
+    "workflow": "Skill estudiosimple-lecciones (Flujo Canónico 12 Pasos)",
+    "isomorphismLevel": "100% (DOCX == TXT Prompts == TypeScript)",
+    "pedagogicalStandards": [
+      "Estándar normativo universal: 6 lecciones completas por OA (Directriz Work)",
+      "Estructura bimodal de 14 láminas (7 Gancho + 7 Explicación) por clase = 84 láminas totales",
+      "Dúo co-protagonista de 13 años (joven con trenzas y joven con chaqueta cerceta) en 100% de escenas",
+      "Widescreen 16:9 Anime Moderno limpio sin texto dibujado por IA (No text drawn by AI)",
+      "Sin sombras, sin contornos, sin emojis, sin guiones largos",
+      "Reactivos psicométricos formales de 4 alternativas (A, B, C, D) con análisis de distractores",
+      "Lámina 6 de Explicación isomórfica con Caso 1 de Práctica Guiada",
+      "Cierre de video en Lámina 7 con Regla de Oro y pase directo a la plataforma"
+    ]
+  }
+}

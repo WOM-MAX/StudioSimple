@@ -26,9 +26,9 @@ const TARGET_SUBJECTS = [
   },
   {
     id: '110-7-HIS-OA02',
-    lecciones: 5,
+    lecciones: 6,
     shortName: 'Historia_OA02.docx',
-    fullName: 'Plan_Maestro_7Básico_110-7-HIS-OA02_5Lecciones.docx'
+    fullName: 'Plan_Maestro_7Básico_110-7-HIS-OA02_6Lecciones.docx'
   },
   {
     id: '110-7-ING-OA09',

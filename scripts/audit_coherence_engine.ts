@@ -391,35 +391,13 @@ export async function auditOA(targetOaId: string): Promise<AuditReport> {
       });
     }
 
-    // CONTROL 2 (UNI-002): Calibracion temporal de locucion
+    // CONTROL 2 (UNI-002): Verificacion de presencia de locucion limpia (calibracion acustica delegada a Google Vids)
     const hookWords = hookSlides.reduce((acc, s) => acc + countWords(s.speakerNotes || ''), 0);
     const explWords = explSlides.reduce((acc, s) => acc + countWords(s.speakerNotes || ''), 0);
     hookWordsList.push(hookWords);
     explWordsList.push(explWords);
-
-    if (hookWords < 115 || hookWords > 150) {
-      findings.push({
-        code: 'WARN-TIME-001',
-        priority: 'Media',
-        location: `Leccion ${lessonNum} -> hook.speakerNotes (Total palabras: ${hookWords})`,
-        approvedSource: 'Regla UNI-002: Rango optimo de 120 a 145 palabras (~130 palabras / 60 segundos)',
-        reviewedMaterial: `${hookWords} palabras de locucion continua`,
-        discrepancy: `La duracion estimada de locucion en el gancho se desvia del rango ideal (${hookWords} palabras).`,
-        suggestedCorrection: `Ajustar notas del orador para acercarse a ~130 palabras totales.`
-      });
-    }
-
-    if (explWords < 170 || explWords > 225) {
-      findings.push({
-        code: 'WARN-TIME-002',
-        priority: 'Media',
-        location: `Leccion ${lessonNum} -> formalization.speakerNotes (Total palabras: ${explWords})`,
-        approvedSource: 'Regla UNI-002: Rango optimo de 180 a 220 palabras (~195 palabras / 90 segundos)',
-        reviewedMaterial: `${explWords} palabras de locucion continua`,
-        discrepancy: `La duracion estimada de locucion en la explicacion se desvia del rango ideal (${explWords} palabras).`,
-        suggestedCorrection: `Ajustar notas del orador para acercarse a ~195 palabras totales.`
-      });
-    }
+    // Nota: Se suprimen las restricciones punitivas de conteo de palabras (WARN-TIME-001 / WARN-TIME-002)
+    // La duracion acustica y sincronizacion se verifican en Google Vids durante la produccion.
 
     // CONTROL 3 (UNI-003), CONTROL 4 (UNI-004) y CONTROL 12 (UNI-012): Criterios visuales universales en cada escena
     const allSlides = [...hookSlides, ...explSlides];
@@ -725,8 +703,8 @@ export function generateMarkdownReport(report: AuditReport): string {
   md += `| Reutilizacion Fiel en Revision Post-Video (UNI-009) | ${report.metrics.postQuestionsReusedCount} / ${report.totalLessons} clases | 100% reutilizacion |\n`;
   md += `| Estructura Teleologica (UNI-010: Objetivo en D1, Cierre a Practica) | ${report.metrics.teleologicalPassCount} / ${report.totalLessons} clases | 100% conforme |\n`;
   md += `| Integridad de 8 Pasos Obligatorios (UNI-011) | ${report.metrics.mandatoryStepsPassCount} / ${report.totalLessons} clases | 100% completos |\n`;
-  md += `| Promedio Palabras Gancho (UNI-002: Locucion 60s) | ~${report.metrics.averageHookWords} palabras | Rango 120-145 palabras |\n`;
-  md += `| Promedio Palabras Explicativo (UNI-002: Locucion 90s) | ~${report.metrics.averageExplWords} palabras | Rango 180-220 palabras |\n\n`;
+  md += `| Promedio Palabras Gancho (Informativo) | ~${report.metrics.averageHookWords} palabras | Referencia continua (calibración en Vids) |\n`;
+  md += `| Promedio Palabras Explicativo (Informativo) | ~${report.metrics.averageExplWords} palabras | Referencia continua (calibración en Vids) |\n\n`;
 
   md += `## 2. Detalle de Hallazgos y Discrepancias\n\n`;
 
