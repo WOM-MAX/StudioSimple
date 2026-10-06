@@ -1,0 +1,48 @@
+{
+  "curso": "110-7",
+  "asignatura": "Matematica",
+  "oa": "OA01",
+  "identificador_paquete": "110-7-MAT-OA01",
+  "version": "1.0.0",
+  "fecha_actualizacion": "2026-10-06",
+  "estado": "EN_REVISION",
+  "total_clases": 6,
+  "fuente_oficial_unica_docx": {
+    "archivo": "Plan_Maestro_7Básico_110-7-MAT-OA01_6Lecciones.docx",
+    "rol": "Unica fuente oficial de produccion de lecciones y prompts",
+    "sha256": "f53dcdb5f481ae288757db6fa858dacdc39bc235d2407347ceb99c9ec4ca0087",
+    "bytes": 40402
+  },
+  "prompts_asociados": {
+    "archivo": "Prompts_Work_Matematica_7B_OA01.txt",
+    "total_laminas": 84,
+    "laminas_por_clase": 14,
+    "perfil_visual": "Perfil 7° Básico (14 láminas bimodales: 7 Gancho + 7 Explicación; sin desafío final en video)"
+  },
+  "fundamentacion_curricular": {
+    "temario_eell": {
+      "archivo": "TEMARIOS EELL/temario 7° basico.pdf",
+      "pagina": 5,
+      "seccion": "Eje Números y Operaciones - OA01: Comprenden adición y sustracción de enteros",
+      "estado_fuente": "verificada"
+    },
+    "insumos_mineduc": {
+      "texto_estudiante_pdf": "INSUMOS/LIBROS DIGITALES Y GUÍAS/110-7/Matemática.pdf",
+      "unidad_y_paginas": "Unidad 1, Tema 1 (pág. 12 a 23)",
+      "estado_fuente": "no_evaluable"
+    }
+  },
+  "resolucion_rutas_typescript": {
+    "raiz_app_spa": "Web Studio Simple/",
+    "alias_tsconfig": "@/* -> ./src/*",
+    "sincronizacion_con_docx": "sincronizado",
+    "archivos_clases_ts": [
+      "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase01.ts",
+      "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase02.ts",
+      "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase03.ts",
+      "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase04.ts",
+      "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase05.ts",
+      "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase06.ts"
+    ]
+  }
+}

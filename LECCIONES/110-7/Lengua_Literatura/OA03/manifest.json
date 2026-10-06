@@ -1,25 +1,17 @@
 {
-  "curso": "7_Basico",
+  "curso": "110-7",
   "asignatura": "Lengua_Literatura",
   "oa": "OA03",
   "identificador_paquete": "110-7-LEN-OA03",
   "version": "2.6.0",
-  "fecha_actualizacion": "2026-10-05",
-  "estado": "Oficial y Certificado",
+  "fecha_actualizacion": "2026-10-06",
+  "estado": "EN_REVISION",
   "total_clases": 6,
   "fuente_oficial_unica_docx": {
     "archivo": "Plan_Maestro_7Básico_110-7-LEN-OA03_6Lecciones.docx",
     "rol": "Unica fuente oficial de produccion de lecciones y prompts",
     "sha256": "306a56cd08d18eab309253553d68767fdba73eeb62114657fb341375899af41b",
     "bytes": 67910
-  },
-  "alias_docx": {
-    "archivo": "Lenguaje_OA03.docx",
-    "generado_desde": "Plan_Maestro_7Básico_110-7-LEN-OA03_6Lecciones.docx",
-    "rol": "Copia alias para retrocompatibilidad con scripts legados",
-    "sha256": "306a56cd08d18eab309253553d68767fdba73eeb62114657fb341375899af41b",
-    "bytes": 67910,
-    "validacion_divergencia": "0 bytes de diferencia / SHA256 identico verificado"
   },
   "prompts_asociados": {
     "archivo": "Prompts_Work_Lenguaje_7B_OA03.txt",

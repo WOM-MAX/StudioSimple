@@ -1,25 +1,17 @@
 {
-  "curso": "7_Basico",
+  "curso": "110-7",
   "asignatura": "Ciencias_Naturales",
   "oa": "OA01",
   "identificador_paquete": "110-7-CIE-OA01",
   "version": "1.4.0",
-  "fecha_actualizacion": "2026-10-05",
-  "estado": "Oficial y Certificado",
+  "fecha_actualizacion": "2026-10-06",
+  "estado": "EN_REVISION",
   "total_clases": 6,
   "fuente_oficial_unica_docx": {
     "archivo": "Plan_Maestro_7Básico_110-7-CIE-OA01_6Lecciones.docx",
     "rol": "Unica fuente oficial de produccion de lecciones y prompts",
     "sha256": "07a82f7119a7cba25982ac03d5c0841ac997dcdeef74f28629a207f1589e1780",
     "bytes": 82152
-  },
-  "alias_docx": {
-    "archivo": "Ciencias_OA01.docx",
-    "generado_desde": "Plan_Maestro_7Básico_110-7-CIE-OA01_6Lecciones.docx",
-    "rol": "Copia alias para retrocompatibilidad con scripts legados",
-    "sha256": "07a82f7119a7cba25982ac03d5c0841ac997dcdeef74f28629a207f1589e1780",
-    "bytes": 82152,
-    "validacion_divergencia": "0 bytes de diferencia / SHA256 identico verificado"
   },
   "prompts_asociados": {
     "archivo": "Prompts_Work_Ciencias_7B_OA01.txt",

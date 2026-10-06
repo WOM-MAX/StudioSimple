@@ -1,25 +1,17 @@
 {
-  "curso": "7_Basico",
+  "curso": "110-7",
   "asignatura": "Historia_Geografia",
   "oa": "OA02",
   "identificador_paquete": "110-7-HIS-OA02",
   "version": "1.4.0",
-  "fecha_actualizacion": "2026-10-05",
-  "estado": "Oficial y Certificado",
+  "fecha_actualizacion": "2026-10-06",
+  "estado": "EN_REVISION",
   "total_clases": 5,
   "fuente_oficial_unica_docx": {
     "archivo": "Plan_Maestro_7Básico_110-7-HIS-OA02_5Lecciones.docx",
     "rol": "Unica fuente oficial de produccion de lecciones y prompts",
     "sha256": "6102209f960b4fae21913c01559b1092adf2d477556f1890c00fef5cfe2d81ea",
     "bytes": 59282
-  },
-  "alias_docx": {
-    "archivo": "Historia_OA02.docx",
-    "generado_desde": "Plan_Maestro_7Básico_110-7-HIS-OA02_5Lecciones.docx",
-    "rol": "Copia alias para retrocompatibilidad con scripts legados",
-    "sha256": "6102209f960b4fae21913c01559b1092adf2d477556f1890c00fef5cfe2d81ea",
-    "bytes": 59282,
-    "validacion_divergencia": "0 bytes de diferencia / SHA256 identico verificado"
   },
   "prompts_asociados": {
     "archivo": "Prompts_Work_Historia_7B_OA02.txt",

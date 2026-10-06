@@ -46,6 +46,7 @@ import { ParentUser, GradeLevel } from '../../../types';
 import { AdminUser, AdminRole, GuestPass, AuditLogEntry, AuditActionType } from '../../../types/authAdmin';
 import {
   getAllRegisteredUsers,
+  fetchRegisteredUsersFromBackend,
   updateUserGrades,
   updateUserStatus,
   generateTemporaryPassword,
@@ -206,9 +207,19 @@ export const UserManagementView: React.FC = () => {
   const [gatewaySandbox, setGatewaySandbox] = useState(() => pricingConfig.pasarela.modoSandbox ?? true);
   const [gatewaySuccessMsg, setGatewaySuccessMsg] = useState<string | null>(null);
 
-  // Recarga sincronizada
-  const refreshAll = () => {
-    setUsers([...getAllRegisteredUsers()]);
+  const [isLoadingBackendFamilies, setIsLoadingBackendFamilies] = useState(false);
+
+  // Recarga sincronizada desde API central Neon PostgreSQL y repositorios
+  const refreshAll = async () => {
+    setIsLoadingBackendFamilies(true);
+    try {
+      const backendFamilies = await fetchRegisteredUsersFromBackend();
+      setUsers(backendFamilies);
+    } catch {
+      setUsers([...getAllRegisteredUsers()]);
+    } finally {
+      setIsLoadingBackendFamilies(false);
+    }
     setGuestPasses([...getAllGuestPasses()]);
     setAdmins([...getAllAdmins()]);
     setActiveAdminUser(getActiveAdmin());
@@ -369,8 +380,9 @@ export const UserManagementView: React.FC = () => {
         target: deleteTargetUser.rut || deleteTargetUser.email,
         details: `Eliminacion definitiva y purga en cascada de cuenta y suscripcion para ${deleteTargetUser.name} (${deleteTargetUser.email})`
       });
-      deleteUserPermanently(deleteTargetUser.id);
+      await deleteUserPermanently(deleteTargetUser.id);
       setDeleteTargetUser(null);
+      await fetchRegisteredUsersFromBackend();
       refreshAll();
     } catch (err) {
       console.error('Error al eliminar usuario permanentemente:', err);
@@ -868,6 +880,16 @@ export const UserManagementView: React.FC = () => {
                 <option key={g} value={g}>{g}</option>
               ))}
             </select>
+            <button
+              type="button"
+              onClick={() => refreshAll()}
+              disabled={isLoadingBackendFamilies}
+              title="Sincronizar familias con Neon PostgreSQL"
+              className="px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs font-bold text-slate-700 bg-slate-50 hover:bg-slate-100 flex items-center justify-center gap-2 transition-colors cursor-pointer disabled:opacity-60"
+            >
+              <RefreshCw className={`w-3.5 h-3.5 text-[#12A1A4] ${isLoadingBackendFamilies ? 'animate-spin' : ''}`} />
+              <span className="hidden sm:inline">Sincronizar BD</span>
+            </button>
           </div>
 
           {/* Tabla de Familias */}

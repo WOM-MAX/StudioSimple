@@ -4,7 +4,7 @@ import { INITIAL_STUDENT, INITIAL_STUDENTS, INITIAL_PARENT, SAMPLE_LESSON } from
 import { LessonData } from '../types/lesson';
 import { initializeInjectedLessons } from '../lib/lesson-repository';
 import { validateAdminLogin, validateGuestPass, recordAuditLog } from '../lib/admin-repository';
-import { findUserByEmailOrRut, getAllRegisteredUsers, updateUserPassword } from '../lib/user-repository';
+import { findUserByEmailOrRut, getAllRegisteredUsers, updateUserPassword, fetchRegisteredUsersFromBackend } from '../lib/user-repository';
 
 interface AppContextType {
   viewMode: ViewMode;
@@ -114,6 +114,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   useEffect(() => {
     initializeInjectedLessons().catch(console.error);
+    fetchRegisteredUsersFromBackend().catch(() => {});
   }, []);
   const [isSensoryPauseOpen, setIsSensoryPauseOpen] = useState<boolean>(false);
 
@@ -515,7 +516,11 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       return updated;
     });
 
-    updateUserPassword(parent.id, cleanPass);
+    try {
+      await updateUserPassword(parent.id, cleanPass, parent.email, parent.rut);
+    } catch (err: any) {
+      console.warn('[AppContext] Error al sincronizar cambio de clave:', err?.message);
+    }
 
     recordAuditLog({
       actorId: parent.id || 'parent',

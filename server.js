@@ -216,6 +216,63 @@ const server = http.createServer(async (req, res) => {
       }
     }
 
+    // 1b-2. Familias Registradas y Suscripciones (Neon DB + Fallback disco)
+    if (pathname === '/api/admin/families' && method === 'GET') {
+      try {
+        let families = [];
+        let fetchedFromDb = false;
+
+        try {
+          await withPrisma(async (prisma) => {
+            const users = await prisma.user.findMany({
+              orderBy: { createdAt: 'desc' }
+            });
+            families = users.map((u) => ({
+              id: u.id,
+              rut: u.rut || '',
+              name: u.name,
+              email: u.email,
+              phone: u.phone || '',
+              password: u.password || 'demo2026',
+              studentId: u.studentId || `stu-${u.id}`,
+              studentName: u.studentName || 'Estudiante',
+              studentRun: u.studentRun || '',
+              studentPin: u.studentPin || '123456',
+              status: u.status || 'active',
+              subscriptionActive: u.subscriptionActive !== false,
+              plan: u.plan === 'anual' ? 'anual' : 'mensual',
+              enrolledGrades: Array.isArray(u.enrolledGrades) && u.enrolledGrades.length > 0 ? u.enrolledGrades : ['7° Básico'],
+              createdAt: u.createdAt ? u.createdAt.toISOString() : new Date().toISOString(),
+              lastLogin: u.lastLogin ? u.lastLogin.toISOString() : new Date().toISOString()
+            }));
+            fetchedFromDb = true;
+          });
+        } catch (dbErr) {
+          console.warn('[AdminGetFamilies] Fallback Prisma DB:', dbErr.message);
+        }
+
+        const familiesFilePath = path.resolve(__dirname, 'data', 'registered_families.json');
+        if (fetchedFromDb) {
+          try {
+            const dataDir = path.dirname(familiesFilePath);
+            if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+            fs.writeFileSync(familiesFilePath, JSON.stringify(families, null, 2), 'utf8');
+          } catch {}
+        } else if (!fetchedFromDb && fs.existsSync(familiesFilePath)) {
+          try {
+            families = JSON.parse(fs.readFileSync(familiesFilePath, 'utf8'));
+          } catch {}
+        }
+
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ success: true, families, count: families.length, source: fetchedFromDb ? 'database' : 'file' }));
+      } catch (err) {
+        res.writeHead(500, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ success: false, error: err.message }));
+      }
+      return;
+    }
+
     // 1c. Administradores (Persistencia en disco data/admins.json)
     if (pathname === '/api/admin/users') {
       const adminsFilePath = path.resolve(__dirname, 'data', 'admins.json');
@@ -868,6 +925,20 @@ const server = http.createServer(async (req, res) => {
           console.warn('[AdminDeleteFamily] Fallback Prisma DB:', dbErr.message);
         }
 
+        // Purgar tambien de data/registered_families.json
+        const familiesFilePath = path.resolve(__dirname, 'data', 'registered_families.json');
+        if (fs.existsSync(familiesFilePath)) {
+          try {
+            const existingFamilies = JSON.parse(fs.readFileSync(familiesFilePath, 'utf8'));
+            const filteredFamilies = existingFamilies.filter(f => 
+              (!userId || f.id !== userId) &&
+              (!email || f.email?.toLowerCase() !== email.toLowerCase()) &&
+              (!rut || f.rut?.replace(/[^0-9kK]/g, '') !== rut.replace(/[^0-9kK]/g, ''))
+            );
+            fs.writeFileSync(familiesFilePath, JSON.stringify(filteredFamilies, null, 2), 'utf8');
+          } catch {}
+        }
+
         // Registro de auditoria permanente
         const logsFilePath = path.resolve(__dirname, 'data', 'audit_logs.json');
         let existingLogs = [];
@@ -947,6 +1018,24 @@ const server = http.createServer(async (req, res) => {
           });
         } catch (dbErr) {
           console.warn('[UserChangePassword] Fallback Prisma DB:', dbErr.message);
+        }
+
+        // Actualizar tambien en data/registered_families.json
+        const familiesFilePath = path.resolve(__dirname, 'data', 'registered_families.json');
+        if (fs.existsSync(familiesFilePath)) {
+          try {
+            const existingFamilies = JSON.parse(fs.readFileSync(familiesFilePath, 'utf8'));
+            const updatedFamilies = existingFamilies.map((f) => {
+              const matchId = userId && f.id === userId;
+              const matchEmail = email && f.email?.toLowerCase() === email.toLowerCase();
+              const matchRut = rut && f.rut?.replace(/[^0-9kK]/g, '') === rut.replace(/[^0-9kK]/g, '');
+              if (matchId || matchEmail || matchRut) {
+                return { ...f, password: newPassword.trim() };
+              }
+              return f;
+            });
+            fs.writeFileSync(familiesFilePath, JSON.stringify(updatedFamilies, null, 2), 'utf8');
+          } catch {}
         }
 
         const logsFilePath = path.resolve(__dirname, 'data', 'audit_logs.json');
@@ -1478,6 +1567,57 @@ const server = http.createServer(async (req, res) => {
 
           return { user, order };
         });
+
+        // Sincronizar tambien a data/registered_families.json
+        try {
+          const familiesFilePath = path.resolve(__dirname, 'data', 'registered_families.json');
+          const dataDir = path.dirname(familiesFilePath);
+          if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+          let existingFamilies = [];
+          if (fs.existsSync(familiesFilePath)) {
+            try { existingFamilies = JSON.parse(fs.readFileSync(familiesFilePath, 'utf8')); } catch {}
+          }
+          const savedUser = result?.user ? {
+            id: result.user.id,
+            name: result.user.name,
+            email: result.user.email,
+            rut: result.user.rut || rut || '',
+            phone: result.user.phone || phone || '',
+            studentName: result.user.studentName || studentName || 'Estudiante',
+            studentRun: result.user.studentRun || studentRun || '',
+            studentPin: result.user.studentPin || '123456',
+            status: result.user.status || 'active',
+            subscriptionActive: true,
+            plan: result.user.plan || plan || 'mensual',
+            enrolledGrades: result.user.enrolledGrades || [grade || '7° Básico'],
+            createdAt: result.user.createdAt ? result.user.createdAt.toISOString() : new Date().toISOString(),
+            lastLogin: new Date().toISOString()
+          } : {
+            id: `usr-${Date.now()}`,
+            name,
+            email,
+            rut: rut || '',
+            phone: phone || '',
+            studentName: studentName || 'Estudiante',
+            studentRun: studentRun || '',
+            studentPin: '123456',
+            status: 'active',
+            subscriptionActive: true,
+            plan: plan || 'mensual',
+            enrolledGrades: [grade || '7° Básico'],
+            createdAt: new Date().toISOString(),
+            lastLogin: new Date().toISOString()
+          };
+          const userIdx = existingFamilies.findIndex(f => f.email?.toLowerCase() === email.toLowerCase());
+          if (userIdx >= 0) {
+            existingFamilies[userIdx] = { ...existingFamilies[userIdx], ...savedUser, subscriptionActive: true };
+          } else {
+            existingFamilies.unshift(savedUser);
+          }
+          fs.writeFileSync(familiesFilePath, JSON.stringify(existingFamilies, null, 2), 'utf8');
+        } catch (fErr) {
+          console.warn('[Checkout] Error sincronizando archivo de familias:', fErr.message);
+        }
 
         res.writeHead(200);
         res.end(JSON.stringify({ success: true, ...result }));

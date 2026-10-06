@@ -2,6 +2,7 @@ import { ParentUser, GradeLevel } from '../types';
 import { cleanRut, formatRut } from './rut-validator';
 
 const LOCAL_STORAGE_USERS_KEY = 'estudiosimple_registered_users';
+const LOCAL_STORAGE_SYNCED_KEY = 'estudiosimple_users_synced_db';
 
 /**
  * Familias demo iniciales con RUNs chilenos matemáticamente válidos (Módulo 11)
@@ -77,38 +78,83 @@ const SEED_USERS: ParentUser[] = [
   }
 ];
 
+let isInitialized = false;
 let cachedUsers: ParentUser[] = [];
 
 /**
- * Inicializa el repositorio desde localStorage o carga los usuarios semilla.
+ * Inicializa el repositorio desde localStorage o carga los usuarios semilla solo si nunca se ha sincronizado.
  */
 export function initializeUsersRegistry(): ParentUser[] {
   if (typeof window === 'undefined') {
-    cachedUsers = [...SEED_USERS];
+    if (!isInitialized) {
+      cachedUsers = [...SEED_USERS];
+      isInitialized = true;
+    }
     return cachedUsers;
   }
 
   try {
     const raw = localStorage.getItem(LOCAL_STORAGE_USERS_KEY);
-    if (raw) {
+    const synced = localStorage.getItem(LOCAL_STORAGE_SYNCED_KEY);
+
+    if (raw !== null) {
+      // Si existe la clave en localStorage (incluso si es []), se respeta el estado del usuario/servidor
       cachedUsers = JSON.parse(raw);
+    } else if (synced === 'true') {
+      // Ya se sincronizó con el backend previamente, mantener lista vacía en lugar de reinyectar semillas
+      cachedUsers = [];
+      localStorage.setItem(LOCAL_STORAGE_USERS_KEY, '[]');
     } else {
+      // Primera ejecución pura sin sincronización previa con el backend
       cachedUsers = [...SEED_USERS];
       localStorage.setItem(LOCAL_STORAGE_USERS_KEY, JSON.stringify(cachedUsers));
     }
   } catch (err) {
     console.error('Error al inicializar registro de usuarios:', err);
-    cachedUsers = [...SEED_USERS];
+    cachedUsers = [];
   }
 
+  isInitialized = true;
   return cachedUsers;
 }
 
 /**
- * Obtiene todos los usuarios registrados.
+ * Carga de forma asíncrona la lista centralizada de familias desde Neon DB / API backend
+ * y actualiza la caché local suprimiendo semillas demo.
+ */
+export async function fetchRegisteredUsersFromBackend(): Promise<ParentUser[]> {
+  if (typeof window === 'undefined' || typeof fetch !== 'function') {
+    return getAllRegisteredUsers();
+  }
+
+  try {
+    const res = await fetch('/api/admin/families');
+    if (res.ok) {
+      const data = await res.json();
+      if (data && data.success && Array.isArray(data.families)) {
+        cachedUsers = data.families;
+        isInitialized = true;
+        try {
+          localStorage.setItem(LOCAL_STORAGE_USERS_KEY, JSON.stringify(data.families));
+          localStorage.setItem(LOCAL_STORAGE_SYNCED_KEY, 'true');
+        } catch (e) {
+          console.warn('[UserRepository] Error al guardar en localStorage:', e);
+        }
+        return data.families;
+      }
+    }
+  } catch (err) {
+    console.warn('[UserRepository] No se pudo conectar al endpoint /api/admin/families:', err);
+  }
+
+  return getAllRegisteredUsers();
+}
+
+/**
+ * Obtiene todos los usuarios registrados (desde memoria o localStorage).
  */
 export function getAllRegisteredUsers(): ParentUser[] {
-  if (cachedUsers.length === 0) {
+  if (!isInitialized) {
     initializeUsersRegistry();
   }
   return cachedUsers;
@@ -122,6 +168,7 @@ function persistUsers(users: ParentUser[]): void {
   if (typeof window !== 'undefined') {
     try {
       localStorage.setItem(LOCAL_STORAGE_USERS_KEY, JSON.stringify(users));
+      localStorage.setItem(LOCAL_STORAGE_SYNCED_KEY, 'true');
     } catch (err) {
       console.error('Error al guardar usuarios en localStorage:', err);
     }
@@ -278,9 +325,23 @@ export function updateUserStatus(userId: string, status: 'active' | 'suspended' 
  * Actualiza la contraseña personalizada del apoderado, persiste localmente
  * y sincroniza hacia Neon DB a traves de la API.
  */
-export function updateUserPassword(userId: string, newPassword: string): void {
+export async function updateUserPassword(
+  userId: string,
+  newPassword: string,
+  email?: string,
+  rut?: string
+): Promise<{ success: boolean; message?: string }> {
   const users = getAllRegisteredUsers();
-  const idx = users.findIndex((u) => u.id === userId);
+  const cleanIncomingRut = rut ? cleanRut(rut) : '';
+  const normalizedEmail = email ? email.toLowerCase().trim() : '';
+
+  const idx = users.findIndex((u) => {
+    if (userId && u.id === userId) return true;
+    if (normalizedEmail && u.email?.toLowerCase().trim() === normalizedEmail) return true;
+    if (cleanIncomingRut && u.rut && cleanRut(u.rut) === cleanIncomingRut) return true;
+    return false;
+  });
+
   let targetUser: ParentUser | null = null;
 
   if (idx >= 0) {
@@ -292,20 +353,27 @@ export function updateUserPassword(userId: string, newPassword: string): void {
     persistUsers(users);
   }
 
-  if (typeof fetch !== 'undefined' && targetUser) {
-    fetch('/api/user/change-password', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        userId: targetUser.id,
-        email: targetUser.email,
-        rut: targetUser.rut,
-        newPassword
-      })
-    }).catch((err) => {
+  if (typeof fetch !== 'undefined') {
+    try {
+      const res = await fetch('/api/user/change-password', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          userId: targetUser?.id || userId,
+          email: targetUser?.email || email,
+          rut: targetUser?.rut || rut,
+          newPassword
+        })
+      });
+      const data = await res.json();
+      return { success: data.success !== false, message: data.message };
+    } catch (err: any) {
       console.warn('[UserRepository] Error al sincronizar cambio de clave en backend:', err?.message);
-    });
+      return { success: true, message: 'Actualizado localmente' };
+    }
   }
+
+  return { success: true };
 }
 
 /**
@@ -392,7 +460,7 @@ export function findUserByEmailOrRut(identifier: string): ParentUser | null {
 /**
  * Elimina definitivamente un usuario y su suscripcion asociada de localStorage y del backend.
  */
-export function deleteUserPermanently(userId: string): boolean {
+export async function deleteUserPermanently(userId: string): Promise<boolean> {
   const users = getAllRegisteredUsers();
   const target = users.find((u) => u.id === userId);
   if (!target) return false;
@@ -402,17 +470,19 @@ export function deleteUserPermanently(userId: string): boolean {
 
   // Despacho asincrono de purga a nivel servidor y base de datos Neon
   if (typeof fetch !== 'undefined') {
-    fetch('/api/admin/family/delete', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        userId: target.id,
-        email: target.email,
-        rut: target.rut
-      })
-    }).catch((err) => {
+    try {
+      await fetch('/api/admin/family/delete', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          userId: target.id,
+          email: target.email,
+          rut: target.rut
+        })
+      });
+    } catch (err: any) {
       console.warn('[UserRepository] Error al sincronizar eliminacion en backend:', err?.message);
-    });
+    }
   }
 
   return true;

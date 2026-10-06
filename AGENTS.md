@@ -116,6 +116,7 @@ El entregable y criterios de **Salida** son: Cumplimiento estricto del protocolo
      - Historia, Geografía y Cs. Sociales: Pensamiento histórico, análisis de fuentes y contextualización espacio-temporal.
      - Inglés (EFL): Enfoque comunicativo funcional, input comprensible y vocabulario en contexto.
   4. *Alcance por OA (Objetivo de Aprendizaje Específico):* Alineación estricta con los Temarios Oficiales de Exámenes Libres (EELL) del MINEDUC, progresión didáctica de la lección y coherencia con el `manifest.json` y el DOCX oficial del OA.
+- **Mecanismo de Invocación de la Skill de Lecciones:** Ante toda solicitud de crear, auditar o modificar lecciones pedagógicas (3° a 8° básico), Antigravity DEBE invocar y ejecutar obligatoriamente el flujo de 12 pasos de `.agents/skills/estudiosimple-lecciones/SKILL.md`, consultando los perfiles de curso y asignatura pertinentes y registrando los estados normativos (`EN_REVISION`, `REQUIERE_AJUSTES`, `APROBADA`) en el `manifest.json`.
 - **Eficiencia en Terminal y Scripts:** Prohibido ejecutar comandos de búsqueda recursiva masiva que caigan a segundo plano o interrumpan la sesión. Todo script de automatización o procesamiento de datos debe desarrollarse en TypeScript y ejecutarse mediante `npx tsx scripts/[nombre].ts`, evitando scripts improvisados en Python que fallen por codificación (cp1252) en Windows.
 - **Circuito de Protección y Autocorrección:** Máximo 4 intentos iterativos de corrección ante un fallo de compilación antes de cambiar de enfoque estratégico, evitando bucles repetitivos infinitos.
 - **Control de Procesos Bloqueantes (Windows):** Identificar procesos bloqueantes (servidores dev o archivos tomados por el sistema con error EBUSY/EPERM) antes de ejecutar limpiezas o reemplazos de paquetes y archivos.
@@ -150,6 +151,7 @@ El entregable y criterios de **Salida** son: Cumplimiento estricto del protocolo
 > ⚡ **DIRECTIVA MANDATORIA (Zero-Config Skills):** 
 > Las habilidades requeridas para este proyecto han sido inyectadas localmente en la carpeta `.agents/skills/`. 
 > **ESTÁ ESTRICTAMENTE PROHIBIDO** ignorar estos archivos. Antes de escribir una sola línea de código, DEBES leer obligatoriamente el archivo `SKILL.md` de cada habilidad listada abajo y APLICAR AL PIE DE LA LETRA sus convenciones, reglas de diseño y arquitectura durante TODO el ciclo de desarrollo. No trabajes de memoria.
+- **EstudioSimple Lecciones**: `.agents/skills/estudiosimple-lecciones/SKILL.md`
 - **Educational Expert**: `.agents/skills/educational_expert/SKILL.md`
 - **Curriculum MINEDUC Expert**: `.agents/skills/curriculum_mineduc_expert/SKILL.md`
 - **Instructional Design Expert**: `.agents/skills/instructional_design_expert/SKILL.md`

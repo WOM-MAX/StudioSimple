@@ -234,11 +234,91 @@ export default defineConfig({
             return;
           }
 
+          if (url === '/api/admin/families' && req.method === 'GET') {
+            try {
+              const familiesFilePath = path.resolve(__dirname, '../data/registered_families.json');
+              let families = [];
+              if (fs.existsSync(familiesFilePath)) {
+                try {
+                  families = JSON.parse(fs.readFileSync(familiesFilePath, 'utf8'));
+                } catch {}
+              }
+              res.setHeader('Content-Type', 'application/json');
+              return res.end(JSON.stringify({ success: true, families, count: families.length, source: 'file_dev' }));
+            } catch (e: any) {
+              res.statusCode = 500;
+              res.setHeader('Content-Type', 'application/json');
+              return res.end(JSON.stringify({ success: false, error: e?.message }));
+            }
+          }
+
+          if (url === '/api/checkout' && req.method === 'POST') {
+            let body = '';
+            req.on('data', chunk => { body += chunk; });
+            req.on('end', () => {
+              try {
+                const parsed = JSON.parse(body || '{}');
+                const familiesFilePath = path.resolve(__dirname, '../data/registered_families.json');
+                const dataDir = path.dirname(familiesFilePath);
+                if (!fs.existsSync(dataDir)) {
+                  fs.mkdirSync(dataDir, { recursive: true });
+                }
+                let families = [];
+                if (fs.existsSync(familiesFilePath)) {
+                  try { families = JSON.parse(fs.readFileSync(familiesFilePath, 'utf8')); } catch {}
+                }
+                const newFam = {
+                  id: `usr-${Date.now()}`,
+                  rut: parsed.rut || '',
+                  name: parsed.name,
+                  email: parsed.email,
+                  phone: parsed.phone || '',
+                  studentName: parsed.studentName || 'Estudiante',
+                  studentRun: parsed.studentRun || '',
+                  studentPin: '123456',
+                  status: 'active',
+                  subscriptionActive: true,
+                  plan: parsed.plan || 'mensual',
+                  enrolledGrades: [parsed.grade || '7° Básico'],
+                  createdAt: new Date().toISOString(),
+                  lastLogin: new Date().toISOString()
+                };
+                const existingIdx = families.findIndex((f: any) => f.email?.toLowerCase() === (parsed.email || '').toLowerCase().trim());
+                if (existingIdx >= 0) {
+                  families[existingIdx] = { ...families[existingIdx], ...newFam, subscriptionActive: true };
+                } else {
+                  families.unshift(newFam);
+                }
+                fs.writeFileSync(familiesFilePath, JSON.stringify(families, null, 2), 'utf8');
+                res.setHeader('Content-Type', 'application/json');
+                return res.end(JSON.stringify({ success: true, user: newFam }));
+              } catch (e: any) {
+                res.statusCode = 500;
+                res.setHeader('Content-Type', 'application/json');
+                return res.end(JSON.stringify({ success: false, error: e?.message }));
+              }
+            });
+            return;
+          }
+
           if (url === '/api/admin/family/delete' && req.method === 'POST') {
             let body = '';
             req.on('data', chunk => { body += chunk; });
             req.on('end', () => {
               try {
+                const parsed = JSON.parse(body || '{}');
+                const familiesFilePath = path.resolve(__dirname, '../data/registered_families.json');
+                if (fs.existsSync(familiesFilePath)) {
+                  try {
+                    let families = JSON.parse(fs.readFileSync(familiesFilePath, 'utf8'));
+                    families = families.filter((f: any) => 
+                      (!parsed.userId || f.id !== parsed.userId) &&
+                      (!parsed.email || f.email?.toLowerCase() !== parsed.email.toLowerCase()) &&
+                      (!parsed.rut || f.rut?.replace(/[^0-9kK]/g, '') !== parsed.rut.replace(/[^0-9kK]/g, ''))
+                    );
+                    fs.writeFileSync(familiesFilePath, JSON.stringify(families, null, 2), 'utf8');
+                  } catch {}
+                }
                 res.setHeader('Content-Type', 'application/json');
                 return res.end(JSON.stringify({
                   success: true,
@@ -343,6 +423,23 @@ export default defineConfig({
                   res.statusCode = 400;
                   res.setHeader('Content-Type', 'application/json');
                   return res.end(JSON.stringify({ success: false, message: 'La contraseña debe tener al menos 6 caracteres' }));
+                }
+
+                const familiesFilePath = path.resolve(__dirname, '../data/registered_families.json');
+                if (fs.existsSync(familiesFilePath)) {
+                  try {
+                    let families = JSON.parse(fs.readFileSync(familiesFilePath, 'utf8'));
+                    families = families.map((f: any) => {
+                      const matchId = parsed.userId && f.id === parsed.userId;
+                      const matchEmail = parsed.email && f.email?.toLowerCase() === parsed.email.toLowerCase();
+                      const matchRut = parsed.rut && f.rut?.replace(/[^0-9kK]/g, '') === parsed.rut.replace(/[^0-9kK]/g, '');
+                      if (matchId || matchEmail || matchRut) {
+                        return { ...f, password: parsed.newPassword.trim() };
+                      }
+                      return f;
+                    });
+                    fs.writeFileSync(familiesFilePath, JSON.stringify(families, null, 2), 'utf8');
+                  } catch {}
                 }
 
                 res.setHeader('Content-Type', 'application/json');
