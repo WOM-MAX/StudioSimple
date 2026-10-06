@@ -1,0 +1,14 @@
+[
+  {
+    "id": "email-1791324730730",
+    "timestamp": "2026-10-06T22:12:10.730Z",
+    "recipient": "wom@colegioacropolis.net",
+    "name": "WALTER ORELLANA",
+    "grade": "7° Básico",
+    "studentPin": "278748",
+    "mode": "simulated",
+    "dispatched": false,
+    "details": null,
+    "plan": "mensual"
+  }
+]

@@ -139,6 +139,272 @@ function readJsonBody(req) {
 }
 
 // -----------------------------------------------------------------------------
+// SERVICIO DE CORREO TRANSACCIONAL DUAL (RESEND API + SMTP UNIVERSAL)
+// -----------------------------------------------------------------------------
+
+let nodemailer = null;
+try {
+  nodemailer = require('nodemailer');
+} catch (e) {}
+
+async function sendWelcomeEmail({
+  email,
+  name,
+  rut,
+  password,
+  studentName,
+  grade,
+  studentPin,
+  plan,
+  amount
+}) {
+  if (!email) {
+    return { success: false, error: 'Email de destinatario requerido' };
+  }
+
+  const planName = plan === 'full' || plan === 'anual' ? 'Plan Anual Exámenes Libres' : (plan === 'monthly' || plan === 'mensual' ? 'Plan Mensual Continuo' : 'Plan EstudioSimple');
+  const formattedAmount = amount ? `$${Number(amount).toLocaleString('es-CL')} CLP` : '$1.000 CLP';
+
+  const emailHtml = `<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Tus Credenciales Oficiales de EstudioSimple</title>
+</head>
+<body style="margin:0;padding:0;background-color:#0A192F;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#FFFFFF;">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color:#0A192F;padding:30px 15px;">
+    <tr>
+      <td align="center">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width:600px;background-color:#10223D;border:1px solid #1C3257;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.4);">
+          <!-- Header -->
+          <tr>
+            <td style="background-color:#0E1B31;padding:24px 30px;border-bottom:2px solid #F8AD22;text-align:center;">
+              <h1 style="margin:0;font-size:22px;font-weight:900;letter-spacing:1px;color:#FFFFFF;">
+                ESTUDIO<span style="color:#F8AD22;">SIMPLE</span>
+              </h1>
+              <p style="margin:6px 0 0 0;font-size:11px;color:#57d6f3;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;">
+                Acompañamiento Curricular y Exámenes Libres MINEDUC
+              </p>
+            </td>
+          </tr>
+          <!-- Main Content -->
+          <tr>
+            <td style="padding:32px 30px;">
+              <h2 style="margin:0 0 12px 0;font-size:20px;font-weight:800;color:#FFFFFF;">
+                ¡Bienvenida/o a la familia EstudioSimple!
+              </h2>
+              <p style="margin:0 0 20px 0;font-size:13px;color:#CBD5E1;line-height:1.6;">
+                Hola <strong>${name || 'Apoderado'}</strong>, tu suscripción a <strong>${grade || '7° Básico'}</strong> ha sido activada con éxito (${planName} - ${formattedAmount}). A continuación encuentras la ficha oficial con las claves de acceso de tu familia:
+              </p>
+
+              <!-- Tarjeta Apoderado -->
+              <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color:#162A4A;border:1px solid #233D66;border-radius:12px;margin-bottom:20px;">
+                <tr>
+                  <td style="padding:18px 20px;">
+                    <div style="font-size:11px;font-weight:800;color:#57d6f3;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;">
+                      ACCESO DEL APODERADO / TUTOR LEGAL
+                    </div>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="4" style="font-size:13px;">
+                      <tr>
+                        <td width="35%" style="color:#94A3B8;">RUN de Acceso:</td>
+                        <td style="color:#FFFFFF;font-weight:700;font-family:monospace;">${rut || 'No especificado'}</td>
+                      </tr>
+                      <tr>
+                        <td style="color:#94A3B8;">Correo Electrónico:</td>
+                        <td style="color:#FFFFFF;font-weight:700;">${email}</td>
+                      </tr>
+                      <tr>
+                        <td style="color:#94A3B8;">Contraseña:</td>
+                        <td style="color:#34D399;font-weight:700;font-family:monospace;">${password || 'Asignada en checkout'}</td>
+                      </tr>
+                    </table>
+                    <p style="margin:10px 0 0 0;font-size:11px;color:#94A3B8;line-height:1.4;">
+                      Usa estas credenciales para acceder al Portal del Apoderado, supervisar el avance de tu hijo/a y gestionar tu suscripción.
+                    </p>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Tarjeta Estudiante -->
+              <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color:#1E293B;border:2px solid #F8AD22;border-radius:12px;margin-bottom:24px;">
+                <tr>
+                  <td style="padding:18px 20px;text-align:center;">
+                    <div style="font-size:11px;font-weight:800;color:#F8AD22;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">
+                      ACCESO DEL ESTUDIANTE (SALÓN DE CLASES)
+                    </div>
+                    <div style="font-size:14px;color:#FFFFFF;font-weight:700;margin-bottom:12px;">
+                      ${studentName || 'Estudiante'} (${grade || '7° Básico'})
+                    </div>
+                    <div style="background-color:#0A192F;border:1px dashed #F8AD22;padding:12px 18px;border-radius:10px;display:inline-block;margin-bottom:10px;">
+                      <div style="font-size:10px;color:#94A3B8;text-transform:uppercase;font-weight:700;">PIN Numérico de Ingreso</div>
+                      <div style="font-size:30px;font-family:monospace;font-weight:900;letter-spacing:6px;color:#F8AD22;margin-top:2px;">
+                        ${studentPin || '123456'}
+                      </div>
+                    </div>
+                    <p style="margin:0;font-size:11px;color:#CBD5E1;line-height:1.4;">
+                      Tu hijo/a solo necesita ingresar este PIN de 6 dígitos en la pantalla de inicio para comenzar sus clases inmediatamente, sin necesidad de recordar contraseñas largas.
+                    </p>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Boton de Acceso -->
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td align="center">
+                    <a href="https://estudiosimple.cl" target="_blank" style="background-color:#EE751C;color:#FFFFFF;font-size:14px;font-weight:800;text-decoration:none;padding:14px 32px;border-radius:12px;display:inline-block;letter-spacing:0.5px;">
+                      Comenzar a Estudiar Ahora
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- Footer -->
+          <tr>
+            <td style="background-color:#0A192F;padding:20px 30px;border-top:1px solid #1C3257;text-align:center;font-size:11px;color:#64748B;line-height:1.5;">
+              <p style="margin:0 0 6px 0;">EstudioSimple SpA - Plataforma de Acompañamiento Curricular Homeschooling</p>
+              <p style="margin:0;">¿Necesitas ayuda? Escríbenos a <a href="mailto:soporte@estudiosimple.cl" style="color:#57d6f3;text-decoration:none;">soporte@estudiosimple.cl</a> o vía WhatsApp oficial.</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>`;
+
+  let emailMode = 'simulated';
+  let emailDispatched = false;
+  let deliveryDetails = null;
+
+  const resendKey = process.env.RESEND_API_KEY;
+  const smtpHost = process.env.SMTP_HOST;
+
+  // 1. Proveedor Resend API
+  if (resendKey && resendKey.trim()) {
+    try {
+      const resendResponse = await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${resendKey.trim()}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          from: process.env.EMAIL_FROM || 'EstudioSimple <bienvenida@estudiosimple.cl>',
+          to: [email],
+          subject: `Bienvenida/o a EstudioSimple - Credenciales Oficiales de ${grade || 'Curso'}`,
+          html: emailHtml
+        })
+      });
+      const resendData = await resendResponse.json();
+      if (resendData && resendData.id) {
+        emailMode = 'resend';
+        emailDispatched = true;
+        deliveryDetails = { id: resendData.id };
+        console.log(`[MailService] Correo enviado vía Resend a ${email} (ID: ${resendData.id})`);
+      } else {
+        console.warn('[MailService] Resend API devolvió advertencia:', resendData);
+      }
+    } catch (resendErr) {
+      console.warn('[MailService] Error en Resend API:', resendErr.message);
+    }
+  }
+
+  // 2. Proveedor SMTP Universal (Nodemailer)
+  if (!emailDispatched && smtpHost && smtpHost.trim()) {
+    try {
+      if (!nodemailer) {
+        nodemailer = require('nodemailer');
+      }
+      const port = Number(process.env.SMTP_PORT) || 587;
+      const secure = port === 465 || process.env.SMTP_SECURE === 'true';
+      const transporter = nodemailer.createTransport({
+        host: smtpHost.trim(),
+        port,
+        secure,
+        auth: {
+          user: (process.env.SMTP_USER || '').trim(),
+          pass: (process.env.SMTP_PASS || process.env.SMTP_PASSWORD || '').trim()
+        },
+        tls: {
+          rejectUnauthorized: process.env.SMTP_IGNORE_TLS === 'true' ? false : true
+        }
+      });
+
+      const fromAddress = process.env.EMAIL_FROM || (process.env.SMTP_USER ? `EstudioSimple <${process.env.SMTP_USER.trim()}>` : 'EstudioSimple <bienvenida@estudiosimple.cl>');
+
+      const info = await transporter.sendMail({
+        from: fromAddress,
+        to: email,
+        subject: `Bienvenida/o a EstudioSimple - Credenciales Oficiales de ${grade || 'Curso'}`,
+        html: emailHtml
+      });
+
+      emailMode = 'smtp';
+      emailDispatched = true;
+      deliveryDetails = { messageId: info.messageId };
+      console.log(`[MailService] Correo enviado vía SMTP a ${email} (MessageID: ${info.messageId})`);
+    } catch (smtpErr) {
+      console.warn('[MailService] Error enviando correo vía SMTP:', smtpErr.message);
+    }
+  }
+
+  // 3. Persistencia en disco (data/sent_emails.json)
+  const emailsFilePath = path.resolve(__dirname, 'data', 'sent_emails.json');
+  let sentEmails = [];
+  if (fs.existsSync(emailsFilePath)) {
+    try { sentEmails = JSON.parse(fs.readFileSync(emailsFilePath, 'utf8')); } catch {}
+  }
+  sentEmails.unshift({
+    id: `email-${Date.now()}`,
+    timestamp: new Date().toISOString(),
+    recipient: email,
+    name,
+    grade,
+    studentPin,
+    mode: emailMode,
+    dispatched: emailDispatched,
+    details: deliveryDetails,
+    plan
+  });
+  const dataDir = path.dirname(emailsFilePath);
+  if (!fs.existsSync(dataDir)) {
+    fs.mkdirSync(dataDir, { recursive: true });
+  }
+  fs.writeFileSync(emailsFilePath, JSON.stringify(sentEmails.slice(0, 100), null, 2), 'utf8');
+
+  // 4. Registro en auditoria
+  const logsFilePath = path.resolve(__dirname, 'data', 'audit_logs.json');
+  let existingLogs = [];
+  if (fs.existsSync(logsFilePath)) {
+    try { existingLogs = JSON.parse(fs.readFileSync(logsFilePath, 'utf8')); } catch {}
+  }
+  existingLogs.unshift({
+    id: `log-mail-${Date.now()}`,
+    timestamp: new Date().toISOString(),
+    actorId: 'mail-service',
+    actorName: 'Servicio de Correo',
+    actorRole: 'system',
+    action: 'SEND_WELCOME_CREDENTIALS',
+    target: email,
+    details: `Despacho de credenciales (${emailMode}) a ${email} para estudiante ${studentName || 'Estudiante'} (${grade || '7° Básico'}). PIN: ${studentPin || '123456'}. Proveedor activo: ${emailDispatched}`
+  });
+  fs.writeFileSync(logsFilePath, JSON.stringify(existingLogs.slice(0, 1000), null, 2), 'utf8');
+
+  return {
+    success: true,
+    mode: emailMode,
+    dispatched: emailDispatched,
+    details: deliveryDetails,
+    recipient: email,
+    message: emailDispatched
+      ? `Credenciales entregadas con éxito a ${email} vía ${emailMode}`
+      : `Credenciales generadas en modo simulado para ${email} (configure RESEND_API_KEY o SMTP_* para envío real)`
+  };
+}
+
+// -----------------------------------------------------------------------------
 // SERVIDOR HTTP PRINCIPAL
 // -----------------------------------------------------------------------------
 
@@ -939,6 +1205,23 @@ const server = http.createServer(async (req, res) => {
               } catch (prismaErr) {
                 console.warn('[MercadoPago Webhook] Fallo Neon DB, pero usuario ya salvado en JSON:', prismaErr.message);
               }
+
+              // 3. Despacho automatico de correo de bienvenida y credenciales en segundo plano (Server-Side)
+              sendWelcomeEmail({
+                email: payerEmail,
+                name: familyRecord.name,
+                rut: familyRecord.rut,
+                password: familyRecord.password,
+                studentName: familyRecord.studentName,
+                grade: grade || '7° Básico',
+                studentPin: familyRecord.studentPin,
+                plan: familyRecord.plan,
+                amount
+              }).then(mRes => {
+                console.log(`[MercadoPago Webhook] Despacho de bienvenida para ${payerEmail}: modo ${mRes.mode}, enviado: ${mRes.dispatched}`);
+              }).catch(mailErr => {
+                console.warn('[MercadoPago Webhook] Advertencia despachando correo de bienvenida:', mailErr.message);
+              });
             }
           } catch (autoProvErr) {
             console.error('[MercadoPago Webhook] Error en auto-aprovisionamiento:', autoProvErr.message);
@@ -1387,212 +1670,11 @@ const server = http.createServer(async (req, res) => {
     if (pathname === '/api/mail/send-welcome' && method === 'POST') {
       try {
         const body = await readJsonBody(req);
-        const {
-          email,
-          name,
-          rut,
-          password,
-          studentName,
-          grade,
-          studentPin,
-          plan,
-          amount
-        } = body;
-
-        if (!email) {
-          res.writeHead(400);
-          res.end(JSON.stringify({ success: false, error: 'Email de destinatario requerido' }));
-          return;
-        }
-
-        const planName = plan === 'full' ? 'Plan Anual Exámenes Libres' : (plan === 'monthly' ? 'Plan Mensual Continuo' : 'Prueba Gratuita 7 Días');
-        const formattedAmount = amount ? `$${Number(amount).toLocaleString('es-CL')} CLP` : '$0 CLP';
-
-        const emailHtml = `<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="utf-8">
-  <title>Tus Credenciales Oficiales de EstudioSimple</title>
-</head>
-<body style="margin:0;padding:0;background-color:#0A192F;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#FFFFFF;">
-  <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color:#0A192F;padding:30px 15px;">
-    <tr>
-      <td align="center">
-        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width:600px;background-color:#10223D;border:1px solid #1C3257;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.4);">
-          <!-- Header -->
-          <tr>
-            <td style="background-color:#0E1B31;padding:24px 30px;border-bottom:2px solid #F8AD22;text-align:center;">
-              <h1 style="margin:0;font-size:22px;font-weight:900;letter-spacing:1px;color:#FFFFFF;">
-                ESTUDIO<span style="color:#F8AD22;">SIMPLE</span>
-              </h1>
-              <p style="margin:6px 0 0 0;font-size:11px;color:#57d6f3;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;">
-                Acompañamiento Curricular y Exámenes Libres MINEDUC
-              </p>
-            </td>
-          </tr>
-          <!-- Main Content -->
-          <tr>
-            <td style="padding:32px 30px;">
-              <h2 style="margin:0 0 12px 0;font-size:20px;font-weight:800;color:#FFFFFF;">
-                ¡Bienvenida/o a la familia EstudioSimple!
-              </h2>
-              <p style="margin:0 0 20px 0;font-size:13px;color:#CBD5E1;line-height:1.6;">
-                Hola <strong>${name || 'Apoderado'}</strong>, tu suscripción a <strong>${grade || 'Enseñanza Básica'}</strong> ha sido activada con éxito (${planName} - ${formattedAmount}). A continuación encuentras la ficha oficial con las claves de acceso de tu familia:
-              </p>
-
-              <!-- Tarjeta Apoderado -->
-              <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color:#162A4A;border:1px solid #233D66;border-radius:12px;margin-bottom:20px;">
-                <tr>
-                  <td style="padding:18px 20px;">
-                    <div style="font-size:11px;font-weight:800;color:#57d6f3;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;">
-                      ACCESO DEL APODERADO / TUTOR LEGAL
-                    </div>
-                    <table width="100%" border="0" cellspacing="0" cellpadding="4" style="font-size:13px;">
-                      <tr>
-                        <td width="35%" style="color:#94A3B8;">RUN de Acceso:</td>
-                        <td style="color:#FFFFFF;font-weight:700;font-family:monospace;">${rut || 'No especificado'}</td>
-                      </tr>
-                      <tr>
-                        <td style="color:#94A3B8;">Correo Electrónico:</td>
-                        <td style="color:#FFFFFF;font-weight:700;">${email}</td>
-                      </tr>
-                      <tr>
-                        <td style="color:#94A3B8;">Contraseña:</td>
-                        <td style="color:#34D399;font-weight:700;font-family:monospace;">${password || 'Asignada en checkout'}</td>
-                      </tr>
-                    </table>
-                    <p style="margin:10px 0 0 0;font-size:11px;color:#94A3B8;line-height:1.4;">
-                      Usa estas credenciales para acceder al Portal del Apoderado, supervisar el avance de tu hijo/a y gestionar tu suscripción.
-                    </p>
-                  </td>
-                </tr>
-              </table>
-
-              <!-- Tarjeta Estudiante -->
-              <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color:#1E293B;border:2px solid #F8AD22;border-radius:12px;margin-bottom:24px;">
-                <tr>
-                  <td style="padding:18px 20px;text-align:center;">
-                    <div style="font-size:11px;font-weight:800;color:#F8AD22;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">
-                      ACCESO DEL ESTUDIANTE (SALÓN DE CLASES)
-                    </div>
-                    <div style="font-size:14px;color:#FFFFFF;font-weight:700;margin-bottom:12px;">
-                      ${studentName || 'Estudiante'} (${grade || 'Curso Oficial'})
-                    </div>
-                    <div style="background-color:#0A192F;border:1px dashed #F8AD22;padding:12px 18px;border-radius:10px;display:inline-block;margin-bottom:10px;">
-                      <div style="font-size:10px;color:#94A3B8;text-transform:uppercase;font-weight:700;">PIN Numérico de Ingreso</div>
-                      <div style="font-size:30px;font-family:monospace;font-weight:900;letter-spacing:6px;color:#F8AD22;margin-top:2px;">
-                        ${studentPin || '123456'}
-                      </div>
-                    </div>
-                    <p style="margin:0;font-size:11px;color:#CBD5E1;line-height:1.4;">
-                      Tu hijo/a solo necesita ingresar este PIN de 6 dígitos en la pantalla de inicio para comenzar sus clases inmediatamente, sin necesidad de recordar contraseñas largas.
-                    </p>
-                  </td>
-                </tr>
-              </table>
-
-              <!-- Boton de Acceso -->
-              <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                <tr>
-                  <td align="center">
-                    <a href="https://estudiosimple.cl" target="_blank" style="background-color:#EE751C;color:#FFFFFF;font-size:14px;font-weight:800;text-decoration:none;padding:14px 32px;border-radius:12px;display:inline-block;letter-spacing:0.5px;">
-                      Comenzar a Estudiar Ahora
-                    </a>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <!-- Footer -->
-          <tr>
-            <td style="background-color:#0A192F;padding:20px 30px;border-top:1px solid #1C3257;text-align:center;font-size:11px;color:#64748B;line-height:1.5;">
-              <p style="margin:0 0 6px 0;">EstudioSimple SpA - Plataforma de Acompañamiento Curricular Homeschooling</p>
-              <p style="margin:0;">¿Necesitas ayuda? Escríbenos a <a href="mailto:soporte@estudiosimple.cl" style="color:#57d6f3;text-decoration:none;">soporte@estudiosimple.cl</a> o vía WhatsApp oficial.</p>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
-</body>
-</html>`;
-
-        let emailMode = 'simulated';
-        const resendKey = process.env.RESEND_API_KEY;
-
-        if (resendKey && resendKey.trim()) {
-          try {
-            const resendResponse = await fetch('https://api.resend.com/emails', {
-              method: 'POST',
-              headers: {
-                'Authorization': `Bearer ${resendKey.trim()}`,
-                'Content-Type': 'application/json'
-              },
-              body: JSON.stringify({
-                from: process.env.EMAIL_FROM || 'EstudioSimple <bienvenida@estudiosimple.cl>',
-                to: [email],
-                subject: `Bienvenida/o a EstudioSimple - Credenciales Oficiales de ${grade || 'Curso'}`,
-                html: emailHtml
-              })
-            });
-            const resendData = await resendResponse.json();
-            if (resendData && resendData.id) {
-              emailMode = 'resend';
-            }
-          } catch (resendErr) {
-            console.warn('[MailService] Error en llamada a Resend API:', resendErr.message);
-          }
-        }
-
-        // Registro de correo en disco (data/sent_emails.json)
-        const emailsFilePath = path.resolve(__dirname, 'data', 'sent_emails.json');
-        let sentEmails = [];
-        if (fs.existsSync(emailsFilePath)) {
-          try { sentEmails = JSON.parse(fs.readFileSync(emailsFilePath, 'utf8')); } catch {}
-        }
-        sentEmails.unshift({
-          id: `email-${Date.now()}`,
-          timestamp: new Date().toISOString(),
-          recipient: email,
-          name,
-          grade,
-          studentPin,
-          mode: emailMode,
-          plan
-        });
-        const dataDir = path.dirname(emailsFilePath);
-        if (!fs.existsSync(dataDir)) {
-          fs.mkdirSync(dataDir, { recursive: true });
-        }
-        fs.writeFileSync(emailsFilePath, JSON.stringify(sentEmails.slice(0, 100), null, 2), 'utf8');
-
-        // Registro en auditoria
-        const logsFilePath = path.resolve(__dirname, 'data', 'audit_logs.json');
-        let existingLogs = [];
-        if (fs.existsSync(logsFilePath)) {
-          try { existingLogs = JSON.parse(fs.readFileSync(logsFilePath, 'utf8')); } catch {}
-        }
-        existingLogs.unshift({
-          id: `log-mail-${Date.now()}`,
-          timestamp: new Date().toISOString(),
-          actorId: 'mail-service',
-          actorName: 'Servicio de Correo',
-          actorRole: 'system',
-          action: 'SEND_WELCOME_CREDENTIALS',
-          target: email,
-          details: `Despacho de credenciales (${emailMode}) a ${email} para estudiante ${studentName} (${grade}). PIN: ${studentPin}`
-        });
-        fs.writeFileSync(logsFilePath, JSON.stringify(existingLogs.slice(0, 1000), null, 2), 'utf8');
-
-        res.writeHead(200);
-        res.end(JSON.stringify({
-          success: true,
-          mode: emailMode,
-          recipient: email,
-          message: 'Credenciales despachadas exitosamente'
-        }));
+        const result = await sendWelcomeEmail(body);
+        res.writeHead(result.success ? 200 : 400, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify(result));
       } catch (err) {
-        res.writeHead(500);
+        res.writeHead(500, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ success: false, error: err.message }));
       }
       return;
@@ -1928,6 +2010,21 @@ const server = http.createServer(async (req, res) => {
         } catch (dbErr) {
           console.warn('[Checkout] Advertencia Neon DB (guardado en archivo garantizado):', dbErr.message);
         }
+
+        // PASO 3: Despacho automatico de correo transaccional en segundo plano
+        sendWelcomeEmail({
+          email: savedUserRecord.email,
+          name: savedUserRecord.name,
+          rut: savedUserRecord.rut,
+          password: savedUserRecord.password,
+          studentName: savedUserRecord.studentName,
+          grade: selectedGrade,
+          studentPin: savedUserRecord.studentPin,
+          plan: selectedPlan,
+          amount: cleanAmount
+        }).catch(mailErr => {
+          console.warn('[Checkout] Advertencia despachando correo de bienvenida:', mailErr.message);
+        });
 
         res.writeHead(200, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({
