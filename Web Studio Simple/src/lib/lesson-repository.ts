@@ -15,8 +15,23 @@ import {
   CIENCIAS_7B_OA01_CLASE05,
   CIENCIAS_7B_OA01_CLASE06,
   LENGUA_7B_OA03_CLASE01,
+  LENGUA_7B_OA03_CLASE02,
+  LENGUA_7B_OA03_CLASE03,
+  LENGUA_7B_OA03_CLASE04,
+  LENGUA_7B_OA03_CLASE05,
+  LENGUA_7B_OA03_CLASE06,
   HISTORIA_7B_OA02_CLASE01,
+  HISTORIA_7B_OA02_CLASE02,
+  HISTORIA_7B_OA02_CLASE03,
+  HISTORIA_7B_OA02_CLASE04,
+  HISTORIA_7B_OA02_CLASE05,
+  HISTORIA_7B_OA02_CLASE06,
   INGLES_7B_OA09_CLASE01,
+  INGLES_7B_OA09_CLASE02,
+  INGLES_7B_OA09_CLASE03,
+  INGLES_7B_OA09_CLASE04,
+  INGLES_7B_OA09_CLASE05,
+  INGLES_7B_OA09_CLASE06,
   MATEMATICA_7B_OA04_CLASE01,
   MATEMATICA_7B_OA04_CLASE02,
   MATEMATICA_7B_OA04_CLASE03,
@@ -293,12 +308,27 @@ if ((keyGrade === '7' || keyGrade.includes('7')) && keySubj === 'mat' && keyOa =
   }
   if ((keyGrade === '7' || keyGrade.includes('7')) && keySubj === 'len' && (keyOa === 'oa3' || keyOa === 'oa03')) {
     if (lessonNumber === 1) return LENGUA_7B_OA03_CLASE01;
+    if (lessonNumber === 2) return LENGUA_7B_OA03_CLASE02;
+    if (lessonNumber === 3) return LENGUA_7B_OA03_CLASE03;
+    if (lessonNumber === 4) return LENGUA_7B_OA03_CLASE04;
+    if (lessonNumber === 5) return LENGUA_7B_OA03_CLASE05;
+    if (lessonNumber === 6) return LENGUA_7B_OA03_CLASE06;
   }
   if ((keyGrade === '7' || keyGrade.includes('7')) && keySubj === 'his' && (keyOa === 'oa2' || keyOa === 'oa02')) {
     if (lessonNumber === 1) return HISTORIA_7B_OA02_CLASE01;
+    if (lessonNumber === 2) return HISTORIA_7B_OA02_CLASE02;
+    if (lessonNumber === 3) return HISTORIA_7B_OA02_CLASE03;
+    if (lessonNumber === 4) return HISTORIA_7B_OA02_CLASE04;
+    if (lessonNumber === 5) return HISTORIA_7B_OA02_CLASE05;
+    if (lessonNumber === 6) return HISTORIA_7B_OA02_CLASE06;
   }
   if ((keyGrade === '7' || keyGrade.includes('7')) && keySubj === 'ing' && (keyOa === 'oa9' || keyOa === 'oa09')) {
     if (lessonNumber === 1) return INGLES_7B_OA09_CLASE01;
+    if (lessonNumber === 2) return INGLES_7B_OA09_CLASE02;
+    if (lessonNumber === 3) return INGLES_7B_OA09_CLASE03;
+    if (lessonNumber === 4) return INGLES_7B_OA09_CLASE04;
+    if (lessonNumber === 5) return INGLES_7B_OA09_CLASE05;
+    if (lessonNumber === 6) return INGLES_7B_OA09_CLASE06;
   }
   return null;
 }

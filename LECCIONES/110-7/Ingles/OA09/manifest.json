@@ -40,7 +40,12 @@
     "raiz_app_spa": "Web Studio Simple/",
     "alias_tsconfig": "@/* -> ./src/* (definido en Web Studio Simple/tsconfig.json)",
     "archivos_clases_ts": [
-      "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase01.ts"
+      "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase01.ts",
+      "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase02.ts",
+      "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase03.ts",
+      "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase04.ts",
+      "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase05.ts",
+      "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase06.ts"
     ]
   }
 }

@@ -7,7 +7,7 @@ export const HISTORIA_7B_OA02_CLASE01: LessonData = {
     oaCode: 'OA 2',
     oaTitle: 'El proceso de hominización y las primeras sociedades humanas',
     lessonNumber: 1,
-    totalLessonsInOa: 5,
+    totalLessonsInOa: 6,
     lessonTitle: 'El fin del nomadismo y el surgimiento agrícola',
     durationMinutes: 30,
     nextLessonTitle: 'La domesticación de especies en la Media Luna Fértil'
