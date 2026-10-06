@@ -1618,8 +1618,29 @@ const server = http.createServer(async (req, res) => {
         const { identifier, pin, password } = body;
 
         const normId = (identifier || '').trim().toLowerCase();
+        const cleanId = (identifier || '').replace(/[^0-9kK]/g, '').toUpperCase();
 
-        // 3a. Verificar administradores dinamicos en disco
+        // 3a. Generar variantes de RUN para búsqueda tolerante (con puntos, sin puntos, con guion)
+        const rutVariants = [];
+        if (identifier && identifier.trim()) {
+          rutVariants.push(identifier.trim());
+        }
+        if (cleanId.length >= 7) {
+          rutVariants.push(cleanId);
+          const cuerpo = cleanId.slice(0, -1);
+          const dv = cleanId.slice(-1);
+          rutVariants.push(`${cuerpo}-${dv}`);
+          let formatted = '';
+          let count = 0;
+          for (let i = cuerpo.length - 1; i >= 0; i--) {
+            formatted = cuerpo.charAt(i) + formatted;
+            count++;
+            if (count % 3 === 0 && i !== 0) formatted = '.' + formatted;
+          }
+          rutVariants.push(`${formatted}-${dv}`);
+        }
+
+        // 3b. Verificar administradores dinamicos en disco
         const adminsFilePath = path.resolve(__dirname, 'data', 'admins.json');
         let diskAdmins = [];
         if (fs.existsSync(adminsFilePath)) {
@@ -1671,21 +1692,52 @@ const server = http.createServer(async (req, res) => {
           return;
         }
 
-        const user = await withPrisma(async (prisma) => {
-          if (!identifier) return null;
-          return await prisma.user.findFirst({
-            where: {
-              OR: [
-                { email: identifier },
-                { rut: identifier },
-                { studentRun: identifier }
-              ]
+        let user = null;
+
+        // 3c. Búsqueda en Neon DB con variantes de RUN y email insensible a mayúsculas
+        try {
+          await withPrisma(async (prisma) => {
+            const orConditions = [];
+            if (normId) {
+              orConditions.push({ email: { equals: normId, mode: 'insensitive' } });
+            }
+            rutVariants.forEach(r => {
+              orConditions.push({ rut: r });
+              orConditions.push({ studentRun: r });
+            });
+            if (pin) {
+              orConditions.push({ studentPin: pin });
+            }
+
+            if (orConditions.length > 0) {
+              user = await prisma.user.findFirst({
+                where: { OR: orConditions }
+              });
             }
           });
-        });
+        } catch (dbErr) {
+          console.warn('[/api/auth/login] Advertencia al consultar Neon DB:', dbErr.message);
+        }
+
+        // 3d. Fallback a data/registered_families.json si no se encontró en DB o si Neon estaba suspendido
+        if (!user) {
+          const familiesFilePath = path.resolve(__dirname, 'data', 'registered_families.json');
+          if (fs.existsSync(familiesFilePath)) {
+            try {
+              const diskFamilies = JSON.parse(fs.readFileSync(familiesFilePath, 'utf8'));
+              user = diskFamilies.find(f => {
+                const matchEmail = normId && f.email && f.email.toLowerCase().trim() === normId;
+                const fCleanRut = f.rut ? f.rut.replace(/[^0-9kK]/g, '').toUpperCase() : '';
+                const matchRut = cleanId && fCleanRut === cleanId;
+                const matchPin = pin && f.studentPin === pin;
+                return matchEmail || matchRut || matchPin;
+              }) || null;
+            } catch {}
+          }
+        }
 
         if (!user) {
-          res.writeHead(401);
+          res.writeHead(401, { 'Content-Type': 'application/json' });
           res.end(JSON.stringify({ success: false, message: 'Usuario no encontrado' }));
           return;
         }
@@ -1708,8 +1760,27 @@ const server = http.createServer(async (req, res) => {
           }
         }
 
+        const safeUser = {
+          id: user.id,
+          rut: user.rut || '',
+          name: user.name,
+          email: user.email,
+          phone: user.phone || '',
+          password: user.password || 'demo2026',
+          studentId: user.studentId || `stu-${user.id}`,
+          studentName: user.studentName || 'Estudiante',
+          studentRun: user.studentRun || '',
+          studentPin: user.studentPin || '123456',
+          status: user.status || 'active',
+          subscriptionActive: user.subscriptionActive !== false,
+          plan: user.plan || 'mensual',
+          enrolledGrades: Array.isArray(user.enrolledGrades) && user.enrolledGrades.length > 0 ? user.enrolledGrades : ['7° Básico'],
+          createdAt: user.createdAt ? (typeof user.createdAt === 'string' ? user.createdAt : user.createdAt.toISOString()) : new Date().toISOString(),
+          lastLogin: new Date().toISOString()
+        };
+
         res.writeHead(200, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify({ success: true, user }));
+        res.end(JSON.stringify({ success: true, user: safeUser }));
       } catch (err) {
         res.writeHead(500);
         res.end(JSON.stringify({ success: false, error: err.message }));
@@ -1954,7 +2025,9 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
-  let filePath = path.join(PUBLIC_DIR, pathname === '/' ? 'index.html' : pathname);
+  let cleanPathname = pathname;
+  try { cleanPathname = decodeURIComponent(pathname); } catch {}
+  let filePath = path.join(PUBLIC_DIR, cleanPathname === '/' ? 'index.html' : cleanPathname);
 
   if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
     const ext = path.extname(filePath).toLowerCase();

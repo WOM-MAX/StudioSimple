@@ -11,30 +11,47 @@ export const LoginScreen: React.FC = () => {
   const [guestCode, setGuestCode] = useState('');
   const [error, setError] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleStudentLogin = (e: React.FormEvent) => {
+  const handleStudentLogin = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (isLoading) return;
     setError('');
     if (pin.length !== 6) {
-      setError('El PIN debe tener 6 digitos.');
+      setError('El PIN debe tener 6 dígitos.');
       return;
     }
-    const result = loginAsStudent(pin);
-    if (!result.success && result.error) {
-      setError(result.error);
+    setIsLoading(true);
+    try {
+      const result = await loginAsStudent(pin);
+      if (!result.success && result.error) {
+        setError(result.error);
+      }
+    } catch (err: any) {
+      setError(err?.message || 'Error al conectar con el servidor.');
+    } finally {
+      setIsLoading(false);
     }
   };
 
-  const handleParentLogin = (e: React.FormEvent) => {
+  const handleParentLogin = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (isLoading) return;
     setError('');
     if (!email.trim() || !password.trim()) {
       setError('Completa todos los campos requeridos.');
       return;
     }
-    const result = loginAsParent(email, password);
-    if (!result.success && result.error) {
-      setError(result.error);
+    setIsLoading(true);
+    try {
+      const result = await loginAsParent(email.trim(), password);
+      if (!result.success && result.error) {
+        setError(result.error);
+      }
+    } catch (err: any) {
+      setError(err?.message || 'Error al validar credenciales.');
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -78,7 +95,13 @@ export const LoginScreen: React.FC = () => {
           <img
             alt="Estudio Simple Logo"
             className="h-16 md:h-20 w-auto object-contain mx-auto drop-shadow-md"
-            src="/logos/Logo largo blanco.png"
+            src="/logos/Logo_cabecera.png"
+            onError={(e) => {
+              const target = e.currentTarget;
+              if (target.src.indexOf('Logo_cabecera.png') !== -1) {
+                target.src = '/logos/Logo largo blanco.png';
+              }
+            }}
           />
         </div>
         <h1 className="text-2xl md:text-3xl font-black text-white mb-1">Iniciar Sesion</h1>
@@ -188,15 +211,19 @@ export const LoginScreen: React.FC = () => {
                 </button>
                 <button
                   type="submit"
-                  disabled={pin.length !== 6}
+                  disabled={pin.length !== 6 || isLoading}
                   className={`h-14 rounded-xl text-sm font-bold transition-all flex items-center justify-center border cursor-pointer ${
-                    pin.length === 6
+                    pin.length === 6 && !isLoading
                       ? 'bg-[#F8AD22] hover:bg-[#e09a1e] text-[#0A192F] border-[#F8AD22] hover:scale-105 active:scale-95 shadow-lg'
                       : 'bg-white/5 text-white/30 border-white/10 cursor-not-allowed opacity-50'
                   }`}
                   title="Ingresar con PIN"
                 >
-                  <ArrowRight size={22} />
+                  {isLoading ? (
+                    <span className="material-symbols-outlined text-lg animate-spin">progress_activity</span>
+                  ) : (
+                    <ArrowRight size={22} />
+                  )}
                 </button>
               </div>
 
@@ -268,10 +295,20 @@ export const LoginScreen: React.FC = () => {
 
               <button
                 type="submit"
-                className="w-full py-3.5 rounded-xl bg-[#12A1A4] hover:bg-[#0e8b8e] text-white font-bold text-sm shadow-lg transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 cursor-pointer"
+                disabled={isLoading}
+                className="w-full py-3.5 rounded-xl bg-[#12A1A4] hover:bg-[#0e8b8e] text-white font-bold text-sm shadow-lg transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-wait"
               >
-                <Shield size={18} />
-                <span>Ingresar al Portal</span>
+                {isLoading ? (
+                  <>
+                    <span className="material-symbols-outlined text-lg animate-spin">progress_activity</span>
+                    <span>Validando credenciales...</span>
+                  </>
+                ) : (
+                  <>
+                    <Shield size={18} />
+                    <span>Ingresar al Portal</span>
+                  </>
+                )}
               </button>
 
               <div className="pt-1 text-center">

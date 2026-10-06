@@ -34,8 +34,8 @@ interface AppContextType {
   resetProgress: () => void;
   // Auth
   authSession: AuthSession | null;
-  loginAsStudent: (pin: string) => { success: boolean; error?: string };
-  loginAsParent: (email: string, password: string) => { success: boolean; error?: string };
+  loginAsStudent: (pin: string) => Promise<{ success: boolean; error?: string }>;
+  loginAsParent: (email: string, password: string) => Promise<{ success: boolean; error?: string }>;
   loginAsGuest: (code: string) => { success: boolean; pass?: any; error?: string };
   logout: () => void;
   generateStudentPin: () => string;
@@ -251,7 +251,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   };
 
   // Auth functions
-  const loginAsStudent = (pin: string): { success: boolean; error?: string } => {
+  const loginAsStudent = async (pin: string): Promise<{ success: boolean; error?: string }> => {
     // 1. Validar contra estudiante local
     if (pin === student.pin) {
       const session: AuthSession = {
@@ -274,14 +274,49 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       return { success: true };
     }
 
-    // 2. Validar contra registro de usuarios
+    // 2. Validar contra registro de usuarios local
     const allUsers = getAllRegisteredUsers();
-    const matchedFamily = allUsers.find(u => u.studentPin === pin);
+    let matchedFamily = allUsers.find(u => u.studentPin === pin);
+
+    // 3. Si no está en caché local, consultar directamente al endpoint central en vivo
+    if (!matchedFamily && typeof fetch === 'function') {
+      try {
+        const res = await fetch('/api/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ pin })
+        });
+        const data = await res.json().catch(() => null);
+        if (res.ok && data?.success && data?.user) {
+          const fetchedFamily = data.user as ParentUser;
+          matchedFamily = fetchedFamily;
+          const cleanRut = (u: any) => (u?.rut || '').replace(/[^0-9kK]/g, '').toUpperCase();
+          const targetClean = cleanRut(fetchedFamily);
+          const existingIdx = allUsers.findIndex(u => 
+            (u.email?.toLowerCase().trim() === fetchedFamily.email?.toLowerCase().trim()) ||
+            (targetClean && cleanRut(u) === targetClean)
+          );
+          if (existingIdx >= 0) {
+            allUsers[existingIdx] = { ...allUsers[existingIdx], ...fetchedFamily };
+          } else {
+            allUsers.unshift(fetchedFamily);
+          }
+          try {
+            localStorage.setItem('estudiosimple_registered_users', JSON.stringify(allUsers));
+          } catch {}
+        } else if (data?.message) {
+          return { success: false, error: data.message };
+        }
+      } catch (pinNetErr) {
+        console.warn('[loginAsStudent] Error al validar PIN en servidor central:', pinNetErr);
+      }
+    }
+
     if (matchedFamily) {
       const stuProfile: StudentProfile = {
         id: matchedFamily.studentId || `stu-${matchedFamily.id}`,
         name: matchedFamily.studentName || 'Estudiante',
-        grade: matchedFamily.enrolledGrades[0] || '7° Básico',
+        grade: (matchedFamily.enrolledGrades && matchedFamily.enrolledGrades[0]) || '7° Básico',
         avatar: 'buho',
         curiosityPoints: 0,
         gems: 0,
@@ -313,7 +348,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     return { success: false, error: 'PIN incorrecto. Pide tu PIN al apoderado o revisa tu comprobante de bienvenida.' };
   };
 
-  const loginAsParent = (email: string, password: string): { success: boolean; error?: string } => {
+  const loginAsParent = async (email: string, password: string): Promise<{ success: boolean; error?: string }> => {
     // 1. Verificacion de Administradores Dinamicos
     const adminCheck = validateAdminLogin(email, password);
     if (adminCheck.success && adminCheck.admin) {
@@ -334,86 +369,122 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       return { success: true };
     }
 
-    // 2. Verificacion de Familias Registradas por Email o RUN
-    const registeredUser = findUserByEmailOrRut(email);
+    // 2. Verificacion preliminar en memoria / caché local
+    let registeredUser = findUserByEmailOrRut(email);
+    let passValid = false;
     if (registeredUser) {
-      const passValid =
+      passValid =
         (registeredUser.password && registeredUser.password === password) ||
         password === 'demo2026' ||
         password === 'admin123' ||
         password === registeredUser.studentPin;
+    }
 
-      if (passValid) {
-        setParent(registeredUser);
-        localStorage.setItem('estudio_simple_parent', JSON.stringify(registeredUser));
-
-        // Sincronizar y cargar el estudiante real asociado al apoderado
-        const targetStudentId = registeredUser.studentId || `stu-${registeredUser.id}`;
-        const targetStudentName = registeredUser.studentName || 'Estudiante';
-        const targetGrade = (registeredUser.enrolledGrades && registeredUser.enrolledGrades[0]) || '7° Básico';
-
-        setStudents((prev) => {
-          const existing = prev.find((s) => s.id === targetStudentId);
-          if (existing) {
-            const cleanCompleted = (existing.id !== 'stu-101' && existing.name !== 'Mateo')
-              ? existing.completedLessons.filter((id) => id !== '7_mat_oa1_1' && id !== '7_mat_oa1_2')
-              : existing.completedLessons;
-            const updated = { ...existing, name: targetStudentName, grade: targetGrade, completedLessons: cleanCompleted };
-            const nextList = prev.map((s) => (s.id === targetStudentId ? updated : s));
-            localStorage.setItem('estudio_simple_students', JSON.stringify(nextList));
-            setStudent(updated);
-            localStorage.setItem('estudio_simple_student', JSON.stringify(updated));
-            return nextList;
+    // 3. Si no está en caché local O la contraseña local no coincidió, consultar al backend en vivo (/api/auth/login)
+    if ((!registeredUser || !passValid) && typeof fetch === 'function') {
+      try {
+        const res = await fetch('/api/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ identifier: email, password })
+        });
+        const data = await res.json().catch(() => null);
+        if (res.ok && data?.success && data?.user) {
+          const fetchedParent = data.user as ParentUser;
+          registeredUser = fetchedParent;
+          passValid = true;
+          const allUsers = getAllRegisteredUsers();
+          const cleanRut = (u: any) => (u?.rut || '').replace(/[^0-9kK]/g, '').toUpperCase();
+          const targetClean = cleanRut(fetchedParent);
+          const existingIdx = allUsers.findIndex(u => 
+            (u.email?.toLowerCase().trim() === fetchedParent.email?.toLowerCase().trim()) ||
+            (targetClean && cleanRut(u) === targetClean)
+          );
+          if (existingIdx >= 0) {
+            allUsers[existingIdx] = { ...allUsers[existingIdx], ...fetchedParent };
           } else {
-            const newStu: StudentProfile = {
-              id: targetStudentId,
-              name: targetStudentName,
-              grade: targetGrade,
-              avatar: 'buho',
-              curiosityPoints: 0,
-              gems: 0,
-              completedLessons: [],
-              currentStreakDays: 1,
-              pin: registeredUser.studentPin || generatePin()
-            };
-            const nextList = [newStu, ...prev.filter((s) => s.id !== targetStudentId)];
-            localStorage.setItem('estudio_simple_students', JSON.stringify(nextList));
-            setStudent(newStu);
-            localStorage.setItem('estudio_simple_student', JSON.stringify(newStu));
-            return nextList;
+            allUsers.unshift(fetchedParent);
           }
-        });
-        setActiveStudentId(targetStudentId);
-        localStorage.setItem('estudio_simple_active_student_id', targetStudentId);
-
-        const session: AuthSession = {
-          role: 'parent',
-          userId: registeredUser.id,
-          enrolledGrades: registeredUser.enrolledGrades || ['7° Básico'],
-          isAuthenticated: true,
-        };
-        setAuthSessionState(session);
-        localStorage.setItem('estudio_simple_auth_session', JSON.stringify(session));
-
-        recordAuditLog({
-          actorId: registeredUser.id,
-          actorName: registeredUser.name,
-          actorEmail: registeredUser.email,
-          actorRole: 'user',
-          action: 'LOGIN_PARENT',
-          target: 'Portal del Apoderado',
-          details: `Inicio de sesion exitoso del apoderado ${registeredUser.name} (${registeredUser.rut || registeredUser.email})`
-        });
-
-        setViewModeState('courses');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        return { success: true };
-      } else {
-        return { success: false, error: 'Contraseña incorrecta para el usuario ingresado.' };
+          try {
+            localStorage.setItem('estudiosimple_registered_users', JSON.stringify(allUsers));
+          } catch {}
+        } else if (data && data.success === false && data.message) {
+          // El servidor central rechazó explícitamente las credenciales
+          return { success: false, error: data.message };
+        }
+      } catch (netErr) {
+        console.warn('[loginAsParent] Fallo al consultar endpoint central /api/auth/login:', netErr);
       }
     }
 
-    // 3. Verificacion de usuario semilla por defecto
+    if (registeredUser && passValid) {
+      setParent(registeredUser);
+      localStorage.setItem('estudio_simple_parent', JSON.stringify(registeredUser));
+
+      // Sincronizar y cargar el estudiante real asociado al apoderado
+      const targetStudentId = registeredUser.studentId || `stu-${registeredUser.id}`;
+      const targetStudentName = registeredUser.studentName || 'Estudiante';
+      const targetGrade = (registeredUser.enrolledGrades && registeredUser.enrolledGrades[0]) || '7° Básico';
+
+      setStudents((prev) => {
+        const existing = prev.find((s) => s.id === targetStudentId);
+        if (existing) {
+          const cleanCompleted = (existing.id !== 'stu-101' && existing.name !== 'Mateo')
+            ? existing.completedLessons.filter((id) => id !== '7_mat_oa1_1' && id !== '7_mat_oa1_2')
+            : existing.completedLessons;
+          const updated = { ...existing, name: targetStudentName, grade: targetGrade, completedLessons: cleanCompleted };
+          const nextList = prev.map((s) => (s.id === targetStudentId ? updated : s));
+          localStorage.setItem('estudio_simple_students', JSON.stringify(nextList));
+          setStudent(updated);
+          localStorage.setItem('estudio_simple_student', JSON.stringify(updated));
+          return nextList;
+        } else {
+          const newStu: StudentProfile = {
+            id: targetStudentId,
+            name: targetStudentName,
+            grade: targetGrade,
+            avatar: 'buho',
+            curiosityPoints: 0,
+            gems: 0,
+            completedLessons: [],
+            currentStreakDays: 1,
+            pin: registeredUser.studentPin || generatePin()
+          };
+          const nextList = [newStu, ...prev.filter((s) => s.id !== targetStudentId)];
+          localStorage.setItem('estudio_simple_students', JSON.stringify(nextList));
+          setStudent(newStu);
+          localStorage.setItem('estudio_simple_student', JSON.stringify(newStu));
+          return nextList;
+        }
+      });
+      setActiveStudentId(targetStudentId);
+      localStorage.setItem('estudio_simple_active_student_id', targetStudentId);
+
+      const session: AuthSession = {
+        role: 'parent',
+        userId: registeredUser.id,
+        enrolledGrades: registeredUser.enrolledGrades || ['7° Básico'],
+        isAuthenticated: true,
+      };
+      setAuthSessionState(session);
+      localStorage.setItem('estudio_simple_auth_session', JSON.stringify(session));
+
+      recordAuditLog({
+        actorId: registeredUser.id,
+        actorName: registeredUser.name,
+        actorEmail: registeredUser.email,
+        actorRole: 'user',
+        action: 'LOGIN_PARENT',
+        target: 'Portal del Apoderado',
+        details: `Inicio de sesion exitoso del apoderado ${registeredUser.name} (${registeredUser.rut || registeredUser.email})`
+      });
+
+      setViewModeState('courses');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return { success: true };
+    }
+
+    // 4. Verificacion de usuario semilla por defecto
     if (email.trim().toLowerCase() === parent.email.toLowerCase() && (password === parent.password || password === 'demo2026')) {
       const session: AuthSession = {
         role: 'parent',
