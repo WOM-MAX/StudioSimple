@@ -5,109 +5,55 @@ const LOCAL_STORAGE_USERS_KEY = 'estudiosimple_registered_users';
 const LOCAL_STORAGE_SYNCED_KEY = 'estudiosimple_users_synced_db';
 
 /**
- * Familias demo iniciales con RUNs chilenos matemáticamente válidos (Módulo 11)
+ * Lista negra de cuentas semilla/demo históricas para purga irreversible.
+ * En producción NUNCA se inyectan usuarios ficticios.
  */
-const SEED_USERS: ParentUser[] = [
-  {
-    id: 'usr-chile-01',
-    rut: '15.321.876-5',
-    name: 'Carolina Morales R.',
-    email: 'carolina@estudiosimple.cl',
-    phone: '+56 9 8412 9012',
-    studentId: 'stu-chile-01',
-    studentName: 'Mateo Morales',
-    studentRun: '24.102.394-K',
-    studentPin: '123456',
-    status: 'active',
-    subscriptionActive: true,
-    plan: 'mensual',
-    enrolledGrades: ['7° Básico'],
-    createdAt: '2026-08-15T10:00:00.000Z',
-    lastLogin: '2026-09-24T14:30:00.000Z'
-  },
-  {
-    id: 'usr-chile-02',
-    rut: '14.892.410-8',
-    name: 'Rodrigo Silva A.',
-    email: 'rodrigo.silva@gmail.com',
-    phone: '+56 9 9234 1156',
-    studentId: 'stu-chile-02',
-    studentName: 'Sofía Silva',
-    studentRun: '25.301.992-1',
-    studentPin: '481920',
-    status: 'active',
-    subscriptionActive: true,
-    plan: 'anual',
-    enrolledGrades: ['5° Básico'],
-    createdAt: '2026-08-20T11:20:00.000Z',
-    lastLogin: '2026-09-23T18:15:00.000Z'
-  },
-  {
-    id: 'usr-chile-03',
-    rut: '16.204.811-3',
-    name: 'Marcela González P.',
-    email: 'mgonzalez@educarchile.cl',
-    phone: '+56 9 7120 4490',
-    studentId: 'stu-chile-03',
-    studentName: 'Lucas González',
-    studentRun: '26.890.114-7',
-    studentPin: '839102',
-    status: 'active',
-    subscriptionActive: true,
-    plan: 'anual',
-    enrolledGrades: ['3° Básico', '4° Básico'],
-    createdAt: '2026-09-01T09:45:00.000Z',
-    lastLogin: '2026-09-24T09:10:00.000Z'
-  },
-  {
-    id: 'usr-chile-04',
-    rut: '17.514.209-6',
-    name: 'Valentina Valenzuela T.',
-    email: 'vvalenzuela@vtr.net',
-    phone: '+56 9 6554 8821',
-    studentId: 'stu-chile-04',
-    studentName: 'Martina Valenzuela',
-    studentRun: '23.940.122-4',
-    studentPin: '592014',
-    status: 'trial',
-    subscriptionActive: true,
-    plan: 'mensual',
-    enrolledGrades: ['8° Básico'],
-    createdAt: '2026-09-18T16:00:00.000Z',
-    lastLogin: '2026-09-22T20:00:00.000Z'
-  }
-];
+export const DEMO_SEED_EMAILS = new Set([
+  'carolina@estudiosimple.cl',
+  'rodrigo.silva@gmail.com',
+  'mgonzalez@educarchile.cl',
+  'vvalenzuela@vtr.net'
+]);
+
+export const DEMO_SEED_IDS = new Set([
+  'usr-chile-01',
+  'usr-chile-02',
+  'usr-chile-03',
+  'usr-chile-04'
+]);
+
+export function isSeedDemoUser(user: { id?: string; email?: string } | null | undefined): boolean {
+  if (!user) return false;
+  if (user.id && DEMO_SEED_IDS.has(user.id)) return true;
+  if (user.email && DEMO_SEED_EMAILS.has(user.email.toLowerCase().trim())) return true;
+  return false;
+}
+
+const SEED_USERS: ParentUser[] = [];
 
 let isInitialized = false;
 let cachedUsers: ParentUser[] = [];
 
 /**
- * Inicializa el repositorio desde localStorage o carga los usuarios semilla solo si nunca se ha sincronizado.
+ * Inicializa el repositorio desde localStorage suprimiendo permanentemente cualquier semilla demo residual.
  */
 export function initializeUsersRegistry(): ParentUser[] {
   if (typeof window === 'undefined') {
-    if (!isInitialized) {
-      cachedUsers = [...SEED_USERS];
-      isInitialized = true;
-    }
     return cachedUsers;
   }
 
   try {
     const raw = localStorage.getItem(LOCAL_STORAGE_USERS_KEY);
-    const synced = localStorage.getItem(LOCAL_STORAGE_SYNCED_KEY);
 
     if (raw !== null) {
-      // Si existe la clave en localStorage (incluso si es []), se respeta el estado del usuario/servidor
-      cachedUsers = JSON.parse(raw);
-    } else if (synced === 'true') {
-      // Ya se sincronizó con el backend previamente, mantener lista vacía en lugar de reinyectar semillas
+      const parsed: ParentUser[] = JSON.parse(raw);
+      // Purgar de forma permanente cualquier cuenta demo residual de localStorage
+      cachedUsers = Array.isArray(parsed) ? parsed.filter((u) => !isSeedDemoUser(u)) : [];
+      localStorage.setItem(LOCAL_STORAGE_USERS_KEY, JSON.stringify(cachedUsers));
+    } else {
       cachedUsers = [];
       localStorage.setItem(LOCAL_STORAGE_USERS_KEY, '[]');
-    } else {
-      // Primera ejecución pura sin sincronización previa con el backend
-      cachedUsers = [...SEED_USERS];
-      localStorage.setItem(LOCAL_STORAGE_USERS_KEY, JSON.stringify(cachedUsers));
+      localStorage.setItem(LOCAL_STORAGE_SYNCED_KEY, 'true');
     }
   } catch (err) {
     console.error('Error al inicializar registro de usuarios:', err);
@@ -132,50 +78,41 @@ export async function fetchRegisteredUsersFromBackend(): Promise<ParentUser[]> {
     if (res.ok) {
       const data = await res.json();
       if (data && data.success && Array.isArray(data.families)) {
-        const currentLocal = getAllRegisteredUsers();
+        // 1. Filtrar cualquier semilla que venga del backend
+        const cleanBackendFamilies: ParentUser[] = data.families.filter((f: ParentUser) => !isSeedDemoUser(f));
 
-        // BLINDAJE CRÍTICO: Si el backend devuelve 0 familias pero localmente ya existen usuarios registrados,
-        // NUNCA borrar la lista local (evita pérdida de datos ante cold-starts o fallos transitorios de BD).
-        if (data.families.length === 0 && currentLocal.length > 0) {
-          console.warn('[UserRepository] Servidor devolvió 0 familias. Preservando', currentLocal.length, 'familias locales.');
-          currentLocal.forEach((u) => {
-            syncUserToNeon(u);
-          });
-          return currentLocal;
-        }
+        // 2. Obtener usuarios locales limpios
+        const currentLocal = getAllRegisteredUsers().filter((l) => !isSeedDemoUser(l));
 
-        // FUSIÓN INTELIGENTE: Combinar registros preservando credenciales reales si el backend viene con defaults
-        const mergedFamilies: ParentUser[] = data.families.map((backendUser: ParentUser) => {
-          const localMatch = currentLocal.find(
-            (l) => l.email?.toLowerCase().trim() === backendUser.email?.toLowerCase().trim()
-          );
-          return {
-            ...backendUser,
-            password: (backendUser.password && backendUser.password !== 'demo2026')
-              ? backendUser.password
-              : (localMatch?.password || backendUser.password || 'demo2026'),
-            studentPin: (backendUser.studentPin && backendUser.studentPin !== '123456')
-              ? backendUser.studentPin
-              : (localMatch?.studentPin || backendUser.studentPin || '123456')
-          };
+        // Si el backend viene con datos válidos o si ambos están vacíos
+        const mergedMap = new Map<string, ParentUser>();
+
+        cleanBackendFamilies.forEach((bUser) => {
+          if (bUser.email) {
+            mergedMap.set(bUser.email.toLowerCase().trim(), bUser);
+          }
         });
 
-        // Asegurar que cualquier familia registrada localmente que no esté aún en el backend se conserve y se sincronice
+        // Asegurar que las familias locales reales no registradas aún en backend se preserven y sincronicen
         currentLocal.forEach((localUser) => {
-          if (!mergedFamilies.some((m) => m.email?.toLowerCase().trim() === localUser.email?.toLowerCase().trim())) {
-            mergedFamilies.push(localUser);
+          const key = localUser.email ? localUser.email.toLowerCase().trim() : '';
+          if (key && !mergedMap.has(key)) {
+            mergedMap.set(key, localUser);
             syncUserToNeon(localUser);
           }
         });
 
+        const mergedFamilies = Array.from(mergedMap.values());
         cachedUsers = mergedFamilies;
         isInitialized = true;
+
         try {
           localStorage.setItem(LOCAL_STORAGE_USERS_KEY, JSON.stringify(mergedFamilies));
           localStorage.setItem(LOCAL_STORAGE_SYNCED_KEY, 'true');
         } catch (e) {
           console.warn('[UserRepository] Error al guardar en localStorage:', e);
         }
+
         return mergedFamilies;
       }
     }
@@ -183,7 +120,7 @@ export async function fetchRegisteredUsersFromBackend(): Promise<ParentUser[]> {
     console.warn('[UserRepository] No se pudo conectar al endpoint /api/admin/families:', err);
   }
 
-  return getAllRegisteredUsers();
+  return getAllRegisteredUsers().filter((u) => !isSeedDemoUser(u));
 }
 
 /**

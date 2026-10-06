@@ -857,7 +857,7 @@ export const UserManagementView: React.FC = () => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Buscar por RUN, nombre de apoderado, correo o alumno..."
-                className="w-full pl-9 pr-4 py-2.5 rounded-xl border border-slate-200 text-xs text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-[#12A1A4]"
+                className="w-full pl-9 pr-4 py-2.5 rounded-xl border border-slate-200 bg-white text-slate-900 placeholder:text-slate-400 text-xs focus:outline-none focus:border-[#12A1A4]"
               />
             </div>
             <select
@@ -1065,7 +1065,7 @@ export const UserManagementView: React.FC = () => {
                 value={guestSearchQuery}
                 onChange={(e) => setGuestSearchQuery(e.target.value)}
                 placeholder="Buscar por código de pase, destinatario o correo..."
-                className="w-full pl-9 pr-4 py-2.5 rounded-xl border border-slate-200 text-xs text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-[#EE751C]"
+                className="w-full pl-9 pr-4 py-2.5 rounded-xl border border-slate-200 bg-white text-slate-900 placeholder:text-slate-400 text-xs focus:outline-none focus:border-[#EE751C]"
               />
             </div>
             <select
@@ -1241,7 +1241,7 @@ export const UserManagementView: React.FC = () => {
                     value={newAdminPassword}
                     onChange={(e) => setNewAdminPassword(e.target.value)}
                     placeholder="Mínimo 4 caracteres"
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:border-[#12A1A4]"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-white text-slate-900 placeholder:text-slate-400 text-xs focus:outline-none focus:border-[#12A1A4]"
                   />
                 </div>
 
@@ -1252,7 +1252,7 @@ export const UserManagementView: React.FC = () => {
                     value={confirmAdminPassword}
                     onChange={(e) => setConfirmAdminPassword(e.target.value)}
                     placeholder="Repite la contraseña"
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:border-[#12A1A4]"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-white text-slate-900 placeholder:text-slate-400 text-xs focus:outline-none focus:border-[#12A1A4]"
                   />
                 </div>
 
@@ -1386,7 +1386,7 @@ export const UserManagementView: React.FC = () => {
                 value={auditSearchQuery}
                 onChange={(e) => setAuditSearchQuery(e.target.value)}
                 placeholder="Buscar por actor, correo, objetivo intervenido o detalle..."
-                className="w-full pl-9 pr-4 py-2.5 rounded-xl border border-slate-200 text-xs text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-slate-800"
+                className="w-full pl-9 pr-4 py-2.5 rounded-xl border border-slate-200 bg-white text-slate-900 placeholder:text-slate-400 text-xs focus:outline-none focus:border-slate-800"
               />
             </div>
             <select
@@ -2124,7 +2124,7 @@ export const UserManagementView: React.FC = () => {
                     value={newUserData.name}
                     onChange={(e) => setNewUserData({ ...newUserData, name: e.target.value })}
                     placeholder="ej. Marcela González"
-                    className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs"
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:bg-white focus:text-slate-950 focus:border-[#12A1A4] focus:ring-1 focus:ring-[#12A1A4] text-xs font-medium outline-none shadow-xs"
                   />
                 </div>
                 <div>
@@ -2135,7 +2135,7 @@ export const UserManagementView: React.FC = () => {
                     value={newUserData.rut}
                     onChange={(e) => setNewUserData({ ...newUserData, rut: formatRutOnInput(e.target.value) })}
                     placeholder="15.321.876-5"
-                    className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs font-mono"
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:bg-white focus:text-slate-950 focus:border-[#12A1A4] focus:ring-1 focus:ring-[#12A1A4] text-xs font-mono font-medium outline-none shadow-xs"
                   />
                 </div>
               </div>
@@ -2149,7 +2149,7 @@ export const UserManagementView: React.FC = () => {
                     value={newUserData.email}
                     onChange={(e) => setNewUserData({ ...newUserData, email: e.target.value })}
                     placeholder="apoderado@correo.cl"
-                    className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs"
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:bg-white focus:text-slate-950 focus:border-[#12A1A4] focus:ring-1 focus:ring-[#12A1A4] text-xs font-medium outline-none shadow-xs"
                   />
                 </div>
                 <div>
@@ -2159,7 +2159,7 @@ export const UserManagementView: React.FC = () => {
                     value={newUserData.phone}
                     onChange={(e) => setNewUserData({ ...newUserData, phone: e.target.value })}
                     placeholder="+56 9 1234 5678"
-                    className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs font-mono"
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:bg-white focus:text-slate-950 focus:border-[#12A1A4] focus:ring-1 focus:ring-[#12A1A4] text-xs font-mono font-medium outline-none shadow-xs"
                   />
                 </div>
               </div>
@@ -2173,7 +2173,7 @@ export const UserManagementView: React.FC = () => {
                     value={newUserData.studentName}
                     onChange={(e) => setNewUserData({ ...newUserData, studentName: e.target.value })}
                     placeholder="ej. Lucas González"
-                    className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs"
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:bg-white focus:text-slate-950 focus:border-[#12A1A4] focus:ring-1 focus:ring-[#12A1A4] text-xs font-medium outline-none shadow-xs"
                   />
                 </div>
                 <div>
@@ -2183,7 +2183,7 @@ export const UserManagementView: React.FC = () => {
                     value={newUserData.studentRun}
                     onChange={(e) => setNewUserData({ ...newUserData, studentRun: formatRutOnInput(e.target.value) })}
                     placeholder="26.890.114-7 (opcional)"
-                    className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs font-mono"
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:bg-white focus:text-slate-950 focus:border-[#12A1A4] focus:ring-1 focus:ring-[#12A1A4] text-xs font-mono font-medium outline-none shadow-xs"
                   />
                 </div>
               </div>
@@ -2194,7 +2194,7 @@ export const UserManagementView: React.FC = () => {
                   <select
                     value={newUserData.grade}
                     onChange={(e) => setNewUserData({ ...newUserData, grade: e.target.value as GradeLevel })}
-                    className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs font-semibold"
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 focus:border-[#12A1A4] focus:ring-1 focus:ring-[#12A1A4] text-xs font-semibold outline-none shadow-xs"
                   >
                     {ALL_GRADES.map((g) => (
                       <option key={g} value={g}>{g}</option>
@@ -2206,7 +2206,7 @@ export const UserManagementView: React.FC = () => {
                   <select
                     value={newUserData.plan}
                     onChange={(e) => setNewUserData({ ...newUserData, plan: e.target.value as any })}
-                    className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs font-semibold"
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 focus:border-[#12A1A4] focus:ring-1 focus:ring-[#12A1A4] text-xs font-semibold outline-none shadow-xs"
                   >
                     <option value="full">Anual Exámenes Libres</option>
                     <option value="monthly">Mensual</option>
@@ -2270,7 +2270,7 @@ export const UserManagementView: React.FC = () => {
                   value={newPassData.name}
                   onChange={(e) => setNewPassData({ ...newPassData, name: e.target.value })}
                   placeholder="ej. Familia Gómez - Evaluación Homeschooling"
-                  className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs"
+                  className="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:bg-white focus:text-slate-950 focus:border-[#12A1A4] focus:ring-1 focus:ring-[#12A1A4] text-xs font-medium outline-none shadow-xs"
                 />
               </div>
 
@@ -2281,7 +2281,7 @@ export const UserManagementView: React.FC = () => {
                   value={newPassData.email}
                   onChange={(e) => setNewPassData({ ...newPassData, email: e.target.value })}
                   placeholder="ej. evaluacion@familia.cl"
-                  className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs"
+                  className="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:bg-white focus:text-slate-950 focus:border-[#12A1A4] focus:ring-1 focus:ring-[#12A1A4] text-xs font-medium outline-none shadow-xs"
                 />
               </div>
 
@@ -2290,7 +2290,7 @@ export const UserManagementView: React.FC = () => {
                 <select
                   value={newPassData.durationDays}
                   onChange={(e) => setNewPassData({ ...newPassData, durationDays: parseInt(e.target.value, 10) })}
-                  className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs font-semibold"
+                  className="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 focus:border-[#12A1A4] focus:ring-1 focus:ring-[#12A1A4] text-xs font-semibold outline-none shadow-xs"
                 >
                   <option value={1}>24 Horas (1 Día de prueba rápida)</option>
                   <option value={7}>7 Días (1 Semana de evaluación)</option>
@@ -2334,7 +2334,7 @@ export const UserManagementView: React.FC = () => {
                   value={newPassData.notes}
                   onChange={(e) => setNewPassData({ ...newPassData, notes: e.target.value })}
                   placeholder="ej. Solicitado en feria de educación libre"
-                  className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs"
+                  className="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:bg-white focus:text-slate-950 focus:border-[#12A1A4] focus:ring-1 focus:ring-[#12A1A4] text-xs font-medium outline-none shadow-xs"
                 />
               </div>
 
@@ -2393,7 +2393,7 @@ export const UserManagementView: React.FC = () => {
                   value={newAdminData.name}
                   onChange={(e) => setNewAdminData({ ...newAdminData, name: e.target.value })}
                   placeholder="ej. Daniel Pedagogo"
-                  className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs"
+                  className="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:bg-white focus:text-slate-950 focus:border-[#12A1A4] focus:ring-1 focus:ring-[#12A1A4] text-xs font-medium outline-none shadow-xs"
                 />
               </div>
 
@@ -2405,7 +2405,7 @@ export const UserManagementView: React.FC = () => {
                   value={newAdminData.email}
                   onChange={(e) => setNewAdminData({ ...newAdminData, email: e.target.value })}
                   placeholder="ej. daniel@estudiosimple.cl"
-                  className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs"
+                  className="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:bg-white focus:text-slate-950 focus:border-[#12A1A4] focus:ring-1 focus:ring-[#12A1A4] text-xs font-medium outline-none shadow-xs"
                 />
               </div>
 
@@ -2417,7 +2417,7 @@ export const UserManagementView: React.FC = () => {
                   value={newAdminData.password}
                   onChange={(e) => setNewAdminData({ ...newAdminData, password: e.target.value })}
                   placeholder="Mínimo 4 caracteres"
-                  className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs"
+                  className="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:bg-white focus:text-slate-950 focus:border-[#12A1A4] focus:ring-1 focus:ring-[#12A1A4] text-xs font-medium outline-none shadow-xs"
                 />
               </div>
 
@@ -2426,7 +2426,7 @@ export const UserManagementView: React.FC = () => {
                 <select
                   value={newAdminData.role}
                   onChange={(e) => setNewAdminData({ ...newAdminData, role: e.target.value as AdminRole })}
-                  className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs font-semibold"
+                  className="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 focus:border-[#12A1A4] focus:ring-1 focus:ring-[#12A1A4] text-xs font-semibold outline-none shadow-xs"
                 >
                   <option value="admin">Administrador (Contenidos, pases y familias)</option>
                   <option value="superadmin">Superadmin (Acceso total y gestión de claves)</option>

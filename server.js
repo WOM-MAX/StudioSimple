@@ -593,9 +593,25 @@ const server = http.createServer(async (req, res) => {
           }
         });
 
-        const allFamilies = Array.from(mergedMap.values());
+        const DEMO_SEED_EMAILS = new Set([
+          'carolina@estudiosimple.cl',
+          'rodrigo.silva@gmail.com',
+          'mgonzalez@educarchile.cl',
+          'vvalenzuela@vtr.net'
+        ]);
+        const DEMO_SEED_IDS = new Set([
+          'usr-chile-01',
+          'usr-chile-02',
+          'usr-chile-03',
+          'usr-chile-04'
+        ]);
 
-        // Mantener sincronizado el archivo de respaldo con el listado consolidado
+        const allFamilies = Array.from(mergedMap.values()).filter(f => 
+          !DEMO_SEED_IDS.has(f.id) &&
+          (!f.email || !DEMO_SEED_EMAILS.has(f.email.toLowerCase().trim()))
+        );
+
+        // Mantener sincronizado el archivo de respaldo con el listado consolidado limpio
         try {
           const dataDir = path.dirname(familiesFilePath);
           if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
