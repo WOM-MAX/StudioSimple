@@ -120,7 +120,7 @@ export function initializeUsersRegistry(): ParentUser[] {
 
 /**
  * Carga de forma asíncrona la lista centralizada de familias desde Neon DB / API backend
- * y actualiza la caché local suprimiendo semillas demo.
+ * y actualiza la caché local suprimiendo semillas demo y preservando familias locales.
  */
 export async function fetchRegisteredUsersFromBackend(): Promise<ParentUser[]> {
   if (typeof window === 'undefined' || typeof fetch !== 'function') {
@@ -132,15 +132,51 @@ export async function fetchRegisteredUsersFromBackend(): Promise<ParentUser[]> {
     if (res.ok) {
       const data = await res.json();
       if (data && data.success && Array.isArray(data.families)) {
-        cachedUsers = data.families;
+        const currentLocal = getAllRegisteredUsers();
+
+        // BLINDAJE CRÍTICO: Si el backend devuelve 0 familias pero localmente ya existen usuarios registrados,
+        // NUNCA borrar la lista local (evita pérdida de datos ante cold-starts o fallos transitorios de BD).
+        if (data.families.length === 0 && currentLocal.length > 0) {
+          console.warn('[UserRepository] Servidor devolvió 0 familias. Preservando', currentLocal.length, 'familias locales.');
+          currentLocal.forEach((u) => {
+            syncUserToNeon(u);
+          });
+          return currentLocal;
+        }
+
+        // FUSIÓN INTELIGENTE: Combinar registros preservando credenciales reales si el backend viene con defaults
+        const mergedFamilies: ParentUser[] = data.families.map((backendUser: ParentUser) => {
+          const localMatch = currentLocal.find(
+            (l) => l.email?.toLowerCase().trim() === backendUser.email?.toLowerCase().trim()
+          );
+          return {
+            ...backendUser,
+            password: (backendUser.password && backendUser.password !== 'demo2026')
+              ? backendUser.password
+              : (localMatch?.password || backendUser.password || 'demo2026'),
+            studentPin: (backendUser.studentPin && backendUser.studentPin !== '123456')
+              ? backendUser.studentPin
+              : (localMatch?.studentPin || backendUser.studentPin || '123456')
+          };
+        });
+
+        // Asegurar que cualquier familia registrada localmente que no esté aún en el backend se conserve y se sincronice
+        currentLocal.forEach((localUser) => {
+          if (!mergedFamilies.some((m) => m.email?.toLowerCase().trim() === localUser.email?.toLowerCase().trim())) {
+            mergedFamilies.push(localUser);
+            syncUserToNeon(localUser);
+          }
+        });
+
+        cachedUsers = mergedFamilies;
         isInitialized = true;
         try {
-          localStorage.setItem(LOCAL_STORAGE_USERS_KEY, JSON.stringify(data.families));
+          localStorage.setItem(LOCAL_STORAGE_USERS_KEY, JSON.stringify(mergedFamilies));
           localStorage.setItem(LOCAL_STORAGE_SYNCED_KEY, 'true');
         } catch (e) {
           console.warn('[UserRepository] Error al guardar en localStorage:', e);
         }
-        return data.families;
+        return mergedFamilies;
       }
     }
   } catch (err) {
@@ -175,20 +211,32 @@ function persistUsers(users: ParentUser[]): void {
   }
 }
 
-function syncUserToNeon(user: ParentUser, grade?: GradeLevel): void {
+/**
+ * Sincroniza un usuario con Neon DB y con el archivo de persistencia dual del servidor.
+ */
+export function syncUserToNeon(
+  user: ParentUser,
+  grade?: GradeLevel,
+  extra?: { password?: string; studentPin?: string; paymentId?: string; amount?: number }
+): Promise<{ success: boolean; error?: string }> {
   if (typeof window !== 'undefined' && typeof fetch === 'function') {
-    fetch('/api/checkout', {
+    return fetch('/api/checkout', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         rut: user.rut,
         name: user.name,
         email: user.email,
+        password: extra?.password || user.password,
         studentName: user.studentName,
         studentRun: user.studentRun,
+        studentPin: extra?.studentPin || user.studentPin,
+        studentId: user.studentId,
         grade: grade || (user.enrolledGrades && user.enrolledGrades[0]),
         plan: user.plan,
-        phone: user.phone
+        phone: user.phone,
+        paymentId: extra?.paymentId,
+        amount: extra?.amount
       })
     })
       .then((res) => res.json())
@@ -196,11 +244,14 @@ function syncUserToNeon(user: ParentUser, grade?: GradeLevel): void {
         if (data.success && data.user?.id) {
           user.id = data.user.id;
         }
+        return { success: Boolean(data?.success) };
       })
-      .catch(() => {
-        // Fallback silencioso en modo local u offline
+      .catch((err) => {
+        console.warn('[syncUserToNeon] Advertencia al sincronizar con backend:', err.message);
+        return { success: false, error: err.message };
       });
   }
+  return Promise.resolve({ success: false, error: 'No browser fetch available' });
 }
 
 /**
@@ -214,9 +265,12 @@ export function registerUserFromCheckout(params: {
   password?: string;
   studentName: string;
   studentRun?: string;
+  studentPin?: string;
   grade: GradeLevel;
   plan: 'monthly' | 'full' | 'trial';
   phone?: string;
+  amount?: number;
+  paymentId?: string;
 }): { user: ParentUser; isNew: boolean } {
   const users = getAllRegisteredUsers();
   const cleanIncomingRut = cleanRut(params.rut);
@@ -241,6 +295,7 @@ export function registerUserFromCheckout(params: {
       name: params.name || existing.name,
       rut: existing.rut || formatRut(params.rut),
       phone: params.phone || existing.phone,
+      password: params.password || existing.password || 'demo2026',
       subscriptionActive: true,
       status: 'active',
       plan: planMapping,
@@ -254,16 +309,24 @@ export function registerUserFromCheckout(params: {
     if (params.studentRun && !existing.studentRun) {
       updatedUser.studentRun = formatRut(params.studentRun);
     }
+    if (params.studentPin) {
+      updatedUser.studentPin = params.studentPin;
+    }
 
     users[existingIdx] = updatedUser;
     persistUsers(users);
-    syncUserToNeon(updatedUser, params.grade);
+    syncUserToNeon(updatedUser, params.grade, {
+      password: updatedUser.password,
+      studentPin: updatedUser.studentPin,
+      amount: params.amount,
+      paymentId: params.paymentId
+    });
     return { user: updatedUser, isNew: false };
   }
 
   // Usuario nuevo: crear credenciales y PIN
   const newId = `usr-${Date.now()}`;
-  const generatedPin = Math.floor(100000 + Math.random() * 900000).toString();
+  const generatedPin = params.studentPin || Math.floor(100000 + Math.random() * 900000).toString();
 
   const newUser: ParentUser = {
     id: newId,
@@ -286,7 +349,12 @@ export function registerUserFromCheckout(params: {
 
   const updatedUsers = [newUser, ...users];
   persistUsers(updatedUsers);
-  syncUserToNeon(newUser, params.grade);
+  syncUserToNeon(newUser, params.grade, {
+    password: newUser.password,
+    studentPin: newUser.studentPin,
+    amount: params.amount,
+    paymentId: params.paymentId
+  });
   return { user: newUser, isNew: true };
 }
 

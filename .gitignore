@@ -47,3 +47,17 @@ pnpm-debug.log*
 .DS_Store
 Thumbs.db
 ~$*
+
+# Runtime User Data & Customer Records (Data Privacy & Zero-Trust)
+data/registered_families.json
+data/pending_preferences.json
+data/audit_logs.json
+
+# Scratch & Diagnostic Scripts with Live Fixtures
+scripts/check_env_files.ts
+scripts/inspect_neon_db.ts
+scripts/inspect_orders.ts
+scripts/provision_family.ts
+scripts/test_auth_check.ts
+scripts/test_prisma_checkout.ts
+scripts/verify_registered_families.ts

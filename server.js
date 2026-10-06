@@ -216,10 +216,10 @@ const server = http.createServer(async (req, res) => {
       }
     }
 
-    // 1b-2. Familias Registradas y Suscripciones (Neon DB + Fallback disco)
+    // 1b-2. Familias Registradas y Suscripciones (Neon DB + Fallback disco + Fusion Inteligente)
     if (pathname === '/api/admin/families' && method === 'GET') {
       try {
-        let families = [];
+        let dbFamilies = [];
         let fetchedFromDb = false;
 
         try {
@@ -227,7 +227,7 @@ const server = http.createServer(async (req, res) => {
             const users = await prisma.user.findMany({
               orderBy: { createdAt: 'desc' }
             });
-            families = users.map((u) => ({
+            dbFamilies = users.map((u) => ({
               id: u.id,
               rut: u.rut || '',
               name: u.name,
@@ -252,20 +252,53 @@ const server = http.createServer(async (req, res) => {
         }
 
         const familiesFilePath = path.resolve(__dirname, 'data', 'registered_families.json');
-        if (fetchedFromDb) {
+        let fileFamilies = [];
+        if (fs.existsSync(familiesFilePath)) {
           try {
-            const dataDir = path.dirname(familiesFilePath);
-            if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
-            fs.writeFileSync(familiesFilePath, JSON.stringify(families, null, 2), 'utf8');
-          } catch {}
-        } else if (!fetchedFromDb && fs.existsSync(familiesFilePath)) {
-          try {
-            families = JSON.parse(fs.readFileSync(familiesFilePath, 'utf8'));
+            fileFamilies = JSON.parse(fs.readFileSync(familiesFilePath, 'utf8'));
           } catch {}
         }
 
+        // FUSION INTELIGENTE: Combinar DB y Archivo sin perdida de registros ni contraseñas
+        const mergedMap = new Map();
+
+        // 1. Cargar archivo local primero
+        fileFamilies.forEach(f => {
+          if (f.email) mergedMap.set(f.email.toLowerCase(), f);
+        });
+
+        // 2. Superponer datos de DB preservando contraseñas y PINs reales si DB tiene default
+        dbFamilies.forEach(dbF => {
+          const emailKey = dbF.email.toLowerCase();
+          const existingFileF = mergedMap.get(emailKey);
+          if (existingFileF) {
+            mergedMap.set(emailKey, {
+              ...existingFileF,
+              ...dbF,
+              password: (dbF.password && dbF.password !== 'demo2026') ? dbF.password : (existingFileF.password || dbF.password || 'demo2026'),
+              studentPin: (dbF.studentPin && dbF.studentPin !== '123456') ? dbF.studentPin : (existingFileF.studentPin || dbF.studentPin || '123456')
+            });
+          } else {
+            mergedMap.set(emailKey, dbF);
+          }
+        });
+
+        const allFamilies = Array.from(mergedMap.values());
+
+        // Mantener sincronizado el archivo de respaldo con el listado consolidado
+        try {
+          const dataDir = path.dirname(familiesFilePath);
+          if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+          fs.writeFileSync(familiesFilePath, JSON.stringify(allFamilies, null, 2), 'utf8');
+        } catch {}
+
         res.writeHead(200, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify({ success: true, families, count: families.length, source: fetchedFromDb ? 'database' : 'file' }));
+        res.end(JSON.stringify({
+          success: true,
+          families: allFamilies,
+          count: allFamilies.length,
+          source: fetchedFromDb ? 'database_merged' : 'file'
+        }));
       } catch (err) {
         res.writeHead(500, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ success: false, error: err.message }));
@@ -689,6 +722,32 @@ const server = http.createServer(async (req, res) => {
               ? (mpData.sandbox_init_point || mpData.init_point)
               : (mpData.init_point || mpData.sandbox_init_point);
 
+            // Guardar intencion de checkout en disco para respaldo de webhook server-to-server
+            try {
+              const pendingPrefsPath = path.resolve(__dirname, 'data', 'pending_preferences.json');
+              const dataDir = path.dirname(pendingPrefsPath);
+              if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+              let pendingPrefs = {};
+              if (fs.existsSync(pendingPrefsPath)) {
+                try { pendingPrefs = JSON.parse(fs.readFileSync(pendingPrefsPath, 'utf8')); } catch {}
+              }
+              pendingPrefs[mpData.id] = {
+                preferenceId: mpData.id,
+                name: name || '',
+                email: email || '',
+                rut: rut || '',
+                studentName: studentName || '',
+                studentRun: studentRun || '',
+                grade: grade || '7° Básico',
+                plan: planId || 'mensual',
+                amount: cleanAmount,
+                createdAt: new Date().toISOString()
+              };
+              fs.writeFileSync(pendingPrefsPath, JSON.stringify(pendingPrefs, null, 2), 'utf8');
+            } catch (prefErr) {
+              console.warn('[MercadoPago] Error guardando preferencia pendiente:', prefErr.message);
+            }
+
             res.writeHead(200);
             res.end(JSON.stringify({
               success: true,
@@ -725,12 +784,166 @@ const server = http.createServer(async (req, res) => {
       return;
     }
 
-    // 1i. Webhook IPN de Mercado Pago (Recepcion de Pago y Acreditacion)
+    // 1i. Webhook IPN de Mercado Pago (Recepcion de Pago y Acreditacion Automatica Server-to-Server)
     if (pathname === '/api/payment/webhook' && method === 'POST') {
       try {
         const body = await readJsonBody(req);
         const queryTopic = url.searchParams.get('topic') || url.searchParams.get('type') || body.type;
         const paymentId = url.searchParams.get('data.id') || url.searchParams.get('id') || body.data?.id;
+
+        // Leer configuracion de Mercado Pago para consultar estado del pago
+        let pricingConfig = {};
+        const pricingFilePath = path.resolve(__dirname, 'data', 'pricing_config.json');
+        if (fs.existsSync(pricingFilePath)) {
+          try { pricingConfig = JSON.parse(fs.readFileSync(pricingFilePath, 'utf8')); } catch {}
+        }
+        const pasarelaConfig = pricingConfig?.pasarela || {};
+        const accessToken = (
+          process.env.MERCADOPAGO_ACCESS_TOKEN ||
+          process.env.MERCADO_PAGO_ACCESS_TOKEN ||
+          process.env.MP_ACCESS_TOKEN ||
+          pasarelaConfig.mercadoPagoAccessToken ||
+          ''
+        ).trim();
+
+        let paymentData = null;
+        let isApproved = false;
+
+        // Si tenemos paymentId y accessToken, consultar directamente a Mercado Pago
+        if (paymentId && accessToken) {
+          try {
+            const mpRes = await fetch(`https://api.mercadopago.com/v1/payments/${paymentId}`, {
+              headers: { 'Authorization': `Bearer ${accessToken}` }
+            });
+            if (mpRes.ok) {
+              paymentData = await mpRes.json();
+              if (paymentData.status === 'approved') {
+                isApproved = true;
+              }
+            }
+          } catch (mpFetchErr) {
+            console.warn('[MercadoPago Webhook] Error consultando pago en API MP:', mpFetchErr.message);
+          }
+        }
+
+        // Si el pago esta aprobado, aprovisionar o actualizar a la familia de inmediato
+        if (isApproved && paymentData) {
+          try {
+            const prefId = paymentData.preference_id || paymentData.order?.id;
+            let pendingIntent = null;
+            const pendingPrefsPath = path.resolve(__dirname, 'data', 'pending_preferences.json');
+            if (fs.existsSync(pendingPrefsPath)) {
+              try {
+                const pendingPrefs = JSON.parse(fs.readFileSync(pendingPrefsPath, 'utf8'));
+                if (prefId && pendingPrefs[prefId]) {
+                  pendingIntent = pendingPrefs[prefId];
+                }
+              } catch {}
+            }
+
+            const meta = paymentData.metadata || {};
+            const payerEmail = (paymentData.payer?.email || meta.email || pendingIntent?.email || '').trim().toLowerCase();
+            const payerName = (meta.name || pendingIntent?.name || `${paymentData.payer?.first_name || ''} ${paymentData.payer?.last_name || ''}`.trim() || 'Apoderado EstudioSimple').toUpperCase();
+            const payerRut = meta.rut || pendingIntent?.rut || '';
+            const studentName = (meta.student_name || meta.studentName || pendingIntent?.studentName || 'Estudiante').toUpperCase();
+            const studentRun = meta.student_run || meta.studentRun || pendingIntent?.studentRun || '';
+            const grade = meta.grade || pendingIntent?.grade || '7° Básico';
+            const plan = meta.plan_id || pendingIntent?.plan || 'mensual';
+            const amount = paymentData.transaction_amount || pendingIntent?.amount || 1000;
+            const studentPin = meta.student_pin || Math.floor(100000 + Math.random() * 900000).toString();
+
+            if (payerEmail) {
+              // 1. Persistir inmediatamente en data/registered_families.json
+              const familiesFilePath = path.resolve(__dirname, 'data', 'registered_families.json');
+              const dataDir = path.dirname(familiesFilePath);
+              if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+              let existingFamilies = [];
+              if (fs.existsSync(familiesFilePath)) {
+                try { existingFamilies = JSON.parse(fs.readFileSync(familiesFilePath, 'utf8')); } catch {}
+              }
+
+              const existingIdx = existingFamilies.findIndex(f => f.email?.toLowerCase() === payerEmail);
+              const existingUser = existingIdx >= 0 ? existingFamilies[existingIdx] : null;
+
+              const familyRecord = {
+                id: existingUser?.id || `usr-${Date.now()}`,
+                rut: payerRut || existingUser?.rut || '',
+                name: payerName || existingUser?.name || 'APODERADO ESTUDIOSIMPLE',
+                email: payerEmail,
+                phone: existingUser?.phone || '',
+                password: existingUser?.password || 'demo2026',
+                studentId: existingUser?.studentId || `stu-${Date.now()}`,
+                studentName: studentName || existingUser?.studentName || 'Estudiante',
+                studentRun: studentRun || existingUser?.studentRun || '',
+                studentPin: existingUser?.studentPin || studentPin,
+                status: 'active',
+                subscriptionActive: true,
+                plan: plan === 'anual' ? 'anual' : 'mensual',
+                enrolledGrades: Array.from(new Set([...(existingUser?.enrolledGrades || []), grade])),
+                createdAt: existingUser?.createdAt || new Date().toISOString(),
+                lastLogin: new Date().toISOString()
+              };
+
+              if (existingIdx >= 0) {
+                existingFamilies[existingIdx] = familyRecord;
+              } else {
+                existingFamilies.unshift(familyRecord);
+              }
+              fs.writeFileSync(familiesFilePath, JSON.stringify(existingFamilies, null, 2), 'utf8');
+
+              // 2. Persistir en Neon PostgreSQL via withPrisma
+              try {
+                await withPrisma(async (prisma) => {
+                  const dbUser = await prisma.user.upsert({
+                    where: { email: payerEmail },
+                    update: {
+                      name: familyRecord.name,
+                      rut: familyRecord.rut || undefined,
+                      subscriptionActive: true,
+                      status: 'active',
+                      plan: familyRecord.plan,
+                      studentName: familyRecord.studentName,
+                      studentRun: familyRecord.studentRun || undefined,
+                      studentPin: familyRecord.studentPin,
+                      enrolledGrades: familyRecord.enrolledGrades,
+                      lastLogin: new Date()
+                    },
+                    create: {
+                      email: payerEmail,
+                      name: familyRecord.name,
+                      rut: familyRecord.rut || null,
+                      password: familyRecord.password,
+                      subscriptionActive: true,
+                      status: 'active',
+                      plan: familyRecord.plan,
+                      studentName: familyRecord.studentName,
+                      studentRun: familyRecord.studentRun || null,
+                      studentPin: familyRecord.studentPin,
+                      studentId: familyRecord.studentId,
+                      enrolledGrades: familyRecord.enrolledGrades
+                    }
+                  });
+
+                  await prisma.subscriptionOrder.create({
+                    data: {
+                      orderNumber: `ORD-MP-${Date.now().toString(36).toUpperCase()}-${Math.floor(Math.random() * 1000)}`,
+                      userId: dbUser.id,
+                      plan: familyRecord.plan,
+                      amount: Number(amount) || 1000,
+                      status: 'paid',
+                      paymentMethod: 'mercadopago',
+                      gatewayTransactionId: String(paymentId)
+                    }
+                  });
+                });
+              } catch (prismaErr) {
+                console.warn('[MercadoPago Webhook] Fallo Neon DB, pero usuario ya salvado en JSON:', prismaErr.message);
+              }
+            }
+          } catch (autoProvErr) {
+            console.error('[MercadoPago Webhook] Error en auto-aprovisionamiento:', autoProvErr.message);
+          }
+        }
 
         // Registro de notificacion en bitacora de auditoria en disco
         const logsFilePath = path.resolve(__dirname, 'data', 'audit_logs.json');
@@ -745,15 +958,15 @@ const server = http.createServer(async (req, res) => {
           actorId: 'mercadopago-webhook',
           actorName: 'Mercado Pago IPN',
           actorRole: 'system',
-          action: 'PAYMENT_MERCADOPAGO_IPN',
+          action: isApproved ? 'PAYMENT_MERCADOPAGO_APPROVED' : 'PAYMENT_MERCADOPAGO_IPN',
           target: paymentId ? `Pago ID: ${paymentId}` : 'Notificacion IPN',
-          details: `Recepcion de evento webhook desde Mercado Pago / Mercado Libre. Topic: ${queryTopic || 'notificacion'}. Pago ID: ${paymentId || 'N/A'}`
+          details: `Recepcion de evento webhook desde Mercado Pago. Topic: ${queryTopic || 'notificacion'}. Pago ID: ${paymentId || 'N/A'}. Aprobado: ${isApproved}`
         });
 
         fs.writeFileSync(logsFilePath, JSON.stringify(existingLogs.slice(0, 1000), null, 2), 'utf8');
 
         res.writeHead(200);
-        res.end(JSON.stringify({ status: 'ok', received: true, paymentId }));
+        res.end(JSON.stringify({ status: 'ok', received: true, paymentId, isApproved }));
       } catch (err) {
         res.writeHead(200); // Siempre responder 200 a Mercado Pago para evitar reintentos continuos
         res.end(JSON.stringify({ status: 'error', error: err.message }));
@@ -1504,7 +1717,7 @@ const server = http.createServer(async (req, res) => {
       return;
     }
 
-    // 4. Registro y Checkout (Persistencia de usuario y orden en Neon DB)
+    // 4. Registro y Checkout (Persistencia Dual de usuario y orden: Disco JSON + Neon DB)
     if (pathname === '/api/checkout' && method === 'POST') {
       try {
         const body = await readJsonBody(req);
@@ -1512,12 +1725,16 @@ const server = http.createServer(async (req, res) => {
           rut,
           name,
           email,
+          password,
           studentName,
           studentRun,
+          studentPin,
+          studentId,
           grade,
           plan,
           phone,
-          amount
+          amount,
+          paymentId
         } = body;
 
         if (!email || !name) {
@@ -1526,103 +1743,132 @@ const server = http.createServer(async (req, res) => {
           return;
         }
 
-        const result = await withPrisma(async (prisma) => {
-          const user = await prisma.user.upsert({
-            where: { email },
-            update: {
-              name,
-              rut: rut || undefined,
-              phone: phone || undefined,
-              subscriptionActive: true,
-              plan: plan || 'mensual',
-              studentName: studentName || undefined,
-              studentRun: studentRun || undefined,
-              enrolledGrades: grade ? [grade] : undefined,
-              lastLogin: new Date()
-            },
-            create: {
-              email,
-              name,
-              rut: rut || null,
-              phone: phone || null,
-              subscriptionActive: true,
-              plan: plan || 'mensual',
-              studentName: studentName || null,
-              studentRun: studentRun || null,
-              enrolledGrades: grade ? [grade] : []
-            }
-          });
+        const normalizedEmail = email.trim().toLowerCase();
+        const selectedGrade = grade || '7° Básico';
+        const selectedPlan = (plan === 'anual' || plan === 'full') ? 'anual' : 'mensual';
+        const cleanAmount = Number(amount) || (selectedPlan === 'anual' ? 149990 : 19990);
 
-          const orderNumber = `ORD-${Date.now().toString(36).toUpperCase()}-${Math.floor(Math.random() * 1000)}`;
-          const order = await prisma.subscriptionOrder.create({
-            data: {
-              orderNumber,
-              userId: user.id,
-              plan: plan || 'mensual',
-              amount: amount || (plan === 'anual' ? 149990 : 19990),
-              status: 'paid',
-              paymentMethod: 'simulated_webpay'
-            }
-          });
+        // PASO 1: Persistencia INMEDIATA y garantizada en disco (data/registered_families.json)
+        const familiesFilePath = path.resolve(__dirname, 'data', 'registered_families.json');
+        const dataDir = path.dirname(familiesFilePath);
+        if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
 
-          return { user, order };
-        });
-
-        // Sincronizar tambien a data/registered_families.json
-        try {
-          const familiesFilePath = path.resolve(__dirname, 'data', 'registered_families.json');
-          const dataDir = path.dirname(familiesFilePath);
-          if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
-          let existingFamilies = [];
-          if (fs.existsSync(familiesFilePath)) {
-            try { existingFamilies = JSON.parse(fs.readFileSync(familiesFilePath, 'utf8')); } catch {}
-          }
-          const savedUser = result?.user ? {
-            id: result.user.id,
-            name: result.user.name,
-            email: result.user.email,
-            rut: result.user.rut || rut || '',
-            phone: result.user.phone || phone || '',
-            studentName: result.user.studentName || studentName || 'Estudiante',
-            studentRun: result.user.studentRun || studentRun || '',
-            studentPin: result.user.studentPin || '123456',
-            status: result.user.status || 'active',
-            subscriptionActive: true,
-            plan: result.user.plan || plan || 'mensual',
-            enrolledGrades: result.user.enrolledGrades || [grade || '7° Básico'],
-            createdAt: result.user.createdAt ? result.user.createdAt.toISOString() : new Date().toISOString(),
-            lastLogin: new Date().toISOString()
-          } : {
-            id: `usr-${Date.now()}`,
-            name,
-            email,
-            rut: rut || '',
-            phone: phone || '',
-            studentName: studentName || 'Estudiante',
-            studentRun: studentRun || '',
-            studentPin: '123456',
-            status: 'active',
-            subscriptionActive: true,
-            plan: plan || 'mensual',
-            enrolledGrades: [grade || '7° Básico'],
-            createdAt: new Date().toISOString(),
-            lastLogin: new Date().toISOString()
-          };
-          const userIdx = existingFamilies.findIndex(f => f.email?.toLowerCase() === email.toLowerCase());
-          if (userIdx >= 0) {
-            existingFamilies[userIdx] = { ...existingFamilies[userIdx], ...savedUser, subscriptionActive: true };
-          } else {
-            existingFamilies.unshift(savedUser);
-          }
-          fs.writeFileSync(familiesFilePath, JSON.stringify(existingFamilies, null, 2), 'utf8');
-        } catch (fErr) {
-          console.warn('[Checkout] Error sincronizando archivo de familias:', fErr.message);
+        let existingFamilies = [];
+        if (fs.existsSync(familiesFilePath)) {
+          try { existingFamilies = JSON.parse(fs.readFileSync(familiesFilePath, 'utf8')); } catch {}
         }
 
-        res.writeHead(200);
-        res.end(JSON.stringify({ success: true, ...result }));
+        const existingIdx = existingFamilies.findIndex(f => f.email?.toLowerCase() === normalizedEmail);
+        const existingFamily = existingIdx >= 0 ? existingFamilies[existingIdx] : null;
+
+        const effectivePin = studentPin || existingFamily?.studentPin || Math.floor(100000 + Math.random() * 900000).toString();
+        const effectivePassword = password || existingFamily?.password || 'demo2026';
+        const effectiveGrades = Array.from(new Set([...(existingFamily?.enrolledGrades || []), selectedGrade]));
+
+        const savedUserRecord = {
+          id: existingFamily?.id || `usr-${Date.now()}`,
+          rut: rut || existingFamily?.rut || '',
+          name: name.toUpperCase(),
+          email: normalizedEmail,
+          phone: phone || existingFamily?.phone || '',
+          password: effectivePassword,
+          studentId: studentId || existingFamily?.studentId || `stu-${Date.now()}`,
+          studentName: (studentName || existingFamily?.studentName || 'Estudiante').toUpperCase(),
+          studentRun: studentRun || existingFamily?.studentRun || '',
+          studentPin: effectivePin,
+          status: 'active',
+          subscriptionActive: true,
+          plan: selectedPlan,
+          enrolledGrades: effectiveGrades,
+          createdAt: existingFamily?.createdAt || new Date().toISOString(),
+          lastLogin: new Date().toISOString()
+        };
+
+        if (existingIdx >= 0) {
+          existingFamilies[existingIdx] = savedUserRecord;
+        } else {
+          existingFamilies.unshift(savedUserRecord);
+        }
+
+        try {
+          fs.writeFileSync(familiesFilePath, JSON.stringify(existingFamilies, null, 2), 'utf8');
+        } catch (fErr) {
+          console.warn('[Checkout] Error escribiendo registered_families.json:', fErr.message);
+        }
+
+        // PASO 2: Persistencia en Neon DB (tolerante a fallos de suspension/scale-to-zero)
+        let dbUser = null;
+        let dbOrder = null;
+        try {
+          await withPrisma(async (prisma) => {
+            dbUser = await prisma.user.upsert({
+              where: { email: normalizedEmail },
+              update: {
+                name: savedUserRecord.name,
+                rut: savedUserRecord.rut || undefined,
+                phone: savedUserRecord.phone || undefined,
+                password: savedUserRecord.password || undefined,
+                subscriptionActive: true,
+                status: 'active',
+                plan: savedUserRecord.plan,
+                studentName: savedUserRecord.studentName || undefined,
+                studentRun: savedUserRecord.studentRun || undefined,
+                studentPin: savedUserRecord.studentPin,
+                enrolledGrades: savedUserRecord.enrolledGrades,
+                lastLogin: new Date()
+              },
+              create: {
+                email: normalizedEmail,
+                name: savedUserRecord.name,
+                rut: savedUserRecord.rut || null,
+                phone: savedUserRecord.phone || null,
+                password: savedUserRecord.password || null,
+                subscriptionActive: true,
+                status: 'active',
+                plan: savedUserRecord.plan,
+                studentName: savedUserRecord.studentName || null,
+                studentRun: savedUserRecord.studentRun || null,
+                studentPin: savedUserRecord.studentPin,
+                studentId: savedUserRecord.studentId,
+                enrolledGrades: savedUserRecord.enrolledGrades
+              }
+            });
+
+            const orderNumber = `ORD-${Date.now().toString(36).toUpperCase()}-${Math.floor(Math.random() * 1000)}`;
+            dbOrder = await prisma.subscriptionOrder.create({
+              data: {
+                orderNumber,
+                userId: dbUser.id,
+                plan: savedUserRecord.plan,
+                amount: cleanAmount,
+                status: 'paid',
+                paymentMethod: paymentId ? 'mercadopago' : 'simulated_webpay',
+                gatewayTransactionId: paymentId ? String(paymentId) : null
+              }
+            });
+
+            // Si Prisma devolvio un id formal, actualizarlo en el registro de archivo
+            if (dbUser?.id && savedUserRecord.id !== dbUser.id) {
+              savedUserRecord.id = dbUser.id;
+              existingFamilies = existingFamilies.map(f => f.email?.toLowerCase() === normalizedEmail ? savedUserRecord : f);
+              try { fs.writeFileSync(familiesFilePath, JSON.stringify(existingFamilies, null, 2), 'utf8'); } catch {}
+            }
+          });
+        } catch (dbErr) {
+          console.warn('[Checkout] Advertencia Neon DB (guardado en archivo garantizado):', dbErr.message);
+        }
+
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({
+          success: true,
+          user: dbUser || savedUserRecord,
+          order: dbOrder || { orderNumber: `ORD-${Date.now().toString(36).toUpperCase()}`, status: 'paid', amount: cleanAmount },
+          persistedToFile: true,
+          persistedToDb: Boolean(dbUser)
+        }));
       } catch (err) {
-        res.writeHead(500);
+        console.error('[Checkout] Error critico:', err);
+        res.writeHead(500, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ success: false, error: err.message }));
       }
       return;

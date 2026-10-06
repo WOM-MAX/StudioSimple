@@ -131,9 +131,12 @@ export const CheckoutFlow: React.FC = () => {
             password: pendingData.password,
             studentName: (pendingData.studentName || 'ESTUDIANTE').toUpperCase(),
             studentRun: pendingData.studentRun || '',
+            studentPin: pendingData.studentPin,
             grade: pendingData.grade || '7° Básico',
             plan: pendingData.plan || 'monthly',
-            phone: pendingData.phone || ''
+            phone: pendingData.phone || '',
+            amount: pendingData.amount,
+            paymentId: params.get('payment_id') || params.get('collection_id') || undefined
           });
 
           activateSessionFromCheckout(user, pendingData.grade || '7° Básico');
@@ -437,6 +440,7 @@ export const CheckoutFlow: React.FC = () => {
         studentFirstName: studentFirstName.trim().toUpperCase(),
         studentLastName: studentLastName.trim().toUpperCase(),
         studentRun: studentRun.trim(),
+        studentPin: Math.floor(100000 + Math.random() * 900000).toString(),
         grade,
         plan: selectedPlan,
         phone: phone.trim(),
