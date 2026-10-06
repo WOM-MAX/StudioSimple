@@ -13,12 +13,12 @@ Para maximizar la agilidad, evitar ejecuciones intempestivas que demoren la resp
      2. Plan de accion estructurado y jerarquizado por prioridad tecnica.
      3. **PROMPT CANONICO `/goal` LISTO PARA EJECUTAR (OBLIGATORIO, NO OPCIONAL):** La finalidad expresa de este modo es formular y entregar el bloque canonico `/goal` con las directivas de autonomia, rutas exactas y Definition of Done (DoD) para que el usuario solo tenga que activarlo cuando decida.
 
-2. **Modo Ejecucion Directa (Disparadores: comando `/goal`, "ejecuta", "aplica", "haz push", "haz pull"):**
-   - Cuando el usuario envie un comando que inicie con `/goal`, o de una orden imperativa directa de ejecucion (ej. "ejecuta el plan", "aplica los cambios ahora", "haz push", "haz pull"):
+2. **Modo Ejecucion Directa (Disparadores: comando `/goal`, "ejecuta", "aplica", "haz push", "haz pull", y toda la familia lexica de "autonoma", "autónoma", "autonomo", "autónomo", "autonomia", "autonomía", "de forma autonoma", "de forma autónoma", "con autonomia", "con autonomía", "autonomamente", "autónomamente"):**
+   - Cuando el usuario envie un comando que inicie con `/goal`, dé una orden imperativa directa de ejecucion, o mencione cualquier derivado de la palabra **autonomia / autonoma / autonomo**:
    - El agente **DEBE EJECUTAR DIRECTAMENTE DE PRINCIPIO A FIN** con 100% de autonomia.
    - **PROHIBIDO** generar prompts intermediarios de `/goal` en este modo (cero doble paso).
    - **PROHIBIDO** hacer preguntas de diseno intermedias, pedir aprobaciones previas o hacer pausas intermedias.
-   - La ejecucion debe incluir analisis, codigo, pruebas, validacion (build con codigo 0) y documentacion en memoria/ antes de entregar el informe final de cierre.
+   - La ejecucion debe incluir analisis, codigo, pruebas, validacion (build con codigo 0), bitacora en memoria/ y sincronizacion correspondiente antes de entregar el informe final de cierre sin preguntas pasivas.
 
 3. **Regla de Prevalencia ante Prompts Externos (Work / ChatGPT):**
    - Cuando el usuario pegue un prompt generado por Work o terceros que contenga verbos imperativos (ej. "Corrige el plan...", "Actualiza..."), pero la intencion expresada o previa sea "analiza el prompt", "¿que le entrego?", o "analiza y plan":

@@ -948,35 +948,35 @@ export const CheckoutFlow: React.FC = () => {
                 <p className="text-sm text-white/70 max-w-xl mx-auto">
                   Bienvenida/o {createdUser?.name}. El nivel <strong className="text-[#57d6f3]">{grade}</strong> ha sido habilitado con éxito. Tu sesión se encuentra activa para ingresar de inmediato.
                 </p>
-                <div className="flex flex-wrap items-center justify-center gap-2 pt-1">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold">
-                    <Check size={14} />
-                    <span>
+                <div className="flex flex-wrap items-center justify-center gap-2 pt-1 max-w-full">
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold max-w-full">
+                    <Check size={14} className="shrink-0" />
+                    <span className="truncate max-w-[280px] sm:max-w-none">
                       {emailSentStatus?.sent
-                        ? `Copia oficial de credenciales despachada a ${createdUser?.email || email}`
+                        ? `Copia oficial despachada a ${createdUser?.email || email}`
                         : `Copia oficial enviada a ${createdUser?.email || email}`}
                     </span>
                   </div>
                   {isMercadoPagoApproved && (
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#009EE3]/15 border border-[#009EE3]/40 text-[#009EE3] text-xs font-bold">
-                      <CreditCard size={14} />
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#009EE3]/15 border border-[#009EE3]/40 text-[#009EE3] text-xs font-bold max-w-full">
+                      <CreditCard size={14} className="shrink-0" />
                       <span>Pago Verificado vía Mercado Pago / Webpay ($1.000 CLP)</span>
                     </div>
                   )}
                 </div>
               </div>
 
-              {/* BANNER DESTACADO: DESPACHO DIRECTO A WHATSAPP */}
-              <div className="p-5 rounded-2xl bg-gradient-to-r from-[#25D366]/20 via-[#12A1A4]/15 to-transparent border-2 border-[#25D366]/50 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-4">
-                <div className="flex items-center gap-3.5 text-center sm:text-left">
+              {/* BANNER DESTACADO: DESPACHO DIRECTO A WHATSAPP (100% FLUIDO Y RESPONSIVE) */}
+              <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-[#25D366]/20 via-[#12A1A4]/15 to-transparent border-2 border-[#25D366]/50 shadow-xl flex flex-col md:flex-row items-center justify-between gap-4 w-full min-w-0">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-3.5 min-w-0 flex-1 w-full">
                   <div className="w-12 h-12 rounded-xl bg-[#25D366] text-white flex items-center justify-center shrink-0 shadow-lg">
                     <MessageCircle size={26} />
                   </div>
-                  <div>
-                    <h3 className="text-sm md:text-base font-extrabold text-white">
+                  <div className="min-w-0 space-y-1 flex-1">
+                    <h3 className="text-sm md:text-base font-extrabold text-white break-words">
                       Recibe tus credenciales de acceso en tu WhatsApp
                     </h3>
-                    <p className="text-xs text-white/70">
+                    <p className="text-xs text-white/70 leading-relaxed break-words">
                       Envía un respaldo automático con tu RUN, contraseña y PIN del estudiante a tu teléfono celular.
                     </p>
                   </div>
@@ -986,12 +986,12 @@ export const CheckoutFlow: React.FC = () => {
                   href={buildWhatsAppUrl(parentPhone, waMessage)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95 cursor-pointer shadow-lg shrink-0 border border-emerald-400/40"
+                  className="w-full md:w-auto px-4 sm:px-6 py-3 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-lg border border-emerald-400/40 text-center leading-normal break-words max-w-full"
                 >
-                  <MessageCircle size={16} />
-                  <span>
+                  <MessageCircle size={18} className="shrink-0" />
+                  <span className="break-words">
                     {parentPhone
-                      ? `Enviar credenciales a mi WhatsApp (${parentPhone})`
+                      ? `Enviar a mi WhatsApp (${parentPhone})`
                       : 'Enviar credenciales a mi WhatsApp'}
                   </span>
                 </a>

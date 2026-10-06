@@ -131,8 +131,9 @@ El entregable y criterios de **Salida** son: Cumplimiento estricto del protocolo
      - **PROHIBIDO** iniciar mutaciones de código, modificar archivos o ejecutar compilaciones pesadas en este modo.
      - **PROHIBIDO TERMINAR CON PREGUNTAS PASIVAS DE CIERRE:** Queda estrictamente prohibido finalizar respuestas con preguntas abiertas o de delegación tipo "¿con cuál empezamos?", "¿cómo procedemos?" o "¿te parece bien el plan?".
      - El bloque `/goal` es **OBLIGATORIO** (no opcional), formulado con las 12 directivas de autonomía para que el usuario pueda revisarlo y detonarlo cuando decida.
-  2. **Modo Ejecución Directa (Disparadores: comando `/goal`, "ejecuta", "aplica", "haz push", "haz pull"):**
-     - Ejecución autónoma de principio a fin, sin pausas, sin preguntas intermedias y sin emitir prompts intermediarios, concluyendo con validación (código 0) y reporte final.
+  2. **Modo Ejecución Directa (Disparadores: comando `/goal`, "ejecuta", "aplica", "haz push", "haz pull", y toda la familia léxica de "autónoma", "autonoma", "autónomo", "autonomo", "autonomía", "autonomia", "de forma autónoma", "con autonomía", "autónomamente", "autonomamente"):**
+     - Toda presencia explícita de la palabra **autonomía / autónoma / autónomo** o sus derivados gramaticales instruye al agente a operar bajo **Ejecución Directa de Principio a Fin**.
+     - Ejecución autónoma de principio a fin, sin pausas, sin preguntas intermedias, sin delegaciones de decisión al usuario y sin emitir prompts intermediarios, concluyendo con validación técnica (código 0), bitácora y reporte final integral.
   3. **Regla de Prevalencia ante Prompts Externos (Work / ChatGPT):**
      - Si el usuario presenta un prompt generado por Work u otra fuente con verbos imperativos pero dentro del contexto de analizar, evaluar o "¿qué le entrego?", rige estrictamente el Modo Análisis y Planificación, produciendo el análisis, el plan y el prompt `/goal` correspondiente sin ejecutar cambios directos en el repositorio. Ver [.agents/rules/analisis_autonomo_goal.md](file:///d:/StudioSimple%20-%20Antigravity/.agents/rules/analisis_autonomo_goal.md).
 
