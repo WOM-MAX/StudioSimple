@@ -8,39 +8,66 @@ import { recordAuditLog } from '../../lib/admin-repository';
 import { loadPricingConfig, validateCoupon } from '../../lib/pricing-repository';
 import { PricingConfig, DiscountCoupon } from '../../types/pricing';
 
-function formatChileanPhone(value: string): string {
-  const digits = value.replace(/\D/g, '');
+/**
+ * Extrae de forma limpia y tolerante los 8 dígitos locales de un móvil chileno,
+ * eliminando automáticamente prefijos comunes como +56, 56, 9 o espacios.
+ */
+function extractChileanLocalDigits(value: string): string {
+  if (!value) return '';
+  let digits = value.replace(/\D/g, '');
   if (!digits) return '';
-  let rest = digits;
-  if (rest.startsWith('56')) {
-    rest = rest.slice(2);
+
+  // 1. Si comienza con código de país 569 (+56 9)
+  if (digits.startsWith('569')) {
+    digits = digits.slice(3);
+  } else if (digits.startsWith('56')) {
+    // Si comienza con 56 y luego un 9 u otro dígito
+    digits = digits.slice(2);
+    if (digits.startsWith('9')) {
+      digits = digits.slice(1);
+    }
+  } else if (digits.length >= 9 && digits.startsWith('9')) {
+    // Si viene en formato móvil chileno clásico de 9 dígitos (9XXXXXXXX)
+    digits = digits.slice(1);
   }
-  if (rest.startsWith('9')) {
-    rest = rest.slice(1);
-  }
-  rest = rest.slice(0, 8);
-  if (rest.length === 0) {
-    return '+56 9 ';
-  }
-  if (rest.length <= 4) {
-    return `+56 9 ${rest}`;
-  }
-  return `+56 9 ${rest.slice(0, 4)} ${rest.slice(4)}`;
+
+  // Se retornan estrictamente hasta 8 dígitos locales
+  return digits.slice(0, 8);
+}
+
+/**
+ * Formatea los dígitos locales para presentación visual amena (XXXX XXXX)
+ */
+function formatLocalDigitsDisplay(digits: string): string {
+  if (!digits) return '';
+  const clean = digits.slice(0, 8);
+  if (clean.length <= 4) return clean;
+  return `${clean.slice(0, 4)} ${clean.slice(4)}`;
+}
+
+/**
+ * Genera la representación internacional canónica chilena (+56 9 XXXX XXXX)
+ */
+function toChileanInternationalPhone(localDigits: string): string {
+  if (!localDigits) return '';
+  const formatted = formatLocalDigitsDisplay(localDigits);
+  return `+56 9 ${formatted}`;
+}
+
+function formatChileanPhone(value: string): string {
+  const local = extractChileanLocalDigits(value);
+  return toChileanInternationalPhone(local);
 }
 
 function buildWhatsAppUrl(phoneStr: string, text: string): string {
-  const digits = (phoneStr || '').replace(/\D/g, '');
-  let targetDigits = digits;
-  if (digits.startsWith('56')) {
-    targetDigits = digits;
-  } else if (digits.startsWith('9') && digits.length === 9) {
-    targetDigits = `56${digits}`;
-  } else if (digits.length === 8) {
-    targetDigits = `569${digits}`;
-  }
+  const localDigits = extractChileanLocalDigits(phoneStr || '');
   const encoded = encodeURIComponent(text);
-  return targetDigits.length >= 8
-    ? `https://wa.me/${targetDigits}?text=${encoded}`
+  if (localDigits.length === 8) {
+    return `https://wa.me/569${localDigits}?text=${encoded}`;
+  }
+  const digits = (phoneStr || '').replace(/\D/g, '');
+  return digits.length >= 8
+    ? `https://wa.me/${digits.startsWith('56') ? digits : `56${digits}`}?text=${encoded}`
     : `https://api.whatsapp.com/send?text=${encoded}`;
 }
 
@@ -656,16 +683,36 @@ export const CheckoutFlow: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="block text-xs text-white/70 font-semibold mb-1">
-                      Teléfono Móvil (WhatsApp de Apoyo)
+                    <label className="block text-xs text-white/70 font-semibold mb-1 flex items-center justify-between">
+                      <span>Teléfono Móvil (WhatsApp de Apoyo)</span>
+                      <span className="text-[10px] text-white/40 font-normal">8 dígitos móviles</span>
                     </label>
-                    <input
-                      type="tel"
-                      value={phone}
-                      onChange={(e) => setPhone(formatChileanPhone(e.target.value))}
-                      placeholder="+56 9 1234 5678"
-                      className="input-field w-full rounded-lg px-4 py-3 text-xs font-mono"
-                    />
+                    <div className="flex rounded-lg overflow-hidden border border-white/20 focus-within:border-[#57d6f3] focus-within:ring-2 focus-within:ring-[#57d6f3]/25 bg-[#0A192F]/60 transition-all shadow-inner">
+                      {/* Badge exterior inmutable de código país y prefijo móvil chileno */}
+                      <div className="flex items-center gap-1.5 px-3 py-3 bg-white/5 border-r border-white/10 text-white/90 font-mono text-xs select-none shrink-0">
+                        <span className="text-sm leading-none" role="img" aria-label="Chile">🇨🇱</span>
+                        <span className="font-extrabold text-[#57d6f3] tracking-wide">+56 9</span>
+                      </div>
+                      {/* Input tolerante que solo acepta los 8 dígitos locales */}
+                      <input
+                        type="tel"
+                        inputMode="numeric"
+                        value={formatLocalDigitsDisplay(extractChileanLocalDigits(phone))}
+                        onChange={(e) => {
+                          const localDigits = extractChileanLocalDigits(e.target.value);
+                          setPhone(localDigits ? toChileanInternationalPhone(localDigits) : '');
+                        }}
+                        placeholder="7898 1434"
+                        maxLength={9}
+                        className="w-full bg-transparent px-3.5 py-3 text-xs font-mono text-white placeholder-white/30 focus:outline-none tracking-wider"
+                      />
+                    </div>
+                    {phone && extractChileanLocalDigits(phone).length === 8 && (
+                      <p className="mt-1 text-[11px] text-emerald-400 font-medium flex items-center gap-1">
+                        <Check size={12} className="shrink-0" />
+                        <span>Número verificado: <strong className="font-mono">{phone}</strong></span>
+                      </p>
+                    )}
                   </div>
 
                   <div>
