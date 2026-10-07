@@ -27,8 +27,12 @@ import {
   GraduationCap,
   Shield,
   AlertTriangle,
-  X
+  X,
+  Pencil,
+  Mail,
+  Phone
 } from 'lucide-react';
+import { updateFamilyDetails } from '../../lib/user-repository';
 
 const GRADES = ['3° Básico', '4° Básico', '5° Básico', '6° Básico', '7° Básico', '8° Básico'];
 
@@ -58,6 +62,46 @@ export const ParentDashboard: React.FC = () => {
   const [isCancelling, setIsCancelling] = useState(false);
   const [cancelMessage, setCancelMessage] = useState<string | null>(null);
   const [isSubscriptionActive, setIsSubscriptionActive] = useState<boolean>(parent?.subscriptionActive !== false);
+
+  // Estados para actualizar datos de contacto del apoderado (correo y teléfono)
+  const [showContactModal, setShowContactModal] = useState(false);
+  const [contactEmailInput, setContactEmailInput] = useState(parent?.email || '');
+  const [contactPhoneInput, setContactPhoneInput] = useState(parent?.phone || '');
+  const [isSavingContact, setIsSavingContact] = useState(false);
+  const [contactError, setContactError] = useState<string | null>(null);
+  const [contactSuccess, setContactSuccess] = useState(false);
+
+  const handleUpdateContactDetails = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setContactError(null);
+    if (!contactEmailInput || !contactEmailInput.trim().includes('@')) {
+      setContactError('Ingresa una dirección de correo electrónico válida.');
+      return;
+    }
+    setIsSavingContact(true);
+    try {
+      const res = await updateFamilyDetails({
+        id: parent.id,
+        email: contactEmailInput.trim().toLowerCase(),
+        phone: contactPhoneInput.trim()
+      });
+      if (res.success && res.user) {
+        setContactSuccess(true);
+        localStorage.setItem('estudio_simple_parent', JSON.stringify(res.user));
+        setTimeout(() => {
+          setShowContactModal(false);
+          setContactSuccess(false);
+          window.location.reload();
+        }, 1200);
+      } else {
+        setContactError(res.error || 'No fue posible actualizar los datos de contacto.');
+      }
+    } catch (err: any) {
+      setContactError(err?.message || 'Error al actualizar los datos.');
+    } finally {
+      setIsSavingContact(false);
+    }
+  };
 
   // Estados para cambio de clave del apoderado
   const [showPasswordModal, setShowPasswordModal] = useState(false);
@@ -1054,9 +1098,16 @@ export const ParentDashboard: React.FC = () => {
                     </div>
 
                     <div>
-                      <span className="text-[11px] text-slate-400 block font-semibold">Correo Electrónico:</span>
+                      <span className="text-[11px] text-slate-400 block font-semibold">Correo Electrónico (Login):</span>
                       <span className="font-mono font-bold text-white bg-black/20 px-3 py-1.5 rounded-lg border border-white/5 inline-block mt-0.5">
                         {parent.email || 'No especificado'}
+                      </span>
+                    </div>
+
+                    <div>
+                      <span className="text-[11px] text-slate-400 block font-semibold">Teléfono Móvil de Contacto:</span>
+                      <span className="font-mono font-bold text-white bg-black/20 px-3 py-1.5 rounded-lg border border-white/5 inline-block mt-0.5">
+                        {parent.phone || 'No especificado'}
                       </span>
                     </div>
 
@@ -1071,8 +1122,23 @@ export const ParentDashboard: React.FC = () => {
                       </div>
                     </div>
 
-                    {/* Boton para cambiar clave del apoderado */}
-                    <div className="pt-2 border-t border-white/10">
+                    {/* Botones de gestion de cuenta del apoderado */}
+                    <div className="pt-2 border-t border-white/10 space-y-2">
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setContactEmailInput(parent.email || '');
+                          setContactPhoneInput(parent.phone || '');
+                          setContactError(null);
+                          setContactSuccess(false);
+                          setShowContactModal(true);
+                        }}
+                        className="w-full py-2.5 px-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/15 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer shadow-xs"
+                      >
+                        <Pencil size={15} className="text-[#F8AD22]" />
+                        <span>Actualizar Correo y Teléfono</span>
+                      </button>
+
                       <button
                         type="button"
                         onClick={() => {
@@ -1285,6 +1351,97 @@ export const ParentDashboard: React.FC = () => {
                   className="flex-1 py-2.5 px-4 rounded-xl bg-[#12A1A4] hover:bg-[#0e8b8e] text-xs font-bold text-white transition-all cursor-pointer disabled:opacity-50 flex items-center justify-center gap-1.5"
                 >
                   {isChangingPassword ? 'Guardando...' : 'Guardar Nueva Clave'}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* MODAL PARA ACTUALIZAR DATOS DE CONTACTO (CORREO Y TELÉFONO) */}
+      {showContactModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-xs">
+          <div className="bg-[#10223D] border border-white/20 rounded-3xl max-w-md w-full p-6 sm:p-8 space-y-5 shadow-2xl relative text-white">
+            <button
+              type="button"
+              onClick={() => setShowContactModal(false)}
+              className="absolute right-4 top-4 p-1.5 text-white/50 hover:text-white rounded-lg transition-colors cursor-pointer"
+              title="Cerrar"
+            >
+              <X size={18} />
+            </button>
+
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-2xl bg-[#EE751C]/20 border border-[#EE751C]/40 flex items-center justify-center text-[#EE751C]">
+                <Pencil size={20} />
+              </div>
+              <div>
+                <h3 className="text-lg font-bold">Actualizar Datos de Contacto</h3>
+                <p className="text-xs text-white/60">Portal del Apoderado EstudioSimple</p>
+              </div>
+            </div>
+
+            <p className="text-xs text-slate-300 leading-relaxed">
+              Modifica tu correo de acceso y número de WhatsApp para mantener tus credenciales y avisos siempre actualizados.
+            </p>
+
+            <form onSubmit={handleUpdateContactDetails} className="space-y-4">
+              <div>
+                <label className="block text-[11px] text-white/70 font-semibold mb-1">
+                  Correo Electrónico (Login de Apoderado) *
+                </label>
+                <div className="relative">
+                  <input
+                    type="email"
+                    required
+                    value={contactEmailInput}
+                    onChange={(e) => setContactEmailInput(e.target.value)}
+                    placeholder="apoderado@correo.cl"
+                    className="input-field w-full rounded-xl px-3 py-2.5 text-xs bg-black/30 border border-white/15 text-white focus:outline-none focus:border-[#12A1A4]"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-[11px] text-white/70 font-semibold mb-1">
+                  Teléfono Móvil (WhatsApp)
+                </label>
+                <input
+                  type="text"
+                  value={contactPhoneInput}
+                  onChange={(e) => setContactPhoneInput(e.target.value)}
+                  placeholder="+56 9 1234 5678"
+                  className="input-field w-full rounded-xl px-3 py-2.5 text-xs bg-black/30 border border-white/15 text-white font-mono focus:outline-none focus:border-[#12A1A4]"
+                />
+              </div>
+
+              {contactError && (
+                <div className="p-2.5 rounded-xl bg-rose-500/20 border border-rose-500/40 text-rose-300 text-xs font-semibold">
+                  {contactError}
+                </div>
+              )}
+
+              {contactSuccess && (
+                <div className="p-2.5 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs font-bold flex items-center gap-2">
+                  <CheckCircle2 size={16} className="text-emerald-400 shrink-0" />
+                  <span>¡Datos de contacto actualizados exitosamente!</span>
+                </div>
+              )}
+
+              <div className="flex gap-3 pt-2">
+                <button
+                  type="button"
+                  onClick={() => setShowContactModal(false)}
+                  className="flex-1 py-2.5 px-4 rounded-xl bg-white/10 hover:bg-white/20 text-xs font-bold text-white transition-all cursor-pointer"
+                >
+                  Cancelar
+                </button>
+                <button
+                  type="submit"
+                  disabled={isSavingContact || contactSuccess}
+                  className="flex-1 py-2.5 px-4 rounded-xl bg-[#EE751C] hover:bg-[#d96512] text-xs font-bold text-white transition-all cursor-pointer disabled:opacity-50 flex items-center justify-center gap-1.5"
+                >
+                  {isSavingContact ? 'Guardando...' : 'Guardar Datos'}
                 </button>
               </div>
             </form>

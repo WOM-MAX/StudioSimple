@@ -54,6 +54,7 @@ export type AuditActionType =
   | 'PAYMENT_MERCADOPAGO_SUCCESS'
   | 'DELETE_USER_PERMANENT'
   | 'RESET_USER_PASSWORD'
+  | 'UPDATE_USER_DATA'
   | 'WHATSAPP_CREDENTIALS_DISPATCH';
 
 export interface AuditLogEntry {

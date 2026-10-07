@@ -1668,6 +1668,25 @@ const server = http.createServer(async (req, res) => {
           console.warn('[AdminResetPassword] Fallback Prisma DB:', dbErr.message);
         }
 
+        // Persistir tambien en data/registered_families.json
+        const familiesFilePath = path.resolve(__dirname, 'data', 'registered_families.json');
+        if (fs.existsSync(familiesFilePath)) {
+          try {
+            const existingFamilies = JSON.parse(fs.readFileSync(familiesFilePath, 'utf8'));
+            const fIdx = existingFamilies.findIndex(f =>
+              (userId && f.id === userId) ||
+              (email && f.email?.toLowerCase() === email.toLowerCase()) ||
+              (rut && f.rut?.replace(/[^0-9kK]/g, '') === rut.replace(/[^0-9kK]/g, ''))
+            );
+            if (fIdx >= 0) {
+              existingFamilies[fIdx].password = newPassword;
+              fs.writeFileSync(familiesFilePath, JSON.stringify(existingFamilies, null, 2), 'utf8');
+            }
+          } catch (jsonErr) {
+            console.warn('[AdminResetPassword] Error actualizando JSON local:', jsonErr.message);
+          }
+        }
+
         const logsFilePath = path.resolve(__dirname, 'data', 'audit_logs.json');
         let existingLogs = [];
         if (fs.existsSync(logsFilePath)) {
@@ -1721,6 +1740,142 @@ const server = http.createServer(async (req, res) => {
         }));
       } catch (err) {
         res.writeHead(500);
+        res.end(JSON.stringify({ success: false, error: err.message }));
+      }
+      return;
+    }
+
+    // 1i-5. Edicion y Actualizacion de Datos Familiares (Admin CMS y Portal Apoderado)
+    if (pathname === '/api/admin/family/update' && (method === 'PUT' || method === 'POST')) {
+      try {
+        const body = await readJsonBody(req);
+        const {
+          userId,
+          id,
+          name,
+          rut,
+          email,
+          phone,
+          studentName,
+          studentRun,
+          studentPin,
+          plan,
+          enrolledGrades,
+          status,
+          password
+        } = body;
+
+        const targetId = userId || id;
+        if (!targetId && !email && !rut) {
+          res.writeHead(400, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ success: false, message: 'Identificador de usuario requerido para actualizacion' }));
+          return;
+        }
+
+        let updatedInDb = false;
+
+        // 1. Actualizar en Neon PostgreSQL via withPrisma
+        try {
+          await withPrisma(async (prisma) => {
+            const user = await prisma.user.findFirst({
+              where: {
+                OR: [
+                  targetId ? { id: targetId } : undefined,
+                  email ? { email } : undefined,
+                  rut ? { rut } : undefined
+                ].filter(Boolean)
+              }
+            });
+
+            if (user) {
+              const updateData = {};
+              if (name !== undefined) updateData.name = name;
+              if (rut !== undefined) updateData.rut = rut || null;
+              if (email !== undefined) updateData.email = email;
+              if (phone !== undefined) updateData.phone = phone || null;
+              if (studentName !== undefined) updateData.studentName = studentName;
+              if (studentRun !== undefined) updateData.studentRun = studentRun || null;
+              if (studentPin !== undefined) updateData.studentPin = studentPin;
+              if (plan !== undefined) updateData.plan = plan;
+              if (enrolledGrades !== undefined) updateData.enrolledGrades = enrolledGrades;
+              if (status !== undefined) updateData.status = status;
+              if (password !== undefined && password) updateData.password = password;
+
+              await prisma.user.update({
+                where: { id: user.id },
+                data: updateData
+              });
+              updatedInDb = true;
+            }
+          });
+        } catch (dbErr) {
+          console.warn('[AdminUpdateFamily] Fallback Prisma DB:', dbErr.message);
+        }
+
+        // 2. Actualizar en data/registered_families.json
+        const familiesFilePath = path.resolve(__dirname, 'data', 'registered_families.json');
+        let updatedFamilyRecord = null;
+        if (fs.existsSync(familiesFilePath)) {
+          try {
+            const existingFamilies = JSON.parse(fs.readFileSync(familiesFilePath, 'utf8'));
+            const fIdx = existingFamilies.findIndex(f =>
+              (targetId && f.id === targetId) ||
+              (email && f.email?.toLowerCase() === email.toLowerCase()) ||
+              (rut && f.rut?.replace(/[^0-9kK]/g, '') === rut.replace(/[^0-9kK]/g, ''))
+            );
+
+            if (fIdx >= 0) {
+              const current = existingFamilies[fIdx];
+              updatedFamilyRecord = {
+                ...current,
+                name: name !== undefined ? name : current.name,
+                rut: rut !== undefined ? rut : current.rut,
+                email: email !== undefined ? email : current.email,
+                phone: phone !== undefined ? phone : current.phone,
+                studentName: studentName !== undefined ? studentName : current.studentName,
+                studentRun: studentRun !== undefined ? studentRun : current.studentRun,
+                studentPin: studentPin !== undefined ? studentPin : current.studentPin,
+                plan: plan !== undefined ? plan : current.plan,
+                enrolledGrades: enrolledGrades !== undefined ? enrolledGrades : current.enrolledGrades,
+                status: status !== undefined ? status : current.status,
+                password: (password !== undefined && password) ? password : current.password,
+                updatedAt: new Date().toISOString()
+              };
+              existingFamilies[fIdx] = updatedFamilyRecord;
+              fs.writeFileSync(familiesFilePath, JSON.stringify(existingFamilies, null, 2), 'utf8');
+            }
+          } catch (jsonErr) {
+            console.warn('[AdminUpdateFamily] Error actualizando JSON local:', jsonErr.message);
+          }
+        }
+
+        // 3. Auditoria
+        const logsFilePath = path.resolve(__dirname, 'data', 'audit_logs.json');
+        let existingLogs = [];
+        if (fs.existsSync(logsFilePath)) {
+          try { existingLogs = JSON.parse(fs.readFileSync(logsFilePath, 'utf8')); } catch {}
+        }
+        existingLogs.unshift({
+          id: `log-update-${Date.now()}`,
+          timestamp: new Date().toISOString(),
+          actorId: 'admin',
+          actorName: 'Administrador',
+          actorRole: 'admin',
+          action: 'UPDATE_FAMILY_DETAILS',
+          target: email || rut || targetId,
+          details: `Actualizacion de datos familiares (${name || email}). Base de datos: ${updatedInDb ? 'Sincronizado' : 'Modo local'}`
+        });
+        fs.writeFileSync(logsFilePath, JSON.stringify(existingLogs.slice(0, 1000), null, 2), 'utf8');
+
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({
+          success: true,
+          updatedInDb,
+          user: updatedFamilyRecord,
+          message: 'Datos de la familia actualizados exitosamente'
+        }));
+      } catch (err) {
+        res.writeHead(500, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ success: false, error: err.message }));
       }
       return;

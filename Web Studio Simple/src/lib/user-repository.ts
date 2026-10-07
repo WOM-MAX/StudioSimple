@@ -493,6 +493,64 @@ export async function deleteUserPermanently(userId: string): Promise<boolean> {
   return true;
 }
 
+/**
+ * Actualiza los datos de una familia en localStorage y sincroniza con el backend (/api/admin/family/update)
+ */
+export async function updateFamilyDetails(
+  updatedFields: Partial<ParentUser> & { id: string }
+): Promise<{ success: boolean; user?: ParentUser; error?: string }> {
+  const users = getAllRegisteredUsers();
+  const idx = users.findIndex((u) => u.id === updatedFields.id);
+  if (idx < 0) {
+    return { success: false, error: 'Usuario no encontrado en el registro' };
+  }
+
+  const existing = users[idx];
+  const mergedUser: ParentUser = {
+    ...existing,
+    ...updatedFields,
+    rut: updatedFields.rut !== undefined ? formatRut(updatedFields.rut) : existing.rut,
+    email: updatedFields.email ? updatedFields.email.trim().toLowerCase() : existing.email,
+    name: updatedFields.name ? updatedFields.name.trim() : existing.name,
+    studentName: updatedFields.studentName !== undefined ? updatedFields.studentName.trim() : existing.studentName,
+    studentRun: updatedFields.studentRun !== undefined ? (updatedFields.studentRun ? formatRut(updatedFields.studentRun) : '') : existing.studentRun,
+    phone: updatedFields.phone !== undefined ? updatedFields.phone.trim() : existing.phone,
+    password: updatedFields.password !== undefined && updatedFields.password.trim() ? updatedFields.password.trim() : existing.password
+  };
+
+  users[idx] = mergedUser;
+  persistUsers(users);
+
+  // Sincronizar en backend
+  if (typeof fetch !== 'undefined') {
+    try {
+      await fetch('/api/admin/family/update', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          userId: mergedUser.id,
+          id: mergedUser.id,
+          name: mergedUser.name,
+          rut: mergedUser.rut,
+          email: mergedUser.email,
+          phone: mergedUser.phone,
+          studentName: mergedUser.studentName,
+          studentRun: mergedUser.studentRun,
+          studentPin: mergedUser.studentPin,
+          plan: mergedUser.plan,
+          enrolledGrades: mergedUser.enrolledGrades,
+          status: mergedUser.status,
+          password: mergedUser.password
+        })
+      });
+    } catch (err: any) {
+      console.warn('[UserRepository] Error al sincronizar actualización en backend:', err?.message);
+    }
+  }
+
+  return { success: true, user: mergedUser };
+}
+
 // Inicialización automática
 if (typeof window !== 'undefined') {
   initializeUsersRegistry();

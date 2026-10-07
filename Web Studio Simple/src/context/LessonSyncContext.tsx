@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, useCallback, useRef } from 'react';
 import { LessonSessionState, SyncViewMode, LessonStage, LessonData } from '../types/lesson';
+import { AuthRole } from '../types';
 import { MATEMATICA_7B_OA01_CLASE01 } from '../data/lessons/matematica_7b_oa01_clase01';
 
 const SYNC_CHANNEL_NAME = 'estudiosimple_lesson_sync_channel';
@@ -52,11 +53,21 @@ interface LessonSyncContextType {
 
 const LessonSyncContext = createContext<LessonSyncContextType | undefined>(undefined);
 
-export const LessonSyncProvider: React.FC<{ children: React.ReactNode; initialLesson?: LessonData }> = ({
+export const LessonSyncProvider: React.FC<{
+  children: React.ReactNode;
+  initialLesson?: LessonData;
+  userRole?: AuthRole;
+}> = ({
   children,
-  initialLesson = MATEMATICA_7B_OA01_CLASE01
+  initialLesson = MATEMATICA_7B_OA01_CLASE01,
+  userRole
 }) => {
+  const isStudentRole = userRole === 'student';
+
   const [viewMode, setViewModeState] = useState<SyncViewMode>(() => {
+    if (isStudentRole) {
+      return 'student';
+    }
     if (typeof window !== 'undefined') {
       const urlMode = new URLSearchParams(window.location.search).get('mode') as SyncViewMode;
       if (urlMode === 'adult' || urlMode === 'student' || urlMode === 'split') {
@@ -176,21 +187,27 @@ export const LessonSyncProvider: React.FC<{ children: React.ReactNode; initialLe
   }, [updateSession]);
 
   const setViewMode = useCallback((mode: SyncViewMode) => {
+    if (isStudentRole && mode !== 'student') {
+      return;
+    }
     setViewModeState(mode);
     if (typeof window !== 'undefined') {
       const url = new URL(window.location.href);
       url.searchParams.set('mode', mode);
       window.history.replaceState({}, '', url.toString());
     }
-  }, []);
+  }, [isStudentRole]);
 
   const openNewWindow = useCallback((mode: 'adult' | 'student') => {
+    if (isStudentRole && mode !== 'student') {
+      return;
+    }
     if (typeof window !== 'undefined') {
       const url = new URL(window.location.href);
       url.searchParams.set('mode', mode);
       window.open(url.toString(), '_blank', 'noopener,noreferrer');
     }
-  }, []);
+  }, [isStudentRole]);
 
   return (
     <LessonSyncContext.Provider

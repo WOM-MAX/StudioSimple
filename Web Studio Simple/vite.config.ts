@@ -341,6 +341,22 @@ export default defineConfig({
             req.on('end', () => {
               try {
                 const parsed = JSON.parse(body || '{}');
+                const familiesFilePath = path.resolve(__dirname, '..', 'data', 'registered_families.json');
+                if (fs.existsSync(familiesFilePath) && parsed.newPassword) {
+                  try {
+                    const existingFamilies = JSON.parse(fs.readFileSync(familiesFilePath, 'utf8'));
+                    const fIdx = existingFamilies.findIndex((f: any) =>
+                      (parsed.userId && f.id === parsed.userId) ||
+                      (parsed.email && f.email?.toLowerCase() === parsed.email.toLowerCase()) ||
+                      (parsed.rut && f.rut?.replace(/[^0-9kK]/g, '') === parsed.rut.replace(/[^0-9kK]/g, ''))
+                    );
+                    if (fIdx >= 0) {
+                      existingFamilies[fIdx].password = parsed.newPassword;
+                      fs.writeFileSync(familiesFilePath, JSON.stringify(existingFamilies, null, 2), 'utf8');
+                    }
+                  } catch {}
+                }
+
                 res.setHeader('Content-Type', 'application/json');
                 return res.end(JSON.stringify({
                   success: true,
@@ -350,6 +366,62 @@ export default defineConfig({
                   message: parsed.autoNotifyWhatsApp && parsed.phone
                     ? `Contraseña actualizada y enviada automáticamente por WhatsApp a ${parsed.phone} (dev)`
                     : 'Contraseña actualizada y sincronizada exitosamente (dev)'
+                }));
+              } catch (e: any) {
+                res.statusCode = 500;
+                res.setHeader('Content-Type', 'application/json');
+                return res.end(JSON.stringify({ success: false, error: e?.message }));
+              }
+            });
+            return;
+          }
+
+          if ((url === '/api/admin/family/update' || url?.startsWith('/api/admin/family/update')) && (req.method === 'PUT' || req.method === 'POST')) {
+            let body = '';
+            req.on('data', chunk => { body += chunk; });
+            req.on('end', () => {
+              try {
+                const parsed = JSON.parse(body || '{}');
+                const familiesFilePath = path.resolve(__dirname, '..', 'data', 'registered_families.json');
+                let updatedRecord = null;
+                if (fs.existsSync(familiesFilePath)) {
+                  try {
+                    const existingFamilies = JSON.parse(fs.readFileSync(familiesFilePath, 'utf8'));
+                    const targetId = parsed.userId || parsed.id;
+                    const fIdx = existingFamilies.findIndex((f: any) =>
+                      (targetId && f.id === targetId) ||
+                      (parsed.email && f.email?.toLowerCase() === parsed.email.toLowerCase()) ||
+                      (parsed.rut && f.rut?.replace(/[^0-9kK]/g, '') === parsed.rut.replace(/[^0-9kK]/g, ''))
+                    );
+                    if (fIdx >= 0) {
+                      const cur = existingFamilies[fIdx];
+                      updatedRecord = {
+                        ...cur,
+                        name: parsed.name !== undefined ? parsed.name : cur.name,
+                        rut: parsed.rut !== undefined ? parsed.rut : cur.rut,
+                        email: parsed.email !== undefined ? parsed.email : cur.email,
+                        phone: parsed.phone !== undefined ? parsed.phone : cur.phone,
+                        studentName: parsed.studentName !== undefined ? parsed.studentName : cur.studentName,
+                        studentRun: parsed.studentRun !== undefined ? parsed.studentRun : cur.studentRun,
+                        studentPin: parsed.studentPin !== undefined ? parsed.studentPin : cur.studentPin,
+                        plan: parsed.plan !== undefined ? parsed.plan : cur.plan,
+                        enrolledGrades: parsed.enrolledGrades !== undefined ? parsed.enrolledGrades : cur.enrolledGrades,
+                        status: parsed.status !== undefined ? parsed.status : cur.status,
+                        password: (parsed.password !== undefined && parsed.password) ? parsed.password : cur.password,
+                        updatedAt: new Date().toISOString()
+                      };
+                      existingFamilies[fIdx] = updatedRecord;
+                      fs.writeFileSync(familiesFilePath, JSON.stringify(existingFamilies, null, 2), 'utf8');
+                    }
+                  } catch {}
+                }
+
+                res.setHeader('Content-Type', 'application/json');
+                return res.end(JSON.stringify({
+                  success: true,
+                  updatedInDb: false,
+                  user: updatedRecord,
+                  message: 'Datos de familia actualizados exitosamente (dev)'
                 }));
               } catch (e: any) {
                 res.statusCode = 500;

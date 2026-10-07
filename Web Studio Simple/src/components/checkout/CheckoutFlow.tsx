@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
-import { ShieldCheck, CheckCircle2, AlertCircle, Check, KeyRound, Copy, GraduationCap, Shield, UserCheck, ArrowRight, Tag, Sparkles, CreditCard, HelpCircle, Lock, Eye, EyeOff, MessageCircle } from 'lucide-react';
+import { ShieldCheck, CheckCircle2, AlertCircle, Check, KeyRound, Copy, GraduationCap, Shield, UserCheck, ArrowRight, Tag, Sparkles, CreditCard, HelpCircle, Lock, Eye, EyeOff, MessageCircle, AlertTriangle, Pencil, X, Mail, Phone } from 'lucide-react';
 import { GradeLevel, ParentUser } from '../../types';
 import { validateRut, formatRutOnInput } from '../../lib/rut-validator';
 import { registerUserFromCheckout } from '../../lib/user-repository';
@@ -107,6 +107,7 @@ export const CheckoutFlow: React.FC = () => {
   const [createdUser, setCreatedUser] = useState<ParentUser | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [isMercadoPagoApproved, setIsMercadoPagoApproved] = useState(false);
+  const [showConfirmationModal, setShowConfirmationModal] = useState(false);
 
   const PENDING_CHECKOUT_KEY = 'estudio_simple_pending_checkout';
 
@@ -428,9 +429,14 @@ export const CheckoutFlow: React.FC = () => {
     e.preventDefault();
     setErrorMessage(null);
 
-    // 1. Validaciones estrictas
+    // 1. Validaciones estrictas de datos ingresados
     if (!validateRut(rut)) {
       setErrorMessage('El RUN del apoderado ingresado no es válido según el algoritmo oficial Módulo 11.');
+      return;
+    }
+
+    if (!email.trim() || !email.includes('@')) {
+      setErrorMessage('Por favor ingresa una dirección de correo electrónico válida.');
       return;
     }
 
@@ -450,9 +456,14 @@ export const CheckoutFlow: React.FC = () => {
       return;
     }
 
+    // Abrir pantalla de confirmación y advertencia explícita previa al pago
+    setShowConfirmationModal(true);
+  };
+
+  const handleProceedToPayment = () => {
     setIsProcessing(true);
 
-    // Todo plan con cobro redirige a la pasarela oficial de Mercado Pago / Webpay
+    const finalStudentName = `${studentFirstName.trim()} ${studentLastName.trim()}`.trim().toUpperCase() || studentName.trim().toUpperCase();
     const shouldUseMercadoPago = finalPrice > 0 && selectedPlan !== 'trial';
 
     if (shouldUseMercadoPago) {
@@ -500,20 +511,24 @@ export const CheckoutFlow: React.FC = () => {
             return;
           }
           if (data.success && data.directActivation) {
+            setShowConfirmationModal(false);
             completeLocalActivation();
             return;
           }
           setIsProcessing(false);
+          setShowConfirmationModal(false);
           setErrorMessage(data?.error || data?.message || 'No fue posible conectar con la pasarela segura de Mercado Pago / Webpay. Por favor reintenta o contacta a soporte.');
         })
         .catch((err) => {
           console.error('Error en llamada a Mercado Pago:', err);
           setIsProcessing(false);
+          setShowConfirmationModal(false);
           setErrorMessage('Error de conexión con la pasarela de pagos. Por favor verifica tu red e intenta nuevamente.');
         });
       return;
     }
 
+    setShowConfirmationModal(false);
     completeLocalActivation();
   };
 
@@ -978,8 +993,8 @@ export const CheckoutFlow: React.FC = () => {
                     {isProcessing
                       ? 'Conectando con Mercado Pago...'
                       : selectedPlan === 'trial'
-                      ? 'Activar Prueba Gratuita (7 Días)'
-                      : `Pagar $${finalPrice.toLocaleString('es-CL')} CLP con Mercado Pago / Webpay`}
+                      ? 'Continuar a Revisión y Activación (7 Días)'
+                      : `Revisar Datos y Pagar ($${finalPrice.toLocaleString('es-CL')} CLP)`}
                   </span>
                 </button>
               </section>
@@ -1327,6 +1342,129 @@ export const CheckoutFlow: React.FC = () => {
           </div>
         </div>
       </main>
+
+      {/* MODAL DE CONFIRMACIÓN PREVIA Y ADVERTENCIA DE CONTACTO */}
+      {showConfirmationModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fade-in">
+          <div className="bg-[#1e1b4b] border border-amber-500/40 rounded-3xl p-6 md:p-8 max-w-lg w-full shadow-2xl relative space-y-6 text-white max-h-[90vh] overflow-y-auto">
+            {/* Header */}
+            <div className="flex items-start justify-between">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-2xl bg-amber-500/20 border border-amber-500/40 text-amber-400 flex items-center justify-center">
+                  <AlertTriangle size={26} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-black text-white">Revisión de Datos Familiares</h3>
+                  <p className="text-xs text-white/60">Paso previo obligatorio antes de pasar a la pasarela de pago</p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setShowConfirmationModal(false)}
+                className="text-white/40 hover:text-white p-2 rounded-xl hover:bg-white/10 transition-colors cursor-pointer"
+              >
+                <X size={20} />
+              </button>
+            </div>
+
+            {/* Advertencia Crítica */}
+            <div className="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-200 text-xs space-y-2">
+              <div className="flex items-center gap-2 font-bold text-amber-300">
+                <AlertCircle size={16} className="shrink-0" />
+                <span>¡Revisa atentamente tu correo y teléfono!</span>
+              </div>
+              <p className="text-[11px] leading-relaxed text-amber-100/90">
+                A esta casilla de correo despacharemos de forma inmediata las <strong>claves oficiales de acceso familiar</strong> y el PIN del estudiante. Un error de escritura o letra tipográfica impedirá que recibas las credenciales de inmediato.
+              </p>
+            </div>
+
+            {/* Bloques de Datos Destacados */}
+            <div className="space-y-3">
+              {/* Correo y Teléfono resaltados */}
+              <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+                <div className="flex items-center justify-between text-xs text-white/50">
+                  <span className="flex items-center gap-1.5 font-semibold text-white/70">
+                    <Mail size={14} className="text-[#57d6f3]" /> Correo de Envío Oficial:
+                  </span>
+                  <span className="text-[10px] bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded-full font-bold">
+                    Destino Claves
+                  </span>
+                </div>
+                <p className="text-base font-black text-[#57d6f3] break-all px-1">
+                  {email.trim()}
+                </p>
+              </div>
+
+              <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+                <div className="flex items-center justify-between text-xs text-white/50">
+                  <span className="flex items-center gap-1.5 font-semibold text-white/70">
+                    <Phone size={14} className="text-emerald-400" /> Teléfono Móvil / WhatsApp:
+                  </span>
+                  <span className="text-[10px] bg-white/10 text-white/70 px-2 py-0.5 rounded-full">
+                    Soporte Directo
+                  </span>
+                </div>
+                <p className="text-sm font-bold text-white px-1">
+                  {phone ? (phone.startsWith('+56') ? phone : `+56 9 ${phone}`) : 'No especificado'}
+                </p>
+              </div>
+
+              {/* Ficha Resumen */}
+              <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 text-xs space-y-2 text-white/80">
+                <div className="flex justify-between items-center py-1 border-b border-white/5">
+                  <span className="text-white/50">Apoderado Titular:</span>
+                  <span className="font-bold text-white uppercase">{firstName.trim()} {lastName.trim()} ({rut})</span>
+                </div>
+                <div className="flex justify-between items-center py-1 border-b border-white/5">
+                  <span className="text-white/50">Estudiante:</span>
+                  <span className="font-bold text-white uppercase">
+                    {studentFirstName.trim()} {studentLastName.trim()}
+                    {studentRun.trim() ? ` (${studentRun.trim()})` : ''}
+                  </span>
+                </div>
+                <div className="flex justify-between items-center py-1 border-b border-white/5">
+                  <span className="text-white/50">Nivel y Asignaturas:</span>
+                  <span className="font-bold text-[#57d6f3]">{grade}</span>
+                </div>
+                <div className="flex justify-between items-center py-1">
+                  <span className="text-white/50">Plan y Monto a Pagar:</span>
+                  <span className="font-black text-[#F8AD22] text-sm">
+                    {activePlanObj?.nombre || selectedPlan} — ${finalPrice.toLocaleString('es-CL')} CLP
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Botones de Acción */}
+            <div className="flex flex-col sm:flex-row gap-3 pt-2">
+              <button
+                type="button"
+                onClick={() => setShowConfirmationModal(false)}
+                className="flex-1 py-3 px-4 rounded-xl bg-white/10 hover:bg-white/15 text-white/80 hover:text-white font-bold text-xs transition-all flex items-center justify-center gap-2 border border-white/10 cursor-pointer"
+              >
+                <Pencil size={15} />
+                <span>Modificar mis datos</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={handleProceedToPayment}
+                disabled={isProcessing}
+                className="flex-1 py-3 px-4 rounded-xl bg-[#EE751C] hover:bg-[#d96512] text-white font-black text-xs transition-all flex items-center justify-center gap-2 shadow-lg cursor-pointer disabled:opacity-50 hover:scale-[1.01]"
+              >
+                <ShieldCheck size={16} />
+                <span>
+                  {isProcessing
+                    ? 'Conectando...'
+                    : selectedPlan === 'trial'
+                    ? 'Confirmar y Activar'
+                    : 'Confirmar y Pagar'}
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

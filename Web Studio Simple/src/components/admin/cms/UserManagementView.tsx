@@ -40,7 +40,8 @@ import {
   Save,
   Sparkles,
   ToggleLeft,
-  ToggleRight
+  ToggleRight,
+  Pencil
 } from 'lucide-react';
 import { ParentUser, GradeLevel } from '../../../types';
 import { AdminUser, AdminRole, GuestPass, AuditLogEntry, AuditActionType } from '../../../types/authAdmin';
@@ -52,7 +53,8 @@ import {
   generateTemporaryPassword,
   regenerateStudentPin,
   registerUserFromCheckout,
-  deleteUserPermanently
+  deleteUserPermanently,
+  updateFamilyDetails
 } from '../../../lib/user-repository';
 import { cleanRut, formatRut, validateRut, formatRutOnInput } from '../../../lib/rut-validator';
 import {
@@ -120,6 +122,7 @@ export const UserManagementView: React.FC = () => {
     rut: '',
     email: '',
     phone: '',
+    password: '',
     studentName: '',
     studentRun: '',
     grade: '7° Básico' as GradeLevel,
@@ -127,6 +130,34 @@ export const UserManagementView: React.FC = () => {
   });
   const [formError, setFormError] = useState<string | null>(null);
   const [copiedKey, setCopiedKey] = useState<string | null>(null);
+
+  // Modal Edición de Familia
+  const [editFamilyUser, setEditFamilyUser] = useState<ParentUser | null>(null);
+  const [editFormData, setEditFormData] = useState<{
+    name: string;
+    rut: string;
+    email: string;
+    phone: string;
+    studentName: string;
+    studentRun: string;
+    studentPin: string;
+    plan: 'mensual' | 'anual';
+    status: 'active' | 'trial' | 'suspended';
+    newPassword: string;
+  }>({
+    name: '',
+    rut: '',
+    email: '',
+    phone: '',
+    studentName: '',
+    studentRun: '',
+    studentPin: '',
+    plan: 'mensual',
+    status: 'active',
+    newPassword: ''
+  });
+  const [editFormError, setEditFormError] = useState<string | null>(null);
+  const [isSavingEdit, setIsSavingEdit] = useState(false);
 
   // ---------------------------------------------------------------------------
   // 2. ESTADO: PASES DE INVITADOS Y DEMOS
@@ -323,16 +354,97 @@ export const UserManagementView: React.FC = () => {
       actorRole: actor.role,
       action: 'GENERATE_TEMP_PASSWORD',
       target: user.rut || user.email,
-      details: `Generacion de clave temporal de soporte para ${user.name} (${user.rut || user.email}) y despacho automatico por WhatsApp`
+      details: `Generacion de clave temporal de soporte para ${user.name} (${user.rut || user.email})`
     });
     setTempPasswordModal({
       userName: user.name,
       userEmail: user.email,
       userPhone: user.phone,
       tempPass,
-      autoSentWhatsApp: Boolean(user.phone)
+      autoSentWhatsApp: false
     });
     refreshAll();
+  };
+
+  const handleOpenEditFamily = (user: ParentUser) => {
+    setEditFamilyUser(user);
+    setEditFormData({
+      name: user.name || '',
+      rut: user.rut || '',
+      email: user.email || '',
+      phone: user.phone || '',
+      studentName: user.studentName || '',
+      studentRun: user.studentRun || '',
+      studentPin: user.studentPin || '',
+      plan: user.plan === 'anual' ? 'anual' : 'mensual',
+      status: user.status || 'active',
+      newPassword: ''
+    });
+    setEditFormError(null);
+  };
+
+  const handleSaveEditFamily = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!editFamilyUser) return;
+    setEditFormError(null);
+
+    if (editFormData.rut.trim() && !validateRut(editFormData.rut)) {
+      setEditFormError('El RUN del apoderado ingresado no es válido según Módulo 11.');
+      return;
+    }
+    if (editFormData.studentRun.trim() && !validateRut(editFormData.studentRun)) {
+      setEditFormError('El RUN del estudiante ingresado no es válido.');
+      return;
+    }
+    if (!editFormData.name.trim() || !editFormData.email.trim()) {
+      setEditFormError('Nombre y correo electrónico son obligatorios.');
+      return;
+    }
+    if (!editFormData.studentName.trim()) {
+      setEditFormError('El nombre del estudiante es obligatorio.');
+      return;
+    }
+
+    setIsSavingEdit(true);
+    try {
+      const res = await updateFamilyDetails({
+        id: editFamilyUser.id,
+        name: editFormData.name.trim(),
+        rut: editFormData.rut.trim(),
+        email: editFormData.email.trim().toLowerCase(),
+        phone: editFormData.phone.trim(),
+        studentName: editFormData.studentName.trim(),
+        studentRun: editFormData.studentRun.trim(),
+        studentPin: editFormData.studentPin.trim() || editFamilyUser.studentPin,
+        plan: editFormData.plan,
+        status: editFormData.status,
+        password: editFormData.newPassword.trim() || undefined
+      });
+
+      if (!res.success) {
+        setEditFormError(res.error || 'Error al actualizar los datos de la familia.');
+        setIsSavingEdit(false);
+        return;
+      }
+
+      const actor = activeAdminUser || { id: 'admin-001', name: 'Administrador', email: 'admin@estudiosimple.cl', role: 'admin' as AdminRole };
+      recordAuditLog({
+        actorId: actor.id,
+        actorName: actor.name,
+        actorEmail: actor.email,
+        actorRole: actor.role,
+        action: 'UPDATE_USER_DATA',
+        target: editFormData.rut || editFormData.email,
+        details: `Actualizacion de datos familiares para ${editFormData.name} (${editFormData.email})`
+      });
+
+      setEditFamilyUser(null);
+      refreshAll();
+    } catch (err: any) {
+      setEditFormError(err?.message || 'Error inesperado al guardar los cambios.');
+    } finally {
+      setIsSavingEdit(false);
+    }
   };
 
   const handleRegeneratePin = (user: ParentUser) => {
@@ -434,6 +546,7 @@ export const UserManagementView: React.FC = () => {
       rut: newUserData.rut,
       name: newUserData.name.trim(),
       email: newUserData.email.trim(),
+      password: newUserData.password.trim() || undefined,
       studentName: newUserData.studentName.trim() || 'Estudiante',
       studentRun: newUserData.studentRun.trim(),
       grade: newUserData.grade,
@@ -458,6 +571,7 @@ export const UserManagementView: React.FC = () => {
       rut: '',
       email: '',
       phone: '',
+      password: '',
       studentName: '',
       studentRun: '',
       grade: '7° Básico',
@@ -1000,6 +1114,15 @@ export const UserManagementView: React.FC = () => {
 
                         <td className="py-3.5 px-4 text-right">
                           <div className="flex items-center justify-end gap-1.5">
+                            <button
+                              type="button"
+                              onClick={() => handleOpenEditFamily(user)}
+                              className="px-2.5 py-1.5 rounded-lg border border-slate-200 hover:border-[#EE751C] text-slate-700 hover:text-[#EE751C] text-[11px] font-bold transition-all cursor-pointer inline-flex items-center gap-1 shadow-2xs"
+                              title="Editar datos de la familia (correo, teléfono, estudiante, etc.)"
+                            >
+                              <Pencil className="w-3.5 h-3.5 text-[#EE751C]" />
+                              <span>Editar</span>
+                            </button>
                             <button
                               type="button"
                               onClick={() => handleGenerateTempPassword(user)}
@@ -2016,13 +2139,13 @@ export const UserManagementView: React.FC = () => {
 
               return (
                 <div className="space-y-3">
-                  {tempPasswordModal.autoSentWhatsApp ? (
+                  {tempPasswordModal.userPhone ? (
                     <div className="p-3 rounded-xl bg-emerald-50 border border-emerald-200/80 flex items-start gap-2.5 text-xs text-emerald-800">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                       <div>
-                        <span className="font-bold block">Despacho automático WhatsApp ejecutado</span>
+                        <span className="font-bold block">Teléfono verificado para contacto directo</span>
                         <p className="text-[11px] text-emerald-700 mt-0.5">
-                          Se ha registrado y despachado la notificación al teléfono: <strong className="font-mono">{tempPasswordModal.userPhone}</strong>.
+                          Teléfono registrado: <strong className="font-mono">{tempPasswordModal.userPhone}</strong>. Presiona <strong>"Abrir Chat de WhatsApp"</strong> para enviar la plantilla precargada al apoderado.
                         </p>
                       </div>
                     </div>
@@ -2030,9 +2153,9 @@ export const UserManagementView: React.FC = () => {
                     <div className="p-3 rounded-xl bg-amber-50 border border-amber-200/80 flex items-start gap-2.5 text-xs text-amber-800">
                       <AlertCircle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
                       <div>
-                        <span className="font-bold block">Sin teléfono registrado para auto-envío</span>
+                        <span className="font-bold block">Sin teléfono registrado para contacto directo</span>
                         <p className="text-[11px] text-amber-700 mt-0.5">
-                          El apoderado no tiene número de teléfono registrado en el sistema. Puedes copiar la clave o plantilla para enviarla por correo.
+                          El apoderado no tiene número de teléfono registrado en el sistema. Puedes copiar la clave o plantilla para enviarla por correo electrónico.
                         </p>
                       </div>
                     </div>
@@ -2215,6 +2338,19 @@ export const UserManagementView: React.FC = () => {
                 </div>
               </div>
 
+              <div>
+                <label className="block text-xs font-bold text-slate-700 mb-1">
+                  Contraseña Apoderado (Opcional)
+                </label>
+                <input
+                  type="text"
+                  value={newUserData.password}
+                  onChange={(e) => setNewUserData({ ...newUserData, password: e.target.value })}
+                  placeholder="demo2026 (por defecto si se deja en blanco)"
+                  className="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:bg-white focus:text-slate-950 focus:border-[#12A1A4] focus:ring-1 focus:ring-[#12A1A4] text-xs font-mono font-medium outline-none shadow-xs"
+                />
+              </div>
+
               {formError && (
                 <div className="p-2.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-xs font-semibold">
                   {formError}
@@ -2234,6 +2370,172 @@ export const UserManagementView: React.FC = () => {
                   className="px-5 py-2 rounded-xl bg-[#12A1A4] hover:bg-[#0e8385] text-white text-xs font-bold transition-all cursor-pointer shadow-sm"
                 >
                   Crear Cuenta y Asignar Claves
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* =======================================================================
+          MODAL: EDITAR DATOS FAMILIARES (CORRECCIÓN DE CORREO, TELÉFONO, NOMBRES)
+      ======================================================================= */}
+      {editFamilyUser && (
+        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl space-y-4">
+            <div className="flex justify-between items-center border-b border-slate-100 pb-3">
+              <div className="flex items-center gap-2 text-slate-800 font-bold text-sm">
+                <Pencil className="w-5 h-5 text-[#EE751C]" />
+                <span>Editar Datos de la Familia</span>
+              </div>
+              <button
+                type="button"
+                onClick={() => setEditFamilyUser(null)}
+                className="text-slate-400 hover:text-slate-700 cursor-pointer"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+
+            <form onSubmit={handleSaveEditFamily} className="space-y-3">
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 mb-1">Nombre Apoderado *</label>
+                  <input
+                    type="text"
+                    required
+                    value={editFormData.name}
+                    onChange={(e) => setEditFormData({ ...editFormData, name: e.target.value })}
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 focus:border-[#12A1A4] text-xs font-medium outline-none shadow-xs"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 mb-1">RUN Apoderado</label>
+                  <input
+                    type="text"
+                    value={editFormData.rut}
+                    onChange={(e) => setEditFormData({ ...editFormData, rut: formatRutOnInput(e.target.value) })}
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 focus:border-[#12A1A4] text-xs font-mono font-medium outline-none shadow-xs"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 mb-1">
+                    Correo Electrónico (Login) *
+                  </label>
+                  <input
+                    type="email"
+                    required
+                    value={editFormData.email}
+                    onChange={(e) => setEditFormData({ ...editFormData, email: e.target.value })}
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 focus:border-[#12A1A4] text-xs font-medium outline-none shadow-xs"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 mb-1">Teléfono Móvil</label>
+                  <input
+                    type="text"
+                    value={editFormData.phone}
+                    onChange={(e) => setEditFormData({ ...editFormData, phone: e.target.value })}
+                    placeholder="+56 9 1234 5678"
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 focus:border-[#12A1A4] text-xs font-mono font-medium outline-none shadow-xs"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 mb-1">Nombre Estudiante *</label>
+                  <input
+                    type="text"
+                    required
+                    value={editFormData.studentName}
+                    onChange={(e) => setEditFormData({ ...editFormData, studentName: e.target.value })}
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 focus:border-[#12A1A4] text-xs font-medium outline-none shadow-xs"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 mb-1">RUN Estudiante</label>
+                  <input
+                    type="text"
+                    value={editFormData.studentRun}
+                    onChange={(e) => setEditFormData({ ...editFormData, studentRun: formatRutOnInput(e.target.value) })}
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 focus:border-[#12A1A4] text-xs font-mono font-medium outline-none shadow-xs"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-3 gap-3">
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 mb-1">PIN Estudiante</label>
+                  <input
+                    type="text"
+                    value={editFormData.studentPin}
+                    onChange={(e) => setEditFormData({ ...editFormData, studentPin: e.target.value.replace(/\D/g, '').slice(0, 6) })}
+                    maxLength={6}
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 focus:border-[#12A1A4] text-xs font-mono font-bold tracking-widest outline-none shadow-xs"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 mb-1">Plan</label>
+                  <select
+                    value={editFormData.plan}
+                    onChange={(e) => setEditFormData({ ...editFormData, plan: e.target.value as any })}
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 focus:border-[#12A1A4] text-xs font-semibold outline-none shadow-xs"
+                  >
+                    <option value="anual">Anual Exámenes Libres</option>
+                    <option value="mensual">Mensual</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 mb-1">Estado</label>
+                  <select
+                    value={editFormData.status}
+                    onChange={(e) => setEditFormData({ ...editFormData, status: e.target.value as any })}
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 focus:border-[#12A1A4] text-xs font-semibold outline-none shadow-xs"
+                  >
+                    <option value="active">Activo</option>
+                    <option value="trial">Prueba</option>
+                    <option value="suspended">Suspendido</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-700 mb-1">
+                  Nueva Contraseña del Apoderado (Opcional)
+                </label>
+                <input
+                  type="text"
+                  value={editFormData.newPassword}
+                  onChange={(e) => setEditFormData({ ...editFormData, newPassword: e.target.value })}
+                  placeholder="Dejar en blanco para conservar la actual"
+                  className="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:border-[#12A1A4] text-xs font-mono outline-none shadow-xs"
+                />
+              </div>
+
+              {editFormError && (
+                <div className="p-2.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-xs font-semibold">
+                  {editFormError}
+                </div>
+              )}
+
+              <div className="flex justify-end gap-2 pt-2 border-t border-slate-100">
+                <button
+                  type="button"
+                  onClick={() => setEditFamilyUser(null)}
+                  className="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition-all cursor-pointer"
+                >
+                  Cancelar
+                </button>
+                <button
+                  type="submit"
+                  disabled={isSavingEdit}
+                  className="px-5 py-2 rounded-xl bg-[#EE751C] hover:bg-[#d96512] text-white text-xs font-bold transition-all cursor-pointer shadow-sm disabled:opacity-50"
+                >
+                  {isSavingEdit ? 'Guardando...' : 'Guardar Cambios'}
                 </button>
               </div>
             </form>
