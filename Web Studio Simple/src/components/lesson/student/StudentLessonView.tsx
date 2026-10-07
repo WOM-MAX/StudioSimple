@@ -19,7 +19,9 @@ import {
   Play,
   Home,
   RotateCcw,
-  AlertCircle
+  AlertCircle,
+  Send,
+  MessageSquare
 } from 'lucide-react';
 
 function isAmbientActiveStage(
@@ -36,8 +38,129 @@ function isAmbientActiveStage(
   return false;
 }
 
+interface StudentAnswerSectionProps {
+  questionKey: string;
+  feedback: { kind: 'success' | 'support' | 'reveal' | 'info'; text: string } | null;
+  studentReveal: string;
+  onSubmitAnswer: (key: string, ans: string) => void;
+  savedAnswer?: string;
+  hintMessage?: string;
+}
+
+const StudentAnswerSection: React.FC<StudentAnswerSectionProps> = ({
+  questionKey,
+  feedback,
+  studentReveal,
+  onSubmitAnswer,
+  savedAnswer = '',
+  hintMessage = 'Presta atención a la pista que te dará tu mentor.'
+}) => {
+  const [text, setText] = useState(savedAnswer);
+  const [isEditing, setIsEditing] = useState(!savedAnswer);
+
+  useEffect(() => {
+    setText(savedAnswer);
+    if (!savedAnswer) {
+      setIsEditing(true);
+    }
+  }, [savedAnswer, questionKey]);
+
+  const handleSubmit = (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
+    if (text.trim()) {
+      onSubmitAnswer(questionKey, text.trim());
+      setIsEditing(false);
+    }
+  };
+
+  const isResolved = feedback?.kind === 'success' || feedback?.kind === 'reveal';
+
+  return (
+    <div className="mt-4 text-left">
+      <SupportHintCard
+        visible={feedback?.kind === 'support'}
+        message={hintMessage}
+      />
+
+      {isResolved && (
+        <div className="bg-emerald-50 border border-emerald-200 text-emerald-800 p-4 rounded-2xl text-sm font-bold flex items-center justify-center gap-2 shadow-xs animate-fadeIn my-3">
+          <Sparkles className="w-5 h-5 text-emerald-600 shrink-0" />
+          <span>{studentReveal}</span>
+        </div>
+      )}
+
+      {/* Tarjeta de Respuesta Escrita del Estudiante */}
+      <div className="bg-slate-50 border border-slate-200/90 rounded-2xl p-4 transition-all mt-3">
+        <div className="flex items-center justify-between mb-2">
+          <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#1C3257] flex items-center gap-1.5">
+            <Send className="w-3.5 h-3.5 text-[#EE751C]" />
+            Tu respuesta para tu mentor:
+          </span>
+          {savedAnswer && !isEditing ? (
+            <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full flex items-center gap-1">
+              <Check className="w-3 h-3" />
+              Enviada en vivo
+            </span>
+          ) : (
+            <span className="text-[10px] font-bold text-slate-400">
+              {isResolved ? 'Completada' : 'Escribe y envía'}
+            </span>
+          )}
+        </div>
+
+        {isEditing && !isResolved ? (
+          <form onSubmit={handleSubmit} className="space-y-2">
+            <textarea
+              rows={2}
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+              placeholder="Escribe tu respuesta aquí para tu mentor..."
+              className="w-full text-xs sm:text-sm font-semibold text-[#1C3257] bg-white border border-slate-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-[#EE751C]/40 focus:border-[#EE751C] transition-all resize-none shadow-2xs"
+              autoFocus
+            />
+            <div className="flex items-center justify-between">
+              <span className="text-[10px] text-slate-400">
+                Tu mentor revisará lo que escribas aquí.
+              </span>
+              <button
+                type="submit"
+                disabled={!text.trim()}
+                className="bg-[#EE751C] hover:bg-[#D96512] disabled:opacity-40 disabled:hover:bg-[#EE751C] text-white font-extrabold text-xs px-4 py-2 rounded-xl shadow-xs transition-all flex items-center gap-1.5 cursor-pointer disabled:cursor-not-allowed"
+              >
+                <span>Enviar respuesta</span>
+                <Send className="w-3.5 h-3.5" />
+              </button>
+            </div>
+          </form>
+        ) : (
+          <div>
+            <div className="p-3 bg-white border border-slate-200 rounded-xl text-xs sm:text-sm font-bold text-[#1C3257] whitespace-pre-wrap">
+              {savedAnswer || text || '(Sin respuesta escrita)'}
+            </div>
+            {!isResolved && (
+              <div className="flex items-center justify-between mt-2.5">
+                <span className="text-[10px] text-amber-700 font-semibold flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-ping" />
+                  Tu mentor está revisando tu respuesta...
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setIsEditing(true)}
+                  className="text-[11px] font-bold text-[#12A1A4] hover:underline cursor-pointer"
+                >
+                  Editar respuesta
+                </button>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
 export const StudentLessonView: React.FC = () => {
-  const { session, lessonData, setStage, peerRoleConnected } = useLessonSync();
+  const { session, lessonData, setStage, peerRoleConnected, submitStudentAnswer } = useLessonSync();
   const { setViewMode, setActiveSynchronizedLesson, markLessonCompleted, authSession } = useApp();
   const theme = getSubjectTheme(lessonData.metadata.subject);
   const audioRef = useRef<HTMLAudioElement>(null);
@@ -363,23 +486,14 @@ export const StudentLessonView: React.FC = () => {
                 </div>
               )}
 
-              <SupportHintCard
-                visible={session.feedback?.kind === 'support'}
-                message="Presta atencion a la pista que te dara tu mentor."
+              <StudentAnswerSection
+                questionKey={`pre_${session.conversationIndex}`}
+                feedback={session.feedback}
+                studentReveal={currentPreItem.studentReveal}
+                onSubmitAnswer={submitStudentAnswer}
+                savedAnswer={session.studentTextAnswers?.[`pre_${session.conversationIndex}`]}
+                hintMessage="Presta atención a la pista que te dará tu mentor."
               />
-
-              {(session.feedback?.kind === 'success' || session.feedback?.kind === 'reveal') && (
-                <div className="bg-emerald-50 border border-emerald-200 text-emerald-800 p-4 rounded-2xl text-sm font-bold flex items-center justify-center gap-2 shadow-xs animate-fadeIn">
-                  <Sparkles className="w-5 h-5 text-emerald-600 shrink-0" />
-                  <span>{currentPreItem.studentReveal}</span>
-                </div>
-              )}
-
-              {!session.feedback && (
-                <p className="text-xs text-slate-400 mt-4">
-                  Responde en voz alta a tu mentor.
-                </p>
-              )}
             </div>
           </div>
         )}
@@ -455,23 +569,14 @@ export const StudentLessonView: React.FC = () => {
                 </div>
               )}
 
-              <SupportHintCard
-                visible={session.feedback?.kind === 'support'}
-                message="Presta atencion a la pista que te dara tu mentor."
+              <StudentAnswerSection
+                questionKey={`post_${session.postIndex}`}
+                feedback={session.feedback}
+                studentReveal={currentPostItem.studentReveal}
+                onSubmitAnswer={submitStudentAnswer}
+                savedAnswer={session.studentTextAnswers?.[`post_${session.postIndex}`]}
+                hintMessage="Presta atención a la pista que te dará tu mentor."
               />
-
-              {(session.feedback?.kind === 'success' || session.feedback?.kind === 'reveal') && (
-                <div className="bg-emerald-50 border border-emerald-200 text-emerald-800 p-4 rounded-2xl text-sm font-bold flex items-center justify-center gap-2 shadow-xs animate-fadeIn">
-                  <Sparkles className="w-5 h-5 text-emerald-600 shrink-0" />
-                  <span>{currentPostItem.studentReveal}</span>
-                </div>
-              )}
-
-              {!session.feedback && (
-                <p className="text-xs text-slate-400 mt-4">
-                  Responde en voz alta a tu mentor.
-                </p>
-              )}
             </div>
           </div>
         )}
@@ -569,23 +674,14 @@ export const StudentLessonView: React.FC = () => {
             )}
 
             <div className="bg-white border border-[#dce2e6] rounded-3xl p-8 shadow-sm">
-              <SupportHintCard
-                visible={session.feedback?.kind === 'support'}
-                message="Presta atencion a la pista que te dara tu mentor."
+              <StudentAnswerSection
+                questionKey={`practice_${session.practiceIndex}`}
+                feedback={session.feedback}
+                studentReveal={currentPracticeItem.studentReveal}
+                onSubmitAnswer={submitStudentAnswer}
+                savedAnswer={session.studentTextAnswers?.[`practice_${session.practiceIndex}`]}
+                hintMessage="Presta atención a la pista que te dará tu mentor."
               />
-
-              {(session.feedback?.kind === 'success' || session.feedback?.kind === 'reveal') && (
-                <div className="bg-[#eaf4e8] border border-[#badcb8] text-[#255e29] p-4 rounded-2xl text-base font-bold flex items-center justify-center gap-2 shadow-sm animate-fadeIn">
-                  <Sparkles className="w-5 h-5 text-[#255e29]" />
-                  <span>{currentPracticeItem.studentReveal}</span>
-                </div>
-              )}
-
-              {!session.feedback && (
-                <p className="text-xs text-[#748093]">
-                  Responde oralmente a tu mentor.
-                </p>
-              )}
             </div>
           </div>
         )}

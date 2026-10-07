@@ -240,5 +240,7 @@ export interface LessonSessionState {
   closureState?: 'none' | 'one_concept' | 'needs_support' | 'done';
   isOxygenPauseActive?: boolean;
   studentConnected?: boolean;
+  studentTextAnswers?: Record<string, string>;
+  studentSubmissionStatus?: 'writing' | 'submitted' | 'reviewed';
 }
 

@@ -31,7 +31,8 @@ import {
   HelpCircle,
   Info,
   Home,
-  AlertTriangle
+  AlertTriangle,
+  MessageSquare
 } from 'lucide-react';
 
 function formatTime(seconds: number): string {
@@ -39,6 +40,139 @@ function formatTime(seconds: number): string {
   const s = Math.floor(seconds % 60);
   return `${m}:${s < 10 ? '0' : ''}${s}`;
 }
+
+interface AdultStudentAnswerAndEvaluationBoxProps {
+  questionKey: string;
+  studentAnswer?: string;
+  feedback: { kind: 'success' | 'support' | 'reveal' | 'info'; text: string } | null;
+  onSuccess: () => void;
+  onSupport: () => void;
+  onReveal: () => void;
+}
+
+const AdultStudentAnswerAndEvaluationBox: React.FC<AdultStudentAnswerAndEvaluationBoxProps> = ({
+  studentAnswer,
+  feedback,
+  onSuccess,
+  onSupport,
+  onReveal
+}) => {
+  const cleanAnswer = studentAnswer?.trim();
+  const hasAnswer = Boolean(cleanAnswer);
+
+  return (
+    <div className="mt-4 mb-2 space-y-4">
+      {/* Tarjeta en tiempo real: Respuesta escrita por el estudiante */}
+      <div
+        className={`p-4 rounded-2xl border transition-all duration-300 ${
+          hasAnswer
+            ? 'bg-emerald-50/40 border-emerald-200/90 shadow-2xs'
+            : 'bg-slate-50/80 border-slate-200/80'
+        }`}
+      >
+        <div className="flex items-center justify-between mb-2">
+          <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#1C3257] flex items-center gap-1.5">
+            <MessageSquare className="w-3.5 h-3.5 text-[#12A1A4]" />
+            Respuesta redactada por el estudiante:
+          </span>
+          {hasAnswer ? (
+            <span className="text-[10px] font-bold text-emerald-700 bg-emerald-100/70 border border-emerald-300 px-2 py-0.5 rounded-full flex items-center gap-1">
+              <Check className="w-3 h-3" />
+              Recibida en vivo
+            </span>
+          ) : (
+            <span className="text-[10px] font-bold text-amber-700 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded-full flex items-center gap-1">
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-ping" />
+              Esperando respuesta...
+            </span>
+          )}
+        </div>
+
+        {hasAnswer ? (
+          <div className="p-3 bg-white border border-emerald-200/90 rounded-xl text-sm font-bold text-[#1C3257] whitespace-pre-wrap shadow-2xs">
+            “{cleanAnswer}”
+          </div>
+        ) : (
+          <div className="p-3 bg-amber-50/50 border border-amber-200/60 rounded-xl text-xs text-amber-900/90 font-medium italic">
+            El estudiante está redactando su respuesta en su computador. Se reflejará aquí en vivo en cuanto la envíe.
+          </div>
+        )}
+      </div>
+
+      <FeedbackBanner feedback={feedback} />
+
+      {/* Botonera de dictamen tripartito (Primer intento) */}
+      {!feedback && (
+        <div className="pt-2">
+          <p className="text-xs font-bold text-[#1c3257] uppercase tracking-wider mb-2.5">
+            Evaluación del Mentor: ¿Cómo respondió el estudiante?
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+            {/* 1. Correcto */}
+            <button
+              type="button"
+              onClick={onSuccess}
+              className="bg-white hover:bg-[#eaf4e8] border-2 border-[#badcb8] rounded-2xl p-3 text-xs font-bold text-[#255e29] transition-all cursor-pointer flex flex-col items-center justify-center gap-1 text-center hover:shadow-xs group"
+            >
+              <span className="text-base">🟢</span>
+              <span className="font-extrabold text-[#255e29]">Respondió correctamente</span>
+              <span className="text-[10px] text-slate-500 font-normal">Avanzar con celebración</span>
+            </button>
+
+            {/* 2. Parcial / Necesita apoyo */}
+            <button
+              type="button"
+              onClick={onSupport}
+              className="bg-white hover:bg-[#fff0e4] border-2 border-[#f5c49d] rounded-2xl p-3 text-xs font-bold text-[#794112] transition-all cursor-pointer flex flex-col items-center justify-center gap-1 text-center hover:shadow-xs group"
+            >
+              <span className="text-base">🟡</span>
+              <span className="font-extrabold text-[#794112]">Parcial / Necesita apoyo</span>
+              <span className="text-[10px] text-slate-500 font-normal">Enviar pista para reintentar</span>
+            </button>
+
+            {/* 3. Tuvo un error */}
+            <button
+              type="button"
+              onClick={onReveal}
+              className="bg-white hover:bg-[#f8f9fa] border-2 border-[#dce2e6] rounded-2xl p-3 text-xs font-bold text-[#475569] transition-all cursor-pointer flex flex-col items-center justify-center gap-1 text-center hover:shadow-xs group"
+            >
+              <span className="text-base">🔴</span>
+              <span className="font-extrabold text-[#475569]">Tuvo un error</span>
+              <span className="text-[10px] text-slate-500 font-normal">Mostrar modelamiento guiado</span>
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Botonera tras la pista (Segundo intento si necesitó apoyo) */}
+      {feedback?.kind === 'support' && (
+        <div className="pt-2">
+          <p className="text-xs font-bold text-[#1c3257] uppercase tracking-wider mb-2.5">
+            Después de la pista formativa:
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <button
+              type="button"
+              onClick={onSuccess}
+              className="bg-white hover:bg-[#eaf4e8] border-2 border-[#badcb8] rounded-xl p-3.5 text-xs font-bold text-[#255e29] transition-all cursor-pointer flex items-center justify-center gap-2"
+            >
+              <span>🟢</span>
+              <span>Ahora respondió correctamente</span>
+            </button>
+            <button
+              type="button"
+              onClick={onReveal}
+              className="bg-white hover:bg-[#f8f9fa] border-2 border-[#dce2e6] rounded-xl p-3.5 text-xs font-bold text-[#556376] transition-all cursor-pointer flex items-center justify-center gap-2"
+            >
+              <span>🔴</span>
+              <span>Todavía necesita apoyo (revelar solución)</span>
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
 
 export const AdultLessonView: React.FC = () => {
   const { session, lessonData, updateSession, setStage, setFeedback } = useLessonSync();
@@ -528,55 +662,14 @@ export const AdultLessonView: React.FC = () => {
                 {currentPreItem.expected}
               </ExpectedAnswerBox>
 
-              <FeedbackBanner feedback={session.feedback} />
-
-              {!session.feedback && (
-                <div className="mt-6">
-                  <p className="text-xs font-bold text-[#1c3257] uppercase tracking-wider mb-2">
-                    ¿Cómo respondió?
-                  </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <button
-                      type="button"
-                      onClick={() => handleSuccess(currentPreItem.success)}
-                      className="bg-white hover:bg-[#eaf4e8] border border-[#badcb8] rounded-xl p-3.5 text-xs font-bold text-[#255e29] transition-all cursor-pointer"
-                    >
-                      Respondió correctamente
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => handleSupport(currentPreItem.support)}
-                      className="bg-white hover:bg-[#fff0e4] border border-[#f5c49d] rounded-xl p-3.5 text-xs font-bold text-[#794112] transition-all cursor-pointer"
-                    >
-                      Necesita apoyo
-                    </button>
-                  </div>
-                </div>
-              )}
-
-              {session.feedback?.kind === 'support' && (
-                <div className="mt-6">
-                  <p className="text-xs font-bold text-[#1c3257] uppercase tracking-wider mb-2">
-                    Después de la pista…
-                  </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <button
-                      type="button"
-                      onClick={() => handleSuccess(currentPreItem.success)}
-                      className="bg-white hover:bg-[#eaf4e8] border border-[#badcb8] rounded-xl p-3.5 text-xs font-bold text-[#255e29] transition-all cursor-pointer"
-                    >
-                      Ahora respondió correctamente
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => handleReveal(currentPreItem.reveal)}
-                      className="bg-white hover:bg-[#f8f9fa] border border-[#dce2e6] rounded-xl p-3.5 text-xs font-bold text-[#556376] transition-all cursor-pointer"
-                    >
-                      Todavía necesita apoyo
-                    </button>
-                  </div>
-                </div>
-              )}
+              <AdultStudentAnswerAndEvaluationBox
+                questionKey={`pre_${session.conversationIndex}`}
+                studentAnswer={session.studentTextAnswers?.[`pre_${session.conversationIndex}`]}
+                feedback={session.feedback}
+                onSuccess={() => handleSuccess(currentPreItem.success)}
+                onSupport={() => handleSupport(currentPreItem.support)}
+                onReveal={() => handleReveal(currentPreItem.reveal)}
+              />
 
               {(session.feedback?.kind === 'success' || session.feedback?.kind === 'reveal') && (
                 <div className="flex justify-end mt-6">
@@ -717,55 +810,14 @@ export const AdultLessonView: React.FC = () => {
                 {currentPostItem.expected}
               </ExpectedAnswerBox>
 
-              <FeedbackBanner feedback={session.feedback} />
-
-              {!session.feedback && (
-                <div className="mt-6">
-                  <p className="text-xs font-bold text-[#1c3257] uppercase tracking-wider mb-2">
-                    ¿Cómo respondió?
-                  </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <button
-                      type="button"
-                      onClick={() => handleSuccess(currentPostItem.success)}
-                      className="bg-white hover:bg-[#eaf4e8] border border-[#badcb8] rounded-xl p-3.5 text-xs font-bold text-[#255e29] transition-all cursor-pointer"
-                    >
-                      Respondió correctamente
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => handleSupport(currentPostItem.support)}
-                      className="bg-white hover:bg-[#fff0e4] border border-[#f5c49d] rounded-xl p-3.5 text-xs font-bold text-[#794112] transition-all cursor-pointer"
-                    >
-                      Necesita apoyo
-                    </button>
-                  </div>
-                </div>
-              )}
-
-              {session.feedback?.kind === 'support' && (
-                <div className="mt-6">
-                  <p className="text-xs font-bold text-[#1c3257] uppercase tracking-wider mb-2">
-                    Después de la pista…
-                  </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <button
-                      type="button"
-                      onClick={() => handleSuccess(currentPostItem.success)}
-                      className="bg-white hover:bg-[#eaf4e8] border border-[#badcb8] rounded-xl p-3.5 text-xs font-bold text-[#255e29] transition-all cursor-pointer"
-                    >
-                      Ahora respondió correctamente
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => handleReveal(currentPostItem.reveal)}
-                      className="bg-white hover:bg-[#f8f9fa] border border-[#dce2e6] rounded-xl p-3.5 text-xs font-bold text-[#556376] transition-all cursor-pointer"
-                    >
-                      Todavía necesita apoyo
-                    </button>
-                  </div>
-                </div>
-              )}
+              <AdultStudentAnswerAndEvaluationBox
+                questionKey={`post_${session.postIndex}`}
+                studentAnswer={session.studentTextAnswers?.[`post_${session.postIndex}`]}
+                feedback={session.feedback}
+                onSuccess={() => handleSuccess(currentPostItem.success)}
+                onSupport={() => handleSupport(currentPostItem.support)}
+                onReveal={() => handleReveal(currentPostItem.reveal)}
+              />
 
               {(session.feedback?.kind === 'success' || session.feedback?.kind === 'reveal') && (
                 <div className="flex justify-end mt-6">
@@ -848,55 +900,14 @@ export const AdultLessonView: React.FC = () => {
                 {currentPracticeItem.expected}
               </ExpectedAnswerBox>
 
-              <FeedbackBanner feedback={session.feedback} />
-
-              {!session.feedback && (
-                <div className="mt-6">
-                  <p className="text-xs font-bold text-[#1c3257] uppercase tracking-wider mb-2">
-                    ¿Cómo respondió?
-                  </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <button
-                      type="button"
-                      onClick={() => handleSuccess(currentPracticeItem.success)}
-                      className="bg-white hover:bg-[#eaf4e8] border border-[#badcb8] rounded-xl p-3.5 text-xs font-bold text-[#255e29] transition-all cursor-pointer"
-                    >
-                      Respondió correctamente
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => handleSupport(currentPracticeItem.support)}
-                      className="bg-white hover:bg-[#fff0e4] border border-[#f5c49d] rounded-xl p-3.5 text-xs font-bold text-[#794112] transition-all cursor-pointer"
-                    >
-                      Necesita apoyo
-                    </button>
-                  </div>
-                </div>
-              )}
-
-              {session.feedback?.kind === 'support' && (
-                <div className="mt-6">
-                  <p className="text-xs font-bold text-[#1c3257] uppercase tracking-wider mb-2">
-                    Después de la pista…
-                  </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <button
-                      type="button"
-                      onClick={() => handleSuccess(currentPracticeItem.success)}
-                      className="bg-white hover:bg-[#eaf4e8] border border-[#badcb8] rounded-xl p-3.5 text-xs font-bold text-[#255e29] transition-all cursor-pointer"
-                    >
-                      Ahora respondió correctamente
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => handleReveal(currentPracticeItem.reveal)}
-                      className="bg-white hover:bg-[#f8f9fa] border border-[#dce2e6] rounded-xl p-3.5 text-xs font-bold text-[#556376] transition-all cursor-pointer"
-                    >
-                      Todavía necesita apoyo
-                    </button>
-                  </div>
-                </div>
-              )}
+              <AdultStudentAnswerAndEvaluationBox
+                questionKey={`practice_${session.practiceIndex}`}
+                studentAnswer={session.studentTextAnswers?.[`practice_${session.practiceIndex}`]}
+                feedback={session.feedback}
+                onSuccess={() => handleSuccess(currentPracticeItem.success)}
+                onSupport={() => handleSupport(currentPracticeItem.support)}
+                onReveal={() => handleReveal(currentPracticeItem.reveal)}
+              />
 
               {(session.feedback?.kind === 'success' || session.feedback?.kind === 'reveal') && (
                 <div className="flex justify-end mt-6">

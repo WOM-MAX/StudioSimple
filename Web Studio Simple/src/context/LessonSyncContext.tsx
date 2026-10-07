@@ -35,7 +35,9 @@ export const INITIAL_LESSON_SESSION: LessonSessionState = {
   challengeCompleted: false,
   closureState: 'none',
   isOxygenPauseActive: false,
-  studentConnected: true
+  studentConnected: true,
+  studentTextAnswers: {},
+  studentSubmissionStatus: 'writing'
 };
 
 interface LessonSyncContextType {
@@ -49,6 +51,8 @@ interface LessonSyncContextType {
   toggleOxygenPause: () => void;
   setFeedback: (feedback: { kind: 'success' | 'support' | 'reveal' | 'info'; text: string } | null) => void;
   openNewWindow: (mode: 'adult' | 'student') => void;
+  // Respuestas escritas del estudiante en vivo
+  submitStudentAnswer: (questionKey: string, answer: string) => void;
   // Propiedades de enlace remoto multi-dispositivo
   roomCode: string;
   remoteConnected: boolean;
@@ -426,6 +430,17 @@ export const LessonSyncProvider: React.FC<{
     }
   }, [isStudentRole]);
 
+  const submitStudentAnswer = useCallback((questionKey: string, answer: string) => {
+    updateSession((prev) => ({
+      ...prev,
+      studentTextAnswers: {
+        ...(prev.studentTextAnswers || {}),
+        [questionKey]: answer
+      },
+      studentSubmissionStatus: 'submitted'
+    }));
+  }, [updateSession]);
+
   return (
     <LessonSyncContext.Provider
       value={{
@@ -439,6 +454,7 @@ export const LessonSyncProvider: React.FC<{
         toggleOxygenPause,
         setFeedback,
         openNewWindow,
+        submitStudentAnswer,
         roomCode: effectiveRoomCode,
         remoteConnected,
         peerRoleConnected,
