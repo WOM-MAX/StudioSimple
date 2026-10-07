@@ -11,6 +11,52 @@ export default defineConfig({
       configureServer(server) {
         server.middlewares.use((req, res, next) => {
           const url = req.url?.split('?')[0];
+          if (url === '/api/cms/pages') {
+            const pagesFilePath = path.resolve(__dirname, '../data/cms_pages.json');
+            if (req.method === 'GET') {
+              try {
+                if (fs.existsSync(pagesFilePath)) {
+                  const raw = fs.readFileSync(pagesFilePath, 'utf8');
+                  res.setHeader('Content-Type', 'application/json');
+                  return res.end(JSON.stringify({ success: true, data: JSON.parse(raw) }));
+                } else {
+                  res.setHeader('Content-Type', 'application/json');
+                  return res.end(JSON.stringify({ success: true, data: null }));
+                }
+              } catch (err: any) {
+                res.statusCode = 500;
+                res.setHeader('Content-Type', 'application/json');
+                return res.end(JSON.stringify({ success: false, error: err?.message }));
+              }
+            } else if (req.method === 'POST') {
+              let body = '';
+              req.on('data', chunk => { body += chunk; });
+              req.on('end', () => {
+                try {
+                  const parsed = JSON.parse(body);
+                  const pagesData = Array.isArray(parsed) ? parsed : (parsed && parsed.pages ? parsed.pages : null);
+                  if (!pagesData) {
+                    res.statusCode = 400;
+                    res.setHeader('Content-Type', 'application/json');
+                    return res.end(JSON.stringify({ success: false, message: 'Formato de páginas inválido' }));
+                  }
+                  const dataDir = path.dirname(pagesFilePath);
+                  if (!fs.existsSync(dataDir)) {
+                    fs.mkdirSync(dataDir, { recursive: true });
+                  }
+                  fs.writeFileSync(pagesFilePath, JSON.stringify(pagesData, null, 2), 'utf8');
+                  res.setHeader('Content-Type', 'application/json');
+                  return res.end(JSON.stringify({ success: true, message: 'Páginas guardadas exitosamente en disco (dev)', count: pagesData.length }));
+                } catch (err: any) {
+                  res.statusCode = 500;
+                  res.setHeader('Content-Type', 'application/json');
+                  return res.end(JSON.stringify({ success: false, error: err?.message || 'Error al guardar páginas' }));
+                }
+              });
+              return;
+            }
+          }
+
           if (url === '/api/pricing/config') {
             const pricingFilePath = path.resolve(__dirname, '../data/pricing_config.json');
             if (req.method === 'GET') {

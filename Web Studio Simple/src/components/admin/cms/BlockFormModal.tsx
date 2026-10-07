@@ -160,6 +160,7 @@ export const BlockFormModal: React.FC<BlockFormModalProps> = ({
       case 'CINTA_NOTICIAS': return 'Cinta de Noticias';
       case 'ESPACIADOR': return 'Espaciador';
       case 'JOURNAL': return 'Artículos del Blog';
+      case 'PILARES': return 'Pilares de Éxito Académico';
       case 'METODO': return 'Método en 8 Pasos';
       case 'SIMULADOR': return 'Simulador MINEDUC';
       case 'PRICING': return 'Planes y Precios';
@@ -228,6 +229,7 @@ export const BlockFormModal: React.FC<BlockFormModalProps> = ({
 
               <optgroup label="⚡ Secciones del Sistema (Página de Inicio)">
                 <option value="HERO_SYSTEM">Hero Principal Interactivo (Frontis Scrubber)</option>
+                <option value="PILARES">Pilares de Éxito Académico (4 Tarjetas de Metodología)</option>
                 <option value="METODO">Método en 8 Pasos (Pantalla y Cuaderno)</option>
                 <option value="SIMULADOR">Simulador de Examen Libre MINEDUC (4 Alternativas)</option>
                 <option value="PRICING">Planes y Membresías Familiares</option>
@@ -1674,6 +1676,609 @@ export const BlockFormModal: React.FC<BlockFormModalProps> = ({
                 <label htmlFor="soloVigentes" className="text-xs font-semibold text-slate-700 cursor-pointer">
                   Mostrar únicamente eventos vigentes (ocultar fechas que ya pasaron)
                 </label>
+              </div>
+            </div>
+          )}
+
+          {/* 15. HERO / HERO_SYSTEM (Textos del Scrubber y Portada) */}
+          {(tipoBloque === 'HERO' || tipoBloque === 'HERO_SYSTEM') && (
+            <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-4">
+              <span className="text-xs font-bold text-slate-700 uppercase tracking-wider block">
+                Configuración de Portada Interactiva (Hero Scrubber)
+              </span>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-xs font-semibold text-slate-700 mb-1">Badge Superior</label>
+                  <input
+                    type="text"
+                    value={config.badgeText ?? 'Temarios Oficiales MINEDUC 2026'}
+                    onChange={(e) => handleConfigChange('badgeText', e.target.value)}
+                    placeholder="Ej: Temarios Oficiales MINEDUC 2026"
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs bg-white font-medium"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-semibold text-slate-700 mb-1">Palabra Destacada en Título</label>
+                  <input
+                    type="text"
+                    value={config.highlightWord ?? 'sin estrés.'}
+                    onChange={(e) => handleConfigChange('highlightWord', e.target.value)}
+                    placeholder="Ej: sin estrés."
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs bg-white font-medium"
+                  />
+                </div>
+              </div>
+
+              <div className="p-3 bg-white rounded-xl border border-slate-200 space-y-2">
+                <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
+                  Fase 1: Introducción y Propósito
+                </span>
+                <input
+                  type="text"
+                  value={config.fase1Titulo ?? 'Prepara sus exámenes libres sin estrés.'}
+                  onChange={(e) => handleConfigChange('fase1Titulo', e.target.value)}
+                  placeholder="Título Fase 1"
+                  className="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs font-bold"
+                />
+                <textarea
+                  rows={2}
+                  value={config.fase1Subtitulo ?? 'Microaprendizaje de 30 minutos al día con pedagogía adaptativa y acompañamiento guiado.'}
+                  onChange={(e) => handleConfigChange('fase1Subtitulo', e.target.value)}
+                  placeholder="Subtítulo descriptivo Fase 1"
+                  className="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs text-slate-600"
+                />
+              </div>
+
+              <div className="p-3 bg-white rounded-xl border border-slate-200 space-y-2">
+                <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
+                  Fase 2: Estructura Pedagógica
+                </span>
+                <input
+                  type="text"
+                  value={config.fase2Titulo ?? 'Lecciones interactivas de 30 minutos guiadas paso a paso'}
+                  onChange={(e) => handleConfigChange('fase2Titulo', e.target.value)}
+                  placeholder="Título Fase 2"
+                  className="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs font-bold"
+                />
+                <textarea
+                  rows={2}
+                  value={config.fase2Subtitulo ?? 'El apoderado guía con diálogo socrático y preguntas precisas, mientras el estudiante practica de forma autónoma.'}
+                  onChange={(e) => handleConfigChange('fase2Subtitulo', e.target.value)}
+                  placeholder="Subtítulo descriptivo Fase 2"
+                  className="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs text-slate-600"
+                />
+              </div>
+
+              <div className="p-3 bg-white rounded-xl border border-slate-200 space-y-2">
+                <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
+                  Fase 3: Autonomía y Confianza
+                </span>
+                <input
+                  type="text"
+                  value={config.fase3Titulo ?? 'Acompañamiento sin sobrecarga cognitiva'}
+                  onChange={(e) => handleConfigChange('fase3Titulo', e.target.value)}
+                  placeholder="Título Fase 3"
+                  className="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs font-bold"
+                />
+                <textarea
+                  rows={2}
+                  value={config.fase3Subtitulo ?? 'Diseñado especialmente para familias neurodivergentes y homeschooling.'}
+                  onChange={(e) => handleConfigChange('fase3Subtitulo', e.target.value)}
+                  placeholder="Subtítulo descriptivo Fase 3"
+                  className="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs text-slate-600"
+                />
+              </div>
+
+              <div className="grid grid-cols-2 gap-3 pt-1">
+                <div>
+                  <label className="block text-xs font-semibold text-slate-700 mb-1">Botón Principal</label>
+                  <input
+                    type="text"
+                    value={config.ctaText ?? 'Ver Planes y Precios'}
+                    onChange={(e) => handleConfigChange('ctaText', e.target.value)}
+                    placeholder="Ver Planes y Precios"
+                    className="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-semibold text-slate-700 mb-1">Botón Secundario</label>
+                  <input
+                    type="text"
+                    value={config.ctaSecondaryText ?? 'Explorar Cursos'}
+                    onChange={(e) => handleConfigChange('ctaSecondaryText', e.target.value)}
+                    placeholder="Explorar Cursos"
+                    className="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs"
+                  />
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* 16. PILARES / ÉXITO ACADÉMICO */}
+          {tipoBloque === 'PILARES' && (
+            <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-4">
+              <span className="text-xs font-bold text-slate-700 uppercase tracking-wider block">
+                Pilares de Metodología y Éxito Escolar
+              </span>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-xs font-semibold text-slate-700 mb-1">Badge de Cabecera</label>
+                  <input
+                    type="text"
+                    value={config.badgeText ?? 'Metodología Paso a Paso'}
+                    onChange={(e) => handleConfigChange('badgeText', e.target.value)}
+                    placeholder="Ej: Metodología Paso a Paso"
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs bg-white font-medium"
+                  />
+                </div>
+                <div>
+                  <ColorPickerField
+                    label="Color Borde de Etiqueta"
+                    value={config.colorBordeEtiqueta || '#18AFCB'}
+                    onChange={(hex) => handleConfigChange('colorBordeEtiqueta', hex)}
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-3 pt-2 border-t border-slate-200">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-bold text-slate-700 uppercase tracking-wider">
+                    Tarjetas de Pilares ({((config.pilares || []).length)})
+                  </span>
+                  <div className="flex gap-2">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        handleConfigChange('pilares', [
+                          {
+                            numero: '1',
+                            titulo: '1. Bloques Independientes',
+                            descripcion: 'Sesiones modulares de 30 minutos sin libros densos. Un formato paso a paso, visual y sin estrés para tu hijo.',
+                            icono: 'grid_view',
+                            colorIcono: '#123a72'
+                          },
+                          {
+                            numero: '2',
+                            titulo: '2. Temario MINEDUC',
+                            descripcion: 'Ruta exacta de 3° a 8° Básico con el temario oficial del MINEDUC. Contenido directo, organizado y sin relleno.',
+                            icono: 'menu_book',
+                            colorIcono: '#18AFCB'
+                          },
+                          {
+                            numero: '3',
+                            titulo: '3. Respaldo Legal',
+                            descripcion: 'Nuestro sistema cumple estrictamente con los Decretos 2272 y 67 para certificar legalmente el año escolar.',
+                            icono: 'gavel',
+                            colorIcono: '#f27a00'
+                          },
+                          {
+                            numero: '4',
+                            titulo: '4. Evaluación',
+                            descripcion: 'Simulacros de examen idénticos a los oficiales para garantizar que lleguen con total seguridad.',
+                            icono: 'fact_check',
+                            colorIcono: '#F8AD22'
+                          }
+                        ]);
+                      }}
+                      className="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold cursor-pointer"
+                    >
+                      Cargar 4 Oficiales
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        const current = config.pilares || [];
+                        handleConfigChange('pilares', [
+                          ...current,
+                          {
+                            numero: String(current.length + 1),
+                            titulo: `${current.length + 1}. Nuevo Pilar`,
+                            descripcion: '',
+                            icono: 'school',
+                            colorIcono: '#123a72'
+                          }
+                        ]);
+                      }}
+                      className="px-2.5 py-1 rounded-lg bg-[#12A1A4]/15 hover:bg-[#12A1A4]/25 text-[#12A1A4] text-xs font-bold flex items-center gap-1 cursor-pointer"
+                    >
+                      <Plus className="w-3.5 h-3.5" />
+                      <span>Añadir Pilar</span>
+                    </button>
+                  </div>
+                </div>
+
+                {((config.pilares && config.pilares.length > 0) ? config.pilares : [
+                  {
+                    numero: '1',
+                    titulo: '1. Bloques Independientes',
+                    descripcion: 'Sesiones modulares de 30 minutos sin libros densos. Un formato paso a paso, visual y sin estrés para tu hijo.',
+                    icono: 'grid_view',
+                    colorIcono: '#123a72'
+                  },
+                  {
+                    numero: '2',
+                    titulo: '2. Temario MINEDUC',
+                    descripcion: 'Ruta exacta de 3° a 8° Básico con el temario oficial del MINEDUC. Contenido directo, organizado y sin relleno.',
+                    icono: 'menu_book',
+                    colorIcono: '#18AFCB'
+                  },
+                  {
+                    numero: '3',
+                    titulo: '3. Respaldo Legal',
+                    descripcion: 'Nuestro sistema cumple estrictamente con los Decretos 2272 y 67 para certificar legalmente el año escolar.',
+                    icono: 'gavel',
+                    colorIcono: '#f27a00'
+                  },
+                  {
+                    numero: '4',
+                    titulo: '4. Evaluación',
+                    descripcion: 'Simulacros de examen idénticos a los oficiales para garantizar que lleguen con total seguridad.',
+                    icono: 'fact_check',
+                    colorIcono: '#F8AD22'
+                  }
+                ]).map((pilar: any, idx: number) => (
+                  <div key={idx} className="p-3 bg-white rounded-xl border border-slate-200 space-y-2">
+                    <div className="flex items-center justify-between gap-2">
+                      <input
+                        type="text"
+                        value={pilar.titulo || ''}
+                        onChange={(e) => {
+                          const currentList = config.pilares ? [...config.pilares] : [
+                            { numero: '1', titulo: '1. Bloques Independientes', descripcion: '', icono: 'grid_view', colorIcono: '#123a72' },
+                            { numero: '2', titulo: '2. Temario MINEDUC', descripcion: '', icono: 'menu_book', colorIcono: '#18AFCB' },
+                            { numero: '3', titulo: '3. Respaldo Legal', descripcion: '', icono: 'gavel', colorIcono: '#f27a00' },
+                            { numero: '4', titulo: '4. Evaluación', descripcion: '', icono: 'fact_check', colorIcono: '#F8AD22' }
+                          ];
+                          currentList[idx] = { ...currentList[idx], titulo: e.target.value };
+                          handleConfigChange('pilares', currentList);
+                        }}
+                        placeholder="Título del Pilar"
+                        className="flex-1 px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs font-bold"
+                      />
+                      <input
+                        type="text"
+                        value={pilar.icono || 'school'}
+                        onChange={(e) => {
+                          const currentList = config.pilares ? [...config.pilares] : [];
+                          currentList[idx] = { ...currentList[idx], icono: e.target.value };
+                          handleConfigChange('pilares', currentList);
+                        }}
+                        placeholder="Icono (Material Symbol)"
+                        className="w-32 px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs font-mono"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => {
+                          const currentList = config.pilares ? [...config.pilares] : [];
+                          const updated = currentList.filter((_: any, i: number) => i !== idx);
+                          handleConfigChange('pilares', updated);
+                        }}
+                        className="p-1.5 text-slate-400 hover:text-red-500 rounded-lg hover:bg-red-50 cursor-pointer"
+                      >
+                        <Trash2 className="w-3.5 h-3.5" />
+                      </button>
+                    </div>
+                    <textarea
+                      rows={2}
+                      value={pilar.descripcion || ''}
+                      onChange={(e) => {
+                        const currentList = config.pilares ? [...config.pilares] : [];
+                        currentList[idx] = { ...currentList[idx], descripcion: e.target.value };
+                        handleConfigChange('pilares', currentList);
+                      }}
+                      placeholder="Descripción del pilar pedagógico..."
+                      className="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs text-slate-600"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* 17. MÉTODO EN 8 PASOS (Pestañas Interactivas) */}
+          {tipoBloque === 'METODO' && (
+            <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-4">
+              <span className="text-xs font-bold text-slate-700 uppercase tracking-wider block">
+                Pestañas del Método Pedagógico
+              </span>
+
+              <div>
+                <label className="block text-xs font-semibold text-slate-700 mb-1">Badge de Cabecera</label>
+                <input
+                  type="text"
+                  value={config.badgeText ?? 'Pedagogía Esencial sin Sobrecarga Cognitiva'}
+                  onChange={(e) => handleConfigChange('badgeText', e.target.value)}
+                  placeholder="Ej: Pedagogía Esencial sin Sobrecarga Cognitiva"
+                  className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs bg-white font-medium"
+                />
+              </div>
+
+              <div className="space-y-3 pt-2 border-t border-slate-200">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-bold text-slate-700 uppercase tracking-wider">
+                    Pestañas Interactivas ({((config.tabs || []).length)})
+                  </span>
+                  <div className="flex gap-2">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        handleConfigChange('tabs', [
+                          {
+                            id: 'tab-1',
+                            numeroTab: '1. Pantalla y Papel',
+                            colorTab: '#1D4ED8',
+                            badge: 'Fase 1: Puente Pantalla - Papel',
+                            titulo: 'La Pantalla Modela, el Cuaderno Físico Consolida',
+                            descripcion: 'Microaprendizaje de 30 minutos al día. Tu hijo no pasa horas pasivo frente a un monitor: la pantalla entrega una explicación didáctica breve y de inmediato el estudiante replica y resuelve el ejercicio en su cuaderno físico, fijando neurológicamente el aprendizaje motriz y evitando la fatiga de pantallas infinitas.',
+                            icono: 'edit_note'
+                          },
+                          {
+                            id: 'tab-2',
+                            numeroTab: '2. Mediación Dual',
+                            colorTab: '#12A1A4',
+                            badge: 'Acompañamiento sin Estrés',
+                            titulo: 'El Apoderado como Mentor con Diálogo Socrático',
+                            descripcion: 'Diseñado para madres y padres que trabajan y carecen de formación pedagógica. Mientras el estudiante practica con autonomía, el portal del apoderado le entrega preguntas clave, resolución de errores comunes e indicadores de logro, permitiendo guiar con seguridad, sin frustraciones ni discusiones familiares.',
+                            icono: 'record_voice_over'
+                          },
+                          {
+                            id: 'tab-3',
+                            numeroTab: '3. Neurodiversidad',
+                            colorTab: '#F8AD22',
+                            badge: 'Descompresión Escolar y TEA / TDAH',
+                            titulo: 'Ritmo Respetuoso para Neurodiversidad',
+                            descripcion: 'Sin cronómetros angustiantes ni gamificación punitiva. Desarrollado con pausas sensoriales y lenguaje directo para estudiantes que salieron del aula tradicional por ansiedad, bullying escolar o desajuste con el SAE, devolviéndoles la autoestima y la curiosidad natural por aprender.',
+                            icono: 'self_improvement'
+                          },
+                          {
+                            id: 'tab-4',
+                            numeroTab: '4. Rigor MINEDUC',
+                            colorTab: '#EE751C',
+                            badge: 'Fase 2: Certificación Legal Oficial',
+                            titulo: 'Ensayos con Estándar Formal de Exámenes Libres',
+                            descripcion: 'Una vez asimilado el concepto en el cuaderno, se habilita el módulo de práctica. Los estudiantes se enfrentan a ensayos estructurados con estándares docentes del MINEDUC (Decretos 2272 y 67), garantizando que el estudiante valide con serenidad su año escolar ante la comisión examinadora.',
+                            icono: 'fact_check'
+                          }
+                        ]);
+                      }}
+                      className="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold cursor-pointer"
+                    >
+                      Cargar 4 Oficiales
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        const current = config.tabs || [];
+                        handleConfigChange('tabs', [
+                          ...current,
+                          {
+                            id: `tab-${current.length + 1}`,
+                            numeroTab: `${current.length + 1}. Nueva Fase`,
+                            colorTab: '#12A1A4',
+                            badge: `Fase ${current.length + 1}`,
+                            titulo: 'Título de la Fase',
+                            descripcion: '',
+                            icono: 'psychology'
+                          }
+                        ]);
+                      }}
+                      className="px-2.5 py-1 rounded-lg bg-[#12A1A4]/15 hover:bg-[#12A1A4]/25 text-[#12A1A4] text-xs font-bold flex items-center gap-1 cursor-pointer"
+                    >
+                      <Plus className="w-3.5 h-3.5" />
+                      <span>Añadir Pestaña</span>
+                    </button>
+                  </div>
+                </div>
+
+                {(config.tabs || []).map((tab: any, idx: number) => (
+                  <div key={idx} className="p-3.5 bg-white rounded-xl border border-slate-200 space-y-2.5">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="w-6 h-6 rounded-full bg-[#12A1A4] text-white text-xs font-bold flex items-center justify-center shrink-0">
+                        {idx + 1}
+                      </span>
+                      <input
+                        type="text"
+                        value={tab.numeroTab || ''}
+                        onChange={(e) => {
+                          const updated = [...config.tabs];
+                          updated[idx] = { ...updated[idx], numeroTab: e.target.value };
+                          handleConfigChange('tabs', updated);
+                        }}
+                        placeholder="Nombre Botón (ej: 1. Pantalla y Papel)"
+                        className="flex-1 px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs font-bold"
+                      />
+                      <input
+                        type="text"
+                        value={tab.icono || 'edit_note'}
+                        onChange={(e) => {
+                          const updated = [...config.tabs];
+                          updated[idx] = { ...updated[idx], icono: e.target.value };
+                          handleConfigChange('tabs', updated);
+                        }}
+                        placeholder="Icono (Material Symbol)"
+                        className="w-32 px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs font-mono"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => {
+                          const updated = config.tabs.filter((_: any, i: number) => i !== idx);
+                          handleConfigChange('tabs', updated);
+                        }}
+                        className="p-1.5 text-slate-400 hover:text-red-500 rounded-lg hover:bg-red-50 cursor-pointer"
+                      >
+                        <Trash2 className="w-3.5 h-3.5" />
+                      </button>
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-2">
+                      <input
+                        type="text"
+                        value={tab.badge || ''}
+                        onChange={(e) => {
+                          const updated = [...config.tabs];
+                          updated[idx] = { ...updated[idx], badge: e.target.value };
+                          handleConfigChange('tabs', updated);
+                        }}
+                        placeholder="Badge (ej: Fase 1: Puente Pantalla - Papel)"
+                        className="px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs text-[#12A1A4] font-semibold"
+                      />
+                      <input
+                        type="text"
+                        value={tab.colorTab || '#1D4ED8'}
+                        onChange={(e) => {
+                          const updated = [...config.tabs];
+                          updated[idx] = { ...updated[idx], colorTab: e.target.value };
+                          handleConfigChange('tabs', updated);
+                        }}
+                        placeholder="Color Hex botón (ej: #1D4ED8)"
+                        className="px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs font-mono"
+                      />
+                    </div>
+
+                    <input
+                      type="text"
+                      value={tab.titulo || ''}
+                      onChange={(e) => {
+                        const updated = [...config.tabs];
+                        updated[idx] = { ...updated[idx], titulo: e.target.value };
+                        handleConfigChange('tabs', updated);
+                      }}
+                      placeholder="Título Interior (ej: La Pantalla Modela, el Cuaderno Físico Consolida)"
+                      className="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs font-bold"
+                    />
+
+                    <textarea
+                      rows={3}
+                      value={tab.descripcion || ''}
+                      onChange={(e) => {
+                        const updated = [...config.tabs];
+                        updated[idx] = { ...updated[idx], descripcion: e.target.value };
+                        handleConfigChange('tabs', updated);
+                      }}
+                      placeholder="Descripción pedagógica explicativa..."
+                      className="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs text-slate-600"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* 18. PLANES Y PRECIOS */}
+          {tipoBloque === 'PRICING' && (
+            <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-4">
+              <span className="text-xs font-bold text-slate-700 uppercase tracking-wider block">
+                Textos y Viñetas de la Sección de Precios
+              </span>
+
+              <div>
+                <label className="block text-xs font-semibold text-slate-700 mb-1">Badge de Cabecera</label>
+                <input
+                  type="text"
+                  value={config.badgeText ?? 'Inversión Transparente · Sin Contratos Forzados'}
+                  onChange={(e) => handleConfigChange('badgeText', e.target.value)}
+                  placeholder="Ej: Inversión Transparente · Sin Contratos Forzados"
+                  className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs bg-white font-medium"
+                />
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div className="space-y-1.5">
+                  <label className="block text-xs font-bold text-slate-700">Viñetas Plan Mensual</label>
+                  <p className="text-[10px] text-slate-400">1 viñeta por línea</p>
+                  <textarea
+                    rows={6}
+                    value={Array.isArray(config.bulletsMensual) ? config.bulletsMensual.join('\n') : (config.bulletsMensual || '')}
+                    onChange={(e) => handleConfigChange('bulletsMensual', e.target.value.split('\n').filter(Boolean))}
+                    placeholder="Acceso a las 5 asignaturas&#10;Lecciones de 30 min..."
+                    className="w-full px-2.5 py-2 rounded-xl border border-slate-300 text-xs"
+                  />
+                </div>
+
+                <div className="space-y-1.5">
+                  <label className="block text-xs font-bold text-slate-700">Viñetas Plan Anual</label>
+                  <p className="text-[10px] text-slate-400">1 viñeta por línea</p>
+                  <textarea
+                    rows={6}
+                    value={Array.isArray(config.bulletsAnual) ? config.bulletsAnual.join('\n') : (config.bulletsAnual || '')}
+                    onChange={(e) => handleConfigChange('bulletsAnual', e.target.value.split('\n').filter(Boolean))}
+                    placeholder="Todo lo incluido en Mensual&#10;Simulacros examen..."
+                    className="w-full px-2.5 py-2 rounded-xl border border-slate-300 text-xs"
+                  />
+                </div>
+
+                <div className="space-y-1.5">
+                  <label className="block text-xs font-bold text-slate-700">Viñetas Prueba 7 Días</label>
+                  <p className="text-[10px] text-slate-400">1 viñeta por línea</p>
+                  <textarea
+                    rows={6}
+                    value={Array.isArray(config.bulletsPrueba) ? config.bulletsPrueba.join('\n') : (config.bulletsPrueba || '')}
+                    onChange={(e) => handleConfigChange('bulletsPrueba', e.target.value.split('\n').filter(Boolean))}
+                    placeholder="Acceso a 3 lecciones...&#10;Vista dual..."
+                    className="w-full px-2.5 py-2 rounded-xl border border-slate-300 text-xs"
+                  />
+                </div>
+              </div>
+
+              <div className="p-3 bg-white rounded-xl border border-slate-200 space-y-2">
+                <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
+                  Banner Inferior hacia Comparativa
+                </span>
+                <input
+                  type="text"
+                  value={config.bannerTitulo ?? '¿Quieres revisar la comparativa detallada de asignaturas y garantías pedagógicas?'}
+                  onChange={(e) => handleConfigChange('bannerTitulo', e.target.value)}
+                  placeholder="Título del banner"
+                  className="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs font-bold"
+                />
+                <textarea
+                  rows={2}
+                  value={config.bannerDescripcion ?? 'Conoce en detalle el desglose de cobertura de los 5 temarios oficiales MINEDUC y las preguntas frecuentes para apoderados.'}
+                  onChange={(e) => handleConfigChange('bannerDescripcion', e.target.value)}
+                  placeholder="Descripción del banner"
+                  className="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs text-slate-600"
+                />
+                <input
+                  type="text"
+                  value={config.bannerBotonTexto ?? 'Ver Comparativa Completa de Asignaturas'}
+                  onChange={(e) => handleConfigChange('bannerBotonTexto', e.target.value)}
+                  placeholder="Texto del botón"
+                  className="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs font-semibold"
+                />
+              </div>
+            </div>
+          )}
+
+          {/* 19. SIMULADOR MINEDUC */}
+          {tipoBloque === 'SIMULADOR' && (
+            <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+              <span className="text-xs font-bold text-slate-700 uppercase tracking-wider block">
+                Configuración del Simulador de Exámenes
+              </span>
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-xs font-semibold text-slate-700 mb-1">Alternativas por Pregunta</label>
+                  <input
+                    type="number"
+                    min={2}
+                    max={5}
+                    value={config.alternativasPorPregunta || 4}
+                    onChange={(e) => handleConfigChange('alternativasPorPregunta', Number(e.target.value))}
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs bg-white font-bold"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-semibold text-slate-700 mb-1">Umbral de Aprobación</label>
+                  <input
+                    type="text"
+                    value={config.umbralAprobacion || '60%'}
+                    onChange={(e) => handleConfigChange('umbralAprobacion', e.target.value)}
+                    placeholder="60%"
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs bg-white font-bold"
+                  />
+                </div>
               </div>
             </div>
           )}

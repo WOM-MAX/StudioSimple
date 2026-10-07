@@ -45,25 +45,123 @@ export const INITIAL_CMS_PAGES: CmsPage[] = [
           badgeText: 'Temarios Oficiales MINEDUC 2026',
           ctaText: 'Ver Planes y Precios',
           ctaSecondaryText: 'Explorar Cursos',
-          highlightWord: 'Valídalo'
+          highlightWord: 'sin estrés.',
+          fase1Badge: 'Método Exclusivo 3º a 8º Básico',
+          fase1Titulo: 'Prepara sus exámenes libres sin estrés.',
+          fase1Subtitulo: 'Microaprendizaje de 30 minutos al día con pedagogía adaptativa y acompañamiento guiado.',
+          fase2Badge: 'Estructura Canónica de 8 Pasos',
+          fase2Titulo: 'Lecciones interactivas de 30 minutos guiadas paso a paso',
+          fase2Subtitulo: 'El apoderado guía con diálogo socrático y preguntas precisas, mientras el estudiante practica de forma autónoma.',
+          fase3Badge: 'Autonomía y Confianza Escolar',
+          fase3Titulo: 'Acompañamiento sin sobrecarga cognitiva',
+          fase3Subtitulo: 'Diseñado especialmente para familias neurodivergentes y homeschooling.'
+        }
+      },
+      {
+        id: 'sec-exito',
+        tipoBloque: 'PILARES',
+        orden: 2,
+        activo: true,
+        titulo: '¿Cómo logramos el éxito académico?',
+        subtitulo: 'Cuatro pilares estructurales para validar el año escolar con autonomía y serenidad.',
+        configuracion: {
+          badgeText: 'Metodología Paso a Paso',
+          colorBordeEtiqueta: '#18AFCB',
+          pilares: [
+            {
+              numero: '1',
+              titulo: '1. Bloques Independientes',
+              descripcion: 'Sesiones modulares de 30 minutos sin libros densos. Un formato paso a paso, visual y sin estrés para tu hijo.',
+              icono: 'grid_view',
+              colorIcono: '#123a72'
+            },
+            {
+              numero: '2',
+              titulo: '2. Temario MINEDUC',
+              descripcion: 'Ruta exacta de 3° a 8° Básico con el temario oficial del MINEDUC. Contenido directo, organizado y sin relleno.',
+              icono: 'menu_book',
+              colorIcono: '#18AFCB'
+            },
+            {
+              numero: '3',
+              titulo: '3. Respaldo Legal',
+              descripcion: 'Nuestro sistema cumple estrictamente con los Decretos 2272 y 67 para certificar legalmente el año escolar.',
+              icono: 'gavel',
+              colorIcono: '#f27a00'
+            },
+            {
+              numero: '4',
+              titulo: '4. Evaluación',
+              descripcion: 'Simulacros de examen idénticos a los oficiales para garantizar que lleguen con total seguridad.',
+              icono: 'fact_check',
+              colorIcono: '#F8AD22'
+            }
+          ]
         }
       },
       {
         id: 'sec-metodo',
         tipoBloque: 'METODO',
-        orden: 1,
+        orden: 3,
         activo: true,
-        titulo: 'El Método EstudioSimple en 8 Pasos',
-        subtitulo: 'Una arquitectura pedagógica esencial que conecta la pantalla digital con el cuaderno físico del estudiante.',
+        titulo: 'Nuestro Método',
+        subtitulo: 'El puente exacto entre la cápsula digital interactiva y el cuaderno físico de tu hijo.',
         configuracion: {
+          badgeText: 'Pedagogía Esencial sin Sobrecarga Cognitiva',
           totalPasos: 8,
-          destacado: 'Puente entre pantalla y papel'
+          destacado: 'Puente entre pantalla y papel',
+          tabs: [
+            {
+              id: 'tab-1',
+              numeroTab: '1. Pantalla y Papel',
+              colorTab: '#1D4ED8',
+              badge: 'Fase 1: Puente Pantalla - Papel',
+              badgeColor: 'bg-[#1D4ED8]/20 text-[#60A5FA] border-[#1D4ED8]/40',
+              titulo: 'La Pantalla Modela, el Cuaderno Físico Consolida',
+              descripcion: 'Microaprendizaje de 30 minutos al día. Tu hijo no pasa horas pasivo frente a un monitor: la pantalla entrega una explicación didáctica breve y de inmediato el estudiante replica y resuelve el ejercicio en su cuaderno físico, fijando neurológicamente el aprendizaje motriz y evitando la fatiga de pantallas infinitas.',
+              destacado: 'cuaderno físico',
+              icono: 'edit_note'
+            },
+            {
+              id: 'tab-2',
+              numeroTab: '2. Mediación Dual',
+              colorTab: '#12A1A4',
+              badge: 'Acompañamiento sin Estrés',
+              badgeColor: 'bg-[#12A1A4]/20 text-[#12A1A4] border-[#12A1A4]/40',
+              titulo: 'El Apoderado como Mentor con Diálogo Socrático',
+              descripcion: 'Diseñado para madres y padres que trabajan y carecen de formación pedagógica. Mientras el estudiante practica con autonomía, el portal del apoderado le entrega preguntas clave, resolución de errores comunes e indicadores de logro, permitiendo guiar con seguridad, sin frustraciones ni discusiones familiares.',
+              destacado: 'preguntas clave, resolución de errores comunes e indicadores de logro',
+              icono: 'record_voice_over'
+            },
+            {
+              id: 'tab-3',
+              numeroTab: '3. Neurodiversidad',
+              colorTab: '#F8AD22',
+              badge: 'Descompresión Escolar y TEA / TDAH',
+              badgeColor: 'bg-[#F8AD22]/20 text-[#F8AD22] border-[#F8AD22]/40',
+              titulo: 'Ritmo Respetuoso para Neurodiversidad',
+              descripcion: 'Sin cronómetros angustiantes ni gamificación punitiva. Desarrollado con pausas sensoriales y lenguaje directo para estudiantes que salieron del aula tradicional por ansiedad, bullying escolar o desajuste con el SAE, devolviéndoles la autoestima y la curiosidad natural por aprender.',
+              destacado: 'ansiedad, bullying escolar o desajuste con el SAE',
+              icono: 'self_improvement'
+            },
+            {
+              id: 'tab-4',
+              numeroTab: '4. Rigor MINEDUC',
+              colorTab: '#EE751C',
+              badge: 'Fase 2: Certificación Legal Oficial',
+              badgeColor: 'bg-[#EE751C]/20 text-[#EE751C] border-[#EE751C]/40',
+              titulo: 'Ensayos con Estándar Formal de Exámenes Libres',
+              descripcion: 'Una vez asimilado el concepto en el cuaderno, se habilita el módulo de práctica. Los estudiantes se enfrentan a ensayos estructurados con estándares docentes del MINEDUC (Decretos 2272 y 67), garantizando que el estudiante valide con serenidad su año escolar ante la comisión examinadora.',
+              destacado: 'ensayos estructurados con estándares docentes del MINEDUC (Decretos 2272 y 67)',
+              icono: 'fact_check'
+            }
+          ]
         }
       },
       {
         id: 'sec-simulador',
         tipoBloque: 'SIMULADOR',
-        orden: 2,
+        orden: 4,
         activo: true,
         titulo: 'Simulador de Exámenes Libres MINEDUC',
         subtitulo: 'Instrumentos formales con 4 alternativas, estándares psicométricos y retroalimentación formativa inmediata.',
@@ -75,18 +173,42 @@ export const INITIAL_CMS_PAGES: CmsPage[] = [
       {
         id: 'sec-pricing',
         tipoBloque: 'PRICING',
-        orden: 3,
+        orden: 5,
         activo: true,
-        titulo: 'Planes Familiares Transparentes',
-        subtitulo: 'Acceso total a todos los cursos y temarios oficiales. Sin matrículas abusivas ni permanencia forzada.',
+        titulo: 'Planes Adaptados a Tu Familia',
+        subtitulo: 'Preparación integral para Exámenes Libres de 3° a 8° Básico con temario oficial MINEDUC, lecciones de 30 minutos y puente con cuaderno físico.',
         configuracion: {
-          planDestacado: 'Anual Homeschooler'
+          badgeText: 'Inversión Transparente · Sin Contratos Forzados',
+          planDestacado: 'Anual Homeschooler',
+          bulletsMensual: [
+            'Acceso a las 5 asignaturas oficiales',
+            'Lecciones de 30 min y cuaderno guiado',
+            'Panel de seguimiento del apoderado',
+            'Diálogo socrático para guiar sin ser profesor',
+            'Soporte pedagógico vía WhatsApp y correo'
+          ],
+          bulletsAnual: [
+            'Todo lo incluido en el Plan Mensual',
+            'Simulacros de examen formal tipo MINEDUC',
+            'Cuadernillos imprimibles de ejercitación física',
+            'Garantía de actualización curricular 2026',
+            'Informes periódicos de avance para apoderados'
+          ],
+          bulletsPrueba: [
+            'Acceso a 3 lecciones modelo completas',
+            'Vista dual sincronizada (estudiante y apoderado)',
+            'Ejercicios prácticos en cuaderno físico',
+            'Sin cobros posteriores sin tu autorización'
+          ],
+          bannerTitulo: '¿Quieres revisar la comparativa detallada de asignaturas y garantías pedagógicas?',
+          bannerDescripcion: 'Conoce en detalle el desglose de cobertura de los 5 temarios oficiales MINEDUC y las preguntas frecuentes para apoderados.',
+          bannerBotonTexto: 'Ver Comparativa Completa de Asignaturas'
         }
       },
       {
         id: 'sec-testimonios',
         tipoBloque: 'TESTIMONIOS',
-        orden: 4,
+        orden: 6,
         activo: true,
         titulo: 'Lo que Dicen las Familias',
         subtitulo: 'Padres, madres y educadores en Santiago y regiones que transformaron su rutina de homeschool.',
@@ -130,7 +252,7 @@ export const INITIAL_CMS_PAGES: CmsPage[] = [
       {
         id: 'sec-faq',
         tipoBloque: 'FAQ',
-        orden: 5,
+        orden: 7,
         activo: true,
         titulo: 'Preguntas Frecuentes',
         subtitulo: 'Respuestas directas sobre el respaldo legal, la metodología y el estudio en el hogar.',
@@ -162,7 +284,7 @@ export const INITIAL_CMS_PAGES: CmsPage[] = [
       {
         id: 'sec-home-journal',
         tipoBloque: 'JOURNAL',
-        orden: 6,
+        orden: 8,
         activo: true,
         titulo: 'Journal Pedagógico · Últimas Novedades',
         subtitulo: 'Guías para padres, novedades de fechas MINEDUC y artículos del método de estudio.',
@@ -176,7 +298,7 @@ export const INITIAL_CMS_PAGES: CmsPage[] = [
       {
         id: 'sec-home-eventos',
         tipoBloque: 'EVENTOS',
-        orden: 7,
+        orden: 9,
         activo: true,
         titulo: 'Calendario Oficial y Fechas Clave MINEDUC',
         subtitulo: 'Convocatorias de inscripción, períodos de exámenes libres y talleres de acompañamiento pedagógico.',
@@ -395,6 +517,7 @@ export function loadCmsPages(): CmsPage[] {
         }
 
         // 6. Auto-reparar sec-testimonios en inicio si no tiene testimonios para que sean inmediatamente editables
+        // 6. Auto-reparar sec-testimonios en inicio si no tiene testimonios para que sean inmediatamente editables
         const homeTestimonios = home?.secciones.find((s: any) => s.id === 'sec-testimonios' || s.tipoBloque === 'TESTIMONIOS');
         if (homeTestimonios && (!homeTestimonios.configuracion?.testimonios || homeTestimonios.configuracion.testimonios.length === 0)) {
           const defaultTest = INITIAL_CMS_PAGES[0].secciones.find((s) => s.id === 'sec-testimonios');
@@ -402,6 +525,55 @@ export function loadCmsPages(): CmsPage[] {
             homeTestimonios.configuracion = {
               ...(homeTestimonios.configuracion || {}),
               testimonios: defaultTest.configuracion.testimonios
+            };
+            changed = true;
+          }
+        }
+
+        // 7. Auto-reparar sec-exito (PILARES) en inicio si no existe
+        if (home && !home.secciones.some((s: any) => s.id === 'sec-exito' || s.tipoBloque === 'PILARES')) {
+          const defaultExito = INITIAL_CMS_PAGES[0].secciones.find((s) => s.id === 'sec-exito');
+          if (defaultExito) {
+            home.secciones.push(defaultExito);
+            home.secciones.sort((a: any, b: any) => (a.orden ?? 0) - (b.orden ?? 0));
+            changed = true;
+          }
+        }
+
+        // 8. Auto-reparar sec-metodo con tabs si no las tiene
+        const homeMetodo = home?.secciones.find((s: any) => s.id === 'sec-metodo' || s.tipoBloque === 'METODO');
+        if (homeMetodo && (!homeMetodo.configuracion?.tabs || homeMetodo.configuracion.tabs.length === 0)) {
+          const defaultMetodo = INITIAL_CMS_PAGES[0].secciones.find((s) => s.id === 'sec-metodo');
+          if (defaultMetodo?.configuracion?.tabs) {
+            homeMetodo.configuracion = {
+              ...(homeMetodo.configuracion || {}),
+              tabs: defaultMetodo.configuracion.tabs
+            };
+            changed = true;
+          }
+        }
+
+        // 9. Auto-reparar sec-pricing con bullets si no los tiene
+        const homePricing = home?.secciones.find((s: any) => s.id === 'sec-pricing' || s.tipoBloque === 'PRICING');
+        if (homePricing && (!homePricing.configuracion?.bulletsMensual || homePricing.configuracion.bulletsMensual.length === 0)) {
+          const defaultPricing = INITIAL_CMS_PAGES[0].secciones.find((s) => s.id === 'sec-pricing');
+          if (defaultPricing?.configuracion) {
+            homePricing.configuracion = {
+              ...(homePricing.configuracion || {}),
+              ...defaultPricing.configuracion
+            };
+            changed = true;
+          }
+        }
+
+        // 10. Auto-reparar sec-hero con textos de fases si no los tiene
+        const homeHero = home?.secciones.find((s: any) => s.id === 'sec-hero' || s.tipoBloque === 'HERO');
+        if (homeHero && !homeHero.configuracion?.fase1Titulo) {
+          const defaultHero = INITIAL_CMS_PAGES[0].secciones.find((s) => s.id === 'sec-hero');
+          if (defaultHero?.configuracion) {
+            homeHero.configuracion = {
+              ...(homeHero.configuracion || {}),
+              ...defaultHero.configuracion
             };
             changed = true;
           }

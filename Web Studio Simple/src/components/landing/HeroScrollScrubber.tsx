@@ -6,7 +6,25 @@ const TOTAL_FRAMES = 151;
 const FRAME_PATH = (index: number) =>
   `/hero-frames/frame_${String(index).padStart(4, '0')}.webp`;
 
-export const HeroScrollScrubber: React.FC = () => {
+export interface HeroScrollScrubberProps {
+  config?: {
+    badgeText?: string;
+    highlightWord?: string;
+    fase1Badge?: string;
+    fase1Titulo?: string;
+    fase1Subtitulo?: string;
+    fase2Badge?: string;
+    fase2Titulo?: string;
+    fase2Subtitulo?: string;
+    fase3Badge?: string;
+    fase3Titulo?: string;
+    fase3Subtitulo?: string;
+    ctaText?: string;
+    ctaSecondaryText?: string;
+  };
+}
+
+export const HeroScrollScrubber: React.FC<HeroScrollScrubberProps> = ({ config }) => {
   const { setViewMode } = useApp();
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -201,15 +219,19 @@ export const HeroScrollScrubber: React.FC = () => {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#F8AD22]/25 border border-[#F8AD22]/50 text-[#F8AD22] text-xs sm:text-sm font-black mb-4 backdrop-blur-md drop-shadow">
             <Sparkles className="w-4 h-4" />
-            <span>Método Exclusivo 3º a 8º Básico</span>
+            <span>{config?.fase1Badge || config?.badgeText || 'Método Exclusivo 3º a 8º Básico'}</span>
           </div>
 
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-black text-white tracking-tight leading-tight mb-4 drop-shadow-[0_4px_16px_rgba(0,0,0,0.85)]">
-            Prepara sus exámenes libres <span className="text-[#F8AD22]">sin estrés.</span>
+            {config?.fase1Titulo ? (
+              config.fase1Titulo
+            ) : (
+              <>Prepara sus exámenes libres <span className="text-[#F8AD22]">{config?.highlightWord || 'sin estrés.'}</span></>
+            )}
           </h1>
 
           <p className="text-white/95 text-sm sm:text-lg max-w-xl font-medium leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
-            Microaprendizaje de 30 minutos al día con pedagogía adaptativa y acompañamiento guiado.
+            {config?.fase1Subtitulo || 'Microaprendizaje de 30 minutos al día con pedagogía adaptativa y acompañamiento guiado.'}
           </p>
 
           <div className="mt-8 flex items-center gap-2 text-white/80 text-xs font-bold animate-bounce drop-shadow">
@@ -225,15 +247,15 @@ export const HeroScrollScrubber: React.FC = () => {
           }`}
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#12A1A4]/30 border border-[#12A1A4]/50 text-white text-xs font-extrabold mb-3 backdrop-blur-md drop-shadow">
-            <span>Estructura Canónica de 8 Pasos</span>
+            <span>{config?.fase2Badge || 'Estructura Canónica de 8 Pasos'}</span>
           </div>
 
           <h2 className="text-3xl sm:text-5xl font-black text-white leading-tight mb-4 drop-shadow-[0_4px_16px_rgba(0,0,0,0.85)]">
-            Lecciones interactivas de 30 minutos guiadas paso a paso
+            {config?.fase2Titulo || 'Lecciones interactivas de 30 minutos guiadas paso a paso'}
           </h2>
 
           <p className="text-white/95 text-xs sm:text-base max-w-lg leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
-            El apoderado guía con diálogo socrático y preguntas precisas, mientras el estudiante practica de forma autónoma.
+            {config?.fase2Subtitulo || 'El apoderado guía con diálogo socrático y preguntas precisas, mientras el estudiante practica de forma autónoma.'}
           </p>
         </div>
 
@@ -244,15 +266,15 @@ export const HeroScrollScrubber: React.FC = () => {
           }`}
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#4A964E]/30 border border-[#4A964E]/50 text-white text-xs font-extrabold mb-3 backdrop-blur-md drop-shadow">
-            <span>Autonomía y Confianza Escolar</span>
+            <span>{config?.fase3Badge || 'Autonomía y Confianza Escolar'}</span>
           </div>
 
           <h2 className="text-3xl sm:text-5xl font-black text-white leading-tight mb-4 drop-shadow-[0_4px_16px_rgba(0,0,0,0.85)]">
-            Preparados para validar sus estudios con éxito
+            {config?.fase3Titulo || 'Preparados para validar sus estudios con éxito'}
           </h2>
 
           <p className="text-white/95 text-xs sm:text-base max-w-xl mb-8 leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
-            Una metodología validada que brinda tranquilidad a las familias y seguridad a los estudiantes frente a la evaluación MINEDUC.
+            {config?.fase3Subtitulo || 'Una metodología validada que brinda tranquilidad a las familias y seguridad a los estudiantes frente a la evaluación MINEDUC.'}
           </p>
 
           <div className="flex justify-center">

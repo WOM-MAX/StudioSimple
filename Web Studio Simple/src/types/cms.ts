@@ -25,11 +25,87 @@ export type CmsBlockType =
   | 'ESPACIADOR'
   // Secciones del Sistema (EstudioSimple)
   | 'HERO_SYSTEM'
+  | 'PILARES'
   | 'METODO'
   | 'SIMULADOR'
   | 'PRICING'
   | 'JOURNAL'
   | 'EVENTOS';
+
+export interface PilarItem {
+  numero?: string | number;
+  titulo: string;
+  descripcion: string;
+  icono: string;
+  colorIcono?: string;
+}
+
+export interface PilaresConfig {
+  badgeText?: string;
+  colorBordeEtiqueta?: string;
+  pilares?: PilarItem[];
+  colorFondo?: string;
+  colorTexto?: ModoColorTexto | string;
+  colorBorde?: string;
+  modoBorde?: ModoBordeTarjeta;
+  grosorBorde?: string;
+}
+
+export interface MetodoTabItem {
+  id: string;
+  numeroTab: string;
+  colorTab?: string;
+  badge: string;
+  badgeColor?: string;
+  titulo: string;
+  descripcion: string;
+  destacado?: string;
+  icono: string;
+}
+
+export interface MetodoConfig {
+  badgeText?: string;
+  totalPasos?: number;
+  tabs?: MetodoTabItem[];
+  colorFondo?: string;
+  colorTexto?: ModoColorTexto | string;
+  colorBorde?: string;
+  modoBorde?: ModoBordeTarjeta;
+  grosorBorde?: string;
+}
+
+export interface PricingSectionConfig {
+  badgeText?: string;
+  bulletsMensual?: string[];
+  bulletsAnual?: string[];
+  bulletsPrueba?: string[];
+  bannerTitulo?: string;
+  bannerDescripcion?: string;
+  bannerBotonTexto?: string;
+  colorFondo?: string;
+  colorTexto?: ModoColorTexto | string;
+  colorBorde?: string;
+  modoBorde?: ModoBordeTarjeta;
+  grosorBorde?: string;
+}
+
+export interface HeroScrubberConfig {
+  badgeText?: string;
+  ctaText?: string;
+  ctaSecondaryText?: string;
+  highlightWord?: string;
+  fase1Badge?: string;
+  fase1Titulo?: string;
+  fase1Subtitulo?: string;
+  fase2Badge?: string;
+  fase2Titulo?: string;
+  fase2Subtitulo?: string;
+  fase3Badge?: string;
+  fase3Titulo?: string;
+  fase3Subtitulo?: string;
+  colorFondo?: string;
+  colorTexto?: ModoColorTexto | string;
+}
 
 export interface NoticiaItem {
   texto: string;

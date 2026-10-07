@@ -18,7 +18,7 @@ import { CmsBlockRenderer } from '../common/CmsBlockRenderer';
 import { PublicHeader } from '../common/PublicHeader';
 import { PopupWrapper } from '../common/PopupWrapper';
 import { getBorderStyles } from '../common/borderStyles';
-import { CmsPage } from '../../types/cms';
+import { CmsPage, CmsSection } from '../../types/cms';
 import { loadPricingConfig } from '../../lib/pricing-repository';
 import { PricingConfig } from '../../types/pricing';
 
@@ -92,6 +92,107 @@ const DEFAULT_FAQ_ITEMS = [
   }
 ];
 
+const DEFAULT_PILARES = [
+  {
+    numero: '1',
+    titulo: '1. Bloques Independientes',
+    descripcion: 'Sesiones modulares de 30 minutos sin libros densos. Un formato paso a paso, visual y sin estrés para tu hijo.',
+    icono: 'grid_view',
+    colorIcono: '#123a72'
+  },
+  {
+    numero: '2',
+    titulo: '2. Temario MINEDUC',
+    descripcion: 'Ruta exacta de 3° a 8° Básico con el temario oficial del MINEDUC. Contenido directo, organizado y sin relleno.',
+    icono: 'menu_book',
+    colorIcono: '#18AFCB'
+  },
+  {
+    numero: '3',
+    titulo: '3. Respaldo Legal',
+    descripcion: 'Nuestro sistema cumple estrictamente con los Decretos 2272 y 67 para certificar legalmente el año escolar.',
+    icono: 'gavel',
+    colorIcono: '#f27a00'
+  },
+  {
+    numero: '4',
+    titulo: '4. Evaluación',
+    descripcion: 'Simulacros de examen idénticos a los oficiales para garantizar que lleguen con total seguridad.',
+    icono: 'fact_check',
+    colorIcono: '#F8AD22'
+  }
+];
+
+const DEFAULT_METODO_TABS = [
+  {
+    id: 'tab-1',
+    numeroTab: '1. Pantalla y Papel',
+    colorTab: '#1D4ED8',
+    badge: 'Fase 1: Puente Pantalla - Papel',
+    badgeColor: 'bg-[#1D4ED8]/20 text-[#60A5FA] border-[#1D4ED8]/40',
+    titulo: 'La Pantalla Modela, el Cuaderno Físico Consolida',
+    descripcion: 'Microaprendizaje de 30 minutos al día. Tu hijo no pasa horas pasivo frente a un monitor: la pantalla entrega una explicación didáctica breve y de inmediato el estudiante replica y resuelve el ejercicio en su <span class="text-[#F8AD22] font-bold">cuaderno físico</span>, fijando neurológicamente el aprendizaje motriz y evitando la fatiga de pantallas infinitas.',
+    icono: 'edit_note',
+    colorAcento: '#1D4ED8'
+  },
+  {
+    id: 'tab-2',
+    numeroTab: '2. Mediación Dual',
+    colorTab: '#12A1A4',
+    badge: 'Acompañamiento sin Estrés',
+    badgeColor: 'bg-[#12A1A4]/20 text-[#12A1A4] border-[#12A1A4]/40',
+    titulo: 'El Apoderado como Mentor con Diálogo Socrático',
+    descripcion: 'Diseñado para madres y padres que trabajan y carecen de formación pedagógica. Mientras el estudiante practica con autonomía, el portal del apoderado le entrega <span class="text-[#12A1A4] font-bold">preguntas clave, resolución de errores comunes e indicadores de logro</span>, permitiendo guiar con seguridad, sin frustraciones ni discusiones familiares.',
+    icono: 'record_voice_over',
+    colorAcento: '#12A1A4'
+  },
+  {
+    id: 'tab-3',
+    numeroTab: '3. Neurodiversidad',
+    colorTab: '#F8AD22',
+    badge: 'Descompresión Escolar y TEA / TDAH',
+    badgeColor: 'bg-[#F8AD22]/20 text-[#F8AD22] border-[#F8AD22]/40',
+    titulo: 'Ritmo Respetuoso para Neurodiversidad',
+    descripcion: 'Sin cronómetros angustiantes ni gamificación punitiva. Desarrollado con pausas sensoriales y lenguaje directo para estudiantes que salieron del aula tradicional por <span class="text-[#F8AD22] font-bold">ansiedad, bullying escolar o desajuste con el SAE</span>, devolviéndoles la autoestima y la curiosidad natural por aprender.',
+    icono: 'self_improvement',
+    colorAcento: '#F8AD22'
+  },
+  {
+    id: 'tab-4',
+    numeroTab: '4. Rigor MINEDUC',
+    colorTab: '#EE751C',
+    badge: 'Fase 2: Certificación Legal Oficial',
+    badgeColor: 'bg-[#EE751C]/20 text-[#EE751C] border-[#EE751C]/40',
+    titulo: 'Ensayos con Estándar Formal de Exámenes Libres',
+    descripcion: 'Una vez asimilado el concepto en el cuaderno, se habilita el módulo de práctica. Los estudiantes se enfrentan a <span class="text-[#EE751C] font-bold">ensayos estructurados con estándares docentes del MINEDUC (Decretos 2272 y 67)</span>, garantizando que el estudiante valide con serenidad su año escolar ante la comisión examinadora.',
+    icono: 'fact_check',
+    colorAcento: '#EE751C'
+  }
+];
+
+const DEFAULT_BULLETS_MENSUAL = [
+  'Acceso a las 5 asignaturas oficiales',
+  'Lecciones de 30 min y cuaderno guiado',
+  'Panel de seguimiento del apoderado',
+  'Diálogo socrático para guiar sin ser profesor',
+  'Soporte pedagógico vía WhatsApp y correo'
+];
+
+const DEFAULT_BULLETS_ANUAL = [
+  'Todo lo incluido en el Plan Mensual',
+  'Simulacros de examen formal tipo MINEDUC',
+  'Cuadernillos imprimibles de ejercitación física',
+  'Garantía de actualización curricular 2026',
+  'Informes periódicos de avance para apoderados'
+];
+
+const DEFAULT_BULLETS_PRUEBA = [
+  'Acceso a 3 lecciones modelo completas',
+  'Vista dual sincronizada (estudiante y apoderado)',
+  'Ejercicios prácticos en cuaderno físico',
+  'Sin cobros posteriores sin tu autorización'
+];
+
 const renderSocialIcon = (red: TipoRedSocial) => {
   switch (red) {
     case 'instagram':
@@ -128,7 +229,7 @@ const renderSocialIcon = (red: TipoRedSocial) => {
 export const LandingPage: React.FC = () => {
   const { setViewMode, headerFooterColor, authSession, logout } = useApp();
   
-  const [activeTab, setActiveTab] = useState<'tab-1' | 'tab-2' | 'tab-3' | 'tab-4'>('tab-1');
+  const [activeTab, setActiveTab] = useState<string>('tab-1');
   const [siteConfig, setSiteConfig] = useState<SiteConfig>(() => loadSiteConfig());
   const [popups, setPopups] = useState<PopupBanner[]>(() => loadPopups());
   const [cmsPages, setCmsPages] = useState<CmsPage[]>(() => loadCmsPages());
@@ -309,46 +410,12 @@ export const LandingPage: React.FC = () => {
     return false;
   }, [siteConfig.cintaNoticias, activeCintaSection]);
 
-  const isSectionActive = (type: string) => {
-    if (!homePage) return true;
-    const sec = homePage.secciones.find((s) => s.tipoBloque === type);
-    return sec ? sec.activo : true;
-  };
-
-  const homeTestimoniosSection = useMemo(() => {
-    return homePage?.secciones.find((s) => s.tipoBloque === 'TESTIMONIOS');
+  const orderedHomeSections = useMemo(() => {
+    if (!homePage || !homePage.secciones) return [];
+    return [...homePage.secciones]
+      .filter((s) => s.activo && s.tipoBloque !== 'CINTA_NOTICIAS')
+      .sort((a, b) => (a.orden ?? 0) - (b.orden ?? 0));
   }, [homePage]);
-
-  const homeFaqSection = useMemo(() => {
-    return homePage?.secciones.find((s) => s.tipoBloque === 'FAQ' || s.tipoBloque === 'ACORDEON');
-  }, [homePage]);
-
-  const dynamicTestimonios = useMemo(() => {
-    const list = homeTestimoniosSection?.configuracion?.testimonios;
-    if (list && Array.isArray(list) && list.length > 0) {
-      return list.map((item: any, idx: number) => ({
-        id: idx + 1,
-        badge: item.badge || 'Comunidad Homeschooling',
-        badgeColor: item.badgeColor || 'bg-[#12A1A4]/15 text-[#57d6f3] border-[#12A1A4]/30',
-        text: item.cita || item.text || '',
-        name: item.nombre || item.name || 'Familia de EstudioSimple',
-        role: item.rol || item.role || 'Comunidad Oficial',
-        initials: (item.nombre || item.name || 'ES').substring(0, 2).toUpperCase(),
-        avatarBg: 'bg-[#12A1A4]/20 text-[#57d6f3] border-[#12A1A4]/40',
-        fotoUrl: item.fotoUrl,
-        estrellas: item.estrellas || 5
-      }));
-    }
-    return TESTIMONIALS;
-  }, [homeTestimoniosSection]);
-
-  const dynamicFaqItems = useMemo(() => {
-    const items = homeFaqSection?.configuracion?.items;
-    if (items && Array.isArray(items) && items.length > 0) {
-      return items;
-    }
-    return null;
-  }, [homeFaqSection]);
 
   const handleSelectPlan = (plan: 'monthly' | 'full' | 'trial') => {
     localStorage.setItem('estudio_simple_selected_plan', plan);
@@ -386,6 +453,486 @@ export const LandingPage: React.FC = () => {
     siteConfig.estilosGlobales?.grosorBordeComentarios || '1.5px',
     '1px solid rgba(255,255,255,0.1)'
   );
+
+  const renderHeroSection = (sec: CmsSection) => (
+    <section key={sec.id} id="home">
+      <HeroScrollScrubber config={sec.configuracion} />
+    </section>
+  );
+
+  const renderPilaresSection = (sec: CmsSection) => {
+    const pilaresList = (sec.configuracion?.pilares && Array.isArray(sec.configuracion.pilares) && sec.configuracion.pilares.length > 0)
+      ? sec.configuracion.pilares
+      : DEFAULT_PILARES;
+    const badgeColor = sec.configuracion?.colorBordeEtiqueta || siteConfig.estilosGlobales?.colorBordeEtiquetas || '#18AFCB';
+
+    return (
+      <section key={sec.id} id="exito" className="px-4 md:px-12 max-w-7xl mx-auto py-20 md:py-24">
+        <div className="text-center mb-12 space-y-3">
+          <div
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider"
+            style={{
+              border: `1.5px solid ${badgeColor}`,
+              backgroundColor: `${badgeColor}20`,
+              color: badgeColor
+            }}
+          >
+            <span className="material-symbols-outlined text-sm">school</span>
+            <span>{sec.configuracion?.badgeText || 'Metodología Paso a Paso'}</span>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+            {sec.titulo || '¿Cómo logramos el éxito académico?'}
+          </h2>
+          <p className="text-slate-300 text-sm md:text-base max-w-xl mx-auto font-normal">
+            {sec.subtitulo || 'Cuatro pilares estructurales para validar el año escolar con autonomía y serenidad.'}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {pilaresList.map((pilar: any, idx: number) => {
+            const iconBg = pilar.colorIcono || (idx === 0 ? '#123a72' : idx === 1 ? '#18AFCB' : idx === 2 ? '#f27a00' : '#F8AD22');
+            const isYellow = (iconBg || '').toUpperCase() === '#F8AD22';
+            return (
+              <div
+                key={idx}
+                className="bg-[#16325C] rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl border border-white/10"
+                style={pilaresBorderStyles}
+              >
+                <div 
+                  className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-lg"
+                  style={{ backgroundColor: iconBg }}
+                >
+                  <span className={`material-symbols-outlined text-3xl ${isYellow ? 'text-[#0A192F]' : 'text-white'}`}>
+                    {pilar.icono || 'grid_view'}
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{pilar.titulo}</h3>
+                <p className="text-white/70 text-base leading-relaxed">
+                  {pilar.descripcion}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+    );
+  };
+
+  const renderMetodoSection = (sec: CmsSection) => {
+    const tabsList = (sec.configuracion?.tabs && Array.isArray(sec.configuracion.tabs) && sec.configuracion.tabs.length > 0)
+      ? sec.configuracion.tabs
+      : DEFAULT_METODO_TABS;
+    const currentTab = tabsList.find((t: any) => t.id === activeTab) || tabsList[0];
+    const accentColor = currentTab?.colorTab || currentTab?.colorAcento || '#1D4ED8';
+    const isCurrentYellow = (accentColor || '').toUpperCase() === '#F8AD22';
+
+    return (
+      <section key={sec.id} className="px-4 md:px-12 max-w-5xl mx-auto py-20 md:py-24" id="method">
+        <div className="text-center mb-10 space-y-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#12A1A4]/15 text-[#57d6f3] border border-[#12A1A4]/30 text-xs font-semibold uppercase tracking-wider">
+            <span className="material-symbols-outlined text-sm">psychology</span>
+            <span>{sec.configuracion?.badgeText || 'Pedagogía Esencial sin Sobrecarga Cognitiva'}</span>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+            {sec.titulo || 'Nuestro Método'}
+          </h2>
+          <p className="text-slate-300 text-sm md:text-base max-w-xl mx-auto font-normal">
+            {sec.subtitulo || 'El puente exacto entre la cápsula digital interactiva y el cuaderno físico de tu hijo.'}
+          </p>
+        </div>
+
+        <div className="bg-[#16325C] rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-300 border border-white/10">
+          <div className="flex flex-wrap sm:flex-nowrap border-b border-white/10 min-h-[60px] relative bg-[#10223D]">
+            {tabsList.map((tab: any, idx: number) => {
+              const isSelected = (currentTab?.id || tabsList[0].id) === tab.id;
+              const tabColor = tab.colorTab || tab.colorAcento || (idx === 0 ? '#1D4ED8' : idx === 1 ? '#12A1A4' : idx === 2 ? '#F8AD22' : '#EE751C');
+              const isYellow = (tabColor || '').toUpperCase() === '#F8AD22';
+              return (
+                <button
+                  key={tab.id || idx}
+                  type="button"
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`tab-btn flex-1 py-4 px-3 sm:px-6 text-center text-xs sm:text-sm font-bold transition-all duration-300 cursor-pointer ${
+                    isSelected
+                      ? `${isYellow ? 'text-[#0A192F]' : 'text-white'} opacity-100 shadow-xl border-b-4`
+                      : 'text-white/70 opacity-80 hover:text-white hover:bg-white/5'
+                  }`}
+                  style={isSelected ? { backgroundColor: tabColor, borderColor: isYellow ? '#0A192F' : '#FFFFFF' } : {}}
+                >
+                  {tab.numeroTab || tab.tabTitulo || `Paso ${idx + 1}`}
+                </button>
+              );
+            })}
+          </div>
+
+          <div className="relative p-8 md:p-12 min-h-[320px]">
+            <div className="flex flex-col md:flex-row gap-8 items-center justify-between">
+              <div className="flex-1 space-y-4">
+                <div 
+                  className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-black uppercase tracking-wider"
+                  style={{
+                    backgroundColor: `${accentColor}25`,
+                    color: isCurrentYellow ? '#F8AD22' : accentColor === '#1D4ED8' ? '#60A5FA' : accentColor,
+                    border: `1px solid ${accentColor}50`
+                  }}
+                >
+                  {currentTab.badge || 'Fase Metodológica'}
+                </div>
+                <h3 className="text-2xl md:text-3xl font-black text-white">{currentTab.titulo}</h3>
+                <p 
+                  className="text-gray-200 text-base md:text-lg leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: currentTab.descripcion }}
+                />
+              </div>
+              <div 
+                className="shrink-0 p-8 rounded-3xl shadow-2xl md:ml-6 flex items-center justify-center"
+                style={{
+                  backgroundColor: `${accentColor}15`,
+                  border: `1px solid ${accentColor}40`
+                }}
+              >
+                <span 
+                  className="material-symbols-outlined text-[100px] md:text-[130px] leading-none"
+                  style={{ color: isCurrentYellow ? '#F8AD22' : accentColor === '#1D4ED8' ? '#60A5FA' : accentColor }}
+                >
+                  {currentTab.icono || 'edit_note'}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  };
+
+  const renderTestimoniosSection = (sec: CmsSection) => {
+    const list = sec.configuracion?.testimonios;
+    const items = (list && Array.isArray(list) && list.length > 0)
+      ? list.map((item: any, idx: number) => ({
+          id: idx + 1,
+          badge: item.badge || 'Comunidad Homeschooling',
+          badgeColor: item.badgeColor || 'bg-[#12A1A4]/15 text-[#57d6f3] border-[#12A1A4]/30',
+          text: item.cita || item.text || '',
+          name: item.nombre || item.name || 'Familia de EstudioSimple',
+          role: item.rol || item.role || 'Comunidad Oficial',
+          initials: (item.nombre || item.name || 'ES').substring(0, 2).toUpperCase(),
+          avatarBg: 'bg-[#12A1A4]/20 text-[#57d6f3] border-[#12A1A4]/40',
+          fotoUrl: item.fotoUrl,
+          estrellas: item.estrellas || 5
+        }))
+      : TESTIMONIALS;
+
+    return (
+      <section key={sec.id} id="testimonios" className="px-4 md:px-12 max-w-7xl mx-auto py-20 md:py-24">
+        <div className="text-center mb-12 space-y-3">
+          <div
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider"
+            style={{
+              border: `1.5px solid ${siteConfig.estilosGlobales?.colorBordeEtiquetas || '#F8AD22'}`,
+              backgroundColor: `${siteConfig.estilosGlobales?.colorBordeEtiquetas || '#F8AD22'}20`,
+              color: siteConfig.estilosGlobales?.colorBordeEtiquetas || '#F8AD22'
+            }}
+          >
+            <span className="material-symbols-outlined text-sm">family_restroom</span>
+            <span>{sec.configuracion?.badgeText || 'Comunidad Homeschooling · Historias Reales'}</span>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+            {sec.titulo || 'Lo que dicen las familias'}
+          </h2>
+          <p className="text-slate-300 text-sm md:text-base max-w-xl mx-auto font-normal">
+            {sec.subtitulo || 'Experiencias de aprendizaje en el hogar y validación formal de exámenes libres.'}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          {items.map((t: any, idx: number) => (
+            <div 
+              key={t.id || idx}
+              className="bg-[#12284D]/75 rounded-2xl p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 group"
+              style={comentariosBorderStyles}
+            >
+              <div>
+                <div className="mb-3">
+                  <span className={`inline-block text-[11px] font-semibold px-2.5 py-1 rounded-full border ${t.badgeColor || 'bg-[#12A1A4]/15 text-[#57d6f3] border-[#12A1A4]/30'} leading-tight`}>
+                    {t.badge}
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-1 mb-3.5" style={{ color: sec.configuracion?.colorEstrellas || siteConfig.estilosGlobales?.colorEstrellas || '#F8AD22' }}>
+                  {[...Array(t.estrellas || 5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-current shrink-0" />
+                  ))}
+                </div>
+
+                <p className="text-slate-200 text-xs sm:text-sm font-normal leading-relaxed mb-5">
+                  "{t.text}"
+                </p>
+              </div>
+
+              <div className="pt-3.5 border-t border-white/10 flex items-center gap-3">
+                {t.fotoUrl ? (
+                  <img src={t.fotoUrl} alt={t.name} className="w-9 h-9 rounded-xl object-cover shrink-0 border border-white/20" />
+                ) : (
+                  <div className={`w-9 h-9 rounded-xl flex items-center justify-center font-bold text-xs shrink-0 border ${t.avatarBg || 'bg-[#12A1A4]/20 text-[#57d6f3] border-[#12A1A4]/40'}`}>
+                    {t.initials}
+                  </div>
+                )}
+                <div className="min-w-0">
+                  <div className="font-semibold text-xs sm:text-sm text-white flex items-center gap-1">
+                    <span className="truncate">{t.name}</span>
+                    <span className="material-symbols-outlined text-xs text-emerald-400 shrink-0" title="Familia Verificada">verified</span>
+                  </div>
+                  <div className="text-[11px] text-slate-400 truncate font-normal">
+                    {t.role}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    );
+  };
+
+  const renderFaqSection = (sec: CmsSection) => {
+    const faqItems = (sec.configuracion?.items && Array.isArray(sec.configuracion.items) && sec.configuracion.items.length > 0)
+      ? sec.configuracion.items
+      : DEFAULT_FAQ_ITEMS;
+
+    return (
+      <section key={sec.id} id="faq" className="px-4 sm:px-6 md:px-8 max-w-5xl mx-auto py-20 md:py-24">
+        <div className="text-center mb-12 space-y-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#12A1A4]/15 text-[#57d6f3] border border-[#12A1A4]/30 text-xs font-semibold uppercase tracking-wider">
+            <span className="material-symbols-outlined text-sm">help</span>
+            <span>{sec.configuracion?.badgeText || 'Resolución de Dudas Frecuentes'}</span>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+            {sec.titulo || 'Preguntas Frecuentes'}
+          </h2>
+          <p className="text-slate-300 text-sm md:text-base max-w-xl mx-auto font-normal">
+            {sec.subtitulo || 'Respuestas directas sobre el respaldo legal, la metodología y el estudio en el hogar.'}
+          </p>
+        </div>
+
+        <div className="space-y-4">
+          {faqItems.map((item: any, idx: number) => (
+            <div 
+              key={idx}
+              className="bg-[#16325C] rounded-2xl overflow-hidden transition-all duration-300 shadow-sm hover:border-white/20"
+              style={faqBorderStyles}
+            >
+              <details className="group">
+                <summary className="font-bold text-white text-base md:text-lg p-5 md:p-6 cursor-pointer flex justify-between items-center outline-none transition-colors gap-4 select-none list-none hover:bg-white/5">
+                  <span className="text-left">{item.pregunta}</span>
+                  <span 
+                    className="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-xl shrink-0"
+                    style={{ color: sec.configuracion?.colorIcono || siteConfig.estilosGlobales?.colorAcentoFaq || '#57d6f3' }}
+                  >expand_more</span>
+                </summary>
+                <div className="px-6 pb-6 text-slate-200 text-sm md:text-base font-normal leading-relaxed border-t border-white/5 pt-4 whitespace-pre-line space-y-2">
+                  <p>{item.respuesta}</p>
+                </div>
+              </details>
+            </div>
+          ))}
+        </div>
+      </section>
+    );
+  };
+
+  const renderPricingSection = (sec: CmsSection) => {
+    const bulletsMensual = (sec.configuracion?.bulletsMensual && Array.isArray(sec.configuracion.bulletsMensual) && sec.configuracion.bulletsMensual.length > 0)
+      ? sec.configuracion.bulletsMensual
+      : DEFAULT_BULLETS_MENSUAL;
+    const bulletsAnual = (sec.configuracion?.bulletsAnual && Array.isArray(sec.configuracion.bulletsAnual) && sec.configuracion.bulletsAnual.length > 0)
+      ? sec.configuracion.bulletsAnual
+      : DEFAULT_BULLETS_ANUAL;
+    const bulletsPrueba = (sec.configuracion?.bulletsPrueba && Array.isArray(sec.configuracion.bulletsPrueba) && sec.configuracion.bulletsPrueba.length > 0)
+      ? sec.configuracion.bulletsPrueba
+      : DEFAULT_BULLETS_PRUEBA;
+
+    const bannerTitulo = sec.configuracion?.bannerTitulo || '¿Quieres revisar la comparativa detallada de asignaturas y garantías pedagógicas?';
+    const bannerDescripcion = sec.configuracion?.bannerDescripcion || 'Conoce en detalle el desglose de cobertura de los 5 temarios oficiales MINEDUC y las preguntas frecuentes para apoderados.';
+    const bannerBotonTexto = sec.configuracion?.bannerBotonTexto || 'Ver Comparativa Completa de Asignaturas';
+
+    const monthlyPlan = pricingConfig.planes.find(p => p.id === 'monthly') || {
+      precioNormal: 29990,
+      precioOferta: 1000,
+      enOferta: true,
+      etiquetaOferta: 'Oferta Prueba $1.000 CLP'
+    };
+    const fullPlan = pricingConfig.planes.find(p => p.id === 'full') || {
+      precioNormal: 199900,
+      precioOferta: 99900,
+      enOferta: true,
+      etiquetaOferta: 'Oferta Lanzamiento 50% DCTO'
+    };
+    const monthlyEffective = monthlyPlan.enOferta ? monthlyPlan.precioOferta : monthlyPlan.precioNormal;
+    const fullEffective = fullPlan.enOferta ? fullPlan.precioOferta : fullPlan.precioNormal;
+
+    return (
+      <section key={sec.id} id="planes" className="px-4 md:px-12 max-w-7xl mx-auto py-20 md:py-24 scroll-mt-24">
+        <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#12A1A4]/20 border border-[#12A1A4]/40 text-[#57d6f3] text-xs font-black uppercase tracking-wider mb-4">
+            <Sparkles className="w-4 h-4 text-[#57d6f3]" />
+            <span>{sec.configuracion?.badgeText || 'Inversión Transparente · Sin Contratos Forzados'}</span>
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-4">
+            {sec.titulo || 'Planes Adaptados a Tu Familia'}
+          </h2>
+
+          <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+            {sec.subtitulo || 'Preparación integral para Exámenes Libres de 3° a 8° Básico con temario oficial MINEDUC, lecciones de 30 minutos y puente con cuaderno físico.'}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          {/* Tarjeta 1: Plan Mensual */}
+          <div className="bg-[#16325C] rounded-3xl p-8 border border-white/10 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:shadow-xl shadow-lg relative">
+            {monthlyPlan.enOferta && (
+              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#57d6f3] text-[#0A192F] font-black text-xs px-4 py-0.5 rounded-full uppercase tracking-wider shadow-md">
+                {monthlyPlan.etiquetaOferta || 'OFERTA ACTIVA'}
+              </div>
+            )}
+            <div>
+              <div className="text-xs font-bold uppercase tracking-wider text-[#57d6f3] mb-2">Flexibilidad Total</div>
+              <h3 className="text-2xl font-bold text-white mb-2">Plan Mensual</h3>
+              <p className="text-sm text-gray-300 mb-6">Ideal para avanzar mes a mes a tu propio ritmo con tranquilidad.</p>
+              
+              <div className="mb-1">
+                {monthlyPlan.enOferta && (
+                  <span className="text-sm font-semibold text-white/50 line-through block">
+                    ${monthlyPlan.precioNormal.toLocaleString('es-CL')} CLP
+                  </span>
+                )}
+                <div className="text-4xl font-black text-white">
+                  ${monthlyEffective.toLocaleString('es-CL')} <span className="text-sm font-normal text-gray-300">/ mes</span>
+                </div>
+              </div>
+              <div className="text-xs text-gray-400 mb-6">Renovación mensual cancelable cuando quieras sin penalización</div>
+
+              <ul className="space-y-3.5 text-sm text-gray-200 border-t border-white/10 pt-6">
+                {bulletsMensual.map((b: string, bIdx: number) => (
+                  <li key={bIdx} className="flex items-center gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#12A1A4] shrink-0" />
+                    <span>{b}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <button
+              type="button"
+              onClick={() => handleSelectPlan('monthly')}
+              className="w-full mt-8 py-4 px-4 rounded-2xl font-bold text-sm bg-white/10 hover:bg-white/20 text-white border border-white/20 transition-all flex items-center justify-center gap-2 shadow-md hover:scale-[1.02] cursor-pointer"
+            >
+              <span>{monthlyPlan.enOferta ? `Elegir Plan Mensual ($${monthlyEffective.toLocaleString('es-CL')})` : 'Seleccionar Plan Mensual'}</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+
+          {/* Tarjeta 2: Anual Exámenes Libres (Destacado) */}
+          <div className="bg-[#10223D] rounded-3xl p-8 border-2 border-[#F8AD22] shadow-2xl relative flex flex-col justify-between transition-all duration-300 hover:scale-[1.03]">
+            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#F8AD22] text-[#0A192F] font-black text-xs px-5 py-1 rounded-full uppercase tracking-wider shadow-md">
+              {fullPlan.enOferta ? (fullPlan.etiquetaOferta || 'OFERTA EXCLUSIVA') : 'Más Recomendado'}
+            </div>
+
+            <div>
+              <div className="text-xs font-bold uppercase tracking-wider text-[#F8AD22] mb-2">Preparación Integral</div>
+              <h3 className="text-2xl font-bold text-white mb-2">Anual Exámenes Libres</h3>
+              <p className="text-sm text-gray-300 mb-6">Acompañamiento completo durante todo el año escolar oficial.</p>
+              
+              <div className="mb-1">
+                {fullPlan.enOferta && (
+                  <span className="text-sm font-semibold text-white/50 line-through block">
+                    ${fullPlan.precioNormal.toLocaleString('es-CL')} CLP
+                  </span>
+                )}
+                <div className="text-4xl font-black text-white">
+                  ${fullEffective.toLocaleString('es-CL')} <span className="text-sm font-normal text-gray-300">/ año</span>
+                </div>
+              </div>
+              <div className="text-xs text-[#F8AD22] font-semibold mb-6">Ahorras más del 44% en comparación al pago mensual</div>
+
+              <ul className="space-y-3.5 text-sm text-gray-200 border-t border-white/10 pt-6">
+                {bulletsAnual.map((b: string, bIdx: number) => (
+                  <li key={bIdx} className="flex items-center gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#F8AD22] shrink-0" />
+                    <span className={bIdx === 0 ? "font-semibold text-white" : ""}>{b}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <button
+              type="button"
+              onClick={() => handleSelectPlan('full')}
+              className="w-full mt-8 py-4 px-4 rounded-2xl font-bold text-sm bg-[#EE751C] hover:bg-[#D66512] text-white shadow-xl transition-all flex items-center justify-center gap-2 hover:scale-[1.02] cursor-pointer"
+            >
+              <span>Comenzar Plan Anual</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+
+          {/* Tarjeta 3: Prueba 7 Días */}
+          <div className="bg-[#16325C] rounded-3xl p-8 border border-white/10 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:shadow-xl shadow-lg">
+            <div>
+              <div className="text-xs font-bold uppercase tracking-wider text-[#12A1A4] mb-2">Sin Compromiso</div>
+              <h3 className="text-2xl font-bold text-white mb-2">Prueba 7 Días</h3>
+              <p className="text-sm text-gray-300 mb-6">Comprueba cómo tu hijo aprende con autonomía y tranquilidad.</p>
+              
+              <div className="text-4xl font-black text-white mb-1">
+                $0 <span className="text-sm font-normal text-gray-300">/ 7 días</span>
+              </div>
+              <div className="text-xs text-gray-400 mb-6">Sin tarjeta de crédito ni cobros automáticos</div>
+
+              <ul className="space-y-3.5 text-sm text-gray-200 border-t border-white/10 pt-6">
+                {bulletsPrueba.map((b: string, bIdx: number) => (
+                  <li key={bIdx} className="flex items-center gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#12A1A4] shrink-0" />
+                    <span>{b}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <button
+              type="button"
+              onClick={() => handleSelectPlan('trial')}
+              className="w-full mt-8 py-4 px-4 rounded-2xl font-bold text-sm bg-white/10 hover:bg-white/20 text-white border border-white/20 transition-all flex items-center justify-center gap-2 shadow-md hover:scale-[1.02] cursor-pointer"
+            >
+              <span>Probar Gratis 7 Días</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+
+        {/* Banner de detalle hacia /planes */}
+        <div className="bg-[#16325C]/80 border border-[#abc7ff]/20 rounded-3xl p-8 md:p-10 text-center relative overflow-hidden transition-all duration-300 shadow-xl">
+          <h4 className="text-xl md:text-2xl font-bold text-white mb-3">
+            {bannerTitulo}
+          </h4>
+          <p className="text-gray-300 max-w-2xl mx-auto mb-6 text-sm md:text-base">
+            {bannerDescripcion}
+          </p>
+          <div className="flex justify-center">
+            <button 
+              type="button"
+              onClick={() => {
+                setViewMode('pricing');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="bg-[#EE751C] hover:bg-[#D66512] text-white px-8 py-3.5 rounded-2xl font-bold text-sm md:text-base shadow-lg hover:scale-105 transition-all flex items-center gap-2 cursor-pointer"
+            >
+              <span>{bannerBotonTexto}</span>
+              <ArrowRight className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      </section>
+    );
+  };
 
   return (
     <div className="min-h-screen font-body-md selection:bg-[#12A1A4]/30 transition-colors duration-300" style={{ backgroundColor: 'var(--canvas-bg)', color: 'var(--canvas-text)', fontFamily: '"Arial Rounded MT Bold", "Arial Rounded", sans-serif' }}>
@@ -427,610 +974,88 @@ export const LandingPage: React.FC = () => {
           />
         ) : (currentSlug === '/' && homePage?.activo !== false) ? (
           <>
-            {/* 2. HERO INTERACTIVO CON SCROLL SCRUBBING */}
-            <section id="home">
-              <HeroScrollScrubber />
-            </section>
-
-        {/* 3. SECTION: ¿CÓMO LOGRAMOS EL ÉXITO ACADÉMICO? */}
-        <section id="exito" className="px-4 md:px-12 max-w-7xl mx-auto py-20 md:py-24">
-          <div className="text-center mb-12 space-y-3">
-            <div
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider"
-              style={{
-                border: `1.5px solid ${siteConfig.estilosGlobales?.colorBordeEtiquetas || '#18AFCB'}`,
-                backgroundColor: `${siteConfig.estilosGlobales?.colorBordeEtiquetas || '#18AFCB'}20`,
-                color: siteConfig.estilosGlobales?.colorBordeEtiquetas || '#57d6f3'
-              }}
-            >
-              <span className="material-symbols-outlined text-sm">school</span>
-              <span>Metodología Paso a Paso</span>
-            </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
-              ¿Cómo logramos el éxito académico?
-            </h2>
-            <p className="text-slate-300 text-sm md:text-base max-w-xl mx-auto font-normal">
-              Cuatro pilares estructurales para validar el año escolar con autonomía y serenidad.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            
-            {/* Card 1 */}
-            <div
-              className="bg-[#16325C] rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl border border-white/10"
-              style={pilaresBorderStyles}
-            >
-              <div className="w-16 h-16 rounded-2xl bg-[#123a72] flex items-center justify-center mb-6 shadow-lg">
-                <span className="material-symbols-outlined text-white text-3xl">grid_view</span>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3">1. Bloques Independientes</h3>
-              <p className="text-white/70 text-base leading-relaxed">
-                Sesiones modulares de 30 minutos sin libros densos. Un formato paso a paso, visual y sin estrés para tu hijo.
-              </p>
-            </div>
-
-            {/* Card 2 */}
-            <div
-              className="bg-[#16325C] rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl border border-white/10"
-              style={pilaresBorderStyles}
-            >
-              <div className="w-16 h-16 rounded-2xl bg-[#18AFCB] flex items-center justify-center mb-6 shadow-lg">
-                <span className="material-symbols-outlined text-white text-3xl">menu_book</span>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3">2. Temario MINEDUC</h3>
-              <p className="text-white/70 text-base leading-relaxed">
-                Ruta exacta de 3° a 8° Básico con el temario oficial del MINEDUC. Contenido directo, organizado y sin relleno.
-              </p>
-            </div>
-
-            {/* Card 3 */}
-            <div
-              className="bg-[#16325C] rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl border border-white/10"
-              style={pilaresBorderStyles}
-            >
-              <div className="w-16 h-16 rounded-2xl bg-[#f27a00] flex items-center justify-center mb-6 shadow-lg">
-                <span className="material-symbols-outlined text-white text-3xl">gavel</span>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3">3. Respaldo Legal</h3>
-              <p className="text-white/70 text-base leading-relaxed">
-                Nuestro sistema cumple estrictamente con los Decretos 2272 y 67 para certificar legalmente el año escolar.
-              </p>
-            </div>
-
-            {/* Card 4 */}
-            <div
-              className="bg-[#16325C] rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl border border-white/10"
-              style={pilaresBorderStyles}
-            >
-              <div className="w-16 h-16 rounded-2xl bg-[#F8AD22] flex items-center justify-center mb-6 shadow-lg">
-                <span className="material-symbols-outlined text-[#0A192F] text-3xl">fact_check</span>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3">4. Evaluación</h3>
-              <p className="text-white/70 text-base leading-relaxed">
-                Simulacros de examen idénticos a los oficiales para garantizar que lleguen con total seguridad.
-              </p>
-            </div>
-
-          </div>
-        </section>
-
-        {/* 4. METHOD TABS SECTION (FUNDADO EN EL PLAN MAESTRO) */}
-        {isSectionActive('METODO') && (
-        <section className="px-4 md:px-12 max-w-5xl mx-auto py-20 md:py-24" id="method">
-          <div className="text-center mb-10 space-y-3">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#12A1A4]/15 text-[#57d6f3] border border-[#12A1A4]/30 text-xs font-semibold uppercase tracking-wider">
-              <span className="material-symbols-outlined text-sm">psychology</span>
-              <span>Pedagogía Esencial sin Sobrecarga Cognitiva</span>
-            </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
-              Nuestro Método
-            </h2>
-            <p className="text-slate-300 text-sm md:text-base max-w-xl mx-auto font-normal">
-              El puente exacto entre la cápsula digital interactiva y el cuaderno físico de tu hijo.
-            </p>
-          </div>
-
-          <div className="bg-[#16325C] rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-300 border border-white/10">
-            
-            {/* Tab Navigation Bar */}
-            <div className="flex flex-wrap sm:flex-nowrap border-b border-white/10 min-h-[60px] relative bg-[#10223D]">
-              <button 
-                type="button"
-                onClick={() => setActiveTab('tab-1')}
-                className={`tab-btn flex-1 py-4 px-3 sm:px-6 text-center text-xs sm:text-sm font-bold transition-all duration-300 ${
-                  activeTab === 'tab-1' ? 'bg-[#1D4ED8] text-white opacity-100 shadow-xl border-b-4 border-white' : 'text-white/70 opacity-80 hover:text-white hover:bg-white/5'
-                }`}
-              >
-                1. Pantalla y Papel
-              </button>
-
-              <button 
-                type="button"
-                onClick={() => setActiveTab('tab-2')}
-                className={`tab-btn flex-1 py-4 px-3 sm:px-6 text-center text-xs sm:text-sm font-bold transition-all duration-300 ${
-                  activeTab === 'tab-2' ? 'bg-[#12A1A4] text-white opacity-100 shadow-xl border-b-4 border-white' : 'text-white/70 opacity-80 hover:text-white hover:bg-white/5'
-                }`}
-              >
-                2. Mediación Dual
-              </button>
-
-              <button 
-                type="button"
-                onClick={() => setActiveTab('tab-3')}
-                className={`tab-btn flex-1 py-4 px-3 sm:px-6 text-center text-xs sm:text-sm font-bold transition-all duration-300 ${
-                  activeTab === 'tab-3' ? 'bg-[#F8AD22] text-[#0A192F] opacity-100 shadow-xl border-b-4 border-[#0A192F]' : 'text-white/70 opacity-80 hover:text-white hover:bg-white/5'
-                }`}
-              >
-                3. Neurodiversidad
-              </button>
-
-              <button 
-                type="button"
-                onClick={() => setActiveTab('tab-4')}
-                className={`tab-btn flex-1 py-4 px-3 sm:px-6 text-center text-xs sm:text-sm font-bold transition-all duration-300 ${
-                  activeTab === 'tab-4' ? 'bg-[#EE751C] text-white opacity-100 shadow-xl border-b-4 border-white' : 'text-white/70 opacity-80 hover:text-white hover:bg-white/5'
-                }`}
-              >
-                4. Rigor MINEDUC
-              </button>
-            </div>
-
-            {/* Tab Contents */}
-            <div className="relative p-8 md:p-12 min-h-[320px]">
-              {activeTab === 'tab-1' && (
-                <div className="flex flex-col md:flex-row gap-8 items-center justify-between">
-                  <div className="flex-1 space-y-4">
-                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1D4ED8]/20 text-[#60A5FA] border border-[#1D4ED8]/40 text-xs font-black uppercase tracking-wider">
-                      Fase 1: Puente Pantalla - Papel
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-black text-white">La Pantalla Modela, el Cuaderno Físico Consolida</h3>
-                    <p className="text-gray-200 text-base md:text-lg leading-relaxed">
-                      Microaprendizaje de 30 minutos al día. Tu hijo no pasa horas pasivo frente a un monitor: la pantalla entrega una explicación didáctica breve y de inmediato el estudiante replica y resuelve el ejercicio en su <span className="text-[#F8AD22] font-bold">cuaderno físico</span>, fijando neurológicamente el aprendizaje motriz y evitando la fatiga de pantallas infinitas.
-                    </p>
-                  </div>
-                  <div className="shrink-0 p-8 bg-[#1D4ED8]/10 rounded-3xl border border-[#1D4ED8]/30 shadow-2xl md:ml-6 flex items-center justify-center">
-                    <span className="material-symbols-outlined text-[100px] md:text-[130px] text-[#60A5FA] leading-none">edit_note</span>
-                  </div>
-                </div>
-              )}
-
-              {activeTab === 'tab-2' && (
-                <div className="flex flex-col md:flex-row gap-8 items-center justify-between">
-                  <div className="flex-1 space-y-4">
-                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#12A1A4]/20 text-[#12A1A4] border border-[#12A1A4]/40 text-xs font-black uppercase tracking-wider">
-                      Acompañamiento sin Estrés
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-black text-white">El Apoderado como Mentor con Diálogo Socrático</h3>
-                    <p className="text-gray-200 text-base md:text-lg leading-relaxed">
-                      Diseñado para madres y padres que trabajan y carecen de formación pedagógica. Mientras el estudiante practica con autonomía, el portal del apoderado le entrega <span className="text-[#12A1A4] font-bold">preguntas clave, resolución de errores comunes e indicadores de logro</span>, permitiendo guiar con seguridad, sin frustraciones ni discusiones familiares.
-                    </p>
-                  </div>
-                  <div className="shrink-0 p-8 bg-[#12A1A4]/10 rounded-3xl border border-[#12A1A4]/30 shadow-2xl md:ml-6 flex items-center justify-center">
-                    <span className="material-symbols-outlined text-[100px] md:text-[130px] text-[#12A1A4] leading-none">record_voice_over</span>
-                  </div>
-                </div>
-              )}
-
-              {activeTab === 'tab-3' && (
-                <div className="flex flex-col md:flex-row gap-8 items-center justify-between">
-                  <div className="flex-1 space-y-4">
-                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F8AD22]/20 text-[#F8AD22] border border-[#F8AD22]/40 text-xs font-black uppercase tracking-wider">
-                      Descompresión Escolar y TEA / TDAH
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-black text-white">Ritmo Respetuoso para Neurodiversidad</h3>
-                    <p className="text-gray-200 text-base md:text-lg leading-relaxed">
-                      Sin cronómetros angustiantes ni gamificación punitiva. Desarrollado con pausas sensoriales y lenguaje directo para estudiantes que salieron del aula tradicional por <span className="text-[#F8AD22] font-bold">ansiedad, bullying escolar o desajuste con el SAE</span>, devolviéndoles la autoestima y la curiosidad natural por aprender.
-                    </p>
-                  </div>
-                  <div className="shrink-0 p-8 bg-[#F8AD22]/10 rounded-3xl border border-[#F8AD22]/30 shadow-2xl md:ml-6 flex items-center justify-center">
-                    <span className="material-symbols-outlined text-[100px] md:text-[130px] text-[#F8AD22] leading-none">self_improvement</span>
-                  </div>
-                </div>
-              )}
-
-              {activeTab === 'tab-4' && (
-                <div className="flex flex-col md:flex-row gap-8 items-center justify-between">
-                  <div className="flex-1 space-y-4">
-                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EE751C]/20 text-[#EE751C] border border-[#EE751C]/40 text-xs font-black uppercase tracking-wider">
-                      Fase 2: Certificación Legal Oficial
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-black text-white">Ensayos con Estándar Formal de Exámenes Libres</h3>
-                    <p className="text-gray-200 text-base md:text-lg leading-relaxed">
-                      Una vez asimilado el concepto en el cuaderno, se habilita el módulo de práctica. Los estudiantes se enfrentan a <span className="text-[#EE751C] font-bold">ensayos estructurados con estándares docentes del MINEDUC (Decretos 2272 y 67)</span>, garantizando que el estudiante valide con serenidad su año escolar ante la comisión examinadora.
-                    </p>
-                  </div>
-                  <div className="shrink-0 p-8 bg-[#EE751C]/10 rounded-3xl border border-[#EE751C]/30 shadow-2xl md:ml-6 flex items-center justify-center">
-                    <span className="material-symbols-outlined text-[100px] md:text-[130px] text-[#EE751C] leading-none">fact_check</span>
-                  </div>
-                </div>
-              )}
-            </div>
-
-          </div>
-        </section>
-        )}
-
-        {/* 5. TESTIMONIALS SECTION */}
-        {isSectionActive('TESTIMONIOS') && (
-        <section id="testimonios" className="px-4 md:px-12 max-w-7xl mx-auto py-20 md:py-24">
-          <div className="text-center mb-12 space-y-3">
-            <div
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider"
-              style={{
-                border: `1.5px solid ${siteConfig.estilosGlobales?.colorBordeEtiquetas || '#F8AD22'}`,
-                backgroundColor: `${siteConfig.estilosGlobales?.colorBordeEtiquetas || '#F8AD22'}20`,
-                color: siteConfig.estilosGlobales?.colorBordeEtiquetas || '#F8AD22'
-              }}
-            >
-              <span className="material-symbols-outlined text-sm">family_restroom</span>
-              <span>Comunidad Homeschooling · Historias Reales</span>
-            </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
-              {homeTestimoniosSection?.titulo || 'Lo que dicen las familias'}
-            </h2>
-            <p className="text-slate-300 text-sm md:text-base max-w-xl mx-auto font-normal">
-              {homeTestimoniosSection?.subtitulo || 'Experiencias de aprendizaje en el hogar y validación formal de exámenes libres.'}
-            </p>
-          </div>
-
-          {/* Grid Horizontal de los Testimonios Dinámicos */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-            {dynamicTestimonios.map((t: any, idx: number) => (
-              <div 
-                key={t.id || idx}
-                className="bg-[#12284D]/75 rounded-2xl p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 group"
-                style={comentariosBorderStyles}
-              >
-                <div>
-                  {/* Badge de Caso Estratégico */}
-                  <div className="mb-3">
-                    <span className={`inline-block text-[11px] font-semibold px-2.5 py-1 rounded-full border ${t.badgeColor || 'bg-[#12A1A4]/15 text-[#57d6f3] border-[#12A1A4]/30'} leading-tight`}>
-                      {t.badge}
-                    </span>
-                  </div>
-
-                  {/* 5 Estrellas Doradas con Relleno Sólido */}
-                  <div className="flex items-center gap-1 mb-3.5" style={{ color: homeTestimoniosSection?.configuracion?.colorEstrellas || siteConfig.estilosGlobales?.colorEstrellas || '#F8AD22' }}>
-                    {[...Array(t.estrellas || 5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current shrink-0" />
-                    ))}
-                  </div>
-
-                  {/* Cuerpo del Testimonio con tipografía fina y legible */}
-                  <p className="text-slate-200 text-xs sm:text-sm font-normal leading-relaxed mb-5">
-                    "{t.text}"
-                  </p>
-                </div>
-
-                {/* Pie de Autor Verificado */}
-                <div className="pt-3.5 border-t border-white/10 flex items-center gap-3">
-                  {t.fotoUrl ? (
-                    <img src={t.fotoUrl} alt={t.name} className="w-9 h-9 rounded-xl object-cover shrink-0 border border-white/20" />
-                  ) : (
-                    <div className={`w-9 h-9 rounded-xl flex items-center justify-center font-bold text-xs shrink-0 border ${t.avatarBg || 'bg-[#12A1A4]/20 text-[#57d6f3] border-[#12A1A4]/40'}`}>
-                      {t.initials}
-                    </div>
-                  )}
-                  <div className="min-w-0">
-                    <div className="font-semibold text-xs sm:text-sm text-white flex items-center gap-1">
-                      <span className="truncate">{t.name}</span>
-                      <span className="material-symbols-outlined text-xs text-emerald-400 shrink-0" title="Familia Verificada">verified</span>
-                    </div>
-                    <div className="text-[11px] text-slate-400 truncate font-normal">
-                      {t.role}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-        )}
-
-        {/* 6. FAQ ACCORDION SECTION */}
-        {isSectionActive('FAQ') && (
-        <section id="faq" className="px-4 sm:px-6 md:px-8 max-w-5xl mx-auto py-20 md:py-24">
-          <div className="text-center mb-12 space-y-3">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#12A1A4]/15 text-[#57d6f3] border border-[#12A1A4]/30 text-xs font-semibold uppercase tracking-wider">
-              <span className="material-symbols-outlined text-sm">help</span>
-              <span>Resolución de Dudas Frecuentes</span>
-            </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
-              {homeFaqSection?.titulo || 'Preguntas Frecuentes'}
-            </h2>
-            <p className="text-slate-300 text-sm md:text-base max-w-xl mx-auto font-normal">
-              {homeFaqSection?.subtitulo || 'Respuestas directas sobre el respaldo legal, la metodología y el estudio en el hogar.'}
-            </p>
-          </div>
-
-          <div className="space-y-4">
-            {(dynamicFaqItems || DEFAULT_FAQ_ITEMS).map((item: any, idx: number) => (
-              <div 
-                key={idx}
-                className="bg-[#16325C] rounded-2xl overflow-hidden transition-all duration-300 shadow-sm hover:border-white/20"
-                style={faqBorderStyles}
-              >
-                <details className="group">
-                  <summary className="font-bold text-white text-base md:text-lg p-5 md:p-6 cursor-pointer flex justify-between items-center outline-none transition-colors gap-4 select-none list-none hover:bg-white/5">
-                    <span className="text-left">{item.pregunta}</span>
-                    <span 
-                      className="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-xl shrink-0"
-                      style={{ color: homeFaqSection?.configuracion?.colorIcono || siteConfig.estilosGlobales?.colorAcentoFaq || '#57d6f3' }}
-                    >expand_more</span>
-                  </summary>
-                  <div className="px-6 pb-6 text-slate-200 text-sm md:text-base font-normal leading-relaxed border-t border-white/5 pt-4 whitespace-pre-line space-y-2">
-                    <p>{item.respuesta}</p>
-                  </div>
-                </details>
-              </div>
-            ))}
-          </div>
-        </section>
-        )}
-
-        {/* 7. SECCIÓN DE PLANES Y PRECIOS OFICIALES (OFERTAS DINÁMICAS) */}
-        <section id="planes" className="px-4 md:px-12 max-w-7xl mx-auto py-20 md:py-24 scroll-mt-24">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#12A1A4]/20 border border-[#12A1A4]/40 text-[#57d6f3] text-xs font-black uppercase tracking-wider mb-4">
-              <Sparkles className="w-4 h-4 text-[#57d6f3]" />
-              <span>Inversión Transparente · Sin Contratos Forzados</span>
-            </div>
-
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-4">
-              Planes Adaptados a Tu Familia
-            </h2>
-
-            <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-              Preparación integral para Exámenes Libres de 3° a 8° Básico con temario oficial MINEDUC, lecciones de 30 minutos y puente con cuaderno físico.
-            </p>
-          </div>
-
-          {(() => {
-            const monthlyPlan = pricingConfig.planes.find(p => p.id === 'monthly') || {
-              precioNormal: 29990,
-              precioOferta: 1000,
-              enOferta: true,
-              etiquetaOferta: 'Oferta Prueba $1.000 CLP'
-            };
-            const fullPlan = pricingConfig.planes.find(p => p.id === 'full') || {
-              precioNormal: 199900,
-              precioOferta: 99900,
-              enOferta: true,
-              etiquetaOferta: 'Oferta Lanzamiento 50% DCTO'
-            };
-            const monthlyEffective = monthlyPlan.enOferta ? monthlyPlan.precioOferta : monthlyPlan.precioNormal;
-            const fullEffective = fullPlan.enOferta ? fullPlan.precioOferta : fullPlan.precioNormal;
-
-            return (
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                {/* Tarjeta 1: Plan Mensual */}
-                <div className="bg-[#16325C] rounded-3xl p-8 border border-white/10 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:shadow-xl shadow-lg relative">
-                  {monthlyPlan.enOferta && (
-                    <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#57d6f3] text-[#0A192F] font-black text-xs px-4 py-0.5 rounded-full uppercase tracking-wider shadow-md">
-                      {monthlyPlan.etiquetaOferta || 'OFERTA ACTIVA'}
-                    </div>
-                  )}
-                  <div>
-                    <div className="text-xs font-bold uppercase tracking-wider text-[#57d6f3] mb-2">Flexibilidad Total</div>
-                    <h3 className="text-2xl font-bold text-white mb-2">Plan Mensual</h3>
-                    <p className="text-sm text-gray-300 mb-6">Ideal para avanzar mes a mes a tu propio ritmo con tranquilidad.</p>
-                    
-                    <div className="mb-1">
-                      {monthlyPlan.enOferta && (
-                        <span className="text-sm font-semibold text-white/50 line-through block">
-                          ${monthlyPlan.precioNormal.toLocaleString('es-CL')} CLP
-                        </span>
-                      )}
-                      <div className="text-4xl font-black text-white">
-                        ${monthlyEffective.toLocaleString('es-CL')} <span className="text-sm font-normal text-gray-300">/ mes</span>
+            {orderedHomeSections.map((sec) => {
+              switch (sec.tipoBloque) {
+                case 'HERO':
+                case 'HERO_SYSTEM':
+                  return renderHeroSection(sec);
+                case 'PILARES':
+                  return renderPilaresSection(sec);
+                case 'METODO':
+                  return renderMetodoSection(sec);
+                case 'TESTIMONIOS':
+                  return renderTestimoniosSection(sec);
+                case 'FAQ':
+                case 'ACORDEON':
+                  return renderFaqSection(sec);
+                case 'PRICING':
+                  return renderPricingSection(sec);
+                case 'JOURNAL':
+                  return (
+                    <JournalBlock
+                      key={sec.id}
+                      titulo={sec.titulo || 'Journal Pedagógico · Últimas Novedades'}
+                      subtitulo={sec.subtitulo || 'Guías para padres, novedades de fechas MINEDUC y artículos del método de estudio.'}
+                      configuracion={sec.configuracion}
+                      onNavigateToPricing={goToPricing}
+                      onSelectArticle={(article) => {
+                        setSelectedJournalArticle(article);
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }}
+                    />
+                  );
+                case 'EVENTOS':
+                  return (
+                    <EventosBlock
+                      key={sec.id}
+                      titulo={sec.titulo || 'Calendario Oficial y Fechas Clave MINEDUC'}
+                      subtitulo={sec.subtitulo || 'Convocatorias de inscripción, períodos de exámenes libres y talleres de acompañamiento pedagógico.'}
+                      configuracion={sec.configuracion}
+                    />
+                  );
+                case 'SIMULADOR':
+                  return (
+                    <section key={sec.id} id="simulador" className="px-4 md:px-12 max-w-7xl mx-auto py-16 md:py-20">
+                      <div className="bg-gradient-to-br from-[#10223D] to-[#16325C] border border-[#18AFCB]/40 rounded-3xl p-8 md:p-12 text-center relative overflow-hidden shadow-2xl">
+                        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#18AFCB]/20 text-[#57d6f3] border border-[#18AFCB]/40 text-xs font-bold uppercase tracking-wider mb-4">
+                          <Sparkles className="w-4 h-4 text-[#57d6f3]" />
+                          <span>{sec.configuracion?.badgeText || 'Simulador Formal MINEDUC'}</span>
+                        </div>
+                        <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-4">
+                          {sec.titulo || 'Simulador de Exámenes Libres MINEDUC'}
+                        </h2>
+                        <p className="text-slate-300 text-sm md:text-base max-w-2xl mx-auto mb-8 font-normal leading-relaxed">
+                          {sec.subtitulo || 'Instrumentos formales con 4 alternativas, estándares psicométricos y retroalimentación formativa inmediata para garantizar que tu hijo rinda con tranquilidad.'}
+                        </p>
+                        <div className="flex flex-wrap items-center justify-center gap-4">
+                          <button
+                            type="button"
+                            onClick={goToPricing}
+                            className="bg-[#EE751C] hover:bg-[#D66512] text-white px-8 py-3.5 rounded-2xl font-bold text-sm md:text-base shadow-xl hover:scale-105 transition-all flex items-center gap-2 cursor-pointer"
+                          >
+                            <span>Probar Simulador en Prueba 7 Días</span>
+                            <ArrowRight className="w-5 h-5" />
+                          </button>
+                        </div>
                       </div>
+                    </section>
+                  );
+                default:
+                  return (
+                    <div key={sec.id} className="max-w-7xl mx-auto px-4 md:px-12 py-8">
+                      <CmsBlockRenderer
+                        section={sec}
+                        onNavigateToPricing={goToPricing}
+                        onOpenContactModal={() => setShowContactModal(true)}
+                        onSelectJournalArticle={(article) => {
+                          setSelectedJournalArticle(article);
+                          window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }}
+                      />
                     </div>
-                    <div className="text-xs text-gray-400 mb-6">Renovación mensual cancelable cuando quieras sin penalización</div>
-
-                    <ul className="space-y-3.5 text-sm text-gray-200 border-t border-white/10 pt-6">
-                      <li className="flex items-center gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-[#12A1A4] shrink-0" />
-                        <span>Acceso a las 5 asignaturas oficiales</span>
-                      </li>
-                      <li className="flex items-center gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-[#12A1A4] shrink-0" />
-                        <span>Lecciones de 30 min y cuaderno guiado</span>
-                      </li>
-                      <li className="flex items-center gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-[#12A1A4] shrink-0" />
-                        <span>Panel de seguimiento del apoderado</span>
-                      </li>
-                      <li className="flex items-center gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-[#12A1A4] shrink-0" />
-                        <span>Diálogo socrático para guiar sin ser profesor</span>
-                      </li>
-                      <li className="flex items-center gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-[#12A1A4] shrink-0" />
-                        <span>Soporte pedagógico vía WhatsApp y correo</span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <button
-                    type="button"
-                    onClick={() => handleSelectPlan('monthly')}
-                    className="w-full mt-8 py-4 px-4 rounded-2xl font-bold text-sm bg-white/10 hover:bg-white/20 text-white border border-white/20 transition-all flex items-center justify-center gap-2 shadow-md hover:scale-[1.02] cursor-pointer"
-                  >
-                    <span>{monthlyPlan.enOferta ? `Elegir Plan Mensual ($${monthlyEffective.toLocaleString('es-CL')})` : 'Seleccionar Plan Mensual'}</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-
-                {/* Tarjeta 2: Anual Exámenes Libres (Destacado) */}
-                <div className="bg-[#10223D] rounded-3xl p-8 border-2 border-[#F8AD22] shadow-2xl relative flex flex-col justify-between transition-all duration-300 hover:scale-[1.03]">
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#F8AD22] text-[#0A192F] font-black text-xs px-5 py-1 rounded-full uppercase tracking-wider shadow-md">
-                    {fullPlan.enOferta ? (fullPlan.etiquetaOferta || 'OFERTA EXCLUSIVA') : 'Más Recomendado'}
-                  </div>
-
-                  <div>
-                    <div className="text-xs font-bold uppercase tracking-wider text-[#F8AD22] mb-2">Preparación Integral</div>
-                    <h3 className="text-2xl font-bold text-white mb-2">Anual Exámenes Libres</h3>
-                    <p className="text-sm text-gray-300 mb-6">Acompañamiento completo durante todo el año escolar oficial.</p>
-                    
-                    <div className="mb-1">
-                      {fullPlan.enOferta && (
-                        <span className="text-sm font-semibold text-white/50 line-through block">
-                          ${fullPlan.precioNormal.toLocaleString('es-CL')} CLP
-                        </span>
-                      )}
-                      <div className="text-4xl font-black text-white">
-                        ${fullEffective.toLocaleString('es-CL')} <span className="text-sm font-normal text-gray-300">/ año</span>
-                      </div>
-                    </div>
-                    <div className="text-xs text-[#F8AD22] font-semibold mb-6">Ahorras más del 44% en comparación al pago mensual</div>
-
-                    <ul className="space-y-3.5 text-sm text-gray-200 border-t border-white/10 pt-6">
-                      <li className="flex items-center gap-2.5 font-semibold text-white">
-                        <CheckCircle2 className="w-4 h-4 text-[#F8AD22] shrink-0" />
-                        <span>Todo lo incluido en el Plan Mensual</span>
-                      </li>
-                      <li className="flex items-center gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-[#F8AD22] shrink-0" />
-                        <span>Simulacros de examen formal tipo MINEDUC</span>
-                      </li>
-                      <li className="flex items-center gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-[#F8AD22] shrink-0" />
-                        <span>Cuadernillos imprimibles de ejercitación física</span>
-                      </li>
-                      <li className="flex items-center gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-[#F8AD22] shrink-0" />
-                        <span>Garantía de actualización curricular 2026</span>
-                      </li>
-                      <li className="flex items-center gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-[#F8AD22] shrink-0" />
-                        <span>Informes periódicos de avance para apoderados</span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <button
-                    type="button"
-                    onClick={() => handleSelectPlan('full')}
-                    className="w-full mt-8 py-4 px-4 rounded-2xl font-bold text-sm bg-[#EE751C] hover:bg-[#D66512] text-white shadow-xl transition-all flex items-center justify-center gap-2 hover:scale-[1.02] cursor-pointer"
-                  >
-                    <span>Comenzar Plan Anual</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-
-                {/* Tarjeta 3: Prueba 7 Días */}
-                <div className="bg-[#16325C] rounded-3xl p-8 border border-white/10 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] hover:shadow-xl shadow-lg">
-                  <div>
-                    <div className="text-xs font-bold uppercase tracking-wider text-[#12A1A4] mb-2">Sin Compromiso</div>
-                    <h3 className="text-2xl font-bold text-white mb-2">Prueba 7 Días</h3>
-                    <p className="text-sm text-gray-300 mb-6">Comprueba cómo tu hijo aprende con autonomía y tranquilidad.</p>
-                    
-                    <div className="text-4xl font-black text-white mb-1">
-                      $0 <span className="text-sm font-normal text-gray-300">/ 7 días</span>
-                    </div>
-                    <div className="text-xs text-gray-400 mb-6">Sin tarjeta de crédito ni cobros automáticos</div>
-
-                    <ul className="space-y-3.5 text-sm text-gray-200 border-t border-white/10 pt-6">
-                      <li className="flex items-center gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-[#12A1A4] shrink-0" />
-                        <span>Acceso a 3 lecciones modelo completas</span>
-                      </li>
-                      <li className="flex items-center gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-[#12A1A4] shrink-0" />
-                        <span>Vista dual sincronizada (estudiante y apoderado)</span>
-                      </li>
-                      <li className="flex items-center gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-[#12A1A4] shrink-0" />
-                        <span>Ejercicios prácticos en cuaderno físico</span>
-                      </li>
-                      <li className="flex items-center gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-[#12A1A4] shrink-0" />
-                        <span>Sin cobros posteriores sin tu autorización</span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <button
-                    type="button"
-                    onClick={() => handleSelectPlan('trial')}
-                    className="w-full mt-8 py-4 px-4 rounded-2xl font-bold text-sm bg-white/10 hover:bg-white/20 text-white border border-white/20 transition-all flex items-center justify-center gap-2 shadow-md hover:scale-[1.02] cursor-pointer"
-                  >
-                    <span>Probar Gratis 7 Días</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-            );
-          })()}
-
-          {/* Banner de detalle hacia /planes */}
-          <div className="bg-[#16325C]/80 border border-[#abc7ff]/20 rounded-3xl p-8 md:p-10 text-center relative overflow-hidden transition-all duration-300 shadow-xl">
-            <h4 className="text-xl md:text-2xl font-bold text-white mb-3">
-              ¿Quieres revisar la comparativa detallada de asignaturas y garantías pedagógicas?
-            </h4>
-            <p className="text-gray-300 max-w-2xl mx-auto mb-6 text-sm md:text-base">
-              Conoce en detalle el desglose de cobertura de los 5 temarios oficiales MINEDUC y las preguntas frecuentes para apoderados.
-            </p>
-            <div className="flex justify-center">
-              <button 
-                type="button"
-                onClick={() => {
-                  setViewMode('pricing');
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
-                className="bg-[#EE751C] hover:bg-[#D66512] text-white px-8 py-3.5 rounded-2xl font-bold text-sm md:text-base shadow-lg hover:scale-105 transition-all flex items-center gap-2 cursor-pointer"
-              >
-                <span>Ver Comparativa Completa de Asignaturas</span>
-                <ArrowRight className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-        </section>
-
-        {/* JOURNAL / BLOG PEDAGÓGICO EN INICIO */}
-        {isSectionActive('JOURNAL') && (
-          <JournalBlock
-            titulo={homePage?.secciones.find((s) => s.tipoBloque === 'JOURNAL')?.titulo || 'Journal Pedagógico · Últimas Novedades'}
-            subtitulo={homePage?.secciones.find((s) => s.tipoBloque === 'JOURNAL')?.subtitulo || 'Guías para padres, novedades de fechas MINEDUC y artículos del método de estudio.'}
-            configuracion={homePage?.secciones.find((s) => s.tipoBloque === 'JOURNAL')?.configuracion}
-            onNavigateToPricing={goToPricing}
-            onSelectArticle={(article) => {
-              setSelectedJournalArticle(article);
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-          />
-        )}
-
-        {/* EVENTOS Y CALENDARIO OFICIAL MINEDUC EN INICIO */}
-        {isSectionActive('EVENTOS') && (
-          <EventosBlock
-            titulo={homePage?.secciones.find((s) => s.tipoBloque === 'EVENTOS')?.titulo || 'Calendario Oficial y Fechas Clave MINEDUC'}
-            subtitulo={homePage?.secciones.find((s) => s.tipoBloque === 'EVENTOS')?.subtitulo || 'Convocatorias de inscripción, períodos de exámenes libres y talleres de acompañamiento pedagógico.'}
-            configuracion={homePage?.secciones.find((s) => s.tipoBloque === 'EVENTOS')?.configuracion}
-          />
-        )}
-
-        {/* Secciones adicionales personalizadas añadidas a la página de inicio desde el constructor CMS */}
-        {homePage?.secciones
-          .filter(
-            (s) =>
-              s.activo &&
-              !['CINTA_NOTICIAS', 'HERO', 'METODO', 'SIMULADOR', 'PRICING', 'TESTIMONIOS', 'FAQ', 'JOURNAL', 'EVENTOS'].includes(s.tipoBloque)
-          )
-          .map((sec) => (
-            <div key={sec.id} className="max-w-7xl mx-auto px-4 md:px-12 py-8">
-              <CmsBlockRenderer
-                section={sec}
-                onNavigateToPricing={goToPricing}
-                onOpenContactModal={() => setShowContactModal(true)}
-                onSelectJournalArticle={(article) => {
-                  setSelectedJournalArticle(article);
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
-              />
-            </div>
-          ))}
+                  );
+              }
+            })}
           </>
         ) : (
           <div 
@@ -1041,7 +1066,7 @@ export const LandingPage: React.FC = () => {
             }}
           >
             {/* Secciones de la Página Actual (Renderizador Universal de Bloques Limpio) */}
-            {currentPage && currentPage.secciones.filter((s) => s.activo && s.tipoBloque !== 'CINTA_NOTICIAS').map((sec) => (
+            {currentPage && [...currentPage.secciones].filter((s) => s.activo && s.tipoBloque !== 'CINTA_NOTICIAS').sort((a, b) => (a.orden ?? 0) - (b.orden ?? 0)).map((sec) => (
               <div
                 key={sec.id}
                 className={
