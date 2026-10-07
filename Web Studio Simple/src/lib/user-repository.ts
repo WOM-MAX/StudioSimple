@@ -68,56 +68,64 @@ export function initializeUsersRegistry(): ParentUser[] {
  * Carga de forma asíncrona la lista centralizada de familias desde Neon DB / API backend
  * y actualiza la caché local suprimiendo semillas demo y preservando familias locales.
  */
-export async function fetchRegisteredUsersFromBackend(): Promise<ParentUser[]> {
+export async function fetchRegisteredUsersFromBackend(retryCount = 1): Promise<ParentUser[]> {
   if (typeof window === 'undefined' || typeof fetch !== 'function') {
     return getAllRegisteredUsers();
   }
 
-  try {
-    const res = await fetch('/api/admin/families');
-    if (res.ok) {
-      const data = await res.json();
-      if (data && data.success && Array.isArray(data.families)) {
-        // 1. Filtrar cualquier semilla que venga del backend
-        const cleanBackendFamilies: ParentUser[] = data.families.filter((f: ParentUser) => !isSeedDemoUser(f));
+  for (let attempt = 0; attempt <= retryCount; attempt++) {
+    try {
+      const res = await fetch('/api/admin/families');
+      if (res.ok) {
+        const data = await res.json();
+        if (data && data.success && Array.isArray(data.families)) {
+          // 1. Filtrar cualquier semilla que venga del backend
+          const cleanBackendFamilies: ParentUser[] = data.families.filter((f: ParentUser) => !isSeedDemoUser(f));
 
-        // 2. Obtener usuarios locales limpios
-        const currentLocal = getAllRegisteredUsers().filter((l) => !isSeedDemoUser(l));
+          // Si obtuvimos familias o si agotamos reintentos
+          if (cleanBackendFamilies.length > 0 || attempt === retryCount) {
+            // 2. Obtener usuarios locales limpios
+            const currentLocal = getAllRegisteredUsers().filter((l) => !isSeedDemoUser(l));
 
-        // Si el backend viene con datos válidos o si ambos están vacíos
-        const mergedMap = new Map<string, ParentUser>();
+            const mergedMap = new Map<string, ParentUser>();
 
-        cleanBackendFamilies.forEach((bUser) => {
-          if (bUser.email) {
-            mergedMap.set(bUser.email.toLowerCase().trim(), bUser);
+            cleanBackendFamilies.forEach((bUser) => {
+              if (bUser.email) {
+                mergedMap.set(bUser.email.toLowerCase().trim(), bUser);
+              }
+            });
+
+            // Asegurar que las familias locales reales no registradas aún en backend se preserven y sincronicen
+            currentLocal.forEach((localUser) => {
+              const key = localUser.email ? localUser.email.toLowerCase().trim() : '';
+              if (key && !mergedMap.has(key)) {
+                mergedMap.set(key, localUser);
+                syncUserToNeon(localUser);
+              }
+            });
+
+            const mergedFamilies = Array.from(mergedMap.values());
+            cachedUsers = mergedFamilies;
+            isInitialized = true;
+
+            try {
+              localStorage.setItem(LOCAL_STORAGE_USERS_KEY, JSON.stringify(mergedFamilies));
+              localStorage.setItem(LOCAL_STORAGE_SYNCED_KEY, 'true');
+            } catch (e) {
+              console.warn('[UserRepository] Error al guardar en localStorage:', e);
+            }
+
+            return mergedFamilies;
           }
-        });
-
-        // Asegurar que las familias locales reales no registradas aún en backend se preserven y sincronicen
-        currentLocal.forEach((localUser) => {
-          const key = localUser.email ? localUser.email.toLowerCase().trim() : '';
-          if (key && !mergedMap.has(key)) {
-            mergedMap.set(key, localUser);
-            syncUserToNeon(localUser);
-          }
-        });
-
-        const mergedFamilies = Array.from(mergedMap.values());
-        cachedUsers = mergedFamilies;
-        isInitialized = true;
-
-        try {
-          localStorage.setItem(LOCAL_STORAGE_USERS_KEY, JSON.stringify(mergedFamilies));
-          localStorage.setItem(LOCAL_STORAGE_SYNCED_KEY, 'true');
-        } catch (e) {
-          console.warn('[UserRepository] Error al guardar en localStorage:', e);
         }
-
-        return mergedFamilies;
       }
+    } catch (err) {
+      console.warn(`[UserRepository] Intento ${attempt + 1} de conexión a Neon DB:`, err);
     }
-  } catch (err) {
-    console.warn('[UserRepository] No se pudo conectar al endpoint /api/admin/families:', err);
+
+    if (attempt < retryCount) {
+      await new Promise((r) => setTimeout(r, 1200));
+    }
   }
 
   return getAllRegisteredUsers().filter((u) => !isSeedDemoUser(u));

@@ -668,9 +668,13 @@ const server = http.createServer(async (req, res) => {
           const patch = body.session || {};
           const clientId = (body.clientId || '').trim();
           const role = (body.role || 'unknown').trim();
+          const isReset = Boolean(
+            body.isReset ||
+            (patch && patch.stage === 'cover' && patch.attempt === 0 && (!patch.studentTextAnswers || Object.keys(patch.studentTextAnswers).length === 0))
+          );
 
           let room = activeClassrooms.get(roomCode);
-          if (!room) {
+          if (!room || isReset) {
             room = { session: patch, lastUpdated: Date.now() };
             activeClassrooms.set(roomCode, room);
           } else {
@@ -689,6 +693,7 @@ const server = http.createServer(async (req, res) => {
               type: 'sync',
               roomCode,
               session: room.session,
+              isReset,
               senderClientId: clientId,
               senderRole: role,
               activeClients: activeCount,
@@ -712,6 +717,7 @@ const server = http.createServer(async (req, res) => {
             success: true,
             roomCode,
             activeClients: activeCount,
+            isReset,
             timestamp: Date.now()
           }));
         } catch (err) {

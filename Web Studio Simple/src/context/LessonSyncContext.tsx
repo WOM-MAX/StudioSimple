@@ -159,7 +159,11 @@ export const LessonSyncProvider: React.FC<{
 
       channel.onmessage = (event) => {
         if (event.data && typeof event.data === 'object') {
-          setSessionState((prev) => ({ ...prev, ...event.data }));
+          if (event.data.isReset) {
+            setSessionState({ ...INITIAL_LESSON_SESSION, ...event.data });
+          } else {
+            setSessionState((prev) => ({ ...prev, ...event.data }));
+          }
         }
       };
 
@@ -174,7 +178,7 @@ export const LessonSyncProvider: React.FC<{
   // 2. Transporte Remoto: Publicación HTTP hacia in-memory relay con debounce inteligente
   const debouncePostRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const postSyncToServer = useCallback((stateToSync: LessonSessionState, immediate: boolean = false) => {
+  const postSyncToServer = useCallback((stateToSync: LessonSessionState, immediate: boolean = false, isReset: boolean = false) => {
     if (typeof fetch !== 'function') return;
 
     const executePost = () => {
@@ -185,7 +189,8 @@ export const LessonSyncProvider: React.FC<{
           roomCode: effectiveRoomCode,
           session: stateToSync,
           clientId: clientIdRef.current,
-          role: currentRole
+          role: currentRole,
+          isReset
         })
       })
         .then((res) => {
@@ -240,6 +245,13 @@ export const LessonSyncProvider: React.FC<{
                 try {
                   localStorage.setItem(STORAGE_KEY, JSON.stringify(incoming));
                 } catch {}
+                const isReset = Boolean(
+                  json.isReset ||
+                  (incoming.stage === 'cover' && incoming.attempt === 0 && (!incoming.studentTextAnswers || Object.keys(incoming.studentTextAnswers).length === 0))
+                );
+                if (isReset) {
+                  return { ...INITIAL_LESSON_SESSION, ...incoming };
+                }
                 return { ...prev, ...incoming };
               }
               return prev;
@@ -277,6 +289,9 @@ export const LessonSyncProvider: React.FC<{
                   try {
                     localStorage.setItem(STORAGE_KEY, JSON.stringify(incoming));
                   } catch {}
+                  if (data.isReset) {
+                    return { ...INITIAL_LESSON_SESSION, ...incoming };
+                  }
                   return { ...prev, ...incoming };
                 }
                 return prev;
@@ -355,11 +370,11 @@ export const LessonSyncProvider: React.FC<{
       setSessionState(cleanSession);
       try {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(cleanSession));
-        channelRef.current?.postMessage(cleanSession);
+        channelRef.current?.postMessage({ ...cleanSession, isReset: true });
       } catch (e) {
         console.error('Error resetting session for new lesson:', e);
       }
-      postSyncToServer(cleanSession, true);
+      postSyncToServer(cleanSession, true, true);
     }
   }, [initialLesson.metadata.oaCode, initialLesson.metadata.lessonNumber, session.activeOa, session.activeLessonNum, postSyncToServer]);
 
@@ -383,17 +398,18 @@ export const LessonSyncProvider: React.FC<{
     const cleanSession: LessonSessionState = {
       ...INITIAL_LESSON_SESSION,
       activeOa: initialLesson.metadata.oaCode,
-      activeLessonNum: initialLesson.metadata.lessonNumber
+      activeLessonNum: initialLesson.metadata.lessonNumber,
+      studentConnected: peerRoleConnected
     };
     setSessionState(cleanSession);
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(cleanSession));
-      channelRef.current?.postMessage(cleanSession);
+      channelRef.current?.postMessage({ ...cleanSession, isReset: true });
     } catch (e) {
       console.error('Error resetting session:', e);
     }
-    postSyncToServer(cleanSession, true);
-  }, [initialLesson.metadata.oaCode, initialLesson.metadata.lessonNumber, postSyncToServer]);
+    postSyncToServer(cleanSession, true, true);
+  }, [initialLesson.metadata.oaCode, initialLesson.metadata.lessonNumber, peerRoleConnected, postSyncToServer]);
 
   const setStage = useCallback((stage: LessonStage) => {
     updateSession({ stage, feedback: null });

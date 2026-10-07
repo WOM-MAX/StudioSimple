@@ -365,6 +365,9 @@ export const StudentDashboard: React.FC = () => {
                         <button
                           type="button"
                           onClick={() => {
+                            try {
+                              localStorage.removeItem('estudiosimple_lesson_session_v1');
+                            } catch {}
                             if (injectedLesson) {
                               setActiveSynchronizedLesson(injectedLesson);
                             } else {

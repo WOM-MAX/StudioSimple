@@ -175,7 +175,7 @@ const AdultStudentAnswerAndEvaluationBox: React.FC<AdultStudentAnswerAndEvaluati
 };
 
 export const AdultLessonView: React.FC = () => {
-  const { session, lessonData, updateSession, setStage, setFeedback } = useLessonSync();
+  const { session, lessonData, updateSession, setStage, setFeedback, resetSession } = useLessonSync();
   const { setViewMode, authSession, markLessonCompleted } = useApp();
 
   useEffect(() => {
@@ -1486,7 +1486,7 @@ export const AdultLessonView: React.FC = () => {
                 </button>
                 <button
                   type="button"
-                  onClick={() => setStage('cover')}
+                  onClick={() => resetSession()}
                   className="bg-white hover:bg-slate-50 text-[#1c3257] border border-slate-300 font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-sm transition-all cursor-pointer"
                 >
                   <span>Repetir esta clase</span>

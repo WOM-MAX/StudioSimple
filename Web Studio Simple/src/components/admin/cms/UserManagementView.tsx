@@ -949,19 +949,19 @@ export const UserManagementView: React.FC = () => {
             <div className="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
               <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">Familias Activas</span>
               <span className="text-2xl font-black text-emerald-600 mt-1 block">
-                {users.filter(u => u.status === 'active').length}
+                {isLoadingBackendFamilies && users.length === 0 ? '...' : users.filter(u => u.status === 'active').length}
               </span>
             </div>
             <div className="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
               <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">En Período de Prueba</span>
               <span className="text-2xl font-black text-[#F8AD22] mt-1 block">
-                {users.filter(u => u.status === 'trial').length}
+                {isLoadingBackendFamilies && users.length === 0 ? '...' : users.filter(u => u.status === 'trial').length}
               </span>
             </div>
             <div className="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
               <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">Cuentas Suspendidas</span>
               <span className="text-2xl font-black text-rose-600 mt-1 block">
-                {users.filter(u => u.status === 'suspended').length}
+                {isLoadingBackendFamilies && users.length === 0 ? '...' : users.filter(u => u.status === 'suspended').length}
               </span>
             </div>
           </div>
@@ -1028,7 +1028,16 @@ export const UserManagementView: React.FC = () => {
                   {filteredUsers.length === 0 ? (
                     <tr>
                       <td colSpan={6} className="py-12 text-center text-slate-400 font-medium">
-                        No se encontraron familias registradas con los filtros seleccionados.
+                        {isLoadingBackendFamilies ? (
+                          <div className="flex flex-col items-center justify-center gap-2">
+                            <RefreshCw className="w-5 h-5 text-[#12A1A4] animate-spin" />
+                            <span className="text-xs font-semibold text-slate-600">
+                              Conectando con Neon PostgreSQL y sincronizando cuentas familiares...
+                            </span>
+                          </div>
+                        ) : (
+                          'No se encontraron familias registradas con los filtros seleccionados.'
+                        )}
                       </td>
                     </tr>
                   ) : (

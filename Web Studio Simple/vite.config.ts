@@ -709,9 +709,13 @@ export default defineConfig({
                   const patch = parsed.session || {};
                   const clientId = (parsed.clientId || '').trim();
                   const role = (parsed.role || 'unknown').trim();
+                  const isReset = Boolean(
+                    parsed.isReset ||
+                    (patch && patch.stage === 'cover' && patch.attempt === 0 && (!patch.studentTextAnswers || Object.keys(patch.studentTextAnswers).length === 0))
+                  );
 
                   let room = activeClassroomsDev.get(rCode);
-                  if (!room) {
+                  if (!room || isReset) {
                     room = { session: patch, lastUpdated: Date.now() };
                     activeClassroomsDev.set(rCode, room);
                   } else {
@@ -730,6 +734,7 @@ export default defineConfig({
                       type: 'sync',
                       roomCode: rCode,
                       session: room.session,
+                      isReset,
                       senderClientId: clientId,
                       senderRole: role,
                       activeClients: activeCount,
@@ -753,6 +758,7 @@ export default defineConfig({
                     success: true,
                     roomCode: rCode,
                     activeClients: activeCount,
+                    isReset,
                     timestamp: Date.now()
                   }));
                 } catch (err: any) {

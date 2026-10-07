@@ -160,7 +160,7 @@ const StudentAnswerSection: React.FC<StudentAnswerSectionProps> = ({
 };
 
 export const StudentLessonView: React.FC = () => {
-  const { session, lessonData, setStage, peerRoleConnected, submitStudentAnswer } = useLessonSync();
+  const { session, lessonData, setStage, peerRoleConnected, submitStudentAnswer, resetSession } = useLessonSync();
   const { setViewMode, setActiveSynchronizedLesson, markLessonCompleted, authSession } = useApp();
   const theme = getSubjectTheme(lessonData.metadata.subject);
   const audioRef = useRef<HTMLAudioElement>(null);
@@ -286,17 +286,21 @@ export const StudentLessonView: React.FC = () => {
                   <span className={`relative inline-flex rounded-full h-2.5 w-2.5 ${peerRoleConnected ? 'bg-emerald-500' : 'bg-amber-500'}`}></span>
                 </span>
                 <span>
-                  {peerRoleConnected ? '🟢 Mentor en línea · Sincronizado' : '🟡 Conectando con Mentor...'}
+                  {peerRoleConnected
+                    ? (session.stage === 'prep' ? '🟢 Mentor revisando preparación · ¡Casi listos!' : '🟢 Mentor en línea · Sincronizado')
+                    : '🟡 Conectando con Mentor...'}
                 </span>
               </div>
 
               <h1 className="text-2xl font-black text-[#1C3257] mb-2 tracking-tight">
-                La clase comenzará pronto
+                {session.stage === 'prep' ? 'Preparando la sesión de hoy' : 'La clase comenzará pronto'}
               </h1>
               <p className="text-xs text-slate-500 leading-relaxed mb-6">
-                {peerRoleConnected
-                  ? 'Tu mentor está preparando la sesión de hoy. Cuando comience, tu pantalla avanzará automáticamente.'
-                  : 'Esperando que tu mentor inicie la clase desde su computador. Tu pantalla se actualizará automáticamente.'}
+                {session.stage === 'prep'
+                  ? 'Tu mentor ya inició la clase y está revisando los objetivos pedagógicos. En breve dará el pase y tu pantalla avanzará automáticamente.'
+                  : (peerRoleConnected
+                    ? 'Tu mentor está conectado en su computador. Cuando inicie la clase, tu pantalla avanzará automáticamente.'
+                    : 'Esperando que tu mentor inicie la clase desde su computador. Tu pantalla se actualizará automáticamente.')}
               </p>
 
               <div className="pt-4 border-t border-slate-100 text-left bg-slate-50/70 -mx-8 -mb-8 p-6 rounded-b-3xl">
@@ -976,7 +980,7 @@ export const StudentLessonView: React.FC = () => {
                   </button>
                   <button
                     type="button"
-                    onClick={() => setStage('cover')}
+                    onClick={() => resetSession()}
                     className="w-full sm:w-auto bg-white hover:bg-slate-50 text-[#1C3257] border border-slate-300 font-bold px-5 py-2.5 rounded-xl flex items-center justify-center gap-2 text-xs shadow-sm transition-all cursor-pointer"
                   >
                     <span>Repetir esta clase</span>
