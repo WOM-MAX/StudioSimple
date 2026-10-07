@@ -35,8 +35,89 @@ export const ConfiguracionGeneralView: React.FC = () => {
   const [config, setConfig] = useState<SiteConfig>(() => loadSiteConfig());
   const [savedSuccess, setSavedSuccess] = useState(false);
   const [cintaAutoSaveStatus, setCintaAutoSaveStatus] = useState<string | null>(null);
-  const [activeTab, setActiveTab] = useState<'header' | 'cinta' | 'footer' | 'contacto' | 'cloudinary' | 'colores'>('header');
+  const [activeTab, setActiveTab] = useState<'header' | 'cinta' | 'footer' | 'contacto' | 'cloudinary' | 'colores' | 'correo'>('header');
   const [testResult, setTestResult] = useState<{ status: 'idle' | 'testing' | 'success' | 'error'; message?: string }>({ status: 'idle' });
+
+  // Configuración de Correo Real en Neon DB
+  const [mailProvider, setMailProvider] = useState<'resend' | 'smtp'>('resend');
+  const [mailConfig, setMailConfig] = useState({
+    resendApiKey: '',
+    smtpHost: '',
+    smtpPort: '587',
+    smtpUser: '',
+    smtpPass: '',
+    emailFrom: 'EstudioSimple <bienvenida@estudiosimple.cl>'
+  });
+  const [testEmailTarget, setTestEmailTarget] = useState('walterorellanamedi@gmail.com');
+  const [mailTestStatus, setMailTestStatus] = useState<{ status: 'idle' | 'testing' | 'success' | 'error'; message?: string }>({ status: 'idle' });
+  const [mailSaveSuccess, setMailSaveSuccess] = useState(false);
+
+  useEffect(() => {
+    if (typeof fetch !== 'undefined') {
+      fetch('/api/mail/config')
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.success && data.config) {
+            setMailConfig((prev) => ({
+              ...prev,
+              ...data.config,
+              resendApiKey: data.config.resendApiKey || prev.resendApiKey
+            }));
+            if (data.config.smtpHost && !data.config.resendApiKey) {
+              setMailProvider('smtp');
+            }
+          }
+        })
+        .catch(() => {});
+    }
+  }, []);
+
+  const handleSaveMailConfig = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setMailSaveSuccess(false);
+    try {
+      const res = await fetch('/api/mail/config', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(mailConfig)
+      });
+      const data = await res.json();
+      if (data.success) {
+        setMailSaveSuccess(true);
+        setTimeout(() => setMailSaveSuccess(false), 3500);
+      }
+    } catch (err: any) {
+      alert('Error guardando configuración de correo: ' + err.message);
+    }
+  };
+
+  const handleSendTestMail = async () => {
+    setMailTestStatus({ status: 'testing', message: 'Despachando correo de prueba...' });
+    try {
+      const res = await fetch('/api/mail/test', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: testEmailTarget })
+      });
+      const data = await res.json();
+      if (data.dispatched) {
+        setMailTestStatus({
+          status: 'success',
+          message: `¡Correo enviado con éxito vía ${data.mode}! Revisa la bandeja de entrada de ${testEmailTarget}`
+        });
+      } else {
+        setMailTestStatus({
+          status: 'error',
+          message: data.message || `No fue posible despachar: proveedor en modo simulado. Verifica tu API Key o credenciales.`
+        });
+      }
+    } catch (err: any) {
+      setMailTestStatus({
+        status: 'error',
+        message: 'Error de conexión: ' + err.message
+      });
+    }
+  };
 
   useEffect(() => {
     const handleStorageChange = () => {
@@ -421,6 +502,19 @@ export const ConfiguracionGeneralView: React.FC = () => {
         >
           <Palette className="w-4 h-4" />
           <span>Colores de Elementos (Paleta)</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => setActiveTab('correo')}
+          className={`py-3 px-4 text-xs font-bold border-b-2 flex items-center gap-2 transition-all cursor-pointer ${
+            activeTab === 'correo'
+              ? 'border-[#12A1A4] text-[#12A1A4]'
+              : 'border-transparent text-slate-500 hover:text-slate-800'
+          }`}
+        >
+          <Mail className="w-4 h-4" />
+          <span>Servicio de Correo Real</span>
         </button>
       </div>
 
@@ -1544,6 +1638,232 @@ export const ConfiguracionGeneralView: React.FC = () => {
           </div>
         )}
 
+        {/* PESTAÑA 7: SERVICIO DE CORREO REAL */}
+        {activeTab === 'correo' && (
+          <div className="space-y-6">
+            <div className="bg-white rounded-2xl border border-slate-200/90 p-6 shadow-sm space-y-6">
+              <div className="border-b border-slate-100 pb-4">
+                <h2 className="text-base font-extrabold text-slate-800 flex items-center gap-2">
+                  <Mail className="w-5 h-5 text-[#12A1A4]" />
+                  <span>Configuración del Servicio de Correo en Neon PostgreSQL</span>
+                </h2>
+                <p className="text-xs text-slate-500 mt-1">
+                  Las credenciales se guardan de forma inmutable y cifrada en Neon DB (tabla <code className="text-[#12A1A4] font-mono">SystemSetting</code>). No se pierden con ningún reinicio de contenedor en Railway.
+                </p>
+              </div>
+
+              {/* Selector de Proveedor */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div
+                  onClick={() => setMailProvider('resend')}
+                  className={`p-4 rounded-xl border-2 cursor-pointer transition-all ${
+                    mailProvider === 'resend'
+                      ? 'border-[#12A1A4] bg-teal-50/50'
+                      : 'border-slate-200 hover:border-slate-300 bg-white'
+                  }`}
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-bold text-slate-800">Resend API (Recomendado)</span>
+                    <span className="text-[10px] bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full font-bold">100 gratis/día</span>
+                  </div>
+                  <p className="text-xs text-slate-500 mt-1">
+                    Entrega ultra rápida vía API REST. Solo requiere una clave tipo <code className="font-mono">re_...</code>
+                  </p>
+                </div>
+
+                <div
+                  onClick={() => setMailProvider('smtp')}
+                  className={`p-4 rounded-xl border-2 cursor-pointer transition-all ${
+                    mailProvider === 'smtp'
+                      ? 'border-[#12A1A4] bg-teal-50/50'
+                      : 'border-slate-200 hover:border-slate-300 bg-white'
+                  }`}
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-bold text-slate-800">SMTP Universal (Nodemailer)</span>
+                    <span className="text-[10px] bg-slate-100 text-slate-700 px-2 py-0.5 rounded-full font-bold">Google / cPanel</span>
+                  </div>
+                  <p className="text-xs text-slate-500 mt-1">
+                    Envía a través de cualquier servidor de correo corporativo o Gmail con clave de aplicación.
+                  </p>
+                </div>
+              </div>
+
+              {/* Formulario según Proveedor */}
+              {mailProvider === 'resend' ? (
+                <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/50 space-y-4">
+                  <div>
+                    <div className="flex items-center justify-between mb-1">
+                      <label className="text-xs font-bold text-slate-700">Resend API Key</label>
+                      <a
+                        href="https://resend.com/api-keys"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-[11px] text-[#12A1A4] hover:underline flex items-center gap-1 font-semibold"
+                      >
+                        <span>Obtener clave gratis en resend.com</span>
+                        <ExternalLink className="w-3 h-3" />
+                      </a>
+                    </div>
+                    <input
+                      type="password"
+                      value={mailConfig.resendApiKey}
+                      onChange={(e) => setMailConfig({ ...mailConfig, resendApiKey: e.target.value })}
+                      placeholder="re_123456789abcdef..."
+                      className="w-full text-xs bg-white border border-slate-300 rounded-xl px-3 py-2 font-mono text-slate-800 focus:ring-2 focus:ring-[#12A1A4] focus:outline-none"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1">Remitente (De / From)</label>
+                    <input
+                      type="text"
+                      value={mailConfig.emailFrom}
+                      onChange={(e) => setMailConfig({ ...mailConfig, emailFrom: e.target.value })}
+                      placeholder="EstudioSimple <bienvenida@estudiosimple.cl> o onboarding@resend.dev"
+                      className="w-full text-xs bg-white border border-slate-300 rounded-xl px-3 py-2 font-medium text-slate-800 focus:ring-2 focus:ring-[#12A1A4] focus:outline-none"
+                    />
+                    <p className="text-[11px] text-slate-400 mt-1">
+                      Para pruebas sin dominio configurado en Resend, puedes usar <code className="font-mono">Acme &lt;onboarding@resend.dev&gt;</code>.
+                    </p>
+                  </div>
+                </div>
+              ) : (
+                <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/50 space-y-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <div className="sm:col-span-2">
+                      <label className="block text-xs font-bold text-slate-700 mb-1">Servidor SMTP (Host)</label>
+                      <input
+                        type="text"
+                        value={mailConfig.smtpHost}
+                        onChange={(e) => setMailConfig({ ...mailConfig, smtpHost: e.target.value })}
+                        placeholder="smtp.gmail.com o mail.estudiosimple.cl"
+                        className="w-full text-xs bg-white border border-slate-300 rounded-xl px-3 py-2 font-mono text-slate-800 focus:ring-2 focus:ring-[#12A1A4] focus:outline-none"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 mb-1">Puerto</label>
+                      <input
+                        type="text"
+                        value={mailConfig.smtpPort}
+                        onChange={(e) => setMailConfig({ ...mailConfig, smtpPort: e.target.value })}
+                        placeholder="587 o 465"
+                        className="w-full text-xs bg-white border border-slate-300 rounded-xl px-3 py-2 font-mono text-slate-800 focus:ring-2 focus:ring-[#12A1A4] focus:outline-none"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 mb-1">Usuario / Correo</label>
+                      <input
+                        type="text"
+                        value={mailConfig.smtpUser}
+                        onChange={(e) => setMailConfig({ ...mailConfig, smtpUser: e.target.value })}
+                        placeholder="contacto@estudiosimple.cl"
+                        className="w-full text-xs bg-white border border-slate-300 rounded-xl px-3 py-2 font-medium text-slate-800 focus:ring-2 focus:ring-[#12A1A4] focus:outline-none"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 mb-1">Contraseña SMTP</label>
+                      <input
+                        type="password"
+                        value={mailConfig.smtpPass}
+                        onChange={(e) => setMailConfig({ ...mailConfig, smtpPass: e.target.value })}
+                        placeholder="••••••••••••••••"
+                        className="w-full text-xs bg-white border border-slate-300 rounded-xl px-3 py-2 font-mono text-slate-800 focus:ring-2 focus:ring-[#12A1A4] focus:outline-none"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1">Remitente (De / From)</label>
+                    <input
+                      type="text"
+                      value={mailConfig.emailFrom}
+                      onChange={(e) => setMailConfig({ ...mailConfig, emailFrom: e.target.value })}
+                      placeholder="EstudioSimple <contacto@estudiosimple.cl>"
+                      className="w-full text-xs bg-white border border-slate-300 rounded-xl px-3 py-2 font-medium text-slate-800 focus:ring-2 focus:ring-[#12A1A4] focus:outline-none"
+                    />
+                  </div>
+                </div>
+              )}
+
+              {/* Botón Guardar Credenciales */}
+              <div className="flex items-center justify-between pt-2">
+                <div>
+                  {mailSaveSuccess && (
+                    <span className="text-xs text-emerald-600 font-bold flex items-center gap-1.5 animate-pulse">
+                      <CheckCircle2 className="w-4 h-4" />
+                      <span>¡Configuración de correo guardada en Neon PostgreSQL!</span>
+                    </span>
+                  )}
+                </div>
+                <button
+                  type="button"
+                  onClick={handleSaveMailConfig}
+                  className="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold shadow flex items-center gap-2 cursor-pointer transition-all hover:scale-[1.02]"
+                >
+                  <Save className="w-4 h-4 text-[#12A1A4]" />
+                  <span>Guardar Credenciales en Neon DB</span>
+                </button>
+              </div>
+            </div>
+
+            {/* Módulo de Prueba de Envío en Vivo */}
+            <div className="bg-white rounded-2xl border border-slate-200/90 p-6 shadow-sm space-y-4">
+              <div className="border-b border-slate-100 pb-3">
+                <h3 className="text-sm font-black text-slate-800 flex items-center gap-2">
+                  <Sparkles className="w-4 h-4 text-[#EE751C]" />
+                  <span>Prueba de Despacho en Vivo (Test de Entrega Real)</span>
+                </h3>
+                <p className="text-xs text-slate-500 mt-0.5">
+                  Envía un correo de prueba oficial con el diseño HTML de bienvenida a cualquier dirección para verificar la entrega inmediata en tu bandeja de entrada.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row items-center gap-3">
+                <div className="w-full sm:flex-1">
+                  <input
+                    type="email"
+                    value={testEmailTarget}
+                    onChange={(e) => setTestEmailTarget(e.target.value)}
+                    placeholder="walterorellanamedi@gmail.com"
+                    className="w-full text-xs bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 font-medium text-slate-800 focus:ring-2 focus:ring-[#12A1A4] focus:outline-none"
+                  />
+                </div>
+                <button
+                  type="button"
+                  onClick={handleSendTestMail}
+                  disabled={mailTestStatus.status === 'testing'}
+                  className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-[#EE751C] hover:bg-[#d66515] disabled:opacity-50 text-white text-xs font-black shadow flex items-center justify-center gap-2 cursor-pointer transition-all hover:scale-[1.02]"
+                >
+                  <Mail className="w-4 h-4" />
+                  <span>{mailTestStatus.status === 'testing' ? 'Enviando...' : 'Enviar Correo de Prueba Ahora'}</span>
+                </button>
+              </div>
+
+              {mailTestStatus.status !== 'idle' && (
+                <div
+                  className={`p-4 rounded-xl border text-xs flex items-start gap-2.5 transition-all ${
+                    mailTestStatus.status === 'success'
+                      ? 'bg-emerald-50 border-emerald-200 text-emerald-800'
+                      : mailTestStatus.status === 'error'
+                      ? 'bg-red-50 border-red-200 text-red-800'
+                      : 'bg-amber-50 border-amber-200 text-amber-800'
+                  }`}
+                >
+                  {mailTestStatus.status === 'success' ? (
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                  ) : (
+                    <AlertCircle className="w-4 h-4 text-red-600 shrink-0 mt-0.5" />
+                  )}
+                  <span className="font-medium leading-relaxed">{mailTestStatus.message}</span>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
 
         {/* Botón Guardar Cambios */}
         <div className="flex justify-end pt-2">

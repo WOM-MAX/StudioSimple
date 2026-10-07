@@ -208,7 +208,7 @@ export function registerUserFromCheckout(params: {
   phone?: string;
   amount?: number;
   paymentId?: string;
-}): { user: ParentUser; isNew: boolean } {
+}): { user: ParentUser; isNew: boolean; syncPromise?: Promise<{ success: boolean; error?: string }> } {
   const users = getAllRegisteredUsers();
   const cleanIncomingRut = cleanRut(params.rut);
   const normalizedEmail = (params.email || '').toLowerCase().trim();
@@ -252,13 +252,13 @@ export function registerUserFromCheckout(params: {
 
     users[existingIdx] = updatedUser;
     persistUsers(users);
-    syncUserToNeon(updatedUser, params.grade, {
+    const syncPromise = syncUserToNeon(updatedUser, params.grade, {
       password: updatedUser.password,
       studentPin: updatedUser.studentPin,
       amount: params.amount,
       paymentId: params.paymentId
     });
-    return { user: updatedUser, isNew: false };
+    return { user: updatedUser, isNew: false, syncPromise };
   }
 
   // Usuario nuevo: crear credenciales y PIN
@@ -286,13 +286,13 @@ export function registerUserFromCheckout(params: {
 
   const updatedUsers = [newUser, ...users];
   persistUsers(updatedUsers);
-  syncUserToNeon(newUser, params.grade, {
+  const syncPromise = syncUserToNeon(newUser, params.grade, {
     password: newUser.password,
     studentPin: newUser.studentPin,
     amount: params.amount,
     paymentId: params.paymentId
   });
-  return { user: newUser, isNew: true };
+  return { user: newUser, isNew: true, syncPromise };
 }
 
 /**

@@ -186,8 +186,8 @@ export const CheckoutFlow: React.FC = () => {
             })
           })
             .then(res => res.json())
-            .then(data => { if (data.success) setEmailSentStatus({ sent: true, mode: data.mode }); })
-            .catch(() => setEmailSentStatus({ sent: true, mode: 'local' }));
+            .then(data => { setEmailSentStatus({ sent: Boolean(data?.dispatched), mode: data?.mode }); })
+            .catch(() => setEmailSentStatus({ sent: false, mode: 'local' }));
 
           localStorage.setItem('estudio_simple_parent', JSON.stringify(user));
           setCreatedUser(user);
@@ -393,12 +393,10 @@ export const CheckoutFlow: React.FC = () => {
         })
           .then((res) => res.json())
           .then((data) => {
-            if (data.success) {
-              setEmailSentStatus({ sent: true, mode: data.mode });
-            }
+            setEmailSentStatus({ sent: Boolean(data?.dispatched), mode: data?.mode });
           })
           .catch(() => {
-            setEmailSentStatus({ sent: true, mode: 'local' });
+            setEmailSentStatus({ sent: false, mode: 'local' });
           });
 
         localStorage.setItem('estudio_simple_parent', JSON.stringify(user));
@@ -1015,8 +1013,8 @@ export const CheckoutFlow: React.FC = () => {
                     <Check size={14} className="shrink-0" />
                     <span className="truncate max-w-[280px] sm:max-w-none">
                       {emailSentStatus?.sent
-                        ? `Copia oficial despachada a ${createdUser?.email || email}`
-                        : `Copia oficial enviada a ${createdUser?.email || email}`}
+                        ? `Copia oficial despachada a tu bandeja (${createdUser?.email || email})`
+                        : `Credenciales listas en plataforma para ${createdUser?.email || email}`}
                     </span>
                   </div>
                   {isMercadoPagoApproved && (

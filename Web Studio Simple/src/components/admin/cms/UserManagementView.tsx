@@ -526,7 +526,7 @@ export const UserManagementView: React.FC = () => {
     refreshAll();
   };
 
-  const handleCreateManualUser = (e: React.FormEvent) => {
+  const handleCreateManualUser = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormError(null);
     if (!validateRut(newUserData.rut)) {
@@ -542,7 +542,7 @@ export const UserManagementView: React.FC = () => {
       return;
     }
 
-    const { user } = registerUserFromCheckout({
+    const { user, syncPromise } = registerUserFromCheckout({
       rut: newUserData.rut,
       name: newUserData.name.trim(),
       email: newUserData.email.trim(),
@@ -553,6 +553,10 @@ export const UserManagementView: React.FC = () => {
       plan: newUserData.plan,
       phone: newUserData.phone.trim()
     });
+
+    if (syncPromise) {
+      await syncPromise.catch(() => {});
+    }
 
     const actor = activeAdminUser || { id: 'admin-001', name: 'Administrador', email: 'admin@estudiosimple.cl', role: 'admin' as AdminRole };
     recordAuditLog({
@@ -577,7 +581,7 @@ export const UserManagementView: React.FC = () => {
       grade: '7° Básico',
       plan: 'full'
     });
-    refreshAll();
+    await refreshAll();
   };
 
   // ---------------------------------------------------------------------------

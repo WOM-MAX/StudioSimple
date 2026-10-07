@@ -42,6 +42,54 @@ async function withPrisma(fn) {
   }
 }
 
+// Reintento resiliente con espera activa para absorber el despertar de Neon Scale-to-Zero (2 a 5s)
+async function withPrismaRetry(fn, maxRetries = 3, initialDelayMs = 1500) {
+  let lastError;
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      return await withPrisma(fn);
+    } catch (err) {
+      lastError = err;
+      console.warn(`[NeonRetry] Intento ${attempt}/${maxRetries} falló: ${err.message}`);
+      if (attempt < maxRetries) {
+        const delay = initialDelayMs * attempt;
+        await new Promise((r) => setTimeout(r, delay));
+      }
+    }
+  }
+  throw lastError;
+}
+
+// Helpers para almacenamiento inmutable SystemSetting en Neon DB
+async function getSystemSetting(key, fallbackFn = null) {
+  try {
+    const res = await withPrismaRetry(async (prisma) => {
+      const record = await prisma.systemSetting.findUnique({
+        where: { key }
+      });
+      return record ? record.value : null;
+    });
+    if (res !== null && res !== undefined) return res;
+  } catch (err) {
+    console.warn(`[SystemSetting] Fallback al leer key "${key}":`, err.message);
+  }
+  if (typeof fallbackFn === 'function') {
+    return await fallbackFn();
+  }
+  return null;
+}
+
+async function setSystemSetting(key, value) {
+  return await withPrismaRetry(async (prisma) => {
+    return await prisma.systemSetting.upsert({
+      where: { key },
+      update: { value, updatedAt: new Date() },
+      create: { key, value }
+    });
+  });
+}
+
+
 // -----------------------------------------------------------------------------
 // WHITELIST CACHE SHIELD (Memoria RAM para Lecturas Publicas)
 // -----------------------------------------------------------------------------
@@ -278,8 +326,27 @@ async function sendWelcomeEmail({
   let emailDispatched = false;
   let deliveryDetails = null;
 
-  const resendKey = process.env.RESEND_API_KEY;
-  const smtpHost = process.env.SMTP_HOST;
+  let resendKey = process.env.RESEND_API_KEY;
+  let smtpHost = process.env.SMTP_HOST;
+  let smtpUser = process.env.SMTP_USER;
+  let smtpPass = process.env.SMTP_PASS || process.env.SMTP_PASSWORD;
+  let smtpPort = Number(process.env.SMTP_PORT) || 587;
+  let emailFrom = process.env.EMAIL_FROM;
+
+  // Consulta de configuracion persistente en Neon DB si no viene por variables de entorno
+  try {
+    const dbMailConfig = await getSystemSetting('mail_config');
+    if (dbMailConfig) {
+      if (!resendKey && dbMailConfig.resendApiKey) resendKey = String(dbMailConfig.resendApiKey).trim();
+      if (!smtpHost && dbMailConfig.smtpHost) smtpHost = String(dbMailConfig.smtpHost).trim();
+      if (!smtpUser && dbMailConfig.smtpUser) smtpUser = String(dbMailConfig.smtpUser).trim();
+      if (!smtpPass && dbMailConfig.smtpPass) smtpPass = String(dbMailConfig.smtpPass).trim();
+      if (dbMailConfig.smtpPort) smtpPort = Number(dbMailConfig.smtpPort);
+      if (!emailFrom && dbMailConfig.emailFrom) emailFrom = String(dbMailConfig.emailFrom).trim();
+    }
+  } catch (mErr) {
+    console.warn('[MailService] Fallback al cargar mail_config de DB:', mErr.message);
+  }
 
   // 1. Proveedor Resend API
   if (resendKey && resendKey.trim()) {
@@ -291,7 +358,7 @@ async function sendWelcomeEmail({
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          from: process.env.EMAIL_FROM || 'EstudioSimple <bienvenida@estudiosimple.cl>',
+          from: emailFrom || 'EstudioSimple <bienvenida@estudiosimple.cl>',
           to: [email],
           subject: `Bienvenida/o a EstudioSimple - Credenciales Oficiales de ${grade || 'Curso'}`,
           html: emailHtml
@@ -444,21 +511,21 @@ const server = http.createServer(async (req, res) => {
       return;
     }
 
-    // 1b. Site Config (CMS - Persistencia de configuracion del sitio)
+    // 1b. Site Config (CMS - Persistencia en Neon DB SystemSetting con fallback a disco)
     if (pathname === '/api/cms/site-config') {
       const configFilePath = path.resolve(__dirname, 'data', 'site_config.json');
       if (method === 'GET') {
         try {
-          if (fs.existsSync(configFilePath)) {
-            const raw = fs.readFileSync(configFilePath, 'utf8');
-            res.writeHead(200);
-            res.end(JSON.stringify({ success: true, data: JSON.parse(raw) }));
-          } else {
-            res.writeHead(200);
-            res.end(JSON.stringify({ success: true, data: null }));
-          }
+          const data = await getSystemSetting('site_config', () => {
+            if (fs.existsSync(configFilePath)) {
+              return JSON.parse(fs.readFileSync(configFilePath, 'utf8'));
+            }
+            return null;
+          });
+          res.writeHead(200, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ success: true, data }));
         } catch (err) {
-          res.writeHead(500);
+          res.writeHead(500, { 'Content-Type': 'application/json' });
           res.end(JSON.stringify({ success: false, error: err.message }));
         }
         return;
@@ -467,13 +534,14 @@ const server = http.createServer(async (req, res) => {
       if (method === 'POST') {
         try {
           const body = await readJsonBody(req);
-          const dataDir = path.dirname(configFilePath);
-          if (!fs.existsSync(dataDir)) {
-            fs.mkdirSync(dataDir, { recursive: true });
-          }
-          fs.writeFileSync(configFilePath, JSON.stringify(body, null, 2), 'utf8');
+          await setSystemSetting('site_config', body);
+          try {
+            const dataDir = path.dirname(configFilePath);
+            if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+            fs.writeFileSync(configFilePath, JSON.stringify(body, null, 2), 'utf8');
+          } catch {}
           res.writeHead(200, { 'Content-Type': 'application/json' });
-          res.end(JSON.stringify({ success: true, message: 'Configuracion guardada exitosamente' }));
+          res.end(JSON.stringify({ success: true, message: 'Configuracion guardada exitosamente en Neon DB' }));
         } catch (err) {
           res.writeHead(500, { 'Content-Type': 'application/json' });
           res.end(JSON.stringify({ success: false, error: err.message }));
@@ -482,19 +550,19 @@ const server = http.createServer(async (req, res) => {
       }
     }
 
-    // 1b-1. CMS Pages (Persistencia permanente de páginas y secciones del sitio en disco)
+    // 1b-1. CMS Pages (Persistencia permanente en Neon DB SystemSetting con fallback a disco)
     if (pathname === '/api/cms/pages') {
       const pagesFilePath = path.resolve(__dirname, 'data', 'cms_pages.json');
       if (method === 'GET') {
         try {
-          if (fs.existsSync(pagesFilePath)) {
-            const raw = fs.readFileSync(pagesFilePath, 'utf8');
-            res.writeHead(200, { 'Content-Type': 'application/json' });
-            res.end(JSON.stringify({ success: true, data: JSON.parse(raw) }));
-          } else {
-            res.writeHead(200, { 'Content-Type': 'application/json' });
-            res.end(JSON.stringify({ success: true, data: null }));
-          }
+          const pagesData = await getSystemSetting('cms_pages', () => {
+            if (fs.existsSync(pagesFilePath)) {
+              return JSON.parse(fs.readFileSync(pagesFilePath, 'utf8'));
+            }
+            return null;
+          });
+          res.writeHead(200, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ success: true, data: pagesData }));
         } catch (err) {
           res.writeHead(500, { 'Content-Type': 'application/json' });
           res.end(JSON.stringify({ success: false, error: err.message }));
@@ -511,13 +579,14 @@ const server = http.createServer(async (req, res) => {
             res.end(JSON.stringify({ success: false, message: 'Formato de páginas inválido' }));
             return;
           }
-          const dataDir = path.dirname(pagesFilePath);
-          if (!fs.existsSync(dataDir)) {
-            fs.mkdirSync(dataDir, { recursive: true });
-          }
-          fs.writeFileSync(pagesFilePath, JSON.stringify(pagesData, null, 2), 'utf8');
+          await setSystemSetting('cms_pages', pagesData);
+          try {
+            const dataDir = path.dirname(pagesFilePath);
+            if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+            fs.writeFileSync(pagesFilePath, JSON.stringify(pagesData, null, 2), 'utf8');
+          } catch {}
           res.writeHead(200, { 'Content-Type': 'application/json' });
-          res.end(JSON.stringify({ success: true, message: 'Páginas guardadas exitosamente en disco', count: pagesData.length }));
+          res.end(JSON.stringify({ success: true, message: 'Páginas guardadas exitosamente en Neon DB', count: pagesData.length }));
         } catch (err) {
           res.writeHead(500, { 'Content-Type': 'application/json' });
           res.end(JSON.stringify({ success: false, error: err.message }));
@@ -533,7 +602,7 @@ const server = http.createServer(async (req, res) => {
         let fetchedFromDb = false;
 
         try {
-          await withPrisma(async (prisma) => {
+          await withPrismaRetry(async (prisma) => {
             const users = await prisma.user.findMany({
               orderBy: { createdAt: 'desc' }
             });
@@ -556,7 +625,7 @@ const server = http.createServer(async (req, res) => {
               lastLogin: u.lastLogin ? u.lastLogin.toISOString() : new Date().toISOString()
             }));
             fetchedFromDb = true;
-          });
+          }, 3, 1500);
         } catch (dbErr) {
           console.warn('[AdminGetFamilies] Fallback Prisma DB:', dbErr.message);
         }
@@ -632,21 +701,21 @@ const server = http.createServer(async (req, res) => {
       return;
     }
 
-    // 1c. Administradores (Persistencia en disco data/admins.json)
+    // 1c. Administradores (Persistencia en Neon DB SystemSetting con fallback a disco)
     if (pathname === '/api/admin/users') {
       const adminsFilePath = path.resolve(__dirname, 'data', 'admins.json');
       if (method === 'GET') {
         try {
-          if (fs.existsSync(adminsFilePath)) {
-            const raw = fs.readFileSync(adminsFilePath, 'utf8');
-            res.writeHead(200);
-            res.end(JSON.stringify({ success: true, data: JSON.parse(raw) }));
-          } else {
-            res.writeHead(200);
-            res.end(JSON.stringify({ success: true, data: null }));
-          }
+          const data = await getSystemSetting('admin_users', () => {
+            if (fs.existsSync(adminsFilePath)) {
+              return JSON.parse(fs.readFileSync(adminsFilePath, 'utf8'));
+            }
+            return null;
+          });
+          res.writeHead(200, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ success: true, data }));
         } catch (err) {
-          res.writeHead(500);
+          res.writeHead(500, { 'Content-Type': 'application/json' });
           res.end(JSON.stringify({ success: false, error: err.message }));
         }
         return;
@@ -655,37 +724,38 @@ const server = http.createServer(async (req, res) => {
       if (method === 'POST') {
         try {
           const body = await readJsonBody(req);
-          const dataDir = path.dirname(adminsFilePath);
-          if (!fs.existsSync(dataDir)) {
-            fs.mkdirSync(dataDir, { recursive: true });
-          }
           const adminsList = body.admins || body;
-          fs.writeFileSync(adminsFilePath, JSON.stringify(adminsList, null, 2), 'utf8');
-          res.writeHead(200);
-          res.end(JSON.stringify({ success: true, message: 'Administradores guardados exitosamente' }));
+          await setSystemSetting('admin_users', adminsList);
+          try {
+            const dataDir = path.dirname(adminsFilePath);
+            if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+            fs.writeFileSync(adminsFilePath, JSON.stringify(adminsList, null, 2), 'utf8');
+          } catch {}
+          res.writeHead(200, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ success: true, message: 'Administradores guardados exitosamente en Neon DB' }));
         } catch (err) {
-          res.writeHead(500);
+          res.writeHead(500, { 'Content-Type': 'application/json' });
           res.end(JSON.stringify({ success: false, error: err.message }));
         }
         return;
       }
     }
 
-    // 1d. Pases de Invitados (Persistencia en disco data/guest_passes.json)
+    // 1d. Pases de Invitados (Persistencia en Neon DB SystemSetting con fallback a disco)
     if (pathname === '/api/admin/guest-passes') {
       const passesFilePath = path.resolve(__dirname, 'data', 'guest_passes.json');
       if (method === 'GET') {
         try {
-          if (fs.existsSync(passesFilePath)) {
-            const raw = fs.readFileSync(passesFilePath, 'utf8');
-            res.writeHead(200);
-            res.end(JSON.stringify({ success: true, data: JSON.parse(raw) }));
-          } else {
-            res.writeHead(200);
-            res.end(JSON.stringify({ success: true, data: null }));
-          }
+          const data = await getSystemSetting('guest_passes', () => {
+            if (fs.existsSync(passesFilePath)) {
+              return JSON.parse(fs.readFileSync(passesFilePath, 'utf8'));
+            }
+            return null;
+          });
+          res.writeHead(200, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ success: true, data }));
         } catch (err) {
-          res.writeHead(500);
+          res.writeHead(500, { 'Content-Type': 'application/json' });
           res.end(JSON.stringify({ success: false, error: err.message }));
         }
         return;
@@ -694,20 +764,81 @@ const server = http.createServer(async (req, res) => {
       if (method === 'POST') {
         try {
           const body = await readJsonBody(req);
-          const dataDir = path.dirname(passesFilePath);
-          if (!fs.existsSync(dataDir)) {
-            fs.mkdirSync(dataDir, { recursive: true });
-          }
           const passesList = body.passes || body;
-          fs.writeFileSync(passesFilePath, JSON.stringify(passesList, null, 2), 'utf8');
-          res.writeHead(200);
-          res.end(JSON.stringify({ success: true, message: 'Pases de invitados guardados exitosamente' }));
+          await setSystemSetting('guest_passes', passesList);
+          try {
+            const dataDir = path.dirname(passesFilePath);
+            if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+            fs.writeFileSync(passesFilePath, JSON.stringify(passesList, null, 2), 'utf8');
+          } catch {}
+          res.writeHead(200, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ success: true, message: 'Pases de invitados guardados exitosamente en Neon DB' }));
         } catch (err) {
-          res.writeHead(500);
+          res.writeHead(500, { 'Content-Type': 'application/json' });
           res.end(JSON.stringify({ success: false, error: err.message }));
         }
         return;
       }
+    }
+
+    // 1d-2. Configuracion de Correo en Neon DB (GET / POST)
+    if (pathname === '/api/mail/config') {
+      if (method === 'GET') {
+        try {
+          const config = await getSystemSetting('mail_config', () => ({
+            resendApiKey: process.env.RESEND_API_KEY ? '••••••••' + process.env.RESEND_API_KEY.slice(-4) : '',
+            smtpHost: process.env.SMTP_HOST || '',
+            smtpPort: process.env.SMTP_PORT || '587',
+            smtpUser: process.env.SMTP_USER || '',
+            emailFrom: process.env.EMAIL_FROM || 'EstudioSimple <bienvenida@estudiosimple.cl>',
+            hasResendKey: Boolean(process.env.RESEND_API_KEY)
+          }));
+          res.writeHead(200, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ success: true, config }));
+        } catch (err) {
+          res.writeHead(500, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ success: false, error: err.message }));
+        }
+        return;
+      }
+
+      if (method === 'POST') {
+        try {
+          const body = await readJsonBody(req);
+          await setSystemSetting('mail_config', body);
+          res.writeHead(200, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ success: true, message: 'Configuración de correo guardada exitosamente en Neon DB' }));
+        } catch (err) {
+          res.writeHead(500, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ success: false, error: err.message }));
+        }
+        return;
+      }
+    }
+
+    // 1d-3. Envío de Correo de Prueba (POST /api/mail/test)
+    if (pathname === '/api/mail/test' && method === 'POST') {
+      try {
+        const body = await readJsonBody(req);
+        const targetEmail = body.email || 'walterorellanamedi@gmail.com';
+        const result = await sendWelcomeEmail({
+          email: targetEmail,
+          name: 'Walter Orellana (Prueba)',
+          rut: '8.311.477-0',
+          password: 'TestPassword2026!',
+          studentName: 'Estudiante Prueba',
+          grade: '7° Básico',
+          studentPin: '654321',
+          plan: 'trial',
+          amount: 0
+        });
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify(result));
+      } catch (err) {
+        res.writeHead(500, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ success: false, error: err.message }));
+      }
+      return;
     }
 
     // 1e. Bitacora de Auditoria (Persistencia en disco data/audit_logs.json)
@@ -2085,7 +2216,7 @@ const server = http.createServer(async (req, res) => {
       return;
     }
 
-    // 4. Registro y Checkout (Persistencia Dual de usuario y orden: Disco JSON + Neon DB)
+    // 4. Registro y Checkout (Persistencia Garantizada en Neon DB + Retry para Scale-to-Zero)
     if (pathname === '/api/checkout' && method === 'POST') {
       try {
         const body = await readJsonBody(req);
@@ -2106,153 +2237,137 @@ const server = http.createServer(async (req, res) => {
         } = body;
 
         if (!email || !name) {
-          res.writeHead(400);
+          res.writeHead(400, { 'Content-Type': 'application/json' });
           res.end(JSON.stringify({ success: false, message: 'Faltan campos obligatorios' }));
           return;
         }
 
         const normalizedEmail = email.trim().toLowerCase();
+        const cleanRut = (rut || '').trim() || null;
+        const cleanStudentRun = (studentRun || '').trim() || null;
         const selectedGrade = grade || '7° Básico';
         const selectedPlan = (plan === 'anual' || plan === 'full') ? 'anual' : 'mensual';
         const cleanAmount = Number(amount) || (selectedPlan === 'anual' ? 149990 : 19990);
+        const generatedStudentId = (studentId && String(studentId).trim()) || `stu-${Date.now()}-${Math.floor(100 + Math.random() * 900)}`;
+        const effectivePin = (studentPin && String(studentPin).trim()) || Math.floor(100000 + Math.random() * 900000).toString();
+        const effectivePassword = (password && String(password).trim()) || 'demo2026';
 
-        // PASO 1: Persistencia INMEDIATA y garantizada en disco (data/registered_families.json)
-        const familiesFilePath = path.resolve(__dirname, 'data', 'registered_families.json');
-        const dataDir = path.dirname(familiesFilePath);
-        if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
-
-        let existingFamilies = [];
-        if (fs.existsSync(familiesFilePath)) {
-          try { existingFamilies = JSON.parse(fs.readFileSync(familiesFilePath, 'utf8')); } catch {}
-        }
-
-        const existingIdx = existingFamilies.findIndex(f => f.email?.toLowerCase() === normalizedEmail);
-        const existingFamily = existingIdx >= 0 ? existingFamilies[existingIdx] : null;
-
-        const effectivePin = studentPin || existingFamily?.studentPin || Math.floor(100000 + Math.random() * 900000).toString();
-        const effectivePassword = password || existingFamily?.password || 'demo2026';
-        const effectiveGrades = Array.from(new Set([...(existingFamily?.enrolledGrades || []), selectedGrade]));
-
-        const savedUserRecord = {
-          id: existingFamily?.id || `usr-${Date.now()}`,
-          rut: rut || existingFamily?.rut || '',
-          name: name.toUpperCase(),
-          email: normalizedEmail,
-          phone: phone || existingFamily?.phone || '',
-          password: effectivePassword,
-          studentId: studentId || existingFamily?.studentId || `stu-${Date.now()}`,
-          studentName: (studentName || existingFamily?.studentName || 'Estudiante').toUpperCase(),
-          studentRun: studentRun || existingFamily?.studentRun || '',
-          studentPin: effectivePin,
-          status: 'active',
-          subscriptionActive: true,
-          plan: selectedPlan,
-          enrolledGrades: effectiveGrades,
-          createdAt: existingFamily?.createdAt || new Date().toISOString(),
-          lastLogin: new Date().toISOString()
-        };
-
-        if (existingIdx >= 0) {
-          existingFamilies[existingIdx] = savedUserRecord;
-        } else {
-          existingFamilies.unshift(savedUserRecord);
-        }
-
-        try {
-          fs.writeFileSync(familiesFilePath, JSON.stringify(existingFamilies, null, 2), 'utf8');
-        } catch (fErr) {
-          console.warn('[Checkout] Error escribiendo registered_families.json:', fErr.message);
-        }
-
-        // PASO 2: Persistencia en Neon DB (tolerante a fallos de suspension/scale-to-zero)
+        // PERSISTENCIA REAL Y OBLIGATORIA EN NEON POSTGRESQL (con reintentos para Scale-to-Zero)
         let dbUser = null;
         let dbOrder = null;
-        try {
-          await withPrisma(async (prisma) => {
-            dbUser = await prisma.user.upsert({
-              where: { email: normalizedEmail },
-              update: {
-                name: savedUserRecord.name,
-                rut: savedUserRecord.rut || undefined,
-                phone: savedUserRecord.phone || undefined,
-                password: savedUserRecord.password || undefined,
-                subscriptionActive: true,
-                status: 'active',
-                plan: savedUserRecord.plan,
-                studentName: savedUserRecord.studentName || undefined,
-                studentRun: savedUserRecord.studentRun || undefined,
-                studentPin: savedUserRecord.studentPin,
-                enrolledGrades: savedUserRecord.enrolledGrades,
-                lastLogin: new Date()
-              },
-              create: {
-                email: normalizedEmail,
-                name: savedUserRecord.name,
-                rut: savedUserRecord.rut || null,
-                phone: savedUserRecord.phone || null,
-                password: savedUserRecord.password || null,
-                subscriptionActive: true,
-                status: 'active',
-                plan: savedUserRecord.plan,
-                studentName: savedUserRecord.studentName || null,
-                studentRun: savedUserRecord.studentRun || null,
-                studentPin: savedUserRecord.studentPin,
-                studentId: savedUserRecord.studentId,
-                enrolledGrades: savedUserRecord.enrolledGrades
-              }
-            });
 
-            const orderNumber = `ORD-${Date.now().toString(36).toUpperCase()}-${Math.floor(Math.random() * 1000)}`;
-            dbOrder = await prisma.subscriptionOrder.create({
-              data: {
-                orderNumber,
-                userId: dbUser.id,
-                plan: savedUserRecord.plan,
-                amount: cleanAmount,
-                status: 'paid',
-                paymentMethod: paymentId ? 'mercadopago' : 'simulated_webpay',
-                gatewayTransactionId: paymentId ? String(paymentId) : null
-              }
-            });
-
-            // Si Prisma devolvio un id formal, actualizarlo en el registro de archivo
-            if (dbUser?.id && savedUserRecord.id !== dbUser.id) {
-              savedUserRecord.id = dbUser.id;
-              existingFamilies = existingFamilies.map(f => f.email?.toLowerCase() === normalizedEmail ? savedUserRecord : f);
-              try { fs.writeFileSync(familiesFilePath, JSON.stringify(existingFamilies, null, 2), 'utf8'); } catch {}
+        await withPrismaRetry(async (prisma) => {
+          dbUser = await prisma.user.upsert({
+            where: { email: normalizedEmail },
+            update: {
+              name: name.toUpperCase(),
+              rut: cleanRut || undefined,
+              phone: phone ? String(phone).trim() : undefined,
+              password: effectivePassword || undefined,
+              subscriptionActive: true,
+              status: 'active',
+              plan: selectedPlan,
+              studentName: (studentName || 'Estudiante').toUpperCase(),
+              studentRun: cleanStudentRun || undefined,
+              studentPin: effectivePin,
+              enrolledGrades: [selectedGrade],
+              lastLogin: new Date()
+            },
+            create: {
+              email: normalizedEmail,
+              name: name.toUpperCase(),
+              rut: cleanRut,
+              phone: phone ? String(phone).trim() : null,
+              password: effectivePassword,
+              subscriptionActive: true,
+              status: 'active',
+              plan: selectedPlan,
+              studentName: (studentName || 'Estudiante').toUpperCase(),
+              studentRun: cleanStudentRun,
+              studentPin: effectivePin,
+              studentId: generatedStudentId,
+              enrolledGrades: [selectedGrade]
             }
           });
-        } catch (dbErr) {
-          console.warn('[Checkout] Advertencia Neon DB (guardado en archivo garantizado):', dbErr.message);
+
+          const orderNumber = `ORD-${Date.now().toString(36).toUpperCase()}-${Math.floor(Math.random() * 1000)}`;
+          dbOrder = await prisma.subscriptionOrder.create({
+            data: {
+              orderNumber,
+              userId: dbUser.id,
+              plan: selectedPlan,
+              amount: cleanAmount,
+              status: 'paid',
+              paymentMethod: paymentId ? 'mercadopago' : 'simulated_webpay',
+              gatewayTransactionId: paymentId ? String(paymentId) : null
+            }
+          });
+        }, 3, 1500);
+
+        // Respaldo secundario de contingencia en disco
+        const familiesFilePath = path.resolve(__dirname, 'data', 'registered_families.json');
+        try {
+          const dataDir = path.dirname(familiesFilePath);
+          if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+          let existingFamilies = [];
+          if (fs.existsSync(familiesFilePath)) {
+            try { existingFamilies = JSON.parse(fs.readFileSync(familiesFilePath, 'utf8')); } catch {}
+          }
+          const savedRecord = {
+            id: dbUser.id,
+            rut: dbUser.rut || '',
+            name: dbUser.name,
+            email: dbUser.email,
+            phone: dbUser.phone || '',
+            password: dbUser.password || effectivePassword,
+            studentId: dbUser.studentId || generatedStudentId,
+            studentName: dbUser.studentName || 'Estudiante',
+            studentRun: dbUser.studentRun || '',
+            studentPin: dbUser.studentPin || effectivePin,
+            status: dbUser.status || 'active',
+            subscriptionActive: true,
+            plan: dbUser.plan || selectedPlan,
+            enrolledGrades: dbUser.enrolledGrades || [selectedGrade],
+            createdAt: dbUser.createdAt ? (typeof dbUser.createdAt === 'string' ? dbUser.createdAt : dbUser.createdAt.toISOString()) : new Date().toISOString(),
+            lastLogin: new Date().toISOString()
+          };
+          const fIdx = existingFamilies.findIndex(f => f.email?.toLowerCase() === normalizedEmail);
+          if (fIdx >= 0) existingFamilies[fIdx] = savedRecord;
+          else existingFamilies.unshift(savedRecord);
+          fs.writeFileSync(familiesFilePath, JSON.stringify(existingFamilies, null, 2), 'utf8');
+        } catch (fErr) {
+          console.warn('[Checkout] Advertencia guardando respaldo en archivo:', fErr.message);
         }
 
-        // PASO 3: Despacho automatico de correo transaccional en segundo plano
+        // Despacho de correo transaccional en segundo plano
         sendWelcomeEmail({
-          email: savedUserRecord.email,
-          name: savedUserRecord.name,
-          rut: savedUserRecord.rut,
-          password: savedUserRecord.password,
-          studentName: savedUserRecord.studentName,
+          email: dbUser.email,
+          name: dbUser.name,
+          rut: dbUser.rut,
+          password: dbUser.password || effectivePassword,
+          studentName: dbUser.studentName,
           grade: selectedGrade,
-          studentPin: savedUserRecord.studentPin,
+          studentPin: dbUser.studentPin || effectivePin,
           plan: selectedPlan,
           amount: cleanAmount
-        }).catch(mailErr => {
-          console.warn('[Checkout] Advertencia despachando correo de bienvenida:', mailErr.message);
+        }).catch((mailErr) => {
+          console.warn('[Checkout] Advertencia despachando correo:', mailErr.message);
         });
 
         res.writeHead(200, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({
           success: true,
-          user: dbUser || savedUserRecord,
-          order: dbOrder || { orderNumber: `ORD-${Date.now().toString(36).toUpperCase()}`, status: 'paid', amount: cleanAmount },
-          persistedToFile: true,
-          persistedToDb: Boolean(dbUser)
+          user: dbUser,
+          order: dbOrder,
+          persistedToDb: true
         }));
       } catch (err) {
-        console.error('[Checkout] Error critico:', err);
+        console.error('[Checkout] Error crítico en registro:', err);
         res.writeHead(500, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify({ success: false, error: err.message }));
+        res.end(JSON.stringify({
+          success: false,
+          error: 'No fue posible guardar al usuario en la base de datos central: ' + err.message
+        }));
       }
       return;
     }

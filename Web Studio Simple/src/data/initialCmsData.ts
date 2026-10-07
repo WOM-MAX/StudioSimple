@@ -6,7 +6,7 @@ export const INITIAL_CMS_PAGES: CmsPage[] = [
     titulo: 'Página de Inicio',
     slug: '/',
     activo: true,
-    mostrarEnMenu: true,
+    mostrarEnMenu: false,
     ordenMenu: 1,
     seoTitle: 'EstudioSimple · Homeschooling Oficial para Exámenes Libres MINEDUC',
     seoDescription: 'Plataforma educativa mobile-first para estudiantes de 3° a 8° básico en Chile. Guiones pedagógicos, articulación pantalla-cuaderno y ensayos tipo MINEDUC.',
