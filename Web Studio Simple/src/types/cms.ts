@@ -97,12 +97,14 @@ export interface HeroScrubberConfig {
   fase1Badge?: string;
   fase1Titulo?: string;
   fase1Subtitulo?: string;
+  fase1IndicadorScroll?: string;
   fase2Badge?: string;
   fase2Titulo?: string;
   fase2Subtitulo?: string;
   fase3Badge?: string;
   fase3Titulo?: string;
   fase3Subtitulo?: string;
+  fase3BotonTexto?: string;
   colorFondo?: string;
   colorTexto?: ModoColorTexto | string;
 }

@@ -85,10 +85,7 @@ export const PublicHeader: React.FC<PublicHeaderProps> = ({
         {/* Contenedor del Logotipo Oficial con Placa Blanca */}
         <div 
           className="flex items-center shrink-0 cursor-pointer bg-white hover:bg-white/95 rounded-xl px-4 md:px-5 py-1 md:py-1.5 shadow-sm border border-black/10 hover:shadow-md transition-all duration-300" 
-          onClick={() => {
-            const isHomeActive = deduplicatedPages.some((p) => p.slug === '/' && p.activo !== false);
-            onNavigatePage(isHomeActive ? '/' : '/planes');
-          }}
+          onClick={() => onNavigatePage('/')}
           title="EstudioSimple"
         >
           <img 

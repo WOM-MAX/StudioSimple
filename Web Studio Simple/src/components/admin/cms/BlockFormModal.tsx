@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, Save, Plus, Trash2, ArrowUp, ArrowDown, Image as ImageIcon, CheckCircle2 } from 'lucide-react';
+import { X, Save, Plus, Trash2, ArrowUp, ArrowDown, Image as ImageIcon, CheckCircle2, Sparkles } from 'lucide-react';
 import { CmsSection, CmsBlockType } from '../../../types/cms';
 import { ColorPickerField } from '../../common/ColorPickerField';
 import { CloudinaryImageUploader } from '../../common/CloudinaryImageUploader';
@@ -41,6 +41,8 @@ export const BlockFormModal: React.FC<BlockFormModalProps> = ({
   const [titulo, setTitulo] = useState('');
   const [subtitulo, setSubtitulo] = useState('');
   const [config, setConfig] = useState<Record<string, any>>({});
+
+  const isHeroScrubber = tipoBloque === 'HERO_SYSTEM' || (tipoBloque === 'HERO' && section?.id === 'sec-hero');
 
   useEffect(() => {
     if (section) {
@@ -102,13 +104,21 @@ export const BlockFormModal: React.FC<BlockFormModalProps> = ({
       }
     }
 
+    let finalTitulo = titulo.trim() || getDefaultTitleForType(tipoBloque);
+    let finalSubtitulo = subtitulo.trim();
+
+    if (isHeroScrubber) {
+      finalTitulo = config.fase1Titulo?.trim() || 'Prepara sus exámenes libres sin estrés.';
+      finalSubtitulo = config.fase1Subtitulo?.trim() || 'Microaprendizaje de 30 minutos al día con pedagogía adaptativa y acompañamiento guiado.';
+    }
+
     const savedSection: CmsSection = {
       id: section ? section.id : `sec-${Date.now()}`,
       tipoBloque,
       orden: section ? section.orden : defaultOrder,
       activo: isActivo,
-      titulo: titulo.trim() || getDefaultTitleForType(tipoBloque),
-      subtitulo: subtitulo.trim(),
+      titulo: finalTitulo,
+      subtitulo: finalSubtitulo,
       configuracion: config
     };
 
@@ -139,7 +149,8 @@ export const BlockFormModal: React.FC<BlockFormModalProps> = ({
   const getDefaultTitleForType = (type: CmsBlockType): string => {
     switch (type) {
       case 'PAGE_HEADER': return 'Encabezado Institucional';
-      case 'HERO': return 'Cabecera Hero';
+      case 'HERO': return 'Cabecera Hero Personalizada';
+      case 'HERO_SYSTEM': return 'Portada Interactiva (Frontis Scrubber)';
       case 'IMAGEN_TEXTO': return 'Imagen y Texto';
       case 'TEXTO':
       case 'RICHTEXT': return 'Contenido de Texto';
@@ -237,8 +248,8 @@ export const BlockFormModal: React.FC<BlockFormModalProps> = ({
             </select>
           </div>
 
-          {/* Campos Básicos de Título y Subtítulo (Salvo para bloques que no lo requieren como Espaciador) */}
-          {tipoBloque !== 'ESPACIADOR' && tipoBloque !== 'HERO_SYSTEM' && (
+          {/* Campos Básicos de Título y Subtítulo (Salvo para bloques que no lo requieren como Espaciador o Hero Scrubber) */}
+          {tipoBloque !== 'ESPACIADOR' && !isHeroScrubber && (
             <div className="space-y-3 pt-1">
               <div>
                 <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
@@ -300,8 +311,8 @@ export const BlockFormModal: React.FC<BlockFormModalProps> = ({
             </div>
           )}
 
-          {/* 2. HERO */}
-          {tipoBloque === 'HERO' && (
+          {/* 2. HERO ESTÁNDAR (Para páginas personalizadas, no para el Scrubber de inicio) */}
+          {tipoBloque === 'HERO' && !isHeroScrubber && (
             <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
               <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block">
                 Cabecera Hero Limpia
@@ -1680,115 +1691,192 @@ export const BlockFormModal: React.FC<BlockFormModalProps> = ({
             </div>
           )}
 
-          {/* 15. HERO / HERO_SYSTEM (Textos del Scrubber y Portada) */}
-          {(tipoBloque === 'HERO' || tipoBloque === 'HERO_SYSTEM') && (
-            <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-4">
-              <span className="text-xs font-bold text-slate-700 uppercase tracking-wider block">
-                Configuración de Portada Interactiva (Hero Scrubber)
-              </span>
+          {/* 15. HERO FRONTIS SCRUBBER (Portada Interactiva de Inicio) */}
+          {isHeroScrubber && (
+            <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-5">
+              <div className="border-b border-slate-200 pb-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-black text-slate-800 uppercase tracking-wider flex items-center gap-2">
+                    <Sparkles className="w-4 h-4 text-[#12A1A4]" />
+                    Configuración de Portada Interactiva (Frontis Scrubber)
+                  </span>
+                  <span className="px-2.5 py-0.5 rounded-full bg-[#12A1A4]/10 text-[#12A1A4] text-[10px] font-bold">
+                    3 Fases de Desplazamiento
+                  </span>
+                </div>
+                <p className="text-xs text-slate-500 mt-1">
+                  Estos textos corresponden exactamente a lo que ven las familias al hacer scroll en la portada de la página de inicio.
+                </p>
+              </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {/* FASE 1: Introducción y Propósito */}
+              <div className="p-4 bg-white rounded-xl border border-slate-200 shadow-xs space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] font-black text-[#123A72] uppercase tracking-wider">
+                    Fase 1: Introducción y Propósito (0% - 35% del Scroll)
+                  </span>
+                  <span className="text-[10px] text-slate-400 font-semibold">Pantalla Inicial</span>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <label className="block text-[11px] font-bold text-slate-700 mb-1">Insignia Superior (Badge)</label>
+                    <input
+                      type="text"
+                      value={config.fase1Badge ?? config.badgeText ?? 'Método Exclusivo 3º a 8º Básico'}
+                      onChange={(e) => {
+                        handleConfigChange('fase1Badge', e.target.value);
+                        handleConfigChange('badgeText', e.target.value);
+                      }}
+                      placeholder="Ej: Método Exclusivo 3º a 8º Básico"
+                      className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs bg-white font-medium"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-[11px] font-bold text-slate-700 mb-1">Palabra Resaltada en Amarillo</label>
+                    <input
+                      type="text"
+                      value={config.highlightWord ?? 'sin estrés.'}
+                      onChange={(e) => handleConfigChange('highlightWord', e.target.value)}
+                      placeholder="Ej: sin estrés."
+                      className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs bg-white font-medium"
+                    />
+                  </div>
+                </div>
+
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 mb-1">Badge Superior</label>
+                  <label className="block text-[11px] font-bold text-slate-700 mb-1">Título Principal Fase 1</label>
                   <input
                     type="text"
-                    value={config.badgeText ?? 'Temarios Oficiales MINEDUC 2026'}
-                    onChange={(e) => handleConfigChange('badgeText', e.target.value)}
-                    placeholder="Ej: Temarios Oficiales MINEDUC 2026"
+                    value={config.fase1Titulo ?? 'Prepara sus exámenes libres sin estrés.'}
+                    onChange={(e) => handleConfigChange('fase1Titulo', e.target.value)}
+                    placeholder="Ej: Prepara sus exámenes libres sin estrés."
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs font-bold text-slate-800"
+                  />
+                  <p className="text-[10px] text-slate-400 mt-0.5">
+                    La palabra resaltada indicada arriba se mostrará automáticamente con estilo amarillo destacado.
+                  </p>
+                </div>
+
+                <div>
+                  <label className="block text-[11px] font-bold text-slate-700 mb-1">Subtítulo / Bajada Descriptiva Fase 1</label>
+                  <textarea
+                    rows={2}
+                    value={config.fase1Subtitulo ?? 'Microaprendizaje de 30 minutos al día con pedagogía adaptativa y acompañamiento guiado.'}
+                    onChange={(e) => handleConfigChange('fase1Subtitulo', e.target.value)}
+                    placeholder="Subtítulo descriptivo Fase 1"
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs text-slate-700"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-[11px] font-bold text-slate-700 mb-1">Indicador de Desplazamiento (Flecha Inferior)</label>
+                  <input
+                    type="text"
+                    value={config.fase1IndicadorScroll ?? 'Desliza hacia abajo para recorrer la experiencia'}
+                    onChange={(e) => handleConfigChange('fase1IndicadorScroll', e.target.value)}
+                    placeholder="Ej: Desliza hacia abajo para recorrer la experiencia"
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs text-slate-600"
+                  />
+                </div>
+              </div>
+
+              {/* FASE 2: Estructura Pedagógica */}
+              <div className="p-4 bg-white rounded-xl border border-slate-200 shadow-xs space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] font-black text-[#123A72] uppercase tracking-wider">
+                    Fase 2: Enfoque Pedagógico (35% - 70% del Scroll)
+                  </span>
+                  <span className="text-[10px] text-slate-400 font-semibold">Pantalla Media</span>
+                </div>
+
+                <div>
+                  <label className="block text-[11px] font-bold text-slate-700 mb-1">Insignia Fase 2 (Badge)</label>
+                  <input
+                    type="text"
+                    value={config.fase2Badge ?? 'Estructura Canónica de 8 Pasos'}
+                    onChange={(e) => handleConfigChange('fase2Badge', e.target.value)}
+                    placeholder="Ej: Estructura Canónica de 8 Pasos"
                     className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs bg-white font-medium"
                   />
                 </div>
+
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 mb-1">Palabra Destacada en Título</label>
+                  <label className="block text-[11px] font-bold text-slate-700 mb-1">Título Fase 2</label>
                   <input
                     type="text"
-                    value={config.highlightWord ?? 'sin estrés.'}
-                    onChange={(e) => handleConfigChange('highlightWord', e.target.value)}
-                    placeholder="Ej: sin estrés."
+                    value={config.fase2Titulo ?? 'Lecciones interactivas de 30 minutos guiadas paso a paso'}
+                    onChange={(e) => handleConfigChange('fase2Titulo', e.target.value)}
+                    placeholder="Título Fase 2"
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs font-bold text-slate-800"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-[11px] font-bold text-slate-700 mb-1">Subtítulo / Bajada Descriptiva Fase 2</label>
+                  <textarea
+                    rows={2}
+                    value={config.fase2Subtitulo ?? 'El apoderado guía con diálogo socrático y preguntas precisas, mientras el estudiante practica de forma autónoma.'}
+                    onChange={(e) => handleConfigChange('fase2Subtitulo', e.target.value)}
+                    placeholder="Subtítulo descriptivo Fase 2"
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs text-slate-700"
+                  />
+                </div>
+              </div>
+
+              {/* FASE 3: Autonomía y Confianza */}
+              <div className="p-4 bg-white rounded-xl border border-slate-200 shadow-xs space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] font-black text-[#123A72] uppercase tracking-wider">
+                    Fase 3: Autonomía, Confianza y Acción (70% - 100% del Scroll)
+                  </span>
+                  <span className="text-[10px] text-slate-400 font-semibold">Pantalla Final</span>
+                </div>
+
+                <div>
+                  <label className="block text-[11px] font-bold text-slate-700 mb-1">Insignia Fase 3 (Badge)</label>
+                  <input
+                    type="text"
+                    value={config.fase3Badge ?? 'Autonomía y Confianza Escolar'}
+                    onChange={(e) => handleConfigChange('fase3Badge', e.target.value)}
+                    placeholder="Ej: Autonomía y Confianza Escolar"
                     className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs bg-white font-medium"
                   />
                 </div>
-              </div>
 
-              <div className="p-3 bg-white rounded-xl border border-slate-200 space-y-2">
-                <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
-                  Fase 1: Introducción y Propósito
-                </span>
-                <input
-                  type="text"
-                  value={config.fase1Titulo ?? 'Prepara sus exámenes libres sin estrés.'}
-                  onChange={(e) => handleConfigChange('fase1Titulo', e.target.value)}
-                  placeholder="Título Fase 1"
-                  className="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs font-bold"
-                />
-                <textarea
-                  rows={2}
-                  value={config.fase1Subtitulo ?? 'Microaprendizaje de 30 minutos al día con pedagogía adaptativa y acompañamiento guiado.'}
-                  onChange={(e) => handleConfigChange('fase1Subtitulo', e.target.value)}
-                  placeholder="Subtítulo descriptivo Fase 1"
-                  className="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs text-slate-600"
-                />
-              </div>
-
-              <div className="p-3 bg-white rounded-xl border border-slate-200 space-y-2">
-                <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
-                  Fase 2: Estructura Pedagógica
-                </span>
-                <input
-                  type="text"
-                  value={config.fase2Titulo ?? 'Lecciones interactivas de 30 minutos guiadas paso a paso'}
-                  onChange={(e) => handleConfigChange('fase2Titulo', e.target.value)}
-                  placeholder="Título Fase 2"
-                  className="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs font-bold"
-                />
-                <textarea
-                  rows={2}
-                  value={config.fase2Subtitulo ?? 'El apoderado guía con diálogo socrático y preguntas precisas, mientras el estudiante practica de forma autónoma.'}
-                  onChange={(e) => handleConfigChange('fase2Subtitulo', e.target.value)}
-                  placeholder="Subtítulo descriptivo Fase 2"
-                  className="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs text-slate-600"
-                />
-              </div>
-
-              <div className="p-3 bg-white rounded-xl border border-slate-200 space-y-2">
-                <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
-                  Fase 3: Autonomía y Confianza
-                </span>
-                <input
-                  type="text"
-                  value={config.fase3Titulo ?? 'Acompañamiento sin sobrecarga cognitiva'}
-                  onChange={(e) => handleConfigChange('fase3Titulo', e.target.value)}
-                  placeholder="Título Fase 3"
-                  className="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs font-bold"
-                />
-                <textarea
-                  rows={2}
-                  value={config.fase3Subtitulo ?? 'Diseñado especialmente para familias neurodivergentes y homeschooling.'}
-                  onChange={(e) => handleConfigChange('fase3Subtitulo', e.target.value)}
-                  placeholder="Subtítulo descriptivo Fase 3"
-                  className="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs text-slate-600"
-                />
-              </div>
-
-              <div className="grid grid-cols-2 gap-3 pt-1">
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 mb-1">Botón Principal</label>
+                  <label className="block text-[11px] font-bold text-slate-700 mb-1">Título Fase 3</label>
                   <input
                     type="text"
-                    value={config.ctaText ?? 'Ver Planes y Precios'}
-                    onChange={(e) => handleConfigChange('ctaText', e.target.value)}
-                    placeholder="Ver Planes y Precios"
-                    className="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs"
+                    value={config.fase3Titulo ?? 'Preparados para validar sus estudios con éxito'}
+                    onChange={(e) => handleConfigChange('fase3Titulo', e.target.value)}
+                    placeholder="Título Fase 3"
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs font-bold text-slate-800"
                   />
                 </div>
+
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 mb-1">Botón Secundario</label>
+                  <label className="block text-[11px] font-bold text-slate-700 mb-1">Subtítulo / Bajada Descriptiva Fase 3</label>
+                  <textarea
+                    rows={2}
+                    value={config.fase3Subtitulo ?? 'Una metodología validada que brinda tranquilidad a las familias y seguridad a los estudiantes frente a la evaluación MINEDUC.'}
+                    onChange={(e) => handleConfigChange('fase3Subtitulo', e.target.value)}
+                    placeholder="Subtítulo descriptivo Fase 3"
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs text-slate-700"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-[11px] font-bold text-slate-700 mb-1">Texto del Botón de Acción hacia el Método</label>
                   <input
                     type="text"
-                    value={config.ctaSecondaryText ?? 'Explorar Cursos'}
-                    onChange={(e) => handleConfigChange('ctaSecondaryText', e.target.value)}
-                    placeholder="Explorar Cursos"
-                    className="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs"
+                    value={config.fase3BotonTexto ?? config.ctaText ?? 'Conoce cómo funciona el método'}
+                    onChange={(e) => {
+                      handleConfigChange('fase3BotonTexto', e.target.value);
+                      handleConfigChange('ctaText', e.target.value);
+                    }}
+                    placeholder="Ej: Conoce cómo funciona el método"
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs font-bold text-slate-800"
                   />
                 </div>
               </div>

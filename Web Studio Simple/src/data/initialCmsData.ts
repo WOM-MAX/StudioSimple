@@ -39,22 +39,24 @@ export const INITIAL_CMS_PAGES: CmsPage[] = [
         tipoBloque: 'HERO',
         orden: 1,
         activo: true,
-        titulo: 'Aprende lo Esencial, Valídalo en tu Cuaderno.',
-        subtitulo: 'La plataforma de homeschooling diseñada para estructurar el aprendizaje de 3° a 8° básico y aprobar los Exámenes Libres del MINEDUC sin sobrecarga cognitiva.',
+        titulo: 'Prepara sus exámenes libres sin estrés.',
+        subtitulo: 'Microaprendizaje de 30 minutos al día con pedagogía adaptativa y acompañamiento guiado.',
         configuracion: {
-          badgeText: 'Temarios Oficiales MINEDUC 2026',
-          ctaText: 'Ver Planes y Precios',
+          badgeText: 'Método Exclusivo 3º a 8º Básico',
+          ctaText: 'Conoce cómo funciona el método',
           ctaSecondaryText: 'Explorar Cursos',
           highlightWord: 'sin estrés.',
           fase1Badge: 'Método Exclusivo 3º a 8º Básico',
           fase1Titulo: 'Prepara sus exámenes libres sin estrés.',
           fase1Subtitulo: 'Microaprendizaje de 30 minutos al día con pedagogía adaptativa y acompañamiento guiado.',
+          fase1IndicadorScroll: 'Desliza hacia abajo para recorrer la experiencia',
           fase2Badge: 'Estructura Canónica de 8 Pasos',
           fase2Titulo: 'Lecciones interactivas de 30 minutos guiadas paso a paso',
           fase2Subtitulo: 'El apoderado guía con diálogo socrático y preguntas precisas, mientras el estudiante practica de forma autónoma.',
           fase3Badge: 'Autonomía y Confianza Escolar',
-          fase3Titulo: 'Acompañamiento sin sobrecarga cognitiva',
-          fase3Subtitulo: 'Diseñado especialmente para familias neurodivergentes y homeschooling.'
+          fase3Titulo: 'Preparados para validar sus estudios con éxito',
+          fase3Subtitulo: 'Una metodología validada que brinda tranquilidad a las familias y seguridad a los estudiantes frente a la evaluación MINEDUC.',
+          fase3BotonTexto: 'Conoce cómo funciona el método'
         }
       },
       {
@@ -566,16 +568,32 @@ export function loadCmsPages(): CmsPage[] {
           }
         }
 
-        // 10. Auto-reparar sec-hero con textos de fases si no los tiene
-        const homeHero = home?.secciones.find((s: any) => s.id === 'sec-hero' || s.tipoBloque === 'HERO');
-        if (homeHero && !homeHero.configuracion?.fase1Titulo) {
-          const defaultHero = INITIAL_CMS_PAGES[0].secciones.find((s) => s.id === 'sec-hero');
-          if (defaultHero?.configuracion) {
-            homeHero.configuracion = {
-              ...(homeHero.configuracion || {}),
-              ...defaultHero.configuracion
-            };
+        // 10. Auto-reparar sec-hero con textos canónicos de fases si no los tiene o si son obsoletos
+        const homeHero = home?.secciones.find((s: any) => s.id === 'sec-hero' || s.tipoBloque === 'HERO' || s.tipoBloque === 'HERO_SYSTEM');
+        if (homeHero) {
+          if (!homeHero.configuracion) {
+            homeHero.configuracion = {};
+          }
+          if (homeHero.titulo === 'Aprende lo Esencial, Valídalo en tu Cuaderno.') {
+            homeHero.titulo = 'Prepara sus exámenes libres sin estrés.';
+            homeHero.subtitulo = 'Microaprendizaje de 30 minutos al día con pedagogía adaptativa y acompañamiento guiado.';
             changed = true;
+          }
+          if (homeHero.configuracion.fase3Titulo === 'Acompañamiento sin sobrecarga cognitiva') {
+            homeHero.configuracion.fase3Titulo = 'Preparados para validar sus estudios con éxito';
+            homeHero.configuracion.fase3Subtitulo = 'Una metodología validada que brinda tranquilidad a las familias y seguridad a los estudiantes frente a la evaluación MINEDUC.';
+            homeHero.configuracion.fase3BotonTexto = 'Conoce cómo funciona el método';
+            changed = true;
+          }
+          if (!homeHero.configuracion.fase1Titulo) {
+            const defaultHero = INITIAL_CMS_PAGES[0].secciones.find((s) => s.id === 'sec-hero');
+            if (defaultHero?.configuracion) {
+              homeHero.configuracion = {
+                ...(homeHero.configuracion || {}),
+                ...defaultHero.configuracion
+              };
+              changed = true;
+            }
           }
         }
 

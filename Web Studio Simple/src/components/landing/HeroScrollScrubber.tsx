@@ -13,12 +13,14 @@ export interface HeroScrollScrubberProps {
     fase1Badge?: string;
     fase1Titulo?: string;
     fase1Subtitulo?: string;
+    fase1IndicadorScroll?: string;
     fase2Badge?: string;
     fase2Titulo?: string;
     fase2Subtitulo?: string;
     fase3Badge?: string;
     fase3Titulo?: string;
     fase3Subtitulo?: string;
+    fase3BotonTexto?: string;
     ctaText?: string;
     ctaSecondaryText?: string;
   };
@@ -198,6 +200,22 @@ export const HeroScrollScrubber: React.FC<HeroScrollScrubberProps> = ({ config }
     requestAnimationFrame(animateScroll);
   };
 
+  const renderFase1Titulo = () => {
+    const fullText = config?.fase1Titulo || 'Prepara sus exámenes libres sin estrés.';
+    const highlight = config?.highlightWord || 'sin estrés.';
+    if (highlight && fullText.includes(highlight)) {
+      const parts = fullText.split(highlight);
+      return (
+        <>
+          {parts[0]}
+          <span className="text-[#F8AD22]">{highlight}</span>
+          {parts.slice(1).join(highlight)}
+        </>
+      );
+    }
+    return fullText;
+  };
+
   return (
     <div ref={containerRef} className="relative w-full h-[240vh] bg-[#0A192F]">
       {/* Sticky Viewport Container */}
@@ -223,11 +241,7 @@ export const HeroScrollScrubber: React.FC<HeroScrollScrubberProps> = ({ config }
           </div>
 
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-black text-white tracking-tight leading-tight mb-4 drop-shadow-[0_4px_16px_rgba(0,0,0,0.85)]">
-            {config?.fase1Titulo ? (
-              config.fase1Titulo
-            ) : (
-              <>Prepara sus exámenes libres <span className="text-[#F8AD22]">{config?.highlightWord || 'sin estrés.'}</span></>
-            )}
+            {renderFase1Titulo()}
           </h1>
 
           <p className="text-white/95 text-sm sm:text-lg max-w-xl font-medium leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
@@ -236,7 +250,7 @@ export const HeroScrollScrubber: React.FC<HeroScrollScrubberProps> = ({ config }
 
           <div className="mt-8 flex items-center gap-2 text-white/80 text-xs font-bold animate-bounce drop-shadow">
             <ArrowDown className="w-4 h-4 text-[#F8AD22]" />
-            <span>Desliza hacia abajo para recorrer la experiencia</span>
+            <span>{config?.fase1IndicadorScroll || 'Desliza hacia abajo para recorrer la experiencia'}</span>
           </div>
         </div>
 
@@ -283,7 +297,7 @@ export const HeroScrollScrubber: React.FC<HeroScrollScrubberProps> = ({ config }
               onClick={handleScrollToMethod}
               className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-white/15 hover:bg-white/25 border border-white/30 text-white font-bold text-sm shadow-2xl backdrop-blur-md transition-all hover:scale-105 cursor-pointer"
             >
-              <span>Conoce cómo funciona el método</span>
+              <span>{config?.fase3BotonTexto || config?.ctaText || 'Conoce cómo funciona el método'}</span>
               <ArrowDown className="w-4 h-4 text-[#F8AD22]" />
             </button>
           </div>
