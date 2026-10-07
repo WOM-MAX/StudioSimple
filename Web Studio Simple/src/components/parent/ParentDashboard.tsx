@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
+import { GradeLevel } from '../../types';
 import { OFFICIAL_SUBJECTS, getSubjectOAs, CurricularOA } from '../../data/curriculumData';
 import { findInjectedLesson, isLessonCompleted } from '../../lib/lesson-repository';
 import {
@@ -30,9 +31,17 @@ import {
   X,
   Pencil,
   Mail,
-  Phone
+  Phone,
+  Settings,
+  User,
+  Eye,
+  EyeOff,
+  Save,
+  UserCheck,
+  Check
 } from 'lucide-react';
 import { updateFamilyDetails } from '../../lib/user-repository';
+import { formatRut } from '../../lib/rut-validator';
 
 const GRADES = ['3° Básico', '4° Básico', '5° Básico', '6° Básico', '7° Básico', '8° Básico'];
 
@@ -49,12 +58,13 @@ export const ParentDashboard: React.FC = () => {
     themeMode,
     toggleThemeMode,
     generateStudentPin,
-    changeParentPassword
+    changeParentPassword,
+    updateParentProfile
   } = useApp();
   const [selectedGrade, setSelectedGrade] = useState<string>(student?.grade || '7° Básico');
   const [selectedSubject, setSelectedSubject] = useState('Matemática');
   const [selectedOaIndex, setSelectedOaIndex] = useState(0);
-  const [activeTab, setActiveTab] = useState<'lessons' | 'analytics' | 'credentials'>('lessons');
+  const [activeTab, setActiveTab] = useState<'lessons' | 'analytics' | 'credentials' | 'settings'>('lessons');
   const [copiedPin, setCopiedPin] = useState(false);
   const [pinFeedback, setPinFeedback] = useState<string | null>(null);
   const [showCancelModal, setShowCancelModal] = useState(false);
@@ -63,86 +73,135 @@ export const ParentDashboard: React.FC = () => {
   const [cancelMessage, setCancelMessage] = useState<string | null>(null);
   const [isSubscriptionActive, setIsSubscriptionActive] = useState<boolean>(parent?.subscriptionActive !== false);
 
-  // Estados para actualizar datos de contacto del apoderado (correo y teléfono)
-  const [showContactModal, setShowContactModal] = useState(false);
-  const [contactEmailInput, setContactEmailInput] = useState(parent?.email || '');
-  const [contactPhoneInput, setContactPhoneInput] = useState(parent?.phone || '');
-  const [isSavingContact, setIsSavingContact] = useState(false);
-  const [contactError, setContactError] = useState<string | null>(null);
-  const [contactSuccess, setContactSuccess] = useState(false);
+  // Estados para panel de configuración y autoservicio
+  const [parentNameInput, setParentNameInput] = useState(parent?.name || '');
+  const [parentRutInput, setParentRutInput] = useState(parent?.rut || '');
+  const [parentEmailInput, setParentEmailInput] = useState(parent?.email || '');
+  const [parentPhoneInput, setParentPhoneInput] = useState(parent?.phone || '');
+  const [isSavingParent, setIsSavingParent] = useState(false);
+  const [parentFeedback, setParentFeedback] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
 
-  const handleUpdateContactDetails = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setContactError(null);
-    if (!contactEmailInput || !contactEmailInput.trim().includes('@')) {
-      setContactError('Ingresa una dirección de correo electrónico válida.');
-      return;
-    }
-    setIsSavingContact(true);
-    try {
-      const res = await updateFamilyDetails({
-        id: parent.id,
-        email: contactEmailInput.trim().toLowerCase(),
-        phone: contactPhoneInput.trim()
-      });
-      if (res.success && res.user) {
-        setContactSuccess(true);
-        localStorage.setItem('estudio_simple_parent', JSON.stringify(res.user));
-        setTimeout(() => {
-          setShowContactModal(false);
-          setContactSuccess(false);
-          window.location.reload();
-        }, 1200);
-      } else {
-        setContactError(res.error || 'No fue posible actualizar los datos de contacto.');
-      }
-    } catch (err: any) {
-      setContactError(err?.message || 'Error al actualizar los datos.');
-    } finally {
-      setIsSavingContact(false);
-    }
-  };
+  const [studentNameInput, setStudentNameInput] = useState(student?.name || parent?.studentName || '');
+  const [studentRunInput, setStudentRunInput] = useState(parent?.studentRun || '');
+  const [studentGradeInput, setStudentGradeInput] = useState<string>(student?.grade || selectedGrade || '7° Básico');
+  const [isSavingStudent, setIsSavingStudent] = useState(false);
+  const [studentFeedback, setStudentFeedback] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
 
-  // Estados para cambio de clave del apoderado
-  const [showPasswordModal, setShowPasswordModal] = useState(false);
   const [newPasswordInput, setNewPasswordInput] = useState('');
   const [confirmPasswordInput, setConfirmPasswordInput] = useState('');
   const [showNewPassword, setShowNewPassword] = useState(false);
-  const [isChangingPassword, setIsChangingPassword] = useState(false);
-  const [passwordChangeError, setPasswordChangeError] = useState<string | null>(null);
-  const [passwordChangeSuccess, setPasswordChangeSuccess] = useState(false);
+  const [isSavingPassword, setIsSavingPassword] = useState(false);
+  const [passwordFeedback, setPasswordFeedback] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
 
-  const handleChangePassword = async (e: React.FormEvent) => {
+  // Sincronizar inputs si cambia parent o student
+  React.useEffect(() => {
+    if (parent) {
+      setParentNameInput(parent.name || '');
+      setParentRutInput(parent.rut || '');
+      setParentEmailInput(parent.email || '');
+      setParentPhoneInput(parent.phone || '');
+    }
+  }, [parent]);
+
+  React.useEffect(() => {
+    if (student) {
+      setStudentNameInput(student.name || parent?.studentName || '');
+      setStudentRunInput(parent?.studentRun || '');
+      setStudentGradeInput(student.grade || selectedGrade || '7° Básico');
+    }
+  }, [student, parent?.studentRun, parent?.studentName, selectedGrade]);
+
+  const handleSaveParentProfile = async (e: React.FormEvent) => {
     e.preventDefault();
-    setPasswordChangeError(null);
+    setParentFeedback(null);
+    if (!parentEmailInput.trim().includes('@')) {
+      setParentFeedback({ type: 'error', text: 'Por favor ingresa un correo electrónico válido.' });
+      return;
+    }
+    setIsSavingParent(true);
+    try {
+      const payload = {
+        id: parent.id,
+        name: parentNameInput.trim(),
+        rut: parentRutInput.trim(),
+        email: parentEmailInput.trim().toLowerCase(),
+        phone: parentPhoneInput.trim()
+      };
+      const res = await updateFamilyDetails(payload);
+      if (res.success) {
+        updateParentProfile(payload);
+        setParentFeedback({ type: 'success', text: '¡Tus datos de apoderado han sido guardados exitosamente!' });
+        setTimeout(() => setParentFeedback(null), 4000);
+      } else {
+        setParentFeedback({ type: 'error', text: res.error || 'No fue posible guardar los datos.' });
+      }
+    } catch (err: any) {
+      setParentFeedback({ type: 'error', text: err?.message || 'Error al conectar con la base de datos.' });
+    } finally {
+      setIsSavingParent(false);
+    }
+  };
+
+  const handleSaveStudentProfile = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStudentFeedback(null);
+    if (!studentNameInput.trim()) {
+      setStudentFeedback({ type: 'error', text: 'Por favor ingresa el nombre del estudiante.' });
+      return;
+    }
+    setIsSavingStudent(true);
+    try {
+      const payload = {
+        id: parent.id,
+        studentName: studentNameInput.trim(),
+        studentRun: studentRunInput.trim(),
+        enrolledGrades: [studentGradeInput as GradeLevel]
+      };
+      const res = await updateFamilyDetails(payload);
+      if (res.success) {
+        updateParentProfile(payload);
+        setSelectedGrade(studentGradeInput);
+        setStudentFeedback({ type: 'success', text: '¡Datos y curso del estudiante guardados correctamente!' });
+        setTimeout(() => setStudentFeedback(null), 4000);
+      } else {
+        setStudentFeedback({ type: 'error', text: res.error || 'No fue posible actualizar al estudiante.' });
+      }
+    } catch (err: any) {
+      setStudentFeedback({ type: 'error', text: err?.message || 'Error al conectar con la base de datos.' });
+    } finally {
+      setIsSavingStudent(false);
+    }
+  };
+
+  const handleSavePassword = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setPasswordFeedback(null);
     if (!newPasswordInput || newPasswordInput.trim().length < 6) {
-      setPasswordChangeError('La nueva contraseña debe tener al menos 6 caracteres.');
+      setPasswordFeedback({ type: 'error', text: 'La nueva contraseña debe tener al menos 6 caracteres.' });
       return;
     }
     if (newPasswordInput !== confirmPasswordInput) {
-      setPasswordChangeError('Las contraseñas no coinciden. Por favor verifícalas.');
+      setPasswordFeedback({ type: 'error', text: 'Las contraseñas no coinciden. Por favor verifícalas.' });
       return;
     }
-    setIsChangingPassword(true);
+    setIsSavingPassword(true);
     try {
       const res = await changeParentPassword(newPasswordInput.trim());
       if (res.success) {
-        setPasswordChangeSuccess(true);
-        setTimeout(() => {
-          setShowPasswordModal(false);
-          setNewPasswordInput('');
-          setConfirmPasswordInput('');
-          setPasswordChangeSuccess(false);
-        }, 1800);
+        setPasswordFeedback({ type: 'success', text: '¡Contraseña actualizada exitosamente! Úsala en tu próximo acceso.' });
+        setNewPasswordInput('');
+        setConfirmPasswordInput('');
+        setTimeout(() => setPasswordFeedback(null), 4000);
       } else {
-        setPasswordChangeError(res.error || 'No fue posible actualizar la contraseña.');
+        setPasswordFeedback({ type: 'error', text: res.error || 'No fue posible actualizar la contraseña.' });
       }
     } catch (err: any) {
-      setPasswordChangeError(err?.message || 'Error al actualizar la contraseña.');
+      setPasswordFeedback({ type: 'error', text: err?.message || 'Error al actualizar la contraseña.' });
     } finally {
-      setIsChangingPassword(false);
+      setIsSavingPassword(false);
     }
   };
+
 
   const handleCancelSubscription = async () => {
     setIsCancelling(true);
@@ -343,8 +402,8 @@ export const ParentDashboard: React.FC = () => {
             </div>
           </div>
 
-          {/* Theme Toggle, Profile & Logout */}
-          <div className="flex items-center gap-3">
+          {/* Theme Toggle, Quick Settings, Profile & Logout */}
+          <div className="flex items-center gap-2.5">
             <button
               type="button"
               onClick={toggleThemeMode}
@@ -358,15 +417,32 @@ export const ParentDashboard: React.FC = () => {
               {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </button>
 
+            {/* Acceso directo a panel de Ajustes */}
+            <button
+              type="button"
+              onClick={() => setActiveTab('settings')}
+              className={`px-2.5 py-1.5 rounded-xl border transition-all cursor-pointer flex items-center gap-1.5 text-xs font-bold ${
+                activeTab === 'settings' || activeTab === 'credentials'
+                  ? 'bg-amber-500/20 border-amber-500/40 text-amber-400'
+                  : isDark
+                  ? 'bg-[#1C3257] border-[#2A4365] text-slate-300 hover:text-white hover:bg-[#2A4365]'
+                  : 'bg-slate-100 border-slate-200 text-[#1C3257] hover:bg-slate-200'
+              }`}
+              title="Panel de Ajustes y Credenciales"
+            >
+              <Settings className="w-3.5 h-3.5 text-amber-500" />
+              <span className="hidden sm:inline">Ajustes</span>
+            </button>
+
             <div className="hidden md:flex flex-col text-right">
               <span className={`text-xs font-bold ${isDark ? 'text-white' : 'text-[#1C3257]'}`}>
                 {parent.name || 'Apoderado'}
               </span>
               <button
                 type="button"
-                onClick={() => setActiveTab('credentials')}
+                onClick={() => setActiveTab('settings')}
                 className="text-[10px] text-amber-500 hover:underline flex items-center gap-1 cursor-pointer font-bold justify-end"
-                title="Ver y Gestionar PIN del Estudiante"
+                title="Gestionar PIN y Datos en Ajustes"
               >
                 <KeyRound size={11} />
                 <span>PIN: {student.pin || parent.studentPin || '123456'}</span>
@@ -420,17 +496,17 @@ export const ParentDashboard: React.FC = () => {
 
           <button
             type="button"
-            onClick={() => setActiveTab('credentials')}
+            onClick={() => setActiveTab('settings')}
             className={`py-3.5 px-3 text-xs font-bold border-b-2 flex items-center gap-2 transition-all cursor-pointer ${
-              activeTab === 'credentials'
+              activeTab === 'settings' || activeTab === 'credentials'
                 ? isDark
                   ? 'border-[#F8AD22] text-[#F8AD22]'
                   : 'border-[#F8AD22] text-amber-700'
                 : 'border-transparent text-slate-500 hover:text-slate-800'
             }`}
           >
-            <KeyRound className="w-4 h-4" />
-            <span>PIN & Credenciales Familiares</span>
+            <Settings className="w-4 h-4" />
+            <span>Ajustes & Claves (Configuración Familiar)</span>
           </button>
 
           <button
@@ -947,23 +1023,29 @@ export const ParentDashboard: React.FC = () => {
           </div>
         )}
 
-        {/* TAB 3: CREDENCIALES DE ACCESO & PIN FAMILIAR */}
-        {activeTab === 'credentials' && (
-          <div className="space-y-6">
-            {/* Header del Tab */}
+        {/* TAB 3: AJUSTES, CONFIGURACIÓN FAMILIAR & CREDENCIALES (100% AUTOSERVICIO) */}
+        {(activeTab === 'settings' || activeTab === 'credentials') && (
+          <div className="space-y-6 animate-fadeIn">
+            {/* Header del Panel de Ajustes y Autoservicio */}
             <div className={`p-6 sm:p-8 rounded-3xl border ${
-              isDark ? 'bg-[#10223D] border-[#1C3257] shadow-xl' : 'bg-white/90 backdrop-blur-xs border-slate-200/90 shadow-sm'
+              isDark ? 'bg-[#10223D] border-[#1C3257] shadow-xl' : 'bg-white/95 backdrop-blur-xs border-slate-200/90 shadow-sm'
             }`}>
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
-                  <span className="text-[10px] font-black text-[#F8AD22] uppercase tracking-wider block mb-1">
-                    Seguridad y Control Familiar
-                  </span>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-[10px] font-black text-[#F8AD22] uppercase tracking-wider bg-amber-500/10 px-2.5 py-0.5 rounded-md border border-amber-500/20">
+                      Panel de Autoservicio 100% Autónomo
+                    </span>
+                    <span className="text-[10px] font-black text-emerald-500 bg-emerald-500/10 px-2.5 py-0.5 rounded-md border border-emerald-500/20 flex items-center gap-1">
+                      <Check size={11} />
+                      <span>Sincronizado con Neon DB</span>
+                    </span>
+                  </div>
                   <h2 className={`text-xl sm:text-2xl font-black ${isDark ? 'text-white' : 'text-[#1C3257]'}`}>
-                    Credenciales de Acceso y PIN del Estudiante
+                    Ajustes de Cuenta, Datos y Credenciales
                   </h2>
                   <p className="text-xs text-slate-400 mt-1 max-w-2xl leading-relaxed">
-                    Gestiona los accesos de tu familia. Tu hijo/a no necesita contraseñas complejas: ingresa directamente al aula digitando su PIN numérico de 6 dígitos.
+                    Modifica tus datos de contacto, el nombre y curso de tu hijo/a, gestiona el PIN de aula o renueva tu contraseña en cualquier momento con guardado inmediato en tu base de datos, sin necesidad de llamar a soporte.
                   </p>
                 </div>
               </div>
@@ -976,223 +1058,468 @@ export const ParentDashboard: React.FC = () => {
               )}
             </div>
 
-            {/* Grid Dual: Estudiante vs Apoderado */}
+            {/* BENTO GRID DE 5 TARJETAS DE AUTOSERVICIO */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {/* Tarjeta del Estudiante */}
+
+              {/* BENTO 1: DATOS DEL TITULAR / APODERADO */}
+              <div className={`p-6 sm:p-8 rounded-3xl border flex flex-col justify-between ${
+                isDark ? 'bg-[#10223D] border-[#1C3257] shadow-lg' : 'bg-white border-slate-200 shadow-sm'
+              }`}>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between border-b border-white/10 dark:border-white/10 pb-3">
+                    <div className="flex items-center gap-2 text-[#12A1A4] font-black text-xs uppercase tracking-wider">
+                      <UserCheck size={18} />
+                      <span>1. Datos del Titular / Apoderado</span>
+                    </div>
+                    <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-[#12A1A4]/15 text-[#12A1A4]">
+                      Editable
+                    </span>
+                  </div>
+
+                  <p className="text-xs text-slate-400">
+                    Información oficial del tutor legal responsable del estudiante y de la facturación.
+                  </p>
+
+                  <form onSubmit={handleSaveParentProfile} className="space-y-3 text-xs">
+                    <div>
+                      <label className="block text-[11px] font-bold text-slate-400 mb-1">
+                        Nombre Completo del Apoderado:
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        value={parentNameInput}
+                        onChange={(e) => setParentNameInput(e.target.value)}
+                        placeholder="Ej. Mercedes Peña Córdova"
+                        className={`w-full rounded-xl px-3 py-2.5 text-xs font-semibold border transition-all ${
+                          isDark
+                            ? 'bg-black/30 border-white/15 text-white focus:border-[#12A1A4]'
+                            : 'bg-slate-50 border-slate-200 text-[#1C3257] focus:border-[#12A1A4]'
+                        }`}
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-[11px] font-bold text-slate-400 mb-1">
+                        RUN de Identificación:
+                      </label>
+                      <input
+                        type="text"
+                        value={parentRutInput}
+                        onChange={(e) => setParentRutInput(formatRut(e.target.value))}
+                        placeholder="Ej. 12.345.678-9"
+                        className={`w-full rounded-xl px-3 py-2.5 text-xs font-mono font-bold border transition-all ${
+                          isDark
+                            ? 'bg-black/30 border-white/15 text-white focus:border-[#12A1A4]'
+                            : 'bg-slate-50 border-slate-200 text-[#1C3257] focus:border-[#12A1A4]'
+                        }`}
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-[11px] font-bold text-slate-400 mb-1">
+                        Correo Electrónico (Login Apoderado):
+                      </label>
+                      <input
+                        type="email"
+                        required
+                        value={parentEmailInput}
+                        onChange={(e) => setParentEmailInput(e.target.value)}
+                        placeholder="apoderado@correo.cl"
+                        className={`w-full rounded-xl px-3 py-2.5 text-xs font-semibold border transition-all ${
+                          isDark
+                            ? 'bg-black/30 border-white/15 text-white focus:border-[#12A1A4]'
+                            : 'bg-slate-50 border-slate-200 text-[#1C3257] focus:border-[#12A1A4]'
+                        }`}
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-[11px] font-bold text-slate-400 mb-1">
+                        Teléfono Móvil (WhatsApp de Avisos):
+                      </label>
+                      <input
+                        type="tel"
+                        value={parentPhoneInput}
+                        onChange={(e) => setParentPhoneInput(e.target.value)}
+                        placeholder="+56 9 1234 5678"
+                        className={`w-full rounded-xl px-3 py-2.5 text-xs font-mono font-bold border transition-all ${
+                          isDark
+                            ? 'bg-black/30 border-white/15 text-white focus:border-[#12A1A4]'
+                            : 'bg-slate-50 border-slate-200 text-[#1C3257] focus:border-[#12A1A4]'
+                        }`}
+                      />
+                    </div>
+
+                    {parentFeedback && (
+                      <div className={`p-2.5 rounded-xl text-xs font-bold flex items-center gap-2 ${
+                        parentFeedback.type === 'success'
+                          ? 'bg-emerald-500/20 border border-emerald-500/40 text-emerald-400'
+                          : 'bg-rose-500/20 border border-rose-500/40 text-rose-300'
+                      }`}>
+                        {parentFeedback.type === 'success' ? <CheckCircle2 size={15} /> : <AlertTriangle size={15} />}
+                        <span>{parentFeedback.text}</span>
+                      </div>
+                    )}
+
+                    <button
+                      type="submit"
+                      disabled={isSavingParent}
+                      className="w-full mt-2 py-2.5 px-4 rounded-xl bg-[#12A1A4] hover:bg-[#0e8385] text-white font-bold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer shadow-xs disabled:opacity-50"
+                    >
+                      <Save size={14} />
+                      <span>{isSavingParent ? 'Guardando en Base de Datos...' : 'Guardar Datos del Apoderado'}</span>
+                    </button>
+                  </form>
+                </div>
+              </div>
+
+              {/* BENTO 2: DATOS DEL ESTUDIANTE & NIVEL EDUCATIVO */}
+              <div className={`p-6 sm:p-8 rounded-3xl border flex flex-col justify-between ${
+                isDark ? 'bg-[#10223D] border-[#1C3257] shadow-lg' : 'bg-white border-slate-200 shadow-sm'
+              }`}>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                    <div className="flex items-center gap-2 text-[#F8AD22] font-black text-xs uppercase tracking-wider">
+                      <GraduationCap size={18} />
+                      <span>2. Datos del Estudiante & Curso</span>
+                    </div>
+                    <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-[#F8AD22]/15 text-[#F8AD22]">
+                      Editable
+                    </span>
+                  </div>
+
+                  <p className="text-xs text-slate-400">
+                    Configura el nombre del alumno, su RUN y el curso oficial activo al que ingresa con su PIN.
+                  </p>
+
+                  <form onSubmit={handleSaveStudentProfile} className="space-y-3 text-xs">
+                    <div>
+                      <label className="block text-[11px] font-bold text-slate-400 mb-1">
+                        Nombre Completo del Alumno:
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        value={studentNameInput}
+                        onChange={(e) => setStudentNameInput(e.target.value)}
+                        placeholder="Ej. Mateo Silva Peña"
+                        className={`w-full rounded-xl px-3 py-2.5 text-xs font-semibold border transition-all ${
+                          isDark
+                            ? 'bg-black/30 border-white/15 text-white focus:border-[#F8AD22]'
+                            : 'bg-slate-50 border-slate-200 text-[#1C3257] focus:border-[#F8AD22]'
+                        }`}
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-[11px] font-bold text-slate-400 mb-1">
+                        RUN del Estudiante (Opcional):
+                      </label>
+                      <input
+                        type="text"
+                        value={studentRunInput}
+                        onChange={(e) => setStudentRunInput(formatRut(e.target.value))}
+                        placeholder="Ej. 25.123.456-7"
+                        className={`w-full rounded-xl px-3 py-2.5 text-xs font-mono font-bold border transition-all ${
+                          isDark
+                            ? 'bg-black/30 border-white/15 text-white focus:border-[#F8AD22]'
+                            : 'bg-slate-50 border-slate-200 text-[#1C3257] focus:border-[#F8AD22]'
+                        }`}
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-[11px] font-bold text-slate-400 mb-1">
+                        Nivel Escolar Oficial Asignado:
+                      </label>
+                      <div className="relative">
+                        <select
+                          value={studentGradeInput}
+                          onChange={(e) => setStudentGradeInput(e.target.value)}
+                          className={`w-full appearance-none rounded-xl px-3 py-2.5 text-xs font-bold border cursor-pointer transition-all ${
+                            isDark
+                              ? 'bg-[#0A192F] border-white/15 text-white focus:border-[#F8AD22]'
+                              : 'bg-slate-50 border-slate-200 text-[#1C3257] focus:border-[#F8AD22]'
+                          }`}
+                        >
+                          {GRADES.map((g) => (
+                            <option key={g} value={g} className={isDark ? 'bg-[#10223D] text-white' : 'bg-white text-[#1C3257]'}>
+                              {g} (Bases Curriculares MINEDUC)
+                            </option>
+                          ))}
+                        </select>
+                        <ChevronDown className="w-4 h-4 text-slate-400 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+                      </div>
+                    </div>
+
+                    <div className="p-3 rounded-xl bg-amber-500/10 border border-amber-500/20 text-slate-400 text-[11px] leading-relaxed">
+                      💡 Cambiar de curso actualiza instantáneamente el catálogo de lecciones, cápsulas y ensayos MINEDUC que tu hijo verá en su pantalla.
+                    </div>
+
+                    {studentFeedback && (
+                      <div className={`p-2.5 rounded-xl text-xs font-bold flex items-center gap-2 ${
+                        studentFeedback.type === 'success'
+                          ? 'bg-emerald-500/20 border border-emerald-500/40 text-emerald-400'
+                          : 'bg-rose-500/20 border border-rose-500/40 text-rose-300'
+                      }`}>
+                        {studentFeedback.type === 'success' ? <CheckCircle2 size={15} /> : <AlertTriangle size={15} />}
+                        <span>{studentFeedback.text}</span>
+                      </div>
+                    )}
+
+                    <button
+                      type="submit"
+                      disabled={isSavingStudent}
+                      className="w-full mt-2 py-2.5 px-4 rounded-xl bg-[#F8AD22] hover:bg-[#e59d1a] text-[#0A192F] font-bold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer shadow-xs disabled:opacity-50"
+                    >
+                      <Save size={14} />
+                      <span>{isSavingStudent ? 'Guardando en Base de Datos...' : 'Guardar Datos del Estudiante'}</span>
+                    </button>
+                  </form>
+                </div>
+              </div>
+
+              {/* BENTO 3: SEGURIDAD & CAMBIO DE CONTRASEÑA */}
+              <div className={`p-6 sm:p-8 rounded-3xl border flex flex-col justify-between ${
+                isDark ? 'bg-[#10223D] border-[#1C3257] shadow-lg' : 'bg-white border-slate-200 shadow-sm'
+              }`}>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                    <div className="flex items-center gap-2 text-rose-400 font-black text-xs uppercase tracking-wider">
+                      <Lock size={18} />
+                      <span>3. Clave de Acceso del Titular</span>
+                    </div>
+                    <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-rose-500/15 text-rose-400">
+                      Autoservicio
+                    </span>
+                  </div>
+
+                  <p className="text-xs text-slate-400 leading-relaxed">
+                    Define una nueva contraseña segura para tu cuenta de apoderado. La actualización es inmediata y no requiere códigos por SMS ni validación de soporte.
+                  </p>
+
+                  <form onSubmit={handleSavePassword} className="space-y-3 text-xs">
+                    <div>
+                      <label className="block text-[11px] font-bold text-slate-400 mb-1">
+                        Nueva Contraseña (mínimo 6 caracteres):
+                      </label>
+                      <div className="relative">
+                        <input
+                          type={showNewPassword ? 'text' : 'password'}
+                          required
+                          value={newPasswordInput}
+                          onChange={(e) => setNewPasswordInput(e.target.value)}
+                          placeholder="Ingresa tu nueva clave secreta"
+                          className={`w-full rounded-xl px-3 py-2.5 pr-12 text-xs font-semibold border transition-all ${
+                            isDark
+                              ? 'bg-black/30 border-white/15 text-white focus:border-rose-400'
+                              : 'bg-slate-50 border-slate-200 text-[#1C3257] focus:border-rose-400'
+                          }`}
+                        />
+                        <button
+                          type="button"
+                          onClick={() => setShowNewPassword(!showNewPassword)}
+                          className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white transition-colors cursor-pointer"
+                          title={showNewPassword ? 'Ocultar' : 'Mostrar'}
+                        >
+                          {showNewPassword ? <EyeOff size={16} /> : <Eye size={16} />}
+                        </button>
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-[11px] font-bold text-slate-400 mb-1">
+                        Confirmar Nueva Contraseña:
+                      </label>
+                      <input
+                        type={showNewPassword ? 'text' : 'password'}
+                        required
+                        value={confirmPasswordInput}
+                        onChange={(e) => setConfirmPasswordInput(e.target.value)}
+                        placeholder="Repite la nueva clave secreta"
+                        className={`w-full rounded-xl px-3 py-2.5 text-xs font-semibold border transition-all ${
+                          isDark
+                            ? 'bg-black/30 border-white/15 text-white focus:border-rose-400'
+                            : 'bg-slate-50 border-slate-200 text-[#1C3257] focus:border-rose-400'
+                        }`}
+                      />
+                    </div>
+
+                    {passwordFeedback && (
+                      <div className={`p-2.5 rounded-xl text-xs font-bold flex items-center gap-2 ${
+                        passwordFeedback.type === 'success'
+                          ? 'bg-emerald-500/20 border border-emerald-500/40 text-emerald-400'
+                          : 'bg-rose-500/20 border border-rose-500/40 text-rose-300'
+                      }`}>
+                        {passwordFeedback.type === 'success' ? <CheckCircle2 size={15} /> : <AlertTriangle size={15} />}
+                        <span>{passwordFeedback.text}</span>
+                      </div>
+                    )}
+
+                    <button
+                      type="submit"
+                      disabled={isSavingPassword}
+                      className="w-full mt-2 py-2.5 px-4 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer shadow-xs disabled:opacity-50"
+                    >
+                      <KeyRound size={14} />
+                      <span>{isSavingPassword ? 'Actualizando Clave...' : 'Actualizar Contraseña'}</span>
+                    </button>
+                  </form>
+                </div>
+              </div>
+
+              {/* BENTO 4: PIN DE ACCESO DIRECTO DEL ESTUDIANTE */}
               <div className={`p-6 sm:p-8 rounded-3xl border flex flex-col justify-between ${
                 isDark ? 'bg-[#0E1C33] border-[#F8AD22]/40 shadow-lg' : 'bg-white border-amber-200 shadow-sm'
               }`}>
                 <div className="space-y-4">
                   <div className="flex items-center justify-between border-b border-white/10 pb-3">
                     <div className="flex items-center gap-2 text-[#F8AD22] font-black text-xs uppercase tracking-wider">
-                      <GraduationCap size={18} />
-                      <span>Acceso del Estudiante (Aula Virtual)</span>
+                      <KeyRound size={18} />
+                      <span>4. PIN de Acceso del Estudiante</span>
                     </div>
-                    <span className="px-2.5 py-0.5 rounded-full bg-[#F8AD22]/20 text-[#F8AD22] text-[10px] font-extrabold uppercase">
-                      Activo
+                    <span className="px-2 py-0.5 rounded-full bg-[#F8AD22]/20 text-[#F8AD22] text-[10px] font-extrabold uppercase">
+                      Aula Virtual
                     </span>
                   </div>
 
-                  <div className="space-y-3">
-                    <div>
-                      <span className="text-[11px] text-slate-400 block font-semibold">Nombre del Estudiante:</span>
-                      <strong className={`text-base font-black ${isDark ? 'text-white' : 'text-[#1C3257]'}`}>
-                        {student.name || 'Estudiante'} ({student.grade || selectedGrade})
-                      </strong>
-                    </div>
+                  <p className="text-xs text-slate-400 leading-relaxed">
+                    Tu hijo/a no necesita recordar correos ni contraseñas complejas. Solo digita este PIN de 6 dígitos para ingresar directamente a sus lecciones.
+                  </p>
 
+                  <div className="p-4 rounded-2xl bg-[#0A192F] border-2 border-[#F8AD22] flex items-center justify-between">
                     <div>
-                      <span className="text-[11px] text-slate-400 block font-semibold mb-1">
-                        PIN Numérico de Ingreso Directo:
-                      </span>
-                      <div className="p-4 rounded-2xl bg-[#0A192F] border-2 border-[#F8AD22] flex items-center justify-between">
-                        <div>
-                          <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
-                            Código de 6 dígitos
-                          </div>
-                          <div className="font-mono text-3xl font-black text-[#F8AD22] tracking-[0.25em] mt-0.5">
-                            {student.pin || parent.studentPin || '123456'}
-                          </div>
-                        </div>
-
-                        <button
-                          type="button"
-                          onClick={handleCopyPin}
-                          className="px-3.5 py-2 rounded-xl bg-[#F8AD22] hover:bg-[#e09b1f] text-[#0A192F] font-bold text-xs flex items-center gap-1.5 transition-all hover:scale-105 active:scale-95 cursor-pointer shadow-md"
-                          title="Copiar PIN"
-                        >
-                          {copiedPin ? <CheckCircle2 size={16} /> : <Copy size={16} />}
-                          <span>{copiedPin ? 'Copiado' : 'Copiar'}</span>
-                        </button>
+                      <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+                        Código PIN de 6 dígitos
+                      </div>
+                      <div className="font-mono text-3xl font-black text-[#F8AD22] tracking-[0.25em] mt-0.5">
+                        {student.pin || parent.studentPin || '123456'}
                       </div>
                     </div>
 
-                    <p className="text-xs text-slate-400 leading-relaxed">
-                      El estudiante no necesita recordar correos ni contraseñas. Al abrir la plataforma, solo escribe este PIN y entra directo a sus clases.
-                    </p>
+                    <button
+                      type="button"
+                      onClick={handleCopyPin}
+                      className="px-3.5 py-2 rounded-xl bg-[#F8AD22] hover:bg-[#e09b1f] text-[#0A192F] font-bold text-xs flex items-center gap-1.5 transition-all hover:scale-105 active:scale-95 cursor-pointer shadow-md"
+                      title="Copiar PIN"
+                    >
+                      {copiedPin ? <CheckCircle2 size={16} /> : <Copy size={16} />}
+                      <span>{copiedPin ? 'Copiado' : 'Copiar'}</span>
+                    </button>
                   </div>
-                </div>
 
-                <div className="pt-6 border-t border-white/10 mt-6 space-y-2.5">
-                  <div className="flex flex-col sm:flex-row gap-2.5">
+                  <div className="pt-2 space-y-2">
+                    <div className="flex flex-col sm:flex-row gap-2">
+                      <button
+                        type="button"
+                        onClick={handleRegeneratePin}
+                        className="flex-1 py-2 px-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/15 text-xs font-bold text-white flex items-center justify-center gap-2 transition-all cursor-pointer"
+                        title="Generar un nuevo PIN de forma instantánea"
+                      >
+                        <RotateCcw size={14} className="text-[#57d6f3]" />
+                        <span>Regenerar Nuevo PIN</span>
+                      </button>
+
+                      <button
+                        type="button"
+                        onClick={handleSharePinWhatsApp}
+                        className="flex-1 py-2 px-3 rounded-xl bg-[#25D366]/20 hover:bg-[#25D366]/30 border border-[#25D366]/50 text-xs font-bold text-[#25D366] flex items-center justify-center gap-2 transition-all cursor-pointer"
+                      >
+                        <span>Enviar por WhatsApp</span>
+                      </button>
+                    </div>
+
                     <button
                       type="button"
-                      onClick={handleRegeneratePin}
-                      className="flex-1 py-2.5 px-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/15 text-xs font-bold text-white flex items-center justify-center gap-2 transition-all cursor-pointer"
+                      onClick={() => {
+                        setViewMode('student');
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }}
+                      className="w-full py-2.5 px-3 rounded-xl bg-[#12A1A4] hover:bg-[#0e8385] text-white font-extrabold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer shadow-md"
                     >
-                      <RotateCcw size={14} className="text-[#57d6f3]" />
-                      <span>Regenerar Nuevo PIN</span>
-                    </button>
-                    <button
-                      type="button"
-                      onClick={handleSharePinWhatsApp}
-                      className="flex-1 py-2.5 px-3 rounded-xl bg-[#25D366]/20 hover:bg-[#25D366]/30 border border-[#25D366]/50 text-xs font-bold text-[#25D366] flex items-center justify-center gap-2 transition-all cursor-pointer"
-                    >
-                      <span>Enviar PIN por WhatsApp</span>
+                      <Play size={14} />
+                      <span>Ingresar al Salón de Clases con este PIN</span>
                     </button>
                   </div>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setViewMode('student');
-                      window.scrollTo({ top: 0, behavior: 'smooth' });
-                    }}
-                    className="w-full py-2.5 px-3 rounded-xl bg-[#12A1A4] hover:bg-[#0e8385] text-white font-extrabold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer shadow-md"
-                  >
-                    <Play size={14} />
-                    <span>Entrar al Aula como Alumno ({student.grade || selectedGrade})</span>
-                  </button>
                 </div>
               </div>
 
-              {/* Tarjeta del Apoderado */}
-              <div className={`p-6 sm:p-8 rounded-3xl border flex flex-col justify-between ${
+              {/* BENTO 5: SUSCRIPCIÓN & FACTURACIÓN DE AUTOSERVICIO (FULL WIDTH) */}
+              <div className={`lg:col-span-2 p-6 sm:p-8 rounded-3xl border flex flex-col justify-between ${
                 isDark ? 'bg-[#10223D] border-[#1C3257] shadow-lg' : 'bg-white border-slate-200 shadow-sm'
               }`}>
                 <div className="space-y-4">
                   <div className="flex items-center justify-between border-b border-white/10 pb-3">
-                    <div className="flex items-center gap-2 text-[#57d6f3] font-black text-xs uppercase tracking-wider">
+                    <div className="flex items-center gap-2 text-emerald-400 font-black text-xs uppercase tracking-wider">
                       <Shield size={18} />
-                      <span>Cuenta del Apoderado / Tutor Legal</span>
+                      <span>5. Suscripción Familiar & Estado del Plan</span>
                     </div>
                     <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase ${
                       isSubscriptionActive ? 'bg-emerald-500/20 text-emerald-400' : 'bg-amber-500/20 text-amber-400'
                     }`}>
-                      {isSubscriptionActive ? 'Suscripción Activa' : 'Suscripción Cancelada'}
+                      {isSubscriptionActive ? 'Plan Activo (Sin restricciones)' : 'Suscripción Cancelada'}
                     </span>
                   </div>
 
-                  <div className="space-y-3 text-xs">
-                    <div>
-                      <span className="text-[11px] text-slate-400 block font-semibold">Titular Registrado:</span>
-                      <strong className={`text-sm font-black ${isDark ? 'text-white' : 'text-[#1C3257]'}`}>
-                        {parent.name || 'Apoderado'}
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+                    <div className="p-4 rounded-2xl bg-black/20 border border-white/5 space-y-1">
+                      <span className="text-[11px] text-slate-400 block font-semibold">Estado del Servicio:</span>
+                      <strong className="text-sm font-black text-emerald-400 block">
+                        {isSubscriptionActive ? 'Activo & Renovado' : 'Dado de Baja (Sin cobro)'}
                       </strong>
+                      <span className="text-[10px] text-slate-500 block">Acceso ilimitado al temario completo</span>
                     </div>
 
-                    <div>
-                      <span className="text-[11px] text-slate-400 block font-semibold">RUN de Identificación:</span>
-                      <span className="font-mono font-bold text-white bg-black/20 px-3 py-1.5 rounded-lg border border-white/5 inline-block mt-0.5">
-                        {parent.rut || 'No especificado'}
-                      </span>
+                    <div className="p-4 rounded-2xl bg-black/20 border border-white/5 space-y-1">
+                      <span className="text-[11px] text-slate-400 block font-semibold">Plan Oficial:</span>
+                      <strong className={`text-sm font-black ${isDark ? 'text-white' : 'text-[#1C3257]'}`}>
+                        {parent.plan || 'EstudioSimple Pro Anual'}
+                      </strong>
+                      <span className="text-[10px] text-slate-500 block">Todas las asignaturas MINEDUC</span>
                     </div>
 
-                    <div>
-                      <span className="text-[11px] text-slate-400 block font-semibold">Correo Electrónico (Login):</span>
-                      <span className="font-mono font-bold text-white bg-black/20 px-3 py-1.5 rounded-lg border border-white/5 inline-block mt-0.5">
-                        {parent.email || 'No especificado'}
-                      </span>
-                    </div>
-
-                    <div>
-                      <span className="text-[11px] text-slate-400 block font-semibold">Teléfono Móvil de Contacto:</span>
-                      <span className="font-mono font-bold text-white bg-black/20 px-3 py-1.5 rounded-lg border border-white/5 inline-block mt-0.5">
-                        {parent.phone || 'No especificado'}
-                      </span>
-                    </div>
-
-                    <div>
+                    <div className="p-4 rounded-2xl bg-black/20 border border-white/5 space-y-1">
                       <span className="text-[11px] text-slate-400 block font-semibold">Cursos Habilitados:</span>
-                      <div className="flex flex-wrap gap-1.5 mt-1">
+                      <div className="flex flex-wrap gap-1 mt-1">
                         {(parent.enrolledGrades || [student.grade || selectedGrade]).map(g => (
-                          <span key={g} className="px-2.5 py-1 rounded-lg bg-[#12A1A4]/20 border border-[#12A1A4]/40 text-[#57d6f3] font-bold text-xs">
+                          <span key={g} className="px-2 py-0.5 rounded-md bg-[#12A1A4]/20 text-[#57d6f3] font-bold text-[10px]">
                             {g}
                           </span>
                         ))}
                       </div>
                     </div>
+                  </div>
 
-                    {/* Botones de gestion de cuenta del apoderado */}
-                    <div className="pt-2 border-t border-white/10 space-y-2">
+                  {cancelMessage && (
+                    <div className="p-3 rounded-xl bg-amber-500/20 border border-amber-500/40 text-amber-300 text-xs font-semibold">
+                      {cancelMessage}
+                    </div>
+                  )}
+
+                  <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-3 border-t border-white/10">
+                    <p className="text-[11px] text-slate-400 leading-relaxed max-w-xl">
+                      Cuentas con autonomía total: puedes dar de baja o pausar tu cuenta en cualquier momento con un solo clic, sin llamadas de retención ni trámites burocráticos.
+                    </p>
+
+                    {isSubscriptionActive ? (
                       <button
                         type="button"
-                        onClick={() => {
-                          setContactEmailInput(parent.email || '');
-                          setContactPhoneInput(parent.phone || '');
-                          setContactError(null);
-                          setContactSuccess(false);
-                          setShowContactModal(true);
-                        }}
-                        className="w-full py-2.5 px-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/15 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer shadow-xs"
+                        onClick={() => setShowCancelModal(true)}
+                        className="py-2 px-4 rounded-xl bg-rose-500/10 hover:bg-rose-500/20 border border-rose-500/30 text-rose-400 hover:text-rose-300 font-bold text-xs flex items-center justify-center gap-1.5 transition-all cursor-pointer shrink-0"
                       >
-                        <Pencil size={15} className="text-[#F8AD22]" />
-                        <span>Actualizar Correo y Teléfono</span>
+                        <AlertTriangle size={14} />
+                        <span>Cancelar / Dar de Baja Suscripción</span>
                       </button>
-
-                      <button
-                        type="button"
-                        onClick={() => {
-                          setNewPasswordInput('');
-                          setConfirmPasswordInput('');
-                          setPasswordChangeError(null);
-                          setPasswordChangeSuccess(false);
-                          setShowPasswordModal(true);
-                        }}
-                        className="w-full py-2.5 px-3 rounded-xl bg-[#12A1A4]/15 hover:bg-[#12A1A4]/25 border border-[#12A1A4]/40 text-[#57d6f3] hover:text-white font-bold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer shadow-xs"
-                      >
-                        <KeyRound size={15} />
-                        <span>Cambiar Contraseña / Clave de Acceso</span>
-                      </button>
-                    </div>
-
-                    {/* Estado y Acciones de Suscripcion */}
-                    <div className="pt-2 border-t border-white/10 space-y-2">
-                      <div className="flex items-center justify-between text-[11px]">
-                        <span className="text-slate-400 font-semibold">Estado del Servicio:</span>
-                        <span className="font-bold text-white">
-                          {isSubscriptionActive ? 'Plan Activo' : 'Dado de Baja (Sin cobro)'}
-                        </span>
-                      </div>
-
-                      {cancelMessage && (
-                        <div className="p-2.5 rounded-xl bg-amber-500/20 border border-amber-500/40 text-amber-300 text-xs font-semibold">
-                          {cancelMessage}
-                        </div>
-                      )}
-
-                      {isSubscriptionActive ? (
-                        <button
-                          type="button"
-                          onClick={() => setShowCancelModal(true)}
-                          className="w-full mt-2 py-2 px-3 rounded-xl bg-rose-500/10 hover:bg-rose-500/20 border border-rose-500/30 text-rose-400 hover:text-rose-300 font-bold text-xs flex items-center justify-center gap-1.5 transition-all cursor-pointer"
-                        >
-                          <AlertTriangle size={14} />
-                          <span>Cancelar / Dar de Baja Suscripción</span>
-                        </button>
-                      ) : (
-                        <p className="text-[10px] text-slate-400 italic">
-                          Tu suscripción fue cancelada. Mantendrás acceso a las lecciones hasta el término del ciclo en curso.
-                        </p>
-                      )}
-                    </div>
+                    ) : (
+                      <span className="text-xs font-bold text-amber-400 italic">
+                        Suscripción finalizada. Acceso vigente hasta término de ciclo.
+                      </span>
+                    )}
                   </div>
                 </div>
-
-                <div className="pt-6 border-t border-white/10 mt-6 text-[11px] text-slate-400 space-y-1">
-                  <p>Para cambiar el correo o gestionar la facturación, contacta a soporte oficial.</p>
-                  <p className="text-white/60">Soporte oficial: soporte@estudiosimple.cl</p>
-                </div>
               </div>
+
             </div>
           </div>
         )}
@@ -1259,195 +1586,7 @@ export const ParentDashboard: React.FC = () => {
           </div>
         </div>
       )}
-      {/* MODAL DE CAMBIO DE CLAVE DEL APODERADO */}
-      {showPasswordModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-xs">
-          <div className="bg-[#10223D] border border-[#1C3257] rounded-3xl max-w-md w-full p-6 sm:p-8 space-y-5 shadow-2xl relative text-white">
-            <button
-              type="button"
-              onClick={() => setShowPasswordModal(false)}
-              className="absolute right-4 top-4 p-1.5 text-white/50 hover:text-white rounded-lg transition-colors cursor-pointer"
-              title="Cerrar"
-            >
-              <X size={18} />
-            </button>
 
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-2xl bg-[#12A1A4]/20 border border-[#12A1A4]/40 flex items-center justify-center text-[#57d6f3]">
-                <KeyRound size={20} />
-              </div>
-              <div>
-                <h3 className="text-lg font-bold">Cambiar Contraseña de Acceso</h3>
-                <p className="text-xs text-white/60">Portal del Apoderado EstudioSimple</p>
-              </div>
-            </div>
-
-            <p className="text-xs text-slate-300 leading-relaxed">
-              Define una nueva clave fácil de recordar para ingresar a tu cuenta familiar. Te recomendamos usar al menos 6 caracteres.
-            </p>
-
-            <form onSubmit={handleChangePassword} className="space-y-4">
-              <div>
-                <label className="block text-[11px] text-white/70 font-semibold mb-1">
-                  Nueva Contraseña *
-                </label>
-                <div className="relative">
-                  <input
-                    type={showNewPassword ? 'text' : 'password'}
-                    required
-                    value={newPasswordInput}
-                    onChange={(e) => setNewPasswordInput(e.target.value)}
-                    placeholder="Mínimo 6 caracteres"
-                    className="input-field w-full rounded-xl px-3 py-2.5 text-xs bg-black/30 border border-white/15 pr-14 text-white focus:outline-none focus:border-[#12A1A4]"
-                  />
-                  <button
-                    type="button"
-                    onClick={() => setShowNewPassword(!showNewPassword)}
-                    className="absolute right-3 top-2.5 text-white/40 hover:text-white text-[11px] font-semibold transition-colors"
-                  >
-                    {showNewPassword ? 'Ocultar' : 'Ver'}
-                  </button>
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-[11px] text-white/70 font-semibold mb-1">
-                  Confirmar Nueva Contraseña *
-                </label>
-                <input
-                  type={showNewPassword ? 'text' : 'password'}
-                  required
-                  value={confirmPasswordInput}
-                  onChange={(e) => setConfirmPasswordInput(e.target.value)}
-                  placeholder="Repite la nueva contraseña"
-                  className="input-field w-full rounded-xl px-3 py-2.5 text-xs bg-black/30 border border-white/15 text-white focus:outline-none focus:border-[#12A1A4]"
-                />
-              </div>
-
-              {passwordChangeError && (
-                <div className="p-2.5 rounded-xl bg-rose-500/20 border border-rose-500/40 text-rose-300 text-xs font-semibold">
-                  {passwordChangeError}
-                </div>
-              )}
-
-              {passwordChangeSuccess && (
-                <div className="p-2.5 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs font-bold flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-emerald-400 shrink-0" />
-                  <span>¡Contraseña actualizada exitosamente! Úsala en tu próximo acceso.</span>
-                </div>
-              )}
-
-              <div className="flex gap-3 pt-2">
-                <button
-                  type="button"
-                  onClick={() => setShowPasswordModal(false)}
-                  className="flex-1 py-2.5 px-4 rounded-xl bg-white/10 hover:bg-white/20 text-xs font-bold text-white transition-all cursor-pointer"
-                >
-                  Cancelar
-                </button>
-                <button
-                  type="submit"
-                  disabled={isChangingPassword || passwordChangeSuccess}
-                  className="flex-1 py-2.5 px-4 rounded-xl bg-[#12A1A4] hover:bg-[#0e8b8e] text-xs font-bold text-white transition-all cursor-pointer disabled:opacity-50 flex items-center justify-center gap-1.5"
-                >
-                  {isChangingPassword ? 'Guardando...' : 'Guardar Nueva Clave'}
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      )}
-
-      {/* MODAL PARA ACTUALIZAR DATOS DE CONTACTO (CORREO Y TELÉFONO) */}
-      {showContactModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-xs">
-          <div className="bg-[#10223D] border border-white/20 rounded-3xl max-w-md w-full p-6 sm:p-8 space-y-5 shadow-2xl relative text-white">
-            <button
-              type="button"
-              onClick={() => setShowContactModal(false)}
-              className="absolute right-4 top-4 p-1.5 text-white/50 hover:text-white rounded-lg transition-colors cursor-pointer"
-              title="Cerrar"
-            >
-              <X size={18} />
-            </button>
-
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-2xl bg-[#EE751C]/20 border border-[#EE751C]/40 flex items-center justify-center text-[#EE751C]">
-                <Pencil size={20} />
-              </div>
-              <div>
-                <h3 className="text-lg font-bold">Actualizar Datos de Contacto</h3>
-                <p className="text-xs text-white/60">Portal del Apoderado EstudioSimple</p>
-              </div>
-            </div>
-
-            <p className="text-xs text-slate-300 leading-relaxed">
-              Modifica tu correo de acceso y número de WhatsApp para mantener tus credenciales y avisos siempre actualizados.
-            </p>
-
-            <form onSubmit={handleUpdateContactDetails} className="space-y-4">
-              <div>
-                <label className="block text-[11px] text-white/70 font-semibold mb-1">
-                  Correo Electrónico (Login de Apoderado) *
-                </label>
-                <div className="relative">
-                  <input
-                    type="email"
-                    required
-                    value={contactEmailInput}
-                    onChange={(e) => setContactEmailInput(e.target.value)}
-                    placeholder="apoderado@correo.cl"
-                    className="input-field w-full rounded-xl px-3 py-2.5 text-xs bg-black/30 border border-white/15 text-white focus:outline-none focus:border-[#12A1A4]"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-[11px] text-white/70 font-semibold mb-1">
-                  Teléfono Móvil (WhatsApp)
-                </label>
-                <input
-                  type="text"
-                  value={contactPhoneInput}
-                  onChange={(e) => setContactPhoneInput(e.target.value)}
-                  placeholder="+56 9 1234 5678"
-                  className="input-field w-full rounded-xl px-3 py-2.5 text-xs bg-black/30 border border-white/15 text-white font-mono focus:outline-none focus:border-[#12A1A4]"
-                />
-              </div>
-
-              {contactError && (
-                <div className="p-2.5 rounded-xl bg-rose-500/20 border border-rose-500/40 text-rose-300 text-xs font-semibold">
-                  {contactError}
-                </div>
-              )}
-
-              {contactSuccess && (
-                <div className="p-2.5 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs font-bold flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-emerald-400 shrink-0" />
-                  <span>¡Datos de contacto actualizados exitosamente!</span>
-                </div>
-              )}
-
-              <div className="flex gap-3 pt-2">
-                <button
-                  type="button"
-                  onClick={() => setShowContactModal(false)}
-                  className="flex-1 py-2.5 px-4 rounded-xl bg-white/10 hover:bg-white/20 text-xs font-bold text-white transition-all cursor-pointer"
-                >
-                  Cancelar
-                </button>
-                <button
-                  type="submit"
-                  disabled={isSavingContact || contactSuccess}
-                  className="flex-1 py-2.5 px-4 rounded-xl bg-[#EE751C] hover:bg-[#d96512] text-xs font-bold text-white transition-all cursor-pointer disabled:opacity-50 flex items-center justify-center gap-1.5"
-                >
-                  {isSavingContact ? 'Guardando...' : 'Guardar Datos'}
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

@@ -44,6 +44,7 @@ interface AppContextType {
   updateEnrolledGrades: (grades: GradeLevel[]) => void;
   activateSessionFromCheckout: (user: ParentUser, grade: GradeLevel) => void;
   changeParentPassword: (newPassword: string) => Promise<{ success: boolean; error?: string }>;
+  updateParentProfile: (updated: Partial<ParentUser>) => void;
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -537,6 +538,64 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     });
   };
 
+  const updateParentProfile = (updatedFields: Partial<ParentUser>) => {
+    setParent((prev) => {
+      const updated = { ...prev, ...updatedFields };
+      localStorage.setItem('estudio_simple_parent', JSON.stringify(updated));
+      return updated;
+    });
+
+    if (updatedFields.studentName || updatedFields.studentPin || updatedFields.enrolledGrades) {
+      setStudent((prev) => {
+        const updated = {
+          ...prev,
+          name: updatedFields.studentName || prev.name,
+          pin: updatedFields.studentPin || prev.pin,
+          grade: (updatedFields.enrolledGrades?.[0] as GradeLevel) || prev.grade
+        };
+        localStorage.setItem('estudio_simple_student', JSON.stringify(updated));
+        return updated;
+      });
+
+      setStudents((prev) => {
+        const updated = prev.map((s) => {
+          if (s.id === student?.id || s.id === parent.studentId) {
+            return {
+              ...s,
+              name: updatedFields.studentName || s.name,
+              pin: updatedFields.studentPin || s.pin,
+              grade: (updatedFields.enrolledGrades?.[0] as GradeLevel) || s.grade
+            };
+          }
+          return s;
+        });
+        localStorage.setItem('estudio_simple_students', JSON.stringify(updated));
+        return updated;
+      });
+    }
+
+    if (updatedFields.enrolledGrades) {
+      setAuthSessionState((prev) => {
+        if (!prev) return null;
+        const updated = {
+          ...prev,
+          enrolledGrades: updatedFields.enrolledGrades || prev.enrolledGrades
+        };
+        localStorage.setItem('estudio_simple_auth_session', JSON.stringify(updated));
+        return updated;
+      });
+    }
+
+    try {
+      const allUsers = getAllRegisteredUsers();
+      const idx = allUsers.findIndex(u => u.id === parent.id || (u.rut && parent.rut && u.rut === parent.rut) || (u.email && parent.email && u.email === parent.email));
+      if (idx >= 0) {
+        allUsers[idx] = { ...allUsers[idx], ...updatedFields };
+        localStorage.setItem('estudiosimple_registered_users', JSON.stringify(allUsers));
+      }
+    } catch {}
+  };
+
   const logout = () => {
     setAuthSessionState(null);
     setViewModeState('landing');
@@ -808,6 +867,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         updateEnrolledGrades,
         activateSessionFromCheckout,
         changeParentPassword,
+        updateParentProfile,
         activeSynchronizedLesson,
         setActiveSynchronizedLesson,
       }}
