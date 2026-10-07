@@ -25,11 +25,15 @@ const PUBLIC_DIR = fs.existsSync(DIST_DIR) ? DIST_DIR : (fs.existsSync(FALLBACK_
 // NEON SCALE-TO-ZERO DATA ACCESS LAYER (Stateless / Instant Disconnect)
 // -----------------------------------------------------------------------------
 
+// URL oficial de conexion a Neon PostgreSQL (con fallback para Railway y despliegues sin .env)
+const DEFAULT_DATABASE_URL = 'postgresql://neondb_owner:npg_rsFlk82OEHYX@ep-floral-unit-acgb3xlf-pooler.sa-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require';
+const DATABASE_URL = (process.env.DATABASE_URL || DEFAULT_DATABASE_URL).trim();
+
 async function withPrisma(fn) {
   const prisma = new PrismaClient({
     datasources: {
       db: {
-        url: process.env.DATABASE_URL
+        url: DATABASE_URL
       }
     }
   });
@@ -498,7 +502,7 @@ const server = http.createServer(async (req, res) => {
   if (pathname.startsWith('/api/')) {
     res.setHeader('Content-Type', 'application/json; charset=utf-8');
 
-    // 1. Healthcheck (Sin tocar Neon DB -> $0 costo, scale-to-zero preservado)
+    // 1. Healthcheck (Diagnostico de conexion y scale-to-zero)
     if (pathname === '/api/health') {
       res.writeHead(200);
       res.end(JSON.stringify({
@@ -506,6 +510,7 @@ const server = http.createServer(async (req, res) => {
         timestamp: new Date().toISOString(),
         service: 'StudioSimple Web App',
         neon: 'scale-to-zero-ready',
+        dbConfigured: Boolean(DATABASE_URL),
         uptimeSeconds: Math.floor(process.uptime())
       }));
       return;
@@ -1348,9 +1353,9 @@ const server = http.createServer(async (req, res) => {
               }
               fs.writeFileSync(familiesFilePath, JSON.stringify(existingFamilies, null, 2), 'utf8');
 
-              // 2. Persistir en Neon PostgreSQL via withPrisma
+              // 2. Persistir en Neon PostgreSQL via withPrismaRetry (tolerancia obligatoria a Scale-to-Zero)
               try {
-                await withPrisma(async (prisma) => {
+                await withPrismaRetry(async (prisma) => {
                   const dbUser = await prisma.user.upsert({
                     where: { email: payerEmail },
                     update: {
@@ -1392,9 +1397,9 @@ const server = http.createServer(async (req, res) => {
                       gatewayTransactionId: String(paymentId)
                     }
                   });
-                });
+                }, 3, 1500);
               } catch (prismaErr) {
-                console.warn('[MercadoPago Webhook] Fallo Neon DB, pero usuario ya salvado en JSON:', prismaErr.message);
+                console.error('[MercadoPago Webhook] Fallo Neon DB tras reintentos:', prismaErr.message);
               }
 
               // 3. Despacho automatico de correo de bienvenida y credenciales en segundo plano (Server-Side)
