@@ -10,7 +10,7 @@ import { findInjectedLesson } from '../../lib/lesson-repository';
 import { ArrowLeft } from 'lucide-react';
 
 const SynchronizedLessonContainer: React.FC = () => {
-  const { viewMode } = useLessonSync();
+  const { viewMode, peerRoleConnected } = useLessonSync();
   const { authSession, setViewMode: setAppViewMode } = useApp();
   const isStudent = authSession?.role === 'student';
 
@@ -23,9 +23,16 @@ const SynchronizedLessonContainer: React.FC = () => {
       {isStudent && (
         <header className="bg-white/95 border border-[#d9dde2] rounded-2xl flex items-center justify-between gap-3 max-w-5xl min-h-[52px] mx-auto mb-4 px-4 py-2 shadow-xs backdrop-blur-sm">
           <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#10B981] animate-pulse" />
+            <span
+              className={`w-2.5 h-2.5 rounded-full ${
+                peerRoleConnected ? 'bg-[#10B981] animate-pulse' : 'bg-amber-400 animate-ping'
+              }`}
+            />
             <span className="text-[#1C3257] font-extrabold text-xs">
               EstudioSimple · Aula del Estudiante
+            </span>
+            <span className="text-[11px] font-semibold text-slate-500 hidden sm:inline">
+              ({peerRoleConnected ? '🟢 Mentor conectado' : '🟡 Esperando conexión del mentor...'})
             </span>
           </div>
           <button
@@ -78,7 +85,15 @@ const SynchronizedLessonContainer: React.FC = () => {
 export const SynchronizedLessonMaster: React.FC<{ lessonData?: LessonData }> = ({
   lessonData
 }) => {
-  const { authSession } = useApp();
+  const { authSession, student, parent } = useApp();
+
+  const familyRoomCode = useMemo(() => {
+    const pin = (student?.pin || parent?.studentPin || '').trim();
+    if (pin) return `room-${pin}`;
+    const familyId = (parent?.id || student?.id || '').trim();
+    if (familyId) return `room-${familyId}`;
+    return 'room-estudiosimple';
+  }, [student?.pin, parent?.studentPin, parent?.id, student?.id]);
 
   const resolvedLesson = useMemo(() => {
     if (lessonData) return lessonData;
@@ -96,7 +111,12 @@ export const SynchronizedLessonMaster: React.FC<{ lessonData?: LessonData }> = (
   const syncKey = `${resolvedLesson.metadata.grade}_${resolvedLesson.metadata.subject}_${resolvedLesson.metadata.oaCode}_${resolvedLesson.metadata.lessonNumber}_${resolvedLesson.hook.videoSrc || 'nohook'}_${resolvedLesson.formalization.videoSrc || 'noformal'}`;
 
   return (
-    <LessonSyncProvider key={syncKey} initialLesson={resolvedLesson} userRole={authSession?.role}>
+    <LessonSyncProvider
+      key={syncKey}
+      initialLesson={resolvedLesson}
+      userRole={authSession?.role}
+      roomCode={familyRoomCode}
+    >
       <SynchronizedLessonContainer />
     </LessonSyncProvider>
   );

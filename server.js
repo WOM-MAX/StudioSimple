@@ -95,6 +95,26 @@ async function setSystemSetting(key, value) {
 
 
 // -----------------------------------------------------------------------------
+// IN-MEMORY CLASSROOM SYNC RELAY (0ms/50ms Relay RAM - Cero cuota Neon DB)
+// -----------------------------------------------------------------------------
+const activeClassrooms = new Map(); // roomCode -> { session, lastUpdated }
+const classroomClients = new Map(); // roomCode -> Set<{ res, role, clientId, lastSeen }>
+
+// Limpieza periódica de salas inactivas (cada 15 minutos, expira tras 3 horas sin clientes)
+setInterval(() => {
+  const now = Date.now();
+  for (const [roomCode, clients] of classroomClients.entries()) {
+    if (!clients || clients.size === 0) {
+      const room = activeClassrooms.get(roomCode);
+      if (room && (now - room.lastUpdated > 3 * 60 * 60 * 1000)) {
+        activeClassrooms.delete(roomCode);
+        classroomClients.delete(roomCode);
+      }
+    }
+  }
+}, 15 * 60 * 1000);
+
+// -----------------------------------------------------------------------------
 // WHITELIST CACHE SHIELD (Memoria RAM para Lecturas Publicas)
 // -----------------------------------------------------------------------------
 
@@ -514,6 +534,192 @@ const server = http.createServer(async (req, res) => {
         uptimeSeconds: Math.floor(process.uptime())
       }));
       return;
+    }
+
+    // -------------------------------------------------------------------------
+    // 1c. AULA INTERACTIVA REMOTA: ENLACE SSE / POLLING EN TIEMPO REAL (MULTI-PC)
+    // -------------------------------------------------------------------------
+
+    // Stream SSE en tiempo real
+    if (pathname === '/api/classroom/stream') {
+      const roomCode = (url.searchParams.get('roomCode') || 'room-estudiosimple').trim();
+      const role = (url.searchParams.get('role') || 'unknown').trim();
+      const clientId = (url.searchParams.get('clientId') || `client-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`).trim();
+
+      res.writeHead(200, {
+        'Content-Type': 'text/event-stream; charset=utf-8',
+        'Cache-Control': 'no-cache, no-transform',
+        'Connection': 'keep-alive',
+        'Access-Control-Allow-Origin': '*',
+        'X-Accel-Buffering': 'no'
+      });
+      if (typeof res.flushHeaders === 'function') {
+        res.flushHeaders();
+      }
+
+      if (!classroomClients.has(roomCode)) {
+        classroomClients.set(roomCode, new Set());
+      }
+      const clientSet = classroomClients.get(roomCode);
+      const clientRecord = { res, role, clientId, lastSeen: Date.now() };
+      clientSet.add(clientRecord);
+
+      let room = activeClassrooms.get(roomCode);
+      if (!room) {
+        room = { session: null, lastUpdated: Date.now() };
+        activeClassrooms.set(roomCode, room);
+      }
+
+      const getPeerRoles = () => Array.from(clientSet).map((c) => c.role);
+      const peerRoles = getPeerRoles();
+      const hasAdult = peerRoles.includes('adult') || peerRoles.includes('split');
+      const hasStudent = peerRoles.includes('student') || peerRoles.includes('split');
+
+      // Enviar estado inicial inmediato al cliente que se conecta
+      res.write(`data: ${JSON.stringify({
+        type: 'init',
+        roomCode,
+        session: room.session,
+        activeClients: clientSet.size,
+        peerRoles,
+        hasAdult,
+        hasStudent,
+        timestamp: Date.now()
+      })}\n\n`);
+
+      // Notificar al resto de participantes en la sala del nuevo participante
+      for (const client of clientSet) {
+        if (client !== clientRecord) {
+          try {
+            client.res.write(`data: ${JSON.stringify({
+              type: 'presence',
+              roomCode,
+              activeClients: clientSet.size,
+              peerRoles,
+              hasAdult,
+              hasStudent,
+              timestamp: Date.now()
+            })}\n\n`);
+          } catch {}
+        }
+      }
+
+      // Heartbeat periódico (ping cada 15 segundos para evitar timeouts de proxies y Railway)
+      const heartbeatTimer = setInterval(() => {
+        try {
+          res.write(': ping\n\n');
+        } catch {
+          clearInterval(heartbeatTimer);
+        }
+      }, 15000);
+
+      req.on('close', () => {
+        clearInterval(heartbeatTimer);
+        clientSet.delete(clientRecord);
+        const remainingRoles = Array.from(clientSet).map((c) => c.role);
+        const remHasAdult = remainingRoles.includes('adult') || remainingRoles.includes('split');
+        const remHasStudent = remainingRoles.includes('student') || remainingRoles.includes('split');
+
+        for (const client of clientSet) {
+          try {
+            client.res.write(`data: ${JSON.stringify({
+              type: 'presence',
+              roomCode,
+              activeClients: clientSet.size,
+              peerRoles: remainingRoles,
+              hasAdult: remHasAdult,
+              hasStudent: remHasStudent,
+              timestamp: Date.now()
+            })}\n\n`);
+          } catch {}
+        }
+      });
+      return;
+    }
+
+    // Endpoint de sincronización (POST para broadcast, GET para polling/fallback)
+    if (pathname === '/api/classroom/sync') {
+      if (method === 'GET') {
+        const roomCode = (url.searchParams.get('roomCode') || 'room-estudiosimple').trim();
+        const room = activeClassrooms.get(roomCode);
+        const clientSet = classroomClients.get(roomCode);
+        const peerRoles = clientSet ? Array.from(clientSet).map((c) => c.role) : [];
+        const hasAdult = peerRoles.includes('adult') || peerRoles.includes('split');
+        const hasStudent = peerRoles.includes('student') || peerRoles.includes('split');
+
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({
+          success: true,
+          roomCode,
+          session: room?.session || null,
+          lastUpdated: room?.lastUpdated || null,
+          activeClients: clientSet ? clientSet.size : 0,
+          hasAdult,
+          hasStudent,
+          peerRoles
+        }));
+        return;
+      }
+
+      if (method === 'POST') {
+        try {
+          const body = await readJsonBody(req);
+          const roomCode = (body.roomCode || 'room-estudiosimple').trim();
+          const patch = body.session || {};
+          const clientId = (body.clientId || '').trim();
+          const role = (body.role || 'unknown').trim();
+
+          let room = activeClassrooms.get(roomCode);
+          if (!room) {
+            room = { session: patch, lastUpdated: Date.now() };
+            activeClassrooms.set(roomCode, room);
+          } else {
+            room.session = { ...(room.session || {}), ...patch };
+            room.lastUpdated = Date.now();
+          }
+
+          const clientSet = classroomClients.get(roomCode);
+          const activeCount = clientSet ? clientSet.size : 0;
+          const peerRoles = clientSet ? Array.from(clientSet).map((c) => c.role) : [];
+          const hasAdult = peerRoles.includes('adult') || peerRoles.includes('split');
+          const hasStudent = peerRoles.includes('student') || peerRoles.includes('split');
+
+          if (clientSet && clientSet.size > 0) {
+            const eventPayload = JSON.stringify({
+              type: 'sync',
+              roomCode,
+              session: room.session,
+              senderClientId: clientId,
+              senderRole: role,
+              activeClients: activeCount,
+              peerRoles,
+              hasAdult,
+              hasStudent,
+              timestamp: Date.now()
+            });
+
+            for (const client of Array.from(clientSet)) {
+              try {
+                client.res.write(`data: ${eventPayload}\n\n`);
+              } catch {
+                clientSet.delete(client);
+              }
+            }
+          }
+
+          res.writeHead(200, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({
+            success: true,
+            roomCode,
+            activeClients: activeCount,
+            timestamp: Date.now()
+          }));
+        } catch (err) {
+          res.writeHead(500, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ success: false, error: err.message }));
+        }
+        return;
+      }
     }
 
     // 1b. Site Config (CMS - Persistencia en Neon DB SystemSetting con fallback a disco)

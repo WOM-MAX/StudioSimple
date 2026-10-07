@@ -20,7 +20,7 @@ import {
 } from 'lucide-react';
 
 export const TesterBar: React.FC = () => {
-  const { viewMode, setViewMode, resetSession, openNewWindow, session, toggleOxygenPause, lessonData } = useLessonSync();
+  const { viewMode, setViewMode, resetSession, openNewWindow, session, toggleOxygenPause, lessonData, roomCode, peerRoleConnected } = useLessonSync();
   const { setViewMode: setAppViewMode, setActiveSynchronizedLesson } = useApp();
 
   const [openDropdown, setOpenDropdown] = useState<'nav' | 'subject' | 'view' | 'tools' | null>(null);
@@ -348,6 +348,15 @@ export const TesterBar: React.FC = () => {
               </button>
             </div>
           )}
+        </div>
+
+        {/* Indicador de Sala Remota Multi-Dispositivo */}
+        <div
+          className="hidden lg:flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-600"
+          title={`Sala remota multi-dispositivo: ${roomCode}`}
+        >
+          <span className={`w-2 h-2 rounded-full ${peerRoleConnected ? 'bg-[#10B981] animate-pulse' : 'bg-amber-400'}`} />
+          <span className="text-[11px] font-mono text-slate-500 font-bold">{roomCode}</span>
         </div>
 
         {/* 4. Dropdown Herramientas y Monitores */}

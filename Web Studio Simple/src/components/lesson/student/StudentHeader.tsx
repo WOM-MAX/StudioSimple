@@ -14,7 +14,7 @@ export const StudentHeader: React.FC<StudentHeaderProps> = ({
   soundOn = true,
   onToggleSound
 }) => {
-  const { lessonData, session } = useLessonSync();
+  const { lessonData, session, peerRoleConnected } = useLessonSync();
   const theme = getSubjectTheme(lessonData.metadata.subject);
 
   return (
@@ -54,8 +54,24 @@ export const StudentHeader: React.FC<StudentHeaderProps> = ({
             Pausa de respiración
           </span>
         )}
-        <span className="bg-[#e9f2f8] text-[#1c3257] font-bold px-3 py-1 rounded-full border border-[#bcd6ea] shrink-0 whitespace-nowrap">
-          Sincronizado
+        <span
+          className={`font-bold px-3 py-1 rounded-full border shrink-0 whitespace-nowrap text-xs flex items-center gap-1.5 transition-colors ${
+            peerRoleConnected
+              ? 'bg-[#eaf4e8] text-[#255e29] border-[#badcb8]'
+              : 'bg-[#fff8e6] text-[#b45309] border-[#fde68a]'
+          }`}
+          title={
+            peerRoleConnected
+              ? 'Conectado en vivo con tu mentor'
+              : 'Reconectando con tu mentor...'
+          }
+        >
+          <span
+            className={`w-1.5 h-1.5 rounded-full ${
+              peerRoleConnected ? 'bg-[#4a964e] animate-ping' : 'bg-[#f59e0b] animate-pulse'
+            }`}
+          />
+          <span>{peerRoleConnected ? '🟢 Mentor en vivo' : '🟡 Reconectando...'}</span>
         </span>
       </div>
     </header>

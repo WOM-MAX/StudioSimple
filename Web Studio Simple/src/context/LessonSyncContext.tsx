@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, useCallback, useRef } from 'react';
+import React, { createContext, useContext, useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import { LessonSessionState, SyncViewMode, LessonStage, LessonData } from '../types/lesson';
 import { AuthRole } from '../types';
 import { MATEMATICA_7B_OA01_CLASE01 } from '../data/lessons/matematica_7b_oa01_clase01';
@@ -49,6 +49,11 @@ interface LessonSyncContextType {
   toggleOxygenPause: () => void;
   setFeedback: (feedback: { kind: 'success' | 'support' | 'reveal' | 'info'; text: string } | null) => void;
   openNewWindow: (mode: 'adult' | 'student') => void;
+  // Propiedades de enlace remoto multi-dispositivo
+  roomCode: string;
+  remoteConnected: boolean;
+  peerRoleConnected: boolean;
+  activeClientsCount: number;
 }
 
 const LessonSyncContext = createContext<LessonSyncContextType | undefined>(undefined);
@@ -57,12 +62,40 @@ export const LessonSyncProvider: React.FC<{
   children: React.ReactNode;
   initialLesson?: LessonData;
   userRole?: AuthRole;
+  roomCode?: string;
 }> = ({
   children,
   initialLesson = MATEMATICA_7B_OA01_CLASE01,
-  userRole
+  userRole,
+  roomCode: initialRoomCode
 }) => {
   const isStudentRole = userRole === 'student';
+
+  // Identificador de cliente único por pestaña/dispositivo para evitar bucles de eco
+  const clientIdRef = useRef<string>(`client-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`);
+
+  // Derivación determinista del roomCode a partir de PIN familiar o parámetro
+  const effectiveRoomCode = useMemo(() => {
+    if (initialRoomCode && initialRoomCode.trim()) return initialRoomCode.trim();
+    if (typeof window !== 'undefined') {
+      const urlParam = new URLSearchParams(window.location.search).get('room');
+      if (urlParam && urlParam.trim()) return `room-${urlParam.trim()}`;
+      try {
+        const studentRaw = localStorage.getItem('estudio_simple_student');
+        if (studentRaw) {
+          const s = JSON.parse(studentRaw);
+          if (s?.pin) return `room-${s.pin}`;
+        }
+        const parentRaw = localStorage.getItem('estudio_simple_parent');
+        if (parentRaw) {
+          const p = JSON.parse(parentRaw);
+          if (p?.studentPin) return `room-${p.studentPin}`;
+          if (p?.id) return `room-${p.id}`;
+        }
+      } catch {}
+    }
+    return 'room-estudiosimple';
+  }, [initialRoomCode]);
 
   const [viewMode, setViewModeState] = useState<SyncViewMode>(() => {
     if (isStudentRole) {
@@ -103,7 +136,16 @@ export const LessonSyncProvider: React.FC<{
 
   const channelRef = useRef<BroadcastChannel | null>(null);
 
-  // Setup BroadcastChannel for Real-time tab sync
+  // Estados de conexión remota
+  const [remoteConnected, setRemoteConnected] = useState<boolean>(false);
+  const [peerRoleConnected, setPeerRoleConnected] = useState<boolean>(() => {
+    return !isStudentRole && viewMode === 'split';
+  });
+  const [activeClientsCount, setActiveClientsCount] = useState<number>(1);
+
+  const currentRole = isStudentRole ? 'student' : (viewMode === 'adult' ? 'adult' : 'split');
+
+  // 1. Transporte Local: BroadcastChannel (0ms entre pestañas en el mismo PC)
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
@@ -125,7 +167,177 @@ export const LessonSyncProvider: React.FC<{
     }
   }, []);
 
-  // Reiniciar estado si cambia la leccion activa
+  // 2. Transporte Remoto: Publicación HTTP hacia in-memory relay con debounce inteligente
+  const debouncePostRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const postSyncToServer = useCallback((stateToSync: LessonSessionState, immediate: boolean = false) => {
+    if (typeof fetch !== 'function') return;
+
+    const executePost = () => {
+      fetch('/api/classroom/sync', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          roomCode: effectiveRoomCode,
+          session: stateToSync,
+          clientId: clientIdRef.current,
+          role: currentRole
+        })
+      })
+        .then((res) => {
+          if (res.ok) {
+            setRemoteConnected(true);
+          }
+        })
+        .catch((err) => {
+          console.warn('[LessonSync] Advertencia de envío remoto:', err);
+        });
+    };
+
+    if (debouncePostRef.current) {
+      clearTimeout(debouncePostRef.current);
+      debouncePostRef.current = null;
+    }
+
+    if (immediate) {
+      executePost();
+    } else {
+      debouncePostRef.current = setTimeout(executePost, 50);
+    }
+  }, [effectiveRoomCode, currentRole]);
+
+  // 3. Transporte Remoto: Escucha en tiempo real vía SSE con fallback automático a polling HTTP
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    let eventSource: EventSource | null = null;
+    let fallbackInterval: ReturnType<typeof setInterval> | null = null;
+    let isMounted = true;
+
+    const pollFallback = async () => {
+      try {
+        const res = await fetch(`/api/classroom/sync?roomCode=${encodeURIComponent(effectiveRoomCode)}`);
+        if (res.ok && isMounted) {
+          const json = await res.json();
+          if (json.success && json.session) {
+            setRemoteConnected(true);
+            setActiveClientsCount(json.activeClients || 1);
+            if (isStudentRole) {
+              setPeerRoleConnected(Boolean(json.hasAdult || viewMode === 'split'));
+            } else {
+              setPeerRoleConnected(Boolean(json.hasStudent || viewMode === 'split'));
+            }
+            setSessionState((prev) => {
+              const incoming = json.session;
+              if (
+                incoming.activeOa === initialLesson.metadata.oaCode &&
+                incoming.activeLessonNum === initialLesson.metadata.lessonNumber
+              ) {
+                try {
+                  localStorage.setItem(STORAGE_KEY, JSON.stringify(incoming));
+                } catch {}
+                return { ...prev, ...incoming };
+              }
+              return prev;
+            });
+          }
+        }
+      } catch {}
+    };
+
+    try {
+      const streamUrl = `/api/classroom/stream?roomCode=${encodeURIComponent(effectiveRoomCode)}&role=${encodeURIComponent(currentRole)}&clientId=${encodeURIComponent(clientIdRef.current)}`;
+      eventSource = new EventSource(streamUrl);
+
+      eventSource.onopen = () => {
+        if (!isMounted) return;
+        setRemoteConnected(true);
+      };
+
+      eventSource.onmessage = (event) => {
+        if (!isMounted) return;
+        try {
+          const data = JSON.parse(event.data);
+          if (data.type === 'init' || data.type === 'sync') {
+            // Ignorar eco si vino de este mismo cliente
+            if (data.senderClientId && data.senderClientId === clientIdRef.current) {
+              return;
+            }
+            if (data.session) {
+              setSessionState((prev) => {
+                const incoming = data.session;
+                if (
+                  incoming.activeOa === initialLesson.metadata.oaCode &&
+                  incoming.activeLessonNum === initialLesson.metadata.lessonNumber
+                ) {
+                  try {
+                    localStorage.setItem(STORAGE_KEY, JSON.stringify(incoming));
+                  } catch {}
+                  return { ...prev, ...incoming };
+                }
+                return prev;
+              });
+            }
+          }
+
+          if (data.activeClients !== undefined) {
+            setActiveClientsCount(data.activeClients);
+          }
+
+          if (isStudentRole) {
+            const adultConnected = Boolean(data.hasAdult || (data.peerRoles && (data.peerRoles.includes('adult') || data.peerRoles.includes('split'))));
+            setPeerRoleConnected(adultConnected);
+          } else {
+            const studentConnected = Boolean(data.hasStudent || (data.peerRoles && (data.peerRoles.includes('student') || data.peerRoles.includes('split'))) || viewMode === 'split');
+            setPeerRoleConnected(studentConnected);
+          }
+        } catch (e) {
+          console.warn('[LessonSync] Error analizando evento SSE:', e);
+        }
+      };
+
+      eventSource.onerror = () => {
+        if (!isMounted) return;
+        setRemoteConnected(false);
+        if (!fallbackInterval) {
+          fallbackInterval = setInterval(pollFallback, 1500);
+        }
+      };
+    } catch (e) {
+      console.warn('[LessonSync] SSE no disponible, iniciando polling de contingencia:', e);
+      fallbackInterval = setInterval(pollFallback, 1500);
+    }
+
+    // Consulta inicial inmediata
+    pollFallback();
+
+    return () => {
+      isMounted = false;
+      if (eventSource) {
+        eventSource.close();
+      }
+      if (fallbackInterval) {
+        clearInterval(fallbackInterval);
+      }
+      if (debouncePostRef.current) {
+        clearTimeout(debouncePostRef.current);
+      }
+    };
+  }, [effectiveRoomCode, currentRole, initialLesson.metadata.oaCode, initialLesson.metadata.lessonNumber, isStudentRole, viewMode]);
+
+  // Sincronizar session.studentConnected con peerRoleConnected para el rol adulto
+  useEffect(() => {
+    if (!isStudentRole) {
+      setSessionState((prev) => {
+        if (prev.studentConnected !== peerRoleConnected) {
+          return { ...prev, studentConnected: peerRoleConnected };
+        }
+        return prev;
+      });
+    }
+  }, [peerRoleConnected, isStudentRole]);
+
+  // Reiniciar estado si cambia la lección activa
   useEffect(() => {
     if (
       session.activeOa !== initialLesson.metadata.oaCode ||
@@ -143,8 +355,9 @@ export const LessonSyncProvider: React.FC<{
       } catch (e) {
         console.error('Error resetting session for new lesson:', e);
       }
+      postSyncToServer(cleanSession, true);
     }
-  }, [initialLesson.metadata.oaCode, initialLesson.metadata.lessonNumber, session.activeOa, session.activeLessonNum]);
+  }, [initialLesson.metadata.oaCode, initialLesson.metadata.lessonNumber, session.activeOa, session.activeLessonNum, postSyncToServer]);
 
   const updateSession = useCallback((patch: Partial<LessonSessionState> | ((prev: LessonSessionState) => LessonSessionState)) => {
     setSessionState((prev) => {
@@ -155,9 +368,12 @@ export const LessonSyncProvider: React.FC<{
       } catch (e) {
         console.error('Error broadcasting update:', e);
       }
+      const isCritical = ('stage' in updated && updated.stage !== prev.stage) ||
+                         ('video' in updated && updated.video.command !== prev.video.command);
+      postSyncToServer(updated, isCritical);
       return updated;
     });
-  }, []);
+  }, [postSyncToServer]);
 
   const resetSession = useCallback(() => {
     const cleanSession: LessonSessionState = {
@@ -172,7 +388,8 @@ export const LessonSyncProvider: React.FC<{
     } catch (e) {
       console.error('Error resetting session:', e);
     }
-  }, [initialLesson.metadata.oaCode, initialLesson.metadata.lessonNumber]);
+    postSyncToServer(cleanSession, true);
+  }, [initialLesson.metadata.oaCode, initialLesson.metadata.lessonNumber, postSyncToServer]);
 
   const setStage = useCallback((stage: LessonStage) => {
     updateSession({ stage, feedback: null });
@@ -221,7 +438,11 @@ export const LessonSyncProvider: React.FC<{
         setStage,
         toggleOxygenPause,
         setFeedback,
-        openNewWindow
+        openNewWindow,
+        roomCode: effectiveRoomCode,
+        remoteConnected,
+        peerRoleConnected,
+        activeClientsCount
       }}
     >
       {children}

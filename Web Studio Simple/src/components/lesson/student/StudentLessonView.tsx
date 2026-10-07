@@ -37,7 +37,7 @@ function isAmbientActiveStage(
 }
 
 export const StudentLessonView: React.FC = () => {
-  const { session, lessonData, setStage } = useLessonSync();
+  const { session, lessonData, setStage, peerRoleConnected } = useLessonSync();
   const { setViewMode, setActiveSynchronizedLesson, markLessonCompleted, authSession } = useApp();
   const theme = getSubjectTheme(lessonData.metadata.subject);
   const audioRef = useRef<HTMLAudioElement>(null);
@@ -159,17 +159,21 @@ export const StudentLessonView: React.FC = () => {
 
               <div className={`inline-flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-full ${theme.badgeBg} ${theme.badgeText} border ${theme.badgeBorder} font-bold text-xs uppercase tracking-wider mb-4 shadow-xs`}>
                 <span className="relative flex h-2.5 w-2.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                  <span className={`animate-ping absolute inline-flex h-full w-full rounded-full ${peerRoleConnected ? 'bg-emerald-400' : 'bg-amber-400'} opacity-75`}></span>
+                  <span className={`relative inline-flex rounded-full h-2.5 w-2.5 ${peerRoleConnected ? 'bg-emerald-500' : 'bg-amber-500'}`}></span>
                 </span>
-                <span>Sala de Espera · Sincronizado</span>
+                <span>
+                  {peerRoleConnected ? '🟢 Mentor en línea · Sincronizado' : '🟡 Conectando con Mentor...'}
+                </span>
               </div>
 
               <h1 className="text-2xl font-black text-[#1C3257] mb-2 tracking-tight">
                 La clase comenzará pronto
               </h1>
               <p className="text-xs text-slate-500 leading-relaxed mb-6">
-                Tu mentor está preparando la sesión de hoy. Cuando comience, tu pantalla avanzará automáticamente.
+                {peerRoleConnected
+                  ? 'Tu mentor está preparando la sesión de hoy. Cuando comience, tu pantalla avanzará automáticamente.'
+                  : 'Esperando que tu mentor inicie la clase desde su computador. Tu pantalla se actualizará automáticamente.'}
               </p>
 
               <div className="pt-4 border-t border-slate-100 text-left bg-slate-50/70 -mx-8 -mb-8 p-6 rounded-b-3xl">

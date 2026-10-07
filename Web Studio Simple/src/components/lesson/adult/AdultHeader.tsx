@@ -1,9 +1,11 @@
-﻿import React from 'react';
+import React from 'react';
 import { useLessonSync } from '../../../context/LessonSyncContext';
 import { HeartPulse } from 'lucide-react';
 
 export const AdultHeader: React.FC = () => {
-  const { lessonData, session } = useLessonSync();
+  const { lessonData, session, peerRoleConnected } = useLessonSync();
+
+  const isStudentOnline = Boolean(peerRoleConnected || session.studentConnected);
 
   return (
     <header className="h-14 bg-white border-b border-[#dce2e6] px-4 sm:px-5 flex items-center justify-between text-xs shrink-0 select-none gap-3">
@@ -26,9 +28,26 @@ export const AdultHeader: React.FC = () => {
             Pausa activa
           </span>
         )}
-        <div className="flex items-center gap-1.5 bg-[#eaf4e8] text-[#255e29] font-bold px-3 py-1 rounded-full border border-[#badcb8] shrink-0 whitespace-nowrap">
-          <span className="w-2 h-2 rounded-full bg-[#4a964e] animate-ping" />
-          <span>Estudiante conectado</span>
+        <div
+          className={`flex items-center gap-1.5 font-bold px-3 py-1 rounded-full border shrink-0 whitespace-nowrap transition-colors ${
+            isStudentOnline
+              ? 'bg-[#eaf4e8] text-[#255e29] border-[#badcb8]'
+              : 'bg-[#fff8e6] text-[#b45309] border-[#fde68a]'
+          }`}
+          title={
+            isStudentOnline
+              ? 'El estudiante está conectado en vivo en su pantalla'
+              : 'Esperando que el estudiante ingrese a la clase en su dispositivo'
+          }
+        >
+          <span
+            className={`w-2 h-2 rounded-full ${
+              isStudentOnline ? 'bg-[#4a964e] animate-ping' : 'bg-[#f59e0b] animate-pulse'
+            }`}
+          />
+          <span>
+            {isStudentOnline ? '🟢 Estudiante en línea' : '🟡 Esperando estudiante'}
+          </span>
         </div>
       </div>
     </header>

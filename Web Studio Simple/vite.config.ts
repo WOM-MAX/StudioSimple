@@ -9,6 +9,9 @@ export default defineConfig({
     {
       name: 'api-dev-server-middleware',
       configureServer(server) {
+        const activeClassroomsDev = new Map<string, any>();
+        const classroomClientsDev = new Map<string, Set<any>>();
+
         server.middlewares.use((req, res, next) => {
           const url = req.url?.split('?')[0];
           if (url === '/api/cms/pages') {
@@ -574,6 +577,192 @@ export default defineConfig({
               }
             });
             return;
+          }
+
+          // -------------------------------------------------------------------
+          // AULA INTERACTIVA REMOTA: ENLACE SSE / POLLING DEV SERVER
+          // -------------------------------------------------------------------
+          if (url === '/api/classroom/stream') {
+            const parsedUrl = new URL(req.url || '/', 'http://localhost');
+            const roomCode = (parsedUrl.searchParams.get('roomCode') || 'room-estudiosimple').trim();
+            const role = (parsedUrl.searchParams.get('role') || 'unknown').trim();
+            const clientId = (parsedUrl.searchParams.get('clientId') || `client-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`).trim();
+
+            res.writeHead(200, {
+              'Content-Type': 'text/event-stream; charset=utf-8',
+              'Cache-Control': 'no-cache, no-transform',
+              'Connection': 'keep-alive',
+              'Access-Control-Allow-Origin': '*',
+              'X-Accel-Buffering': 'no'
+            });
+            if (typeof (res as any).flushHeaders === 'function') {
+              (res as any).flushHeaders();
+            }
+
+            if (!classroomClientsDev.has(roomCode)) {
+              classroomClientsDev.set(roomCode, new Set());
+            }
+            const clientSet = classroomClientsDev.get(roomCode);
+            const clientRecord = { res, role, clientId, lastSeen: Date.now() };
+            clientSet.add(clientRecord);
+
+            let room = activeClassroomsDev.get(roomCode);
+            if (!room) {
+              room = { session: null, lastUpdated: Date.now() };
+              activeClassroomsDev.set(roomCode, room);
+            }
+
+            const peerRoles = Array.from(clientSet).map((c: any) => c.role);
+            const hasAdult = peerRoles.includes('adult') || peerRoles.includes('split');
+            const hasStudent = peerRoles.includes('student') || peerRoles.includes('split');
+
+            res.write(`data: ${JSON.stringify({
+              type: 'init',
+              roomCode,
+              session: room.session,
+              activeClients: clientSet.size,
+              peerRoles,
+              hasAdult,
+              hasStudent,
+              timestamp: Date.now()
+            })}\n\n`);
+
+            for (const client of clientSet) {
+              if (client !== clientRecord) {
+                try {
+                  client.res.write(`data: ${JSON.stringify({
+                    type: 'presence',
+                    roomCode,
+                    activeClients: clientSet.size,
+                    peerRoles,
+                    hasAdult,
+                    hasStudent,
+                    timestamp: Date.now()
+                  })}\n\n`);
+                } catch {}
+              }
+            }
+
+            const heartbeatTimer = setInterval(() => {
+              try {
+                res.write(': ping\n\n');
+              } catch {
+                clearInterval(heartbeatTimer);
+              }
+            }, 15000);
+
+            req.on('close', () => {
+              clearInterval(heartbeatTimer);
+              clientSet.delete(clientRecord);
+              const remainingRoles = Array.from(clientSet).map((c: any) => c.role);
+              const remHasAdult = remainingRoles.includes('adult') || remainingRoles.includes('split');
+              const remHasStudent = remainingRoles.includes('student') || remainingRoles.includes('split');
+
+              for (const client of clientSet) {
+                try {
+                  client.res.write(`data: ${JSON.stringify({
+                    type: 'presence',
+                    roomCode,
+                    activeClients: clientSet.size,
+                    peerRoles: remainingRoles,
+                    hasAdult: remHasAdult,
+                    hasStudent: remHasStudent,
+                    timestamp: Date.now()
+                  })}\n\n`);
+                } catch {}
+              }
+            });
+            return;
+          }
+
+          if (url === '/api/classroom/sync') {
+            const parsedUrl = new URL(req.url || '/', 'http://localhost');
+            const roomCode = (parsedUrl.searchParams.get('roomCode') || 'room-estudiosimple').trim();
+
+            if (req.method === 'GET') {
+              const room = activeClassroomsDev.get(roomCode);
+              const clientSet = classroomClientsDev.get(roomCode);
+              const peerRoles = clientSet ? Array.from(clientSet).map((c: any) => c.role) : [];
+              const hasAdult = peerRoles.includes('adult') || peerRoles.includes('split');
+              const hasStudent = peerRoles.includes('student') || peerRoles.includes('split');
+
+              res.setHeader('Content-Type', 'application/json');
+              return res.end(JSON.stringify({
+                success: true,
+                roomCode,
+                session: room?.session || null,
+                lastUpdated: room?.lastUpdated || null,
+                activeClients: clientSet ? clientSet.size : 0,
+                hasAdult,
+                hasStudent,
+                peerRoles
+              }));
+            }
+
+            if (req.method === 'POST') {
+              let body = '';
+              req.on('data', chunk => { body += chunk; });
+              req.on('end', () => {
+                try {
+                  const parsed = JSON.parse(body || '{}');
+                  const rCode = (parsed.roomCode || roomCode || 'room-estudiosimple').trim();
+                  const patch = parsed.session || {};
+                  const clientId = (parsed.clientId || '').trim();
+                  const role = (parsed.role || 'unknown').trim();
+
+                  let room = activeClassroomsDev.get(rCode);
+                  if (!room) {
+                    room = { session: patch, lastUpdated: Date.now() };
+                    activeClassroomsDev.set(rCode, room);
+                  } else {
+                    room.session = { ...(room.session || {}), ...patch };
+                    room.lastUpdated = Date.now();
+                  }
+
+                  const clientSet = classroomClientsDev.get(rCode);
+                  const activeCount = clientSet ? clientSet.size : 0;
+                  const peerRoles = clientSet ? Array.from(clientSet).map((c: any) => c.role) : [];
+                  const hasAdult = peerRoles.includes('adult') || peerRoles.includes('split');
+                  const hasStudent = peerRoles.includes('student') || peerRoles.includes('split');
+
+                  if (clientSet && clientSet.size > 0) {
+                    const eventPayload = JSON.stringify({
+                      type: 'sync',
+                      roomCode: rCode,
+                      session: room.session,
+                      senderClientId: clientId,
+                      senderRole: role,
+                      activeClients: activeCount,
+                      peerRoles,
+                      hasAdult,
+                      hasStudent,
+                      timestamp: Date.now()
+                    });
+
+                    for (const client of Array.from(clientSet) as any[]) {
+                      try {
+                        client.res.write(`data: ${eventPayload}\n\n`);
+                      } catch {
+                        clientSet.delete(client);
+                      }
+                    }
+                  }
+
+                  res.setHeader('Content-Type', 'application/json');
+                  return res.end(JSON.stringify({
+                    success: true,
+                    roomCode: rCode,
+                    activeClients: activeCount,
+                    timestamp: Date.now()
+                  }));
+                } catch (err: any) {
+                  res.statusCode = 500;
+                  res.setHeader('Content-Type', 'application/json');
+                  return res.end(JSON.stringify({ success: false, error: err?.message }));
+                }
+              });
+              return;
+            }
           }
 
           next();
