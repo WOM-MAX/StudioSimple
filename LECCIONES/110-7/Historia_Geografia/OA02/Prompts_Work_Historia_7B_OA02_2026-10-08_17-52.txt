@@ -1,21 +1,20 @@
 ================================================================================
-STUDIOSIMPLE - PAQUETE DE PROMPTS Y GUIONES OFICIALES PARA CHATGPT WORK
-ASIGNATURA: HISTORIA, GEOGRAFÍA Y CIENCIAS SOCIALES
-CURSO: 7° BASICO | OBJETIVO: OA 2 (Explicar que el surgimiento de la agricultura, la domesticación de animales, la sedentarización, la acumulación de bienes y el desarrollo del comercio, fueron procesos de larga duración que revolucionaron la forma en que los seres humanos se relacionaron con el espacio geográfico.)
-TOTAL DE CLASES: 6 LECCIONES (14 DIAPOSITIVAS POR CLASE = 84 LÁMINAS TOTALES)
+STUDIOSIMPLE - PAQUETE COMPLETO DE PROMPTS Y GUIONES MAESTROS
+CURSO: 7° BASICO | ASIGNATURA: HISTORIA, GEOGRAFÍA Y CIENCIAS SOCIALES | OA: 110-7-HIS-OA02
+ARCHIVO: Prompts_Work_Historia_7B_OA02_2026-10-08_17-52.txt
+TOTAL DE CLASES: 6 CLASES CANONICAS BIMODALES (14 LAMINAS CADA UNA = 84 LAMINAS TOTALES)
 FORMATO: 7 DIAPOSITIVAS VIDEO GANCHO (60s) + 7 DIAPOSITIVAS VIDEO EXPLICATIVO (90s)
-ESTILO VISUAL: ANIME MODERNO 16:9 | PROTAGONISTAS: EXPLORADORES 13 AÑOS (NIÑA TRENZAS + NIÑO CHAQUETA CERCETA)
-REGLAS DE ARTE: FONDOS LIMPIOS CON ESPACIO NEGATIVO REAL, SIN TEXTO Y SIN LOGO DIBUJADO POR IA
-DURACIONES: 60s Y 90s COMO METAS REFERENCIALES PARA GOOGLE VIDS / TTS (SIN REEXPORTACIÓN FORZADA)
+FECHA Y HORA DE ACTUALIZACION: 2026-10-08 17:52:12 [America/Santiago]
+DESTINATARIO: CHATGPT WORK / CODEX (MAQUETACION PPTX 16:9 EN PYTHON)
 ================================================================================
 
-
 ################################################################################
-### CLASE 1 DE 6: LA TRANSICIÓN AL NEOLÍTICO Y ORÍGENES AGRÍCOLAS
+CLASE 1 DE 6: LA TRANSICIÓN AL NEOLÍTICO Y ORÍGENES AGRÍCOLAS
 ################################################################################
 
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 08-10-2026, 5:52:12 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -30,13 +29,13 @@ DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
 2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
 3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
 4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
-5. Objetivos de Producción Audiovisual (Google Vids):
-   • Video Gancho: 60 segundos como objetivo de producción pedagógica distribuidos en 7 diapositivas.
-   • Video Explicativo: 90 segundos como objetivo de producción pedagógica distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
+5. Duraciones Planificadas de Producción Audiovisual:
+   • Video Gancho: 60 segundos de duración planificada distribuidos en 7 diapositivas.
+   • Video Explicativo: 90 segundos de duración planificada distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
    • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (48 pt, maximo 8 palabras); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
 6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (48 pt, maximo 8 palabras). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes.
 7. Logotipo Oficial: Codex/Work incorpora el logo blanco de EstudioSimple en la esquina inferior derecha del PPTX al tamano del video de referencia. No pedir a la IA que dibuje el logo dentro de la imagen; dejar espacio negativo.
-8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locucion puede enriquecerse y extenderse unos segundos de forma natural; no se exige medir con cronometro ni reexportar por unos segundos adicionales. No limitar notas con conteo de palabras.
+8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. No se exige medir con cronómetro, contar palabras ni reexportar por unos segundos adicionales.
 
 ================================================================================
 MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
@@ -54,60 +53,67 @@ Titulo: El Desafío de la Transición al Neolítico
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Apertura y Escenario (9 seg aprox) ---
+--- DIAPOSITIVA 1: Apertura y Escenario (9 segundos) ---
 1. Propósito Didáctico: Apertura y Escenario
 2. Título en Pantalla (64 pt): El Gran Cambio Climático
 3. Subtítulo en Pantalla (48 pt): Retirada de glaciares y nuevos paisajes
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing on a verdant hill overlooking a melting glacial valley with blooming grasslands. Warm morning sunlight, wide negative space in top third. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Transición climática: Fin del Pleistoceno -> Inicio del Holoceno cálido
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Al finalizar la última era glacial, hace unos doce mil años, las temperaturas aumentaron y vastos valles se cubrieron de vegetación silvestre."
 
---- DIAPOSITIVA 2: Observación de la Naturaleza (9 seg aprox) ---
+--- DIAPOSITIVA 2: Observación de la Naturaleza (9 segundos) ---
 1. Propósito Didáctico: Observación de la Naturaleza
 2. Título en Pantalla (64 pt): Recolección Intensiva
 3. Subtítulo en Pantalla (48 pt): Aprovechamiento de granos y frutos silvestres
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old explorers observing hunter-gatherers collecting wild cereal grains by a riverbend with sickles made of bone and flint. Soft natural lighting, clear negative space. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modo de subsistencia: Recolección selectiva de cereales silvestres
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Las comunidades observaron atentamente cómo brotaban las semillas caídas y comenzaron a recolectar trigo y cebada silvestre con hoces de sílex."
 
---- DIAPOSITIVA 3: El Enigma Natufiense (9 seg aprox) ---
+--- DIAPOSITIVA 3: El Enigma Natufiense (9 segundos) ---
 1. Propósito Didáctico: El Enigma Natufiense
 2. Título en Pantalla (64 pt): Campamentos Semipermanentes
 3. Subtítulo en Pantalla (48 pt): Viviendas circulares previas a la siembra
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing at circular stone house foundations while the girl sketches a grinding mortar in her physical field notebook. Atmospheric morning mist, wide negative space. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Evidencia arqueológica: Asentamientos natufienses sedentarios con economía recolectora
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "En el Cercano Oriente, algunos grupos levantaron cabañas de piedra permanentes mucho antes de sembrar, aprovechando la abundancia natural del entorno."
 
---- DIAPOSITIVA 4: Diferentes Rutas y Tiempos (9 seg aprox) ---
+--- DIAPOSITIVA 4: Diferentes Rutas y Tiempos (9 segundos) ---
 1. Propósito Didáctico: Diferentes Rutas y Tiempos
 2. Título en Pantalla (64 pt): Adaptaciones Regionales
 3. Subtítulo en Pantalla (48 pt): Diversas respuestas a cada entorno natural
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A panoramic archaeological landscape showing three distinct habitats: river valley, dry steppe with goats, and forested hills. Both explorers analyzing the terrain. Clean composition. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Proceso en mosaico: Cada ecosistema requirió soluciones técnicas singulares
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "No todas las regiones avanzaron al mismo ritmo: en zonas secas se priorizó el pastoreo de cabras, mientras que en los valles floreció el cultivo."
 
---- DIAPOSITIVA 5: Centros Independientes (9 seg aprox) ---
+--- DIAPOSITIVA 5: Centros Independientes (9 segundos) ---
 1. Propósito Didáctico: Centros Independientes
 2. Título en Pantalla (64 pt): Focos de Invención Agrícola
 3. Subtítulo en Pantalla (48 pt): Orígenes independientes en distintos continentes
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two explorers examining an ancient global projection showing early botanical domestications across continents. Clean lighting, negative space. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Cartografía histórica: Media Luna Fértil, China fluvial, Mesoamérica y Andes Centrales
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "La agricultura no nació en un único rincón: pueblos de Asia, América y Medio Oriente domesticaron especies por su cuenta sin comunicarse entre sí."
 
---- DIAPOSITIVA 6: El Dilema del Tiempo (9 seg aprox) ---
+--- DIAPOSITIVA 6: El Dilema del Tiempo (9 segundos) ---
 1. Propósito Didáctico: El Dilema del Tiempo
 2. Título en Pantalla (64 pt): La Larga Duración
 3. Subtítulo en Pantalla (48 pt): Milenios de experimentación paciente y continua
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the boy and girl standing on a cliffside looking toward a vast historical horizon with volumetric clouds. Thoughtful expression, generous negative space. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Tiempo histórico: Proceso acumulativo de aprendizaje de larga duración
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Llegamos a la gran pregunta: si este cambio tomó miles de años y ocurrió en lugares tan distintos, ¿cómo transformó la vida de la humanidad?"
 
---- DIAPOSITIVA 7: Pregunta Detonante (6 seg aprox) ---
+--- DIAPOSITIVA 7: Pregunta Detonante (6 segundos) ---
 1. Propósito Didáctico: Pregunta Detonante
 2. Título en Pantalla (64 pt): Misión de Aprendizaje
 3. Subtítulo en Pantalla (48 pt): Descubrir la gran revolución de subsistencia
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Inspiring graphic setting with the two 13-year-olds holding an ear of wild grain and an obsidian tool, smiling toward the viewer. Soft ambient lighting, clean background. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta rectora: ¿Por qué la producción de alimentos transformó a la sociedad?
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "¡Acompáñanos a descubrir en la clase cómo el ser humano aprendió a producir su propio alimento y a transformar el espacio geográfico!"
 
 ================================================================================
@@ -121,60 +127,67 @@ Titulo: La Transición al Neolítico: Un Proceso en Mosaico
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
+--- DIAPOSITIVA 1: Objetivo de la Lección (12 segundos) ---
 1. Propósito Didáctico: Objetivo de la Lección
 2. Título en Pantalla (64 pt): Objetivo de la Clase
 3. Subtítulo en Pantalla (48 pt): Comprender la transición gradual al Neolítico
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The boy and girl in a luminous study room, examining a world map showing distinct agricultural hearths in the Fertile Crescent, China, Mesoamerica, and the Andes. Generous negative space on top. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 2 · La Revolución Neolítica como proceso de larga duración
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El objetivo de hoy es comprender que la transición al Neolítico fue un proceso gradual y regionalmente diverso, desarrollado en múltiples focos del planeta."
 
---- DIAPOSITIVA 2: Concepto de Larga Duración (13 seg aprox) ---
+--- DIAPOSITIVA 2: Concepto de Larga Duración (13 segundos) ---
 1. Propósito Didáctico: Concepto de Larga Duración
 2. Título en Pantalla (64 pt): Tiempo Histórico Acumulativo
 3. Subtítulo en Pantalla (48 pt): Transformaciones lentas a lo largo de milenios
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl explaining a timeline banner showing thousands of years connecting the late Paleolithic with the Neolithic. Clear infographic elements, warm ambient lighting. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Concepto historiográfico: Larga duración (Fernand Braudel) aplicada a la prehistoria
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "En historia usamos el concepto de larga duración: los cambios en la subsistencia no ocurrieron en una generación, sino a lo largo de miles de años de observación."
 
---- DIAPOSITIVA 3: Focos Independientes Mundiales (13 seg aprox) ---
+--- DIAPOSITIVA 3: Focos Independientes Mundiales (13 segundos) ---
 1. Propósito Didáctico: Focos Independientes Mundiales
 2. Título en Pantalla (64 pt): Cuatro Focos Clave
 3. Subtítulo en Pantalla (48 pt): Trigo arroz maíz y papa domesticados
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Detailed cartographic projection highlighting Fertile Crescent with wheat, Yangtze River with rice, Mesoamerica with maize, and Andes with potato. The two explorers pointing at the regions. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Mapa de domesticación: Medio Oriente (10.000 a.C.), China (8.000 a.C.), Mesoamérica (5.000 a.C.), Andes (4.000 a.C.)
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Hacia el diez mil a.C. se domesticó trigo en Medio Oriente; hacia el ocho mil a.C. arroz en China; y más tarde maíz en Mesoamérica y papa en los Andes."
 
---- DIAPOSITIVA 4: Coexistencia de Modos de Vida (13 seg aprox) ---
+--- DIAPOSITIVA 4: Coexistencia de Modos de Vida (13 segundos) ---
 1. Propósito Didáctico: Coexistencia de Modos de Vida
 2. Título en Pantalla (64 pt): Modos de Vida Diversos
 3. Subtítulo en Pantalla (48 pt): Caza pastoreo y cultivo coexistiendo juntos
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A split-scene landscape: on one side hunters tracking game in a forest, in the center pastoralists herding goats, on the riverbank farmers tending crops. Soft depth of field. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema multilineal: Coexistencia prolongada de economías depredadoras y productoras
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Durante siglos las comunidades combinaron la caza con la siembra incipiente. Muchos pueblos mantuvieron el pastoreo móvil y nunca adoptaron la vida aldeana fija."
 
---- DIAPOSITIVA 5: Atención al Error Común (13 seg aprox) ---
+--- DIAPOSITIVA 5: Atención al Error Común (13 segundos) ---
 1. Propósito Didáctico: Atención al Error Común
 2. Título en Pantalla (64 pt): Error: La Línea Única
 3. Subtítulo en Pantalla (48 pt): El cambio no fue automático ni idéntico
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing to a crossed-out linear arrow, contrasting it with an intricate branching tree of human development. Visual clarity, soft teal glow. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Advertencia epistemológica: Superar el evolucionismo unilineal y el determinismo geográfico
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Un error habitual es pensar que toda la humanidad siguió los mismos pasos obligados. Cada cultura se adaptó a su territorio creando soluciones propias y originales."
 
---- DIAPOSITIVA 6: Estrategia de Análisis (13 seg aprox) ---
+--- DIAPOSITIVA 6: Estrategia de Análisis (13 segundos) ---
 1. Propósito Didáctico: Estrategia de Análisis
 2. Título en Pantalla (64 pt): Claves de Interpretación
 3. Subtítulo en Pantalla (48 pt): Medio natural especies y decisiones sociales
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Three connected icons showing: 1. Clima y geografía, 2. Observación de especies, 3. Prácticas comunitarias. The two protagonists studying the icons together. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Guía metodológica: 1. Espacio geográfico · 2. Base ecológica · 3. Organización comunitaria
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Para comprender el origen de la agricultura analiza siempre tres factores: el clima del territorio, las especies disponibles y las necesidades de la comunidad."
 
---- DIAPOSITIVA 7: Síntesis y Conclusión (13 seg aprox) ---
+--- DIAPOSITIVA 7: Síntesis y Conclusión (13 segundos) ---
 1. Propósito Didáctico: Síntesis y Conclusión
 2. Título en Pantalla (64 pt): Regla de Oro Histórica
 3. Subtítulo en Pantalla (48 pt): El Neolítico transformó la subsistencia humana
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Beautiful sunrise over an early farming settlement by a calm lake, with both 13-year-old student explorers smiling with their field notebooks ready. Clear negative space. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Síntesis conceptual: La economía productora transformó la relación del ser humano con la naturaleza
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El Neolítico inauguró la economía productora. El ser humano dejó de depender solo de lo que encontraba y comenzó a transformar activamente su entorno."
 
 ================================================================================
@@ -324,13 +337,13 @@ Refuerzo 1 (Recuperación Histórica: Comprensión de la Transición al Neolíti
 • Vista Previa Proxima Clase: ""
 
 
-
 ################################################################################
-### CLASE 2 DE 6: DOMESTICACIÓN DE PLANTAS Y ANIMALES EN EL CRECIENTE FÉRTIL
+CLASE 2 DE 6: DOMESTICACIÓN DE PLANTAS Y ANIMALES EN EL CRECIENTE FÉRTIL
 ################################################################################
 
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 08-10-2026, 5:52:12 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -345,13 +358,13 @@ DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
 2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
 3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
 4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
-5. Objetivos de Producción Audiovisual (Google Vids):
-   • Video Gancho: 60 segundos como objetivo de producción pedagógica distribuidos en 7 diapositivas.
-   • Video Explicativo: 90 segundos como objetivo de producción pedagógica distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
+5. Duraciones Planificadas de Producción Audiovisual:
+   • Video Gancho: 60 segundos de duración planificada distribuidos en 7 diapositivas.
+   • Video Explicativo: 90 segundos de duración planificada distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
    • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (48 pt, maximo 8 palabras); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
 6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (48 pt, maximo 8 palabras). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes.
 7. Logotipo Oficial: Codex/Work incorpora el logo blanco de EstudioSimple en la esquina inferior derecha del PPTX al tamano del video de referencia. No pedir a la IA que dibuje el logo dentro de la imagen; dejar espacio negativo.
-8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locucion puede enriquecerse y extenderse unos segundos de forma natural; no se exige medir con cronometro ni reexportar por unos segundos adicionales. No limitar notas con conteo de palabras.
+8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. No se exige medir con cronómetro, contar palabras ni reexportar por unos segundos adicionales.
 
 ================================================================================
 MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
@@ -369,60 +382,67 @@ Titulo: El Secreto de las Primeras Cosechas
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Apertura y Escenario (9 seg aprox) ---
+--- DIAPOSITIVA 1: Apertura y Escenario (9 segundos) ---
 1. Propósito Didáctico: Apertura y Escenario
 2. Título en Pantalla (64 pt): El Creciente Fértil
 3. Subtítulo en Pantalla (48 pt): Valles del Tigris y Éufrates floreciendo
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a golden foothill valley in the Fertile Crescent with wild wheat swaying in the breeze. Cinematic warm morning light, wide negative space in top third. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Coordenadas históricas: Arco fértil de Medio Oriente (10.000 a 8.000 a.C.)
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Nuestros dos exploradores llegan a los valles del Creciente Fértil, donde abundaban el trigo silvestre, la cebada y las manadas de cabras montesas."
 
---- DIAPOSITIVA 2: El Enigma de la Semilla (9 seg aprox) ---
+--- DIAPOSITIVA 2: El Enigma de la Semilla (9 segundos) ---
 1. Propósito Didáctico: El Enigma de la Semilla
 2. Título en Pantalla (64 pt): El Trigo Silvestre
 3. Subtítulo en Pantalla (48 pt): Espigas frágiles que dispersan su grano
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl holding a magnifying glass inspecting an ancient ear of emmer wheat, comparing a fragile wild stem with a sturdy domesticated stalk. Clean lineart, soft depth of field, clear space on left. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Mutación y selección: Trigo silvestre (raquis quebradizo) vs Trigo cultivado (raquis firme)
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Al examinar las espigas silvestres descubren un misterio: la naturaleza hace que el grano se desprenda solo, dificultando su recolección humana."
 
---- DIAPOSITIVA 3: La Selección Paciente (9 seg aprox) ---
+--- DIAPOSITIVA 3: La Selección Paciente (9 segundos) ---
 1. Propósito Didáctico: La Selección Paciente
 2. Título en Pantalla (64 pt): Selección Artificial
 3. Subtítulo en Pantalla (48 pt): Elegir las mejores semillas para sembrar
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy and girl observing Neolithic villagers carefully sorting harvested grain baskets, separating the largest, healthiest seeds into clay pots. Dramatic lighting, expressive eyes. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Mecanismo biológico: Selección humana empírica repetida a lo largo de generaciones
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Los recolectores notaron que algunas espigas conservaban el grano adherido. Comenzaron a guardar esas semillas específicas para sembrarlas al año siguiente."
 
---- DIAPOSITIVA 4: El Rebaño Amistoso (9 seg aprox) ---
+--- DIAPOSITIVA 4: El Rebaño Amistoso (9 segundos) ---
 1. Propósito Didáctico: El Rebaño Amistoso
 2. Título en Pantalla (64 pt): Domesticación de Rebaños
 3. Subtítulo en Pantalla (48 pt): Ovejas y cabras conviviendo en aldeas
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists near a stone-walled pen where gentle sheep and goats drink from a wooden trough, with villagers shearing wool. Warm afternoon sunlight, clean composition. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Ganadería neolítica: De la caza indiscriminada al control reproductivo y pastoreo
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Al mismo tiempo, aprendieron a controlar manadas de ovejas y cabras dóciles, asegurando leche fresca, lana para abrigo y carne sin salir a cazar."
 
---- DIAPOSITIVA 5: El Ciclo Agrícola (9 seg aprox) ---
+--- DIAPOSITIVA 5: El Ciclo Agrícola (9 segundos) ---
 1. Propósito Didáctico: El Ciclo Agrícola
 2. Título en Pantalla (64 pt): El Calendario Agrícola
 3. Subtítulo en Pantalla (48 pt): Siembra cuidados riego y cosecha estacional
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy taking notes on an illustrated four-season circular calendar carved on stone, while the girl points to a field being prepared with stone hoes. Vibrant colors, focused determination. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Ciclo de subsistencia: Preparación del suelo -> Siembra -> Protección -> Cosecha
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "La agricultura exigió sincronizarse con las estaciones: preparar la tierra tras las lluvias, regar los brotes y organizar la cosecha comunitaria."
 
---- DIAPOSITIVA 6: El Silo Protector (9 seg aprox) ---
+--- DIAPOSITIVA 6: El Silo Protector (9 segundos) ---
 1. Propósito Didáctico: El Silo Protector
 2. Título en Pantalla (64 pt): El Almacenamiento
 3. Subtítulo en Pantalla (48 pt): Guardar grano para el invierno venidero
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two explorers inspecting an underground pit lined with clay plaster and sealed with flat stones, filled with dried golden grain. Calm volumetric light, wide negative space. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Innovación técnica: Silos sellados para resguardar excedentes de plagas y humedad
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Para que el cultivo tuviera sentido fue vital guardarlo. Inventaron silos y vasijas selladas para proteger las reservas de grano durante los meses fríos."
 
---- DIAPOSITIVA 7: Pregunta Detonante (6 seg aprox) ---
+--- DIAPOSITIVA 7: Pregunta Detonante (6 segundos) ---
 1. Propósito Didáctico: Pregunta Detonante
 2. Título en Pantalla (64 pt): Pregunta de Indagación
 3. Subtítulo en Pantalla (48 pt): ¿Cómo cambió la domesticación nuestra vida?
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Elegant visual setting with the two 13-year-olds smiling with their study notes in hand beside an ancient clay jar overflowing with wheat. Soft gradient background. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Interrogante central: ¿De qué manera la selección artificial transformó la relación con el entorno?
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Ahora descubriremos en la lección cómo estas técnicas agrícolas y ganaderas sentaron las bases para fundar las primeras aldeas permanentes."
 
 ================================================================================
@@ -436,60 +456,67 @@ Titulo: Domesticación y Selección Artificial en el Neolítico
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
+--- DIAPOSITIVA 1: Objetivo de la Lección (12 segundos) ---
 1. Propósito Didáctico: Objetivo de la Lección
 2. Título en Pantalla (64 pt): Objetivo de la Clase
 3. Subtítulo en Pantalla (48 pt): Comprender la domesticación y selección artificial
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The boy and girl in a luminous study room, pointing at an anatomical and botanical diagram comparing wild einkorn wheat and modern domesticated wheat. Clear negative space on top. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 2 · Domesticación en el Creciente Fértil
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El objetivo de hoy es comprender cómo la selección artificial y el manejo de ciclos estacionales permitieron domesticar plantas y animales en el Creciente Fértil."
 
---- DIAPOSITIVA 2: Concepto de Selección Artificial (13 seg aprox) ---
+--- DIAPOSITIVA 2: Concepto de Selección Artificial (13 segundos) ---
 1. Propósito Didáctico: Concepto de Selección Artificial
 2. Título en Pantalla (64 pt): Selección Artificial Empírica
 3. Subtítulo en Pantalla (48 pt): Modificación de especies para beneficio humano
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl explaining a comparison board with wild goat horns versus domesticated sheep wool icons. Soft lighting, clean infographic layout. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Definición histórica: Intervención humana continua seleccionando rasgos ventajosos de plantas y animales
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "La selección artificial es la elección intencionada de rasgos favorables: granos más nutritivos en las plantas y docilidad y mayor tamaño en los animales."
 
---- DIAPOSITIVA 3: El Caso del Trigo Escanda (13 seg aprox) ---
+--- DIAPOSITIVA 3: El Caso del Trigo Escanda (13 segundos) ---
 1. Propósito Didáctico: El Caso del Trigo Escanda
 2. Título en Pantalla (64 pt): El Raquis no Quebradizo
 3. Subtítulo en Pantalla (48 pt): Retener semillas para facilitar la cosecha
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up diagram showing a wheat spikelet: wild brittle rachis breaking vs non-brittle tough rachis of domesticated wheat. The two explorers examining the grain closely. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Mutación domesticada: El raquis resistente retiene el grano en la espiga durante la siega
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "En el trigo, la clave fue el raquis no quebradizo. Las espigas que no soltaban el grano al viento permitieron a las familias cosechar grandes cantidades sin pérdidas."
 
---- DIAPOSITIVA 4: Domesticación de Ganado Menor (13 seg aprox) ---
+--- DIAPOSITIVA 4: Domesticación de Ganado Menor (13 segundos) ---
 1. Propósito Didáctico: Domesticación de Ganado Menor
 2. Título en Pantalla (64 pt): Ganadería y Recursos Continuos
 3. Subtítulo en Pantalla (48 pt): Leche lana y carne en corrales
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy sketching a pen with sheep, goats and pigs, noting secondary products: wool, milk, leather and traction. Clean lineart, soft ambient lighting. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Aprovechamiento secundario: Obtención recurrente de derivados lácteos y textiles sin sacrificar el ganado
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Las ovejas y cabras se convirtieron en despensas vivientes: aportaban leche y lana de forma periódica, complementando la dieta vegetal con proteínas de calidad."
 
---- DIAPOSITIVA 5: Almacenamiento y Seguridad (13 seg aprox) ---
+--- DIAPOSITIVA 5: Almacenamiento y Seguridad (13 segundos) ---
 1. Propósito Didáctico: Almacenamiento y Seguridad
 2. Título en Pantalla (64 pt): Reservas de Alimento
 3. Subtítulo en Pantalla (48 pt): Silos y vasijas protegiendo la cosecha
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Village storage scene with sealed pottery jars and subterranean clay silos being inspected by village elders and the two protagonists. Clear negative space. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Función económica: Conservación de excedentes estacionales para subsistencia y siembra posterior
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El almacenamiento resolvió el dilema del invierno. Guardar granos en silos subterráneos secos aseguró comida durante los meses sin cosecha y semillas para sembrar."
 
---- DIAPOSITIVA 6: Atención al Error Frecuente (13 seg aprox) ---
+--- DIAPOSITIVA 6: Atención al Error Frecuente (13 segundos) ---
 1. Propósito Didáctico: Atención al Error Frecuente
 2. Título en Pantalla (64 pt): Error: Amaestrar no es Domesticar
 3. Subtítulo en Pantalla (48 pt): Domesticar altera la genética de generaciones
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Visual contrast showing a wild aggressive wolf versus a friendly domesticated sheep flock, emphasizing generational biological changes. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diferenciación conceptual: Amaestramiento (conducta individual) vs Domesticación (cambio evolutivo poblacional)
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Un error habitual es confundir amaestrar con domesticar. Amaestrar es educar a un animal salvaje; domesticar es transformar genéticamente a toda una especie a lo largo de siglos."
 
---- DIAPOSITIVA 7: Síntesis y Regla de Oro (13 seg aprox) ---
+--- DIAPOSITIVA 7: Síntesis y Regla de Oro (13 segundos) ---
 1. Propósito Didáctico: Síntesis y Regla de Oro
 2. Título en Pantalla (64 pt): Regla de Oro Agrícola
 3. Subtítulo en Pantalla (48 pt): Selección continua y almacenamiento planificado
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-olds smiling proudly with their open notebooks before an ancient Fertile Crescent landscape of cultivated terraces and grazing sheep. Clear negative space. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Síntesis metodológica: Observación empírica + Selección artificial + Almacenamiento = Estabilidad comunitaria
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "La domesticación y el almacenamiento liberaron a las comunidades de la escasez inmediata, sentando las bases materiales para construir las primeras aldeas sedentarias permanentes."
 
 ================================================================================
@@ -639,13 +666,13 @@ Refuerzo 1 (Recuperación Histórica: Comprensión de la Domesticación Neolíti
 • Vista Previa Proxima Clase: ""
 
 
-
 ################################################################################
-### CLASE 3 DE 6: PRIMERAS ALDEAS SEDENTARIAS Y ORGANIZACIÓN COMUNITARIA
+CLASE 3 DE 6: PRIMERAS ALDEAS SEDENTARIAS Y ORGANIZACIÓN COMUNITARIA
 ################################################################################
 
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 08-10-2026, 5:52:12 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -660,13 +687,13 @@ DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
 2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
 3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
 4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
-5. Objetivos de Producción Audiovisual (Google Vids):
-   • Video Gancho: 60 segundos como objetivo de producción pedagógica distribuidos en 7 diapositivas.
-   • Video Explicativo: 90 segundos como objetivo de producción pedagógica distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
+5. Duraciones Planificadas de Producción Audiovisual:
+   • Video Gancho: 60 segundos de duración planificada distribuidos en 7 diapositivas.
+   • Video Explicativo: 90 segundos de duración planificada distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
    • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (48 pt, maximo 8 palabras); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
 6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (48 pt, maximo 8 palabras). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes.
 7. Logotipo Oficial: Codex/Work incorpora el logo blanco de EstudioSimple en la esquina inferior derecha del PPTX al tamano del video de referencia. No pedir a la IA que dibuje el logo dentro de la imagen; dejar espacio negativo.
-8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locucion puede enriquecerse y extenderse unos segundos de forma natural; no se exige medir con cronometro ni reexportar por unos segundos adicionales. No limitar notas con conteo de palabras.
+8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. No se exige medir con cronómetro, contar palabras ni reexportar por unos segundos adicionales.
 
 ================================================================================
 MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
@@ -684,60 +711,67 @@ Titulo: La Vida Cotidiana en las Primeras Aldeas
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Apertura y Escenario (9 seg aprox) ---
+--- DIAPOSITIVA 1: Apertura y Escenario (9 segundos) ---
 1. Propósito Didáctico: Apertura y Escenario
 2. Título en Pantalla (64 pt): Las Primeras Aldeas
 3. Subtítulo en Pantalla (48 pt): Hogares permanentes junto a valles fértiles
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a sunlit plateau overlooking the mudbrick rooftops of ancient Çatalhöyük. Warm morning light, wide negative space in top third. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Coordenadas arqueológicas: Çatalhöyük (Anatolia) y Jericó (Cisjordania), 8.000 a 6.000 a.C.
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Nuestros exploradores descubren Çatalhöyük, una de las aldeas más antiguas del mundo, donde cientos de familias compartían un asentamiento fijo de adobe."
 
---- DIAPOSITIVA 2: El Hábitat Adosado (9 seg aprox) ---
+--- DIAPOSITIVA 2: El Hábitat Adosado (9 segundos) ---
 1. Propósito Didáctico: El Hábitat Adosado
 2. Título en Pantalla (64 pt): Viviendas por el Techo
 3. Subtítulo en Pantalla (48 pt): Entradas superiores y muros continuos protectores
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl climbing a wooden ladder through a roof opening into a clean, plastered mudbrick room with an oven and sleeping benches. Soft volumetric light, clear space on left. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Arquitectura vernácula: Casas adosadas sin calles para aislamiento térmico y defensa
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Las casas no tenían puertas en la planta baja. Las familias circulaban por los techos y descendían por escaleras, protegiéndose del frío y de animales salvajes."
 
---- DIAPOSITIVA 3: La Muralla de Jericó (9 seg aprox) ---
+--- DIAPOSITIVA 3: La Muralla de Jericó (9 segundos) ---
 1. Propósito Didáctico: La Muralla de Jericó
 2. Título en Pantalla (64 pt): Fortificaciones Colectivas
 3. Subtítulo en Pantalla (48 pt): Murallas de piedra levantadas en comunidad
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy standing before a massive stone fortification wall and circular tower of ancient Jericho, measuring the stones with admiration. Dramatic lighting, expressive eyes. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Monumento comunitario: Muralla y torre de Jericó construidas mediante trabajo cooperativo
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "En Jericó, los aldeanos construyeron una imponente muralla de piedra. Esta gran obra exigió que toda la comunidad colaborara organizada para proteger su oasis."
 
---- DIAPOSITIVA 4: La División del Trabajo (9 seg aprox) ---
+--- DIAPOSITIVA 4: La División del Trabajo (9 segundos) ---
 1. Propósito Didáctico: La División del Trabajo
 2. Título en Pantalla (64 pt): Nuevas Labores Aldeanas
 3. Subtítulo en Pantalla (48 pt): Agricultores constructores pastores y artesanos
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Bustling village scene: a group of men molding mudbricks, women weaving flax linen, and youths herding goats toward the green hills. Vibrant colors, clean composition. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Organización social: Primeros pasos hacia la especialización y división comunitaria del trabajo
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "La vida aldeana impulsó la división de tareas: mientras unos sembraban en los campos, otros fabricaban ladrillos de adobe, cuidaban los rebaños o tejían mantas."
 
---- DIAPOSITIVA 5: El Espacio Sagrado (9 seg aprox) ---
+--- DIAPOSITIVA 5: El Espacio Sagrado (9 segundos) ---
 1. Propósito Didáctico: El Espacio Sagrado
 2. Título en Pantalla (64 pt): Memoria y Antepasados
 3. Subtítulo en Pantalla (48 pt): Culto doméstico y enterramientos familiares
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists in a quiet domestic room with bull skull decorations (bucrania) and plastered hearths, looking with respect at an ancestral platform. Gentle warm light. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Cohesión social: Sentido de pertenencia territorial vinculado al culto de los antepasados
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Los lazos de parentesco eran sagrados. Enterraban a sus seres queridos bajo las plataformas de sus casas, reforzando el arraigo y el derecho a su tierra."
 
---- DIAPOSITIVA 6: El Espacio Modificado (9 seg aprox) ---
+--- DIAPOSITIVA 6: El Espacio Modificado (9 segundos) ---
 1. Propósito Didáctico: El Espacio Modificado
 2. Título en Pantalla (64 pt): Transformación del Paisaje
 3. Subtítulo en Pantalla (48 pt): Campos canales y corrales alterando el entorno
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two explorers on a hill overlooking cultivated fields, water diversion ditches, and animal pens surrounding the village. Volumetric clouds, generous negative space. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Geografía humana: Modificación intencional del entorno natural para fines productivos
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El sedentarismo transformó el paisaje geográfico: abrieron canales para desviar agua de ríos, talaron matorrales y crearon huertos permanentes en el valle."
 
---- DIAPOSITIVA 7: Pregunta Detonante (6 seg aprox) ---
+--- DIAPOSITIVA 7: Pregunta Detonante (6 segundos) ---
 1. Propósito Didáctico: Pregunta Detonante
 2. Título en Pantalla (64 pt): Interrogante Central
 3. Subtítulo en Pantalla (48 pt): ¿Cómo organizaron la convivencia en aldeas?
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Inspiring setting with both 13-year-olds smiling with their study notes before an ancient village map, curious and confident. Soft gradient background. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta rectora: ¿Qué acuerdos comunitarios permitieron la vida sedentaria?
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "¡Acompáñanos a descubrir cómo las primeras aldeas sedentarias crearon nuevas formas de cooperación, liderazgo y vida comunitaria!"
 
 ================================================================================
@@ -751,60 +785,67 @@ Titulo: El Espacio Aldeano y la Vida Comunitaria
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
+--- DIAPOSITIVA 1: Objetivo de la Lección (12 segundos) ---
 1. Propósito Didáctico: Objetivo de la Lección
 2. Título en Pantalla (64 pt): Objetivo de la Clase
 3. Subtítulo en Pantalla (48 pt): Comprender la vida en primeras aldeas
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The boy and girl in a luminous study room, examining architectural models of Neolithic mudbrick houses and village layouts. Clear negative space on top. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 2 · Hábitat sedentario y organización comunitaria
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El objetivo de hoy es comprender cómo las primeras aldeas sedentarias transformaron el espacio geográfico e inauguraron la división social del trabajo."
 
---- DIAPOSITIVA 2: La Arquitectura de Adobe (13 seg aprox) ---
+--- DIAPOSITIVA 2: La Arquitectura de Adobe (13 segundos) ---
 1. Propósito Didáctico: La Arquitectura de Adobe
 2. Título en Pantalla (64 pt): Viviendas Permanentes
 3. Subtítulo en Pantalla (48 pt): Ladrillos de adobe barro y madera
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl explaining a cutaway illustration of a Neolithic mudbrick house: hearth, clay storage bins, reed roof with opening, and wooden ladder. Clean lineart. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Tecnología constructiva: Ladrillos de barro y paja secados al sol para arquitectura duradera
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El adobe fue el material estrella. Mezclando arcilla, agua y paja secada al sol, levantaron viviendas cuadrangulares sólidas que resistían años de uso."
 
---- DIAPOSITIVA 3: El Caso de Çatalhöyük (13 seg aprox) ---
+--- DIAPOSITIVA 3: El Caso de Çatalhöyük (13 segundos) ---
 1. Propósito Didáctico: El Caso de Çatalhöyük
 2. Título en Pantalla (64 pt): Urbanismo sin Calles
 3. Subtítulo en Pantalla (48 pt): Circulación por terrazas y azoteas comunales
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. High-angle architectural view of Çatalhöyük showing contiguous rooftops, people walking between terraces, and ladder entrances. The two explorers studying the settlement map. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Caso arqueológico: Asentamiento igualitario de Çatalhöyük (Anatolia, 7.500 a.C.)
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "En Çatalhöyük vivían miles de personas sin calles. Los tejados eran plazas públicas donde molían granos, horneaban pan y conversaban en comunidad."
 
---- DIAPOSITIVA 4: Defensa Colectiva en Jericó (13 seg aprox) ---
+--- DIAPOSITIVA 4: Defensa Colectiva en Jericó (13 segundos) ---
 1. Propósito Didáctico: Defensa Colectiva en Jericó
 2. Título en Pantalla (64 pt): Obras Públicas Comunes
 3. Subtítulo en Pantalla (48 pt): Protección ante crecidas y pueblos vecinos
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Detailed diagram showing the stone defensive ditch, stone wall, and circular tower of Jericho with water channels flowing from the spring. Soft ambient light. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Ingeniería temprana: Murallas de Jericó como respuesta a riesgos hídricos y amenazas externas
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Jericó levantó murallas de piedra para resguardar su manantial y defender sus cosechas, demostrando que podían organizar faenas colectivas masivas."
 
---- DIAPOSITIVA 5: La División del Trabajo (13 seg aprox) ---
+--- DIAPOSITIVA 5: La División del Trabajo (13 segundos) ---
 1. Propósito Didáctico: La División del Trabajo
 2. Título en Pantalla (64 pt): Especialización de Roles
 3. Subtítulo en Pantalla (48 pt): Nuevas tareas divididas en la comunidad
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Four-quadrant diagram: 1. Labranza de campos, 2. Pastoreo, 3. Fabricación de adobes, 4. Tejido y alfarería. The two 13-year-olds analyzing each role. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Estructura social: Diferenciación inicial de funciones productivas y de cuidado
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Con el sedentarismo nació la división del trabajo: las familias se repartieron labores entre cultivo, pastoreo, construcción y artesanías útiles."
 
---- DIAPOSITIVA 6: Atención al Error Común (13 seg aprox) ---
+--- DIAPOSITIVA 6: Atención al Error Común (13 segundos) ---
 1. Propósito Didáctico: Atención al Error Común
 2. Título en Pantalla (64 pt): Error: No Eran Ciudades
 3. Subtítulo en Pantalla (48 pt): Eran aldeas agrícolas de organización familiar
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing to an architectural drawing, correcting the mistaken idea of modern avenues with a graphic of clustered Neolithic rooftops. Clean visuals. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rigor conceptual: Distinción entre aldea igualitaria neolítica y ciudad-estado estratificada posterior
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Un error común es llamar ciudades a estas primeras aldeas. Eran asentamientos campesinos donde primaba el parentesco y la colaboración familiar."
 
---- DIAPOSITIVA 7: Síntesis y Regla de Oro (13 seg aprox) ---
+--- DIAPOSITIVA 7: Síntesis y Regla de Oro (13 segundos) ---
 1. Propósito Didáctico: Síntesis y Regla de Oro
 2. Título en Pantalla (64 pt): Regla de Oro Comunitaria
 3. Subtítulo en Pantalla (48 pt): Vivienda permanente y cooperación organizada
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-olds smiling confidently with their notebooks open before a peaceful view of a fertile Neolithic river village at sunset. Generous negative space. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Conclusión didáctica: Sedentarismo = Reorganización del espacio + Cooperación social colectiva
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "La aldea sedentaria transformó la convivencia. La vivienda permanente y el trabajo compartido establecieron las bases de la vida en sociedad que perdura hasta hoy."
 
 ================================================================================
@@ -954,13 +995,13 @@ Refuerzo 1 (Recuperación Histórica: Vida en las Primeras Aldeas):
 • Vista Previa Proxima Clase: ""
 
 
-
 ################################################################################
-### CLASE 4 DE 6: INNOVACIONES TECNOLÓGICAS DEL NEOLÍTICO
+CLASE 4 DE 6: INNOVACIONES TECNOLÓGICAS DEL NEOLÍTICO
 ################################################################################
 
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 08-10-2026, 5:52:12 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -975,13 +1016,13 @@ DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
 2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
 3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
 4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
-5. Objetivos de Producción Audiovisual (Google Vids):
-   • Video Gancho: 60 segundos como objetivo de producción pedagógica distribuidos en 7 diapositivas.
-   • Video Explicativo: 90 segundos como objetivo de producción pedagógica distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
+5. Duraciones Planificadas de Producción Audiovisual:
+   • Video Gancho: 60 segundos de duración planificada distribuidos en 7 diapositivas.
+   • Video Explicativo: 90 segundos de duración planificada distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
    • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (48 pt, maximo 8 palabras); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
 6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (48 pt, maximo 8 palabras). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes.
 7. Logotipo Oficial: Codex/Work incorpora el logo blanco de EstudioSimple en la esquina inferior derecha del PPTX al tamano del video de referencia. No pedir a la IA que dibuje el logo dentro de la imagen; dejar espacio negativo.
-8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locucion puede enriquecerse y extenderse unos segundos de forma natural; no se exige medir con cronometro ni reexportar por unos segundos adicionales. No limitar notas con conteo de palabras.
+8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. No se exige medir con cronómetro, contar palabras ni reexportar por unos segundos adicionales.
 
 ================================================================================
 MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
@@ -999,60 +1040,67 @@ Titulo: Los Inventos que Transformaron el Neolítico
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Apertura y Escenario (9 seg aprox) ---
+--- DIAPOSITIVA 1: Apertura y Escenario (9 segundos) ---
 1. Propósito Didáctico: Apertura y Escenario
 2. Título en Pantalla (64 pt): El Taller Neolítico
 3. Subtítulo en Pantalla (48 pt): Artesanos creando herramientas para la aldea
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at an ancient artisan quarter in a sunny Neolithic village. Warm morning light, wide negative space in top third. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Revolución técnica: Nuevas herramientas para nuevas necesidades de subsistencia
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Nuestros exploradores llegan a una aldea neolítica donde las familias perfeccionan inventos indispensables para su vida diaria sedentaria."
 
---- DIAPOSITIVA 2: El Pulido de la Piedra (9 seg aprox) ---
+--- DIAPOSITIVA 2: El Pulido de la Piedra (9 segundos) ---
 1. Propósito Didáctico: El Pulido de la Piedra
 2. Título en Pantalla (64 pt): Piedra Pulimentada
 3. Subtítulo en Pantalla (48 pt): Frotado con arena para filos indestructibles
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy observing a villager patiently rubbing a greenstone axe head with wet abrasive sand on a large sandstone boulder, showing smooth polished facets. Soft clean lighting, clear space on left. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Técnica lítica: Frotamiento abrasivo con agua para eliminar microfracturas y lograr filos uniformes
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "La técnica del pulido revolucionó las herramientas. Al frotar la piedra con arena y agua, lograban filos resistentes que no se rompían al golpear."
 
---- DIAPOSITIVA 3: El Molino de Mano (9 seg aprox) ---
+--- DIAPOSITIVA 3: El Molino de Mano (9 segundos) ---
 1. Propósito Didáctico: El Molino de Mano
 2. Título en Pantalla (64 pt): Molienda de Cereales
 3. Subtítulo en Pantalla (48 pt): Molinos de piedra para transformar el grano
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl trying out a boat-shaped stone saddle quern (metate), grinding golden wheat grains into white flour with a smooth handstone. Expressive eyes, warm ambient lighting. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Procesamiento de alimentos: De granos duros e indigeribles a harina molida lista para el pan
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Los granos de trigo eran duros para masticar. Con molinos de piedra pulida los transformaron en harina fina, inventando las primeras tortas y panes cocidos."
 
---- DIAPOSITIVA 4: La Alfarería y el Fuego (9 seg aprox) ---
+--- DIAPOSITIVA 4: La Alfarería y el Fuego (9 segundos) ---
 1. Propósito Didáctico: La Alfarería y el Fuego
 2. Título en Pantalla (64 pt): Cerámica en Hornos
 3. Subtítulo en Pantalla (48 pt): Recipientes impermeables que soportan el fuego
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on a potter smoothing a wet clay vessel with coils, next to an active domed kiln glowing with orange coals. Vibrant colors, clean composition. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Tecnología pirotécnica: Transformación química de la arcilla en material cerámico impermeable
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Al cocer la arcilla en hornos lograron recipientes impermeables. Por primera vez pudieron hervir caldos directamente al fuego y proteger sus granos de las lluvias."
 
---- DIAPOSITIVA 5: El Telar Vertical (9 seg aprox) ---
+--- DIAPOSITIVA 5: El Telar Vertical (9 segundos) ---
 1. Propósito Didáctico: El Telar Vertical
 2. Título en Pantalla (64 pt): Textilería y Vestimenta
 3. Subtítulo en Pantalla (48 pt): Lino y lana tejidos en telares
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young companions examining an upright warp-weighted wooden loom with woven linen and wool patterns, decorated with bone weaving needles. Soft depth of field. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Manufactura textil: Hilado con huso y tejido en telar vertical para reemplazar pieles pesadas
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El telar permitió tejer fibras de lana de oveja y lino vegetal. Las familias reemplazaron las pieles pesadas de caza por prendas livianas, flexibles y lavables."
 
---- DIAPOSITIVA 6: Los Primeros Metales (9 seg aprox) ---
+--- DIAPOSITIVA 6: Los Primeros Metales (9 segundos) ---
 1. Propósito Didáctico: Los Primeros Metales
 2. Título en Pantalla (64 pt): Cobre Martillado
 3. Subtítulo en Pantalla (48 pt): Primeros destellos de la metalurgia naciente
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two explorers inspecting cold-hammered native copper awls, beads, and small hooks shining with reddish metallic luster on an artisan mat. Volumetric lighting. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Metalurgia incipiente: Martillado en frío de cobre nativo para adornos y pequeños punzones
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Hacia el final del Neolítico hallaron pepitas de cobre puro. Golpeándolas en frío con piedras, modelaron pequeños punzones y adornos metálicos brillantes."
 
---- DIAPOSITIVA 7: Pregunta Detonante (6 seg aprox) ---
+--- DIAPOSITIVA 7: Pregunta Detonante (6 segundos) ---
 1. Propósito Didáctico: Pregunta Detonante
 2. Título en Pantalla (64 pt): Pregunta de Indagación
 3. Subtítulo en Pantalla (48 pt): ¿Cómo cambió la técnica nuestra vida?
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Elegant visual setting with the two 13-year-olds smiling with their notebooks beside a display of polished tools, pottery, and woven fabric. Soft background. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta rectora: ¿Qué impacto social tuvieron las nuevas tecnologías del Neolítico?
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "¡Descubramos en la lección cómo estas innovaciones técnicas multiplicaron la capacidad de producir, guardar y transformar la vida cotidiana!"
 
 ================================================================================
@@ -1066,60 +1114,67 @@ Titulo: La Revolución Tecnológica del Neolítico
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
+--- DIAPOSITIVA 1: Objetivo de la Lección (12 segundos) ---
 1. Propósito Didáctico: Objetivo de la Lección
 2. Título en Pantalla (64 pt): Objetivo de la Clase
 3. Subtítulo en Pantalla (48 pt): Comprender las tecnologías del Neolítico
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The boy and girl in a luminous study room, examining archaeological diagrams of Neolithic tools: polished axes, ceramic vessels, and loom parts. Clear negative space on top. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 2 · Innovaciones técnicas de la Revolución Neolítica
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El objetivo de hoy es comprender cómo la piedra pulida, la cerámica, los telares y el cobre transformaron la subsistencia y la vida cotidiana neolítica."
 
---- DIAPOSITIVA 2: Piedra Pulida y Medio Físico (13 seg aprox) ---
+--- DIAPOSITIVA 2: Piedra Pulida y Medio Físico (13 segundos) ---
 1. Propósito Didáctico: Piedra Pulida y Medio Físico
 2. Título en Pantalla (64 pt): Hachas y Azadas Pulimentadas
 3. Subtítulo en Pantalla (48 pt): Modificar el paisaje para campos agrícolas
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl explaining a technical diagram showing how a polished stone axe cuts down trees to clear farmland, with micrographic comparison of stone surfaces. Clear lineart. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Transformación geográfica: Deforestación controlada de bosques y preparación de surcos agrícolas
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "La piedra pulida permitió talar bosques y remover suelos duros. Gracias a hachas y azadas resistentes abrieron campos de cultivo permanentes en los valles."
 
---- DIAPOSITIVA 3: Alfarería y Conservación (13 seg aprox) ---
+--- DIAPOSITIVA 3: Alfarería y Conservación (13 segundos) ---
 1. Propósito Didáctico: Alfarería y Conservación
 2. Título en Pantalla (64 pt): Cerámica y Almacenamiento
 3. Subtítulo en Pantalla (48 pt): Protección de granos y cocción de guisos
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up diagram of clay pottery being fired, showing water impermeability and protection against mice and moisture. The two explorers testing a ceramic jar. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Beneficio doble: 1. Almacenamiento impermeable y hermético · 2. Cocción hervida de legumbres y cereales
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "La cerámica cocida aportó dos ventajas decisivas: ollas que resistían el fuego para hervir sopas y tinajas herméticas que protegían el grano de la humedad."
 
---- DIAPOSITIVA 4: La Revolución Textil (13 seg aprox) ---
+--- DIAPOSITIVA 4: La Revolución Textil (13 segundos) ---
 1. Propósito Didáctico: La Revolución Textil
 2. Título en Pantalla (64 pt): Telares y Fibras Naturales
 3. Subtítulo en Pantalla (48 pt): Lino y lana para vestimentas ligeras
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating a vertical loom with hanging clay loom-weights, showing warp and weft fibers interlacing smoothly. Clean lighting. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Tecnología textil: Uso de husos de hilar y telares para crear tejidos suaves, higiénicos y resistentes
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Los telares transformaron la vestimenta. Al hilar lana de oveja y fibras de lino, elaboraron mantas y túnicas ligeras, dejando atrás las pieles rígidas del Paleolítico."
 
---- DIAPOSITIVA 5: Metalurgia Temprana del Cobre (13 seg aprox) ---
+--- DIAPOSITIVA 5: Metalurgia Temprana del Cobre (13 segundos) ---
 1. Propósito Didáctico: Metalurgia Temprana del Cobre
 2. Título en Pantalla (64 pt): Los Primeros Metales
 3. Subtítulo en Pantalla (48 pt): Cobre martillado para herramientas precisas
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An artisan martillando cold native copper nuggets into thin needles, awls, and shiny green-blue beads on an anvil stone. The two 13-year-olds watching with interest. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Transición calcolítica: De la piedra trabajada al martillado en frío del cobre nativo
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "A fines del período apareció el cobre nativo. Martillándolo sin fundir crearon agujas finas, punzones para cuero y cuentas de adorno con brillo metálico."
 
---- DIAPOSITIVA 6: Atención al Error Común (13 seg aprox) ---
+--- DIAPOSITIVA 6: Atención al Error Común (13 segundos) ---
 1. Propósito Didáctico: Atención al Error Común
 2. Título en Pantalla (64 pt): Error: No Solo Piedras
 3. Subtítulo en Pantalla (48 pt): La tecnología abarcó barro fuego y tejidos
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl contrasting an image of crude stone chipping with a smooth polished stone axe, pointing out that 'Neolítico' significa piedra pulida. Clear visual. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rigor conceptual: El Neolítico no se reduce a la piedra; combinó cerámica, textiles, agricultura y metales
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Un error habitual es creer que la tecnología neolítica fue solo pulir piedras. En verdad fue un sistema integrado de alfarería, hornos, textilería y herramientas."
 
---- DIAPOSITIVA 7: Síntesis y Regla de Oro (13 seg aprox) ---
+--- DIAPOSITIVA 7: Síntesis y Regla de Oro (13 segundos) ---
 1. Propósito Didáctico: Síntesis y Regla de Oro
 2. Título en Pantalla (64 pt): Regla de Oro Tecnológica
 3. Subtítulo en Pantalla (48 pt): Herramientas que transformaron la subsistencia
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-olds smiling proudly with their open notebooks before an infographic linking: Piedra pulida -> Cerámica -> Telar -> Cobre. Clean negative space. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Síntesis conceptual: La innovación tecnológica amplió la productividad y el bienestar material de las comunidades
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Cada innovación tecnológica resolvió una necesidad vital de la aldea: limpiar campos, cocinar alimentos, abrigar a las familias y asegurar reservas para el futuro."
 
 ================================================================================
@@ -1269,13 +1324,13 @@ Refuerzo 1 (Recuperación Histórica: Las Tecnologías Neolíticas):
 • Vista Previa Proxima Clase: ""
 
 
-
 ################################################################################
-### CLASE 5 DE 6: PROPIEDAD, JERARQUÍAS Y ESPECIALIZACIÓN DEL TRABAJO
+CLASE 5 DE 6: PROPIEDAD, JERARQUÍAS Y ESPECIALIZACIÓN DEL TRABAJO
 ################################################################################
 
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 08-10-2026, 5:52:12 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -1290,13 +1345,13 @@ DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
 2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
 3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
 4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
-5. Objetivos de Producción Audiovisual (Google Vids):
-   • Video Gancho: 60 segundos como objetivo de producción pedagógica distribuidos en 7 diapositivas.
-   • Video Explicativo: 90 segundos como objetivo de producción pedagógica distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
+5. Duraciones Planificadas de Producción Audiovisual:
+   • Video Gancho: 60 segundos de duración planificada distribuidos en 7 diapositivas.
+   • Video Explicativo: 90 segundos de duración planificada distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
    • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (48 pt, maximo 8 palabras); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
 6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (48 pt, maximo 8 palabras). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes.
 7. Logotipo Oficial: Codex/Work incorpora el logo blanco de EstudioSimple en la esquina inferior derecha del PPTX al tamano del video de referencia. No pedir a la IA que dibuje el logo dentro de la imagen; dejar espacio negativo.
-8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locucion puede enriquecerse y extenderse unos segundos de forma natural; no se exige medir con cronometro ni reexportar por unos segundos adicionales. No limitar notas con conteo de palabras.
+8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. No se exige medir con cronómetro, contar palabras ni reexportar por unos segundos adicionales.
 
 ================================================================================
 MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
@@ -1314,60 +1369,67 @@ Titulo: El Nacimiento de las Jerarquías Sociales
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Apertura y Escenario (9 seg aprox) ---
+--- DIAPOSITIVA 1: Apertura y Escenario (9 segundos) ---
 1. Propósito Didáctico: Apertura y Escenario
 2. Título en Pantalla (64 pt): Linderos de Piedra
 3. Subtítulo en Pantalla (48 pt): Límites marcando parcelas familiares de cultivo
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, observing agricultural plots separated by low stone boundary markers along a river terrace. Clear morning light, wide negative space in top third. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Transformación jurídica consuetudinaria: Aparición de linderos y delimitación de parcelas
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Nuestros exploradores observan un cambio en los campos: muros bajos de piedra marcan las tierras de cada familia, delimitando su propiedad."
 
---- DIAPOSITIVA 2: El Trabajo y el Derecho (9 seg aprox) ---
+--- DIAPOSITIVA 2: El Trabajo y el Derecho (9 segundos) ---
 1. Propósito Didáctico: El Trabajo y el Derecho
 2. Título en Pantalla (64 pt): El Fruto del Esfuerzo
 3. Subtítulo en Pantalla (48 pt): Cuidar la tierra genera derechos exclusivos
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A farming family sweating together to remove river boulders from their field while planting grain, showing months of dedicated labor. The two protagonists taking field notes. Clear space on left. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Base económica: La inversión de trabajo continuado justifica el reclamo de propiedad familiar
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Al invertir meses limpiando, regando y cuidando la tierra, las familias comenzaron a considerar que el grano cosechado les pertenecía por derecho propio."
 
---- DIAPOSITIVA 3: La Cosecha Desigual (9 seg aprox) ---
+--- DIAPOSITIVA 3: La Cosecha Desigual (9 segundos) ---
 1. Propósito Didáctico: La Cosecha Desigual
 2. Título en Pantalla (64 pt): Acumulación Desigual
 3. Subtítulo en Pantalla (48 pt): Diferencias materiales entre las familias aldeanas
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Visual contrast in the village: one house with multiple overflowing clay grain jars and robust sheep pens, next to a modest house with empty baskets. Dramatic lighting, expressive eyes. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diferenciación económica: Cosechas favorables y rebaños numerosos generan acumulación asimétrica de riqueza
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "No todas las familias obtuvieron el mismo resultado. Quienes contaban con mejores suelos o más brazos acumularon grandes reservas, mientras otras pasaban escasez."
 
---- DIAPOSITIVA 4: La Jefatura Comunal (9 seg aprox) ---
+--- DIAPOSITIVA 4: La Jefatura Comunal (9 segundos) ---
 1. Propósito Didáctico: La Jefatura Comunal
 2. Título en Pantalla (64 pt): Autoridad y Mediación
 3. Subtítulo en Pantalla (48 pt): Consejos de ancianos resolviendo disputas comunales
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A respected elder chief with carved bone ornaments mediating a dispute between two farmers near a communal canal, with villagers listening attentively. Vibrant colors, clean composition. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Estructura política: Nacimiento de jefaturas y consejos para resolver conflictos de linderos y riego
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Surgieron conflictos por tierras y agua de regadío. Los consejos de ancianos y líderes prestigiosos asumieron la autoridad para dictar acuerdos y mantener el orden."
 
---- DIAPOSITIVA 5: Artesanos Especializados (9 seg aprox) ---
+--- DIAPOSITIVA 5: Artesanos Especializados (9 segundos) ---
 1. Propósito Didáctico: Artesanos Especializados
 2. Título en Pantalla (64 pt): Oficios de Tiempo Completo
 3. Subtítulo en Pantalla (48 pt): Especialistas alimentados por excedentes agrícolas
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A master potter and a stone polisher working full time in a dedicated workshop, receiving grain baskets from farmers in exchange for tools and pots. Soft depth of field. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Especialización laboral: Los artesanos no cultivan la tierra y son sostenidos por los excedentes colectivos
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Al haber comida acumulada, algunos aldeanos dejaron de cultivar para dedicarse exclusivamente a perfeccionar la alfarería, la metalurgia y la construcción."
 
---- DIAPOSITIVA 6: Jerarquías de Prestigio (9 seg aprox) ---
+--- DIAPOSITIVA 6: Jerarquías de Prestigio (9 segundos) ---
 1. Propósito Didáctico: Jerarquías de Prestigio
 2. Título en Pantalla (64 pt): Evidencias Funerarias
 3. Subtítulo en Pantalla (48 pt): Tumbas que revelan diferencias de prestigio
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the village cemetery showing differences in grave goods: some burials with fine polished jade beads and painted pottery, others with simple earth pits. Volumetric lighting. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Registro arqueológico: Ajuares funerarios desiguales demuestran estratificación social hereditaria incipiente
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Los arqueólogos confirman esta jerarquía al excavar tumbas: ciertas familias eran enterradas con adornos valiosos y finas vasijas, reflejando su alto rango social."
 
---- DIAPOSITIVA 7: Pregunta Detonante (6 seg aprox) ---
+--- DIAPOSITIVA 7: Pregunta Detonante (6 segundos) ---
 1. Propósito Didáctico: Pregunta Detonante
 2. Título en Pantalla (64 pt): Interrogante Central
 3. Subtítulo en Pantalla (48 pt): ¿Cómo cambió la igualdad comunitaria inicial?
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Inspiring setting with both 13-year-olds smiling with their notebooks before an ancient village diagram showing chiefs, artisans, and farmers collaborating. Clear background. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta rectora: ¿Qué transformaciones trajo la aparición de la propiedad y las jerarquías?
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "¡Acompáñanos a comprender en la lección cómo estas jerarquías sociales prepararon el camino para las primeras civilizaciones de la historia!"
 
 ================================================================================
@@ -1381,60 +1443,67 @@ Titulo: Propiedad, Jerarquías y Especialización Social
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
+--- DIAPOSITIVA 1: Objetivo de la Lección (12 segundos) ---
 1. Propósito Didáctico: Objetivo de la Lección
 2. Título en Pantalla (64 pt): Objetivo de la Clase
 3. Subtítulo en Pantalla (48 pt): Comprender propiedad jerarquías y especialización
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The boy and girl in a luminous study room, examining a sociological pyramid diagram of a Neolithic community showing chiefs, artisans, and farming families. Clear negative space on top. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 2 · Complejización social en el Neolítico
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El objetivo de hoy es comprender cómo la propiedad de parcelas, la acumulación desigual y la especialización del trabajo originaron jerarquías sociales."
 
---- DIAPOSITIVA 2: Aparición de la Propiedad (13 seg aprox) ---
+--- DIAPOSITIVA 2: Aparición de la Propiedad (13 segundos) ---
 1. Propósito Didáctico: Aparición de la Propiedad
 2. Título en Pantalla (64 pt): De lo Comunal a lo Familiar
 3. Subtítulo en Pantalla (48 pt): Parcelas y rebaños bajo posesión propia
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl explaining a diagram contrasting communal gathering territory in the Paleolithic with demarcated family agricultural plots in the Neolithic. Clean lineart. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Evolución institucional: Territorio de caza compartido -> Parcelas agrícolas y ganado de propiedad familiar
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El modo sedentario transformó la posesión de la tierra. Las parcelas de cultivo y los rebaños pasaron a ser propiedad de familias y linajes específicos."
 
---- DIAPOSITIVA 3: Desigualdad y Acumulación (13 seg aprox) ---
+--- DIAPOSITIVA 3: Desigualdad y Acumulación (13 segundos) ---
 1. Propósito Didáctico: Desigualdad y Acumulación
 2. Título en Pantalla (64 pt): Acumulación Desigual
 3. Subtítulo en Pantalla (48 pt): Mayor riqueza genera mayor influencia social
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Village storage comparison showing a lineage with large multi-chambered granaries and abundant herds, contrasting with a family with modest reserves. Soft ambient lighting. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Mecanismo social: La posesión asimétrica de excedentes permite acumular prestigio, deudas y poder político
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Quienes acumulaban más grano y animales podían prestar alimento en épocas duras. Esta ventaja material se tradujo en prestigio social y dependencia comunitaria."
 
---- DIAPOSITIVA 4: Jefaturas y Autoridad (13 seg aprox) ---
+--- DIAPOSITIVA 4: Jefaturas y Autoridad (13 segundos) ---
 1. Propósito Didáctico: Jefaturas y Autoridad
 2. Título en Pantalla (64 pt): El Surgimiento de Jefes
 3. Subtítulo en Pantalla (48 pt): Liderazgo para coordinar obras y justicia
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating a tribal chief wearing a copper pectoral and holding an ornate stone staff, coordinating irrigation canal maintenance with village heads. Dramatic lighting. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Poder político temprano: Jefaturas tribales encargadas de mediar conflictos y organizar la defensa
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Aparecieron las jefaturas. Líderes respetados asumieron el rol de jueces en conflictos de tierras y de organizadores de obras públicas como canales y murallas."
 
---- DIAPOSITIVA 5: Especialización de Artesanos (13 seg aprox) ---
+--- DIAPOSITIVA 5: Especialización de Artesanos (13 segundos) ---
 1. Propósito Didáctico: Especialización de Artesanos
 2. Título en Pantalla (64 pt): Artesanos a Tiempo Completo
 3. Subtítulo en Pantalla (48 pt): Oficios sostenidos por el excedente alimentario
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on a skilled potter decorating fine pottery and a metalsmith crafting copper tools, free from field labor. The two explorers observing. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): División técnica: Separación definitiva entre productores directos de alimentos y especialistas artesanales
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Gracias a los excedentes, nacieron artesanos de tiempo completo. Ya no sembraban: la comunidad les daba alimento a cambio de vasijas, telas y herramientas pulidas."
 
---- DIAPOSITIVA 6: Atención al Error Común (13 seg aprox) ---
+--- DIAPOSITIVA 6: Atención al Error Común (13 segundos) ---
 1. Propósito Didáctico: Atención al Error Común
 2. Título en Pantalla (64 pt): Error: Desigualdad No Inmutable
 3. Subtítulo en Pantalla (48 pt): La jerarquía social nació con los excedentes
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing out a misconception diagram, showing that social inequality was not present in the Paleolithic band but arose with food storage. Clear visual. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Perspectiva histórica: Las sociedades cazadoras eran igualitarias; la estratificación nació con la acumulación
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Un error habitual es creer que las jerarquías siempre existieron. En el Paleolítico reinaba el igualitarismo; la desigualdad nació al acumular excedentes materiales."
 
---- DIAPOSITIVA 7: Síntesis y Regla de Oro (13 seg aprox) ---
+--- DIAPOSITIVA 7: Síntesis y Regla de Oro (13 segundos) ---
 1. Propósito Didáctico: Síntesis y Regla de Oro
 2. Título en Pantalla (64 pt): Regla de Oro Social
 3. Subtítulo en Pantalla (48 pt): La acumulación transformó la organización comunitaria
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Both 13-year-olds smiling proudly with their notebooks before an infographic: Excedente -> Propiedad -> Jerarquía -> Especialización. Clean negative space. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Conclusión didáctica: Acumulación de excedentes = Propiedad privada + Jerarquías políticas + Especialización laboral
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "La propiedad familiar y la acumulación de bienes complejizaron a la sociedad neolítica, sentando las bases de la división social y la autoridad política."
 
 ================================================================================
@@ -1584,13 +1653,13 @@ Refuerzo 1 (Recuperación Histórica: Complejización Social en el Neolítico):
 • Vista Previa Proxima Clase: ""
 
 
-
 ################################################################################
-### CLASE 6 DE 6: EXCEDENTES, COMERCIO Y PRIMERAS CIUDADES
+CLASE 6 DE 6: EXCEDENTES, COMERCIO Y PRIMERAS CIUDADES
 ################################################################################
 
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 08-10-2026, 5:52:12 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -1605,13 +1674,13 @@ DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
 2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
 3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
 4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
-5. Objetivos de Producción Audiovisual (Google Vids):
-   • Video Gancho: 60 segundos como objetivo de producción pedagógica distribuidos en 7 diapositivas.
-   • Video Explicativo: 90 segundos como objetivo de producción pedagógica distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
+5. Duraciones Planificadas de Producción Audiovisual:
+   • Video Gancho: 60 segundos de duración planificada distribuidos en 7 diapositivas.
+   • Video Explicativo: 90 segundos de duración planificada distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
    • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (48 pt, maximo 8 palabras); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
 6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (48 pt, maximo 8 palabras). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes.
 7. Logotipo Oficial: Codex/Work incorpora el logo blanco de EstudioSimple en la esquina inferior derecha del PPTX al tamano del video de referencia. No pedir a la IA que dibuje el logo dentro de la imagen; dejar espacio negativo.
-8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locucion puede enriquecerse y extenderse unos segundos de forma natural; no se exige medir con cronometro ni reexportar por unos segundos adicionales. No limitar notas con conteo de palabras.
+8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. No se exige medir con cronómetro, contar palabras ni reexportar por unos segundos adicionales.
 
 ================================================================================
 MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
@@ -1629,60 +1698,67 @@ Titulo: De la Aldea a la Primera Ciudad
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Apertura y Escenario (9 seg aprox) ---
+--- DIAPOSITIVA 1: Apertura y Escenario (9 segundos) ---
 1. Propósito Didáctico: Apertura y Escenario
 2. Título en Pantalla (64 pt): La Ciudad de Uruk
 3. Subtítulo en Pantalla (48 pt): El amanecer de la civilización urbana en Mesopotamia
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing on a canal embankment looking toward the bustling gate of ancient Uruk in Sumer. Golden sunset light, wide negative space in top third. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Coordenadas históricas: Baja Mesopotamia (Sumer), 3.500 a 3.000 a.C.
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Nuestros dos exploradores contemplan las imponentes murallas de Uruk, la primera gran ciudad del mundo, nacida junto a los ríos Tigris y Éufrates."
 
---- DIAPOSITIVA 2: El Excedente Fluvial (9 seg aprox) ---
+--- DIAPOSITIVA 2: El Excedente Fluvial (9 segundos) ---
 1. Propósito Didáctico: El Excedente Fluvial
 2. Título en Pantalla (64 pt): Riego y Abundancia
 3. Subtítulo en Pantalla (48 pt): Canales fluviales multiplicando las cosechas agrícolas
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Vast irrigated grain fields along the Euphrates with sluice gates and network of canals, overflowing with tall barley stalks. Villagers and explorers admiring the bounty. Clear space on left. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Agricultura de regadío: Control de crecidas mediante diques y canales para cosechas masivas continuas
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El secreto de Mesopotamia fue el riego artificial. Al dominar las aguas fluviales con canales y diques, obtuvieron cosechas colosales de trigo y cebada."
 
---- DIAPOSITIVA 3: Rutas de Intercambio (9 seg aprox) ---
+--- DIAPOSITIVA 3: Rutas de Intercambio (9 segundos) ---
 1. Propósito Didáctico: Rutas de Intercambio
 2. Título en Pantalla (64 pt): Comercio a Larga Distancia
 3. Subtítulo en Pantalla (48 pt): Trueque de excedentes por materias primas escasas
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. River harbor in Uruk with reed and wooden boats unloading cedar logs, copper ingots, and blue lapis lazuli stones, trading with sacks of grain. Expressive eyes, dramatic lighting. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Redes comerciales: Exportación de cereales y textiles a cambio de madera de cedro, cobre y piedras duras
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Mesopotamia no tenía maderas duras ni piedras. Enviaron barcas por los ríos para cambiar su grano y tejidos por cobre de Anatolia y cedros del Líbano."
 
---- DIAPOSITIVA 4: El Templo y la Autoridad (9 seg aprox) ---
+--- DIAPOSITIVA 4: El Templo y la Autoridad (9 segundos) ---
 1. Propósito Didáctico: El Templo y la Autoridad
 2. Título en Pantalla (64 pt): El Templo Central
 3. Subtítulo en Pantalla (48 pt): Centro religioso administrativo y almacén público
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl and boy looking up at the monumental stepped temple terrace (proto-ziggurat) of Eanna in Uruk, with priests receiving tax offerings of sesame oil and grain. Vibrant colors, clean composition. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Institución estatal: El templo administra los excedentes comunales y dirige el trabajo colectivo de la ciudad
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El templo central era el corazón de la urbe. Los sacerdotes no solo dirigían ceremonias religiosas, sino que administraban los almacenes públicos de la ciudad."
 
---- DIAPOSITIVA 5: Sellos y Contabilidad (9 seg aprox) ---
+--- DIAPOSITIVA 5: Sellos y Contabilidad (9 segundos) ---
 1. Propósito Didáctico: Sellos y Contabilidad
 2. Título en Pantalla (64 pt): Primeros Registros
 3. Subtítulo en Pantalla (48 pt): Sellos cilíndricos y fichas de contabilidad urbana
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on a Sumerian scribe rolling a carved stone cylinder seal over wet clay to seal a grain vessel, with the two 13-year-olds taking notes in awe. Soft depth of field. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Control administrativo: Sellos y tokens de arcilla que dieron origen directo a la escritura cuneiforme
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Para controlar miles de sacos de grano inventaron sellos cilíndricos y marcas en arcilla, dando el primer paso histórico hacia la invención de la escritura."
 
---- DIAPOSITIVA 6: La Complejidad Urbana (9 seg aprox) ---
+--- DIAPOSITIVA 6: La Complejidad Urbana (9 segundos) ---
 1. Propósito Didáctico: La Complejidad Urbana
 2. Título en Pantalla (64 pt): Sociedad Estratificada
 3. Subtítulo en Pantalla (48 pt): Gobernantes soldados artesanos y campesinos urbanos
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Panoramic view of Uruk showing distinct quarters: artisans' street, bronze foundry, grain market, residential brick houses, and grand outer walls. Volumetric lighting. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Estructura urbana: Diferenciación socioespacial entre barrios residenciales, talleres y centro cívico
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "En la ciudad convivían decenas de profesiones: soldados de guardia, orfebres, tejedores, comerciantes y campesinos, bajo leyes y autoridades estatales."
 
---- DIAPOSITIVA 7: Pregunta Detonante (6 seg aprox) ---
+--- DIAPOSITIVA 7: Pregunta Detonante (6 segundos) ---
 1. Propósito Didáctico: Pregunta Detonante
 2. Título en Pantalla (64 pt): Síntesis del Objetivo
 3. Subtítulo en Pantalla (48 pt): El camino hacia las primeras civilizaciones
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Inspiring closing setting with both 13-year-olds smiling proudly with their open notebooks before a majestic sunrise over the ancient Near East. Soft gradient background. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Cierre formativo: La agricultura y el comercio transformaron para siempre la historia de la humanidad
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "¡Hemos completado la gran trayectoria! Demostremos todo lo aprendido sobre el Neolítico y las primeras ciudades en nuestro ensayo final."
 
 ================================================================================
@@ -1696,60 +1772,67 @@ Titulo: Excedentes, Comercio y Primeras Ciudades
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
+--- DIAPOSITIVA 1: Objetivo de la Lección (12 segundos) ---
 1. Propósito Didáctico: Objetivo de la Lección
 2. Título en Pantalla (64 pt): Objetivo de la Clase
 3. Subtítulo en Pantalla (48 pt): Comprender excedentes comercio y primeras ciudades
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The boy and girl in a luminous study room, examining a historical map of Mesopotamia showing Uruk, Ur, and trade routes extending toward the Persian Gulf and Anatolia. Clear negative space on top. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 2 · De las aldeas agrícolas a las primeras civilizaciones urbanas
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El objetivo de hoy es sintetizar cómo los excedentes agrícolas masivos y el comercio interregional hicieron nacer las primeras ciudades en Mesopotamia."
 
---- DIAPOSITIVA 2: El Excedente como Motor (13 seg aprox) ---
+--- DIAPOSITIVA 2: El Excedente como Motor (13 segundos) ---
 1. Propósito Didáctico: El Excedente como Motor
 2. Título en Pantalla (64 pt): Excedentes en Mesopotamia
 3. Subtítulo en Pantalla (48 pt): Canales de riego produciendo cosechas masivas
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl explaining a diagram showing hydraulic canal networks filling vast central grain granaries in Sumer. Clean lineart, soft ambient light. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Base hidráulica: El control del Tigris y Éufrates permitió cosechas gigantescas capaces de alimentar ciudades enteras
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Los canales de regadío en Mesopotamia produjeron cosechas colosales. Ese excedente alimentario permitió sostener a miles de personas que no cultivaban la tierra."
 
---- DIAPOSITIVA 3: Redes Comerciales Lejanas (13 seg aprox) ---
+--- DIAPOSITIVA 3: Redes Comerciales Lejanas (13 segundos) ---
 1. Propósito Didáctico: Redes Comerciales Lejanas
 2. Título en Pantalla (64 pt): Intercambio Interregional
 3. Subtítulo en Pantalla (48 pt): Trueque de alimentos por madera y metales
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Trade route map illustration showing donkey caravans and boats connecting Sumer with the Zagros Mountains and Mediterranean coast. The two explorers studying the routes. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Economía de trueque: Exportación de granos y lana a cambio de madera de cedro, cobre, estaño y piedras duras
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Surgió el comercio interregional. Como en Mesopotamia faltaban materias primas, intercambiaron trigo y telas por madera de cedro, cobre y piedras duras de tierras lejanas."
 
---- DIAPOSITIVA 4: La Ciudad de Uruk (13 seg aprox) ---
+--- DIAPOSITIVA 4: La Ciudad de Uruk (13 segundos) ---
 1. Propósito Didáctico: La Ciudad de Uruk
 2. Título en Pantalla (64 pt): La Primera Metrópolis
 3. Subtítulo en Pantalla (48 pt): Cincuenta mil habitantes murallas y templos
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. High-angle view of ancient Uruk with massive mudbrick defensive walls, thousands of flat-roofed houses, bustling markets, and the monumental Eanna temple precinct. Dramatic atmospheric lighting. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Revolución urbana (Gordon Childe): Asentamiento de alta densidad, murallas monumentales y división espacial
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Hacia el 3.500 a.C. Uruk se convirtió en la primera gran ciudad. Con cincuenta mil habitantes, murallas de ladrillo y templos colosales, inauguró una nueva era."
 
---- DIAPOSITIVA 5: El Estado y la Contabilidad (13 seg aprox) ---
+--- DIAPOSITIVA 5: El Estado y la Contabilidad (13 segundos) ---
 1. Propósito Didáctico: El Estado y la Contabilidad
 2. Título en Pantalla (64 pt): Gestión Administrativa
 3. Subtítulo en Pantalla (48 pt): De fichas de arcilla a la escritura
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy sketching the evolution from clay counting tokens to clay tablets inscribed with early proto-cuneiform pictograms. Clear lighting. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Origen de la escritura: Necesidad estatal de registrar tributos, raciones y almacenamiento en los templos
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El Estado urbano necesitó organizar los almacenes. Para registrar impuestos y raciones de comida crearon marcas en tablillas de arcilla, originando la escritura."
 
---- DIAPOSITIVA 6: Atención al Error Común (13 seg aprox) ---
+--- DIAPOSITIVA 6: Atención al Error Común (13 segundos) ---
 1. Propósito Didáctico: Atención al Error Común
 2. Título en Pantalla (64 pt): Error: La Ciudad no es Aldea
 3. Subtítulo en Pantalla (48 pt): Requiere comercio exterior leyes y administración
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl contrasting an image of a small self-sufficient farming village with a complex city dependent on regional trade. Clean visual layout. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Criterio disciplinar: La ciudad no es solo una aldea más grande; posee administración pública, leyes y comercio estatal
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Un error habitual es creer que una ciudad es solo una aldea con más casas. La ciudad exige leyes escritas, comercio a larga distancia y autoridades centrales."
 
---- DIAPOSITIVA 7: Síntesis y Regla de Oro (13 seg aprox) ---
+--- DIAPOSITIVA 7: Síntesis y Regla de Oro (13 segundos) ---
 1. Propósito Didáctico: Síntesis y Regla de Oro
 2. Título en Pantalla (64 pt): Regla de Oro de la Civilización
 3. Subtítulo en Pantalla (48 pt): El Neolítico hizo posible el mundo moderno
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Both 13-year-olds smiling confidently with their notebooks open before a grand panorama connecting: Neolítico -> Agricultura -> Excedentes -> Comercio -> Ciudad. Generous negative space. No text drawn by AI. No logo drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Conclusión de unidad: De la domesticación de especies nacieron las ciudades, las leyes y las primeras civilizaciones
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "La gran transformación se completó. Al dominar la producción de alimentos y el comercio, la humanidad construyó las primeras ciudades, abriendo las puertas de la civilización."
 
 ================================================================================

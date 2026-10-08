@@ -8,17 +8,19 @@
   "estado": "EN_REVISION",
   "total_clases": 6,
   "fuente_oficial_unica_docx": {
-    "archivo": "Plan_Maestro_7Básico_110-7-LEN-OA03_6Lecciones.docx",
+    "archivo": "Plan_Maestro_7Básico_110-7-LEN-OA03_6Lecciones_2026-10-08_17-52.docx",
     "rol": "Unica fuente oficial de produccion de lecciones y prompts",
-    "sha256": "306a56cd08d18eab309253553d68767fdba73eeb62114657fb341375899af41b",
-    "bytes": 67910
+    "sha256": "f21606904d3c51517344bfee4066e4940be79ce7726cbbfeabdad049a68184a6",
+    "bytes": 73892
   },
   "prompts_asociados": {
-    "archivo": "Prompts_Work_Lenguaje_7B_OA03.txt",
+    "archivo": "Prompts_Work_Lenguaje_7B_OA03_2026-10-08_17-52.txt",
     "ruta_origen_zip_anterior": "DESCARGA_LECCIONES/PROMPTS_TXT_PARA_WORK/Prompts_Work_Lenguaje_7B_OA03.txt",
     "total_laminas": 84,
     "laminas_por_clase": 14,
-    "perfil_evaluacion": "Perfil 7° Básico (14 láminas bimodales: 7 Gancho + 7 Explicación; reactivos de 4 alternativas en cierre)"
+    "perfil_evaluacion": "Perfil 7° Básico (14 láminas bimodales: 7 Gancho + 7 Explicación; reactivos de 4 alternativas en cierre)",
+    "sha256": "35811a37b1079416d238ee8ee319a5a01dcc395f5701902ab7fe8de34ccc5f94",
+    "bytes": 214398
   },
   "fundamentacion_curricular": {
     "temario_eell": {
@@ -48,5 +50,27 @@
       "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase05.ts",
       "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase06.ts"
     ]
+  },
+  "schemaVersion": "2.0.0",
+  "generatedAt": "2026-10-08 17:52:12 [America/Santiago]",
+  "status": "EN_REVISION",
+  "etapa_revision": "WORK_PRE_APROBACION",
+  "oaIdentifier": "110-7-LEN-OA03",
+  "course": "7° Básico",
+  "subject": "Lengua y Literatura",
+  "totalLessons": 6,
+  "artifacts": {
+    "docxMaster": {
+      "filename": "Plan_Maestro_7Básico_110-7-LEN-OA03_6Lecciones_2026-10-08_17-52.docx",
+      "relativePath": "LECCIONES/110-7/Lengua_Literatura/OA03/Plan_Maestro_7Básico_110-7-LEN-OA03_6Lecciones_2026-10-08_17-52.docx",
+      "sizeBytes": 73892,
+      "sha256": "f21606904d3c51517344bfee4066e4940be79ce7726cbbfeabdad049a68184a6"
+    },
+    "promptsWorkTxt": {
+      "filename": "Prompts_Work_Lenguaje_7B_OA03_2026-10-08_17-52.txt",
+      "relativePath": "LECCIONES/110-7/Lengua_Literatura/OA03/Prompts_Work_Lenguaje_7B_OA03_2026-10-08_17-52.txt",
+      "sizeBytes": 214398,
+      "sha256": "35811a37b1079416d238ee8ee319a5a01dcc395f5701902ab7fe8de34ccc5f94"
+    }
   }
 }

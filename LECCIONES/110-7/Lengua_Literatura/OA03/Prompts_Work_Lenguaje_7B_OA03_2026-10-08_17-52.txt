@@ -1,24 +1,26 @@
 ================================================================================
-STUDIOSIMPLE - PAQUETE DE PROMPTS Y GUIONES OFICIALES PARA CHATGPT WORK
-ASIGNATURA: LENGUA Y LITERATURA
-CURSO: 7° BASICO | OBJETIVO: OA 3 (Analizar las narraciones leídas para enriquecer su comprensión, considerando, cuando sea pertinente: El o los conflictos de la historia. El papel que juega cada personaje en el conflicto y cómo sus acciones afectan a otros personajes. El efecto de ciertas acciones en el desarrollo de la historia. Cuándo habla el narrador y cuándo hablan los personajes. La disposición temporal de los hechos. Elementos en común con otros textos leídos en el año.)
-TOTAL DE CLASES: 6 LECCIONES (14 DIAPOSITIVAS POR CLASE = 84 LAMINAS TOTALES)
+STUDIOSIMPLE - PAQUETE COMPLETO DE PROMPTS Y GUIONES MAESTROS
+CURSO: 7° BASICO | ASIGNATURA: LENGUA Y LITERATURA | OA: 110-7-LEN-OA03
+ARCHIVO: Prompts_Work_Lenguaje_7B_OA03_2026-10-08_17-52.txt
+TOTAL DE CLASES: 6 CLASES CANONICAS BIMODALES (14 LAMINAS CADA UNA = 84 LAMINAS TOTALES)
 FORMATO: 7 DIAPOSITIVAS VIDEO GANCHO (60s) + 7 DIAPOSITIVAS VIDEO EXPLICATIVO (90s)
+FECHA Y HORA DE ACTUALIZACION: 2026-10-08 17:52:12 [America/Santiago]
+DESTINATARIO: CHATGPT WORK / CODEX (MAQUETACION PPTX 16:9 EN PYTHON)
 ================================================================================
 
-
 ################################################################################
-### CLASE 1 DE 6: LAS 6 ETAPAS DEL VIAJE DEL HÉROE
+CLASE 1 DE 6: LAS 6 ETAPAS DEL VIAJE DEL HÉROE
 ################################################################################
 
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 08-10-2026, 5:52:12 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
 • Asignatura: Lengua y Literatura
 • Nivel / Curso: 7° Básico
-• Objetivo de Aprendizaje: OA 3 - Lectura
+• Objetivo de Aprendizaje: OA 3 - El conflicto narrativo y la trama de la historia
 • Clase: 1 de 6 ("Las 6 Etapas del Viaje del Héroe")
 • Duracion Estimada: 30 Minutos
 
@@ -27,146 +29,167 @@ DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
 2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
 3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
 4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
-5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
-   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
-   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
-   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
-6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
-7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
-8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
+5. Duraciones Planificadas de Producción Audiovisual:
+   • Video Gancho: 60 segundos de duración planificada distribuidos en 7 diapositivas.
+   • Video Explicativo: 90 segundos de duración planificada distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt, maximo 8 palabras); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt, maximo 8 palabras). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes.
+7. Logotipo Oficial: Codex/Work incorpora el logo blanco de EstudioSimple en la esquina inferior derecha del PPTX al tamano del video de referencia. No pedir a la IA que dibuje el logo dentro de la imagen; dejar espacio negativo.
+8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. No se exige medir con cronómetro, contar palabras ni reexportar por unos segundos adicionales.
 
 ================================================================================
 MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
 ================================================================================
 
-Titulo: Las 6 etapas del viaje del héroe
-• DILE ANTES DEL VIDEO: "Vamos a explorar cómo los grandes relatos de la literatura universal comparten esta misma estructura dramática en 6 momentos a través del viaje del héroe."
-• INSTRUCCION AL ESTUDIANTE: "Observa y reflexiona con las escenas del desafío visual."
-• DILE DESPUES DEL VIDEO: "Conversemos sobre lo observado. Te haré dos preguntas para comprobar cómo identificamos estas etapas en los relatos."
+Titulo: El motor de la historia: El conflicto narrativo
+• DILE ANTES DEL VIDEO: "Vamos a explorar cómo los grandes relatos de la literatura universal (desde la Odisea hasta las sagas modernas) comparten esta misma estructura dramática en 6 momentos."
+• INSTRUCCION AL ESTUDIANTE: "Observa atentamente cada una de las 6 etapas en la pantalla e identifica cómo sube y baja la tensión dramática del relato."
+• DILE DESPUES DEL VIDEO: "Conversemos sobre lo observado. Te haré dos preguntas para comprobar cómo identificamos estas etapas en los relatos que lees."
+• Puntos de foco visual al observar:
+  1. Etapa 1: Mundo Ordinario (rutina cotidiana del personaje).
+  2. Etapa 2: La Llamada a la Aventura (aparición del conflicto inicial).
+  3. Etapa 3: Cruce del Umbral (entrada al mundo desconocido y peligroso).
+  4. Etapa 4: Pruebas y Aliados (obstáculos intermedios y amigos de confianza).
+  5. Etapa 5: El Abismo (el clímax o prueba máxima donde todo parece perdido).
+  6. Etapa 6: Regreso Transformado (vuelta a casa con una nueva sabiduría).
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Apertura y Mundo Ordinario (9 seg aprox) ---
+--- DIAPOSITIVA 1: Apertura y Mundo Ordinario (9 segundos) ---
 1. Propósito Didáctico: Apertura y Mundo Ordinario
 2. Título en Pantalla (64 pt): Misión 1: El viaje del héroe
 3. Subtítulo en Pantalla (36 pt): El mundo ordinario en la biblioteca
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, studying in a quiet, sunlit village library filled with ancient scrolls and comfortable wooden desks. Warm morning light, negative space in upper third. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema narrativo: Etapa 1 · Estado de calma y rutina conocida
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Toda gran narración comienza en la calma. Nuestro protagonista vive en un mundo seguro donde todo resulta familiar y predecible."
 
---- DIAPOSITIVA 2: Quiebre y Tensión (9 seg aprox) ---
+--- DIAPOSITIVA 2: Quiebre y Tensión (9 segundos) ---
 1. Propósito Didáctico: Quiebre y Tensión
 2. Título en Pantalla (64 pt): La llamada a la aventura
 3. Subtítulo en Pantalla (36 pt): Un mensaje que altera la tranquilidad
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two companions looking startled as a mysterious glowing letter arrives on the table, surrounded by subtle wind swirls. Clean lineart, dramatic lighting, clear space on the left side. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vector de conflicto: Suceso inesperado -> Quiebre del equilibrio inicial
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "De pronto, la tranquilidad se quiebra. Un mensaje misterioso sobre la mesa plantea un dilema que no puede ser ignorado."
 
---- DIAPOSITIVA 3: Encuentro con el Mentor (10 seg aprox) ---
+--- DIAPOSITIVA 3: Encuentro con el Mentor (10 segundos) ---
 1. Propósito Didáctico: Encuentro con el Mentor
 2. Título en Pantalla (64 pt): El consejo del mentor
 3. Subtítulo en Pantalla (36 pt): Herramienta y sabiduría inicial
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A wise elderly librarian mentor handing the young protagonists an ancient compass and a leather-bound journal. Soft depth of field, warm candlelight. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Icono de mediación: Guía experimentado entrega objeto clave y consejo
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Sentir temor es natural frente a lo desconocido. El sabio bibliotecario entrega un mapa y el consejo necesario para dar el primer paso."
 
---- DIAPOSITIVA 4: Cruce del Umbral (10 seg aprox) ---
+--- DIAPOSITIVA 4: Cruce del Umbral (10 segundos) ---
 1. Propósito Didáctico: Cruce del Umbral
 2. Título en Pantalla (64 pt): El cruce del umbral
 3. Subtítulo en Pantalla (36 pt): Hacia el territorio de lo desconocido
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists stepping across a stone archway into a mysterious twilight forest with glowing flora. Dramatic atmospheric lighting. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Frontera narrativa: Límite entre lo cotidiano y el mundo de los desafíos
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Nuestros protagonistas cruzan el arco de piedra hacia el bosque. Han dejado atrás la seguridad y se adentran en territorio de aventura."
 
---- DIAPOSITIVA 5: Pruebas y Aliados (10 seg aprox) ---
+--- DIAPOSITIVA 5: Pruebas y Aliados (10 segundos) ---
 1. Propósito Didáctico: Pruebas y Aliados
 2. Título en Pantalla (64 pt): Pruebas en el camino
 3. Subtítulo en Pantalla (36 pt): Obstáculos y fuerzas que se oponen
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy and girl working side by side with a loyal animal companion, deciphering a stone puzzle gate while rain falls softly. Vibrant colors, focused determination. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de progresión: Reto 1 -> Reto 2 -> Alianza con compañeros
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "En el camino surgen dificultades crecientes. Cada obstáculo exige ingenio y pone a prueba el compromiso de mantenerse unidos frente a la adversidad."
 
---- DIAPOSITIVA 6: Antesala del Conflicto Mayor (9 seg aprox) ---
+--- DIAPOSITIVA 6: Antesala del Conflicto Mayor (9 segundos) ---
 1. Propósito Didáctico: Antesala del Conflicto Mayor
 2. Título en Pantalla (64 pt): La prueba suprema
 3. Subtítulo en Pantalla (36 pt): El núcleo del conflicto dramático
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Dramatic confrontation in a cavern illuminated by a deep blue glowing crystal. High tension, expressive faces showing courage despite fear. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Clímax narrativo: Protagonista frente a la fuerza antagónica principal
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Llegan a la caverna profunda. Están frente a la fuerza antagónica que amenaza su hogar, y no pueden retroceder."
 
---- DIAPOSITIVA 7: Pregunta Detonante (9 seg aprox) ---
+--- DIAPOSITIVA 7: Pregunta Detonante (9 segundos) ---
 1. Propósito Didáctico: Pregunta Detonante
 2. Título en Pantalla (64 pt): El enigma del relato
 3. Subtítulo en Pantalla (36 pt): ¿Qué fuerza mueve toda historia?
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist clean composition showing the StudioSimple emblem, the hero returning to the sunrise holding the light of knowledge, wiser and smiling. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta detonante: ¿Qué es el conflicto narrativo y por qué transforma al héroe?
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Ahora surge la gran pregunta detonante: ¿qué fuerza impulsa a actuar al personaje y hace que una historia exista de verdad?"
 
 ================================================================================
 MODULO 2: PROMPT VIDEO EXPLICATIVO CONCEPTUAL (PASO 4 - 7 DIAPOSITIVAS)
 ================================================================================
 
-Titulo: El conflicto narrativo: motor de la historia
+Titulo: Estructura de la Narración: Conflicto, Nudo y Desenlace
 • Idea Clave: "El conflicto narrativo es el obstáculo o fuerza contraria que enfrenta al protagonista y lo obliga a actuar. Sin conflicto no hay trama, y a través de las pruebas el héroe se transforma."
-• DILE ANTES DEL VIDEO: "Ahora formalizaremos la idea central sobre el conflicto narrativo y cómo estructura toda narración literaria."
-• INSTRUCCION: "Revisemos la explicación formal y la idea clave."
+• DILE ANTES DEL VIDEO: "Revisemos la regla fundamental de la narrativa: todo relato literario tiene una situación inicial, un conflicto detonante que genera el nudo o desarrollo, y un desenlace."
+• INSTRUCCION: "Lee con atención la idea clave en pantalla y prepárate para anotarla en tu cuaderno de Lengua."
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
+--- DIAPOSITIVA 1: Objetivo de la Lección (12 segundos) ---
 1. Propósito Didáctico: Objetivo de la Lección
 2. Título en Pantalla (64 pt): Objetivo de la lección
 3. Subtítulo en Pantalla (36 pt): Analizar el conflicto como motor de la narración
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The boy and girl standing before an interactive lightboard showing a dynamic balance scale: 'Equilibrio Inicial' vs 'Conflicto Detonante'. Clean typography. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 03 · Conflicto Narrativo y Etapas del Viaje del Héroe
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El objetivo de hoy es aprender a identificar el conflicto narrativo como motor de la historia y a reconocer cómo transforma a los personajes en el relato."
 
---- DIAPOSITIVA 2: Definición Conceptual (12 seg aprox) ---
+--- DIAPOSITIVA 2: Definición Conceptual (12 segundos) ---
 1. Propósito Didáctico: Definición Conceptual
 2. Título en Pantalla (64 pt): El conflicto narrativo
 3. Subtítulo en Pantalla (36 pt): Oposición entre el deseo y el obstáculo
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Split screen diagram: Left side shows the protagonist's goal; Right side shows the opposing obstacle or antagonist. High contrast, sharp clarity. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Mapa Visual: Fuerza A (Meta del Protagonista) <---> Fuerza B (Obstáculo u Opositor)
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Toda historia nace cuando el equilibrio se rompe. El conflicto es la tensión constante entre lo que el protagonista desea alcanzar y los obstáculos que se lo impiden."
 
---- DIAPOSITIVA 3: Modelamiento Textual (12 seg aprox) ---
+--- DIAPOSITIVA 3: Modelamiento Textual (12 segundos) ---
 1. Propósito Didáctico: Modelamiento Textual
 2. Título en Pantalla (64 pt): Análisis del fragmento
 3. Subtítulo en Pantalla (36 pt): Localizar la evidencia en el texto
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A prominent glowing parchment paper showing a clearly legible excerpt of an adventure story, with key sentences highlighted. Clear negative space. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Fragmento fuente visible: Subrayado de la meta y encerrado del obstáculo detonante
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Observemos este fragmento: marcamos con color la meta del personaje y subrayamos la fuerza opuesta. Al contrastarlas, el conflicto central queda a la vista con total claridad."
 
---- DIAPOSITIVA 4: Tipos de Conflicto (12 seg aprox) ---
+--- DIAPOSITIVA 4: Tipos de Conflicto (12 segundos) ---
 1. Propósito Didáctico: Tipos de Conflicto
 2. Título en Pantalla (64 pt): Interno vs Externo
 3. Subtítulo en Pantalla (36 pt): Lucha interior o desafío del entorno
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Side by side panels: Left shows hero facing a storm (external); Right shows hero in internal doubt looking in mirror (internal). No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Cuadro comparativo: Conflicto Interno (Miedo, culpa) vs Externo (Naturaleza, rival, sociedad)
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El conflicto puede ser externo, si el héroe enfrenta monstruos o tempestades; o interno, si debe vencer sus propios temores y dudas antes de tomar una decisión."
 
---- DIAPOSITIVA 5: Evolución del Personaje (13 seg aprox) ---
+--- DIAPOSITIVA 5: Evolución del Personaje (13 segundos) ---
 1. Propósito Didáctico: Evolución del Personaje
 2. Título en Pantalla (64 pt): El cambio visible del héroe
 3. Subtítulo en Pantalla (36 pt): Superar el obstáculo transforma la identidad
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The progression of the protagonist across 3 stages: naive beginner, tested apprentice, and confident hero holding a lantern. Clean lightboard. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Línea de transformación: Estado inicial (Inseguro) -> Prueba -> Estado final (Maduro y sabio)
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Al enfrentar las fuerzas opositoras, el personaje no solo avanza en el mapa: cambia su manera de pensar, supera sus límites y regresa con nueva sabiduría para su comunidad."
 
---- DIAPOSITIVA 6: Prevención del Error (13 seg aprox) ---
+--- DIAPOSITIVA 6: Prevención del Error (13 segundos) ---
 1. Propósito Didáctico: Prevención del Error
 2. Título en Pantalla (64 pt): Atención: Error habitual
 3. Subtítulo en Pantalla (36 pt): No confundir problema secundario con conflicto central
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Contrast graphic: An incidental minor accident crossed out with subtle red; The central plot conflict illuminated with vibrant teal glow. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Alerta de lectura: Conflicto central (motiva toda la obra) ≠ Percance pasajero (se resuelve en un párrafo)
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Un error habitual consiste en confundir un tropiezo menor con el conflicto central. Pregúntate siempre: ¿cuál es el gran obstáculo que sostiene la trama desde el principio hasta el desenlace?"
 
---- DIAPOSITIVA 7: Síntesis y Regla de Oro (11 seg aprox) ---
+--- DIAPOSITIVA 7: Síntesis y Regla de Oro (11 segundos) ---
 1. Propósito Didáctico: Síntesis y Regla de Oro
 2. Título en Pantalla (64 pt): Regla de Oro de la narrativa
 3. Subtítulo en Pantalla (36 pt): Sin conflicto no hay transformación ni historia
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-olds pointing toward the StudioSimple emblem, with a dynamic infographic summarizing the narrative journey. Positive confident expressions. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de síntesis: Equilibrio -> Quiebre (Conflicto) -> Acción -> Transformación
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Recuerda la regla de oro: sin conflicto no hay narración. ¡Ahora demostraremos lo aprendido aplicando este mapa en las lecturas interactivas de la plataforma!"
 
 ================================================================================
@@ -175,51 +198,49 @@ MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
 
 [PREPARACION DEL ADULTO / MENTOR]
 • Objetivo del Adulto: Acompañar al estudiante a reconocer la estructura de una narración a través de las 6 etapas del viaje del héroe, identificando cómo el conflicto narrativo impulsa las acciones de los personajes.
-• Ruta de Hoy: Identificar las 6 etapas del viaje del héroe y el conflicto narrativo como motor del relato
+• Ruta de Hoy: Estructura narrativa: Desde el Mundo Ordinario hasta el Regreso Transformado en los relatos literarios.
 • Recordatorios Pedagogicos del Mentor:
-  1. Sigue el orden indicado.
-  2. Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.
-  3. No leas los recuadros SOLO PARA TI ni AYUDA DE LECTURA.
-  4. Haz cada pregunta y espera la respuesta antes de seleccionar una opción.
-  5. Considera correcta una respuesta si expresa la idea matemática, aunque use palabras distintas.
-  6. Si el estudiante necesita apoyo, usa únicamente la ayuda que aparecerá.
-  7. Si propone otra explicación o no está de acuerdo, escúchalo completo y valora su razonamiento antes de guiarlo.
-• Clima Emocional y Acogida: "Crea un clima de disfrute por la lectura: 'Leer nos permite viajar a otros mundos, comprender los desafíos de los personajes y descubrir cómo resuelven sus problemas'."
+  1. Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.
+  2. No leas los recuadros de AYUDA PEDAGÓGICA ni CLIMA EMOCIONAL; son guías exclusivas para ti.
+  3. Pídele que observe la pantalla interactiva con las 6 etapas del viaje del héroe.
+  4. Valora sus respuestas aunque use sus propias palabras cotidianas.
+  5. Ten a mano su cuaderno de Lengua y Literatura para los ejercicios de escritura y análisis.
+• Clima Emocional y Acogida: "Crea un clima de disfrute por la lectura: "Leer nos permite viajar a otros mundos, comprender los desafíos de los personajes y descubrir cómo resuelven sus problemas"."
 
 --------------------------------------------------------------------------------
 [PASO 1: INICIO (4 SUB-ETAPAS CANONICAS)]
 --------------------------------------------------------------------------------
 Sub-etapa 1: Nuestra Ruta de la Asignatura
-• DILE AL ESTUDIANTE (Apertura de la ruta): "Hoy comenzaremos la clase 1 de Lengua y Literatura: "Las 6 Etapas del Viaje del Héroe"."
+• DILE AL ESTUDIANTE (Apertura de la ruta): "Hoy comenzaremos la primera clase de Lengua y Literatura para 7° Básico: "Las 6 Etapas del Viaje del Héroe"."
 • 4 Bloques Tematicos de la Asignatura:
-  Bloque 01: Lengua y Literatura (Las 6 Etapas del Viaje del Héroe)
-  Bloque 02: Exploración (Gancho y Recorrido Guiado)
-  Bloque 03: Práctica (Aplicación en situaciones reales)
+  Bloque 01: Lengua y Literatura (El conflicto narrativo)
+  Bloque 02: Exploración (Las 6 etapas del viaje)
+  Bloque 03: Práctica (Análisis y escritura en cuaderno)
   Bloque 04: Evaluación (Miniquiz formativo y síntesis)
 
 Sub-etapa 2: La Clase de Hoy
-• DILE AL ESTUDIANTE (Foco didactico): "Identificar las 6 etapas del viaje del héroe y el conflicto narrativo como motor del relato"
+• DILE AL ESTUDIANTE (Foco didactico): "Aprenderemos a reconocer cómo se organiza la trama de una historia y por qué el conflicto es el motor que hace avanzar todo el relato."
 • 3 Tarjetas de Foco de la Pantalla del Estudiante:
-  Tarjeta 1: Exploración inicial -> Las 6 Etapas del Viaje del Héroe
-  Tarjeta 2: Idea clave -> El conflicto narrativo es el obstáculo o fuerza contraria qu
-  Tarjeta 3: Práctica y aplicación -> Resolución guiada paso a paso
+  Tarjeta 1: ¿Qué es el conflicto narrativo? -> El problema o quiebre que obliga a los personajes a actuar.
+  Tarjeta 2: ¿Cuáles son las etapas del viaje? -> Mundo ordinario, llamada, umbral, pruebas, abismo y regreso.
 
 Sub-etapa 3: Situacion Inicial de Exploracion (Detonante)
-• DILE AL ESTUDIANTE (Situacion detonante): "Hoy en Lengua y Literatura nos adentramos en 'El conflicto narrativo y la trama de la historia'. En la pantalla puedes ver el organizador gráfico 'Las 6 Etapas del Viaje del Héroe'. Observa la Etapa 1 (Mundo Ordinario) y la Etapa 2 (La Llamada a la Aventura). ¿Qué suceso o problema rompe la calma cotidiana del protagonista y lo obliga a iniciar su historia?"
-• RESPUESTA ESPERADA: El conflicto narrativo (surge un problema, desafío, peligro o misterio inesperado que altera la tranquilidad normal).
+• DILE AL ESTUDIANTE (Situacion detonante): "Hoy en Lengua y Literatura nos adentramos en "El conflicto narrativo y la trama de la historia". En la pantalla puedes ver el organizador gráfico "Las 6 Etapas del Viaje del Héroe". Observa la Etapa 1 (Mundo Ordinario) y la Etapa 2 (La Llamada a la Aventura). ¿Qué suceso o problema rompe la calma cotidiana del protagonista y lo obliga a iniciar su historia?"
+• RESPUESTA ESPERADA: El estudiante debe señalar que surge un problema, misterio, peligro o llamado imprevisto que altera la vida normal del personaje y lo obliga a salir a resolverlo (el conflicto narrativo).
 • PISTA SOCRATICA (SOLO PARA TI): "Fíjate en la Etapa 2 en la pantalla: ¿qué aparece de repente para que el protagonista no pueda quedarse cómodo en su casa?"
-• CLIMA EMOCIONAL: "Crea un clima de disfrute por la lectura: 'Leer nos permite viajar a otros mundos, comprender los desafíos de los personajes y descubrir cómo resuelven sus problemas'."
+• CLIMA EMOCIONAL: "Transmite curiosidad y empatía por los personajes: en toda buena historia, las dificultades hacen crecer a las personas."
 • Pautas de Evaluacion Formativa del Mentor:
-  - [Acierto] Respondió correctamente: El conflicto narrativo (surge un problema, desafío, peligro o misterio inespe... -> Feedback: "¡Exacto! Comprendió la idea central esperada."
-  - [Requiere Apoyo] Necesita apoyo o dio otra respuesta -> Feedback: "Fíjate en la Etapa 2 en la pantalla: ¿qué aparece de repente para que el protagonista no pueda quedarse cómodo en su casa?"
+  - [Acierto] Mencionó que surge un problema, amenaza o misterio que rompe la calma (conflicto narrativo) -> Feedback: "¡Exacto! Ese problema o quiebre se llama conflicto narrativo y es el motor que pone en marcha la historia."
+  - [Requiere Apoyo] Solo mencionó el nombre del personaje o que sale de viaje, sin explicar el problema que lo obliga -> Feedback: "Observa la Etapa 2: un viaje no empieza por casualidad. Siempre hay una necesidad, peligro o misterio que lo provoca."
+  - [Requiere Apoyo] No sabe qué responder o dio otra respuesta -> Feedback: "Pista guiada: Fíjate en la descripción de la Etapa 2: "Surge un problema, desafío o misterio que altera la tranquilidad". Eso es el conflicto."
 
 Sub-etapa 4: Comprendamos la Respuesta (Punto de Referencia)
-• DILE AL ESTUDIANTE (Formalizacion de referencia): "¿Qué suceso rompe la calma del protagonista y lo obliga a salir a resolver el problema?"
-• PREGUNTALE AL ESTUDIANTE: "¿Qué suceso rompe la calma del protagonista y lo obliga a salir a resolver el problema?"
-• RESPUESTA ESPERADA: El conflicto narrativo (surge un problema, desafío, peligro o misterio inesperado que altera la tranquilidad normal).
-• PISTA SOCRATICA: "Fíjate en la Etapa 2 en la pantalla: ¿qué aparece de repente para que el protagonista no pueda quedarse cómodo en su casa?"
-• FEEDBACK SI ACIERTA: "Muy bien. Observaste el detalle central con precisión."
-• FEEDBACK SI NECESITA APOYO: "Fíjate en la Etapa 2 en la pantalla: ¿qué aparece de repente para que el protagonista no pueda quedarse cómodo en su casa?"
+• DILE AL ESTUDIANTE (Formalizacion de referencia): "En la pantalla interactiva se muestran las 6 etapas del viaje: Mundo Ordinario, La Llamada, Cruce del Umbral, Pruebas y Aliados, El Abismo y Regreso Transformado."
+• PREGUNTALE AL ESTUDIANTE: "¿Por qué decimos que sin un conflicto o problema no existiría una verdadera historia narrada?"
+• RESPUESTA ESPERADA: Porque si no hay un problema o desafío que resolver, los personajes no tendrían ningún motivo para actuar, cambiar o tomar decisiones.
+• PISTA SOCRATICA: "Imagina un cuento donde todo es perfecto y nunca pasa nada difícil: ¿habría algo emocionante que contar o leer?"
+• FEEDBACK SI ACIERTA: "¡Excelente reflexión! El conflicto crea la tensión y el interés de todo relato."
+• FEEDBACK SI NECESITA APOYO: "Si no hubiera un obstáculo, los personajes se quedarían en su rutina y no existiría ninguna aventura que contar."
 
 --------------------------------------------------------------------------------
 [PASO 3: RECORRIDO - CONVERSACION GUIADA Y PREGUNTAS SOCRATICAS]
@@ -232,7 +253,7 @@ Item 1 (Mundo Ordinario vs La Llamada):
 • Revelacion: "El Mundo Ordinario muestra la normalidad del personaje; La Llamada es el incidente que rompe esa calma e inicia la trama."
 
 Item 2 (El Abismo y el Clímax Dramático):
-• Pregunta Socratica: "Observa la Etapa 5 en la pantalla: 'El Abismo'. ¿Por qué esta etapa representa el momento de mayor tensión en todo el relato?"
+• Pregunta Socratica: "Observa la Etapa 5 en la pantalla: "El Abismo". ¿Por qué esta etapa representa el momento de mayor tensión en todo el relato?"
 • Respuesta Esperada: Porque es la crisis más grande o batalla decisiva donde el héroe enfrenta su mayor peligro, parece estar a punto de perder y debe vencer sus temores para triunfar.
 • Feedback de Exito: "¡Excelente análisis dramático! Identificaste el clímax donde se decide el destino del personaje."
 • Pista de Apoyo Socratica: "Fíjate en la descripción de la Etapa 5: es el momento culminante donde todo está en riesgo antes de resolver el conflicto."
@@ -241,19 +262,11 @@ Item 2 (El Abismo y el Clímax Dramático):
 --------------------------------------------------------------------------------
 [PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
 --------------------------------------------------------------------------------
-• Cierre y Sintesis del Video Explicativo: "Sin conflicto no hay historia. El obstáculo obliga al héroe a actuar, cruzar el umbral, superar el abismo y regresar con sabiduría."
-
-Comprobacion 1 (Mundo Ordinario vs La Llamada):
-• Pregunta: "En las dos primeras etapas, ¿qué diferencia la vida del héroe en su Mundo Ordinario respecto de cuando recibe La Llamada a la Aventura?"
-• Respuesta Esperada: En el Mundo Ordinario el personaje vive su rutina segura y conocida; con La Llamada recibe un desafío, peligro o misión que quiebra esa rutina y lo enfrenta a lo desconocido.
-• Pista de Apoyo: "Piensa en cómo empieza una película o libro antes de que ocurra el incidente principal y qué pasa justo después."
-• Revelacion: "El Mundo Ordinario muestra la rutina; La Llamada introduce el problema o misión que inicia la aventura."
-
-Comprobacion 2 (El Abismo y el Clímax Dramático):
-• Pregunta: "Observa la Etapa 5 en la pantalla: 'El Abismo'. ¿Por qué esta etapa representa el momento de mayor tensión en todo el relato?"
-• Respuesta Esperada: Porque es la crisis más grande o batalla decisiva donde el héroe enfrenta su mayor peligro, parece estar a punto de perder y debe vencer sus temores para triunfar.
-• Pista de Apoyo: "Fíjate en la descripción de la Etapa 5: es el momento culminante donde todo está en riesgo antes de resolver el conflicto."
-• Revelacion: "El Abismo es la prueba más difícil donde el héroe arriesga todo para superar el conflicto."
+Comprobacion 1 (Tipos de Conflicto en la Literatura):
+• Pregunta: "¿Qué diferencia existe entre un conflicto externo (como un monstruo, un villano o una tormenta en el mar) y un conflicto interno del personaje?"
+• Respuesta Esperada: El conflicto externo es una amenaza física del mundo exterior; el conflicto interno es una lucha emocional, un miedo, una culpa o una duda dentro de los pensamientos del propio personaje.
+• Pista de Apoyo: "Pregúntate: ¿el problema viene de afuera (otra persona o la naturaleza) o está dentro de su mente y corazón (un temor o una decisión difícil)?"
+• Revelacion: "El conflicto externo ocurre contra fuerzas del exterior; el conflicto interno ocurre dentro de los sentimientos del personaje."
 
 --------------------------------------------------------------------------------
 [PASO 5: PRACTICA EN EL CUADERNO FISICO]
@@ -268,52 +281,55 @@ Ejercicio 2 (Creación de un Conflicto Narrativo Breve en el Cuaderno):
 • Enunciado de Aplicacion: "En tu cuaderno de Lengua, inventa un personaje original y redacta un párrafo de 4 a 5 líneas donde presentes su vida cotidiana y el momento exacto en que un conflicto inesperado interrumpe su día."
 • Respuesta Esperada: Párrafo narrativo con redacción clara, que describe una rutina cotidiana y luego introduce un conflicto detonante explícito.
 • Feedback de Exito: "¡Gran creatividad narrativa! Creaste una tensión dramática muy clara que dan ganas de seguir leyendo."
-• Pista de Apoyo Socratica: "Empieza describiendo qué hace el personaje en una mañana común, y usa un conector de quiebre como 'De pronto...' o 'Sin embargo, esa tarde...'."
+• Pista de Apoyo Socratica: "Empieza describiendo qué hace el personaje en una mañana común, y usa un conector de quiebre como "De pronto..." o "Sin embargo, esa tarde..."."
 
-Modulo: Comparemos dos situaciones (Comparemos dos situaciones)
-• DILE: "Antes de resumir, comparemos dos situaciones. No necesitas repetir una frase exacta: lo importante es que expliques la idea con tus propias palabras."
-• Pregunta: "Al comparar dos situaciones de Las 6 Etapas del Viaje del Héroe, ¿cómo influye el contexto en la interpretación de los datos?"
-• Respuesta Esperada: El significado o resultado depende de las condiciones del contexto y del propósito de la situación.
-• Feedback si acierta: "¡Excelente razonamiento! Reconociste que el contexto orienta la interpretación de los datos."
-• Feedback si necesita apoyo: "Observa cada situación por separado y explica qué elementos las distinguen."
+Modulo: Comparemos dos situaciones (Comparemos dos situaciones narrativas)
+• DILE: "Antes de cerrar, analicemos dos tipos de situaciones que vive un personaje."
+• Pregunta: "En la Situación 1 un guerrero enfrenta a un dragón gigante que ataca la ciudad. En la Situación 2 el guerrero siente un profundo miedo de fallarle a sus amigos y duda de tomar su espada. ¿Por qué ambas representan un conflicto, pero uno es externo y el otro interno?"
+• Respuesta Esperada: Porque en la primera el peligro viene del mundo exterior (el dragón), mientras que en la segunda la lucha ocurre dentro de sus propias emociones y pensamientos (el miedo a fallar).
+• Feedback si acierta: "¡Extraordinario razonamiento! Supiste diferenciar con total claridad la fuerza exterior del dilema emocional interno."
+• Feedback si necesita apoyo: "Observa dónde ocurre cada problema: ¿uno está afuera destruyendo muros y el otro está en los pensamientos y temores del guerrero?"
 
-Modulo: Desafio Breve (Desafío breve: Las 6 Etapas del Viaje del Héroe)
-• Pregunta: "En Lengua y Literatura, ¿qué diferencia observas entre identificar los datos y aplicar el procedimiento? Explica tu razonamiento."
-• Respuesta Esperada: Identificar los datos determina el punto de partida; aplicar el procedimiento permite construir la respuesta.
+Modulo: Desafio Breve (Desafío breve: Identificar la etapa)
+• Pregunta: "En un relato leemos: "Lucía encontró un pergamino oculto en el desván y esa misma noche empacó su linterna para salir al bosque". ¿Qué etapa del viaje del héroe representa encontrar el pergamino y cuál empacar la linterna?"
+• Respuesta Esperada: Encontrar el pergamino representa La Llamada a la Aventura (aparece el misterio); empacar la linterna representa el Cruce del Umbral (decide entrar al mundo desconocido).
 
 --------------------------------------------------------------------------------
 [PASO 6: RESUMEN Y ESTRATEGIA DE PENSAMIENTO]
 --------------------------------------------------------------------------------
 • Idea Clave: "El conflicto narrativo es el obstáculo o fuerza contraria que enfrenta al protagonista y lo obliga a actuar. Sin conflicto no hay trama, y a través de las pruebas el héroe se transforma."
-• DILE AL ESTUDIANTE: "Cuando enfrentes un problema en Lengua y Literatura, puedes seguir estos tres pasos clave:"
+• DILE AL ESTUDIANTE: "Cada vez que leas un cuento, fábula o novela, aplica estos tres pasos ordenados:"
 • Pasos de la Estrategia:
-  Paso 1: Identifica -> ¿Cuáles son los datos clave y cuál es la pregunta central?
-  Paso 2: Aplica -> ¿Qué regla o método disciplinar corresponde utilizar?
-  Paso 3: Comprueba -> ¿La conclusión o resultado responde con coherencia al problema?
+  Paso 1: Ubica el equilibrio inicial -> ¿Cómo era la vida cotidiana y pacífica del personaje antes de que ocurriera nada extraño?
+  Paso 2: Identifica el conflicto -> ¿Qué suceso inesperado rompe la calma y qué obstáculo debe vencer el protagonista?
+  Paso 3: Observa la transformación -> ¿Cómo cambia el personaje al final de la historia tras haber superado las pruebas?
 • 3 Ideas Clave Estructuradas de Sintesis:
-  - 1 · Concepto central: Identificamos los elementos y el punto de partida del análisis.
-  - 2 · Interpretación del contexto: Identificar las 6 etapas del viaje del héroe y el conflicto narrativo como motor del relato
-  - 3 · Síntesis formal: El conflicto narrativo es el obstáculo o fuerza contraria que enfrenta al protagonista y lo obliga a actuar. Sin conflicto no hay trama, y a través de las pruebas el héroe se transforma.
+  - Estructura Universal: Las narraciones siguen una progresión dramática en 6 etapas que van desde la calma cotidiana hasta la resolución.
+  - El Conflicto Narrativo: Es el motor de la historia: sin un obstáculo o problema que resolver, no existen acciones, decisiones ni transformación.
+  - Evolución del Personaje: Al superar las pruebas y el abismo, el protagonista regresa transformado con nueva madurez y sabiduría.
 
 --------------------------------------------------------------------------------
 [PASO 7: MINIQUIZ FORMATIVO Y FASE REVISAR]
 --------------------------------------------------------------------------------
 Pregunta 1: ¿Cuál es la función principal del conflicto narrativo en un cuento o novela?
-  A) Describir el paisaje geográfico donde viven los personajes secundarios 
-  B) Romper el equilibrio inicial y motivar las acciones y decisiones del protagonista [CORRECTA]
-  C) Enumerar los nombres de todos los autores que escribieron sobre el tema 
+  A) A) Describir el paisaje geográfico donde viven los personajes secundarios 
+  B) B) Romper el equilibrio inicial y motivar las acciones y decisiones del protagonista [CORRECTA]
+  C) C) Enumerar los nombres de todos los autores que escribieron sobre el tema 
+  D) D) Eliminar a todos los personajes para que la historia termine rápidamente 
 • Explicacion Formativa del Error: "El conflicto narrativo quiebra la tranquilidad inicial y obliga al protagonista a actuar, poniendo en movimiento toda la trama."
 
-Pregunta 2: En el esquema del Viaje del Héroe, ¿qué sucede en la etapa de 'El Abismo'?
-  A) El protagonista descansa en su casa sin ninguna preocupación 
-  B) El protagonista enfrenta su mayor peligro o temor en el momento de máxima tensión [CORRECTA]
-  C) El protagonista decide abandonar para siempre la aventura sin intentar nada 
+Pregunta 2: En el esquema del Viaje del Héroe, ¿qué sucede en la etapa de "El Abismo"?
+  A) A) El protagonista descansa en su casa sin ninguna preocupación 
+  B) B) El protagonista enfrenta su mayor peligro o temor en el momento de máxima tensión [CORRECTA]
+  C) C) El protagonista decide abandonar para siempre la aventura sin intentar nada 
+  D) D) El relato vuelve a comenzar exactamente desde la primera página 
 • Explicacion Formativa del Error: "El Abismo representa el clímax o crisis máxima: es el momento más difícil donde el héroe debe darlo todo para vencer el conflicto."
 
 Pregunta 3: Si en un relato leemos que una capitana navega hacia una isla prohibida para rescatar a su tripulación secuestrada por piratas, ¿qué tipo de conflicto predomina en ese momento?
-  A) Un conflicto puramente gramatical sin personajes 
-  B) Un conflicto externo donde enfrenta a piratas y al mar para cumplir su misión [CORRECTA]
-  C) La capitana no tiene ningún conflicto porque le gusta navegar 
+  A) A) Un conflicto puramente gramatical sin personajes 
+  B) B) Un conflicto externo donde enfrenta a piratas y al mar para cumplir su misión [CORRECTA]
+  C) C) La capitana no tiene ningún conflicto porque le gusta navegar 
+  D) D) Un conflicto de ortografía en la redacción del mapa 
 • Explicacion Formativa del Error: "Los piratas y los peligros del mar son fuerzas externas del entorno que amenazan a la protagonista y sus compañeros."
 
 --------------------------------------------------------------------------------
@@ -322,27 +338,24 @@ Pregunta 3: Si en un relato leemos que una capitana navega hacia una isla prohib
 Refuerzo 1 (Refuerzo: El Incidente Detonante):
 • Explicacion Previa: "Toda historia necesita un suceso que cambie las cosas. Si Caperucita se queda en su casa comiendo sopa, no hay cuento. El conflicto surge cuando debe cruzar el bosque peligroso y se encuentra con el lobo."
 • Pregunta: "¿Por qué la aparición del lobo en el camino de Caperucita es un conflicto narrativo?"
-• Opciones: Porque interrumpe su viaje seguro y genera un peligro directo que debe enfrentar | Porque el lobo era un personaje que no tenía diálogo
-• Respuesta Correcta: Porque interrumpe su viaje seguro y genera un peligro directo que debe enfrentar
-• Refuerzo si falla: "La respuesta correcta es: el lobo altera su trayecto pacífico y crea el peligro que da vida al cuento."
+• Opciones: A) Porque interrumpe su viaje seguro y genera un peligro directo que debe enfrentar | B) Porque el lobo era un personaje que no tenía diálogo | C) Porque el bosque tenía muchos árboles verdes
+• Respuesta Correcta: A) Porque interrumpe su viaje seguro y genera un peligro directo que debe enfrentar
+• Refuerzo si falla: "La respuesta correcta es la A: el lobo altera su trayecto pacífico y crea el peligro que da vida al cuento."
 
 --------------------------------------------------------------------------------
 [PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
 --------------------------------------------------------------------------------
-• Pregunta de Sintesis: "En tus propias palabras, ¿por qué decimos que sin un conflicto no habría historia que contar?"
-• Reflexion Metacognitiva: "¿Qué película o libro conocido te ayudó a visualizar las 6 etapas del viaje del héroe?"
-• Celebracion del Logro: "¡Felicitaciones! Has dominado la primera lección de estructura narrativa y viaje del héroe de 7° básico."
-• Felicitacion Final: "¡Felicitaciones! Hoy completaste con éxito la clase "Las 6 Etapas del Viaje del Héroe". Has demostrado constancia y rigor en tu aprendizaje."
-• Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Lengua y Literatura."
-
+• Felicitacion Final: "¡Felicitaciones! Hoy aprendiste qué es el conflicto narrativo, cómo las 6 etapas del viaje del héroe organizan la trama de las historias y cómo diferenciar los conflictos externos de los internos."
+• Vista Previa Proxima Clase: "En la próxima clase analizaremos en profundidad a los personajes: sus motivaciones secretas y cómo se relacionan los protagonistas con los antagonistas."
 
 
 ################################################################################
-### CLASE 2 DE 6: EVOLUCIÓN Y ROLES DE LOS PERSONAJES
+CLASE 2 DE 6: EVOLUCIÓN Y ROLES DE LOS PERSONAJES
 ################################################################################
 
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 08-10-2026, 5:52:12 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -357,13 +370,13 @@ DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
 2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
 3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
 4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
-5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
-   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
-   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
-   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
-6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
-7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
-8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
+5. Duraciones Planificadas de Producción Audiovisual:
+   • Video Gancho: 60 segundos de duración planificada distribuidos en 7 diapositivas.
+   • Video Explicativo: 90 segundos de duración planificada distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt, maximo 8 palabras); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt, maximo 8 palabras). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes.
+7. Logotipo Oficial: Codex/Work incorpora el logo blanco de EstudioSimple en la esquina inferior derecha del PPTX al tamano del video de referencia. No pedir a la IA que dibuje el logo dentro de la imagen; dejar espacio negativo.
+8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. No se exige medir con cronómetro, contar palabras ni reexportar por unos segundos adicionales.
 
 ================================================================================
 MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
@@ -376,60 +389,67 @@ Titulo: Video Motivacional: El Desafío de Evolución y roles de los personajes
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Apertura y Contexto (9 seg aprox) ---
+--- DIAPOSITIVA 1: Apertura y Contexto (9 segundos) ---
 1. Propósito Didáctico: Apertura y Contexto
 2. Título en Pantalla (64 pt): Misión 2: Evolución y roles de los personajes
 3. Subtítulo en Pantalla (36 pt): Exploración inicial en Lengua y Literatura
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Evolución y roles de los personajes (Lengua y Literatura). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Mapa Visual: Situacion narrativa inicial de Evolución y roles de los personajes
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Comienza una nueva expedición de aprendizaje en Lengua y Literatura. Nuestros dos exploradores analizan el desafío de Evolución y roles de los personajes para descubrir sus secretos."
 
---- DIAPOSITIVA 2: Presentación del Escenario (9 seg aprox) ---
+--- DIAPOSITIVA 2: Presentación del Escenario (9 segundos) ---
 1. Propósito Didáctico: Presentación del Escenario
 2. Título en Pantalla (64 pt): Punto de partida
 3. Subtítulo en Pantalla (36 pt): Protagonistas, antagonistas y motivaciones que impulsan las acciones
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Protagonistas, antagonistas y motivaciones que impulsan las acciones. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Protagonistas, antagonistas y motivaciones que impulsan las acciones
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Al observar los datos sobre Protagonistas, antagonistas y motivaciones que impulsan las acciones, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor."
 
---- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 seg aprox) ---
+--- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 segundos) ---
 1. Propósito Didáctico: Aparición del Conflicto / Misterio
 2. Título en Pantalla (64 pt): El enigma disciplinar
 3. Subtítulo en Pantalla (36 pt): Desafío en Evolución y roles de los personajes
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Protagonistas, antagonistas y motivaciones que impulsan las acciones
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Surge un reto concreto sobre Evolución y roles de los personajes: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso."
 
---- DIAPOSITIVA 4: Exploración de Pistas (9 seg aprox) ---
+--- DIAPOSITIVA 4: Exploración de Pistas (9 segundos) ---
 1. Propósito Didáctico: Exploración de Pistas
 2. Título en Pantalla (64 pt): Análisis de evidencias
 3. Subtítulo en Pantalla (36 pt): Protagonistas, antagonistas y motivaciones que impulsan las acciones
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Protagonistas, antagonistas y motivaciones que impulsan las acciones
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Ambos comparan las pistas disponibles sobre Protagonistas, antagonistas y motivaciones que impulsan las acciones. Cada dato confirma cómo interactúan los elementos clave de la situación."
 
---- DIAPOSITIVA 5: El Momento Crítico (9 seg aprox) ---
+--- DIAPOSITIVA 5: El Momento Crítico (9 segundos) ---
 1. Propósito Didáctico: El Momento Crítico
 2. Título en Pantalla (64 pt): Criterio de decisión
 3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Protagonistas, antagonistas y motivaciones que impulsan las acciones
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Evolución y roles de los personajes con total precisión metodológica."
 
---- DIAPOSITIVA 6: La Antesala de la Pregunta (9 seg aprox) ---
+--- DIAPOSITIVA 6: La Antesala de la Pregunta (9 segundos) ---
 1. Propósito Didáctico: La Antesala de la Pregunta
 2. Título en Pantalla (64 pt): El dilema central
 3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Evolución y roles de los personajes?
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Tension dramatica: Conflicto entre fuerzas del relato
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje."
 
---- DIAPOSITIVA 7: La Pregunta Detonante (9 seg aprox) ---
+--- DIAPOSITIVA 7: La Pregunta Detonante (9 segundos) ---
 1. Propósito Didáctico: La Pregunta Detonante
 2. Título en Pantalla (64 pt): Pregunta detonante
 3. Subtítulo en Pantalla (36 pt): Regla y método de Evolución y roles de los personajes
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta detonante: ¿Cual es el motor de la historia en Evolución y roles de los personajes?
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!"
 
 ================================================================================
@@ -443,60 +463,67 @@ Titulo: Video Explicativo: Formalización de Evolución y roles de los personaje
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
+--- DIAPOSITIVA 1: Objetivo de la Lección (12 segundos) ---
 1. Propósito Didáctico: Objetivo de la Lección
 2. Título en Pantalla (64 pt): Objetivo de la lección
 3. Subtítulo en Pantalla (36 pt): Dominar Evolución y roles de los personajes: Protagonistas, antagonistas y motivaciones que impulsan las acciones
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Protagonistas, antagonistas y motivaciones que impulsan las acciones. High clarity, negative space for text. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 3 · Evolución y roles de los personajes
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El objetivo de hoy es aprender a protagonistas, antagonistas y motivaciones que impulsan las acciones, aplicando el método disciplinar paso a paso con total rigor y claridad."
 
---- DIAPOSITIVA 2: Definición del Concepto Central (12 seg aprox) ---
+--- DIAPOSITIVA 2: Definición del Concepto Central (12 segundos) ---
 1. Propósito Didáctico: Definición del Concepto Central
 2. Título en Pantalla (64 pt): Concepto fundamental
 3. Subtítulo en Pantalla (36 pt): Protagonistas, antagonistas y motivaciones que impulsan las acciones
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Concepto disciplinar: Protagonistas, antagonistas y motivaciones que impulsan las acciones
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Para comprender Evolución y roles de los personajes, establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación."
 
---- DIAPOSITIVA 3: Demostración Modelada (12 seg aprox) ---
+--- DIAPOSITIVA 3: Demostración Modelada (12 segundos) ---
 1. Propósito Didáctico: Demostración Modelada
 2. Título en Pantalla (64 pt): Modelamiento paso a paso
 3. Subtítulo en Pantalla (36 pt): Procedimiento de Evolución y roles de los personajes
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Fragmento textual visible con marcas de evidencia literal e inferencias
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Observa cómo se aplica el procedimiento en este caso guiado: cada transformación responde a una justificación disciplinar explícita y visible."
 
---- DIAPOSITIVA 4: Prevención del Error Frecuente (13 seg aprox) ---
+--- DIAPOSITIVA 4: Prevención del Error Frecuente (13 segundos) ---
 1. Propósito Didáctico: Prevención del Error Frecuente
 2. Título en Pantalla (64 pt): Atención: Error habitual
 3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Contraste analitico: distincion de elementos narrativos clave
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Un error frecuente ocurre al descuidar el orden o saltarse un paso de la convención establecida. Siempre comprobamos cada dato antes de continuar."
 
---- DIAPOSITIVA 5: Comprobación del Resultado (12 seg aprox) ---
+--- DIAPOSITIVA 5: Comprobación del Resultado (12 segundos) ---
 1. Propósito Didáctico: Comprobación del Resultado
 2. Título en Pantalla (64 pt): Validación del resultado
 3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo de respuesta justificada con citas y evidencia textual
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Al contrastar el resultado con la situación inicial, confirmamos que la solución es consistente, rigurosa y responde plenamente a la pregunta."
 
---- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 seg aprox) ---
+--- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 segundos) ---
 1. Propósito Didáctico: Estrategia Mnemotécnica
 2. Título en Pantalla (64 pt): Estrategia de pensamiento
 3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Estrategia de lectura: Localizar, interpretar y fundamentar
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Recuerda siempre la estrategia en tres pasos: identificar la información clave, aplicar la regla en orden y comprobar el resultado final."
 
---- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 seg aprox) ---
+--- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 segundos) ---
 1. Propósito Didáctico: Síntesis y Regla de Oro
 2. Título en Pantalla (64 pt): Regla de Oro: Evolución y roles de los personajes
 3. Subtítulo en Pantalla (36 pt): Método disciplinar validado
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Infografía de síntesis: Regla de lectura de Evolución y roles de los personajes
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Ahora que dominas la regla fundamental y el procedimiento de Evolución y roles de los personajes, ¡vamos a demostrarlo en las actividades interactivas de la plataforma!"
 
 ================================================================================
@@ -669,13 +696,13 @@ Refuerzo 1 (Recuperación de Lengua y Literatura: Evolución y roles de los pers
 • Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Lengua y Literatura."
 
 
-
 ################################################################################
-### CLASE 3 DE 6: LA VOZ DEL NARRADOR Y PERSPECTIVAS
+CLASE 3 DE 6: LA VOZ DEL NARRADOR Y PERSPECTIVAS
 ################################################################################
 
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 08-10-2026, 5:52:12 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -690,13 +717,13 @@ DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
 2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
 3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
 4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
-5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
-   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
-   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
-   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
-6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
-7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
-8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
+5. Duraciones Planificadas de Producción Audiovisual:
+   • Video Gancho: 60 segundos de duración planificada distribuidos en 7 diapositivas.
+   • Video Explicativo: 90 segundos de duración planificada distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt, maximo 8 palabras); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt, maximo 8 palabras). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes.
+7. Logotipo Oficial: Codex/Work incorpora el logo blanco de EstudioSimple en la esquina inferior derecha del PPTX al tamano del video de referencia. No pedir a la IA que dibuje el logo dentro de la imagen; dejar espacio negativo.
+8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. No se exige medir con cronómetro, contar palabras ni reexportar por unos segundos adicionales.
 
 ================================================================================
 MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
@@ -709,60 +736,67 @@ Titulo: Video Motivacional: El Desafío de La voz del narrador y perspectivas
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Apertura y Contexto (9 seg aprox) ---
+--- DIAPOSITIVA 1: Apertura y Contexto (9 segundos) ---
 1. Propósito Didáctico: Apertura y Contexto
 2. Título en Pantalla (64 pt): Misión 3: La voz del narrador y perspectivas
 3. Subtítulo en Pantalla (36 pt): Exploración inicial en Lengua y Literatura
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to La voz del narrador y perspectivas (Lengua y Literatura). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Mapa Visual: Situacion narrativa inicial de La voz del narrador y perspectivas
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Comienza una nueva expedición de aprendizaje en Lengua y Literatura. Nuestros dos exploradores analizan el desafío de La voz del narrador y perspectivas para descubrir sus secretos."
 
---- DIAPOSITIVA 2: Presentación del Escenario (9 seg aprox) ---
+--- DIAPOSITIVA 2: Presentación del Escenario (9 segundos) ---
 1. Propósito Didáctico: Presentación del Escenario
 2. Título en Pantalla (64 pt): Punto de partida
 3. Subtítulo en Pantalla (36 pt): Distinción entre narrador omnisciente, protagonista y testigo
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Distinción entre narrador omnisciente, protagonista y testigo. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Distinción entre narrador omnisciente, protagonista y testigo
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Al observar los datos sobre Distinción entre narrador omnisciente, protagonista y testigo, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor."
 
---- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 seg aprox) ---
+--- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 segundos) ---
 1. Propósito Didáctico: Aparición del Conflicto / Misterio
 2. Título en Pantalla (64 pt): El enigma disciplinar
 3. Subtítulo en Pantalla (36 pt): Desafío en La voz del narrador y perspectivas
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Distinción entre narrador omnisciente, protagonista y testigo
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Surge un reto concreto sobre La voz del narrador y perspectivas: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso."
 
---- DIAPOSITIVA 4: Exploración de Pistas (9 seg aprox) ---
+--- DIAPOSITIVA 4: Exploración de Pistas (9 segundos) ---
 1. Propósito Didáctico: Exploración de Pistas
 2. Título en Pantalla (64 pt): Análisis de evidencias
 3. Subtítulo en Pantalla (36 pt): Distinción entre narrador omnisciente, protagonista y testigo
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Distinción entre narrador omnisciente, protagonista y testigo
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Ambos comparan las pistas disponibles sobre Distinción entre narrador omnisciente, protagonista y testigo. Cada dato confirma cómo interactúan los elementos clave de la situación."
 
---- DIAPOSITIVA 5: El Momento Crítico (9 seg aprox) ---
+--- DIAPOSITIVA 5: El Momento Crítico (9 segundos) ---
 1. Propósito Didáctico: El Momento Crítico
 2. Título en Pantalla (64 pt): Criterio de decisión
 3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Distinción entre narrador omnisciente, protagonista y testigo
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de La voz del narrador y perspectivas con total precisión metodológica."
 
---- DIAPOSITIVA 6: La Antesala de la Pregunta (9 seg aprox) ---
+--- DIAPOSITIVA 6: La Antesala de la Pregunta (9 segundos) ---
 1. Propósito Didáctico: La Antesala de la Pregunta
 2. Título en Pantalla (64 pt): El dilema central
 3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver La voz del narrador y perspectivas?
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Tension dramatica: Conflicto entre fuerzas del relato
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje."
 
---- DIAPOSITIVA 7: La Pregunta Detonante (9 seg aprox) ---
+--- DIAPOSITIVA 7: La Pregunta Detonante (9 segundos) ---
 1. Propósito Didáctico: La Pregunta Detonante
 2. Título en Pantalla (64 pt): Pregunta detonante
 3. Subtítulo en Pantalla (36 pt): Regla y método de La voz del narrador y perspectivas
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta detonante: ¿Cual es el motor de la historia en La voz del narrador y perspectivas?
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!"
 
 ================================================================================
@@ -776,60 +810,67 @@ Titulo: Video Explicativo: Formalización de La voz del narrador y perspectivas
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
+--- DIAPOSITIVA 1: Objetivo de la Lección (12 segundos) ---
 1. Propósito Didáctico: Objetivo de la Lección
 2. Título en Pantalla (64 pt): Objetivo de la lección
 3. Subtítulo en Pantalla (36 pt): Dominar La voz del narrador y perspectivas: Distinción entre narrador omnisciente, protagonista y testigo
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Distinción entre narrador omnisciente, protagonista y testigo. High clarity, negative space for text. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 3 · La voz del narrador y perspectivas
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El objetivo de hoy es aprender a distinción entre narrador omnisciente, protagonista y testigo, aplicando el método disciplinar paso a paso con total rigor y claridad."
 
---- DIAPOSITIVA 2: Definición del Concepto Central (12 seg aprox) ---
+--- DIAPOSITIVA 2: Definición del Concepto Central (12 segundos) ---
 1. Propósito Didáctico: Definición del Concepto Central
 2. Título en Pantalla (64 pt): Concepto fundamental
 3. Subtítulo en Pantalla (36 pt): Distinción entre narrador omnisciente, protagonista y testigo
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Concepto disciplinar: Distinción entre narrador omnisciente, protagonista y testigo
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Para comprender La voz del narrador y perspectivas, establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación."
 
---- DIAPOSITIVA 3: Demostración Modelada (12 seg aprox) ---
+--- DIAPOSITIVA 3: Demostración Modelada (12 segundos) ---
 1. Propósito Didáctico: Demostración Modelada
 2. Título en Pantalla (64 pt): Modelamiento paso a paso
 3. Subtítulo en Pantalla (36 pt): Procedimiento de La voz del narrador y perspectivas
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Fragmento textual visible con marcas de evidencia literal e inferencias
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Observa cómo se aplica el procedimiento en este caso guiado: cada transformación responde a una justificación disciplinar explícita y visible."
 
---- DIAPOSITIVA 4: Prevención del Error Frecuente (13 seg aprox) ---
+--- DIAPOSITIVA 4: Prevención del Error Frecuente (13 segundos) ---
 1. Propósito Didáctico: Prevención del Error Frecuente
 2. Título en Pantalla (64 pt): Atención: Error habitual
 3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Contraste analitico: distincion de elementos narrativos clave
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Un error frecuente ocurre al descuidar el orden o saltarse un paso de la convención establecida. Siempre comprobamos cada dato antes de continuar."
 
---- DIAPOSITIVA 5: Comprobación del Resultado (12 seg aprox) ---
+--- DIAPOSITIVA 5: Comprobación del Resultado (12 segundos) ---
 1. Propósito Didáctico: Comprobación del Resultado
 2. Título en Pantalla (64 pt): Validación del resultado
 3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo de respuesta justificada con citas y evidencia textual
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Al contrastar el resultado con la situación inicial, confirmamos que la solución es consistente, rigurosa y responde plenamente a la pregunta."
 
---- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 seg aprox) ---
+--- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 segundos) ---
 1. Propósito Didáctico: Estrategia Mnemotécnica
 2. Título en Pantalla (64 pt): Estrategia de pensamiento
 3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Estrategia de lectura: Localizar, interpretar y fundamentar
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Recuerda siempre la estrategia en tres pasos: identificar la información clave, aplicar la regla en orden y comprobar el resultado final."
 
---- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 seg aprox) ---
+--- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 segundos) ---
 1. Propósito Didáctico: Síntesis y Regla de Oro
 2. Título en Pantalla (64 pt): Regla de Oro: La voz del narrador y perspectivas
 3. Subtítulo en Pantalla (36 pt): Método disciplinar validado
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Infografía de síntesis: Regla de lectura de La voz del narrador y perspectivas
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Ahora que dominas la regla fundamental y el procedimiento de La voz del narrador y perspectivas, ¡vamos a demostrarlo en las actividades interactivas de la plataforma!"
 
 ================================================================================
@@ -1002,13 +1043,13 @@ Refuerzo 1 (Recuperación de Lengua y Literatura: La voz del narrador y perspect
 • Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Lengua y Literatura."
 
 
-
 ################################################################################
-### CLASE 4 DE 6: DISPOSICIÓN TEMPORAL DE LOS ACONTECIMIENTOS
+CLASE 4 DE 6: DISPOSICIÓN TEMPORAL DE LOS ACONTECIMIENTOS
 ################################################################################
 
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 08-10-2026, 5:52:12 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -1023,13 +1064,13 @@ DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
 2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
 3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
 4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
-5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
-   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
-   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
-   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
-6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
-7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
-8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
+5. Duraciones Planificadas de Producción Audiovisual:
+   • Video Gancho: 60 segundos de duración planificada distribuidos en 7 diapositivas.
+   • Video Explicativo: 90 segundos de duración planificada distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt, maximo 8 palabras); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt, maximo 8 palabras). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes.
+7. Logotipo Oficial: Codex/Work incorpora el logo blanco de EstudioSimple en la esquina inferior derecha del PPTX al tamano del video de referencia. No pedir a la IA que dibuje el logo dentro de la imagen; dejar espacio negativo.
+8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. No se exige medir con cronómetro, contar palabras ni reexportar por unos segundos adicionales.
 
 ================================================================================
 MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
@@ -1042,60 +1083,67 @@ Titulo: Video Motivacional: El Desafío de Disposición temporal de los aconteci
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Apertura y Contexto (9 seg aprox) ---
+--- DIAPOSITIVA 1: Apertura y Contexto (9 segundos) ---
 1. Propósito Didáctico: Apertura y Contexto
 2. Título en Pantalla (64 pt): Misión 4: Disposición temporal de los acontecimientos
 3. Subtítulo en Pantalla (36 pt): Exploración inicial en Lengua y Literatura
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Disposición temporal de los acontecimientos (Lengua y Literatura). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Mapa Visual: Situacion narrativa inicial de Disposición temporal de los acontecimientos
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Comienza una nueva expedición de aprendizaje en Lengua y Literatura. Nuestros dos exploradores analizan el desafío de Disposición temporal de los acontecimientos para descubrir sus secretos."
 
---- DIAPOSITIVA 2: Presentación del Escenario (9 seg aprox) ---
+--- DIAPOSITIVA 2: Presentación del Escenario (9 segundos) ---
 1. Propósito Didáctico: Presentación del Escenario
 2. Título en Pantalla (64 pt): Punto de partida
 3. Subtítulo en Pantalla (36 pt): Orden cronológico, saltos temporales (anacronías) y ritmo narrativo
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Orden cronológico, saltos temporales (anacronías) y ritmo narrativo. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Orden cronológico, saltos temporales (anacronías) y ritmo narrativo
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Al observar los datos sobre Orden cronológico, saltos temporales (anacronías) y ritmo narrativo, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor."
 
---- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 seg aprox) ---
+--- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 segundos) ---
 1. Propósito Didáctico: Aparición del Conflicto / Misterio
 2. Título en Pantalla (64 pt): El enigma disciplinar
 3. Subtítulo en Pantalla (36 pt): Desafío en Disposición temporal de los acontecimientos
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Orden cronológico, saltos temporales (anacronías) y ritmo narrativo
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Surge un reto concreto sobre Disposición temporal de los acontecimientos: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso."
 
---- DIAPOSITIVA 4: Exploración de Pistas (9 seg aprox) ---
+--- DIAPOSITIVA 4: Exploración de Pistas (9 segundos) ---
 1. Propósito Didáctico: Exploración de Pistas
 2. Título en Pantalla (64 pt): Análisis de evidencias
 3. Subtítulo en Pantalla (36 pt): Orden cronológico, saltos temporales (anacronías) y ritmo narrativo
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Orden cronológico, saltos temporales (anacronías) y ritmo narrativo
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Ambos comparan las pistas disponibles sobre Orden cronológico, saltos temporales (anacronías) y ritmo narrativo. Cada dato confirma cómo interactúan los elementos clave de la situación."
 
---- DIAPOSITIVA 5: El Momento Crítico (9 seg aprox) ---
+--- DIAPOSITIVA 5: El Momento Crítico (9 segundos) ---
 1. Propósito Didáctico: El Momento Crítico
 2. Título en Pantalla (64 pt): Criterio de decisión
 3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Orden cronológico, saltos temporales (anacronías) y ritmo narrativo
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Disposición temporal de los acontecimientos con total precisión metodológica."
 
---- DIAPOSITIVA 6: La Antesala de la Pregunta (9 seg aprox) ---
+--- DIAPOSITIVA 6: La Antesala de la Pregunta (9 segundos) ---
 1. Propósito Didáctico: La Antesala de la Pregunta
 2. Título en Pantalla (64 pt): El dilema central
 3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Disposición temporal de los acontecimientos?
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Tension dramatica: Conflicto entre fuerzas del relato
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje."
 
---- DIAPOSITIVA 7: La Pregunta Detonante (9 seg aprox) ---
+--- DIAPOSITIVA 7: La Pregunta Detonante (9 segundos) ---
 1. Propósito Didáctico: La Pregunta Detonante
 2. Título en Pantalla (64 pt): Pregunta detonante
 3. Subtítulo en Pantalla (36 pt): Regla y método de Disposición temporal de los acontecimientos
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta detonante: ¿Cual es el motor de la historia en Disposición temporal de los acontecimientos?
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!"
 
 ================================================================================
@@ -1109,60 +1157,67 @@ Titulo: Video Explicativo: Formalización de Disposición temporal de los aconte
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
+--- DIAPOSITIVA 1: Objetivo de la Lección (12 segundos) ---
 1. Propósito Didáctico: Objetivo de la Lección
 2. Título en Pantalla (64 pt): Objetivo de la lección
 3. Subtítulo en Pantalla (36 pt): Dominar Disposición temporal de los acontecimientos: Orden cronológico, saltos temporales (anacronías) y ritmo narrativo
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Orden cronológico, saltos temporales (anacronías) y ritmo narrativo. High clarity, negative space for text. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 3 · Disposición temporal de los acontecimientos
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El objetivo de hoy es aprender a orden cronológico, saltos temporales (anacronías) y ritmo narrativo, aplicando el método disciplinar paso a paso con total rigor y claridad."
 
---- DIAPOSITIVA 2: Definición del Concepto Central (12 seg aprox) ---
+--- DIAPOSITIVA 2: Definición del Concepto Central (12 segundos) ---
 1. Propósito Didáctico: Definición del Concepto Central
 2. Título en Pantalla (64 pt): Concepto fundamental
 3. Subtítulo en Pantalla (36 pt): Orden cronológico, saltos temporales (anacronías) y ritmo narrativo
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Concepto disciplinar: Orden cronológico, saltos temporales (anacronías) y ritmo narrativo
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Para comprender Disposición temporal de los acontecimientos, establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación."
 
---- DIAPOSITIVA 3: Demostración Modelada (12 seg aprox) ---
+--- DIAPOSITIVA 3: Demostración Modelada (12 segundos) ---
 1. Propósito Didáctico: Demostración Modelada
 2. Título en Pantalla (64 pt): Modelamiento paso a paso
 3. Subtítulo en Pantalla (36 pt): Procedimiento de Disposición temporal de los acontecimientos
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Fragmento textual visible con marcas de evidencia literal e inferencias
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Observa cómo se aplica el procedimiento en este caso guiado: cada transformación responde a una justificación disciplinar explícita y visible."
 
---- DIAPOSITIVA 4: Prevención del Error Frecuente (13 seg aprox) ---
+--- DIAPOSITIVA 4: Prevención del Error Frecuente (13 segundos) ---
 1. Propósito Didáctico: Prevención del Error Frecuente
 2. Título en Pantalla (64 pt): Atención: Error habitual
 3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Contraste analitico: distincion de elementos narrativos clave
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Un error frecuente ocurre al descuidar el orden o saltarse un paso de la convención establecida. Siempre comprobamos cada dato antes de continuar."
 
---- DIAPOSITIVA 5: Comprobación del Resultado (12 seg aprox) ---
+--- DIAPOSITIVA 5: Comprobación del Resultado (12 segundos) ---
 1. Propósito Didáctico: Comprobación del Resultado
 2. Título en Pantalla (64 pt): Validación del resultado
 3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo de respuesta justificada con citas y evidencia textual
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Al contrastar el resultado con la situación inicial, confirmamos que la solución es consistente, rigurosa y responde plenamente a la pregunta."
 
---- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 seg aprox) ---
+--- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 segundos) ---
 1. Propósito Didáctico: Estrategia Mnemotécnica
 2. Título en Pantalla (64 pt): Estrategia de pensamiento
 3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Estrategia de lectura: Localizar, interpretar y fundamentar
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Recuerda siempre la estrategia en tres pasos: identificar la información clave, aplicar la regla en orden y comprobar el resultado final."
 
---- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 seg aprox) ---
+--- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 segundos) ---
 1. Propósito Didáctico: Síntesis y Regla de Oro
 2. Título en Pantalla (64 pt): Regla de Oro: Disposición temporal de los acontecimientos
 3. Subtítulo en Pantalla (36 pt): Método disciplinar validado
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Infografía de síntesis: Regla de lectura de Disposición temporal de los acontecimientos
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Ahora que dominas la regla fundamental y el procedimiento de Disposición temporal de los acontecimientos, ¡vamos a demostrarlo en las actividades interactivas de la plataforma!"
 
 ================================================================================
@@ -1335,13 +1390,13 @@ Refuerzo 1 (Recuperación de Lengua y Literatura: Disposición temporal de los a
 • Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Lengua y Literatura."
 
 
-
 ################################################################################
-### CLASE 5 DE 6: PRÁCTICA AVANZADA Y MODELAMIENTO DE OA 3 (PARTE 1)
+CLASE 5 DE 6: PRÁCTICA AVANZADA Y MODELAMIENTO DE OA 3 (PARTE 1)
 ################################################################################
 
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 08-10-2026, 5:52:12 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -1356,13 +1411,13 @@ DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
 2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
 3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
 4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
-5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
-   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
-   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
-   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
-6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
-7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
-8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
+5. Duraciones Planificadas de Producción Audiovisual:
+   • Video Gancho: 60 segundos de duración planificada distribuidos en 7 diapositivas.
+   • Video Explicativo: 90 segundos de duración planificada distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt, maximo 8 palabras); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt, maximo 8 palabras). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes.
+7. Logotipo Oficial: Codex/Work incorpora el logo blanco de EstudioSimple en la esquina inferior derecha del PPTX al tamano del video de referencia. No pedir a la IA que dibuje el logo dentro de la imagen; dejar espacio negativo.
+8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. No se exige medir con cronómetro, contar palabras ni reexportar por unos segundos adicionales.
 
 ================================================================================
 MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
@@ -1375,60 +1430,67 @@ Titulo: Video Motivacional: El Desafío de Práctica avanzada y modelamiento de 
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Apertura y Contexto (9 seg aprox) ---
+--- DIAPOSITIVA 1: Apertura y Contexto (9 segundos) ---
 1. Propósito Didáctico: Apertura y Contexto
 2. Título en Pantalla (64 pt): Misión 5: Práctica avanzada y modelamiento de OA 3 (Parte 1)
 3. Subtítulo en Pantalla (36 pt): Exploración inicial en Lengua y Literatura
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Práctica avanzada y modelamiento de OA 3 (Parte 1) (Lengua y Literatura). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Mapa Visual: Situacion narrativa inicial de Práctica avanzada y modelamiento de OA 3 (Parte 1)
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Comienza una nueva expedición de aprendizaje en Lengua y Literatura. Nuestros dos exploradores analizan el desafío de Práctica avanzada y modelamiento de OA 3 (Parte 1) para descubrir sus secretos."
 
---- DIAPOSITIVA 2: Presentación del Escenario (9 seg aprox) ---
+--- DIAPOSITIVA 2: Presentación del Escenario (9 segundos) ---
 1. Propósito Didáctico: Presentación del Escenario
 2. Título en Pantalla (64 pt): Punto de partida
 3. Subtítulo en Pantalla (36 pt): Consolidación guiada de destrezas para Lengua y Literatura
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Consolidación guiada de destrezas para Lengua y Literatura. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Consolidación guiada de destrezas para Lengua y Literatura
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Al observar los datos sobre Consolidación guiada de destrezas para Lengua y Literatura, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor."
 
---- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 seg aprox) ---
+--- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 segundos) ---
 1. Propósito Didáctico: Aparición del Conflicto / Misterio
 2. Título en Pantalla (64 pt): El enigma disciplinar
 3. Subtítulo en Pantalla (36 pt): Desafío en Práctica avanzada y modelamiento de OA 3 (Parte 1)
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Consolidación guiada de destrezas para Lengua y Literatura
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Surge un reto concreto sobre Práctica avanzada y modelamiento de OA 3 (Parte 1): las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso."
 
---- DIAPOSITIVA 4: Exploración de Pistas (9 seg aprox) ---
+--- DIAPOSITIVA 4: Exploración de Pistas (9 segundos) ---
 1. Propósito Didáctico: Exploración de Pistas
 2. Título en Pantalla (64 pt): Análisis de evidencias
 3. Subtítulo en Pantalla (36 pt): Consolidación guiada de destrezas para Lengua y Literatura
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Consolidación guiada de destrezas para Lengua y Literatura
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Ambos comparan las pistas disponibles sobre Consolidación guiada de destrezas para Lengua y Literatura. Cada dato confirma cómo interactúan los elementos clave de la situación."
 
---- DIAPOSITIVA 5: El Momento Crítico (9 seg aprox) ---
+--- DIAPOSITIVA 5: El Momento Crítico (9 segundos) ---
 1. Propósito Didáctico: El Momento Crítico
 2. Título en Pantalla (64 pt): Criterio de decisión
 3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Consolidación guiada de destrezas para Lengua y Literatura
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Práctica avanzada y modelamiento de OA 3 (Parte 1) con total precisión metodológica."
 
---- DIAPOSITIVA 6: La Antesala de la Pregunta (9 seg aprox) ---
+--- DIAPOSITIVA 6: La Antesala de la Pregunta (9 segundos) ---
 1. Propósito Didáctico: La Antesala de la Pregunta
 2. Título en Pantalla (64 pt): El dilema central
 3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Práctica avanzada y modelamiento de OA 3 (Parte 1)?
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Tension dramatica: Conflicto entre fuerzas del relato
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje."
 
---- DIAPOSITIVA 7: La Pregunta Detonante (9 seg aprox) ---
+--- DIAPOSITIVA 7: La Pregunta Detonante (9 segundos) ---
 1. Propósito Didáctico: La Pregunta Detonante
 2. Título en Pantalla (64 pt): Pregunta detonante
 3. Subtítulo en Pantalla (36 pt): Regla y método de Práctica avanzada y modelamiento de OA 3 (Parte 1)
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta detonante: ¿Cual es el motor de la historia en Práctica avanzada y modelamiento de OA 3 (Parte 1)?
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!"
 
 ================================================================================
@@ -1442,60 +1504,67 @@ Titulo: Video Explicativo: Formalización de Práctica avanzada y modelamiento d
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
+--- DIAPOSITIVA 1: Objetivo de la Lección (12 segundos) ---
 1. Propósito Didáctico: Objetivo de la Lección
 2. Título en Pantalla (64 pt): Objetivo de la lección
 3. Subtítulo en Pantalla (36 pt): Dominar Práctica avanzada y modelamiento de OA 3 (Parte 1): Consolidación guiada de destrezas para Lengua y Literatura
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Consolidación guiada de destrezas para Lengua y Literatura. High clarity, negative space for text. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 3 · Práctica avanzada y modelamiento de OA 3 (Parte 1)
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El objetivo de hoy es aprender a consolidación guiada de destrezas para lengua y literatura, aplicando el método disciplinar paso a paso con total rigor y claridad."
 
---- DIAPOSITIVA 2: Definición del Concepto Central (12 seg aprox) ---
+--- DIAPOSITIVA 2: Definición del Concepto Central (12 segundos) ---
 1. Propósito Didáctico: Definición del Concepto Central
 2. Título en Pantalla (64 pt): Concepto fundamental
 3. Subtítulo en Pantalla (36 pt): Consolidación guiada de destrezas para Lengua y Literatura
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Concepto disciplinar: Consolidación guiada de destrezas para Lengua y Literatura
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Para comprender Práctica avanzada y modelamiento de OA 3 (Parte 1), establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación."
 
---- DIAPOSITIVA 3: Demostración Modelada (12 seg aprox) ---
+--- DIAPOSITIVA 3: Demostración Modelada (12 segundos) ---
 1. Propósito Didáctico: Demostración Modelada
 2. Título en Pantalla (64 pt): Modelamiento paso a paso
 3. Subtítulo en Pantalla (36 pt): Procedimiento de Práctica avanzada y modelamiento de OA 3 (Parte 1)
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Fragmento textual visible con marcas de evidencia literal e inferencias
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Observa cómo se aplica el procedimiento en este caso guiado: cada transformación responde a una justificación disciplinar explícita y visible."
 
---- DIAPOSITIVA 4: Prevención del Error Frecuente (13 seg aprox) ---
+--- DIAPOSITIVA 4: Prevención del Error Frecuente (13 segundos) ---
 1. Propósito Didáctico: Prevención del Error Frecuente
 2. Título en Pantalla (64 pt): Atención: Error habitual
 3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Contraste analitico: distincion de elementos narrativos clave
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Un error frecuente ocurre al descuidar el orden o saltarse un paso de la convención establecida. Siempre comprobamos cada dato antes de continuar."
 
---- DIAPOSITIVA 5: Comprobación del Resultado (12 seg aprox) ---
+--- DIAPOSITIVA 5: Comprobación del Resultado (12 segundos) ---
 1. Propósito Didáctico: Comprobación del Resultado
 2. Título en Pantalla (64 pt): Validación del resultado
 3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo de respuesta justificada con citas y evidencia textual
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Al contrastar el resultado con la situación inicial, confirmamos que la solución es consistente, rigurosa y responde plenamente a la pregunta."
 
---- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 seg aprox) ---
+--- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 segundos) ---
 1. Propósito Didáctico: Estrategia Mnemotécnica
 2. Título en Pantalla (64 pt): Estrategia de pensamiento
 3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Estrategia de lectura: Localizar, interpretar y fundamentar
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Recuerda siempre la estrategia en tres pasos: identificar la información clave, aplicar la regla en orden y comprobar el resultado final."
 
---- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 seg aprox) ---
+--- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 segundos) ---
 1. Propósito Didáctico: Síntesis y Regla de Oro
 2. Título en Pantalla (64 pt): Regla de Oro: Práctica avanzada y modelamiento de OA 3 (Parte 1)
 3. Subtítulo en Pantalla (36 pt): Método disciplinar validado
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Infografía de síntesis: Regla de lectura de Práctica avanzada y modelamiento de OA 3 (Parte 1)
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Ahora que dominas la regla fundamental y el procedimiento de Práctica avanzada y modelamiento de OA 3 (Parte 1), ¡vamos a demostrarlo en las actividades interactivas de la plataforma!"
 
 ================================================================================
@@ -1668,13 +1737,13 @@ Refuerzo 1 (Recuperación de Lengua y Literatura: Práctica avanzada y modelamie
 • Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Lengua y Literatura."
 
 
-
 ################################################################################
-### CLASE 6 DE 6: INTERPRETACIÓN GLOBAL, VISIÓN DE MUNDO Y SÍNTESIS
+CLASE 6 DE 6: INTERPRETACIÓN GLOBAL, VISIÓN DE MUNDO Y SÍNTESIS
 ################################################################################
 
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 08-10-2026, 5:52:12 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -1689,13 +1758,13 @@ DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
 2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
 3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
 4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
-5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
-   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
-   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
-   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
-6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
-7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
-8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
+5. Duraciones Planificadas de Producción Audiovisual:
+   • Video Gancho: 60 segundos de duración planificada distribuidos en 7 diapositivas.
+   • Video Explicativo: 90 segundos de duración planificada distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt, maximo 8 palabras); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt, maximo 8 palabras). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes.
+7. Logotipo Oficial: Codex/Work incorpora el logo blanco de EstudioSimple en la esquina inferior derecha del PPTX al tamano del video de referencia. No pedir a la IA que dibuje el logo dentro de la imagen; dejar espacio negativo.
+8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. No se exige medir con cronómetro, contar palabras ni reexportar por unos segundos adicionales.
 
 ================================================================================
 MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
@@ -1708,60 +1777,67 @@ Titulo: Video Motivacional: El Desafío de Interpretación global, visión de mu
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Apertura y Contexto (9 seg aprox) ---
+--- DIAPOSITIVA 1: Apertura y Contexto (9 segundos) ---
 1. Propósito Didáctico: Apertura y Contexto
 2. Título en Pantalla (64 pt): Misión 6: Interpretación global, visión de mundo y síntesis
 3. Subtítulo en Pantalla (36 pt): Exploración inicial en Lengua y Literatura
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Interpretación global, visión de mundo y síntesis (Lengua y Literatura). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Mapa Visual: Situacion narrativa inicial de Interpretación global, visión de mundo y síntesis
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Comienza una nueva expedición de aprendizaje en Lengua y Literatura. Nuestros dos exploradores analizan el desafío de Interpretación global, visión de mundo y síntesis para descubrir sus secretos."
 
---- DIAPOSITIVA 2: Presentación del Escenario (9 seg aprox) ---
+--- DIAPOSITIVA 2: Presentación del Escenario (9 segundos) ---
 1. Propósito Didáctico: Presentación del Escenario
 2. Título en Pantalla (64 pt): Punto de partida
 3. Subtítulo en Pantalla (36 pt): Mensaje implícito, dilemas humanos y ensayo tipo MINEDUC
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Mensaje implícito, dilemas humanos y ensayo tipo MINEDUC. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Mensaje implícito, dilemas humanos y ensayo tipo MINEDUC
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Al observar los datos sobre Mensaje implícito, dilemas humanos y ensayo tipo MINEDUC, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor."
 
---- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 seg aprox) ---
+--- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 segundos) ---
 1. Propósito Didáctico: Aparición del Conflicto / Misterio
 2. Título en Pantalla (64 pt): El enigma disciplinar
 3. Subtítulo en Pantalla (36 pt): Desafío en Interpretación global, visión de mundo y síntesis
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Mensaje implícito, dilemas humanos y ensayo tipo MINEDUC
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Surge un reto concreto sobre Interpretación global, visión de mundo y síntesis: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso."
 
---- DIAPOSITIVA 4: Exploración de Pistas (9 seg aprox) ---
+--- DIAPOSITIVA 4: Exploración de Pistas (9 segundos) ---
 1. Propósito Didáctico: Exploración de Pistas
 2. Título en Pantalla (64 pt): Análisis de evidencias
 3. Subtítulo en Pantalla (36 pt): Mensaje implícito, dilemas humanos y ensayo tipo MINEDUC
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Mensaje implícito, dilemas humanos y ensayo tipo MINEDUC
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Ambos comparan las pistas disponibles sobre Mensaje implícito, dilemas humanos y ensayo tipo MINEDUC. Cada dato confirma cómo interactúan los elementos clave de la situación."
 
---- DIAPOSITIVA 5: El Momento Crítico (9 seg aprox) ---
+--- DIAPOSITIVA 5: El Momento Crítico (9 segundos) ---
 1. Propósito Didáctico: El Momento Crítico
 2. Título en Pantalla (64 pt): Criterio de decisión
 3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Mensaje implícito, dilemas humanos y ensayo tipo MINEDUC
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Interpretación global, visión de mundo y síntesis con total precisión metodológica."
 
---- DIAPOSITIVA 6: La Antesala de la Pregunta (9 seg aprox) ---
+--- DIAPOSITIVA 6: La Antesala de la Pregunta (9 segundos) ---
 1. Propósito Didáctico: La Antesala de la Pregunta
 2. Título en Pantalla (64 pt): El dilema central
 3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Interpretación global, visión de mundo y síntesis?
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Tension dramatica: Conflicto entre fuerzas del relato
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje."
 
---- DIAPOSITIVA 7: La Pregunta Detonante (9 seg aprox) ---
+--- DIAPOSITIVA 7: La Pregunta Detonante (9 segundos) ---
 1. Propósito Didáctico: La Pregunta Detonante
 2. Título en Pantalla (64 pt): Pregunta detonante
 3. Subtítulo en Pantalla (36 pt): Regla y método de Interpretación global, visión de mundo y síntesis
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta detonante: ¿Cual es el motor de la historia en Interpretación global, visión de mundo y síntesis?
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!"
 
 ================================================================================
@@ -1775,60 +1851,67 @@ Titulo: Video Explicativo: Formalización de Interpretación global, visión de 
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
+--- DIAPOSITIVA 1: Objetivo de la Lección (12 segundos) ---
 1. Propósito Didáctico: Objetivo de la Lección
 2. Título en Pantalla (64 pt): Objetivo de la lección
 3. Subtítulo en Pantalla (36 pt): Dominar Interpretación global, visión de mundo y síntesis: Mensaje implícito, dilemas humanos y ensayo tipo MINEDUC
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Mensaje implícito, dilemas humanos y ensayo tipo MINEDUC. High clarity, negative space for text. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 3 · Interpretación global, visión de mundo y síntesis
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El objetivo de hoy es aprender a mensaje implícito, dilemas humanos y ensayo tipo mineduc, aplicando el método disciplinar paso a paso con total rigor y claridad."
 
---- DIAPOSITIVA 2: Definición del Concepto Central (12 seg aprox) ---
+--- DIAPOSITIVA 2: Definición del Concepto Central (12 segundos) ---
 1. Propósito Didáctico: Definición del Concepto Central
 2. Título en Pantalla (64 pt): Concepto fundamental
 3. Subtítulo en Pantalla (36 pt): Mensaje implícito, dilemas humanos y ensayo tipo MINEDUC
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Concepto disciplinar: Mensaje implícito, dilemas humanos y ensayo tipo MINEDUC
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Para comprender Interpretación global, visión de mundo y síntesis, establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación."
 
---- DIAPOSITIVA 3: Demostración Modelada (12 seg aprox) ---
+--- DIAPOSITIVA 3: Demostración Modelada (12 segundos) ---
 1. Propósito Didáctico: Demostración Modelada
 2. Título en Pantalla (64 pt): Modelamiento paso a paso
 3. Subtítulo en Pantalla (36 pt): Procedimiento de Interpretación global, visión de mundo y síntesis
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Fragmento textual visible con marcas de evidencia literal e inferencias
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Observa cómo se aplica el procedimiento en este caso guiado: cada transformación responde a una justificación disciplinar explícita y visible."
 
---- DIAPOSITIVA 4: Prevención del Error Frecuente (13 seg aprox) ---
+--- DIAPOSITIVA 4: Prevención del Error Frecuente (13 segundos) ---
 1. Propósito Didáctico: Prevención del Error Frecuente
 2. Título en Pantalla (64 pt): Atención: Error habitual
 3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Contraste analitico: distincion de elementos narrativos clave
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Un error frecuente ocurre al descuidar el orden o saltarse un paso de la convención establecida. Siempre comprobamos cada dato antes de continuar."
 
---- DIAPOSITIVA 5: Comprobación del Resultado (12 seg aprox) ---
+--- DIAPOSITIVA 5: Comprobación del Resultado (12 segundos) ---
 1. Propósito Didáctico: Comprobación del Resultado
 2. Título en Pantalla (64 pt): Validación del resultado
 3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo de respuesta justificada con citas y evidencia textual
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Al contrastar el resultado con la situación inicial, confirmamos que la solución es consistente, rigurosa y responde plenamente a la pregunta."
 
---- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 seg aprox) ---
+--- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 segundos) ---
 1. Propósito Didáctico: Estrategia Mnemotécnica
 2. Título en Pantalla (64 pt): Estrategia de pensamiento
 3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Estrategia de lectura: Localizar, interpretar y fundamentar
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Recuerda siempre la estrategia en tres pasos: identificar la información clave, aplicar la regla en orden y comprobar el resultado final."
 
---- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 seg aprox) ---
+--- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 segundos) ---
 1. Propósito Didáctico: Síntesis y Regla de Oro
 2. Título en Pantalla (64 pt): Regla de Oro: Interpretación global, visión de mundo y síntesis
 3. Subtítulo en Pantalla (36 pt): Método disciplinar validado
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Infografía de síntesis: Regla de lectura de Interpretación global, visión de mundo y síntesis
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Ahora que dominas la regla fundamental y el procedimiento de Interpretación global, visión de mundo y síntesis, ¡vamos a demostrarlo en las actividades interactivas de la plataforma!"
 
 ================================================================================

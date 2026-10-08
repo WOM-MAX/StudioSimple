@@ -1,24 +1,26 @@
 ================================================================================
-STUDIOSIMPLE - PAQUETE DE PROMPTS Y GUIONES OFICIALES PARA CHATGPT WORK
-ASIGNATURA: INGLÉS
-CURSO: 7° BASICO | OBJETIVO: OA 9 (Demostrar comprensión de ideas generales e información explícita en textos adaptados y auténticos simples, en formato impreso o digital, acerca de temas variados (como experiencias personales, temas de otras asignaturas, del contexto inmediato, de actualidad e interés global o de otras culturas) y que contienen las funciones del año.)
-TOTAL DE CLASES: 6 LECCIONES (14 DIAPOSITIVAS POR CLASE = 84 LAMINAS TOTALES)
+STUDIOSIMPLE - PAQUETE COMPLETO DE PROMPTS Y GUIONES MAESTROS
+CURSO: 7° BASICO | ASIGNATURA: INGLÉS | OA: 110-7-ING-OA09
+ARCHIVO: Prompts_Work_Ingles_7B_OA09_2026-10-08_17-52.txt
+TOTAL DE CLASES: 6 CLASES CANONICAS BIMODALES (14 LAMINAS CADA UNA = 84 LAMINAS TOTALES)
 FORMATO: 7 DIAPOSITIVAS VIDEO GANCHO (60s) + 7 DIAPOSITIVAS VIDEO EXPLICATIVO (90s)
+FECHA Y HORA DE ACTUALIZACION: 2026-10-08 17:52:12 [America/Santiago]
+DESTINATARIO: CHATGPT WORK / CODEX (MAQUETACION PPTX 16:9 EN PYTHON)
 ================================================================================
 
-
 ################################################################################
-### CLASE 1 DE 6: SETTING AND CHARACTERS IN SHORT STORIES
+CLASE 1 DE 6: SETTING AND CHARACTERS IN SHORT STORIES
 ################################################################################
 
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 08-10-2026, 5:52:12 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
-• Asignatura: Inglés
+• Asignatura: Idioma Extranjero Inglés
 • Nivel / Curso: 7° Básico
-• Objetivo de Aprendizaje: OA 9 - Comprensión de lectura
+• Objetivo de Aprendizaje: OA 9 - Comprensión lectora de textos narrativos breves en inglés
 • Clase: 1 de 6 ("Setting and Characters in Short Stories")
 • Duracion Estimada: 30 Minutos
 
@@ -27,13 +29,13 @@ DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
 2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
 3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
 4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
-5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
-   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
-   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
-   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
-6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
-7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
-8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
+5. Duraciones Planificadas de Producción Audiovisual:
+   • Video Gancho: 60 segundos de duración planificada distribuidos en 7 diapositivas.
+   • Video Explicativo: 90 segundos de duración planificada distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt, maximo 8 palabras); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt, maximo 8 palabras). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes.
+7. Logotipo Oficial: Codex/Work incorpora el logo blanco de EstudioSimple en la esquina inferior derecha del PPTX al tamano del video de referencia. No pedir a la IA que dibuje el logo dentro de la imagen; dejar espacio negativo.
+8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. No se exige medir con cronómetro, contar palabras ni reexportar por unos segundos adicionales.
 
 ================================================================================
 MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
@@ -41,65 +43,78 @@ MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
 
 Titulo: The Narrative Mountain: Story Arc & Time Connectors
 • DILE ANTES DEL VIDEO: "En los relatos en inglés, toda narración sigue una montaña de tensión dramática estructurada con conectores de tiempo clave."
-• INSTRUCCION AL ESTUDIANTE: "Observa y reflexiona con las escenas del desafío visual."
-• DILE DESPUES DEL VIDEO: "Conversemos sobre el organizador. Te haré dos preguntas sobre los conectores y elementos que vimos en inglés."
+• INSTRUCCION AL ESTUDIANTE: "Haz clic en cada uno de los 5 pasos de la montaña narrativa en la pantalla y escucha o lee los ejemplos en inglés."
+• DILE DESPUES DEL VIDEO: "Conversemos sobre el organizador. Te haré dos preguntas en español sobre los conectores y elementos que vimos en inglés."
+• Puntos de foco visual al observar:
+  1. Step 1: Beginning (Introduction) -> Conector: First / In the beginning (Presenta personajes y lugar).
+  2. Step 2: Rising Action -> Conector: Then / Next / Suddenly (Aparece el problema o desafío).
+  3. Step 3: Climax (Peak Tension) -> Conector: At that moment / Just then (El momento más emocionante y peligroso).
+  4. Step 4: Falling Action -> Conector: After that / Later on (La tensión baja y se busca la solución).
+  5. Step 5: Resolution (Ending) -> Conector: Finally / In the end (Se resuelve el conflicto y concluye la historia).
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Opening and Setting (10 seg aprox) ---
+--- DIAPOSITIVA 1: Opening and Setting (10 segundos) ---
 1. Propósito Didáctico: Opening and Setting
 2. Título en Pantalla (64 pt): Mission 1: The Mountain Cabin
 3. Subtítulo en Pantalla (36 pt): Reading our first adventure story
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a cozy wooden cabin in a sunny mountain forest. Warm inviting atmosphere, negative space in top third. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Narrative context: Leo and Sophia exploring an old wooden cabin in the woods
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Welcome to English class. Today we will read an engaging short story about two young explorers discovering an ancient mystery cabin in the mountains."
 
---- DIAPOSITIVA 2: Identifying Characters (9 seg aprox) ---
+--- DIAPOSITIVA 2: Identifying Characters (9 segundos) ---
 1. Propósito Didáctico: Identifying Characters
 2. Título en Pantalla (64 pt): Who is in the story?
 3. Subtítulo en Pantalla (36 pt): Leo and his brave sister Sophia
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy and girl examining an explorer backpack with notebook, magnifying glass and compass. Clean lineart, bright morning lighting. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Character tags: Subject = 'Leo and his sister' (The protagonists)
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "First, look closely at the characters. Leo and his sister Sophia are thirteen years old and love finding ancient historical artifacts."
 
---- DIAPOSITIVA 3: Spotting the Setting (9 seg aprox) ---
+--- DIAPOSITIVA 3: Spotting the Setting (9 segundos) ---
 1. Propósito Didáctico: Spotting the Setting
 2. Título en Pantalla (64 pt): Where does it happen?
 3. Subtítulo en Pantalla (36 pt): A quiet green valley near the lake
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide scenic view of the lush green mountain valley with a sparkling river and tall pine trees under a clear blue sky. High clarity. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Setting labels: Location = 'in a quiet valley' | Time = 'one summer morning'
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Next, we observe the setting. The events take place in a quiet valley surrounded by tall pine trees on a sunny morning."
 
---- DIAPOSITIVA 4: The Action Begins (9 seg aprox) ---
+--- DIAPOSITIVA 4: The Action Begins (9 segundos) ---
 1. Propósito Didáctico: The Action Begins
 2. Título en Pantalla (64 pt): Action verbs in past
 3. Subtítulo en Pantalla (36 pt): They walked, opened and discovered
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two companions walking along a stone path and opening the creaky wooden door of the cabin with curiosity and teamwork. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Past Simple verbs: walk -> walked | open -> opened | find -> found
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "The narrative describes their actions using past simple verbs: they walked through the trees and opened an old wooden chest."
 
---- DIAPOSITIVA 5: The Mystery Clue (9 seg aprox) ---
+--- DIAPOSITIVA 5: The Mystery Clue (9 segundos) ---
 1. Propósito Didáctico: The Mystery Clue
 2. Título en Pantalla (64 pt): The secret map
 3. Subtítulo en Pantalla (36 pt): A strange message on yellow paper
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two explorers holding an aged rolled parchment showing a compass rose and an intriguing hand-drawn trail map. Golden dust particles. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Visual evidence: Ancient parchment with compass rose and handwritten clue
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Inside the chest, Sophia finds an old handwritten map with a secret message that points toward a forgotten hidden waterfall."
 
---- DIAPOSITIVA 6: Connecting the Sequence (9 seg aprox) ---
+--- DIAPOSITIVA 6: Connecting the Sequence (9 segundos) ---
 1. Propósito Didáctico: Connecting the Sequence
 2. Título en Pantalla (64 pt): Connecting the sequence
 3. Subtítulo en Pantalla (36 pt): First, Then, After that, Finally
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant chronological banner showing sequential comic panels of the story connected by glowing arrows. Crisp clean layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Timeline connectors: First -> Then -> Next -> Finally
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "To follow any good narrative, we use time sequence connectors to understand what happens in the beginning, middle, and end."
 
---- DIAPOSITIVA 7: Trigger Question (10 seg aprox) ---
+--- DIAPOSITIVA 7: Trigger Question (10 segundos) ---
 1. Propósito Didáctico: Trigger Question
 2. Título en Pantalla (64 pt): The narrative challenge
 3. Subtítulo en Pantalla (36 pt): How do we write story sentences?
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist clean composition showing StudioSimple emblem, the two explorers smiling with their English notebooks open, ready to write. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Detonating question: What is the golden sentence formula to describe narrative events in English?
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Here is our trigger question: what formula allows us to write clear English sentences describing characters, actions and settings in the past?"
 
 ================================================================================
@@ -107,66 +122,73 @@ MODULO 2: PROMPT VIDEO EXPLICATIVO CONCEPTUAL (PASO 4 - 7 DIAPOSITIVAS)
 ================================================================================
 
 Titulo: Model Sentence Pattern: Beginning a Story in English
-• Idea Clave: "Pattern: 'First, [Character] lived/worked in [Setting].' Example: 'First, two brave explorers traveled across the desert.'"
+• Idea Clave: "Pattern: "First, [Character] lived/worked in [Setting]." Example: "First, two brave explorers traveled across the desert.""
 • DILE ANTES DEL VIDEO: "Revisemos la estructura formal para iniciar una historia en inglés con conector, personaje, verbo en pasado y lugar."
-• INSTRUCCION: "Revisemos la explicación formal y la idea clave."
+• INSTRUCCION: "Observa la fórmula en pantalla: Time Connector + Subject (Character) + Verb (Past) + Setting (Place/Time)."
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Lesson Objective (10 seg aprox) ---
+--- DIAPOSITIVA 1: Lesson Objective (10 segundos) ---
 1. Propósito Didáctico: Lesson Objective
 2. Título en Pantalla (64 pt): Lesson Objective
 3. Subtítulo en Pantalla (36 pt): Master the Narrative Sentence Formula in English
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The boy and girl standing before a clear formula board: 'Time Connector + Subject (Character) + Past Verb + Setting'. Modern typography. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Formal heading: OA 09 · Narrative Reading Comprehension & Past Simple Sentences
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Today our main objective is to learn the universal narrative sentence formula in English to describe characters, actions, and settings with precision."
 
---- DIAPOSITIVA 2: The 4-Part Formula (11 seg aprox) ---
+--- DIAPOSITIVA 2: The 4-Part Formula (11 segundos) ---
 1. Propósito Didáctico: The 4-Part Formula
 2. Título en Pantalla (64 pt): The 4-Part Formula
 3. Subtítulo en Pantalla (36 pt): Connector + Subject + Past Verb + Setting
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Four distinct color-coded modular blocks floating on an interactive board: Orange (Connector), Blue (Subject), Green (Verb), Purple (Setting). High contrast. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Color-coded formula: [Orange: Time Word,] + [Blue: Character] + [Green: Past Verb] + [Purple: Place Phrase]
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Every narrative sentence in English follows a clean four-part structure: time connector with comma, followed by the subject, the past verb, and the setting phrase."
 
---- DIAPOSITIVA 3: Time Connectors (11 seg aprox) ---
+--- DIAPOSITIVA 3: Time Connectors (11 segundos) ---
 1. Propósito Didáctico: Time Connectors
 2. Título en Pantalla (64 pt): Step 1: Time Connectors
 3. Subtítulo en Pantalla (36 pt): First, Then, After that, Finally,
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl highlighting 'First,' with a glowing comma on the digital board. Callout: 'Always add a comma after First'. Crisp typography. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Linguistic rule: Always place a comma immediately after an introductory time connector
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Always place a comma after your introductory time word. Words like First, Then, and Finally tell the reader exactly where we are in the chronology."
 
---- DIAPOSITIVA 4: Past Regular Verbs (11 seg aprox) ---
+--- DIAPOSITIVA 4: Past Regular Verbs (11 segundos) ---
 1. Propósito Didáctico: Past Regular Verbs
 2. Título en Pantalla (64 pt): Step 2: Action in the Past
 3. Subtítulo en Pantalla (36 pt): Add -ed to regular verbs (lived, walked, explored)
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Glowing linguistic breakdown showing the verb 'live' adding '-ed' to become 'lived', and 'travel' becoming 'traveled'. Sharp clarity. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Morphology box: live + d = lived | walk + ed = walked | discover + ed = discovered
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Because the events already occurred, regular action verbs take the -ed ending. For example: Leo walked in the forest, and Sophia opened the door."
 
---- DIAPOSITIVA 5: Setting and Place (10 seg aprox) ---
+--- DIAPOSITIVA 5: Setting and Place (10 segundos) ---
 1. Propósito Didáctico: Setting and Place
 2. Título en Pantalla (64 pt): Step 3: Setting the Scene
 3. Subtítulo en Pantalla (36 pt): Prepositional phrases: in the cabin, by the lake
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy holding up cards with prepositional phrases: 'in the quiet cabin', 'near the mountain lake', 'under the stars'. Vibrant visuals. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Location builders: [in + noun] | [near + noun] | [under + noun]
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Finish your sentence with a clear place description using prepositions like in, near, or by. This allows the reader to picture the exact environment."
 
---- DIAPOSITIVA 6: Common Mistake to Avoid (12 seg aprox) ---
+--- DIAPOSITIVA 6: Common Mistake to Avoid (12 segundos) ---
 1. Propósito Didáctico: Common Mistake to Avoid
 2. Título en Pantalla (64 pt): Common Mistake to Avoid
 3. Subtítulo en Pantalla (36 pt): Never forget the comma after the time connector
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Contrast graphic: An incorrect sentence missing comma with subtle red outline; The corrected sentence glowing in vibrant teal. Clean infographic. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Visual contrast: [Red: First Leo lived...] vs [Teal: First, Leo lived... with checkmark]
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "A common mistake among beginners is forgetting the comma after First or Then, or forgetting to conjugate the verb into the past simple. Always check both."
 
---- DIAPOSITIVA 7: The Golden Narrative Rule (11 seg aprox) ---
+--- DIAPOSITIVA 7: The Golden Narrative Rule (11 segundos) ---
 1. Propósito Didáctico: The Golden Narrative Rule
 2. Título en Pantalla (64 pt): The Golden Narrative Rule
 3. Subtítulo en Pantalla (36 pt): Time, + Who + Did + Where = Clear English Story
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem with an elegant golden banner displaying the complete modeled sentence: 'First, Leo and Sophia explored the ancient cabin.' Inspiring atmosphere. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Summary infography: [First,] + [Leo and Sophia] + [explored] + [the old mountain cabin.]
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Remember the golden rule: Time, subject, past verb, and place give you the perfect narrative sentence. Now let's practice this formula in the interactive platform!"
 
 ================================================================================
@@ -175,94 +197,84 @@ MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
 
 [PREPARACION DEL ADULTO / MENTOR]
 • Objetivo del Adulto: Guiar al estudiante en inglés a identificar los personajes (characters), el lugar y tiempo (setting) y el conector inicial (First / In the beginning) en oraciones narrativas breves.
-• Ruta de Hoy: Identificar personajes (characters), ambientación (setting) y conector inicial (First) en textos narrativos en inglés
+• Ruta de Hoy: Narrative Story Arc: Paso 1 (Beginning / Introduction) y conectores de tiempo en inglés.
 • Recordatorios Pedagogicos del Mentor:
-  1. Sigue el orden indicado.
-  2. Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.
-  3. No leas los recuadros SOLO PARA TI ni AYUDA DE LECTURA.
-  4. Haz cada pregunta y espera la respuesta antes de seleccionar una opción.
-  5. Considera correcta una respuesta si expresa la idea matemática, aunque use palabras distintas.
-  6. Si el estudiante necesita apoyo, usa únicamente la ayuda que aparecerá.
-  7. Si propone otra explicación o no está de acuerdo, escúchalo completo y valora su razonamiento antes de guiarlo.
-• Clima Emocional y Acogida: "Crea un ambiente de confianza en inglés: 'No tengas miedo a equivocarte al pronunciar. En inglés cada intento suma vocabulario y seguridad'."
+  1. Tú guías en español con los recuadros DILE y PREGÚNTALE.
+  2. El estudiante lee y pronuncia las frases en inglés en voz alta.
+  3. No te preocupes si su pronunciación no es perfecta; lo esencial es que comprenda el significado.
+  4. Pídele que observe el gráfico interactivo de la montaña narrativa (Story Arc) en la pantalla.
+  5. Ten a mano su cuaderno de inglés para anotar las oraciones con conectores.
+• Clima Emocional y Acogida: "Crea un ambiente de confianza en inglés: "No tengas miedo a equivocarte al pronunciar. En inglés cada intento suma vocabulario y seguridad"."
 
 --------------------------------------------------------------------------------
 [PASO 1: INICIO (4 SUB-ETAPAS CANONICAS)]
 --------------------------------------------------------------------------------
 Sub-etapa 1: Nuestra Ruta de la Asignatura
-• DILE AL ESTUDIANTE (Apertura de la ruta): "Hoy comenzaremos la clase 1 de Inglés: "Setting and Characters in Short Stories"."
+• DILE AL ESTUDIANTE (Apertura de la ruta): "Hoy comenzaremos la primera clase de Inglés para 7° Básico: "Setting and Characters in Short Stories"."
 • 4 Bloques Tematicos de la Asignatura:
-  Bloque 01: Inglés (Setting and Characters in Short Stories)
-  Bloque 02: Exploración (Gancho y Recorrido Guiado)
-  Bloque 03: Práctica (Aplicación en situaciones reales)
-  Bloque 04: Evaluación (Miniquiz formativo y síntesis)
+  Bloque 01: English Session (Setting and Characters)
+  Bloque 02: Story Arc (5 Narrative Steps & Connectors)
+  Bloque 03: Notebook Practice (Writing sentences with "First")
+  Bloque 04: Evaluation (Miniquiz formativo y síntesis)
 
 Sub-etapa 2: La Clase de Hoy
-• DILE AL ESTUDIANTE (Foco didactico): "Identificar personajes (characters), ambientación (setting) y conector inicial (First) en textos narrativos en inglés"
+• DILE AL ESTUDIANTE (Foco didactico): "Aprenderemos a reconocer quiénes son los personajes, dónde se ambienta la historia y qué conector en inglés se utiliza para abrir el relato."
 • 3 Tarjetas de Foco de la Pantalla del Estudiante:
-  Tarjeta 1: Exploración inicial -> Setting and Characters in Short Stories
-  Tarjeta 2: Idea clave -> Pattern: 'First, [Character] lived/worked in [Setting].' Exa
-  Tarjeta 3: Práctica y aplicación -> Resolución guiada paso a paso
+  Tarjeta 1: ¿Qué es el "Setting"? -> El lugar (where) y momento (when) donde ocurre la historia.
+  Tarjeta 2: ¿Qué conector usamos al inicio? -> Usamos "First" o "In the beginning" (Primero / Al comienzo).
 
 Sub-etapa 3: Situacion Inicial de Exploracion (Detonante)
-• DILE AL ESTUDIANTE (Situacion detonante): "Hoy en nuestra sesión de English exploramos 'Setting and Characters in Short Stories'. En la pantalla del estudiante se muestra el organizador de la montaña narrativa. Observa el Paso 1: 'Beginning (Introduction)' y lee en voz alta la oración de ejemplo: 'First, Leo and his sister lived in a quiet town near the mountains.' ¿Quiénes son los personajes de la historia y en qué lugar viven?"
-• RESPUESTA ESPERADA: Characters: Leo and his sister. Setting: a quiet town near the mountains (comenzando con 'First').
-• PISTA SOCRATICA (SOLO PARA TI): "Fíjate en las palabras en inglés: 'Leo and his sister' indica quiénes son, y 'quiet town near the mountains' describe el pueblo y las montañas."
-• CLIMA EMOCIONAL: "Crea un ambiente de confianza en inglés: 'No tengas miedo a equivocarte al pronunciar. En inglés cada intento suma vocabulario y seguridad'."
+• DILE AL ESTUDIANTE (Situacion detonante): "Hoy en nuestra sesión de English exploramos "Setting and Characters in Short Stories". En la pantalla del estudiante se muestra el organizador de la montaña narrativa. Observa el Paso 1: "Beginning (Introduction)" y lee en voz alta la oración de ejemplo: "First, Leo and his sister lived in a quiet town near the mountains." ¿Quiénes son los personajes de la historia y en qué lugar (setting) viven?"
+• RESPUESTA ESPERADA: El estudiante debe responder (en español o inglés) que los personajes son Leo y su hermana ("Leo and his sister") y el lugar es un pueblo tranquilo cerca de las montañas ("a quiet town near the mountains"), comenzando con el conector "First" (primero).
+• PISTA SOCRATICA (SOLO PARA TI): "Fíjate en las palabras en inglés: "Leo and his sister" indica quiénes son, y "quiet town near the mountains" describe el pueblo y las montañas. La primera palabra "First" significa "Primero"."
+• CLIMA EMOCIONAL: "Felicita su lectura en voz alta. Si duda con alguna palabra, léesela tú con calma para que la repita."
 • Pautas de Evaluacion Formativa del Mentor:
-  - [Acierto] Respondió correctamente: Characters: Leo and his sister. Setting: a quiet town near the mountains (com... -> Feedback: "¡Exacto! Comprendió la idea central esperada."
-  - [Requiere Apoyo] Necesita apoyo o dio otra respuesta -> Feedback: "Fíjate en las palabras en inglés: 'Leo and his sister' indica quiénes son, y 'quiet town near the mountains' describe el pueblo y las montañas."
+  - [Acierto] Identificó a Leo y su hermana y el pueblo cerca de las montañas usando First -> Feedback: "¡Exacto! "Characters" son Leo y su hermana, y "Setting" es el pueblo tranquilo en las montañas, introducido por "First"."
+  - [Requiere Apoyo] Mencionó solo a Leo o solo las montañas, sin relacionar los personajes con el lugar -> Feedback: "Fíjate bien en la oración completa: "Leo and his sister" son ambos personajes, y "a quiet town near the mountains" es el lugar."
+  - [Requiere Apoyo] No comprende la frase en inglés o dio otra respuesta -> Feedback: "Pista guiada: Traduzcamos juntos: "First" (Primero), "Leo and his sister" (Leo y su hermana), "lived in a quiet town" (vivían en un pueblo tranquilo)."
 
 Sub-etapa 4: Comprendamos la Respuesta (Punto de Referencia)
-• DILE AL ESTUDIANTE (Formalizacion de referencia): "Who are the characters and what is the setting in this story?"
-• PREGUNTALE AL ESTUDIANTE: "Who are the characters and what is the setting in this story?"
-• RESPUESTA ESPERADA: Characters: Leo and his sister. Setting: a quiet town near the mountains (comenzando con 'First').
-• PISTA SOCRATICA: "Fíjate en las palabras en inglés: 'Leo and his sister' indica quiénes son, y 'quiet town near the mountains' describe el pueblo y las montañas."
-• FEEDBACK SI ACIERTA: "Muy bien. Observaste el detalle central con precisión."
-• FEEDBACK SI NECESITA APOYO: "Fíjate en las palabras en inglés: 'Leo and his sister' indica quiénes son, y 'quiet town near the mountains' describe el pueblo y las montañas."
+• DILE AL ESTUDIANTE (Formalizacion de referencia): "En la pantalla interactiva se muestran las 5 etapas: Step 1 Beginning (First), Step 2 Rising (Then), Step 3 Climax (At that moment), Step 4 Falling (After that) y Step 5 Resolution (Finally)."
+• PREGUNTALE AL ESTUDIANTE: "Why do we use connectors like "First", "Then", and "Finally" when telling a story in English? (¿Por qué usamos conectores como First, Then o Finally al contar una historia en inglés?)"
+• RESPUESTA ESPERADA: Porque ordenan la secuencia de los acontecimientos en el tiempo para que el lector entienda qué pasó al principio, qué pasó después y cómo terminó el relato.
+• PISTA SOCRATICA: "Piensa en qué pasaría si cuentas los hechos desordenados sin palabras que indiquen el orden del tiempo: ¿se entendería la historia?"
+• FEEDBACK SI ACIERTA: "¡Excelente comprensión! Los time connectors le dan claridad y fluidez cronológica a la narración."
+• FEEDBACK SI NECESITA APOYO: "Los conectores de tiempo sirven para guiar al lector paso a paso en el orden de los hechos."
 
 --------------------------------------------------------------------------------
 [PASO 3: RECORRIDO - CONVERSACION GUIADA Y PREGUNTAS SOCRATICAS]
 --------------------------------------------------------------------------------
 Item 1 (Characters vs Setting in English):
-• Pregunta Socratica: "En un cuento en inglés leemos: 'The young astronaut landed on Mars in the year 2095.' ¿Cuál es el 'character' (personaje) y cuál es el 'setting' (lugar y tiempo)?"
-• Respuesta Esperada: El character es el joven astronauta ('the young astronaut') y el setting es Marte en el año 2095 ('Mars in the year 2095').
+• Pregunta Socratica: "En un cuento en inglés leemos: "The young astronaut landed on Mars in the year 2095." ¿Cuál es el "character" (personaje) y cuál es el "setting" (lugar y tiempo)?"
+• Respuesta Esperada: El character es el joven astronauta ("the young astronaut") y el setting es Marte en el año 2095 ("Mars in the year 2095").
 • Feedback de Exito: "¡Very good! Identificaste con total exactitud al protagonista y las coordenadas de lugar y tiempo."
 • Pista de Apoyo Socratica: "Busca quién realiza la acción (astronaut) y dónde y cuándo ocurre (Mars, year 2095)."
-• Revelacion: "'Character' responde a 'Who' (quién); 'Setting' responde a 'Where and When' (dónde y cuándo)."
+• Revelacion: ""Character" responde a "Who" (quién); "Setting" responde a "Where and When" (dónde y cuándo)."
 
 Item 2 (Time Connector: First):
-• Pregunta Socratica: "¿Qué función cumple la palabra 'First' o la frase 'In the beginning' al inicio de un párrafo narrativo?"
+• Pregunta Socratica: "¿Qué función cumple la palabra "First" o la frase "In the beginning" al inicio de un párrafo narrativo?"
 • Respuesta Esperada: Indica el punto de partida temporal, señalando qué hecho ocurrió en primer lugar antes de todos los demás.
-• Feedback de Exito: "¡Excelente! 'First' marca el orden cronológico inicial de la historia."
-• Pista de Apoyo Socratica: "Recuerda que First significa 'Primero'. Se usa siempre para abrir la secuencia de acciones."
-• Revelacion: "'First' conecta el inicio del relato con la presentación de la rutina de los personajes."
+• Feedback de Exito: "¡Excelente! "First" marca el orden cronológico inicial de la historia."
+• Pista de Apoyo Socratica: "Recuerda que First significa "Primero". Se usa siempre para abrir la secuencia de acciones."
+• Revelacion: ""First" conecta el inicio del relato con la presentación de la rutina de los personajes."
 
 --------------------------------------------------------------------------------
 [PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
 --------------------------------------------------------------------------------
-• Cierre y Sintesis del Video Explicativo: "Fórmula de apertura: Time Connector ('First,') + Character + Past Verb ('lived in') + Setting ('a quiet town')."
-
-Comprobacion 1 (Characters vs Setting in English):
-• Pregunta: "En un cuento en inglés leemos: 'The young astronaut landed on Mars in the year 2095.' ¿Cuál es el 'character' (personaje) y cuál es el 'setting' (lugar y tiempo)?"
-• Respuesta Esperada: El character es el joven astronauta ('the young astronaut') y el setting es Marte en el año 2095 ('Mars in the year 2095').
-• Pista de Apoyo: "Busca quién realiza la acción (astronaut) y dónde y cuándo ocurre (Mars, year 2095)."
-• Revelacion: "Character: The young astronaut. Setting: Mars in the year 2095."
-
-Comprobacion 2 (Time Connector: First):
-• Pregunta: "¿Qué función cumple la palabra 'First' o la frase 'In the beginning' al inicio de un párrafo narrativo?"
-• Respuesta Esperada: Indica el punto de partida temporal, señalando qué hecho ocurrió en primer lugar antes de todos los demás.
-• Pista de Apoyo: "Recuerda que First significa 'Primero'. Se usa siempre para abrir la secuencia de acciones."
-• Revelacion: "'First' indica el primer hecho que ocurre al comenzar una historia en inglés."
+Comprobacion 1 (Identifying Past Tense Verbs in Context):
+• Pregunta: "En las oraciones "lived in a quiet town" y "traveled across the desert", ¿en qué tiempo verbal están los verbos "lived" y "traveled" y por qué se usan en una narración?"
+• Respuesta Esperada: Están en pasado simple (Past Simple, terminados en -ed), porque narran acontecimientos que ya sucedieron en la historia.
+• Pista de Apoyo: "Fíjate en la terminación -ed de lived y traveled: indican que la acción ya ocurrió antes."
+• Revelacion: "Están en pasado simple (terminación -ed) porque relatan sucesos que ya ocurrieron."
 
 --------------------------------------------------------------------------------
 [PASO 5: PRACTICA EN EL CUADERNO FISICO]
 --------------------------------------------------------------------------------
 Ejercicio 1 (Writing a Story Beginning in English Notebook):
-• Enunciado de Aplicacion: "Abre tu cuaderno de inglés. Escribe el título: 'Story Arc: Step 1 Beginning'. Inventa y escribe 1 oración completa en inglés siguiendo el modelo aprendido: empieza con 'First,', luego nombra un personaje (ej. 'a brave girl', 'a curious dog', 'a clever scientist') y di dónde vivía usando 'lived in...'."
-• Respuesta Esperada: Oración completa en inglés en el cuaderno con la estructura: 'First, [personaje] lived in [lugar].' (Por ejemplo: 'First, a brave girl lived in a magical forest.').
+• Enunciado de Aplicacion: "Abre tu cuaderno de inglés. Escribe el título: "Story Arc: Step 1 Beginning". Inventa y escribe 1 oración completa en inglés siguiendo el modelo aprendido: empieza con "First,", luego nombra un personaje (ej. "a brave girl", "a curious dog", "a clever scientist") y di dónde vivía usando "lived in..."."
+• Respuesta Esperada: Oración completa en inglés en el cuaderno con la estructura: "First, [personaje] lived in [lugar]." (Por ejemplo: "First, a brave girl lived in a magical forest.").
 • Feedback de Exito: "¡Great job in your notebook! Tu oración en inglés está correctamente estructurada con conector, personaje y lugar."
-• Pista de Apoyo Socratica: "Copia este molde y complétalo: 'First, a young detective lived in Santiago.' o 'First, a lonely wizard lived in an old castle.'"
+• Pista de Apoyo Socratica: "Copia este molde y complétalo: "First, a young detective lived in Santiago." o "First, a lonely wizard lived in an old castle.""
 
 Ejercicio 2 (Translating Setting and Characters to Spanish):
 • Enunciado de Aplicacion: "Debajo de tu oración en inglés en el cuaderno, escribe la traducción al español e indica al lado con dos flechas: ¿cuál es el Character (personaje) y cuál es el Setting (lugar)?"
@@ -270,79 +282,79 @@ Ejercicio 2 (Translating Setting and Characters to Spanish):
 • Feedback de Exito: "¡Excelente demostración bilingüe! Comprobaste que comprendes a fondo cada parte de lo que escribiste en inglés."
 • Pista de Apoyo Socratica: "Escribe tu frase en español y encierra en un círculo el nombre del personaje y subraya el lugar donde vive."
 
-Modulo: Comparemos dos situaciones (Comparemos dos situaciones)
-• DILE: "Antes de resumir, comparemos dos situaciones. No necesitas repetir una frase exacta: lo importante es que expliques la idea con tus propias palabras."
-• Pregunta: "Al comparar dos situaciones de Setting and Characters in Short Stories, ¿cómo influye el contexto en la interpretación de los datos?"
-• Respuesta Esperada: El significado o resultado depende de las condiciones del contexto y del propósito de la situación.
-• Feedback si acierta: "¡Excelente razonamiento! Reconociste que el contexto orienta la interpretación de los datos."
-• Feedback si necesita apoyo: "Observa cada situación por separado y explica qué elementos las distinguen."
+Modulo: Comparemos dos situaciones (Comparemos dos oraciones en inglés)
+• DILE: "Antes de cerrar, analicemos dos oraciones con conectores de tiempo en inglés."
+• Pregunta: "Sentence 1: "First, the children packed their bags at home." Sentence 2: "Finally, they arrived at the campsite happy and tired." ¿Por qué "First" corresponde al inicio de la montaña narrativa y "Finally" al desenlace?"
+• Respuesta Esperada: Porque "First" indica la primera acción que da partida al viaje (Step 1 Beginning), mientras que "Finally" indica el resultado final que concluye la historia (Step 5 Resolution).
+• Feedback si acierta: "¡Brillante razonamiento! Comprendiste cómo los conectores guían el recorrido narrativo desde la partida hasta la meta."
+• Feedback si necesita apoyo: "Observa el significado de las palabras: First es "primero" (al partir) y Finally es "finalmente" (al terminar la aventura)."
 
-Modulo: Desafio Breve (Desafío breve: Setting and Characters in Short Stories)
-• Pregunta: "En Inglés, ¿qué diferencia observas entre identificar los datos y aplicar el procedimiento? Explica tu razonamiento."
-• Respuesta Esperada: Identificar los datos determina el punto de partida; aplicar el procedimiento permite construir la respuesta.
+Modulo: Desafio Breve (Desafío breve: Identificar Character y Setting)
+• Pregunta: "Lee la frase: "First, two young detectives investigated a mystery in Valparaíso." ¿Quiénes son los Characters y cuál es el Setting?"
+• Respuesta Esperada: Characters: "two young detectives" (dos jóvenes detectives). Setting: "Valparaíso" (la ciudad donde investigan).
 
 --------------------------------------------------------------------------------
 [PASO 6: RESUMEN Y ESTRATEGIA DE PENSAMIENTO]
 --------------------------------------------------------------------------------
-• Idea Clave: "Pattern: 'First, [Character] lived/worked in [Setting].' Example: 'First, two brave explorers traveled across the desert.'"
-• DILE AL ESTUDIANTE: "Cuando enfrentes un problema en Inglés, puedes seguir estos tres pasos clave:"
+• Idea Clave: "Pattern: "First, [Character] lived/worked in [Setting]." Example: "First, two brave explorers traveled across the desert.""
+• DILE AL ESTUDIANTE: "Cada vez que leas o redactes el inicio de un cuento en inglés, sigue estos tres pasos:"
 • Pasos de la Estrategia:
-  Paso 1: Identifica -> ¿Cuáles son los datos clave y cuál es la pregunta central?
-  Paso 2: Aplica -> ¿Qué regla o método disciplinar corresponde utilizar?
-  Paso 3: Comprueba -> ¿La conclusión o resultado responde con coherencia al problema?
+  Paso 1: Usa el conector inicial -> Comienza siempre con "First," o "In the beginning," para marcar el tiempo.
+  Paso 2: Presenta al Character -> Nombra claramente al protagonista con su adjetivo o profesión (ej. "a brave astronaut").
+  Paso 3: Establece el Setting -> Indica el lugar y época donde vive o se encuentra (ej. "lived in a quiet valley").
 • 3 Ideas Clave Estructuradas de Sintesis:
-  - 1 · Concepto central: Identificamos los elementos y el punto de partida del análisis.
-  - 2 · Interpretación del contexto: Identificar personajes (characters), ambientación (setting) y conector inicial (First) en textos narrativos en inglés
-  - 3 · Síntesis formal: Pattern: 'First, [Character] lived/worked in [Setting].' Example: 'First, two brave explorers traveled across the desert.'
+  - Characters and Setting: Todo inicio de relato en inglés presenta "Characters" (quiénes participan) y "Setting" (dónde y cuándo ocurre la acción).
+  - Time Connectors: Usamos conectores como "First" (primero) y "In the beginning" (al comienzo) para ordenar cronológicamente la historia.
+  - Past Simple Structure: Las narraciones utilizan verbos en tiempo pasado regular (como lived o traveled) para relatar los acontecimientos ya sucedidos.
 
 --------------------------------------------------------------------------------
 [PASO 7: MINIQUIZ FORMATIVO Y FASE REVISAR]
 --------------------------------------------------------------------------------
-Pregunta 1: Read the sentence: 'First, an old sailor lived in a small lighthouse near the sea.' Who is the main character?
-  A) The sea 
-  B) An old sailor [CORRECTA]
-  C) A small lighthouse 
-• Explicacion Formativa del Error: "'An old sailor' (un viejo marinero) es la persona que realiza la acción y vive en el lugar."
+Pregunta 1: Read the sentence: "First, an old sailor lived in a small lighthouse near the sea." Who is the main character?
+  A) A) The sea 
+  B) B) An old sailor [CORRECTA]
+  C) C) A small lighthouse 
+  D) D) The wind 
+• Explicacion Formativa del Error: ""An old sailor" (un viejo marinero) es la persona que realiza la acción y vive en el lugar."
 
-Pregunta 2: In the same sentence: 'First, an old sailor lived in a small lighthouse near the sea.' What is the setting (place)?
-  A) In a big airport 
-  B) In an old sailor 
-  C) In a small lighthouse near the sea [CORRECTA]
-• Explicacion Formativa del Error: "'A small lighthouse near the sea' (un pequeño faro cerca del mar) es el lugar físico donde se ambienta la escena."
+Pregunta 2: In the same sentence: "First, an old sailor lived in a small lighthouse near the sea." What is the setting (place)?
+  A) A) In a big airport 
+  B) B) In an old sailor 
+  C) C) In a small lighthouse near the sea [CORRECTA]
+  D) D) In a shopping mall 
+• Explicacion Formativa del Error: ""A small lighthouse near the sea" (un pequeño faro cerca del mar) es el lugar físico donde se ambienta la escena."
 
 Pregunta 3: Which time connector is best suited to start the very first sentence of a short story in English?
-  A) Finally, 
-  B) First, [CORRECTA]
-  C) Because, 
-• Explicacion Formativa del Error: "'First,' (Primero) o 'In the beginning' son los conectores ideales para iniciar la narración cronológica."
+  A) A) Finally, 
+  B) B) First, [CORRECTA]
+  C) C) Because, 
+  D) D) Never, 
+• Explicacion Formativa del Error: ""First," (Primero) o "In the beginning" son los conectores ideales para iniciar la narración cronológica."
 
 --------------------------------------------------------------------------------
 [PASO 7B: MODULO DE RECUPERACION FORMATIVA]
 --------------------------------------------------------------------------------
-Refuerzo 1 (Recuperación: Characters and Setting):
-• Explicacion Previa: "Recuerda que 'Character' es la persona o animal de la historia, y 'Setting' es el lugar donde ocurre."
-• Pregunta: "In 'First, a doctor worked in a hospital', what is the setting?"
-• Opciones: In a hospital (un hospital). | A doctor (un doctor).
-• Respuesta Correcta: In a hospital (un hospital).
-• Refuerzo si falla: "The correct answer is: In a hospital (el hospital es el lugar físico)."
+Refuerzo 1 (Refuerzo: Characters y Setting):
+• Explicacion Previa: "Recuerda: en inglés "Character" significa el personaje (la persona, animal o robot de la historia). "Setting" significa el escenario (el lugar y tiempo donde ocurre)."
+• Pregunta: "Si una historia dice "Elena walked in the forest at night", ¿qué parte representa el "Setting"?"
+• Opciones: A) Elena | B) Walked | C) In the forest at night
+• Respuesta Correcta: C) In the forest at night
+• Refuerzo si falla: "La respuesta correcta es la C: el bosque de noche es el lugar y tiempo (setting) de la historia."
 
 --------------------------------------------------------------------------------
 [PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
 --------------------------------------------------------------------------------
-• Pregunta de Sintesis: "In your own words, what is the difference between a character and a setting in an English short story?"
-• Reflexion Metacognitiva: "¿Qué conector de tiempo en inglés te resultó más fácil de recordar para comenzar un relato?"
-• Celebracion del Logro: "Congratulations! You have completed your first English lesson on Setting and Characters!"
-• Felicitacion Final: "¡Felicitaciones! Hoy completaste con éxito la clase "Setting and Characters in Short Stories". Has demostrado constancia y rigor en tu aprendizaje."
-• Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Inglés."
-
+• Felicitacion Final: "¡Congratulations! Hoy diste un paso fundamental en inglés: aprendiste a identificar el Setting y los Characters, a usar el conector "First" y a reconocer oraciones en tiempo pasado dentro de la montaña narrativa."
+• Vista Previa Proxima Clase: "En la próxima clase exploraremos el Paso 2 de la montaña narrativa: la aparición del conflicto con los conectores "Then" y "Suddenly"."
 
 
 ################################################################################
-### CLASE 2 DE 6: CHRONOLOGICAL SEQUENCE AND TIME CONNECTORS
+CLASE 2 DE 6: CHRONOLOGICAL SEQUENCE AND TIME CONNECTORS
 ################################################################################
 
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 08-10-2026, 5:52:12 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -357,13 +369,13 @@ DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
 2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
 3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
 4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
-5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
-   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
-   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
-   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
-6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
-7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
-8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
+5. Duraciones Planificadas de Producción Audiovisual:
+   • Video Gancho: 60 segundos de duración planificada distribuidos en 7 diapositivas.
+   • Video Explicativo: 90 segundos de duración planificada distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt, maximo 8 palabras); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt, maximo 8 palabras). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes.
+7. Logotipo Oficial: Codex/Work incorpora el logo blanco de EstudioSimple en la esquina inferior derecha del PPTX al tamano del video de referencia. No pedir a la IA que dibuje el logo dentro de la imagen; dejar espacio negativo.
+8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. No se exige medir con cronómetro, contar palabras ni reexportar por unos segundos adicionales.
 
 ================================================================================
 MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
@@ -376,60 +388,67 @@ Titulo: Video Motivacional: El Desafío de Chronological Sequence and Time Conne
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Apertura y Contexto (9 seg aprox) ---
+--- DIAPOSITIVA 1: Apertura y Contexto (9 segundos) ---
 1. Propósito Didáctico: Apertura y Contexto
 2. Título en Pantalla (64 pt): Misión 2: Chronological Sequence and Time Connectors
 3. Subtítulo en Pantalla (36 pt): Exploración inicial en Inglés
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Chronological Sequence and Time Connectors (Inglés). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Communicative context: Story scenario of Chronological Sequence and Time Connectors
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Comienza una nueva expedición de aprendizaje en Inglés. Nuestros dos exploradores analizan el desafío de Chronological Sequence and Time Connectors para descubrir sus secretos."
 
---- DIAPOSITIVA 2: Presentación del Escenario (9 seg aprox) ---
+--- DIAPOSITIVA 2: Presentación del Escenario (9 segundos) ---
 1. Propósito Didáctico: Presentación del Escenario
 2. Título en Pantalla (64 pt): Punto de partida
 3. Subtítulo en Pantalla (36 pt): Using 'first', 'then', 'suddenly' to map narrative events
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Using 'first', 'then', 'suddenly' to map narrative events. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Using 'first', 'then', 'suddenly' to map narrative events
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Al observar los datos sobre Using 'first', 'then', 'suddenly' to map narrative events, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor."
 
---- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 seg aprox) ---
+--- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 segundos) ---
 1. Propósito Didáctico: Aparición del Conflicto / Misterio
 2. Título en Pantalla (64 pt): El enigma disciplinar
 3. Subtítulo en Pantalla (36 pt): Desafío en Chronological Sequence and Time Connectors
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Using 'first', 'then', 'suddenly' to map narrative events
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Surge un reto concreto sobre Chronological Sequence and Time Connectors: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso."
 
---- DIAPOSITIVA 4: Exploración de Pistas (9 seg aprox) ---
+--- DIAPOSITIVA 4: Exploración de Pistas (9 segundos) ---
 1. Propósito Didáctico: Exploración de Pistas
 2. Título en Pantalla (64 pt): Análisis de evidencias
 3. Subtítulo en Pantalla (36 pt): Using 'first', 'then', 'suddenly' to map narrative events
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Using 'first', 'then', 'suddenly' to map narrative events
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Ambos comparan las pistas disponibles sobre Using 'first', 'then', 'suddenly' to map narrative events. Cada dato confirma cómo interactúan los elementos clave de la situación."
 
---- DIAPOSITIVA 5: El Momento Crítico (9 seg aprox) ---
+--- DIAPOSITIVA 5: El Momento Crítico (9 segundos) ---
 1. Propósito Didáctico: El Momento Crítico
 2. Título en Pantalla (64 pt): Criterio de decisión
 3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Using 'first', 'then', 'suddenly' to map narrative events
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Chronological Sequence and Time Connectors con total precisión metodológica."
 
---- DIAPOSITIVA 6: La Antesala de la Pregunta (9 seg aprox) ---
+--- DIAPOSITIVA 6: La Antesala de la Pregunta (9 segundos) ---
 1. Propósito Didáctico: La Antesala de la Pregunta
 2. Título en Pantalla (64 pt): El dilema central
 3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Chronological Sequence and Time Connectors?
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Language puzzle: Identifying narrative clues in English
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje."
 
---- DIAPOSITIVA 7: La Pregunta Detonante (9 seg aprox) ---
+--- DIAPOSITIVA 7: La Pregunta Detonante (9 segundos) ---
 1. Propósito Didáctico: La Pregunta Detonante
 2. Título en Pantalla (64 pt): Pregunta detonante
 3. Subtítulo en Pantalla (36 pt): Regla y método de Chronological Sequence and Time Connectors
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Trigger question: How do we express Chronological Sequence and Time Connectors accurately?
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!"
 
 ================================================================================
@@ -443,60 +462,67 @@ Titulo: Video Explicativo: Formalización de Chronological Sequence and Time Con
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
+--- DIAPOSITIVA 1: Objetivo de la Lección (12 segundos) ---
 1. Propósito Didáctico: Objetivo de la Lección
 2. Título en Pantalla (64 pt): Objetivo de la lección
 3. Subtítulo en Pantalla (36 pt): Master Chronological Sequence and Time Connectors: Using 'first', 'then', 'suddenly' to map narrative events
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Using 'first', 'then', 'suddenly' to map narrative events. High clarity, negative space for text. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Formal heading: OA 9 · Chronological Sequence and Time Connectors
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Today our goal is to learn how to master using 'first', 'then', 'suddenly' to map narrative events, applying clear disciplinary steps with total confidence."
 
---- DIAPOSITIVA 2: Definición del Concepto Central (12 seg aprox) ---
+--- DIAPOSITIVA 2: Definición del Concepto Central (12 segundos) ---
 1. Propósito Didáctico: Definición del Concepto Central
 2. Título en Pantalla (64 pt): Concepto fundamental
 3. Subtítulo en Pantalla (36 pt): Using 'first', 'then', 'suddenly' to map narrative events
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Sentence formula: Structure of Using 'first', 'then', 'suddenly' to map narrative events
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "To understand Chronological Sequence and Time Connectors, we establish a clean conceptual foundation connecting the core definition with verifiable concrete evidence."
 
---- DIAPOSITIVA 3: Demostración Modelada (12 seg aprox) ---
+--- DIAPOSITIVA 3: Demostración Modelada (12 segundos) ---
 1. Propósito Didáctico: Demostración Modelada
 2. Título en Pantalla (64 pt): Modelamiento paso a paso
 3. Subtítulo en Pantalla (36 pt): Procedimiento de Chronological Sequence and Time Connectors
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Color-coded grammar blocks with modeled example
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Observe how the procedure unfolds in this guided demonstration: every single change responds to an explicit disciplinary rule."
 
---- DIAPOSITIVA 4: Prevención del Error Frecuente (13 seg aprox) ---
+--- DIAPOSITIVA 4: Prevención del Error Frecuente (13 segundos) ---
 1. Propósito Didáctico: Prevención del Error Frecuente
 2. Título en Pantalla (64 pt): Atención: Error habitual
 3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Error contrast: common grammar and punctuation pitfall
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "A common pitfall happens when overlooking order or basic conventions. We always check each intermediate step before concluding."
 
---- DIAPOSITIVA 5: Comprobación del Resultado (12 seg aprox) ---
+--- DIAPOSITIVA 5: Comprobación del Resultado (12 segundos) ---
 1. Propósito Didáctico: Comprobación del Resultado
 2. Título en Pantalla (64 pt): Validación del resultado
 3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Meaning validation: verifying sentence cohesion
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "By contrasting the result with our initial scenario, we confirm that our solution is consistent, rigorous, and fully answers the question."
 
---- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 seg aprox) ---
+--- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 segundos) ---
 1. Propósito Didáctico: Estrategia Mnemotécnica
 2. Título en Pantalla (64 pt): Estrategia de pensamiento
 3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Memory strategy: Connector + Subject + Verb + Context
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Always remember the three-step thinking strategy: identify the key data, apply the formal rule in order, and verify the final result."
 
---- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 seg aprox) ---
+--- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 segundos) ---
 1. Propósito Didáctico: Síntesis y Regla de Oro
 2. Título en Pantalla (64 pt): Regla de Oro: Chronological Sequence and Time Connectors
 3. Subtítulo en Pantalla (36 pt): Método disciplinar validado
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Summary infography: Golden rule of Chronological Sequence and Time Connectors
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Now that you understand the golden rule and the procedure of Chronological Sequence and Time Connectors, let us practice and prove our skills in the interactive platform!"
 
 ================================================================================
@@ -669,13 +695,13 @@ Refuerzo 1 (English Recovery & Consolidation: Chronological Sequence and Time Co
 • Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Inglés."
 
 
-
 ################################################################################
-### CLASE 3 DE 6: PAST SIMPLE TENSE: REGULAR AND IRREGULAR VERBS
+CLASE 3 DE 6: PAST SIMPLE TENSE: REGULAR AND IRREGULAR VERBS
 ################################################################################
 
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 08-10-2026, 5:52:12 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -690,13 +716,13 @@ DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
 2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
 3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
 4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
-5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
-   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
-   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
-   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
-6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
-7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
-8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
+5. Duraciones Planificadas de Producción Audiovisual:
+   • Video Gancho: 60 segundos de duración planificada distribuidos en 7 diapositivas.
+   • Video Explicativo: 90 segundos de duración planificada distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt, maximo 8 palabras); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt, maximo 8 palabras). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes.
+7. Logotipo Oficial: Codex/Work incorpora el logo blanco de EstudioSimple en la esquina inferior derecha del PPTX al tamano del video de referencia. No pedir a la IA que dibuje el logo dentro de la imagen; dejar espacio negativo.
+8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. No se exige medir con cronómetro, contar palabras ni reexportar por unos segundos adicionales.
 
 ================================================================================
 MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
@@ -709,60 +735,67 @@ Titulo: Video Motivacional: El Desafío de Past Simple Tense: Regular and Irregu
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Apertura y Contexto (9 seg aprox) ---
+--- DIAPOSITIVA 1: Apertura y Contexto (9 segundos) ---
 1. Propósito Didáctico: Apertura y Contexto
 2. Título en Pantalla (64 pt): Misión 3: Past Simple Tense: Regular and Irregular Verbs
 3. Subtítulo en Pantalla (36 pt): Exploración inicial en Inglés
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Past Simple Tense: Regular and Irregular Verbs (Inglés). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Communicative context: Story scenario of Past Simple Tense: Regular and Irregular Verbs
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Comienza una nueva expedición de aprendizaje en Inglés. Nuestros dos exploradores analizan el desafío de Past Simple Tense: Regular and Irregular Verbs para descubrir sus secretos."
 
---- DIAPOSITIVA 2: Presentación del Escenario (9 seg aprox) ---
+--- DIAPOSITIVA 2: Presentación del Escenario (9 segundos) ---
 1. Propósito Didáctico: Presentación del Escenario
 2. Título en Pantalla (64 pt): Punto de partida
 3. Subtítulo en Pantalla (36 pt): Recognizing -ed endings and common irregular past actions in context
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Recognizing -ed endings and common irregular past actions in context. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Recognizing -ed endings and common irregular past actions in context
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Al observar los datos sobre Recognizing -ed endings and common irregular past actions in context, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor."
 
---- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 seg aprox) ---
+--- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 segundos) ---
 1. Propósito Didáctico: Aparición del Conflicto / Misterio
 2. Título en Pantalla (64 pt): El enigma disciplinar
 3. Subtítulo en Pantalla (36 pt): Desafío en Past Simple Tense: Regular and Irregular Verbs
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Recognizing -ed endings and common irregular past actions in context
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Surge un reto concreto sobre Past Simple Tense: Regular and Irregular Verbs: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso."
 
---- DIAPOSITIVA 4: Exploración de Pistas (9 seg aprox) ---
+--- DIAPOSITIVA 4: Exploración de Pistas (9 segundos) ---
 1. Propósito Didáctico: Exploración de Pistas
 2. Título en Pantalla (64 pt): Análisis de evidencias
 3. Subtítulo en Pantalla (36 pt): Recognizing -ed endings and common irregular past actions in context
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Recognizing -ed endings and common irregular past actions in context
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Ambos comparan las pistas disponibles sobre Recognizing -ed endings and common irregular past actions in context. Cada dato confirma cómo interactúan los elementos clave de la situación."
 
---- DIAPOSITIVA 5: El Momento Crítico (9 seg aprox) ---
+--- DIAPOSITIVA 5: El Momento Crítico (9 segundos) ---
 1. Propósito Didáctico: El Momento Crítico
 2. Título en Pantalla (64 pt): Criterio de decisión
 3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Recognizing -ed endings and common irregular past actions in context
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Past Simple Tense: Regular and Irregular Verbs con total precisión metodológica."
 
---- DIAPOSITIVA 6: La Antesala de la Pregunta (9 seg aprox) ---
+--- DIAPOSITIVA 6: La Antesala de la Pregunta (9 segundos) ---
 1. Propósito Didáctico: La Antesala de la Pregunta
 2. Título en Pantalla (64 pt): El dilema central
 3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Past Simple Tense: Regular and Irregular Verbs?
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Language puzzle: Identifying narrative clues in English
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje."
 
---- DIAPOSITIVA 7: La Pregunta Detonante (9 seg aprox) ---
+--- DIAPOSITIVA 7: La Pregunta Detonante (9 segundos) ---
 1. Propósito Didáctico: La Pregunta Detonante
 2. Título en Pantalla (64 pt): Pregunta detonante
 3. Subtítulo en Pantalla (36 pt): Regla y método de Past Simple Tense: Regular and Irregular Verbs
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Trigger question: How do we express Past Simple Tense: Regular and Irregular Verbs accurately?
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!"
 
 ================================================================================
@@ -776,60 +809,67 @@ Titulo: Video Explicativo: Formalización de Past Simple Tense: Regular and Irre
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
+--- DIAPOSITIVA 1: Objetivo de la Lección (12 segundos) ---
 1. Propósito Didáctico: Objetivo de la Lección
 2. Título en Pantalla (64 pt): Objetivo de la lección
 3. Subtítulo en Pantalla (36 pt): Master Past Simple Tense: Regular and Irregular Verbs: Recognizing -ed endings and common irregular past actions in context
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Recognizing -ed endings and common irregular past actions in context. High clarity, negative space for text. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Formal heading: OA 9 · Past Simple Tense: Regular and Irregular Verbs
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Today our goal is to learn how to master recognizing -ed endings and common irregular past actions in context, applying clear disciplinary steps with total confidence."
 
---- DIAPOSITIVA 2: Definición del Concepto Central (12 seg aprox) ---
+--- DIAPOSITIVA 2: Definición del Concepto Central (12 segundos) ---
 1. Propósito Didáctico: Definición del Concepto Central
 2. Título en Pantalla (64 pt): Concepto fundamental
 3. Subtítulo en Pantalla (36 pt): Recognizing -ed endings and common irregular past actions in context
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Sentence formula: Structure of Recognizing -ed endings and common irregular past actions in context
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "To understand Past Simple Tense: Regular and Irregular Verbs, we establish a clean conceptual foundation connecting the core definition with verifiable concrete evidence."
 
---- DIAPOSITIVA 3: Demostración Modelada (12 seg aprox) ---
+--- DIAPOSITIVA 3: Demostración Modelada (12 segundos) ---
 1. Propósito Didáctico: Demostración Modelada
 2. Título en Pantalla (64 pt): Modelamiento paso a paso
 3. Subtítulo en Pantalla (36 pt): Procedimiento de Past Simple Tense: Regular and Irregular Verbs
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Color-coded grammar blocks with modeled example
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Observe how the procedure unfolds in this guided demonstration: every single change responds to an explicit disciplinary rule."
 
---- DIAPOSITIVA 4: Prevención del Error Frecuente (13 seg aprox) ---
+--- DIAPOSITIVA 4: Prevención del Error Frecuente (13 segundos) ---
 1. Propósito Didáctico: Prevención del Error Frecuente
 2. Título en Pantalla (64 pt): Atención: Error habitual
 3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Error contrast: common grammar and punctuation pitfall
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "A common pitfall happens when overlooking order or basic conventions. We always check each intermediate step before concluding."
 
---- DIAPOSITIVA 5: Comprobación del Resultado (12 seg aprox) ---
+--- DIAPOSITIVA 5: Comprobación del Resultado (12 segundos) ---
 1. Propósito Didáctico: Comprobación del Resultado
 2. Título en Pantalla (64 pt): Validación del resultado
 3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Meaning validation: verifying sentence cohesion
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "By contrasting the result with our initial scenario, we confirm that our solution is consistent, rigorous, and fully answers the question."
 
---- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 seg aprox) ---
+--- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 segundos) ---
 1. Propósito Didáctico: Estrategia Mnemotécnica
 2. Título en Pantalla (64 pt): Estrategia de pensamiento
 3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Memory strategy: Connector + Subject + Verb + Context
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Always remember the three-step thinking strategy: identify the key data, apply the formal rule in order, and verify the final result."
 
---- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 seg aprox) ---
+--- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 segundos) ---
 1. Propósito Didáctico: Síntesis y Regla de Oro
 2. Título en Pantalla (64 pt): Regla de Oro: Past Simple Tense: Regular and Irregular Verbs
 3. Subtítulo en Pantalla (36 pt): Método disciplinar validado
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Summary infography: Golden rule of Past Simple Tense: Regular and Irregular Verbs
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Now that you understand the golden rule and the procedure of Past Simple Tense: Regular and Irregular Verbs, let us practice and prove our skills in the interactive platform!"
 
 ================================================================================
@@ -1002,13 +1042,13 @@ Refuerzo 1 (English Recovery & Consolidation: Past Simple Tense: Regular and Irr
 • Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Inglés."
 
 
-
 ################################################################################
-### CLASE 4 DE 6: CHARACTER FEELINGS, DIALOGUE, AND CONFLICT
+CLASE 4 DE 6: CHARACTER FEELINGS, DIALOGUE, AND CONFLICT
 ################################################################################
 
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 08-10-2026, 5:52:12 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -1023,13 +1063,13 @@ DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
 2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
 3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
 4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
-5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
-   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
-   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
-   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
-6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
-7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
-8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
+5. Duraciones Planificadas de Producción Audiovisual:
+   • Video Gancho: 60 segundos de duración planificada distribuidos en 7 diapositivas.
+   • Video Explicativo: 90 segundos de duración planificada distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt, maximo 8 palabras); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt, maximo 8 palabras). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes.
+7. Logotipo Oficial: Codex/Work incorpora el logo blanco de EstudioSimple en la esquina inferior derecha del PPTX al tamano del video de referencia. No pedir a la IA que dibuje el logo dentro de la imagen; dejar espacio negativo.
+8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. No se exige medir con cronómetro, contar palabras ni reexportar por unos segundos adicionales.
 
 ================================================================================
 MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
@@ -1042,60 +1082,67 @@ Titulo: Video Motivacional: El Desafío de Character Feelings, Dialogue, and Con
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Apertura y Contexto (9 seg aprox) ---
+--- DIAPOSITIVA 1: Apertura y Contexto (9 segundos) ---
 1. Propósito Didáctico: Apertura y Contexto
 2. Título en Pantalla (64 pt): Misión 4: Character Feelings, Dialogue, and Conflict
 3. Subtítulo en Pantalla (36 pt): Exploración inicial en Inglés
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Character Feelings, Dialogue, and Conflict (Inglés). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Communicative context: Story scenario of Character Feelings, Dialogue, and Conflict
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Comienza una nueva expedición de aprendizaje en Inglés. Nuestros dos exploradores analizan el desafío de Character Feelings, Dialogue, and Conflict para descubrir sus secretos."
 
---- DIAPOSITIVA 2: Presentación del Escenario (9 seg aprox) ---
+--- DIAPOSITIVA 2: Presentación del Escenario (9 segundos) ---
 1. Propósito Didáctico: Presentación del Escenario
 2. Título en Pantalla (64 pt): Punto de partida
 3. Subtítulo en Pantalla (36 pt): Identifying emotions and the main obstacle in narrative texts
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Identifying emotions and the main obstacle in narrative texts. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Identifying emotions and the main obstacle in narrative texts
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Al observar los datos sobre Identifying emotions and the main obstacle in narrative texts, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor."
 
---- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 seg aprox) ---
+--- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 segundos) ---
 1. Propósito Didáctico: Aparición del Conflicto / Misterio
 2. Título en Pantalla (64 pt): El enigma disciplinar
 3. Subtítulo en Pantalla (36 pt): Desafío en Character Feelings, Dialogue, and Conflict
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Identifying emotions and the main obstacle in narrative texts
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Surge un reto concreto sobre Character Feelings, Dialogue, and Conflict: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso."
 
---- DIAPOSITIVA 4: Exploración de Pistas (9 seg aprox) ---
+--- DIAPOSITIVA 4: Exploración de Pistas (9 segundos) ---
 1. Propósito Didáctico: Exploración de Pistas
 2. Título en Pantalla (64 pt): Análisis de evidencias
 3. Subtítulo en Pantalla (36 pt): Identifying emotions and the main obstacle in narrative texts
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Identifying emotions and the main obstacle in narrative texts
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Ambos comparan las pistas disponibles sobre Identifying emotions and the main obstacle in narrative texts. Cada dato confirma cómo interactúan los elementos clave de la situación."
 
---- DIAPOSITIVA 5: El Momento Crítico (9 seg aprox) ---
+--- DIAPOSITIVA 5: El Momento Crítico (9 segundos) ---
 1. Propósito Didáctico: El Momento Crítico
 2. Título en Pantalla (64 pt): Criterio de decisión
 3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Identifying emotions and the main obstacle in narrative texts
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Character Feelings, Dialogue, and Conflict con total precisión metodológica."
 
---- DIAPOSITIVA 6: La Antesala de la Pregunta (9 seg aprox) ---
+--- DIAPOSITIVA 6: La Antesala de la Pregunta (9 segundos) ---
 1. Propósito Didáctico: La Antesala de la Pregunta
 2. Título en Pantalla (64 pt): El dilema central
 3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Character Feelings, Dialogue, and Conflict?
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Language puzzle: Identifying narrative clues in English
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje."
 
---- DIAPOSITIVA 7: La Pregunta Detonante (9 seg aprox) ---
+--- DIAPOSITIVA 7: La Pregunta Detonante (9 segundos) ---
 1. Propósito Didáctico: La Pregunta Detonante
 2. Título en Pantalla (64 pt): Pregunta detonante
 3. Subtítulo en Pantalla (36 pt): Regla y método de Character Feelings, Dialogue, and Conflict
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Trigger question: How do we express Character Feelings, Dialogue, and Conflict accurately?
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!"
 
 ================================================================================
@@ -1109,60 +1156,67 @@ Titulo: Video Explicativo: Formalización de Character Feelings, Dialogue, and C
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
+--- DIAPOSITIVA 1: Objetivo de la Lección (12 segundos) ---
 1. Propósito Didáctico: Objetivo de la Lección
 2. Título en Pantalla (64 pt): Objetivo de la lección
 3. Subtítulo en Pantalla (36 pt): Master Character Feelings, Dialogue, and Conflict: Identifying emotions and the main obstacle in narrative texts
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Identifying emotions and the main obstacle in narrative texts. High clarity, negative space for text. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Formal heading: OA 9 · Character Feelings, Dialogue, and Conflict
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Today our goal is to learn how to master identifying emotions and the main obstacle in narrative texts, applying clear disciplinary steps with total confidence."
 
---- DIAPOSITIVA 2: Definición del Concepto Central (12 seg aprox) ---
+--- DIAPOSITIVA 2: Definición del Concepto Central (12 segundos) ---
 1. Propósito Didáctico: Definición del Concepto Central
 2. Título en Pantalla (64 pt): Concepto fundamental
 3. Subtítulo en Pantalla (36 pt): Identifying emotions and the main obstacle in narrative texts
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Sentence formula: Structure of Identifying emotions and the main obstacle in narrative texts
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "To understand Character Feelings, Dialogue, and Conflict, we establish a clean conceptual foundation connecting the core definition with verifiable concrete evidence."
 
---- DIAPOSITIVA 3: Demostración Modelada (12 seg aprox) ---
+--- DIAPOSITIVA 3: Demostración Modelada (12 segundos) ---
 1. Propósito Didáctico: Demostración Modelada
 2. Título en Pantalla (64 pt): Modelamiento paso a paso
 3. Subtítulo en Pantalla (36 pt): Procedimiento de Character Feelings, Dialogue, and Conflict
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Color-coded grammar blocks with modeled example
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Observe how the procedure unfolds in this guided demonstration: every single change responds to an explicit disciplinary rule."
 
---- DIAPOSITIVA 4: Prevención del Error Frecuente (13 seg aprox) ---
+--- DIAPOSITIVA 4: Prevención del Error Frecuente (13 segundos) ---
 1. Propósito Didáctico: Prevención del Error Frecuente
 2. Título en Pantalla (64 pt): Atención: Error habitual
 3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Error contrast: common grammar and punctuation pitfall
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "A common pitfall happens when overlooking order or basic conventions. We always check each intermediate step before concluding."
 
---- DIAPOSITIVA 5: Comprobación del Resultado (12 seg aprox) ---
+--- DIAPOSITIVA 5: Comprobación del Resultado (12 segundos) ---
 1. Propósito Didáctico: Comprobación del Resultado
 2. Título en Pantalla (64 pt): Validación del resultado
 3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Meaning validation: verifying sentence cohesion
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "By contrasting the result with our initial scenario, we confirm that our solution is consistent, rigorous, and fully answers the question."
 
---- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 seg aprox) ---
+--- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 segundos) ---
 1. Propósito Didáctico: Estrategia Mnemotécnica
 2. Título en Pantalla (64 pt): Estrategia de pensamiento
 3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Memory strategy: Connector + Subject + Verb + Context
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Always remember the three-step thinking strategy: identify the key data, apply the formal rule in order, and verify the final result."
 
---- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 seg aprox) ---
+--- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 segundos) ---
 1. Propósito Didáctico: Síntesis y Regla de Oro
 2. Título en Pantalla (64 pt): Regla de Oro: Character Feelings, Dialogue, and Conflict
 3. Subtítulo en Pantalla (36 pt): Método disciplinar validado
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Summary infography: Golden rule of Character Feelings, Dialogue, and Conflict
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Now that you understand the golden rule and the procedure of Character Feelings, Dialogue, and Conflict, let us practice and prove our skills in the interactive platform!"
 
 ================================================================================
@@ -1335,13 +1389,13 @@ Refuerzo 1 (English Recovery & Consolidation: Character Feelings, Dialogue, and 
 • Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Inglés."
 
 
-
 ################################################################################
-### CLASE 5 DE 6: PRÁCTICA AVANZADA Y MODELAMIENTO DE OA 9 (PARTE 1)
+CLASE 5 DE 6: PRÁCTICA AVANZADA Y MODELAMIENTO DE OA 9 (PARTE 1)
 ################################################################################
 
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 08-10-2026, 5:52:12 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -1356,13 +1410,13 @@ DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
 2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
 3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
 4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
-5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
-   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
-   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
-   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
-6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
-7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
-8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
+5. Duraciones Planificadas de Producción Audiovisual:
+   • Video Gancho: 60 segundos de duración planificada distribuidos en 7 diapositivas.
+   • Video Explicativo: 90 segundos de duración planificada distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt, maximo 8 palabras); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt, maximo 8 palabras). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes.
+7. Logotipo Oficial: Codex/Work incorpora el logo blanco de EstudioSimple en la esquina inferior derecha del PPTX al tamano del video de referencia. No pedir a la IA que dibuje el logo dentro de la imagen; dejar espacio negativo.
+8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. No se exige medir con cronómetro, contar palabras ni reexportar por unos segundos adicionales.
 
 ================================================================================
 MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
@@ -1375,60 +1429,67 @@ Titulo: Video Motivacional: El Desafío de Práctica avanzada y modelamiento de 
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Apertura y Contexto (9 seg aprox) ---
+--- DIAPOSITIVA 1: Apertura y Contexto (9 segundos) ---
 1. Propósito Didáctico: Apertura y Contexto
 2. Título en Pantalla (64 pt): Misión 5: Práctica avanzada y modelamiento de OA 9 (Parte 1)
 3. Subtítulo en Pantalla (36 pt): Exploración inicial en Inglés
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Práctica avanzada y modelamiento de OA 9 (Parte 1) (Inglés). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Communicative context: Story scenario of Práctica avanzada y modelamiento de OA 9 (Parte 1)
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Comienza una nueva expedición de aprendizaje en Inglés. Nuestros dos exploradores analizan el desafío de Práctica avanzada y modelamiento de OA 9 (Parte 1) para descubrir sus secretos."
 
---- DIAPOSITIVA 2: Presentación del Escenario (9 seg aprox) ---
+--- DIAPOSITIVA 2: Presentación del Escenario (9 segundos) ---
 1. Propósito Didáctico: Presentación del Escenario
 2. Título en Pantalla (64 pt): Punto de partida
 3. Subtítulo en Pantalla (36 pt): Consolidación guiada de destrezas para Inglés
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Consolidación guiada de destrezas para Inglés. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Consolidación guiada de destrezas para Inglés
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Al observar los datos sobre Consolidación guiada de destrezas para Inglés, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor."
 
---- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 seg aprox) ---
+--- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 segundos) ---
 1. Propósito Didáctico: Aparición del Conflicto / Misterio
 2. Título en Pantalla (64 pt): El enigma disciplinar
 3. Subtítulo en Pantalla (36 pt): Desafío en Práctica avanzada y modelamiento de OA 9 (Parte 1)
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Consolidación guiada de destrezas para Inglés
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Surge un reto concreto sobre Práctica avanzada y modelamiento de OA 9 (Parte 1): las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso."
 
---- DIAPOSITIVA 4: Exploración de Pistas (9 seg aprox) ---
+--- DIAPOSITIVA 4: Exploración de Pistas (9 segundos) ---
 1. Propósito Didáctico: Exploración de Pistas
 2. Título en Pantalla (64 pt): Análisis de evidencias
 3. Subtítulo en Pantalla (36 pt): Consolidación guiada de destrezas para Inglés
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Consolidación guiada de destrezas para Inglés
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Ambos comparan las pistas disponibles sobre Consolidación guiada de destrezas para Inglés. Cada dato confirma cómo interactúan los elementos clave de la situación."
 
---- DIAPOSITIVA 5: El Momento Crítico (9 seg aprox) ---
+--- DIAPOSITIVA 5: El Momento Crítico (9 segundos) ---
 1. Propósito Didáctico: El Momento Crítico
 2. Título en Pantalla (64 pt): Criterio de decisión
 3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Consolidación guiada de destrezas para Inglés
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Práctica avanzada y modelamiento de OA 9 (Parte 1) con total precisión metodológica."
 
---- DIAPOSITIVA 6: La Antesala de la Pregunta (9 seg aprox) ---
+--- DIAPOSITIVA 6: La Antesala de la Pregunta (9 segundos) ---
 1. Propósito Didáctico: La Antesala de la Pregunta
 2. Título en Pantalla (64 pt): El dilema central
 3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Práctica avanzada y modelamiento de OA 9 (Parte 1)?
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Language puzzle: Identifying narrative clues in English
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje."
 
---- DIAPOSITIVA 7: La Pregunta Detonante (9 seg aprox) ---
+--- DIAPOSITIVA 7: La Pregunta Detonante (9 segundos) ---
 1. Propósito Didáctico: La Pregunta Detonante
 2. Título en Pantalla (64 pt): Pregunta detonante
 3. Subtítulo en Pantalla (36 pt): Regla y método de Práctica avanzada y modelamiento de OA 9 (Parte 1)
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Trigger question: How do we express Práctica avanzada y modelamiento de OA 9 (Parte 1) accurately?
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!"
 
 ================================================================================
@@ -1442,60 +1503,67 @@ Titulo: Video Explicativo: Formalización de Práctica avanzada y modelamiento d
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
+--- DIAPOSITIVA 1: Objetivo de la Lección (12 segundos) ---
 1. Propósito Didáctico: Objetivo de la Lección
 2. Título en Pantalla (64 pt): Objetivo de la lección
 3. Subtítulo en Pantalla (36 pt): Master Práctica avanzada y modelamiento de OA 9 (Parte 1): Consolidación guiada de destrezas para Inglés
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Consolidación guiada de destrezas para Inglés. High clarity, negative space for text. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Formal heading: OA 9 · Práctica avanzada y modelamiento de OA 9 (Parte 1)
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Today our goal is to learn how to master consolidación guiada de destrezas para inglés, applying clear disciplinary steps with total confidence."
 
---- DIAPOSITIVA 2: Definición del Concepto Central (12 seg aprox) ---
+--- DIAPOSITIVA 2: Definición del Concepto Central (12 segundos) ---
 1. Propósito Didáctico: Definición del Concepto Central
 2. Título en Pantalla (64 pt): Concepto fundamental
 3. Subtítulo en Pantalla (36 pt): Consolidación guiada de destrezas para Inglés
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Sentence formula: Structure of Consolidación guiada de destrezas para Inglés
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "To understand Práctica avanzada y modelamiento de OA 9 (Parte 1), we establish a clean conceptual foundation connecting the core definition with verifiable concrete evidence."
 
---- DIAPOSITIVA 3: Demostración Modelada (12 seg aprox) ---
+--- DIAPOSITIVA 3: Demostración Modelada (12 segundos) ---
 1. Propósito Didáctico: Demostración Modelada
 2. Título en Pantalla (64 pt): Modelamiento paso a paso
 3. Subtítulo en Pantalla (36 pt): Procedimiento de Práctica avanzada y modelamiento de OA 9 (Parte 1)
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Color-coded grammar blocks with modeled example
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Observe how the procedure unfolds in this guided demonstration: every single change responds to an explicit disciplinary rule."
 
---- DIAPOSITIVA 4: Prevención del Error Frecuente (13 seg aprox) ---
+--- DIAPOSITIVA 4: Prevención del Error Frecuente (13 segundos) ---
 1. Propósito Didáctico: Prevención del Error Frecuente
 2. Título en Pantalla (64 pt): Atención: Error habitual
 3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Error contrast: common grammar and punctuation pitfall
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "A common pitfall happens when overlooking order or basic conventions. We always check each intermediate step before concluding."
 
---- DIAPOSITIVA 5: Comprobación del Resultado (12 seg aprox) ---
+--- DIAPOSITIVA 5: Comprobación del Resultado (12 segundos) ---
 1. Propósito Didáctico: Comprobación del Resultado
 2. Título en Pantalla (64 pt): Validación del resultado
 3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Meaning validation: verifying sentence cohesion
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "By contrasting the result with our initial scenario, we confirm that our solution is consistent, rigorous, and fully answers the question."
 
---- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 seg aprox) ---
+--- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 segundos) ---
 1. Propósito Didáctico: Estrategia Mnemotécnica
 2. Título en Pantalla (64 pt): Estrategia de pensamiento
 3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Memory strategy: Connector + Subject + Verb + Context
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Always remember the three-step thinking strategy: identify the key data, apply the formal rule in order, and verify the final result."
 
---- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 seg aprox) ---
+--- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 segundos) ---
 1. Propósito Didáctico: Síntesis y Regla de Oro
 2. Título en Pantalla (64 pt): Regla de Oro: Práctica avanzada y modelamiento de OA 9 (Parte 1)
 3. Subtítulo en Pantalla (36 pt): Método disciplinar validado
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Summary infography: Golden rule of Práctica avanzada y modelamiento de OA 9 (Parte 1)
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Now that you understand the golden rule and the procedure of Práctica avanzada y modelamiento de OA 9 (Parte 1), let us practice and prove our skills in the interactive platform!"
 
 ================================================================================
@@ -1668,13 +1736,13 @@ Refuerzo 1 (English Recovery & Consolidation: Práctica avanzada y modelamiento 
 • Vista Previa Proxima Clase: "En la próxima sesión continuaremos profundizando los aprendizajes de Inglés."
 
 
-
 ################################################################################
-### CLASE 6 DE 6: RESOLUTION, MORAL OF THE STORY, AND READING TEST
+CLASE 6 DE 6: RESOLUTION, MORAL OF THE STORY, AND READING TEST
 ################################################################################
 
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 08-10-2026, 5:52:12 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -1689,13 +1757,13 @@ DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
 2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
 3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
 4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
-5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
-   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
-   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
-   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
-6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
-7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
-8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.
+5. Duraciones Planificadas de Producción Audiovisual:
+   • Video Gancho: 60 segundos de duración planificada distribuidos en 7 diapositivas.
+   • Video Explicativo: 90 segundos de duración planificada distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt, maximo 8 palabras); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt, maximo 8 palabras). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes.
+7. Logotipo Oficial: Codex/Work incorpora el logo blanco de EstudioSimple en la esquina inferior derecha del PPTX al tamano del video de referencia. No pedir a la IA que dibuje el logo dentro de la imagen; dejar espacio negativo.
+8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. No se exige medir con cronómetro, contar palabras ni reexportar por unos segundos adicionales.
 
 ================================================================================
 MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
@@ -1708,60 +1776,67 @@ Titulo: Video Motivacional: El Desafío de Resolution, Moral of the Story, and R
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Apertura y Contexto (9 seg aprox) ---
+--- DIAPOSITIVA 1: Apertura y Contexto (9 segundos) ---
 1. Propósito Didáctico: Apertura y Contexto
 2. Título en Pantalla (64 pt): Misión 6: Resolution, Moral of the Story, and Reading Test
 3. Subtítulo en Pantalla (36 pt): Exploración inicial en Inglés
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Resolution, Moral of the Story, and Reading Test (Inglés). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Communicative context: Story scenario of Resolution, Moral of the Story, and Reading Test
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Comienza una nueva expedición de aprendizaje en Inglés. Nuestros dos exploradores analizan el desafío de Resolution, Moral of the Story, and Reading Test para descubrir sus secretos."
 
---- DIAPOSITIVA 2: Presentación del Escenario (9 seg aprox) ---
+--- DIAPOSITIVA 2: Presentación del Escenario (9 segundos) ---
 1. Propósito Didáctico: Presentación del Escenario
 2. Título en Pantalla (64 pt): Punto de partida
 3. Subtítulo en Pantalla (36 pt): Reading comprehension synthesis, story mapping, and official test
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Reading comprehension synthesis, story mapping, and official test. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Reading comprehension synthesis, story mapping, and official test
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Al observar los datos sobre Reading comprehension synthesis, story mapping, and official test, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor."
 
---- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 seg aprox) ---
+--- DIAPOSITIVA 3: Aparición del Conflicto / Misterio (9 segundos) ---
 1. Propósito Didáctico: Aparición del Conflicto / Misterio
 2. Título en Pantalla (64 pt): El enigma disciplinar
 3. Subtítulo en Pantalla (36 pt): Desafío en Resolution, Moral of the Story, and Reading Test
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Reading comprehension synthesis, story mapping, and official test
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Surge un reto concreto sobre Resolution, Moral of the Story, and Reading Test: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso."
 
---- DIAPOSITIVA 4: Exploración de Pistas (9 seg aprox) ---
+--- DIAPOSITIVA 4: Exploración de Pistas (9 segundos) ---
 1. Propósito Didáctico: Exploración de Pistas
 2. Título en Pantalla (64 pt): Análisis de evidencias
 3. Subtítulo en Pantalla (36 pt): Reading comprehension synthesis, story mapping, and official test
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Reading comprehension synthesis, story mapping, and official test
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Ambos comparan las pistas disponibles sobre Reading comprehension synthesis, story mapping, and official test. Cada dato confirma cómo interactúan los elementos clave de la situación."
 
---- DIAPOSITIVA 5: El Momento Crítico (9 seg aprox) ---
+--- DIAPOSITIVA 5: El Momento Crítico (9 segundos) ---
 1. Propósito Didáctico: El Momento Crítico
 2. Título en Pantalla (64 pt): Criterio de decisión
 3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Reading comprehension synthesis, story mapping, and official test
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Resolution, Moral of the Story, and Reading Test con total precisión metodológica."
 
---- DIAPOSITIVA 6: La Antesala de la Pregunta (9 seg aprox) ---
+--- DIAPOSITIVA 6: La Antesala de la Pregunta (9 segundos) ---
 1. Propósito Didáctico: La Antesala de la Pregunta
 2. Título en Pantalla (64 pt): El dilema central
 3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Resolution, Moral of the Story, and Reading Test?
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Language puzzle: Identifying narrative clues in English
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje."
 
---- DIAPOSITIVA 7: La Pregunta Detonante (9 seg aprox) ---
+--- DIAPOSITIVA 7: La Pregunta Detonante (9 segundos) ---
 1. Propósito Didáctico: La Pregunta Detonante
 2. Título en Pantalla (64 pt): Pregunta detonante
 3. Subtítulo en Pantalla (36 pt): Regla y método de Resolution, Moral of the Story, and Reading Test
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Trigger question: How do we express Resolution, Moral of the Story, and Reading Test accurately?
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!"
 
 ================================================================================
@@ -1775,60 +1850,67 @@ Titulo: Video Explicativo: Formalización de Resolution, Moral of the Story, and
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Objetivo de la Lección (12 seg aprox) ---
+--- DIAPOSITIVA 1: Objetivo de la Lección (12 segundos) ---
 1. Propósito Didáctico: Objetivo de la Lección
 2. Título en Pantalla (64 pt): Objetivo de la lección
 3. Subtítulo en Pantalla (36 pt): Master Resolution, Moral of the Story, and Reading Test: Reading comprehension synthesis, story mapping, and official test
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Reading comprehension synthesis, story mapping, and official test. High clarity, negative space for text. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Formal heading: OA 9 · Resolution, Moral of the Story, and Reading Test
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Today our goal is to learn how to master reading comprehension synthesis, story mapping, and official test, applying clear disciplinary steps with total confidence."
 
---- DIAPOSITIVA 2: Definición del Concepto Central (12 seg aprox) ---
+--- DIAPOSITIVA 2: Definición del Concepto Central (12 segundos) ---
 1. Propósito Didáctico: Definición del Concepto Central
 2. Título en Pantalla (64 pt): Concepto fundamental
 3. Subtítulo en Pantalla (36 pt): Reading comprehension synthesis, story mapping, and official test
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Sentence formula: Structure of Reading comprehension synthesis, story mapping, and official test
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "To understand Resolution, Moral of the Story, and Reading Test, we establish a clean conceptual foundation connecting the core definition with verifiable concrete evidence."
 
---- DIAPOSITIVA 3: Demostración Modelada (12 seg aprox) ---
+--- DIAPOSITIVA 3: Demostración Modelada (12 segundos) ---
 1. Propósito Didáctico: Demostración Modelada
 2. Título en Pantalla (64 pt): Modelamiento paso a paso
 3. Subtítulo en Pantalla (36 pt): Procedimiento de Resolution, Moral of the Story, and Reading Test
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Color-coded grammar blocks with modeled example
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Observe how the procedure unfolds in this guided demonstration: every single change responds to an explicit disciplinary rule."
 
---- DIAPOSITIVA 4: Prevención del Error Frecuente (13 seg aprox) ---
+--- DIAPOSITIVA 4: Prevención del Error Frecuente (13 segundos) ---
 1. Propósito Didáctico: Prevención del Error Frecuente
 2. Título en Pantalla (64 pt): Atención: Error habitual
 3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Error contrast: common grammar and punctuation pitfall
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "A common pitfall happens when overlooking order or basic conventions. We always check each intermediate step before concluding."
 
---- DIAPOSITIVA 5: Comprobación del Resultado (12 seg aprox) ---
+--- DIAPOSITIVA 5: Comprobación del Resultado (12 segundos) ---
 1. Propósito Didáctico: Comprobación del Resultado
 2. Título en Pantalla (64 pt): Validación del resultado
 3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Meaning validation: verifying sentence cohesion
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "By contrasting the result with our initial scenario, we confirm that our solution is consistent, rigorous, and fully answers the question."
 
---- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 seg aprox) ---
+--- DIAPOSITIVA 6: Estrategia Mnemotécnica (12 segundos) ---
 1. Propósito Didáctico: Estrategia Mnemotécnica
 2. Título en Pantalla (64 pt): Estrategia de pensamiento
 3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Memory strategy: Connector + Subject + Verb + Context
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Always remember the three-step thinking strategy: identify the key data, apply the formal rule in order, and verify the final result."
 
---- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 seg aprox) ---
+--- DIAPOSITIVA 7: Síntesis y Regla de Oro (12 segundos) ---
 1. Propósito Didáctico: Síntesis y Regla de Oro
 2. Título en Pantalla (64 pt): Regla de Oro: Resolution, Moral of the Story, and Reading Test
 3. Subtítulo en Pantalla (36 pt): Método disciplinar validado
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Summary infography: Golden rule of Resolution, Moral of the Story, and Reading Test
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Now that you understand the golden rule and the procedure of Resolution, Moral of the Story, and Reading Test, let us practice and prove our skills in the interactive platform!"
 
 ================================================================================

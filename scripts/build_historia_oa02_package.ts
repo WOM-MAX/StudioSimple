@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
-import { Packer } from 'docx';
+import { Packer } from '../Web Studio Simple/node_modules/docx';
 import { adaptPlayerLessonToGenerator } from '../Web Studio Simple/src/lib/lesson-adapter';
 import { buildOAPackageDocx } from '../Web Studio Simple/src/lib/docx-export';
 import { buildLessonPromptText } from '../Web Studio Simple/src/lib/prompt-export';
@@ -58,11 +58,34 @@ async function main() {
 
   console.log(`✓ Paquete configurado con ${pkg.lessons.length} lecciones reales.`);
 
+  const now = new Date();
+  const santiagoTimestamp = now.toLocaleString('sv-SE', { timeZone: 'America/Santiago' }) + ' [America/Santiago]';
+  const fileDate = now.toLocaleDateString('sv-SE', { timeZone: 'America/Santiago' });
+  const fileTime = now.toLocaleTimeString('es-CL', { timeZone: 'America/Santiago', hour12: false, hour: '2-digit', minute: '2-digit' }).replace(':', '-');
+  const fileTimestamp = `${fileDate}_${fileTime}`;
+
+  const docxFilename = `Plan_Maestro_7Básico_110-7-HIS-OA02_6Lecciones_${fileTimestamp}.docx`;
+  const promptFilename = `Prompts_Work_Historia_7B_OA02_${fileTimestamp}.txt`;
+
+  // Eliminar versiones previas para conservar únicamente el más actualizado
+  if (fs.existsSync(targetOaDir)) {
+    const existing = fs.readdirSync(targetOaDir);
+    for (const f of existing) {
+      if (f.startsWith('Plan_Maestro_') && f.endsWith('.docx') && f !== docxFilename) {
+        fs.unlinkSync(path.join(targetOaDir, f));
+        console.log(`Versión anterior de DOCX eliminada: ${f}`);
+      }
+      if (f.startsWith('Prompts_Work_') && f.endsWith('.txt') && f !== promptFilename) {
+        fs.unlinkSync(path.join(targetOaDir, f));
+        console.log(`Versión anterior de Prompts eliminada: ${f}`);
+      }
+    }
+  }
+
   // 2. Compilar y guardar nuevo DOCX oficial de 6 lecciones
   console.log('Compilando DOCX oficial canónico (buildOAPackageDocx)...');
-  const doc = buildOAPackageDocx(pkg);
+  const doc = buildOAPackageDocx(pkg, santiagoTimestamp);
   const docxBuffer = await Packer.toBuffer(doc);
-  const docxFilename = 'Plan_Maestro_7Básico_110-7-HIS-OA02_6Lecciones.docx';
   const docxPath = path.join(targetOaDir, docxFilename);
   fs.writeFileSync(docxPath, docxBuffer);
   const docxBytes = fs.statSync(docxPath).size;
@@ -83,8 +106,10 @@ async function main() {
   promptText += `================================================================================\n`;
   promptText += `STUDIOSIMPLE - PAQUETE DE PROMPTS Y GUIONES OFICIALES PARA CHATGPT WORK\n`;
   promptText += `ASIGNATURA: HISTORIA, GEOGRAFÍA Y CIENCIAS SOCIALES\n`;
+  promptText += `ARCHIVO: ${promptFilename}\n`;
   promptText += `CURSO: 7° BASICO | OBJETIVO: OA 2 (${catalogItem.descripcion})\n`;
   promptText += `TOTAL DE CLASES: 6 LECCIONES (14 DIAPOSITIVAS POR CLASE = 84 LÁMINAS TOTALES)\n`;
+  promptText += `FECHA Y HORA DE ACTUALIZACIÓN OFICIAL: ${santiagoTimestamp}\n`;
   promptText += `FORMATO: 7 DIAPOSITIVAS VIDEO GANCHO (60s) + 7 DIAPOSITIVAS VIDEO EXPLICATIVO (90s)\n`;
   promptText += `ESTILO VISUAL: ANIME MODERNO 16:9 | PROTAGONISTAS: EXPLORADORES 13 AÑOS (NIÑA TRENZAS + NIÑO CHAQUETA CERCETA)\n`;
   promptText += `REGLAS DE ARTE: FONDOS LIMPIOS CON ESPACIO NEGATIVO REAL, SIN TEXTO Y SIN LOGO DIBUJADO POR IA\n`;
@@ -100,7 +125,6 @@ async function main() {
     promptText += `\n\n`;
   });
 
-  const promptFilename = 'Prompts_Work_Historia_7B_OA02.txt';
   const promptPath = path.join(targetOaDir, promptFilename);
   fs.writeFileSync(promptPath, promptText, 'utf-8');
   const promptBytes = fs.statSync(promptPath).size;

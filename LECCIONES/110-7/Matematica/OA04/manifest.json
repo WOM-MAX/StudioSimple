@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2.0.0",
-  "generatedAt": "2026-10-08 17:43:59 [America/Santiago]",
+  "generatedAt": "2026-10-08 17:52:12 [America/Santiago]",
   "status": "EN_REVISION",
   "etapa_revision": "WORK_PRE_APROBACION",
   "oaIdentifier": "110-7-MAT-OA04",
@@ -87,16 +87,16 @@
   ],
   "artifacts": {
     "docxMaster": {
-      "filename": "Plan_Maestro_7Básico_110-7-MAT-OA04_6Lecciones_2026-10-08_17-43.docx",
-      "relativePath": "LECCIONES/110-7/Matematica/OA04/Plan_Maestro_7Básico_110-7-MAT-OA04_6Lecciones_2026-10-08_17-43.docx",
-      "sizeBytes": 71690,
-      "sha256": "c38fa913f758555978af219b3bea6176da6b5e23b82dc17b1584bf50b511469e"
+      "filename": "Plan_Maestro_7Básico_110-7-MAT-OA04_6Lecciones_2026-10-08_17-52.docx",
+      "relativePath": "LECCIONES/110-7/Matematica/OA04/Plan_Maestro_7Básico_110-7-MAT-OA04_6Lecciones_2026-10-08_17-52.docx",
+      "sizeBytes": 71748,
+      "sha256": "de3ea8201a8573137dcb422d49a8137828cb3cf747843b00143f43f611164ebd"
     },
     "promptsWorkTxt": {
-      "filename": "Prompts_Work_Matematica_7B_OA04_2026-10-08_17-43.txt",
-      "relativePath": "LECCIONES/110-7/Matematica/OA04/Prompts_Work_Matematica_7B_OA04_2026-10-08_17-43.txt",
-      "sizeBytes": 204569,
-      "sha256": "ca3fa26db6c7125b405880c846d049aeee6b252e89c9d998c27b203fbb7d6c90"
+      "filename": "Prompts_Work_Matematica_7B_OA04_2026-10-08_17-52.txt",
+      "relativePath": "LECCIONES/110-7/Matematica/OA04/Prompts_Work_Matematica_7B_OA04_2026-10-08_17-52.txt",
+      "sizeBytes": 206023,
+      "sha256": "588862787bd2516d176517ab5ae64db4afc562adca280f7bb381f7b44d91c863"
     }
   },
   "governance": {

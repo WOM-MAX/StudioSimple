@@ -8,17 +8,19 @@
   "estado": "APROBADA",
   "total_clases": 6,
   "fuente_oficial_unica_docx": {
-    "archivo": "Plan_Maestro_7Básico_110-7-CIE-OA01_6Lecciones.docx",
+    "archivo": "Plan_Maestro_7Básico_110-7-CIE-OA01_6Lecciones_2026-10-08_17-52.docx",
     "rol": "Unica fuente oficial de produccion de lecciones y prompts",
-    "sha256": "3792cd43c2d0108c63560250a7df556f1c64a0ef3043bcd2a1894e3f81c11209",
-    "bytes": 76025
+    "sha256": "443a8011ed2ddb2069d5b903a0555740fabf195f2f62321a850bd34eeafbe633",
+    "bytes": 82840
   },
   "prompts_asociados": {
-    "archivo": "Prompts_Work_Ciencias_7B_OA01.txt",
-    "ruta_origen_zip_anterior": "DESCARGA_LECCIONES/PROMPTS_TXT_PARA_WORK/Prompts_Work_Ciencias_7B_OA01.txt",
+    "archivo": "Prompts_Work_Ciencias_7B_OA01_2026-10-08_17-52.txt",
+    "ruta_origen_zip_anterior": "DESCARGA_LECCIONES/PROMPTS_TXT_PARA_WORK/Prompts_Work_Ciencias_7B_OA01_2026-10-08_17-49.txt",
     "total_laminas": 84,
     "laminas_por_clase": 14,
-    "perfil_evaluacion": "Perfil 7° Básico (14 láminas bimodales: 7 Gancho + 7 Explicación; 4 alternativas A-D en todas las preguntas)"
+    "perfil_evaluacion": "Perfil 7° Básico (14 láminas bimodales: 7 Gancho + 7 Explicación; 4 alternativas A-D en todas las preguntas)",
+    "sha256": "e4694197d50559f3a58c8753c537458bfadfba25c8799d26d14793fe26220abe",
+    "bytes": 233925
   },
   "fundamentacion_curricular": {
     "temario_eell": {
@@ -48,5 +50,27 @@
       "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase05.ts",
       "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase06.ts"
     ]
+  },
+  "schemaVersion": "2.0.0",
+  "generatedAt": "2026-10-08 17:52:12 [America/Santiago]",
+  "status": "APROBADA",
+  "etapa_revision": "WORK_PRE_APROBACION",
+  "oaIdentifier": "110-7-CIE-OA01",
+  "course": "7° Básico",
+  "subject": "Ciencias Naturales",
+  "totalLessons": 6,
+  "artifacts": {
+    "docxMaster": {
+      "filename": "Plan_Maestro_7Básico_110-7-CIE-OA01_6Lecciones_2026-10-08_17-52.docx",
+      "relativePath": "LECCIONES/110-7/Ciencias_Naturales/OA01/Plan_Maestro_7Básico_110-7-CIE-OA01_6Lecciones_2026-10-08_17-52.docx",
+      "sizeBytes": 82840,
+      "sha256": "443a8011ed2ddb2069d5b903a0555740fabf195f2f62321a850bd34eeafbe633"
+    },
+    "promptsWorkTxt": {
+      "filename": "Prompts_Work_Ciencias_7B_OA01_2026-10-08_17-52.txt",
+      "relativePath": "LECCIONES/110-7/Ciencias_Naturales/OA01/Prompts_Work_Ciencias_7B_OA01_2026-10-08_17-52.txt",
+      "sizeBytes": 233925,
+      "sha256": "e4694197d50559f3a58c8753c537458bfadfba25c8799d26d14793fe26220abe"
+    }
   }
 }

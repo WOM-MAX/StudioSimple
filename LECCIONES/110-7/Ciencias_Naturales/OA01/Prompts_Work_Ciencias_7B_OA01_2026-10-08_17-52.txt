@@ -1,16 +1,20 @@
 ================================================================================
-STUDIOSIMPLE - PAQUETE DE PROMPTS Y GUIONES OFICIALES PARA CHATGPT WORK
-ASIGNATURA: CIENCIAS NATURALES | CURSO: 7° BÁSICO | OBJETIVO: OA 01
-PAQUETE COMPLETO: 6 LECCIONES CANÓNICAS (14 LÁMINAS POR LECCIÓN = 84 LÁMINAS)
-FECHA DE COMPILACIÓN OFICIAL: 08-10-2026, 1:25:30 p. m. (America/Santiago)
+STUDIOSIMPLE - PAQUETE COMPLETO DE PROMPTS Y GUIONES MAESTROS
+CURSO: 7° BASICO | ASIGNATURA: CIENCIAS NATURALES | OA: 110-7-CIE-OA01
+ARCHIVO: Prompts_Work_Ciencias_7B_OA01_2026-10-08_17-52.txt
+TOTAL DE CLASES: 6 CLASES CANONICAS BIMODALES (14 LAMINAS CADA UNA = 84 LAMINAS TOTALES)
+FORMATO: 7 DIAPOSITIVAS VIDEO GANCHO (60s) + 7 DIAPOSITIVAS VIDEO EXPLICATIVO (90s)
+FECHA Y HORA DE ACTUALIZACION: 2026-10-08 17:52:12 [America/Santiago]
+DESTINATARIO: CHATGPT WORK / CODEX (MAQUETACION PPTX 16:9 EN PYTHON)
 ================================================================================
 
 ################################################################################
-LECCIÓN 1 DE 6: LAS 4 DIMENSIONES DE LA SEXUALIDAD HUMANA
+CLASE 1 DE 6: LAS 4 DIMENSIONES DE LA SEXUALIDAD HUMANA
 ################################################################################
 
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 08-10-2026, 5:52:12 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -55,6 +59,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Mucho más que un fenómeno biológico
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining a glowing interactive holographic infographic of the 4 dimensions of human sexuality in a warm scientific atmosphere, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema integrador: Silueta humana y 4 nodos dimensionales interconectados
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Comienza una expedición fascinante en ciencias. La sexualidad humana es una vivencia integral presente en todas las etapas de nuestra vida."
 
 --- DIAPOSITIVA 2: Dimensión Biológica (8 segundos) ---
@@ -63,6 +68,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): El cuerpo físico y los cambios puberales
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing a clean anatomical growth chart showing developmental milestones of puberty and height markers with clinical clarity, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa médica: Eje de maduración corporal, estirón y caracteres sexuales secundarios
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Comprende nuestro cuerpo material, la maduración celular y los cambios puberales que transforman nuestra estatura, voz y fisonomía."
 
 --- DIAPOSITIVA 3: Dimensión Afectiva (10 segundos) ---
@@ -71,6 +77,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Emociones, cariño y autoestima
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, sharing a sincere laugh in a sunlit school courtyard, with softly illuminated icons of heart and brain symbolizing emotional connection, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Iconografía emocional: Vínculos de apego, empatía y autoimagen positiva
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Reúne nuestros sentimientos, la autoestima personal, el cariño y la capacidad de establecer lazos de ternura y confianza profunda con otros."
 
 --- DIAPOSITIVA 4: Dimensión Social (9 segundos) ---
@@ -79,6 +86,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Familia, amistades y cultura
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, collaborating respectfully with a diverse group of young students and families in a bright park, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Red de interacción: Individuo en el centro rodeado por familia, escuela y comunidad
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Se manifiesta en cómo convivimos día a día, compartiendo experiencias con la familia, en la escuela y dialogando con amigos."
 
 --- DIAPOSITIVA 5: Dimensión Ética (9 segundos) ---
@@ -87,6 +95,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Valores, consentimiento y dignidad
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, observing a balanced scale illustration with glowing representations of respect, personal limits, consent, and mutual dignity, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Símbolos normativos: Escudo de límites personales y balanza de respeto mutuo
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Guía nuestras decisiones morales a través del respeto incondicional a la dignidad humana, límites personales y el consentimiento mutuo."
 
 --- DIAPOSITIVA 6: Interrelación de Dimensiones (8 segundos) ---
@@ -95,6 +104,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Cuatro dimensiones que dialogan a la vez
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, observing the four dimensions connecting dynamically with glowing energetic nodes around a human silhouette, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama dinámico de 4 cuadrantes con flechas de retroalimentación recíproca
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Ninguna dimensión funciona aislada. Lo que experimenta nuestro cuerpo repercute en nuestras emociones y moldea nuestras relaciones comunitarias."
 
 --- DIAPOSITIVA 7: Pregunta Detonante (9 segundos) ---
@@ -103,6 +113,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): ¿Cómo actúan las 4 dimensiones juntas?
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, smiling ready to investigate everyday cases with their science notebooks open in an organized study room, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta detonante: ¿Cómo influyen los 4 aspectos en una decisión cotidiana real?
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Ahora surge la gran pregunta: al enfrentar un cambio en nuestra adolescencia, ¿cómo interactúan estas cuatro dimensiones al mismo tiempo?"
 
 ================================================================================
@@ -122,6 +133,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Comprender la sexualidad como dimensión integral
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing before a clear 4-quadrant lightboard representing biological, affective, social, and ethical dimensions, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 01 · Modelo Integral de la Sexualidad Humana
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El objetivo de la lección es reconocer y explicar que la sexualidad humana está conformada por cuatro dimensiones inseparables: biológica, afectiva, social y ética."
 
 --- DIAPOSITIVA 2: Análisis Biológico (10 segundos) ---
@@ -130,6 +142,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Maduración fisiológica y sistema endocrino
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing growth metrics, voice change diagrams, and cellular maturation charts on a holographic display with clinical clarity, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama endocrino: Hipotálamo (GnRH) -> Hipófisis anterior (LH y FSH) -> Gónadas (hormonas sexuales) -> Cambios puberales
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "La pubertad inicia cuando el hipotálamo (GnRH) estimula a la hipófisis anterior para secretar LH y FSH, las cuales activan a las gónadas a producir hormonas sexuales que inducen los cambios puberales."
 
 --- DIAPOSITIVA 3: Análisis Afectivo (12 segundos) ---
@@ -138,6 +151,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Autoestima y gestión de los afectos
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, reflecting on emotional self-worth, feelings, and family bonds with gentle warm ambient lighting, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo de autovaloración: Identidad personal, autoaceptación y expresión sana de sentimientos
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El eje afectivo orienta cómo nos sentimos con nosotros mismos. Una autoestima sólida permite valorar el propio cuerpo y comunicar afectos de manera asertiva y respetuosa."
 
 --- DIAPOSITIVA 4: Análisis Social (11 segundos) ---
@@ -146,6 +160,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Pertenencia, roles y vida en sociedad
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, participating in school and family dialogues with peers, showing open active listening in a bright library, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Matriz sociocultural: Normas de convivencia escolar, dinámicas familiares y equidad
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "En el entorno social aprendemos pautas culturales y construimos amistades. La dimensión social nos invita a convivir en igualdad de derechos sin discriminación ni estereotipos."
 
 --- DIAPOSITIVA 5: Análisis Ético (12 segundos) ---
@@ -154,6 +169,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Dignidad humana y límites inviolables
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, holding a glowing cyan symbolic compass of mutual respect, personal boundaries, and dignity, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa ética: Principio de consentimiento explícito y respeto a la privacidad del prójimo
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El eje ético establece que el cuerpo de cada individuo es inviolable. Toda relación humana sana se funda en la dignidad, honestidad y consentimiento libre y mutuo."
 
 --- DIAPOSITIVA 6: Casos Concretos (18 segundos) ---
@@ -162,6 +178,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Identificar la dimensión en una decisión real
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, reviewing an illustrated daily hygiene and sleep schedule routine on a study desk with clean lineart, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Desglose del caso: Hábitos de higiene y descanso -> Cuidado del cuerpo -> Dimensión Biológica
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Analicemos un caso concreto: mantener hábitos de higiene diaria, ropa limpia y dormir ocho horas para cuidar el cuerpo durante el crecimiento, ¿a qué dimensión corresponde? Corresponde a la dimensión biológica, porque beneficia directamente la salud, anatomía y bienestar del organismo."
 
 --- DIAPOSITIVA 7: Síntesis y Regla de Oro (13 segundos) ---
@@ -170,6 +187,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Cuatro dimensiones unidas en salud integral
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, presenting a prominent balance diagram with all four dimensions working in dynamic equilibrium in a bright modern science laboratory, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Infografía de síntesis: Las 4 dimensiones convergen en el bienestar integral de la persona
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Recuerda la regla de oro: la sexualidad es integral. Une cuerpo, emociones, sociedad y valores. ¡Ahora pon a prueba lo aprendido resolviendo las actividades prácticas en la plataforma interactiva!"
 
 ================================================================================
@@ -330,11 +348,12 @@ Refuerzo 1 (Recuperación: Las 4 Dimensiones de la Sexualidad):
 
 
 ################################################################################
-LECCIÓN 2 DE 6: TRANSFORMACIONES FÍSICAS Y EMOCIONALES EN LA PUBERTAD
+CLASE 2 DE 6: TRANSFORMACIONES FÍSICAS Y EMOCIONALES EN LA PUBERTAD
 ################################################################################
 
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 08-10-2026, 5:52:12 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -379,6 +398,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): El inicio de una nueva etapa de crecimiento
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining a glowing timeline of human growth in a bright science lab, observing the endocrine transition, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Cronograma de desarrollo: Infancia -> Pubertad -> Adolescencia
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Comienza una expedición en ciencias. La pubertad marca el inicio de cambios corporales y emocionales guiados por señales químicas."
 
 --- DIAPOSITIVA 2: El Centro de Mando: La Hipófisis (9 segundos) ---
@@ -387,6 +407,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Centro emisor de hormonas reguladoras
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining a medical diagram in a clean holographic sphere showing the pituitary gland and descending hormonal signals, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema endocrino: Hipotálamo (GnRH) -> Hipófisis anterior (LH y FSH) -> Gónadas (hormonas sexuales) -> Cambios puberales
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "En el encéfalo, el hipotálamo libera GnRH estimulando a la hipófisis anterior para secretar LH y FSH, las cuales activan a las gónadas a producir hormonas sexuales."
 
 --- DIAPOSITIVA 3: Caracteres Sexuales Primarios (8 segundos) ---
@@ -395,6 +416,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Estructuras anatómicas presentes desde que nacemos
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, studying an anatomical diagram of primary reproductive organs present from birth with respectful scientific curiosity, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Definición médica: Órganos genitales externos e internos presentes en el recién nacido
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Los caracteres primarios son los órganos reproductores. Están formados desde la gestación y nos acompañan desde el nacimiento."
 
 --- DIAPOSITIVA 4: Caracteres Sexuales Secundarios (9 segundos) ---
@@ -403,6 +425,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Cambios físicos visibles durante la pubertad
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, observing comparison silhouettes illustrating height markers, shoulder broadening, and vocal changes of puberty, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Matriz comparativa: Estirón puberal, cambio de voz, distribución de grasa y vello
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "En la pubertad surgen los caracteres secundarios: aumento de estatura, cambio en el tono de voz y aparición de vello."
 
 --- DIAPOSITIVA 5: El Mundo de las Emociones (8 segundos) ---
@@ -411,6 +434,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Búsqueda de autonomía y nuevas inquietudes
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, reflecting outdoors under a gentle autumn tree, expressing camaraderie and emotional growth in the pubertal stage, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema psicológico: Cambios de humor transitorios y necesidad de autoafirmación
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Las hormonas también influyen en los afectos. Experimentamos cambios de ánimo y la necesidad de construir nuestra identidad."
 
 --- DIAPOSITIVA 6: Cada Cuerpo a su Propio Ritmo (10 segundos) ---
@@ -419,6 +443,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Cada persona se desarrolla a un ritmo único
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, interacting with healthy teenage friends of different heights and physical builds, observing diverse developmental and growth rhythms, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Consenso médico: Inicio habitual entre 8-13 años (niñas) y 9-14 años (niños) según Tanner / MedlinePlus
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "No todos los cuerpos crecen al mismo tiempo. La pubertad inicia habitualmente entre los 8 y 13 años en niñas y entre los 9 y 14 años en niños según consensos médicos (Tanner / MedlinePlus), mientras que el estirón de estatura ocurre como un hito posterior."
 
 --- DIAPOSITIVA 7: La Pregunta Detonante (8 segundos) ---
@@ -427,6 +452,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): ¿Cómo clasificamos cada cambio con exactitud?
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, ready to classify developmental traits with their science notebooks open in an organized science study room, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta detonante: ¿Qué criterio biológico diferencia a cada carácter sexual?
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Surge ahora el desafío: al analizar un cambio puberal, ¿cómo determinamos si es primario o secundario sin dudar?"
 
 ================================================================================
@@ -446,6 +472,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Diferenciar caracteres sexuales primarios de secundarios
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing before a clear two-column digital panel contrasting primary and secondary sexual characteristics, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 01 · Diferenciación de Caracteres Sexuales y Pubertad
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El objetivo de la lección es diferenciar con precisión científica los caracteres sexuales primarios de los secundarios, comprendiendo la acción del sistema endocrino en la pubertad."
 
 --- DIAPOSITIVA 2: Mecanismo Hormonal: Eje Hipófisis-Gónadas (11 segundos) ---
@@ -454,6 +481,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Señales de LH, FSH y hormonas sexuales
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, in a modern science laboratory observing blank modular comparison panels representing the endocrine pathway with hypothalamus, pituitary and gonads, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama fisiológico: Hipotálamo (GnRH) -> Hipófisis anterior (LH y FSH) -> Gónadas (hormonas sexuales) -> Cambios puberales
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "La pubertad inicia cuando el hipotálamo (GnRH) estimula a la hipófisis anterior para liberar LH y FSH; estas viajan por la sangre y activan a las gónadas a producir hormonas sexuales como estrógenos y testosterona que inducen los cambios puberales."
 
 --- DIAPOSITIVA 3: Definición de Caracteres Primarios (11 segundos) ---
@@ -462,6 +490,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Estructuras anatómicas presentes desde el nacimiento
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, studying a respectful anatomical diagram of primary reproductive organs present from birth, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa anatómica: Órganos reproductores congénitos presentes desde la gestación y el nacimiento
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Los caracteres primarios son los órganos reproductores congénitos presentes desde el nacimiento; se formaron durante la gestación y existen antes de las señales hormonales de la pubertad."
 
 --- DIAPOSITIVA 4: Definición de Caracteres Secundarios (17 segundos) ---
@@ -470,6 +499,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Rasgos corporales activados en la pubertad
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, comparing growth curves and percentiles in their notebooks, laughing warmly with reassurance about individual rhythms, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa puberal: Estirón estatural, cambio de voz, desarrollo mamario y vello corporal
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Los caracteres secundarios surgen en la pubertad por estímulo de las hormonas sexuales: provocan el estirón de estatura, cambio de voz, desarrollo mamario y aparición de vello."
 
 --- DIAPOSITIVA 5: Dimensión Emocional y Autonomía (9 segundos) ---
@@ -478,6 +508,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Sentimientos, independencia y diálogo familiar
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, writing in their science journals while a supportive family chats in the background living room, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema biopsicosocial: Cambios hormonales conectados con la autoimagen y la vida familiar
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "La maduración puberal también impacta las emociones y la autonomía, requiriendo comunicación empática y diálogo cercano en el hogar."
 
 --- DIAPOSITIVA 6: Caso Modelado: Voz y Estatura (14 segundos) ---
@@ -486,6 +517,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Identificación de caracteres con justificación biológica
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing an illustrated medical card with height metrics and voice frequency charts on their desk, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Desglose del caso: Aumento de estatura y cambio de voz -> Aparecen en la pubertad -> Caracteres Secundarios
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Analicemos un caso concreto: el cambio de voz y el aumento de estatura corresponden a caracteres secundarios, ya que surgen en la pubertad por estímulo hormonal y no estaban al nacer."
 
 --- DIAPOSITIVA 7: Síntesis y Regla de Oro (15 segundos) ---
@@ -494,6 +526,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Nacimiento = Primarios | Pubertad = Secundarios
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, presenting a two-part diagram contrasting primary organs from birth with pubertal secondary traits in a bright science laboratory, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Infografía de síntesis: Órganos de nacimiento (primarios) vs rasgos puberales hormonales (secundarios)
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Recuerda la regla de oro: los caracteres primarios nacen con nosotros; los secundarios despiertan en la pubertad por acción hormonal. ¡Ahora pon a prueba lo aprendido resolviendo las actividades prácticas en la plataforma interactiva!"
 
 ================================================================================
@@ -655,11 +688,12 @@ Refuerzo 1 (Recuperación: Caracteres Primarios vs Secundarios):
 
 
 ################################################################################
-LECCIÓN 3 DE 6: VÍNCULOS AFECTIVOS, RESPETO MUTUO E INTIMIDAD
+CLASE 3 DE 6: VÍNCULOS AFECTIVOS, RESPETO MUTUO E INTIMIDAD
 ################################################################################
 
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 08-10-2026, 5:52:12 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -704,6 +738,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Construir relaciones basadas en la confianza
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, sharing a peaceful conversation on a wooden bench in a sunlit courtyard, learning the value of empathy and friendship, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Red de interacción positiva: Confianza recíproca, diálogo sincero y aprecio mutuo
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Comienza una nueva expedición en ciencias. Los seres humanos somos sociales por naturaleza y nuestros vínculos afectivos determinan nuestra felicidad y salud mental."
 
 --- DIAPOSITIVA 2: La Escucha Activa y la Empatía (9 segundos) ---
@@ -712,6 +747,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Comprender los sentimientos del compañero
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, resolving a misunderstanding calmly under a courtyard pergola with active listening gestures and mutual respect, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa comunicativa: Escucha atenta sin interrumpir -> Validación emocional
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "En la adolescencia, las amistades cobran un valor central. Aprendemos a compartir vivencias, escuchar con paciencia y brindar apoyo sincero."
 
 --- DIAPOSITIVA 3: Reciprocidad y Respeto Mutuo (10 segundos) ---
@@ -720,6 +756,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Relaciones equilibradas sin imposiciones
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, visualizing two thought bubbles overlapping in gentle harmony representing empathy and reciprocal perspective, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Balanza de reciprocidad: Aporte compartido de ideas y respeto de los tiempos ajenos
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "La empatía es la capacidad de ponerse en el lugar del otro, comprendiendo sus emociones y respetando sus puntos de vista sin juzgar."
 
 --- DIAPOSITIVA 4: El Territorio de la Intimidad (10 segundos) ---
@@ -728,6 +765,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Pensamientos, emociones y vivencias reservadas
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, holding an illustrated symbolic boundary indicator representing personal boundaries, intimacy, and family privacy, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa de privacidad: Círculo de intimidad personal protegido por límites claros
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "La intimidad es nuestro espacio personal más reservado. Cada persona tiene derecho a decidir qué comparte y qué guarda para sí misma."
 
 --- DIAPOSITIVA 5: Intimidad en la Era Digital (10 segundos) ---
@@ -736,6 +774,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Proteger la privacidad propia y ajena en redes
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, responsibly reviewing privacy settings on digital tablets with a protective digital shield icon, respecting personal boundaries and digital privacy, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Escudo digital: Respeto a fotos privadas, contraseñas y mensajes personales
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Cuidar la intimidad digital significa respetar las fotos, mensajes y contraseñas de los demás, recordando que la privacidad personal es un derecho innegociable en redes sociales."
 
 --- DIAPOSITIVA 6: El Hogar como Refugio Afectivo (10 segundos) ---
@@ -744,6 +783,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Espacio de seguridad para compartir inquietudes
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, engaged in a warm, open dialogue with family members in a welcoming living room setting, experiencing emotional support and understanding, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Núcleo familiar: Diálogo abierto, afecto incondicional y acompañamiento en dudas
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Cuando surge un desacuerdo con amigos o familia, el diálogo sincero y la calma permiten encontrar acuerdos justos que cuiden la relación."
 
 --- DIAPOSITIVA 7: La Pregunta Detonante (9 segundos) ---
@@ -752,6 +792,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): ¿Cómo cultivamos vínculos de respeto mutuo?
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, holding open science notebooks, ready to investigate interpersonal cases in a warm modern study room, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta detonante: ¿Qué principio guía una relación sana ante un conflicto?
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Surge ahora la pregunta: en nuestras relaciones diarias, ¿cómo podemos cuidar la intimidad ajena y expresar afecto con madurez?"
 
 ================================================================================
@@ -771,6 +812,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Comprender empatía, reciprocidad e intimidad en vínculos
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing next to a glowing infographic illustrating empathy, mutual trust, and personal intimacy, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 01 · Vínculos Afectivos, Empatía e Intimidad
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El objetivo de la lección es comprender el valor de la empatía, el respeto mutuo y la intimidad en los vínculos afectivos de la adolescencia."
 
 --- DIAPOSITIVA 2: Empatía: El Arte de Conectar (12 segundos) ---
@@ -779,6 +821,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Sintonizar con las emociones del prójimo
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, listening intently to each other with speech bubbles transforming into a bridge of reciprocal understanding, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema socioafectivo: Reconocer emoción ajena -> Validar sin juzgar -> Responder con afecto
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "La empatía es la capacidad de comprender y sintonizar con los sentimientos del otro; nos permite escuchar activamente sin juzgar y validar las emociones de nuestros pares."
 
 --- DIAPOSITIVA 3: Reciprocidad: Equilibrio en el Afecto (13 segundos) ---
@@ -787,6 +830,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Afecto compartido en igualdad de condiciones
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, observing a balanced scale of reciprocal care and mutual respect glowing softly in cyan and gold, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Principio ético: Ninguna persona debe estar sometida a los deseos exclusivos de la otra
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El principio de reciprocidad establece que el afecto, la consideración y el cuidado deben ser mutuos; ninguna persona debe asumir toda la carga emocional o someterse a la otra."
 
 --- DIAPOSITIVA 4: La Esfera de la Intimidad (13 segundos) ---
@@ -795,6 +839,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Espacio inviolable de la persona
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, keeping personal confidences safe beside a study desk with an illustrated lock and diary, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Matriz de privacidad: Límites corporales, emocionales y personales reconocidos por ley
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "La intimidad es el espacio inviolable de vivencias, pensamientos y emociones personales; respetarla implica no forzar revelaciones, guardar confidencias y proteger la privacidad."
 
 --- DIAPOSITIVA 5: Ciudadanía y Cuidado Digital (11 segundos) ---
@@ -803,6 +848,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Cero tolerancia a la divulgación no autorizada
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, high-fiving respectfully after establishing healthy teamwork boundaries and positive peer support, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Regla de oro digital: Lo privado se mantiene privado; compartir requiere permiso explícito
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "En entornos digitales, cuidar la intimidad exige contar siempre con consentimiento explícito antes de reenviar fotos o mensajes privados; lo íntimo debe mantenerse en reserva."
 
 --- DIAPOSITIVA 6: Caso Modelado: Resolución de Diferencias (27 segundos) ---
@@ -811,6 +857,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Búsqueda de acuerdos sin presiones ni imposición
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining an illustrated case card of respectful conflict resolution on a study desk, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Desglose del caso: Posturas opuestas -> Escucha empática -> Negociación compartida -> Vínculo fortalecido
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Analicemos un caso concreto: dos amigos debaten sobre cómo resolver una diferencia de opinión sobre un proyecto escolar sin presiones, aplicando diálogo sincero y respeto mutuo. ¿Qué principio afectivo y ético se aplica? Se aplica la comunicación empática y la reciprocidad, ya que ambos escuchan con respeto la postura del otro y construyen un acuerdo justo sin forzar voluntades."
 
 --- DIAPOSITIVA 7: Síntesis y Regla de Oro (14 segundos) ---
@@ -819,6 +866,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Empatía + Reciprocidad + Intimidad = Relaciones Sanas
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, presenting a three-pillar diagram of empathy, reciprocity, and intimacy in a brightly lit study environment, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Infografía de síntesis: La confianza duradera florece donde hay respeto por los límites del prójimo
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Recuerda la regla de oro: la reciprocidad y la empatía protegen la intimidad y fortalecen la amistad. ¡Ahora pon a prueba lo aprendido resolviendo las actividades prácticas en la plataforma interactiva!"
 
 ================================================================================
@@ -980,11 +1028,12 @@ Refuerzo 1 (Recuperación: El Valor de la Empatía y la Intimidad):
 
 
 ################################################################################
-LECCIÓN 4 DE 6: RESPONSABILIDAD INDIVIDUAL, AUTOCUIDADO Y CONSENTIMIENTO
+CLASE 4 DE 6: RESPONSABILIDAD INDIVIDUAL, AUTOCUIDADO Y CONSENTIMIENTO
 ################################################################################
 
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 08-10-2026, 5:52:12 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -1029,6 +1078,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Cuidar el propio cuerpo y asumir decisiones conscientes
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing in front of a welcoming digital board displaying the four pillars of responsible consent and self-care, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Camino de decisiones: Reflexión previa -> Evaluación de consecuencias -> Acción responsable
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Comienza una lección fundamental en ciencias. El autocuidado y la responsabilidad personal son herramientas que protegen nuestro bienestar físico, emocional y social."
 
 --- DIAPOSITIVA 2: El Cuerpo como Territorio Propio (9 segundos) ---
@@ -1037,6 +1087,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Límites claros que nadie debe cruzar sin permiso
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing calmly in front of a study room with an open hand sign projecting serene confidence and clear personal boundaries, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Escudo personal: El cuerpo humano es un espacio inviolable con derecho a la privacidad
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El consentimiento es el acuerdo libre, consciente y voluntario mediante el cual una persona acepta participar en una situación determinada."
 
 --- DIAPOSITIVA 3: El Consentimiento: Libre y Consciente (10 segundos) ---
@@ -1045,6 +1096,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Un acuerdo mutuo, informado y voluntario
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, assembling four glowing holographic puzzle pieces representing free, informed, specific, and revocable consent, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Definición ética: Libre de presiones + Plenamente informado + Revocable en todo momento
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Para que el consentimiento sea válido, nadie debe presionar, amenazar o manipular. La decisión debe tomarse con total tranquilidad y conocimiento."
 
 --- DIAPOSITIVA 4: La Fuerza de la Asertividad (10 segundos) ---
@@ -1053,6 +1105,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Expresar los propios límites con serenidad y claridad
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, expressing a calm and assertive refusal in front of peers, surrounded by a gentle aura of dignity and self-respect, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Estrategia asertiva: Postura erguida + Tono firme y tranquilo + Mensaje directo sin rodeos
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Decir no con seguridad es un derecho inviolable. La asertividad nos permite fijar límites personales claros frente a la presión de grupo."
 
 --- DIAPOSITIVA 5: Frente a la Presión de Grupo (10 segundos) ---
@@ -1061,6 +1114,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Priorizar el bienestar sobre la aprobación ajena
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, holding an illustrated protective symbolic boundary safeguarding personal space and digital privacy against peer pressure, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa de criterio: El valor propio no depende de complacer a los demás en conductas de riesgo
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El consentimiento también se aplica en el mundo digital: no compartir fotografías, mensajes o información privada de otros sin su autorización explícita."
 
 --- DIAPOSITIVA 6: Redes de Apoyo y Confianza (11 segundos) ---
@@ -1069,6 +1123,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Familia, profesores y profesionales de apoyo
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, talking with a trusted teacher and guidance counselor in a brightly lit room, receiving supportive advice, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Red protectora: Identificar adultos de confianza ante dudas, malestar o vulneraciones
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Si una situación nos incomoda o vulnera nuestros límites, acudir de inmediato a adultos de confianza en la familia o el colegio es indispensable."
 
 --- DIAPOSITIVA 7: La Pregunta Detonante (9 segundos) ---
@@ -1077,6 +1132,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): ¿Cómo aplicamos el consentimiento día a día?
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, holding open science notebooks, ready to evaluate ethical consent scenarios in an organized study room, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta detonante: ¿Qué criterio ético nos guía ante una situación de presión?
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Surge ahora el desafío ético: ante una decisión cotidiana con amigos, ¿cómo comprobamos que existe un consentimiento plenamente válido?"
 
 ================================================================================
@@ -1096,6 +1152,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Reconocer consentimiento mutuo, límites corporales y autocuidado
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing before a four-part criteria board illustrating consent: free, informed, specific, and revocable, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 01 · Consentimiento, Límites Corporales y Autocuidado
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El objetivo de la lección es analizar y aplicar los cuatro criterios innegociables del consentimiento: libre, informado, específico y siempre revocable."
 
 --- DIAPOSITIVA 2: El Principio de la Autonomía Corporal (10 segundos) ---
@@ -1104,6 +1161,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): El derecho a la integridad física y emocional
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing a four-quadrant infographic breaking down unpressured choice, truth, context, and the right to revoke consent, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Marco normativo: Declaración universal de derechos y protección legal de niños y adolescentes
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El primer criterio exige que el consentimiento sea libre: sin chantajes, amenazas ni presiones de grupo. Si existe coacción, el consentimiento es nulo."
 
 --- DIAPOSITIVA 3: Los 4 Criterios del Consentimiento (12 segundos) ---
@@ -1112,6 +1170,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Libre, informado, específico y revocable
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, observing a student changing their mind during an activity with classmates stopping immediately and nodding respectfully, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pauta de verificación: Sin presión (Libre) + Con conocimiento (Informado) + Concreto (Específico) + Modificable (Revocable)
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El consentimiento válido requiere cuatro condiciones ineludibles: ser libre de presiones, plenamente informado, específico para la situación concreta y revocable en cualquier momento."
 
 --- DIAPOSITIVA 4: La Asertividad en la Práctica (11 segundos) ---
@@ -1120,6 +1179,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Expresar límites sin agresividad ni sumisión
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing firmly in the light with moral confidence, resisting group pressure and upholding personal boundaries, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Triángulo comunicativo: Pasivo (someterse) vs Agresivo (atacar) vs Asertivo (afirmar límites con respeto)
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "La asertividad es la capacidad de expresar límites y decisiones de manera clara, serena y firme, sin agredir a otros ni someterse a presiones grupales contrarias a nuestras convicciones."
 
 --- DIAPOSITIVA 5: Responsabilidad y Consecuencias (12 segundos) ---
@@ -1128,6 +1188,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Evaluar consecuencias a corto y largo plazo
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, pausing thoughtfully before a decision pathway flowchart, carefully weighing causes and consequences of actions, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Matriz de discernimiento: Estimar riesgos potenciales -> Proteger la salud -> Actuar éticamente
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Pensar antes de actuar implica evaluar las consecuencias individuales y sociales de nuestras acciones; la responsabilidad personal exige cuidar la propia integridad y la de los demás."
 
 --- DIAPOSITIVA 6: Caso Modelado: Presión por Contenido Privado (29 segundos) ---
@@ -1136,6 +1197,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Establecer límites firmes ante la insistencia
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, reviewing an illustrated decision flowchart of valid consent on a tablet at their desk, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Desglose del caso: Presión de pares para compartir imagen privada -> Negativa asertiva inmediata -> Principio de consentimiento protegido
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Analicemos un caso concreto: un grupo insiste para que un estudiante comparta una foto privada ajena o propia y el estudiante se niega con firmeza diciendo que la privacidad debe respetarse. ¿Qué principio se evidencia? Se evidencia el ejercicio del consentimiento informado, el derecho a la privacidad y el uso de la asertividad para fijar límites claros frente a la presión de grupo."
 
 --- DIAPOSITIVA 7: Síntesis y Regla de Oro (13 segundos) ---
@@ -1144,6 +1206,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Límites claros y respeto corporal mutuo
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, presenting a protective shield with four gold stars representing the criteria of consent in a bright school setting, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Infografía de síntesis: El consentimiento libre y la asertividad garantizan la convivencia digna
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Recuerda la regla de oro: el consentimiento debe ser libre, informado, específico y siempre revocable. ¡Ahora pon a prueba lo aprendido resolviendo las actividades prácticas en la plataforma interactiva!"
 
 ================================================================================
@@ -1305,11 +1368,12 @@ Refuerzo 1 (Recuperación: El Derecho a Decir 'No'):
 
 
 ################################################################################
-LECCIÓN 5 DE 6: MITOS, ESTEREOTIPOS Y CONVIVENCIA SALUDABLE
+CLASE 5 DE 6: MITOS, ESTEREOTIPOS Y CONVIVENCIA SALUDABLE
 ################################################################################
 
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 08-10-2026, 5:52:12 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -1354,6 +1418,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Desarmar prejuicios con evidencia y respeto mutuo
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, reviewing a digital display that debunks popular adolescent myths with verified scientific evidence, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Ruta de exploración: Creencias populares -> Contraste científico -> Convivencia armónica
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Comienza una expedición de pensamiento crítico en ciencias. Alrededor de la pubertad circulan muchas creencias populares que no tienen respaldo científico."
 
 --- DIAPOSITIVA 2: El Espejismo de la Homogeneidad (11 segundos) ---
@@ -1362,6 +1427,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): La naturaleza celebra la diversidad biológica
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, observing a distorted mirror being replaced with a clean, realistic medical illustration of pubertal growth, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Variabilidad del crecimiento: Estirón de estatura con amplia dispersión saludable (Tanner / MedlinePlus)
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El inicio puberal habitual (8 a 13 años en niñas y 9 a 14 en niños) no debe confundirse con el peak de velocidad de crecimiento, cuyos promedios poblacionales rondan los 11,5 años en niñas y 13,5 en niños con amplia variación saludable."
 
 --- DIAPOSITIVA 3: El Mito del 'Atraso' Corporal (11 segundos) ---
@@ -1370,6 +1436,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): La genética define el calendario de maduración
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, in a modern science classroom observing blank modular panels representing the height growth spurt window (between ages 10 and 16, distinct from earlier pubertal onset), with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Factores de sincronía: Herencia genética + Estado nutricional + Factores ambientales equilibrados
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El estirón de estatura suele ocurrir como un hito posterior de la pubertad (habitualmente entre los 10 y 16 años según Tanner y MedlinePlus), mientras el inicio puberal ocurre antes (8-13 años en niñas y 9-14 en niños según MedlinePlus). Crecer a ritmos distintos es completamente normal."
 
 --- DIAPOSITIVA 4: Estereotipos que Limitan Emociones (10 segundos) ---
@@ -1378,6 +1445,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Las emociones y valores no tienen género
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, collaborating in a science lab with robotics tools and culinary chemistry, demonstrating equal capabilities without gender stereotypes, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de equidad: Reconocimiento emocional pleno y superación de mandatos culturales restrictivos
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Los estereotipos de género también son mitos culturales sin base biológica. Hombres y mujeres tienen iguales capacidades cognitivas, artísticas y científicas."
 
 --- DIAPOSITIVA 5: El Filtro Crítico de las Redes (9 segundos) ---
@@ -1386,6 +1454,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Comprobar fuentes antes de creer rumores virales
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, holding a glowing magnifying glass revealing verified biological facts over misleading social media headlines, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Criterios de verificación: Fuentes médicas oficiales vs Cuentas comerciales con imágenes retocadas
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El acné puberal responde a estímulos hormonales en las glándulas sebáceas, no a la suciedad ni a castigos imaginarios."
 
 --- DIAPOSITIVA 6: Construir Espacios de Confianza (9 segundos) ---
@@ -1394,6 +1463,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Erradicar apodos y burlas sobre el cuerpo
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, celebrating diverse talents and unique growth trajectories with classmates in an inclusive classroom, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Principios de convivencia: Cero tolerancia a la burla corporal + Apoyo entre pares + Solidaridad activa
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Aprender a buscar información en fuentes médicas oficiales nos protege de la desinformación y fortalece nuestra autoestima y seguridad personal."
 
 --- DIAPOSITIVA 7: Cierre y Preparación para el Rigor (9 segundos) ---
@@ -1402,6 +1472,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Profundicemos en los fundamentos biológicos
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, holding open science notebooks, ready to debunk myths and analyze evidence in an organized study room, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Conexión conceptual: Comprensión biológica integral -> Actitudes éticas de convivencia
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Surge ahora la pregunta clave: cuando escuchamos una afirmación sobre el desarrollo adolescente, ¿cómo usamos la evidencia científica para evaluarla?"
 
 ================================================================================
@@ -1421,6 +1492,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Analizar la variabilidad puberal y superar estereotipos
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing in front of a split-screen display contrasting popular myths with verified biological evidence, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 01 · Variabilidad Biológica, Mitos y Convivencia Saludable
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El objetivo de la lección es refutar mitos sobre la pubertad usando evidencia biológica y criterios de salud integral."
 
 --- DIAPOSITIVA 2: Rangos Normales del Inicio Puberal (11 segundos) ---
@@ -1429,6 +1501,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Inicio puberal y sus variaciones habituales
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, in a modern science laboratory observing blank modular comparison panels on a digital display, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Inicio puberal: 8-13 años (niñas), 9-14 años (niños) | Peak de crecimiento: promedios poblacionales ~11,5 (niñas) y ~13,5 (niños)
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El inicio de la pubertad suele ocurrir entre los 8 y 13 años en niñas y entre los 9 y 14 en niños (MedlinePlus/OMS). Distinto del inicio, el peak de velocidad de crecimiento en estatura alcanza promedios poblacionales de ~11,5 años en niñas y ~13,5 años en niños dentro de una amplia ventana normal (10 a 16 años según Tanner)."
 
 --- DIAPOSITIVA 3: Factores que Regulan el Crecimiento (10 segundos) ---
@@ -1437,6 +1510,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Interacción entre herencia, hormonas y ambiente
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, in a modern biology lab examining interactive infographic panels of biological growth factors including genetics, nutrition, healthy sleep, and hormonal regulation, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Ecuación multifactorial: Crecimiento = Genética (herencia) + Endocrino (GH y esteroides) + Nutrición y descanso
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El ritmo de crecimiento depende de factores genéticos hereditarios, secreción hormonal equilibrada y hábitos saludables de nutrición y sueño profundo, los cuales regulan el desarrollo biológico."
 
 --- DIAPOSITIVA 4: Desmontando los Estereotipos de Género (12 segundos) ---
@@ -1445,6 +1519,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Habilidades y emociones compartidas
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, enthusiastically collaborating in robotics and creative artistic design in a modern school workshop, breaking gender stereotypes, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Cuadro de equidad: Capacidades intelectuales, creativas y emocionales idénticas entre géneros
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Los estereotipos que asignan roles rígidos carecen de fundamento científico. Todos los estudiantes pueden destacar plenamente en ciencias, tecnología, artes y deportes sin límites impuestos por el género."
 
 --- DIAPOSITIVA 5: El Impacto Psicológico del Juicio Externo (11 segundos) ---
@@ -1453,6 +1528,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Fomentar un entorno escolar seguro
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, fostering an inclusive and supportive environment with classmates in a bright classroom, rejecting teasing and body judgment, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Mecanismo protector: Validación entre pares + Comunicación asertiva + Cero burlas corporales
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Las burlas sobre el cuerpo pueden generar inseguridad y aislamiento. Promover un entorno escolar seguro exige empatía, detener los comentarios dañinos y recordar que cada persona vive su desarrollo a su propio ritmo."
 
 --- DIAPOSITIVA 6: Caso Modelado: El Mito del Estirón Puberal (38 segundos) ---
@@ -1461,6 +1537,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Variabilidad biológica y ritmos genéticos de crecimiento
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing an illustrated growth-percentile chart on their desk, comparing curves with calm scientific smiles, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Caso 1 modelado: Estudiante de 13 años con angustia por estirón -> Evidencia científica: ritmos genéticos normales (10 a 16 años) -> Desarrollo biológico saludable
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Analicemos el Caso 1: un estudiante de 13 años siente angustia porque varios compañeros ya tuvieron el estirón puberal y él aún no, creyendo que tiene un problema de salud o no crecerá. ¿Qué evidencia biológica desmiente este mito? La evidencia indica que el estirón puberal no ocurre a la misma edad para todos; responde a ritmos genéticos individuales que se extienden normalmente entre los 10 y los 16 años, por lo que su desarrollo es biológicamente normal y no constituye una anomalía."
 
 --- DIAPOSITIVA 7: Síntesis y Compromiso con la Convivencia (13 segundos) ---
@@ -1469,6 +1546,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Comprender la biología para convivir mejor
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, presenting an illustrated scientific evidence board dispelling common myths about puberty, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Infografía final: Conocimiento científico -> Eliminación de prejuicios -> Convivencia armónica
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Recuerda la regla de oro: la ciencia desmiente prejuicios; cada cuerpo crece a su propio ritmo genético. ¡Ahora pon a prueba lo aprendido resolviendo las actividades prácticas en la plataforma interactiva!"
 
 ================================================================================
@@ -1630,11 +1708,12 @@ Refuerzo 1 (Recuperación: La Normalidad de la Diversidad):
 
 
 ################################################################################
-LECCIÓN 6 DE 6: SÍNTESIS INTEGRAL Y EVALUACIÓN TIPO EXAMEN LIBRE
+CLASE 6 DE 6: SÍNTESIS INTEGRAL Y EVALUACIÓN TIPO EXAMEN LIBRE
 ################################################################################
 
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 08-10-2026, 5:52:12 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -1679,6 +1758,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Consolidación de aprendizajes y evaluación formativa
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing at the entrance of a high-tech science evaluation room, reviewing their comprehensive unit portfolio, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Ruta de maestría: 4 Dimensiones -> Fisiología Puberal -> Autocuidado y Consentimiento -> Descarte Metódico
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Comienza la síntesis de Ciencias del OA 1. Consolidaremos todos los aprendizajes adquiridos en esta unidad."
 
 --- DIAPOSITIVA 2: El Mapa Completo del OA 1 (10 segundos) ---
@@ -1687,6 +1767,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Cuatro dimensiones articuladas e inseparables
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, in a high-tech science examination hall, with four clean blank modular rectangular panels softly illuminated in cyan, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Matriz curricular: Dimensión biológica (cuerpo) + afectiva (emociones) + social (cultura y convivencia) + ética (valores y respeto)
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "La sexualidad es una vivencia integral organizada didácticamente en las dimensiones biológica, afectiva, social y ética, articulando el currículum de Ciencias Naturales con valores de respeto y responsabilidad."
 
 --- DIAPOSITIVA 3: Anatomía del Reactivo de Selección Múltiple (8 segundos) ---
@@ -1695,6 +1776,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Contexto, enunciado clave y cuatro alternativas
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining the anatomy of a multiple-choice item with blank modular panels representing the context, question stem, and four options on a digital display, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Componentes del ítem: Estímulo (caso/gráfico) -> Tarea cognitiva -> Clave correcta vs Distractores verosímiles
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Un reactivo formal de evaluación se compone de un contexto o estímulo, una pregunta directriz y cuatro alternativas; analizar su anatomía nos permite enfocar con precisión la tarea solicitada."
 
 --- DIAPOSITIVA 4: Estrategia de Descarte Científico (10 segundos) ---
@@ -1703,6 +1785,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Identificar afirmaciones reduccionistas o erradas
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, methodically crossing off incorrect distractors on an interactive evaluation review board, applying systematic scientific elimination, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Protocolo de descarte: 1. Descartar falsedades biológicas -> 2. Descartar opciones parciales -> 3. Validar la respuesta completa
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "La técnica del descarte científico consiste en evaluar cada alternativa paso a paso, eliminando aquellas con errores fácticos, generalizaciones abusivas o visiones incompletas para aislar la clave válida."
 
 --- DIAPOSITIVA 5: El Hábito de la Justificación Rigurosa (8 segundos) ---
@@ -1711,6 +1794,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Argumentar científicamente cada elección
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, writing rigorous scientific justifications in their open study notebooks, supporting their chosen answer with evidence, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Fórmula argumentativa: Selección de alternativa + Premisa teórica MINEDUC + Evidencia biológica concreta
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Justificar la respuesta elegida en el cuaderno físico asegura una comprensión profunda; cada selección debe fundamentarse en conceptos biológicos y principios de respeto integral."
 
 --- DIAPOSITIVA 6: Autocontrol y Serenidad en el Examen (10 segundos) ---
@@ -1719,6 +1803,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Pausar, respirar y leer con calma
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, taking a calm deep breath before beginning an evaluation, maintaining serene emotional composure and focus at their modern study desks, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Factores de éxito evaluativo: Preparación conceptual previa + Manejo de la ansiedad + Revisión metódica
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Afrontar una evaluación con serenidad y mente clara es clave: respirar hondo, leer cada enunciado con detenimiento y confiar en la preparación sistemática desarrollada durante las clases."
 
 --- DIAPOSITIVA 7: Cierre y Tránsito al Ensayo Guiado (9 segundos) ---
@@ -1727,6 +1812,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Modelaremos el análisis de un ítem real
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, holding open science notebooks fully completed, smiling with triumphant focus in an organized study room, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Conexión operativa: Revisión de estrategia teórica -> Modelado de ítem complejo -> Demostración autónoma
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Estamos listos para enfrentar la evaluación formativa formal: ¿cómo aplicamos el método científico para justificar cada respuesta del examen libre?"
 
 ================================================================================
@@ -1746,6 +1832,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Resolver reactivos de selección múltiple con 4 alternativas
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing before an interactive evaluation board displaying four blank choice panels in a clean modular layout, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 01 · Síntesis Integral y Evaluación Tipo Examen Libre MINEDUC
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El objetivo de la lección es integrar los contenidos de sexualidad y pubertad, aplicando el análisis riguroso para resolver reactivos psicométricos de práctica tipo Examen Libre."
 
 --- DIAPOSITIVA 2: Tipología de Distractores en Ciencias (11 segundos) ---
@@ -1754,6 +1841,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Aprender a reconocer las trampas habituales
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining a three-category diagram of typical exam distractors: factual errors, biological reductionism, and sweeping generalizations, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Clasificación de distractores: 1. Error fáctico directo · 2. Reduccionismo biologicista · 3. Generalización arbitraria
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "En las preguntas de ciencias encontramos tres tipos comunes de distractores: el error fáctico con datos falsos, el reduccionismo que olvida lo afectivo o social, y las generalizaciones absolutas sin respaldo."
 
 --- DIAPOSITIVA 3: Paso 1: Detectar el Núcleo del Enunciado (8 segundos) ---
@@ -1762,6 +1850,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Subrayar el verbo rector y las condiciones
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing an exam question prompt on a digital display, highlighting the core verb and key scientific conditions, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Desglose del estímulo: Sujeto del caso -> Situación planteada -> Verbo rector de la tarea cognitiva
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "El primer paso consiste en leer el enunciado para aislar la pregunta central: identificamos el sujeto del caso, la situación descrita y el verbo rector que define la tarea científica pedida."
 
 --- DIAPOSITIVA 4: Paso 2: Evaluación Crítica de Opciones A, B, C, D (10 segundos) ---
@@ -1770,6 +1859,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Verificar si cumple todas las condiciones
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, methodically evaluating four blank interactive choice cards against scientific criteria on a test review board, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Algoritmo de filtro: Opción A (Verificar) -> Opción B (Verificar) -> Opción C (Verificar) -> Opción D (Verificar)
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "En el segundo paso evaluamos críticamente cada alternativa: revisamos las opciones A, B, C y D una por una, comprobando si contienen errores fácticos, si son incompletas o si cumplen todas las condiciones científicas del enunciado."
 
 --- DIAPOSITIVA 5: Paso 3: La Clave Integral y su Justificación (10 segundos) ---
@@ -1778,6 +1868,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Respaldo conceptual sin vacíos
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, reviewing a four-option response grid on their study desk, calm and confident with plenty of time, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Validación de la clave: Responde al problema + Coherencia curricular MINEDUC + Cero contradicciones científicas
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "En el tercer paso seleccionamos la respuesta correcta asegurándonos de que sea completa y autosuficiente: debe responder directamente a lo preguntado, tener coherencia con el marco curricular del MINEDUC y carecer de contradicciones científicas."
 
 --- DIAPOSITIVA 6: Caso Modelado: Reactivo de Práctica de 4 Alternativas (24 segundos) ---
@@ -1786,6 +1877,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Análisis y descarte de 4 alternativas
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing a four-choice blank test card on their desk, comparing reasoning notes before selecting the correct option, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Despiece del ítem: Enunciado: Estudiante afirma que la sexualidad es solo biología reproductiva -> Opción A (Falsa: reduccionista) · Opción B (CLAVE CORRECTA: 4 dimensiones integrales) · Opción C (Falsa: inicio tardío erróneo) · Opción D (Falsa: niega afecto en la niñez)
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Analicemos un reactivo de práctica de EstudioSimple elaborado para 7° Básico: un estudiante afirma que la sexualidad se limita exclusivamente a órganos y procreación. A partir del Texto Escolar Ciencias Naturales 7° Básico MINEDUC (Edición SM, Unidad 4: Salud sexual y reproducción, Lección 8: Sexualidad y autocuidado, págs. 114 a 137, inicio temático pág. 116), la opción B es correcta porque establece que la sexualidad se organiza didácticamente en cuatro dimensiones fundamentales: biológica, afectiva, social y ética."
 
 --- DIAPOSITIVA 7: Síntesis y Coronación del Aprendizaje (15 segundos) ---
@@ -1794,6 +1886,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Preparados para la evaluación formativa
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, presenting a completed scientific summary board of 7th grade Ciencias Naturales with bright confident smiles, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Hito alcanzado: OA 1 completado con éxito · Dominio conceptual y evaluativo consolidado
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
 6. Notas al Orador (Locución Google Vids): "Recuerda la regla de oro: la justificación científica y el descarte de distractores aseguran el éxito en la evaluación. ¡Ahora pon a prueba lo aprendido resolviendo las actividades prácticas en la plataforma interactiva!"
 
 ================================================================================

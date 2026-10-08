@@ -8,17 +8,19 @@
   "estado": "EN_REVISION",
   "total_clases": 6,
   "fuente_oficial_unica_docx": {
-    "archivo": "Plan_Maestro_7Básico_110-7-ING-OA09_6Lecciones.docx",
+    "archivo": "Plan_Maestro_7Básico_110-7-ING-OA09_6Lecciones_2026-10-08_17-52.docx",
     "rol": "Unica fuente oficial de produccion de lecciones y prompts",
-    "sha256": "55e4832c21b4fc63e01295499ee241b1aba27d5e8838f64c5761ae3848c08d85",
-    "bytes": 66932
+    "sha256": "5729ecd4638b41142b225aa5af0ca93a469f6b440075f4766a2777f9268facbc",
+    "bytes": 72159
   },
   "prompts_asociados": {
-    "archivo": "Prompts_Work_Ingles_7B_OA09.txt",
+    "archivo": "Prompts_Work_Ingles_7B_OA09_2026-10-08_17-52.txt",
     "ruta_origen_zip_anterior": "DESCARGA_LECCIONES/PROMPTS_TXT_PARA_WORK/Prompts_Work_Ingles_7B_OA09.txt",
     "total_laminas": 84,
     "laminas_por_clase": 14,
-    "perfil_evaluacion": "Perfil 7° Básico (14 láminas bimodales: 7 Gancho + 7 Explicación; reactivos de 4 alternativas en cierre)"
+    "perfil_evaluacion": "Perfil 7° Básico (14 láminas bimodales: 7 Gancho + 7 Explicación; reactivos de 4 alternativas en cierre)",
+    "sha256": "c37fdd4e96359d547567aafb1f043aff21c26fec53964de67edfd4ecbf3f7a99",
+    "bytes": 206739
   },
   "fundamentacion_curricular": {
     "temario_eell": {
@@ -47,5 +49,27 @@
       "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase05.ts",
       "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase06.ts"
     ]
+  },
+  "schemaVersion": "2.0.0",
+  "generatedAt": "2026-10-08 17:52:12 [America/Santiago]",
+  "status": "EN_REVISION",
+  "etapa_revision": "WORK_PRE_APROBACION",
+  "oaIdentifier": "110-7-ING-OA09",
+  "course": "7° Básico",
+  "subject": "Inglés",
+  "totalLessons": 6,
+  "artifacts": {
+    "docxMaster": {
+      "filename": "Plan_Maestro_7Básico_110-7-ING-OA09_6Lecciones_2026-10-08_17-52.docx",
+      "relativePath": "LECCIONES/110-7/Ingles/OA09/Plan_Maestro_7Básico_110-7-ING-OA09_6Lecciones_2026-10-08_17-52.docx",
+      "sizeBytes": 72159,
+      "sha256": "5729ecd4638b41142b225aa5af0ca93a469f6b440075f4766a2777f9268facbc"
+    },
+    "promptsWorkTxt": {
+      "filename": "Prompts_Work_Ingles_7B_OA09_2026-10-08_17-52.txt",
+      "relativePath": "LECCIONES/110-7/Ingles/OA09/Prompts_Work_Ingles_7B_OA09_2026-10-08_17-52.txt",
+      "sizeBytes": 206739,
+      "sha256": "c37fdd4e96359d547567aafb1f043aff21c26fec53964de67edfd4ecbf3f7a99"
+    }
   }
 }

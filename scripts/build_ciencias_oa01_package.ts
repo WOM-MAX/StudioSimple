@@ -580,11 +580,34 @@ async function buildOutputs() {
     lessons: generatorLessons
   };
 
+  const now = new Date();
+  const santiagoTimestamp = now.toLocaleString('sv-SE', { timeZone: 'America/Santiago' }) + ' [America/Santiago]';
+  const fileDate = now.toLocaleDateString('sv-SE', { timeZone: 'America/Santiago' });
+  const fileTime = now.toLocaleTimeString('es-CL', { timeZone: 'America/Santiago', hour12: false, hour: '2-digit', minute: '2-digit' }).replace(':', '-');
+  const fileTimestamp = `${fileDate}_${fileTime}`;
+
+  const docxFilename = `Plan_Maestro_7Básico_110-7-CIE-OA01_6Lecciones_${fileTimestamp}.docx`;
+  const txtFilename = `Prompts_Work_Ciencias_7B_OA01_${fileTimestamp}.txt`;
+
+  // Eliminar versiones previas para conservar únicamente el más actualizado
+  if (fs.existsSync(targetOaDir)) {
+    const existing = fs.readdirSync(targetOaDir);
+    for (const f of existing) {
+      if (f.startsWith('Plan_Maestro_') && f.endsWith('.docx') && f !== docxFilename) {
+        fs.unlinkSync(path.join(targetOaDir, f));
+        console.log(`Versión anterior de DOCX eliminada: ${f}`);
+      }
+      if (f.startsWith('Prompts_Work_') && f.endsWith('.txt') && f !== txtFilename) {
+        fs.unlinkSync(path.join(targetOaDir, f));
+        console.log(`Versión anterior de Prompts eliminada: ${f}`);
+      }
+    }
+  }
+
   // 1. Compilar DOCX oficial
   console.log('Compilando DOCX oficial (buildOAPackageDocx)...');
-  const doc = buildOAPackageDocx(pkg);
+  const doc = buildOAPackageDocx(pkg, santiagoTimestamp);
   const docxBuffer = await Packer.toBuffer(doc);
-  const docxFilename = 'Plan_Maestro_7Básico_110-7-CIE-OA01_6Lecciones.docx';
   const docxPath = path.join(targetOaDir, docxFilename);
   fs.writeFileSync(docxPath, docxBuffer);
 
@@ -600,13 +623,11 @@ async function buildOutputs() {
 
   if (fs.existsSync(publicDir)) {
     fs.writeFileSync(path.join(publicDir, docxFilename), docxBuffer);
-    fs.writeFileSync(path.join(publicDir, 'Ciencias_OA01.docx'), docxBuffer);
     console.log(`✓ Sincronizado en ${publicDir}`);
   }
 
   if (fs.existsSync(descargaDir)) {
     fs.writeFileSync(path.join(descargaDir, docxFilename), docxBuffer);
-    fs.writeFileSync(path.join(descargaDir, 'Ciencias_OA01.docx'), docxBuffer);
     console.log(`✓ Sincronizado en ${descargaDir}`);
   }
 
@@ -616,8 +637,9 @@ async function buildOutputs() {
   promptText += `================================================================================\n`;
   promptText += `STUDIOSIMPLE - PAQUETE DE PROMPTS Y GUIONES OFICIALES PARA CHATGPT WORK\n`;
   promptText += `ASIGNATURA: CIENCIAS NATURALES | CURSO: 7° BÁSICO | OBJETIVO: OA 01\n`;
+  promptText += `ARCHIVO: ${txtFilename}\n`;
   promptText += `PAQUETE COMPLETO: 6 LECCIONES CANÓNICAS (14 LÁMINAS POR LECCIÓN = 84 LÁMINAS)\n`;
-  promptText += `FECHA DE COMPILACIÓN OFICIAL: ${new Date().toLocaleString("es-CL", { timeZone: "America/Santiago" })} (America/Santiago)\n`;
+  promptText += `FECHA Y HORA DE ACTUALIZACIÓN OFICIAL: ${santiagoTimestamp}\n`;
   promptText += `================================================================================\n\n`;
 
   for (let i = 0; i < allLessons.length; i++) {
@@ -629,7 +651,6 @@ async function buildOutputs() {
     promptText += `\n\n`;
   }
 
-  const txtFilename = 'Prompts_Work_Ciencias_7B_OA01.txt';
   const txtPath = path.join(targetOaDir, txtFilename);
   fs.writeFileSync(txtPath, promptText, 'utf8');
   const txtBytes = fs.statSync(txtPath).size;

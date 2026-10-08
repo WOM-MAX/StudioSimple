@@ -1,16 +1,20 @@
 ================================================================================
 STUDIOSIMPLE - PAQUETE COMPLETO DE PROMPTS Y GUIONES MAESTROS
-CURSO: 7° BASICO | ASIGNATURA: MATEMATICA | OA: 110-7-MAT-OA04 (PORCENTAJES)
-ARCHIVO: Prompts_Work_Matematica_7B_OA04_2026-10-08_17-43.txt
+CURSO: 7° BASICO | ASIGNATURA: MATEMÁTICA | OA: 110-7-MAT-OA04
+ARCHIVO: Prompts_Work_Matematica_7B_OA04_2026-10-08_17-52.txt
 TOTAL DE CLASES: 6 CLASES CANONICAS BIMODALES (14 LAMINAS CADA UNA = 84 LAMINAS TOTALES)
 FORMATO: 7 DIAPOSITIVAS VIDEO GANCHO (60s) + 7 DIAPOSITIVAS VIDEO EXPLICATIVO (90s)
-FECHA Y HORA DE ACTUALIZACION: 2026-10-08 17:43:59 [America/Santiago]
+FECHA Y HORA DE ACTUALIZACION: 2026-10-08 17:52:12 [America/Santiago]
 DESTINATARIO: CHATGPT WORK / CODEX (MAQUETACION PPTX 16:9 EN PYTHON)
 ================================================================================
 
+################################################################################
+CLASE 1 DE 6: CONCEPTO DE PORCENTAJE Y REPRESENTACIÓN EN CUADRÍCULAS DE 100
+################################################################################
+
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
-FECHA DE GENERACION: 08-10-2026, 5:44:00 p. m. (America/Santiago)
+FECHA DE GENERACION: 08-10-2026, 5:52:13 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -346,9 +350,13 @@ Refuerzo 1 (Refuerzo de Porcentaje en Cuadrícula):
 • Vista Previa Proxima Clase: "En la próxima clase aprenderemos cómo transformar cualquier porcentaje en una fracción irreducible y en un número decimal."
 
 
+################################################################################
+CLASE 2 DE 6: PORCENTAJES COMO FRACCIÓN IRREDUCTIBLE Y NÚMERO DECIMAL
+################################################################################
+
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
-FECHA DE GENERACION: 08-10-2026, 5:44:00 p. m. (America/Santiago)
+FECHA DE GENERACION: 08-10-2026, 5:52:13 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -683,9 +691,13 @@ Refuerzo 1 (Refuerzo de Conversión de Porcentajes):
 • Vista Previa Proxima Clase: "En la siguiente clase aprenderemos atajos matemáticos para calcular porcentajes mentalmente en segundos."
 
 
+################################################################################
+CLASE 3 DE 6: CÁLCULO MENTAL Y ESTRATEGIAS RÁPIDAS DE PORCENTAJES NOTABLES
+################################################################################
+
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
-FECHA DE GENERACION: 08-10-2026, 5:44:00 p. m. (America/Santiago)
+FECHA DE GENERACION: 08-10-2026, 5:52:13 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -1021,9 +1033,13 @@ Refuerzo 1 (Refuerzo de Atajos de Cálculo Mental):
 • Vista Previa Proxima Clase: "En la siguiente clase aprenderemos cómo calcular cualquier porcentaje, incluso aquellos que no tienen atajos directos, usando decimales y proporciones."
 
 
+################################################################################
+CLASE 4 DE 6: ESTRATEGIAS DE CÁLCULO DE CUALQUIER PORCENTAJE: DECIMALES Y PROPORCIONES
+################################################################################
+
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
-FECHA DE GENERACION: 08-10-2026, 5:44:00 p. m. (America/Santiago)
+FECHA DE GENERACION: 08-10-2026, 5:52:13 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -1358,9 +1374,13 @@ Refuerzo 1 (Refuerzo de Multiplicación Decimal de Porcentajes):
 • Vista Previa Proxima Clase: "En la última clase de esta unidad aplicaremos todo lo aprendido a problemas reales de compras, descuentos comerciales y el IVA de las boletas chilenas."
 
 
+################################################################################
+CLASE 5 DE 6: RESOLUCIÓN DE PROBLEMAS COTIDIANOS: DESCUENTOS COMERCIALES E IVA
+################################################################################
+
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
-FECHA DE GENERACION: 08-10-2026, 5:44:00 p. m. (America/Santiago)
+FECHA DE GENERACION: 08-10-2026, 5:52:13 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -1696,9 +1716,13 @@ Refuerzo 1 (Refuerzo de Problemas de Descuento):
 • Vista Previa Proxima Clase: "Has adquirido una competencia matemática fundamental para toda tu vida ciudadana y académica. ¡Felicitaciones por tu dedicación!"
 
 
+################################################################################
+CLASE 6 DE 6: SÍNTESIS INTEGRADORA Y ENSAYO DE EVALUACIÓN FORMATIVA: PORCENTAJES EN ACCIÓN
+################################################################################
+
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
-FECHA DE GENERACION: 08-10-2026, 5:44:00 p. m. (America/Santiago)
+FECHA DE GENERACION: 08-10-2026, 5:52:13 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:

@@ -8,15 +8,18 @@
   "estado": "APROBADA",
   "total_clases": 6,
   "fuente_oficial_unica_docx": {
-    "archivo": "Plan_Maestro_7Básico_110-7-MAT-OA01_6Lecciones.docx",
+    "archivo": "Plan_Maestro_7Básico_110-7-MAT-OA01_6Lecciones_2026-10-08_17-52.docx",
     "rol": "Unica fuente oficial de produccion de lecciones y prompts (6 lecciones completas)",
-    "sha256": "f53dcdb5f481ae288757db6fa858dacdc39bc235d2407347ceb99c9ec4ca0087",
-    "bytes": 40402
+    "sha256": "15c31fa8bef51d753ac0a731ef9189aee964961c2918ea564b6dccba191afee3",
+    "bytes": 78837
   },
   "prompts_asociados": {
     "tipo": "Integrados en codigo TypeScript y tablas formales de DOCX",
     "tablas_en_docx": "Tablas de especificaciones visuales y locucion escena por escena en Plan Maestro oficial",
-    "perfil_evaluacion": "Perfil 7° Básico (14 láminas bimodales: 7 Gancho + 7 Explicación; reactivos de 4 alternativas en cierre)"
+    "perfil_evaluacion": "Perfil 7° Básico (14 láminas bimodales: 7 Gancho + 7 Explicación; reactivos de 4 alternativas en cierre)",
+    "archivo": "Prompts_Work_Matematica_7B_OA01_2026-10-08_17-52.txt",
+    "sha256": "8a169e1efd7c14ecd877b344186e69f850b68ba9b64ae735b913861cdf7499cd",
+    "bytes": 234991
   },
   "fundamentacion_curricular": {
     "temario_eell": {
@@ -47,5 +50,27 @@
       "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase05.ts",
       "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase06.ts"
     ]
+  },
+  "schemaVersion": "2.0.0",
+  "generatedAt": "2026-10-08 17:52:12 [America/Santiago]",
+  "status": "APROBADA",
+  "etapa_revision": "WORK_PRE_APROBACION",
+  "oaIdentifier": "110-7-MAT-OA01",
+  "course": "7° Básico",
+  "subject": "Matemática",
+  "totalLessons": 6,
+  "artifacts": {
+    "docxMaster": {
+      "filename": "Plan_Maestro_7Básico_110-7-MAT-OA01_6Lecciones_2026-10-08_17-52.docx",
+      "relativePath": "LECCIONES/110-7/Matematica/OA01/Plan_Maestro_7Básico_110-7-MAT-OA01_6Lecciones_2026-10-08_17-52.docx",
+      "sizeBytes": 78837,
+      "sha256": "15c31fa8bef51d753ac0a731ef9189aee964961c2918ea564b6dccba191afee3"
+    },
+    "promptsWorkTxt": {
+      "filename": "Prompts_Work_Matematica_7B_OA01_2026-10-08_17-52.txt",
+      "relativePath": "LECCIONES/110-7/Matematica/OA01/Prompts_Work_Matematica_7B_OA01_2026-10-08_17-52.txt",
+      "sizeBytes": 234991,
+      "sha256": "8a169e1efd7c14ecd877b344186e69f850b68ba9b64ae735b913861cdf7499cd"
+    }
   }
 }

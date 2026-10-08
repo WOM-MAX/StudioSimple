@@ -4,22 +4,22 @@
   "oa": "OA02",
   "identificador_paquete": "110-7-HIS-OA02",
   "version": "2.1.0",
-  "fecha_actualizacion": "2026-10-07",
+  "fecha_actualizacion": "2026-10-08",
   "estado": "REQUIERE_AJUSTES",
   "total_clases": 6,
   "fuente_oficial_unica_docx": {
-    "archivo": "Plan_Maestro_7Básico_110-7-HIS-OA02_6Lecciones.docx",
+    "archivo": "Plan_Maestro_7Básico_110-7-HIS-OA02_6Lecciones_2026-10-08_17-52.docx",
     "rol": "Unica fuente oficial de produccion de lecciones y prompts (6 lecciones completas)",
-    "sha256": "5f956bd82da301117e4c6701f440ae2f45b593a884328eb2171097e917ea719e",
-    "bytes": 79976
+    "sha256": "5184e49ef6b9748e6c81d333708ece72a73d4ee20bd8e6d3b5225171a1925118",
+    "bytes": 85264
   },
   "prompts_asociados": {
-    "archivo": "Prompts_Work_Historia_7B_OA02.txt",
+    "archivo": "Prompts_Work_Historia_7B_OA02_2026-10-08_17-52.txt",
     "total_laminas": 84,
     "laminas_por_clase": 14,
     "perfil_evaluacion": "Perfil 7° Básico (14 láminas bimodales: 7 Gancho + 7 Explicación; 4 alternativas A-D en todas las preguntas; sin texto ni logo IA)",
-    "sha256": "574a7fb53fb533517f8fc3a38692d44fe649446d74d1be446494fa40043c48a6",
-    "bytes": 206847
+    "sha256": "741a93ea3d615d4243b4b7c6e51d9418c111dcf6f4e2372eb9cc6da33f9bcf6c",
+    "bytes": 217213
   },
   "fundamentacion_curricular": {
     "temario_eell": {
@@ -49,5 +49,27 @@
       "Web Studio Simple/src/data/lessons/historia_7b_oa02_clase05.ts",
       "Web Studio Simple/src/data/lessons/historia_7b_oa02_clase06.ts"
     ]
+  },
+  "schemaVersion": "2.0.0",
+  "generatedAt": "2026-10-08 17:52:12 [America/Santiago]",
+  "status": "REQUIERE_AJUSTES",
+  "etapa_revision": "WORK_PRE_APROBACION",
+  "oaIdentifier": "110-7-HIS-OA02",
+  "course": "7° Básico",
+  "subject": "Historia, Geografía y Ciencias Sociales",
+  "totalLessons": 6,
+  "artifacts": {
+    "docxMaster": {
+      "filename": "Plan_Maestro_7Básico_110-7-HIS-OA02_6Lecciones_2026-10-08_17-52.docx",
+      "relativePath": "LECCIONES/110-7/Historia_Geografia/OA02/Plan_Maestro_7Básico_110-7-HIS-OA02_6Lecciones_2026-10-08_17-52.docx",
+      "sizeBytes": 85264,
+      "sha256": "5184e49ef6b9748e6c81d333708ece72a73d4ee20bd8e6d3b5225171a1925118"
+    },
+    "promptsWorkTxt": {
+      "filename": "Prompts_Work_Historia_7B_OA02_2026-10-08_17-52.txt",
+      "relativePath": "LECCIONES/110-7/Historia_Geografia/OA02/Prompts_Work_Historia_7B_OA02_2026-10-08_17-52.txt",
+      "sizeBytes": 217213,
+      "sha256": "741a93ea3d615d4243b4b7c6e51d9418c111dcf6f4e2372eb9cc6da33f9bcf6c"
+    }
   }
 }

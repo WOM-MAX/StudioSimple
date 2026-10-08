@@ -4,7 +4,7 @@
 - **Asignatura:** Matemática
 - **Curso:** 7° Básico
 - **Total de Lecciones Auditadas:** 6
-- **Fecha de Auditoria:** 2026-10-08T20:44:33.869Z
+- **Fecha de Auditoria:** 2026-10-08T20:52:29.069Z
 - **ESTADO DE CIERRE:** **APROBADO**
 
 ## 1. Metricas Generales de Inspeccion (Controles UNI-001 a UNI-012)
