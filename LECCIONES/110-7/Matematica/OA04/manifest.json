@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2.0.0",
-  "generatedAt": "2026-10-08 15:56:16 [America/Santiago]",
+  "generatedAt": "2026-10-08 17:34:51 [America/Santiago]",
   "status": "EN_REVISION",
   "etapa_revision": "WORK_PRE_APROBACION",
   "oaIdentifier": "110-7-MAT-OA04",
@@ -27,7 +27,7 @@
       "totalSlides": 14,
       "durationMinutes": 30,
       "tsFile": "matematica_7b_oa04_clase01.ts",
-      "tsHashSha256": "8f8e02707b06d64d6dff16c42d1a5e397845c5f3126aef87ad863eda5230697e"
+      "tsHashSha256": "86fc884cb82af693a87e3764c5068ec28f6c9d47566b74f5999f5d22e56b81c3"
     },
     {
       "lessonNumber": 2,
@@ -38,7 +38,7 @@
       "totalSlides": 14,
       "durationMinutes": 30,
       "tsFile": "matematica_7b_oa04_clase02.ts",
-      "tsHashSha256": "afe7e97b3eb3f3dc5870740a5c19785857ddf312733db7671e564430379c9f20"
+      "tsHashSha256": "e60419072df5aa0e32d1e60dace537fcc0bbe280abe5323a6e6f33d11f24a2cb"
     },
     {
       "lessonNumber": 3,
@@ -49,7 +49,7 @@
       "totalSlides": 14,
       "durationMinutes": 30,
       "tsFile": "matematica_7b_oa04_clase03.ts",
-      "tsHashSha256": "0e86d5ca42380afa688a5035fd86a1cbeaebfa5c60db388a427710698aa35c22"
+      "tsHashSha256": "a5e99aad94d25bef1c38ba43c2a83d69692b549a5d31e126cb891803ec9f650d"
     },
     {
       "lessonNumber": 4,
@@ -60,7 +60,7 @@
       "totalSlides": 14,
       "durationMinutes": 30,
       "tsFile": "matematica_7b_oa04_clase04.ts",
-      "tsHashSha256": "0b9c5c0bad131a686c3805d21e1905c6dba12e80e8251d2dbf67ce5cafdce0ab"
+      "tsHashSha256": "01c20f7f8e9112d2ec1ba3c2eb7ca71540ff7db9faa7c0b6a72e81cdb86bb822"
     },
     {
       "lessonNumber": 5,
@@ -71,32 +71,32 @@
       "totalSlides": 14,
       "durationMinutes": 30,
       "tsFile": "matematica_7b_oa04_clase05.ts",
-      "tsHashSha256": "0319f94b8ec32e991738db014113cf0c79987983d0fc99e35be786fb9365aab2"
+      "tsHashSha256": "f60b5ab909023a98a7fd93f06868d8474d1a85ad24fab4fc216ddcae4c1332b5"
     },
     {
       "lessonNumber": 6,
       "title": "Síntesis Integradora y Ensayo de Evaluación Formativa: Porcentajes en Acción",
-      "focus": "Cálculo inverso del total, gráficos circulares, variaciones sucesivas y ensayo psicométrico tipo MINEDUC",
+      "focus": "Cálculo inverso del total, gráficos circulares, estrategias de evaluación y ensayo psicométrico tipo MINEDUC",
       "slidesHook": 7,
       "slidesExplanation": 7,
       "totalSlides": 14,
       "durationMinutes": 30,
       "tsFile": "matematica_7b_oa04_clase06.ts",
-      "tsHashSha256": "0361a66cd12476a79d394328c13ef144fde8a1fd16bff83f3f827ff993b8d71a"
+      "tsHashSha256": "ff5dbbc824aa071f278ab5b5ee60dacfe5383116d41c3467c588f977f63c3e75"
     }
   ],
   "artifacts": {
     "docxMaster": {
       "filename": "Plan_Maestro_7Básico_110-7-MAT-OA04_6Lecciones.docx",
       "relativePath": "LECCIONES/110-7/Matematica/OA04/Plan_Maestro_7Básico_110-7-MAT-OA04_6Lecciones.docx",
-      "sizeBytes": 67392,
-      "sha256": "54d6b3db0821987200edb90f70d803378cab997c1f0e1682efb008761442fabe"
+      "sizeBytes": 71685,
+      "sha256": "898808108a875efbe9aa2753d282da8b41102a698f44abdc6e2b3fdea7de4cf2"
     },
     "promptsWorkTxt": {
       "filename": "Prompts_Work_Matematica_7B_OA04.txt",
       "relativePath": "LECCIONES/110-7/Matematica/OA04/Prompts_Work_Matematica_7B_OA04.txt",
-      "sizeBytes": 196131,
-      "sha256": "e24b8560a48948156388ef37bccdab7a5c5c7aa0484ba827207db0d01e751b85"
+      "sizeBytes": 204507,
+      "sha256": "b2d40f4f7d56c669a80f8fb163e3dc1e7bd90972ca4011bfc7693beff5457498"
     }
   },
   "governance": {

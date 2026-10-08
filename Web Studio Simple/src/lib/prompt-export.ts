@@ -56,6 +56,7 @@ export function buildLessonPromptText(lesson: PlayerLessonData): string {
       out += `3. Subtítulo en Pantalla (${subPt} pt): ${s.overlaySubtitle || ''}\n`;
       out += `4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): ${s.visualPrompt || ''}\n`;
       out += `5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): ${s.vectorialOverlayPptx || s.mathOverlayPptx || s.overlayText || ''}\n`;
+      out += `   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.\n`;
       out += `6. Notas al Orador (Locución Google Vids): "${s.speakerNotes || ''}"\n`;
       if (s.imageUrl) {
         out += `• URL Imagen de Referencia: ${s.imageUrl}\n`;
@@ -95,6 +96,7 @@ export function buildLessonPromptText(lesson: PlayerLessonData): string {
       out += `3. Subtítulo en Pantalla (${subPt} pt): ${s.overlaySubtitle || ''}\n`;
       out += `4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): ${s.visualPrompt || ''}\n`;
       out += `5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): ${s.vectorialOverlayPptx || s.mathOverlayPptx || s.overlayText || ''}\n`;
+      out += `   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.\n`;
       out += `6. Notas al Orador (Locución Google Vids): "${s.speakerNotes || ''}"\n`;
       if (s.imageUrl) {
         out += `• URL Imagen de Referencia: ${s.imageUrl}\n`;

@@ -496,7 +496,14 @@ export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
                               new TextRun({ text: s.vectorialOverlayPptx || s.mathOverlayPptx || '', size: 17 })
                             ]
                           })
-                        ] : [])
+                        ] : []),
+                        new Paragraph({
+                          spacing: { after: 20 },
+                          children: [
+                            new TextRun({ text: "• Logotipo Oficial: ", bold: true, color: "0F766E", size: 17 }),
+                            new TextRun({ text: "Logo blanco de EstudioSimple en la esquina inferior derecha, tamaño del video de referencia.", size: 17 })
+                          ]
+                        })
                       ], 32, idx % 2 === 1),
                       createRichDataCell([
                         new Paragraph({
@@ -717,7 +724,14 @@ export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
                               new TextRun({ text: s.vectorialOverlayPptx || s.mathOverlayPptx || '', size: 17 })
                             ]
                           })
-                        ] : [])
+                        ] : []),
+                        new Paragraph({
+                          spacing: { after: 20 },
+                          children: [
+                            new TextRun({ text: "• Logotipo Oficial: ", bold: true, color: "0F766E", size: 17 }),
+                            new TextRun({ text: "Logo blanco de EstudioSimple en la esquina inferior derecha, tamaño del video de referencia.", size: 17 })
+                          ]
+                        })
                       ], 32, idx % 2 === 1),
                       createRichDataCell([
                         new Paragraph({

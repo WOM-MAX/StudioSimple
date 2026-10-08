@@ -4,7 +4,7 @@
 - **Asignatura:** Matemática
 - **Curso:** 7° Básico
 - **Total de Lecciones Auditadas:** 6
-- **Fecha de Auditoria:** 2026-10-08T18:56:30.067Z
+- **Fecha de Auditoria:** 2026-10-08T20:35:06.958Z
 - **ESTADO DE CIERRE:** **APROBADO**
 
 ## 1. Metricas Generales de Inspeccion (Controles UNI-001 a UNI-012)
@@ -21,8 +21,8 @@
 | Reutilizacion Fiel en Revision Post-Video (UNI-009) | 6 / 6 clases | 100% reutilizacion |
 | Estructura Teleologica (UNI-010: Objetivo en D1, Cierre a Practica) | 6 / 6 clases | 100% conforme |
 | Integridad de 8 Pasos Obligatorios (UNI-011) | 6 / 6 clases | 100% completos |
-| Promedio Palabras Gancho (Informativo) | ~196 palabras | Referencia continua (calibración en Vids) |
-| Promedio Palabras Explicativo (Informativo) | ~220 palabras | Referencia continua (calibración en Vids) |
+| Promedio Palabras Gancho (Informativo) | ~194 palabras | Referencia continua (calibración en Vids) |
+| Promedio Palabras Explicativo (Informativo) | ~215 palabras | Referencia continua (calibración en Vids) |
 
 ## 2. Detalle de Hallazgos y Discrepancias
 

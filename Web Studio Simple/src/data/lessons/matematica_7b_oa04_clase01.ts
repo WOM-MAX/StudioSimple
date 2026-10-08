@@ -121,7 +121,7 @@ export const MATEMATICA_7B_OA04_CLASE01: LessonData = {
       {
         "slideNumber": 1,
         "tituloMomento": "Desafío Inicial: El panel solar escolar",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing on a sunny school rooftop looking at a large square solar panel divided into a grid of 100 square cells. High contrast, bright sunny day, clean vector lines, ample negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing on a sunny school rooftop looking at a large square solar panel divided into a grid of 100 square cells. High contrast, bright sunny day, clean vector lines, ample negative space on the left. Clear lighting, vibrant colors. No text drawn by AI.",
         "overlayText": "¿QUÉ ES EL PORCENTAJE?",
         "overlayTitle": "¿QUÉ ES EL PORCENTAJE?",
         "overlaySubtitle": "El enigma de las 100 celdas solares",
@@ -229,10 +229,10 @@ export const MATEMATICA_7B_OA04_CLASE01: LessonData = {
       {
         "slideNumber": 1,
         "tituloMomento": "Declaración del Objetivo: Concepto de Porcentaje",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, , a girl with braided hair and a boy in a teal jacket, in a clean modern classroom looking at a digital blackboard. Generous negative space on the left. High contrast, bright flat colors.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, in a clean modern classroom looking at a digital blackboard. Generous negative space on the left. High contrast, bright flat colors. Clear lighting, vibrant colors. No text drawn by AI.",
         "overlayText": "OBJETIVO DE LA LECCIÓN",
         "overlayTitle": "OBJETIVO DE LA LECCIÓN",
-        "overlaySubtitle": "Comprender el porcentaje y su modelo pictórico en cuadrícula de 100",
+        "overlaySubtitle": "Comprender el porcentaje en cuadrículas de 100",
         "vectorialOverlayPptx": "Cuadro limpio con el Objetivo de Aprendizaje MINEDUC OA 4",
         "speakerNotes": "Hoy aprenderemos a representar y comprender el porcentaje como una razón de consecuente cien, utilizando cuadrículas de diez por diez para visualizar cada cantidad.",
         "duracionSeg": 12
@@ -284,10 +284,10 @@ export const MATEMATICA_7B_OA04_CLASE01: LessonData = {
       {
         "slideNumber": 6,
         "tituloMomento": "Caso Isomórfico: Cuarenta cuadritos sombreados",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The 13-year-old girl and boy pointing together at a grid of 100 cells where exactly 40 blue cells are neatly colored. Perfect visual clarity, spacious negative space for practice step.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, pointing together at a grid of 100 cells where exactly 40 blue cells are neatly colored. Perfect visual clarity, spacious negative space on the left. Clear lighting, vibrant colors. No text drawn by AI.",
         "overlayText": "EJEMPLO MODELADO: CASO 1",
         "overlayTitle": "EJEMPLO MODELADO: CASO 1",
-        "overlaySubtitle": "En una cuadrícula de 100 cuadritos iguales, se colorean exactamente 40 cuadritos",
+        "overlaySubtitle": "40 cuadritos de 100 representan el 40%",
         "vectorialOverlayPptx": "Resolución canónica: La razón es 40/100, lo que por definición es 40%.",
         "speakerNotes": "Analicemos paso a paso el caso modelado: En una cuadrícula de 100 cuadritos iguales, se colorean exactamente 40 cuadritos de color azul. ¿Qué porcentaje de la cuadrícula está coloreado de azul? La razón es 40/100, lo que por definición es 40%. Por lo tanto, el resultado esperado es: 40%.",
         "duracionSeg": 13
@@ -307,6 +307,7 @@ export const MATEMATICA_7B_OA04_CLASE01: LessonData = {
   },
   "postQuestions": [
     {
+      "id": "caso1",
       "context": "En una cuadrícula de 100 cuadritos iguales, se colorean exactamente 40 cuadritos de color azul.",
       "question": "¿Qué porcentaje de la cuadrícula está coloreado de azul?",
       "expected": "40%",
@@ -316,6 +317,7 @@ export const MATEMATICA_7B_OA04_CLASE01: LessonData = {
       "studentReveal": "Está coloreado el 40%."
     },
     {
+      "id": "caso2",
       "context": "En un mosaico de 100 baldosas cuadradas en el patio de la escuela, 65 baldosas son de color verde y el resto son blancas.",
       "question": "¿Qué porcentaje del mosaico está formado por baldosas verdes?",
       "expected": "65%",
@@ -327,6 +329,7 @@ export const MATEMATICA_7B_OA04_CLASE01: LessonData = {
   ],
   "practice": [
     {
+      "id": "caso1",
       "context": "En una cuadrícula de 100 cuadritos iguales, se colorean exactamente 40 cuadritos de color azul.",
       "question": "¿Qué porcentaje de la cuadrícula está coloreado de azul?",
       "expected": "40%",
@@ -336,6 +339,7 @@ export const MATEMATICA_7B_OA04_CLASE01: LessonData = {
       "studentReveal": "Está coloreado el 40%."
     },
     {
+      "id": "caso2",
       "context": "En un mosaico de 100 baldosas cuadradas en el patio de la escuela, 65 baldosas son de color verde y el resto son blancas.",
       "question": "¿Qué porcentaje del mosaico está formado por baldosas verdes?",
       "expected": "65%",

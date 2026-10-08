@@ -33,6 +33,7 @@ export type LessonStage =
 export type SyncViewMode = 'split' | 'adult' | 'student';
 
 export interface GuidedItem {
+  id?: string;
   context: string;
   question: string;
   expected: string;

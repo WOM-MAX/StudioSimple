@@ -254,7 +254,7 @@ async function main() {
       {
         lessonNumber: 6,
         title: "Síntesis Integradora y Ensayo de Evaluación Formativa: Porcentajes en Acción",
-        focus: "Cálculo inverso del total, gráficos circulares, variaciones sucesivas y ensayo psicométrico tipo MINEDUC",
+        focus: "Cálculo inverso del total, gráficos circulares, estrategias de evaluación y ensayo psicométrico tipo MINEDUC",
         slidesHook: 7,
         slidesExplanation: 7,
         totalSlides: 14,

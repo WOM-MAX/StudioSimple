@@ -56,3 +56,13 @@ Toda lección de matemática en EstudioSimple debe progresar a través del model
 - **Clase 5:** *Resolución de Problemas Cotidianos: Descuentos Comerciales e IVA.* Rebajas sobre el precio original y recargo del 19% en operaciones comerciales afectas.
 - **Clase 6:** *Síntesis Integradora y Ensayo de Evaluación Formativa.* Cálculo inverso: hallar el total (100%) conociendo una parte y el porcentaje correspondiente; ensayo psicométrico tipo Examen Libre con 4 alternativas (A, B, C, D) y justificación de distractores.
   - **Prohibición Terminante:** Prohibido utilizar el término *"porcentaje acumulado"*, conceptualmente impropio de este nivel.
+
+### 5.1. Delimitación de Alcance en 7° Básico OA04: Exclusión Estricta de Variaciones Sucesivas
+- **Exclusión Terminante:** En 7° Básico OA04 queda estrictamente prohibido incorporar descuentos sucesivos (ej. dos rebajas de 10% que resultan en 19%), aumentos sucesivos o cualquier tipo de variación porcentual escalonada, tanto en gancho, explicación conceptual, focos de observación, prompts visuales, locución, síntesis y reactivos de evaluación.
+- **Foco Canónico de OA04:** El alcance de 7° Básico OA04 se circunscribe exclusivamente a:
+  1. Concepto de porcentaje como razón de consecuente 100 y representación en cuadrículas 10x10.
+  2. Equivalencia triple entre porcentaje, fracción simplificada y número decimal.
+  3. Cálculo mental de porcentajes notables (50%, 25%, 20%, 10%) mediante división canónica.
+  4. Algoritmos universales directos: multiplicación decimal y regla de tres proporcional.
+  5. Aplicaciones comerciales directas de variación simple: descuento individual y recargo simple (IVA 19% en operaciones comerciales afectas).
+  6. Síntesis y evaluación formativa: cálculo inverso para hallar el total (100%) a partir de una parte conocida y su porcentaje, lectura de sectores en gráficos circulares y preparación para evaluaciones formales.

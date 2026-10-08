@@ -121,7 +121,7 @@ export const MATEMATICA_7B_OA04_CLASE02: LessonData = {
       {
         "slideNumber": 1,
         "tituloMomento": "Desafío Inicial: La receta en porcentajes",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, in a bright home economics kitchen classroom looking at a recipe chalkboard. Clean kitchen counters, glass measuring cups, bright daylight, generous negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, in a bright home economics kitchen classroom looking at a recipe chalkboard. Clean kitchen counters, glass measuring cups, bright daylight, generous negative space on the left. Clear lighting, vibrant colors. No text drawn by AI.",
         "overlayText": "TRES CARAS DE UN MISMO NÚMERO",
         "overlayTitle": "TRES CARAS DE UN MISMO NÚMERO",
         "overlaySubtitle": "Porcentaje, fracción y número decimal",
@@ -143,7 +143,7 @@ export const MATEMATICA_7B_OA04_CLASE02: LessonData = {
       {
         "slideNumber": 3,
         "tituloMomento": "Pregunta clave: La balanza decimal",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The 13-year-old boy in a teal jacket pointing to the digital scale display showing decimal numbers. Inquisitive expression, clean scientific aesthetic, negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, observing a digital kitchen scale on the counter. Inquisitive expression, clean scientific aesthetic, ample negative space on the left. Clear lighting, vibrant colors. No text drawn by AI.",
         "overlayText": "¿Y EN NÚMEROS DECIMALES?",
         "overlayTitle": "¿Y EN NÚMEROS DECIMALES?",
         "overlaySubtitle": "¿Qué número muestra la pantalla electrónica?",
@@ -154,10 +154,10 @@ export const MATEMATICA_7B_OA04_CLASE02: LessonData = {
       {
         "slideNumber": 4,
         "tituloMomento": "Visualización: La división por 100",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, calculating on a digital whiteboard, showing the decimal point shifting two places to the left. Sharp focus, clean graphics, negative space on the right.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, calculating on a digital whiteboard. Sharp focus, clean graphics, negative space on the right. Clear lighting, vibrant colors. No text drawn by AI.",
         "overlayText": "DIVIDIR ENTRE CIEN",
         "overlayTitle": "DIVIDIR ENTRE CIEN",
-        "overlaySubtitle": "La coma se desplaza dos lugares a la izquierda",
+        "overlaySubtitle": "Mover la coma dos lugares a la izquierda",
         "vectorialOverlayPptx": "Visualización animada del desplazamiento decimal: 25,0 -> 0,25",
         "speakerNotes": "Como el porcentaje significa dividir entre cien, el número decimal se obtiene corriendo la coma dos lugares hacia la izquierda. Veinticinco dividido por cien es cero coma veinticinco.",
         "duracionSeg": 9
@@ -229,10 +229,10 @@ export const MATEMATICA_7B_OA04_CLASE02: LessonData = {
       {
         "slideNumber": 1,
         "tituloMomento": "Declaración del Objetivo: Conversión de Registros",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, , a girl with braided hair and a boy in a teal jacket, standing beside a digital display in a bright classroom. Spacious negative space on left. Clean vector style.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing beside a digital display in a bright classroom. Spacious negative space on the left. Clean vector style. Clear lighting, vibrant colors. No text drawn by AI.",
         "overlayText": "OBJETIVO DE LA LECCIÓN",
         "overlayTitle": "OBJETIVO DE LA LECCIÓN",
-        "overlaySubtitle": "Equivalencia triple: porcentaje, fracción simplificada y número decimal",
+        "overlaySubtitle": "Equivalencia triple: porcentaje, fracción y número decimal",
         "vectorialOverlayPptx": "Título de la lección y Objetivo de Aprendizaje oficial",
         "speakerNotes": "Hoy aprenderemos la equivalencia triple entre porcentaje, fracción simplificada y número decimal, utilizando simplificaciones rigurosas.",
         "duracionSeg": 12
@@ -240,10 +240,10 @@ export const MATEMATICA_7B_OA04_CLASE02: LessonData = {
       {
         "slideNumber": 2,
         "tituloMomento": "Paso 1: De Porcentaje a Fracción",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The 13-year-old girl writing a fraction on a chalkboard. Clean neat numbers, bright daytime light, negative space on the right.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, working with chalk at a large classroom blackboard. Bright daytime light, ample negative space on the left. Clear lighting, vibrant colors. No text drawn by AI.",
         "overlayText": "ESCRIBIR SOBRE 100",
         "overlayTitle": "ESCRIBIR SOBRE 100",
-        "overlaySubtitle": "El porcentaje se convierte en el numerador y 100 en el denominador",
+        "overlaySubtitle": "Numerador es el porcentaje y denominador es 100",
         "vectorialOverlayPptx": "Fórmula: p% = p / 100",
         "speakerNotes": "El primer paso consiste en escribir el número del porcentaje en el numerador y colocar siempre el número cien en el denominador.",
         "duracionSeg": 13
@@ -251,10 +251,10 @@ export const MATEMATICA_7B_OA04_CLASE02: LessonData = {
       {
         "slideNumber": 3,
         "tituloMomento": "Paso 2: Simplificación Irreductible",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The 13-year-old boy demonstrating step-by-step division by common factors on a notebook. High contrast, clear diagrams, negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, demonstrating step-by-step division by common factors on a notebook. High contrast, clear diagrams, negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "SIMPLIFICAR AL MÁXIMO",
         "overlayTitle": "SIMPLIFICAR AL MÁXIMO",
-        "overlaySubtitle": "Dividir numerador y denominador por el máximo común divisor",
+        "overlaySubtitle": "Dividir por el máximo común divisor",
         "vectorialOverlayPptx": "Ejemplo paso a paso: 50/100 -> dividir por 50 -> 1/2",
         "speakerNotes": "El segundo paso es simplificar la fracción dividiendo el numerador y el denominador por su máximo común divisor hasta obtener una fracción irreducible.",
         "duracionSeg": 13
@@ -287,7 +287,7 @@ export const MATEMATICA_7B_OA04_CLASE02: LessonData = {
         "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, solving the 20% case together on an interactive tablet. Clear, high contrast, negative space on the right.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "EJEMPLO MODELADO: CASO 1",
         "overlayTitle": "EJEMPLO MODELADO: CASO 1",
-        "overlaySubtitle": "Queremos transformar el 20% en su expresión fraccionaria irreductible y en su nú",
+        "overlaySubtitle": "20% equivale a 1/5 y a 0,2",
         "vectorialOverlayPptx": "Resolución canónica: 20% = 20/100 = 1/5 = 0,2.",
         "speakerNotes": "Analicemos paso a paso el caso modelado: Queremos transformar el 20% en su expresión fraccionaria irreductible y en su número decimal correspondiente. ¿Cuál es la fracción irreductible y el número decimal equivalente al 20%? 20% = 20/100 = 1/5 = 0,2. Por lo tanto, el resultado esperado es: Fracción: 1/5 y Decimal: 0,2.",
         "duracionSeg": 13
@@ -307,6 +307,7 @@ export const MATEMATICA_7B_OA04_CLASE02: LessonData = {
   },
   "postQuestions": [
     {
+      "id": "caso1",
       "context": "Queremos transformar el 20% en su expresión fraccionaria irreductible y en su número decimal correspondiente.",
       "question": "¿Cuál es la fracción irreductible y el número decimal equivalente al 20%?",
       "expected": "Fracción: 1/5 y Decimal: 0,2",
@@ -316,6 +317,7 @@ export const MATEMATICA_7B_OA04_CLASE02: LessonData = {
       "studentReveal": "Fracción: 1/5 | Decimal: 0,2."
     },
     {
+      "id": "caso2",
       "context": "Un estudiante desea expresar el 75% como fracción irreductible y como decimal.",
       "question": "¿Cuáles son los valores correspondientes al 75%?",
       "expected": "Fracción: 3/4 y Decimal: 0,75",
@@ -327,6 +329,7 @@ export const MATEMATICA_7B_OA04_CLASE02: LessonData = {
   ],
   "practice": [
     {
+      "id": "caso1",
       "context": "Queremos transformar el 20% en su expresión fraccionaria irreductible y en su número decimal correspondiente.",
       "question": "¿Cuál es la fracción irreductible y el número decimal equivalente al 20%?",
       "expected": "Fracción: 1/5 y Decimal: 0,2",
@@ -336,6 +339,7 @@ export const MATEMATICA_7B_OA04_CLASE02: LessonData = {
       "studentReveal": "Fracción: 1/5 | Decimal: 0,2."
     },
     {
+      "id": "caso2",
       "context": "Un estudiante desea expresar el 75% como fracción irreductible y como decimal.",
       "question": "¿Cuáles son los valores correspondientes al 75%?",
       "expected": "Fracción: 3/4 y Decimal: 0,75",

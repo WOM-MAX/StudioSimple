@@ -121,7 +121,7 @@ export const MATEMATICA_7B_OA04_CLASE03: LessonData = {
       {
         "slideNumber": 1,
         "tituloMomento": "Desafío Inicial: Ofertas en la feria escolar",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, , a girl with braided hair and a boy in a teal jacket, walking through a lively school book fair with colorful discount banners. High contrast, bright sunny afternoon, spacious negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, walking through a lively school book fair with colorful discount banners. High contrast, bright sunny afternoon, spacious negative space on the left. Clear lighting, vibrant colors. No text drawn by AI.",
         "overlayText": "CALCULAR MENTALMENTE",
         "overlayTitle": "CALCULAR MENTALMENTE",
         "overlaySubtitle": "El poder de los porcentajes notables",
@@ -146,7 +146,7 @@ export const MATEMATICA_7B_OA04_CLASE03: LessonData = {
         "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The 13-year-old boy in a teal jacket thinking with fingers on his chin looking at a 25 percent banner. Thought bubble with clean division diagram, negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "25% ES DIVIDIR POR 4",
         "overlayTitle": "25% ES DIVIDIR POR 4",
-        "overlaySubtitle": "Un cuarto del total o la mitad de la mitad",
+        "overlaySubtitle": "Un cuarto o la mitad de la mitad",
         "vectorialOverlayPptx": "Diagrama de cuatro partes iguales: 100% / 4 = 25%",
         "speakerNotes": "En la mesa de cómics, el descuento era del veinticinco por ciento. Lucas recordó que veinticinco es la cuarta parte de cien, por lo que basta dividir el precio entre cuatro.",
         "duracionSeg": 9
@@ -229,10 +229,10 @@ export const MATEMATICA_7B_OA04_CLASE03: LessonData = {
       {
         "slideNumber": 1,
         "tituloMomento": "Declaración del Objetivo: Cálculo Mental de Porcentajes",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, , a girl with braided hair and a boy in a teal jacket, in front of a modern smartboard displaying mental math icons. Clean classroom setting, ample negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, in front of a modern smartboard displaying mental math icons. Clean classroom setting, ample negative space on the left. Clear lighting, vibrant colors. No text drawn by AI.",
         "overlayText": "OBJETIVO DE LA LECCIÓN",
         "overlayTitle": "OBJETIVO DE LA LECCIÓN",
-        "overlaySubtitle": "Estrategias de cálculo mental usando división por fracciones canónicas",
+        "overlaySubtitle": "Cálculo mental mediante división por fracciones canónicas",
         "vectorialOverlayPptx": "Título y estándar curricular del cálculo mental con porcentajes",
         "speakerNotes": "Hoy aprenderemos estrategias de cálculo mental de porcentajes notables mediante divisiones directas por dos, cuatro, cinco y diez.",
         "duracionSeg": 12
@@ -254,7 +254,7 @@ export const MATEMATICA_7B_OA04_CLASE03: LessonData = {
         "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The 13-year-old boy demonstrating a square divided into four quarters. High clarity, negative space for formulas.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "CALCULAR EL 25% -> DIVIDIR POR 4",
         "overlayTitle": "CALCULAR EL 25% -> DIVIDIR POR 4",
-        "overlaySubtitle": "25% = 1/4 del total | Cuarta parte (mitad de la mitad)",
+        "overlaySubtitle": "25% es dividir por 4: cuarta parte",
         "vectorialOverlayPptx": "Regla: 25% de N = N : 4 (ej. 25% de 80 = 20)",
         "speakerNotes": "Veinticinco por ciento equivale a un cuarto. Para calcular el veinticinco por ciento, dividimos el número entre cuatro, o sacamos la mitad y volvemos a sacar la mitad.",
         "duracionSeg": 13
@@ -276,7 +276,7 @@ export const MATEMATICA_7B_OA04_CLASE03: LessonData = {
         "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Close up of calculation steps showing a decimal point moving one spot to the left. Sharp focus, negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "CALCULAR EL 10% -> DIVIDIR POR 10",
         "overlayTitle": "CALCULAR EL 10% -> DIVIDIR POR 10",
-        "overlaySubtitle": "10% = 1/10 | Quitar un cero o desplazar la coma un lugar",
+        "overlaySubtitle": "10% es dividir por 10: décima parte",
         "vectorialOverlayPptx": "Regla: 10% de N = N : 10 (ej. 10% de 340 = 34 | 10% de 85 = 8,5)",
         "speakerNotes": "Diez por ciento equivale a un décimo. Basta con dividir entre diez, lo que en números enteros con ceros significa simplemente eliminar el último cero.",
         "duracionSeg": 13
@@ -284,10 +284,10 @@ export const MATEMATICA_7B_OA04_CLASE03: LessonData = {
       {
         "slideNumber": 6,
         "tituloMomento": "Caso Isomórfico: El 20% de 150",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, solving the problem 20% of 150 on the tablet together. Clean and bright, spacious negative space on the right.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, solving a mental math calculation on a tablet together. Clean and bright, spacious negative space on the right. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "EJEMPLO MODELADO: CASO 1",
         "overlayTitle": "EJEMPLO MODELADO: CASO 1",
-        "overlaySubtitle": "Se requiere calcular mentalmente el 20% de 150 utilizando la división directa po",
+        "overlaySubtitle": "20% de 150: 150 : 5 = 30",
         "vectorialOverlayPptx": "Resolución canónica: 150 : 5 = 30.",
         "speakerNotes": "Analicemos paso a paso el caso modelado: Se requiere calcular mentalmente el 20% de 150 utilizando la división directa por 5. ¿Cuál es el 20% de 150? 150 : 5 = 30. Por lo tanto, el resultado esperado es: 30.",
         "duracionSeg": 13
@@ -298,15 +298,16 @@ export const MATEMATICA_7B_OA04_CLASE03: LessonData = {
         "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The two 13-year-old student explorers smiling with thumbs up, ready to begin interactive practice. Bright anime aesthetic, negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "REGLA DE ORO DE LA LECCIÓN",
         "overlayTitle": "REGLA DE ORO DE LA LECCIÓN",
-        "overlaySubtitle": "Asocia el porcentaje con su división: 50%(:2), 25%(:4), 20%(:5), 10%(:10)",
+        "overlaySubtitle": "Atajos: 50%(:2), 25%(:4), 20%(:5) y 10%(:10)",
         "vectorialOverlayPptx": "Cuadro resumen final con los 4 atajos maestros. ¡A practicar!",
-        "speakerNotes": "Regla de oro: Asocia el porcentaje con su división: 50%(:2), 25%(:4), 20%(:5), 10%(:10). Ahora pon a prueba lo aprendido resolviendo los casos de práctica en la plataforma interactiva.",
+        "speakerNotes": "Regla de oro: Asocia el porcentaje con su división: cincuenta por ciento entre dos, veinticinco entre cuatro, veinte entre cinco y diez entre diez. Ahora pon a prueba lo aprendido resolviendo los casos de práctica en la plataforma interactiva.",
         "duracionSeg": 13
       }
     ]
   },
   "postQuestions": [
     {
+      "id": "caso1",
       "context": "Se requiere calcular mentalmente el 20% de 150 utilizando la división directa por 5.",
       "question": "¿Cuál es el 20% de 150?",
       "expected": "30",
@@ -316,6 +317,7 @@ export const MATEMATICA_7B_OA04_CLASE03: LessonData = {
       "studentReveal": "El 20% de 150 es 30."
     },
     {
+      "id": "caso2",
       "context": "Un estudiante desea calcular mentalmente el 25% de 80 páginas de un folleto.",
       "question": "¿Cuál es el 25% de 80?",
       "expected": "20",
@@ -327,6 +329,7 @@ export const MATEMATICA_7B_OA04_CLASE03: LessonData = {
   ],
   "practice": [
     {
+      "id": "caso1",
       "context": "Se requiere calcular mentalmente el 20% de 150 utilizando la división directa por 5.",
       "question": "¿Cuál es el 20% de 150?",
       "expected": "30",
@@ -336,6 +339,7 @@ export const MATEMATICA_7B_OA04_CLASE03: LessonData = {
       "studentReveal": "El 20% de 150 es 30."
     },
     {
+      "id": "caso2",
       "context": "Un estudiante desea calcular mentalmente el 25% de 80 páginas de un folleto.",
       "question": "¿Cuál es el 25% de 80?",
       "expected": "20",

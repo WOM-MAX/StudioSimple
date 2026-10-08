@@ -77,6 +77,10 @@ Estas reglas aplican con carácter vinculante y obligatorio a todas las leccione
 ### UNI-015: Fuente Estructurada Única y Compilación Unidireccional [BLOQUEANTE]
 - Cada OA dispone de una **fuente estructurada única** (ej. `scripts/oa04_data/` para MAT-OA04). DOCX, TXT de prompts y TypeScript se generan o sincronizan exclusivamente en una dirección desde dicha fuente. Prohibida la edición independiente de artefactos derivados.
 
+### UNI-016: Control Estricto de Alcance en Correcciones [BLOQUEANTE]
+- Durante procesos de corrección, ajuste o saneamiento de lecciones ya planificadas, queda terminantemente prohibido introducir temas, conceptos, ejemplos, actividades o ejercicios nuevos que no formen parte de la lista de cambios explícitamente autorizados.
+- Todo concepto, tema o ejemplo eliminado queda estrictamente excluido en todas sus formas y manifestaciones de la lección completa (gancho, explicación, focos didácticos, prompts visuales, notas de locución, síntesis, práctica y evaluaciones), y no puede reaparecer bajo sinónimos, paráfrasis o formulaciones alternativas.
+
 ---
 
 ## 2. Derivación de Reglas por Nivel de Especialidad

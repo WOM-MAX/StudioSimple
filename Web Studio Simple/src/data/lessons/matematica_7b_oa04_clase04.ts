@@ -121,7 +121,7 @@ export const MATEMATICA_7B_OA04_CLASE04: LessonData = {
       {
         "slideNumber": 1,
         "tituloMomento": "Desafío Inicial: El agua del huerto escolar",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, , a girl with braided hair and a boy in a teal jacket, standing next to a large transparent rainwater tank with 500 liters marked on it in a green school garden. High contrast, sunny day, spacious negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing next to a large transparent rainwater tank with 500 liters marked on it in a green school garden. High contrast, sunny day, spacious negative space on the left. Clear lighting, vibrant colors. No text drawn by AI.",
         "overlayText": "CALCULAR CUALQUIER PORCENTAJE",
         "overlayTitle": "CALCULAR CUALQUIER PORCENTAJE",
         "overlaySubtitle": "El desafío del 18% de 500 litros",
@@ -135,7 +135,7 @@ export const MATEMATICA_7B_OA04_CLASE04: LessonData = {
         "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The 13-year-old boy looking at his notebook noting that 18% does not divide by 2, 4, 5, or 10 directly. Thoughtful expression, garden background, negative space on top.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "¿Y SI NO HAY UN ATAJO DIRECTO?",
         "overlayTitle": "¿Y SI NO HAY UN ATAJO DIRECTO?",
-        "overlaySubtitle": "18% no es 50%, ni 25%, ni 20%, ni 10%",
+        "overlaySubtitle": "Porcentajes generales requieren un algoritmo universal",
         "vectorialOverlayPptx": "Signo de interrogación sobre el número 18% junto a los atajos conocidos",
         "speakerNotes": "Lucas observó que dieciocho no es un porcentaje notable directo. Para resolverlo se necesitan métodos matemáticos universales que funcionen con cualquier número.",
         "duracionSeg": 8
@@ -168,7 +168,7 @@ export const MATEMATICA_7B_OA04_CLASE04: LessonData = {
         "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, comparing their notebooks with big smiles of satisfaction. Two different calculations arriving at 90.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "¡AMBOS CAMINOS SON CORRECTOS!",
         "overlayTitle": "¡AMBOS CAMINOS SON CORRECTOS!",
-        "overlaySubtitle": "500 x 0,18 = (18 x 500) / 100 = 90",
+        "overlaySubtitle": "Ambos procedimientos obtienen el mismo resultado: 90",
         "vectorialOverlayPptx": "Balanza matemática mostrando la equivalencia perfecta de ambos métodos",
         "speakerNotes": "Ambos caminos llegaron con exactitud a noventa litros. Esto demuestra que en matemática puedes elegir el método que te resulte más cómodo y rápido según los números.",
         "duracionSeg": 9
@@ -229,7 +229,7 @@ export const MATEMATICA_7B_OA04_CLASE04: LessonData = {
       {
         "slideNumber": 1,
         "tituloMomento": "Declaración del Objetivo: Métodos Universales de Cálculo",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, , a girl with braided hair and a boy in a teal jacket, looking at a math display showing calculation formulas. Clean modern classroom, ample negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, looking at a math display showing calculation formulas. Clean modern classroom, ample negative space on the left. Clear lighting, vibrant colors. No text drawn by AI.",
         "overlayText": "OBJETIVO DE LA LECCIÓN",
         "overlayTitle": "OBJETIVO DE LA LECCIÓN",
         "overlaySubtitle": "Multiplicación por decimal y regla de proporcionalidad directa",
@@ -273,10 +273,10 @@ export const MATEMATICA_7B_OA04_CLASE04: LessonData = {
       {
         "slideNumber": 5,
         "tituloMomento": "Consejo Práctico: Simplificar antes de multiplicar",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Both students simplifying numbers with slashes before multiplying. High clarity, modern anime, negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, working together with pencil and notebook at a study table. High clarity, modern anime aesthetic, ample negative space on the left. Clear lighting, vibrant colors. No text drawn by AI.",
         "overlayText": "SIMPLIFICAR CEROS PRIMERO",
         "overlayTitle": "SIMPLIFICAR CEROS PRIMERO",
-        "overlaySubtitle": "(18 x 500) / 100 = 18 x 5 = 90",
+        "overlaySubtitle": "Simplificar ceros facilita el cálculo final: 90",
         "vectorialOverlayPptx": "Técnica de cancelación de ceros: 500 / 100 se convierte directamente en 5",
         "speakerNotes": "Un consejo de oro para el método proporcional: cuando el total termina en ceros, cancela los ceros con el cien primero. Quinientos entre cien es cinco, y dieciocho por cinco es noventa.",
         "duracionSeg": 13
@@ -284,10 +284,10 @@ export const MATEMATICA_7B_OA04_CLASE04: LessonData = {
       {
         "slideNumber": 6,
         "tituloMomento": "Caso Isomórfico: El 18% de 500",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, solving 18% of 500 on an interactive tablet display. Clear numbers, spacious negative space on the right.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, studying and solving the case together on an interactive tablet display. Spacious negative space on the left, clear lighting. No text drawn by AI.",
         "overlayText": "EJEMPLO MODELADO: CASO 1",
         "overlayTitle": "EJEMPLO MODELADO: CASO 1",
-        "overlaySubtitle": "Se requiere calcular el 18% de 500 utilizando cualquiera de los dos métodos apre",
+        "overlaySubtitle": "El 18% de 500 equivale a 90",
         "vectorialOverlayPptx": "Resolución canónica: 500 x 0,18 = 90.",
         "speakerNotes": "Analicemos paso a paso el caso modelado: Se requiere calcular el 18% de 500 utilizando cualquiera de los dos métodos aprendidos. ¿Cuál es el 18% de 500? 500 x 0,18 = 90. Por lo tanto, el resultado esperado es: 90.",
         "duracionSeg": 13
@@ -307,6 +307,7 @@ export const MATEMATICA_7B_OA04_CLASE04: LessonData = {
   },
   "postQuestions": [
     {
+      "id": "caso1",
       "context": "Se requiere calcular el 18% de 500 utilizando cualquiera de los dos métodos aprendidos.",
       "question": "¿Cuál es el 18% de 500?",
       "expected": "90",
@@ -316,6 +317,7 @@ export const MATEMATICA_7B_OA04_CLASE04: LessonData = {
       "studentReveal": "El 18% de 500 es 90."
     },
     {
+      "id": "caso2",
       "context": "En un curso de 40 estudiantes, el 35% practica básquetbol en las tardes.",
       "question": "¿Cuántos estudiantes practican básquetbol?",
       "expected": "14",
@@ -327,6 +329,7 @@ export const MATEMATICA_7B_OA04_CLASE04: LessonData = {
   ],
   "practice": [
     {
+      "id": "caso1",
       "context": "Se requiere calcular el 18% de 500 utilizando cualquiera de los dos métodos aprendidos.",
       "question": "¿Cuál es el 18% de 500?",
       "expected": "90",
@@ -336,6 +339,7 @@ export const MATEMATICA_7B_OA04_CLASE04: LessonData = {
       "studentReveal": "El 18% de 500 es 90."
     },
     {
+      "id": "caso2",
       "context": "En un curso de 40 estudiantes, el 35% practica básquetbol en las tardes.",
       "question": "¿Cuántos estudiantes practican básquetbol?",
       "expected": "14",

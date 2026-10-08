@@ -121,7 +121,7 @@ export const MATEMATICA_7B_OA04_CLASE05: LessonData = {
       {
         "slideNumber": 1,
         "tituloMomento": "Desafío Comercial: Las ofertas de la feria",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Two 13-year-old student organizers, a girl with braided hair holding a calculator and clipboard, and a boy in a teal jacket arranging items on a wooden school market stall. Bright banners with percentage signs in the background, warm natural daylight, clean vector aesthetic, ample negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair holding a calculator and clipboard, and a boy in a teal jacket arranging items on a wooden school market stall. Bright banners in the background, warm natural daylight, clean vector aesthetic, ample negative space on the left. Clear lighting, vibrant colors. No text drawn by AI.",
         "overlayText": "DESCUENTOS E IVA EN LA VIDA REAL",
         "overlayTitle": "DESCUENTOS E IVA EN LA VIDA REAL",
         "overlaySubtitle": "Aplicación de porcentajes en compras cotidianas",
@@ -157,7 +157,7 @@ export const MATEMATICA_7B_OA04_CLASE05: LessonData = {
         "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Lucas examining an official Chilean shopping receipt or ticket under a magnifying glass, showing clear structured printed sections for net value, tax and total. Soft studio lighting, clean digital vector feel, ample negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "EL IMPUESTO AL CONSUMO: IVA 19%",
         "overlayTitle": "EL IMPUESTO AL CONSUMO: IVA 19%",
-        "overlaySubtitle": "Tributo legal del 19% que se aplica sobre operaciones afectas",
+        "overlaySubtitle": "Tributo legal del 19% en operaciones afectas",
         "vectorialOverlayPptx": "Boleta de compra en operación afecta: Neto + IVA (19%) = Total Bruto",
         "speakerNotes": "Por otro lado, cuando compramos un bien o servicio en una operación afecta a IVA en Chile, la ley tributaria aplica un recargo del diecinueve por ciento sobre el valor neto. A diferencia del descuento, el IVA se suma al total.",
         "duracionSeg": 9
@@ -190,7 +190,7 @@ export const MATEMATICA_7B_OA04_CLASE05: LessonData = {
         "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, An open student notebook on the foreground desk with three clearly numbered structured bullet steps highlighted in cyan, orange and navy. Lucas holding a pen smiling warmly beside Sofía, bright inviting atmosphere, ample negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "MÉTODO DE 3 PASOS EN ACCIÓN",
         "overlayTitle": "MÉTODO DE 3 PASOS EN ACCIÓN",
-        "overlaySubtitle": "Paso 1: Base | Paso 2: Monto % | Paso 3: Operar",
+        "overlaySubtitle": "Tres pasos: base, porcentaje y operación final",
         "vectorialOverlayPptx": "Diagrama de flujo de 3 pasos conectando hacia el cuaderno",
         "speakerNotes": "Vamos a ver cómo formular este método en el cuaderno de matemática para resolver problemas de comercio sin margen de error.",
         "duracionSeg": 8
@@ -229,10 +229,10 @@ export const MATEMATICA_7B_OA04_CLASE05: LessonData = {
       {
         "slideNumber": 1,
         "tituloMomento": "Declaración del Objetivo: Descuentos Comerciales e IVA",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, , a girl with braided hair and a boy in a teal jacket, in a clean modern classroom looking at a digital blackboard with price tags and receipts. Generous negative space on the left. High contrast, bright flat colors.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, in a clean modern classroom looking at a digital blackboard with price tags and receipts. Generous negative space on the left. High contrast, bright flat colors. Clear lighting, vibrant colors. No text drawn by AI.",
         "overlayText": "OBJETIVO DE LA LECCIÓN",
         "overlayTitle": "OBJETIVO DE LA LECCIÓN",
-        "overlaySubtitle": "Cálculo de rebajas comerciales e IVA 19% en boletas chilenas",
+        "overlaySubtitle": "Rebajas comerciales e IVA en boletas chilenas",
         "vectorialOverlayPptx": "Meta de aprendizaje: Calcular rebajas y recargos por IVA distinguiendo monto de precio final",
         "speakerNotes": "Hoy resolveremos problemas cotidianos de descuentos comerciales e IVA del diecinueve por ciento en operaciones comerciales afectas.",
         "duracionSeg": 13
@@ -265,7 +265,7 @@ export const MATEMATICA_7B_OA04_CLASE05: LessonData = {
         "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Split visual layout showing two clear operations: on the left a green discount tag with a subtraction symbol leading to Final Price, on the right an official seal with an addition symbol leading to Gross Price. High contrast, clean vector art, ample negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "PASO 3: SUMAR O RESTAR",
         "overlayTitle": "PASO 3: SUMAR O RESTAR",
-        "overlaySubtitle": "Resta en rebajas | Suma en impuestos y recargos",
+        "overlaySubtitle": "Resta en rebajas y suma en impuestos",
         "vectorialOverlayPptx": "Árbol de decisión: ¿Descuento? Restar. ¿Operación afecta a IVA? Sumar.",
         "speakerNotes": "El tercer paso es la operación final. Si el problema plantea un descuento o rebaja, restamos el monto al precio original. Si plantea una compraventa afecta a IVA del diecinueve por ciento o un recargo, sumamos el monto al valor base.",
         "duracionSeg": 13
@@ -276,7 +276,7 @@ export const MATEMATICA_7B_OA04_CLASE05: LessonData = {
         "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Modern computational infographic showing two shortcuts: multiplying by 0.80 to directly obtain an 80% price after 20% off, and multiplying by 1.19 to directly obtain the price with 19% IVA included. Minimalist aesthetic, ample negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "ATAJO: FACTOR DIRECTO",
         "overlayTitle": "ATAJO: FACTOR DIRECTO",
-        "overlaySubtitle": "Descuento 20% -> x 0,80 | IVA 19% -> x 1,19",
+        "overlaySubtitle": "Factores directos: multiplicar por 0,80 o 1,19",
         "vectorialOverlayPptx": "Factores directos: 1 - 0,20 = 0,80 | Operación afecta a IVA: 1 + 0,19 = 1,19",
         "speakerNotes": "Atajo experto: si te descuentan el veinte por ciento, pagas el ochenta por ciento del valor, multiplicando por cero coma ochenta. Y en compras afectas a IVA del diecinueve por ciento, el valor bruto final corresponde al ciento diecinueve por ciento, multiplicando el neto por uno coma diecinueve.",
         "duracionSeg": 13
@@ -284,10 +284,10 @@ export const MATEMATICA_7B_OA04_CLASE05: LessonData = {
       {
         "slideNumber": 6,
         "tituloMomento": "Modelamiento en Cuaderno: El Polerón de $30.000",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Close up of a student notebook page neatly filled with pencil writing: Original price $30.000, 20% calculation equals $6.000, and final subtraction $30.000 minus $6.000 equals $24.000. Lucas and Sofía looking at the completed page with satisfaction, ample negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Close up of a student notebook page on a wooden desk. Lucas and Sofía looking at the notebook with satisfaction, modern anime style, ample negative space on the left. Clear lighting, vibrant colors. No text drawn by AI.",
         "overlayText": "EJEMPLO MODELADO: CASO 1",
         "overlayTitle": "EJEMPLO MODELADO: CASO 1",
-        "overlaySubtitle": "Un polerón escolar tiene un precio de lista de $30.000. Durante la liquidación d",
+        "overlaySubtitle": "Polerón de $30.000 con 20%: pagar $24.000",
         "vectorialOverlayPptx": "Resolución canónica: Descuento = 20% de 30.000 = (20 × 30.000) / 100 = $6.000. Precio final = 30.000 - 6.000 = $24.000.",
         "speakerNotes": "Analicemos paso a paso el caso modelado: Un polerón escolar tiene un precio de lista de $30.000. Durante la liquidación de temporada se ofrece con un 20% de descuento. ¿Cuánto dinero se descuenta y cuál es el precio final que se debe pagar por el polerón? Descuento = 20% de 30.000 = (20 × 30.000) / 100 = $6.000. Precio final = 30.000 - 6.000 = $24.000. Por lo tanto, el resultado esperado es: Se descuentan $6.000 y el precio final es $24.000..",
         "duracionSeg": 13
@@ -298,7 +298,7 @@ export const MATEMATICA_7B_OA04_CLASE05: LessonData = {
         "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, A large golden interactive study guide on a clean background highlighting a glowing key icon. Sofía and Lucas pointing forward enthusiastically toward the practice exercises on the platform screen, bright vibrant lighting, ample negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "REGLA DE ORO DE LA LECCIÓN",
         "overlayTitle": "REGLA DE ORO DE LA LECCIÓN",
-        "overlaySubtitle": "Verifica siempre si piden la rebaja o el precio final",
+        "overlaySubtitle": "Verifica si piden la rebaja o precio final",
         "vectorialOverlayPptx": "Insignia dorada con la regla de oro: Distinguir monto vs precio final",
         "speakerNotes": "Regla de oro: Verifica siempre si piden la rebaja o el precio final. Ahora pon a prueba lo aprendido resolviendo los casos de práctica en la plataforma interactiva.",
         "duracionSeg": 12
@@ -307,6 +307,7 @@ export const MATEMATICA_7B_OA04_CLASE05: LessonData = {
   },
   "postQuestions": [
     {
+      "id": "caso1",
       "context": "Un polerón escolar tiene un precio de lista de $30.000. Durante la liquidación de temporada se ofrece con un 20% de descuento.",
       "question": "¿Cuánto dinero se descuenta y cuál es el precio final que se debe pagar por el polerón?",
       "expected": "Se descuentan $6.000 y el precio final es $24.000.",
@@ -316,6 +317,7 @@ export const MATEMATICA_7B_OA04_CLASE05: LessonData = {
       "studentReveal": "El descuento es de $6.000 y el precio final a pagar es $24.000."
     },
     {
+      "id": "caso2",
       "context": "Una librería vende una enciclopedia escolar a un valor neto de $10.000, en una compraventa afecta a IVA. Al momento de emitir la boleta de venta en Chile, se debe agregar el 19% correspondiente al Impuesto al Valor Agregado.",
       "question": "¿A cuánto dinero asciende el impuesto de IVA y cuál es el precio bruto total con IVA incluido?",
       "expected": "El IVA es de $1.900 y el precio final con IVA es $11.900.",
@@ -327,6 +329,7 @@ export const MATEMATICA_7B_OA04_CLASE05: LessonData = {
   ],
   "practice": [
     {
+      "id": "caso1",
       "context": "Un polerón escolar tiene un precio de lista de $30.000. Durante la liquidación de temporada se ofrece con un 20% de descuento.",
       "question": "¿Cuánto dinero se descuenta y cuál es el precio final que se debe pagar por el polerón?",
       "expected": "Se descuentan $6.000 y el precio final es $24.000.",
@@ -336,6 +339,7 @@ export const MATEMATICA_7B_OA04_CLASE05: LessonData = {
       "studentReveal": "El descuento es de $6.000 y el precio final a pagar es $24.000."
     },
     {
+      "id": "caso2",
       "context": "Una librería vende una enciclopedia escolar a un valor neto de $10.000, en una compraventa afecta a IVA. Al momento de emitir la boleta de venta en Chile, se debe agregar el 19% correspondiente al Impuesto al Valor Agregado.",
       "question": "¿A cuánto dinero asciende el impuesto de IVA y cuál es el precio bruto total con IVA incluido?",
       "expected": "El IVA es de $1.900 y el precio final con IVA es $11.900.",
