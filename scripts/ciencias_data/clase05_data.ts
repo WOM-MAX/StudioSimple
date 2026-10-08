@@ -321,13 +321,13 @@ export function buildClase05() {
         "didacticPurpose": "Caso Modelado: El Mito del Estirón Puberal",
         "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing an illustrated growth-percentile chart on their desk, comparing curves with calm scientific smiles, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Caso Modelado: Variabilidad en el Estirón",
-        "overlayTitle": "Caso Modelado: Variabilidad en el crecimiento",
-        "overlaySubtitle": "Comprender ritmos diversos sin diagnósticos apresurados",
-        "vectorialOverlayPptx": "El ritmo de crecimiento es individual; ante dudas o inquietudes, consultar con un adulto de confianza o profesional de salud",
-        "mathOverlayPptx": "El ritmo de crecimiento es individual; ante dudas o inquietudes, consultar con un adulto de confianza o profesional de salud",
-        "speakerNotes": "Si un estudiante de 13 años nota que sus compañeros crecen a distinto ritmo, debe recordar que los momentos del estirón varían. Una curva general no diagnostica a una persona; ante cualquier inquietud, lo adecuado es conversarlo con un adulto de confianza o un profesional de salud.",
-        "palabrasAprox": 52,
-        "duracionSeg": 23
+        "overlayTitle": "Caso 1: El mito del estirón puberal simultáneo",
+        "overlaySubtitle": "Variabilidad biológica y ritmos genéticos de crecimiento",
+        "vectorialOverlayPptx": "Caso 1 modelado: Estudiante de 13 años con angustia por estirón -> Evidencia científica: ritmos genéticos normales (10 a 16 años) -> Desarrollo biológico saludable",
+        "mathOverlayPptx": "Caso 1 modelado: Estudiante de 13 años con angustia por estirón -> Evidencia científica: ritmos genéticos normales (10 a 16 años) -> Desarrollo biológico saludable",
+        "speakerNotes": "Analicemos el Caso 1: un estudiante de 13 años siente angustia porque varios compañeros ya tuvieron el estirón puberal y él aún no, creyendo que tiene un problema de salud o no crecerá. ¿Qué evidencia biológica desmiente este mito? La evidencia indica que el estirón puberal no ocurre a la misma edad para todos; responde a ritmos genéticos individuales que se extienden normalmente entre los 10 y los 16 años, por lo que su desarrollo es biológicamente normal y no constituye una anomalía.",
+        "palabrasAprox": 85,
+        "duracionSeg": 38
       },
       {
         "slideNumber": 7,

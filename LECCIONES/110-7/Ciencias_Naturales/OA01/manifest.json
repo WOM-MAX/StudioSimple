@@ -4,14 +4,14 @@
   "oa": "OA01",
   "identificador_paquete": "110-7-CIE-OA01",
   "version": "1.5.0",
-  "fecha_actualizacion": "2026-10-07",
-  "estado": "REQUIERE_AJUSTES",
+  "fecha_actualizacion": "2026-10-08",
+  "estado": "APROBADA",
   "total_clases": 6,
   "fuente_oficial_unica_docx": {
     "archivo": "Plan_Maestro_7Básico_110-7-CIE-OA01_6Lecciones.docx",
     "rol": "Unica fuente oficial de produccion de lecciones y prompts",
-    "sha256": "68461e50bed2a2c417cf7525a9ba7c2706c2df362753780b793059b45fa88d41",
-    "bytes": 76451
+    "sha256": "1e1f7b6ac7c73ea7718bbe799bcedd27be83d61e28b3719e07184bcf72759327",
+    "bytes": 76388
   },
   "prompts_asociados": {
     "archivo": "Prompts_Work_Ciencias_7B_OA01.txt",

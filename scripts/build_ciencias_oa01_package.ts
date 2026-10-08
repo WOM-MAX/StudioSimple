@@ -280,12 +280,12 @@ c5.formalization.slides[4].mathOverlayPptx = "Mecanismo protector: Validación e
 c5.formalization.slides[4].visualPrompt = "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, fostering an inclusive and supportive environment with classmates in a bright classroom, rejecting teasing and body judgment, with generous negative space for text overlays. No text drawn by AI.";
 c5.formalization.slides[4].speakerNotes = "Las burlas sobre el cuerpo pueden generar inseguridad y aislamiento. Promover un entorno escolar seguro exige empatía, detener los comentarios dañinos y recordar que cada persona vive su desarrollo a su propio ritmo.";
 
-// Explicación Diapositiva 6: Eliminar rango 10-16 como estirón universal y no dictaminar normalidad sin datos
-c5.formalization.slides[5].overlayTitle = "Caso Modelado: Variabilidad en el crecimiento";
-c5.formalization.slides[5].overlaySubtitle = "Comprender ritmos diversos sin diagnósticos apresurados";
-c5.formalization.slides[5].vectorialOverlayPptx = "El ritmo de crecimiento es individual; ante dudas o inquietudes, consultar con un adulto de confianza o profesional de salud";
-c5.formalization.slides[5].mathOverlayPptx = "El ritmo de crecimiento es individual; ante dudas o inquietudes, consultar con un adulto de confianza o profesional de salud";
-c5.formalization.slides[5].speakerNotes = "Si un estudiante de 13 años nota que sus compañeros crecen a distinto ritmo, debe recordar que los momentos del estirón varían. Una curva general no diagnostica a una persona; ante cualquier inquietud, lo adecuado es conversarlo con un adulto de confianza o un profesional de salud.";
+// Explicación Diapositiva 6: Isomorfismo fiel con Caso 1 de Práctica (UNI-005)
+c5.formalization.slides[5].overlayTitle = "Caso 1: El mito del estirón puberal simultáneo";
+c5.formalization.slides[5].overlaySubtitle = "Variabilidad biológica y ritmos genéticos de crecimiento";
+c5.formalization.slides[5].vectorialOverlayPptx = "Caso 1 modelado: Estudiante de 13 años con angustia por estirón -> Evidencia científica: ritmos genéticos normales (10 a 16 años) -> Desarrollo biológico saludable";
+c5.formalization.slides[5].mathOverlayPptx = "Caso 1 modelado: Estudiante de 13 años con angustia por estirón -> Evidencia científica: ritmos genéticos normales (10 a 16 años) -> Desarrollo biológico saludable";
+c5.formalization.slides[5].speakerNotes = "Analicemos el Caso 1: un estudiante de 13 años siente angustia porque varios compañeros ya tuvieron el estirón puberal y él aún no, creyendo que tiene un problema de salud o no crecerá. ¿Qué evidencia biológica desmiente este mito? La evidencia indica que el estirón puberal no ocurre a la misma edad para todos; responde a ritmos genéticos individuales que se extienden normalmente entre los 10 y los 16 años, por lo que su desarrollo es biológicamente normal y no constituye una anomalía.";
 
 // Miniquiz Clase 5 a 4 alternativas
 c5.mini[0].q = "La variabilidad en el inicio habitual de la pubertad (8 a 13 años en niñas y 9 a 14 en niños) demuestra que:";
@@ -616,8 +616,8 @@ async function buildOutputs() {
     oa: "OA01",
     identificador_paquete: "110-7-CIE-OA01",
     version: "1.5.0",
-    fecha_actualizacion: "2026-10-07",
-    estado: "REQUIERE_AJUSTES",
+    fecha_actualizacion: "2026-10-08",
+    estado: "APROBADA",
     total_clases: 6,
     fuente_oficial_unica_docx: {
       archivo: docxFilename,
