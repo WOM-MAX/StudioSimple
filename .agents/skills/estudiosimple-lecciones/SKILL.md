@@ -23,6 +23,49 @@ Esta Skill establece las **reglas universales** y el **flujo general de producci
 
 ## 2. Delimitación Estricta de Responsabilidades (Pipeline)
 
+```mermaid
+flowchart TD
+    subgraph Antigravity["1. Antigravity"]
+        A1["Fuente estructurada única por OA<br/>OA04: scripts/oa04_data/"]
+        A2["Generación unidireccional<br/>DOCX + TXT + TypeScript"]
+        A3["Auditoría interna<br/>motor y revisión por lección"]
+        A4["EN_REVISION<br/>etapa: WORK_PRE_APROBACION"]
+        A5["REQUIERE_AJUSTES<br/>corregir fuente y regenerar"]
+
+        A1 --> A2 --> A3
+        A3 -->|Con hallazgos| A5
+        A5 --> A1
+        A3 -->|Cero hallazgos internos| A4
+    end
+
+    subgraph WorkCodex["2. Work / Codex"]
+        W1["Auditoría independiente<br/>DOCX + TXT + TypeScript disponible"]
+        W2{"¿Auditoría conforme?"}
+        W3["Devolver hallazgos<br/>con evidencia"]
+        W4["LISTA_PARA_APROBACION"]
+        W5["Construir y verificar PPTX<br/>después de aprobación humana"]
+        W6["Entregar PPTX a Walter"]
+
+        W1 --> W2
+        W2 -->|No| W3
+        W2 -->|Sí| W4
+        W5 --> W6
+    end
+
+    subgraph Walter["3. Walter"]
+        H1["Revisar el paquete con Work"]
+        H2{"¿Walter lo aprueba?"}
+        H3["Instrucción explícita<br/>por consola"]
+        H4["APROBADA<br/>registrar versión y hash"]
+    end
+
+    A4 --> W1
+    W3 --> A5
+    W4 --> H1 --> H2
+    H2 -->|Solicita ajustes| A5
+    H2 -->|Sí| H3 --> H4 --> W5
+```
+
 | Actor | Responsabilidad Obligatoria | Prohibiciones Estrictas |
 | :--- | :--- | :--- |
 | **Antigravity** | Mantener la fuente estructurada única, compilar unidireccionalmente el DOCX oficial, los prompts TXT y TypeScript, y ejecutar la auditoría interna automatizada con 0 hallazgos. Entregar el paquete en `EN_REVISION` (`WORK_PRE_APROBACION`). | **PROHIBIDO** generar o editar archivos PPTX finales. **PROHIBIDO** declarar `LISTA_PARA_APROBACION` o `APROBADA`. **PROHIBIDO** contar palabras o certificar duración acústica previa. |

@@ -19,28 +19,45 @@ El ciclo de vida de un paquete curricular involucra tres actores con fronteras y
 
 ```mermaid
 flowchart TD
-    subgraph Antigravity["1. Antigravity (Ingeniero Software IA)"]
-        A1[Fuente Estructurada Única por OA\nscripts/oaXX_data/] --> A2[Compilación Unidireccional\nDOCX + TXT Prompts + TypeScript]
-        A2 --> A3[Auditoría Interna Automatizada\naudit_coherence_engine.ts]
-        A3 -->|0 Hallazgos Internos| A4[Entrega en EN_REVISION\netapa: WORK_PRE_APROBACION]
+    subgraph Antigravity["1. Antigravity"]
+        A1["Fuente estructurada única por OA<br/>OA04: scripts/oa04_data/"]
+        A2["Generación unidireccional<br/>DOCX + TXT + TypeScript"]
+        A3["Auditoría interna<br/>motor y revisión por lección"]
+        A4["EN_REVISION<br/>etapa: WORK_PRE_APROBACION"]
+        A5["REQUIERE_AJUSTES<br/>corregir fuente y regenerar"]
+
+        A1 --> A2 --> A3
+        A3 -->|Con hallazgos| A5
+        A5 --> A1
+        A3 -->|Cero hallazgos internos| A4
     end
 
-    subgraph WorkCodex["2. ChatGPT Work / Codex (Revisión Independiente)"]
-        W1[Auditoría Conceptual Pre-Aprobación\nDOCX Plan Maestro + TXT Prompts]
-        W2[Construcción y Verificación PPTX\nEntorno Python tras Aprobación Humana]
+    subgraph WorkCodex["2. Work / Codex"]
+        W1["Auditoría independiente<br/>DOCX + TXT + TypeScript disponible"]
+        W2{"¿Auditoría conforme?"}
+        W3["Devolver hallazgos<br/>con evidencia"]
+        W4["LISTA_PARA_APROBACION"]
+        W5["Construir y verificar PPTX<br/>después de aprobación humana"]
+        W6["Entregar PPTX a Walter"]
+
+        W1 --> W2
+        W2 -->|No| W3
+        W2 -->|Sí| W4
+        W5 --> W6
     end
 
-    subgraph Walter["3. Walter (Aprobador Humano Exclusivo)"]
-        H1[Revisión y Análisis con Work]
-        H2[Instrucción Exclusiva por Consola]
-        H3[Transición a Estado: APROBADA]
+    subgraph Walter["3. Walter"]
+        H1["Revisar el paquete con Work"]
+        H2{"¿Walter lo aprueba?"}
+        H3["Instrucción explícita<br/>por consola"]
+        H4["APROBADA<br/>registrar versión y hash"]
     end
 
     A4 --> W1
-    W1 --> H1
-    H1 --> H2
-    H2 --> H3
-    H3 --> W2
+    W3 --> A5
+    W4 --> H1 --> H2
+    H2 -->|Solicita ajustes| A5
+    H2 -->|Sí| H3 --> H4 --> W5
 ```
 
 ### 2.1. Antigravity (Ingeniero de Software con IA)
