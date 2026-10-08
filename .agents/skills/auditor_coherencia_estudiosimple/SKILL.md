@@ -42,9 +42,9 @@ Queda estrictamente prohibido dar por válida una alineación solo porque un doc
    - Queda terminantemente prohibido para Antigravity o el motor de auditoría marcar autónomamente cualquier paquete como `APROBADA`.
    - Las lecciones las aprueba **única y exclusivamente Walter**, después de realizar el análisis conjunto con ChatGPT Work.
    - La aprobación se otorgará formalmente por consola y solo en ese instante preciso se podrá promover el manifiesto a `APROBADA`.
-5. **Trazabilidad Temporal Obligatoria (Fecha y Hora en cada Versión):**
-   - Todo plan de lecciones (DOCX, TXT de prompts y `manifest.json`) debe incluir la fecha y hora exacta de actualización en zona horaria de Chile (`America/Santiago`, formato `YYYY-MM-DD HH:mm [America/Santiago]`).
-   - Cada nueva iteración reemplaza a la anterior en su ruta oficial, preservando la constancia temporal de los arreglos.
+5. **Trazabilidad Temporal Obligatoria (Fecha y Hora en Nombre de Archivo y Contenido):**
+   - Todo archivo de plan de lecciones (DOCX oficial y TXT de prompts) debe incorporar la fecha y hora exacta en el propio **nombre del archivo** (`..._YYYY-MM-DD_HH-mm.docx` / `..._YYYY-MM-DD_HH-mm.txt`, `America/Santiago`), así como en sus portadas, cabeceras y `manifest.json` (`YYYY-MM-DD HH:mm [America/Santiago]`).
+   - Cada nueva iteración elimina y reemplaza a la anterior en su carpeta oficial, dejando estrictamente el archivo más actualizado con su estampa temporal para evitar acumulación de archivos obsoletos.
 
 ---
 

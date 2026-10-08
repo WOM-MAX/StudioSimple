@@ -49,11 +49,13 @@
 
 - **Fuente Estructurada Única**: `scripts/oa04_data/` (`clase01.ts` a `clase06.ts`).
 - **Compilador Unidireccional**: `scripts/build_matematica_oa04_package.ts`.
-- **Artefactos Regenerados**:
-  - `Plan_Maestro_7Básico_110-7-MAT-OA04_6Lecciones.docx` (71.685 bytes)
-  - `Prompts_Work_Matematica_7B_OA04.txt` (204.507 bytes)
+- **Artefactos Regenerados (Con Fecha y Hora en Nombre de Archivo)**:
+  - `Plan_Maestro_7Básico_110-7-MAT-OA04_6Lecciones_2026-10-08_17-43.docx` (71.690 bytes)
+  - `Prompts_Work_Matematica_7B_OA04_2026-10-08_17-43.txt` (204.569 bytes)
   - 6 Módulos TypeScript en `Web Studio Simple/src/data/lessons/`
-  - `LECCIONES/110-7/Matematica/OA04/manifest.json` (5.965 bytes)
+  - `LECCIONES/110-7/Matematica/OA04/manifest.json` (6.033 bytes)
+- **Política de Archivo Único Más Actualizado**:
+  - Al compilar una nueva versión con estampa temporal, el compilador elimina automáticamente las versiones previas en `LECCIONES/110-7/Matematica/OA04/`, dejando estrictamente el archivo más reciente para evitar duplicados u obsolescencias.
 
 ---
 

@@ -152,5 +152,5 @@ En `manifest.json`, el campo `status` transita estrictamente a través de 5 esta
 - `LISTA_PARA_APROBACION`: Declarado **únicamente después** de que Work/Codex concluye su auditoría independiente del contenido sin observaciones. Prohibido aplicar este estado de forma autónoma por Antigravity.
 - `APROBADA`: Declarado **exclusivamente por Walter** por consola tras el análisis conjunto con Work.
 
-> 🕒 **TRAZABILIDAD TEMPORAL OBLIGATORIA (FECHA Y HORA):**
-> Todo plan de lecciones generado o modificado (DOCX oficial, archivo TXT de prompts para Work y `manifest.json`) DEBE incorporar de forma explícita y visible la **fecha y hora exacta de actualización** en zona horaria de Chile (`America/Santiago`, formato `YYYY-MM-DD HH:mm [America/Santiago]`).
+> 🕒 **TRAZABILIDAD TEMPORAL OBLIGATORIA (FECHA Y HORA EN NOMBRE DE ARCHIVO Y CONTENIDO):**
+> Todo archivo de plan de lecciones generado o modificado (DOCX oficial y TXT de prompts para Work) DEBE incorporar obligatoriamente la fecha y hora exacta en el propio **nombre del archivo** (formato `..._YYYY-MM-DD_HH-mm.docx` y `..._YYYY-MM-DD_HH-mm.txt`, zona horaria de Chile `America/Santiago`), así como en sus portadas, cabeceras internas y `manifest.json` (`YYYY-MM-DD HH:mm [America/Santiago]`). Al generarse una nueva versión, se elimina y reemplaza el archivo antiguo por el nuevo en su carpeta canónica, dejando estrictamente el archivo más actualizado con su estampa temporal para evitar acumulación de versiones obsoletas.

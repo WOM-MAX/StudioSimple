@@ -15,10 +15,11 @@ import { GeneratedOAPackage, LessonData as GeneratorLessonData } from "./lesson-
 import { LessonData as PlayerLessonData } from "../types/lesson";
 import { adaptPlayerLessonToGenerator } from "./lesson-adapter";
 
-export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
+export function buildOAPackageDocx(pkg: GeneratedOAPackage, updateTimestamp?: string): Document {
   const { oa, totalLessons, lessons } = pkg;
   const isCiencias = (oa.asignatura || '').toLowerCase().includes('cien');
   const subPt = isCiencias ? 48 : 36;
+  const formattedTimestamp = updateTimestamp || (new Date().toLocaleString("sv-SE", { timeZone: "America/Santiago" }) + " [America/Santiago]");
 
   const doc = new Document({
     sections: [
@@ -66,7 +67,7 @@ export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
             spacing: { after: 600 },
             children: [
               new TextRun({
-                text: `Desglose Instruccional en ${totalLessons} Lecciones de 30 Minutos (8 Pasos Pedagógicos Oficiales)\nIncluye Enlaces a Videos en Cloudflare R2, Prompts Anime Moderno 16:9 y Ficha Técnica de Aula\nFecha de Actualización Oficial: ${new Date().toLocaleString("es-CL", { timeZone: "America/Santiago" })} (America/Santiago)`,
+                text: `Desglose Instruccional en ${totalLessons} Lecciones de 30 Minutos (8 Pasos Pedagógicos Oficiales)\nIncluye Enlaces a Videos en Cloudflare R2, Prompts Anime Moderno 16:9 y Ficha Técnica de Aula\nFecha y Hora de Actualización Oficial: ${formattedTimestamp}`,
                 italics: true,
                 size: 20,
                 color: "64748B",

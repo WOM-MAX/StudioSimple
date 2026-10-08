@@ -81,6 +81,10 @@ Estas reglas aplican con carácter vinculante y obligatorio a todas las leccione
 - Durante procesos de corrección, ajuste o saneamiento de lecciones ya planificadas, queda terminantemente prohibido introducir temas, conceptos, ejemplos, actividades o ejercicios nuevos que no formen parte de la lista de cambios explícitamente autorizados.
 - Todo concepto, tema o ejemplo eliminado queda estrictamente excluido en todas sus formas y manifestaciones de la lección completa (gancho, explicación, focos didácticos, prompts visuales, notas de locución, síntesis, práctica y evaluaciones), y no puede reaparecer bajo sinónimos, paráfrasis o formulaciones alternativas.
 
+### UNI-017: Trazabilidad Temporal en Nombres de Archivo y Contenido [BLOQUEANTE]
+- Todo archivo de plan de lecciones generado o modificado (documento DOCX oficial y archivo TXT de prompts para Work) DEBE incorporar obligatoriamente la fecha y hora exacta en el propio **nombre del archivo** (formato `..._YYYY-MM-DD_HH-mm.docx` y `..._YYYY-MM-DD_HH-mm.txt`, zona horaria de Chile `America/Santiago`), así como en sus portadas, cabeceras internas y `manifest.json` (`YYYY-MM-DD HH:mm [America/Santiago]`).
+- Al generarse una nueva versión de un plan, se elimina y reemplaza el archivo antiguo por el nuevo en su carpeta canónica, dejando estrictamente el archivo más actualizado con su estampa temporal para evitar acumulación de versiones obsoletas.
+
 ---
 
 ## 2. Derivación de Reglas por Nivel de Especialidad

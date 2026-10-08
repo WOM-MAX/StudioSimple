@@ -132,23 +132,37 @@ async function main() {
     lessons: adaptedLessons
   };
 
-  // Eliminar el archivo antiguo de 5 lecciones si existe
-  const oldDocxPath = path.join(targetOaDir, 'Plan_Maestro_7Básico_110-7-MAT-OA04_5Lecciones.docx');
-  if (fs.existsSync(oldDocxPath)) {
-    fs.unlinkSync(oldDocxPath);
-    console.log(`Archivo obsoleto eliminado: ${oldDocxPath}`);
+  const now = new Date();
+  const santiagoTimestamp = now.toLocaleString('sv-SE', { timeZone: 'America/Santiago' }) + ' [America/Santiago]';
+  const fileDate = now.toLocaleDateString('sv-SE', { timeZone: 'America/Santiago' });
+  const fileTime = now.toLocaleTimeString('es-CL', { timeZone: 'America/Santiago', hour12: false, hour: '2-digit', minute: '2-digit' }).replace(':', '-');
+  const fileTimestamp = `${fileDate}_${fileTime}`;
+
+  const docxFilename = `Plan_Maestro_7Básico_110-7-MAT-OA04_6Lecciones_${fileTimestamp}.docx`;
+  const promptFilename = `Prompts_Work_Matematica_7B_OA04_${fileTimestamp}.txt`;
+
+  // Eliminar cualquier versión previa de Plan_Maestro_*.docx o Prompts_Work_*.txt en targetOaDir para conservar únicamente el más actualizado
+  if (fs.existsSync(targetOaDir)) {
+    const existing = fs.readdirSync(targetOaDir);
+    for (const f of existing) {
+      if (f.startsWith('Plan_Maestro_') && f.endsWith('.docx') && f !== docxFilename) {
+        fs.unlinkSync(path.join(targetOaDir, f));
+        console.log(`Versión anterior de DOCX eliminada: ${f}`);
+      }
+      if (f.startsWith('Prompts_Work_') && f.endsWith('.txt') && f !== promptFilename) {
+        fs.unlinkSync(path.join(targetOaDir, f));
+        console.log(`Versión anterior de Prompts eliminada: ${f}`);
+      }
+    }
   }
 
-  const doc = buildOAPackageDocx(pkg);
+  const doc = buildOAPackageDocx(pkg, santiagoTimestamp);
   const docxBuffer = await Packer.toBuffer(doc);
-  const docxFilename = 'Plan_Maestro_7Básico_110-7-MAT-OA04_6Lecciones.docx';
   const docxPath = path.join(targetOaDir, docxFilename);
   fs.writeFileSync(docxPath, docxBuffer);
   const docxBytes = fs.statSync(docxPath).size;
   const docxSha256 = sha256File(docxPath);
   console.log(`DOCX generado con éxito: ${docxFilename} (${docxBytes} bytes, SHA-256: ${docxSha256.substring(0, 16)}...)`);
-
-  const santiagoTimestamp = new Date().toLocaleString('sv-SE', { timeZone: 'America/Santiago' }) + ' [America/Santiago]';
 
   // 5. Construir archivo TXT de Prompts para Work (84 láminas)
   console.log('Generando archivo de Prompts TXT para Work (84 laminas)...');
@@ -156,6 +170,7 @@ async function main() {
   promptText += `================================================================================\n`;
   promptText += `STUDIOSIMPLE - PAQUETE COMPLETO DE PROMPTS Y GUIONES MAESTROS\n`;
   promptText += `CURSO: 7° BASICO | ASIGNATURA: MATEMATICA | OA: 110-7-MAT-OA04 (PORCENTAJES)\n`;
+  promptText += `ARCHIVO: ${promptFilename}\n`;
   promptText += `TOTAL DE CLASES: 6 CLASES CANONICAS BIMODALES (14 LAMINAS CADA UNA = 84 LAMINAS TOTALES)\n`;
   promptText += `FORMATO: 7 DIAPOSITIVAS VIDEO GANCHO (60s) + 7 DIAPOSITIVAS VIDEO EXPLICATIVO (90s)\n`;
   promptText += `FECHA Y HORA DE ACTUALIZACION: ${santiagoTimestamp}\n`;
@@ -167,7 +182,6 @@ async function main() {
     promptText += `\n\n`;
   }
 
-  const promptFilename = 'Prompts_Work_Matematica_7B_OA04.txt';
   const promptPath = path.join(targetOaDir, promptFilename);
   fs.writeFileSync(promptPath, promptText, 'utf-8');
   const promptBytes = fs.statSync(promptPath).size;
