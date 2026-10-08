@@ -335,7 +335,7 @@ export const MATEMATICA_7B_OA04_CLASE04: LessonData = {
     }
   ],
   summaryIdeas: [
-    ['Método Decimal', 'Multiplicar el total por el porcentaje dividido en 100: Total x 0,p.'],
+    ['Método Decimal', 'Multiplicar el total por el decimal equivalente: Total · (p ÷ 100).'],
     ['Método Proporcional', 'Multiplicar el porcentaje por el total y dividir por 100: (p x Total) : 100.'],
     ['Equivalencia Algorítmica', 'Ambos métodos producen exactamente el mismo resultado matemático.']
   ],

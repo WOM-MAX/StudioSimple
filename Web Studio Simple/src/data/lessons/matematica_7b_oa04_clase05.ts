@@ -13,12 +13,12 @@ export const MATEMATICA_7B_OA04_CLASE05: LessonData = {
     "nextLessonTitle": "Clase 6: Síntesis Integradora y Ensayo de Evaluación Formativa"
   },
   "prep": {
-    "adultObjective": "Guiar al estudiante en la aplicación de porcentajes a situaciones reales del comercio y la economía cotidiana, calculando rebajas comerciales mediante restas del precio original y recargos impositivos como el IVA chileno (19%) mediante adiciones al valor neto.",
-    "routeToday": "Resolver problemas auténticos de compras y facturación, identificando cuándo un porcentaje representa un ahorro que se descuenta y cuándo representa un impuesto o recargo que se suma al valor base.",
+    "adultObjective": "Guiar al estudiante en la aplicación de porcentajes a situaciones reales del comercio y la economía cotidiana, calculando rebajas comerciales mediante restas del precio original y recargos impositivos como el IVA chileno (19%) en operaciones afectas mediante adiciones al valor neto.",
+    "routeToday": "Resolver problemas auténticos de compras y facturación, identificando cuándo un porcentaje representa un ahorro que se descuenta y cuándo representa un impuesto o recargo que se suma al valor base en operaciones afectas.",
     "mentorReminder": "Sigue el guion leyendo en voz alta únicamente los recuadros DILE y PREGÚNTALE. Valida el procedimiento completo: cálculo del porcentaje y operación final (sumar o restar).",
     "reminders": [
       "En problemas de descuento se calcula la rebaja y se resta del precio original: Precio Final = Precio Original - Descuento.",
-      "En problemas de IVA (19%) o recargo se calcula el impuesto y se suma al valor neto: Precio Bruto = Valor Neto + IVA.",
+      "En problemas de IVA (19%) o recargo en operaciones afectas se calcula el impuesto y se suma al valor neto: Precio Bruto = Valor Neto + IVA.",
       "Lee en voz alta únicamente los textos con la etiqueta DILE o PREGÚNTALE.",
       "Asegúrate de que el estudiante distinga entre \"el monto del descuento\" y \"el precio final a pagar\"."
     ],
@@ -62,15 +62,15 @@ export const MATEMATICA_7B_OA04_CLASE05: LessonData = {
       },
       {
         "label": "IVA chileno (19%)",
-        "sub": "Impuesto que se adiciona al valor neto de un bien o servicio"
+        "sub": "Impuesto que se adiciona al valor neto en operaciones comerciales afectas"
       },
       {
         "label": "Estrategia en dos pasos",
         "sub": "Calcular el monto porcentual y operar con la base"
       }
     ],
-    "dileIntro": "Llegamos a la clase culminante de nuestra unidad de porcentajes en 7° Básico. Hoy aplicaremos todo lo aprendido a dos situaciones fundamentales de la vida diaria: los descuentos en tiendas y el cálculo del IVA en boletas y facturas.",
-    "dileObjective": "Aprender a calcular precios finales aplicando descuentos comerciales y recargos por impuestos como el IVA del 19%, distinguiendo con claridad el valor de la rebaja del total a pagar."
+    "dileIntro": "Llegamos a la quinta clase de nuestra unidad de porcentajes en 7° Básico. Hoy aplicaremos lo aprendido a dos situaciones fundamentales de la vida diaria: los descuentos en tiendas y el cálculo del IVA del 19% en boletas y facturas de operaciones gravadas.",
+    "dileObjective": "Aprender a resolver problemas cotidianos calculando descuentos comerciales y recargos por IVA (19%) en operaciones afectas, distinguiendo con claridad el monto del beneficio o impuesto del precio final a pagar."
   },
   "situation": {
     "dilePrompt": "Imagina que ves una polera con un precio de etiqueta de $10.000 y un cartel que anuncia 30% de descuento. ¿El cliente pagará $3.000 o pagará $7.000 en la caja?",
@@ -109,9 +109,9 @@ export const MATEMATICA_7B_OA04_CLASE05: LessonData = {
     "focusPoints": [
       "Analizar los carteles de liquidación y ofertas en los puestos de la feria.",
       "Identificar la diferencia entre un descuento que disminuye el precio y un impuesto que lo incrementa.",
-      "Comprender por qué el IVA del 19% se aplica en todas las compras formales en Chile."
+      "Comprender por qué el IVA del 19% se aplica en operaciones afectas en Chile (el SII contempla casos exentos)."
     ],
-    "dileIntro": "Acompañemos a Sofía y Lucas en la feria escolar de fin de año, donde deben administrar el puesto de útiles escolares y calcular los precios con descuentos y boletas con IVA.",
+    "dileIntro": "Acompañemos a Sofía y Lucas en la feria escolar de fin de año, donde deben administrar el puesto de útiles escolares y calcular los precios con descuentos y boletas con IVA en operaciones gravadas.",
     "hazInstruction": "Observa la animación y fíjate en la estrategia que utilizan para no confundir el ahorro con el valor final que deben cobrar.",
     "videoSrc": "/videos/mat_7b_oa04_c05_hook.mp4",
     "videoUrl": "/videos/mat_7b_oa04_c05_hook.mp4",
@@ -126,7 +126,7 @@ export const MATEMATICA_7B_OA04_CLASE05: LessonData = {
         "overlayTitle": "DESCUENTOS E IVA EN LA VIDA REAL",
         "overlaySubtitle": "Aplicación de porcentajes en compras cotidianas",
         "vectorialOverlayPptx": "Carteles promocionales con símbolos de % y etiquetas de precios",
-        "speakerNotes": "Bienvenidos a la feria escolar. Hoy Sofía y Lucas tienen una misión de gran responsabilidad: calcular correctamente los cobros con descuentos promocionales y emitir boletas legales con el impuesto de IVA.",
+        "speakerNotes": "Bienvenidos a la feria escolar. Hoy Sofía y Lucas tienen una misión de gran responsabilidad: calcular correctamente los cobros con descuentos promocionales y emitir boletas legales con el impuesto de IVA en las operaciones afectas.",
         "duracionSeg": 8
       },
       {
@@ -155,11 +155,11 @@ export const MATEMATICA_7B_OA04_CLASE05: LessonData = {
         "slideNumber": 4,
         "tituloMomento": "El Impuesto al Valor Agregado: IVA 19%",
         "visualPrompt": "Modern anime style 16:9 widescreen illustration. Lucas examining an official Chilean shopping receipt or ticket under a magnifying glass, showing clear structured printed sections for net value, tax and total. Soft studio lighting, clean digital vector feel, ample negative space on the left. No text drawn by AI.",
-        "overlayText": "EL IMPUESTO OBLIGATORIO: IVA 19%",
-        "overlayTitle": "EL IMPUESTO OBLIGATORIO: IVA 19%",
-        "overlaySubtitle": "Tributo legal que se agrega al valor neto",
-        "vectorialOverlayPptx": "Boleta de compra destacando secciones: Neto + IVA (19%) = Total Bruto",
-        "speakerNotes": "Por otro lado, cuando compramos un bien o servicio con boleta formal en Chile, el Estado aplica el IVA, equivalente al 19% del valor neto. A diferencia del descuento, el IVA es un recargo que se suma al total.",
+        "overlayText": "EL IMPUESTO AL CONSUMO: IVA 19%",
+        "overlayTitle": "EL IMPUESTO AL CONSUMO: IVA 19%",
+        "overlaySubtitle": "Tributo legal del 19% que se aplica sobre operaciones afectas",
+        "vectorialOverlayPptx": "Boleta de compra en operación afecta: Neto + IVA (19%) = Total Bruto",
+        "speakerNotes": "Por otro lado, cuando compramos un bien o servicio en una operación afecta a IVA en Chile, la ley tributaria aplica un recargo del diecinueve por ciento sobre el valor neto. A diferencia del descuento, el IVA se suma al total.",
         "duracionSeg": 9
       },
       {
@@ -219,7 +219,7 @@ export const MATEMATICA_7B_OA04_CLASE05: LessonData = {
   ],
   "formalization": {
     "title": "Modelamiento de Problemas Comerciales: Descuentos e IVA",
-    "concept": "En problemas comerciales, el 100% es el valor base. En descuentos se calcula el monto y se resta (P_final = P_orig - Desc). En IVA (19%) o recargos se calcula el monto y se suma (P_bruto = P_neto + IVA).",
+    "concept": "En problemas comerciales, el 100% es el valor base. En descuentos se calcula el monto y se resta (P_final = P_orig - Desc). En operaciones afectas a IVA (19%) o recargos se calcula el monto y se suma (P_bruto = P_neto + IVA).",
     "dileIntro": "Abre tu cuaderno de matemática en una página limpia. Vamos a registrar el método universal para calcular descuentos e impuestos con total precisión.",
     "hazInstruction": "Observa la explicación y copia en tu cuaderno el procedimiento paso a paso del polerón de $30.000 con 20% de descuento.",
     "videoSrc": "/videos/mat_7b_oa04_c05_expl.mp4",
@@ -228,14 +228,14 @@ export const MATEMATICA_7B_OA04_CLASE05: LessonData = {
     "slides": [
       {
         "slideNumber": 1,
-        "tituloMomento": "Definición: Descuentos y Recargos",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Clean educational infographic showing two clear mathematical formula banners: Discount formula in cyan and Tax formula in gold. Soft gradient background, bold crisp modern styling, ample negative space on the left. No text drawn by AI.",
-        "overlayText": "CONCEPTOS CLAVE DEL COMERCIO",
-        "overlayTitle": "CONCEPTOS CLAVE DEL COMERCIO",
-        "overlaySubtitle": "Descuento (rebaja) y Recargo/IVA (aumento)",
-        "vectorialOverlayPptx": "Fórmulas maestras: P_final = P_orig - Descuento | P_bruto = P_neto + IVA",
-        "speakerNotes": "Un descuento comercial es una reducción porcentual aplicada al precio original de un bien. Un recargo o impuesto es un incremento porcentual que se agrega al valor base o neto.",
-        "duracionSeg": 12
+        "tituloMomento": "Declaración del Objetivo: Descuentos Comerciales e IVA",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old students, a girl with braided hair and a boy in a teal jacket, in a clean modern classroom looking at a digital blackboard with price tags and receipts. Generous negative space on the left. High contrast, bright flat colors. No text drawn by AI.",
+        "overlayText": "OBJETIVO DE LA LECCIÓN",
+        "overlayTitle": "OBJETIVO DE LA LECCIÓN",
+        "overlaySubtitle": "Resolver problemas de descuentos comerciales e IVA (19%) en operaciones afectas",
+        "vectorialOverlayPptx": "Meta de aprendizaje: Calcular rebajas y recargos por IVA distinguiendo monto de precio final",
+        "speakerNotes": "Hoy aprenderemos a resolver problemas cotidianos aplicando porcentajes al comercio: calcularemos descuentos comerciales y recargos de IVA del diecinueve por ciento en operaciones afectas.",
+        "duracionSeg": 13
       },
       {
         "slideNumber": 2,
@@ -245,7 +245,7 @@ export const MATEMATICA_7B_OA04_CLASE05: LessonData = {
         "overlayTitle": "PASO 1: IDENTIFICAR EL TOTAL BASE",
         "overlaySubtitle": "El valor inicial siempre representa el 100%",
         "vectorialOverlayPptx": "Esquema de partida: Base (100%) y Tasa porcentual (p%)",
-        "speakerNotes": "El primer paso consiste en identificar cuál es la cantidad que representa el 100%. En un descuento, el 100% es el precio de lista original. En una boleta, el 100% es el valor neto sobre el cual se calcula el impuesto.",
+        "speakerNotes": "El primer paso consiste en identificar cuál es la cantidad que representa el 100%. En un descuento, el 100% es el precio de lista original. En una operación afecta a IVA, el 100% es el valor neto sobre el cual se calcula el impuesto.",
         "duracionSeg": 13
       },
       {
@@ -266,8 +266,8 @@ export const MATEMATICA_7B_OA04_CLASE05: LessonData = {
         "overlayText": "PASO 3: SUMAR O RESTAR",
         "overlayTitle": "PASO 3: SUMAR O RESTAR",
         "overlaySubtitle": "Resta en rebajas | Suma en impuestos y recargos",
-        "vectorialOverlayPptx": "Árbol de decisión: ¿Descuento? Restar. ¿IVA/Recargo? Sumar.",
-        "speakerNotes": "El tercer paso es la operación final. Si el problema plantea un descuento o rebaja, restamos el monto al precio original. Si plantea un impuesto como el IVA del 19% o un recargo por mora, sumamos el monto al valor base.",
+        "vectorialOverlayPptx": "Árbol de decisión: ¿Descuento? Restar. ¿Operación afecta a IVA? Sumar.",
+        "speakerNotes": "El tercer paso es la operación final. Si el problema plantea un descuento o rebaja, restamos el monto al precio original. Si plantea una compraventa afecta a IVA del diecinueve por ciento o un recargo, sumamos el monto al valor base.",
         "duracionSeg": 13
       },
       {
@@ -277,8 +277,8 @@ export const MATEMATICA_7B_OA04_CLASE05: LessonData = {
         "overlayText": "ATAJO: FACTOR DIRECTO",
         "overlayTitle": "ATAJO: FACTOR DIRECTO",
         "overlaySubtitle": "Descuento 20% -> x 0,80 | IVA 19% -> x 1,19",
-        "vectorialOverlayPptx": "Factores directos: 1 - 0,20 = 0,80 | 1 + 0,19 = 1,19",
-        "speakerNotes": "Atajo experto: si te descuentan el 20%, pagas el 80% del valor, por lo que puedes multiplicar directamente por 0,80. Y para el IVA del 19%, el precio final corresponde al 119%, equivalente a multiplicar el valor neto por 1,19.",
+        "vectorialOverlayPptx": "Factores directos: 1 - 0,20 = 0,80 | Operación afecta a IVA: 1 + 0,19 = 1,19",
+        "speakerNotes": "Atajo experto: si te descuentan el veinte por ciento, pagas el ochenta por ciento del valor, multiplicando por cero coma ochenta. Y en compras afectas a IVA del diecinueve por ciento, el valor bruto final corresponde al ciento diecinueve por ciento, multiplicando el neto por uno coma diecinueve.",
         "duracionSeg": 13
       },
       {
@@ -327,7 +327,7 @@ export const MATEMATICA_7B_OA04_CLASE05: LessonData = {
       "studentReveal": "El descuento es de $6.000 y el precio final a pagar es $24.000."
     },
     {
-      "context": "Una librería vende una enciclopedia escolar a un valor neto de $10.000. Al momento de emitir la boleta de venta en Chile, se debe agregar el 19% correspondiente al Impuesto al Valor Agregado (IVA).",
+      "context": "Una librería vende una enciclopedia escolar a un valor neto de $10.000, en una compraventa afecta a IVA. Al momento de emitir la boleta de venta en Chile, se debe agregar el 19% correspondiente al Impuesto al Valor Agregado.",
       "question": "¿A cuánto dinero asciende el impuesto de IVA y cuál es el precio bruto total con IVA incluido?",
       "expected": "El IVA es de $1.900 y el precio final con IVA es $11.900.",
       "success": "¡Muy bien! El 19% de $10.000 es $1.900 de impuesto, y al sumarlo al valor neto se obtiene un total bruto de $11.900.",
@@ -360,7 +360,7 @@ export const MATEMATICA_7B_OA04_CLASE05: LessonData = {
     },
     {
       "id": "q2",
-      "q": "Un taller mecánico emite una factura por un servicio cuyo valor neto es de $50.000. Si a este valor se le aplica el IVA del 19%, ¿cuál es el monto correspondiente únicamente al impuesto de IVA?",
+      "q": "Un taller mecánico emite una factura por un servicio afecto a IVA cuyo valor neto es de $50.000. Si a este valor se le aplica la tasa legal del 19%, ¿cuál es el monto correspondiente únicamente al impuesto de IVA?",
       "options": [
         "$950",
         "$9.500",
@@ -406,7 +406,7 @@ export const MATEMATICA_7B_OA04_CLASE05: LessonData = {
     ],
     [
       "Impuesto al Valor Agregado (IVA)",
-      "Tributo chileno del 19% aplicado al valor neto. Se calcula el 19% y se suma: Precio Bruto = Valor Neto + IVA."
+      "Tributo chileno del 19% aplicado al valor neto en operaciones comerciales afectas (según el SII). Se calcula el 19% y se suma: Precio Bruto = Valor Neto + IVA."
     ],
     [
       "Lectura Rigurosa del Enunciado",

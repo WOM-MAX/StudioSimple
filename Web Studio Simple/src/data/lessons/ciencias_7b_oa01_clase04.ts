@@ -253,7 +253,7 @@ export const CIENCIAS_7B_OA01_CLASE04: LessonData = {
         "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing before a four-part criteria board illustrating consent: free, informed, specific, and revocable, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Principios del Consentimiento",
         "overlayTitle": "Objetivo de la lección",
-        "overlaySubtitle": "Reconocer el consentimiento mutuo, los límites y el autocuidado",
+        "overlaySubtitle": "Reconocer consentimiento mutuo, límites corporales y autocuidado",
         "vectorialOverlayPptx": "Rótulo formal: OA 01 · Consentimiento, Límites Corporales y Autocuidado",
         "mathOverlayPptx": "Rótulo formal: OA 01 · Consentimiento, Límites Corporales y Autocuidado",
         "speakerNotes": "El objetivo de la lección es analizar y aplicar los cuatro criterios innegociables del consentimiento: libre, informado, específico y siempre revocable.",
@@ -337,7 +337,7 @@ export const CIENCIAS_7B_OA01_CLASE04: LessonData = {
         "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, presenting a protective shield with four gold stars representing the criteria of consent in a bright school setting, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Regla de Oro: Consentimiento y Autocuidado",
         "overlayTitle": "Regla de Oro del consentimiento",
-        "overlaySubtitle": "Mi cuerpo, mis límites | Tu cuerpo, tus límites",
+        "overlaySubtitle": "Límites claros y respeto corporal mutuo",
         "vectorialOverlayPptx": "Infografía de síntesis: El consentimiento libre y la asertividad garantizan la convivencia digna",
         "mathOverlayPptx": "Infografía de síntesis: El consentimiento libre y la asertividad garantizan la convivencia digna",
         "speakerNotes": "Recuerda la regla de oro: el consentimiento debe ser libre, informado, específico y siempre revocable. ¡Ahora pon a prueba lo aprendido resolviendo las actividades prácticas en la plataforma interactiva!",
@@ -400,9 +400,10 @@ export const CIENCIAS_7B_OA01_CLASE04: LessonData = {
       "id": "q1",
       "q": "Para que un consentimiento sea plenamente válido en una relación interpersonal, este debe ser:",
       "options": [
+        "Obligatorio por presión del grupo aunque exista incomodidad",
         "Libre de presiones, informado, específico para la situación y revocable en todo momento",
-        "Obligatorio por ley aunque la persona se sienta incómoda",
-        "Otorgado una única vez en la vida sin posibilidad de cambiar de opinión"
+        "Otorgado una única vez en la vida sin posibilidad de cambiar de opinión",
+        "Aceptado por temor a perder una amistad o sufrir burlas"
       ],
       "correct": "Libre de presiones, informado, específico para la situación y revocable en todo momento",
       "fixExplain": "El consentimiento pierde toda validez si media la coacción, el engaño o la imposición; debe ser siempre libre y revocable."
@@ -413,7 +414,8 @@ export const CIENCIAS_7B_OA01_CLASE04: LessonData = {
       "options": [
         "Expresar con claridad, calma y firmeza las propias decisiones y límites respetando al interlocutor",
         "Imponer la propia voluntad gritando y agrediendo a quien piense distinto",
-        "Guardar silencio y aceptar todo lo que los demás exijan para evitar discusiones"
+        "Guardar silencio y aceptar todo lo que los demás exijan para no discutir",
+        "Aceptar presiones grupales para evitar el rechazo social"
       ],
       "correct": "Expresar con claridad, calma y firmeza las propias decisiones y límites respetando al interlocutor",
       "fixExplain": "La asertividad no es sumisa ni agresiva: expresa con seguridad y respeto los derechos y límites personales."
@@ -422,9 +424,10 @@ export const CIENCIAS_7B_OA01_CLASE04: LessonData = {
       "id": "q3",
       "q": "¿Cuál es la conducta adecuada si alguien nos pide que detengamos un juego o contacto físico porque se siente incómodo?",
       "options": [
-        "Detenerse inmediatamente y respetar su límite sin hacer preguntas ni burlarse",
         "Insistir varias veces más hasta que la persona se acostumbre",
-        "Enojarse y decirle que es aburrida frente a todo el grupo"
+        "Enojarse y descalificarla frente a todo el grupo",
+        "Detenerse inmediatamente y respetar su límite sin hacer preguntas ni burlarse",
+        "Ignorar la petición y continuar argumentando que es solo una broma"
       ],
       "correct": "Detenerse inmediatamente y respetar su límite sin hacer preguntas ni burlarse",
       "fixExplain": "Cuando una persona expresa que no desea continuar, el consentimiento cesa de inmediato y el límite debe acatarse con respeto."
@@ -436,8 +439,10 @@ export const CIENCIAS_7B_OA01_CLASE04: LessonData = {
       "explain": "Recuerda que cada individuo tiene derecho inalienable a decidir sobre su propio cuerpo y sus vivencias. Decir 'no' cuando algo no te agrada o te hace sentir inseguro es un acto legítimo de autocuidado que todos deben acatar.",
       "q": "Si alguien te dice 'no quiero participar en esto', ¿qué debes hacer?",
       "options": [
+        "Continuar insistiendo hasta que cambie de parecer",
         "Aceptar su respuesta de inmediato y respetar su decisión sin presionar",
-        "Continuar insistiendo hasta que cambie de parecer"
+        "Burlarse de su decisión con los demás compañeros",
+        "Presionarlo mediante amenazas de dejar de ser amigos"
       ],
       "correct": "Aceptar su respuesta de inmediato y respetar su decisión sin presionar",
       "correctText": "¡Exacto! El 'no' de cualquier persona marca un límite innegociable que debe ser respetado siempre.",

@@ -1,529 +1,414 @@
 import { LessonData } from '../../types/lesson';
 
 export const HISTORIA_7B_OA02_CLASE02: LessonData = {
-  "metadata": {
-    "grade": "7° Básico",
-    "subject": "Historia, Geografía y Ciencias Sociales",
-    "oaCode": "OA 2",
-    "oaTitle": "Complejización de las primeras sociedades: de la hominización al surgimiento de las civilizaciones",
-    "lessonNumber": 2,
-    "totalLessonsInOa": 6,
-    "lessonTitle": "Domesticación de animales y plantas en el Creciente Fértil",
-    "durationMinutes": 30,
-    "nextLessonTitle": "Primeras aldeas sedentarias y división del trabajo"
+  metadata: {
+    grade: '7° Básico',
+    subject: 'Historia, Geografía y Ciencias Sociales',
+    oaCode: 'OA 2',
+    oaTitle: 'Procesos de transformación de la vida humana en el Neolítico',
+    lessonNumber: 2,
+    totalLessonsInOa: 6,
+    lessonTitle: 'Domesticación de plantas y animales en el Creciente Fértil',
+    durationMinutes: 30,
+    nextLessonTitle: 'Primeras aldeas sedentarias y organización comunitaria'
   },
-  "prep": {
-    "adultObjective": "Acompañar al estudiante a contextualizar y comprender el proceso histórico o geográfico de: Domesticación de animales y plantas en el Creciente Fértil, desarrollando el pensamiento crítico y analizando Domesticación.",
-    "routeToday": "1. Inicio y activación · 2. Video de exploración · 3. Recorrido guiado · 4. Formalización y práctica en cuaderno · 5. Miniquiz y REVISAR · 6. Cierre metacognitivo",
-    "mentorReminder": "Sigue las indicaciones en pantalla paso a paso. Lee únicamente los recuadros DILE en voz alta y espera siempre la respuesta.",
-    "reminders": [
-      "Sigue el orden indicado.",
-      "Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.",
-      "No leas los recuadros SOLO PARA TI ni AYUDA DE LECTURA.",
-      "Haz cada pregunta y espera la respuesta antes de seleccionar una opción.",
-      "Considera correcta una respuesta si expresa la idea matemática, aunque use palabras distintas.",
-      "Si el estudiante necesita apoyo, usa únicamente la ayuda que aparecerá.",
-      "Si propone otra explicación o no está de acuerdo, escúchalo completo y valora su razonamiento antes de guiarlo."
+
+  prep: {
+    adultObjective: 'Acompañar al estudiante a comprender el mecanismo histórico de la domesticación en el Creciente Fértil: cómo la selección artificial empírica de semillas (trigo escanda, cebada) y animales dóciles (ovejas, cabras) transformó a las especies silvestres y permitió la planificación alimentaria estacional.',
+    routeToday: 'De la recolección silvestre a la domesticación selectiva y el almacenamiento de semillas.',
+    mentorReminder: 'Sigue las indicaciones en pantalla paso a paso. Lee únicamente los recuadros DILE y PREGÚNTALE en voz alta.',
+    reminders: [
+      'Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.',
+      'No leas los recuadros SOLO PARA TI ni AYUDA PEDAGÓGICA.',
+      'Haz cada pregunta y espera la respuesta antes de retroalimentar.',
+      'Considera correcta una respuesta si expresa el razonamiento histórico con sus propias palabras.',
+      'Asegura que comprenda la diferencia entre amaestrar un animal salvaje individual y domesticar una especie a lo largo de generaciones.'
     ],
-    "emotionalTip": "Fomenta la perspectiva histórica: 'Analiza los hechos considerando la época y el espacio geográfico en que ocurrieron'."
+    emotionalTip: 'Fomenta la curiosidad científica e histórica: "Nuestros antepasados fueron observadores minuciosos de la naturaleza que aprendieron a multiplicar la vida para alimentarse".'
   },
-  "route": {
-    "blocks": [
-      {
-        "id": "b1",
-        "number": "01",
-        "title": "Historia, Geografía y Ciencias Sociales",
-        "subtitle": "Domesticación de animales y plantas en el Creciente Fértil",
-        "color": "yellow"
-      },
-      {
-        "id": "b2",
-        "number": "02",
-        "title": "Exploración",
-        "subtitle": "Gancho y Recorrido Guiado",
-        "color": "orange"
-      },
-      {
-        "id": "b3",
-        "number": "03",
-        "title": "Práctica",
-        "subtitle": "Aplicación en situaciones reales",
-        "color": "yellow"
-      },
-      {
-        "id": "b4",
-        "number": "04",
-        "title": "Evaluación",
-        "subtitle": "Miniquiz formativo y síntesis",
-        "color": "teal"
-      }
+
+  route: {
+    blocks: [
+      { id: 'b1', number: '01', title: 'Historia y Geografía', subtitle: 'Domesticación en el Creciente Fértil', color: 'yellow' },
+      { id: 'b2', number: '02', title: 'Exploración', subtitle: 'Selección artificial y ciclos agrícolas', color: 'orange' },
+      { id: 'b3', number: '03', title: 'Práctica', subtitle: 'Transformación de especies en cuaderno', color: 'yellow' },
+      { id: 'b4', number: '04', title: 'Evaluación', subtitle: 'Miniquiz formativo y síntesis', color: 'teal' }
     ],
-    "keyQuestions": [
-      {
-        "label": "Exploración inicial",
-        "sub": "Domesticación de animales y plantas en el Creciente Fértil"
-      },
-      {
-        "label": "Idea clave",
-        "sub": "Los procesos históricos sobre Domesticación de animales y pl"
-      },
-      {
-        "label": "Práctica y aplicación",
-        "sub": "Resolución guiada paso a paso"
-      }
+    keyQuestions: [
+      { label: '¿Cómo se domesticó una planta?', sub: 'Seleccionando semillas de espigas más firmes y granos más grandes.' },
+      { label: '¿Qué animales se integraron?', sub: 'Ovejas y cabras dóciles que aportaban carne, lana y leche.' }
     ],
-    "dileIntro": "Hoy comenzaremos la clase 2 de Historia, Geografía y Ciencias Sociales: \"Domesticación de animales y plantas en el Creciente Fértil\".",
-    "dileObjective": "Selección artificial, ciclos de cultivo y almacenamiento de excedentes"
+    dileIntro: 'Hoy comenzaremos la clase 2 de Historia, Geografía y Ciencias Sociales: "Domesticación de plantas y animales en el Creciente Fértil".',
+    dileObjective: 'Comprender cómo la selección artificial y los ciclos de cultivo aseguraron la alimentación humana.'
   },
-  "situation": {
-    "dilePrompt": "Hoy en Historia y Ciencias Sociales nos situamos en 'Domesticación de animales y plantas en el Creciente Fértil'. El concepto histórico central que abordamos es 'Domesticación'. Observa el escenario histórico planteado en la pantalla sobre Selección artificial, ciclos de cultivo y almacenamiento de excedentes:",
-    "expectedAnswer": "Explicar las necesidades de subsistencia, recursos geográficos o motivos sociales vinculados con Domesticación.",
-    "socraticHint": "Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?",
-    "emotionalTip": "Fomenta la perspectiva histórica: 'Analiza los hechos considerando la época y el espacio geográfico en que ocurrieron'.",
-    "options": [
+
+  situation: {
+    dilePrompt: 'Observa la espiga de trigo silvestre y la espiga de trigo cultivado en pantalla. La planta silvestre dispersa sus granos al suelo con el viento para reproducirse, mientras que la planta domesticada retiene sus semillas en la espiga para que las personas puedan cosecharlas. ¿Por qué crees que los primeros recolectores decidieron guardar y sembrar únicamente los granos que no se caían solos?',
+    expectedAnswer: 'Porque si los granos caían al suelo se perdían entre la tierra, mientras que las plantas que retenían sus granos permitían recolectar cosechas abundantes para alimentar a la comunidad y guardar semillas para la próxima temporada.',
+    socraticHint: 'Ponte en el lugar de quien cosecha trigo con una hoz: ¿prefieres cortar una planta cuyos granos caen al barro o una cuyos granos quedan firmes en la espiga?',
+    emotionalTip: 'Invítalo a valorar el ingenio humano: ese sencillo acto de seleccionar semillas dio origen a toda la agricultura moderna.',
+    options: [
       {
-        "label": "Explicó las causas históricas y geográficas vinculadas con Domesticación",
-        "kind": "correct",
-        "feedbackText": "¡Exacto! Comprendió las causas históricas y geográficas que motivaron a las personas de esa época."
+        label: 'Explicó que seleccionaban las espigas que retenían sus granos para cosechar más alimento',
+        kind: 'correct',
+        feedbackText: '¡Exacto! Esa selección intencional de rasgos favorables se llama selección artificial empírica.'
       },
       {
-        "label": "Solo mencionó hechos aislados sin explicar por qué ocurrieron",
-        "kind": "needs_support",
-        "feedbackText": "Pídele que piense en los desafíos del entorno: ¿por qué necesitaban organizarse de esa manera?"
+        label: 'Dijo que las plantas cambiaron solas sin que nadie las eligiera ni sembrara',
+        kind: 'needs_support',
+        feedbackText: 'Las plantas cambiaron porque las familias humanas sembraron año tras año solo las semillas de las mejores espigas.'
+      },
+      {
+        label: 'No sabe qué responder o dio otra respuesta',
+        kind: 'no_answer',
+        feedbackText: 'Pista guiada: Fíjate en el dibujo: al elegir espigas con granos firmes y grandes, las siguientes cosechas salían cada vez más rendidoras.'
       }
     ]
   },
-  "reference": {
-    "dilePrompt": "¿Qué causas o necesidades motivaron a las comunidades de esa época en relación con 'Domesticación'?",
-    "question": "¿Qué causas o necesidades motivaron a las comunidades de esa época en relación con 'Domesticación'?",
-    "expectedAnswer": "Explicar las necesidades de subsistencia, recursos geográficos o motivos sociales vinculados con Domesticación.",
-    "socraticHint": "Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?",
-    "feedbackSuccess": "Muy bien. Observaste el detalle central con precisión.",
-    "feedbackSupport": "Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?"
+
+  reference: {
+    dilePrompt: 'Además de cuidar los cereales, las comunidades neolíticas construyeron corrales para criar ovejas y cabras cerca de sus viviendas.',
+    question: '¿Qué ventajas ofrecía tener un rebaño de cabras y ovejas vivas en comparación con salir a cazar animales salvajes?',
+    expectedAnswer: 'Tener animales domesticados aseguraba alimento continuo (leche, carne), pieles y lana sin riesgo de sufrir heridas en cacerías ni pasar hambre si los animales salvajes migraban.',
+    socraticHint: 'Si cazas una gacela silvestre, obtienes carne una sola vez. Pero si cuidas una cabra viva en un corral, ¿qué obtienes todos los días?',
+    feedbackSuccess: '¡Brillante deducción histórica! El rebaño vivo proporcionó recursos secundarios diarios como leche y lana, además de seguridad alimentaria constante.',
+    feedbackSupport: 'Un rebaño en corral garantizaba leche fresca todos los días y lana para abrigarse, sin depender de la suerte de la caza.'
   },
-  "hook": {
-    "title": "Video Motivacional: El Desafío de Domesticación de animales y plantas en el Creciente Fértil",
-    "titulo": "Video Motivacional: El Desafío de Domesticación de animales y plantas en el Creciente Fértil",
-    "focusPoints": [],
-    "dileIntro": "Antes de ver el video, observa con atención lo que descubren los dos exploradores y qué pregunta queda planteada.",
-    "hazInstruction": "Observa y reflexiona con las escenas del desafío visual.",
-    "videoSrc": "",
-    "videoUrl": "",
-    "posterSrc": "",
-    "dileAfterVideo": "Muy buena observación. Ahora conversaremos sobre lo que descubrieron en la expedición.",
-    "fullPrompt": "Actúa como Diseñador Instruccional Senior y Creador de Presentaciones en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de GANCHO MOTIVACIONAL (Paso 2) para:\n- Asignatura: Historia, Geografía y Ciencias Sociales\n- Objetivo de Aprendizaje: OA 2\n- Clase: 2 (\"Domesticación de animales y plantas en el Creciente Fértil\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS (PLAN MAESTRO ACTUALIZACIÓN 29-09-2026):\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Exactamente 7 diapositivas (slide1 a slide7).\n3. ESTILO ARTÍSTICO DE LAS IMÁGENES: Anime Moderno (Modern Anime Style, cinematográfico, iluminación dinámica, fondos limpios con espacio negativo real).\n4. PROTAGONISTAS FIJOS: Dúo co-protagónico de 13 años (la joven y el joven estudiantes-exploradores chilenos). ACTÚAN JUNTOS en cada escena, colaborando y resolviendo el desafío en equipo.\n5. REGLA VISUAL ANTI-MÁSCARAS Y FONDOS LIMPIOS: Imágenes Full-Bleed con espacio negativo para texto y vectores. Queda prohibido usar placas oscuras que tapen las caras de los personajes o la mitad de la lámina. PROHIBIDO dibujar números, letras o fórmulas dentro de la ilustración generada por IA.\n6. PRESUPUESTO TEMPORAL Y GUION CONTINUO (GANCHO - 60 SEGUNDOS / 130 PALABRAS TOTALES): Cada diapositiva DEBE incluir únicamente el texto de narración oral continua (8+8+8+9+9+9+9 segundos, totalizando exactamente ~130 palabras para 60 segundos de locución a 130 palabras por minuto en Google Vids/TTS), sin marcas técnicas, encabezados ni duraciones, listo para ser leído por voz en off.\n7. PROTOCOLO DE COMPROBACIÓN ACÚSTICA OBLIGATORIA (GOOGLE VIDS): Medir la duración real del archivo exportado con cronómetro o analizador de audio. El conteo de palabras no garantiza por sí solo 60 segundos exactos. Si la duración no es exacta, ajustar narración, pausas o ritmo, volver a exportar y registrar la duración comprobada oficial.\n8. ESTRUCTURA HEXAPARTITA POR DIAPOSITIVA:\n   • Toda diapositiva se define con: 1) Propósito, 2) Título en Pantalla (64 pt), 3) Subtítulo en Pantalla (36 pt), 4) Prompt de imagen IA sin texto, 5) Capa vectorial para PowerPoint, y 6) Notas al orador continuas.\n   • COLOR DE TEXTO: Un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.\n   • LOCUCIÓN COHERENTE: Narra con precisión lo que se observa en la imagen y lo que se sintetiza en la pantalla.\n\nDETALLE DE LAS 7 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Apertura y Contexto) ---\n1. Propósito Didáctico: Apertura y Contexto\n2. Título en Pantalla (64 pt): Misión 2: Domesticación de animales y plantas en el Creciente Fértil\n3. Subtítulo en Pantalla (36 pt): Exploración inicial en Historia, Geografía y Ciencias Sociales\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Domesticación de animales y plantas en el Creciente Fértil (Historia, Geografía y Ciencias Sociales). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Coordenadas historicas: Linea temporal y contexto de Domesticación de animales y plantas en el Creciente Fértil\n6. Notas al Orador (Locución Continua Google Vids): \"Comienza una nueva expedición de aprendizaje en Historia, Geografía y Ciencias Sociales. Nuestros dos exploradores analizan el desafío de Domesticación de animales y plantas en el Creciente Fértil para descubrir sus secretos.\"\n\n--- DIAPOSITIVA 2 (Presentación del Escenario) ---\n1. Propósito Didáctico: Presentación del Escenario\n2. Título en Pantalla (64 pt): Punto de partida\n3. Subtítulo en Pantalla (36 pt): Selección artificial, ciclos de cultivo y almacenamiento de excedentes\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Selección artificial, ciclos de cultivo y almacenamiento de excedentes. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Selección artificial, ciclos de cultivo y almacenamiento de excedentes\n6. Notas al Orador (Locución Continua Google Vids): \"Al observar los datos sobre Selección artificial, ciclos de cultivo y almacenamiento de excedentes, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor.\"\n\n--- DIAPOSITIVA 3 (Aparición del Conflicto / Misterio) ---\n1. Propósito Didáctico: Aparición del Conflicto / Misterio\n2. Título en Pantalla (64 pt): El enigma disciplinar\n3. Subtítulo en Pantalla (36 pt): Desafío en Domesticación de animales y plantas en el Creciente Fértil\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Selección artificial, ciclos de cultivo y almacenamiento de excedentes\n6. Notas al Orador (Locución Continua Google Vids): \"Surge un reto concreto sobre Domesticación de animales y plantas en el Creciente Fértil: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso.\"\n\n--- DIAPOSITIVA 4 (Exploración de Pistas) ---\n1. Propósito Didáctico: Exploración de Pistas\n2. Título en Pantalla (64 pt): Análisis de evidencias\n3. Subtítulo en Pantalla (36 pt): Selección artificial, ciclos de cultivo y almacenamiento de excedentes\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Selección artificial, ciclos de cultivo y almacenamiento de excedentes\n6. Notas al Orador (Locución Continua Google Vids): \"Ambos comparan las pistas disponibles sobre Selección artificial, ciclos de cultivo y almacenamiento de excedentes. Cada dato confirma cómo interactúan los elementos clave de la situación.\"\n\n--- DIAPOSITIVA 5 (El Momento Crítico) ---\n1. Propósito Didáctico: El Momento Crítico\n2. Título en Pantalla (64 pt): Criterio de decisión\n3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Selección artificial, ciclos de cultivo y almacenamiento de excedentes\n6. Notas al Orador (Locución Continua Google Vids): \"Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Domesticación de animales y plantas en el Creciente Fértil con total precisión metodológica.\"\n\n--- DIAPOSITIVA 6 (La Antesala de la Pregunta) ---\n1. Propósito Didáctico: La Antesala de la Pregunta\n2. Título en Pantalla (64 pt): El dilema central\n3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Domesticación de animales y plantas en el Creciente Fértil?\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Dilema historico: Fuentes contrastadas frente al acontecimiento\n6. Notas al Orador (Locución Continua Google Vids): \"Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje.\"\n\n--- DIAPOSITIVA 7 (La Pregunta Detonante) ---\n1. Propósito Didáctico: La Pregunta Detonante\n2. Título en Pantalla (64 pt): Pregunta detonante\n3. Subtítulo en Pantalla (36 pt): Regla y método de Domesticación de animales y plantas en el Creciente Fértil\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta detonante: ¿Que consecuencias trajo Domesticación de animales y plantas en el Creciente Fértil?\n6. Notas al Orador (Locución Continua Google Vids): \"Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!\"\n\n",
-    "slides": [
+
+  hook: {
+    title: 'El Secreto de las Primeras Cosechas',
+    titulo: 'El Secreto de las Primeras Cosechas',
+    focusPoints: [
+      'El arco del Creciente Fértil: Cuencas de los ríos Tigris y Éufrates con trigo escanda y cebada silvestre.',
+      'Selección artificial: Selección repetida de espigas con raquis resistente durante cientos de ciclos.',
+      'Domesticación de rebaños: Control reproductivo y convivencia con ovejas y cabras dóciles.',
+      'Los primeros silos: Protección de granos secos frente a la humedad y los roedores.'
+    ],
+    dileIntro: 'Acompañemos a los dos jóvenes exploradores a investigar cómo una pequeña semilla y un dócil rebaño cambiaron el destino de la humanidad.',
+    hazInstruction: 'Observa con atención cómo la selección de especies permitió asegurar el alimento para todo el año.',
+    videoSrc: '',
+    dileAfterVideo: 'Excelente observación. Ahora analizaremos las claves de este gran salto productivo.',
+    slides: [
       {
-        "slideNumber": 1,
-        "tituloMomento": "Apertura y Contexto",
-        "didacticPurpose": "Apertura y Contexto",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Domesticación de animales y plantas en el Creciente Fértil (Historia, Geografía y Ciencias Sociales). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.",
-        "overlayTitle": "Misión 2: Domesticación de animales y plantas en el Creciente Fértil",
-        "overlaySubtitle": "Exploración inicial en Historia, Geografía y Ciencias Sociales",
-        "overlayText": "Misión 2: Domesticación de animales y plantas en el Creciente Fértil",
-        "vectorialOverlayPptx": "Coordenadas historicas: Linea temporal y contexto de Domesticación de animales y plantas en el Creciente Fértil",
-        "mathOverlayPptx": "Coordenadas historicas: Linea temporal y contexto de Domesticación de animales y plantas en el Creciente Fértil",
-        "speakerNotes": "Comienza una nueva expedición de aprendizaje en Historia, Geografía y Ciencias Sociales. Nuestros dos exploradores analizan el desafío de Domesticación de animales y plantas en el Creciente Fértil para descubrir sus secretos.",
-        "palabrasAprox": 21,
-        "duracionSeg": 9
+        slideNumber: 1,
+        tituloMomento: "Apertura y Escenario",
+        didacticPurpose: "Apertura y Escenario",
+        visualPrompt: "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a golden foothill valley in the Fertile Crescent with wild wheat swaying in the breeze. Cinematic warm morning light, wide negative space in top third. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "El Creciente Fértil",
+        overlaySubtitle: "Valles del Tigris y Éufrates floreciendo",
+        overlayText: "El Creciente Fértil: Valles del Tigris y Éufrates floreciendo",
+        vectorialOverlayPptx: "Coordenadas históricas: Arco fértil de Medio Oriente (10.000 a 8.000 a.C.)",
+        speakerNotes: "Nuestros dos exploradores llegan a los valles del Creciente Fértil, donde abundaban el trigo silvestre, la cebada y las manadas de cabras montesas.",
+        palabrasAprox: 23,
+        duracionSeg: 9
       },
       {
-        "slideNumber": 2,
-        "tituloMomento": "Presentación del Escenario",
-        "didacticPurpose": "Presentación del Escenario",
-        "visualPrompt": "Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Selección artificial, ciclos de cultivo y almacenamiento de excedentes. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.",
-        "overlayTitle": "Punto de partida",
-        "overlaySubtitle": "Selección artificial, ciclos de cultivo y almacenamiento de excedentes",
-        "overlayText": "Punto de partida: Selección artificial, ciclos de cultivo y almacenamiento de excedentes",
-        "vectorialOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Selección artificial, ciclos de cultivo y almacenamiento de excedentes",
-        "mathOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Selección artificial, ciclos de cultivo y almacenamiento de excedentes",
-        "speakerNotes": "Al observar los datos sobre Selección artificial, ciclos de cultivo y almacenamiento de excedentes, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor.",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        slideNumber: 2,
+        tituloMomento: "El Enigma de la Semilla",
+        didacticPurpose: "El Enigma de la Semilla",
+        visualPrompt: "Modern anime style. The girl holding a magnifying glass inspecting an ancient ear of emmer wheat, comparing a fragile wild stem with a sturdy domesticated stalk. Clean lineart, soft depth of field, clear space on left. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "El Trigo Silvestre",
+        overlaySubtitle: "Espigas frágiles que dispersan su grano",
+        overlayText: "El Trigo Silvestre: Espigas frágiles que dispersan su grano",
+        vectorialOverlayPptx: "Mutación y selección: Trigo silvestre (raquis quebradizo) vs Trigo cultivado (raquis firme)",
+        speakerNotes: "Al examinar las espigas silvestres descubren un misterio: la naturaleza hace que el grano se desprenda solo, dificultando su recolección humana.",
+        palabrasAprox: 21,
+        duracionSeg: 9
       },
       {
-        "slideNumber": 3,
-        "tituloMomento": "Aparición del Conflicto / Misterio",
-        "didacticPurpose": "Aparición del Conflicto / Misterio",
-        "visualPrompt": "Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.",
-        "overlayTitle": "El enigma disciplinar",
-        "overlaySubtitle": "Desafío en Domesticación de animales y plantas en el Creciente Fértil",
-        "overlayText": "El enigma disciplinar: Domesticación de animales y plantas en el Creciente Fértil",
-        "vectorialOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Selección artificial, ciclos de cultivo y almacenamiento de excedentes",
-        "mathOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Selección artificial, ciclos de cultivo y almacenamiento de excedentes",
-        "speakerNotes": "Surge un reto concreto sobre Domesticación de animales y plantas en el Creciente Fértil: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        slideNumber: 3,
+        tituloMomento: "La Selección Paciente",
+        didacticPurpose: "La Selección Paciente",
+        visualPrompt: "Modern anime style. The boy and girl observing Neolithic villagers carefully sorting harvested grain baskets, separating the largest, healthiest seeds into clay pots. Dramatic lighting, expressive eyes. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Selección Artificial",
+        overlaySubtitle: "Elegir las mejores semillas para sembrar",
+        overlayText: "Selección Artificial: Elegir las mejores semillas para sembrar",
+        vectorialOverlayPptx: "Mecanismo biológico: Selección humana empírica repetida a lo largo de generaciones",
+        speakerNotes: "Los recolectores notaron que algunas espigas conservaban el grano adherido. Comenzaron a guardar esas semillas específicas para sembrarlas al año siguiente.",
+        palabrasAprox: 22,
+        duracionSeg: 9
       },
       {
-        "slideNumber": 4,
-        "tituloMomento": "Exploración de Pistas",
-        "didacticPurpose": "Exploración de Pistas",
-        "visualPrompt": "Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.",
-        "overlayTitle": "Análisis de evidencias",
-        "overlaySubtitle": "Selección artificial, ciclos de cultivo y almacenamiento de excedentes",
-        "overlayText": "Análisis de evidencias: Selección artificial, ciclos de cultivo y almacenamiento de excedentes",
-        "vectorialOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Selección artificial, ciclos de cultivo y almacenamiento de excedentes",
-        "mathOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Selección artificial, ciclos de cultivo y almacenamiento de excedentes",
-        "speakerNotes": "Ambos comparan las pistas disponibles sobre Selección artificial, ciclos de cultivo y almacenamiento de excedentes. Cada dato confirma cómo interactúan los elementos clave de la situación.",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        slideNumber: 4,
+        tituloMomento: "El Rebaño Amistoso",
+        didacticPurpose: "El Rebaño Amistoso",
+        visualPrompt: "Modern anime style. The two young protagonists near a stone-walled pen where gentle sheep and goats drink from a wooden trough, with villagers shearing wool. Warm afternoon sunlight, clean composition. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Domesticación de Rebaños",
+        overlaySubtitle: "Ovejas y cabras conviviendo en aldeas",
+        overlayText: "Domesticación de Rebaños: Ovejas y cabras conviviendo en aldeas",
+        vectorialOverlayPptx: "Ganadería neolítica: De la caza indiscriminada al control reproductivo y pastoreo",
+        speakerNotes: "Al mismo tiempo, aprendieron a controlar manadas de ovejas y cabras dóciles, asegurando leche fresca, lana para abrigo y carne sin salir a cazar.",
+        palabrasAprox: 24,
+        duracionSeg: 9
       },
       {
-        "slideNumber": 5,
-        "tituloMomento": "El Momento Crítico",
-        "didacticPurpose": "El Momento Crítico",
-        "visualPrompt": "Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.",
-        "overlayTitle": "Criterio de decisión",
-        "overlaySubtitle": "Aplicar el método riguroso",
-        "overlayText": "Criterio de decisión riguroso",
-        "vectorialOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Selección artificial, ciclos de cultivo y almacenamiento de excedentes",
-        "mathOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Selección artificial, ciclos de cultivo y almacenamiento de excedentes",
-        "speakerNotes": "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Domesticación de animales y plantas en el Creciente Fértil con total precisión metodológica.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        slideNumber: 5,
+        tituloMomento: "El Ciclo Agrícola",
+        didacticPurpose: "El Ciclo Agrícola",
+        visualPrompt: "Modern anime style. The boy taking notes on an illustrated four-season circular calendar carved on stone, while the girl points to a field being prepared with stone hoes. Vibrant colors, focused determination. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "El Calendario Agrícola",
+        overlaySubtitle: "Siembra cuidados riego y cosecha estacional",
+        overlayText: "El Calendario Agrícola: Siembra cuidados riego y cosecha estacional",
+        vectorialOverlayPptx: "Ciclo de subsistencia: Preparación del suelo -> Siembra -> Protección -> Cosecha",
+        speakerNotes: "La agricultura exigió sincronizarse con las estaciones: preparar la tierra tras las lluvias, regar los brotes y organizar la cosecha comunitaria.",
+        palabrasAprox: 20,
+        duracionSeg: 9
       },
       {
-        "slideNumber": 6,
-        "tituloMomento": "La Antesala de la Pregunta",
-        "didacticPurpose": "La Antesala de la Pregunta",
-        "visualPrompt": "Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.",
-        "overlayTitle": "El dilema central",
-        "overlaySubtitle": "¿Cómo resolver Domesticación de animales y plantas en el Creciente Fértil?",
-        "overlayText": "¿Cómo resolver Domesticación de animales y plantas en el Creciente Fértil?",
-        "vectorialOverlayPptx": "Dilema historico: Fuentes contrastadas frente al acontecimiento",
-        "mathOverlayPptx": "Dilema historico: Fuentes contrastadas frente al acontecimiento",
-        "speakerNotes": "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        slideNumber: 6,
+        tituloMomento: "El Silo Protector",
+        didacticPurpose: "El Silo Protector",
+        visualPrompt: "Modern anime style. Wide shot of the two explorers inspecting an underground pit lined with clay plaster and sealed with flat stones, filled with dried golden grain. Calm volumetric light, wide negative space. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "El Almacenamiento",
+        overlaySubtitle: "Guardar grano para el invierno venidero",
+        overlayText: "El Almacenamiento: Guardar grano para el invierno venidero",
+        vectorialOverlayPptx: "Innovación técnica: Silos sellados para resguardar excedentes de plagas y humedad",
+        speakerNotes: "Para que el cultivo tuviera sentido fue vital guardarlo. Inventaron silos y vasijas selladas para proteger las reservas de grano durante los meses fríos.",
+        palabrasAprox: 24,
+        duracionSeg: 9
       },
       {
-        "slideNumber": 7,
-        "tituloMomento": "La Pregunta Detonante",
-        "didacticPurpose": "La Pregunta Detonante",
-        "visualPrompt": "Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.",
-        "overlayTitle": "Pregunta detonante",
-        "overlaySubtitle": "Regla y método de Domesticación de animales y plantas en el Creciente Fértil",
-        "overlayText": "Meta: Dominio de Domesticación de animales y plantas en el Creciente Fértil",
-        "vectorialOverlayPptx": "Pregunta detonante: ¿Que consecuencias trajo Domesticación de animales y plantas en el Creciente Fértil?",
-        "mathOverlayPptx": "Pregunta detonante: ¿Que consecuencias trajo Domesticación de animales y plantas en el Creciente Fértil?",
-        "speakerNotes": "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        slideNumber: 7,
+        tituloMomento: "Pregunta Detonante",
+        didacticPurpose: "Pregunta Detonante",
+        visualPrompt: "Modern anime style. Elegant visual setting with the two 13-year-olds smiling with their study notes in hand beside an ancient clay jar overflowing with wheat. Soft gradient background. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Pregunta de Indagación",
+        overlaySubtitle: "¿Cómo cambió la domesticación nuestra vida?",
+        overlayText: "Pregunta de Indagación: ¿Cómo cambió la domesticación nuestra vida?",
+        vectorialOverlayPptx: "Interrogante central: ¿De qué manera la selección artificial transformó la relación con el entorno?",
+        speakerNotes: "Ahora descubriremos en la lección cómo estas técnicas agrícolas y ganaderas sentaron las bases para fundar las primeras aldeas permanentes.",
+        palabrasAprox: 21,
+        duracionSeg: 6
       }
     ]
   },
-  "preQuestions": [
+
+  preQuestions: [
     {
-      "context": "Contexto Temporal, Espacial y Domesticación",
-      "question": "¿De qué manera el entorno geográfico y la época condicionaron el desarrollo de 'Domesticación' en este proceso histórico?",
-      "expected": "Relacionar las características del espacio geográfico con la organización social y el desarrollo de Domesticación.",
-      "success": "¡Muy bien! Ubicaste con precisión las coordenadas temporales y espaciales del proceso.",
-      "support": "Observa las referencias del mapa y la cronología: ¿qué recursos naturales o rutas influían en sus decisiones?",
-      "reveal": "El entorno geográfico y las condiciones de la época condicionaron profundamente los modos de vida y las instituciones humanas.",
-      "studentReveal": "La influencia del espacio geográfico y el tiempo histórico en Domesticación."
+      context: 'Selección Artificial del Trigo Escanda',
+      question: 'Vimos que el trigo silvestre botaba sus semillas al suelo y el trigo cultivado las retenía en la espiga. ¿Cómo lograron los agricultores que todo su campo tuviera espigas firmes?',
+      expected: 'Seleccionando y sembrando únicamente las semillas de las espigas que retenían sus granos, repitiendo este proceso durante muchas generaciones hasta que esa característica predominó.',
+      success: '¡Exacto! Esa selección artificial empírica fue la que transformó genéticamente las especies vegetales para el provecho humano.',
+      support: 'Piensa en qué semilla sembraban: si solo sembraban las espigas que no se caían, ¿cómo serían las plantas de la siguiente cosecha?',
+      reveal: 'Al sembrar exclusivamente semillas con espigas firmes, los agricultores favorecieron esa característica hasta domesticar por completo la especie.',
+      studentReveal: 'Sembrando durante muchas generaciones solo las semillas de las espigas firmes que no soltaban el grano.'
     },
     {
-      "context": "Pensamiento Crítico y Prevención del Presentismo",
-      "question": "Para evitar el error común de 'No comprender la magnitud temporal de 'larga duración' y percibir el Neolítico como un cambio rápido y homogéneo.', ¿qué debemos considerar al analizar las decisiones tomadas por los actores históricos?",
-      "expected": "Evaluar las decisiones históricas desde la mentalidad, recursos y cosmovisión propia de la época estudiada.",
-      "success": "¡Excelente empatía histórica! Analizaste el pasado desde su propio contexto y no desde los prejuicios actuales.",
-      "support": "Piensa qué información y qué valores tenían en ese siglo: ¿podían prever las consecuencias de la misma forma que nosotros hoy?",
-      "reveal": "El rigor histórico exige comprender las razones de los protagonistas en su propio tiempo, evitando anacronismos.",
-      "studentReveal": "La comprensión del pasado desde el contexto propio de sus protagonistas."
+      context: 'El Rol de los Primeros Silos de Grano',
+      question: '¿Por qué la construcción de silos y vasijas selladas con arcilla fue tan importante como el acto mismo de sembrar?',
+      expected: 'Porque de nada servía cosechar mucho grano si se pudría con la lluvia o se lo comían los roedores; el almacenamiento aseguró reservas para sobrevivir y sembrar al año siguiente.',
+      success: '¡Excelente visión económica! El almacenamiento garantizó la seguridad alimentaria en épocas de sequía o invierno.',
+      support: 'Imagina que cosechas mil sacos de trigo: si no tienes dónde guardarlos secos y protegidos de ratones, ¿qué pasa en pocas semanas?',
+      reveal: 'El almacenamiento en silos protegió los granos de la humedad y plagas, garantizando comida para el invierno y semillas para la nueva siembra.',
+      studentReveal: 'Porque protegía el grano de la humedad y los roedores, asegurando comida para el invierno y semillas para el próximo año.'
     }
   ],
-  "formalization": {
-    "title": "Video Explicativo: Formalización de Domesticación de animales y plantas en el Creciente Fértil",
-    "concept": "Video Explicativo: Formalización de Domesticación de animales y plantas en el Creciente Fértil",
-    "dileIntro": "Ahora veremos el video explicativo de Domesticación de animales y plantas en el Creciente Fértil. Observa el mapa conceptual y cómo se articula el concepto de Domesticación.",
-    "hazInstruction": "Revisemos la explicación formal y la idea clave.",
-    "ideaClave": "Los procesos históricos sobre Domesticación de animales y plantas en el Creciente Fértil responden a múltiples causas interconectadas, donde 'Domesticación' explica cómo las sociedades resolvieron sus desafíos de convivencia y subsistencia.",
-    "videoSrc": "",
-    "videoUrl": "",
-    "graphicPoster": "",
-    "fullPrompt": "Actúa como Diseñador Pedagógico y Especialista en Didáctica Disciplinar en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de VIDEO EXPLICATIVO / FORMALIZACIÓN (Paso 4) para:\n- Asignatura: Historia, Geografía y Ciencias Sociales\n- Objetivo de Aprendizaje: OA 2\n- Clase: 2 (\"Domesticación de animales y plantas en el Creciente Fértil\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS (PLAN MAESTRO ACTUALIZACIÓN 29-09-2026):\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Exactamente 7 diapositivas (slide1 a slide7) siguiendo el principio de un cambio visual por cada movimiento mental.\n3. DIAPOSITIVA 1 OBLIGATORIA CON OBJETIVO: La primera diapositiva declara como subtítulo (36 pt) el objetivo específico de la lección, sin repetir rótulos redundantes 'OA 01'.\n4. PROTAGONISTAS FIJOS EN EL 100% DE LAS ESCENAS: Los mismos 2 jóvenes de 13 años (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.\n5. REGLA VISUAL ANTI-MÁSCARAS Y FONDOS LIMPIOS: Imagen limpia con espacio negativo real. Prohibido que la IA intente dibujar números, rectas o letras. Todo elemento disciplinar se ensambla vectorialmente en PowerPoint.\n6. PRESUPUESTO TEMPORAL Y GUION PEDAGÓGICO (LECCIÓN EXPLICATIVA - 90 SEGUNDOS / 195 PALABRAS TOTALES): Guion explicativo continuo (12+13+13+13+13+13+13 segundos, totalizando exactamente ~195 palabras para 90 segundos a 130 palabras por minuto en Google Vids/TTS), sin marcas técnicas. Diapositiva 1 formula el objetivo; diapositivas 2 a 7 desarrollan el contenido sin repetirlo.\n7. PROTOCOLO DE COMPROBACIÓN ACÚSTICA OBLIGATORIA (GOOGLE VIDS): Medir la duración real del archivo exportado con cronómetro o analizador de audio. El conteo de palabras no garantiza por sí solo 90 segundos exactos. Si la duración no es exacta, ajustar narración, pausas o ritmo, volver a exportar y registrar la duración comprobada oficial.\n8. JERARQUÍA TIPOGRÁFICA Y COLOR DE TEXTO: Título en Pantalla (64 pt); Subtítulo en Pantalla (36 pt). Texto brillante de un solo color de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, contornos, resplandores ni recuadros flotantes o fondos detrás del texto. Especificar color en cada prompt.\n9. CIERRE SIN RETO EN EL VIDEO: La explicación concluye con la regla de oro y da el pase directo a la práctica en la plataforma web, sin proponer desafíos finales ni tareas en el cuaderno durante el video.\n10. ESTRUCTURA HEXAPARTITA POR DIAPOSITIVA (Propósito, Título 64 pt, Subtítulo 36 pt, Prompt Imagen IA, Capa Vectorial PPTX, Notas al Orador).\n\nDETALLE DE LAS 7 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Objetivo de la Lección) ---\n1. Propósito Didáctico: Objetivo de la Lección\n2. Título en Pantalla (64 pt): Objetivo de la lección\n3. Subtítulo en Pantalla (36 pt): Dominar Domesticación de animales y plantas en el Creciente Fértil: Selección artificial, ciclos de cultivo y almacenamiento de excedentes\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Selección artificial, ciclos de cultivo y almacenamiento de excedentes. High clarity, negative space for text. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 2 · Domesticación de animales y plantas en el Creciente Fértil\n6. Notas al Orador (Locución Continua Google Vids): \"El objetivo de hoy es aprender a selección artificial, ciclos de cultivo y almacenamiento de excedentes, aplicando el método disciplinar paso a paso con total rigor y claridad.\"\n\n--- DIAPOSITIVA 2 (Definición del Concepto Central) ---\n1. Propósito Didáctico: Definición del Concepto Central\n2. Título en Pantalla (64 pt): Concepto fundamental\n3. Subtítulo en Pantalla (36 pt): Selección artificial, ciclos de cultivo y almacenamiento de excedentes\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Escenario historico y fuentes primarias de Selección artificial, ciclos de cultivo y almacenamiento de excedentes\n6. Notas al Orador (Locución Continua Google Vids): \"Para comprender Domesticación de animales y plantas en el Creciente Fértil, establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación.\"\n\n--- DIAPOSITIVA 3 (Demostración Modelada) ---\n1. Propósito Didáctico: Demostración Modelada\n2. Título en Pantalla (64 pt): Modelamiento paso a paso\n3. Subtítulo en Pantalla (36 pt): Procedimiento de Domesticación de animales y plantas en el Creciente Fértil\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama multicausal: Factores economicos, sociales y culturales\n6. Notas al Orador (Locución Continua Google Vids): \"Observa cómo se aplica el procedimiento en este caso guiado: cada transformación responde a una justificación disciplinar explícita y visible.\"\n\n--- DIAPOSITIVA 4 (Prevención del Error Frecuente) ---\n1. Propósito Didáctico: Prevención del Error Frecuente\n2. Título en Pantalla (64 pt): Atención: Error habitual\n3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Contraste temporal: cambios y continuidades historicas\n6. Notas al Orador (Locución Continua Google Vids): \"Un error frecuente ocurre al descuidar el orden o saltarse un paso de la convención establecida. Siempre comprobamos cada dato antes de continuar.\"\n\n--- DIAPOSITIVA 5 (Comprobación del Resultado) ---\n1. Propósito Didáctico: Comprobación del Resultado\n2. Título en Pantalla (64 pt): Validación del resultado\n3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Interpretacion historica justificada a partir de evidencias\n6. Notas al Orador (Locución Continua Google Vids): \"Al contrastar el resultado con la situación inicial, confirmamos que la solución es consistente, rigurosa y responde plenamente a la pregunta.\"\n\n--- DIAPOSITIVA 6 (Estrategia Mnemotécnica) ---\n1. Propósito Didáctico: Estrategia Mnemotécnica\n2. Título en Pantalla (64 pt): Estrategia de pensamiento\n3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Estrategia de analisis historico: Contexto, causas y consecuencias\n6. Notas al Orador (Locución Continua Google Vids): \"Recuerda siempre la estrategia en tres pasos: identificar la información clave, aplicar la regla en orden y comprobar el resultado final.\"\n\n--- DIAPOSITIVA 7 (Síntesis y Regla de Oro) ---\n1. Propósito Didáctico: Síntesis y Regla de Oro\n2. Título en Pantalla (64 pt): Regla de Oro: Domesticación de animales y plantas en el Creciente Fértil\n3. Subtítulo en Pantalla (36 pt): Método disciplinar validado\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Infografía de síntesis: Regla historica de Domesticación de animales y plantas en el Creciente Fértil\n6. Notas al Orador (Locución Continua Google Vids): \"Ahora que dominas la regla fundamental y el procedimiento de Domesticación de animales y plantas en el Creciente Fértil, ¡vamos a demostrarlo en las actividades interactivas de la plataforma!\"\n\n",
-    "slides": [
+
+  formalization: {
+    title: 'Domesticación y Selección Artificial en el Neolítico',
+    concept: 'Domesticación de Plantas y Animales en el Creciente Fértil',
+    dileIntro: 'Ahora veremos el video explicativo. Comprenderemos los conceptos históricos de selección artificial, ciclos de cultivo y conservación de excedentes.',
+    hazInstruction: 'Revisemos la explicación formal y preparemos el cuaderno para registrar las ideas centrales.',
+    ideaClave: 'La domesticación en el Creciente Fértil fue un proceso de selección artificial continua: al elegir plantas con mayores granos y animales dóciles, las comunidades aseguraron alimentos predecibles y reservas para el futuro.',
+    slides: [
       {
-        "slideNumber": 1,
-        "tituloMomento": "Objetivo de la Lección",
-        "didacticPurpose": "Objetivo de la Lección",
-        "visualPrompt": "Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Selección artificial, ciclos de cultivo y almacenamiento de excedentes. High clarity, negative space for text. No text drawn by AI.",
-        "overlayTitle": "Objetivo de la lección",
-        "overlaySubtitle": "Dominar Domesticación de animales y plantas en el Creciente Fértil: Selección artificial, ciclos de cultivo y almacenamiento de excedentes",
-        "overlayText": "Concepto clave: Domesticación de animales y plantas en el Creciente Fértil",
-        "vectorialOverlayPptx": "Rótulo formal: OA 2 · Domesticación de animales y plantas en el Creciente Fértil",
-        "mathOverlayPptx": "Rótulo formal: OA 2 · Domesticación de animales y plantas en el Creciente Fértil",
-        "speakerNotes": "El objetivo de hoy es aprender a selección artificial, ciclos de cultivo y almacenamiento de excedentes, aplicando el método disciplinar paso a paso con total rigor y claridad.",
-        "palabrasAprox": 25,
-        "duracionSeg": 12
+        slideNumber: 1,
+        tituloMomento: "Objetivo de la Lección",
+        didacticPurpose: "Objetivo de la Lección",
+        visualPrompt: "Modern anime style 16:9. The boy and girl in a luminous study room, pointing at an anatomical and botanical diagram comparing wild einkorn wheat and modern domesticated wheat. Clear negative space on top. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Objetivo de la Clase",
+        overlaySubtitle: "Comprender la domesticación y selección artificial",
+        overlayText: "Objetivo: Comprender la domesticación y selección artificial",
+        vectorialOverlayPptx: "Rótulo formal: OA 2 · Domesticación en el Creciente Fértil",
+        speakerNotes: "El objetivo de hoy es comprender cómo la selección artificial y el manejo de ciclos estacionales permitieron domesticar plantas y animales en el Creciente Fértil.",
+        palabrasAprox: 25,
+        duracionSeg: 12
       },
       {
-        "slideNumber": 2,
-        "tituloMomento": "Definición del Concepto Central",
-        "didacticPurpose": "Definición del Concepto Central",
-        "visualPrompt": "Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.",
-        "overlayTitle": "Concepto fundamental",
-        "overlaySubtitle": "Selección artificial, ciclos de cultivo y almacenamiento de excedentes",
-        "overlayText": "Regla formal: Selección artificial, ciclos de cultivo y almacenamiento de excedentes",
-        "vectorialOverlayPptx": "Escenario historico y fuentes primarias de Selección artificial, ciclos de cultivo y almacenamiento de excedentes",
-        "mathOverlayPptx": "Escenario historico y fuentes primarias de Selección artificial, ciclos de cultivo y almacenamiento de excedentes",
-        "speakerNotes": "Para comprender Domesticación de animales y plantas en el Creciente Fértil, establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        slideNumber: 2,
+        tituloMomento: "Concepto de Selección Artificial",
+        didacticPurpose: "Concepto de Selección Artificial",
+        visualPrompt: "Modern anime style. The girl explaining a comparison board with wild goat horns versus domesticated sheep wool icons. Soft lighting, clean infographic layout. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Selección Artificial Empírica",
+        overlaySubtitle: "Modificación de especies para beneficio humano",
+        overlayText: "Selección Artificial Empírica: Modificación de especies para beneficio humano",
+        vectorialOverlayPptx: "Definición histórica: Intervención humana continua seleccionando rasgos ventajosos de plantas y animales",
+        speakerNotes: "La selección artificial es la elección intencionada de rasgos favorables: granos más nutritivos en las plantas y docilidad y mayor tamaño en los animales.",
+        palabrasAprox: 24,
+        duracionSeg: 13
       },
       {
-        "slideNumber": 3,
-        "tituloMomento": "Demostración Modelada",
-        "didacticPurpose": "Demostración Modelada",
-        "visualPrompt": "Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.",
-        "overlayTitle": "Modelamiento paso a paso",
-        "overlaySubtitle": "Procedimiento de Domesticación de animales y plantas en el Creciente Fértil",
-        "overlayText": "Modelamiento paso a paso de Domesticación de animales y plantas en el Creciente Fértil",
-        "vectorialOverlayPptx": "Diagrama multicausal: Factores economicos, sociales y culturales",
-        "mathOverlayPptx": "Diagrama multicausal: Factores economicos, sociales y culturales",
-        "speakerNotes": "Observa cómo se aplica el procedimiento en este caso guiado: cada transformación responde a una justificación disciplinar explícita y visible.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        slideNumber: 3,
+        tituloMomento: "El Caso del Trigo Escanda",
+        didacticPurpose: "El Caso del Trigo Escanda",
+        visualPrompt: "Modern anime style. Close-up diagram showing a wheat spikelet: wild brittle rachis breaking vs non-brittle tough rachis of domesticated wheat. The two explorers examining the grain closely. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "El Raquis no Quebradizo",
+        overlaySubtitle: "Retener semillas para facilitar la cosecha",
+        overlayText: "El Raquis no Quebradizo: Retener semillas para facilitar la cosecha",
+        vectorialOverlayPptx: "Mutación domesticada: El raquis resistente retiene el grano en la espiga durante la siega",
+        speakerNotes: "En el trigo, la clave fue el raquis no quebradizo. Las espigas que no soltaban el grano al viento permitieron a las familias cosechar grandes cantidades sin pérdidas.",
+        palabrasAprox: 27,
+        duracionSeg: 13
       },
       {
-        "slideNumber": 4,
-        "tituloMomento": "Prevención del Error Frecuente",
-        "didacticPurpose": "Prevención del Error Frecuente",
-        "visualPrompt": "Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.",
-        "overlayTitle": "Atención: Error habitual",
-        "overlaySubtitle": "Confusión común que debemos evitar",
-        "overlayText": "Atención: Error habitual a evitar",
-        "vectorialOverlayPptx": "Contraste temporal: cambios y continuidades historicas",
-        "mathOverlayPptx": "Contraste temporal: cambios y continuidades historicas",
-        "speakerNotes": "Un error frecuente ocurre al descuidar el orden o saltarse un paso de la convención establecida. Siempre comprobamos cada dato antes de continuar.",
-        "palabrasAprox": 27,
-        "duracionSeg": 13
+        slideNumber: 4,
+        tituloMomento: "Domesticación de Ganado Menor",
+        didacticPurpose: "Domesticación de Ganado Menor",
+        visualPrompt: "Modern anime style. The boy sketching a pen with sheep, goats and pigs, noting secondary products: wool, milk, leather and traction. Clean lineart, soft ambient lighting. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Ganadería y Recursos Continuos",
+        overlaySubtitle: "Leche lana y carne en corrales",
+        overlayText: "Ganadería y Recursos Continuos: Leche lana y carne en corrales",
+        vectorialOverlayPptx: "Aprovechamiento secundario: Obtención recurrente de derivados lácteos y textiles sin sacrificar el ganado",
+        speakerNotes: "Las ovejas y cabras se convirtieron en despensas vivientes: aportaban leche y lana de forma periódica, complementando la dieta vegetal con proteínas de calidad.",
+        palabrasAprox: 24,
+        duracionSeg: 13
       },
       {
-        "slideNumber": 5,
-        "tituloMomento": "Comprobación del Resultado",
-        "didacticPurpose": "Comprobación del Resultado",
-        "visualPrompt": "Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.",
-        "overlayTitle": "Validación del resultado",
-        "overlaySubtitle": "Comprobar que la respuesta es consistente",
-        "overlayText": "Comprobación y validación del resultado",
-        "vectorialOverlayPptx": "Interpretacion historica justificada a partir de evidencias",
-        "mathOverlayPptx": "Interpretacion historica justificada a partir de evidencias",
-        "speakerNotes": "Al contrastar el resultado con la situación inicial, confirmamos que la solución es consistente, rigurosa y responde plenamente a la pregunta.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        slideNumber: 5,
+        tituloMomento: "Almacenamiento y Seguridad",
+        didacticPurpose: "Almacenamiento y Seguridad",
+        visualPrompt: "Modern anime style. Village storage scene with sealed pottery jars and subterranean clay silos being inspected by village elders and the two protagonists. Clear negative space. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Reservas de Alimento",
+        overlaySubtitle: "Silos y vasijas protegiendo la cosecha",
+        overlayText: "Reservas de Alimento: Silos y vasijas protegiendo la cosecha",
+        vectorialOverlayPptx: "Función económica: Conservación de excedentes estacionales para subsistencia y siembra posterior",
+        speakerNotes: "El almacenamiento resolvió el dilema del invierno. Guardar granos en silos subterráneos secos aseguró comida durante los meses sin cosecha y semillas para sembrar.",
+        palabrasAprox: 24,
+        duracionSeg: 13
       },
       {
-        "slideNumber": 6,
-        "tituloMomento": "Estrategia Mnemotécnica",
-        "didacticPurpose": "Estrategia Mnemotécnica",
-        "visualPrompt": "Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.",
-        "overlayTitle": "Estrategia de pensamiento",
-        "overlaySubtitle": "1. Identificar · 2. Aplicar · 3. Comprobar",
-        "overlayText": "Estrategia mental: Identificar, Aplicar y Verificar",
-        "vectorialOverlayPptx": "Estrategia de analisis historico: Contexto, causas y consecuencias",
-        "mathOverlayPptx": "Estrategia de analisis historico: Contexto, causas y consecuencias",
-        "speakerNotes": "Recuerda siempre la estrategia en tres pasos: identificar la información clave, aplicar la regla en orden y comprobar el resultado final.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        slideNumber: 6,
+        tituloMomento: "Atención al Error Frecuente",
+        didacticPurpose: "Atención al Error Frecuente",
+        visualPrompt: "Modern anime style. Visual contrast showing a wild aggressive wolf versus a friendly domesticated sheep flock, emphasizing generational biological changes. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Error: Amaestrar no es Domesticar",
+        overlaySubtitle: "Domesticar altera la genética de generaciones",
+        overlayText: "Error: Amaestrar no es Domesticar: Domesticar altera la genética de generaciones",
+        vectorialOverlayPptx: "Diferenciación conceptual: Amaestramiento (conducta individual) vs Domesticación (cambio evolutivo poblacional)",
+        speakerNotes: "Un error habitual es confundir amaestrar con domesticar. Amaestrar es educar a un animal salvaje; domesticar es transformar genéticamente a toda una especie a lo largo de siglos.",
+        palabrasAprox: 27,
+        duracionSeg: 13
       },
       {
-        "slideNumber": 7,
-        "tituloMomento": "Síntesis y Regla de Oro",
-        "didacticPurpose": "Síntesis y Regla de Oro",
-        "visualPrompt": "Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.",
-        "overlayTitle": "Regla de Oro: Domesticación de animales y plantas en el Creciente Fértil",
-        "overlaySubtitle": "Método disciplinar validado",
-        "overlayText": "Síntesis: Domesticación de animales y plantas en el Creciente Fértil",
-        "vectorialOverlayPptx": "Infografía de síntesis: Regla historica de Domesticación de animales y plantas en el Creciente Fértil",
-        "mathOverlayPptx": "Infografía de síntesis: Regla historica de Domesticación de animales y plantas en el Creciente Fértil",
-        "speakerNotes": "Ahora que dominas la regla fundamental y el procedimiento de Domesticación de animales y plantas en el Creciente Fértil, ¡vamos a demostrarlo en las actividades interactivas de la plataforma!",
-        "palabrasAprox": 25,
-        "duracionSeg": 12
+        slideNumber: 7,
+        tituloMomento: "Síntesis y Regla de Oro",
+        didacticPurpose: "Síntesis y Regla de Oro",
+        visualPrompt: "Modern anime style. The two 13-year-olds smiling proudly with their open notebooks before an ancient Fertile Crescent landscape of cultivated terraces and grazing sheep. Clear negative space. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Regla de Oro Agrícola",
+        overlaySubtitle: "Selección continua y almacenamiento planificado",
+        overlayText: "Regla de Oro: Selección continua y almacenamiento planificado",
+        vectorialOverlayPptx: "Síntesis metodológica: Observación empírica + Selección artificial + Almacenamiento = Estabilidad comunitaria",
+        speakerNotes: "La domesticación y el almacenamiento liberaron a las comunidades de la escasez inmediata, sentando las bases materiales para construir las primeras aldeas sedentarias permanentes.",
+        palabrasAprox: 24,
+        duracionSeg: 13
       }
     ]
   },
-  "postQuestions": [
+
+  postQuestions: [
     {
-      "context": "Contexto Temporal, Espacial y Domesticación",
-      "question": "¿De qué manera el entorno geográfico y la época condicionaron el desarrollo de 'Domesticación' en este proceso histórico?",
-      "expected": "Relacionar las características del espacio geográfico con la organización social y el desarrollo de Domesticación.",
-      "success": "¡Muy bien! Ubicaste con precisión las coordenadas temporales y espaciales del proceso.",
-      "support": "Observa las referencias del mapa y la cronología: ¿qué recursos naturales o rutas influían en sus decisiones?",
-      "reveal": "El entorno geográfico y las condiciones de la época condicionaron profundamente los modos de vida y las instituciones humanas.",
-      "studentReveal": "La influencia del espacio geográfico y el tiempo histórico en Domesticación."
+      context: 'El Mecanismo de Selección Artificial en Cereales',
+      question: 'En el video explicativo analizamos que el trigo silvestre tenía un raquis quebradizo y el domesticado un raquis firme. ¿Por qué este cambio biológico fue fundamental para la subsistencia de los agricultores?',
+      expected: 'Porque evitó que los granos maduros cayeran al suelo y se perdieran con el viento, permitiendo que las familias cosecharan el grano completo en la espiga para alimentarse y almacenar.',
+      success: '¡Excelente precisión arqueobotánica! Comprendiste con exactitud cómo la mutación del raquis firme hizo posible la cosecha a gran escala.',
+      support: 'Fíjate en lo que ocurría durante la siega: si el tallo de la espiga se quiebra solo, el grano cae al suelo y no se puede recolectar.',
+      reveal: 'El raquis no quebradizo permitió recoger las espigas enteras con hoces, multiplicando el rendimiento de las cosechas neolíticas.',
+      studentReveal: 'Porque impidió que las semillas cayeran al suelo con el viento, permitiendo cosechar las espigas enteras.'
     },
     {
-      "context": "Pensamiento Crítico y Prevención del Presentismo",
-      "question": "Para evitar el error común de 'No comprender la magnitud temporal de 'larga duración' y percibir el Neolítico como un cambio rápido y homogéneo.', ¿qué debemos considerar al analizar las decisiones tomadas por los actores históricos?",
-      "expected": "Evaluar las decisiones históricas desde la mentalidad, recursos y cosmovisión propia de la época estudiada.",
-      "success": "¡Excelente empatía histórica! Analizaste el pasado desde su propio contexto y no desde los prejuicios actuales.",
-      "support": "Piensa qué información y qué valores tenían en ese siglo: ¿podían prever las consecuencias de la misma forma que nosotros hoy?",
-      "reveal": "El rigor histórico exige comprender las razones de los protagonistas en su propio tiempo, evitando anacronismos.",
-      "studentReveal": "La comprensión del pasado desde el contexto propio de sus protagonistas."
+      context: 'Los Beneficios Secundarios de la Ganadería',
+      question: '¿Por qué la cría de ovejas y cabras en corrales fue más provechosa que cazar animales salvajes, más allá de la obtención de carne?',
+      expected: 'Porque proporcionó recursos secundarios continuos como leche para beber todos los días y lana o cuero para confeccionar vestimentas, sin tener que matar al animal de inmediato.',
+      success: '¡Muy bien fundamentado! La ganadería aportó productos secundarios permanentes que mejoraron la nutrición y el abrigo de la comunidad.',
+      support: 'Piensa en los derivados que da un animal vivo: la leche y la lana se pueden obtener muchas veces a lo largo de su vida.',
+      reveal: 'Los productos secundarios (leche, queso primitivo, lana y abono para los campos) transformaron al rebaño en un recurso productivo continuo.',
+      studentReveal: 'Porque los animales vivos daban leche todos los días y lana para vestimenta sin necesidad de sacrificarlos.'
     }
   ],
-  "practice": [
+
+  practice: [
     {
-      "context": "Ejercicio 1 en Cuaderno: Análisis de Fuentes y Cuadro Comparativo",
-      "question": "Abre tu cuaderno de notas. Escribe como título: 'Domesticación de animales y plantas en el Creciente Fértil'. Con base en la actividad (Crea una línea de tiempo física en el aula, ordenando los procesos clave del Neo...), dibuja un cuadro de doble entrada: en una columna registra los antecedentes geográficos y sociales, y en la otra explica el impacto de 'Domesticación'.",
-      "expected": "Cuadro comparativo en el cuaderno con antecedentes históricos y análisis fundamentado del impacto de concepto.",
-      "success": "¡Excelente análisis en tu cuaderno! Has sintetizado las múltiples causas con claridad y orden.",
-      "support": "Revisa la línea de tiempo en pantalla: identifica qué ocurrió antes y qué transformaciones trajo este acontecimiento.",
-      "reveal": "El cuadro comparativo permite distinguir causas estructurales de consecuencias inmediatas en el proceso histórico.",
-      "studentReveal": "Cuadro comparativo completo en el cuaderno con causas y consecuencias analizadas."
+      context: 'Actividad en Cuaderno: Esquema de Transformación de Especies',
+      question: 'Abre tu cuaderno de notas de Historia. Escribe como título: "Domesticación de Especies en el Creciente Fértil". Dibuja un esquema comparativo: a la izquierda ilustra el trigo silvestre (raquis quebradizo, granos pequeños) y a la derecha el trigo domesticado (raquis resistente, granos grandes). Explica debajo cómo la selección artificial humana produjo esa transformación.',
+      expected: 'Esquema comparativo en el cuaderno con dibujos y explicación fundamentada de la selección artificial empírica.',
+      success: '¡Excelente esquema en tu cuaderno! Has representado la transformación biológica con claridad y rigor histórico.',
+      support: 'Revisa las diapositivas de la lección: explica que los humanos sembraban solo las semillas con mejores características año tras año.',
+      reveal: 'El esquema visualiza cómo la acción humana modificó las características físicas de las especies vegetales para asegurar su sustento.',
+      studentReveal: 'Esquema completo en el cuaderno comparando el trigo silvestre y el cultivado con explicación de la selección artificial.'
     },
     {
-      "context": "Ejercicio 2 en Cuaderno: Reflexión de Ciudadanía y Continuidad",
-      "question": "En tu cuaderno, responde con un breve texto argumentativo: ¿Qué elementos de 'Domesticación' continúan presentes en nuestra sociedad actual y qué aspectos han cambiado sustancialmente?",
-      "expected": "Reflexión argumentada identificando elementos de cambio y continuidad histórica entre el pasado y el presente.",
-      "success": "¡Muy buena argumentación! Conectaste el aprendizaje histórico con la realidad ciudadana actual.",
-      "support": "Piensa en nuestras leyes, ciudades o costumbres: ¿qué heredamos de esa civilización o proceso?",
-      "reveal": "La historia nos permite comprender el presente al identificar las raíces de nuestras instituciones contemporáneas.",
-      "studentReveal": "Reflexión en el cuaderno sobre continuidades y transformaciones hacia el presente."
+      context: 'Análisis de Fuentes: El Almacenamiento y la Seguridad Alimentaria',
+      question: 'En tu cuaderno, redacta un breve texto argumentativo respondiendo: ¿Qué consecuencias habría tenido para una comunidad neolítica cosechar abundante trigo pero carecer de silos o vasijas de cerámica para guardarlo?',
+      expected: 'Texto argumentativo que analice los riesgos de pérdida por humedad, roedores o descomposición, impidiendo la supervivencia en el invierno.',
+      success: '¡Gran argumentación histórica! Relacionaste la tecnología del almacenamiento con la supervivencia material de la aldea.',
+      support: 'Piensa en las lluvias de invierno y las plagas de insectos: sin vasijas ni silos impermeables, ¿cuánto dura un saco de trigo guardado en el suelo?',
+      reveal: 'Sin tecnología de almacenamiento hermético, las cosechas se habrían perdido rápidamente y las familias habrían enfrentado hambrunas invernales.',
+      studentReveal: 'Texto argumentativo en el cuaderno explicando que sin silos ni vasijas el trigo se habría podrido con las lluvias y comido por plagas.'
     }
   ],
-  "mini": [
+
+  summaryIdeas: [
+    ['Selección Artificial', 'Los primeros agricultores eligieron y sembraron repetidamente las semillas con espigas firmes y granos más nutritivos.'],
+    ['Ganadería de Rebaño', 'La domesticación de ovejas y cabras proporcionó carne, leche diaria y lana para abrigo sin depender del azar de la caza.'],
+    ['Silos y Almacenamiento', 'Construir silos subterráneos y vasijas de arcilla garantizó reservas de alimento para el invierno y semillas para el siguiente ciclo.']
+  ],
+
+  mini: [
     {
-      "id": "q_1",
-      "q": "Al estudiar el proceso de Domesticación de animales y plantas en el Creciente Fértil, ¿cuál de las siguientes opciones describe con rigor histórico el rol de 'Domesticación'?",
-      "options": [
-        "Constituyó un elemento articulador que permitió a la sociedad responder a sus necesidades de organización y territorio",
-        "Fue un acontecimiento completamente aislado que no tuvo ninguna relación con el entorno social ni geográfico",
-        "Ocurrió por decisión exclusiva de un único individuo sin influencia de la comunidad ni de la época"
+      id: 'q_1',
+      q: '¿Cuál fue la transformación biológica decisiva producida por la selección artificial en el trigo domesticado del Creciente Fértil?',
+      options: [
+        'A) Las raíces se volvieron venenosas para evitar que los insectos tocaran la planta.',
+        'B) Las flores cambiaron de color para atraer abejas en mitad de la noche.',
+        'C) El raquis de la espiga se volvió más resistente, evitando que los granos cayeran solos al suelo antes de la cosecha.',
+        'D) Las espigas aprendieron a desplazarse solas hacia los ríos para absorber agua.'
       ],
-      "correct": "Constituyó un elemento articulador que permitió a la sociedad responder a sus necesidades de organización y territorio",
-      "fixExplain": "Los procesos históricos son colectivos y multicausales; Domesticación responde a dinámicas sociales y territoriales profundas.",
-      "concept": "Domesticación de animales y plantas en el Creciente Fértil",
-      "explain": "Los procesos históricos son colectivos y multicausales; Domesticación responde a dinámicas sociales y territoriales profundas.",
-      "dileReview": "Pídele que señale qué fuentes o evidencias históricas analizadas hoy justifican esta afirmación."
+      correct: 'C) El raquis de la espiga se volvió más resistente, evitando que los granos cayeran solos al suelo antes de la cosecha.',
+      fixExplain: 'El raquis no quebradizo permitió recolectar la espiga entera sin perder los granos maduros en la tierra.',
+      concept: 'Selección Artificial del Trigo'
     },
     {
-      "id": "q_2",
-      "q": "Para analizar críticamente este proceso sin caer en el error de 'No comprender la magnitud temporal de 'larga duración' y percibir el Neolítico como un cambio rápido y homogéneo.', ¿qué actitud metodológica debemos adoptar?",
-      "options": [
-        "Evaluar las decisiones históricas considerando el contexto, las creencias y los recursos disponibles en su época",
-        "Condenar inmediatamente las acciones del pasado aplicando únicamente los estándares de la sociedad actual",
-        "Ignorar las fuentes primarias y basarse en opiniones espontáneas sin respaldo documental"
+      id: 'q_2',
+      q: '¿Por qué la domesticación de ganado menor (ovejas y cabras) ofreció una ventaja económica superior frente a la caza tradicional de animales salvajes?',
+      options: [
+        'A) Porque aseguró recursos secundarios regulares como leche y lana sin necesidad de sacrificar inmediatamente al animal.',
+        'B) Porque los animales domesticados cazaban solos a los animales salvajes para alimentar a las familias.',
+        'C) Porque las cabras podían nadar océanos enteros para traer mercancías de otros continentes.',
+        'D) Porque las ovejas aprendieron a tejer sus propias telas en telares de madera.'
       ],
-      "correct": "Evaluar las decisiones históricas considerando el contexto, las creencias y los recursos disponibles en su época",
-      "fixExplain": "El presentismo distorsiona la comprensión histórica; la empatía histórica permite entender las motivaciones reales de los actores del pasado.",
-      "concept": "Domesticación de animales y plantas en el Creciente Fértil",
-      "explain": "El presentismo distorsiona la comprensión histórica; la empatía histórica permite entender las motivaciones reales de los actores del pasado.",
-      "dileReview": "Pregúntale: ¿por qué es injusto juzgar a personas del pasado como si tuvieran la tecnología y valores de hoy?"
+      correct: 'A) Porque aseguró recursos secundarios regulares como leche y lana sin necesidad de sacrificar inmediatamente al animal.',
+      fixExplain: 'La ganadería proporcionó proteínas lácteas diarias y abrigo continuo, superando la incertidumbre de la caza de subsistencia.',
+      concept: 'Ventajas de la Ganadería Neolítica'
     },
     {
-      "id": "q_3",
-      "q": "¿Qué importancia tiene para la formación ciudadana actual el análisis de Selección artificial, ciclos de cultivo y almacenamiento de excedentes?",
-      "options": [
-        "Permite valorar los derechos humanos, la participación democrática y la diversidad cultural al comprender su evolución histórica",
-        "Demuestra que el pasado no guarda ninguna relación con los problemas ni desafíos de la sociedad moderna",
-        "Enseña que las leyes e instituciones humanas son inmutables y no han cambiado a lo largo de los siglos"
+      id: 'q_3',
+      q: 'Para evitar el error común de confundir amaestrar con domesticar, ¿cuál es la diferencia conceptual correcta en historia y arqueología?',
+      options: [
+        'A) Amaestrar es enseñar trucos a un rebaño completo, mientras que domesticar es encerrar a un pájaro en una jaula.',
+        'B) Domesticar implica una modificación genética y biológica hereditaria en una población a lo largo de generaciones, mientras que amaestrar modifica solo la conducta de un individuo.',
+        'C) Amaestrar dura miles de años y domesticar ocurre en un solo día con cualquier fiera salvaje.',
+        'D) No existe ninguna diferencia; ambas palabras significan exactamente lo mismo en ciencias sociales.'
       ],
-      "correct": "Permite valorar los derechos humanos, la participación democrática y la diversidad cultural al comprender su evolución histórica",
-      "fixExplain": "El aprendizaje histórico fortalece el juicio cívico y la convivencia democrática mediante el análisis crítico del pasado.",
-      "concept": "Domesticación de animales y plantas en el Creciente Fértil",
-      "explain": "El aprendizaje histórico fortalece el juicio cívico y la convivencia democrática mediante el análisis crítico del pasado.",
-      "dileReview": "Pídele que mencione cómo lo aprendido hoy fortalece su rol como ciudadano responsable en su comunidad."
+      correct: 'B) Domesticar implica una modificación genética y biológica hereditaria en una población a lo largo de generaciones, mientras que amaestrar modifica solo la conducta de un individuo.',
+      fixExplain: 'La domesticación es un proceso evolutivo y biológico guiado por el ser humano que modifica a la especie completa.',
+      concept: 'Diferencia entre Domesticar y Amaestrar'
     }
   ],
-  "recovery": [
+
+  recovery: [
     {
-      "title": "Recuperación Histórica: Domesticación de animales y plantas en el Creciente Fértil",
-      "explain": "Al analizar Selección artificial, ciclos de cultivo y almacenamiento de excedentes, recuerda situar siempre los acontecimientos en su espacio geográfico y comprender Domesticación dentro de su época.",
-      "q": "¿Cuál es el principio metodológico central para interpretar un hecho histórico en Domesticación de animales y plantas en el Creciente Fértil?",
-      "options": [
-        "Analizar el hecho a partir de sus fuentes históricas y el contexto propio de Domesticación",
-        "Memorizar fechas aisladas sin considerar las causas ni las consecuencias del proceso"
+      title: 'Recuperación Histórica: Comprensión de la Domesticación Neolítica',
+      explain: 'La domesticación en el Creciente Fértil fue el resultado de miles de años de interacción entre seres humanos, plantas y animales. Al elegir y cuidar las especies más productivas y dóciles, las comunidades aseguraron su subsistencia diaria.',
+      q: '¿Qué combinación de factores permitió a las primeras comunidades del Creciente Fértil lograr una producción de alimentos estable?',
+      options: [
+        'A) Depender de la caza migratoria en invierno y comprar comida en ferias medievales en verano.',
+        'B) Esperar que las semillas crecieran sin regarlas ni seleccionarlas, viviendo siempre en cuevas temporales.',
+        'C) Usar únicamente herramientas de piedra tosca para derribar árboles sin sembrar ninguna planta.',
+        'D) La selección artificial de cereales con raquis firme, la cría de ganado dócil en corrales y el almacenamiento de reservas en silos protegidos.'
       ],
-      "correct": "Analizar el hecho a partir de sus fuentes históricas y el contexto propio de Domesticación",
-      "correctText": "¡Correcto! Comprender el contexto histórico es la base del pensamiento crítico en Ciencias Sociales.",
-      "fixText": "Recuerda que la historia explica procesos humanos: busca siempre las causas y el entorno donde ocurrieron."
+      correct: 'D) La selección artificial de cereales con raquis firme, la cría de ganado dócil en corrales y el almacenamiento de reservas en silos protegidos.',
+      correctText: '¡Correcto! Identificaste la articulación integral de factores que consolidó la economía productora en el Creciente Fértil.',
+      fixText: 'Recuerda que la producción estable requirió tres pilares: selección de semillas firmes, ganado dócil en corrales y almacenamiento hermético.'
     }
-  ],
-  "summaryIdeas": [
-    [
-      "1 · Concepto central",
-      "Identificamos los elementos y el punto de partida del análisis."
-    ],
-    [
-      "2 · Interpretación del contexto",
-      "Selección artificial, ciclos de cultivo y almacenamiento de excedentes"
-    ],
-    [
-      "3 · Síntesis formal",
-      "Los procesos históricos sobre Domesticación de animales y plantas en el Creciente Fértil responden a múltiples causas interconectadas, donde 'Domesticación' explica cómo las sociedades resolvieron sus desafíos de convivencia y subsistencia."
-    ]
-  ],
-  "interactive": {
-    "type": "timeline",
-    "title": "Línea de Tiempo Histórica: De la Hominización a la Aldea",
-    "description": "Organizador cronológico de la revolución agrícola y el modo de vida."
-  },
-  "summaryText": "Hoy dominaste Selección artificial, ciclos de cultivo y almacenamiento de excedentes con pensamiento crítico y fuentes históricas en tu cuaderno.",
-  "reasoning": {
-    "title": "Comparemos dos situaciones",
-    "dileIntro": "Antes de resumir, comparemos dos situaciones. No necesitas repetir una frase exacta: lo importante es que expliques la idea con tus propias palabras.",
-    "question": "Al comparar dos situaciones de Domesticación de animales y plantas en el Creciente Fértil, ¿cómo influye el contexto en la interpretación de los datos?",
-    "expectedAnswer": "El significado o resultado depende de las condiciones del contexto y del propósito de la situación.",
-    "context1": {
-      "label": "SITUACIÓN 1",
-      "value": "Ejercicio 1 en Cuaderno: Análisis de Fuentes y Cuadro Comparativo",
-      "desc": "Abre tu cuaderno de notas. Escribe como título: 'Domesticación de animales y plantas en el Creciente Fértil'. Con base en la actividad (Crea una línea de tiempo física en el aula, ordenando los procesos clave del Neo...), dibuja un cuadro de doble entrada: en una columna registra los antecedentes geográficos y sociales, y en la otra explica el impacto de 'Domesticación'."
-    },
-    "context2": {
-      "label": "SITUACIÓN 2",
-      "value": "Ejercicio 2 en Cuaderno: Reflexión de Ciudadanía y Continuidad",
-      "desc": "En tu cuaderno, responde con un breve texto argumentativo: ¿Qué elementos de 'Domesticación' continúan presentes en nuestra sociedad actual y qué aspectos han cambiado sustancialmente?"
-    },
-    "successFeedback": "¡Excelente razonamiento! Reconociste que el contexto orienta la interpretación de los datos.",
-    "supportFeedback": "Observa cada situación por separado y explica qué elementos las distinguen.",
-    "revealText": "Cada situación tiene un propósito particular y los datos se interpretan según las condiciones del problema."
-  },
-  "challenge": {
-    "title": "Desafío breve: Domesticación de animales y plantas en el Creciente Fértil",
-    "question": "En Historia, Geografía y Ciencias Sociales, ¿qué diferencia observas entre identificar los datos y aplicar el procedimiento? Explica tu razonamiento.",
-    "expectedAnswer": "Identificar los datos determina el punto de partida; aplicar el procedimiento permite construir la respuesta.",
-    "item1": {
-      "label": "Datos iniciales",
-      "tag": "Punto de partida"
-    },
-    "item2": {
-      "label": "Procedimiento",
-      "tag": "Aplicación"
-    },
-    "successFeedback": "¡Muy bien! Distinguiste claramente los momentos del análisis.",
-    "supportFeedback": "Revisémoslo juntos: primero identificamos la información disponible y luego aplicamos el método correspondiente."
-  },
-  "strategy": {
-    "title": "Cómo analizar una situación",
-    "dileIntro": "Cuando enfrentes un problema en Historia, Geografía y Ciencias Sociales, puedes seguir estos tres pasos clave:",
-    "steps": [
-      {
-        "number": 1,
-        "title": "Identifica",
-        "desc": "¿Cuáles son los datos clave y cuál es la pregunta central?"
-      },
-      {
-        "number": 2,
-        "title": "Aplica",
-        "desc": "¿Qué regla o método disciplinar corresponde utilizar?"
-      },
-      {
-        "number": 3,
-        "title": "Comprueba",
-        "desc": "¿La conclusión o resultado responde con coherencia al problema?"
-      }
-    ]
-  },
-  "closure": {
-    "congratulations": "¡Felicitaciones! Hoy completaste con éxito la clase \"Domesticación de animales y plantas en el Creciente Fértil\". Has demostrado constancia y rigor en tu aprendizaje.",
-    "nextClassPreview": "En la próxima sesión continuaremos profundizando los aprendizajes de Historia, Geografía y Ciencias Sociales."
-  },
-  "paso8_cierre": {
-    "preguntaSintesis": "En tus propias palabras, ¿qué lección o reflexión para el presente nos deja el estudio de Domesticación en Domesticación de animales y plantas en el Creciente Fértil?",
-    "metacognicion": "¿Qué estrategia te ayudó más a comprender la época estudiada: analizar el mapa o ponerte en el lugar de los protagonistas?",
-    "celebracion": "¡Gran trabajo hoy! Has dominado la Clase 2. ¡Nos vemos en la próxima expedición histórica!"
-  }
+  ]
 };

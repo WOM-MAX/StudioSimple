@@ -32,6 +32,7 @@ Actúas como un **Especialista en Currículum Nacional Chileno y Evaluación de 
 
 ## Protocolo de Trabajo Curricular
 1. **Paso 1 - Identificación**: Localizar el OA en el temario oficial de Exámenes Libres y determinar su posición y prioridad.
-2. **Paso 2 - Vinculación del Texto Escolar**: Abrir el PDF oficial de la asignatura en `MATERIALES/`, extraer las páginas exactas de la lección, los ejemplos modelo y las actividades del estudiante.
-3. **Paso 3 - Dosificación Didáctica**: Dividir el OA en lecciones de 30 minutos sin saturación cognitiva (máximo 5 a 6 clases por OA complejo).
-4. **Paso 4 - Validación Cruzada**: Verificar que cada ejercicio del miniquiz y de la práctica guiada evalúe un indicador explícito del MINEDUC y utilice la terminología exacta del texto escolar.
+2. **Paso 2 - Vinculación del Texto Escolar e Identificación Editorial**: Abrir el PDF oficial de la asignatura en `MATERIALES/`, verificar la editorial oficial de la edición vigente en Currículum Nacional (ej. en Ciencias Naturales 7° Básico corresponde a **Edición SM**, no Santillana), extraer las páginas exactas de la lección, los ejemplos modelo y las actividades del estudiante.
+3. **Paso 3 - Dosificación Didáctica**: Dividir el OA en exactamente 6 lecciones completas según el estándar normativo de EstudioSimple para cobertura exhaustiva de EELL.
+4. **Paso 4 - Validación Cruzada y Honestidad de Fuentes**: Verificar que cada ejercicio evalúe un indicador explícito del MINEDUC. Distinguir con honestidad epistemológica las citas directas del texto oficial de los constructos organizativos didácticos (ej. el modelo de cuatro dimensiones de la sexualidad en 7° OA 1 es una organización didáctica integral, no una lista literal del decreto).
+

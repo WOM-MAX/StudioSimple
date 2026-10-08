@@ -38,3 +38,14 @@ Antes de dar por validado un miniquiz o ensayo:
 - [ ] ¿Los distractores reflejan confusiones conceptuales reales y tienen su explicación de corrección?
 - [ ] ¿El vocabulario utilizado coincide con el del texto escolar oficial del nivel?
 - [ ] ¿La dificultad es gradual (desde reconocimiento hasta análisis/aplicación)?
+- [ ] ¿Se respeta la nomenclatura de reactivos (prohibido llamar "oficial" a un ítem elaborado por el equipo)?
+- [ ] En 7° y 8° básico, ¿todas las preguntas de selección múltiple cuentan estrictamente con 4 alternativas (A, B, C, D)?
+
+## 5. Nomenclatura Rigurosa y Honestidad de Reactivos
+- **Reactivos Diseñados por el Equipo:** Deben rotularse explícitamente como *"reactivo didáctico de práctica elaborado para esta clase"* o *"reactivo de práctica formato Examen Libre"*.
+- **Reserva del Término "Oficial":** Queda estrictamente prohibido calificar de "oficial" o "oficial MINEDUC" a cualquier reactivo creado didácticamente. El término "oficial" se reserva única y exclusivamente para ítems transcritos directamente de pruebas liberadas del MINEDUC, citando año, instrumento y página.
+
+## 6. Estandarización de 4 Alternativas en Segundo Ciclo (7° y 8° Básico)
+- En 7° y 8° Básico, todo reactivo de selección múltiple debe contar obligatoriamente con **cuatro alternativas (A, B, C, D)**.
+- Prohibido formular preguntas de 2 o 3 opciones en este ciclo; cada ítem debe presentar 1 clave correcta y 3 distractores fundamentados psicométricamente.
+

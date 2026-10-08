@@ -175,13 +175,13 @@ export function buildClase03() {
         "slideNumber": 5,
         "tituloMomento": "Intimidad en la Era Digital",
         "didacticPurpose": "Intimidad en la Era Digital",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, reflecting on reciprocal support and sharing notes during study time in a soft morning atmosphere, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, responsibly reviewing privacy settings on digital tablets with a protective digital shield icon, respecting personal boundaries and digital privacy, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Privacidad en el Mundo Digital",
         "overlayTitle": "Cuidado de la intimidad digital",
         "overlaySubtitle": "Proteger la privacidad propia y ajena en redes",
         "vectorialOverlayPptx": "Escudo digital: Respeto a fotos privadas, contraseñas y mensajes personales",
         "mathOverlayPptx": "Escudo digital: Respeto a fotos privadas, contraseñas y mensajes personales",
-        "speakerNotes": "La reciprocidad exige equilibrio: dar y recibir afecto en igualdad de condiciones, cuidando que nadie imponga su voluntad sobre los demás.",
+        "speakerNotes": "Cuidar la intimidad digital significa respetar las fotos, mensajes y contraseñas de los demás, recordando que la privacidad personal es un derecho innegociable en redes sociales.",
         "palabrasAprox": 21,
         "duracionSeg": 10
       },
@@ -252,7 +252,7 @@ export function buildClase03() {
         "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing next to a glowing infographic illustrating empathy, mutual trust, and personal intimacy, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Pilares de las Relaciones Afectivas",
         "overlayTitle": "Objetivo de la lección",
-        "overlaySubtitle": "Explicar el rol de la reciprocidad, la empatía y la intimidad en los vínculos afectivos",
+        "overlaySubtitle": "Comprender empatía, reciprocidad e intimidad en vínculos",
         "vectorialOverlayPptx": "Rótulo formal: OA 01 · Vínculos Afectivos, Empatía e Intimidad",
         "mathOverlayPptx": "Rótulo formal: OA 01 · Vínculos Afectivos, Empatía e Intimidad",
         "speakerNotes": "El objetivo de la lección es comprender el valor de la empatía, el respeto mutuo y la intimidad en los vínculos afectivos de la adolescencia.",
@@ -400,8 +400,9 @@ export function buildClase03() {
       "q": "¿Cuál de las siguientes acciones demuestra una verdadera comunicación empática en una relación de amistad?",
       "options": [
         "Escuchar con atención los sentimientos del otro e intentar comprender su perspectiva sin burlarse ni juzgar",
-        "Interrumpir constantemente al amigo para demostrar que uno tiene más experiencia",
-        "Obligar al compañero a cambiar de opinión para que piense igual que el resto"
+        "Interrumpir constantemente al amigo para demostrar superioridad",
+        "Obligar al compañero a cambiar de opinión para que piense igual",
+        "Ignorar lo que la otra persona expresa y retirarse con enojo"
       ],
       "correct": "Escuchar con atención los sentimientos del otro e intentar comprender su perspectiva sin burlarse ni juzgar",
       "fixExplain": "La empatía se fundamenta en la escucha activa, la validación de las emociones del otro y la ausencia de juicio descalificador."
@@ -410,9 +411,10 @@ export function buildClase03() {
       "id": "q2",
       "q": "La intimidad personal es un derecho fundamental que protege:",
       "options": [
+        "Únicamente los bienes materiales que una persona compra en tiendas",
+        "La obligación de publicar toda la vida en redes sociales",
         "Los pensamientos, emociones, vivencias personales y la privacidad del propio cuerpo frente a intromisiones no deseadas",
-        "Únicamente los bienes materiales que una persona compra en el supermercado",
-        "La obligación de publicar toda la vida personal en redes sociales públicas"
+        "El deber de someterse a las opiniones del grupo de pares"
       ],
       "correct": "Los pensamientos, emociones, vivencias personales y la privacidad del propio cuerpo frente a intromisiones no deseadas",
       "fixExplain": "La intimidad resguarda la esfera privada de la persona: nadie tiene derecho a invadirla ni a divulgarla sin consentimiento."
@@ -421,9 +423,10 @@ export function buildClase03() {
       "id": "q3",
       "q": "En una relación afectiva recíproca y respetuosa, ¿qué ocurre cuando surge un desacuerdo?",
       "options": [
+        "Una de las partes impone su voluntad gritando o amenazando",
         "Se dialoga de manera asertiva, buscando acuerdos donde ambas personas sean valoradas",
-        "Una de las partes impone su voluntad gritando o amenazando con terminar la amistad",
-        "Se ignora el problema fingiendo que no existe hasta que explote en conflicto"
+        "Se corta el diálogo indefinidamente sin buscar solución",
+        "Se presiona a la otra persona hasta que ceda por cansancio"
       ],
       "correct": "Se dialoga de manera asertiva, buscando acuerdos donde ambas personas sean valoradas",
       "fixExplain": "La reciprocidad y el respeto mutuo resuelven los desacuerdos mediante la conversación honesta y la consideración de ambas posturas."
@@ -436,7 +439,9 @@ export function buildClase03() {
       "q": "¿Qué actitud protege la intimidad de un compañero?",
       "options": [
         "No divulgar sus secretos personales ni compartir sus fotografías sin su consentimiento",
-        "Publicar sus anécdotas privadas en internet para que otros las comenten"
+        "Publicar sus anécdotas privadas en internet para llamar la atención",
+        "Compartir sus contraseñas con otros compañeros de curso",
+        "Grabar conversaciones privadas y difundirlas en grupos"
       ],
       "correct": "No divulgar sus secretos personales ni compartir sus fotografías sin su consentimiento",
       "correctText": "¡Exacto! Proteger sus secretos y no difundir sus imágenes resguarda su intimidad.",

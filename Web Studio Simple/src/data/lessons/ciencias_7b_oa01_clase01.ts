@@ -13,7 +13,7 @@ export const CIENCIAS_7B_OA01_CLASE01: LessonData = {
     "nextLessonTitle": "Transformaciones físicas y emocionales en la pubertad"
   },
   "prep": {
-    "adultObjective": "Guiar al estudiante a comprender que la sexualidad humana es una vivencia integral que comprende cuatro dimensiones inseparables: biológica, afectiva, social y ética (Texto del Estudiante Ciencias Naturales 7° Básico MINEDUC, Unidad 1, Lección 1, pág. 16), superando la visión reducida a lo estrictamente reproductivo.",
+    "adultObjective": "Guiar al estudiante a comprender que la sexualidad humana es una vivencia integral organizada didácticamente en cuatro dimensiones fundamentales: biológica, afectiva, social y ética, articulando los aspectos curriculares del Texto Escolar Ciencias Naturales 7° Básico MINEDUC (Edición SM, Unidad 1, Lección 1, págs. 16 a 29) con valores de respeto mutuo y responsabilidad personal, superando la visión reducida a lo reproductivo.",
     "routeToday": "Reconocer e interrelacionar las dimensiones biológica, afectiva, social y ética en situaciones reales de la vida cotidiana.",
     "mentorReminder": "Sigue el guion leyendo en voz alta únicamente los recuadros DILE y PREGÚNTALE. El contenido pedagógico y las respuestas esperadas te indican con total precisión qué debe responder el estudiante para que no tengas que estudiar previamente.",
     "reminders": [
@@ -249,7 +249,7 @@ export const CIENCIAS_7B_OA01_CLASE01: LessonData = {
         "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing before a clear 4-quadrant lightboard representing biological, affective, social, and ethical dimensions, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Modelo Integral de la Sexualidad",
         "overlayTitle": "Objetivo de la lección",
-        "overlaySubtitle": "Explicar las 4 dimensiones de la sexualidad humana",
+        "overlaySubtitle": "Comprender la sexualidad como dimensión integral",
         "vectorialOverlayPptx": "Rótulo formal: OA 01 · Modelo Integral de la Sexualidad Humana",
         "mathOverlayPptx": "Rótulo formal: OA 01 · Modelo Integral de la Sexualidad Humana",
         "speakerNotes": "El objetivo de la lección es reconocer y explicar que la sexualidad humana está conformada por cuatro dimensiones inseparables: biológica, afectiva, social y ética.",
@@ -264,9 +264,9 @@ export const CIENCIAS_7B_OA01_CLASE01: LessonData = {
         "overlayText": "Cambios Biológicos de la Pubertad",
         "overlayTitle": "Eje Biológico: La Pubertad",
         "overlaySubtitle": "Maduración fisiológica y sistema endocrino",
-        "vectorialOverlayPptx": "Diagrama fisiológico: Glándula hipófisis -> Hormonas gonadales -> Caracteres secundarios",
-        "mathOverlayPptx": "Diagrama fisiológico: Glándula hipófisis -> Hormonas gonadales -> Caracteres secundarios",
-        "speakerNotes": "En la pubertad, el sistema endocrino libera señales químicas que inician el estirón puberal, el desarrollo reproductivo y cambios visibles corporales.",
+        "vectorialOverlayPptx": "Diagrama endocrino: Hipotálamo (GnRH) -> Hipófisis anterior (LH y FSH) -> Gónadas (hormonas sexuales) -> Cambios puberales",
+        "mathOverlayPptx": "Diagrama endocrino: Hipotálamo (GnRH) -> Hipófisis anterior (LH y FSH) -> Gónadas (hormonas sexuales) -> Cambios puberales",
+        "speakerNotes": "La pubertad inicia cuando el hipotálamo (GnRH) estimula a la hipófisis anterior para secretar LH y FSH, las cuales activan a las gónadas a producir hormonas sexuales que inducen los cambios puberales.",
         "palabrasAprox": 21,
         "duracionSeg": 10
       },
@@ -333,7 +333,7 @@ export const CIENCIAS_7B_OA01_CLASE01: LessonData = {
         "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, presenting a prominent balance diagram with all four dimensions working in dynamic equilibrium in a bright modern science laboratory, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Regla de Oro: La Sexualidad es Integral",
         "overlayTitle": "Regla de Oro de la sexualidad",
-        "overlaySubtitle": "Biológica + Afectiva + Social + Ética = Salud Integral",
+        "overlaySubtitle": "Cuatro dimensiones unidas en salud integral",
         "vectorialOverlayPptx": "Infografía de síntesis: Las 4 dimensiones convergen en el bienestar integral de la persona",
         "mathOverlayPptx": "Infografía de síntesis: Las 4 dimensiones convergen en el bienestar integral de la persona",
         "speakerNotes": "Recuerda la regla de oro: la sexualidad es integral. Une cuerpo, emociones, sociedad y valores. ¡Ahora pon a prueba lo aprendido resolviendo las actividades prácticas en la plataforma interactiva!",
@@ -398,7 +398,8 @@ export const CIENCIAS_7B_OA01_CLASE01: LessonData = {
       "options": [
         "Es una dimensión integral presente a lo largo de toda la vida que une lo biológico, afectivo, social y ético.",
         "Se reduce exclusivamente a la reproducción biológica y a los órganos del cuerpo humano.",
-        "Es un tema que únicamente involucra a los adultos y no tiene relación con las emociones ni los valores."
+        "Es un tema que únicamente involucra a los adultos sin relación con las emociones.",
+        "Es un fenómeno que solo aparece en la vejez y depende del clima ambiental."
       ],
       "correct": "Es una dimensión integral presente a lo largo de toda la vida que une lo biológico, afectivo, social y ético.",
       "fixExplain": "La sexualidad humana es integral: comprende el cuerpo biológico, los afectos, la convivencia social y los valores éticos durante toda la vida."
@@ -407,22 +408,24 @@ export const CIENCIAS_7B_OA01_CLASE01: LessonData = {
       "id": "q2",
       "q": "El cambio en el tono de la voz y el crecimiento acelerado de estatura durante la pubertad corresponden a la dimensión:",
       "options": [
-        "Biológica",
-        "Social",
-        "Ética"
+        "Dimensión Social",
+        "Dimensión Biológica",
+        "Dimensión Ética",
+        "Dimensión Afectiva"
       ],
-      "correct": "Biológica",
+      "correct": "Dimensión Biológica",
       "fixExplain": "Los cambios corporales, hormonales y anatómicos forman parte de la dimensión biológica del ser humano."
     },
     {
       "id": "q3",
       "q": "Aprender a decir \"no\" con seguridad y respetar los límites y decisiones de los demás corresponde a la dimensión:",
       "options": [
-        "Ética y moral",
+        "Dimensión ética y moral",
         "Exclusivamente biológica",
-        "Únicamente climática"
+        "Únicamente climática",
+        "Dimensión química y mineral"
       ],
-      "correct": "Ética y moral",
+      "correct": "Dimensión ética y moral",
       "fixExplain": "Establecer límites personales, cuidar el consentimiento y valorar la dignidad propia y ajena son fundamentos de la dimensión ética."
     }
   ],
@@ -433,7 +436,9 @@ export const CIENCIAS_7B_OA01_CLASE01: LessonData = {
       "q": "Si una persona siente cariño por sus amigos y comparte momentos felices con ellos, ¿qué dos dimensiones se manifiestan?",
       "options": [
         "Las dimensiones afectiva (cariño) y social (amistades).",
-        "Únicamente la dimensión biológica anatómica."
+        "Únicamente la dimensión biológica anatómica.",
+        "Solamente la dimensión climática y meteorológica.",
+        "Ninguna dimensión humana reconocible."
       ],
       "correct": "Las dimensiones afectiva (cariño) y social (amistades).",
       "correctText": "¡Exacto! El cariño representa la dimensión afectiva y compartir con amigos representa la dimensión social.",

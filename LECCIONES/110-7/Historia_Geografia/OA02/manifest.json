@@ -3,23 +3,23 @@
   "asignatura": "Historia_Geografia",
   "oa": "OA02",
   "identificador_paquete": "110-7-HIS-OA02",
-  "version": "2.0.0",
-  "fecha_actualizacion": "2026-10-06",
-  "estado": "EN_REVISION",
+  "version": "2.1.0",
+  "fecha_actualizacion": "2026-10-07",
+  "estado": "REQUIERE_AJUSTES",
   "total_clases": 6,
   "fuente_oficial_unica_docx": {
     "archivo": "Plan_Maestro_7Básico_110-7-HIS-OA02_6Lecciones.docx",
     "rol": "Unica fuente oficial de produccion de lecciones y prompts (6 lecciones completas)",
-    "sha256": "a884788757213cf0b8b9a68cd64560de0f99f6f6fcd595ced56c835643ba17a1",
-    "bytes": 69113
+    "sha256": "5f956bd82da301117e4c6701f440ae2f45b593a884328eb2171097e917ea719e",
+    "bytes": 79976
   },
   "prompts_asociados": {
     "archivo": "Prompts_Work_Historia_7B_OA02.txt",
     "total_laminas": 84,
     "laminas_por_clase": 14,
-    "perfil_evaluacion": "Perfil 7° Básico (14 láminas bimodales: 7 Gancho + 7 Explicación; reactivos de 4 alternativas en cierre)",
-    "sha256": "9010fd649c369f9d1129631c44658f9ea372b85266483e04d7fa4096d71dea8a",
-    "bytes": 210962
+    "perfil_evaluacion": "Perfil 7° Básico (14 láminas bimodales: 7 Gancho + 7 Explicación; 4 alternativas A-D en todas las preguntas; sin texto ni logo IA)",
+    "sha256": "574a7fb53fb533517f8fc3a38692d44fe649446d74d1be446494fa40043c48a6",
+    "bytes": 206847
   },
   "fundamentacion_curricular": {
     "temario_eell": {

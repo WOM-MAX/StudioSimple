@@ -177,11 +177,11 @@ export const MATEMATICA_7B_OA04_CLASE01: LessonData = {
         "slideNumber": 6,
         "tituloMomento": "Conexión Matemática: 40 por ciento",
         "visualPrompt": "Modern anime style 16:9 widescreen illustration. The 13-year-old girl with braided hair writing on her digital notebook while the boy in a teal jacket gives a thumbs up. Clean bright modern anime, high clarity, negative space for mathematical formulas. No text drawn by AI.",
-        "overlayText": "40% DE ENERGÍA CAPTURADA",
-        "overlayTitle": "40% DE ENERGÍA CAPTURADA",
-        "overlaySubtitle": "Razón matemática: 40 sobre 100",
-        "vectorialOverlayPptx": "Fórmula limpia: 40 de 100 = 40%",
-        "speakerNotes": "Sofía anotó en su registro: cuarenta de cada cien partes significa que el panel está funcionando al cuarenta por ciento de su capacidad total.",
+        "overlayText": "40% DE LAS CELDAS ACTIVAS",
+        "overlayTitle": "40% DE LAS CELDAS ACTIVAS",
+        "overlaySubtitle": "Razón matemática: 40 sobre 100 celdas",
+        "vectorialOverlayPptx": "Fórmula limpia: 40 celdas de 100 = 40%",
+        "speakerNotes": "Sofía anotó en su registro: cuarenta de cada cien partes significa que el panel tiene activas el cuarenta por ciento de sus celdas fotovoltaicas.",
         "duracionSeg": 9
       },
       {
@@ -244,8 +244,8 @@ export const MATEMATICA_7B_OA04_CLASE01: LessonData = {
         "overlayText": "¿QUÉ ES UN PORCENTAJE?",
         "overlayTitle": "¿QUÉ ES UN PORCENTAJE?",
         "overlaySubtitle": "Una razón matemática que compara con 100 partes",
-        "vectorialOverlayPptx": "Diagrama conceptual: a% = a / 100",
-        "speakerNotes": "Un porcentaje es una comparación por cociente donde el total siempre se divide en cien partes iguales. La expresión a por ciento representa a partes de cada cien.",
+        "vectorialOverlayPptx": "Diagrama conceptual: p% = p ÷ 100 (razón con consecuente 100)",
+        "speakerNotes": "Un porcentaje es una comparación por cociente donde el total siempre se divide en cien partes iguales. La expresión p por ciento representa p partes de cada cien, es decir, p dividido en cien.",
         "duracionSeg": 13
       },
       {
@@ -298,9 +298,9 @@ export const MATEMATICA_7B_OA04_CLASE01: LessonData = {
         "visualPrompt": "Modern anime style 16:9 widescreen illustration. The two 13-year-old student explorers holding their notebooks, ready to begin interactive exercises. Modern anime style, bright friendly expressions, negative space. No text drawn by AI.",
         "overlayText": "REGLA DE ORO DEL PORCENTAJE",
         "overlayTitle": "REGLA DE ORO DEL PORCENTAJE",
-        "overlaySubtitle": "El porcentaje es una fracción de denominador 100",
-        "vectorialOverlayPptx": "Regla de oro: Cantidad sobre 100 = Porcentaje directo. ¡A practicar!",
-        "speakerNotes": "Regla de oro: cualquier cantidad comparada directamente con cien se convierte de inmediato en su porcentaje correspondiente. Ahora continuemos con la práctica interactiva.",
+        "overlaySubtitle": "El porcentaje es una razón de consecuente 100",
+        "vectorialOverlayPptx": "Regla de oro: p% = p ÷ 100. ¡A practicar!",
+        "speakerNotes": "Regla de oro: cualquier cantidad comparada directamente con cien se convierte de inmediato en su porcentaje correspondiente: p por ciento es p dividido en cien. Ahora continuemos con la práctica interactiva.",
         "duracionSeg": 13
       }
     ]

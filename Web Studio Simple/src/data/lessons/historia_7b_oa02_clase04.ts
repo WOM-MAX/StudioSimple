@@ -1,529 +1,414 @@
 import { LessonData } from '../../types/lesson';
 
 export const HISTORIA_7B_OA02_CLASE04: LessonData = {
-  "metadata": {
-    "grade": "7° Básico",
-    "subject": "Historia, Geografía y Ciencias Sociales",
-    "oaCode": "OA 2",
-    "oaTitle": "Complejización de las primeras sociedades: de la hominización al surgimiento de las civilizaciones",
-    "lessonNumber": 4,
-    "totalLessonsInOa": 6,
-    "lessonTitle": "Innovaciones tecnológicas del Neolítico",
-    "durationMinutes": 30,
-    "nextLessonTitle": "Consecuencias históricas y complejización social"
+  metadata: {
+    grade: '7° Básico',
+    subject: 'Historia, Geografía y Ciencias Sociales',
+    oaCode: 'OA 2',
+    oaTitle: 'Procesos de transformación de la vida humana en el Neolítico',
+    lessonNumber: 4,
+    totalLessonsInOa: 6,
+    lessonTitle: 'Innovaciones tecnológicas del Neolítico',
+    durationMinutes: 30,
+    nextLessonTitle: 'Propiedad, jerarquías y especialización del trabajo'
   },
-  "prep": {
-    "adultObjective": "Acompañar al estudiante a contextualizar y comprender el proceso histórico o geográfico de: Innovaciones tecnológicas del Neolítico, desarrollando el pensamiento crítico y analizando Neolítico.",
-    "routeToday": "1. Inicio y activación · 2. Video de exploración · 3. Recorrido guiado · 4. Formalización y práctica en cuaderno · 5. Miniquiz y REVISAR · 6. Cierre metacognitivo",
-    "mentorReminder": "Sigue las indicaciones en pantalla paso a paso. Lee únicamente los recuadros DILE en voz alta y espera siempre la respuesta.",
-    "reminders": [
-      "Sigue el orden indicado.",
-      "Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.",
-      "No leas los recuadros SOLO PARA TI ni AYUDA DE LECTURA.",
-      "Haz cada pregunta y espera la respuesta antes de seleccionar una opción.",
-      "Considera correcta una respuesta si expresa la idea matemática, aunque use palabras distintas.",
-      "Si el estudiante necesita apoyo, usa únicamente la ayuda que aparecerá.",
-      "Si propone otra explicación o no está de acuerdo, escúchalo completo y valora su razonamiento antes de guiarlo."
+
+  prep: {
+    adultObjective: 'Acompañar al estudiante a comprender las innovaciones tecnológicas de la Revolución Neolítica (piedra pulida, alfarería, cestería, telar y metalurgia incipiente del cobre), analizando cómo estas herramientas transformaron la preparación de alimentos, el almacenamiento de reservas y la modificación del entorno natural.',
+    routeToday: 'De la piedra tallada a la piedra pulida, la cerámica cocida y los telares.',
+    mentorReminder: 'Sigue las indicaciones en pantalla paso a paso. Lee únicamente los recuadros DILE y PREGÚNTALE en voz alta.',
+    reminders: [
+      'Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.',
+      'No leas los recuadros SOLO PARA TI ni AYUDA PEDAGÓGICA.',
+      'Haz cada pregunta y espera la respuesta antes de retroalimentar.',
+      'Considera correcta una respuesta si expresa el razonamiento histórico con sus propias palabras.',
+      'Ten a mano el cuaderno de Historia para dibujar las herramientas y esquemas.'
     ],
-    "emotionalTip": "Fomenta la perspectiva histórica: 'Analiza los hechos considerando la época y el espacio geográfico en que ocurrieron'."
+    emotionalTip: 'Fomenta el aprecio por la tecnología ancestral: "La tecnología no comenzó con los teléfonos ni computadores: comenzó cuando los seres humanos crearon herramientas para resolver sus necesidades cotidianas".'
   },
-  "route": {
-    "blocks": [
-      {
-        "id": "b1",
-        "number": "01",
-        "title": "Historia, Geografía y Ciencias Sociales",
-        "subtitle": "Innovaciones tecnológicas del Neolítico",
-        "color": "yellow"
-      },
-      {
-        "id": "b2",
-        "number": "02",
-        "title": "Exploración",
-        "subtitle": "Gancho y Recorrido Guiado",
-        "color": "orange"
-      },
-      {
-        "id": "b3",
-        "number": "03",
-        "title": "Práctica",
-        "subtitle": "Aplicación en situaciones reales",
-        "color": "yellow"
-      },
-      {
-        "id": "b4",
-        "number": "04",
-        "title": "Evaluación",
-        "subtitle": "Miniquiz formativo y síntesis",
-        "color": "teal"
-      }
+
+  route: {
+    blocks: [
+      { id: 'b1', number: '01', title: 'Historia y Geografía', subtitle: 'Tecnología de la piedra pulida', color: 'yellow' },
+      { id: 'b2', number: '02', title: 'Exploración', subtitle: 'Alfarería hornos y telares', color: 'orange' },
+      { id: 'b3', number: '03', title: 'Práctica', subtitle: 'Cuadro de inventos en cuaderno', color: 'yellow' },
+      { id: 'b4', number: '04', title: 'Evaluación', subtitle: 'Miniquiz formativo y síntesis', color: 'teal' }
     ],
-    "keyQuestions": [
-      {
-        "label": "Exploración inicial",
-        "sub": "Innovaciones tecnológicas del Neolítico"
-      },
-      {
-        "label": "Idea clave",
-        "sub": "Los procesos históricos sobre Innovaciones tecnológicas del "
-      },
-      {
-        "label": "Práctica y aplicación",
-        "sub": "Resolución guiada paso a paso"
-      }
+    keyQuestions: [
+      { label: '¿Qué significa piedra pulida?', sub: 'Herramientas frotadas con arena que logran filos más firmes y resistentes.' },
+      { label: '¿Por qué la cerámica fue vital?', sub: 'Permitió cocinar caldos y proteger cosechas de humedad y roedores.' }
     ],
-    "dileIntro": "Hoy comenzaremos la clase 4 de Historia, Geografía y Ciencias Sociales: \"Innovaciones tecnológicas del Neolítico\".",
-    "dileObjective": "Cerámica, tejido, piedra pulida y metalurgia incipiente"
+    dileIntro: 'Hoy comenzaremos la clase 4 de Historia, Geografía y Ciencias Sociales: "Innovaciones tecnológicas del Neolítico".',
+    dileObjective: 'Analizar cómo la piedra pulimentada, la cerámica y los telares transformaron la vida cotidiana.'
   },
-  "situation": {
-    "dilePrompt": "Hoy en Historia y Ciencias Sociales nos situamos en 'Innovaciones tecnológicas del Neolítico'. El concepto histórico central que abordamos es 'Neolítico'. Observa el escenario histórico planteado en la pantalla sobre Cerámica, tejido, piedra pulida y metalurgia incipiente:",
-    "expectedAnswer": "Explicar las necesidades de subsistencia, recursos geográficos o motivos sociales vinculados con Neolítico.",
-    "socraticHint": "Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?",
-    "emotionalTip": "Fomenta la perspectiva histórica: 'Analiza los hechos considerando la época y el espacio geográfico en que ocurrieron'.",
-    "options": [
+
+  situation: {
+    dilePrompt: 'Observa en pantalla una hacha del Paleolítico (piedra tallada a golpes con filos irregulares) junto a una hacha del Neolítico (piedra pulida frotada con arena y agua, con un filo liso y uniforme engastada en un mango de madera firme). ¿Por qué para talar árboles grandes y abrir campos de siembra era indispensable usar una hacha de piedra pulimentada y no una tosca piedra tallada?',
+    expectedAnswer: 'Porque al pulir la piedra no quedan grietas internas; el filo liso soporta golpes fuertes repetidos contra troncos duros sin quebrarse, mientras que la piedra tallada a golpes se fractura con facilidad al chocar contra la madera.',
+    socraticHint: 'Si golpeas una piedra quebradiza llena de astillas contra un tronco de roble, ¿qué le pasa? ¿Y si la piedra fue pulida y compactada frotándola con arena?',
+    emotionalTip: 'Invítalo a valorar el esfuerzo físico y mental de quienes inventaron el pulido: frotar una piedra durante días requería paciencia y visión de futuro.',
+    options: [
       {
-        "label": "Explicó las causas históricas y geográficas vinculadas con Neolítico",
-        "kind": "correct",
-        "feedbackText": "¡Exacto! Comprendió las causas históricas y geográficas que motivaron a las personas de esa época."
+        label: 'Explicó que el filo pulimentado era más resistente a impactos fuertes y no se quebraba',
+        kind: 'correct',
+        feedbackText: '¡Exacto! La técnica del pulido eliminaba fracturas internas, creando herramientas de impacto duraderas.'
       },
       {
-        "label": "Solo mencionó hechos aislados sin explicar por qué ocurrieron",
-        "kind": "needs_support",
-        "feedbackText": "Pídele que piense en los desafíos del entorno: ¿por qué necesitaban organizarse de esa manera?"
+        label: 'Dijo que solo la pulían para que se viera brillante y bonita',
+        kind: 'needs_support',
+        feedbackText: 'Aunque se veía lisa, el motivo central era práctico: un filo pulido no se rompe al cortar árboles duros.'
+      },
+      {
+        label: 'No sabe qué responder o dio otra respuesta',
+        kind: 'no_answer',
+        feedbackText: 'Pista guiada: Fíjate en el filo: al estar frotado con arena, la hoja es compacta y resiste golpes constantes contra la madera.'
       }
     ]
   },
-  "reference": {
-    "dilePrompt": "¿Qué causas o necesidades motivaron a las comunidades de esa época en relación con 'Neolítico'?",
-    "question": "¿Qué causas o necesidades motivaron a las comunidades de esa época en relación con 'Neolítico'?",
-    "expectedAnswer": "Explicar las necesidades de subsistencia, recursos geográficos o motivos sociales vinculados con Neolítico.",
-    "socraticHint": "Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?",
-    "feedbackSuccess": "Muy bien. Observaste el detalle central con precisión.",
-    "feedbackSupport": "Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?"
+
+  reference: {
+    dilePrompt: 'Antes de inventar la alfarería cocida, los seres humanos no podían poner recipientes directamente sobre el fuego para hervir agua o cocinar granos duros.',
+    question: '¿De qué manera la invención de vasijas de cerámica cocida en hornos mejoró la salud y la alimentación de las familias de la aldea?',
+    expectedAnswer: 'Permitió hervir agua y cocinar sopas, papillas y guisos con cereales y legumbres, haciendo los alimentos mucho más nutritivos, suaves y fáciles de digerir para niños pequeños y ancianos.',
+    socraticHint: '¿Puedes comer trigo crudo y duro fácilmente? ¿Qué pasa cuando lo cocinas en agua hirviendo dentro de una olla de arcilla?',
+    feedbackSuccess: '¡Brillante razonamiento nutricional e histórico! La cerámica revolucionó la dieta humana al permitir la cocción prolongada de alimentos.',
+    feedbackSupport: 'Cocinar en ollas de barro permitió hacer papillas y sopas nutritivas, mejorando la digestión y la esperanza de vida.'
   },
-  "hook": {
-    "title": "Video Motivacional: El Desafío de Innovaciones tecnológicas del Neolítico",
-    "titulo": "Video Motivacional: El Desafío de Innovaciones tecnológicas del Neolítico",
-    "focusPoints": [],
-    "dileIntro": "Antes de ver el video, observa con atención lo que descubren los dos exploradores y qué pregunta queda planteada.",
-    "hazInstruction": "Observa y reflexiona con las escenas del desafío visual.",
-    "videoSrc": "",
-    "videoUrl": "",
-    "posterSrc": "",
-    "dileAfterVideo": "Muy buena observación. Ahora conversaremos sobre lo que descubrieron en la expedición.",
-    "fullPrompt": "Actúa como Diseñador Instruccional Senior y Creador de Presentaciones en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de GANCHO MOTIVACIONAL (Paso 2) para:\n- Asignatura: Historia, Geografía y Ciencias Sociales\n- Objetivo de Aprendizaje: OA 2\n- Clase: 4 (\"Innovaciones tecnológicas del Neolítico\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS (PLAN MAESTRO ACTUALIZACIÓN 29-09-2026):\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Exactamente 7 diapositivas (slide1 a slide7).\n3. ESTILO ARTÍSTICO DE LAS IMÁGENES: Anime Moderno (Modern Anime Style, cinematográfico, iluminación dinámica, fondos limpios con espacio negativo real).\n4. PROTAGONISTAS FIJOS: Dúo co-protagónico de 13 años (la joven y el joven estudiantes-exploradores chilenos). ACTÚAN JUNTOS en cada escena, colaborando y resolviendo el desafío en equipo.\n5. REGLA VISUAL ANTI-MÁSCARAS Y FONDOS LIMPIOS: Imágenes Full-Bleed con espacio negativo para texto y vectores. Queda prohibido usar placas oscuras que tapen las caras de los personajes o la mitad de la lámina. PROHIBIDO dibujar números, letras o fórmulas dentro de la ilustración generada por IA.\n6. PRESUPUESTO TEMPORAL Y GUION CONTINUO (GANCHO - 60 SEGUNDOS / 130 PALABRAS TOTALES): Cada diapositiva DEBE incluir únicamente el texto de narración oral continua (8+8+8+9+9+9+9 segundos, totalizando exactamente ~130 palabras para 60 segundos de locución a 130 palabras por minuto en Google Vids/TTS), sin marcas técnicas, encabezados ni duraciones, listo para ser leído por voz en off.\n7. PROTOCOLO DE COMPROBACIÓN ACÚSTICA OBLIGATORIA (GOOGLE VIDS): Medir la duración real del archivo exportado con cronómetro o analizador de audio. El conteo de palabras no garantiza por sí solo 60 segundos exactos. Si la duración no es exacta, ajustar narración, pausas o ritmo, volver a exportar y registrar la duración comprobada oficial.\n8. ESTRUCTURA HEXAPARTITA POR DIAPOSITIVA:\n   • Toda diapositiva se define con: 1) Propósito, 2) Título en Pantalla (64 pt), 3) Subtítulo en Pantalla (36 pt), 4) Prompt de imagen IA sin texto, 5) Capa vectorial para PowerPoint, y 6) Notas al orador continuas.\n   • COLOR DE TEXTO: Un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.\n   • LOCUCIÓN COHERENTE: Narra con precisión lo que se observa en la imagen y lo que se sintetiza en la pantalla.\n\nDETALLE DE LAS 7 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Apertura y Contexto) ---\n1. Propósito Didáctico: Apertura y Contexto\n2. Título en Pantalla (64 pt): Misión 4: Innovaciones tecnológicas del Neolítico\n3. Subtítulo en Pantalla (36 pt): Exploración inicial en Historia, Geografía y Ciencias Sociales\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Innovaciones tecnológicas del Neolítico (Historia, Geografía y Ciencias Sociales). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Coordenadas historicas: Linea temporal y contexto de Innovaciones tecnológicas del Neolítico\n6. Notas al Orador (Locución Continua Google Vids): \"Comienza una nueva expedición de aprendizaje en Historia, Geografía y Ciencias Sociales. Nuestros dos exploradores analizan el desafío de Innovaciones tecnológicas del Neolítico para descubrir sus secretos.\"\n\n--- DIAPOSITIVA 2 (Presentación del Escenario) ---\n1. Propósito Didáctico: Presentación del Escenario\n2. Título en Pantalla (64 pt): Punto de partida\n3. Subtítulo en Pantalla (36 pt): Cerámica, tejido, piedra pulida y metalurgia incipiente\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Cerámica, tejido, piedra pulida y metalurgia incipiente. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Cerámica, tejido, piedra pulida y metalurgia incipiente\n6. Notas al Orador (Locución Continua Google Vids): \"Al observar los datos sobre Cerámica, tejido, piedra pulida y metalurgia incipiente, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor.\"\n\n--- DIAPOSITIVA 3 (Aparición del Conflicto / Misterio) ---\n1. Propósito Didáctico: Aparición del Conflicto / Misterio\n2. Título en Pantalla (64 pt): El enigma disciplinar\n3. Subtítulo en Pantalla (36 pt): Desafío en Innovaciones tecnológicas del Neolítico\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Cerámica, tejido, piedra pulida y metalurgia incipiente\n6. Notas al Orador (Locución Continua Google Vids): \"Surge un reto concreto sobre Innovaciones tecnológicas del Neolítico: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso.\"\n\n--- DIAPOSITIVA 4 (Exploración de Pistas) ---\n1. Propósito Didáctico: Exploración de Pistas\n2. Título en Pantalla (64 pt): Análisis de evidencias\n3. Subtítulo en Pantalla (36 pt): Cerámica, tejido, piedra pulida y metalurgia incipiente\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Cerámica, tejido, piedra pulida y metalurgia incipiente\n6. Notas al Orador (Locución Continua Google Vids): \"Ambos comparan las pistas disponibles sobre Cerámica, tejido, piedra pulida y metalurgia incipiente. Cada dato confirma cómo interactúan los elementos clave de la situación.\"\n\n--- DIAPOSITIVA 5 (El Momento Crítico) ---\n1. Propósito Didáctico: El Momento Crítico\n2. Título en Pantalla (64 pt): Criterio de decisión\n3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Cerámica, tejido, piedra pulida y metalurgia incipiente\n6. Notas al Orador (Locución Continua Google Vids): \"Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Innovaciones tecnológicas del Neolítico con total precisión metodológica.\"\n\n--- DIAPOSITIVA 6 (La Antesala de la Pregunta) ---\n1. Propósito Didáctico: La Antesala de la Pregunta\n2. Título en Pantalla (64 pt): El dilema central\n3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Innovaciones tecnológicas del Neolítico?\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Dilema historico: Fuentes contrastadas frente al acontecimiento\n6. Notas al Orador (Locución Continua Google Vids): \"Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje.\"\n\n--- DIAPOSITIVA 7 (La Pregunta Detonante) ---\n1. Propósito Didáctico: La Pregunta Detonante\n2. Título en Pantalla (64 pt): Pregunta detonante\n3. Subtítulo en Pantalla (36 pt): Regla y método de Innovaciones tecnológicas del Neolítico\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta detonante: ¿Que consecuencias trajo Innovaciones tecnológicas del Neolítico?\n6. Notas al Orador (Locución Continua Google Vids): \"Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!\"\n\n",
-    "slides": [
+
+  hook: {
+    title: 'Los Inventos que Transformaron el Neolítico',
+    titulo: 'Los Inventos que Transformaron el Neolítico',
+    focusPoints: [
+      'Piedra pulida: Hachas para despejar bosques y molinos barquiformes de mano para harina.',
+      'Alfarería cocida: Hornos de barro que crearon recipientes impermeables y resistentes al fuego.',
+      'Textilería y telar: Tejido de lana y lino para reemplazar las pieles por prendas ligeras.',
+      'Metalurgia incipiente: Trabajo inicial del cobre martillado en frío para adornos y punzones.'
+    ],
+    dileIntro: 'Acompañemos a los dos exploradores a un taller neolítico para descubrir cómo estas tecnologías cambiaron el trabajo diario.',
+    hazInstruction: 'Observa cómo cada herramienta resolvía un problema concreto de alimentación, abrigo y trabajo.',
+    videoSrc: '',
+    dileAfterVideo: 'Excelente observación. Ahora analizaremos el impacto de cada una de estas innovaciones técnicas.',
+    slides: [
       {
-        "slideNumber": 1,
-        "tituloMomento": "Apertura y Contexto",
-        "didacticPurpose": "Apertura y Contexto",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Innovaciones tecnológicas del Neolítico (Historia, Geografía y Ciencias Sociales). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.",
-        "overlayTitle": "Misión 4: Innovaciones tecnológicas del Neolítico",
-        "overlaySubtitle": "Exploración inicial en Historia, Geografía y Ciencias Sociales",
-        "overlayText": "Misión 4: Innovaciones tecnológicas del Neolítico",
-        "vectorialOverlayPptx": "Coordenadas historicas: Linea temporal y contexto de Innovaciones tecnológicas del Neolítico",
-        "mathOverlayPptx": "Coordenadas historicas: Linea temporal y contexto de Innovaciones tecnológicas del Neolítico",
-        "speakerNotes": "Comienza una nueva expedición de aprendizaje en Historia, Geografía y Ciencias Sociales. Nuestros dos exploradores analizan el desafío de Innovaciones tecnológicas del Neolítico para descubrir sus secretos.",
-        "palabrasAprox": 21,
-        "duracionSeg": 9
+        slideNumber: 1,
+        tituloMomento: "Apertura y Escenario",
+        didacticPurpose: "Apertura y Escenario",
+        visualPrompt: "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at an ancient artisan quarter in a sunny Neolithic village. Warm morning light, wide negative space in top third. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "El Taller Neolítico",
+        overlaySubtitle: "Artesanos creando herramientas para la aldea",
+        overlayText: "El Taller Neolítico: Artesanos creando herramientas para la aldea",
+        vectorialOverlayPptx: "Revolución técnica: Nuevas herramientas para nuevas necesidades de subsistencia",
+        speakerNotes: "Nuestros exploradores llegan a una aldea neolítica donde las familias perfeccionan inventos indispensables para su vida diaria sedentaria.",
+        palabrasAprox: 20,
+        duracionSeg: 9
       },
       {
-        "slideNumber": 2,
-        "tituloMomento": "Presentación del Escenario",
-        "didacticPurpose": "Presentación del Escenario",
-        "visualPrompt": "Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Cerámica, tejido, piedra pulida y metalurgia incipiente. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.",
-        "overlayTitle": "Punto de partida",
-        "overlaySubtitle": "Cerámica, tejido, piedra pulida y metalurgia incipiente",
-        "overlayText": "Punto de partida: Cerámica, tejido, piedra pulida y metalurgia incipiente",
-        "vectorialOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Cerámica, tejido, piedra pulida y metalurgia incipiente",
-        "mathOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Cerámica, tejido, piedra pulida y metalurgia incipiente",
-        "speakerNotes": "Al observar los datos sobre Cerámica, tejido, piedra pulida y metalurgia incipiente, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor.",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        slideNumber: 2,
+        tituloMomento: "El Pulido de la Piedra",
+        didacticPurpose: "El Pulido de la Piedra",
+        visualPrompt: "Modern anime style. The boy observing a villager patiently rubbing a greenstone axe head with wet abrasive sand on a large sandstone boulder, showing smooth polished facets. Soft clean lighting, clear space on left. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Piedra Pulimentada",
+        overlaySubtitle: "Frotado con arena para filos indestructibles",
+        overlayText: "Piedra Pulimentada: Frotado con arena para filos indestructibles",
+        vectorialOverlayPptx: "Técnica lítica: Frotamiento abrasivo con agua para eliminar microfracturas y lograr filos uniformes",
+        speakerNotes: "La técnica del pulido revolucionó las herramientas. Al frotar la piedra con arena y agua, lograban filos resistentes que no se rompían al golpear.",
+        palabrasAprox: 24,
+        duracionSeg: 9
       },
       {
-        "slideNumber": 3,
-        "tituloMomento": "Aparición del Conflicto / Misterio",
-        "didacticPurpose": "Aparición del Conflicto / Misterio",
-        "visualPrompt": "Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.",
-        "overlayTitle": "El enigma disciplinar",
-        "overlaySubtitle": "Desafío en Innovaciones tecnológicas del Neolítico",
-        "overlayText": "El enigma disciplinar: Innovaciones tecnológicas del Neolítico",
-        "vectorialOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Cerámica, tejido, piedra pulida y metalurgia incipiente",
-        "mathOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Cerámica, tejido, piedra pulida y metalurgia incipiente",
-        "speakerNotes": "Surge un reto concreto sobre Innovaciones tecnológicas del Neolítico: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        slideNumber: 3,
+        tituloMomento: "El Molino de Mano",
+        didacticPurpose: "El Molino de Mano",
+        visualPrompt: "Modern anime style. The girl trying out a boat-shaped stone saddle quern (metate), grinding golden wheat grains into white flour with a smooth handstone. Expressive eyes, warm ambient lighting. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Molienda de Cereales",
+        overlaySubtitle: "Molinos de piedra para transformar el grano",
+        overlayText: "Molienda de Cereales: Molinos de piedra para transformar el grano",
+        vectorialOverlayPptx: "Procesamiento de alimentos: De granos duros e indigeribles a harina molida lista para el pan",
+        speakerNotes: "Los granos de trigo eran duros para masticar. Con molinos de piedra pulida los transformaron en harina fina, inventando las primeras tortas y panes cocidos.",
+        palabrasAprox: 25,
+        duracionSeg: 9
       },
       {
-        "slideNumber": 4,
-        "tituloMomento": "Exploración de Pistas",
-        "didacticPurpose": "Exploración de Pistas",
-        "visualPrompt": "Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.",
-        "overlayTitle": "Análisis de evidencias",
-        "overlaySubtitle": "Cerámica, tejido, piedra pulida y metalurgia incipiente",
-        "overlayText": "Análisis de evidencias: Cerámica, tejido, piedra pulida y metalurgia incipiente",
-        "vectorialOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Cerámica, tejido, piedra pulida y metalurgia incipiente",
-        "mathOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Cerámica, tejido, piedra pulida y metalurgia incipiente",
-        "speakerNotes": "Ambos comparan las pistas disponibles sobre Cerámica, tejido, piedra pulida y metalurgia incipiente. Cada dato confirma cómo interactúan los elementos clave de la situación.",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        slideNumber: 4,
+        tituloMomento: "La Alfarería y el Fuego",
+        didacticPurpose: "La Alfarería y el Fuego",
+        visualPrompt: "Modern anime style. Close-up on a potter smoothing a wet clay vessel with coils, next to an active domed kiln glowing with orange coals. Vibrant colors, clean composition. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Cerámica en Hornos",
+        overlaySubtitle: "Recipientes impermeables que soportan el fuego",
+        overlayText: "Cerámica en Hornos: Recipientes impermeables que soportan el fuego",
+        vectorialOverlayPptx: "Tecnología pirotécnica: Transformación química de la arcilla en material cerámico impermeable",
+        speakerNotes: "Al cocer la arcilla en hornos lograron recipientes impermeables. Por primera vez pudieron hervir caldos directamente al fuego y proteger sus granos de las lluvias.",
+        palabrasAprox: 25,
+        duracionSeg: 9
       },
       {
-        "slideNumber": 5,
-        "tituloMomento": "El Momento Crítico",
-        "didacticPurpose": "El Momento Crítico",
-        "visualPrompt": "Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.",
-        "overlayTitle": "Criterio de decisión",
-        "overlaySubtitle": "Aplicar el método riguroso",
-        "overlayText": "Criterio de decisión riguroso",
-        "vectorialOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Cerámica, tejido, piedra pulida y metalurgia incipiente",
-        "mathOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Cerámica, tejido, piedra pulida y metalurgia incipiente",
-        "speakerNotes": "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Innovaciones tecnológicas del Neolítico con total precisión metodológica.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        slideNumber: 5,
+        tituloMomento: "El Telar Vertical",
+        didacticPurpose: "El Telar Vertical",
+        visualPrompt: "Modern anime style. The two young companions examining an upright warp-weighted wooden loom with woven linen and wool patterns, decorated with bone weaving needles. Soft depth of field. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Textilería y Vestimenta",
+        overlaySubtitle: "Lino y lana tejidos en telares",
+        overlayText: "Textilería y Vestimenta: Lino y lana tejidos en telares",
+        vectorialOverlayPptx: "Manufactura textil: Hilado con huso y tejido en telar vertical para reemplazar pieles pesadas",
+        speakerNotes: "El telar permitió tejer fibras de lana de oveja y lino vegetal. Las familias reemplazaron las pieles pesadas de caza por prendas livianas, flexibles y lavables.",
+        palabrasAprox: 25,
+        duracionSeg: 9
       },
       {
-        "slideNumber": 6,
-        "tituloMomento": "La Antesala de la Pregunta",
-        "didacticPurpose": "La Antesala de la Pregunta",
-        "visualPrompt": "Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.",
-        "overlayTitle": "El dilema central",
-        "overlaySubtitle": "¿Cómo resolver Innovaciones tecnológicas del Neolítico?",
-        "overlayText": "¿Cómo resolver Innovaciones tecnológicas del Neolítico?",
-        "vectorialOverlayPptx": "Dilema historico: Fuentes contrastadas frente al acontecimiento",
-        "mathOverlayPptx": "Dilema historico: Fuentes contrastadas frente al acontecimiento",
-        "speakerNotes": "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        slideNumber: 6,
+        tituloMomento: "Los Primeros Metales",
+        didacticPurpose: "Los Primeros Metales",
+        visualPrompt: "Modern anime style. Wide shot of the two explorers inspecting cold-hammered native copper awls, beads, and small hooks shining with reddish metallic luster on an artisan mat. Volumetric lighting. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Cobre Martillado",
+        overlaySubtitle: "Primeros destellos de la metalurgia naciente",
+        overlayText: "Cobre Martillado: Primeros destellos de la metalurgia naciente",
+        vectorialOverlayPptx: "Metalurgia incipiente: Martillado en frío de cobre nativo para adornos y pequeños punzones",
+        speakerNotes: "Hacia el final del Neolítico hallaron pepitas de cobre puro. Golpeándolas en frío con piedras, modelaron pequeños punzones y adornos metálicos brillantes.",
+        palabrasAprox: 22,
+        duracionSeg: 9
       },
       {
-        "slideNumber": 7,
-        "tituloMomento": "La Pregunta Detonante",
-        "didacticPurpose": "La Pregunta Detonante",
-        "visualPrompt": "Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.",
-        "overlayTitle": "Pregunta detonante",
-        "overlaySubtitle": "Regla y método de Innovaciones tecnológicas del Neolítico",
-        "overlayText": "Meta: Dominio de Innovaciones tecnológicas del Neolítico",
-        "vectorialOverlayPptx": "Pregunta detonante: ¿Que consecuencias trajo Innovaciones tecnológicas del Neolítico?",
-        "mathOverlayPptx": "Pregunta detonante: ¿Que consecuencias trajo Innovaciones tecnológicas del Neolítico?",
-        "speakerNotes": "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        slideNumber: 7,
+        tituloMomento: "Pregunta Detonante",
+        didacticPurpose: "Pregunta Detonante",
+        visualPrompt: "Modern anime style. Elegant visual setting with the two 13-year-olds smiling with their notebooks beside a display of polished tools, pottery, and woven fabric. Soft background. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Pregunta de Indagación",
+        overlaySubtitle: "¿Cómo cambió la técnica nuestra vida?",
+        overlayText: "Pregunta de Indagación: ¿Cómo cambió la técnica nuestra vida?",
+        vectorialOverlayPptx: "Pregunta rectora: ¿Qué impacto social tuvieron las nuevas tecnologías del Neolítico?",
+        speakerNotes: "¡Descubramos en la lección cómo estas innovaciones técnicas multiplicaron la capacidad de producir, guardar y transformar la vida cotidiana!",
+        palabrasAprox: 19,
+        duracionSeg: 6
       }
     ]
   },
-  "preQuestions": [
+
+  preQuestions: [
     {
-      "context": "Contexto Temporal, Espacial y Neolítico",
-      "question": "¿De qué manera el entorno geográfico y la época condicionaron el desarrollo de 'Neolítico' en este proceso histórico?",
-      "expected": "Relacionar las características del espacio geográfico con la organización social y el desarrollo de Neolítico.",
-      "success": "¡Muy bien! Ubicaste con precisión las coordenadas temporales y espaciales del proceso.",
-      "support": "Observa las referencias del mapa y la cronología: ¿qué recursos naturales o rutas influían en sus decisiones?",
-      "reveal": "El entorno geográfico y las condiciones de la época condicionaron profundamente los modos de vida y las instituciones humanas.",
-      "studentReveal": "La influencia del espacio geográfico y el tiempo histórico en Neolítico."
+      context: 'El Impacto del Molino de Mano',
+      question: 'En el video vimos cómo la molienda de trigo en molinos de piedra transformó los granos duros en harina. ¿Por qué esto fue una revolución para la nutrición diaria?',
+      expected: 'Porque permitió hornear pan y preparar tortas y papillas que se digerían mucho mejor, alimentando eficientemente a niños pequeños y ancianos.',
+      success: '¡Exacto! La molienda de cereales multiplicó la absorción de nutrientes y facilitó la alimentación de toda la familia.',
+      support: 'Piensa en lo difícil que es masticar semillas secas crudas frente a comer pan o papilla suave recién horneada.',
+      reveal: 'El molino de mano permitió elaborar harina y pan, transformando cereales duros en la base alimentaria más nutritiva de la comunidad.',
+      studentReveal: 'Porque convirtió granos duros en harina para hacer pan y papillas suaves fáciles de comer para todos.'
     },
     {
-      "context": "Pensamiento Crítico y Prevención del Presentismo",
-      "question": "Para evitar el error común de 'Confundir la simultaneidad de procesos en distintas regiones con un origen único y lineal de la agricultura.', ¿qué debemos considerar al analizar las decisiones tomadas por los actores históricos?",
-      "expected": "Evaluar las decisiones históricas desde la mentalidad, recursos y cosmovisión propia de la época estudiada.",
-      "success": "¡Excelente empatía histórica! Analizaste el pasado desde su propio contexto y no desde los prejuicios actuales.",
-      "support": "Piensa qué información y qué valores tenían en ese siglo: ¿podían prever las consecuencias de la misma forma que nosotros hoy?",
-      "reveal": "El rigor histórico exige comprender las razones de los protagonistas en su propio tiempo, evitando anacronismos.",
-      "studentReveal": "La comprensión del pasado desde el contexto propio de sus protagonistas."
+      context: 'La Cerámica Cocida y la Salud',
+      question: '¿Por qué la invención de vasijas que podían ponerse directamente sobre el fuego ayudó a prevenir enfermedades en las aldeas?',
+      expected: 'Porque al hervir el agua y cocinar los alimentos a altas temperaturas se eliminaban bacterias y parásitos, haciendo la comida más segura y saludable.',
+      success: '¡Excelente deducción sanitaria! Hervir alimentos y agua en ollas de cerámica redujo drásticamente las infecciones estomacales.',
+      support: 'Recuerda qué le hace el fuego al agua cuando hierve: mata microbios dañinos y hace que los alimentos no enfermen a la gente.',
+      reveal: 'Cocer alimentos y hervir agua en recipientes cerámicos purificó la dieta, reduciendo enfermedades transmitidas por bacterias y parásitos.',
+      studentReveal: 'Porque hervir el agua y cocer la comida a fuego eliminaba microbios y parásitos que enfermaban a la gente.'
     }
   ],
-  "formalization": {
-    "title": "Video Explicativo: Formalización de Innovaciones tecnológicas del Neolítico",
-    "concept": "Video Explicativo: Formalización de Innovaciones tecnológicas del Neolítico",
-    "dileIntro": "Ahora veremos el video explicativo de Innovaciones tecnológicas del Neolítico. Observa el mapa conceptual y cómo se articula el concepto de Neolítico.",
-    "hazInstruction": "Revisemos la explicación formal y la idea clave.",
-    "ideaClave": "Los procesos históricos sobre Innovaciones tecnológicas del Neolítico responden a múltiples causas interconectadas, donde 'Neolítico' explica cómo las sociedades resolvieron sus desafíos de convivencia y subsistencia.",
-    "videoSrc": "",
-    "videoUrl": "",
-    "graphicPoster": "",
-    "fullPrompt": "Actúa como Diseñador Pedagógico y Especialista en Didáctica Disciplinar en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de VIDEO EXPLICATIVO / FORMALIZACIÓN (Paso 4) para:\n- Asignatura: Historia, Geografía y Ciencias Sociales\n- Objetivo de Aprendizaje: OA 2\n- Clase: 4 (\"Innovaciones tecnológicas del Neolítico\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS (PLAN MAESTRO ACTUALIZACIÓN 29-09-2026):\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Exactamente 7 diapositivas (slide1 a slide7) siguiendo el principio de un cambio visual por cada movimiento mental.\n3. DIAPOSITIVA 1 OBLIGATORIA CON OBJETIVO: La primera diapositiva declara como subtítulo (36 pt) el objetivo específico de la lección, sin repetir rótulos redundantes 'OA 01'.\n4. PROTAGONISTAS FIJOS EN EL 100% DE LAS ESCENAS: Los mismos 2 jóvenes de 13 años (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.\n5. REGLA VISUAL ANTI-MÁSCARAS Y FONDOS LIMPIOS: Imagen limpia con espacio negativo real. Prohibido que la IA intente dibujar números, rectas o letras. Todo elemento disciplinar se ensambla vectorialmente en PowerPoint.\n6. PRESUPUESTO TEMPORAL Y GUION PEDAGÓGICO (LECCIÓN EXPLICATIVA - 90 SEGUNDOS / 195 PALABRAS TOTALES): Guion explicativo continuo (12+13+13+13+13+13+13 segundos, totalizando exactamente ~195 palabras para 90 segundos a 130 palabras por minuto en Google Vids/TTS), sin marcas técnicas. Diapositiva 1 formula el objetivo; diapositivas 2 a 7 desarrollan el contenido sin repetirlo.\n7. PROTOCOLO DE COMPROBACIÓN ACÚSTICA OBLIGATORIA (GOOGLE VIDS): Medir la duración real del archivo exportado con cronómetro o analizador de audio. El conteo de palabras no garantiza por sí solo 90 segundos exactos. Si la duración no es exacta, ajustar narración, pausas o ritmo, volver a exportar y registrar la duración comprobada oficial.\n8. JERARQUÍA TIPOGRÁFICA Y COLOR DE TEXTO: Título en Pantalla (64 pt); Subtítulo en Pantalla (36 pt). Texto brillante de un solo color de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, contornos, resplandores ni recuadros flotantes o fondos detrás del texto. Especificar color en cada prompt.\n9. CIERRE SIN RETO EN EL VIDEO: La explicación concluye con la regla de oro y da el pase directo a la práctica en la plataforma web, sin proponer desafíos finales ni tareas en el cuaderno durante el video.\n10. ESTRUCTURA HEXAPARTITA POR DIAPOSITIVA (Propósito, Título 64 pt, Subtítulo 36 pt, Prompt Imagen IA, Capa Vectorial PPTX, Notas al Orador).\n\nDETALLE DE LAS 7 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Objetivo de la Lección) ---\n1. Propósito Didáctico: Objetivo de la Lección\n2. Título en Pantalla (64 pt): Objetivo de la lección\n3. Subtítulo en Pantalla (36 pt): Dominar Innovaciones tecnológicas del Neolítico: Cerámica, tejido, piedra pulida y metalurgia incipiente\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Cerámica, tejido, piedra pulida y metalurgia incipiente. High clarity, negative space for text. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 2 · Innovaciones tecnológicas del Neolítico\n6. Notas al Orador (Locución Continua Google Vids): \"El objetivo de hoy es aprender a cerámica, tejido, piedra pulida y metalurgia incipiente, aplicando el método disciplinar paso a paso con total rigor y claridad.\"\n\n--- DIAPOSITIVA 2 (Definición del Concepto Central) ---\n1. Propósito Didáctico: Definición del Concepto Central\n2. Título en Pantalla (64 pt): Concepto fundamental\n3. Subtítulo en Pantalla (36 pt): Cerámica, tejido, piedra pulida y metalurgia incipiente\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Escenario historico y fuentes primarias de Cerámica, tejido, piedra pulida y metalurgia incipiente\n6. Notas al Orador (Locución Continua Google Vids): \"Para comprender Innovaciones tecnológicas del Neolítico, establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación.\"\n\n--- DIAPOSITIVA 3 (Demostración Modelada) ---\n1. Propósito Didáctico: Demostración Modelada\n2. Título en Pantalla (64 pt): Modelamiento paso a paso\n3. Subtítulo en Pantalla (36 pt): Procedimiento de Innovaciones tecnológicas del Neolítico\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama multicausal: Factores economicos, sociales y culturales\n6. Notas al Orador (Locución Continua Google Vids): \"Observa cómo se aplica el procedimiento en este caso guiado: cada transformación responde a una justificación disciplinar explícita y visible.\"\n\n--- DIAPOSITIVA 4 (Prevención del Error Frecuente) ---\n1. Propósito Didáctico: Prevención del Error Frecuente\n2. Título en Pantalla (64 pt): Atención: Error habitual\n3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Contraste temporal: cambios y continuidades historicas\n6. Notas al Orador (Locución Continua Google Vids): \"Un error frecuente ocurre al descuidar el orden o saltarse un paso de la convención establecida. Siempre comprobamos cada dato antes de continuar.\"\n\n--- DIAPOSITIVA 5 (Comprobación del Resultado) ---\n1. Propósito Didáctico: Comprobación del Resultado\n2. Título en Pantalla (64 pt): Validación del resultado\n3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Interpretacion historica justificada a partir de evidencias\n6. Notas al Orador (Locución Continua Google Vids): \"Al contrastar el resultado con la situación inicial, confirmamos que la solución es consistente, rigurosa y responde plenamente a la pregunta.\"\n\n--- DIAPOSITIVA 6 (Estrategia Mnemotécnica) ---\n1. Propósito Didáctico: Estrategia Mnemotécnica\n2. Título en Pantalla (64 pt): Estrategia de pensamiento\n3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Estrategia de analisis historico: Contexto, causas y consecuencias\n6. Notas al Orador (Locución Continua Google Vids): \"Recuerda siempre la estrategia en tres pasos: identificar la información clave, aplicar la regla en orden y comprobar el resultado final.\"\n\n--- DIAPOSITIVA 7 (Síntesis y Regla de Oro) ---\n1. Propósito Didáctico: Síntesis y Regla de Oro\n2. Título en Pantalla (64 pt): Regla de Oro: Innovaciones tecnológicas del Neolítico\n3. Subtítulo en Pantalla (36 pt): Método disciplinar validado\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Infografía de síntesis: Regla historica de Innovaciones tecnológicas del Neolítico\n6. Notas al Orador (Locución Continua Google Vids): \"Ahora que dominas la regla fundamental y el procedimiento de Innovaciones tecnológicas del Neolítico, ¡vamos a demostrarlo en las actividades interactivas de la plataforma!\"\n\n",
-    "slides": [
+
+  formalization: {
+    title: 'La Revolución Tecnológica del Neolítico',
+    concept: 'Innovaciones Tecnológicas del Neolítico',
+    dileIntro: 'Ahora veremos el video explicativo. Comprenderemos en profundidad cómo la piedra pulida, la cerámica cocida, los telares y la metalurgia inicial transformaron a la sociedad.',
+    hazInstruction: 'Revisemos con atención la explicación formal y preparemos el cuaderno para registrar las ideas centrales.',
+    ideaClave: 'Las innovaciones tecnológicas neolíticas (piedra pulimentada, alfarería cocida, telar y metalurgia incipiente) resolvieron necesidades cruciales de alimentación, almacenamiento y modificación del espacio geográfico.',
+    slides: [
       {
-        "slideNumber": 1,
-        "tituloMomento": "Objetivo de la Lección",
-        "didacticPurpose": "Objetivo de la Lección",
-        "visualPrompt": "Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Cerámica, tejido, piedra pulida y metalurgia incipiente. High clarity, negative space for text. No text drawn by AI.",
-        "overlayTitle": "Objetivo de la lección",
-        "overlaySubtitle": "Dominar Innovaciones tecnológicas del Neolítico: Cerámica, tejido, piedra pulida y metalurgia incipiente",
-        "overlayText": "Concepto clave: Innovaciones tecnológicas del Neolítico",
-        "vectorialOverlayPptx": "Rótulo formal: OA 2 · Innovaciones tecnológicas del Neolítico",
-        "mathOverlayPptx": "Rótulo formal: OA 2 · Innovaciones tecnológicas del Neolítico",
-        "speakerNotes": "El objetivo de hoy es aprender a cerámica, tejido, piedra pulida y metalurgia incipiente, aplicando el método disciplinar paso a paso con total rigor y claridad.",
-        "palabrasAprox": 25,
-        "duracionSeg": 12
+        slideNumber: 1,
+        tituloMomento: "Objetivo de la Lección",
+        didacticPurpose: "Objetivo de la Lección",
+        visualPrompt: "Modern anime style 16:9. The boy and girl in a luminous study room, examining archaeological diagrams of Neolithic tools: polished axes, ceramic vessels, and loom parts. Clear negative space on top. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Objetivo de la Clase",
+        overlaySubtitle: "Comprender las tecnologías del Neolítico",
+        overlayText: "Objetivo: Comprender las tecnologías del Neolítico",
+        vectorialOverlayPptx: "Rótulo formal: OA 2 · Innovaciones técnicas de la Revolución Neolítica",
+        speakerNotes: "El objetivo de hoy es comprender cómo la piedra pulida, la cerámica, los telares y el cobre transformaron la subsistencia y la vida cotidiana neolítica.",
+        palabrasAprox: 24,
+        duracionSeg: 12
       },
       {
-        "slideNumber": 2,
-        "tituloMomento": "Definición del Concepto Central",
-        "didacticPurpose": "Definición del Concepto Central",
-        "visualPrompt": "Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.",
-        "overlayTitle": "Concepto fundamental",
-        "overlaySubtitle": "Cerámica, tejido, piedra pulida y metalurgia incipiente",
-        "overlayText": "Regla formal: Cerámica, tejido, piedra pulida y metalurgia incipiente",
-        "vectorialOverlayPptx": "Escenario historico y fuentes primarias de Cerámica, tejido, piedra pulida y metalurgia incipiente",
-        "mathOverlayPptx": "Escenario historico y fuentes primarias de Cerámica, tejido, piedra pulida y metalurgia incipiente",
-        "speakerNotes": "Para comprender Innovaciones tecnológicas del Neolítico, establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        slideNumber: 2,
+        tituloMomento: "Piedra Pulida y Medio Físico",
+        didacticPurpose: "Piedra Pulida y Medio Físico",
+        visualPrompt: "Modern anime style. The girl explaining a technical diagram showing how a polished stone axe cuts down trees to clear farmland, with micrographic comparison of stone surfaces. Clear lineart. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Hachas y Azadas Pulimentadas",
+        overlaySubtitle: "Modificar el paisaje para campos agrícolas",
+        overlayText: "Hachas y Azadas Pulimentadas: Modificar el paisaje para campos agrícolas",
+        vectorialOverlayPptx: "Transformación geográfica: Deforestación controlada de bosques y preparación de surcos agrícolas",
+        speakerNotes: "La piedra pulida permitió talar bosques y remover suelos duros. Gracias a hachas y azadas resistentes abrieron campos de cultivo permanentes en los valles.",
+        palabrasAprox: 23,
+        duracionSeg: 13
       },
       {
-        "slideNumber": 3,
-        "tituloMomento": "Demostración Modelada",
-        "didacticPurpose": "Demostración Modelada",
-        "visualPrompt": "Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.",
-        "overlayTitle": "Modelamiento paso a paso",
-        "overlaySubtitle": "Procedimiento de Innovaciones tecnológicas del Neolítico",
-        "overlayText": "Modelamiento paso a paso de Innovaciones tecnológicas del Neolítico",
-        "vectorialOverlayPptx": "Diagrama multicausal: Factores economicos, sociales y culturales",
-        "mathOverlayPptx": "Diagrama multicausal: Factores economicos, sociales y culturales",
-        "speakerNotes": "Observa cómo se aplica el procedimiento en este caso guiado: cada transformación responde a una justificación disciplinar explícita y visible.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        slideNumber: 3,
+        tituloMomento: "Alfarería y Conservación",
+        didacticPurpose: "Alfarería y Conservación",
+        visualPrompt: "Modern anime style. Close-up diagram of clay pottery being fired, showing water impermeability and protection against mice and moisture. The two explorers testing a ceramic jar. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Cerámica y Almacenamiento",
+        overlaySubtitle: "Protección de granos y cocción de guisos",
+        overlayText: "Cerámica y Almacenamiento: Protección de granos y cocción de guisos",
+        vectorialOverlayPptx: "Beneficio doble: 1. Almacenamiento impermeable y hermético · 2. Cocción hervida de legumbres y cereales",
+        speakerNotes: "La cerámica cocida aportó dos ventajas decisivas: ollas que resistían el fuego para hervir sopas y tinajas herméticas que protegían el grano de la humedad.",
+        palabrasAprox: 24,
+        duracionSeg: 13
       },
       {
-        "slideNumber": 4,
-        "tituloMomento": "Prevención del Error Frecuente",
-        "didacticPurpose": "Prevención del Error Frecuente",
-        "visualPrompt": "Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.",
-        "overlayTitle": "Atención: Error habitual",
-        "overlaySubtitle": "Confusión común que debemos evitar",
-        "overlayText": "Atención: Error habitual a evitar",
-        "vectorialOverlayPptx": "Contraste temporal: cambios y continuidades historicas",
-        "mathOverlayPptx": "Contraste temporal: cambios y continuidades historicas",
-        "speakerNotes": "Un error frecuente ocurre al descuidar el orden o saltarse un paso de la convención establecida. Siempre comprobamos cada dato antes de continuar.",
-        "palabrasAprox": 27,
-        "duracionSeg": 13
+        slideNumber: 4,
+        tituloMomento: "La Revolución Textil",
+        didacticPurpose: "La Revolución Textil",
+        visualPrompt: "Modern anime style. The boy illustrating a vertical loom with hanging clay loom-weights, showing warp and weft fibers interlacing smoothly. Clean lighting. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Telares y Fibras Naturales",
+        overlaySubtitle: "Lino y lana para vestimentas ligeras",
+        overlayText: "Telares y Fibras Naturales: Lino y lana para vestimentas ligeras",
+        vectorialOverlayPptx: "Tecnología textil: Uso de husos de hilar y telares para crear tejidos suaves, higiénicos y resistentes",
+        speakerNotes: "Los telares transformaron la vestimenta. Al hilar lana de oveja y fibras de lino, elaboraron mantas y túnicas ligeras, dejando atrás las pieles rígidas del Paleolítico.",
+        palabrasAprox: 25,
+        duracionSeg: 13
       },
       {
-        "slideNumber": 5,
-        "tituloMomento": "Comprobación del Resultado",
-        "didacticPurpose": "Comprobación del Resultado",
-        "visualPrompt": "Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.",
-        "overlayTitle": "Validación del resultado",
-        "overlaySubtitle": "Comprobar que la respuesta es consistente",
-        "overlayText": "Comprobación y validación del resultado",
-        "vectorialOverlayPptx": "Interpretacion historica justificada a partir de evidencias",
-        "mathOverlayPptx": "Interpretacion historica justificada a partir de evidencias",
-        "speakerNotes": "Al contrastar el resultado con la situación inicial, confirmamos que la solución es consistente, rigurosa y responde plenamente a la pregunta.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        slideNumber: 5,
+        tituloMomento: "Metalurgia Temprana del Cobre",
+        didacticPurpose: "Metalurgia Temprana del Cobre",
+        visualPrompt: "Modern anime style. An artisan martillando cold native copper nuggets into thin needles, awls, and shiny green-blue beads on an anvil stone. The two 13-year-olds watching with interest. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Los Primeros Metales",
+        overlaySubtitle: "Cobre martillado para herramientas precisas",
+        overlayText: "Los Primeros Metales: Cobre martillado para herramientas precisas",
+        vectorialOverlayPptx: "Transición calcolítica: De la piedra trabajada al martillado en frío del cobre nativo",
+        speakerNotes: "A fines del período apareció el cobre nativo. Martillándolo sin fundir crearon agujas finas, punzones para cuero y cuentas de adorno con brillo metálico.",
+        palabrasAprox: 23,
+        duracionSeg: 13
       },
       {
-        "slideNumber": 6,
-        "tituloMomento": "Estrategia Mnemotécnica",
-        "didacticPurpose": "Estrategia Mnemotécnica",
-        "visualPrompt": "Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.",
-        "overlayTitle": "Estrategia de pensamiento",
-        "overlaySubtitle": "1. Identificar · 2. Aplicar · 3. Comprobar",
-        "overlayText": "Estrategia mental: Identificar, Aplicar y Verificar",
-        "vectorialOverlayPptx": "Estrategia de analisis historico: Contexto, causas y consecuencias",
-        "mathOverlayPptx": "Estrategia de analisis historico: Contexto, causas y consecuencias",
-        "speakerNotes": "Recuerda siempre la estrategia en tres pasos: identificar la información clave, aplicar la regla en orden y comprobar el resultado final.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        slideNumber: 6,
+        tituloMomento: "Atención al Error Común",
+        didacticPurpose: "Atención al Error Común",
+        visualPrompt: "Modern anime style. The girl contrasting an image of crude stone chipping with a smooth polished stone axe, pointing out that 'Neolítico' significa piedra pulida. Clear visual. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Error: No Solo Piedras",
+        overlaySubtitle: "La tecnología abarcó barro fuego y tejidos",
+        overlayText: "Error: No Solo Piedras: La tecnología abarcó barro fuego y tejidos",
+        vectorialOverlayPptx: "Rigor conceptual: El Neolítico no se reduce a la piedra; combinó cerámica, textiles, agricultura y metales",
+        speakerNotes: "Un error habitual es creer que la tecnología neolítica fue solo pulir piedras. En verdad fue un sistema integrado de alfarería, hornos, textilería y herramientas.",
+        palabrasAprox: 24,
+        duracionSeg: 13
       },
       {
-        "slideNumber": 7,
-        "tituloMomento": "Síntesis y Regla de Oro",
-        "didacticPurpose": "Síntesis y Regla de Oro",
-        "visualPrompt": "Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.",
-        "overlayTitle": "Regla de Oro: Innovaciones tecnológicas del Neolítico",
-        "overlaySubtitle": "Método disciplinar validado",
-        "overlayText": "Síntesis: Innovaciones tecnológicas del Neolítico",
-        "vectorialOverlayPptx": "Infografía de síntesis: Regla historica de Innovaciones tecnológicas del Neolítico",
-        "mathOverlayPptx": "Infografía de síntesis: Regla historica de Innovaciones tecnológicas del Neolítico",
-        "speakerNotes": "Ahora que dominas la regla fundamental y el procedimiento de Innovaciones tecnológicas del Neolítico, ¡vamos a demostrarlo en las actividades interactivas de la plataforma!",
-        "palabrasAprox": 25,
-        "duracionSeg": 12
+        slideNumber: 7,
+        tituloMomento: "Síntesis y Regla de Oro",
+        didacticPurpose: "Síntesis y Regla de Oro",
+        visualPrompt: "Modern anime style. The two 13-year-olds smiling proudly with their open notebooks before an infographic linking: Piedra pulida -> Cerámica -> Telar -> Cobre. Clean negative space. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Regla de Oro Tecnológica",
+        overlaySubtitle: "Herramientas que transformaron la subsistencia",
+        overlayText: "Regla de Oro: Herramientas que transformaron la subsistencia",
+        vectorialOverlayPptx: "Síntesis conceptual: La innovación tecnológica amplió la productividad y el bienestar material de las comunidades",
+        speakerNotes: "Cada innovación tecnológica resolvió una necesidad vital de la aldea: limpiar campos, cocinar alimentos, abrigar a las familias y asegurar reservas para el futuro.",
+        palabrasAprox: 22,
+        duracionSeg: 13
       }
     ]
   },
-  "postQuestions": [
+
+  postQuestions: [
     {
-      "context": "Contexto Temporal, Espacial y Neolítico",
-      "question": "¿De qué manera el entorno geográfico y la época condicionaron el desarrollo de 'Neolítico' en este proceso histórico?",
-      "expected": "Relacionar las características del espacio geográfico con la organización social y el desarrollo de Neolítico.",
-      "success": "¡Muy bien! Ubicaste con precisión las coordenadas temporales y espaciales del proceso.",
-      "support": "Observa las referencias del mapa y la cronología: ¿qué recursos naturales o rutas influían en sus decisiones?",
-      "reveal": "El entorno geográfico y las condiciones de la época condicionaron profundamente los modos de vida y las instituciones humanas.",
-      "studentReveal": "La influencia del espacio geográfico y el tiempo histórico en Neolítico."
+      context: 'El Rol de la Cerámica en la Dieta y Conservación',
+      question: 'En el video analizamos que la cerámica cocida cumplió dos funciones vitales: cocinar y almacenar. ¿Por qué ambas funciones fueron decisivas para que una aldea sobreviviera todo el año?',
+      expected: 'Porque cocinar en ollas permitió hacer comestibles cereales y legumbres duros mediante caldos nutritivos, y almacenar en tinajas protegió el grano de la lluvia y roedores para el invierno.',
+      success: '¡Excelente análisis integral! Uniste la nutrición familiar con la seguridad alimentaria en una sola explicación fundamentada.',
+      support: 'Fíjate en los dos momentos: cuando comes todos los días necesitas cocinar el grano, y cuando termina la cosecha necesitas guardarlo sin que se pudra.',
+      reveal: 'La cerámica aseguró la digestibilidad diaria mediante la cocción de alimentos y garantizó reservas estables protegidas de plagas y humedad.',
+      studentReveal: 'Porque permitió hervir alimentos duros para comer mejor y guardar granos secos protegidos de ratones y humedad.'
     },
     {
-      "context": "Pensamiento Crítico y Prevención del Presentismo",
-      "question": "Para evitar el error común de 'Confundir la simultaneidad de procesos en distintas regiones con un origen único y lineal de la agricultura.', ¿qué debemos considerar al analizar las decisiones tomadas por los actores históricos?",
-      "expected": "Evaluar las decisiones históricas desde la mentalidad, recursos y cosmovisión propia de la época estudiada.",
-      "success": "¡Excelente empatía histórica! Analizaste el pasado desde su propio contexto y no desde los prejuicios actuales.",
-      "support": "Piensa qué información y qué valores tenían en ese siglo: ¿podían prever las consecuencias de la misma forma que nosotros hoy?",
-      "reveal": "El rigor histórico exige comprender las razones de los protagonistas en su propio tiempo, evitando anacronismos.",
-      "studentReveal": "La comprensión del pasado desde el contexto propio de sus protagonistas."
+      context: 'La Piedra Pulimentada y la Agricultura',
+      question: '¿Por qué la agricultura extensiva en valles boscosos no habría sido posible sin la previa invención del hacha de piedra pulimentada?',
+      expected: 'Porque se requerían hachas sólidas y resistentes a impactos fuertes para talar árboles densos, desmalezar terrenos y despejar claros para sembrar campos agrícolas.',
+      success: '¡Muy bien! Reconociste que modificar el espacio geográfico requirió herramientas líticas capaces de talar bosques sin fracturarse.',
+      support: 'Piensa en el terreno natural: antes de sembrar, los valles estaban llenos de árboles y raíces duras que había que cortar.',
+      reveal: 'Las hachas pulimentadas permitieron talar bosques y despejar parcelas de cultivo, transformando el paisaje natural en espacio agrícola.',
+      studentReveal: 'Porque se necesitaban hachas firmes que no se rompieran para cortar árboles y abrir espacio limpio para sembrar.'
     }
   ],
-  "practice": [
+
+  practice: [
     {
-      "context": "Ejercicio 1 en Cuaderno: Análisis de Fuentes y Cuadro Comparativo",
-      "question": "Abre tu cuaderno de notas. Escribe como título: 'Innovaciones tecnológicas del Neolítico'. Con base en la actividad (Crea una línea de tiempo física en el aula, ordenando los procesos clave del Neo...), dibuja un cuadro de doble entrada: en una columna registra los antecedentes geográficos y sociales, y en la otra explica el impacto de 'Neolítico'.",
-      "expected": "Cuadro comparativo en el cuaderno con antecedentes históricos y análisis fundamentado del impacto de concepto.",
-      "success": "¡Excelente análisis en tu cuaderno! Has sintetizado las múltiples causas con claridad y orden.",
-      "support": "Revisa la línea de tiempo en pantalla: identifica qué ocurrió antes y qué transformaciones trajo este acontecimiento.",
-      "reveal": "El cuadro comparativo permite distinguir causas estructurales de consecuencias inmediatas en el proceso histórico.",
-      "studentReveal": "Cuadro comparativo completo en el cuaderno con causas y consecuencias analizadas."
+      context: 'Actividad en Cuaderno: Cuadro de Innovaciones Tecnológicas',
+      question: 'Abre tu cuaderno de notas de Historia. Escribe como título: "Innovaciones Tecnológicas del Neolítico". Construye una tabla de tres columnas: 1. "Tecnología" (Piedra Pulida, Cerámica Cocida, Telar, Cobre Martillado), 2. "Materiales y Técnica", y 3. "Impacto en la Vida de la Aldea". Completa cada fila con los datos analizados hoy.',
+      expected: 'Tabla comparativa completa en el cuaderno con las cuatro tecnologías, sus materiales y su impacto en la vida comunitaria.',
+      success: '¡Excelente tabla en tu cuaderno! Has clasificado los inventos neolíticos con precisión conceptual y orden impecable.',
+      support: 'Revisa las diapositivas de la lección: asocia piedra pulida con talar y moler, cerámica con cocinar y guardar, telar con vestimenta y cobre con punzones.',
+      reveal: 'La tabla sintetiza cómo el desarrollo técnico diversificó las capacidades productivas de la sociedad neolítica.',
+      studentReveal: 'Tabla completa en el cuaderno con las cuatro innovaciones tecnológicas, sus materiales y su impacto comunitario.'
     },
     {
-      "context": "Ejercicio 2 en Cuaderno: Reflexión de Ciudadanía y Continuidad",
-      "question": "En tu cuaderno, responde con un breve texto argumentativo: ¿Qué elementos de 'Neolítico' continúan presentes en nuestra sociedad actual y qué aspectos han cambiado sustancialmente?",
-      "expected": "Reflexión argumentada identificando elementos de cambio y continuidad histórica entre el pasado y el presente.",
-      "success": "¡Muy buena argumentación! Conectaste el aprendizaje histórico con la realidad ciudadana actual.",
-      "support": "Piensa en nuestras leyes, ciudades o costumbres: ¿qué heredamos de esa civilización o proceso?",
-      "reveal": "La historia nos permite comprender el presente al identificar las raíces de nuestras instituciones contemporáneas.",
-      "studentReveal": "Reflexión en el cuaderno sobre continuidades y transformaciones hacia el presente."
+      context: 'Análisis de Continuidad Histórica: La Huella en el Presente',
+      question: 'En tu cuaderno, responde brevemente: ¿Qué herramientas o utensilios de los inventados en el Neolítico (ollas de cocina, telas de ropa, hachas de corte, harina molida) seguimos utilizando hoy y cómo han cambiado sus materiales?',
+      expected: 'Texto argumentativo que identifique continuidades funcionales (ollas, ropa tejida, harina) reconociendo los cambios de materiales (metal, plástico, fibras sintéticas).',
+      success: '¡Brillante reflexión de cambio y continuidad histórica! Conectaste el pasado neolítico con los objetos de tu vida cotidiana.',
+      support: 'Mira a tu alrededor: tu ropa, las ollas de tu cocina o el pan del desayuno provienen de inventos neolíticos modernizados.',
+      reveal: 'Identificar continuidades históricas permite comprender que las bases de nuestra cultura material nacieron en las aldeas neolíticas.',
+      studentReveal: 'Texto en el cuaderno explicando que seguimos usando ollas, telares y harina, pero hoy son de metal, plástico o máquinas modernas.'
     }
   ],
-  "mini": [
+
+  summaryIdeas: [
+    ['Piedra Pulida', 'El pulido con arena abrasiva creó hachas resistentes para talar bosques y molinos de mano para elaborar harina.'],
+    ['Alfarería y Hornos', 'La cerámica impermeable permitió hervir caldos nutritivos y almacenar granos secos protegidos de humedad y roedores.'],
+    ['Telares y Cobre', 'El hilado de lana y lino reemplazó a las pieles pesadas, mientras el cobre martillado anticipó la metalurgia.']
+  ],
+
+  mini: [
     {
-      "id": "q_1",
-      "q": "Al estudiar el proceso de Innovaciones tecnológicas del Neolítico, ¿cuál de las siguientes opciones describe con rigor histórico el rol de 'Neolítico'?",
-      "options": [
-        "Constituyó un elemento articulador que permitió a la sociedad responder a sus necesidades de organización y territorio",
-        "Fue un acontecimiento completamente aislado que no tuvo ninguna relación con el entorno social ni geográfico",
-        "Ocurrió por decisión exclusiva de un único individuo sin influencia de la comunidad ni de la época"
+      id: 'q_1',
+      q: '¿Cuál fue la ventaja técnica decisiva que ofreció la piedra pulida frente a las herramientas de piedra toscamente talladas del Paleolítico?',
+      options: [
+        'A) La piedra pulida flotaba sola sobre los ríos para transportar personas sin botes.',
+        'B) Al frotar la piedra con arena y agua se eliminaban fisuras internas, logrando filos lisos que resistían golpes fuertes sin quebrarse.',
+        'C) Permitía disparar rayos de fuego al frotarla con ramas secas.',
+        'D) Se volvía invisible cuando entraban enemigos a la aldea.'
       ],
-      "correct": "Constituyó un elemento articulador que permitió a la sociedad responder a sus necesidades de organización y territorio",
-      "fixExplain": "Los procesos históricos son colectivos y multicausales; Neolítico responde a dinámicas sociales y territoriales profundas.",
-      "concept": "Innovaciones tecnológicas del Neolítico",
-      "explain": "Los procesos históricos son colectivos y multicausales; Neolítico responde a dinámicas sociales y territoriales profundas.",
-      "dileReview": "Pídele que señale qué fuentes o evidencias históricas analizadas hoy justifican esta afirmación."
+      correct: 'B) Al frotar la piedra con arena y agua se eliminaban fisuras internas, logrando filos lisos que resistían golpes fuertes sin quebrarse.',
+      fixExplain: 'El pulido compactaba la superficie de la herramienta lítica, otorgándole gran resistencia mecánica para talar maderas duras.',
+      concept: 'Ventajas de la Piedra Pulimentada'
     },
     {
-      "id": "q_2",
-      "q": "Para analizar críticamente este proceso sin caer en el error de 'Confundir la simultaneidad de procesos en distintas regiones con un origen único y lineal de la agricultura.', ¿qué actitud metodológica debemos adoptar?",
-      "options": [
-        "Evaluar las decisiones históricas considerando el contexto, las creencias y los recursos disponibles en su época",
-        "Condenar inmediatamente las acciones del pasado aplicando únicamente los estándares de la sociedad actual",
-        "Ignorar las fuentes primarias y basarse en opiniones espontáneas sin respaldo documental"
+      id: 'q_2',
+      q: '¿Por qué la invención de vasijas de cerámica cocida en hornos transformó radicalmente la nutrición de las comunidades aldeanas?',
+      options: [
+        'A) Porque la arcilla producía azúcar de forma mágica en el interior de los platos.',
+        'B) Porque las vasijas reemplazaron a las semillas de trigo como alimento principal.',
+        'C) Porque permitió cocinar caldos, sopas y papillas nutritivas al fuego, ablandando granos duros y facilitando la digestión de niños y ancianos.',
+        'D) Porque las ollas de barro enfriaban la comida a temperaturas bajo cero en verano.'
       ],
-      "correct": "Evaluar las decisiones históricas considerando el contexto, las creencias y los recursos disponibles en su época",
-      "fixExplain": "El presentismo distorsiona la comprensión histórica; la empatía histórica permite entender las motivaciones reales de los actores del pasado.",
-      "concept": "Innovaciones tecnológicas del Neolítico",
-      "explain": "El presentismo distorsiona la comprensión histórica; la empatía histórica permite entender las motivaciones reales de los actores del pasado.",
-      "dileReview": "Pregúntale: ¿por qué es injusto juzgar a personas del pasado como si tuvieran la tecnología y valores de hoy?"
+      correct: 'C) Porque permitió cocinar caldos, sopas y papillas nutritivas al fuego, ablandando granos duros y facilitando la digestión de niños y ancianos.',
+      fixExplain: 'Cocer legumbres y cereales en ollas sobre el fuego permitió una asimilación calórica y proteica mucho más eficiente.',
+      concept: 'Impacto Nutricional de la Cerámica'
     },
     {
-      "id": "q_3",
-      "q": "¿Qué importancia tiene para la formación ciudadana actual el análisis de Cerámica, tejido, piedra pulida y metalurgia incipiente?",
-      "options": [
-        "Permite valorar los derechos humanos, la participación democrática y la diversidad cultural al comprender su evolución histórica",
-        "Demuestra que el pasado no guarda ninguna relación con los problemas ni desafíos de la sociedad moderna",
-        "Enseña que las leyes e instituciones humanas son inmutables y no han cambiado a lo largo de los siglos"
+      id: 'q_3',
+      q: '¿Qué avance representó la invención del telar para la vestimenta humana en comparación con el uso exclusivo de pieles de animales cazados?',
+      options: [
+        'A) Permitió confeccionar prendas ligeras, flexibles y lavables a partir de fibras vegetales de lino y lana esquilada de ovejas.',
+        'B) Obligó a todos los habitantes a vestir pesadas armaduras de hierro durante todo el año.',
+        'C) Hizo que la ropa durara exactamente un solo día antes de desarmarse.',
+        'D) Impidió que las personas salieran de sus casas debido al peso del telar.'
       ],
-      "correct": "Permite valorar los derechos humanos, la participación democrática y la diversidad cultural al comprender su evolución histórica",
-      "fixExplain": "El aprendizaje histórico fortalece el juicio cívico y la convivencia democrática mediante el análisis crítico del pasado.",
-      "concept": "Innovaciones tecnológicas del Neolítico",
-      "explain": "El aprendizaje histórico fortalece el juicio cívico y la convivencia democrática mediante el análisis crítico del pasado.",
-      "dileReview": "Pídele que mencione cómo lo aprendido hoy fortalece su rol como ciudadano responsable en su comunidad."
+      correct: 'A) Permitió confeccionar prendas ligeras, flexibles y lavables a partir de fibras vegetales de lino y lana esquilada de ovejas.',
+      fixExplain: 'El tejido textil mejoró la higiene, el confort térmico y la ligereza de la vestimenta neolítica.',
+      concept: 'La Textilería Neolítica'
     }
   ],
-  "recovery": [
+
+  recovery: [
     {
-      "title": "Recuperación Histórica: Innovaciones tecnológicas del Neolítico",
-      "explain": "Al analizar Cerámica, tejido, piedra pulida y metalurgia incipiente, recuerda situar siempre los acontecimientos en su espacio geográfico y comprender Neolítico dentro de su época.",
-      "q": "¿Cuál es el principio metodológico central para interpretar un hecho histórico en Innovaciones tecnológicas del Neolítico?",
-      "options": [
-        "Analizar el hecho a partir de sus fuentes históricas y el contexto propio de Neolítico",
-        "Memorizar fechas aisladas sin considerar las causas ni las consecuencias del proceso"
+      title: 'Recuperación Histórica: Las Tecnologías Neolíticas',
+      explain: 'Las herramientas del Neolítico respondieron a las nuevas necesidades del modo de vida sedentario. Para abrir campos talaron árboles con hachas pulidas; para comer mejor cocinaron en ollas de barro; para guardar grano usaron vasijas selladas; y para vestirse hilaron lana y lino.',
+      q: '¿Cuál de las siguientes relaciones entre herramienta neolítica y su función histórica es correcta?',
+      options: [
+        'A) Hacha de piedra pulida: navegar océanos profundos en busca de metales.',
+        'B) Telar vertical: guardar agua de lluvia durante las sequías.',
+        'C) Vasija de cerámica cocida: disparar flechas en batallas contra animales.',
+        'D) Molino de mano de piedra: triturar granos duros de trigo para convertirlos en harina digestible.'
       ],
-      "correct": "Analizar el hecho a partir de sus fuentes históricas y el contexto propio de Neolítico",
-      "correctText": "¡Correcto! Comprender el contexto histórico es la base del pensamiento crítico en Ciencias Sociales.",
-      "fixText": "Recuerda que la historia explica procesos humanos: busca siempre las causas y el entorno donde ocurrieron."
+      correct: 'D) Molino de mano de piedra: triturar granos duros de trigo para convertirlos en harina digestible.',
+      correctText: '¡Correcto! El molino barquiforme de mano fue esencial para moler los cereales cosechados y elaborar pan.',
+      fixText: 'Recuerda que el molino de mano permitía moler granos de trigo duros para producir harina y alimentar a la comunidad.'
     }
-  ],
-  "summaryIdeas": [
-    [
-      "1 · Concepto central",
-      "Identificamos los elementos y el punto de partida del análisis."
-    ],
-    [
-      "2 · Interpretación del contexto",
-      "Cerámica, tejido, piedra pulida y metalurgia incipiente"
-    ],
-    [
-      "3 · Síntesis formal",
-      "Los procesos históricos sobre Innovaciones tecnológicas del Neolítico responden a múltiples causas interconectadas, donde 'Neolítico' explica cómo las sociedades resolvieron sus desafíos de convivencia y subsistencia."
-    ]
-  ],
-  "interactive": {
-    "type": "timeline",
-    "title": "Línea de Tiempo Histórica: De la Hominización a la Aldea",
-    "description": "Organizador cronológico de la revolución agrícola y el modo de vida."
-  },
-  "summaryText": "Hoy dominaste Cerámica, tejido, piedra pulida y metalurgia incipiente con pensamiento crítico y fuentes históricas en tu cuaderno.",
-  "reasoning": {
-    "title": "Comparemos dos situaciones",
-    "dileIntro": "Antes de resumir, comparemos dos situaciones. No necesitas repetir una frase exacta: lo importante es que expliques la idea con tus propias palabras.",
-    "question": "Al comparar dos situaciones de Innovaciones tecnológicas del Neolítico, ¿cómo influye el contexto en la interpretación de los datos?",
-    "expectedAnswer": "El significado o resultado depende de las condiciones del contexto y del propósito de la situación.",
-    "context1": {
-      "label": "SITUACIÓN 1",
-      "value": "Ejercicio 1 en Cuaderno: Análisis de Fuentes y Cuadro Comparativo",
-      "desc": "Abre tu cuaderno de notas. Escribe como título: 'Innovaciones tecnológicas del Neolítico'. Con base en la actividad (Crea una línea de tiempo física en el aula, ordenando los procesos clave del Neo...), dibuja un cuadro de doble entrada: en una columna registra los antecedentes geográficos y sociales, y en la otra explica el impacto de 'Neolítico'."
-    },
-    "context2": {
-      "label": "SITUACIÓN 2",
-      "value": "Ejercicio 2 en Cuaderno: Reflexión de Ciudadanía y Continuidad",
-      "desc": "En tu cuaderno, responde con un breve texto argumentativo: ¿Qué elementos de 'Neolítico' continúan presentes en nuestra sociedad actual y qué aspectos han cambiado sustancialmente?"
-    },
-    "successFeedback": "¡Excelente razonamiento! Reconociste que el contexto orienta la interpretación de los datos.",
-    "supportFeedback": "Observa cada situación por separado y explica qué elementos las distinguen.",
-    "revealText": "Cada situación tiene un propósito particular y los datos se interpretan según las condiciones del problema."
-  },
-  "challenge": {
-    "title": "Desafío breve: Innovaciones tecnológicas del Neolítico",
-    "question": "En Historia, Geografía y Ciencias Sociales, ¿qué diferencia observas entre identificar los datos y aplicar el procedimiento? Explica tu razonamiento.",
-    "expectedAnswer": "Identificar los datos determina el punto de partida; aplicar el procedimiento permite construir la respuesta.",
-    "item1": {
-      "label": "Datos iniciales",
-      "tag": "Punto de partida"
-    },
-    "item2": {
-      "label": "Procedimiento",
-      "tag": "Aplicación"
-    },
-    "successFeedback": "¡Muy bien! Distinguiste claramente los momentos del análisis.",
-    "supportFeedback": "Revisémoslo juntos: primero identificamos la información disponible y luego aplicamos el método correspondiente."
-  },
-  "strategy": {
-    "title": "Cómo analizar una situación",
-    "dileIntro": "Cuando enfrentes un problema en Historia, Geografía y Ciencias Sociales, puedes seguir estos tres pasos clave:",
-    "steps": [
-      {
-        "number": 1,
-        "title": "Identifica",
-        "desc": "¿Cuáles son los datos clave y cuál es la pregunta central?"
-      },
-      {
-        "number": 2,
-        "title": "Aplica",
-        "desc": "¿Qué regla o método disciplinar corresponde utilizar?"
-      },
-      {
-        "number": 3,
-        "title": "Comprueba",
-        "desc": "¿La conclusión o resultado responde con coherencia al problema?"
-      }
-    ]
-  },
-  "closure": {
-    "congratulations": "¡Felicitaciones! Hoy completaste con éxito la clase \"Innovaciones tecnológicas del Neolítico\". Has demostrado constancia y rigor en tu aprendizaje.",
-    "nextClassPreview": "En la próxima sesión continuaremos profundizando los aprendizajes de Historia, Geografía y Ciencias Sociales."
-  },
-  "paso8_cierre": {
-    "preguntaSintesis": "En tus propias palabras, ¿qué lección o reflexión para el presente nos deja el estudio de Neolítico en Innovaciones tecnológicas del Neolítico?",
-    "metacognicion": "¿Qué estrategia te ayudó más a comprender la época estudiada: analizar el mapa o ponerte en el lugar de los protagonistas?",
-    "celebracion": "¡Gran trabajo hoy! Has dominado la Clase 4. ¡Nos vemos en la próxima expedición histórica!"
-  }
+  ]
 };

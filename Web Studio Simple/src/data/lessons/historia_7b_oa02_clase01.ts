@@ -5,23 +5,23 @@ export const HISTORIA_7B_OA02_CLASE01: LessonData = {
     grade: '7° Básico',
     subject: 'Historia, Geografía y Ciencias Sociales',
     oaCode: 'OA 2',
-    oaTitle: 'El proceso de hominización y las primeras sociedades humanas',
+    oaTitle: 'Procesos de transformación de la vida humana en el Neolítico',
     lessonNumber: 1,
     totalLessonsInOa: 6,
-    lessonTitle: 'El fin del nomadismo y el surgimiento agrícola',
+    lessonTitle: 'La transición al Neolítico y orígenes agrícolas',
     durationMinutes: 30,
-    nextLessonTitle: 'La domesticación de especies en la Media Luna Fértil'
+    nextLessonTitle: 'Domesticación de plantas y animales en el Creciente Fértil'
   },
 
   prep: {
-    adultObjective: 'Acompañar al estudiante a comprender la gran transformación del Paleolítico al Neolítico: cómo el descubrimiento de la agricultura y la domesticación de animales transformó a los grupos humanos nómades en comunidades sedentarias.',
-    routeToday: 'De la caza y recolección nómade a las primeras aldeas sedentarias productoras de alimentos.',
+    adultObjective: 'Acompañar al estudiante a comprender la transición del Paleolítico al Neolítico como un proceso gradual, multicausal y en mosaico, reconociendo diversos centros independientes de domesticación en el mundo y superando la idea de un cambio súbito o lineal.',
+    routeToday: 'De la caza y recolección a los múltiples centros de producción agrícola en el mundo.',
     mentorReminder: 'Sigue las indicaciones en pantalla paso a paso. Lee únicamente los recuadros con la etiqueta DILE o PREGÚNTALE en voz alta.',
     reminders: [
       'Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.',
       'No leas los recuadros de AYUDA PEDAGÓGICA ni CLIMA EMOCIONAL; son guías exclusivas para ti.',
-      'Pídele que observe la línea de tiempo interactiva con las eras históricas en la pantalla.',
-      'Asegura que comprenda la diferencia central: los nómadas buscan comida; los sedentarios la producen y almacenan.',
+      'Pídele que observe el mapa interactivo de orígenes agrícolas en la pantalla.',
+      'Asegura que comprenda que la agricultura no surgió de un día para otro ni en un solo lugar.',
       'Ten a mano su cuaderno de Historia y Ciencias Sociales para los diagramas y notas.'
     ],
     emotionalTip: 'Crea un clima de exploración histórica: "En historia no memorizamos fechas sueltas: comprendemos cómo las personas resolvieron sus necesidades básicas para construir nuestra civilización".'
@@ -29,440 +29,385 @@ export const HISTORIA_7B_OA02_CLASE01: LessonData = {
 
   route: {
     blocks: [
-      { id: 'b1', number: '01', title: 'Historia y Geografía', subtitle: 'Del nomadismo a la aldea', color: 'yellow' },
-      { id: 'b2', number: '02', title: 'Exploración', subtitle: 'Línea de tiempo histórica', color: 'orange' },
+      { id: 'b1', number: '01', title: 'Historia y Geografía', subtitle: 'Transición y cambio en mosaico', color: 'yellow' },
+      { id: 'b2', number: '02', title: 'Exploración', subtitle: 'Línea de tiempo y mapa mundial', color: 'orange' },
       { id: 'b3', number: '03', title: 'Práctica', subtitle: 'Comparación y cuadro en cuaderno', color: 'teal' },
       { id: 'b4', number: '04', title: 'Evaluación', subtitle: 'Miniquiz formativo y síntesis', color: 'navy' }
     ],
     keyQuestions: [
-      { label: '¿Qué causó el fin del nomadismo?', sub: 'La agricultura y la ganadería permitieron tener comida estable.' },
-      { label: '¿Dónde ocurrió este cambio?', sub: 'En el Creciente Fértil (Medio Oriente) y valles fluviales.' }
+      { label: '¿Cómo comenzó la agricultura?', sub: 'Un proceso gradual de observación y adaptación ambiental.' },
+      { label: '¿Dónde ocurrió este cambio?', sub: 'En múltiples regiones independientes del planeta.' }
     ],
-    dileIntro: 'Hoy comenzaremos la primera clase de Historia, Geografía y Ciencias Sociales para 7° Básico: "El fin del nomadismo y el surgimiento agrícola".',
-    dileObjective: 'Comprenderemos por qué la invención de la agricultura en la Revolución Neolítica cambió para siempre la forma de vivir de la humanidad.'
+    dileIntro: 'Hoy comenzaremos la primera clase de Historia, Geografía y Ciencias Sociales para 7° Básico: "La transición al Neolítico y orígenes agrícolas".',
+    dileObjective: 'Comprender que la agricultura y la domesticación fueron procesos graduales y regionalmente diversos.'
   },
 
   situation: {
-    dilePrompt: 'Hoy en Historia y Ciencias Sociales nos situamos en "El fin del nomadismo y el surgimiento agrícola". En la pantalla puedes ver la línea de tiempo interactiva. Observa la etapa de la "Revolución Neolítica" (hace unos 10.000 años a.C.). ¿Qué descubrimiento fundamental permitió a las familias humanas dejar de trasladarse todo el tiempo y fundar las primeras aldeas sedentarias?',
-    expectedAnswer: 'El estudiante debe señalar la agricultura (cultivo de plantas como trigo y cebada) y la domesticación de animales (ganadería), lo que les permitió producir y almacenar su propio alimento en un lugar fijo.',
-    socraticHint: 'Fíjate en el icono de la espiga de trigo en la pantalla: ¿de dónde sacaban la comida los nómadas y qué empezaron a hacer en el Neolítico para tener alimento sin tener que viajar?',
-    emotionalTip: 'Invítalo a valorar el ingenio de nuestros antepasados: cada alimento que hoy compramos o comemos proviene de este trascendental invento neolítico.',
+    dilePrompt: 'Observa la línea de tiempo en pantalla. Al terminar la última glaciación, hace unos 10.000 a 12.000 años (aprox. 10.000 a 8.000 a.C.), el clima terrestre se volvió más cálido y templado. ¿Crees que las bandas humanas dejaron de cazar de un día para otro al descubrir la primera planta cultivada, o fue una transición lenta donde coexistieron varios modos de vida?',
+    expectedAnswer: 'El estudiante debe señalar que fue una transición gradual y diversa: continuaron cazando y recolectando mientras aprendían lentamente a cuidar y sembrar plantas en distintos lugares.',
+    socraticHint: 'Piensa en lo que ocurre cuando alguien aprende algo nuevo: ¿abandona de golpe todo lo que hacía antes para sobrevivir o combina ambas estrategias durante mucho tiempo?',
+    emotionalTip: 'Valora la prudencia de nuestros antepasados: experimentar con semillas requería asegurar el alimento diario con la caza mientras se comprobaba si el cultivo funcionaba.',
     options: [
       {
-        label: 'Mencionó la agricultura y domesticación de animales (producir su alimento en un lugar fijo)',
+        label: 'Explicó que fue una transición gradual donde coexistieron la caza y la siembra incipiente',
         kind: 'correct',
-        feedbackText: '¡Exacto! La agricultura y la ganadería aseguraron alimento continuo, haciendo posible el sedentarismo y las primeras aldeas.'
+        feedbackText: '¡Exacto! El Neolítico no fue un salto repentino, sino una transformación paulatina que tomó milenios.'
       },
       {
-        label: 'Solo mencionó que construyeron casas o inventaron armas, sin explicar que fue la comida lo que permitió quedarse',
+        label: 'Afirmó que todos se volvieron agricultores de inmediato y abandonaron la caza',
         kind: 'needs_support',
-        feedbackText: 'Las casas fueron importantes, pero nadie puede quedarse en un lugar si no tiene qué comer. La clave fue cultivar su propio alimento.'
+        feedbackText: 'Recuerda que si una cosecha fallaba, podían morir de hambre. Por eso combinaron la caza tradicional con el cultivo durante mucho tiempo.'
       },
       {
         label: 'No sabe qué responder o dio otra respuesta',
         kind: 'no_answer',
-        feedbackText: 'Pista guiada: Fíjate en la tarjeta de la Revolución Neolítica en pantalla: domesticaron cereales (trigo, cebada) y animales (ovejas, cabras) para no depender de la caza.'
+        feedbackText: 'Pista guiada: Fíjate en la línea de tiempo: pasaron miles de años entre las primeras semillas recolectadas y los campos de cultivo permanentes.'
       }
     ]
   },
 
   reference: {
-    dilePrompt: 'En la línea de tiempo interactiva se muestran las eras: Paleolítico Temprano, Paleolítico Superior, Revolución Neolítica y Primeras Aldeas.',
-    question: '¿Por qué el almacenamiento de excedentes de trigo y cereales en vasijas de cerámica fue crucial para el nacimiento de las aldeas permanentes?',
-    expectedAnswer: 'Porque guardar comida sobrante (excedente alimentario) garantizó sobrevivir en épocas de invierno o sequía sin tener que salir a cazar a otros territorios.',
-    socraticHint: 'Si cazas un animal, la carne se descompone en pocos días. Pero si cosechas granos de trigo secos y los guardas en una vasija, ¿cuánto tiempo duran?',
-    feedbackSuccess: '¡Excelente razonamiento histórico! Los excedentes permitieron alimentar a la población todo el año y dieron origen al comercio y la especialización del trabajo.',
-    feedbackSupport: 'Guardar grano seco en vasijas permitió tener reservas para meses enteros, algo que los cazadores del Paleolítico jamás pudieron hacer.'
+    dilePrompt: 'En el Levante mediterráneo, la cultura natufiense construyó campamentos de piedra semipermanentes porque los cereales silvestres eran muy abundantes, ¡incluso antes de sembrar sus propios huertos!',
+    question: '¿Qué demuestra este caso arqueológico sobre la relación entre el sedentarismo y la agricultura?',
+    expectedAnswer: 'Demuestra que el sedentarismo pudo comenzar antes de la agricultura si el entorno natural ofrecía suficiente alimento silvestre para asentarse.',
+    socraticHint: 'Si un valle tiene toneladas de trigo silvestre que crece solo cada año, ¿necesitas sembrarlo para quedarte a vivir allí?',
+    feedbackSuccess: '¡Brillante razonamiento histórico! Demuestra que el sedentarismo y la agricultura no ocurrieron en una sola línea fija para todas las comunidades.',
+    feedbackSupport: 'Los natufienses demuestran que algunos grupos se establecieron primero donde había alimento abundante y luego aprendieron a cultivar.'
   },
 
   hook: {
-    title: 'De cazadores a agricultores: La Revolución Neolítica',
-    dileIntro: 'Durante más del 95% de la historia humana, nuestros antepasados fueron cazadores y recolectores nómadas que dependían de lo que encontraban en la naturaleza. Todo cambió cuando aprendieron a sembrar.',
-    hazInstruction: 'Recorre con atención las 4 etapas de la línea de tiempo en pantalla, desde el control del fuego en el Paleolítico hasta las primeras aldeas con murallas.',
+    title: 'El Desafío de la Transición al Neolítico',
+    dileIntro: 'Acompáñame a ver este video introductorio. Descubriremos cómo el final de la era glacial abrió nuevas oportunidades para la subsistencia humana en diferentes rincones del planeta.',
+    hazInstruction: 'Observa con atención cómo el cambio ambiental impulsó nuevas respuestas humanas en el mapa.',
     videoSrc: '',
     focusPoints: [
-      'Paleolítico Temprano (2.500.000 a 300.000 a.C.): Bipedismo, herramientas de piedra tallada y control del fuego.',
-      'Paleolítico Superior (40.000 a 10.000 a.C.): Bandas nómadas, lenguaje simbólico y pinturas rupestres.',
-      'Revolución Neolítica (10.000 a 4.000 a.C.): Invención de la agricultura, domesticación de ovejas y cabras, y piedra pulida.',
-      'Primeras Aldeas (4.000 a.C. en adelante): Casas de adobe, cerámica para almacenar granos, división del trabajo y sedentarismo.'
+      'Calentamiento del Holoceno: Retirada de glaciares hace unos 10.000 a 12.000 años.',
+      'Diversidad de recursos: Bosques templados y praderas con cereales silvestres.',
+      'Campamentos semipermanentes: Recolección intensiva previa al cultivo sistemático.',
+      'Múltiples focos mundiales: Medio Oriente, Asia y América desarrollaron la agricultura por separado.'
     ],
-    dileAfterVideo: 'Conversemos sobre lo observado en la línea de tiempo. Te haré dos preguntas para comprobar cómo comprendemos esta transformación.',
+    dileAfterVideo: 'Conversemos sobre lo observado en el video. Te haré dos preguntas sobre cómo vivieron las comunidades este período de transición.',
     slides: [
       {
-        "slideNumber": 1,
-        "tituloMomento": "Apertura y Escenario",
-        "didacticPurpose": "Apertura y Escenario",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, watching from a ridge as a Paleolithic band moves across cold windswept plains carrying shelters and stone spears. Cinematic atmospheric lighting. No text drawn by AI.",
-        "overlayText": "Hace 15.000 años: La vida nómade",
-        "overlayTitle": "Hace 15.000 años: La vida nómade",
-        "overlaySubtitle": "Bandas de cazadores-recolectores del Paleolítico",
-        "vectorialOverlayPptx": "Línea temporal: Paleolítico superior (Clima glacial, refugios transitorios)",
-        "mathOverlayPptx": "Línea temporal: Paleolítico superior (Clima glacial, refugios transitorios)",
-        "speakerNotes": "Durante decenas de milenios, las bandas humanas debían desplazarse constantemente siguiendo las manadas de animales para sobrevivir en un clima glacial riguroso.",
-        "palabrasAprox": 21,
-        "duracionSeg": 9
+        slideNumber: 1,
+        tituloMomento: "Apertura y Escenario",
+        didacticPurpose: "Apertura y Escenario",
+        visualPrompt: "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing on a verdant hill overlooking a melting glacial valley with blooming grasslands. Warm morning sunlight, wide negative space in top third. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "El Gran Cambio Climático",
+        overlaySubtitle: "Retirada de glaciares y nuevos paisajes",
+        overlayText: "El Gran Cambio Climático: Retirada de glaciares y nuevos paisajes",
+        vectorialOverlayPptx: "Transición climática: Fin del Pleistoceno -> Inicio del Holoceno cálido",
+        speakerNotes: "Al finalizar la última era glacial, hace unos doce mil años, las temperaturas aumentaron y vastos valles se cubrieron de vegetación silvestre.",
+        palabrasAprox: 23,
+        duracionSeg: 9
       },
       {
-        "slideNumber": 2,
-        "tituloMomento": "El Clima Cambia",
-        "didacticPurpose": "El Clima Cambia",
-        "visualPrompt": "Modern anime style. Warm sunlight illuminating green valleys along a flowing river. Early hunter-gatherers observing wild wheat and barley growing naturally. Fresh spring atmosphere. No text drawn by AI.",
-        "overlayText": "El Clima Cambia y Florece la Tierra",
-        "overlayTitle": "El deshielo y el nuevo clima",
-        "overlaySubtitle": "Temperaturas más cálidas y valles verdes",
-        "vectorialOverlayPptx": "Vector de transición: Fin de la glaciación -> Nacimiento de cuencas fluviales fértiles",
-        "mathOverlayPptx": "Vector de transición: Fin de la glaciación -> Nacimiento de cuencas fluviales fértiles",
-        "speakerNotes": "Al finalizar la última glaciación, el calentamiento global permitió que las llanuras se cubrieran de cereales silvestres y las comunidades comenzaron a observar los ciclos vegetales.",
-        "palabrasAprox": 24,
-        "duracionSeg": 11
+        slideNumber: 2,
+        tituloMomento: "Observación de la Naturaleza",
+        didacticPurpose: "Observación de la Naturaleza",
+        visualPrompt: "Modern anime style. The two 13-year-old explorers observing hunter-gatherers collecting wild cereal grains by a riverbend with sickles made of bone and flint. Soft natural lighting, clear negative space. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Recolección Intensiva",
+        overlaySubtitle: "Aprovechamiento de granos y frutos silvestres",
+        overlayText: "Recolección Intensiva: Aprovechamiento de granos y frutos silvestres",
+        vectorialOverlayPptx: "Modo de subsistencia: Recolección selectiva de cereales silvestres",
+        speakerNotes: "Las comunidades observaron atentamente cómo brotaban las semillas caídas y comenzaron a recolectar trigo y cebada silvestre con hoces de sílex.",
+        palabrasAprox: 22,
+        duracionSeg: 9
       },
       {
-        "slideNumber": 3,
-        "tituloMomento": "La Gran Invención",
-        "didacticPurpose": "La Gran Invención",
-        "visualPrompt": "Modern anime style. Early Neolithic farmers carefully planting emmer and barley seeds into fertile soil near the Euphrates river with polished digging sticks. Golden morning light. No text drawn by AI.",
-        "overlayText": "La Revolución Agrícola",
-        "overlayTitle": "La invención de la agricultura",
-        "overlaySubtitle": "Siembra deliberada y cosecha de granos",
-        "vectorialOverlayPptx": "Capa tecnológica: Bastones de siembra, semillas de trigo y cebada en suelo fértil",
-        "mathOverlayPptx": "Capa tecnológica: Bastones de siembra, semillas de trigo y cebada en suelo fértil",
-        "speakerNotes": "Aprender a sembrar trigo y cebada transformó la historia humana: ya no era necesario migrar para comer, pues el alimento brotaba en la propia tierra.",
-        "palabrasAprox": 23,
-        "duracionSeg": 10
+        slideNumber: 3,
+        tituloMomento: "El Enigma Natufiense",
+        didacticPurpose: "El Enigma Natufiense",
+        visualPrompt: "Modern anime style. The boy pointing at circular stone house foundations while the girl sketches a grinding mortar in her physical field notebook. Atmospheric morning mist, wide negative space. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Campamentos Semipermanentes",
+        overlaySubtitle: "Viviendas circulares previas a la siembra",
+        overlayText: "Campamentos Semipermanentes: Viviendas circulares previas a la siembra",
+        vectorialOverlayPptx: "Evidencia arqueológica: Asentamientos natufienses sedentarios con economía recolectora",
+        speakerNotes: "En el Cercano Oriente, algunos grupos levantaron cabañas de piedra permanentes mucho antes de sembrar, aprovechando la abundancia natural del entorno.",
+        palabrasAprox: 21,
+        duracionSeg: 9
       },
       {
-        "slideNumber": 4,
-        "tituloMomento": "Domesticación Animal",
-        "didacticPurpose": "Domesticación Animal",
-        "visualPrompt": "Modern anime style. Neolithic sheep and goats grazing peacefully in stone-fenced enclosures beside early mudbrick round houses. Clean lineart, soft depth of field. No text drawn by AI.",
-        "overlayText": "La Ganadería Neolítica",
-        "overlayTitle": "La ganadería neolítica",
-        "overlaySubtitle": "Crianza de rebaños y control de recursos",
-        "vectorialOverlayPptx": "Iconos productivos: Cercados de piedra con ovejas y cabras junto al río",
-        "mathOverlayPptx": "Iconos productivos: Cercados de piedra con ovejas y cabras junto al río",
-        "speakerNotes": "Al domesticar ovejas y cabras, las familias aseguraron carne, leche y lana constante, liberándose de la incertidumbre que imponía la cacería de animales salvajes.",
-        "palabrasAprox": 23,
-        "duracionSeg": 10
+        slideNumber: 4,
+        tituloMomento: "Diferentes Rutas y Tiempos",
+        didacticPurpose: "Diferentes Rutas y Tiempos",
+        visualPrompt: "Modern anime style. A panoramic archaeological landscape showing three distinct habitats: river valley, dry steppe with goats, and forested hills. Both explorers analyzing the terrain. Clean composition. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Adaptaciones Regionales",
+        overlaySubtitle: "Diversas respuestas a cada entorno natural",
+        overlayText: "Adaptaciones Regionales: Diversas respuestas a cada entorno natural",
+        vectorialOverlayPptx: "Proceso en mosaico: Cada ecosistema requirió soluciones técnicas singulares",
+        speakerNotes: "No todas las regiones avanzaron al mismo ritmo: en zonas secas se priorizó el pastoreo de cabras, mientras que en los valles floreció el cultivo.",
+        palabrasAprox: 25,
+        duracionSeg: 9
       },
       {
-        "slideNumber": 5,
-        "tituloMomento": "Nacimiento de Aldeas",
-        "didacticPurpose": "Nacimiento de Aldeas",
-        "visualPrompt": "Modern anime style. Panoramic view of an ancient settlement like Jericho or Catalhoyuk with square mudbrick dwellings, communal granaries, and children playing safely. No text drawn by AI.",
-        "overlayText": "Nacen las Primeras Aldeas Sedentarias",
-        "overlayTitle": "Las primeras aldeas",
-        "overlaySubtitle": "De campamentos temporales a viviendas de adobe",
-        "vectorialOverlayPptx": "Plano urbano primitivo: Asentamiento permanente de Jericó o Çatalhöyük con graneros",
-        "mathOverlayPptx": "Plano urbano primitivo: Asentamiento permanente de Jericó o Çatalhöyük con graneros",
-        "speakerNotes": "Con excedentes almacenados en silos y graneros, nacieron las primeras viviendas sólidas de adobe y piedra: el ser humano se convirtió en un habitante sedentario.",
-        "palabrasAprox": 23,
-        "duracionSeg": 10
+        slideNumber: 5,
+        tituloMomento: "Centros Independientes",
+        didacticPurpose: "Centros Independientes",
+        visualPrompt: "Modern anime style. The two explorers examining an ancient global projection showing early botanical domestications across continents. Clean lighting, negative space. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Focos de Invención Agrícola",
+        overlaySubtitle: "Orígenes independientes en distintos continentes",
+        overlayText: "Focos de Invención Agrícola: Orígenes independientes en distintos continentes",
+        vectorialOverlayPptx: "Cartografía histórica: Media Luna Fértil, China fluvial, Mesoamérica y Andes Centrales",
+        speakerNotes: "La agricultura no nació en un único rincón: pueblos de Asia, América y Medio Oriente domesticaron especies por su cuenta sin comunicarse entre sí.",
+        palabrasAprox: 24,
+        duracionSeg: 9
       },
       {
-        "slideNumber": 6,
-        "tituloMomento": "División del Trabajo",
-        "didacticPurpose": "División del Trabajo",
-        "visualPrompt": "Modern anime style. Villagers shaping clay into storage pots, weaving woolen textiles, and polishing stone sickles beside a communal fire. No text drawn by AI.",
-        "overlayText": "Nuevas Herramientas y Oficios",
-        "overlayTitle": "Especialización de oficios",
-        "overlaySubtitle": "Alfareros, tejedores y constructores",
-        "vectorialOverlayPptx": "Red social de oficios: Excedente agrícola -> Alfarería, textilería y herramientas pulidas",
-        "mathOverlayPptx": "Red social de oficios: Excedente agrícola -> Alfarería, textilería y herramientas pulidas",
-        "speakerNotes": "Al no tener que salir todos a buscar alimento, surgieron artesanos que crearon la cerámica para conservar granos, telares para abrigo y herramientas de piedra pulida.",
-        "palabrasAprox": 24,
-        "duracionSeg": 11
+        slideNumber: 6,
+        tituloMomento: "El Dilema del Tiempo",
+        didacticPurpose: "El Dilema del Tiempo",
+        visualPrompt: "Modern anime style. Wide shot of the boy and girl standing on a cliffside looking toward a vast historical horizon with volumetric clouds. Thoughtful expression, generous negative space. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "La Larga Duración",
+        overlaySubtitle: "Milenios de experimentación paciente y continua",
+        overlayText: "La Larga Duración: Milenios de experimentación paciente y continua",
+        vectorialOverlayPptx: "Tiempo histórico: Proceso acumulativo de aprendizaje de larga duración",
+        speakerNotes: "Llegamos a la gran pregunta: si este cambio tomó miles de años y ocurrió en lugares tan distintos, ¿cómo transformó la vida de la humanidad?",
+        palabrasAprox: 25,
+        duracionSeg: 9
       },
       {
-        "slideNumber": 7,
-        "tituloMomento": "Pregunta Detonante",
-        "didacticPurpose": "Pregunta Detonante",
-        "visualPrompt": "Modern anime style. The two 13-year-olds analyzing a glowing interactive map of the Fertile Crescent with timeline markers. StudioSimple emblem. No text drawn by AI.",
-        "overlayText": "StudioSimple · Historia 7° Básico",
-        "overlayTitle": "La gran pregunta histórica",
-        "overlaySubtitle": "¿Por qué el Neolítico cambió la humanidad?",
-        "vectorialOverlayPptx": "Pregunta detonante: ¿De qué manera la agricultura y la aldea transformaron la sociedad para siempre?",
-        "mathOverlayPptx": "Pregunta detonante: ¿De qué manera la agricultura y la aldea transformaron la sociedad para siempre?",
-        "speakerNotes": "Surge ahora la gran pregunta histórica: ¿cómo la revolución de la agricultura y la sedentarización sentó las bases de nuestras civilizaciones actuales?",
-        "palabrasAprox": 21,
-        "duracionSeg": 10
+        slideNumber: 7,
+        tituloMomento: "Pregunta Detonante",
+        didacticPurpose: "Pregunta Detonante",
+        visualPrompt: "Modern anime style. Inspiring graphic setting with the two 13-year-olds holding an ear of wild grain and an obsidian tool, smiling toward the viewer. Soft ambient lighting, clean background. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Misión de Aprendizaje",
+        overlaySubtitle: "Descubrir la gran revolución de subsistencia",
+        overlayText: "Misión de Aprendizaje: Descubrir la gran revolución de subsistencia",
+        vectorialOverlayPptx: "Pregunta rectora: ¿Por qué la producción de alimentos transformó a la sociedad?",
+        speakerNotes: "¡Acompáñanos a descubrir en la clase cómo el ser humano aprendió a producir su propio alimento y a transformar el espacio geográfico!",
+        palabrasAprox: 22,
+        duracionSeg: 6
       }
     ]
   },
 
   preQuestions: [
     {
-      context: 'Vida Nómada vs Vida Sedentaria',
-      question: '¿Por qué las bandas humanas del Paleolítico estaban obligadas a ser nómadas y trasladarse constantemente de un lugar a otro?',
-      expected: 'Porque dependían de la caza de animales que migraban y de la recolección de frutos silvestres; cuando los recursos de una zona se agotaban o cambiaba la estación, debían moverse para no morir de hambre.',
-      success: '¡Muy bien! Comprendiste que el nomadismo era una necesidad estricta para sobrevivir buscando comida.',
-      support: 'Piensa en una manada de mamuts o ciervos: si los animales se van hacia el sur por el invierno, ¿qué tienen que hacer los cazadores?',
-      reveal: 'Los nómadas no tenían cultivos propios; seguían las rutas migratorias de los animales y las estaciones de las plantas silvestres.',
-      studentReveal: 'Eran nómadas porque dependían de la caza y recolección, y debían seguir a las manadas de animales.'
+      context: 'El Caso de los Recolectores Natufienses',
+      question: 'Vimos que los natufienses vivían en campamentos de piedra semipermanentes pero todavía no sembraban campos de cultivo. ¿Por qué pudieron quedarse en un lugar fijo?',
+      expected: 'Porque el entorno natural contaba con abundantes cereales silvestres, caza y agua, lo que les permitía alimentarse sin tener que trasladarse constantemente.',
+      success: '¡Excelente razonamiento! Supiste ver que la abundancia de recursos naturales permitió el sedentarismo antes de inventar la agricultura extensiva.',
+      support: 'Fíjate en las herramientas y el entorno: recolectaban tanto grano silvestre que tenían comida suficiente para todo el año en su valle.',
+      reveal: 'El sedentarismo pudo preceder a la agricultura cuando los recursos naturales del entorno eran suficientemente ricos y estables.',
+      studentReveal: 'Pudieron quedarse porque el valle tenía abundantes cereales silvestres y agua durante todo el año.'
     },
     {
-      context: 'El Creciente Fértil y la Geografía',
-      question: '¿Por qué la Revolución Neolítica comenzó en regiones con ríos abundantes como la Media Luna Fértil (en Medio Oriente, junto a los ríos Tigris y Éufrates)?',
-      expected: 'Porque los ríos proveían agua constante para regar los primeros campos cultivados y dejaban tierras húmedas y fértiles tras las crecidas.',
-      success: '¡Excelente análisis geográfico! Supiste vincular la presencia de agua dulce y suelos fértiles con el éxito de los primeros cultivos.',
-      support: 'Fíjate en las condiciones que necesita una semilla para crecer: ¿por qué los desiertos o las montañas secas no servían para empezar la agricultura?',
-      reveal: 'El agua dulce de los ríos y los valles aluviales proporcionaron el entorno propicio para domesticar el trigo y la cebada.',
-      studentReveal: 'Comenzó junto a los ríos porque aseguraban agua para el riego y tierras fértiles para los cultivos.'
+      context: 'Centros Independientes en el Mundo',
+      question: 'El video mostró que la agricultura surgió en América, Asia y Medio Oriente sin que estos pueblos tuvieran contacto. ¿Qué demuestra esto sobre la creatividad humana?',
+      expected: 'Demuestra que distintas sociedades humanas respondieron de manera creativa a desafíos ambientales similares, domesticando las especies disponibles en su territorio.',
+      success: '¡Muy bien fundamentado! Las sociedades humanas descubrieron soluciones productivas independientes según su propia geografía.',
+      support: 'Piensa en las distancias: no había barcos ni caminos entre América y Asia. Cada pueblo inventó sus cultivos con las plantas de su región.',
+      reveal: 'La invención de la agricultura fue una respuesta creativa y simultánea de múltiples grupos humanos frente al nuevo clima del planeta.',
+      studentReveal: 'Demuestra que diferentes pueblos encontraron respuestas similares inventando cultivos con las plantas de su propia región.'
     }
   ],
 
   formalization: {
-    title: 'La Revolución Neolítica: Piedra Pulida y Sedentarismo',
-    dileIntro: 'Revisemos la idea histórica formal: la palabra Neolítico significa "piedra nueva o pulida", pero su verdadero impacto fue el nacimiento de la economía productora de alimentos.',
-    hazInstruction: 'Lee con atención la idea clave en la pantalla y prepárate para anotarla en tu cuaderno de Historia.',
-    ideaClave: 'La Revolución Neolítica fue la transformación más profunda de la humanidad: al domesticar plantas y animales, las sociedades pasaron de la economía depredadora (caza) a la economía productora (agricultura), naciendo las primeras aldeas sedentarias.',
-    graphicPoster: '',
+    title: 'La Transición al Neolítico: Un Proceso en Mosaico',
+    concept: 'La Transición al Neolítico y Orígenes Agrícolas',
+    dileIntro: 'Ahora veremos el video explicativo. Comprenderemos la noción de proceso de larga duración y cómo la agricultura se desarrolló de manera diversa en el mundo.',
+    hazInstruction: 'Revisemos con atención la explicación formal y preparemos el cuaderno para registrar las ideas centrales.',
+    ideaClave: 'La Revolución Neolítica no fue un cambio súbito ni lineal, sino un proceso gradual y en mosaico de miles de años, con focos independientes de domesticación en distintos continentes.',
     slides: [
       {
-        "slideNumber": 1,
-        "tituloMomento": "Objetivo de la Lección",
-        "didacticPurpose": "Objetivo de la Lección",
-        "visualPrompt": "Modern anime style 16:9. The boy and girl standing before a grand historical timeline comparing 'Vida Nómade (Paleolítico)' and 'Vida Sedentaria (Neolítico)'. Clean modern typography. No text drawn by AI.",
-        "overlayText": "La Gran Transformación del Neolítico",
-        "overlayTitle": "Objetivo de la lección",
-        "overlaySubtitle": "Explicar el impacto de la revolución agrícola",
-        "vectorialOverlayPptx": "Rótulo formal: OA 02 · De la Hominización a las Primeras Sociedades Agrícolas",
-        "mathOverlayPptx": "Rótulo formal: OA 02 · De la Hominización a las Primeras Sociedades Agrícolas",
-        "speakerNotes": "El objetivo de hoy es aprender cómo el descubrimiento de la agricultura, la domesticación de animales y la sedentarización revolucionaron la forma de vida humana en el Neolítico.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        slideNumber: 1,
+        tituloMomento: "Objetivo de la Lección",
+        didacticPurpose: "Objetivo de la Lección",
+        visualPrompt: "Modern anime style 16:9. The boy and girl in a luminous study room, examining a world map showing distinct agricultural hearths in the Fertile Crescent, China, Mesoamerica, and the Andes. Generous negative space on top. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Objetivo de la Clase",
+        overlaySubtitle: "Comprender la transición gradual al Neolítico",
+        overlayText: "Objetivo: Comprender la transición gradual al Neolítico",
+        vectorialOverlayPptx: "Rótulo formal: OA 2 · La Revolución Neolítica como proceso de larga duración",
+        speakerNotes: "El objetivo de hoy es comprender que la transición al Neolítico fue un proceso gradual y regionalmente diverso, desarrollado en múltiples focos del planeta.",
+        palabrasAprox: 25,
+        duracionSeg: 12
       },
       {
-        "slideNumber": 2,
-        "tituloMomento": "El Creciente Fértil",
-        "didacticPurpose": "El Creciente Fértil",
-        "visualPrompt": "Modern anime style. Topographical map of the Fertile Crescent with glowing blue rivers (Tigris, Euphrates, Nile) and early crop cultivation zones. Clear cartographic style. No text drawn by AI.",
-        "overlayText": "El Creciente Fértil y los Ríos",
-        "overlayTitle": "El escenario geográfico",
-        "overlaySubtitle": "El Creciente Fértil y los grandes ríos",
-        "vectorialOverlayPptx": "Mapa histórico vectorial: Ríos Tigris, Éufrates, Jordán y Nilo formando el arco fértil",
-        "mathOverlayPptx": "Mapa histórico vectorial: Ríos Tigris, Éufrates, Jordán y Nilo formando el arco fértil",
-        "speakerNotes": "El proceso comenzó en el Creciente Fértil de Medio Oriente. La presencia de ríos caudalosos como el Tigris y el Éufrates proporcionó agua y limo enriquecido para los primeros cultivos.",
-        "palabrasAprox": 29,
-        "duracionSeg": 13
+        slideNumber: 2,
+        tituloMomento: "Concepto de Larga Duración",
+        didacticPurpose: "Concepto de Larga Duración",
+        visualPrompt: "Modern anime style. The girl explaining a timeline banner showing thousands of years connecting the late Paleolithic with the Neolithic. Clear infographic elements, warm ambient lighting. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Tiempo Histórico Acumulativo",
+        overlaySubtitle: "Transformaciones lentas a lo largo de milenios",
+        overlayText: "Tiempo Histórico Acumulativo: Transformaciones lentas a lo largo de milenios",
+        vectorialOverlayPptx: "Concepto historiográfico: Larga duración (Fernand Braudel) aplicada a la prehistoria",
+        speakerNotes: "En historia usamos el concepto de larga duración: los cambios en la subsistencia no ocurrieron en una generación, sino a lo largo de miles de años de observación.",
+        palabrasAprox: 28,
+        duracionSeg: 13
       },
       {
-        "slideNumber": 3,
-        "tituloMomento": "Excedente y Sedentarismo",
-        "didacticPurpose": "Excedente y Sedentarismo",
-        "visualPrompt": "Modern anime style. The girl explaining a diagram of agricultural surplus: grain sacks and ceramic jars stored in communal granaries. Crisp clean lighting. No text drawn by AI.",
-        "overlayText": "El Excedente que Permitió la Aldea",
-        "overlayTitle": "El excedente alimentario",
-        "overlaySubtitle": "Producir más de lo consumido en el día",
-        "vectorialOverlayPptx": "Diagrama económico: Cosecha abundante -> Almacenamiento en vasijas -> Seguridad alimentaria",
-        "mathOverlayPptx": "Diagrama económico: Cosecha abundante -> Almacenamiento en vasijas -> Seguridad alimentaria",
-        "speakerNotes": "El cambio fundamental fue el excedente: por primera vez las personas cosechaban más de lo que consumían en la jornada. Guardar alimento en vasijas de arcilla garantizó la supervivencia en invierno.",
-        "palabrasAprox": 28,
-        "duracionSeg": 13
+        slideNumber: 3,
+        tituloMomento: "Focos Independientes Mundiales",
+        didacticPurpose: "Focos Independientes Mundiales",
+        visualPrompt: "Modern anime style. Detailed cartographic projection highlighting Fertile Crescent with wheat, Yangtze River with rice, Mesoamerica with maize, and Andes with potato. The two explorers pointing at the regions. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Cuatro Focos Clave",
+        overlaySubtitle: "Trigo arroz maíz y papa domesticados",
+        overlayText: "Cuatro Focos Clave: Trigo arroz maíz y papa domesticados",
+        vectorialOverlayPptx: "Mapa de domesticación: Medio Oriente (10.000 a.C.), China (8.000 a.C.), Mesoamérica (5.000 a.C.), Andes (4.000 a.C.)",
+        speakerNotes: "Hacia el diez mil a.C. se domesticó trigo en Medio Oriente; hacia el ocho mil a.C. arroz en China; y más tarde maíz en Mesoamérica y papa en los Andes.",
+        palabrasAprox: 30,
+        duracionSeg: 13
       },
       {
-        "slideNumber": 4,
-        "tituloMomento": "Complejidad Social",
-        "didacticPurpose": "Complejidad Social",
-        "visualPrompt": "Modern anime style. Bustling village scene showing specialized craftsmen: potter at wheel, weaver at loom, builder carving mudbrick. Soft depth of field. No text drawn by AI.",
-        "overlayText": "Especialización del Trabajo y Roles",
-        "overlayTitle": "Especialización y jerarquía",
-        "overlaySubtitle": "Nuevos roles en la comunidad aldeana",
-        "vectorialOverlayPptx": "Estructura social: Agricultores, alfareros, constructores y primeros consejos de ancianos",
-        "mathOverlayPptx": "Estructura social: Agricultores, alfareros, constructores y primeros consejos de ancianos",
-        "speakerNotes": "La aldea neolítica exigió organización. Se crearon turnos de regadío, líderes para resolver conflictos y artesanos dedicados exclusivamente a perfeccionar la alfarería y la arquitectura.",
-        "palabrasAprox": 24,
-        "duracionSeg": 11
+        slideNumber: 4,
+        tituloMomento: "Coexistencia de Modos de Vida",
+        didacticPurpose: "Coexistencia de Modos de Vida",
+        visualPrompt: "Modern anime style. A split-scene landscape: on one side hunters tracking game in a forest, in the center pastoralists herding goats, on the riverbank farmers tending crops. Soft depth of field. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Modos de Vida Diversos",
+        overlaySubtitle: "Caza pastoreo y cultivo coexistiendo juntos",
+        overlayText: "Modos de Vida Diversos: Caza pastoreo y cultivo coexistiendo juntos",
+        vectorialOverlayPptx: "Esquema multilineal: Coexistencia prolongada de economías depredadoras y productoras",
+        speakerNotes: "Durante siglos las comunidades combinaron la caza con la siembra incipiente. Muchos pueblos mantuvieron el pastoreo móvil y nunca adoptaron la vida aldeana fija.",
+        palabrasAprox: 24,
+        duracionSeg: 13
       },
       {
-        "slideNumber": 5,
-        "tituloMomento": "Piedra Pulida y Tecnología",
-        "didacticPurpose": "Piedra Pulida y Tecnología",
-        "visualPrompt": "Modern anime style. Close-up contrast: rough chipped stone blade of Paleolithic next to smooth, symmetrical polished stone axe and sickle of Neolithic. Crystal clarity. No text drawn by AI.",
-        "overlayText": "Tecnología de la Piedra Pulimentada",
-        "overlayTitle": "Revolución tecnológica",
-        "overlaySubtitle": "De la piedra tallada a la piedra pulimentada",
-        "vectorialOverlayPptx": "Comparación técnica: Cuchillo de sílex tallado (Paleolítico) vs Hacha y hoz pulida (Neolítico)",
-        "mathOverlayPptx": "Comparación técnica: Cuchillo de sílex tallado (Paleolítico) vs Hacha y hoz pulida (Neolítico)",
-        "speakerNotes": "El nombre Neolítico significa piedra nueva. Las herramientas ya no se tallaban por golpes toscos, sino que se pulían frotándolas con arena y agua, logrando filos duraderos y resistentes.",
-        "palabrasAprox": 27,
-        "duracionSeg": 12
+        slideNumber: 5,
+        tituloMomento: "Atención al Error Común",
+        didacticPurpose: "Atención al Error Común",
+        visualPrompt: "Modern anime style. The boy pointing to a crossed-out linear arrow, contrasting it with an intricate branching tree of human development. Visual clarity, soft teal glow. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Error: La Línea Única",
+        overlaySubtitle: "El cambio no fue automático ni idéntico",
+        overlayText: "Error: La Línea Única: El cambio no fue automático ni idéntico",
+        vectorialOverlayPptx: "Advertencia epistemológica: Superar el evolucionismo unilineal y el determinismo geográfico",
+        speakerNotes: "Un error habitual es pensar que toda la humanidad siguió los mismos pasos obligados. Cada cultura se adaptó a su territorio creando soluciones propias y originales.",
+        palabrasAprox: 26,
+        duracionSeg: 13
       },
       {
-        "slideNumber": 6,
-        "tituloMomento": "Prevención del Error",
-        "didacticPurpose": "Prevención del Error",
-        "visualPrompt": "Modern anime style. Timeline graphic showing smooth gradual transition across centuries, with hunter-gatherer icons overlapping with farming icons. Clean infographic. No text drawn by AI.",
-        "overlayText": "Transición Gradual, no Repentina",
-        "overlayTitle": "Atención: Error habitual",
-        "overlaySubtitle": "La transición fue gradual, no inmediata",
-        "vectorialOverlayPptx": "Línea temporal extendida: Miles de años de coexistencia entre caza y cultivo experimental",
-        "mathOverlayPptx": "Línea temporal extendida: Miles de años de coexistencia entre caza y cultivo experimental",
-        "speakerNotes": "Un error habitual es creer que la revolución agrícola ocurrió de un día para otro. Fue un proceso de miles de años donde la recolección y el cultivo coexistieron pacientemente.",
-        "palabrasAprox": 28,
-        "duracionSeg": 13
+        slideNumber: 6,
+        tituloMomento: "Estrategia de Análisis",
+        didacticPurpose: "Estrategia de Análisis",
+        visualPrompt: "Modern anime style. Three connected icons showing: 1. Clima y geografía, 2. Observación de especies, 3. Prácticas comunitarias. The two protagonists studying the icons together. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Claves de Interpretación",
+        overlaySubtitle: "Medio natural especies y decisiones sociales",
+        overlayText: "Claves de Interpretación: Medio natural especies y decisiones sociales",
+        vectorialOverlayPptx: "Guía metodológica: 1. Espacio geográfico · 2. Base ecológica · 3. Organización comunitaria",
+        speakerNotes: "Para comprender el origen de la agricultura analiza siempre tres factores: el clima del territorio, las especies disponibles y las necesidades de la comunidad.",
+        palabrasAprox: 24,
+        duracionSeg: 13
       },
       {
-        "slideNumber": 7,
-        "tituloMomento": "Síntesis y Regla de Oro",
-        "didacticPurpose": "Síntesis y Regla de Oro",
-        "visualPrompt": "Modern anime style. StudioSimple emblem with golden banner summarizing the 3 pillars of Neolithic revolution: Sedentarismo, Excedente, Especialización. High elegance. No text drawn by AI.",
-        "overlayText": "Regla de Oro: El Triángulo Neolítico",
-        "overlayTitle": "Regla de Oro del Neolítico",
-        "overlaySubtitle": "Agricultura + Aldea + Excedente = Cuna de la Civilización",
-        "vectorialOverlayPptx": "Infografía de síntesis: Triángulo fundacional: Sedentarismo, Excedente y Especialización social",
-        "mathOverlayPptx": "Infografía de síntesis: Triángulo fundacional: Sedentarismo, Excedente y Especialización social",
-        "speakerNotes": "Recuerda la regla de oro: el excedente agrícola hizo posible la vida sedentaria y las ciudades. ¡Ahora comprobaremos este análisis histórico en las actividades interactivas de la plataforma!",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        slideNumber: 7,
+        tituloMomento: "Síntesis y Conclusión",
+        didacticPurpose: "Síntesis y Conclusión",
+        visualPrompt: "Modern anime style. Beautiful sunrise over an early farming settlement by a calm lake, with both 13-year-old student explorers smiling with their field notebooks ready. Clear negative space. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Regla de Oro Histórica",
+        overlaySubtitle: "El Neolítico transformó la subsistencia humana",
+        overlayText: "Regla de Oro: El Neolítico transformó la subsistencia humana",
+        vectorialOverlayPptx: "Síntesis conceptual: La economía productora transformó la relación del ser humano con la naturaleza",
+        speakerNotes: "El Neolítico inauguró la economía productora. El ser humano dejó de depender solo de lo que encontraba y comenzó a transformar activamente su entorno.",
+        palabrasAprox: 25,
+        duracionSeg: 13
       }
     ]
   },
 
   postQuestions: [
     {
-      context: 'Nuevas Tecnologías del Neolítico',
-      question: 'Además de sembrar, ¿qué dos grandes inventos tecnológicos crearon las sociedades neolíticas para procesar y guardar los alimentos?',
-      expected: 'La cerámica (vasijas y ollas de barro cocido para almacenar granos y cocinar) y el molino de mano de piedra pulida (para moler el trigo y hacer harina).',
-      success: '¡Exacto! La alfarería y la piedra pulida fueron tecnologías directamente creadas para aprovechar la cosecha.',
-      support: 'Pregúntate: una vez cosechado el trigo, ¿en qué lo guardaban para que no se mojara y con qué lo molían para comerlo?',
-      reveal: 'La cerámica protegió las reservas de alimentos de la humedad y los roedores, y los molinos de piedra permitieron elaborar panes y papillas.',
-      studentReveal: 'La cerámica para almacenar granos secos y los molinos de piedra pulida para hacer harina.'
+      context: 'Múltiples Focos de Domesticación en el Mundo',
+      question: 'En el video revisamos que el trigo se domesticó en Medio Oriente, el arroz en China y el maíz en América. ¿Por qué estas plantas fueron distintas en cada continente?',
+      expected: 'Porque cada región contaba con su propia flora silvestre originaria; los seres humanos experimentaron con las plantas que crecían naturalmente en su espacio geográfico.',
+      success: '¡Excelente precisión histórica! La geografía y la biodiversidad local determinaron qué especies vegetales fueron domesticadas en cada continente.',
+      support: 'Recuerda que en esa época no existían intercambios entre continentes. Si en América no había trigo silvestre pero sí maíz, ¿cuál podían cultivar?',
+      reveal: 'Cada foco agrícola domesticó las especies silvestres propias de su territorio: trigo en el Creciente Fértil, arroz en Asia y maíz en Mesoamérica.',
+      studentReveal: 'Porque cada continente tenía sus propias plantas silvestres y la gente domesticó las que crecían en su entorno.'
+    },
+    {
+      context: 'La Noción de Proceso en Mosaico',
+      question: '¿Por qué los historiadores afirman que la Revolución Neolítica fue un cambio "en mosaico" y no una línea recta donde todos los pueblos hicieron lo mismo?',
+      expected: 'Porque diferentes comunidades adoptaron la agricultura, el pastoreo o mantuvieron la caza según sus necesidades y recursos, a ritmos y en momentos distintos.',
+      success: '¡Gran comprensión del tiempo histórico! Comprendiste que no hubo un camino único para toda la humanidad.',
+      support: 'Piensa en las distintas regiones: en las praderas algunos prefirieron cuidar rebaños sin hacer casas fijas, mientras otros sembraron en valles.',
+      reveal: 'El cambio en mosaico significa que coexistieron múltiples ritmos y estilos de vida según el ecosistema y las decisiones de cada comunidad.',
+      studentReveal: 'Porque los pueblos avanzaron a ritmos diferentes: unos cultivaron valles, otros se dedicaron al pastoreo y otros continuaron cazando.'
     }
   ],
 
   practice: [
     {
-      context: 'Cuadro Comparativo en el Cuaderno de Historia',
-      question: 'Abre tu cuaderno de Historia. Dibuja una tabla de 2 columnas titulada: "Paleolítico (Nómadas) vs Neolítico (Sedentarios)". Completa al menos 3 diferencias: 1) Modo de conseguir comida, 2) Tipo de vivienda, y 3) Herramientas principales.',
-      expected: 'Tabla ordenada en el cuaderno con 3 comparaciones claras: Caza/recolección vs Agricultura/ganadería; Cavernas/chozas desmontables vs Casas de barro y piedra; Piedra tallada vs Piedra pulida y cerámica.',
-      success: '¡Excelente sistematización histórica en tu cuaderno! Tu cuadro comparativo refleja con rigor las diferencias de cada período.',
-      support: 'Escribe en la izquierda "Paleolítico" (nómadas, caza, piedra tallada) y a la derecha "Neolítico" (sedentarios, cultivo, cerámica y casas fijas).',
-      reveal: 'Comparar ambos modos de vida permite apreciar el enorme salto de seguridad y organización que trajo el Neolítico.',
-      studentReveal: 'Cuadro comparativo completo de 3 filas en el cuaderno de Historia y Ciencias Sociales.'
+      context: 'Actividad en Cuaderno: Cuadro Comparativo de Subsistencia',
+      question: 'Abre tu cuaderno de Historia y escribe el título: "La Transición al Neolítico: Un Proceso en Mosaico". Dibuja un cuadro de dos columnas: en la primera columna escribe "Focos Independientes y Especies" (menciona Creciente Fértil, China y América); en la segunda explica por qué la caza y la siembra coexistieron durante miles de años.',
+      expected: 'Cuadro comparativo completo en el cuaderno con los tres focos mundiales y la fundamentación de la coexistencia de modos de vida.',
+      success: '¡Excelente trabajo en tu cuaderno! Has ordenado los datos históricos con claridad y rigor conceptual.',
+      support: 'Revisa tus apuntes de la clase: asocia Medio Oriente con trigo, China con arroz y América con maíz, y explica la seguridad de no depender de una sola fuente.',
+      reveal: 'El cuadro permite registrar la diversidad geográfica de los orígenes agrícolas y superar visiones lineales simplistas.',
+      studentReveal: 'Cuadro completo en el cuaderno con focos agrícolas independientes y análisis de la coexistencia de modos de vida.'
     },
     {
-      context: 'Consecuencias Sociales del Sedentarismo en el Cuaderno',
-      question: 'En tu cuaderno, responde en 3 líneas: Al tener comida asegurada en la aldea, ya no todos tenían que salir a cazar todo el día. ¿Qué nuevos oficios o trabajos surgieron en las aldeas neolíticas?',
-      expected: 'Mencionar al menos dos nuevos oficios: alfareros (cerámica), tejedores (textiles con lana de oveja), agricultores, constructores o artesanos de herramientas.',
-      success: '¡Muy buena deducción histórica! Identificaste la división y especialización del trabajo que dio origen a la vida urbana.',
-      support: 'Piensa en las nuevas necesidades de la aldea: ¿quién hacía las vasijas de barro?, ¿quién tejía la ropa con lana de oveja?',
-      reveal: 'El excedente de comida liberó a parte de la población para dedicarse a la alfarería, el tejido, la arquitectura y el liderazgo comunitario.',
-      studentReveal: 'Mención en el cuaderno de la especialización del trabajo: alfareros, tejedores, agricultores y constructores.'
+      context: 'Reflexión Histórica: Fechas y Larga Duración',
+      question: 'En tu cuaderno, redacta una breve respuesta argumentada: ¿Por qué es un error afirmar que el Neolítico comenzó exactamente en un solo año o que ocurrió de un día para otro?',
+      expected: 'Texto argumentativo que explique la noción de larga duración y la experimentación acumulativa a lo largo de milenios.',
+      success: '¡Brillante argumentación histórica! Demostraste comprensión del tiempo histórico y sus ritmos de cambio.',
+      support: 'Piensa en cuántas generaciones se necesitaron para aprender cuándo sembrar y cómo cuidar las semillas.',
+      reveal: 'Los cambios estructurales en la subsistencia humana corresponden a procesos acumulativos de larga duración.',
+      studentReveal: 'Texto argumentativo en el cuaderno que explica la larga duración y la gradualidad de la experimentación agrícola.'
     }
   ],
 
   summaryIdeas: [
-    ['Economía Productora', 'El ser humano dejó de depender exclusivamente de lo que encontraba en la naturaleza y aprendió a producir su propio alimento con la agricultura y ganadería.'],
-    ['El Sedentarismo', 'Tener campos de cultivo y reservas de grano exigió permanecer en un lugar fijo, dando origen a las primeras aldeas con casas permanentes.'],
-    ['Revolución Tecnológica', 'Surgieron la cerámica para conservar granos, la piedra pulida para molinos y hoces, y la especialización del trabajo en nuevos oficios.']
+    ['Larga Duración y Gradualidad', 'La agricultura no surgió de un día para otro: fue un proceso de miles de años de observación empírica y selección vegetal.'],
+    ['Centros Independientes en el Mundo', 'Distintas sociedades domesticaron especies por separado: trigo en Medio Oriente, arroz en China, y maíz y papa en América.'],
+    ['Proceso en Mosaico', 'El sedentarismo y la producción de alimentos se combinaron con la caza y el pastoreo móvil según las posibilidades de cada entorno natural.']
   ],
 
   mini: [
     {
       id: 'q_1',
-      q: '¿Cuál fue la causa principal que permitió a los seres humanos abandonar la vida nómada y volverse sedentarios en el Neolítico?',
+      q: '¿Por qué los arqueólogos e historiadores consideran que la Revolución Neolítica fue un proceso "en mosaico" y no una transformación homogénea inmediata?',
       options: [
-        'A) La invención de barcos de guerra para navegar grandes océanos',
-        'B) La domesticación de plantas (agricultura) y animales (ganadería)',
-        'C) El enfriamiento brusco del clima polar en toda Europa',
-        'D) El descubrimiento del teléfono y la imprenta'
+        'A) Porque la agricultura fue impuesta rápidamente por un solo ejército imperial en todo el planeta.',
+        'B) Porque diferentes sociedades experimentaron cambios a ritmos distintos, combinando caza, pastoreo y cultivo según su entorno.',
+        'C) Porque todos los seres humanos aprendieron a cultivar el mismo cereal durante el mismo siglo.',
+        'D) Porque las plantas cultivadas se expandieron por el viento de un continente a otro sin intervención humana.'
       ],
-      correct: 'B) La domesticación de plantas (agricultura) y animales (ganadería)',
-      fixExplain: 'Al producir su propio alimento en campos fijos, las familias ya no necesitaban desplazarse detrás de las manadas de caza.',
-      concept: 'Causa del Sedentarismo'
+      correct: 'B) Porque diferentes sociedades experimentaron cambios a ritmos distintos, combinando caza, pastoreo y cultivo según su entorno.',
+      fixExplain: 'El concepto de mosaico destaca la diversidad de ritmos, ecosistemas y combinaciones de subsistencia en cada territorio.',
+      concept: 'Proceso en Mosaico Neolítico'
     },
     {
       id: 'q_2',
-      q: '¿Por qué la invención de vasijas de cerámica fue indispensable para las primeras aldeas agrícolas?',
+      q: '¿Qué evidencia arqueológica demuestra que el sedentarismo pudo preceder al desarrollo de la agricultura sistemática?',
       options: [
-        'A) Porque servían únicamente como adornos en los templos',
-        'B) Porque permitían almacenar excedentes de granos y líquidos protegiéndolos de roedores y humedad',
-        'C) Porque reemplazaron a las armas de fuego en las batallas',
-        'D) Porque eran obligatorias para escribir tratados de paz'
+        'A) Los campamentos natufienses semipermanentes que recolectaban cereales silvestres antes de cultivar campos agrícolas.',
+        'B) Las grandes pirámides egipcias construidas por bandas de cazadores del Paleolítico inferior.',
+        'C) La invención de fábricas de telares industriales en campamentos nómades de las estepas.',
+        'D) El uso de monedas de oro acuñadas para pagar a recolectores de frutas durante el invierno.'
       ],
-      correct: 'B) Porque permitían almacenar excedentes de granos y líquidos protegiéndolos de roedores y humedad',
-      fixExplain: 'La cerámica permitió guardar cosechas durante meses, asegurando reservas contra el hambre y el invierno.',
-      concept: 'Tecnología Cerámica'
+      correct: 'A) Los campamentos natufienses semipermanentes que recolectaban cereales silvestres antes de cultivar campos agrícolas.',
+      fixExplain: 'La cultura natufiense demostró que la abundancia de recursos naturales silvestres permitió fundar asentamientos estables antes del cultivo formal.',
+      concept: 'Sedentarismo Preagrícola Natufiense'
     },
     {
       id: 'q_3',
-      q: 'En el período Paleolítico anterior a la agricultura, ¿cómo obtenían su sustento diario las bandas humanas?',
+      q: 'Al analizar los orígenes de la agricultura en el mundo hacia el 8.000 a.C. y milenios posteriores, ¿qué afirmación es históricamente rigurosa?',
       options: [
-        'A) Comprando alimentos en supermercados y ferias locales',
-        'B) Mediante la caza de animales, la pesca y la recolección de frutos silvestres',
-        'C) Cultivando grandes hectáreas de maíz transgénico',
-        'D) Exportando trigo a civilizaciones lejanas'
+        'A) La agricultura surgió únicamente en el norte de Europa y desde allí se difundió al resto del mundo.',
+        'B) Las comunidades de América dependían de las semillas de trigo importadas en barcos desde Mesopotamia.',
+        'C) Existieron múltiples focos independientes de domesticación en regiones como la Media Luna Fértil, valles fluviales de China, Mesoamérica y los Andes.',
+        'D) El ser humano abandonó de forma instantánea el consumo de carne animal al brotar la primera cosecha.'
       ],
-      correct: 'B) Mediante la caza de animales, la pesca y la recolección de frutos silvestres',
-      fixExplain: 'El Paleolítico se caracterizó por una economía depredadora basada exclusivamente en la caza y recolección silvestre.',
-      concept: 'Economía del Paleolítico'
+      correct: 'C) Existieron múltiples focos independientes de domesticación en regiones como la Media Luna Fértil, valles fluviales de China, Mesoamérica y los Andes.',
+      fixExplain: 'La investigación arqueológica confirma focos autónomos de domesticación adaptados a la biodiversidad propia de cada continente.',
+      concept: 'Centros Independientes de Domesticación'
     }
   ],
 
   recovery: [
     {
-      title: 'Refuerzo: ¿Qué significa excedente alimentario?',
-      explain: 'Un excedente es la comida que sobra después de que todos en la comunidad comieron. En el Neolítico, un buen campo de trigo producía mucho más de lo necesario para una semana, lo que permitía guardarlo en vasijas para épocas difíciles.',
-      q: '¿Qué ventaja directa le daba a una aldea tener excedentes de trigo almacenados?',
+      title: 'Recuperación Histórica: Comprensión de la Transición al Neolítico',
+      explain: 'El paso de la economía recolectora a la economía productora no ocurrió de golpe ni de la misma manera en todo el mundo. Las comunidades observaron su entorno durante generaciones y experimentaron con las plantas y animales que tenían a su alcance.',
+      q: '¿Cuál de las siguientes afirmaciones explica correctamente cómo ocurrió la transición al Neolítico?',
       options: [
-        'A) Aseguraba la supervivencia en meses de sequía e invierno sin tener que mudarse a otro lugar',
-        'B) Obligaba a todos los aldeanos a abandonar sus casas inmediatamente',
-        'C) Hacía que las semillas desaparecieran del suelo'
+        'A) Ocurrió en un solo año cuando una familia nómade descubrió cómo hacer crecer todas las frutas del mundo.',
+        'B) Fue un cambio violento que obligó a todas las personas a abandonar sus herramientas de piedra inmediatamente.',
+        'C) Surgió de la decisión de un emperador que prohibió la caza de animales en todos los continentes.',
+        'D) Fue un proceso gradual y multicausal que tomó miles de años, donde la recolección, el pastoreo y el cultivo convivieron según cada geografía.'
       ],
-      correct: 'A) Aseguraba la supervivencia en meses de sequía e invierno sin tener que mudarse a otro lugar',
-      correctText: '¡Exacto! El excedente daba seguridad y tranquilidad para vivir de forma sedentaria.',
-      fixText: 'La respuesta correcta es la A: tener reservas de comida aseguraba la vida durante el invierno sin tener que migrar.'
+      correct: 'D) Fue un proceso gradual y multicausal que tomó miles de años, donde la recolección, el pastoreo y el cultivo convivieron según cada geografía.',
+      correctText: '¡Correcto! Comprendiste con exactitud la gradualidad y la diversidad geográfica de este proceso de larga duración.',
+      fixText: 'Recuerda que la transición fue un proceso gradual de larga duración donde convivieron diversos modos de vida adaptados a cada territorio.'
     }
-  ],
-
-  reasoning: {
-    title: 'Comparemos dos modos de subsistencia histórica',
-    dileIntro: 'Antes de sintetizar, comparemos dos situaciones de supervivencia en la prehistoria.',
-    question: 'En la Situación 1 una banda de 20 cazadores persigue a una manada de ciervos durante semanas y si no cazan pasan hambre. En la Situación 2 una aldea de 100 personas cuida sus campos de trigo y corrales de ovejas junto al río. ¿Cómo influye el método de obtención de comida en la forma de vivir de cada grupo?',
-    expectedAnswer: 'En la Situación 1 dependen del azar de la caza y deben mudarse sin cesar (nómadas); en la Situación 2 controlan la producción de alimentos, tienen reservas y pueden vivir en casas fijas (sedentarios).',
-    context1: {
-      label: 'SITUACIÓN 1: BANDA PALEOLÍTICA',
-      value: 'Caza migratoria de ciervos y recolección.',
-      desc: 'Economía depredadora: nomadismo forzado, campamentos provisorios y riesgo permanente de escasez.'
-    },
-    context2: {
-      label: 'SITUACIÓN 2: ALDEA NEOLÍTICA',
-      value: 'Campos de trigo y corrales de ovejas.',
-      desc: 'Economía productora: sedentarismo, casas de adobe, vasijas de reserva y división comunitaria del trabajo.'
-    },
-    successFeedback: '¡Extraordinario razonamiento histórico! Explicaste con total claridad cómo el paso de recolectar a producir comida cambió toda la estructura humana.',
-    supportFeedback: 'Observa la diferencia entre perseguir animales silvestres por el bosque versus cultivar tus propios alimentos al lado de tu casa.',
-    revealText: 'El control sobre la producción de alimentos liberó a la humanidad de la incertidumbre diaria de la caza migratoria.'
-  },
-
-  challenge: {
-    title: 'Desafío breve: Herramientas de piedra',
-    question: 'Un arqueólogo encuentra dos herramientas en una excavación: una hacha tosca tallada a golpes sobre un canto rodado, y una hoz con mango de madera y filo de piedra cuidadosamente pulida y brillante. ¿A qué período pertenece cada una?',
-    expectedAnswer: 'El hacha tosca tallada pertenece al Paleolítico (piedra tallada); la hoz de piedra pulida pertenece al Neolítico (piedra pulida para cosechar cereales).',
-    item1: { label: 'Hacha tosca tallada a golpes', tag: 'Paleolítico' },
-    item2: { label: 'Hoz de filo pulido y brillante', tag: 'Neolítico' },
-    successFeedback: '¡Excelente ojo arqueológico! Identificaste la técnica de piedra tallada del Paleolítico y la piedra pulida especializada del Neolítico.',
-    supportFeedback: 'Recuerda el significado de las palabras: Paleo significa antiguo (piedra tosca tallada); Neo significa nuevo (piedra pulida y fina).'
-  },
-
-  strategy: {
-    title: 'Estrategia para analizar grandes transformaciones históricas',
-    dileIntro: 'Cuando analices un cambio de era en la historia de la humanidad, sigue estos tres pasos:',
-    steps: [
-      { number: 1, title: 'Identifica la base material', desc: '¿Cómo conseguían su alimento, abrigo y herramientas en esa época?' },
-      { number: 2, title: 'Examina la tecnología', desc: '¿Qué nuevos inventos (fuego, agricultura, cerámica, metales) transformaron su vida diaria?' },
-      { number: 3, title: 'Evalúa la organización social', desc: '¿Cómo cambió la forma de convivir: eran familias nómades, aldeas de vecinos o ciudades con leyes?' }
-    ]
-  },
-
-  closure: {
-    congratulations: '¡Felicitaciones! Hoy comprendiste el paso decisivo del nomadismo al sedentarismo, el impacto revolucionario de la agricultura y la domesticación de animales, y por qué las primeras aldeas dieron origen a nuestra vida en comunidad.',
-    nextClassPreview: 'En la próxima clase investigaremos la domesticación de especies en la Media Luna Fértil y cómo los primeros excedentes agrícolas permitieron el nacimiento del comercio y las leyes.'
-  },
-
-  interactive: {
-    type: 'timeline',
-    title: 'Línea de Tiempo Histórica: De la Hominización a la Aldea',
-    description: 'Organizador cronológico de la transición del Paleolítico al Neolítico y el surgimiento del sedentarismo.'
-  }
+  ]
 };

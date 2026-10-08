@@ -37,7 +37,7 @@ export const MATEMATICA_7B_OA04_CLASE06: LessonData = {
       { label: 'Variaciones Sucesivas', sub: 'Comprensión de que el porcentaje depende de la base' }
     ],
     dileIntro: '¡Llegamos a la sexta y última clase de nuestra unidad de porcentajes! Hoy integraremos todo nuestro conocimiento para resolver el gran ensayo oficial tipo Examen Libre del MINEDUC.',
-    dileObjective: 'Consolidar el dominio de porcentajes en situaciones complejas: calcular totales desconocidos, interpretar gráficos circulares y resolver preguntas psicométricas con análisis de distractores.'
+    dileObjective: 'Consolidar el aprendizaje integral de la unidad de porcentajes: calcular el total desconocido a partir de una parte porcentual, interpretar gráficos de sectores circulares y resolver reactivos de evaluación formativa tipo MINEDUC con análisis crítico de distractores.'
   },
   situation: {
     dilePrompt: 'En una biblioteca escolar, 12 libros de ciencias representan el 20% de los libros prestados durante la semana. ¿Cuántos libros se prestaron en total?',
@@ -183,13 +183,13 @@ export const MATEMATICA_7B_OA04_CLASE06: LessonData = {
     slides: [
       {
         slideNumber: 1,
-        tituloMomento: 'Formalización del Cálculo Inverso',
-        visualPrompt: 'Modern anime style 16:9 widescreen illustration. Classroom scene where teacher whiteboard shows clear mathematical formula highlighted in cyan: Total = (Parte · 100) / Porcentaje. Sofía and Lucas taking neat notes in their open grid notebooks, bright ambient light, clean lineart. No text drawn by AI.',
-        overlayText: 'CÁLCULO INVERSO: ENCONTRAR EL 100%',
-        overlayTitle: 'CÁLCULO INVERSO: ENCONTRAR EL 100%',
-        overlaySubtitle: 'Fórmula universal de proporcionalidad directa',
-        vectorialOverlayPptx: 'Fórmula formal en recuadro dorado: Total = (Parte · 100) / Porcentaje',
-        speakerNotes: 'Cuando conocemos una cantidad parcial y el porcentaje que representa, podemos hallar el cien por ciento multiplicando la parte por cien y dividiendo por el porcentaje respectivo.',
+        tituloMomento: 'Declaración del Objetivo: Síntesis de Porcentajes y Ensayo MINEDUC',
+        visualPrompt: 'Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing confidently before a modern digital board displaying summary diagrams and sample questions. Clean classroom, high clarity, ample negative space on the left. No text drawn by AI.',
+        overlayText: 'OBJETIVO DE LA LECCIÓN',
+        overlayTitle: 'OBJETIVO DE LA LECCIÓN',
+        overlaySubtitle: 'Consolidar el cálculo inverso, gráficos circulares y ensayo psicométrico tipo MINEDUC',
+        vectorialOverlayPptx: 'Meta de aprendizaje: Dominar cálculo inverso, gráficos de sectores y resolución formal de reactivos',
+        speakerNotes: 'Hoy consolidaremos todo lo aprendido sobre porcentajes: resolveremos problemas de cálculo inverso, interpretaremos gráficos circulares y enfrentaremos un ensayo formal con análisis de distractores.',
         duracionSeg: 12
       },
       {
@@ -291,7 +291,7 @@ export const MATEMATICA_7B_OA04_CLASE06: LessonData = {
       studentReveal: '50 estudiantes eligieron el taller de Ajedrez.'
     },
     {
-      context: 'Un microscopio escolar tiene un precio neto de $50.000. Se aplica un 10% de descuento y luego se agrega el 19% de IVA sobre el valor resultante.',
+      context: 'Un microscopio escolar tiene un precio neto de $50.000 en una compraventa afecta a IVA. Se aplica un 10% de descuento y luego se agrega el 19% de IVA sobre el valor resultante.',
       question: '¿Cuál es el valor final a pagar con el IVA incluido?',
       expected: 'El valor final a pagar es $53.550.',
       success: '¡Extraordinario! Neto rebajado: $45.000. IVA (19%): $8.550. Total: $45.000 + $8.550 = $53.550.',

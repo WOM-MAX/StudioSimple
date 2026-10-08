@@ -1,12 +1,12 @@
 {
   "schemaVersion": "2.0.0",
-  "generatedAt": "2026-10-06T16:48:31.502Z",
+  "generatedAt": "2026-10-07T22:11:34.822Z",
   "status": "EN_REVISION",
   "oaIdentifier": "110-7-MAT-OA04",
   "course": "7° Básico",
   "subject": "Matemática",
   "axis": "Números",
-  "mineducObjective": "Mostrar que comprenden el concepto de porcentaje de manera concreta, pictórica y simbólica, de forma manual y/o usando software educativo.",
+  "mineducObjective": "Mostrar que comprenden el concepto de porcentaje: representándolo de manera pictórica, calculando de varias maneras, aplicándolo a situaciones sencillas.",
   "textbookSource": {
     "title": "Matemática 7° Básico - Texto del Estudiante",
     "publisher": "Santillana / Ministerio de Educación de Chile",
@@ -26,7 +26,7 @@
       "totalSlides": 14,
       "durationMinutes": 30,
       "tsFile": "matematica_7b_oa04_clase01.ts",
-      "tsHashSha256": "4dc82b0c1f80e78221286b83746e24f71055b5c5153e11186836dd26981b41f4"
+      "tsHashSha256": "9a128aa36a5dd96c66ce1e5f8eedf310f3f56abb0ebd27cec2967dc1fd6ec180"
     },
     {
       "lessonNumber": 2,
@@ -37,7 +37,7 @@
       "totalSlides": 14,
       "durationMinutes": 30,
       "tsFile": "matematica_7b_oa04_clase02.ts",
-      "tsHashSha256": "0458b7b22c823170187dc1a174ebe1f44e5b3cb78774b00998bf7ab4c464e711"
+      "tsHashSha256": "9d76365193edbdea39267b8c9b98818bc2bc3fbd9c9e9aebb255c5803ac62c06"
     },
     {
       "lessonNumber": 3,
@@ -59,7 +59,7 @@
       "totalSlides": 14,
       "durationMinutes": 30,
       "tsFile": "matematica_7b_oa04_clase04.ts",
-      "tsHashSha256": "5d4f87ba7c6db718f0ded7d276e7f142105ddbd1667b286722fdad84cb8086ec"
+      "tsHashSha256": "f0e89fbc65d8c2a87c7d50a7ca94fcd9ba26da0c4134da580cd38cc63f5d66a8"
     },
     {
       "lessonNumber": 5,
@@ -70,7 +70,7 @@
       "totalSlides": 14,
       "durationMinutes": 30,
       "tsFile": "matematica_7b_oa04_clase05.ts",
-      "tsHashSha256": "14b495c1476ce68160fbb09363217908333a3d05db19b6252956b5f376b0ba83"
+      "tsHashSha256": "b1434e3d27ae8d3d09bae89b772d3a00d6aedab2fc2ec2528aa20dd8542c25b4"
     },
     {
       "lessonNumber": 6,
@@ -81,21 +81,21 @@
       "totalSlides": 14,
       "durationMinutes": 30,
       "tsFile": "matematica_7b_oa04_clase06.ts",
-      "tsHashSha256": "ca762a0edb3b923febb3c42be8a34102f96df6d1f150e71b35e52e496ed3a47f"
+      "tsHashSha256": "fb1182331016c8ffc6f9c35c94dc767a7e75fbf6875f66dc6054fb66b6e0e437"
     }
   ],
   "artifacts": {
     "docxMaster": {
       "filename": "Plan_Maestro_7Básico_110-7-MAT-OA04_6Lecciones.docx",
       "relativePath": "LECCIONES/110-7/Matematica/OA04/Plan_Maestro_7Básico_110-7-MAT-OA04_6Lecciones.docx",
-      "sizeBytes": 75578,
-      "sha256": "fb05172279352b8504a59ed8da686770ecce47be1e74c48178e167e168593cbf"
+      "sizeBytes": 67667,
+      "sha256": "5a5b70fdebb2cd5a95152a0bcf0372b57cb7e86be6b6cc479e6058bb65a9e3b9"
     },
     "promptsWorkTxt": {
       "filename": "Prompts_Work_Matematica_7B_OA04.txt",
       "relativePath": "LECCIONES/110-7/Matematica/OA04/Prompts_Work_Matematica_7B_OA04.txt",
-      "sizeBytes": 180167,
-      "sha256": "d4703a801211634ba8c3ab1494239c91117610be778d18a8769365a6e3106531"
+      "sizeBytes": 180865,
+      "sha256": "45f9b9fe004c9cb282b43befb5bc0e89719a16546fcd3521fb3ac94ef9a73863"
     }
   },
   "governance": {
@@ -105,12 +105,17 @@
     "pedagogicalStandards": [
       "Estándar normativo universal: 6 lecciones completas por OA (Directriz Work)",
       "Estructura bimodal de 14 láminas (7 Gancho + 7 Explicación) por clase = 84 láminas totales",
+      "Objetivo de aprendizaje explícito al inicio de la secuencia visible para el estudiante (Lámina 1 de Explicación)",
       "Dúo co-protagonista de 13 años (joven con trenzas y joven con chaqueta cerceta) en 100% de escenas",
       "Widescreen 16:9 Anime Moderno limpio sin texto dibujado por IA (No text drawn by AI)",
-      "Sin sombras, sin contornos, sin emojis, sin guiones largos",
+      "Textos y fórmulas matemáticas como capas vectoriales editables, sin recuadros flotantes ni sombras",
+      "Subtítulos breves y legibles con logotipo blanco de EstudioSimple en esquina inferior derecha",
+      "Fórmula general de porcentaje: p% = p ÷ 100 (cero uso de notaciones informales tipo 0,p)",
+      "Contexto tributario verídico: IVA (19%) acotado a operaciones comerciales afectas (según SII)",
       "Reactivos psicométricos formales de 4 alternativas (A, B, C, D) con análisis de distractores",
-      "Lámina 6 de Explicación isomórfica con Caso 1 de Práctica Guiada",
-      "Cierre de video en Lámina 7 con Regla de Oro y pase directo a la plataforma"
+      "Comprobación posterior y práctica basadas en los mismos ejemplos modelados en el video",
+      "Cierre de video en Lámina 7 con Regla de Oro y pase directo a la plataforma (sin desafíos adicionales)",
+      "Regla de producción: 60s gancho y 90s explicación sin imposición de cronómetro acústico previo"
     ]
   }
 }

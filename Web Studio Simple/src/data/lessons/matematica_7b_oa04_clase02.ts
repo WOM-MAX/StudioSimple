@@ -266,8 +266,8 @@ export const MATEMATICA_7B_OA04_CLASE02: LessonData = {
         "overlayText": "DIVISIÓN DECIMAL POR 100",
         "overlayTitle": "DIVISIÓN DECIMAL POR 100",
         "overlaySubtitle": "Mover la coma dos posiciones hacia la izquierda",
-        "vectorialOverlayPptx": "Regla: p% = p / 100 = 0,p (ej. 75% = 0,75; 8% = 0,08)",
-        "speakerNotes": "Para obtener el número decimal, dividimos el porcentaje entre cien desplazando la coma dos lugares hacia la izquierda, agregando un cero si es necesario.",
+        "vectorialOverlayPptx": "Regla: p% = p ÷ 100 (ej. 75% = 75 ÷ 100 = 0,75; 8% = 8 ÷ 100 = 0,08)",
+        "speakerNotes": "Para obtener el número decimal, aplicamos la regla universal: p por ciento es p dividido en cien, desplazando la coma dos lugares hacia la izquierda.",
         "duracionSeg": 13
       },
       {
@@ -299,8 +299,8 @@ export const MATEMATICA_7B_OA04_CLASE02: LessonData = {
         "overlayText": "REGLA DE ORO DE LA CONVERSIÓN",
         "overlayTitle": "REGLA DE ORO DE LA CONVERSIÓN",
         "overlaySubtitle": "Todo porcentaje tiene su gemelo fraccionario y decimal",
-        "vectorialOverlayPptx": "Regla de oro: p% = p/100 = p:100. ¡Ahora ponlo en práctica!",
-        "speakerNotes": "Regla de oro: el porcentaje, la fracción irreducible y el decimal representan la misma cantidad en lenguajes distintos. Ahora practiquemos en la plataforma.",
+        "vectorialOverlayPptx": "Regla de oro: p% = p ÷ 100. ¡Ahora ponlo en práctica!",
+        "speakerNotes": "Regla de oro: el porcentaje, la fracción irreducible y el decimal representan la misma cantidad en lenguajes distintos: p por ciento es siempre p dividido en cien. Ahora practiquemos en la plataforma.",
         "duracionSeg": 13
       }
     ]

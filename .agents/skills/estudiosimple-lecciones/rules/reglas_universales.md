@@ -82,3 +82,69 @@ Al generar descripciones visuales para las diapositivas en ChatGPT Work o herram
   5. *Clase 5:* Aplicaciones en la vida cotidiana, contextos interdisciplinares o toma de decisiones.
   6. *Clase 6:* Síntesis integradora, preparación rigurosa para Exámenes Libres (EELL) del MINEDUC y evaluación psicométrica de cierre.
 - **Coherencia Isomórfica:** El paquete de 6 clases debe reflejarse con identidad total entre el DOCX oficial (`_6Lecciones.docx`), los prompts para Work (`.txt`) y los 6 módulos TypeScript en la plataforma web.
+
+---
+
+## 7. Reglas Universales de Maquetación y Flujo Audiovisual (7° Básico y Transversal)
+
+Estas especificaciones son de cumplimiento estricto para asegurar la calidad pedagógica y visual del ecosistema:
+
+1. **Objetivo al Comienzo de la Secuencia Visible:**
+   - En toda lección, el Objetivo de Aprendizaje debe presentarse de manera explícita al inicio de la secuencia visible para el estudiante (en la Lámina 1 de la explicación/formalización y en la ruta de inicio de la plataforma).
+   - El objetivo debe formularse de manera clara, autónoma y representativa del aprendizaje completo de la lección (especialmente en clases de aplicación cotidiana y síntesis, como las clases 5 y 6).
+
+2. **Ambos Protagonistas en Cada Escena:**
+   - El dúo co-protagonista fijo (la joven de 13 años con trenzas y el joven de 13 años con chaqueta cerceta) debe aparecer presente, visible y coprotagónico en el 100% de las láminas e ilustraciones.
+   - Prohibido dejar escenas con personajes aislados o ilustraciones mecánicas descontextualizadas sin la interacción de ambos estudiantes.
+
+3. **Imágenes Generadas Sin Texto (Blindaje IA):**
+   - Todo prompt para generadores de imagen debe incluir obligatoriamente la restricción: `No text drawn by AI, no artificial typography, no random letters, no watermark, no logos on the background scene.`
+   - La IA genera exclusivamente el arte de fondo y los personajes limpios.
+
+4. **Textos y Matemáticas como Overlays Editables:**
+   - Todos los textos explicativos, subtítulos, fórmulas matemáticas y anotaciones numéricas deben maquetarse como capas nativas editables en PowerPoint (`.pptx`) o componentes tipográficos en la plataforma web.
+   - Prohibido incrustar tipografía fija o fórmulas dentro de los mapas de bits.
+   - Prohibido el uso de sombras duras, contornos, resplandores o recuadros flotantes detrás del texto.
+
+5. **Subtítulos Breves de Máximo 8 Palabras:**
+   - Los subtítulos en pantalla deben ser sintéticos, concisos y de lectura ágil, calibrados a un máximo estricto de **ocho palabras** (48 pt en Ciencias y asignaturas afines, 36 pt en Matemática). Prohibido saturar visualmente la lámina con subtítulos extensos.
+
+6. **Logotipo Blanco de EstudioSimple Abajo a la Derecha:**
+   - En la maquetación final de diapositivas en PowerPoint (operada por ChatGPT Work / Codex), debe colocarse de forma sistemática el logotipo blanco oficial de EstudioSimple en la esquina inferior derecha de cada lámina, al tamaño del video de referencia. No se debe pedir a la IA generativa que dibuje el logo dentro de la imagen; se debe dejar espacio negativo real.
+
+7. **Comprobación Posterior Basada en los Mismos Ejemplos de la Clase:**
+   - Las preguntas guiadas de comprobación posterior al video (Paso 6 / Post-Questions) y el primer reactivo de la práctica guiada deben basarse estrictamente en los **mismos ejemplos y datos numéricos** modelados en el video explicativo (Lámina 6).
+   - Prohibido cambiar las cifras o la situación en el chequeo inmediato; el cambio de variables se introduce gradualmente a partir del segundo reactivo de práctica autónoma.
+
+8. **Explicación sin Desafío Adicional al Cierre:**
+   - La última lámina del video explicativo (Lámina 7) concluye con la Regla de Oro conceptual y el pase directo a la ejercitación en la plataforma interactiva.
+   - Queda estrictamente prohibido agregar nuevos ejercicios, desafíos no resueltos o tareas para el cuaderno al cierre del video explicativo, preservando el flujo directo a la plataforma.
+
+9. **Coherencia Integral de Cada Diapositiva (Cuádruple Alineación):**
+   - El título en pantalla, subtítulo, prompt de imagen, overlay vectorial y notas al orador (locución) deben explicar rigurosamente **la misma idea central**. Prohibido que las notas al orador desarrollen un tema pedagógico desalineado de lo anunciado en el título u overlay.
+
+10. **Sin Cuadernillos como Entregables Independientes:**
+   - Las actividades de práctica en el cuaderno físico permanecen integradas dentro del Paso 5 del guion pedagógico. Queda prohibido generar secciones anexas de "Cuadernillo de Trabajo del Estudiante" o entregables de rellenado dentro del DOCX oficial.
+
+11. **Duraciones Audiovisuales Planificadas (60s Gancho / 90s Explicación) y Tolerancia Google Vids:**
+   - Los tiempos asignados son **60 segundos para el Gancho** y **90 segundos para la Explicación** como duraciones planificadas de cada presentación (sin emplear el término "aproximado").
+   - Google Vids puede extender el video unos segundos al procesar o enriquecer las notas al orador; ese excedente natural se acepta plenamente.
+   - No exigir que el archivo exportado dure exactamente 60 o 90 segundos. Queda terminantemente prohibido utilizar la duración exportada, el cronómetro, ajustes de voz o el conteo de palabras como criterio para rechazar un plan o exigir reexportaciones.
+
+12. **Diferenciación Epistemológica de Fuentes Oficiales, Modelos Didácticos y Reactivos Creados:**
+   - *Fuentes Oficiales:* Citar con exactitud la edición, editorial, unidad y páginas verificadas (ej. Texto del Estudiante Ciencias Naturales 7° Básico Edición SM, Currículum Nacional MINEDUC). Queda prohibido atribuir como oficial un contenido o texto sin verificar la edición local y citarla.
+   - *Modelos Didácticos:* Reconocer explícitamente los andamiajes formativos (ej. el modelo de cuatro dimensiones: biológica, afectiva, social y ética) como organizadores didácticos derivados de los aspectos curriculares y de valores formativos (respeto mutuo, responsabilidad y consentimiento), sin atribuirlos como clasificaciones o decretos oficiales del MINEDUC ni de las Bases Curriculares.
+   - *Identificación de Preguntas y Reactivos de Práctica:* **Las preguntas creadas para una lección se identifican como “preguntas” o “reactivos de práctica”. Solo se llaman “oficiales” cuando se proporciona y verifica la pregunta original y su fuente.** Queda terminantemente prohibido calificar de "oficial" un reactivo elaborado por el equipo pedagógico.
+
+13. **Separación Radical entre Fondos IA y Overlays Editables (Prohibición de Letras A–D en Prompts de Imagen):**
+   - Todo prompt de generación de imágenes para IA debe solicitar arte de fondo limpio con espacio negativo real y la restricción obligatoria: *"No text drawn by AI. No logo drawn by AI."*
+   - En escenas que ilustren preguntas de selección múltiple, los prompts deben solicitar paneles, tarjetas o recuadros modulares interactivos en blanco (*clean blank illuminated panels / interactive blank choice cards*). Queda estrictamente prohibido pedir a la IA que dibuje letras A, B, C, D, números o textos de alternativas.
+   - Las letras (A, B, C, D), enunciados, opciones y rótulos se incorporan exclusivamente como overlays vectoriales editables en PowerPoint (`vectorialOverlayPptx` / `mathOverlayPptx`) y en la plataforma web. El logotipo blanco de EstudioSimple se agrega como vector independiente en PPTX.
+
+14. **Erradicación de Fórmulas y Jerga Procedimental en Humanidades:**
+   - En Historia, Geografía y Ciencias Sociales (y Lenguaje/Literatura), queda estrictamente prohibido usar fórmulas o expresiones de plantilla heredadas de matemática (tales como "idea matemática", "procedimiento formal", "regla y valor", "resultado consistente" o "resolución guiada"). La mediación y los reactivos deben formularse con categorías historiográficas rigurosas (multicausalidad, espacialidad, fuentes y procesos de larga duración).
+
+15. **Correspondencia Isomórfica en Comprobación Posterior al Video (Paso 6):**
+   - Las preguntas de comprobación guiada posteriores al video (Paso 6 / Post-Questions) deben repetir exactamente los mismos casos, datos y fenómenos modelados en el video explicativo (Lámina 6) y en el primer reactivo de la práctica guiada. La variación de parámetros o situaciones se introduce de manera progresiva a partir de la práctica autónoma.
+
+

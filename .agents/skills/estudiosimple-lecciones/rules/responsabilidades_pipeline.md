@@ -40,5 +40,17 @@ Este documento formaliza las fronteras operativas entre las tres entidades técn
 3. Sincronizar acústicamente el audio con las transiciones de las láminas.
 4. Generar subtítulos sincronizados y renderizar el video final de la lección.
 
-### Invariante de Pipeline:
-La duración acústica real del video solo se mide y certifica empíricamente dentro de Google Vids. Ni Antigravity ni Codex imponen cronómetros teóricos previos.
+### Invariante de Pipeline y Regla de Producción Audiovisual:
+- **Presupuesto Temporal Asignado:** El video gancho tiene 60 segundos asignados en la dosificación teórica (7 diapositivas) y la explicación 90 segundos asignados (7 diapositivas).
+- **Flexibilidad Acústica Natural en Google Vids:** En la producción real con Google Vids, la locución y el ritmo de narración pueden extenderlos unos segundos de forma natural. Queda retirado terminantemente todo protocolo que exija medir con cronómetro, reexportar sucesivamente por diferencias de segundos o mutilar las notas al orador mediante límites rígidos de conteo de palabras.
+- **Tratamiento de Ajustes Menores de Distribución:** Discrepancias menores de un segundo en la suma teórica (ej: 89s en lugar de 90s) se clasifican como ajustes menores de distribución: se corrigen en la misma pasada ajustando la lámina correspondiente sin bloquear el OA ni generar otra ronda completa de revisión.
+- La duración acústica real del video solo se mide y certifica empíricamente dentro de Google Vids. Ni Antigravity ni Codex imponen cronómetros teóricos punitivos previos.
+
+---
+
+## 4. Reglas de Producción de Activos y Nomenclatura
+
+- **Regla del Logotipo Oficial:** Codex/Work incorpora el logotipo blanco oficial de EstudioSimple en la esquina inferior derecha del PPTX, al tamaño del video de referencia. Queda prohibido solicitar a una IA generativa que dibuje el logo dentro de los mapas de bits de las ilustraciones; se debe reservar el espacio negativo correspondiente en la diapositiva.
+- **Nomenclatura Rigurosa de Reactivos:** Todo ejercicio diseñado originalmente para la clase debe titularse "reactivo didáctico de práctica elaborado para esta clase". La etiqueta "oficial MINEDUC" o "reactivo oficial de Examen Libre" se reserva exclusivamente para aquellos ítems cuya fuente original en el temario o ensayo oficial haya sido contrastada y citada con precisión.
+- **Sin Cuadernillos como Entregables:** Las actividades para el cuaderno se integran en el Paso 5 del guion; no se generan secciones anexas de cuadernillos dentro del DOCX oficial.
+

@@ -20,7 +20,7 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
       "El estándar MINEDUC para 7° Básico evalúa comprensión conceptual y aplicación a casos reales.",
       "Las preguntas de selección múltiple cuentan con distractores plausibles que exigen lectura atenta.",
       "Lee en voz alta únicamente los textos con la etiqueta DILE o PREGÚNTALE.",
-      "Refuerza la confianza del estudiante: este ensayo valida su preparación para el examen oficial."
+      "Refuerza la confianza del estudiante: este ensayo valida su preparación para la evaluación tipo Examen Libre."
     ],
     "emotionalTip": "Trasmite serenidad y seguridad. Las evaluaciones formativas no son castigos, sino instrumentos para celebrar lo aprendido e identificar qué detalles afinar."
   },
@@ -36,7 +36,7 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
       {
         "id": "b2",
         "number": "02",
-        "title": "Ensayo Oficial MINEDUC",
+        "title": "Ensayo Formativo Tipo Examen Libre",
         "subtitle": "Estrategia de Selección Múltiple",
         "color": "orange"
       },
@@ -98,7 +98,7 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
   "reference": {
     "dilePrompt": "La evaluación formativa de Ciencias Naturales para 7° Básico evalúa no solo la memoria de nombres anatómicos, sino la comprensión profunda de cómo se interconectan los cambios corporales, las emociones, los valores éticos y el autocuidado en la vida real.",
     "question": "Con tus propias palabras: ¿por qué un reactivo de evaluación de ciencias califica como 'incorrecta' una opción que afirme que la sexualidad es solo biología?",
-    "expectedAnswer": "Porque las Bases Curriculares y el Texto del Estudiante de Ciencias Naturales 7° Básico MINEDUC (pág. 16) definen la sexualidad como un fenómeno integral constituido por cuatro dimensiones inseparables (biológica, afectiva, social y ética), por lo que reducirla solo a lo físico es incompleto y erróneo.",
+    "expectedAnswer": "Porque la sexualidad humana se organiza didácticamente en cuatro dimensiones fundamentales (biológica, afectiva, social y ética) para estructurar los aspectos curriculares del OA 1 y los valores de respeto mutuo, por lo que reducirla solo a lo biológico resulta incompleto y erróneo.",
     "socraticHint": "Recuerda las dimensiones estudiadas desde la primera lección: ¿qué otros aspectos acompañan al cuerpo?",
     "feedbackSuccess": "¡Perfecto! Has captado la esencia del currículum nacional: la persona humana es una totalidad indivisible.",
     "feedbackSupport": "Recuerda: la sexualidad incluye afectos, vínculos sociales y normas éticas, no únicamente órganos y hormonas."
@@ -134,23 +134,23 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
         "slideNumber": 2,
         "tituloMomento": "El Mapa Completo del OA 1",
         "didacticPurpose": "El Mapa Completo del OA 1",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, in a high-tech science examination hall, with clean multiple-choice options A, B, C, D softly illuminated in cyan, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, in a high-tech science examination hall, with four clean blank modular rectangular panels softly illuminated in cyan, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Mapa Conceptual Integral del OA 1",
         "overlayTitle": "La visión holística del ser humano",
         "overlaySubtitle": "Cuatro dimensiones articuladas e inseparables",
         "vectorialOverlayPptx": "Matriz curricular: Dimensión biológica (cuerpo) + afectiva (emociones) + social (cultura y convivencia) + ética (valores y respeto)",
         "mathOverlayPptx": "Matriz curricular: Dimensión biológica (cuerpo) + afectiva (emociones) + social (cultura y convivencia) + ética (valores y respeto)",
-        "speakerNotes": "La sexualidad es una vivencia integral que articula las dimensiones biológica, afectiva, social y ética, según el Texto Oficial MINEDUC (pág. 16).",
+        "speakerNotes": "La sexualidad es una vivencia integral organizada didácticamente en las dimensiones biológica, afectiva, social y ética, articulando el currículum de Ciencias Naturales con valores de respeto y responsabilidad.",
         "palabrasAprox": 22,
         "duracionSeg": 10
       },
       {
         "slideNumber": 3,
-        "tituloMomento": "Anatomía de una Pregunta Oficial",
-        "didacticPurpose": "Anatomía de una Pregunta Oficial",
+        "tituloMomento": "Anatomía del Reactivo de Selección Múltiple",
+        "didacticPurpose": "Anatomía del Reactivo de Selección Múltiple",
         "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, observing a panoramic holographic map synthesizing the biological, affective, social, and ethical dimensions, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Estructura del Reactivo MINEDUC",
-        "overlayTitle": "Desarmando el reactivo oficial",
+        "overlayText": "Estructura del Reactivo de Práctica",
+        "overlayTitle": "Desarmando el reactivo de práctica",
         "overlaySubtitle": "Contexto, enunciado clave y cuatro alternativas",
         "vectorialOverlayPptx": "Componentes del ítem: Estímulo (caso/gráfico) -> Tarea cognitiva -> Clave correcta vs Distractores verosímiles",
         "mathOverlayPptx": "Componentes del ítem: Estímulo (caso/gráfico) -> Tarea cognitiva -> Clave correcta vs Distractores verosímiles",
@@ -190,13 +190,13 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
         "slideNumber": 6,
         "tituloMomento": "Autocontrol y Serenidad en el Examen",
         "didacticPurpose": "Autocontrol y Serenidad en el Examen",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing an official MINEDUC growth percentile chart demonstrating normal developmental tracks between 10 and 16 years, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing a medical growth percentile chart demonstrating healthy pubertal development, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Mente Clara y Confianza Plena",
         "overlayTitle": "Gestión emocional del examen",
         "overlaySubtitle": "Pausar, respirar y leer con calma",
         "vectorialOverlayPptx": "Factores de éxito evaluativo: Preparación conceptual previa + Manejo de la ansiedad + Revisión metódica",
         "mathOverlayPptx": "Factores de éxito evaluativo: Preparación conceptual previa + Manejo de la ansiedad + Revisión metódica",
-        "speakerNotes": "Derribamos mitos sobre el crecimiento adolescente, fundamentando que la variabilidad entre los 10 y 16 años es un hecho biológico normal.",
+        "speakerNotes": "Derribamos mitos sobre el crecimiento adolescente, fundamentando que la variabilidad en el inicio puberal y en el estirón de estatura es un hecho biológico respaldado por la medicina.",
         "palabrasAprox": 21,
         "duracionSeg": 10
       },
@@ -220,7 +220,7 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
     {
       "context": "Estrategia frente a preguntas de aplicación",
       "question": "¿Por qué en un examen de ciencias es un error buscar palabras idénticas del texto de memoria en lugar de comprender la relación causa-efecto?",
-      "expected": "Porque las preguntas oficiales plantean casos nuevos y situaciones aplicadas; memorizar palabras sueltas impide razonar cuando el contexto cambia.",
+      "expected": "Porque las evaluaciones tipo Examen Libre plantean casos nuevos y situaciones aplicadas; memorizar palabras sueltas impide razonar cuando el contexto cambia.",
       "success": "¡Exacto! El MINEDUC evalúa habilidades de pensamiento científico y transferencia, no repetición de memoria.",
       "support": "Piensa en un problema de la vida diaria: ¿se resuelve repitiendo una definición o comprendiendo cómo funciona el fenómeno?",
       "reveal": "El aprendizaje profundo exige conectar causas con efectos biológicos y aplicar principios a escenarios inéditos.",
@@ -236,13 +236,13 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
       "studentReveal": "Porque es incompleta: aunque tenga algo de verdad, no responde todo lo que pide la pregunta."
     }
   ],
-  "conversationContext": "Analizaremos en profundidad la estructura psicométrica de un reactivo oficial de 4 alternativas y modelaremos su resolución fundamentada.",
+  "conversationContext": "Analizaremos en profundidad la estructura psicométrica de un reactivo de práctica de 4 alternativas y modelaremos su resolución fundamentada.",
   "formalization": {
     "title": "Modelado de Reactivos Psicométricos Tipo Examen Libre",
     "concept": "Técnicas de análisis, descarte de distractores y justificación epistemológica",
     "summary": "La evaluación en Ciencias Naturales bajo estándares del MINEDUC utiliza reactivos de cuatro alternativas con distractores verosímiles. El éxito radica en identificar el núcleo del objetivo de aprendizaje, contrastar las opciones con la evidencia científica y descartar aquellas incompletas o reduccionistas.",
     "ideaClave": "Resolver reactivos didácticos tipo MINEDUC con rigor exige identificar el distractor parcial y fundamentar la clave correcta mediante la integración de las 4 dimensiones del OA 1.",
-    "dileIntro": "A continuación formalizaremos la técnica de resolución de ítems oficiales y analizaremos un caso modelado idéntico al primer desafío de tu práctica.",
+    "dileIntro": "A continuación formalizaremos la técnica de resolución de reactivos de práctica tipo Examen Libre y analizaremos un caso modelado idéntico al primer desafío de tu práctica.",
     "hazInstruction": "Sigue con máxima atención el despiece del reactivo modelado en la lámina 6 y observa cómo se descarta cada opción incorrecta.",
     "videoSrc": "",
     "slides": [
@@ -250,13 +250,13 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
         "slideNumber": 1,
         "tituloMomento": "Objetivo y Criterios de Evaluación",
         "didacticPurpose": "Objetivo y Criterios de Evaluación",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing before an exam review board showing an official MINEDUC multiple-choice item with options A, B, C, D clearly laid out, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Objetivo: Dominio del Estándar Oficial",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing before an interactive evaluation board displaying four blank choice panels in a clean modular layout, with generous negative space for text overlays. No text drawn by AI.",
+        "overlayText": "Objetivo: Dominio de Selección Múltiple",
         "overlayTitle": "Objetivo de la lección",
         "overlaySubtitle": "Resolver reactivos de selección múltiple con 4 alternativas",
         "vectorialOverlayPptx": "Rótulo formal: OA 01 · Síntesis Integral y Evaluación Tipo Examen Libre MINEDUC",
         "mathOverlayPptx": "Rótulo formal: OA 01 · Síntesis Integral y Evaluación Tipo Examen Libre MINEDUC",
-        "speakerNotes": "El objetivo de la lección es integrar los contenidos de sexualidad y pubertad, aplicando el análisis riguroso para resolver reactivos psicométricos tipo Examen Libre MINEDUC.",
+        "speakerNotes": "El objetivo de la lección es integrar los contenidos de sexualidad y pubertad, aplicando el análisis riguroso para resolver reactivos psicométricos de práctica tipo Examen Libre.",
         "palabrasAprox": 25,
         "duracionSeg": 11
       },
@@ -264,13 +264,13 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
         "slideNumber": 2,
         "tituloMomento": "Tipología de Distractores en Ciencias",
         "didacticPurpose": "Tipología de Distractores en Ciencias",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, pointing at the correct option B on the screen, highlighted by a subtle green aura of valid scientific evidence, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining a three-category diagram of typical exam distractors: factual errors, biological reductionism, and sweeping generalizations, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Cómo se Construyen los Distractores",
         "overlayTitle": "Los tres tipos de distractores",
         "overlaySubtitle": "Aprender a reconocer las trampas habituales",
         "vectorialOverlayPptx": "Clasificación de distractores: 1. Error fáctico directo · 2. Reduccionismo biologicista · 3. Generalización arbitraria",
         "mathOverlayPptx": "Clasificación de distractores: 1. Error fáctico directo · 2. Reduccionismo biologicista · 3. Generalización arbitraria",
-        "speakerNotes": "El análisis de reactivos formales exige leer con atención el enunciado e identificar la variable disciplinaria central antes de revisar las alternativas de respuesta.",
+        "speakerNotes": "En las preguntas de ciencias encontramos tres tipos comunes de distractores: el error fáctico con datos falsos, el reduccionismo que olvida lo afectivo o social, y las generalizaciones absolutas sin respaldo.",
         "palabrasAprox": 24,
         "duracionSeg": 11
       },
@@ -278,13 +278,13 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
         "slideNumber": 3,
         "tituloMomento": "Paso 1: Detectar el Núcleo del Enunciado",
         "didacticPurpose": "Paso 1: Detectar el Núcleo del Enunciado",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, demonstrating the systematic discard of distractors A, C, and D with clinical reasoning on a digital display, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing an exam question prompt on a digital display, highlighting the core verb and key scientific conditions, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Paso 1: Aislar la Pregunta Central",
         "overlayTitle": "Qué me están preguntando exactamente",
         "overlaySubtitle": "Subrayar el verbo rector y las condiciones",
         "vectorialOverlayPptx": "Desglose del estímulo: Sujeto del caso -> Situación planteada -> Verbo rector de la tarea cognitiva",
         "mathOverlayPptx": "Desglose del estímulo: Sujeto del caso -> Situación planteada -> Verbo rector de la tarea cognitiva",
-        "speakerNotes": "El método de resolución descarta sistemáticamente distractores que presenten reduccionismos biológicos, afirmaciones absolutas falsas o confusiones conceptuales.",
+        "speakerNotes": "El primer paso consiste en leer el enunciado para aislar la pregunta central: identificamos el sujeto del caso, la situación descrita y el verbo rector que define la tarea científica pedida.",
         "palabrasAprox": 17,
         "duracionSeg": 8
       },
@@ -292,13 +292,13 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
         "slideNumber": 4,
         "tituloMomento": "Paso 2: Evaluación Crítica de Opciones A, B, C, D",
         "didacticPurpose": "Paso 2: Evaluación Crítica de Opciones A, B, C, D",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing beside four solid pillars representing dimensions, pubertal hormones, consent, and scientific evidence, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, methodically evaluating four blank interactive choice cards against scientific criteria on a test review board, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Paso 2: Filtrar Cada Alternativa",
         "overlayTitle": "Someter a prueba cada opción",
         "overlaySubtitle": "Verificar si cumple todas las condiciones",
         "vectorialOverlayPptx": "Algoritmo de filtro: Opción A (Verificar) -> Opción B (Verificar) -> Opción C (Verificar) -> Opción D (Verificar)",
         "mathOverlayPptx": "Algoritmo de filtro: Opción A (Verificar) -> Opción B (Verificar) -> Opción C (Verificar) -> Opción D (Verificar)",
-        "speakerNotes": "La justificación de la clave correcta debe articular la evidencia biológica con las dimensiones afectivas y éticas aprobadas en las Bases Curriculares nacionales.",
+        "speakerNotes": "En el segundo paso evaluamos críticamente cada alternativa: revisamos las opciones A, B, C y D una por una, comprobando si contienen errores fácticos, si son incompletas o si cumplen todas las condiciones científicas del enunciado.",
         "palabrasAprox": 23,
         "duracionSeg": 10
       },
@@ -306,27 +306,27 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
         "slideNumber": 5,
         "tituloMomento": "Paso 3: La Clave Integral y su Justificación",
         "didacticPurpose": "Paso 3: La Clave Integral y su Justificación",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, reviewing an official bubble answer sheet on their study desk, calm and confident with plenty of time, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, reviewing a four-option response grid on their study desk, calm and confident with plenty of time, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Paso 3: Seleccionar la Respuesta Completa",
         "overlayTitle": "La clave debe ser autosuficiente",
         "overlaySubtitle": "Respaldo conceptual sin vacíos",
         "vectorialOverlayPptx": "Validación de la clave: Responde al problema + Coherencia curricular MINEDUC + Cero contradicciones científicas",
         "mathOverlayPptx": "Validación de la clave: Responde al problema + Coherencia curricular MINEDUC + Cero contradicciones científicas",
-        "speakerNotes": "La gestión del tiempo en la evaluación formal requiere calma y seguridad: fundamentar cada elección en conceptos científicos estudiados en el cuaderno.",
+        "speakerNotes": "En el tercer paso seleccionamos la respuesta correcta asegurándonos de que sea completa y autosuficiente: debe responder directamente a lo preguntado, tener coherencia con el marco curricular del MINEDUC y carecer de contradicciones científicas.",
         "palabrasAprox": 22,
         "duracionSeg": 10
       },
       {
         "slideNumber": 6,
-        "tituloMomento": "Caso Modelado: Pregunta Oficial de 4 Alternativas",
-        "didacticPurpose": "Caso Modelado: Pregunta Oficial de 4 Alternativas",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing an official four-choice exam card on their desk, comparing reasoning notes before selecting option B, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Caso Modelado: Reactivo Didáctico MINEDUC",
-        "overlayTitle": "Caso Modelado: Multidimensionalidad de la sexualidad",
-        "overlaySubtitle": "Análisis y descarte psicométrico de 4 alternativas",
+        "tituloMomento": "Caso Modelado: Reactivo de Práctica de 4 Alternativas",
+        "didacticPurpose": "Caso Modelado: Reactivo de Práctica de 4 Alternativas",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing a four-choice blank test card on their desk, comparing reasoning notes before selecting the correct option, with generous negative space for text overlays. No text drawn by AI.",
+        "overlayText": "Caso Modelado: Reactivo de Práctica",
+        "overlayTitle": "Caso Modelado: Reactivo de Práctica",
+        "overlaySubtitle": "Análisis y descarte de 4 alternativas",
         "vectorialOverlayPptx": "Despiece del ítem: Enunciado: Estudiante afirma que la sexualidad es solo biología reproductiva -> Opción A (Falsa: reduccionista) · Opción B (CLAVE CORRECTA: 4 dimensiones integrales) · Opción C (Falsa: inicio tardío erróneo) · Opción D (Falsa: niega afecto en la niñez)",
         "mathOverlayPptx": "Despiece del ítem: Enunciado: Estudiante afirma que la sexualidad es solo biología reproductiva -> Opción A (Falsa: reduccionista) · Opción B (CLAVE CORRECTA: 4 dimensiones integrales) · Opción C (Falsa: inicio tardío erróneo) · Opción D (Falsa: niega afecto en la niñez)",
-        "speakerNotes": "Analicemos un reactivo didáctico elaborado según estándar MINEDUC: un estudiante afirma que la sexualidad se limita exclusivamente a órganos y procreación. A partir del Texto Oficial MINEDUC (pág. 16), ¿cuál opción refuta dicha postura? La opción B es correcta porque establece que la sexualidad es una dimensión integral que une lo biológico, afectivo, social y ético durante toda la vida.",
+        "speakerNotes": "Analicemos un reactivo de práctica elaborado para esta clase según el estándar de 7° Básico: un estudiante afirma que la sexualidad se limita exclusivamente a órganos y procreación. A partir del Texto Escolar Ciencias Naturales 7° Básico Edición SM (Unidad 1, pág. 16), la opción B es correcta porque establece que la sexualidad se organiza didácticamente en cuatro dimensiones fundamentales: biológica, afectiva, social y ética.",
         "palabrasAprox": 53,
         "duracionSeg": 24
       },
@@ -349,7 +349,7 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
   "postQuestions": [
     {
       "context": "Caso 1: Reactivo didáctico de selección múltiple (Estándar MINEDUC)",
-      "question": "A continuación se presenta un reactivo didáctico elaborado según estándar MINEDUC para 7° Básico:\n'Durante una clase de Ciencias Naturales, los estudiantes debaten sobre la sexualidad humana. Uno de ellos afirma que la sexualidad se limita exclusivamente a los procesos biológicos de maduración de los órganos reproductores y a la capacidad de procrear.'\nA partir de las Bases Curriculares y el Texto Oficial de Ciencias Naturales (pág. 16), ¿cuál de las siguientes opciones refuta con mayor precisión científica y pedagógica dicha afirmación?\nA) La afirmación es correcta porque las hormonas y los caracteres sexuales primarios son las únicas variables medibles empíricamente.\nB) La afirmación es incompleta porque la sexualidad humana es una dimensión integral que involucra aspectos biológicos, afectivos, sociales y éticos a lo largo de toda la vida.\nC) La afirmación es incorrecta porque la sexualidad solo comienza en la adultez cuando se forman vínculos legales formales.\nD) La afirmación es válida únicamente para la etapa de la pubertad, pues en la niñez no existen influencias afectivas ni sociales.\n\nIndica la alternativa correcta y justifica por qué descartaste las otras tres opciones.",
+      "question": "A continuación se presenta un reactivo didáctico elaborado según estándar MINEDUC para 7° Básico:\n'Durante una clase de Ciencias Naturales, los estudiantes debaten sobre la sexualidad humana. Uno de ellos afirma que la sexualidad se limita exclusivamente a los procesos biológicos de maduración de los órganos reproductores y a la capacidad de procrear.'\nA partir del enfoque de Ciencias Naturales 7° Básico (Texto del Estudiante Edición SM, pág. 16), ¿cuál de las siguientes opciones refuta con mayor precisión científica y pedagógica dicha afirmación?\nA) La afirmación es correcta porque las hormonas y los caracteres sexuales primarios son las únicas variables medibles empíricamente.\nB) La afirmación es incompleta porque la sexualidad humana es una dimensión integral que involucra aspectos biológicos, afectivos, sociales y éticos a lo largo de toda la vida.\nC) La afirmación es incorrecta porque la sexualidad solo comienza en la adultez cuando se forman vínculos legales formales.\nD) La afirmación es válida únicamente para la etapa de la pubertad, pues en la niñez no existen influencias afectivas ni sociales.\n\nIndica la alternativa correcta y justifica por qué descartaste las otras tres opciones.",
       "expected": "La alternativa correcta es la B. Se descarta la opción A porque es un reduccionismo biológico falso; se descarta la C porque la sexualidad se vive en todas las etapas del ciclo vital y no solo en la adultez; y se descarta la D porque las dimensiones afectivas y sociales están presentes desde la primera infancia.",
       "success": "¡Extraordinario desempeño evaluativo! Has seleccionado la clave B y justificado con rigor el descarte psicométrico de cada distractor.",
       "support": "Recuerda el caso modelado en el video: identifica la opción que describe la sexualidad como una vivencia integral y explica los fallos de las demás.",
@@ -368,8 +368,8 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
   ],
   "practice": [
     {
-      "context": "Caso 1: Reactivo didáctico de selección múltiple (Estándar MINEDUC)",
-      "question": "A continuación se presenta un reactivo didáctico elaborado según estándar MINEDUC para 7° Básico:\n'Durante una clase de Ciencias Naturales, los estudiantes debaten sobre la sexualidad humana. Uno de ellos afirma que la sexualidad se limita exclusivamente a los procesos biológicos de maduración de los órganos reproductores y a la capacidad de procrear.'\nA partir de las Bases Curriculares y el Texto Oficial de Ciencias Naturales (pág. 16), ¿cuál de las siguientes opciones refuta con mayor precisión científica y pedagógica dicha afirmación?\nA) La afirmación es correcta porque las hormonas y los caracteres sexuales primarios son las únicas variables medibles empíricamente.\nB) La afirmación es incompleta porque la sexualidad humana es una dimensión integral que involucra aspectos biológicos, afectivos, sociales y éticos a lo largo de toda la vida.\nC) La afirmación es incorrecta porque la sexualidad solo comienza en la adultez cuando se forman vínculos legales formales.\nD) La afirmación es válida únicamente para la etapa de la pubertad, pues en la niñez no existen influencias afectivas ni sociales.\n\nIndica la alternativa correcta y justifica por qué descartaste las otras tres opciones.",
+      "context": "Caso 1: Reactivo de práctica elaborado para esta clase",
+      "question": "A continuación se presenta un reactivo didáctico elaborado según estándar MINEDUC para 7° Básico:\n'Durante una clase de Ciencias Naturales, los estudiantes debaten sobre la sexualidad humana. Uno de ellos afirma que la sexualidad se limita exclusivamente a los procesos biológicos de maduración de los órganos reproductores y a la capacidad de procrear.'\nA partir del enfoque de Ciencias Naturales 7° Básico (Texto del Estudiante Edición SM, pág. 16), ¿cuál de las siguientes opciones refuta con mayor precisión científica y pedagógica dicha afirmación?\nA) La afirmación es correcta porque las hormonas y los caracteres sexuales primarios son las únicas variables medibles empíricamente.\nB) La afirmación es incompleta porque la sexualidad humana es una dimensión integral que involucra aspectos biológicos, afectivos, sociales y éticos a lo largo de toda la vida.\nC) La afirmación es incorrecta porque la sexualidad solo comienza en la adultez cuando se forman vínculos legales formales.\nD) La afirmación es válida únicamente para la etapa de la pubertad, pues en la niñez no existen influencias afectivas ni sociales.\n\nIndica la alternativa correcta y justifica por qué descartaste las otras tres opciones.",
       "expected": "La alternativa correcta es la B. Se descarta la opción A porque es un reduccionismo biológico falso; se descarta la C porque la sexualidad se vive en todas las etapas del ciclo vital y no solo en la adultez; y se descarta la D porque las dimensiones afectivas y sociales están presentes desde la primera infancia.",
       "success": "¡Extraordinario desempeño evaluativo! Has seleccionado la clave B y justificado con rigor el descarte psicométrico de cada distractor.",
       "support": "Recuerda el caso modelado en el video: identifica la opción que describe la sexualidad como una vivencia integral y explica los fallos de las demás.",
@@ -430,20 +430,22 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
         "Solo las personas que presentan cambios tempranos logran una salud reproductiva adecuada"
       ],
       "correct": "Los relojes biológicos y factores genéticos determinan ventanas temporales amplias y saludables de maduración puberal",
-      "fixExplain": "La variabilidad cronológica en el inicio puberal (entre 8-13 años en niñas y 9-14 en niños según Tanner 1962 y MINEDUC) es una característica biológica normal."
+      "fixExplain": "La variabilidad cronológica en el inicio puberal (entre 8-13 años en niñas y 9-14 en niños según Tanner 1962, MedlinePlus y MINEDUC) y en el estirón de estatura posterior es una característica biológica normal."
     }
   ],
   "recovery": [
     {
-      "title": "Recuperación: El Enfoque Integral del MINEDUC",
-      "explain": "El Ministerio de Educación de Chile enfatiza que la sexualidad no es únicamente un fenómeno de órganos y hormonas. Comprende cómo nos sentimos, cómo nos relacionamos con los demás, nuestros valores éticos y el respeto por los derechos humanos de cada individuo (Texto Oficial pág. 16).",
-      "q": "¿Qué dimensiones integran la sexualidad humana de acuerdo a las Bases Curriculares y el Texto Oficial (pág. 16)?",
+      "title": "Recuperación: El Enfoque Integral de la Sexualidad",
+      "explain": "El enfoque formativo enfatiza que la sexualidad no es únicamente un fenómeno de órganos y hormonas. Comprende cómo nos sentimos, cómo nos relacionamos con los demás, nuestros valores éticos y el respeto por los derechos humanos de cada individuo (Texto del Estudiante Edición SM, pág. 16).",
+      "q": "¿Qué dimensiones articulan didácticamente la sexualidad humana como organizador de esta unidad (Edición SM, pág. 16)?",
       "options": [
+        "Únicamente la dimensión biológica y la reproducción en la etapa adulta",
         "Biológica, afectiva, social y ética a lo largo de toda la vida",
-        "Únicamente la dimensión biológica y la reproducción en la etapa adulta"
+        "Exclusivamente la dimensión económica y laboral",
+        "Solamente los cambios anatómicos visibles en la adolescencia"
       ],
       "correct": "Biológica, afectiva, social y ética a lo largo de toda la vida",
-      "correctText": "¡Exacto! La visión integral de cuatro dimensiones (biológica, afectiva, social y ética) según el Texto Oficial MINEDUC (pág. 16) es la base del currículum de Ciencias Naturales.",
+      "correctText": "¡Exacto! El organizador didáctico de cuatro dimensiones (biológica, afectiva, social y ética) articula los aspectos curriculares con los valores de respeto y responsabilidad.",
       "fixText": "Recuerda que la sexualidad es un fenómeno integral con 4 dimensiones inseparables, no solo biología."
     }
   ],
@@ -458,7 +460,7 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
     ],
     [
       "3 · Éxito en Evaluaciones Oficiales",
-      "El análisis crítico de los enunciados y el descarte metódico de distractores permiten resolver con solidez los Exámenes Libres del MINEDUC."
+      "El análisis crítico de los enunciados y el descarte metódico de distractores permiten resolver con solidez las evaluaciones tipo Examen Libre del MINEDUC."
     ]
   ],
   "interactive": {

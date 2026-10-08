@@ -1,529 +1,414 @@
 import { LessonData } from '../../types/lesson';
 
 export const HISTORIA_7B_OA02_CLASE03: LessonData = {
-  "metadata": {
-    "grade": "7° Básico",
-    "subject": "Historia, Geografía y Ciencias Sociales",
-    "oaCode": "OA 2",
-    "oaTitle": "Complejización de las primeras sociedades: de la hominización al surgimiento de las civilizaciones",
-    "lessonNumber": 3,
-    "totalLessonsInOa": 6,
-    "lessonTitle": "Primeras aldeas sedentarias y división del trabajo",
-    "durationMinutes": 30,
-    "nextLessonTitle": "Innovaciones tecnológicas del Neolítico"
+  metadata: {
+    grade: '7° Básico',
+    subject: 'Historia, Geografía y Ciencias Sociales',
+    oaCode: 'OA 2',
+    oaTitle: 'Procesos de transformación de la vida humana en el Neolítico',
+    lessonNumber: 3,
+    totalLessonsInOa: 6,
+    lessonTitle: 'Primeras aldeas sedentarias y organización comunitaria',
+    durationMinutes: 30,
+    nextLessonTitle: 'Innovaciones tecnológicas del Neolítico'
   },
-  "prep": {
-    "adultObjective": "Acompañar al estudiante a contextualizar y comprender el proceso histórico o geográfico de: Primeras aldeas sedentarias y división del trabajo, desarrollando el pensamiento crítico y analizando Sedentarización.",
-    "routeToday": "1. Inicio y activación · 2. Video de exploración · 3. Recorrido guiado · 4. Formalización y práctica en cuaderno · 5. Miniquiz y REVISAR · 6. Cierre metacognitivo",
-    "mentorReminder": "Sigue las indicaciones en pantalla paso a paso. Lee únicamente los recuadros DILE en voz alta y espera siempre la respuesta.",
-    "reminders": [
-      "Sigue el orden indicado.",
-      "Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.",
-      "No leas los recuadros SOLO PARA TI ni AYUDA DE LECTURA.",
-      "Haz cada pregunta y espera la respuesta antes de seleccionar una opción.",
-      "Considera correcta una respuesta si expresa la idea matemática, aunque use palabras distintas.",
-      "Si el estudiante necesita apoyo, usa únicamente la ayuda que aparecerá.",
-      "Si propone otra explicación o no está de acuerdo, escúchalo completo y valora su razonamiento antes de guiarlo."
+
+  prep: {
+    adultObjective: 'Acompañar al estudiante a comprender la reorganización del espacio geográfico y la vida comunitaria en las primeras aldeas sedentarias del Neolítico, analizando los casos arqueológicos de Çatalhöyük y Jericó, y reconociendo el surgimiento de la cooperación colectiva y la división del trabajo.',
+    routeToday: 'De los campamentos temporales a las viviendas permanentes de adobe y la vida comunitaria.',
+    mentorReminder: 'Sigue las indicaciones en pantalla paso a paso. Lee únicamente los recuadros DILE y PREGÚNTALE en voz alta.',
+    reminders: [
+      'Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.',
+      'No leas los recuadros SOLO PARA TI ni AYUDA PEDAGÓGICA.',
+      'Haz cada pregunta y espera la respuesta antes de retroalimentar.',
+      'Considera correcta una respuesta si expresa el razonamiento histórico con sus propias palabras.',
+      'Pídele que imagine la vida cotidiana en una aldea donde no había calles y se caminaba por los techos.'
     ],
-    "emotionalTip": "Fomenta la perspectiva histórica: 'Analiza los hechos considerando la época y el espacio geográfico en que ocurrieron'."
+    emotionalTip: 'Invítalo a valorar el sentido de comunidad: "Vivir juntos en aldeas exigió inventar acuerdos, ayudarse en las cosechas y aprender a resolver conflictos en paz".'
   },
-  "route": {
-    "blocks": [
-      {
-        "id": "b1",
-        "number": "01",
-        "title": "Historia, Geografía y Ciencias Sociales",
-        "subtitle": "Primeras aldeas sedentarias y división del trabajo",
-        "color": "yellow"
-      },
-      {
-        "id": "b2",
-        "number": "02",
-        "title": "Exploración",
-        "subtitle": "Gancho y Recorrido Guiado",
-        "color": "orange"
-      },
-      {
-        "id": "b3",
-        "number": "03",
-        "title": "Práctica",
-        "subtitle": "Aplicación en situaciones reales",
-        "color": "yellow"
-      },
-      {
-        "id": "b4",
-        "number": "04",
-        "title": "Evaluación",
-        "subtitle": "Miniquiz formativo y síntesis",
-        "color": "teal"
-      }
+
+  route: {
+    blocks: [
+      { id: 'b1', number: '01', title: 'Historia y Geografía', subtitle: 'Primeras aldeas sedentarias', color: 'yellow' },
+      { id: 'b2', number: '02', title: 'Exploración', subtitle: 'Casas de adobe y murallas comunales', color: 'orange' },
+      { id: 'b3', number: '03', title: 'Práctica', subtitle: 'Análisis de Çatalhöyük en cuaderno', color: 'yellow' },
+      { id: 'b4', number: '04', title: 'Evaluación', subtitle: 'Miniquiz formativo y síntesis', color: 'teal' }
     ],
-    "keyQuestions": [
-      {
-        "label": "Exploración inicial",
-        "sub": "Primeras aldeas sedentarias y división del trabajo"
-      },
-      {
-        "label": "Idea clave",
-        "sub": "Los procesos históricos sobre Primeras aldeas sedentarias y "
-      },
-      {
-        "label": "Práctica y aplicación",
-        "sub": "Resolución guiada paso a paso"
-      }
+    keyQuestions: [
+      { label: '¿Cómo eran las primeras aldeas?', sub: 'Viviendas agrupadas de adobe construidas junto a ríos y valles fértiles.' },
+      { label: '¿Qué nuevos roles surgieron?', sub: 'División del trabajo entre agricultores, constructores y pastores.' }
     ],
-    "dileIntro": "Hoy comenzaremos la clase 3 de Historia, Geografía y Ciencias Sociales: \"Primeras aldeas sedentarias y división del trabajo\".",
-    "dileObjective": "Transformación del espacio geográfico y nuevas profesiones"
+    dileIntro: 'Hoy comenzaremos la clase 3 de Historia, Geografía y Ciencias Sociales: "Primeras aldeas sedentarias y organización comunitaria".',
+    dileObjective: 'Analizar cómo el sedentarismo transformó el hábitat humano y la organización social.'
   },
-  "situation": {
-    "dilePrompt": "Hoy en Historia y Ciencias Sociales nos situamos en 'Primeras aldeas sedentarias y división del trabajo'. El concepto histórico central que abordamos es 'Sedentarización'. Observa el escenario histórico planteado en la pantalla sobre Transformación del espacio geográfico y nuevas profesiones:",
-    "expectedAnswer": "Explicar las necesidades de subsistencia, recursos geográficos o motivos sociales vinculados con Sedentarización.",
-    "socraticHint": "Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?",
-    "emotionalTip": "Fomenta la perspectiva histórica: 'Analiza los hechos considerando la época y el espacio geográfico en que ocurrieron'.",
-    "options": [
+
+  situation: {
+    dilePrompt: 'Observa la reconstrucción arqueológica de la aldea neolítica de Çatalhöyük en Anatolia (actual Turquía). Las casas estaban completamente pegadas unas a otras, sin calles entre ellas. Las personas subían por escaleras de madera a los techos, caminaban sobre las terrazas y entraban a sus hogares por una abertura superior. ¿Por qué crees que diseñaron su aldea de esta forma tan compacta?',
+    expectedAnswer: 'Para defenderse de posibles ataques de animales salvajes o grupos rivales al no tener puertas exteriores vulnerables, y para aprovechar mejor el calor en invierno y el espacio disponible para los campos de cultivo.',
+    socraticHint: 'Si no hay calles ni puertas en la planta baja, ¿cómo entra un intruso o un animal salvaje a la aldea?',
+    emotionalTip: 'Valora la creatividad arquitectónica de nuestros antepasados para sentirse seguros y protegidos en su nuevo modo de vida.',
+    options: [
       {
-        "label": "Explicó las causas históricas y geográficas vinculadas con Sedentarización",
-        "kind": "correct",
-        "feedbackText": "¡Exacto! Comprendió las causas históricas y geográficas que motivaron a las personas de esa época."
+        label: 'Explicó que servía como muralla defensiva continua y para protegerse del clima y animales',
+        kind: 'correct',
+        feedbackText: '¡Exacto! La disposición adosada funcionaba como una fortaleza natural que protegía a toda la comunidad.'
       },
       {
-        "label": "Solo mencionó hechos aislados sin explicar por qué ocurrieron",
-        "kind": "needs_support",
-        "feedbackText": "Pídele que piense en los desafíos del entorno: ¿por qué necesitaban organizarse de esa manera?"
+        label: 'Dijo que no sabían hacer puertas ni ventanas comunes en el suelo',
+        kind: 'needs_support',
+        feedbackText: 'Sabían construir muy bien, pero entrar por el techo era una decisión inteligente de seguridad defensiva y aislamiento térmico.'
+      },
+      {
+        label: 'No sabe qué responder o dio otra respuesta',
+        kind: 'no_answer',
+        feedbackText: 'Pista guiada: Fíjate en los muros exteriores continuos: al no tener puertas hacia afuera, ninguna fiera salvaje podía entrar a la aldea.'
       }
     ]
   },
-  "reference": {
-    "dilePrompt": "¿Qué causas o necesidades motivaron a las comunidades de esa época en relación con 'Sedentarización'?",
-    "question": "¿Qué causas o necesidades motivaron a las comunidades de esa época en relación con 'Sedentarización'?",
-    "expectedAnswer": "Explicar las necesidades de subsistencia, recursos geográficos o motivos sociales vinculados con Sedentarización.",
-    "socraticHint": "Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?",
-    "feedbackSuccess": "Muy bien. Observaste el detalle central con precisión.",
-    "feedbackSupport": "Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?"
+
+  reference: {
+    dilePrompt: 'En la antigua aldea de Jericó, los arqueólogos descubrieron una imponente muralla de piedra de cuatro metros de alto y una torre circular de ocho metros construida hacia el 8.000 a.C.',
+    question: '¿Qué nos indica la construcción de una muralla y una torre monumental sobre la organización social de los habitantes de Jericó?',
+    expectedAnswer: 'Indica que existía una sólida cooperación colectiva y líderes o consejos capaces de coordinar a cientos de personas trabajando juntas durante meses en una obra pública común.',
+    socraticHint: 'Una sola familia no puede levantar una muralla de piedra de cuatro metros. ¿Quiénes tuvieron que participar y cómo debieron organizarse?',
+    feedbackSuccess: '¡Excelente deducción histórica! Revela que ya existía coordinación comunitaria a gran escala y un fuerte sentido de defensa colectiva.',
+    feedbackSupport: 'Una obra tan grande demuestra que la aldea trabajaba de forma unida bajo acuerdos comunitarios para proteger su territorio.'
   },
-  "hook": {
-    "title": "Video Motivacional: El Desafío de Primeras aldeas sedentarias y división del trabajo",
-    "titulo": "Video Motivacional: El Desafío de Primeras aldeas sedentarias y división del trabajo",
-    "focusPoints": [],
-    "dileIntro": "Antes de ver el video, observa con atención lo que descubren los dos exploradores y qué pregunta queda planteada.",
-    "hazInstruction": "Observa y reflexiona con las escenas del desafío visual.",
-    "videoSrc": "",
-    "videoUrl": "",
-    "posterSrc": "",
-    "dileAfterVideo": "Muy buena observación. Ahora conversaremos sobre lo que descubrieron en la expedición.",
-    "fullPrompt": "Actúa como Diseñador Instruccional Senior y Creador de Presentaciones en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de GANCHO MOTIVACIONAL (Paso 2) para:\n- Asignatura: Historia, Geografía y Ciencias Sociales\n- Objetivo de Aprendizaje: OA 2\n- Clase: 3 (\"Primeras aldeas sedentarias y división del trabajo\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS (PLAN MAESTRO ACTUALIZACIÓN 29-09-2026):\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Exactamente 7 diapositivas (slide1 a slide7).\n3. ESTILO ARTÍSTICO DE LAS IMÁGENES: Anime Moderno (Modern Anime Style, cinematográfico, iluminación dinámica, fondos limpios con espacio negativo real).\n4. PROTAGONISTAS FIJOS: Dúo co-protagónico de 13 años (la joven y el joven estudiantes-exploradores chilenos). ACTÚAN JUNTOS en cada escena, colaborando y resolviendo el desafío en equipo.\n5. REGLA VISUAL ANTI-MÁSCARAS Y FONDOS LIMPIOS: Imágenes Full-Bleed con espacio negativo para texto y vectores. Queda prohibido usar placas oscuras que tapen las caras de los personajes o la mitad de la lámina. PROHIBIDO dibujar números, letras o fórmulas dentro de la ilustración generada por IA.\n6. PRESUPUESTO TEMPORAL Y GUION CONTINUO (GANCHO - 60 SEGUNDOS / 130 PALABRAS TOTALES): Cada diapositiva DEBE incluir únicamente el texto de narración oral continua (8+8+8+9+9+9+9 segundos, totalizando exactamente ~130 palabras para 60 segundos de locución a 130 palabras por minuto en Google Vids/TTS), sin marcas técnicas, encabezados ni duraciones, listo para ser leído por voz en off.\n7. PROTOCOLO DE COMPROBACIÓN ACÚSTICA OBLIGATORIA (GOOGLE VIDS): Medir la duración real del archivo exportado con cronómetro o analizador de audio. El conteo de palabras no garantiza por sí solo 60 segundos exactos. Si la duración no es exacta, ajustar narración, pausas o ritmo, volver a exportar y registrar la duración comprobada oficial.\n8. ESTRUCTURA HEXAPARTITA POR DIAPOSITIVA:\n   • Toda diapositiva se define con: 1) Propósito, 2) Título en Pantalla (64 pt), 3) Subtítulo en Pantalla (36 pt), 4) Prompt de imagen IA sin texto, 5) Capa vectorial para PowerPoint, y 6) Notas al orador continuas.\n   • COLOR DE TEXTO: Un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.\n   • LOCUCIÓN COHERENTE: Narra con precisión lo que se observa en la imagen y lo que se sintetiza en la pantalla.\n\nDETALLE DE LAS 7 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Apertura y Contexto) ---\n1. Propósito Didáctico: Apertura y Contexto\n2. Título en Pantalla (64 pt): Misión 3: Primeras aldeas sedentarias y división del trabajo\n3. Subtítulo en Pantalla (36 pt): Exploración inicial en Historia, Geografía y Ciencias Sociales\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Primeras aldeas sedentarias y división del trabajo (Historia, Geografía y Ciencias Sociales). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Coordenadas historicas: Linea temporal y contexto de Primeras aldeas sedentarias y división del trabajo\n6. Notas al Orador (Locución Continua Google Vids): \"Comienza una nueva expedición de aprendizaje en Historia, Geografía y Ciencias Sociales. Nuestros dos exploradores analizan el desafío de Primeras aldeas sedentarias y división del trabajo para descubrir sus secretos.\"\n\n--- DIAPOSITIVA 2 (Presentación del Escenario) ---\n1. Propósito Didáctico: Presentación del Escenario\n2. Título en Pantalla (64 pt): Punto de partida\n3. Subtítulo en Pantalla (36 pt): Transformación del espacio geográfico y nuevas profesiones\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Transformación del espacio geográfico y nuevas profesiones. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Transformación del espacio geográfico y nuevas profesiones\n6. Notas al Orador (Locución Continua Google Vids): \"Al observar los datos sobre Transformación del espacio geográfico y nuevas profesiones, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor.\"\n\n--- DIAPOSITIVA 3 (Aparición del Conflicto / Misterio) ---\n1. Propósito Didáctico: Aparición del Conflicto / Misterio\n2. Título en Pantalla (64 pt): El enigma disciplinar\n3. Subtítulo en Pantalla (36 pt): Desafío en Primeras aldeas sedentarias y división del trabajo\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Transformación del espacio geográfico y nuevas profesiones\n6. Notas al Orador (Locución Continua Google Vids): \"Surge un reto concreto sobre Primeras aldeas sedentarias y división del trabajo: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso.\"\n\n--- DIAPOSITIVA 4 (Exploración de Pistas) ---\n1. Propósito Didáctico: Exploración de Pistas\n2. Título en Pantalla (64 pt): Análisis de evidencias\n3. Subtítulo en Pantalla (36 pt): Transformación del espacio geográfico y nuevas profesiones\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Transformación del espacio geográfico y nuevas profesiones\n6. Notas al Orador (Locución Continua Google Vids): \"Ambos comparan las pistas disponibles sobre Transformación del espacio geográfico y nuevas profesiones. Cada dato confirma cómo interactúan los elementos clave de la situación.\"\n\n--- DIAPOSITIVA 5 (El Momento Crítico) ---\n1. Propósito Didáctico: El Momento Crítico\n2. Título en Pantalla (64 pt): Criterio de decisión\n3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Transformación del espacio geográfico y nuevas profesiones\n6. Notas al Orador (Locución Continua Google Vids): \"Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Primeras aldeas sedentarias y división del trabajo con total precisión metodológica.\"\n\n--- DIAPOSITIVA 6 (La Antesala de la Pregunta) ---\n1. Propósito Didáctico: La Antesala de la Pregunta\n2. Título en Pantalla (64 pt): El dilema central\n3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Primeras aldeas sedentarias y división del trabajo?\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Dilema historico: Fuentes contrastadas frente al acontecimiento\n6. Notas al Orador (Locución Continua Google Vids): \"Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje.\"\n\n--- DIAPOSITIVA 7 (La Pregunta Detonante) ---\n1. Propósito Didáctico: La Pregunta Detonante\n2. Título en Pantalla (64 pt): Pregunta detonante\n3. Subtítulo en Pantalla (36 pt): Regla y método de Primeras aldeas sedentarias y división del trabajo\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta detonante: ¿Que consecuencias trajo Primeras aldeas sedentarias y división del trabajo?\n6. Notas al Orador (Locución Continua Google Vids): \"Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!\"\n\n",
-    "slides": [
+
+  hook: {
+    title: 'La Vida Cotidiana en las Primeras Aldeas',
+    titulo: 'La Vida Cotidiana en las Primeras Aldeas',
+    focusPoints: [
+      'El poblado de Çatalhöyük: Urbanismo compacto de adobe con acceso por los techos.',
+      'Las defensas de Jericó: Murallas y torre circular de piedra para protección colectiva.',
+      'División comunitaria: Tareas compartidas de siembra, construcción, pastoreo y alfarería.',
+      'Lazos de parentesco: Ritos y enterramientos de antepasados bajo el suelo familiar.'
+    ],
+    dileIntro: 'Acompañemos a los dos exploradores a recorrer los tejados y patios de las primeras aldeas sedentarias de la historia.',
+    hazInstruction: 'Observa cómo el espacio habitacional transformó la convivencia y la seguridad colectiva.',
+    videoSrc: '',
+    dileAfterVideo: 'Muy buena observación. Ahora profundizaremos en cómo estas aldeas cambiaron la organización humana.',
+    slides: [
       {
-        "slideNumber": 1,
-        "tituloMomento": "Apertura y Contexto",
-        "didacticPurpose": "Apertura y Contexto",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Primeras aldeas sedentarias y división del trabajo (Historia, Geografía y Ciencias Sociales). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.",
-        "overlayTitle": "Misión 3: Primeras aldeas sedentarias y división del trabajo",
-        "overlaySubtitle": "Exploración inicial en Historia, Geografía y Ciencias Sociales",
-        "overlayText": "Misión 3: Primeras aldeas sedentarias y división del trabajo",
-        "vectorialOverlayPptx": "Coordenadas historicas: Linea temporal y contexto de Primeras aldeas sedentarias y división del trabajo",
-        "mathOverlayPptx": "Coordenadas historicas: Linea temporal y contexto de Primeras aldeas sedentarias y división del trabajo",
-        "speakerNotes": "Comienza una nueva expedición de aprendizaje en Historia, Geografía y Ciencias Sociales. Nuestros dos exploradores analizan el desafío de Primeras aldeas sedentarias y división del trabajo para descubrir sus secretos.",
-        "palabrasAprox": 21,
-        "duracionSeg": 9
+        slideNumber: 1,
+        tituloMomento: "Apertura y Escenario",
+        didacticPurpose: "Apertura y Escenario",
+        visualPrompt: "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a sunlit plateau overlooking the mudbrick rooftops of ancient Çatalhöyük. Warm morning light, wide negative space in top third. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Las Primeras Aldeas",
+        overlaySubtitle: "Hogares permanentes junto a valles fértiles",
+        overlayText: "Las Primeras Aldeas: Hogares permanentes junto a valles fértiles",
+        vectorialOverlayPptx: "Coordenadas arqueológicas: Çatalhöyük (Anatolia) y Jericó (Cisjordania), 8.000 a 6.000 a.C.",
+        speakerNotes: "Nuestros exploradores descubren Çatalhöyük, una de las aldeas más antiguas del mundo, donde cientos de familias compartían un asentamiento fijo de adobe.",
+        palabrasAprox: 23,
+        duracionSeg: 9
       },
       {
-        "slideNumber": 2,
-        "tituloMomento": "Presentación del Escenario",
-        "didacticPurpose": "Presentación del Escenario",
-        "visualPrompt": "Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Transformación del espacio geográfico y nuevas profesiones. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.",
-        "overlayTitle": "Punto de partida",
-        "overlaySubtitle": "Transformación del espacio geográfico y nuevas profesiones",
-        "overlayText": "Punto de partida: Transformación del espacio geográfico y nuevas profesiones",
-        "vectorialOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Transformación del espacio geográfico y nuevas profesiones",
-        "mathOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Transformación del espacio geográfico y nuevas profesiones",
-        "speakerNotes": "Al observar los datos sobre Transformación del espacio geográfico y nuevas profesiones, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor.",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        slideNumber: 2,
+        tituloMomento: "El Hábitat Adosado",
+        didacticPurpose: "El Hábitat Adosado",
+        visualPrompt: "Modern anime style. The girl climbing a wooden ladder through a roof opening into a clean, plastered mudbrick room with an oven and sleeping benches. Soft volumetric light, clear space on left. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Viviendas por el Techo",
+        overlaySubtitle: "Entradas superiores y muros continuos protectores",
+        overlayText: "Viviendas por el Techo: Entradas superiores y muros continuos protectores",
+        vectorialOverlayPptx: "Arquitectura vernácula: Casas adosadas sin calles para aislamiento térmico y defensa",
+        speakerNotes: "Las casas no tenían puertas en la planta baja. Las familias circulaban por los techos y descendían por escaleras, protegiéndose del frío y de animales salvajes.",
+        palabrasAprox: 26,
+        duracionSeg: 9
       },
       {
-        "slideNumber": 3,
-        "tituloMomento": "Aparición del Conflicto / Misterio",
-        "didacticPurpose": "Aparición del Conflicto / Misterio",
-        "visualPrompt": "Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.",
-        "overlayTitle": "El enigma disciplinar",
-        "overlaySubtitle": "Desafío en Primeras aldeas sedentarias y división del trabajo",
-        "overlayText": "El enigma disciplinar: Primeras aldeas sedentarias y división del trabajo",
-        "vectorialOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Transformación del espacio geográfico y nuevas profesiones",
-        "mathOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Transformación del espacio geográfico y nuevas profesiones",
-        "speakerNotes": "Surge un reto concreto sobre Primeras aldeas sedentarias y división del trabajo: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        slideNumber: 3,
+        tituloMomento: "La Muralla de Jericó",
+        didacticPurpose: "La Muralla de Jericó",
+        visualPrompt: "Modern anime style. The boy standing before a massive stone fortification wall and circular tower of ancient Jericho, measuring the stones with admiration. Dramatic lighting, expressive eyes. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Fortificaciones Colectivas",
+        overlaySubtitle: "Murallas de piedra levantadas en comunidad",
+        overlayText: "Fortificaciones Colectivas: Murallas de piedra levantadas en comunidad",
+        vectorialOverlayPptx: "Monumento comunitario: Muralla y torre de Jericó construidas mediante trabajo cooperativo",
+        speakerNotes: "En Jericó, los aldeanos construyeron una imponente muralla de piedra. Esta gran obra exigió que toda la comunidad colaborara organizada para proteger su oasis.",
+        palabrasAprox: 24,
+        duracionSeg: 9
       },
       {
-        "slideNumber": 4,
-        "tituloMomento": "Exploración de Pistas",
-        "didacticPurpose": "Exploración de Pistas",
-        "visualPrompt": "Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.",
-        "overlayTitle": "Análisis de evidencias",
-        "overlaySubtitle": "Transformación del espacio geográfico y nuevas profesiones",
-        "overlayText": "Análisis de evidencias: Transformación del espacio geográfico y nuevas profesiones",
-        "vectorialOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Transformación del espacio geográfico y nuevas profesiones",
-        "mathOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Transformación del espacio geográfico y nuevas profesiones",
-        "speakerNotes": "Ambos comparan las pistas disponibles sobre Transformación del espacio geográfico y nuevas profesiones. Cada dato confirma cómo interactúan los elementos clave de la situación.",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        slideNumber: 4,
+        tituloMomento: "La División del Trabajo",
+        didacticPurpose: "La División del Trabajo",
+        visualPrompt: "Modern anime style. Bustling village scene: a group of men molding mudbricks, women weaving flax linen, and youths herding goats toward the green hills. Vibrant colors, clean composition. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Nuevas Labores Aldeanas",
+        overlaySubtitle: "Agricultores constructores pastores y artesanos",
+        overlayText: "Nuevas Labores Aldeanas: Agricultores constructores pastores y artesanos",
+        vectorialOverlayPptx: "Organización social: Primeros pasos hacia la especialización y división comunitaria del trabajo",
+        speakerNotes: "La vida aldeana impulsó la división de tareas: mientras unos sembraban en los campos, otros fabricaban ladrillos de adobe, cuidaban los rebaños o tejían mantas.",
+        palabrasAprox: 25,
+        duracionSeg: 9
       },
       {
-        "slideNumber": 5,
-        "tituloMomento": "El Momento Crítico",
-        "didacticPurpose": "El Momento Crítico",
-        "visualPrompt": "Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.",
-        "overlayTitle": "Criterio de decisión",
-        "overlaySubtitle": "Aplicar el método riguroso",
-        "overlayText": "Criterio de decisión riguroso",
-        "vectorialOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Transformación del espacio geográfico y nuevas profesiones",
-        "mathOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Transformación del espacio geográfico y nuevas profesiones",
-        "speakerNotes": "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Primeras aldeas sedentarias y división del trabajo con total precisión metodológica.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        slideNumber: 5,
+        tituloMomento: "El Espacio Sagrado",
+        didacticPurpose: "El Espacio Sagrado",
+        visualPrompt: "Modern anime style. The two young protagonists in a quiet domestic room with bull skull decorations (bucrania) and plastered hearths, looking with respect at an ancestral platform. Gentle warm light. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Memoria y Antepasados",
+        overlaySubtitle: "Culto doméstico y enterramientos familiares",
+        overlayText: "Memoria y Antepasados: Culto doméstico y enterramientos familiares",
+        vectorialOverlayPptx: "Cohesión social: Sentido de pertenencia territorial vinculado al culto de los antepasados",
+        speakerNotes: "Los lazos de parentesco eran sagrados. Enterraban a sus seres queridos bajo las plataformas de sus casas, reforzando el arraigo y el derecho a su tierra.",
+        palabrasAprox: 25,
+        duracionSeg: 9
       },
       {
-        "slideNumber": 6,
-        "tituloMomento": "La Antesala de la Pregunta",
-        "didacticPurpose": "La Antesala de la Pregunta",
-        "visualPrompt": "Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.",
-        "overlayTitle": "El dilema central",
-        "overlaySubtitle": "¿Cómo resolver Primeras aldeas sedentarias y división del trabajo?",
-        "overlayText": "¿Cómo resolver Primeras aldeas sedentarias y división del trabajo?",
-        "vectorialOverlayPptx": "Dilema historico: Fuentes contrastadas frente al acontecimiento",
-        "mathOverlayPptx": "Dilema historico: Fuentes contrastadas frente al acontecimiento",
-        "speakerNotes": "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        slideNumber: 6,
+        tituloMomento: "El Espacio Modificado",
+        didacticPurpose: "El Espacio Modificado",
+        visualPrompt: "Modern anime style. Wide shot of the two explorers on a hill overlooking cultivated fields, water diversion ditches, and animal pens surrounding the village. Volumetric clouds, generous negative space. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Transformación del Paisaje",
+        overlaySubtitle: "Campos canales y corrales alterando el entorno",
+        overlayText: "Transformación del Paisaje: Campos canales y corrales alterando el entorno",
+        vectorialOverlayPptx: "Geografía humana: Modificación intencional del entorno natural para fines productivos",
+        speakerNotes: "El sedentarismo transformó el paisaje geográfico: abrieron canales para desviar agua de ríos, talaron matorrales y crearon huertos permanentes en el valle.",
+        palabrasAprox: 22,
+        duracionSeg: 9
       },
       {
-        "slideNumber": 7,
-        "tituloMomento": "La Pregunta Detonante",
-        "didacticPurpose": "La Pregunta Detonante",
-        "visualPrompt": "Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.",
-        "overlayTitle": "Pregunta detonante",
-        "overlaySubtitle": "Regla y método de Primeras aldeas sedentarias y división del trabajo",
-        "overlayText": "Meta: Dominio de Primeras aldeas sedentarias y división del trabajo",
-        "vectorialOverlayPptx": "Pregunta detonante: ¿Que consecuencias trajo Primeras aldeas sedentarias y división del trabajo?",
-        "mathOverlayPptx": "Pregunta detonante: ¿Que consecuencias trajo Primeras aldeas sedentarias y división del trabajo?",
-        "speakerNotes": "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        slideNumber: 7,
+        tituloMomento: "Pregunta Detonante",
+        didacticPurpose: "Pregunta Detonante",
+        visualPrompt: "Modern anime style. Inspiring setting with both 13-year-olds smiling with their study notes before an ancient village map, curious and confident. Soft gradient background. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Interrogante Central",
+        overlaySubtitle: "¿Cómo organizaron la convivencia en aldeas?",
+        overlayText: "Interrogante Central: ¿Cómo organizaron la convivencia en aldeas?",
+        vectorialOverlayPptx: "Pregunta rectora: ¿Qué acuerdos comunitarios permitieron la vida sedentaria?",
+        speakerNotes: "¡Acompáñanos a descubrir cómo las primeras aldeas sedentarias crearon nuevas formas de cooperación, liderazgo y vida comunitaria!",
+        palabrasAprox: 18,
+        duracionSeg: 6
       }
     ]
   },
-  "preQuestions": [
+
+  preQuestions: [
     {
-      "context": "Contexto Temporal, Espacial y Sedentarización",
-      "question": "¿De qué manera el entorno geográfico y la época condicionaron el desarrollo de 'Sedentarización' en este proceso histórico?",
-      "expected": "Relacionar las características del espacio geográfico con la organización social y el desarrollo de Sedentarización.",
-      "success": "¡Muy bien! Ubicaste con precisión las coordenadas temporales y espaciales del proceso.",
-      "support": "Observa las referencias del mapa y la cronología: ¿qué recursos naturales o rutas influían en sus decisiones?",
-      "reveal": "El entorno geográfico y las condiciones de la época condicionaron profundamente los modos de vida y las instituciones humanas.",
-      "studentReveal": "La influencia del espacio geográfico y el tiempo histórico en Sedentarización."
+      context: 'El Urbanismo de Çatalhöyük',
+      question: 'En el video observamos que las casas de Çatalhöyük estaban pegadas sin calles y se entraba por los techos. ¿Qué ventajas prácticas tenía esta forma de construir?',
+      expected: 'Proporcionaba una muralla defensiva continua contra intrusos o animales feroces y mantenía el calor en las viviendas durante los inviernos rigurosos.',
+      success: '¡Exacto! El diseño compacto ofrecía defensa colectiva pasiva y un excelente aislamiento térmico en la meseta.',
+      support: 'Piensa en la seguridad: sin puertas al nivel del suelo, ningún enemigo o fiera podía ingresar sin trepar a las terrazas.',
+      reveal: 'El diseño adosado de Çatalhöyük funcionaba como fortaleza comunal y protegía los hogares frente a las heladas invernales.',
+      studentReveal: 'Servía como muralla defensiva continua para la aldea y mantenía el calor en las casas durante el invierno.'
     },
     {
-      "context": "Pensamiento Crítico y Prevención del Presentismo",
-      "question": "Para evitar el error común de 'Dificultad para establecer relaciones de causa y efecto entre los diferentes procesos (ej., agricultura -> sedentarización -> acumulación -> comercio).', ¿qué debemos considerar al analizar las decisiones tomadas por los actores históricos?",
-      "expected": "Evaluar las decisiones históricas desde la mentalidad, recursos y cosmovisión propia de la época estudiada.",
-      "success": "¡Excelente empatía histórica! Analizaste el pasado desde su propio contexto y no desde los prejuicios actuales.",
-      "support": "Piensa qué información y qué valores tenían en ese siglo: ¿podían prever las consecuencias de la misma forma que nosotros hoy?",
-      "reveal": "El rigor histórico exige comprender las razones de los protagonistas en su propio tiempo, evitando anacronismos.",
-      "studentReveal": "La comprensión del pasado desde el contexto propio de sus protagonistas."
+      context: 'Las Murallas de Jericó y la Cooperación Social',
+      question: '¿Por qué la construcción de la gran muralla y torre de Jericó demuestra que la sociedad neolítica ya tenía una organización comunitaria avanzada?',
+      expected: 'Porque una obra de piedra tan grande requería trabajo conjunto planificado, turnos organizados y liderazgo comunal para coordinar a cientos de personas.',
+      success: '¡Excelente análisis social! La arquitectura monumental es prueba irrefutable de trabajo cooperativo y acuerdos comunitarios estables.',
+      support: 'Una familia sola no puede cortar ni transportar miles de piedras pesadas. Requirió el esfuerzo coordinado de todo el poblado.',
+      reveal: 'Las fortificaciones de Jericó demuestran que las aldeas contaban con liderazgo, acuerdos colectivos y división de faenas para obras de bien común.',
+      studentReveal: 'Porque levantar murallas de piedra exigió que cientos de aldeanos trabajaran juntos bajo acuerdos y liderazgos comunes.'
     }
   ],
-  "formalization": {
-    "title": "Video Explicativo: Formalización de Primeras aldeas sedentarias y división del trabajo",
-    "concept": "Video Explicativo: Formalización de Primeras aldeas sedentarias y división del trabajo",
-    "dileIntro": "Ahora veremos el video explicativo de Primeras aldeas sedentarias y división del trabajo. Observa el mapa conceptual y cómo se articula el concepto de Sedentarización.",
-    "hazInstruction": "Revisemos la explicación formal y la idea clave.",
-    "ideaClave": "Los procesos históricos sobre Primeras aldeas sedentarias y división del trabajo responden a múltiples causas interconectadas, donde 'Sedentarización' explica cómo las sociedades resolvieron sus desafíos de convivencia y subsistencia.",
-    "videoSrc": "",
-    "videoUrl": "",
-    "graphicPoster": "",
-    "fullPrompt": "Actúa como Diseñador Pedagógico y Especialista en Didáctica Disciplinar en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de VIDEO EXPLICATIVO / FORMALIZACIÓN (Paso 4) para:\n- Asignatura: Historia, Geografía y Ciencias Sociales\n- Objetivo de Aprendizaje: OA 2\n- Clase: 3 (\"Primeras aldeas sedentarias y división del trabajo\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS (PLAN MAESTRO ACTUALIZACIÓN 29-09-2026):\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Exactamente 7 diapositivas (slide1 a slide7) siguiendo el principio de un cambio visual por cada movimiento mental.\n3. DIAPOSITIVA 1 OBLIGATORIA CON OBJETIVO: La primera diapositiva declara como subtítulo (36 pt) el objetivo específico de la lección, sin repetir rótulos redundantes 'OA 01'.\n4. PROTAGONISTAS FIJOS EN EL 100% DE LAS ESCENAS: Los mismos 2 jóvenes de 13 años (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.\n5. REGLA VISUAL ANTI-MÁSCARAS Y FONDOS LIMPIOS: Imagen limpia con espacio negativo real. Prohibido que la IA intente dibujar números, rectas o letras. Todo elemento disciplinar se ensambla vectorialmente en PowerPoint.\n6. PRESUPUESTO TEMPORAL Y GUION PEDAGÓGICO (LECCIÓN EXPLICATIVA - 90 SEGUNDOS / 195 PALABRAS TOTALES): Guion explicativo continuo (12+13+13+13+13+13+13 segundos, totalizando exactamente ~195 palabras para 90 segundos a 130 palabras por minuto en Google Vids/TTS), sin marcas técnicas. Diapositiva 1 formula el objetivo; diapositivas 2 a 7 desarrollan el contenido sin repetirlo.\n7. PROTOCOLO DE COMPROBACIÓN ACÚSTICA OBLIGATORIA (GOOGLE VIDS): Medir la duración real del archivo exportado con cronómetro o analizador de audio. El conteo de palabras no garantiza por sí solo 90 segundos exactos. Si la duración no es exacta, ajustar narración, pausas o ritmo, volver a exportar y registrar la duración comprobada oficial.\n8. JERARQUÍA TIPOGRÁFICA Y COLOR DE TEXTO: Título en Pantalla (64 pt); Subtítulo en Pantalla (36 pt). Texto brillante de un solo color de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, contornos, resplandores ni recuadros flotantes o fondos detrás del texto. Especificar color en cada prompt.\n9. CIERRE SIN RETO EN EL VIDEO: La explicación concluye con la regla de oro y da el pase directo a la práctica en la plataforma web, sin proponer desafíos finales ni tareas en el cuaderno durante el video.\n10. ESTRUCTURA HEXAPARTITA POR DIAPOSITIVA (Propósito, Título 64 pt, Subtítulo 36 pt, Prompt Imagen IA, Capa Vectorial PPTX, Notas al Orador).\n\nDETALLE DE LAS 7 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Objetivo de la Lección) ---\n1. Propósito Didáctico: Objetivo de la Lección\n2. Título en Pantalla (64 pt): Objetivo de la lección\n3. Subtítulo en Pantalla (36 pt): Dominar Primeras aldeas sedentarias y división del trabajo: Transformación del espacio geográfico y nuevas profesiones\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Transformación del espacio geográfico y nuevas profesiones. High clarity, negative space for text. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 2 · Primeras aldeas sedentarias y división del trabajo\n6. Notas al Orador (Locución Continua Google Vids): \"El objetivo de hoy es aprender a transformación del espacio geográfico y nuevas profesiones, aplicando el método disciplinar paso a paso con total rigor y claridad.\"\n\n--- DIAPOSITIVA 2 (Definición del Concepto Central) ---\n1. Propósito Didáctico: Definición del Concepto Central\n2. Título en Pantalla (64 pt): Concepto fundamental\n3. Subtítulo en Pantalla (36 pt): Transformación del espacio geográfico y nuevas profesiones\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Escenario historico y fuentes primarias de Transformación del espacio geográfico y nuevas profesiones\n6. Notas al Orador (Locución Continua Google Vids): \"Para comprender Primeras aldeas sedentarias y división del trabajo, establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación.\"\n\n--- DIAPOSITIVA 3 (Demostración Modelada) ---\n1. Propósito Didáctico: Demostración Modelada\n2. Título en Pantalla (64 pt): Modelamiento paso a paso\n3. Subtítulo en Pantalla (36 pt): Procedimiento de Primeras aldeas sedentarias y división del trabajo\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama multicausal: Factores economicos, sociales y culturales\n6. Notas al Orador (Locución Continua Google Vids): \"Observa cómo se aplica el procedimiento en este caso guiado: cada transformación responde a una justificación disciplinar explícita y visible.\"\n\n--- DIAPOSITIVA 4 (Prevención del Error Frecuente) ---\n1. Propósito Didáctico: Prevención del Error Frecuente\n2. Título en Pantalla (64 pt): Atención: Error habitual\n3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Contraste temporal: cambios y continuidades historicas\n6. Notas al Orador (Locución Continua Google Vids): \"Un error frecuente ocurre al descuidar el orden o saltarse un paso de la convención establecida. Siempre comprobamos cada dato antes de continuar.\"\n\n--- DIAPOSITIVA 5 (Comprobación del Resultado) ---\n1. Propósito Didáctico: Comprobación del Resultado\n2. Título en Pantalla (64 pt): Validación del resultado\n3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Interpretacion historica justificada a partir de evidencias\n6. Notas al Orador (Locución Continua Google Vids): \"Al contrastar el resultado con la situación inicial, confirmamos que la solución es consistente, rigurosa y responde plenamente a la pregunta.\"\n\n--- DIAPOSITIVA 6 (Estrategia Mnemotécnica) ---\n1. Propósito Didáctico: Estrategia Mnemotécnica\n2. Título en Pantalla (64 pt): Estrategia de pensamiento\n3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Estrategia de analisis historico: Contexto, causas y consecuencias\n6. Notas al Orador (Locución Continua Google Vids): \"Recuerda siempre la estrategia en tres pasos: identificar la información clave, aplicar la regla en orden y comprobar el resultado final.\"\n\n--- DIAPOSITIVA 7 (Síntesis y Regla de Oro) ---\n1. Propósito Didáctico: Síntesis y Regla de Oro\n2. Título en Pantalla (64 pt): Regla de Oro: Primeras aldeas sedentarias y división del trabajo\n3. Subtítulo en Pantalla (36 pt): Método disciplinar validado\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Infografía de síntesis: Regla historica de Primeras aldeas sedentarias y división del trabajo\n6. Notas al Orador (Locución Continua Google Vids): \"Ahora que dominas la regla fundamental y el procedimiento de Primeras aldeas sedentarias y división del trabajo, ¡vamos a demostrarlo en las actividades interactivas de la plataforma!\"\n\n",
-    "slides": [
+
+  formalization: {
+    title: 'El Espacio Aldeano y la Vida Comunitaria',
+    concept: 'Primeras Aldeas Sedentarias y División del Trabajo',
+    dileIntro: 'Ahora veremos el video explicativo. Comprenderemos cómo el sedentarismo transformó el espacio geográfico, la arquitectura y la división social del trabajo.',
+    hazInstruction: 'Revisemos con atención la explicación formal y preparemos el cuaderno para registrar las ideas centrales.',
+    ideaClave: 'El surgimiento de las primeras aldeas sedentarias como Çatalhöyük y Jericó reorganizó el espacio geográfico mediante viviendas permanentes de adobe, obras defensivas colectivas y una división inicial del trabajo entre agricultores, pastores y constructores.',
+    slides: [
       {
-        "slideNumber": 1,
-        "tituloMomento": "Objetivo de la Lección",
-        "didacticPurpose": "Objetivo de la Lección",
-        "visualPrompt": "Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Transformación del espacio geográfico y nuevas profesiones. High clarity, negative space for text. No text drawn by AI.",
-        "overlayTitle": "Objetivo de la lección",
-        "overlaySubtitle": "Dominar Primeras aldeas sedentarias y división del trabajo: Transformación del espacio geográfico y nuevas profesiones",
-        "overlayText": "Concepto clave: Primeras aldeas sedentarias y división del trabajo",
-        "vectorialOverlayPptx": "Rótulo formal: OA 2 · Primeras aldeas sedentarias y división del trabajo",
-        "mathOverlayPptx": "Rótulo formal: OA 2 · Primeras aldeas sedentarias y división del trabajo",
-        "speakerNotes": "El objetivo de hoy es aprender a transformación del espacio geográfico y nuevas profesiones, aplicando el método disciplinar paso a paso con total rigor y claridad.",
-        "palabrasAprox": 25,
-        "duracionSeg": 12
+        slideNumber: 1,
+        tituloMomento: "Objetivo de la Lección",
+        didacticPurpose: "Objetivo de la Lección",
+        visualPrompt: "Modern anime style 16:9. The boy and girl in a luminous study room, examining architectural models of Neolithic mudbrick houses and village layouts. Clear negative space on top. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Objetivo de la Clase",
+        overlaySubtitle: "Comprender la vida en primeras aldeas",
+        overlayText: "Objetivo: Comprender la vida en primeras aldeas",
+        vectorialOverlayPptx: "Rótulo formal: OA 2 · Hábitat sedentario y organización comunitaria",
+        speakerNotes: "El objetivo de hoy es comprender cómo las primeras aldeas sedentarias transformaron el espacio geográfico e inauguraron la división social del trabajo.",
+        palabrasAprox: 23,
+        duracionSeg: 12
       },
       {
-        "slideNumber": 2,
-        "tituloMomento": "Definición del Concepto Central",
-        "didacticPurpose": "Definición del Concepto Central",
-        "visualPrompt": "Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.",
-        "overlayTitle": "Concepto fundamental",
-        "overlaySubtitle": "Transformación del espacio geográfico y nuevas profesiones",
-        "overlayText": "Regla formal: Transformación del espacio geográfico y nuevas profesiones",
-        "vectorialOverlayPptx": "Escenario historico y fuentes primarias de Transformación del espacio geográfico y nuevas profesiones",
-        "mathOverlayPptx": "Escenario historico y fuentes primarias de Transformación del espacio geográfico y nuevas profesiones",
-        "speakerNotes": "Para comprender Primeras aldeas sedentarias y división del trabajo, establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        slideNumber: 2,
+        tituloMomento: "La Arquitectura de Adobe",
+        didacticPurpose: "La Arquitectura de Adobe",
+        visualPrompt: "Modern anime style. The girl explaining a cutaway illustration of a Neolithic mudbrick house: hearth, clay storage bins, reed roof with opening, and wooden ladder. Clean lineart. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Viviendas Permanentes",
+        overlaySubtitle: "Ladrillos de adobe barro y madera",
+        overlayText: "Viviendas Permanentes: Ladrillos de adobe barro y madera",
+        vectorialOverlayPptx: "Tecnología constructiva: Ladrillos de barro y paja secados al sol para arquitectura duradera",
+        speakerNotes: "El adobe fue el material estrella. Mezclando arcilla, agua y paja secada al sol, levantaron viviendas cuadrangulares sólidas que resistían años de uso.",
+        palabrasAprox: 24,
+        duracionSeg: 13
       },
       {
-        "slideNumber": 3,
-        "tituloMomento": "Demostración Modelada",
-        "didacticPurpose": "Demostración Modelada",
-        "visualPrompt": "Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.",
-        "overlayTitle": "Modelamiento paso a paso",
-        "overlaySubtitle": "Procedimiento de Primeras aldeas sedentarias y división del trabajo",
-        "overlayText": "Modelamiento paso a paso de Primeras aldeas sedentarias y división del trabajo",
-        "vectorialOverlayPptx": "Diagrama multicausal: Factores economicos, sociales y culturales",
-        "mathOverlayPptx": "Diagrama multicausal: Factores economicos, sociales y culturales",
-        "speakerNotes": "Observa cómo se aplica el procedimiento en este caso guiado: cada transformación responde a una justificación disciplinar explícita y visible.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        slideNumber: 3,
+        tituloMomento: "El Caso de Çatalhöyük",
+        didacticPurpose: "El Caso de Çatalhöyük",
+        visualPrompt: "Modern anime style. High-angle architectural view of Çatalhöyük showing contiguous rooftops, people walking between terraces, and ladder entrances. The two explorers studying the settlement map. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Urbanismo sin Calles",
+        overlaySubtitle: "Circulación por terrazas y azoteas comunales",
+        overlayText: "Urbanismo sin Calles: Circulación por terrazas y azoteas comunales",
+        vectorialOverlayPptx: "Caso arqueológico: Asentamiento igualitario de Çatalhöyük (Anatolia, 7.500 a.C.)",
+        speakerNotes: "En Çatalhöyük vivían miles de personas sin calles. Los tejados eran plazas públicas donde molían granos, horneaban pan y conversaban en comunidad.",
+        palabrasAprox: 22,
+        duracionSeg: 13
       },
       {
-        "slideNumber": 4,
-        "tituloMomento": "Prevención del Error Frecuente",
-        "didacticPurpose": "Prevención del Error Frecuente",
-        "visualPrompt": "Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.",
-        "overlayTitle": "Atención: Error habitual",
-        "overlaySubtitle": "Confusión común que debemos evitar",
-        "overlayText": "Atención: Error habitual a evitar",
-        "vectorialOverlayPptx": "Contraste temporal: cambios y continuidades historicas",
-        "mathOverlayPptx": "Contraste temporal: cambios y continuidades historicas",
-        "speakerNotes": "Un error frecuente ocurre al descuidar el orden o saltarse un paso de la convención establecida. Siempre comprobamos cada dato antes de continuar.",
-        "palabrasAprox": 27,
-        "duracionSeg": 13
+        slideNumber: 4,
+        tituloMomento: "Defensa Colectiva en Jericó",
+        didacticPurpose: "Defensa Colectiva en Jericó",
+        visualPrompt: "Modern anime style. Detailed diagram showing the stone defensive ditch, stone wall, and circular tower of Jericho with water channels flowing from the spring. Soft ambient light. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Obras Públicas Comunes",
+        overlaySubtitle: "Protección ante crecidas y pueblos vecinos",
+        overlayText: "Obras Públicas Comunes: Protección ante crecidas y pueblos vecinos",
+        vectorialOverlayPptx: "Ingeniería temprana: Murallas de Jericó como respuesta a riesgos hídricos y amenazas externas",
+        speakerNotes: "Jericó levantó murallas de piedra para resguardar su manantial y defender sus cosechas, demostrando que podían organizar faenas colectivas masivas.",
+        palabrasAprox: 21,
+        duracionSeg: 13
       },
       {
-        "slideNumber": 5,
-        "tituloMomento": "Comprobación del Resultado",
-        "didacticPurpose": "Comprobación del Resultado",
-        "visualPrompt": "Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.",
-        "overlayTitle": "Validación del resultado",
-        "overlaySubtitle": "Comprobar que la respuesta es consistente",
-        "overlayText": "Comprobación y validación del resultado",
-        "vectorialOverlayPptx": "Interpretacion historica justificada a partir de evidencias",
-        "mathOverlayPptx": "Interpretacion historica justificada a partir de evidencias",
-        "speakerNotes": "Al contrastar el resultado con la situación inicial, confirmamos que la solución es consistente, rigurosa y responde plenamente a la pregunta.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        slideNumber: 5,
+        tituloMomento: "La División del Trabajo",
+        didacticPurpose: "La División del Trabajo",
+        visualPrompt: "Modern anime style. Four-quadrant diagram: 1. Labranza de campos, 2. Pastoreo, 3. Fabricación de adobes, 4. Tejido y alfarería. The two 13-year-olds analyzing each role. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Especialización de Roles",
+        overlaySubtitle: "Nuevas tareas divididas en la comunidad",
+        overlayText: "Especialización de Roles: Nuevas tareas divididas en la comunidad",
+        vectorialOverlayPptx: "Estructura social: Diferenciación inicial de funciones productivas y de cuidado",
+        speakerNotes: "Con el sedentarismo nació la división del trabajo: las familias se repartieron labores entre cultivo, pastoreo, construcción y artesanías útiles.",
+        palabrasAprox: 20,
+        duracionSeg: 13
       },
       {
-        "slideNumber": 6,
-        "tituloMomento": "Estrategia Mnemotécnica",
-        "didacticPurpose": "Estrategia Mnemotécnica",
-        "visualPrompt": "Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.",
-        "overlayTitle": "Estrategia de pensamiento",
-        "overlaySubtitle": "1. Identificar · 2. Aplicar · 3. Comprobar",
-        "overlayText": "Estrategia mental: Identificar, Aplicar y Verificar",
-        "vectorialOverlayPptx": "Estrategia de analisis historico: Contexto, causas y consecuencias",
-        "mathOverlayPptx": "Estrategia de analisis historico: Contexto, causas y consecuencias",
-        "speakerNotes": "Recuerda siempre la estrategia en tres pasos: identificar la información clave, aplicar la regla en orden y comprobar el resultado final.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        slideNumber: 6,
+        tituloMomento: "Atención al Error Común",
+        didacticPurpose: "Atención al Error Común",
+        visualPrompt: "Modern anime style. The boy pointing to an architectural drawing, correcting the mistaken idea of modern avenues with a graphic of clustered Neolithic rooftops. Clean visuals. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Error: No Eran Ciudades",
+        overlaySubtitle: "Eran aldeas agrícolas de organización familiar",
+        overlayText: "Error: No Eran Ciudades: Eran aldeas agrícolas de organización familiar",
+        vectorialOverlayPptx: "Rigor conceptual: Distinción entre aldea igualitaria neolítica y ciudad-estado estratificada posterior",
+        speakerNotes: "Un error común es llamar ciudades a estas primeras aldeas. Eran asentamientos campesinos donde primaba el parentesco y la colaboración familiar.",
+        palabrasAprox: 21,
+        duracionSeg: 13
       },
       {
-        "slideNumber": 7,
-        "tituloMomento": "Síntesis y Regla de Oro",
-        "didacticPurpose": "Síntesis y Regla de Oro",
-        "visualPrompt": "Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.",
-        "overlayTitle": "Regla de Oro: Primeras aldeas sedentarias y división del trabajo",
-        "overlaySubtitle": "Método disciplinar validado",
-        "overlayText": "Síntesis: Primeras aldeas sedentarias y división del trabajo",
-        "vectorialOverlayPptx": "Infografía de síntesis: Regla historica de Primeras aldeas sedentarias y división del trabajo",
-        "mathOverlayPptx": "Infografía de síntesis: Regla historica de Primeras aldeas sedentarias y división del trabajo",
-        "speakerNotes": "Ahora que dominas la regla fundamental y el procedimiento de Primeras aldeas sedentarias y división del trabajo, ¡vamos a demostrarlo en las actividades interactivas de la plataforma!",
-        "palabrasAprox": 25,
-        "duracionSeg": 12
+        slideNumber: 7,
+        tituloMomento: "Síntesis y Regla de Oro",
+        didacticPurpose: "Síntesis y Regla de Oro",
+        visualPrompt: "Modern anime style. The two 13-year-olds smiling confidently with their notebooks open before a peaceful view of a fertile Neolithic river village at sunset. Generous negative space. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Regla de Oro Comunitaria",
+        overlaySubtitle: "Vivienda permanente y cooperación organizada",
+        overlayText: "Regla de Oro: Vivienda permanente y cooperación organizada",
+        vectorialOverlayPptx: "Conclusión didáctica: Sedentarismo = Reorganización del espacio + Cooperación social colectiva",
+        speakerNotes: "La aldea sedentaria transformó la convivencia. La vivienda permanente y el trabajo compartido establecieron las bases de la vida en sociedad que perdura hasta hoy.",
+        palabrasAprox: 25,
+        duracionSeg: 13
       }
     ]
   },
-  "postQuestions": [
+
+  postQuestions: [
     {
-      "context": "Contexto Temporal, Espacial y Sedentarización",
-      "question": "¿De qué manera el entorno geográfico y la época condicionaron el desarrollo de 'Sedentarización' en este proceso histórico?",
-      "expected": "Relacionar las características del espacio geográfico con la organización social y el desarrollo de Sedentarización.",
-      "success": "¡Muy bien! Ubicaste con precisión las coordenadas temporales y espaciales del proceso.",
-      "support": "Observa las referencias del mapa y la cronología: ¿qué recursos naturales o rutas influían en sus decisiones?",
-      "reveal": "El entorno geográfico y las condiciones de la época condicionaron profundamente los modos de vida y las instituciones humanas.",
-      "studentReveal": "La influencia del espacio geográfico y el tiempo histórico en Sedentarización."
+      context: 'El Espacio de Convivencia en Çatalhöyük',
+      question: 'En el video revisamos que en Çatalhöyük las terrazas y tejados eran los espacios principales de circulación y encuentro diario. ¿Cómo influyó esto en la relación entre los vecinos de la aldea?',
+      expected: 'Favoreció una intensa convivencia comunitaria y colaboración cercana, ya que las familias realizaban sus labores domésticas y conversaban compartiendo los techos de sus hogares.',
+      success: '¡Excelente deducción de geografía social! Supiste reconocer cómo la arquitectura física moldea los vínculos y la confianza comunitaria.',
+      support: 'Imagina que tu patio o vereda fuera el techo de tu casa y de la de tu vecino: ¿tendrías mucho contacto con ellos?',
+      reveal: 'Los techos compartidos funcionaron como plazas públicas donde las familias cooperaban, fortaleciendo la solidaridad comunitaria.',
+      studentReveal: 'Generó una convivencia muy cercana y unida porque todos compartían los techos para trabajar, cocinar y conversar.'
     },
     {
-      "context": "Pensamiento Crítico y Prevención del Presentismo",
-      "question": "Para evitar el error común de 'Dificultad para establecer relaciones de causa y efecto entre los diferentes procesos (ej., agricultura -> sedentarización -> acumulación -> comercio).', ¿qué debemos considerar al analizar las decisiones tomadas por los actores históricos?",
-      "expected": "Evaluar las decisiones históricas desde la mentalidad, recursos y cosmovisión propia de la época estudiada.",
-      "success": "¡Excelente empatía histórica! Analizaste el pasado desde su propio contexto y no desde los prejuicios actuales.",
-      "support": "Piensa qué información y qué valores tenían en ese siglo: ¿podían prever las consecuencias de la misma forma que nosotros hoy?",
-      "reveal": "El rigor histórico exige comprender las razones de los protagonistas en su propio tiempo, evitando anacronismos.",
-      "studentReveal": "La comprensión del pasado desde el contexto propio de sus protagonistas."
+      context: 'Las Murallas de Jericó como Obra Colectiva',
+      question: '¿Por qué la muralla de piedra de Jericó es considerada por los arqueólogos como una de las primeras obras de ingeniería pública de la humanidad?',
+      expected: 'Porque no beneficiaba a una sola familia sino a toda la comunidad, y requirió planificación colectiva, mano de obra masiva y dirección técnica compartida.',
+      success: '¡Gran comprensión histórica! Identificaste el carácter público y solidario de las obras defensivas neolíticas.',
+      support: 'Piensa en quiénes se protegían detrás del muro: servía para resguardar a todos los habitantes del poblado.',
+      reveal: 'La muralla de Jericó es la primera gran obra pública porque fue concebida, levantada y mantenida por el esfuerzo conjunto de toda la aldea.',
+      studentReveal: 'Porque fue una obra para proteger a todo el pueblo que exigió el esfuerzo y trabajo planificado de todos los vecinos juntos.'
     }
   ],
-  "practice": [
+
+  practice: [
     {
-      "context": "Ejercicio 1 en Cuaderno: Análisis de Fuentes y Cuadro Comparativo",
-      "question": "Abre tu cuaderno de notas. Escribe como título: 'Primeras aldeas sedentarias y división del trabajo'. Con base en la actividad (Crea una línea de tiempo física en el aula, ordenando los procesos clave del Neo...), dibuja un cuadro de doble entrada: en una columna registra los antecedentes geográficos y sociales, y en la otra explica el impacto de 'Sedentarización'.",
-      "expected": "Cuadro comparativo en el cuaderno con antecedentes históricos y análisis fundamentado del impacto de concepto.",
-      "success": "¡Excelente análisis en tu cuaderno! Has sintetizado las múltiples causas con claridad y orden.",
-      "support": "Revisa la línea de tiempo en pantalla: identifica qué ocurrió antes y qué transformaciones trajo este acontecimiento.",
-      "reveal": "El cuadro comparativo permite distinguir causas estructurales de consecuencias inmediatas en el proceso histórico.",
-      "studentReveal": "Cuadro comparativo completo en el cuaderno con causas y consecuencias analizadas."
+      context: 'Actividad en Cuaderno: Ficha Arqueológica de Çatalhöyük',
+      question: 'Abre tu cuaderno de notas de Historia. Escribe como título: "Primeras Aldeas Sedentarias: El Caso de Çatalhöyük". Dibuja un croquis de una vivienda de adobe (mostrando la escalera, la abertura en el techo, el fogón y las plataformas para dormir). Debajo, explica en tres líneas por qué no tenían puertas al nivel de la tierra.',
+      expected: 'Ficha arqueológica en el cuaderno con dibujo rotulado y justificación de la arquitectura defensiva y térmica.',
+      success: '¡Excelente trabajo en tu cuaderno! Has graficado el hábitat neolítico con gran fidelidad a los hallazgos arqueológicos.',
+      support: 'Revisa las diapositivas de la lección: recuerda incluir la entrada por el techo y la función de protección contra el frío y animales feroces.',
+      reveal: 'La ficha permite comprender cómo las viviendas reflejaban las necesidades de abrigo, seguridad y vida doméstica permanente.',
+      studentReveal: 'Ficha completa en el cuaderno con croquis de vivienda de adobe y fundamentación de la entrada por el techo.'
     },
     {
-      "context": "Ejercicio 2 en Cuaderno: Reflexión de Ciudadanía y Continuidad",
-      "question": "En tu cuaderno, responde con un breve texto argumentativo: ¿Qué elementos de 'Sedentarización' continúan presentes en nuestra sociedad actual y qué aspectos han cambiado sustancialmente?",
-      "expected": "Reflexión argumentada identificando elementos de cambio y continuidad histórica entre el pasado y el presente.",
-      "success": "¡Muy buena argumentación! Conectaste el aprendizaje histórico con la realidad ciudadana actual.",
-      "support": "Piensa en nuestras leyes, ciudades o costumbres: ¿qué heredamos de esa civilización o proceso?",
-      "reveal": "La historia nos permite comprender el presente al identificar las raíces de nuestras instituciones contemporáneas.",
-      "studentReveal": "Reflexión en el cuaderno sobre continuidades y transformaciones hacia el presente."
+      context: 'Reflexión Social: La División de Tareas en la Aldea',
+      question: 'En tu cuaderno, elabora un breve cuadro con cuatro oficios o tareas neolíticas (agricultor, pastor, constructor de adobe, alfarero/tejedor) y explica cómo cada una beneficiaba al resto de la comunidad.',
+      expected: 'Cuadro en el cuaderno con cuatro roles neolíticos y análisis de la interdependencia y beneficio mutuo en la aldea.',
+      success: '¡Brillante análisis de organización social! Explicaste con precisión cómo la división del trabajo unió a la comunidad.',
+      support: 'Piensa en el intercambio: el agricultor alimenta al constructor de adobe, y el constructor levanta la casa del agricultor.',
+      reveal: 'La división del trabajo creó interdependencia social: ningún individuo podía subsistir aislado, reforzando la unión comunitaria.',
+      studentReveal: 'Cuadro en el cuaderno con los cuatro oficios neolíticos y explicación del beneficio mutuo e interdependencia.'
     }
   ],
-  "mini": [
+
+  summaryIdeas: [
+    ['Hábitat Permanente', 'Las viviendas de adobe secado al sol permitieron vivir en comunidad fija durante todo el año cerca de tierras fértiles.'],
+    ['Obras Colectivas', 'Yacimientos como Jericó y Çatalhöyük demuestran defensa colectiva, trabajo cooperativo y arquitectura adaptada al entorno.'],
+    ['División del Trabajo', 'Surgieron roles comunitarios complementarios entre siembra, pastoreo, construcción y artesanías indispensables.']
+  ],
+
+  mini: [
     {
-      "id": "q_1",
-      "q": "Al estudiar el proceso de Primeras aldeas sedentarias y división del trabajo, ¿cuál de las siguientes opciones describe con rigor histórico el rol de 'Sedentarización'?",
-      "options": [
-        "Constituyó un elemento articulador que permitió a la sociedad responder a sus necesidades de organización y territorio",
-        "Fue un acontecimiento completamente aislado que no tuvo ninguna relación con el entorno social ni geográfico",
-        "Ocurrió por decisión exclusiva de un único individuo sin influencia de la comunidad ni de la época"
+      id: 'q_1',
+      q: '¿Cuál fue la razón arquitectónica principal por la que los habitantes de Çatalhöyük construyeron sus casas pegadas unas a otras sin calles intermedias?',
+      options: [
+        'A) Para crear una muralla exterior continua que protegiera a la comunidad de animales salvajes y regulara la temperatura.',
+        'B) Porque tenían prohibido caminar al aire libre por órdenes de sacerdotes extranjeros.',
+        'C) Porque el suelo estaba cubierto de agua de mar y las casas flotaban sobre botes.',
+        'D) Porque querían construir pistas de carreras para carruajes de hierro sobre las azoteas.'
       ],
-      "correct": "Constituyó un elemento articulador que permitió a la sociedad responder a sus necesidades de organización y territorio",
-      "fixExplain": "Los procesos históricos son colectivos y multicausales; Sedentarización responde a dinámicas sociales y territoriales profundas.",
-      "concept": "Primeras aldeas sedentarias y división del trabajo",
-      "explain": "Los procesos históricos son colectivos y multicausales; Sedentarización responde a dinámicas sociales y territoriales profundas.",
-      "dileReview": "Pídele que señale qué fuentes o evidencias históricas analizadas hoy justifican esta afirmación."
+      correct: 'A) Para crear una muralla exterior continua que protegiera a la comunidad de animales salvajes y regulara la temperatura.',
+      fixExplain: 'El trazado adosado actuaba como defensa colectiva y aislante térmico en el riguroso clima de Anatolia.',
+      concept: 'Arquitectura Defensiva de Çatalhöyük'
     },
     {
-      "id": "q_2",
-      "q": "Para analizar críticamente este proceso sin caer en el error de 'Dificultad para establecer relaciones de causa y efecto entre los diferentes procesos (ej., agricultura -> sedentarización -> acumulación -> comercio).', ¿qué actitud metodológica debemos adoptar?",
-      "options": [
-        "Evaluar las decisiones históricas considerando el contexto, las creencias y los recursos disponibles en su época",
-        "Condenar inmediatamente las acciones del pasado aplicando únicamente los estándares de la sociedad actual",
-        "Ignorar las fuentes primarias y basarse en opiniones espontáneas sin respaldo documental"
+      id: 'q_2',
+      q: '¿Qué nos enseña la monumental muralla de piedra descubierta en la antigua Jericó sobre la sociedad que la construyó hacia el 8.000 a.C.?',
+      options: [
+        'A) Que era una banda de diez cazadores nómades que levantó el muro en una sola tarde.',
+        'B) Que las familias no hablaban entre sí y competían destruyéndose mutuamente sus chozas.',
+        'C) Que las piedras fueron transportadas por extraterrestres según las leyendas locales.',
+        'D) Que poseía una avanzada capacidad de cooperación comunitaria, acuerdos colectivos y liderazgo para realizar obras públicas.'
       ],
-      "correct": "Evaluar las decisiones históricas considerando el contexto, las creencias y los recursos disponibles en su época",
-      "fixExplain": "El presentismo distorsiona la comprensión histórica; la empatía histórica permite entender las motivaciones reales de los actores del pasado.",
-      "concept": "Primeras aldeas sedentarias y división del trabajo",
-      "explain": "El presentismo distorsiona la comprensión histórica; la empatía histórica permite entender las motivaciones reales de los actores del pasado.",
-      "dileReview": "Pregúntale: ¿por qué es injusto juzgar a personas del pasado como si tuvieran la tecnología y valores de hoy?"
+      correct: 'D) Que poseía una avanzada capacidad de cooperación comunitaria, acuerdos colectivos y liderazgo para realizar obras públicas.',
+      fixExplain: 'Una fortificación de tal escala requirió cientos de trabajadores coordinados y un sólido sentido de protección compartida.',
+      concept: 'Cooperación Comunitaria en Jericó'
     },
     {
-      "id": "q_3",
-      "q": "¿Qué importancia tiene para la formación ciudadana actual el análisis de Transformación del espacio geográfico y nuevas profesiones?",
-      "options": [
-        "Permite valorar los derechos humanos, la participación democrática y la diversidad cultural al comprender su evolución histórica",
-        "Demuestra que el pasado no guarda ninguna relación con los problemas ni desafíos de la sociedad moderna",
-        "Enseña que las leyes e instituciones humanas son inmutables y no han cambiado a lo largo de los siglos"
+      id: 'q_3',
+      q: 'Al consolidarse el sedentarismo en las aldeas neolíticas, ¿qué transformación fundamental experimentó la organización del trabajo humano?',
+      options: [
+        'A) Todas las personas fueron obligadas a hacer exactamente la misma tarea al mismo minuto.',
+        'B) Se produjo una división social del trabajo donde diferentes miembros asumieron tareas especializadas como cultivo, pastoreo, construcción y alfarería.',
+        'C) El trabajo desapareció por completo porque la comida crecía sola sin ningún esfuerzo humano.',
+        'D) Se contrataron trabajadores de otros continentes pagados mediante billetes de banco.'
       ],
-      "correct": "Permite valorar los derechos humanos, la participación democrática y la diversidad cultural al comprender su evolución histórica",
-      "fixExplain": "El aprendizaje histórico fortalece el juicio cívico y la convivencia democrática mediante el análisis crítico del pasado.",
-      "concept": "Primeras aldeas sedentarias y división del trabajo",
-      "explain": "El aprendizaje histórico fortalece el juicio cívico y la convivencia democrática mediante el análisis crítico del pasado.",
-      "dileReview": "Pídele que mencione cómo lo aprendido hoy fortalece su rol como ciudadano responsable en su comunidad."
+      correct: 'B) Se produjo una división social del trabajo donde diferentes miembros asumieron tareas especializadas como cultivo, pastoreo, construcción y alfarería.',
+      fixExplain: 'La vida sedentaria permitió repartir funciones según las necesidades del poblado, aumentando la eficiencia comunitaria.',
+      concept: 'División del Trabajo Neolítica'
     }
   ],
-  "recovery": [
+
+  recovery: [
     {
-      "title": "Recuperación Histórica: Primeras aldeas sedentarias y división del trabajo",
-      "explain": "Al analizar Transformación del espacio geográfico y nuevas profesiones, recuerda situar siempre los acontecimientos en su espacio geográfico y comprender Sedentarización dentro de su época.",
-      "q": "¿Cuál es el principio metodológico central para interpretar un hecho histórico en Primeras aldeas sedentarias y división del trabajo?",
-      "options": [
-        "Analizar el hecho a partir de sus fuentes históricas y el contexto propio de Sedentarización",
-        "Memorizar fechas aisladas sin considerar las causas ni las consecuencias del proceso"
+      title: 'Recuperación Histórica: Vida en las Primeras Aldeas',
+      explain: 'El sedentarismo no consistió únicamente en quedarse en un sitio: exigió inventar una nueva manera de convivir. Levantaron casas de barro y piedra, construyeron defensas compartidas y se repartieron las tareas de siembra, ganado y construcción.',
+      q: '¿Qué características definían a una aldea sedentaria del Neolítico como Çatalhöyük o Jericó?',
+      options: [
+        'A) Carpas temporales de pieles de animales que se desmontaban cada semana para seguir ciervos.',
+        'B) Rascacielos de hormigón armado con electricidad y avenidas pavimentadas para automóviles.',
+        'C) Casas permanentes de adobe o piedra, trabajo cooperativo entre vecinos y división de labores de subsistencia.',
+        'D) Castillos medievales gobernados por reyes con caballeros armados con armaduras de acero.'
       ],
-      "correct": "Analizar el hecho a partir de sus fuentes históricas y el contexto propio de Sedentarización",
-      "correctText": "¡Correcto! Comprender el contexto histórico es la base del pensamiento crítico en Ciencias Sociales.",
-      "fixText": "Recuerda que la historia explica procesos humanos: busca siempre las causas y el entorno donde ocurrieron."
+      correct: 'C) Casas permanentes de adobe o piedra, trabajo cooperativo entre vecinos y división de labores de subsistencia.',
+      correctText: '¡Correcto! Identificaste los pilares del hábitat sedentario neolítico: vivienda duradera, cooperación y división del trabajo.',
+      fixText: 'Recuerda que las aldeas neolíticas se caracterizaron por casas permanentes de adobe, cooperación colectiva y especialización de tareas.'
     }
-  ],
-  "summaryIdeas": [
-    [
-      "1 · Concepto central",
-      "Identificamos los elementos y el punto de partida del análisis."
-    ],
-    [
-      "2 · Interpretación del contexto",
-      "Transformación del espacio geográfico y nuevas profesiones"
-    ],
-    [
-      "3 · Síntesis formal",
-      "Los procesos históricos sobre Primeras aldeas sedentarias y división del trabajo responden a múltiples causas interconectadas, donde 'Sedentarización' explica cómo las sociedades resolvieron sus desafíos de convivencia y subsistencia."
-    ]
-  ],
-  "interactive": {
-    "type": "timeline",
-    "title": "Línea de Tiempo Histórica: De la Hominización a la Aldea",
-    "description": "Organizador cronológico de la revolución agrícola y el modo de vida."
-  },
-  "summaryText": "Hoy dominaste Transformación del espacio geográfico y nuevas profesiones con pensamiento crítico y fuentes históricas en tu cuaderno.",
-  "reasoning": {
-    "title": "Comparemos dos situaciones",
-    "dileIntro": "Antes de resumir, comparemos dos situaciones. No necesitas repetir una frase exacta: lo importante es que expliques la idea con tus propias palabras.",
-    "question": "Al comparar dos situaciones de Primeras aldeas sedentarias y división del trabajo, ¿cómo influye el contexto en la interpretación de los datos?",
-    "expectedAnswer": "El significado o resultado depende de las condiciones del contexto y del propósito de la situación.",
-    "context1": {
-      "label": "SITUACIÓN 1",
-      "value": "Ejercicio 1 en Cuaderno: Análisis de Fuentes y Cuadro Comparativo",
-      "desc": "Abre tu cuaderno de notas. Escribe como título: 'Primeras aldeas sedentarias y división del trabajo'. Con base en la actividad (Crea una línea de tiempo física en el aula, ordenando los procesos clave del Neo...), dibuja un cuadro de doble entrada: en una columna registra los antecedentes geográficos y sociales, y en la otra explica el impacto de 'Sedentarización'."
-    },
-    "context2": {
-      "label": "SITUACIÓN 2",
-      "value": "Ejercicio 2 en Cuaderno: Reflexión de Ciudadanía y Continuidad",
-      "desc": "En tu cuaderno, responde con un breve texto argumentativo: ¿Qué elementos de 'Sedentarización' continúan presentes en nuestra sociedad actual y qué aspectos han cambiado sustancialmente?"
-    },
-    "successFeedback": "¡Excelente razonamiento! Reconociste que el contexto orienta la interpretación de los datos.",
-    "supportFeedback": "Observa cada situación por separado y explica qué elementos las distinguen.",
-    "revealText": "Cada situación tiene un propósito particular y los datos se interpretan según las condiciones del problema."
-  },
-  "challenge": {
-    "title": "Desafío breve: Primeras aldeas sedentarias y división del trabajo",
-    "question": "En Historia, Geografía y Ciencias Sociales, ¿qué diferencia observas entre identificar los datos y aplicar el procedimiento? Explica tu razonamiento.",
-    "expectedAnswer": "Identificar los datos determina el punto de partida; aplicar el procedimiento permite construir la respuesta.",
-    "item1": {
-      "label": "Datos iniciales",
-      "tag": "Punto de partida"
-    },
-    "item2": {
-      "label": "Procedimiento",
-      "tag": "Aplicación"
-    },
-    "successFeedback": "¡Muy bien! Distinguiste claramente los momentos del análisis.",
-    "supportFeedback": "Revisémoslo juntos: primero identificamos la información disponible y luego aplicamos el método correspondiente."
-  },
-  "strategy": {
-    "title": "Cómo analizar una situación",
-    "dileIntro": "Cuando enfrentes un problema en Historia, Geografía y Ciencias Sociales, puedes seguir estos tres pasos clave:",
-    "steps": [
-      {
-        "number": 1,
-        "title": "Identifica",
-        "desc": "¿Cuáles son los datos clave y cuál es la pregunta central?"
-      },
-      {
-        "number": 2,
-        "title": "Aplica",
-        "desc": "¿Qué regla o método disciplinar corresponde utilizar?"
-      },
-      {
-        "number": 3,
-        "title": "Comprueba",
-        "desc": "¿La conclusión o resultado responde con coherencia al problema?"
-      }
-    ]
-  },
-  "closure": {
-    "congratulations": "¡Felicitaciones! Hoy completaste con éxito la clase \"Primeras aldeas sedentarias y división del trabajo\". Has demostrado constancia y rigor en tu aprendizaje.",
-    "nextClassPreview": "En la próxima sesión continuaremos profundizando los aprendizajes de Historia, Geografía y Ciencias Sociales."
-  },
-  "paso8_cierre": {
-    "preguntaSintesis": "En tus propias palabras, ¿qué lección o reflexión para el presente nos deja el estudio de Sedentarización en Primeras aldeas sedentarias y división del trabajo?",
-    "metacognicion": "¿Qué estrategia te ayudó más a comprender la época estudiada: analizar el mapa o ponerte en el lugar de los protagonistas?",
-    "celebracion": "¡Gran trabajo hoy! Has dominado la Clase 3. ¡Nos vemos en la próxima expedición histórica!"
-  }
+  ]
 };

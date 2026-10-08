@@ -137,9 +137,9 @@ export function buildClase02() {
         "overlayText": "La Hipófisis: Centro de Control",
         "overlayTitle": "La glándula hipófisis",
         "overlaySubtitle": "Centro emisor de hormonas reguladoras",
-        "vectorialOverlayPptx": "Esquema endocrino: Hipófisis -> Señales químicas LH y FSH -> Gónadas",
-        "mathOverlayPptx": "Esquema endocrino: Hipófisis -> Señales químicas LH y FSH -> Gónadas",
-        "speakerNotes": "En la base del cerebro, la hipófisis emite hormonas que despiertan a los ovarios y testículos para comenzar la maduración.",
+        "vectorialOverlayPptx": "Esquema endocrino: Hipotálamo (GnRH) -> Hipófisis anterior (LH y FSH) -> Gónadas (hormonas sexuales) -> Cambios puberales",
+        "mathOverlayPptx": "Esquema endocrino: Hipotálamo (GnRH) -> Hipófisis anterior (LH y FSH) -> Gónadas (hormonas sexuales) -> Cambios puberales",
+        "speakerNotes": "En el encéfalo, el hipotálamo libera GnRH estimulando a la hipófisis anterior para secretar LH y FSH, las cuales activan a las gónadas a producir hormonas sexuales.",
         "palabrasAprox": 20,
         "duracionSeg": 9
       },
@@ -189,13 +189,13 @@ export function buildClase02() {
         "slideNumber": 6,
         "tituloMomento": "Cada Cuerpo a su Propio Ritmo",
         "didacticPurpose": "Cada Cuerpo a su Propio Ritmo",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, interacting with healthy teenage friends of different heights and physical builds, observing diverse growth rhythms between 10 and 16 years, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, interacting with healthy teenage friends of different heights and physical builds, observing diverse developmental and growth rhythms, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Diversidad de Ritmos Biológicos",
         "overlayTitle": "Diversidad y reloj biológico",
         "overlaySubtitle": "Cada persona se desarrolla a un ritmo único",
-        "vectorialOverlayPptx": "Rango cronológico: Variabilidad natural de inicio entre los 10 y 16 años",
-        "mathOverlayPptx": "Rango cronológico: Variabilidad natural de inicio entre los 10 y 16 años",
-        "speakerNotes": "No todos los cuerpos crecen al mismo tiempo. La pubertad inicia normalmente entre los 10 y 16 años según ritmos genéticos.",
+        "vectorialOverlayPptx": "Consenso médico: Inicio habitual entre 8-13 años (niñas) y 9-14 años (niños) según Tanner / MedlinePlus",
+        "mathOverlayPptx": "Consenso médico: Inicio habitual entre 8-13 años (niñas) y 9-14 años (niños) según Tanner / MedlinePlus",
+        "speakerNotes": "No todos los cuerpos crecen al mismo tiempo. La pubertad inicia habitualmente entre los 8 y 13 años en niñas y entre los 9 y 14 años en niños según consensos médicos (Tanner / MedlinePlus), mientras que el estirón de estatura ocurre como un hito posterior.",
         "palabrasAprox": 21,
         "duracionSeg": 10
       },
@@ -252,7 +252,7 @@ export function buildClase02() {
         "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing before a clear two-column digital panel contrasting primary and secondary sexual characteristics, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Caracteres Primarios y Secundarios",
         "overlayTitle": "Objetivo de la lección",
-        "overlaySubtitle": "Diferenciar caracteres sexuales primarios de secundarios en la pubertad",
+        "overlaySubtitle": "Diferenciar caracteres sexuales primarios de secundarios",
         "vectorialOverlayPptx": "Rótulo formal: OA 01 · Diferenciación de Caracteres Sexuales y Pubertad",
         "mathOverlayPptx": "Rótulo formal: OA 01 · Diferenciación de Caracteres Sexuales y Pubertad",
         "speakerNotes": "El objetivo de la lección es diferenciar con precisión científica los caracteres sexuales primarios de los secundarios, comprendiendo la acción del sistema endocrino en la pubertad.",
@@ -263,13 +263,13 @@ export function buildClase02() {
         "slideNumber": 2,
         "tituloMomento": "Mecanismo Hormonal: Eje Hipófisis-Gónadas",
         "didacticPurpose": "Mecanismo Hormonal: Eje Hipófisis-Gónadas",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing the endocrine feedback loop showing the pituitary gland, gonadotropins, and gonadal hormones, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, in a modern science laboratory observing blank modular comparison panels representing the endocrine pathway with hypothalamus, pituitary and gonads, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Eje Hormonal: Hipófisis y Gónadas",
         "overlayTitle": "El sistema endocrino en acción",
-        "overlaySubtitle": "Liberación de gonadotropinas, estrógenos y testosterona",
-        "vectorialOverlayPptx": "Diagrama fisiológico: Hipófisis -> LH/FSH -> Ovarios (Estrógenos) / Testículos (Testosterona)",
-        "mathOverlayPptx": "Diagrama fisiológico: Hipófisis -> LH/FSH -> Ovarios (Estrógenos) / Testículos (Testosterona)",
-        "speakerNotes": "La pubertad inicia cuando la hipófisis secreta hormonas gonadales. Estas estimulan la producción de estrógenos en mujeres y testosterona en varones, desencadenando cambios físicos.",
+        "overlaySubtitle": "Señales de LH, FSH y hormonas sexuales",
+        "vectorialOverlayPptx": "Diagrama fisiológico: Hipotálamo (GnRH) -> Hipófisis anterior (LH y FSH) -> Gónadas (hormonas sexuales) -> Cambios puberales",
+        "mathOverlayPptx": "Diagrama fisiológico: Hipotálamo (GnRH) -> Hipófisis anterior (LH y FSH) -> Gónadas (hormonas sexuales) -> Cambios puberales",
+        "speakerNotes": "La pubertad inicia cuando el hipotálamo (GnRH) estimula a la hipófisis anterior para liberar LH y FSH; estas viajan por la sangre y activan a las gónadas a producir hormonas sexuales como estrógenos y testosterona que inducen los cambios puberales.",
         "palabrasAprox": 24,
         "duracionSeg": 11
       },
@@ -277,13 +277,13 @@ export function buildClase02() {
         "slideNumber": 3,
         "tituloMomento": "Definición de Caracteres Primarios",
         "didacticPurpose": "Definición de Caracteres Primarios",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining a developmental timeline of secondary sexual characteristics in males and females with clean medical aesthetics, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, studying a respectful anatomical diagram of primary reproductive organs present from birth, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Caracteres Primarios: Órganos Reproductores",
         "overlayTitle": "Caracteres sexuales primarios",
-        "overlaySubtitle": "Anatomía presente desde el nacimiento",
-        "vectorialOverlayPptx": "Capa anatómica: Ovarios, útero, trompas, testículos, conductos y pene presentes desde el parto",
-        "mathOverlayPptx": "Capa anatómica: Ovarios, útero, trompas, testículos, conductos y pene presentes desde el parto",
-        "speakerNotes": "Los caracteres primarios son congénitos y anatómicos. Los secundarios son adquiridos durante la pubertad por estímulo hormonal, preparando al organismo para la madurez reproductiva.",
+        "overlaySubtitle": "Estructuras anatómicas presentes desde el nacimiento",
+        "vectorialOverlayPptx": "Capa anatómica: Órganos reproductores congénitos presentes desde la gestación y el nacimiento",
+        "mathOverlayPptx": "Capa anatómica: Órganos reproductores congénitos presentes desde la gestación y el nacimiento",
+        "speakerNotes": "Los caracteres primarios son los órganos reproductores congénitos presentes desde el nacimiento; se formaron durante la gestación y existen antes de las señales hormonales de la pubertad.",
         "palabrasAprox": 24,
         "duracionSeg": 11
       },
@@ -297,7 +297,7 @@ export function buildClase02() {
         "overlaySubtitle": "Rasgos corporales activados en la pubertad",
         "vectorialOverlayPptx": "Capa puberal: Estirón estatural, cambio de voz, desarrollo mamario y vello corporal",
         "mathOverlayPptx": "Capa puberal: Estirón estatural, cambio de voz, desarrollo mamario y vello corporal",
-        "speakerNotes": "La pubertad inicia entre los 8 y 13 años en niñas y entre los 9 y 14 en niños, mientras que el estirón puberal ocurre entre los 10 y 14 en niñas y 12 a 16 en niños, según los estadios de Tanner (1962) y MINEDUC.",
+        "speakerNotes": "Los caracteres secundarios surgen en la pubertad por estímulo de las hormonas sexuales: provocan el estirón de estatura, cambio de voz, desarrollo mamario y aparición de vello.",
         "palabrasAprox": 39,
         "duracionSeg": 17
       },
@@ -401,7 +401,8 @@ export function buildClase02() {
       "options": [
         "La glándula hipófisis (ubicada en la base del cerebro)",
         "El páncreas (encargado de la digestión)",
-        "Las glándulas sudoríparas de la piel"
+        "Las glándulas sudoríparas de la piel",
+        "El apéndice cecal del sistema digestivo"
       ],
       "correct": "La glándula hipófisis (ubicada en la base del cerebro)",
       "fixExplain": "La hipófisis actúa como centro de control del sistema endocrino, liberando gonadotropinas que activan a ovarios y testículos."
@@ -410,9 +411,10 @@ export function buildClase02() {
       "id": "q2",
       "q": "¿Cuál de los siguientes rasgos corresponde a un carácter sexual secundario en los seres humanos?",
       "options": [
+        "La presencia de ovarios o testículos desde el nacimiento",
         "El aumento acelerado de estatura (estirón puberal)",
-        "La presencia de los ovarios desde el nacimiento",
-        "La formación del corazón en la etapa embrionaria"
+        "La formación del corazón en la etapa embrionaria",
+        "La presencia de los pulmones al nacer"
       ],
       "correct": "El aumento acelerado de estatura (estirón puberal)",
       "fixExplain": "El estirón puberal es un carácter secundario porque aparece en la adolescencia por estímulo de la hormona del crecimiento y hormonas sexuales."
@@ -421,12 +423,13 @@ export function buildClase02() {
       "id": "q3",
       "q": "Si dos adolescentes de la misma edad inician su pubertad en años distintos, ¿qué principio científico explica esta situación?",
       "options": [
+        "Significa obligatoriamente que uno de ellos tiene una deficiencia permanente",
+        "Todos los seres humanos deben comenzar la pubertad el mismo día",
         "Cada cuerpo posee un ritmo biológico individual normal influenciado por factores genéticos y de salud",
-        "Significa obligatoriamente que uno de ellos tiene una deficiencia biológica permanente",
-        "Todos los seres humanos deben comenzar la pubertad exactamente el mismo día"
+        "Demuestra que la pubertad no depende de señales hormonales"
       ],
       "correct": "Cada cuerpo posee un ritmo biológico individual normal influenciado por factores genéticos y de salud",
-      "fixExplain": "Existe una amplia variabilidad biológica natural: la pubertad suele iniciarse entre los 10 y 16 años sin que ello represente una anomalía."
+      "fixExplain": "Existe una amplia variabilidad biológica natural: el inicio de la pubertad suele ocurrir entre los 8 y 13 años en niñas y entre los 9 y 14 años en niños (Tanner / MedlinePlus), mientras que el estirón de estatura ocurre como un hito posterior entre los 10 y 16 años según factores genéticos y nutricionales, sin constituir una anomalía."
     }
   ],
   "recovery": [
@@ -435,8 +438,10 @@ export function buildClase02() {
       "explain": "Recuerda el criterio temporal y biológico: los caracteres primarios son los órganos reproductores presentes desde el nacimiento; los secundarios son los cambios corporales que aparecen en la pubertad gracias a las hormonas.",
       "q": "¿Cuál de las siguientes estructuras es un carácter sexual primario?",
       "options": [
+        "El cambio en el tono de la voz en la adolescencia",
+        "El ensanchamiento de hombros durante la pubertad",
         "Los órganos reproductores anatómicos presentes al nacer",
-        "El ensanchamiento de hombros durante la pubertad"
+        "La aparición de vello corporal durante el estirón"
       ],
       "correct": "Los órganos reproductores anatómicos presentes al nacer",
       "correctText": "¡Correcto! Los órganos reproductores presentes desde el nacimiento son los caracteres primarios.",

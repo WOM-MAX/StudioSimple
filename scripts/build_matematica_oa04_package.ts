@@ -121,7 +121,7 @@ async function main() {
     eje: 'Números',
     titulo: 'Porcentajes',
     totalLecciones: 6,
-    descripcion: 'Mostrar que comprenden el concepto de porcentaje de manera concreta, pictórica y simbólica, de forma manual y/o usando software educativo.'
+    descripcion: 'Mostrar que comprenden el concepto de porcentaje: representándolo de manera pictórica, calculando de varias maneras, aplicándolo a situaciones sencillas.'
   };
 
   const adaptedLessons = rawLessons.map(item => adaptPlayerLessonToGenerator(item.data));
@@ -181,7 +181,7 @@ async function main() {
     course: "7° Básico",
     subject: "Matemática",
     axis: "Números",
-    mineducObjective: "Mostrar que comprenden el concepto de porcentaje de manera concreta, pictórica y simbólica, de forma manual y/o usando software educativo.",
+    mineducObjective: "Mostrar que comprenden el concepto de porcentaje: representándolo de manera pictórica, calculando de varias maneras, aplicándolo a situaciones sencillas.",
     textbookSource: {
       title: "Matemática 7° Básico - Texto del Estudiante",
       publisher: "Santillana / Ministerio de Educación de Chile",
@@ -280,12 +280,17 @@ async function main() {
       pedagogicalStandards: [
         "Estándar normativo universal: 6 lecciones completas por OA (Directriz Work)",
         "Estructura bimodal de 14 láminas (7 Gancho + 7 Explicación) por clase = 84 láminas totales",
+        "Objetivo de aprendizaje explícito al inicio de la secuencia visible para el estudiante (Lámina 1 de Explicación)",
         "Dúo co-protagonista de 13 años (joven con trenzas y joven con chaqueta cerceta) en 100% de escenas",
         "Widescreen 16:9 Anime Moderno limpio sin texto dibujado por IA (No text drawn by AI)",
-        "Sin sombras, sin contornos, sin emojis, sin guiones largos",
+        "Textos y fórmulas matemáticas como capas vectoriales editables, sin recuadros flotantes ni sombras",
+        "Subtítulos breves y legibles con logotipo blanco de EstudioSimple en esquina inferior derecha",
+        "Fórmula general de porcentaje: p% = p ÷ 100 (cero uso de notaciones informales tipo 0,p)",
+        "Contexto tributario verídico: IVA (19%) acotado a operaciones comerciales afectas (según SII)",
         "Reactivos psicométricos formales de 4 alternativas (A, B, C, D) con análisis de distractores",
-        "Lámina 6 de Explicación isomórfica con Caso 1 de Práctica Guiada",
-        "Cierre de video en Lámina 7 con Regla de Oro y pase directo a la plataforma"
+        "Comprobación posterior y práctica basadas en los mismos ejemplos modelados en el video",
+        "Cierre de video en Lámina 7 con Regla de Oro y pase directo a la plataforma (sin desafíos adicionales)",
+        "Regla de producción: 60s gancho y 90s explicación sin imposición de cronómetro acústico previo"
       ]
     }
   };

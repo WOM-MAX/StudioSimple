@@ -1,529 +1,414 @@
 import { LessonData } from '../../types/lesson';
 
 export const HISTORIA_7B_OA02_CLASE05: LessonData = {
-  "metadata": {
-    "grade": "7° Básico",
-    "subject": "Historia, Geografía y Ciencias Sociales",
-    "oaCode": "OA 2",
-    "oaTitle": "Complejización de las primeras sociedades: de la hominización al surgimiento de las civilizaciones",
-    "lessonNumber": 5,
-    "totalLessonsInOa": 6,
-    "lessonTitle": "Consecuencias históricas y complejización social",
-    "durationMinutes": 30,
-    "nextLessonTitle": "De las aldeas a las primeras ciudades: el surgimiento de la civilización y ensayo"
+  metadata: {
+    grade: '7° Básico',
+    subject: 'Historia, Geografía y Ciencias Sociales',
+    oaCode: 'OA 2',
+    oaTitle: 'Procesos de transformación de la vida humana en el Neolítico',
+    lessonNumber: 5,
+    totalLessonsInOa: 6,
+    lessonTitle: 'Propiedad, jerarquías y especialización del trabajo',
+    durationMinutes: 30,
+    nextLessonTitle: 'Excedentes, comercio y primeras ciudades'
   },
-  "prep": {
-    "adultObjective": "Acompañar al estudiante a contextualizar y comprender el proceso histórico o geográfico de: Consecuencias históricas y complejización social, desarrollando el pensamiento crítico y analizando Comercio.",
-    "routeToday": "1. Inicio y activación · 2. Video de exploración · 3. Recorrido guiado · 4. Formalización y práctica en cuaderno · 5. Miniquiz y REVISAR · 6. Cierre metacognitivo",
-    "mentorReminder": "Sigue las indicaciones en pantalla paso a paso. Lee únicamente los recuadros DILE en voz alta y espera siempre la respuesta.",
-    "reminders": [
-      "Sigue el orden indicado.",
-      "Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.",
-      "No leas los recuadros SOLO PARA TI ni AYUDA DE LECTURA.",
-      "Haz cada pregunta y espera la respuesta antes de seleccionar una opción.",
-      "Considera correcta una respuesta si expresa la idea matemática, aunque use palabras distintas.",
-      "Si el estudiante necesita apoyo, usa únicamente la ayuda que aparecerá.",
-      "Si propone otra explicación o no está de acuerdo, escúchalo completo y valora su razonamiento antes de guiarlo."
+
+  prep: {
+    adultObjective: 'Acompañar al estudiante a comprender la complejización social del Neolítico: el paso de la posesión comunitaria a la noción de propiedad familiar de parcelas y rebaños, la acumulación desigual de bienes, la aparición de jerarquías sociales (jefaturas y consejos de ancianos) y la especialización laboral a tiempo completo.',
+    routeToday: 'De la comunidad igualitaria a la propiedad de parcelas, jerarquías y artesanos de tiempo completo.',
+    mentorReminder: 'Sigue las indicaciones en pantalla paso a paso. Lee únicamente los recuadros DILE y PREGÚNTALE en voz alta.',
+    reminders: [
+      'Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.',
+      'No leas los recuadros SOLO PARA TI ni AYUDA PEDAGÓGICA.',
+      'Haz cada pregunta y espera la respuesta antes de retroalimentar.',
+      'Considera correcta una respuesta si expresa el razonamiento histórico con sus propias palabras.',
+      'Asegura que el foco se mantenga estrictamente en la propiedad y las jerarquías sociales, sin desviar la discusión al comercio general.'
     ],
-    "emotionalTip": "Fomenta la perspectiva histórica: 'Analiza los hechos considerando la época y el espacio geográfico en que ocurrieron'."
+    emotionalTip: 'Invítalo a reflexionar sobre la justicia y el trabajo: "Cuando las personas comenzaron a acumular bienes propios, surgió la necesidad de crear reglas, líderes y acuerdos para convivir en paz".'
   },
-  "route": {
-    "blocks": [
-      {
-        "id": "b1",
-        "number": "01",
-        "title": "Historia, Geografía y Ciencias Sociales",
-        "subtitle": "Consecuencias históricas y complejización social",
-        "color": "yellow"
-      },
-      {
-        "id": "b2",
-        "number": "02",
-        "title": "Exploración",
-        "subtitle": "Gancho y Recorrido Guiado",
-        "color": "orange"
-      },
-      {
-        "id": "b3",
-        "number": "03",
-        "title": "Práctica",
-        "subtitle": "Aplicación en situaciones reales",
-        "color": "yellow"
-      },
-      {
-        "id": "b4",
-        "number": "04",
-        "title": "Evaluación",
-        "subtitle": "Miniquiz formativo y síntesis",
-        "color": "teal"
-      }
+
+  route: {
+    blocks: [
+      { id: 'b1', number: '01', title: 'Historia y Geografía', subtitle: 'Propiedad y jerarquías sociales', color: 'yellow' },
+      { id: 'b2', number: '02', title: 'Exploración', subtitle: 'Parcelas linajes y jefaturas', color: 'orange' },
+      { id: 'b3', number: '03', title: 'Práctica', subtitle: 'Estratificación en cuaderno', color: 'yellow' },
+      { id: 'b4', number: '04', title: 'Evaluación', subtitle: 'Miniquiz formativo y síntesis', color: 'teal' }
     ],
-    "keyQuestions": [
-      {
-        "label": "Exploración inicial",
-        "sub": "Consecuencias históricas y complejización social"
-      },
-      {
-        "label": "Idea clave",
-        "sub": "Los procesos históricos sobre Consecuencias históricas y com"
-      },
-      {
-        "label": "Práctica y aplicación",
-        "sub": "Resolución guiada paso a paso"
-      }
+    keyQuestions: [
+      { label: '¿Cómo nació la propiedad?', sub: 'Del reclamo familiar sobre parcelas y rebaños cuidados durante meses.' },
+      { label: '¿Por qué surgieron líderes?', sub: 'Para resolver disputas de tierras y coordinar faenas de riego comunal.' }
     ],
-    "dileIntro": "Hoy comenzaremos la clase 5 de Historia, Geografía y Ciencias Sociales: \"Consecuencias históricas y complejización social\".",
-    "dileObjective": "Aparición de la propiedad, jerarquías y especialización del trabajo"
+    dileIntro: 'Hoy comenzaremos la clase 5 de Historia, Geografía y Ciencias Sociales: "Propiedad, jerarquías y especialización del trabajo".',
+    dileObjective: 'Comprender cómo la acumulación de bienes dio origen a la propiedad familiar y a las jerarquías sociales.'
   },
-  "situation": {
-    "dilePrompt": "Hoy en Historia y Ciencias Sociales nos situamos en 'Consecuencias históricas y complejización social'. El concepto histórico central que abordamos es 'Comercio'. Observa el escenario histórico planteado en la pantalla sobre Aparición de la propiedad, jerarquías y especialización del trabajo:",
-    "expectedAnswer": "Explicar las necesidades de subsistencia, recursos geográficos o motivos sociales vinculados con Comercio.",
-    "socraticHint": "Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?",
-    "emotionalTip": "Fomenta la perspectiva histórica: 'Analiza los hechos considerando la época y el espacio geográfico en que ocurrieron'.",
-    "options": [
+
+  situation: {
+    dilePrompt: 'En las bandas del Paleolítico todo lo cazado o recolectado se repartía de inmediato entre todos porque la carne no duraba y nadie era dueño de la tierra. Pero en el Neolítico, una familia trabajaba durante seis meses limpiando piedras de un campo, regándolo y cuidando el trigo. ¿Por qué crees que esa familia empezó a considerar que ese campo y ese trigo eran de su propiedad y no de cualquiera que pasara por ahí?',
+    expectedAnswer: 'Porque habían invertido meses de esfuerzo, trabajo y cuidado personal en esa parcela específica, por lo que sintieron que tenían derecho exclusivo sobre los frutos de su cosecha para alimentar a sus propios hijos y guardar semillas.',
+    socraticHint: 'Si dedicas medio año de tu vida a construir un huerto y cuidarlo todos los días, ¿te parecería justo que alguien que no hizo nada se lleve toda la cosecha?',
+    emotionalTip: 'Valora la comprensión del trabajo: el sentido de propiedad nació vinculado al esfuerzo continuado invertido en la tierra y los rebaños.',
+    options: [
       {
-        "label": "Explicó las causas históricas y geográficas vinculadas con Comercio",
-        "kind": "correct",
-        "feedbackText": "¡Exacto! Comprendió las causas históricas y geográficas que motivaron a las personas de esa época."
+        label: 'Explicó que la propiedad nació del esfuerzo y tiempo invertido en cuidar la tierra y los animales',
+        kind: 'correct',
+        feedbackText: '¡Exacto! El trabajo prolongado sobre la tierra generó el derecho consuetudinario a reclamar esa parcela y su cosecha.'
       },
       {
-        "label": "Solo mencionó hechos aislados sin explicar por qué ocurrieron",
-        "kind": "needs_support",
-        "feedbackText": "Pídele que piense en los desafíos del entorno: ¿por qué necesitaban organizarse de esa manera?"
+        label: 'Dijo que un rey les vendió la tierra con papeles firmados y dinero',
+        kind: 'needs_support',
+        feedbackText: 'En esa época aún no existían reyes, dinero ni escrituras legales; la propiedad nació de la ocupación y trabajo familiar continuo.'
+      },
+      {
+        label: 'No sabe qué responder o dio otra respuesta',
+        kind: 'no_answer',
+        feedbackText: 'Pista guiada: Fíjate en los meses de trabajo: quien siembra, riega y desmaleza una parcela reclama el derecho a cosechar su propio alimento.'
       }
     ]
   },
-  "reference": {
-    "dilePrompt": "¿Qué causas o necesidades motivaron a las comunidades de esa época en relación con 'Comercio'?",
-    "question": "¿Qué causas o necesidades motivaron a las comunidades de esa época en relación con 'Comercio'?",
-    "expectedAnswer": "Explicar las necesidades de subsistencia, recursos geográficos o motivos sociales vinculados con Comercio.",
-    "socraticHint": "Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?",
-    "feedbackSuccess": "Muy bien. Observaste el detalle central con precisión.",
-    "feedbackSupport": "Pídele que se sitúe en el lugar de las personas de la época: ¿con qué recursos contaban y qué problemas debían solucionar?"
+
+  reference: {
+    dilePrompt: 'A medida que algunas familias acumulaban más granos en sus silos y tenían rebaños más numerosos, comenzaron a construirse viviendas más grandes y a tomar decisiones por toda la aldea.',
+    question: '¿De qué manera la acumulación desigual de bienes provocó la aparición de las primeras diferencias y jerarquías sociales entre los habitantes?',
+    expectedAnswer: 'Porque las familias con más reservas de comida y ganado podían ayudar a otras en tiempos de sequía o hambruna, ganando prestigio, respeto y autoridad política para liderar y mandar en la comunidad.',
+    socraticHint: 'Si en un año de sequía a tu vecino se le muere el cultivo pero tú tienes diez vasijas de trigo guardadas y le prestas comida, ¿quién tiene más influencia en el pueblo?',
+    feedbackSuccess: '¡Extraordinario razonamiento sociológico e histórico! La riqueza acumulada se tradujo en poder político, prestigio social y autoridad comunal.',
+    feedbackSupport: 'Tener reservas sobrantes permitió a ciertas familias prestar grano y ganar influencia, convirtiéndose en jefes o líderes de la aldea.'
   },
-  "hook": {
-    "title": "Video Motivacional: El Desafío de Consecuencias históricas y complejización social",
-    "titulo": "Video Motivacional: El Desafío de Consecuencias históricas y complejización social",
-    "focusPoints": [],
-    "dileIntro": "Antes de ver el video, observa con atención lo que descubren los dos exploradores y qué pregunta queda planteada.",
-    "hazInstruction": "Observa y reflexiona con las escenas del desafío visual.",
-    "videoSrc": "",
-    "videoUrl": "",
-    "posterSrc": "",
-    "dileAfterVideo": "Muy buena observación. Ahora conversaremos sobre lo que descubrieron en la expedición.",
-    "fullPrompt": "Actúa como Diseñador Instruccional Senior y Creador de Presentaciones en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de GANCHO MOTIVACIONAL (Paso 2) para:\n- Asignatura: Historia, Geografía y Ciencias Sociales\n- Objetivo de Aprendizaje: OA 2\n- Clase: 5 (\"Consecuencias históricas y complejización social\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS (PLAN MAESTRO ACTUALIZACIÓN 29-09-2026):\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Exactamente 7 diapositivas (slide1 a slide7).\n3. ESTILO ARTÍSTICO DE LAS IMÁGENES: Anime Moderno (Modern Anime Style, cinematográfico, iluminación dinámica, fondos limpios con espacio negativo real).\n4. PROTAGONISTAS FIJOS: Dúo co-protagónico de 13 años (la joven y el joven estudiantes-exploradores chilenos). ACTÚAN JUNTOS en cada escena, colaborando y resolviendo el desafío en equipo.\n5. REGLA VISUAL ANTI-MÁSCARAS Y FONDOS LIMPIOS: Imágenes Full-Bleed con espacio negativo para texto y vectores. Queda prohibido usar placas oscuras que tapen las caras de los personajes o la mitad de la lámina. PROHIBIDO dibujar números, letras o fórmulas dentro de la ilustración generada por IA.\n6. PRESUPUESTO TEMPORAL Y GUION CONTINUO (GANCHO - 60 SEGUNDOS / 130 PALABRAS TOTALES): Cada diapositiva DEBE incluir únicamente el texto de narración oral continua (8+8+8+9+9+9+9 segundos, totalizando exactamente ~130 palabras para 60 segundos de locución a 130 palabras por minuto en Google Vids/TTS), sin marcas técnicas, encabezados ni duraciones, listo para ser leído por voz en off.\n7. PROTOCOLO DE COMPROBACIÓN ACÚSTICA OBLIGATORIA (GOOGLE VIDS): Medir la duración real del archivo exportado con cronómetro o analizador de audio. El conteo de palabras no garantiza por sí solo 60 segundos exactos. Si la duración no es exacta, ajustar narración, pausas o ritmo, volver a exportar y registrar la duración comprobada oficial.\n8. ESTRUCTURA HEXAPARTITA POR DIAPOSITIVA:\n   • Toda diapositiva se define con: 1) Propósito, 2) Título en Pantalla (64 pt), 3) Subtítulo en Pantalla (36 pt), 4) Prompt de imagen IA sin texto, 5) Capa vectorial para PowerPoint, y 6) Notas al orador continuas.\n   • COLOR DE TEXTO: Un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.\n   • LOCUCIÓN COHERENTE: Narra con precisión lo que se observa en la imagen y lo que se sintetiza en la pantalla.\n\nDETALLE DE LAS 7 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Apertura y Contexto) ---\n1. Propósito Didáctico: Apertura y Contexto\n2. Título en Pantalla (64 pt): Misión 5: Consecuencias históricas y complejización social\n3. Subtítulo en Pantalla (36 pt): Exploración inicial en Historia, Geografía y Ciencias Sociales\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Consecuencias históricas y complejización social (Historia, Geografía y Ciencias Sociales). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Coordenadas historicas: Linea temporal y contexto de Consecuencias históricas y complejización social\n6. Notas al Orador (Locución Continua Google Vids): \"Comienza una nueva expedición de aprendizaje en Historia, Geografía y Ciencias Sociales. Nuestros dos exploradores analizan el desafío de Consecuencias históricas y complejización social para descubrir sus secretos.\"\n\n--- DIAPOSITIVA 2 (Presentación del Escenario) ---\n1. Propósito Didáctico: Presentación del Escenario\n2. Título en Pantalla (64 pt): Punto de partida\n3. Subtítulo en Pantalla (36 pt): Aparición de la propiedad, jerarquías y especialización del trabajo\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Aparición de la propiedad, jerarquías y especialización del trabajo. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Aparición de la propiedad, jerarquías y especialización del trabajo\n6. Notas al Orador (Locución Continua Google Vids): \"Al observar los datos sobre Aparición de la propiedad, jerarquías y especialización del trabajo, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor.\"\n\n--- DIAPOSITIVA 3 (Aparición del Conflicto / Misterio) ---\n1. Propósito Didáctico: Aparición del Conflicto / Misterio\n2. Título en Pantalla (64 pt): El enigma disciplinar\n3. Subtítulo en Pantalla (36 pt): Desafío en Consecuencias históricas y complejización social\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Aparición de la propiedad, jerarquías y especialización del trabajo\n6. Notas al Orador (Locución Continua Google Vids): \"Surge un reto concreto sobre Consecuencias históricas y complejización social: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso.\"\n\n--- DIAPOSITIVA 4 (Exploración de Pistas) ---\n1. Propósito Didáctico: Exploración de Pistas\n2. Título en Pantalla (64 pt): Análisis de evidencias\n3. Subtítulo en Pantalla (36 pt): Aparición de la propiedad, jerarquías y especialización del trabajo\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Aparición de la propiedad, jerarquías y especialización del trabajo\n6. Notas al Orador (Locución Continua Google Vids): \"Ambos comparan las pistas disponibles sobre Aparición de la propiedad, jerarquías y especialización del trabajo. Cada dato confirma cómo interactúan los elementos clave de la situación.\"\n\n--- DIAPOSITIVA 5 (El Momento Crítico) ---\n1. Propósito Didáctico: El Momento Crítico\n2. Título en Pantalla (64 pt): Criterio de decisión\n3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Capa espacio-temporal: Mapa historico con vectores de Aparición de la propiedad, jerarquías y especialización del trabajo\n6. Notas al Orador (Locución Continua Google Vids): \"Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Consecuencias históricas y complejización social con total precisión metodológica.\"\n\n--- DIAPOSITIVA 6 (La Antesala de la Pregunta) ---\n1. Propósito Didáctico: La Antesala de la Pregunta\n2. Título en Pantalla (64 pt): El dilema central\n3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Consecuencias históricas y complejización social?\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Dilema historico: Fuentes contrastadas frente al acontecimiento\n6. Notas al Orador (Locución Continua Google Vids): \"Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje.\"\n\n--- DIAPOSITIVA 7 (La Pregunta Detonante) ---\n1. Propósito Didáctico: La Pregunta Detonante\n2. Título en Pantalla (64 pt): Pregunta detonante\n3. Subtítulo en Pantalla (36 pt): Regla y método de Consecuencias históricas y complejización social\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta detonante: ¿Que consecuencias trajo Consecuencias históricas y complejización social?\n6. Notas al Orador (Locución Continua Google Vids): \"Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!\"\n\n",
-    "slides": [
+
+  hook: {
+    title: 'El Nacimiento de las Jerarquías Sociales',
+    titulo: 'El Nacimiento de las Jerarquías Sociales',
+    focusPoints: [
+      'Del usufructo comunal a la propiedad familiar: Cercado de parcelas y marcas de rebaño.',
+      'Desigualdad material: Familias con mayores silos frente a familias vulnerables a sequías.',
+      'Jefaturas y consejos: Líderes para mediar en pleitos y organizar canales de riego.',
+      'Artesanos a tiempo completo: Especialistas mantenidos por el excedente alimentario comunal.'
+    ],
+    dileIntro: 'Acompañemos a los dos exploradores a investigar cómo la aldea comenzó a dividirse en diferentes sectores sociales.',
+    hazInstruction: 'Observa cómo la acumulación de bienes transformó las relaciones entre las familias de la aldea.',
+    videoSrc: '',
+    dileAfterVideo: 'Muy buena observación. Ahora analizaremos las causas que originaron estas jerarquías sociales.',
+    slides: [
       {
-        "slideNumber": 1,
-        "tituloMomento": "Apertura y Contexto",
-        "didacticPurpose": "Apertura y Contexto",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Consecuencias históricas y complejización social (Historia, Geografía y Ciencias Sociales). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.",
-        "overlayTitle": "Misión 5: Consecuencias históricas y complejización social",
-        "overlaySubtitle": "Exploración inicial en Historia, Geografía y Ciencias Sociales",
-        "overlayText": "Misión 5: Consecuencias históricas y complejización social",
-        "vectorialOverlayPptx": "Coordenadas historicas: Linea temporal y contexto de Consecuencias históricas y complejización social",
-        "mathOverlayPptx": "Coordenadas historicas: Linea temporal y contexto de Consecuencias históricas y complejización social",
-        "speakerNotes": "Comienza una nueva expedición de aprendizaje en Historia, Geografía y Ciencias Sociales. Nuestros dos exploradores analizan el desafío de Consecuencias históricas y complejización social para descubrir sus secretos.",
-        "palabrasAprox": 21,
-        "duracionSeg": 9
+        slideNumber: 1,
+        tituloMomento: "Apertura y Escenario",
+        didacticPurpose: "Apertura y Escenario",
+        visualPrompt: "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, observing agricultural plots separated by low stone boundary markers along a river terrace. Clear morning light, wide negative space in top third. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Linderos de Piedra",
+        overlaySubtitle: "Límites marcando parcelas familiares de cultivo",
+        overlayText: "Linderos de Piedra: Límites marcando parcelas familiares de cultivo",
+        vectorialOverlayPptx: "Transformación jurídica consuetudinaria: Aparición de linderos y delimitación de parcelas",
+        speakerNotes: "Nuestros exploradores observan un cambio en los campos: muros bajos de piedra marcan las tierras de cada familia, delimitando su propiedad.",
+        palabrasAprox: 21,
+        duracionSeg: 9
       },
       {
-        "slideNumber": 2,
-        "tituloMomento": "Presentación del Escenario",
-        "didacticPurpose": "Presentación del Escenario",
-        "visualPrompt": "Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Aparición de la propiedad, jerarquías y especialización del trabajo. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.",
-        "overlayTitle": "Punto de partida",
-        "overlaySubtitle": "Aparición de la propiedad, jerarquías y especialización del trabajo",
-        "overlayText": "Punto de partida: Aparición de la propiedad, jerarquías y especialización del trabajo",
-        "vectorialOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Aparición de la propiedad, jerarquías y especialización del trabajo",
-        "mathOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Aparición de la propiedad, jerarquías y especialización del trabajo",
-        "speakerNotes": "Al observar los datos sobre Aparición de la propiedad, jerarquías y especialización del trabajo, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor.",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        slideNumber: 2,
+        tituloMomento: "El Trabajo y el Derecho",
+        didacticPurpose: "El Trabajo y el Derecho",
+        visualPrompt: "Modern anime style. A farming family sweating together to remove river boulders from their field while planting grain, showing months of dedicated labor. The two protagonists taking field notes. Clear space on left. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "El Fruto del Esfuerzo",
+        overlaySubtitle: "Cuidar la tierra genera derechos exclusivos",
+        overlayText: "El Fruto del Esfuerzo: Cuidar la tierra genera derechos exclusivos",
+        vectorialOverlayPptx: "Base económica: La inversión de trabajo continuado justifica el reclamo de propiedad familiar",
+        speakerNotes: "Al invertir meses limpiando, regando y cuidando la tierra, las familias comenzaron a considerar que el grano cosechado les pertenecía por derecho propio.",
+        palabrasAprox: 23,
+        duracionSeg: 9
       },
       {
-        "slideNumber": 3,
-        "tituloMomento": "Aparición del Conflicto / Misterio",
-        "didacticPurpose": "Aparición del Conflicto / Misterio",
-        "visualPrompt": "Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.",
-        "overlayTitle": "El enigma disciplinar",
-        "overlaySubtitle": "Desafío en Consecuencias históricas y complejización social",
-        "overlayText": "El enigma disciplinar: Consecuencias históricas y complejización social",
-        "vectorialOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Aparición de la propiedad, jerarquías y especialización del trabajo",
-        "mathOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Aparición de la propiedad, jerarquías y especialización del trabajo",
-        "speakerNotes": "Surge un reto concreto sobre Consecuencias históricas y complejización social: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        slideNumber: 3,
+        tituloMomento: "La Cosecha Desigual",
+        didacticPurpose: "La Cosecha Desigual",
+        visualPrompt: "Modern anime style. Visual contrast in the village: one house with multiple overflowing clay grain jars and robust sheep pens, next to a modest house with empty baskets. Dramatic lighting, expressive eyes. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Acumulación Desigual",
+        overlaySubtitle: "Diferencias materiales entre las familias aldeanas",
+        overlayText: "Acumulación Desigual: Diferencias materiales entre las familias aldeanas",
+        vectorialOverlayPptx: "Diferenciación económica: Cosechas favorables y rebaños numerosos generan acumulación asimétrica de riqueza",
+        speakerNotes: "No todas las familias obtuvieron el mismo resultado. Quienes contaban con mejores suelos o más brazos acumularon grandes reservas, mientras otras pasaban escasez.",
+        palabrasAprox: 23,
+        duracionSeg: 9
       },
       {
-        "slideNumber": 4,
-        "tituloMomento": "Exploración de Pistas",
-        "didacticPurpose": "Exploración de Pistas",
-        "visualPrompt": "Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.",
-        "overlayTitle": "Análisis de evidencias",
-        "overlaySubtitle": "Aparición de la propiedad, jerarquías y especialización del trabajo",
-        "overlayText": "Análisis de evidencias: Aparición de la propiedad, jerarquías y especialización del trabajo",
-        "vectorialOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Aparición de la propiedad, jerarquías y especialización del trabajo",
-        "mathOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Aparición de la propiedad, jerarquías y especialización del trabajo",
-        "speakerNotes": "Ambos comparan las pistas disponibles sobre Aparición de la propiedad, jerarquías y especialización del trabajo. Cada dato confirma cómo interactúan los elementos clave de la situación.",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        slideNumber: 4,
+        tituloMomento: "La Jefatura Comunal",
+        didacticPurpose: "La Jefatura Comunal",
+        visualPrompt: "Modern anime style. A respected elder chief with carved bone ornaments mediating a dispute between two farmers near a communal canal, with villagers listening attentively. Vibrant colors, clean composition. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Autoridad y Mediación",
+        overlaySubtitle: "Consejos de ancianos resolviendo disputas comunales",
+        overlayText: "Autoridad y Mediación: Consejos de ancianos resolviendo disputas comunales",
+        vectorialOverlayPptx: "Estructura política: Nacimiento de jefaturas y consejos para resolver conflictos de linderos y riego",
+        speakerNotes: "Surgieron conflictos por tierras y agua de regadío. Los consejos de ancianos y líderes prestigiosos asumieron la autoridad para dictar acuerdos y mantener el orden.",
+        palabrasAprox: 24,
+        duracionSeg: 9
       },
       {
-        "slideNumber": 5,
-        "tituloMomento": "El Momento Crítico",
-        "didacticPurpose": "El Momento Crítico",
-        "visualPrompt": "Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.",
-        "overlayTitle": "Criterio de decisión",
-        "overlaySubtitle": "Aplicar el método riguroso",
-        "overlayText": "Criterio de decisión riguroso",
-        "vectorialOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Aparición de la propiedad, jerarquías y especialización del trabajo",
-        "mathOverlayPptx": "Capa espacio-temporal: Mapa historico con vectores de Aparición de la propiedad, jerarquías y especialización del trabajo",
-        "speakerNotes": "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Consecuencias históricas y complejización social con total precisión metodológica.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        slideNumber: 5,
+        tituloMomento: "Artesanos Especializados",
+        didacticPurpose: "Artesanos Especializados",
+        visualPrompt: "Modern anime style. A master potter and a stone polisher working full time in a dedicated workshop, receiving grain baskets from farmers in exchange for tools and pots. Soft depth of field. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Oficios de Tiempo Completo",
+        overlaySubtitle: "Especialistas alimentados por excedentes agrícolas",
+        overlayText: "Oficios de Tiempo Completo: Especialistas alimentados por excedentes agrícolas",
+        vectorialOverlayPptx: "Especialización laboral: Los artesanos no cultivan la tierra y son sostenidos por los excedentes colectivos",
+        speakerNotes: "Al haber comida acumulada, algunos aldeanos dejaron de cultivar para dedicarse exclusivamente a perfeccionar la alfarería, la metalurgia y la construcción.",
+        palabrasAprox: 21,
+        duracionSeg: 9
       },
       {
-        "slideNumber": 6,
-        "tituloMomento": "La Antesala de la Pregunta",
-        "didacticPurpose": "La Antesala de la Pregunta",
-        "visualPrompt": "Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.",
-        "overlayTitle": "El dilema central",
-        "overlaySubtitle": "¿Cómo resolver Consecuencias históricas y complejización social?",
-        "overlayText": "¿Cómo resolver Consecuencias históricas y complejización social?",
-        "vectorialOverlayPptx": "Dilema historico: Fuentes contrastadas frente al acontecimiento",
-        "mathOverlayPptx": "Dilema historico: Fuentes contrastadas frente al acontecimiento",
-        "speakerNotes": "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        slideNumber: 6,
+        tituloMomento: "Jerarquías de Prestigio",
+        didacticPurpose: "Jerarquías de Prestigio",
+        visualPrompt: "Modern anime style. Wide shot of the village cemetery showing differences in grave goods: some burials with fine polished jade beads and painted pottery, others with simple earth pits. Volumetric lighting. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Evidencias Funerarias",
+        overlaySubtitle: "Tumbas que revelan diferencias de prestigio",
+        overlayText: "Evidencias Funerarias: Tumbas que revelan diferencias de prestigio",
+        vectorialOverlayPptx: "Registro arqueológico: Ajuares funerarios desiguales demuestran estratificación social hereditaria incipiente",
+        speakerNotes: "Los arqueólogos confirman esta jerarquía al excavar tumbas: ciertas familias eran enterradas con adornos valiosos y finas vasijas, reflejando su alto rango social.",
+        palabrasAprox: 23,
+        duracionSeg: 9
       },
       {
-        "slideNumber": 7,
-        "tituloMomento": "La Pregunta Detonante",
-        "didacticPurpose": "La Pregunta Detonante",
-        "visualPrompt": "Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.",
-        "overlayTitle": "Pregunta detonante",
-        "overlaySubtitle": "Regla y método de Consecuencias históricas y complejización social",
-        "overlayText": "Meta: Dominio de Consecuencias históricas y complejización social",
-        "vectorialOverlayPptx": "Pregunta detonante: ¿Que consecuencias trajo Consecuencias históricas y complejización social?",
-        "mathOverlayPptx": "Pregunta detonante: ¿Que consecuencias trajo Consecuencias históricas y complejización social?",
-        "speakerNotes": "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        slideNumber: 7,
+        tituloMomento: "Pregunta Detonante",
+        didacticPurpose: "Pregunta Detonante",
+        visualPrompt: "Modern anime style. Inspiring setting with both 13-year-olds smiling with their notebooks before an ancient village diagram showing chiefs, artisans, and farmers collaborating. Clear background. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Interrogante Central",
+        overlaySubtitle: "¿Cómo cambió la igualdad comunitaria inicial?",
+        overlayText: "Interrogante Central: ¿Cómo cambió la igualdad comunitaria inicial?",
+        vectorialOverlayPptx: "Pregunta rectora: ¿Qué transformaciones trajo la aparición de la propiedad y las jerarquías?",
+        speakerNotes: "¡Acompáñanos a comprender en la lección cómo estas jerarquías sociales prepararon el camino para las primeras civilizaciones de la historia!",
+        palabrasAprox: 19,
+        duracionSeg: 6
       }
     ]
   },
-  "preQuestions": [
+
+  preQuestions: [
     {
-      "context": "Contexto Temporal, Espacial y Comercio",
-      "question": "¿De qué manera el entorno geográfico y la época condicionaron el desarrollo de 'Comercio' en este proceso histórico?",
-      "expected": "Relacionar las características del espacio geográfico con la organización social y el desarrollo de Comercio.",
-      "success": "¡Muy bien! Ubicaste con precisión las coordenadas temporales y espaciales del proceso.",
-      "support": "Observa las referencias del mapa y la cronología: ¿qué recursos naturales o rutas influían en sus decisiones?",
-      "reveal": "El entorno geográfico y las condiciones de la época condicionaron profundamente los modos de vida y las instituciones humanas.",
-      "studentReveal": "La influencia del espacio geográfico y el tiempo histórico en Comercio."
+      context: 'El Reclamo de la Propiedad Familiar',
+      question: 'Vimos que los agricultores neolíticos pusieron cercos de piedra para delimitar sus parcelas. ¿Por qué el trabajo continuo en la tierra generó este sentido de propiedad privada o familiar?',
+      expected: 'Porque las familias dedicaban meses de esfuerzo personal en preparar y regar su huerto, considerando que tenían el derecho exclusivo sobre la cosecha que su propio trabajo había generado.',
+      success: '¡Exacto! El derecho a la propiedad nació del vínculo directo entre el trabajo humano sostenido y el fruto de la tierra.',
+      support: 'Piensa en el tiempo invertido: si trabajas medio año en una parcela, necesitas la seguridad de que nadie te quitará la comida de tus hijos.',
+      reveal: 'El esfuerzo continuo de desmalezar, sembrar y regar transformó la tierra en un bien familiar protegido por linderos.',
+      studentReveal: 'Porque trabajaron meses en esa parcela y sentían que tenían derecho a la comida que su propio esfuerzo produjo.'
     },
     {
-      "context": "Pensamiento Crítico y Prevención del Presentismo",
-      "question": "Para evitar el error común de 'No comprender la magnitud temporal de 'larga duración' y percibir el Neolítico como un cambio rápido y homogéneo.', ¿qué debemos considerar al analizar las decisiones tomadas por los actores históricos?",
-      "expected": "Evaluar las decisiones históricas desde la mentalidad, recursos y cosmovisión propia de la época estudiada.",
-      "success": "¡Excelente empatía histórica! Analizaste el pasado desde su propio contexto y no desde los prejuicios actuales.",
-      "support": "Piensa qué información y qué valores tenían en ese siglo: ¿podían prever las consecuencias de la misma forma que nosotros hoy?",
-      "reveal": "El rigor histórico exige comprender las razones de los protagonistas en su propio tiempo, evitando anacronismos.",
-      "studentReveal": "La comprensión del pasado desde el contexto propio de sus protagonistas."
+      context: 'Los Especialistas de Tiempo Completo',
+      question: '¿Por qué un artesano alfarero o tejedor pudo dejar de sembrar trigo y dedicarse únicamente a su oficio artesanal?',
+      expected: 'Porque los agricultores producían excedentes de alimentos suficientes para alimentar a los artesanos, intercambiando trigo por vasijas, telas y herramientas.',
+      success: '¡Brillante comprensión económica! El excedente agrícola liberó a un sector de la comunidad para crear tecnología especializada.',
+      support: 'Recuerda: si el campo produce más comida de la que los campesinos comen, ¿a quién pueden alimentar con lo que sobra?',
+      reveal: 'El excedente de alimentos permitió sostener a personas dedicadas exclusivamente a la alfarería, la metalurgia y la construcción.',
+      studentReveal: 'Porque los agricultores producían comida de sobra y se la cambiaban al artesano por sus vasijas y herramientas.'
     }
   ],
-  "formalization": {
-    "title": "Video Explicativo: Formalización de Consecuencias históricas y complejización social",
-    "concept": "Video Explicativo: Formalización de Consecuencias históricas y complejización social",
-    "dileIntro": "Ahora veremos el video explicativo de Consecuencias históricas y complejización social. Observa el mapa conceptual y cómo se articula el concepto de Comercio.",
-    "hazInstruction": "Revisemos la explicación formal y la idea clave.",
-    "ideaClave": "Los procesos históricos sobre Consecuencias históricas y complejización social responden a múltiples causas interconectadas, donde 'Comercio' explica cómo las sociedades resolvieron sus desafíos de convivencia y subsistencia.",
-    "videoSrc": "",
-    "videoUrl": "",
-    "graphicPoster": "",
-    "fullPrompt": "Actúa como Diseñador Pedagógico y Especialista en Didáctica Disciplinar en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de VIDEO EXPLICATIVO / FORMALIZACIÓN (Paso 4) para:\n- Asignatura: Historia, Geografía y Ciencias Sociales\n- Objetivo de Aprendizaje: OA 2\n- Clase: 5 (\"Consecuencias históricas y complejización social\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS (PLAN MAESTRO ACTUALIZACIÓN 29-09-2026):\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Exactamente 7 diapositivas (slide1 a slide7) siguiendo el principio de un cambio visual por cada movimiento mental.\n3. DIAPOSITIVA 1 OBLIGATORIA CON OBJETIVO: La primera diapositiva declara como subtítulo (36 pt) el objetivo específico de la lección, sin repetir rótulos redundantes 'OA 01'.\n4. PROTAGONISTAS FIJOS EN EL 100% DE LAS ESCENAS: Los mismos 2 jóvenes de 13 años (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.\n5. REGLA VISUAL ANTI-MÁSCARAS Y FONDOS LIMPIOS: Imagen limpia con espacio negativo real. Prohibido que la IA intente dibujar números, rectas o letras. Todo elemento disciplinar se ensambla vectorialmente en PowerPoint.\n6. PRESUPUESTO TEMPORAL Y GUION PEDAGÓGICO (LECCIÓN EXPLICATIVA - 90 SEGUNDOS / 195 PALABRAS TOTALES): Guion explicativo continuo (12+13+13+13+13+13+13 segundos, totalizando exactamente ~195 palabras para 90 segundos a 130 palabras por minuto en Google Vids/TTS), sin marcas técnicas. Diapositiva 1 formula el objetivo; diapositivas 2 a 7 desarrollan el contenido sin repetirlo.\n7. PROTOCOLO DE COMPROBACIÓN ACÚSTICA OBLIGATORIA (GOOGLE VIDS): Medir la duración real del archivo exportado con cronómetro o analizador de audio. El conteo de palabras no garantiza por sí solo 90 segundos exactos. Si la duración no es exacta, ajustar narración, pausas o ritmo, volver a exportar y registrar la duración comprobada oficial.\n8. JERARQUÍA TIPOGRÁFICA Y COLOR DE TEXTO: Título en Pantalla (64 pt); Subtítulo en Pantalla (36 pt). Texto brillante de un solo color de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, contornos, resplandores ni recuadros flotantes o fondos detrás del texto. Especificar color en cada prompt.\n9. CIERRE SIN RETO EN EL VIDEO: La explicación concluye con la regla de oro y da el pase directo a la práctica en la plataforma web, sin proponer desafíos finales ni tareas en el cuaderno durante el video.\n10. ESTRUCTURA HEXAPARTITA POR DIAPOSITIVA (Propósito, Título 64 pt, Subtítulo 36 pt, Prompt Imagen IA, Capa Vectorial PPTX, Notas al Orador).\n\nDETALLE DE LAS 7 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Objetivo de la Lección) ---\n1. Propósito Didáctico: Objetivo de la Lección\n2. Título en Pantalla (64 pt): Objetivo de la lección\n3. Subtítulo en Pantalla (36 pt): Dominar Consecuencias históricas y complejización social: Aparición de la propiedad, jerarquías y especialización del trabajo\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Aparición de la propiedad, jerarquías y especialización del trabajo. High clarity, negative space for text. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 2 · Consecuencias históricas y complejización social\n6. Notas al Orador (Locución Continua Google Vids): \"El objetivo de hoy es aprender a aparición de la propiedad, jerarquías y especialización del trabajo, aplicando el método disciplinar paso a paso con total rigor y claridad.\"\n\n--- DIAPOSITIVA 2 (Definición del Concepto Central) ---\n1. Propósito Didáctico: Definición del Concepto Central\n2. Título en Pantalla (64 pt): Concepto fundamental\n3. Subtítulo en Pantalla (36 pt): Aparición de la propiedad, jerarquías y especialización del trabajo\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Escenario historico y fuentes primarias de Aparición de la propiedad, jerarquías y especialización del trabajo\n6. Notas al Orador (Locución Continua Google Vids): \"Para comprender Consecuencias históricas y complejización social, establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación.\"\n\n--- DIAPOSITIVA 3 (Demostración Modelada) ---\n1. Propósito Didáctico: Demostración Modelada\n2. Título en Pantalla (64 pt): Modelamiento paso a paso\n3. Subtítulo en Pantalla (36 pt): Procedimiento de Consecuencias históricas y complejización social\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama multicausal: Factores economicos, sociales y culturales\n6. Notas al Orador (Locución Continua Google Vids): \"Observa cómo se aplica el procedimiento en este caso guiado: cada transformación responde a una justificación disciplinar explícita y visible.\"\n\n--- DIAPOSITIVA 4 (Prevención del Error Frecuente) ---\n1. Propósito Didáctico: Prevención del Error Frecuente\n2. Título en Pantalla (64 pt): Atención: Error habitual\n3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Contraste temporal: cambios y continuidades historicas\n6. Notas al Orador (Locución Continua Google Vids): \"Un error frecuente ocurre al descuidar el orden o saltarse un paso de la convención establecida. Siempre comprobamos cada dato antes de continuar.\"\n\n--- DIAPOSITIVA 5 (Comprobación del Resultado) ---\n1. Propósito Didáctico: Comprobación del Resultado\n2. Título en Pantalla (64 pt): Validación del resultado\n3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Interpretacion historica justificada a partir de evidencias\n6. Notas al Orador (Locución Continua Google Vids): \"Al contrastar el resultado con la situación inicial, confirmamos que la solución es consistente, rigurosa y responde plenamente a la pregunta.\"\n\n--- DIAPOSITIVA 6 (Estrategia Mnemotécnica) ---\n1. Propósito Didáctico: Estrategia Mnemotécnica\n2. Título en Pantalla (64 pt): Estrategia de pensamiento\n3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Estrategia de analisis historico: Contexto, causas y consecuencias\n6. Notas al Orador (Locución Continua Google Vids): \"Recuerda siempre la estrategia en tres pasos: identificar la información clave, aplicar la regla en orden y comprobar el resultado final.\"\n\n--- DIAPOSITIVA 7 (Síntesis y Regla de Oro) ---\n1. Propósito Didáctico: Síntesis y Regla de Oro\n2. Título en Pantalla (64 pt): Regla de Oro: Consecuencias históricas y complejización social\n3. Subtítulo en Pantalla (36 pt): Método disciplinar validado\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Infografía de síntesis: Regla historica de Consecuencias históricas y complejización social\n6. Notas al Orador (Locución Continua Google Vids): \"Ahora que dominas la regla fundamental y el procedimiento de Consecuencias históricas y complejización social, ¡vamos a demostrarlo en las actividades interactivas de la plataforma!\"\n\n",
-    "slides": [
+
+  formalization: {
+    title: 'Propiedad, Jerarquías y Especialización Social',
+    concept: 'Propiedad, Jerarquías y Especialización del Trabajo',
+    dileIntro: 'Ahora veremos el video explicativo. Analizaremos cómo la acumulación de bienes, las jerarquías de autoridad y los oficios especializados transformaron la sociedad neolítica.',
+    hazInstruction: 'Revisemos con atención la explicación formal y preparemos el cuaderno para registrar las ideas centrales.',
+    ideaClave: 'La acumulación de bienes agrícolas y rebaños consolidó la propiedad familiar, generó desigualdades materiales y dio origen a jerarquías de autoridad (jefaturas) y a artesanos especializados a tiempo completo.',
+    slides: [
       {
-        "slideNumber": 1,
-        "tituloMomento": "Objetivo de la Lección",
-        "didacticPurpose": "Objetivo de la Lección",
-        "visualPrompt": "Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Aparición de la propiedad, jerarquías y especialización del trabajo. High clarity, negative space for text. No text drawn by AI.",
-        "overlayTitle": "Objetivo de la lección",
-        "overlaySubtitle": "Dominar Consecuencias históricas y complejización social: Aparición de la propiedad, jerarquías y especialización del trabajo",
-        "overlayText": "Concepto clave: Consecuencias históricas y complejización social",
-        "vectorialOverlayPptx": "Rótulo formal: OA 2 · Consecuencias históricas y complejización social",
-        "mathOverlayPptx": "Rótulo formal: OA 2 · Consecuencias históricas y complejización social",
-        "speakerNotes": "El objetivo de hoy es aprender a aparición de la propiedad, jerarquías y especialización del trabajo, aplicando el método disciplinar paso a paso con total rigor y claridad.",
-        "palabrasAprox": 25,
-        "duracionSeg": 12
+        slideNumber: 1,
+        tituloMomento: "Objetivo de la Lección",
+        didacticPurpose: "Objetivo de la Lección",
+        visualPrompt: "Modern anime style 16:9. The boy and girl in a luminous study room, examining a sociological pyramid diagram of a Neolithic community showing chiefs, artisans, and farming families. Clear negative space on top. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Objetivo de la Clase",
+        overlaySubtitle: "Comprender propiedad jerarquías y especialización",
+        overlayText: "Objetivo: Comprender propiedad jerarquías y especialización",
+        vectorialOverlayPptx: "Rótulo formal: OA 2 · Complejización social en el Neolítico",
+        speakerNotes: "El objetivo de hoy es comprender cómo la propiedad de parcelas, la acumulación desigual y la especialización del trabajo originaron jerarquías sociales.",
+        palabrasAprox: 23,
+        duracionSeg: 12
       },
       {
-        "slideNumber": 2,
-        "tituloMomento": "Definición del Concepto Central",
-        "didacticPurpose": "Definición del Concepto Central",
-        "visualPrompt": "Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.",
-        "overlayTitle": "Concepto fundamental",
-        "overlaySubtitle": "Aparición de la propiedad, jerarquías y especialización del trabajo",
-        "overlayText": "Regla formal: Aparición de la propiedad, jerarquías y especialización del trabajo",
-        "vectorialOverlayPptx": "Escenario historico y fuentes primarias de Aparición de la propiedad, jerarquías y especialización del trabajo",
-        "mathOverlayPptx": "Escenario historico y fuentes primarias de Aparición de la propiedad, jerarquías y especialización del trabajo",
-        "speakerNotes": "Para comprender Consecuencias históricas y complejización social, establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        slideNumber: 2,
+        tituloMomento: "Aparición de la Propiedad",
+        didacticPurpose: "Aparición de la Propiedad",
+        visualPrompt: "Modern anime style. The girl explaining a diagram contrasting communal gathering territory in the Paleolithic with demarcated family agricultural plots in the Neolithic. Clean lineart. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "De lo Comunal a lo Familiar",
+        overlaySubtitle: "Parcelas y rebaños bajo posesión propia",
+        overlayText: "De lo Comunal a lo Familiar: Parcelas y rebaños bajo posesión propia",
+        vectorialOverlayPptx: "Evolución institucional: Territorio de caza compartido -> Parcelas agrícolas y ganado de propiedad familiar",
+        speakerNotes: "El modo sedentario transformó la posesión de la tierra. Las parcelas de cultivo y los rebaños pasaron a ser propiedad de familias y linajes específicos.",
+        palabrasAprox: 24,
+        duracionSeg: 13
       },
       {
-        "slideNumber": 3,
-        "tituloMomento": "Demostración Modelada",
-        "didacticPurpose": "Demostración Modelada",
-        "visualPrompt": "Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.",
-        "overlayTitle": "Modelamiento paso a paso",
-        "overlaySubtitle": "Procedimiento de Consecuencias históricas y complejización social",
-        "overlayText": "Modelamiento paso a paso de Consecuencias históricas y complejización social",
-        "vectorialOverlayPptx": "Diagrama multicausal: Factores economicos, sociales y culturales",
-        "mathOverlayPptx": "Diagrama multicausal: Factores economicos, sociales y culturales",
-        "speakerNotes": "Observa cómo se aplica el procedimiento en este caso guiado: cada transformación responde a una justificación disciplinar explícita y visible.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        slideNumber: 3,
+        tituloMomento: "Desigualdad y Acumulación",
+        didacticPurpose: "Desigualdad y Acumulación",
+        visualPrompt: "Modern anime style. Village storage comparison showing a lineage with large multi-chambered granaries and abundant herds, contrasting with a family with modest reserves. Soft ambient lighting. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Acumulación Desigual",
+        overlaySubtitle: "Mayor riqueza genera mayor influencia social",
+        overlayText: "Acumulación Desigual: Mayor riqueza genera mayor influencia social",
+        vectorialOverlayPptx: "Mecanismo social: La posesión asimétrica de excedentes permite acumular prestigio, deudas y poder político",
+        speakerNotes: "Quienes acumulaban más grano y animales podían prestar alimento en épocas duras. Esta ventaja material se tradujo en prestigio social y dependencia comunitaria.",
+        palabrasAprox: 24,
+        duracionSeg: 13
       },
       {
-        "slideNumber": 4,
-        "tituloMomento": "Prevención del Error Frecuente",
-        "didacticPurpose": "Prevención del Error Frecuente",
-        "visualPrompt": "Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.",
-        "overlayTitle": "Atención: Error habitual",
-        "overlaySubtitle": "Confusión común que debemos evitar",
-        "overlayText": "Atención: Error habitual a evitar",
-        "vectorialOverlayPptx": "Contraste temporal: cambios y continuidades historicas",
-        "mathOverlayPptx": "Contraste temporal: cambios y continuidades historicas",
-        "speakerNotes": "Un error frecuente ocurre al descuidar el orden o saltarse un paso de la convención establecida. Siempre comprobamos cada dato antes de continuar.",
-        "palabrasAprox": 27,
-        "duracionSeg": 13
+        slideNumber: 4,
+        tituloMomento: "Jefaturas y Autoridad",
+        didacticPurpose: "Jefaturas y Autoridad",
+        visualPrompt: "Modern anime style. The boy illustrating a tribal chief wearing a copper pectoral and holding an ornate stone staff, coordinating irrigation canal maintenance with village heads. Dramatic lighting. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "El Surgimiento de Jefes",
+        overlaySubtitle: "Liderazgo para coordinar obras y justicia",
+        overlayText: "El Surgimiento de Jefes: Liderazgo para coordinar obras y justicia",
+        vectorialOverlayPptx: "Poder político temprano: Jefaturas tribales encargadas de mediar conflictos y organizar la defensa",
+        speakerNotes: "Aparecieron las jefaturas. Líderes respetados asumieron el rol de jueces en conflictos de tierras y de organizadores de obras públicas como canales y murallas.",
+        palabrasAprox: 24,
+        duracionSeg: 13
       },
       {
-        "slideNumber": 5,
-        "tituloMomento": "Comprobación del Resultado",
-        "didacticPurpose": "Comprobación del Resultado",
-        "visualPrompt": "Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.",
-        "overlayTitle": "Validación del resultado",
-        "overlaySubtitle": "Comprobar que la respuesta es consistente",
-        "overlayText": "Comprobación y validación del resultado",
-        "vectorialOverlayPptx": "Interpretacion historica justificada a partir de evidencias",
-        "mathOverlayPptx": "Interpretacion historica justificada a partir de evidencias",
-        "speakerNotes": "Al contrastar el resultado con la situación inicial, confirmamos que la solución es consistente, rigurosa y responde plenamente a la pregunta.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        slideNumber: 5,
+        tituloMomento: "Especialización de Artesanos",
+        didacticPurpose: "Especialización de Artesanos",
+        visualPrompt: "Modern anime style. Close-up on a skilled potter decorating fine pottery and a metalsmith crafting copper tools, free from field labor. The two explorers observing. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Artesanos a Tiempo Completo",
+        overlaySubtitle: "Oficios sostenidos por el excedente alimentario",
+        overlayText: "Artesanos a Tiempo Completo: Oficios sostenidos por el excedente alimentario",
+        vectorialOverlayPptx: "División técnica: Separación definitiva entre productores directos de alimentos y especialistas artesanales",
+        speakerNotes: "Gracias a los excedentes, nacieron artesanos de tiempo completo. Ya no sembraban: la comunidad les daba alimento a cambio de vasijas, telas y herramientas pulidas.",
+        palabrasAprox: 24,
+        duracionSeg: 13
       },
       {
-        "slideNumber": 6,
-        "tituloMomento": "Estrategia Mnemotécnica",
-        "didacticPurpose": "Estrategia Mnemotécnica",
-        "visualPrompt": "Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.",
-        "overlayTitle": "Estrategia de pensamiento",
-        "overlaySubtitle": "1. Identificar · 2. Aplicar · 3. Comprobar",
-        "overlayText": "Estrategia mental: Identificar, Aplicar y Verificar",
-        "vectorialOverlayPptx": "Estrategia de analisis historico: Contexto, causas y consecuencias",
-        "mathOverlayPptx": "Estrategia de analisis historico: Contexto, causas y consecuencias",
-        "speakerNotes": "Recuerda siempre la estrategia en tres pasos: identificar la información clave, aplicar la regla en orden y comprobar el resultado final.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        slideNumber: 6,
+        tituloMomento: "Atención al Error Común",
+        didacticPurpose: "Atención al Error Común",
+        visualPrompt: "Modern anime style. The boy pointing out a misconception diagram, showing that social inequality was not present in the Paleolithic band but arose with food storage. Clear visual. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Error: Desigualdad No Inmutable",
+        overlaySubtitle: "La jerarquía social nació con los excedentes",
+        overlayText: "Error: Desigualdad No Inmutable: La jerarquía social nació con los excedentes",
+        vectorialOverlayPptx: "Perspectiva histórica: Las sociedades cazadoras eran igualitarias; la estratificación nació con la acumulación",
+        speakerNotes: "Un error habitual es creer que las jerarquías siempre existieron. En el Paleolítico reinaba el igualitarismo; la desigualdad nació al acumular excedentes materiales.",
+        palabrasAprox: 25,
+        duracionSeg: 13
       },
       {
-        "slideNumber": 7,
-        "tituloMomento": "Síntesis y Regla de Oro",
-        "didacticPurpose": "Síntesis y Regla de Oro",
-        "visualPrompt": "Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.",
-        "overlayTitle": "Regla de Oro: Consecuencias históricas y complejización social",
-        "overlaySubtitle": "Método disciplinar validado",
-        "overlayText": "Síntesis: Consecuencias históricas y complejización social",
-        "vectorialOverlayPptx": "Infografía de síntesis: Regla historica de Consecuencias históricas y complejización social",
-        "mathOverlayPptx": "Infografía de síntesis: Regla historica de Consecuencias históricas y complejización social",
-        "speakerNotes": "Ahora que dominas la regla fundamental y el procedimiento de Consecuencias históricas y complejización social, ¡vamos a demostrarlo en las actividades interactivas de la plataforma!",
-        "palabrasAprox": 25,
-        "duracionSeg": 12
+        slideNumber: 7,
+        tituloMomento: "Síntesis y Regla de Oro",
+        didacticPurpose: "Síntesis y Regla de Oro",
+        visualPrompt: "Modern anime style. Both 13-year-olds smiling proudly with their notebooks before an infographic: Excedente -> Propiedad -> Jerarquía -> Especialización. Clean negative space. No text drawn by AI. No logo drawn by AI.",
+        overlayTitle: "Regla de Oro Social",
+        overlaySubtitle: "La acumulación transformó la organización comunitaria",
+        overlayText: "Regla de Oro: La acumulación transformó la organización comunitaria",
+        vectorialOverlayPptx: "Conclusión didáctica: Acumulación de excedentes = Propiedad privada + Jerarquías políticas + Especialización laboral",
+        speakerNotes: "La propiedad familiar y la acumulación de bienes complejizaron a la sociedad neolítica, sentando las bases de la división social y la autoridad política.",
+        palabrasAprox: 23,
+        duracionSeg: 13
       }
     ]
   },
-  "postQuestions": [
+
+  postQuestions: [
     {
-      "context": "Contexto Temporal, Espacial y Comercio",
-      "question": "¿De qué manera el entorno geográfico y la época condicionaron el desarrollo de 'Comercio' en este proceso histórico?",
-      "expected": "Relacionar las características del espacio geográfico con la organización social y el desarrollo de Comercio.",
-      "success": "¡Muy bien! Ubicaste con precisión las coordenadas temporales y espaciales del proceso.",
-      "support": "Observa las referencias del mapa y la cronología: ¿qué recursos naturales o rutas influían en sus decisiones?",
-      "reveal": "El entorno geográfico y las condiciones de la época condicionaron profundamente los modos de vida y las instituciones humanas.",
-      "studentReveal": "La influencia del espacio geográfico y el tiempo histórico en Comercio."
+      context: 'El Vínculo entre Excedente y Poder Político',
+      question: 'En el video analizamos que las familias con mayores cosechas y rebaños ganaron prestigio y autoridad sobre la comunidad. ¿Cómo se convirtió la riqueza alimentaria en poder de decisión política?',
+      expected: 'Porque al poder prestar grano y ganado en épocas de escasez, esas familias generaron lealtad y dependencia, lo que les permitió liderar consejos y tomar decisiones por la aldea.',
+      success: '¡Excelente análisis de ciencia política e historia! Reconociste cómo el excedente material se transformó en autoridad comunal.',
+      support: 'Fíjate en quién tiene la comida cuando hay sequía: quien ayuda a los demás se gana el respeto y la obediencia de la comunidad.',
+      reveal: 'La capacidad de distribuir alimentos en tiempos difíciles otorgó prestigio e influencia a los linajes ricos, consolidando su rol como jefes.',
+      studentReveal: 'Porque al prestar comida en épocas de hambre ganaron el respeto y apoyo de la gente para mandar y dirigir la aldea.'
     },
     {
-      "context": "Pensamiento Crítico y Prevención del Presentismo",
-      "question": "Para evitar el error común de 'No comprender la magnitud temporal de 'larga duración' y percibir el Neolítico como un cambio rápido y homogéneo.', ¿qué debemos considerar al analizar las decisiones tomadas por los actores históricos?",
-      "expected": "Evaluar las decisiones históricas desde la mentalidad, recursos y cosmovisión propia de la época estudiada.",
-      "success": "¡Excelente empatía histórica! Analizaste el pasado desde su propio contexto y no desde los prejuicios actuales.",
-      "support": "Piensa qué información y qué valores tenían en ese siglo: ¿podían prever las consecuencias de la misma forma que nosotros hoy?",
-      "reveal": "El rigor histórico exige comprender las razones de los protagonistas en su propio tiempo, evitando anacronismos.",
-      "studentReveal": "La comprensión del pasado desde el contexto propio de sus protagonistas."
+      context: 'La Especialización Laboral de Tiempo Completo',
+      question: '¿Por qué la existencia de artesanos de tiempo completo fue imposible durante el Paleolítico y solo pudo surgir en el Neolítico?',
+      expected: 'Porque en el Paleolítico no había excedentes de comida guardados; todos debían buscar alimento diariamente. En el Neolítico el excedente agrícola permitió alimentar a quienes no cultivaban.',
+      success: '¡Gran precisión historiográfica! Vinculaste la base económica de subsistencia con la división social del trabajo.',
+      support: 'Piensa en el tiempo diario: si tienes que cazar para no morir de hambre hoy, ¿puedes pasar todo el día fabricando vasijas?',
+      reveal: 'Solo cuando la producción agrícola generó excedentes sostenidos fue posible liberar a miembros de la comunidad para oficios artesanales exclusivos.',
+      studentReveal: 'Porque antes todos tenían que buscar comida para vivir; con la agricultura sobraba comida para alimentar a los artesanos.'
     }
   ],
-  "practice": [
+
+  practice: [
     {
-      "context": "Ejercicio 1 en Cuaderno: Análisis de Fuentes y Cuadro Comparativo",
-      "question": "Abre tu cuaderno de notas. Escribe como título: 'Consecuencias históricas y complejización social'. Con base en la actividad (Crea una línea de tiempo física en el aula, ordenando los procesos clave del Neo...), dibuja un cuadro de doble entrada: en una columna registra los antecedentes geográficos y sociales, y en la otra explica el impacto de 'Comercio'.",
-      "expected": "Cuadro comparativo en el cuaderno con antecedentes históricos y análisis fundamentado del impacto de concepto.",
-      "success": "¡Excelente análisis en tu cuaderno! Has sintetizado las múltiples causas con claridad y orden.",
-      "support": "Revisa la línea de tiempo en pantalla: identifica qué ocurrió antes y qué transformaciones trajo este acontecimiento.",
-      "reveal": "El cuadro comparativo permite distinguir causas estructurales de consecuencias inmediatas en el proceso histórico.",
-      "studentReveal": "Cuadro comparativo completo en el cuaderno con causas y consecuencias analizadas."
+      context: 'Actividad en Cuaderno: Esquema de Jerarquización Social',
+      question: 'Abre tu cuaderno de notas de Historia. Escribe como título: "Propiedad, Jerarquías y Especialización en el Neolítico". Dibuja un esquema piramidal con tres niveles: en la cúspide ubica a los Jefes y Consejos de Ancianos; en el centro a los Artesanos Especializados (alfareros, constructores, tejedores); y en la base a las Familias de Agricultores y Pastores. Al lado de cada grupo, anota su función social y cómo se sostenía económicamente.',
+      expected: 'Esquema piramidal completo en el cuaderno con los tres estamentos neolíticos, sus funciones y su base económica de sostenimiento.',
+      success: '¡Excelente esquema en tu cuaderno! Has estructurado la pirámide social neolítica con claridad conceptual impecable.',
+      support: 'Revisa las diapositivas de la lección: explica que los jefes dirigían, los campesinos producían la comida y los artesanos creaban herramientas y vasijas.',
+      reveal: 'El esquema piramidal muestra el nacimiento de la estratificación social como consecuencia directa de la acumulación de bienes.',
+      studentReveal: 'Pirámide social completa en el cuaderno con jefes, artesanos y agricultores, indicando su función y cómo se alimentaban.'
     },
     {
-      "context": "Ejercicio 2 en Cuaderno: Reflexión de Ciudadanía y Continuidad",
-      "question": "En tu cuaderno, responde con un breve texto argumentativo: ¿Qué elementos de 'Comercio' continúan presentes en nuestra sociedad actual y qué aspectos han cambiado sustancialmente?",
-      "expected": "Reflexión argumentada identificando elementos de cambio y continuidad histórica entre el pasado y el presente.",
-      "success": "¡Muy buena argumentación! Conectaste el aprendizaje histórico con la realidad ciudadana actual.",
-      "support": "Piensa en nuestras leyes, ciudades o costumbres: ¿qué heredamos de esa civilización o proceso?",
-      "reveal": "La historia nos permite comprender el presente al identificar las raíces de nuestras instituciones contemporáneas.",
-      "studentReveal": "Reflexión en el cuaderno sobre continuidades y transformaciones hacia el presente."
+      context: 'Debate Histórico: Del Igualitarismo a la Desigualdad',
+      question: 'En tu cuaderno, redacta una breve reflexión argumentativa respondiendo: ¿Consideras que la aparición de la propiedad y las jerarquías sociales fue un avance positivo, un problema de convivencia, o ambos a la vez? Fundamenta con ejemplos vistos hoy.',
+      expected: 'Texto argumentativo fundamentado que evalúe tanto las ventajas organizativas (obras hidráulicas, defensa, tecnología) como los conflictos de desigualdad.',
+      success: '¡Brillante madurez de pensamiento crítico! Evaluaste las transformaciones sociales reconociendo luces y sombras en la historia humana.',
+      support: 'Considera los dos lados: permitió organizar grandes canales de agua y fabricar mejores herramientas, pero también generó diferencias entre ricos y pobres.',
+      reveal: 'La complejización social aportó orden y productividad técnica, pero introdujo desigualdades que acompañaron a las civilizaciones posteriores.',
+      studentReveal: 'Texto argumentativo en el cuaderno analizando las ventajas organizativas de las jerarquías y las desigualdades sociales surgidas.'
     }
   ],
-  "mini": [
+
+  summaryIdeas: [
+    ['Propiedad Familiar', 'El trabajo continuo sobre la tierra y el cuidado de animales consolidó el derecho de familias sobre parcelas y rebaños.'],
+    ['Jerarquías de Autoridad', 'Familias con mayores reservas de alimento ganaron prestigio e influencia, asumiendo el liderazgo comunal como jefaturas.'],
+    ['Artesanos Exclusivos', 'Los excedentes agrícolas permitieron mantener a especialistas en alfarería, metalurgia y tejido que no trabajaban en el campo.']
+  ],
+
+  mini: [
     {
-      "id": "q_1",
-      "q": "Al estudiar el proceso de Consecuencias históricas y complejización social, ¿cuál de las siguientes opciones describe con rigor histórico el rol de 'Comercio'?",
-      "options": [
-        "Constituyó un elemento articulador que permitió a la sociedad responder a sus necesidades de organización y territorio",
-        "Fue un acontecimiento completamente aislado que no tuvo ninguna relación con el entorno social ni geográfico",
-        "Ocurrió por decisión exclusiva de un único individuo sin influencia de la comunidad ni de la época"
+      id: 'q_1',
+      q: '¿Cómo surgió históricamente la noción de propiedad familiar sobre las parcelas de cultivo en las aldeas neolíticas?',
+      options: [
+        'A) Por un decreto escrito enviado por gobernantes de otros planetas.',
+        'B) Porque las personas compraban la tierra utilizando tarjetas de crédito.',
+        'C) A partir del trabajo e inversión continua de esfuerzo familiar durante meses para preparar, regar y proteger la tierra.',
+        'D) Porque los ríos dibujaban cercos de oro alrededor de las casas cada primavera.'
       ],
-      "correct": "Constituyó un elemento articulador que permitió a la sociedad responder a sus necesidades de organización y territorio",
-      "fixExplain": "Los procesos históricos son colectivos y multicausales; Comercio responde a dinámicas sociales y territoriales profundas.",
-      "concept": "Consecuencias históricas y complejización social",
-      "explain": "Los procesos históricos son colectivos y multicausales; Comercio responde a dinámicas sociales y territoriales profundas.",
-      "dileReview": "Pídele que señale qué fuentes o evidencias históricas analizadas hoy justifican esta afirmación."
+      correct: 'C) A partir del trabajo e inversión continua de esfuerzo familiar durante meses para preparar, regar y proteger la tierra.',
+      fixExplain: 'El sentido de propiedad nació consuetudinariamente al vincular el esfuerzo físico prolongado con los frutos obtenidos de la parcela.',
+      concept: 'Origen de la Propiedad Neolítica'
     },
     {
-      "id": "q_2",
-      "q": "Para analizar críticamente este proceso sin caer en el error de 'No comprender la magnitud temporal de 'larga duración' y percibir el Neolítico como un cambio rápido y homogéneo.', ¿qué actitud metodológica debemos adoptar?",
-      "options": [
-        "Evaluar las decisiones históricas considerando el contexto, las creencias y los recursos disponibles en su época",
-        "Condenar inmediatamente las acciones del pasado aplicando únicamente los estándares de la sociedad actual",
-        "Ignorar las fuentes primarias y basarse en opiniones espontáneas sin respaldo documental"
+      id: 'q_2',
+      q: '¿Cuál fue la causa socioeconómica fundamental que permitió la aparición de artesanos dedicados a tiempo completo a la alfarería o la metalurgia?',
+      options: [
+        'A) Que los artesanos no necesitaban comer ni beber agua para vivir.',
+        'B) La generación de excedentes alimentarios agrícolas que permitieron a la comunidad alimentar a personas que no trabajaban en el campo.',
+        'C) La prohibición religiosa de que los hombres tocaran la tierra con las manos.',
+        'D) Que los cultivos desaparecieron y todos tuvieron que inventar ollas para no aburrirse.'
       ],
-      "correct": "Evaluar las decisiones históricas considerando el contexto, las creencias y los recursos disponibles en su época",
-      "fixExplain": "El presentismo distorsiona la comprensión histórica; la empatía histórica permite entender las motivaciones reales de los actores del pasado.",
-      "concept": "Consecuencias históricas y complejización social",
-      "explain": "El presentismo distorsiona la comprensión histórica; la empatía histórica permite entender las motivaciones reales de los actores del pasado.",
-      "dileReview": "Pregúntale: ¿por qué es injusto juzgar a personas del pasado como si tuvieran la tecnología y valores de hoy?"
+      correct: 'B) La generación de excedentes alimentarios agrícolas que permitieron a la comunidad alimentar a personas que no trabajaban en el campo.',
+      fixExplain: 'El excedente liberó a una parte de la población de las tareas de siembra directa, permitiendo el florecimiento de oficios especializados.',
+      concept: 'Base Económica de la Especialización'
     },
     {
-      "id": "q_3",
-      "q": "¿Qué importancia tiene para la formación ciudadana actual el análisis de Aparición de la propiedad, jerarquías y especialización del trabajo?",
-      "options": [
-        "Permite valorar los derechos humanos, la participación democrática y la diversidad cultural al comprender su evolución histórica",
-        "Demuestra que el pasado no guarda ninguna relación con los problemas ni desafíos de la sociedad moderna",
-        "Enseña que las leyes e instituciones humanas son inmutables y no han cambiado a lo largo de los siglos"
+      id: 'q_3',
+      q: 'Para evitar el error común de creer que la desigualdad social siempre existió, ¿qué nos demuestra la comparación entre el Paleolítico y el Neolítico?',
+      options: [
+        'A) Que las bandas de cazadores del Paleolítico compartían el alimento de forma igualitaria, mientras que la acumulación de bienes en el Neolítico originó las primeras jerarquías.',
+        'B) Que en el Paleolítico los jefes tenían castillos y en el Neolítico todos vivían exactamente igual sin jefes.',
+        'C) Que los animales salvajes elegían a los gobernantes de las bandas humanas.',
+        'D) Que la sociedad humana se volvió completamente nómade y olvidó las leyes al inventar la agricultura.'
       ],
-      "correct": "Permite valorar los derechos humanos, la participación democrática y la diversidad cultural al comprender su evolución histórica",
-      "fixExplain": "El aprendizaje histórico fortalece el juicio cívico y la convivencia democrática mediante el análisis crítico del pasado.",
-      "concept": "Consecuencias históricas y complejización social",
-      "explain": "El aprendizaje histórico fortalece el juicio cívico y la convivencia democrática mediante el análisis crítico del pasado.",
-      "dileReview": "Pídele que mencione cómo lo aprendido hoy fortalece su rol como ciudadano responsable en su comunidad."
+      correct: 'A) Que las bandas de cazadores del Paleolítico compartían el alimento de forma igualitaria, mientras que la acumulación de bienes en el Neolítico originó las primeras jerarquías.',
+      fixExplain: 'La estratificación social es una construcción histórica surgida con la capacidad material de acumular excedentes y riqueza.',
+      concept: 'Evolución Histórica de la Desigualdad'
     }
   ],
-  "recovery": [
+
+  recovery: [
     {
-      "title": "Recuperación Histórica: Consecuencias históricas y complejización social",
-      "explain": "Al analizar Aparición de la propiedad, jerarquías y especialización del trabajo, recuerda situar siempre los acontecimientos en su espacio geográfico y comprender Comercio dentro de su época.",
-      "q": "¿Cuál es el principio metodológico central para interpretar un hecho histórico en Consecuencias históricas y complejización social?",
-      "options": [
-        "Analizar el hecho a partir de sus fuentes históricas y el contexto propio de Comercio",
-        "Memorizar fechas aisladas sin considerar las causas ni las consecuencias del proceso"
+      title: 'Recuperación Histórica: Complejización Social en el Neolítico',
+      explain: 'Cuando las comunidades comenzaron a producir y guardar excedentes de comida, su forma de relacionarse cambió para siempre. La tierra comenzó a tener dueños familiares, surgieron jefes para organizar el trabajo y aparecieron artesanos dedicados a crear herramientas sin sembrar.',
+      q: '¿Qué elementos definieron la complejización social en las aldeas del Neolítico tardío?',
+      options: [
+        'A) La desaparición de los poblados y el regreso al nomadismo en cavernas.',
+        'B) La invención de fábricas de vapor y trenes para viajar entre continentes.',
+        'C) El uso exclusivo de pieles de animales y la prohibición de usar vasijas de cerámica.',
+        'D) La propiedad familiar de tierras, la diferenciación social por acumulación de excedentes y la división del trabajo entre campesinos, jefes y artesanos.'
       ],
-      "correct": "Analizar el hecho a partir de sus fuentes históricas y el contexto propio de Comercio",
-      "correctText": "¡Correcto! Comprender el contexto histórico es la base del pensamiento crítico en Ciencias Sociales.",
-      "fixText": "Recuerda que la historia explica procesos humanos: busca siempre las causas y el entorno donde ocurrieron."
+      correct: 'D) La propiedad familiar de tierras, la diferenciación social por acumulación de excedentes y la división del trabajo entre campesinos, jefes y artesanos.',
+      correctText: '¡Correcto! Identificaste los pilares de la complejización social neolítica: propiedad, jerarquías y especialización laboral.',
+      fixText: 'Recuerda que la complejización social combinó tres elementos clave: propiedad de tierras, jerarquías de liderazgo y artesanos especializados.'
     }
-  ],
-  "summaryIdeas": [
-    [
-      "1 · Concepto central",
-      "Identificamos los elementos y el punto de partida del análisis."
-    ],
-    [
-      "2 · Interpretación del contexto",
-      "Aparición de la propiedad, jerarquías y especialización del trabajo"
-    ],
-    [
-      "3 · Síntesis formal",
-      "Los procesos históricos sobre Consecuencias históricas y complejización social responden a múltiples causas interconectadas, donde 'Comercio' explica cómo las sociedades resolvieron sus desafíos de convivencia y subsistencia."
-    ]
-  ],
-  "interactive": {
-    "type": "timeline",
-    "title": "Línea de Tiempo Histórica: De la Hominización a la Aldea",
-    "description": "Organizador cronológico de la revolución agrícola y el modo de vida."
-  },
-  "summaryText": "Hoy dominaste Aparición de la propiedad, jerarquías y especialización del trabajo con pensamiento crítico y fuentes históricas en tu cuaderno.",
-  "reasoning": {
-    "title": "Comparemos dos situaciones",
-    "dileIntro": "Antes de resumir, comparemos dos situaciones. No necesitas repetir una frase exacta: lo importante es que expliques la idea con tus propias palabras.",
-    "question": "Al comparar dos situaciones de Consecuencias históricas y complejización social, ¿cómo influye el contexto en la interpretación de los datos?",
-    "expectedAnswer": "El significado o resultado depende de las condiciones del contexto y del propósito de la situación.",
-    "context1": {
-      "label": "SITUACIÓN 1",
-      "value": "Ejercicio 1 en Cuaderno: Análisis de Fuentes y Cuadro Comparativo",
-      "desc": "Abre tu cuaderno de notas. Escribe como título: 'Consecuencias históricas y complejización social'. Con base en la actividad (Crea una línea de tiempo física en el aula, ordenando los procesos clave del Neo...), dibuja un cuadro de doble entrada: en una columna registra los antecedentes geográficos y sociales, y en la otra explica el impacto de 'Comercio'."
-    },
-    "context2": {
-      "label": "SITUACIÓN 2",
-      "value": "Ejercicio 2 en Cuaderno: Reflexión de Ciudadanía y Continuidad",
-      "desc": "En tu cuaderno, responde con un breve texto argumentativo: ¿Qué elementos de 'Comercio' continúan presentes en nuestra sociedad actual y qué aspectos han cambiado sustancialmente?"
-    },
-    "successFeedback": "¡Excelente razonamiento! Reconociste que el contexto orienta la interpretación de los datos.",
-    "supportFeedback": "Observa cada situación por separado y explica qué elementos las distinguen.",
-    "revealText": "Cada situación tiene un propósito particular y los datos se interpretan según las condiciones del problema."
-  },
-  "challenge": {
-    "title": "Desafío breve: Consecuencias históricas y complejización social",
-    "question": "En Historia, Geografía y Ciencias Sociales, ¿qué diferencia observas entre identificar los datos y aplicar el procedimiento? Explica tu razonamiento.",
-    "expectedAnswer": "Identificar los datos determina el punto de partida; aplicar el procedimiento permite construir la respuesta.",
-    "item1": {
-      "label": "Datos iniciales",
-      "tag": "Punto de partida"
-    },
-    "item2": {
-      "label": "Procedimiento",
-      "tag": "Aplicación"
-    },
-    "successFeedback": "¡Muy bien! Distinguiste claramente los momentos del análisis.",
-    "supportFeedback": "Revisémoslo juntos: primero identificamos la información disponible y luego aplicamos el método correspondiente."
-  },
-  "strategy": {
-    "title": "Cómo analizar una situación",
-    "dileIntro": "Cuando enfrentes un problema en Historia, Geografía y Ciencias Sociales, puedes seguir estos tres pasos clave:",
-    "steps": [
-      {
-        "number": 1,
-        "title": "Identifica",
-        "desc": "¿Cuáles son los datos clave y cuál es la pregunta central?"
-      },
-      {
-        "number": 2,
-        "title": "Aplica",
-        "desc": "¿Qué regla o método disciplinar corresponde utilizar?"
-      },
-      {
-        "number": 3,
-        "title": "Comprueba",
-        "desc": "¿La conclusión o resultado responde con coherencia al problema?"
-      }
-    ]
-  },
-  "closure": {
-    "congratulations": "¡Felicitaciones! Hoy completaste con éxito la clase \"Consecuencias históricas y complejización social\". Has demostrado constancia y rigor en tu aprendizaje.",
-    "nextClassPreview": "En la próxima sesión continuaremos profundizando los aprendizajes de Historia, Geografía y Ciencias Sociales."
-  },
-  "paso8_cierre": {
-    "preguntaSintesis": "En tus propias palabras, ¿qué lección o reflexión para el presente nos deja el estudio de Comercio en Consecuencias históricas y complejización social?",
-    "metacognicion": "¿Qué estrategia te ayudó más a comprender la época estudiada: analizar el mapa o ponerte en el lugar de los protagonistas?",
-    "celebracion": "¡Gran trabajo hoy! Has dominado la Clase 5. ¡Nos vemos en la próxima expedición histórica!"
-  }
+  ]
 };

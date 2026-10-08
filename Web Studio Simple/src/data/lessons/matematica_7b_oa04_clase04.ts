@@ -402,7 +402,7 @@ export const MATEMATICA_7B_OA04_CLASE04: LessonData = {
   "summaryIdeas": [
     [
       "Método Decimal",
-      "Multiplicar el total por el porcentaje dividido en 100: Total x 0,p."
+      "Multiplicar el total por el decimal equivalente: Total · (p ÷ 100)."
     ],
     [
       "Método Proporcional",

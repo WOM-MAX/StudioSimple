@@ -3,22 +3,22 @@
   "asignatura": "Ciencias_Naturales",
   "oa": "OA01",
   "identificador_paquete": "110-7-CIE-OA01",
-  "version": "1.4.0",
-  "fecha_actualizacion": "2026-10-06",
-  "estado": "EN_REVISION",
+  "version": "1.5.0",
+  "fecha_actualizacion": "2026-10-07",
+  "estado": "REQUIERE_AJUSTES",
   "total_clases": 6,
   "fuente_oficial_unica_docx": {
     "archivo": "Plan_Maestro_7Básico_110-7-CIE-OA01_6Lecciones.docx",
     "rol": "Unica fuente oficial de produccion de lecciones y prompts",
-    "sha256": "07a82f7119a7cba25982ac03d5c0841ac997dcdeef74f28629a207f1589e1780",
-    "bytes": 82152
+    "sha256": "68461e50bed2a2c417cf7525a9ba7c2706c2df362753780b793059b45fa88d41",
+    "bytes": 76451
   },
   "prompts_asociados": {
     "archivo": "Prompts_Work_Ciencias_7B_OA01.txt",
     "ruta_origen_zip_anterior": "DESCARGA_LECCIONES/PROMPTS_TXT_PARA_WORK/Prompts_Work_Ciencias_7B_OA01.txt",
     "total_laminas": 84,
     "laminas_por_clase": 14,
-    "perfil_evaluacion": "Perfil 7° Básico (14 láminas bimodales: 7 Gancho + 7 Explicación; reactivos de 4 alternativas en cierre)"
+    "perfil_evaluacion": "Perfil 7° Básico (14 láminas bimodales: 7 Gancho + 7 Explicación; 4 alternativas A-D en todas las preguntas)"
   },
   "fundamentacion_curricular": {
     "temario_eell": {

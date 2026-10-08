@@ -12,7 +12,7 @@ export function buildClase05() {
     "nextLessonTitle": "Síntesis Integral y Evaluación Tipo Examen Libre"
   },
   "prep": {
-    "adultObjective": "Guiar al estudiante a contrastar mitos y estereotipos sobre la pubertad y la afectividad con la evidencia médica, comprendiendo que el estirón puberal de estatura ocurre normalmente entre los 10 y 16 años según los estadios de maduración de Tanner (1962) y curvas MINEDUC/OMS, y que cada cuerpo sigue su propio ritmo genético sin constituir una anomalía.",
+    "adultObjective": "Guiar al estudiante a contrastar mitos y estereotipos sobre la pubertad y la afectividad con la evidencia médica, comprendiendo que el inicio de la pubertad ocurre entre los 8 y 13 años en niñas y 9 y 14 años en niños (Tanner 1962 / MedlinePlus), mientras que el estirón de estatura es un hito posterior no universal que suele presentarse entre los 10 y 16 años según ritmos genéticos individuales.",
     "routeToday": "Analizar falsas creencias sobre el cuerpo y los roles de género, comprender que cada organismo madura a su propio ritmo genético y promover una convivencia respetuosa y solidaria.",
     "mentorReminder": "Sigue el guion leyendo en voz alta únicamente los recuadros DILE y PREGÚNTALE. El contenido pedagógico y las respuestas esperadas te indican con total precisión qué debe responder el estudiante.",
     "reminders": [
@@ -137,8 +137,8 @@ export function buildClase05() {
         "overlayText": "Diversidad: Ningún Cuerpo es Idéntico",
         "overlayTitle": "No existen moldes únicos",
         "overlaySubtitle": "La naturaleza celebra la diversidad biológica",
-        "vectorialOverlayPptx": "Campana de distribución: Rango normal de inicio puberal (10 a 14 años) con amplia dispersión saludable",
-        "mathOverlayPptx": "Campana de distribución: Rango normal de inicio puberal (10 a 14 años) con amplia dispersión saludable",
+        "vectorialOverlayPptx": "Variabilidad del crecimiento: Estirón de estatura con amplia dispersión saludable (Tanner / MedlinePlus)",
+        "mathOverlayPptx": "Variabilidad del crecimiento: Estirón de estatura con amplia dispersión saludable (Tanner / MedlinePlus)",
         "speakerNotes": "Muchos creen que todos los adolescentes deben pegar el estirón al mismo tiempo. La biología demuestra que cada cuerpo tiene su propio reloj genético.",
         "palabrasAprox": 24,
         "duracionSeg": 11
@@ -147,13 +147,13 @@ export function buildClase05() {
         "slideNumber": 3,
         "tituloMomento": "El Mito del 'Atraso' Corporal",
         "didacticPurpose": "El Mito del 'Atraso' Corporal",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining a bell-curve growth graph demonstrating the natural developmental diversity between ages 10 and 16, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, in a modern science classroom observing blank modular panels representing the height growth spurt window (between ages 10 and 16, distinct from earlier pubertal onset), with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "El Reloj Biológico Personal",
         "overlayTitle": "El reloj biológico individual",
         "overlaySubtitle": "La genética define el calendario de maduración",
         "vectorialOverlayPptx": "Factores de sincronía: Herencia genética + Estado nutricional + Factores ambientales equilibrados",
         "mathOverlayPptx": "Factores de sincronía: Herencia genética + Estado nutricional + Factores ambientales equilibrados",
-        "speakerNotes": "El inicio de la pubertad se extiende normalmente entre los 10 y 16 años. Crecer antes o después no significa tener una enfermedad o deficiencia.",
+        "speakerNotes": "El estirón de estatura suele ocurrir como un hito posterior de la pubertad (habitualmente entre los 10 y 16 años según Tanner y MedlinePlus), mientras el inicio puberal ocurre antes (8-13 años en niñas y 9-14 en niños según MedlinePlus). Crecer a ritmos distintos es completamente normal.",
         "palabrasAprox": 25,
         "duracionSeg": 11
       },
@@ -164,7 +164,7 @@ export function buildClase05() {
         "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, collaborating in a science lab with robotics tools and culinary chemistry, demonstrating equal capabilities without gender stereotypes, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Emociones Sin Etiquetas de Género",
         "overlayTitle": "Sentir es una cualidad humana",
-        "overlaySubtitle": "La tristeza, el afecto y el valor no tienen género",
+        "overlaySubtitle": "Las emociones y valores no tienen género",
         "vectorialOverlayPptx": "Esquema de equidad: Reconocimiento emocional pleno y superación de mandatos culturales restrictivos",
         "mathOverlayPptx": "Esquema de equidad: Reconocimiento emocional pleno y superación de mandatos culturales restrictivos",
         "speakerNotes": "Los estereotipos de género también son mitos culturales sin base biológica. Hombres y mujeres tienen iguales capacidades cognitivas, artísticas y científicas.",
@@ -263,13 +263,13 @@ export function buildClase05() {
         "slideNumber": 2,
         "tituloMomento": "Rangos Normales del Inicio Puberal",
         "didacticPurpose": "Rangos Normales del Inicio Puberal",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing official growth curves from WHO and MINEDUC on a digital screen showing normal pubertal ranges between 10 and 16 years, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, in a modern science laboratory observing blank modular comparison panels on a digital display, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Ventanas de Tiempo del Desarrollo",
         "overlayTitle": "Rangos biológicos de la pubertad",
-        "overlaySubtitle": "Ventana cronológica amplia y saludable",
-        "vectorialOverlayPptx": "Rangos MINEDUC / OMS: Inicio puberal femenino (9-13 años) e inicio puberal masculino (10-14 años)",
-        "mathOverlayPptx": "Rangos MINEDUC / OMS: Inicio puberal femenino (9-13 años) e inicio puberal masculino (10-14 años)",
-        "speakerNotes": "Las curvas de la OMS y el MINEDUC confirman que la pubertad inicia normalmente entre los 10 y 16 años según factores genéticos y nutricionales.",
+        "overlaySubtitle": "Inicio puberal y sus variaciones habituales",
+        "vectorialOverlayPptx": "Inicio puberal habitual: 8 a 13 años en niñas y 9 a 14 años en niños (MedlinePlus / OMS)",
+        "mathOverlayPptx": "Inicio puberal habitual: 8 a 13 años en niñas y 9 a 14 años en niños (MedlinePlus / OMS)",
+        "speakerNotes": "El inicio de la pubertad varía entre personas: suele ocurrir entre los 8 y 13 años en niñas y entre los 9 y 14 en niños según MedlinePlus y la OMS. Este inicio habitual no debe confundirse con el momento del estirón de estatura, que ocurre en etapas posteriores.",
         "palabrasAprox": 25,
         "duracionSeg": 11
       },
@@ -297,7 +297,7 @@ export function buildClase05() {
         "overlaySubtitle": "Habilidades y emociones compartidas",
         "vectorialOverlayPptx": "Cuadro de equidad: Capacidades intelectuales, creativas y emocionales idénticas entre géneros",
         "mathOverlayPptx": "Cuadro de equidad: Capacidades intelectuales, creativas y emocionales idénticas entre géneros",
-        "speakerNotes": "Los estereotipos que asignan roles rígidos según el sexo carecen de fundamento científico. La neurociencia confirma que la inteligencia y vocaciones no tienen límites de género.",
+        "speakerNotes": "Los estereotipos que asignan roles rígidos carecen de fundamento científico. Los estereotipos sociales no deben limitar los intereses, talentos ni oportunidades de cada estudiante.",
         "palabrasAprox": 26,
         "duracionSeg": 12
       },
@@ -305,13 +305,13 @@ export function buildClase05() {
         "slideNumber": 5,
         "tituloMomento": "El Impacto Psicológico del Juicio Externo",
         "didacticPurpose": "El Impacto Psicológico del Juicio Externo",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, reviewing official pediatric health guides and verified scientific portals on their laptops, calm and reassured, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, fostering an inclusive and supportive environment with classmates in a bright classroom, rejecting teasing and body judgment, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Prevención del Acoso y Cuidado Emocional",
         "overlayTitle": "Efectos del juicio y la burla",
         "overlaySubtitle": "Fomentar un entorno escolar seguro",
-        "vectorialOverlayPptx": "Mecanismo protector: Validación entre pares + Comunicación asertiva + Intervención temprana docente",
-        "mathOverlayPptx": "Mecanismo protector: Validación entre pares + Comunicación asertiva + Intervención temprana docente",
-        "speakerNotes": "La salud puberal requiere hábitos concretos: alimentación balanceada, hidratación, actividad física regular y al menos ocho horas de sueño para la hormona del crecimiento.",
+        "vectorialOverlayPptx": "Mecanismo protector: Validación entre pares + Comunicación asertiva + Cero burlas corporales",
+        "mathOverlayPptx": "Mecanismo protector: Validación entre pares + Comunicación asertiva + Cero burlas corporales",
+        "speakerNotes": "Las burlas sobre el cuerpo pueden generar inseguridad y aislamiento. Promover un entorno escolar seguro exige empatía, detener los comentarios dañinos y recordar que cada persona vive su desarrollo a su propio ritmo.",
         "palabrasAprox": 24,
         "duracionSeg": 11
       },
@@ -321,11 +321,11 @@ export function buildClase05() {
         "didacticPurpose": "Caso Modelado: El Mito del Estirón Puberal",
         "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing an illustrated growth-percentile chart on their desk, comparing curves with calm scientific smiles, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Caso Modelado: Variabilidad en el Estirón",
-        "overlayTitle": "Caso Modelado: El mito del estirón simultáneo",
-        "overlaySubtitle": "Descartar anomalías mediante evidencia científica",
-        "vectorialOverlayPptx": "Desglose del caso: Inseguridad por diferencia de estatura a los 13 años -> Contraste con curvas OMS -> Confirmación de desarrollo normal",
-        "mathOverlayPptx": "Desglose del caso: Inseguridad por diferencia de estatura a los 13 años -> Contraste con curvas OMS -> Confirmación de desarrollo normal",
-        "speakerNotes": "Analicemos un caso concreto: un estudiante de 13 años se angustia creyendo erróneamente que tiene una anomalía porque sus compañeros ya crecieron. La evidencia médica demuestra que el estirón puberal responde a relojes genéticos individuales que se manifiestan normalmente entre los 10 y 16 años según los estadios de Tanner (1962) y curvas MINEDUC/OMS.",
+        "overlayTitle": "Caso Modelado: Variabilidad en el crecimiento",
+        "overlaySubtitle": "Comprender ritmos diversos sin diagnósticos apresurados",
+        "vectorialOverlayPptx": "El ritmo de crecimiento es individual; ante dudas o inquietudes, consultar con un adulto de confianza o profesional de salud",
+        "mathOverlayPptx": "El ritmo de crecimiento es individual; ante dudas o inquietudes, consultar con un adulto de confianza o profesional de salud",
+        "speakerNotes": "Si un estudiante de 13 años nota que sus compañeros crecen a distinto ritmo, debe recordar que los momentos del estirón varían. Una curva general no diagnostica a una persona; ante cualquier inquietud, lo adecuado es conversarlo con un adulto de confianza o un profesional de salud.",
         "palabrasAprox": 52,
         "duracionSeg": 23
       },
@@ -397,35 +397,38 @@ export function buildClase05() {
   "mini": [
     {
       "id": "q1",
-      "q": "La variabilidad en el inicio de la pubertad (entre los 10 y 16 años) demuestra que:",
+      "q": "La variabilidad en el inicio habitual de la pubertad (8 a 13 años en niñas y 9 a 14 en niños) demuestra que:",
       "options": [
+        "Quienes comienzan más tarde presentan obligatoriamente una deficiencia grave",
         "Cada organismo tiene un ritmo biológico y genético individual dentro de rangos normales de salud",
-        "Quienes comienzan más tarde presentan obligatoriamente una deficiencia nutricional grave",
-        "Todos los adolescentes deberían recibir tratamientos hormonales para igualar su estatura"
+        "Todos los adolescentes deberían recibir tratamientos hormonales para igualar su crecimiento",
+        "La estatura final depende exclusivamente de comenzar la pubertad de manera temprana"
       ],
       "correct": "Cada organismo tiene un ritmo biológico y genético individual dentro de rangos normales de salud",
-      "fixExplain": "La variabilidad es una característica universal y saludable de la especie humana; los rangos etarios del desarrollo son amplios."
+      "fixExplain": "La variabilidad cronológica en el inicio puberal es normal y saludable; cada persona tiene su propio ritmo genético."
     },
     {
       "id": "q2",
-      "q": "¿Cuál de las siguientes afirmaciones sobre los estereotipos de género es científicamente correcta?",
+      "q": "¿Cuál de las siguientes afirmaciones sobre los estereotipos sociales de género está respaldada por la ciencia?",
       "options": [
-        "Son construcciones socioculturales arbitrarias que no corresponden a capacidades biológicas ni intelectuales reales",
-        "Son leyes biológicas inmutables determinadas estrictamente por los cromosomas X e Y",
-        "Permiten organizar a la sociedad asignando tareas según el potencial cerebral de cada sexo"
+        "Son leyes biológicas inmutables determinadas estrictamente por los cromosomas",
+        "Permiten organizar la sociedad asignando tareas según el potencial cerebral de cada sexo",
+        "Los estereotipos sociales no deben limitar los intereses, talentos ni oportunidades de cada estudiante",
+        "La neurociencia demuestra que los gustos e intereses están prefijados por el sexo al nacer"
       ],
-      "correct": "Son construcciones socioculturales arbitrarias que no corresponden a capacidades biológicas ni intelectuales reales",
-      "fixExplain": "La neurociencia y la psicología demuestran que las capacidades cognitivas, emocionales y vocacionales son compartidas por igual."
+      "correct": "Los estereotipos sociales no deben limitar los intereses, talentos ni oportunidades de cada estudiante",
+      "fixExplain": "Los estereotipos son construcciones culturales arbitrarias; cada estudiante debe desarrollar plenamente sus intereses, talentos y oportunidades."
     },
     {
       "id": "q3",
       "q": "Una actitud que promueve activamente una convivencia saludable en la escuela es:",
       "options": [
-        "Respetar la apariencia física y los ritmos personales de todos, rechazando apodos y bromas sobre el cuerpo",
-        "Reírse de las bromas corporales para demostrar sentido del humor en el grupo",
-        "Aconsejar a los compañeros que oculten sus emociones para no mostrar debilidad"
+        "Reírse de las burlas corporales para demostrar sentido del humor en el grupo",
+        "Respetar la apariencia física y los ritmos personales de todos, rechazando apodos y juicios sobre el cuerpo",
+        "Aconsejar a los compañeros que oculten sus emociones para no mostrar debilidad",
+        "Juzgar a quienes crecen más lento o más rápido que el promedio del curso"
       ],
-      "correct": "Respetar la apariencia física y los ritmos personales de todos, rechazando apodos y bromas sobre el cuerpo",
+      "correct": "Respetar la apariencia física y los ritmos personales de todos, rechazando apodos y juicios sobre el cuerpo",
       "fixExplain": "El respeto incondicional por la corporalidad de los pares es el cimiento de una convivencia escolar pacífica y acogedora."
     }
   ],
@@ -435,10 +438,12 @@ export function buildClase05() {
       "explain": "Recuerda que los seres humanos no somos réplicas idénticas de una fábrica. La altura, el momento del cambio de voz y la complexión física dependen de la herencia de nuestros padres y abuelos. No existe una edad fija obligatoria para cambiar.",
       "q": "¿Es motivo de alarma médica que dos amigos de la misma edad tengan estaturas y etapas de maduración distintas?",
       "options": [
-        "No, porque la diversidad de ritmos y tiempos es completamente normal en la pubertad",
-        "Sí, porque todos los seres humanos sanos deben crecer exactamente la misma cantidad de centímetros al mes"
+        "Sí, porque todos los seres humanos deben crecer exactamente la misma cantidad de centímetros al mes",
+        "No, porque la diversidad de ritmos y tiempos es normal; ante dudas se consulta a un profesional de salud",
+        "Sí, porque las diferencias de estatura indican una anomalía biológica inmediata",
+        "Sí, porque el estirón debe ocurrir exactamente en la misma fecha en todos los adolescentes"
       ],
-      "correct": "No, porque la diversidad de ritmos y tiempos es completamente normal en la pubertad",
+      "correct": "No, porque la diversidad de ritmos y tiempos es normal; ante dudas se consulta a un profesional de salud",
       "correctText": "¡Exacto! La biología se caracteriza por la diversidad; las diferencias de ritmo son esperables y saludables.",
       "fixText": "Recuerda que cada individuo posee un reloj biológico propio; las diferencias entre pares de la misma edad son normales."
     }

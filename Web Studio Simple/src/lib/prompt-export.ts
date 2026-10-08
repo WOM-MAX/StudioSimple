@@ -24,13 +24,13 @@ export function buildLessonPromptText(lesson: PlayerLessonData): string {
   out += `2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).\n`;
   out += `3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.\n`;
   out += `4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.\n`;
-  out += `5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):\n`;
-  out += `   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).\n`;
-  out += `   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).\n`;
-  out += `   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (${subPt} pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.\n`;
-  out += `6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (${subPt} pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.\n`;
-  out += `7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.\n`;
-  out += `8. Protocolo de Comprobacion Acustica Obligatoria (Google Vids): Medir la duracion real del archivo exportado con cronometro o analizador de audio. El conteo de palabras no garantiza por si solo 60 o 90 segundos exactos. Si la duracion no es exacta, ajustar narracion, pausas o ritmo, volver a exportar y registrar la duracion comprobada oficial.\n\n`;
+  out += `5. Duraciones Planificadas de Producción Audiovisual:\n`;
+  out += `   • Video Gancho: 60 segundos de duración planificada distribuidos en 7 diapositivas.\n`;
+  out += `   • Video Explicativo: 90 segundos de duración planificada distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).\n`;
+  out += `   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (${subPt} pt, maximo 8 palabras); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.\n`;
+  out += `6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (${subPt} pt, maximo 8 palabras). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes.\n`;
+  out += `7. Logotipo Oficial: Codex/Work incorpora el logo blanco de EstudioSimple en la esquina inferior derecha del PPTX al tamano del video de referencia. No pedir a la IA que dibuje el logo dentro de la imagen; dejar espacio negativo.\n`;
+  out += `8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. No se exige medir con cronómetro, contar palabras ni reexportar por unos segundos adicionales.\n\n`;
 
   out += `================================================================================\n`;
   out += `MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)\n`;
@@ -49,7 +49,7 @@ export function buildLessonPromptText(lesson: PlayerLessonData): string {
     }
     out += `\nSECUENCIA DE ${lesson.hook.slides.length} DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):\n\n`;
     lesson.hook.slides.forEach((s: SlidePrompt, idx: number) => {
-      out += `--- DIAPOSITIVA ${s.slideNumber || idx + 1}: ${s.tituloMomento || ''} (${s.duracionSeg || 10} seg aprox) ---\n`;
+      out += `--- DIAPOSITIVA ${s.slideNumber || idx + 1}: ${s.tituloMomento || ''} (${s.duracionSeg || 10} segundos) ---\n`;
       out += `1. Propósito Didáctico: ${s.tituloMomento || ''}\n`;
       out += `2. Título en Pantalla (64 pt): ${s.overlayTitle || s.overlayText || ''}\n`;
       out += `3. Subtítulo en Pantalla (${subPt} pt): ${s.overlaySubtitle || ''}\n`;
@@ -88,7 +88,7 @@ export function buildLessonPromptText(lesson: PlayerLessonData): string {
     out += `• INSTRUCCION: "${lesson.formalization.hazInstruction}"\n\n`;
     out += `SECUENCIA DE ${lesson.formalization.slides.length} DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):\n\n`;
     lesson.formalization.slides.forEach((s: SlidePrompt, idx: number) => {
-      out += `--- DIAPOSITIVA ${s.slideNumber || idx + 1}: ${s.tituloMomento || ''} (${s.duracionSeg || 10} seg aprox) ---\n`;
+      out += `--- DIAPOSITIVA ${s.slideNumber || idx + 1}: ${s.tituloMomento || ''} (${s.duracionSeg || 10} segundos) ---\n`;
       out += `1. Propósito Didáctico: ${s.tituloMomento || ''}\n`;
       out += `2. Título en Pantalla (64 pt): ${s.overlayTitle || s.overlayText || ''}\n`;
       out += `3. Subtítulo en Pantalla (${subPt} pt): ${s.overlaySubtitle || ''}\n`;

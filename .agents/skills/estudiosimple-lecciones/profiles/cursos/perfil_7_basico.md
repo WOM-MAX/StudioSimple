@@ -30,19 +30,30 @@ Cada clase de 7° básico se compone estrictamente de **14 diapositivas dividida
 
 ---
 
-## 3. Especificaciones Psicométricas de Evaluación (Estándar MINEDUC)
+## 3. Especificaciones Psicométricas de Evaluación (Estándar MINEDUC de 4 Alternativas A-D)
 
-- **Formato:** 4 alternativas formales (A, B, C, D).
+- **Formato Universal en 7° Básico:** Exactamente **4 alternativas formales (A, B, C, D)** en **todas** las preguntas de selección múltiple del nivel:
+  * Los 3 ítems del Miniquiz de Evaluación Formativa (Paso 7).
+  * Los ítems de Recuperación Pedagógica Inmediata (Paso 6).
+  * Los reactivos didácticos de práctica y el ítem modelado en el video explicativo (Lámina 13 / Paso 5).
+- **Prohibición de Alternativas Incompletas:** Queda terminantemente prohibido dejar miniquiz con 3 alternativas o ítems de recuperación binarios con 2 opciones en 7° Básico; todo ítem debe contar con cuatro opciones plausibles, una sola respuesta correcta y retroalimentación formativa de distractores.
+- **Variación de la Posición de la Clave Correcta:** La posición de la respuesta correcta debe rotar de manera equilibrada y variada (A, B, C, D) a lo largo de las preguntas del miniquiz y de la unidad. Queda estrictamente prohibido mantener la clave fija en una sola letra (ej: siempre opción A o siempre opción B).
+- **Recuperación Psicométrica Completa:** El reactivo de recuperación formativa (Paso 6) debe contar con cuatro alternativas completas (A-D), con distractores pedagógicamente diseñados y sin duplicar la respuesta correcta.
 - **Análisis Obligatorio de Distractores:**
-  Cada reactivo en el DOCX debe incluir la tabla psicométrica oficial:
+  Cada reactivo formal en el DOCX debe incluir la tabla psicométrica oficial:
   * **Alternativa Correcta:** Justificación pedagógica y procedimental completa.
-  * **Distractor 1:** Error conceptual de primer nivel (ej: regla de signos invertida).
-  * **Distractor 2:** Error procedimental o de cálculo intermedio.
-  * **Distractor 3:** Comprensión lectora superficial o distractor plausible no relacionado.
+  * **Distractor 1:** Error conceptual de primer nivel (ej: regla de signos invertida, presentismo histórico, anacronismo).
+  * **Distractor 2:** Error procedimental, cronológico o de cálculo intermedio.
+  * **Distractor 3:** Comprensión lectora superficial, generalización indebida o distractor verosímil no relacionado.
+
 
 ---
 
-## 4. Cobertura de Clases por OA
+## 4. Cobertura de Clases por OA y Estándares Audiovisuales (7° Básico)
 
-- **Parámetro Estándar Oficial:** Cada paquete de OA se estructura obligatoriamente en **exactamente 6 lecciones completas** como parámetro estándar normativo (recomendación y directriz de Work, alineado con el canon ejemplar de 110-7-MAT-OA01 y 110-7-CN-OA01).
-- Toda lección de 7° básico preserva la estructura bimodal de 14 láminas por clase (7 de gancho contextual + 7 de formalización rigurosa) y reactivos de 4 alternativas con análisis psicométrico de distractores.
+- **Parámetro Estándar Oficial:** Cada paquete de OA para **todas las asignaturas de 7° Básico** (Matemática, Ciencias Naturales, Lengua y Literatura, Historia, Geografía y Ciencias Sociales, e Inglés) se estructura obligatoriamente en **exactamente 6 lecciones completas** como parámetro estándar normativo (recomendación y directriz de Work).
+- **Consistencia Estructural Bimodal:** Toda lección de 7° básico preserva la estructura bimodal de 14 láminas por clase (7 de gancho contextual + 7 de formalización rigurosa) con duraciones planificadas de 60 segundos (Gancho) y 90 segundos (Explicación).
+- **Objetivo Explícito en la Primera Diapositiva de Explicación:** La Lámina 1 del bloque explicativo (Lámina 8 global) declara siempre el objetivo de aprendizaje como subtítulo visible (48 pt, máximo 8 palabras); las láminas 2 a 7 desarrollan el contenido sin repetirlo.
+- **Subtítulos Breves de 48 pt y Máximo 8 Palabras:** Todos los subtítulos en pantalla se calibran a 48 pt y un máximo estricto de ocho palabras, garantizando lectura ágil y alto contraste sobre fondo limpio.
+- **Evaluación Psicométrica de 4 Alternativas (A–D):** Todas las preguntas de selección múltiple del nivel (miniquiz, reactivos de práctica y recuperación) cuentan con 4 alternativas (A, B, C, D) y análisis formal de distractores.
+- **Continuidad de Ejemplos en Comprobación:** La comprobación guiada posterior al video (Paso 6) y el primer ejercicio de práctica en plataforma reutilizan exactamente el mismo caso modelado en la Lámina 6 del video explicativo.

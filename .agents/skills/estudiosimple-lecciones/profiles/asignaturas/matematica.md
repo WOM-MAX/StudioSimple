@@ -27,3 +27,21 @@ Toda lección de matemática en EstudioSimple debe progresar a través del model
 - Enunciados contextualizados tipo MINEDUC.
 - Alternativas con unidades de medida correctas.
 - Distractores que capturen errores sistemáticos de cálculo o conceptualización (ej: error en ley de signos, orden de operaciones PAPOMUDAS, simplificación incorrecta).
+
+---
+
+## 4. Reglas Disciplinares de Notación, Cálculos y Contexto Legal
+
+Estas reglas aplican **exclusivamente a Matemática** y garantizan el rigor científico y curricular:
+
+1. **Notación Porcentual Correcta y Universal:**
+   - La fórmula general canónica del porcentaje es $p\% = p \div 100$ o $\frac{p}{100}$ (razón con consecuente 100).
+   - **Prohibición Estricta:** Queda terminantemente prohibido usar la expresión informal "0,p" como regla universal de conversión. Dicha expresión es matemáticamente falsa para porcentajes de un solo dígito (ej: $5\% = 0,05$, no $0,5$) y para porcentajes con decimales (ej: $12,5\% = 0,125$, no $0,125$ mediante concatenación simple).
+
+2. **Verificación Rigurosa de Cálculos Aritméticos:**
+   - Todo ejercicio modelado, paso intermedio, simplificación a fracción irreductible y factor de cálculo mental debe estar verificado formalmente.
+   - Prohibido dejar inconsistencias entre el procedimiento explicado y el resultado exhibido.
+
+3. **Contexto Tributario Preciso (IVA en Chile):**
+   - En situaciones cotidianas de comercio que involucren el Impuesto al Valor Agregado (IVA chileno, 19%), se debe precisar expresamente que se trata de una **operación comercial afecta a IVA** (según el D.L. 825 y la normativa oficial del Servicio de Impuestos Internos - SII).
+   - **Prohibición:** Prohibido afirmar que el IVA se aplica a "todas las compras o boletas" indiscriminadamente, dado que la legislación tributaria chilena contempla ventas y prestaciones de servicios expresamente exentas de IVA.

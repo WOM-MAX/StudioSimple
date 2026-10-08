@@ -243,8 +243,8 @@ export function buildHookPromptText(
   prompt += `3. ESTILO ARTÍSTICO DE LAS IMÁGENES: Anime Moderno (Modern Anime Style, cinematográfico, iluminación dinámica, fondos limpios con espacio negativo real).\n`;
   prompt += `4. PROTAGONISTAS FIJOS: Dúo co-protagónico de 13 años (la joven y el joven estudiantes-exploradores chilenos). ACTÚAN JUNTOS en cada escena, colaborando y resolviendo el desafío en equipo.\n`;
   prompt += `5. REGLA VISUAL ANTI-MÁSCARAS Y FONDOS LIMPIOS: Imágenes Full-Bleed con espacio negativo para texto y vectores. Queda prohibido usar placas oscuras que tapen las caras de los personajes o la mitad de la lámina. PROHIBIDO dibujar números, letras o fórmulas dentro de la ilustración generada por IA.\n`;
-  prompt += `6. PRESUPUESTO TEMPORAL Y GUION CONTINUO (GANCHO - 60 SEGUNDOS / 130 PALABRAS TOTALES): Cada diapositiva DEBE incluir únicamente el texto de narración oral continua (8+8+8+9+9+9+9 segundos, totalizando exactamente ~130 palabras para 60 segundos de locución a 130 palabras por minuto en Google Vids/TTS), sin marcas técnicas, encabezados ni duraciones, listo para ser leído por voz en off.\n`;
-  prompt += `7. PROTOCOLO DE COMPROBACIÓN ACÚSTICA OBLIGATORIA (GOOGLE VIDS): Medir la duración real del archivo exportado con cronómetro o analizador de audio. El conteo de palabras no garantiza por sí solo 60 segundos exactos. Si la duración no es exacta, ajustar narración, pausas o ritmo, volver a exportar y registrar la duración comprobada oficial.\n`;
+  prompt += `6. DURACIÓN PLANIFICADA Y GUION CONTINUO (GANCHO - 60 SEGUNDOS PLANIFICADOS): Cada diapositiva DEBE incluir el texto de narración oral continua (distribución de 60 segundos totales), sin marcas técnicas, encabezados ni duraciones, listo para ser leído por voz en off.\n`;
+  prompt += `7. TOLERANCIA Y FLEXIBILIDAD EN GOOGLE VIDS: Los 60 segundos del Gancho y 90 segundos de la Explicación son duraciones planificadas. En Google Vids la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. Queda prohibido rechazar lecciones por duración exportada o exigir cronómetro o conteos rígidos de palabras.\n`;
   prompt += `8. ESTRUCTURA HEXAPARTITA POR DIAPOSITIVA:\n`;
   prompt += `   • Toda diapositiva se define con: 1) Propósito, 2) Título en Pantalla (64 pt), 3) Subtítulo en Pantalla (36 pt), 4) Prompt de imagen IA sin texto, 5) Capa vectorial para PowerPoint, y 6) Notas al orador continuas.\n`;
   prompt += `   • COLOR DE TEXTO: Un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.\n`;
@@ -758,8 +758,8 @@ export function getCanonicalClase1Ciencias(): LessonData {
       overlayTitle: "Eje Biológico: La Pubertad",
       overlaySubtitle: "Maduración fisiológica y sistema endocrino",
       overlayText: "Cambios Biológicos de la Pubertad",
-      vectorialOverlayPptx: "Diagrama fisiológico: Glándula hipófisis -> Hormonas gonadales -> Caracteres secundarios",
-      speakerNotes: "En la pubertad, el sistema endocrino libera señales químicas que inician el estirón puberal, el desarrollo reproductivo y cambios visibles en la piel, masa muscular y voz.",
+      vectorialOverlayPptx: "Diagrama endocrino: Hipotálamo (GnRH) -> Hipófisis anterior (LH y FSH) -> Gónadas (hormonas sexuales) -> Cambios puberales",
+      speakerNotes: "La pubertad inicia cuando el hipotálamo (GnRH) estimula a la hipófisis anterior para secretar LH y FSH, las cuales activan a las gónadas a producir hormonas sexuales que inducen los cambios puberales.",
       palabrasAprox: 25,
       duracionSeg: 12
     },
@@ -835,7 +835,7 @@ export function getCanonicalClase1Ciencias(): LessonData {
     title: "Las 4 Dimensiones de la Sexualidad Humana",
     focoDidactico: "Reconocer e interrelacionar las dimensiones biológica, afectiva, social y ética en la vida cotidiana",
     duracion: "30-35 Minutos",
-    objetivoAdulto: "Guiar al estudiante a comprender que la sexualidad humana es una vivencia integral que comprende cuatro dimensiones inseparables: biológica, afectiva, social y ética, superando la visión reducida a lo estrictamente reproductivo.",
+    objetivoAdulto: "Guiar al estudiante a comprender que la sexualidad humana es una vivencia integral organizada didácticamente en cuatro dimensiones fundamentales: biológica, afectiva, social y ética, superando la visión reducida a lo estrictamente reproductivo.",
     climaEmocional: "Aborda la pubertad y la sexualidad con serenidad, apertura y confianza. Es una etapa natural del desarrollo y el diálogo cercano refuerza su seguridad personal.",
     situacionIntro: {
       dialogo: "Hoy en Ciencias Naturales investigamos la sexualidad humana como una dimensión integral de la persona. En pantalla puedes ver el modelo de 4 dimensiones. Observa la primera dimensión destacada: la Dimensión Biológica. ¿Qué cambios físicos concretos ocurren en el cuerpo humano durante la pubertad?",
