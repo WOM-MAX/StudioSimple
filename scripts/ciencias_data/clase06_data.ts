@@ -16,7 +16,7 @@ export function buildClase06() {
     "routeToday": "Consolidar los aprendizajes del OA 1 mediante el análisis de reactivos psicométricos de cuatro alternativas, aplicando estrategias de descarte y justificación científica rigurosa.",
     "mentorReminder": "Sigue el guion leyendo en voz alta únicamente los recuadros DILE y PREGÚNTALE. El contenido pedagógico y las respuestas esperadas te indican con total precisión qué debe responder el estudiante.",
     "reminders": [
-      "El estándar MINEDUC para 7° Básico evalúa comprensión conceptual y aplicación a casos reales.",
+      "El reactivo de práctica de EstudioSimple para 7° Básico evalúa comprensión conceptual y aplicación a casos reales.",
       "Las preguntas de selección múltiple cuentan con distractores plausibles que exigen lectura atenta.",
       "Lee en voz alta únicamente los textos con la etiqueta DILE o PREGÚNTALE.",
       "Refuerza la confianza del estudiante: este ensayo valida su preparación para la evaluación tipo Examen Libre."
@@ -69,7 +69,7 @@ export function buildClase06() {
       }
     ],
     "dileIntro": "Hoy culminamos la unidad de Sexualidad y Afectividad con la sexta clase: 'Síntesis Integral y Evaluación Tipo Examen Libre'.",
-    "dileObjective": "Integrar todos los conceptos del OA 1 de Ciencias Naturales y demostrar maestría al resolver reactivos de evaluación formal de cuatro alternativas con estándar MINEDUC."
+    "dileObjective": "Integrar todos los conceptos del OA 1 de Ciencias Naturales y resolver con maestría reactivos de práctica de EstudioSimple de cuatro alternativas."
   },
   "situation": {
     "dilePrompt": "Imagina que estás frente al cuadernillo oficial del Examen Libre de Ciencias Naturales. Te encuentras con una pregunta que describe una situación cotidiana y te ofrece cuatro alternativas muy parecidas entre sí. ¿Qué método sistemático debes emplear para evitar caer en trampas o distractores y seleccionar la respuesta correcta?",
@@ -147,13 +147,13 @@ export function buildClase06() {
         "slideNumber": 3,
         "tituloMomento": "Anatomía del Reactivo de Selección Múltiple",
         "didacticPurpose": "Anatomía del Reactivo de Selección Múltiple",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, observing a panoramic holographic map synthesizing the biological, affective, social, and ethical dimensions, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining the anatomy of a multiple-choice item with blank modular panels representing the context, question stem, and four options on a digital display, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Estructura del Reactivo de Práctica",
         "overlayTitle": "Desarmando el reactivo de práctica",
         "overlaySubtitle": "Contexto, enunciado clave y cuatro alternativas",
         "vectorialOverlayPptx": "Componentes del ítem: Estímulo (caso/gráfico) -> Tarea cognitiva -> Clave correcta vs Distractores verosímiles",
         "mathOverlayPptx": "Componentes del ítem: Estímulo (caso/gráfico) -> Tarea cognitiva -> Clave correcta vs Distractores verosímiles",
-        "speakerNotes": "Comprendimos que la pubertad es activada por el sistema endocrino, diferenciando órganos primarios de caracteres secundarios hormonales.",
+        "speakerNotes": "Un reactivo formal de evaluación se compone de un contexto o estímulo, una pregunta directriz y cuatro alternativas; analizar su anatomía nos permite enfocar con precisión la tarea solicitada.",
         "palabrasAprox": 17,
         "duracionSeg": 8
       },
@@ -161,13 +161,13 @@ export function buildClase06() {
         "slideNumber": 4,
         "tituloMomento": "Estrategia de Descarte Científico",
         "didacticPurpose": "Estrategia de Descarte Científico",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining an endocrine feedback loop diagram showing the pituitary gland and secondary sexual characteristics, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, methodically crossing off incorrect distractors on an interactive evaluation review board, applying systematic scientific elimination, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "El Poder del Descarte Sistemático",
         "overlayTitle": "Técnica del descarte fundamentado",
         "overlaySubtitle": "Identificar afirmaciones reduccionistas o erradas",
         "vectorialOverlayPptx": "Protocolo de descarte: 1. Descartar falsedades biológicas -> 2. Descartar opciones parciales -> 3. Validar la respuesta completa",
         "mathOverlayPptx": "Protocolo de descarte: 1. Descartar falsedades biológicas -> 2. Descartar opciones parciales -> 3. Validar la respuesta completa",
-        "speakerNotes": "Afianzamos que los vínculos afectivos sanos se fundan en la empatía sincera, la reciprocidad y el cuidado riguroso de la intimidad personal.",
+        "speakerNotes": "La técnica del descarte científico consiste en evaluar cada alternativa paso a paso, eliminando aquellas con errores fácticos, generalizaciones abusivas o visiones incompletas para aislar la clave válida.",
         "palabrasAprox": 22,
         "duracionSeg": 10
       },
@@ -175,13 +175,13 @@ export function buildClase06() {
         "slideNumber": 5,
         "tituloMomento": "El Hábito de la Justificación Rigurosa",
         "didacticPurpose": "El Hábito de la Justificación Rigurosa",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, observing four interlocking glowing rings representing mutual dignity, consent, and respect, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, writing rigorous scientific justifications in their open study notebooks, supporting their chosen answer with evidence, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Justificar es Comprender de Verdad",
         "overlayTitle": "El valor del '¿por qué?'",
         "overlaySubtitle": "Argumentar científicamente cada elección",
         "vectorialOverlayPptx": "Fórmula argumentativa: Selección de alternativa + Premisa teórica MINEDUC + Evidencia biológica concreta",
         "mathOverlayPptx": "Fórmula argumentativa: Selección de alternativa + Premisa teórica MINEDUC + Evidencia biológica concreta",
-        "speakerNotes": "Validamos que el consentimiento debe cumplir cuatro condiciones innegociables: ser libre, informado, específico y revocable en todo instante.",
+        "speakerNotes": "Justificar la respuesta elegida en el cuaderno físico asegura una comprensión profunda; cada selección debe fundamentarse en conceptos biológicos y principios de respeto integral.",
         "palabrasAprox": 18,
         "duracionSeg": 8
       },
@@ -189,13 +189,13 @@ export function buildClase06() {
         "slideNumber": 6,
         "tituloMomento": "Autocontrol y Serenidad en el Examen",
         "didacticPurpose": "Autocontrol y Serenidad en el Examen",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing a medical growth percentile chart demonstrating healthy pubertal development, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, taking a calm deep breath before beginning an evaluation, maintaining serene emotional composure and focus at their modern study desks, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Mente Clara y Confianza Plena",
         "overlayTitle": "Gestión emocional del examen",
         "overlaySubtitle": "Pausar, respirar y leer con calma",
         "vectorialOverlayPptx": "Factores de éxito evaluativo: Preparación conceptual previa + Manejo de la ansiedad + Revisión metódica",
         "mathOverlayPptx": "Factores de éxito evaluativo: Preparación conceptual previa + Manejo de la ansiedad + Revisión metódica",
-        "speakerNotes": "Derribamos mitos sobre el crecimiento adolescente, fundamentando que la variabilidad en el inicio puberal y en el estirón de estatura es un hecho biológico respaldado por la medicina.",
+        "speakerNotes": "Afrontar una evaluación con serenidad y mente clara es clave: respirar hondo, leer cada enunciado con detenimiento y confiar en la preparación sistemática desarrollada durante las clases.",
         "palabrasAprox": 21,
         "duracionSeg": 10
       },
@@ -325,7 +325,7 @@ export function buildClase06() {
         "overlaySubtitle": "Análisis y descarte de 4 alternativas",
         "vectorialOverlayPptx": "Despiece del ítem: Enunciado: Estudiante afirma que la sexualidad es solo biología reproductiva -> Opción A (Falsa: reduccionista) · Opción B (CLAVE CORRECTA: 4 dimensiones integrales) · Opción C (Falsa: inicio tardío erróneo) · Opción D (Falsa: niega afecto en la niñez)",
         "mathOverlayPptx": "Despiece del ítem: Enunciado: Estudiante afirma que la sexualidad es solo biología reproductiva -> Opción A (Falsa: reduccionista) · Opción B (CLAVE CORRECTA: 4 dimensiones integrales) · Opción C (Falsa: inicio tardío erróneo) · Opción D (Falsa: niega afecto en la niñez)",
-        "speakerNotes": "Analicemos un reactivo de práctica elaborado para esta clase según el estándar de 7° Básico: un estudiante afirma que la sexualidad se limita exclusivamente a órganos y procreación. A partir del Texto Escolar Ciencias Naturales 7° Básico Edición SM (Unidad 1, pág. 16), la opción B es correcta porque establece que la sexualidad se organiza didácticamente en cuatro dimensiones fundamentales: biológica, afectiva, social y ética.",
+        "speakerNotes": "Analicemos un reactivo de práctica de EstudioSimple elaborado para 7° Básico: un estudiante afirma que la sexualidad se limita exclusivamente a órganos y procreación. A partir del Texto Escolar Ciencias Naturales 7° Básico MINEDUC (Edición SM, Unidad 4: Salud sexual y reproducción, Lección 8: Sexualidad y autocuidado, págs. 114 a 137, inicio temático pág. 116), la opción B es correcta porque establece que la sexualidad se organiza didácticamente en cuatro dimensiones fundamentales: biológica, afectiva, social y ética.",
         "palabrasAprox": 53,
         "duracionSeg": 24
       },
@@ -347,12 +347,12 @@ export function buildClase06() {
   },
   "postQuestions": [
     {
-      "context": "Caso 1: Reactivo didáctico de selección múltiple (Estándar MINEDUC)",
-      "question": "A continuación se presenta un reactivo didáctico elaborado según estándar MINEDUC para 7° Básico:\n'Durante una clase de Ciencias Naturales, los estudiantes debaten sobre la sexualidad humana. Uno de ellos afirma que la sexualidad se limita exclusivamente a los procesos biológicos de maduración de los órganos reproductores y a la capacidad de procrear.'\nA partir del enfoque de Ciencias Naturales 7° Básico (Texto del Estudiante Edición SM, pág. 16), ¿cuál de las siguientes opciones refuta con mayor precisión científica y pedagógica dicha afirmación?\nA) La afirmación es correcta porque las hormonas y los caracteres sexuales primarios son las únicas variables medibles empíricamente.\nB) La afirmación es incompleta porque la sexualidad humana es una dimensión integral que involucra aspectos biológicos, afectivos, sociales y éticos a lo largo de toda la vida.\nC) La afirmación es incorrecta porque la sexualidad solo comienza en la adultez cuando se forman vínculos legales formales.\nD) La afirmación es válida únicamente para la etapa de la pubertad, pues en la niñez no existen influencias afectivas ni sociales.\n\nIndica la alternativa correcta y justifica por qué descartaste las otras tres opciones.",
-      "expected": "La alternativa correcta es la B. Se descarta la opción A porque es un reduccionismo biológico falso; se descarta la C porque la sexualidad se vive en todas las etapas del ciclo vital y no solo en la adultez; y se descarta la D porque las dimensiones afectivas y sociales están presentes desde la primera infancia.",
+      "context": "Caso 1: Reactivo de práctica de EstudioSimple de selección múltiple",
+      "question": "A continuación se presenta un reactivo de práctica de EstudioSimple elaborado para 7° Básico:\n'Durante una clase de Ciencias Naturales, los estudiantes debaten sobre la sexualidad humana. Uno de ellos afirma que la sexualidad se limita exclusivamente a los procesos biológicos de maduración de los órganos reproductores y a la capacidad de procrear.'\nA partir del enfoque de Ciencias Naturales 7° Básico (Texto del Estudiante Edición SM, Unidad 4, Lección 8, págs. 114 a 137, inicio temático pág. 116), ¿cuál de las siguientes opciones refuta con mayor precisión científica y pedagógica dicha afirmación?\nA) La afirmación es correcta porque las hormonas y los caracteres sexuales primarios son las únicas variables medibles empíricamente.\nB) La afirmación es incompleta porque la sexualidad humana es una dimensión integral que involucra aspectos biológicos, afectivos, sociales y éticos a lo largo de toda la vida.\nC) La afirmación es incorrecta porque la sexualidad solo comienza en la adultez cuando se forman vínculos legales formales.\nD) La afirmación es válida únicamente para la etapa de la pubertad, pues en la niñez no existen influencias afectivas ni sociales.\n\nIndica la alternativa correcta y justifica por qué descartaste las otras tres opciones (A, C y D).",
+      "expected": "La alternativa correcta es la B. Análisis de distractores: Se descarta la opción A porque es un reduccionismo biológico falso; se descarta la C porque la sexualidad se vive en todas las etapas del ciclo vital y no solo en la adultez; y se descarta la D porque las dimensiones afectivas y sociales están presentes desde la primera infancia.",
       "success": "¡Extraordinario desempeño evaluativo! Has seleccionado la clave B y justificado con rigor el descarte psicométrico de cada distractor.",
       "support": "Recuerda el caso modelado en el video: identifica la opción que describe la sexualidad como una vivencia integral y explica los fallos de las demás.",
-      "reveal": "La opción B es la única canónicamente correcta; las alternativas A, C y D contienen errores conceptuales de reduccionismo, cronología y etapas de desarrollo.",
+      "reveal": "La opción B es la única canónicamente correcta. Análisis de distractores: las alternativas A, C y D contienen errores conceptuales de reduccionismo, cronología errónea y etapas de desarrollo incompletas.",
       "studentReveal": "La correcta es la B. La A es falsa por reduccionista, la C porque la sexualidad dura toda la vida y la D porque el afecto existe desde que nacemos."
     },
     {
@@ -367,12 +367,12 @@ export function buildClase06() {
   ],
   "practice": [
     {
-      "context": "Caso 1: Reactivo de práctica elaborado para esta clase",
-      "question": "A continuación se presenta un reactivo didáctico elaborado según estándar MINEDUC para 7° Básico:\n'Durante una clase de Ciencias Naturales, los estudiantes debaten sobre la sexualidad humana. Uno de ellos afirma que la sexualidad se limita exclusivamente a los procesos biológicos de maduración de los órganos reproductores y a la capacidad de procrear.'\nA partir del enfoque de Ciencias Naturales 7° Básico (Texto del Estudiante Edición SM, pág. 16), ¿cuál de las siguientes opciones refuta con mayor precisión científica y pedagógica dicha afirmación?\nA) La afirmación es correcta porque las hormonas y los caracteres sexuales primarios son las únicas variables medibles empíricamente.\nB) La afirmación es incompleta porque la sexualidad humana es una dimensión integral que involucra aspectos biológicos, afectivos, sociales y éticos a lo largo de toda la vida.\nC) La afirmación es incorrecta porque la sexualidad solo comienza en la adultez cuando se forman vínculos legales formales.\nD) La afirmación es válida únicamente para la etapa de la pubertad, pues en la niñez no existen influencias afectivas ni sociales.\n\nIndica la alternativa correcta y justifica por qué descartaste las otras tres opciones.",
-      "expected": "La alternativa correcta es la B. Se descarta la opción A porque es un reduccionismo biológico falso; se descarta la C porque la sexualidad se vive en todas las etapas del ciclo vital y no solo en la adultez; y se descarta la D porque las dimensiones afectivas y sociales están presentes desde la primera infancia.",
+      "context": "Caso 1: Reactivo de práctica de EstudioSimple de selección múltiple",
+      "question": "A continuación se presenta un reactivo de práctica de EstudioSimple elaborado para 7° Básico:\n'Durante una clase de Ciencias Naturales, los estudiantes debaten sobre la sexualidad humana. Uno de ellos afirma que la sexualidad se limita exclusivamente a los procesos biológicos de maduración de los órganos reproductores y a la capacidad de procrear.'\nA partir del enfoque de Ciencias Naturales 7° Básico (Texto del Estudiante Edición SM, Unidad 4, Lección 8, págs. 114 a 137, inicio temático pág. 116), ¿cuál de las siguientes opciones refuta con mayor precisión científica y pedagógica dicha afirmación?\nA) La afirmación es correcta porque las hormonas y los caracteres sexuales primarios son las únicas variables medibles empíricamente.\nB) La afirmación es incompleta porque la sexualidad humana es una dimensión integral que involucra aspectos biológicos, afectivos, sociales y éticos a lo largo de toda la vida.\nC) La afirmación es incorrecta porque la sexualidad solo comienza en la adultez cuando se forman vínculos legales formales.\nD) La afirmación es válida únicamente para la etapa de la pubertad, pues en la niñez no existen influencias afectivas ni sociales.\n\nIndica la alternativa correcta y justifica por qué descartaste las otras tres opciones (A, C y D).",
+      "expected": "La alternativa correcta es la B. Análisis de distractores: Se descarta la opción A porque es un reduccionismo biológico falso; se descarta la C porque la sexualidad se vive en todas las etapas del ciclo vital y no solo en la adultez; y se descarta la D porque las dimensiones afectivas y sociales están presentes desde la primera infancia.",
       "success": "¡Extraordinario desempeño evaluativo! Has seleccionado la clave B y justificado con rigor el descarte psicométrico de cada distractor.",
       "support": "Recuerda el caso modelado en el video: identifica la opción que describe la sexualidad como una vivencia integral y explica los fallos de las demás.",
-      "reveal": "La opción B es la única canónicamente correcta; las alternativas A, C y D contienen errores conceptuales de reduccionismo, cronología y etapas de desarrollo.",
+      "reveal": "La opción B es la única canónicamente correcta. Análisis de distractores: las alternativas A, C y D contienen errores conceptuales de reduccionismo, cronología errónea y etapas de desarrollo incompletas.",
       "studentReveal": "La correcta es la B. La A es falsa por reduccionista, la C porque la sexualidad dura toda la vida y la D porque el afecto existe desde que nacemos."
     },
     {
@@ -399,13 +399,13 @@ export function buildClase06() {
       "id": "q1",
       "q": "¿Cuál es la función principal de la hormona folículo estimulante (FSH) y la hormona luteinizante (LH) producidas por la hipófisis durante la pubertad?",
       "options": [
-        "Estimular a las gónadas (ovarios y testículos) para producir gametos y secretar hormonas sexuales",
+        "Estimular a las gónadas (ovarios y testículos) para secretar hormonas sexuales e inducir caracteres secundarios",
         "Detener el crecimiento óseo para evitar un estirón excesivo en la adolescencia",
         "Aumentar únicamente la temperatura corporal sin intervenir en la reproducción",
         "Destruir los tejidos linfáticos y reemplazar el sistema inmunitario"
       ],
-      "correct": "Estimular a las gónadas (ovarios y testículos) para producir gametos y secretar hormonas sexuales",
-      "fixExplain": "FSH y LH son gonadotrofinas hipofisarias que activan la maduración de gametos y la síntesis de esteroides sexuales en las gónadas."
+      "correct": "Estimular a las gónadas (ovarios y testículos) para secretar hormonas sexuales e inducir caracteres secundarios",
+      "fixExplain": "FSH y LH son gonadotrofinas hipofisarias que estimulan a las gónadas para secretar hormonas sexuales (estrógenos, progesterona y testosterona), induciendo la aparición de los caracteres sexuales secundarios en la pubertad."
     },
     {
       "id": "q2",
@@ -435,8 +435,8 @@ export function buildClase06() {
   "recovery": [
     {
       "title": "Recuperación: El Enfoque Integral de la Sexualidad",
-      "explain": "El enfoque formativo enfatiza que la sexualidad no es únicamente un fenómeno de órganos y hormonas. Comprende cómo nos sentimos, cómo nos relacionamos con los demás, nuestros valores éticos y el respeto por los derechos humanos de cada individuo (Texto del Estudiante Edición SM, pág. 16).",
-      "q": "¿Qué dimensiones articulan didácticamente la sexualidad humana como organizador de esta unidad (Edición SM, pág. 16)?",
+      "explain": "El enfoque formativo enfatiza que la sexualidad no es únicamente un fenómeno de órganos y hormonas. Comprende cómo nos sentimos, cómo nos relacionamos con los demás, nuestros valores éticos y el respeto por los derechos humanos de cada individuo (Texto del Estudiante Edición SM, Unidad 4, Lección 8, págs. 114 a 137, inicio temático pág. 116).",
+      "q": "¿Qué dimensiones articulan didácticamente la sexualidad humana como organizador de esta unidad (Edición SM, Unidad 4, Lección 8, págs. 114 a 137)?",
       "options": [
         "Únicamente la dimensión biológica y la reproducción en la etapa adulta",
         "Biológica, afectiva, social y ética a lo largo de toda la vida",

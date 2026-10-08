@@ -2,6 +2,7 @@
 STUDIOSIMPLE - PAQUETE DE PROMPTS Y GUIONES OFICIALES PARA CHATGPT WORK
 ASIGNATURA: CIENCIAS NATURALES | CURSO: 7° BÁSICO | OBJETIVO: OA 01
 PAQUETE COMPLETO: 6 LECCIONES CANÓNICAS (14 LÁMINAS POR LECCIÓN = 84 LÁMINAS)
+FECHA DE COMPILACIÓN OFICIAL: 08-10-2026, 1:25:30 p. m. (America/Santiago)
 ================================================================================
 
 ################################################################################
@@ -176,7 +177,7 @@ MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
 ================================================================================
 
 [PREPARACION DEL ADULTO / MENTOR]
-• Objetivo del Adulto: Guiar al estudiante a comprender que la sexualidad humana es una vivencia integral organizada didácticamente en cuatro dimensiones fundamentales: biológica, afectiva, social y ética, articulando los aspectos curriculares del Texto Escolar Ciencias Naturales 7° Básico MINEDUC (Edición SM, Unidad 1, Lección 1, págs. 16 a 29) con valores de respeto mutuo y responsabilidad personal, superando la visión reducida a lo reproductivo.
+• Objetivo del Adulto: Guiar al estudiante a comprender que la sexualidad humana es una vivencia integral organizada didácticamente en cuatro dimensiones fundamentales: biológica, afectiva, social y ética, articulando los aspectos curriculares del Texto Escolar Ciencias Naturales 7° Básico MINEDUC (Edición SM, Unidad 4: Salud sexual y reproducción, Lección 8: Sexualidad y autocuidado, págs. 114 a 137, inicio temático pág. 116) con valores de respeto mutuo y responsabilidad personal, superando la visión reducida a lo reproductivo.
 • Ruta de Hoy: Reconocer e interrelacionar las dimensiones biológica, afectiva, social y ética en situaciones reales de la vida cotidiana.
 • Recordatorios Pedagogicos del Mentor:
   1. La sexualidad humana no es solo el cuerpo biológico; involucra a la persona en su totalidad.
@@ -500,7 +501,7 @@ MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
 ================================================================================
 
 [PREPARACION DEL ADULTO / MENTOR]
-• Objetivo del Adulto: Acompañar al estudiante a distinguir entre caracteres sexuales primarios y secundarios, reconociendo la acción del sistema endocrino en los cambios físicos y emocionales propios de la pubertad, diferenciando el inicio puberal (8 a 13 años en niñas y 9 a 14 en niños) del estirón puberal de estatura (10 a 14 en niñas y 12 a 16 en niños) según los estadios de Tanner (1962) y orientaciones del MINEDUC.
+• Objetivo del Adulto: Acompañar al estudiante a distinguir entre caracteres sexuales primarios y secundarios, reconociendo la acción del sistema endocrino en los cambios físicos y emocionales propios de la pubertad, diferenciando el inicio puberal habitual (8 a 13 años en niñas y 9 a 14 en niños) de la aceleración del crecimiento, cuyo peak de velocidad de crecimiento alcanza promedios poblacionales de ~11,5 años en niñas y ~13,5 años en niños dentro de una amplia ventana normal (10 a 16 años según Tanner y MINEDUC).
 • Ruta de Hoy: Reconocer cómo las señales hormonales de la pubertad transforman nuestro cuerpo y nuestras emociones, diferenciando caracteres primarios de secundarios y valorando la diversidad en los ritmos de crecimiento.
 • Recordatorios Pedagogicos del Mentor:
   1. La pubertad es una etapa de maduración biológica y psicológica universal.
@@ -741,7 +742,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 1. Propósito Didáctico: El Hogar como Refugio Afectivo
 2. Título en Pantalla (64 pt): El apoyo familiar sincero
 3. Subtítulo en Pantalla (48 pt): Espacio de seguridad para compartir inquietudes
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, agreeing on respectful group rules with classmates in a bright school library with thumbs-up gestures, with generous negative space for text overlays. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, engaged in a warm, open dialogue with family members in a welcoming living room setting, experiencing emotional support and understanding, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Núcleo familiar: Diálogo abierto, afecto incondicional y acompañamiento en dudas
 6. Notas al Orador (Locución Google Vids): "Cuando surge un desacuerdo con amigos o familia, el diálogo sincero y la calma permiten encontrar acuerdos justos que cuiden la relación."
 
@@ -778,23 +779,23 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Sintonizar con las emociones del prójimo
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, listening intently to each other with speech bubbles transforming into a bridge of reciprocal understanding, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema socioafectivo: Reconocer emoción ajena -> Validar sin juzgar -> Responder con afecto
-6. Notas al Orador (Locución Google Vids): "Los vínculos afectivos sanos se construyen sobre la reciprocidad y la confianza. Cuando ambas partes se sienten escuchadas y valoradas, la amistad se fortalece y genera bienestar."
+6. Notas al Orador (Locución Google Vids): "La empatía es la capacidad de comprender y sintonizar con los sentimientos del otro; nos permite escuchar activamente sin juzgar y validar las emociones de nuestros pares."
 
 --- DIAPOSITIVA 3: Reciprocidad: Equilibrio en el Afecto (13 segundos) ---
 1. Propósito Didáctico: Reciprocidad: Equilibrio en el Afecto
 2. Título en Pantalla (64 pt): El principio de reciprocidad
 3. Subtítulo en Pantalla (48 pt): Afecto compartido en igualdad de condiciones
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, keeping personal confidences safe beside a study desk with an illustrated lock and diary, with generous negative space for text overlays. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, observing a balanced scale of reciprocal care and mutual respect glowing softly in cyan and gold, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Principio ético: Ninguna persona debe estar sometida a los deseos exclusivos de la otra
-6. Notas al Orador (Locución Google Vids): "La empatía permite conectar con los sentimientos ajenos sin invalidarlos. Escuchar activamente a un amigo que pasa por un momento difícil es una manifestación concreta de madurez afectiva."
+6. Notas al Orador (Locución Google Vids): "El principio de reciprocidad establece que el afecto, la consideración y el cuidado deben ser mutuos; ninguna persona debe asumir toda la carga emocional o someterse a la otra."
 
 --- DIAPOSITIVA 4: La Esfera de la Intimidad (13 segundos) ---
 1. Propósito Didáctico: La Esfera de la Intimidad
 2. Título en Pantalla (64 pt): La intimidad personal
 3. Subtítulo en Pantalla (48 pt): Espacio inviolable de la persona
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, observing a balanced scale of reciprocal care and mutual respect glowing softly in cyan and gold, with generous negative space for text overlays. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, keeping personal confidences safe beside a study desk with an illustrated lock and diary, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Matriz de privacidad: Límites corporales, emocionales y personales reconocidos por ley
-6. Notas al Orador (Locución Google Vids): "El respeto a la intimidad exige no divulgar confidencias, no revisar pertenencias ajenas y no presionar a nadie para que revele aspectos reservados de su vida personal o familiar."
+6. Notas al Orador (Locución Google Vids): "La intimidad es el espacio inviolable de vivencias, pensamientos y emociones personales; respetarla implica no forzar revelaciones, guardar confidencias y proteger la privacidad."
 
 --- DIAPOSITIVA 5: Ciudadanía y Cuidado Digital (11 segundos) ---
 1. Propósito Didáctico: Ciudadanía y Cuidado Digital
@@ -802,7 +803,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Cero tolerancia a la divulgación no autorizada
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, high-fiving respectfully after establishing healthy teamwork boundaries and positive peer support, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Regla de oro digital: Lo privado se mantiene privado; compartir requiere permiso explícito
-6. Notas al Orador (Locución Google Vids): "La reciprocidad evita relaciones desiguales. Compartir decisiones en el grupo escolar garantiza que nadie se sienta excluido o sometido a las preferencias de los demás."
+6. Notas al Orador (Locución Google Vids): "En entornos digitales, cuidar la intimidad exige contar siempre con consentimiento explícito antes de reenviar fotos o mensajes privados; lo íntimo debe mantenerse en reserva."
 
 --- DIAPOSITIVA 6: Caso Modelado: Resolución de Diferencias (27 segundos) ---
 1. Propósito Didáctico: Caso Modelado: Resolución de Diferencias
@@ -1111,7 +1112,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Libre, informado, específico y revocable
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, observing a student changing their mind during an activity with classmates stopping immediately and nodding respectfully, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pauta de verificación: Sin presión (Libre) + Con conocimiento (Informado) + Concreto (Específico) + Modificable (Revocable)
-6. Notas al Orador (Locución Google Vids): "El segundo criterio exige que sea informado: conocer con claridad qué se propone y qué consecuencias tiene. El tercer criterio establece que sea específico para cada momento."
+6. Notas al Orador (Locución Google Vids): "El consentimiento válido requiere cuatro condiciones ineludibles: ser libre de presiones, plenamente informado, específico para la situación concreta y revocable en cualquier momento."
 
 --- DIAPOSITIVA 4: La Asertividad en la Práctica (11 segundos) ---
 1. Propósito Didáctico: La Asertividad en la Práctica
@@ -1119,15 +1120,15 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Expresar límites sin agresividad ni sumisión
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing firmly in the light with moral confidence, resisting group pressure and upholding personal boundaries, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Triángulo comunicativo: Pasivo (someterse) vs Agresivo (atacar) vs Asertivo (afirmar límites con respeto)
-6. Notas al Orador (Locución Google Vids): "El cuarto criterio es decisivo: el consentimiento es revocable. Cualquier persona tiene derecho a cambiar de opinión y detener una actividad cuando lo decida."
+6. Notas al Orador (Locución Google Vids): "La asertividad es la capacidad de expresar límites y decisiones de manera clara, serena y firme, sin agredir a otros ni someterse a presiones grupales contrarias a nuestras convicciones."
 
 --- DIAPOSITIVA 5: Responsabilidad y Consecuencias (12 segundos) ---
 1. Propósito Didáctico: Responsabilidad y Consecuencias
 2. Título en Pantalla (64 pt): Pensar antes de actuar
 3. Subtítulo en Pantalla (48 pt): Evaluar consecuencias a corto y largo plazo
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, visualizing a glowing circle of trust with school counselors, teachers, and parents forming a protective network, with generous negative space for text overlays. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, pausing thoughtfully before a decision pathway flowchart, carefully weighing causes and consequences of actions, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Matriz de discernimiento: Estimar riesgos potenciales -> Proteger la salud -> Actuar éticamente
-6. Notas al Orador (Locución Google Vids): "La asertividad es la habilidad de expresar límites con firmeza y respeto. Reconocer situaciones de riesgo y pedir apoyo a docentes o apoderados refuerza la seguridad."
+6. Notas al Orador (Locución Google Vids): "Pensar antes de actuar implica evaluar las consecuencias individuales y sociales de nuestras acciones; la responsabilidad personal exige cuidar la propia integridad y la de los demás."
 
 --- DIAPOSITIVA 6: Caso Modelado: Presión por Contenido Privado (29 segundos) ---
 1. Propósito Didáctico: Caso Modelado: Presión por Contenido Privado
@@ -1188,7 +1189,7 @@ Sub-etapa 3: Situacion Inicial de Exploracion (Detonante)
   - [Requiere Apoyo] No sabe o tiene dudas -> Feedback: "Pista guiada: Es el principio del consentimiento y el autocuidado, que nos permite decidir sobre nuestro cuerpo y privacidad."
 
 Sub-etapa 4: Comprendamos la Respuesta (Punto de Referencia)
-• DILE AL ESTUDIANTE (Formalizacion de referencia): "El consentimiento es la manifestación libre, voluntaria, clara y consciente de aceptar o no una situación, contacto o propuesta. Un consentimiento real jamás se obtiene mediante amenazas, engaños o insistencias insistentes."
+• DILE AL ESTUDIANTE (Formalizacion de referencia): "El consentimiento es la manifestación libre, voluntaria, clara y consciente de aceptar o no una situación, contacto o propuesta. Un consentimiento real jamás se obtiene mediante amenazas, engaños o presiones indebidas."
 • PREGUNTALE AL ESTUDIANTE: "Con tus propias palabras: ¿cuáles son las características que hacen que un consentimiento sea verdaderamente válido?"
 • RESPUESTA ESPERADA: Debe ser completamente libre (sin presiones ni miedos), consciente (sabiendo lo que ocurre), explícito y revocable (se puede cambiar de opinión en cualquier momento).
 • PISTA SOCRATICA: "Piensa si un 'sí' dicho por miedo o por cansancio ante tanta insistencia es realmente libre."
@@ -1361,7 +1362,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): La naturaleza celebra la diversidad biológica
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, observing a distorted mirror being replaced with a clean, realistic medical illustration of pubertal growth, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Variabilidad del crecimiento: Estirón de estatura con amplia dispersión saludable (Tanner / MedlinePlus)
-6. Notas al Orador (Locución Google Vids): "Muchos creen que todos los adolescentes deben pegar el estirón al mismo tiempo. La biología demuestra que cada cuerpo tiene su propio reloj genético."
+6. Notas al Orador (Locución Google Vids): "El inicio puberal habitual (8 a 13 años en niñas y 9 a 14 en niños) no debe confundirse con el peak de velocidad de crecimiento, cuyos promedios poblacionales rondan los 11,5 años en niñas y 13,5 en niños con amplia variación saludable."
 
 --- DIAPOSITIVA 3: El Mito del 'Atraso' Corporal (11 segundos) ---
 1. Propósito Didáctico: El Mito del 'Atraso' Corporal
@@ -1427,24 +1428,24 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 2. Título en Pantalla (64 pt): Rangos biológicos de la pubertad
 3. Subtítulo en Pantalla (48 pt): Inicio puberal y sus variaciones habituales
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, in a modern science laboratory observing blank modular comparison panels on a digital display, with generous negative space for text overlays. No text drawn by AI.
-5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Inicio puberal habitual: 8 a 13 años en niñas y 9 a 14 años en niños (MedlinePlus / OMS)
-6. Notas al Orador (Locución Google Vids): "El inicio de la pubertad varía entre personas: suele ocurrir entre los 8 y 13 años en niñas y entre los 9 y 14 en niños según MedlinePlus y la OMS. Este inicio habitual no debe confundirse con el momento del estirón de estatura, que ocurre en etapas posteriores."
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Inicio puberal: 8-13 años (niñas), 9-14 años (niños) | Peak de crecimiento: promedios poblacionales ~11,5 (niñas) y ~13,5 (niños)
+6. Notas al Orador (Locución Google Vids): "El inicio de la pubertad suele ocurrir entre los 8 y 13 años en niñas y entre los 9 y 14 en niños (MedlinePlus/OMS). Distinto del inicio, el peak de velocidad de crecimiento en estatura alcanza promedios poblacionales de ~11,5 años en niñas y ~13,5 años en niños dentro de una amplia ventana normal (10 a 16 años según Tanner)."
 
 --- DIAPOSITIVA 3: Factores que Regulan el Crecimiento (10 segundos) ---
 1. Propósito Didáctico: Factores que Regulan el Crecimiento
 2. Título en Pantalla (64 pt): Qué determina el ritmo de maduración
 3. Subtítulo en Pantalla (48 pt): Interacción entre herencia, hormonas y ambiente
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, visualizing neural pathways and equal cognitive capabilities across diverse vocations and scientific fields, with generous negative space for text overlays. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, in a modern biology lab examining interactive infographic panels of biological growth factors including genetics, nutrition, healthy sleep, and hormonal regulation, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Ecuación multifactorial: Crecimiento = Genética (herencia) + Endocrino (GH y esteroides) + Nutrición y descanso
-6. Notas al Orador (Locución Google Vids): "El desarrollo puberal no es una carrera. Quienes experimentan cambios tempranos o tardíos alcanzan igualmente la madurez biológica completa con salud."
+6. Notas al Orador (Locución Google Vids): "El ritmo de crecimiento depende de factores genéticos hereditarios, secreción hormonal equilibrada y hábitos saludables de nutrición y sueño profundo, los cuales regulan el desarrollo biológico."
 
 --- DIAPOSITIVA 4: Desmontando los Estereotipos de Género (12 segundos) ---
 1. Propósito Didáctico: Desmontando los Estereotipos de Género
 2. Título en Pantalla (64 pt): Libre desarrollo de la personalidad
 3. Subtítulo en Pantalla (48 pt): Habilidades y emociones compartidas
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining a scientific anatomical model of skin glands and hormonal changes during puberty, with generous negative space for text overlays. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, enthusiastically collaborating in robotics and creative artistic design in a modern school workshop, breaking gender stereotypes, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Cuadro de equidad: Capacidades intelectuales, creativas y emocionales idénticas entre géneros
-6. Notas al Orador (Locución Google Vids): "Los estereotipos que asignan roles rígidos carecen de fundamento científico. Los estereotipos sociales no deben limitar los intereses, talentos ni oportunidades de cada estudiante."
+6. Notas al Orador (Locución Google Vids): "Los estereotipos que asignan roles rígidos carecen de fundamento científico. Todos los estudiantes pueden destacar plenamente en ciencias, tecnología, artes y deportes sin límites impuestos por el género."
 
 --- DIAPOSITIVA 5: El Impacto Psicológico del Juicio Externo (11 segundos) ---
 1. Propósito Didáctico: El Impacto Psicológico del Juicio Externo
@@ -1692,33 +1693,33 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 1. Propósito Didáctico: Anatomía del Reactivo de Selección Múltiple
 2. Título en Pantalla (64 pt): Desarmando el reactivo de práctica
 3. Subtítulo en Pantalla (48 pt): Contexto, enunciado clave y cuatro alternativas
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, observing a panoramic holographic map synthesizing the biological, affective, social, and ethical dimensions, with generous negative space for text overlays. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining the anatomy of a multiple-choice item with blank modular panels representing the context, question stem, and four options on a digital display, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Componentes del ítem: Estímulo (caso/gráfico) -> Tarea cognitiva -> Clave correcta vs Distractores verosímiles
-6. Notas al Orador (Locución Google Vids): "Comprendimos que la pubertad es activada por el sistema endocrino, diferenciando órganos primarios de caracteres secundarios hormonales."
+6. Notas al Orador (Locución Google Vids): "Un reactivo formal de evaluación se compone de un contexto o estímulo, una pregunta directriz y cuatro alternativas; analizar su anatomía nos permite enfocar con precisión la tarea solicitada."
 
 --- DIAPOSITIVA 4: Estrategia de Descarte Científico (10 segundos) ---
 1. Propósito Didáctico: Estrategia de Descarte Científico
 2. Título en Pantalla (64 pt): Técnica del descarte fundamentado
 3. Subtítulo en Pantalla (48 pt): Identificar afirmaciones reduccionistas o erradas
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining an endocrine feedback loop diagram showing the pituitary gland and secondary sexual characteristics, with generous negative space for text overlays. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, methodically crossing off incorrect distractors on an interactive evaluation review board, applying systematic scientific elimination, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Protocolo de descarte: 1. Descartar falsedades biológicas -> 2. Descartar opciones parciales -> 3. Validar la respuesta completa
-6. Notas al Orador (Locución Google Vids): "Afianzamos que los vínculos afectivos sanos se fundan en la empatía sincera, la reciprocidad y el cuidado riguroso de la intimidad personal."
+6. Notas al Orador (Locución Google Vids): "La técnica del descarte científico consiste en evaluar cada alternativa paso a paso, eliminando aquellas con errores fácticos, generalizaciones abusivas o visiones incompletas para aislar la clave válida."
 
 --- DIAPOSITIVA 5: El Hábito de la Justificación Rigurosa (8 segundos) ---
 1. Propósito Didáctico: El Hábito de la Justificación Rigurosa
 2. Título en Pantalla (64 pt): El valor del '¿por qué?'
 3. Subtítulo en Pantalla (48 pt): Argumentar científicamente cada elección
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, observing four interlocking glowing rings representing mutual dignity, consent, and respect, with generous negative space for text overlays. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, writing rigorous scientific justifications in their open study notebooks, supporting their chosen answer with evidence, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Fórmula argumentativa: Selección de alternativa + Premisa teórica MINEDUC + Evidencia biológica concreta
-6. Notas al Orador (Locución Google Vids): "Validamos que el consentimiento debe cumplir cuatro condiciones innegociables: ser libre, informado, específico y revocable en todo instante."
+6. Notas al Orador (Locución Google Vids): "Justificar la respuesta elegida en el cuaderno físico asegura una comprensión profunda; cada selección debe fundamentarse en conceptos biológicos y principios de respeto integral."
 
 --- DIAPOSITIVA 6: Autocontrol y Serenidad en el Examen (10 segundos) ---
 1. Propósito Didáctico: Autocontrol y Serenidad en el Examen
 2. Título en Pantalla (64 pt): Gestión emocional del examen
 3. Subtítulo en Pantalla (48 pt): Pausar, respirar y leer con calma
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing a medical growth percentile chart demonstrating healthy pubertal development, with generous negative space for text overlays. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, taking a calm deep breath before beginning an evaluation, maintaining serene emotional composure and focus at their modern study desks, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Factores de éxito evaluativo: Preparación conceptual previa + Manejo de la ansiedad + Revisión metódica
-6. Notas al Orador (Locución Google Vids): "Derribamos mitos sobre el crecimiento adolescente, fundamentando que la variabilidad en el inicio puberal y en el estirón de estatura es un hecho biológico respaldado por la medicina."
+6. Notas al Orador (Locución Google Vids): "Afrontar una evaluación con serenidad y mente clara es clave: respirar hondo, leer cada enunciado con detenimiento y confiar en la preparación sistemática desarrollada durante las clases."
 
 --- DIAPOSITIVA 7: Cierre y Tránsito al Ensayo Guiado (9 segundos) ---
 1. Propósito Didáctico: Cierre y Tránsito al Ensayo Guiado
@@ -1785,7 +1786,7 @@ SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 3. Subtítulo en Pantalla (48 pt): Análisis y descarte de 4 alternativas
 4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing a four-choice blank test card on their desk, comparing reasoning notes before selecting the correct option, with generous negative space for text overlays. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Despiece del ítem: Enunciado: Estudiante afirma que la sexualidad es solo biología reproductiva -> Opción A (Falsa: reduccionista) · Opción B (CLAVE CORRECTA: 4 dimensiones integrales) · Opción C (Falsa: inicio tardío erróneo) · Opción D (Falsa: niega afecto en la niñez)
-6. Notas al Orador (Locución Google Vids): "Analicemos un reactivo de práctica elaborado para esta clase según el estándar de 7° Básico: un estudiante afirma que la sexualidad se limita exclusivamente a órganos y procreación. A partir del Texto Escolar Ciencias Naturales 7° Básico Edición SM (Unidad 1, pág. 16), la opción B es correcta porque establece que la sexualidad se organiza didácticamente en cuatro dimensiones fundamentales: biológica, afectiva, social y ética."
+6. Notas al Orador (Locución Google Vids): "Analicemos un reactivo de práctica de EstudioSimple elaborado para 7° Básico: un estudiante afirma que la sexualidad se limita exclusivamente a órganos y procreación. A partir del Texto Escolar Ciencias Naturales 7° Básico MINEDUC (Edición SM, Unidad 4: Salud sexual y reproducción, Lección 8: Sexualidad y autocuidado, págs. 114 a 137, inicio temático pág. 116), la opción B es correcta porque establece que la sexualidad se organiza didácticamente en cuatro dimensiones fundamentales: biológica, afectiva, social y ética."
 
 --- DIAPOSITIVA 7: Síntesis y Coronación del Aprendizaje (15 segundos) ---
 1. Propósito Didáctico: Síntesis y Coronación del Aprendizaje
@@ -1803,7 +1804,7 @@ MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
 • Objetivo del Adulto: Evaluar de manera formativa e integral el dominio de los objetivos del OA 1 de Ciencias Naturales (sexualidad como dimensión integral, caracteres sexuales, anatomía y fisiología reproductora, autocuidado y discernimiento ético) bajo el formato de Exámenes Libres del MINEDUC.
 • Ruta de Hoy: Consolidar los aprendizajes del OA 1 mediante el análisis de reactivos psicométricos de cuatro alternativas, aplicando estrategias de descarte y justificación científica rigurosa.
 • Recordatorios Pedagogicos del Mentor:
-  1. El estándar MINEDUC para 7° Básico evalúa comprensión conceptual y aplicación a casos reales.
+  1. El reactivo de práctica de EstudioSimple para 7° Básico evalúa comprensión conceptual y aplicación a casos reales.
   2. Las preguntas de selección múltiple cuentan con distractores plausibles que exigen lectura atenta.
   3. Lee en voz alta únicamente los textos con la etiqueta DILE o PREGÚNTALE.
   4. Refuerza la confianza del estudiante: este ensayo valida su preparación para la evaluación tipo Examen Libre.
@@ -1821,7 +1822,7 @@ Sub-etapa 1: Nuestra Ruta de la Asignatura
   Bloque 04: Evaluación (Simulador de Examen Libre y Cierre)
 
 Sub-etapa 2: La Clase de Hoy
-• DILE AL ESTUDIANTE (Foco didactico): "Integrar todos los conceptos del OA 1 de Ciencias Naturales y demostrar maestría al resolver reactivos de evaluación formal de cuatro alternativas con estándar MINEDUC."
+• DILE AL ESTUDIANTE (Foco didactico): "Integrar todos los conceptos del OA 1 de Ciencias Naturales y resolver con maestría reactivos de práctica de EstudioSimple de cuatro alternativas."
 • 3 Tarjetas de Foco de la Pantalla del Estudiante:
   Tarjeta 1: Multidimensionalidad de la sexualidad -> Integración de las 4 dimensiones humanas fundamentales
   Tarjeta 2: Anatomía, fisiología y pubertad -> Estructuras biológicas, caracteres sexuales y hormonas
@@ -1867,17 +1868,17 @@ Item 2 (Identificación de distractores parciales):
 --------------------------------------------------------------------------------
 [PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
 --------------------------------------------------------------------------------
-Comprobacion 1 (Caso 1: Reactivo didáctico de selección múltiple (Estándar MINEDUC)):
-• Pregunta: "A continuación se presenta un reactivo didáctico elaborado según estándar MINEDUC para 7° Básico:
+Comprobacion 1 (Caso 1: Reactivo de práctica de EstudioSimple de selección múltiple):
+• Pregunta: "A continuación se presenta un reactivo de práctica de EstudioSimple elaborado para 7° Básico:
 'Durante una clase de Ciencias Naturales, los estudiantes debaten sobre la sexualidad humana. Uno de ellos afirma que la sexualidad se limita exclusivamente a los procesos biológicos de maduración de los órganos reproductores y a la capacidad de procrear.'
-A partir del enfoque de Ciencias Naturales 7° Básico (Texto del Estudiante Edición SM, pág. 16), ¿cuál de las siguientes opciones refuta con mayor precisión científica y pedagógica dicha afirmación?
+A partir del enfoque de Ciencias Naturales 7° Básico (Texto del Estudiante Edición SM, Unidad 4, Lección 8, págs. 114 a 137, inicio temático pág. 116), ¿cuál de las siguientes opciones refuta con mayor precisión científica y pedagógica dicha afirmación?
 A) La afirmación es correcta porque las hormonas y los caracteres sexuales primarios son las únicas variables medibles empíricamente.
 B) La afirmación es incompleta porque la sexualidad humana es una dimensión integral que involucra aspectos biológicos, afectivos, sociales y éticos a lo largo de toda la vida.
 C) La afirmación es incorrecta porque la sexualidad solo comienza en la adultez cuando se forman vínculos legales formales.
 D) La afirmación es válida únicamente para la etapa de la pubertad, pues en la niñez no existen influencias afectivas ni sociales.
 
-Indica la alternativa correcta y justifica por qué descartaste las otras tres opciones."
-• Respuesta Esperada: La alternativa correcta es la B. Se descarta la opción A porque es un reduccionismo biológico falso; se descarta la C porque la sexualidad se vive en todas las etapas del ciclo vital y no solo en la adultez; y se descarta la D porque las dimensiones afectivas y sociales están presentes desde la primera infancia.
+Indica la alternativa correcta y justifica por qué descartaste las otras tres opciones (A, C y D)."
+• Respuesta Esperada: La alternativa correcta es la B. Análisis de distractores: Se descarta la opción A porque es un reduccionismo biológico falso; se descarta la C porque la sexualidad se vive en todas las etapas del ciclo vital y no solo en la adultez; y se descarta la D porque las dimensiones afectivas y sociales están presentes desde la primera infancia.
 • Pista de Apoyo: "Recuerda el caso modelado en el video: identifica la opción que describe la sexualidad como una vivencia integral y explica los fallos de las demás."
 • Revelacion: "La correcta es la B. La A es falsa por reduccionista, la C porque la sexualidad dura toda la vida y la D porque el afecto existe desde que nacemos."
 
@@ -1896,17 +1897,17 @@ Selecciona la alternativa correcta y explica brevemente su funcionamiento bioló
 --------------------------------------------------------------------------------
 [PASO 5: PRACTICA EN EL CUADERNO FISICO]
 --------------------------------------------------------------------------------
-Ejercicio 1 (Caso 1: Reactivo de práctica elaborado para esta clase):
-• Enunciado de Aplicacion: "A continuación se presenta un reactivo didáctico elaborado según estándar MINEDUC para 7° Básico:
+Ejercicio 1 (Caso 1: Reactivo de práctica de EstudioSimple de selección múltiple):
+• Enunciado de Aplicacion: "A continuación se presenta un reactivo de práctica de EstudioSimple elaborado para 7° Básico:
 'Durante una clase de Ciencias Naturales, los estudiantes debaten sobre la sexualidad humana. Uno de ellos afirma que la sexualidad se limita exclusivamente a los procesos biológicos de maduración de los órganos reproductores y a la capacidad de procrear.'
-A partir del enfoque de Ciencias Naturales 7° Básico (Texto del Estudiante Edición SM, pág. 16), ¿cuál de las siguientes opciones refuta con mayor precisión científica y pedagógica dicha afirmación?
+A partir del enfoque de Ciencias Naturales 7° Básico (Texto del Estudiante Edición SM, Unidad 4, Lección 8, págs. 114 a 137, inicio temático pág. 116), ¿cuál de las siguientes opciones refuta con mayor precisión científica y pedagógica dicha afirmación?
 A) La afirmación es correcta porque las hormonas y los caracteres sexuales primarios son las únicas variables medibles empíricamente.
 B) La afirmación es incompleta porque la sexualidad humana es una dimensión integral que involucra aspectos biológicos, afectivos, sociales y éticos a lo largo de toda la vida.
 C) La afirmación es incorrecta porque la sexualidad solo comienza en la adultez cuando se forman vínculos legales formales.
 D) La afirmación es válida únicamente para la etapa de la pubertad, pues en la niñez no existen influencias afectivas ni sociales.
 
-Indica la alternativa correcta y justifica por qué descartaste las otras tres opciones."
-• Respuesta Esperada: La alternativa correcta es la B. Se descarta la opción A porque es un reduccionismo biológico falso; se descarta la C porque la sexualidad se vive en todas las etapas del ciclo vital y no solo en la adultez; y se descarta la D porque las dimensiones afectivas y sociales están presentes desde la primera infancia.
+Indica la alternativa correcta y justifica por qué descartaste las otras tres opciones (A, C y D)."
+• Respuesta Esperada: La alternativa correcta es la B. Análisis de distractores: Se descarta la opción A porque es un reduccionismo biológico falso; se descarta la C porque la sexualidad se vive en todas las etapas del ciclo vital y no solo en la adultez; y se descarta la D porque las dimensiones afectivas y sociales están presentes desde la primera infancia.
 • Feedback de Exito: "¡Extraordinario desempeño evaluativo! Has seleccionado la clave B y justificado con rigor el descarte psicométrico de cada distractor."
 • Pista de Apoyo Socratica: "Recuerda el caso modelado en el video: identifica la opción que describe la sexualidad como una vivencia integral y explica los fallos de las demás."
 
@@ -1941,11 +1942,11 @@ Ejercicio 3 (Caso 3: Trabajo en el Cuaderno de Ciencias - Hoja de Examen):
 [PASO 7: MINIQUIZ FORMATIVO Y FASE REVISAR]
 --------------------------------------------------------------------------------
 Pregunta 1: ¿Cuál es la función principal de la hormona folículo estimulante (FSH) y la hormona luteinizante (LH) producidas por la hipófisis durante la pubertad?
-  A) Estimular a las gónadas (ovarios y testículos) para producir gametos y secretar hormonas sexuales [CORRECTA]
+  A) Estimular a las gónadas (ovarios y testículos) para secretar hormonas sexuales e inducir caracteres secundarios [CORRECTA]
   B) Detener el crecimiento óseo para evitar un estirón excesivo en la adolescencia 
   C) Aumentar únicamente la temperatura corporal sin intervenir en la reproducción 
   D) Destruir los tejidos linfáticos y reemplazar el sistema inmunitario 
-• Explicacion Formativa del Error: "FSH y LH son gonadotrofinas hipofisarias que activan la maduración de gametos y la síntesis de esteroides sexuales en las gónadas."
+• Explicacion Formativa del Error: "FSH y LH son gonadotrofinas hipofisarias que estimulan a las gónadas para secretar hormonas sexuales (estrógenos, progesterona y testosterona), induciendo la aparición de los caracteres sexuales secundarios en la pubertad."
 
 Pregunta 2: Un estudiante lee en internet que 'el consentimiento otorgado verbalmente una vez compromete para siempre'. ¿Por qué esta afirmación es éticamente nula y falsa?
   A) Porque el consentimiento es por definición continuo y revocable en cualquier momento si la persona decide cambiar de opinión [CORRECTA]
@@ -1965,8 +1966,8 @@ Pregunta 3: La afirmación 'la diversidad de edades en la aparición del botón 
 [PASO 7B: MODULO DE RECUPERACION FORMATIVA]
 --------------------------------------------------------------------------------
 Refuerzo 1 (Recuperación: El Enfoque Integral de la Sexualidad):
-• Explicacion Previa: "El enfoque formativo enfatiza que la sexualidad no es únicamente un fenómeno de órganos y hormonas. Comprende cómo nos sentimos, cómo nos relacionamos con los demás, nuestros valores éticos y el respeto por los derechos humanos de cada individuo (Texto del Estudiante Edición SM, pág. 16)."
-• Pregunta: "¿Qué dimensiones articulan didácticamente la sexualidad humana como organizador de esta unidad (Edición SM, pág. 16)?"
+• Explicacion Previa: "El enfoque formativo enfatiza que la sexualidad no es únicamente un fenómeno de órganos y hormonas. Comprende cómo nos sentimos, cómo nos relacionamos con los demás, nuestros valores éticos y el respeto por los derechos humanos de cada individuo (Texto del Estudiante Edición SM, Unidad 4, Lección 8, págs. 114 a 137, inicio temático pág. 116)."
+• Pregunta: "¿Qué dimensiones articulan didácticamente la sexualidad humana como organizador de esta unidad (Edición SM, Unidad 4, Lección 8, págs. 114 a 137)?"
 • Opciones: Únicamente la dimensión biológica y la reproducción en la etapa adulta | Biológica, afectiva, social y ética a lo largo de toda la vida | Exclusivamente la dimensión económica y laboral | Solamente los cambios anatómicos visibles en la adolescencia
 • Respuesta Correcta: Biológica, afectiva, social y ética a lo largo de toda la vida
 • Refuerzo si falla: "Recuerda que la sexualidad es un fenómeno integral con 4 dimensiones inseparables, no solo biología."

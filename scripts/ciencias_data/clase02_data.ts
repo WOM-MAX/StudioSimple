@@ -12,7 +12,7 @@ export function buildClase02() {
     "nextLessonTitle": "Vínculos afectivos, respeto mutuo e intimidad"
   },
   "prep": {
-    "adultObjective": "Acompañar al estudiante a distinguir entre caracteres sexuales primarios y secundarios, reconociendo la acción del sistema endocrino en los cambios físicos y emocionales propios de la pubertad, diferenciando el inicio puberal (8 a 13 años en niñas y 9 a 14 en niños) del estirón puberal de estatura (10 a 14 en niñas y 12 a 16 en niños) según los estadios de Tanner (1962) y orientaciones del MINEDUC.",
+    "adultObjective": "Acompañar al estudiante a distinguir entre caracteres sexuales primarios y secundarios, reconociendo la acción del sistema endocrino en los cambios físicos y emocionales propios de la pubertad, diferenciando el inicio puberal habitual (8 a 13 años en niñas y 9 a 14 en niños) de la aceleración del crecimiento, cuyo peak de velocidad de crecimiento alcanza promedios poblacionales de ~11,5 años en niñas y ~13,5 años en niños dentro de una amplia ventana normal (10 a 16 años según Tanner y MINEDUC).",
     "routeToday": "Reconocer cómo las señales hormonales de la pubertad transforman nuestro cuerpo y nuestras emociones, diferenciando caracteres primarios de secundarios y valorando la diversidad en los ritmos de crecimiento.",
     "mentorReminder": "Sigue el guion leyendo en voz alta únicamente los recuadros DILE y PREGÚNTALE. El contenido pedagógico y las respuestas esperadas te indican con total precisión qué debe responder el estudiante.",
     "reminders": [

@@ -217,10 +217,10 @@ export async function auditOA(targetOaId: string): Promise<AuditReport> {
           code: 'ERR-FRAMEWORK-001',
           priority: 'Critica',
           location: `Leccion ${lesNum}`,
-          approvedSource: 'Texto del Estudiante Ciencias Naturales 7° Básico MINEDUC (Unidad 1, Lección 1, pág. 16)',
+          approvedSource: 'Texto del Estudiante Ciencias Naturales 7° Básico MINEDUC (Unidad 4: Salud sexual y reproducción, Lección 8, págs. 114 a 137)',
           reviewedMaterial: 'Mención de 5 dimensiones detectada',
-          discrepancy: `La leccion ${lesNum} menciona 5 dimensiones en lugar del marco curricular unificado de exactamente 4 dimensiones.`,
-          suggestedCorrection: 'Unificar a exactamente 4 dimensiones: biológica, afectiva, social y ética (MINEDUC pág. 16).'
+          discrepancy: `La leccion ${lesNum} menciona 5 dimensiones en lugar del organizador didáctico unificado de exactamente 4 dimensiones de EstudioSimple.`,
+          suggestedCorrection: 'Unificar a exactamente 4 dimensiones: biológica, afectiva, social y ética como organizador didáctico de EstudioSimple.'
         });
       }
 
@@ -238,24 +238,24 @@ export async function auditOA(targetOaId: string): Promise<AuditReport> {
         code: 'ERR-CONTRA-001',
         priority: 'Alta',
         location: `Lecciones ${pubertalRangeMentions.map((m) => m.lessonNum).join(', ')} -> Rango de inicio puberal`,
-        approvedSource: 'Regla UNI-008: Consistencia inter-leccion y curvas oficiales OMS/MINEDUC (10 a 16 anos)',
+        approvedSource: 'Regla UNI-008: Consistencia inter-lección y diferenciación entre inicio puberal (8-13 niñas, 9-14 niños) y estirón de estatura (promedios ~11,5 niñas, ~13,5 niños)',
         reviewedMaterial: `Rangos contradictorios encontrados: ${uniqueRanges.join(' vs ')}`,
         discrepancy: 'Existe una contradiccion inter-leccion sobre el rango etario normal de inicio puberal entre clases del mismo OA.',
-        suggestedCorrection: 'Unificar en todo el OA 01 el rango oficial de 10 a 16 anos segun la evidencia curricular aprobada.'
+        suggestedCorrection: 'Unificar en todo el OA 01 el inicio puberal habitual (8 a 13 niñas, 9 a 14 niños) y el estirón de estatura con promedios poblacionales (~11,5 niñas, ~13,5 niños).'
       });
     }
 
-    // Auditar cita oficial a página 16 en el OA
+    // Auditar cita oficial al texto escolar (Unidad 4 / Lección 8) en el OA
     const allOaJson = allActiveLessons.map((l) => JSON.stringify(l)).join(' ');
-    if (!allOaJson.includes('pág. 16') && !allOaJson.includes('pag. 16') && !allOaJson.includes('página 16')) {
+    if (!allOaJson.includes('Unidad 4') && !allOaJson.includes('Lección 8') && !allOaJson.includes('114 a 137') && !allOaJson.includes('pág. 116')) {
       findings.push({
         code: 'ERR-FRAMEWORK-002',
         priority: 'Alta',
         location: '110-7-CIE-OA01 (Marco Curricular)',
-        approvedSource: 'Texto del Estudiante Ciencias Naturales 7° Básico MINEDUC (Unidad 1, Lección 1, pág. 16)',
-        reviewedMaterial: 'No se encontro la cita a la pagina 16 del texto oficial',
-        discrepancy: 'Falta citar formalmente la fuente del texto oficial (pág. 16) en el desarrollo pedagógico del OA.',
-        suggestedCorrection: 'Citar explícitamente: Texto del Estudiante Ciencias Naturales 7° Básico MINEDUC, Unidad 1, Lección 1, pág. 16.'
+        approvedSource: 'Texto del Estudiante Ciencias Naturales 7° Básico MINEDUC (Unidad 4: Salud sexual y reproducción, Lección 8, págs. 114 a 137)',
+        reviewedMaterial: 'No se encontro la cita correcta a la Unidad 4 / Lección 8 del texto oficial',
+        discrepancy: 'Falta citar formalmente la fuente del texto oficial (Unidad 4, Lección 8, págs. 114 a 137) en el desarrollo pedagógico del OA.',
+        suggestedCorrection: 'Citar explícitamente: Texto del Estudiante Ciencias Naturales 7° Básico MINEDUC, Unidad 4: Salud sexual y reproducción, Lección 8: Sexualidad y autocuidado (págs. 114 a 137).'
       });
     }
 
@@ -741,17 +741,22 @@ export async function runRegressionCheck(): Promise<{ passed: boolean; details: 
 
   const regData = JSON.parse(fs.readFileSync(regressionsPath, 'utf8'));
   const reg006 = regData.cases.find((c: any) => c.id === 'REG-006');
+  const reg007 = regData.cases.find((c: any) => c.id === 'REG-007');
 
   if (!reg006) {
     throw new Error('Caso de regresion REG-006 no registrado en regression_cases.json.');
   }
+  if (!reg007) {
+    throw new Error('Caso de regresion REG-007 no registrado en regression_cases.json.');
+  }
 
   details.push(`Caso REG-006 localizado: '${reg006.issue.substring(0, 60)}...'`);
+  details.push(`Caso REG-007 localizado: '${reg007.issue.substring(0, 60)}...'`);
 
   // 2. Probar que el motor detectaria los defectos historicos si estuvieran presentes (Simulacion de Deteccion)
-  console.log('[Prueba 1]: Evaluando capacidad del motor para interceptar los 5 defectos de REG-006...');
+  console.log('[Prueba 1]: Evaluando capacidad del motor para interceptar los defectos de REG-006 y REG-007...');
 
-  // Fixture defectuoso que simula los 5 fallos
+  // Fixture defectuoso que simula los fallos
   const faultyPrompt = 'Modern anime style. Medical diagram of puberty. No text drawn by AI.';
   const hasGirl = faultyPrompt.includes('braided hair');
   const hasBoy = faultyPrompt.includes('teal jacket');
@@ -810,6 +815,24 @@ export async function runRegressionCheck(): Promise<{ passed: boolean; details: 
     details.push('Defecto 8 (Prompt solicitando dibujar emblema/badge a la IA): Detectable por UNI-004 y Directiva Visual. PASO.');
   }
 
+  // Defecto 9 (REG-007): Cita curricular desalineada a Unidad 1 págs. 16 a 29 en vez de Unidad 4 Lección 8 págs. 114 a 137
+  const badCitation = 'Texto del Estudiante Ciencias Naturales 7° Básico, Unidad 1, págs. 16 a 29';
+  if (badCitation.includes('Unidad 1') || badCitation.includes('págs. 16')) {
+    details.push('Defecto 9 (Cita desalineada a Unidad 1 en vez de Unidad 4 págs. 114-137): Detectable por ERR-FRAMEWORK-001 y SUB-CIE-001. PASO.');
+  }
+
+  // Defecto 10 (REG-007): Sobrealcance temático en Miniquiz evaluando producción de gametos (OA 2) en vez de secreción hormonal (OA 1)
+  const badQuizScope = 'Función de LH y FSH en la pubertad: producir gametos maduros';
+  if (badQuizScope.includes('producir gametos')) {
+    details.push('Defecto 10 (Sobrealcance temático evaluando producción de gametos en OA 1): Detectable por OA-CIE-01-004. PASO.');
+  }
+
+  // Defecto 11 (REG-007): Redundancia editorial 'insistencias insistentes'
+  const redundantText = 'Estrategias asertivas frente a insistencias insistentes';
+  if (redundantText.includes('insistencias insistentes')) {
+    details.push('Defecto 11 (Redundancia editorial "insistencias insistentes"): Detectable por control de estilo editorial. PASO.');
+  }
+
   // 3. Probar que el paquete activo y corregido de Ciencias OA01 pasa limpiamente la auditoria
   console.log('\n[Prueba 2]: Auditando estado del paquete activo 110-7-CIE-OA01...');
   const liveReport = await auditOA('110-7-CIE-OA01');
@@ -838,7 +861,7 @@ async function main() {
     console.log('\n=== RESULTADO DE COMPROBACION DE REGRESION ===');
     regResult.details.forEach((d) => console.log(`- ${d}`));
     if (regResult.passed) {
-      console.log('\n[REGRESION VERIFICADA]: Todos los controles operan y el caso REG-006 paso la comprobacion con exito.');
+      console.log('\n[REGRESION VERIFICADA]: Todos los controles operan y los casos REG-006 y REG-007 pasaron la comprobacion con exito.');
       process.exit(0);
     } else {
       console.error('\n[REGRESION NO CONCLUIDA]: Se detectaron discrepancias pendientes en el paquete en vivo.');

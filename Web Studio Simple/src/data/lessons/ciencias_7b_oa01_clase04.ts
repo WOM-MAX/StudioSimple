@@ -96,7 +96,7 @@ export const CIENCIAS_7B_OA01_CLASE04: LessonData = {
     ]
   },
   "reference": {
-    "dilePrompt": "El consentimiento es la manifestación libre, voluntaria, clara y consciente de aceptar o no una situación, contacto o propuesta. Un consentimiento real jamás se obtiene mediante amenazas, engaños o insistencias insistentes.",
+    "dilePrompt": "El consentimiento es la manifestación libre, voluntaria, clara y consciente de aceptar o no una situación, contacto o propuesta. Un consentimiento real jamás se obtiene mediante amenazas, engaños o presiones indebidas.",
     "question": "Con tus propias palabras: ¿cuáles son las características que hacen que un consentimiento sea verdaderamente válido?",
     "expectedAnswer": "Debe ser completamente libre (sin presiones ni miedos), consciente (sabiendo lo que ocurre), explícito y revocable (se puede cambiar de opinión en cualquier momento).",
     "socraticHint": "Piensa si un 'sí' dicho por miedo o por cansancio ante tanta insistencia es realmente libre.",
@@ -284,7 +284,7 @@ export const CIENCIAS_7B_OA01_CLASE04: LessonData = {
         "overlaySubtitle": "Libre, informado, específico y revocable",
         "vectorialOverlayPptx": "Pauta de verificación: Sin presión (Libre) + Con conocimiento (Informado) + Concreto (Específico) + Modificable (Revocable)",
         "mathOverlayPptx": "Pauta de verificación: Sin presión (Libre) + Con conocimiento (Informado) + Concreto (Específico) + Modificable (Revocable)",
-        "speakerNotes": "El segundo criterio exige que sea informado: conocer con claridad qué se propone y qué consecuencias tiene. El tercer criterio establece que sea específico para cada momento.",
+        "speakerNotes": "El consentimiento válido requiere cuatro condiciones ineludibles: ser libre de presiones, plenamente informado, específico para la situación concreta y revocable en cualquier momento.",
         "palabrasAprox": 27,
         "duracionSeg": 12
       },
@@ -298,7 +298,7 @@ export const CIENCIAS_7B_OA01_CLASE04: LessonData = {
         "overlaySubtitle": "Expresar límites sin agresividad ni sumisión",
         "vectorialOverlayPptx": "Triángulo comunicativo: Pasivo (someterse) vs Agresivo (atacar) vs Asertivo (afirmar límites con respeto)",
         "mathOverlayPptx": "Triángulo comunicativo: Pasivo (someterse) vs Agresivo (atacar) vs Asertivo (afirmar límites con respeto)",
-        "speakerNotes": "El cuarto criterio es decisivo: el consentimiento es revocable. Cualquier persona tiene derecho a cambiar de opinión y detener una actividad cuando lo decida.",
+        "speakerNotes": "La asertividad es la capacidad de expresar límites y decisiones de manera clara, serena y firme, sin agredir a otros ni someterse a presiones grupales contrarias a nuestras convicciones.",
         "palabrasAprox": 24,
         "duracionSeg": 11
       },
@@ -306,13 +306,13 @@ export const CIENCIAS_7B_OA01_CLASE04: LessonData = {
         "slideNumber": 5,
         "tituloMomento": "Responsabilidad y Consecuencias",
         "didacticPurpose": "Responsabilidad y Consecuencias",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, visualizing a glowing circle of trust with school counselors, teachers, and parents forming a protective network, with generous negative space for text overlays. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, pausing thoughtfully before a decision pathway flowchart, carefully weighing causes and consequences of actions, with generous negative space for text overlays. No text drawn by AI.",
         "overlayText": "Decisiones Informadas y Futuro",
         "overlayTitle": "Pensar antes de actuar",
         "overlaySubtitle": "Evaluar consecuencias a corto y largo plazo",
         "vectorialOverlayPptx": "Matriz de discernimiento: Estimar riesgos potenciales -> Proteger la salud -> Actuar éticamente",
         "mathOverlayPptx": "Matriz de discernimiento: Estimar riesgos potenciales -> Proteger la salud -> Actuar éticamente",
-        "speakerNotes": "La asertividad es la habilidad de expresar límites con firmeza y respeto. Reconocer situaciones de riesgo y pedir apoyo a docentes o apoderados refuerza la seguridad.",
+        "speakerNotes": "Pensar antes de actuar implica evaluar las consecuencias individuales y sociales de nuestras acciones; la responsabilidad personal exige cuidar la propia integridad y la de los demás.",
         "palabrasAprox": 26,
         "duracionSeg": 12
       },

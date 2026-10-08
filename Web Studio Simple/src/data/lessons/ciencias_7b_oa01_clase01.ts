@@ -13,7 +13,7 @@ export const CIENCIAS_7B_OA01_CLASE01: LessonData = {
     "nextLessonTitle": "Transformaciones físicas y emocionales en la pubertad"
   },
   "prep": {
-    "adultObjective": "Guiar al estudiante a comprender que la sexualidad humana es una vivencia integral organizada didácticamente en cuatro dimensiones fundamentales: biológica, afectiva, social y ética, articulando los aspectos curriculares del Texto Escolar Ciencias Naturales 7° Básico MINEDUC (Edición SM, Unidad 1, Lección 1, págs. 16 a 29) con valores de respeto mutuo y responsabilidad personal, superando la visión reducida a lo reproductivo.",
+    "adultObjective": "Guiar al estudiante a comprender que la sexualidad humana es una vivencia integral organizada didácticamente en cuatro dimensiones fundamentales: biológica, afectiva, social y ética, articulando los aspectos curriculares del Texto Escolar Ciencias Naturales 7° Básico MINEDUC (Edición SM, Unidad 4: Salud sexual y reproducción, Lección 8: Sexualidad y autocuidado, págs. 114 a 137, inicio temático pág. 116) con valores de respeto mutuo y responsabilidad personal, superando la visión reducida a lo reproductivo.",
     "routeToday": "Reconocer e interrelacionar las dimensiones biológica, afectiva, social y ética en situaciones reales de la vida cotidiana.",
     "mentorReminder": "Sigue el guion leyendo en voz alta únicamente los recuadros DILE y PREGÚNTALE. El contenido pedagógico y las respuestas esperadas te indican con total precisión qué debe responder el estudiante para que no tengas que estudiar previamente.",
     "reminders": [

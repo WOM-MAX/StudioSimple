@@ -163,8 +163,8 @@
         "name": "Enfoque de Indagacion y Marco de 4 Dimensiones",
         "scope": "subject",
         "subject": "Ciencias Naturales",
-        "description": "Abordar los fenomenos biologicos articulando observacion, explicacion causal y el marco canonico de exactamente cuatro dimensiones de la sexualidad humana (biologica, afectiva, social y etica) segun el Texto del Estudiante Ciencias Naturales 7° Basico MINEDUC (Unidad 1, Leccion 1, pag. 16), evitando reduccionismos y clasificaciones contradictorias.",
-        "source": "Texto del Estudiante Ciencias Naturales 7° Básico MINEDUC (pág. 16)"
+        "description": "Abordar los fenomenos biologicos articulando observacion, explicacion causal y el marco didactico canonico de exactamente cuatro dimensiones de la sexualidad humana (biologica, afectiva, social y etica) como organizador pedagogico de EstudioSimple articulado con la Unidad 4 (Leccion 8, pags. 114 a 137) del Texto del Estudiante Ciencias Naturales 7° Basico MINEDUC, evitando reduccionismos y clasificaciones contradictorias.",
+        "source": "Texto del Estudiante Ciencias Naturales 7° Básico MINEDUC (Unidad 4, Lección 8, págs. 114 a 137)"
       },
       {
         "id": "SUB-CIE-002",
@@ -222,15 +222,23 @@
         "scope": "oa",
         "oaId": "110-7-CIE-OA01",
         "description": "La leccion 4 debe explicitar y evaluar que el consentimiento debe ser libre, informado, especifico y revocable.",
-        "source": "Texto del Estudiante MINEDUC Ciencias 7° Básico, Unidad 1"
+        "source": "Texto del Estudiante MINEDUC Ciencias 7° Básico, Unidad 4 (Lección 8)"
       },
       {
         "id": "OA-CIE-01-003",
         "name": "Diferenciacion Puberal Fisiologica y Variabilidad Normal",
         "scope": "oa",
         "oaId": "110-7-CIE-OA01",
-        "description": "Diferenciar el inicio de la pubertad (8 a 13 anos en ninas, 9 a 14 anos en ninos) del estiron puberal (10 a 14 anos en ninas, 12 a 16 anos en ninos) con respaldo cientifico de los estadios de Tanner (1962) y MINEDUC/OMS, sin presentar promedios como absolutos.",
-        "source": "Estadios de Tanner (1962), Curvas OMS y MINEDUC Ciencias 7° Básico"
+        "description": "Diferenciar el inicio habitual de la pubertad (8 a 13 anos en ninas, 9 a 14 anos en ninos como referencia) del peak de velocidad de crecimiento en estatura (promedios poblacionales de aproximadamente 11,5 anos en ninas y 13,5 anos en ninos) con respaldo cientifico de los estadios de Tanner (1962), MedlinePlus y MINEDUC, sin presentar promedios como limites universales dogmaticos.",
+        "source": "Estadios de Tanner (1962), MedlinePlus, Curvas OMS y MINEDUC Ciencias 7° Básico (Unidad 4)"
+      },
+      {
+        "id": "OA-CIE-01-004",
+        "name": "Alineacion Tematica de Prompts Visuales y Delimitacion de Alcance con OA 2",
+        "scope": "oa",
+        "oaId": "110-7-CIE-OA01",
+        "description": "Garantizar que todos los prompts visuales correspondan fielmente al contenido de cada diapositiva (dialogo familiar en el hogar para Clase 3 Gancho D6; reciprocidad/intimidad para Clase 3 Expl D3/D4; pausa reflexiva ante flujograma de decisiones para Clase 4 Expl D5; factores biologicos de crecimiento y superacion de estereotipos en robotica/arte para Clase 5 Expl D3/D4; anatomia del reactivo, descarte sistematico, justificacion en cuaderno y compostura emocional para Clase 6 Gancho D3-D6). En la evaluacion de Clase 6, LH y FSH deben orientarse a la activacion de gonadas para secretar hormonas sexuales y caracteres secundarios en la pubertad, delimitando la gametogenesis y fecundacion para el OA 2.",
+        "source": "Bases Curriculares MINEDUC Ciencias 7° Básico (OA 1 vs OA 2) y Auditoría de Coherencia EstudioSimple"
       }
     ]
   }

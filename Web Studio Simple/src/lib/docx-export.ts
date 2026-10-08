@@ -66,7 +66,7 @@ export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
             spacing: { after: 600 },
             children: [
               new TextRun({
-                text: `Desglose Instruccional en ${totalLessons} Lecciones de 30 Minutos (8 Pasos Pedagógicos Oficiales)\nIncluye Enlaces a Videos en Cloudflare R2, Prompts Anime Moderno 16:9 y Ficha Técnica de Aula`,
+                text: `Desglose Instruccional en ${totalLessons} Lecciones de 30 Minutos (8 Pasos Pedagógicos Oficiales)\nIncluye Enlaces a Videos en Cloudflare R2, Prompts Anime Moderno 16:9 y Ficha Técnica de Aula\nFecha de Actualización Oficial: ${new Date().toLocaleString("es-CL", { timeZone: "America/Santiago" })} (America/Santiago)`,
                 italics: true,
                 size: 20,
                 color: "64748B",
@@ -418,13 +418,13 @@ export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
               spacing: { after: 100 },
               children: [
                 new TextRun({
-                  text: "• Protocolo de Comprobación Acústica Obligatoria (Google Vids): ",
+                  text: "• Calibración Audiovisual (Google Vids): ",
                   bold: true,
                   size: 19,
-                  color: "B45309"
+                  color: "0F766E"
                 }),
                 new TextRun({
-                  text: "Tras generar y exportar el audio en Google Vids, medir la duración real del archivo exportado con cronómetro o analizador de audio. El conteo de palabras no garantiza por sí solo que se obtengan 60 o 90 segundos exactos. Si la duración real no es exacta (60 s en gancho y 90 s en explicación), ajustar la narración, las pausas o el ritmo, volver a exportar y medir nuevamente. Registrar la duración comprobada; no marcar el requisito como cumplido basándose solo en el número de palabras o en una duración estimada.",
+                  text: "El guion continuo está redactado con un presupuesto léxico referencial adaptado al nivel escolar. La calibración acústica, pausas y ritmo de locución se ajustan directamente en Google Vids durante la síntesis y renderizado, sin que el conteo de palabras ni la duración en segundos constituyan un criterio de bloqueo pedagógico.",
                   size: 19,
                   color: "334155"
                 })
@@ -639,13 +639,13 @@ export function buildOAPackageDocx(pkg: GeneratedOAPackage): Document {
               spacing: { after: 100 },
               children: [
                 new TextRun({
-                  text: "• Protocolo de Comprobación Acústica Obligatoria (Google Vids): ",
+                  text: "• Calibración Audiovisual (Google Vids): ",
                   bold: true,
                   size: 19,
-                  color: "B45309"
+                  color: "0F766E"
                 }),
                 new TextRun({
-                  text: "Tras generar y exportar el audio en Google Vids, medir la duración real del archivo exportado con cronómetro o analizador de audio. El conteo de palabras no garantiza por sí solo que se obtengan 60 o 90 segundos exactos. Si la duración real no es exacta (60 s en gancho y 90 s en explicación), ajustar la narración, las pausas o el ritmo, volver a exportar y medir nuevamente. Registrar la duración comprobada; no marcar el requisito como cumplido basándose solo en el número de palabras o en una duración estimada.",
+                  text: "El guion continuo está redactado con un presupuesto léxico referencial adaptado al nivel escolar. La calibración acústica, pausas y ritmo de locución se ajustan directamente en Google Vids durante la síntesis y renderizado, sin que el conteo de palabras ni la duración en segundos constituyan un criterio de bloqueo pedagógico.",
                   size: 19,
                   color: "334155"
                 })

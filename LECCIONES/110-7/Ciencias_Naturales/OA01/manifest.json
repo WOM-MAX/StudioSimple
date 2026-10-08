@@ -10,8 +10,8 @@
   "fuente_oficial_unica_docx": {
     "archivo": "Plan_Maestro_7Básico_110-7-CIE-OA01_6Lecciones.docx",
     "rol": "Unica fuente oficial de produccion de lecciones y prompts",
-    "sha256": "1e1f7b6ac7c73ea7718bbe799bcedd27be83d61e28b3719e07184bcf72759327",
-    "bytes": 76388
+    "sha256": "3792cd43c2d0108c63560250a7df556f1c64a0ef3043bcd2a1894e3f81c11209",
+    "bytes": 76025
   },
   "prompts_asociados": {
     "archivo": "Prompts_Work_Ciencias_7B_OA01.txt",
@@ -30,7 +30,7 @@
     },
     "insumos_mineduc": {
       "texto_estudiante_pdf": "INSUMOS/LIBROS DIGITALES Y GUÍAS/110-7/Ciencias Naturales.pdf",
-      "unidad_y_paginas": "Unidad 1: Sexualidad y Afectividad, Lección 1 (pág. 16 a 29)",
+      "unidad_y_paginas": "Unidad 4: Salud sexual y reproducción, Lección 8: Sexualidad y autocuidado (págs. 114 a 137)",
       "banco_digital_actividades": "INSUMOS/LIBROS DIGITALES Y GUÍAS/110-7/BDA_CNA_7B/",
       "resumen_oficial": "INSUMOS/RESUMENES/110-7/RESUMEN CIENCIAS NATURALES.pdf",
       "ensayos_oficiales": "INSUMOS/ENSAYOS/110-7/CIENCIAS NATURALES.pdf"

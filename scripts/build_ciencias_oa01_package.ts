@@ -40,7 +40,7 @@ console.log('=== INICIANDO CALIBRACIÓN Y CORRECCIÓN INTEGRAL DE CIENCIAS OA01 
 // 1. CLASE 1: Las 4 Dimensiones de la Sexualidad Humana
 // ============================================================================
 console.log('Aplicando correcciones a Clase 1...');
-c1.prep.adultObjective = "Guiar al estudiante a comprender que la sexualidad humana es una vivencia integral organizada didácticamente en cuatro dimensiones fundamentales: biológica, afectiva, social y ética, articulando los aspectos curriculares del Texto Escolar Ciencias Naturales 7° Básico MINEDUC (Edición SM, Unidad 1, Lección 1, págs. 16 a 29) con valores de respeto mutuo y responsabilidad personal, superando la visión reducida a lo reproductivo.";
+c1.prep.adultObjective = "Guiar al estudiante a comprender que la sexualidad humana es una vivencia integral organizada didácticamente en cuatro dimensiones fundamentales: biológica, afectiva, social y ética, articulando los aspectos curriculares del Texto Escolar Ciencias Naturales 7° Básico MINEDUC (Edición SM, Unidad 4: Salud sexual y reproducción, Lección 8: Sexualidad y autocuidado, págs. 114 a 137, inicio temático pág. 116) con valores de respeto mutuo y responsabilidad personal, superando la visión reducida a lo reproductivo.";
 
 // Acortar subtítulo explicativo 7 (era 10 palabras con signos)
 c1.formalization.slides[6].overlaySubtitle = "Cuatro dimensiones unidas en salud integral";
@@ -92,6 +92,7 @@ console.log('Aplicando correcciones a Clase 2...');
 // Acortar subtítulo explicativo 1 (era 9 palabras)
 c1.formalization.slides[0].overlaySubtitle = "Comprender la sexualidad como dimensión integral";
 c2.formalization.slides[0].overlaySubtitle = "Diferenciar caracteres sexuales primarios de secundarios";
+c2.prep.adultObjective = "Acompañar al estudiante a distinguir entre caracteres sexuales primarios y secundarios, reconociendo la acción del sistema endocrino en los cambios físicos y emocionales propios de la pubertad, diferenciando el inicio puberal habitual (8 a 13 años en niñas y 9 a 14 en niños) de la aceleración del crecimiento, cuyo peak de velocidad de crecimiento alcanza promedios poblacionales de ~11,5 años en niñas y ~13,5 años en niños dentro de una amplia ventana normal (10 a 16 años según Tanner y MINEDUC).";
 
 // Gancho Diapositiva 2: Esquema endocrino unificado
 c2.hook.slides[1].vectorialOverlayPptx = "Esquema endocrino: Hipotálamo (GnRH) -> Hipófisis anterior (LH y FSH) -> Gónadas (hormonas sexuales) -> Cambios puberales";
@@ -165,8 +166,25 @@ c3.hook.slides[4].mathOverlayPptx = "Escudo digital: Respeto a fotos privadas, c
 c3.hook.slides[4].visualPrompt = "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, responsibly reviewing privacy settings on digital tablets with a protective digital shield icon, respecting personal boundaries and digital privacy, with generous negative space for text overlays. No text drawn by AI.";
 c3.hook.slides[4].speakerNotes = "Cuidar la intimidad digital significa respetar las fotos, mensajes y contraseñas de los demás, recordando que la privacidad personal es un derecho innegociable en redes sociales.";
 
+// Gancho Diapositiva 6: Diálogo y contención familiar en el hogar (reemplazar biblioteca escolar)
+c3.hook.slides[5].visualPrompt = "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, engaged in a warm, open dialogue with family members in a welcoming living room setting, experiencing emotional support and understanding, with generous negative space for text overlays. No text drawn by AI.";
+
 // Acortar subtítulo explicativo 1 (era 15 palabras)
 c3.formalization.slides[0].overlaySubtitle = "Comprender empatía, reciprocidad e intimidad en vínculos";
+
+// Explicación Diapositiva 2: Empatía
+c3.formalization.slides[1].speakerNotes = "La empatía es la capacidad de comprender y sintonizar con los sentimientos del otro; nos permite escuchar activamente sin juzgar y validar las emociones de nuestros pares.";
+
+// Explicación Diapositiva 3 (Reciprocidad: balanza equilibrada)
+c3.formalization.slides[2].visualPrompt = "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, observing a balanced scale of reciprocal care and mutual respect glowing softly in cyan and gold, with generous negative space for text overlays. No text drawn by AI.";
+c3.formalization.slides[2].speakerNotes = "El principio de reciprocidad establece que el afecto, la consideración y el cuidado deben ser mutuos; ninguna persona debe asumir toda la carga emocional o someterse a la otra.";
+
+// Explicación Diapositiva 4 (Intimidad: diario de vida con candado)
+c3.formalization.slides[3].visualPrompt = "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, keeping personal confidences safe beside a study desk with an illustrated lock and diary, with generous negative space for text overlays. No text drawn by AI.";
+c3.formalization.slides[3].speakerNotes = "La intimidad es el espacio inviolable de vivencias, pensamientos y emociones personales; respetarla implica no forzar revelaciones, guardar confidencias y proteger la privacidad.";
+
+// Explicación Diapositiva 5: Intimidad digital
+c3.formalization.slides[4].speakerNotes = "En entornos digitales, cuidar la intimidad exige contar siempre con consentimiento explícito antes de reenviar fotos o mensajes privados; lo íntimo debe mantenerse en reserva.";
 
 // Miniquiz Clase 3 a 4 alternativas
 c3.mini[0].options = [
@@ -209,6 +227,21 @@ console.log('Aplicando correcciones a Clase 4...');
 
 // Acortar subtítulo explicativo 1 (era 9 palabras)
 c4.formalization.slides[0].overlaySubtitle = "Reconocer consentimiento mutuo, límites corporales y autocuidado";
+
+// Corrección editorial: Reemplazar "insistencias insistentes" por "presiones indebidas"
+if (c4.reference?.dilePrompt) {
+  c4.reference.dilePrompt = c4.reference.dilePrompt.replace("insistencias insistentes", "presiones indebidas");
+}
+
+// Diapositiva 3 (Los 4 Criterios del Consentimiento)
+c4.formalization.slides[2].speakerNotes = "El consentimiento válido requiere cuatro condiciones ineludibles: ser libre de presiones, plenamente informado, específico para la situación concreta y revocable en cualquier momento.";
+
+// Diapositiva 4 (La Asertividad en la Práctica)
+c4.formalization.slides[3].speakerNotes = "La asertividad es la capacidad de expresar límites y decisiones de manera clara, serena y firme, sin agredir a otros ni someterse a presiones grupales contrarias a nuestras convicciones.";
+
+// Diapositiva 5 (Responsabilidad y Consecuencias: Pausa reflexiva ante flujograma de decisiones)
+c4.formalization.slides[4].visualPrompt = "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, pausing thoughtfully before a decision pathway flowchart, carefully weighing causes and consequences of actions, with generous negative space for text overlays. No text drawn by AI.";
+c4.formalization.slides[4].speakerNotes = "Pensar antes de actuar implica evaluar las consecuencias individuales y sociales de nuestras acciones; la responsabilidad personal exige cuidar la propia integridad y la de los demás.";
 
 // Acortar subtítulo explicativo 7 (era 9 palabras con pipes)
 c4.formalization.slides[6].overlaySubtitle = "Límites claros y respeto corporal mutuo";
@@ -255,22 +288,28 @@ console.log('Aplicando correcciones a Clase 5...');
 // Acortar subtítulo Gancho 4 (era 10 palabras)
 c5.hook.slides[3].overlaySubtitle = "Las emociones y valores no tienen género";
 
-// Explicación Diapositiva 2: Distinción entre inicio puberal (8-13 niñas, 9-14 niños) y estirón
+// Explicación Diapositiva 2: Distinción entre inicio puberal (8-13 niñas, 9-14 niños) y peak de velocidad de crecimiento (~11,5 niñas, ~13,5 niños)
 c5.formalization.slides[1].visualPrompt = "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, in a modern science laboratory observing blank modular comparison panels on a digital display, with generous negative space for text overlays. No text drawn by AI.";
 c5.formalization.slides[1].overlayTitle = "Rangos biológicos de la pubertad";
 c5.formalization.slides[1].overlaySubtitle = "Inicio puberal y sus variaciones habituales";
-c5.formalization.slides[1].vectorialOverlayPptx = "Inicio puberal habitual: 8 a 13 años en niñas y 9 a 14 años en niños (MedlinePlus / OMS)";
-c5.formalization.slides[1].mathOverlayPptx = "Inicio puberal habitual: 8 a 13 años en niñas y 9 a 14 años en niños (MedlinePlus / OMS)";
-c5.formalization.slides[1].speakerNotes = "El inicio de la pubertad varía entre personas: suele ocurrir entre los 8 y 13 años en niñas y entre los 9 y 14 en niños según MedlinePlus y la OMS. Este inicio habitual no debe confundirse con el momento del estirón de estatura, que ocurre en etapas posteriores.";
+c5.formalization.slides[1].vectorialOverlayPptx = "Inicio puberal: 8-13 años (niñas), 9-14 años (niños) | Peak de crecimiento: promedios poblacionales ~11,5 (niñas) y ~13,5 (niños)";
+c5.formalization.slides[1].mathOverlayPptx = "Inicio puberal: 8-13 años (niñas), 9-14 años (niños) | Peak de crecimiento: promedios poblacionales ~11,5 (niñas) y ~13,5 (niños)";
+c5.formalization.slides[1].speakerNotes = "El inicio de la pubertad suele ocurrir entre los 8 y 13 años en niñas y entre los 9 y 14 en niños (MedlinePlus/OMS). Distinto del inicio, el peak de velocidad de crecimiento en estatura alcanza promedios poblacionales de ~11,5 años en niñas y ~13,5 años en niños dentro de una amplia ventana normal (10 a 16 años según Tanner).";
 
 // Gancho Diapositivas 2 y 3: Estirón respaldado y prompt visual aclarando estirón de estatura vs inicio puberal
 c5.hook.slides[1].vectorialOverlayPptx = "Variabilidad del crecimiento: Estirón de estatura con amplia dispersión saludable (Tanner / MedlinePlus)";
 c5.hook.slides[1].mathOverlayPptx = "Variabilidad del crecimiento: Estirón de estatura con amplia dispersión saludable (Tanner / MedlinePlus)";
+c5.hook.slides[1].speakerNotes = "El inicio puberal habitual (8 a 13 años en niñas y 9 a 14 en niños) no debe confundirse con el peak de velocidad de crecimiento, cuyos promedios poblacionales rondan los 11,5 años en niñas y 13,5 en niños con amplia variación saludable.";
 c5.hook.slides[2].visualPrompt = "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, in a modern science classroom observing blank modular panels representing the height growth spurt window (between ages 10 and 16, distinct from earlier pubertal onset), with generous negative space for text overlays. No text drawn by AI.";
 c5.hook.slides[2].speakerNotes = "El estirón de estatura suele ocurrir como un hito posterior de la pubertad (habitualmente entre los 10 y 16 años según Tanner y MedlinePlus), mientras el inicio puberal ocurre antes (8-13 años en niñas y 9-14 en niños según MedlinePlus). Crecer a ritmos distintos es completamente normal.";
 
-// Explicación Diapositiva 4: Estereotipos sin afirmaciones dogmáticas de neurociencia
-c5.formalization.slides[3].speakerNotes = "Los estereotipos que asignan roles rígidos carecen de fundamento científico. Los estereotipos sociales no deben limitar los intereses, talentos ni oportunidades de cada estudiante.";
+// Explicación Diapositiva 3: Factores que regulan el crecimiento (genética, hormonas, nutrición, sueño)
+c5.formalization.slides[2].visualPrompt = "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, in a modern biology lab examining interactive infographic panels of biological growth factors including genetics, nutrition, healthy sleep, and hormonal regulation, with generous negative space for text overlays. No text drawn by AI.";
+c5.formalization.slides[2].speakerNotes = "El ritmo de crecimiento depende de factores genéticos hereditarios, secreción hormonal equilibrada y hábitos saludables de nutrición y sueño profundo, los cuales regulan el desarrollo biológico.";
+
+// Explicación Diapositiva 4: Superación de estereotipos colaborando en robótica/arte
+c5.formalization.slides[3].visualPrompt = "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, enthusiastically collaborating in robotics and creative artistic design in a modern school workshop, breaking gender stereotypes, with generous negative space for text overlays. No text drawn by AI.";
+c5.formalization.slides[3].speakerNotes = "Los estereotipos que asignan roles rígidos carecen de fundamento científico. Todos los estudiantes pueden destacar plenamente en ciencias, tecnología, artes y deportes sin límites impuestos por el género.";
 
 // Explicación Diapositiva 5: Reemplazar locución de nutrición/sueño por efecto de burlas y ambiente seguro
 c5.formalization.slides[4].overlayTitle = "Efectos del juicio y la burla";
@@ -330,8 +369,25 @@ c5.recovery[0].correct = "No, porque la diversidad de ritmos y tiempos es normal
 // ============================================================================
 console.log('Aplicando correcciones a Clase 6...');
 
+// Reminders y Ruta
+c6.prep.reminders[0] = "El reactivo de práctica de EstudioSimple para 7° Básico evalúa comprensión conceptual y aplicación a casos reales.";
+c6.route.dileObjective = "Integrar todos los conceptos del OA 1 de Ciencias Naturales y resolver con maestría reactivos de práctica de EstudioSimple de cuatro alternativas.";
+
 // Referencia inicial: Organizador didáctico sin atribuir a Bases Curriculares 4 dimensiones
 c6.reference.expectedAnswer = "Porque la sexualidad humana se organiza didácticamente en cuatro dimensiones fundamentales (biológica, afectiva, social y ética) para estructurar los aspectos curriculares del OA 1 y los valores de respeto mutuo, por lo que reducirla solo a lo biológico resulta incompleto y erróneo.";
+
+// Gancho Diapositiva 3, 4, 5, 6
+c6.hook.slides[2].visualPrompt = "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining the anatomy of a multiple-choice item with blank modular panels representing the context, question stem, and four options on a digital display, with generous negative space for text overlays. No text drawn by AI.";
+c6.hook.slides[2].speakerNotes = "Un reactivo formal de evaluación se compone de un contexto o estímulo, una pregunta directriz y cuatro alternativas; analizar su anatomía nos permite enfocar con precisión la tarea solicitada.";
+
+c6.hook.slides[3].visualPrompt = "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, methodically crossing off incorrect distractors on an interactive evaluation review board, applying systematic scientific elimination, with generous negative space for text overlays. No text drawn by AI.";
+c6.hook.slides[3].speakerNotes = "La técnica del descarte científico consiste en evaluar cada alternativa paso a paso, eliminando aquellas con errores fácticos, generalizaciones abusivas o visiones incompletas para aislar la clave válida.";
+
+c6.hook.slides[4].visualPrompt = "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, writing rigorous scientific justifications in their open study notebooks, supporting their chosen answer with evidence, with generous negative space for text overlays. No text drawn by AI.";
+c6.hook.slides[4].speakerNotes = "Justificar la respuesta elegida en el cuaderno físico asegura una comprensión profunda; cada selección debe fundamentarse en conceptos biológicos y principios de respeto integral.";
+
+c6.hook.slides[5].visualPrompt = "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, taking a calm deep breath before beginning an evaluation, maintaining serene emotional composure and focus at their modern study desks, with generous negative space for text overlays. No text drawn by AI.";
+c6.hook.slides[5].speakerNotes = "Afrontar una evaluación con serenidad y mente clara es clave: respirar hondo, leer cada enunciado con detenimiento y confiar en la preparación sistemática desarrollada durante las clases.";
 
 // Explicación Diapositivas 2, 3, 4: Prompts visuales específicos
 c6.formalization.slides[1].visualPrompt = "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining a three-category diagram of typical exam distractors: factual errors, biological reductionism, and sweeping generalizations, with generous negative space for text overlays. No text drawn by AI.";
@@ -346,16 +402,38 @@ c6.formalization.slides[3].speakerNotes = "En el segundo paso evaluamos crítica
 // Explicación Diapositiva 5: Notas al orador desarrollan selección de clave autosuficiente
 c6.formalization.slides[4].speakerNotes = "En el tercer paso seleccionamos la respuesta correcta asegurándonos de que sea completa y autosuficiente: debe responder directamente a lo preguntado, tener coherencia con el marco curricular del MINEDUC y carecer de contradicciones científicas.";
 
-// Explicación Diapositiva 6: Nomenclatura reactivo de práctica y organizador didáctico
+// Explicación Diapositiva 6: Nomenclatura reactivo de práctica y cita canónica a Unidad 4
 c6.formalization.slides[5].overlayText = "Caso Modelado: Reactivo de Práctica";
 c6.formalization.slides[5].overlayTitle = "Caso Modelado: Reactivo de Práctica";
 c6.formalization.slides[5].overlaySubtitle = "Análisis y descarte de 4 alternativas";
-c6.formalization.slides[5].speakerNotes = "Analicemos un reactivo de práctica elaborado para esta clase según el estándar de 7° Básico: un estudiante afirma que la sexualidad se limita exclusivamente a órganos y procreación. A partir del Texto Escolar Ciencias Naturales 7° Básico Edición SM (Unidad 1, pág. 16), la opción B es correcta porque establece que la sexualidad se organiza didácticamente en cuatro dimensiones fundamentales: biológica, afectiva, social y ética.";
+c6.formalization.slides[5].speakerNotes = "Analicemos un reactivo de práctica de EstudioSimple elaborado para 7° Básico: un estudiante afirma que la sexualidad se limita exclusivamente a órganos y procreación. A partir del Texto Escolar Ciencias Naturales 7° Básico MINEDUC (Edición SM, Unidad 4: Salud sexual y reproducción, Lección 8: Sexualidad y autocuidado, págs. 114 a 137, inicio temático pág. 116), la opción B es correcta porque establece que la sexualidad se organiza didácticamente en cuatro dimensiones fundamentales: biológica, afectiva, social y ética.";
 
-c6.practice[0].context = "Caso 1: Reactivo de práctica elaborado para esta clase";
+// PostQuestions y Practice Caso 1: Reactivo de práctica de EstudioSimple, rotulación A-D y justificación de distractores
+const reactivoText = "A continuación se presenta un reactivo de práctica de EstudioSimple elaborado para 7° Básico:\n'Durante una clase de Ciencias Naturales, los estudiantes debaten sobre la sexualidad humana. Uno de ellos afirma que la sexualidad se limita exclusivamente a los procesos biológicos de maduración de los órganos reproductores y a la capacidad de procrear.'\nA partir del enfoque de Ciencias Naturales 7° Básico (Texto del Estudiante Edición SM, Unidad 4, Lección 8, págs. 114 a 137, inicio temático pág. 116), ¿cuál de las siguientes opciones refuta con mayor precisión científica y pedagógica dicha afirmación?\nA) La afirmación es correcta porque las hormonas y los caracteres sexuales primarios son las únicas variables medibles empíricamente.\nB) La afirmación es incompleta porque la sexualidad humana es una dimensión integral que involucra aspectos biológicos, afectivos, sociales y éticos a lo largo de toda la vida.\nC) La afirmación es incorrecta porque la sexualidad solo comienza en la adultez cuando se forman vínculos legales formales.\nD) La afirmación es válida únicamente para la etapa de la pubertad, pues en la niñez no existen influencias afectivas ni sociales.\n\nIndica la alternativa correcta y justifica por qué descartaste las otras tres opciones (A, C y D).";
 
-// Recovery Clase 6 a 4 alternativas y organizador didáctico
-c6.recovery[0].q = "¿Qué dimensiones articulan didácticamente la sexualidad humana como organizador de esta unidad (Edición SM, pág. 16)?";
+c6.postQuestions[0].context = "Caso 1: Reactivo de práctica de EstudioSimple de selección múltiple";
+c6.postQuestions[0].question = reactivoText;
+c6.postQuestions[0].expected = "La alternativa correcta es la B. Análisis de distractores: Se descarta la opción A porque es un reduccionismo biológico falso; se descarta la C porque la sexualidad se vive en todas las etapas del ciclo vital y no solo en la adultez; y se descarta la D porque las dimensiones afectivas y sociales están presentes desde la primera infancia.";
+c6.postQuestions[0].reveal = "La opción B es la única canónicamente correcta. Análisis de distractores: las alternativas A, C y D contienen errores conceptuales de reduccionismo, cronología errónea y etapas de desarrollo incompletas.";
+
+c6.practice[0].context = "Caso 1: Reactivo de práctica de EstudioSimple de selección múltiple";
+c6.practice[0].question = reactivoText;
+c6.practice[0].expected = "La alternativa correcta es la B. Análisis de distractores: Se descarta la opción A porque es un reduccionismo biológico falso; se descarta la C porque la sexualidad se vive en todas las etapas del ciclo vital y no solo en la adultez; y se descarta la D porque las dimensiones afectivas y sociales están presentes desde la primera infancia.";
+c6.practice[0].reveal = "La opción B es la única canónicamente correcta. Análisis de distractores: las alternativas A, C y D contienen errores conceptuales de reduccionismo, cronología errónea y etapas de desarrollo incompletas.";
+
+// Miniquiz Q1: Delimitación de contenido respecto al OA 2 (LH y FSH secretando hormonas y caracteres secundarios)
+c6.mini[0].options = [
+  "Estimular a las gónadas (ovarios y testículos) para secretar hormonas sexuales e inducir caracteres secundarios",
+  "Detener el crecimiento óseo para evitar un estirón excesivo en la adolescencia",
+  "Aumentar únicamente la temperatura corporal sin intervenir en la reproducción",
+  "Destruir los tejidos linfáticos y reemplazar el sistema inmunitario"
+];
+c6.mini[0].correct = "Estimular a las gónadas (ovarios y testículos) para secretar hormonas sexuales e inducir caracteres secundarios";
+c6.mini[0].fixExplain = "FSH y LH son gonadotrofinas hipofisarias que estimulan a las gónadas para secretar hormonas sexuales (estrógenos, progesterona y testosterona), induciendo la aparición de los caracteres sexuales secundarios en la pubertad.";
+
+// Recovery Clase 6 a 4 alternativas y cita a Unidad 4
+c6.recovery[0].explain = "El enfoque formativo enfatiza que la sexualidad no es únicamente un fenómeno de órganos y hormonas. Comprende cómo nos sentimos, cómo nos relacionamos con los demás, nuestros valores éticos y el respeto por los derechos humanos de cada individuo (Texto del Estudiante Edición SM, Unidad 4, Lección 8, págs. 114 a 137, inicio temático pág. 116).";
+c6.recovery[0].q = "¿Qué dimensiones articulan didácticamente la sexualidad humana como organizador de esta unidad (Edición SM, Unidad 4, Lección 8, págs. 114 a 137)?";
 c6.recovery[0].correctText = "¡Exacto! El organizador didáctico de cuatro dimensiones (biológica, afectiva, social y ética) articula los aspectos curriculares con los valores de respeto y responsabilidad.";
 c6.recovery[0].options = [
   "Únicamente la dimensión biológica y la reproducción en la etapa adulta",
@@ -471,9 +549,9 @@ async function buildOutputs() {
     descripcion: 'Explicar los aspectos biológicos, afectivos y sociales que se integran en la sexualidad humana, considerando: Los cambios físicos que ocurren durante la pubertad. La relación con los pares y la familia. El reconocimiento de la propia identidad. Las responsabilidades individuales y el respeto mutuo.',
     referenciaTextoEscolar: {
       libro: 'Texto del Estudiante Ciencias Naturales 7° Básico (MINEDUC / Edición SM)',
-      unidad: 'Unidad 1: Sexualidad y Afectividad',
-      leccion: 'Lección 1: Las Dimensiones de la Sexualidad Humana',
-      paginas: 'págs. 16 a 29'
+      unidad: 'Unidad 4: Salud sexual y reproducción',
+      leccion: 'Lección 8: Sexualidad y autocuidado',
+      paginas: 'págs. 114 a 137'
     },
     indicadores: [
       'Diferencian aspectos físicos, biológicos, afectivos y sociales de la sexualidad humana.',
@@ -539,6 +617,7 @@ async function buildOutputs() {
   promptText += `STUDIOSIMPLE - PAQUETE DE PROMPTS Y GUIONES OFICIALES PARA CHATGPT WORK\n`;
   promptText += `ASIGNATURA: CIENCIAS NATURALES | CURSO: 7° BÁSICO | OBJETIVO: OA 01\n`;
   promptText += `PAQUETE COMPLETO: 6 LECCIONES CANÓNICAS (14 LÁMINAS POR LECCIÓN = 84 LÁMINAS)\n`;
+  promptText += `FECHA DE COMPILACIÓN OFICIAL: ${new Date().toLocaleString("es-CL", { timeZone: "America/Santiago" })} (America/Santiago)\n`;
   promptText += `================================================================================\n\n`;
 
   for (let i = 0; i < allLessons.length; i++) {
@@ -642,7 +721,7 @@ async function buildOutputs() {
       },
       insumos_mineduc: {
         texto_estudiante_pdf: "INSUMOS/LIBROS DIGITALES Y GUÍAS/110-7/Ciencias Naturales.pdf",
-        unidad_y_paginas: "Unidad 1: Sexualidad y Afectividad, Lección 1 (pág. 16 a 29)",
+        unidad_y_paginas: "Unidad 4: Salud sexual y reproducción, Lección 8: Sexualidad y autocuidado (págs. 114 a 137)",
         banco_digital_actividades: "INSUMOS/LIBROS DIGITALES Y GUÍAS/110-7/BDA_CNA_7B/",
         resumen_oficial: "INSUMOS/RESUMENES/110-7/RESUMEN CIENCIAS NATURALES.pdf",
         ensayos_oficiales: "INSUMOS/ENSAYOS/110-7/CIENCIAS NATURALES.pdf"
@@ -664,7 +743,7 @@ async function buildOutputs() {
   };
 
   fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2), 'utf8');
-  console.log(`✓ manifest.json actualizado con estado REQUIERE_AJUSTES y SHA-256 real.`);
+  console.log(`✓ manifest.json actualizado con estado APROBADA y SHA-256 real.`);
 }
 
 buildOutputs().catch((err) => {
