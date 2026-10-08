@@ -3,11 +3,13 @@ STUDIOSIMPLE - PAQUETE COMPLETO DE PROMPTS Y GUIONES MAESTROS
 CURSO: 7° BASICO | ASIGNATURA: MATEMATICA | OA: 110-7-MAT-OA04 (PORCENTAJES)
 TOTAL DE CLASES: 6 CLASES CANONICAS BIMODALES (14 LAMINAS CADA UNA = 84 LAMINAS TOTALES)
 FORMATO: 7 DIAPOSITIVAS VIDEO GANCHO (60s) + 7 DIAPOSITIVAS VIDEO EXPLICATIVO (90s)
+FECHA Y HORA DE ACTUALIZACION: 2026-10-08 15:56:16 [America/Santiago]
 DESTINATARIO: CHATGPT WORK / CODEX (MAQUETACION PPTX 16:9 EN PYTHON)
 ================================================================================
 
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 08-10-2026, 3:56:16 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -22,13 +24,13 @@ DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
 2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
 3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
 4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
-5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
-   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
-   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
-   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
-6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
-7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
-8. Regla de Producción Audiovisual: El gancho tiene 60 segundos asignados y la explicación 90 segundos. En la producción con Google Vids, la locución puede extenderlos unos segundos de forma natural; no se exige medir con cronómetro, reexportar ni forzar una duración acústica exacta.
+5. Duraciones Planificadas de Producción Audiovisual:
+   • Video Gancho: 60 segundos de duración planificada distribuidos en 7 diapositivas.
+   • Video Explicativo: 90 segundos de duración planificada distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt, maximo 8 palabras); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt, maximo 8 palabras). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes.
+7. Logotipo Oficial: Codex/Work incorpora el logo blanco de EstudioSimple en la esquina inferior derecha del PPTX al tamano del video de referencia. No pedir a la IA que dibuje el logo dentro de la imagen; dejar espacio negativo.
+8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. No se exige medir con cronómetro, contar palabras ni reexportar por unos segundos adicionales.
 
 ================================================================================
 MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
@@ -45,59 +47,59 @@ Titulo: El Enigma del Panel Solar
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Desafío Inicial: El panel solar escolar (8 seg aprox) ---
+--- DIAPOSITIVA 1: Desafío Inicial: El panel solar escolar (8 segundos) ---
 1. Propósito Didáctico: Desafío Inicial: El panel solar escolar
 2. Título en Pantalla (64 pt): ¿QUÉ ES EL PORCENTAJE?
 3. Subtítulo en Pantalla (36 pt): El enigma de las 100 celdas solares
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing on a sunny school rooftop looking at a large square solar panel divided into a grid of 100 square cells. High contrast, bright sunny day, clean vector lines, ample negative space on the left. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing on a sunny school rooftop looking at a large square solar panel divided into a grid of 100 square cells. High contrast, bright sunny day, clean vector lines, ample negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Panel solar cuadrado dividido en cuadrícula de 10x10 celdas
 6. Notas al Orador (Locución Google Vids): "Sofía y Lucas subieron al techo de su escuela para revisar el nuevo panel solar. El profesor les explicó que el panel está formado exactamente por cien celdas idénticas."
 
---- DIAPOSITIVA 2: Observación: Contando celdas activas (8 seg aprox) ---
+--- DIAPOSITIVA 2: Observación: Contando celdas activas (8 segundos) ---
 1. Propósito Didáctico: Observación: Contando celdas activas
 2. Título en Pantalla (64 pt): MEDIR SOBRE UN TOTAL DE 100
 3. Subtítulo en Pantalla (36 pt): Cada celda representa una parte igual
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old girl with braided hair pointing with a digital tablet at the solar panel grid, while the 13-year-old boy in a teal jacket counts illuminated blue cells. Clean modern anime aesthetic, bright flat saturated colors, generous negative space on top. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The 13-year-old girl with braided hair pointing with a digital tablet at the solar panel grid, while the 13-year-old boy in a teal jacket counts illuminated blue cells. Clean modern anime aesthetic, bright flat saturated colors, generous negative space on top.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Ilustración esquemática de cuadrícula con celdas que brillan en color azul cian
 6. Notas al Orador (Locución Google Vids): "Al recibir la luz del sol, varias celdas comenzaron a brillar en color azul. Lucas notó que cada fila tenía diez celdas y que en total había diez filas completas."
 
---- DIAPOSITIVA 3: Pregunta clave: La razón de cien (9 seg aprox) ---
+--- DIAPOSITIVA 3: Pregunta clave: La razón de cien (9 segundos) ---
 1. Propósito Didáctico: Pregunta clave: La razón de cien
 2. Título en Pantalla (64 pt): ¿POR QUÉ COMPARAMOS CON 100?
 3. Subtítulo en Pantalla (36 pt): El estándar universal de comparación
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The two 13-year-old students looking curiously at a digital display showing a glowing percent symbol. Thoughtful expressions, scientific classroom rooftop setting, sharp clean lines, negative space for layout. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, looking curiously at a digital display showing a glowing percent symbol. Thoughtful expressions, scientific classroom rooftop setting, sharp clean lines, negative space for layout.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Símbolo de porcentaje estilizado con flechas indicando proporción
 6. Notas al Orador (Locución Google Vids): "¿Por qué los científicos e ingenieros eligen comparar siempre con cien partes? Porque cien nos da una referencia estándar para comparar cualquier tamaño sin confusiones."
 
---- DIAPOSITIVA 4: Visualización: Cuadrícula de 10x10 (9 seg aprox) ---
+--- DIAPOSITIVA 4: Visualización: Cuadrícula de 10x10 (9 segundos) ---
 1. Propósito Didáctico: Visualización: Cuadrícula de 10x10
 2. Título en Pantalla (64 pt): LA CUADRÍCULA DE 100 PARTES
 3. Subtítulo en Pantalla (36 pt): 10 filas de 10 cuadritos cada una
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old boy and girl examining a clear holographic 10 by 10 grid floating between them. Crisp vector aesthetic, bright turquoise and orange accents, clean white highlights, negative space. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining a clear holographic 10 by 10 grid floating between them. Crisp vector aesthetic, bright turquoise and orange accents, clean white highlights, negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Cuadrícula regular de 100 unidades con una celda destacada en amarillo
 6. Notas al Orador (Locución Google Vids): "Si el panel completo tiene cien celdas, cada celda individual representa exactamente una de cien partes. A esa unidad básica la llamamos uno por ciento."
 
---- DIAPOSITIVA 5: Descubrimiento: Cuarenta celdas iluminadas (9 seg aprox) ---
+--- DIAPOSITIVA 5: Descubrimiento: Cuarenta celdas iluminadas (9 segundos) ---
 1. Propósito Didáctico: Descubrimiento: Cuarenta celdas iluminadas
 2. Título en Pantalla (64 pt): 40 DE CADA 100 PARTES
 3. Subtítulo en Pantalla (36 pt): Cuatro filas completas encendidas
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The two 13-year-old students happily observing four full rows of ten cells lighting up in bright energy glow on the panel. Cheerful collaborative atmosphere, negative space on the right. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, happily observing four full rows of ten cells lighting up in bright energy glow on the panel. Cheerful collaborative atmosphere, negative space on the right.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Cuatro filas de diez celdas sombreadas en azul brillante
 6. Notas al Orador (Locución Google Vids): "A media mañana, el sensor indicó que cuatro filas completas estaban produciendo energía. Cuatro filas de diez celdas equivalen a cuarenta celdas activas de las cien."
 
---- DIAPOSITIVA 6: Conexión Matemática: 40 por ciento (9 seg aprox) ---
+--- DIAPOSITIVA 6: Conexión Matemática: 40 por ciento (9 segundos) ---
 1. Propósito Didáctico: Conexión Matemática: 40 por ciento
 2. Título en Pantalla (64 pt): 40% DE LAS CELDAS ACTIVAS
 3. Subtítulo en Pantalla (36 pt): Razón matemática: 40 sobre 100 celdas
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old girl with braided hair writing on her digital notebook while the boy in a teal jacket gives a thumbs up. Clean bright modern anime, high clarity, negative space for mathematical formulas. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The 13-year-old girl with braided hair writing on her digital notebook while the boy in a teal jacket gives a thumbs up. Clean bright modern anime, high clarity, negative space for mathematical formulas.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Fórmula limpia: 40 celdas de 100 = 40%
 6. Notas al Orador (Locución Google Vids): "Sofía anotó en su registro: cuarenta de cada cien partes significa que el panel tiene activas el cuarenta por ciento de sus celdas fotovoltaicas."
 
---- DIAPOSITIVA 7: Síntesis del Gancho: Pase a la formalización (8 seg aprox) ---
+--- DIAPOSITIVA 7: Síntesis del Gancho: Pase a la formalización (8 segundos) ---
 1. Propósito Didáctico: Síntesis del Gancho: Pase a la formalización
 2. Título en Pantalla (64 pt): EL LENGUAJE DEL PORCENTAJE
 3. Subtítulo en Pantalla (36 pt): De la cuadrícula al cálculo matemático
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Both 13-year-old student explorers smiling confidently toward the camera, inviting the viewer into the mathematics laboratory. Sunlit morning, bright clean colors, spacious negative space. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Both 13-year-old student explorers smiling confidently toward the camera, inviting the viewer into the mathematics laboratory. Sunlit morning, bright clean colors, spacious negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Íconos limpios conectando cuadrícula, fracción y porcentaje
 6. Notas al Orador (Locución Google Vids): "Comprender la cuadrícula de cien es la llave maestra para entender todos los porcentajes. Ahora entremos al aula para aprender sus reglas y propiedades."
 
@@ -112,61 +114,61 @@ Titulo: Definición Formal de Porcentaje y Representación Pictórica
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Declaración del Objetivo: Concepto de Porcentaje (12 seg aprox) ---
+--- DIAPOSITIVA 1: Declaración del Objetivo: Concepto de Porcentaje (12 segundos) ---
 1. Propósito Didáctico: Declaración del Objetivo: Concepto de Porcentaje
 2. Título en Pantalla (64 pt): OBJETIVO DE LA LECCIÓN
 3. Subtítulo en Pantalla (36 pt): Comprender el porcentaje y su modelo pictórico en cuadrícula de 100
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old students, a girl with braided hair and a boy in a teal jacket, in a clean modern classroom looking at a digital blackboard. Generous negative space on the left. High contrast, bright flat colors. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, , a girl with braided hair and a boy in a teal jacket, in a clean modern classroom looking at a digital blackboard. Generous negative space on the left. High contrast, bright flat colors.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Cuadro limpio con el Objetivo de Aprendizaje MINEDUC OA 4
 6. Notas al Orador (Locución Google Vids): "Hoy aprenderemos a representar y comprender el porcentaje como una razón de consecuente cien, utilizando cuadrículas de diez por diez para visualizar cada cantidad."
 
---- DIAPOSITIVA 2: Definición: La razón respecto a 100 (13 seg aprox) ---
+--- DIAPOSITIVA 2: Definición: La razón respecto a 100 (13 segundos) ---
 1. Propósito Didáctico: Definición: La razón respecto a 100
 2. Título en Pantalla (64 pt): ¿QUÉ ES UN PORCENTAJE?
 3. Subtítulo en Pantalla (36 pt): Una razón matemática que compara con 100 partes
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old girl explaining with an open notebook, pointing to an illustrated ratio concept. Clean lines, bright cheerful classroom background, negative space on the right. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The 13-year-old girl explaining with an open notebook, pointing to an illustrated ratio concept. Clean lines, bright cheerful classroom background, negative space on the right.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama conceptual: p% = p ÷ 100 (razón con consecuente 100)
 6. Notas al Orador (Locución Google Vids): "Un porcentaje es una comparación por cociente donde el total siempre se divide en cien partes iguales. La expresión p por ciento representa p partes de cada cien, es decir, p dividido en cien."
 
---- DIAPOSITIVA 3: La Unidad Básica: El 1 por ciento (13 seg aprox) ---
+--- DIAPOSITIVA 3: La Unidad Básica: El 1 por ciento (13 segundos) ---
 1. Propósito Didáctico: La Unidad Básica: El 1 por ciento
 2. Título en Pantalla (64 pt): CADA CUADRITO ES UN 1%
 3. Subtítulo en Pantalla (36 pt): 1 de 100 partes = 1/100 = 1%
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. A close-up view of the 13-year-old boy in teal jacket highlighting a single colored square within a large 100-cell grid. Sharp focus, clean modern anime, negative space. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, A close-up view of the 13-year-old boy in teal jacket highlighting a single colored square within a large 100-cell grid. Sharp focus, clean modern anime, negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Un solo cuadrito coloreado en amarillo con la etiqueta 1% destacada
 6. Notas al Orador (Locución Google Vids): "En una cuadrícula de diez por diez, cada cuadrito representa exactamente una centésima del total. Por eso decimos que cada cuadrito sombreado equivale al uno por ciento."
 
---- DIAPOSITIVA 4: Lectura y Escritura de Porcentajes (13 seg aprox) ---
+--- DIAPOSITIVA 4: Lectura y Escritura de Porcentajes (13 segundos) ---
 1. Propósito Didáctico: Lectura y Escritura de Porcentajes
 2. Título en Pantalla (64 pt): LECTURA Y ESCRITURA
 3. Subtítulo en Pantalla (36 pt): Símbolo % y su lectura verbal precisa
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Both 13-year-old students reviewing examples on an interactive tablet display. Clear lighting, neat classroom setup, negative space for mathematical notation. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, reviewing examples on an interactive tablet display.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Ejemplos claros: 15% se lee quince por ciento, 50% se lee cincuenta por ciento
 6. Notas al Orador (Locución Google Vids): "Escribimos el número seguido del símbolo de porcentaje. Se lee siempre diciendo el número y luego la frase por ciento, recordando que representa partes de cien."
 
---- DIAPOSITIVA 5: La Totalidad: El 100 por ciento (13 seg aprox) ---
+--- DIAPOSITIVA 5: La Totalidad: El 100 por ciento (13 segundos) ---
 1. Propósito Didáctico: La Totalidad: El 100 por ciento
 2. Título en Pantalla (64 pt): EL TOTAL ES EL 100%
 3. Subtítulo en Pantalla (36 pt): 100 cuadritos de 100 = Todo el conjunto
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The full 100-cell grid glowing completely in warm golden light while the two 13-year-old students smile in comprehension. Clean vibrant aesthetic, negative space on left. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The full 100-cell grid glowing completely in warm golden light while smile in comprehension. Clean vibrant aesthetic, negative space on left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Cuadrícula 10x10 totalmente iluminada con la igualdad 100/100 = 1 = 100%
 6. Notas al Orador (Locución Google Vids): "Cuando los cien cuadritos están coloreados, tenemos la totalidad del conjunto. Cien sobre cien es igual a un entero completo, lo que corresponde al cien por ciento."
 
---- DIAPOSITIVA 6: Caso Isomórfico: Cuarenta cuadritos sombreados (13 seg aprox) ---
+--- DIAPOSITIVA 6: Caso Isomórfico: Cuarenta cuadritos sombreados (13 segundos) ---
 1. Propósito Didáctico: Caso Isomórfico: Cuarenta cuadritos sombreados
-2. Título en Pantalla (64 pt): EJEMPLO MODELADO
-3. Subtítulo en Pantalla (36 pt): En una cuadrícula de 100 cuadritos, se colorean exactamente 40
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old girl and boy pointing together at a grid of 100 cells where exactly 40 blue cells are neatly colored. Perfect visual clarity, spacious negative space for practice step. No text drawn by AI.
-5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Cuadrícula 10x10 con exactamente 40 celdas coloreadas en azul: 40/100 = 40%
-6. Notas al Orador (Locución Google Vids): "Analicemos este caso: en una cuadrícula de cien cuadritos, coloreamos exactamente cuarenta. Al contar cuarenta de cien, el porcentaje representado es cuarenta por ciento."
+2. Título en Pantalla (64 pt): EJEMPLO MODELADO: CASO 1
+3. Subtítulo en Pantalla (36 pt): En una cuadrícula de 100 cuadritos iguales, se colorean exactamente 40 cuadritos
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The 13-year-old girl and boy pointing together at a grid of 100 cells where exactly 40 blue cells are neatly colored. Perfect visual clarity, spacious negative space for practice step.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Resolución canónica: La razón es 40/100, lo que por definición es 40%.
+6. Notas al Orador (Locución Google Vids): "Analicemos paso a paso el caso modelado: En una cuadrícula de 100 cuadritos iguales, se colorean exactamente 40 cuadritos de color azul. ¿Qué porcentaje de la cuadrícula está coloreado de azul? La razón es 40/100, lo que por definición es 40%. Por lo tanto, el resultado esperado es: 40%."
 
---- DIAPOSITIVA 7: Regla de Oro y Pase a la Práctica (13 seg aprox) ---
+--- DIAPOSITIVA 7: Regla de Oro y Pase a la Práctica (13 segundos) ---
 1. Propósito Didáctico: Regla de Oro y Pase a la Práctica
-2. Título en Pantalla (64 pt): REGLA DE ORO DEL PORCENTAJE
+2. Título en Pantalla (64 pt): REGLA DE ORO DE LA LECCIÓN
 3. Subtítulo en Pantalla (36 pt): El porcentaje es una razón de consecuente 100
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The two 13-year-old student explorers holding their notebooks, ready to begin interactive exercises. Modern anime style, bright friendly expressions, negative space. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The two 13-year-old student explorers holding their notebooks, ready to begin interactive exercises. Modern anime style, bright friendly expressions, negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Regla de oro: p% = p ÷ 100. ¡A practicar!
-6. Notas al Orador (Locución Google Vids): "Regla de oro: cualquier cantidad comparada directamente con cien se convierte de inmediato en su porcentaje correspondiente: p por ciento es p dividido en cien. Ahora continuemos con la práctica interactiva."
+6. Notas al Orador (Locución Google Vids): "Regla de oro: El porcentaje es una razón de consecuente 100. Ahora pon a prueba lo aprendido resolviendo los casos de práctica en la plataforma interactiva."
 
 ================================================================================
 MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
@@ -238,11 +240,17 @@ Item 2 (Si se iluminaron 4 filas completas de 10 celdas cada una.):
 --------------------------------------------------------------------------------
 [PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
 --------------------------------------------------------------------------------
-Comprobacion 1 (En el video explicativo analizamos una cuadrícula de 100 cuadritos con 40 celdas coloreadas.):
-• Pregunta: "¿Por qué 40 cuadritos de 100 representan directamente el 40%?"
-• Respuesta Esperada: Porque cada cuadrito es 1%, por lo que 40 cuadritos equivalen a 40%.
-• Pista de Apoyo: "Recuerda que el porcentaje expresa cuántas partes se toman de cada 100."
-• Revelacion: "Representa el 40% porque son 40 partes de un total de 100."
+Comprobacion 1 (En una cuadrícula de 100 cuadritos iguales, se colorean exactamente 40 cuadritos de color azul.):
+• Pregunta: "¿Qué porcentaje de la cuadrícula está coloreado de azul?"
+• Respuesta Esperada: 40%
+• Pista de Apoyo: "Cuenta las partes pintadas sobre el total de 100 cuadritos."
+• Revelacion: "Está coloreado el 40%."
+
+Comprobacion 2 (En un mosaico de 100 baldosas cuadradas en el patio de la escuela, 65 baldosas son de color verde y el resto son blancas.):
+• Pregunta: "¿Qué porcentaje del mosaico está formado por baldosas verdes?"
+• Respuesta Esperada: 65%
+• Pista de Apoyo: "El total de baldosas es 100. Compara las 65 verdes con ese total."
+• Revelacion: "El 65% de las baldosas son verdes."
 
 --------------------------------------------------------------------------------
 [PASO 5: PRACTICA EN EL CUADERNO FISICO]
@@ -325,6 +333,7 @@ Refuerzo 1 (Refuerzo de Porcentaje en Cuadrícula):
 
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 08-10-2026, 3:56:16 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -339,13 +348,13 @@ DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
 2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
 3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
 4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
-5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
-   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
-   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
-   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
-6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
-7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
-8. Regla de Producción Audiovisual: El gancho tiene 60 segundos asignados y la explicación 90 segundos. En la producción con Google Vids, la locución puede extenderlos unos segundos de forma natural; no se exige medir con cronómetro, reexportar ni forzar una duración acústica exacta.
+5. Duraciones Planificadas de Producción Audiovisual:
+   • Video Gancho: 60 segundos de duración planificada distribuidos en 7 diapositivas.
+   • Video Explicativo: 90 segundos de duración planificada distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt, maximo 8 palabras); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt, maximo 8 palabras). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes.
+7. Logotipo Oficial: Codex/Work incorpora el logo blanco de EstudioSimple en la esquina inferior derecha del PPTX al tamano del video de referencia. No pedir a la IA que dibuje el logo dentro de la imagen; dejar espacio negativo.
+8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. No se exige medir con cronómetro, contar palabras ni reexportar por unos segundos adicionales.
 
 ================================================================================
 MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
@@ -362,59 +371,59 @@ Titulo: La Receta del Pan Integral
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Desafío Inicial: La receta en porcentajes (8 seg aprox) ---
+--- DIAPOSITIVA 1: Desafío Inicial: La receta en porcentajes (8 segundos) ---
 1. Propósito Didáctico: Desafío Inicial: La receta en porcentajes
 2. Título en Pantalla (64 pt): TRES CARAS DE UN MISMO NÚMERO
 3. Subtítulo en Pantalla (36 pt): Porcentaje, fracción y número decimal
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, in a bright home economics kitchen classroom looking at a recipe chalkboard. Clean kitchen counters, glass measuring cups, bright daylight, generous negative space on the left. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, in a bright home economics kitchen classroom looking at a recipe chalkboard. Clean kitchen counters, glass measuring cups, bright daylight, generous negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama triangular conectando: Porcentaje, Fracción y Decimal
 6. Notas al Orador (Locución Google Vids): "En el taller de cocina, la receta indicaba agregar el veinticinco por ciento de un litro de agua. Sofía y Lucas tenían una taza medidora graduada en fracciones y una balanza digital."
 
---- DIAPOSITIVA 2: Observación: La taza medidora (8 seg aprox) ---
+--- DIAPOSITIVA 2: Observación: La taza medidora (8 segundos) ---
 1. Propósito Didáctico: Observación: La taza medidora
 2. Título en Pantalla (64 pt): ¿CÓMO MEDIR UN 25%?
 3. Subtítulo en Pantalla (36 pt): De la expresión porcentual a la medida real
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old girl holding a clear measuring cup showing liquid at the one-fourth mark, while the boy checks a digital scale. Modern anime style, bright flat saturated colors, negative space on top. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The 13-year-old girl holding a clear measuring cup showing liquid at the one-fourth mark, while the boy checks a digital scale. Modern anime style, bright flat saturated colors, negative space on top.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Taza medidora dividida en cuatro cuartos con 1/4 resaltado
 6. Notas al Orador (Locución Google Vids): "Para medir el veinticinco por ciento, Lucas recordó que veinticinco partes de cien equivalen a una de cuatro partes iguales, es decir, un cuarto de taza."
 
---- DIAPOSITIVA 3: Pregunta clave: La balanza decimal (9 seg aprox) ---
+--- DIAPOSITIVA 3: Pregunta clave: La balanza decimal (9 segundos) ---
 1. Propósito Didáctico: Pregunta clave: La balanza decimal
 2. Título en Pantalla (64 pt): ¿Y EN NÚMEROS DECIMALES?
 3. Subtítulo en Pantalla (36 pt): ¿Qué número muestra la pantalla electrónica?
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old boy in a teal jacket pointing to the digital scale display showing decimal numbers. Inquisitive expression, clean scientific aesthetic, negative space. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The 13-year-old boy in a teal jacket pointing to the digital scale display showing decimal numbers. Inquisitive expression, clean scientific aesthetic, negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pantalla digital mostrando la conversión: 25 / 100 = 0,25
 6. Notas al Orador (Locución Google Vids): "Al colocar el agua en la balanza digital, la pantalla no mostró fracciones ni porcentajes, sino un número decimal. ¿Cuál fue el valor exacto que marcó la balanza?"
 
---- DIAPOSITIVA 4: Visualización: La división por 100 (9 seg aprox) ---
+--- DIAPOSITIVA 4: Visualización: La división por 100 (9 segundos) ---
 1. Propósito Didáctico: Visualización: La división por 100
 2. Título en Pantalla (64 pt): DIVIDIR ENTRE CIEN
 3. Subtítulo en Pantalla (36 pt): La coma se desplaza dos lugares a la izquierda
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Both 13-year-old students calculating on a digital whiteboard, showing the decimal point shifting two places to the left. Sharp focus, clean graphics, negative space on the right. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, calculating on a digital whiteboard, showing the decimal point shifting two places to the left. Sharp focus, clean graphics, negative space on the right.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Visualización animada del desplazamiento decimal: 25,0 -> 0,25
 6. Notas al Orador (Locución Google Vids): "Como el porcentaje significa dividir entre cien, el número decimal se obtiene corriendo la coma dos lugares hacia la izquierda. Veinticinco dividido por cien es cero coma veinticinco."
 
---- DIAPOSITIVA 5: Equivalencia confirmada: 25% = 1/4 = 0,25 (9 seg aprox) ---
+--- DIAPOSITIVA 5: Equivalencia confirmada: 25% = 1/4 = 0,25 (9 segundos) ---
 1. Propósito Didáctico: Equivalencia confirmada: 25% = 1/4 = 0,25
 2. Título en Pantalla (64 pt): LA TRIPLE IDENTIDAD
 3. Subtítulo en Pantalla (36 pt): Exactamente la misma cantidad matemática
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The two 13-year-old students smiling in agreement as the ingredients measure perfectly. Bright kitchen atmosphere, high contrast, clean vector overlays. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, smiling in agreement as the ingredients measure perfectly. Bright kitchen atmosphere, high contrast, clean vector overlays.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Fórmula central destacada: 25% = 25/100 = 1/4 = 0,25
 6. Notas al Orador (Locución Google Vids): "Veinticinco por ciento, un cuarto y cero coma veinticinco son tres formas diferentes de nombrar exactamente la misma cantidad de agua."
 
---- DIAPOSITIVA 6: Desafío modelado: ¿Qué pasa con el 20%? (9 seg aprox) ---
+--- DIAPOSITIVA 6: Desafío modelado: ¿Qué pasa con el 20%? (9 segundos) ---
 1. Propósito Didáctico: Desafío modelado: ¿Qué pasa con el 20%?
 2. Título en Pantalla (64 pt): CONVIRTIENDO EL 20%
 3. Subtítulo en Pantalla (36 pt): Simplificación y decimal correspondiente
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old girl writing a new problem in her notebook: 20%. The boy watches attentively. Clean lines, negative space for calculations. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The 13-year-old girl writing a new problem in her notebook: 20%. The boy watches attentively. Clean lines, negative space for calculations.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Ecuación matemática en construcción: 20% = 20/100 = ?/5 = 0,?
 6. Notas al Orador (Locución Google Vids): "Lucas planteó un nuevo desafío: ¿cómo expresaríamos el veinte por ciento como fracción irreducible y como decimal? Vamos a resolverlo juntos."
 
---- DIAPOSITIVA 7: Síntesis del Gancho: Pase a la formalización (8 seg aprox) ---
+--- DIAPOSITIVA 7: Síntesis del Gancho: Pase a la formalización (8 segundos) ---
 1. Propósito Didáctico: Síntesis del Gancho: Pase a la formalización
 2. Título en Pantalla (64 pt): DOMINANDO LAS CONVERSIONES
 3. Subtítulo en Pantalla (36 pt): El método formal paso a paso
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Both 13-year-old students waving cheerfully in front of a neat blackboard filled with fraction and percent relations. Bright welcoming mood, spacious negative space. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, waving cheerfully in front of a neat blackboard filled with fraction and percent relations. Bright welcoming mood, spacious negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Iconos conectando la flecha bidireccional entre %, Fracción y Decimal
 6. Notas al Orador (Locución Google Vids): "Aprender a cambiar de porcentaje a fracción y a decimal te dará una ventaja enorme para resolver problemas rápidamente. Entremos a formalizar el método."
 
@@ -429,61 +438,61 @@ Titulo: Procedimiento de Conversión entre Porcentajes, Fracciones y Decimales
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Declaración del Objetivo: Conversión de Registros (12 seg aprox) ---
+--- DIAPOSITIVA 1: Declaración del Objetivo: Conversión de Registros (12 segundos) ---
 1. Propósito Didáctico: Declaración del Objetivo: Conversión de Registros
 2. Título en Pantalla (64 pt): OBJETIVO DE LA LECCIÓN
-3. Subtítulo en Pantalla (36 pt): Convertir porcentajes a fracciones irreductibles y números decimales
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old students, a girl with braided hair and a boy in a teal jacket, standing beside a digital display in a bright classroom. Spacious negative space on left. Clean vector style. No text drawn by AI.
+3. Subtítulo en Pantalla (36 pt): Equivalencia triple: porcentaje, fracción simplificada y número decimal
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, , a girl with braided hair and a boy in a teal jacket, standing beside a digital display in a bright classroom. Spacious negative space on left. Clean vector style.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Título de la lección y Objetivo de Aprendizaje oficial
-6. Notas al Orador (Locución Google Vids): "Hoy aprenderemos a transformar cualquier porcentaje en su fracción irreducible y en su número decimal correspondiente mediante procedimientos matemáticos directos."
+6. Notas al Orador (Locución Google Vids): "Hoy aprenderemos la equivalencia triple entre porcentaje, fracción simplificada y número decimal, utilizando simplificaciones rigurosas."
 
---- DIAPOSITIVA 2: Paso 1: De Porcentaje a Fracción (13 seg aprox) ---
+--- DIAPOSITIVA 2: Paso 1: De Porcentaje a Fracción (13 segundos) ---
 1. Propósito Didáctico: Paso 1: De Porcentaje a Fracción
 2. Título en Pantalla (64 pt): ESCRIBIR SOBRE 100
 3. Subtítulo en Pantalla (36 pt): El porcentaje se convierte en el numerador y 100 en el denominador
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old girl writing a fraction on a chalkboard. Clean neat numbers, bright daytime light, negative space on the right. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The 13-year-old girl writing a fraction on a chalkboard. Clean neat numbers, bright daytime light, negative space on the right.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Fórmula: p% = p / 100
 6. Notas al Orador (Locución Google Vids): "El primer paso consiste en escribir el número del porcentaje en el numerador y colocar siempre el número cien en el denominador."
 
---- DIAPOSITIVA 3: Paso 2: Simplificación Irreductible (13 seg aprox) ---
+--- DIAPOSITIVA 3: Paso 2: Simplificación Irreductible (13 segundos) ---
 1. Propósito Didáctico: Paso 2: Simplificación Irreductible
 2. Título en Pantalla (64 pt): SIMPLIFICAR AL MÁXIMO
 3. Subtítulo en Pantalla (36 pt): Dividir numerador y denominador por el máximo común divisor
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old boy demonstrating step-by-step division by common factors on a notebook. High contrast, clear diagrams, negative space. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The 13-year-old boy demonstrating step-by-step division by common factors on a notebook. High contrast, clear diagrams, negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Ejemplo paso a paso: 50/100 -> dividir por 50 -> 1/2
 6. Notas al Orador (Locución Google Vids): "El segundo paso es simplificar la fracción dividiendo el numerador y el denominador por su máximo común divisor hasta obtener una fracción irreducible."
 
---- DIAPOSITIVA 4: Paso 3: De Porcentaje a Número Decimal (13 seg aprox) ---
+--- DIAPOSITIVA 4: Paso 3: De Porcentaje a Número Decimal (13 segundos) ---
 1. Propósito Didáctico: Paso 3: De Porcentaje a Número Decimal
 2. Título en Pantalla (64 pt): DIVISIÓN DECIMAL POR 100
 3. Subtítulo en Pantalla (36 pt): Mover la coma dos posiciones hacia la izquierda
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old students pointing at a number line with decimal steps. Bright clean graphics, negative space for decimal notation. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, pointing at a number line with decimal steps. Bright clean graphics, negative space for decimal notation.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Regla: p% = p ÷ 100 (ej. 75% = 75 ÷ 100 = 0,75; 8% = 8 ÷ 100 = 0,08)
 6. Notas al Orador (Locución Google Vids): "Para obtener el número decimal, aplicamos la regla universal: p por ciento es p dividido en cien, desplazando la coma dos lugares hacia la izquierda."
 
---- DIAPOSITIVA 5: Tabla Canónica de Equivalencias (13 seg aprox) ---
+--- DIAPOSITIVA 5: Tabla Canónica de Equivalencias (13 segundos) ---
 1. Propósito Didáctico: Tabla Canónica de Equivalencias
 2. Título en Pantalla (64 pt): EQUIVALENCIAS FUNDAMENTALES
 3. Subtítulo en Pantalla (36 pt): Valores de uso frecuente que debes memorizar
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. A tidy comparative chart floating in the classroom with clean columns for %, Fracción y Decimal. Ample negative space. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, A tidy comparative chart floating in the classroom with clean columns for %, Fracción y Decimal. Ample negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Tabla: 50% = 1/2 = 0,5 | 25% = 1/4 = 0,25 | 75% = 3/4 = 0,75 | 10% = 1/10 = 0,1
 6. Notas al Orador (Locución Google Vids): "Hay equivalencias que usarás toda tu vida: cincuenta por ciento es un medio y cero coma cinco; veinticinco por ciento es un cuarto y cero coma veinticinco."
 
---- DIAPOSITIVA 6: Caso Isomórfico: Conversión del 20% (13 seg aprox) ---
+--- DIAPOSITIVA 6: Caso Isomórfico: Conversión del 20% (13 segundos) ---
 1. Propósito Didáctico: Caso Isomórfico: Conversión del 20%
-2. Título en Pantalla (64 pt): EJEMPLO MODELADO: 20%
-3. Subtítulo en Pantalla (36 pt): Fracción irreductible y decimal del 20%
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The two 13-year-old students solving the 20% case together on an interactive tablet. Clear, high contrast, negative space on the right. No text drawn by AI.
-5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Resolución: 20% = 20/100 = 1/5 (dividiendo por 20) | 20 : 100 = 0,2
-6. Notas al Orador (Locución Google Vids): "Resolvamos juntos el caso del veinte por ciento: como fracción es veinte sobre cien, que simplificado entre veinte nos da un quinto. Como decimal es cero coma dos."
+2. Título en Pantalla (64 pt): EJEMPLO MODELADO: CASO 1
+3. Subtítulo en Pantalla (36 pt): Queremos transformar el 20% en su expresión fraccionaria irreductible y en su nú
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, solving the 20% case together on an interactive tablet. Clear, high contrast, negative space on the right.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Resolución canónica: 20% = 20/100 = 1/5 = 0,2.
+6. Notas al Orador (Locución Google Vids): "Analicemos paso a paso el caso modelado: Queremos transformar el 20% en su expresión fraccionaria irreductible y en su número decimal correspondiente. ¿Cuál es la fracción irreductible y el número decimal equivalente al 20%? 20% = 20/100 = 1/5 = 0,2. Por lo tanto, el resultado esperado es: Fracción: 1/5 y Decimal: 0,2."
 
---- DIAPOSITIVA 7: Regla de Oro y Pase a la Práctica (13 seg aprox) ---
+--- DIAPOSITIVA 7: Regla de Oro y Pase a la Práctica (13 segundos) ---
 1. Propósito Didáctico: Regla de Oro y Pase a la Práctica
-2. Título en Pantalla (64 pt): REGLA DE ORO DE LA CONVERSIÓN
+2. Título en Pantalla (64 pt): REGLA DE ORO DE LA LECCIÓN
 3. Subtítulo en Pantalla (36 pt): Todo porcentaje tiene su gemelo fraccionario y decimal
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old girl and boy smiling confidently, holding their pencils ready for practice. Bright classroom, negative space. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The 13-year-old girl and boy smiling confidently, holding their pencils ready for practice. Bright classroom, negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Regla de oro: p% = p ÷ 100. ¡Ahora ponlo en práctica!
-6. Notas al Orador (Locución Google Vids): "Regla de oro: el porcentaje, la fracción irreducible y el decimal representan la misma cantidad en lenguajes distintos: p por ciento es siempre p dividido en cien. Ahora practiquemos en la plataforma."
+6. Notas al Orador (Locución Google Vids): "Regla de oro: Todo porcentaje tiene su gemelo fraccionario y decimal. Ahora pon a prueba lo aprendido resolviendo los casos de práctica en la plataforma interactiva."
 
 ================================================================================
 MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
@@ -555,11 +564,17 @@ Item 2 (Al dividir 25 entre 100 para escribirlo como número decimal.):
 --------------------------------------------------------------------------------
 [PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
 --------------------------------------------------------------------------------
-Comprobacion 1 (En el video modelamos la conversión del 20%.):
-• Pregunta: "¿Por qué 20/100 se simplifica a 1/5 y no a 2/10 como resultado final?"
-• Respuesta Esperada: Porque 2/10 aún se puede simplificar dividiendo por 2, hasta llegar a la fracción irreducible 1/5.
-• Pista de Apoyo: "Recuerda que una fracción es irreductible cuando el numerador y el denominador ya no se pueden dividir por un factor común mayor que 1."
-• Revelacion: "Porque 1/5 es la fracción irreductible máxima."
+Comprobacion 1 (Queremos transformar el 20% en su expresión fraccionaria irreductible y en su número decimal correspondiente.):
+• Pregunta: "¿Cuál es la fracción irreductible y el número decimal equivalente al 20%?"
+• Respuesta Esperada: Fracción: 1/5 y Decimal: 0,2
+• Pista de Apoyo: "Escribe 20/100 y divide ambos términos por 20. Luego divide 20 por 100 para el decimal."
+• Revelacion: "Fracción: 1/5 | Decimal: 0,2."
+
+Comprobacion 2 (Un estudiante desea expresar el 75% como fracción irreductible y como decimal.):
+• Pregunta: "¿Cuáles son los valores correspondientes al 75%?"
+• Respuesta Esperada: Fracción: 3/4 y Decimal: 0,75
+• Pista de Apoyo: "Divide 75 y 100 por 25 para la fracción. Para el decimal, corre la coma dos lugares a la izquierda."
+• Revelacion: "Fracción: 3/4 | Decimal: 0,75."
 
 --------------------------------------------------------------------------------
 [PASO 5: PRACTICA EN EL CUADERNO FISICO]
@@ -641,6 +656,7 @@ Refuerzo 1 (Refuerzo de Conversión de Porcentajes):
 
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 08-10-2026, 3:56:16 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -655,13 +671,13 @@ DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
 2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
 3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
 4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
-5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
-   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
-   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
-   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
-6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
-7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
-8. Regla de Producción Audiovisual: El gancho tiene 60 segundos asignados y la explicación 90 segundos. En la producción con Google Vids, la locución puede extenderlos unos segundos de forma natural; no se exige medir con cronómetro, reexportar ni forzar una duración acústica exacta.
+5. Duraciones Planificadas de Producción Audiovisual:
+   • Video Gancho: 60 segundos de duración planificada distribuidos en 7 diapositivas.
+   • Video Explicativo: 90 segundos de duración planificada distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt, maximo 8 palabras); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt, maximo 8 palabras). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes.
+7. Logotipo Oficial: Codex/Work incorpora el logo blanco de EstudioSimple en la esquina inferior derecha del PPTX al tamano del video de referencia. No pedir a la IA que dibuje el logo dentro de la imagen; dejar espacio negativo.
+8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. No se exige medir con cronómetro, contar palabras ni reexportar por unos segundos adicionales.
 
 ================================================================================
 MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
@@ -678,59 +694,59 @@ Titulo: La Feria del Libro Escolar
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Desafío Inicial: Ofertas en la feria escolar (8 seg aprox) ---
+--- DIAPOSITIVA 1: Desafío Inicial: Ofertas en la feria escolar (8 segundos) ---
 1. Propósito Didáctico: Desafío Inicial: Ofertas en la feria escolar
 2. Título en Pantalla (64 pt): CALCULAR MENTALMENTE
 3. Subtítulo en Pantalla (36 pt): El poder de los porcentajes notables
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old students, a girl with braided hair and a boy in a teal jacket, walking through a lively school book fair with colorful discount banners. High contrast, bright sunny afternoon, spacious negative space on the left. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, , a girl with braided hair and a boy in a teal jacket, walking through a lively school book fair with colorful discount banners. High contrast, bright sunny afternoon, spacious negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Banners limpios con descuentos destacados: 50%, 25%, 20% y 10%
 6. Notas al Orador (Locución Google Vids): "Sofía y Lucas visitaron la feria del libro en el patio de su escuela. Cada puesto tenía carteles con descuentos llamativos: cincuenta, veinticinco, veinte y diez por ciento."
 
---- DIAPOSITIVA 2: Observación: El atajo del 50% (8 seg aprox) ---
+--- DIAPOSITIVA 2: Observación: El atajo del 50% (8 segundos) ---
 1. Propósito Didáctico: Observación: El atajo del 50%
 2. Título en Pantalla (64 pt): 50% ES DIVIDIR POR 2
 3. Subtítulo en Pantalla (36 pt): La mitad exacta del valor original
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old girl pointing at an adventure novel marked at 8000 pesos with a 50 percent off sticker. Clean anime aesthetic, cheerful expression, negative space on top. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The 13-year-old girl pointing at an adventure novel marked at 8000 pesos with a 50 percent off sticker. Clean anime aesthetic, cheerful expression, negative space on top.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Operación mental destacada: $8.000 : 2 = $4.000
 6. Notas al Orador (Locución Google Vids): "Un libro de aventuras de ocho mil pesos tenía cincuenta por ciento de descuento. Sofía sonrió de inmediato: calcular el cincuenta por ciento es simplemente dividir entre dos."
 
---- DIAPOSITIVA 3: El reto del 25%: La cuarta parte (9 seg aprox) ---
+--- DIAPOSITIVA 3: El reto del 25%: La cuarta parte (9 segundos) ---
 1. Propósito Didáctico: El reto del 25%: La cuarta parte
 2. Título en Pantalla (64 pt): 25% ES DIVIDIR POR 4
 3. Subtítulo en Pantalla (36 pt): Un cuarto del total o la mitad de la mitad
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old boy in a teal jacket thinking with fingers on his chin looking at a 25 percent banner. Thought bubble with clean division diagram, negative space. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The 13-year-old boy in a teal jacket thinking with fingers on his chin looking at a 25 percent banner. Thought bubble with clean division diagram, negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama de cuatro partes iguales: 100% / 4 = 25%
 6. Notas al Orador (Locución Google Vids): "En la mesa de cómics, el descuento era del veinticinco por ciento. Lucas recordó que veinticinco es la cuarta parte de cien, por lo que basta dividir el precio entre cuatro."
 
---- DIAPOSITIVA 4: Los atajos del 10% y del 20% (9 seg aprox) ---
+--- DIAPOSITIVA 4: Los atajos del 10% y del 20% (9 segundos) ---
 1. Propósito Didáctico: Los atajos del 10% y del 20%
 2. Título en Pantalla (64 pt): 10% ES DIVIDIR POR 10 | 20% ES DIVIDIR POR 5
 3. Subtítulo en Pantalla (36 pt): La décima parte y la quinta parte
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Both 13-year-old students examining a science encyclopedia marked at 10 percent off. Clear lighting, neat book stalls, negative space for calculations. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining a science encyclopedia marked at 10 percent off.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de atajos rápidos: 10% -> :10 | 20% -> :5
 6. Notas al Orador (Locución Google Vids): "Para el diez por ciento, solo quitamos un cero o corremos la coma un lugar hacia la izquierda. Y para el veinte por ciento, dividimos directamente entre cinco."
 
---- DIAPOSITIVA 5: La estrategia combinada: Mitad de la mitad (9 seg aprox) ---
+--- DIAPOSITIVA 5: La estrategia combinada: Mitad de la mitad (9 segundos) ---
 1. Propósito Didáctico: La estrategia combinada: Mitad de la mitad
 2. Título en Pantalla (64 pt): LA MITAD DE LA MITAD
 3. Subtítulo en Pantalla (36 pt): Un truco infalible para el 25%
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old girl showing the boy a mental trick with two quick hand gestures. Modern anime style, bright colors, generous negative space. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The 13-year-old girl showing the boy a mental trick with two quick hand gestures. Modern anime style, bright colors, generous negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Paso 1: Mitad de $80 -> $40. Paso 2: Mitad de $40 -> $20
 6. Notas al Orador (Locución Google Vids): "Sofía le enseñó otro truco fantástico a Lucas: si dividir entre cuatro te cuesta, saca la mitad una vez y luego vuelve a sacar la mitad del resultado."
 
---- DIAPOSITIVA 6: Desafío modelado: El 20% de 150 (9 seg aprox) ---
+--- DIAPOSITIVA 6: Desafío modelado: El 20% de 150 (9 segundos) ---
 1. Propósito Didáctico: Desafío modelado: El 20% de 150
 2. Título en Pantalla (64 pt): CALCULAR EL 20% DE 150
 3. Subtítulo en Pantalla (36 pt): División directa por 5 en segundos
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Both 13-year-old students calculating in their heads while looking at a sign indicating 150 pages with 20% already read. High contrast, clean vector overlays. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, calculating in their heads while looking at a sign indicating 150 pages with 20% already read. High contrast, clean vector overlays.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Cálculo limpio: 150 : 5 = 30 páginas
 6. Notas al Orador (Locución Google Vids): "Resolvamos este desafío: un libro tiene ciento cincuenta páginas y leíste el veinte por ciento. Como veinte por ciento es dividir entre cinco, ciento cincuenta entre cinco son treinta páginas."
 
---- DIAPOSITIVA 7: Síntesis del Gancho: Pase a la formalización (8 seg aprox) ---
+--- DIAPOSITIVA 7: Síntesis del Gancho: Pase a la formalización (8 segundos) ---
 1. Propósito Didáctico: Síntesis del Gancho: Pase a la formalización
 2. Título en Pantalla (64 pt): LAS 4 DIVISIONES MAESTRAS
 3. Subtítulo en Pantalla (36 pt): Guárdalas en tu memoria para siempre
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Both 13-year-old students standing proudly with their purchased books, ready to enter the classroom. Bright daylight, spacious negative space. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing proudly with their purchased books, ready to enter the classroom. Bright daylight, spacious negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Resumen visual de los 4 atajos: :2, :4, :5, :10
 6. Notas al Orador (Locución Google Vids): "Con estas cuatro divisiones maestras, podrás calcular los porcentajes más importantes de la vida diaria en segundos. Ahora formalicemos cada atajo en el cuaderno."
 
@@ -745,61 +761,61 @@ Titulo: Formalización de los Atajos de Cálculo Mental de Porcentajes
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Declaración del Objetivo: Cálculo Mental de Porcentajes (12 seg aprox) ---
+--- DIAPOSITIVA 1: Declaración del Objetivo: Cálculo Mental de Porcentajes (12 segundos) ---
 1. Propósito Didáctico: Declaración del Objetivo: Cálculo Mental de Porcentajes
 2. Título en Pantalla (64 pt): OBJETIVO DE LA LECCIÓN
-3. Subtítulo en Pantalla (36 pt): Calcular mentalmente porcentajes notables mediante divisiones exactas
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old students, a girl with braided hair and a boy in a teal jacket, in front of a modern smartboard displaying mental math icons. Clean classroom setting, ample negative space on the left. No text drawn by AI.
+3. Subtítulo en Pantalla (36 pt): Estrategias de cálculo mental usando división por fracciones canónicas
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, , a girl with braided hair and a boy in a teal jacket, in front of a modern smartboard displaying mental math icons. Clean classroom setting, ample negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Título y estándar curricular del cálculo mental con porcentajes
-6. Notas al Orador (Locución Google Vids): "Hoy aprenderemos a calcular mentalmente porcentajes de uso frecuente asociándolos de forma inmediata con las divisiones por dos, cuatro, cinco y diez."
+6. Notas al Orador (Locución Google Vids): "Hoy aprenderemos estrategias de cálculo mental de porcentajes notables mediante divisiones directas por dos, cuatro, cinco y diez."
 
---- DIAPOSITIVA 2: Atajo 1: El 50% es la mitad (:2) (13 seg aprox) ---
+--- DIAPOSITIVA 2: Atajo 1: El 50% es la mitad (:2) (13 segundos) ---
 1. Propósito Didáctico: Atajo 1: El 50% es la mitad (:2)
 2. Título en Pantalla (64 pt): CALCULAR EL 50% -> DIVIDIR POR 2
 3. Subtítulo en Pantalla (36 pt): 50% = 1/2 del total | Mitad exacta
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old girl pointing to a circle divided in two halves. Bright contrast, clean lines, negative space on the right. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The 13-year-old girl pointing to a circle divided in two halves. Bright contrast, clean lines, negative space on the right.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Regla: 50% de N = N : 2 (ej. 50% de 600 = 300)
 6. Notas al Orador (Locución Google Vids): "Cincuenta por ciento equivale a la fracción un medio. Para calcular el cincuenta por ciento de cualquier número, simplemente dividimos esa cantidad entre dos."
 
---- DIAPOSITIVA 3: Atajo 2: El 25% es la cuarta parte (:4) (13 seg aprox) ---
+--- DIAPOSITIVA 3: Atajo 2: El 25% es la cuarta parte (:4) (13 segundos) ---
 1. Propósito Didáctico: Atajo 2: El 25% es la cuarta parte (:4)
 2. Título en Pantalla (64 pt): CALCULAR EL 25% -> DIVIDIR POR 4
 3. Subtítulo en Pantalla (36 pt): 25% = 1/4 del total | Cuarta parte (mitad de la mitad)
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old boy demonstrating a square divided into four quarters. High clarity, negative space for formulas. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The 13-year-old boy demonstrating a square divided into four quarters. High clarity, negative space for formulas.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Regla: 25% de N = N : 4 (ej. 25% de 80 = 20)
 6. Notas al Orador (Locución Google Vids): "Veinticinco por ciento equivale a un cuarto. Para calcular el veinticinco por ciento, dividimos el número entre cuatro, o sacamos la mitad y volvemos a sacar la mitad."
 
---- DIAPOSITIVA 4: Atajo 3: El 20% es la quinta parte (:5) (13 seg aprox) ---
+--- DIAPOSITIVA 4: Atajo 3: El 20% es la quinta parte (:5) (13 segundos) ---
 1. Propósito Didáctico: Atajo 3: El 20% es la quinta parte (:5)
 2. Título en Pantalla (64 pt): CALCULAR EL 20% -> DIVIDIR POR 5
 3. Subtítulo en Pantalla (36 pt): 20% = 1/5 del total | Quinta parte
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The two students reviewing a bar divided into five equal 20% segments. Clean graphics, negative space. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The two students reviewing a bar divided into five equal 20% segments. Clean graphics, negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Regla: 20% de N = N : 5 (ej. 20% de 100 = 20)
 6. Notas al Orador (Locución Google Vids): "Veinte por ciento equivale a la fracción un quinto. Para calcular el veinte por ciento de cualquier cantidad, dividimos ese valor directamente entre cinco."
 
---- DIAPOSITIVA 5: Atajo 4: El 10% es la décima parte (:10) (13 seg aprox) ---
+--- DIAPOSITIVA 5: Atajo 4: El 10% es la décima parte (:10) (13 segundos) ---
 1. Propósito Didáctico: Atajo 4: El 10% es la décima parte (:10)
 2. Título en Pantalla (64 pt): CALCULAR EL 10% -> DIVIDIR POR 10
 3. Subtítulo en Pantalla (36 pt): 10% = 1/10 | Quitar un cero o desplazar la coma un lugar
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Close up of calculation steps showing a decimal point moving one spot to the left. Sharp focus, negative space. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Close up of calculation steps showing a decimal point moving one spot to the left. Sharp focus, negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Regla: 10% de N = N : 10 (ej. 10% de 340 = 34 | 10% de 85 = 8,5)
 6. Notas al Orador (Locución Google Vids): "Diez por ciento equivale a un décimo. Basta con dividir entre diez, lo que en números enteros con ceros significa simplemente eliminar el último cero."
 
---- DIAPOSITIVA 6: Caso Isomórfico: El 20% de 150 (13 seg aprox) ---
+--- DIAPOSITIVA 6: Caso Isomórfico: El 20% de 150 (13 segundos) ---
 1. Propósito Didáctico: Caso Isomórfico: El 20% de 150
-2. Título en Pantalla (64 pt): EJEMPLO MODELADO: 20% DE 150
-3. Subtítulo en Pantalla (36 pt): Aplicando el atajo de la división por 5
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Both 13-year-old students solving the problem 20% of 150 on the tablet together. Clean and bright, spacious negative space on the right. No text drawn by AI.
-5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Resolución: 20% de 150 = 150 : 5 = 30
-6. Notas al Orador (Locución Google Vids): "Apliquemos el atajo al caso modelado: queremos calcular el veinte por ciento de ciento cincuenta. Como veinte por ciento es dividir entre cinco, calculamos ciento cincuenta entre cinco, que da exactamente treinta."
+2. Título en Pantalla (64 pt): EJEMPLO MODELADO: CASO 1
+3. Subtítulo en Pantalla (36 pt): Se requiere calcular mentalmente el 20% de 150 utilizando la división directa po
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, solving the problem 20% of 150 on the tablet together. Clean and bright, spacious negative space on the right.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Resolución canónica: 150 : 5 = 30.
+6. Notas al Orador (Locución Google Vids): "Analicemos paso a paso el caso modelado: Se requiere calcular mentalmente el 20% de 150 utilizando la división directa por 5. ¿Cuál es el 20% de 150? 150 : 5 = 30. Por lo tanto, el resultado esperado es: 30."
 
---- DIAPOSITIVA 7: Regla de Oro y Pase a la Práctica (13 seg aprox) ---
+--- DIAPOSITIVA 7: Regla de Oro y Pase a la Práctica (13 segundos) ---
 1. Propósito Didáctico: Regla de Oro y Pase a la Práctica
-2. Título en Pantalla (64 pt): REGLA DE ORO DEL CÁLCULO MENTAL
+2. Título en Pantalla (64 pt): REGLA DE ORO DE LA LECCIÓN
 3. Subtítulo en Pantalla (36 pt): Asocia el porcentaje con su división: 50%(:2), 25%(:4), 20%(:5), 10%(:10)
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The two 13-year-old student explorers smiling with thumbs up, ready to begin interactive practice. Bright anime aesthetic, negative space. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The two 13-year-old student explorers smiling with thumbs up, ready to begin interactive practice. Bright anime aesthetic, negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Cuadro resumen final con los 4 atajos maestros. ¡A practicar!
-6. Notas al Orador (Locución Google Vids): "Regla de oro: cada vez que veas cincuenta, veinticinco, veinte o diez por ciento, sustitúyelo mentalmente por su división correspondiente. Ahora es momento de practicar en la pantalla."
+6. Notas al Orador (Locución Google Vids): "Regla de oro: Asocia el porcentaje con su división: 50%(:2), 25%(:4), 20%(:5), 10%(:10). Ahora pon a prueba lo aprendido resolviendo los casos de práctica en la plataforma interactiva."
 
 ================================================================================
 MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
@@ -871,11 +887,17 @@ Item 2 (Para calcular el 20% de una cantidad se utiliza la división entre 5.):
 --------------------------------------------------------------------------------
 [PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
 --------------------------------------------------------------------------------
-Comprobacion 1 (En el video explicativo calculamos mentalmente el 20% de 150.):
-• Pregunta: "¿Qué división directa se realizó y cuál fue el resultado obtenido?"
-• Respuesta Esperada: Se dividió 150 entre 5, obteniendo 30.
-• Pista de Apoyo: "Recuerda cuál de las cuatro divisiones maestras corresponde al 20%."
-• Revelacion: "Se dividió 150 : 5 = 30."
+Comprobacion 1 (Se requiere calcular mentalmente el 20% de 150 utilizando la división directa por 5.):
+• Pregunta: "¿Cuál es el 20% de 150?"
+• Respuesta Esperada: 30
+• Pista de Apoyo: "Aplica el atajo del 20%: divide 150 entre 5."
+• Revelacion: "El 20% de 150 es 30."
+
+Comprobacion 2 (Un estudiante desea calcular mentalmente el 25% de 80 páginas de un folleto.):
+• Pregunta: "¿Cuál es el 25% de 80?"
+• Respuesta Esperada: 20
+• Pista de Apoyo: "Aplica el atajo del 25%: divide 80 entre 4, o saca la mitad dos veces."
+• Revelacion: "El 25% de 80 es 20 páginas."
 
 --------------------------------------------------------------------------------
 [PASO 5: PRACTICA EN EL CUADERNO FISICO]
@@ -958,6 +980,7 @@ Refuerzo 1 (Refuerzo de Atajos de Cálculo Mental):
 
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 08-10-2026, 3:56:16 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -972,13 +995,13 @@ DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
 2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
 3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
 4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
-5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
-   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
-   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
-   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
-6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
-7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
-8. Regla de Producción Audiovisual: El gancho tiene 60 segundos asignados y la explicación 90 segundos. En la producción con Google Vids, la locución puede extenderlos unos segundos de forma natural; no se exige medir con cronómetro, reexportar ni forzar una duración acústica exacta.
+5. Duraciones Planificadas de Producción Audiovisual:
+   • Video Gancho: 60 segundos de duración planificada distribuidos en 7 diapositivas.
+   • Video Explicativo: 90 segundos de duración planificada distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt, maximo 8 palabras); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt, maximo 8 palabras). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes.
+7. Logotipo Oficial: Codex/Work incorpora el logo blanco de EstudioSimple en la esquina inferior derecha del PPTX al tamano del video de referencia. No pedir a la IA que dibuje el logo dentro de la imagen; dejar espacio negativo.
+8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. No se exige medir con cronómetro, contar palabras ni reexportar por unos segundos adicionales.
 
 ================================================================================
 MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
@@ -995,59 +1018,59 @@ Titulo: El Huerto Escolar y el 18%
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Desafío Inicial: El agua del huerto escolar (8 seg aprox) ---
+--- DIAPOSITIVA 1: Desafío Inicial: El agua del huerto escolar (8 segundos) ---
 1. Propósito Didáctico: Desafío Inicial: El agua del huerto escolar
 2. Título en Pantalla (64 pt): CALCULAR CUALQUIER PORCENTAJE
 3. Subtítulo en Pantalla (36 pt): El desafío del 18% de 500 litros
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old students, a girl with braided hair and a boy in a teal jacket, standing next to a large transparent rainwater tank with 500 liters marked on it in a green school garden. High contrast, sunny day, spacious negative space on the left. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, , a girl with braided hair and a boy in a teal jacket, standing next to a large transparent rainwater tank with 500 liters marked on it in a green school garden. High contrast, sunny day, spacious negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Tanque graduado mostrando 500 L de agua con marcador en 18%
 6. Notas al Orador (Locución Google Vids): "En el huerto escolar, Sofía y Lucas debían separar el dieciocho por ciento de un estanque de quinientos litros de agua de lluvia para regar las hierbas aromáticas."
 
---- DIAPOSITIVA 2: Observación: Sin atajo mental directo (8 seg aprox) ---
+--- DIAPOSITIVA 2: Observación: Sin atajo mental directo (8 segundos) ---
 1. Propósito Didáctico: Observación: Sin atajo mental directo
 2. Título en Pantalla (64 pt): ¿Y SI NO HAY UN ATAJO DIRECTO?
 3. Subtítulo en Pantalla (36 pt): 18% no es 50%, ni 25%, ni 20%, ni 10%
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old boy looking at his notebook noting that 18% does not divide by 2, 4, 5, or 10 directly. Thoughtful expression, garden background, negative space on top. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The 13-year-old boy looking at his notebook noting that 18% does not divide by 2, 4, 5, or 10 directly. Thoughtful expression, garden background, negative space on top.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Signo de interrogación sobre el número 18% junto a los atajos conocidos
 6. Notas al Orador (Locución Google Vids): "Lucas observó que dieciocho no es un porcentaje notable directo. Para resolverlo se necesitan métodos matemáticos universales que funcionen con cualquier número."
 
---- DIAPOSITIVA 3: Método 1 de Lucas: La multiplicación decimal (9 seg aprox) ---
+--- DIAPOSITIVA 3: Método 1 de Lucas: La multiplicación decimal (9 segundos) ---
 1. Propósito Didáctico: Método 1 de Lucas: La multiplicación decimal
 2. Título en Pantalla (64 pt): MÉTODO 1: MULTIPLICAR POR DECIMAL
 3. Subtítulo en Pantalla (36 pt): Convertir 18% a decimal: 0,18
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old boy in a teal jacket calculating on a digital tablet showing 500 multiplied by 0.18. Clear digital tablet glow, modern anime aesthetic, negative space. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The 13-year-old boy in a teal jacket calculating on a digital tablet showing 500 multiplied by 0.18. Clear digital tablet glow, modern anime aesthetic, negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Operación en pantalla: 500 x 0,18 = 90 litros
 6. Notas al Orador (Locución Google Vids): "Lucas propuso el primer método: transformar dieciocho por ciento en cero coma dieciocho y multiplicarlo directamente por quinientos. El resultado fue noventa."
 
---- DIAPOSITIVA 4: Método 2 de Sofía: La regla de proporción (9 seg aprox) ---
+--- DIAPOSITIVA 4: Método 2 de Sofía: La regla de proporción (9 segundos) ---
 1. Propósito Didáctico: Método 2 de Sofía: La regla de proporción
 2. Título en Pantalla (64 pt): MÉTODO 2: REGLA DE PROPORCIÓN
 3. Subtítulo en Pantalla (36 pt): 18 por 500 dividido entre 100
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old girl with braided hair writing on a notepad showing a clean rule of three proportion. Bright daylight, garden greenery, negative space on the right. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The 13-year-old girl with braided hair writing on a notepad showing a clean rule of three proportion. Bright daylight, garden greenery, negative space on the right.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Ecuación de proporción: (18 x 500) / 100 = 9.000 / 100 = 90 litros
 6. Notas al Orador (Locución Google Vids): "Sofía prefirió usar una proporción: dieciocho partes de cada cien multiplicado por quinientos. Al multiplicar dieciocho por quinientos y dividir por cien, también obtuvo noventa."
 
---- DIAPOSITIVA 5: Comparación: Dos caminos, un mismo destino (9 seg aprox) ---
+--- DIAPOSITIVA 5: Comparación: Dos caminos, un mismo destino (9 segundos) ---
 1. Propósito Didáctico: Comparación: Dos caminos, un mismo destino
 2. Título en Pantalla (64 pt): ¡AMBOS CAMINOS SON CORRECTOS!
 3. Subtítulo en Pantalla (36 pt): 500 x 0,18 = (18 x 500) / 100 = 90
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Both 13-year-old students comparing their notebooks with big smiles of satisfaction. Two different calculations arriving at 90. Clear lighting, clean graphics, negative space. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, comparing their notebooks with big smiles of satisfaction. Two different calculations arriving at 90.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Balanza matemática mostrando la equivalencia perfecta de ambos métodos
 6. Notas al Orador (Locución Google Vids): "Ambos caminos llegaron con exactitud a noventa litros. Esto demuestra que en matemática puedes elegir el método que te resulte más cómodo y rápido según los números."
 
---- DIAPOSITIVA 6: Desafío modelado: El 35% de 40 estudiantes (9 seg aprox) ---
+--- DIAPOSITIVA 6: Desafío modelado: El 35% de 40 estudiantes (9 segundos) ---
 1. Propósito Didáctico: Desafío modelado: El 35% de 40 estudiantes
 2. Título en Pantalla (64 pt): APLICANDO AL 35% DE 40
 3. Subtítulo en Pantalla (36 pt): ¿Cuántos estudiantes practican básquetbol?
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The two 13-year-old students looking at a school roster showing 40 students with 35% in basketball team. Clean vector overlays, high contrast. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, looking at a school roster showing 40 students with 35% in basketball team. Clean vector overlays, high contrast.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Cálculo limpio: 40 x 0,35 = 14 estudiantes
 6. Notas al Orador (Locución Google Vids): "Practiquemos otro caso: en un curso de cuarenta estudiantes, el treinta y cinco por ciento practica básquetbol. Cuarenta por cero coma treinta y cinco nos da exactamente catorce estudiantes."
 
---- DIAPOSITIVA 7: Síntesis del Gancho: Pase a la formalización (8 seg aprox) ---
+--- DIAPOSITIVA 7: Síntesis del Gancho: Pase a la formalización (8 segundos) ---
 1. Propósito Didáctico: Síntesis del Gancho: Pase a la formalización
 2. Título en Pantalla (64 pt): LOS DOS ALGORITMOS MAESTROS
 3. Subtítulo en Pantalla (36 pt): Listos para resolver cualquier porcentaje
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Both 13-year-old students standing together with confidence, welcoming the viewer to the classroom board. Bright vibrant colors, generous negative space. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing together with confidence, welcoming the viewer to the classroom board. Bright vibrant colors, generous negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Iconos conectando la fórmula decimal y la fórmula fraccionaria
 6. Notas al Orador (Locución Google Vids): "Ahora que conoces los dos algoritmos universales, estás listo para calcular cualquier porcentaje sin importar su valor. Formalicemos las fórmulas en el cuaderno."
 
@@ -1062,61 +1085,61 @@ Titulo: Algoritmos Universales de Cálculo: Multiplicación Decimal y Proporció
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Declaración del Objetivo: Métodos Universales de Cálculo (12 seg aprox) ---
+--- DIAPOSITIVA 1: Declaración del Objetivo: Métodos Universales de Cálculo (12 segundos) ---
 1. Propósito Didáctico: Declaración del Objetivo: Métodos Universales de Cálculo
 2. Título en Pantalla (64 pt): OBJETIVO DE LA LECCIÓN
-3. Subtítulo en Pantalla (36 pt): Calcular cualquier porcentaje mediante multiplicación decimal o proporción directa
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old students, a girl with braided hair and a boy in a teal jacket, looking at a math display showing calculation formulas. Clean modern classroom, ample negative space on the left. No text drawn by AI.
+3. Subtítulo en Pantalla (36 pt): Multiplicación por decimal y regla de proporcionalidad directa
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, , a girl with braided hair and a boy in a teal jacket, looking at a math display showing calculation formulas. Clean modern classroom, ample negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Título de la lección y Objetivo de Aprendizaje oficial
-6. Notas al Orador (Locución Google Vids): "Hoy aprenderemos a calcular cualquier porcentaje aplicando dos estrategias formales universales: la multiplicación por número decimal y la fórmula proporcional."
+6. Notas al Orador (Locución Google Vids): "Hoy aprenderemos a calcular cualquier porcentaje utilizando la multiplicación por decimal y la proporción directa."
 
---- DIAPOSITIVA 2: Método 1: Multiplicación por Número Decimal (13 seg aprox) ---
+--- DIAPOSITIVA 2: Método 1: Multiplicación por Número Decimal (13 segundos) ---
 1. Propósito Didáctico: Método 1: Multiplicación por Número Decimal
 2. Título en Pantalla (64 pt): MÉTODO 1: MULTIPLICAR POR DECIMAL
 3. Subtítulo en Pantalla (36 pt): Total x (Porcentaje : 100)
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old boy in a teal jacket pointing to the conversion from percent to decimal on a whiteboard. Clean lines, negative space on the right. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The 13-year-old boy in a teal jacket pointing to the conversion from percent to decimal on a whiteboard. Clean lines, negative space on the right.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Fórmula: Valor = Total x Decimal (ej. 35% de 40 = 40 x 0,35 = 14)
 6. Notas al Orador (Locución Google Vids): "En el primer método convertimos el porcentaje a número decimal dividiéndolo por cien y luego multiplicamos ese decimal por el valor total."
 
---- DIAPOSITIVA 3: Ejemplo del Método 1: Decimales con Cero (13 seg aprox) ---
+--- DIAPOSITIVA 3: Ejemplo del Método 1: Decimales con Cero (13 segundos) ---
 1. Propósito Didáctico: Ejemplo del Método 1: Decimales con Cero
 2. Título en Pantalla (64 pt): CUIDADO CON LOS PORCENTAJES MENORES A 10%
 3. Subtítulo en Pantalla (36 pt): El 8% es 0,08 (no 0,8)
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Close-up of notebook calculations showing 8% = 0.08 and 250 x 0.08 = 20. Clear mathematical notation, negative space. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Close-up of notebook calculations showing 8% = 0.08 and 250 x 0.08 = 20. Clear mathematical notation, negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Ejemplo de advertencia: 8% de 250 = 250 x 0,08 = 20
 6. Notas al Orador (Locución Google Vids): "Atención especial con los porcentajes de un solo dígito: ocho por ciento es cero coma cero ocho. Si multiplicas por cero coma ocho estarías calculando el ochenta por ciento."
 
---- DIAPOSITIVA 4: Método 2: Regla de Proporcionalidad Directa (13 seg aprox) ---
+--- DIAPOSITIVA 4: Método 2: Regla de Proporcionalidad Directa (13 segundos) ---
 1. Propósito Didáctico: Método 2: Regla de Proporcionalidad Directa
 2. Título en Pantalla (64 pt): MÉTODO 2: REGLA DE PROPORCIONALIDAD
 3. Subtítulo en Pantalla (36 pt): Porcentaje / 100 = Parte / Total
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The 13-year-old girl setting up a 2x2 proportion table on a blackboard. Clear handwriting, negative space. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The 13-year-old girl setting up a 2x2 proportion table on a blackboard. Clear handwriting, negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Fórmula cruzada: Parte = (Porcentaje x Total) / 100
 6. Notas al Orador (Locución Google Vids): "En el segundo método planteamos una proporción directa: el porcentaje es a cien como la parte desconocida es al total. Despejando, multiplicamos el porcentaje por el total y dividimos por cien."
 
---- DIAPOSITIVA 5: Consejo Práctico: Simplificar antes de multiplicar (13 seg aprox) ---
+--- DIAPOSITIVA 5: Consejo Práctico: Simplificar antes de multiplicar (13 segundos) ---
 1. Propósito Didáctico: Consejo Práctico: Simplificar antes de multiplicar
 2. Título en Pantalla (64 pt): SIMPLIFICAR CEROS PRIMERO
 3. Subtítulo en Pantalla (36 pt): (18 x 500) / 100 = 18 x 5 = 90
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Both students simplifying numbers with slashes before multiplying. High clarity, modern anime, negative space. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Both students simplifying numbers with slashes before multiplying. High clarity, modern anime, negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Técnica de cancelación de ceros: 500 / 100 se convierte directamente en 5
 6. Notas al Orador (Locución Google Vids): "Un consejo de oro para el método proporcional: cuando el total termina en ceros, cancela los ceros con el cien primero. Quinientos entre cien es cinco, y dieciocho por cinco es noventa."
 
---- DIAPOSITIVA 6: Caso Isomórfico: El 18% de 500 (13 seg aprox) ---
+--- DIAPOSITIVA 6: Caso Isomórfico: El 18% de 500 (13 segundos) ---
 1. Propósito Didáctico: Caso Isomórfico: El 18% de 500
-2. Título en Pantalla (64 pt): EJEMPLO MODELADO: 18% DE 500
-3. Subtítulo en Pantalla (36 pt): Por decimal: 500 x 0,18 = 90 | Por proporción: (18 x 500) / 100 = 90
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Both 13-year-old students solving 18% of 500 on an interactive tablet display. Clear numbers, spacious negative space on the right. No text drawn by AI.
-5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Resolución completa paso a paso con ambos algoritmos confirmando 90
-6. Notas al Orador (Locución Google Vids): "Resolvamos el caso modelado: dieciocho por ciento de quinientos. Multiplicando quinientos por cero coma dieciocho obtenemos noventa. Por proporción, dieciocho por quinientos entre cien también da noventa."
+2. Título en Pantalla (64 pt): EJEMPLO MODELADO: CASO 1
+3. Subtítulo en Pantalla (36 pt): Se requiere calcular el 18% de 500 utilizando cualquiera de los dos métodos apre
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, solving 18% of 500 on an interactive tablet display. Clear numbers, spacious negative space on the right.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Resolución canónica: 500 x 0,18 = 90.
+6. Notas al Orador (Locución Google Vids): "Analicemos paso a paso el caso modelado: Se requiere calcular el 18% de 500 utilizando cualquiera de los dos métodos aprendidos. ¿Cuál es el 18% de 500? 500 x 0,18 = 90. Por lo tanto, el resultado esperado es: 90."
 
---- DIAPOSITIVA 7: Regla de Oro y Pase a la Práctica (13 seg aprox) ---
+--- DIAPOSITIVA 7: Regla de Oro y Pase a la Práctica (13 segundos) ---
 1. Propósito Didáctico: Regla de Oro y Pase a la Práctica
-2. Título en Pantalla (64 pt): REGLA DE ORO DEL CÁLCULO GENERAL
+2. Título en Pantalla (64 pt): REGLA DE ORO DE LA LECCIÓN
 3. Subtítulo en Pantalla (36 pt): Elige tu camino favorito: decimal o proporción
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. The two 13-year-old student explorers smiling, pointing forward ready for exercises. Modern anime style, bright colors, negative space. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The two 13-year-old student explorers smiling, pointing forward ready for exercises. Modern anime style, bright colors, negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Resumen final de ambas fórmulas. ¡A practicar en la pantalla!
-6. Notas al Orador (Locución Google Vids): "Regla de oro: si tienes calculadora o multiplicas rápido con decimales, usa el método decimal; si los números tienen ceros fáciles de simplificar, usa la proporción. Ahora practiquemos."
+6. Notas al Orador (Locución Google Vids): "Regla de oro: Elige tu camino favorito: decimal o proporción. Ahora pon a prueba lo aprendido resolviendo los casos de práctica en la plataforma interactiva."
 
 ================================================================================
 MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
@@ -1188,11 +1211,17 @@ Item 2 (Para calcular el 35% de 40 estudiantes.):
 --------------------------------------------------------------------------------
 [PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
 --------------------------------------------------------------------------------
-Comprobacion 1 (En el video modelamos el cálculo del 18% de 500 usando ambos métodos.):
-• Pregunta: "¿Por qué simplificar los ceros en (18 x 500) / 100 hace que el cálculo sea tan rápido?"
-• Respuesta Esperada: Porque 500 dividido por 100 es 5, transformando la operación simplemente en 18 x 5 = 90.
-• Pista de Apoyo: "Divide 500 entre 100 primero: obtienes 5. Luego multiplica 18 por 5."
-• Revelacion: "Porque se simplifica 500/100 a 5, y 18 x 5 = 90."
+Comprobacion 1 (Se requiere calcular el 18% de 500 utilizando cualquiera de los dos métodos aprendidos.):
+• Pregunta: "¿Cuál es el 18% de 500?"
+• Respuesta Esperada: 90
+• Pista de Apoyo: "Multiplica 500 por 0,18 o calcula 18 x 5."
+• Revelacion: "El 18% de 500 es 90."
+
+Comprobacion 2 (En un curso de 40 estudiantes, el 35% practica básquetbol en las tardes.):
+• Pregunta: "¿Cuántos estudiantes practican básquetbol?"
+• Respuesta Esperada: 14
+• Pista de Apoyo: "Multiplica 40 por 0,35 o usa la proporción (35 x 40) : 100."
+• Revelacion: "14 estudiantes practican básquetbol."
 
 --------------------------------------------------------------------------------
 [PASO 5: PRACTICA EN EL CUADERNO FISICO]
@@ -1274,6 +1303,7 @@ Refuerzo 1 (Refuerzo de Multiplicación Decimal de Porcentajes):
 
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 08-10-2026, 3:56:16 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -1288,13 +1318,13 @@ DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
 2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
 3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
 4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
-5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
-   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
-   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
-   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
-6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
-7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
-8. Regla de Producción Audiovisual: El gancho tiene 60 segundos asignados y la explicación 90 segundos. En la producción con Google Vids, la locución puede extenderlos unos segundos de forma natural; no se exige medir con cronómetro, reexportar ni forzar una duración acústica exacta.
+5. Duraciones Planificadas de Producción Audiovisual:
+   • Video Gancho: 60 segundos de duración planificada distribuidos en 7 diapositivas.
+   • Video Explicativo: 90 segundos de duración planificada distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt, maximo 8 palabras); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt, maximo 8 palabras). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes.
+7. Logotipo Oficial: Codex/Work incorpora el logo blanco de EstudioSimple en la esquina inferior derecha del PPTX al tamano del video de referencia. No pedir a la IA que dibuje el logo dentro de la imagen; dejar espacio negativo.
+8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. No se exige medir con cronómetro, contar palabras ni reexportar por unos segundos adicionales.
 
 ================================================================================
 MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
@@ -1311,59 +1341,59 @@ Titulo: El Desafío de la Feria Escolar
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Desafío Comercial: Las ofertas de la feria (8 seg aprox) ---
+--- DIAPOSITIVA 1: Desafío Comercial: Las ofertas de la feria (8 segundos) ---
 1. Propósito Didáctico: Desafío Comercial: Las ofertas de la feria
 2. Título en Pantalla (64 pt): DESCUENTOS E IVA EN LA VIDA REAL
 3. Subtítulo en Pantalla (36 pt): Aplicación de porcentajes en compras cotidianas
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student organizers, a girl with braided hair holding a calculator and clipboard, and a boy in a teal jacket arranging items on a wooden school market stall. Bright banners with percentage signs in the background, warm natural daylight, clean vector aesthetic, ample negative space on the left. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Two 13-year-old student organizers, a girl with braided hair holding a calculator and clipboard, and a boy in a teal jacket arranging items on a wooden school market stall. Bright banners with percentage signs in the background, warm natural daylight, clean vector aesthetic, ample negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Carteles promocionales con símbolos de % y etiquetas de precios
 6. Notas al Orador (Locución Google Vids): "Bienvenidos a la feria escolar. Hoy Sofía y Lucas tienen una misión de gran responsabilidad: calcular correctamente los cobros con descuentos promocionales y emitir boletas legales con el impuesto de IVA en las operaciones afectas."
 
---- DIAPOSITIVA 2: El Polerón en Liquidación (9 seg aprox) ---
+--- DIAPOSITIVA 2: El Polerón en Liquidación (9 segundos) ---
 1. Propósito Didáctico: El Polerón en Liquidación
 2. Título en Pantalla (64 pt): ¿CUÁNTO AHORRAMOS Y CUÁNTO PAGAMOS?
 3. Subtítulo en Pantalla (36 pt): Polerón de $30.000 con 20% de descuento
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Close up of the school market stall counter where a warm blue hoodie is displayed with a large yellow tag showing an original price. Lucas is pointing at a notebook while Sofía checks the calculation, clear focused expressions, clean modern flat colors, ample negative space on the left. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Close up of the school market stall counter where a warm blue hoodie is displayed with a large yellow tag showing an original price. Lucas is pointing at a notebook while Sofía checks the calculation, clear focused expressions, clean modern flat colors, ample negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Etiqueta de polerón: Precio de lista $30.000 - Oferta 20% OFF
 6. Notas al Orador (Locución Google Vids): "Un polerón institucional tiene un precio de lista de 30.000 pesos y un letrero anuncia 20% de descuento por liquidación de temporada. Un apoderado se acerca y pregunta cuál es el monto exacto a pagar."
 
---- DIAPOSITIVA 3: La Trampa del Descuento (9 seg aprox) ---
+--- DIAPOSITIVA 3: La Trampa del Descuento (9 segundos) ---
 1. Propósito Didáctico: La Trampa del Descuento
 2. Título en Pantalla (64 pt): DESCUENTO NO ES EL PRECIO FINAL
 3. Subtítulo en Pantalla (36 pt): Distinguir entre ahorro y total a pagar
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Split visualization on a desk surface: on one side a stack of coins representing the discount savings, on the other side a larger stack representing the final payment amount. Sofía explaining with gestures to Lucas, vibrant educational palette, clean lines, ample negative space on the left. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Split visualization on a desk surface: on one side a stack of coins representing the discount savings, on the other side a larger stack representing the final payment amount. Sofía explaining with gestures to Lucas, vibrant educational palette, clean lines, ample negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema comparativo: Ahorro ($6.000) vs Pago final ($24.000)
 6. Notas al Orador (Locución Google Vids): "Muchos compradores cometen el error de pensar que el cálculo termina al encontrar el 20%. Pero el 20% es solo el ahorro. El precio final exige un paso adicional: restar esa rebaja del precio inicial."
 
---- DIAPOSITIVA 4: El Impuesto al Valor Agregado: IVA 19% (9 seg aprox) ---
+--- DIAPOSITIVA 4: El Impuesto al Valor Agregado: IVA 19% (9 segundos) ---
 1. Propósito Didáctico: El Impuesto al Valor Agregado: IVA 19%
 2. Título en Pantalla (64 pt): EL IMPUESTO AL CONSUMO: IVA 19%
 3. Subtítulo en Pantalla (36 pt): Tributo legal del 19% que se aplica sobre operaciones afectas
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Lucas examining an official Chilean shopping receipt or ticket under a magnifying glass, showing clear structured printed sections for net value, tax and total. Soft studio lighting, clean digital vector feel, ample negative space on the left. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Lucas examining an official Chilean shopping receipt or ticket under a magnifying glass, showing clear structured printed sections for net value, tax and total. Soft studio lighting, clean digital vector feel, ample negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Boleta de compra en operación afecta: Neto + IVA (19%) = Total Bruto
 6. Notas al Orador (Locución Google Vids): "Por otro lado, cuando compramos un bien o servicio en una operación afecta a IVA en Chile, la ley tributaria aplica un recargo del diecinueve por ciento sobre el valor neto. A diferencia del descuento, el IVA se suma al total."
 
---- DIAPOSITIVA 5: Aumento vs Disminución Porcentual (9 seg aprox) ---
+--- DIAPOSITIVA 5: Aumento vs Disminución Porcentual (9 segundos) ---
 1. Propósito Didáctico: Aumento vs Disminución Porcentual
 2. Título en Pantalla (64 pt): DOS OPERACIONES OPUESTAS
 3. Subtítulo en Pantalla (36 pt): Descuento resta | Impuesto suma
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Conceptual visual comparing two balance scales side by side: one scale showing a subtraction arrow pointing down labeled with a minus sign, the other showing an addition arrow pointing up. Sofía and Lucas collaborating peacefully, balanced modern layout, ample negative space on the left. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Conceptual visual comparing two balance scales side by side: one scale showing a subtraction arrow pointing down labeled with a minus sign, the other showing an addition arrow pointing up. Sofía and Lucas collaborating peacefully, balanced modern layout, ample negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Flecha descendente verde (Descuento) vs Flecha ascendente azul (IVA)
 6. Notas al Orador (Locución Google Vids): "Porcentajes en acción: en el descuento restamos porque el precio disminuye; en el impuesto sumamos porque el precio aumenta. La estructura matemática es idéntica, cambia únicamente la operación de cierre."
 
---- DIAPOSITIVA 6: El Desafío de la Caja Registradora (8 seg aprox) ---
+--- DIAPOSITIVA 6: El Desafío de la Caja Registradora (8 segundos) ---
 1. Propósito Didáctico: El Desafío de la Caja Registradora
 2. Título en Pantalla (64 pt): EXACTITUD Y RESPONSABILIDAD
 3. Subtítulo en Pantalla (36 pt): Operar sin errores en situaciones reales
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Sofía and Lucas standing behind the stall cash register with a line of enthusiastic students and parents waiting to buy. They look confident and focused, ready to aplicar las matemáticas con exactitud y rapidez, clean lines, ample negative space on the left. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Sofía and Lucas standing behind the stall cash register with a line of enthusiastic students and parents waiting to buy. They look confident and focused, ready to aplicar las matemáticas con exactitud y rapidez, clean lines, ample negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Iconografía de boleta y calculadora indicando orden y método
 6. Notas al Orador (Locución Google Vids): "Para atender con rapidez y sin equivocarse, Lucas y Sofía necesitan un método estructurado de 3 pasos que funcione para cualquier precio, cualquier descuento y cualquier boleta con IVA."
 
---- DIAPOSITIVA 7: El Puente: La regla de los 3 pasos (8 seg aprox) ---
+--- DIAPOSITIVA 7: El Puente: La regla de los 3 pasos (8 segundos) ---
 1. Propósito Didáctico: El Puente: La regla de los 3 pasos
 2. Título en Pantalla (64 pt): MÉTODO DE 3 PASOS EN ACCIÓN
 3. Subtítulo en Pantalla (36 pt): Paso 1: Base | Paso 2: Monto % | Paso 3: Operar
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. An open student notebook on the foreground desk with three clearly numbered structured bullet steps highlighted in cyan, orange and navy. Lucas holding a pen smiling warmly beside Sofía, bright inviting atmosphere, ample negative space on the left. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, An open student notebook on the foreground desk with three clearly numbered structured bullet steps highlighted in cyan, orange and navy. Lucas holding a pen smiling warmly beside Sofía, bright inviting atmosphere, ample negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama de flujo de 3 pasos conectando hacia el cuaderno
 6. Notas al Orador (Locución Google Vids): "Vamos a ver cómo formular este método en el cuaderno de matemática para resolver problemas de comercio sin margen de error."
 
@@ -1378,61 +1408,61 @@ Titulo: Modelamiento de Problemas Comerciales: Descuentos e IVA
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Declaración del Objetivo: Descuentos Comerciales e IVA (13 seg aprox) ---
+--- DIAPOSITIVA 1: Declaración del Objetivo: Descuentos Comerciales e IVA (13 segundos) ---
 1. Propósito Didáctico: Declaración del Objetivo: Descuentos Comerciales e IVA
 2. Título en Pantalla (64 pt): OBJETIVO DE LA LECCIÓN
-3. Subtítulo en Pantalla (36 pt): Resolver problemas de descuentos comerciales e IVA (19%) en operaciones afectas
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old students, a girl with braided hair and a boy in a teal jacket, in a clean modern classroom looking at a digital blackboard with price tags and receipts. Generous negative space on the left. High contrast, bright flat colors. No text drawn by AI.
+3. Subtítulo en Pantalla (36 pt): Cálculo de rebajas comerciales e IVA 19% en boletas chilenas
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, , a girl with braided hair and a boy in a teal jacket, in a clean modern classroom looking at a digital blackboard with price tags and receipts. Generous negative space on the left. High contrast, bright flat colors.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Meta de aprendizaje: Calcular rebajas y recargos por IVA distinguiendo monto de precio final
-6. Notas al Orador (Locución Google Vids): "Hoy aprenderemos a resolver problemas cotidianos aplicando porcentajes al comercio: calcularemos descuentos comerciales y recargos de IVA del diecinueve por ciento en operaciones afectas."
+6. Notas al Orador (Locución Google Vids): "Hoy resolveremos problemas cotidianos de descuentos comerciales e IVA del diecinueve por ciento en operaciones comerciales afectas."
 
---- DIAPOSITIVA 2: Paso 1: Identificar el 100% y el Porcentaje (13 seg aprox) ---
+--- DIAPOSITIVA 2: Paso 1: Identificar el 100% y el Porcentaje (13 segundos) ---
 1. Propósito Didáctico: Paso 1: Identificar el 100% y el Porcentaje
 2. Título en Pantalla (64 pt): PASO 1: IDENTIFICAR EL TOTAL BASE
 3. Subtítulo en Pantalla (36 pt): El valor inicial siempre representa el 100%
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Analytical blackboard diagram breaking down a real purchase into its components: Base Price represents 100%, and the Rate represents the percentage to be calculated. Lucas highlighting the variables with chalk, clean modern aesthetic, ample negative space on the left. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Analytical blackboard diagram breaking down a real purchase into its components: Base Price represents 100%, and the Rate represents the percentage to be calculated. Lucas highlighting the variables with chalk, clean modern aesthetic, ample negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de partida: Base (100%) y Tasa porcentual (p%)
 6. Notas al Orador (Locución Google Vids): "El primer paso consiste en identificar cuál es la cantidad que representa el 100%. En un descuento, el 100% es el precio de lista original. En una operación afecta a IVA, el 100% es el valor neto sobre el cual se calcula el impuesto."
 
---- DIAPOSITIVA 3: Paso 2: Calcular el Monto del Porcentaje (13 seg aprox) ---
+--- DIAPOSITIVA 3: Paso 2: Calcular el Monto del Porcentaje (13 segundos) ---
 1. Propósito Didáctico: Paso 2: Calcular el Monto del Porcentaje
 2. Título en Pantalla (64 pt): PASO 2: CALCULAR EL MONTO
 3. Subtítulo en Pantalla (36 pt): Monto = Base x (Porcentaje : 100)
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Step by step numerical demonstration showing multiplication of a base quantity by a decimal percentage, with clear intermediate arrows pointing to the resulting monetary amount. Sofía writing notes diligently, ample negative space on the left. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Step by step numerical demonstration showing multiplication of a base quantity by a decimal percentage, with clear intermediate arrows pointing to the resulting monetary amount. Sofía writing notes diligently, ample negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Operación: Monto = Base x Decimal o Proporción cruzada
 6. Notas al Orador (Locución Google Vids): "El segundo paso es calcular el valor del porcentaje usando la estrategia más conveniente: ya sea multiplicando por el decimal correspondiente o aplicando la regla de proporcionalidad directa."
 
---- DIAPOSITIVA 4: Paso 3: Operar Según la Situación (Sumar o Restar) (13 seg aprox) ---
+--- DIAPOSITIVA 4: Paso 3: Operar Según la Situación (Sumar o Restar) (13 segundos) ---
 1. Propósito Didáctico: Paso 3: Operar Según la Situación (Sumar o Restar)
 2. Título en Pantalla (64 pt): PASO 3: SUMAR O RESTAR
 3. Subtítulo en Pantalla (36 pt): Resta en rebajas | Suma en impuestos y recargos
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Split visual layout showing two clear operations: on the left a green discount tag with a subtraction symbol leading to Final Price, on the right an official seal with an addition symbol leading to Gross Price. High contrast, clean vector art, ample negative space on the left. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Split visual layout showing two clear operations: on the left a green discount tag with a subtraction symbol leading to Final Price, on the right an official seal with an addition symbol leading to Gross Price. High contrast, clean vector art, ample negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Árbol de decisión: ¿Descuento? Restar. ¿Operación afecta a IVA? Sumar.
 6. Notas al Orador (Locución Google Vids): "El tercer paso es la operación final. Si el problema plantea un descuento o rebaja, restamos el monto al precio original. Si plantea una compraventa afecta a IVA del diecinueve por ciento o un recargo, sumamos el monto al valor base."
 
---- DIAPOSITIVA 5: Estrategia Abreviada: El Factor Directo (13 seg aprox) ---
+--- DIAPOSITIVA 5: Estrategia Abreviada: El Factor Directo (13 segundos) ---
 1. Propósito Didáctico: Estrategia Abreviada: El Factor Directo
 2. Título en Pantalla (64 pt): ATAJO: FACTOR DIRECTO
 3. Subtítulo en Pantalla (36 pt): Descuento 20% -> x 0,80 | IVA 19% -> x 1,19
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Modern computational infographic showing two shortcuts: multiplying by 0.80 to directly obtain an 80% price after 20% off, and multiplying by 1.19 to directly obtain the price with 19% IVA included. Minimalist aesthetic, ample negative space on the left. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Modern computational infographic showing two shortcuts: multiplying by 0.80 to directly obtain an 80% price after 20% off, and multiplying by 1.19 to directly obtain the price with 19% IVA included. Minimalist aesthetic, ample negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Factores directos: 1 - 0,20 = 0,80 | Operación afecta a IVA: 1 + 0,19 = 1,19
 6. Notas al Orador (Locución Google Vids): "Atajo experto: si te descuentan el veinte por ciento, pagas el ochenta por ciento del valor, multiplicando por cero coma ochenta. Y en compras afectas a IVA del diecinueve por ciento, el valor bruto final corresponde al ciento diecinueve por ciento, multiplicando el neto por uno coma diecinueve."
 
---- DIAPOSITIVA 6: Modelamiento en Cuaderno: El Polerón de $30.000 (13 seg aprox) ---
+--- DIAPOSITIVA 6: Modelamiento en Cuaderno: El Polerón de $30.000 (13 segundos) ---
 1. Propósito Didáctico: Modelamiento en Cuaderno: El Polerón de $30.000
-2. Título en Pantalla (64 pt): MODELAMIENTO EN CUADERNO
-3. Subtítulo en Pantalla (36 pt): Precio $30.000 - 20% Desc ($6.000) = $24.000
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Close up of a student notebook page neatly filled with pencil writing: Original price $30.000, 20% calculation equals $6.000, and final subtraction $30.000 minus $6.000 equals $24.000. Lucas and Sofía looking at the completed page with satisfaction, ample negative space on the left. No text drawn by AI.
-5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Resolución manuscrita: Descuento = $6.000, Total a pagar = $24.000
-6. Notas al Orador (Locución Google Vids): "Registremos en el cuaderno el caso del polerón: Precio de lista = 30.000 pesos. Descuento del 20%: calculamos 20 por 30.000 dividido en 100, lo que da 6.000 pesos de rebaja. Precio final a pagar: 30.000 menos 6.000 = 24.000 pesos."
+2. Título en Pantalla (64 pt): EJEMPLO MODELADO: CASO 1
+3. Subtítulo en Pantalla (36 pt): Un polerón escolar tiene un precio de lista de $30.000. Durante la liquidación d
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Close up of a student notebook page neatly filled with pencil writing: Original price $30.000, 20% calculation equals $6.000, and final subtraction $30.000 minus $6.000 equals $24.000. Lucas and Sofía looking at the completed page with satisfaction, ample negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Resolución canónica: Descuento = 20% de 30.000 = (20 × 30.000) / 100 = $6.000. Precio final = 30.000 - 6.000 = $24.000.
+6. Notas al Orador (Locución Google Vids): "Analicemos paso a paso el caso modelado: Un polerón escolar tiene un precio de lista de $30.000. Durante la liquidación de temporada se ofrece con un 20% de descuento. ¿Cuánto dinero se descuenta y cuál es el precio final que se debe pagar por el polerón? Descuento = 20% de 30.000 = (20 × 30.000) / 100 = $6.000. Precio final = 30.000 - 6.000 = $24.000. Por lo tanto, el resultado esperado es: Se descuentan $6.000 y el precio final es $24.000.."
 
---- DIAPOSITIVA 7: Regla de Oro: Lee con Atención qué se Pregunta (12 seg aprox) ---
+--- DIAPOSITIVA 7: Regla de Oro: Lee con Atención qué se Pregunta (12 segundos) ---
 1. Propósito Didáctico: Regla de Oro: Lee con Atención qué se Pregunta
-2. Título en Pantalla (64 pt): REGLA DE ORO DE LOS PROBLEMAS
+2. Título en Pantalla (64 pt): REGLA DE ORO DE LA LECCIÓN
 3. Subtítulo en Pantalla (36 pt): Verifica siempre si piden la rebaja o el precio final
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. A large golden badge on a clean background highlighting a glowing key icon. Sofía and Lucas pointing forward enthusiastically toward the practice exercises on the platform screen, bright vibrant lighting, ample negative space on the left. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, A large golden interactive study guide on a clean background highlighting a glowing key icon. Sofía and Lucas pointing forward enthusiastically toward the practice exercises on the platform screen, bright vibrant lighting, ample negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Insignia dorada con la regla de oro: Distinguir monto vs precio final
-6. Notas al Orador (Locución Google Vids): "Regla de Oro: antes de responder, verifica siempre si la pregunta solicita el monto del descuento o impuesto, o bien el precio final a pagar. Ahora apliquemos este modelo en los ejercicios interactivos."
+6. Notas al Orador (Locución Google Vids): "Regla de oro: Verifica siempre si piden la rebaja o el precio final. Ahora pon a prueba lo aprendido resolviendo los casos de práctica en la plataforma interactiva."
 
 ================================================================================
 MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
@@ -1504,11 +1534,17 @@ Item 2 (Para saber cuánto paga el cliente por el polerón de $30.000.):
 --------------------------------------------------------------------------------
 [PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
 --------------------------------------------------------------------------------
-Comprobacion 1 (En el video modelamos el cálculo del polerón de $30.000 con 20% de descuento.):
-• Pregunta: "¿Por qué responder $6.000 a la pregunta "¿cuánto se paga?" sería un error común?"
-• Respuesta Esperada: Porque $6.000 es solo la rebaja que se ahorra el cliente; para saber cuánto se paga se debe restar esa rebaja del precio original.
-• Pista de Apoyo: "Recuerda que $6.000 es el beneficio del descuento. El cliente debe pagar los $24.000 restantes."
-• Revelacion: "Porque $6.000 es el descuento y no el precio final."
+Comprobacion 1 (Un polerón escolar tiene un precio de lista de $30.000. Durante la liquidación de temporada se ofrece con un 20% de descuento.):
+• Pregunta: "¿Cuánto dinero se descuenta y cuál es el precio final que se debe pagar por el polerón?"
+• Respuesta Esperada: Se descuentan $6.000 y el precio final es $24.000.
+• Pista de Apoyo: "Paso 1: Calcula el 20% de $30.000 (el 10% es $3.000, así que el 20% es $6.000). Paso 2: Resta esa rebaja a los $30.000 originales."
+• Revelacion: "El descuento es de $6.000 y el precio final a pagar es $24.000."
+
+Comprobacion 2 (Una librería vende una enciclopedia escolar a un valor neto de $10.000, en una compraventa afecta a IVA. Al momento de emitir la boleta de venta en Chile, se debe agregar el 19% correspondiente al Impuesto al Valor Agregado.):
+• Pregunta: "¿A cuánto dinero asciende el impuesto de IVA y cuál es el precio bruto total con IVA incluido?"
+• Respuesta Esperada: El IVA es de $1.900 y el precio final con IVA es $11.900.
+• Pista de Apoyo: "Paso 1: Calcula el 19% de $10.000 multiplicando 10.000 por 0,19. Paso 2: Suma ese valor tributario a los $10.000 netos iniciales."
+• Revelacion: "El IVA es $1.900 y el valor final con impuesto incluido es $11.900."
 
 --------------------------------------------------------------------------------
 [PASO 5: PRACTICA EN EL CUADERNO FISICO]
@@ -1591,6 +1627,7 @@ Refuerzo 1 (Refuerzo de Problemas de Descuento):
 
 ================================================================================
 STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 08-10-2026, 3:56:16 p. m. (America/Santiago)
 ================================================================================
 
 FICHA CURRICULAR:
@@ -1605,13 +1642,13 @@ DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
 2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
 3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
 4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
-5. Presupuesto Temporal Estricto (TTS / Google Vids a 130 ppm):
-   • Video Gancho: 60 segundos exactos (8+8+8+9+9+9+9 s, ~130 palabras de locucion distribuidas en 7 diapositivas).
-   • Video Explicativo: 90 segundos exactos (12+13+13+13+13+13+13 s, ~195 palabras de locucion distribuidas en 7 diapositivas, incluida la diapositiva 1 del Objetivo).
-   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
-6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.
-7. Cierre de Video: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin proponer desafios finales ni tareas de cuaderno durante el video.
-8. Regla de Producción Audiovisual: El gancho tiene 60 segundos asignados y la explicación 90 segundos. En la producción con Google Vids, la locución puede extenderlos unos segundos de forma natural; no se exige medir con cronómetro, reexportar ni forzar una duración acústica exacta.
+5. Duraciones Planificadas de Producción Audiovisual:
+   • Video Gancho: 60 segundos de duración planificada distribuidos en 7 diapositivas.
+   • Video Explicativo: 90 segundos de duración planificada distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (36 pt, maximo 8 palabras); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (36 pt, maximo 8 palabras). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes.
+7. Logotipo Oficial: Codex/Work incorpora el logo blanco de EstudioSimple en la esquina inferior derecha del PPTX al tamano del video de referencia. No pedir a la IA que dibuje el logo dentro de la imagen; dejar espacio negativo.
+8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. No se exige medir con cronómetro, contar palabras ni reexportar por unos segundos adicionales.
 
 ================================================================================
 MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
@@ -1628,59 +1665,59 @@ Titulo: La Gran Misión del Cierre Anual
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: El Gran Balance del Cierre Escolar (8 seg aprox) ---
+--- DIAPOSITIVA 1: El Gran Balance del Cierre Escolar (8 segundos) ---
 1. Propósito Didáctico: El Gran Balance del Cierre Escolar
 2. Título en Pantalla (64 pt): SÍNTESIS INTEGRADORA: PORCENTAJES EN ACCIÓN
 3. Subtítulo en Pantalla (36 pt): Misión 6: Consolidación y Ensayo Final tipo MINEDUC
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student organizers, a girl with braided hair and a boy in a teal jacket, standing before a large wooden presentation board in a bright school auditorium. A colorful pie chart is pinned to the board, sunlight streaming through tall windows, clean vector aesthetic, ample negative space on the left. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Two 13-year-old student organizers, a girl with braided hair and a boy in a teal jacket, standing before a large wooden presentation board in a bright school auditorium. A colorful pie chart is pinned to the board, sunlight streaming through tall windows, clean vector aesthetic, ample negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Panel de asamblea escolar con gráfico circular de participación estudiantil
 6. Notas al Orador (Locución Google Vids): "Bienvenidos a la sesión final de nuestra unidad. Sofía y Lucas deben presentar el informe oficial de participación escolar ante la asamblea, interpretando datos porcentuales y calculando totales clave."
 
---- DIAPOSITIVA 2: El Enigma del Gráfico Circular (9 seg aprox) ---
+--- DIAPOSITIVA 2: El Enigma del Gráfico Circular (9 segundos) ---
 1. Propósito Didáctico: El Enigma del Gráfico Circular
 2. Título en Pantalla (64 pt): ¿CÓMO LEER UN GRÁFICO CIRCULAR?
 3. Subtítulo en Pantalla (36 pt): El círculo completo equivale al 100% de la muestra
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Close up of the presentation board showing a large circular chart divided into three distinct colored slices: blue for 50%, yellow for 25%, and coral for 25%. Lucas is pointing with a wooden ruler while Sofía holds her notes, focused engaged expressions, clear clean lines, negative space on the left. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Close up of the presentation board showing a large circular chart divided into three distinct colored slices: blue for 50%, yellow for 25%, and coral for 25%. Lucas is pointing with a wooden ruler while Sofía holds her notes, focused engaged expressions, clear clean lines, negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama circular con sectores: 50% (semicírculo), 25% (cuadrante) y 25% (cuadrante)
 6. Notas al Orador (Locución Google Vids): "El gráfico muestra las preferencias deportivas de los estudiantes. El sector azul ocupa la mitad del círculo, lo que equivale al 50%. Los dos sectores restantes ocupan un cuarto cada uno, correspondientes al 25%."
 
---- DIAPOSITIVA 3: El Misterio del Total Desconocido (9 seg aprox) ---
+--- DIAPOSITIVA 3: El Misterio del Total Desconocido (9 segundos) ---
 1. Propósito Didáctico: El Misterio del Total Desconocido
 2. Título en Pantalla (64 pt): CONOCIENDO LA PARTE, ENCONTRAMOS EL TOTAL
 3. Subtítulo en Pantalla (36 pt): Si el 10% son 15 estudiantes, ¿cuántos son el 100%?
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Sofía writing on a chalkboard with neat chalk figures, drawing a balance scale where one side shows 15 students and the other side shows a 10% tag. Lucas is calculating in his notebook, bright classroom ambiance, clean anime shading. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Sofía writing on a chalkboard with neat chalk figures, drawing a balance scale where one side shows 15 students and the other side shows a 10% tag. Lucas is calculating in his notebook, bright classroom ambiance, clean anime shading.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de proporción directa: 10% -> 15 | 100% -> X = (15 · 100) / 10 = 150
 6. Notas al Orador (Locución Google Vids): "El informe señala que 15 estudiantes eligieron ajedrez, representando exactamente el 10% del colegio. Sofía se pregunta: ¿cómo calculamos a cuántos estudiantes encuestaron en total?"
 
---- DIAPOSITIVA 4: El Razonamiento Multiplicativo (9 seg aprox) ---
+--- DIAPOSITIVA 4: El Razonamiento Multiplicativo (9 segundos) ---
 1. Propósito Didáctico: El Razonamiento Multiplicativo
 2. Título en Pantalla (64 pt): EL 10% CABE 10 VECES EN EL 100%
 3. Subtítulo en Pantalla (36 pt): Multiplicamos 15 por 10 = 150 estudiantes en total
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Lucas showing his notebook to the audience with an enthusiastic smile, revealing a diagram with 10 identical blocks of 15 students lined up to form a large bar of 150. Crisp lineart, warm studio lighting, negative space on the left. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Lucas showing his notebook to the audience with an enthusiastic smile, revealing a diagram with 10 identical blocks of 15 students lined up to form a large bar of 150. Crisp lineart, warm studio lighting, negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Barra modular de 10 bloques de 15 unidades: 10 · 15 = 150
 6. Notas al Orador (Locución Google Vids): "Lucas razona con rapidez: como el 10% cabe 10 veces en el 100%, multiplicamos 15 por 10. El colegio encuestó a 150 estudiantes en total. ¡Una deducción matemáticamente impecable!"
 
---- DIAPOSITIVA 5: El Dilema de las Rebajas Sucesivas (8 seg aprox) ---
+--- DIAPOSITIVA 5: El Dilema de las Rebajas Sucesivas (8 segundos) ---
 1. Propósito Didáctico: El Dilema de las Rebajas Sucesivas
 2. Título en Pantalla (64 pt): ¿SUMAR DESCUENTOS ES LO MISMO?
 3. Subtítulo en Pantalla (36 pt): Comparando 20% directo versus 10% + 10% sucesivo
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two shop posters in a bookstore window: one claims 20% direct discount, and another claims 10% plus an additional 10% discount. Sofía and Lucas analyzing the difference with furrowed brows, dramatic curious expressions, clean lighting. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Two shop posters in a bookstore window: one claims 20% direct discount, and another claims 10% plus an additional 10% discount. Sofía and Lucas analyzing the difference with furrowed brows, dramatic curious expressions, clean lighting.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Comparación: Descuento 20% sobre $10.000 ($8.000) vs 10% sobre $10.000 y 10% sobre $9.000 ($8.100)
 6. Notas al Orador (Locución Google Vids): "Un puesto escolar anuncia una rebaja del 10% y luego otro 10% adicional. ¿Es lo mismo que una rebaja del 20% de una sola vez? Sofía advierte que hay una trampa sutil."
 
---- DIAPOSITIVA 6: La Base Cambia en Cada Paso (9 seg aprox) ---
+--- DIAPOSITIVA 6: La Base Cambia en Cada Paso (9 segundos) ---
 1. Propósito Didáctico: La Base Cambia en Cada Paso
 2. Título en Pantalla (64 pt): EL SEGUNDO PORCENTAJE TIENE NUEVA BASE
 3. Subtítulo en Pantalla (36 pt): 10% de $10.000 = $1.000 | 10% de $9.000 = $900 | Total = $8.100
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Sofía and Lucas pointing at a comparison table on their chalkboard, showing that the second 10% se calcula sobre el nuevo precio rebajado de $9.000, resultando en $900 y no en $1.000. Clean modern flat colors, ample negative space. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Sofía and Lucas pointing at a comparison table on their chalkboard, showing that the second 10% se calcula sobre el nuevo precio rebajado de $9.000, resultando en $900 y no en $1.000. Clean modern flat colors, ample negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Cálculo paso a paso: $10.000 - $1.000 = $9.000 -> $9.000 - $900 = $8.100 (Ahorro real: 19%)
 6. Notas al Orador (Locución Google Vids): "Al aplicar el segundo descuento, la base ya no es 10.000, sino 9.000 pesos. Por eso el segundo ahorro es de 900 pesos, pagando 8.100 en lugar de 8.000. ¡El porcentaje siempre depende de la base sobre la que actúa!"
 
---- DIAPOSITIVA 7: Paso a la Consolidación Formal (8 seg aprox) ---
+--- DIAPOSITIVA 7: Paso a la Consolidación Formal (8 segundos) ---
 1. Propósito Didáctico: Paso a la Consolidación Formal
 2. Título en Pantalla (64 pt): ¡LISTOS PARA EL ENSAYO OFICIAL!
 3. Subtítulo en Pantalla (36 pt): Dominamos las 4 operaciones y las estrategias de porcentajes
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Sofía and Lucas high-fiving in front of the finished presentation board, holding their study guides with proud smiles, warm golden afternoon glow entering the hall, tidy minimalist room. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Sofía and Lucas high-fiving in front of the finished presentation board, holding their study guides with proud smiles, warm golden afternoon glow entering the hall, tidy minimalist room.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Insignia de maestría: 100% de la unidad dominada
 6. Notas al Orador (Locución Google Vids): "Han resuelto todos los desafíos con rigor. Ahora pasemos a la formalización matemática y al ensayo tipo Examen Libre para consolidar tu maestría en porcentajes."
 
@@ -1695,61 +1732,61 @@ Titulo: Formalización y Síntesis: El Algoritmo Universal de Porcentajes
 
 SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
 
---- DIAPOSITIVA 1: Declaración del Objetivo: Síntesis de Porcentajes y Ensayo MINEDUC (12 seg aprox) ---
+--- DIAPOSITIVA 1: Declaración del Objetivo: Síntesis de Porcentajes y Ensayo MINEDUC (12 segundos) ---
 1. Propósito Didáctico: Declaración del Objetivo: Síntesis de Porcentajes y Ensayo MINEDUC
 2. Título en Pantalla (64 pt): OBJETIVO DE LA LECCIÓN
-3. Subtítulo en Pantalla (36 pt): Consolidar el cálculo inverso, gráficos circulares y ensayo psicométrico tipo MINEDUC
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing confidently before a modern digital board displaying summary diagrams and sample questions. Clean classroom, high clarity, ample negative space on the left. No text drawn by AI.
+3. Subtítulo en Pantalla (36 pt): Hallar el total conociendo una parte y el porcentaje correspondiente
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing confidently before a modern digital board displaying summary diagrams and sample questions. Clean classroom, high clarity, ample negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Meta de aprendizaje: Dominar cálculo inverso, gráficos de sectores y resolución formal de reactivos
-6. Notas al Orador (Locución Google Vids): "Hoy consolidaremos todo lo aprendido sobre porcentajes: resolveremos problemas de cálculo inverso, interpretaremos gráficos circulares y enfrentaremos un ensayo formal con análisis de distractores."
+6. Notas al Orador (Locución Google Vids): "Hoy aprenderemos a hallar el total correspondiente al cien por ciento conociendo una parte y su porcentaje, consolidando todas las estrategias de porcentajes para evaluaciones formales."
 
---- DIAPOSITIVA 2: Ejemplo Modelado: Cálculo del Total (13 seg aprox) ---
+--- DIAPOSITIVA 2: Ejemplo Modelado: Cálculo del Total (13 segundos) ---
 1. Propósito Didáctico: Ejemplo Modelado: Cálculo del Total
 2. Título en Pantalla (64 pt): MODELAMIENTO PASO A PASO
 3. Subtítulo en Pantalla (36 pt): 18 libros corresponden al 15% -> Total = 120 libros
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Detailed chalkboard split into three vertical sections demonstrating the calculation step by step: 15% -> 18 libros, 18 · 100 = 1.800, 1.800 : 15 = 120 libros. Lucas pointing to each step, calm organized atmosphere. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Detailed chalkboard split into three vertical sections demonstrating the calculation step by step: 15% -> 18 libros, 18 · 100 = 1.800, 1.800 : 15 = 120 libros. Lucas pointing to each step, calm organized atmosphere.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Resolución: X = (18 · 100) / 15 = 1.800 / 15 = 120 libros
 6. Notas al Orador (Locución Google Vids): "Observa la resolución: si dieciocho libros son el quince por ciento, multiplicamos dieciocho por cien, obteniendo mil ochocientos. Al dividir por quince, el resultado final es ciento veinte libros."
 
---- DIAPOSITIVA 3: Interpretación de Gráficos de Sectores (13 seg aprox) ---
+--- DIAPOSITIVA 3: Interpretación de Gráficos de Sectores (13 segundos) ---
 1. Propósito Didáctico: Interpretación de Gráficos de Sectores
 2. Título en Pantalla (64 pt): LECTURA DE GRÁFICOS CIRCULARES
 3. Subtítulo en Pantalla (36 pt): La suma de todos los sectores siempre equivale al 100%
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Clean educational infographic style slide showing a 360-degree circle with protractor markings. Slices clearly labeled with fraction equivalents: 50% = 1/2, 25% = 1/4, 10% = 1/10. Sofía explaining with a pointer, bright colors. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Clean educational infographic style slide showing a 360-degree circle with protractor markings. Slices clearly labeled with fraction equivalents: 50% = 1/2, 25% = 1/4, 10% = 1/10. Sofía explaining with a pointer, bright colors.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Círculo trigonométrico de porcentajes: 360° = 100% | 180° = 50% | 90° = 25% | 36° = 10%
 6. Notas al Orador (Locución Google Vids): "En un gráfico de sectores circulares, la totalidad del círculo representa el cien por ciento. Cada sector equivale a una fracción del total, y la suma de todas las partes debe dar exactamente cien por ciento."
 
---- DIAPOSITIVA 4: Variaciones Porcentuales y Descuentos Sucesivos (13 seg aprox) ---
+--- DIAPOSITIVA 4: Variaciones Porcentuales y Descuentos Sucesivos (13 segundos) ---
 1. Propósito Didáctico: Variaciones Porcentuales y Descuentos Sucesivos
 2. Título en Pantalla (64 pt): VARIACIONES PORCENTUALES SUCESIVAS
 3. Subtítulo en Pantalla (36 pt): El porcentaje se aplica siempre sobre el saldo anterior
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Infographic comparison slide with a flow diagram showing two sequential arrows: from $10.000 minus 10% to $9.000, and from $9.000 minus 10% to $8.100. Lucas analyzing the flow, clean corporate aesthetic. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Infographic comparison slide with a flow diagram showing two sequential arrows: from $10.000 minus 10% to $9.000, and from $9.000 minus 10% to $8.100. Lucas analyzing the flow, clean corporate aesthetic.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Diagrama de flujo: $10.000 -> -10% -> $9.000 -> -10% -> $8.100 (Rebaja efectiva: 19%)
 6. Notas al Orador (Locución Google Vids): "Recuerda que en aumentos o descuentos sucesivos, la base cambia en cada etapa. Por eso dos rebajas sucesivas del diez por ciento producen un descuento real del diecinueve por ciento, no del veinte."
 
---- DIAPOSITIVA 5: Análisis del Error Típico en Evaluaciones (13 seg aprox) ---
+--- DIAPOSITIVA 5: Análisis del Error Típico en Evaluaciones (13 segundos) ---
 1. Propósito Didáctico: Análisis del Error Típico en Evaluaciones
 2. Título en Pantalla (64 pt): EVITA LA TRAMPA: ¿PARTE O TOTAL?
 3. Subtítulo en Pantalla (36 pt): Lee con atención si el número dado es la parte o el total
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Chalkboard showing a red alert icon next to a common error: calculating 20% OF 12 instead of solving for the total. Sofía crossing out the error with a gentle smile and writing the correct formula. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Chalkboard showing a red alert icon next to a common error: calculating 20% OF 12 instead of solving for the total. Sofía crossing out the error with a gentle smile and writing the correct formula.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Cuadro comparativo: "Calcular el 20% de 12" = 2,4 vs "12 es el 20%" = 60
 6. Notas al Orador (Locución Google Vids): "El error más frecuente en los exámenes es calcular el porcentaje sobre el número dado cuando el enunciado indica que ese número ya es la parte porcentual. Pregúntate siempre: ¿este número es la parte o el total?"
 
---- DIAPOSITIVA 6: Reactivo de Evaluación Formativa Oficial (13 seg aprox) ---
+--- DIAPOSITIVA 6: Reactivo de Evaluación Formativa Oficial (13 segundos) ---
 1. Propósito Didáctico: Reactivo de Evaluación Formativa Oficial
-2. Título en Pantalla (64 pt): REACTIVO TIPO EXAMEN LIBRE (MINEDUC)
-3. Subtítulo en Pantalla (36 pt): Pregunta formal de 4 alternativas con análisis de distractores
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Sofía and Lucas in formal school uniforms, standing beside a projected sample test question with 4 multiple choice letters A, B, C, D clearly highlighted in clean boxes. Focused confident attitudes. No text drawn by AI.
-5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Reactivo formal: Si 14 estudiantes son el 28%, el total es: A) 50  B) 39  C) 3,92  D) 200
-6. Notas al Orador (Locución Google Vids): "En las evaluaciones oficiales de Exámenes Libres te enfrentarás a preguntas de cuatro alternativas. Aplica con calma tu procedimiento y descarta los distractores analizando el origen del error."
+2. Título en Pantalla (64 pt): EJEMPLO MODELADO: CASO 1
+3. Subtítulo en Pantalla (36 pt): En una biblioteca pública, 18 libros de literatura juvenil representan el 15% de
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Sofía and Lucas in formal school uniforms, standing beside a projected sample test question with 4 multiple choice letters A, B, C, D clearly highlighted in clean boxes. Focused confident attitudes.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Resolución canónica: Total = (18 · 100) / 15 = 1.800 / 15 = 120 libros.
+6. Notas al Orador (Locución Google Vids): "Analicemos paso a paso el caso modelado: En una biblioteca pública, 18 libros de literatura juvenil representan el 15% del total de libros prestados este mes. ¿Cuántos libros prestó la biblioteca en total? Total = (18 · 100) / 15 = 1.800 / 15 = 120 libros. Por lo tanto, el resultado esperado es: Se prestaron 120 libros en total.."
 
---- DIAPOSITIVA 7: Cierre y Transición a la Práctica en Plataforma (13 seg aprox) ---
+--- DIAPOSITIVA 7: Cierre y Transición a la Práctica en Plataforma (13 segundos) ---
 1. Propósito Didáctico: Cierre y Transición a la Práctica en Plataforma
-2. Título en Pantalla (64 pt): ¡MAESTRÍA EN PORCENTAJES ALCANZADA!
+2. Título en Pantalla (64 pt): REGLA DE ORO DE LA LECCIÓN
 3. Subtítulo en Pantalla (36 pt): Ingresa al módulo interactivo para tu práctica final
-4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Both students smiling warmly at the camera from their study desks, laptop open showing the practice portal interface with green checkmarks. Clean bright study room, ample negative space. No text drawn by AI.
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Both students smiling warmly at the camera from their study desks, laptop open showing the practice portal interface with green checkmarks. Clean bright study room, ample negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.
 5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Logotipo de EstudioSimple con botón: Iniciar Práctica Interactiva
-6. Notas al Orador (Locución Google Vids): "¡Has dominado los porcentajes en todas sus formas! Ahora estás plenamente preparado para ingresar al simulador interactivo de EstudioSimple y poner a prueba tus habilidades."
+6. Notas al Orador (Locución Google Vids): "Regla de oro: Ingresa al módulo interactivo para tu práctica final. Ahora pon a prueba lo aprendido resolviendo los casos de práctica en la plataforma interactiva."
 
 ================================================================================
 MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
@@ -1821,11 +1858,17 @@ Item 2 (En un gráfico circular que representa a toda la comunidad escolar (100%
 --------------------------------------------------------------------------------
 [PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
 --------------------------------------------------------------------------------
-Comprobacion 1 (En el video formalizamos el cálculo inverso a partir de 18 libros equivalentes al 15%.):
-• Pregunta: "¿Por qué no debemos calcular el 15% de 18 para resolver este problema?"
-• Respuesta Esperada: Porque 18 no es el total completo; 18 es solo la parte del 15%, por lo que el total debe ser un número mucho mayor.
-• Pista de Apoyo: "Recuerda: 18 libros representan solo el 15%. Para encontrar el 100%, multiplicamos por 100 y dividimos por 15."
-• Revelacion: "Porque 18 es solo una parte y el total debe ser mayor."
+Comprobacion 1 (En una biblioteca pública, 18 libros de literatura juvenil representan el 15% del total de libros prestados este mes.):
+• Pregunta: "¿Cuántos libros prestó la biblioteca en total?"
+• Respuesta Esperada: Se prestaron 120 libros en total.
+• Pista de Apoyo: "Multiplica la parte por 100 y divide por el porcentaje: (18 · 100) : 15 = 1.800 : 15 = 120."
+• Revelacion: "La biblioteca prestó 120 libros en total."
+
+Comprobacion 2 (Un gráfico circular muestra las preferencias de 200 estudiantes: 40% Robótica, 35% Teatro y el resto Ajedrez.):
+• Pregunta: "¿Cuántos estudiantes eligieron Ajedrez?"
+• Respuesta Esperada: 50 estudiantes eligieron Ajedrez (25% del total).
+• Pista de Apoyo: "Suma 40% + 35% = 75%. El resto es 100% - 75% = 25%. Luego calcula: 200 : 4 = 50."
+• Revelacion: "50 estudiantes eligieron el taller de Ajedrez."
 
 --------------------------------------------------------------------------------
 [PASO 5: PRACTICA EN EL CUADERNO FISICO]

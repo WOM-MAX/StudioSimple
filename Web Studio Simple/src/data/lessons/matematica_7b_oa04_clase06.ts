@@ -121,7 +121,7 @@ export const MATEMATICA_7B_OA04_CLASE06: LessonData = {
       {
         "slideNumber": 1,
         "tituloMomento": "El Gran Balance del Cierre Escolar",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student organizers, a girl with braided hair and a boy in a teal jacket, standing before a large wooden presentation board in a bright school auditorium. A colorful pie chart is pinned to the board, sunlight streaming through tall windows, clean vector aesthetic, ample negative space on the left. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Two 13-year-old student organizers, a girl with braided hair and a boy in a teal jacket, standing before a large wooden presentation board in a bright school auditorium. A colorful pie chart is pinned to the board, sunlight streaming through tall windows, clean vector aesthetic, ample negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "SÍNTESIS INTEGRADORA: PORCENTAJES EN ACCIÓN",
         "overlayTitle": "SÍNTESIS INTEGRADORA: PORCENTAJES EN ACCIÓN",
         "overlaySubtitle": "Misión 6: Consolidación y Ensayo Final tipo MINEDUC",
@@ -132,7 +132,7 @@ export const MATEMATICA_7B_OA04_CLASE06: LessonData = {
       {
         "slideNumber": 2,
         "tituloMomento": "El Enigma del Gráfico Circular",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Close up of the presentation board showing a large circular chart divided into three distinct colored slices: blue for 50%, yellow for 25%, and coral for 25%. Lucas is pointing with a wooden ruler while Sofía holds her notes, focused engaged expressions, clear clean lines, negative space on the left. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Close up of the presentation board showing a large circular chart divided into three distinct colored slices: blue for 50%, yellow for 25%, and coral for 25%. Lucas is pointing with a wooden ruler while Sofía holds her notes, focused engaged expressions, clear clean lines, negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "¿CÓMO LEER UN GRÁFICO CIRCULAR?",
         "overlayTitle": "¿CÓMO LEER UN GRÁFICO CIRCULAR?",
         "overlaySubtitle": "El círculo completo equivale al 100% de la muestra",
@@ -143,7 +143,7 @@ export const MATEMATICA_7B_OA04_CLASE06: LessonData = {
       {
         "slideNumber": 3,
         "tituloMomento": "El Misterio del Total Desconocido",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Sofía writing on a chalkboard with neat chalk figures, drawing a balance scale where one side shows 15 students and the other side shows a 10% tag. Lucas is calculating in his notebook, bright classroom ambiance, clean anime shading. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Sofía writing on a chalkboard with neat chalk figures, drawing a balance scale where one side shows 15 students and the other side shows a 10% tag. Lucas is calculating in his notebook, bright classroom ambiance, clean anime shading.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "CONOCIENDO LA PARTE, ENCONTRAMOS EL TOTAL",
         "overlayTitle": "CONOCIENDO LA PARTE, ENCONTRAMOS EL TOTAL",
         "overlaySubtitle": "Si el 10% son 15 estudiantes, ¿cuántos son el 100%?",
@@ -154,7 +154,7 @@ export const MATEMATICA_7B_OA04_CLASE06: LessonData = {
       {
         "slideNumber": 4,
         "tituloMomento": "El Razonamiento Multiplicativo",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Lucas showing his notebook to the audience with an enthusiastic smile, revealing a diagram with 10 identical blocks of 15 students lined up to form a large bar of 150. Crisp lineart, warm studio lighting, negative space on the left. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Lucas showing his notebook to the audience with an enthusiastic smile, revealing a diagram with 10 identical blocks of 15 students lined up to form a large bar of 150. Crisp lineart, warm studio lighting, negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "EL 10% CABE 10 VECES EN EL 100%",
         "overlayTitle": "EL 10% CABE 10 VECES EN EL 100%",
         "overlaySubtitle": "Multiplicamos 15 por 10 = 150 estudiantes en total",
@@ -165,7 +165,7 @@ export const MATEMATICA_7B_OA04_CLASE06: LessonData = {
       {
         "slideNumber": 5,
         "tituloMomento": "El Dilema de las Rebajas Sucesivas",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two shop posters in a bookstore window: one claims 20% direct discount, and another claims 10% plus an additional 10% discount. Sofía and Lucas analyzing the difference with furrowed brows, dramatic curious expressions, clean lighting. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Two shop posters in a bookstore window: one claims 20% direct discount, and another claims 10% plus an additional 10% discount. Sofía and Lucas analyzing the difference with furrowed brows, dramatic curious expressions, clean lighting.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "¿SUMAR DESCUENTOS ES LO MISMO?",
         "overlayTitle": "¿SUMAR DESCUENTOS ES LO MISMO?",
         "overlaySubtitle": "Comparando 20% directo versus 10% + 10% sucesivo",
@@ -176,7 +176,7 @@ export const MATEMATICA_7B_OA04_CLASE06: LessonData = {
       {
         "slideNumber": 6,
         "tituloMomento": "La Base Cambia en Cada Paso",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Sofía and Lucas pointing at a comparison table on their chalkboard, showing that the second 10% se calcula sobre el nuevo precio rebajado de $9.000, resultando en $900 y no en $1.000. Clean modern flat colors, ample negative space. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Sofía and Lucas pointing at a comparison table on their chalkboard, showing that the second 10% se calcula sobre el nuevo precio rebajado de $9.000, resultando en $900 y no en $1.000. Clean modern flat colors, ample negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "EL SEGUNDO PORCENTAJE TIENE NUEVA BASE",
         "overlayTitle": "EL SEGUNDO PORCENTAJE TIENE NUEVA BASE",
         "overlaySubtitle": "10% de $10.000 = $1.000 | 10% de $9.000 = $900 | Total = $8.100",
@@ -187,7 +187,7 @@ export const MATEMATICA_7B_OA04_CLASE06: LessonData = {
       {
         "slideNumber": 7,
         "tituloMomento": "Paso a la Consolidación Formal",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Sofía and Lucas high-fiving in front of the finished presentation board, holding their study guides with proud smiles, warm golden afternoon glow entering the hall, tidy minimalist room. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Sofía and Lucas high-fiving in front of the finished presentation board, holding their study guides with proud smiles, warm golden afternoon glow entering the hall, tidy minimalist room.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "¡LISTOS PARA EL ENSAYO OFICIAL!",
         "overlayTitle": "¡LISTOS PARA EL ENSAYO OFICIAL!",
         "overlaySubtitle": "Dominamos las 4 operaciones y las estrategias de porcentajes",
@@ -229,18 +229,18 @@ export const MATEMATICA_7B_OA04_CLASE06: LessonData = {
       {
         "slideNumber": 1,
         "tituloMomento": "Declaración del Objetivo: Síntesis de Porcentajes y Ensayo MINEDUC",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing confidently before a modern digital board displaying summary diagrams and sample questions. Clean classroom, high clarity, ample negative space on the left. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing confidently before a modern digital board displaying summary diagrams and sample questions. Clean classroom, high clarity, ample negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "OBJETIVO DE LA LECCIÓN",
         "overlayTitle": "OBJETIVO DE LA LECCIÓN",
-        "overlaySubtitle": "Consolidar el cálculo inverso, gráficos circulares y ensayo psicométrico tipo MINEDUC",
+        "overlaySubtitle": "Hallar el total conociendo una parte y el porcentaje correspondiente",
         "vectorialOverlayPptx": "Meta de aprendizaje: Dominar cálculo inverso, gráficos de sectores y resolución formal de reactivos",
-        "speakerNotes": "Hoy consolidaremos todo lo aprendido sobre porcentajes: resolveremos problemas de cálculo inverso, interpretaremos gráficos circulares y enfrentaremos un ensayo formal con análisis de distractores.",
+        "speakerNotes": "Hoy aprenderemos a hallar el total correspondiente al cien por ciento conociendo una parte y su porcentaje, consolidando todas las estrategias de porcentajes para evaluaciones formales.",
         "duracionSeg": 12
       },
       {
         "slideNumber": 2,
         "tituloMomento": "Ejemplo Modelado: Cálculo del Total",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Detailed chalkboard split into three vertical sections demonstrating the calculation step by step: 15% -> 18 libros, 18 · 100 = 1.800, 1.800 : 15 = 120 libros. Lucas pointing to each step, calm organized atmosphere. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Detailed chalkboard split into three vertical sections demonstrating the calculation step by step: 15% -> 18 libros, 18 · 100 = 1.800, 1.800 : 15 = 120 libros. Lucas pointing to each step, calm organized atmosphere.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "MODELAMIENTO PASO A PASO",
         "overlayTitle": "MODELAMIENTO PASO A PASO",
         "overlaySubtitle": "18 libros corresponden al 15% -> Total = 120 libros",
@@ -251,7 +251,7 @@ export const MATEMATICA_7B_OA04_CLASE06: LessonData = {
       {
         "slideNumber": 3,
         "tituloMomento": "Interpretación de Gráficos de Sectores",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Clean educational infographic style slide showing a 360-degree circle with protractor markings. Slices clearly labeled with fraction equivalents: 50% = 1/2, 25% = 1/4, 10% = 1/10. Sofía explaining with a pointer, bright colors. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Clean educational infographic style slide showing a 360-degree circle with protractor markings. Slices clearly labeled with fraction equivalents: 50% = 1/2, 25% = 1/4, 10% = 1/10. Sofía explaining with a pointer, bright colors.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "LECTURA DE GRÁFICOS CIRCULARES",
         "overlayTitle": "LECTURA DE GRÁFICOS CIRCULARES",
         "overlaySubtitle": "La suma de todos los sectores siempre equivale al 100%",
@@ -262,7 +262,7 @@ export const MATEMATICA_7B_OA04_CLASE06: LessonData = {
       {
         "slideNumber": 4,
         "tituloMomento": "Variaciones Porcentuales y Descuentos Sucesivos",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Infographic comparison slide with a flow diagram showing two sequential arrows: from $10.000 minus 10% to $9.000, and from $9.000 minus 10% to $8.100. Lucas analyzing the flow, clean corporate aesthetic. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Infographic comparison slide with a flow diagram showing two sequential arrows: from $10.000 minus 10% to $9.000, and from $9.000 minus 10% to $8.100. Lucas analyzing the flow, clean corporate aesthetic.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "VARIACIONES PORCENTUALES SUCESIVAS",
         "overlayTitle": "VARIACIONES PORCENTUALES SUCESIVAS",
         "overlaySubtitle": "El porcentaje se aplica siempre sobre el saldo anterior",
@@ -273,7 +273,7 @@ export const MATEMATICA_7B_OA04_CLASE06: LessonData = {
       {
         "slideNumber": 5,
         "tituloMomento": "Análisis del Error Típico en Evaluaciones",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Chalkboard showing a red alert icon next to a common error: calculating 20% OF 12 instead of solving for the total. Sofía crossing out the error with a gentle smile and writing the correct formula. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Chalkboard showing a red alert icon next to a common error: calculating 20% OF 12 instead of solving for the total. Sofía crossing out the error with a gentle smile and writing the correct formula.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "EVITA LA TRAMPA: ¿PARTE O TOTAL?",
         "overlayTitle": "EVITA LA TRAMPA: ¿PARTE O TOTAL?",
         "overlaySubtitle": "Lee con atención si el número dado es la parte o el total",
@@ -284,36 +284,45 @@ export const MATEMATICA_7B_OA04_CLASE06: LessonData = {
       {
         "slideNumber": 6,
         "tituloMomento": "Reactivo de Evaluación Formativa Oficial",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Sofía and Lucas in formal school uniforms, standing beside a projected sample test question with 4 multiple choice letters A, B, C, D clearly highlighted in clean boxes. Focused confident attitudes. No text drawn by AI.",
-        "overlayText": "REACTIVO TIPO EXAMEN LIBRE (MINEDUC)",
-        "overlayTitle": "REACTIVO TIPO EXAMEN LIBRE (MINEDUC)",
-        "overlaySubtitle": "Pregunta formal de 4 alternativas con análisis de distractores",
-        "vectorialOverlayPptx": "Reactivo formal: Si 14 estudiantes son el 28%, el total es: A) 50  B) 39  C) 3,92  D) 200",
-        "speakerNotes": "En las evaluaciones oficiales de Exámenes Libres te enfrentarás a preguntas de cuatro alternativas. Aplica con calma tu procedimiento y descarta los distractores analizando el origen del error.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Sofía and Lucas in formal school uniforms, standing beside a projected sample test question with 4 multiple choice letters A, B, C, D clearly highlighted in clean boxes. Focused confident attitudes.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
+        "overlayText": "EJEMPLO MODELADO: CASO 1",
+        "overlayTitle": "EJEMPLO MODELADO: CASO 1",
+        "overlaySubtitle": "En una biblioteca pública, 18 libros de literatura juvenil representan el 15% de",
+        "vectorialOverlayPptx": "Resolución canónica: Total = (18 · 100) / 15 = 1.800 / 15 = 120 libros.",
+        "speakerNotes": "Analicemos paso a paso el caso modelado: En una biblioteca pública, 18 libros de literatura juvenil representan el 15% del total de libros prestados este mes. ¿Cuántos libros prestó la biblioteca en total? Total = (18 · 100) / 15 = 1.800 / 15 = 120 libros. Por lo tanto, el resultado esperado es: Se prestaron 120 libros en total..",
         "duracionSeg": 13
       },
       {
         "slideNumber": 7,
         "tituloMomento": "Cierre y Transición a la Práctica en Plataforma",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Both students smiling warmly at the camera from their study desks, laptop open showing the practice portal interface with green checkmarks. Clean bright study room, ample negative space. No text drawn by AI.",
-        "overlayText": "¡MAESTRÍA EN PORCENTAJES ALCANZADA!",
-        "overlayTitle": "¡MAESTRÍA EN PORCENTAJES ALCANZADA!",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Both students smiling warmly at the camera from their study desks, laptop open showing the practice portal interface with green checkmarks. Clean bright study room, ample negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
+        "overlayText": "REGLA DE ORO DE LA LECCIÓN",
+        "overlayTitle": "REGLA DE ORO DE LA LECCIÓN",
         "overlaySubtitle": "Ingresa al módulo interactivo para tu práctica final",
         "vectorialOverlayPptx": "Logotipo de EstudioSimple con botón: Iniciar Práctica Interactiva",
-        "speakerNotes": "¡Has dominado los porcentajes en todas sus formas! Ahora estás plenamente preparado para ingresar al simulador interactivo de EstudioSimple y poner a prueba tus habilidades.",
+        "speakerNotes": "Regla de oro: Ingresa al módulo interactivo para tu práctica final. Ahora pon a prueba lo aprendido resolviendo los casos de práctica en la plataforma interactiva.",
         "duracionSeg": 13
       }
     ]
   },
   "postQuestions": [
     {
-      "context": "En el video formalizamos el cálculo inverso a partir de 18 libros equivalentes al 15%.",
-      "question": "¿Por qué no debemos calcular el 15% de 18 para resolver este problema?",
-      "expected": "Porque 18 no es el total completo; 18 es solo la parte del 15%, por lo que el total debe ser un número mucho mayor.",
-      "success": "¡Exacto! Distinguir la parte del total es la clave para no aplicar la operación inversa por error.",
-      "support": "Recuerda: 18 libros representan solo el 15%. Para encontrar el 100%, multiplicamos por 100 y dividimos por 15.",
-      "reveal": "18 es la parte. Total = (18 · 100) / 15 = 120 libros.",
-      "studentReveal": "Porque 18 es solo una parte y el total debe ser mayor."
+      "context": "En una biblioteca pública, 18 libros de literatura juvenil representan el 15% del total de libros prestados este mes.",
+      "question": "¿Cuántos libros prestó la biblioteca en total?",
+      "expected": "Se prestaron 120 libros en total.",
+      "success": "¡Excelente! Planteaste la proporción con precisión: (18 · 100) / 15 = 120 libros.",
+      "support": "Multiplica la parte por 100 y divide por el porcentaje: (18 · 100) : 15 = 1.800 : 15 = 120.",
+      "reveal": "Total = (18 · 100) / 15 = 1.800 / 15 = 120 libros.",
+      "studentReveal": "La biblioteca prestó 120 libros en total."
+    },
+    {
+      "context": "Un gráfico circular muestra las preferencias de 200 estudiantes: 40% Robótica, 35% Teatro y el resto Ajedrez.",
+      "question": "¿Cuántos estudiantes eligieron Ajedrez?",
+      "expected": "50 estudiantes eligieron Ajedrez (25% del total).",
+      "success": "¡Perfecto! Identificaste que Ajedrez correspondía al 25% (la cuarta parte de 200 = 50).",
+      "support": "Suma 40% + 35% = 75%. El resto es 100% - 75% = 25%. Luego calcula: 200 : 4 = 50.",
+      "reveal": "100% - 75% = 25% | 200 · 0,25 = 50 estudiantes.",
+      "studentReveal": "50 estudiantes eligieron el taller de Ajedrez."
     }
   ],
   "practice": [

@@ -1,7 +1,8 @@
 {
   "schemaVersion": "2.0.0",
-  "generatedAt": "2026-10-07T22:11:34.822Z",
+  "generatedAt": "2026-10-08 15:56:16 [America/Santiago]",
   "status": "EN_REVISION",
+  "etapa_revision": "WORK_PRE_APROBACION",
   "oaIdentifier": "110-7-MAT-OA04",
   "course": "7° Básico",
   "subject": "Matemática",
@@ -26,7 +27,7 @@
       "totalSlides": 14,
       "durationMinutes": 30,
       "tsFile": "matematica_7b_oa04_clase01.ts",
-      "tsHashSha256": "9a128aa36a5dd96c66ce1e5f8eedf310f3f56abb0ebd27cec2967dc1fd6ec180"
+      "tsHashSha256": "8f8e02707b06d64d6dff16c42d1a5e397845c5f3126aef87ad863eda5230697e"
     },
     {
       "lessonNumber": 2,
@@ -37,7 +38,7 @@
       "totalSlides": 14,
       "durationMinutes": 30,
       "tsFile": "matematica_7b_oa04_clase02.ts",
-      "tsHashSha256": "9d76365193edbdea39267b8c9b98818bc2bc3fbd9c9e9aebb255c5803ac62c06"
+      "tsHashSha256": "afe7e97b3eb3f3dc5870740a5c19785857ddf312733db7671e564430379c9f20"
     },
     {
       "lessonNumber": 3,
@@ -48,7 +49,7 @@
       "totalSlides": 14,
       "durationMinutes": 30,
       "tsFile": "matematica_7b_oa04_clase03.ts",
-      "tsHashSha256": "f8c85a1f50ff39f38c72c33d5d465e861440f0425449c448715a7777724c6bd7"
+      "tsHashSha256": "0e86d5ca42380afa688a5035fd86a1cbeaebfa5c60db388a427710698aa35c22"
     },
     {
       "lessonNumber": 4,
@@ -59,7 +60,7 @@
       "totalSlides": 14,
       "durationMinutes": 30,
       "tsFile": "matematica_7b_oa04_clase04.ts",
-      "tsHashSha256": "f0e89fbc65d8c2a87c7d50a7ca94fcd9ba26da0c4134da580cd38cc63f5d66a8"
+      "tsHashSha256": "0b9c5c0bad131a686c3805d21e1905c6dba12e80e8251d2dbf67ce5cafdce0ab"
     },
     {
       "lessonNumber": 5,
@@ -70,7 +71,7 @@
       "totalSlides": 14,
       "durationMinutes": 30,
       "tsFile": "matematica_7b_oa04_clase05.ts",
-      "tsHashSha256": "b1434e3d27ae8d3d09bae89b772d3a00d6aedab2fc2ec2528aa20dd8542c25b4"
+      "tsHashSha256": "0319f94b8ec32e991738db014113cf0c79987983d0fc99e35be786fb9365aab2"
     },
     {
       "lessonNumber": 6,
@@ -81,21 +82,21 @@
       "totalSlides": 14,
       "durationMinutes": 30,
       "tsFile": "matematica_7b_oa04_clase06.ts",
-      "tsHashSha256": "fb1182331016c8ffc6f9c35c94dc767a7e75fbf6875f66dc6054fb66b6e0e437"
+      "tsHashSha256": "0361a66cd12476a79d394328c13ef144fde8a1fd16bff83f3f827ff993b8d71a"
     }
   ],
   "artifacts": {
     "docxMaster": {
       "filename": "Plan_Maestro_7Básico_110-7-MAT-OA04_6Lecciones.docx",
       "relativePath": "LECCIONES/110-7/Matematica/OA04/Plan_Maestro_7Básico_110-7-MAT-OA04_6Lecciones.docx",
-      "sizeBytes": 67667,
-      "sha256": "5a5b70fdebb2cd5a95152a0bcf0372b57cb7e86be6b6cc479e6058bb65a9e3b9"
+      "sizeBytes": 67392,
+      "sha256": "54d6b3db0821987200edb90f70d803378cab997c1f0e1682efb008761442fabe"
     },
     "promptsWorkTxt": {
       "filename": "Prompts_Work_Matematica_7B_OA04.txt",
       "relativePath": "LECCIONES/110-7/Matematica/OA04/Prompts_Work_Matematica_7B_OA04.txt",
-      "sizeBytes": 180865,
-      "sha256": "45f9b9fe004c9cb282b43befb5bc0e89719a16546fcd3521fb3ac94ef9a73863"
+      "sizeBytes": 196131,
+      "sha256": "e24b8560a48948156388ef37bccdab7a5c5c7aa0484ba827207db0d01e751b85"
     }
   },
   "governance": {

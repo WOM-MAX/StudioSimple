@@ -10,6 +10,7 @@ export function buildLessonPromptText(lesson: PlayerLessonData): string {
   const subPt = isCiencias ? 48 : 36;
   let out = `================================================================================\n`;
   out += `STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA\n`;
+  out += `FECHA DE GENERACION: ${new Date().toLocaleString("es-CL", { timeZone: "America/Santiago" })} (America/Santiago)\n`;
   out += `================================================================================\n\n`;
 
   out += `FICHA CURRICULAR:\n`;

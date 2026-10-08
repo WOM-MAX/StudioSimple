@@ -1,150 +1,94 @@
 # Reglas Universales Transversales (3° a 8° Básico)
+**Ecosistema Educativo EstudioSimple**
+**Estado Normativo:** VIGENTE (Todas las reglas UNI-001 a UNI-015 son **BLOQUEANTES**)
 
-Estas reglas aplican obligatoriamente a todas las lecciones de EstudioSimple, independientemente del curso, nivel o asignatura.
-
----
-
-## 1. Arquitectura Pedagógica de 8 Etapas Duales
-
-Cada lección completa se estructura en una progresión de 8 etapas con roles claramente diferenciados para el **Mentor (Apoderado / Guía)** y el **Estudiante**:
-
-1. **Etapa 1: Conexión Inicial y Activación:**
-   - *Mentor:* Plantea una pregunta cotidiana de contextualización o desafío cercano.
-   - *Estudiante:* Verbaliza ideas previas o conecta con vivencias cotidianas sin miedo al error.
-2. **Etapa 2: Presentación del Objetivo y Modelamiento:**
-   - *Mentor:* Presenta el propósito concreto de la sesión y modela el concepto clave.
-   - *Estudiante:* Observa la resolución paso a paso y registra las definiciones nucleares.
-3. **Etapa 3: Práctica Guiada (Andamiaje Directo):**
-   - *Mentor:* Acompaña la resolución de un primer ejercicio estructurado con pistas progresivas.
-   - *Estudiante:* Aplica el procedimiento modelado con retroalimentación inmediata.
-4. **Etapa 4: Puente Análogo-Digital (Cuaderno Físico):**
-   - *Mentor:* Pide pausar la pantalla y orienta el trabajo escrito a mano.
-   - *Estudiante:* Escribe, dibuja o resuelve en su cuaderno físico, consolidando la memoria muscular y espacial.
-5. **Etapa 5: Práctica Autónoma Inicial:**
-   - *Mentor:* Observa sin intervenir prematuramente, permitiendo el despliegue del razonamiento individual.
-   - *Estudiante:* Enfrenta un ejercicio de dificultad gradual sin asistencia directa.
-6. **Etapa 6: Detección y Análisis Constructivo del Error:**
-   - *Mentor:* Presenta un caso o distractor común para analizar "por qué esto no es correcto".
-   - *Estudiante:* Desarrolla metacognición explicando el motivo del error y cómo corregirlo.
-7. **Etapa 7: Evaluación Formativa y Cierre Conceptual:**
-   - *Mentor:* Aplica reactivos de comprobación sin notas ni juicios punitivos.
-   - *Estudiante:* Demuestra la asimilación del objetivo mediante respuestas justificadas.
-8. **Etapa 8: Proyección y Síntesis Final:**
-   - *Mentor:* Sintetiza la gran idea aprendida y anticipa el siguiente paso de aprendizaje.
-   - *Estudiante:* Resume en una frase o dibujo la idea fuerza de la clase.
+Estas reglas aplican con carácter vinculante y obligatorio a todas las lecciones de EstudioSimple (3° a 8° básico). Cualquier incumplimiento de estas directrices constituye un error bloqueante en la auditoría interna.
 
 ---
 
-## 2. Puente Análogo-Digital con el Cuaderno Físico
+## 1. Clasificación Canónica de Reglas Universales [BLOQUEANTE]
 
-- **Invariante:** La tecnología digital es un medio de andamiaje, no un fin en sí mismo.
-- Cada lección debe contener instrucciones explícitas para pausar la aplicación y realizar operaciones manuales en el cuaderno físico:
-  * Dibujo de diagramas, líneas de tiempo o rectas numéricas.
-  * Cálculos de desarrollo aritmético o algebraico.
-  * Mapas conceptuales o redacción de oraciones completas.
-- El cuaderno físico es el testigo verificable del aprendizaje para la familia y la preparación para el examen escrito del MINEDUC.
+### UNI-001: Estructura Estandarizada por Lección [BLOQUEANTE]
+- Cada lección se organiza en dos módulos audiovisuales balanceados (Gancho motivacional y Explicación conceptual formal).
+- El número exacto de diapositivas y duración se rige por el perfil de curso aplicable (ej. en 7° Básico: exactamente 7 láminas Gancho y 7 láminas Explicación = 14 láminas totales).
 
----
+### UNI-002: Locución Limpia y Fluida [BLOQUEANTE]
+- Las notas al orador (`speakerNotes`) contienen prosa pedagógica limpia, continua y verbalizable.
+- Prohibido incluir acotaciones de dirección de escena, marcas de tiempo artificiales o textos no locutables.
+- La duración y ritmo acústico se calibran en Google Vids durante la fase de producción audiovisual.
 
-## 3. Blindaje de Prompts de Imagen (Arte por IA)
+### UNI-003: Representación Humana Coherente y Continuidad de Personajes [BLOQUEANTE]
+- Los protagonistas reflejan la edad evolutiva del nivel (ej. dúo co-protagónico de 13 años para 7° básico: joven con trenzas y joven con chaqueta cerceta).
+- Mantienen presencia visible y rol activo de co-aprendizaje en el 100% de las ilustraciones.
 
-Al generar descripciones visuales para las diapositivas en ChatGPT Work o herramientas de generación de imágenes:
-- **Restricción Terminante:** Queda estrictamente prohibido que la IA dibuje textos, carteles, títulos, números o logotipos dentro de la ilustración.
-- **Directiva Obligatoria en todo prompt:**
+### UNI-004: Blindaje Terminante Anti-Texto en Arte IA [BLOQUEANTE]
+- Todo prompt para generadores de imagen debe incluir obligatoriamente:
   `[Negative/Constraint]: No text drawn by AI, no artificial typography, no random letters, no watermark, no logos on the background scene.`
-- Toda información textual debe ser maquetada en capas nativas de PowerPoint o código web, garantizando legibilidad perfecta y control tipográfico.
+- La IA generativa produce exclusivamente los personajes y la escenografía limpia.
+
+### UNI-005: Coherencia Isomórfica en 5 Dimensiones (Lámina 6 = Práctica 1) [BLOQUEANTE]
+- El caso modelado en la diapositiva final de contenido del video explicativo debe ser **estrictamente idéntico** al primer reactivo de la práctica interactiva (`caso1`).
+- La identidad debe verificarse en las 5 dimensiones fundamentales:
+  1. **Contexto del ejercicio:** Mismo escenario, personajes y situación problemática.
+  2. **Datos y unidades:** Mismas cifras numéricas, valores, divisas y unidades de medida.
+  3. **Pregunta e intención:** Misma pregunta formulada y meta de aprendizaje.
+  4. **Procedimiento esperado:** Mismos pasos de modelamiento y resolución algorítmica.
+  5. **Respuesta correcta y retroalimentación:** Mismo resultado numérico/conceptual y explicación formativa del porqué.
+
+### UNI-006: Evaluación Psicométrica Formal de Cierre [BLOQUEANTE]
+- La lección final de síntesis de cada OA incorpora reactivos formales alineados al estándar del MINEDUC para Exámenes Libres (EELL), con alternativas plausibles y análisis exhaustivo de distractores según el nivel del curso.
+
+### UNI-007: Estándar Normativo de 6 Lecciones por OA [BLOQUEANTE]
+- Cada Objetivo de Aprendizaje (OA) debe desplegarse en **exactamente 6 lecciones completas** (según recomendación de ChatGPT Work):
+  - *Clase 1:* Activación previa y modelo concreto/pictórico.
+  - *Clase 2:* Formalización conceptual y representación simbólica.
+  - *Clase 3:* Estrategias cognitivas y cálculo mental/atajos.
+  - *Clase 4:* Algoritmos universales y resolución guiada de problemas.
+  - *Clase 5:* Aplicaciones cotidianas y toma de decisiones.
+  - *Clase 6:* Síntesis integradora, preparación para Exámenes Libres (EELL) y evaluación psicométrica de cierre.
+
+### UNI-008: Puente Análogo-Digital con el Cuaderno Físico [BLOQUEANTE]
+- Cada lección debe contener instrucciones explícitas para pausar el entorno digital y realizar actividades manuales en el cuaderno físico:
+  * Dibujo de diagramas, tablas o rectas numéricas.
+  * Cálculos de desarrollo aritmético o algebraico.
+  * Esquemas conceptuales o respuestas redactadas de puño y letra.
+
+### UNI-009: Reutilización Fiel en Comprobación Post-Video (`postQuestions`) [BLOQUEANTE]
+- Las preguntas de comprobación inmediata posterior al video (Paso 6) deben reutilizar con identidad total en las 5 dimensiones los ejercicios de la práctica guiada (`caso1` y `caso2`).
+- Queda estrictamente prohibido introducir preguntas desarticuladas o variantes no modeladas en este chequeo.
+
+### UNI-010: Cierre Teleológico con Regla de Oro y Pase a la Práctica [BLOQUEANTE]
+- La lámina final de la explicación conceptual debe sintetizar la lección mediante la **Regla de Oro** y culminar con el pase limpio e inmediato:
+  `"Ahora pon a prueba lo aprendido resolviendo los casos de práctica en la plataforma interactiva."`
+- Prohibido agregar desafíos imprevistos, tareas no resueltas o desvíos pedagógicos al cierre del video.
+
+### UNI-011: Integridad Total de los 8 Pasos Didácticos [BLOQUEANTE]
+- Toda lección debe implementar los 8 pasos completos en plataforma (`metadata`, `prep`, `route`, `situation`, `hook`, `formalization`, `practice`, `mini` y `paso8_cierre` con `preguntaSintesis`, `metacognicion` y `celebracion`), sin placeholders (`TODO`, `FIXME`, `lorem ipsum`).
+
+### UNI-012: Atributos Estéticos Universales de Prompts Visuales [BLOQUEANTE]
+- Todo prompt visual debe incorporar el estándar estético completo: relación de aspecto 16:9, Anime moderno limpio, espacio negativo real, presencia de los protagonistas y cláusula anti-texto.
+
+### UNI-013: Prohibición de Elementos Gráficos Simulados en Arte IA [BLOQUEANTE]
+- Queda terminantemente prohibido solicitar a la IA generativa que dibuje logotipos, insignias, escudos o letras de alternativas (A, B, C, D) en la ilustración. Toda capa de interfaz es vectorial nativa.
+
+### UNI-014: Honestidad Epistemológica y Cita Canónica [BLOQUEANTE]
+- Todo marco conceptual debe sustentarse en los Textos Escolares Oficiales del MINEDUC y las Bases Curriculares vigentes, citando editorial, unidad y páginas verificadas. Se prohíbe calificar de "oficial" reactivos elaborados por el equipo pedagógico.
+
+### UNI-015: Fuente Estructurada Única y Compilación Unidireccional [BLOQUEANTE]
+- Cada OA dispone de una **fuente estructurada única** (ej. `scripts/oa04_data/` para MAT-OA04). DOCX, TXT de prompts y TypeScript se generan o sincronizan exclusivamente en una dirección desde dicha fuente. Prohibida la edición independiente de artefactos derivados.
 
 ---
 
-## 4. Honestidad Epistemológica y Fuentes Oficiales
+## 2. Derivación de Reglas por Nivel de Especialidad
 
-- Toda definición, regla o criterio conceptual debe subordinarse estrictamente a las Bases Curriculares y Temarios Oficiales de Exámenes Libres (EELL) del MINEDUC.
-- **Prohibición de Invenciones:** Queda estrictamente prohibido inventar conceptos pedagógicos, fórmulas alternativas o clasificaciones no avaladas por el currículum chileno.
-- Si una fuente complementaria no está disponible en el entorno local, se registra como `no evaluable`.
-
----
-
-## 5. Evaluación Formativa No Punitiva
-
-- Los reactivos de evaluación no deben transmitir frustración ni incorporar marcas punitivas agresivas.
-- Cada alternativa incorrecta (distractor) debe construirse a partir de un error conceptual plausible o brecha diagnóstica común, ofreciendo retroalimentación formativa inmediata orientada a la recuperación pedagógica.
+Para preservar la pureza transversal de este catálogo universal:
+1. **Perfil de Curso (ej. `perfil_7_basico.md`):** Regula la estructura bimodal de 14 láminas (7 Gancho + 7 Explicación), los reactivos psicométricos de 4 alternativas (A, B, C, D) con análisis de distractores y la locución adecuada a los 13 años.
+2. **Perfil de Asignatura (ej. `matematica.md`):** Regula el enfoque CPA (Concreto-Pictórico-Simbólico), las fórmulas matemáticas (`p% = p ÷ 100`), la progresión temática de Porcentajes en 7° Básico y el límite de subtítulos en 36 pt. No se extrapolan estas convenciones a otras disciplinas.
 
 ---
 
-## 6. Parámetro Estándar de Cobertura por Objetivo de Aprendizaje (OA)
+## 3. Delimitación de Fases y Estados de Revisión
 
-- **Estándar Normativo:** Se fija como parámetro normativo estándar **exactamente 6 lecciones completas por Objetivo de Aprendizaje (OA)**, adoptando formalmente la directriz y recomendación de ChatGPT Work.
-- **Distribución Pedagógica:** Las 6 clases deben distribuir equilibradamente la progresión didáctica del OA:
-  1. *Clase 1:* Activación previa, concepto fundacional y modelo concreto/pictórico.
-  2. *Clase 2:* Procedimientos formales, reglas y representaciones simbólicas.
-  3. *Clase 3:* Casos especiales, estrategias de cálculo mental o atajos cognitivos.
-  4. *Clase 4:* Algoritmos universales y resolución guiada de problemas.
-  5. *Clase 5:* Aplicaciones en la vida cotidiana, contextos interdisciplinares o toma de decisiones.
-  6. *Clase 6:* Síntesis integradora, preparación rigurosa para Exámenes Libres (EELL) del MINEDUC y evaluación psicométrica de cierre.
-- **Coherencia Isomórfica:** El paquete de 6 clases debe reflejarse con identidad total entre el DOCX oficial (`_6Lecciones.docx`), los prompts para Work (`.txt`) y los 6 módulos TypeScript en la plataforma web.
-
----
-
-## 7. Reglas Universales de Maquetación y Flujo Audiovisual (7° Básico y Transversal)
-
-Estas especificaciones son de cumplimiento estricto para asegurar la calidad pedagógica y visual del ecosistema:
-
-1. **Objetivo al Comienzo de la Secuencia Visible:**
-   - En toda lección, el Objetivo de Aprendizaje debe presentarse de manera explícita al inicio de la secuencia visible para el estudiante (en la Lámina 1 de la explicación/formalización y en la ruta de inicio de la plataforma).
-   - El objetivo debe formularse de manera clara, autónoma y representativa del aprendizaje completo de la lección (especialmente en clases de aplicación cotidiana y síntesis, como las clases 5 y 6).
-
-2. **Ambos Protagonistas en Cada Escena:**
-   - El dúo co-protagonista fijo (la joven de 13 años con trenzas y el joven de 13 años con chaqueta cerceta) debe aparecer presente, visible y coprotagónico en el 100% de las láminas e ilustraciones.
-   - Prohibido dejar escenas con personajes aislados o ilustraciones mecánicas descontextualizadas sin la interacción de ambos estudiantes.
-
-3. **Imágenes Generadas Sin Texto (Blindaje IA):**
-   - Todo prompt para generadores de imagen debe incluir obligatoriamente la restricción: `No text drawn by AI, no artificial typography, no random letters, no watermark, no logos on the background scene.`
-   - La IA genera exclusivamente el arte de fondo y los personajes limpios.
-
-4. **Textos y Matemáticas como Overlays Editables:**
-   - Todos los textos explicativos, subtítulos, fórmulas matemáticas y anotaciones numéricas deben maquetarse como capas nativas editables en PowerPoint (`.pptx`) o componentes tipográficos en la plataforma web.
-   - Prohibido incrustar tipografía fija o fórmulas dentro de los mapas de bits.
-   - Prohibido el uso de sombras duras, contornos, resplandores o recuadros flotantes detrás del texto.
-
-5. **Subtítulos Breves de Máximo 8 Palabras:**
-   - Los subtítulos en pantalla deben ser sintéticos, concisos y de lectura ágil, calibrados a un máximo estricto de **ocho palabras** (48 pt en Ciencias y asignaturas afines, 36 pt en Matemática). Prohibido saturar visualmente la lámina con subtítulos extensos.
-
-6. **Logotipo Blanco de EstudioSimple Abajo a la Derecha:**
-   - En la maquetación final de diapositivas en PowerPoint (operada por ChatGPT Work / Codex), debe colocarse de forma sistemática el logotipo blanco oficial de EstudioSimple en la esquina inferior derecha de cada lámina, al tamaño del video de referencia. No se debe pedir a la IA generativa que dibuje el logo dentro de la imagen; se debe dejar espacio negativo real.
-
-7. **Comprobación Posterior Basada en los Mismos Ejemplos de la Clase:**
-   - Las preguntas guiadas de comprobación posterior al video (Paso 6 / Post-Questions) y el primer reactivo de la práctica guiada deben basarse estrictamente en los **mismos ejemplos y datos numéricos** modelados en el video explicativo (Lámina 6).
-   - Prohibido cambiar las cifras o la situación en el chequeo inmediato; el cambio de variables se introduce gradualmente a partir del segundo reactivo de práctica autónoma.
-
-8. **Explicación sin Desafío Adicional al Cierre:**
-   - La última lámina del video explicativo (Lámina 7) concluye con la Regla de Oro conceptual y el pase directo a la ejercitación en la plataforma interactiva.
-   - Queda estrictamente prohibido agregar nuevos ejercicios, desafíos no resueltos o tareas para el cuaderno al cierre del video explicativo, preservando el flujo directo a la plataforma.
-
-9. **Coherencia Integral de Cada Diapositiva (Cuádruple Alineación):**
-   - El título en pantalla, subtítulo, prompt de imagen, overlay vectorial y notas al orador (locución) deben explicar rigurosamente **la misma idea central**. Prohibido que las notas al orador desarrollen un tema pedagógico desalineado de lo anunciado en el título u overlay.
-
-10. **Sin Cuadernillos como Entregables Independientes:**
-   - Las actividades de práctica en el cuaderno físico permanecen integradas dentro del Paso 5 del guion pedagógico. Queda prohibido generar secciones anexas de "Cuadernillo de Trabajo del Estudiante" o entregables de rellenado dentro del DOCX oficial.
-
-11. **Duraciones Audiovisuales Planificadas (60s Gancho / 90s Explicación) y Tolerancia Google Vids:**
-   - Los tiempos asignados son **60 segundos para el Gancho** y **90 segundos para la Explicación** como duraciones planificadas de cada presentación (sin emplear el término "aproximado").
-   - Google Vids puede extender el video unos segundos al procesar o enriquecer las notas al orador; ese excedente natural se acepta plenamente.
-   - No exigir que el archivo exportado dure exactamente 60 o 90 segundos. Queda terminantemente prohibido utilizar la duración exportada, el cronómetro, ajustes de voz o el conteo de palabras como criterio para rechazar un plan o exigir reexportaciones.
-
-12. **Diferenciación Epistemológica de Fuentes Oficiales, Modelos Didácticos y Reactivos Creados:**
-   - *Fuentes Oficiales:* Citar con exactitud la edición, editorial, unidad y páginas verificadas (ej. Texto del Estudiante Ciencias Naturales 7° Básico Edición SM, Currículum Nacional MINEDUC). Queda prohibido atribuir como oficial un contenido o texto sin verificar la edición local y citarla.
-   - *Modelos Didácticos:* Reconocer explícitamente los andamiajes formativos (ej. el modelo de cuatro dimensiones: biológica, afectiva, social y ética) como organizadores didácticos derivados de los aspectos curriculares y de valores formativos (respeto mutuo, responsabilidad y consentimiento), sin atribuirlos como clasificaciones o decretos oficiales del MINEDUC ni de las Bases Curriculares.
-   - *Identificación de Preguntas y Reactivos de Práctica:* **Las preguntas creadas para una lección se identifican como “preguntas” o “reactivos de práctica”. Solo se llaman “oficiales” cuando se proporciona y verifica la pregunta original y su fuente.** Queda terminantemente prohibido calificar de "oficial" un reactivo elaborado por el equipo pedagógico.
-
-13. **Separación Radical entre Fondos IA y Overlays Editables (Prohibición de Letras A–D en Prompts de Imagen):**
-   - Todo prompt de generación de imágenes para IA debe solicitar arte de fondo limpio con espacio negativo real y la restricción obligatoria: *"No text drawn by AI. No logo drawn by AI."*
-   - En escenas que ilustren preguntas de selección múltiple, los prompts deben solicitar paneles, tarjetas o recuadros modulares interactivos en blanco (*clean blank illuminated panels / interactive blank choice cards*). Queda estrictamente prohibido pedir a la IA que dibuje letras A, B, C, D, números o textos de alternativas.
-   - Las letras (A, B, C, D), enunciados, opciones y rótulos se incorporan exclusivamente como overlays vectoriales editables en PowerPoint (`vectorialOverlayPptx` / `mathOverlayPptx`) y en la plataforma web. El logotipo blanco de EstudioSimple se agrega como vector independiente en PPTX.
-
-14. **Erradicación de Fórmulas y Jerga Procedimental en Humanidades:**
-   - En Historia, Geografía y Ciencias Sociales (y Lenguaje/Literatura), queda estrictamente prohibido usar fórmulas o expresiones de plantilla heredadas de matemática (tales como "idea matemática", "procedimiento formal", "regla y valor", "resultado consistente" o "resolución guiada"). La mediación y los reactivos deben formularse con categorías historiográficas rigurosas (multicausalidad, espacialidad, fuentes y procesos de larga duración).
-
-15. **Correspondencia Isomórfica en Comprobación Posterior al Video (Paso 6):**
-   - Las preguntas de comprobación guiada posteriores al video (Paso 6 / Post-Questions) deben repetir exactamente los mismos casos, datos y fenómenos modelados en el video explicativo (Lámina 6) y en el primer reactivo de la práctica guiada. La variación de parámetros o situaciones se introduce de manera progresiva a partir de la práctica autónoma.
-
-
+- **Antigravity:** Compila desde la fuente estructurada única y ejecuta la auditoría interna. El resultado de 0 hallazgos certifica **únicamente la auditoría interna**. Entrega el paquete en `EN_REVISION` (`etapa_revision: WORK_PRE_APROBACION`).
+- **Work/Codex:** Ejecuta la auditoría independiente del contenido (DOCX y prompts TXT; PPTX no existe en esta fase). Tras la aprobación humana, compila y revisa las presentaciones PPTX en su entorno Python.
+- **Walter:** Aprueba formalmente por consola (`APROBADA`) tras análisis con Work. Queda prohibida la promoción autónoma por Antigravity.

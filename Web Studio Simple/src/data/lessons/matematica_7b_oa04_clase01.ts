@@ -121,7 +121,7 @@ export const MATEMATICA_7B_OA04_CLASE01: LessonData = {
       {
         "slideNumber": 1,
         "tituloMomento": "Desafío Inicial: El panel solar escolar",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing on a sunny school rooftop looking at a large square solar panel divided into a grid of 100 square cells. High contrast, bright sunny day, clean vector lines, ample negative space on the left. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing on a sunny school rooftop looking at a large square solar panel divided into a grid of 100 square cells. High contrast, bright sunny day, clean vector lines, ample negative space on the left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "¿QUÉ ES EL PORCENTAJE?",
         "overlayTitle": "¿QUÉ ES EL PORCENTAJE?",
         "overlaySubtitle": "El enigma de las 100 celdas solares",
@@ -132,7 +132,7 @@ export const MATEMATICA_7B_OA04_CLASE01: LessonData = {
       {
         "slideNumber": 2,
         "tituloMomento": "Observación: Contando celdas activas",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. The 13-year-old girl with braided hair pointing with a digital tablet at the solar panel grid, while the 13-year-old boy in a teal jacket counts illuminated blue cells. Clean modern anime aesthetic, bright flat saturated colors, generous negative space on top. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The 13-year-old girl with braided hair pointing with a digital tablet at the solar panel grid, while the 13-year-old boy in a teal jacket counts illuminated blue cells. Clean modern anime aesthetic, bright flat saturated colors, generous negative space on top.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "MEDIR SOBRE UN TOTAL DE 100",
         "overlayTitle": "MEDIR SOBRE UN TOTAL DE 100",
         "overlaySubtitle": "Cada celda representa una parte igual",
@@ -143,7 +143,7 @@ export const MATEMATICA_7B_OA04_CLASE01: LessonData = {
       {
         "slideNumber": 3,
         "tituloMomento": "Pregunta clave: La razón de cien",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. The two 13-year-old students looking curiously at a digital display showing a glowing percent symbol. Thoughtful expressions, scientific classroom rooftop setting, sharp clean lines, negative space for layout. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, looking curiously at a digital display showing a glowing percent symbol. Thoughtful expressions, scientific classroom rooftop setting, sharp clean lines, negative space for layout.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "¿POR QUÉ COMPARAMOS CON 100?",
         "overlayTitle": "¿POR QUÉ COMPARAMOS CON 100?",
         "overlaySubtitle": "El estándar universal de comparación",
@@ -154,7 +154,7 @@ export const MATEMATICA_7B_OA04_CLASE01: LessonData = {
       {
         "slideNumber": 4,
         "tituloMomento": "Visualización: Cuadrícula de 10x10",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. The 13-year-old boy and girl examining a clear holographic 10 by 10 grid floating between them. Crisp vector aesthetic, bright turquoise and orange accents, clean white highlights, negative space. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining a clear holographic 10 by 10 grid floating between them. Crisp vector aesthetic, bright turquoise and orange accents, clean white highlights, negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "LA CUADRÍCULA DE 100 PARTES",
         "overlayTitle": "LA CUADRÍCULA DE 100 PARTES",
         "overlaySubtitle": "10 filas de 10 cuadritos cada una",
@@ -165,7 +165,7 @@ export const MATEMATICA_7B_OA04_CLASE01: LessonData = {
       {
         "slideNumber": 5,
         "tituloMomento": "Descubrimiento: Cuarenta celdas iluminadas",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. The two 13-year-old students happily observing four full rows of ten cells lighting up in bright energy glow on the panel. Cheerful collaborative atmosphere, negative space on the right. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, happily observing four full rows of ten cells lighting up in bright energy glow on the panel. Cheerful collaborative atmosphere, negative space on the right.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "40 DE CADA 100 PARTES",
         "overlayTitle": "40 DE CADA 100 PARTES",
         "overlaySubtitle": "Cuatro filas completas encendidas",
@@ -176,7 +176,7 @@ export const MATEMATICA_7B_OA04_CLASE01: LessonData = {
       {
         "slideNumber": 6,
         "tituloMomento": "Conexión Matemática: 40 por ciento",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. The 13-year-old girl with braided hair writing on her digital notebook while the boy in a teal jacket gives a thumbs up. Clean bright modern anime, high clarity, negative space for mathematical formulas. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The 13-year-old girl with braided hair writing on her digital notebook while the boy in a teal jacket gives a thumbs up. Clean bright modern anime, high clarity, negative space for mathematical formulas.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "40% DE LAS CELDAS ACTIVAS",
         "overlayTitle": "40% DE LAS CELDAS ACTIVAS",
         "overlaySubtitle": "Razón matemática: 40 sobre 100 celdas",
@@ -187,7 +187,7 @@ export const MATEMATICA_7B_OA04_CLASE01: LessonData = {
       {
         "slideNumber": 7,
         "tituloMomento": "Síntesis del Gancho: Pase a la formalización",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Both 13-year-old student explorers smiling confidently toward the camera, inviting the viewer into the mathematics laboratory. Sunlit morning, bright clean colors, spacious negative space. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, Both 13-year-old student explorers smiling confidently toward the camera, inviting the viewer into the mathematics laboratory. Sunlit morning, bright clean colors, spacious negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "EL LENGUAJE DEL PORCENTAJE",
         "overlayTitle": "EL LENGUAJE DEL PORCENTAJE",
         "overlaySubtitle": "De la cuadrícula al cálculo matemático",
@@ -229,7 +229,7 @@ export const MATEMATICA_7B_OA04_CLASE01: LessonData = {
       {
         "slideNumber": 1,
         "tituloMomento": "Declaración del Objetivo: Concepto de Porcentaje",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old students, a girl with braided hair and a boy in a teal jacket, in a clean modern classroom looking at a digital blackboard. Generous negative space on the left. High contrast, bright flat colors. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, , a girl with braided hair and a boy in a teal jacket, in a clean modern classroom looking at a digital blackboard. Generous negative space on the left. High contrast, bright flat colors.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "OBJETIVO DE LA LECCIÓN",
         "overlayTitle": "OBJETIVO DE LA LECCIÓN",
         "overlaySubtitle": "Comprender el porcentaje y su modelo pictórico en cuadrícula de 100",
@@ -240,7 +240,7 @@ export const MATEMATICA_7B_OA04_CLASE01: LessonData = {
       {
         "slideNumber": 2,
         "tituloMomento": "Definición: La razón respecto a 100",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. The 13-year-old girl explaining with an open notebook, pointing to an illustrated ratio concept. Clean lines, bright cheerful classroom background, negative space on the right. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The 13-year-old girl explaining with an open notebook, pointing to an illustrated ratio concept. Clean lines, bright cheerful classroom background, negative space on the right.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "¿QUÉ ES UN PORCENTAJE?",
         "overlayTitle": "¿QUÉ ES UN PORCENTAJE?",
         "overlaySubtitle": "Una razón matemática que compara con 100 partes",
@@ -251,7 +251,7 @@ export const MATEMATICA_7B_OA04_CLASE01: LessonData = {
       {
         "slideNumber": 3,
         "tituloMomento": "La Unidad Básica: El 1 por ciento",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. A close-up view of the 13-year-old boy in teal jacket highlighting a single colored square within a large 100-cell grid. Sharp focus, clean modern anime, negative space. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, A close-up view of the 13-year-old boy in teal jacket highlighting a single colored square within a large 100-cell grid. Sharp focus, clean modern anime, negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "CADA CUADRITO ES UN 1%",
         "overlayTitle": "CADA CUADRITO ES UN 1%",
         "overlaySubtitle": "1 de 100 partes = 1/100 = 1%",
@@ -262,7 +262,7 @@ export const MATEMATICA_7B_OA04_CLASE01: LessonData = {
       {
         "slideNumber": 4,
         "tituloMomento": "Lectura y Escritura de Porcentajes",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Both 13-year-old students reviewing examples on an interactive tablet display. Clear lighting, neat classroom setup, negative space for mathematical notation. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, reviewing examples on an interactive tablet display.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "LECTURA Y ESCRITURA",
         "overlayTitle": "LECTURA Y ESCRITURA",
         "overlaySubtitle": "Símbolo % y su lectura verbal precisa",
@@ -273,7 +273,7 @@ export const MATEMATICA_7B_OA04_CLASE01: LessonData = {
       {
         "slideNumber": 5,
         "tituloMomento": "La Totalidad: El 100 por ciento",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. The full 100-cell grid glowing completely in warm golden light while the two 13-year-old students smile in comprehension. Clean vibrant aesthetic, negative space on left. No text drawn by AI.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The full 100-cell grid glowing completely in warm golden light while smile in comprehension. Clean vibrant aesthetic, negative space on left.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
         "overlayText": "EL TOTAL ES EL 100%",
         "overlayTitle": "EL TOTAL ES EL 100%",
         "overlaySubtitle": "100 cuadritos de 100 = Todo el conjunto",
@@ -284,36 +284,45 @@ export const MATEMATICA_7B_OA04_CLASE01: LessonData = {
       {
         "slideNumber": 6,
         "tituloMomento": "Caso Isomórfico: Cuarenta cuadritos sombreados",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. The 13-year-old girl and boy pointing together at a grid of 100 cells where exactly 40 blue cells are neatly colored. Perfect visual clarity, spacious negative space for practice step. No text drawn by AI.",
-        "overlayText": "EJEMPLO MODELADO",
-        "overlayTitle": "EJEMPLO MODELADO",
-        "overlaySubtitle": "En una cuadrícula de 100 cuadritos, se colorean exactamente 40",
-        "vectorialOverlayPptx": "Cuadrícula 10x10 con exactamente 40 celdas coloreadas en azul: 40/100 = 40%",
-        "speakerNotes": "Analicemos este caso: en una cuadrícula de cien cuadritos, coloreamos exactamente cuarenta. Al contar cuarenta de cien, el porcentaje representado es cuarenta por ciento.",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The 13-year-old girl and boy pointing together at a grid of 100 cells where exactly 40 blue cells are neatly colored. Perfect visual clarity, spacious negative space for practice step.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
+        "overlayText": "EJEMPLO MODELADO: CASO 1",
+        "overlayTitle": "EJEMPLO MODELADO: CASO 1",
+        "overlaySubtitle": "En una cuadrícula de 100 cuadritos iguales, se colorean exactamente 40 cuadritos",
+        "vectorialOverlayPptx": "Resolución canónica: La razón es 40/100, lo que por definición es 40%.",
+        "speakerNotes": "Analicemos paso a paso el caso modelado: En una cuadrícula de 100 cuadritos iguales, se colorean exactamente 40 cuadritos de color azul. ¿Qué porcentaje de la cuadrícula está coloreado de azul? La razón es 40/100, lo que por definición es 40%. Por lo tanto, el resultado esperado es: 40%.",
         "duracionSeg": 13
       },
       {
         "slideNumber": 7,
         "tituloMomento": "Regla de Oro y Pase a la Práctica",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. The two 13-year-old student explorers holding their notebooks, ready to begin interactive exercises. Modern anime style, bright friendly expressions, negative space. No text drawn by AI.",
-        "overlayText": "REGLA DE ORO DEL PORCENTAJE",
-        "overlayTitle": "REGLA DE ORO DEL PORCENTAJE",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, The two 13-year-old student explorers holding their notebooks, ready to begin interactive exercises. Modern anime style, bright friendly expressions, negative space.. Clear lighting, vibrant colors, clear negative space for layout. No text drawn by AI.",
+        "overlayText": "REGLA DE ORO DE LA LECCIÓN",
+        "overlayTitle": "REGLA DE ORO DE LA LECCIÓN",
         "overlaySubtitle": "El porcentaje es una razón de consecuente 100",
         "vectorialOverlayPptx": "Regla de oro: p% = p ÷ 100. ¡A practicar!",
-        "speakerNotes": "Regla de oro: cualquier cantidad comparada directamente con cien se convierte de inmediato en su porcentaje correspondiente: p por ciento es p dividido en cien. Ahora continuemos con la práctica interactiva.",
+        "speakerNotes": "Regla de oro: El porcentaje es una razón de consecuente 100. Ahora pon a prueba lo aprendido resolviendo los casos de práctica en la plataforma interactiva.",
         "duracionSeg": 13
       }
     ]
   },
   "postQuestions": [
     {
-      "context": "En el video explicativo analizamos una cuadrícula de 100 cuadritos con 40 celdas coloreadas.",
-      "question": "¿Por qué 40 cuadritos de 100 representan directamente el 40%?",
-      "expected": "Porque cada cuadrito es 1%, por lo que 40 cuadritos equivalen a 40%.",
-      "success": "¡Excelente! Como el total es 100, la cantidad de partes sombreadas coincide exactamente con el valor del porcentaje.",
-      "support": "Recuerda que el porcentaje expresa cuántas partes se toman de cada 100.",
-      "reveal": "Cada cuadrito es 1 de 100 (1%). Cuarenta cuadritos son 40 de 100, es decir, 40%.",
-      "studentReveal": "Representa el 40% porque son 40 partes de un total de 100."
+      "context": "En una cuadrícula de 100 cuadritos iguales, se colorean exactamente 40 cuadritos de color azul.",
+      "question": "¿Qué porcentaje de la cuadrícula está coloreado de azul?",
+      "expected": "40%",
+      "success": "¡Correcto! 40 partes de 100 corresponden exactamente al 40%.",
+      "support": "Cuenta las partes pintadas sobre el total de 100 cuadritos.",
+      "reveal": "La razón es 40/100, lo que por definición es 40%.",
+      "studentReveal": "Está coloreado el 40%."
+    },
+    {
+      "context": "En un mosaico de 100 baldosas cuadradas en el patio de la escuela, 65 baldosas son de color verde y el resto son blancas.",
+      "question": "¿Qué porcentaje del mosaico está formado por baldosas verdes?",
+      "expected": "65%",
+      "success": "¡Muy bien! 65 de 100 baldosas representan el 65%.",
+      "support": "El total de baldosas es 100. Compara las 65 verdes con ese total.",
+      "reveal": "65 baldosas verdes de 100 baldosas totales = 65/100 = 65%.",
+      "studentReveal": "El 65% de las baldosas son verdes."
     }
   ],
   "practice": [

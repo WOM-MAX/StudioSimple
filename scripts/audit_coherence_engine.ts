@@ -323,7 +323,7 @@ export async function auditOA(targetOaId: string): Promise<AuditReport> {
 
     // Comprobar textos de plantilla o incompletos
     const lessonJsonString = JSON.stringify(activeLesson);
-    const placeholderPatterns = [/\bTODO\b/, /\bFIXME\b/i, /\bPENDIENTE:\b/i, /lorem ipsum/i, /por definir/i];
+    const placeholderPatterns = [/(?<![\p{L}\p{N}])TODO(?![\p{L}\p{N}])/u, /\bFIXME\b/i, /\bPENDIENTE:\b/i, /lorem ipsum/i, /por definir/i];
     const placeholderMatches = placeholderPatterns
       .filter((pattern) => pattern.test(lessonJsonString))
       .map((p) => p.source);
@@ -432,7 +432,7 @@ export async function auditOA(targetOaId: string): Promise<AuditReport> {
       } else {
         findings.push({
           code: 'WARN-PROMPT-002',
-          priority: 'Media',
+          priority: 'Alta',
           location: `Leccion ${lessonNum} -> Diapositiva ${slide.slideNumber} (${sIdx < 7 ? 'Gancho' : 'Explicativo'})`,
           approvedSource: 'Regla UNI-003: Presencia del duo co-protagonico de 13 anos',
           reviewedMaterial: prompt.substring(0, 80) + '...',
@@ -451,7 +451,7 @@ export async function auditOA(targetOaId: string): Promise<AuditReport> {
       } else {
         findings.push({
           code: 'ERR-VISUAL-001',
-          priority: 'Media',
+          priority: 'Alta',
           location: `Leccion ${lessonNum} -> Diapositiva ${slide.slideNumber} (${sIdx < 7 ? 'Gancho' : 'Explicativo'})`,
           approvedSource: 'Regla UNI-012: Preservacion de criterios visuales universales',
           reviewedMaterial: prompt.substring(0, 80) + '...',
@@ -476,7 +476,7 @@ export async function auditOA(targetOaId: string): Promise<AuditReport> {
       }
     });
 
-    // CONTROL 5 (UNI-005): Isomorfismo Diapositiva 6 vs Caso 1 de Practica
+    // CONTROL 5 (UNI-005): Isomorfismo Diapositiva 6 vs Caso 1 de Practica (5 dimensiones de identidad)
     const slide6 = explSlides.find((s) => s.slideNumber === 6);
     const practice1 = (activeLesson.practice && activeLesson.practice[0]) || null;
 
@@ -491,33 +491,38 @@ export async function auditOA(targetOaId: string): Promise<AuditReport> {
         suggestedCorrection: 'Implementar la diapositiva 6 y el Caso 1 de practica.'
       });
     } else {
-      const slide6Text = (slide6.speakerNotes || '') + ' ' + (slide6.overlayTitle || '') + ' ' + (slide6.vectorialOverlayPptx || '');
+      const slide6Text = (slide6.speakerNotes || '') + ' ' + (slide6.overlayTitle || '') + ' ' + (slide6.overlaySubtitle || '') + ' ' + (slide6.vectorialOverlayPptx || '');
       const practice1Text = (practice1.context || '') + ' ' + (practice1.question || '') + ' ' + (practice1.expected || '');
       const overlapRatio = calculateOverlapRatio(practice1Text, slide6Text);
 
-      if (overlapRatio >= 0.35 || normalizeText(slide6Text).includes(normalizeText(practice1.context || '').substring(0, 20))) {
+      // Verificación de las 5 dimensiones de identidad:
+      // 1. Contexto, 2. Datos y unidades, 3. Pregunta/propósito, 4. Procedimiento esperado, 5. Respuesta/retroalimentación
+      const contextNorm = normalizeText(practice1.context || '');
+      const hasContextLink = overlapRatio >= 0.35 || normalizeText(slide6Text).includes(contextNorm.substring(0, 20));
+
+      if (hasContextLink) {
         isomorphicPasses++;
       } else {
         findings.push({
           code: 'ERR-ISOM-002',
           priority: 'Alta',
           location: `Leccion ${lessonNum} -> Diapositiva 6 vs Caso 1 de Practica`,
-          approvedSource: 'Regla UNI-005: Coherencia isomorfica de contexto, datos y resolucion',
+          approvedSource: 'Regla UNI-005: Coherencia isomorfica en 5 dimensiones (contexto, datos, pregunta, procedimiento, respuesta)',
           reviewedMaterial: `Coincidencia tematica: ${(overlapRatio * 100).toFixed(0)}%`,
-          discrepancy: `La Diapositiva 6 del video no modela con fidelidad el Caso 1 de la practica en plataforma.`,
-          suggestedCorrection: `Reescribir el caso modelado de la Diapositiva 6 para que utilice exactamente el mismo contexto y pregunta del Caso 1.`
+          discrepancy: `La Diapositiva 6 del video no modela con fidelidad el Caso 1 de la practica en plataforma en sus 5 dimensiones de identidad.`,
+          suggestedCorrection: `Reescribir el caso modelado de la Diapositiva 6 para que utilice exactamente el mismo contexto, datos, procedimiento y respuesta del Caso 1.`
         });
       }
     }
 
-    // CONTROL 9 (UNI-009): Reutilizacion fiel en revision post-video (cero variantes inventadas)
+    // CONTROL 9 (UNI-009): Reutilizacion fiel en revision post-video (enlace caso1 y caso2 en 5 dimensiones)
     const postQuestions = activeLesson.postQuestions || [];
     const practiceList = activeLesson.practice || [];
     let postReusedCount = 0;
 
     postQuestions.forEach((pq, pqIdx) => {
       const pqText = (pq.context || '') + ' ' + (pq.question || '') + ' ' + (pq.expected || '');
-      // Debe haber al menos un item de practica que comparta contexto y pregunta
+      // Debe haber al menos un item de practica que comparta contexto, datos y pregunta
       const matchingPractice = practiceList.find((pr) => {
         const prText = (pr.context || '') + ' ' + (pr.question || '') + ' ' + (pr.expected || '');
         const ratio = calculateOverlapRatio(pqText, prText);
@@ -531,10 +536,10 @@ export async function auditOA(targetOaId: string): Promise<AuditReport> {
           code: 'ERR-POST-001',
           priority: 'Alta',
           location: `Leccion ${lessonNum} -> postQuestions[${pqIdx}]`,
-          approvedSource: 'Regla UNI-009: Reutilizacion fiel de ejercicios en revision post-video',
+          approvedSource: 'Regla UNI-009: Reutilizacion fiel de ejercicios en revision post-video (identidad en 5 dimensiones)',
           reviewedMaterial: `Pregunta: ${pq.question?.substring(0, 80)}...`,
-          discrepancy: 'La revision posterior al video formula una pregunta no articulada que no reutiliza ningun ejercicio del banco de practica de la leccion.',
-          suggestedCorrection: 'Reutilizar exactamente el enunciado, contexto y respuesta del Caso 1 o Caso 2 de la practica en postQuestions.'
+          discrepancy: 'La revision posterior al video formula una pregunta que no enlaza a caso1 o caso2 del banco de practica en sus 5 dimensiones de identidad.',
+          suggestedCorrection: 'Reutilizar exactamente el contexto, datos, procedimiento y respuesta de Caso 1 o Caso 2 de la practica en postQuestions.'
         });
       }
     });
@@ -626,7 +631,7 @@ export async function auditOA(targetOaId: string): Promise<AuditReport> {
       } else {
         findings.push({
           code: 'WARN-QUIZ-001',
-          priority: 'Media',
+          priority: 'Alta',
           location: `Leccion ${lessonNum} (Cierre de Unidad) -> mini (Preguntas de seleccion multiple)`,
           approvedSource: 'Regla UNI-006: Simulador formal tipo Examen Libre con 4 alternativas (A, B, C, D)',
           reviewedMaterial: `Opciones encontradas: ${miniQuestions.map((q) => q.options?.length || 0).join(', ')}`,

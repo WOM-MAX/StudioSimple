@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
-import { Packer } from 'docx';
+import { Packer } from '../Web Studio Simple/node_modules/docx';
 import { adaptPlayerLessonToGenerator } from '../Web Studio Simple/src/lib/lesson-adapter';
 import { buildOAPackageDocx } from '../Web Studio Simple/src/lib/docx-export';
 import { buildLessonPromptText } from '../Web Studio Simple/src/lib/prompt-export';
@@ -148,6 +148,8 @@ async function main() {
   const docxSha256 = sha256File(docxPath);
   console.log(`DOCX generado con éxito: ${docxFilename} (${docxBytes} bytes, SHA-256: ${docxSha256.substring(0, 16)}...)`);
 
+  const santiagoTimestamp = new Date().toLocaleString('sv-SE', { timeZone: 'America/Santiago' }) + ' [America/Santiago]';
+
   // 5. Construir archivo TXT de Prompts para Work (84 láminas)
   console.log('Generando archivo de Prompts TXT para Work (84 laminas)...');
   let promptText = '';
@@ -156,6 +158,7 @@ async function main() {
   promptText += `CURSO: 7° BASICO | ASIGNATURA: MATEMATICA | OA: 110-7-MAT-OA04 (PORCENTAJES)\n`;
   promptText += `TOTAL DE CLASES: 6 CLASES CANONICAS BIMODALES (14 LAMINAS CADA UNA = 84 LAMINAS TOTALES)\n`;
   promptText += `FORMATO: 7 DIAPOSITIVAS VIDEO GANCHO (60s) + 7 DIAPOSITIVAS VIDEO EXPLICATIVO (90s)\n`;
+  promptText += `FECHA Y HORA DE ACTUALIZACION: ${santiagoTimestamp}\n`;
   promptText += `DESTINATARIO: CHATGPT WORK / CODEX (MAQUETACION PPTX 16:9 EN PYTHON)\n`;
   promptText += `================================================================================\n\n`;
 
@@ -175,8 +178,9 @@ async function main() {
   console.log('Generando manifest.json oficial...');
   const manifest = {
     schemaVersion: "2.0.0",
-    generatedAt: new Date().toISOString(),
+    generatedAt: santiagoTimestamp,
     status: "EN_REVISION",
+    etapa_revision: "WORK_PRE_APROBACION",
     oaIdentifier: "110-7-MAT-OA04",
     course: "7° Básico",
     subject: "Matemática",

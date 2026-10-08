@@ -38,6 +38,13 @@ Queda estrictamente prohibido dar por válida una alineación solo porque un doc
    - Es el consumidor de los paquetes entregados. Adapta el guion a la maqueta de diapositivas y asume la responsabilidad exclusiva de generar y validar las presentaciones PPTX en su propio entorno con Python.
 3. **Producción Audiovisual (Google Vids):**
    - La duración real y la sincronización acústica se revisan empíricamente en Google Vids durante la producción del video (síntesis de voz y renderizado). No se exige ni atribuye esa calibración temporal a Antigravity ni a Codex/Work.
+4. **Gobernanza de Aprobación Humana Exclusiva (Consola de Walter):**
+   - Queda terminantemente prohibido para Antigravity o el motor de auditoría marcar autónomamente cualquier paquete como `APROBADA`.
+   - Las lecciones las aprueba **única y exclusivamente Walter**, después de realizar el análisis conjunto con ChatGPT Work.
+   - La aprobación se otorgará formalmente por consola y solo en ese instante preciso se podrá promover el manifiesto a `APROBADA`.
+5. **Trazabilidad Temporal Obligatoria (Fecha y Hora en cada Versión):**
+   - Todo plan de lecciones (DOCX, TXT de prompts y `manifest.json`) debe incluir la fecha y hora exacta de actualización en zona horaria de Chile (`America/Santiago`, formato `YYYY-MM-DD HH:mm [America/Santiago]`).
+   - Cada nueva iteración reemplaza a la anterior en su ruta oficial, preservando la constancia temporal de los arreglos.
 
 ---
 
