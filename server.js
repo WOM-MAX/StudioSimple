@@ -182,7 +182,8 @@ const MIME_TYPES = {
   '.docx': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
   '.txt': 'text/plain; charset=utf-8',
   '.woff': 'font/woff',
-  '.woff2': 'font/woff2'
+  '.woff2': 'font/woff2',
+  '.webmanifest': 'application/manifest+json'
 };
 
 // -----------------------------------------------------------------------------

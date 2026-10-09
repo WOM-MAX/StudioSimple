@@ -1,0 +1,21 @@
+{
+  "name": "EstudioSimple",
+  "short_name": "EstudioSimple",
+  "description": "Aprender en familia, paso a paso. Exámenes Libres MINEDUC Chile.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#1C3257",
+  "background_color": "#0A192F",
+  "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
