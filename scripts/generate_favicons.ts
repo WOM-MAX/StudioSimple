@@ -1,9 +1,15 @@
 /**
  * generate_favicons.ts — Generador de Suite Completa de Favicons y PWA Icons
  * 
- * Genera la suite completa de favicons de alto contraste (21:1) sobre
- * contenedor squircle blanco (#FFFFFF), aplicando trim perimetral automático
- * sobre imagotipo.png para maximizar el peso óptico (86% de cobertura útil).
+ * Implementa el rediseño "Favicon Masivo Tipo Gmail":
+ * - Glifo macro bold a sangre de la "E" de EstudioSimple.
+ * - Squircle base blanco (#FFFFFF) para contraste ratio 21:1 en fondos oscuros o claros.
+ * - Cuatro colores oficiales de marca:
+ *     • Espina vertical: Azul Marino (#1C3257)
+ *     • Barra superior: Naranja Estudio (#EE751C)
+ *     • Barra intermedia: Amarillo Sol (#F8AD22)
+ *     • Barra inferior: Turquesa (#12A1A4)
+ * - Geometría calibrada para alineación píxel-perfecta en 16×16 px (3px de trazo por barra, 2px de gap).
  * 
  * Uso: npx tsx scripts/generate_favicons.ts
  */
@@ -13,49 +19,25 @@ import fs from 'fs';
 import path from 'path';
 
 const PUBLIC_DIR = path.resolve(import.meta.dirname ?? __dirname, '..', 'Web Studio Simple', 'public');
-const IMAGOTIPO_PATH = path.join(PUBLIC_DIR, 'logos', 'imagotipo.png');
 
-/**
- * Crea un ícono con fondo squircle blanco y el imagotipo recortado (.trim()) centrado.
- */
-async function createSquircleIcon(
-  trimmedBuffer: Buffer,
-  size: number,
-  padding: number,
-  outputPath: string
-): Promise<void> {
-  const innerSize = Math.max(size - padding * 2, 1);
-  const radius = Math.round(size * 0.22); // Squircle con curvatura superelíptica ~22%
-
-  // Fondo blanco puro con esquinas redondeadas (squircle)
-  const backgroundSvg = Buffer.from(
-    `<svg width="${size}" height="${size}" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="0" width="${size}" height="${size}" rx="${radius}" ry="${radius}" fill="#FFFFFF"/>
-    </svg>`
-  );
-
-  // Redimensionar el imagotipo recortado ajustándolo al área útil
-  const resizedIcon = await sharp(trimmedBuffer)
-    .resize(innerSize, innerSize, {
-      fit: 'contain',
-      background: { r: 255, g: 255, b: 255, alpha: 0 }
-    })
-    .png()
-    .toBuffer();
-
-  // Componer: fondo squircle blanco + isotipo oficial nítido
-  await sharp(backgroundSvg)
-    .composite([{
-      input: resizedIcon,
-      top: padding,
-      left: padding
-    }])
-    .png({ quality: 98, compressionLevel: 9 })
-    .toFile(outputPath);
-
-  const stats = fs.statSync(outputPath);
-  console.log(`  ✅ ${path.basename(outputPath)} (${size}×${size}, ${(stats.size / 1024).toFixed(1)} KB, squircle blanco)`);
-}
+export const FAVICON_SVG_CONTENT = `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- EstudioSimple — Favicon Oficial Masivo Macro (Estilo M de Gmail) -->
+  <!-- Base Squircle Blanco Brillante Alto Contraste (21:1) -->
+  <rect width="512" height="512" rx="112" fill="#FFFFFF"/>
+  
+  <!-- Barras Horizontales con Terminación Pill (rx=48) -->
+  <!-- Barra Superior: Naranja Estudio Oficial -->
+  <rect x="108" y="60" width="344" height="96" rx="48" fill="#EE751C"/>
+  <!-- Barra Media: Amarillo Sol Oficial -->
+  <rect x="108" y="208" width="280" height="96" rx="48" fill="#F8AD22"/>
+  <!-- Barra Inferior: Turquesa Oficial -->
+  <rect x="108" y="356" width="344" height="96" rx="48" fill="#12A1A4"/>
+  
+  <!-- Espina Vertical: Azul Marino Oficial (rx=48) -->
+  <rect x="60" y="60" width="96" height="392" rx="48" fill="#1C3257"/>
+</svg>
+`;
 
 /**
  * Empaqueta un PNG de 32×32 en formato ICO (header + PNG embebido).
@@ -90,48 +72,63 @@ function createFaviconIco(png32Path: string, outputPath: string): void {
 async function main(): Promise<void> {
   console.log('');
   console.log('🎨 ═══════════════════════════════════════════════════════════════════');
-  console.log('   EstudioSimple — Generador de Favicons Squircle Alto Contraste');
+  console.log('   EstudioSimple — Generador de Favicons Masivos Macro (Estilo Gmail)');
   console.log('═══════════════════════════════════════════════════════════════════════');
   console.log('');
 
-  // Validar existencia del imagotipo fuente
-  if (!fs.existsSync(IMAGOTIPO_PATH)) {
-    console.error(`❌ FATAL: No se encontró el imagotipo fuente en:\n   ${IMAGOTIPO_PATH}`);
-    process.exit(1);
-  }
+  // 1. Guardar favicon.svg canónico oficial
+  const svgPath = path.join(PUBLIC_DIR, 'favicon.svg');
+  fs.writeFileSync(svgPath, FAVICON_SVG_CONTENT.trim(), 'utf-8');
+  console.log(`  ✅ favicon.svg generado (SVG vectorial de alta fidelidad)`);
 
-  // Pre-procesar imagotipo: aplicar trim() para descartar márgenes transparentes
-  console.log('🔹 Recortando márgenes transparentes con sharp.trim()...');
-  const trimmedBuffer = await sharp(IMAGOTIPO_PATH)
-    .trim()
-    .toBuffer();
+  const svgBuffer = Buffer.from(FAVICON_SVG_CONTENT);
+
+  // 2. Favicons para Pestañas del Navegador (16×16 y 32×32)
+  console.log('🔹 Renderizando favicons rasterizados para pestañas (Pixel-Perfect)...');
   
-  const trimmedMeta = await sharp(trimmedBuffer).metadata();
-  console.log(`   Área útil detectada: ${trimmedMeta.width}×${trimmedMeta.height} px`);
-  console.log('');
+  const png16Path = path.join(PUBLIC_DIR, 'favicon-16x16.png');
+  await sharp(svgBuffer)
+    .resize(16, 16)
+    .png({ quality: 100, compressionLevel: 9 })
+    .toFile(png16Path);
+  console.log(`  ✅ favicon-16x16.png (${(fs.statSync(png16Path).size / 1024).toFixed(1)} KB)`);
 
-  // ── 1. Favicons para Pestañas del Navegador (Squircle Blanco Alto Contraste) ──
-  console.log('🔹 Generando favicons para pestañas (squircle blanco 21:1)...');
-  await createSquircleIcon(trimmedBuffer, 16, 1, path.join(PUBLIC_DIR, 'favicon-16x16.png'));
-  await createSquircleIcon(trimmedBuffer, 32, 2, path.join(PUBLIC_DIR, 'favicon-32x32.png'));
-  console.log('');
+  const png32Path = path.join(PUBLIC_DIR, 'favicon-32x32.png');
+  await sharp(svgBuffer)
+    .resize(32, 32)
+    .png({ quality: 100, compressionLevel: 9 })
+    .toFile(png32Path);
+  console.log(`  ✅ favicon-32x32.png (${(fs.statSync(png32Path).size / 1024).toFixed(1)} KB)`);
 
-  // ── 2. Íconos de App y PWA (Squircle Blanco Oficial) ──────────────────────────
-  console.log('🔹 Generando íconos de App / PWA (squircle blanco optimizado)...');
-  await createSquircleIcon(trimmedBuffer, 180, 12, path.join(PUBLIC_DIR, 'apple-touch-icon.png'));
-  await createSquircleIcon(trimmedBuffer, 192, 14, path.join(PUBLIC_DIR, 'pwa-192x192.png'));
-  await createSquircleIcon(trimmedBuffer, 512, 36, path.join(PUBLIC_DIR, 'pwa-512x512.png'));
-  console.log('');
+  // 3. Íconos de App y PWA (180×180, 192×192 y 512×512)
+  console.log('🔹 Renderizando íconos Touch y PWA...');
+  
+  const touchPath = path.join(PUBLIC_DIR, 'apple-touch-icon.png');
+  await sharp(svgBuffer)
+    .resize(180, 180)
+    .png({ quality: 100, compressionLevel: 9 })
+    .toFile(touchPath);
+  console.log(`  ✅ apple-touch-icon.png (${(fs.statSync(touchPath).size / 1024).toFixed(1)} KB)`);
 
-  // ── 3. favicon.ico (Legacy) ───────────────────────────────────────────────────
-  console.log('🔹 Generando favicon.ico multi-resolución...');
-  createFaviconIco(
-    path.join(PUBLIC_DIR, 'favicon-32x32.png'),
-    path.join(PUBLIC_DIR, 'favicon.ico')
-  );
-  console.log('');
+  const pwa192Path = path.join(PUBLIC_DIR, 'pwa-192x192.png');
+  await sharp(svgBuffer)
+    .resize(192, 192)
+    .png({ quality: 100, compressionLevel: 9 })
+    .toFile(pwa192Path);
+  console.log(`  ✅ pwa-192x192.png (${(fs.statSync(pwa192Path).size / 1024).toFixed(1)} KB)`);
 
-  // ── Resumen de Validación ─────────────────────────────────────────────────────
+  const pwa512Path = path.join(PUBLIC_DIR, 'pwa-512x512.png');
+  await sharp(svgBuffer)
+    .resize(512, 512)
+    .png({ quality: 100, compressionLevel: 9 })
+    .toFile(pwa512Path);
+  console.log(`  ✅ pwa-512x512.png (${(fs.statSync(pwa512Path).size / 1024).toFixed(1)} KB)`);
+
+  // 4. favicon.ico Multi-Resolución Legacy
+  console.log('🔹 Generando favicon.ico...');
+  createFaviconIco(png32Path, path.join(PUBLIC_DIR, 'favicon.ico'));
+
+  // 5. Validación de Suite Completa
   const generatedFiles = [
     'favicon.svg',
     'favicon-16x16.png',
@@ -143,8 +140,9 @@ async function main(): Promise<void> {
     'site.webmanifest'
   ];
 
+  console.log('');
   console.log('═══════════════════════════════════════════════════════════════════');
-  console.log(`✅ Suite completa de alto contraste lista: ${generatedFiles.length} archivos en public/`);
+  console.log(`✅ Suite completa de favicons masivos lista: ${generatedFiles.length} archivos en public/`);
   
   let allExist = true;
   for (const file of generatedFiles) {

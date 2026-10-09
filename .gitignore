@@ -47,6 +47,7 @@ pnpm-debug.log*
 .DS_Store
 Thumbs.db
 ~$*
+*.zip
 
 # Runtime User Data & Customer Records (Data Privacy & Zero-Trust)
 data/registered_families.json
