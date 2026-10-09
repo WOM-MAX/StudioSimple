@@ -1,17 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <!-- EstudioSimple — Favicon Oficial Masivo Macro (Estilo M de Gmail) -->
+  <!-- EstudioSimple — Favicon Oficial Dual 'ES' (Alto Contraste) -->
   <!-- Base Squircle Blanco Brillante Alto Contraste (21:1) -->
   <rect width="512" height="512" rx="112" fill="#FFFFFF"/>
   
-  <!-- Barras Horizontales con Terminación Pill (rx=48) -->
-  <!-- Barra Superior: Naranja Estudio Oficial -->
-  <rect x="108" y="60" width="344" height="96" rx="48" fill="#EE751C"/>
-  <!-- Barra Media: Amarillo Sol Oficial -->
-  <rect x="108" y="208" width="280" height="96" rx="48" fill="#F8AD22"/>
-  <!-- Barra Inferior: Turquesa Oficial -->
-  <rect x="108" y="356" width="344" height="96" rx="48" fill="#12A1A4"/>
-  
-  <!-- Espina Vertical: Azul Marino Oficial (rx=48) -->
-  <rect x="60" y="60" width="96" height="392" rx="48" fill="#1C3257"/>
+  <!-- Letra 'E': Azul Marino Oficial (#1C3257) -->
+  <g fill="#1C3257">
+    <!-- Espina vertical -->
+    <rect x="56" y="88" width="64" height="336" rx="32"/>
+    <!-- Barra superior -->
+    <rect x="56" y="88" width="176" height="64" rx="32"/>
+    <!-- Barra intermedia -->
+    <rect x="56" y="224" width="156" height="64" rx="32"/>
+    <!-- Barra inferior -->
+    <rect x="56" y="360" width="176" height="64" rx="32"/>
+  </g>
+
+  <!-- Letra 'S': Naranja Estudio Oficial (#EE751C) -->
+  <g fill="#EE751C">
+    <!-- Poste superior izquierdo -->
+    <rect x="296" y="88" width="64" height="168" rx="32"/>
+    <!-- Barra superior -->
+    <rect x="328" y="88" width="128" height="64" rx="32"/>
+    <!-- Barra media -->
+    <rect x="296" y="224" width="160" height="64" rx="32"/>
+    <!-- Poste inferior derecho -->
+    <rect x="392" y="256" width="64" height="168" rx="32"/>
+    <!-- Barra inferior -->
+    <rect x="296" y="360" width="128" height="64" rx="32"/>
+  </g>
 </svg>
