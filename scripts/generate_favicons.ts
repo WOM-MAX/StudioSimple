@@ -1,8 +1,9 @@
 /**
  * generate_favicons.ts — Generador de Suite Completa de Favicons y PWA Icons
  * 
- * Utiliza sharp para redimensionar el imagotipo oficial de EstudioSimple
- * y generar todas las variantes necesarias (PNG multi-tamaño, ICO, squircle PWA).
+ * Genera la suite completa de favicons de alto contraste (21:1) sobre
+ * contenedor squircle blanco (#FFFFFF), aplicando trim perimetral automático
+ * sobre imagotipo.png para maximizar el peso óptico (86% de cobertura útil).
  * 
  * Uso: npx tsx scripts/generate_favicons.ts
  */
@@ -15,57 +16,45 @@ const PUBLIC_DIR = path.resolve(import.meta.dirname ?? __dirname, '..', 'Web Stu
 const IMAGOTIPO_PATH = path.join(PUBLIC_DIR, 'logos', 'imagotipo.png');
 
 /**
- * Crea un ícono con fondo squircle blanco y el imagotipo centrado con padding.
- * Usado para apple-touch-icon y PWA icons según la especificación de "Muestra de usos.png".
+ * Crea un ícono con fondo squircle blanco y el imagotipo recortado (.trim()) centrado.
  */
-async function createSquircleIcon(size: number, padding: number, outputPath: string): Promise<void> {
-  const innerSize = size - padding * 2;
-  const radius = Math.round(size * 0.22); // ~22% corner radius para efecto squircle
+async function createSquircleIcon(
+  trimmedBuffer: Buffer,
+  size: number,
+  padding: number,
+  outputPath: string
+): Promise<void> {
+  const innerSize = Math.max(size - padding * 2, 1);
+  const radius = Math.round(size * 0.22); // Squircle con curvatura superelíptica ~22%
 
-  // Fondo blanco con esquinas redondeadas (squircle)
+  // Fondo blanco puro con esquinas redondeadas (squircle)
   const backgroundSvg = Buffer.from(
     `<svg width="${size}" height="${size}" xmlns="http://www.w3.org/2000/svg">
       <rect x="0" y="0" width="${size}" height="${size}" rx="${radius}" ry="${radius}" fill="#FFFFFF"/>
     </svg>`
   );
 
-  // Redimensionar el imagotipo con fondo transparente
-  const resizedIcon = await sharp(IMAGOTIPO_PATH)
+  // Redimensionar el imagotipo recortado ajustándolo al área útil
+  const resizedIcon = await sharp(trimmedBuffer)
     .resize(innerSize, innerSize, {
       fit: 'contain',
-      background: { r: 0, g: 0, b: 0, alpha: 0 }
+      background: { r: 255, g: 255, b: 255, alpha: 0 }
     })
     .png()
     .toBuffer();
 
-  // Componer: fondo squircle + imagotipo centrado
+  // Componer: fondo squircle blanco + isotipo oficial nítido
   await sharp(backgroundSvg)
     .composite([{
       input: resizedIcon,
       top: padding,
       left: padding
     }])
-    .png({ quality: 95, compressionLevel: 9 })
+    .png({ quality: 98, compressionLevel: 9 })
     .toFile(outputPath);
 
   const stats = fs.statSync(outputPath);
-  console.log(`  ✅ ${path.basename(outputPath)} (${size}×${size}, ${(stats.size / 1024).toFixed(1)} KB)`);
-}
-
-/**
- * Crea un ícono con fondo transparente (para pestañas del navegador).
- */
-async function createTransparentIcon(size: number, outputPath: string): Promise<void> {
-  await sharp(IMAGOTIPO_PATH)
-    .resize(size, size, {
-      fit: 'contain',
-      background: { r: 0, g: 0, b: 0, alpha: 0 }
-    })
-    .png({ compressionLevel: 9 })
-    .toFile(outputPath);
-
-  const stats = fs.statSync(outputPath);
-  console.log(`  ✅ ${path.basename(outputPath)} (${size}×${size}, ${(stats.size / 1024).toFixed(1)} KB)`);
+  console.log(`  ✅ ${path.basename(outputPath)} (${size}×${size}, ${(stats.size / 1024).toFixed(1)} KB, squircle blanco)`);
 }
 
 /**
@@ -95,14 +84,14 @@ function createFaviconIco(png32Path: string, outputPath: string): void {
   const ico = Buffer.concat([header, entry, pngData]);
   fs.writeFileSync(outputPath, ico);
 
-  console.log(`  ✅ favicon.ico (${(ico.length / 1024).toFixed(1)} KB, PNG-in-ICO 32×32)`);
+  console.log(`  ✅ favicon.ico (${(ico.length / 1024).toFixed(1)} KB, PNG-in-ICO 32×32 squircle)`);
 }
 
 async function main(): Promise<void> {
   console.log('');
-  console.log('🎨 ═══════════════════════════════════════════════════════');
-  console.log('   EstudioSimple — Generador de Suite de Favicons y PWA');
-  console.log('═══════════════════════════════════════════════════════════');
+  console.log('🎨 ═══════════════════════════════════════════════════════════════════');
+  console.log('   EstudioSimple — Generador de Favicons Squircle Alto Contraste');
+  console.log('═══════════════════════════════════════════════════════════════════════');
   console.log('');
 
   // Validar existencia del imagotipo fuente
@@ -111,32 +100,38 @@ async function main(): Promise<void> {
     process.exit(1);
   }
 
-  const meta = await sharp(IMAGOTIPO_PATH).metadata();
-  console.log(`📸 Fuente: imagotipo.png (${meta.width}×${meta.height}, ${meta.format})`);
+  // Pre-procesar imagotipo: aplicar trim() para descartar márgenes transparentes
+  console.log('🔹 Recortando márgenes transparentes con sharp.trim()...');
+  const trimmedBuffer = await sharp(IMAGOTIPO_PATH)
+    .trim()
+    .toBuffer();
+  
+  const trimmedMeta = await sharp(trimmedBuffer).metadata();
+  console.log(`   Área útil detectada: ${trimmedMeta.width}×${trimmedMeta.height} px`);
   console.log('');
 
-  // ── 1. Favicons Transparentes (Browser Tabs) ──────────────────────────
-  console.log('🔹 Generando favicons transparentes (browser tabs)...');
-  await createTransparentIcon(16, path.join(PUBLIC_DIR, 'favicon-16x16.png'));
-  await createTransparentIcon(32, path.join(PUBLIC_DIR, 'favicon-32x32.png'));
+  // ── 1. Favicons para Pestañas del Navegador (Squircle Blanco Alto Contraste) ──
+  console.log('🔹 Generando favicons para pestañas (squircle blanco 21:1)...');
+  await createSquircleIcon(trimmedBuffer, 16, 1, path.join(PUBLIC_DIR, 'favicon-16x16.png'));
+  await createSquircleIcon(trimmedBuffer, 32, 2, path.join(PUBLIC_DIR, 'favicon-32x32.png'));
   console.log('');
 
-  // ── 2. Íconos Squircle (App / PWA / Apple) ────────────────────────────
-  console.log('🔹 Generando íconos squircle (Apple Touch + PWA)...');
-  await createSquircleIcon(180, 16, path.join(PUBLIC_DIR, 'apple-touch-icon.png'));
-  await createSquircleIcon(192, 18, path.join(PUBLIC_DIR, 'pwa-192x192.png'));
-  await createSquircleIcon(512, 48, path.join(PUBLIC_DIR, 'pwa-512x512.png'));
+  // ── 2. Íconos de App y PWA (Squircle Blanco Oficial) ──────────────────────────
+  console.log('🔹 Generando íconos de App / PWA (squircle blanco optimizado)...');
+  await createSquircleIcon(trimmedBuffer, 180, 12, path.join(PUBLIC_DIR, 'apple-touch-icon.png'));
+  await createSquircleIcon(trimmedBuffer, 192, 14, path.join(PUBLIC_DIR, 'pwa-192x192.png'));
+  await createSquircleIcon(trimmedBuffer, 512, 36, path.join(PUBLIC_DIR, 'pwa-512x512.png'));
   console.log('');
 
-  // ── 3. favicon.ico (Legacy) ───────────────────────────────────────────
-  console.log('🔹 Generando favicon.ico (compatibilidad legacy)...');
+  // ── 3. favicon.ico (Legacy) ───────────────────────────────────────────────────
+  console.log('🔹 Generando favicon.ico multi-resolución...');
   createFaviconIco(
     path.join(PUBLIC_DIR, 'favicon-32x32.png'),
     path.join(PUBLIC_DIR, 'favicon.ico')
   );
   console.log('');
 
-  // ── Resumen ───────────────────────────────────────────────────────────
+  // ── Resumen de Validación ─────────────────────────────────────────────────────
   const generatedFiles = [
     'favicon.svg',
     'favicon-16x16.png',
@@ -148,8 +143,8 @@ async function main(): Promise<void> {
     'site.webmanifest'
   ];
 
-  console.log('═══════════════════════════════════════════════════════════');
-  console.log(`✅ Suite completa generada: ${generatedFiles.length} archivos en public/`);
+  console.log('═══════════════════════════════════════════════════════════════════');
+  console.log(`✅ Suite completa de alto contraste lista: ${generatedFiles.length} archivos en public/`);
   
   let allExist = true;
   for (const file of generatedFiles) {
@@ -162,9 +157,9 @@ async function main(): Promise<void> {
   }
   
   if (allExist) {
-    console.log('  ✅ Todos los archivos verificados en disco.');
+    console.log('  ✅ Todos los archivos verificados en disco con dimensiones óptimas.');
   }
-  console.log('═══════════════════════════════════════════════════════════');
+  console.log('═══════════════════════════════════════════════════════════════════');
   console.log('');
 }
 

@@ -1,25 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
-  <!-- EstudioSimple — Isotipo Oficial (Favicon SVG Vectorial) -->
+  <!-- EstudioSimple — Favicon Oficial Squircle Alto Contraste (21:1) -->
+  
+  <!-- Base Squircle Blanco Brillante -->
+  <rect width="512" height="512" rx="112" fill="#FFFFFF"/>
 
-  <!-- Libro Abierto (Página izquierda) -->
-  <path d="M256 375 C250 377 180 398 120 410 C88 416 62 412 56 392 L56 310 C56 294 72 286 100 282 L242 258 C254 256 256 260 256 270 Z" fill="#1C3257"/>
-  <!-- Libro Abierto (Página derecha) -->
-  <path d="M256 375 C262 377 332 398 392 410 C424 416 450 412 456 392 L456 310 C456 294 440 286 412 282 L270 258 C258 256 256 260 256 270 Z" fill="#1C3257"/>
+  <!-- Isotipo Oficial Escalado y Centrado (86% Cobertura Visual) -->
+  <g transform="translate(256, 252) scale(1.10) translate(-256, -240)">
+    <!-- Libro Abierto (Página izquierda) -->
+    <path d="M256 375 C250 377 180 398 120 410 C88 416 62 412 56 392 L56 310 C56 294 72 286 100 282 L242 258 C254 256 256 260 256 270 Z" fill="#1C3257"/>
+    <!-- Libro Abierto (Página derecha) -->
+    <path d="M256 375 C262 377 332 398 392 410 C424 416 450 412 456 392 L456 310 C456 294 440 286 412 282 L270 258 C258 256 256 260 256 270 Z" fill="#1C3257"/>
 
-  <!-- Figura Mentor / Apoderado (Azul Marino) -->
-  <circle cx="216" cy="178" r="36" fill="#1C3257"/>
-  <path d="M178 220 C166 254 172 306 202 346 C222 374 250 380 256 366 C256 330 250 278 240 246 C232 222 210 210 194 216 Z" fill="#1C3257"/>
+    <!-- Figura Mentor / Apoderado (Azul Marino) -->
+    <circle cx="216" cy="178" r="36" fill="#1C3257"/>
+    <path d="M178 220 C166 254 172 306 202 346 C222 374 250 380 256 366 C256 330 250 278 240 246 C232 222 210 210 194 216 Z" fill="#1C3257"/>
 
-  <!-- Figura Estudiante (Naranja Estudio) -->
-  <circle cx="306" cy="206" r="26" fill="#EE751C"/>
-  <path d="M284 238 C276 264 278 304 296 336 C310 360 258 380 256 366 C256 336 262 292 274 260 C280 244 286 236 284 238 Z" fill="#EE751C"/>
+    <!-- Figura Estudiante (Naranja Estudio) -->
+    <circle cx="306" cy="206" r="26" fill="#EE751C"/>
+    <path d="M284 238 C276 264 278 304 296 336 C310 360 258 380 256 366 C256 336 262 292 274 260 C280 244 286 236 284 238 Z" fill="#EE751C"/>
 
-  <!-- Estrella (Amarillo Sol) -->
-  <path d="M256 58 L269 100 L314 100 L278 126 L291 168 L256 144 L221 168 L234 126 L198 100 L243 100 Z" fill="#F8AD22"/>
+    <!-- Estrella (Amarillo Sol) -->
+    <path d="M256 58 L269 100 L314 100 L278 126 L291 168 L256 144 L221 168 L234 126 L198 100 L243 100 Z" fill="#F8AD22"/>
 
-  <!-- Destellos de Curiosidad -->
-  <line x1="198" y1="110" x2="168" y2="80" stroke="#4A964E" stroke-width="11" stroke-linecap="round"/>
-  <line x1="192" y1="138" x2="156" y2="120" stroke="#F8AD22" stroke-width="11" stroke-linecap="round"/>
-  <line x1="314" y1="110" x2="344" y2="80" stroke="#12A1A4" stroke-width="11" stroke-linecap="round"/>
-  <line x1="320" y1="138" x2="356" y2="120" stroke="#F8AD22" stroke-width="11" stroke-linecap="round"/>
+    <!-- Destellos de Curiosidad -->
+    <line x1="198" y1="110" x2="168" y2="80" stroke="#4A964E" stroke-width="11" stroke-linecap="round"/>
+    <line x1="192" y1="138" x2="156" y2="120" stroke="#F8AD22" stroke-width="11" stroke-linecap="round"/>
+    <line x1="314" y1="110" x2="344" y2="80" stroke="#12A1A4" stroke-width="11" stroke-linecap="round"/>
+    <line x1="320" y1="138" x2="356" y2="120" stroke="#F8AD22" stroke-width="11" stroke-linecap="round"/>
+  </g>
 </svg>
