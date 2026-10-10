@@ -1,0 +1,353 @@
+Sistema de lecciones EstudioSimple
+
+Estructura global y cinco módulos para séptimo básico
+
+Versión 1.0 para implementación controlada · 2026-10-09 09:47 [America/Santiago]
+
+Destinatarios: Walter, Antigravity y ChatGPT Work. El objetivo es producir lecciones completas, coherentes y revisables sin reescribir contenido correcto en cada corrección. Este documento define el sistema antes del piloto de Ciencias y fija el criterio de cierre acordado: cero problemas críticos o mayores y hasta tres problemas menores documentados por lección.
+
+Alcance y orden
+
+Primero se implementa la estructura global; luego se conectan los cinco módulos disciplinares; después se aplica el conjunto a Ciencias OA01 clase 1; finalmente se corrigen los incumplimientos de una lista consolidada y Walter decide la aprobación. El diseño de esta especificación no autoriza cambiar lecciones existentes, producir PPTX ni publicar contenido.
+
+Base documental y límites de verificación
+
+Se utilizaron el informe de Fase 0, MANUAL MAESTRO.zip, .agents.zip, LECCIONES.zip, TEMARIOS EELL.zip y scripts.zip entregados el 9 de octubre. Los perfiles, reglas, manifiestos y dependencias de los generadores se contrastaron para definir el sistema. Los informes históricos que declaran 100 % de conformidad no sustituyen una comprobación actual.
+
+No se recibieron INSUMOS, los cinco planes generales de PLANES MAESTROS PRESENTACIONES, AGENTS.md de la raíz ni los módulos importados de Web Studio Simple/src. Su ausencia no impide diseñar el sistema, pero impide certificar aquí la alineación curricular completa, ejecutar los generadores y comprobar la igualdad DOCX–TXT–TS. Esos controles quedan PENDIENTES DE FUENTE, sin inventar conformidad.
+
+Entregables de implementación
+
+Un catálogo único de reglas; cinco perfiles disciplinares generales; anexos por OA para restricciones particulares; un esquema de fuente estructurada; validadores con evidencias; una matriz entre etapas pedagógicas y plataforma; y un protocolo de corrección con protección del contenido. Se reutilizan las skills existentes, evitando crear otra cadena paralela de instrucciones.
+
+1 Estructura global y prioridad de reglas
+
+Autoridad y conflictos
+
+Las instrucciones expresas de Walter gobiernan alcance y aprobación. Las fuentes curriculares verificadas determinan OA y contenido disciplinar. El Manual Maestro gobierna la experiencia pedagógica y familiar. El catálogo común gobierna el proceso; el perfil 7° fija parámetros del nivel; cada módulo establece excepciones disciplinares explícitas; el anexo por OA limita solo ese OA. Una excepción requiere identificar la regla que modifica. La fecha de un archivo, por sí sola, no determina su autoridad.
+
+Cuando una instrucción de Walter y una fuente curricular parezcan incompatibles, registrar el conflicto con citas y conservar el contenido antes de cambiarlo. Las decisiones rutinarias dentro del alcance se resuelven sin consultas; las decisiones que cambian objetivo, cobertura o material aprobado se presentan con la alternativa concreta y su impacto.
+
+ID
+
+Resolución operativa
+
+DEC-01
+
+Datos estructurados = fuente de generación. DOCX aprobado = documento oficial de consumo. Se aprueba una versión identificada por hashes; DOCX, TXT y TS no se editan por separado.
+
+DEC-02
+
+Para nuevos paquetes se conserva el perfil recibido: 6 clases por OA y 7 láminas de gancho + 7 de explicación. No convertir a 17 láminas ni modificar Matemática OA01 aprobada.
+
+DEC-03
+
+Subtítulos: 48 pt en Lenguaje, Inglés, Ciencias e Historia; excepción explícita de 36 pt en Matemática. Títulos: 64 pt. Límites de texto visible se validan; no limitar la locución por conteo.
+
+DEC-04
+
+Retirar de la regla universal UNI-007 la progresión de cálculo mental y algoritmos. Mantener seis clases y funciones pedagógicas comunes; cada asignatura define su contenido.
+
+DEC-05
+
+El adulto conserva su papel de guía según el Manual. La autonomía del estudiante aumenta sin eliminar guiones privados, apoyos ni coordinación familiar.
+
+DEC-06
+
+Explicación E6 modela caso1 completo y E7 sintetiza y conduce a práctica. No exigir un nuevo desafío ni cuatro alternativas en preguntas abiertas.
+
+DEC-07
+
+60 s y 90 s son metas de producción. No declarar duración real validada sin audio. No abrir una ronda pedagógica por una diferencia menor de distribución; cualquier cambio de duración solicitada se decide en producción.
+
+Separar reglas generales y anexos
+
+Mover sin pérdida las restricciones particulares de porcentajes OA04, sexualidad OA01 y Neolítico OA02 a anexos claramente identificados. No extenderlas a otros OA. Conservar sus identificadores y procedencia para que el auditor active solo las reglas aplicables al paquete.
+
+2 Fuente única y planificación curricular
+
+Contrato de la fuente estructurada
+
+Cada OA tendrá código de curso, asignatura, OA literal, fuente con página/sección, versión, seis clases y estado. Cada clase contendrá objetivo observable, prerrequisitos, evidencia de logro, guion adulto, contenido estudiante, ocho funciones pedagógicas, dos guiones audiovisuales, casos, práctica, miniquiz, recuperación y cierre. Cada campo y recurso tendrá un ID estable; las referencias se realizan por ID, no copiando manualmente el mismo ejercicio.
+
+Cada caso registra contexto, datos y unidades o texto estímulo, pregunta, razonamiento esperado, respuesta y retroalimentación. caso1 se reutiliza en explicación E6, primera práctica y comprobación inmediata. caso2 se reutiliza en práctica y comprobación; no se certifica como modelado en video si no aparece allí. En tareas abiertas, respuesta esperada es una rúbrica de respuestas válidas, no una única frase obligatoria.
+
+Procedencia curricular
+
+Registrar nombre real, edición y página del documento consultado, OA literal y fragmento que justifica la selección. El temario EELL determina el alcance de preparación del examen; Bases y programas aportan OA y habilidades; textos y guías apoyan enseñanza. Distinguir fuente oficial de material interno, resumen adaptado y actividad creada por EstudioSimple. Un manifiesto que llama “oficial” a un PDF no acredita su procedencia.
+
+Plan del OA antes de redactar
+
+Definir seis subobjetivos con progresión y cobertura, evitando repetir la misma clase con títulos distintos. Para cada subobjetivo fijar lo que el estudiante podrá hacer y qué producto lo demostrará. Registrar qué habilidad se modela, qué se practica y qué evalúa cada ítem. No agregar conceptos solo para llenar seis clases; distribuir comprensión, aplicación, profundización y síntesis según el módulo.
+
+Generación y sincronización
+
+Validar la fuente antes de exportar. Generar DOCX, TXT, TS y manifest en una carpeta temporal de la misma unidad. Releer los artefactos y comparar campos pedagógicos por ID: objetivos, textos, casos, claves, retroalimentaciones y notas. Las diferencias de estilo DOCX o saltos de línea se normalizan únicamente según una lista documentada; nunca se normalizan cifras, negaciones, claves o contenido.
+
+Promover el conjunto completo solo después de pasar la validación; conservar respaldo o checkpoint y restaurar el conjunto anterior si falla cualquier escritura. No dejar una mezcla de versiones. Recalcular hashes del conjunto, registrar fecha America/Santiago y sustituir archivos obsoletos únicamente tras éxito. No borrar material aprobado para implementar el sistema.
+
+Estados
+
+BORRADOR → EN_REVISION / WORK_PRE_APROBACION → APROBADA por Walter → producción. El informe de auditoría tiene estado propio: CONFORME, CONFORME CON MENORES, NO CONFORME o PENDIENTE DE FUENTE. Un build exitoso no aprueba contenido; cero errores de regex tampoco. Una modificación pedagógica de un paquete aprobado requiere nueva revisión, sin borrar la aprobación histórica.
+
+3 Clase completa y producción audiovisual
+
+Función pedagógica
+
+Evidencia mínima
+
+1 Conexión
+
+Objetivo comprensible, prerrequisito y situación inicial pertinente.
+
+2 Explicación y modelamiento
+
+Concepto explicado y caso resuelto con razonamiento visible.
+
+3 Práctica guiada
+
+Instrucción, respuesta esperada y preguntas del adulto sin entregar la solución de entrada.
+
+4 Práctica autónoma
+
+Tarea realizable en cuaderno o plataforma que permite observar el objetivo.
+
+5 Retroalimentación y nuevo intento
+
+Explicación del error y tres apoyos graduados cuando se requiere recuperación.
+
+6 Transferencia
+
+Aplicación a una situación nueva dentro de lo enseñado, identificada como transferencia.
+
+7 Comprobación final
+
+Miniquiz de tres ítems y recuperación si obtiene menos de dos aciertos.
+
+8 Cierre
+
+Síntesis, reflexión breve y reconocimiento del proceso de aprendizaje.
+
+Estas funciones no obligan a renumerar la interfaz existente. Antigravity elaborará una matriz función → paso y campo real → evidencia. Un paso puede reunir varias funciones; una función puede distribuirse en varios pasos. Falta de equivalencia de nombres no es un error. Falta de evidencia de una función sí requiere corrección.
+
+Guion familiar y cuaderno
+
+El adulto recibe qué decir, qué preguntar, qué observar, respuesta esperada y qué hacer ante una dificultad. El estudiante recibe instrucciones y estímulos, sin claves privadas antes de responder. Especificar cuándo se revela la solución. Las actividades de cuaderno incluyen tarea, material accesible y criterio de revisión. No producir cuadernillo separado.
+
+Dos bloques audiovisuales
+
+Gancho G1–G7: apertura contextual; situación concreta; información relevante; tensión o pregunta; observación; conexión con el problema; transición sin impartir toda la clase. Explicación E1–E7: objetivo de la lección; concepto; representación; razonamiento; error típico; caso1 modelado completo; síntesis y pase a práctica. La función exacta de E2–E5 se adapta a la disciplina, sin imponer una fórmula matemática.
+
+Cada lámina registra ID, propósito, título, subtítulo, arte sin texto, especificación de capa editable y speakerNotes. Dos protagonistas de 13 años, joven con trenzas y joven con chaqueta cerceta, con continuidad visual. Imagen 16:9. Todo texto, cifra, gráfico exacto, esquema científico y logo se incorpora como capa controlada. No pedir a la IA dibujar ejes, curvas oficiales, ecuaciones ni textos.
+
+Títulos de hasta seis palabras y subtítulos de hasta ocho según el criterio vigente recibido. La tokenización se fija en el catálogo: palabras separadas por espacios, ignorando signos aislados. No cortar una frase hasta volverla incomprensible. Objetivo completo en la fuente y versión breve fiel en pantalla. Colores planos con contraste, sin cortina negra, sombras, bordes ni saturación; revisar a tamaño del reproductor. El arte reserva espacio para el logo oficial blanco inferior derecho.
+
+Antigravity produce fuente, DOCX, TXT, TS y manifest; Work revisa y, tras aprobación de Walter, produce PPTX; Google Vids sintetiza y valida audio y subtítulos; carga y publicación siguen la autorización correspondiente. Una imagen o PPTX ausente se registra como no inspeccionado; no se certifica su calidad visual desde un prompt.
+
+4 Módulo de Matemática
+
+Enseñanza y modelamiento
+
+Adaptar representaciones concretas, pictóricas y simbólicas al objeto matemático. Conectar lo que significa cada representación; no usar ilustraciones decorativas como prueba de comprensión. En problemas, explicitar datos y pregunta, plan, ejecución y comprobación de sentido. No exigir los cuatro pasos de Pólya como guion artificial en cada definición breve.
+
+Secuencia de seis clases
+
+1 significado y situación; 2 representaciones y relaciones; 3 estrategias justificadas; 4 resolución y comparación de procedimientos; 5 aplicación y transferencia; 6 integración y evaluación. El anexo del OA define subobjetivos concretos. Matemática OA01 aprobada queda preservada; OA04 conserva sus exclusiones particulares sin convertirlas en normas de todos los OA.
+
+Práctica y evaluación
+
+Modelar un ejemplo completo, guiar un caso del mismo tipo y pasar a resolución autónoma con variación autorizada. Pedir desarrollo y unidades cuando correspondan. Evaluar significado y procedimiento, no solo selección de un resultado. Cuatro alternativas en selección múltiple; distractores basados en errores reales de signos, unidad, operación, valor posicional o interpretación.
+
+Controles disciplinares
+
+MAT-01: recalcular cada resultado y sustitución desde los datos originales; mostrar evidencia de cálculo. MAT-02: cotejar símbolos, escala, dirección, intervalos y unidades de gráficos y rectas. MAT-03: comparar paso a paso desarrollo y clave, incluyendo casos límite relevantes. MAT-04: comprobar que una regla general no sea una simplificación falsa. MAT-05: verificar contexto y condiciones de aplicación con la fuente adecuada si son necesarios para el aprendizaje.
+
+En OA04, p % significa p dividido por 100; no usar concatenación “0,p” como regla. Mantener descuentos simples y exclusiones del anexo vigente. No cambiar números correctos para facilitar una corrección de título. Fórmulas, rectas y tablas son editables; subtítulos 36 pt como excepción explícita del perfil de Matemática.
+
+Criterio de aceptación
+
+Ningún cálculo incorrecto, representación engañosa, respuesta ambigua ni procedimiento contradictorio. El ejercicio modelado se conecta con caso1 y la comprobación. Un detalle tipográfico sin efecto matemático puede ser menor; un signo, exponente, unidad o escala incorrectos nunca lo son.
+
+5 Módulo de Lengua y Literatura
+
+Enseñanza y modelamiento
+
+Seleccionar texto o fragmento pertinente al OA, íntegro para la tarea y legible. Distinguir localizar información, inferir con evidencia e interpretar o evaluar con fundamento. Modelar cómo se pasa de una pista textual a una conclusión; señalar citas breves o segmentos sin inventarlos. En escritura, mostrar planificación, borrador, revisión y versión mejorada según el objetivo. En oralidad, definir propósito, audiencia y criterio observable.
+
+Secuencia de seis clases
+
+1 encuentro con el texto y propósito; 2 comprensión y elementos necesarios; 3 modelamiento de la habilidad central; 4 práctica con evidencia; 5 interpretación, producción o transferencia; 6 integración y evaluación. No convertir esta progresión en una obligación de enseñar todos los ejes en cada OA: seleccionar lo pertinente al objetivo.
+
+Práctica y evaluación
+
+La práctica inicial y comprobación emplean el mismo fragmento del ejemplo. Otro fragmento aparece como transferencia y se incluye completo. Preguntas literales, inferenciales o reflexivas según el objetivo; en respuestas abiertas, aceptar formulaciones equivalentes fundamentadas. En selección múltiple, una clave sustentada en el texto y distractores plausibles de lectura parcial o inferencia no respaldada.
+
+Controles disciplinares
+
+LYL-01: verificar integridad y atribución del texto; si es creado para la clase, declararlo. LYL-02: localizar la evidencia que sostiene cada clave. LYL-03: distinguir narrador, autor y personaje. LYL-04: no imponer una interpretación única si el texto admite varias justificadas; ajustar rúbrica o pregunta. LYL-05: verificar que ejemplos de revisión lingüística mejoren el aspecto enseñado y no alteren sin motivo el contenido.
+
+Conservar acentos, puntuación y saltos de verso relevantes al texto. Texto literario necesario puede superar el límite de ocho palabras: ese límite corresponde al subtítulo, no al estímulo. Si no cabe legiblemente en una lámina, distribuir o usar lectura en plataforma sin mutilar el fragmento. Subtítulos de 48 pt y segmentos destacados como capas controladas.
+
+Criterio de aceptación
+
+Toda respuesta debe poder justificarse con el estímulo o la rúbrica. Bloquean aprobación un fragmento ausente, una atribución inventada, una clave sin evidencia o una pregunta que requiere información no enseñada. Una preferencia por otro sinónimo no justifica reescribir el texto.
+
+6 Módulo de Inglés
+
+Enseñanza y modelamiento
+
+Definir una función comunicativa concreta y lenguaje comprensible. Enseñar vocabulario y estructuras dentro de una situación; mostrar su uso mediante diálogo o texto modelo. Seleccionar las habilidades de comprensión auditiva, lectura, expresión oral y escrita que correspondan al OA, sin forzar las cuatro en cada lección.
+
+Secuencia de seis clases
+
+1 situación y comprensión inicial; 2 vocabulario y expresiones; 3 modelamiento de la función; 4 práctica guiada con apoyo; 5 producción o transferencia; 6 integración y evaluación. El anexo por OA delimita estructuras, vocabulario y dificultad. No convertir una mención a tiempos verbales en una obligación de enseñarlos todos.
+
+Lenguas y recursos
+
+Separar instrucciones de acompañamiento en español, cuando faciliten el uso familiar, y estímulos o producciones en inglés que ejercitan el OA. Especificar idioma por campo. Conservar ambos protagonistas en las imágenes. No alternar eliminando uno de ellos. La traducción de apoyo no sustituye la tarea de comprensión en inglés ni revela de entrada la respuesta.
+
+En listening, adjuntar guion exacto, referencia al audio y momento de reproducción. Sin audio, verificar el guion y marcar pendiente la comprensión auditiva real. En speaking, describir producción esperada y criterios de inteligibilidad; no certificar pronunciación desde texto. Subtítulos 48 pt; frases modelo y vocabulario como capas editables.
+
+Práctica y evaluación
+
+Pasar de reconocer un modelo a producir con apoyos y luego a una tarea autónoma breve. La evaluación mide la función o habilidad enseñada; distractores de concordancia, auxiliares, léxico o interpretación según el foco. Evitar que una ambigüedad de contexto permita dos opciones correctas. Evaluar oralidad o escritura con rúbrica cuando la selección múltiple no recoge la habilidad.
+
+Controles disciplinares y aceptación
+
+ING-01: corrección gramatical y naturalidad del modelo. ING-02: correspondencia entre función, contexto y respuesta. ING-03: alcance léxico y dificultad consistente. ING-04: identidad guion–audio cuando el recurso existe. ING-05: separar ayuda adulta, traducción opcional y respuesta privada. Bloquean claves ambiguas, estructuras incorrectas, ausencia de un estímulo necesario o evaluación de una habilidad que no se enseñó.
+
+7 Módulo de Ciencias Naturales
+
+Enseñanza y modelamiento
+
+Partir de fenómeno, caso, modelo o datos pertinentes. Distinguir observación, explicación e inferencia. Mostrar qué evidencia permite concluir y qué no se puede concluir. La indagación no obliga a ejecutar un experimento en cada OA; puede consistir en analizar un modelo, información o datos. Emplear términos precisos y graduar su complejidad.
+
+Secuencia de seis clases
+
+1 fenómeno y concepciones previas; 2 conceptos y modelo; 3 interpretación de evidencia; 4 explicación y contraste de errores; 5 aplicación o decisiones fundamentadas; 6 integración y evaluación. Para Ciencias OA01, conservar la progresión temática existente como anexo; no reemplazarla por una secuencia genérica sin necesidad.
+
+Práctica y evaluación
+
+La práctica requiere clasificar con criterio, explicar relaciones, interpretar evidencia o justificar una decisión según el OA. Las preguntas no exigen datos ajenos al material presentado. Distractores de concepciones alternativas plausibles. En contenidos personales, utilizar casos ficticios y no solicitar revelaciones íntimas del estudiante como evidencia de logro.
+
+Controles disciplinares
+
+CIE-01: cada afirmación central se contrasta con la fuente consultada. CIE-02: diagramas con estructuras y relaciones correctas, elaborados como capas controladas. CIE-03: separar dato, modelo simplificado y organizador pedagógico. CIE-04: no diagnosticar a una persona con datos generales. CIE-05: no atribuir a MINEDUC una clasificación o pregunta creada por el equipo. CIE-06: revisar que los casos permitan la clasificación esperada sin negar otras dimensiones pertinentes.
+
+En OA01, las cuatro dimensiones se presentan como organizador didáctico de la clase, sin atribución curricular no verificada. Distinguir inicio puberal y estirón; no introducir rangos o promedios innecesarios. No pedir a la IA dibujar curvas médicas. Las reglas médicas específicas quedan en el anexo OA01 y exigen fuente verificable antes de aplicarse. Subtítulos 48 pt.
+
+Criterio de aceptación
+
+Bloquean una causalidad falsa, esquema científicamente engañoso, fuente inventada, diagnóstico individual infundado o respuesta que contradice el modelo. La coherencia no requiere igualar todos los fenómenos a un algoritmo. Una explicación más extensa no implica mejor calidad; se conserva únicamente lo necesario para lograr el objetivo.
+
+8 Módulo de Historia y Ciencias Sociales
+
+Enseñanza y modelamiento
+
+Situar el proceso en tiempo y espacio, identificar actores y analizar evidencias. Distinguir fuente primaria o secundaria, interpretación y hecho documentado. Modelar cómo se fundamenta una explicación multicausal, una relación de cambio y continuidad o una lectura geográfica. No usar procedimientos matemáticos como plantilla de explicación.
+
+Secuencia de seis clases
+
+1 contexto temporal y espacial; 2 fuentes y conceptos; 3 modelamiento del análisis; 4 comparación y explicación; 5 aplicación, ciudadanía o transferencia pertinente; 6 integración y evaluación. El anexo OA02 conserva su organización temática específica. No trasladar cronologías del Neolítico a otros objetivos.
+
+Práctica y evaluación
+
+Incluir mapa, fragmento, objeto o datos suficientes para la tarea. Pedir evidencias al explicar causas o interpretar una fuente. En preguntas abiertas, admitir argumentos alternativos fundamentados. En selección múltiple, distractores por anacronismo, confusión causal, cronológica o de fuente, sin convertir toda evaluación en memorización de fechas.
+
+Controles disciplinares
+
+HIS-01: verificar cronología y convención temporal; no mezclar “hace” con “a. C.” sin conversión correcta. HIS-02: comprobar mapas, escalas y límites correspondientes al periodo. HIS-03: sostener afirmaciones con la evidencia presentada y reconocer incertidumbre. HIS-04: evitar causalidad única injustificada y anacronismo. HIS-05: distinguir ilustración reconstruida de documento histórico. HIS-06: no convertir interpretaciones discutidas en hechos indiscutibles.
+
+Mapas, líneas de tiempo, fechas y leyendas exactas son capas controladas, no arte generado. Los dos protagonistas pueden observar o analizar la reconstrucción sin presentarse como actores históricos reales. Subtítulos 48 pt. Los fragmentos de fuente mantienen contenido suficiente y atribución comprobada.
+
+Criterio de aceptación
+
+Bloquean fechas o mapas que alteran la interpretación, citas inventadas, evidencia ausente o una clave cuya supuesta superioridad no puede fundamentarse. Una preferencia por otro ejemplo histórico correcto no genera corrección. Las afirmaciones específicas del anexo se revisan con fuentes; su presencia en una skill no demuestra que sean ciertas.
+
+9 Tolerancias y corrección delimitada
+
+Severidad
+
+Decisión
+
+Crítico
+
+Error conceptual, clave incorrecta, fuente inventada, contradicción sustantiva o fuga de respuestas privadas. Cero pendientes; bloquea.
+
+Mayor
+
+Componente obligatorio ausente, tarea irrealizable, falta de legibilidad necesaria o desincronización pedagógica. Cero pendientes; bloquea.
+
+Menor
+
+Detalle de redacción o presentación sin efecto en significado, acceso o aprendizaje. Hasta tres por clase, enumerados y aceptados.
+
+Preferencia
+
+Otra opción igualmente válida. Se conserva la opción actual; no cuenta como defecto.
+
+Pendiente de fuente
+
+Control que no puede ejecutarse por falta de evidencia. No es menor ni conformidad. Si afecta contenido esencial, impide aprobación de ese alcance.
+
+No usar un porcentaje agregado para aprobar. Tres menores no compensan un error mayor. No fragmentar un mismo problema en varios ni agrupar varios problemas independientes para eludir el límite. Defectos repetidos se reportan por ocurrencia dentro de cada clase. Con cuatro menores, corregir los mínimos necesarios en la misma lista consolidada.
+
+Registro obligatorio de cada corrección
+
+ID; severidad y regla; ruta relativa al repositorio; OA/clase/etapa/lámina/campo; texto actual literal; reemplazo literal; dependencias explícitas; campos autorizados; campos protegidos; comprobación esperada. Si no se dispone del nombre del campo fuente, localizarlo por ID o coincidencia literal y reportar la ruta real antes de editar. No inventar ubicaciones.
+
+Protección del contenido correcto
+
+Antes de editar, serializar el contenido pedagógico de referencia por campo. El conjunto autorizado incluye el campo fuente señalado y solo sus derivados directos. Comparar todos los campos fuera de ese conjunto después de generar: deben ser idénticos. Permitir exclusivamente diferencias técnicas declaradas de fecha, hash y metadatos de exportación. Un hash binario DOCX distinto no demuestra una regresión; sí la demuestra un campo pedagógico protegido distinto.
+
+Ciclo de cierre
+
+1 revisar el paquete completo con criterios congelados; 2 consolidar todos los incumplimientos en una lista; 3 corregir cada archivo en una operación planificada; 4 regenerar derivados; 5 comprobar la lista y campos protegidos; 6 registrar menores aceptados; 7 entregar a Walter. Una segunda intervención solo atiende fallos pendientes de esa lista o regresiones introducidas; no incorpora preferencias nuevas. Un error crítico nuevo se atiende y registra por su impacto.
+
+Máximo cuatro intentos técnicos consecutivos sobre el mismo fallo; luego cambiar de estrategia o restaurar. No entregar como completo si sigue fallando. Prohibidas instrucciones vagas como “mejora el contenido”, “ajusta todo” o “hazlo más coherente”. Tampoco se añade un tema nuevo para corregir una frase.
+
+10 Implementación exacta en Antigravity
+
+Copiar esta orden y adjuntar este documento. Esta ejecución implementa las dos capas; el piloto se inicia solo después de entregar y verificar esa implementación.
+
+/goal Implementa la estructura global y los cinco módulos del documento Sistema de lecciones EstudioSimple v1.0 en D:\StudioSimple - Antigravity. Ejecuta el alcance autorizado de principio a fin sin preguntas intermedias. No regeneres todavía lecciones ni PPTX y no cambies estados de aprobación.
+
+Lecturas y archivos autorizados
+
+Lee AGENTS.md si existe, MANUAL MAESTRO/Manual Maestro.docx, las reglas de .agents/skills/estudiosimple-lecciones/, perfil_7_basico.md, los cinco profiles/asignaturas/, las skills transversales y auditor_coherencia_estudiosimple con sus catálogos. Consulta scripts/build_all_7b_packages.ts y los generadores específicos solo para identificar contratos. No ejecutes scripts de base de datos, usuarios, pagos, despliegue ni sincronización remota.
+
+Edita únicamente .agents/skills/estudiosimple-lecciones/SKILL.md, sus rules/, profiles/, templates/ y validators/ y el catálogo y skill de auditor_coherencia_estudiosimple cuando sea necesario para reflejar estas reglas. Puedes crear anexos por OA dentro de la skill y scripts/validate_lesson_system.ts. Añade memoria/ y un DOCX de resultados en docs/ con fecha America/Santiago. Los cinco expertos disciplinares se conservan; corrige un conflicto suyo solo si lo enumeras con texto actual y reemplazo en el informe.
+
+Cambios obligatorios
+
+Aplica DEC-01 a DEC-07. Separa los anexos particulares de los perfiles generales. Sustituye la progresión matemática de UNI-007 por seis funciones curriculares adaptables. Declara la excepción de 36 pt para Matemática. Distingue límites de títulos/subtítulos de ausencia de conteo restrictivo de locución. Distingue preguntas abiertas de selección múltiple A-D. Documenta fuente de generación, documento aprobado y estados independientes de auditoría. Integra tolerancias y corrección delimitada.
+
+Crea catálogo con ID, alcance, severidad, evidencia y método de validación. Las reglas conceptuales no se marcan verificadas por regex. Produce la matriz de equivalencia entre ocho funciones pedagógicas y campos reales de la plataforma; consulta solo src/types/lesson.ts, src/lib/lesson-generator.ts, lesson-adapter.ts, docx-export.ts, prompt-export.ts y las lecciones 7° necesarias. No modifiques esos archivos en esta etapa.
+
+Pruebas y entrega
+
+Comprueba Git antes de editar y conserva un checkpoint local. Usa TypeScript/Node. Valida enlaces y alcance de reglas. Ejecuta el validador con casos: paquete válido; cálculo erróneo; fuente ausente; excepción Matemática 36 pt; pregunta abierta sin alternativas; tres menores; cuatro menores; campo protegido modificado. Cada caso debe producir el resultado previsto. No exigir build de toda la web si no cambias código de la web.
+
+Entrega un único DOCX con archivos cambiados, decisiones, pruebas realmente ejecutadas y limitaciones. Definition of Done: estructura global y cinco módulos conectados; cero contradicciones operativas detectadas; criterios de tolerancia implementados; protección de campos probada; lecciones y aprobaciones existentes intactas. No declarar implementado lo que solo se describe. No publicar ni hacer push en esta etapa.
+
+11 Piloto de Ciencias y cierre posterior
+
+Paquete piloto acotado
+
+Después de verificar la implementación, aplicar a 110-7-CIE-OA01 clase 1. Revisar objetivo, mediación familiar, gancho, explicación, comprobación, práctica, miniquiz, recuperación y cierre juntos. No extender automáticamente la corrección a las otras cinco clases. El manifest recibido dice APROBADA; ese texto se conserva como estado histórico y no sustituye una aprobación nueva ni permite asumir que Walter aprobó esta versión.
+
+Evidencia disponible y verificación pendiente
+
+La clase recibida contiene un objetivo explícito en E1; caso1 de higiene y descanso en E6, práctica y comprobación; caso2 de diálogo familiar en práctica y comprobación; tres preguntas de miniquiz y cierre. Estos componentes pueden reutilizarse. Su presencia no certifica calidad de implementación, privacidad de vistas ni conformidad con las fuentes curriculares ausentes.
+
+La aplicación del sistema deberá comprobar particularmente: correspondencia real del guion TXT y TS con DOCX; carácter didáctico del organizador de cuatro dimensiones; pertinencia de la profundidad hormonal para el objetivo de clase 1; plausibilidad de distractores del miniquiz; apoyos graduados de recuperación; clasificación de casos que pueden involucrar varias dimensiones; y prompts que solicitan gráficos anatómicos o métricas a la IA. No se ordena reescribirlos indiscriminadamente: cada defecto debe tener evidencia y reemplazo localizado.
+
+Orden posterior lista para ejecutar
+
+/goal Aplica el sistema validado exclusivamente a Ciencias 7° OA01 clase 1. Lee INSUMOS de 110-7 y los planes generales vigentes. Identifica las fuentes originales usadas y sus páginas; no atribuyas oficialidad desde el nombre del archivo. Revisa la clase completa y entrega a Work el DOCX, TXT, datos fuente pertinentes, resultado de validación y registro de cambios propuestos. Conserva las clases 2 a 6 y Matemática OA01. No produzcas PPTX ni publiques ni marques APROBADA.
+
+Tras recibir la lista consolidada de Work, ejecuta solo los reemplazos identificados y sus dependencias declaradas. Regenera el paquete preservando los campos protegidos de las clases no afectadas. Comprueba igualdad por campo y ausencia de regresiones. Entrega la revisión con cero críticos o mayores y hasta tres menores explícitos en la clase piloto; Walter decide aprobación. Un insumo esencial ausente queda pendiente de fuente y no se oculta como detalle menor.
+
+Cierre comprobable
+
+El sistema se considera diseñado con este documento; implementado solo con evidencia de los archivos y validadores de Antigravity; probado con el piloto solo cuando existe un paquete revisado bajo las dos capas; aprobado solo por Walter. La revisión de una clase no acredita todo el OA ni las cinco asignaturas. Después de aprobar el piloto se reutiliza el sistema y se aplica a cada asignatura su propio módulo sin reabrir el diseño común por preferencias.

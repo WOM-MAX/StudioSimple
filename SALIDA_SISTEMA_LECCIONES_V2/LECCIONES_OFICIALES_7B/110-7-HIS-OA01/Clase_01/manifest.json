@@ -1,0 +1,21 @@
+{
+  "package_id": "110-7-HIS-OA01-C01",
+  "subject": "Historia, Geografía y Ciencias Sociales",
+  "grade": "7.° Básico",
+  "oa": "OA01",
+  "oa_title": "Comprender la revolución agrícola y sus cambios en la vida humana",
+  "lesson_number": 1,
+  "total_lessons": 6,
+  "status": "EN_REVISION",
+  "generated_at": "2026-10-09 19:45 [America/Santiago]",
+  "structure": {
+    "stages_count": 8,
+    "slides_count": 14,
+    "quiz_items": 3,
+    "quiz_threshold": ">= 2/3"
+  },
+  "files": {
+    "markdown": "Guion_Pedagogico_Clase01.md",
+    "docx": "Plan_Maestro_Clase01_7B_HIS_OA01_2026-10-09_19-45.docx"
+  }
+}

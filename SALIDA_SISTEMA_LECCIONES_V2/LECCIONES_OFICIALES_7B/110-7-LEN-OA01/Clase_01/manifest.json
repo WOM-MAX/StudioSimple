@@ -1,0 +1,21 @@
+{
+  "package_id": "110-7-LEN-OA01-C01",
+  "subject": "Lengua y Literatura",
+  "grade": "7.° Básico",
+  "oa": "OA01",
+  "oa_title": "Analizar narraciones para comprenderlas en profundidad (el conflicto de la historia)",
+  "lesson_number": 1,
+  "total_lessons": 6,
+  "status": "EN_REVISION",
+  "generated_at": "2026-10-09 19:45 [America/Santiago]",
+  "structure": {
+    "stages_count": 8,
+    "slides_count": 14,
+    "quiz_items": 3,
+    "quiz_threshold": ">= 2/3"
+  },
+  "files": {
+    "markdown": "Guion_Pedagogico_Clase01.md",
+    "docx": "Plan_Maestro_Clase01_7B_LEN_OA01_2026-10-09_19-45.docx"
+  }
+}

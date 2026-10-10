@@ -1,0 +1,431 @@
+{
+  "version": "2.0.0",
+  "updated_at": "2026-10-09T17:38:00-03:00",
+  "system_version": "Sistema Global de Lecciones EstudioSimple v2.0",
+  "description": "Catálogo único y dinámico de 47 reglas normativas de coherencia pedagógica, curricular, psicométrica y técnica.",
+  "rules": [
+    {
+      "id": "UNI-001",
+      "name": "Estructura Bimodal por Lección",
+      "scope": "universal",
+      "severity": "mayor",
+      "evidence": "Dos módulos audiovisuales balanceados (Gancho y Explicación) de 7 diapositivas cada uno.",
+      "validation_method": "computable",
+      "description": "Cada lección se organiza en Video Motivacional (7 diapositivas) y Video Explicativo (7 diapositivas)."
+    },
+    {
+      "id": "UNI-002",
+      "name": "Locución Limpia y Fluida",
+      "scope": "universal",
+      "severity": "menor",
+      "evidence": "Notas al orador en prosa continua sin marcas de tiempo artificiales ni acotaciones técnicas.",
+      "validation_method": "computable",
+      "description": "Las notas al orador son verbalizables y fluidas. La locución no se limita por conteo arbitrario de palabras; la duración real se calibra en producción."
+    },
+    {
+      "id": "UNI-003",
+      "name": "Continuidad del Dúo Co-protagónico",
+      "scope": "universal",
+      "severity": "mayor",
+      "evidence": "Presencia visible de la joven con trenzas y el joven con chaqueta cerceta con edad adaptada al nivel.",
+      "validation_method": "computable",
+      "description": "Los dos protagonistas colaboran activamente en todas las láminas de la lección."
+    },
+    {
+      "id": "UNI-004",
+      "name": "Blindaje Anti-Texto en Arte IA",
+      "scope": "universal",
+      "severity": "critico",
+      "evidence": "Inclusión de la cláusula 'No text drawn by AI' en el prompt de cada lámina.",
+      "validation_method": "computable",
+      "description": "La IA generativa produce exclusivamente personajes y escenografía limpia sin texto simulado."
+    },
+    {
+      "id": "UNI-005",
+      "name": "Coherencia Isomórfica Lámina 6 vs Práctica 1 (caso1)",
+      "scope": "universal",
+      "severity": "critico",
+      "evidence": "Identidad estricta en 5 dimensiones entre lámina E6 y reactivo 1 de práctica.",
+      "validation_method": "computable",
+      "description": "El caso modelado en lámina 6 coincide en contexto, datos, pregunta, procedimiento y respuesta con caso1."
+    },
+    {
+      "id": "UNI-006",
+      "name": "Evaluación Psicométrica Formal",
+      "scope": "universal",
+      "severity": "critico",
+      "evidence": "Reactivos de selección múltiple con 4 alternativas (A-D) y análisis de distractores; preguntas abiertas con rúbricas de respuestas válidas.",
+      "validation_method": "conceptual",
+      "description": "Distingue preguntas cerradas tipo MINEDUC con 4 opciones de preguntas abiertas fundamentadas en rúbricas."
+    },
+    {
+      "id": "UNI-007",
+      "name": "Progresión Curricular de 6 Clases por OA",
+      "scope": "universal",
+      "severity": "mayor",
+      "evidence": "Secuencia de exactamente 6 clases articuladas según las funciones pedagógicas del módulo disciplinar.",
+      "validation_method": "computable",
+      "description": "Cada OA despliega 6 lecciones completas adaptadas a su asignatura, sin imponer fórmulas matemáticas a otras áreas."
+    },
+    {
+      "id": "UNI-008",
+      "name": "Puente Análogo-Digital con Cuaderno Físico",
+      "scope": "universal",
+      "severity": "mayor",
+      "evidence": "Instrucciones explícitas de pausa y actividades manuales registradas en cuaderno físico.",
+      "validation_method": "computable",
+      "description": "Garantiza la ejercitación manual mediante esquemas, desarrollos y respuestas redactadas en papel."
+    },
+    {
+      "id": "UNI-009",
+      "name": "Reutilización Fiel en Comprobación Post-Video",
+      "scope": "universal",
+      "severity": "critico",
+      "evidence": "Uso exacto de caso1 y caso2 en las preguntas de comprobación post-video.",
+      "validation_method": "computable",
+      "description": "Las preguntas guiadas tras el video evalúan los casos modelados sin introducir variantes imprevistas."
+    },
+    {
+      "id": "UNI-010",
+      "name": "Cierre Teleológico con Regla de Oro",
+      "scope": "universal",
+      "severity": "mayor",
+      "evidence": "Lámina E7 sintetiza la lección con la Regla de Oro y pase directo a la práctica interactiva.",
+      "validation_method": "computable",
+      "description": "Cierre limpio sin nuevos desafíos ni preguntas abiertas no resueltas en el video."
+    },
+    {
+      "id": "UNI-011",
+      "name": "Integridad de Pasos Pedagógicos en Plataforma",
+      "scope": "universal",
+      "severity": "mayor",
+      "evidence": "Todos los campos de la clase poblados sin textos vacíos ni marcadores 'TODO' o 'lorem'.",
+      "validation_method": "computable",
+      "description": "La lección en plataforma contiene los componentes requeridos para la experiencia interactiva de las 8 etapas."
+    },
+    {
+      "id": "UNI-012",
+      "name": "Estándar Visual de Prompts (16:9 y Espacio Negativo)",
+      "scope": "universal",
+      "severity": "mayor",
+      "evidence": "Formato 16:9 widescreen, estilo Anime moderno y espacio reservado para logo oficial blanco inferior derecho.",
+      "validation_method": "computable",
+      "description": "Preserva composición limpia y espacio negativo para textos vectoriales superpuestos."
+    },
+    {
+      "id": "UNI-013",
+      "name": "Prohibición de Gráficos Oficiales Simulados por IA",
+      "scope": "universal",
+      "severity": "critico",
+      "evidence": "Curvas médicas, fórmulas complejas, rectas numéricas y letras A-D maquetadas como capas vectoriales.",
+      "validation_method": "computable",
+      "description": "No solicitar a la IA que dibuje elementos técnicos o matemáticos que requieren exactitud vectorial."
+    },
+    {
+      "id": "UNI-014",
+      "name": "Honestidad Epistemológica y Cita Canónica",
+      "scope": "universal",
+      "severity": "critico",
+      "evidence": "Respaldo en Textos Escolares MINEDUC y Bases Curriculares con mención de unidad y páginas verificables.",
+      "validation_method": "conceptual",
+      "description": "No atribuir carácter oficial a materiales creados por el equipo ni alterar la editorial del texto escolar."
+    },
+    {
+      "id": "UNI-015",
+      "name": "Compilación Unidireccional desde Fuente Estructurada",
+      "scope": "universal",
+      "severity": "critico",
+      "evidence": "DOCX, TXT y TypeScript generados sin ediciones intermedias divergentes.",
+      "validation_method": "computable",
+      "description": "Los datos estructurados son la única fuente de autoría; DOCX es el documento oficial de consumo."
+    },
+    {
+      "id": "UNI-016",
+      "name": "Control Estricto de Alcance en Correcciones",
+      "scope": "universal",
+      "severity": "mayor",
+      "evidence": "Las modificaciones atienden únicamente los ítems de la lista consolidada sin incorporar temas nuevos.",
+      "validation_method": "conceptual",
+      "description": "Los saneamientos no introducen conceptos ajenos ni reabren decisiones pedagógicas consolidadas."
+    },
+    {
+      "id": "UNI-017",
+      "name": "Trazabilidad Temporal en Nombres y Cabeceras",
+      "scope": "universal",
+      "severity": "mayor",
+      "evidence": "Fecha y hora exacta (America/Santiago) en el nombre de archivos DOCX y TXT y en sus cabeceras internas.",
+      "validation_method": "computable",
+      "description": "Formato ..._YYYY-MM-DD_HH-mm.docx asegurando trazabilidad y reemplazo de versiones obsoletas."
+    },
+    {
+      "id": "7B-001",
+      "name": "Estructura Bimodal de 14 Láminas (7° Básico)",
+      "scope": "7_basico",
+      "severity": "mayor",
+      "evidence": "Exactamente 7 láminas Gancho (G1-G7) y 7 láminas Explicación (E1-E7) en cada clase de 7°.",
+      "validation_method": "computable",
+      "description": "Formato de 14 diapositivas propio del perfil audiovisual de 7° básico."
+    },
+    {
+      "id": "7B-002",
+      "name": "Límites de Texto Visible en Láminas (7° Básico)",
+      "scope": "7_basico",
+      "severity": "menor",
+      "evidence": "Títulos <= 6 palabras (64 pt) y subtítulos <= 8 palabras (48 pt o 36 pt en Matemática).",
+      "validation_method": "computable",
+      "description": "Control de legibilidad en pantalla para evitar saturación visual cognitiva."
+    },
+    {
+      "id": "7B-003",
+      "name": "Reactivos de 4 Alternativas (A-D) en Selección Múltiple",
+      "scope": "7_basico",
+      "severity": "critico",
+      "evidence": "Exactamente 4 alternativas con distractores justificados en preguntas cerradas del nivel.",
+      "validation_method": "computable",
+      "description": "Estándar psicométrico formal para preparación de Exámenes Libres MINEDUC en 7° básico."
+    },
+    {
+      "id": "MAT-01",
+      "name": "Recálculo Aritmético y Evidencia de Procedimiento",
+      "scope": "subject_matematica",
+      "severity": "critico",
+      "evidence": "Verificación aritmética explícita de cada cálculo, simplificación y resultado desde los datos fuente.",
+      "validation_method": "computable",
+      "description": "Ningún cálculo, porcentaje o ecuación puede presentar discrepancias aritméticas."
+    },
+    {
+      "id": "MAT-02",
+      "name": "Cotejo de Símbolos, Escalas y Unidades",
+      "scope": "subject_matematica",
+      "severity": "critico",
+      "evidence": "Consistencia de unidades de medida (metros para distancia lineal) y escala en rectas numéricas y gráficos.",
+      "validation_method": "conceptual",
+      "description": "Verifica exactitud geométrica y uso correcto de signos positivos y negativos."
+    },
+    {
+      "id": "MAT-03",
+      "name": "Alineación Paso a Paso entre Desarrollo y Clave",
+      "scope": "subject_matematica",
+      "severity": "critico",
+      "evidence": "El procedimiento formal conduce sin ambigüedad a la opción declarada correcta, incluyendo casos límite.",
+      "validation_method": "conceptual",
+      "description": "El desarrollo matemático modelado debe fundamentar inequívocamente la alternativa seleccionada."
+    },
+    {
+      "id": "MAT-04",
+      "name": "Rigor en Reglas Generales y Conversiones",
+      "scope": "subject_matematica",
+      "severity": "critico",
+      "evidence": "Uso de definiciones matemáticas universales (ej. p% = p ÷ 100); prohibido usar '0,p' como regla general.",
+      "validation_method": "computable",
+      "description": "Impide simplificaciones falsas que inducen a error en casos especiales o decimales."
+    },
+    {
+      "id": "MAT-05",
+      "name": "Verificación de Condiciones y Contexto de Aplicación",
+      "scope": "subject_matematica",
+      "severity": "mayor",
+      "evidence": "Contextualización correcta de problemas (ej. D.L. 825 para operaciones comerciales afectas a IVA 19%).",
+      "validation_method": "conceptual",
+      "description": "Verifica que las condiciones de aplicación del concepto matemático se apeguen al marco real."
+    },
+    {
+      "id": "LYL-01",
+      "name": "Integridad y Atribución Textual",
+      "scope": "subject_lengua",
+      "severity": "critico",
+      "evidence": "Texto estímulo completo o fragmento íntegro con autor, título y procedencia claramente identificados.",
+      "validation_method": "conceptual",
+      "description": "Prohíbe fragmentos mutilados o citas inventadas; si el texto es creado internamente, declararlo."
+    },
+    {
+      "id": "LYL-02",
+      "name": "Evidencia Textual de Claves de Comprensión",
+      "scope": "subject_lengua",
+      "severity": "critico",
+      "evidence": "Cita directa o referencia verificable del texto que sostiene la respuesta correcta.",
+      "validation_method": "conceptual",
+      "description": "Toda pregunta de comprensión lectora debe basarse estrictamente en la evidencia del texto estímulo."
+    },
+    {
+      "id": "LYL-03",
+      "name": "Distinción Teórica entre Narrador, Autor y Personaje",
+      "scope": "subject_lengua",
+      "severity": "mayor",
+      "evidence": "Tratamiento conceptual riguroso de las voces literarias sin confundir autor con voz ficticia.",
+      "validation_method": "conceptual",
+      "description": "Asegura alfabetización literaria adecuada a las Bases Curriculares de 7° básico."
+    },
+    {
+      "id": "LYL-04",
+      "name": "Rúbricas de Interpretación Abierta Fundamentada",
+      "scope": "subject_lengua",
+      "severity": "mayor",
+      "evidence": "Aceptación de interpretaciones válidas sustentadas en el texto cuando admite varias lecturas.",
+      "validation_method": "conceptual",
+      "description": "No imponer una lectura única subjetiva en preguntas abiertas; calibrar rúbrica de criterios."
+    },
+    {
+      "id": "LYL-05",
+      "name": "Coherencia en Revisión Ortográfica y Gramatical",
+      "scope": "subject_lengua",
+      "severity": "menor",
+      "evidence": "Ejemplos de escritura que corrigen el aspecto enseñado sin deformar el contenido de la oración.",
+      "validation_method": "conceptual",
+      "description": "Asegura modelamiento limpio del proceso de corrección lingüística."
+    },
+    {
+      "id": "ING-01",
+      "name": "Corrección Gramatical y Naturalidad del Inglés",
+      "scope": "subject_ingles",
+      "severity": "critico",
+      "evidence": "Estructuras gramaticales, ortografía y expresiones en inglés estándar natural.",
+      "validation_method": "conceptual",
+      "description": "Prohíbe oraciones agramaticales o construcciones artificiosas en diálogos y modelos."
+    },
+    {
+      "id": "ING-02",
+      "name": "Correspondencia Pragmática y Funcional",
+      "scope": "subject_ingles",
+      "severity": "critico",
+      "evidence": "La respuesta responde con precisión al propósito comunicativo y al contexto de la situación.",
+      "validation_method": "conceptual",
+      "description": "Verifica adecuación de la función comunicativa enseñada."
+    },
+    {
+      "id": "ING-03",
+      "name": "Graduación Léxica Consistente",
+      "scope": "subject_ingles",
+      "severity": "mayor",
+      "evidence": "Vocabulario dentro del nivel de andamiaje de 7° básico (i + 1).",
+      "validation_method": "conceptual",
+      "description": "Mantiene accesibilidad lingüística sin sobrecargar innecesariamente al estudiante."
+    },
+    {
+      "id": "ING-04",
+      "name": "Identidad entre Guion y Audio Locutado",
+      "scope": "subject_ingles",
+      "severity": "mayor",
+      "evidence": "Correspondencia palabra por palabra entre el guion textual de listening y el audio.",
+      "validation_method": "computable",
+      "description": "Sin audio, marcar pendiente la comprensión auditiva real."
+    },
+    {
+      "id": "ING-05",
+      "name": "Delimitación entre Español Familiar e Inglés del Estudiante",
+      "scope": "subject_ingles",
+      "severity": "mayor",
+      "evidence": "Instrucciones de acompañamiento en español y textos/producciones del estudiante en inglés.",
+      "validation_method": "computable",
+      "description": "Facilita la mediación del adulto en el hogar sin diluir el ejercicio de la lengua extranjera."
+    },
+    {
+      "id": "CIE-01",
+      "name": "Contraste con Fuentes Científicas y Oficiales",
+      "scope": "subject_ciencias",
+      "severity": "critico",
+      "evidence": "Afirmaciones biológicas y físicas verificadas con el texto escolar oficial SM o fuentes médicas.",
+      "validation_method": "conceptual",
+      "description": "Prohíbe datos anatómicos o fisiológicos erróneos o mitos populares."
+    },
+    {
+      "id": "CIE-02",
+      "name": "Rigor en Esquemas Anatómicos y Modelos",
+      "scope": "subject_ciencias",
+      "severity": "critico",
+      "evidence": "Diagramas y modelos con estructuras, proporciones y conexiones exactas diseñados como capas vectoriales.",
+      "validation_method": "conceptual",
+      "description": "Impide esquemas confusos o engañosos en el desarrollo de conceptos científicos."
+    },
+    {
+      "id": "CIE-03",
+      "name": "Distinción entre Dato, Modelo y Organizador Didáctico",
+      "scope": "subject_ciencias",
+      "severity": "mayor",
+      "evidence": "Diferenciación explícita entre un hecho empírico, un modelo científico y un esquema didáctico de clase.",
+      "validation_method": "conceptual",
+      "description": "Evita presentar organizadores internos (ej. 4 dimensiones) como dogmas de las Bases Curriculares."
+    },
+    {
+      "id": "CIE-04",
+      "name": "Prohibición de Diagnósticos Personales sobre el Estudiante",
+      "scope": "subject_ciencias",
+      "severity": "critico",
+      "evidence": "No juzgar el desarrollo o normalidad médica de un estudiante a partir de curvas generales.",
+      "validation_method": "conceptual",
+      "description": "Resguarda la salud emocional y privacidad del estudiante; derivar a profesionales de la salud."
+    },
+    {
+      "id": "CIE-05",
+      "name": "Honestidad en Atribuciones Curriculares de Ciencias",
+      "scope": "subject_ciencias",
+      "severity": "mayor",
+      "evidence": "No calificar de oficiales del MINEDUC esquemas propios de EstudioSimple no presentes en las Bases.",
+      "validation_method": "conceptual",
+      "description": "Garantiza atribución precisa y honestidad en el material pedagógico."
+    },
+    {
+      "id": "CIE-06",
+      "name": "Validez Multidimensional en Casos de Estudio",
+      "scope": "subject_ciencias",
+      "severity": "mayor",
+      "evidence": "Casos que permiten la clasificación esperada sin negar arbitrariamente otras dimensiones presentes.",
+      "validation_method": "conceptual",
+      "description": "Reconoce la complejidad de situaciones que involucran dimensiones biológicas, afectivas y sociales."
+    },
+    {
+      "id": "HIS-01",
+      "name": "Rigor Cronológico y Convención de Fechas",
+      "scope": "subject_historia",
+      "severity": "critico",
+      "evidence": "Uso uniforme de convenciones temporales; no mezclar 'hace...' con 'a. C.' sin equivalencia explícita.",
+      "validation_method": "computable",
+      "description": "Prohíbe aberraciones cronológicas como 'hace 10.000 años a. C.'."
+    },
+    {
+      "id": "HIS-02",
+      "name": "Exactitud Cartográfica y Límites Históricos",
+      "scope": "subject_historia",
+      "severity": "critico",
+      "evidence": "Mapas con fronteras, toponimia y escalas geográficas correspondientes al periodo histórico estudiado.",
+      "validation_method": "conceptual",
+      "description": "Impide el uso de mapas con fronteras modernas en civilizaciones de la antigüedad."
+    },
+    {
+      "id": "HIS-03",
+      "name": "Fundamentación Basada en Evidencia y Fuentes",
+      "scope": "subject_historia",
+      "severity": "critico",
+      "evidence": "Afirmaciones respaldadas por testimonios arqueológicos o documentales, reconociendo incertidumbre.",
+      "validation_method": "conceptual",
+      "description": "Fomenta el pensamiento histórico fundamentado sin inventar certezas inexistentes."
+    },
+    {
+      "id": "HIS-04",
+      "name": "Multicausalidad y Erradicación del Anacronismo",
+      "scope": "subject_historia",
+      "severity": "mayor",
+      "evidence": "Explicaciones que articulan múltiples factores (geográficos, económicos, sociales) sin juzgar el pasado con normas actuales.",
+      "validation_method": "conceptual",
+      "description": "Supera visiones monocausales simplistas y juicios anacrónicos."
+    },
+    {
+      "id": "HIS-05",
+      "name": "Distinción entre Reconstrucción Artística y Fuente Auténtica",
+      "scope": "subject_historia",
+      "severity": "mayor",
+      "evidence": "Diferenciación clara entre una ilustración hipotética moderna y un vestigio histórico real.",
+      "validation_method": "conceptual",
+      "description": "Educa la mirada crítica del estudiante en el análisis de fuentes visuales."
+    },
+    {
+      "id": "HIS-06",
+      "name": "Pluralidad de Interpretaciones Historiográficas",
+      "scope": "subject_historia",
+      "severity": "mayor",
+      "evidence": "Presentar debates historiográficos abiertos como perspectivas de análisis y no como dogmas cerrados.",
+      "validation_method": "conceptual",
+      "description": "Reconoce la naturaleza interpretativa de las ciencias sociales."
+    }
+  ]
+}
