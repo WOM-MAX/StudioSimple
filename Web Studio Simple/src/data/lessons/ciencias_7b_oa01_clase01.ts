@@ -2,471 +2,458 @@ import { LessonData } from '../../types/lesson';
 
 export const CIENCIAS_7B_OA01_CLASE01: LessonData = {
   "metadata": {
-    "grade": "7° Básico",
+    "grade": "7° básico",
     "subject": "Ciencias Naturales",
     "oaCode": "OA 1",
-    "oaTitle": "Sexualidad y Afectividad",
+    "oaTitle": "Ciencias Naturales - OA 1",
     "lessonNumber": 1,
     "totalLessonsInOa": 6,
-    "lessonTitle": "Las 4 Dimensiones de la Sexualidad Humana",
+    "lessonTitle": "La sexualidad integra distintas dimensiones",
     "durationMinutes": 30,
-    "nextLessonTitle": "Transformaciones físicas y emocionales en la pubertad"
+    "nextLessonTitle": "Cambios físicos y emocionales durante la pubertad."
   },
   "prep": {
-    "adultObjective": "Guiar al estudiante a comprender que la sexualidad humana es una vivencia integral organizada didácticamente en cuatro dimensiones fundamentales: biológica, afectiva, social y ética, articulando los aspectos curriculares del Texto Escolar Ciencias Naturales 7° Básico MINEDUC (Edición SM, Unidad 4: Salud sexual y reproducción, Lección 8: Sexualidad y autocuidado, págs. 114 a 137, inicio temático pág. 116) con valores de respeto mutuo y responsabilidad personal, superando la visión reducida a lo reproductivo.",
-    "routeToday": "Reconocer e interrelacionar las dimensiones biológica, afectiva, social y ética en situaciones reales de la vida cotidiana.",
-    "mentorReminder": "Sigue el guion leyendo en voz alta únicamente los recuadros DILE y PREGÚNTALE. El contenido pedagógico y las respuestas esperadas te indican con total precisión qué debe responder el estudiante para que no tengas que estudiar previamente.",
+    "adultObjective": "Explicar que la sexualidad comprende más que el aspecto físico, identificando las cinco dimensiones que presenta el Texto Escolar y relacionándolas con los aspectos biológicos, afectivos y sociales señalados en el OA.",
+    "routeToday": "Observar el esquema → distinguir sus dimensiones → relacionarlas → explicar por qué se integran.",
+    "mentorReminder": "Sigue el guion leyendo en voz alta únicamente los recuadros DILE y PREGÚNTALE. Las respuestas esperadas y criterios te indican qué debe responder el estudiante.",
     "reminders": [
-      "La sexualidad humana no es solo el cuerpo biológico; involucra a la persona en su totalidad.",
-      "Lee en voz alta únicamente los textos con la etiqueta DILE o PREGÚNTALE.",
-      "Los recuadros AYUDA PEDAGÓGICA y CLIMA EMOCIONAL son información exclusiva para ti.",
-      "Valora la reflexión del estudiante antes de calificar su respuesta."
+      "Abre la página original impresa 116 antes de presentar el esquema.",
+      "Explica los términos con calma y usa los ejemplos de esta lección.",
+      "La página organiza el tema en cinco dimensiones: física, intelectual, social, emocional y espiritual.",
+      "El OA expresa su aprendizaje mediante tres aspectos integrados: biológico, afectivo y social. Son dos marcos de organización relacionados; no reemplaces las cinco etiquetas del libro por una lista distinta."
     ],
-    "emotionalTip": "Aborda la pubertad y la sexualidad con serenidad, apertura y confianza. Es una etapa natural del desarrollo y el diálogo cercano refuerza su seguridad personal."
+    "emotionalTip": "Permite que el estudiante responda usando los casos ficticios. No pidas que describa su cuerpo, identidad, relaciones, creencias ni experiencias íntimas."
   },
   "route": {
     "blocks": [
       {
         "id": "b1",
         "number": "01",
-        "title": "Ciencias Naturales",
-        "subtitle": "Las 4 Dimensiones Humanas",
-        "color": "teal"
+        "title": "Abrimos la pregunta",
+        "subtitle": "¿La sexualidad se limita a lo físico?",
+        "color": "orange"
       },
       {
         "id": "b2",
         "number": "02",
-        "title": "Exploración",
-        "subtitle": "Biológica, Afectiva, Social, Ética",
-        "color": "orange"
+        "title": "Leemos el esquema",
+        "subtitle": "Cinco dimensiones del libro",
+        "color": "teal"
       },
       {
         "id": "b3",
         "number": "03",
-        "title": "Práctica",
-        "subtitle": "Casos y Cuaderno de Ciencias",
+        "title": "Conectamos aspectos",
+        "subtitle": "Biológico, afectivo y social",
         "color": "yellow"
       },
       {
         "id": "b4",
         "number": "04",
-        "title": "Evaluación",
-        "subtitle": "Miniquiz y Síntesis Integral",
+        "title": "Explicamos con ejemplos",
+        "subtitle": "Situaciones ficticias y síntesis",
         "color": "navy"
       }
     ],
     "keyQuestions": [
       {
-        "label": "¿Qué es la sexualidad?",
-        "sub": "Una dimensión integral presente a lo largo de toda la vida."
+        "label": "Pregunta Clave 1",
+        "sub": "¿Qué dimensiones presenta el Texto Escolar?"
       },
       {
-        "label": "¿Cuáles son sus dimensiones?",
-        "sub": "Biológica, afectiva, social y ético-moral."
+        "label": "Pregunta Clave 2",
+        "sub": "¿Por qué una sola dimensión no explica toda la sexualidad?"
       }
     ],
-    "dileIntro": "Hoy comenzaremos la primera clase de Ciencias Naturales para 7° Básico: \"Las 4 Dimensiones de la Sexualidad Humana\".",
-    "dileObjective": "Comprender que la sexualidad humana abarca mucho más que la reproducción: integra nuestro cuerpo, nuestros sentimientos, nuestras relaciones con amigos y familia, y nuestros valores."
+    "dileIntro": "Hoy estudiaremos cómo se relacionan distintas dimensiones de la sexualidad. Trabajaremos con ejemplos ficticios; no es necesario contar experiencias personales.",
+    "dileObjective": "Al terminar, podrás reconocer las cinco dimensiones del esquema y explicar cómo varios aspectos pueden estar presentes en una misma experiencia."
+  },
+  "hook": {
+    "title": "La sexualidad integra distintas dimensiones",
+    "dileIntro": "Hoy estudiaremos cómo se relacionan distintas dimensiones de la sexualidad. Trabajaremos con ejemplos ficticios; no es necesario contar experiencias personales.",
+    "hazInstruction": "Pon atención a las imágenes y conceptos clave.",
+    "dileAfterVideo": "En esta historia inventada aparecen el cuerpo, las emociones, las ideas y las relaciones. ¿Crees que una sola de esas partes explica todo lo que vive el personaje?",
+    "videoSrc": "",
+    "posterSrc": "",
+    "focusPoints": [
+      "Observa el contexto general.",
+      "Identifica la situación inicial."
+    ],
+    "slides": [
+      {
+        "slideNumber": 1,
+        "tituloMomento": "Objetivo de la lección",
+        "didacticPurpose": "Objetivo de la lección",
+        "visualPrompt": "Los dos guías ante un mapa visual de cinco caminos que confluyen, sin palabras generadas dentro de la imagen.",
+        "overlayText": "Objetivo de la lección",
+        "overlayTitle": "Objetivo de la lección",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Objetivo de la lección",
+        "speakerNotes": "Hoy verás por qué la sexualidad abarca más que el aspecto físico."
+      },
+      {
+        "slideNumber": 2,
+        "tituloMomento": "Una pregunta amplia",
+        "didacticPurpose": "Una pregunta amplia",
+        "visualPrompt": "El estudiante ficticio prepara una presentación; los guías observan con curiosidad.",
+        "overlayText": "¿Es solo algo físico?",
+        "overlayTitle": "¿Es solo algo físico?",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "¿Es solo algo físico?",
+        "speakerNotes": "Una situación cotidiana puede involucrar el cuerpo, emociones, ideas y relaciones."
+      },
+      {
+        "slideNumber": 3,
+        "tituloMomento": "Diferentes pistas",
+        "didacticPurpose": "Diferentes pistas",
+        "visualPrompt": "En torno a la escena aparecen símbolos de cuerpo, pensamiento, emoción y vínculos.",
+        "overlayText": "Observa todas las pistas",
+        "overlayTitle": "Observa todas las pistas",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Observa todas las pistas",
+        "speakerNotes": "Mira cuántos aspectos aparecen en una experiencia de una persona."
+      },
+      {
+        "slideNumber": 4,
+        "tituloMomento": "El esquema del libro",
+        "didacticPurpose": "El esquema del libro",
+        "visualPrompt": "Página original del Texto Escolar como recurso aparte; los guías leen el esquema.",
+        "overlayText": "Cinco dimensiones",
+        "overlayTitle": "Cinco dimensiones",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Cinco dimensiones",
+        "speakerNotes": "El Texto Escolar organiza la sexualidad en cinco dimensiones."
+      },
+      {
+        "slideNumber": 5,
+        "tituloMomento": "Nombrar y comprender",
+        "didacticPurpose": "Nombrar y comprender",
+        "visualPrompt": "Cinco íconos claros conectados alrededor de una figura humana abstracta y respetuosa.",
+        "overlayText": "Física · intelectual · social · emocional · espiritual",
+        "overlayTitle": "Física · intelectual · social · emocional · espiritual",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Física · intelectual · social · emocional · espiritual",
+        "speakerNotes": "Cada dimensión aporta una perspectiva; juntas ayudan a comprender a la persona."
+      },
+      {
+        "slideNumber": 6,
+        "tituloMomento": "Aspectos que se integran",
+        "didacticPurpose": "Aspectos que se integran",
+        "visualPrompt": "Tres bandas translúcidas se cruzan; los cinco íconos del libro permanecen visibles como otro esquema.",
+        "overlayText": "Biológicos · afectivos · sociales",
+        "overlayTitle": "Biológicos · afectivos · sociales",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Biológicos · afectivos · sociales",
+        "speakerNotes": "El OA destaca aspectos biológicos, afectivos y sociales que se integran."
+      },
+      {
+        "slideNumber": 7,
+        "tituloMomento": "Pregunta gancho",
+        "didacticPurpose": "Pregunta gancho",
+        "visualPrompt": "Los guías observan un esquema al que le falta una parte; escena conceptual sobria.",
+        "overlayText": "¿Qué perderíamos al mirar una sola dimensión?",
+        "overlayTitle": "¿Qué perderíamos al mirar una sola dimensión?",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "¿Qué perderíamos al mirar una sola dimensión?",
+        "speakerNotes": "Descubramos cómo explicar una visión integral con evidencia."
+      }
+    ]
   },
   "situation": {
-    "dilePrompt": "Hoy en Ciencias Naturales investigamos la sexualidad humana como una dimensión integral de la persona. En pantalla puedes ver el modelo de 4 dimensiones. Observa la primera dimensión destacada: la Dimensión Biológica. ¿Qué cambios físicos concretos ocurren en el cuerpo humano durante la pubertad?",
-    "expectedAnswer": "Mencionar al menos dos cambios físicos propios de la pubertad (por ejemplo: aumento de estatura, cambio de voz, aparición de vello corporal o desarrollo de caracteres sexuales).",
-    "socraticHint": "Piensa en las transformaciones corporales que ocurren al pasar de la niñez a la adolescencia: ¿qué cambia en la estatura, la voz o el cuerpo?",
-    "emotionalTip": "Conversa sobre los cambios físicos con naturalidad y calma, recordándole que cada cuerpo se desarrolla a su propio ritmo sin comparaciones.",
+    "dilePrompt": "En esta historia inventada aparecen el cuerpo, las emociones, las ideas y las relaciones. ¿Crees que una sola de esas partes explica todo lo que vive el personaje?",
+    "expectedAnswer": "Puede señalar que no; se aceptan explicaciones propias.",
+    "socraticHint": "¿Qué elementos aparecen además del cuerpo?",
+    "emotionalTip": "Permite que el estudiante responda usando los casos ficticios. No pidas que describa su cuerpo, identidad, relaciones, creencias ni experiencias íntimas.",
     "options": [
       {
-        "label": "Mencionó cambios corporales concretos (crecimiento, voz, vello o desarrollo físico)",
+        "label": "Identificó los elementos centrales y fundamentó con el contexto",
         "kind": "correct",
-        "feedbackText": "¡Exacto! Esos son cambios biológicos y anatómicos concretos característicos de la pubertad."
+        "feedbackText": "¡Muy bien! Notaste las pistas clave del escenario inicial."
       },
       {
-        "label": "Solo mencionó sentimientos, emociones o amigos (dimensiones afectiva o social)",
+        "label": "Mencionó detalles parciales sin conectar con la idea principal",
         "kind": "needs_support",
-        "feedbackText": "Las emociones y las amistades son fundamentales, pero corresponden a lo afectivo y social. Fíjate en los cambios físicos y anatómicos del cuerpo."
+        "feedbackText": "Observa nuevamente y busca qué condición o suceso da inicio a la situación."
       },
       {
-        "label": "No sabe, siente timidez o dio otra respuesta",
+        "label": "No sabe qué responder o requiere apoyo inicial",
         "kind": "no_answer",
-        "feedbackText": "Pista guiada: Fíjate en la pantalla bajo Dimensión Biológica: menciona el crecimiento acelerado, el cambio de tono en la voz o la aparición de vello corporal."
+        "feedbackText": "Leamos juntos el punto de partida y observemos los detalles destacados."
       }
     ]
   },
   "reference": {
-    "dilePrompt": "En la pantalla interactiva se muestran las cuatro dimensiones de la sexualidad humana: Biológica, Afectiva, Social y Ética.",
-    "question": "¿Qué cambios físicos específicos observas o reconoces en la dimensión biológica de la pubertad?",
-    "expectedAnswer": "Mencionar cambios corporales concretos como crecimiento de estatura, cambio de tono en la voz, vello corporal o maduración de órganos reproductores.",
-    "socraticHint": "Observa la tarjeta verde en la pantalla del estudiante: describe las manifestaciones corporales de la dimensión biológica.",
-    "feedbackSuccess": "¡Excelente observación! Reconociste las transformaciones físicas que caracterizan la dimensión biológica.",
-    "feedbackSupport": "Observa la tarjeta verde en la pantalla: lee las manifestaciones corporales que se producen en la pubertad."
-  },
-  "hook": {
-    "title": "La persona en su totalidad: Las 4 dimensiones",
-    "dileIntro": "Vamos a ver cómo la ciencia moderna comprende la sexualidad. No se reduce solo a la biología o la anatomía: involucra a la persona completa a través de cuatro dimensiones inseparables.",
-    "hazInstruction": "Observa atentamente el esquema de los 4 cuadrantes e identifica qué aspectos de nuestra vida cotidiana abarca cada uno.",
-    "videoSrc": "",
-    "focusPoints": [
-      "Dimensión Biológica: anatomía, pubertad y caracteres sexuales.",
-      "Dimensión Afectiva: sentimientos, emociones, autoestima y cariño.",
-      "Dimensión Social: convivencia familiar, amistades y cultura.",
-      "Dimensión Ética: valores, respeto, cuidado mutuo y consentimiento."
-    ],
-    "dileAfterVideo": "Conversemos sobre lo observado. Te haré dos preguntas para comprobar cómo se interrelacionan estas 4 dimensiones.",
-    "slides": [
-      {
-        "slideNumber": 1,
-        "tituloMomento": "Apertura e Impacto",
-        "didacticPurpose": "Apertura e Impacto",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining a glowing interactive holographic infographic of the 4 dimensions of human sexuality in a warm scientific atmosphere, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Misión 1: Las 4 Dimensiones Humanas",
-        "overlayTitle": "Misión 1: La sexualidad humana",
-        "overlaySubtitle": "Mucho más que un fenómeno biológico",
-        "vectorialOverlayPptx": "Esquema integrador: Silueta humana y 4 nodos dimensionales interconectados",
-        "mathOverlayPptx": "Esquema integrador: Silueta humana y 4 nodos dimensionales interconectados",
-        "speakerNotes": "Comienza una expedición fascinante en ciencias. La sexualidad humana es una vivencia integral presente en todas las etapas de nuestra vida.",
-        "palabrasAprox": 21,
-        "duracionSeg": 10
-      },
-      {
-        "slideNumber": 2,
-        "tituloMomento": "Dimensión Biológica",
-        "didacticPurpose": "Dimensión Biológica",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing a clean anatomical growth chart showing developmental milestones of puberty and height markers with clinical clarity, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Dimensión Biológica: El Cuerpo",
-        "overlayTitle": "Dimensión biológica",
-        "overlaySubtitle": "El cuerpo físico y los cambios puberales",
-        "vectorialOverlayPptx": "Capa médica: Eje de maduración corporal, estirón y caracteres sexuales secundarios",
-        "mathOverlayPptx": "Capa médica: Eje de maduración corporal, estirón y caracteres sexuales secundarios",
-        "speakerNotes": "Comprende nuestro cuerpo material, la maduración celular y los cambios puberales que transforman nuestra estatura, voz y fisonomía.",
-        "palabrasAprox": 18,
-        "duracionSeg": 8
-      },
-      {
-        "slideNumber": 3,
-        "tituloMomento": "Dimensión Afectiva",
-        "didacticPurpose": "Dimensión Afectiva",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, sharing a sincere laugh in a sunlit school courtyard, with softly illuminated icons of heart and brain symbolizing emotional connection, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Dimensión Afectiva: Emociones",
-        "overlayTitle": "Dimensión afectiva",
-        "overlaySubtitle": "Emociones, cariño y autoestima",
-        "vectorialOverlayPptx": "Iconografía emocional: Vínculos de apego, empatía y autoimagen positiva",
-        "mathOverlayPptx": "Iconografía emocional: Vínculos de apego, empatía y autoimagen positiva",
-        "speakerNotes": "Reúne nuestros sentimientos, la autoestima personal, el cariño y la capacidad de establecer lazos de ternura y confianza profunda con otros.",
-        "palabrasAprox": 21,
-        "duracionSeg": 10
-      },
-      {
-        "slideNumber": 4,
-        "tituloMomento": "Dimensión Social",
-        "didacticPurpose": "Dimensión Social",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, collaborating respectfully with a diverse group of young students and families in a bright park, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Dimensión Social: Relaciones",
-        "overlayTitle": "Dimensión social",
-        "overlaySubtitle": "Familia, amistades y cultura",
-        "vectorialOverlayPptx": "Red de interacción: Individuo en el centro rodeado por familia, escuela y comunidad",
-        "mathOverlayPptx": "Red de interacción: Individuo en el centro rodeado por familia, escuela y comunidad",
-        "speakerNotes": "Se manifiesta en cómo convivimos día a día, compartiendo experiencias con la familia, en la escuela y dialogando con amigos.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
-      },
-      {
-        "slideNumber": 5,
-        "tituloMomento": "Dimensión Ética",
-        "didacticPurpose": "Dimensión Ética",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, observing a balanced scale illustration with glowing representations of respect, personal limits, consent, and mutual dignity, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Dimensión Ética: Valores y Respeto",
-        "overlayTitle": "Dimensión ética",
-        "overlaySubtitle": "Valores, consentimiento y dignidad",
-        "vectorialOverlayPptx": "Símbolos normativos: Escudo de límites personales y balanza de respeto mutuo",
-        "mathOverlayPptx": "Símbolos normativos: Escudo de límites personales y balanza de respeto mutuo",
-        "speakerNotes": "Guía nuestras decisiones morales a través del respeto incondicional a la dignidad humana, límites personales y el consentimiento mutuo.",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
-      },
-      {
-        "slideNumber": 6,
-        "tituloMomento": "Interrelación de Dimensiones",
-        "didacticPurpose": "Interrelación de Dimensiones",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, observing the four dimensions connecting dynamically with glowing energetic nodes around a human silhouette, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Un Sistema Integral e Inseparable",
-        "overlayTitle": "Un sistema inseparable",
-        "overlaySubtitle": "Cuatro dimensiones que dialogan a la vez",
-        "vectorialOverlayPptx": "Diagrama dinámico de 4 cuadrantes con flechas de retroalimentación recíproca",
-        "mathOverlayPptx": "Diagrama dinámico de 4 cuadrantes con flechas de retroalimentación recíproca",
-        "speakerNotes": "Ninguna dimensión funciona aislada. Lo que experimenta nuestro cuerpo repercute en nuestras emociones y moldea nuestras relaciones comunitarias.",
-        "palabrasAprox": 18,
-        "duracionSeg": 8
-      },
-      {
-        "slideNumber": 7,
-        "tituloMomento": "Pregunta Detonante",
-        "didacticPurpose": "Pregunta Detonante",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, smiling ready to investigate everyday cases with their science notebooks open in an organized study room, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "StudioSimple · Ciencias Naturales",
-        "overlayTitle": "El desafío científico",
-        "overlaySubtitle": "¿Cómo actúan las 4 dimensiones juntas?",
-        "vectorialOverlayPptx": "Pregunta detonante: ¿Cómo influyen los 4 aspectos en una decisión cotidiana real?",
-        "mathOverlayPptx": "Pregunta detonante: ¿Cómo influyen los 4 aspectos en una decisión cotidiana real?",
-        "speakerNotes": "Ahora surge la gran pregunta: al enfrentar un cambio en nuestra adolescencia, ¿cómo interactúan estas cuatro dimensiones al mismo tiempo?",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
-      }
-    ]
+    "dilePrompt": "Revisemos el punto de partida para encontrar evidencia.",
+    "question": "¿Qué información o evidencia entrega el punto de partida?",
+    "expectedAnswer": "Respuesta guiada por el texto o fuente.",
+    "socraticHint": "Localiza las palabras clave en la página.",
+    "feedbackSuccess": "Las encontraste todas en el esquema.",
+    "feedbackSupport": "Ya tenemos algunas. Lee las etiquetas alrededor de ‘Sexualidad humana’ y completa las que faltan."
   },
   "preQuestions": [
     {
-      "context": "Dimensión Afectiva y Vínculos",
-      "question": "En la segunda dimensión, ¿qué elementos componen la dimensión afectiva de la sexualidad humana?",
-      "expected": "Las emociones, los sentimientos, el cariño, la autoestima y la capacidad de amar y establecer vínculos afectivos.",
-      "success": "¡Muy bien! La dimensión afectiva reúne cómo sentimos, cómo expresamos cariño y cómo cuidamos nuestra autoestima.",
-      "support": "Piensa en lo que pasa en nuestro corazón y mente: cuando sentimos alegría por un amigo, afecto por la familia o aprendemos a querernos a nosotros mismos. ¿Qué integra esta dimensión?",
-      "reveal": "La dimensión afectiva integra las emociones, los sentimientos, el cariño y la capacidad de formar lazos profundos con los demás.",
-      "studentReveal": "Las emociones, sentimientos, el amor, el cariño y los vínculos afectivos."
+      "context": "Página impresa 116.",
+      "question": "¿Qué cinco dimensiones nombra el libro?",
+      "expected": "Física, intelectual, social, emocional y espiritual.",
+      "success": "Nombra las cinco con apoyo visual disponible.",
+      "support": "Recorre las etiquetas alrededor del concepto central.",
+      "reveal": "La página nombra esas cinco dimensiones; no sustituirlas por los tres aspectos que enuncia el OA.",
+      "studentReveal": "El libro presenta las dimensiones física, intelectual, social, emocional y espiritual."
     },
     {
-      "context": "Dimensiones Social y Ética",
-      "question": "¿Por qué decimos que la sexualidad humana también tiene una dimensión social y una dimensión ética?",
-      "expected": "Porque nos relacionamos con la familia y la sociedad (social), y debemos actuar con valores, respeto mutuo, responsabilidad y consentimiento (ética).",
-      "success": "¡Exacto! Somos seres sociales que convivimos con otros, y la ética nos enseña a respetar la dignidad y los límites de cada persona.",
-      "support": "Separa las dos palabras: \"social\" tiene que ver con vivir en sociedad y convivir; \"ética\" tiene que ver con valores, normas y tomar decisiones correctas con respeto. ¿Cómo se aplican?",
-      "reveal": "La dimensión social abarca cómo convivimos en sociedad y familia, mientras que la ética guía nuestras decisiones con valores de respeto, dignidad y cuidado.",
-      "studentReveal": "Porque convivimos en sociedad (social) y debemos tratarnos con respeto, valores y responsabilidad (ética)."
+      "context": "Caso ficticio del personaje que prepara una presentación y conversa con alguien de confianza.",
+      "question": "¿Qué dimensiones aparecen cuando siente nervios, piensa qué decir y conversa con una persona cercana?",
+      "expected": "Emocional (nervios), intelectual (pensar qué decir) y social (interacción con otra persona). Puede haber más de una dimensión relacionada con un mismo hecho si lo explica.",
+      "success": "Señala dos dimensiones y vincula cada una con una pista.",
+      "support": "¿Qué siente? ¿Qué piensa? ¿Con quién interactúa?",
+      "reveal": "La clasificación depende de la pista: nervios corresponde a lo emocional, pensar a lo intelectual y conversar con alguien a lo social.",
+      "studentReveal": "Aparecen las dimensiones emocional, intelectual y social: siente nervios, organiza sus ideas y conversa con otra persona."
+    },
+    {
+      "context": "Objetivo oficial y esquema del libro.",
+      "question": "¿Por qué el libro ofrece una visión más completa que decir que la sexualidad es solo física?",
+      "expected": "Porque considera varias dimensiones de la persona, como emociones, ideas, relaciones y valores, además del cuerpo. Debe aceptarse una explicación equivalente.",
+      "success": "Explica que el fenómeno es multidimensional y ofrece un ejemplo.",
+      "support": "¿Qué elementos del esquema quedarían fuera si miráramos solo el cuerpo?",
+      "reveal": "La respuesta debe mostrar que el enfoque físico no abarca las otras dimensiones; aceptar formulaciones equivalentes basadas en el esquema.",
+      "studentReveal": "Dejaríamos fuera dimensiones como la emocional, social e intelectual, por eso el enfoque físico por sí solo es incompleto."
     }
   ],
-  "conversationContext": "Revisaremos cómo las cuatro dimensiones de la sexualidad interactúan permanentemente en la vida cotidiana de las personas.",
+  "conversationContext": "Diálogo guiado para profundizar en los elementos clave.",
   "formalization": {
-    "title": "Modelo Integral de la Sexualidad Humana",
-    "concept": "La sexualidad como dimensión integral",
-    "summary": "La sexualidad humana es una experiencia integral que comprende cuatro dimensiones inseparables: la biológica (el cuerpo), la afectiva (las emociones), la social (las relaciones) y la ética (los valores y el respeto mutuo). Ninguna dimensión opera aislada de las demás.",
-    "ideaClave": "La sexualidad humana es integral: une nuestro cuerpo biológico, nuestras emociones, nuestra convivencia social y nuestros valores éticos.",
-    "dileIntro": "Ahora formalizaremos la idea central que debes recordar para siempre sobre la sexualidad en Ciencias Naturales.",
-    "hazInstruction": "Lee con atención la idea clave en pantalla y fíjate en cómo las cuatro dimensiones se conectan entre sí.",
+    "title": "La sexualidad es un componente esencial de cada ser humano. El texto escolar la explica mediante cinco dimensiones relacionadas: física, intelectual, social, emocional y espiritual.",
+    "concept": "La sexualidad es un componente esencial de cada ser humano. El texto escolar la explica mediante cinco dimensiones relacionadas: física, intelectual, social, emocional y espiritual.",
+    "summary": "Las dimensiones ayudan a mirar diferentes aspectos de una persona. En experiencias reales se relacionan; no siempre aparece una sola dimensión aislada.",
+    "ideaClave": "Las dimensiones ayudan a mirar diferentes aspectos de una persona. En experiencias reales se relacionan; no siempre aparece una sola dimensión aislada.",
+    "dileIntro": "Completa: una visión integral incluye ___, ___ y ___, además de considerar otras dimensiones del esquema.",
+    "hazInstruction": "Clasifica el caso ficticio: “Una persona se siente nerviosa, conversa con una amiga y piensa qué decisión coincide con sus valores.”",
+    "graphicPoster": "",
     "videoSrc": "",
     "slides": [
       {
-        "slideNumber": 1,
-        "tituloMomento": "Objetivo de la Lección",
-        "didacticPurpose": "Objetivo de la Lección",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing before a clear 4-quadrant lightboard representing biological, affective, social, and ethical dimensions, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Modelo Integral de la Sexualidad",
-        "overlayTitle": "Objetivo de la lección",
-        "overlaySubtitle": "Comprender la sexualidad como dimensión integral",
-        "vectorialOverlayPptx": "Rótulo formal: OA 01 · Modelo Integral de la Sexualidad Humana",
-        "mathOverlayPptx": "Rótulo formal: OA 01 · Modelo Integral de la Sexualidad Humana",
-        "speakerNotes": "El objetivo de la lección es reconocer y explicar que la sexualidad humana está conformada por cuatro dimensiones inseparables: biológica, afectiva, social y ética.",
-        "palabrasAprox": 24,
-        "duracionSeg": 11
+        "slideNumber": 8,
+        "tituloMomento": "El libro organiza cinco dimensiones",
+        "didacticPurpose": "El libro organiza cinco dimensiones",
+        "visualPrompt": "Esquema original del libro en el panel de lectura; los rótulos se muestran nítidos.",
+        "overlayText": "Física · intelectual · social · emocional · espiritual",
+        "overlayTitle": "Física · intelectual · social · emocional · espiritual",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Física · intelectual · social · emocional · espiritual",
+        "speakerNotes": "En la página 116, el libro presenta cinco dimensiones. Leamos sus nombres antes de interpretar el esquema."
       },
       {
-        "slideNumber": 2,
-        "tituloMomento": "Análisis Biológico",
-        "didacticPurpose": "Análisis Biológico",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing growth metrics, voice change diagrams, and cellular maturation charts on a holographic display with clinical clarity, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Cambios Biológicos de la Pubertad",
-        "overlayTitle": "Eje Biológico: La Pubertad",
-        "overlaySubtitle": "Maduración fisiológica y sistema endocrino",
-        "vectorialOverlayPptx": "Diagrama endocrino: Hipotálamo (GnRH) -> Hipófisis anterior (LH y FSH) -> Gónadas (hormonas sexuales) -> Cambios puberales",
-        "mathOverlayPptx": "Diagrama endocrino: Hipotálamo (GnRH) -> Hipófisis anterior (LH y FSH) -> Gónadas (hormonas sexuales) -> Cambios puberales",
-        "speakerNotes": "La pubertad inicia cuando el hipotálamo (GnRH) estimula a la hipófisis anterior para secretar LH y FSH, las cuales activan a las gónadas a producir hormonas sexuales que inducen los cambios puberales.",
-        "palabrasAprox": 21,
-        "duracionSeg": 10
+        "slideNumber": 9,
+        "tituloMomento": "Dimensión física",
+        "didacticPurpose": "Dimensión física",
+        "visualPrompt": "Ícono abstracto de cuerpo y autocuidado, sin detalles íntimos.",
+        "overlayText": "Física: cuerpo y caracteres sexuales",
+        "overlayTitle": "Física: cuerpo y caracteres sexuales",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Física: cuerpo y caracteres sexuales",
+        "speakerNotes": "La dimensión física se relaciona con el cuerpo y los caracteres sexuales. Es una parte del concepto, no la totalidad."
       },
       {
-        "slideNumber": 3,
-        "tituloMomento": "Análisis Afectivo",
-        "didacticPurpose": "Análisis Afectivo",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, reflecting on emotional self-worth, feelings, and family bonds with gentle warm ambient lighting, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Autoestima y Expresión de Afectos",
-        "overlayTitle": "Eje Afectivo: Las Emociones",
-        "overlaySubtitle": "Autoestima y gestión de los afectos",
-        "vectorialOverlayPptx": "Modelo de autovaloración: Identidad personal, autoaceptación y expresión sana de sentimientos",
-        "mathOverlayPptx": "Modelo de autovaloración: Identidad personal, autoaceptación y expresión sana de sentimientos",
-        "speakerNotes": "El eje afectivo orienta cómo nos sentimos con nosotros mismos. Una autoestima sólida permite valorar el propio cuerpo y comunicar afectos de manera asertiva y respetuosa.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        "slideNumber": 10,
+        "tituloMomento": "Dimensión emocional",
+        "didacticPurpose": "Dimensión emocional",
+        "visualPrompt": "Personaje ficticio identifica nervios y alegría con expresiones cuidadas.",
+        "overlayText": "Emocional: emociones y sentimientos",
+        "overlayTitle": "Emocional: emociones y sentimientos",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Emocional: emociones y sentimientos",
+        "speakerNotes": "La dimensión emocional considera emociones y sentimientos que influyen en los actos de las personas."
       },
       {
-        "slideNumber": 4,
-        "tituloMomento": "Análisis Social",
-        "didacticPurpose": "Análisis Social",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, participating in school and family dialogues with peers, showing open active listening in a bright library, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Amistad, Familia y Cultura",
-        "overlayTitle": "Eje Social: La Convivencia",
-        "overlaySubtitle": "Pertenencia, roles y vida en sociedad",
-        "vectorialOverlayPptx": "Matriz sociocultural: Normas de convivencia escolar, dinámicas familiares y equidad",
-        "mathOverlayPptx": "Matriz sociocultural: Normas de convivencia escolar, dinámicas familiares y equidad",
-        "speakerNotes": "En el entorno social aprendemos pautas culturales y construimos amistades. La dimensión social nos invita a convivir en igualdad de derechos sin discriminación ni estereotipos.",
-        "palabrasAprox": 25,
-        "duracionSeg": 11
+        "slideNumber": 11,
+        "tituloMomento": "Dimensión social",
+        "didacticPurpose": "Dimensión social",
+        "visualPrompt": "Personaje conversa con amistades y familia en situaciones cotidianas.",
+        "overlayText": "Social: vínculos y contexto",
+        "overlayTitle": "Social: vínculos y contexto",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Social: vínculos y contexto",
+        "speakerNotes": "La dimensión social considera factores del entorno, como amistades y familia, que influyen en cómo se vive la sexualidad."
       },
       {
-        "slideNumber": 5,
-        "tituloMomento": "Análisis Ético",
-        "didacticPurpose": "Análisis Ético",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, holding a glowing cyan symbolic compass of mutual respect, personal boundaries, and dignity, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Límites Personales y Consentimiento",
-        "overlayTitle": "Eje Ético: El Consentimiento",
-        "overlaySubtitle": "Dignidad humana y límites inviolables",
-        "vectorialOverlayPptx": "Capa ética: Principio de consentimiento explícito y respeto a la privacidad del prójimo",
-        "mathOverlayPptx": "Capa ética: Principio de consentimiento explícito y respeto a la privacidad del prójimo",
-        "speakerNotes": "El eje ético establece que el cuerpo de cada individuo es inviolable. Toda relación humana sana se funda en la dignidad, honestidad y consentimiento libre y mutuo.",
-        "palabrasAprox": 27,
-        "duracionSeg": 12
+        "slideNumber": 12,
+        "tituloMomento": "Intelectual y espiritual",
+        "didacticPurpose": "Intelectual y espiritual",
+        "visualPrompt": "El personaje reflexiona sobre una decisión y lo que considera importante.",
+        "overlayText": "Ideas, autoconocimiento, convicciones y valores",
+        "overlayTitle": "Ideas, autoconocimiento, convicciones y valores",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Ideas, autoconocimiento, convicciones y valores",
+        "speakerNotes": "El libro también incluye las dimensiones intelectual y espiritual, relacionadas con autoconocimiento, convicciones, valores y sentido personal."
       },
       {
-        "slideNumber": 6,
-        "tituloMomento": "Casos Concretos",
-        "didacticPurpose": "Casos Concretos",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, reviewing an illustrated daily hygiene and sleep schedule routine on a study desk with clean lineart, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Caso Modelado: Cuidado e Higiene",
-        "overlayTitle": "Caso Modelado: Higiene y Salud",
-        "overlaySubtitle": "Identificar la dimensión en una decisión real",
-        "vectorialOverlayPptx": "Desglose del caso: Hábitos de higiene y descanso -> Cuidado del cuerpo -> Dimensión Biológica",
-        "mathOverlayPptx": "Desglose del caso: Hábitos de higiene y descanso -> Cuidado del cuerpo -> Dimensión Biológica",
-        "speakerNotes": "Analicemos un caso concreto: mantener hábitos de higiene diaria, ropa limpia y dormir ocho horas para cuidar el cuerpo durante el crecimiento, ¿a qué dimensión corresponde? Corresponde a la dimensión biológica, porque beneficia directamente la salud, anatomía y bienestar del organismo.",
-        "palabrasAprox": 40,
-        "duracionSeg": 18
+        "slideNumber": 13,
+        "tituloMomento": "Integración",
+        "didacticPurpose": "Integración",
+        "visualPrompt": "Cinco caminos conectados en una misma escena ficticia.",
+        "overlayText": "Una experiencia puede reunir varias dimensiones",
+        "overlayTitle": "Una experiencia puede reunir varias dimensiones",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Una experiencia puede reunir varias dimensiones",
+        "speakerNotes": "El OA reúne aspectos biológicos, afectivos y sociales. El libro presenta cinco dimensiones. Podemos relacionar los esquemas sin confundir sus etiquetas."
       },
       {
-        "slideNumber": 7,
-        "tituloMomento": "Síntesis y Regla de Oro",
-        "didacticPurpose": "Síntesis y Regla de Oro",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, presenting a prominent balance diagram with all four dimensions working in dynamic equilibrium in a bright modern science laboratory, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Regla de Oro: La Sexualidad es Integral",
-        "overlayTitle": "Regla de Oro de la sexualidad",
-        "overlaySubtitle": "Cuatro dimensiones unidas en salud integral",
-        "vectorialOverlayPptx": "Infografía de síntesis: Las 4 dimensiones convergen en el bienestar integral de la persona",
-        "mathOverlayPptx": "Infografía de síntesis: Las 4 dimensiones convergen en el bienestar integral de la persona",
-        "speakerNotes": "Recuerda la regla de oro: la sexualidad es integral. Une cuerpo, emociones, sociedad y valores. ¡Ahora pon a prueba lo aprendido resolviendo las actividades prácticas en la plataforma interactiva!",
-        "palabrasAprox": 29,
-        "duracionSeg": 13
+        "slideNumber": 14,
+        "tituloMomento": "Idea clave",
+        "didacticPurpose": "Idea clave",
+        "visualPrompt": "Los dos guías completan el mapa conceptual y resaltan sus conexiones.",
+        "overlayText": "Integral significa considerar varias dimensiones",
+        "overlayTitle": "Integral significa considerar varias dimensiones",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Integral significa considerar varias dimensiones",
+        "speakerNotes": "Una explicación integral considera más de una dimensión y reconoce cómo se relacionan en la vida de las personas."
       }
     ]
   },
   "postQuestions": [
     {
-      "context": "Caso 1: Cuidado de la higiene y descanso",
-      "question": "El hábito de bañarse diariamente, usar ropa limpia y dormir ocho horas para cuidar el cuerpo durante el crecimiento, ¿a qué dimensión corresponde?",
-      "expected": "Corresponde a la dimensión biológica, ya que se relaciona con el cuidado y funcionamiento saludable del organismo.",
-      "success": "¡Muy bien! Cuidar el cuerpo físico con higiene y descanso es parte de la dimensión biológica.",
-      "support": "Piensa a qué parte de la persona beneficia directamente el descanso y la limpieza: ¿al cuerpo físico, a las leyes o a la economía?",
-      "reveal": "Corresponde a la dimensión biológica porque promueve la salud, higiene y bienestar anatómico del cuerpo.",
-      "studentReveal": "Dimensión biológica (salud y cuidado del cuerpo)."
+      "context": "Comprobación 1",
+      "question": "¿El esquema del libro nombra cuatro o cinco dimensiones? Di cuáles.",
+      "expected": "Cinco: física, intelectual, social, emocional y espiritual.",
+      "success": "Respuesta precisa y fundamentada",
+      "support": "Revisa el concepto clave expuesto",
+      "reveal": "Cinco: física, intelectual, social, emocional y espiritual.",
+      "studentReveal": "Cinco: física, intelectual, social, emocional y espiritual."
     },
     {
-      "context": "Caso 2: Expresión de afecto en la familia",
-      "question": "Conversar con honestidad con los padres sobre los temores o dudas que surgen en la adolescencia, ¿qué dimensiones involucra?",
-      "expected": "Involucra la dimensión afectiva (expresar emociones y confianza) y la dimensión social (el vínculo familiar).",
-      "success": "¡Exacto! El diálogo familiar combina el cariño sincero (afectivo) con la convivencia dentro del hogar (social).",
-      "support": "Piensa en las emociones compartidas (afecto) y en las personas con las que vives y convives (familia/social). ¿Qué dimensiones son?",
-      "reveal": "Involucra la dimensión afectiva (manejo de emociones y confianza) y la dimensión social (la relación de convivencia con la familia).",
-      "studentReveal": "Dimensión afectiva (emociones) y dimensión social (familia)."
+      "context": "Comprobación 2",
+      "question": "¿Por qué una experiencia puede relacionarse con más de una dimensión?",
+      "expected": "Porque una persona puede sentir, pensar, relacionarse y vivir aspectos corporales en una misma situación; las dimensiones se conectan.",
+      "success": "Respuesta precisa y fundamentada",
+      "support": "Revisa la relación entre los elementos",
+      "reveal": "Porque una persona puede sentir, pensar, relacionarse y vivir aspectos corporales en una misma situación; las dimensiones se conectan.",
+      "studentReveal": "Porque una persona puede sentir, pensar, relacionarse y vivir aspectos corporales en una misma situación; las dimensiones se conectan."
     }
   ],
   "practice": [
     {
-      "context": "Caso 1: Cuidado de la higiene y descanso",
-      "question": "El hábito de bañarse diariamente, usar ropa limpia y dormir ocho horas para cuidar el cuerpo durante el crecimiento, ¿a qué dimensión corresponde?",
-      "expected": "Corresponde a la dimensión biológica, ya que se relaciona con el cuidado y funcionamiento saludable del organismo.",
-      "success": "¡Muy bien! Cuidar el cuerpo físico con higiene y descanso es parte de la dimensión biológica.",
-      "support": "Piensa a qué parte de la persona beneficia directamente el descanso y la limpieza: ¿al cuerpo físico, a las leyes o a la economía?",
-      "reveal": "Corresponde a la dimensión biológica porque promueve la salud, higiene y bienestar anatómico del cuerpo.",
-      "studentReveal": "Dimensión biológica (salud y cuidado del cuerpo)."
+      "context": "Texto Escolar, página impresa 116.",
+      "question": "Copia los cinco nombres y escribe junto a cada uno una palabra o frase clave del esquema.",
+      "expected": "Física–cuerpo; intelectual–personalidad/autoconocimiento; social–amigos/familia; emocional–sentimientos; espiritual–aceptación/sentido personal.",
+      "success": "Las cinco categorías son correctas y cada frase representa la descripción de la página.",
+      "support": "Usar los cinco íconos interactivos como guía.",
+      "reveal": "Física–cuerpo; intelectual–personalidad/autoconocimiento; social–amigos/familia; emocional–sentimientos; espiritual–aceptación/sentido personal.",
+      "studentReveal": "Física–cuerpo; intelectual–personalidad/autoconocimiento; social–amigos/familia; emocional–sentimientos; espiritual–aceptación/sentido personal."
     },
     {
-      "context": "Caso 2: Expresión de afecto en la familia",
-      "question": "Conversar con honestidad con los padres sobre los temores o dudas que surgen en la adolescencia, ¿qué dimensiones involucra?",
-      "expected": "Involucra la dimensión afectiva (expresar emociones y confianza) y la dimensión social (el vínculo familiar).",
-      "success": "¡Exacto! El diálogo familiar combina el cariño sincero (afectivo) con la convivencia dentro del hogar (social).",
-      "support": "Piensa en las emociones compartidas (afecto) y en las personas con las que vives y convives (familia/social). ¿Qué dimensiones son?",
-      "reveal": "Involucra la dimensión afectiva (manejo de emociones y confianza) y la dimensión social (la relación de convivencia con la familia).",
-      "studentReveal": "Dimensión afectiva (emociones) y dimensión social (familia)."
-    },
-    {
-      "context": "Caso 3: Trabajo en el Cuaderno de Ciencias",
-      "question": "Abre tu cuaderno de Ciencias Naturales. Dibuja un cuadro con cuatro columnas tituladas: Biológica, Afectiva, Social y Ética. Anota en la columna \"Ética\" una acción que demuestre respeto hacia tus compañeros.",
-      "expected": "Registrar una acción ética concreta (por ejemplo: no burlarse de los cambios de otros, pedir permiso antes de tocar pertenencias ajenas o respetar la opinión y límites de cada persona).",
-      "success": "¡Excelente registro en tu cuaderno! Anotaste una acción clara de respeto y valor ético.",
-      "support": "Escribe una acción cotidiana donde se note el respeto hacia los demás: por ejemplo, no difundir secretos o no burlarse del cuerpo de otra persona.",
-      "reveal": "Una acción ética fundamental es tratar a todas las personas con respeto y dignidad, valorando su individualidad y respetando sus límites.",
-      "studentReveal": "Acción ética registrada en el cuaderno: respetar los límites y la dignidad de cada compañero."
+      "context": "Una estudiante ficticia prepara una presentación, se siente nerviosa, conversa con su hermana y reflexiona sobre sus valores.",
+      "question": "Identifica tres dimensiones presentes y explica qué pista corresponde a cada una.",
+      "expected": "Emocional (nervios), social (conversación) e intelectual (reflexión sobre ideas y valores). La dimensión espiritual se reconoce en la página por autoconocimiento, aceptación de sí y sentido personal; no se infiere solo por nombrar valores.",
+      "success": "Relaciona pistas concretas con dimensiones correctamente.",
+      "support": "Preguntar: “¿Qué siente? ¿Con quién interactúa? ¿Qué piensa o valora?",
+      "reveal": "Emocional (nervios), social (conversación) e intelectual (reflexión sobre ideas y valores). La dimensión espiritual se reconoce en la página por autoconocimiento, aceptación de sí y sentido personal; no se infiere solo por nombrar valores.",
+      "studentReveal": "Emocional (nervios), social (conversación) e intelectual (reflexión sobre ideas y valores). La dimensión espiritual se reconoce en la página por autoconocimiento, aceptación de sí y sentido personal; no se infiere solo por nombrar valores."
     }
   ],
   "mini": [
     {
       "id": "q1",
-      "q": "¿Cuál de las siguientes afirmaciones define correctamente la sexualidad humana según la ciencia?",
+      "q": "¿Cuántas dimensiones presenta el esquema de la página 116?",
       "options": [
-        "Es una dimensión integral presente a lo largo de toda la vida que une lo biológico, afectivo, social y ético.",
-        "Se reduce exclusivamente a la reproducción biológica y a los órganos del cuerpo humano.",
-        "Es un tema que únicamente involucra a los adultos sin relación con las emociones.",
-        "Es un fenómeno que solo aparece en la vejez y depende del clima ambiental."
+        "A. Tres: biológica, afectiva y social.",
+        "B. Cuatro: corporal, familiar, escolar y cultural.",
+        "C. Seis: física, biológica, afectiva, social, escolar y familiar.",
+        "D. Cinco: física, intelectual, social, emocional y espiritual."
       ],
-      "correct": "Es una dimensión integral presente a lo largo de toda la vida que une lo biológico, afectivo, social y ético.",
-      "fixExplain": "La sexualidad humana es integral: comprende el cuerpo biológico, los afectos, la convivencia social y los valores éticos durante toda la vida."
+      "correct": "D. Cinco: física, intelectual, social, emocional y espiritual.",
+      "fixExplain": "El OA destaca tres aspectos, mientras el esquema del libro presenta cinco dimensiones. Revisa los rótulos de la página."
     },
     {
       "id": "q2",
-      "q": "El cambio en el tono de la voz y el crecimiento acelerado de estatura durante la pubertad corresponden a la dimensión:",
+      "q": "¿Qué explicación refleja mejor una visión integral de la sexualidad?",
       "options": [
-        "Dimensión Social",
-        "Dimensión Biológica",
-        "Dimensión Ética",
-        "Dimensión Afectiva"
+        "A. Solo considera los cambios visibles del cuerpo.",
+        "B. Considera aspectos corporales, emocionales, sociales y otros de la persona que se relacionan.",
+        "C. Se refiere exclusivamente a las opiniones de la familia.",
+        "D. Solo aparece durante la pubertad."
       ],
-      "correct": "Dimensión Biológica",
-      "fixExplain": "Los cambios corporales, hormonales y anatómicos forman parte de la dimensión biológica del ser humano."
+      "correct": "B. Considera aspectos corporales, emocionales, sociales y otros de la persona que se relacionan.",
+      "fixExplain": "El libro describe un concepto que abarca diferentes dimensiones; no lo limita al cuerpo ni a una sola etapa."
     },
     {
       "id": "q3",
-      "q": "Aprender a decir \"no\" con seguridad y respetar los límites y decisiones de los demás corresponde a la dimensión:",
+      "q": "En el ejemplo ficticio, una persona conversa con su familia y sus amistades, que influyen en cómo se siente. ¿Qué dimensión del esquema permite analizar principalmente esa influencia?",
       "options": [
-        "Dimensión ética y moral",
-        "Exclusivamente biológica",
-        "Únicamente climática",
-        "Dimensión química y mineral"
+        "A. Física.",
+        "B. Espiritual.",
+        "C. Social.",
+        "D. Intelectual."
       ],
-      "correct": "Dimensión ética y moral",
-      "fixExplain": "Establecer límites personales, cuidar el consentimiento y valorar la dignidad propia y ajena son fundamentos de la dimensión ética."
+      "correct": "C. Social.",
+      "fixExplain": "La dimensión social considera factores del entorno, incluidas amistades y familia."
     }
   ],
   "recovery": [
     {
-      "title": "Recuperación: Las 4 Dimensiones de la Sexualidad",
-      "explain": "Recuerda que la sexualidad humana se compone de 4 dimensiones esenciales: 1) Biológica (el cuerpo), 2) Afectiva (las emociones), 3) Social (la relación con otros) y 4) Ética (los valores y el respeto).",
-      "q": "Si una persona siente cariño por sus amigos y comparte momentos felices con ellos, ¿qué dos dimensiones se manifiestan?",
+      "title": "Recuperación Reactivo 1",
+      "explain": "**Si necesita apoyo en el reactivo 1:** Abrir página 116 y recorrer las cinco etiquetas; después seleccionar la lista que coincide.",
+      "q": "Paso guiado de recuperación para el Reactivo 1",
       "options": [
-        "Las dimensiones afectiva (cariño) y social (amistades).",
-        "Únicamente la dimensión biológica anatómica.",
-        "Solamente la dimensión climática y meteorológica.",
-        "Ninguna dimensión humana reconocible."
+        "Opción con andamiaje A",
+        "Opción con andamiaje B",
+        "Opción con andamiaje C"
       ],
-      "correct": "Las dimensiones afectiva (cariño) y social (amistades).",
-      "correctText": "¡Exacto! El cariño representa la dimensión afectiva y compartir con amigos representa la dimensión social.",
-      "fixText": "Recuerda que el cariño corresponde a la dimensión afectiva y la convivencia con amigos corresponde a la dimensión social."
+      "correct": "Opción con andamiaje A",
+      "correctText": "¡Excelente! Lograste resolver el reactivo con el andamiaje del texto.",
+      "fixText": "Vuelve a revisar la página de referencia para consolidar el aprendizaje."
+    },
+    {
+      "title": "Recuperación Reactivo 2",
+      "explain": "**Si necesita apoyo en el reactivo 2:** Clasificar cuatro tarjetas: cuerpo, sentimientos, vínculos e ideas; explicar por qué la primera no basta.",
+      "q": "Paso guiado de recuperación para el Reactivo 2",
+      "options": [
+        "Opción con andamiaje A",
+        "Opción con andamiaje B",
+        "Opción con andamiaje C"
+      ],
+      "correct": "Opción con andamiaje A",
+      "correctText": "¡Excelente! Lograste resolver el reactivo con el andamiaje del texto.",
+      "fixText": "Vuelve a revisar la página de referencia para consolidar el aprendizaje."
+    },
+    {
+      "title": "Recuperación Reactivo 3",
+      "explain": "**Si necesita apoyo en el reactivo 3:** Volver a la definición del libro y buscar las palabras “amigos” y “familia”; elegir la dimensión que las incluye.",
+      "q": "Paso guiado de recuperación para el Reactivo 3",
+      "options": [
+        "Opción con andamiaje A",
+        "Opción con andamiaje B",
+        "Opción con andamiaje C"
+      ],
+      "correct": "Opción con andamiaje A",
+      "correctText": "¡Excelente! Lograste resolver el reactivo con el andamiaje del texto.",
+      "fixText": "Vuelve a revisar la página de referencia para consolidar el aprendizaje."
     }
   ],
   "summaryIdeas": [
     [
-      "1 · Visión Integral",
-      "La sexualidad humana es una dimensión integral de la persona y no debe reducirse únicamente al aspecto biológico o reproductivo."
+      "Idea clave",
+      "**Cinco dimensiones del libro:** física, intelectual, social, emocional y espiritual."
     ],
     [
-      "2 · Las 4 Dimensiones",
-      "Comprende cuatro dimensiones inseparables: biológica (cuerpo y cambios físicos), afectiva (emociones y sentimientos), social (relaciones y cultura) y ética (valores y respeto)."
+      "Idea clave",
+      "**Aspectos que integra el OA:** biológicos, afectivos y sociales."
     ],
     [
-      "3 · Interrelación Constante",
-      "Todas las dimensiones interactúan entre sí: lo que sentimos (afectivo) se refleja en nuestro cuerpo (biológico) y en cómo nos relacionamos con los demás (social y ético)."
+      "Idea clave",
+      "**Visión integral:** una situación puede implicar varias dimensiones; mirar solo el cuerpo deja fuera otros aspectos."
     ]
   ],
-  "interactive": {
-    "type": "dimensions",
-    "title": "Las 4 Dimensiones de la Sexualidad Humana",
-    "description": "Organizador gráfico del modelo integral de desarrollo personal."
+  "closure": {
+    "congratulations": "¡Buen trabajo! Reconociste distintas dimensiones y explicaste por qué se relacionan.",
+    "nextClassPreview": "En la próxima clase estudiaremos los cambios físicos y emocionales durante la pubertad con información del texto."
   },
   "paso8_cierre": {
-    "preguntaSintesis": "¿Por qué decimos que la sexualidad humana involucra cuatro dimensiones inseparables y no solo los cambios biológicos del cuerpo?",
-    "metacognicion": "¿Qué dimensión de las cuatro te resultó más reveladora o te ayudó a comprender mejor los cambios que experimentas en esta etapa?",
-    "celebracion": "¡Felicitaciones! Has completado con éxito la primera clase sobre las 4 dimensiones de la sexualidad humana."
+    "preguntaSintesis": "¿Qué tres dimensiones usarías para analizar la situación ficticia de hoy y qué pistas te ayudarían?",
+    "metacognicion": "¿Qué te ayudó a comprender las dimensiones: los nombres, sus definiciones o el caso ficticio?",
+    "celebracion": "¡Buen trabajo! Reconociste distintas dimensiones y explicaste por qué se relacionan."
+  },
+  "interactive": {
+    "type": "dimensions",
+    "title": "Dimensiones Integrales de la Sexualidad",
+    "description": "Organizador de las cinco dimensiones biopsicosociales."
   }
 };

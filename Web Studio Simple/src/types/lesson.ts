@@ -165,7 +165,7 @@ export interface LessonData {
   // Opcionales para desacoplamiento pedagógico total
   ambientAudioSrc?: string;
   interactive?: {
-    type: 'thermo' | 'number_line' | 'hero_journey' | 'dimensions' | 'timeline' | 'story_arc' | 'general' | 'none';
+    type: 'thermo' | 'number_line' | 'hero_journey' | 'dimensions' | 'timeline' | 'story_arc' | 'reading_resource' | 'story_context' | 'general' | 'none';
     title?: string;
     [key: string]: any;
   };

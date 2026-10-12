@@ -1,76 +1,32 @@
 {
   "curso": "110-7",
-  "asignatura": "Ciencias_Naturales",
+  "nivel": "7° Básico",
+  "asignatura": "Ciencias Naturales",
   "oa": "OA01",
-  "identificador_paquete": "110-7-CIE-OA01",
-  "version": "1.5.0",
-  "fecha_actualizacion": "2026-10-08",
-  "estado": "APROBADA",
-  "total_clases": 6,
-  "fuente_oficial_unica_docx": {
-    "archivo": "Plan_Maestro_7Básico_110-7-CIE-OA01_6Lecciones_2026-10-08_17-52.docx",
-    "rol": "Unica fuente oficial de produccion de lecciones y prompts",
-    "sha256": "443a8011ed2ddb2069d5b903a0555740fabf195f2f62321a850bd34eeafbe633",
-    "bytes": 82840
-  },
-  "prompts_asociados": {
-    "archivo": "Prompts_Work_Ciencias_7B_OA01_2026-10-08_17-52.txt",
-    "ruta_origen_zip_anterior": "DESCARGA_LECCIONES/PROMPTS_TXT_PARA_WORK/Prompts_Work_Ciencias_7B_OA01_2026-10-08_17-49.txt",
-    "total_laminas": 84,
-    "laminas_por_clase": 14,
-    "perfil_evaluacion": "Perfil 7° Básico (14 láminas bimodales: 7 Gancho + 7 Explicación; 4 alternativas A-D en todas las preguntas)",
-    "sha256": "e4694197d50559f3a58c8753c537458bfadfba25c8799d26d14793fe26220abe",
-    "bytes": 233925
-  },
-  "fundamentacion_curricular": {
-    "temario_eell": {
-      "archivo": "TEMARIOS EELL/temario 7° basico.pdf",
-      "pagina": 7,
-      "seccion": "Eje Biología - Objetivo de Aprendizaje N° 1: Explicar los aspectos biológicos, afectivos y sociales que se integran en la sexualidad humana.",
-      "plan_estudios_complementario": "TEMARIOS EELL/Septimo/Plan_de_Estudios_Optimizado_7Basico.docx",
-      "documento_detallado": "TEMARIOS EELL/Septimo/Ciencias/Clase_1_Ciencias_Naturales_Detallada.pdf"
-    },
-    "insumos_mineduc": {
-      "texto_estudiante_pdf": "INSUMOS/LIBROS DIGITALES Y GUÍAS/110-7/Ciencias Naturales.pdf",
-      "unidad_y_paginas": "Unidad 4: Salud sexual y reproducción, Lección 8: Sexualidad y autocuidado (págs. 114 a 137)",
-      "banco_digital_actividades": "INSUMOS/LIBROS DIGITALES Y GUÍAS/110-7/BDA_CNA_7B/",
-      "resumen_oficial": "INSUMOS/RESUMENES/110-7/RESUMEN CIENCIAS NATURALES.pdf",
-      "ensayos_oficiales": "INSUMOS/ENSAYOS/110-7/CIENCIAS NATURALES.pdf"
-    }
-  },
-  "resolucion_rutas_typescript": {
-    "raiz_repositorio": "d:/StudioSimple - Antigravity/",
-    "raiz_app_spa": "Web Studio Simple/",
-    "alias_tsconfig": "@/* -> ./src/* (definido en Web Studio Simple/tsconfig.json)",
-    "archivos_clases_ts": [
-      "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase01.ts",
-      "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase02.ts",
-      "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase03.ts",
-      "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase04.ts",
-      "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase05.ts",
-      "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase06.ts"
-    ]
-  },
-  "schemaVersion": "2.0.0",
-  "generatedAt": "2026-10-08 17:52:12 [America/Santiago]",
-  "status": "APROBADA",
+  "titulo_oa": "Sexualidad y Afectividad",
+  "fecha_generacion": "2026-10-10 19:15 [America/Santiago]",
+  "status": "EN_REVISION",
   "etapa_revision": "WORK_PRE_APROBACION",
-  "oaIdentifier": "110-7-CIE-OA01",
-  "course": "7° Básico",
-  "subject": "Ciencias Naturales",
-  "totalLessons": 6,
-  "artifacts": {
-    "docxMaster": {
-      "filename": "Plan_Maestro_7Básico_110-7-CIE-OA01_6Lecciones_2026-10-08_17-52.docx",
-      "relativePath": "LECCIONES/110-7/Ciencias_Naturales/OA01/Plan_Maestro_7Básico_110-7-CIE-OA01_6Lecciones_2026-10-08_17-52.docx",
-      "sizeBytes": 82840,
-      "sha256": "443a8011ed2ddb2069d5b903a0555740fabf195f2f62321a850bd34eeafbe633"
-    },
-    "promptsWorkTxt": {
-      "filename": "Prompts_Work_Ciencias_7B_OA01_2026-10-08_17-52.txt",
-      "relativePath": "LECCIONES/110-7/Ciencias_Naturales/OA01/Prompts_Work_Ciencias_7B_OA01_2026-10-08_17-52.txt",
-      "sizeBytes": 233925,
-      "sha256": "e4694197d50559f3a58c8753c537458bfadfba25c8799d26d14793fe26220abe"
+  "total_lecciones": 6,
+  "lecciones_construidas": [
+    {
+      "clase": 1,
+      "archivo_ts": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase01.ts",
+      "archivo_md": "CLASE01_2026-10-10_19-15.md",
+      "estado": "EN_REVISION",
+      "secciones_completas": 12,
+      "laminas_bimodales": 14,
+      "reactivos_miniquiz": 3,
+      "alternativas_por_pregunta": 4
     }
-  }
+  ],
+  "auditoria_interna": {
+    "fecha": "2026-10-10 19:15 [America/Santiago]",
+    "hallazgos": 0,
+    "resultado": "CONFORME"
+  },
+  "fuentes_utilizadas": [
+    "INSUMOS/BASE_CURRICULAR/EstudioSimple_Base_Curricular_7B_4Asignaturas_v1.json",
+    "TEMARIOS EELL 7° Básico MINEDUC"
+  ]
 }

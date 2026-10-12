@@ -84,7 +84,7 @@ const TEXTBOOK_MAPPINGS: Record<string, { libro: string; unidad: string; leccion
   '110-7-MAT-OA18': { libro: 'Matemática 7° Básico (Texto del Estudiante MINEDUC)', unidad: 'Unidad 4: "Probabilidad y estadística"', leccion: 'Lección 10: "Probabilidades y regla de Laplace"', paginas: 'Páginas 130 a 140' },
 
   // 2. LENGUA Y LITERATURA
-  '110-7-LEN-OA03': { libro: 'Lengua y Literatura 7° Básico (Texto del Estudiante MINEDUC)', unidad: 'Unidad 1: "Héroes y heroínas"', leccion: 'Lección 1: "El viaje del héroe en la narrativa"', paginas: 'Páginas 14 a 45' },
+  '110-7-LEN-OA03': { libro: 'Lengua y Literatura 7° Básico (Texto del Estudiante MINEDUC)', unidad: 'Unidad 1: "Héroes y heroínas"', leccion: 'Lección 1: "El conflicto narrativo y el ambiente"', paginas: 'Páginas 14 a 45' },
   '110-7-LEN-OA04': { libro: 'Lengua y Literatura 7° Básico (Texto del Estudiante MINEDUC)', unidad: 'Unidad 2: "Voces de la poesía"', leccion: 'Lección 1 y 2: "Lenguaje poético y sentimientos"', paginas: 'Páginas 46 a 87' },
   '110-7-LEN-OA09': { libro: 'Lengua y Literatura 7° Básico (Texto del Estudiante MINEDUC)', unidad: 'Unidad 3: "Somos naturaleza y sociedad"', leccion: 'Lección 1: "Noticias, reportajes y medios"', paginas: 'Páginas 92 a 125' },
   '110-7-LEN-OA15': { libro: 'Lengua y Literatura 7° Básico (Texto del Estudiante MINEDUC)', unidad: 'Unidad 4: "¿Qué nos cuenta el mundo?"', leccion: 'Lección 2: "Producción escrita y revisión"', paginas: 'Páginas 138 a 170' },

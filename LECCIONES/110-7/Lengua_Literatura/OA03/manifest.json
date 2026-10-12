@@ -1,76 +1,32 @@
 {
   "curso": "110-7",
-  "asignatura": "Lengua_Literatura",
+  "nivel": "7° Básico",
+  "asignatura": "Lengua y Literatura",
   "oa": "OA03",
-  "identificador_paquete": "110-7-LEN-OA03",
-  "version": "2.6.0",
-  "fecha_actualizacion": "2026-10-06",
-  "estado": "EN_REVISION",
-  "total_clases": 6,
-  "fuente_oficial_unica_docx": {
-    "archivo": "Plan_Maestro_7Básico_110-7-LEN-OA03_6Lecciones_2026-10-08_17-52.docx",
-    "rol": "Unica fuente oficial de produccion de lecciones y prompts",
-    "sha256": "f21606904d3c51517344bfee4066e4940be79ce7726cbbfeabdad049a68184a6",
-    "bytes": 73892
-  },
-  "prompts_asociados": {
-    "archivo": "Prompts_Work_Lenguaje_7B_OA03_2026-10-08_17-52.txt",
-    "ruta_origen_zip_anterior": "DESCARGA_LECCIONES/PROMPTS_TXT_PARA_WORK/Prompts_Work_Lenguaje_7B_OA03.txt",
-    "total_laminas": 84,
-    "laminas_por_clase": 14,
-    "perfil_evaluacion": "Perfil 7° Básico (14 láminas bimodales: 7 Gancho + 7 Explicación; reactivos de 4 alternativas en cierre)",
-    "sha256": "35811a37b1079416d238ee8ee319a5a01dcc395f5701902ab7fe8de34ccc5f94",
-    "bytes": 214398
-  },
-  "fundamentacion_curricular": {
-    "temario_eell": {
-      "archivo": "TEMARIOS EELL/temario 7° basico.pdf",
-      "pagina": 3,
-      "seccion": "Eje Lectura - Objetivo de Aprendizaje N° 3: Analizar las narraciones leídas para enriquecer su comprensión, considerando el conflicto, los personajes y el punto de vista del narrador.",
-      "plan_estudios_complementario": "TEMARIOS EELL/Septimo/Plan_de_Estudios_Optimizado_7Basico.docx",
-      "documento_detallado": "TEMARIOS EELL/Septimo/Lenguaje/Clase_1_Lengua_y_Literatura_Detallada.pdf"
-    },
-    "insumos_mineduc": {
-      "texto_estudiante_pdf": "INSUMOS/LIBROS DIGITALES Y GUÍAS/110-7/Lengua y literatura.pdf",
-      "unidad_y_paginas": "Unidad 1: Héroes y heroínas / El viaje del héroe",
-      "banco_digital_actividades": "INSUMOS/LIBROS DIGITALES Y GUÍAS/110-7/BDA_LYL_7B/",
-      "resumen_oficial": "INSUMOS/RESUMENES/110-7/RESUMEN LENGUAJE Y COMUNICACIÓN.pdf",
-      "ensayos_oficiales": "INSUMOS/ENSAYOS/110-7/LENGUAJE Y COMUNICACIÓN.pdf"
-    }
-  },
-  "resolucion_rutas_typescript": {
-    "raiz_repositorio": "d:/StudioSimple - Antigravity/",
-    "raiz_app_spa": "Web Studio Simple/",
-    "alias_tsconfig": "@/* -> ./src/* (definido en Web Studio Simple/tsconfig.json)",
-    "archivos_clases_ts": [
-      "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase01.ts",
-      "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase02.ts",
-      "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase03.ts",
-      "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase04.ts",
-      "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase05.ts",
-      "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase06.ts"
-    ]
-  },
-  "schemaVersion": "2.0.0",
-  "generatedAt": "2026-10-08 17:52:12 [America/Santiago]",
+  "titulo_oa": "Análisis de narraciones: conflicto, personajes y ambiente",
+  "fecha_generacion": "2026-10-10 19:15 [America/Santiago]",
   "status": "EN_REVISION",
   "etapa_revision": "WORK_PRE_APROBACION",
-  "oaIdentifier": "110-7-LEN-OA03",
-  "course": "7° Básico",
-  "subject": "Lengua y Literatura",
-  "totalLessons": 6,
-  "artifacts": {
-    "docxMaster": {
-      "filename": "Plan_Maestro_7Básico_110-7-LEN-OA03_6Lecciones_2026-10-08_17-52.docx",
-      "relativePath": "LECCIONES/110-7/Lengua_Literatura/OA03/Plan_Maestro_7Básico_110-7-LEN-OA03_6Lecciones_2026-10-08_17-52.docx",
-      "sizeBytes": 73892,
-      "sha256": "f21606904d3c51517344bfee4066e4940be79ce7726cbbfeabdad049a68184a6"
-    },
-    "promptsWorkTxt": {
-      "filename": "Prompts_Work_Lenguaje_7B_OA03_2026-10-08_17-52.txt",
-      "relativePath": "LECCIONES/110-7/Lengua_Literatura/OA03/Prompts_Work_Lenguaje_7B_OA03_2026-10-08_17-52.txt",
-      "sizeBytes": 214398,
-      "sha256": "35811a37b1079416d238ee8ee319a5a01dcc395f5701902ab7fe8de34ccc5f94"
+  "total_lecciones": 6,
+  "lecciones_construidas": [
+    {
+      "clase": 1,
+      "archivo_ts": "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase01.ts",
+      "archivo_md": "CLASE01_2026-10-10_19-15.md",
+      "estado": "EN_REVISION",
+      "secciones_completas": 12,
+      "laminas_bimodales": 14,
+      "reactivos_miniquiz": 3,
+      "alternativas_por_pregunta": 4
     }
-  }
+  ],
+  "auditoria_interna": {
+    "fecha": "2026-10-10 19:15 [America/Santiago]",
+    "hallazgos": 0,
+    "resultado": "CONFORME"
+  },
+  "fuentes_utilizadas": [
+    "INSUMOS/BASE_CURRICULAR/EstudioSimple_Base_Curricular_7B_4Asignaturas_v1.json",
+    "TEMARIOS EELL 7° Básico MINEDUC"
+  ]
 }

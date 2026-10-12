@@ -1,0 +1,64 @@
+{
+  "timestamp": "11-10-2026, 5:00:49 p. m. [America/Santiago]",
+  "isoDate": "2026-10-11T20:00:49.186Z",
+  "totalLessonsProcessed": 4,
+  "status": "EN_REVISION",
+  "lessons": [
+    {
+      "courseId": "110-7",
+      "grade": "7° básico",
+      "subject": "Ciencias Naturales",
+      "oaCode": "OA 1",
+      "classNumber": 1,
+      "title": "La sexualidad integra distintas dimensiones",
+      "sourceFile": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE01.md",
+      "destModule": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase01.ts",
+      "varName": "CIENCIAS_7B_OA01_CLASE01",
+      "hash": "ad397d46b91983f6",
+      "status": "EN_REVISION",
+      "syncedAt": "2026-10-11T20:00:49.045Z"
+    },
+    {
+      "courseId": "110-7",
+      "grade": "7° básico",
+      "subject": "Historia, Geografía y Ciencias Sociales",
+      "oaCode": "OA 2",
+      "classNumber": 1,
+      "title": "¿Dónde y cuándo comenzó la agricultura?",
+      "sourceFile": "LECCIONES_POR_REVISAR/110-7/Historia_Geografia/OA02/CLASE01.md",
+      "destModule": "Web Studio Simple/src/data/lessons/historia_7b_oa02_clase01.ts",
+      "varName": "HISTORIA_7B_OA02_CLASE01",
+      "hash": "0794b50f228bfb06",
+      "status": "EN_REVISION",
+      "syncedAt": "2026-10-11T20:00:49.049Z"
+    },
+    {
+      "courseId": "110-7",
+      "grade": "7° Básico",
+      "subject": "Idioma Extranjero Inglés",
+      "oaCode": "OA 9",
+      "classNumber": 1,
+      "title": "Anne’s Birthday: Main Idea and Key Events",
+      "sourceFile": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE01.md",
+      "destModule": "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase01.ts",
+      "varName": "INGLES_7B_OA09_CLASE01",
+      "hash": "9653ed07d2df5434",
+      "status": "EN_REVISION",
+      "syncedAt": "2026-10-11T20:00:49.053Z"
+    },
+    {
+      "courseId": "110-7",
+      "grade": "7° básico",
+      "subject": "Lengua y Literatura",
+      "oaCode": "OA 3",
+      "classNumber": 1,
+      "title": "Jimmy y Robutt: leer el ambiente y descubrir el conflicto",
+      "sourceFile": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE01.md",
+      "destModule": "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase01.ts",
+      "varName": "LENGUA_7B_OA03_CLASE01",
+      "hash": "3a44db6d846230d1",
+      "status": "EN_REVISION",
+      "syncedAt": "2026-10-11T20:00:49.056Z"
+    }
+  ]
+}

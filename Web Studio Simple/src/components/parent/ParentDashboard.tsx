@@ -839,7 +839,7 @@ export const ParentDashboard: React.FC = () => {
                             ? isDark ? 'text-white' : 'text-[#1C3257]'
                             : isDark ? 'text-slate-300' : 'text-slate-700'
                         }`}>
-                          {lesson.title}
+                          {injectedLesson ? injectedLesson.metadata.lessonTitle : lesson.title}
                         </h3>
 
                         <p className={`text-xs leading-relaxed line-clamp-4 ${
@@ -847,7 +847,7 @@ export const ParentDashboard: React.FC = () => {
                             ? isDark ? 'text-slate-300' : 'text-slate-600'
                             : isDark ? 'text-slate-500' : 'text-slate-500'
                         }`}>
-                          {lesson.focusSummary}
+                          {injectedLesson ? (injectedLesson.prep.adultObjective || injectedLesson.route.dileObjective) : lesson.focusSummary}
                         </p>
                       </div>
 
@@ -881,6 +881,9 @@ export const ParentDashboard: React.FC = () => {
                           <button
                             type="button"
                             onClick={() => {
+                              try {
+                                localStorage.removeItem('estudiosimple_lesson_session_v1');
+                              } catch {}
                               if (injectedLesson) {
                                 setActiveSynchronizedLesson(injectedLesson);
                               } else {

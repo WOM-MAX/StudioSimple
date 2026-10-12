@@ -210,12 +210,12 @@ export const LENGUAJE_7B_OAS: CurricularOA[] = [
   {
     code: 'OA 3',
     number: 3,
-    title: 'Análisis de Narraciones y el Héroe',
-    shortDesc: 'Analizar las narraciones leídas reconociendo el conflicto, motivaciones de los personajes, el viaje del héroe y la visión de mundo.',
+    title: 'Análisis de Narraciones: Conflicto, Personajes y Ambiente',
+    shortDesc: 'Describir el ambiente y explicar el conflicto que inicia el relato usando acciones y palabras de sus personajes como evidencia.',
     totalLessons: 6,
     completedLessons: 0,
     lessons: [
-      { lessonNumber: 1, title: 'Las 6 Etapas del Viaje del Héroe', durationMinutes: 30, status: 'ready', focusSummary: 'Estructura del viaje del héroe, llamado a la aventura, pruebas y transformación.' },
+      { lessonNumber: 1, title: 'Jimmy y Robutt: leer el ambiente y descubrir el conflicto', durationMinutes: 30, status: 'ready', focusSummary: 'Describir el ambiente donde vive Jimmy y explicar el conflicto que inicia el relato usando acciones y palabras de sus personajes como evidencia.' },
       { lessonNumber: 2, title: 'Evolución y roles de los personajes', durationMinutes: 30, status: 'ready', focusSummary: 'Protagonista, antagonista, aliados y evolución de motivaciones en el relato.' },
       { lessonNumber: 3, title: 'La voz del narrador y perspectivas', durationMinutes: 30, status: 'ready', focusSummary: 'Narrador protagonista, testigo y omnisciente; perspectiva y focalización.' },
       { lessonNumber: 4, title: 'Disposición temporal de los acontecimientos', durationMinutes: 30, status: 'ready', focusSummary: 'Tiempo de la historia y tiempo del relato, anacronías (analepsis y prolepsis).' },
@@ -279,7 +279,7 @@ export const CIENCIAS_7B_OAS: CurricularOA[] = [
     totalLessons: 6,
     completedLessons: 0,
     lessons: [
-      { lessonNumber: 1, title: 'Las 4 Dimensiones de la Sexualidad Humana', durationMinutes: 30, status: 'ready', focusSummary: 'Dimensión biológica, afectiva, psicológica y social según MINEDUC.' },
+      { lessonNumber: 1, title: 'La sexualidad integra distintas dimensiones', durationMinutes: 30, status: 'ready', focusSummary: 'Explicar que la sexualidad comprende más que el aspecto físico, identificando las cinco dimensiones del Texto Escolar.' },
       { lessonNumber: 2, title: 'Transformaciones físicas y emocionales en la pubertad', durationMinutes: 30, status: 'ready', focusSummary: 'Caracteres sexuales primarios, secundarios y maduración biológica.' },
       { lessonNumber: 3, title: 'Vínculos afectivos, respeto mutuo e intimidad', durationMinutes: 30, status: 'ready', focusSummary: 'Comunicación asertiva, empatía y límites personales.' },
       { lessonNumber: 4, title: 'Responsabilidad individual y toma de decisiones', durationMinutes: 30, status: 'ready', focusSummary: 'Autocuidado, autonomía y canales de apoyo institucional.' },
@@ -388,7 +388,7 @@ export const HISTORIA_7B_OAS: CurricularOA[] = [
     totalLessons: 5,
     completedLessons: 0,
     lessons: [
-      { lessonNumber: 1, title: 'El fin del nomadismo y el surgimiento agrícola', durationMinutes: 30, status: 'ready', focusSummary: 'Evolución humana, cambio climático posglacial y transición al sedentarismo.' },
+      { lessonNumber: 1, title: '¿Dónde y cuándo comenzó la agricultura?', durationMinutes: 30, status: 'ready', focusSummary: 'Interpretar el mapa histórico de las páginas 18–19 para describir dónde y cuándo aparecen registros tempranos de agricultura y domesticación.' },
       { lessonNumber: 2, title: 'Domesticación de animales y plantas en el Creciente Fértil', durationMinutes: 30, status: 'ready', focusSummary: 'Agricultura temprana, ganadería y transformación del entorno natural.' },
       { lessonNumber: 3, title: 'Primeras aldeas sedentarias y división del trabajo', durationMinutes: 30, status: 'ready', focusSummary: 'Estructura social, excedentes alimentarios y especialización de oficios.' },
       { lessonNumber: 4, title: 'Innovaciones tecnológicas del Neolítico', durationMinutes: 30, status: 'ready', focusSummary: 'Piedra pulida, alfarería, textilería y metalurgia incipiente.' },
@@ -586,7 +586,7 @@ export const INGLES_7B_OAS: CurricularOA[] = [
     totalLessons: 6,
     completedLessons: 0,
     lessons: [
-      { lessonNumber: 1, title: 'Setting and Characters in Short Stories', durationMinutes: 30, status: 'ready', focusSummary: 'Story elements, literary terminology, character descriptions and settings.' },
+      { lessonNumber: 1, title: 'Anne’s Birthday: Main Idea and Key Events', durationMinutes: 30, status: 'ready', focusSummary: 'Identify the main idea of Anne Frank’s diary entry and use explicit details to describe the order of events in her birthday.' },
       { lessonNumber: 2, title: 'Chronological Sequence and Time Connectors', durationMinutes: 30, status: 'ready', focusSummary: 'Time sequence markers (first, next, suddenly, finally) and event order.' },
       { lessonNumber: 3, title: 'Past Simple Tense: Regular and Irregular Verbs', durationMinutes: 30, status: 'ready', focusSummary: 'Narrative past tense recognition in adapted stories.' },
       { lessonNumber: 4, title: 'Character Feelings, Dialogue, and Conflict', durationMinutes: 30, status: 'ready', focusSummary: 'Direct speech, internal states, emotions and conflict resolution.' },
@@ -645,8 +645,8 @@ export function getSubjectOAs(grade: string, subjectName: string): CurricularOA[
   const norm = subjectName.toLowerCase().trim();
   if (norm.includes('mat')) return MATEMATICA_7B_OAS;
   if (norm.includes('leng') || norm.includes('liter')) return LENGUAJE_7B_OAS;
-  if (norm.includes('cien') || norm.includes('nat')) return CIENCIAS_7B_OAS;
   if (norm.includes('hist') || norm.includes('geog') || norm.includes('soc')) return HISTORIA_7B_OAS;
+  if ((norm.includes('cien') && !norm.includes('soc')) || norm.includes('nat')) return CIENCIAS_7B_OAS;
   if (norm.includes('ing') || norm.includes('eng')) return INGLES_7B_OAS;
   return MATEMATICA_7B_OAS;
 }

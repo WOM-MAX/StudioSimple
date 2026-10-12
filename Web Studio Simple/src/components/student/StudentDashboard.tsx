@@ -348,10 +348,10 @@ export const StudentDashboard: React.FC = () => {
                     </div>
 
                     <h3 className={`text-sm sm:text-base font-extrabold leading-snug tracking-tight ${isDark ? 'text-white' : 'text-[#1C3257]'}`}>
-                      {lesson.title}
+                      {injectedLesson ? injectedLesson.metadata.lessonTitle : lesson.title}
                     </h3>
                     <p className={`text-xs leading-relaxed line-clamp-4 ${isDark ? 'text-[#94A3B8]' : 'text-[#526177]'}`}>
-                      {lesson.focusSummary}
+                      {injectedLesson ? (injectedLesson.prep.adultObjective || injectedLesson.route.dileObjective) : lesson.focusSummary}
                     </p>
                   </div>
 
@@ -385,6 +385,9 @@ export const StudentDashboard: React.FC = () => {
                       <button
                         type="button"
                         onClick={() => {
+                          try {
+                            localStorage.removeItem('estudiosimple_lesson_session_v1');
+                          } catch {}
                           if (injectedLesson) {
                             setActiveSynchronizedLesson(injectedLesson);
                           } else {

@@ -457,9 +457,9 @@ export const LENGUA_7B_OA03_CLASE04: LessonData = {
     ]
   ],
   "interactive": {
-    "type": "hero_journey",
-    "title": "Las 6 Etapas del Viaje del Héroe",
-    "description": "Organizador gráfico de la estructura narrativa y evolución del personaje."
+    "type": "reading_resource",
+    "title": "Recurso de Lectura y Análisis Narrativo",
+    "description": "Organizador y lectura contextualizada del cuento 'El mejor amigo de un muchacho'."
   },
   "summaryText": "Hoy profundizaste en Orden cronológico, saltos temporales (anacronías) y ritmo narrativo con lectura analítica y escritura reflexiva en tu cuaderno.",
   "reasoning": {

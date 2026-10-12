@@ -367,7 +367,7 @@ export function adaptGeneratorLessonToPlayer(
 function resolveInteractiveForDiscipline(
   asignatura: string,
   lessonNum: number
-): { type: 'thermo' | 'number_line' | 'hero_journey' | 'dimensions' | 'timeline' | 'story_arc'; title: string; description?: string } {
+): { type: 'thermo' | 'number_line' | 'hero_journey' | 'dimensions' | 'timeline' | 'story_arc' | 'reading_resource' | 'story_context'; title: string; description?: string } {
   const norm = (asignatura || '').toLowerCase();
 
   if (norm.includes('mat')) {
@@ -387,9 +387,9 @@ function resolveInteractiveForDiscipline(
 
   if (norm.includes('len') || norm.includes('liter')) {
     return {
-      type: 'hero_journey',
-      title: 'Las 6 Etapas del Viaje del Héroe',
-      description: 'Organizador gráfico de la estructura narrativa y evolución del personaje.'
+      type: 'story_context',
+      title: 'Recurso de Lectura y Ambiente Narrativo',
+      description: 'Organizador de lectura comprensiva y análisis del entorno narrativo.'
     };
   }
 

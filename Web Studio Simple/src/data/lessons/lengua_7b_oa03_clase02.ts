@@ -457,9 +457,9 @@ export const LENGUA_7B_OA03_CLASE02: LessonData = {
     ]
   ],
   "interactive": {
-    "type": "hero_journey",
-    "title": "Las 6 Etapas del Viaje del Héroe",
-    "description": "Organizador gráfico de la estructura narrativa y evolución del personaje."
+    "type": "reading_resource",
+    "title": "Recurso de Lectura y Análisis Narrativo",
+    "description": "Organizador y lectura contextualizada del cuento 'El mejor amigo de un muchacho'."
   },
   "summaryText": "Hoy profundizaste en Protagonistas, antagonistas y motivaciones que impulsan las acciones con lectura analítica y escritura reflexiva en tu cuaderno.",
   "reasoning": {

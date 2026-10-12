@@ -1,44 +1,8 @@
 import { LessonData as PlayerLessonData } from '../types/lesson';
 import { GeneratedOAPackage, LessonData as GeneratorLessonData } from './lesson-generator';
 import { adaptGeneratorLessonToPlayer, adaptPlayerLessonToGenerator } from './lesson-adapter';
-import {
-  MATEMATICA_7B_OA01_CLASE01,
-  MATEMATICA_7B_OA01_CLASE02,
-  MATEMATICA_7B_OA01_CLASE03,
-  MATEMATICA_7B_OA01_CLASE04,
-  MATEMATICA_7B_OA01_CLASE05,
-  MATEMATICA_7B_OA01_CLASE06,
-  CIENCIAS_7B_OA01_CLASE01,
-  CIENCIAS_7B_OA01_CLASE02,
-  CIENCIAS_7B_OA01_CLASE03,
-  CIENCIAS_7B_OA01_CLASE04,
-  CIENCIAS_7B_OA01_CLASE05,
-  CIENCIAS_7B_OA01_CLASE06,
-  LENGUA_7B_OA03_CLASE01,
-  LENGUA_7B_OA03_CLASE02,
-  LENGUA_7B_OA03_CLASE03,
-  LENGUA_7B_OA03_CLASE04,
-  LENGUA_7B_OA03_CLASE05,
-  LENGUA_7B_OA03_CLASE06,
-  HISTORIA_7B_OA02_CLASE01,
-  HISTORIA_7B_OA02_CLASE02,
-  HISTORIA_7B_OA02_CLASE03,
-  HISTORIA_7B_OA02_CLASE04,
-  HISTORIA_7B_OA02_CLASE05,
-  HISTORIA_7B_OA02_CLASE06,
-  INGLES_7B_OA09_CLASE01,
-  INGLES_7B_OA09_CLASE02,
-  INGLES_7B_OA09_CLASE03,
-  INGLES_7B_OA09_CLASE04,
-  INGLES_7B_OA09_CLASE05,
-  INGLES_7B_OA09_CLASE06,
-  MATEMATICA_7B_OA04_CLASE01,
-  MATEMATICA_7B_OA04_CLASE02,
-  MATEMATICA_7B_OA04_CLASE03,
-  MATEMATICA_7B_OA04_CLASE04,
-  MATEMATICA_7B_OA04_CLASE05,
-  MATEMATICA_7B_OA04_CLASE06
-} from '../data/lessons';
+import * as ALL_CANONICAL_LESSONS from '../data/lessons';
+
 
 const LOCAL_STORAGE_KEY = 'estudiosimple_injected_lessons';
 const CUSTOM_STORAGE_KEY = 'estudiosimple_custom_lessons';
@@ -61,22 +25,28 @@ export async function initializeInjectedLessons(): Promise<InjectedOAPackage[]> 
   let customPackages: InjectedOAPackage[] = [];
 
   if (typeof window !== 'undefined') {
-    const localData = localStorage.getItem(LOCAL_STORAGE_KEY);
-    if (localData) {
-      try {
-        localPackages = JSON.parse(localData);
-      } catch (e) {
-        console.error('Error al leer paquetes locales de lecciones:', e);
+    // 1. Limpieza preventiva de almacenamiento residual obsoleto
+    try {
+      const localDataRaw = localStorage.getItem(LOCAL_STORAGE_KEY);
+      if (localDataRaw && (localDataRaw.includes('Viaje del Héroe') || localDataRaw.includes('viaje del héroe') || localDataRaw.includes('hero_journey'))) {
+        localStorage.removeItem(LOCAL_STORAGE_KEY);
+      } else if (localDataRaw) {
+        localPackages = JSON.parse(localDataRaw);
       }
-    }
 
-    const customData = localStorage.getItem(CUSTOM_STORAGE_KEY);
-    if (customData) {
-      try {
-        customPackages = JSON.parse(customData);
-      } catch (e) {
-        console.error('Error al leer lecciones personalizadas:', e);
+      const customPlayerDataRaw = localStorage.getItem(CUSTOM_PLAYER_LESSONS_KEY);
+      if (customPlayerDataRaw && (customPlayerDataRaw.includes('Viaje del Héroe') || customPlayerDataRaw.includes('viaje del héroe'))) {
+        const parsedCustom = JSON.parse(customPlayerDataRaw);
+        delete parsedCustom['7_len_oa3_1'];
+        localStorage.setItem(CUSTOM_PLAYER_LESSONS_KEY, JSON.stringify(parsedCustom));
       }
+
+      const customData = localStorage.getItem(CUSTOM_STORAGE_KEY);
+      if (customData) {
+        customPackages = JSON.parse(customData).filter((p: any) => p.isCustomized);
+      }
+    } catch (e) {
+      console.error('Error durante saneamiento de lecciones locales:', e);
     }
   }
 
@@ -88,12 +58,25 @@ export async function initializeInjectedLessons(): Promise<InjectedOAPackage[]> 
     if (res.ok) {
       const remotePackages: InjectedOAPackage[] = await res.json();
       const map = new Map<string, InjectedOAPackage>();
+      
+      // La fuente canónica remota tiene prioridad absoluta sobre la caché local
       remotePackages.forEach((p) => map.set(p.oaId || `${p.curso}_${p.asignatura}_${p.oaCodigo}`, p));
-      localPackages.forEach((p) => map.set(p.oaId || `${p.curso}_${p.asignatura}_${p.oaCodigo}`, p));
+      
+      // Solo modificaciones explícitas de usuario (isCustomized === true) pueden sobreescribir
       customPackages.forEach((p) => {
-        map.set(p.oaId || `${p.curso}_${p.asignatura}_${p.oaCodigo}`, { ...p, isCustomized: true });
+        if (p.isCustomized) {
+          map.set(p.oaId || `${p.curso}_${p.asignatura}_${p.oaCodigo}`, p);
+        }
       });
+      
       cachedInjectedPackages = Array.from(map.values());
+
+      // Actualizar localStorage con la versión canónica limpia
+      if (typeof window !== 'undefined') {
+        try {
+          localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(cachedInjectedPackages));
+        } catch {}
+      }
     } else {
       cachedInjectedPackages = [...localPackages, ...customPackages];
     }
@@ -282,53 +265,17 @@ export function findCanonicalFactoryLesson(
   const keySubj = normalizeSubject(subject);
   const keyOa = normalizeOa(oaCode);
 
-          if ((keyGrade === '7' || keyGrade.includes('7')) && keySubj === 'mat' && (keyOa === 'oa4' || keyOa === 'oa04')) {
-    if (lessonNumber === 1) return MATEMATICA_7B_OA04_CLASE01;
-    if (lessonNumber === 2) return MATEMATICA_7B_OA04_CLASE02;
-    if (lessonNumber === 3) return MATEMATICA_7B_OA04_CLASE03;
-    if (lessonNumber === 4) return MATEMATICA_7B_OA04_CLASE04;
-    if (lessonNumber === 5) return MATEMATICA_7B_OA04_CLASE05;
-    if (lessonNumber === 6) return MATEMATICA_7B_OA04_CLASE06;
-  }
-if ((keyGrade === '7' || keyGrade.includes('7')) && keySubj === 'mat' && keyOa === 'oa1') {
-    if (lessonNumber === 1) return MATEMATICA_7B_OA01_CLASE01;
-    if (lessonNumber === 2) return MATEMATICA_7B_OA01_CLASE02;
-    if (lessonNumber === 3) return MATEMATICA_7B_OA01_CLASE03;
-    if (lessonNumber === 4) return MATEMATICA_7B_OA01_CLASE04;
-    if (lessonNumber === 5) return MATEMATICA_7B_OA01_CLASE05;
-    if (lessonNumber === 6) return MATEMATICA_7B_OA01_CLASE06;
-  }
-  if ((keyGrade === '7' || keyGrade.includes('7')) && keySubj === 'cie' && keyOa === 'oa1') {
-    if (lessonNumber === 1) return CIENCIAS_7B_OA01_CLASE01;
-    if (lessonNumber === 2) return CIENCIAS_7B_OA01_CLASE02;
-    if (lessonNumber === 3) return CIENCIAS_7B_OA01_CLASE03;
-    if (lessonNumber === 4) return CIENCIAS_7B_OA01_CLASE04;
-    if (lessonNumber === 5) return CIENCIAS_7B_OA01_CLASE05;
-    if (lessonNumber === 6) return CIENCIAS_7B_OA01_CLASE06;
-  }
-  if ((keyGrade === '7' || keyGrade.includes('7')) && keySubj === 'len' && (keyOa === 'oa3' || keyOa === 'oa03')) {
-    if (lessonNumber === 1) return LENGUA_7B_OA03_CLASE01;
-    if (lessonNumber === 2) return LENGUA_7B_OA03_CLASE02;
-    if (lessonNumber === 3) return LENGUA_7B_OA03_CLASE03;
-    if (lessonNumber === 4) return LENGUA_7B_OA03_CLASE04;
-    if (lessonNumber === 5) return LENGUA_7B_OA03_CLASE05;
-    if (lessonNumber === 6) return LENGUA_7B_OA03_CLASE06;
-  }
-  if ((keyGrade === '7' || keyGrade.includes('7')) && keySubj === 'his' && (keyOa === 'oa2' || keyOa === 'oa02')) {
-    if (lessonNumber === 1) return HISTORIA_7B_OA02_CLASE01;
-    if (lessonNumber === 2) return HISTORIA_7B_OA02_CLASE02;
-    if (lessonNumber === 3) return HISTORIA_7B_OA02_CLASE03;
-    if (lessonNumber === 4) return HISTORIA_7B_OA02_CLASE04;
-    if (lessonNumber === 5) return HISTORIA_7B_OA02_CLASE05;
-    if (lessonNumber === 6) return HISTORIA_7B_OA02_CLASE06;
-  }
-  if ((keyGrade === '7' || keyGrade.includes('7')) && keySubj === 'ing' && (keyOa === 'oa9' || keyOa === 'oa09')) {
-    if (lessonNumber === 1) return INGLES_7B_OA09_CLASE01;
-    if (lessonNumber === 2) return INGLES_7B_OA09_CLASE02;
-    if (lessonNumber === 3) return INGLES_7B_OA09_CLASE03;
-    if (lessonNumber === 4) return INGLES_7B_OA09_CLASE04;
-    if (lessonNumber === 5) return INGLES_7B_OA09_CLASE05;
-    if (lessonNumber === 6) return INGLES_7B_OA09_CLASE06;
+  const allLessons = Object.values(ALL_CANONICAL_LESSONS) as PlayerLessonData[];
+  for (const l of allLessons) {
+    if (!l?.metadata) continue;
+    if (
+      normalizeGrade(l.metadata.grade) === keyGrade &&
+      normalizeSubject(l.metadata.subject) === keySubj &&
+      normalizeOa(l.metadata.oaCode) === keyOa &&
+      l.metadata.lessonNumber === lessonNumber
+    ) {
+      return l;
+    }
   }
   return null;
 }
@@ -428,7 +375,11 @@ export function findInjectedLesson(
   const keyOa = normalizeOa(oaCode);
   const customKey = `${keyGrade}_${keySubj}_${keyOa}_${lessonNumber}`;
 
-  // 1. REGLA PRIORITARIA: Versión personalizada guardada por el usuario en localStorage
+  // 1. Sobrescrituras manuales curadas de alta fidelidad de fábrica (Prioridad oficial canónica)
+  const canonical = findCanonicalFactoryLesson(grade, subject, oaCode, lessonNumber);
+  if (canonical) return canonical;
+
+  // 2. Versión personalizada guardada por el usuario en localStorage
   if (typeof window !== 'undefined') {
     try {
       const raw = localStorage.getItem(CUSTOM_PLAYER_LESSONS_KEY);
@@ -443,7 +394,7 @@ export function findInjectedLesson(
     }
   }
 
-  // Compatibilidad con almacenamiento anterior
+  // 3. Compatibilidad con almacenamiento anterior
   const customPkg = cachedInjectedPackages.find((p) => {
     if (!p.isCustomized) return false;
     return (
@@ -466,10 +417,6 @@ export function findInjectedLesson(
       );
     }
   }
-
-  // 2. Sobrescrituras manuales curadas de alta fidelidad de fábrica
-  const canonical = findCanonicalFactoryLesson(grade, subject, oaCode, lessonNumber);
-  if (canonical) return canonical;
 
   // 3. Fallback canónico en los paquetes inyectados o generados
   const foundPkg = cachedInjectedPackages.find((p) => {

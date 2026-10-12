@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "sync:lessons": "npx tsx ../scripts/pipeline_sync_lessons.ts"
   },
   "dependencies": {
     "docx": "^9.7.1",

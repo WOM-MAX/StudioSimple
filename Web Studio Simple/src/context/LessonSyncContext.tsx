@@ -122,9 +122,17 @@ export const LessonSyncProvider: React.FC<{
           const parsed = JSON.parse(saved);
           if (
             parsed.activeOa === initialLesson.metadata.oaCode &&
-            parsed.activeLessonNum === initialLesson.metadata.lessonNumber
+            parsed.activeLessonNum === initialLesson.metadata.lessonNumber &&
+            parsed.activeLessonTitle === initialLesson.metadata.lessonTitle
           ) {
-            return { ...INITIAL_LESSON_SESSION, ...parsed };
+            return {
+              ...INITIAL_LESSON_SESSION,
+              ...parsed,
+              activeLessonTitle: initialLesson.metadata.lessonTitle
+            };
+          } else {
+            // Invalida sesión residual de otra lección o versión anterior
+            localStorage.removeItem(STORAGE_KEY);
           }
         }
       } catch (e) {
@@ -134,7 +142,8 @@ export const LessonSyncProvider: React.FC<{
     return {
       ...INITIAL_LESSON_SESSION,
       activeOa: initialLesson.metadata.oaCode,
-      activeLessonNum: initialLesson.metadata.lessonNumber
+      activeLessonNum: initialLesson.metadata.lessonNumber,
+      activeLessonTitle: initialLesson.metadata.lessonTitle
     };
   });
 
@@ -356,16 +365,18 @@ export const LessonSyncProvider: React.FC<{
     }
   }, [peerRoleConnected, isStudentRole]);
 
-  // Reiniciar estado si cambia la lección activa
+  // Reiniciar estado si cambia la lección activa o su título
   useEffect(() => {
-    if (
-      session.activeOa !== initialLesson.metadata.oaCode ||
-      session.activeLessonNum !== initialLesson.metadata.lessonNumber
-    ) {
-      const cleanSession: LessonSessionState = {
+    const isDifferentOa = session.activeOa !== initialLesson.metadata.oaCode;
+    const isDifferentNum = session.activeLessonNum !== initialLesson.metadata.lessonNumber;
+    const isDifferentTitle = (session as any).activeLessonTitle && (session as any).activeLessonTitle !== initialLesson.metadata.lessonTitle;
+
+    if (isDifferentOa || isDifferentNum || isDifferentTitle) {
+      const cleanSession: LessonSessionState & { activeLessonTitle?: string } = {
         ...INITIAL_LESSON_SESSION,
         activeOa: initialLesson.metadata.oaCode,
-        activeLessonNum: initialLesson.metadata.lessonNumber
+        activeLessonNum: initialLesson.metadata.lessonNumber,
+        activeLessonTitle: initialLesson.metadata.lessonTitle
       };
       setSessionState(cleanSession);
       try {
@@ -376,7 +387,7 @@ export const LessonSyncProvider: React.FC<{
       }
       postSyncToServer(cleanSession, true, true);
     }
-  }, [initialLesson.metadata.oaCode, initialLesson.metadata.lessonNumber, session.activeOa, session.activeLessonNum, postSyncToServer]);
+  }, [initialLesson.metadata.oaCode, initialLesson.metadata.lessonNumber, initialLesson.metadata.lessonTitle, session.activeOa, session.activeLessonNum, postSyncToServer]);
 
   const updateSession = useCallback((patch: Partial<LessonSessionState> | ((prev: LessonSessionState) => LessonSessionState)) => {
     setSessionState((prev) => {
@@ -395,10 +406,11 @@ export const LessonSyncProvider: React.FC<{
   }, [postSyncToServer]);
 
   const resetSession = useCallback(() => {
-    const cleanSession: LessonSessionState = {
+    const cleanSession: LessonSessionState & { activeLessonTitle?: string } = {
       ...INITIAL_LESSON_SESSION,
       activeOa: initialLesson.metadata.oaCode,
       activeLessonNum: initialLesson.metadata.lessonNumber,
+      activeLessonTitle: initialLesson.metadata.lessonTitle,
       studentConnected: peerRoleConnected
     };
     setSessionState(cleanSession);

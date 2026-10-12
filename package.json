@@ -8,6 +8,7 @@
     "build": "npm run build --prefix \"Web Studio Simple\"",
     "start": "node server.js",
     "preview": "npm run preview --prefix \"Web Studio Simple\"",
+    "sync:lessons": "npx tsx scripts/pipeline_sync_lessons.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

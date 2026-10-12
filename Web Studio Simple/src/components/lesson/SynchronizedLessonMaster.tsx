@@ -107,8 +107,8 @@ export const SynchronizedLessonMaster: React.FC<{ lessonData?: LessonData }> = (
     return injected || MATEMATICA_7B_OA01_CLASE01;
   }, [lessonData]);
 
-  // Dynamic key ensures that changing lessonData or its videoSrc completely resets and re-renders the Provider
-  const syncKey = `${resolvedLesson.metadata.grade}_${resolvedLesson.metadata.subject}_${resolvedLesson.metadata.oaCode}_${resolvedLesson.metadata.lessonNumber}_${resolvedLesson.hook.videoSrc || 'nohook'}_${resolvedLesson.formalization.videoSrc || 'noformal'}`;
+  // Dynamic key ensures that changing lessonData, its title or its videoSrc completely resets and re-renders the Provider
+  const syncKey = `${resolvedLesson.metadata.grade}_${resolvedLesson.metadata.subject}_${resolvedLesson.metadata.oaCode}_${resolvedLesson.metadata.lessonNumber}_${resolvedLesson.metadata.lessonTitle}_${resolvedLesson.hook.videoSrc || 'nohook'}_${resolvedLesson.formalization.videoSrc || 'noformal'}`;
 
   return (
     <LessonSyncProvider
