@@ -11,7 +11,7 @@ Para maximizar la agilidad, evitar ejecuciones intempestivas que demoren la resp
    - **OBJETIVO Y ENTREGABLE MANDATORIO:**
      1. Analisis objetivo del requerimiento o estado con evidencia verificable.
      2. Plan de accion estructurado y jerarquizado por prioridad tecnica.
-     3. **PROMPT CANONICO `/goal` LISTO PARA EJECUTAR (OBLIGATORIO, NO OPCIONAL):** La finalidad expresa de este modo es formular y entregar el bloque canonico `/goal` con las directivas de autonomia, rutas exactas y Definition of Done (DoD) para que el usuario solo tenga que activarlo cuando decida.
+     3. **PROMPT CANONICO `/goal` LISTO PARA EJECUTAR (OBLIGATORIO, NO OPCIONAL):** La finalidad expresa de este modo es formular y entregar el bloque canonico `/goal` con las directivas de autonomia, rutas exactas y Definition of Done (DoD), finalizando obligatoriamente al final con la frase: `haz todo con total autonomía.` para asegurar la activación inmediata del Modo de Ejecución Directa.
 
 2. **Modo Ejecucion Directa (Disparadores: comando `/goal`, "ejecuta", "aplica", "haz push", "haz pull", y toda la familia lexica de "autonoma", "autónoma", "autonomo", "autónomo", "autonomia", "autonomía", "de forma autonoma", "de forma autónoma", "con autonomia", "con autonomía", "autonomamente", "autónomamente"):**
    - Cuando el usuario envie un comando que inicie con `/goal`, dé una orden imperativa directa de ejecucion, o mencione cualquier derivado de la palabra **autonomia / autonoma / autonomo**:
@@ -122,4 +122,5 @@ CRITERIOS DE ACEPTACION Y DEFINITION OF DONE (DoD):
 3. Verificacion de integridad y comportamiento del flujo segun especificaciones.
 4. Documentar los cambios en memoria/ si corresponde.
 5. Entregar el informe de resultados en un unico mensaje final al terminar todo el flujo.
+Haz todo con total autonomía.
 ```

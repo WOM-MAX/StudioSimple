@@ -134,7 +134,7 @@ El entregable y criterios de **Salida** son: Cumplimiento estricto del protocolo
      - El objetivo MANDATORIO de este modo es entregar el diagnóstico objetivo con evidencia, el plan de acción estructurado y el bloque canónico `/goal`.
      - **PROHIBIDO** iniciar mutaciones de código, modificar archivos o ejecutar compilaciones pesadas en este modo.
      - **PROHIBIDO TERMINAR CON PREGUNTAS PASIVAS DE CIERRE:** Queda estrictamente prohibido finalizar respuestas con preguntas abiertas o de delegación tipo "¿con cuál empezamos?", "¿cómo procedemos?" o "¿te parece bien el plan?".
-     - El bloque `/goal` es **OBLIGATORIO** (no opcional), formulado con las 12 directivas de autonomía para que el usuario pueda revisarlo y detonarlo cuando decida.
+     - El bloque `/goal` es **OBLIGATORIO** (no opcional), formulado con las 12 directivas de autonomía y finalizando siempre obligatoriamente con la frase de activación al final: `haz todo con total autonomía.` para asegurar la ejecución directa sin pausas ni interrupciones.
   2. **Modo Ejecución Directa (Disparadores: comando `/goal`, "ejecuta", "aplica", "haz push", "haz pull", y toda la familia léxica de "autónoma", "autonoma", "autónomo", "autonomo", "autonomía", "autonomia", "de forma autónoma", "con autonomía", "autónomamente", "autonomamente"):**
      - Toda presencia explícita de la palabra **autonomía / autónoma / autónomo** o sus derivados gramaticales instruye al agente a operar bajo **Ejecución Directa de Principio a Fin**.
      - Ejecución autónoma de principio a fin, sin pausas, sin preguntas intermedias, sin delegaciones de decisión al usuario y sin emitir prompts intermediarios, concluyendo con validación técnica (código 0), bitácora y reporte final integral.

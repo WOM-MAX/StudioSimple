@@ -5,49 +5,46 @@ export const LENGUA_7B_OA03_CLASE04: LessonData = {
     "grade": "7° Básico",
     "subject": "Lengua y Literatura",
     "oaCode": "OA 3",
-    "oaTitle": "Lectura",
+    "oaTitle": "Análisis de narraciones: conflicto, personajes y ambiente",
     "lessonNumber": 4,
     "totalLessonsInOa": 6,
-    "lessonTitle": "Disposición temporal de los acontecimientos",
+    "lessonTitle": "La voz del narrador y los personajes",
     "durationMinutes": 30,
-    "nextLessonTitle": "Práctica avanzada y modelamiento de OA 3 (Parte 1)"
+    "nextLessonTitle": "El orden de los hechos y el recuerdo"
   },
   "prep": {
-    "adultObjective": "Acompañar la lectura comprensiva e interpretativa de: Disposición temporal de los acontecimientos, guiando al estudiante a inferir sentidos profundos en torno a 'Disposición temporal' y dialogar sobre la obra.",
-    "routeToday": "1. Inicio y activación · 2. Video de exploración · 3. Recorrido guiado · 4. Formalización y práctica en cuaderno · 5. Miniquiz y REVISAR · 6. Cierre metacognitivo",
-    "mentorReminder": "Sigue las indicaciones en pantalla paso a paso. Lee únicamente los recuadros DILE en voz alta y espera siempre la respuesta.",
+    "adultObjective": "Distinguir quién cuenta las acciones y quién habla en los diálogos del relato, usando señales del fragmento.",
+    "routeToday": "Leer el recurso → localizar pistas → explicar → practicar → comprobar comprensión.",
+    "mentorReminder": "Lee el recurso con el estudiante antes de preguntar. Guía usando DILE y PREGÚNTALE. Mantén las respuestas de referencia privadas hasta que el estudiante intente responder.",
     "reminders": [
-      "Sigue el orden indicado.",
-      "Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.",
-      "No leas los recuadros SOLO PARA TI ni AYUDA DE LECTURA.",
-      "Haz cada pregunta y espera la respuesta antes de seleccionar una opción.",
-      "Considera correcta una respuesta si expresa la idea matemática, aunque use palabras distintas.",
-      "Si el estudiante necesita apoyo, usa únicamente la ayuda que aparecerá.",
-      "Si propone otra explicación o no está de acuerdo, escúchalo completo y valora su razonamiento antes de guiarlo."
+      "Lee el recurso con el estudiante antes de preguntar.",
+      "Guía usando los recuadros DILE y PREGÚNTALE.",
+      "Mantén las respuestas de referencia privadas hasta que el estudiante intente responder.",
+      "Acepta respuestas en palabras propias siempre que se fundamenten con pistas del texto."
     ],
-    "emotionalTip": "Estimula la voz propia: 'En literatura tu interpretación es valiosa siempre que encuentres pistas en el texto que la respalden'."
+    "emotionalTip": "Distingue con paciencia las voces del relato: separar la voz del narrador de las intervenciones de los personajes agudiza la comprensión sin presiones."
   },
   "route": {
     "blocks": [
       {
         "id": "b1",
         "number": "01",
-        "title": "Lengua y Literatura",
-        "subtitle": "Disposición temporal de los acontecimientos",
+        "title": "Lectura activa",
+        "subtitle": "Leer el recurso y ubicar pistas",
         "color": "orange"
       },
       {
         "id": "b2",
         "number": "02",
         "title": "Exploración",
-        "subtitle": "Gancho y Recorrido Guiado",
-        "color": "orange"
+        "subtitle": "Videos y conversación guiada",
+        "color": "teal"
       },
       {
         "id": "b3",
         "number": "03",
-        "title": "Práctica",
-        "subtitle": "Aplicación en situaciones reales",
+        "title": "Modelamiento",
+        "subtitle": "Explicación y práctica en cuaderno",
         "color": "yellow"
       },
       {
@@ -55,475 +52,404 @@ export const LENGUA_7B_OA03_CLASE04: LessonData = {
         "number": "04",
         "title": "Evaluación",
         "subtitle": "Miniquiz formativo y síntesis",
-        "color": "teal"
+        "color": "navy"
       }
     ],
     "keyQuestions": [
       {
-        "label": "Exploración inicial",
-        "sub": "Disposición temporal de los acontecimientos"
+        "label": "Pregunta Clave 1",
+        "sub": "¿Qué parte corresponde al narrador y qué parte a Jimmy?"
       },
       {
-        "label": "Idea clave",
-        "sub": "En Disposición temporal de los acontecimientos, el autor uti"
-      },
-      {
-        "label": "Práctica y aplicación",
-        "sub": "Resolución guiada paso a paso"
+        "label": "Pregunta Clave 2",
+        "sub": "¿Qué señal permite atribuir esas palabras a Jimmy?"
       }
     ],
-    "dileIntro": "Hoy comenzaremos la clase 4 de Lengua y Literatura: \"Disposición temporal de los acontecimientos\".",
-    "dileObjective": "Orden cronológico, saltos temporales (anacronías) y ritmo narrativo"
+    "dileIntro": "Distinguir quién cuenta las acciones y quién habla en los diálogos del relato, usando señales del fragmento.",
+    "dileObjective": "Al terminar, podrás distinguir quién cuenta las acciones y quién habla en los diálogos del relato, usando señales del fragmento."
   },
   "situation": {
-    "dilePrompt": "Hoy en Lengua y Literatura nos sumergimos en 'Disposición temporal de los acontecimientos'. El concepto literario clave que exploraremos es 'Disposición temporal'. Observa el fragmento o situación inicial en la pantalla sobre Orden cronológico, saltos temporales (anacronías) y ritmo narrativo:",
-    "expectedAnswer": "Identificar el tema central, conflicto del personaje o recurso literario vinculado con Disposición temporal.",
-    "socraticHint": "Pídele que relea la primera frase y se fije en cómo se siente el protagonista o qué tono tiene el narrador.",
-    "emotionalTip": "Estimula la voz propia: 'En literatura tu interpretación es valiosa siempre que encuentres pistas en el texto que la respalden'.",
+    "dilePrompt": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",
+    "expectedAnswer": "Jimmy frunció el ceño corresponde al narrador. La intervención que comienza con Robutt no es una imitación corresponde a Jimmy.",
+    "socraticHint": "¿Eso aparece en el recurso o lo estás anticipando a partir del título?",
+    "emotionalTip": "Distingue con paciencia las voces del relato: separar la voz del narrador de las intervenciones de los personajes agudiza la comprensión sin presiones.",
     "options": [
       {
-        "label": "Identificó el conflicto central y lo vinculó con Disposición temporal",
+        "label": "Formuló una anticipación lógica basada en el título y el contexto",
         "kind": "correct",
-        "feedbackText": "¡Excelente intuición lectora! Reconoció el dilema humano y el sentido de la situación."
+        "feedbackText": "¡Excelente! Planteaste una anticipación fundamentada."
       },
       {
-        "label": "Repitió palabras del texto sin interpretar lo que sienten los personajes",
+        "label": "Mencionó ideas sueltas sin conectar con la situación del relato",
         "kind": "needs_support",
-        "feedbackText": "Pregúntale qué emoción transmite el personaje: ¿por qué actúa de esa forma?"
+        "feedbackText": "Observa el título: ¿qué palabras te dan pistas de lo que ocurrirá?"
+      },
+      {
+        "label": "Requiere apoyo inicial o no sabe qué anticipar",
+        "kind": "no_answer",
+        "feedbackText": "Leamos juntos el título: ¿de qué imaginas que tratará?"
       }
     ]
   },
+  "interactive": {
+    "type": "reading_resource",
+    "title": "La voz del narrador y los personajes",
+    "readingText": "Fragmento del cuento de Isaac Asimov:\n\nJimmy frunció el ceño.\n—Robutt no es una imitación, papi. Es mi perro.\n—No es un perro de verdad, Jimmy. Robutt tiene un cerebro positrónico muy sencillo y está hecho de acero y circuitos. No está vivo.\n\nEn otro momento del diálogo:\n—¿Y qué diferencia hay entre Robutt y el perro? —preguntó Jimmy.\n—Es difícil de explicar —dijo el señor Anderson—, pero lo comprenderás en cuanto lo veas.\n\nEl fragmento alterna la narración de acciones con las intervenciones de Jimmy y de su padre.",
+    "paragraphs": [
+      "Fragmento del cuento de Isaac Asimov:",
+      "Jimmy frunció el ceño.\n—Robutt no es una imitación, papi. Es mi perro.\n—No es un perro de verdad, Jimmy. Robutt tiene un cerebro positrónico muy sencillo y está hecho de acero y circuitos. No está vivo.",
+      "En otro momento del diálogo:\n—¿Y qué diferencia hay entre Robutt y el perro? —preguntó Jimmy.\n—Es difícil de explicar —dijo el señor Anderson—, pero lo comprenderás en cuanto lo veas.",
+      "El fragmento alterna la narración de acciones con las intervenciones de Jimmy y de su padre."
+    ],
+    "imageSrc": "/images/lessons/lengua_7b_oa03_clase04_recurso.jpg"
+  },
   "reference": {
-    "dilePrompt": "¿Qué conflicto, dilema humano o recurso expresivo identificas en este texto en relación con 'Disposición temporal'?",
-    "question": "¿Qué conflicto, dilema humano o recurso expresivo identificas en este texto en relación con 'Disposición temporal'?",
-    "expectedAnswer": "Identificar el tema central, conflicto del personaje o recurso literario vinculado con Disposición temporal.",
-    "socraticHint": "Pídele que relea la primera frase y se fije en cómo se siente el protagonista o qué tono tiene el narrador.",
-    "feedbackSuccess": "Muy bien. Observaste el detalle central con precisión.",
-    "feedbackSupport": "Pídele que relea la primera frase y se fije en cómo se siente el protagonista o qué tono tiene el narrador."
+    "dilePrompt": "¿Qué parte corresponde al narrador y qué parte a Jimmy?",
+    "question": "¿Qué parte corresponde al narrador y qué parte a Jimmy?",
+    "expectedAnswer": "Jimmy frunció el ceño corresponde al narrador. La intervención que comienza con Robutt no es una imitación corresponde a Jimmy.",
+    "socraticHint": "Vuelve al recurso de lectura en pantalla y localiza la pista clave.",
+    "feedbackSuccess": "¡Excelente! Usaste información del recurso para fundamentar tu respuesta.",
+    "feedbackSupport": "Vuelve a leer el recurso en pantalla y busca la acción concreta que responde a la pregunta."
   },
   "hook": {
-    "title": "Video Motivacional: El Desafío de Disposición temporal de los acontecimientos",
-    "titulo": "Video Motivacional: El Desafío de Disposición temporal de los acontecimientos",
-    "focusPoints": [],
-    "dileIntro": "Antes de ver el video, observa con atención lo que descubren los dos exploradores y qué pregunta queda planteada.",
-    "hazInstruction": "Observa y reflexiona con las escenas del desafío visual.",
+    "title": "La voz del narrador y los personajes",
+    "dileIntro": "Hoy exploraremos la voz del narrador y los personajes.",
+    "hazInstruction": "Observa cada una de las 14 láminas y sigue la locución.",
     "videoSrc": "",
-    "videoUrl": "",
-    "posterSrc": "",
-    "dileAfterVideo": "Muy buena observación. Ahora conversaremos sobre lo que descubrieron en la expedición.",
-    "fullPrompt": "Actúa como Diseñador Instruccional Senior y Creador de Presentaciones en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de GANCHO MOTIVACIONAL (Paso 2) para:\n- Asignatura: Lengua y Literatura\n- Objetivo de Aprendizaje: OA 3\n- Clase: 4 (\"Disposición temporal de los acontecimientos\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS (PLAN MAESTRO ACTUALIZACIÓN 29-09-2026):\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Exactamente 7 diapositivas (slide1 a slide7).\n3. ESTILO ARTÍSTICO DE LAS IMÁGENES: Anime Moderno (Modern Anime Style, cinematográfico, iluminación dinámica, fondos limpios con espacio negativo real).\n4. PROTAGONISTAS FIJOS: Dúo co-protagónico de 13 años (la joven y el joven estudiantes-exploradores chilenos). ACTÚAN JUNTOS en cada escena, colaborando y resolviendo el desafío en equipo.\n5. REGLA VISUAL ANTI-MÁSCARAS Y FONDOS LIMPIOS: Imágenes Full-Bleed con espacio negativo para texto y vectores. Queda prohibido usar placas oscuras que tapen las caras de los personajes o la mitad de la lámina. PROHIBIDO dibujar números, letras o fórmulas dentro de la ilustración generada por IA.\n6. PRESUPUESTO TEMPORAL Y GUION CONTINUO (GANCHO - 60 SEGUNDOS / 130 PALABRAS TOTALES): Cada diapositiva DEBE incluir únicamente el texto de narración oral continua (8+8+8+9+9+9+9 segundos, totalizando exactamente ~130 palabras para 60 segundos de locución a 130 palabras por minuto en Google Vids/TTS), sin marcas técnicas, encabezados ni duraciones, listo para ser leído por voz en off.\n7. PROTOCOLO DE COMPROBACIÓN ACÚSTICA OBLIGATORIA (GOOGLE VIDS): Medir la duración real del archivo exportado con cronómetro o analizador de audio. El conteo de palabras no garantiza por sí solo 60 segundos exactos. Si la duración no es exacta, ajustar narración, pausas o ritmo, volver a exportar y registrar la duración comprobada oficial.\n8. ESTRUCTURA HEXAPARTITA POR DIAPOSITIVA:\n   • Toda diapositiva se define con: 1) Propósito, 2) Título en Pantalla (64 pt), 3) Subtítulo en Pantalla (36 pt), 4) Prompt de imagen IA sin texto, 5) Capa vectorial para PowerPoint, y 6) Notas al orador continuas.\n   • COLOR DE TEXTO: Un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.\n   • LOCUCIÓN COHERENTE: Narra con precisión lo que se observa en la imagen y lo que se sintetiza en la pantalla.\n\nDETALLE DE LAS 7 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Apertura y Contexto) ---\n1. Propósito Didáctico: Apertura y Contexto\n2. Título en Pantalla (64 pt): Misión 4: Disposición temporal de los acontecimientos\n3. Subtítulo en Pantalla (36 pt): Exploración inicial en Lengua y Literatura\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Disposición temporal de los acontecimientos (Lengua y Literatura). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Mapa Visual: Situacion narrativa inicial de Disposición temporal de los acontecimientos\n6. Notas al Orador (Locución Continua Google Vids): \"Comienza una nueva expedición de aprendizaje en Lengua y Literatura. Nuestros dos exploradores analizan el desafío de Disposición temporal de los acontecimientos para descubrir sus secretos.\"\n\n--- DIAPOSITIVA 2 (Presentación del Escenario) ---\n1. Propósito Didáctico: Presentación del Escenario\n2. Título en Pantalla (64 pt): Punto de partida\n3. Subtítulo en Pantalla (36 pt): Orden cronológico, saltos temporales (anacronías) y ritmo narrativo\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Orden cronológico, saltos temporales (anacronías) y ritmo narrativo. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Orden cronológico, saltos temporales (anacronías) y ritmo narrativo\n6. Notas al Orador (Locución Continua Google Vids): \"Al observar los datos sobre Orden cronológico, saltos temporales (anacronías) y ritmo narrativo, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor.\"\n\n--- DIAPOSITIVA 3 (Aparición del Conflicto / Misterio) ---\n1. Propósito Didáctico: Aparición del Conflicto / Misterio\n2. Título en Pantalla (64 pt): El enigma disciplinar\n3. Subtítulo en Pantalla (36 pt): Desafío en Disposición temporal de los acontecimientos\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Orden cronológico, saltos temporales (anacronías) y ritmo narrativo\n6. Notas al Orador (Locución Continua Google Vids): \"Surge un reto concreto sobre Disposición temporal de los acontecimientos: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso.\"\n\n--- DIAPOSITIVA 4 (Exploración de Pistas) ---\n1. Propósito Didáctico: Exploración de Pistas\n2. Título en Pantalla (64 pt): Análisis de evidencias\n3. Subtítulo en Pantalla (36 pt): Orden cronológico, saltos temporales (anacronías) y ritmo narrativo\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Orden cronológico, saltos temporales (anacronías) y ritmo narrativo\n6. Notas al Orador (Locución Continua Google Vids): \"Ambos comparan las pistas disponibles sobre Orden cronológico, saltos temporales (anacronías) y ritmo narrativo. Cada dato confirma cómo interactúan los elementos clave de la situación.\"\n\n--- DIAPOSITIVA 5 (El Momento Crítico) ---\n1. Propósito Didáctico: El Momento Crítico\n2. Título en Pantalla (64 pt): Criterio de decisión\n3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Orden cronológico, saltos temporales (anacronías) y ritmo narrativo\n6. Notas al Orador (Locución Continua Google Vids): \"Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Disposición temporal de los acontecimientos con total precisión metodológica.\"\n\n--- DIAPOSITIVA 6 (La Antesala de la Pregunta) ---\n1. Propósito Didáctico: La Antesala de la Pregunta\n2. Título en Pantalla (64 pt): El dilema central\n3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Disposición temporal de los acontecimientos?\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Tension dramatica: Conflicto entre fuerzas del relato\n6. Notas al Orador (Locución Continua Google Vids): \"Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje.\"\n\n--- DIAPOSITIVA 7 (La Pregunta Detonante) ---\n1. Propósito Didáctico: La Pregunta Detonante\n2. Título en Pantalla (64 pt): Pregunta detonante\n3. Subtítulo en Pantalla (36 pt): Regla y método de Disposición temporal de los acontecimientos\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta detonante: ¿Cual es el motor de la historia en Disposición temporal de los acontecimientos?\n6. Notas al Orador (Locución Continua Google Vids): \"Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!\"\n\n",
+    "dileAfterVideo": "Conversemos sobre los detalles y evidencias que acabas de observar.",
     "slides": [
       {
         "slideNumber": 1,
-        "tituloMomento": "Apertura y Contexto",
-        "didacticPurpose": "Apertura y Contexto",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Disposición temporal de los acontecimientos (Lengua y Literatura). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.",
-        "overlayTitle": "Misión 4: Disposición temporal de los acontecimientos",
-        "overlaySubtitle": "Exploración inicial en Lengua y Literatura",
-        "overlayText": "Misión 4: Disposición temporal de los acontecimientos",
-        "vectorialOverlayPptx": "Mapa Visual: Situacion narrativa inicial de Disposición temporal de los acontecimientos",
-        "mathOverlayPptx": "Mapa Visual: Situacion narrativa inicial de Disposición temporal de los acontecimientos",
-        "speakerNotes": "Comienza una nueva expedición de aprendizaje en Lengua y Literatura. Nuestros dos exploradores analizan el desafío de Disposición temporal de los acontecimientos para descubrir sus secretos.",
-        "palabrasAprox": 21,
-        "duracionSeg": 9
+        "tituloMomento": "Objetivo de la lección",
+        "didacticPurpose": "Objetivo de la lección",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers analyzing La voz del narrador y los personajes in Lengua y Literatura. Setting: Objetivo de la lección. Cinematic lighting, clean composition, clear negative space. No text drawn by AI.",
+        "overlayText": "La voz del narrador y los personajes",
+        "overlayTitle": "La voz del narrador y los personajes",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "La voz del narrador y los personajes",
+        "speakerNotes": "Hoy exploraremos la voz del narrador y los personajes."
       },
       {
         "slideNumber": 2,
-        "tituloMomento": "Presentación del Escenario",
-        "didacticPurpose": "Presentación del Escenario",
-        "visualPrompt": "Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Orden cronológico, saltos temporales (anacronías) y ritmo narrativo. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.",
-        "overlayTitle": "Punto de partida",
-        "overlaySubtitle": "Orden cronológico, saltos temporales (anacronías) y ritmo narrativo",
-        "overlayText": "Punto de partida: Orden cronológico, saltos temporales (anacronías) y ritmo narrativo",
-        "vectorialOverlayPptx": "Esquema de analisis: Texto fuente y pistas de Orden cronológico, saltos temporales (anacronías) y ritmo narrativo",
-        "mathOverlayPptx": "Esquema de analisis: Texto fuente y pistas de Orden cronológico, saltos temporales (anacronías) y ritmo narrativo",
-        "speakerNotes": "Al observar los datos sobre Orden cronológico, saltos temporales (anacronías) y ritmo narrativo, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor.",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        "tituloMomento": "Una situación",
+        "didacticPurpose": "Una situación",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers analyzing La voz del narrador y los personajes in Lengua y Literatura. Setting: Una situación. Cinematic lighting, clean composition, clear negative space. No text drawn by AI.",
+        "overlayText": "Jimmy frunció el ceño.",
+        "overlayTitle": "Jimmy frunció el ceño.",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Jimmy frunció el ceño.",
+        "speakerNotes": "Jimmy frunció el ceño."
       },
       {
         "slideNumber": 3,
-        "tituloMomento": "Aparición del Conflicto / Misterio",
-        "didacticPurpose": "Aparición del Conflicto / Misterio",
-        "visualPrompt": "Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.",
-        "overlayTitle": "El enigma disciplinar",
-        "overlaySubtitle": "Desafío en Disposición temporal de los acontecimientos",
-        "overlayText": "El enigma disciplinar: Disposición temporal de los acontecimientos",
-        "vectorialOverlayPptx": "Esquema de analisis: Texto fuente y pistas de Orden cronológico, saltos temporales (anacronías) y ritmo narrativo",
-        "mathOverlayPptx": "Esquema de analisis: Texto fuente y pistas de Orden cronológico, saltos temporales (anacronías) y ritmo narrativo",
-        "speakerNotes": "Surge un reto concreto sobre Disposición temporal de los acontecimientos: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        "tituloMomento": "Una pregunta",
+        "didacticPurpose": "Una pregunta",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers analyzing La voz del narrador y los personajes in Lengua y Literatura. Setting: Una pregunta. Cinematic lighting, clean composition, clear negative space. No text drawn by AI.",
+        "overlayText": "¿Qué parte corresponde al narrador y qué parte a Jimmy?",
+        "overlayTitle": "¿Qué parte corresponde al narrador y qué parte a Jimmy?",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "¿Qué parte corresponde al narrador y qué parte a Jimmy?",
+        "speakerNotes": "¿Qué parte corresponde al narrador y qué parte a Jimmy?"
       },
       {
         "slideNumber": 4,
-        "tituloMomento": "Exploración de Pistas",
-        "didacticPurpose": "Exploración de Pistas",
-        "visualPrompt": "Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.",
-        "overlayTitle": "Análisis de evidencias",
-        "overlaySubtitle": "Orden cronológico, saltos temporales (anacronías) y ritmo narrativo",
-        "overlayText": "Análisis de evidencias: Orden cronológico, saltos temporales (anacronías) y ritmo narrativo",
-        "vectorialOverlayPptx": "Esquema de analisis: Texto fuente y pistas de Orden cronológico, saltos temporales (anacronías) y ritmo narrativo",
-        "mathOverlayPptx": "Esquema de analisis: Texto fuente y pistas de Orden cronológico, saltos temporales (anacronías) y ritmo narrativo",
-        "speakerNotes": "Ambos comparan las pistas disponibles sobre Orden cronológico, saltos temporales (anacronías) y ritmo narrativo. Cada dato confirma cómo interactúan los elementos clave de la situación.",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        "tituloMomento": "Pistas para observar",
+        "didacticPurpose": "Pistas para observar",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers analyzing La voz del narrador y los personajes in Lengua y Literatura. Setting: Pistas para observar. Cinematic lighting, clean composition, clear negative space. No text drawn by AI.",
+        "overlayText": "Las acciones y los detalles importan",
+        "overlayTitle": "Las acciones y los detalles importan",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Las acciones y los detalles importan",
+        "speakerNotes": "Observa la situación. ¿Qué detalle podría ayudarte a responder?"
       },
       {
         "slideNumber": 5,
-        "tituloMomento": "El Momento Crítico",
-        "didacticPurpose": "El Momento Crítico",
-        "visualPrompt": "Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.",
-        "overlayTitle": "Criterio de decisión",
-        "overlaySubtitle": "Aplicar el método riguroso",
-        "overlayText": "Criterio de decisión riguroso",
-        "vectorialOverlayPptx": "Esquema de analisis: Texto fuente y pistas de Orden cronológico, saltos temporales (anacronías) y ritmo narrativo",
-        "mathOverlayPptx": "Esquema de analisis: Texto fuente y pistas de Orden cronológico, saltos temporales (anacronías) y ritmo narrativo",
-        "speakerNotes": "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Disposición temporal de los acontecimientos con total precisión metodológica.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        "tituloMomento": "Distintas respuestas",
+        "didacticPurpose": "Distintas respuestas",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers analyzing La voz del narrador y los personajes in Lengua y Literatura. Setting: Distintas respuestas. Cinematic lighting, clean composition, clear negative space. No text drawn by AI.",
+        "overlayText": "¿Qué respuesta tiene respaldo?",
+        "overlayTitle": "¿Qué respuesta tiene respaldo?",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "¿Qué respuesta tiene respaldo?",
+        "speakerNotes": "Una respuesta necesita información del recurso. Buscaremos pistas para fundamentarla."
       },
       {
         "slideNumber": 6,
-        "tituloMomento": "La Antesala de la Pregunta",
-        "didacticPurpose": "La Antesala de la Pregunta",
-        "visualPrompt": "Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.",
-        "overlayTitle": "El dilema central",
-        "overlaySubtitle": "¿Cómo resolver Disposición temporal de los acontecimientos?",
-        "overlayText": "¿Cómo resolver Disposición temporal de los acontecimientos?",
-        "vectorialOverlayPptx": "Tension dramatica: Conflicto entre fuerzas del relato",
-        "mathOverlayPptx": "Tension dramatica: Conflicto entre fuerzas del relato",
-        "speakerNotes": "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        "tituloMomento": "Una forma de explorar",
+        "didacticPurpose": "Una forma de explorar",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers analyzing La voz del narrador y los personajes in Lengua y Literatura. Setting: Una forma de explorar. Cinematic lighting, clean composition, clear negative space. No text drawn by AI.",
+        "overlayText": "Leer, relacionar y explicar",
+        "overlayTitle": "Leer, relacionar y explicar",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Leer, relacionar y explicar",
+        "speakerNotes": "Lee el recurso y relaciona sus detalles antes de elegir una explicación."
       },
       {
         "slideNumber": 7,
-        "tituloMomento": "La Pregunta Detonante",
-        "didacticPurpose": "La Pregunta Detonante",
-        "visualPrompt": "Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.",
-        "overlayTitle": "Pregunta detonante",
-        "overlaySubtitle": "Regla y método de Disposición temporal de los acontecimientos",
-        "overlayText": "Meta: Dominio de Disposición temporal de los acontecimientos",
-        "vectorialOverlayPptx": "Pregunta detonante: ¿Cual es el motor de la historia en Disposición temporal de los acontecimientos?",
-        "mathOverlayPptx": "Pregunta detonante: ¿Cual es el motor de la historia en Disposición temporal de los acontecimientos?",
-        "speakerNotes": "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        "tituloMomento": "La pregunta inicial",
+        "didacticPurpose": "La pregunta inicial",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers analyzing La voz del narrador y los personajes in Lengua y Literatura. Setting: La pregunta inicial. Cinematic lighting, clean composition, clear negative space. No text drawn by AI.",
+        "overlayText": "¿Qué muestra la evidencia?",
+        "overlayTitle": "¿Qué muestra la evidencia?",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "¿Qué muestra la evidencia?",
+        "speakerNotes": "Ahora descubriremos cómo las pistas ayudan a comprender esta situación."
+      },
+      {
+        "slideNumber": 8,
+        "tituloMomento": "Objetivo de la lección",
+        "didacticPurpose": "Objetivo de la lección",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Focus on explanation and modeling of La voz del narrador y los personajes. Concept: Objetivo de la lección. Clean background, warm focus. No text drawn by AI.",
+        "overlayText": "Objetivo de la lección. Distinguir quién narra y quién habla",
+        "overlayTitle": "Objetivo de la lección. Distinguir quién narra y quién habla",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Objetivo de la lección. Distinguir quién narra y quién habla",
+        "speakerNotes": "En esta clase distinguirás quién cuenta y quién habla. El narrador presenta acciones y los personajes expresan sus palabras en el diálogo."
+      },
+      {
+        "slideNumber": 9,
+        "tituloMomento": "Herramienta",
+        "didacticPurpose": "Herramienta",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Focus on explanation and modeling of La voz del narrador y los personajes. Concept: Herramienta. Clean background, warm focus. No text drawn by AI.",
+        "overlayText": "Herramienta. Raya y aclaración muestran quién habla",
+        "overlayTitle": "Herramienta. Raya y aclaración muestran quién habla",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Herramienta. Raya y aclaración muestran quién habla",
+        "speakerNotes": "Busca las marcas del diálogo, como la raya, y las aclaraciones que atribuyen cada intervención. También observa qué acciones cuenta la voz narradora."
+      },
+      {
+        "slideNumber": 10,
+        "tituloMomento": "Criterio",
+        "didacticPurpose": "Criterio",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Focus on explanation and modeling of La voz del narrador y los personajes. Concept: Criterio. Clean background, warm focus. No text drawn by AI.",
+        "overlayText": "Criterio. Separa narración y diálogo con señales",
+        "overlayTitle": "Criterio. Separa narración y diálogo con señales",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Criterio. Separa narración y diálogo con señales",
+        "speakerNotes": "Separa las palabras pronunciadas por un personaje de la información que entrega el narrador. Una aclaración como «preguntó Jimmy» identifica quién habló."
+      },
+      {
+        "slideNumber": 11,
+        "tituloMomento": "Modelo",
+        "didacticPurpose": "Modelo",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Focus on explanation and modeling of La voz del narrador y los personajes. Concept: Modelo. Clean background, warm focus. No text drawn by AI.",
+        "overlayText": "Modelo. Narrador: «Frunció el ceño» / Jimmy: «Es mi perro»",
+        "overlayTitle": "Modelo. Narrador: «Frunció el ceño»",
+        "overlaySubtitle": "Jimmy: «Es mi perro»",
+        "vectorialOverlayPptx": "Modelo. Narrador: «Frunció el ceño» / Jimmy: «Es mi perro»",
+        "speakerNotes": "¿Quién cuenta que Jimmy frunció el ceño y quién dice que Robutt es su perro? El narrador cuenta la acción; Jimmy pronuncia esa frase."
+      },
+      {
+        "slideNumber": 12,
+        "tituloMomento": "Verificación",
+        "didacticPurpose": "Verificación",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Focus on explanation and modeling of La voz del narrador y los personajes. Concept: Verificación. Clean background, warm focus. No text drawn by AI.",
+        "overlayText": "Verificación. «Preguntó Jimmy» identifica quién habla",
+        "overlayTitle": "Verificación. «Preguntó Jimmy» identifica quién habla",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Verificación. «Preguntó Jimmy» identifica quién habla",
+        "speakerNotes": "Comprobamos el análisis en el fragmento. La raya abre la intervención de Jimmy y «preguntó Jimmy» identifica al hablante. La acción anterior pertenece al narrador."
+      },
+      {
+        "slideNumber": 13,
+        "tituloMomento": "Error y corrección",
+        "didacticPurpose": "Error y corrección",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Focus on explanation and modeling of La voz del narrador y los personajes. Concept: Error y corrección. Clean background, warm focus. No text drawn by AI.",
+        "overlayText": "Error y corrección. La raya abre el diálogo, no lo narra",
+        "overlayTitle": "Error y corrección. La raya abre el diálogo, no lo narra",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Error y corrección. La raya abre el diálogo, no lo narra",
+        "speakerNotes": "No confundas la raya con la voz del narrador. La raya abre diálogo. La aclaración atribuye la frase y la narración informa acciones."
+      },
+      {
+        "slideNumber": 14,
+        "tituloMomento": "Estrategia y puente",
+        "didacticPurpose": "Estrategia y puente",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Focus on explanation and modeling of La voz del narrador y los personajes. Concept: Estrategia y puente. Clean background, warm focus. No text drawn by AI.",
+        "overlayText": "Estrategia y puente. Separa las voces y vuelve al fragmento",
+        "overlayTitle": "Estrategia y puente. Separa las voces y vuelve al fragmento",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Estrategia y puente. Separa las voces y vuelve al fragmento",
+        "speakerNotes": "Ubica la raya, lee la aclaración y separa las voces. En la práctica analizarás otro fragmento, revisarás tus respuestas y cerrarás con la distinción."
       }
     ]
   },
   "preQuestions": [
     {
-      "context": "Indicios Textuales y Disposición temporal",
-      "question": "¿Qué palabras o pistas del texto nos permiten inferir la presencia e importancia de 'Disposición temporal' en este relato?",
-      "expected": "Citar pistas textuales o acciones de los personajes que demuestran el sentido de Disposición temporal.",
-      "success": "¡Muy bien! Tu interpretación se apoya directamente en evidencias del texto y no en suposiciones.",
-      "support": "Busca en el segundo párrafo: ¿qué palabras describen la atmósfera o la motivación del personaje?",
-      "reveal": "La comprensión profunda se construye rastreando las pistas explícitas e implícitas que el autor distribuye en la obra.",
-      "studentReveal": "Las pistas textuales que confirman la presencia y sentido de Disposición temporal."
+      "context": "Jimmy frunció el ceño.",
+      "question": "¿Qué parte corresponde al narrador y qué parte a Jimmy?",
+      "expected": "Jimmy frunció el ceño corresponde al narrador. La intervención que comienza con Robutt no es una imitación corresponde a Jimmy.",
+      "success": "Respuesta comprensible, información precisa y explicación de su relación.",
+      "support": "Localizar una pista concreta en el recurso. Comparar esa pista con la explicación propuesta. Leer el modelo, relacionarlo con la pista y pedir un nuevo intento en palabras propias.",
+      "reveal": "Una parte cuenta la acción y la otra reproduce palabras dirigidas al padre.",
+      "studentReveal": "Jimmy frunció el ceño corresponde al narrador. La intervención que comienza con Robutt no es una imitación corresponde a Jimmy.",
+      "studentImage": "/images/lessons/lengua_7b_oa03_clase04_p1.jpg",
+      "relevantParagraph": 1
     },
     {
-      "context": "Sentido Figurado y Prevención del Error Literal",
-      "question": "Para no caer en el error de 'Confundir la voz del narrador con la de los personajes o sus opiniones personales.', ¿cómo debemos interpretar las expresiones en sentido figurado o simbólico de esta obra?",
-      "expected": "Distinguir el significado literal del sentido connotativo o metafórico que el autor busca evocar.",
-      "success": "¡Exacto! Lograste ver más allá de las palabras literales y descubriste la metáfora profunda del autor.",
-      "support": "Piensa qué imagen o sentimiento evoca esa frase: ¿busca describir un hecho físico o una emoción interior?",
-      "reveal": "El lenguaje literario utiliza recursos figurados para transmitir experiencias humanas universales que trascienden lo literal.",
-      "studentReveal": "La interpretación del sentido figurado y simbólico de la obra."
+      "context": "Jimmy llama papi a su interlocutor y afirma: «Es mi perro».",
+      "question": "¿Qué señal permite atribuir esas palabras a Jimmy?",
+      "expected": "La intervención comienza con una raya y Jimmy se dirige a su padre con la palabra papi. Esas señales muestran que Jimmy pronuncia la frase.",
+      "success": "Respuesta comprensible, información precisa y explicación de su relación.",
+      "support": "Localizar la raya que inicia la intervención. Identificar a quién se dirige Jimmy. Volver al fragmento, separar la intervención de la narración y pedir un nuevo intento en palabras propias.",
+      "reveal": "La raya de diálogo y la palabra papi aparecen en la intervención de Jimmy.",
+      "studentReveal": "La intervención comienza con una raya y Jimmy se dirige a su padre con la palabra papi. Esas señales muestran que Jimmy pronuncia la frase.",
+      "studentImage": "/images/lessons/lengua_7b_oa03_clase04_p2.jpg",
+      "relevantParagraph": 2
     }
   ],
   "formalization": {
-    "title": "Video Explicativo: Formalización de Disposición temporal de los acontecimientos",
-    "concept": "Video Explicativo: Formalización de Disposición temporal de los acontecimientos",
-    "dileIntro": "Ahora veremos el video explicativo de Disposición temporal de los acontecimientos. Observa cómo se analiza el personaje y la función de Disposición temporal.",
-    "hazInstruction": "Revisemos la explicación formal y la idea clave.",
-    "ideaClave": "En Disposición temporal de los acontecimientos, el autor utiliza 'Disposición temporal' para construir una experiencia estética y reflexiva que interpela al lector en sus propias vivencias.",
+    "title": "Explicación y modelamiento",
+    "concept": "El narrador cuenta lo que sucede en la historia. Los personajes intervienen en los diálogos. La raya introduce una intervención, pero las aclaraciones como «preguntó Jimmy» o «dijo el señor Anderson» pertenecen al narrador.",
+    "summary": "Jimmy frunció el ceño corresponde al narrador. La intervención que comienza con Robutt no es una imitación corresponde a Jimmy. Una parte cuenta la acción y la otra reproduce palabras dirigidas al padre.",
+    "ideaClave": "La narración y el diálogo cumplen funciones diferentes.",
+    "dileIntro": "¿Toda la línea pertenece a Jimmy? Explica.",
+    "hazInstruction": "Explica tu respuesta relacionando la acción con su efecto concreto usando evidencia del texto.",
+    "postDileIntro": "Comprobemos lo que acabamos de revisar.",
     "videoSrc": "",
-    "videoUrl": "",
-    "graphicPoster": "",
-    "fullPrompt": "Actúa como Diseñador Pedagógico y Especialista en Didáctica Disciplinar en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de VIDEO EXPLICATIVO / FORMALIZACIÓN (Paso 4) para:\n- Asignatura: Lengua y Literatura\n- Objetivo de Aprendizaje: OA 3\n- Clase: 4 (\"Disposición temporal de los acontecimientos\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS (PLAN MAESTRO ACTUALIZACIÓN 29-09-2026):\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Exactamente 7 diapositivas (slide1 a slide7) siguiendo el principio de un cambio visual por cada movimiento mental.\n3. DIAPOSITIVA 1 OBLIGATORIA CON OBJETIVO: La primera diapositiva declara como subtítulo (36 pt) el objetivo específico de la lección, sin repetir rótulos redundantes 'OA 01'.\n4. PROTAGONISTAS FIJOS EN EL 100% DE LAS ESCENAS: Los mismos 2 jóvenes de 13 años (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.\n5. REGLA VISUAL ANTI-MÁSCARAS Y FONDOS LIMPIOS: Imagen limpia con espacio negativo real. Prohibido que la IA intente dibujar números, rectas o letras. Todo elemento disciplinar se ensambla vectorialmente en PowerPoint.\n6. PRESUPUESTO TEMPORAL Y GUION PEDAGÓGICO (LECCIÓN EXPLICATIVA - 90 SEGUNDOS / 195 PALABRAS TOTALES): Guion explicativo continuo (12+13+13+13+13+13+13 segundos, totalizando exactamente ~195 palabras para 90 segundos a 130 palabras por minuto en Google Vids/TTS), sin marcas técnicas. Diapositiva 1 formula el objetivo; diapositivas 2 a 7 desarrollan el contenido sin repetirlo.\n7. PROTOCOLO DE COMPROBACIÓN ACÚSTICA OBLIGATORIA (GOOGLE VIDS): Medir la duración real del archivo exportado con cronómetro o analizador de audio. El conteo de palabras no garantiza por sí solo 90 segundos exactos. Si la duración no es exacta, ajustar narración, pausas o ritmo, volver a exportar y registrar la duración comprobada oficial.\n8. JERARQUÍA TIPOGRÁFICA Y COLOR DE TEXTO: Título en Pantalla (64 pt); Subtítulo en Pantalla (36 pt). Texto brillante de un solo color de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, contornos, resplandores ni recuadros flotantes o fondos detrás del texto. Especificar color en cada prompt.\n9. CIERRE SIN RETO EN EL VIDEO: La explicación concluye con la regla de oro y da el pase directo a la práctica en la plataforma web, sin proponer desafíos finales ni tareas en el cuaderno durante el video.\n10. ESTRUCTURA HEXAPARTITA POR DIAPOSITIVA (Propósito, Título 64 pt, Subtítulo 36 pt, Prompt Imagen IA, Capa Vectorial PPTX, Notas al Orador).\n\nDETALLE DE LAS 7 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Objetivo de la Lección) ---\n1. Propósito Didáctico: Objetivo de la Lección\n2. Título en Pantalla (64 pt): Objetivo de la lección\n3. Subtítulo en Pantalla (36 pt): Dominar Disposición temporal de los acontecimientos: Orden cronológico, saltos temporales (anacronías) y ritmo narrativo\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Orden cronológico, saltos temporales (anacronías) y ritmo narrativo. High clarity, negative space for text. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 3 · Disposición temporal de los acontecimientos\n6. Notas al Orador (Locución Continua Google Vids): \"El objetivo de hoy es aprender a orden cronológico, saltos temporales (anacronías) y ritmo narrativo, aplicando el método disciplinar paso a paso con total rigor y claridad.\"\n\n--- DIAPOSITIVA 2 (Definición del Concepto Central) ---\n1. Propósito Didáctico: Definición del Concepto Central\n2. Título en Pantalla (64 pt): Concepto fundamental\n3. Subtítulo en Pantalla (36 pt): Orden cronológico, saltos temporales (anacronías) y ritmo narrativo\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Concepto disciplinar: Orden cronológico, saltos temporales (anacronías) y ritmo narrativo\n6. Notas al Orador (Locución Continua Google Vids): \"Para comprender Disposición temporal de los acontecimientos, establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación.\"\n\n--- DIAPOSITIVA 3 (Demostración Modelada) ---\n1. Propósito Didáctico: Demostración Modelada\n2. Título en Pantalla (64 pt): Modelamiento paso a paso\n3. Subtítulo en Pantalla (36 pt): Procedimiento de Disposición temporal de los acontecimientos\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Fragmento textual visible con marcas de evidencia literal e inferencias\n6. Notas al Orador (Locución Continua Google Vids): \"Observa cómo se aplica el procedimiento en este caso guiado: cada transformación responde a una justificación disciplinar explícita y visible.\"\n\n--- DIAPOSITIVA 4 (Prevención del Error Frecuente) ---\n1. Propósito Didáctico: Prevención del Error Frecuente\n2. Título en Pantalla (64 pt): Atención: Error habitual\n3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Contraste analitico: distincion de elementos narrativos clave\n6. Notas al Orador (Locución Continua Google Vids): \"Un error frecuente ocurre al descuidar el orden o saltarse un paso de la convención establecida. Siempre comprobamos cada dato antes de continuar.\"\n\n--- DIAPOSITIVA 5 (Comprobación del Resultado) ---\n1. Propósito Didáctico: Comprobación del Resultado\n2. Título en Pantalla (64 pt): Validación del resultado\n3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo de respuesta justificada con citas y evidencia textual\n6. Notas al Orador (Locución Continua Google Vids): \"Al contrastar el resultado con la situación inicial, confirmamos que la solución es consistente, rigurosa y responde plenamente a la pregunta.\"\n\n--- DIAPOSITIVA 6 (Estrategia Mnemotécnica) ---\n1. Propósito Didáctico: Estrategia Mnemotécnica\n2. Título en Pantalla (64 pt): Estrategia de pensamiento\n3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Estrategia de lectura: Localizar, interpretar y fundamentar\n6. Notas al Orador (Locución Continua Google Vids): \"Recuerda siempre la estrategia en tres pasos: identificar la información clave, aplicar la regla en orden y comprobar el resultado final.\"\n\n--- DIAPOSITIVA 7 (Síntesis y Regla de Oro) ---\n1. Propósito Didáctico: Síntesis y Regla de Oro\n2. Título en Pantalla (64 pt): Regla de Oro: Disposición temporal de los acontecimientos\n3. Subtítulo en Pantalla (36 pt): Método disciplinar validado\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Infografía de síntesis: Regla de lectura de Disposición temporal de los acontecimientos\n6. Notas al Orador (Locución Continua Google Vids): \"Ahora que dominas la regla fundamental y el procedimiento de Disposición temporal de los acontecimientos, ¡vamos a demostrarlo en las actividades interactivas de la plataforma!\"\n\n",
-    "slides": [
-      {
-        "slideNumber": 1,
-        "tituloMomento": "Objetivo de la Lección",
-        "didacticPurpose": "Objetivo de la Lección",
-        "visualPrompt": "Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Orden cronológico, saltos temporales (anacronías) y ritmo narrativo. High clarity, negative space for text. No text drawn by AI.",
-        "overlayTitle": "Objetivo de la lección",
-        "overlaySubtitle": "Dominar Disposición temporal de los acontecimientos: Orden cronológico, saltos temporales (anacronías) y ritmo narrativo",
-        "overlayText": "Concepto clave: Disposición temporal de los acontecimientos",
-        "vectorialOverlayPptx": "Rótulo formal: OA 3 · Disposición temporal de los acontecimientos",
-        "mathOverlayPptx": "Rótulo formal: OA 3 · Disposición temporal de los acontecimientos",
-        "speakerNotes": "El objetivo de hoy es aprender a orden cronológico, saltos temporales (anacronías) y ritmo narrativo, aplicando el método disciplinar paso a paso con total rigor y claridad.",
-        "palabrasAprox": 25,
-        "duracionSeg": 12
-      },
-      {
-        "slideNumber": 2,
-        "tituloMomento": "Definición del Concepto Central",
-        "didacticPurpose": "Definición del Concepto Central",
-        "visualPrompt": "Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.",
-        "overlayTitle": "Concepto fundamental",
-        "overlaySubtitle": "Orden cronológico, saltos temporales (anacronías) y ritmo narrativo",
-        "overlayText": "Regla formal: Orden cronológico, saltos temporales (anacronías) y ritmo narrativo",
-        "vectorialOverlayPptx": "Concepto disciplinar: Orden cronológico, saltos temporales (anacronías) y ritmo narrativo",
-        "mathOverlayPptx": "Concepto disciplinar: Orden cronológico, saltos temporales (anacronías) y ritmo narrativo",
-        "speakerNotes": "Para comprender Disposición temporal de los acontecimientos, establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
-      },
-      {
-        "slideNumber": 3,
-        "tituloMomento": "Demostración Modelada",
-        "didacticPurpose": "Demostración Modelada",
-        "visualPrompt": "Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.",
-        "overlayTitle": "Modelamiento paso a paso",
-        "overlaySubtitle": "Procedimiento de Disposición temporal de los acontecimientos",
-        "overlayText": "Modelamiento paso a paso de Disposición temporal de los acontecimientos",
-        "vectorialOverlayPptx": "Fragmento textual visible con marcas de evidencia literal e inferencias",
-        "mathOverlayPptx": "Fragmento textual visible con marcas de evidencia literal e inferencias",
-        "speakerNotes": "Observa cómo se aplica el procedimiento en este caso guiado: cada transformación responde a una justificación disciplinar explícita y visible.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
-      },
-      {
-        "slideNumber": 4,
-        "tituloMomento": "Prevención del Error Frecuente",
-        "didacticPurpose": "Prevención del Error Frecuente",
-        "visualPrompt": "Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.",
-        "overlayTitle": "Atención: Error habitual",
-        "overlaySubtitle": "Confusión común que debemos evitar",
-        "overlayText": "Atención: Error habitual a evitar",
-        "vectorialOverlayPptx": "Contraste analitico: distincion de elementos narrativos clave",
-        "mathOverlayPptx": "Contraste analitico: distincion de elementos narrativos clave",
-        "speakerNotes": "Un error frecuente ocurre al descuidar el orden o saltarse un paso de la convención establecida. Siempre comprobamos cada dato antes de continuar.",
-        "palabrasAprox": 27,
-        "duracionSeg": 13
-      },
-      {
-        "slideNumber": 5,
-        "tituloMomento": "Comprobación del Resultado",
-        "didacticPurpose": "Comprobación del Resultado",
-        "visualPrompt": "Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.",
-        "overlayTitle": "Validación del resultado",
-        "overlaySubtitle": "Comprobar que la respuesta es consistente",
-        "overlayText": "Comprobación y validación del resultado",
-        "vectorialOverlayPptx": "Modelo de respuesta justificada con citas y evidencia textual",
-        "mathOverlayPptx": "Modelo de respuesta justificada con citas y evidencia textual",
-        "speakerNotes": "Al contrastar el resultado con la situación inicial, confirmamos que la solución es consistente, rigurosa y responde plenamente a la pregunta.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
-      },
-      {
-        "slideNumber": 6,
-        "tituloMomento": "Estrategia Mnemotécnica",
-        "didacticPurpose": "Estrategia Mnemotécnica",
-        "visualPrompt": "Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.",
-        "overlayTitle": "Estrategia de pensamiento",
-        "overlaySubtitle": "1. Identificar · 2. Aplicar · 3. Comprobar",
-        "overlayText": "Estrategia mental: Identificar, Aplicar y Verificar",
-        "vectorialOverlayPptx": "Estrategia de lectura: Localizar, interpretar y fundamentar",
-        "mathOverlayPptx": "Estrategia de lectura: Localizar, interpretar y fundamentar",
-        "speakerNotes": "Recuerda siempre la estrategia en tres pasos: identificar la información clave, aplicar la regla en orden y comprobar el resultado final.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
-      },
-      {
-        "slideNumber": 7,
-        "tituloMomento": "Síntesis y Regla de Oro",
-        "didacticPurpose": "Síntesis y Regla de Oro",
-        "visualPrompt": "Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.",
-        "overlayTitle": "Regla de Oro: Disposición temporal de los acontecimientos",
-        "overlaySubtitle": "Método disciplinar validado",
-        "overlayText": "Síntesis: Disposición temporal de los acontecimientos",
-        "vectorialOverlayPptx": "Infografía de síntesis: Regla de lectura de Disposición temporal de los acontecimientos",
-        "mathOverlayPptx": "Infografía de síntesis: Regla de lectura de Disposición temporal de los acontecimientos",
-        "speakerNotes": "Ahora que dominas la regla fundamental y el procedimiento de Disposición temporal de los acontecimientos, ¡vamos a demostrarlo en las actividades interactivas de la plataforma!",
-        "palabrasAprox": 25,
-        "duracionSeg": 12
-      }
-    ]
+    "slides": []
   },
   "postQuestions": [
     {
-      "context": "Indicios Textuales y Disposición temporal",
-      "question": "¿Qué palabras o pistas del texto nos permiten inferir la presencia e importancia de 'Disposición temporal' en este relato?",
-      "expected": "Citar pistas textuales o acciones de los personajes que demuestran el sentido de Disposición temporal.",
-      "success": "¡Muy bien! Tu interpretación se apoya directamente en evidencias del texto y no en suposiciones.",
-      "support": "Busca en el segundo párrafo: ¿qué palabras describen la atmósfera o la motivación del personaje?",
-      "reveal": "La comprensión profunda se construye rastreando las pistas explícitas e implícitas que el autor distribuye en la obra.",
-      "studentReveal": "Las pistas textuales que confirman la presencia y sentido de Disposición temporal."
+      "context": "Comprobación 1 · Aplicación inmediata",
+      "question": "¿Toda la línea pertenece a Jimmy? Explica.",
+      "expected": "La pregunta pertenece a Jimmy. La aclaración preguntó Jimmy pertenece al narrador.",
+      "success": "Respuesta comprensible, fundamentada en el texto.",
+      "support": "Revisa el modelo de la clase y compáralo con tu respuesta.",
+      "reveal": "La pregunta pertenece a Jimmy. La aclaración preguntó Jimmy pertenece al narrador.",
+      "studentReveal": "La pregunta pertenece a Jimmy. La aclaración preguntó Jimmy pertenece al narrador."
     },
     {
-      "context": "Sentido Figurado y Prevención del Error Literal",
-      "question": "Para no caer en el error de 'Confundir la voz del narrador con la de los personajes o sus opiniones personales.', ¿cómo debemos interpretar las expresiones en sentido figurado o simbólico de esta obra?",
-      "expected": "Distinguir el significado literal del sentido connotativo o metafórico que el autor busca evocar.",
-      "success": "¡Exacto! Lograste ver más allá de las palabras literales y descubriste la metáfora profunda del autor.",
-      "support": "Piensa qué imagen o sentimiento evoca esa frase: ¿busca describir un hecho físico o una emoción interior?",
-      "reveal": "El lenguaje literario utiliza recursos figurados para transmitir experiencias humanas universales que trascienden lo literal.",
-      "studentReveal": "La interpretación del sentido figurado y simbólico de la obra."
+      "context": "Comprobación 2 · Síntesis de la evidencia",
+      "question": "¿Qué parte corresponde al narrador y qué parte a Jimmy?",
+      "expected": "Jimmy frunció el ceño corresponde al narrador. La intervención que comienza con Robutt no es una imitación corresponde a Jimmy.",
+      "success": "Usa una pista concreta del texto.",
+      "support": "Vuelve al recurso de lectura para ubicar la pista.",
+      "reveal": "Jimmy frunció el ceño corresponde al narrador. La intervención que comienza con Robutt no es una imitación corresponde a Jimmy.",
+      "studentReveal": "Jimmy frunció el ceño corresponde al narrador. La intervención que comienza con Robutt no es una imitación corresponde a Jimmy."
     }
   ],
   "practice": [
     {
-      "context": "Ejercicio 1 en Cuaderno: Ficha de Análisis Textual",
-      "question": "Abre tu cuaderno de notas. Escribe como título: 'Disposición temporal de los acontecimientos'. Con base en la actividad (Representa a través de un breve sketch o dramatización una escena clave donde la...), escribe un breve párrafo analizando el rol de 'Disposición temporal': cita una frase del texto, explica su significado implícito y menciona qué valor transmite.",
-      "expected": "Desarrollo en el cuaderno con cita textual, interpretación del significado implícito y reflexión sobre el valor o tema.",
-      "success": "¡Excelente análisis literario en tu cuaderno! Tu interpretación está fundamentada con citas precisas.",
-      "support": "Revisa la diapositiva: subraya la cita textual y escribe con tus palabras qué revela sobre el protagonista.",
-      "reveal": "El análisis riguroso vincula la cita textual con la interpretación temática y el contexto de la obra.",
-      "studentReveal": "Ficha de análisis completa en el cuaderno con cita e interpretación fundamentada."
+      "context": "Caso 1",
+      "question": "¿Qué palabras pronuncia Jimmy y qué parte corresponde al narrador? Señala la marca que te ayuda a separar ambas voces.",
+      "expected": "Jimmy pronuncia la pregunta. La aclaración «preguntó Jimmy» corresponde al narrador, porque identifica quién realizó la pregunta.",
+      "success": "La respuesta separa el diálogo de la aclaración narrativa. Revisa que no atribuyas «preguntó Jimmy» a las palabras que él pronuncia.",
+      "support": "Vuelve al texto para ubicar la pista que conecta la acción con su efecto.",
+      "reveal": "Jimmy pronuncia la pregunta. La aclaración «preguntó Jimmy» corresponde al narrador, porque identifica quién realizó la pregunta.",
+      "studentReveal": "Jimmy pronuncia la pregunta. La aclaración «preguntó Jimmy» corresponde al narrador, porque identifica quién realizó la pregunta.",
+      "relevantParagraph": 1
     },
     {
-      "context": "Ejercicio 2 en Cuaderno: Producción Escrita Breve y Revisión",
-      "question": "En tu cuaderno, redacta una breve continuación o respuesta reflexiva de 5 líneas aplicando 'Disposición temporal'. Al finalizar, revisa tu texto cuidando la coherencia, el uso de conectores y la ortografía.",
-      "expected": "Micro-escritura creativa en el cuaderno con aplicación de concepto y revisión de cohesión y ortografía.",
-      "success": "¡Muy buena producción escrita! Tu texto es coherente, expresivo y demuestra el dominio del concepto literario.",
-      "support": "Lee tu borrador en voz alta: ¿las ideas se conectan con fluidez? Corrige las tildes antes de darlo por listo.",
-      "reveal": "Escribir y revisar permite consolidar la apropiación del lenguaje y expresar ideas personales con rigor.",
-      "studentReveal": "Texto breve producido y revisado en el cuaderno con coherencia y precisión."
+      "context": "Caso 2",
+      "question": "¿Qué parte dice el padre y qué parte aclara el narrador? Explica cómo reconoces cada voz.",
+      "expected": "El padre dice «Es difícil de explicar» y «pero lo comprenderás en cuanto lo veas». La aclaración «dijo el señor Anderson» pertenece al narrador.",
+      "success": "La respuesta distingue las palabras entre rayas de la aclaración sobre quién habla. Si marcaste toda la línea como diálogo, vuelve a revisar la función de la acotación.",
+      "support": "Vuelve al texto para ubicar la pista que conecta la acción con su efecto.",
+      "reveal": "El padre dice «Es difícil de explicar» y «pero lo comprenderás en cuanto lo veas». La aclaración «dijo el señor Anderson» pertenece al narrador.",
+      "studentReveal": "El padre dice «Es difícil de explicar» y «pero lo comprenderás en cuanto lo veas». La aclaración «dijo el señor Anderson» pertenece al narrador.",
+      "relevantParagraph": 2
     }
   ],
   "mini": [
     {
-      "id": "q_1",
-      "q": "Al interpretar el fragmento de Disposición temporal de los acontecimientos, ¿cuál de las siguientes opciones expresa con mayor fidelidad el rol de 'Disposición temporal'?",
+      "id": "q1",
+      "q": "¿Quién cuenta que Jimmy frunció el ceño?",
       "options": [
-        "Permite develar la motivación profunda del personaje y el conflicto central a través de indicios textuales concretos",
-        "Es un detalle puramente decorativo que no aporta ningún significado a la historia ni al mensaje del autor",
-        "Demuestra que el texto literario carece de sentido implícito y solo debe leerse al pie de la letra"
+        "A. Robutt",
+        "B. Jimmy en voz alta",
+        "C. El padre",
+        "D. El narrador"
       ],
-      "correct": "Permite develar la motivación profunda del personaje y el conflicto central a través de indicios textuales concretos",
-      "fixExplain": "Toda inferencia legítima en comprensión lectora debe apoyarse en pistas textuales e indicios entregados por la obra.",
-      "concept": "Disposición temporal de los acontecimientos",
-      "explain": "Toda inferencia legítima en comprensión lectora debe apoyarse en pistas textuales e indicios entregados por la obra.",
-      "dileReview": "Pídele que señale qué fragmento específico de la lectura justifica su respuesta."
+      "correct": "D. El narrador",
+      "fixExplain": "La frase cuenta una acción del personaje desde la voz narrativa."
     },
     {
-      "id": "q_2",
-      "q": "Para no cometer el error de 'Confundir la voz del narrador con la de los personajes o sus opiniones personales.', ¿qué estrategia de lectura comprensiva debemos emplear?",
+      "id": "q2",
+      "q": "¿Quién dice Es mi perro en el fragmento?",
       "options": [
-        "Distinguir el sentido literal del lenguaje figurado, relacionando las metáforas con las emociones de los personajes",
-        "Asumir que cada palabra significa exclusivamente su definición de diccionario más simple y directa",
-        "Saltarse los pasajes poéticos o descriptivos para centrarse únicamente en el desenlace final"
+        "A. Jimmy",
+        "B. El padre",
+        "C. El narrador",
+        "D. El equipo de rescate"
       ],
-      "correct": "Distinguir el sentido literal del lenguaje figurado, relacionando las metáforas con las emociones de los personajes",
-      "fixExplain": "El lenguaje figurado transmite matices que el sentido literal no logra expresar; comprenderlo es la cumbre de la lectura crítica.",
-      "concept": "Disposición temporal de los acontecimientos",
-      "explain": "El lenguaje figurado transmite matices que el sentido literal no logra expresar; comprenderlo es la cumbre de la lectura crítica.",
-      "dileReview": "Pregúntale: ¿cómo cambia el mensaje de un poema o relato cuando descubrimos el sentido figurado?"
+      "correct": "A. Jimmy",
+      "fixExplain": "Jimmy se dirige a su padre mediante la palabra papi."
     },
     {
-      "id": "q_3",
-      "q": "Durante el proceso de análisis y escritura sobre Orden cronológico, saltos temporales (anacronías) y ritmo narrativo, ¿por qué es indispensable la etapa de revisión del borrador en el cuaderno?",
+      "id": "q3",
+      "q": "En preguntó Jimmy, ¿qué función cumple el narrador?",
       "options": [
-        "Porque permite verificar la coherencia de las ideas, la precisión de los conectores y la correcta ortografía antes de la versión final",
-        "Porque la primera versión de un texto nunca debe ser modificada bajo ninguna circunstancia",
-        "Porque revisar un texto escrito carece de impacto en la claridad comunicativa ante el lector"
+        "A. Expresa su propia pregunta al padre",
+        "B. Aclara quién realizó la pregunta",
+        "C. Se convierte en Robutt",
+        "D. Describe una decisión del padre"
       ],
-      "correct": "Porque permite verificar la coherencia de las ideas, la precisión de los conectores y la correcta ortografía antes de la versión final",
-      "fixExplain": "La revisión y edición es la fase fundamental de la escritura que asegura que el mensaje se transmita con claridad y rigor.",
-      "concept": "Disposición temporal de los acontecimientos",
-      "explain": "La revisión y edición es la fase fundamental de la escritura que asegura que el mensaje se transmita con claridad y rigor.",
-      "dileReview": "Pídele que te muestre en su cuaderno qué ajustes u observaciones hizo al releer su escrito."
+      "correct": "B. Aclara quién realizó la pregunta",
+      "fixExplain": "La aclaración identifica al personaje que habla."
     }
   ],
   "recovery": [
     {
-      "title": "Recuperación de Lengua y Literatura: Disposición temporal de los acontecimientos",
-      "explain": "Al analizar Orden cronológico, saltos temporales (anacronías) y ritmo narrativo, recuerda buscar siempre las pistas explícitas e implícitas en el texto y relacionar 'Disposición temporal' con la intención del autor.",
-      "q": "¿Cuál es la estrategia clave para comprender el sentido profundo de una obra en Disposición temporal de los acontecimientos?",
+      "title": "Recuperación Reactivo 1",
+      "explain": "La frase cuenta una acción del personaje desde la voz narrativa. Separa la frase que cuenta una acción de la intervención que comienza con raya. Identifica quién pronuncia las palabras.",
+      "q": "Después de releer el recurso, responde de nuevo: ¿Quién cuenta que Jimmy frunció el ceño?",
       "options": [
-        "Releer con atención buscando las pistas contextuales que justifican la interpretación de 'Disposición temporal'",
-        "Adivinar el tema central fijándose únicamente en el título sin examinar el cuerpo del texto"
+        "A. Robutt",
+        "B. Jimmy en voz alta",
+        "C. El padre",
+        "D. El narrador"
       ],
-      "correct": "Releer con atención buscando las pistas contextuales que justifican la interpretación de 'Disposición temporal'",
-      "correctText": "¡Correcto! La relectura atenta guiada por pistas textuales es la mejor herramienta de comprensión lectora.",
-      "fixText": "Recuerda que en Lengua y Literatura las respuestas están en el texto: vuelve siempre al fragmento para comprobar tu deducción."
+      "correct": "D. El narrador",
+      "correctText": "Usaste el recurso para fundamentar tu respuesta.",
+      "fixText": "La frase cuenta una acción del personaje desde la voz narrativa. Subraya la pista específica, compárala con tu respuesta y vuelve a intentarlo en tus palabras."
+    },
+    {
+      "title": "Recuperación Reactivo 2",
+      "explain": "Jimmy se dirige a su padre mediante la palabra papi. Localiza la raya y la palabra papi. Esa señal te ayuda a reconocer quién se dirige al padre.",
+      "q": "Después de releer el recurso, responde de nuevo: ¿Quién dice Es mi perro en el fragmento?",
+      "options": [
+        "A. Jimmy",
+        "B. El padre",
+        "C. El narrador",
+        "D. El equipo de rescate"
+      ],
+      "correct": "A. Jimmy",
+      "correctText": "Usaste el recurso para fundamentar tu respuesta.",
+      "fixText": "Jimmy se dirige a su padre mediante la palabra papi. Subraya la pista específica, compárala con tu respuesta y vuelve a intentarlo en tus palabras."
+    },
+    {
+      "title": "Recuperación Reactivo 3",
+      "explain": "La aclaración identifica al personaje que habla. Divide la línea en la pregunta del personaje y la aclaración del narrador. Explica qué informa cada parte.",
+      "q": "Después de releer el recurso, responde de nuevo: En preguntó Jimmy, ¿qué función cumple el narrador?",
+      "options": [
+        "A. Expresa su propia pregunta al padre",
+        "B. Aclara quién realizó la pregunta",
+        "C. Se convierte en Robutt",
+        "D. Describe una decisión del padre"
+      ],
+      "correct": "B. Aclara quién realizó la pregunta",
+      "correctText": "Usaste el recurso para fundamentar tu respuesta.",
+      "fixText": "La aclaración identifica al personaje que habla. Subraya la pista específica, compárala con tu respuesta y vuelve a intentarlo en tus palabras."
     }
   ],
   "summaryIdeas": [
     [
-      "1 · Concepto central",
-      "Identificamos los elementos y el punto de partida del análisis."
+      "Idea clave",
+      "La narración y el diálogo cumplen funciones diferentes."
     ],
     [
-      "2 · Interpretación del contexto",
-      "Orden cronológico, saltos temporales (anacronías) y ritmo narrativo"
+      "Síntesis",
+      "¿Qué parte corresponde al narrador y qué parte a Jimmy?"
     ],
     [
-      "3 · Síntesis formal",
-      "En Disposición temporal de los acontecimientos, el autor utiliza 'Disposición temporal' para construir una experiencia estética y reflexiva que interpela al lector en sus propias vivencias."
+      "Metacognición",
+      "¿Qué te ayudó más: leer el recurso, localizar una pista o comparar explicaciones? ¿Por qué?"
     ]
   ],
-  "interactive": {
-    "type": "reading_resource",
-    "title": "Recurso de Lectura y Análisis Narrativo",
-    "description": "Organizador y lectura contextualizada del cuento 'El mejor amigo de un muchacho'."
-  },
-  "summaryText": "Hoy profundizaste en Orden cronológico, saltos temporales (anacronías) y ritmo narrativo con lectura analítica y escritura reflexiva en tu cuaderno.",
-  "reasoning": {
-    "title": "Comparemos dos situaciones",
-    "dileIntro": "Antes de resumir, comparemos dos situaciones. No necesitas repetir una frase exacta: lo importante es que expliques la idea con tus propias palabras.",
-    "question": "Al comparar dos situaciones de Disposición temporal de los acontecimientos, ¿cómo influye el contexto en la interpretación de los datos?",
-    "expectedAnswer": "El significado o resultado depende de las condiciones del contexto y del propósito de la situación.",
-    "context1": {
-      "label": "SITUACIÓN 1",
-      "value": "Ejercicio 1 en Cuaderno: Ficha de Análisis Textual",
-      "desc": "Abre tu cuaderno de notas. Escribe como título: 'Disposición temporal de los acontecimientos'. Con base en la actividad (Representa a través de un breve sketch o dramatización una escena clave donde la...), escribe un breve párrafo analizando el rol de 'Disposición temporal': cita una frase del texto, explica su significado implícito y menciona qué valor transmite."
-    },
-    "context2": {
-      "label": "SITUACIÓN 2",
-      "value": "Ejercicio 2 en Cuaderno: Producción Escrita Breve y Revisión",
-      "desc": "En tu cuaderno, redacta una breve continuación o respuesta reflexiva de 5 líneas aplicando 'Disposición temporal'. Al finalizar, revisa tu texto cuidando la coherencia, el uso de conectores y la ortografía."
-    },
-    "successFeedback": "¡Excelente razonamiento! Reconociste que el contexto orienta la interpretación de los datos.",
-    "supportFeedback": "Observa cada situación por separado y explica qué elementos las distinguen.",
-    "revealText": "Cada situación tiene un propósito particular y los datos se interpretan según las condiciones del problema."
-  },
-  "challenge": {
-    "title": "Desafío breve: Disposición temporal de los acontecimientos",
-    "question": "En Lengua y Literatura, ¿qué diferencia observas entre identificar los datos y aplicar el procedimiento? Explica tu razonamiento.",
-    "expectedAnswer": "Identificar los datos determina el punto de partida; aplicar el procedimiento permite construir la respuesta.",
-    "item1": {
-      "label": "Datos iniciales",
-      "tag": "Punto de partida"
-    },
-    "item2": {
-      "label": "Procedimiento",
-      "tag": "Aplicación"
-    },
-    "successFeedback": "¡Muy bien! Distinguiste claramente los momentos del análisis.",
-    "supportFeedback": "Revisémoslo juntos: primero identificamos la información disponible y luego aplicamos el método correspondiente."
-  },
-  "strategy": {
-    "title": "Cómo analizar una situación",
-    "dileIntro": "Cuando enfrentes un problema en Lengua y Literatura, puedes seguir estos tres pasos clave:",
-    "steps": [
-      {
-        "number": 1,
-        "title": "Identifica",
-        "desc": "¿Cuáles son los datos clave y cuál es la pregunta central?"
-      },
-      {
-        "number": 2,
-        "title": "Aplica",
-        "desc": "¿Qué regla o método disciplinar corresponde utilizar?"
-      },
-      {
-        "number": 3,
-        "title": "Comprueba",
-        "desc": "¿La conclusión o resultado responde con coherencia al problema?"
-      }
-    ]
-  },
-  "closure": {
-    "congratulations": "¡Felicitaciones! Hoy completaste con éxito la clase \"Disposición temporal de los acontecimientos\". Has demostrado constancia y rigor en tu aprendizaje.",
-    "nextClassPreview": "En la próxima sesión continuaremos profundizando los aprendizajes de Lengua y Literatura."
-  },
   "paso8_cierre": {
-    "preguntaSintesis": "En tus propias palabras, ¿qué personaje, frase o idea de Disposición temporal de los acontecimientos te pareció más significativa y por qué?",
-    "metacognicion": "¿Qué estrategia de lectura te ayudó más a entender el sentido profundo del texto?",
-    "celebracion": "¡Gran trabajo hoy! Has dominado la Clase 4. ¡Nos vemos en la siguiente misión de lectura!"
+    "preguntaSintesis": "¿Qué parte corresponde al narrador y qué parte a Jimmy?",
+    "metacognicion": "¿Qué te ayudó más: leer el recurso, localizar una pista o comparar explicaciones? ¿Por qué?",
+    "celebracion": "Buen trabajo. Explicaste tu respuesta usando información del recurso."
   }
 };

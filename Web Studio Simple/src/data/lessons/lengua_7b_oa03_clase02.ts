@@ -5,49 +5,46 @@ export const LENGUA_7B_OA03_CLASE02: LessonData = {
     "grade": "7° Básico",
     "subject": "Lengua y Literatura",
     "oaCode": "OA 3",
-    "oaTitle": "Lectura",
+    "oaTitle": "Análisis de narraciones: conflicto, personajes y ambiente",
     "lessonNumber": 2,
     "totalLessonsInOa": 6,
-    "lessonTitle": "Evolución y roles de los personajes",
+    "lessonTitle": "Acciones que cambian el conflicto",
     "durationMinutes": 30,
-    "nextLessonTitle": "La voz del narrador y perspectivas"
+    "nextLessonTitle": "Inferencias con evidencia del relato"
   },
   "prep": {
-    "adultObjective": "Acompañar la lectura comprensiva e interpretativa de: Evolución y roles de los personajes, guiando al estudiante a inferir sentidos profundos en torno a 'Personajes' y dialogar sobre la obra.",
-    "routeToday": "1. Inicio y activación · 2. Video de exploración · 3. Recorrido guiado · 4. Formalización y práctica en cuaderno · 5. Miniquiz y REVISAR · 6. Cierre metacognitivo",
-    "mentorReminder": "Sigue las indicaciones en pantalla paso a paso. Lee únicamente los recuadros DILE en voz alta y espera siempre la respuesta.",
+    "adultObjective": "Explicar cómo las acciones del padre, Jimmy y Robutt afectan a otros personajes y desarrollan el conflicto.",
+    "routeToday": "Leer el recurso → localizar pistas → explicar → practicar → comprobar comprensión.",
+    "mentorReminder": "Lee el recurso con el estudiante antes de preguntar. Guía usando DILE y PREGÚNTALE. Mantén las respuestas de referencia privadas hasta que el estudiante intente responder.",
     "reminders": [
-      "Sigue el orden indicado.",
-      "Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.",
-      "No leas los recuadros SOLO PARA TI ni AYUDA DE LECTURA.",
-      "Haz cada pregunta y espera la respuesta antes de seleccionar una opción.",
-      "Considera correcta una respuesta si expresa la idea matemática, aunque use palabras distintas.",
-      "Si el estudiante necesita apoyo, usa únicamente la ayuda que aparecerá.",
-      "Si propone otra explicación o no está de acuerdo, escúchalo completo y valora su razonamiento antes de guiarlo."
+      "Lee el recurso con el estudiante antes de preguntar.",
+      "Guía usando los recuadros DILE y PREGÚNTALE.",
+      "Mantén las respuestas de referencia privadas hasta que el estudiante intente responder.",
+      "Acepta respuestas en palabras propias siempre que se fundamenten con pistas del texto."
     ],
-    "emotionalTip": "Estimula la voz propia: 'En literatura tu interpretación es valiosa siempre que encuentres pistas en el texto que la respalden'."
+    "emotionalTip": "Acompaña el razonamiento del estudiante: comprender las acciones y sus efectos en el conflicto fomenta el pensamiento crítico y la empatía narrativa."
   },
   "route": {
     "blocks": [
       {
         "id": "b1",
         "number": "01",
-        "title": "Lengua y Literatura",
-        "subtitle": "Evolución y roles de los personajes",
+        "title": "Lectura activa",
+        "subtitle": "Leer el recurso y ubicar pistas",
         "color": "orange"
       },
       {
         "id": "b2",
         "number": "02",
         "title": "Exploración",
-        "subtitle": "Gancho y Recorrido Guiado",
-        "color": "orange"
+        "subtitle": "Videos y conversación guiada",
+        "color": "teal"
       },
       {
         "id": "b3",
         "number": "03",
-        "title": "Práctica",
-        "subtitle": "Aplicación en situaciones reales",
+        "title": "Modelamiento",
+        "subtitle": "Explicación y práctica en cuaderno",
         "color": "yellow"
       },
       {
@@ -55,475 +52,401 @@ export const LENGUA_7B_OA03_CLASE02: LessonData = {
         "number": "04",
         "title": "Evaluación",
         "subtitle": "Miniquiz formativo y síntesis",
-        "color": "teal"
+        "color": "navy"
       }
     ],
     "keyQuestions": [
       {
-        "label": "Exploración inicial",
-        "sub": "Evolución y roles de los personajes"
+        "label": "Pregunta Clave 1",
+        "sub": "¿Qué efecto tiene la propuesta del padre sobre Jimmy?"
       },
       {
-        "label": "Idea clave",
-        "sub": "En Evolución y roles de los personajes, el autor utiliza 'Pe"
-      },
-      {
-        "label": "Práctica y aplicación",
-        "sub": "Resolución guiada paso a paso"
+        "label": "Pregunta Clave 2",
+        "sub": "¿Cómo ayuda esta acción a comprender la postura de Jimmy?"
       }
     ],
-    "dileIntro": "Hoy comenzaremos la clase 2 de Lengua y Literatura: \"Evolución y roles de los personajes\".",
-    "dileObjective": "Protagonistas, antagonistas y motivaciones que impulsan las acciones"
+    "dileIntro": "Explicar cómo las acciones del padre, Jimmy y Robutt afectan a otros personajes y desarrollan el conflicto.",
+    "dileObjective": "Al terminar, podrás explicar cómo las acciones del padre, jimmy y robutt afectan a otros personajes y desarrollan el conflicto."
   },
   "situation": {
-    "dilePrompt": "Hoy en Lengua y Literatura nos sumergimos en 'Evolución y roles de los personajes'. El concepto literario clave que exploraremos es 'Personajes'. Observa el fragmento o situación inicial en la pantalla sobre Protagonistas, antagonistas y motivaciones que impulsan las acciones:",
-    "expectedAnswer": "Identificar el tema central, conflicto del personaje o recurso literario vinculado con Personajes.",
-    "socraticHint": "Pídele que relea la primera frase y se fije en cómo se siente el protagonista o qué tono tiene el narrador.",
-    "emotionalTip": "Estimula la voz propia: 'En literatura tu interpretación es valiosa siempre que encuentres pistas en el texto que la respalden'.",
+    "dilePrompt": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",
+    "expectedAnswer": "La propuesta provoca la oposición de Jimmy y hace visible el desacuerdo entre ambos.",
+    "socraticHint": "¿Eso aparece en el recurso o lo estás anticipando a partir del título?",
+    "emotionalTip": "Acompaña el razonamiento del estudiante: comprender las acciones y sus efectos en el conflicto fomenta el pensamiento crítico y la empatía narrativa.",
     "options": [
       {
-        "label": "Identificó el conflicto central y lo vinculó con Personajes",
+        "label": "Formuló una anticipación lógica basada en el título y el contexto",
         "kind": "correct",
-        "feedbackText": "¡Excelente intuición lectora! Reconoció el dilema humano y el sentido de la situación."
+        "feedbackText": "¡Excelente! Planteaste una anticipación fundamentada."
       },
       {
-        "label": "Repitió palabras del texto sin interpretar lo que sienten los personajes",
+        "label": "Mencionó ideas sueltas sin conectar con la situación del relato",
         "kind": "needs_support",
-        "feedbackText": "Pregúntale qué emoción transmite el personaje: ¿por qué actúa de esa forma?"
+        "feedbackText": "Observa el título: ¿qué palabras te dan pistas de lo que ocurrirá?"
+      },
+      {
+        "label": "Requiere apoyo inicial o no sabe qué anticipar",
+        "kind": "no_answer",
+        "feedbackText": "Leamos juntos el título: ¿de qué imaginas que tratará?"
       }
     ]
   },
+  "interactive": {
+    "type": "reading_resource",
+    "title": "Acciones que cambian el conflicto",
+    "readingText": "Jimmy comparte juegos con Robutt y se siente acompañado por él. En una travesura anterior, Jimmy finge estar herido: Robutt activa una alarma, llega un equipo de rescate y el padre reprende a Jimmy. Más tarde, el padre anuncia que llegará un perro vivo y propone regalar a Robutt. Jimmy responde que Robutt es su perro. Cuando Robutt emite gemidos, Jimmy extiende los brazos y el robot salta hacia él. Jimmy lo abraza y expresa que lo quiere. El relato no cuenta una decisión posterior del padre.",
+    "paragraphs": [
+      "Jimmy comparte juegos con Robutt y se siente acompañado por él. En una travesura anterior, Jimmy finge estar herido: Robutt activa una alarma, llega un equipo de rescate y el padre reprende a Jimmy. Más tarde, el padre anuncia que llegará un perro vivo y propone regalar a Robutt. Jimmy responde que Robutt es su perro. Cuando Robutt emite gemidos, Jimmy extiende los brazos y el robot salta hacia él. Jimmy lo abraza y expresa que lo quiere. El relato no cuenta una decisión posterior del padre."
+    ],
+    "imageSrc": "/images/lessons/lengua_7b_oa03_clase02_recurso.jpg"
+  },
   "reference": {
-    "dilePrompt": "¿Qué conflicto, dilema humano o recurso expresivo identificas en este texto en relación con 'Personajes'?",
-    "question": "¿Qué conflicto, dilema humano o recurso expresivo identificas en este texto en relación con 'Personajes'?",
-    "expectedAnswer": "Identificar el tema central, conflicto del personaje o recurso literario vinculado con Personajes.",
-    "socraticHint": "Pídele que relea la primera frase y se fije en cómo se siente el protagonista o qué tono tiene el narrador.",
-    "feedbackSuccess": "Muy bien. Observaste el detalle central con precisión.",
-    "feedbackSupport": "Pídele que relea la primera frase y se fije en cómo se siente el protagonista o qué tono tiene el narrador."
+    "dilePrompt": "¿Qué efecto tiene la propuesta del padre sobre Jimmy?",
+    "question": "¿Qué efecto tiene la propuesta del padre sobre Jimmy?",
+    "expectedAnswer": "La propuesta provoca la oposición de Jimmy y hace visible el desacuerdo entre ambos.",
+    "socraticHint": "Vuelve al recurso de lectura en pantalla y localiza la pista clave.",
+    "feedbackSuccess": "¡Excelente! Usaste información del recurso para fundamentar tu respuesta.",
+    "feedbackSupport": "Vuelve a leer el recurso en pantalla y busca la acción concreta que responde a la pregunta."
   },
   "hook": {
-    "title": "Video Motivacional: El Desafío de Evolución y roles de los personajes",
-    "titulo": "Video Motivacional: El Desafío de Evolución y roles de los personajes",
-    "focusPoints": [],
-    "dileIntro": "Antes de ver el video, observa con atención lo que descubren los dos exploradores y qué pregunta queda planteada.",
-    "hazInstruction": "Observa y reflexiona con las escenas del desafío visual.",
+    "title": "Acciones que cambian el conflicto",
+    "dileIntro": "Hoy exploraremos acciones que cambian el conflicto.",
+    "hazInstruction": "Observa cada una de las 14 láminas y sigue la locución.",
     "videoSrc": "",
-    "videoUrl": "",
-    "posterSrc": "",
-    "dileAfterVideo": "Muy buena observación. Ahora conversaremos sobre lo que descubrieron en la expedición.",
-    "fullPrompt": "Actúa como Diseñador Instruccional Senior y Creador de Presentaciones en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de GANCHO MOTIVACIONAL (Paso 2) para:\n- Asignatura: Lengua y Literatura\n- Objetivo de Aprendizaje: OA 3\n- Clase: 2 (\"Evolución y roles de los personajes\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS (PLAN MAESTRO ACTUALIZACIÓN 29-09-2026):\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Exactamente 7 diapositivas (slide1 a slide7).\n3. ESTILO ARTÍSTICO DE LAS IMÁGENES: Anime Moderno (Modern Anime Style, cinematográfico, iluminación dinámica, fondos limpios con espacio negativo real).\n4. PROTAGONISTAS FIJOS: Dúo co-protagónico de 13 años (la joven y el joven estudiantes-exploradores chilenos). ACTÚAN JUNTOS en cada escena, colaborando y resolviendo el desafío en equipo.\n5. REGLA VISUAL ANTI-MÁSCARAS Y FONDOS LIMPIOS: Imágenes Full-Bleed con espacio negativo para texto y vectores. Queda prohibido usar placas oscuras que tapen las caras de los personajes o la mitad de la lámina. PROHIBIDO dibujar números, letras o fórmulas dentro de la ilustración generada por IA.\n6. PRESUPUESTO TEMPORAL Y GUION CONTINUO (GANCHO - 60 SEGUNDOS / 130 PALABRAS TOTALES): Cada diapositiva DEBE incluir únicamente el texto de narración oral continua (8+8+8+9+9+9+9 segundos, totalizando exactamente ~130 palabras para 60 segundos de locución a 130 palabras por minuto en Google Vids/TTS), sin marcas técnicas, encabezados ni duraciones, listo para ser leído por voz en off.\n7. PROTOCOLO DE COMPROBACIÓN ACÚSTICA OBLIGATORIA (GOOGLE VIDS): Medir la duración real del archivo exportado con cronómetro o analizador de audio. El conteo de palabras no garantiza por sí solo 60 segundos exactos. Si la duración no es exacta, ajustar narración, pausas o ritmo, volver a exportar y registrar la duración comprobada oficial.\n8. ESTRUCTURA HEXAPARTITA POR DIAPOSITIVA:\n   • Toda diapositiva se define con: 1) Propósito, 2) Título en Pantalla (64 pt), 3) Subtítulo en Pantalla (36 pt), 4) Prompt de imagen IA sin texto, 5) Capa vectorial para PowerPoint, y 6) Notas al orador continuas.\n   • COLOR DE TEXTO: Un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.\n   • LOCUCIÓN COHERENTE: Narra con precisión lo que se observa en la imagen y lo que se sintetiza en la pantalla.\n\nDETALLE DE LAS 7 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Apertura y Contexto) ---\n1. Propósito Didáctico: Apertura y Contexto\n2. Título en Pantalla (64 pt): Misión 2: Evolución y roles de los personajes\n3. Subtítulo en Pantalla (36 pt): Exploración inicial en Lengua y Literatura\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Evolución y roles de los personajes (Lengua y Literatura). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Mapa Visual: Situacion narrativa inicial de Evolución y roles de los personajes\n6. Notas al Orador (Locución Continua Google Vids): \"Comienza una nueva expedición de aprendizaje en Lengua y Literatura. Nuestros dos exploradores analizan el desafío de Evolución y roles de los personajes para descubrir sus secretos.\"\n\n--- DIAPOSITIVA 2 (Presentación del Escenario) ---\n1. Propósito Didáctico: Presentación del Escenario\n2. Título en Pantalla (64 pt): Punto de partida\n3. Subtítulo en Pantalla (36 pt): Protagonistas, antagonistas y motivaciones que impulsan las acciones\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Protagonistas, antagonistas y motivaciones que impulsan las acciones. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Protagonistas, antagonistas y motivaciones que impulsan las acciones\n6. Notas al Orador (Locución Continua Google Vids): \"Al observar los datos sobre Protagonistas, antagonistas y motivaciones que impulsan las acciones, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor.\"\n\n--- DIAPOSITIVA 3 (Aparición del Conflicto / Misterio) ---\n1. Propósito Didáctico: Aparición del Conflicto / Misterio\n2. Título en Pantalla (64 pt): El enigma disciplinar\n3. Subtítulo en Pantalla (36 pt): Desafío en Evolución y roles de los personajes\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Protagonistas, antagonistas y motivaciones que impulsan las acciones\n6. Notas al Orador (Locución Continua Google Vids): \"Surge un reto concreto sobre Evolución y roles de los personajes: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso.\"\n\n--- DIAPOSITIVA 4 (Exploración de Pistas) ---\n1. Propósito Didáctico: Exploración de Pistas\n2. Título en Pantalla (64 pt): Análisis de evidencias\n3. Subtítulo en Pantalla (36 pt): Protagonistas, antagonistas y motivaciones que impulsan las acciones\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Protagonistas, antagonistas y motivaciones que impulsan las acciones\n6. Notas al Orador (Locución Continua Google Vids): \"Ambos comparan las pistas disponibles sobre Protagonistas, antagonistas y motivaciones que impulsan las acciones. Cada dato confirma cómo interactúan los elementos clave de la situación.\"\n\n--- DIAPOSITIVA 5 (El Momento Crítico) ---\n1. Propósito Didáctico: El Momento Crítico\n2. Título en Pantalla (64 pt): Criterio de decisión\n3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Protagonistas, antagonistas y motivaciones que impulsan las acciones\n6. Notas al Orador (Locución Continua Google Vids): \"Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Evolución y roles de los personajes con total precisión metodológica.\"\n\n--- DIAPOSITIVA 6 (La Antesala de la Pregunta) ---\n1. Propósito Didáctico: La Antesala de la Pregunta\n2. Título en Pantalla (64 pt): El dilema central\n3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Evolución y roles de los personajes?\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Tension dramatica: Conflicto entre fuerzas del relato\n6. Notas al Orador (Locución Continua Google Vids): \"Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje.\"\n\n--- DIAPOSITIVA 7 (La Pregunta Detonante) ---\n1. Propósito Didáctico: La Pregunta Detonante\n2. Título en Pantalla (64 pt): Pregunta detonante\n3. Subtítulo en Pantalla (36 pt): Regla y método de Evolución y roles de los personajes\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta detonante: ¿Cual es el motor de la historia en Evolución y roles de los personajes?\n6. Notas al Orador (Locución Continua Google Vids): \"Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!\"\n\n",
+    "dileAfterVideo": "Conversemos sobre los detalles y evidencias que acabas de observar.",
     "slides": [
       {
         "slideNumber": 1,
-        "tituloMomento": "Apertura y Contexto",
-        "didacticPurpose": "Apertura y Contexto",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Evolución y roles de los personajes (Lengua y Literatura). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.",
-        "overlayTitle": "Misión 2: Evolución y roles de los personajes",
-        "overlaySubtitle": "Exploración inicial en Lengua y Literatura",
-        "overlayText": "Misión 2: Evolución y roles de los personajes",
-        "vectorialOverlayPptx": "Mapa Visual: Situacion narrativa inicial de Evolución y roles de los personajes",
-        "mathOverlayPptx": "Mapa Visual: Situacion narrativa inicial de Evolución y roles de los personajes",
-        "speakerNotes": "Comienza una nueva expedición de aprendizaje en Lengua y Literatura. Nuestros dos exploradores analizan el desafío de Evolución y roles de los personajes para descubrir sus secretos.",
-        "palabrasAprox": 21,
-        "duracionSeg": 9
+        "tituloMomento": "Objetivo de la lección",
+        "didacticPurpose": "Objetivo de la lección",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers analyzing Acciones que cambian el conflicto in Lengua y Literatura. Setting: Objetivo de la lección. Cinematic lighting, clean composition, clear negative space. No text drawn by AI.",
+        "overlayText": "Acciones que cambian el conflicto",
+        "overlayTitle": "Acciones que cambian el conflicto",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Acciones que cambian el conflicto",
+        "speakerNotes": "Hoy exploraremos acciones que cambian el conflicto."
       },
       {
         "slideNumber": 2,
-        "tituloMomento": "Presentación del Escenario",
-        "didacticPurpose": "Presentación del Escenario",
-        "visualPrompt": "Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Protagonistas, antagonistas y motivaciones que impulsan las acciones. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.",
-        "overlayTitle": "Punto de partida",
-        "overlaySubtitle": "Protagonistas, antagonistas y motivaciones que impulsan las acciones",
-        "overlayText": "Punto de partida: Protagonistas, antagonistas y motivaciones que impulsan las acciones",
-        "vectorialOverlayPptx": "Esquema de analisis: Texto fuente y pistas de Protagonistas, antagonistas y motivaciones que impulsan las acciones",
-        "mathOverlayPptx": "Esquema de analisis: Texto fuente y pistas de Protagonistas, antagonistas y motivaciones que impulsan las acciones",
-        "speakerNotes": "Al observar los datos sobre Protagonistas, antagonistas y motivaciones que impulsan las acciones, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor.",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        "tituloMomento": "Una situación",
+        "didacticPurpose": "Una situación",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers analyzing Acciones que cambian el conflicto in Lengua y Literatura. Setting: Una situación. Cinematic lighting, clean composition, clear negative space. No text drawn by AI.",
+        "overlayText": "Un caso por explorar",
+        "overlayTitle": "Un caso por explorar",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Un caso por explorar",
+        "speakerNotes": "El padre propone regalar a Robutt porque llegará un perro vivo. Jimmy afirma que Robutt es su perro."
       },
       {
         "slideNumber": 3,
-        "tituloMomento": "Aparición del Conflicto / Misterio",
-        "didacticPurpose": "Aparición del Conflicto / Misterio",
-        "visualPrompt": "Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.",
-        "overlayTitle": "El enigma disciplinar",
-        "overlaySubtitle": "Desafío en Evolución y roles de los personajes",
-        "overlayText": "El enigma disciplinar: Evolución y roles de los personajes",
-        "vectorialOverlayPptx": "Esquema de analisis: Texto fuente y pistas de Protagonistas, antagonistas y motivaciones que impulsan las acciones",
-        "mathOverlayPptx": "Esquema de analisis: Texto fuente y pistas de Protagonistas, antagonistas y motivaciones que impulsan las acciones",
-        "speakerNotes": "Surge un reto concreto sobre Evolución y roles de los personajes: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        "tituloMomento": "Una pregunta",
+        "didacticPurpose": "Una pregunta",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers analyzing Acciones que cambian el conflicto in Lengua y Literatura. Setting: Una pregunta. Cinematic lighting, clean composition, clear negative space. No text drawn by AI.",
+        "overlayText": "¿Qué efecto tiene la propuesta del padre sobre Jimmy?",
+        "overlayTitle": "¿Qué efecto tiene la propuesta del padre sobre Jimmy?",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "¿Qué efecto tiene la propuesta del padre sobre Jimmy?",
+        "speakerNotes": "¿Qué efecto tiene la propuesta del padre sobre Jimmy?"
       },
       {
         "slideNumber": 4,
-        "tituloMomento": "Exploración de Pistas",
-        "didacticPurpose": "Exploración de Pistas",
-        "visualPrompt": "Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.",
-        "overlayTitle": "Análisis de evidencias",
-        "overlaySubtitle": "Protagonistas, antagonistas y motivaciones que impulsan las acciones",
-        "overlayText": "Análisis de evidencias: Protagonistas, antagonistas y motivaciones que impulsan las acciones",
-        "vectorialOverlayPptx": "Esquema de analisis: Texto fuente y pistas de Protagonistas, antagonistas y motivaciones que impulsan las acciones",
-        "mathOverlayPptx": "Esquema de analisis: Texto fuente y pistas de Protagonistas, antagonistas y motivaciones que impulsan las acciones",
-        "speakerNotes": "Ambos comparan las pistas disponibles sobre Protagonistas, antagonistas y motivaciones que impulsan las acciones. Cada dato confirma cómo interactúan los elementos clave de la situación.",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        "tituloMomento": "Pistas para observar",
+        "didacticPurpose": "Pistas para observar",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers analyzing Acciones que cambian el conflicto in Lengua y Literatura. Setting: Pistas para observar. Cinematic lighting, clean composition, clear negative space. No text drawn by AI.",
+        "overlayText": "Las acciones y los detalles importan",
+        "overlayTitle": "Las acciones y los detalles importan",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Las acciones y los detalles importan",
+        "speakerNotes": "Observa la situación. ¿Qué detalle podría ayudarte a responder?"
       },
       {
         "slideNumber": 5,
-        "tituloMomento": "El Momento Crítico",
-        "didacticPurpose": "El Momento Crítico",
-        "visualPrompt": "Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.",
-        "overlayTitle": "Criterio de decisión",
-        "overlaySubtitle": "Aplicar el método riguroso",
-        "overlayText": "Criterio de decisión riguroso",
-        "vectorialOverlayPptx": "Esquema de analisis: Texto fuente y pistas de Protagonistas, antagonistas y motivaciones que impulsan las acciones",
-        "mathOverlayPptx": "Esquema de analisis: Texto fuente y pistas de Protagonistas, antagonistas y motivaciones que impulsan las acciones",
-        "speakerNotes": "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Evolución y roles de los personajes con total precisión metodológica.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        "tituloMomento": "Distintas respuestas",
+        "didacticPurpose": "Distintas respuestas",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers analyzing Acciones que cambian el conflicto in Lengua y Literatura. Setting: Distintas respuestas. Cinematic lighting, clean composition, clear negative space. No text drawn by AI.",
+        "overlayText": "¿Qué respuesta tiene respaldo?",
+        "overlayTitle": "¿Qué respuesta tiene respaldo?",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "¿Qué respuesta tiene respaldo?",
+        "speakerNotes": "Una respuesta necesita información del recurso. Buscaremos pistas para fundamentarla."
       },
       {
         "slideNumber": 6,
-        "tituloMomento": "La Antesala de la Pregunta",
-        "didacticPurpose": "La Antesala de la Pregunta",
-        "visualPrompt": "Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.",
-        "overlayTitle": "El dilema central",
-        "overlaySubtitle": "¿Cómo resolver Evolución y roles de los personajes?",
-        "overlayText": "¿Cómo resolver Evolución y roles de los personajes?",
-        "vectorialOverlayPptx": "Tension dramatica: Conflicto entre fuerzas del relato",
-        "mathOverlayPptx": "Tension dramatica: Conflicto entre fuerzas del relato",
-        "speakerNotes": "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        "tituloMomento": "Una forma de explorar",
+        "didacticPurpose": "Una forma de explorar",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers analyzing Acciones que cambian el conflicto in Lengua y Literatura. Setting: Una forma de explorar. Cinematic lighting, clean composition, clear negative space. No text drawn by AI.",
+        "overlayText": "Leer, relacionar y explicar",
+        "overlayTitle": "Leer, relacionar y explicar",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Leer, relacionar y explicar",
+        "speakerNotes": "Lee el recurso y relaciona sus detalles antes de elegir una explicación."
       },
       {
         "slideNumber": 7,
-        "tituloMomento": "La Pregunta Detonante",
-        "didacticPurpose": "La Pregunta Detonante",
-        "visualPrompt": "Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.",
-        "overlayTitle": "Pregunta detonante",
-        "overlaySubtitle": "Regla y método de Evolución y roles de los personajes",
-        "overlayText": "Meta: Dominio de Evolución y roles de los personajes",
-        "vectorialOverlayPptx": "Pregunta detonante: ¿Cual es el motor de la historia en Evolución y roles de los personajes?",
-        "mathOverlayPptx": "Pregunta detonante: ¿Cual es el motor de la historia en Evolución y roles de los personajes?",
-        "speakerNotes": "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        "tituloMomento": "La pregunta inicial",
+        "didacticPurpose": "La pregunta inicial",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers analyzing Acciones que cambian el conflicto in Lengua y Literatura. Setting: La pregunta inicial. Cinematic lighting, clean composition, clear negative space. No text drawn by AI.",
+        "overlayText": "¿Qué muestra la evidencia?",
+        "overlayTitle": "¿Qué muestra la evidencia?",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "¿Qué muestra la evidencia?",
+        "speakerNotes": "Ahora descubriremos cómo las pistas ayudan a comprender esta situación."
+      },
+      {
+        "slideNumber": 8,
+        "tituloMomento": "Objetivo de la lección",
+        "didacticPurpose": "Objetivo de la lección",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Focus on explanation and modeling of Acciones que cambian el conflicto. Concept: Objetivo de la lección. Clean background, warm focus. No text drawn by AI.",
+        "overlayText": "Objetivo de la lección. Explicar cómo una acción cambia el conflicto",
+        "overlayTitle": "Objetivo de la lección. Explicar cómo una acción cambia el conflicto",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Objetivo de la lección. Explicar cómo una acción cambia el conflicto",
+        "speakerNotes": "En esta clase explicarás cómo una acción cambia el conflicto. Seguirás lo que hace un personaje, la respuesta de otro y el efecto que esa respuesta deja ver."
+      },
+      {
+        "slideNumber": 9,
+        "tituloMomento": "Herramienta",
+        "didacticPurpose": "Herramienta",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Focus on explanation and modeling of Acciones que cambian el conflicto. Concept: Herramienta. Clean background, warm focus. No text drawn by AI.",
+        "overlayText": "Herramienta. Acción, respuesta y efecto en el conflicto",
+        "overlayTitle": "Herramienta. Acción, respuesta y efecto en el conflicto",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Herramienta. Acción, respuesta y efecto en el conflicto",
+        "speakerNotes": "Una acción puede provocar una respuesta. Esa relación permite observar cómo avanza un desacuerdo. Aquí el padre propone regalar a Robutt cuando llegue un perro vivo."
+      },
+      {
+        "slideNumber": 10,
+        "tituloMomento": "Criterio",
+        "didacticPurpose": "Criterio",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Focus on explanation and modeling of Acciones que cambian el conflicto. Concept: Criterio. Clean background, warm focus. No text drawn by AI.",
+        "overlayText": "Criterio. Nombra la acción y explica su efecto",
+        "overlayTitle": "Criterio. Nombra la acción y explica su efecto",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Criterio. Nombra la acción y explica su efecto",
+        "speakerNotes": "Para explicar, nombra primero lo que ocurre. Después indica qué respuesta sigue y qué muestra esa respuesta. Usa una pista del relato para sostener la relación."
+      },
+      {
+        "slideNumber": 11,
+        "tituloMomento": "Modelo",
+        "didacticPurpose": "Modelo",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Focus on explanation and modeling of Acciones que cambian el conflicto. Concept: Modelo. Clean background, warm focus. No text drawn by AI.",
+        "overlayText": "Modelo. La propuesta del padre provoca oposición en Jimmy",
+        "overlayTitle": "Modelo. La propuesta del padre provoca oposición en Jimmy",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Modelo. La propuesta del padre provoca oposición en Jimmy",
+        "speakerNotes": "¿Qué efecto tiene la propuesta del padre sobre Jimmy? La propuesta provoca su oposición. Jimmy afirma que Robutt es su perro, y así se hace visible el desacuerdo."
+      },
+      {
+        "slideNumber": 12,
+        "tituloMomento": "Verificación",
+        "didacticPurpose": "Verificación",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Focus on explanation and modeling of Acciones que cambian el conflicto. Concept: Verificación. Clean background, warm focus. No text drawn by AI.",
+        "overlayText": "Verificación. La propuesta y la respuesta aparecen juntas",
+        "overlayTitle": "Verificación. La propuesta y la respuesta aparecen juntas",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Verificación. La propuesta y la respuesta aparecen juntas",
+        "speakerNotes": "Comprobamos la respuesta en el recurso: aparecen la propuesta del padre y la oposición de Jimmy. Esa evidencia permite explicar el efecto sin suponer un desenlace."
+      },
+      {
+        "slideNumber": 13,
+        "tituloMomento": "Error y corrección",
+        "didacticPurpose": "Error y corrección",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Focus on explanation and modeling of Acciones que cambian el conflicto. Concept: Error y corrección. Clean background, warm focus. No text drawn by AI.",
+        "overlayText": "Error y corrección. El final no cuenta otra decisión",
+        "overlayTitle": "Error y corrección. El final no cuenta otra decisión",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Error y corrección. El final no cuenta otra decisión",
+        "speakerNotes": "Un error sería decir que el padre cambia de opinión. El relato termina sin informar otra decisión. La corrección es limitar la conclusión a la evidencia disponible."
+      },
+      {
+        "slideNumber": 14,
+        "tituloMomento": "Estrategia y puente",
+        "didacticPurpose": "Estrategia y puente",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Focus on explanation and modeling of Acciones que cambian el conflicto. Concept: Estrategia y puente. Clean background, warm focus. No text drawn by AI.",
+        "overlayText": "Estrategia y puente. Explica el efecto con evidencia y practica",
+        "overlayTitle": "Estrategia y puente. Explica el efecto con evidencia y practica",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Estrategia y puente. Explica el efecto con evidencia y practica",
+        "speakerNotes": "Recuerda seguir la acción, ubicar la respuesta y explicar su efecto con una pista. En la práctica usarás el mismo método, revisarás tus respuestas y cerrarás con la idea central."
       }
     ]
   },
   "preQuestions": [
     {
-      "context": "Indicios Textuales y Personajes",
-      "question": "¿Qué palabras o pistas del texto nos permiten inferir la presencia e importancia de 'Personajes' en este relato?",
-      "expected": "Citar pistas textuales o acciones de los personajes que demuestran el sentido de Personajes.",
-      "success": "¡Muy bien! Tu interpretación se apoya directamente en evidencias del texto y no en suposiciones.",
-      "support": "Busca en el segundo párrafo: ¿qué palabras describen la atmósfera o la motivación del personaje?",
-      "reveal": "La comprensión profunda se construye rastreando las pistas explícitas e implícitas que el autor distribuye en la obra.",
-      "studentReveal": "Las pistas textuales que confirman la presencia y sentido de Personajes."
+      "context": "El padre propone regalar a Robutt porque llegará un perro vivo. Jimmy afirma que Robutt es su perro.",
+      "question": "¿Qué efecto tiene la propuesta del padre sobre Jimmy?",
+      "expected": "La propuesta provoca la oposición de Jimmy y hace visible el desacuerdo entre ambos.",
+      "success": "Respuesta comprensible, información precisa y explicación de su relación.",
+      "support": "Localizar una pista concreta en el recurso. Comparar esa pista con la explicación propuesta. Leer el modelo, relacionarlo con la pista y pedir un nuevo intento en palabras propias.",
+      "reveal": "La propuesta de regalar a Robutt y la respuesta de Jimmy aparecen juntas en el recurso.",
+      "studentReveal": "La propuesta provoca la oposición de Jimmy y hace visible el desacuerdo entre ambos.",
+      "studentImage": "/images/lessons/lengua_7b_oa03_clase02_p1.jpg",
+      "relevantParagraph": 1
     },
     {
-      "context": "Sentido Figurado y Prevención del Error Literal",
-      "question": "Para no caer en el error de 'Dificultad para identificar y reordenar la secuencia no cronológica de los hechos en una narración.', ¿cómo debemos interpretar las expresiones en sentido figurado o simbólico de esta obra?",
-      "expected": "Distinguir el significado literal del sentido connotativo o metafórico que el autor busca evocar.",
-      "success": "¡Exacto! Lograste ver más allá de las palabras literales y descubriste la metáfora profunda del autor.",
-      "support": "Piensa qué imagen o sentimiento evoca esa frase: ¿busca describir un hecho físico o una emoción interior?",
-      "reveal": "El lenguaje literario utiliza recursos figurados para transmitir experiencias humanas universales que trascienden lo literal.",
-      "studentReveal": "La interpretación del sentido figurado y simbólico de la obra."
+      "context": "Robutt gime. Jimmy extiende sus brazos y lo abraza. Después afirma que quiere a Robutt.",
+      "question": "¿Cómo ayuda esta acción a comprender la postura de Jimmy?",
+      "expected": "El abrazo y su expresión de cariño permiten explicar que desea conservar su vínculo con Robutt.",
+      "success": "Respuesta comprensible, información precisa y explicación de su relación.",
+      "support": "Localizar una pista concreta en el recurso. Comparar esa pista con la explicación propuesta. Leer el modelo, relacionarlo con la pista y pedir un nuevo intento en palabras propias.",
+      "reveal": "Jimmy lo abraza y expresa que lo quiere; ambas pistas apoyan la explicación.",
+      "studentReveal": "El abrazo y su expresión de cariño permiten explicar que desea conservar su vínculo con Robutt.",
+      "studentImage": "/images/lessons/lengua_7b_oa03_clase02_p2.jpg",
+      "relevantParagraph": 2
     }
   ],
   "formalization": {
-    "title": "Video Explicativo: Formalización de Evolución y roles de los personajes",
-    "concept": "Video Explicativo: Formalización de Evolución y roles de los personajes",
-    "dileIntro": "Ahora veremos el video explicativo de Evolución y roles de los personajes. Observa cómo se analiza el personaje y la función de Personajes.",
-    "hazInstruction": "Revisemos la explicación formal y la idea clave.",
-    "ideaClave": "En Evolución y roles de los personajes, el autor utiliza 'Personajes' para construir una experiencia estética y reflexiva que interpela al lector en sus propias vivencias.",
+    "title": "Explicación y modelamiento",
+    "concept": "Las acciones de un personaje pueden cambiar lo que otros sienten, dicen o hacen. Una consecuencia se explica relacionando una acción con su efecto, sin inventar hechos.",
+    "summary": "La propuesta provoca la oposición de Jimmy y hace visible el desacuerdo entre ambos. La propuesta de regalar a Robutt y la respuesta de Jimmy aparecen juntas en el recurso.",
+    "ideaClave": "Una acción se explica mediante su efecto.",
+    "dileIntro": "¿Cómo ayuda esta acción a comprender la postura de Jimmy?",
+    "hazInstruction": "Explica tu respuesta relacionando la acción con su efecto concreto usando evidencia del texto.",
+    "postDileIntro": "Comprobemos lo que acabamos de revisar.",
     "videoSrc": "",
-    "videoUrl": "",
-    "graphicPoster": "",
-    "fullPrompt": "Actúa como Diseñador Pedagógico y Especialista en Didáctica Disciplinar en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de VIDEO EXPLICATIVO / FORMALIZACIÓN (Paso 4) para:\n- Asignatura: Lengua y Literatura\n- Objetivo de Aprendizaje: OA 3\n- Clase: 2 (\"Evolución y roles de los personajes\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS (PLAN MAESTRO ACTUALIZACIÓN 29-09-2026):\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Exactamente 7 diapositivas (slide1 a slide7) siguiendo el principio de un cambio visual por cada movimiento mental.\n3. DIAPOSITIVA 1 OBLIGATORIA CON OBJETIVO: La primera diapositiva declara como subtítulo (36 pt) el objetivo específico de la lección, sin repetir rótulos redundantes 'OA 01'.\n4. PROTAGONISTAS FIJOS EN EL 100% DE LAS ESCENAS: Los mismos 2 jóvenes de 13 años (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.\n5. REGLA VISUAL ANTI-MÁSCARAS Y FONDOS LIMPIOS: Imagen limpia con espacio negativo real. Prohibido que la IA intente dibujar números, rectas o letras. Todo elemento disciplinar se ensambla vectorialmente en PowerPoint.\n6. PRESUPUESTO TEMPORAL Y GUION PEDAGÓGICO (LECCIÓN EXPLICATIVA - 90 SEGUNDOS / 195 PALABRAS TOTALES): Guion explicativo continuo (12+13+13+13+13+13+13 segundos, totalizando exactamente ~195 palabras para 90 segundos a 130 palabras por minuto en Google Vids/TTS), sin marcas técnicas. Diapositiva 1 formula el objetivo; diapositivas 2 a 7 desarrollan el contenido sin repetirlo.\n7. PROTOCOLO DE COMPROBACIÓN ACÚSTICA OBLIGATORIA (GOOGLE VIDS): Medir la duración real del archivo exportado con cronómetro o analizador de audio. El conteo de palabras no garantiza por sí solo 90 segundos exactos. Si la duración no es exacta, ajustar narración, pausas o ritmo, volver a exportar y registrar la duración comprobada oficial.\n8. JERARQUÍA TIPOGRÁFICA Y COLOR DE TEXTO: Título en Pantalla (64 pt); Subtítulo en Pantalla (36 pt). Texto brillante de un solo color de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, contornos, resplandores ni recuadros flotantes o fondos detrás del texto. Especificar color en cada prompt.\n9. CIERRE SIN RETO EN EL VIDEO: La explicación concluye con la regla de oro y da el pase directo a la práctica en la plataforma web, sin proponer desafíos finales ni tareas en el cuaderno durante el video.\n10. ESTRUCTURA HEXAPARTITA POR DIAPOSITIVA (Propósito, Título 64 pt, Subtítulo 36 pt, Prompt Imagen IA, Capa Vectorial PPTX, Notas al Orador).\n\nDETALLE DE LAS 7 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Objetivo de la Lección) ---\n1. Propósito Didáctico: Objetivo de la Lección\n2. Título en Pantalla (64 pt): Objetivo de la lección\n3. Subtítulo en Pantalla (36 pt): Dominar Evolución y roles de los personajes: Protagonistas, antagonistas y motivaciones que impulsan las acciones\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Protagonistas, antagonistas y motivaciones que impulsan las acciones. High clarity, negative space for text. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 3 · Evolución y roles de los personajes\n6. Notas al Orador (Locución Continua Google Vids): \"El objetivo de hoy es aprender a protagonistas, antagonistas y motivaciones que impulsan las acciones, aplicando el método disciplinar paso a paso con total rigor y claridad.\"\n\n--- DIAPOSITIVA 2 (Definición del Concepto Central) ---\n1. Propósito Didáctico: Definición del Concepto Central\n2. Título en Pantalla (64 pt): Concepto fundamental\n3. Subtítulo en Pantalla (36 pt): Protagonistas, antagonistas y motivaciones que impulsan las acciones\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Concepto disciplinar: Protagonistas, antagonistas y motivaciones que impulsan las acciones\n6. Notas al Orador (Locución Continua Google Vids): \"Para comprender Evolución y roles de los personajes, establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación.\"\n\n--- DIAPOSITIVA 3 (Demostración Modelada) ---\n1. Propósito Didáctico: Demostración Modelada\n2. Título en Pantalla (64 pt): Modelamiento paso a paso\n3. Subtítulo en Pantalla (36 pt): Procedimiento de Evolución y roles de los personajes\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Fragmento textual visible con marcas de evidencia literal e inferencias\n6. Notas al Orador (Locución Continua Google Vids): \"Observa cómo se aplica el procedimiento en este caso guiado: cada transformación responde a una justificación disciplinar explícita y visible.\"\n\n--- DIAPOSITIVA 4 (Prevención del Error Frecuente) ---\n1. Propósito Didáctico: Prevención del Error Frecuente\n2. Título en Pantalla (64 pt): Atención: Error habitual\n3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Contraste analitico: distincion de elementos narrativos clave\n6. Notas al Orador (Locución Continua Google Vids): \"Un error frecuente ocurre al descuidar el orden o saltarse un paso de la convención establecida. Siempre comprobamos cada dato antes de continuar.\"\n\n--- DIAPOSITIVA 5 (Comprobación del Resultado) ---\n1. Propósito Didáctico: Comprobación del Resultado\n2. Título en Pantalla (64 pt): Validación del resultado\n3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo de respuesta justificada con citas y evidencia textual\n6. Notas al Orador (Locución Continua Google Vids): \"Al contrastar el resultado con la situación inicial, confirmamos que la solución es consistente, rigurosa y responde plenamente a la pregunta.\"\n\n--- DIAPOSITIVA 6 (Estrategia Mnemotécnica) ---\n1. Propósito Didáctico: Estrategia Mnemotécnica\n2. Título en Pantalla (64 pt): Estrategia de pensamiento\n3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Estrategia de lectura: Localizar, interpretar y fundamentar\n6. Notas al Orador (Locución Continua Google Vids): \"Recuerda siempre la estrategia en tres pasos: identificar la información clave, aplicar la regla en orden y comprobar el resultado final.\"\n\n--- DIAPOSITIVA 7 (Síntesis y Regla de Oro) ---\n1. Propósito Didáctico: Síntesis y Regla de Oro\n2. Título en Pantalla (64 pt): Regla de Oro: Evolución y roles de los personajes\n3. Subtítulo en Pantalla (36 pt): Método disciplinar validado\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Infografía de síntesis: Regla de lectura de Evolución y roles de los personajes\n6. Notas al Orador (Locución Continua Google Vids): \"Ahora que dominas la regla fundamental y el procedimiento de Evolución y roles de los personajes, ¡vamos a demostrarlo en las actividades interactivas de la plataforma!\"\n\n",
-    "slides": [
-      {
-        "slideNumber": 1,
-        "tituloMomento": "Objetivo de la Lección",
-        "didacticPurpose": "Objetivo de la Lección",
-        "visualPrompt": "Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Protagonistas, antagonistas y motivaciones que impulsan las acciones. High clarity, negative space for text. No text drawn by AI.",
-        "overlayTitle": "Objetivo de la lección",
-        "overlaySubtitle": "Dominar Evolución y roles de los personajes: Protagonistas, antagonistas y motivaciones que impulsan las acciones",
-        "overlayText": "Concepto clave: Evolución y roles de los personajes",
-        "vectorialOverlayPptx": "Rótulo formal: OA 3 · Evolución y roles de los personajes",
-        "mathOverlayPptx": "Rótulo formal: OA 3 · Evolución y roles de los personajes",
-        "speakerNotes": "El objetivo de hoy es aprender a protagonistas, antagonistas y motivaciones que impulsan las acciones, aplicando el método disciplinar paso a paso con total rigor y claridad.",
-        "palabrasAprox": 25,
-        "duracionSeg": 12
-      },
-      {
-        "slideNumber": 2,
-        "tituloMomento": "Definición del Concepto Central",
-        "didacticPurpose": "Definición del Concepto Central",
-        "visualPrompt": "Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.",
-        "overlayTitle": "Concepto fundamental",
-        "overlaySubtitle": "Protagonistas, antagonistas y motivaciones que impulsan las acciones",
-        "overlayText": "Regla formal: Protagonistas, antagonistas y motivaciones que impulsan las acciones",
-        "vectorialOverlayPptx": "Concepto disciplinar: Protagonistas, antagonistas y motivaciones que impulsan las acciones",
-        "mathOverlayPptx": "Concepto disciplinar: Protagonistas, antagonistas y motivaciones que impulsan las acciones",
-        "speakerNotes": "Para comprender Evolución y roles de los personajes, establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
-      },
-      {
-        "slideNumber": 3,
-        "tituloMomento": "Demostración Modelada",
-        "didacticPurpose": "Demostración Modelada",
-        "visualPrompt": "Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.",
-        "overlayTitle": "Modelamiento paso a paso",
-        "overlaySubtitle": "Procedimiento de Evolución y roles de los personajes",
-        "overlayText": "Modelamiento paso a paso de Evolución y roles de los personajes",
-        "vectorialOverlayPptx": "Fragmento textual visible con marcas de evidencia literal e inferencias",
-        "mathOverlayPptx": "Fragmento textual visible con marcas de evidencia literal e inferencias",
-        "speakerNotes": "Observa cómo se aplica el procedimiento en este caso guiado: cada transformación responde a una justificación disciplinar explícita y visible.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
-      },
-      {
-        "slideNumber": 4,
-        "tituloMomento": "Prevención del Error Frecuente",
-        "didacticPurpose": "Prevención del Error Frecuente",
-        "visualPrompt": "Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.",
-        "overlayTitle": "Atención: Error habitual",
-        "overlaySubtitle": "Confusión común que debemos evitar",
-        "overlayText": "Atención: Error habitual a evitar",
-        "vectorialOverlayPptx": "Contraste analitico: distincion de elementos narrativos clave",
-        "mathOverlayPptx": "Contraste analitico: distincion de elementos narrativos clave",
-        "speakerNotes": "Un error frecuente ocurre al descuidar el orden o saltarse un paso de la convención establecida. Siempre comprobamos cada dato antes de continuar.",
-        "palabrasAprox": 27,
-        "duracionSeg": 13
-      },
-      {
-        "slideNumber": 5,
-        "tituloMomento": "Comprobación del Resultado",
-        "didacticPurpose": "Comprobación del Resultado",
-        "visualPrompt": "Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.",
-        "overlayTitle": "Validación del resultado",
-        "overlaySubtitle": "Comprobar que la respuesta es consistente",
-        "overlayText": "Comprobación y validación del resultado",
-        "vectorialOverlayPptx": "Modelo de respuesta justificada con citas y evidencia textual",
-        "mathOverlayPptx": "Modelo de respuesta justificada con citas y evidencia textual",
-        "speakerNotes": "Al contrastar el resultado con la situación inicial, confirmamos que la solución es consistente, rigurosa y responde plenamente a la pregunta.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
-      },
-      {
-        "slideNumber": 6,
-        "tituloMomento": "Estrategia Mnemotécnica",
-        "didacticPurpose": "Estrategia Mnemotécnica",
-        "visualPrompt": "Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.",
-        "overlayTitle": "Estrategia de pensamiento",
-        "overlaySubtitle": "1. Identificar · 2. Aplicar · 3. Comprobar",
-        "overlayText": "Estrategia mental: Identificar, Aplicar y Verificar",
-        "vectorialOverlayPptx": "Estrategia de lectura: Localizar, interpretar y fundamentar",
-        "mathOverlayPptx": "Estrategia de lectura: Localizar, interpretar y fundamentar",
-        "speakerNotes": "Recuerda siempre la estrategia en tres pasos: identificar la información clave, aplicar la regla en orden y comprobar el resultado final.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
-      },
-      {
-        "slideNumber": 7,
-        "tituloMomento": "Síntesis y Regla de Oro",
-        "didacticPurpose": "Síntesis y Regla de Oro",
-        "visualPrompt": "Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.",
-        "overlayTitle": "Regla de Oro: Evolución y roles de los personajes",
-        "overlaySubtitle": "Método disciplinar validado",
-        "overlayText": "Síntesis: Evolución y roles de los personajes",
-        "vectorialOverlayPptx": "Infografía de síntesis: Regla de lectura de Evolución y roles de los personajes",
-        "mathOverlayPptx": "Infografía de síntesis: Regla de lectura de Evolución y roles de los personajes",
-        "speakerNotes": "Ahora que dominas la regla fundamental y el procedimiento de Evolución y roles de los personajes, ¡vamos a demostrarlo en las actividades interactivas de la plataforma!",
-        "palabrasAprox": 25,
-        "duracionSeg": 12
-      }
-    ]
+    "slides": []
   },
   "postQuestions": [
     {
-      "context": "Indicios Textuales y Personajes",
-      "question": "¿Qué palabras o pistas del texto nos permiten inferir la presencia e importancia de 'Personajes' en este relato?",
-      "expected": "Citar pistas textuales o acciones de los personajes que demuestran el sentido de Personajes.",
-      "success": "¡Muy bien! Tu interpretación se apoya directamente en evidencias del texto y no en suposiciones.",
-      "support": "Busca en el segundo párrafo: ¿qué palabras describen la atmósfera o la motivación del personaje?",
-      "reveal": "La comprensión profunda se construye rastreando las pistas explícitas e implícitas que el autor distribuye en la obra.",
-      "studentReveal": "Las pistas textuales que confirman la presencia y sentido de Personajes."
+      "context": "Comprobación 1 · Aplicación inmediata",
+      "question": "¿Cómo ayuda esta acción a comprender la postura de Jimmy?",
+      "expected": "El abrazo y su expresión de cariño permiten explicar que desea conservar su vínculo con Robutt.",
+      "success": "Respuesta comprensible, fundamentada en el texto.",
+      "support": "Revisa el modelo de la clase y compáralo con tu respuesta.",
+      "reveal": "El abrazo y su expresión de cariño permiten explicar que desea conservar su vínculo con Robutt.",
+      "studentReveal": "El abrazo y su expresión de cariño permiten explicar que desea conservar su vínculo con Robutt."
     },
     {
-      "context": "Sentido Figurado y Prevención del Error Literal",
-      "question": "Para no caer en el error de 'Dificultad para identificar y reordenar la secuencia no cronológica de los hechos en una narración.', ¿cómo debemos interpretar las expresiones en sentido figurado o simbólico de esta obra?",
-      "expected": "Distinguir el significado literal del sentido connotativo o metafórico que el autor busca evocar.",
-      "success": "¡Exacto! Lograste ver más allá de las palabras literales y descubriste la metáfora profunda del autor.",
-      "support": "Piensa qué imagen o sentimiento evoca esa frase: ¿busca describir un hecho físico o una emoción interior?",
-      "reveal": "El lenguaje literario utiliza recursos figurados para transmitir experiencias humanas universales que trascienden lo literal.",
-      "studentReveal": "La interpretación del sentido figurado y simbólico de la obra."
+      "context": "Comprobación 2 · Síntesis de la evidencia",
+      "question": "¿Qué efecto tiene la propuesta del padre sobre Jimmy?",
+      "expected": "La propuesta provoca la oposición de Jimmy y hace visible el desacuerdo entre ambos.",
+      "success": "Usa una pista concreta del texto.",
+      "support": "Vuelve al recurso de lectura para ubicar la pista.",
+      "reveal": "La propuesta provoca la oposición de Jimmy y hace visible el desacuerdo entre ambos.",
+      "studentReveal": "La propuesta provoca la oposición de Jimmy y hace visible el desacuerdo entre ambos."
     }
   ],
   "practice": [
     {
-      "context": "Ejercicio 1 en Cuaderno: Ficha de Análisis Textual",
-      "question": "Abre tu cuaderno de notas. Escribe como título: 'Evolución y roles de los personajes'. Con base en la actividad (Representa a través de un breve sketch o dramatización una escena clave donde la...), escribe un breve párrafo analizando el rol de 'Personajes': cita una frase del texto, explica su significado implícito y menciona qué valor transmite.",
-      "expected": "Desarrollo en el cuaderno con cita textual, interpretación del significado implícito y reflexión sobre el valor o tema.",
-      "success": "¡Excelente análisis literario en tu cuaderno! Tu interpretación está fundamentada con citas precisas.",
-      "support": "Revisa la diapositiva: subraya la cita textual y escribe con tus palabras qué revela sobre el protagonista.",
-      "reveal": "El análisis riguroso vincula la cita textual con la interpretación temática y el contexto de la obra.",
-      "studentReveal": "Ficha de análisis completa en el cuaderno con cita e interpretación fundamentada."
+      "context": "Caso 1: En una travesura anterior, Jimmy finge estar herido. Robutt activa una alarma y llega un equipo de rescate.",
+      "question": "¿Qué acción de Robutt produce la llegada del equipo? Escribe la acción, su efecto y la pista que conecta ambas cosas.",
+      "expected": "Robutt activa una alarma y luego llega el equipo de rescate. La alarma provoca la respuesta del equipo.",
+      "success": "La respuesta identifica una acción y su efecto. Para mejorarla, señala la alarma como pista y explica qué ocurre después.",
+      "support": "Vuelve al texto para ubicar la pista que conecta la acción con su efecto.",
+      "reveal": "Robutt activa una alarma y luego llega el equipo de rescate. La alarma provoca la respuesta del equipo.",
+      "studentReveal": "Robutt activa una alarma y luego llega el equipo de rescate. La alarma provoca la respuesta del equipo.",
+      "relevantParagraph": 1
     },
     {
-      "context": "Ejercicio 2 en Cuaderno: Producción Escrita Breve y Revisión",
-      "question": "En tu cuaderno, redacta una breve continuación o respuesta reflexiva de 5 líneas aplicando 'Personajes'. Al finalizar, revisa tu texto cuidando la coherencia, el uso de conectores y la ortografía.",
-      "expected": "Micro-escritura creativa en el cuaderno con aplicación de concepto y revisión de cohesión y ortografía.",
-      "success": "¡Muy buena producción escrita! Tu texto es coherente, expresivo y demuestra el dominio del concepto literario.",
-      "support": "Lee tu borrador en voz alta: ¿las ideas se conectan con fluidez? Corrige las tildes antes de darlo por listo.",
-      "reveal": "Escribir y revisar permite consolidar la apropiación del lenguaje y expresar ideas personales con rigor.",
-      "studentReveal": "Texto breve producido y revisado en el cuaderno con coherencia y precisión."
+      "context": "Caso 2: Jimmy finge estar herido durante la travesura. Después de la alarma y la llegada del equipo, su padre lo reprende.",
+      "question": "¿Qué acción de Jimmy antecede a la respuesta del padre? ¿Qué efecto tuvo en la situación?",
+      "expected": "Jimmy finge estar herido y su padre lo reprende después de que llega el equipo de rescate. La reprensión es una respuesta a la travesura.",
+      "success": "La respuesta relaciona la travesura de Jimmy con la reacción del padre. Revisa el orden para no atribuir la reprimenda a la propuesta posterior sobre el perro.",
+      "support": "Vuelve al texto para ubicar la pista que conecta la acción con su efecto.",
+      "reveal": "Jimmy finge estar herido y su padre lo reprende después de que llega el equipo de rescate. La reprensión es una respuesta a la travesura.",
+      "studentReveal": "Jimmy finge estar herido y su padre lo reprende después de que llega el equipo de rescate. La reprensión es una respuesta a la travesura.",
+      "relevantParagraph": 2
     }
   ],
   "mini": [
     {
-      "id": "q_1",
-      "q": "Al interpretar el fragmento de Evolución y roles de los personajes, ¿cuál de las siguientes opciones expresa con mayor fidelidad el rol de 'Personajes'?",
+      "id": "q1",
+      "q": "¿Qué provoca directamente la oposición de Jimmy?",
       "options": [
-        "Permite develar la motivación profunda del personaje y el conflicto central a través de indicios textuales concretos",
-        "Es un detalle puramente decorativo que no aporta ningún significado a la historia ni al mensaje del autor",
-        "Demuestra que el texto literario carece de sentido implícito y solo debe leerse al pie de la letra"
+        "A. La llegada de un rescate durante el diálogo",
+        "B. La propuesta del padre de regalar a Robutt",
+        "C. Un deseo de Robutt de ir a la Tierra",
+        "D. La decisión de Jimmy de cambiar de perro"
       ],
-      "correct": "Permite develar la motivación profunda del personaje y el conflicto central a través de indicios textuales concretos",
-      "fixExplain": "Toda inferencia legítima en comprensión lectora debe apoyarse en pistas textuales e indicios entregados por la obra.",
-      "concept": "Evolución y roles de los personajes",
-      "explain": "Toda inferencia legítima en comprensión lectora debe apoyarse en pistas textuales e indicios entregados por la obra.",
-      "dileReview": "Pídele que señale qué fragmento específico de la lectura justifica su respuesta."
+      "correct": "B. La propuesta del padre de regalar a Robutt",
+      "fixExplain": "El recurso relaciona la propuesta del padre con la respuesta de Jimmy."
     },
     {
-      "id": "q_2",
-      "q": "Para no cometer el error de 'Dificultad para identificar y reordenar la secuencia no cronológica de los hechos en una narración.', ¿qué estrategia de lectura comprensiva debemos emplear?",
+      "id": "q2",
+      "q": "¿Qué acción apoya el deseo de Jimmy de conservar a Robutt?",
       "options": [
-        "Distinguir el sentido literal del lenguaje figurado, relacionando las metáforas con las emociones de los personajes",
-        "Asumir que cada palabra significa exclusivamente su definición de diccionario más simple y directa",
-        "Saltarse los pasajes poéticos o descriptivos para centrarse únicamente en el desenlace final"
+        "A. Jimmy evita acercarse al robot",
+        "B. Jimmy pide llevarlo a otra colonia",
+        "C. Jimmy lo abraza y expresa su cariño",
+        "D. Jimmy acepta regalarlo sin responder"
       ],
-      "correct": "Distinguir el sentido literal del lenguaje figurado, relacionando las metáforas con las emociones de los personajes",
-      "fixExplain": "El lenguaje figurado transmite matices que el sentido literal no logra expresar; comprenderlo es la cumbre de la lectura crítica.",
-      "concept": "Evolución y roles de los personajes",
-      "explain": "El lenguaje figurado transmite matices que el sentido literal no logra expresar; comprenderlo es la cumbre de la lectura crítica.",
-      "dileReview": "Pregúntale: ¿cómo cambia el mensaje de un poema o relato cuando descubrimos el sentido figurado?"
+      "correct": "C. Jimmy lo abraza y expresa su cariño",
+      "fixExplain": "El abrazo y sus palabras muestran el vínculo que Jimmy quiere conservar."
     },
     {
-      "id": "q_3",
-      "q": "Durante el proceso de análisis y escritura sobre Protagonistas, antagonistas y motivaciones que impulsan las acciones, ¿por qué es indispensable la etapa de revisión del borrador en el cuaderno?",
+      "id": "q3",
+      "q": "¿Qué conclusión respeta el límite del final?",
       "options": [
-        "Porque permite verificar la coherencia de las ideas, la precisión de los conectores y la correcta ortografía antes de la versión final",
-        "Porque la primera versión de un texto nunca debe ser modificada bajo ninguna circunstancia",
-        "Porque revisar un texto escrito carece de impacto en la claridad comunicativa ante el lector"
+        "A. El padre promete conservar los dos perros",
+        "B. El perro vivo regresa a la Tierra",
+        "C. Robutt se marcha con otro niño",
+        "D. Jimmy reafirma su afecto, sin una decisión posterior del padre"
       ],
-      "correct": "Porque permite verificar la coherencia de las ideas, la precisión de los conectores y la correcta ortografía antes de la versión final",
-      "fixExplain": "La revisión y edición es la fase fundamental de la escritura que asegura que el mensaje se transmita con claridad y rigor.",
-      "concept": "Evolución y roles de los personajes",
-      "explain": "La revisión y edición es la fase fundamental de la escritura que asegura que el mensaje se transmita con claridad y rigor.",
-      "dileReview": "Pídele que te muestre en su cuaderno qué ajustes u observaciones hizo al releer su escrito."
+      "correct": "D. Jimmy reafirma su afecto, sin una decisión posterior del padre",
+      "fixExplain": "El recurso muestra la postura de Jimmy, pero no informa una nueva decisión del padre."
     }
   ],
   "recovery": [
     {
-      "title": "Recuperación de Lengua y Literatura: Evolución y roles de los personajes",
-      "explain": "Al analizar Protagonistas, antagonistas y motivaciones que impulsan las acciones, recuerda buscar siempre las pistas explícitas e implícitas en el texto y relacionar 'Personajes' con la intención del autor.",
-      "q": "¿Cuál es la estrategia clave para comprender el sentido profundo de una obra en Evolución y roles de los personajes?",
+      "title": "Recuperación Reactivo 1",
+      "explain": "El recurso relaciona la propuesta del padre con la respuesta de Jimmy. Vuelve a la conversación con el padre. Subraya qué propone y qué responde Jimmy; separa ese momento de la travesura anterior.",
+      "q": "Después de releer el recurso, responde de nuevo: ¿Qué provoca directamente la oposición de Jimmy?",
       "options": [
-        "Releer con atención buscando las pistas contextuales que justifican la interpretación de 'Personajes'",
-        "Adivinar el tema central fijándose únicamente en el título sin examinar el cuerpo del texto"
+        "A. La llegada de un rescate durante el diálogo",
+        "B. La propuesta del padre de regalar a Robutt",
+        "C. Un deseo de Robutt de ir a la Tierra",
+        "D. La decisión de Jimmy de cambiar de perro"
       ],
-      "correct": "Releer con atención buscando las pistas contextuales que justifican la interpretación de 'Personajes'",
-      "correctText": "¡Correcto! La relectura atenta guiada por pistas textuales es la mejor herramienta de comprensión lectora.",
-      "fixText": "Recuerda que en Lengua y Literatura las respuestas están en el texto: vuelve siempre al fragmento para comprobar tu deducción."
+      "correct": "B. La propuesta del padre de regalar a Robutt",
+      "correctText": "Usaste el recurso para fundamentar tu respuesta.",
+      "fixText": "El recurso relaciona la propuesta del padre con la respuesta de Jimmy. Subraya la pista específica, compárala con tu respuesta y vuelve a intentarlo en tus palabras."
+    },
+    {
+      "title": "Recuperación Reactivo 2",
+      "explain": "El abrazo y sus palabras muestran el vínculo que Jimmy quiere conservar. Busca la acción de Jimmy cuando Robutt gime. Distingue el gesto que aparece en el recurso de acciones que no se narran.",
+      "q": "Después de releer el recurso, responde de nuevo: ¿Qué acción apoya el deseo de Jimmy de conservar a Robutt?",
+      "options": [
+        "A. Jimmy evita acercarse al robot",
+        "B. Jimmy pide llevarlo a otra colonia",
+        "C. Jimmy lo abraza y expresa su cariño",
+        "D. Jimmy acepta regalarlo sin responder"
+      ],
+      "correct": "C. Jimmy lo abraza y expresa su cariño",
+      "correctText": "Usaste el recurso para fundamentar tu respuesta.",
+      "fixText": "El abrazo y sus palabras muestran el vínculo que Jimmy quiere conservar. Subraya la pista específica, compárala con tu respuesta y vuelve a intentarlo en tus palabras."
+    },
+    {
+      "title": "Recuperación Reactivo 3",
+      "explain": "El recurso muestra la postura de Jimmy, pero no informa una nueva decisión del padre. Lee el final y separa lo que sí cuenta sobre Jimmy de la decisión posterior del padre, que no aparece.",
+      "q": "Después de releer el recurso, responde de nuevo: ¿Qué conclusión respeta el límite del final?",
+      "options": [
+        "A. El padre promete conservar los dos perros",
+        "B. El perro vivo regresa a la Tierra",
+        "C. Robutt se marcha con otro niño",
+        "D. Jimmy reafirma su afecto, sin una decisión posterior del padre"
+      ],
+      "correct": "D. Jimmy reafirma su afecto, sin una decisión posterior del padre",
+      "correctText": "Usaste el recurso para fundamentar tu respuesta.",
+      "fixText": "El recurso muestra la postura de Jimmy, pero no informa una nueva decisión del padre. Subraya la pista específica, compárala con tu respuesta y vuelve a intentarlo en tus palabras."
     }
   ],
   "summaryIdeas": [
     [
-      "1 · Concepto central",
-      "Identificamos los elementos y el punto de partida del análisis."
+      "Idea clave",
+      "Una acción se explica mediante su efecto."
     ],
     [
-      "2 · Interpretación del contexto",
-      "Protagonistas, antagonistas y motivaciones que impulsan las acciones"
+      "Síntesis",
+      "¿Qué efecto tiene la propuesta del padre sobre Jimmy?"
     ],
     [
-      "3 · Síntesis formal",
-      "En Evolución y roles de los personajes, el autor utiliza 'Personajes' para construir una experiencia estética y reflexiva que interpela al lector en sus propias vivencias."
+      "Metacognición",
+      "¿Qué te ayudó más: leer el recurso, localizar una pista o comparar explicaciones? ¿Por qué?"
     ]
   ],
-  "interactive": {
-    "type": "reading_resource",
-    "title": "Recurso de Lectura y Análisis Narrativo",
-    "description": "Organizador y lectura contextualizada del cuento 'El mejor amigo de un muchacho'."
-  },
-  "summaryText": "Hoy profundizaste en Protagonistas, antagonistas y motivaciones que impulsan las acciones con lectura analítica y escritura reflexiva en tu cuaderno.",
-  "reasoning": {
-    "title": "Comparemos dos situaciones",
-    "dileIntro": "Antes de resumir, comparemos dos situaciones. No necesitas repetir una frase exacta: lo importante es que expliques la idea con tus propias palabras.",
-    "question": "Al comparar dos situaciones de Evolución y roles de los personajes, ¿cómo influye el contexto en la interpretación de los datos?",
-    "expectedAnswer": "El significado o resultado depende de las condiciones del contexto y del propósito de la situación.",
-    "context1": {
-      "label": "SITUACIÓN 1",
-      "value": "Ejercicio 1 en Cuaderno: Ficha de Análisis Textual",
-      "desc": "Abre tu cuaderno de notas. Escribe como título: 'Evolución y roles de los personajes'. Con base en la actividad (Representa a través de un breve sketch o dramatización una escena clave donde la...), escribe un breve párrafo analizando el rol de 'Personajes': cita una frase del texto, explica su significado implícito y menciona qué valor transmite."
-    },
-    "context2": {
-      "label": "SITUACIÓN 2",
-      "value": "Ejercicio 2 en Cuaderno: Producción Escrita Breve y Revisión",
-      "desc": "En tu cuaderno, redacta una breve continuación o respuesta reflexiva de 5 líneas aplicando 'Personajes'. Al finalizar, revisa tu texto cuidando la coherencia, el uso de conectores y la ortografía."
-    },
-    "successFeedback": "¡Excelente razonamiento! Reconociste que el contexto orienta la interpretación de los datos.",
-    "supportFeedback": "Observa cada situación por separado y explica qué elementos las distinguen.",
-    "revealText": "Cada situación tiene un propósito particular y los datos se interpretan según las condiciones del problema."
-  },
-  "challenge": {
-    "title": "Desafío breve: Evolución y roles de los personajes",
-    "question": "En Lengua y Literatura, ¿qué diferencia observas entre identificar los datos y aplicar el procedimiento? Explica tu razonamiento.",
-    "expectedAnswer": "Identificar los datos determina el punto de partida; aplicar el procedimiento permite construir la respuesta.",
-    "item1": {
-      "label": "Datos iniciales",
-      "tag": "Punto de partida"
-    },
-    "item2": {
-      "label": "Procedimiento",
-      "tag": "Aplicación"
-    },
-    "successFeedback": "¡Muy bien! Distinguiste claramente los momentos del análisis.",
-    "supportFeedback": "Revisémoslo juntos: primero identificamos la información disponible y luego aplicamos el método correspondiente."
-  },
-  "strategy": {
-    "title": "Cómo analizar una situación",
-    "dileIntro": "Cuando enfrentes un problema en Lengua y Literatura, puedes seguir estos tres pasos clave:",
-    "steps": [
-      {
-        "number": 1,
-        "title": "Identifica",
-        "desc": "¿Cuáles son los datos clave y cuál es la pregunta central?"
-      },
-      {
-        "number": 2,
-        "title": "Aplica",
-        "desc": "¿Qué regla o método disciplinar corresponde utilizar?"
-      },
-      {
-        "number": 3,
-        "title": "Comprueba",
-        "desc": "¿La conclusión o resultado responde con coherencia al problema?"
-      }
-    ]
-  },
-  "closure": {
-    "congratulations": "¡Felicitaciones! Hoy completaste con éxito la clase \"Evolución y roles de los personajes\". Has demostrado constancia y rigor en tu aprendizaje.",
-    "nextClassPreview": "En la próxima sesión continuaremos profundizando los aprendizajes de Lengua y Literatura."
-  },
   "paso8_cierre": {
-    "preguntaSintesis": "En tus propias palabras, ¿qué personaje, frase o idea de Evolución y roles de los personajes te pareció más significativa y por qué?",
-    "metacognicion": "¿Qué estrategia de lectura te ayudó más a entender el sentido profundo del texto?",
-    "celebracion": "¡Gran trabajo hoy! Has dominado la Clase 2. ¡Nos vemos en la siguiente misión de lectura!"
+    "preguntaSintesis": "¿Qué efecto tiene la propuesta del padre sobre Jimmy?",
+    "metacognicion": "¿Qué te ayudó más: leer el recurso, localizar una pista o comparar explicaciones? ¿Por qué?",
+    "celebracion": "Buen trabajo. Explicaste tu respuesta usando información del recurso."
   }
 };

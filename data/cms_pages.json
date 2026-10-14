@@ -4,11 +4,11 @@
     "titulo": "Página de Inicio",
     "slug": "/",
     "activo": true,
-    "mostrarEnMenu": false,
+    "mostrarEnMenu": true,
     "ordenMenu": 1,
     "seoTitle": "EstudioSimple · Homeschooling Oficial para Exámenes Libres MINEDUC",
     "seoDescription": "Plataforma educativa mobile-first para estudiantes de 3° a 8° básico en Chile. Guiones pedagógicos, articulación pantalla-cuaderno y ensayos tipo MINEDUC.",
-    "ultimaModificacion": "2026-09-18",
+    "ultimaModificacion": "2026-09-22",
     "secciones": [
       {
         "id": "sec-cinta",
@@ -70,56 +70,13 @@
         }
       },
       {
-        "id": "sec-exito",
-        "tipoBloque": "PILARES",
-        "orden": 2,
-        "activo": true,
-        "titulo": "¿Cómo logramos el éxito académico?",
-        "subtitulo": "Cuatro pilares estructurales para validar el año escolar con autonomía y serenidad.",
-        "configuracion": {
-          "badgeText": "Metodología Paso a Paso",
-          "colorBordeEtiqueta": "#18AFCB",
-          "pilares": [
-            {
-              "numero": "1",
-              "titulo": "1. Bloques Independientes",
-              "descripcion": "Sesiones modulares de 30 minutos sin libros densos. Un formato paso a paso, visual y sin estrés para tu hijo.",
-              "icono": "grid_view",
-              "colorIcono": "#123a72"
-            },
-            {
-              "numero": "2",
-              "titulo": "2. Temario MINEDUC",
-              "descripcion": "Ruta exacta de 3° a 8° Básico con el temario oficial del MINEDUC. Contenido directo, organizado y sin relleno.",
-              "icono": "menu_book",
-              "colorIcono": "#18AFCB"
-            },
-            {
-              "numero": "3",
-              "titulo": "3. Respaldo Legal",
-              "descripcion": "Nuestro sistema cumple estrictamente con los Decretos 2272 y 67 para certificar legalmente el año escolar.",
-              "icono": "gavel",
-              "colorIcono": "#f27a00"
-            },
-            {
-              "numero": "4",
-              "titulo": "4. Evaluación",
-              "descripcion": "Simulacros de examen idénticos a los oficiales para garantizar que lleguen con total seguridad.",
-              "icono": "fact_check",
-              "colorIcono": "#F8AD22"
-            }
-          ]
-        }
-      },
-      {
         "id": "sec-metodo",
         "tipoBloque": "METODO",
-        "orden": 3,
+        "orden": 1,
         "activo": true,
-        "titulo": "Nuestro Método",
-        "subtitulo": "El puente exacto entre la cápsula digital interactiva y el cuaderno físico de tu hijo.",
+        "titulo": "El Método EstudioSimple en 8 Pasos",
+        "subtitulo": "Una arquitectura pedagógica esencial que conecta la pantalla digital con el cuaderno físico del estudiante.",
         "configuracion": {
-          "badgeText": "Pedagogía Esencial sin Sobrecarga Cognitiva",
           "totalPasos": 8,
           "destacado": "Puente entre pantalla y papel",
           "tabs": [
@@ -173,7 +130,7 @@
       {
         "id": "sec-simulador",
         "tipoBloque": "SIMULADOR",
-        "orden": 4,
+        "orden": 2,
         "activo": true,
         "titulo": "Simulador de Exámenes Libres MINEDUC",
         "subtitulo": "Instrumentos formales con 4 alternativas, estándares psicométricos y retroalimentación formativa inmediata.",
@@ -183,15 +140,57 @@
         }
       },
       {
+        "id": "sec-exito",
+        "tipoBloque": "PILARES",
+        "orden": 2,
+        "activo": true,
+        "titulo": "¿Cómo logramos el éxito académico?",
+        "subtitulo": "Cuatro pilares estructurales para validar el año escolar con autonomía y serenidad.",
+        "configuracion": {
+          "badgeText": "Metodología Paso a Paso",
+          "colorBordeEtiqueta": "#18AFCB",
+          "pilares": [
+            {
+              "numero": "1",
+              "titulo": "1. Bloques Independientes",
+              "descripcion": "Sesiones modulares de 30 minutos sin libros densos. Un formato paso a paso, visual y sin estrés para tu hijo.",
+              "icono": "grid_view",
+              "colorIcono": "#123a72"
+            },
+            {
+              "numero": "2",
+              "titulo": "2. Temario MINEDUC",
+              "descripcion": "Ruta exacta de 3° a 8° Básico con el temario oficial del MINEDUC. Contenido directo, organizado y sin relleno.",
+              "icono": "menu_book",
+              "colorIcono": "#18AFCB"
+            },
+            {
+              "numero": "3",
+              "titulo": "3. Respaldo Legal",
+              "descripcion": "Nuestro sistema cumple estrictamente con los Decretos 2272 y 67 para certificar legalmente el año escolar.",
+              "icono": "gavel",
+              "colorIcono": "#f27a00"
+            },
+            {
+              "numero": "4",
+              "titulo": "4. Evaluación",
+              "descripcion": "Simulacros de examen idénticos a los oficiales para garantizar que lleguen con total seguridad.",
+              "icono": "fact_check",
+              "colorIcono": "#F8AD22"
+            }
+          ]
+        }
+      },
+      {
         "id": "sec-pricing",
         "tipoBloque": "PRICING",
-        "orden": 5,
+        "orden": 3,
         "activo": true,
-        "titulo": "Planes Adaptados a Tu Familia",
-        "subtitulo": "Preparación integral para Exámenes Libres de 3° a 8° Básico con temario oficial MINEDUC, lecciones de 30 minutos y puente con cuaderno físico.",
+        "titulo": "Planes Familiares Transparentes",
+        "subtitulo": "Acceso total a todos los cursos y temarios oficiales. Sin matrículas abusivas ni permanencia forzada.",
         "configuracion": {
-          "badgeText": "Inversión Transparente · Sin Contratos Forzados",
           "planDestacado": "Anual Homeschooler",
+          "badgeText": "Inversión Transparente · Sin Contratos Forzados",
           "bulletsMensual": [
             "Acceso a las 5 asignaturas oficiales",
             "Lecciones de 30 min y cuaderno guiado",
@@ -220,7 +219,7 @@
       {
         "id": "sec-testimonios",
         "tipoBloque": "TESTIMONIOS",
-        "orden": 6,
+        "orden": 4,
         "activo": true,
         "titulo": "Lo que Dicen las Familias",
         "subtitulo": "Padres, madres y educadores en Santiago y regiones que transformaron su rutina de homeschool.",
@@ -264,7 +263,7 @@
       {
         "id": "sec-faq",
         "tipoBloque": "FAQ",
-        "orden": 7,
+        "orden": 5,
         "activo": true,
         "titulo": "Preguntas Frecuentes",
         "subtitulo": "Respuestas directas sobre el respaldo legal, la metodología y el estudio en el hogar.",
@@ -296,7 +295,7 @@
       {
         "id": "sec-home-journal",
         "tipoBloque": "JOURNAL",
-        "orden": 8,
+        "orden": 6,
         "activo": true,
         "titulo": "Journal Pedagógico · Últimas Novedades",
         "subtitulo": "Guías para padres, novedades de fechas MINEDUC y artículos del método de estudio.",
@@ -310,7 +309,7 @@
       {
         "id": "sec-home-eventos",
         "tipoBloque": "EVENTOS",
-        "orden": 9,
+        "orden": 7,
         "activo": true,
         "titulo": "Calendario Oficial y Fechas Clave MINEDUC",
         "subtitulo": "Convocatorias de inscripción, períodos de exámenes libres y talleres de acompañamiento pedagógico.",

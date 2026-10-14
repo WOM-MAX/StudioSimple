@@ -5,49 +5,46 @@ export const LENGUA_7B_OA03_CLASE05: LessonData = {
     "grade": "7° Básico",
     "subject": "Lengua y Literatura",
     "oaCode": "OA 3",
-    "oaTitle": "Lectura",
+    "oaTitle": "Análisis de narraciones: conflicto, personajes y ambiente",
     "lessonNumber": 5,
     "totalLessonsInOa": 6,
-    "lessonTitle": "Práctica avanzada y modelamiento de OA 3 (Parte 1)",
+    "lessonTitle": "El orden de los hechos y el recuerdo",
     "durationMinutes": 30,
-    "nextLessonTitle": "Interpretación global, visión de mundo y síntesis"
+    "nextLessonTitle": "Comparar relatos con evidencia"
   },
   "prep": {
-    "adultObjective": "Acompañar la lectura comprensiva e interpretativa de: Práctica avanzada y modelamiento de OA 3 (Parte 1), guiando al estudiante a inferir sentidos profundos en torno a 'Desenlace' y dialogar sobre la obra.",
-    "routeToday": "1. Inicio y activación · 2. Video de exploración · 3. Recorrido guiado · 4. Formalización y práctica en cuaderno · 5. Miniquiz y REVISAR · 6. Cierre metacognitivo",
-    "mentorReminder": "Sigue las indicaciones en pantalla paso a paso. Lee únicamente los recuadros DILE en voz alta y espera siempre la respuesta.",
+    "adultObjective": "Distinguir el orden de los acontecimientos del orden en que se cuentan e interpretar la función de un recuerdo en la historia.",
+    "routeToday": "Leer el recurso → localizar pistas → explicar → practicar → comprobar comprensión.",
+    "mentorReminder": "Lee el recurso con el estudiante antes de preguntar. Guía usando DILE y PREGÚNTALE. Mantén las respuestas de referencia privadas hasta que el estudiante intente responder.",
     "reminders": [
-      "Sigue el orden indicado.",
-      "Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.",
-      "No leas los recuadros SOLO PARA TI ni AYUDA DE LECTURA.",
-      "Haz cada pregunta y espera la respuesta antes de seleccionar una opción.",
-      "Considera correcta una respuesta si expresa la idea matemática, aunque use palabras distintas.",
-      "Si el estudiante necesita apoyo, usa únicamente la ayuda que aparecerá.",
-      "Si propone otra explicación o no está de acuerdo, escúchalo completo y valora su razonamiento antes de guiarlo."
+      "Lee el recurso con el estudiante antes de preguntar.",
+      "Guía usando los recuadros DILE y PREGÚNTALE.",
+      "Mantén las respuestas de referencia privadas hasta que el estudiante intente responder.",
+      "Acepta respuestas en palabras propias siempre que se fundamenten con pistas del texto."
     ],
-    "emotionalTip": "Estimula la voz propia: 'En literatura tu interpretación es valiosa siempre que encuentres pistas en el texto que la respalden'."
+    "emotionalTip": "Comprender los saltos temporales requiere atención: celebra cuando conecte el recuerdo del pasado con el presente de la historia."
   },
   "route": {
     "blocks": [
       {
         "id": "b1",
         "number": "01",
-        "title": "Lengua y Literatura",
-        "subtitle": "Práctica avanzada y modelamiento de OA 3 (Parte 1)",
+        "title": "Lectura activa",
+        "subtitle": "Leer el recurso y ubicar pistas",
         "color": "orange"
       },
       {
         "id": "b2",
         "number": "02",
         "title": "Exploración",
-        "subtitle": "Gancho y Recorrido Guiado",
-        "color": "orange"
+        "subtitle": "Videos y conversación guiada",
+        "color": "teal"
       },
       {
         "id": "b3",
         "number": "03",
-        "title": "Práctica",
-        "subtitle": "Aplicación en situaciones reales",
+        "title": "Modelamiento",
+        "subtitle": "Explicación y práctica en cuaderno",
         "color": "yellow"
       },
       {
@@ -55,475 +52,401 @@ export const LENGUA_7B_OA03_CLASE05: LessonData = {
         "number": "04",
         "title": "Evaluación",
         "subtitle": "Miniquiz formativo y síntesis",
-        "color": "teal"
+        "color": "navy"
       }
     ],
     "keyQuestions": [
       {
-        "label": "Exploración inicial",
-        "sub": "Práctica avanzada y modelamiento de OA 3 (Parte 1)"
+        "label": "Pregunta Clave 1",
+        "sub": "¿La travesura ocurre al mismo tiempo que la llamada?"
       },
       {
-        "label": "Idea clave",
-        "sub": "En Práctica avanzada y modelamiento de OA 3 (Parte 1), el au"
-      },
-      {
-        "label": "Práctica y aplicación",
-        "sub": "Resolución guiada paso a paso"
+        "label": "Pregunta Clave 2",
+        "sub": "¿Qué información aporta ese recuerdo para comprender el vínculo entre Jimmy y Robutt?"
       }
     ],
-    "dileIntro": "Hoy comenzaremos la clase 5 de Lengua y Literatura: \"Práctica avanzada y modelamiento de OA 3 (Parte 1)\".",
-    "dileObjective": "Consolidación guiada de destrezas para Lengua y Literatura"
+    "dileIntro": "Distinguir el orden de los acontecimientos del orden en que se cuentan e interpretar la función de un recuerdo en la historia.",
+    "dileObjective": "Al terminar, podrás distinguir el orden de los acontecimientos del orden en que se cuentan e interpretar la función de un recuerdo en la historia."
   },
   "situation": {
-    "dilePrompt": "Hoy en Lengua y Literatura nos sumergimos en 'Práctica avanzada y modelamiento de OA 3 (Parte 1)'. El concepto literario clave que exploraremos es 'Desenlace'. Observa el fragmento o situación inicial en la pantalla sobre Consolidación guiada de destrezas para Lengua y Literatura:",
-    "expectedAnswer": "Identificar el tema central, conflicto del personaje o recurso literario vinculado con Desenlace.",
-    "socraticHint": "Pídele que relea la primera frase y se fije en cómo se siente el protagonista o qué tono tiene el narrador.",
-    "emotionalTip": "Estimula la voz propia: 'En literatura tu interpretación es valiosa siempre que encuentres pistas en el texto que la respalden'.",
+    "dilePrompt": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",
+    "expectedAnswer": "No. La travesura ocurrió en una ocasión anterior; Jimmy la recuerda cuando recibe la llamada.",
+    "socraticHint": "¿Eso aparece en el recurso o lo estás anticipando a partir del título?",
+    "emotionalTip": "Comprender los saltos temporales requiere atención: celebra cuando conecte el recuerdo del pasado con el presente de la historia.",
     "options": [
       {
-        "label": "Identificó el conflicto central y lo vinculó con Desenlace",
+        "label": "Formuló una anticipación lógica basada en el título y el contexto",
         "kind": "correct",
-        "feedbackText": "¡Excelente intuición lectora! Reconoció el dilema humano y el sentido de la situación."
+        "feedbackText": "¡Excelente! Planteaste una anticipación fundamentada."
       },
       {
-        "label": "Repitió palabras del texto sin interpretar lo que sienten los personajes",
+        "label": "Mencionó ideas sueltas sin conectar con la situación del relato",
         "kind": "needs_support",
-        "feedbackText": "Pregúntale qué emoción transmite el personaje: ¿por qué actúa de esa forma?"
+        "feedbackText": "Observa el título: ¿qué palabras te dan pistas de lo que ocurrirá?"
+      },
+      {
+        "label": "Requiere apoyo inicial o no sabe qué anticipar",
+        "kind": "no_answer",
+        "feedbackText": "Leamos juntos el título: ¿de qué imaginas que tratará?"
       }
     ]
   },
+  "interactive": {
+    "type": "reading_resource",
+    "title": "El orden de los hechos y el recuerdo",
+    "readingText": "En el presente del relato, Jimmy juega con Robutt fuera de casa. Mientras juega, recuerda una ocasión anterior en que fingió estar herido: Robutt activó una alarma, llegó un equipo de rescate y el padre lo reprendió. La voz del padre le llega por radio justo cuando está recordando aquello y le pide volver a casa. Jimmy vuelve, se quita el traje y escucha el anuncio sobre el perro de la Tierra. Después discute la propuesta de regalar a Robutt y termina abrazándolo. El narrador introduce el episodio anterior con la expresión «En una ocasión» y luego vuelve al presente del diálogo.",
+    "paragraphs": [
+      "En el presente del relato, Jimmy juega con Robutt fuera de casa. Mientras juega, recuerda una ocasión anterior en que fingió estar herido: Robutt activó una alarma, llegó un equipo de rescate y el padre lo reprendió. La voz del padre le llega por radio justo cuando está recordando aquello y le pide volver a casa. Jimmy vuelve, se quita el traje y escucha el anuncio sobre el perro de la Tierra. Después discute la propuesta de regalar a Robutt y termina abrazándolo. El narrador introduce el episodio anterior con la expresión «En una ocasión» y luego vuelve al presente del diálogo."
+    ],
+    "imageSrc": "/images/lessons/lengua_7b_oa03_clase05_recurso.jpg"
+  },
   "reference": {
-    "dilePrompt": "¿Qué conflicto, dilema humano o recurso expresivo identificas en este texto en relación con 'Desenlace'?",
-    "question": "¿Qué conflicto, dilema humano o recurso expresivo identificas en este texto en relación con 'Desenlace'?",
-    "expectedAnswer": "Identificar el tema central, conflicto del personaje o recurso literario vinculado con Desenlace.",
-    "socraticHint": "Pídele que relea la primera frase y se fije en cómo se siente el protagonista o qué tono tiene el narrador.",
-    "feedbackSuccess": "Muy bien. Observaste el detalle central con precisión.",
-    "feedbackSupport": "Pídele que relea la primera frase y se fije en cómo se siente el protagonista o qué tono tiene el narrador."
+    "dilePrompt": "¿La travesura ocurre al mismo tiempo que la llamada?",
+    "question": "¿La travesura ocurre al mismo tiempo que la llamada?",
+    "expectedAnswer": "No. La travesura ocurrió en una ocasión anterior; Jimmy la recuerda cuando recibe la llamada.",
+    "socraticHint": "Vuelve al recurso de lectura en pantalla y localiza la pista clave.",
+    "feedbackSuccess": "¡Excelente! Usaste información del recurso para fundamentar tu respuesta.",
+    "feedbackSupport": "Vuelve a leer el recurso en pantalla y busca la acción concreta que responde a la pregunta."
   },
   "hook": {
-    "title": "Video Motivacional: El Desafío de Práctica avanzada y modelamiento de OA 3 (Parte 1)",
-    "titulo": "Video Motivacional: El Desafío de Práctica avanzada y modelamiento de OA 3 (Parte 1)",
-    "focusPoints": [],
-    "dileIntro": "Antes de ver el video, observa con atención lo que descubren los dos exploradores y qué pregunta queda planteada.",
-    "hazInstruction": "Observa y reflexiona con las escenas del desafío visual.",
+    "title": "El orden de los hechos y el recuerdo",
+    "dileIntro": "Hoy exploraremos el orden de los hechos y el recuerdo.",
+    "hazInstruction": "Observa cada una de las 14 láminas y sigue la locución.",
     "videoSrc": "",
-    "videoUrl": "",
-    "posterSrc": "",
-    "dileAfterVideo": "Muy buena observación. Ahora conversaremos sobre lo que descubrieron en la expedición.",
-    "fullPrompt": "Actúa como Diseñador Instruccional Senior y Creador de Presentaciones en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de GANCHO MOTIVACIONAL (Paso 2) para:\n- Asignatura: Lengua y Literatura\n- Objetivo de Aprendizaje: OA 3\n- Clase: 5 (\"Práctica avanzada y modelamiento de OA 3 (Parte 1)\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS (PLAN MAESTRO ACTUALIZACIÓN 29-09-2026):\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Exactamente 7 diapositivas (slide1 a slide7).\n3. ESTILO ARTÍSTICO DE LAS IMÁGENES: Anime Moderno (Modern Anime Style, cinematográfico, iluminación dinámica, fondos limpios con espacio negativo real).\n4. PROTAGONISTAS FIJOS: Dúo co-protagónico de 13 años (la joven y el joven estudiantes-exploradores chilenos). ACTÚAN JUNTOS en cada escena, colaborando y resolviendo el desafío en equipo.\n5. REGLA VISUAL ANTI-MÁSCARAS Y FONDOS LIMPIOS: Imágenes Full-Bleed con espacio negativo para texto y vectores. Queda prohibido usar placas oscuras que tapen las caras de los personajes o la mitad de la lámina. PROHIBIDO dibujar números, letras o fórmulas dentro de la ilustración generada por IA.\n6. PRESUPUESTO TEMPORAL Y GUION CONTINUO (GANCHO - 60 SEGUNDOS / 130 PALABRAS TOTALES): Cada diapositiva DEBE incluir únicamente el texto de narración oral continua (8+8+8+9+9+9+9 segundos, totalizando exactamente ~130 palabras para 60 segundos de locución a 130 palabras por minuto en Google Vids/TTS), sin marcas técnicas, encabezados ni duraciones, listo para ser leído por voz en off.\n7. PROTOCOLO DE COMPROBACIÓN ACÚSTICA OBLIGATORIA (GOOGLE VIDS): Medir la duración real del archivo exportado con cronómetro o analizador de audio. El conteo de palabras no garantiza por sí solo 60 segundos exactos. Si la duración no es exacta, ajustar narración, pausas o ritmo, volver a exportar y registrar la duración comprobada oficial.\n8. ESTRUCTURA HEXAPARTITA POR DIAPOSITIVA:\n   • Toda diapositiva se define con: 1) Propósito, 2) Título en Pantalla (64 pt), 3) Subtítulo en Pantalla (36 pt), 4) Prompt de imagen IA sin texto, 5) Capa vectorial para PowerPoint, y 6) Notas al orador continuas.\n   • COLOR DE TEXTO: Un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.\n   • LOCUCIÓN COHERENTE: Narra con precisión lo que se observa en la imagen y lo que se sintetiza en la pantalla.\n\nDETALLE DE LAS 7 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Apertura y Contexto) ---\n1. Propósito Didáctico: Apertura y Contexto\n2. Título en Pantalla (64 pt): Misión 5: Práctica avanzada y modelamiento de OA 3 (Parte 1)\n3. Subtítulo en Pantalla (36 pt): Exploración inicial en Lengua y Literatura\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Práctica avanzada y modelamiento de OA 3 (Parte 1) (Lengua y Literatura). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Mapa Visual: Situacion narrativa inicial de Práctica avanzada y modelamiento de OA 3 (Parte 1)\n6. Notas al Orador (Locución Continua Google Vids): \"Comienza una nueva expedición de aprendizaje en Lengua y Literatura. Nuestros dos exploradores analizan el desafío de Práctica avanzada y modelamiento de OA 3 (Parte 1) para descubrir sus secretos.\"\n\n--- DIAPOSITIVA 2 (Presentación del Escenario) ---\n1. Propósito Didáctico: Presentación del Escenario\n2. Título en Pantalla (64 pt): Punto de partida\n3. Subtítulo en Pantalla (36 pt): Consolidación guiada de destrezas para Lengua y Literatura\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Consolidación guiada de destrezas para Lengua y Literatura. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Consolidación guiada de destrezas para Lengua y Literatura\n6. Notas al Orador (Locución Continua Google Vids): \"Al observar los datos sobre Consolidación guiada de destrezas para Lengua y Literatura, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor.\"\n\n--- DIAPOSITIVA 3 (Aparición del Conflicto / Misterio) ---\n1. Propósito Didáctico: Aparición del Conflicto / Misterio\n2. Título en Pantalla (64 pt): El enigma disciplinar\n3. Subtítulo en Pantalla (36 pt): Desafío en Práctica avanzada y modelamiento de OA 3 (Parte 1)\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Consolidación guiada de destrezas para Lengua y Literatura\n6. Notas al Orador (Locución Continua Google Vids): \"Surge un reto concreto sobre Práctica avanzada y modelamiento de OA 3 (Parte 1): las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso.\"\n\n--- DIAPOSITIVA 4 (Exploración de Pistas) ---\n1. Propósito Didáctico: Exploración de Pistas\n2. Título en Pantalla (64 pt): Análisis de evidencias\n3. Subtítulo en Pantalla (36 pt): Consolidación guiada de destrezas para Lengua y Literatura\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Consolidación guiada de destrezas para Lengua y Literatura\n6. Notas al Orador (Locución Continua Google Vids): \"Ambos comparan las pistas disponibles sobre Consolidación guiada de destrezas para Lengua y Literatura. Cada dato confirma cómo interactúan los elementos clave de la situación.\"\n\n--- DIAPOSITIVA 5 (El Momento Crítico) ---\n1. Propósito Didáctico: El Momento Crítico\n2. Título en Pantalla (64 pt): Criterio de decisión\n3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Esquema de analisis: Texto fuente y pistas de Consolidación guiada de destrezas para Lengua y Literatura\n6. Notas al Orador (Locución Continua Google Vids): \"Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Práctica avanzada y modelamiento de OA 3 (Parte 1) con total precisión metodológica.\"\n\n--- DIAPOSITIVA 6 (La Antesala de la Pregunta) ---\n1. Propósito Didáctico: La Antesala de la Pregunta\n2. Título en Pantalla (64 pt): El dilema central\n3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Práctica avanzada y modelamiento de OA 3 (Parte 1)?\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Tension dramatica: Conflicto entre fuerzas del relato\n6. Notas al Orador (Locución Continua Google Vids): \"Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje.\"\n\n--- DIAPOSITIVA 7 (La Pregunta Detonante) ---\n1. Propósito Didáctico: La Pregunta Detonante\n2. Título en Pantalla (64 pt): Pregunta detonante\n3. Subtítulo en Pantalla (36 pt): Regla y método de Práctica avanzada y modelamiento de OA 3 (Parte 1)\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta detonante: ¿Cual es el motor de la historia en Práctica avanzada y modelamiento de OA 3 (Parte 1)?\n6. Notas al Orador (Locución Continua Google Vids): \"Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!\"\n\n",
+    "dileAfterVideo": "Conversemos sobre los detalles y evidencias que acabas de observar.",
     "slides": [
       {
         "slideNumber": 1,
-        "tituloMomento": "Apertura y Contexto",
-        "didacticPurpose": "Apertura y Contexto",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Práctica avanzada y modelamiento de OA 3 (Parte 1) (Lengua y Literatura). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.",
-        "overlayTitle": "Misión 5: Práctica avanzada y modelamiento de OA 3 (Parte 1)",
-        "overlaySubtitle": "Exploración inicial en Lengua y Literatura",
-        "overlayText": "Misión 5: Práctica avanzada y modelamiento de OA 3 (Parte 1)",
-        "vectorialOverlayPptx": "Mapa Visual: Situacion narrativa inicial de Práctica avanzada y modelamiento de OA 3 (Parte 1)",
-        "mathOverlayPptx": "Mapa Visual: Situacion narrativa inicial de Práctica avanzada y modelamiento de OA 3 (Parte 1)",
-        "speakerNotes": "Comienza una nueva expedición de aprendizaje en Lengua y Literatura. Nuestros dos exploradores analizan el desafío de Práctica avanzada y modelamiento de OA 3 (Parte 1) para descubrir sus secretos.",
-        "palabrasAprox": 21,
-        "duracionSeg": 9
+        "tituloMomento": "Objetivo de la lección",
+        "didacticPurpose": "Objetivo de la lección",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers analyzing El orden de los hechos y el recuerdo in Lengua y Literatura. Setting: Objetivo de la lección. Cinematic lighting, clean composition, clear negative space. No text drawn by AI.",
+        "overlayText": "El orden de los hechos y el recuerdo",
+        "overlayTitle": "El orden de los hechos y el recuerdo",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "El orden de los hechos y el recuerdo",
+        "speakerNotes": "Hoy exploraremos el orden de los hechos y el recuerdo."
       },
       {
         "slideNumber": 2,
-        "tituloMomento": "Presentación del Escenario",
-        "didacticPurpose": "Presentación del Escenario",
-        "visualPrompt": "Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Consolidación guiada de destrezas para Lengua y Literatura. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.",
-        "overlayTitle": "Punto de partida",
-        "overlaySubtitle": "Consolidación guiada de destrezas para Lengua y Literatura",
-        "overlayText": "Punto de partida: Consolidación guiada de destrezas para Lengua y Literatura",
-        "vectorialOverlayPptx": "Esquema de analisis: Texto fuente y pistas de Consolidación guiada de destrezas para Lengua y Literatura",
-        "mathOverlayPptx": "Esquema de analisis: Texto fuente y pistas de Consolidación guiada de destrezas para Lengua y Literatura",
-        "speakerNotes": "Al observar los datos sobre Consolidación guiada de destrezas para Lengua y Literatura, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor.",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        "tituloMomento": "Una situación",
+        "didacticPurpose": "Una situación",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers analyzing El orden de los hechos y el recuerdo in Lengua y Literatura. Setting: Una situación. Cinematic lighting, clean composition, clear negative space. No text drawn by AI.",
+        "overlayText": "Jimmy recuerda la travesura",
+        "overlayTitle": "Jimmy recuerda la travesura",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Jimmy recuerda la travesura",
+        "speakerNotes": "Jimmy recuerda la travesura. La llamada del padre llega mientras recuerda y le pide regresar."
       },
       {
         "slideNumber": 3,
-        "tituloMomento": "Aparición del Conflicto / Misterio",
-        "didacticPurpose": "Aparición del Conflicto / Misterio",
-        "visualPrompt": "Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.",
-        "overlayTitle": "El enigma disciplinar",
-        "overlaySubtitle": "Desafío en Práctica avanzada y modelamiento de OA 3 (Parte 1)",
-        "overlayText": "El enigma disciplinar: Práctica avanzada y modelamiento de OA 3 (Parte 1)",
-        "vectorialOverlayPptx": "Esquema de analisis: Texto fuente y pistas de Consolidación guiada de destrezas para Lengua y Literatura",
-        "mathOverlayPptx": "Esquema de analisis: Texto fuente y pistas de Consolidación guiada de destrezas para Lengua y Literatura",
-        "speakerNotes": "Surge un reto concreto sobre Práctica avanzada y modelamiento de OA 3 (Parte 1): las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        "tituloMomento": "Una pregunta",
+        "didacticPurpose": "Una pregunta",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers analyzing El orden de los hechos y el recuerdo in Lengua y Literatura. Setting: Una pregunta. Cinematic lighting, clean composition, clear negative space. No text drawn by AI.",
+        "overlayText": "¿La travesura ocurre al mismo tiempo que la llamada?",
+        "overlayTitle": "¿La travesura ocurre al mismo tiempo que la llamada?",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "¿La travesura ocurre al mismo tiempo que la llamada?",
+        "speakerNotes": "¿La travesura ocurre al mismo tiempo que la llamada?"
       },
       {
         "slideNumber": 4,
-        "tituloMomento": "Exploración de Pistas",
-        "didacticPurpose": "Exploración de Pistas",
-        "visualPrompt": "Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.",
-        "overlayTitle": "Análisis de evidencias",
-        "overlaySubtitle": "Consolidación guiada de destrezas para Lengua y Literatura",
-        "overlayText": "Análisis de evidencias: Consolidación guiada de destrezas para Lengua y Literatura",
-        "vectorialOverlayPptx": "Esquema de analisis: Texto fuente y pistas de Consolidación guiada de destrezas para Lengua y Literatura",
-        "mathOverlayPptx": "Esquema de analisis: Texto fuente y pistas de Consolidación guiada de destrezas para Lengua y Literatura",
-        "speakerNotes": "Ambos comparan las pistas disponibles sobre Consolidación guiada de destrezas para Lengua y Literatura. Cada dato confirma cómo interactúan los elementos clave de la situación.",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        "tituloMomento": "Pistas para observar",
+        "didacticPurpose": "Pistas para observar",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers analyzing El orden de los hechos y el recuerdo in Lengua y Literatura. Setting: Pistas para observar. Cinematic lighting, clean composition, clear negative space. No text drawn by AI.",
+        "overlayText": "Las acciones y los detalles importan",
+        "overlayTitle": "Las acciones y los detalles importan",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Las acciones y los detalles importan",
+        "speakerNotes": "Observa la situación. ¿Qué detalle podría ayudarte a responder?"
       },
       {
         "slideNumber": 5,
-        "tituloMomento": "El Momento Crítico",
-        "didacticPurpose": "El Momento Crítico",
-        "visualPrompt": "Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.",
-        "overlayTitle": "Criterio de decisión",
-        "overlaySubtitle": "Aplicar el método riguroso",
-        "overlayText": "Criterio de decisión riguroso",
-        "vectorialOverlayPptx": "Esquema de analisis: Texto fuente y pistas de Consolidación guiada de destrezas para Lengua y Literatura",
-        "mathOverlayPptx": "Esquema de analisis: Texto fuente y pistas de Consolidación guiada de destrezas para Lengua y Literatura",
-        "speakerNotes": "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Práctica avanzada y modelamiento de OA 3 (Parte 1) con total precisión metodológica.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        "tituloMomento": "Distintas respuestas",
+        "didacticPurpose": "Distintas respuestas",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers analyzing El orden de los hechos y el recuerdo in Lengua y Literatura. Setting: Distintas respuestas. Cinematic lighting, clean composition, clear negative space. No text drawn by AI.",
+        "overlayText": "¿Qué respuesta tiene respaldo?",
+        "overlayTitle": "¿Qué respuesta tiene respaldo?",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "¿Qué respuesta tiene respaldo?",
+        "speakerNotes": "Una respuesta necesita información del recurso. Buscaremos pistas para fundamentarla."
       },
       {
         "slideNumber": 6,
-        "tituloMomento": "La Antesala de la Pregunta",
-        "didacticPurpose": "La Antesala de la Pregunta",
-        "visualPrompt": "Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.",
-        "overlayTitle": "El dilema central",
-        "overlaySubtitle": "¿Cómo resolver Práctica avanzada y modelamiento de OA 3 (Parte 1)?",
-        "overlayText": "¿Cómo resolver Práctica avanzada y modelamiento de OA 3 (Parte 1)?",
-        "vectorialOverlayPptx": "Tension dramatica: Conflicto entre fuerzas del relato",
-        "mathOverlayPptx": "Tension dramatica: Conflicto entre fuerzas del relato",
-        "speakerNotes": "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        "tituloMomento": "Una forma de explorar",
+        "didacticPurpose": "Una forma de explorar",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers analyzing El orden de los hechos y el recuerdo in Lengua y Literatura. Setting: Una forma de explorar. Cinematic lighting, clean composition, clear negative space. No text drawn by AI.",
+        "overlayText": "Leer, relacionar y explicar",
+        "overlayTitle": "Leer, relacionar y explicar",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Leer, relacionar y explicar",
+        "speakerNotes": "Lee el recurso y relaciona sus detalles antes de elegir una explicación."
       },
       {
         "slideNumber": 7,
-        "tituloMomento": "La Pregunta Detonante",
-        "didacticPurpose": "La Pregunta Detonante",
-        "visualPrompt": "Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.",
-        "overlayTitle": "Pregunta detonante",
-        "overlaySubtitle": "Regla y método de Práctica avanzada y modelamiento de OA 3 (Parte 1)",
-        "overlayText": "Meta: Dominio de Práctica avanzada y modelamiento de OA 3 (Parte 1)",
-        "vectorialOverlayPptx": "Pregunta detonante: ¿Cual es el motor de la historia en Práctica avanzada y modelamiento de OA 3 (Parte 1)?",
-        "mathOverlayPptx": "Pregunta detonante: ¿Cual es el motor de la historia en Práctica avanzada y modelamiento de OA 3 (Parte 1)?",
-        "speakerNotes": "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        "tituloMomento": "La pregunta inicial",
+        "didacticPurpose": "La pregunta inicial",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers analyzing El orden de los hechos y el recuerdo in Lengua y Literatura. Setting: La pregunta inicial. Cinematic lighting, clean composition, clear negative space. No text drawn by AI.",
+        "overlayText": "¿Qué muestra la evidencia?",
+        "overlayTitle": "¿Qué muestra la evidencia?",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "¿Qué muestra la evidencia?",
+        "speakerNotes": "Ahora descubriremos cómo las pistas ayudan a comprender esta situación."
+      },
+      {
+        "slideNumber": 8,
+        "tituloMomento": "Objetivo de la lección",
+        "didacticPurpose": "Objetivo de la lección",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Focus on explanation and modeling of El orden de los hechos y el recuerdo. Concept: Objetivo de la lección. Clean background, warm focus. No text drawn by AI.",
+        "overlayText": "Objetivo de la lección. Distinguir orden de hechos y función del recuerdo",
+        "overlayTitle": "Objetivo de la lección. Distinguir orden de hechos y función del recuerdo",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Objetivo de la lección. Distinguir orden de hechos y función del recuerdo",
+        "speakerNotes": "En esta clase distinguirás cuándo ocurren los hechos y cuándo los cuenta la narración. También interpretarás qué aporta un recuerdo anterior."
+      },
+      {
+        "slideNumber": 9,
+        "tituloMomento": "Herramienta",
+        "didacticPurpose": "Herramienta",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Focus on explanation and modeling of El orden de los hechos y el recuerdo. Concept: Herramienta. Clean background, warm focus. No text drawn by AI.",
+        "overlayText": "Herramienta. Orden narrado y orden temporal",
+        "overlayTitle": "Herramienta. Orden narrado y orden temporal",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Herramienta. Orden narrado y orden temporal",
+        "speakerNotes": "Una historia puede contar un hecho pasado dentro de una escena presente. Las expresiones temporales ayudan a ordenar los acontecimientos."
+      },
+      {
+        "slideNumber": 10,
+        "tituloMomento": "Criterio",
+        "didacticPurpose": "Criterio",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Focus on explanation and modeling of El orden de los hechos y el recuerdo. Concept: Criterio. Clean background, warm focus. No text drawn by AI.",
+        "overlayText": "Criterio. Ordena hechos y reconoce cuándo se cuentan",
+        "overlayTitle": "Criterio. Ordena hechos y reconoce cuándo se cuentan",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Criterio. Ordena hechos y reconoce cuándo se cuentan",
+        "speakerNotes": "Identifica la escena presente, localiza la señal que introduce el recuerdo y vuelve al momento de la llamada. Así distingues tiempo de historia y orden narrativo."
+      },
+      {
+        "slideNumber": 11,
+        "tituloMomento": "Modelo",
+        "didacticPurpose": "Modelo",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Focus on explanation and modeling of El orden de los hechos y el recuerdo. Concept: Modelo. Clean background, warm focus. No text drawn by AI.",
+        "overlayText": "Modelo. La travesura ocurrió antes de la llamada",
+        "overlayTitle": "Modelo. La travesura ocurrió antes de la llamada",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Modelo. La travesura ocurrió antes de la llamada",
+        "speakerNotes": "¿La travesura ocurrió al mismo tiempo que la llamada? No. «En una ocasión» presenta una broma anterior, que Jimmy recuerda mientras conversa por radio con su padre."
+      },
+      {
+        "slideNumber": 12,
+        "tituloMomento": "Verificación",
+        "didacticPurpose": "Verificación",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Focus on explanation and modeling of El orden de los hechos y el recuerdo. Concept: Verificación. Clean background, warm focus. No text drawn by AI.",
+        "overlayText": "Verificación. «En una ocasión» marca un hecho anterior",
+        "overlayTitle": "Verificación. «En una ocasión» marca un hecho anterior",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Verificación. «En una ocasión» marca un hecho anterior",
+        "speakerNotes": "Comprobamos el orden: la travesura y el rescate ocurrieron antes. La llamada pertenece al presente narrado y activa ese recuerdo."
+      },
+      {
+        "slideNumber": 13,
+        "tituloMomento": "Error y corrección",
+        "didacticPurpose": "Error y corrección",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Focus on explanation and modeling of El orden de los hechos y el recuerdo. Concept: Error y corrección. Clean background, warm focus. No text drawn by AI.",
+        "overlayText": "Error y corrección. Un recuerdo no cambia cuándo ocurrió",
+        "overlayTitle": "Error y corrección. Un recuerdo no cambia cuándo ocurrió",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Error y corrección. Un recuerdo no cambia cuándo ocurrió",
+        "speakerNotes": "Recordar un hecho durante una llamada no significa que ocurrió entonces. Ordena los acontecimientos por sus señales temporales, aunque el relato los presente en otro orden."
+      },
+      {
+        "slideNumber": 14,
+        "tituloMomento": "Estrategia y puente",
+        "didacticPurpose": "Estrategia y puente",
+        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Focus on explanation and modeling of El orden de los hechos y el recuerdo. Concept: Estrategia y puente. Clean background, warm focus. No text drawn by AI.",
+        "overlayText": "Estrategia y puente. Ordena los hechos y explica el recuerdo",
+        "overlayTitle": "Estrategia y puente. Ordena los hechos y explica el recuerdo",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Estrategia y puente. Ordena los hechos y explica el recuerdo",
+        "speakerNotes": "Marca la señal del recuerdo, coloca los hechos en el tiempo y explica su función. En la práctica ordenarás otra secuencia, revisarás tus respuestas y cerrarás con el método."
       }
     ]
   },
   "preQuestions": [
     {
-      "context": "Indicios Textuales y Desenlace",
-      "question": "¿Qué palabras o pistas del texto nos permiten inferir la presencia e importancia de 'Desenlace' en este relato?",
-      "expected": "Citar pistas textuales o acciones de los personajes que demuestran el sentido de Desenlace.",
-      "success": "¡Muy bien! Tu interpretación se apoya directamente en evidencias del texto y no en suposiciones.",
-      "support": "Busca en el segundo párrafo: ¿qué palabras describen la atmósfera o la motivación del personaje?",
-      "reveal": "La comprensión profunda se construye rastreando las pistas explícitas e implícitas que el autor distribuye en la obra.",
-      "studentReveal": "Las pistas textuales que confirman la presencia y sentido de Desenlace."
+      "context": "Jimmy recuerda la travesura. La llamada del padre llega mientras recuerda y le pide regresar.",
+      "question": "¿La travesura ocurre al mismo tiempo que la llamada?",
+      "expected": "No. La travesura ocurrió en una ocasión anterior; Jimmy la recuerda cuando recibe la llamada.",
+      "success": "Respuesta comprensible, información precisa y explicación de su relación.",
+      "support": "Localizar una pista concreta en el recurso. Comparar esa pista con la explicación propuesta. Leer el modelo, relacionarlo con la pista y pedir un nuevo intento en palabras propias.",
+      "reveal": "El recurso distingue una ocasión anterior del momento en que llega la voz del padre.",
+      "studentReveal": "No. La travesura ocurrió en una ocasión anterior; Jimmy la recuerda cuando recibe la llamada.",
+      "studentImage": "/images/lessons/lengua_7b_oa03_clase05_p1.jpg",
+      "relevantParagraph": 1
     },
     {
-      "context": "Sentido Figurado y Prevención del Error Literal",
-      "question": "Para no caer en el error de 'Dificultad para identificar y reordenar la secuencia no cronológica de los hechos en una narración.', ¿cómo debemos interpretar las expresiones en sentido figurado o simbólico de esta obra?",
-      "expected": "Distinguir el significado literal del sentido connotativo o metafórico que el autor busca evocar.",
-      "success": "¡Exacto! Lograste ver más allá de las palabras literales y descubriste la metáfora profunda del autor.",
-      "support": "Piensa qué imagen o sentimiento evoca esa frase: ¿busca describir un hecho físico o una emoción interior?",
-      "reveal": "El lenguaje literario utiliza recursos figurados para transmitir experiencias humanas universales que trascienden lo literal.",
-      "studentReveal": "La interpretación del sentido figurado y simbólico de la obra."
+      "context": "El recuerdo incluye una travesura anterior en que Robutt activa una alarma y llega un equipo de rescate.",
+      "question": "¿Qué información aporta ese recuerdo para comprender el vínculo entre Jimmy y Robutt?",
+      "expected": "El episodio muestra una experiencia compartida y la reacción de Robutt ante el peligro que Jimmy simula. Aporta contexto para comprender su vínculo en el presente.",
+      "success": "Respuesta comprensible, información precisa y explicación de su relación.",
+      "support": "Localizar qué ocurrió durante la travesura. Relacionar esa experiencia con la situación actual de Jimmy y Robutt. Explicar qué aporta el recuerdo sin convertirlo en un desenlace que el recurso no cuenta.",
+      "reveal": "La travesura, la alarma y la llegada del equipo aparecen como hechos de una ocasión anterior.",
+      "studentReveal": "El episodio muestra una experiencia compartida y la reacción de Robutt ante el peligro que Jimmy simula. Aporta contexto para comprender su vínculo en el presente.",
+      "studentImage": "/images/lessons/lengua_7b_oa03_clase05_p2.jpg",
+      "relevantParagraph": 2
     }
   ],
   "formalization": {
-    "title": "Video Explicativo: Formalización de Práctica avanzada y modelamiento de OA 3 (Parte 1)",
-    "concept": "Video Explicativo: Formalización de Práctica avanzada y modelamiento de OA 3 (Parte 1)",
-    "dileIntro": "Ahora veremos el video explicativo de Práctica avanzada y modelamiento de OA 3 (Parte 1). Observa cómo se analiza el personaje y la función de Desenlace.",
-    "hazInstruction": "Revisemos la explicación formal y la idea clave.",
-    "ideaClave": "En Práctica avanzada y modelamiento de OA 3 (Parte 1), el autor utiliza 'Desenlace' para construir una experiencia estética y reflexiva que interpela al lector en sus propias vivencias.",
+    "title": "Explicación y modelamiento",
+    "concept": "El orden de los hechos es la secuencia en que suceden. El orden del relato es la forma en que el narrador los presenta. Un recuerdo introduce un hecho anterior dentro de la narración de acontecimientos posteriores.",
+    "summary": "No. La travesura ocurrió en una ocasión anterior; Jimmy la recuerda cuando recibe la llamada. El recurso distingue una ocasión anterior del momento en que llega la voz del padre.",
+    "ideaClave": "Un recuerdo introduce un hecho anterior.",
+    "dileIntro": "¿Cómo ordenarías estos acontecimientos según cuándo sucedieron?",
+    "hazInstruction": "Explica tu respuesta relacionando la acción con su efecto concreto usando evidencia del texto.",
+    "postDileIntro": "Comprobemos lo que acabamos de revisar.",
     "videoSrc": "",
-    "videoUrl": "",
-    "graphicPoster": "",
-    "fullPrompt": "Actúa como Diseñador Pedagógico y Especialista en Didáctica Disciplinar en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de VIDEO EXPLICATIVO / FORMALIZACIÓN (Paso 4) para:\n- Asignatura: Lengua y Literatura\n- Objetivo de Aprendizaje: OA 3\n- Clase: 5 (\"Práctica avanzada y modelamiento de OA 3 (Parte 1)\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS (PLAN MAESTRO ACTUALIZACIÓN 29-09-2026):\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Exactamente 7 diapositivas (slide1 a slide7) siguiendo el principio de un cambio visual por cada movimiento mental.\n3. DIAPOSITIVA 1 OBLIGATORIA CON OBJETIVO: La primera diapositiva declara como subtítulo (36 pt) el objetivo específico de la lección, sin repetir rótulos redundantes 'OA 01'.\n4. PROTAGONISTAS FIJOS EN EL 100% DE LAS ESCENAS: Los mismos 2 jóvenes de 13 años (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.\n5. REGLA VISUAL ANTI-MÁSCARAS Y FONDOS LIMPIOS: Imagen limpia con espacio negativo real. Prohibido que la IA intente dibujar números, rectas o letras. Todo elemento disciplinar se ensambla vectorialmente en PowerPoint.\n6. PRESUPUESTO TEMPORAL Y GUION PEDAGÓGICO (LECCIÓN EXPLICATIVA - 90 SEGUNDOS / 195 PALABRAS TOTALES): Guion explicativo continuo (12+13+13+13+13+13+13 segundos, totalizando exactamente ~195 palabras para 90 segundos a 130 palabras por minuto en Google Vids/TTS), sin marcas técnicas. Diapositiva 1 formula el objetivo; diapositivas 2 a 7 desarrollan el contenido sin repetirlo.\n7. PROTOCOLO DE COMPROBACIÓN ACÚSTICA OBLIGATORIA (GOOGLE VIDS): Medir la duración real del archivo exportado con cronómetro o analizador de audio. El conteo de palabras no garantiza por sí solo 90 segundos exactos. Si la duración no es exacta, ajustar narración, pausas o ritmo, volver a exportar y registrar la duración comprobada oficial.\n8. JERARQUÍA TIPOGRÁFICA Y COLOR DE TEXTO: Título en Pantalla (64 pt); Subtítulo en Pantalla (36 pt). Texto brillante de un solo color de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, contornos, resplandores ni recuadros flotantes o fondos detrás del texto. Especificar color en cada prompt.\n9. CIERRE SIN RETO EN EL VIDEO: La explicación concluye con la regla de oro y da el pase directo a la práctica en la plataforma web, sin proponer desafíos finales ni tareas en el cuaderno durante el video.\n10. ESTRUCTURA HEXAPARTITA POR DIAPOSITIVA (Propósito, Título 64 pt, Subtítulo 36 pt, Prompt Imagen IA, Capa Vectorial PPTX, Notas al Orador).\n\nDETALLE DE LAS 7 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Objetivo de la Lección) ---\n1. Propósito Didáctico: Objetivo de la Lección\n2. Título en Pantalla (64 pt): Objetivo de la lección\n3. Subtítulo en Pantalla (36 pt): Dominar Práctica avanzada y modelamiento de OA 3 (Parte 1): Consolidación guiada de destrezas para Lengua y Literatura\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Consolidación guiada de destrezas para Lengua y Literatura. High clarity, negative space for text. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Rótulo formal: OA 3 · Práctica avanzada y modelamiento de OA 3 (Parte 1)\n6. Notas al Orador (Locución Continua Google Vids): \"El objetivo de hoy es aprender a consolidación guiada de destrezas para lengua y literatura, aplicando el método disciplinar paso a paso con total rigor y claridad.\"\n\n--- DIAPOSITIVA 2 (Definición del Concepto Central) ---\n1. Propósito Didáctico: Definición del Concepto Central\n2. Título en Pantalla (64 pt): Concepto fundamental\n3. Subtítulo en Pantalla (36 pt): Consolidación guiada de destrezas para Lengua y Literatura\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Concepto disciplinar: Consolidación guiada de destrezas para Lengua y Literatura\n6. Notas al Orador (Locución Continua Google Vids): \"Para comprender Práctica avanzada y modelamiento de OA 3 (Parte 1), establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación.\"\n\n--- DIAPOSITIVA 3 (Demostración Modelada) ---\n1. Propósito Didáctico: Demostración Modelada\n2. Título en Pantalla (64 pt): Modelamiento paso a paso\n3. Subtítulo en Pantalla (36 pt): Procedimiento de Práctica avanzada y modelamiento de OA 3 (Parte 1)\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Fragmento textual visible con marcas de evidencia literal e inferencias\n6. Notas al Orador (Locución Continua Google Vids): \"Observa cómo se aplica el procedimiento en este caso guiado: cada transformación responde a una justificación disciplinar explícita y visible.\"\n\n--- DIAPOSITIVA 4 (Prevención del Error Frecuente) ---\n1. Propósito Didáctico: Prevención del Error Frecuente\n2. Título en Pantalla (64 pt): Atención: Error habitual\n3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Contraste analitico: distincion de elementos narrativos clave\n6. Notas al Orador (Locución Continua Google Vids): \"Un error frecuente ocurre al descuidar el orden o saltarse un paso de la convención establecida. Siempre comprobamos cada dato antes de continuar.\"\n\n--- DIAPOSITIVA 5 (Comprobación del Resultado) ---\n1. Propósito Didáctico: Comprobación del Resultado\n2. Título en Pantalla (64 pt): Validación del resultado\n3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo de respuesta justificada con citas y evidencia textual\n6. Notas al Orador (Locución Continua Google Vids): \"Al contrastar el resultado con la situación inicial, confirmamos que la solución es consistente, rigurosa y responde plenamente a la pregunta.\"\n\n--- DIAPOSITIVA 6 (Estrategia Mnemotécnica) ---\n1. Propósito Didáctico: Estrategia Mnemotécnica\n2. Título en Pantalla (64 pt): Estrategia de pensamiento\n3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Estrategia de lectura: Localizar, interpretar y fundamentar\n6. Notas al Orador (Locución Continua Google Vids): \"Recuerda siempre la estrategia en tres pasos: identificar la información clave, aplicar la regla en orden y comprobar el resultado final.\"\n\n--- DIAPOSITIVA 7 (Síntesis y Regla de Oro) ---\n1. Propósito Didáctico: Síntesis y Regla de Oro\n2. Título en Pantalla (64 pt): Regla de Oro: Práctica avanzada y modelamiento de OA 3 (Parte 1)\n3. Subtítulo en Pantalla (36 pt): Método disciplinar validado\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Infografía de síntesis: Regla de lectura de Práctica avanzada y modelamiento de OA 3 (Parte 1)\n6. Notas al Orador (Locución Continua Google Vids): \"Ahora que dominas la regla fundamental y el procedimiento de Práctica avanzada y modelamiento de OA 3 (Parte 1), ¡vamos a demostrarlo en las actividades interactivas de la plataforma!\"\n\n",
-    "slides": [
-      {
-        "slideNumber": 1,
-        "tituloMomento": "Objetivo de la Lección",
-        "didacticPurpose": "Objetivo de la Lección",
-        "visualPrompt": "Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Consolidación guiada de destrezas para Lengua y Literatura. High clarity, negative space for text. No text drawn by AI.",
-        "overlayTitle": "Objetivo de la lección",
-        "overlaySubtitle": "Dominar Práctica avanzada y modelamiento de OA 3 (Parte 1): Consolidación guiada de destrezas para Lengua y Literatura",
-        "overlayText": "Concepto clave: Práctica avanzada y modelamiento de OA 3 (Parte 1)",
-        "vectorialOverlayPptx": "Rótulo formal: OA 3 · Práctica avanzada y modelamiento de OA 3 (Parte 1)",
-        "mathOverlayPptx": "Rótulo formal: OA 3 · Práctica avanzada y modelamiento de OA 3 (Parte 1)",
-        "speakerNotes": "El objetivo de hoy es aprender a consolidación guiada de destrezas para lengua y literatura, aplicando el método disciplinar paso a paso con total rigor y claridad.",
-        "palabrasAprox": 25,
-        "duracionSeg": 12
-      },
-      {
-        "slideNumber": 2,
-        "tituloMomento": "Definición del Concepto Central",
-        "didacticPurpose": "Definición del Concepto Central",
-        "visualPrompt": "Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.",
-        "overlayTitle": "Concepto fundamental",
-        "overlaySubtitle": "Consolidación guiada de destrezas para Lengua y Literatura",
-        "overlayText": "Regla formal: Consolidación guiada de destrezas para Lengua y Literatura",
-        "vectorialOverlayPptx": "Concepto disciplinar: Consolidación guiada de destrezas para Lengua y Literatura",
-        "mathOverlayPptx": "Concepto disciplinar: Consolidación guiada de destrezas para Lengua y Literatura",
-        "speakerNotes": "Para comprender Práctica avanzada y modelamiento de OA 3 (Parte 1), establecemos un modelo conceptual claro que conecta la regla formal con la evidencia directa de la situación.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
-      },
-      {
-        "slideNumber": 3,
-        "tituloMomento": "Demostración Modelada",
-        "didacticPurpose": "Demostración Modelada",
-        "visualPrompt": "Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.",
-        "overlayTitle": "Modelamiento paso a paso",
-        "overlaySubtitle": "Procedimiento de Práctica avanzada y modelamiento de OA 3 (Parte 1)",
-        "overlayText": "Modelamiento paso a paso de Práctica avanzada y modelamiento de OA 3 (Parte 1)",
-        "vectorialOverlayPptx": "Fragmento textual visible con marcas de evidencia literal e inferencias",
-        "mathOverlayPptx": "Fragmento textual visible con marcas de evidencia literal e inferencias",
-        "speakerNotes": "Observa cómo se aplica el procedimiento en este caso guiado: cada transformación responde a una justificación disciplinar explícita y visible.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
-      },
-      {
-        "slideNumber": 4,
-        "tituloMomento": "Prevención del Error Frecuente",
-        "didacticPurpose": "Prevención del Error Frecuente",
-        "visualPrompt": "Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.",
-        "overlayTitle": "Atención: Error habitual",
-        "overlaySubtitle": "Confusión común que debemos evitar",
-        "overlayText": "Atención: Error habitual a evitar",
-        "vectorialOverlayPptx": "Contraste analitico: distincion de elementos narrativos clave",
-        "mathOverlayPptx": "Contraste analitico: distincion de elementos narrativos clave",
-        "speakerNotes": "Un error frecuente ocurre al descuidar el orden o saltarse un paso de la convención establecida. Siempre comprobamos cada dato antes de continuar.",
-        "palabrasAprox": 27,
-        "duracionSeg": 13
-      },
-      {
-        "slideNumber": 5,
-        "tituloMomento": "Comprobación del Resultado",
-        "didacticPurpose": "Comprobación del Resultado",
-        "visualPrompt": "Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.",
-        "overlayTitle": "Validación del resultado",
-        "overlaySubtitle": "Comprobar que la respuesta es consistente",
-        "overlayText": "Comprobación y validación del resultado",
-        "vectorialOverlayPptx": "Modelo de respuesta justificada con citas y evidencia textual",
-        "mathOverlayPptx": "Modelo de respuesta justificada con citas y evidencia textual",
-        "speakerNotes": "Al contrastar el resultado con la situación inicial, confirmamos que la solución es consistente, rigurosa y responde plenamente a la pregunta.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
-      },
-      {
-        "slideNumber": 6,
-        "tituloMomento": "Estrategia Mnemotécnica",
-        "didacticPurpose": "Estrategia Mnemotécnica",
-        "visualPrompt": "Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.",
-        "overlayTitle": "Estrategia de pensamiento",
-        "overlaySubtitle": "1. Identificar · 2. Aplicar · 3. Comprobar",
-        "overlayText": "Estrategia mental: Identificar, Aplicar y Verificar",
-        "vectorialOverlayPptx": "Estrategia de lectura: Localizar, interpretar y fundamentar",
-        "mathOverlayPptx": "Estrategia de lectura: Localizar, interpretar y fundamentar",
-        "speakerNotes": "Recuerda siempre la estrategia en tres pasos: identificar la información clave, aplicar la regla en orden y comprobar el resultado final.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
-      },
-      {
-        "slideNumber": 7,
-        "tituloMomento": "Síntesis y Regla de Oro",
-        "didacticPurpose": "Síntesis y Regla de Oro",
-        "visualPrompt": "Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.",
-        "overlayTitle": "Regla de Oro: Práctica avanzada y modelamiento de OA 3 (Parte 1)",
-        "overlaySubtitle": "Método disciplinar validado",
-        "overlayText": "Síntesis: Práctica avanzada y modelamiento de OA 3 (Parte 1)",
-        "vectorialOverlayPptx": "Infografía de síntesis: Regla de lectura de Práctica avanzada y modelamiento de OA 3 (Parte 1)",
-        "mathOverlayPptx": "Infografía de síntesis: Regla de lectura de Práctica avanzada y modelamiento de OA 3 (Parte 1)",
-        "speakerNotes": "Ahora que dominas la regla fundamental y el procedimiento de Práctica avanzada y modelamiento de OA 3 (Parte 1), ¡vamos a demostrarlo en las actividades interactivas de la plataforma!",
-        "palabrasAprox": 25,
-        "duracionSeg": 12
-      }
-    ]
+    "slides": []
   },
   "postQuestions": [
     {
-      "context": "Indicios Textuales y Desenlace",
-      "question": "¿Qué palabras o pistas del texto nos permiten inferir la presencia e importancia de 'Desenlace' en este relato?",
-      "expected": "Citar pistas textuales o acciones de los personajes que demuestran el sentido de Desenlace.",
-      "success": "¡Muy bien! Tu interpretación se apoya directamente en evidencias del texto y no en suposiciones.",
-      "support": "Busca en el segundo párrafo: ¿qué palabras describen la atmósfera o la motivación del personaje?",
-      "reveal": "La comprensión profunda se construye rastreando las pistas explícitas e implícitas que el autor distribuye en la obra.",
-      "studentReveal": "Las pistas textuales que confirman la presencia y sentido de Desenlace."
+      "context": "Comprobación 1 · Aplicación inmediata",
+      "question": "¿Cómo ordenarías estos acontecimientos según cuándo sucedieron?",
+      "expected": "Primero ocurrió la travesura y la alarma. Más tarde, el juego actual, la llamada, la conversación y el abrazo.",
+      "success": "Respuesta comprensible, fundamentada en el texto.",
+      "support": "Revisa el modelo de la clase y compáralo con tu respuesta.",
+      "reveal": "Primero ocurrió la travesura y la alarma. Más tarde, el juego actual, la llamada, la conversación y el abrazo.",
+      "studentReveal": "Primero ocurrió la travesura y la alarma. Más tarde, el juego actual, la llamada, la conversación y el abrazo."
     },
     {
-      "context": "Sentido Figurado y Prevención del Error Literal",
-      "question": "Para no caer en el error de 'Dificultad para identificar y reordenar la secuencia no cronológica de los hechos en una narración.', ¿cómo debemos interpretar las expresiones en sentido figurado o simbólico de esta obra?",
-      "expected": "Distinguir el significado literal del sentido connotativo o metafórico que el autor busca evocar.",
-      "success": "¡Exacto! Lograste ver más allá de las palabras literales y descubriste la metáfora profunda del autor.",
-      "support": "Piensa qué imagen o sentimiento evoca esa frase: ¿busca describir un hecho físico o una emoción interior?",
-      "reveal": "El lenguaje literario utiliza recursos figurados para transmitir experiencias humanas universales que trascienden lo literal.",
-      "studentReveal": "La interpretación del sentido figurado y simbólico de la obra."
+      "context": "Comprobación 2 · Síntesis de la evidencia",
+      "question": "¿La travesura ocurre al mismo tiempo que la llamada?",
+      "expected": "No. La travesura ocurrió en una ocasión anterior; Jimmy la recuerda cuando recibe la llamada.",
+      "success": "Usa una pista concreta del texto.",
+      "support": "Vuelve al recurso de lectura para ubicar la pista.",
+      "reveal": "No. La travesura ocurrió en una ocasión anterior; Jimmy la recuerda cuando recibe la llamada.",
+      "studentReveal": "No. La travesura ocurrió en una ocasión anterior; Jimmy la recuerda cuando recibe la llamada."
     }
   ],
   "practice": [
     {
-      "context": "Ejercicio 1 en Cuaderno: Ficha de Análisis Textual",
-      "question": "Abre tu cuaderno de notas. Escribe como título: 'Práctica avanzada y modelamiento de OA 3 (Parte 1)'. Con base en la actividad (Representa a través de un breve sketch o dramatización una escena clave donde la...), escribe un breve párrafo analizando el rol de 'Desenlace': cita una frase del texto, explica su significado implícito y menciona qué valor transmite.",
-      "expected": "Desarrollo en el cuaderno con cita textual, interpretación del significado implícito y reflexión sobre el valor o tema.",
-      "success": "¡Excelente análisis literario en tu cuaderno! Tu interpretación está fundamentada con citas precisas.",
-      "support": "Revisa la diapositiva: subraya la cita textual y escribe con tus palabras qué revela sobre el protagonista.",
-      "reveal": "El análisis riguroso vincula la cita textual con la interpretación temática y el contexto de la obra.",
-      "studentReveal": "Ficha de análisis completa en el cuaderno con cita e interpretación fundamentada."
+      "context": "Caso 1: Jimmy juega fuera de casa. Mientras recuerda la travesura anterior, escucha por radio la voz de su padre, quien le pide volver.",
+      "question": "Ordena estos hechos según cuándo suceden: la travesura y la alarma, el juego fuera de casa, la llamada por radio y el regreso al hogar. Indica cuál pertenece al recuerdo.",
+      "expected": "Primero ocurre la travesura y la alarma. Después Jimmy juega fuera de casa, recibe la llamada por radio y vuelve al hogar. La travesura pertenece al recuerdo.",
+      "success": "La respuesta distingue el hecho anterior del momento presente. Si pusiste la llamada antes de la travesura, comprueba la expresión «En una ocasión» y la secuencia descrita.",
+      "support": "Vuelve al texto para ubicar la pista que conecta la acción con su efecto.",
+      "reveal": "Primero ocurre la travesura y la alarma. Después Jimmy juega fuera de casa, recibe la llamada por radio y vuelve al hogar. La travesura pertenece al recuerdo.",
+      "studentReveal": "Primero ocurre la travesura y la alarma. Después Jimmy juega fuera de casa, recibe la llamada por radio y vuelve al hogar. La travesura pertenece al recuerdo.",
+      "relevantParagraph": 1
     },
     {
-      "context": "Ejercicio 2 en Cuaderno: Producción Escrita Breve y Revisión",
-      "question": "En tu cuaderno, redacta una breve continuación o respuesta reflexiva de 5 líneas aplicando 'Desenlace'. Al finalizar, revisa tu texto cuidando la coherencia, el uso de conectores y la ortografía.",
-      "expected": "Micro-escritura creativa en el cuaderno con aplicación de concepto y revisión de cohesión y ortografía.",
-      "success": "¡Muy buena producción escrita! Tu texto es coherente, expresivo y demuestra el dominio del concepto literario.",
-      "support": "Lee tu borrador en voz alta: ¿las ideas se conectan con fluidez? Corrige las tildes antes de darlo por listo.",
-      "reveal": "Escribir y revisar permite consolidar la apropiación del lenguaje y expresar ideas personales con rigor.",
-      "studentReveal": "Texto breve producido y revisado en el cuaderno con coherencia y precisión."
+      "context": "Caso 2: El recuerdo muestra que Robutt activó una alarma cuando Jimmy fingió estar herido y que llegó un equipo de rescate.",
+      "question": "¿Qué información del recuerdo ayuda a comprender la relación entre Jimmy y Robutt en el presente? Responde con una pista del episodio y explica su aporte.",
+      "expected": "El episodio muestra una experiencia compartida y la reacción de Robutt ante el peligro que Jimmy simuló. Esa historia previa aporta contexto para comprender por qué su vínculo importa en el presente, pero no decide lo que hará el padre.",
+      "success": "La explicación conecta el recuerdo con el presente sin convertirlo en una decisión futura. Si afirmaste que resuelve el conflicto, vuelve al límite señalado en el recurso.",
+      "support": "Vuelve al texto para ubicar la pista que conecta la acción con su efecto.",
+      "reveal": "El episodio muestra una experiencia compartida y la reacción de Robutt ante el peligro que Jimmy simuló. Esa historia previa aporta contexto para comprender por qué su vínculo importa en el presente, pero no decide lo que hará el padre.",
+      "studentReveal": "El episodio muestra una experiencia compartida y la reacción de Robutt ante el peligro que Jimmy simuló. Esa historia previa aporta contexto para comprender por qué su vínculo importa en el presente, pero no decide lo que hará el padre.",
+      "relevantParagraph": 2
     }
   ],
   "mini": [
     {
-      "id": "q_1",
-      "q": "Al interpretar el fragmento de Práctica avanzada y modelamiento de OA 3 (Parte 1), ¿cuál de las siguientes opciones expresa con mayor fidelidad el rol de 'Desenlace'?",
+      "id": "q1",
+      "q": "¿Qué hecho pertenece al recuerdo?",
       "options": [
-        "Permite develar la motivación profunda del personaje y el conflicto central a través de indicios textuales concretos",
-        "Es un detalle puramente decorativo que no aporta ningún significado a la historia ni al mensaje del autor",
-        "Demuestra que el texto literario carece de sentido implícito y solo debe leerse al pie de la letra"
+        "A. El abrazo al final",
+        "B. La propuesta sobre el perro vivo",
+        "C. La travesura que provocó la alarma",
+        "D. La llamada que pide volver a casa"
       ],
-      "correct": "Permite develar la motivación profunda del personaje y el conflicto central a través de indicios textuales concretos",
-      "fixExplain": "Toda inferencia legítima en comprensión lectora debe apoyarse en pistas textuales e indicios entregados por la obra.",
-      "concept": "Práctica avanzada y modelamiento de OA 3 (Parte 1)",
-      "explain": "Toda inferencia legítima en comprensión lectora debe apoyarse en pistas textuales e indicios entregados por la obra.",
-      "dileReview": "Pídele que señale qué fragmento específico de la lectura justifica su respuesta."
+      "correct": "C. La travesura que provocó la alarma",
+      "fixExplain": "La travesura se cuenta como una ocasión anterior."
     },
     {
-      "id": "q_2",
-      "q": "Para no cometer el error de 'Dificultad para identificar y reordenar la secuencia no cronológica de los hechos en una narración.', ¿qué estrategia de lectura comprensiva debemos emplear?",
+      "id": "q2",
+      "q": "¿Qué devuelve la narración al presente?",
       "options": [
-        "Distinguir el sentido literal del lenguaje figurado, relacionando las metáforas con las emociones de los personajes",
-        "Asumir que cada palabra significa exclusivamente su definición de diccionario más simple y directa",
-        "Saltarse los pasajes poéticos o descriptivos para centrarse únicamente en el desenlace final"
+        "A. La voz del padre por radio",
+        "B. La llegada de otro equipo de rescate",
+        "C. Una aceptación del padre",
+        "D. La partida de Robutt"
       ],
-      "correct": "Distinguir el sentido literal del lenguaje figurado, relacionando las metáforas con las emociones de los personajes",
-      "fixExplain": "El lenguaje figurado transmite matices que el sentido literal no logra expresar; comprenderlo es la cumbre de la lectura crítica.",
-      "concept": "Práctica avanzada y modelamiento de OA 3 (Parte 1)",
-      "explain": "El lenguaje figurado transmite matices que el sentido literal no logra expresar; comprenderlo es la cumbre de la lectura crítica.",
-      "dileReview": "Pregúntale: ¿cómo cambia el mensaje de un poema o relato cuando descubrimos el sentido figurado?"
+      "correct": "A. La voz del padre por radio",
+      "fixExplain": "La voz del padre llega mientras Jimmy recuerda y le pide regresar."
     },
     {
-      "id": "q_3",
-      "q": "Durante el proceso de análisis y escritura sobre Consolidación guiada de destrezas para Lengua y Literatura, ¿por qué es indispensable la etapa de revisión del borrador en el cuaderno?",
+      "id": "q3",
+      "q": "¿Para qué sirve el recuerdo en esta lectura?",
       "options": [
-        "Porque permite verificar la coherencia de las ideas, la precisión de los conectores y la correcta ortografía antes de la versión final",
-        "Porque la primera versión de un texto nunca debe ser modificada bajo ninguna circunstancia",
-        "Porque revisar un texto escrito carece de impacto en la claridad comunicativa ante el lector"
+        "A. Para demostrar una resolución que no aparece",
+        "B. Para aportar antecedentes del vínculo entre Jimmy y Robutt",
+        "C. Para afirmar que todo ocurre simultáneamente",
+        "D. Para cambiar el lugar de la historia a la Tierra"
       ],
-      "correct": "Porque permite verificar la coherencia de las ideas, la precisión de los conectores y la correcta ortografía antes de la versión final",
-      "fixExplain": "La revisión y edición es la fase fundamental de la escritura que asegura que el mensaje se transmita con claridad y rigor.",
-      "concept": "Práctica avanzada y modelamiento de OA 3 (Parte 1)",
-      "explain": "La revisión y edición es la fase fundamental de la escritura que asegura que el mensaje se transmita con claridad y rigor.",
-      "dileReview": "Pídele que te muestre en su cuaderno qué ajustes u observaciones hizo al releer su escrito."
+      "correct": "B. Para aportar antecedentes del vínculo entre Jimmy y Robutt",
+      "fixExplain": "El episodio muestra una experiencia compartida y la reacción de Robutt."
     }
   ],
   "recovery": [
     {
-      "title": "Recuperación de Lengua y Literatura: Práctica avanzada y modelamiento de OA 3 (Parte 1)",
-      "explain": "Al analizar Consolidación guiada de destrezas para Lengua y Literatura, recuerda buscar siempre las pistas explícitas e implícitas en el texto y relacionar 'Desenlace' con la intención del autor.",
-      "q": "¿Cuál es la estrategia clave para comprender el sentido profundo de una obra en Práctica avanzada y modelamiento de OA 3 (Parte 1)?",
+      "title": "Recuperación Reactivo 1",
+      "explain": "La travesura se cuenta como una ocasión anterior. Busca la expresión que introduce una ocasión anterior. Clasifica ese hecho como recuerdo y compáralo con el momento de la llamada.",
+      "q": "Después de releer el recurso, responde de nuevo: ¿Qué hecho pertenece al recuerdo?",
       "options": [
-        "Releer con atención buscando las pistas contextuales que justifican la interpretación de 'Desenlace'",
-        "Adivinar el tema central fijándose únicamente en el título sin examinar el cuerpo del texto"
+        "A. El abrazo al final",
+        "B. La propuesta sobre el perro vivo",
+        "C. La travesura que provocó la alarma",
+        "D. La llamada que pide volver a casa"
       ],
-      "correct": "Releer con atención buscando las pistas contextuales que justifican la interpretación de 'Desenlace'",
-      "correctText": "¡Correcto! La relectura atenta guiada por pistas textuales es la mejor herramienta de comprensión lectora.",
-      "fixText": "Recuerda que en Lengua y Literatura las respuestas están en el texto: vuelve siempre al fragmento para comprobar tu deducción."
+      "correct": "C. La travesura que provocó la alarma",
+      "correctText": "Usaste el recurso para fundamentar tu respuesta.",
+      "fixText": "La travesura se cuenta como una ocasión anterior. Subraya la pista específica, compárala con tu respuesta y vuelve a intentarlo en tus palabras."
+    },
+    {
+      "title": "Recuperación Reactivo 2",
+      "explain": "La voz del padre llega mientras Jimmy recuerda y le pide regresar. Identifica qué ocurre mientras Jimmy recuerda. La voz por radio es la señal que lo hace volver al presente narrado.",
+      "q": "Después de releer el recurso, responde de nuevo: ¿Qué devuelve la narración al presente?",
+      "options": [
+        "A. La voz del padre por radio",
+        "B. La llegada de otro equipo de rescate",
+        "C. Una aceptación del padre",
+        "D. La partida de Robutt"
+      ],
+      "correct": "A. La voz del padre por radio",
+      "correctText": "Usaste el recurso para fundamentar tu respuesta.",
+      "fixText": "La voz del padre llega mientras Jimmy recuerda y le pide regresar. Subraya la pista específica, compárala con tu respuesta y vuelve a intentarlo en tus palabras."
+    },
+    {
+      "title": "Recuperación Reactivo 3",
+      "explain": "El episodio muestra una experiencia compartida y la reacción de Robutt. Compara el episodio recordado con la conversación actual. Explica qué antecedente aporta y evita completar el desenlace.",
+      "q": "Después de releer el recurso, responde de nuevo: ¿Para qué sirve el recuerdo en esta lectura?",
+      "options": [
+        "A. Para demostrar una resolución que no aparece",
+        "B. Para aportar antecedentes del vínculo entre Jimmy y Robutt",
+        "C. Para afirmar que todo ocurre simultáneamente",
+        "D. Para cambiar el lugar de la historia a la Tierra"
+      ],
+      "correct": "B. Para aportar antecedentes del vínculo entre Jimmy y Robutt",
+      "correctText": "Usaste el recurso para fundamentar tu respuesta.",
+      "fixText": "El episodio muestra una experiencia compartida y la reacción de Robutt. Subraya la pista específica, compárala con tu respuesta y vuelve a intentarlo en tus palabras."
     }
   ],
   "summaryIdeas": [
     [
-      "1 · Concepto central",
-      "Identificamos los elementos y el punto de partida del análisis."
+      "Idea clave",
+      "Un recuerdo introduce un hecho anterior."
     ],
     [
-      "2 · Interpretación del contexto",
-      "Consolidación guiada de destrezas para Lengua y Literatura"
+      "Síntesis",
+      "¿La travesura ocurre al mismo tiempo que la llamada?"
     ],
     [
-      "3 · Síntesis formal",
-      "En Práctica avanzada y modelamiento de OA 3 (Parte 1), el autor utiliza 'Desenlace' para construir una experiencia estética y reflexiva que interpela al lector en sus propias vivencias."
+      "Metacognición",
+      "¿Qué te ayudó más: leer el recurso, localizar una pista o comparar explicaciones? ¿Por qué?"
     ]
   ],
-  "interactive": {
-    "type": "reading_resource",
-    "title": "Recurso de Lectura y Análisis Narrativo",
-    "description": "Organizador y lectura contextualizada del cuento 'El mejor amigo de un muchacho'."
-  },
-  "summaryText": "Hoy profundizaste en Consolidación guiada de destrezas para Lengua y Literatura con lectura analítica y escritura reflexiva en tu cuaderno.",
-  "reasoning": {
-    "title": "Comparemos dos situaciones",
-    "dileIntro": "Antes de resumir, comparemos dos situaciones. No necesitas repetir una frase exacta: lo importante es que expliques la idea con tus propias palabras.",
-    "question": "Al comparar dos situaciones de Práctica avanzada y modelamiento de OA 3 (Parte 1), ¿cómo influye el contexto en la interpretación de los datos?",
-    "expectedAnswer": "El significado o resultado depende de las condiciones del contexto y del propósito de la situación.",
-    "context1": {
-      "label": "SITUACIÓN 1",
-      "value": "Ejercicio 1 en Cuaderno: Ficha de Análisis Textual",
-      "desc": "Abre tu cuaderno de notas. Escribe como título: 'Práctica avanzada y modelamiento de OA 3 (Parte 1)'. Con base en la actividad (Representa a través de un breve sketch o dramatización una escena clave donde la...), escribe un breve párrafo analizando el rol de 'Desenlace': cita una frase del texto, explica su significado implícito y menciona qué valor transmite."
-    },
-    "context2": {
-      "label": "SITUACIÓN 2",
-      "value": "Ejercicio 2 en Cuaderno: Producción Escrita Breve y Revisión",
-      "desc": "En tu cuaderno, redacta una breve continuación o respuesta reflexiva de 5 líneas aplicando 'Desenlace'. Al finalizar, revisa tu texto cuidando la coherencia, el uso de conectores y la ortografía."
-    },
-    "successFeedback": "¡Excelente razonamiento! Reconociste que el contexto orienta la interpretación de los datos.",
-    "supportFeedback": "Observa cada situación por separado y explica qué elementos las distinguen.",
-    "revealText": "Cada situación tiene un propósito particular y los datos se interpretan según las condiciones del problema."
-  },
-  "challenge": {
-    "title": "Desafío breve: Práctica avanzada y modelamiento de OA 3 (Parte 1)",
-    "question": "En Lengua y Literatura, ¿qué diferencia observas entre identificar los datos y aplicar el procedimiento? Explica tu razonamiento.",
-    "expectedAnswer": "Identificar los datos determina el punto de partida; aplicar el procedimiento permite construir la respuesta.",
-    "item1": {
-      "label": "Datos iniciales",
-      "tag": "Punto de partida"
-    },
-    "item2": {
-      "label": "Procedimiento",
-      "tag": "Aplicación"
-    },
-    "successFeedback": "¡Muy bien! Distinguiste claramente los momentos del análisis.",
-    "supportFeedback": "Revisémoslo juntos: primero identificamos la información disponible y luego aplicamos el método correspondiente."
-  },
-  "strategy": {
-    "title": "Cómo analizar una situación",
-    "dileIntro": "Cuando enfrentes un problema en Lengua y Literatura, puedes seguir estos tres pasos clave:",
-    "steps": [
-      {
-        "number": 1,
-        "title": "Identifica",
-        "desc": "¿Cuáles son los datos clave y cuál es la pregunta central?"
-      },
-      {
-        "number": 2,
-        "title": "Aplica",
-        "desc": "¿Qué regla o método disciplinar corresponde utilizar?"
-      },
-      {
-        "number": 3,
-        "title": "Comprueba",
-        "desc": "¿La conclusión o resultado responde con coherencia al problema?"
-      }
-    ]
-  },
-  "closure": {
-    "congratulations": "¡Felicitaciones! Hoy completaste con éxito la clase \"Práctica avanzada y modelamiento de OA 3 (Parte 1)\". Has demostrado constancia y rigor en tu aprendizaje.",
-    "nextClassPreview": "En la próxima sesión continuaremos profundizando los aprendizajes de Lengua y Literatura."
-  },
   "paso8_cierre": {
-    "preguntaSintesis": "En tus propias palabras, ¿qué personaje, frase o idea de Práctica avanzada y modelamiento de OA 3 (Parte 1) te pareció más significativa y por qué?",
-    "metacognicion": "¿Qué estrategia de lectura te ayudó más a entender el sentido profundo del texto?",
-    "celebracion": "¡Gran trabajo hoy! Has dominado la Clase 5. ¡Nos vemos en la siguiente misión de lectura!"
+    "preguntaSintesis": "¿La travesura ocurre al mismo tiempo que la llamada?",
+    "metacognicion": "¿Qué te ayudó más: leer el recurso, localizar una pista o comparar explicaciones? ¿Por qué?",
+    "celebracion": "Buen trabajo. Explicaste tu respuesta usando información del recurso."
   }
 };

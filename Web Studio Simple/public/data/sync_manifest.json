@@ -1,7 +1,7 @@
 {
-  "timestamp": "11-10-2026, 5:00:49 p. m. [America/Santiago]",
-  "isoDate": "2026-10-11T20:00:49.186Z",
-  "totalLessonsProcessed": 4,
+  "timestamp": "14-10-2026, 10:08:06 a. m. [America/Santiago]",
+  "isoDate": "2026-10-14T13:08:06.509Z",
+  "totalLessonsProcessed": 9,
   "status": "EN_REVISION",
   "lessons": [
     {
@@ -59,6 +59,76 @@
       "hash": "3a44db6d846230d1",
       "status": "EN_REVISION",
       "syncedAt": "2026-10-11T20:00:49.056Z"
+    },
+    {
+      "courseId": "110-7",
+      "grade": "7° Básico",
+      "subject": "Lengua y Literatura",
+      "oaCode": "OA 3",
+      "classNumber": 2,
+      "title": "Acciones que cambian el conflicto",
+      "sourceFile": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE02.md",
+      "destModule": "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase02.ts",
+      "varName": "LENGUA_7B_OA03_CLASE02",
+      "hash": "524df488357ef43f",
+      "status": "EN_REVISION",
+      "syncedAt": "2026-10-14T13:08:06.263Z"
+    },
+    {
+      "courseId": "110-7",
+      "grade": "7° Básico",
+      "subject": "Lengua y Literatura",
+      "oaCode": "OA 3",
+      "classNumber": 3,
+      "title": "Inferencias con evidencia del relato",
+      "sourceFile": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE03.md",
+      "destModule": "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase03.ts",
+      "varName": "LENGUA_7B_OA03_CLASE03",
+      "hash": "6869383e7d7abd1b",
+      "status": "EN_REVISION",
+      "syncedAt": "2026-10-14T13:08:06.271Z"
+    },
+    {
+      "courseId": "110-7",
+      "grade": "7° Básico",
+      "subject": "Lengua y Literatura",
+      "oaCode": "OA 3",
+      "classNumber": 4,
+      "title": "La voz del narrador y los personajes",
+      "sourceFile": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE04.md",
+      "destModule": "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase04.ts",
+      "varName": "LENGUA_7B_OA03_CLASE04",
+      "hash": "dc55b2a4870de7d0",
+      "status": "EN_REVISION",
+      "syncedAt": "2026-10-14T13:08:06.273Z"
+    },
+    {
+      "courseId": "110-7",
+      "grade": "7° Básico",
+      "subject": "Lengua y Literatura",
+      "oaCode": "OA 3",
+      "classNumber": 5,
+      "title": "El orden de los hechos y el recuerdo",
+      "sourceFile": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE05.md",
+      "destModule": "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase05.ts",
+      "varName": "LENGUA_7B_OA03_CLASE05",
+      "hash": "81bed6e2c90c15ee",
+      "status": "EN_REVISION",
+      "syncedAt": "2026-10-14T13:08:06.276Z"
+    },
+    {
+      "courseId": "110-7",
+      "grade": "7° Básico",
+      "subject": "Lengua y Literatura",
+      "oaCode": "OA 3",
+      "classNumber": 6,
+      "title": "Comparar relatos con evidencia",
+      "sourceFile": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE06.md",
+      "destModule": "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase06.ts",
+      "varName": "LENGUA_7B_OA03_CLASE06",
+      "hash": "63220140e8c0d05e",
+      "status": "EN_REVISION",
+      "syncedAt": "2026-10-14T13:08:06.279Z"
     }
   ]
 }
