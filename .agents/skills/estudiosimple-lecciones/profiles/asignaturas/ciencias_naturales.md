@@ -44,7 +44,12 @@ Toda lección de ciencias naturales debe promover las habilidades de pensamiento
   * Evitar generalizaciones dogmáticas atribuidas a la neurociencia; emplear la formulación respaldada: los estereotipos sociales no deben limitar los intereses, talentos ni oportunidades de cada estudiante.
 - **Alineación Curricular, Fuentes Oficiales y Organizador Didáctico:**
   * El texto del estudiante oficial de 7° Básico identificado en el portal Currículum Nacional corresponde a **Edición SM (Editorial SM / Ministerio de Educación de Chile)**; queda estrictamente prohibido denominarlo "Santillana".
-  * El texto oficial del OA 1 menciona aspectos biológicos, afectivos y sociales, cambios de la pubertad, relación con pares y familia, identidad, responsabilidades individuales y respeto mutuo.
-  * **Conservar las cuatro dimensiones (biológica, afectiva, social y ética) como un organizador didáctico de esta unidad.** No atribuir a las Bases Curriculares una clasificación oficial de cuatro dimensiones. Si el texto escolar citado efectivamente presenta esa clasificación, verificarla en la página original antes de atribuírsela.
+  * **Exigencia Oficial del OA 1:** Explicar la integración de **aspectos biológicos, afectivos y sociales** en la sexualidad humana, considerando los cambios de la pubertad, la relación con pares y familia, identidad, responsabilidades individuales y respeto mutuo.
+  * **Distinción Estricta entre Clasificación del Libro y Organizador de la App:**
+    - El **Texto Escolar SM** (págs. 118–121) clasifica la sexualidad en **cinco dimensiones explícitas**: *física, intelectual, social, emocional y espiritual*.
+    - La **App EstudioSimple** utiliza como transposición didáctica consolidada **cuatro dimensiones operativas**: *biológica, afectiva, social y ética*.
+    - **Prohibición:** Queda terminantemente prohibido atribuir al libro de texto la clasificación de cuatro dimensiones. Se debe enseñar la integración de dimensiones que exige el currículum, explicando con transparencia la articulación didáctica.
+  * **Privacidad y Casos Ficticios:** Queda prohibido solicitar al estudiante relatar experiencias íntimas personales; todo análisis y conversación guiada debe utilizar situaciones y dilemas ficticios en tercera persona.
+  * **Variabilidad Individual en la Pubertad:** Las edades promedio del texto y del BDA son datos estadísticos poblacionales de referencia, no plazos cronológicos obligatorios de desarrollo individual.
 
 

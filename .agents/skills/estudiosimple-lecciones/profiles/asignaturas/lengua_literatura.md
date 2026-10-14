@@ -27,3 +27,12 @@ La enseñanza de la lengua se estructura en tres ejes interrelacionados:
 - Reactivos articulados en torno a un texto estímulo breve.
 - Opciones que evalúan habilidades específicas (localizar, interpretar/relacionar, reflexionar).
 - Distractores basados en lecturas literales erróneas o sobreinterpretaciones no respaldadas por el texto.
+
+---
+
+## 4. Especificaciones para 7° Básico (OA 03 - Narraciones y Conflicto)
+
+- **Texto Canónico:** Cuento *"El mejor amigo de un muchacho"* de Isaac Asimov (Texto Escolar Lengua y Literatura 7° Básico, págs. impresas 12–15).
+- **Límite Estricto de Evidencia Textual:** El relato culmina con Jimmy abrazando fuertemente a Robutt en la superficie lunar. **Queda estrictamente prohibido afirmar o dar por sentado que el padre aceptó conservar a Robutt**, ya que ese acuerdo no aparece formulado en el texto.
+- **Evaluación de Respuestas Abiertas:** Las preguntas de inferencia y opinión deben evaluarse mediante criterios y rúbricas cualitativas con base en la evidencia del texto, sin imponer una única interpretación como verdad absoluta.
+- **Enfoque de Clase 01:** Centrada en la comprensión global, localización de información explícita e inferencias fundamentadas sobre el ambiente lunar y los personajes iniciales (Jimmy, Robutt, señor Anderson), articulando la base para el conflicto narrativo posterior.

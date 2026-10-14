@@ -42,6 +42,12 @@ export interface GuidedItem {
   reveal: string;
   studentReveal: string;
   studentImage?: string;
+  relevantParagraph?: number;
+  teachingBox?: {
+    title?: string;
+    points: string[];
+    modelExample?: string;
+  };
 }
 
 export interface QuizQuestion {
@@ -150,6 +156,7 @@ export interface LessonData {
     ideaClave?: string;
     dileIntro: string;
     hazInstruction: string;
+    postDileIntro?: string;
     videoSrc?: string;
     videoUrl?: string;
     graphicPoster?: string;
@@ -167,6 +174,9 @@ export interface LessonData {
   interactive?: {
     type: 'thermo' | 'number_line' | 'hero_journey' | 'dimensions' | 'timeline' | 'story_arc' | 'reading_resource' | 'story_context' | 'general' | 'none';
     title?: string;
+    paragraphs?: string[];
+    readingText?: string;
+    imageSrc?: string;
     [key: string]: any;
   };
   summaryText?: string;

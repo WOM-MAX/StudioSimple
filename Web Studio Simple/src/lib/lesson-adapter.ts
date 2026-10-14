@@ -15,6 +15,11 @@ export function adaptGeneratorLessonToPlayer(
   oa: { curso: string; asignatura: string; oa: string; eje?: string; titulo?: string },
   totalLessons: number
 ): PlayerLessonData {
+  // 1. Preservación estricta: Si ya es PlayerLessonData completa, devolverla directamente
+  if ((genLesson as any).metadata && (genLesson as any).prep && (genLesson as any).route) {
+    return genLesson as unknown as PlayerLessonData;
+  }
+
   const preQuestions: GuidedItem[] = (genLesson.paso3_recorrido || []).map((item) => ({
     context: item.context || 'Recorrido',
     question: item.question,
@@ -22,18 +27,26 @@ export function adaptGeneratorLessonToPlayer(
     success: item.success || '¡Muy bien!',
     support: item.support || 'Recuerda observar los detalles principales.',
     reveal: item.reveal || item.expected,
-    studentReveal: item.studentReveal || item.expected
+    studentReveal: item.studentReveal || item.expected,
+    studentImage: (item as any).studentImage,
+    relevantParagraph: (item as any).relevantParagraph,
+    teachingBox: (item as any).teachingBox
   }));
 
-  const postQuestions: GuidedItem[] = (genLesson.paso3_recorrido || []).slice(0, 2).map((item) => ({
-    context: item.context || 'Comprobación',
-    question: item.question,
-    expected: item.expected,
-    success: item.success || '¡Correcto!',
-    support: item.support || 'Observa la dirección y el cambio.',
-    reveal: item.reveal || item.expected,
-    studentReveal: item.studentReveal || item.expected
-  }));
+  const postQuestions: GuidedItem[] = (genLesson as any).postQuestions && (genLesson as any).postQuestions.length > 0
+    ? (genLesson as any).postQuestions
+    : (genLesson.paso3_recorrido || []).slice(0, 2).map((item) => ({
+        context: item.context || 'Comprobación',
+        question: item.question,
+        expected: item.expected,
+        success: item.success || '¡Correcto!',
+        support: item.support || 'Observa la dirección y el cambio.',
+        reveal: item.reveal || item.expected,
+        studentReveal: item.studentReveal || item.expected,
+        studentImage: (item as any).studentImage,
+        relevantParagraph: (item as any).relevantParagraph,
+        teachingBox: (item as any).teachingBox
+      }));
 
   const practiceItems: GuidedItem[] = (genLesson.paso5_practica || []).map((item) => ({
     context: item.context || 'Situación Aplicada',
@@ -496,7 +509,10 @@ export function adaptPlayerLessonToGenerator(playerLesson: PlayerLessonData): Ge
       success: q.success,
       support: q.support,
       reveal: q.reveal,
-      studentReveal: q.studentReveal
+      studentReveal: q.studentReveal,
+      studentImage: q.studentImage,
+      relevantParagraph: q.relevantParagraph,
+      teachingBox: q.teachingBox
     })),
     conversationContext: playerLesson.conversationContext,
     paso4_explicativo: {
@@ -556,6 +572,7 @@ export function adaptPlayerLessonToGenerator(playerLesson: PlayerLessonData): Ge
       preguntaSintesis: playerLesson.closure?.nextClassPreview || '',
       metacognicion: playerLesson.closure?.congratulations || '',
       celebracion: playerLesson.closure?.congratulations || '¡Felicitaciones! Has completado la clase.'
-    }
+    },
+    interactive: playerLesson.interactive
   } as any;
 }

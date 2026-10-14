@@ -23,3 +23,12 @@ La enseñanza del inglés en EstudioSimple se basa en el enfoque comunicativo:
 
 - Preguntas redactadas en inglés acorde al nivel evolutivo, con instrucciones claras y directas.
 - Distractores construidos sobre transferencias negativas del español (*falsos amigos*), errores típicos de concordancia sujeto-verbo o uso erróneo de auxiliares (*do/does/did*).
+
+---
+
+## 4. Especificaciones para 7° Básico (OA 09 - Comprensión Lectora en Textos Auténticos y Adaptados)
+
+- **Texto Canónico:** Extracto de *The Diary of a Young Girl* (Anne Frank), Students' Book 7° Básico, Unit 1, Lesson 1, pág. impresa 18.
+- **Rigor Textual y Prohibición Específica:** En la elaboración de reactivos, opciones y alternativas, **queda estrictamente prohibido exigir el término *volleyball* como información explícita del pasaje**, ya que el texto escolar únicamente menciona *"the game that we played in the sports lesson"*.
+- **Construcción de Reactivos Cerrados:** Toda pregunta, alternativa correcta y distractor del Miniquiz (3 ítems de 4 alternativas A-D) y de la Recuperación debe poder ser verificada y justificada directamente a partir del texto y las estrategias de lectura presentadas al estudiante.
+- **Enfoque de Clase 01:** Comprensión global de la entrada del diario (cumpleaños de Ana, regalos recibidos, entorno familiar y escolar) y localización de detalles cronológicos explícitos.

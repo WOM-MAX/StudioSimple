@@ -130,15 +130,25 @@ const AdultStudentAnswerAndEvaluationBox: React.FC<AdultStudentAnswerAndEvaluati
               <span className="text-[10px] text-slate-500 font-normal">Enviar pista para reintentar</span>
             </button>
 
-            {/* 3. Tuvo un error */}
+            {/* 3. Tuvo un error / Sin respuesta */}
             <button
               type="button"
-              onClick={onReveal}
+              onClick={() => {
+                if (!hasAnswer) {
+                  onSupport();
+                } else {
+                  onReveal();
+                }
+              }}
               className="bg-white hover:bg-[#f8f9fa] border-2 border-[#dce2e6] rounded-2xl p-3 text-xs font-bold text-[#475569] transition-all cursor-pointer flex flex-col items-center justify-center gap-1 text-center hover:shadow-xs group"
             >
-              <span className="text-base">🔴</span>
-              <span className="font-extrabold text-[#475569]">Tuvo un error</span>
-              <span className="text-[10px] text-slate-500 font-normal">Mostrar modelamiento guiado</span>
+              <span className="text-base">{hasAnswer ? '🔴' : '💡'}</span>
+              <span className="font-extrabold text-[#475569]">
+                {hasAnswer ? 'Tuvo un error' : 'Aún no responde'}
+              </span>
+              <span className="text-[10px] text-slate-500 font-normal">
+                {hasAnswer ? 'Mostrar modelamiento guiado' : 'Ofrecer pista para responder'}
+              </span>
             </button>
           </div>
         </div>
@@ -655,6 +665,30 @@ export const AdultLessonView: React.FC = () => {
                   {currentPreItem.context} · Pregunta {session.conversationIndex + 1} de 2
                 </span>
               </div>
+
+              {currentPreItem.teachingBox && (
+                <div className="mb-4 bg-blue-50/90 rounded-2xl p-4 border border-blue-200/90 shadow-xs space-y-2.5">
+                  <div className="flex items-center gap-2 text-blue-900 font-bold text-xs uppercase tracking-wide">
+                    <span className="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse"></span>
+                    <span>{currentPreItem.teachingBox.title || 'Guía didáctica: Describir vs. Inferir'}</span>
+                  </div>
+                  <ul className="space-y-1 text-xs text-blue-950 font-medium">
+                    {currentPreItem.teachingBox.points.map((pt, i) => (
+                      <li key={i} className="flex items-start gap-1.5">
+                        <span className="text-blue-600 font-bold">•</span>
+                        <span>{pt}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  {currentPreItem.teachingBox.modelExample && (
+                    <div className="bg-white/90 rounded-xl p-2.5 border border-blue-100 text-xs text-slate-700 leading-relaxed">
+                      <span className="font-bold text-blue-900 block mb-0.5">Modelamiento con Robutt:</span>
+                      <p className="italic text-slate-800">{currentPreItem.teachingBox.modelExample}</p>
+                    </div>
+                  )}
+                </div>
+              )}
+
               <PromptBox label="PREGÚNTALE">
                 {currentPreItem.question}
               </PromptBox>
@@ -803,6 +837,30 @@ export const AdultLessonView: React.FC = () => {
                   {currentPostItem.context} · Pregunta {session.postIndex + 1} de 2
                 </span>
               </div>
+
+              {currentPostItem.teachingBox && (
+                <div className="mb-4 bg-blue-50/90 rounded-2xl p-4 border border-blue-200/90 shadow-xs space-y-2.5">
+                  <div className="flex items-center gap-2 text-blue-900 font-bold text-xs uppercase tracking-wide">
+                    <span className="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse"></span>
+                    <span>{currentPostItem.teachingBox.title || 'Guía didáctica: Describir vs. Inferir'}</span>
+                  </div>
+                  <ul className="space-y-1 text-xs text-blue-950 font-medium">
+                    {currentPostItem.teachingBox.points.map((pt, i) => (
+                      <li key={i} className="flex items-start gap-1.5">
+                        <span className="text-blue-600 font-bold">•</span>
+                        <span>{pt}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  {currentPostItem.teachingBox.modelExample && (
+                    <div className="bg-white/90 rounded-xl p-2.5 border border-blue-100 text-xs text-slate-700 leading-relaxed">
+                      <span className="font-bold text-blue-900 block mb-0.5">Modelamiento con Robutt:</span>
+                      <p className="italic text-slate-800">{currentPostItem.teachingBox.modelExample}</p>
+                    </div>
+                  )}
+                </div>
+              )}
+
               <PromptBox label="PREGÚNTALE">
                 {currentPostItem.question}
               </PromptBox>
@@ -867,8 +925,8 @@ export const AdultLessonView: React.FC = () => {
               <PromptBox label="DILE">
                 {session.practiceIndex === 0
                   ? ((lessonData as any).practiceDileIntro ||
-                    `Ahora apliquemos lo que hemos aprendido sobre ${lessonData.metadata.lessonTitle || 'la clase'} en situaciones prácticas. Resolveremos cada caso paso a paso: primero ${currentPracticeItem?.context || 'la primera situación'}.`)
-                  : `Pasemos a la situación ${session.practiceIndex + 1}: ${currentPracticeItem.context || 'siguiente caso'}.`}
+                    `Ahora apliquemos lo que hemos aprendido sobre ${lessonData.metadata.lessonTitle || 'la clase'} en situaciones prácticas. Resolveremos cada caso paso a paso: primero ${currentPracticeItem?.context || 'el primer caso'}.`)
+                  : `Pasemos al caso ${session.practiceIndex + 1} de ${lessonData.practice.length || 2}: ${currentPracticeItem.context || 'siguiente caso'}.`}
               </PromptBox>
               <div className="flex justify-end mt-8 pt-4 border-t border-[#dce2e6]">
                 <button
@@ -877,7 +935,7 @@ export const AdultLessonView: React.FC = () => {
                   className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
                 >
                   <span>
-                    Mostrar {session.practiceIndex === 0 ? 'primera' : session.practiceIndex === 1 ? 'segunda' : 'última'} situación
+                    Mostrar {session.practiceIndex === 0 ? 'primer' : 'segundo'} caso ({session.practiceIndex + 1} de {lessonData.practice.length || 2})
                   </span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
@@ -890,7 +948,7 @@ export const AdultLessonView: React.FC = () => {
             <div>
               <div className="flex items-center justify-between mb-3">
                 <span className="text-xs font-bold uppercase tracking-wider text-[#12a1a4] bg-[#e6f7f7] px-3 py-1 rounded-full">
-                  {currentPracticeItem.context} · Situación {session.practiceIndex + 1} de 3
+                  {currentPracticeItem.context} · Caso {session.practiceIndex + 1} de {lessonData.practice.length || 2}
                 </span>
               </div>
               <PromptBox label="PREGÚNTALE">
@@ -914,10 +972,20 @@ export const AdultLessonView: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => {
-                      if (session.practiceIndex < 2) {
-                        updateSession({ stage: 'practiceIntro', practiceIndex: session.practiceIndex + 1, feedback: null, attempt: 0 });
+                      const totalPractice = lessonData.practice?.length || 2;
+                      if (session.practiceIndex < totalPractice - 1) {
+                        updateSession({
+                          stage: 'practiceIntro',
+                          practiceIndex: session.practiceIndex + 1,
+                          feedback: null,
+                          attempt: 0
+                        });
                       } else {
-                        updateSession({ stage: 'reasoningIntro', feedback: null, attempt: 0 });
+                        if (lessonData.reasoning) {
+                          updateSession({ stage: 'reasoningIntro', feedback: null, attempt: 0 });
+                        } else {
+                          updateSession({ stage: 'practiceSummary', summaryIdea: 0, feedback: null });
+                        }
                       }
                     }}
                     className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"

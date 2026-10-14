@@ -406,6 +406,9 @@ export function findInjectedLesson(
   if (customPkg) {
     const customLesson = customPkg.lessons.find((l) => l.num === lessonNumber);
     if (customLesson) {
+      if ((customLesson as any).metadata && (customLesson as any).prep && (customLesson as any).route) {
+        return customLesson as unknown as PlayerLessonData;
+      }
       return adaptGeneratorLessonToPlayer(
         customLesson,
         {
@@ -430,6 +433,11 @@ export function findInjectedLesson(
 
   const genLesson = foundPkg.lessons.find((l) => l.num === lessonNumber);
   if (!genLesson) return null;
+
+  // Preservación estricta: Si la lección ya es una lección canónica completa PlayerLessonData, devolverla directamente sin degradación
+  if ((genLesson as any).metadata && (genLesson as any).prep && (genLesson as any).route) {
+    return genLesson as unknown as PlayerLessonData;
+  }
 
   return adaptGeneratorLessonToPlayer(
     genLesson,

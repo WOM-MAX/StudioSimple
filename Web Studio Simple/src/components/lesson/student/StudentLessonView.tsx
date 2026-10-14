@@ -8,6 +8,8 @@ import { StudentQuizReviewView } from './StudentQuizReviewView';
 import { StudentRecoveryView } from './StudentRecoveryView';
 import { ConfettiEffect } from './ConfettiEffect';
 import { SupportHintCard } from './SupportHintCard';
+import { OptionalAudioPlayer } from '../common/OptionalAudioPlayer';
+import { StudentReadingResourceCard } from './StudentReadingResourceCard';
 import { getSubjectTheme } from '../../../lib/subject-theme';
 import { resolveVideoSource } from '../../../lib/video-utils';
 import { getLessonCanonicalKey } from '../../../lib/lesson-repository';
@@ -21,7 +23,8 @@ import {
   RotateCcw,
   AlertCircle,
   Send,
-  MessageSquare
+  MessageSquare,
+  BookOpen
 } from 'lucide-react';
 
 function isAmbientActiveStage(
@@ -73,7 +76,9 @@ const StudentAnswerSection: React.FC<StudentAnswerSectionProps> = ({
     }
   };
 
-  const isResolved = feedback?.kind === 'success' || feedback?.kind === 'reveal';
+  // No mostrar la solución modelo antes de que el estudiante responda
+  const studentHasAnswered = Boolean(savedAnswer && savedAnswer.trim().length > 0);
+  const isResolved = (feedback?.kind === 'success' || feedback?.kind === 'reveal') && studentHasAnswered;
 
   return (
     <div className="mt-4 text-left">
@@ -89,7 +94,7 @@ const StudentAnswerSection: React.FC<StudentAnswerSectionProps> = ({
         </div>
       )}
 
-      {/* Tarjeta de Respuesta Escrita del Estudiante */}
+      {/* Tarjeta de Respuesta Escrita del Estudiante (Una sola respuesta registrada por caso) */}
       <div className="bg-slate-50 border border-slate-200/90 rounded-2xl p-4 transition-all mt-3">
         <div className="flex items-center justify-between mb-2">
           <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#1C3257] flex items-center gap-1.5">
@@ -99,11 +104,11 @@ const StudentAnswerSection: React.FC<StudentAnswerSectionProps> = ({
           {savedAnswer && !isEditing ? (
             <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full flex items-center gap-1">
               <Check className="w-3 h-3" />
-              Enviada en vivo
+              Respuesta registrada
             </span>
           ) : (
             <span className="text-[10px] font-bold text-slate-400">
-              {isResolved ? 'Completada' : 'Escribe y envía'}
+              {isResolved ? 'Completada' : 'Escribe y envía una sola respuesta'}
             </span>
           )}
         </div>
@@ -120,7 +125,7 @@ const StudentAnswerSection: React.FC<StudentAnswerSectionProps> = ({
             />
             <div className="flex items-center justify-between">
               <span className="text-[10px] text-slate-400">
-                Tu mentor revisará lo que escribas aquí.
+                Tu mentor revisará tu respuesta.
               </span>
               <button
                 type="submit"
@@ -143,13 +148,15 @@ const StudentAnswerSection: React.FC<StudentAnswerSectionProps> = ({
                   <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-ping" />
                   Tu mentor está revisando tu respuesta...
                 </span>
-                <button
-                  type="button"
-                  onClick={() => setIsEditing(true)}
-                  className="text-[11px] font-bold text-[#12A1A4] hover:underline cursor-pointer"
-                >
-                  Editar respuesta
-                </button>
+                {feedback?.kind === 'support' && (
+                  <button
+                    type="button"
+                    onClick={() => setIsEditing(true)}
+                    className="text-[11px] font-bold text-[#12A1A4] hover:underline cursor-pointer"
+                  >
+                    Ajustar con la pista
+                  </button>
+                )}
               </div>
             )}
           </div>
@@ -167,6 +174,8 @@ export const StudentLessonView: React.FC = () => {
   const [soundOn, setSoundOn] = useState(true);
   const [blocked, setBlocked] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
+  const [showReadingConsult, setShowReadingConsult] = useState(false);
+  const [consultParagraph, setConsultParagraph] = useState<number | undefined>(undefined);
   const prevFeedbackRef = useRef<string | null>(null);
 
   useEffect(() => {
@@ -476,9 +485,55 @@ export const StudentLessonView: React.FC = () => {
               <span className={`inline-flex px-3 py-1 rounded-full ${theme.badgeBg} ${theme.badgeText} border ${theme.badgeBorder} text-[11px] font-bold uppercase tracking-widest mb-3`}>
                 Pregunta {session.conversationIndex + 1} de {lessonData.preQuestions.length || 2}
               </span>
-              <h1 className="text-xl sm:text-2xl font-extrabold text-[#1C3257] mb-4">
+
+              {/* Enseñanza guiada visible antes de la actividad si está presente */}
+              {currentPreItem.teachingBox && (
+                <div className="mb-5 text-left bg-blue-50/90 rounded-2xl p-4 sm:p-5 border border-blue-200/90 shadow-xs">
+                  <div className="flex items-center gap-2 text-blue-900 font-bold text-xs uppercase tracking-wide mb-2.5">
+                    <span className="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                    <span>{currentPreItem.teachingBox.title || 'Enseñanza guiada: Describir vs. Inferir'}</span>
+                  </div>
+                  <div className="space-y-2 text-xs sm:text-sm text-blue-950 font-medium mb-3">
+                    {currentPreItem.teachingBox.points.map((pt, i) => (
+                      <div key={i} className="flex items-start gap-2">
+                        <span className="text-blue-600 font-bold">•</span>
+                        <span>{pt}</span>
+                      </div>
+                    ))}
+                  </div>
+                  {currentPreItem.teachingBox.modelExample && (
+                    <div className="bg-white/95 rounded-xl p-3 border border-blue-100 text-xs text-slate-700 leading-relaxed shadow-2xs">
+                      <span className="font-bold text-blue-900 block mb-1">Ejemplo modelado:</span>
+                      <p className="italic text-slate-800">{currentPreItem.teachingBox.modelExample}</p>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              <h1 className="text-xl sm:text-2xl font-extrabold text-[#1C3257] mb-3">
                 {currentPreItem.question}
               </h1>
+
+              {/* Controles de lectura y audio opcional */}
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setConsultParagraph(currentPreItem.relevantParagraph);
+                    setShowReadingConsult(true);
+                  }}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-orange-50 hover:bg-orange-100 text-[#C2540A] border border-orange-200/90 text-xs font-bold transition-all shadow-2xs cursor-pointer"
+                >
+                  <BookOpen className="w-3.5 h-3.5 text-[#EE751C]" />
+                  <span>Consultar texto de lectura {currentPreItem.relevantParagraph ? `(Párrafo ${currentPreItem.relevantParagraph})` : ''}</span>
+                </button>
+
+                <OptionalAudioPlayer
+                  text={currentPreItem.question}
+                  label="Escuchar pregunta"
+                  compact
+                />
+              </div>
 
               {currentPreItem.studentImage && (
                 <div className="mb-4 max-w-sm mx-auto rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm bg-slate-50">
@@ -513,9 +568,25 @@ export const StudentLessonView: React.FC = () => {
                 <h1 className="text-2xl font-extrabold text-[#1C3257] mb-2">
                   {lessonData.formalization.concept || 'Concepto clave'}
                 </h1>
-                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed mb-4">
                   {lessonData.formalization.summary || 'Explicación del concepto fundamental de la clase.'}
                 </p>
+
+                <div className="flex flex-col items-center gap-3 my-3">
+                  <OptionalAudioPlayer
+                    text={`${lessonData.formalization.concept || ''}. ${lessonData.formalization.summary || ''}`}
+                    label="Escuchar explicación conceptual"
+                  />
+                  {lessonData.formalization.graphicPoster && (
+                    <div className="max-w-sm w-full rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm bg-slate-50 mt-1">
+                      <img
+                        src={lessonData.formalization.graphicPoster}
+                        alt="Desacuerdo familiar"
+                        className="w-full h-auto max-h-52 object-contain mx-auto"
+                      />
+                    </div>
+                  )}
+                </div>
               </div>
             ) : !session.formalEnded ? (
               <SyncedStudentVideo src={lessonData.formalization.videoSrc ?? ''} kind="formal" session={session} title={lessonData.formalization.concept} />
@@ -525,9 +596,15 @@ export const StudentLessonView: React.FC = () => {
                 <h1 className="text-2xl font-extrabold text-[#1C3257] mb-2">
                   {lessonData.formalization.concept || 'Concepto clave'}
                 </h1>
-                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed mb-3">
                   Ahora comprobaremos lo aprendido con dos preguntas.
                 </p>
+                <div className="flex justify-center">
+                  <OptionalAudioPlayer
+                    text={`${lessonData.formalization.concept || ''}. ${lessonData.formalization.summary || ''}`}
+                    label="Escuchar explicación conceptual"
+                  />
+                </div>
               </div>
             )}
           </div>
@@ -559,9 +636,55 @@ export const StudentLessonView: React.FC = () => {
               <span className={`inline-flex px-3 py-1 rounded-full ${theme.badgeBg} ${theme.badgeText} border ${theme.badgeBorder} text-[11px] font-bold uppercase tracking-widest mb-3`}>
                 Pregunta {session.postIndex + 1} de {lessonData.postQuestions.length || 2}
               </span>
-              <h1 className="text-xl sm:text-2xl font-extrabold text-[#1C3257] mb-4">
+
+              {/* Enseñanza guiada visible antes de la pregunta */}
+              {currentPostItem.teachingBox && (
+                <div className="mb-5 text-left bg-blue-50/90 rounded-2xl p-4 sm:p-5 border border-blue-200/90 shadow-xs">
+                  <div className="flex items-center gap-2 text-blue-900 font-bold text-xs uppercase tracking-wide mb-2.5">
+                    <span className="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                    <span>{currentPostItem.teachingBox.title || 'Enseñanza guiada: Describir vs. Inferir'}</span>
+                  </div>
+                  <div className="space-y-2 text-xs sm:text-sm text-blue-950 font-medium mb-3">
+                    {currentPostItem.teachingBox.points.map((pt, i) => (
+                      <div key={i} className="flex items-start gap-2">
+                        <span className="text-blue-600 font-bold">•</span>
+                        <span>{pt}</span>
+                      </div>
+                    ))}
+                  </div>
+                  {currentPostItem.teachingBox.modelExample && (
+                    <div className="bg-white/95 rounded-xl p-3 border border-blue-100 text-xs text-slate-700 leading-relaxed shadow-2xs">
+                      <span className="font-bold text-blue-900 block mb-1">Ejemplo modelado:</span>
+                      <p className="italic text-slate-800">{currentPostItem.teachingBox.modelExample}</p>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              <h1 className="text-xl sm:text-2xl font-extrabold text-[#1C3257] mb-3">
                 {currentPostItem.question}
               </h1>
+
+              {/* Botón para consultar lectura */}
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setConsultParagraph(undefined);
+                    setShowReadingConsult(true);
+                  }}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-orange-50 hover:bg-orange-100 text-[#C2540A] border border-orange-200/90 text-xs font-bold transition-all shadow-2xs cursor-pointer"
+                >
+                  <BookOpen className="w-3.5 h-3.5 text-[#EE751C]" />
+                  <span>Consultar texto de lectura</span>
+                </button>
+
+                <OptionalAudioPlayer
+                  text={currentPostItem.question}
+                  label="Escuchar pregunta"
+                  compact
+                />
+              </div>
 
               {currentPostItem.studentImage && (
                 <div className="mb-4 max-w-sm mx-auto rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm bg-slate-50">
@@ -624,9 +747,11 @@ export const StudentLessonView: React.FC = () => {
         )}
 
         {/* 12. STAGE: PRACTICE INTRO */}
+        {/* 12. STAGE: PRACTICE INTRO */}
         {session.stage === 'practiceIntro' && (() => {
-          const ordinals = ['Primera situación', 'Segunda situación', 'Tercera situación', 'Siguiente situación'];
-          const textOrdinal = ordinals[session.practiceIndex] ?? `Situación ${session.practiceIndex + 1}`;
+          const totalPractice = lessonData.practice?.length || 2;
+          const ordinals = ['Caso 1 de 2', 'Caso 2 de 2'];
+          const textOrdinal = ordinals[session.practiceIndex] ?? `Caso ${session.practiceIndex + 1} de ${totalPractice}`;
 
           return (
             <div className="max-w-xl mx-auto w-full animate-fadeIn text-center py-4">
@@ -640,6 +765,15 @@ export const StudentLessonView: React.FC = () => {
                 <h1 className="text-2xl sm:text-3xl font-extrabold text-[#1c3257] mb-3">
                   {currentPracticeItem?.context || 'Práctica guiada'}
                 </h1>
+
+                {/* Audio opcional de instrucciones de práctica */}
+                <div className="my-3">
+                  <OptionalAudioPlayer
+                    text={currentPracticeItem?.question || currentPracticeItem?.context || 'Escucha la indicación para resolver este caso.'}
+                    label="Escuchar instrucciones del caso"
+                  />
+                </div>
+
                 {currentPracticeItem?.studentImage && (
                   <div className="mb-4 max-w-sm mx-auto rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm bg-slate-50">
                     <img
@@ -650,7 +784,7 @@ export const StudentLessonView: React.FC = () => {
                   </div>
                 )}
                 <p className="text-xs text-[#748093]">
-                  Escucha la situación antes de responder.
+                  Escucha o lee la situación antes de responder.
                 </p>
               </div>
             </div>
@@ -658,37 +792,61 @@ export const StudentLessonView: React.FC = () => {
         })()}
 
         {/* 13. STAGE: PRACTICE */}
-        {session.stage === 'practice' && (
-          <div className="max-w-xl mx-auto w-full animate-fadeIn text-center py-4">
-            <span className="text-[#12a1a4] font-bold text-xs uppercase tracking-widest block mb-1">
-              Situación {session.practiceIndex + 1} de {lessonData.practice.length || 3} : {currentPracticeItem.context}
-            </span>
-            <h1 className="text-xl sm:text-2xl font-extrabold text-[#1c3257] mb-6">
-              {currentPracticeItem.question}
-            </h1>
+        {session.stage === 'practice' && (() => {
+          const totalPractice = lessonData.practice?.length || 2;
+          return (
+            <div className="max-w-xl mx-auto w-full animate-fadeIn text-center py-4">
+              <span className="text-[#12a1a4] font-bold text-xs uppercase tracking-widest block mb-1">
+                Caso {session.practiceIndex + 1} de {totalPractice} : {currentPracticeItem.context}
+              </span>
+              <h1 className="text-xl sm:text-2xl font-extrabold text-[#1c3257] mb-4">
+                {currentPracticeItem.question}
+              </h1>
 
-            {currentPracticeItem.studentImage && (
-              <div className="mb-6 max-w-sm mx-auto rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm bg-slate-50">
-                <img
-                  src={currentPracticeItem.studentImage}
-                  alt={currentPracticeItem.context || 'Imagen de práctica'}
-                  className="w-full h-auto max-h-56 object-contain mx-auto"
+              {/* Botón para consultar lectura y audio opcional de instrucciones */}
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setConsultParagraph(currentPracticeItem.relevantParagraph);
+                    setShowReadingConsult(true);
+                  }}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-orange-50 hover:bg-orange-100 text-[#C2540A] border border-orange-200/90 text-xs font-bold transition-all shadow-2xs cursor-pointer"
+                >
+                  <BookOpen className="w-3.5 h-3.5 text-[#EE751C]" />
+                  <span>Consultar texto de lectura {currentPracticeItem.relevantParagraph ? `(Párrafo ${currentPracticeItem.relevantParagraph})` : ''}</span>
+                </button>
+
+                <OptionalAudioPlayer
+                  text={currentPracticeItem.question}
+                  label="Escuchar instrucciones de práctica"
+                  compact
                 />
               </div>
-            )}
 
-            <div className="bg-white border border-[#dce2e6] rounded-3xl p-8 shadow-sm">
-              <StudentAnswerSection
-                questionKey={`practice_${session.practiceIndex}`}
-                feedback={session.feedback}
-                studentReveal={currentPracticeItem.studentReveal}
-                onSubmitAnswer={submitStudentAnswer}
-                savedAnswer={session.studentTextAnswers?.[`practice_${session.practiceIndex}`]}
-                hintMessage="Presta atención a la pista que te dará tu mentor."
-              />
+              {currentPracticeItem.studentImage && (
+                <div className="mb-6 max-w-sm mx-auto rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm bg-slate-50">
+                  <img
+                    src={currentPracticeItem.studentImage}
+                    alt={currentPracticeItem.context || 'Imagen de práctica'}
+                    className="w-full h-auto max-h-56 object-contain mx-auto"
+                  />
+                </div>
+              )}
+
+              <div className="bg-white border border-[#dce2e6] rounded-3xl p-8 shadow-sm">
+                <StudentAnswerSection
+                  questionKey={`practice_${session.practiceIndex}`}
+                  feedback={session.feedback}
+                  studentReveal={currentPracticeItem.studentReveal}
+                  onSubmitAnswer={submitStudentAnswer}
+                  savedAnswer={session.studentTextAnswers?.[`practice_${session.practiceIndex}`]}
+                  hintMessage="Presta atención a la pista que te dará tu mentor."
+                />
+              </div>
             </div>
-          </div>
-        )}
+          );
+        })()}
 
         {/* 14. STAGE: REASONING INTRO & REASONING */}
         {(session.stage === 'reasoningIntro' || session.stage === 'reasoning') && (
@@ -992,6 +1150,35 @@ export const StudentLessonView: React.FC = () => {
           </div>
         )}
       </div>
+
+      {/* Modal / Drawer para consultar lectura sin perder la pregunta ni reiniciar respuesta */}
+      {showReadingConsult && (
+        <div className="fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-xs flex items-center justify-center p-4 animate-fadeIn">
+          <div className="bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden">
+            <div className="p-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/90 shrink-0">
+              <div className="flex items-center gap-2">
+                <BookOpen className="w-4 h-4 text-[#EE751C]" />
+                <span className="text-xs font-black uppercase tracking-wider text-[#1C3257]">
+                  Consulta de Lectura · Relato en pantalla
+                </span>
+              </div>
+              <button
+                type="button"
+                onClick={() => setShowReadingConsult(false)}
+                className="text-xs font-bold px-3 py-1.5 bg-slate-200 hover:bg-slate-300 text-slate-700 rounded-xl transition-all cursor-pointer"
+              >
+                Volver a la pregunta ✕
+              </button>
+            </div>
+            <div className="p-6 overflow-y-auto">
+              <StudentReadingResourceCard
+                activeParagraph={consultParagraph}
+                showImage={false}
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

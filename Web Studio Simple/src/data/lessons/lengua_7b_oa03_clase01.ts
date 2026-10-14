@@ -17,7 +17,7 @@ export const LENGUA_7B_OA03_CLASE01: LessonData = {
     "routeToday": "Observar → leer el recurso en pantalla → reunir pistas → explicar el conflicto → comprobar comprensión.",
     "mentorReminder": "Sigue el guion leyendo en voz alta únicamente los recuadros DILE y PREGÚNTALE. Las respuestas esperadas y criterios te indican qué debe responder el estudiante.",
     "reminders": [
-      "Usa el recurso de lectura incluido en esta lección. El Texto Escolar fue una fuente de autoría; el estudiante no necesita tenerlo ni abrirlo.",
+      "Usa el recurso de lectura incluido en pantalla en esta lección. Todo el material necesario está integrado digitalmente; el estudiante no necesita consultar fuentes externas.",
       "Antes de revelar una respuesta, invita al estudiante a localizar una pista.",
       "Acepta respuestas diferentes si se entienden y se sostienen con el cuento.",
       "En preguntas de opinión, acompaña el razonamiento sin calificar la postura personal."
@@ -93,14 +93,21 @@ export const LENGUA_7B_OA03_CLASE01: LessonData = {
   },
   "interactive": {
     "type": "reading_resource",
-    "title": "Recurso de Lectura Autónomo: El mejor amigo de un muchacho"
+    "title": "El mejor amigo de un muchacho",
+    "readingText": "En una colonia de la Luna vive Jimmy, un niño que juega con Robutt, su perro robot. El exterior lunar es rocoso y árido; no hay oxígeno respirable y Jimmy debe usar un traje espacial cuando sale. En una ocasión, Jimmy finge estar herido durante un juego. Robutt activa una alarma y llega un equipo de rescate. Esa acción permite reconocer que el robot está atento a Jimmy. Más tarde, el padre de Jimmy anuncia que llegará desde la Tierra un perro vivo y dice que no pueden quedarse con los dos perros. Propone regalar a Robutt a otro niño. Jimmy se opone y expresa que Robutt es su perro. Al final, Jimmy abraza a Robutt; el relato no informa qué decide después el padre.",
+    "paragraphs": [
+      "En una colonia de la Luna vive Jimmy, un niño que juega con Robutt, su perro robot. El exterior lunar es rocoso y árido; no hay oxígeno respirable y Jimmy debe usar un traje espacial cuando sale.",
+      "En una ocasión, Jimmy finge estar herido durante un juego. Robutt activa una alarma y llega un equipo de rescate. Esa acción permite reconocer que el robot está atento a Jimmy.",
+      "Más tarde, el padre de Jimmy anuncia que llegará desde la Tierra un perro vivo y dice que no pueden quedarse con los dos perros. Propone regalar a Robutt a otro niño. Jimmy se opone y expresa que Robutt es su perro. Al final, Jimmy abraza a Robutt; el relato no informa qué decide después el padre."
+    ],
+    "imageSrc": "/images/lessons/lengua_7b_oa03_clase01_ambiente_lunar.jpg"
   },
   "reference": {
     "dilePrompt": "Lee el recurso que aparece en pantalla. ¿Dónde vive Jimmy? Elige dos detalles que nos ayuden a describir el ambiente.",
     "question": "Lee el recurso que aparece en pantalla. ¿Dónde vive Jimmy? Elige dos detalles que nos ayuden a describir el ambiente.",
     "expectedAnswer": "Jimmy vive en una colonia de la Luna. El relato describe un entorno rocoso y árido y señala que no hay oxígeno respirable en el exterior.",
     "socraticHint": "Vuelve al recurso en pantalla: busca el suelo y la condición exterior.",
-    "feedbackSuccess": "Encontraste el lugar y usaste detalles del texto para describirlo.",
+    "feedbackSuccess": "Encontraste el lugar y usaste detalles de la lectura en pantalla para describirlo.",
     "feedbackSupport": "Ya ubicamos la Luna. Vuelve al recurso en pantalla: ¿qué detalle describe el suelo y qué condición del exterior hace necesario el traje espacial?"
   },
   "hook": {
@@ -114,7 +121,7 @@ export const LENGUA_7B_OA03_CLASE01: LessonData = {
         "slideNumber": 1,
         "tituloMomento": "Objetivo de la lección",
         "didacticPurpose": "Objetivo de la lección",
-        "visualPrompt": "Los dos guías observan la Tierra y la Luna desde una ventana de una colonia lunar; espacio despejado para el texto.",
+        "visualPrompt": "Los dos guías observan la Tierra y la Luna desde una ventana de una colonia lunar; espacio despejado para la información.",
         "overlayText": "Objetivo de la lección",
         "overlayTitle": "Objetivo de la lección",
         "overlaySubtitle": "",
@@ -268,31 +275,45 @@ export const LENGUA_7B_OA03_CLASE01: LessonData = {
   },
   "preQuestions": [
     {
-      "context": "Inicio del relato, resumido en el recurso de lectura en pantalla.",
+      "context": "Inicio del relato · El ambiente lunar",
       "question": "¿Dónde ocurre la historia y qué detalles permiten imaginar ese lugar?",
       "expected": "En una colonia lunar; el estudiante menciona detalles del relato, como el suelo rocoso y árido y la ausencia de oxígeno respirable en el exterior.",
       "success": "Lugar correcto más dos detalles.",
       "support": "Busca una pista sobre el suelo y otra sobre las condiciones del exterior.",
       "reveal": "Responder con los datos incluidos en la paráfrasis visible; no se requiere conocimiento externo ni abrir otro material.",
-      "studentReveal": "Jimmy vive en una colonia lunar. El cuento describe el suelo rocoso y árido y señala que afuera no hay oxígeno para respirar."
+      "studentReveal": "Jimmy vive en una colonia lunar. El cuento describe el suelo rocoso y árido y señala que afuera no hay oxígeno para respirar.",
+      "studentImage": "/images/lessons/lengua_7b_oa03_clase01_ambiente_lunar.jpg",
+      "relevantParagraph": 1
     },
     {
-      "context": "Juego y episodio de la alarma, incluidos en el recurso de lectura en pantalla.",
+      "context": "Juego y episodio de la alarma",
+      "teachingBox": {
+        "title": "Enseñanza guiada: Describir vs. Inferir",
+        "points": [
+          "Describir: decir qué acción o detalle aparece en el relato.",
+          "Inferir: proponer qué permite comprender ese detalle y justificar la interpretación con evidencia."
+        ],
+        "modelExample": "«Robutt activa la alarma cuando Jimmy finge estar herido» describe lo ocurrido; «Robutt está atento a Jimmy» es una inferencia apoyada en esa acción."
+      },
       "question": "¿Qué acción de Robutt te ayuda a comprender cómo se relaciona con Jimmy?",
       "expected": "Puede mencionar los juegos compartidos o que Robutt activa la alarma cuando Jimmy finge estar herido. Debe explicar qué infiere de esa acción.",
       "success": "Acción narrada más inferencia razonable.",
       "support": "¿Qué ocurre después de que Jimmy finge estar herido?",
       "reveal": "La paráfrasis resume que después de activarse la alarma llega un grupo de rescate.",
-      "studentReveal": "Robutt activa una alarma y llega un grupo de rescate. Esa acción me permite inferir que está atento a Jimmy."
+      "studentReveal": "Robutt activa una alarma y llega un grupo de rescate. Esa acción me permite inferir que está atento a Jimmy.",
+      "studentImage": "/images/lessons/lengua_7b_oa03_clase01_robutt_alarma.jpg",
+      "relevantParagraph": 2
     },
     {
-      "context": "Conversación entre Jimmy y su padre, resumida en el recurso de lectura en pantalla.",
+      "context": "Conversación familiar · Desacuerdo inicial",
       "question": "¿Qué propone el padre y cómo responde Jimmy?",
       "expected": "El padre anuncia un perro de la Tierra y propone regalar a Robutt a otro niño; Jimmy afirma que Robutt es su perro y expresa su afecto.",
       "success": "Presenta las dos posturas y una pista del diálogo.",
       "support": "Busca la propuesta del padre. Luego lee en voz alta la respuesta de Jimmy.",
       "reveal": "La pregunta aborda el inicio del conflicto; la opinión sobre quién tiene razón queda abierta.",
-      "studentReveal": "El padre quiere traer un perro vivo y propone regalar a Robutt. Jimmy se opone porque lo considera su perro."
+      "studentReveal": "El padre quiere traer un perro vivo y propone regalar a Robutt. Jimmy se opone porque lo considera su perro.",
+      "studentImage": "/images/lessons/lengua_7b_oa03_clase01_jimmy_padre_desacuerdo.jpg",
+      "relevantParagraph": 3
     }
   ],
   "formalization": {
@@ -302,18 +323,20 @@ export const LENGUA_7B_OA03_CLASE01: LessonData = {
     "ideaClave": "Una interpretación literaria se vuelve más clara cuando explicamos qué evidencia del relato la apoya.",
     "dileIntro": "¿Qué hace que el anuncio del padre se convierta en un conflicto para Jimmy?",
     "hazInstruction": "Responde con esta estructura: “El conflicto comienza cuando ___ quiere ___, pero ___ quiere ___; lo noto porque el cuento muestra ___.”",
+    "postDileIntro": "Comprobemos lo que acabamos de revisar sobre el conflicto y los personajes. Responderemos dos preguntas de comprobación.",
     "videoSrc": "",
+    "graphicPoster": "/images/lessons/lengua_7b_oa03_clase01_jimmy_padre_desacuerdo.jpg",
     "slides": []
   },
   "postQuestions": [
     {
-      "context": "Comprobación 1",
-      "question": "¿Qué diferencia hay entre describir una escena y explicar una inferencia?",
-      "expected": "Describir una escena es decir qué ocurre; inferir es proponer qué permite comprender esa acción, justificándolo con la escena.",
-      "success": "Respuesta precisa y fundamentada",
-      "support": "Revisa el concepto clave expuesto",
-      "reveal": "Describir una escena es decir qué ocurre; inferir es proponer qué permite comprender esa acción, justificándolo con la escena.",
-      "studentReveal": "Describir una escena es decir qué ocurre; inferir es proponer qué permite comprender esa acción, justificándolo con la escena."
+      "context": "Comprobación 1 · Inferencia con evidencia",
+      "question": "Al final, Jimmy abraza a Robutt. ¿Qué puedes inferir de ese gesto sobre lo que siente Jimmy? Justifica tu respuesta usando la acción descrita.",
+      "expected": "El relato muestra que Jimmy abraza a Robutt. De ese gesto se puede inferir que siente afecto por él, porque el abrazo expresa cercanía.",
+      "success": "Infiere afecto a partir de la acción del abrazo como expresión de cercanía.",
+      "support": "¿Qué acción realiza Jimmy al final del relato y qué sentimiento de cercanía se infiere de ese gesto?",
+      "reveal": "El relato muestra que Jimmy abraza a Robutt. De ese gesto se puede inferir que siente afecto por él, porque el abrazo expresa cercanía.",
+      "studentReveal": "El relato muestra que Jimmy abraza a Robutt. De ese gesto se puede inferir que siente afecto por él, porque el abrazo expresa cercanía."
     },
     {
       "context": "Comprobación 2",
@@ -327,28 +350,32 @@ export const LENGUA_7B_OA03_CLASE01: LessonData = {
   ],
   "practice": [
     {
-      "context": "Inicio del relato, resumido en el recurso de lectura en pantalla.",
+      "context": "Caso 1 de 2 · Ambiente lunar",
       "question": "Redacta dos oraciones para ubicar la historia y describir el ambiente con dos detalles de la lectura.",
       "expected": "Jimmy vive en una colonia de la Luna. El ambiente es rocoso y árido y afuera no hay oxígeno respirable.",
       "success": "Ubica correctamente la historia y usa dos datos del recurso en pantalla.",
       "support": "Busca en la tarjeta una palabra que describa el suelo y una pista sobre el exterior.",
       "reveal": "Jimmy vive en una colonia de la Luna. El ambiente es rocoso y árido y afuera no hay oxígeno respirable.",
-      "studentReveal": "Jimmy vive en una colonia de la Luna. El ambiente es rocoso y árido y afuera no hay oxígeno respirable."
+      "studentReveal": "Jimmy vive en una colonia de la Luna. El ambiente es rocoso y árido y afuera no hay oxígeno respirable.",
+      "studentImage": "/images/lessons/lengua_7b_oa03_clase01_ambiente_lunar.jpg",
+      "relevantParagraph": 1
     },
     {
-      "context": "Conversación familiar resumida en el recurso de lectura en pantalla.",
+      "context": "Caso 2 de 2 · Origen del conflicto",
       "question": "Explica en tres oraciones qué origina el conflicto. Incluye una evidencia para cada postura.",
       "expected": "El padre quiere traer un perro vivo y propone regalar a Robutt. Jimmy afirma que Robutt es su perro. El desacuerdo entre ambas posturas inicia el conflicto.",
       "success": "Distingue ambas posturas, usa evidencia y explica el desacuerdo.",
       "support": "Identifica una idea del padre y la postura de Jimmy tal como aparecen en el recurso. No necesitas copiar una cita literal.",
       "reveal": "El padre quiere traer un perro vivo y propone regalar a Robutt. Jimmy afirma que Robutt es su perro. El desacuerdo entre ambas posturas inicia el conflicto.",
-      "studentReveal": "El padre quiere traer un perro vivo y propone regalar a Robutt. Jimmy afirma que Robutt es su perro. El desacuerdo entre ambas posturas inicia el conflicto."
+      "studentReveal": "El padre quiere traer un perro vivo y propone regalar a Robutt. Jimmy afirma que Robutt es su perro. El desacuerdo entre ambas posturas inicia el conflicto.",
+      "studentImage": "/images/lessons/lengua_7b_oa03_clase01_jimmy_padre_desacuerdo.jpg",
+      "relevantParagraph": 3
     }
   ],
   "mini": [
     {
       "id": "q1",
-      "q": "¿Dónde ocurre la historia y qué descripción coincide con el texto?",
+      "q": "¿Dónde ocurre la historia y qué descripción coincide con la lectura en pantalla?",
       "options": [
         "A. En una colonia lunar con aire respirable y vegetación abundante.",
         "B. En un asentamiento terrestre rocoso donde los personajes no necesitan traje.",
@@ -394,7 +421,7 @@ export const LENGUA_7B_OA03_CLASE01: LessonData = {
         "Opción con andamiaje C"
       ],
       "correct": "Opción con andamiaje A",
-      "correctText": "¡Excelente! Lograste resolver el reactivo con el andamiaje del texto.",
+      "correctText": "¡Excelente! Lograste resolver el reactivo con el apoyo de la lectura.",
       "fixText": "Vuelve a revisar la lectura en pantalla para consolidar el aprendizaje."
     },
     {
@@ -407,7 +434,7 @@ export const LENGUA_7B_OA03_CLASE01: LessonData = {
         "Opción con andamiaje C"
       ],
       "correct": "Opción con andamiaje A",
-      "correctText": "¡Excelente! Lograste resolver el reactivo con el andamiaje del texto.",
+      "correctText": "¡Excelente! Lograste resolver el reactivo con el apoyo de la lectura.",
       "fixText": "Vuelve a revisar la lectura en pantalla para consolidar el aprendizaje."
     },
     {
@@ -420,22 +447,22 @@ export const LENGUA_7B_OA03_CLASE01: LessonData = {
         "Opción con andamiaje C"
       ],
       "correct": "Opción con andamiaje A",
-      "correctText": "¡Excelente! Lograste resolver el reactivo con el andamiaje del texto.",
+      "correctText": "¡Excelente! Lograste resolver el reactivo con el apoyo de la lectura.",
       "fixText": "Vuelve a revisar la lectura en pantalla para consolidar el aprendizaje."
     }
   ],
   "summaryIdeas": [
     [
       "Idea clave",
-      "**Ambiente narrativo:** se describe con detalles que aparecen en el texto."
+      "Ambiente narrativo: se describe con detalles que aparecen en el relato."
     ],
     [
       "Idea clave",
-      "**Personajes y acciones:** ayudan a comprender sus relaciones y cómo avanza el relato."
+      "Personajes y acciones: ayudan a comprender sus relaciones y cómo avanza el relato."
     ],
     [
       "Idea clave",
-      "**Conflicto:** se reconoce al comparar lo que los personajes quieren o deciden hacer."
+      "Conflicto: se reconoce al comparar lo que los personajes quieren o deciden hacer."
     ]
   ],
   "paso8_cierre": {

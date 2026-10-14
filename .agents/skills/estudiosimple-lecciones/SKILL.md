@@ -105,52 +105,63 @@ Las directivas están estrictamente ordenadas por ámbito de aplicación en los 
    - **Historia, Geografía y Cs. Sociales:** [profiles/asignaturas/historia_geografia.md](profiles/asignaturas/historia_geografia.md) (Pensamiento histórico, erradicación de jerga matemática, subtítulos en 48 pt).
    - **Inglés (EFL):** [profiles/asignaturas/ingles.md](profiles/asignaturas/ingles.md) (Enfoque comunicativo funcional, subtítulos en 48 pt).
 
-4. **Alcance por OA Específico:**
-   - Alineación obligatoria con `TEMARIOS EELL/` y el texto escolar respectivo.
-   - Si una fuente no está disponible en el disco local, se registra como **"no evaluable"**.
+4. **Alcance por OA Específico y Consulta a la Base Curricular:**
+   - Alineación obligatoria con `TEMARIOS EELL/`, el texto escolar respectivo y la base curricular local:  
+     `INSUMOS/BASE_CURRICULAR/EstudioSimple_Base_Curricular_7B_4Asignaturas_v1.json`.
+   - Consulta obligatoria de fragmentos, fuentes, indicadores y auditoría vinculados al OA.
+   - **Distinción entre Unidades de Contenido y Clases:** Las unidades de contenido (`C01`, `C02`, etc.) agrupan núcleos temáticos en la base; no equivalen mecánicamente a los números de clase (`CLASE 01`, etc.). Cada clase se define según la planificación vigente del proyecto.
+   - **Correspondencia Oficial de Identificadores:**
+     * Nivel: `7B` en base $\longleftrightarrow$ `110-7` en App/editor.
+     * `7B-LYL-OA03` $\longleftrightarrow$ `110-7/Lengua_Literatura/OA03`.
+     * `7B-CNA-OA01` $\longleftrightarrow$ `110-7/Ciencias_Naturales/OA01`.
+     * `7B-HIS-OA02` $\longleftrightarrow$ `110-7/Historia_Geografia/OA02`.
+     * `7B-ING-OA09` $\longleftrightarrow$ `110-7/Ingles/OA09`.
 
 ---
 
-## 4. Flujo de Trabajo Obligatorio de 12 Pasos por OA
+## 4. Secciones Obligatorias de una Lección (Modelo Universal Dual)
 
-Cada vez que se cree o revise una lección, se debe ejecutar estrictamente este protocolo:
+Cada lección construida para EstudioSimple debe implementar de forma exhaustiva y ordenada las siguientes secciones en su esquema `LessonData` y archivo Markdown:
 
-1. **Identificar:** Definir curso, asignatura, OA y verificar la existencia de fuentes oficiales aplicables.
-2. **Definir Fuente Única:** Configurar o actualizar el módulo de datos en `scripts/oaXX_data/`.
-3. **Comprobar Alineación en 5 Dimensiones:** Validar contexto, datos, pregunta, procedimiento y respuesta entre práctica, video explicativo y post-questions.
-4. **Verificar Cálculos y Notación:** Asegurar que los procedimientos matemáticos y citas sean científicamente intachables.
-5. **Articulación de Práctica:** Confirmar que la lección prepare de forma directa y genuina para la práctica interactiva posterior de la plataforma.
-6. **Cierre sin Desafío Redundante:** Asegurar que la lámina final concluya con la Regla de Oro y pase directo a la plataforma interactiva.
-7. **Reutilización Fiel de Ejercicios:** La revisión posterior al video (`postQuestions`) debe reutilizar exactamente `caso1` y `caso2` de la práctica.
-8. **Compilación Unidireccional:** Ejecutar el script `build_<asignatura>_<oa>_package.ts` para regenerar DOCX, TXT y TypeScript.
-9. **Ubicación Canónica y Timestamp:** Guardar el paquete en `LECCIONES/110-<curso>/<Asignatura>/<OA>/` con timestamp en `America/Santiago`.
-10. **Auditoría Interna Determinista:** Ejecutar `audit_coherence_engine.ts` hasta obtener 0 hallazgos (certifica únicamente la auditoría interna).
-11. **Entrega a Work:** Publicar el paquete en estado `EN_REVISION` con `"etapa_revision": "WORK_PRE_APROBACION"`.
-12. **Aprobación Humana Exclusiva:** Solo tras la revisión independiente de Work/Codex y la orden expresa de Walter por consola, transicionar a `APROBADA`.
+1. **`metadata`:** Identificación formal (`grade`, `subject`, `oaCode`, `oaTitle`, `lessonNumber`, `totalLessonsInOa`, `lessonTitle`, `durationMinutes`, `nextLessonTitle`).
+2. **`prep` (Paso 1 - Preparación del Mentor):** `adultObjective`, `routeToday`, `mentorReminder`, `reminders` (4 consejos obligatorios), `emotionalTip`.
+3. **`route` (Paso 2A - Ruta de Aprendizaje):** `blocks` (4 bloques temáticos con id, número, título, subtítulo, color), `keyQuestions` (2 preguntas clave con bajada), `dileIntro`, `dileObjective`.
+4. **`situation` & `reference` (Paso 2B - Situación Inicial y Punto de Partida):**
+   - En `situation`: `dilePrompt`, `expectedAnswer`, `socraticHint`, `emotionalTip`, y `options` con retroalimentación para respuesta correcta (`correct`), necesidad de apoyo (`needs_support`) y ausencia de respuesta (`no_answer`).
+   - En `reference`: pregunta de observación concreta y criterios de retroalimentación (`feedbackSuccess`, `feedbackSupport`).
+5. **`hook` (Paso 3 - Video Gancho y Diapositivas):**
+   - Metadatos del gancho: `title`, `dileIntro`, `hazInstruction`, `videoSrc`, `focusPoints`, `dileAfterVideo`.
+   - **14 Láminas Bimodales:** Exactamente 7 de gancho contextual + 7 de explicación formal, con `visualPrompt` (`No text drawn by AI`), overlay tipográfico y guion completo de notas al orador (`speakerNotes`).
+6. **`preQuestions` (Paso 4 - Conversación Guiada):** Items guiados socráticos posteriores al video (`context`, `question`, `expected`, `success`, `support`, `reveal`, `studentReveal`).
+7. **`formalization` (Paso 5 - Explicación e Idea Clave):** Consolidación conceptual (`title`, `concept`, `ideaClave`, `dileIntro`, `hazInstruction`, esquema o láminas).
+8. **`postQuestions` (Paso 5B - Comprobación de Formalización):** Items guiados que comprueban inmediatamente la formalización.
+9. **`practice` (Paso 6 - Práctica Conjunta y Cuaderno):** Mínimo dos casos (`caso1` y `caso2`) con identidad en 5 dimensiones articulados con el cuaderno físico.
+10. **`mini` (Paso 7 - Miniquiz de Evaluación Formativa):** Exactamente 3 preguntas de **4 alternativas (A, B, C, D)** con una respuesta correcta, distractores pedagógicos plausibles y explicación correctiva (`fixExplain`).
+11. **`recovery` (Paso 7B - Recuperación Formativa):** Reactivos de refuerzo coherentes con los errores evaluados en el miniquiz.
+12. **`summaryIdeas` & `paso8_cierre` (Paso 8 - Síntesis y Cierre):** Ideas clave de recapitulación, `preguntaSintesis`, `metacognicion`, y `celebracion` con proyección a la siguiente clase.
 
 ---
 
-## 5. Ciclo de Vida y Estados Canónicos del Manifiesto
+## 5. Procedimiento de Guardado e Incorporación al Editor
 
-En `manifest.json`, el campo `status` transita estrictamente a través de 5 estados:
+1. **Módulo TypeScript en la App:**
+   - Escribir la lección como módulo tipado en `Web Studio Simple/src/data/lessons/<asignatura>_7b_<oa>_clase<nn>.ts`.
+   - Registrar la lección en [Web Studio Simple/src/data/lessons/index.ts](Web Studio Simple/src/data/lessons/index.ts) sin generar duplicados.
+2. **Archivo Markdown y Manifiesto Canónico:**
+   - Generar el archivo `.md` de la lección en `LECCIONES/110-7/<Asignatura>/<OA>/CLASE<NN>_YYYY-MM-DD_HH-mm.md`.
+   - Actualizar el `manifest.json` del OA con `status: "EN_REVISION"`, `etapa_revision: "WORK_PRE_APROBACION"`.
+3. **Entrega de Borradores para Revisión:**
+   - La lección queda accesible inmediatamente en el reproductor/editor interactivo de la App.
+   - Dejar la copia idéntica del archivo `.md` en la ruta correspondiente para revisión de Work.
 
-```
-[BORRADOR] ──► [EN_REVISION] ──(Auditoría interna: 0 hallazgos)──► [EN_REVISION (WORK_PRE_APROBACION)]
-                     │                                                          │
-             (Si hay brechas)                                           (Auditoría Work)
-                     ▼                                                          ▼
-             [REQUIERE_AJUSTES] ◄──────────────────────────────────── [LISTA_PARA_APROBACION]
-                                                                                │
-                                                                   (Instrucción Walter en consola)
-                                                                                ▼
-                                                                           [APROBADA]
-```
+---
 
-- `BORRADOR`: En desarrollo en la fuente estructurada de datos.
-- `EN_REVISION`: Paquete compilado en proceso de verificación. Con 0 hallazgos en la auditoría interna de Antigravity, se registra `"etapa_revision": "WORK_PRE_APROBACION"`.
-- `REQUIERE_AJUSTES`: Se identificaron brechas en la auditoría interna o por Work.
-- `LISTA_PARA_APROBACION`: Declarado **únicamente después** de que Work/Codex concluye su auditoría independiente del contenido sin observaciones. Prohibido aplicar este estado de forma autónoma por Antigravity.
-- `APROBADA`: Declarado **exclusivamente por Walter** por consola tras el análisis conjunto con Work.
+## 6. Condiciones de la Tarea Actual (Entrega Inicial 4 Clases)
 
-> 🕒 **TRAZABILIDAD TEMPORAL OBLIGATORIA (FECHA Y HORA EN NOMBRE DE ARCHIVO Y CONTENIDO):**
-> Todo archivo de plan de lecciones generado o modificado (DOCX oficial y TXT de prompts para Work) DEBE incorporar obligatoriamente la fecha y hora exacta en el propio **nombre del archivo** (formato `..._YYYY-MM-DD_HH-mm.docx` y `..._YYYY-MM-DD_HH-mm.txt`, zona horaria de Chile `America/Santiago`), así como en sus portadas, cabeceras internas y `manifest.json` (`YYYY-MM-DD HH:mm [America/Santiago]`). Al generarse una nueva versión, se elimina y reemplaza el archivo antiguo por el nuevo en su carpeta canónica, dejando estrictamente el archivo más actualizado con su estampa temporal para evitar acumulación de versiones obsoletas.
+- **Alcance Específico:** Construcción de **Clase 01** para:
+  1. Lengua y Literatura: OA03 (Clase 01).
+  2. Ciencias Naturales: OA01 (Clase 01).
+  3. Historia, Geografía y Cs. Sociales: OA02 (Clase 01).
+  4. Inglés: OA09 (Clase 01).
+- **Exclusión:** Matemática queda excluida de esta entrega puntual (no constituye una restricción permanente de 7° básico).
+- **Estado Normativo:** Todas las clases quedan registradas en `EN_REVISION` (`WORK_PRE_APROBACION`). Prohibido marcar autónomamente `APROBADA`.
