@@ -38,7 +38,12 @@ import {
   EyeOff,
   Save,
   UserCheck,
-  Check
+  Check,
+  Calculator,
+  Microscope,
+  Globe,
+  Languages,
+  LucideIcon
 } from 'lucide-react';
 import { updateFamilyDetails } from '../../lib/user-repository';
 import { formatRut } from '../../lib/rut-validator';
@@ -46,6 +51,41 @@ import { Card } from '../ui/card';
 import { Badge } from '../ui/badge';
 import { Button } from '../ui/button';
 import { Progress } from '../ui/progress';
+
+const SUBJECT_CONFIG: Record<
+  string,
+  {
+    Icon: LucideIcon;
+    badgeClass: string;
+    pillClass: string;
+  }
+> = {
+  mat: {
+    Icon: Calculator,
+    badgeClass: 'bg-blue-50/50 text-blue-600 border border-blue-100/60 dark:bg-blue-950/40 dark:text-blue-400 dark:border-blue-900/40',
+    pillClass: 'bg-blue-50/70 text-blue-700 border border-blue-200/60 dark:bg-blue-950/50 dark:text-blue-300 dark:border-blue-900/50'
+  },
+  len: {
+    Icon: BookOpen,
+    badgeClass: 'bg-orange-50/50 text-orange-600 border border-orange-100/60 dark:bg-orange-950/40 dark:text-orange-400 dark:border-orange-900/40',
+    pillClass: 'bg-orange-50/70 text-orange-700 border border-orange-200/60 dark:bg-orange-950/50 dark:text-orange-300 dark:border-orange-900/50'
+  },
+  cie: {
+    Icon: Microscope,
+    badgeClass: 'bg-emerald-50/50 text-emerald-600 border border-emerald-100/60 dark:bg-emerald-950/40 dark:text-emerald-400 dark:border-emerald-900/40',
+    pillClass: 'bg-emerald-50/70 text-emerald-700 border border-emerald-200/60 dark:bg-emerald-950/50 dark:text-emerald-300 dark:border-emerald-900/50'
+  },
+  his: {
+    Icon: Globe,
+    badgeClass: 'bg-purple-50/50 text-purple-600 border border-purple-100/60 dark:bg-purple-950/40 dark:text-purple-400 dark:border-purple-900/40',
+    pillClass: 'bg-purple-50/70 text-purple-700 border border-purple-200/60 dark:bg-purple-950/50 dark:text-purple-300 dark:border-purple-900/50'
+  },
+  ing: {
+    Icon: Languages,
+    badgeClass: 'bg-teal-50/50 text-teal-600 border border-teal-100/60 dark:bg-teal-950/40 dark:text-teal-400 dark:border-teal-900/40',
+    pillClass: 'bg-teal-50/70 text-teal-700 border border-teal-200/60 dark:bg-teal-950/50 dark:text-teal-300 dark:border-teal-900/50'
+  }
+};
 
 const GRADES = ['3° Básico', '4° Básico', '5° Básico', '6° Básico', '7° Básico', '8° Básico'];
 
@@ -547,14 +587,13 @@ export const ParentDashboard: React.FC = () => {
                   const isSelected = selectedSubject.toLowerCase().includes(sub.id) || selectedSubject === sub.name;
                   const subjectOAs = getSubjectOAs(selectedGrade, sub.name);
                   const totalLessons = subjectOAs.reduce((acc, oa) => acc + oa.lessons.length, 0);
-                  const iconMap: Record<string, string> = {
-                    mat: 'calculate',
-                    len: 'auto_stories',
-                    cie: 'biotech',
-                    his: 'public',
-                    ing: 'translate'
+                  const cfg = SUBJECT_CONFIG[sub.id] || {
+                    Icon: BookOpen,
+                    badgeClass: 'bg-slate-50/50 text-slate-600 border border-slate-200/60 dark:bg-slate-900/40 dark:text-slate-400 dark:border-slate-800',
+                    pillClass: 'bg-slate-100 text-slate-700 border border-slate-200/60 dark:bg-slate-800 dark:text-slate-300'
                   };
-                  const subIcon = iconMap[sub.id] || 'school';
+                  const SubjectIcon = cfg.Icon;
+
                   return (
                     <button
                       key={sub.id}
@@ -564,46 +603,50 @@ export const ParentDashboard: React.FC = () => {
                         isSelected
                           ? isDark
                             ? 'bg-[#10223D] border-slate-700 ring-1 ring-[#12A1A4]/50 shadow-md hover:-translate-y-0.5'
-                            : 'bg-teal-50/25 border-slate-200/90 ring-1 ring-[#12A1A4]/50 shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:-translate-y-0.5'
+                            : 'bg-teal-50/20 border-slate-200/90 ring-1 ring-[#12A1A4]/50 shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:-translate-y-0.5'
                           : isDark
                           ? 'bg-[#10223D] border-[#1C3257] text-slate-400 hover:bg-[#1C3257]/60 hover:text-white hover:-translate-y-0.5'
                           : 'bg-white border-slate-200/80 text-slate-600 hover:bg-slate-50/70 hover:border-slate-300 shadow-[0_1px_2px_rgba(0,0,0,0.02)] hover:-translate-y-0.5'
                       }`}
                     >
-                      {/* Subject icon */}
+                      {/* Subject icon badge */}
                       <div
-                        className="w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs"
-                        style={{
-                          backgroundColor: isSelected ? sub.color : `${sub.color}15`,
-                          color: isSelected ? '#FFFFFF' : sub.color
-                        }}
+                        className={`w-10 h-10 sm:w-11 sm:h-11 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs ${cfg.badgeClass}`}
                       >
-                        <span className="material-symbols-outlined text-xl">{subIcon}</span>
+                        <SubjectIcon className="w-5 h-5 sm:w-5.5 sm:h-5.5" strokeWidth={1.5} />
                       </div>
 
                       {/* Subject name */}
                       <span
-                        className="font-display text-xs sm:text-sm font-bold leading-tight"
-                        style={{ color: isSelected ? (isDark ? '#FFFFFF' : sub.color) : undefined }}
+                        className={`font-display text-xs sm:text-sm font-bold leading-tight ${
+                          isSelected
+                            ? isDark
+                              ? 'text-white'
+                              : 'text-slate-900'
+                            : isDark
+                            ? 'text-slate-300'
+                            : 'text-slate-700'
+                        }`}
                       >
                         {sub.name}
                       </span>
 
                       {/* Lesson count pill */}
                       <span
-                        className="text-[10px] font-semibold px-2 py-0.5 rounded-md transition-colors duration-200"
-                        style={{
-                          backgroundColor: isSelected ? `${sub.color}20` : isDark ? '#0A192F' : '#F1F5F9',
-                          color: isSelected ? sub.color : isDark ? '#94A3B8' : '#64748B',
-                          border: isSelected ? `1px solid ${sub.color}30` : '1px solid transparent'
-                        }}
+                        className={`text-[10px] font-semibold px-2 py-0.5 rounded-md transition-colors duration-200 ${
+                          isSelected
+                            ? cfg.pillClass
+                            : isDark
+                            ? 'bg-[#0A192F] text-slate-400 border border-transparent'
+                            : 'bg-slate-100 text-slate-500 border border-transparent'
+                        }`}
                       >
                         {totalLessons} clases · {subjectOAs.length} OAs
                       </span>
 
                       {/* Active indicator dot */}
                       {isSelected && (
-                        <span className="absolute top-2.5 right-2.5 w-1.5 h-1.5 rounded-full bg-teal-500 shadow-xs animate-pulse" />
+                        <span className="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-[#12A1A4] ring-2 ring-white dark:ring-slate-900 shadow-xs" />
                       )}
                     </button>
                   );
