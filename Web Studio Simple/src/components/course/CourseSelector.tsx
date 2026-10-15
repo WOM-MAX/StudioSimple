@@ -7,13 +7,15 @@ import {
   BookOpen,
   ArrowRight,
   Shield,
-  LogOut,
   Sun,
   Moon,
   Sparkles,
   Home,
   ArrowLeft
 } from 'lucide-react';
+import { Card } from '../ui/card';
+import { Badge } from '../ui/badge';
+import { Button } from '../ui/button';
 
 interface CourseCardData {
   grade: GradeLevel;
@@ -67,7 +69,6 @@ export const CourseSelector: React.FC = () => {
     parent,
     student,
     setViewMode,
-    logout,
     themeMode,
     toggleThemeMode
   } = useApp();
@@ -89,18 +90,18 @@ export const CourseSelector: React.FC = () => {
 
   return (
     <div
-      className={`min-h-screen font-sans flex flex-col transition-colors duration-300 ${
+      className={`min-h-screen font-sans flex flex-col transition-colors duration-200 ${
         isDark
           ? 'bg-[#0A192F] text-[#F8FAFC]'
-          : 'bg-gradient-to-b from-[#EDF2F7] via-[#F8FAFC] to-[#EBF3F5] text-[#1C3257]'
+          : 'bg-[#FAFAFC] text-slate-900'
       }`}
     >
-      {/* 1. CABECERA INSTITUCIONAL */}
+      {/* 1. CABECERA INSTITUCIONAL MINIMALISTA */}
       <header
-        className={`border-b sticky top-0 z-30 px-4 sm:px-8 py-3.5 transition-colors duration-300 ${
+        className={`border-b sticky top-0 z-30 px-4 sm:px-8 py-3 transition-colors duration-200 ${
           isDark
-            ? 'bg-[#10223D] border-[#1C3257]'
-            : 'bg-white/85 backdrop-blur-md border-slate-200/90 shadow-xs'
+            ? 'bg-[#10223D]/95 backdrop-blur-md border-[#1C3257]'
+            : 'bg-white/95 backdrop-blur-md border-slate-200/80 shadow-[0_1px_2px_rgba(0,0,0,0.02)]'
         }`}
       >
         <div className="max-w-6xl mx-auto flex items-center justify-between gap-4">
@@ -109,21 +110,21 @@ export const CourseSelector: React.FC = () => {
             <button
               type="button"
               onClick={() => setViewMode('landing')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl border text-xs font-bold transition-all cursor-pointer ${
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-xs font-semibold transition-all cursor-pointer ${
                 isDark
                   ? 'bg-[#1C3257] border-[#2A4365] text-[#57d6f3] hover:bg-[#2A4365]'
-                  : 'bg-teal-50 border-teal-200 text-[#12A1A4] hover:bg-teal-100/70'
+                  : 'bg-teal-50/70 border-teal-200/70 text-[#0E8284] hover:bg-teal-100/70'
               }`}
               title="Volver a la Página de Inicio (Landing)"
             >
               <Home className="w-3.5 h-3.5" />
-              <span>Volver a la Landing</span>
+              <span>Volver a Inicio</span>
             </button>
-            <div className="w-8 h-8 rounded-xl bg-[#F8AD22] flex items-center justify-center font-black text-sm text-[#1C3257] shadow-xs">
+            <div className="w-7 h-7 rounded-lg bg-[#F8AD22] flex items-center justify-center font-black text-xs text-[#1C3257] shadow-xs">
               ES
             </div>
             <div>
-              <span className={`font-extrabold text-base tracking-tight block leading-tight ${isDark ? 'text-white' : 'text-[#1C3257]'}`}>
+              <span className={`font-display font-bold text-sm tracking-tight block leading-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
                 EstudioSimple
               </span>
               <span className="text-[10px] text-[#12A1A4] font-bold uppercase tracking-wider">
@@ -133,14 +134,14 @@ export const CourseSelector: React.FC = () => {
           </div>
 
           {/* Perfil, Modo Claro/Oscuro y Cierre de Sesión */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2.5">
             <button
               type="button"
               onClick={toggleThemeMode}
-              className={`p-2 rounded-xl border transition-all cursor-pointer ${
+              className={`p-2 rounded-lg border transition-all cursor-pointer ${
                 isDark
                   ? 'bg-[#1C3257] border-[#2A4365] text-[#F8AD22] hover:bg-[#2A4365]'
-                  : 'bg-slate-100 border-slate-200 text-[#1C3257] hover:bg-slate-200'
+                  : 'bg-slate-50 border-slate-200/80 text-slate-700 hover:bg-slate-100'
               }`}
               title={isDark ? 'Cambiar a Modo Claro' : 'Cambiar a Modo Oscuro'}
             >
@@ -148,18 +149,18 @@ export const CourseSelector: React.FC = () => {
             </button>
 
             <div className="hidden sm:flex flex-col text-right text-xs">
-              <span className={`font-bold ${isDark ? 'text-white' : 'text-[#1C3257]'}`}>
+              <span className={`font-bold ${isDark ? 'text-white' : 'text-slate-900'}`}>
                 {parent.name || 'Apoderado'}
               </span>
               <span className="text-[10px] text-slate-500">
-                Estudiante: {student.name || 'Carla'}
+                Estudiante: {student.name || 'Estudiante'}
               </span>
             </div>
 
             <button
               type="button"
               onClick={() => setViewMode('landing')}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold text-slate-700 bg-slate-200 hover:bg-slate-300 dark:bg-slate-800 dark:text-slate-200 transition-colors cursor-pointer"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 border border-slate-200/80 dark:bg-slate-800 dark:border-slate-700 dark:text-slate-200 transition-colors cursor-pointer"
               title="Volver a la Landing Oficial"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
@@ -171,66 +172,62 @@ export const CourseSelector: React.FC = () => {
 
       {/* 2. CONTENIDO PRINCIPAL */}
       <main className="flex-1 max-w-6xl mx-auto w-full p-4 sm:p-8 space-y-8">
-        <div className="text-center max-w-2xl mx-auto pt-2 space-y-2">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-teal-50 border border-teal-200/80 text-[#0E8284] text-xs font-bold uppercase tracking-wider shadow-xs">
+        <div className="text-center max-w-2xl mx-auto pt-3 space-y-2">
+          <Badge variant="teal" className="gap-1.5 px-3 py-1 text-xs">
             <Sparkles className="w-3.5 h-3.5 text-[#12A1A4]" />
             <span>Control de Acceso por Matrícula</span>
-          </div>
-          <h1 className={`text-2xl sm:text-3xl font-black tracking-tight ${isDark ? 'text-white' : 'text-[#1C3257]'}`}>
+          </Badge>
+          <h1 className={`font-display text-2xl sm:text-3xl font-extrabold tracking-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
             Selecciona tu Curso de Estudio
           </h1>
-          <p className={`text-sm leading-relaxed max-w-xl mx-auto ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
+          <p className={`text-sm leading-relaxed max-w-xl mx-auto font-normal ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
             Tu cuenta tiene acceso exclusivo a los niveles contratados en el plan de homeschooling.
             Selecciona el curso activo para acceder a la ruta de lecciones de 30 minutos.
           </p>
         </div>
 
-        {/* 3. GRILLA DE CURSOS */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* 3. GRILLA BENTO DE CURSOS (ESTILO STRIPE/LINK LIGHT MODE) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {ALL_COURSES.map((item) => {
             const isEnrolled = enrolledGrades.includes(item.grade);
 
             return (
-              <div
+              <Card
                 key={item.grade}
-                className={`rounded-3xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 relative overflow-hidden ${
+                className={`p-6 sm:p-7 flex flex-col justify-between transition-all duration-200 ${
                   isEnrolled
                     ? isDark
-                      ? 'bg-[#10223D] border-2 border-[#12A1A4] shadow-xl shadow-teal-950/20 ring-1 ring-[#12A1A4] hover:shadow-2xl hover:-translate-y-1'
-                      : 'bg-white border-2 border-[#12A1A4] shadow-xl shadow-teal-900/10 ring-4 ring-[#12A1A4]/15 hover:shadow-2xl hover:-translate-y-1'
+                      ? 'bg-[#10223D] border-teal-500/40 ring-1 ring-[#12A1A4]/30 shadow-md hover:-translate-y-0.5'
+                      : 'bg-white border-slate-200/90 ring-1 ring-[#12A1A4]/40 bg-gradient-to-b from-teal-50/20 to-white shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-md hover:border-slate-300 hover:-translate-y-0.5'
                     : isDark
-                    ? 'bg-[#0E1B30]/70 border border-[#1C3257] opacity-65 hover:opacity-80'
-                    : 'bg-white/80 backdrop-blur-xs border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 hover:bg-white'
+                    ? 'bg-[#0E1B30]/60 border-slate-800 opacity-60 hover:opacity-80'
+                    : 'bg-white/70 border-slate-200/80 opacity-70 hover:opacity-90 shadow-[0_1px_2px_rgba(0,0,0,0.02)] hover:border-slate-300'
                 }`}
               >
-                {/* Franja decorativa de acento en curso activo */}
-                {isEnrolled && (
-                  <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#12A1A4] via-[#38BDF8] to-[#F8AD22]" />
-                )}
-
                 <div className="space-y-3">
                   <div className="flex items-center justify-between gap-2">
-                    <span className="text-xs font-bold text-slate-500 bg-slate-100 px-2.5 py-0.5 rounded-md border border-slate-200/70">
+                    <span className="text-[11px] font-semibold text-slate-500 bg-slate-100/90 dark:bg-slate-800 dark:text-slate-400 px-2.5 py-0.5 rounded-md border border-slate-200/70 dark:border-slate-700">
                       {item.range}
                     </span>
                     {isEnrolled ? (
-                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black bg-teal-50 text-[#0E8284] border border-teal-200 shadow-xs">
+                      <Badge variant="teal" className="gap-1.5 px-2.5 py-1 text-xs">
                         <CheckCircle2 className="w-3.5 h-3.5 text-[#12A1A4]" />
                         <span>Curso Activo</span>
-                      </span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-teal-500 ml-0.5 animate-pulse" />
+                      </Badge>
                     ) : (
-                      <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-slate-100 text-slate-500 border border-slate-200">
+                      <Badge variant="subtle" className="gap-1 px-2.5 py-0.5 text-[11px]">
                         <Lock className="w-3 h-3 text-slate-400" />
                         <span>No Adquirido</span>
-                      </span>
+                      </Badge>
                     )}
                   </div>
 
                   <div>
-                    <h2 className={`text-xl sm:text-2xl font-black mb-1.5 tracking-tight ${
+                    <h2 className={`font-display text-xl sm:text-2xl font-bold mb-1.5 tracking-tight ${
                       isEnrolled
-                        ? isDark ? 'text-white' : 'text-[#1C3257]'
-                        : isDark ? 'text-slate-300' : 'text-slate-800'
+                        ? isDark ? 'text-white' : 'text-slate-900'
+                        : isDark ? 'text-slate-300' : 'text-slate-700'
                     }`}>
                       {item.grade}
                     </h2>
@@ -245,58 +242,58 @@ export const CourseSelector: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="pt-5 mt-4 border-t border-slate-100 dark:border-slate-800 space-y-4">
+                <div className="pt-4 mt-5 border-t border-slate-100 dark:border-slate-800/80 space-y-3.5">
                   <div className="flex items-center justify-between text-xs">
                     <span className="flex items-center gap-1.5 text-slate-600 dark:text-slate-400 font-medium">
                       <BookOpen className="w-3.5 h-3.5 text-[#12A1A4]" />
                       <span>{item.totalOas} Objetivos MINEDUC</span>
                     </span>
-                    <span className="font-bold text-xs px-2 py-0.5 rounded-md bg-amber-50 text-amber-800 border border-amber-200/80">
+                    <Badge variant="amber" className="text-[10px] px-2 py-0.5">
                       Temario EELL
-                    </span>
+                    </Badge>
                   </div>
 
                   {isEnrolled ? (
-                    <button
-                      type="button"
+                    <Button
+                      variant="teal"
                       onClick={() => handleSelectCourse(item.grade)}
-                      className="w-full py-3.5 px-5 rounded-2xl bg-gradient-to-r from-[#12A1A4] to-[#0E8284] hover:from-[#0E8284] hover:to-[#0A6D6F] text-white font-black text-xs shadow-md shadow-teal-800/20 flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+                      className="w-full text-xs font-bold py-2.5 shadow-xs flex items-center justify-center gap-2"
                     >
                       <span>Entrar al Catálogo de Clases</span>
                       <ArrowRight className="w-4 h-4" />
-                    </button>
+                    </Button>
                   ) : (
-                    <button
-                      type="button"
+                    <Button
+                      variant="subtle"
                       disabled
-                      className="w-full py-3 px-4 rounded-2xl bg-slate-100 text-slate-400 font-bold text-xs flex items-center justify-center gap-2 cursor-not-allowed border border-slate-200/60"
+                      className="w-full text-xs font-semibold py-2.5 flex items-center justify-center gap-1.5"
                     >
                       <Lock className="w-3.5 h-3.5 text-slate-400" />
                       <span>Bloqueado · No Contratado</span>
-                    </button>
+                    </Button>
                   )}
                 </div>
-              </div>
+              </Card>
             );
           })}
         </div>
 
-        {/* 4. NOTA INFORMATIVA */}
-        <div
-          className={`p-4 sm:p-5 rounded-2xl border flex items-center gap-3.5 text-xs leading-relaxed max-w-2xl mx-auto shadow-xs ${
+        {/* 4. NOTA INFORMATIVA MINIMALISTA */}
+        <Card
+          className={`p-4 sm:p-5 flex items-center gap-3.5 text-xs leading-relaxed max-w-2xl mx-auto ${
             isDark
               ? 'bg-[#10223D] border-[#1C3257] text-slate-400'
-              : 'bg-white/90 backdrop-blur-md border-slate-200/90 text-slate-600'
+              : 'bg-white border-slate-200/80 text-slate-600 shadow-[0_1px_3px_rgba(0,0,0,0.04)]'
           }`}
         >
-          <div className="p-2 rounded-xl bg-teal-50 border border-teal-200 text-[#12A1A4] shrink-0">
+          <div className="p-2 rounded-lg bg-teal-50/80 border border-teal-200/70 text-[#12A1A4] shrink-0">
             <Shield className="w-4 h-4" />
           </div>
-          <p>
+          <p className="font-normal text-slate-600 dark:text-slate-400">
             Los cursos habilitados corresponden a las asignaciones validadas por el administrador del sistema.
             Si necesitas inscribir un nivel adicional, el cambio se reflejará automáticamente tras la activación en el panel docente.
           </p>
-        </div>
+        </Card>
       </main>
     </div>
   );

@@ -42,6 +42,10 @@ import {
 } from 'lucide-react';
 import { updateFamilyDetails } from '../../lib/user-repository';
 import { formatRut } from '../../lib/rut-validator';
+import { Card } from '../ui/card';
+import { Badge } from '../ui/badge';
+import { Button } from '../ui/button';
+import { Progress } from '../ui/progress';
 
 const GRADES = ['3° Básico', '4° Básico', '5° Básico', '6° Básico', '7° Básico', '8° Básico'];
 
@@ -286,16 +290,16 @@ export const ParentDashboard: React.FC = () => {
   }, [student?.grade]);
 
   return (
-    <div className={`min-h-screen font-sans flex flex-col transition-colors duration-300 ${
+    <div className={`min-h-screen font-sans flex flex-col transition-colors duration-200 ${
       isDark
         ? 'bg-[#0A192F] text-[#F8FAFC]'
-        : 'bg-gradient-to-b from-[#EDF2F7] via-[#F8FAFC] to-[#EBF3F5] text-[#1C3257]'
+        : 'bg-[#FAFAFC] text-slate-900'
     }`}>
       {/* 1. TOP HEADER (UNIFIED & MINIMALIST WITH LIVE BREADCRUMB) */}
-      <header className={`border-b sticky top-0 z-30 px-4 sm:px-8 py-3.5 transition-colors duration-300 ${
+      <header className={`border-b sticky top-0 z-30 px-4 sm:px-8 py-3 transition-colors duration-200 ${
         isDark
-          ? 'bg-[#10223D] border-[#1C3257]'
-          : 'bg-white/85 backdrop-blur-md border-slate-200/90 shadow-xs'
+          ? 'bg-[#10223D]/95 backdrop-blur-md border-[#1C3257]'
+          : 'bg-white/95 backdrop-blur-md border-slate-200/80 shadow-[0_1px_2px_rgba(0,0,0,0.02)]'
       }`}>
         <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-4">
           {/* Brand Identity & Return to Course Selector with Live Breadcrumb */}
@@ -303,8 +307,8 @@ export const ParentDashboard: React.FC = () => {
             <button
               type="button"
               onClick={() => setViewMode('landing')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl border text-xs font-bold transition-all cursor-pointer ${
-                isDark ? 'bg-[#1C3257] border-[#2A4365] text-[#57d6f3] hover:bg-[#2A4365]' : 'bg-teal-50 border-teal-200 text-[#12A1A4] hover:bg-teal-100/70'
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-xs font-semibold transition-all cursor-pointer ${
+                isDark ? 'bg-[#1C3257] border-[#2A4365] text-[#57d6f3] hover:bg-[#2A4365]' : 'bg-teal-50/70 border-teal-200/70 text-[#0E8284] hover:bg-teal-100/70'
               }`}
               title="Volver a la Landing Page Oficial"
             >
@@ -314,8 +318,8 @@ export const ParentDashboard: React.FC = () => {
             <button
               type="button"
               onClick={() => setViewMode('courses')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl border text-xs font-bold transition-all cursor-pointer ${
-                isDark ? 'bg-[#0A192F] border-[#1C3257] text-white hover:bg-[#1C3257]' : 'bg-slate-100 border-slate-200 text-[#1C3257] hover:bg-slate-200'
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-xs font-semibold transition-all cursor-pointer ${
+                isDark ? 'bg-[#0A192F] border-[#1C3257] text-white hover:bg-[#1C3257]' : 'bg-slate-100 border-slate-200/80 text-slate-700 hover:bg-slate-200'
               }`}
               title="Volver a la Selección de Cursos"
             >
@@ -324,20 +328,18 @@ export const ParentDashboard: React.FC = () => {
             </button>
 
             <div className="flex items-center gap-2 text-xs">
-              <span className={`font-bold ${isDark ? 'text-white' : 'text-[#1C3257]'}`}>{selectedGrade}</span>
-              <span className="text-[#748093]">›</span>
+              <span className={`font-bold ${isDark ? 'text-white' : 'text-slate-900'}`}>{selectedGrade}</span>
+              <span className="text-slate-400">›</span>
               <span className="font-semibold text-[#12A1A4]">{selectedSubject}</span>
-              <span className="text-[#748093]">›</span>
-              <span className={`font-bold px-2 py-0.5 rounded-lg text-[11px] ${
-                isDark ? 'bg-[#1C3257] text-[#F8AD22]' : 'bg-[#EAF2F8] text-[#1C3257]'
-              }`}>
+              <span className="text-slate-400">›</span>
+              <Badge variant="teal" className="text-[11px] px-2 py-0.5">
                 {activeOa.code}
-              </span>
+              </Badge>
             </div>
           </div>
 
-          <div className={`flex items-center gap-2 p-1 rounded-2xl border ${
-            isDark ? 'bg-[#0A192F] border-[#1C3257]' : 'bg-slate-100/80 border-slate-200'
+          <div className={`flex items-center gap-2 p-1 rounded-xl border ${
+            isDark ? 'bg-[#0A192F] border-[#1C3257]' : 'bg-slate-50 border-slate-200/80'
           }`}>
             {/* Conmutador Multi-Estudiante de la Familia */}
             <div className="relative">
@@ -351,18 +353,18 @@ export const ParentDashboard: React.FC = () => {
                     setSelectedGrade(targetStudent.grade);
                   }
                 }}
-                className={`appearance-none font-bold text-xs py-1.5 pl-3 pr-7 rounded-xl border focus:outline-none focus:border-[#12A1A4] cursor-pointer shadow-xs ${
-                  isDark ? 'bg-[#1C3257] text-[#F8AD22] border-[#2A4365]' : 'bg-amber-50 text-[#1C3257] border-amber-200'
+                className={`appearance-none font-semibold text-xs py-1.5 pl-3 pr-7 rounded-lg border focus:outline-none focus:ring-1 focus:ring-[#12A1A4] cursor-pointer shadow-xs ${
+                  isDark ? 'bg-[#1C3257] text-[#F8AD22] border-[#2A4365]' : 'bg-amber-50/80 text-amber-900 border-amber-200/80'
                 }`}
                 title="Estudiante de la Familia Activo"
               >
                 {students.map((s) => (
-                  <option key={s.id} value={s.id} className={isDark ? 'bg-[#10223D] text-white' : 'bg-white text-[#1C3257]'}>
+                  <option key={s.id} value={s.id} className={isDark ? 'bg-[#10223D] text-white' : 'bg-white text-slate-900'}>
                     {s.avatar} {s.name} ({s.grade})
                   </option>
                 ))}
               </select>
-              <ChevronDown className="w-3.5 h-3.5 text-amber-500 absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none" />
+              <ChevronDown className="w-3.5 h-3.5 text-amber-600 absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none" />
             </div>
 
             {/* Curso */}
@@ -370,12 +372,12 @@ export const ParentDashboard: React.FC = () => {
               <select
                 value={selectedGrade}
                 onChange={(e) => setSelectedGrade(e.target.value)}
-                className={`appearance-none font-bold text-xs py-1.5 pl-3 pr-7 rounded-xl border focus:outline-none focus:border-[#12A1A4] cursor-pointer shadow-xs ${
-                  isDark ? 'bg-[#10223D] text-white border-[#1C3257]' : 'bg-white text-[#1C3257] border-slate-200'
+                className={`appearance-none font-semibold text-xs py-1.5 pl-3 pr-7 rounded-lg border focus:outline-none focus:ring-1 focus:ring-[#12A1A4] cursor-pointer shadow-xs ${
+                  isDark ? 'bg-[#10223D] text-white border-[#1C3257]' : 'bg-white text-slate-800 border-slate-200/80'
                 }`}
               >
                 {GRADES.map((g) => (
-                  <option key={g} value={g} className={isDark ? 'bg-[#10223D] text-white' : 'bg-white text-[#1C3257]'}>
+                  <option key={g} value={g} className={isDark ? 'bg-[#10223D] text-white' : 'bg-white text-slate-900'}>
                     {g}
                   </option>
                 ))}
@@ -388,12 +390,12 @@ export const ParentDashboard: React.FC = () => {
               <select
                 value={selectedSubject}
                 onChange={(e) => handleSubjectChange(e.target.value)}
-                className={`appearance-none font-bold text-xs py-1.5 pl-3 pr-7 rounded-xl border focus:outline-none focus:border-[#12A1A4] cursor-pointer shadow-xs ${
-                  isDark ? 'bg-[#10223D] text-white border-[#1C3257]' : 'bg-white text-[#1C3257] border-slate-200'
+                className={`appearance-none font-semibold text-xs py-1.5 pl-3 pr-7 rounded-lg border focus:outline-none focus:ring-1 focus:ring-[#12A1A4] cursor-pointer shadow-xs ${
+                  isDark ? 'bg-[#10223D] text-white border-[#1C3257]' : 'bg-white text-slate-800 border-slate-200/80'
                 }`}
               >
                 {OFFICIAL_SUBJECTS.map((s) => (
-                  <option key={s.id} value={s.name} className={isDark ? 'bg-[#10223D] text-white' : 'bg-white text-[#1C3257]'}>
+                  <option key={s.id} value={s.name} className={isDark ? 'bg-[#10223D] text-white' : 'bg-white text-slate-900'}>
                     {s.name}
                   </option>
                 ))}
@@ -407,10 +409,10 @@ export const ParentDashboard: React.FC = () => {
             <button
               type="button"
               onClick={toggleThemeMode}
-              className={`p-2 rounded-xl border transition-all cursor-pointer ${
+              className={`p-2 rounded-lg border transition-all cursor-pointer ${
                 isDark
                   ? 'bg-[#1C3257] border-[#2A4365] text-[#F8AD22] hover:bg-[#2A4365]'
-                  : 'bg-slate-100 border-slate-200 text-[#1C3257] hover:bg-slate-200'
+                  : 'bg-slate-50 border-slate-200/80 text-slate-700 hover:bg-slate-100'
               }`}
               title={isDark ? 'Cambiar a Modo Claro' : 'Cambiar a Modo Oscuro'}
             >
@@ -421,12 +423,12 @@ export const ParentDashboard: React.FC = () => {
             <button
               type="button"
               onClick={() => setActiveTab('settings')}
-              className={`px-2.5 py-1.5 rounded-xl border transition-all cursor-pointer flex items-center gap-1.5 text-xs font-bold ${
+              className={`px-2.5 py-1.5 rounded-lg border transition-all cursor-pointer flex items-center gap-1.5 text-xs font-semibold ${
                 activeTab === 'settings' || activeTab === 'credentials'
-                  ? 'bg-amber-500/20 border-amber-500/40 text-amber-400'
+                  ? 'bg-amber-500/15 border-amber-500/30 text-amber-600 dark:text-amber-400'
                   : isDark
                   ? 'bg-[#1C3257] border-[#2A4365] text-slate-300 hover:text-white hover:bg-[#2A4365]'
-                  : 'bg-slate-100 border-slate-200 text-[#1C3257] hover:bg-slate-200'
+                  : 'bg-slate-50 border-slate-200/80 text-slate-700 hover:bg-slate-100'
               }`}
               title="Panel de Ajustes y Credenciales"
             >
@@ -435,13 +437,13 @@ export const ParentDashboard: React.FC = () => {
             </button>
 
             <div className="hidden md:flex flex-col text-right">
-              <span className={`text-xs font-bold ${isDark ? 'text-white' : 'text-[#1C3257]'}`}>
+              <span className={`text-xs font-bold ${isDark ? 'text-white' : 'text-slate-900'}`}>
                 {parent.name || 'Apoderado'}
               </span>
               <button
                 type="button"
                 onClick={() => setActiveTab('settings')}
-                className="text-[10px] text-amber-500 hover:underline flex items-center gap-1 cursor-pointer font-bold justify-end"
+                className="text-[10px] text-amber-600 hover:underline flex items-center gap-1 cursor-pointer font-semibold justify-end"
                 title="Gestionar PIN y Datos en Ajustes"
               >
                 <KeyRound size={11} />
@@ -452,7 +454,7 @@ export const ParentDashboard: React.FC = () => {
             <button
               type="button"
               onClick={() => logout()}
-              className="p-2 rounded-xl text-slate-400 hover:text-rose-600 hover:bg-rose-50 transition-colors cursor-pointer"
+              className="p-2 rounded-lg text-slate-400 hover:text-rose-600 hover:bg-rose-50 transition-colors cursor-pointer"
               title="Cerrar Sesión"
             >
               <LogOut className="w-4 h-4" />
@@ -461,13 +463,13 @@ export const ParentDashboard: React.FC = () => {
         </div>
       </header>
 
-      {/* 2. TAB SELECTOR BAR */}
-      <div className={`border-b ${isDark ? 'bg-[#0E1C33] border-[#1C3257]' : 'bg-white/85 backdrop-blur-md border-slate-200/90 shadow-xs'}`}>
+      {/* 2. TAB SELECTOR BAR (MINIMALISTA STRIPE LIGHT MODE) */}
+      <div className={`border-b ${isDark ? 'bg-[#0E1C33] border-[#1C3257]' : 'bg-white border-slate-200/80 shadow-[0_1px_2px_rgba(0,0,0,0.02)]'}`}>
         <div className="max-w-6xl mx-auto px-4 sm:px-8 flex items-center gap-4">
           <button
             type="button"
             onClick={() => setActiveTab('lessons')}
-            className={`py-3.5 px-3 text-xs font-bold border-b-2 flex items-center gap-2 transition-all cursor-pointer ${
+            className={`py-3 px-3 text-xs font-bold border-b-2 flex items-center gap-2 transition-all cursor-pointer ${
               activeTab === 'lessons'
                 ? isDark
                   ? 'border-[#12A1A4] text-[#12A1A4]'
@@ -482,7 +484,7 @@ export const ParentDashboard: React.FC = () => {
           <button
             type="button"
             onClick={() => setActiveTab('analytics')}
-            className={`py-3.5 px-3 text-xs font-bold border-b-2 flex items-center gap-2 transition-all cursor-pointer ${
+            className={`py-3 px-3 text-xs font-bold border-b-2 flex items-center gap-2 transition-all cursor-pointer ${
               activeTab === 'analytics'
                 ? isDark
                   ? 'border-[#12A1A4] text-[#12A1A4]'
@@ -497,7 +499,7 @@ export const ParentDashboard: React.FC = () => {
           <button
             type="button"
             onClick={() => setActiveTab('settings')}
-            className={`py-3.5 px-3 text-xs font-bold border-b-2 flex items-center gap-2 transition-all cursor-pointer ${
+            className={`py-3 px-3 text-xs font-bold border-b-2 flex items-center gap-2 transition-all cursor-pointer ${
               activeTab === 'settings' || activeTab === 'credentials'
                 ? isDark
                   ? 'border-[#F8AD22] text-[#F8AD22]'
@@ -512,7 +514,7 @@ export const ParentDashboard: React.FC = () => {
           <button
             type="button"
             onClick={() => setViewMode('formal-exam')}
-            className={`py-3.5 px-3 text-xs font-bold border-b-2 border-transparent flex items-center gap-2 transition-all cursor-pointer ${
+            className={`py-3 px-3 text-xs font-bold border-b-2 border-transparent flex items-center gap-2 transition-all cursor-pointer ${
               isDark ? 'text-amber-400 hover:text-amber-300' : 'text-amber-600 hover:text-amber-700'
             }`}
             title="Abrir Simulador de Examen Acumulativo MINEDUC"
@@ -535,12 +537,12 @@ export const ParentDashboard: React.FC = () => {
                 <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
                   Asignaturas Oficiales · Temario Exámenes Libres MINEDUC
                 </span>
-                <span className="text-xs font-black text-[#12A1A4] bg-teal-50 px-2.5 py-0.5 rounded-md border border-teal-200">
+                <Badge variant="teal" className="text-xs font-bold px-2.5 py-0.5">
                   {selectedGrade}
-                </span>
+                </Badge>
               </div>
 
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3.5">
                 {OFFICIAL_SUBJECTS.map((sub) => {
                   const isSelected = selectedSubject.toLowerCase().includes(sub.id) || selectedSubject === sub.name;
                   const subjectOAs = getSubjectOAs(selectedGrade, sub.name);
@@ -558,34 +560,19 @@ export const ParentDashboard: React.FC = () => {
                       key={sub.id}
                       type="button"
                       onClick={() => handleSubjectChange(sub.name)}
-                      className={`relative rounded-2xl p-4 pt-5 pb-4 font-bold text-xs transition-all duration-300 flex flex-col items-center gap-2.5 border text-center cursor-pointer overflow-hidden group ${
+                      className={`relative rounded-xl sm:rounded-2xl p-4 font-bold text-xs transition-all duration-200 flex flex-col items-center gap-2 text-center cursor-pointer border ${
                         isSelected
                           ? isDark
-                            ? 'border-2 shadow-lg ring-1 ring-opacity-40 scale-[1.03]'
-                            : 'border-2 shadow-xl scale-[1.03]'
+                            ? 'bg-[#10223D] border-slate-700 ring-1 ring-[#12A1A4]/50 shadow-md hover:-translate-y-0.5'
+                            : 'bg-teal-50/25 border-slate-200/90 ring-1 ring-[#12A1A4]/50 shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:-translate-y-0.5'
                           : isDark
-                          ? 'bg-[#10223D] border-[#1C3257] text-slate-400 hover:bg-[#1C3257]/60 hover:text-white hover:scale-[1.02]'
-                          : 'bg-white/90 backdrop-blur-xs border-slate-200/90 text-slate-600 hover:bg-white hover:border-slate-300 hover:shadow-md hover:scale-[1.02]'
+                          ? 'bg-[#10223D] border-[#1C3257] text-slate-400 hover:bg-[#1C3257]/60 hover:text-white hover:-translate-y-0.5'
+                          : 'bg-white border-slate-200/80 text-slate-600 hover:bg-slate-50/70 hover:border-slate-300 shadow-[0_1px_2px_rgba(0,0,0,0.02)] hover:-translate-y-0.5'
                       }`}
-                      style={isSelected ? {
-                        borderColor: sub.color,
-                        backgroundColor: isDark ? `${sub.color}22` : `${sub.color}0A`,
-                        boxShadow: `0 8px 24px ${sub.color}25`,
-                        ['--tw-ring-color' as string]: `${sub.color}60`
-                      } : undefined}
                     >
-                      {/* Decorative top accent bar */}
-                      <div
-                        className="absolute top-0 left-0 right-0 h-1 rounded-t-2xl transition-opacity duration-300"
-                        style={{
-                          backgroundColor: sub.color,
-                          opacity: isSelected ? 1 : 0.15
-                        }}
-                      />
-
                       {/* Subject icon */}
                       <div
-                        className="w-11 h-11 rounded-xl flex items-center justify-center transition-all duration-300 shadow-sm"
+                        className="w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs"
                         style={{
                           backgroundColor: isSelected ? sub.color : `${sub.color}15`,
                           color: isSelected ? '#FFFFFF' : sub.color
@@ -596,7 +583,7 @@ export const ParentDashboard: React.FC = () => {
 
                       {/* Subject name */}
                       <span
-                        className="text-xs sm:text-sm font-black leading-tight"
+                        className="font-display text-xs sm:text-sm font-bold leading-tight"
                         style={{ color: isSelected ? (isDark ? '#FFFFFF' : sub.color) : undefined }}
                       >
                         {sub.name}
@@ -604,7 +591,7 @@ export const ParentDashboard: React.FC = () => {
 
                       {/* Lesson count pill */}
                       <span
-                        className="text-[10px] font-bold px-2.5 py-0.5 rounded-full transition-colors duration-300"
+                        className="text-[10px] font-semibold px-2 py-0.5 rounded-md transition-colors duration-200"
                         style={{
                           backgroundColor: isSelected ? `${sub.color}20` : isDark ? '#0A192F' : '#F1F5F9',
                           color: isSelected ? sub.color : isDark ? '#94A3B8' : '#64748B',
@@ -616,7 +603,7 @@ export const ParentDashboard: React.FC = () => {
 
                       {/* Active indicator dot */}
                       {isSelected && (
-                        <span className="absolute top-2.5 right-2.5 w-2.5 h-2.5 rounded-full bg-[#F8AD22] shadow-sm animate-pulse" />
+                        <span className="absolute top-2.5 right-2.5 w-1.5 h-1.5 rounded-full bg-teal-500 shadow-xs animate-pulse" />
                       )}
                     </button>
                   );
@@ -635,7 +622,7 @@ export const ParentDashboard: React.FC = () => {
                 </span>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
                 {currentOAs.map((oa, index) => {
                   const isSelected = index === selectedOaIndex;
                   const currentSub = OFFICIAL_SUBJECTS.find(
@@ -647,42 +634,26 @@ export const ParentDashboard: React.FC = () => {
                       key={oa.code}
                       type="button"
                       onClick={() => setSelectedOaIndex(index)}
-                      className={`relative rounded-2xl p-4 transition-all duration-300 flex flex-col items-start gap-2 text-left cursor-pointer overflow-hidden group ${
+                      className={`relative rounded-xl p-4 transition-all duration-200 flex flex-col items-start gap-2 text-left cursor-pointer border ${
                         isSelected
                           ? isDark
-                            ? 'border-2 shadow-lg'
-                            : 'border-2 shadow-lg'
+                            ? 'bg-[#10223D] border-slate-700 ring-1 ring-[#12A1A4]/40 shadow-md hover:-translate-y-0.5'
+                            : 'bg-teal-50/20 border-slate-200/90 ring-1 ring-[#12A1A4]/40 shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:-translate-y-0.5'
                           : isDark
-                          ? 'bg-[#10223D] border border-[#1C3257] hover:bg-[#1C3257]/60'
-                          : 'bg-white/90 border border-slate-200/90 hover:bg-white hover:border-slate-300 hover:shadow-md'
+                          ? 'bg-[#10223D] border-[#1C3257] text-slate-400 hover:bg-[#1C3257]/60 hover:text-white hover:-translate-y-0.5'
+                          : 'bg-white border-slate-200/80 text-slate-600 hover:bg-slate-50/60 hover:border-slate-300 shadow-[0_1px_2px_rgba(0,0,0,0.02)] hover:-translate-y-0.5'
                       }`}
-                      style={isSelected ? {
-                        borderColor: oaColor,
-                        backgroundColor: isDark ? `${oaColor}15` : `${oaColor}08`,
-                        boxShadow: `0 4px 16px ${oaColor}20`
-                      } : undefined}
                     >
-                      {/* Top accent bar */}
-                      {isSelected && (
-                        <div
-                          className="absolute top-0 left-0 right-0 h-1"
-                          style={{ backgroundColor: oaColor }}
-                        />
-                      )}
-
                       <div className="flex items-center justify-between w-full">
-                        <span
-                          className="text-[11px] font-black px-2.5 py-0.5 rounded-lg"
-                          style={{
-                            backgroundColor: isSelected ? oaColor : isDark ? '#1C3257' : '#F1F5F9',
-                            color: isSelected ? '#FFFFFF' : isDark ? '#94A3B8' : '#64748B'
-                          }}
+                        <Badge
+                          variant={isSelected ? 'teal' : 'secondary'}
+                          className="text-[11px] font-bold px-2 py-0.5"
                         >
                           {oa.code}
-                        </span>
-                        <span className={`text-[10px] font-bold ${
+                        </Badge>
+                        <span className={`text-[10px] font-semibold ${
                           isSelected
-                            ? 'text-emerald-600'
+                            ? 'text-teal-700 dark:text-teal-400'
                             : isDark ? 'text-slate-500' : 'text-slate-400'
                         }`}>
                           {oa.lessons.length} lecciones
@@ -691,16 +662,16 @@ export const ParentDashboard: React.FC = () => {
 
                       {/* Full title - no truncation */}
                       <h4
-                        className="text-xs sm:text-sm font-bold leading-snug"
+                        className="font-display text-xs sm:text-sm font-bold leading-snug"
                         style={{ color: isSelected ? (isDark ? '#FFFFFF' : oaColor) : isDark ? '#CBD5E1' : '#334155' }}
                       >
                         {oa.title}
                       </h4>
 
                       {/* Status indicator */}
-                      <span className={`text-[10px] font-bold ${
+                      <span className={`text-[10px] font-semibold ${
                         index === 0
-                          ? 'text-emerald-600'
+                          ? 'text-emerald-700 dark:text-emerald-400'
                           : isDark ? 'text-slate-500' : 'text-slate-400'
                       }`}>
                         {index === 0 ? 'En curso' : 'Pendiente'}
@@ -711,32 +682,29 @@ export const ParentDashboard: React.FC = () => {
               </div>
             </div>
 
-            {/* TARJETA HERO DEL OA ACTIVO */}
-            <div className={`rounded-3xl p-6 sm:p-8 border relative overflow-hidden transition-all ${
+            {/* TARJETA HERO DEL OA ACTIVO MINIMALISTA */}
+            <Card className={`rounded-xl sm:rounded-2xl p-6 sm:p-7 border relative overflow-hidden transition-all ${
               isDark
-                ? 'bg-[#10223D] border-[#1C3257] shadow-lg shadow-slate-950/30'
-                : 'bg-white border-slate-200/90 shadow-xl shadow-slate-200/60'
+                ? 'bg-[#10223D] border-[#1C3257] shadow-md'
+                : 'bg-white border-slate-200/80 shadow-[0_1px_3px_rgba(0,0,0,0.04)]'
             }`}>
-              {/* Franja decorativa superior de acento */}
-              <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#12A1A4] via-[#38BDF8] to-[#F8AD22]" />
-
               <div className="flex flex-wrap items-center justify-between gap-3 mb-4 border-b pb-4 border-slate-100 dark:border-slate-800">
                 <div className="flex items-center gap-2">
-                  <span className="bg-teal-50 text-[#0E8284] border border-teal-200 text-xs font-black px-3 py-1 rounded-full shadow-xs">
+                  <Badge variant="teal" className="text-xs font-bold px-2.5 py-0.5">
                     {activeOa.code}
-                  </span>
-                  <span className="text-xs font-bold text-slate-500">
+                  </Badge>
+                  <span className="text-xs font-medium text-slate-500">
                     Objetivo {selectedOaIndex + 1} de {currentOAs.length}
                   </span>
                 </div>
 
-                <div className="flex items-center gap-2 text-xs font-bold text-emerald-800 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200 shadow-xs">
+                <Badge variant="emerald" className="gap-1.5 px-2.5 py-1 text-xs">
                   <Clock className="w-3.5 h-3.5 text-emerald-600" />
                   <span>{activeOa.lessons.length} Lecciones de 30 min</span>
-                </div>
+                </Badge>
               </div>
 
-              <h1 className={`text-2xl sm:text-3xl font-black tracking-tight mb-2 ${isDark ? 'text-white' : 'text-[#1C3257]'}`}>
+              <h1 className={`font-display text-2xl sm:text-3xl font-extrabold tracking-tight mb-2 ${isDark ? 'text-white' : 'text-slate-900'}`}>
                 {activeOa.title}
               </h1>
               <p className={`text-sm leading-relaxed max-w-3xl mb-4 font-normal ${isDark ? 'text-slate-300' : 'text-slate-600'}`}>
@@ -745,32 +713,29 @@ export const ParentDashboard: React.FC = () => {
 
               <div className="flex flex-wrap items-center gap-4 text-xs text-slate-500 pt-3 border-t border-slate-100 dark:border-slate-800">
                 <div className="flex items-center gap-1.5">
-                  <Layers className="w-4 h-4 text-[#EE751C]" />
-                  <strong className="text-slate-700 dark:text-slate-300">Progresión:</strong>
+                  <Layers className="w-4 h-4 text-amber-600" />
+                  <strong className="text-slate-700 dark:text-slate-300 font-semibold">Progresión:</strong>
                   <span>{completedCount} de {totalLessons} lecciones completadas ({progressPercent}%)</span>
                 </div>
-                <div className="w-36 h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden border border-slate-200/60 dark:border-slate-700">
-                  <div
-                    className="h-full bg-[#12A1A4] transition-all duration-500"
-                    style={{ width: `${progressPercent}%` }}
-                  />
+                <div className="w-36">
+                  <Progress value={progressPercent} className="h-1.5 bg-slate-100 rounded-full" />
                 </div>
               </div>
-            </div>
+            </Card>
 
-            {/* GRILLA DE LECCIONES DEL OBJETIVO */}
+            {/* GRILLA DE LECCIONES DEL OBJETIVO (GRID 3 COLS DESKTOP ESPACIOSO) */}
             <div>
               <div className="flex items-center justify-between mb-4">
-                <h2 className={`text-base font-black flex items-center gap-2 tracking-tight ${isDark ? 'text-white' : 'text-[#1C3257]'}`}>
+                <h2 className={`font-display text-base font-bold flex items-center gap-2 tracking-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
                   <span>Lecciones del Objetivo</span>
-                  <span className="text-xs font-semibold text-slate-500">(Secuencia pedagógica de 30 min)</span>
+                  <span className="text-xs font-normal text-slate-500">(Secuencia pedagógica de 30 min)</span>
                 </h2>
-                <span className="text-xs font-bold text-[#0E8284] bg-teal-50 px-2.5 py-0.5 rounded-full border border-teal-200">
+                <Badge variant="teal" className="text-xs px-2.5 py-0.5">
                   Secuencia de {totalLessons} Fases
-                </span>
+                </Badge>
               </div>
 
-              <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ${totalLessons >= 6 ? 'xl:grid-cols-6' : 'xl:grid-cols-5'} gap-4`}>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {activeOa.lessons.map((lesson) => {
                   const injectedLesson = findInjectedLesson(
                     selectedGrade,
@@ -788,61 +753,49 @@ export const ParentDashboard: React.FC = () => {
                   const isReady = lesson.status === 'ready' || Boolean(injectedLesson);
 
                   return (
-                    <div
+                    <Card
                       key={lesson.lessonNumber}
-                      className={`rounded-3xl p-5 transition-all duration-300 flex flex-col justify-between relative overflow-hidden h-full min-h-[350px] ${
+                      className={`p-6 transition-all duration-200 flex flex-col justify-between relative overflow-hidden h-full min-h-[300px] ${
                         isCompleted
                           ? isDark
-                            ? 'bg-[#10223D] border-2 border-emerald-500 ring-1 ring-emerald-500/40 shadow-lg'
-                            : 'bg-white border-2 border-emerald-500 ring-4 ring-emerald-500/15 shadow-xl shadow-emerald-900/10 hover:shadow-2xl hover:-translate-y-1'
+                            ? 'bg-[#10223D] border-emerald-500/40 ring-1 ring-emerald-500/30 shadow-md hover:-translate-y-0.5'
+                            : 'bg-white border-slate-200/90 ring-1 ring-emerald-500/30 bg-gradient-to-b from-emerald-50/15 to-white shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-md hover:border-slate-300 hover:-translate-y-0.5'
                           : isReady
                           ? isDark
-                            ? 'bg-[#10223D] border-2 border-[#12A1A4] ring-1 ring-[#12A1A4]/40 shadow-lg'
-                            : 'bg-white border-2 border-[#12A1A4] ring-4 ring-[#12A1A4]/15 shadow-xl shadow-teal-900/10 hover:shadow-2xl hover:-translate-y-1'
+                            ? 'bg-[#10223D] border-teal-500/40 ring-1 ring-[#12A1A4]/30 shadow-md hover:-translate-y-0.5'
+                            : 'bg-white border-slate-200/90 ring-1 ring-[#12A1A4]/30 bg-gradient-to-b from-teal-50/15 to-white shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-md hover:border-slate-300 hover:-translate-y-0.5'
                           : isDark
-                          ? 'bg-[#0E1C33]/70 border border-[#1C3257] opacity-75'
-                          : 'bg-white/80 backdrop-blur-xs border border-slate-200/90 shadow-sm hover:border-slate-300 hover:bg-white hover:shadow-md'
+                          ? 'bg-[#0E1C33]/60 border-slate-800 opacity-70'
+                          : 'bg-white/80 border-slate-200/80 opacity-75 hover:opacity-90 shadow-[0_1px_2px_rgba(0,0,0,0.02)]'
                       }`}
                     >
-                      {/* Borde superior de acento */}
-                      {isCompleted ? (
-                        <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-emerald-500 to-teal-400" />
-                      ) : isReady ? (
-                        <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#12A1A4] to-[#EE751C]" />
-                      ) : null}
-
                       <div className="flex flex-col space-y-3">
                         <div className="flex items-center justify-between gap-1.5">
-                          <span className={`text-[11px] font-black uppercase tracking-wider px-2.5 py-1 rounded-lg ${
-                            isCompleted
-                              ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
-                              : isReady
-                              ? 'bg-teal-50 text-[#0E8284] border border-teal-200'
-                              : 'bg-slate-100 text-slate-500 border border-slate-200/70'
-                          }`}>
+                          <Badge
+                            variant={isCompleted ? 'emerald' : isReady ? 'teal' : 'subtle'}
+                            className="text-[11px] px-2 py-0.5"
+                          >
                             Clase {lesson.lessonNumber} de {totalLessons}
-                          </span>
-                          <span className={`text-[11px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 ${
-                            isDark ? 'bg-[#0A192F] text-slate-400' : 'bg-slate-100 text-slate-600 border border-slate-200/70'
-                          }`}>
-                            <Clock className="w-3 h-3 text-[#EE751C]" />
-                            {lesson.durationMinutes}m
-                          </span>
+                          </Badge>
+                          <Badge variant="outline" className="gap-1 text-[11px] px-2 py-0.5">
+                            <Clock className="w-3 h-3 text-amber-600" />
+                            <span>{lesson.durationMinutes}m</span>
+                          </Badge>
                         </div>
 
-                        <div className="text-[10px] font-black uppercase tracking-wider text-[#EE751C]">
+                        <div className="text-[10px] font-bold uppercase tracking-wider text-amber-700 dark:text-amber-400">
                           Fase {lesson.lessonNumber} · Secuencia 30m
                         </div>
 
-                        <h3 className={`text-sm sm:text-base font-black leading-snug tracking-tight ${
+                        <h3 className={`font-display text-base font-bold leading-snug tracking-tight ${
                           isCompleted || isReady
-                            ? isDark ? 'text-white' : 'text-[#1C3257]'
+                            ? isDark ? 'text-white' : 'text-slate-900'
                             : isDark ? 'text-slate-300' : 'text-slate-700'
                         }`}>
                           {injectedLesson ? injectedLesson.metadata.lessonTitle : lesson.title}
                         </h3>
 
-                        <p className={`text-xs leading-relaxed line-clamp-4 ${
+                        <p className={`text-xs leading-relaxed line-clamp-3 font-normal ${
                           isCompleted || isReady
                             ? isDark ? 'text-slate-300' : 'text-slate-600'
                             : isDark ? 'text-slate-500' : 'text-slate-500'
@@ -854,7 +807,7 @@ export const ParentDashboard: React.FC = () => {
                       <div className="pt-4 mt-auto border-t border-slate-100 dark:border-slate-800 space-y-2">
                         {isCompleted ? (
                           <>
-                            <div className="w-full bg-emerald-50 text-emerald-800 font-bold text-xs py-2 px-3 rounded-2xl flex items-center justify-center gap-1.5 border border-emerald-200 shadow-xs">
+                            <div className="w-full bg-emerald-50/80 text-emerald-800 font-semibold text-xs py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 border border-emerald-200/80 shadow-2xs">
                               <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                               <span>Completada</span>
                             </div>
@@ -871,7 +824,7 @@ export const ParentDashboard: React.FC = () => {
                                 }
                                 setViewMode('lesson');
                               }}
-                              className="w-full bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-[#1C3257] dark:text-slate-200 font-bold text-xs py-2.5 px-3 rounded-2xl flex items-center justify-center gap-1.5 transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer text-center border border-slate-200 dark:border-slate-700 shadow-xs"
+                              className="w-full bg-slate-50 hover:bg-slate-100 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-semibold text-xs py-2.5 px-3 rounded-lg flex items-center justify-center gap-1.5 transition-all duration-200 hover:-translate-y-0.5 active:scale-[0.99] cursor-pointer text-center border border-slate-200/80 shadow-2xs"
                             >
                               <RotateCcw className="w-3.5 h-3.5 text-[#12A1A4] shrink-0" />
                               <span>Repasar Clase (Host)</span>
@@ -891,23 +844,23 @@ export const ParentDashboard: React.FC = () => {
                               }
                               setViewMode('lesson');
                             }}
-                            className="w-full bg-gradient-to-r from-[#EE751C] to-[#E55B00] hover:from-[#E55B00] hover:to-[#CC4C00] text-white font-black text-xs py-3 px-3 rounded-2xl shadow-md shadow-orange-900/20 flex items-center justify-center gap-1.5 transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer text-center"
+                            className="w-full bg-[#EE751C] hover:bg-[#E55B00] active:scale-[0.99] text-white font-bold text-xs py-2.5 px-4 rounded-lg shadow-xs flex items-center justify-center gap-2 transition-all duration-200 hover:-translate-y-0.5 cursor-pointer text-center"
                           >
                             <Play className="w-3.5 h-3.5 fill-white shrink-0" />
                             <span>Iniciar Clase (Host)</span>
                           </button>
                         ) : (
-                          <div className={`w-full font-bold text-xs py-2.5 px-3 rounded-2xl flex items-center justify-center gap-1.5 border ${
+                          <div className={`w-full font-medium text-xs py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 border ${
                             isDark
                               ? 'bg-[#0A192F] text-slate-500 border-[#1C3257]'
-                              : 'bg-slate-100 text-slate-400 border-slate-200/70'
+                              : 'bg-slate-50 text-slate-400 border-slate-200/60'
                           }`}>
                             <Lock className="w-3.5 h-3.5 text-slate-400 shrink-0" />
                             <span>Bloqueada</span>
                           </div>
                         )}
                       </div>
-                    </div>
+                    </Card>
                   );
                 })}
               </div>
