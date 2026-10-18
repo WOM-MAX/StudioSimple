@@ -1,8 +1,8 @@
-import { LessonData } from '../../types/lesson';
+import { LessonData } from '../../../src/types/lesson';
 
 export const CIENCIAS_7B_OA01_CLASE01: LessonData = {
   "metadata": {
-    "grade": "7° básico",
+    "grade": "7° Básico",
     "subject": "Ciencias Naturales",
     "oaCode": "OA 1",
     "oaTitle": "Ciencias Naturales - OA 1",
@@ -15,9 +15,9 @@ export const CIENCIAS_7B_OA01_CLASE01: LessonData = {
   "prep": {
     "adultObjective": "Explicar que la sexualidad comprende más que el aspecto físico, identificando las cinco dimensiones que presenta el Texto Escolar y relacionándolas con los aspectos biológicos, afectivos y sociales señalados en el OA.",
     "routeToday": "Observar el esquema → distinguir sus dimensiones → relacionarlas → explicar por qué se integran.",
-    "mentorReminder": "Sigue el guion leyendo en voz alta únicamente los recuadros DILE y PREGÚNTALE. Las respuestas esperadas y criterios te indican qué debe responder el estudiante.",
+    "mentorReminder": "Hoy estudiaremos cómo se relacionan distintas dimensiones de la sexualidad. Trabajaremos con ejemplos ficticios; no es necesario contar experiencias personales.",
     "reminders": [
-      "Abre la página original impresa 116 antes de presentar el esquema.",
+      "Presenta la tabla textual de cinco dimensiones incluida en esta clase; puedes consultar también la página original impresa 116 / PDF físico 118.",
       "Explica los términos con calma y usa los ejemplos de esta lección.",
       "La página organiza el tema en cinco dimensiones: física, intelectual, social, emocional y espiritual.",
       "El OA expresa su aprendizaje mediante tres aspectos integrados: biológico, afectivo y social. Son dos marcos de organización relacionados; no reemplaces las cinco etiquetas del libro por una lista distinta."
@@ -55,140 +55,134 @@ export const CIENCIAS_7B_OA01_CLASE01: LessonData = {
         "color": "navy"
       }
     ],
-    "keyQuestions": [
-      {
-        "label": "Pregunta Clave 1",
-        "sub": "¿Qué dimensiones presenta el Texto Escolar?"
-      },
-      {
-        "label": "Pregunta Clave 2",
-        "sub": "¿Por qué una sola dimensión no explica toda la sexualidad?"
-      }
-    ],
-    "dileIntro": "Hoy estudiaremos cómo se relacionan distintas dimensiones de la sexualidad. Trabajaremos con ejemplos ficticios; no es necesario contar experiencias personales.",
-    "dileObjective": "Al terminar, podrás reconocer las cinco dimensiones del esquema y explicar cómo varios aspectos pueden estar presentes en una misma experiencia."
-  },
-  "hook": {
-    "title": "La sexualidad integra distintas dimensiones",
-    "dileIntro": "Hoy estudiaremos cómo se relacionan distintas dimensiones de la sexualidad. Trabajaremos con ejemplos ficticios; no es necesario contar experiencias personales.",
-    "hazInstruction": "Pon atención a las imágenes y conceptos clave.",
-    "dileAfterVideo": "En esta historia inventada aparecen el cuerpo, las emociones, las ideas y las relaciones. ¿Crees que una sola de esas partes explica todo lo que vive el personaje?",
-    "videoSrc": "",
-    "posterSrc": "",
-    "focusPoints": [
-      "Observa el contexto general.",
-      "Identifica la situación inicial."
-    ],
-    "slides": [
-      {
-        "slideNumber": 1,
-        "tituloMomento": "Objetivo de la lección",
-        "didacticPurpose": "Objetivo de la lección",
-        "visualPrompt": "Los dos guías ante un mapa visual de cinco caminos que confluyen, sin palabras generadas dentro de la imagen.",
-        "overlayText": "Objetivo de la lección",
-        "overlayTitle": "Objetivo de la lección",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Objetivo de la lección",
-        "speakerNotes": "Hoy verás por qué la sexualidad abarca más que el aspecto físico."
-      },
-      {
-        "slideNumber": 2,
-        "tituloMomento": "Una pregunta amplia",
-        "didacticPurpose": "Una pregunta amplia",
-        "visualPrompt": "El estudiante ficticio prepara una presentación; los guías observan con curiosidad.",
-        "overlayText": "¿Es solo algo físico?",
-        "overlayTitle": "¿Es solo algo físico?",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "¿Es solo algo físico?",
-        "speakerNotes": "Una situación cotidiana puede involucrar el cuerpo, emociones, ideas y relaciones."
-      },
-      {
-        "slideNumber": 3,
-        "tituloMomento": "Diferentes pistas",
-        "didacticPurpose": "Diferentes pistas",
-        "visualPrompt": "En torno a la escena aparecen símbolos de cuerpo, pensamiento, emoción y vínculos.",
-        "overlayText": "Observa todas las pistas",
-        "overlayTitle": "Observa todas las pistas",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Observa todas las pistas",
-        "speakerNotes": "Mira cuántos aspectos aparecen en una experiencia de una persona."
-      },
-      {
-        "slideNumber": 4,
-        "tituloMomento": "El esquema del libro",
-        "didacticPurpose": "El esquema del libro",
-        "visualPrompt": "Página original del Texto Escolar como recurso aparte; los guías leen el esquema.",
-        "overlayText": "Cinco dimensiones",
-        "overlayTitle": "Cinco dimensiones",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Cinco dimensiones",
-        "speakerNotes": "El Texto Escolar organiza la sexualidad en cinco dimensiones."
-      },
-      {
-        "slideNumber": 5,
-        "tituloMomento": "Nombrar y comprender",
-        "didacticPurpose": "Nombrar y comprender",
-        "visualPrompt": "Cinco íconos claros conectados alrededor de una figura humana abstracta y respetuosa.",
-        "overlayText": "Física · intelectual · social · emocional · espiritual",
-        "overlayTitle": "Física · intelectual · social · emocional · espiritual",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Física · intelectual · social · emocional · espiritual",
-        "speakerNotes": "Cada dimensión aporta una perspectiva; juntas ayudan a comprender a la persona."
-      },
-      {
-        "slideNumber": 6,
-        "tituloMomento": "Aspectos que se integran",
-        "didacticPurpose": "Aspectos que se integran",
-        "visualPrompt": "Tres bandas translúcidas se cruzan; los cinco íconos del libro permanecen visibles como otro esquema.",
-        "overlayText": "Biológicos · afectivos · sociales",
-        "overlayTitle": "Biológicos · afectivos · sociales",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Biológicos · afectivos · sociales",
-        "speakerNotes": "El OA destaca aspectos biológicos, afectivos y sociales que se integran."
-      },
-      {
-        "slideNumber": 7,
-        "tituloMomento": "Pregunta gancho",
-        "didacticPurpose": "Pregunta gancho",
-        "visualPrompt": "Los guías observan un esquema al que le falta una parte; escena conceptual sobria.",
-        "overlayText": "¿Qué perderíamos al mirar una sola dimensión?",
-        "overlayTitle": "¿Qué perderíamos al mirar una sola dimensión?",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "¿Qué perderíamos al mirar una sola dimensión?",
-        "speakerNotes": "Descubramos cómo explicar una visión integral con evidencia."
-      }
-    ]
+    "dileIntro": "Hoy avanzaremos en una nueva clase interactiva.",
+    "dileObjective": "Hoy estudiaremos cómo se relacionan distintas dimensiones de la sexualidad. Trabajaremos con ejemplos ficticios; no es necesario contar experiencias personales."
   },
   "situation": {
-    "dilePrompt": "En esta historia inventada aparecen el cuerpo, las emociones, las ideas y las relaciones. ¿Crees que una sola de esas partes explica todo lo que vive el personaje?",
+    "dilePrompt": "Hoy estudiaremos cómo se relacionan distintas dimensiones de la sexualidad. Trabajaremos con ejemplos ficticios; no es necesario contar experiencias personales.",
     "expectedAnswer": "Puede señalar que no; se aceptan explicaciones propias.",
     "socraticHint": "¿Qué elementos aparecen además del cuerpo?",
     "emotionalTip": "Permite que el estudiante responda usando los casos ficticios. No pidas que describa su cuerpo, identidad, relaciones, creencias ni experiencias íntimas.",
     "options": [
       {
-        "label": "Identificó los elementos centrales y fundamentó con el contexto",
+        "label": "Puede señalar que no; se aceptan explicaciones propias.",
         "kind": "correct",
-        "feedbackText": "¡Muy bien! Notaste las pistas clave del escenario inicial."
+        "feedbackText": "¡Muy bien observado!"
       },
       {
-        "label": "Mencionó detalles parciales sin conectar con la idea principal",
+        "label": "Requiere apoyo adicional",
         "kind": "needs_support",
-        "feedbackText": "Observa nuevamente y busca qué condición o suceso da inicio a la situación."
+        "feedbackText": "Revisa nuevamente la situación inicial."
       },
       {
-        "label": "No sabe qué responder o requiere apoyo inicial",
+        "label": "No sabe qué responder",
         "kind": "no_answer",
-        "feedbackText": "Leamos juntos el punto de partida y observemos los detalles destacados."
+        "feedbackText": "Leamos juntos para descubrir la pista."
       }
     ]
   },
   "reference": {
-    "dilePrompt": "Revisemos el punto de partida para encontrar evidencia.",
-    "question": "¿Qué información o evidencia entrega el punto de partida?",
-    "expectedAnswer": "Respuesta guiada por el texto o fuente.",
-    "socraticHint": "Localiza las palabras clave en la página.",
-    "feedbackSuccess": "Las encontraste todas en el esquema.",
-    "feedbackSupport": "Ya tenemos algunas. Lee las etiquetas alrededor de ‘Sexualidad humana’ y completa las que faltan."
+    "dilePrompt": "¿El esquema del libro nombra cuatro o cinco dimensiones? Di cuáles.",
+    "question": "¿Qué información entrega el punto de partida?",
+    "expectedAnswer": "Puede señalar que no; se aceptan explicaciones propias.",
+    "socraticHint": "Localiza las palabras clave.",
+    "feedbackSuccess": "¡Excelente fundamentación!",
+    "feedbackSupport": "¿Qué elementos aparecen además del cuerpo?"
+  },
+  "hook": {
+    "title": "Motivación",
+    "titulo": "Motivación",
+    "focusPoints": [],
+    "dileIntro": "Hoy estudiaremos cómo se relacionan distintas dimensiones de la sexualidad. Trabajaremos con ejemplos ficticios; no es necesario contar experiencias personales.",
+    "hazInstruction": "Observa y reflexiona con las escenas del video.",
+    "videoSrc": "",
+    "dileAfterVideo": "¿Qué observaste en esta situación inicial?",
+    "slides": [
+      {
+        "slideNumber": 1,
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Un caso / cotidiano",
+        "visualPrompt": "",
+        "overlayText": "Un caso / cotidiano",
+        "overlayTitle": "Un caso / cotidiano",
+        "overlaySubtitle": "¿Qué aspectos / aparecen?",
+        "vectorialOverlayPptx": "Un caso / cotidiano",
+        "speakerNotes": "En este caso ficticio, la estudiante prepara una presentación y conversa con un compañero de confianza. Observemos las pistas antes de explicar qué significan.",
+        "duracionSeg": 8
+      },
+      {
+        "slideNumber": 2,
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Distintas / pistas",
+        "visualPrompt": "",
+        "overlayText": "Distintas / pistas",
+        "overlayTitle": "Distintas / pistas",
+        "overlaySubtitle": "Observa sin / suponer",
+        "vectorialOverlayPptx": "Distintas / pistas",
+        "speakerNotes": "En la historia, la estudiante dice que siente nervios y piensa qué idea valora expresar. Tenemos pistas distintas, pero todavía no las clasificaremos.",
+        "duracionSeg": 8
+      },
+      {
+        "slideNumber": 3,
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Mirada / parcial",
+        "visualPrompt": "",
+        "overlayText": "Mirada / parcial",
+        "overlayTitle": "Mirada / parcial",
+        "overlaySubtitle": "¿Basta mirar / el cuerpo?",
+        "vectorialOverlayPptx": "Mirada / parcial",
+        "speakerNotes": "Si miramos únicamente el cuerpo, ¿entendemos también sus emociones y su conversación? Pensemos qué detalles quedarían fuera al observar una sola parte.",
+        "duracionSeg": 8
+      },
+      {
+        "slideNumber": 4,
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Busca / pistas",
+        "visualPrompt": "",
+        "overlayText": "Busca / pistas",
+        "overlayTitle": "Busca / pistas",
+        "overlaySubtitle": "¿Qué podemos / describir?",
+        "vectorialOverlayPptx": "Busca / pistas",
+        "speakerNotes": "Revisemos sus apuntes y lo que cuenta el relato. ¿Qué hace, qué siente y con quién conversa? Describamos esas pistas sin añadir suposiciones.",
+        "duracionSeg": 8
+      },
+      {
+        "slideNumber": 5,
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Ordena / las pistas",
+        "visualPrompt": "",
+        "overlayText": "Ordena / las pistas",
+        "overlayTitle": "Ordena / las pistas",
+        "overlaySubtitle": "¿Qué recurso puede / ayudar?",
+        "vectorialOverlayPptx": "Ordena / las pistas",
+        "speakerNotes": "Para ordenar las pistas necesitamos un criterio. ¿Qué recurso podría ayudarnos a relacionarlas con cuidado y explicar mejor la situación?",
+        "duracionSeg": 8
+      },
+      {
+        "slideNumber": 6,
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Mirada / integral",
+        "visualPrompt": "",
+        "overlayText": "Mirada / integral",
+        "overlayTitle": "Mirada / integral",
+        "overlaySubtitle": "¿Qué significa mirar / integralmente?",
+        "vectorialOverlayPptx": "Mirada / integral",
+        "speakerNotes": "¿Qué significa explicar la sexualidad de manera integral? Dejemos abierta la pregunta mientras buscamos una herramienta para reconocer y relacionar las pistas.",
+        "duracionSeg": 8
+      },
+      {
+        "slideNumber": 7,
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Pregunta / abierta",
+        "visualPrompt": "",
+        "overlayText": "Pregunta / abierta",
+        "overlayTitle": "Pregunta / abierta",
+        "overlaySubtitle": "Revisemos ahora el / esquema original",
+        "vectorialOverlayPptx": "Pregunta / abierta",
+        "speakerNotes": "Ahora consultaremos el esquema del Texto Escolar. Buscaremos una explicación que considere la situación completa.",
+        "duracionSeg": 8
+      }
+    ]
   },
   "preQuestions": [
     {
@@ -202,12 +196,12 @@ export const CIENCIAS_7B_OA01_CLASE01: LessonData = {
     },
     {
       "context": "Caso ficticio del personaje que prepara una presentación y conversa con alguien de confianza.",
-      "question": "¿Qué dimensiones aparecen cuando siente nervios, piensa qué decir y conversa con una persona cercana?",
-      "expected": "Emocional (nervios), intelectual (pensar qué decir) y social (interacción con otra persona). Puede haber más de una dimensión relacionada con un mismo hecho si lo explica.",
+      "question": "¿Qué dimensiones aparecen cuando siente nervios, reflexiona sobre una idea que valora expresar y conversa con una persona cercana?",
+      "expected": "Emocional (nervios), intelectual (reflexionar sobre una idea que valora expresar) y social (interacción con otra persona). Puede haber más de una dimensión relacionada con un mismo hecho si lo explica.",
       "success": "Señala dos dimensiones y vincula cada una con una pista.",
-      "support": "¿Qué siente? ¿Qué piensa? ¿Con quién interactúa?",
-      "reveal": "La clasificación depende de la pista: nervios corresponde a lo emocional, pensar a lo intelectual y conversar con alguien a lo social.",
-      "studentReveal": "Aparecen las dimensiones emocional, intelectual y social: siente nervios, organiza sus ideas y conversa con otra persona."
+      "support": "¿Qué siente? ¿Qué idea valora expresar? ¿Con quién interactúa?",
+      "reveal": "La clasificación depende de la pista: nervios corresponde a lo emocional, reflexionar sobre valores a lo intelectual, según la descripción de este libro y conversar con alguien a lo social.",
+      "studentReveal": "Aparecen las dimensiones emocional, intelectual y social: siente nervios, reflexiona sobre una idea que valora expresar y conversa con otra persona."
     },
     {
       "context": "Objetivo oficial y esquema del libro.",
@@ -232,80 +226,87 @@ export const CIENCIAS_7B_OA01_CLASE01: LessonData = {
     "slides": [
       {
         "slideNumber": 8,
-        "tituloMomento": "El libro organiza cinco dimensiones",
-        "didacticPurpose": "El libro organiza cinco dimensiones",
-        "visualPrompt": "Esquema original del libro en el panel de lectura; los rótulos se muestran nítidos.",
-        "overlayText": "Física · intelectual · social · emocional · espiritual",
-        "overlayTitle": "Física · intelectual · social · emocional · espiritual",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Física · intelectual · social · emocional · espiritual",
-        "speakerNotes": "En la página 116, el libro presenta cinco dimensiones. Leamos sus nombres antes de interpretar el esquema."
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Objetivo",
+        "visualPrompt": "",
+        "overlayText": "Objetivo",
+        "overlayTitle": "Objetivo",
+        "overlaySubtitle": "Comprender una / visión integral",
+        "vectorialOverlayPptx": "Objetivo",
+        "speakerNotes": "Explicar que la sexualidad comprende más que el aspecto físico, identificando las cinco dimensiones que presenta el Texto Escolar y relacionándolas con los aspectos biológicos, afectivos y sociales señalados en el OA.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 9,
-        "tituloMomento": "Dimensión física",
-        "didacticPurpose": "Dimensión física",
-        "visualPrompt": "Ícono abstracto de cuerpo y autocuidado, sin detalles íntimos.",
-        "overlayText": "Física: cuerpo y caracteres sexuales",
-        "overlayTitle": "Física: cuerpo y caracteres sexuales",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Física: cuerpo y caracteres sexuales",
-        "speakerNotes": "La dimensión física se relaciona con el cuerpo y los caracteres sexuales. Es una parte del concepto, no la totalidad."
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "El esquema",
+        "visualPrompt": "",
+        "overlayText": "El esquema",
+        "overlayTitle": "El esquema",
+        "overlaySubtitle": "Cinco dimensiones / del Texto Escolar",
+        "vectorialOverlayPptx": "El esquema",
+        "speakerNotes": "En el libro, física se refiere a caracteres sexuales primarios y secundarios; emocional, a emociones y sentimientos; social, a amistades y familia. Intelectual incluye personalidad, autoconocimiento, convicciones y valores. Espiritual considera aceptación de sí y sentido trascendente.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 10,
-        "tituloMomento": "Dimensión emocional",
-        "didacticPurpose": "Dimensión emocional",
-        "visualPrompt": "Personaje ficticio identifica nervios y alegría con expresiones cuidadas.",
-        "overlayText": "Emocional: emociones y sentimientos",
-        "overlayTitle": "Emocional: emociones y sentimientos",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Emocional: emociones y sentimientos",
-        "speakerNotes": "La dimensión emocional considera emociones y sentimientos que influyen en los actos de las personas."
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Del libro / al OA",
+        "visualPrompt": "",
+        "overlayText": "Del libro / al OA",
+        "overlayTitle": "Del libro / al OA",
+        "overlaySubtitle": "Relaciona ambos / marcos",
+        "vectorialOverlayPptx": "Del libro / al OA",
+        "speakerNotes": "El cuerpo se relaciona con lo biológico, las emociones con lo afectivo y los vínculos con lo social. Las cinco dimensiones del libro conservan sus nombres; no son equivalencias exactas.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 11,
-        "tituloMomento": "Dimensión social",
-        "didacticPurpose": "Dimensión social",
-        "visualPrompt": "Personaje conversa con amistades y familia en situaciones cotidianas.",
-        "overlayText": "Social: vínculos y contexto",
-        "overlayTitle": "Social: vínculos y contexto",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Social: vínculos y contexto",
-        "speakerNotes": "La dimensión social considera factores del entorno, como amistades y familia, que influyen en cómo se vive la sexualidad."
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Un caso / ficticio",
+        "visualPrompt": "",
+        "overlayText": "Un caso / ficticio",
+        "overlayTitle": "Un caso / ficticio",
+        "overlaySubtitle": "Nervios: / dimensión emocional",
+        "vectorialOverlayPptx": "Un caso / ficticio",
+        "speakerNotes": "Retomemos a la estudiante ficticia: prepara una presentación, siente nervios, conversa con alguien de confianza y reflexiona sobre sus valores. Los nervios son una emoción; por eso corresponden a la dimensión emocional.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 12,
-        "tituloMomento": "Intelectual y espiritual",
-        "didacticPurpose": "Intelectual y espiritual",
-        "visualPrompt": "El personaje reflexiona sobre una decisión y lo que considera importante.",
-        "overlayText": "Ideas, autoconocimiento, convicciones y valores",
-        "overlayTitle": "Ideas, autoconocimiento, convicciones y valores",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Ideas, autoconocimiento, convicciones y valores",
-        "speakerNotes": "El libro también incluye las dimensiones intelectual y espiritual, relacionadas con autoconocimiento, convicciones, valores y sentido personal."
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Valores / y vínculos",
+        "visualPrompt": "",
+        "overlayText": "Valores / y vínculos",
+        "overlayTitle": "Valores / y vínculos",
+        "overlaySubtitle": "Valores: intelectual / Conversación: social",
+        "vectorialOverlayPptx": "Valores / y vínculos",
+        "speakerNotes": "La conversación muestra un vínculo: dimensión social. Reflexionar sobre valores corresponde a intelectual según este esquema. Así, identificamos tres pistas y justificamos cada relación, sin atribuir otras dimensiones que el caso no demuestra.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 13,
-        "tituloMomento": "Integración",
-        "didacticPurpose": "Integración",
-        "visualPrompt": "Cinco caminos conectados en una misma escena ficticia.",
-        "overlayText": "Una experiencia puede reunir varias dimensiones",
-        "overlayTitle": "Una experiencia puede reunir varias dimensiones",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Una experiencia puede reunir varias dimensiones",
-        "speakerNotes": "El OA reúne aspectos biológicos, afectivos y sociales. El libro presenta cinco dimensiones. Podemos relacionar los esquemas sin confundir sus etiquetas."
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "No es solo / física",
+        "visualPrompt": "",
+        "overlayText": "No es solo / física",
+        "overlayTitle": "No es solo / física",
+        "overlaySubtitle": "Lo físico no explica / todas las pistas",
+        "vectorialOverlayPptx": "No es solo / física",
+        "speakerNotes": "Decir que esta experiencia es solo física omite sus emociones, vínculos y valores. Esas pistas justifican una explicación integral.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 14,
-        "tituloMomento": "Idea clave",
-        "didacticPurpose": "Idea clave",
-        "visualPrompt": "Los dos guías completan el mapa conceptual y resaltan sus conexiones.",
-        "overlayText": "Integral significa considerar varias dimensiones",
-        "overlayTitle": "Integral significa considerar varias dimensiones",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Integral significa considerar varias dimensiones",
-        "speakerNotes": "Una explicación integral considera más de una dimensión y reconoce cómo se relacionan en la vida de las personas."
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Una visión / integral",
+        "visualPrompt": "",
+        "overlayText": "Una visión / integral",
+        "overlayTitle": "Una visión / integral",
+        "overlaySubtitle": "Relaciona las pistas / y justifica",
+        "vectorialOverlayPptx": "Una visión / integral",
+        "speakerNotes": "Una explicación integral relaciona dimensiones con pistas del caso. En la práctica leeremos el esquema original y justificaremos nuestras asociaciones.",
+        "duracionSeg": 8
       }
     ]
   },
@@ -324,29 +325,38 @@ export const CIENCIAS_7B_OA01_CLASE01: LessonData = {
       "question": "¿Por qué una experiencia puede relacionarse con más de una dimensión?",
       "expected": "Porque una persona puede sentir, pensar, relacionarse y vivir aspectos corporales en una misma situación; las dimensiones se conectan.",
       "success": "Respuesta precisa y fundamentada",
-      "support": "Revisa la relación entre los elementos",
+      "support": "Revisa el concepto clave expuesto",
       "reveal": "Porque una persona puede sentir, pensar, relacionarse y vivir aspectos corporales en una misma situación; las dimensiones se conectan.",
       "studentReveal": "Porque una persona puede sentir, pensar, relacionarse y vivir aspectos corporales en una misma situación; las dimensiones se conectan."
     }
   ],
   "practice": [
     {
-      "context": "Texto Escolar, página impresa 116.",
-      "question": "Copia los cinco nombres y escribe junto a cada uno una palabra o frase clave del esquema.",
-      "expected": "Física–cuerpo; intelectual–personalidad/autoconocimiento; social–amigos/familia; emocional–sentimientos; espiritual–aceptación/sentido personal.",
+      "context": "Texto Escolar, página impresa 116.\n- **Datos:** El libro presenta cinco dimensiones y una breve descripción de cada una.",
+      "question": "“Copia los cinco nombres y escribe junto a cada uno una palabra o frase clave del esquema.”",
+      "expected": "Física–cuerpo; intelectual–personalidad/autoconocimiento/convicciones/valores; social–amigos/familia; emocional–sentimientos; espiritual–aceptación de sí/sentido trascendente, respetando las etiquetas impresas en el esquema original.",
       "success": "Las cinco categorías son correctas y cada frase representa la descripción de la página.",
-      "support": "Usar los cinco íconos interactivos como guía.",
-      "reveal": "Física–cuerpo; intelectual–personalidad/autoconocimiento; social–amigos/familia; emocional–sentimientos; espiritual–aceptación/sentido personal.",
-      "studentReveal": "Física–cuerpo; intelectual–personalidad/autoconocimiento; social–amigos/familia; emocional–sentimientos; espiritual–aceptación/sentido personal."
+      "support": "Usar las cinco filas de la tabla textual de dimensiones incluida en esta clase. Los íconos son opcionales; no dependen de un recurso de cuatro categorías.",
+      "reveal": "Física–cuerpo; intelectual–personalidad/autoconocimiento/convicciones/valores; social–amigos/familia; emocional–sentimientos; espiritual–aceptación de sí/sentido trascendente, respetando las etiquetas impresas en el esquema original.",
+      "studentReveal": "Física–cuerpo; intelectual–personalidad/autoconocimiento/convicciones/valores; social–amigos/familia; emocional–sentimientos; espiritual–aceptación de sí/sentido trascendente, respetando las etiquetas impresas en el esquema original."
     },
     {
-      "context": "Una estudiante ficticia prepara una presentación, se siente nerviosa, conversa con su hermana y reflexiona sobre sus valores.",
-      "question": "Identifica tres dimensiones presentes y explica qué pista corresponde a cada una.",
-      "expected": "Emocional (nervios), social (conversación) e intelectual (reflexión sobre ideas y valores). La dimensión espiritual se reconoce en la página por autoconocimiento, aceptación de sí y sentido personal; no se infiere solo por nombrar valores.",
+      "context": "Una estudiante ficticia prepara una presentación, se siente nerviosa, conversa con su hermana y reflexiona sobre sus valores.\n- **Datos:** Hay emociones, interacción social, ideas y reflexión personal.",
+      "question": "“Identifica tres dimensiones presentes y explica qué pista corresponde a cada una.”",
+      "expected": "Emocional (nervios), social (conversación) e intelectual (reflexión sobre valores). Las etiquetas y descripciones de intelectual y espiritual se verifican directamente en el esquema original; aceptar una asociación justificada sin inferirla solo por una palabra aislada.",
       "success": "Relaciona pistas concretas con dimensiones correctamente.",
       "support": "Preguntar: “¿Qué siente? ¿Con quién interactúa? ¿Qué piensa o valora?",
-      "reveal": "Emocional (nervios), social (conversación) e intelectual (reflexión sobre ideas y valores). La dimensión espiritual se reconoce en la página por autoconocimiento, aceptación de sí y sentido personal; no se infiere solo por nombrar valores.",
-      "studentReveal": "Emocional (nervios), social (conversación) e intelectual (reflexión sobre ideas y valores). La dimensión espiritual se reconoce en la página por autoconocimiento, aceptación de sí y sentido personal; no se infiere solo por nombrar valores."
+      "reveal": "Emocional (nervios), social (conversación) e intelectual (reflexión sobre valores). Las etiquetas y descripciones de intelectual y espiritual se verifican directamente en el esquema original; aceptar una asociación justificada sin inferirla solo por una palabra aislada.",
+      "studentReveal": "Emocional (nervios), social (conversación) e intelectual (reflexión sobre valores). Las etiquetas y descripciones de intelectual y espiritual se verifican directamente en el esquema original; aceptar una asociación justificada sin inferirla solo por una palabra aislada."
+    },
+    {
+      "context": "Caso ficticio nuevo: Luz participa en un taller. Siente alegría al colaborar, conversa con sus compañeros y decide expresar una convicción que considera importante. El caso no describe cambios corporales ni una búsqueda de sentido trascendente.",
+      "question": "Identifica tres dimensiones que tengan una pista explícita y explica por qué no corresponde forzar las cinco en este caso. Después nombra las cinco del esquema, diferenciando el esquema completo de las pistas del caso.",
+      "expected": "Emocional: alegría; social: conversación; intelectual: convicción. El esquema completo añade física y espiritual, pero el caso no aporta pistas suficientes para esas dos. Una mirada integral relaciona dimensiones sin inventar evidencias.",
+      "success": "Aplica el criterio de la clase de manera autónoma en un recurso nuevo",
+      "support": "Comprobar cada elemento pedido y su evidencia; aceptar formulaciones equivalentes. Si falta una relación, pedir que señale la pista y explique qué demuestra; después ofrecer el modelo y un nuevo intento. Registrar respuesta, apoyos y criterio por reforzar.",
+      "reveal": "Emocional: alegría; social: conversación; intelectual: convicción. El esquema completo añade física y espiritual, pero el caso no aporta pistas suficientes para esas dos. Una mirada integral relaciona dimensiones sin inventar evidencias.",
+      "studentReveal": "Emocional: alegría; social: conversación; intelectual: convicción. El esquema completo añade física y espiritual, pero el caso no aporta pistas suficientes para esas dos. Una mirada integral relaciona dimensiones sin inventar evidencias."
     }
   ],
   "mini": [
@@ -389,43 +399,43 @@ export const CIENCIAS_7B_OA01_CLASE01: LessonData = {
   ],
   "recovery": [
     {
-      "title": "Recuperación Reactivo 1",
-      "explain": "**Si necesita apoyo en el reactivo 1:** Abrir página 116 y recorrer las cinco etiquetas; después seleccionar la lista que coincide.",
-      "q": "Paso guiado de recuperación para el Reactivo 1",
-      "options": [
-        "Opción con andamiaje A",
-        "Opción con andamiaje B",
-        "Opción con andamiaje C"
-      ],
-      "correct": "Opción con andamiaje A",
-      "correctText": "¡Excelente! Lograste resolver el reactivo con el andamiaje del texto.",
-      "fixText": "Vuelve a revisar la página de referencia para consolidar el aprendizaje."
+      "title": "Nueva práctica para el reactivo 1",
+      "explain": "Revisa los conceptos clave del reactivo 1.",
+      "q": "Escribe las cinco etiquetas del esquema sin sustituirlas por los tres aspectos del OA.",
+      "kind": "open_response",
+      "options": [],
+      "correct": "",
+      "correctText": "Física, intelectual, social, emocional y espiritual. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
+      "fixText": "Buscar estas expresiones del recurso nuevo: «Física»; «intelectual»; «social»; «emocional». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
+      "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
+      "resource": "Caso nuevo de recuperación: Noa siente entusiasmo, conversa con su familia y reflexiona sobre sus convicciones. El esquema de consulta nombra física, intelectual, social, emocional y espiritual.",
+      "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
     },
     {
-      "title": "Recuperación Reactivo 2",
-      "explain": "**Si necesita apoyo en el reactivo 2:** Clasificar cuatro tarjetas: cuerpo, sentimientos, vínculos e ideas; explicar por qué la primera no basta.",
-      "q": "Paso guiado de recuperación para el Reactivo 2",
-      "options": [
-        "Opción con andamiaje A",
-        "Opción con andamiaje B",
-        "Opción con andamiaje C"
-      ],
-      "correct": "Opción con andamiaje A",
-      "correctText": "¡Excelente! Lograste resolver el reactivo con el andamiaje del texto.",
-      "fixText": "Vuelve a revisar la página de referencia para consolidar el aprendizaje."
+      "title": "Nueva práctica para el reactivo 2",
+      "explain": "Revisa los conceptos clave del reactivo 2.",
+      "q": "Explica qué quedaría sin analizar si solo miráramos el cuerpo en este caso.",
+      "kind": "open_response",
+      "options": [],
+      "correct": "",
+      "correctText": "Quedarían fuera el entusiasmo, la conversación y la reflexión sobre convicciones; corresponden a dimensiones emocional, social e intelectual. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
+      "fixText": "Buscar estas expresiones del recurso nuevo: «entusiasmo»; «convicciones»; «emocional»; «social». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
+      "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
+      "resource": "Caso nuevo de recuperación: Noa siente entusiasmo, conversa con su familia y reflexiona sobre sus convicciones. El esquema de consulta nombra física, intelectual, social, emocional y espiritual.",
+      "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
     },
     {
-      "title": "Recuperación Reactivo 3",
-      "explain": "**Si necesita apoyo en el reactivo 3:** Volver a la definición del libro y buscar las palabras “amigos” y “familia”; elegir la dimensión que las incluye.",
-      "q": "Paso guiado de recuperación para el Reactivo 3",
-      "options": [
-        "Opción con andamiaje A",
-        "Opción con andamiaje B",
-        "Opción con andamiaje C"
-      ],
-      "correct": "Opción con andamiaje A",
-      "correctText": "¡Excelente! Lograste resolver el reactivo con el andamiaje del texto.",
-      "fixText": "Vuelve a revisar la página de referencia para consolidar el aprendizaje."
+      "title": "Nueva práctica para el reactivo 3",
+      "explain": "Revisa los conceptos clave del reactivo 3.",
+      "q": "¿Qué pista permite reconocer la dimensión social y cuál corresponde a la intelectual?",
+      "kind": "open_response",
+      "options": [],
+      "correct": "",
+      "correctText": "La conversación con la familia es social; la reflexión sobre convicciones es intelectual. No basta la palabra pensar por sí sola. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
+      "fixText": "Buscar estas expresiones del recurso nuevo: «familia»; «social»; «convicciones»; «intelectual». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
+      "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
+      "resource": "Caso nuevo de recuperación: Noa siente entusiasmo, conversa con su familia y reflexiona sobre sus convicciones. El esquema de consulta nombra física, intelectual, social, emocional y espiritual.",
+      "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
     }
   ],
   "summaryIdeas": [
@@ -442,18 +452,18 @@ export const CIENCIAS_7B_OA01_CLASE01: LessonData = {
       "**Visión integral:** una situación puede implicar varias dimensiones; mirar solo el cuerpo deja fuera otros aspectos."
     ]
   ],
-  "closure": {
-    "congratulations": "¡Buen trabajo! Reconociste distintas dimensiones y explicaste por qué se relacionan.",
-    "nextClassPreview": "En la próxima clase estudiaremos los cambios físicos y emocionales durante la pubertad con información del texto."
-  },
-  "paso8_cierre": {
-    "preguntaSintesis": "¿Qué tres dimensiones usarías para analizar la situación ficticia de hoy y qué pistas te ayudarían?",
-    "metacognicion": "¿Qué te ayudó a comprender las dimensiones: los nombres, sus definiciones o el caso ficticio?",
-    "celebracion": "¡Buen trabajo! Reconociste distintas dimensiones y explicaste por qué se relacionan."
-  },
   "interactive": {
     "type": "dimensions",
     "title": "Dimensiones Integrales de la Sexualidad",
     "description": "Organizador de las cinco dimensiones biopsicosociales."
+  },
+  "closure": {
+    "congratulations": "“¡Buen trabajo! Reconociste distintas dimensiones y explicaste por qué se relacionan.”",
+    "nextClassPreview": "Próxima clase: Cambios físicos y emocionales durante la pubertad."
+  },
+  "paso8_cierre": {
+    "preguntaSintesis": "“¿Qué tres dimensiones usarías para analizar la situación ficticia de hoy y qué pistas te ayudarían?”",
+    "metacognicion": "“¿Qué te ayudó a comprender las dimensiones: los nombres, sus definiciones o el caso ficticio?”",
+    "celebracion": "“¡Buen trabajo! Reconociste distintas dimensiones y explicaste por qué se relacionan.”"
   }
 };

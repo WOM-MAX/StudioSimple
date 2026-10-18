@@ -289,9 +289,9 @@ export function buildLessonPromptText(lesson: PlayerLessonData): string {
       out += `Refuerzo ${i + 1} (${r.title}):\n`;
       out += `• Explicacion Previa: "${r.explain}"\n`;
       out += `• Pregunta: "${r.q}"\n`;
-      out += `• Opciones: ${r.options.join(' | ')}\n`;
-      out += `• Respuesta Correcta: ${r.correct}\n`;
-      out += `• Refuerzo si falla: "${r.fixText}"\n\n`;
+      out += `• Opciones: ${r.options && r.options.length > 0 ? r.options.join(' | ') : '[Práctica abierta en cuaderno]'}\n`;
+      out += `• Respuesta esperada / Criterio: ${r.correct || r.correctText || '[Evaluación formativa del mentor]'}\n`;
+      out += `• Refuerzo si falla: "${r.fixText || ''}"\n\n`;
     });
   }
 

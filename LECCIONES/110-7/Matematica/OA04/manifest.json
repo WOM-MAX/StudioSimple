@@ -1,0 +1,83 @@
+{
+  "curso": "110-7",
+  "nivel": "7° Básico",
+  "asignatura": "Matemática",
+  "oa": "OA04",
+  "titulo_oa": "Concepto y cálculo de porcentajes",
+  "fecha_generacion": "2026-10-17 16:58 [America/Santiago]",
+  "status": "EN_REVISION",
+  "etapa_revision": "WORK_PRE_APROBACION",
+  "total_lecciones": 6,
+  "lecciones_construidas": [
+    {
+      "clase": 1,
+      "archivo_ts": "Web Studio Simple/src/data/lessons/matematica_7b_oa04_clase01.ts",
+      "archivo_md": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE01.md",
+      "estado": "EN_REVISION",
+      "secciones_completas": 12,
+      "laminas_bimodales": 14,
+      "reactivos_miniquiz": 3,
+      "alternativas_por_pregunta": 4
+    },
+    {
+      "clase": 2,
+      "archivo_ts": "Web Studio Simple/src/data/lessons/matematica_7b_oa04_clase02.ts",
+      "archivo_md": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE02.md",
+      "estado": "EN_REVISION",
+      "secciones_completas": 12,
+      "laminas_bimodales": 14,
+      "reactivos_miniquiz": 3,
+      "alternativas_por_pregunta": 4
+    },
+    {
+      "clase": 3,
+      "archivo_ts": "Web Studio Simple/src/data/lessons/matematica_7b_oa04_clase03.ts",
+      "archivo_md": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE03.md",
+      "estado": "EN_REVISION",
+      "secciones_completas": 12,
+      "laminas_bimodales": 14,
+      "reactivos_miniquiz": 3,
+      "alternativas_por_pregunta": 4
+    },
+    {
+      "clase": 4,
+      "archivo_ts": "Web Studio Simple/src/data/lessons/matematica_7b_oa04_clase04.ts",
+      "archivo_md": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE04.md",
+      "estado": "EN_REVISION",
+      "secciones_completas": 12,
+      "laminas_bimodales": 14,
+      "reactivos_miniquiz": 3,
+      "alternativas_por_pregunta": 4
+    },
+    {
+      "clase": 5,
+      "archivo_ts": "Web Studio Simple/src/data/lessons/matematica_7b_oa04_clase05.ts",
+      "archivo_md": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE05.md",
+      "estado": "EN_REVISION",
+      "secciones_completas": 12,
+      "laminas_bimodales": 14,
+      "reactivos_miniquiz": 3,
+      "alternativas_por_pregunta": 4
+    },
+    {
+      "clase": 6,
+      "archivo_ts": "Web Studio Simple/src/data/lessons/matematica_7b_oa04_clase06.ts",
+      "archivo_md": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE06.md",
+      "estado": "EN_REVISION",
+      "secciones_completas": 12,
+      "laminas_bimodales": 14,
+      "reactivos_miniquiz": 3,
+      "alternativas_por_pregunta": 4
+    }
+  ],
+  "auditoria_interna": {
+    "fecha": "2026-10-17 16:58 [America/Santiago]",
+    "hallazgos": 0,
+    "resultado": "CONFORME"
+  },
+  "fuentes_utilizadas": [
+    "INSUMOS/BASE_CURRICULAR/EstudioSimple_Base_Curricular_7B_4Asignaturas_v1.json",
+    "TEMARIOS EELL 7° Básico MINEDUC",
+    "DATOS_PARA_ANTIGRAVITY_22_LECCIONES_CORREGIDAS_2026-10-17.json (Work R1)"
+  ]
+}

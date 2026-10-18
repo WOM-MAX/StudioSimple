@@ -1,0 +1,209 @@
+{
+  "metadata": {
+    "title": "Confirmación Oficial: Protocolo Permanente de Coordinación y Validación Previa Work <-> Antigravity",
+    "timestamp": "2026-10-17 20:01 [America/Santiago]",
+    "timestampKey": "2026-10-17_20-01_CL",
+    "contractVersion": "Contrato v1.0",
+    "environment": "PREPARACION_AISLADA",
+    "status": "EN_REVISION",
+    "gitHead": "71413f50255bb426b4c8a86fccd74394ce3ec0aa",
+    "instructionSource": "https://drive.google.com/file/d/1Zu8sCFtOxCkXMIIXDDmMDFx2QDTtBoHS/view?usp=drivesdk"
+  },
+  "triadVerification": {
+    "reglaDocumentada": {
+      "status": "VERIFICADA",
+      "locations": [
+        {
+          "file": "AGENTS.md",
+          "section": "## 🤝 Protocolo Permanente de Coordinación y Validación Previa Work ↔ Antigravity (Contrato v1.0)",
+          "sha256": "3386ea6bcb8ffbe32c28cda5dbaa55d1c0a8334873014353ada101f3f33862b9"
+        },
+        {
+          "file": "spec/contrato_pedagogico_lecciones_estudiosimple.md",
+          "section": "## 4. Protocolo Permanente de Coordinación y Validación Previa Work ↔ Antigravity (Contrato v1.0)",
+          "sha256": "9db6f4d251626111bae372458724a09800628e97c8f00f7f64df16b04176bab2"
+        }
+      ]
+    },
+    "controlImplementado": {
+      "status": "VERIFICADO",
+      "linterScript": "scripts/linter_contrato_pedagogico.ts",
+      "sha256": "d7585631b02f1ac542c2eb92478157d5f4073bfd914b8d5eeb56b86fdeda0753",
+      "capabilities": [
+        "Reconocimiento no bloqueante del estado PENDIENTE_VIDEO_A_CARGO_WALTER",
+        "Estructuración unificada de discrepancias en 5 categorías oficiales",
+        "Validación isomórfica de fuentes Markdown y módulos TypeScript"
+      ]
+    },
+    "pruebasRealizadas": {
+      "status": "VERIFICADAS_EXITOSAS",
+      "totalClasses": 30,
+      "aptasParaInyeccion": 30,
+      "blockingDiscrepancies": 0,
+      "linterConsoleOutput": "================================================================\n🔍 LINTER DE CONTRATO PEDAGÓGICO PRE-INYECCIÓN (WORK <-> ANTIGRAVITY)\n   Versión del Contrato: Contrato v1.0 (Oficial)\n   Ruta analizada: D:\\StudioSimple - Antigravity\\staging_preparacion_aislada\\lessons\n================================================================\n\n  ✓ [APTA PARA INYECCIÓN] ciencias_7b_oa01_clase01.ts [VIDEO: PENDIENTE_VIDEO_A_CARGO_WALTER]\n  ✓ [APTA PARA INYECCIÓN] ciencias_7b_oa01_clase02.ts [VIDEO: PENDIENTE_VIDEO_A_CARGO_WALTER]\n  ✓ [APTA PARA INYECCIÓN] ciencias_7b_oa01_clase03.ts [VIDEO: PENDIENTE_VIDEO_A_CARGO_WALTER]\n  ✓ [APTA PARA INYECCIÓN] ciencias_7b_oa01_clase04.ts [VIDEO: PENDIENTE_VIDEO_A_CARGO_WALTER]\n  ✓ [APTA PARA INYECCIÓN] ciencias_7b_oa01_clase05.ts [VIDEO: PENDIENTE_VIDEO_A_CARGO_WALTER]\n  ✓ [APTA PARA INYECCIÓN] ciencias_7b_oa01_clase06.ts [VIDEO: PENDIENTE_VIDEO_A_CARGO_WALTER]\n  ✓ [APTA PARA INYECCIÓN] historia_7b_oa02_clase01.ts [VIDEO: PENDIENTE_VIDEO_A_CARGO_WALTER]\n  ✓ [APTA PARA INYECCIÓN] historia_7b_oa02_clase02.ts [VIDEO: PENDIENTE_VIDEO_A_CARGO_WALTER]\n  ✓ [APTA PARA INYECCIÓN] historia_7b_oa02_clase03.ts [VIDEO: PENDIENTE_VIDEO_A_CARGO_WALTER]\n  ✓ [APTA PARA INYECCIÓN] historia_7b_oa02_clase04.ts [VIDEO: PENDIENTE_VIDEO_A_CARGO_WALTER]\n  ✓ [APTA PARA INYECCIÓN] historia_7b_oa02_clase05.ts [VIDEO: PENDIENTE_VIDEO_A_CARGO_WALTER]\n  ✓ [APTA PARA INYECCIÓN] historia_7b_oa02_clase06.ts [VIDEO: PENDIENTE_VIDEO_A_CARGO_WALTER]\n  ✓ [APTA PARA INYECCIÓN] ingles_7b_oa09_clase01.ts [VIDEO: PENDIENTE_VIDEO_A_CARGO_WALTER]\n  ✓ [APTA PARA INYECCIÓN] ingles_7b_oa09_clase02.ts [VIDEO: PENDIENTE_VIDEO_A_CARGO_WALTER]\n  ✓ [APTA PARA INYECCIÓN] ingles_7b_oa09_clase03.ts [VIDEO: PENDIENTE_VIDEO_A_CARGO_WALTER]\n  ✓ [APTA PARA INYECCIÓN] ingles_7b_oa09_clase04.ts [VIDEO: PENDIENTE_VIDEO_A_CARGO_WALTER]\n  ✓ [APTA PARA INYECCIÓN] ingles_7b_oa09_clase05.ts [VIDEO: PENDIENTE_VIDEO_A_CARGO_WALTER]\n  ✓ [APTA PARA INYECCIÓN] ingles_7b_oa09_clase06.ts [VIDEO: PENDIENTE_VIDEO_A_CARGO_WALTER]\n  ✓ [APTA PARA INYECCIÓN] lengua_7b_oa03_clase01.ts [VIDEO: PENDIENTE_VIDEO_A_CARGO_WALTER]\n  ✓ [APTA PARA INYECCIÓN] lengua_7b_oa03_clase02.ts [VIDEO: PENDIENTE_VIDEO_A_CARGO_WALTER]\n  ✓ [APTA PARA INYECCIÓN] lengua_7b_oa03_clase03.ts [VIDEO: PENDIENTE_VIDEO_A_CARGO_WALTER]\n  ✓ [APTA PARA INYECCIÓN] lengua_7b_oa03_clase04.ts [VIDEO: PENDIENTE_VIDEO_A_CARGO_WALTER]\n  ✓ [APTA PARA INYECCIÓN] lengua_7b_oa03_clase05.ts [VIDEO: PENDIENTE_VIDEO_A_CARGO_WALTER]\n  ✓ [APTA PARA INYECCIÓN] lengua_7b_oa03_clase06.ts [VIDEO: PENDIENTE_VIDEO_A_CARGO_WALTER]\n  ✓ [APTA PARA INYECCIÓN] matematica_7b_oa04_clase01.ts [VIDEO: PENDIENTE_VIDEO_A_CARGO_WALTER]\n  ✓ [APTA PARA INYECCIÓN] matematica_7b_oa04_clase02.ts [VIDEO: PENDIENTE_VIDEO_A_CARGO_WALTER]\n  ✓ [APTA PARA INYECCIÓN] matematica_7b_oa04_clase03.ts [VIDEO: PENDIENTE_VIDEO_A_CARGO_WALTER]\n  ✓ [APTA PARA INYECCIÓN] matematica_7b_oa04_clase04.ts [VIDEO: PENDIENTE_VIDEO_A_CARGO_WALTER]\n  ✓ [APTA PARA INYECCIÓN] matematica_7b_oa04_clase05.ts [VIDEO: PENDIENTE_VIDEO_A_CARGO_WALTER]\n  ✓ [APTA PARA INYECCIÓN] matematica_7b_oa04_clase06.ts [VIDEO: PENDIENTE_VIDEO_A_CARGO_WALTER]\n\n================================================================\n📊 BALANCE DE APTITUD TÉCNICA (CONTRATO v1.0):\n   Total lecciones auditadas: 30\n   Lecciones APTAS PARA INYECCIÓN: 30\n   Lecciones con discrepancias bloqueantes: 0\n================================================================\n\n✅ CERTIFICACIÓN EXITOSA: 100% de las clases cumplen el Contrato Pedagógico Universal.\n",
+      "auditConsoleOutput": "================================================================\n🔎 AUDITORÍA RIGUROSA DE INTEGRIDAD SEMÁNTICA Y SINCRONIZACIÓN (R01-R07)\n   Directorio objetivo: D:\\StudioSimple - Antigravity\\staging_preparacion_aislada\\lessons\n================================================================\n\n📁 Ciencias Naturales OA01 (Encontrados: 6/6)\n  ✓ ciencias_7b_oa01_clase01.ts: PASS (Hook 7 láminas, Explicación 7 láminas, Practice guiado, Claves verificadas contra Markdown)\n  ✓ ciencias_7b_oa01_clase02.ts: PASS (Hook 7 láminas, Explicación 7 láminas, Practice guiado, Claves verificadas contra Markdown)\n  ✓ ciencias_7b_oa01_clase03.ts: PASS (Hook 7 láminas, Explicación 7 láminas, Practice guiado, Claves verificadas contra Markdown)\n  ✓ ciencias_7b_oa01_clase04.ts: PASS (Hook 7 láminas, Explicación 7 láminas, Practice guiado, Claves verificadas contra Markdown)\n  ✓ ciencias_7b_oa01_clase05.ts: PASS (Hook 7 láminas, Explicación 7 láminas, Practice guiado, Claves verificadas contra Markdown)\n  ✓ ciencias_7b_oa01_clase06.ts: PASS (Hook 7 láminas, Explicación 7 láminas, Practice guiado, Claves verificadas contra Markdown)\n\n📁 Historia y Geografía OA02 (Encontrados: 6/6)\n  ✓ historia_7b_oa02_clase01.ts: PASS (Hook 7 láminas, Explicación 7 láminas, Practice guiado, Claves verificadas contra Markdown)\n  ✓ historia_7b_oa02_clase02.ts: PASS (Hook 7 láminas, Explicación 7 láminas, Practice guiado, Claves verificadas contra Markdown)\n  ✓ historia_7b_oa02_clase03.ts: PASS (Hook 7 láminas, Explicación 7 láminas, Practice guiado, Claves verificadas contra Markdown)\n  ✓ historia_7b_oa02_clase04.ts: PASS (Hook 7 láminas, Explicación 7 láminas, Practice guiado, Claves verificadas contra Markdown)\n  ✓ historia_7b_oa02_clase05.ts: PASS (Hook 7 láminas, Explicación 7 láminas, Practice guiado, Claves verificadas contra Markdown)\n  ✓ historia_7b_oa02_clase06.ts: PASS (Hook 7 láminas, Explicación 7 láminas, Practice guiado, Claves verificadas contra Markdown)\n\n📁 Inglés OA09 (Encontrados: 6/6)\n  ✓ ingles_7b_oa09_clase01.ts: PASS (Hook 7 láminas, Explicación 7 láminas, Practice guiado, Claves verificadas contra Markdown)\n  ✓ ingles_7b_oa09_clase02.ts: PASS (Hook 7 láminas, Explicación 7 láminas, Practice guiado, Claves verificadas contra Markdown)\n  ✓ ingles_7b_oa09_clase03.ts: PASS (Hook 7 láminas, Explicación 7 láminas, Practice guiado, Claves verificadas contra Markdown)\n  ✓ ingles_7b_oa09_clase04.ts: PASS (Hook 7 láminas, Explicación 7 láminas, Practice guiado, Claves verificadas contra Markdown)\n  ✓ ingles_7b_oa09_clase05.ts: PASS (Hook 7 láminas, Explicación 7 láminas, Practice guiado, Claves verificadas contra Markdown)\n  ✓ ingles_7b_oa09_clase06.ts: PASS (Hook 7 láminas, Explicación 7 láminas, Practice guiado, Claves verificadas contra Markdown)\n\n📁 Lengua y Literatura OA03 (Encontrados: 6/6)\n  ✓ lengua_7b_oa03_clase01.ts: PASS (Hook 7 láminas, Explicación 7 láminas, Practice guiado, Claves verificadas contra Markdown)\n  ✓ lengua_7b_oa03_clase02.ts: PASS (Hook 7 láminas, Explicación 7 láminas, Practice guiado, Claves verificadas contra Markdown)\n  ✓ lengua_7b_oa03_clase03.ts: PASS (Hook 7 láminas, Explicación 7 láminas, Practice guiado, Claves verificadas contra Markdown)\n  ✓ lengua_7b_oa03_clase04.ts: PASS (Hook 7 láminas, Explicación 7 láminas, Practice guiado, Claves verificadas contra Markdown)\n  ✓ lengua_7b_oa03_clase05.ts: PASS (Hook 7 láminas, Explicación 7 láminas, Practice guiado, Claves verificadas contra Markdown)\n  ✓ lengua_7b_oa03_clase06.ts: PASS (Hook 7 láminas, Explicación 7 láminas, Practice guiado, Claves verificadas contra Markdown)\n\n📁 Matemática OA04 (Encontrados: 6/6)\n  ✓ matematica_7b_oa04_clase01.ts: PASS (Hook 7 láminas, Explicación 7 láminas, Practice guiado, Claves verificadas contra Markdown)\n  ✓ matematica_7b_oa04_clase02.ts: PASS (Hook 7 láminas, Explicación 7 láminas, Practice guiado, Claves verificadas contra Markdown)\n  ✓ matematica_7b_oa04_clase03.ts: PASS (Hook 7 láminas, Explicación 7 láminas, Practice guiado, Claves verificadas contra Markdown)\n  ✓ matematica_7b_oa04_clase04.ts: PASS (Hook 7 láminas, Explicación 7 láminas, Practice guiado, Claves verificadas contra Markdown)\n  ✓ matematica_7b_oa04_clase05.ts: PASS (Hook 7 láminas, Explicación 7 láminas, Practice guiado, Claves verificadas contra Markdown)\n  ✓ matematica_7b_oa04_clase06.ts: PASS (Hook 7 láminas, Explicación 7 láminas, Practice guiado, Claves verificadas contra Markdown)\n\n================================================================\n📊 RESUMEN AUDITORÍA INTEGRIDAD:\n   Total clases auditadas: 30\n   Total defectos detectados: 0\n================================================================\n\n✅ AUDITORÍA APROBADA: Cero defectos estructurales R01-R07 en las 30 clases.\n"
+    }
+  },
+  "protectedAssets": {
+    "matematica_oa01": {
+      "status": "INMUTABLE_VERIFICADO",
+      "modifiedFilesCount": 0
+    },
+    "pptx_files": {
+      "status": "INMUTABLE_VERIFICADO",
+      "totalPptx": 14
+    }
+  },
+  "stagingLessons": [
+    {
+      "filename": "ciencias_7b_oa01_clase01.ts",
+      "sizeBytes": 31998,
+      "sha256": "cb6a86e97e4f5260e5f7c20e5601298ccd2b2d1dd2f73c95878fa94fe1de50f3"
+    },
+    {
+      "filename": "ciencias_7b_oa01_clase02.ts",
+      "sizeBytes": 27007,
+      "sha256": "28e9739d5aaae6f473055de768592028baf462b230d2f9e75d3c04d9fb24cd88"
+    },
+    {
+      "filename": "ciencias_7b_oa01_clase03.ts",
+      "sizeBytes": 26864,
+      "sha256": "7b0a464726df6df91ce1433f57c9387b8b2fd5ac567cbfd0fcb54102ba25ad81"
+    },
+    {
+      "filename": "ciencias_7b_oa01_clase04.ts",
+      "sizeBytes": 27303,
+      "sha256": "d9fa0c3c8647e3c61eeb2f1fe6dfcda284eed83563b55c6afec494ace0f7e65b"
+    },
+    {
+      "filename": "ciencias_7b_oa01_clase05.ts",
+      "sizeBytes": 27298,
+      "sha256": "cbc1e543dcc9bfef09d6b8357a4ac9617224d677ae12caf97d5f9b7bf3c96b15"
+    },
+    {
+      "filename": "ciencias_7b_oa01_clase06.ts",
+      "sizeBytes": 29220,
+      "sha256": "6f22e6cdd1d5e0c00e8c3b395a49bea67b1c1108869a5f5c69f14e59cb8371d1"
+    },
+    {
+      "filename": "historia_7b_oa02_clase01.ts",
+      "sizeBytes": 27525,
+      "sha256": "e4d66f814cd20b08de5c6bcf42042caec77ef05e232b6f8831aa1f38fa680a83"
+    },
+    {
+      "filename": "historia_7b_oa02_clase02.ts",
+      "sizeBytes": 26640,
+      "sha256": "2841c3562c6d6a1a5c6c07de01bfec6f4e5d0137bd9e72b47bdef4e9b0adea7e"
+    },
+    {
+      "filename": "historia_7b_oa02_clase03.ts",
+      "sizeBytes": 27364,
+      "sha256": "0be1cf6e43d49f31dbdec7751def6b87031e6231d350a72f7eafaff672ec5130"
+    },
+    {
+      "filename": "historia_7b_oa02_clase04.ts",
+      "sizeBytes": 26782,
+      "sha256": "2e9e3e0d855270306e6093578748b0acfc1a5c216e8afe0910bee30f96033028"
+    },
+    {
+      "filename": "historia_7b_oa02_clase05.ts",
+      "sizeBytes": 27555,
+      "sha256": "0a9e53f7e8f9c84f97c603a64e7caf2aaa9d2553317a1be9232443ef026e0ee5"
+    },
+    {
+      "filename": "historia_7b_oa02_clase06.ts",
+      "sizeBytes": 28759,
+      "sha256": "5c03aa2b60350ca79c0bc5458e44d3bfc7491b6c46229fc0fc861174eeb46ca3"
+    },
+    {
+      "filename": "ingles_7b_oa09_clase01.ts",
+      "sizeBytes": 25045,
+      "sha256": "40826414c7360089cf4d5f9a693c2599a88143b9f0e10e2b83bc6bf7916e9c69"
+    },
+    {
+      "filename": "ingles_7b_oa09_clase02.ts",
+      "sizeBytes": 25368,
+      "sha256": "bce54c85342c775f7213dd2c857c60ea043c5563748444c83b8ed33591ce2598"
+    },
+    {
+      "filename": "ingles_7b_oa09_clase03.ts",
+      "sizeBytes": 24312,
+      "sha256": "5a4054290a47fea4fe279c461b744bc047b86009807dd6d1ada8f28f363078b9"
+    },
+    {
+      "filename": "ingles_7b_oa09_clase04.ts",
+      "sizeBytes": 24426,
+      "sha256": "5e94f3c2e50e083538fc9da6e04276fcc4a89d44f25788fac4051a6226771730"
+    },
+    {
+      "filename": "ingles_7b_oa09_clase05.ts",
+      "sizeBytes": 24435,
+      "sha256": "7a9dfeb472e203368835ff04e956e40ee17f1b61ca4ee7ebd1e1a4b153499780"
+    },
+    {
+      "filename": "ingles_7b_oa09_clase06.ts",
+      "sizeBytes": 26605,
+      "sha256": "630386542201b5678016117a149818b8f9b7a5cc4c0ed73665dd8a20eca8cf6d"
+    },
+    {
+      "filename": "lengua_7b_oa03_clase01.ts",
+      "sizeBytes": 29561,
+      "sha256": "ff02eac6187a943d0c16679965687cd529d5774b46538bb577a6cd6dd14a286b"
+    },
+    {
+      "filename": "lengua_7b_oa03_clase02.ts",
+      "sizeBytes": 26591,
+      "sha256": "6cb0b05ef31ae7badec5347eb21ab78d572874dfbdeb6b1e121bc66e81c6aeb2"
+    },
+    {
+      "filename": "lengua_7b_oa03_clase03.ts",
+      "sizeBytes": 27069,
+      "sha256": "6b1839668bab8ef99efe1861ea84f6d124fe238b6dff8283b0cb1ebfec158429"
+    },
+    {
+      "filename": "lengua_7b_oa03_clase04.ts",
+      "sizeBytes": 26264,
+      "sha256": "b17e54c0f9a2ee6fef81bb85e8030cc6461f2119c1378fac7743f317c38e7549"
+    },
+    {
+      "filename": "lengua_7b_oa03_clase05.ts",
+      "sizeBytes": 27672,
+      "sha256": "2416d727a439e6545ba604b37877112ac40da6516cab1c1b654add189d6a22f6"
+    },
+    {
+      "filename": "lengua_7b_oa03_clase06.ts",
+      "sizeBytes": 28793,
+      "sha256": "1d39dabbc403a4ef4b6de3588833aba2eb3c5a9d886a2149d7b5628df31dee02"
+    },
+    {
+      "filename": "matematica_7b_oa04_clase01.ts",
+      "sizeBytes": 23114,
+      "sha256": "00aaef23542afd7ed3b256de7e0c8f720d782e1693322307014f93a35e409be6"
+    },
+    {
+      "filename": "matematica_7b_oa04_clase02.ts",
+      "sizeBytes": 22801,
+      "sha256": "07e76d7009a637c3bd06cba707e0608ec74b3f181f1ede51fe7f366ffc291a66"
+    },
+    {
+      "filename": "matematica_7b_oa04_clase03.ts",
+      "sizeBytes": 22310,
+      "sha256": "6ba6ea57652840b8380a967b14e9c19e78c80c61dddccab21dc1b7a255700efd"
+    },
+    {
+      "filename": "matematica_7b_oa04_clase04.ts",
+      "sizeBytes": 23142,
+      "sha256": "e211defc36a4d7a3b58730d357be3cf14e942753e787b33bfe4771f23bbf565b"
+    },
+    {
+      "filename": "matematica_7b_oa04_clase05.ts",
+      "sizeBytes": 27069,
+      "sha256": "2515c08dbcd9dbb26a24fff4673df5d672421bea26743ac6009dc1454459ff97"
+    },
+    {
+      "filename": "matematica_7b_oa04_clase06.ts",
+      "sizeBytes": 27443,
+      "sha256": "5a0995a73c36147e2df19bd9e8b1db9c8b6e1417bbd1e1ab1e75339a69d5df11"
+    }
+  ]
+}

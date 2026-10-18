@@ -1,0 +1,76 @@
+{
+  "auditMetadata": {
+    "agent": "Antigravity",
+    "timestamp": "2026-10-17T11:05:00-03:00",
+    "courseId": "110-7",
+    "subject": "Ciencias_Naturales",
+    "oa": "OA01",
+    "commit": "71413f50255bb426b4c8a86fccd74394ce3ec0aa",
+    "branch": "main"
+  },
+  "manifestComparison": {
+    "localStatus": "EN_REVISION",
+    "localStage": "WORK_PRE_APROBACION",
+    "classesAudit": [
+      {
+        "class": 1,
+        "localSourceFile": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE01.md",
+        "localSha256": "ad397d46b91983f688adb42a74eb9ad72a2e8bfe051873a8937c6fd04a9424bb",
+        "workReferenceSha256": "0dc214db01082f1efa9d4efc4b7b2977a2c639eb60f9efd91753fe44b71b5f30",
+        "servedModule": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase01.ts",
+        "status": "EN_CONFLICTO"
+      },
+      {
+        "class": 2,
+        "localSourceFile": null,
+        "localSha256": null,
+        "workReferenceSha256": "ae7e661c22dbdb1195668eca2195f01e8b7960b089ca0c386e92c9e4033180dc",
+        "servedModule": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase02.ts (snapshot 2026-10-08)",
+        "status": "DESVINCULADO_PENDIENTE_FUENTE"
+      },
+      {
+        "class": 3,
+        "localSourceFile": null,
+        "localSha256": null,
+        "workReferenceSha256": "1d0eb6ae892ecf6e1fc23b65caf3c005e699efe47801ff8d15cf4c4c8021ffba",
+        "servedModule": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase03.ts (snapshot 2026-10-08)",
+        "status": "DESVINCULADO_PENDIENTE_FUENTE"
+      },
+      {
+        "class": 4,
+        "localSourceFile": null,
+        "localSha256": null,
+        "workReferenceSha256": "f3e99e22aed6eba5f3695299a6a844685f2ced4475723045af8d2c51e5affd71",
+        "servedModule": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase04.ts (snapshot 2026-10-08)",
+        "status": "DESVINCULADO_PENDIENTE_FUENTE"
+      },
+      {
+        "class": 5,
+        "localSourceFile": null,
+        "localSha256": null,
+        "workReferenceSha256": "60d770c0b0dd4e958cf3f4b5fba8816e0fad4671a42fb10bc183967042978726",
+        "servedModule": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase05.ts (snapshot 2026-10-08)",
+        "status": "DESVINCULADO_PENDIENTE_FUENTE"
+      },
+      {
+        "class": 6,
+        "localSourceFile": null,
+        "localSha256": null,
+        "workReferenceSha256": "8fbe1d91552a4efb2258371be8bd2a0e699bc4d36712eda54280f6a5753f9430",
+        "servedModule": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase06.ts (snapshot 2026-10-08)",
+        "status": "DESVINCULADO_PENDIENTE_FUENTE"
+      }
+    ]
+  },
+  "pedagogicalChecks": {
+    "clase01Keys": "D-B-C",
+    "clase01KeysVerified": true,
+    "dimensionsBook": 5,
+    "dimensionsBookVerified": true,
+    "oaAspects": 3,
+    "oaAspectsVerified": true,
+    "clase02_06_workSlides": "7+17",
+    "clase02_06_servedSlides": "7+7",
+    "work7_17_slidesStatus": "IGNORADAS_NO_INGESTADAS"
+  }
+}

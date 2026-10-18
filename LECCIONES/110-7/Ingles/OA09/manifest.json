@@ -4,7 +4,7 @@
   "asignatura": "Idioma Extranjero Inglés",
   "oa": "OA09",
   "titulo_oa": "Reading comprehension of authentic and adapted texts",
-  "fecha_generacion": "2026-10-10 19:15 [America/Santiago]",
+  "fecha_generacion": "2026-10-17 16:58 [America/Santiago]",
   "status": "EN_REVISION",
   "etapa_revision": "WORK_PRE_APROBACION",
   "total_lecciones": 6,
@@ -12,7 +12,57 @@
     {
       "clase": 1,
       "archivo_ts": "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase01.ts",
-      "archivo_md": "CLASE01_2026-10-10_19-15.md",
+      "archivo_md": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE01.md",
+      "estado": "EN_REVISION",
+      "secciones_completas": 12,
+      "laminas_bimodales": 14,
+      "reactivos_miniquiz": 3,
+      "alternativas_por_pregunta": 4
+    },
+    {
+      "clase": 2,
+      "archivo_ts": "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase02.ts",
+      "archivo_md": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE02.md",
+      "estado": "EN_REVISION",
+      "secciones_completas": 12,
+      "laminas_bimodales": 14,
+      "reactivos_miniquiz": 3,
+      "alternativas_por_pregunta": 4
+    },
+    {
+      "clase": 3,
+      "archivo_ts": "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase03.ts",
+      "archivo_md": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE03.md",
+      "estado": "EN_REVISION",
+      "secciones_completas": 12,
+      "laminas_bimodales": 14,
+      "reactivos_miniquiz": 3,
+      "alternativas_por_pregunta": 4
+    },
+    {
+      "clase": 4,
+      "archivo_ts": "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase04.ts",
+      "archivo_md": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE04.md",
+      "estado": "EN_REVISION",
+      "secciones_completas": 12,
+      "laminas_bimodales": 14,
+      "reactivos_miniquiz": 3,
+      "alternativas_por_pregunta": 4
+    },
+    {
+      "clase": 5,
+      "archivo_ts": "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase05.ts",
+      "archivo_md": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE05.md",
+      "estado": "EN_REVISION",
+      "secciones_completas": 12,
+      "laminas_bimodales": 14,
+      "reactivos_miniquiz": 3,
+      "alternativas_por_pregunta": 4
+    },
+    {
+      "clase": 6,
+      "archivo_ts": "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase06.ts",
+      "archivo_md": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE06.md",
       "estado": "EN_REVISION",
       "secciones_completas": 12,
       "laminas_bimodales": 14,
@@ -21,12 +71,13 @@
     }
   ],
   "auditoria_interna": {
-    "fecha": "2026-10-10 19:15 [America/Santiago]",
+    "fecha": "2026-10-17 16:58 [America/Santiago]",
     "hallazgos": 0,
     "resultado": "CONFORME"
   },
   "fuentes_utilizadas": [
     "INSUMOS/BASE_CURRICULAR/EstudioSimple_Base_Curricular_7B_4Asignaturas_v1.json",
-    "TEMARIOS EELL 7° Básico MINEDUC"
+    "TEMARIOS EELL 7° Básico MINEDUC",
+    "DATOS_PARA_ANTIGRAVITY_22_LECCIONES_CORREGIDAS_2026-10-17.json (Work R1)"
   ]
 }

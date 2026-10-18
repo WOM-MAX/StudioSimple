@@ -13,6 +13,7 @@ import { StudentReadingResourceCard } from './StudentReadingResourceCard';
 import { getSubjectTheme } from '../../../lib/subject-theme';
 import { resolveVideoSource } from '../../../lib/video-utils';
 import { getLessonCanonicalKey } from '../../../lib/lesson-repository';
+import { canAccreditLesson } from '../../../lib/lesson-session';
 import {
   Sparkles,
   Check,
@@ -179,7 +180,7 @@ export const StudentLessonView: React.FC = () => {
   const prevFeedbackRef = useRef<string | null>(null);
 
   useEffect(() => {
-    if (session.stage === 'completed' && lessonData?.metadata) {
+    if (session.stage === 'completed' && canAccreditLesson(session) && lessonData?.metadata) {
       const canonicalKey = getLessonCanonicalKey(
         lessonData.metadata.grade,
         lessonData.metadata.subject,
@@ -188,7 +189,7 @@ export const StudentLessonView: React.FC = () => {
       );
       markLessonCompleted(canonicalKey);
     }
-  }, [session.stage, lessonData?.metadata, markLessonCompleted]);
+  }, [session.stage, session.miniScore, lessonData?.metadata, markLessonCompleted]);
 
   // Trigger confetti on success/reveal feedback transitions
   useEffect(() => {

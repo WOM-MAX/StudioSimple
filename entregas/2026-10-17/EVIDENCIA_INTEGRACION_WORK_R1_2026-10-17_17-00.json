@@ -1,0 +1,280 @@
+{
+  "timestamp": "2026-10-17 17:00 [America/Santiago]",
+  "status": "EN_REVISION",
+  "total_sources_unified": 30,
+  "protected_sources_mat_oa01": 6,
+  "work_sources_verified_22": [
+    {
+      "subject": "CNA",
+      "class": 1,
+      "path": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE01.md",
+      "bytes": 34617,
+      "sha256": "79541ff2a77e77e516ad2b3472d76b8ef1e6872893adff92b65e86c1731422b8",
+      "expected_sha256": "79541ff2a77e77e516ad2b3472d76b8ef1e6872893adff92b65e86c1731422b8",
+      "match": true
+    },
+    {
+      "subject": "CNA",
+      "class": 2,
+      "path": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE02.md",
+      "bytes": 31151,
+      "sha256": "4c8150b24de3521152da70c02ce127aaaca1030e7a245a977a95edea3178e43a",
+      "expected_sha256": "4c8150b24de3521152da70c02ce127aaaca1030e7a245a977a95edea3178e43a",
+      "match": true
+    },
+    {
+      "subject": "CNA",
+      "class": 3,
+      "path": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE03.md",
+      "bytes": 30331,
+      "sha256": "53db5847d0b7bac7b86a177e4f6fc64e656f380b5accc1f5f97551909aa148c3",
+      "expected_sha256": "53db5847d0b7bac7b86a177e4f6fc64e656f380b5accc1f5f97551909aa148c3",
+      "match": true
+    },
+    {
+      "subject": "CNA",
+      "class": 4,
+      "path": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE04.md",
+      "bytes": 30697,
+      "sha256": "06cdbbd0b660389dc877182e7d3e822c1ef44bf999a8d3dcd1177f72e5609776",
+      "expected_sha256": "06cdbbd0b660389dc877182e7d3e822c1ef44bf999a8d3dcd1177f72e5609776",
+      "match": true
+    },
+    {
+      "subject": "CNA",
+      "class": 5,
+      "path": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE05.md",
+      "bytes": 31104,
+      "sha256": "46ee6797290234d36c0dd4d9faae9ef10b32609f6b684fc932582950752bdbe7",
+      "expected_sha256": "46ee6797290234d36c0dd4d9faae9ef10b32609f6b684fc932582950752bdbe7",
+      "match": true
+    },
+    {
+      "subject": "CNA",
+      "class": 6,
+      "path": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE06.md",
+      "bytes": 32446,
+      "sha256": "6672d97f7fdc340bf08d99642200c1ead8393df18299d620e04d68a289887b6b",
+      "expected_sha256": "6672d97f7fdc340bf08d99642200c1ead8393df18299d620e04d68a289887b6b",
+      "match": true
+    },
+    {
+      "subject": "HIS",
+      "class": 2,
+      "path": "LECCIONES_POR_REVISAR/110-7/Historia_Geografia/OA02/CLASE02.md",
+      "bytes": 30828,
+      "sha256": "114bec14ee28d8c3705fdb82a480e739e8e2a3204aafba498c063b0bb3727b68",
+      "expected_sha256": "114bec14ee28d8c3705fdb82a480e739e8e2a3204aafba498c063b0bb3727b68",
+      "match": true
+    },
+    {
+      "subject": "HIS",
+      "class": 3,
+      "path": "LECCIONES_POR_REVISAR/110-7/Historia_Geografia/OA02/CLASE03.md",
+      "bytes": 31163,
+      "sha256": "1d6321c95a290a3f2dcf57d578b1a53d9b1c6b226a4e144245dd9345bc45fd01",
+      "expected_sha256": "1d6321c95a290a3f2dcf57d578b1a53d9b1c6b226a4e144245dd9345bc45fd01",
+      "match": true
+    },
+    {
+      "subject": "HIS",
+      "class": 4,
+      "path": "LECCIONES_POR_REVISAR/110-7/Historia_Geografia/OA02/CLASE04.md",
+      "bytes": 30810,
+      "sha256": "818e5c9df2cc07f839a93d70521b94b8a063ca70485d74b22ea9f08b09d6f6ae",
+      "expected_sha256": "818e5c9df2cc07f839a93d70521b94b8a063ca70485d74b22ea9f08b09d6f6ae",
+      "match": true
+    },
+    {
+      "subject": "HIS",
+      "class": 5,
+      "path": "LECCIONES_POR_REVISAR/110-7/Historia_Geografia/OA02/CLASE05.md",
+      "bytes": 31135,
+      "sha256": "2291e779d9390ac1d7baf11373140a03d40f28e0dc15a76b02a838cc1979428f",
+      "expected_sha256": "2291e779d9390ac1d7baf11373140a03d40f28e0dc15a76b02a838cc1979428f",
+      "match": true
+    },
+    {
+      "subject": "HIS",
+      "class": 6,
+      "path": "LECCIONES_POR_REVISAR/110-7/Historia_Geografia/OA02/CLASE06.md",
+      "bytes": 33495,
+      "sha256": "d319f59063b48c1fb5053de9c165bfe22d93560238ee0d5fb3109162d8a69178",
+      "expected_sha256": "d319f59063b48c1fb5053de9c165bfe22d93560238ee0d5fb3109162d8a69178",
+      "match": true
+    },
+    {
+      "subject": "ING",
+      "class": 2,
+      "path": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE02.md",
+      "bytes": 28741,
+      "sha256": "ee1b5c6a00acf0e4bba8cb199fa968b3a8b42426bed21e4caddb7041a9d72ea3",
+      "expected_sha256": "ee1b5c6a00acf0e4bba8cb199fa968b3a8b42426bed21e4caddb7041a9d72ea3",
+      "match": true
+    },
+    {
+      "subject": "ING",
+      "class": 3,
+      "path": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE03.md",
+      "bytes": 27327,
+      "sha256": "fbc84d5018d771967976c0a20f64e03731de4bcc84a565d32430b64786d09a83",
+      "expected_sha256": "fbc84d5018d771967976c0a20f64e03731de4bcc84a565d32430b64786d09a83",
+      "match": true
+    },
+    {
+      "subject": "ING",
+      "class": 4,
+      "path": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE04.md",
+      "bytes": 27906,
+      "sha256": "e0acc7d571ea73fecb39ed38ea9be098705417cec87d1f35a1efff8deb6b1b0d",
+      "expected_sha256": "e0acc7d571ea73fecb39ed38ea9be098705417cec87d1f35a1efff8deb6b1b0d",
+      "match": true
+    },
+    {
+      "subject": "ING",
+      "class": 5,
+      "path": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE05.md",
+      "bytes": 27620,
+      "sha256": "56da2f92c4157ebdb88e4df0adcb9976b86c010bbce66036892f33090cb8838a",
+      "expected_sha256": "56da2f92c4157ebdb88e4df0adcb9976b86c010bbce66036892f33090cb8838a",
+      "match": true
+    },
+    {
+      "subject": "ING",
+      "class": 6,
+      "path": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE06.md",
+      "bytes": 30472,
+      "sha256": "2f689f287ac0438540aa963ec6765df43b0c4665d5034a9b042611e5960898f7",
+      "expected_sha256": "2f689f287ac0438540aa963ec6765df43b0c4665d5034a9b042611e5960898f7",
+      "match": true
+    },
+    {
+      "subject": "LYL",
+      "class": 1,
+      "path": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE01.md",
+      "bytes": 31152,
+      "sha256": "5a017b85f232f57c0163adfc9d421b293d2af73dd6479ea0b5c9a9fa7f130733",
+      "expected_sha256": "5a017b85f232f57c0163adfc9d421b293d2af73dd6479ea0b5c9a9fa7f130733",
+      "match": true
+    },
+    {
+      "subject": "LYL",
+      "class": 2,
+      "path": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE02.md",
+      "bytes": 29726,
+      "sha256": "622a4033f26036e036d5e4242353733e6bf7f8855d998fdc88d7e867c48c6b3c",
+      "expected_sha256": "622a4033f26036e036d5e4242353733e6bf7f8855d998fdc88d7e867c48c6b3c",
+      "match": true
+    },
+    {
+      "subject": "LYL",
+      "class": 3,
+      "path": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE03.md",
+      "bytes": 30003,
+      "sha256": "f7d8a657be061f42d0fdd640e9fb9fc8f9379376830403ff6882c387bab05913",
+      "expected_sha256": "f7d8a657be061f42d0fdd640e9fb9fc8f9379376830403ff6882c387bab05913",
+      "match": true
+    },
+    {
+      "subject": "LYL",
+      "class": 4,
+      "path": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE04.md",
+      "bytes": 28539,
+      "sha256": "da7a110c85a326a5f5ffdd364273103cc9a61834fad7c3d717e89480dd103367",
+      "expected_sha256": "da7a110c85a326a5f5ffdd364273103cc9a61834fad7c3d717e89480dd103367",
+      "match": true
+    },
+    {
+      "subject": "LYL",
+      "class": 5,
+      "path": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE05.md",
+      "bytes": 30265,
+      "sha256": "73962fce3c469bc2ba4e5b2671fd0eb143be08a416367e157be234d35d61efb3",
+      "expected_sha256": "73962fce3c469bc2ba4e5b2671fd0eb143be08a416367e157be234d35d61efb3",
+      "match": true
+    },
+    {
+      "subject": "LYL",
+      "class": 6,
+      "path": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE06.md",
+      "bytes": 32364,
+      "sha256": "d92209a89f4ea126275bdf776efda4d95af7da761fe9431c62be43da19256614",
+      "expected_sha256": "d92209a89f4ea126275bdf776efda4d95af7da761fe9431c62be43da19256614",
+      "match": true
+    }
+  ],
+  "recovered_sources_antigravity": [
+    {
+      "subject": "ING",
+      "class": 1,
+      "path": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE01.md",
+      "bytes": 19991,
+      "sha256": "9653ed07d2df5434b9034be80b6f10c110013c092f5164c359d9dc9c37af925d",
+      "status": "RECUPERADA_LOCALMENTE"
+    },
+    {
+      "subject": "HIS",
+      "class": 1,
+      "path": "LECCIONES_POR_REVISAR/110-7/Historia_Geografia/OA02/CLASE01.md",
+      "bytes": 21840,
+      "sha256": "0794b50f228bfb063408bd508d5cdaacb4e5e33ddc2465f2802792696fb23f0a",
+      "status": "RECUPERADA_LOCALMENTE"
+    }
+  ],
+  "matematica_oa04_canonical": [
+    {
+      "subject": "MAT",
+      "class": 1,
+      "path": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE01.md",
+      "bytes": 20194,
+      "sha256": "7769bcfa0b6d40c11a920d05a9809bd56243b7338bd1939f731d7b66d8fd9012",
+      "derived_from": "scripts/oa04_data/clase01.ts"
+    },
+    {
+      "subject": "MAT",
+      "class": 2,
+      "path": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE02.md",
+      "bytes": 19093,
+      "sha256": "84118dcd8dc57520a256e946765188090065c6b3552e66f3a625a6263006eb9f",
+      "derived_from": "scripts/oa04_data/clase02.ts"
+    },
+    {
+      "subject": "MAT",
+      "class": 3,
+      "path": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE03.md",
+      "bytes": 18751,
+      "sha256": "575c4e968c9bd6a7e350b7fae0addd17138957f170b7d4a5fa19c554cacbade3",
+      "derived_from": "scripts/oa04_data/clase03.ts"
+    },
+    {
+      "subject": "MAT",
+      "class": 4,
+      "path": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE04.md",
+      "bytes": 19492,
+      "sha256": "e15d021079fdb9e2e1e98fd03727ecce994cf179da2c38fe9f1e8bde37615d11",
+      "derived_from": "scripts/oa04_data/clase04.ts"
+    },
+    {
+      "subject": "MAT",
+      "class": 5,
+      "path": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE05.md",
+      "bytes": 24622,
+      "sha256": "6388c0f89dc87655b5b67a3411684226dfd1e70fea1d97ce7159d2bcad2fa7b0",
+      "derived_from": "scripts/oa04_data/clase05.ts"
+    },
+    {
+      "subject": "MAT",
+      "class": 6,
+      "path": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE06.md",
+      "bytes": 24246,
+      "sha256": "2a64c7ac990ae246944542b3e8feae3b462f2c44ca8788ffa75a486d3425ed43",
+      "derived_from": "scripts/oa04_data/clase06.ts"
+    }
+  ],
+  "build_verification": {
+    "tsc_exit_code": 0,
+    "vite_build_exit_code": 0,
+    "modules_transformed": 1685,
+    "status": "CONFORME"
+  }
+}

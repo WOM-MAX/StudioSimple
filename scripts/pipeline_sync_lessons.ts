@@ -4,20 +4,18 @@ import crypto from 'crypto';
 import { fileURLToPath } from 'url';
 import { LessonData, SlidePrompt, GuidedItem, QuizQuestion, RecoveryItem } from '../Web Studio Simple/src/types/lesson';
 import { adaptPlayerLessonToGenerator } from '../Web Studio Simple/src/lib/lesson-adapter';
+import { lintPedagogicalLesson } from './linter_contrato_pedagogico';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const ROOT = path.resolve(__dirname, '..');
 const REVISAR_DIR = path.resolve(ROOT, 'LECCIONES_POR_REVISAR');
-const WEB_STUDIO_DIR = path.resolve(ROOT, 'Web Studio Simple');
-const LESSONS_TS_DIR = path.resolve(WEB_STUDIO_DIR, 'src', 'data', 'lessons');
-const ALL_GRADES_JSON_PATH = path.resolve(WEB_STUDIO_DIR, 'public', 'data', 'injected_lessons_all_grades.json');
-const GRADE_7B_JSON_PATH = path.resolve(WEB_STUDIO_DIR, 'public', 'data', 'injected_lessons_7b.json');
-const MANIFEST_DATA_PATH = path.resolve(ROOT, 'data', 'sync_manifest.json');
-const MANIFEST_PUBLIC_PATH = path.resolve(WEB_STUDIO_DIR, 'public', 'data', 'sync_manifest.json');
+const STAGING_DIR = path.resolve(ROOT, 'staging_preparacion_aislada');
+const STAGING_LESSONS_DIR = path.resolve(STAGING_DIR, 'lessons');
+const STAGING_MANIFEST_DIR = path.resolve(STAGING_DIR, 'manifests');
 
 // Normalizadores
-function normalizeSubject(subject: string): string {
+export function normalizeSubject(subject: string): string {
   const clean = (subject || '')
     .toLowerCase()
     .normalize('NFD')
@@ -27,21 +25,21 @@ function normalizeSubject(subject: string): string {
   if (clean.includes('leng') || clean.includes('liter')) return 'len';
   if (clean.includes('hist') || clean.includes('geog') || clean.includes('soc')) return 'his';
   if ((clean.includes('cien') && !clean.includes('soc')) || clean.includes('nat')) return 'cie';
-  if (clean.includes('ing') || clean.includes('eng')) return 'ing';
+  if (clean === 'ing' || clean.includes('ingles') || clean.includes('english')) return 'ing';
   return clean;
 }
 
-function normalizeOa(oaCode: string): string {
+export function normalizeOa(oaCode: string): string {
   const digits = (oaCode || '').replace(/[^0-9]/g, '');
-  return digits ? `oa${parseInt(digits, 10)}` : (oaCode || '').toLowerCase().trim();
+  return digits ? `oa${String(parseInt(digits, 10)).padStart(2, '0')}` : (oaCode || '').toLowerCase().trim();
 }
 
-function normalizeGrade(grade: string): string {
+export function normalizeGrade(grade: string): string {
   const digits = (grade || '').replace(/[^0-9]/g, '');
   return digits || (grade || '').toLowerCase().trim();
 }
 
-function getSubjectFormalName(norm: string): string {
+export function getSubjectFormalName(norm: string): string {
   switch (norm) {
     case 'len': return 'Lengua y Literatura';
     case 'cie': return 'Ciencias Naturales';
@@ -52,7 +50,7 @@ function getSubjectFormalName(norm: string): string {
   }
 }
 
-function getSubjectKey(norm: string): string {
+export function getSubjectKey(norm: string): string {
   switch (norm) {
     case 'len': return 'lengua';
     case 'cie': return 'ciencias';
@@ -63,7 +61,7 @@ function getSubjectKey(norm: string): string {
   }
 }
 
-function getInteractiveConfig(norm: string, title: string): { type: any; title: string; description?: string } {
+export function getInteractiveConfig(norm: string, title: string): { type: any; title: string; description?: string } {
   switch (norm) {
     case 'len':
       return {
@@ -98,28 +96,13 @@ function getInteractiveConfig(norm: string, title: string): { type: any; title: 
     default:
       return {
         type: 'general',
-        title: title || 'Organizador de Aprendizaje'
+        title: title || 'Organizador de Aprendizaje',
+        description: 'Esquema interactivo de aprendizaje'
       };
   }
 }
 
-// Búsqueda recursiva de archivos .md
-function findMarkdownFiles(dir: string, fileList: string[] = []): string[] {
-  if (!fs.existsSync(dir)) return fileList;
-  const entries = fs.readdirSync(dir, { withFileTypes: true });
-  for (const entry of entries) {
-    const fullPath = path.join(dir, entry.name);
-    if (entry.isDirectory()) {
-      findMarkdownFiles(fullPath, fileList);
-    } else if (entry.isFile() && entry.name.endsWith('.md') && !entry.name.toLowerCase().startsWith('readme') && !entry.name.startsWith('_')) {
-      fileList.push(fullPath);
-    }
-  }
-  return fileList;
-}
-
-// Extractor de metadata de archivo
-interface FileMetadata {
+export interface FileMetadata {
   grade: string;
   subjectName: string;
   oaCode: string;
@@ -132,54 +115,50 @@ interface FileMetadata {
   courseId: string;
 }
 
-function extractMetadataFromMd(filePath: string, content: string): FileMetadata {
-  const normPath = filePath.replace(/\\/g, '/');
-  
-  let courseId = '110-7';
-  const cIdMatch = normPath.match(/LECCIONES_POR_REVISAR\/([^\/]+)/);
-  if (cIdMatch) courseId = cIdMatch[1];
+export function extractFileMetadata(filePath: string, content: string): FileMetadata {
+  const relPath = path.relative(REVISAR_DIR, filePath).replace(/\\/g, '/');
+  const pathParts = relPath.split('/');
+
+  const courseId = pathParts[0] || '110-7';
+  const folderSubject = pathParts[1] || '';
+  const folderOa = pathParts[2] || '';
+  const fileName = pathParts[pathParts.length - 1] || '';
+
+  const classNumMatch = fileName.match(/CLASE\s*0?(\d+)/i) || fileName.match(/CLASE_?0?(\d+)/i);
+  const detectedClassNum = classNumMatch ? parseInt(classNumMatch[1], 10) : 1;
 
   let detectedGrade = '7° Básico';
-  if (courseId.includes('-3') || normPath.includes('/3b/') || normPath.includes('3_basico')) detectedGrade = '3° Básico';
-  else if (courseId.includes('-4') || normPath.includes('/4b/')) detectedGrade = '4° Básico';
-  else if (courseId.includes('-5') || normPath.includes('/5b/')) detectedGrade = '5° Básico';
-  else if (courseId.includes('-6') || normPath.includes('/6b/')) detectedGrade = '6° Básico';
-  else if (courseId.includes('-7') || normPath.includes('/7b/')) detectedGrade = '7° Básico';
-  else if (courseId.includes('-8') || normPath.includes('/8b/')) detectedGrade = '8° Básico';
-
-  let detectedSubjNorm = '';
-  if (/lengua|literatura|lyl/i.test(normPath)) detectedSubjNorm = 'len';
-  else if (/ciencias|cna|cie/i.test(normPath)) detectedSubjNorm = 'cie';
-  else if (/historia|geografia|his/i.test(normPath)) detectedSubjNorm = 'his';
-  else if (/ingles|english|ing/i.test(normPath)) detectedSubjNorm = 'ing';
-  else if (/matematica|mat/i.test(normPath)) detectedSubjNorm = 'mat';
-
+  let detectedSubjNorm = normalizeSubject(folderSubject);
   let detectedOaNum = 1;
-  const oaFolderMatch = normPath.match(/\/OA0?(\d+)/i);
-  if (oaFolderMatch) detectedOaNum = parseInt(oaFolderMatch[1], 10);
 
-  let detectedClassNum = 1;
-  const classFileMatch = normPath.match(/CLASE0?(\d+)\.md$/i) || normPath.match(/class0?(\d+)\.md$/i);
-  if (classFileMatch) detectedClassNum = parseInt(classFileMatch[1], 10);
-
-  const titleMatch = content.match(/\*\*Título:\*\*\s*(.+)/i) || content.match(/\*\*Lesson title:\*\*\s*(.+)/i);
-  const nextMatch = content.match(/\*\*Título de trabajo de la siguiente clase:\*\*\s*(.+)/i) || content.match(/\*\*Next class working title:\*\*\s*(.+)/i);
-  const durationMatch = content.match(/\*\*Duración total:\*\*\s*(.+)/i) || content.match(/\*\*Duración:\*\*\s*(.+)/i) || content.match(/\*\*Duration:\*\*\s*(.+)/i);
-  const classNumMatch = content.match(/\*\*(?:Número de clase|Class number):\*\*\s*0?(\d+)\s*(?:de|of)\s*0?(\d+)/i);
-
-  if (classNumMatch) {
-    detectedClassNum = parseInt(classNumMatch[1], 10);
+  const oaMatch = folderOa.match(/OA0?(\d+)/i);
+  if (oaMatch) {
+    detectedOaNum = parseInt(oaMatch[1], 10);
   }
 
-  const h2Match = content.match(/##\s*([^·\n]+)\s*·\s*([^·\n]+)\s*·\s*([^·\n]+)\s*·\s*(?:Clase|Class)\s*0?(\d+)/i);
-  if (h2Match) {
-    detectedGrade = h2Match[1].trim();
-    if (detectedGrade.toLowerCase().includes('7th')) detectedGrade = '7° Básico';
-    const subjRaw = h2Match[2].trim();
-    detectedSubjNorm = normalizeSubject(subjRaw);
-    const oaRaw = h2Match[3].trim().replace(/[^0-9]/g, '');
-    if (oaRaw) detectedOaNum = parseInt(oaRaw, 10);
-    detectedClassNum = parseInt(h2Match[4].trim(), 10);
+  const subjFromContent = content.match(/\*\*(?:Asignatura|Asignatura App):\*\*\s*([^\n·*]+)/i);
+  if (subjFromContent) {
+    detectedSubjNorm = normalizeSubject(subjFromContent[1]);
+  }
+  const oaFromContent = content.match(/\*\*(?:OA|C[óo]digo curricular):\*\*\s*([^\n·*]+)/i);
+  if (oaFromContent) {
+    const oMatch = oaFromContent[1].match(/OA0?(\d+)/i);
+    if (oMatch) detectedOaNum = parseInt(oMatch[1], 10);
+  }
+
+  const titleMatch = content.match(/\*\*(?:Lesson title|T[íi]tulo de la clase|T[íi]tulo|Title):\*\*\s*(.+)/i);
+
+  const durationMatch = content.match(/\*\*Duraci[óo]n:\*\*\s*(.+)/i)
+    || content.match(/\*\*Duration:\*\*\s*(.+)/i);
+
+  const nextMatch = content.match(/\*\*(?:Next class working title|Next class title|T[íi]tulo de trabajo de la siguiente clase|Pr[óo]xima clase):\*\*\s*(.+)/i);
+
+  let resolvedTitle = titleMatch ? titleMatch[1].trim() : '';
+  if (!resolvedTitle) {
+    const h1Match = content.match(/^#\s+EstudioSimple\s*[·|]\s*(.+)$/m);
+    if (h1Match && !h1Match[1].toLowerCase().includes('interactive lesson')) {
+      resolvedTitle = h1Match[1].trim();
+    }
   }
 
   return {
@@ -189,53 +168,60 @@ function extractMetadataFromMd(filePath: string, content: string): FileMetadata 
     oaTitle: `${getSubjectFormalName(detectedSubjNorm)} - OA ${detectedOaNum}`,
     lessonNumber: detectedClassNum,
     totalLessons: 6,
-    lessonTitle: titleMatch ? titleMatch[1].trim() : path.basename(filePath, '.md'),
+    lessonTitle: resolvedTitle || path.basename(filePath, '.md'),
     durationMinutes: durationMatch ? parseInt(durationMatch[1].replace(/[^0-9]/g, ''), 10) || 30 : 30,
     nextLessonTitle: nextMatch ? nextMatch[1].trim() : '',
     courseId
   };
 }
 
-// Parser completo de Markdown a LessonData
-function parseLessonMarkdown(mdContent: string, meta: FileMetadata): LessonData {
+// ============================================================================
+// PARSER ROBUSTO DELIMITADO POR SECCIONES
+// ============================================================================
+
+export function parseLessonMarkdown(mdContent: string, meta: FileMetadata, filePathForContext: string = ''): LessonData {
   const fullText = mdContent.replace(/\r\n/g, '\n').trim();
 
-  // 1. Paso 1
+  // 1. Paso 1 — Preparación del mentor
   let adultObjective = '';
-  const objMatch = fullText.match(/### Objetivo de aprendizaje de la clase\s*\n\s*\*\*([^*]+)\*\*/i)
-    || fullText.match(/### Objetivo de esta clase\s*\n\s*\*\*([^*]+)\*\*/i)
-    || fullText.match(/### Class objective\s*\n\s*\*\*([^*]+)\*\*/i);
-  if (objMatch) adultObjective = objMatch[1].trim();
+  const objHeaderMatch = fullText.match(/\*\*(?:Objetivo de la clase|Objetivo de la sesión|Objetivo de aprendizaje|Class objective):\*\*\s*([^\n]+)/i);
+  const objH3Match = fullText.match(/### (?:Objetivo de aprendizaje de la clase|Objetivo de esta clase|Class objective)\s*\n\s*\*\*([^*]+)\*\*/i);
+  if (objHeaderMatch) {
+    adultObjective = objHeaderMatch[1].trim();
+  } else if (objH3Match) {
+    adultObjective = objH3Match[1].trim();
+  }
+  if (!adultObjective) {
+    const p1Obj = fullText.match(/##\s*\d*\.?\s*(?:Paso 1|Step 1|Mentor preparation)[^\n]*\n([\s\S]*?)(?=##\s*\d*\.?\s*(?:Paso 2|Step 2|Learning route))/i);
+    if (p1Obj) {
+      const p1Match = p1Obj[1].match(/\*\*(?:Propósito|Purpose|Objetivo|Objective):\*\*\s*([^\n]+)/i);
+      if (p1Match) adultObjective = p1Match[1].trim();
+    }
+  }
 
   let routeToday = '';
-  const routeMatch = fullText.match(/\*\*Ruta de la sesión:\*\*\s*(.+)/i)
-    || fullText.match(/\*\*Ruta de hoy:\*\*\s*(.+)/i)
-    || fullText.match(/\*\*Ruta:\*\*\s*(.+)/i)
-    || fullText.match(/\*\*Route:\*\*\s*(.+)/i);
+  const routeMatch = fullText.match(/\*\*(?:Ruta de la sesión|Ruta de hoy|Ruta|Route|Learning route):\*\*\s*(.+)/i);
   if (routeMatch) routeToday = routeMatch[1].trim();
 
   let dilePaso1 = '';
-  const dile1Match = fullText.match(/\*\*DILE al estudiante:\*\*\s*[“"]([^”"]+)[”"]/i)
-    || fullText.match(/\*\*DILE:\*\*\s*[“"]([^”"]+)[”"]/i)
-    || fullText.match(/\*\*Say:\*\*\s*[“"]([^”"]+)[”"]/i);
+  const dile1Match = fullText.match(/\*\*(?:DILE al estudiante|DILE|SAY|DILE \/ SAY):\*\*\s*[“"]?([^”"\n]+)[”"]?/i);
   if (dile1Match) dilePaso1 = dile1Match[1].trim();
 
   const reminders: string[] = [];
-  const pautasRegex = /(?:Pautas para el mentor|Mentor guidance):([\s\S]*?)(?:\*\*Clima|\*\*Emotional)/i;
-  const pautasMatch = fullText.match(pautasRegex);
+  const pautasMatch = fullText.match(/(?:Pautas para el mentor|Mentor guidance|Recordatorios|Reminders):([\s\S]*?)(?:\*\*Clima|\*\*Emotional|\*\*Consejo|\n\s*##\s*\d)/i);
   if (pautasMatch) {
     const pLines = pautasMatch[1].split('\n');
     for (const pl of pLines) {
-      const itemMatch = pl.match(/^\d+\.\s*(.+)/);
+      const itemMatch = pl.match(/^\s*(?:\d+\.|\-)\s*(.+)/);
       if (itemMatch) reminders.push(itemMatch[1].trim());
     }
   }
 
   let emotionalTip = '';
-  const emoMatch = fullText.match(/(?:\*\*Clima emocional:\*\*|\*\*Clima de aprendizaje:\*\*|\*\*Emotional climate:\*\*|\*\*Tip emocional:\*\*)\s*(.+)/i);
+  const emoMatch = fullText.match(/(?:\*\*Clima emocional:\*\*|\*\*Clima de aprendizaje:\*\*|\*\*Emotional climate:\*\*|\*\*Tip emocional:\*\*|\*\*Consejo emocional:\*\*|\*\*Cuidado del acompañamiento:\*\*)\s*(.+)/i);
   if (emoMatch) emotionalTip = emoMatch[1].trim();
 
-  // 2. Paso 2A: Ruta
+  // 2. Paso 2A — Ruta de aprendizaje
   const colorMap: Record<string, 'navy' | 'orange' | 'yellow' | 'teal'> = {
     'naranja': 'orange',
     'orange': 'orange',
@@ -248,8 +234,7 @@ function parseLessonMarkdown(mdContent: string, meta: FileMetadata): LessonData 
   };
 
   const blocks: Array<{ id: string; number: string; title: string; subtitle: string; color: 'navy' | 'orange' | 'yellow' | 'teal' }> = [];
-  const tableRegex = /\| N\.?º? \| Bloque \| (?:Qué hará el estudiante|Qué haremos|Acción|Student action) \| Color \|([\s\S]*?)(?:\n\s*\n|\*\*Pregunta clave|\*\*Key question)/i;
-  const tableMatch = fullText.match(tableRegex);
+  const tableMatch = fullText.match(/\| N\.?º? \| Bloque \| (?:Qué hará el estudiante|Qué haremos|Acción|Student action) \| Color \|([\s\S]*?)(?:\n\s*\n|\*\*Pregunta clave|\*\*Key question|\*\*DILE)/i);
   if (tableMatch) {
     const tableLines = tableMatch[1].trim().split('\n').filter(l => l.includes('|') && !l.includes('---'));
     let bIndex = 1;
@@ -269,120 +254,187 @@ function parseLessonMarkdown(mdContent: string, meta: FileMetadata): LessonData 
     }
   }
 
-  const keyQuestions: Array<{ label: string; sub: string }> = [];
-  const q1Match = fullText.match(/(?:\*\*Pregunta clave 1:\*\*|\*\*Key question 1:\*\*)\s*(.+)/i);
-  const q2Match = fullText.match(/(?:\*\*Pregunta clave 2:\*\*|\*\*Key question 2:\*\*)\s*(.+)/i);
-  if (q1Match) keyQuestions.push({ label: 'Pregunta Clave 1', sub: q1Match[1].trim() });
-  if (q2Match) keyQuestions.push({ label: 'Pregunta Clave 2', sub: q2Match[1].trim() });
-
   let dileObjective = '';
-  const objDileMatch = fullText.match(/(?:\*\*DILE — Objetivo[^*]*:\*\*|\*\*Student objective:\*\*)\s*[“"]?([^”"\n]+)[”"]?/i);
-  if (objDileMatch) dileObjective = objDileMatch[1].trim();
+  const dileObjMatch = fullText.match(/\*\*(?:DILE — Objetivo del estudiante|DILE — Student objective|DILE):\*\*\s*[“"]?([^”"\n]+)[”"]?/i);
+  if (dileObjMatch) dileObjective = dileObjMatch[1].trim();
 
-  // 3. Paso 2B: Situación Inicial y Referencia
+  // 3. Paso 2B — Punto de partida
   let sitDile = '';
-  const sitDileMatch = fullText.match(/### (?:Activación|Situación ficticia|Before reading)[\s\S]*?\*\*(?:DILE|SAY):\*\*\s*[“"]([^”"]+)[”"]/i);
+  const sitDileMatch = fullText.match(/(?:### (?:Activación|Situación ficticia|Before reading|Recurso de lectura visible)[\s\S]*?)?\*\*(?:DILE antes de leer|DILE|SAY|Before reading):\*\*\s*[“"]?([^”"\n]+)[”"]?/i);
   if (sitDileMatch) sitDile = sitDileMatch[1].trim();
 
   let sitExpected = '';
-  const sitExpMatch = fullText.match(/### (?:Activación|Situación ficticia|Before reading)[\s\S]*?\*\*(?:Respuestas aceptables|Respuesta esperada|Expected responses):\*\*\s*([^\n]+)/i);
+  const sitExpMatch = fullText.match(/\*\*(?:Respuestas aceptables|Respuesta esperada[^*]*|Expected responses[^*]*|Respuesta de referencia[^*]*):\*\*\s*([^\n]+)/i);
   if (sitExpMatch) sitExpected = sitExpMatch[1].trim();
 
   let sitHint = '';
-  const sitHintMatch = fullText.match(/### (?:Activación|Situación ficticia|Before reading)[\s\S]*?\*\*(?:Pista socrática|Hint):\*\*\s*[“"]?([^”"\n]+)[”"]?/i);
+  const sitHintMatch = fullText.match(/\*\*(?:Pista socrática|Hint):\*\*\s*[“"]?([^”"\n]+)[”"]?/i);
   if (sitHintMatch) sitHint = sitHintMatch[1].trim();
 
   let refDile = '';
-  const refDileMatch = fullText.match(/### (?:Lectura de partida|Punto de partida|Starting-point check)[\s\S]*?\*\*(?:DILE|SAY):\*\*\s*[“"]([^”"]+)[”"]/i);
+  const refDileMatch = fullText.match(/(?:### (?:Lectura de partida|Punto de partida|Starting-point check)[\s\S]*?)?\*\*(?:Punto de partida \/ Starting point|Pregunta|Question):\*\*\s*[“"]?([^”"\n]+)[”"]?/i);
   if (refDileMatch) refDile = refDileMatch[1].trim();
 
-  let refExpected = '';
-  const refExpMatch = fullText.match(/### (?:Lectura de partida|Punto de partida|Starting-point check)[\s\S]*?\*\*(?:Respuesta de referencia|Respuesta esperada|Expected answer):\*\*\s*([^\n]+)/i);
-  if (refExpMatch) refExpected = refExpMatch[1].trim();
+  let refExpected = sitExpected;
+  let refSuccess = '¡Excelente fundamentación!';
+  let refSupport = sitHint || 'Revisa la lectura para confirmar los datos.';
 
-  let refSuccess = '';
-  const refSuccMatch = fullText.match(/\*\*(?:Retroalimentación correcta|Feedback):\*\*\s*[“"]?([^”"\n]+)[”"]?/i);
-  if (refSuccMatch) refSuccess = refSuccMatch[1].trim();
+  // 4. Paso 3 & Paso 5 — Láminas / Diapositivas (R01: Separación bimodal Motivación / Explicación)
+  // 4. Paso 3 & Paso 5 — Láminas / Diapositivas (R01/R03: Extracción fiel sin guiones fabricados)
+  let hookSlides: SlidePrompt[] = [];
+  let formalizationSlides: SlidePrompt[] = [];
 
-  let refSupport = '';
-  const refSuppMatch = fullText.match(/\*\*(?:Retroalimentación con apoyo|Support):\*\*\s*[“"]?([^”"\n]+)[”"]?/i);
-  if (refSuppMatch) refSupport = refSuppMatch[1].trim();
+  function parseSlidesFromText(text: string, defaultMomento: string, startNum: number = 1): SlidePrompt[] {
+    const parsed: SlidePrompt[] = [];
+    const headerRegex = /^[#]{3,4}\s+(?:Diapositiva|Lámina|Slide)\s*0?(\d+)[:\s·—\-]?[^\n]*/gim;
+    const matches = [...text.matchAll(headerRegex)];
+    if (matches.length === 0) return [];
 
-  // 4. Paso 3: Gancho y Explicación en 14 láminas
-  const slides: SlidePrompt[] = [];
-  const slideBlocks = fullText.split(/#### (?:Lámina|Slide)\s*(\d+)/i);
-  for (let i = 1; i < slideBlocks.length; i += 2) {
-    const sNum = parseInt(slideBlocks[i], 10);
-    const sBody = slideBlocks[i + 1] || '';
-    const headerLine = sBody.split('\n')[0].replace(/^[·\s]+/, '').replace(/[·\s]+\d+\s*s.*$/, '').trim();
-    
-    const textMatch = sBody.match(/-\s*\*\*(?:Texto visible|On-screen text):\*\*\s*[“"]?([^”"\n]+)[”"]?/i);
-    const imgMatch = sBody.match(/-\s*\*\*(?:Imagen|Visual):\*\*\s*([^\n]+)/i);
-    const locMatch = sBody.match(/-\s*\*\*(?:Locución|Voice-over):\*\*\s*[“"]?([^”"\n]+)[”"]?/i);
-    
-    const overlayText = textMatch ? textMatch[1].trim() : headerLine;
-    const parts = overlayText.split('/');
-    const overlayTitle = parts[0]?.trim() || headerLine;
-    const overlaySubtitle = parts[1]?.trim() || '';
+    for (let i = 0; i < matches.length; i++) {
+      const cur = matches[i];
+      const next = matches[i + 1];
+      const sNum = parseInt(cur[1], 10);
+      const headerLine = cur[0].replace(/^[#]+\s*/, '').trim();
+      const startPos = cur.index + cur[0].length;
+      const endPos = next ? next.index : text.length;
+      const sBody = text.slice(startPos, endPos);
 
-    slides.push({
-      slideNumber: sNum,
-      tituloMomento: headerLine || `Lámina ${sNum}`,
-      didacticPurpose: headerLine || `Lámina ${sNum}`,
-      visualPrompt: imgMatch ? imgMatch[1].trim() : '',
-      overlayText: overlayText,
-      overlayTitle: overlayTitle,
-      overlaySubtitle: overlaySubtitle,
-      vectorialOverlayPptx: overlayText,
-      speakerNotes: locMatch ? locMatch[1].trim() : ''
-    });
-  }
+      const titleMatch = sBody.match(/\*\*(?:Título|Title):\*\*\s*([^\n]+)/i);
+      const textMatch = sBody.match(/(?:^|\n)\s*(?:-\s*)?\*\*(?:Texto visible|On-screen text|Texto en Pantalla \(Overlay\)|Overlay):\*\*\s*[“"]?([^”"\n]+)[”"]?/i)
+        || sBody.match(/\*\*(?:Título|Title):\*\*\s*([^\n]+)/i);
+      const subMatch = sBody.match(/(?:^|\n)\s*(?:-\s*)?\*\*(?:Subtítulo|Subtitle):\*\*\s*[“"]?([^”"\n]+)[”"]?/i);
+      const imgMatch = sBody.match(/(?:^|\n)\s*(?:-\s*)?\*\*(?:Visual|Imagen|Prompt Visual [^\n:]*):\*\*\s*([^\n]+)/i);
+      const locMatch = sBody.match(/(?:^|\n)\s*(?:-\s*)?\*\*(?:Locución|Voice-over|Notas de Locución|Narración):\*\*\s*[“"]?([^”"\n]+)[”"]?/i);
+      const durMatch = sBody.match(/\*\*(?:Duración(?: estimada)?|Duration):\*\*\s*(\d+)/i)
+        || cur[0].match(/(\d+)\s*s\b/i);
 
-  // 5. Paso 4: Conversación Guiada
-  const preQuestions: GuidedItem[] = [];
-  const convBlocks = fullText.split(/### (?:Conversación|Pregunta|Question)\s*\d+/i);
-  for (let i = 1; i < convBlocks.length; i++) {
-    const cText = convBlocks[i];
-    if (cText.includes('## 6.') || cText.includes('## Step 5') || cText.includes('Paso 5')) {
-      const cleanBlock = cText.split(/## (?:6\.|Step 5|Paso 5)/)[0];
-      parseConvItem(cleanBlock, preQuestions);
-      break;
-    } else {
-      parseConvItem(cText, preQuestions);
-    }
-  }
+      const sTitle = titleMatch ? titleMatch[1].trim() : headerLine;
+      const overlayText = textMatch ? textMatch[1].trim() : sTitle;
+      const overlaySubtitle = subMatch ? subMatch[1].trim() : '';
 
-  function parseConvItem(text: string, arr: GuidedItem[]) {
-    const ctxMatch = text.match(/-\s*\*\*Context(?:o)?:\*\*\s*([^\n]+)/i);
-    const qMatch = text.match(/-\s*\*\*(?:DILE|SAY):\*\*\s*[“"]?([^”"\n]+)[”"]?/i);
-    const expMatch = text.match(/-\s*\*\*(?:Respuesta esperada|Expected answer):\*\*\s*([^\n]+)/i);
-    const succMatch = text.match(/-\s*\*\*(?:Éxito|Success):\*\*\s*([^\n]+)/i);
-    const suppMatch = text.match(/-\s*\*\*(?:Apoyo|Hint):\*\*\s*[“"]?([^”"\n]+)[”"]?/i);
-    const revMentorMatch = text.match(/-\s*\*\*(?:Revelación para el mentor|Mentor reveal):\*\*\s*([^\n]+)/i);
-    const revStudentMatch = text.match(/-\s*\*\*(?:Revelación para el estudiante|Revelación estudiante|Student reveal):\*\*\s*[“"]?([^”"\n]+)[”"]?/i);
-
-    if (qMatch) {
-      arr.push({
-        context: ctxMatch ? ctxMatch[1].trim() : '',
-        question: qMatch[1].trim(),
-        expected: expMatch ? expMatch[1].trim() : '',
-        success: succMatch ? succMatch[1].trim() : '',
-        support: suppMatch ? suppMatch[1].trim() : '',
-        reveal: revMentorMatch ? revMentorMatch[1].trim() : '',
-        studentReveal: revStudentMatch ? revStudentMatch[1].trim() : (expMatch ? expMatch[1].trim() : '')
+      parsed.push({
+        slideNumber: startNum + i,
+        tituloMomento: defaultMomento,
+        didacticPurpose: sTitle,
+        visualPrompt: imgMatch ? imgMatch[1].trim() : '',
+        overlayText,
+        overlayTitle: overlayText,
+        overlaySubtitle,
+        vectorialOverlayPptx: overlayText,
+        speakerNotes: locMatch ? locMatch[1].trim() : '',
+        duracionSeg: durMatch ? parseInt(durMatch[1], 10) : 8
       });
     }
+    return parsed;
   }
 
-  // 6. Paso 5: Formalización
-  const formalMatch = fullText.match(/## (?:6\.|Step 5|5\.) (?:Paso 5 — Formalización|Step 5 — Formalization)[\s\S]*?(?=## (?:7\.|Step 5B|Paso 5B))/i);
+  // Estrategia A: Buscar en "## Guiones audiovisuales"
+  const guionesIdx = fullText.search(/^##\s*Guiones audiovisuales/im);
+  if (guionesIdx >= 0) {
+    const nextH2 = fullText.slice(guionesIdx + 20).search(/^##\s+[^\n]+/im);
+    const gText = nextH2 > 0 ? fullText.slice(guionesIdx, guionesIdx + 20 + nextH2) : fullText.slice(guionesIdx);
+
+    const motIdx = gText.search(/^###\s*(?:MOTIVACION|MOTIVACIÓN|GANCHO|HOOK)/im);
+    const expIdx = gText.search(/^###\s*(?:EXPLICACION|EXPLICACIÓN|Explanation)/im);
+
+    if (motIdx >= 0 && expIdx > motIdx) {
+      const motText = gText.slice(motIdx, expIdx);
+      const expText = gText.slice(expIdx);
+      hookSlides = parseSlidesFromText(motText, 'Motivación', 1);
+      formalizationSlides = parseSlidesFromText(expText, 'Explicación', 8);
+    }
+  }
+
+  // Estrategia B: Buscar en Paso 3
+  if (hookSlides.length === 0 && formalizationSlides.length === 0) {
+    const p3Idx = fullText.search(/^##\s*\d*\.?\s*(?:Paso 3|Step 3|Videos|Motivación y explicación|Gancho y explicación)/im);
+    if (p3Idx >= 0) {
+      const nextH2 = fullText.slice(p3Idx + 20).search(/^##\s*\d*\.?\s*(?:Paso 4|Step 4|Conversación)|^##\s+[A-Za-z]/im);
+      const p3Text = nextH2 > 0 ? fullText.slice(p3Idx, p3Idx + 20 + nextH2) : fullText.slice(p3Idx);
+
+      const motIdx = p3Text.search(/^###\s*(?:MOTIVACION|MOTIVACIÓN|GANCHO|HOOK|Hook video|Hook\b|Gancho|Presentación 1)/im);
+      const expIdx = p3Text.search(/^###\s*(?:EXPLICACION|EXPLICACIÓN|Explanation|Explicación|Presentación 2)/im);
+
+      if (motIdx >= 0 && expIdx > motIdx) {
+        const motText = p3Text.slice(motIdx, expIdx);
+        const expText = p3Text.slice(expIdx);
+        hookSlides = parseSlidesFromText(motText, 'Motivación', 1);
+        formalizationSlides = parseSlidesFromText(expText, 'Explicación', 8);
+      } else {
+        const allSlides = parseSlidesFromText(p3Text, 'Motivación', 1);
+        if (allSlides.length === 14) {
+          hookSlides = allSlides.slice(0, 7);
+          formalizationSlides = allSlides.slice(7, 14);
+        } else if (allSlides.length === 7) {
+          hookSlides = allSlides;
+        }
+      }
+    }
+  }
+
+  // Estrategia C: Buscar ### MOTIVACION y ### EXPLICACION en cualquier parte
+  if (hookSlides.length === 0 && formalizationSlides.length === 0) {
+    const motIdx = fullText.search(/^###\s*(?:MOTIVACION|MOTIVACIÓN|GANCHO|HOOK)/im);
+    const expIdx = fullText.search(/^###\s*(?:EXPLICACION|EXPLICACIÓN|Explanation)/im);
+    if (motIdx >= 0 && expIdx > motIdx) {
+      const nextH2 = fullText.slice(expIdx).search(/^##\s+[^\n]+/im);
+      const motText = fullText.slice(motIdx, expIdx);
+      const expText = nextH2 > 0 ? fullText.slice(expIdx, expIdx + nextH2) : fullText.slice(expIdx);
+      hookSlides = parseSlidesFromText(motText, 'Motivación', 1);
+      formalizationSlides = parseSlidesFromText(expText, 'Explicación', 8);
+    }
+  }
+
+  // Normalizar numeración y títulos oficiales sin fabricar contenido
+  hookSlides.forEach((s, i) => {
+    s.slideNumber = i + 1;
+    s.tituloMomento = 'Motivación';
+  });
+  formalizationSlides.forEach((s, i) => {
+    s.slideNumber = i + 8;
+    s.tituloMomento = 'Explicación';
+  });
+
+  // 5. Paso 4 — Conversación Guiada (R02: Soporte para formato multilingüe y sin viñeta)
+  const preQuestions: GuidedItem[] = [];
+  const convSectionMatch = fullText.match(/##\s*\d*\.?\s*(?:Paso 4|Step 4|Guided conversation|Conversación guiada)[^\n]*([\s\S]*?)(?=##\s*\d*\.?\s*(?:Paso 5|Step 5|Explanation|Explicación))/i);
+  if (convSectionMatch) {
+    const convText = convSectionMatch[1];
+    const itemRegex = /###\s+(?:Conversación|Pregunta|Question)\s*\d+[^\n]*\n([\s\S]*?)(?=###\s+(?:Conversación|Pregunta|Question)|$)/gi;
+    const matches = [...convText.matchAll(itemRegex)];
+    for (const m of matches) {
+      const b = m[1];
+      const ctxMatch = b.match(/(?:^|\n)\s*(?:-\s*)?\*\*Context(?:o)?:\*\*\s*([^\n]+)/i);
+      const qMatch = b.match(/(?:^|\n)\s*(?:-\s*)?\*\*(?:DILE|PREGÚNTALE|Pregunta|Question|Ask|SAY|PREGÚNTALE \/ ASK):\*\*\s*[“"]?([^”"\n]+)[”"]?/i);
+      const expMatch = b.match(/(?:^|\n)\s*(?:-\s*)?\*\*(?:Respuesta esperada[^*]*|Expected answer[^*]*|Respuesta de referencia[^*]*):\*\*\s*([^\n]+)/i);
+      const succMatch = b.match(/(?:^|\n)\s*(?:-\s*)?\*\*(?:Éxito|Success|Evidencia|Evidence|Criterio|Criterion):\*\*\s*([^\n]+)/i);
+      const suppMatch = b.match(/(?:^|\n)\s*(?:-\s*)?\*\*(?:Apoyo 1|Apoyo|Support 1|Support):\*\*\s*[“"]?([^”"\n]+)[”"]?/i);
+      const revMentorMatch = b.match(/(?:^|\n)\s*(?:-\s*)?\*\*(?:Revelación para el mentor|Mentor reveal|Apoyo 3[^*]*):\*\*\s*([^\n]+)/i);
+      const revStudentMatch = b.match(/(?:^|\n)\s*(?:-\s*)?\*\*(?:Revelación estudiante|Student reveal):\*\*\s*[“"]?([^”"\n]+)[”"]?/i);
+
+      if (qMatch) {
+        preQuestions.push({
+          context: ctxMatch ? ctxMatch[1].trim() : 'Conversación guiada',
+          question: qMatch[1].trim(),
+          expected: expMatch ? expMatch[1].trim() : '',
+          success: succMatch ? succMatch[1].trim() : '',
+          support: suppMatch ? suppMatch[1].trim() : '',
+          reveal: revMentorMatch ? revMentorMatch[1].trim() : (expMatch ? expMatch[1].trim() : ''),
+          studentReveal: revStudentMatch ? revStudentMatch[1].trim() : (expMatch ? expMatch[1].trim() : '')
+        });
+      }
+    }
+  }
+
+  // 6. Paso 5 — Formalización e Idea Clave
+  const formalMatch = fullText.match(/##\s*\d*\.?\s*(?:Paso 5|Step 5)[^\n]*([\s\S]*?)(?=##\s*\d*\.?\s*(?:Paso 5B|Step 5B|Paso 6|Step 6|Joint and independent practice|Práctica))/i);
   let formalConcept = '';
   let formalIdea = '';
   let formalDile = '';
   let formalHaz = '';
 
   if (formalMatch) {
-    const fText = formalMatch[0];
+    const fText = formalMatch[1];
     const cMatch = fText.match(/\*\*Concept(?:o)?:\*\*\s*([^\n]+)/i);
     if (cMatch) formalConcept = cMatch[1].trim();
 
@@ -396,117 +448,358 @@ function parseLessonMarkdown(mdContent: string, meta: FileMetadata): LessonData 
     if (fhMatch) formalHaz = fhMatch[1].trim();
   }
 
-  // 7. Paso 5B: Comprobación Inmediata
+  // 7. Paso 5B — Comprobación Inmediata (R02 & Grupo B)
   const postQuestions: GuidedItem[] = [];
-  const comp1Match = fullText.match(/### (?:Comprobación 1|Check 1)[\s\S]*?\*\*(?:Pregunta|Question):\*\*\s*[“"]?([^”"\n]+)[”"]?[\s\S]*?\*\*(?:Respuesta esperada|Expected answer):\*\*\s*([^\n]+)/i);
-  if (comp1Match) {
-    postQuestions.push({
-      context: 'Comprobación 1',
-      question: comp1Match[1].trim(),
-      expected: comp1Match[2].trim(),
-      success: 'Respuesta precisa y fundamentada',
-      support: 'Revisa el concepto clave expuesto',
-      reveal: comp1Match[2].trim(),
-      studentReveal: comp1Match[2].trim()
-    });
+
+  // A) Búsqueda en sección dedicada Paso 5B o Comprobación
+  const compSectionMatch = fullText.match(/(?:^|\n)##\s*\d*\.?\s*(?:Paso 5B|Step 5B|Comprobación|Check)[^\n]*\n([\s\S]*?)(?=(?:\n|^)##\s*\d*\.?\s*(?:Paso 6|Step 6)|(?:\n|^)##\s+[A-Za-z]|$)/i);
+  if (compSectionMatch) {
+    const compText = compSectionMatch[1];
+    const compRegex = /(?:^|\n)###\s+(?:Pregunta de\s+)?(?:Comprobación|Check)\s*\d+[^\n]*\n([\s\S]*?)(?=(?:\n|^)###\s+(?:Pregunta de\s+)?(?:Comprobación|Check)|(?:\n|^)##|$)/gi;
+    const matches = [...compText.matchAll(compRegex)];
+    let idx = 1;
+    for (const m of matches) {
+      const b = m[1];
+      const qMatch = b.match(/\*\*(?:Pregunta|Question):\*\*\s*[“"]?([^”"\n]+)[”"]?/i) || b.match(/(?:^|\n)\s*[“"]?([^”"\n]+\?)[”"]?/);
+      const expMatch = b.match(/\*\*(?:Respuesta esperada|Expected answer|Solución modelo):\*\*\s*([^\n]+)/i);
+      const suppMatch = b.match(/\*\*(?:Apoyo|Support|Pista):\*\*\s*[“"]?([^”"\n]+)[”"]?/i);
+      if (qMatch) {
+        postQuestions.push({
+          context: `Comprobación ${idx}`,
+          question: qMatch[1].trim(),
+          expected: expMatch ? expMatch[1].trim() : '',
+          success: 'Respuesta precisa y fundamentada',
+          support: suppMatch ? suppMatch[1].trim() : 'Revisa el concepto clave expuesto',
+          reveal: expMatch ? expMatch[1].trim() : '',
+          studentReveal: expMatch ? expMatch[1].trim() : ''
+        });
+        idx++;
+      }
+    }
   }
 
-  const comp2Match = fullText.match(/### (?:Comprobación 2|Check 2)[\s\S]*?\*\*(?:Pregunta|Question):\*\*\s*[“"]?([^”"\n]+)[”"]?[\s\S]*?\*\*(?:Respuesta esperada|Expected answer):\*\*\s*([^\n]+)/i);
-  if (comp2Match) {
-    postQuestions.push({
-      context: 'Comprobación 2',
-      question: comp2Match[1].trim(),
-      expected: comp2Match[2].trim(),
-      success: 'Respuesta precisa y fundamentada',
-      support: 'Revisa la relación entre los elementos',
-      reveal: comp2Match[2].trim(),
-      studentReveal: comp2Match[2].trim()
-    });
-  }
+  // B) Si no se encontraron en 5B, buscar todas las ocurrencias dentro de Paso 5 (con/sin número)
+  if (postQuestions.length === 0) {
+    const p5BlockMatch = fullText.match(/##\s*\d*\.?\s*(?:Paso 5|Step 5)[^\n]*\n([\s\S]*?)(?=##\s*\d*\.?\s*(?:Paso 6|Step 6|Joint and independent practice|Práctica))/i);
+    const searchScope = p5BlockMatch ? p5BlockMatch[1] : fullText;
 
-  // 8. Paso 6: Práctica conjunta en el cuaderno
-  const practice: GuidedItem[] = [];
-  const casoBlocks = fullText.split(/### (?:Caso|Case)\s*\d+/i);
-  for (let i = 1; i < casoBlocks.length; i++) {
-    const cText = casoBlocks[i].split(/## (?:9\.|Step 7|Paso 7)/)[0];
-    const ctxMatch = cText.match(/-\s*\*\*Context(?:o)?:\*\*\s*([^\n]+)/i);
-    const qMatch = cText.match(/-\s*\*\*(?:Pregunta|Question):\*\*\s*[“"]?([^”"\n]+)[”"]?/i);
-    const expMatch = cText.match(/-\s*\*\*(?:Respuesta de referencia|Reference answer):\*\*\s*([^\n]+)/i);
-    const critMatch = cText.match(/-\s*\*\*(?:Criterio|Success criterion):\*\*\s*([^\n]+)/i);
-    const suppMatch = cText.match(/-\s*\*\*(?:Apoyo|Support):\*\*\s*[“"]?([^”"\n]+)[”"]?/i);
+    const compGlobalRegex = /\*\*(?:Comprobación inmediata|Immediate check|Comprobación|Check)\s*(\d+)?:\*\*\s*[“"]?([^”"\n]+)[”"]?/gi;
+    const compMatches = [...searchScope.matchAll(compGlobalRegex)];
 
-    if (qMatch) {
-      practice.push({
-        context: ctxMatch ? ctxMatch[1].trim() : `Caso ${i}`,
-        question: qMatch[1].trim(),
-        expected: expMatch ? expMatch[1].trim() : '',
-        success: critMatch ? critMatch[1].trim() : 'Cumple el criterio formal del caso',
-        support: suppMatch ? suppMatch[1].trim() : 'Revisa los datos del texto o mapa',
-        reveal: expMatch ? expMatch[1].trim() : '',
-        studentReveal: expMatch ? expMatch[1].trim() : ''
+    for (let i = 0; i < compMatches.length; i++) {
+      const cMatch = compMatches[i];
+      const cNum = cMatch[1] || '';
+      const cQuestion = cMatch[2].trim();
+      
+      const startPos = cMatch.index! + cMatch[0].length;
+      const nextMatch = compMatches[i + 1];
+      const endPos = nextMatch ? nextMatch.index! : searchScope.length;
+      const subBlock = searchScope.slice(startPos, endPos);
+
+      let modelRegex = cNum
+        ? new RegExp(`\\*\\*(?:Modelo de comprobación|Check model|Respuesta comprobación)\\s*${cNum}:\\*\\*\\s*([^\\n]+)`, 'i')
+        : /\*\*(?:Modelo de comprobación|Check model|Respuesta comprobación)(?:\s*\d+)?:[^*]*\*\*\s*([^\n]+)/i;
+      
+      let supportRegex = cNum
+        ? new RegExp(`\\*\\*(?:Apoyo de comprobación|Check support|Apoyo)\\s*${cNum}:\\*\\*\\s*[“"]?([^”"\\n]+)[”"]?`, 'i')
+        : /\*\*(?:Apoyo de comprobación|Check support|Apoyo)(?:\s*\d+)?:[^*]*\*\*\s*[“"]?([^”"\\n]+)[”"]?/i;
+
+      const mMatch = subBlock.match(modelRegex) || subBlock.match(/\*\*(?:Modelo de comprobación|Check model|Respuesta comprobación):\*\*\s*([^\n]+)/i);
+      const sMatch = subBlock.match(supportRegex) || subBlock.match(/\*\*(?:Apoyo de comprobación|Check support|Apoyo):\*\*\s*[“"]?([^”"\n]+)[”"]?/i);
+
+      postQuestions.push({
+        context: cNum ? `Comprobación ${cNum}` : `Comprobación ${i + 1}`,
+        question: cQuestion,
+        expected: mMatch ? mMatch[1].trim() : '',
+        success: 'Respuesta precisa y fundamentada',
+        support: sMatch ? sMatch[1].trim() : 'Revisa el concepto clave expuesto',
+        reveal: mMatch ? mMatch[1].trim() : '',
+        studentReveal: mMatch ? mMatch[1].trim() : ''
       });
     }
   }
 
-  // 9. Paso 7: Miniquiz (reactivos psicométricos con A, B, C, D)
+  // 8. Paso 6 — Práctica conjunta y transferencia autónoma (R02: Soporte sin viñetas y multilingüe)
+  const practice: GuidedItem[] = [];
+  const pSectionMatch = fullText.match(/##\s*\d*\.?\s*(?:Paso 6|Step 6|Práctica conjunta|Joint and independent practice)[^\n]*([\s\S]*?)(?=##\s*\d*\.?\s*(?:Paso 7|Step 7|Miniquiz|Mini-quiz))/i);
+  if (pSectionMatch) {
+    const pSection = pSectionMatch[1];
+    const caseRegex = /###\s+(?:Caso(?:\s+de\s+Práctica)?\s*\d+|Case\s*\d+|Task\s*\d+|Aplicación autónoma y transferencia|Autonomous application[^\n]*)/gi;
+    const matches = [...pSection.matchAll(caseRegex)];
+
+    for (let i = 0; i < matches.length; i++) {
+      const heading = matches[i][0];
+      const start = matches[i].index + heading.length;
+      const end = (i + 1 < matches.length) ? matches[i + 1].index : pSection.length;
+      const blockText = pSection.substring(start, end);
+
+      if (/aplicación autónoma|autonomous application/i.test(heading)) {
+        const resMatch = blockText.match(/\*\*(?:Recurso nuevo visible[^\n]*):\*\*\s*([\s\S]*?)(?=\n\s*\*\*(?:Actividad|Criterio|Cómo valorar)|$)/i);
+        const actMatch = blockText.match(/\*\*(?:Actividad del estudiante|Student activity):\*\*\s*([^\n]+)/i);
+        const critMatch = blockText.match(/\*\*(?:Criterio privado del mentor[^\n]*):\*\*\s*([^\n]+)/i);
+        const valMatch = blockText.match(/\*\*(?:Cómo valorar|How to assess):\*\*\s*([^\n]+)/i);
+
+        const resourceText = resMatch ? resMatch[1].trim() : '';
+        if (!resourceText) {
+          throw new Error(`[Pipeline Error] Ruta: ${filePathForContext || meta.fileName} | Campo: practice[${practice.length}].context | Causa: Estímulo indispensable ausente en la fuente ('Recurso nuevo visible para el estudiante' no encontrado o vacío; prohibido sustituir por rótulo genérico).`);
+        }
+
+        practice.push({
+          context: resourceText,
+          question: actMatch ? actMatch[1].trim() : 'Realiza la transferencia autónoma con el nuevo recurso.',
+          expected: critMatch ? critMatch[1].trim() : 'Aplica los criterios aprendidos al nuevo caso.',
+          success: 'Aplica el criterio de la clase de manera autónoma en un recurso nuevo',
+          support: valMatch ? valMatch[1].trim() : 'Revisa el recurso y aplica los criterios aprendidos.',
+          reveal: critMatch ? critMatch[1].trim() : '',
+          studentReveal: critMatch ? critMatch[1].trim() : ''
+        });
+      } else {
+        const resMatch = blockText.match(/(?:^|\n)\s*(?:-\s*)?\*\*(?:Recurso|Resource|Contexto|Context):\*\*\s*([\s\S]*?)(?=\n\s*(?:-\s*)?\*\*(?:Actividad|Pregunta|Task|Question|Procedimiento|Criterio)|$)/i);
+        const actMatch = blockText.match(/(?:^|\n)\s*(?:-\s*)?\*\*(?:Actividad|Activity|Task|Pregunta|Question):\*\*\s*([^\n]+)/i);
+        const expMatch = blockText.match(/(?:^|\n)\s*(?:-\s*)?\*\*(?:Respuesta de referencia|Reference answer|Modelo para revisar[^*]*|Modelo|Model):\*\*\s*([^\n]+)/i);
+        const critMatch = blockText.match(/(?:^|\n)\s*(?:-\s*)?\*\*(?:Criterio|Success criterion|Respaldo|Support):\*\*\s*([^\n]+)/i);
+        const suppMatch = blockText.match(/(?:^|\n)\s*(?:-\s*)?\*\*(?:Apoyo|Support|Pista):\*\*\s*[“"]?([^”"\n]+)[”"]?/i);
+
+        if (actMatch || resMatch) {
+          practice.push({
+            context: resMatch ? resMatch[1].trim() : `Caso ${i + 1}`,
+            question: actMatch ? actMatch[1].trim() : 'Resuelve la actividad en tu cuaderno.',
+            expected: expMatch ? expMatch[1].trim() : '',
+            success: critMatch ? critMatch[1].trim() : 'Cumple el criterio formal del caso',
+            support: suppMatch ? suppMatch[1].trim() : 'Revisa los datos del recurso',
+            reveal: expMatch ? expMatch[1].trim() : '',
+            studentReveal: expMatch ? expMatch[1].trim() : ''
+          });
+        }
+      }
+    }
+  }
+
+  // 9. Paso 7 — Miniquiz y Recuperación (R03: Cero tolerancia a defaults silenciosos)
   const mini: QuizQuestion[] = [];
-  const reactivoBlocks = fullText.split(/### (?:Reactivo|Item)\s*\d+/i);
-  for (let i = 1; i < reactivoBlocks.length; i++) {
-    const rText = reactivoBlocks[i].split(/### (?:Recuperación|Recovery)|## (?:10\.|Step 8|Paso 8)/)[0];
-    const qLineMatch = rText.match(/\*\*([^*]+)\*\*/);
-    const q = qLineMatch ? qLineMatch[1].trim() : `Pregunta ${i}`;
+  const recovery: RecoveryItem[] = [];
+
+  const paso7SectionMatch = fullText.match(/##\s*\d*\.?\s*(?:Paso 7|Step 7|Miniquiz|Mini-quiz)[^\n]*([\s\S]*?)(?=##\s*\d*\.?\s*(?:Paso 8|Step 8|Síntesis|Summary)|## Trazabilidad|## Guiones|$)/i);
+  const paso7Text = paso7SectionMatch ? paso7SectionMatch[1] : fullText;
+
+  // Extraer Reactivos
+  const reactivoRegex = /###\s+(?:Reactivo|Item|Pregunta)\s*\d+[^\n]*\n([\s\S]*?)(?=###\s+(?:Reactivo|Item|Pregunta|Recuperación|Recovery|Refuerzo)|####|##|$)/gi;
+  const rMatches = [...paso7Text.matchAll(reactivoRegex)];
+
+  let qIdx = 1;
+  for (const rm of rMatches) {
+    const rBlock = rm[1];
+    const lines = rBlock.split('\n');
+
+    let qText = '';
+    const enunMatch = rBlock.match(/\*\*(?:Enunciado|Question|Prompt):\*\*\s*([^\n]+)/i);
+    if (enunMatch) {
+      qText = enunMatch[1].trim();
+    } else {
+      const qLines: string[] = [];
+      for (const line of lines) {
+        const trimmed = line.trim();
+        if (/^-\s*(?:[⚪✅\s]*[A-D][.)]|\*\*[A-D]\.\*\*)/i.test(trimmed) || /^\s*-\s*[A-D]\./i.test(trimmed)) {
+          break;
+        }
+        if (/^-\s+[A-Za-z0-9]/.test(trimmed) && (trimmed.includes('%') || trimmed.length < 50)) {
+          break;
+        }
+        if (trimmed && !trimmed.startsWith('**Clave') && !trimmed.startsWith('**Explicación') && !trimmed.startsWith('**Análisis') && !trimmed.startsWith('**Alternativas')) {
+          const cleanLine = trimmed.replace(/^\*\*([^*]+)\*\*$/, '$1').trim();
+          qLines.push(cleanLine);
+        }
+      }
+      qText = qLines.join(' ').trim();
+    }
+
+    qText = qText.replace(/^(?:Reactivo|Item|Pregunta)\s*\d+[:.\s]*/i, '').trim();
 
     const options: string[] = [];
-    let correct = '';
-    const optLines = rText.split('\n').filter(l => /^\s*-\s*[A-D]\./i.test(l));
-    for (const ol of optLines) {
-      const cleanOpt = ol.replace(/^\s*-\s*/, '').trim();
-      const isCorrect = cleanOpt.includes('**Correcta**') || cleanOpt.includes('**Correct**');
-      const optText = cleanOpt.replace(/\*\*(?:Correcta|Correct)\*\*/g, '').trim();
-      options.push(optText);
-      if (isCorrect) correct = optText;
+    const optionLetters: string[] = ['A', 'B', 'C', 'D'];
+    let markedCorrectLetter = '';
+
+    const optLines = lines.filter(l => {
+      const t = l.trim();
+      return /^-\s*(?:[⚪✅\s]*[A-D][.)]|\*\*[A-D]\.\*\*)/i.test(t) || (/^-\s+/.test(t) && !t.includes('**Clave') && !t.includes('**Explicación') && !t.includes('**Análisis'));
+    });
+
+    for (let oIdx = 0; oIdx < optLines.length && oIdx < 4; oIdx++) {
+      let rawLine = optLines[oIdx].replace(/^\s*-\s*/, '').trim();
+      rawLine = rawLine.replace(/^[⚪✅\s]+/, '').trim();
+      const hasCorrectTag = rawLine.includes('**Correcta**') || rawLine.includes('**Correct**') || optLines[oIdx].includes('✅');
+      const cleanOpt = rawLine.replace(/\*\*(?:Correcta|Correct)\*\*/g, '').trim();
+
+      const optTextMatch = cleanOpt.match(/^[A-D][.)]\s*(.+)/i);
+      const finalOptText = optTextMatch ? optTextMatch[1].trim() : cleanOpt;
+      const letter = optionLetters[oIdx];
+
+      options.push(`${letter}. ${finalOptText}`);
+      if (hasCorrectTag) {
+        markedCorrectLetter = letter;
+      }
     }
 
-    const corrMatch = rText.match(/\*\*(?:Corrección|Corrective feedback):\*\*\s*([^\n]+)/i);
+    // Extraer clave privada: CERO DEFAULTS SILENCIOSOS (R03)
+    const claveMatch = rBlock.match(/\*\*(?:Clave privada|Clave|Key|Respuesta correcta):\*\*\s*([A-D])[.)]?/i);
+    const targetLetter = claveMatch ? claveMatch[1].toUpperCase() : markedCorrectLetter;
+
+    if (!targetLetter) {
+      throw new Error(`[Pipeline Error] Ruta: ${filePathForContext || 'desconocida'} | Campo: Paso 7 Reactivo ${qIdx} Clave | Causa: No se encontró clave privada explícita (**Clave privada:** [A-D]) ni marca de respuesta correcta.`);
+    }
+
+    const matchedOpt = options.find(o => o.startsWith(`${targetLetter}.`));
+    if (!matchedOpt) {
+      throw new Error(`[Pipeline Error] Ruta: ${filePathForContext || 'desconocida'} | Campo: Paso 7 Reactivo ${qIdx} Clave | Causa: La clave '${targetLetter}' no coincide con ninguna de las opciones disponibles (${options.map(o => o.slice(0, 2)).join(', ')}).`);
+    }
+    const correctOption = matchedOpt;
+
+    const corrMatch = rBlock.match(/\*\*(?:Explicación formativa|Corrección|Corrective feedback|Feedback):\*\*\s*([^\n]+)/i);
     const fixExplain = corrMatch ? corrMatch[1].trim() : 'Revisa la lectura y las evidencias del texto para fundamentar tu respuesta.';
 
+    if (!qText || qText === 'Clave privada:') {
+      throw new Error(`[Pipeline Error] Ruta: ${filePathForContext || 'desconocida'} | Campo: Paso 7 Reactivo ${qIdx} Enunciado | Causa: Enunciado inválido o ausente ('${qText}').`);
+    }
+
+    if (options.length !== 4) {
+      throw new Error(`[Pipeline Error] Ruta: ${filePathForContext || 'desconocida'} | Campo: Paso 7 Reactivo ${qIdx} Opciones | Causa: Opciones insuficientes (${options.length}). Se requieren exactamente 4 alternativas.`);
+    }
+
     mini.push({
-      id: `q${i}`,
-      q,
+      id: `q${qIdx}`,
+      q: qText,
       options,
-      correct: correct || options[0] || '',
+      correct: correctOption,
       fixExplain
     });
+
+    qIdx++;
   }
 
-  // 10. Paso 7b: Recuperación adaptativa
-  const recovery: RecoveryItem[] = [];
-  const recovSection = fullText.match(/(?:### Recuperación formativa|### Recuperación adaptativa|### Recovery by item)([\s\S]*?)(?=## (?:10\.|Step 8|Paso 8))/i);
-  if (recovSection) {
-    const rLines = recovSection[1].split('\n').filter(l => l.includes('reactivo') || l.includes('Item'));
-    let rIdx = 1;
-    for (const rl of rLines) {
-      const cleanLine = rl.replace(/^\s*-\s*/, '').trim();
-      recovery.push({
-        title: `Recuperación Reactivo ${rIdx}`,
-        explain: cleanLine,
-        q: `Paso guiado de recuperación para el Reactivo ${rIdx}`,
-        options: ['Opción con andamiaje A', 'Opción con andamiaje B', 'Opción con andamiaje C'],
-        correct: 'Opción con andamiaje A',
-        correctText: '¡Excelente! Lograste resolver el reactivo con el andamiaje del texto.',
-        fixText: 'Vuelve a revisar la página de referencia para consolidar el aprendizaje.'
-      });
-      rIdx++;
+  // Extraer items de Recuperación
+  const recoveryRegex = /(?:###\s+(?:Recuperación|Recovery|Refuerzo|Ítem de Recuperación)\s*\d+[^\n]*|####\s+(?:Nueva práctica para el reactivo|Recuperación|Ítem de Recuperación|Recovery Item)\s*\d+[^\n]*)\n([\s\S]*?)(?=###\s+(?:Reactivo|Item|Pregunta|Recuperación|Recovery|Refuerzo|Ítem de Recuperación)|####\s+(?:Nueva práctica|Recuperación|Ítem de Recuperación)|##|$)/gi;
+  const recMatches = [...paso7Text.matchAll(recoveryRegex)];
+
+  let recIdx = 1;
+  for (const rcm of recMatches) {
+    const bText = rcm[1];
+    const heading = rcm[0].split('\n')[0];
+    const title = heading.replace(/^[#\s]+/, '').trim() || `Recuperación Reactivo ${recIdx}`;
+
+    const teachMatch = bText.match(/\*\*(?:Enseñanza|Teaching|Explicación pedagógica|Explicación para el estudiante|Explicación|Explanation):\*\*\s*([^\n]+)/i);
+    const hintMatch = bText.match(/\*\*(?:Pista|Hint):\*\*\s*([^\n]+)/i);
+    const explain = teachMatch ? teachMatch[1].trim() : (hintMatch ? hintMatch[1].trim() : `Revisa los conceptos clave del reactivo ${recIdx}.`);
+
+    const resMatch = bText.match(/\*\*(?:Recurso visible de recuperación|New original message for recovery[^*]*):\*\*\s*([\s\S]*?)(?=\n\s*\*\*(?:Tarea|Student new task|Pregunta|Apoyo|Criterio)|$)/i);
+    const resourceText = resMatch ? resMatch[1].trim() : '';
+
+    const taskMatch = bText.match(/\*\*(?:Tarea nueva del estudiante|Student new task|Pregunta de refuerzo|Pregunta de reintento|Pregunta|Question):\*\*\s*([^\n]+)/i);
+    const q = taskMatch ? taskMatch[1].trim() : `Paso guiado de recuperación para el Reactivo ${recIdx}`;
+
+    const ap1Match = bText.match(/\*\*(?:Apoyo 1[^\n]*|Si necesita apoyo[^\n]*|Texto de Apoyo[^\n]*):\*\*\s*([^\n]+)/i);
+    const fixText = ap1Match ? ap1Match[1].trim() : 'Vuelve a revisar la página de referencia para consolidar el aprendizaje.';
+
+    const ap2Match = bText.match(/\*\*(?:Apoyo 2[^\n]*):\*\*\s*([^\n]+)/i);
+    const support2 = ap2Match ? ap2Match[1].trim() : undefined;
+
+    const modMatch = bText.match(/\*\*(?:Apoyo 3 y modelo privado[^\n]*|Si acierta[^\n]*|Texto de Éxito[^\n]*|Respuesta correcta|Correct answer):\*\*\s*([^\n]+)/i);
+    const correctText = modMatch ? modMatch[1].trim() : '¡Excelente! Lograste resolver el reactivo con el andamiaje del texto.';
+
+    const exitMatch = bText.match(/\*\*(?:Criterio de salida de esta práctica):\*\*\s*([^\n]+)/i);
+    const exitCriteria = exitMatch ? exitMatch[1].trim() : undefined;
+
+    const isOpenTask = bText.includes('Esta es práctica abierta') || bText.includes('no convertir las pistas en alternativas') || bText.includes('práctica abierta:') || bText.includes('Tarea de cuaderno');
+
+    let recoveryKind: 'open_response' | 'multiple_choice' = 'open_response';
+    let recoveryOptions: string[] = [];
+    let recoveryCorrect = '';
+
+    if (!isOpenTask) {
+      const directOptLines = bText.split('\n')
+        .filter(l => /^[-*]\s*(?:\*\*)?[A-D][.)]/i.test(l.trim()))
+        .slice(0, 4);
+
+      if (directOptLines.length === 4) {
+        recoveryKind = 'multiple_choice';
+        recoveryOptions = directOptLines.map(l => {
+          let clean = l.replace(/^[-*]\s*/, '').trim();
+          clean = clean.replace(/\*\*\(([A-D])\)\*\*/i, '$1.');
+          clean = clean.replace(/\*\*([A-D])[.)]\*\*/i, '$1.');
+          clean = clean.replace(/\*\*(?:Correcta|Correct)\*\*/g, '').trim();
+          return clean;
+        });
+        const rClaveMatch = bText.match(/\*\*(?:Clave privada|Clave):\*\*\s*([A-D])/i);
+        let rLet = rClaveMatch ? rClaveMatch[1].toUpperCase() : '';
+        if (!rLet) {
+          const correctIdx = directOptLines.findIndex(l => l.includes('Correcta') || l.includes('Correct') || l.includes('✅'));
+          if (correctIdx >= 0) {
+            rLet = ['A', 'B', 'C', 'D'][correctIdx];
+          }
+        }
+        if (!rLet) {
+          throw new Error(`[Pipeline Error] Ruta: ${filePathForContext || meta.fileName} | Campo: recovery[${recIdx}].correct | Causa: Recuperación de selección múltiple carece de clave explícita [A-D] o marca inequívoca en la fuente (prohibido default a 'A').`);
+        }
+        const matchedOpt = recoveryOptions.find(o => o.startsWith(`${rLet}.`));
+        if (!matchedOpt) {
+          throw new Error(`[Pipeline Error] Ruta: ${filePathForContext || meta.fileName} | Campo: recovery[${recIdx}].correct | Causa: La clave '${rLet}' no coincide con ninguna de las 4 opciones encontradas.`);
+        }
+        recoveryCorrect = matchedOpt;
+      } else if (directOptLines.length > 0 && directOptLines.length < 4) {
+        throw new Error(`[Pipeline Error] Ruta: ${filePathForContext || meta.fileName} | Campo: recovery[${recIdx}].options | Causa: Recuperación de selección múltiple incompleta: se encontraron ${directOptLines.length} opciones en lugar de 4.`);
+      }
+    }
+
+    recovery.push({
+      title,
+      explain,
+      q,
+      kind: recoveryKind,
+      options: recoveryOptions,
+      correct: recoveryCorrect,
+      correctText,
+      fixText,
+      support2,
+      resource: resourceText || undefined,
+      exitCriteria
+    });
+
+    recIdx++;
+  }
+
+  // Si la recuperación está formateada como lista con viñetas (- **Si necesita apoyo...:** ...)
+  if (recovery.length === 0) {
+    const bulletRecSection = paso7Text.match(/###\s*(?:Recuperación formativa|Recovery by item|Recuperación|Recovery)[^\n]*\n([\s\S]*?)(?=##|$)/i);
+    if (bulletRecSection) {
+      const bLines = bulletRecSection[1].split('\n').filter(l => l.trim().startsWith('-'));
+      let bIdx = 1;
+      for (const bl of bLines) {
+        const m = bl.match(/^-\s*\*\*([^:*]+):\*\*\s*([^\n]+)/);
+        if (m) {
+          const itemTitle = m[1].trim();
+          const itemSupport = m[2].trim();
+          recovery.push({
+            title: `Refuerzo: ${itemTitle}`,
+            explain: itemSupport,
+            q: `Resuelve en tu cuaderno físico: ${itemSupport}`,
+            kind: 'open_response',
+            options: [],
+            correct: '',
+            correctText: '¡Muy bien! Completaste el refuerzo correctamente en tu cuaderno.',
+            fixText: itemSupport
+          });
+          bIdx++;
+        }
+      }
     }
   }
 
-  // 11. Paso 8: Síntesis y Cierre
+  // 11. Paso 8 — Síntesis y Cierre
   const summaryIdeas: Array<[string, string]> = [];
-  const ideasSection = fullText.match(/(?:### Tres ideas para recordar|### Ideas de síntesis|### Key ideas|\*\*Ideas de síntesis:\*\*)([\s\S]*?)(?=\*\*Pregunta de síntesis|\*\*Synthesis question)/i);
+  const ideasSection = fullText.match(/(?:### Tres ideas para recordar|### Ideas de síntesis|### Key ideas|\*\*Ideas de síntesis:\*\*)([\s\S]*?)(?=\*\*Pregunta de síntesis|\*\*Synthesis question|\*\*Síntesis:|$)/i);
   if (ideasSection) {
-    const iLines = ideasSection[1].split('\n').filter(l => /^\s*\d+\.\s*/.test(l));
+    const iLines = ideasSection[1].split('\n').filter(l => /^\s*(?:\d+\.|\-)\s*/.test(l));
     for (const il of iLines) {
-      const cleanIl = il.replace(/^\s*\d+\.\s*/, '').trim();
+      const cleanIl = il.replace(/^\s*(?:\d+\.|\-)\s*/, '').trim();
       const boldMatch = cleanIl.match(/\*\*([^*]+)\*\*:\s*(.+)/);
       if (boldMatch) {
         summaryIdeas.push([boldMatch[1].trim(), boldMatch[2].trim()]);
@@ -516,26 +809,14 @@ function parseLessonMarkdown(mdContent: string, meta: FileMetadata): LessonData 
     }
   }
 
-  let preguntaSintesis = '';
-  const psMatch = fullText.match(/(?:\*\*Pregunta de síntesis:\*\*|\*\*Synthesis question:\*\*)\s*[“"]?([^”"\n]+)[”"]?/i);
-  if (psMatch) preguntaSintesis = psMatch[1].trim();
+  const synQMatch = fullText.match(/\*\*(?:Pregunta de síntesis|Synthesis question|Síntesis):\*\*\s*([^\n]+)/i);
+  const metaQMatch = fullText.match(/\*\*(?:Metacognición|Metacognition):\*\*\s*([^\n]+)/i);
+  const celMatch = fullText.match(/\*\*(?:Celebración|Celebration|Cierre):\*\*\s*([^\n]+)/i);
 
-  let metacognicion = '';
-  const metaMatch = fullText.match(/(?:\*\*Metacognición:\*\*|\*\*Metacognition:\*\*)\s*[“"]?([^”"\n]+)[”"]?/i);
-  if (metaMatch && metaMatch[1]) metacognicion = metaMatch[1].trim();
+  const normSubject = normalizeSubject(meta.subjectName);
 
-  let celebracion = '';
-  const celMatch = fullText.match(/(?:\*\*Celebración:\*\*|\*\*Celebration:\*\*)\s*[“"]?([^”"\n]+)[”"]?/i);
-  if (celMatch) celebracion = celMatch[1].trim();
-
-  let puente = '';
-  const puMatch = fullText.match(/(?:\*\*Puente a la siguiente clase:\*\*|\*\*Next-class bridge:\*\*)\s*[“"]?([^”"\n]+)[”"]?/i);
-  if (puMatch) puente = puMatch[1].trim();
-
-  const normSubj = normalizeSubject(meta.subjectName);
-  const interactiveCfg = getInteractiveConfig(normSubj, meta.lessonTitle);
-
-  return {
+  // Ensamblar LessonData con hook obligatorio (R01)
+  const lessonData: LessonData = {
     metadata: {
       grade: meta.grade,
       subject: meta.subjectName,
@@ -548,83 +829,75 @@ function parseLessonMarkdown(mdContent: string, meta: FileMetadata): LessonData 
       nextLessonTitle: meta.nextLessonTitle
     },
     prep: {
-      adultObjective: adultObjective || 'Acompañar al estudiante en la sesión.',
-      routeToday: routeToday || 'Observar → comprender → practicar → evaluar.',
-      mentorReminder: 'Sigue el guion leyendo en voz alta únicamente los recuadros DILE y PREGÚNTALE. Las respuestas esperadas y criterios te indican qué debe responder el estudiante.',
-      reminders: reminders.length > 0 ? reminders : [
-        'Abre el recurso o texto escolar antes de comenzar la sesión.',
-        'Permite que el estudiante elabore su razonamiento sin anticipar las respuestas.',
-        'Fomenta el uso del cuaderno físico para registrar evidencias.'
-      ],
-      emotionalTip: emotionalTip || 'Mantén un ambiente tranquilo de exploración compartida.'
+      adultObjective: adultObjective,
+      routeToday: routeToday || `Ruta guiada de la clase ${meta.lessonNumber}`,
+      mentorReminder: dilePaso1 || 'Sigue las orientaciones pedagógicas del guion interactivo.',
+      reminders: reminders.length > 0 ? reminders : ['Acompaña al estudiante y valora su proceso.'],
+      emotionalTip: emotionalTip || 'Valora cada avance con paciencia y entusiasmo.'
     },
     route: {
       blocks: blocks.length > 0 ? blocks : [
-        { id: 'b1', number: '01', title: 'Apertura', subtitle: 'Observar y contextualizar', color: 'orange' },
-        { id: 'b2', number: '02', title: 'Exploración', subtitle: 'Pistas y evidencias', color: 'teal' },
-        { id: 'b3', number: '03', title: 'Profundización', subtitle: 'Concepto y relaciones', color: 'yellow' },
-        { id: 'b4', number: '04', title: 'Cierre', subtitle: 'Práctica y síntesis', color: 'navy' }
+        { id: 'b1', number: '01', title: 'Punto de partida', subtitle: 'Activación', color: 'teal' },
+        { id: 'b2', number: '02', title: 'Motivación y Explicación', subtitle: '14 láminas', color: 'orange' },
+        { id: 'b3', number: '03', title: 'Práctica guiada', subtitle: 'Transferencia', color: 'yellow' },
+        { id: 'b4', number: '04', title: 'Miniquiz', subtitle: 'Evaluación y cierre', color: 'navy' }
       ],
-      keyQuestions: keyQuestions.length > 0 ? keyQuestions : [
-        { label: 'Pregunta Clave 1', sub: '¿Cuáles son los elementos centrales presentados?' },
-        { label: 'Pregunta Clave 2', sub: '¿Cómo fundamentas tu respuesta usando evidencia?' }
-      ],
-      dileIntro: dilePaso1 || 'Hoy investigaremos los conceptos y evidencias centrales de la clase.',
-      dileObjective: dileObjective || 'Hoy comprenderemos los conceptos centrales de la clase.'
-    },
-    hook: {
-      title: meta.lessonTitle,
-      dileIntro: dilePaso1 || 'Observa con atención el video introductorio.',
-      hazInstruction: 'Pon atención a las imágenes y conceptos clave.',
-      dileAfterVideo: sitDile || 'Comenta lo que más te llamó la atención.',
-      videoSrc: '',
-      posterSrc: '',
-      focusPoints: ['Observa el contexto general.', 'Identifica la situación inicial.'],
-      slides: slides.slice(0, 7)
+      dileIntro: 'Hoy avanzaremos en una nueva clase interactiva.',
+      dileObjective: dileObjective || meta.lessonTitle
     },
     situation: {
-      dilePrompt: sitDile || 'Analicemos la situación inicial planteada.',
-      expectedAnswer: sitExpected || 'Respuesta basada en la situación planteada.',
-      socraticHint: sitHint || 'Observa los detalles del inicio.',
-      emotionalTip: emotionalTip || 'Acompaña la exploración con tranquilidad.',
+      dilePrompt: sitDile || 'Observa la situación de partida para comenzar.',
+      expectedAnswer: sitExpected || 'Respuesta basada en la observación directa.',
+      socraticHint: sitHint || 'Fíjate en los detalles destacados.',
+      emotionalTip: emotionalTip || 'Acompaña con calma.',
       options: [
         {
-          label: 'Identificó los elementos centrales y fundamentó con el contexto',
+          label: sitExpected || 'Respuesta guiada correcta',
           kind: 'correct',
-          feedbackText: '¡Muy bien! Notaste las pistas clave del escenario inicial.'
+          feedbackText: '¡Muy bien observado!'
         },
         {
-          label: 'Mencionó detalles parciales sin conectar con la idea principal',
+          label: 'Requiere apoyo adicional',
           kind: 'needs_support',
-          feedbackText: 'Observa nuevamente y busca qué condición o suceso da inicio a la situación.'
+          feedbackText: 'Revisa nuevamente la situación inicial.'
         },
         {
-          label: 'No sabe qué responder o requiere apoyo inicial',
+          label: 'No sabe qué responder',
           kind: 'no_answer',
-          feedbackText: 'Leamos juntos el punto de partida y observemos los detalles destacados.'
+          feedbackText: 'Leamos juntos para descubrir la pista.'
         }
       ]
     },
     reference: {
-      dilePrompt: refDile || 'Revisemos el punto de partida para encontrar evidencia.',
-      question: refDile || '¿Qué información o evidencia entrega el punto de partida?',
-      expectedAnswer: refExpected || 'Respuesta guiada por el texto o fuente.',
-      socraticHint: 'Localiza las palabras clave en la página.',
-      feedbackSuccess: refSuccess || '¡Muy bien fundamentado!',
-      feedbackSupport: refSupport || 'Vuelve a revisar la fuente para confirmar los datos.'
+      dilePrompt: refDile || 'Revisemos el punto de partida.',
+      question: '¿Qué información entrega el punto de partida?',
+      expectedAnswer: refExpected || 'Respuesta esperada según el texto.',
+      socraticHint: 'Localiza las palabras clave.',
+      feedbackSuccess: refSuccess || '¡Excelente fundamentación!',
+      feedbackSupport: refSupport || 'Revisa la fuente para confirmar los datos.'
+    },
+    hook: {
+      title: 'Motivación',
+      titulo: 'Motivación',
+      focusPoints: [],
+      dileIntro: sitDile || 'Hoy exploraremos una nueva situación motivadora.',
+      hazInstruction: 'Observa y reflexiona con las escenas del video.',
+      videoSrc: '',
+      dileAfterVideo: '¿Qué observaste en esta situación inicial?',
+      slides: hookSlides
     },
     preQuestions,
     conversationContext: 'Diálogo guiado para profundizar en los elementos clave.',
     formalization: {
-      title: formalConcept || meta.lessonTitle,
+      title: formalConcept || 'Explicación',
       concept: formalConcept || meta.lessonTitle,
-      summary: formalIdea || 'La comprensión profunda requiere conectar la evidencia con la explicación.',
-      ideaClave: formalIdea || 'La comprensión profunda requiere conectar la evidencia con la explicación.',
+      summary: formalIdea || 'Consolidación de las ideas clave.',
+      ideaClave: formalIdea || formalConcept || meta.lessonTitle,
       dileIntro: formalDile || 'Ahora consolidaremos los aprendizajes esenciales.',
       hazInstruction: formalHaz || 'Registra en tu cuaderno el concepto principal.',
       graphicPoster: '',
       videoSrc: '',
-      slides: slides.slice(7, 14)
+      slides: formalizationSlides
     },
     postQuestions,
     practice,
@@ -632,197 +905,183 @@ function parseLessonMarkdown(mdContent: string, meta: FileMetadata): LessonData 
     recovery,
     summaryIdeas: summaryIdeas.length > 0 ? summaryIdeas : [
       ['Idea central', meta.lessonTitle],
-      ['Evidencia', 'Uso de fuentes y datos verificables'],
-      ['Conclusión', 'Explicación coherente y argumentada']
+      ['Comprensión', 'Aplicación del criterio formal en el cuaderno físico.']
     ],
+    interactive: getInteractiveConfig(normSubject, meta.lessonTitle),
     closure: {
-      congratulations: celebracion || '¡Felicitaciones! Has completado exitosamente la lección.',
-      nextClassPreview: puente || meta.nextLessonTitle || 'En la próxima clase continuaremos profundizando.'
+      congratulations: celMatch ? celMatch[1].trim() : '¡Felicitaciones por completar la sesión de hoy!',
+      nextClassPreview: meta.nextLessonTitle ? `Próxima clase: ${meta.nextLessonTitle}` : '¡Nos vemos en la próxima lección!'
     },
     paso8_cierre: {
-      preguntaSintesis: preguntaSintesis || '¿Qué aprendiste hoy y cómo lo explicarías?',
-      metacognicion: metacognicion || '¿Qué parte te resultó más interesante de resolver?',
-      celebracion: celebracion || '¡Felicitaciones! Has completado exitosamente la lección.'
-    },
-    interactive: interactiveCfg
+      preguntaSintesis: synQMatch ? synQMatch[1].trim() : '¿Qué aprendiste hoy?',
+      metacognicion: metaQMatch ? metaQMatch[1].trim() : '¿Qué estrategia te ayudó más?',
+      celebracion: celMatch ? celMatch[1].trim() : '¡Buen trabajo hoy!'
+    }
   };
+
+  // Validación estricta de campos esenciales obligatorios (Directivas R01, R02, R03)
+  if (!lessonData.metadata.lessonTitle || lessonData.metadata.lessonTitle.trim().length === 0) {
+    throw new Error(`[Pipeline Error] Ruta: ${filePathForContext || 'desconocida'} | Campo: metadata.lessonTitle | Causa: Título de lección obligatorio ausente o no interpretable.`);
+  }
+  if (!lessonData.prep.adultObjective || lessonData.prep.adultObjective.trim().length === 0 || lessonData.prep.adultObjective.startsWith('Preparación de la clase')) {
+    throw new Error(`[Pipeline Error] Ruta: ${filePathForContext || 'desconocida'} | Campo: prep.adultObjective | Causa: Objetivo de aprendizaje obligatorio ausente o reemplazado por plantilla.`);
+  }
+  if (!lessonData.mini || lessonData.mini.length !== 3) {
+    throw new Error(`[Pipeline Error] Ruta: ${filePathForContext || 'desconocida'} | Campo: mini (Paso 7) | Causa: Se encontraron ${lessonData.mini ? lessonData.mini.length : 0} reactivos de miniquiz. Se requieren estrictamente 3 reactivos psicométricos completos.`);
+  }
+
+  return lessonData;
 }
 
-// Ingestión y Pipeline Principal
-export async function runUniversalPipeline() {
-  console.log('================================================================');
-  console.log('🚀 PIPELINE UNIVERSAL DE INGESTIÓN CURRICULAR (ESTUDIOSIMPLE)');
+// ============================================================================
+// EJECUCIÓN DEL PIPELINE EN STAGING AISLADO
+// ============================================================================
+
+export async function runUniversalPipeline(options: {
+  outputDir?: string;
+  isStaging?: boolean;
+} = {}) {
+  const isStaging = options.isStaging ?? true;
+  const targetLessonsDir = options.outputDir || STAGING_LESSONS_DIR;
+  const targetManifestDir = isStaging ? STAGING_MANIFEST_DIR : path.resolve(ROOT, 'data');
+
+  console.log('\n================================================================');
+  console.log(`🚀 INICIANDO SINCRONIZACIÓN EN PREPARACIÓN AISLADA`);
+  console.log(`   Directorio de salida: ${targetLessonsDir}`);
   console.log('================================================================\n');
 
-  console.log(`[1/5] Escaneando directorio: ${REVISAR_DIR}`);
-  const mdFiles = findMarkdownFiles(REVISAR_DIR);
-  console.log(`[+] Encontrados ${mdFiles.length} archivos .md para procesar.\n`);
-
-  if (mdFiles.length === 0) {
-    console.warn('⚠️ No se encontraron archivos .md en LECCIONES_POR_REVISAR. Abortando.');
-    return;
+  if (!fs.existsSync(targetLessonsDir)) {
+    fs.mkdirSync(targetLessonsDir, { recursive: true });
+  }
+  if (!fs.existsSync(targetManifestDir)) {
+    fs.mkdirSync(targetManifestDir, { recursive: true });
   }
 
-  let allGradesPackages: any[] = [];
-  if (fs.existsSync(ALL_GRADES_JSON_PATH)) {
-    allGradesPackages = JSON.parse(fs.readFileSync(ALL_GRADES_JSON_PATH, 'utf8'));
-    if (!Array.isArray(allGradesPackages)) allGradesPackages = Object.values(allGradesPackages);
+  // Descubrir archivos Markdown en LECCIONES_POR_REVISAR y en candidatos OA04
+  const allMdFiles: string[] = [];
+
+  function scanDir(dir: string) {
+    if (!fs.existsSync(dir)) return;
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+    for (const ent of entries) {
+      const full = path.join(dir, ent.name);
+      if (ent.isDirectory()) {
+        scanDir(full);
+      } else if (ent.isFile() && ent.name.endsWith('.md')) {
+        allMdFiles.push(full);
+      }
+    }
   }
 
-  let grade7bPackages: any[] = [];
-  if (fs.existsSync(GRADE_7B_JSON_PATH)) {
-    grade7bPackages = JSON.parse(fs.readFileSync(GRADE_7B_JSON_PATH, 'utf8'));
-    if (!Array.isArray(grade7bPackages)) grade7bPackages = Object.values(grade7bPackages);
-    grade7bPackages = grade7bPackages.filter((p: any) => normalizeGrade(p.curso) === '7');
-  }
+  scanDir(REVISAR_DIR);
 
-  const manifestItems: any[] = [];
-  const generatedTsModules: Array<{ varName: string; filePath: string }> = [];
+  console.log(`[1/4] Descubiertos ${allMdFiles.length} archivos Markdown para procesar.`);
 
-  console.log('[2/5] Procesando y parseando lecciones...');
+  // Filtro de exclusión estricta de Matemática OA01
+  const validFiles = allMdFiles.filter(f => {
+    const norm = f.replace(/\\/g, '/').toLowerCase();
+    if (norm.includes('matematica/oa01') || norm.includes('matematica_7b_oa01')) {
+      console.log(`  🔒 PROTECCIÓN ABSOLUTA: Omitiendo ${path.basename(f)} (Matemática OA01 congelado).`);
+      return false;
+    }
+    return true;
+  });
 
-  for (const filePath of mdFiles) {
-    const rawContent = fs.readFileSync(filePath, 'utf8');
-    const fileHash = crypto.createHash('sha256').update(rawContent).digest('hex').substring(0, 16);
-    const meta = extractMetadataFromMd(filePath, rawContent);
-    const lessonData = parseLessonMarkdown(rawContent, meta);
+  // Preflight de lectura y análisis antes de escribir nada
+  console.log(`\n[2/4] Ejecutando Preflight y análisis puro de ${validFiles.length} lecciones...`);
+  const parsedBatch: Array<{
+    filePath: string;
+    meta: FileMetadata;
+    lessonData: LessonData;
+    tsFileName: string;
+    varName: string;
+  }> = [];
 
-    const normSubj = normalizeSubject(meta.subjectName);
-    const subjKey = getSubjectKey(normSubj);
-    const gradeKey = normalizeGrade(meta.grade) + 'b';
-    const digitsOa = meta.oaCode.replace(/[^0-9]/g, '').padStart(2, '0');
-    const oaKey = 'oa' + digitsOa;
-    const classNumStr = String(meta.lessonNumber).padStart(2, '0');
+  for (const filePath of validFiles) {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const meta = extractFileMetadata(filePath, content);
 
-    const tsFileName = `${subjKey}_${gradeKey}_${oaKey}_clase${classNumStr}.ts`;
-    const tsFilePath = path.join(LESSONS_TS_DIR, tsFileName);
-    const varName = `${subjKey.toUpperCase()}_${gradeKey.toUpperCase()}_${oaKey.toUpperCase()}_CLASE${classNumStr}`;
-
-    console.log(`  -> [${meta.courseId}] ${meta.subjectName} · ${meta.oaCode} · Clase ${meta.lessonNumber}`);
-    console.log(`     Título: "${lessonData.metadata.lessonTitle}"`);
-
-    const tsCode = `import { LessonData } from '../../types/lesson';\n\nexport const ${varName}: LessonData = ${JSON.stringify(lessonData, null, 2)};\n`;
-    fs.writeFileSync(tsFilePath, tsCode, 'utf8');
-    generatedTsModules.push({ varName, filePath: tsFileName });
-
-    const adaptedGenLesson = adaptPlayerLessonToGenerator(lessonData);
-
-    updatePackageInList(allGradesPackages, meta, adaptedGenLesson);
-
-    if (normalizeGrade(meta.grade) === '7') {
-      updatePackageInList(grade7bPackages, meta, adaptedGenLesson);
+    // Validar previamente contra Contrato Pedagógico Universal (Grupo A3)
+    const lintReport = lintPedagogicalLesson(filePath, content);
+    if (!lintReport.isAptaParaInyeccion) {
+      const errSummary = lintReport.discrepancies.map(d => `[${d.categoria_oficial}] ${d.campo_afectado}: ${d.requisito_esperado}`).join('; ');
+      throw new Error(`[Pipeline Preflight Error] Fuente inválida para Contrato Pedagógico: ${filePath} | ${errSummary}`);
     }
 
-    manifestItems.push({
-      courseId: meta.courseId,
-      grade: meta.grade,
-      subject: meta.subjectName,
-      oaCode: meta.oaCode,
-      classNumber: meta.lessonNumber,
-      title: lessonData.metadata.lessonTitle,
-      sourceFile: path.relative(ROOT, filePath).replace(/\\/g, '/'),
-      destModule: `Web Studio Simple/src/data/lessons/${tsFileName}`,
-      varName,
-      hash: fileHash,
-      status: 'EN_REVISION',
-      syncedAt: new Date().toISOString()
+    // Parsear
+    const lessonData = parseLessonMarkdown(content, meta, filePath);
+
+    // Validar preflight
+    if (lessonData.mini.length < 3) {
+      console.warn(`  ⚠ AVISO: ${path.basename(filePath)} tiene ${lessonData.mini.length} reactivos de miniquiz.`);
+    }
+
+    const normG = normalizeGrade(meta.grade);
+    const normS = normalizeSubject(meta.subjectName);
+    const normO = normalizeOa(meta.oaCode);
+    const classNumPad = String(meta.lessonNumber).padStart(2, '0');
+    const tsFileName = `${getSubjectKey(normS)}_${normG}b_${normO}_clase${classNumPad}.ts`;
+    const varName = `${getSubjectKey(normS).toUpperCase()}_${normG}B_${normO.toUpperCase()}_CLASE${classNumPad}`;
+
+    parsedBatch.push({
+      filePath,
+      meta,
+      lessonData,
+      tsFileName,
+      varName
     });
   }
 
-  console.log('\n[3/5] Actualizando exportaciones en index.ts de lecciones...');
-  updateLessonsIndexTs(generatedTsModules);
+  console.log(`  ✓ Preflight exitoso: ${parsedBatch.length} lecciones analizadas y validadas.`);
 
-  console.log('\n[4/5] Guardando paquetes JSON consolidados...');
-  fs.writeFileSync(ALL_GRADES_JSON_PATH, JSON.stringify(allGradesPackages, null, 2), 'utf8');
-  console.log(`  ✓ Actualizado: ${ALL_GRADES_JSON_PATH} (${allGradesPackages.length} paquetes)`);
+  // Escritura en staging aislado
+  console.log(`\n[3/4] Generando módulos TypeScript en ${targetLessonsDir}...`);
+  const manifestItems: any[] = [];
 
-  fs.writeFileSync(GRADE_7B_JSON_PATH, JSON.stringify(grade7bPackages, null, 2), 'utf8');
-  console.log(`  ✓ Actualizado: ${GRADE_7B_JSON_PATH} (${grade7bPackages.length} paquetes)`);
+  for (const item of parsedBatch) {
+    const outTsPath = path.join(targetLessonsDir, item.tsFileName);
+    const tsContent = `import { LessonData } from '../../../src/types/lesson';\n\n`
+      + `export const ${item.varName}: LessonData = ${JSON.stringify(item.lessonData, null, 2)};\n`;
 
-  console.log('\n[5/5] Generando manifiesto curricular de sincronización...');
+    fs.writeFileSync(outTsPath, tsContent, 'utf8');
+
+    const fileHash = crypto.createHash('sha256').update(fs.readFileSync(outTsPath)).digest('hex');
+
+    manifestItems.push({
+      subject: item.meta.subjectName,
+      oaCode: item.meta.oaCode,
+      classNumber: item.meta.lessonNumber,
+      title: item.lessonData.metadata.lessonTitle,
+      sourceFile: path.relative(ROOT, item.filePath).replace(/\\/g, '/'),
+      destModule: path.relative(ROOT, outTsPath).replace(/\\/g, '/'),
+      varName: item.varName,
+      hash: fileHash,
+      status: 'EN_REVISION'
+    });
+  }
+
+  console.log(`  ✓ Se generaron ${manifestItems.length} módulos TypeScript en preparación aislada.`);
+
+  // Generar manifiesto de staging
+  console.log(`\n[4/4] Guardando manifiesto de preparación aislada...`);
   const manifestData = {
     timestamp: new Date().toLocaleString('es-CL', { timeZone: 'America/Santiago' }) + ' [America/Santiago]',
     isoDate: new Date().toISOString(),
     totalLessonsProcessed: manifestItems.length,
     status: 'EN_REVISION',
+    environment: 'PREPARACION_AISLADA',
     lessons: manifestItems
   };
 
-  fs.mkdirSync(path.dirname(MANIFEST_DATA_PATH), { recursive: true });
-  fs.writeFileSync(MANIFEST_DATA_PATH, JSON.stringify(manifestData, null, 2), 'utf8');
-  console.log(`  ✓ Manifiesto guardado en: ${MANIFEST_DATA_PATH}`);
-
-  fs.mkdirSync(path.dirname(MANIFEST_PUBLIC_PATH), { recursive: true });
-  fs.writeFileSync(MANIFEST_PUBLIC_PATH, JSON.stringify(manifestData, null, 2), 'utf8');
-  console.log(`  ✓ Manifiesto público guardado en: ${MANIFEST_PUBLIC_PATH}`);
+  const manifestPath = path.join(targetManifestDir, 'staging_sync_manifest.json');
+  fs.writeFileSync(manifestPath, JSON.stringify(manifestData, null, 2), 'utf8');
+  console.log(`  ✓ Manifiesto guardado en: ${manifestPath}`);
 
   console.log('\n================================================================');
-  console.log('✅ SINCRONIZACIÓN UNIVERSAL COMPLETADA CON ÉXITO');
-  console.log(`   Total clases procesadas: ${manifestItems.length}`);
+  console.log('✅ PREPARACIÓN AISLADA COMPLETADA CON ÉXITO (SIN TOCAR PRODUCCIÓN)');
   console.log('================================================================\n');
-}
 
-function updatePackageInList(packageList: any[], meta: FileMetadata, adaptedGenLesson: any) {
-  const normG = normalizeGrade(meta.grade);
-  const normS = normalizeSubject(meta.subjectName);
-  const normO = normalizeOa(meta.oaCode);
-
-  let targetPkg = packageList.find((p: any) => {
-    return (
-      normalizeGrade(p.curso) === normG &&
-      normalizeSubject(p.asignatura) === normS &&
-      normalizeOa(p.oaCodigo) === normO
-    );
-  });
-
-  if (!targetPkg) {
-    const subjCodeMap: Record<string, string> = {
-      len: 'LEN',
-      cie: 'CIE',
-      his: 'HIS',
-      ing: 'ING',
-      mat: 'MAT'
-    };
-    const digitsOa = meta.oaCode.replace(/[^0-9]/g, '').padStart(2, '0');
-    const genOaId = `${meta.courseId}-${subjCodeMap[normS] || 'GEN'}-OA${digitsOa}`;
-
-    targetPkg = {
-      oaId: genOaId,
-      curso: meta.grade,
-      asignatura: meta.subjectName,
-      oaCodigo: meta.oaCode,
-      totalLecciones: meta.totalLessons,
-      lessons: []
-    };
-    packageList.push(targetPkg);
-  }
-
-  const existingIdx = targetPkg.lessons.findIndex((l: any) => l.num === meta.lessonNumber || l.classNumber === meta.lessonNumber);
-  if (existingIdx >= 0) {
-    targetPkg.lessons[existingIdx] = adaptedGenLesson;
-  } else {
-    targetPkg.lessons.push(adaptedGenLesson);
-  }
-
-  targetPkg.lessons.sort((a: any, b: any) => (a.num || 0) - (b.num || 0));
-}
-
-function updateLessonsIndexTs(newModules: Array<{ varName: string; filePath: string }>) {
-  const indexPath = path.resolve(LESSONS_TS_DIR, 'index.ts');
-  const allFiles = fs.readdirSync(LESSONS_TS_DIR).filter(f => f.endsWith('.ts') && f !== 'index.ts');
-
-  const exportLines: string[] = [];
-  for (const file of allFiles) {
-    const base = file.replace(/\.ts$/, '');
-    const content = fs.readFileSync(path.join(LESSONS_TS_DIR, file), 'utf8');
-    const varMatch = content.match(/export const ([A-Z0-9_]+):/);
-    if (varMatch) {
-      exportLines.push(`export { ${varMatch[1]} } from './${base}';`);
-    }
-  }
-
-  exportLines.sort();
-  fs.writeFileSync(indexPath, exportLines.join('\n') + '\n', 'utf8');
+  return { total: manifestItems.length, manifestPath };
 }
 
 if (process.argv[1] && process.argv[1].includes('pipeline_sync_lessons')) {

@@ -1,476 +1,444 @@
-import { LessonData } from '../../types/lesson';
+import { LessonData } from '../../../src/types/lesson';
 
 export const CIENCIAS_7B_OA01_CLASE04: LessonData = {
   "metadata": {
     "grade": "7° Básico",
     "subject": "Ciencias Naturales",
     "oaCode": "OA 1",
-    "oaTitle": "Sexualidad y Afectividad",
+    "oaTitle": "Ciencias Naturales - OA 1",
     "lessonNumber": 4,
     "totalLessonsInOa": 6,
-    "lessonTitle": "Responsabilidad Individual, Autocuidado y Consentimiento",
+    "lessonTitle": "Una situación",
     "durationMinutes": 30,
-    "nextLessonTitle": "Mitos, estereotipos y convivencia saludable"
+    "nextLessonTitle": ""
   },
   "prep": {
-    "adultObjective": "Acompañar al estudiante a reconocer el valor del consentimiento informado, el derecho inalienable a la privacidad corporal y la responsabilidad individual en las decisiones personales sobre la salud y la convivencia.",
-    "routeToday": "Aprender a cuidar el propio cuerpo, tomar decisiones informadas y ejercer el derecho a decir 'no' ante presiones externas, valorando el consentimiento como norma básica de convivencia y autocuidado.",
-    "mentorReminder": "Sigue el guion leyendo en voz alta únicamente los recuadros DILE y PREGÚNTALE. El contenido pedagógico y las respuestas esperadas te indican con total precisión qué debe responder el estudiante.",
+    "adultObjective": "Identificar estereotipos de género en situaciones ficticias y explicar por qué no deben limitar talentos, emociones ni oportunidades.",
+    "routeToday": "Ruta guiada de la clase 4",
+    "mentorReminder": "Identificar estereotipos de género en situaciones ficticias y explicar por qué no deben limitar talentos, emociones ni oportunidades.",
     "reminders": [
-      "El consentimiento y el autocuidado son derechos fundamentales de todo ser humano.",
-      "Lee en voz alta únicamente los textos con la etiqueta DILE o PREGÚNTALE.",
-      "Refuerza la seguridad personal y la asertividad para establecer límites claros.",
-      "Valora la capacidad reflexiva y ética del estudiante."
+      "Acompaña al estudiante y valora su proceso."
     ],
-    "emotionalTip": "Brinda seguridad y valida su autonomía. Saber que cuenta con el apoyo de adultos de confianza ante cualquier situación incómoda le entrega tranquilidad."
+    "emotionalTip": "Usar exclusivamente los casos ficticios. No solicitar información sobre cuerpo, identidad, vínculos o experiencias íntimas del estudiante. Escuchar con respeto. No diagnosticar ni comparar ritmos de desarrollo."
   },
   "route": {
     "blocks": [
       {
         "id": "b1",
         "number": "01",
-        "title": "Ciencias Naturales",
-        "subtitle": "Dimensión Ética",
+        "title": "Punto de partida",
+        "subtitle": "Activación",
         "color": "teal"
       },
       {
         "id": "b2",
         "number": "02",
-        "title": "Autocuidado y Consentimiento",
-        "subtitle": "Límites Corporales y Asertividad",
+        "title": "Motivación y Explicación",
+        "subtitle": "14 láminas",
         "color": "orange"
       },
       {
         "id": "b3",
         "number": "03",
-        "title": "Práctica",
-        "subtitle": "Casos y Cuaderno de Ciencias",
+        "title": "Práctica guiada",
+        "subtitle": "Transferencia",
         "color": "yellow"
       },
       {
         "id": "b4",
         "number": "04",
-        "title": "Evaluación",
-        "subtitle": "Miniquiz y Síntesis Formativa",
+        "title": "Miniquiz",
+        "subtitle": "Evaluación y cierre",
         "color": "navy"
       }
     ],
-    "keyQuestions": [
-      {
-        "label": "Responsabilidad individual",
-        "sub": "Decisiones autónomas e informadas sobre el cuerpo"
-      },
-      {
-        "label": "Principio de consentimiento",
-        "sub": "Libre, explícito, voluntario y revocable"
-      },
-      {
-        "label": "Límites y asertividad",
-        "sub": "El poder de decir 'no' con seguridad ante presiones"
-      }
-    ],
-    "dileIntro": "Hoy comenzaremos la cuarta clase de Ciencias Naturales para 7° Básico: 'Responsabilidad Individual, Autocuidado y Consentimiento'.",
-    "dileObjective": "Comprender que cada persona es dueña de su propio cuerpo y responsable de sus acciones, reconociendo el consentimiento mutuo y la asertividad como herramientas esenciales de protección y respeto."
+    "dileIntro": "Hoy avanzaremos en una nueva clase interactiva.",
+    "dileObjective": "Una situación"
   },
   "situation": {
-    "dilePrompt": "En un grupo de amigos, varios insisten para que un compañero haga algo peligroso o comparta información privada que lo hace sentir incómodo. El estudiante respira con serenidad y responde con firmeza: 'No, no quiero hacerlo y prefiero que cambiemos de tema'. ¿Qué derecho fundamental y principio de autocuidado está ejerciendo?",
-    "expectedAnswer": "Está ejerciendo su derecho al consentimiento, a establecer límites personales sobre su cuerpo y privacidad, y a tomar decisiones con autonomía sin ceder a la presión de grupo.",
-    "socraticHint": "Piensa en la libertad que tiene toda persona para negarse a realizar algo que atente contra su seguridad o bienestar.",
-    "emotionalTip": "Felicita la valentía de decir 'no': poner límites a tiempo es una de las mayores muestras de madurez y autoestima.",
+    "dilePrompt": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",
+    "expectedAnswer": "El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo.",
+    "socraticHint": "Fíjate en los detalles destacados.",
+    "emotionalTip": "Usar exclusivamente los casos ficticios. No solicitar información sobre cuerpo, identidad, vínculos o experiencias íntimas del estudiante. Escuchar con respeto. No diagnosticar ni comparar ritmos de desarrollo.",
     "options": [
       {
-        "label": "Mencionó el consentimiento, los límites personales, el autocuidado o el derecho a decir 'no'",
+        "label": "El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo.",
         "kind": "correct",
-        "feedbackText": "¡Exacto! Poner límites claros y decir 'no' con asertividad es la base del autocuidado y la responsabilidad personal."
+        "feedbackText": "¡Muy bien observado!"
       },
       {
-        "label": "Dijo que debía ceder para no quedar mal con los amigos",
+        "label": "Requiere apoyo adicional",
         "kind": "needs_support",
-        "feedbackText": "Ceder ante presiones por miedo al rechazo pone en riesgo la seguridad. Los verdaderos amigos respetan un 'no' sincero."
+        "feedbackText": "Revisa nuevamente la situación inicial."
       },
       {
-        "label": "No sabe o tiene dudas",
+        "label": "No sabe qué responder",
         "kind": "no_answer",
-        "feedbackText": "Pista guiada: Es el principio del consentimiento y el autocuidado, que nos permite decidir sobre nuestro cuerpo y privacidad."
+        "feedbackText": "Leamos juntos para descubrir la pista."
       }
     ]
   },
   "reference": {
-    "dilePrompt": "El consentimiento es la manifestación libre, voluntaria, clara y consciente de aceptar o no una situación, contacto o propuesta. Un consentimiento real jamás se obtiene mediante amenazas, engaños o presiones indebidas.",
-    "question": "Con tus propias palabras: ¿cuáles son las características que hacen que un consentimiento sea verdaderamente válido?",
-    "expectedAnswer": "Debe ser completamente libre (sin presiones ni miedos), consciente (sabiendo lo que ocurre), explícito y revocable (se puede cambiar de opinión en cualquier momento).",
-    "socraticHint": "Piensa si un 'sí' dicho por miedo o por cansancio ante tanta insistencia es realmente libre.",
-    "feedbackSuccess": "¡Brillante distinción! Si hay presión o miedo, no hay consentimiento real; el consentimiento debe ser siempre libre y revocable.",
-    "feedbackSupport": "Recuerda: el consentimiento solo es válido si es libre, informado y voluntario. Si alguien dice 'no', ese límite debe respetarse inmediatamente."
+    "dilePrompt": "¿Qué parte es un interés individual y qué parte es un estereotipo?",
+    "question": "¿Qué información entrega el punto de partida?",
+    "expectedAnswer": "El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo.",
+    "socraticHint": "Localiza las palabras clave.",
+    "feedbackSuccess": "¡Excelente fundamentación!",
+    "feedbackSupport": "Revisa la lectura para confirmar los datos."
   },
   "hook": {
-    "title": "El escudo personal: Decidir con autonomía y valor",
-    "dileIntro": "Vamos a observar cómo el autocuidado y la toma de decisiones informadas nos permiten actuar como guardianes de nuestro propio bienestar físico y emocional.",
-    "hazInstruction": "Presta atención a cómo el respeto a los límites personales previene situaciones de riesgo y observa cómo actúa la asertividad frente a la presión de grupo.",
+    "title": "Motivación",
+    "titulo": "Motivación",
+    "focusPoints": [],
+    "dileIntro": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",
+    "hazInstruction": "Observa y reflexiona con las escenas del video.",
     "videoSrc": "",
-    "focusPoints": [
-      "Responsabilidad individual: asumir las consecuencias de nuestros actos.",
-      "Consentimiento informado: acuerdo libre, consciente y voluntario.",
-      "Límites corporales: el cuerpo es un espacio personal inviolable.",
-      "Asertividad: comunicar nuestras decisiones con firmeza, claridad y respeto."
-    ],
-    "dileAfterVideo": "Conversemos sobre lo observado en el video. Te haré dos preguntas para profundizar en el autocuidado.",
+    "dileAfterVideo": "¿Qué observaste en esta situación inicial?",
     "slides": [
       {
         "slideNumber": 1,
-        "tituloMomento": "Apertura y el Valor de Decidir",
-        "didacticPurpose": "Apertura y el Valor de Decidir",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing in front of a welcoming digital board displaying the four pillars of responsible consent and self-care, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Misión 4: Responsabilidad y Consentimiento",
-        "overlayTitle": "Misión 4: El poder de decidir",
-        "overlaySubtitle": "Cuidar el propio cuerpo y asumir decisiones conscientes",
-        "vectorialOverlayPptx": "Camino de decisiones: Reflexión previa -> Evaluación de consecuencias -> Acción responsable",
-        "mathOverlayPptx": "Camino de decisiones: Reflexión previa -> Evaluación de consecuencias -> Acción responsable",
-        "speakerNotes": "Comienza una lección fundamental en ciencias. El autocuidado y la responsabilidad personal son herramientas que protegen nuestro bienestar físico, emocional y social.",
-        "palabrasAprox": 22,
-        "duracionSeg": 10
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Una situación",
+        "visualPrompt": "",
+        "overlayText": "Una situación",
+        "overlayTitle": "Una situación",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Una situación",
+        "speakerNotes": "Hoy exploraremos aspectos sociales y estereotipos. Observaremos el caso y buscaremos pistas antes de sacar una conclusión.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 2,
-        "tituloMomento": "El Cuerpo como Territorio Propio",
-        "didacticPurpose": "El Cuerpo como Territorio Propio",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing calmly in front of a study room with an open hand sign projecting serene confidence and clear personal boundaries, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Límites Corporales: Espacio Inviolable",
-        "overlayTitle": "El cuerpo es personal",
-        "overlaySubtitle": "Límites claros que nadie debe cruzar sin permiso",
-        "vectorialOverlayPptx": "Escudo personal: El cuerpo humano es un espacio inviolable con derecho a la privacidad",
-        "mathOverlayPptx": "Escudo personal: El cuerpo humano es un espacio inviolable con derecho a la privacidad",
-        "speakerNotes": "El consentimiento es el acuerdo libre, consciente y voluntario mediante el cual una persona acepta participar en una situación determinada.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "La pregunta",
+        "visualPrompt": "",
+        "overlayText": "La pregunta",
+        "overlayTitle": "La pregunta",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "La pregunta",
+        "speakerNotes": "Valeria quiere construir un robot. Un compañero afirma que las niñas no son buenas para la ciencia. Mantén a la vista la situación y distingue lo que informa de lo que suponemos.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 3,
-        "tituloMomento": "El Consentimiento: Libre y Consciente",
-        "didacticPurpose": "El Consentimiento: Libre y Consciente",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, assembling four glowing holographic puzzle pieces representing free, informed, specific, and revocable consent, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Consentimiento: Libertad sin Coacción",
-        "overlayTitle": "El principio del consentimiento",
-        "overlaySubtitle": "Un acuerdo mutuo, informado y voluntario",
-        "vectorialOverlayPptx": "Definición ética: Libre de presiones + Plenamente informado + Revocable en todo momento",
-        "mathOverlayPptx": "Definición ética: Libre de presiones + Plenamente informado + Revocable en todo momento",
-        "speakerNotes": "Para que el consentimiento sea válido, nadie debe presionar, amenazar o manipular. La decisión debe tomarse con total tranquilidad y conocimiento.",
-        "palabrasAprox": 21,
-        "duracionSeg": 10
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Primera idea",
+        "visualPrompt": "",
+        "overlayText": "Primera idea",
+        "overlayTitle": "Primera idea",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Primera idea",
+        "speakerNotes": "¿Qué parte es un interés individual y qué parte es un estereotipo? Puedes plantear una primera idea; después comprobaremos qué información la apoya.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 4,
-        "tituloMomento": "La Fuerza de la Asertividad",
-        "didacticPurpose": "La Fuerza de la Asertividad",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, expressing a calm and assertive refusal in front of peers, surrounded by a gentle aura of dignity and self-respect, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Asertividad: Decir 'No' con Firmeza",
-        "overlayTitle": "El valor de decir 'no'",
-        "overlaySubtitle": "Expresar los propios límites con serenidad y claridad",
-        "vectorialOverlayPptx": "Estrategia asertiva: Postura erguida + Tono firme y tranquilo + Mensaje directo sin rodeos",
-        "mathOverlayPptx": "Estrategia asertiva: Postura erguida + Tono firme y tranquilo + Mensaje directo sin rodeos",
-        "speakerNotes": "Decir no con seguridad es un derecho inviolable. La asertividad nos permite fijar límites personales claros frente a la presión de grupo.",
-        "palabrasAprox": 22,
-        "duracionSeg": 10
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Busca pistas",
+        "visualPrompt": "",
+        "overlayText": "Busca pistas",
+        "overlayTitle": "Busca pistas",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Busca pistas",
+        "speakerNotes": "Observa la situación. ¿Qué detalle podría ayudarte a responder? Una pista útil debe ayudarnos a responder la pregunta que estamos explorando.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 5,
-        "tituloMomento": "Frente a la Presión de Grupo",
-        "didacticPurpose": "Frente a la Presión de Grupo",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, holding an illustrated protective symbolic boundary safeguarding personal space and digital privacy against peer pressure, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Autonomía frente a la Presión",
-        "overlayTitle": "Resistir la presión social",
-        "overlaySubtitle": "Priorizar el bienestar sobre la aprobación ajena",
-        "vectorialOverlayPptx": "Capa de criterio: El valor propio no depende de complacer a los demás en conductas de riesgo",
-        "mathOverlayPptx": "Capa de criterio: El valor propio no depende de complacer a los demás en conductas de riesgo",
-        "speakerNotes": "El consentimiento también se aplica en el mundo digital: no compartir fotografías, mensajes o información privada de otros sin su autorización explícita.",
-        "palabrasAprox": 22,
-        "duracionSeg": 10
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Compara posibilidades",
+        "visualPrompt": "",
+        "overlayText": "Compara posibilidades",
+        "overlayTitle": "Compara posibilidades",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Compara posibilidades",
+        "speakerNotes": "Una respuesta necesita información del recurso. Buscaremos pistas para fundamentarla. Dos respuestas pueden parecer posibles; necesitamos revisar cuál tiene respaldo.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 6,
-        "tituloMomento": "Redes de Apoyo y Confianza",
-        "didacticPurpose": "Redes de Apoyo y Confianza",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, talking with a trusted teacher and guidance counselor in a brightly lit room, receiving supportive advice, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Redes de Apoyo: Adultos Confiables",
-        "overlayTitle": "Buscar orientación oportuna",
-        "overlaySubtitle": "Familia, profesores y profesionales de apoyo",
-        "vectorialOverlayPptx": "Red protectora: Identificar adultos de confianza ante dudas, malestar o vulneraciones",
-        "mathOverlayPptx": "Red protectora: Identificar adultos de confianza ante dudas, malestar o vulneraciones",
-        "speakerNotes": "Si una situación nos incomoda o vulnera nuestros límites, acudir de inmediato a adultos de confianza en la familia o el colegio es indispensable.",
-        "palabrasAprox": 24,
-        "duracionSeg": 11
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Una estrategia",
+        "visualPrompt": "",
+        "overlayText": "Una estrategia",
+        "overlayTitle": "Una estrategia",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Una estrategia",
+        "speakerNotes": "Lee el recurso y relaciona sus detalles antes de elegir una explicación. La clase mostrará cómo relacionar las pistas y explicar esa relación paso a paso.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 7,
-        "tituloMomento": "La Pregunta Detonante",
-        "didacticPurpose": "La Pregunta Detonante",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, holding open science notebooks, ready to evaluate ethical consent scenarios in an organized study room, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "StudioSimple · Ciencias Naturales",
-        "overlayTitle": "El desafío ético",
-        "overlaySubtitle": "¿Cómo aplicamos el consentimiento día a día?",
-        "vectorialOverlayPptx": "Pregunta detonante: ¿Qué criterio ético nos guía ante una situación de presión?",
-        "mathOverlayPptx": "Pregunta detonante: ¿Qué criterio ético nos guía ante una situación de presión?",
-        "speakerNotes": "Surge ahora el desafío ético: ante una decisión cotidiana con amigos, ¿cómo comprobamos que existe un consentimiento plenamente válido?",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Puente a la lectura",
+        "visualPrompt": "",
+        "overlayText": "Puente a la lectura",
+        "overlayTitle": "Puente a la lectura",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Puente a la lectura",
+        "speakerNotes": "Ahora descubriremos cómo las pistas ayudan a comprender esta situación. Luego aplicarás el criterio a otra situación breve, con menor ayuda.",
+        "duracionSeg": 8
       }
     ]
   },
   "preQuestions": [
     {
-      "context": "Distinción entre acuerdo libre y coacción",
-      "question": "Si alguien acepta hacer algo solo porque sus amigos le dijeron que si no lo hacía dejarían de hablarle, ¿existe consentimiento real? Justifica.",
-      "expected": "No existe consentimiento real, porque esa persona fue presionada mediante chantaje emocional y miedo al rechazo; el consentimiento debe ser completamente libre.",
-      "success": "¡Exacto! El consentimiento bajo amenaza o chantaje no es consentimiento; es coacción.",
-      "support": "Recuerda las características del consentimiento: ¿fue una decisión voluntaria y con gusto, o impuesta por miedo a perder amigos?",
-      "reveal": "No hay consentimiento válido cuando media la presión o la amenaza; la decisión debe ser auténticamente voluntaria.",
-      "studentReveal": "No hay consentimiento porque actuó por miedo al rechazo y bajo presión."
+      "context": "Valeria quiere construir un robot. Un compañero afirma que las niñas no son buenas para la ciencia.",
+      "question": "¿Qué parte es un interés individual y qué parte es un estereotipo?",
+      "expected": "El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo.",
+      "success": "Una parte habla de una persona y la otra generaliza sobre un grupo.",
+      "support": "Si no localiza información, releer esta pista del contexto: «Valeria quiere construir un robot. Un compañero afirma que las niñas no son buenas para la ciencia.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta.",
+      "reveal": "El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento.",
+      "studentReveal": "El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo."
     },
     {
-      "context": "La revocabilidad del consentimiento",
-      "question": "Si una persona acepta participar en una actividad pero durante el desarrollo se siente incómoda y decide retirarse, ¿tiene derecho a cambiar de opinión?",
-      "expected": "Sí, absolutamente. El consentimiento es revocable en cualquier momento: si alguien cambia de opinión y dice 'basta', se debe respetar de inmediato.",
-      "success": "¡Brillante principio ético! El consentimiento es continuo y se puede retirar cuando la persona lo decida.",
-      "support": "Piensa en el derecho a proteger el bienestar propio: ¿estamos obligados a continuar algo si nos hace sentir mal?",
-      "reveal": "El consentimiento es revocable en cualquier momento: un 'sí' inicial no obliga a continuar si surge incomodidad o malestar.",
-      "studentReveal": "Sí, tiene derecho porque el consentimiento se puede retirar en cualquier momento."
+      "context": "Tomás expresa tristeza. Una compañera escucha mientras otro le dice que los niños no deben mostrar emociones.",
+      "question": "¿Qué respuesta respeta a Tomás y por qué?",
+      "expected": "Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión.",
+      "success": "El caso presenta una emoción concreta y una regla impuesta a todos los niños.",
+      "support": "Si no localiza información, releer esta pista del contexto: «Tomás expresa tristeza. Una compañera escucha mientras otro le dice que los niños no deben mostrar emociones.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta.",
+      "reveal": "Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento.",
+      "studentReveal": "Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión."
     }
   ],
-  "conversationContext": "Profundizaremos en cómo la responsabilidad personal, el consentimiento explícito y la asertividad constituyen el escudo del autocuidado.",
+  "conversationContext": "Diálogo guiado para profundizar en los elementos clave.",
   "formalization": {
-    "title": "Consentimiento, Límites Corporales y Autocuidado",
-    "concept": "El consentimiento mutuo y la toma de decisiones informadas",
-    "summary": "La responsabilidad individual en la sexualidad implica cuidar el propio cuerpo y responder por las consecuencias de las decisiones tomadas. El consentimiento es el principio ético rector de toda interacción humana: debe ser libre, informado, explícito y revocable en todo instante.",
-    "ideaClave": "El consentimiento informado y el respeto irrestricto a los límites corporales constituyen la base innegociable del autocuidado y la dignidad humana.",
-    "dileIntro": "Ahora formalizaremos los cuatro criterios obligatorios del consentimiento y cómo aplicarlos en situaciones de la vida real.",
-    "hazInstruction": "Revisa el objetivo formal y analiza con atención el caso modelado de protección de la privacidad.",
+    "title": "Un estereotipo atribuye una característica a todo un grupo sin conocer a cada persona. Una diferencia corporal no demuestra que exista una capacidad, emoción u ocupación exclusiva. Las oportunidades deben considerar a las personas y sus intereses.",
+    "concept": "Un estereotipo atribuye una característica a todo un grupo sin conocer a cada persona. Una diferencia corporal no demuestra que exista una capacidad, emoción u ocupación exclusiva. Las oportunidades deben considerar a las personas y sus intereses.",
+    "summary": "Consolidación de las ideas clave.",
+    "ideaClave": "Un estereotipo atribuye una característica a todo un grupo sin conocer a cada persona. Una diferencia corporal no demuestra que exista una capacidad, emoción u ocupación exclusiva. Las oportunidades deben considerar a las personas y sus intereses.",
+    "dileIntro": "Ahora consolidaremos los aprendizajes esenciales.",
+    "hazInstruction": "Registra en tu cuaderno el concepto principal.",
+    "graphicPoster": "",
     "videoSrc": "",
     "slides": [
       {
-        "slideNumber": 1,
-        "tituloMomento": "Objetivo de la Lección",
-        "didacticPurpose": "Objetivo de la Lección",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing before a four-part criteria board illustrating consent: free, informed, specific, and revocable, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Principios del Consentimiento",
-        "overlayTitle": "Objetivo de la lección",
-        "overlaySubtitle": "Reconocer consentimiento mutuo, límites corporales y autocuidado",
-        "vectorialOverlayPptx": "Rótulo formal: OA 01 · Consentimiento, Límites Corporales y Autocuidado",
-        "mathOverlayPptx": "Rótulo formal: OA 01 · Consentimiento, Límites Corporales y Autocuidado",
-        "speakerNotes": "El objetivo de la lección es analizar y aplicar los cuatro criterios innegociables del consentimiento: libre, informado, específico y siempre revocable.",
-        "palabrasAprox": 21,
-        "duracionSeg": 10
+        "slideNumber": 8,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Una herramienta",
+        "visualPrompt": "",
+        "overlayText": "Una herramienta",
+        "overlayTitle": "Una herramienta",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Una herramienta",
+        "speakerNotes": "Las amistades y la familia transmiten ideas. Podemos examinar esas ideas sin tratar todas sus opiniones como hechos.",
+        "duracionSeg": 8
       },
       {
-        "slideNumber": 2,
-        "tituloMomento": "El Principio de la Autonomía Corporal",
-        "didacticPurpose": "El Principio de la Autonomía Corporal",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing a four-quadrant infographic breaking down unpressured choice, truth, context, and the right to revoke consent, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Autonomía: Mi Cuerpo me Pertenece",
-        "overlayTitle": "Autonomía corporal inviolable",
-        "overlaySubtitle": "El derecho a la integridad física y emocional",
-        "vectorialOverlayPptx": "Marco normativo: Declaración universal de derechos y protección legal de niños y adolescentes",
-        "mathOverlayPptx": "Marco normativo: Declaración universal de derechos y protección legal de niños y adolescentes",
-        "speakerNotes": "El primer criterio exige que el consentimiento sea libre: sin chantajes, amenazas ni presiones de grupo. Si existe coacción, el consentimiento es nulo.",
-        "palabrasAprox": 23,
-        "duracionSeg": 10
+        "slideNumber": 9,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "El criterio",
+        "visualPrompt": "",
+        "overlayText": "El criterio",
+        "overlayTitle": "El criterio",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "El criterio",
+        "speakerNotes": "La frase sobre las niñas y la ciencia atribuye una capacidad a todo un grupo. No considera a Valeria. Valeria quiere construir un robot. Esa información describe su interés y permite darle una oportunidad de aprender.",
+        "duracionSeg": 8
       },
       {
-        "slideNumber": 3,
-        "tituloMomento": "Los 4 Criterios del Consentimiento",
-        "didacticPurpose": "Los 4 Criterios del Consentimiento",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, observing a student changing their mind during an activity with classmates stopping immediately and nodding respectfully, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Los 4 Criterios del Consentimiento",
-        "overlayTitle": "Criterios del consentimiento válido",
-        "overlaySubtitle": "Libre, informado, específico y revocable",
-        "vectorialOverlayPptx": "Pauta de verificación: Sin presión (Libre) + Con conocimiento (Informado) + Concreto (Específico) + Modificable (Revocable)",
-        "mathOverlayPptx": "Pauta de verificación: Sin presión (Libre) + Con conocimiento (Informado) + Concreto (Específico) + Modificable (Revocable)",
-        "speakerNotes": "El consentimiento válido requiere cuatro condiciones ineludibles: ser libre de presiones, plenamente informado, específico para la situación concreta y revocable en cualquier momento.",
-        "palabrasAprox": 27,
-        "duracionSeg": 12
+        "slideNumber": 10,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Relación entre pistas",
+        "visualPrompt": "",
+        "overlayText": "Relación entre pistas",
+        "overlayTitle": "Relación entre pistas",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Relación entre pistas",
+        "speakerNotes": "La frase que impide a los niños mostrar emociones también generaliza y limita una experiencia humana. Escuchar a Tomás y permitir que Valeria participe evita usar estereotipos para decidir por ellos.",
+        "duracionSeg": 8
       },
       {
-        "slideNumber": 4,
-        "tituloMomento": "La Asertividad en la Práctica",
-        "didacticPurpose": "La Asertividad en la Práctica",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing firmly in the light with moral confidence, resisting group pressure and upholding personal boundaries, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Comunicación Asertiva y Firme",
-        "overlayTitle": "La técnica de la asertividad",
-        "overlaySubtitle": "Expresar límites sin agresividad ni sumisión",
-        "vectorialOverlayPptx": "Triángulo comunicativo: Pasivo (someterse) vs Agresivo (atacar) vs Asertivo (afirmar límites con respeto)",
-        "mathOverlayPptx": "Triángulo comunicativo: Pasivo (someterse) vs Agresivo (atacar) vs Asertivo (afirmar límites con respeto)",
-        "speakerNotes": "La asertividad es la capacidad de expresar límites y decisiones de manera clara, serena y firme, sin agredir a otros ni someterse a presiones grupales contrarias a nuestras convicciones.",
-        "palabrasAprox": 24,
-        "duracionSeg": 11
+        "slideNumber": 11,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Modelo explicado",
+        "visualPrompt": "",
+        "overlayText": "Modelo explicado",
+        "overlayTitle": "Modelo explicado",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Modelo explicado",
+        "speakerNotes": "Valeria quiere construir un robot. Un compañero afirma que las niñas no son buenas para la ciencia. ¿Qué parte es un interés individual y qué parte es un estereotipo? El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo. Una parte habla de una persona y la otra generaliza sobre un grupo.",
+        "duracionSeg": 8
       },
       {
-        "slideNumber": 5,
-        "tituloMomento": "Responsabilidad y Consecuencias",
-        "didacticPurpose": "Responsabilidad y Consecuencias",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, pausing thoughtfully before a decision pathway flowchart, carefully weighing causes and consequences of actions, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Decisiones Informadas y Futuro",
-        "overlayTitle": "Pensar antes de actuar",
-        "overlaySubtitle": "Evaluar consecuencias a corto y largo plazo",
-        "vectorialOverlayPptx": "Matriz de discernimiento: Estimar riesgos potenciales -> Proteger la salud -> Actuar éticamente",
-        "mathOverlayPptx": "Matriz de discernimiento: Estimar riesgos potenciales -> Proteger la salud -> Actuar éticamente",
-        "speakerNotes": "Pensar antes de actuar implica evaluar las consecuencias individuales y sociales de nuestras acciones; la responsabilidad personal exige cuidar la propia integridad y la de los demás.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        "slideNumber": 12,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Comprobación",
+        "visualPrompt": "",
+        "overlayText": "Comprobación",
+        "overlayTitle": "Comprobación",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Comprobación",
+        "speakerNotes": "Tomás expresa tristeza. Una compañera escucha mientras otro le dice que los niños no deben mostrar emociones. ¿Qué respuesta respeta a Tomás y por qué? Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión. El caso presenta una emoción concreta y una regla impuesta a todos los niños.",
+        "duracionSeg": 8
       },
       {
-        "slideNumber": 6,
-        "tituloMomento": "Caso Modelado: Presión por Contenido Privado",
-        "didacticPurpose": "Caso Modelado: Presión por Contenido Privado",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, reviewing an illustrated decision flowchart of valid consent on a tablet at their desk, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Caso Modelado: Consentimiento y Asertividad",
-        "overlayTitle": "Caso Modelado: Presión por Contenido Privado",
-        "overlaySubtitle": "Establecer límites firmes ante la insistencia",
-        "vectorialOverlayPptx": "Desglose del caso: Presión de pares para compartir imagen privada -> Negativa asertiva inmediata -> Principio de consentimiento protegido",
-        "mathOverlayPptx": "Desglose del caso: Presión de pares para compartir imagen privada -> Negativa asertiva inmediata -> Principio de consentimiento protegido",
-        "speakerNotes": "Analicemos un caso concreto: un grupo insiste para que un estudiante comparta una foto privada ajena o propia y el estudiante se niega con firmeza diciendo que la privacidad debe respetarse. ¿Qué principio se evidencia? Se evidencia el ejercicio del consentimiento informado, el derecho a la privacidad y el uso de la asertividad para fijar límites claros frente a la presión de grupo.",
-        "palabrasAprox": 63,
-        "duracionSeg": 29
+        "slideNumber": 13,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Error y corrección",
+        "visualPrompt": "",
+        "overlayText": "Error y corrección",
+        "overlayTitle": "Error y corrección",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Error y corrección",
+        "speakerNotes": "Un error que debemos evitar: Confundir una expectativa social con una capacidad biológica demostrada. Si la respuesta añade información, vuelve al recurso y corrígela.",
+        "duracionSeg": 8
       },
       {
-        "slideNumber": 7,
-        "tituloMomento": "Síntesis y Regla de Oro",
-        "didacticPurpose": "Síntesis y Regla de Oro",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, presenting a protective shield with four gold stars representing the criteria of consent in a bright school setting, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Regla de Oro: Consentimiento y Autocuidado",
-        "overlayTitle": "Regla de Oro del consentimiento",
-        "overlaySubtitle": "Límites claros y respeto corporal mutuo",
-        "vectorialOverlayPptx": "Infografía de síntesis: El consentimiento libre y la asertividad garantizan la convivencia digna",
-        "mathOverlayPptx": "Infografía de síntesis: El consentimiento libre y la asertividad garantizan la convivencia digna",
-        "speakerNotes": "Recuerda la regla de oro: el consentimiento debe ser libre, informado, específico y siempre revocable. ¡Ahora pon a prueba lo aprendido resolviendo las actividades prácticas en la plataforma interactiva!",
-        "palabrasAprox": 29,
-        "duracionSeg": 13
+        "slideNumber": 14,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Síntesis y práctica",
+        "visualPrompt": "",
+        "overlayText": "Síntesis y práctica",
+        "overlayTitle": "Síntesis y práctica",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Síntesis y práctica",
+        "speakerNotes": "Los estereotipos no deben limitar oportunidades. Lee, localiza evidencia, explica y comprueba. Continúa con la práctica interactiva.",
+        "duracionSeg": 8
       }
     ]
   },
   "postQuestions": [
     {
-      "context": "Caso 1: Negativa asertiva ante presión digital",
-      "question": "Un grupo de compañeros insiste para que un estudiante comparta una fotografía privada de otra persona o propia. El estudiante se niega con firmeza diciendo que la privacidad debe respetarse. ¿Qué principio de responsabilidad y autocuidado se evidencia?",
-      "expected": "Se evidencia el principio del consentimiento y el respeto a la privacidad, estableciendo un límite claro mediante comunicación asertiva ante la presión del grupo.",
-      "success": "¡Excelente resolución! Identificaste la aplicación práctica del consentimiento y la asertividad protectora.",
-      "support": "Fíjate en la acción: decir 'no' frente a la insistencia para proteger la intimidad. ¿Qué principios aprendidos representa?",
-      "reveal": "Se evidencia el ejercicio del consentimiento informado, el derecho a la privacidad y el uso de la asertividad para fijar límites.",
-      "studentReveal": "El principio del consentimiento y la privacidad, defendiendo sus límites con asertividad."
-    },
-    {
-      "context": "Caso 2: Redes de apoyo ante el acoso",
-      "question": "Un adolescente nota que una compañera está siendo presionada en los recreos y se siente asustada. ¿Qué acción responsable y solidaria puede realizar para apoyarla?",
-      "expected": "Acompañarla, validar su malestar y acudir junto a ella a informar a un profesor, inspector o adulto de confianza para detener la situación.",
-      "success": "¡Exacto! La empatía activa y la denuncia ante adultos responsables protegen a las personas vulneradas.",
-      "support": "Piensa en no ser un espectador pasivo: ¿cómo podemos conectar a la víctima con adultos que puedan ayudarla?",
-      "reveal": "La solidaridad exige acompañar a la persona afectada y reportar la situación a adultos de confianza para activar el protocolo de protección.",
-      "studentReveal": "Acompañarla y avisar a un profesor o adulto responsable para que intervenga."
+      "context": "Comprobación 1",
+      "question": "¿Qué respuesta respeta a Tomás y por qué?",
+      "expected": "Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión.",
+      "success": "Respuesta precisa y fundamentada",
+      "support": "Revisa el concepto clave expuesto",
+      "reveal": "Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión.",
+      "studentReveal": "Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión."
     }
   ],
   "practice": [
     {
-      "context": "Caso 1: Negativa asertiva ante presión digital",
-      "question": "Un grupo de compañeros insiste para que un estudiante comparta una fotografía privada de otra persona o propia. El estudiante se niega con firmeza diciendo que la privacidad debe respetarse. ¿Qué principio de responsabilidad y autocuidado se evidencia?",
-      "expected": "Se evidencia el principio del consentimiento y el respeto a la privacidad, estableciendo un límite claro mediante comunicación asertiva ante la presión del grupo.",
-      "success": "¡Excelente resolución! Identificaste la aplicación práctica del consentimiento y la asertividad protectora.",
-      "support": "Fíjate en la acción: decir 'no' frente a la insistencia para proteger la intimidad. ¿Qué principios aprendidos representa?",
-      "reveal": "Se evidencia el ejercicio del consentimiento informado, el derecho a la privacidad y el uso de la asertividad para fijar límites.",
-      "studentReveal": "El principio del consentimiento y la privacidad, defendiendo sus límites con asertividad."
+      "context": "Valeria quiere construir un robot. Un compañero afirma que las niñas no son buenas para la ciencia.",
+      "question": "¿Qué parte es un interés individual y qué parte es un estereotipo? Escribe una respuesta y señala la pista que la sostiene.",
+      "expected": "El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo.",
+      "success": "Una parte habla de una persona y la otra generaliza sobre un grupo.",
+      "support": "Revisa los datos del recurso",
+      "reveal": "El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo.",
+      "studentReveal": "El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo."
     },
     {
-      "context": "Caso 2: Redes de apoyo ante el acoso",
-      "question": "Un adolescente nota que una compañera está siendo presionada en los recreos y se siente asustada. ¿Qué acción responsable y solidaria puede realizar para apoyarla?",
-      "expected": "Acompañarla, validar su malestar y acudir junto a ella a informar a un profesor, inspector o adulto de confianza para detener la situación.",
-      "success": "¡Exacto! La empatía activa y la denuncia ante adultos responsables protegen a las personas vulneradas.",
-      "support": "Piensa en no ser un espectador pasivo: ¿cómo podemos conectar a la víctima con adultos que puedan ayudarla?",
-      "reveal": "La solidaridad exige acompañar a la persona afectada y reportar la situación a adultos de confianza para activar el protocolo de protección.",
-      "studentReveal": "Acompañarla y avisar a un profesor o adulto responsable para que intervenga."
+      "context": "Tomás expresa tristeza. Una compañera escucha mientras otro le dice que los niños no deben mostrar emociones.",
+      "question": "¿Qué respuesta respeta a Tomás y por qué? Escribe una respuesta y señala la pista que la sostiene.",
+      "expected": "Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión.",
+      "success": "El caso presenta una emoción concreta y una regla impuesta a todos los niños.",
+      "support": "Revisa los datos del recurso",
+      "reveal": "Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión.",
+      "studentReveal": "Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión."
     },
     {
-      "context": "Caso 3: Trabajo en el Cuaderno de Ciencias",
-      "question": "Abre tu cuaderno de Ciencias Naturales. Escribe el título: 'Mis 3 Reglas de Autocuidado y Consentimiento'. Redacta tres normas personales claras que aplicarás en tu vida diaria para cuidar tu cuerpo, tu privacidad y respetar los límites de los demás.",
-      "expected": "Registro completo de 3 normas redactadas con claridad (ejemplo: 'Mi cuerpo es inviolable', 'Pido permiso antes de compartir información ajena', 'Digo no con firmeza si algo me incomoda').",
-      "success": "¡Gran trabajo reflexivo en tu cuaderno! Has formulado un decálogo personal de dignidad y autocuidado.",
-      "support": "Escribe tres frases en primera persona que expresen cómo protegerás tus límites y cómo respetarás los de tus compañeros.",
-      "reveal": "Las 3 normas sintetizan el compromiso ético con la autonomía corporal, el consentimiento explícito y la convivencia digna.",
-      "studentReveal": "Las 3 normas personales de autocuidado y consentimiento registradas en el cuaderno."
+      "context": "Caso ficticio nuevo: Mateo quiere aprender danza. Una compañera afirma que los niños no pueden bailar. El grupo debe decidir cómo organizar un taller para quienes quieran aprender.",
+      "question": "Identifica el estereotipo, sepáralo del interés de Mateo y propone una regla de participación con una razón.",
+      "expected": "Decir que los niños no pueden bailar generaliza sobre un grupo; el interés por danza corresponde a Mateo. Una regla abierta a quienes quieran aprender considera intereses y oportunidades, sin esa generalización.",
+      "success": "Aplica el criterio de la clase de manera autónoma en un recurso nuevo",
+      "support": "Comprobar cada elemento pedido y su evidencia; aceptar formulaciones equivalentes. Si falta una relación, pedir que señale la pista y explique qué demuestra; después ofrecer el modelo y un nuevo intento. Registrar respuesta, apoyos y criterio por reforzar.",
+      "reveal": "Decir que los niños no pueden bailar generaliza sobre un grupo; el interés por danza corresponde a Mateo. Una regla abierta a quienes quieran aprender considera intereses y oportunidades, sin esa generalización.",
+      "studentReveal": "Decir que los niños no pueden bailar generaliza sobre un grupo; el interés por danza corresponde a Mateo. Una regla abierta a quienes quieran aprender considera intereses y oportunidades, sin esa generalización."
     }
   ],
   "mini": [
     {
       "id": "q1",
-      "q": "Para que un consentimiento sea plenamente válido en una relación interpersonal, este debe ser:",
+      "q": "¿Qué afirmación es un estereotipo en el recurso?",
       "options": [
-        "Obligatorio por presión del grupo aunque exista incomodidad",
-        "Libre de presiones, informado, específico para la situación y revocable en todo momento",
-        "Otorgado una única vez en la vida sin posibilidad de cambiar de opinión",
-        "Aceptado por temor a perder una amistad o sufrir burlas"
+        "A. Valeria quiere construir un robot",
+        "B. Las niñas no son buenas para la ciencia",
+        "C. Tomás expresa tristeza",
+        "D. Una compañera escucha"
       ],
-      "correct": "Libre de presiones, informado, específico para la situación y revocable en todo momento",
-      "fixExplain": "El consentimiento pierde toda validez si media la coacción, el engaño o la imposición; debe ser siempre libre y revocable."
+      "correct": "B. Las niñas no son buenas para la ciencia",
+      "fixExplain": "La afirmación atribuye una capacidad a todo un grupo."
     },
     {
       "id": "q2",
-      "q": "La comunicación asertiva se define como la habilidad de:",
+      "q": "¿Qué acción evita limitar el interés de Valeria?",
       "options": [
-        "Expresar con claridad, calma y firmeza las propias decisiones y límites respetando al interlocutor",
-        "Imponer la propia voluntad gritando y agrediendo a quien piense distinto",
-        "Guardar silencio y aceptar todo lo que los demás exijan para no discutir",
-        "Aceptar presiones grupales para evitar el rechazo social"
+        "A. Permitirle participar y aprender",
+        "B. Excluirla por ser niña",
+        "C. Decidir que debe elegir otra actividad",
+        "D. Compararla sin escuchar su interés"
       ],
-      "correct": "Expresar con claridad, calma y firmeza las propias decisiones y límites respetando al interlocutor",
-      "fixExplain": "La asertividad no es sumisa ni agresiva: expresa con seguridad y respeto los derechos y límites personales."
+      "correct": "A. Permitirle participar y aprender",
+      "fixExplain": "La oportunidad considera su interés individual, sin aplicar la generalización."
     },
     {
       "id": "q3",
-      "q": "¿Cuál es la conducta adecuada si alguien nos pide que detengamos un juego o contacto físico porque se siente incómodo?",
+      "q": "¿Por qué escuchar a Tomás es respetuoso?",
       "options": [
-        "Insistir varias veces más hasta que la persona se acostumbre",
-        "Enojarse y descalificarla frente a todo el grupo",
-        "Detenerse inmediatamente y respetar su límite sin hacer preguntas ni burlarse",
-        "Ignorar la petición y continuar argumentando que es solo una broma"
+        "A. Porque todos deben sentir lo mismo",
+        "B. Porque elimina toda emoción",
+        "C. Porque reconoce su experiencia sin imponer un estereotipo",
+        "D. Porque obliga a compartir información íntima"
       ],
-      "correct": "Detenerse inmediatamente y respetar su límite sin hacer preguntas ni burlarse",
-      "fixExplain": "Cuando una persona expresa que no desea continuar, el consentimiento cesa de inmediato y el límite debe acatarse con respeto."
+      "correct": "C. Porque reconoce su experiencia sin imponer un estereotipo",
+      "fixExplain": "Escuchar reconoce una emoción de una persona concreta."
     }
   ],
   "recovery": [
     {
-      "title": "Recuperación: El Derecho a Decir 'No'",
-      "explain": "Recuerda que cada individuo tiene derecho inalienable a decidir sobre su propio cuerpo y sus vivencias. Decir 'no' cuando algo no te agrada o te hace sentir inseguro es un acto legítimo de autocuidado que todos deben acatar.",
-      "q": "Si alguien te dice 'no quiero participar en esto', ¿qué debes hacer?",
-      "options": [
-        "Continuar insistiendo hasta que cambie de parecer",
-        "Aceptar su respuesta de inmediato y respetar su decisión sin presionar",
-        "Burlarse de su decisión con los demás compañeros",
-        "Presionarlo mediante amenazas de dejar de ser amigos"
-      ],
-      "correct": "Aceptar su respuesta de inmediato y respetar su decisión sin presionar",
-      "correctText": "¡Exacto! El 'no' de cualquier persona marca un límite innegociable que debe ser respetado siempre.",
-      "fixText": "Recuerda que un 'no' es definitivo y debe acatarse sin insistencias ni presiones."
+      "title": "Recuperación 1",
+      "explain": "La afirmación atribuye una capacidad a todo un grupo.",
+      "q": "Separa el dato sobre Emilia de la generalización.",
+      "kind": "open_response",
+      "options": [],
+      "correct": "",
+      "correctText": "Su interés por carpintería es individual; la regla sobre todas las niñas es un estereotipo. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
+      "fixText": "Buscar estas expresiones del recurso nuevo: «carpintería»; «todas»; «niñas». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
+      "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
+      "resource": "Caso nuevo de recuperación: Emilia quiere aprender carpintería. Una persona dice que todas las niñas deben elegir otra actividad. Emilia expresa frustración.",
+      "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
+    },
+    {
+      "title": "Recuperación 2",
+      "explain": "La oportunidad considera su interés individual, sin aplicar la generalización.",
+      "q": "Propón una decisión sobre su participación y justifícala.",
+      "kind": "open_response",
+      "options": [],
+      "correct": "",
+      "correctText": "Permitir participar y aprender según su interés y las condiciones comunes del taller, sin excluirla por ser niña. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
+      "fixText": "Buscar estas expresiones del recurso nuevo: «aprender»; «niña». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
+      "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
+      "resource": "Caso nuevo de recuperación: Emilia quiere aprender carpintería. Una persona dice que todas las niñas deben elegir otra actividad. Emilia expresa frustración.",
+      "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
+    },
+    {
+      "title": "Recuperación 3",
+      "explain": "Escuchar reconoce una emoción de una persona concreta.",
+      "q": "¿Cómo responder a la frustración sin imponer otro estereotipo?",
+      "kind": "open_response",
+      "options": [],
+      "correct": "",
+      "correctText": "Escuchar y reconocer su emoción; no exigir que la oculte ni generalizar que un grupo siente de determinada manera. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
+      "fixText": "Volver al caso concreto: «Caso nuevo de recuperación: Emilia quiere aprender carpintería. Una persona dice que todas las niñas deben elegir otra actividad. Emilia expresa frustración.». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
+      "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
+      "resource": "Caso nuevo de recuperación: Emilia quiere aprender carpintería. Una persona dice que todas las niñas deben elegir otra actividad. Emilia expresa frustración.",
+      "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
     }
   ],
   "summaryIdeas": [
     [
-      "1 · Autonomía del Cuerpo",
-      "El cuerpo de cada persona es un territorio propio e inviolable que merece respeto absoluto y protección frente a abusos."
+      "Idea central",
+      "Una situación"
     ],
     [
-      "2 · Las 4 Claves del Consentimiento",
-      "El consentimiento válido debe ser voluntario, informado, específico y revocable en cualquier momento sin consecuencias negativas."
-    ],
-    [
-      "3 · Asertividad y Redes de Apoyo",
-      "Establecer límites con serenidad y acudir a adultos de confianza ante situaciones complejas asegura nuestro bienestar y dignidad."
+      "Comprensión",
+      "Aplicación del criterio formal en el cuaderno físico."
     ]
   ],
   "interactive": {
     "type": "dimensions",
-    "title": "Responsabilidad, Autocuidado y Consentimiento",
-    "description": "Organizador gráfico de los 4 criterios del consentimiento y la toma de decisiones informadas."
+    "title": "Dimensiones Integrales de la Sexualidad",
+    "description": "Organizador de las cinco dimensiones biopsicosociales."
+  },
+  "closure": {
+    "congratulations": "Buen trabajo. Explicaste tu respuesta usando información del recurso.",
+    "nextClassPreview": "¡Nos vemos en la próxima lección!"
   },
   "paso8_cierre": {
-    "preguntaSintesis": "¿Cuáles son los cuatro criterios innegociables del consentimiento informado y por qué revocarlo en cualquier momento es un derecho fundamental?",
-    "metacognicion": "¿Qué estrategia aprendida en esta lección te entrega mayor seguridad para manifestar tus límites personales de forma asertiva ante la presión del entorno?",
-    "celebracion": "¡Felicitaciones! Has completado con éxito la lección sobre responsabilidad, autocuidado y consentimiento informado."
+    "preguntaSintesis": "¿Qué parte es un interés individual y qué parte es un estereotipo?",
+    "metacognicion": "¿Qué te ayudó más: leer el recurso, localizar una pista o comparar explicaciones? ¿Por qué?",
+    "celebracion": "Buen trabajo. Explicaste tu respuesta usando información del recurso."
   }
 };

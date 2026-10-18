@@ -80,7 +80,6 @@ export const LessonSyncProvider: React.FC<{
 
   // Derivación determinista del roomCode a partir de PIN familiar o parámetro
   const effectiveRoomCode = useMemo(() => {
-    if (initialRoomCode && initialRoomCode.trim()) return initialRoomCode.trim();
     if (typeof window !== 'undefined') {
       const urlParam = new URLSearchParams(window.location.search).get('room');
       if (urlParam && urlParam.trim()) return `room-${urlParam.trim()}`;
@@ -98,6 +97,7 @@ export const LessonSyncProvider: React.FC<{
         }
       } catch {}
     }
+    if (initialRoomCode && initialRoomCode.trim()) return initialRoomCode.trim();
     return 'room-estudiosimple';
   }, [initialRoomCode]);
 

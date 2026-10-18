@@ -1,529 +1,444 @@
-import { LessonData } from '../../types/lesson';
+import { LessonData } from '../../../src/types/lesson';
 
 export const INGLES_7B_OA09_CLASE02: LessonData = {
   "metadata": {
     "grade": "7° Básico",
-    "subject": "Inglés",
+    "subject": "Idioma Extranjero Inglés",
     "oaCode": "OA 9",
-    "oaTitle": "Comprensión de lectura",
+    "oaTitle": "Idioma Extranjero Inglés - OA 9",
     "lessonNumber": 2,
     "totalLessonsInOa": 6,
-    "lessonTitle": "Chronological Sequence and Time Connectors",
+    "lessonTitle": "Una situación",
     "durationMinutes": 30,
-    "nextLessonTitle": "Past Simple Tense: Regular and Irregular Verbs"
+    "nextLessonTitle": ""
   },
   "prep": {
-    "adultObjective": "Acompañar al estudiante en la inmersión del idioma inglés para: Chronological Sequence and Time Connectors. Las instrucciones del apoderado son en español, mientras los textos, vocabulario y miniquiz se practican en inglés con foco en 'ideas generales'.",
-    "routeToday": "1. Inicio y activación · 2. Video de exploración · 3. Recorrido guiado · 4. Formalización y práctica en cuaderno · 5. Miniquiz y REVISAR · 6. Cierre metacognitivo",
-    "mentorReminder": "Sigue las indicaciones en pantalla paso a paso. Lee únicamente los recuadros DILE en voz alta y espera siempre la respuesta.",
+    "adultObjective": "State agreement or disagreement about a reading and support the opinion with an accurate detail.",
+    "routeToday": "Ruta guiada de la clase 2",
+    "mentorReminder": "State agreement or disagreement about a reading and support the opinion with an accurate detail.",
     "reminders": [
-      "Sigue el orden indicado.",
-      "Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.",
-      "No leas los recuadros SOLO PARA TI ni AYUDA DE LECTURA.",
-      "Haz cada pregunta y espera la respuesta antes de seleccionar una opción.",
-      "Considera correcta una respuesta si expresa la idea matemática, aunque use palabras distintas.",
-      "Si el estudiante necesita apoyo, usa únicamente la ayuda que aparecerá.",
-      "Si propone otra explicación o no está de acuerdo, escúchalo completo y valora su razonamiento antes de guiarlo."
+      "Acompaña al estudiante y valora su proceso."
     ],
-    "emotionalTip": "Fomenta la confianza comunicativa: 'Listen, read the clues, and focus on the general meaning before translating every single word'."
+    "emotionalTip": "Valora cada avance con paciencia y entusiasmo."
   },
   "route": {
     "blocks": [
       {
         "id": "b1",
         "number": "01",
-        "title": "Inglés",
-        "subtitle": "Chronological Sequence and Time Connectors",
+        "title": "Punto de partida",
+        "subtitle": "Activación",
         "color": "teal"
       },
       {
         "id": "b2",
         "number": "02",
-        "title": "Exploración",
-        "subtitle": "Gancho y Recorrido Guiado",
+        "title": "Motivación y Explicación",
+        "subtitle": "14 láminas",
         "color": "orange"
       },
       {
         "id": "b3",
         "number": "03",
-        "title": "Práctica",
-        "subtitle": "Aplicación en situaciones reales",
+        "title": "Práctica guiada",
+        "subtitle": "Transferencia",
         "color": "yellow"
       },
       {
         "id": "b4",
         "number": "04",
-        "title": "Evaluación",
-        "subtitle": "Miniquiz formativo y síntesis",
-        "color": "teal"
+        "title": "Miniquiz",
+        "subtitle": "Evaluación y cierre",
+        "color": "navy"
       }
     ],
-    "keyQuestions": [
-      {
-        "label": "Exploración inicial",
-        "sub": "Chronological Sequence and Time Connectors"
-      },
-      {
-        "label": "Idea clave",
-        "sub": "In Chronological Sequence and Time Connectors, we communicat"
-      },
-      {
-        "label": "Práctica y aplicación",
-        "sub": "Resolución guiada paso a paso"
-      }
-    ],
-    "dileIntro": "Hoy comenzaremos la clase 2 de Inglés: \"Chronological Sequence and Time Connectors\".",
-    "dileObjective": "Using 'first', 'then', 'suddenly' to map narrative events"
+    "dileIntro": "Hoy avanzaremos en una nueva clase interactiva.",
+    "dileObjective": "Una situación"
   },
   "situation": {
-    "dilePrompt": "Hoy en nuestra sesión de English exploramos 'Chronological Sequence and Time Connectors'. El foco comunicativo del currículum es 'ideas generales'. El apoderado guía en español mientras que el estudiante lee y escucha en inglés. Lee la siguiente frase en voz alta sobre Using 'first', 'then', 'suddenly' to map narrative events:",
-    "expectedAnswer": "Identificar en español o inglés los personajes (characters), la acción o el propósito comunicativo vinculado con ideas generales.",
-    "socraticHint": "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general.",
-    "emotionalTip": "Fomenta la confianza comunicativa: 'Listen, read the clues, and focus on the general meaning before translating every single word'.",
+    "dilePrompt": "What do you expect from the title? Give a prediction, then check it by reading.",
+    "expectedAnswer": "I agree because Anne calls the diary her nicest present. I think a diary is useful for recording experiences.",
+    "socraticHint": "Fíjate en los detalles destacados.",
+    "emotionalTip": "Acompaña con calma.",
     "options": [
       {
-        "label": "Identificó a los personajes, la acción o el propósito en inglés vinculado con ideas generales",
+        "label": "I agree because Anne calls the diary her nicest present. I think a diary is useful for recording experiences.",
         "kind": "correct",
-        "feedbackText": "¡Very good! Supo reconocer los elementos clave de la oración en inglés."
+        "feedbackText": "¡Muy bien observado!"
       },
       {
-        "label": "Tuvo dudas con el vocabulario o no identificó la acción ni los personajes",
+        "label": "Requiere apoyo adicional",
         "kind": "needs_support",
-        "feedbackText": "Busquen juntos palabras transparentes y guíalo para identificar el verbo principal de la acción."
+        "feedbackText": "Revisa nuevamente la situación inicial."
+      },
+      {
+        "label": "No sabe qué responder",
+        "kind": "no_answer",
+        "feedbackText": "Leamos juntos para descubrir la pista."
       }
     ]
   },
   "reference": {
-    "dilePrompt": "\"What is the main communicative situation described in this English sentence? (¿Cuál es la situación principal descrita en la oración?)\"",
-    "question": "\"What is the main communicative situation described in this English sentence? (¿Cuál es la situación principal descrita en la oración?)\"",
-    "expectedAnswer": "Identificar en español o inglés los personajes (characters), la acción o el propósito comunicativo vinculado con ideas generales.",
-    "socraticHint": "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general.",
-    "feedbackSuccess": "Muy bien. Observaste el detalle central con precisión.",
-    "feedbackSupport": "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general."
+    "dilePrompt": "How can a reader agree and give support?",
+    "question": "¿Qué información entrega el punto de partida?",
+    "expectedAnswer": "I agree because Anne calls the diary her nicest present. I think a diary is useful for recording experiences.",
+    "socraticHint": "Localiza las palabras clave.",
+    "feedbackSuccess": "¡Excelente fundamentación!",
+    "feedbackSupport": "Revisa la lectura para confirmar los datos."
   },
   "hook": {
-    "title": "Video Motivacional: El Desafío de Chronological Sequence and Time Connectors",
-    "titulo": "Video Motivacional: El Desafío de Chronological Sequence and Time Connectors",
+    "title": "Motivación",
+    "titulo": "Motivación",
     "focusPoints": [],
-    "dileIntro": "Antes de ver el video, observa con atención lo que descubren los dos exploradores y qué pregunta queda planteada.",
-    "hazInstruction": "Observa y reflexiona con las escenas del desafío visual.",
+    "dileIntro": "What do you expect from the title? Give a prediction, then check it by reading.",
+    "hazInstruction": "Observa y reflexiona con las escenas del video.",
     "videoSrc": "",
-    "videoUrl": "",
-    "posterSrc": "",
-    "dileAfterVideo": "Muy buena observación. Ahora conversaremos sobre lo que descubrieron en la expedición.",
-    "fullPrompt": "Actúa como Diseñador Instruccional Senior y Creador de Presentaciones en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de GANCHO MOTIVACIONAL (Paso 2) para:\n- Asignatura: Inglés\n- Objetivo de Aprendizaje: OA 9\n- Clase: 2 (\"Chronological Sequence and Time Connectors\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS (PLAN MAESTRO ACTUALIZACIÓN 29-09-2026):\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Exactamente 7 diapositivas (slide1 a slide7).\n3. ESTILO ARTÍSTICO DE LAS IMÁGENES: Anime Moderno (Modern Anime Style, cinematográfico, iluminación dinámica, fondos limpios con espacio negativo real).\n4. PROTAGONISTAS FIJOS: Dúo co-protagónico de 13 años (la joven y el joven estudiantes-exploradores chilenos). ACTÚAN JUNTOS en cada escena, colaborando y resolviendo el desafío en equipo.\n5. REGLA VISUAL ANTI-MÁSCARAS Y FONDOS LIMPIOS: Imágenes Full-Bleed con espacio negativo para texto y vectores. Queda prohibido usar placas oscuras que tapen las caras de los personajes o la mitad de la lámina. PROHIBIDO dibujar números, letras o fórmulas dentro de la ilustración generada por IA.\n6. PRESUPUESTO TEMPORAL Y GUION CONTINUO (GANCHO - 60 SEGUNDOS / 130 PALABRAS TOTALES): Cada diapositiva DEBE incluir únicamente el texto de narración oral continua (8+8+8+9+9+9+9 segundos, totalizando exactamente ~130 palabras para 60 segundos de locución a 130 palabras por minuto en Google Vids/TTS), sin marcas técnicas, encabezados ni duraciones, listo para ser leído por voz en off.\n7. PROTOCOLO DE COMPROBACIÓN ACÚSTICA OBLIGATORIA (GOOGLE VIDS): Medir la duración real del archivo exportado con cronómetro o analizador de audio. El conteo de palabras no garantiza por sí solo 60 segundos exactos. Si la duración no es exacta, ajustar narración, pausas o ritmo, volver a exportar y registrar la duración comprobada oficial.\n8. ESTRUCTURA HEXAPARTITA POR DIAPOSITIVA:\n   • Toda diapositiva se define con: 1) Propósito, 2) Título en Pantalla (64 pt), 3) Subtítulo en Pantalla (36 pt), 4) Prompt de imagen IA sin texto, 5) Capa vectorial para PowerPoint, y 6) Notas al orador continuas.\n   • COLOR DE TEXTO: Un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.\n   • LOCUCIÓN COHERENTE: Narra con precisión lo que se observa en la imagen y lo que se sintetiza en la pantalla.\n\nDETALLE DE LAS 7 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Apertura y Contexto) ---\n1. Propósito Didáctico: Apertura y Contexto\n2. Título en Pantalla (64 pt): Misión 2: Chronological Sequence and Time Connectors\n3. Subtítulo en Pantalla (36 pt): Exploración inicial en Inglés\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Chronological Sequence and Time Connectors (Inglés). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Communicative context: Story scenario of Chronological Sequence and Time Connectors\n6. Notas al Orador (Locución Continua Google Vids): \"Comienza una nueva expedición de aprendizaje en Inglés. Nuestros dos exploradores analizan el desafío de Chronological Sequence and Time Connectors para descubrir sus secretos.\"\n\n--- DIAPOSITIVA 2 (Presentación del Escenario) ---\n1. Propósito Didáctico: Presentación del Escenario\n2. Título en Pantalla (64 pt): Punto de partida\n3. Subtítulo en Pantalla (36 pt): Using 'first', 'then', 'suddenly' to map narrative events\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Using 'first', 'then', 'suddenly' to map narrative events. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Using 'first', 'then', 'suddenly' to map narrative events\n6. Notas al Orador (Locución Continua Google Vids): \"Al observar los datos sobre Using 'first', 'then', 'suddenly' to map narrative events, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor.\"\n\n--- DIAPOSITIVA 3 (Aparición del Conflicto / Misterio) ---\n1. Propósito Didáctico: Aparición del Conflicto / Misterio\n2. Título en Pantalla (64 pt): El enigma disciplinar\n3. Subtítulo en Pantalla (36 pt): Desafío en Chronological Sequence and Time Connectors\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Using 'first', 'then', 'suddenly' to map narrative events\n6. Notas al Orador (Locución Continua Google Vids): \"Surge un reto concreto sobre Chronological Sequence and Time Connectors: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso.\"\n\n--- DIAPOSITIVA 4 (Exploración de Pistas) ---\n1. Propósito Didáctico: Exploración de Pistas\n2. Título en Pantalla (64 pt): Análisis de evidencias\n3. Subtítulo en Pantalla (36 pt): Using 'first', 'then', 'suddenly' to map narrative events\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Using 'first', 'then', 'suddenly' to map narrative events\n6. Notas al Orador (Locución Continua Google Vids): \"Ambos comparan las pistas disponibles sobre Using 'first', 'then', 'suddenly' to map narrative events. Cada dato confirma cómo interactúan los elementos clave de la situación.\"\n\n--- DIAPOSITIVA 5 (El Momento Crítico) ---\n1. Propósito Didáctico: El Momento Crítico\n2. Título en Pantalla (64 pt): Criterio de decisión\n3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Using 'first', 'then', 'suddenly' to map narrative events\n6. Notas al Orador (Locución Continua Google Vids): \"Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Chronological Sequence and Time Connectors con total precisión metodológica.\"\n\n--- DIAPOSITIVA 6 (La Antesala de la Pregunta) ---\n1. Propósito Didáctico: La Antesala de la Pregunta\n2. Título en Pantalla (64 pt): El dilema central\n3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Chronological Sequence and Time Connectors?\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Language puzzle: Identifying narrative clues in English\n6. Notas al Orador (Locución Continua Google Vids): \"Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje.\"\n\n--- DIAPOSITIVA 7 (La Pregunta Detonante) ---\n1. Propósito Didáctico: La Pregunta Detonante\n2. Título en Pantalla (64 pt): Pregunta detonante\n3. Subtítulo en Pantalla (36 pt): Regla y método de Chronological Sequence and Time Connectors\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Trigger question: How do we express Chronological Sequence and Time Connectors accurately?\n6. Notas al Orador (Locución Continua Google Vids): \"Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!\"\n\n",
+    "dileAfterVideo": "¿Qué observaste en esta situación inicial?",
     "slides": [
       {
         "slideNumber": 1,
-        "tituloMomento": "Apertura y Contexto",
-        "didacticPurpose": "Apertura y Contexto",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Chronological Sequence and Time Connectors (Inglés). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.",
-        "overlayTitle": "Misión 2: Chronological Sequence and Time Connectors",
-        "overlaySubtitle": "Exploración inicial en Inglés",
-        "overlayText": "Misión 2: Chronological Sequence and Time Connectors",
-        "vectorialOverlayPptx": "Communicative context: Story scenario of Chronological Sequence and Time Connectors",
-        "mathOverlayPptx": "Communicative context: Story scenario of Chronological Sequence and Time Connectors",
-        "speakerNotes": "Comienza una nueva expedición de aprendizaje en Inglés. Nuestros dos exploradores analizan el desafío de Chronological Sequence and Time Connectors para descubrir sus secretos.",
-        "palabrasAprox": 21,
-        "duracionSeg": 9
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Una situación",
+        "visualPrompt": "",
+        "overlayText": "Una situación",
+        "overlayTitle": "Una situación",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Una situación",
+        "speakerNotes": "Today we will explore an opinion supported by the diary. Use the reading to check ideas without inventing details.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 2,
-        "tituloMomento": "Presentación del Escenario",
-        "didacticPurpose": "Presentación del Escenario",
-        "visualPrompt": "Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Using 'first', 'then', 'suddenly' to map narrative events. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.",
-        "overlayTitle": "Punto de partida",
-        "overlaySubtitle": "Using 'first', 'then', 'suddenly' to map narrative events",
-        "overlayText": "Punto de partida: Using 'first', 'then', 'suddenly' to map narrative events",
-        "vectorialOverlayPptx": "Vocabulary tags: Key expressions and setting of Using 'first', 'then', 'suddenly' to map narrative events",
-        "mathOverlayPptx": "Vocabulary tags: Key expressions and setting of Using 'first', 'then', 'suddenly' to map narrative events",
-        "speakerNotes": "Al observar los datos sobre Using 'first', 'then', 'suddenly' to map narrative events, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor.",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "La pregunta",
+        "visualPrompt": "",
+        "overlayText": "La pregunta",
+        "overlayTitle": "La pregunta",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "La pregunta",
+        "speakerNotes": "Anne calls the diary her nicest present. Keep the message in view and notice what information it actually gives.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 3,
-        "tituloMomento": "Aparición del Conflicto / Misterio",
-        "didacticPurpose": "Aparición del Conflicto / Misterio",
-        "visualPrompt": "Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.",
-        "overlayTitle": "El enigma disciplinar",
-        "overlaySubtitle": "Desafío en Chronological Sequence and Time Connectors",
-        "overlayText": "El enigma disciplinar: Chronological Sequence and Time Connectors",
-        "vectorialOverlayPptx": "Vocabulary tags: Key expressions and setting of Using 'first', 'then', 'suddenly' to map narrative events",
-        "mathOverlayPptx": "Vocabulary tags: Key expressions and setting of Using 'first', 'then', 'suddenly' to map narrative events",
-        "speakerNotes": "Surge un reto concreto sobre Chronological Sequence and Time Connectors: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Primera idea",
+        "visualPrompt": "",
+        "overlayText": "Primera idea",
+        "overlayTitle": "Primera idea",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Primera idea",
+        "speakerNotes": "How can a reader agree and give support? You can offer a first idea; we will check its support afterwards.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 4,
-        "tituloMomento": "Exploración de Pistas",
-        "didacticPurpose": "Exploración de Pistas",
-        "visualPrompt": "Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.",
-        "overlayTitle": "Análisis de evidencias",
-        "overlaySubtitle": "Using 'first', 'then', 'suddenly' to map narrative events",
-        "overlayText": "Análisis de evidencias: Using 'first', 'then', 'suddenly' to map narrative events",
-        "vectorialOverlayPptx": "Vocabulary tags: Key expressions and setting of Using 'first', 'then', 'suddenly' to map narrative events",
-        "mathOverlayPptx": "Vocabulary tags: Key expressions and setting of Using 'first', 'then', 'suddenly' to map narrative events",
-        "speakerNotes": "Ambos comparan las pistas disponibles sobre Using 'first', 'then', 'suddenly' to map narrative events. Cada dato confirma cómo interactúan los elementos clave de la situación.",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Busca pistas",
+        "visualPrompt": "",
+        "overlayText": "Busca pistas",
+        "overlayTitle": "Busca pistas",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Busca pistas",
+        "speakerNotes": "Look closely at the situation. Which detail would help you answer? A useful clue should answer the question we are trying to understand.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 5,
-        "tituloMomento": "El Momento Crítico",
-        "didacticPurpose": "El Momento Crítico",
-        "visualPrompt": "Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.",
-        "overlayTitle": "Criterio de decisión",
-        "overlaySubtitle": "Aplicar el método riguroso",
-        "overlayText": "Criterio de decisión riguroso",
-        "vectorialOverlayPptx": "Vocabulary tags: Key expressions and setting of Using 'first', 'then', 'suddenly' to map narrative events",
-        "mathOverlayPptx": "Vocabulary tags: Key expressions and setting of Using 'first', 'then', 'suddenly' to map narrative events",
-        "speakerNotes": "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Chronological Sequence and Time Connectors con total precisión metodológica.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Compara posibilidades",
+        "visualPrompt": "",
+        "overlayText": "Compara posibilidades",
+        "overlayTitle": "Compara posibilidades",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Compara posibilidades",
+        "speakerNotes": "An answer needs information from the resource. We will look for evidence. Two answers may sound possible, so their support needs careful checking.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 6,
-        "tituloMomento": "La Antesala de la Pregunta",
-        "didacticPurpose": "La Antesala de la Pregunta",
-        "visualPrompt": "Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.",
-        "overlayTitle": "El dilema central",
-        "overlaySubtitle": "¿Cómo resolver Chronological Sequence and Time Connectors?",
-        "overlayText": "¿Cómo resolver Chronological Sequence and Time Connectors?",
-        "vectorialOverlayPptx": "Language puzzle: Identifying narrative clues in English",
-        "mathOverlayPptx": "Language puzzle: Identifying narrative clues in English",
-        "speakerNotes": "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Una estrategia",
+        "visualPrompt": "",
+        "overlayText": "Una estrategia",
+        "overlayTitle": "Una estrategia",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Una estrategia",
+        "speakerNotes": "Read the resource and compare its details before choosing an explanation. The class will show a way to explain that connection step by step.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 7,
-        "tituloMomento": "La Pregunta Detonante",
-        "didacticPurpose": "La Pregunta Detonante",
-        "visualPrompt": "Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.",
-        "overlayTitle": "Pregunta detonante",
-        "overlaySubtitle": "Regla y método de Chronological Sequence and Time Connectors",
-        "overlayText": "Meta: Dominio de Chronological Sequence and Time Connectors",
-        "vectorialOverlayPptx": "Trigger question: How do we express Chronological Sequence and Time Connectors accurately?",
-        "mathOverlayPptx": "Trigger question: How do we express Chronological Sequence and Time Connectors accurately?",
-        "speakerNotes": "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Puente a la lectura",
+        "visualPrompt": "",
+        "overlayText": "Puente a la lectura",
+        "overlayTitle": "Puente a la lectura",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Puente a la lectura",
+        "speakerNotes": "Now we will discover how the evidence helps us understand this situation. Then you will apply the strategy to another short resource.",
+        "duracionSeg": 8
       }
     ]
   },
   "preQuestions": [
     {
-      "context": "Key Vocabulary & Context Clues (ideas generales)",
-      "question": "Which English words in the text give you clear clues about the communicative goal and the action?",
-      "expected": "Identify key English nouns, action verbs or connectors related to the topic.",
-      "success": "Well done! You successfully identified the key English vocabulary from the context.",
-      "support": "Look for transparent words and descriptive adjectives: what words tell you what is happening?",
-      "reveal": "Context clues and key vocabulary help us understand the main message without needing an immediate dictionary translation.",
-      "studentReveal": "Key English words identified from the context of the communicative text."
+      "context": "Anne calls the diary her nicest present.",
+      "question": "How can a reader agree and give support?",
+      "expected": "I agree because Anne calls the diary her nicest present. I think a diary is useful for recording experiences.",
+      "success": "The first sentence uses a detail from the reading. The second sentence explains the reader's reason.",
+      "support": "Si no localiza información, releer esta pista del contexto: «Anne calls the diary her nicest present.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta.",
+      "reveal": "I agree because Anne calls the diary her nicest present. I think a diary is useful for recording experiences. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento.",
+      "studentReveal": "I agree because Anne calls the diary her nicest present. I think a diary is useful for recording experiences."
     },
     {
-      "context": "Grammar & Communicative Flow",
-      "question": "Notice the verb tense or structure used in the sentences. How does the grammatical form tell us when or how the action happens?",
-      "expected": "Recognize the verb form or structure indicating time, function, or modality.",
-      "success": "Excellent! You connected the grammatical structure with its real communicative meaning.",
-      "support": "Look at the ending of the verb or auxiliary words: does it talk about routine, past events or future plans?",
-      "reveal": "Grammatical structures and verb tenses provide the timeline and conditions for natural English communication.",
-      "studentReveal": "The verb tense and sentence structure that clarify the communicative intention."
+      "context": "Anne also received a blue blouse.",
+      "question": "How can another reader disagree with support?",
+      "expected": "I disagree because Anne also received a blue blouse. I would prefer a present I could wear.",
+      "success": "The blouse appears in the reading. The preference is the reader's opinion, not a fact about Anne.",
+      "support": "Si no localiza información, releer esta pista del contexto: «Anne also received a blue blouse.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta.",
+      "reveal": "I disagree because Anne also received a blue blouse. I would prefer a present I could wear. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento.",
+      "studentReveal": "I disagree because Anne also received a blue blouse. I would prefer a present I could wear."
     }
   ],
+  "conversationContext": "Diálogo guiado para profundizar en los elementos clave.",
   "formalization": {
-    "title": "Video Explicativo: Formalización de Chronological Sequence and Time Connectors",
-    "concept": "Video Explicativo: Formalización de Chronological Sequence and Time Connectors",
-    "dileIntro": "Ahora veremos el video explicativo de Chronological Sequence and Time Connectors. Fíjate en la pronunciación y en cómo se utiliza 'ideas generales' en una conversación real.",
-    "hazInstruction": "Revisemos la explicación formal y la idea clave.",
-    "ideaClave": "In Chronological Sequence and Time Connectors, we communicate effectively by using 'ideas generales' in context, paying attention to verb tenses and avoiding word-for-word translation.",
-    "videoSrc": "",
-    "videoUrl": "",
+    "title": "Explicación",
+    "concept": "Una situación",
+    "summary": "Consolidación de las ideas clave.",
+    "ideaClave": "Una situación",
+    "dileIntro": "Ahora consolidaremos los aprendizajes esenciales.",
+    "hazInstruction": "Registra en tu cuaderno el concepto principal.",
     "graphicPoster": "",
-    "fullPrompt": "Actúa como Diseñador Pedagógico y Especialista en Didáctica Disciplinar en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de VIDEO EXPLICATIVO / FORMALIZACIÓN (Paso 4) para:\n- Asignatura: Inglés\n- Objetivo de Aprendizaje: OA 9\n- Clase: 2 (\"Chronological Sequence and Time Connectors\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS (PLAN MAESTRO ACTUALIZACIÓN 29-09-2026):\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Exactamente 7 diapositivas (slide1 a slide7) siguiendo el principio de un cambio visual por cada movimiento mental.\n3. DIAPOSITIVA 1 OBLIGATORIA CON OBJETIVO: La primera diapositiva declara como subtítulo (36 pt) el objetivo específico de la lección, sin repetir rótulos redundantes 'OA 01'.\n4. PROTAGONISTAS FIJOS EN EL 100% DE LAS ESCENAS: Los mismos 2 jóvenes de 13 años (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.\n5. REGLA VISUAL ANTI-MÁSCARAS Y FONDOS LIMPIOS: Imagen limpia con espacio negativo real. Prohibido que la IA intente dibujar números, rectas o letras. Todo elemento disciplinar se ensambla vectorialmente en PowerPoint.\n6. PRESUPUESTO TEMPORAL Y GUION PEDAGÓGICO (LECCIÓN EXPLICATIVA - 90 SEGUNDOS / 195 PALABRAS TOTALES): Guion explicativo continuo (12+13+13+13+13+13+13 segundos, totalizando exactamente ~195 palabras para 90 segundos a 130 palabras por minuto en Google Vids/TTS), sin marcas técnicas. Diapositiva 1 formula el objetivo; diapositivas 2 a 7 desarrollan el contenido sin repetirlo.\n7. PROTOCOLO DE COMPROBACIÓN ACÚSTICA OBLIGATORIA (GOOGLE VIDS): Medir la duración real del archivo exportado con cronómetro o analizador de audio. El conteo de palabras no garantiza por sí solo 90 segundos exactos. Si la duración no es exacta, ajustar narración, pausas o ritmo, volver a exportar y registrar la duración comprobada oficial.\n8. JERARQUÍA TIPOGRÁFICA Y COLOR DE TEXTO: Título en Pantalla (64 pt); Subtítulo en Pantalla (36 pt). Texto brillante de un solo color de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, contornos, resplandores ni recuadros flotantes o fondos detrás del texto. Especificar color en cada prompt.\n9. CIERRE SIN RETO EN EL VIDEO: La explicación concluye con la regla de oro y da el pase directo a la práctica en la plataforma web, sin proponer desafíos finales ni tareas en el cuaderno durante el video.\n10. ESTRUCTURA HEXAPARTITA POR DIAPOSITIVA (Propósito, Título 64 pt, Subtítulo 36 pt, Prompt Imagen IA, Capa Vectorial PPTX, Notas al Orador).\n\nDETALLE DE LAS 7 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Objetivo de la Lección) ---\n1. Propósito Didáctico: Objetivo de la Lección\n2. Título en Pantalla (64 pt): Objetivo de la lección\n3. Subtítulo en Pantalla (36 pt): Master Chronological Sequence and Time Connectors: Using 'first', 'then', 'suddenly' to map narrative events\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Using 'first', 'then', 'suddenly' to map narrative events. High clarity, negative space for text. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Formal heading: OA 9 · Chronological Sequence and Time Connectors\n6. Notas al Orador (Locución Continua Google Vids): \"Today our goal is to learn how to master using 'first', 'then', 'suddenly' to map narrative events, applying clear disciplinary steps with total confidence.\"\n\n--- DIAPOSITIVA 2 (Definición del Concepto Central) ---\n1. Propósito Didáctico: Definición del Concepto Central\n2. Título en Pantalla (64 pt): Concepto fundamental\n3. Subtítulo en Pantalla (36 pt): Using 'first', 'then', 'suddenly' to map narrative events\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Sentence formula: Structure of Using 'first', 'then', 'suddenly' to map narrative events\n6. Notas al Orador (Locución Continua Google Vids): \"To understand Chronological Sequence and Time Connectors, we establish a clean conceptual foundation connecting the core definition with verifiable concrete evidence.\"\n\n--- DIAPOSITIVA 3 (Demostración Modelada) ---\n1. Propósito Didáctico: Demostración Modelada\n2. Título en Pantalla (64 pt): Modelamiento paso a paso\n3. Subtítulo en Pantalla (36 pt): Procedimiento de Chronological Sequence and Time Connectors\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Color-coded grammar blocks with modeled example\n6. Notas al Orador (Locución Continua Google Vids): \"Observe how the procedure unfolds in this guided demonstration: every single change responds to an explicit disciplinary rule.\"\n\n--- DIAPOSITIVA 4 (Prevención del Error Frecuente) ---\n1. Propósito Didáctico: Prevención del Error Frecuente\n2. Título en Pantalla (64 pt): Atención: Error habitual\n3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Error contrast: common grammar and punctuation pitfall\n6. Notas al Orador (Locución Continua Google Vids): \"A common pitfall happens when overlooking order or basic conventions. We always check each intermediate step before concluding.\"\n\n--- DIAPOSITIVA 5 (Comprobación del Resultado) ---\n1. Propósito Didáctico: Comprobación del Resultado\n2. Título en Pantalla (64 pt): Validación del resultado\n3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Meaning validation: verifying sentence cohesion\n6. Notas al Orador (Locución Continua Google Vids): \"By contrasting the result with our initial scenario, we confirm that our solution is consistent, rigorous, and fully answers the question.\"\n\n--- DIAPOSITIVA 6 (Estrategia Mnemotécnica) ---\n1. Propósito Didáctico: Estrategia Mnemotécnica\n2. Título en Pantalla (64 pt): Estrategia de pensamiento\n3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Memory strategy: Connector + Subject + Verb + Context\n6. Notas al Orador (Locución Continua Google Vids): \"Always remember the three-step thinking strategy: identify the key data, apply the formal rule in order, and verify the final result.\"\n\n--- DIAPOSITIVA 7 (Síntesis y Regla de Oro) ---\n1. Propósito Didáctico: Síntesis y Regla de Oro\n2. Título en Pantalla (64 pt): Regla de Oro: Chronological Sequence and Time Connectors\n3. Subtítulo en Pantalla (36 pt): Método disciplinar validado\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Summary infography: Golden rule of Chronological Sequence and Time Connectors\n6. Notas al Orador (Locución Continua Google Vids): \"Now that you understand the golden rule and the procedure of Chronological Sequence and Time Connectors, let us practice and prove our skills in the interactive platform!\"\n\n",
+    "videoSrc": "",
     "slides": [
       {
-        "slideNumber": 1,
-        "tituloMomento": "Objetivo de la Lección",
-        "didacticPurpose": "Objetivo de la Lección",
-        "visualPrompt": "Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Using 'first', 'then', 'suddenly' to map narrative events. High clarity, negative space for text. No text drawn by AI.",
-        "overlayTitle": "Objetivo de la lección",
-        "overlaySubtitle": "Master Chronological Sequence and Time Connectors: Using 'first', 'then', 'suddenly' to map narrative events",
-        "overlayText": "Concepto clave: Chronological Sequence and Time Connectors",
-        "vectorialOverlayPptx": "Formal heading: OA 9 · Chronological Sequence and Time Connectors",
-        "mathOverlayPptx": "Formal heading: OA 9 · Chronological Sequence and Time Connectors",
-        "speakerNotes": "Today our goal is to learn how to master using 'first', 'then', 'suddenly' to map narrative events, applying clear disciplinary steps with total confidence.",
-        "palabrasAprox": 25,
-        "duracionSeg": 12
+        "slideNumber": 8,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Una herramienta",
+        "visualPrompt": "",
+        "overlayText": "Una herramienta",
+        "overlayTitle": "Una herramienta",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Una herramienta",
+        "speakerNotes": "Begin with a clear position. You may agree or disagree with Anne about her nicest present.",
+        "duracionSeg": 8
       },
       {
-        "slideNumber": 2,
-        "tituloMomento": "Definición del Concepto Central",
-        "didacticPurpose": "Definición del Concepto Central",
-        "visualPrompt": "Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.",
-        "overlayTitle": "Concepto fundamental",
-        "overlaySubtitle": "Using 'first', 'then', 'suddenly' to map narrative events",
-        "overlayText": "Regla formal: Using 'first', 'then', 'suddenly' to map narrative events",
-        "vectorialOverlayPptx": "Sentence formula: Structure of Using 'first', 'then', 'suddenly' to map narrative events",
-        "mathOverlayPptx": "Sentence formula: Structure of Using 'first', 'then', 'suddenly' to map narrative events",
-        "speakerNotes": "To understand Chronological Sequence and Time Connectors, we establish a clean conceptual foundation connecting the core definition with verifiable concrete evidence.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        "slideNumber": 9,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "El criterio",
+        "visualPrompt": "",
+        "overlayText": "El criterio",
+        "overlayTitle": "El criterio",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "El criterio",
+        "speakerNotes": "The reading says Anne received a diary and called it her nicest present. This is evidence from the text. Use because to explain your choice. Make sure your reason connects with a detail that appears in the reading.",
+        "duracionSeg": 8
       },
       {
-        "slideNumber": 3,
-        "tituloMomento": "Demostración Modelada",
-        "didacticPurpose": "Demostración Modelada",
-        "visualPrompt": "Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.",
-        "overlayTitle": "Modelamiento paso a paso",
-        "overlaySubtitle": "Procedimiento de Chronological Sequence and Time Connectors",
-        "overlayText": "Modelamiento paso a paso de Chronological Sequence and Time Connectors",
-        "vectorialOverlayPptx": "Color-coded grammar blocks with modeled example",
-        "mathOverlayPptx": "Color-coded grammar blocks with modeled example",
-        "speakerNotes": "Observe how the procedure unfolds in this guided demonstration: every single change responds to an explicit disciplinary rule.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        "slideNumber": 10,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Relación entre pistas",
+        "visualPrompt": "",
+        "overlayText": "Relación entre pistas",
+        "overlayTitle": "Relación entre pistas",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Relación entre pistas",
+        "speakerNotes": "A reader may prefer the blue blouse. The reading mentions it, so it can support a different opinion. Do not add a named sport. A supported opinion keeps details accurate even when readers make different choices.",
+        "duracionSeg": 8
       },
       {
-        "slideNumber": 4,
-        "tituloMomento": "Prevención del Error Frecuente",
-        "didacticPurpose": "Prevención del Error Frecuente",
-        "visualPrompt": "Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.",
-        "overlayTitle": "Atención: Error habitual",
-        "overlaySubtitle": "Confusión común que debemos evitar",
-        "overlayText": "Atención: Error habitual a evitar",
-        "vectorialOverlayPptx": "Error contrast: common grammar and punctuation pitfall",
-        "mathOverlayPptx": "Error contrast: common grammar and punctuation pitfall",
-        "speakerNotes": "A common pitfall happens when overlooking order or basic conventions. We always check each intermediate step before concluding.",
-        "palabrasAprox": 27,
-        "duracionSeg": 13
+        "slideNumber": 11,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Modelo explicado",
+        "visualPrompt": "",
+        "overlayText": "Modelo explicado",
+        "overlayTitle": "Modelo explicado",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Modelo explicado",
+        "speakerNotes": "Anne calls the diary her nicest present. How can a reader agree and give support? I agree because Anne calls the diary her nicest present. I think a diary is useful for recording experiences. The first sentence uses a detail from the reading. The second sentence explains the reader's reason.",
+        "duracionSeg": 8
       },
       {
-        "slideNumber": 5,
-        "tituloMomento": "Comprobación del Resultado",
-        "didacticPurpose": "Comprobación del Resultado",
-        "visualPrompt": "Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.",
-        "overlayTitle": "Validación del resultado",
-        "overlaySubtitle": "Comprobar que la respuesta es consistente",
-        "overlayText": "Comprobación y validación del resultado",
-        "vectorialOverlayPptx": "Meaning validation: verifying sentence cohesion",
-        "mathOverlayPptx": "Meaning validation: verifying sentence cohesion",
-        "speakerNotes": "By contrasting the result with our initial scenario, we confirm that our solution is consistent, rigorous, and fully answers the question.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        "slideNumber": 12,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Comprobación",
+        "visualPrompt": "",
+        "overlayText": "Comprobación",
+        "overlayTitle": "Comprobación",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Comprobación",
+        "speakerNotes": "Anne also received a blue blouse. How can another reader disagree with support? I disagree because Anne also received a blue blouse. I would prefer a present I could wear. The blouse appears in the reading. The preference is the reader's opinion, not a fact about Anne.",
+        "duracionSeg": 8
       },
       {
-        "slideNumber": 6,
-        "tituloMomento": "Estrategia Mnemotécnica",
-        "didacticPurpose": "Estrategia Mnemotécnica",
-        "visualPrompt": "Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.",
-        "overlayTitle": "Estrategia de pensamiento",
-        "overlaySubtitle": "1. Identificar · 2. Aplicar · 3. Comprobar",
-        "overlayText": "Estrategia mental: Identificar, Aplicar y Verificar",
-        "vectorialOverlayPptx": "Memory strategy: Connector + Subject + Verb + Context",
-        "mathOverlayPptx": "Memory strategy: Connector + Subject + Verb + Context",
-        "speakerNotes": "Always remember the three-step thinking strategy: identify the key data, apply the formal rule in order, and verify the final result.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        "slideNumber": 13,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Error y corrección",
+        "visualPrompt": "",
+        "overlayText": "Error y corrección",
+        "overlayTitle": "Error y corrección",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Error y corrección",
+        "speakerNotes": "Avoid this mistake: A preference can differ, but its supporting detail must appear in the text. If the answer adds information, return to the resource and revise it.",
+        "duracionSeg": 8
       },
       {
-        "slideNumber": 7,
-        "tituloMomento": "Síntesis y Regla de Oro",
-        "didacticPurpose": "Síntesis y Regla de Oro",
-        "visualPrompt": "Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.",
-        "overlayTitle": "Regla de Oro: Chronological Sequence and Time Connectors",
-        "overlaySubtitle": "Método disciplinar validado",
-        "overlayText": "Síntesis: Chronological Sequence and Time Connectors",
-        "vectorialOverlayPptx": "Summary infography: Golden rule of Chronological Sequence and Time Connectors",
-        "mathOverlayPptx": "Summary infography: Golden rule of Chronological Sequence and Time Connectors",
-        "speakerNotes": "Now that you understand the golden rule and the procedure of Chronological Sequence and Time Connectors, let us practice and prove our skills in the interactive platform!",
-        "palabrasAprox": 25,
-        "duracionSeg": 12
+        "slideNumber": 14,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Síntesis y práctica",
+        "visualPrompt": "",
+        "overlayText": "Síntesis y práctica",
+        "overlayTitle": "Síntesis y práctica",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Síntesis y práctica",
+        "speakerNotes": "A clear opinion needs accurate textual support. Read, locate evidence, explain and check. Continue with the interactive practice.",
+        "duracionSeg": 8
       }
     ]
   },
   "postQuestions": [
     {
-      "context": "Key Vocabulary & Context Clues (ideas generales)",
-      "question": "Which English words in the text give you clear clues about the communicative goal and the action?",
-      "expected": "Identify key English nouns, action verbs or connectors related to the topic.",
-      "success": "Well done! You successfully identified the key English vocabulary from the context.",
-      "support": "Look for transparent words and descriptive adjectives: what words tell you what is happening?",
-      "reveal": "Context clues and key vocabulary help us understand the main message without needing an immediate dictionary translation.",
-      "studentReveal": "Key English words identified from the context of the communicative text."
-    },
-    {
-      "context": "Grammar & Communicative Flow",
-      "question": "Notice the verb tense or structure used in the sentences. How does the grammatical form tell us when or how the action happens?",
-      "expected": "Recognize the verb form or structure indicating time, function, or modality.",
-      "success": "Excellent! You connected the grammatical structure with its real communicative meaning.",
-      "support": "Look at the ending of the verb or auxiliary words: does it talk about routine, past events or future plans?",
-      "reveal": "Grammatical structures and verb tenses provide the timeline and conditions for natural English communication.",
-      "studentReveal": "The verb tense and sentence structure that clarify the communicative intention."
+      "context": "Comprobación 1",
+      "question": "How can another reader disagree with support?",
+      "expected": "I disagree because Anne also received a blue blouse. I would prefer a present I could wear.",
+      "success": "Respuesta precisa y fundamentada",
+      "support": "Revisa el concepto clave expuesto",
+      "reveal": "I disagree because Anne also received a blue blouse. I would prefer a present I could wear.",
+      "studentReveal": "I disagree because Anne also received a blue blouse. I would prefer a present I could wear."
     }
   ],
   "practice": [
     {
-      "context": "Practice 1 in Notebook: Vocabulary & Model Sentences",
-      "question": "Open your English notebook. Write as title: 'Chronological Sequence and Time Connectors'. Copy the key vocabulary box, write 2 original sentences using 'ideas generales', and translate their meaning into Spanish.",
-      "expected": "Accurate English sentences in the notebook with correct spelling, grammar agreement, and Spanish translation.",
-      "success": "Great notebook work! Your English sentences are well structured and meaningful.",
-      "support": "Check the slide model: Subject + Verb + Complement. Follow that pattern to write your sentences.",
-      "reveal": "Writing model sentences consolidates vocabulary and internalizes the English syntactic order.",
-      "studentReveal": "Original English sentences written and checked in the notebook."
+      "context": "Anne calls the diary her nicest present.",
+      "question": "How can a reader agree and give support? Write an answer and identify its support.",
+      "expected": "I agree because Anne calls the diary her nicest present. I think a diary is useful for recording experiences.",
+      "success": "The first sentence uses a detail from the reading. The second sentence explains the reader's reason.",
+      "support": "Revisa los datos del recurso",
+      "reveal": "I agree because Anne calls the diary her nicest present. I think a diary is useful for recording experiences.",
+      "studentReveal": "I agree because Anne calls the diary her nicest present. I think a diary is useful for recording experiences."
     },
     {
-      "context": "Practice 2 in Notebook: Short Dialogue or Message",
-      "question": "In your notebook, write a short 3-line dialogue or message applying today's communicative goal (Using 'first', 'then', 'suddenly' to map narrative events). Then read it aloud with your mentor.",
-      "expected": "Short dialogue written in English and read aloud with proper pronunciation and natural intonation.",
-      "success": "Outstanding fluency! Writing and reading aloud activates both speaking and writing skills.",
-      "support": "Use simple, direct phrases: Greeting, main message or question, and friendly closing.",
-      "reveal": "Interactive dialogue practice is the cornerstone of foreign language fluency.",
-      "studentReveal": "Short English dialogue written and practiced aloud with the mentor."
+      "context": "Anne also received a blue blouse.",
+      "question": "How can another reader disagree with support? Write an answer and identify its support.",
+      "expected": "I disagree because Anne also received a blue blouse. I would prefer a present I could wear.",
+      "success": "The blouse appears in the reading. The preference is the reader's opinion, not a fact about Anne.",
+      "support": "Revisa los datos del recurso",
+      "reveal": "I disagree because Anne also received a blue blouse. I would prefer a present I could wear.",
+      "studentReveal": "I disagree because Anne also received a blue blouse. I would prefer a present I could wear."
+    },
+    {
+      "context": "New original classroom message: Maya writes: Our class made a small booklet. I liked the page of drawings best. Each drawing helped me remember a different part of the story. The message does not name a prize or a sport.",
+      "question": "Do you agree that the drawings helped Maya remember the story? Write a position, one accurate detail and your reason. Do not add a prize or a sport.",
+      "expected": "One possible answer: I agree because each drawing helped Maya remember a part of the story. Pictures can help a reader remember events. Other clear positions are accepted when they accurately use the message and explain the reason.",
+      "success": "Aplica el criterio de la clase de manera autónoma en un recurso nuevo",
+      "support": "Comprobar cada elemento pedido y su evidencia; aceptar formulaciones equivalentes. Si falta una relación, pedir que señale la pista y explique qué demuestra; después ofrecer el modelo y un nuevo intento. Registrar respuesta, apoyos y criterio por reforzar.",
+      "reveal": "One possible answer: I agree because each drawing helped Maya remember a part of the story. Pictures can help a reader remember events. Other clear positions are accepted when they accurately use the message and explain the reason.",
+      "studentReveal": "One possible answer: I agree because each drawing helped Maya remember a part of the story. Pictures can help a reader remember events. Other clear positions are accepted when they accurately use the message and explain the reason."
     }
   ],
   "mini": [
     {
-      "id": "q_1",
-      "q": "Reading Comprehension: What is the main communicative purpose of 'ideas generales' in today's English lesson?",
+      "id": "q1",
+      "q": "Which detail appears in the reading?",
       "options": [
-        "To express clear ideas, actions, or descriptions in English using context clues and accurate sentence structure",
-        "To translate words completely out of context without paying attention to meaning",
-        "To memorize isolated lists of English words without applying them in real sentences"
+        "A. Anne received a bicycle",
+        "B. Anne received a blue blouse",
+        "C. Anne travelled to another city",
+        "D. Anne played a named sport"
       ],
-      "correct": "To express clear ideas, actions, or descriptions in English using context clues and accurate sentence structure",
-      "fixExplain": "Context clues and functional structures allow English learners to communicate naturally and with confidence.",
-      "concept": "Chronological Sequence and Time Connectors",
-      "explain": "Context clues and functional structures allow English learners to communicate naturally and with confidence.",
-      "dileReview": "Pídele que señale la palabra o verbo en inglés que justifica su elección."
+      "correct": "B. Anne received a blue blouse",
+      "fixExplain": "The blue blouse appears among the presents."
     },
     {
-      "id": "q_2",
-      "q": "To avoid the common mistake of 'Dificultad para procesar el inglés hablado a una velocidad natural o casi natural.', what is the best strategy when reading an English text?",
+      "id": "q2",
+      "q": "Which response gives a position and accurate support?",
       "options": [
-        "Identify the general meaning and key cognates first, instead of trying to translate every single word",
-        "Stop reading immediately whenever you find an unfamiliar English word",
-        "Assume that English sentences must follow the exact same word order as Spanish"
+        "A. I agree because the text mentions a diary",
+        "B. I agree because Anne received a bicycle",
+        "C. I disagree, with no reason",
+        "D. The text names football"
       ],
-      "correct": "Identify the general meaning and key cognates first, instead of trying to translate every single word",
-      "fixExplain": "Deducir el significado por contexto evita la frustración y construye fluidez en la comprensión lectora en inglés.",
-      "concept": "Chronological Sequence and Time Connectors",
-      "explain": "Deducir el significado por contexto evita la frustración y construye fluidez en la comprensión lectora en inglés.",
-      "dileReview": "Pregúntale: ¿cómo te ayudaron los cognados a entender la idea general sin usar diccionario?"
+      "correct": "A. I agree because the text mentions a diary",
+      "fixExplain": "The response gives a position and a detail that appears in the reading."
     },
     {
-      "id": "q_3",
-      "q": "Language Structure: Which English sentence demonstrates the correct grammatical pattern for 'ideas generales'?",
+      "id": "q3",
+      "q": "Can readers disagree about the nicest present?",
       "options": [
-        "The student carefully read the text and wrote a complete response in the notebook",
-        "The student carefully reading the text and write without agreement yesterday",
-        "Yesterday the student will read the text in the future tense by mistake"
+        "A. No, every preference must be identical",
+        "B. No, only one reader may answer",
+        "C. Yes, if they support their opinion with accurate information",
+        "D. Yes, by inventing any present"
       ],
-      "correct": "The student carefully read the text and wrote a complete response in the notebook",
-      "fixExplain": "A well-structured English sentence maintains proper subject-verb agreement and consistent tense usage.",
-      "concept": "Chronological Sequence and Time Connectors",
-      "explain": "A well-structured English sentence maintains proper subject-verb agreement and consistent tense usage.",
-      "dileReview": "Pídele que identifique el sujeto y el verbo principal de la oración correcta."
+      "correct": "C. Yes, if they support their opinion with accurate information",
+      "fixExplain": "Different positions can be valid when their support is accurate."
     }
   ],
   "recovery": [
     {
-      "title": "English Recovery & Consolidation: Chronological Sequence and Time Connectors",
-      "explain": "When reading and writing in English, always look for the main subject and the action verb in the correct tense, using context clues to guide your comprehension of 'ideas generales'.",
-      "q": "Which sentence correctly demonstrates clear English communication for this lesson?",
-      "options": [
-        "The team explored the setting and recorded their findings in the notebook",
-        "The team explore yesterday without any past tense marker"
-      ],
-      "correct": "The team explored the setting and recorded their findings in the notebook",
-      "correctText": "Correct! The sentence uses the proper past tense marker (-ed) to express a completed action.",
-      "fixText": "Remember that in English, regular verbs in the past tense take the -ed ending to signal completed events."
+      "title": "Recuperación 1",
+      "explain": "The blue blouse appears among the presents.",
+      "q": "Name two details that actually appear.",
+      "kind": "open_response",
+      "options": [],
+      "correct": "",
+      "correctText": "Short sentences and pictures; making a poster also appears. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
+      "fixText": "Buscar estas expresiones del recurso nuevo: «Short»; «sentences»; «pictures»; «making». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
+      "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
+      "resource": "New original message for recovery: Leo writes: My favourite class activity was making a poster. We used short sentences and pictures to explain our project. The message does not mention a bicycle or a competition.",
+      "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
+    },
+    {
+      "title": "Recuperación 2",
+      "explain": "The response gives a position and a detail that appears in the reading.",
+      "q": "Complete a supported opinion: I agree that a poster can explain a project because ___.",
+      "kind": "open_response",
+      "options": [],
+      "correct": "",
+      "correctText": "For example: it uses short sentences and pictures. The reason must connect with the message. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
+      "fixText": "Buscar estas expresiones del recurso nuevo: «short»; «sentences»; «pictures»; «message». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
+      "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
+      "resource": "New original message for recovery: Leo writes: My favourite class activity was making a poster. We used short sentences and pictures to explain our project. The message does not mention a bicycle or a competition.",
+      "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
+    },
+    {
+      "title": "Recuperación 3",
+      "explain": "Different positions can be valid when their support is accurate.",
+      "q": "Can a reader prefer another activity? Explain the condition for using this text as support.",
+      "kind": "open_response",
+      "options": [],
+      "correct": "",
+      "correctText": "Yes; a different preference is possible, but any claimed detail from this message must be accurate. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
+      "fixText": "Buscar estas expresiones del recurso nuevo: «message». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
+      "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
+      "resource": "New original message for recovery: Leo writes: My favourite class activity was making a poster. We used short sentences and pictures to explain our project. The message does not mention a bicycle or a competition.",
+      "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
     }
   ],
   "summaryIdeas": [
     [
-      "1 · Concepto central",
-      "Identificamos los elementos y el punto de partida del análisis."
+      "Idea central",
+      "Una situación"
     ],
     [
-      "2 · Interpretación del contexto",
-      "Using 'first', 'then', 'suddenly' to map narrative events"
-    ],
-    [
-      "3 · Síntesis formal",
-      "In Chronological Sequence and Time Connectors, we communicate effectively by using 'ideas generales' in context, paying attention to verb tenses and avoiding word-for-word translation."
+      "Comprensión",
+      "Aplicación del criterio formal en el cuaderno físico."
     ]
   ],
   "interactive": {
-    "type": "story_arc",
-    "title": "English Narrative Story Arc & Time Connectors",
-    "description": "Organizador gráfico secuencial para comprensión lectora."
-  },
-  "summaryText": "Hoy dominaste Using 'first', 'then', 'suddenly' to map narrative events en inglés con práctica activa de vocabulario y escritura en tu cuaderno.",
-  "reasoning": {
-    "title": "Comparemos dos situaciones",
-    "dileIntro": "Antes de resumir, comparemos dos situaciones. No necesitas repetir una frase exacta: lo importante es que expliques la idea con tus propias palabras.",
-    "question": "Al comparar dos situaciones de Chronological Sequence and Time Connectors, ¿cómo influye el contexto en la interpretación de los datos?",
-    "expectedAnswer": "El significado o resultado depende de las condiciones del contexto y del propósito de la situación.",
-    "context1": {
-      "label": "SITUACIÓN 1",
-      "value": "Practice 1 in Notebook: Vocabulary & Model Sentences",
-      "desc": "Open your English notebook. Write as title: 'Chronological Sequence and Time Connectors'. Copy the key vocabulary box, write 2 original sentences using 'ideas generales', and translate their meaning into Spanish."
-    },
-    "context2": {
-      "label": "SITUACIÓN 2",
-      "value": "Practice 2 in Notebook: Short Dialogue or Message",
-      "desc": "In your notebook, write a short 3-line dialogue or message applying today's communicative goal (Using 'first', 'then', 'suddenly' to map narrative events). Then read it aloud with your mentor."
-    },
-    "successFeedback": "¡Excelente razonamiento! Reconociste que el contexto orienta la interpretación de los datos.",
-    "supportFeedback": "Observa cada situación por separado y explica qué elementos las distinguen.",
-    "revealText": "Cada situación tiene un propósito particular y los datos se interpretan según las condiciones del problema."
-  },
-  "challenge": {
-    "title": "Desafío breve: Chronological Sequence and Time Connectors",
-    "question": "En Inglés, ¿qué diferencia observas entre identificar los datos y aplicar el procedimiento? Explica tu razonamiento.",
-    "expectedAnswer": "Identificar los datos determina el punto de partida; aplicar el procedimiento permite construir la respuesta.",
-    "item1": {
-      "label": "Datos iniciales",
-      "tag": "Punto de partida"
-    },
-    "item2": {
-      "label": "Procedimiento",
-      "tag": "Aplicación"
-    },
-    "successFeedback": "¡Muy bien! Distinguiste claramente los momentos del análisis.",
-    "supportFeedback": "Revisémoslo juntos: primero identificamos la información disponible y luego aplicamos el método correspondiente."
-  },
-  "strategy": {
-    "title": "Cómo analizar una situación",
-    "dileIntro": "Cuando enfrentes un problema en Inglés, puedes seguir estos tres pasos clave:",
-    "steps": [
-      {
-        "number": 1,
-        "title": "Identifica",
-        "desc": "¿Cuáles son los datos clave y cuál es la pregunta central?"
-      },
-      {
-        "number": 2,
-        "title": "Aplica",
-        "desc": "¿Qué regla o método disciplinar corresponde utilizar?"
-      },
-      {
-        "number": 3,
-        "title": "Comprueba",
-        "desc": "¿La conclusión o resultado responde con coherencia al problema?"
-      }
-    ]
+    "type": "reading_resource",
+    "title": "Reading Resource & Vocabulary in Context",
+    "description": "Text comprehension and contextual vocabulary organizer."
   },
   "closure": {
-    "congratulations": "¡Felicitaciones! Hoy completaste con éxito la clase \"Chronological Sequence and Time Connectors\". Has demostrado constancia y rigor en tu aprendizaje.",
-    "nextClassPreview": "En la próxima sesión continuaremos profundizando los aprendizajes de Inglés."
+    "congratulations": "Good work. You explained your answer with information from the resource.",
+    "nextClassPreview": "¡Nos vemos en la próxima lección!"
   },
   "paso8_cierre": {
-    "preguntaSintesis": "In your own words, what was the most useful English word or phrase you learned in today's lesson?",
-    "metacognicion": "¿Qué técnica te ayudó más a entender el texto en inglés: buscar cognados o identificar los verbos principales?",
-    "celebracion": "Great job today! You have successfully mastered Lesson 2. See you in the next English adventure!"
+    "preguntaSintesis": "How can a reader agree and give support?",
+    "metacognicion": "What helped you understand: the resource, its details or comparing answers? Explain why.",
+    "celebracion": "Good work. You explained your answer with information from the resource."
   }
 };

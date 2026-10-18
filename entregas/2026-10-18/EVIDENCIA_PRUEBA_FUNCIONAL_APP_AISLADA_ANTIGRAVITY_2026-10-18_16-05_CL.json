@@ -1,0 +1,775 @@
+{
+  "meta": {
+    "informe": "INFORME_PRUEBA_FUNCIONAL_APP_AISLADA_ANTIGRAVITY_2026-10-18_16-05_CL.md",
+    "evidencia": "EVIDENCIA_PRUEBA_FUNCIONAL_APP_AISLADA_ANTIGRAVITY_2026-10-18_16-05_CL.json",
+    "fecha_hora_chile": "2026-10-18 16:05 [America/Santiago]",
+    "curso": "110-7 (7° Básico)",
+    "estado_curricular": "EN_REVISION",
+    "entorno": "Copia Aislada Web Studio Simple (Local)",
+    "veredicto": "VERIFICACION_FUNCIONAL_SATISFACTORIA",
+    "controles_totales": 17,
+    "controles_pasados": 17,
+    "controles_fallados": 0
+  },
+  "protecciones_confirmadas": {
+    "matematica_oa01_protegido": true,
+    "pptx_terminados_14_protegidos": true,
+    "videos_estado": "PENDIENTE_VIDEO_A_CARGO_WALTER",
+    "escritura_neon_railway": false,
+    "autoaprobacion_pedagogica": false
+  },
+  "clases_probadas": {
+    "ciencias_7b_oa01_clase02": {
+      "titulo": "Cambios físicos durante la pubertad",
+      "modulo_ts": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase02.ts",
+      "alimentador": "findCanonicalFactoryLesson (Prioridad #1 de Fábrica)",
+      "entrega_base": "2026-10-18 01:13 CL",
+      "reactivos_miniquiz": [
+        {
+          "id": "q1",
+          "correct": "A. Aumento de estatura",
+          "enunciado_valido": true
+        },
+        {
+          "id": "q2",
+          "correct": "B. Los órganos reproductores de los caracteres sexuales secundarios",
+          "enunciado_valido": true
+        },
+        {
+          "id": "q3",
+          "correct": "D. Las personas pueden mostrar cambios en momentos distintos",
+          "enunciado_valido": true
+        }
+      ],
+      "estimulo_transferencia": {
+        "presente": true,
+        "contexto_real": "Caso ficticio nuevo: Ren nota aparición de vello axilar. Su compañero de la misma edad aún no lo nota. Alguien afirma que Ren será mejor estudiante por ese cambio.",
+        "es_generico": false
+      },
+      "recuperacion_cuaderno": {
+        "tipo": "open_response",
+        "opciones_fabricadas_ad": false,
+        "recurso_nuevo": "Caso nuevo de recuperación: Dos estudiantes ficticios de la misma edad comienzan a notar cambios de voz en momentos distintos."
+      }
+    },
+    "lengua_7b_oa03_clase01": {
+      "titulo": "Jimmy y Robutt: leer el ambiente y descubrir el conflicto",
+      "modulo_ts": "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase01.ts",
+      "alimentador": "findCanonicalFactoryLesson (Prioridad #1 de Fábrica)",
+      "relato_asimov_presente": true,
+      "referencia_pptx_protegida": true
+    }
+  },
+  "recorridos_ejecutados": [
+    {
+      "recorrido": "Carga Real",
+      "paso": "Resolución de Ciencias Naturales 7B OA01 Clase 02 vía findCanonicalFactoryLesson",
+      "esperado": "Módulo canónico cargado con prioridad absoluta de fábrica",
+      "observado": "Cargado: \"Una situación\"",
+      "resultado": "PASS",
+      "detalles": {
+        "metadata": {
+          "grade": "7° Básico",
+          "subject": "Ciencias Naturales",
+          "oaCode": "OA 1",
+          "oaTitle": "Ciencias Naturales - OA 1",
+          "lessonNumber": 2,
+          "totalLessonsInOa": 6,
+          "lessonTitle": "Una situación",
+          "durationMinutes": 30,
+          "nextLessonTitle": ""
+        }
+      }
+    },
+    {
+      "recorrido": "Carga Real",
+      "paso": "Resolución de Lengua y Literatura 7B OA03 Clase 01 vía findCanonicalFactoryLesson",
+      "esperado": "Módulo canónico cargado con prioridad absoluta de fábrica",
+      "observado": "Cargado: \"Jimmy y Robutt: leer el ambiente y descubrir el conflicto\"",
+      "resultado": "PASS",
+      "detalles": {
+        "metadata": {
+          "grade": "7° Básico",
+          "subject": "Lengua y Literatura",
+          "oaCode": "OA 3",
+          "oaTitle": "Lengua y Literatura - OA 3",
+          "lessonNumber": 1,
+          "totalLessonsInOa": 6,
+          "lessonTitle": "Jimmy y Robutt: leer el ambiente y descubrir el conflicto",
+          "durationMinutes": 30,
+          "nextLessonTitle": "Acciones de los personajes y desarrollo del conflicto."
+        }
+      }
+    },
+    {
+      "recorrido": "Carga Real",
+      "paso": "Integridad de preguntas y alternativas en Ciencias Clase 02",
+      "esperado": "3 reactivos formales, cada uno con 4 alternativas y claves explícitas sin \"Clave privada:\" como enunciado",
+      "observado": "3 reactivos válidos (Q1: \"A. Aumento de estatura\", Q2: \"B. Los órganos reproductores de los caracteres sexuales secundarios\", Q3: \"D. Las personas pueden mostrar cambios en momentos distintos\")",
+      "resultado": "PASS",
+      "detalles": {
+        "mini": [
+          {
+            "id": "q1",
+            "q": "¿Cuál es un cambio físico descrito en el recurso?",
+            "options": [
+              "A. Aumento de estatura",
+              "B. Elegir un libro favorito",
+              "C. Cambiar una opinión sobre una película",
+              "D. Recibir una invitación"
+            ],
+            "correct": "A. Aumento de estatura",
+            "fixExplain": "El aumento de estatura aparece entre los cambios físicos."
+          },
+          {
+            "id": "q2",
+            "q": "¿Qué distingue el recurso?",
+            "options": [
+              "A. La estatura de la inteligencia mediante una fórmula",
+              "B. Los órganos reproductores de los caracteres sexuales secundarios",
+              "C. El valor de las personas según su voz",
+              "D. Un desarrollo idéntico para todas las personas"
+            ],
+            "correct": "B. Los órganos reproductores de los caracteres sexuales secundarios",
+            "fixExplain": "Ambas categorías se relacionan con el cuerpo, pero no significan lo mismo."
+          },
+          {
+            "id": "q3",
+            "q": "¿Qué conclusión respeta los ritmos individuales?",
+            "options": [
+              "A. Todas las personas cambian el mismo día",
+              "B. Quien cambia antes es más responsable",
+              "C. Las diferencias de ritmo permiten burlarse",
+              "D. Las personas pueden mostrar cambios en momentos distintos"
+            ],
+            "correct": "D. Las personas pueden mostrar cambios en momentos distintos",
+            "fixExplain": "El recurso indica que los cambios no comienzan al mismo tiempo ni tienen ritmo idéntico."
+          }
+        ]
+      }
+    },
+    {
+      "recorrido": "Carga Real",
+      "paso": "Presencia de estímulo indispensable de transferencia en Ciencias Clase 02",
+      "esperado": "Contexto contiene caso ficticio real de Ren con vello axilar (no rótulo genérico)",
+      "observado": "Estímulo presente: \"Caso ficticio nuevo: Ren nota aparición de vello axilar. Su compañero ...\"",
+      "resultado": "PASS",
+      "detalles": {
+        "practiceTransfer": {
+          "context": "Caso ficticio nuevo: Ren nota aparición de vello axilar. Su compañero de la misma edad aún no lo nota. Alguien afirma que Ren será mejor estudiante por ese cambio.",
+          "question": "Distingue el cambio físico, explica qué permiten concluir los ritmos diferentes y rechaza o acepta la afirmación sobre el rendimiento escolar con una razón.",
+          "expected": "El vello axilar es un carácter sexual secundario. Las personas pueden cambiar en momentos distintos. Este cambio no demuestra capacidad escolar ni mayor valor personal.",
+          "success": "Aplica el criterio de la clase de manera autónoma en un recurso nuevo",
+          "support": "Comprobar cada elemento pedido y su evidencia; aceptar formulaciones equivalentes. Si falta una relación, pedir que señale la pista y explique qué demuestra; después ofrecer el modelo y un nuevo intento. Registrar respuesta, apoyos y criterio por reforzar.",
+          "reveal": "El vello axilar es un carácter sexual secundario. Las personas pueden cambiar en momentos distintos. Este cambio no demuestra capacidad escolar ni mayor valor personal.",
+          "studentReveal": "El vello axilar es un carácter sexual secundario. Las personas pueden cambiar en momentos distintos. Este cambio no demuestra capacidad escolar ni mayor valor personal."
+        }
+      }
+    },
+    {
+      "recorrido": "Carga Real",
+      "paso": "Configuración de recuperación como práctica de cuaderno abierta",
+      "esperado": "kind === \"open_response\" con options vacías (cero alternativas A-D fabricadas)",
+      "observado": "3 ítems de recuperación abiertos para cuaderno físico",
+      "resultado": "PASS",
+      "detalles": {
+        "recovery": [
+          {
+            "title": "Recuperación 1",
+            "explain": "El aumento de estatura aparece entre los cambios físicos.",
+            "q": "Nombra el cambio corporal del caso y explica por qué es físico.",
+            "kind": "open_response",
+            "options": [],
+            "correct": "",
+            "correctText": "El cambio de voz afecta una característica del cuerpo. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
+            "fixText": "Buscar estas expresiones del recurso nuevo: «cambio». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
+            "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
+            "resource": "Caso nuevo de recuperación: Dos estudiantes ficticios de la misma edad comienzan a notar cambios de voz en momentos distintos. El recurso distingue órganos reproductores y caracteres secundarios, y señala que el ritmo varía.",
+            "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
+          },
+          {
+            "title": "Recuperación 2",
+            "explain": "Ambas categorías se relacionan con el cuerpo, pero no significan lo mismo.",
+            "q": "¿El cambio de voz es un órgano reproductor o un carácter secundario? Explica la diferencia.",
+            "kind": "open_response",
+            "options": [],
+            "correct": "",
+            "correctText": "Es un carácter secundario, no un órgano reproductor. Que ambos se relacionen con la pubertad no los vuelve la misma categoría. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
+            "fixText": "Buscar estas expresiones del recurso nuevo: «secundario»; «órgano»; «reproductor». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
+            "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
+            "resource": "Caso nuevo de recuperación: Dos estudiantes ficticios de la misma edad comienzan a notar cambios de voz en momentos distintos. El recurso distingue órganos reproductores y caracteres secundarios, y señala que el ritmo varía.",
+            "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
+          },
+          {
+            "title": "Recuperación 3",
+            "explain": "El recurso indica que los cambios no comienzan al mismo tiempo ni tienen ritmo idéntico.",
+            "q": "¿Los distintos momentos permiten decidir quién es más responsable? Justifica.",
+            "kind": "open_response",
+            "options": [],
+            "correct": "",
+            "correctText": "No; los ritmos de cambio no determinan responsabilidad ni valor personal. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
+            "fixText": "Buscar estas expresiones del recurso nuevo: «cambio». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
+            "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
+            "resource": "Caso nuevo de recuperación: Dos estudiantes ficticios de la misma edad comienzan a notar cambios de voz en momentos distintos. El recurso distingue órganos reproductores y caracteres secundarios, y señala que el ritmo varía.",
+            "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
+          }
+        ]
+      }
+    },
+    {
+      "recorrido": "Recorrido A.1 (0/3)",
+      "paso": "Evaluación y finalización de sesión con 0/3 aciertos",
+      "esperado": "canAccreditLesson === false, isMastered === false, NO se registra en completedLessons",
+      "observado": "canAccreditLesson: false, isMastered: false, en storage: false",
+      "resultado": "PASS",
+      "detalles": {
+        "sessionA1": {
+          "stage": "closing",
+          "activeOa": "OA 1",
+          "activeLessonNum": 2,
+          "activeLessonTitle": "Una situación",
+          "feedback": null,
+          "attempt": 1,
+          "attempts": 1,
+          "conversationIndex": 0,
+          "postIndex": 0,
+          "practiceIndex": 0,
+          "summaryIdea": 0,
+          "quizVisible": false,
+          "hookStarted": true,
+          "hookEnded": true,
+          "formalStarted": true,
+          "formalEnded": true,
+          "video": {
+            "kind": null,
+            "playing": false,
+            "seek": 0,
+            "command": 0
+          },
+          "miniAnswers": [
+            "B. Elegir un libro",
+            "A. La estatura",
+            "B. Quien cambia"
+          ],
+          "miniScore": 0,
+          "reviewQueue": [],
+          "reviewIndex": 0,
+          "recoveryItems": [
+            0,
+            1,
+            2
+          ],
+          "recoveryIndex": 0,
+          "recoveryVisible": true,
+          "recoveryAnswer": "",
+          "supportCount": 3,
+          "reasoningIndependent": false,
+          "challengeCompleted": false
+        },
+        "finalA1": {
+          "isMastered": false,
+          "stage": "completed",
+          "canonicalKey": "7_cie_oa1_2"
+        }
+      }
+    },
+    {
+      "recorrido": "Recorrido A.1 (0/3)",
+      "paso": "Recarga y persistencia tras finalizar 0/3",
+      "esperado": "Conserva miniScore=0, attempts=1, canAccreditLesson === false tras recarga",
+      "observado": "Recargado: miniScore=0, attempts=1, canAccredit=false",
+      "resultado": "PASS",
+      "detalles": {
+        "resumedA1": {
+          "stage": "closing",
+          "activeOa": "OA 1",
+          "activeLessonNum": 2,
+          "activeLessonTitle": "Una situación",
+          "feedback": null,
+          "attempt": 1,
+          "attempts": 1,
+          "conversationIndex": 0,
+          "postIndex": 0,
+          "practiceIndex": 0,
+          "summaryIdea": 0,
+          "quizVisible": false,
+          "hookStarted": true,
+          "hookEnded": true,
+          "formalStarted": true,
+          "formalEnded": true,
+          "video": {
+            "kind": null,
+            "playing": false,
+            "seek": 0,
+            "command": 0
+          },
+          "miniAnswers": [
+            "B. Elegir un libro",
+            "A. La estatura",
+            "B. Quien cambia"
+          ],
+          "miniScore": 0,
+          "reviewQueue": [],
+          "reviewIndex": 0,
+          "recoveryItems": [
+            0,
+            1,
+            2
+          ],
+          "recoveryIndex": 0,
+          "recoveryVisible": true,
+          "recoveryAnswer": "",
+          "supportCount": 3,
+          "reasoningIndependent": false,
+          "challengeCompleted": false
+        }
+      }
+    },
+    {
+      "recorrido": "Recorrido A.2 (1/3)",
+      "paso": "Evaluación y finalización de sesión con 1/3 aciertos",
+      "esperado": "canAccreditLesson === false, isMastered === false, NO se registra en completedLessons",
+      "observado": "canAccreditLesson: false, isMastered: false, en storage: false",
+      "resultado": "PASS",
+      "detalles": {
+        "sessionA2": {
+          "stage": "closing",
+          "activeOa": "OA 1",
+          "activeLessonNum": 2,
+          "activeLessonTitle": "Una situación",
+          "feedback": null,
+          "attempt": 1,
+          "attempts": 1,
+          "conversationIndex": 0,
+          "postIndex": 0,
+          "practiceIndex": 0,
+          "summaryIdea": 0,
+          "quizVisible": false,
+          "hookStarted": true,
+          "hookEnded": true,
+          "formalStarted": true,
+          "formalEnded": true,
+          "video": {
+            "kind": null,
+            "playing": false,
+            "seek": 0,
+            "command": 0
+          },
+          "miniAnswers": [
+            "A. Aumento de estatura",
+            "A. La estatura",
+            "B. Quien cambia"
+          ],
+          "miniScore": 1,
+          "reviewQueue": [],
+          "reviewIndex": 0,
+          "recoveryItems": [
+            0,
+            1,
+            2
+          ],
+          "recoveryIndex": 0,
+          "recoveryVisible": true,
+          "recoveryAnswer": "",
+          "supportCount": 2,
+          "reasoningIndependent": false,
+          "challengeCompleted": false
+        },
+        "finalA2": {
+          "isMastered": false,
+          "stage": "completed",
+          "canonicalKey": "7_cie_oa1_2"
+        }
+      }
+    },
+    {
+      "recorrido": "Recorrido B",
+      "paso": "Estudiante completa tarea abierta en cuaderno físico",
+      "esperado": "recoveryAnswer === \"completed_open_task\", sin interacción con opciones A-D",
+      "observado": "recoveryAnswer registrado: \"completed_open_task\"",
+      "resultado": "PASS",
+      "detalles": {
+        "studentAction": {
+          "recoveryAnswer": "completed_open_task"
+        }
+      }
+    },
+    {
+      "recorrido": "Recorrido B",
+      "paso": "Valoración del adulto mentor sobre el trabajo de cuaderno",
+      "esperado": "recoveryPassed === true, pero miniScore permanece en 1 sin acreditar la clase",
+      "observado": "recoveryPassed: true, miniScore: 1, canAccredit: false",
+      "resultado": "PASS",
+      "detalles": {
+        "adultAction": {
+          "recoveryPassed": true
+        },
+        "sessionB": {
+          "stage": "closing",
+          "activeOa": "OA 1",
+          "activeLessonNum": 2,
+          "activeLessonTitle": "Una situación",
+          "feedback": null,
+          "attempt": 1,
+          "attempts": 1,
+          "conversationIndex": 0,
+          "postIndex": 0,
+          "practiceIndex": 0,
+          "summaryIdea": 0,
+          "quizVisible": false,
+          "hookStarted": true,
+          "hookEnded": true,
+          "formalStarted": true,
+          "formalEnded": true,
+          "video": {
+            "kind": null,
+            "playing": false,
+            "seek": 0,
+            "command": 0
+          },
+          "miniAnswers": [
+            "A. Aumento de estatura",
+            "A. La estatura",
+            "B. Quien cambia"
+          ],
+          "miniScore": 1,
+          "reviewQueue": [],
+          "reviewIndex": 0,
+          "recoveryItems": [
+            1,
+            2
+          ],
+          "recoveryIndex": 0,
+          "recoveryVisible": true,
+          "recoveryAnswer": "completed_open_task",
+          "supportCount": 2,
+          "reasoningIndependent": false,
+          "challengeCompleted": false,
+          "recoveryPassed": true
+        }
+      }
+    },
+    {
+      "recorrido": "Recorrido B",
+      "paso": "Comprobación de no acreditación tras refuerzo sin reintento",
+      "esperado": "isMastered === false, clase NO acreditada en storage (tarea abierta no sustituye reintento)",
+      "observado": "isMastered: false, en storage: false",
+      "resultado": "PASS",
+      "detalles": {
+        "finalB": {
+          "isMastered": false,
+          "stage": "completed",
+          "canonicalKey": "7_cie_oa1_2"
+        }
+      }
+    },
+    {
+      "recorrido": "Recorrido C",
+      "paso": "Preparación de estado para reintento de comprobación (retestMiniquiz)",
+      "esperado": "stage === \"miniquiz\", miniScore=0, attempts=2, supportCount conservado",
+      "observado": "stage: miniquiz, miniScore: 0, attempts: 2, supportCount: 2",
+      "resultado": "PASS",
+      "detalles": {
+        "retestPatch": {
+          "stage": "miniquiz",
+          "miniAnswers": [],
+          "miniScore": 0,
+          "quizVisible": false,
+          "attempts": 2,
+          "supportCount": 2
+        },
+        "sessionC": {
+          "stage": "miniquiz",
+          "activeOa": "OA 1",
+          "activeLessonNum": 2,
+          "activeLessonTitle": "Una situación",
+          "feedback": null,
+          "attempt": 1,
+          "attempts": 2,
+          "conversationIndex": 0,
+          "postIndex": 0,
+          "practiceIndex": 0,
+          "summaryIdea": 0,
+          "quizVisible": false,
+          "hookStarted": true,
+          "hookEnded": true,
+          "formalStarted": true,
+          "formalEnded": true,
+          "video": {
+            "kind": null,
+            "playing": false,
+            "seek": 0,
+            "command": 0
+          },
+          "miniAnswers": [],
+          "miniScore": 0,
+          "reviewQueue": [],
+          "reviewIndex": 0,
+          "recoveryItems": [
+            1,
+            2
+          ],
+          "recoveryIndex": 0,
+          "recoveryVisible": true,
+          "recoveryAnswer": "completed_open_task",
+          "supportCount": 2,
+          "reasoningIndependent": false,
+          "challengeCompleted": false,
+          "recoveryPassed": true
+        }
+      }
+    },
+    {
+      "recorrido": "Recorrido C",
+      "paso": "Finalización y acreditación con 2/3 aciertos tras reintento",
+      "esperado": "canAccreditLesson === true, isMastered === true, clase registrada en completedLessons",
+      "observado": "canAccreditLesson: true, isMastered: true, en storage: true",
+      "resultado": "PASS",
+      "detalles": {
+        "sessionC": {
+          "stage": "closing",
+          "activeOa": "OA 1",
+          "activeLessonNum": 2,
+          "activeLessonTitle": "Una situación",
+          "feedback": null,
+          "attempt": 1,
+          "attempts": 2,
+          "conversationIndex": 0,
+          "postIndex": 0,
+          "practiceIndex": 0,
+          "summaryIdea": 0,
+          "quizVisible": false,
+          "hookStarted": true,
+          "hookEnded": true,
+          "formalStarted": true,
+          "formalEnded": true,
+          "video": {
+            "kind": null,
+            "playing": false,
+            "seek": 0,
+            "command": 0
+          },
+          "miniAnswers": [
+            "A. Aumento de estatura",
+            "B. Los órganos reproductores de los caracteres sexuales secundarios",
+            "A. Todas las personas cambian el mismo día"
+          ],
+          "miniScore": 2,
+          "reviewQueue": [],
+          "reviewIndex": 0,
+          "recoveryItems": [
+            1,
+            2
+          ],
+          "recoveryIndex": 0,
+          "recoveryVisible": true,
+          "recoveryAnswer": "completed_open_task",
+          "supportCount": 2,
+          "reasoningIndependent": false,
+          "challengeCompleted": false,
+          "recoveryPassed": true
+        },
+        "finalC": {
+          "isMastered": true,
+          "stage": "completed",
+          "canonicalKey": "7_cie_oa1_2"
+        },
+        "storage": [
+          "7_cie_oa1_2"
+        ]
+      }
+    },
+    {
+      "recorrido": "Recorrido D",
+      "paso": "Pausa y reanudación serializada de sesión real (pauseLessonSession / resumeLessonSession)",
+      "esperado": "Preservación exacta de etapa, respuestas escritas, apoyos, intentos e independencia",
+      "observado": "Todos los campos restaurados con fidelidad de 100%",
+      "resultado": "PASS",
+      "detalles": {
+        "resumedD": {
+          "stage": "practice",
+          "activeOa": "OA 1",
+          "activeLessonNum": 2,
+          "activeLessonTitle": "Una situación",
+          "feedback": {
+            "kind": "success",
+            "text": "Excelente identificación del cambio físico"
+          },
+          "attempt": 2,
+          "attempts": 2,
+          "conversationIndex": 1,
+          "postIndex": 0,
+          "practiceIndex": 1,
+          "summaryIdea": 0,
+          "quizVisible": false,
+          "hookStarted": true,
+          "hookEnded": true,
+          "formalStarted": true,
+          "formalEnded": true,
+          "video": {
+            "kind": null,
+            "playing": false,
+            "seek": 0,
+            "command": 0
+          },
+          "miniAnswers": [],
+          "miniScore": 0,
+          "reviewQueue": [],
+          "reviewIndex": 0,
+          "recoveryItems": [],
+          "recoveryIndex": 0,
+          "recoveryVisible": false,
+          "recoveryAnswer": "",
+          "supportCount": 2,
+          "reasoningIndependent": true,
+          "challengeCompleted": false,
+          "studentTextAnswers": {
+            "practice_0": "El aumento de estatura es un cambio corporal producido en la pubertad."
+          }
+        }
+      }
+    },
+    {
+      "recorrido": "Recorrido E",
+      "paso": "Lectura y referencias de \"Jimmy y Robutt\" en Lengua OA03 Clase 01",
+      "esperado": "Contenido oficial de Isaac Asimov (Jimmy y Robutt) presente y accesible",
+      "observado": "Lectura y referencias de Jimmy y Robutt confirmadas",
+      "resultado": "PASS",
+      "detalles": {
+        "metadata": {
+          "grade": "7° Básico",
+          "subject": "Lengua y Literatura",
+          "oaCode": "OA 3",
+          "oaTitle": "Lengua y Literatura - OA 3",
+          "lessonNumber": 1,
+          "totalLessonsInOa": 6,
+          "lessonTitle": "Jimmy y Robutt: leer el ambiente y descubrir el conflicto",
+          "durationMinutes": 30,
+          "nextLessonTitle": "Acciones de los personajes y desarrollo del conflicto."
+        }
+      }
+    },
+    {
+      "recorrido": "Recorrido E",
+      "paso": "Aislamiento de estado activo al cambiar a Lengua Clase 01",
+      "esperado": "Sesión activa de Lengua limpia en stage=\"cover\", sin arrastrar miniScore ni respuestas de Ciencias",
+      "observado": "Lengua: activeOa=OA 3, miniScore=0, Ciencias acreditada en storage=true",
+      "resultado": "PASS",
+      "detalles": {
+        "cleanLenguaSession": {
+          "stage": "cover",
+          "activeOa": "OA 3",
+          "activeLessonNum": 1,
+          "activeLessonTitle": "Jimmy y Robutt: leer el ambiente y descubrir el conflicto",
+          "feedback": null,
+          "attempt": 0,
+          "attempts": 1,
+          "conversationIndex": 0,
+          "postIndex": 0,
+          "practiceIndex": 0,
+          "summaryIdea": 0,
+          "quizVisible": false,
+          "hookStarted": false,
+          "hookEnded": false,
+          "formalStarted": false,
+          "formalEnded": false,
+          "video": {
+            "kind": null,
+            "playing": false,
+            "seek": 0,
+            "command": 0
+          },
+          "miniAnswers": [
+            "",
+            "",
+            ""
+          ],
+          "miniScore": 0,
+          "reviewQueue": [],
+          "reviewIndex": 0,
+          "recoveryItems": [],
+          "recoveryIndex": 0,
+          "recoveryVisible": false,
+          "recoveryAnswer": "",
+          "supportCount": 0,
+          "reasoningIndependent": false,
+          "challengeCompleted": false
+        },
+        "completedLessonsStorage": [
+          "7_cie_oa1_2"
+        ]
+      }
+    },
+    {
+      "recorrido": "Recorrido E",
+      "paso": "Retorno a Ciencias Clase 02 con preservación de acreditación global",
+      "esperado": "Ciencias se muestra limpia para nueva reproducción mientras completedLessons conserva su logro previo",
+      "observado": "Retorno limpio y acreditación previa conservada",
+      "resultado": "PASS",
+      "detalles": {
+        "returnCieSession": {
+          "stage": "cover",
+          "activeOa": "OA 1",
+          "activeLessonNum": 2,
+          "activeLessonTitle": "Una situación",
+          "feedback": null,
+          "attempt": 0,
+          "attempts": 1,
+          "conversationIndex": 0,
+          "postIndex": 0,
+          "practiceIndex": 0,
+          "summaryIdea": 0,
+          "quizVisible": false,
+          "hookStarted": false,
+          "hookEnded": false,
+          "formalStarted": false,
+          "formalEnded": false,
+          "video": {
+            "kind": null,
+            "playing": false,
+            "seek": 0,
+            "command": 0
+          },
+          "miniAnswers": [
+            "",
+            "",
+            ""
+          ],
+          "miniScore": 0,
+          "reviewQueue": [],
+          "reviewIndex": 0,
+          "recoveryItems": [],
+          "recoveryIndex": 0,
+          "recoveryVisible": false,
+          "recoveryAnswer": "",
+          "supportCount": 0,
+          "reasoningIndependent": false,
+          "challengeCompleted": false
+        }
+      }
+    }
+  ],
+  "delimitacion_archivos": {
+    "archivos_nuevos_encargo": [
+      "Web Studio Simple/src/lib/lesson-session.ts",
+      "scripts/verify_app_isolated_integration.ts"
+    ],
+    "archivos_modificados_componentes_aula": [
+      "Web Studio Simple/src/components/lesson/adult/AdultLessonView.tsx",
+      "Web Studio Simple/src/components/lesson/student/StudentLessonView.tsx",
+      "Web Studio Simple/src/components/lesson/student/StudentRecoveryView.tsx"
+    ],
+    "archivos_datos_lecciones_entrega_01_13": [
+      "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase02.ts",
+      "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase01.ts"
+    ],
+    "archivos_protegidos_intactos": [
+      "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase01.ts",
+      "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase02.ts",
+      "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase03.ts",
+      "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase04.ts",
+      "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase05.ts",
+      "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase06.ts"
+    ]
+  }
+}

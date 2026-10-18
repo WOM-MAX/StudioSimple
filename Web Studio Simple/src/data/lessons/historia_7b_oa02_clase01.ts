@@ -1,8 +1,8 @@
-import { LessonData } from '../../types/lesson';
+import { LessonData } from '../../../src/types/lesson';
 
 export const HISTORIA_7B_OA02_CLASE01: LessonData = {
   "metadata": {
-    "grade": "7° básico",
+    "grade": "7° Básico",
     "subject": "Historia, Geografía y Ciencias Sociales",
     "oaCode": "OA 2",
     "oaTitle": "Historia, Geografía y Ciencias Sociales - OA 2",
@@ -15,7 +15,7 @@ export const HISTORIA_7B_OA02_CLASE01: LessonData = {
   "prep": {
     "adultObjective": "Interpretar el mapa histórico de las páginas 18–19 para describir dónde y cuándo aparecen registros tempranos de agricultura y domesticación, y explicar qué permite concluir el mapa.",
     "routeToday": "Ubicar → leer la leyenda → relacionar símbolos con lugares y fechas → concluir.",
-    "mentorReminder": "Sigue el guion leyendo en voz alta únicamente los recuadros DILE y PREGÚNTALE. Las respuestas esperadas y criterios te indican qué debe responder el estudiante.",
+    "mentorReminder": "Hoy usaremos un mapa para buscar patrones de lugar, tiempo y especies. Después decidiremos qué podemos afirmar con esa evidencia.",
     "reminders": [
       "Mantén visibles las dos páginas originales del mapa, impresas 18–19.",
       "Guía la atención hacia título, leyenda, símbolos, localización y fechas.",
@@ -55,140 +55,134 @@ export const HISTORIA_7B_OA02_CLASE01: LessonData = {
         "color": "navy"
       }
     ],
-    "keyQuestions": [
-      {
-        "label": "Pregunta Clave 1",
-        "sub": "¿Qué lugares y periodos representa el mapa?"
-      },
-      {
-        "label": "Pregunta Clave 2",
-        "sub": "¿Qué conclusión podemos sostener con la distribución de especies y fechas?"
-      }
-    ],
-    "dileIntro": "Hoy usaremos un mapa para buscar patrones de lugar, tiempo y especies. Después decidiremos qué podemos afirmar con esa evidencia.",
-    "dileObjective": "Al terminar, podrás explicar dos pistas que muestra el mapa y decir qué nos ayudan a comprender sobre la agricultura."
-  },
-  "hook": {
-    "title": "¿Dónde y cuándo comenzó la agricultura?",
-    "dileIntro": "Hoy usaremos un mapa para buscar patrones de lugar, tiempo y especies. Después decidiremos qué podemos afirmar con esa evidencia.",
-    "hazInstruction": "Pon atención a las imágenes y conceptos clave.",
-    "dileAfterVideo": "Mira el mapa por unos segundos. ¿Qué te llama primero la atención: los símbolos, los lugares o las fechas?",
-    "videoSrc": "",
-    "posterSrc": "",
-    "focusPoints": [
-      "Observa el contexto general.",
-      "Identifica la situación inicial."
-    ],
-    "slides": [
-      {
-        "slideNumber": 1,
-        "tituloMomento": "Objetivo de la lección",
-        "didacticPurpose": "Objetivo de la lección",
-        "visualPrompt": "Los dos guías ante un mapa desplegado sobre una mesa de trabajo.",
-        "overlayText": "Objetivo de la lección",
-        "overlayTitle": "Objetivo de la lección",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Objetivo de la lección",
-        "speakerNotes": "Hoy leerás un mapa histórico para descubrir patrones de lugar y tiempo."
-      },
-      {
-        "slideNumber": 2,
-        "tituloMomento": "Un mapa lleno de pistas",
-        "didacticPurpose": "Un mapa lleno de pistas",
-        "visualPrompt": "Vista limpia del mapa original con la leyenda ampliable.",
-        "overlayText": "¿Qué representan los símbolos?",
-        "overlayTitle": "¿Qué representan los símbolos?",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "¿Qué representan los símbolos?",
-        "speakerNotes": "Cada símbolo representa una especie animal o vegetal domesticada."
-      },
-      {
-        "slideNumber": 3,
-        "tituloMomento": "Leer antes de concluir",
-        "didacticPurpose": "Leer antes de concluir",
-        "visualPrompt": "Los guías recorren el título, la leyenda y una fecha del mapa.",
-        "overlayText": "Título · leyenda · espacio · tiempo",
-        "overlayTitle": "Título · leyenda · espacio · tiempo",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Título · leyenda · espacio · tiempo",
-        "speakerNotes": "Antes de concluir, identifica qué muestra el mapa y cuándo se ubica."
-      },
-      {
-        "slideNumber": 4,
-        "tituloMomento": "Diferentes regiones",
-        "didacticPurpose": "Diferentes regiones",
-        "visualPrompt": "El mapa original en escala completa; puntos de atención aparecen como resaltados temporales, sin cubrir datos.",
-        "overlayText": "Observa la distribución",
-        "overlayTitle": "Observa la distribución",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Observa la distribución",
-        "speakerNotes": "Los registros aparecen en distintas regiones y no todos corresponden a las mismas especies."
-      },
-      {
-        "slideNumber": 5,
-        "tituloMomento": "Fechas",
-        "didacticPurpose": "Fechas",
-        "visualPrompt": "Ampliación del mapa original y su leyenda cronológica.",
-        "overlayText": "¿Qué nos dice la fecha?",
-        "overlayTitle": "¿Qué nos dice la fecha?",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "¿Qué nos dice la fecha?",
-        "speakerNotes": "Las fechas permiten comparar cuándo aparecen registros en distintos territorios."
-      },
-      {
-        "slideNumber": 6,
-        "tituloMomento": "Pregunta histórica",
-        "didacticPurpose": "Pregunta histórica",
-        "visualPrompt": "Los guías comparan dos regiones con sus símbolos y fechas.",
-        "overlayText": "¿Qué patrón puedes describir?",
-        "overlayTitle": "¿Qué patrón puedes describir?",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "¿Qué patrón puedes describir?",
-        "speakerNotes": "Un patrón se describe con lo que vemos en la fuente: lugar, tiempo y especies."
-      },
-      {
-        "slideNumber": 7,
-        "tituloMomento": "Reto de interpretación",
-        "didacticPurpose": "Reto de interpretación",
-        "visualPrompt": "El mapa completo y una lupa sobre la leyenda.",
-        "overlayText": "Concluye con evidencia",
-        "overlayTitle": "Concluye con evidencia",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Concluye con evidencia",
-        "speakerNotes": "Veamos cómo transformar esas pistas en una conclusión histórica."
-      }
-    ]
+    "dileIntro": "Hoy avanzaremos en una nueva clase interactiva.",
+    "dileObjective": "Hoy usaremos un mapa para buscar patrones de lugar, tiempo y especies. Después decidiremos qué podemos afirmar con esa evidencia."
   },
   "situation": {
-    "dilePrompt": "Mira el mapa por unos segundos. ¿Qué te llama primero la atención: los símbolos, los lugares o las fechas?",
+    "dilePrompt": "Hoy usaremos un mapa para buscar patrones de lugar, tiempo y especies. Después decidiremos qué podemos afirmar con esa evidencia.",
     "expectedAnswer": "Respuestas abiertas de observación, sin corregir aún.",
     "socraticHint": "¿Qué parte del mapa miraste para decidirlo?",
     "emotionalTip": "Las conclusiones históricas se construyen con evidencia. Es válido decir “el mapa muestra” o “el mapa permite observar”; una fuente no responde todas las preguntas por sí sola.",
     "options": [
       {
-        "label": "Identificó los elementos centrales y fundamentó con el contexto",
+        "label": "Respuestas abiertas de observación, sin corregir aún.",
         "kind": "correct",
-        "feedbackText": "¡Muy bien! Notaste las pistas clave del escenario inicial."
+        "feedbackText": "¡Muy bien observado!"
       },
       {
-        "label": "Mencionó detalles parciales sin conectar con la idea principal",
+        "label": "Requiere apoyo adicional",
         "kind": "needs_support",
-        "feedbackText": "Observa nuevamente y busca qué condición o suceso da inicio a la situación."
+        "feedbackText": "Revisa nuevamente la situación inicial."
       },
       {
-        "label": "No sabe qué responder o requiere apoyo inicial",
+        "label": "No sabe qué responder",
         "kind": "no_answer",
-        "feedbackText": "Leamos juntos el punto de partida y observemos los detalles destacados."
+        "feedbackText": "Leamos juntos para descubrir la pista."
       }
     ]
   },
   "reference": {
-    "dilePrompt": "¿Qué información necesitarías leer para saber qué significa cada símbolo?",
-    "question": "¿Qué información necesitarías leer para saber qué significa cada símbolo?",
-    "expectedAnswer": "La leyenda.",
-    "socraticHint": "Localiza las palabras clave en la página.",
-    "feedbackSuccess": "Así es: la leyenda explica qué representa cada símbolo.",
-    "feedbackSupport": "Elige un símbolo del mapa y busca la misma forma en la leyenda."
+    "dilePrompt": "Si ves un símbolo sobre el mapa pero no conoces la leyenda, ¿qué debes hacer?",
+    "question": "¿Qué información entrega el punto de partida?",
+    "expectedAnswer": "Respuestas abiertas de observación, sin corregir aún.",
+    "socraticHint": "Localiza las palabras clave.",
+    "feedbackSuccess": "¡Excelente fundamentación!",
+    "feedbackSupport": "¿Qué parte del mapa miraste para decidirlo?"
+  },
+  "hook": {
+    "title": "Motivación",
+    "titulo": "Motivación",
+    "focusPoints": [],
+    "dileIntro": "Hoy usaremos un mapa para buscar patrones de lugar, tiempo y especies. Después decidiremos qué podemos afirmar con esa evidencia.",
+    "hazInstruction": "Observa y reflexiona con las escenas del video.",
+    "videoSrc": "",
+    "dileAfterVideo": "¿Qué observaste en esta situación inicial?",
+    "slides": [
+      {
+        "slideNumber": 1,
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Lámina 1 · Objetivo de la lección · 8 s",
+        "visualPrompt": "Los dos guías ante un mapa desplegado sobre una mesa de trabajo.",
+        "overlayText": "Objetivo de la lección",
+        "overlayTitle": "Objetivo de la lección",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Objetivo de la lección",
+        "speakerNotes": "Hoy leerás un mapa histórico para descubrir patrones de lugar y tiempo.",
+        "duracionSeg": 8
+      },
+      {
+        "slideNumber": 2,
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Lámina 2 · Un mapa lleno de pistas · 8 s",
+        "visualPrompt": "Vista limpia del mapa original con la leyenda ampliable.",
+        "overlayText": "¿Qué representan los símbolos?",
+        "overlayTitle": "¿Qué representan los símbolos?",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "¿Qué representan los símbolos?",
+        "speakerNotes": "Cada símbolo representa una especie animal o vegetal domesticada.",
+        "duracionSeg": 8
+      },
+      {
+        "slideNumber": 3,
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Lámina 3 · Leer antes de concluir · 9 s",
+        "visualPrompt": "Los guías recorren el título, la leyenda y una fecha del mapa.",
+        "overlayText": "Título · leyenda · espacio · tiempo",
+        "overlayTitle": "Título · leyenda · espacio · tiempo",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Título · leyenda · espacio · tiempo",
+        "speakerNotes": "Antes de concluir, identifica qué muestra el mapa y cuándo se ubica.",
+        "duracionSeg": 9
+      },
+      {
+        "slideNumber": 4,
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Lámina 4 · Diferentes regiones · 9 s",
+        "visualPrompt": "El mapa original en escala completa; puntos de atención aparecen como resaltados temporales, sin cubrir datos.",
+        "overlayText": "Observa la distribución",
+        "overlayTitle": "Observa la distribución",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Observa la distribución",
+        "speakerNotes": "Los registros aparecen en distintas regiones y no todos corresponden a las mismas especies.",
+        "duracionSeg": 9
+      },
+      {
+        "slideNumber": 5,
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Lámina 5 · Fechas · 9 s",
+        "visualPrompt": "Ampliación del mapa original y su leyenda cronológica.",
+        "overlayText": "¿Qué nos dice la fecha?",
+        "overlayTitle": "¿Qué nos dice la fecha?",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "¿Qué nos dice la fecha?",
+        "speakerNotes": "Las fechas permiten comparar cuándo aparecen registros en distintos territorios.",
+        "duracionSeg": 9
+      },
+      {
+        "slideNumber": 6,
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Lámina 6 · Pregunta histórica · 9 s",
+        "visualPrompt": "Los guías comparan dos regiones con sus símbolos y fechas.",
+        "overlayText": "¿Qué patrón puedes describir?",
+        "overlayTitle": "¿Qué patrón puedes describir?",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "¿Qué patrón puedes describir?",
+        "speakerNotes": "Un patrón se describe con lo que vemos en la fuente: lugar, tiempo y especies.",
+        "duracionSeg": 9
+      },
+      {
+        "slideNumber": 7,
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Lámina 7 · Reto de interpretación · 8 s",
+        "visualPrompt": "El mapa completo y una lupa sobre la leyenda.",
+        "overlayText": "Concluye con evidencia",
+        "overlayTitle": "Concluye con evidencia",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Concluye con evidencia",
+        "speakerNotes": "Veamos cómo transformar esas pistas en una conclusión histórica.",
+        "duracionSeg": 8
+      }
+    ]
   },
   "preQuestions": [
     {
@@ -221,7 +215,7 @@ export const HISTORIA_7B_OA02_CLASE01: LessonData = {
   ],
   "conversationContext": "Diálogo guiado para profundizar en los elementos clave.",
   "formalization": {
-    "title": "¿Dónde y cuándo comenzó la agricultura?",
+    "title": "Explicación",
     "concept": "¿Dónde y cuándo comenzó la agricultura?",
     "summary": "Para interpretar un mapa histórico identificamos el tema, leemos la leyenda, ubicamos los elementos, atendemos a las fechas y formulamos una conclusión respaldada por lo representado. El Texto Escolar señala que no existe consenso total sobre cómo se expandieron estos procesos; por eso distinguimos evidencia e interpretación.",
     "ideaClave": "Para interpretar un mapa histórico identificamos el tema, leemos la leyenda, ubicamos los elementos, atendemos a las fechas y formulamos una conclusión respaldada por lo representado. El Texto Escolar señala que no existe consenso total sobre cómo se expandieron estos procesos; por eso distinguimos evidencia e interpretación.",
@@ -232,80 +226,87 @@ export const HISTORIA_7B_OA02_CLASE01: LessonData = {
     "slides": [
       {
         "slideNumber": 8,
-        "tituloMomento": "Paso 1: identifica",
-        "didacticPurpose": "Paso 1: identifica",
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Lámina 8 · Paso 1: identifica · 12 s",
         "visualPrompt": "Título original del mapa y extensión visible.",
         "overlayText": "¿Qué proceso representa?",
         "overlayTitle": "¿Qué proceso representa?",
         "overlaySubtitle": "",
         "vectorialOverlayPptx": "¿Qué proceso representa?",
-        "speakerNotes": "El título informa que el mapa representa primeros registros de actividad agrícola y ganadera. El texto señala que su interpretación se apoya en evidencias arqueológicas."
+        "speakerNotes": "El título informa que el mapa representa primeros registros de actividad agrícola y ganadera. El texto señala que su interpretación se apoya en evidencias arqueológicas.",
+        "duracionSeg": 12
       },
       {
         "slideNumber": 9,
-        "tituloMomento": "Paso 2: lee la leyenda",
-        "didacticPurpose": "Paso 2: lee la leyenda",
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Lámina 9 · Paso 2: lee la leyenda · 13 s",
         "visualPrompt": "Leyenda original ampliada con ejemplos animales y vegetales.",
         "overlayText": "Símbolo = especie",
         "overlayTitle": "Símbolo = especie",
         "overlaySubtitle": "",
         "vectorialOverlayPptx": "Símbolo = especie",
-        "speakerNotes": "La leyenda permite reconocer qué símbolos corresponden a animales domesticados y cuáles a plantas."
+        "speakerNotes": "La leyenda permite reconocer qué símbolos corresponden a animales domesticados y cuáles a plantas.",
+        "duracionSeg": 13
       },
       {
         "slideNumber": 10,
-        "tituloMomento": "Paso 3: ubica",
-        "didacticPurpose": "Paso 3: ubica",
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Lámina 10 · Paso 3: ubica · 13 s",
         "visualPrompt": "Mapa original con dos regiones resaltadas por turno.",
         "overlayText": "¿En qué región aparece?",
         "overlayTitle": "¿En qué región aparece?",
         "overlaySubtitle": "",
         "vectorialOverlayPptx": "¿En qué región aparece?",
-        "speakerNotes": "Relaciona los símbolos con el territorio. Por ejemplo, el mapa presenta registros en Anatolia y en los Andes centrales."
+        "speakerNotes": "Relaciona los símbolos con el territorio. Por ejemplo, el mapa presenta registros en Anatolia y en los Andes centrales.",
+        "duracionSeg": 13
       },
       {
         "slideNumber": 11,
-        "tituloMomento": "Paso 4: compara el tiempo",
-        "didacticPurpose": "Paso 4: compara el tiempo",
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Lámina 11 · Paso 4: compara el tiempo · 13 s",
         "visualPrompt": "Comparación visual con etiquetas tomadas fielmente del mapa: Anatolia y Andes centrales; símbolos y periodos legibles.",
         "overlayText": "Lugar + fecha + especie",
         "overlayTitle": "Lugar + fecha + especie",
         "overlaySubtitle": "",
         "vectorialOverlayPptx": "Lugar + fecha + especie",
-        "speakerNotes": "El ejemplo del libro sitúa registros agrícolas más antiguos en Anatolia y otros más recientes en América del Sur."
+        "speakerNotes": "El ejemplo del libro sitúa registros agrícolas más antiguos en Anatolia y otros más recientes en América del Sur.",
+        "duracionSeg": 13
       },
       {
         "slideNumber": 12,
-        "tituloMomento": "Paso 5: describe el patrón",
-        "didacticPurpose": "Paso 5: describe el patrón",
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Lámina 12 · Paso 5: describe el patrón · 13 s",
         "visualPrompt": "Dos regiones del mapa con sus especies correspondientes resaltadas.",
         "overlayText": "Las especies varían según la región",
         "overlayTitle": "Las especies varían según la región",
         "overlaySubtitle": "",
         "vectorialOverlayPptx": "Las especies varían según la región",
-        "speakerNotes": "La fuente permite observar que las especies asociadas a la agricultura y la ganadería variaron por región."
+        "speakerNotes": "La fuente permite observar que las especies asociadas a la agricultura y la ganadería variaron por región.",
+        "duracionSeg": 13
       },
       {
         "slideNumber": 13,
-        "tituloMomento": "Dos preguntas relacionadas",
-        "didacticPurpose": "Dos preguntas relacionadas",
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Lámina 13 · Dos preguntas relacionadas · 13 s",
         "visualPrompt": "A la izquierda, mapas de registros; a la derecha, una secuencia conceptual de contacto y desplazamiento, etiquetada como explicación de una fuente escrita, no como trazo sobre el mapa.",
         "overlayText": "Origen y expansión",
         "overlayTitle": "Origen y expansión",
         "overlaySubtitle": "",
         "vectorialOverlayPptx": "Origen y expansión",
-        "speakerNotes": "Una fuente escrita puede explicar desarrollos paralelos y otra describir desplazamientos posteriores. Para relacionarlas, compara qué afirma cada una."
+        "speakerNotes": "Una fuente escrita puede explicar desarrollos paralelos y otra describir desplazamientos posteriores. Para relacionarlas, compara qué afirma cada una.",
+        "duracionSeg": 13
       },
       {
         "slideNumber": 14,
-        "tituloMomento": "Conclusión acotada",
-        "didacticPurpose": "Conclusión acotada",
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Lámina 14 · Conclusión acotada · 13 s",
         "visualPrompt": "Los guías formulan una conclusión al costado del mapa original.",
         "overlayText": "Concluye solo lo que la evidencia permite",
         "overlayTitle": "Concluye solo lo que la evidencia permite",
         "overlaySubtitle": "",
         "vectorialOverlayPptx": "Concluye solo lo que la evidencia permite",
-        "speakerNotes": "El mapa permite describir regiones, especies y fechas representadas. Una buena conclusión nombra esas pistas y explica su relación."
+        "speakerNotes": "El mapa permite describir regiones, especies y fechas representadas. Una buena conclusión nombra esas pistas y explica su relación.",
+        "duracionSeg": 13
       }
     ]
   },
@@ -324,15 +325,15 @@ export const HISTORIA_7B_OA02_CLASE01: LessonData = {
       "question": "¿Qué elementos debes incluir para comparar dos registros del mapa?",
       "expected": "Región, especie representada y fecha o periodo.",
       "success": "Respuesta precisa y fundamentada",
-      "support": "Revisa la relación entre los elementos",
+      "support": "Reabrir el mapa original a página completa.",
       "reveal": "Región, especie representada y fecha o periodo.",
       "studentReveal": "Región, especie representada y fecha o periodo."
     }
   ],
   "practice": [
     {
-      "context": "Mapa de las páginas impresas 18–19.",
-      "question": "Registra una especie y una fecha o periodo para cada una de dos regiones que elijas. Después escribe una semejanza o diferencia.",
+      "context": "Mapa de las páginas impresas 18–19.\n- **Datos:** El mapa muestra distintos símbolos y fechas; el texto ejemplifica Anatolia y los Andes centrales.",
+      "question": "“Registra una especie y una fecha o periodo para cada una de dos regiones que elijas. Después escribe una semejanza o diferencia.”",
       "expected": "Las respuestas dependen de las regiones seleccionadas. Ejemplo: el texto señala registros agrícolas más antiguos en Anatolia y más recientes en América del Sur; para los Andes centrales menciona llama, alpaca, quínoa y papa y el periodo aproximado 3000–1000 a. C.",
       "success": "Dos observaciones localizadas correctamente y una comparación que se desprende de ellas.",
       "support": "Apunta primero a una región del mapa. Luego sigue el símbolo hasta la leyenda.",
@@ -340,8 +341,8 @@ export const HISTORIA_7B_OA02_CLASE01: LessonData = {
       "studentReveal": "Las respuestas dependen de las regiones seleccionadas. Ejemplo: el texto señala registros agrícolas más antiguos en Anatolia y más recientes en América del Sur; para los Andes centrales menciona llama, alpaca, quínoa y papa y el periodo aproximado 3000–1000 a. C."
     },
     {
-      "context": "BDA 14_origen_agro, páginas 1–2.",
-      "question": "Completa: ‘La fuente A explica ___; la fuente B explica ___. Pueden complementarse porque ___.’",
+      "context": "BDA 14_origen_agro, páginas 1–2.\n- **Datos:** Fuente A aborda el desarrollo en varias poblaciones del Creciente Fértil; fuente B aborda desplazamientos marítimos y expansión en el Mediterráneo occidental.",
+      "question": "“Completa: ‘La fuente A explica ___; la fuente B explica ___. Pueden complementarse porque ___.’”",
       "expected": "“A explica desarrollos en varias poblaciones del Creciente Fértil; B explica una expansión marítima en el Mediterráneo occidental. Pueden complementarse porque describen desarrollos y desplazamientos en lugares o procesos distintos.”",
       "success": "Resume correctamente cada fuente y justifica la relación.",
       "support": "¿Cuál habla de distintos lugares de desarrollo? ¿Cuál menciona desplazamientos marítimos?",
@@ -389,43 +390,34 @@ export const HISTORIA_7B_OA02_CLASE01: LessonData = {
   ],
   "recovery": [
     {
-      "title": "Recuperación Reactivo 1",
-      "explain": "**Si necesita apoyo en el reactivo 1:** Abrir la leyenda original y asociar tres símbolos con sus nombres.",
-      "q": "Paso guiado de recuperación para el Reactivo 1",
-      "options": [
-        "Opción con andamiaje A",
-        "Opción con andamiaje B",
-        "Opción con andamiaje C"
-      ],
-      "correct": "Opción con andamiaje A",
-      "correctText": "¡Excelente! Lograste resolver el reactivo con el andamiaje del texto.",
-      "fixText": "Vuelve a revisar la página de referencia para consolidar el aprendizaje."
+      "title": "Refuerzo: Si necesita apoyo en el reactivo 1",
+      "explain": "Abrir la leyenda original y asociar tres símbolos con sus nombres.",
+      "q": "Resuelve en tu cuaderno físico: Abrir la leyenda original y asociar tres símbolos con sus nombres.",
+      "kind": "open_response",
+      "options": [],
+      "correct": "",
+      "correctText": "¡Muy bien! Completaste el refuerzo correctamente en tu cuaderno.",
+      "fixText": "Abrir la leyenda original y asociar tres símbolos con sus nombres."
     },
     {
-      "title": "Recuperación Reactivo 2",
-      "explain": "**Si necesita apoyo en el reactivo 2:** Ubicar Anatolia y América del Sur en el mapa; releer el ejemplo escrito del Texto Escolar.",
-      "q": "Paso guiado de recuperación para el Reactivo 2",
-      "options": [
-        "Opción con andamiaje A",
-        "Opción con andamiaje B",
-        "Opción con andamiaje C"
-      ],
-      "correct": "Opción con andamiaje A",
-      "correctText": "¡Excelente! Lograste resolver el reactivo con el andamiaje del texto.",
-      "fixText": "Vuelve a revisar la página de referencia para consolidar el aprendizaje."
+      "title": "Refuerzo: Si necesita apoyo en el reactivo 2",
+      "explain": "Ubicar Anatolia y América del Sur en el mapa; releer el ejemplo escrito del Texto Escolar.",
+      "q": "Resuelve en tu cuaderno físico: Ubicar Anatolia y América del Sur en el mapa; releer el ejemplo escrito del Texto Escolar.",
+      "kind": "open_response",
+      "options": [],
+      "correct": "",
+      "correctText": "¡Muy bien! Completaste el refuerzo correctamente en tu cuaderno.",
+      "fixText": "Ubicar Anatolia y América del Sur en el mapa; releer el ejemplo escrito del Texto Escolar."
     },
     {
-      "title": "Recuperación Reactivo 3",
-      "explain": "**Si necesita apoyo en el reactivo 3:** Completar una tabla de dos columnas con “lugar” y “dinámica” para las fuentes A y B.",
-      "q": "Paso guiado de recuperación para el Reactivo 3",
-      "options": [
-        "Opción con andamiaje A",
-        "Opción con andamiaje B",
-        "Opción con andamiaje C"
-      ],
-      "correct": "Opción con andamiaje A",
-      "correctText": "¡Excelente! Lograste resolver el reactivo con el andamiaje del texto.",
-      "fixText": "Vuelve a revisar la página de referencia para consolidar el aprendizaje."
+      "title": "Refuerzo: Si necesita apoyo en el reactivo 3",
+      "explain": "Completar una tabla de dos columnas con “lugar” y “dinámica” para las fuentes A y B.",
+      "q": "Resuelve en tu cuaderno físico: Completar una tabla de dos columnas con “lugar” y “dinámica” para las fuentes A y B.",
+      "kind": "open_response",
+      "options": [],
+      "correct": "",
+      "correctText": "¡Muy bien! Completaste el refuerzo correctamente en tu cuaderno.",
+      "fixText": "Completar una tabla de dos columnas con “lugar” y “dinámica” para las fuentes A y B."
     }
   ],
   "summaryIdeas": [
@@ -442,18 +434,18 @@ export const HISTORIA_7B_OA02_CLASE01: LessonData = {
       "**Conclusión histórica:** debe limitarse a las evidencias disponibles."
     ]
   ],
-  "closure": {
-    "congratulations": "¡Buen trabajo! Convertiste símbolos y fechas en evidencia para sostener una conclusión.",
-    "nextClassPreview": "En la próxima clase estudiaremos cómo la domesticación favoreció la sedentarización y cambió la forma de habitar."
-  },
-  "paso8_cierre": {
-    "preguntaSintesis": "¿Qué tres pistas del mapa usarías para explicar cómo se distribuyen los primeros registros agrícolas y ganaderos?",
-    "metacognicion": "¿Qué paso te ayudó más a interpretar: leer la leyenda, ubicar una región o comparar fechas?",
-    "celebracion": "¡Buen trabajo! Convertiste símbolos y fechas en evidencia para sostener una conclusión."
-  },
   "interactive": {
     "type": "timeline",
     "title": "Línea de Tiempo y Espacio Histórico",
     "description": "Organizador histórico, espacial y temporal."
+  },
+  "closure": {
+    "congratulations": "“¡Buen trabajo! Convertiste símbolos y fechas en evidencia para sostener una conclusión.”",
+    "nextClassPreview": "Próxima clase: Domesticación y sedentarización."
+  },
+  "paso8_cierre": {
+    "preguntaSintesis": "“¿Qué tres pistas del mapa usarías para explicar cómo se distribuyen los primeros registros agrícolas y ganaderos?”",
+    "metacognicion": "“¿Qué paso te ayudó más a interpretar: leer la leyenda, ubicar una región o comparar fechas?”",
+    "celebracion": "“¡Buen trabajo! Convertiste símbolos y fechas en evidencia para sostener una conclusión.”"
   }
 };

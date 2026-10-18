@@ -1,276 +1,183 @@
-import { LessonData } from '../../types/lesson';
+import { LessonData } from '../../../src/types/lesson';
 
 export const LENGUA_7B_OA03_CLASE04: LessonData = {
   "metadata": {
     "grade": "7° Básico",
     "subject": "Lengua y Literatura",
     "oaCode": "OA 3",
-    "oaTitle": "Análisis de narraciones: conflicto, personajes y ambiente",
+    "oaTitle": "Lengua y Literatura - OA 3",
     "lessonNumber": 4,
     "totalLessonsInOa": 6,
     "lessonTitle": "La voz del narrador y los personajes",
     "durationMinutes": 30,
-    "nextLessonTitle": "El orden de los hechos y el recuerdo"
+    "nextLessonTitle": ""
   },
   "prep": {
     "adultObjective": "Distinguir quién cuenta las acciones y quién habla en los diálogos del relato, usando señales del fragmento.",
-    "routeToday": "Leer el recurso → localizar pistas → explicar → practicar → comprobar comprensión.",
-    "mentorReminder": "Lee el recurso con el estudiante antes de preguntar. Guía usando DILE y PREGÚNTALE. Mantén las respuestas de referencia privadas hasta que el estudiante intente responder.",
+    "routeToday": "Ruta guiada de la clase 4",
+    "mentorReminder": "Distinguir quién cuenta las acciones y quién habla en los diálogos del relato, usando señales del fragmento.",
     "reminders": [
-      "Lee el recurso con el estudiante antes de preguntar.",
-      "Guía usando los recuadros DILE y PREGÚNTALE.",
-      "Mantén las respuestas de referencia privadas hasta que el estudiante intente responder.",
-      "Acepta respuestas en palabras propias siempre que se fundamenten con pistas del texto."
+      "Acompaña al estudiante y valora su proceso."
     ],
-    "emotionalTip": "Distingue con paciencia las voces del relato: separar la voz del narrador de las intervenciones de los personajes agudiza la comprensión sin presiones."
+    "emotionalTip": "Valora cada avance con paciencia y entusiasmo."
   },
   "route": {
     "blocks": [
       {
         "id": "b1",
         "number": "01",
-        "title": "Lectura activa",
-        "subtitle": "Leer el recurso y ubicar pistas",
-        "color": "orange"
+        "title": "Punto de partida",
+        "subtitle": "Activación",
+        "color": "teal"
       },
       {
         "id": "b2",
         "number": "02",
-        "title": "Exploración",
-        "subtitle": "Videos y conversación guiada",
-        "color": "teal"
+        "title": "Motivación y Explicación",
+        "subtitle": "14 láminas",
+        "color": "orange"
       },
       {
         "id": "b3",
         "number": "03",
-        "title": "Modelamiento",
-        "subtitle": "Explicación y práctica en cuaderno",
+        "title": "Práctica guiada",
+        "subtitle": "Transferencia",
         "color": "yellow"
       },
       {
         "id": "b4",
         "number": "04",
-        "title": "Evaluación",
-        "subtitle": "Miniquiz formativo y síntesis",
+        "title": "Miniquiz",
+        "subtitle": "Evaluación y cierre",
         "color": "navy"
       }
     ],
-    "keyQuestions": [
-      {
-        "label": "Pregunta Clave 1",
-        "sub": "¿Qué parte corresponde al narrador y qué parte a Jimmy?"
-      },
-      {
-        "label": "Pregunta Clave 2",
-        "sub": "¿Qué señal permite atribuir esas palabras a Jimmy?"
-      }
-    ],
-    "dileIntro": "Distinguir quién cuenta las acciones y quién habla en los diálogos del relato, usando señales del fragmento.",
-    "dileObjective": "Al terminar, podrás distinguir quién cuenta las acciones y quién habla en los diálogos del relato, usando señales del fragmento."
+    "dileIntro": "Hoy avanzaremos en una nueva clase interactiva.",
+    "dileObjective": "La voz del narrador y los personajes"
   },
   "situation": {
     "dilePrompt": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",
     "expectedAnswer": "Jimmy frunció el ceño corresponde al narrador. La intervención que comienza con Robutt no es una imitación corresponde a Jimmy.",
-    "socraticHint": "¿Eso aparece en el recurso o lo estás anticipando a partir del título?",
-    "emotionalTip": "Distingue con paciencia las voces del relato: separar la voz del narrador de las intervenciones de los personajes agudiza la comprensión sin presiones.",
+    "socraticHint": "Fíjate en los detalles destacados.",
+    "emotionalTip": "Acompaña con calma.",
     "options": [
       {
-        "label": "Formuló una anticipación lógica basada en el título y el contexto",
+        "label": "Jimmy frunció el ceño corresponde al narrador. La intervención que comienza con Robutt no es una imitación corresponde a Jimmy.",
         "kind": "correct",
-        "feedbackText": "¡Excelente! Planteaste una anticipación fundamentada."
+        "feedbackText": "¡Muy bien observado!"
       },
       {
-        "label": "Mencionó ideas sueltas sin conectar con la situación del relato",
+        "label": "Requiere apoyo adicional",
         "kind": "needs_support",
-        "feedbackText": "Observa el título: ¿qué palabras te dan pistas de lo que ocurrirá?"
+        "feedbackText": "Revisa nuevamente la situación inicial."
       },
       {
-        "label": "Requiere apoyo inicial o no sabe qué anticipar",
+        "label": "No sabe qué responder",
         "kind": "no_answer",
-        "feedbackText": "Leamos juntos el título: ¿de qué imaginas que tratará?"
+        "feedbackText": "Leamos juntos para descubrir la pista."
       }
     ]
   },
-  "interactive": {
-    "type": "reading_resource",
-    "title": "La voz del narrador y los personajes",
-    "readingText": "Fragmento del cuento de Isaac Asimov:\n\nJimmy frunció el ceño.\n—Robutt no es una imitación, papi. Es mi perro.\n—No es un perro de verdad, Jimmy. Robutt tiene un cerebro positrónico muy sencillo y está hecho de acero y circuitos. No está vivo.\n\nEn otro momento del diálogo:\n—¿Y qué diferencia hay entre Robutt y el perro? —preguntó Jimmy.\n—Es difícil de explicar —dijo el señor Anderson—, pero lo comprenderás en cuanto lo veas.\n\nEl fragmento alterna la narración de acciones con las intervenciones de Jimmy y de su padre.",
-    "paragraphs": [
-      "Fragmento del cuento de Isaac Asimov:",
-      "Jimmy frunció el ceño.\n—Robutt no es una imitación, papi. Es mi perro.\n—No es un perro de verdad, Jimmy. Robutt tiene un cerebro positrónico muy sencillo y está hecho de acero y circuitos. No está vivo.",
-      "En otro momento del diálogo:\n—¿Y qué diferencia hay entre Robutt y el perro? —preguntó Jimmy.\n—Es difícil de explicar —dijo el señor Anderson—, pero lo comprenderás en cuanto lo veas.",
-      "El fragmento alterna la narración de acciones con las intervenciones de Jimmy y de su padre."
-    ],
-    "imageSrc": "/images/lessons/lengua_7b_oa03_clase04_recurso.jpg"
-  },
   "reference": {
     "dilePrompt": "¿Qué parte corresponde al narrador y qué parte a Jimmy?",
-    "question": "¿Qué parte corresponde al narrador y qué parte a Jimmy?",
+    "question": "¿Qué información entrega el punto de partida?",
     "expectedAnswer": "Jimmy frunció el ceño corresponde al narrador. La intervención que comienza con Robutt no es una imitación corresponde a Jimmy.",
-    "socraticHint": "Vuelve al recurso de lectura en pantalla y localiza la pista clave.",
-    "feedbackSuccess": "¡Excelente! Usaste información del recurso para fundamentar tu respuesta.",
-    "feedbackSupport": "Vuelve a leer el recurso en pantalla y busca la acción concreta que responde a la pregunta."
+    "socraticHint": "Localiza las palabras clave.",
+    "feedbackSuccess": "¡Excelente fundamentación!",
+    "feedbackSupport": "Revisa la lectura para confirmar los datos."
   },
   "hook": {
-    "title": "La voz del narrador y los personajes",
-    "dileIntro": "Hoy exploraremos la voz del narrador y los personajes.",
-    "hazInstruction": "Observa cada una de las 14 láminas y sigue la locución.",
+    "title": "Motivación",
+    "titulo": "Motivación",
+    "focusPoints": [],
+    "dileIntro": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",
+    "hazInstruction": "Observa y reflexiona con las escenas del video.",
     "videoSrc": "",
-    "dileAfterVideo": "Conversemos sobre los detalles y evidencias que acabas de observar.",
+    "dileAfterVideo": "¿Qué observaste en esta situación inicial?",
     "slides": [
       {
         "slideNumber": 1,
-        "tituloMomento": "Objetivo de la lección",
-        "didacticPurpose": "Objetivo de la lección",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers analyzing La voz del narrador y los personajes in Lengua y Literatura. Setting: Objetivo de la lección. Cinematic lighting, clean composition, clear negative space. No text drawn by AI.",
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Diapositiva 01 — Objetivo de la lección",
+        "visualPrompt": "",
         "overlayText": "La voz del narrador y los personajes",
         "overlayTitle": "La voz del narrador y los personajes",
         "overlaySubtitle": "",
         "vectorialOverlayPptx": "La voz del narrador y los personajes",
-        "speakerNotes": "Hoy exploraremos la voz del narrador y los personajes."
+        "speakerNotes": "La misión es reconocer dos voces dentro de un relato. El narrador cuenta acciones y los personajes pronuncian las intervenciones.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 2,
-        "tituloMomento": "Una situación",
-        "didacticPurpose": "Una situación",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers analyzing La voz del narrador y los personajes in Lengua y Literatura. Setting: Una situación. Cinematic lighting, clean composition, clear negative space. No text drawn by AI.",
-        "overlayText": "Jimmy frunció el ceño.",
-        "overlayTitle": "Jimmy frunció el ceño.",
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Diapositiva 02 — Una situación",
+        "visualPrompt": "",
+        "overlayText": "Jimmy frunció el ceño. «Es mi perro».",
+        "overlayTitle": "Jimmy frunció el ceño. «Es mi perro».",
         "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Jimmy frunció el ceño.",
-        "speakerNotes": "Jimmy frunció el ceño."
+        "vectorialOverlayPptx": "Jimmy frunció el ceño. «Es mi perro».",
+        "speakerNotes": "El fragmento presenta una acción de Jimmy y luego sus palabras a su padre. Observemos dónde cambia la voz.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 3,
-        "tituloMomento": "Una pregunta",
-        "didacticPurpose": "Una pregunta",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers analyzing La voz del narrador y los personajes in Lengua y Literatura. Setting: Una pregunta. Cinematic lighting, clean composition, clear negative space. No text drawn by AI.",
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Diapositiva 03 — Una pregunta",
+        "visualPrompt": "",
         "overlayText": "¿Qué parte corresponde al narrador y qué parte a Jimmy?",
         "overlayTitle": "¿Qué parte corresponde al narrador y qué parte a Jimmy?",
         "overlaySubtitle": "",
         "vectorialOverlayPptx": "¿Qué parte corresponde al narrador y qué parte a Jimmy?",
-        "speakerNotes": "¿Qué parte corresponde al narrador y qué parte a Jimmy?"
+        "speakerNotes": "La raya introduce el diálogo, pero también aparece una aclaración que identifica quién preguntó. ¿A quién corresponde cada parte?",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 4,
-        "tituloMomento": "Pistas para observar",
-        "didacticPurpose": "Pistas para observar",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers analyzing La voz del narrador y los personajes in Lengua y Literatura. Setting: Pistas para observar. Cinematic lighting, clean composition, clear negative space. No text drawn by AI.",
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Diapositiva 04 — Pistas para observar",
+        "visualPrompt": "",
         "overlayText": "Las acciones y los detalles importan",
         "overlayTitle": "Las acciones y los detalles importan",
         "overlaySubtitle": "",
         "vectorialOverlayPptx": "Las acciones y los detalles importan",
-        "speakerNotes": "Observa la situación. ¿Qué detalle podría ayudarte a responder?"
+        "speakerNotes": "Miremos la raya y la expresión preguntó Jimmy. La primera abre una intervención; la segunda informa quién habló.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 5,
-        "tituloMomento": "Distintas respuestas",
-        "didacticPurpose": "Distintas respuestas",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers analyzing La voz del narrador y los personajes in Lengua y Literatura. Setting: Distintas respuestas. Cinematic lighting, clean composition, clear negative space. No text drawn by AI.",
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Diapositiva 05 — Distintas respuestas",
+        "visualPrompt": "",
         "overlayText": "¿Qué respuesta tiene respaldo?",
         "overlayTitle": "¿Qué respuesta tiene respaldo?",
         "overlaySubtitle": "",
         "vectorialOverlayPptx": "¿Qué respuesta tiene respaldo?",
-        "speakerNotes": "Una respuesta necesita información del recurso. Buscaremos pistas para fundamentarla."
+        "speakerNotes": "Para identificar las voces, debemos decidir qué palabras pronuncia el personaje y cuáles cuentan o aclaran desde fuera.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 6,
-        "tituloMomento": "Una forma de explorar",
-        "didacticPurpose": "Una forma de explorar",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers analyzing La voz del narrador y los personajes in Lengua y Literatura. Setting: Una forma de explorar. Cinematic lighting, clean composition, clear negative space. No text drawn by AI.",
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Diapositiva 06 — Una forma de explorar",
+        "visualPrompt": "",
         "overlayText": "Leer, relacionar y explicar",
         "overlayTitle": "Leer, relacionar y explicar",
         "overlaySubtitle": "",
         "vectorialOverlayPptx": "Leer, relacionar y explicar",
-        "speakerNotes": "Lee el recurso y relaciona sus detalles antes de elegir una explicación."
+        "speakerNotes": "¿Quién cuenta y quién habla? Da una primera respuesta y conserva la pregunta para revisar el fragmento.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 7,
-        "tituloMomento": "La pregunta inicial",
-        "didacticPurpose": "La pregunta inicial",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers analyzing La voz del narrador y los personajes in Lengua y Literatura. Setting: La pregunta inicial. Cinematic lighting, clean composition, clear negative space. No text drawn by AI.",
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Diapositiva 07 — La pregunta inicial",
+        "visualPrompt": "",
         "overlayText": "¿Qué muestra la evidencia?",
         "overlayTitle": "¿Qué muestra la evidencia?",
         "overlaySubtitle": "",
         "vectorialOverlayPptx": "¿Qué muestra la evidencia?",
-        "speakerNotes": "Ahora descubriremos cómo las pistas ayudan a comprender esta situación."
-      },
-      {
-        "slideNumber": 8,
-        "tituloMomento": "Objetivo de la lección",
-        "didacticPurpose": "Objetivo de la lección",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Focus on explanation and modeling of La voz del narrador y los personajes. Concept: Objetivo de la lección. Clean background, warm focus. No text drawn by AI.",
-        "overlayText": "Objetivo de la lección. Distinguir quién narra y quién habla",
-        "overlayTitle": "Objetivo de la lección. Distinguir quién narra y quién habla",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Objetivo de la lección. Distinguir quién narra y quién habla",
-        "speakerNotes": "En esta clase distinguirás quién cuenta y quién habla. El narrador presenta acciones y los personajes expresan sus palabras en el diálogo."
-      },
-      {
-        "slideNumber": 9,
-        "tituloMomento": "Herramienta",
-        "didacticPurpose": "Herramienta",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Focus on explanation and modeling of La voz del narrador y los personajes. Concept: Herramienta. Clean background, warm focus. No text drawn by AI.",
-        "overlayText": "Herramienta. Raya y aclaración muestran quién habla",
-        "overlayTitle": "Herramienta. Raya y aclaración muestran quién habla",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Herramienta. Raya y aclaración muestran quién habla",
-        "speakerNotes": "Busca las marcas del diálogo, como la raya, y las aclaraciones que atribuyen cada intervención. También observa qué acciones cuenta la voz narradora."
-      },
-      {
-        "slideNumber": 10,
-        "tituloMomento": "Criterio",
-        "didacticPurpose": "Criterio",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Focus on explanation and modeling of La voz del narrador y los personajes. Concept: Criterio. Clean background, warm focus. No text drawn by AI.",
-        "overlayText": "Criterio. Separa narración y diálogo con señales",
-        "overlayTitle": "Criterio. Separa narración y diálogo con señales",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Criterio. Separa narración y diálogo con señales",
-        "speakerNotes": "Separa las palabras pronunciadas por un personaje de la información que entrega el narrador. Una aclaración como «preguntó Jimmy» identifica quién habló."
-      },
-      {
-        "slideNumber": 11,
-        "tituloMomento": "Modelo",
-        "didacticPurpose": "Modelo",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Focus on explanation and modeling of La voz del narrador y los personajes. Concept: Modelo. Clean background, warm focus. No text drawn by AI.",
-        "overlayText": "Modelo. Narrador: «Frunció el ceño» / Jimmy: «Es mi perro»",
-        "overlayTitle": "Modelo. Narrador: «Frunció el ceño»",
-        "overlaySubtitle": "Jimmy: «Es mi perro»",
-        "vectorialOverlayPptx": "Modelo. Narrador: «Frunció el ceño» / Jimmy: «Es mi perro»",
-        "speakerNotes": "¿Quién cuenta que Jimmy frunció el ceño y quién dice que Robutt es su perro? El narrador cuenta la acción; Jimmy pronuncia esa frase."
-      },
-      {
-        "slideNumber": 12,
-        "tituloMomento": "Verificación",
-        "didacticPurpose": "Verificación",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Focus on explanation and modeling of La voz del narrador y los personajes. Concept: Verificación. Clean background, warm focus. No text drawn by AI.",
-        "overlayText": "Verificación. «Preguntó Jimmy» identifica quién habla",
-        "overlayTitle": "Verificación. «Preguntó Jimmy» identifica quién habla",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Verificación. «Preguntó Jimmy» identifica quién habla",
-        "speakerNotes": "Comprobamos el análisis en el fragmento. La raya abre la intervención de Jimmy y «preguntó Jimmy» identifica al hablante. La acción anterior pertenece al narrador."
-      },
-      {
-        "slideNumber": 13,
-        "tituloMomento": "Error y corrección",
-        "didacticPurpose": "Error y corrección",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Focus on explanation and modeling of La voz del narrador y los personajes. Concept: Error y corrección. Clean background, warm focus. No text drawn by AI.",
-        "overlayText": "Error y corrección. La raya abre el diálogo, no lo narra",
-        "overlayTitle": "Error y corrección. La raya abre el diálogo, no lo narra",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Error y corrección. La raya abre el diálogo, no lo narra",
-        "speakerNotes": "No confundas la raya con la voz del narrador. La raya abre diálogo. La aclaración atribuye la frase y la narración informa acciones."
-      },
-      {
-        "slideNumber": 14,
-        "tituloMomento": "Estrategia y puente",
-        "didacticPurpose": "Estrategia y puente",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Focus on explanation and modeling of La voz del narrador y los personajes. Concept: Estrategia y puente. Clean background, warm focus. No text drawn by AI.",
-        "overlayText": "Estrategia y puente. Separa las voces y vuelve al fragmento",
-        "overlayTitle": "Estrategia y puente. Separa las voces y vuelve al fragmento",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Estrategia y puente. Separa las voces y vuelve al fragmento",
-        "speakerNotes": "Ubica la raya, lee la aclaración y separa las voces. En la práctica analizarás otro fragmento, revisarás tus respuestas y cerrarás con la distinción."
+        "speakerNotes": "La explicación separará narración y diálogo mediante las marcas y las palabras que identifican a cada voz. Conservaremos la pregunta para el cierre.",
+        "duracionSeg": 8
       }
     ]
   },
@@ -279,54 +186,127 @@ export const LENGUA_7B_OA03_CLASE04: LessonData = {
       "context": "Jimmy frunció el ceño.",
       "question": "¿Qué parte corresponde al narrador y qué parte a Jimmy?",
       "expected": "Jimmy frunció el ceño corresponde al narrador. La intervención que comienza con Robutt no es una imitación corresponde a Jimmy.",
-      "success": "Respuesta comprensible, información precisa y explicación de su relación.",
-      "support": "Localizar una pista concreta en el recurso. Comparar esa pista con la explicación propuesta. Leer el modelo, relacionarlo con la pista y pedir un nuevo intento en palabras propias.",
-      "reveal": "Una parte cuenta la acción y la otra reproduce palabras dirigidas al padre.",
-      "studentReveal": "Jimmy frunció el ceño corresponde al narrador. La intervención que comienza con Robutt no es una imitación corresponde a Jimmy.",
-      "studentImage": "/images/lessons/lengua_7b_oa03_clase04_p1.jpg",
-      "relevantParagraph": 1
+      "success": "Una parte cuenta la acción y la otra reproduce palabras dirigidas al padre.",
+      "support": "Si no localiza información, releer esta pista del contexto: «Jimmy frunció el ceño.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta.",
+      "reveal": "Jimmy frunció el ceño corresponde al narrador. La intervención que comienza con Robutt no es una imitación corresponde a Jimmy. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento.",
+      "studentReveal": "Jimmy frunció el ceño corresponde al narrador. La intervención que comienza con Robutt no es una imitación corresponde a Jimmy."
     },
     {
       "context": "Jimmy llama papi a su interlocutor y afirma: «Es mi perro».",
       "question": "¿Qué señal permite atribuir esas palabras a Jimmy?",
       "expected": "La intervención comienza con una raya y Jimmy se dirige a su padre con la palabra papi. Esas señales muestran que Jimmy pronuncia la frase.",
-      "success": "Respuesta comprensible, información precisa y explicación de su relación.",
-      "support": "Localizar la raya que inicia la intervención. Identificar a quién se dirige Jimmy. Volver al fragmento, separar la intervención de la narración y pedir un nuevo intento en palabras propias.",
-      "reveal": "La raya de diálogo y la palabra papi aparecen en la intervención de Jimmy.",
-      "studentReveal": "La intervención comienza con una raya y Jimmy se dirige a su padre con la palabra papi. Esas señales muestran que Jimmy pronuncia la frase.",
-      "studentImage": "/images/lessons/lengua_7b_oa03_clase04_p2.jpg",
-      "relevantParagraph": 2
+      "success": "La raya de diálogo y la palabra papi aparecen en la intervención de Jimmy.",
+      "support": "Localizar la raya que inicia la intervención.",
+      "reveal": "Volver al fragmento, separar la intervención de la narración y pedir un nuevo intento en palabras propias.",
+      "studentReveal": "La intervención comienza con una raya y Jimmy se dirige a su padre con la palabra papi. Esas señales muestran que Jimmy pronuncia la frase."
     }
   ],
+  "conversationContext": "Diálogo guiado para profundizar en los elementos clave.",
   "formalization": {
-    "title": "Explicación y modelamiento",
+    "title": "El narrador cuenta lo que sucede en la historia. Los personajes intervienen en los diálogos. La raya introduce una intervención, pero las aclaraciones como «preguntó Jimmy» o «dijo el señor Anderson» pertenecen al narrador.",
     "concept": "El narrador cuenta lo que sucede en la historia. Los personajes intervienen en los diálogos. La raya introduce una intervención, pero las aclaraciones como «preguntó Jimmy» o «dijo el señor Anderson» pertenecen al narrador.",
-    "summary": "Jimmy frunció el ceño corresponde al narrador. La intervención que comienza con Robutt no es una imitación corresponde a Jimmy. Una parte cuenta la acción y la otra reproduce palabras dirigidas al padre.",
-    "ideaClave": "La narración y el diálogo cumplen funciones diferentes.",
-    "dileIntro": "¿Toda la línea pertenece a Jimmy? Explica.",
-    "hazInstruction": "Explica tu respuesta relacionando la acción con su efecto concreto usando evidencia del texto.",
-    "postDileIntro": "Comprobemos lo que acabamos de revisar.",
+    "summary": "Consolidación de las ideas clave.",
+    "ideaClave": "El narrador cuenta lo que sucede en la historia. Los personajes intervienen en los diálogos. La raya introduce una intervención, pero las aclaraciones como «preguntó Jimmy» o «dijo el señor Anderson» pertenecen al narrador.",
+    "dileIntro": "Ahora consolidaremos los aprendizajes esenciales.",
+    "hazInstruction": "Registra en tu cuaderno el concepto principal.",
+    "graphicPoster": "",
     "videoSrc": "",
-    "slides": []
+    "slides": [
+      {
+        "slideNumber": 8,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Diapositiva 01 — Objetivo de la lección",
+        "visualPrompt": "",
+        "overlayText": "Objetivo de la lección. Distinguir quién narra y quién habla",
+        "overlayTitle": "Objetivo de la lección. Distinguir quién narra y quién habla",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Objetivo de la lección. Distinguir quién narra y quién habla",
+        "speakerNotes": "En esta clase distinguirás quién cuenta y quién habla. El narrador presenta acciones y los personajes expresan sus palabras en el diálogo.",
+        "duracionSeg": 8
+      },
+      {
+        "slideNumber": 9,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Diapositiva 02 — Herramienta",
+        "visualPrompt": "",
+        "overlayText": "Herramienta. Raya y aclaración muestran quién habla",
+        "overlayTitle": "Herramienta. Raya y aclaración muestran quién habla",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Herramienta. Raya y aclaración muestran quién habla",
+        "speakerNotes": "Busca las marcas del diálogo, como la raya, y las aclaraciones que atribuyen cada intervención. También observa qué acciones cuenta la voz narradora. La raya inicia una intervención; la aclaración permite atribuirla. La narración puede rodear el diálogo con acciones y descripciones.",
+        "duracionSeg": 8
+      },
+      {
+        "slideNumber": 10,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Diapositiva 03 — Criterio",
+        "visualPrompt": "",
+        "overlayText": "Criterio. Separa narración y diálogo con señales",
+        "overlayTitle": "Criterio. Separa narración y diálogo con señales",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Criterio. Separa narración y diálogo con señales",
+        "speakerNotes": "Separa las palabras pronunciadas por un personaje de la información que entrega el narrador. Una aclaración como «preguntó Jimmy» identifica quién habló. No basta con mirar la raya: revisa también los verbos de habla y la puntuación que los acompaña.",
+        "duracionSeg": 8
+      },
+      {
+        "slideNumber": 11,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Diapositiva 04 — Modelo",
+        "visualPrompt": "",
+        "overlayText": "Modelo. Narrador: «Frunció el ceño» / Jimmy: «Es mi perro»",
+        "overlayTitle": "Modelo. Narrador: «Frunció el ceño» / Jimmy: «Es mi perro»",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Modelo. Narrador: «Frunció el ceño» / Jimmy: «Es mi perro»",
+        "speakerNotes": "¿Quién cuenta que Jimmy frunció el ceño y quién dice que Robutt es su perro? El narrador cuenta la acción; Jimmy pronuncia esa frase. Compara las palabras pronunciadas con la acción que el narrador cuenta antes.",
+        "duracionSeg": 8
+      },
+      {
+        "slideNumber": 12,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Diapositiva 05 — Verificación",
+        "visualPrompt": "",
+        "overlayText": "Verificación. «Preguntó Jimmy» identifica quién habla",
+        "overlayTitle": "Verificación. «Preguntó Jimmy» identifica quién habla",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Verificación. «Preguntó Jimmy» identifica quién habla",
+        "speakerNotes": "Comprobamos el análisis en el fragmento. La raya abre la intervención de Jimmy y «preguntó Jimmy» identifica al hablante. La acción anterior pertenece al narrador. La aclaración confirma quién participa en el diálogo y permite separar las dos voces.",
+        "duracionSeg": 8
+      },
+      {
+        "slideNumber": 13,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Diapositiva 06 — Error y corrección",
+        "visualPrompt": "",
+        "overlayText": "Error y corrección. La raya abre el diálogo, no lo narra",
+        "overlayTitle": "Error y corrección. La raya abre el diálogo, no lo narra",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Error y corrección. La raya abre el diálogo, no lo narra",
+        "speakerNotes": "No confundas la raya con la voz del narrador. La raya abre diálogo. La aclaración atribuye la frase y la narración informa acciones.",
+        "duracionSeg": 8
+      },
+      {
+        "slideNumber": 14,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Diapositiva 07 — Estrategia y puente",
+        "visualPrompt": "",
+        "overlayText": "Estrategia y puente. Separa las voces y vuelve al fragmento",
+        "overlayTitle": "Estrategia y puente. Separa las voces y vuelve al fragmento",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Estrategia y puente. Separa las voces y vuelve al fragmento",
+        "speakerNotes": "Ubica la raya, lee la aclaración y separa las voces. En la práctica analizarás otro fragmento, revisarás tus respuestas y cerrarás con la distinción.",
+        "duracionSeg": 8
+      }
+    ]
   },
   "postQuestions": [
     {
-      "context": "Comprobación 1 · Aplicación inmediata",
+      "context": "Comprobación 1",
       "question": "¿Toda la línea pertenece a Jimmy? Explica.",
       "expected": "La pregunta pertenece a Jimmy. La aclaración preguntó Jimmy pertenece al narrador.",
-      "success": "Respuesta comprensible, fundamentada en el texto.",
-      "support": "Revisa el modelo de la clase y compáralo con tu respuesta.",
+      "success": "Respuesta precisa y fundamentada",
+      "support": "Revisa el concepto clave expuesto",
       "reveal": "La pregunta pertenece a Jimmy. La aclaración preguntó Jimmy pertenece al narrador.",
       "studentReveal": "La pregunta pertenece a Jimmy. La aclaración preguntó Jimmy pertenece al narrador."
-    },
-    {
-      "context": "Comprobación 2 · Síntesis de la evidencia",
-      "question": "¿Qué parte corresponde al narrador y qué parte a Jimmy?",
-      "expected": "Jimmy frunció el ceño corresponde al narrador. La intervención que comienza con Robutt no es una imitación corresponde a Jimmy.",
-      "success": "Usa una pista concreta del texto.",
-      "support": "Vuelve al recurso de lectura para ubicar la pista.",
-      "reveal": "Jimmy frunció el ceño corresponde al narrador. La intervención que comienza con Robutt no es una imitación corresponde a Jimmy.",
-      "studentReveal": "Jimmy frunció el ceño corresponde al narrador. La intervención que comienza con Robutt no es una imitación corresponde a Jimmy."
     }
   ],
   "practice": [
@@ -334,21 +314,28 @@ export const LENGUA_7B_OA03_CLASE04: LessonData = {
       "context": "Caso 1",
       "question": "¿Qué palabras pronuncia Jimmy y qué parte corresponde al narrador? Señala la marca que te ayuda a separar ambas voces.",
       "expected": "Jimmy pronuncia la pregunta. La aclaración «preguntó Jimmy» corresponde al narrador, porque identifica quién realizó la pregunta.",
-      "success": "La respuesta separa el diálogo de la aclaración narrativa. Revisa que no atribuyas «preguntó Jimmy» a las palabras que él pronuncia.",
-      "support": "Vuelve al texto para ubicar la pista que conecta la acción con su efecto.",
+      "success": "Cumple el criterio formal del caso",
+      "support": "Revisa los datos del recurso",
       "reveal": "Jimmy pronuncia la pregunta. La aclaración «preguntó Jimmy» corresponde al narrador, porque identifica quién realizó la pregunta.",
-      "studentReveal": "Jimmy pronuncia la pregunta. La aclaración «preguntó Jimmy» corresponde al narrador, porque identifica quién realizó la pregunta.",
-      "relevantParagraph": 1
+      "studentReveal": "Jimmy pronuncia la pregunta. La aclaración «preguntó Jimmy» corresponde al narrador, porque identifica quién realizó la pregunta."
     },
     {
       "context": "Caso 2",
       "question": "¿Qué parte dice el padre y qué parte aclara el narrador? Explica cómo reconoces cada voz.",
       "expected": "El padre dice «Es difícil de explicar» y «pero lo comprenderás en cuanto lo veas». La aclaración «dijo el señor Anderson» pertenece al narrador.",
-      "success": "La respuesta distingue las palabras entre rayas de la aclaración sobre quién habla. Si marcaste toda la línea como diálogo, vuelve a revisar la función de la acotación.",
-      "support": "Vuelve al texto para ubicar la pista que conecta la acción con su efecto.",
+      "success": "Cumple el criterio formal del caso",
+      "support": "Revisa los datos del recurso",
       "reveal": "El padre dice «Es difícil de explicar» y «pero lo comprenderás en cuanto lo veas». La aclaración «dijo el señor Anderson» pertenece al narrador.",
-      "studentReveal": "El padre dice «Es difícil de explicar» y «pero lo comprenderás en cuanto lo veas». La aclaración «dijo el señor Anderson» pertenece al narrador.",
-      "relevantParagraph": 2
+      "studentReveal": "El padre dice «Es difícil de explicar» y «pero lo comprenderás en cuanto lo veas». La aclaración «dijo el señor Anderson» pertenece al narrador."
+    },
+    {
+      "context": "Microdiálogo original de EstudioSimple, no cita de Asimov: Elena cerró el cuaderno. —Volveré mañana —dijo—, cuando termine el trabajo. —Te esperaré —respondió Omar.",
+      "question": "Separa narración, palabras de Elena y palabras de Omar. Explica por qué dijo y respondió Omar no son palabras pronunciadas por esos personajes.",
+      "expected": "Narrador: Elena cerró el cuaderno, dijo, respondió Omar. Elena: Volveré mañana / cuando termine el trabajo. Omar: Te esperaré. Las acotaciones narrativas atribuyen o explican las intervenciones.",
+      "success": "Aplica el criterio de la clase de manera autónoma en un recurso nuevo",
+      "support": "Comprobar cada elemento pedido y su evidencia; aceptar formulaciones equivalentes. Si falta una relación, pedir que señale la pista y explique qué demuestra; después ofrecer el modelo y un nuevo intento. Registrar respuesta, apoyos y criterio por reforzar.",
+      "reveal": "Narrador: Elena cerró el cuaderno, dijo, respondió Omar. Elena: Volveré mañana / cuando termine el trabajo. Omar: Te esperaré. Las acotaciones narrativas atribuyen o explican las intervenciones.",
+      "studentReveal": "Narrador: Elena cerró el cuaderno, dijo, respondió Omar. Elena: Volveré mañana / cuando termine el trabajo. Omar: Te esperaré. Las acotaciones narrativas atribuyen o explican las intervenciones."
     }
   ],
   "mini": [
@@ -391,62 +378,64 @@ export const LENGUA_7B_OA03_CLASE04: LessonData = {
   ],
   "recovery": [
     {
-      "title": "Recuperación Reactivo 1",
-      "explain": "La frase cuenta una acción del personaje desde la voz narrativa. Separa la frase que cuenta una acción de la intervención que comienza con raya. Identifica quién pronuncia las palabras.",
-      "q": "Después de releer el recurso, responde de nuevo: ¿Quién cuenta que Jimmy frunció el ceño?",
-      "options": [
-        "A. Robutt",
-        "B. Jimmy en voz alta",
-        "C. El padre",
-        "D. El narrador"
-      ],
-      "correct": "D. El narrador",
-      "correctText": "Usaste el recurso para fundamentar tu respuesta.",
-      "fixText": "La frase cuenta una acción del personaje desde la voz narrativa. Subraya la pista específica, compárala con tu respuesta y vuelve a intentarlo en tus palabras."
+      "title": "Recuperación 1",
+      "explain": "La frase cuenta una acción del personaje desde la voz narrativa.",
+      "q": "¿Qué voz cuenta Pablo abrió la ventana?",
+      "kind": "open_response",
+      "options": [],
+      "correct": "",
+      "correctText": "El narrador cuenta esa acción. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
+      "fixText": "Volver al caso concreto: «Microdiálogo original de recuperación: Pablo abrió la ventana. —Hace frío —comentó Pablo—, será mejor cerrarla. —De acuerdo —respondió Lía.». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
+      "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
+      "resource": "Microdiálogo original de recuperación: Pablo abrió la ventana. —Hace frío —comentó Pablo—, será mejor cerrarla. —De acuerdo —respondió Lía.",
+      "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
     },
     {
-      "title": "Recuperación Reactivo 2",
-      "explain": "Jimmy se dirige a su padre mediante la palabra papi. Localiza la raya y la palabra papi. Esa señal te ayuda a reconocer quién se dirige al padre.",
-      "q": "Después de releer el recurso, responde de nuevo: ¿Quién dice Es mi perro en el fragmento?",
-      "options": [
-        "A. Jimmy",
-        "B. El padre",
-        "C. El narrador",
-        "D. El equipo de rescate"
-      ],
-      "correct": "A. Jimmy",
-      "correctText": "Usaste el recurso para fundamentar tu respuesta.",
-      "fixText": "Jimmy se dirige a su padre mediante la palabra papi. Subraya la pista específica, compárala con tu respuesta y vuelve a intentarlo en tus palabras."
+      "title": "Recuperación 2",
+      "explain": "Jimmy se dirige a su padre mediante la palabra papi.",
+      "q": "¿Qué palabras pronuncia Pablo?",
+      "kind": "open_response",
+      "options": [],
+      "correct": "",
+      "correctText": "Hace frío / será mejor cerrarla. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
+      "fixText": "Buscar estas expresiones del recurso nuevo: «Hace»; «frío»; «será»; «mejor». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
+      "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
+      "resource": "Microdiálogo original de recuperación: Pablo abrió la ventana. —Hace frío —comentó Pablo—, será mejor cerrarla. —De acuerdo —respondió Lía.",
+      "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
     },
     {
-      "title": "Recuperación Reactivo 3",
-      "explain": "La aclaración identifica al personaje que habla. Divide la línea en la pregunta del personaje y la aclaración del narrador. Explica qué informa cada parte.",
-      "q": "Después de releer el recurso, responde de nuevo: En preguntó Jimmy, ¿qué función cumple el narrador?",
-      "options": [
-        "A. Expresa su propia pregunta al padre",
-        "B. Aclara quién realizó la pregunta",
-        "C. Se convierte en Robutt",
-        "D. Describe una decisión del padre"
-      ],
-      "correct": "B. Aclara quién realizó la pregunta",
-      "correctText": "Usaste el recurso para fundamentar tu respuesta.",
-      "fixText": "La aclaración identifica al personaje que habla. Subraya la pista específica, compárala con tu respuesta y vuelve a intentarlo en tus palabras."
+      "title": "Recuperación 3",
+      "explain": "La aclaración identifica al personaje que habla.",
+      "q": "¿Qué función cumple respondió Lía y quién dice De acuerdo?",
+      "kind": "open_response",
+      "options": [],
+      "correct": "",
+      "correctText": "La acotación del narrador atribuye la intervención; Lía pronuncia De acuerdo. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
+      "fixText": "Buscar estas expresiones del recurso nuevo: «acuerdo». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
+      "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
+      "resource": "Microdiálogo original de recuperación: Pablo abrió la ventana. —Hace frío —comentó Pablo—, será mejor cerrarla. —De acuerdo —respondió Lía.",
+      "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
     }
   ],
   "summaryIdeas": [
     [
-      "Idea clave",
-      "La narración y el diálogo cumplen funciones diferentes."
+      "Idea central",
+      "La voz del narrador y los personajes"
     ],
     [
-      "Síntesis",
-      "¿Qué parte corresponde al narrador y qué parte a Jimmy?"
-    ],
-    [
-      "Metacognición",
-      "¿Qué te ayudó más: leer el recurso, localizar una pista o comparar explicaciones? ¿Por qué?"
+      "Comprensión",
+      "Aplicación del criterio formal en el cuaderno físico."
     ]
   ],
+  "interactive": {
+    "type": "reading_resource",
+    "title": "Recurso de Lectura y Ambiente Narrativo",
+    "description": "Organizador de lectura comprensiva y análisis del entorno narrativo."
+  },
+  "closure": {
+    "congratulations": "Buen trabajo. Explicaste tu respuesta usando información del recurso.",
+    "nextClassPreview": "¡Nos vemos en la próxima lección!"
+  },
   "paso8_cierre": {
     "preguntaSintesis": "¿Qué parte corresponde al narrador y qué parte a Jimmy?",
     "metacognicion": "¿Qué te ayudó más: leer el recurso, localizar una pista o comparar explicaciones? ¿Por qué?",

@@ -11,8 +11,10 @@ import { SynchronizedLessonMaster } from './components/lesson/SynchronizedLesson
 import { PricingPage } from './components/pricing/PricingPage';
 import { FormalExamSimulator } from './components/student/FormalExamSimulator';
 
+import { findInjectedLesson } from './lib/lesson-repository';
+
 const MainContent: React.FC = () => {
-  const { viewMode, setViewMode, authSession, activeSynchronizedLesson } = useApp();
+  const { viewMode, setViewMode, authSession, activeSynchronizedLesson, setActiveSynchronizedLesson } = useApp();
 
   React.useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -24,9 +26,26 @@ const MainContent: React.FC = () => {
         search.includes('collection_status=approved')
       ) {
         setViewMode('checkout');
+        return;
+      }
+
+      const params = new URLSearchParams(window.location.search);
+      const urlView = params.get('view');
+      if (urlView && ['lesson', 'student', 'parent', 'courses', 'admin'].includes(urlView)) {
+        if (urlView === 'lesson') {
+          const grade = params.get('grade') || '7° Básico';
+          const subject = params.get('subject') || 'Ciencias Naturales';
+          const oa = params.get('oa') || 'OA 1';
+          const lessonNum = parseInt(params.get('lesson') || '2', 10);
+          const lesson = findInjectedLesson(grade, subject, oa, lessonNum);
+          if (lesson) {
+            setActiveSynchronizedLesson(lesson);
+          }
+        }
+        setViewMode(urlView as any);
       }
     }
-  }, [setViewMode]);
+  }, [setViewMode, setActiveSynchronizedLesson]);
 
   const isAuthenticated = authSession?.isAuthenticated === true;
   const isAdmin = isAuthenticated && authSession?.role === 'admin';

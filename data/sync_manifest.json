@@ -1,7 +1,7 @@
 {
-  "timestamp": "14-10-2026, 10:08:06 a. m. [America/Santiago]",
-  "isoDate": "2026-10-14T13:08:06.504Z",
-  "totalLessonsProcessed": 9,
+  "timestamp": "17-10-2026, 4:55:55 p. m. [America/Santiago]",
+  "isoDate": "2026-10-17T19:55:55.332Z",
+  "totalLessonsProcessed": 30,
   "status": "EN_REVISION",
   "lessons": [
     {
@@ -14,9 +14,79 @@
       "sourceFile": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE01.md",
       "destModule": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase01.ts",
       "varName": "CIENCIAS_7B_OA01_CLASE01",
-      "hash": "ad397d46b91983f6",
+      "hash": "79541ff2a77e77e5",
       "status": "EN_REVISION",
-      "syncedAt": "2026-10-11T20:00:49.045Z"
+      "syncedAt": "2026-10-17T19:55:55.101Z"
+    },
+    {
+      "courseId": "110-7",
+      "grade": "7° Básico",
+      "subject": "Ciencias Naturales",
+      "oaCode": "OA 1",
+      "classNumber": 2,
+      "title": "Cambios físicos durante la pubertad",
+      "sourceFile": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE02.md",
+      "destModule": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase02.ts",
+      "varName": "CIENCIAS_7B_OA01_CLASE02",
+      "hash": "4c8150b24de35211",
+      "status": "EN_REVISION",
+      "syncedAt": "2026-10-17T19:55:55.106Z"
+    },
+    {
+      "courseId": "110-7",
+      "grade": "7° Básico",
+      "subject": "Ciencias Naturales",
+      "oaCode": "OA 1",
+      "classNumber": 3,
+      "title": "Emociones, afectividad e imagen personal",
+      "sourceFile": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE03.md",
+      "destModule": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase03.ts",
+      "varName": "CIENCIAS_7B_OA01_CLASE03",
+      "hash": "53db5847d0b7bac7",
+      "status": "EN_REVISION",
+      "syncedAt": "2026-10-17T19:55:55.109Z"
+    },
+    {
+      "courseId": "110-7",
+      "grade": "7° Básico",
+      "subject": "Ciencias Naturales",
+      "oaCode": "OA 1",
+      "classNumber": 4,
+      "title": "Aspectos sociales y estereotipos",
+      "sourceFile": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE04.md",
+      "destModule": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase04.ts",
+      "varName": "CIENCIAS_7B_OA01_CLASE04",
+      "hash": "06cdbbd0b660389d",
+      "status": "EN_REVISION",
+      "syncedAt": "2026-10-17T19:55:55.112Z"
+    },
+    {
+      "courseId": "110-7",
+      "grade": "7° Básico",
+      "subject": "Ciencias Naturales",
+      "oaCode": "OA 1",
+      "classNumber": 5,
+      "title": "Vínculos afectivos y respeto mutuo",
+      "sourceFile": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE05.md",
+      "destModule": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase05.ts",
+      "varName": "CIENCIAS_7B_OA01_CLASE05",
+      "hash": "46ee6797290234d3",
+      "status": "EN_REVISION",
+      "syncedAt": "2026-10-17T19:55:55.115Z"
+    },
+    {
+      "courseId": "110-7",
+      "grade": "7° Básico",
+      "subject": "Ciencias Naturales",
+      "oaCode": "OA 1",
+      "classNumber": 6,
+      "title": "Decisiones responsables e integración",
+      "sourceFile": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE06.md",
+      "destModule": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase06.ts",
+      "varName": "CIENCIAS_7B_OA01_CLASE06",
+      "hash": "6672d97f7fdc340b",
+      "status": "EN_REVISION",
+      "syncedAt": "2026-10-17T19:55:55.119Z"
     },
     {
       "courseId": "110-7",
@@ -30,7 +100,77 @@
       "varName": "HISTORIA_7B_OA02_CLASE01",
       "hash": "0794b50f228bfb06",
       "status": "EN_REVISION",
-      "syncedAt": "2026-10-11T20:00:49.049Z"
+      "syncedAt": "2026-10-17T19:55:55.122Z"
+    },
+    {
+      "courseId": "110-7",
+      "grade": "7° Básico",
+      "subject": "Historia, Geografía y Ciencias Sociales",
+      "oaCode": "OA 2",
+      "classNumber": 2,
+      "title": "Domesticación y sedentarización",
+      "sourceFile": "LECCIONES_POR_REVISAR/110-7/Historia_Geografia/OA02/CLASE02.md",
+      "destModule": "Web Studio Simple/src/data/lessons/historia_7b_oa02_clase02.ts",
+      "varName": "HISTORIA_7B_OA02_CLASE02",
+      "hash": "114bec14ee28d8c3",
+      "status": "EN_REVISION",
+      "syncedAt": "2026-10-17T19:55:55.125Z"
+    },
+    {
+      "courseId": "110-7",
+      "grade": "7° Básico",
+      "subject": "Historia, Geografía y Ciencias Sociales",
+      "oaCode": "OA 2",
+      "classNumber": 3,
+      "title": "Explicar procesos mediante varias causas",
+      "sourceFile": "LECCIONES_POR_REVISAR/110-7/Historia_Geografia/OA02/CLASE03.md",
+      "destModule": "Web Studio Simple/src/data/lessons/historia_7b_oa02_clase03.ts",
+      "varName": "HISTORIA_7B_OA02_CLASE03",
+      "hash": "1d6321c95a290a3f",
+      "status": "EN_REVISION",
+      "syncedAt": "2026-10-17T19:55:55.128Z"
+    },
+    {
+      "courseId": "110-7",
+      "grade": "7° Básico",
+      "subject": "Historia, Geografía y Ciencias Sociales",
+      "oaCode": "OA 2",
+      "classNumber": 4,
+      "title": "Técnicas agrícolas y excedentes",
+      "sourceFile": "LECCIONES_POR_REVISAR/110-7/Historia_Geografia/OA02/CLASE04.md",
+      "destModule": "Web Studio Simple/src/data/lessons/historia_7b_oa02_clase04.ts",
+      "varName": "HISTORIA_7B_OA02_CLASE04",
+      "hash": "818e5c9df2cc07f8",
+      "status": "EN_REVISION",
+      "syncedAt": "2026-10-17T19:55:55.131Z"
+    },
+    {
+      "courseId": "110-7",
+      "grade": "7° Básico",
+      "subject": "Historia, Geografía y Ciencias Sociales",
+      "oaCode": "OA 2",
+      "classNumber": 5,
+      "title": "Excedentes, intercambio y evidencia",
+      "sourceFile": "LECCIONES_POR_REVISAR/110-7/Historia_Geografia/OA02/CLASE05.md",
+      "destModule": "Web Studio Simple/src/data/lessons/historia_7b_oa02_clase05.ts",
+      "varName": "HISTORIA_7B_OA02_CLASE05",
+      "hash": "2291e779d9390ac1",
+      "status": "EN_REVISION",
+      "syncedAt": "2026-10-17T19:55:55.134Z"
+    },
+    {
+      "courseId": "110-7",
+      "grade": "7° Básico",
+      "subject": "Historia, Geografía y Ciencias Sociales",
+      "oaCode": "OA 2",
+      "classNumber": 6,
+      "title": "Transformaciones agrícolas y huellas en el presente",
+      "sourceFile": "LECCIONES_POR_REVISAR/110-7/Historia_Geografia/OA02/CLASE06.md",
+      "destModule": "Web Studio Simple/src/data/lessons/historia_7b_oa02_clase06.ts",
+      "varName": "HISTORIA_7B_OA02_CLASE06",
+      "hash": "d319f59063b48c1f",
+      "status": "EN_REVISION",
+      "syncedAt": "2026-10-17T19:55:55.137Z"
     },
     {
       "courseId": "110-7",
@@ -44,11 +184,81 @@
       "varName": "INGLES_7B_OA09_CLASE01",
       "hash": "9653ed07d2df5434",
       "status": "EN_REVISION",
-      "syncedAt": "2026-10-11T20:00:49.053Z"
+      "syncedAt": "2026-10-17T19:55:55.139Z"
     },
     {
       "courseId": "110-7",
-      "grade": "7° básico",
+      "grade": "7° Básico",
+      "subject": "Idioma Extranjero Inglés",
+      "oaCode": "OA 9",
+      "classNumber": 2,
+      "title": "An opinion supported by the diary",
+      "sourceFile": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE02.md",
+      "destModule": "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase02.ts",
+      "varName": "INGLES_7B_OA09_CLASE02",
+      "hash": "ee1b5c6a00acf0e4",
+      "status": "EN_REVISION",
+      "syncedAt": "2026-10-17T19:55:55.142Z"
+    },
+    {
+      "courseId": "110-7",
+      "grade": "7° Básico",
+      "subject": "Idioma Extranjero Inglés",
+      "oaCode": "OA 9",
+      "classNumber": 3,
+      "title": "Dates, times and explicit information",
+      "sourceFile": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE03.md",
+      "destModule": "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase03.ts",
+      "varName": "INGLES_7B_OA09_CLASE03",
+      "hash": "fbc84d5018d77196",
+      "status": "EN_REVISION",
+      "syncedAt": "2026-10-17T19:55:55.144Z"
+    },
+    {
+      "courseId": "110-7",
+      "grade": "7° Básico",
+      "subject": "Idioma Extranjero Inglés",
+      "oaCode": "OA 9",
+      "classNumber": 4,
+      "title": "Reading a school email",
+      "sourceFile": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE04.md",
+      "destModule": "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase04.ts",
+      "varName": "INGLES_7B_OA09_CLASE04",
+      "hash": "e0acc7d571ea73fe",
+      "status": "EN_REVISION",
+      "syncedAt": "2026-10-17T19:55:55.151Z"
+    },
+    {
+      "courseId": "110-7",
+      "grade": "7° Básico",
+      "subject": "Idioma Extranjero Inglés",
+      "oaCode": "OA 9",
+      "classNumber": 5,
+      "title": "Reading about a school garden",
+      "sourceFile": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE05.md",
+      "destModule": "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase05.ts",
+      "varName": "INGLES_7B_OA09_CLASE05",
+      "hash": "56da2f92c4157ebd",
+      "status": "EN_REVISION",
+      "syncedAt": "2026-10-17T19:55:55.153Z"
+    },
+    {
+      "courseId": "110-7",
+      "grade": "7° Básico",
+      "subject": "Idioma Extranjero Inglés",
+      "oaCode": "OA 9",
+      "classNumber": 6,
+      "title": "Comparing messages and showing understanding",
+      "sourceFile": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE06.md",
+      "destModule": "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase06.ts",
+      "varName": "INGLES_7B_OA09_CLASE06",
+      "hash": "2f689f287ac04385",
+      "status": "EN_REVISION",
+      "syncedAt": "2026-10-17T19:55:55.156Z"
+    },
+    {
+      "courseId": "110-7",
+      "grade": "7° Básico",
       "subject": "Lengua y Literatura",
       "oaCode": "OA 3",
       "classNumber": 1,
@@ -56,9 +266,9 @@
       "sourceFile": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE01.md",
       "destModule": "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase01.ts",
       "varName": "LENGUA_7B_OA03_CLASE01",
-      "hash": "3a44db6d846230d1",
+      "hash": "5a017b85f232f57c",
       "status": "EN_REVISION",
-      "syncedAt": "2026-10-11T20:00:49.056Z"
+      "syncedAt": "2026-10-17T19:55:55.159Z"
     },
     {
       "courseId": "110-7",
@@ -70,9 +280,9 @@
       "sourceFile": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE02.md",
       "destModule": "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase02.ts",
       "varName": "LENGUA_7B_OA03_CLASE02",
-      "hash": "524df488357ef43f",
+      "hash": "622a4033f26036e0",
       "status": "EN_REVISION",
-      "syncedAt": "2026-10-14T13:08:06.263Z"
+      "syncedAt": "2026-10-17T19:55:55.162Z"
     },
     {
       "courseId": "110-7",
@@ -84,9 +294,9 @@
       "sourceFile": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE03.md",
       "destModule": "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase03.ts",
       "varName": "LENGUA_7B_OA03_CLASE03",
-      "hash": "6869383e7d7abd1b",
+      "hash": "f7d8a657be061f42",
       "status": "EN_REVISION",
-      "syncedAt": "2026-10-14T13:08:06.271Z"
+      "syncedAt": "2026-10-17T19:55:55.166Z"
     },
     {
       "courseId": "110-7",
@@ -98,9 +308,9 @@
       "sourceFile": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE04.md",
       "destModule": "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase04.ts",
       "varName": "LENGUA_7B_OA03_CLASE04",
-      "hash": "dc55b2a4870de7d0",
+      "hash": "da7a110c85a326a5",
       "status": "EN_REVISION",
-      "syncedAt": "2026-10-14T13:08:06.273Z"
+      "syncedAt": "2026-10-17T19:55:55.169Z"
     },
     {
       "courseId": "110-7",
@@ -112,9 +322,9 @@
       "sourceFile": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE05.md",
       "destModule": "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase05.ts",
       "varName": "LENGUA_7B_OA03_CLASE05",
-      "hash": "81bed6e2c90c15ee",
+      "hash": "73962fce3c469bc2",
       "status": "EN_REVISION",
-      "syncedAt": "2026-10-14T13:08:06.276Z"
+      "syncedAt": "2026-10-17T19:55:55.172Z"
     },
     {
       "courseId": "110-7",
@@ -126,9 +336,93 @@
       "sourceFile": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE06.md",
       "destModule": "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase06.ts",
       "varName": "LENGUA_7B_OA03_CLASE06",
-      "hash": "63220140e8c0d05e",
+      "hash": "d92209a89f4ea126",
       "status": "EN_REVISION",
-      "syncedAt": "2026-10-14T13:08:06.279Z"
+      "syncedAt": "2026-10-17T19:55:55.176Z"
+    },
+    {
+      "courseId": "110-7",
+      "grade": "7° básico",
+      "subject": "Matemática",
+      "oaCode": "OA 4",
+      "classNumber": 1,
+      "title": "Concepto de Porcentaje y Representación en Cuadrículas de 100",
+      "sourceFile": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE01.md",
+      "destModule": "Web Studio Simple/src/data/lessons/matematica_7b_oa04_clase01.ts",
+      "varName": "MATEMATICA_7B_OA04_CLASE01",
+      "hash": "7769bcfa0b6d40c1",
+      "status": "EN_REVISION",
+      "syncedAt": "2026-10-17T19:55:55.178Z"
+    },
+    {
+      "courseId": "110-7",
+      "grade": "7° básico",
+      "subject": "Matemática",
+      "oaCode": "OA 4",
+      "classNumber": 2,
+      "title": "Porcentajes como Fracción Irreductible y Número Decimal",
+      "sourceFile": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE02.md",
+      "destModule": "Web Studio Simple/src/data/lessons/matematica_7b_oa04_clase02.ts",
+      "varName": "MATEMATICA_7B_OA04_CLASE02",
+      "hash": "84118dcd8dc57520",
+      "status": "EN_REVISION",
+      "syncedAt": "2026-10-17T19:55:55.180Z"
+    },
+    {
+      "courseId": "110-7",
+      "grade": "7° básico",
+      "subject": "Matemática",
+      "oaCode": "OA 4",
+      "classNumber": 3,
+      "title": "Cálculo Mental y Estrategias Rápidas de Porcentajes Notables",
+      "sourceFile": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE03.md",
+      "destModule": "Web Studio Simple/src/data/lessons/matematica_7b_oa04_clase03.ts",
+      "varName": "MATEMATICA_7B_OA04_CLASE03",
+      "hash": "575c4e968c9bd6a7",
+      "status": "EN_REVISION",
+      "syncedAt": "2026-10-17T19:55:55.182Z"
+    },
+    {
+      "courseId": "110-7",
+      "grade": "7° básico",
+      "subject": "Matemática",
+      "oaCode": "OA 4",
+      "classNumber": 4,
+      "title": "Estrategias de Cálculo de Cualquier Porcentaje: Decimales y Proporciones",
+      "sourceFile": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE04.md",
+      "destModule": "Web Studio Simple/src/data/lessons/matematica_7b_oa04_clase04.ts",
+      "varName": "MATEMATICA_7B_OA04_CLASE04",
+      "hash": "e15d021079fdb9e2",
+      "status": "EN_REVISION",
+      "syncedAt": "2026-10-17T19:55:55.184Z"
+    },
+    {
+      "courseId": "110-7",
+      "grade": "7° básico",
+      "subject": "Matemática",
+      "oaCode": "OA 4",
+      "classNumber": 5,
+      "title": "Resolución de Problemas Cotidianos: Descuentos Comerciales e IVA",
+      "sourceFile": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE05.md",
+      "destModule": "Web Studio Simple/src/data/lessons/matematica_7b_oa04_clase05.ts",
+      "varName": "MATEMATICA_7B_OA04_CLASE05",
+      "hash": "6388c0f89dc87655",
+      "status": "EN_REVISION",
+      "syncedAt": "2026-10-17T19:55:55.186Z"
+    },
+    {
+      "courseId": "110-7",
+      "grade": "7° básico",
+      "subject": "Matemática",
+      "oaCode": "OA 4",
+      "classNumber": 6,
+      "title": "Síntesis Integradora y Ensayo de Evaluación Formativa: Porcentajes en Acción",
+      "sourceFile": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE06.md",
+      "destModule": "Web Studio Simple/src/data/lessons/matematica_7b_oa04_clase06.ts",
+      "varName": "MATEMATICA_7B_OA04_CLASE06",
+      "hash": "2a64c7ac990ae246",
+      "status": "EN_REVISION",
+      "syncedAt": "2026-10-17T19:55:55.188Z"
     }
   ]
 }

@@ -1,529 +1,444 @@
-import { LessonData } from '../../types/lesson';
+import { LessonData } from '../../../src/types/lesson';
 
 export const INGLES_7B_OA09_CLASE06: LessonData = {
   "metadata": {
     "grade": "7° Básico",
-    "subject": "Inglés",
+    "subject": "Idioma Extranjero Inglés",
     "oaCode": "OA 9",
-    "oaTitle": "Comprensión de lectura",
+    "oaTitle": "Idioma Extranjero Inglés - OA 9",
     "lessonNumber": 6,
     "totalLessonsInOa": 6,
-    "lessonTitle": "Resolution, Moral of the Story, and Reading Test",
+    "lessonTitle": "Una situación",
     "durationMinutes": 30,
-    "nextLessonTitle": "Fin de Unidad: Felicitaciones por completar el Objetivo de Aprendizaje"
+    "nextLessonTitle": ""
   },
   "prep": {
-    "adultObjective": "Acompañar al estudiante en la inmersión del idioma inglés para: Resolution, Moral of the Story, and Reading Test. Las instrucciones del apoderado son en español, mientras los textos, vocabulario y miniquiz se practican en inglés con foco en 'ideas generales'.",
-    "routeToday": "1. Inicio y activación · 2. Video de exploración · 3. Recorrido guiado · 4. Formalización y práctica en cuaderno · 5. Miniquiz y REVISAR · 6. Cierre metacognitivo",
-    "mentorReminder": "Sigue las indicaciones en pantalla paso a paso. Lee únicamente los recuadros DILE en voz alta y espera siempre la respuesta.",
+    "adultObjective": "Compare the main ideas and explicit details of two short messages and support an opinion with accurate reading evidence.",
+    "routeToday": "Ruta guiada de la clase 6",
+    "mentorReminder": "Compare the main ideas and explicit details of two short messages and support an opinion with accurate reading evidence.",
     "reminders": [
-      "Sigue el orden indicado.",
-      "Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.",
-      "No leas los recuadros SOLO PARA TI ni AYUDA DE LECTURA.",
-      "Haz cada pregunta y espera la respuesta antes de seleccionar una opción.",
-      "Considera correcta una respuesta si expresa la idea matemática, aunque use palabras distintas.",
-      "Si el estudiante necesita apoyo, usa únicamente la ayuda que aparecerá.",
-      "Si propone otra explicación o no está de acuerdo, escúchalo completo y valora su razonamiento antes de guiarlo."
+      "Acompaña al estudiante y valora su proceso."
     ],
-    "emotionalTip": "Fomenta la confianza comunicativa: 'Listen, read the clues, and focus on the general meaning before translating every single word'."
+    "emotionalTip": "Valora cada avance con paciencia y entusiasmo."
   },
   "route": {
     "blocks": [
       {
         "id": "b1",
         "number": "01",
-        "title": "Inglés",
-        "subtitle": "Resolution, Moral of the Story, and Reading Test",
+        "title": "Punto de partida",
+        "subtitle": "Activación",
         "color": "teal"
       },
       {
         "id": "b2",
         "number": "02",
-        "title": "Exploración",
-        "subtitle": "Gancho y Recorrido Guiado",
+        "title": "Motivación y Explicación",
+        "subtitle": "14 láminas",
         "color": "orange"
       },
       {
         "id": "b3",
         "number": "03",
-        "title": "Práctica",
-        "subtitle": "Aplicación en situaciones reales",
+        "title": "Práctica guiada",
+        "subtitle": "Transferencia",
         "color": "yellow"
       },
       {
         "id": "b4",
         "number": "04",
-        "title": "Evaluación",
-        "subtitle": "Miniquiz formativo y síntesis",
-        "color": "teal"
+        "title": "Miniquiz",
+        "subtitle": "Evaluación y cierre",
+        "color": "navy"
       }
     ],
-    "keyQuestions": [
-      {
-        "label": "Exploración inicial",
-        "sub": "Resolution, Moral of the Story, and Reading Test"
-      },
-      {
-        "label": "Idea clave",
-        "sub": "In Resolution, Moral of the Story, and Reading Test, we comm"
-      },
-      {
-        "label": "Práctica y aplicación",
-        "sub": "Resolución guiada paso a paso"
-      }
-    ],
-    "dileIntro": "Hoy comenzaremos la clase 6 de Inglés: \"Resolution, Moral of the Story, and Reading Test\".",
-    "dileObjective": "Reading comprehension synthesis, story mapping, and official test"
+    "dileIntro": "Hoy avanzaremos en una nueva clase interactiva.",
+    "dileObjective": "Una situación"
   },
   "situation": {
-    "dilePrompt": "Hoy en nuestra sesión de English exploramos 'Resolution, Moral of the Story, and Reading Test'. El foco comunicativo del currículum es 'ideas generales'. El apoderado guía en español mientras que el estudiante lee y escucha en inglés. Lee la siguiente frase en voz alta sobre Reading comprehension synthesis, story mapping, and official test:",
-    "expectedAnswer": "Identificar en español o inglés los personajes (characters), la acción o el propósito comunicativo vinculado con ideas generales.",
-    "socraticHint": "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general.",
-    "emotionalTip": "Fomenta la confianza comunicativa: 'Listen, read the clues, and focus on the general meaning before translating every single word'.",
+    "dilePrompt": "What do you expect from the title? Give a prediction, then check it by reading.",
+    "expectedAnswer": "Both invite Sara to learning activities. They differ in the activity, time and place.",
+    "socraticHint": "Fíjate en los detalles destacados.",
+    "emotionalTip": "Acompaña con calma.",
     "options": [
       {
-        "label": "Identificó a los personajes, la acción o el propósito en inglés vinculado con ideas generales",
+        "label": "Both invite Sara to learning activities. They differ in the activity, time and place.",
         "kind": "correct",
-        "feedbackText": "¡Very good! Supo reconocer los elementos clave de la oración en inglés."
+        "feedbackText": "¡Muy bien observado!"
       },
       {
-        "label": "Tuvo dudas con el vocabulario o no identificó la acción ni los personajes",
+        "label": "Requiere apoyo adicional",
         "kind": "needs_support",
-        "feedbackText": "Busquen juntos palabras transparentes y guíalo para identificar el verbo principal de la acción."
+        "feedbackText": "Revisa nuevamente la situación inicial."
+      },
+      {
+        "label": "No sabe qué responder",
+        "kind": "no_answer",
+        "feedbackText": "Leamos juntos para descubrir la pista."
       }
     ]
   },
   "reference": {
-    "dilePrompt": "\"What is the main communicative situation described in this English sentence? (¿Cuál es la situación principal descrita en la oración?)\"",
-    "question": "\"What is the main communicative situation described in this English sentence? (¿Cuál es la situación principal descrita en la oración?)\"",
-    "expectedAnswer": "Identificar en español o inglés los personajes (characters), la acción o el propósito comunicativo vinculado con ideas generales.",
-    "socraticHint": "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general.",
-    "feedbackSuccess": "Muy bien. Observaste el detalle central con precisión.",
-    "feedbackSupport": "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general."
+    "dilePrompt": "What is one similarity and one difference?",
+    "question": "¿Qué información entrega el punto de partida?",
+    "expectedAnswer": "Both invite Sara to learning activities. They differ in the activity, time and place.",
+    "socraticHint": "Localiza las palabras clave.",
+    "feedbackSuccess": "¡Excelente fundamentación!",
+    "feedbackSupport": "Revisa la lectura para confirmar los datos."
   },
   "hook": {
-    "title": "Video Motivacional: El Desafío de Resolution, Moral of the Story, and Reading Test",
-    "titulo": "Video Motivacional: El Desafío de Resolution, Moral of the Story, and Reading Test",
+    "title": "Motivación",
+    "titulo": "Motivación",
     "focusPoints": [],
-    "dileIntro": "Antes de ver el video, observa con atención lo que descubren los dos exploradores y qué pregunta queda planteada.",
-    "hazInstruction": "Observa y reflexiona con las escenas del desafío visual.",
+    "dileIntro": "What do you expect from the title? Give a prediction, then check it by reading.",
+    "hazInstruction": "Observa y reflexiona con las escenas del video.",
     "videoSrc": "",
-    "videoUrl": "",
-    "posterSrc": "",
-    "dileAfterVideo": "Muy buena observación. Ahora conversaremos sobre lo que descubrieron en la expedición.",
-    "fullPrompt": "Actúa como Diseñador Instruccional Senior y Creador de Presentaciones en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de GANCHO MOTIVACIONAL (Paso 2) para:\n- Asignatura: Inglés\n- Objetivo de Aprendizaje: OA 9\n- Clase: 6 (\"Resolution, Moral of the Story, and Reading Test\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS (PLAN MAESTRO ACTUALIZACIÓN 29-09-2026):\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Exactamente 7 diapositivas (slide1 a slide7).\n3. ESTILO ARTÍSTICO DE LAS IMÁGENES: Anime Moderno (Modern Anime Style, cinematográfico, iluminación dinámica, fondos limpios con espacio negativo real).\n4. PROTAGONISTAS FIJOS: Dúo co-protagónico de 13 años (la joven y el joven estudiantes-exploradores chilenos). ACTÚAN JUNTOS en cada escena, colaborando y resolviendo el desafío en equipo.\n5. REGLA VISUAL ANTI-MÁSCARAS Y FONDOS LIMPIOS: Imágenes Full-Bleed con espacio negativo para texto y vectores. Queda prohibido usar placas oscuras que tapen las caras de los personajes o la mitad de la lámina. PROHIBIDO dibujar números, letras o fórmulas dentro de la ilustración generada por IA.\n6. PRESUPUESTO TEMPORAL Y GUION CONTINUO (GANCHO - 60 SEGUNDOS / 130 PALABRAS TOTALES): Cada diapositiva DEBE incluir únicamente el texto de narración oral continua (8+8+8+9+9+9+9 segundos, totalizando exactamente ~130 palabras para 60 segundos de locución a 130 palabras por minuto en Google Vids/TTS), sin marcas técnicas, encabezados ni duraciones, listo para ser leído por voz en off.\n7. PROTOCOLO DE COMPROBACIÓN ACÚSTICA OBLIGATORIA (GOOGLE VIDS): Medir la duración real del archivo exportado con cronómetro o analizador de audio. El conteo de palabras no garantiza por sí solo 60 segundos exactos. Si la duración no es exacta, ajustar narración, pausas o ritmo, volver a exportar y registrar la duración comprobada oficial.\n8. ESTRUCTURA HEXAPARTITA POR DIAPOSITIVA:\n   • Toda diapositiva se define con: 1) Propósito, 2) Título en Pantalla (64 pt), 3) Subtítulo en Pantalla (36 pt), 4) Prompt de imagen IA sin texto, 5) Capa vectorial para PowerPoint, y 6) Notas al orador continuas.\n   • COLOR DE TEXTO: Un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.\n   • LOCUCIÓN COHERENTE: Narra con precisión lo que se observa en la imagen y lo que se sintetiza en la pantalla.\n\nDETALLE DE LAS 7 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Apertura y Contexto) ---\n1. Propósito Didáctico: Apertura y Contexto\n2. Título en Pantalla (64 pt): Misión 6: Resolution, Moral of the Story, and Reading Test\n3. Subtítulo en Pantalla (36 pt): Exploración inicial en Inglés\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Resolution, Moral of the Story, and Reading Test (Inglés). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Communicative context: Story scenario of Resolution, Moral of the Story, and Reading Test\n6. Notas al Orador (Locución Continua Google Vids): \"Comienza una nueva expedición de aprendizaje en Inglés. Nuestros dos exploradores analizan el desafío de Resolution, Moral of the Story, and Reading Test para descubrir sus secretos.\"\n\n--- DIAPOSITIVA 2 (Presentación del Escenario) ---\n1. Propósito Didáctico: Presentación del Escenario\n2. Título en Pantalla (64 pt): Punto de partida\n3. Subtítulo en Pantalla (36 pt): Reading comprehension synthesis, story mapping, and official test\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Reading comprehension synthesis, story mapping, and official test. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Reading comprehension synthesis, story mapping, and official test\n6. Notas al Orador (Locución Continua Google Vids): \"Al observar los datos sobre Reading comprehension synthesis, story mapping, and official test, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor.\"\n\n--- DIAPOSITIVA 3 (Aparición del Conflicto / Misterio) ---\n1. Propósito Didáctico: Aparición del Conflicto / Misterio\n2. Título en Pantalla (64 pt): El enigma disciplinar\n3. Subtítulo en Pantalla (36 pt): Desafío en Resolution, Moral of the Story, and Reading Test\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Reading comprehension synthesis, story mapping, and official test\n6. Notas al Orador (Locución Continua Google Vids): \"Surge un reto concreto sobre Resolution, Moral of the Story, and Reading Test: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso.\"\n\n--- DIAPOSITIVA 4 (Exploración de Pistas) ---\n1. Propósito Didáctico: Exploración de Pistas\n2. Título en Pantalla (64 pt): Análisis de evidencias\n3. Subtítulo en Pantalla (36 pt): Reading comprehension synthesis, story mapping, and official test\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Reading comprehension synthesis, story mapping, and official test\n6. Notas al Orador (Locución Continua Google Vids): \"Ambos comparan las pistas disponibles sobre Reading comprehension synthesis, story mapping, and official test. Cada dato confirma cómo interactúan los elementos clave de la situación.\"\n\n--- DIAPOSITIVA 5 (El Momento Crítico) ---\n1. Propósito Didáctico: El Momento Crítico\n2. Título en Pantalla (64 pt): Criterio de decisión\n3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Reading comprehension synthesis, story mapping, and official test\n6. Notas al Orador (Locución Continua Google Vids): \"Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Resolution, Moral of the Story, and Reading Test con total precisión metodológica.\"\n\n--- DIAPOSITIVA 6 (La Antesala de la Pregunta) ---\n1. Propósito Didáctico: La Antesala de la Pregunta\n2. Título en Pantalla (64 pt): El dilema central\n3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Resolution, Moral of the Story, and Reading Test?\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Language puzzle: Identifying narrative clues in English\n6. Notas al Orador (Locución Continua Google Vids): \"Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje.\"\n\n--- DIAPOSITIVA 7 (La Pregunta Detonante) ---\n1. Propósito Didáctico: La Pregunta Detonante\n2. Título en Pantalla (64 pt): Pregunta detonante\n3. Subtítulo en Pantalla (36 pt): Regla y método de Resolution, Moral of the Story, and Reading Test\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Trigger question: How do we express Resolution, Moral of the Story, and Reading Test accurately?\n6. Notas al Orador (Locución Continua Google Vids): \"Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!\"\n\n",
+    "dileAfterVideo": "¿Qué observaste en esta situación inicial?",
     "slides": [
       {
         "slideNumber": 1,
-        "tituloMomento": "Apertura y Contexto",
-        "didacticPurpose": "Apertura y Contexto",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Resolution, Moral of the Story, and Reading Test (Inglés). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.",
-        "overlayTitle": "Misión 6: Resolution, Moral of the Story, and Reading Test",
-        "overlaySubtitle": "Exploración inicial en Inglés",
-        "overlayText": "Misión 6: Resolution, Moral of the Story, and Reading Test",
-        "vectorialOverlayPptx": "Communicative context: Story scenario of Resolution, Moral of the Story, and Reading Test",
-        "mathOverlayPptx": "Communicative context: Story scenario of Resolution, Moral of the Story, and Reading Test",
-        "speakerNotes": "Comienza una nueva expedición de aprendizaje en Inglés. Nuestros dos exploradores analizan el desafío de Resolution, Moral of the Story, and Reading Test para descubrir sus secretos.",
-        "palabrasAprox": 21,
-        "duracionSeg": 9
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Una situación",
+        "visualPrompt": "",
+        "overlayText": "Una situación",
+        "overlayTitle": "Una situación",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Una situación",
+        "speakerNotes": "Today we will explore comparing messages and showing understanding. Use the reading to check ideas without inventing details.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 2,
-        "tituloMomento": "Presentación del Escenario",
-        "didacticPurpose": "Presentación del Escenario",
-        "visualPrompt": "Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Reading comprehension synthesis, story mapping, and official test. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.",
-        "overlayTitle": "Punto de partida",
-        "overlaySubtitle": "Reading comprehension synthesis, story mapping, and official test",
-        "overlayText": "Punto de partida: Reading comprehension synthesis, story mapping, and official test",
-        "vectorialOverlayPptx": "Vocabulary tags: Key expressions and setting of Reading comprehension synthesis, story mapping, and official test",
-        "mathOverlayPptx": "Vocabulary tags: Key expressions and setting of Reading comprehension synthesis, story mapping, and official test",
-        "speakerNotes": "Al observar los datos sobre Reading comprehension synthesis, story mapping, and official test, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor.",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "La pregunta",
+        "visualPrompt": "",
+        "overlayText": "La pregunta",
+        "overlayTitle": "La pregunta",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "La pregunta",
+        "speakerNotes": "A: museum visit, Friday morning, school gate at nine. B: reading club, Friday afternoon, library at four. Keep the message in view and notice what information it actually gives.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 3,
-        "tituloMomento": "Aparición del Conflicto / Misterio",
-        "didacticPurpose": "Aparición del Conflicto / Misterio",
-        "visualPrompt": "Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.",
-        "overlayTitle": "El enigma disciplinar",
-        "overlaySubtitle": "Desafío en Resolution, Moral of the Story, and Reading Test",
-        "overlayText": "El enigma disciplinar: Resolution, Moral of the Story, and Reading Test",
-        "vectorialOverlayPptx": "Vocabulary tags: Key expressions and setting of Reading comprehension synthesis, story mapping, and official test",
-        "mathOverlayPptx": "Vocabulary tags: Key expressions and setting of Reading comprehension synthesis, story mapping, and official test",
-        "speakerNotes": "Surge un reto concreto sobre Resolution, Moral of the Story, and Reading Test: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Primera idea",
+        "visualPrompt": "",
+        "overlayText": "Primera idea",
+        "overlayTitle": "Primera idea",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Primera idea",
+        "speakerNotes": "What is one similarity and one difference? You can offer a first idea; we will check its support afterwards.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 4,
-        "tituloMomento": "Exploración de Pistas",
-        "didacticPurpose": "Exploración de Pistas",
-        "visualPrompt": "Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.",
-        "overlayTitle": "Análisis de evidencias",
-        "overlaySubtitle": "Reading comprehension synthesis, story mapping, and official test",
-        "overlayText": "Análisis de evidencias: Reading comprehension synthesis, story mapping, and official test",
-        "vectorialOverlayPptx": "Vocabulary tags: Key expressions and setting of Reading comprehension synthesis, story mapping, and official test",
-        "mathOverlayPptx": "Vocabulary tags: Key expressions and setting of Reading comprehension synthesis, story mapping, and official test",
-        "speakerNotes": "Ambos comparan las pistas disponibles sobre Reading comprehension synthesis, story mapping, and official test. Cada dato confirma cómo interactúan los elementos clave de la situación.",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Busca pistas",
+        "visualPrompt": "",
+        "overlayText": "Busca pistas",
+        "overlayTitle": "Busca pistas",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Busca pistas",
+        "speakerNotes": "Look closely at the situation. Which detail would help you answer? A useful clue should answer the question we are trying to understand.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 5,
-        "tituloMomento": "El Momento Crítico",
-        "didacticPurpose": "El Momento Crítico",
-        "visualPrompt": "Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.",
-        "overlayTitle": "Criterio de decisión",
-        "overlaySubtitle": "Aplicar el método riguroso",
-        "overlayText": "Criterio de decisión riguroso",
-        "vectorialOverlayPptx": "Vocabulary tags: Key expressions and setting of Reading comprehension synthesis, story mapping, and official test",
-        "mathOverlayPptx": "Vocabulary tags: Key expressions and setting of Reading comprehension synthesis, story mapping, and official test",
-        "speakerNotes": "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Resolution, Moral of the Story, and Reading Test con total precisión metodológica.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Compara posibilidades",
+        "visualPrompt": "",
+        "overlayText": "Compara posibilidades",
+        "overlayTitle": "Compara posibilidades",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Compara posibilidades",
+        "speakerNotes": "An answer needs information from the resource. We will look for evidence. Two answers may sound possible, so their support needs careful checking.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 6,
-        "tituloMomento": "La Antesala de la Pregunta",
-        "didacticPurpose": "La Antesala de la Pregunta",
-        "visualPrompt": "Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.",
-        "overlayTitle": "El dilema central",
-        "overlaySubtitle": "¿Cómo resolver Resolution, Moral of the Story, and Reading Test?",
-        "overlayText": "¿Cómo resolver Resolution, Moral of the Story, and Reading Test?",
-        "vectorialOverlayPptx": "Language puzzle: Identifying narrative clues in English",
-        "mathOverlayPptx": "Language puzzle: Identifying narrative clues in English",
-        "speakerNotes": "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Una estrategia",
+        "visualPrompt": "",
+        "overlayText": "Una estrategia",
+        "overlayTitle": "Una estrategia",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Una estrategia",
+        "speakerNotes": "Read the resource and compare its details before choosing an explanation. The class will show a way to explain that connection step by step.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 7,
-        "tituloMomento": "La Pregunta Detonante",
-        "didacticPurpose": "La Pregunta Detonante",
-        "visualPrompt": "Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.",
-        "overlayTitle": "Pregunta detonante",
-        "overlaySubtitle": "Regla y método de Resolution, Moral of the Story, and Reading Test",
-        "overlayText": "Meta: Dominio de Resolution, Moral of the Story, and Reading Test",
-        "vectorialOverlayPptx": "Trigger question: How do we express Resolution, Moral of the Story, and Reading Test accurately?",
-        "mathOverlayPptx": "Trigger question: How do we express Resolution, Moral of the Story, and Reading Test accurately?",
-        "speakerNotes": "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Puente a la lectura",
+        "visualPrompt": "",
+        "overlayText": "Puente a la lectura",
+        "overlayTitle": "Puente a la lectura",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Puente a la lectura",
+        "speakerNotes": "Now we will discover how the evidence helps us understand this situation. Then you will apply the strategy to another short resource.",
+        "duracionSeg": 8
       }
     ]
   },
   "preQuestions": [
     {
-      "context": "Key Vocabulary & Context Clues (ideas generales)",
-      "question": "Which English words in the text give you clear clues about the communicative goal and the action?",
-      "expected": "Identify key English nouns, action verbs or connectors related to the topic.",
-      "success": "Well done! You successfully identified the key English vocabulary from the context.",
-      "support": "Look for transparent words and descriptive adjectives: what words tell you what is happening?",
-      "reveal": "Context clues and key vocabulary help us understand the main message without needing an immediate dictionary translation.",
-      "studentReveal": "Key English words identified from the context of the communicative text."
+      "context": "A: museum visit, Friday morning, school gate at nine. B: reading club, Friday afternoon, library at four.",
+      "question": "What is one similarity and one difference?",
+      "expected": "Both invite Sara to learning activities. They differ in the activity, time and place.",
+      "success": "Each message names its own learning activity and its meeting details.",
+      "support": "Si no localiza información, releer esta pista del contexto: «A: museum visit, Friday morning, school gate at nine. B: reading club, Friday afternoon, library at four.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta.",
+      "reveal": "Both invite Sara to learning activities. They differ in the activity, time and place. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento.",
+      "studentReveal": "Both invite Sara to learning activities. They differ in the activity, time and place."
     },
     {
-      "context": "Grammar & Communicative Flow",
-      "question": "Notice the verb tense or structure used in the sentences. How does the grammatical form tell us when or how the action happens?",
-      "expected": "Recognize the verb form or structure indicating time, function, or modality.",
-      "success": "Excellent! You connected the grammatical structure with its real communicative meaning.",
-      "support": "Look at the ending of the verb or auxiliary words: does it talk about routine, past events or future plans?",
-      "reveal": "Grammatical structures and verb tenses provide the timeline and conditions for natural English communication.",
-      "studentReveal": "The verb tense and sentence structure that clarify the communicative intention."
+      "context": "A asks for a notebook. B asks for a short story.",
+      "question": "Which material belongs to each activity, and what opinion can you support?",
+      "expected": "The notebook belongs to the museum visit, and the short story to the club. I agree that a notebook can help because A asks students to record observations.",
+      "success": "Message A connects the notebook with writing observations.",
+      "support": "Si no localiza información, releer esta pista del contexto: «A asks for a notebook. B asks for a short story.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta.",
+      "reveal": "The notebook belongs to the museum visit, and the short story to the club. I agree that a notebook can help because A asks students to record observations. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento.",
+      "studentReveal": "The notebook belongs to the museum visit, and the short story to the club. I agree that a notebook can help because A asks students to record observations."
     }
   ],
+  "conversationContext": "Diálogo guiado para profundizar en los elementos clave.",
   "formalization": {
-    "title": "Video Explicativo: Formalización de Resolution, Moral of the Story, and Reading Test",
-    "concept": "Video Explicativo: Formalización de Resolution, Moral of the Story, and Reading Test",
-    "dileIntro": "Ahora veremos el video explicativo de Resolution, Moral of the Story, and Reading Test. Fíjate en la pronunciación y en cómo se utiliza 'ideas generales' en una conversación real.",
-    "hazInstruction": "Revisemos la explicación formal y la idea clave.",
-    "ideaClave": "In Resolution, Moral of the Story, and Reading Test, we communicate effectively by using 'ideas generales' in context, paying attention to verb tenses and avoiding word-for-word translation.",
-    "videoSrc": "",
-    "videoUrl": "",
+    "title": "Explicación",
+    "concept": "Una situación",
+    "summary": "Consolidación de las ideas clave.",
+    "ideaClave": "Una situación",
+    "dileIntro": "Ahora consolidaremos los aprendizajes esenciales.",
+    "hazInstruction": "Registra en tu cuaderno el concepto principal.",
     "graphicPoster": "",
-    "fullPrompt": "Actúa como Diseñador Pedagógico y Especialista en Didáctica Disciplinar en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de VIDEO EXPLICATIVO / FORMALIZACIÓN (Paso 4) para:\n- Asignatura: Inglés\n- Objetivo de Aprendizaje: OA 9\n- Clase: 6 (\"Resolution, Moral of the Story, and Reading Test\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS (PLAN MAESTRO ACTUALIZACIÓN 29-09-2026):\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Exactamente 7 diapositivas (slide1 a slide7) siguiendo el principio de un cambio visual por cada movimiento mental.\n3. DIAPOSITIVA 1 OBLIGATORIA CON OBJETIVO: La primera diapositiva declara como subtítulo (36 pt) el objetivo específico de la lección, sin repetir rótulos redundantes 'OA 01'.\n4. PROTAGONISTAS FIJOS EN EL 100% DE LAS ESCENAS: Los mismos 2 jóvenes de 13 años (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.\n5. REGLA VISUAL ANTI-MÁSCARAS Y FONDOS LIMPIOS: Imagen limpia con espacio negativo real. Prohibido que la IA intente dibujar números, rectas o letras. Todo elemento disciplinar se ensambla vectorialmente en PowerPoint.\n6. PRESUPUESTO TEMPORAL Y GUION PEDAGÓGICO (LECCIÓN EXPLICATIVA - 90 SEGUNDOS / 195 PALABRAS TOTALES): Guion explicativo continuo (12+13+13+13+13+13+13 segundos, totalizando exactamente ~195 palabras para 90 segundos a 130 palabras por minuto en Google Vids/TTS), sin marcas técnicas. Diapositiva 1 formula el objetivo; diapositivas 2 a 7 desarrollan el contenido sin repetirlo.\n7. PROTOCOLO DE COMPROBACIÓN ACÚSTICA OBLIGATORIA (GOOGLE VIDS): Medir la duración real del archivo exportado con cronómetro o analizador de audio. El conteo de palabras no garantiza por sí solo 90 segundos exactos. Si la duración no es exacta, ajustar narración, pausas o ritmo, volver a exportar y registrar la duración comprobada oficial.\n8. JERARQUÍA TIPOGRÁFICA Y COLOR DE TEXTO: Título en Pantalla (64 pt); Subtítulo en Pantalla (36 pt). Texto brillante de un solo color de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, contornos, resplandores ni recuadros flotantes o fondos detrás del texto. Especificar color en cada prompt.\n9. CIERRE SIN RETO EN EL VIDEO: La explicación concluye con la regla de oro y da el pase directo a la práctica en la plataforma web, sin proponer desafíos finales ni tareas en el cuaderno durante el video.\n10. ESTRUCTURA HEXAPARTITA POR DIAPOSITIVA (Propósito, Título 64 pt, Subtítulo 36 pt, Prompt Imagen IA, Capa Vectorial PPTX, Notas al Orador).\n\nDETALLE DE LAS 7 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Objetivo de la Lección) ---\n1. Propósito Didáctico: Objetivo de la Lección\n2. Título en Pantalla (64 pt): Objetivo de la lección\n3. Subtítulo en Pantalla (36 pt): Master Resolution, Moral of the Story, and Reading Test: Reading comprehension synthesis, story mapping, and official test\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Reading comprehension synthesis, story mapping, and official test. High clarity, negative space for text. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Formal heading: OA 9 · Resolution, Moral of the Story, and Reading Test\n6. Notas al Orador (Locución Continua Google Vids): \"Today our goal is to learn how to master reading comprehension synthesis, story mapping, and official test, applying clear disciplinary steps with total confidence.\"\n\n--- DIAPOSITIVA 2 (Definición del Concepto Central) ---\n1. Propósito Didáctico: Definición del Concepto Central\n2. Título en Pantalla (64 pt): Concepto fundamental\n3. Subtítulo en Pantalla (36 pt): Reading comprehension synthesis, story mapping, and official test\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Sentence formula: Structure of Reading comprehension synthesis, story mapping, and official test\n6. Notas al Orador (Locución Continua Google Vids): \"To understand Resolution, Moral of the Story, and Reading Test, we establish a clean conceptual foundation connecting the core definition with verifiable concrete evidence.\"\n\n--- DIAPOSITIVA 3 (Demostración Modelada) ---\n1. Propósito Didáctico: Demostración Modelada\n2. Título en Pantalla (64 pt): Modelamiento paso a paso\n3. Subtítulo en Pantalla (36 pt): Procedimiento de Resolution, Moral of the Story, and Reading Test\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Color-coded grammar blocks with modeled example\n6. Notas al Orador (Locución Continua Google Vids): \"Observe how the procedure unfolds in this guided demonstration: every single change responds to an explicit disciplinary rule.\"\n\n--- DIAPOSITIVA 4 (Prevención del Error Frecuente) ---\n1. Propósito Didáctico: Prevención del Error Frecuente\n2. Título en Pantalla (64 pt): Atención: Error habitual\n3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Error contrast: common grammar and punctuation pitfall\n6. Notas al Orador (Locución Continua Google Vids): \"A common pitfall happens when overlooking order or basic conventions. We always check each intermediate step before concluding.\"\n\n--- DIAPOSITIVA 5 (Comprobación del Resultado) ---\n1. Propósito Didáctico: Comprobación del Resultado\n2. Título en Pantalla (64 pt): Validación del resultado\n3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Meaning validation: verifying sentence cohesion\n6. Notas al Orador (Locución Continua Google Vids): \"By contrasting the result with our initial scenario, we confirm that our solution is consistent, rigorous, and fully answers the question.\"\n\n--- DIAPOSITIVA 6 (Estrategia Mnemotécnica) ---\n1. Propósito Didáctico: Estrategia Mnemotécnica\n2. Título en Pantalla (64 pt): Estrategia de pensamiento\n3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Memory strategy: Connector + Subject + Verb + Context\n6. Notas al Orador (Locución Continua Google Vids): \"Always remember the three-step thinking strategy: identify the key data, apply the formal rule in order, and verify the final result.\"\n\n--- DIAPOSITIVA 7 (Síntesis y Regla de Oro) ---\n1. Propósito Didáctico: Síntesis y Regla de Oro\n2. Título en Pantalla (64 pt): Regla de Oro: Resolution, Moral of the Story, and Reading Test\n3. Subtítulo en Pantalla (36 pt): Método disciplinar validado\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Summary infography: Golden rule of Resolution, Moral of the Story, and Reading Test\n6. Notas al Orador (Locución Continua Google Vids): \"Now that you understand the golden rule and the procedure of Resolution, Moral of the Story, and Reading Test, let us practice and prove our skills in the interactive platform!\"\n\n",
+    "videoSrc": "",
     "slides": [
       {
-        "slideNumber": 1,
-        "tituloMomento": "Objetivo de la Lección",
-        "didacticPurpose": "Objetivo de la Lección",
-        "visualPrompt": "Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Reading comprehension synthesis, story mapping, and official test. High clarity, negative space for text. No text drawn by AI.",
-        "overlayTitle": "Objetivo de la lección",
-        "overlaySubtitle": "Master Resolution, Moral of the Story, and Reading Test: Reading comprehension synthesis, story mapping, and official test",
-        "overlayText": "Concepto clave: Resolution, Moral of the Story, and Reading Test",
-        "vectorialOverlayPptx": "Formal heading: OA 9 · Resolution, Moral of the Story, and Reading Test",
-        "mathOverlayPptx": "Formal heading: OA 9 · Resolution, Moral of the Story, and Reading Test",
-        "speakerNotes": "Today our goal is to learn how to master reading comprehension synthesis, story mapping, and official test, applying clear disciplinary steps with total confidence.",
-        "palabrasAprox": 25,
-        "duracionSeg": 12
+        "slideNumber": 8,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Una herramienta",
+        "visualPrompt": "",
+        "overlayText": "Una herramienta",
+        "overlayTitle": "Una herramienta",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Una herramienta",
+        "speakerNotes": "Message A describes a museum visit. The school gate is the meeting point at nine, not the museum's address.",
+        "duracionSeg": 8
       },
       {
-        "slideNumber": 2,
-        "tituloMomento": "Definición del Concepto Central",
-        "didacticPurpose": "Definición del Concepto Central",
-        "visualPrompt": "Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.",
-        "overlayTitle": "Concepto fundamental",
-        "overlaySubtitle": "Reading comprehension synthesis, story mapping, and official test",
-        "overlayText": "Regla formal: Reading comprehension synthesis, story mapping, and official test",
-        "vectorialOverlayPptx": "Sentence formula: Structure of Reading comprehension synthesis, story mapping, and official test",
-        "mathOverlayPptx": "Sentence formula: Structure of Reading comprehension synthesis, story mapping, and official test",
-        "speakerNotes": "To understand Resolution, Moral of the Story, and Reading Test, we establish a clean conceptual foundation connecting the core definition with verifiable concrete evidence.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        "slideNumber": 9,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "El criterio",
+        "visualPrompt": "",
+        "overlayText": "El criterio",
+        "overlayTitle": "El criterio",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "El criterio",
+        "speakerNotes": "Message B describes a reading club at four in the library. Its purpose differs from the museum visit. Both messages invite Sara and include preparation details. This is a similarity supported by both texts.",
+        "duracionSeg": 8
       },
       {
-        "slideNumber": 3,
-        "tituloMomento": "Demostración Modelada",
-        "didacticPurpose": "Demostración Modelada",
-        "visualPrompt": "Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.",
-        "overlayTitle": "Modelamiento paso a paso",
-        "overlaySubtitle": "Procedimiento de Resolution, Moral of the Story, and Reading Test",
-        "overlayText": "Modelamiento paso a paso de Resolution, Moral of the Story, and Reading Test",
-        "vectorialOverlayPptx": "Color-coded grammar blocks with modeled example",
-        "mathOverlayPptx": "Color-coded grammar blocks with modeled example",
-        "speakerNotes": "Observe how the procedure unfolds in this guided demonstration: every single change responds to an explicit disciplinary rule.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        "slideNumber": 10,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Relación entre pistas",
+        "visualPrompt": "",
+        "overlayText": "Relación entre pistas",
+        "overlayTitle": "Relación entre pistas",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Relación entre pistas",
+        "speakerNotes": "The museum meeting is at nine with a notebook. The club is at four with a short story. A comparison becomes clearer when it includes information from both texts and identifies where each detail comes from.",
+        "duracionSeg": 8
       },
       {
-        "slideNumber": 4,
-        "tituloMomento": "Prevención del Error Frecuente",
-        "didacticPurpose": "Prevención del Error Frecuente",
-        "visualPrompt": "Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.",
-        "overlayTitle": "Atención: Error habitual",
-        "overlaySubtitle": "Confusión común que debemos evitar",
-        "overlayText": "Atención: Error habitual a evitar",
-        "vectorialOverlayPptx": "Error contrast: common grammar and punctuation pitfall",
-        "mathOverlayPptx": "Error contrast: common grammar and punctuation pitfall",
-        "speakerNotes": "A common pitfall happens when overlooking order or basic conventions. We always check each intermediate step before concluding.",
-        "palabrasAprox": 27,
-        "duracionSeg": 13
+        "slideNumber": 11,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Modelo explicado",
+        "visualPrompt": "",
+        "overlayText": "Modelo explicado",
+        "overlayTitle": "Modelo explicado",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Modelo explicado",
+        "speakerNotes": "A: museum visit, Friday morning, school gate at nine. B: reading club, Friday afternoon, library at four. What is one similarity and one difference? Both invite Sara to learning activities. They differ in the activity, time and place. Each message names its own learning activity and its meeting details.",
+        "duracionSeg": 8
       },
       {
-        "slideNumber": 5,
-        "tituloMomento": "Comprobación del Resultado",
-        "didacticPurpose": "Comprobación del Resultado",
-        "visualPrompt": "Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.",
-        "overlayTitle": "Validación del resultado",
-        "overlaySubtitle": "Comprobar que la respuesta es consistente",
-        "overlayText": "Comprobación y validación del resultado",
-        "vectorialOverlayPptx": "Meaning validation: verifying sentence cohesion",
-        "mathOverlayPptx": "Meaning validation: verifying sentence cohesion",
-        "speakerNotes": "By contrasting the result with our initial scenario, we confirm that our solution is consistent, rigorous, and fully answers the question.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        "slideNumber": 12,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Comprobación",
+        "visualPrompt": "",
+        "overlayText": "Comprobación",
+        "overlayTitle": "Comprobación",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Comprobación",
+        "speakerNotes": "A asks for a notebook. B asks for a short story. Which material belongs to each activity, and what opinion can you support? The notebook belongs to the museum visit, and the short story to the club. I agree that a notebook can help because A asks students to record observations. Message A connects the notebook with writing observations.",
+        "duracionSeg": 8
       },
       {
-        "slideNumber": 6,
-        "tituloMomento": "Estrategia Mnemotécnica",
-        "didacticPurpose": "Estrategia Mnemotécnica",
-        "visualPrompt": "Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.",
-        "overlayTitle": "Estrategia de pensamiento",
-        "overlaySubtitle": "1. Identificar · 2. Aplicar · 3. Comprobar",
-        "overlayText": "Estrategia mental: Identificar, Aplicar y Verificar",
-        "vectorialOverlayPptx": "Memory strategy: Connector + Subject + Verb + Context",
-        "mathOverlayPptx": "Memory strategy: Connector + Subject + Verb + Context",
-        "speakerNotes": "Always remember the three-step thinking strategy: identify the key data, apply the formal rule in order, and verify the final result.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        "slideNumber": 13,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Error y corrección",
+        "visualPrompt": "",
+        "overlayText": "Error y corrección",
+        "overlayTitle": "Error y corrección",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Error y corrección",
+        "speakerNotes": "Avoid this mistake: Moving a detail from one message to the other changes the meaning of the reading.",
+        "duracionSeg": 8
       },
       {
-        "slideNumber": 7,
-        "tituloMomento": "Síntesis y Regla de Oro",
-        "didacticPurpose": "Síntesis y Regla de Oro",
-        "visualPrompt": "Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.",
-        "overlayTitle": "Regla de Oro: Resolution, Moral of the Story, and Reading Test",
-        "overlaySubtitle": "Método disciplinar validado",
-        "overlayText": "Síntesis: Resolution, Moral of the Story, and Reading Test",
-        "vectorialOverlayPptx": "Summary infography: Golden rule of Resolution, Moral of the Story, and Reading Test",
-        "mathOverlayPptx": "Summary infography: Golden rule of Resolution, Moral of the Story, and Reading Test",
-        "speakerNotes": "Now that you understand the golden rule and the procedure of Resolution, Moral of the Story, and Reading Test, let us practice and prove our skills in the interactive platform!",
-        "palabrasAprox": 25,
-        "duracionSeg": 12
+        "slideNumber": 14,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Síntesis y práctica",
+        "visualPrompt": "",
+        "overlayText": "Síntesis y práctica",
+        "overlayTitle": "Síntesis y práctica",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Síntesis y práctica",
+        "speakerNotes": "A comparison needs evidence from both texts. Read, locate evidence, explain and check. Continue with the interactive practice.",
+        "duracionSeg": 8
       }
     ]
   },
   "postQuestions": [
     {
-      "context": "Key Vocabulary & Context Clues (ideas generales)",
-      "question": "Which English words in the text give you clear clues about the communicative goal and the action?",
-      "expected": "Identify key English nouns, action verbs or connectors related to the topic.",
-      "success": "Well done! You successfully identified the key English vocabulary from the context.",
-      "support": "Look for transparent words and descriptive adjectives: what words tell you what is happening?",
-      "reveal": "Context clues and key vocabulary help us understand the main message without needing an immediate dictionary translation.",
-      "studentReveal": "Key English words identified from the context of the communicative text."
-    },
-    {
-      "context": "Grammar & Communicative Flow",
-      "question": "Notice the verb tense or structure used in the sentences. How does the grammatical form tell us when or how the action happens?",
-      "expected": "Recognize the verb form or structure indicating time, function, or modality.",
-      "success": "Excellent! You connected the grammatical structure with its real communicative meaning.",
-      "support": "Look at the ending of the verb or auxiliary words: does it talk about routine, past events or future plans?",
-      "reveal": "Grammatical structures and verb tenses provide the timeline and conditions for natural English communication.",
-      "studentReveal": "The verb tense and sentence structure that clarify the communicative intention."
+      "context": "Comprobación 1",
+      "question": "Which material belongs to each activity, and what opinion can you support?",
+      "expected": "The notebook belongs to the museum visit, and the short story to the club. I agree that a notebook can help because A asks students to record observations.",
+      "success": "Respuesta precisa y fundamentada",
+      "support": "Revisa el concepto clave expuesto",
+      "reveal": "The notebook belongs to the museum visit, and the short story to the club. I agree that a notebook can help because A asks students to record observations.",
+      "studentReveal": "The notebook belongs to the museum visit, and the short story to the club. I agree that a notebook can help because A asks students to record observations."
     }
   ],
   "practice": [
     {
-      "context": "Practice 1 in Notebook: Vocabulary & Model Sentences",
-      "question": "Open your English notebook. Write as title: 'Resolution, Moral of the Story, and Reading Test'. Copy the key vocabulary box, write 2 original sentences using 'ideas generales', and translate their meaning into Spanish.",
-      "expected": "Accurate English sentences in the notebook with correct spelling, grammar agreement, and Spanish translation.",
-      "success": "Great notebook work! Your English sentences are well structured and meaningful.",
-      "support": "Check the slide model: Subject + Verb + Complement. Follow that pattern to write your sentences.",
-      "reveal": "Writing model sentences consolidates vocabulary and internalizes the English syntactic order.",
-      "studentReveal": "Original English sentences written and checked in the notebook."
+      "context": "A: museum visit, Friday morning, school gate at nine. B: reading club, Friday afternoon, library at four.",
+      "question": "What is one similarity and one difference? Write an answer and identify its support.",
+      "expected": "Both invite Sara to learning activities. They differ in the activity, time and place.",
+      "success": "Each message names its own learning activity and its meeting details.",
+      "support": "Revisa los datos del recurso",
+      "reveal": "Both invite Sara to learning activities. They differ in the activity, time and place.",
+      "studentReveal": "Both invite Sara to learning activities. They differ in the activity, time and place."
     },
     {
-      "context": "Practice 2 in Notebook: Short Dialogue or Message",
-      "question": "In your notebook, write a short 3-line dialogue or message applying today's communicative goal (Reading comprehension synthesis, story mapping, and official test). Then read it aloud with your mentor.",
-      "expected": "Short dialogue written in English and read aloud with proper pronunciation and natural intonation.",
-      "success": "Outstanding fluency! Writing and reading aloud activates both speaking and writing skills.",
-      "support": "Use simple, direct phrases: Greeting, main message or question, and friendly closing.",
-      "reveal": "Interactive dialogue practice is the cornerstone of foreign language fluency.",
-      "studentReveal": "Short English dialogue written and practiced aloud with the mentor."
+      "context": "A asks for a notebook. B asks for a short story.",
+      "question": "Which material belongs to each activity, and what opinion can you support? Write an answer and identify its support.",
+      "expected": "The notebook belongs to the museum visit, and the short story to the club. I agree that a notebook can help because A asks students to record observations.",
+      "success": "Message A connects the notebook with writing observations.",
+      "support": "Revisa los datos del recurso",
+      "reveal": "The notebook belongs to the museum visit, and the short story to the club. I agree that a notebook can help because A asks students to record observations.",
+      "studentReveal": "The notebook belongs to the museum visit, and the short story to the club. I agree that a notebook can help because A asks students to record observations."
+    },
+    {
+      "context": "New original messages. A: Hi Jo, the science group meets on Tuesday at two in the lab. Bring a notebook. We will compare leaf shapes. I think recording observations helps us compare. B: Hi Jo, the art group meets on Thursday at three in Room 5. Bring coloured pencils. We will draw plants and share ideas. I think drawing helps us notice details.",
+      "question": "Independently: give each main idea; name a similarity and a difference with a detail from each message; match day/time/place/material to A and B; give an opinion using evidence from a named message. Do not transfer a detail from one to the other.",
+      "expected": "A: science comparison, Tuesday/two/lab/notebook. B: art drawing, Thursday/three/Room 5/coloured pencils. Both invite Jo to learning activities about plants; their tasks and meeting details differ. Example: I agree with A because recording observations helps comparison. Accept equivalent positions with accurate support.",
+      "success": "Aplica el criterio de la clase de manera autónoma en un recurso nuevo",
+      "support": "Comprobar cada elemento pedido y su evidencia; aceptar formulaciones equivalentes. Si falta una relación, pedir que señale la pista y explique qué demuestra; después ofrecer el modelo y un nuevo intento. Registrar respuesta, apoyos y criterio por reforzar.",
+      "reveal": "A: science comparison, Tuesday/two/lab/notebook. B: art drawing, Thursday/three/Room 5/coloured pencils. Both invite Jo to learning activities about plants; their tasks and meeting details differ. Example: I agree with A because recording observations helps comparison. Accept equivalent positions with accurate support.",
+      "studentReveal": "A: science comparison, Tuesday/two/lab/notebook. B: art drawing, Thursday/three/Room 5/coloured pencils. Both invite Jo to learning activities about plants; their tasks and meeting details differ. Example: I agree with A because recording observations helps comparison. Accept equivalent positions with accurate support."
     }
   ],
   "mini": [
     {
-      "id": "q_1",
-      "q": "Reading Comprehension: What is the main communicative purpose of 'ideas generales' in today's English lesson?",
+      "id": "q1",
+      "q": "Which comparison is accurate?",
       "options": [
-        "To express clear ideas, actions, or descriptions in English using context clues and accurate sentence structure",
-        "To translate words completely out of context without paying attention to meaning",
-        "To memorize isolated lists of English words without applying them in real sentences"
+        "A. Both meetings are in the morning",
+        "B. Both activities happen in the museum",
+        "C. Both invite Sara, but their activities and times differ",
+        "D. Both ask for the same material"
       ],
-      "correct": "To express clear ideas, actions, or descriptions in English using context clues and accurate sentence structure",
-      "fixExplain": "Context clues and functional structures allow English learners to communicate naturally and with confidence.",
-      "concept": "Resolution, Moral of the Story, and Reading Test",
-      "explain": "Context clues and functional structures allow English learners to communicate naturally and with confidence.",
-      "dileReview": "Pídele que señale la palabra o verbo en inglés que justifica su elección."
+      "correct": "C. Both invite Sara, but their activities and times differ",
+      "fixExplain": "The messages share an invitation but give different activities and times."
     },
     {
-      "id": "q_2",
-      "q": "To avoid the common mistake of 'No reconocer vocabulario clave o estructuras gramaticales en el contexto oral.', what is the best strategy when reading an English text?",
+      "id": "q2",
+      "q": "Where and when should Sara meet for the museum visit?",
       "options": [
-        "Identify the general meaning and key cognates first, instead of trying to translate every single word",
-        "Stop reading immediately whenever you find an unfamiliar English word",
-        "Assume that English sentences must follow the exact same word order as Spanish"
+        "A. In the library at four",
+        "B. At the school gate at nine",
+        "C. At home at six",
+        "D. At the museum at four"
       ],
-      "correct": "Identify the general meaning and key cognates first, instead of trying to translate every single word",
-      "fixExplain": "Deducir el significado por contexto evita la frustración y construye fluidez en la comprensión lectora en inglés.",
-      "concept": "Resolution, Moral of the Story, and Reading Test",
-      "explain": "Deducir el significado por contexto evita la frustración y construye fluidez en la comprensión lectora en inglés.",
-      "dileReview": "Pregúntale: ¿cómo te ayudaron los cognados a entender la idea general sin usar diccionario?"
+      "correct": "B. At the school gate at nine",
+      "fixExplain": "Message A names the school gate and nine o'clock as the meeting details."
     },
     {
-      "id": "q_3",
-      "q": "Language Structure: Which English sentence demonstrates the correct grammatical pattern for 'ideas generales'?",
+      "id": "q3",
+      "q": "Which response uses evidence from Message B?",
       "options": [
-        "The student carefully read the text and wrote a complete response in the notebook",
-        "The student carefully reading the text and write without agreement yesterday",
-        "Yesterday the student will read the text in the future tense by mistake"
+        "A. I agree that listening can help because the club shares different opinions",
+        "B. I agree because the museum opens at four",
+        "C. I disagree because B asks for a notebook",
+        "D. I agree because B names a sports game"
       ],
-      "correct": "The student carefully read the text and wrote a complete response in the notebook",
-      "fixExplain": "A well-structured English sentence maintains proper subject-verb agreement and consistent tense usage.",
-      "concept": "Resolution, Moral of the Story, and Reading Test",
-      "explain": "A well-structured English sentence maintains proper subject-verb agreement and consistent tense usage.",
-      "dileReview": "Pídele que identifique el sujeto y el verbo principal de la oración correcta."
+      "correct": "A. I agree that listening can help because the club shares different opinions",
+      "fixExplain": "Message B describes listening to different opinions at the club."
     }
   ],
   "recovery": [
     {
-      "title": "English Recovery & Consolidation: Resolution, Moral of the Story, and Reading Test",
-      "explain": "When reading and writing in English, always look for the main subject and the action verb in the correct tense, using context clues to guide your comprehension of 'ideas generales'.",
-      "q": "Which sentence correctly demonstrates clear English communication for this lesson?",
-      "options": [
-        "The team explored the setting and recorded their findings in the notebook",
-        "The team explore yesterday without any past tense marker"
-      ],
-      "correct": "The team explored the setting and recorded their findings in the notebook",
-      "correctText": "Correct! The sentence uses the proper past tense marker (-ed) to express a completed action.",
-      "fixText": "Remember that in English, regular verbs in the past tense take the -ed ending to signal completed events."
+      "title": "Recuperación 1",
+      "explain": "The messages share an invitation but give different activities and times.",
+      "q": "Give one similarity and one difference from both messages.",
+      "kind": "open_response",
+      "options": [],
+      "correct": "",
+      "correctText": "Both announce club meetings; their activities, days, times, places and materials differ. State at least one specific difference. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
+      "fixText": "Buscar estas expresiones del recurso nuevo: «club»; «differ». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
+      "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
+      "resource": "New original messages for recovery. A: The reading club meets on Monday at two in the library. Bring a story. B: The music club meets on Wednesday at five in Room 2. Bring your notebook. In B, members listen to different musical ideas.",
+      "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
+    },
+    {
+      "title": "Recuperación 2",
+      "explain": "Message A names the school gate and nine o'clock as the meeting details.",
+      "q": "Where and when does the reading club meet?",
+      "kind": "open_response",
+      "options": [],
+      "correct": "",
+      "correctText": "Monday at two in the library. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
+      "fixText": "Buscar estas expresiones del recurso nuevo: «Monday»; «library». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
+      "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
+      "resource": "New original messages for recovery. A: The reading club meets on Monday at two in the library. Bring a story. B: The music club meets on Wednesday at five in Room 2. Bring your notebook. In B, members listen to different musical ideas.",
+      "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
+    },
+    {
+      "title": "Recuperación 3",
+      "explain": "Message B describes listening to different opinions at the club.",
+      "q": "Use a detail from B to support an opinion about listening.",
+      "kind": "open_response",
+      "options": [],
+      "correct": "",
+      "correctText": "For example: I agree that listening matters because B includes different musical ideas. Do not import A’s story or library into B. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
+      "fixText": "Buscar estas expresiones del recurso nuevo: «different»; «musical»; «ideas»; «story». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
+      "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
+      "resource": "New original messages for recovery. A: The reading club meets on Monday at two in the library. Bring a story. B: The music club meets on Wednesday at five in Room 2. Bring your notebook. In B, members listen to different musical ideas.",
+      "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
     }
   ],
   "summaryIdeas": [
     [
-      "1 · Concepto central",
-      "Identificamos los elementos y el punto de partida del análisis."
+      "Idea central",
+      "Una situación"
     ],
     [
-      "2 · Interpretación del contexto",
-      "Reading comprehension synthesis, story mapping, and official test"
-    ],
-    [
-      "3 · Síntesis formal",
-      "In Resolution, Moral of the Story, and Reading Test, we communicate effectively by using 'ideas generales' in context, paying attention to verb tenses and avoiding word-for-word translation."
+      "Comprensión",
+      "Aplicación del criterio formal en el cuaderno físico."
     ]
   ],
   "interactive": {
-    "type": "story_arc",
-    "title": "English Narrative Story Arc & Time Connectors",
-    "description": "Organizador gráfico secuencial para comprensión lectora."
-  },
-  "summaryText": "Hoy dominaste Reading comprehension synthesis, story mapping, and official test en inglés con práctica activa de vocabulario y escritura en tu cuaderno.",
-  "reasoning": {
-    "title": "Comparemos dos situaciones",
-    "dileIntro": "Antes de resumir, comparemos dos situaciones. No necesitas repetir una frase exacta: lo importante es que expliques la idea con tus propias palabras.",
-    "question": "Al comparar dos situaciones de Resolution, Moral of the Story, and Reading Test, ¿cómo influye el contexto en la interpretación de los datos?",
-    "expectedAnswer": "El significado o resultado depende de las condiciones del contexto y del propósito de la situación.",
-    "context1": {
-      "label": "SITUACIÓN 1",
-      "value": "Practice 1 in Notebook: Vocabulary & Model Sentences",
-      "desc": "Open your English notebook. Write as title: 'Resolution, Moral of the Story, and Reading Test'. Copy the key vocabulary box, write 2 original sentences using 'ideas generales', and translate their meaning into Spanish."
-    },
-    "context2": {
-      "label": "SITUACIÓN 2",
-      "value": "Practice 2 in Notebook: Short Dialogue or Message",
-      "desc": "In your notebook, write a short 3-line dialogue or message applying today's communicative goal (Reading comprehension synthesis, story mapping, and official test). Then read it aloud with your mentor."
-    },
-    "successFeedback": "¡Excelente razonamiento! Reconociste que el contexto orienta la interpretación de los datos.",
-    "supportFeedback": "Observa cada situación por separado y explica qué elementos las distinguen.",
-    "revealText": "Cada situación tiene un propósito particular y los datos se interpretan según las condiciones del problema."
-  },
-  "challenge": {
-    "title": "Desafío breve: Resolution, Moral of the Story, and Reading Test",
-    "question": "En Inglés, ¿qué diferencia observas entre identificar los datos y aplicar el procedimiento? Explica tu razonamiento.",
-    "expectedAnswer": "Identificar los datos determina el punto de partida; aplicar el procedimiento permite construir la respuesta.",
-    "item1": {
-      "label": "Datos iniciales",
-      "tag": "Punto de partida"
-    },
-    "item2": {
-      "label": "Procedimiento",
-      "tag": "Aplicación"
-    },
-    "successFeedback": "¡Muy bien! Distinguiste claramente los momentos del análisis.",
-    "supportFeedback": "Revisémoslo juntos: primero identificamos la información disponible y luego aplicamos el método correspondiente."
-  },
-  "strategy": {
-    "title": "Cómo analizar una situación",
-    "dileIntro": "Cuando enfrentes un problema en Inglés, puedes seguir estos tres pasos clave:",
-    "steps": [
-      {
-        "number": 1,
-        "title": "Identifica",
-        "desc": "¿Cuáles son los datos clave y cuál es la pregunta central?"
-      },
-      {
-        "number": 2,
-        "title": "Aplica",
-        "desc": "¿Qué regla o método disciplinar corresponde utilizar?"
-      },
-      {
-        "number": 3,
-        "title": "Comprueba",
-        "desc": "¿La conclusión o resultado responde con coherencia al problema?"
-      }
-    ]
+    "type": "reading_resource",
+    "title": "Reading Resource & Vocabulary in Context",
+    "description": "Text comprehension and contextual vocabulary organizer."
   },
   "closure": {
-    "congratulations": "¡Felicitaciones! Hoy completaste con éxito la clase \"Resolution, Moral of the Story, and Reading Test\". Has demostrado constancia y rigor en tu aprendizaje.",
-    "nextClassPreview": "En la próxima sesión continuaremos profundizando los aprendizajes de Inglés."
+    "congratulations": "Good work. You explained your answer with information from the resource.",
+    "nextClassPreview": "¡Nos vemos en la próxima lección!"
   },
   "paso8_cierre": {
-    "preguntaSintesis": "In your own words, what was the most useful English word or phrase you learned in today's lesson?",
-    "metacognicion": "¿Qué técnica te ayudó más a entender el texto en inglés: buscar cognados o identificar los verbos principales?",
-    "celebracion": "Congratulations! You have completed all the English lessons for Objective OA 9. Outstanding language work!"
+    "preguntaSintesis": "What is one similarity and one difference?",
+    "metacognicion": "What helped you understand: the resource, its details or comparing answers? Explain why.",
+    "celebracion": "Good work. You explained your answer with information from the resource."
   }
 };

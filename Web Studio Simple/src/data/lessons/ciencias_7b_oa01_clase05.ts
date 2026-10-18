@@ -1,476 +1,444 @@
-import { LessonData } from '../../types/lesson';
+import { LessonData } from '../../../src/types/lesson';
 
 export const CIENCIAS_7B_OA01_CLASE05: LessonData = {
   "metadata": {
     "grade": "7° Básico",
     "subject": "Ciencias Naturales",
     "oaCode": "OA 1",
-    "oaTitle": "Sexualidad y Afectividad",
+    "oaTitle": "Ciencias Naturales - OA 1",
     "lessonNumber": 5,
     "totalLessonsInOa": 6,
-    "lessonTitle": "Mitos, Estereotipos y Convivencia Saludable",
+    "lessonTitle": "Una situación",
     "durationMinutes": 30,
-    "nextLessonTitle": "Síntesis Integral y Evaluación Tipo Examen Libre"
+    "nextLessonTitle": ""
   },
   "prep": {
-    "adultObjective": "Guiar al estudiante a contrastar mitos y estereotipos sobre la pubertad y la afectividad con la evidencia médica, comprendiendo que el inicio de la pubertad ocurre entre los 8 y 13 años en niñas y 9 y 14 años en niños (Tanner 1962 / MedlinePlus), mientras que el estirón de estatura es un hito posterior no universal que suele presentarse entre los 10 y 16 años según ritmos genéticos individuales.",
-    "routeToday": "Analizar falsas creencias sobre el cuerpo y los roles de género, comprender que cada organismo madura a su propio ritmo genético y promover una convivencia respetuosa y solidaria.",
-    "mentorReminder": "Sigue el guion leyendo en voz alta únicamente los recuadros DILE y PREGÚNTALE. El contenido pedagógico y las respuestas esperadas te indican con total precisión qué debe responder el estudiante.",
+    "adultObjective": "Explicar cómo el respeto por límites y decisiones personales contribuye al cuidado mutuo en vínculos afectivos usando casos ficticios.",
+    "routeToday": "Ruta guiada de la clase 5",
+    "mentorReminder": "Explicar cómo el respeto por límites y decisiones personales contribuye al cuidado mutuo en vínculos afectivos usando casos ficticios.",
     "reminders": [
-      "La variabilidad en el inicio y ritmo de la pubertad es normal y saludable.",
-      "Los estereotipos de género limitan la expresión afectiva y dañan la convivencia.",
-      "Lee en voz alta únicamente los textos con la etiqueta DILE o PREGÚNTALE.",
-      "Fomenta el pensamiento crítico frente a informaciones no científicas en redes sociales."
+      "Acompaña al estudiante y valora su proceso."
     ],
-    "emotionalTip": "Transmite calma respecto a los tiempos del crecimiento. Muchos adolescentes experimentan inseguridad si ven que sus compañeros crecen antes o después; validar la diversidad alivia la ansiedad."
+    "emotionalTip": "Usar exclusivamente los casos ficticios. No solicitar información sobre cuerpo, identidad, vínculos o experiencias íntimas del estudiante. Escuchar con respeto. No diagnosticar ni comparar ritmos de desarrollo."
   },
   "route": {
     "blocks": [
       {
         "id": "b1",
         "number": "01",
-        "title": "Ciencias Naturales",
-        "subtitle": "Dimensión Sociocultural",
+        "title": "Punto de partida",
+        "subtitle": "Activación",
         "color": "teal"
       },
       {
         "id": "b2",
         "number": "02",
-        "title": "Mitos y Estereotipos",
-        "subtitle": "Evidencia Científica y Convivencia",
+        "title": "Motivación y Explicación",
+        "subtitle": "14 láminas",
         "color": "orange"
       },
       {
         "id": "b3",
         "number": "03",
-        "title": "Práctica",
-        "subtitle": "Casos y Cuaderno de Ciencias",
+        "title": "Práctica guiada",
+        "subtitle": "Transferencia",
         "color": "yellow"
       },
       {
         "id": "b4",
         "number": "04",
-        "title": "Evaluación",
-        "subtitle": "Miniquiz y Síntesis Formativa",
+        "title": "Miniquiz",
+        "subtitle": "Evaluación y cierre",
         "color": "navy"
       }
     ],
-    "keyQuestions": [
-      {
-        "label": "Mitos vs Evidencia",
-        "sub": "Desmontar creencias falsas sobre los ritmos del desarrollo"
-      },
-      {
-        "label": "Estereotipos de género",
-        "sub": "Superar mandatos rígidos que impiden la libre expresión"
-      },
-      {
-        "label": "Convivencia y empatía",
-        "sub": "Aceptación activa de las diferencias y prevención del acoso"
-      }
-    ],
-    "dileIntro": "Hoy comenzaremos la quinta clase de Ciencias Naturales para 7° Básico: 'Mitos, Estereotipos y Convivencia Saludable'.",
-    "dileObjective": "Distinguir entre información científica y mitos populares sobre los cambios en la pubertad, comprendiendo que la diversidad de ritmos y la superación de estereotipos son claves para una convivencia armónica."
+    "dileIntro": "Hoy avanzaremos en una nueva clase interactiva.",
+    "dileObjective": "Una situación"
   },
   "situation": {
-    "dilePrompt": "En el patio de un colegio, un estudiante se burla de otro porque todavía no le cambia la voz ni ha pegado el 'estirón', diciéndole que se quedó 'atrasado'. El estudiante afectado se siente triste y avergonzado. Si aplicamos el conocimiento científico sobre la pubertad, ¿por qué esa burla se basa en una creencia completamente falsa e ignorante?",
-    "expectedAnswer": "Porque cada persona tiene su propio reloj biológico y ritmo genético de desarrollo; la pubertad puede comenzar entre los 10 y los 14 años sin que eso represente un atraso o problema de salud.",
-    "socraticHint": "Recuerda que no todos los cuerpos crecen en el mismo mes ni al mismo ritmo: ¿existe una fecha exacta obligatoria para los cambios puberales?",
-    "emotionalTip": "Refuerza la empatía: comprender la biología nos ayuda a defender a quienes sufren burlas y a valorar la diversidad humana.",
+    "dilePrompt": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",
+    "expectedAnswer": "Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo.",
+    "socraticHint": "Fíjate en los detalles destacados.",
+    "emotionalTip": "Usar exclusivamente los casos ficticios. No solicitar información sobre cuerpo, identidad, vínculos o experiencias íntimas del estudiante. Escuchar con respeto. No diagnosticar ni comparar ritmos de desarrollo.",
     "options": [
       {
-        "label": "Explicó que cada cuerpo tiene un ritmo biológico y genético propio y natural",
+        "label": "Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo.",
         "kind": "correct",
-        "feedbackText": "¡Excelente! La biología demuestra que la variabilidad en los tiempos de la pubertad es normal y esperable."
+        "feedbackText": "¡Muy bien observado!"
       },
       {
-        "label": "Dijo que todos los jóvenes deben cambiar a la misma edad exacta",
+        "label": "Requiere apoyo adicional",
         "kind": "needs_support",
-        "feedbackText": "Cuidado: creer que todos maduran al mismo tiempo es precisamente un mito. La pubertad tiene rangos de varios años."
+        "feedbackText": "Revisa nuevamente la situación inicial."
       },
       {
-        "label": "No sabe o tiene dudas",
+        "label": "No sabe qué responder",
         "kind": "no_answer",
-        "feedbackText": "Pista guiada: Piensa en los factores genéticos y biológicos que hacen que cada ser humano crezca a su propio tiempo."
+        "feedbackText": "Leamos juntos para descubrir la pista."
       }
     ]
   },
   "reference": {
-    "dilePrompt": "Un mito es una creencia popular sin sustento empírico que suele generar temores infundados, mientras que un estereotipo es una idea preconcebida y simplificada sobre cómo 'deben' comportarse o sentir las personas según su género o apariencia física.",
-    "question": "Con tus propias palabras: ¿por qué es perjudicial para la salud mental y la convivencia escolar creer en estereotipos como 'los hombres no lloran' o 'las mujeres son débiles'?",
-    "expectedAnswer": "Porque reprimen las emociones naturales de las personas, generan presiones dañinas y justifican la discriminación o la desigualdad en el trato mutuo.",
-    "socraticHint": "Piensa en qué ocurre cuando a alguien se le prohíbe expresar su tristeza o cuando se subestiman las capacidades de una persona.",
-    "feedbackSuccess": "¡Exactamente! Las emociones y las capacidades son humanas, no exclusivas de un género; romper estereotipos permite una convivencia sana.",
-    "feedbackSupport": "Recuerda que reprimir emociones causa sufrimiento y que limitar las oportunidades por prejuicios atenta contra la dignidad."
+    "dilePrompt": "¿Qué acción muestra respeto y cómo cuida el vínculo?",
+    "question": "¿Qué información entrega el punto de partida?",
+    "expectedAnswer": "Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo.",
+    "socraticHint": "Localiza las palabras clave.",
+    "feedbackSuccess": "¡Excelente fundamentación!",
+    "feedbackSupport": "Revisa la lectura para confirmar los datos."
   },
   "hook": {
-    "title": "Rompiendo espejismos: La ciencia frente a los mitos",
-    "dileIntro": "Observaremos cómo la ciencia desmonta los prejuicios que a menudo circulan en las redes sociales y en las conversaciones cotidianas sobre el cuerpo.",
-    "hazInstruction": "Identifica en el video cómo el conocimiento riguroso nos libera de inseguridades y fomenta un trato empático entre compañeros.",
+    "title": "Motivación",
+    "titulo": "Motivación",
+    "focusPoints": [],
+    "dileIntro": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",
+    "hazInstruction": "Observa y reflexiona con las escenas del video.",
     "videoSrc": "",
-    "focusPoints": [
-      "Variabilidad biológica: el estirón puberal ocurre en ventanas de tiempo amplias.",
-      "Mitos corporales: los cambios no son instantáneos ni idénticos para todos.",
-      "Estereotipos de género: ideas fijas que limitan la autenticidad personal.",
-      "Empatía escolar: erradicar las burlas basadas en la apariencia o el desarrollo."
-    ],
-    "dileAfterVideo": "Comentemos lo observado en el video. Te haré dos preguntas para profundizar en el impacto de los mitos.",
+    "dileAfterVideo": "¿Qué observaste en esta situación inicial?",
     "slides": [
       {
         "slideNumber": 1,
-        "tituloMomento": "Apertura y el Desafío de los Mitos",
-        "didacticPurpose": "Apertura y el Desafío de los Mitos",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, reviewing a digital display that debunks popular adolescent myths with verified scientific evidence, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Misión 5: Mitos y Convivencia Saludable",
-        "overlayTitle": "Misión 5: Ciencia vs Mitos",
-        "overlaySubtitle": "Desarmar prejuicios con evidencia y respeto mutuo",
-        "vectorialOverlayPptx": "Ruta de exploración: Creencias populares -> Contraste científico -> Convivencia armónica",
-        "mathOverlayPptx": "Ruta de exploración: Creencias populares -> Contraste científico -> Convivencia armónica",
-        "speakerNotes": "Comienza una expedición de pensamiento crítico en ciencias. Alrededor de la pubertad circulan muchas creencias populares que no tienen respaldo científico.",
-        "palabrasAprox": 21,
-        "duracionSeg": 10
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Una situación",
+        "visualPrompt": "",
+        "overlayText": "Una situación",
+        "overlayTitle": "Una situación",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Una situación",
+        "speakerNotes": "Hoy exploraremos vínculos afectivos y respeto mutuo. Observaremos el caso y buscaremos pistas antes de sacar una conclusión.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 2,
-        "tituloMomento": "El Espejismo de la Homogeneidad",
-        "didacticPurpose": "El Espejismo de la Homogeneidad",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, observing a distorted mirror being replaced with a clean, realistic medical illustration of pubertal growth, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Diversidad: Ningún Cuerpo es Idéntico",
-        "overlayTitle": "No existen moldes únicos",
-        "overlaySubtitle": "La naturaleza celebra la diversidad biológica",
-        "vectorialOverlayPptx": "Variabilidad del crecimiento: Estirón de estatura con amplia dispersión saludable (Tanner / MedlinePlus)",
-        "mathOverlayPptx": "Variabilidad del crecimiento: Estirón de estatura con amplia dispersión saludable (Tanner / MedlinePlus)",
-        "speakerNotes": "El inicio puberal habitual (8 a 13 años en niñas y 9 a 14 en niños) no debe confundirse con el peak de velocidad de crecimiento, cuyos promedios poblacionales rondan los 11,5 años en niñas y 13,5 en niños con amplia variación saludable.",
-        "palabrasAprox": 24,
-        "duracionSeg": 11
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "La pregunta",
+        "visualPrompt": "",
+        "overlayText": "La pregunta",
+        "overlayTitle": "La pregunta",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "La pregunta",
+        "speakerNotes": "Nico prefiere saludar con la mano. Paula acepta sin insistir. Mantén a la vista la situación y distingue lo que informa de lo que suponemos.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 3,
-        "tituloMomento": "El Mito del 'Atraso' Corporal",
-        "didacticPurpose": "El Mito del 'Atraso' Corporal",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, in a modern science classroom observing blank modular panels representing the height growth spurt window (between ages 10 and 16, distinct from earlier pubertal onset), with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "El Reloj Biológico Personal",
-        "overlayTitle": "El reloj biológico individual",
-        "overlaySubtitle": "La genética define el calendario de maduración",
-        "vectorialOverlayPptx": "Factores de sincronía: Herencia genética + Estado nutricional + Factores ambientales equilibrados",
-        "mathOverlayPptx": "Factores de sincronía: Herencia genética + Estado nutricional + Factores ambientales equilibrados",
-        "speakerNotes": "El estirón de estatura suele ocurrir como un hito posterior de la pubertad (habitualmente entre los 10 y 16 años según Tanner y MedlinePlus), mientras el inicio puberal ocurre antes (8-13 años en niñas y 9-14 en niños según MedlinePlus). Crecer a ritmos distintos es completamente normal.",
-        "palabrasAprox": 25,
-        "duracionSeg": 11
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Primera idea",
+        "visualPrompt": "",
+        "overlayText": "Primera idea",
+        "overlayTitle": "Primera idea",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Primera idea",
+        "speakerNotes": "¿Qué acción muestra respeto y cómo cuida el vínculo? Puedes plantear una primera idea; después comprobaremos qué información la apoya.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 4,
-        "tituloMomento": "Estereotipos que Limitan Emociones",
-        "didacticPurpose": "Estereotipos que Limitan Emociones",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, collaborating in a science lab with robotics tools and culinary chemistry, demonstrating equal capabilities without gender stereotypes, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Emociones Sin Etiquetas de Género",
-        "overlayTitle": "Sentir es una cualidad humana",
-        "overlaySubtitle": "Las emociones y valores no tienen género",
-        "vectorialOverlayPptx": "Esquema de equidad: Reconocimiento emocional pleno y superación de mandatos culturales restrictivos",
-        "mathOverlayPptx": "Esquema de equidad: Reconocimiento emocional pleno y superación de mandatos culturales restrictivos",
-        "speakerNotes": "Los estereotipos de género también son mitos culturales sin base biológica. Hombres y mujeres tienen iguales capacidades cognitivas, artísticas y científicas.",
-        "palabrasAprox": 21,
-        "duracionSeg": 10
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Busca pistas",
+        "visualPrompt": "",
+        "overlayText": "Busca pistas",
+        "overlayTitle": "Busca pistas",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Busca pistas",
+        "speakerNotes": "Observa la situación. ¿Qué detalle podría ayudarte a responder? Una pista útil debe ayudarnos a responder la pregunta que estamos explorando.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 5,
-        "tituloMomento": "El Filtro Crítico de las Redes",
-        "didacticPurpose": "El Filtro Crítico de las Redes",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, holding a glowing magnifying glass revealing verified biological facts over misleading social media headlines, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Filtro Crítico Digital",
-        "overlayTitle": "Discernimiento digital",
-        "overlaySubtitle": "Comprobar fuentes antes de creer rumores virales",
-        "vectorialOverlayPptx": "Criterios de verificación: Fuentes médicas oficiales vs Cuentas comerciales con imágenes retocadas",
-        "mathOverlayPptx": "Criterios de verificación: Fuentes médicas oficiales vs Cuentas comerciales con imágenes retocadas",
-        "speakerNotes": "El acné puberal responde a estímulos hormonales en las glándulas sebáceas, no a la suciedad ni a castigos imaginarios.",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Compara posibilidades",
+        "visualPrompt": "",
+        "overlayText": "Compara posibilidades",
+        "overlayTitle": "Compara posibilidades",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Compara posibilidades",
+        "speakerNotes": "Una respuesta necesita información del recurso. Buscaremos pistas para fundamentarla. Dos respuestas pueden parecer posibles; necesitamos revisar cuál tiene respaldo.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 6,
-        "tituloMomento": "Construir Espacios de Confianza",
-        "didacticPurpose": "Construir Espacios de Confianza",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, celebrating diverse talents and unique growth trajectories with classmates in an inclusive classroom, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Convivencia Empática y Respeto",
-        "overlayTitle": "Comunidad escolar protectora",
-        "overlaySubtitle": "Erradicar apodos y burlas sobre el cuerpo",
-        "vectorialOverlayPptx": "Principios de convivencia: Cero tolerancia a la burla corporal + Apoyo entre pares + Solidaridad activa",
-        "mathOverlayPptx": "Principios de convivencia: Cero tolerancia a la burla corporal + Apoyo entre pares + Solidaridad activa",
-        "speakerNotes": "Aprender a buscar información en fuentes médicas oficiales nos protege de la desinformación y fortalece nuestra autoestima y seguridad personal.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Una estrategia",
+        "visualPrompt": "",
+        "overlayText": "Una estrategia",
+        "overlayTitle": "Una estrategia",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Una estrategia",
+        "speakerNotes": "Lee el recurso y relaciona sus detalles antes de elegir una explicación. La clase mostrará cómo relacionar las pistas y explicar esa relación paso a paso.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 7,
-        "tituloMomento": "Cierre y Preparación para el Rigor",
-        "didacticPurpose": "Cierre y Preparación para el Rigor",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, holding open science notebooks, ready to debunk myths and analyze evidence in an organized study room, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Ciencia y Convivencia",
-        "overlayTitle": "Hacia la comprensión científica",
-        "overlaySubtitle": "Profundicemos en los fundamentos biológicos",
-        "vectorialOverlayPptx": "Conexión conceptual: Comprensión biológica integral -> Actitudes éticas de convivencia",
-        "mathOverlayPptx": "Conexión conceptual: Comprensión biológica integral -> Actitudes éticas de convivencia",
-        "speakerNotes": "Surge ahora la pregunta clave: cuando escuchamos una afirmación sobre el desarrollo adolescente, ¿cómo usamos la evidencia científica para evaluarla?",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Puente a la lectura",
+        "visualPrompt": "",
+        "overlayText": "Puente a la lectura",
+        "overlayTitle": "Puente a la lectura",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Puente a la lectura",
+        "speakerNotes": "Ahora descubriremos cómo las pistas ayudan a comprender esta situación. Luego aplicarás el criterio a otra situación breve, con menor ayuda.",
+        "duracionSeg": 8
       }
     ]
   },
   "preQuestions": [
     {
-      "context": "Identificación de mitos comunes",
-      "question": "¿Por qué afirmar que 'el acné surge exclusivamente por falta de aseo facial' es un mito biológico?",
-      "expected": "Porque el acné en la pubertad se debe principalmente al estímulo hormonal de las glándulas sebáceas y factores genéticos, no solo a la higiene.",
-      "success": "¡Exacto! Las hormonas aumentan la secreción sebácea; la higiene ayuda pero no es la causa única ni principal.",
-      "support": "Recuerda el rol de las hormonas sexuales: ¿qué glándulas de la piel se estimulan durante la pubertad?",
-      "reveal": "El acné puberal responde a la actividad hormonal sobre las glándulas sebáceas, combinada con factores genéticos.",
-      "studentReveal": "Porque el acné se debe a las hormonas y a la genética, no solo al lavado de la cara."
+      "context": "Nico prefiere saludar con la mano. Paula acepta sin insistir.",
+      "question": "¿Qué acción muestra respeto y cómo cuida el vínculo?",
+      "expected": "Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo.",
+      "success": "El caso señala que escucha la preferencia y no insiste.",
+      "support": "Si no localiza información, releer esta pista del contexto: «Nico prefiere saludar con la mano. Paula acepta sin insistir.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta.",
+      "reveal": "Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento.",
+      "studentReveal": "Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo."
     },
     {
-      "context": "Superación de estereotipos",
-      "question": "¿Cómo favorece a la convivencia escolar que niños y niñas compartan intereses científicos, deportivos y artísticos sin prejuicios de género?",
-      "expected": "Permite que cada estudiante desarrolle sus talentos con libertad, fomenta el respeto recíproco y elimina barreras artificiales de convivencia.",
-      "success": "¡Muy bien argumentado! La igualdad de oportunidades enriquece a toda la comunidad escolar.",
-      "support": "Piensa en el beneficio de poder elegir libremente lo que nos apasiona sin temor a ser juzgados.",
-      "reveal": "Compartir actividades sin sesgos amplía el aprendizaje mutuo y consolida una cultura de respeto e inclusión.",
-      "studentReveal": "Permite que todos desarrollen sus gustos y talentos libremente con respeto mutuo."
+      "context": "Una amiga pide que no publiquen su fotografía. El grupo puede elegir otra forma de celebrar.",
+      "question": "¿Qué decisión demuestra preocupación por la amiga?",
+      "expected": "No publicar la fotografía y acordar otra forma de celebrar que respete su decisión.",
+      "success": "La amiga expresa un límite claro sobre la fotografía.",
+      "support": "Si no localiza información, releer esta pista del contexto: «Una amiga pide que no publiquen su fotografía. El grupo puede elegir otra forma de celebrar.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta.",
+      "reveal": "No publicar la fotografía y acordar otra forma de celebrar que respete su decisión. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento.",
+      "studentReveal": "No publicar la fotografía y acordar otra forma de celebrar que respete su decisión."
     }
   ],
-  "conversationContext": "Analizaremos cómo el conocimiento biológico de la variabilidad humana desmantela los mitos y fundamenta la convivencia empática.",
+  "conversationContext": "Diálogo guiado para profundizar en los elementos clave.",
   "formalization": {
-    "title": "Variabilidad Biológica, Mitos y Convivencia Saludable",
-    "concept": "Fundamentos científicos de la diversidad puberal y equidad de género",
-    "summary": "La pubertad presenta una amplia variabilidad biológica normal en sus tiempos de inicio y progresión. Los mitos sobre el desarrollo corporal y los estereotipos de género carecen de validez científica y generan malestar psicológico. La comprensión de estos fenómenos fortalece la empatía y la convivencia pacífica.",
-    "ideaClave": "La variabilidad en el ritmo del desarrollo es una manifestación normal de la biología humana; desterrar mitos y estereotipos asegura una convivencia libre de discriminación.",
-    "dileIntro": "Formalizaremos la evidencia médica sobre los rangos de la pubertad y examinaremos un caso modelado de refutación de mitos.",
-    "hazInstruction": "Observa los rangos etarios formales y revisa con atención la resolución del caso de variabilidad en el crecimiento.",
+    "title": "El respeto mutuo implica considerar tanto lo que una persona quiere expresar como lo que la otra acepta. Un vínculo afectivo se cuida escuchando, evitando la presión y respetando límites y decisiones.",
+    "concept": "El respeto mutuo implica considerar tanto lo que una persona quiere expresar como lo que la otra acepta. Un vínculo afectivo se cuida escuchando, evitando la presión y respetando límites y decisiones.",
+    "summary": "Consolidación de las ideas clave.",
+    "ideaClave": "El respeto mutuo implica considerar tanto lo que una persona quiere expresar como lo que la otra acepta. Un vínculo afectivo se cuida escuchando, evitando la presión y respetando límites y decisiones.",
+    "dileIntro": "Ahora consolidaremos los aprendizajes esenciales.",
+    "hazInstruction": "Registra en tu cuaderno el concepto principal.",
+    "graphicPoster": "",
     "videoSrc": "",
     "slides": [
       {
-        "slideNumber": 1,
-        "tituloMomento": "Objetivo y Conceptos Fundamentales",
-        "didacticPurpose": "Objetivo y Conceptos Fundamentales",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing in front of a split-screen display contrasting popular myths with verified biological evidence, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Objetivo: Mitos y Evidencia Científica",
-        "overlayTitle": "Objetivo de la lección",
-        "overlaySubtitle": "Analizar la variabilidad puberal y superar estereotipos",
-        "vectorialOverlayPptx": "Rótulo formal: OA 01 · Variabilidad Biológica, Mitos y Convivencia Saludable",
-        "mathOverlayPptx": "Rótulo formal: OA 01 · Variabilidad Biológica, Mitos y Convivencia Saludable",
-        "speakerNotes": "El objetivo de la lección es refutar mitos sobre la pubertad usando evidencia biológica y criterios de salud integral.",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        "slideNumber": 8,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Una herramienta",
+        "visualPrompt": "",
+        "overlayText": "Una herramienta",
+        "overlayTitle": "Una herramienta",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Una herramienta",
+        "speakerNotes": "La afectividad aparece en vínculos con amistades, familia y pareja. No exige expresar cariño de una sola manera.",
+        "duracionSeg": 8
       },
       {
-        "slideNumber": 2,
-        "tituloMomento": "Rangos Normales del Inicio Puberal",
-        "didacticPurpose": "Rangos Normales del Inicio Puberal",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, in a modern science laboratory observing blank modular comparison panels on a digital display, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Ventanas de Tiempo del Desarrollo",
-        "overlayTitle": "Rangos biológicos de la pubertad",
-        "overlaySubtitle": "Inicio puberal y sus variaciones habituales",
-        "vectorialOverlayPptx": "Inicio puberal: 8-13 años (niñas), 9-14 años (niños) | Peak de crecimiento: promedios poblacionales ~11,5 (niñas) y ~13,5 (niños)",
-        "mathOverlayPptx": "Inicio puberal: 8-13 años (niñas), 9-14 años (niños) | Peak de crecimiento: promedios poblacionales ~11,5 (niñas) y ~13,5 (niños)",
-        "speakerNotes": "El inicio de la pubertad suele ocurrir entre los 8 y 13 años en niñas y entre los 9 y 14 en niños (MedlinePlus/OMS). Distinto del inicio, el peak de velocidad de crecimiento en estatura alcanza promedios poblacionales de ~11,5 años en niñas y ~13,5 años en niños dentro de una amplia ventana normal (10 a 16 años según Tanner).",
-        "palabrasAprox": 25,
-        "duracionSeg": 11
+        "slideNumber": 9,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "El criterio",
+        "visualPrompt": "",
+        "overlayText": "El criterio",
+        "overlayTitle": "El criterio",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "El criterio",
+        "speakerNotes": "Nico prefiere saludar con la mano. Esa preferencia permite saber cómo quiere participar en el saludo. Paula escucha y acepta la preferencia. El cariño puede expresarse mediante un saludo que ambos acepten.",
+        "duracionSeg": 8
       },
       {
-        "slideNumber": 3,
-        "tituloMomento": "Factores que Regulan el Crecimiento",
-        "didacticPurpose": "Factores que Regulan el Crecimiento",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, in a modern biology lab examining interactive infographic panels of biological growth factors including genetics, nutrition, healthy sleep, and hormonal regulation, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Factores de Regulación Biológica",
-        "overlayTitle": "Qué determina el ritmo de maduración",
-        "overlaySubtitle": "Interacción entre herencia, hormonas y ambiente",
-        "vectorialOverlayPptx": "Ecuación multifactorial: Crecimiento = Genética (herencia) + Endocrino (GH y esteroides) + Nutrición y descanso",
-        "mathOverlayPptx": "Ecuación multifactorial: Crecimiento = Genética (herencia) + Endocrino (GH y esteroides) + Nutrición y descanso",
-        "speakerNotes": "El ritmo de crecimiento depende de factores genéticos hereditarios, secreción hormonal equilibrada y hábitos saludables de nutrición y sueño profundo, los cuales regulan el desarrollo biológico.",
-        "palabrasAprox": 21,
-        "duracionSeg": 10
+        "slideNumber": 10,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Relación entre pistas",
+        "visualPrompt": "",
+        "overlayText": "Relación entre pistas",
+        "overlayTitle": "Relación entre pistas",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Relación entre pistas",
+        "speakerNotes": "En el segundo caso, la amiga pide que no publiquen su fotografía. La decisión del grupo debe considerar esa petición. El grupo puede buscar otra forma de celebrar. Respetar un límite permite mantener un vínculo de cuidado.",
+        "duracionSeg": 8
       },
       {
-        "slideNumber": 4,
-        "tituloMomento": "Desmontando los Estereotipos de Género",
-        "didacticPurpose": "Desmontando los Estereotipos de Género",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, enthusiastically collaborating in robotics and creative artistic design in a modern school workshop, breaking gender stereotypes, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Desmontando Estereotipos de Género",
-        "overlayTitle": "Libre desarrollo de la personalidad",
-        "overlaySubtitle": "Habilidades y emociones compartidas",
-        "vectorialOverlayPptx": "Cuadro de equidad: Capacidades intelectuales, creativas y emocionales idénticas entre géneros",
-        "mathOverlayPptx": "Cuadro de equidad: Capacidades intelectuales, creativas y emocionales idénticas entre géneros",
-        "speakerNotes": "Los estereotipos que asignan roles rígidos carecen de fundamento científico. Todos los estudiantes pueden destacar plenamente en ciencias, tecnología, artes y deportes sin límites impuestos por el género.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        "slideNumber": 11,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Modelo explicado",
+        "visualPrompt": "",
+        "overlayText": "Modelo explicado",
+        "overlayTitle": "Modelo explicado",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Modelo explicado",
+        "speakerNotes": "Nico prefiere saludar con la mano. Paula acepta sin insistir. ¿Qué acción muestra respeto y cómo cuida el vínculo? Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo. El caso señala que escucha la preferencia y no insiste.",
+        "duracionSeg": 8
       },
       {
-        "slideNumber": 5,
-        "tituloMomento": "El Impacto Psicológico del Juicio Externo",
-        "didacticPurpose": "El Impacto Psicológico del Juicio Externo",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, fostering an inclusive and supportive environment with classmates in a bright classroom, rejecting teasing and body judgment, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Prevención del Acoso y Cuidado Emocional",
-        "overlayTitle": "Efectos del juicio y la burla",
-        "overlaySubtitle": "Fomentar un entorno escolar seguro",
-        "vectorialOverlayPptx": "Mecanismo protector: Validación entre pares + Comunicación asertiva + Cero burlas corporales",
-        "mathOverlayPptx": "Mecanismo protector: Validación entre pares + Comunicación asertiva + Cero burlas corporales",
-        "speakerNotes": "Las burlas sobre el cuerpo pueden generar inseguridad y aislamiento. Promover un entorno escolar seguro exige empatía, detener los comentarios dañinos y recordar que cada persona vive su desarrollo a su propio ritmo.",
-        "palabrasAprox": 24,
-        "duracionSeg": 11
+        "slideNumber": 12,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Comprobación",
+        "visualPrompt": "",
+        "overlayText": "Comprobación",
+        "overlayTitle": "Comprobación",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Comprobación",
+        "speakerNotes": "Una amiga pide que no publiquen su fotografía. El grupo puede elegir otra forma de celebrar. ¿Qué decisión demuestra preocupación por la amiga? No publicar la fotografía y acordar otra forma de celebrar que respete su decisión. La amiga expresa un límite claro sobre la fotografía. Revisa la segunda respuesta con los datos de su propio caso.",
+        "duracionSeg": 8
       },
       {
-        "slideNumber": 6,
-        "tituloMomento": "Caso Modelado: El Mito del Estirón Puberal",
-        "didacticPurpose": "Caso Modelado: El Mito del Estirón Puberal",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing an illustrated growth-percentile chart on their desk, comparing curves with calm scientific smiles, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Caso Modelado: Variabilidad en el Estirón",
-        "overlayTitle": "Caso 1: El mito del estirón puberal simultáneo",
-        "overlaySubtitle": "Variabilidad biológica y ritmos genéticos de crecimiento",
-        "vectorialOverlayPptx": "Caso 1 modelado: Estudiante de 13 años con angustia por estirón -> Evidencia científica: ritmos genéticos normales (10 a 16 años) -> Desarrollo biológico saludable",
-        "mathOverlayPptx": "Caso 1 modelado: Estudiante de 13 años con angustia por estirón -> Evidencia científica: ritmos genéticos normales (10 a 16 años) -> Desarrollo biológico saludable",
-        "speakerNotes": "Analicemos el Caso 1: un estudiante de 13 años siente angustia porque varios compañeros ya tuvieron el estirón puberal y él aún no, creyendo que tiene un problema de salud o no crecerá. ¿Qué evidencia biológica desmiente este mito? La evidencia indica que el estirón puberal no ocurre a la misma edad para todos; responde a ritmos genéticos individuales que se extienden normalmente entre los 10 y los 16 años, por lo que su desarrollo es biológicamente normal y no constituye una anomalía.",
-        "palabrasAprox": 85,
-        "duracionSeg": 38
+        "slideNumber": 13,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Error y corrección",
+        "visualPrompt": "",
+        "overlayText": "Error y corrección",
+        "overlayTitle": "Error y corrección",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Error y corrección",
+        "speakerNotes": "Un error que debemos evitar: Suponer que el cariño permite ignorar un límite o presionar a otra persona. Si la respuesta añade información, vuelve al recurso y corrígela.",
+        "duracionSeg": 8
       },
       {
-        "slideNumber": 7,
-        "tituloMomento": "Síntesis y Compromiso con la Convivencia",
-        "didacticPurpose": "Síntesis y Compromiso con la Convivencia",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, presenting an illustrated scientific evidence board dispelling common myths about puberty, with generous negative space for text overlays. No text drawn by AI.",
-        "overlayText": "Síntesis: Ciencia, Respeto y Empatía",
-        "overlayTitle": "Regla de Oro frente a los mitos",
-        "overlaySubtitle": "Comprender la biología para convivir mejor",
-        "vectorialOverlayPptx": "Infografía final: Conocimiento científico -> Eliminación de prejuicios -> Convivencia armónica",
-        "mathOverlayPptx": "Infografía final: Conocimiento científico -> Eliminación de prejuicios -> Convivencia armónica",
-        "speakerNotes": "Recuerda la regla de oro: la ciencia desmiente prejuicios; cada cuerpo crece a su propio ritmo genético. ¡Ahora pon a prueba lo aprendido resolviendo las actividades prácticas en la plataforma interactiva!",
-        "palabrasAprox": 29,
-        "duracionSeg": 13
+        "slideNumber": 14,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Síntesis y práctica",
+        "visualPrompt": "",
+        "overlayText": "Síntesis y práctica",
+        "overlayTitle": "Síntesis y práctica",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Síntesis y práctica",
+        "speakerNotes": "El respeto considera los límites de ambas personas. Lee, localiza evidencia, explica y comprueba. Continúa con la práctica interactiva.",
+        "duracionSeg": 8
       }
     ]
   },
   "postQuestions": [
     {
-      "context": "Caso 1: El mito del estirón puberal simultáneo",
-      "question": "Un estudiante de 13 años siente angustia porque varios compañeros ya tuvieron el estirón puberal y él aún no, creyendo erróneamente que tiene un problema de salud o no crecerá. ¿Qué evidencia científica y biológica desmiente este mito y cómo debe explicarse?",
-      "expected": "La evidencia indica que el estirón puberal no ocurre a la misma edad para todos; responde a ritmos genéticos individuales que se extienden normalmente entre los 10 y los 16 años, por lo que su desarrollo es biológicamente normal y no constituye una anomalía.",
-      "success": "¡Excelente resolución! Has contrastado el mito con la evidencia médica de la variabilidad biológica del crecimiento.",
-      "support": "Recuerda las curvas de desarrollo de la OMS: ¿es normal que algunos jóvenes peguen el estirón antes y otros después?",
-      "reveal": "El crecimiento sigue curvas individuales reguladas por la genética y las hormonas en una ventana de varios años; no estar en el primer grupo no indica ninguna enfermedad.",
-      "studentReveal": "La evidencia demuestra que el estirón ocurre en distintas edades según los genes de cada persona, entre los 10 y 16 años, siendo totalmente normal."
-    },
-    {
-      "context": "Caso 2: Superación de estereotipos en el aula",
-      "question": "En una clase de tecnología y robótica, un grupo afirma que los puestos de programación son solo para hombres y que las mujeres deberían dedicarse solo a la decoración del proyecto. ¿Por qué esta afirmación es un estereotipo sin fundamento y qué impacto negativo genera?",
-      "expected": "Es un estereotipo infundado porque no existe diferencia biológica o cognitiva en la capacidad intelectual o tecnológica entre géneros; genera discriminación, limita el desarrollo vocacional de las alumnas y empobrece el trabajo en equipo.",
-      "success": "¡Muy bien analizado! La ciencia cognitiva confirma que el intelecto y el talento no dependen del género biológico.",
-      "support": "Fíjate en las capacidades intelectuales: ¿hay cerebros masculinos o femeninos para programar o es una habilidad universal?",
-      "reveal": "Los estereotipos de género limitan el talento humano sobre la base de prejuicios culturales sin base biológica ni psicológica.",
-      "studentReveal": "Es un estereotipo porque hombres y mujeres tienen la misma capacidad mental para programar y hacer ciencia."
+      "context": "Comprobación 1",
+      "question": "¿Qué decisión demuestra preocupación por la amiga?",
+      "expected": "No publicar la fotografía y acordar otra forma de celebrar que respete su decisión.",
+      "success": "Respuesta precisa y fundamentada",
+      "support": "Revisa el concepto clave expuesto",
+      "reveal": "No publicar la fotografía y acordar otra forma de celebrar que respete su decisión.",
+      "studentReveal": "No publicar la fotografía y acordar otra forma de celebrar que respete su decisión."
     }
   ],
   "practice": [
     {
-      "context": "Caso 1: El mito del estirón puberal simultáneo",
-      "question": "Un estudiante de 13 años siente angustia porque varios compañeros ya tuvieron el estirón puberal y él aún no, creyendo erróneamente que tiene un problema de salud o no crecerá. ¿Qué evidencia científica y biológica desmiente este mito y cómo debe explicarse?",
-      "expected": "La evidencia indica que el estirón puberal no ocurre a la misma edad para todos; responde a ritmos genéticos individuales que se extienden normalmente entre los 10 y los 16 años, por lo que su desarrollo es biológicamente normal y no constituye una anomalía.",
-      "success": "¡Excelente resolución! Has contrastado el mito con la evidencia médica de la variabilidad biológica del crecimiento.",
-      "support": "Recuerda las curvas de desarrollo de la OMS: ¿es normal que algunos jóvenes peguen el estirón antes y otros después?",
-      "reveal": "El crecimiento sigue curvas individuales reguladas por la genética y las hormonas en una ventana de varios años; no estar en el primer grupo no indica ninguna enfermedad.",
-      "studentReveal": "La evidencia demuestra que el estirón ocurre en distintas edades según los genes de cada persona, entre los 10 y 16 años, siendo totalmente normal."
+      "context": "Nico prefiere saludar con la mano. Paula acepta sin insistir.",
+      "question": "¿Qué acción muestra respeto y cómo cuida el vínculo? Escribe una respuesta y señala la pista que la sostiene.",
+      "expected": "Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo.",
+      "success": "El caso señala que escucha la preferencia y no insiste.",
+      "support": "Revisa los datos del recurso",
+      "reveal": "Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo.",
+      "studentReveal": "Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo."
     },
     {
-      "context": "Caso 2: Superación de estereotipos en el aula",
-      "question": "En una clase de tecnología y robótica, un grupo afirma que los puestos de programación son solo para hombres y que las mujeres deberían dedicarse solo a la decoración del proyecto. ¿Por qué esta afirmación es un estereotipo sin fundamento y qué impacto negativo genera?",
-      "expected": "Es un estereotipo infundado porque no existe diferencia biológica o cognitiva en la capacidad intelectual o tecnológica entre géneros; genera discriminación, limita el desarrollo vocacional de las alumnas y empobrece el trabajo en equipo.",
-      "success": "¡Muy bien analizado! La ciencia cognitiva confirma que el intelecto y el talento no dependen del género biológico.",
-      "support": "Fíjate en las capacidades intelectuales: ¿hay cerebros masculinos o femeninos para programar o es una habilidad universal?",
-      "reveal": "Los estereotipos de género limitan el talento humano sobre la base de prejuicios culturales sin base biológica ni psicológica.",
-      "studentReveal": "Es un estereotipo porque hombres y mujeres tienen la misma capacidad mental para programar y hacer ciencia."
+      "context": "Una amiga pide que no publiquen su fotografía. El grupo puede elegir otra forma de celebrar.",
+      "question": "¿Qué decisión demuestra preocupación por la amiga? Escribe una respuesta y señala la pista que la sostiene.",
+      "expected": "No publicar la fotografía y acordar otra forma de celebrar que respete su decisión.",
+      "success": "La amiga expresa un límite claro sobre la fotografía.",
+      "support": "Revisa los datos del recurso",
+      "reveal": "No publicar la fotografía y acordar otra forma de celebrar que respete su decisión.",
+      "studentReveal": "No publicar la fotografía y acordar otra forma de celebrar que respete su decisión."
     },
     {
-      "context": "Caso 3: Trabajo en el Cuaderno de Ciencias",
-      "question": "Abre tu cuaderno de Ciencias Naturales. Traza una tabla de dos columnas con el encabezado: 'Mito Popular vs Realidad Científica'. Escribe al menos dos mitos frecuentes sobre el cuerpo adolescente y su correspondiente refutación basada en la biología y la salud integral.",
-      "expected": "Tabla completada con dos contrastes rigurosos (por ejemplo: Mito 1: 'Todos deben crecer al mismo tiempo' / Realidad: 'Existe variabilidad genética normal'; Mito 2: 'El acné es por mala higiene' / Realidad: 'Es un proceso hormonal y genético').",
-      "success": "¡Trabajo sobresaliente en tu cuaderno! Has documentado la verdad científica frente a las creencias populares.",
-      "support": "Elige dos mitos revisados en la lección y escribe al lado por qué la ciencia demuestra lo contrario con hechos biológicos.",
-      "reveal": "El cuadro comparativo consolida el pensamiento crítico y la capacidad de discernimiento científico frente a la desinformación.",
-      "studentReveal": "Tabla comparativa de mitos y realidades científicas registrada detalladamente en el cuaderno."
+      "context": "Caso ficticio nuevo de EstudioSimple, no cita del libro: Dos adolescentes que mantienen un vínculo de pareja conversan en un espacio tranquilo. Una persona comparte un sentimiento y pide que no se difunda. La otra quiere demostrar cariño con un abrazo, pero su pareja prefiere conversar sin contacto físico. No se describen prácticas sexuales ni vivencias del estudiante.",
+      "question": "Explica cómo se relacionan intimidad afectiva, confianza y respeto mutuo. Propón una decisión que considere ambos límites y una consecuencia de respetarlos frente a presionar. No cuentes experiencias personales.",
+      "expected": "La intimidad afectiva permite compartir sentimientos con confianza. Corresponde escuchar, aceptar que no quiere contacto y no difundir lo compartido para presionar o burlarse. Respetar estos límites cuida la confianza; insistir la perjudica. La privacidad no obliga a guardar situaciones que causan daño o inseguridad: se puede buscar ayuda de un adulto de confianza.",
+      "success": "Aplica el criterio de la clase de manera autónoma en un recurso nuevo",
+      "support": "Comprobar cada elemento pedido y su evidencia; aceptar formulaciones equivalentes. Si falta una relación, pedir que señale la pista y explique qué demuestra; después ofrecer el modelo y un nuevo intento. Registrar respuesta, apoyos y criterio por reforzar.",
+      "reveal": "La intimidad afectiva permite compartir sentimientos con confianza. Corresponde escuchar, aceptar que no quiere contacto y no difundir lo compartido para presionar o burlarse. Respetar estos límites cuida la confianza; insistir la perjudica. La privacidad no obliga a guardar situaciones que causan daño o inseguridad: se puede buscar ayuda de un adulto de confianza.",
+      "studentReveal": "La intimidad afectiva permite compartir sentimientos con confianza. Corresponde escuchar, aceptar que no quiere contacto y no difundir lo compartido para presionar o burlarse. Respetar estos límites cuida la confianza; insistir la perjudica. La privacidad no obliga a guardar situaciones que causan daño o inseguridad: se puede buscar ayuda de un adulto de confianza."
     }
   ],
   "mini": [
     {
       "id": "q1",
-      "q": "La variabilidad en el inicio habitual de la pubertad (8 a 13 años en niñas y 9 a 14 en niños) demuestra que:",
+      "q": "¿Qué acción respeta la preferencia de Nico?",
       "options": [
-        "Quienes comienzan más tarde presentan obligatoriamente una deficiencia grave",
-        "Cada organismo tiene un ritmo biológico y genético individual dentro de rangos normales de salud",
-        "Todos los adolescentes deberían recibir tratamientos hormonales para igualar su crecimiento",
-        "La estatura final depende exclusivamente de comenzar la pubertad de manera temprana"
+        "A. Insistir hasta conseguir un abrazo",
+        "B. Burlarse de su saludo",
+        "C. Aceptar saludar con la mano",
+        "D. Dejar de hablarle por su preferencia"
       ],
-      "correct": "Cada organismo tiene un ritmo biológico y genético individual dentro de rangos normales de salud",
-      "fixExplain": "La variabilidad cronológica en el inicio puberal es normal y saludable; cada persona tiene su propio ritmo genético."
+      "correct": "C. Aceptar saludar con la mano",
+      "fixExplain": "Paula acepta un saludo que Nico prefiere, sin insistencia."
     },
     {
       "id": "q2",
-      "q": "¿Cuál de las siguientes afirmaciones sobre los estereotipos sociales de género está respaldada por la ciencia?",
+      "q": "¿Qué debe considerar el grupo antes de compartir la fotografía?",
       "options": [
-        "Son leyes biológicas inmutables determinadas estrictamente por los cromosomas",
-        "Permiten organizar la sociedad asignando tareas según el potencial cerebral de cada sexo",
-        "Los estereotipos sociales no deben limitar los intereses, talentos ni oportunidades de cada estudiante",
-        "La neurociencia demuestra que los gustos e intereses están prefijados por el sexo al nacer"
+        "A. Solo cuántas personas quieren verla",
+        "B. La decisión expresada por la amiga",
+        "C. Una regla de publicar siempre",
+        "D. La presión de quien insiste más"
       ],
-      "correct": "Los estereotipos sociales no deben limitar los intereses, talentos ni oportunidades de cada estudiante",
-      "fixExplain": "Los estereotipos son construcciones culturales arbitrarias; cada estudiante debe desarrollar plenamente sus intereses, talentos y oportunidades."
+      "correct": "B. La decisión expresada por la amiga",
+      "fixExplain": "La amiga ha pedido que no la publiquen."
     },
     {
       "id": "q3",
-      "q": "Una actitud que promueve activamente una convivencia saludable en la escuela es:",
+      "q": "¿Qué idea representa el respeto mutuo?",
       "options": [
-        "Reírse de las burlas corporales para demostrar sentido del humor en el grupo",
-        "Respetar la apariencia física y los ritmos personales de todos, rechazando apodos y juicios sobre el cuerpo",
-        "Aconsejar a los compañeros que oculten sus emociones para no mostrar debilidad",
-        "Juzgar a quienes crecen más lento o más rápido que el promedio del curso"
+        "A. Escuchar límites y buscar formas de relacionarse aceptadas por ambos",
+        "B. Decidir por la otra persona para demostrar cariño",
+        "C. Ignorar una petición si existe amistad",
+        "D. Exigir información íntima para confiar"
       ],
-      "correct": "Respetar la apariencia física y los ritmos personales de todos, rechazando apodos y juicios sobre el cuerpo",
-      "fixExplain": "El respeto incondicional por la corporalidad de los pares es el cimiento de una convivencia escolar pacífica y acogedora."
+      "correct": "A. Escuchar límites y buscar formas de relacionarse aceptadas por ambos",
+      "fixExplain": "El recurso relaciona el cuidado con la consideración de ambas personas."
     }
   ],
   "recovery": [
     {
-      "title": "Recuperación: La Normalidad de la Diversidad",
-      "explain": "Recuerda que los seres humanos no somos réplicas idénticas de una fábrica. La altura, el momento del cambio de voz y la complexión física dependen de la herencia de nuestros padres y abuelos. No existe una edad fija obligatoria para cambiar.",
-      "q": "¿Es motivo de alarma médica que dos amigos de la misma edad tengan estaturas y etapas de maduración distintas?",
-      "options": [
-        "Sí, porque todos los seres humanos deben crecer exactamente la misma cantidad de centímetros al mes",
-        "No, porque la diversidad de ritmos y tiempos es normal; ante dudas se consulta a un profesional de salud",
-        "Sí, porque las diferencias de estatura indican una anomalía biológica inmediata",
-        "Sí, porque el estirón debe ocurrir exactamente en la misma fecha en todos los adolescentes"
-      ],
-      "correct": "No, porque la diversidad de ritmos y tiempos es normal; ante dudas se consulta a un profesional de salud",
-      "correctText": "¡Exacto! La biología se caracteriza por la diversidad; las diferencias de ritmo son esperables y saludables.",
-      "fixText": "Recuerda que cada individuo posee un reloj biológico propio; las diferencias entre pares de la misma edad son normales."
+      "title": "Recuperación 1",
+      "explain": "Paula acepta un saludo que Nico prefiere, sin insistencia.",
+      "q": "¿Qué forma de expresar cariño respeta la preferencia de Isa?",
+      "kind": "open_response",
+      "options": [],
+      "correct": "",
+      "correctText": "Conversar sin imponer contacto ni otra demostración; escuchar lo que acepta. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
+      "fixText": "Volver al caso concreto: «Caso nuevo de recuperación: En una pareja ficticia, Isa prefiere expresar cariño conversando y pide que un mensaje personal no se comparta. Su pareja propone enviar el mensaje al grupo para demostrar cuánto se quieren.». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
+      "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
+      "resource": "Caso nuevo de recuperación: En una pareja ficticia, Isa prefiere expresar cariño conversando y pide que un mensaje personal no se comparta. Su pareja propone enviar el mensaje al grupo para demostrar cuánto se quieren.",
+      "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
+    },
+    {
+      "title": "Recuperación 2",
+      "explain": "La amiga ha pedido que no la publiquen.",
+      "q": "¿Qué decisión corresponde sobre el mensaje y por qué?",
+      "kind": "open_response",
+      "options": [],
+      "correct": "",
+      "correctText": "No compartirlo contra su decisión; la presión del grupo no reemplaza el respeto por la intimidad. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
+      "fixText": "Buscar estas expresiones del recurso nuevo: «grupo». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
+      "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
+      "resource": "Caso nuevo de recuperación: En una pareja ficticia, Isa prefiere expresar cariño conversando y pide que un mensaje personal no se comparta. Su pareja propone enviar el mensaje al grupo para demostrar cuánto se quieren.",
+      "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
+    },
+    {
+      "title": "Recuperación 3",
+      "explain": "El recurso relaciona el cuidado con la consideración de ambas personas.",
+      "q": "Relaciona una decisión y su consecuencia para la confianza.",
+      "kind": "open_response",
+      "options": [],
+      "correct": "",
+      "correctText": "Escuchar y respetar los límites puede cuidar la confianza; difundir el mensaje para presionar puede dañarla. Buscar ayuda ante daño o inseguridad sigue siendo posible. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
+      "fixText": "Buscar estas expresiones del recurso nuevo: «mensaje». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
+      "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
+      "resource": "Caso nuevo de recuperación: En una pareja ficticia, Isa prefiere expresar cariño conversando y pide que un mensaje personal no se comparta. Su pareja propone enviar el mensaje al grupo para demostrar cuánto se quieren.",
+      "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
     }
   ],
   "summaryIdeas": [
     [
-      "1 · Variabilidad Biológica Natural",
-      "El inicio y la velocidad de los cambios puberales varían ampliamente entre individuos según factores genéticos y ambientales saludables."
+      "Idea central",
+      "Una situación"
     ],
     [
-      "2 · Superación de Estereotipos",
-      "Los prejuicios sobre roles de género o mandatos emocionales limitan el bienestar y carecen de respaldo biológico o neurocientífico."
-    ],
-    [
-      "3 · Empatía y Convivencia Digna",
-      "Erradicar los comentarios sobre los cuerpos ajenos y apoyar a los compañeros consolida una comunidad escolar basada en el respeto."
+      "Comprensión",
+      "Aplicación del criterio formal en el cuaderno físico."
     ]
   ],
   "interactive": {
     "type": "dimensions",
-    "title": "Mitos vs Realidad Científica",
-    "description": "Explorador interactivo de variabilidad biológica y refutación de estereotipos de género."
+    "title": "Dimensiones Integrales de la Sexualidad",
+    "description": "Organizador de las cinco dimensiones biopsicosociales."
+  },
+  "closure": {
+    "congratulations": "Buen trabajo. Explicaste tu respuesta usando información del recurso.",
+    "nextClassPreview": "¡Nos vemos en la próxima lección!"
   },
   "paso8_cierre": {
-    "preguntaSintesis": "¿Por qué la evidencia médica sobre los relojes genéticos y las curvas de crecimiento de la OMS desmiente que el estirón deba ocurrir simultáneamente en todos los adolescentes?",
-    "metacognicion": "¿De qué forma analizar críticamente los mitos y estereotipos de género te permite construir un trato más justo y empático hacia tus pares?",
-    "celebracion": "¡Felicitaciones! Has completado con éxito la lección sobre mitos, estereotipos y variabilidad en la pubertad."
+    "preguntaSintesis": "¿Qué acción muestra respeto y cómo cuida el vínculo?",
+    "metacognicion": "¿Qué te ayudó más: leer el recurso, localizar una pista o comparar explicaciones? ¿Por qué?",
+    "celebracion": "Buen trabajo. Explicaste tu respuesta usando información del recurso."
   }
 };

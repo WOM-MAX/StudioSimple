@@ -1,0 +1,203 @@
+{
+  "metadata": {
+    "agent": "Antigravity",
+    "timestamp": "2026-10-17T13:15:00-03:00",
+    "courseId": "110-7",
+    "commit": "71413f50255bb426b4c8a86fccd74394ce3ec0aa",
+    "branch": "main",
+    "environment": "local_inspection_read_only"
+  },
+  "recoveredSourcesInventory": [
+    {
+      "course": "110-7",
+      "subject": "Ingles",
+      "oa": "OA09",
+      "class": 1,
+      "role": "staging_md",
+      "path": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE01.md",
+      "format": "markdown",
+      "status": "EN_REVISION",
+      "versionDate": "2026-10-11 14:15 [America/Santiago]",
+      "sha256": "9653ED07D2DF5434B9034BE80B6F10C110013C092F5164C359D9DC9C37AF925D",
+      "sizeBytes": 19991
+    },
+    {
+      "course": "110-7",
+      "subject": "Ingles",
+      "oa": "OA09",
+      "class": 1,
+      "role": "canonical_repo_md",
+      "path": "LECCIONES/110-7/Ingles/OA09/CLASE01_2026-10-10_19-15.md",
+      "format": "markdown",
+      "status": "EN_REVISION",
+      "versionDate": "2026-10-10 19:15 [America/Santiago]",
+      "sha256": "52B02AA1362AD17FE88EE977DD79DED820DFB44B6ABB83FEFEE2D8C9D4666AE4",
+      "sizeBytes": 25650
+    },
+    {
+      "course": "110-7",
+      "subject": "Ingles",
+      "oa": "OA09",
+      "class": 1,
+      "role": "served_ts_module",
+      "path": "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase01.ts",
+      "format": "typescript",
+      "status": "EN_REVISION",
+      "versionDate": "2026-10-11 17:00 [America/Santiago]",
+      "sha256": "CB073BBCBFD97C3B3E30BBD676919E92C46128AD3B0BEB4C7B67792F1C1B8BBE",
+      "sizeBytes": 24042
+    },
+    {
+      "course": "110-7",
+      "subject": "Historia_Geografia",
+      "oa": "OA02",
+      "class": 1,
+      "role": "staging_md",
+      "path": "LECCIONES_POR_REVISAR/110-7/Historia_Geografia/OA02/CLASE01.md",
+      "format": "markdown",
+      "status": "EN_REVISION",
+      "versionDate": "2026-10-11 14:15 [America/Santiago]",
+      "sha256": "0794B50F228BFB063408BD508D5CDAACB4E5E33DDC2465F2802792696FB23F0A",
+      "sizeBytes": 21840
+    },
+    {
+      "course": "110-7",
+      "subject": "Historia_Geografia",
+      "oa": "OA02",
+      "class": 1,
+      "role": "canonical_repo_md",
+      "path": "LECCIONES/110-7/Historia_Geografia/OA02/CLASE01_2026-10-10_19-15.md",
+      "format": "markdown",
+      "status": "EN_REVISION",
+      "versionDate": "2026-10-10 19:15 [America/Santiago]",
+      "sha256": "900A51359A84F0BA596CBFDA1B04D241BD286D252BD583D9AC84D4A78ECD3C81",
+      "sizeBytes": 28842
+    },
+    {
+      "course": "110-7",
+      "subject": "Historia_Geografia",
+      "oa": "OA02",
+      "class": 1,
+      "role": "served_ts_module",
+      "path": "Web Studio Simple/src/data/lessons/historia_7b_oa02_clase01.ts",
+      "format": "typescript",
+      "status": "EN_REVISION",
+      "versionDate": "2026-10-11 17:00 [America/Santiago]",
+      "sha256": "D43D5C370BBDEAA8EEA885FE293CE3FCC212AE12B0C92A263E451B945B453B00",
+      "sizeBytes": 25914
+    },
+    {
+      "course": "110-7",
+      "subject": "Matematica",
+      "oa": "OA04",
+      "class": 1,
+      "role": "structured_source_ts",
+      "path": "scripts/oa04_data/clase01.ts",
+      "format": "typescript",
+      "status": "EN_REVISION",
+      "versionDate": "2026-10-08 17:40 [America/Santiago]",
+      "sha256": "FB0D9D59899A4559EDB204E82342DD1287DA0EC1382506ADDC81B177263C75BD",
+      "sizeBytes": 28905
+    },
+    {
+      "course": "110-7",
+      "subject": "Matematica",
+      "oa": "OA04",
+      "class": 2,
+      "role": "structured_source_ts",
+      "path": "scripts/oa04_data/clase02.ts",
+      "format": "typescript",
+      "status": "EN_REVISION",
+      "versionDate": "2026-10-08 17:40 [America/Santiago]",
+      "sha256": "1F7FBD54D22428C6ABBD6F2B0321BC42B800A67109C738F6219218E95908FE72",
+      "sizeBytes": 27482
+    },
+    {
+      "course": "110-7",
+      "subject": "Matematica",
+      "oa": "OA04",
+      "class": 3,
+      "role": "structured_source_ts",
+      "path": "scripts/oa04_data/clase03.ts",
+      "format": "typescript",
+      "status": "EN_REVISION",
+      "versionDate": "2026-10-08 17:40 [America/Santiago]",
+      "sha256": "09D5CFEB51C85DDB3DC16DD60B7F3D9CBE8DB5DA749244E39BFC22FC029081CE",
+      "sizeBytes": 26957
+    },
+    {
+      "course": "110-7",
+      "subject": "Matematica",
+      "oa": "OA04",
+      "class": 4,
+      "role": "structured_source_ts",
+      "path": "scripts/oa04_data/clase04.ts",
+      "format": "typescript",
+      "status": "EN_REVISION",
+      "versionDate": "2026-10-08 17:40 [America/Santiago]",
+      "sha256": "62EADE01CD9EA4346D3B33B81BD8128D5DD997EDE04C710559F5989EDC4534EE",
+      "sizeBytes": 27750
+    },
+    {
+      "course": "110-7",
+      "subject": "Matematica",
+      "oa": "OA04",
+      "class": 5,
+      "role": "structured_source_ts",
+      "path": "scripts/oa04_data/clase05.ts",
+      "format": "typescript",
+      "status": "EN_REVISION",
+      "versionDate": "2026-10-08 17:40 [America/Santiago]",
+      "sha256": "32C8C67DA38DD42DE382D42F5AC615DDF2CADEA3CEE6A608D3E8A85B14C22CCC",
+      "sizeBytes": 34716
+    },
+    {
+      "course": "110-7",
+      "subject": "Matematica",
+      "oa": "OA04",
+      "class": 6,
+      "role": "structured_source_ts",
+      "path": "scripts/oa04_data/clase06.ts",
+      "format": "typescript",
+      "status": "EN_REVISION",
+      "versionDate": "2026-10-08 17:40 [America/Santiago]",
+      "sha256": "C44753A813B67006B68FB88B0A09E2CBEB993D68608AF09897A9B7DA6C5D2586",
+      "sizeBytes": 33580
+    },
+    {
+      "course": "110-7",
+      "subject": "Matematica",
+      "oa": "OA04",
+      "class": "1-6",
+      "role": "staging_md",
+      "path": null,
+      "format": "markdown",
+      "status": "NO_LOCALIZADA",
+      "versionDate": null,
+      "sha256": null,
+      "sizeBytes": 0
+    }
+  ],
+  "transformationContract": {
+    "parserScript": "scripts/pipeline_sync_lessons.ts",
+    "parserFunction": "parseMarkdownLesson",
+    "runtimeResolutionHierarchy": [
+      "1. findCanonicalFactoryLesson (Web Studio Simple/src/data/lessons/index.ts)",
+      "2. localStorage[CUSTOM_PLAYER_LESSONS_KEY]",
+      "3. cachedInjectedPackages (/data/injected_lessons_7b.json)",
+      "4. generateDynamicLesson (fallback)"
+    ],
+    "identifiedDefectsInCurrentParser": [
+      {
+        "id": "DEF-PARSER-01",
+        "description": "El bloque recovery hardcodea 'Opción con andamiaje A', descartando reactivos reales de recuperación.",
+        "affectedField": "recovery[].options"
+      },
+      {
+        "id": "DEF-PARSER-02",
+        "description": "La sección de práctica busca exclusivamente '### Caso \\d+'. Secciones como 'Aplicación autónoma y transferencia' son ignoradas.",
+        "affectedField": "practice[]"
+      }
+    ]
+  }
+}

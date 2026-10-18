@@ -36,7 +36,7 @@ Jimmy comparte juegos con Robutt y se siente acompañado por él. En una travesu
 
 **Punto de partida / Starting point:** ¿Qué efecto tiene la propuesta del padre sobre Jimmy?
 
-**Respuesta de referencia / Reference:** La propuesta provoca la oposición de Jimmy y hace visible el desacuerdo entre ambos.
+**Respuesta de referencia / Reference, privada para el mentor hasta después del intento:** La propuesta provoca la oposición de Jimmy y hace visible el desacuerdo entre ambos.
 
 ## 4. Paso 3 — Videos
 
@@ -56,11 +56,11 @@ Jimmy comparte juegos con Robutt y se siente acompañado por él. En una travesu
 
 **Evidencia:** La propuesta de regalar a Robutt y la respuesta de Jimmy aparecen juntas en el recurso.
 
-**Apoyo 1:** Localizar una pista concreta en el recurso.
+**Apoyo 1:** Si no localiza información, releer esta pista del contexto: «El padre propone regalar a Robutt porque llegará un perro vivo. Jimmy afirma que Robutt es su perro.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta.
 
-**Apoyo 2:** Comparar esa pista con la explicación propuesta.
+**Apoyo 2:** Si encuentra la pista pero no la explica, orientar con esta relación: La propuesta de regalar a Robutt y la respuesta de Jimmy aparecen juntas en el recurso. Pedir que complete su respuesta indicando por qué esa pista sirve.
 
-**Apoyo 3:** Leer el modelo, relacionarlo con la pista y pedir un nuevo intento en palabras propias.
+**Apoyo 3, modelo privado tras intentar con pistas:** La propuesta provoca la oposición de Jimmy y hace visible el desacuerdo entre ambos. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento.
 
 **Criterio:** Respuesta comprensible, información precisa y explicación de su relación.
 
@@ -74,11 +74,11 @@ Jimmy comparte juegos con Robutt y se siente acompañado por él. En una travesu
 
 **Evidencia:** Jimmy lo abraza y expresa que lo quiere; ambas pistas apoyan la explicación.
 
-**Apoyo 1:** Localizar una pista concreta en el recurso.
+**Apoyo 1:** Si no localiza información, releer esta pista del contexto: «Robutt gime. Jimmy extiende sus brazos y lo abraza. Después afirma que quiere a Robutt.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta.
 
-**Apoyo 2:** Comparar esa pista con la explicación propuesta.
+**Apoyo 2:** Si encuentra la pista pero no la explica, orientar con esta relación: Jimmy lo abraza y expresa que lo quiere; ambas pistas apoyan la explicación. Pedir que complete su respuesta indicando por qué esa pista sirve.
 
-**Apoyo 3:** Leer el modelo, relacionarlo con la pista y pedir un nuevo intento en palabras propias.
+**Apoyo 3, modelo privado tras intentar con pistas:** El abrazo y su expresión de cariño permiten explicar que desea conservar su vínculo con Robutt. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento.
 
 **Criterio:** Respuesta comprensible, información precisa y explicación de su relación.
 
@@ -97,6 +97,8 @@ Jimmy comparte juegos con Robutt y se siente acompañado por él. En una travesu
 **El límite del relato:** El final muestra el abrazo y la postura de Jimmy. No cuenta que el padre acepte conservar a ambos perros.
 
 **Modelo explicado:** La propuesta provoca la oposición de Jimmy y hace visible el desacuerdo entre ambos. La propuesta de regalar a Robutt y la respuesta de Jimmy aparecen juntas en el recurso.
+
+**Cómo se construye el modelo, mostrar durante la enseñanza:** 1) Leer la pregunta y precisar qué pide. 2) Localizar en el caso: «El padre propone regalar a Robutt porque llegará un perro vivo. Jimmy afirma que Robutt es su perro.». 3) Explicar la relación: La propuesta de regalar a Robutt y la respuesta de Jimmy aparecen juntas en el recurso. 4) Formular la respuesta: La propuesta provoca la oposición de Jimmy y hace visible el desacuerdo entre ambos. Comprobar que cada afirmación conserva los datos del recurso.
 
 **Error frecuente:** Afirmar que el padre cambia de opinión añade un hecho que el final no cuenta.
 
@@ -132,11 +134,23 @@ Jimmy comparte juegos con Robutt y se siente acompañado por él. En una travesu
 
 **Retroalimentación:** La respuesta relaciona la travesura de Jimmy con la reacción del padre. Revisa el orden para no atribuir la reprimenda a la propuesta posterior sobre el perro.
 
-**Práctica autónoma:** Elige una de las dos situaciones y redacta una explicación con esta estructura: acción del personaje, pista del recurso y efecto en otro personaje.
+### Aplicación autónoma y transferencia
+
+**Recurso nuevo visible para el estudiante:** Microrrelato original de transferencia, independiente de Asimov: El consejo del barrio anuncia que cerrará un taller. Inés reúne trabajos de sus compañeros y los muestra en la reunión. Tras verlos, el consejo decide revisar la propuesta. El relato termina antes de la nueva decisión.
+
+**Actividad del estudiante:** Construye una cadena de dos acciones y sus efectos. Apoya cada relación en el relato y explica qué conclusión final no puede asegurarse.
+
+**Momento:** Intento individual breve antes del miniquiz, sin respuesta modelo visible. El recurso de consulta permanece disponible. No exigir memorizar.
+
+**Criterio privado del mentor, revelar solo después del intento:** El anuncio provoca que Inés reúna y muestre trabajos; verlos lleva al consejo a revisar la propuesta. No se asegura que el taller quede abierto definitivamente.
+
+**Cómo valorar:** Comprobar cada elemento pedido y su evidencia; aceptar formulaciones equivalentes. Si falta una relación, pedir que señale la pista y explique qué demuestra; después ofrecer el modelo y un nuevo intento. Registrar respuesta, apoyos y criterio por reforzar.
+
+**Por qué transfiere:** Cambia el estímulo y exige aplicar el criterio de esta clase; no reproduce el caso ya resuelto.
 
 ## 8. Paso 7 — Miniquiz y recuperación
 
-**Criterio formativo:** 3 preguntas, 4 alternativas por pregunta. Las claves y explicaciones se revisan en este archivo. El umbral de avance y el comportamiento real del reintento dependen del contrato de datos de la app, no disponible para esta revisión: **NO EVALUABLE**. La aprobación de esta entrega corresponde al usuario.
+**Criterio formativo:** Tres preguntas con cuatro alternativas y claves privadas. 2/3 o 3/3 permite avanzar; con 0/3 o 1/3, explicar el error, resolver la nueva práctica de recuperación correspondiente y reintentar. Registrar intentos y apoyos. Es la regla de diseño del Manual; su ejecución real en la App permanece pendiente de prueba. Solo Walter aprueba el OA.
 
 ### Reactivo 1
 
@@ -151,11 +165,11 @@ Jimmy comparte juegos con Robutt y se siente acompañado por él. En una travesu
 
 **Explicación formativa:** El recurso relaciona la propuesta del padre con la respuesta de Jimmy.
 
-**Análisis de alternativas:**
-- A: El rescate ocurre durante la travesura anterior. La pregunta apunta a la causa de la oposición en la conversación, que es la propuesta del padre.
-- B: Coincide con la información del recurso.
-- C: El recurso no cuenta que Robutt quiera ir a la Tierra. No añadas un deseo que no aparece.
-- D: Jimmy afirma que Robutt es su perro y se opone a la propuesta. No decide cambiarlo.
+**Análisis de alternativas, privado; mostrar solo el feedback de la opción elegida tras responder:**
+- A: La opción «La llegada de un rescate durante el diálogo» no coincide con lo que pide este reactivo. Contrástala con «La propuesta del padre de regalar a Robutt». El recurso relaciona la propuesta del padre con la respuesta de Jimmy.
+- B: La respuesta «La propuesta del padre de regalar a Robutt» coincide con el criterio. El recurso relaciona la propuesta del padre con la respuesta de Jimmy.
+- C: La opción «Un deseo de Robutt de ir a la Tierra» no coincide con lo que pide este reactivo. Contrástala con «La propuesta del padre de regalar a Robutt». El recurso relaciona la propuesta del padre con la respuesta de Jimmy.
+- D: La opción «La decisión de Jimmy de cambiar de perro» no coincide con lo que pide este reactivo. Contrástala con «La propuesta del padre de regalar a Robutt». El recurso relaciona la propuesta del padre con la respuesta de Jimmy.
 
 ### Recuperación 1
 
@@ -164,6 +178,20 @@ Jimmy comparte juegos con Robutt y se siente acompañado por él. En una travesu
 **Enseñanza:** El recurso relaciona la propuesta del padre con la respuesta de Jimmy.
 
 **Pista:** Vuelve a la conversación con el padre. Subraya qué propone y qué responde Jimmy; separa ese momento de la travesura anterior.
+
+**Nueva práctica antes del reintento:**
+
+**Recurso visible de recuperación:** Microrrelato original de recuperación: Una directora propone retirar el huerto. Bruno muestra los registros del curso. La directora acepta conversar con los estudiantes, sin anunciar todavía una decisión sobre el huerto.
+
+**Tarea nueva del estudiante:** ¿Qué acción origina la respuesta de Bruno?
+
+**Apoyo 1, si no identifica información:** Buscar estas expresiones del recurso nuevo: «retirar»; «huerto». Señalar las palabras del caso que permiten responder, sin mostrar la solución.
+
+**Apoyo 2, si no relaciona las pistas:** Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.
+
+**Apoyo 3 y modelo privado, después de un intento con las pistas:** La propuesta de retirar el huerto. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
+
+**Criterio de salida de esta práctica:** Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta.
 
 **Reintento completo:** Después de releer el recurso, responde de nuevo: ¿Qué provoca directamente la oposición de Jimmy?
 
@@ -187,11 +215,11 @@ Jimmy comparte juegos con Robutt y se siente acompañado por él. En una travesu
 
 **Explicación formativa:** El abrazo y sus palabras muestran el vínculo que Jimmy quiere conservar.
 
-**Análisis de alternativas:**
-- A: El recurso muestra un abrazo, no que Jimmy evite acercarse a Robutt.
-- B: El recurso no menciona que Jimmy pida llevar a Robutt a otra colonia.
-- C: Coincide con la información del recurso.
-- D: Jimmy responde que Robutt es su perro. No acepta regalarlo.
+**Análisis de alternativas, privado; mostrar solo el feedback de la opción elegida tras responder:**
+- A: La opción «Jimmy evita acercarse al robot» no coincide con lo que pide este reactivo. Contrástala con «Jimmy lo abraza y expresa su cariño». El abrazo y sus palabras muestran el vínculo que Jimmy quiere conservar.
+- B: La opción «Jimmy pide llevarlo a otra colonia» no coincide con lo que pide este reactivo. Contrástala con «Jimmy lo abraza y expresa su cariño». El abrazo y sus palabras muestran el vínculo que Jimmy quiere conservar.
+- C: La respuesta «Jimmy lo abraza y expresa su cariño» coincide con el criterio. El abrazo y sus palabras muestran el vínculo que Jimmy quiere conservar.
+- D: La opción «Jimmy acepta regalarlo sin responder» no coincide con lo que pide este reactivo. Contrástala con «Jimmy lo abraza y expresa su cariño». El abrazo y sus palabras muestran el vínculo que Jimmy quiere conservar.
 
 ### Recuperación 2
 
@@ -200,6 +228,20 @@ Jimmy comparte juegos con Robutt y se siente acompañado por él. En una travesu
 **Enseñanza:** El abrazo y sus palabras muestran el vínculo que Jimmy quiere conservar.
 
 **Pista:** Busca la acción de Jimmy cuando Robutt gime. Distingue el gesto que aparece en el recurso de acciones que no se narran.
+
+**Nueva práctica antes del reintento:**
+
+**Recurso visible de recuperación:** Microrrelato original de recuperación: Una directora propone retirar el huerto. Bruno muestra los registros del curso. La directora acepta conversar con los estudiantes, sin anunciar todavía una decisión sobre el huerto.
+
+**Tarea nueva del estudiante:** ¿Qué hace Bruno y qué efecto se informa?
+
+**Apoyo 1, si no identifica información:** Buscar estas expresiones del recurso nuevo: «Muestra»; «registros»; «directora»; «acepta». Señalar las palabras del caso que permiten responder, sin mostrar la solución.
+
+**Apoyo 2, si no relaciona las pistas:** Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.
+
+**Apoyo 3 y modelo privado, después de un intento con las pistas:** Muestra registros; la directora acepta conversar. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
+
+**Criterio de salida de esta práctica:** Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta.
 
 **Reintento completo:** Después de releer el recurso, responde de nuevo: ¿Qué acción apoya el deseo de Jimmy de conservar a Robutt?
 
@@ -223,11 +265,11 @@ Jimmy comparte juegos con Robutt y se siente acompañado por él. En una travesu
 
 **Explicación formativa:** El recurso muestra la postura de Jimmy, pero no informa una nueva decisión del padre.
 
-**Análisis de alternativas:**
-- A: El final no cuenta que el padre prometa conservar a los dos perros.
-- B: El recurso no informa que el perro vivo regrese a la Tierra.
-- C: El final no cuenta que Robutt se marche con otro niño.
-- D: Coincide con la información del recurso.
+**Análisis de alternativas, privado; mostrar solo el feedback de la opción elegida tras responder:**
+- A: La opción «El padre promete conservar los dos perros» no coincide con lo que pide este reactivo. Contrástala con «Jimmy reafirma su afecto, sin una decisión posterior del padre». El recurso muestra la postura de Jimmy, pero no informa una nueva decisión del padre.
+- B: La opción «El perro vivo regresa a la Tierra» no coincide con lo que pide este reactivo. Contrástala con «Jimmy reafirma su afecto, sin una decisión posterior del padre». El recurso muestra la postura de Jimmy, pero no informa una nueva decisión del padre.
+- C: La opción «Robutt se marcha con otro niño» no coincide con lo que pide este reactivo. Contrástala con «Jimmy reafirma su afecto, sin una decisión posterior del padre». El recurso muestra la postura de Jimmy, pero no informa una nueva decisión del padre.
+- D: La respuesta «Jimmy reafirma su afecto, sin una decisión posterior del padre» coincide con el criterio. El recurso muestra la postura de Jimmy, pero no informa una nueva decisión del padre.
 
 ### Recuperación 3
 
@@ -236,6 +278,20 @@ Jimmy comparte juegos con Robutt y se siente acompañado por él. En una travesu
 **Enseñanza:** El recurso muestra la postura de Jimmy, pero no informa una nueva decisión del padre.
 
 **Pista:** Lee el final y separa lo que sí cuenta sobre Jimmy de la decisión posterior del padre, que no aparece.
+
+**Nueva práctica antes del reintento:**
+
+**Recurso visible de recuperación:** Microrrelato original de recuperación: Una directora propone retirar el huerto. Bruno muestra los registros del curso. La directora acepta conversar con los estudiantes, sin anunciar todavía una decisión sobre el huerto.
+
+**Tarea nueva del estudiante:** ¿Puedes asegurar que el huerto se conserva? Explica el límite.
+
+**Apoyo 1, si no identifica información:** Buscar estas expresiones del recurso nuevo: «decisión». Señalar las palabras del caso que permiten responder, sin mostrar la solución.
+
+**Apoyo 2, si no relaciona las pistas:** Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.
+
+**Apoyo 3 y modelo privado, después de un intento con las pistas:** No; se informa conversación, no la decisión final. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
+
+**Criterio de salida de esta práctica:** Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta.
 
 **Reintento completo:** Después de releer el recurso, responde de nuevo: ¿Qué conclusión respeta el límite del final?
 
@@ -356,3 +412,31 @@ Jimmy comparte juegos con Robutt y se siente acompañado por él. En una travesu
 **Texto visible:** Estrategia y puente. Explica el efecto con evidencia y practica
 
 **Locución:** Recuerda seguir la acción, ubicar la respuesta y explicar su efecto con una pista. En la práctica usarás el mismo método, revisarás tus respuestas y cerrarás con la idea central.
+
+
+## Contrato de revisión y correspondencia pedagógica
+
+**Versión de fuente:** R1 · revisión autorizada 17-10-2026, 11:55 America/Santiago. Fecha de autorización, no certificación de publicación. SHA-256 completo en manifest de esta entrega; no incrustar una huella autorreferente. Estado: CORREGIDA PARA REVISIÓN · NO SINCRONIZADA · NO APROBADA.
+
+**Reglas aplicadas:** Manual Maestro v2.0, secciones 14–19; Global de Lecciones v1.2, U01–U14; plan vigente de la asignatura. Los códigos IE son identificadores internos: sus descriptores y cobertura están en la matriz del paquete, no se presentan como nomenclatura oficial MINEDUC. Se conservan los encabezados previos para no suponer compatibilidad del parser.
+
+**Autoría e integración:** Este CLASE[NN].md es la fuente editable del paquete revisado. TS/JSON/DOCX y manifest son derivados de esta misma versión, conforme a U03; no editar esos derivados por separado ni tratar el TS anterior como autoridad para revertir esta corrección. Actualizar Drive no acredita sincronización. Antigravity debe informar campos no representables y demostrar el mapeo antes de importar; no usar valores por defecto ni placeholders.
+
+| Función del Manual | Sección de esta fuente | Rol y momento |
+|---|---|---|
+| Conexión | Situación inicial / punto de partida | Estudiante: recurso y pregunta; respuesta de referencia privada |
+| Explicación y modelamiento | Explicación / formalización y modelo | Estudiante después del primer intento; conducción del adulto |
+| Práctica guiada | Conversación guiada y caso conjunto | Pregunta primero; pistas solo cuando se necesiten |
+| Práctica autónoma | Aplicación autónoma y transferencia | Estudiante intenta con menor ayuda; criterio privado |
+| Feedback y nuevo intento | Feedback de práctica y recuperación | Explicación según respuesta, nueva práctica, luego reintento |
+| Transferencia | Recurso nuevo de la aplicación autónoma | Estímulo distinto; no mostrar modelo antes del intento |
+| Comprobación final | Miniquiz y evidencia registrada | Tres preguntas; decisión 2/3 y recuperación con 0/1 |
+| Cierre | Síntesis y cierre | Recapitulación, reflexión y continuidad |
+
+**Privacidad y revelación obligatorias:** Respuestas de referencia del punto de partida, respuestas esperadas, claves, análisis de alternativas, modelos de práctica, criterios y apoyos del mentor son privados. El estudiante recibe inicialmente solo recurso, pregunta y alternativas sin marcas de corrección. Revelar feedback de su respuesta después de enviarla; no entregar todas las claves en el payload del rol estudiante. Los modelos explícitos de enseñanza se muestran en el momento de modelamiento. Cada intento autónomo dispone de su pausa antes de revelar criterios. Esta es una especificación: la privacidad efectiva de la App todavía requiere prueba.
+
+**Secuencia de uso:** Preparación del adulto antes de la sesión; conexión y primer intento; motivación; explicación/modelamiento; resolver de manera guiada; intento autónomo con recurso nuevo; feedback; miniquiz; recuperación si corresponde; cierre. La matriz documenta funciones, no renumera la navegación ni impone un nuevo diseño de interfaz.
+
+**Decisión formativa:** 2/3 o 3/3 permite avanzar en la clase según el Manual; con 0/3 o 1/3, explicar el error, ofrecer apoyos, resolver la nueva práctica correspondiente y reintentar. Si vuelve a necesitar ayuda, registrar el apoyo y reforzar el criterio sin aprobar automáticamente. El resultado se acompaña de la evidencia de práctica. El miniquiz no aprueba por sí solo todo el OA.
+
+**Control:** Cero hallazgos críticos o mayores; hasta tres menores enumerados y aceptados por clase. Los recursos audiovisuales pendientes y la integración se registran por separado; no se declara la clase publicada o el OA aprobado desde esta revisión documental. Matemática OA01 y las doce presentaciones terminadas de Lengua y Literatura OA03 permanecen excluidas de cambios.

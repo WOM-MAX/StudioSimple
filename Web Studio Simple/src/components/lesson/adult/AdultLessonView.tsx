@@ -15,6 +15,12 @@ import { GuidedItem } from '../../../types/lesson';
 import { resolveVideoSource } from '../../../lib/video-utils';
 import { getLessonCanonicalKey } from '../../../lib/lesson-repository';
 import {
+  canAccreditLesson,
+  finalizeLessonSession,
+  retestMiniquiz,
+  evaluateOpenRecoveryTask
+} from '../../../lib/lesson-session';
+import {
   ArrowRight,
   ArrowLeft,
   ArrowDown,
@@ -189,7 +195,7 @@ export const AdultLessonView: React.FC = () => {
   const { setViewMode, authSession, markLessonCompleted } = useApp();
 
   useEffect(() => {
-    if (session.stage === 'completed' && lessonData?.metadata) {
+    if (session.stage === 'completed' && canAccreditLesson(session) && lessonData?.metadata) {
       const canonicalKey = getLessonCanonicalKey(
         lessonData.metadata.grade,
         lessonData.metadata.subject,
@@ -198,7 +204,7 @@ export const AdultLessonView: React.FC = () => {
       );
       markLessonCompleted(canonicalKey);
     }
-  }, [session.stage, lessonData?.metadata, markLessonCompleted]);
+  }, [session.stage, session.miniScore, lessonData?.metadata, markLessonCompleted]);
 
   const handleSupport = (text: string) => {
     updateSession({ feedback: { kind: 'support', text }, attempt: 1, supportCount: session.supportCount + 1 });
@@ -1451,7 +1457,40 @@ export const AdultLessonView: React.FC = () => {
                 ) : !answered ? (
                   <div className="flex items-center justify-center gap-3 text-sm text-[#12a1a4] font-semibold mt-6 py-4 bg-[#f0fbfb] rounded-xl border border-[#d2f0f0]">
                     <span className="w-2.5 h-2.5 rounded-full bg-[#12a1a4] animate-ping" />
-                    <span>El estudiante está respondiendo en su pantalla...</span>
+                    <span>El estudiante está trabajando en su cuaderno...</span>
+                  </div>
+                ) : item.kind === 'open_response' || !item.options || item.options.length === 0 ? (
+                  <div className="mt-6 space-y-4">
+                    <div className="bg-[#f0fbfb] border border-[#b2e4e4] rounded-2xl p-4 text-xs sm:text-sm text-[#1c3257]">
+                      <strong className="text-[#12a1a4] uppercase tracking-wider block mb-1 text-xs">Pauta privada del mentor (no visible para el estudiante):</strong>
+                      <p className="font-semibold mb-2">{item.correctText}</p>
+                      {item.fixText && (
+                        <p className="text-xs text-[#526177]"><span className="font-bold">Apoyo pedagógico:</span> {item.fixText}</p>
+                      )}
+                    </div>
+
+                    <div className="flex flex-col sm:flex-row items-center gap-3 pt-2">
+                      <button
+                        type="button"
+                        onClick={() => {
+                          updateSession(evaluateOpenRecoveryTask(true));
+                          handleNext();
+                        }}
+                        className="w-full sm:w-auto bg-[#255e29] hover:bg-[#1e4b21] text-white font-bold px-6 py-3 rounded-xl text-sm transition-all shadow-md cursor-pointer flex items-center justify-center gap-2"
+                      >
+                        <span>✓ Cumple el criterio (Acierto)</span>
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          updateSession(evaluateOpenRecoveryTask(false));
+                          handleNext();
+                        }}
+                        className="w-full sm:w-auto bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl text-sm transition-all shadow-md cursor-pointer flex items-center justify-center gap-2"
+                      >
+                        <span>{isLast ? 'Finalizar sesión (Requiere apoyo)' : 'Continuar con apoyo'}</span>
+                      </button>
+                    </div>
                   </div>
                 ) : (
                   <div className="mt-6">
@@ -1461,7 +1500,10 @@ export const AdultLessonView: React.FC = () => {
                     <div className="flex justify-end mt-8 pt-4 border-t border-[#dce2e6]">
                       <button
                         type="button"
-                        onClick={handleNext}
+                        onClick={() => {
+                          if (isCorrect) (session as any).recoveryPassed = true;
+                          handleNext();
+                        }}
                         className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
                       >
                         <span>{isLast ? 'Finalizar refuerzo' : 'Siguiente refuerzo'}</span>
@@ -1504,26 +1546,44 @@ export const AdultLessonView: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex justify-end mt-8 pt-4 border-t border-[#dce2e6]">
-                <button
-                  type="button"
-                  onClick={() => {
-                    if (lessonData?.metadata) {
-                      const canonicalKey = getLessonCanonicalKey(
-                        lessonData.metadata.grade,
-                        lessonData.metadata.subject,
-                        lessonData.metadata.oaCode,
-                        lessonData.metadata.lessonNumber
-                      );
-                      markLessonCompleted(canonicalKey);
-                    }
-                    updateSession({ stage: 'completed' });
-                  }}
-                  className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-8 py-3.5 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
-                >
-                  <span>Finalizar clase</span>
-                  <Check className="w-4 h-4" />
-                </button>
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-8 pt-4 border-t border-[#dce2e6]">
+                <div className="text-xs text-[#526177]">
+                  {session.miniScore >= 2 ? (
+                    <span className="text-[#255e29] font-bold">✓ Criterio de logro acreditado ({session.miniScore}/3 aciertos).</span>
+                  ) : (
+                    <span className="text-[#924814] font-semibold">⚠ Clase pendiente de consolidación: requiere al menos 2/3 aciertos tras reintento para acreditar logro.</span>
+                  )}
+                </div>
+                <div className="flex flex-wrap items-center gap-3">
+                  {session.miniScore < 2 && (
+                    <button
+                      type="button"
+                      onClick={() => updateSession(retestMiniquiz(session))}
+                      className="bg-white hover:bg-slate-50 border-2 border-[#badcb8] rounded-xl px-4 py-3 text-xs font-bold text-[#255e29] transition-all cursor-pointer flex items-center gap-2"
+                    >
+                      <span>↺ Reintentar comprobación (Miniquiz)</span>
+                    </button>
+                  )}
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (lessonData?.metadata) {
+                        const canonicalKey = getLessonCanonicalKey(
+                          lessonData.metadata.grade,
+                          lessonData.metadata.subject,
+                          lessonData.metadata.oaCode,
+                          lessonData.metadata.lessonNumber
+                        );
+                        finalizeLessonSession(session, canonicalKey, markLessonCompleted);
+                      }
+                      updateSession({ stage: 'completed' });
+                    }}
+                    className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-8 py-3.5 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                  >
+                    <span>{canAccreditLesson(session) ? 'Finalizar y registrar clase lograda' : 'Finalizar sesión (sin acreditar logro)'}</span>
+                    <Check className="w-4 h-4" />
+                  </button>
+                </div>
               </div>
             </div>
           )}

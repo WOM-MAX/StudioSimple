@@ -22,7 +22,7 @@ Explicar los aspectos biológicos, afectivos y sociales que se integran en la se
 
 **Explicar que la sexualidad comprende más que el aspecto físico, identificando las cinco dimensiones que presenta el Texto Escolar y relacionándolas con los aspectos biológicos, afectivos y sociales señalados en el OA.**
 
-**Resultado observable:** El estudiante identifica las dimensiones física, intelectual, social, emocional y espiritual en una situación ficticia y explica por qué reducir la sexualidad a lo físico entrega una visión incompleta.
+**Resultado observable:** El estudiante identifica las cinco dimensiones en el esquema del libro; reconoce las que tienen pistas en un caso ficticio y explica por qué reducir la sexualidad a lo físico entrega una visión incompleta.
 
 ### Alcance
 
@@ -38,7 +38,7 @@ Esta primera clase se concentra en el concepto integral de sexualidad de la pág
 
 **Pautas para el mentor:**
 
-1. Abre la página original impresa 116 antes de presentar el esquema.
+1. Presenta la tabla textual de cinco dimensiones incluida en esta clase; puedes consultar también la página original impresa 116 / PDF físico 118.
 2. Explica los términos con calma y usa los ejemplos de esta lección.
 3. La página organiza el tema en cinco dimensiones: física, intelectual, social, emocional y espiritual.
 4. El OA expresa su aprendizaje mediante tres aspectos integrados: biológico, afectivo y social. Son dos marcos de organización relacionados; no reemplaces las cinco etiquetas del libro por una lista distinta.
@@ -73,7 +73,7 @@ Esta primera clase se concentra en el concepto integral de sexualidad de la pág
 
 ### Recurso de partida
 
-**Recurso visible:** Página original del Texto Escolar, impresa 116 / PDF físico 118, con el esquema de cinco dimensiones.
+**Recurso visible:** Tabla textual de cinco dimensiones incluida en el Paso 3 de esta clase. La página original impresa 116 / PDF físico 118 queda disponible como consulta opcional.
 
 **DILE:** “Mira el esquema. ¿Qué dimensiones nombra el libro?”
 
@@ -87,113 +87,29 @@ Esta primera clase se concentra en el concepto integral de sexualidad de la pág
 
 **Retroalimentación sin respuesta:** “Abramos el esquema original y recorramos juntos cada rótulo.”
 
-## 4. Paso 3 — Gancho y explicación en 14 láminas
+## 4. Paso 3 — Motivación y explicación en dos presentaciones
 
-### Dirección visual compartida
+Esta clase utiliza exactamente siete diapositivas de MOTIVACION y siete de EXPLICACION. Los guiones únicos vigentes se encuentran al final de este archivo. Esta revisión sustituye la pauta audiovisual anterior de esta sección y el apéndice antiguo de 7+17; no sustituye las etapas interactivas.
 
-Formato 16:9. Anime educativo moderno, limpio, luminoso e inclusivo. Mantener los dos jóvenes guías de EstudioSimple consistentes. Mostrar situaciones cotidianas ficticias, símbolos y expresiones respetuosas; no usar imágenes íntimas ni primeros planos corporales. No presentar estereotipos de género como hechos. No dibujar texto en la imagen: rótulos se agregan como texto nativo. Subtítulos de 48 pt, alto contraste, sin sombra; evitar cortinas negras, carteles grandes y párrafos.
+La dirección visual y la producción siguen el Plan Maestro Global de Presentaciones v2.8 y el Plan de Presentaciones de Ciencias v1.6: título Arial negrita 64 pt blanco #FFFFFF; subtítulo Arial negrita 32 pt amarillo #FFD32C; imágenes completas; sin paneles ni sombras para contraste; logo auténtico fijo inferior derecho. Notas limpias: 130–160 palabras en Motivación y 195–240 en Explicación. Duraciones aproximadas de 60 y 90 segundos, estimadas por narración.
 
-### Video gancho — 60 segundos exactos
+El caso se representa mediante la joven de la dupla maestra aprobada y su compañero, sin introducir un tercer personaje narrativo. En la práctica conjunta se conserva el caso canónico con su hermana. El estudiante analiza situaciones ficticias, sin revelar experiencias personales.
 
-#### Lámina 1 · Objetivo de la lección · 8 s
+### Lectura verificada del esquema original
 
-- **Texto visible:** “Objetivo de la lección” / “Reconocer dimensiones y explicar cómo se integran”.
-- **Imagen:** Los dos guías ante un mapa visual de cinco caminos que confluyen, sin palabras generadas dentro de la imagen.
-- **Locución:** “Hoy verás por qué la sexualidad abarca más que el aspecto físico.”
-- **Acción:** Pulsar **Comenzar**.
+Las siguientes asociaciones fueron comprobadas visualmente en la página impresa 116 (PDF físico 118). Son síntesis del esquema, no citas literales.
 
-#### Lámina 2 · Una pregunta amplia · 8 s
+| Dimensión del libro | Descripción de referencia |
+|---|---|
+| Física | Caracteres sexuales primarios y secundarios. |
+| Intelectual | Personalidad, autoconocimiento, convicciones y valores. |
+| Social | Factores del entorno, como amistades y familia. |
+| Emocional | Emociones y sentimientos que inciden en los actos. |
+| Espiritual | Encuentro, experiencia y aceptación de sí; lo que define a la persona y tiene sentido trascendente en su vida. |
 
-- **Texto visible:** “¿Es solo algo físico?”
-- **Imagen:** El estudiante ficticio prepara una presentación; los guías observan con curiosidad.
-- **Locución:** “Una situación cotidiana puede involucrar el cuerpo, emociones, ideas y relaciones.”
-- **Acción:** Elegir **Sí**, **No** o **Quiero pensarlo**.
+En esta clase se mantienen las cinco etiquetas del libro. Se relacionan con los aspectos biológico, afectivo y social del OA sin imponer equivalencias uno a uno. Las cuatro categorías didácticas de la app (biológica, afectiva, social y ética) son un organizador del OA; ética orienta respeto y responsabilidad y no se atribuye como cuarta categoría textual al OA ni como dimensión del diagrama.
 
-#### Lámina 3 · Diferentes pistas · 9 s
-
-- **Texto visible:** “Observa todas las pistas”
-- **Imagen:** En torno a la escena aparecen símbolos de cuerpo, pensamiento, emoción y vínculos.
-- **Locución:** “Mira cuántos aspectos aparecen en una experiencia de una persona.”
-- **Acción:** Tocar una pista para verla destacada.
-
-#### Lámina 4 · El esquema del libro · 9 s
-
-- **Texto visible:** “Cinco dimensiones”
-- **Imagen:** Página original del Texto Escolar como recurso aparte; los guías leen el esquema.
-- **Locución:** “El Texto Escolar organiza la sexualidad en cinco dimensiones.”
-- **Acción:** Abrir la página impresa 116.
-
-#### Lámina 5 · Nombrar y comprender · 9 s
-
-- **Texto visible:** “Física · intelectual · social · emocional · espiritual”
-- **Imagen:** Cinco íconos claros conectados alrededor de una figura humana abstracta y respetuosa.
-- **Locución:** “Cada dimensión aporta una perspectiva; juntas ayudan a comprender a la persona.”
-- **Acción:** El estudiante elige un ícono para escuchar su definición.
-
-#### Lámina 6 · Aspectos que se integran · 9 s
-
-- **Texto visible:** “Biológicos · afectivos · sociales”
-- **Imagen:** Tres bandas translúcidas se cruzan; los cinco íconos del libro permanecen visibles como otro esquema.
-- **Locución:** “El OA destaca aspectos biológicos, afectivos y sociales que se integran.”
-- **Acción:** Relacionar cada palabra con una pista de la situación ficticia.
-
-#### Lámina 7 · Pregunta gancho · 8 s
-
-- **Texto visible:** “¿Qué perderíamos al mirar una sola dimensión?”
-- **Imagen:** Los guías observan un esquema al que le falta una parte; escena conceptual sobria.
-- **Locución:** “Descubramos cómo explicar una visión integral con evidencia.”
-- **Acción:** Pulsar **Ver explicación**.
-
-### Video de explicación — 90 segundos exactos
-
-#### Lámina 8 · El libro organiza cinco dimensiones · 12 s
-
-- **Texto visible:** “Física · intelectual · social · emocional · espiritual”
-- **Imagen:** Esquema original del libro en el panel de lectura; los rótulos se muestran nítidos.
-- **Locución:** “En la página 116, el libro presenta cinco dimensiones. Leamos sus nombres antes de interpretar el esquema.”
-- **Acción:** Seleccionar cada etiqueta para mostrar su descripción.
-
-#### Lámina 9 · Dimensión física · 13 s
-
-- **Texto visible:** “Física: cuerpo y caracteres sexuales”
-- **Imagen:** Ícono abstracto de cuerpo y autocuidado, sin detalles íntimos.
-- **Locución:** “La dimensión física se relaciona con el cuerpo y los caracteres sexuales. Es una parte del concepto, no la totalidad.”
-- **Acción:** Clasificar **aspecto físico**.
-
-#### Lámina 10 · Dimensión emocional · 13 s
-
-- **Texto visible:** “Emocional: emociones y sentimientos”
-- **Imagen:** Personaje ficticio identifica nervios y alegría con expresiones cuidadas.
-- **Locución:** “La dimensión emocional considera emociones y sentimientos que influyen en los actos de las personas.”
-- **Acción:** Emparejar **nervios** y **alegría** con la dimensión emocional.
-
-#### Lámina 11 · Dimensión social · 13 s
-
-- **Texto visible:** “Social: vínculos y contexto”
-- **Imagen:** Personaje conversa con amistades y familia en situaciones cotidianas.
-- **Locución:** “La dimensión social considera factores del entorno, como amistades y familia, que influyen en cómo se vive la sexualidad.”
-- **Acción:** Seleccionar una influencia del entorno en el caso ficticio.
-
-#### Lámina 12 · Intelectual y espiritual · 13 s
-
-- **Texto visible:** “Ideas, autoconocimiento, convicciones y valores”
-- **Imagen:** El personaje reflexiona sobre una decisión y lo que considera importante.
-- **Locución:** “El libro también incluye las dimensiones intelectual y espiritual, relacionadas con autoconocimiento, convicciones, valores y sentido personal.”
-- **Acción:** Elegir qué pista del ejemplo corresponde a una reflexión sobre valores.
-
-#### Lámina 13 · Integración · 13 s
-
-- **Texto visible:** “Una experiencia puede reunir varias dimensiones”
-- **Imagen:** Cinco caminos conectados en una misma escena ficticia.
-- **Locución:** “El OA reúne aspectos biológicos, afectivos y sociales. El libro presenta cinco dimensiones. Podemos relacionar los esquemas sin confundir sus etiquetas.”
-- **Acción:** Construir una conexión: física/biológica, emocional/afectiva, social/social; reconocer que la experiencia también puede implicar ideas y valores.
-
-#### Lámina 14 · Idea clave · 13 s
-
-- **Texto visible:** “Integral significa considerar varias dimensiones”
-- **Imagen:** Los dos guías completan el mapa conceptual y resaltan sus conexiones.
-- **Locución:** “Una explicación integral considera más de una dimensión y reconoce cómo se relacionan en la vida de las personas.”
-- **Acción:** Pulsar **Conversar**.
+Para clasificar el caso, usar las pistas explícitas: nervios, conversación y reflexión sobre valores. No inferir la dimensión intelectual solo de la palabra «pensar», ni forzar las cinco dimensiones en un caso que no las demuestra. No atribuir caracteres sexuales a partir de una postura o de la vestimenta.
 
 ## 5. Paso 4 — Conversación guiada
 
@@ -210,12 +126,12 @@ Formato 16:9. Anime educativo moderno, limpio, luminoso e inclusivo. Mantener lo
 ### Pregunta 2 · Interpretar un ejemplo
 
 - **Contexto:** Caso ficticio del personaje que prepara una presentación y conversa con alguien de confianza.
-- **DILE:** “¿Qué dimensiones aparecen cuando siente nervios, piensa qué decir y conversa con una persona cercana?”
-- **Respuesta esperada:** Emocional (nervios), intelectual (pensar qué decir) y social (interacción con otra persona). Puede haber más de una dimensión relacionada con un mismo hecho si lo explica.
-- **Revelación para el mentor:** La clasificación depende de la pista: nervios corresponde a lo emocional, pensar a lo intelectual y conversar con alguien a lo social.
+- **DILE:** “¿Qué dimensiones aparecen cuando siente nervios, reflexiona sobre una idea que valora expresar y conversa con una persona cercana?”
+- **Respuesta esperada:** Emocional (nervios), intelectual (reflexionar sobre una idea que valora expresar) y social (interacción con otra persona). Puede haber más de una dimensión relacionada con un mismo hecho si lo explica.
+- **Revelación para el mentor:** La clasificación depende de la pista: nervios corresponde a lo emocional, reflexionar sobre valores a lo intelectual, según la descripción de este libro y conversar con alguien a lo social.
 - **Éxito:** Señala dos dimensiones y vincula cada una con una pista.
-- **Apoyo:** “¿Qué siente? ¿Qué piensa? ¿Con quién interactúa?”
-- **Revelación estudiante:** “Aparecen las dimensiones emocional, intelectual y social: siente nervios, organiza sus ideas y conversa con otra persona.”
+- **Apoyo:** “¿Qué siente? ¿Qué idea valora expresar? ¿Con quién interactúa?”
+- **Revelación estudiante:** “Aparecen las dimensiones emocional, intelectual y social: siente nervios, reflexiona sobre una idea que valora expresar y conversa con otra persona.”
 
 ### Pregunta 3 · Explicar integración
 
@@ -239,7 +155,7 @@ Formato 16:9. Anime educativo moderno, limpio, luminoso e inclusivo. Mantener lo
 
 **HAZ:** Clasifica el caso ficticio: “Una persona se siente nerviosa, conversa con una amiga y piensa qué decisión coincide con sus valores.”
 
-**Respuesta de referencia:** Emocional (nervios), social (conversa con una amiga) e intelectual (reflexiona sobre una decisión y sus valores). La dimensión espiritual puede reconocerse si el caso incorpora autoconocimiento, aceptación de sí o sentido personal, aspectos asociados a esa dimensión en la página.
+**Respuesta de referencia:** Emocional (nervios), social (conversa con una amiga) e intelectual (reflexiona sobre una decisión y sus valores). Para intelectual y espiritual, consultar las etiquetas y descripciones del esquema original. No exigir una clasificación única de una reflexión personal sin una pista suficiente.
 
 ## 7. Paso 5B — Comprobación
 
@@ -265,9 +181,9 @@ Formato 16:9. Anime educativo moderno, limpio, luminoso e inclusivo. Mantener lo
 - **Datos:** El libro presenta cinco dimensiones y una breve descripción de cada una.
 - **Pregunta:** “Copia los cinco nombres y escribe junto a cada uno una palabra o frase clave del esquema.”
 - **Procedimiento:** Leer cada etiqueta; resumir su definición con una palabra propia; comparar con la página.
-- **Respuesta de referencia:** Física–cuerpo; intelectual–personalidad/autoconocimiento; social–amigos/familia; emocional–sentimientos; espiritual–aceptación/sentido personal.
+- **Respuesta de referencia:** Física–cuerpo; intelectual–personalidad/autoconocimiento/convicciones/valores; social–amigos/familia; emocional–sentimientos; espiritual–aceptación de sí/sentido trascendente, respetando las etiquetas impresas en el esquema original.
 - **Criterio:** Las cinco categorías son correctas y cada frase representa la descripción de la página.
-- **Apoyo:** Usar los cinco íconos interactivos como guía.
+- **Apoyo:** Usar las cinco filas de la tabla textual de dimensiones incluida en esta clase. Los íconos son opcionales; no dependen de un recurso de cuatro categorías.
 
 ### Caso 2 · Analizar una situación ficticia
 
@@ -275,9 +191,25 @@ Formato 16:9. Anime educativo moderno, limpio, luminoso e inclusivo. Mantener lo
 - **Datos:** Hay emociones, interacción social, ideas y reflexión personal.
 - **Pregunta:** “Identifica tres dimensiones presentes y explica qué pista corresponde a cada una.”
 - **Procedimiento:** Subrayar pistas; asignar una dimensión; completar “Lo relaciono con ___ porque ___.”
-- **Respuesta de referencia:** Emocional (nervios), social (conversación) e intelectual (reflexión sobre ideas y valores). La dimensión espiritual se reconoce en la página por autoconocimiento, aceptación de sí y sentido personal; no se infiere solo por nombrar valores.
+- **Respuesta de referencia:** Emocional (nervios), social (conversación) e intelectual (reflexión sobre valores). Las etiquetas y descripciones de intelectual y espiritual se verifican directamente en el esquema original; aceptar una asociación justificada sin inferirla solo por una palabra aislada.
 - **Criterio:** Relaciona pistas concretas con dimensiones correctamente.
 - **Apoyo:** Preguntar: “¿Qué siente? ¿Con quién interactúa? ¿Qué piensa o valora?”
+
+
+
+### Aplicación autónoma y transferencia
+
+**Recurso nuevo visible para el estudiante:** Caso ficticio nuevo: Luz participa en un taller. Siente alegría al colaborar, conversa con sus compañeros y decide expresar una convicción que considera importante. El caso no describe cambios corporales ni una búsqueda de sentido trascendente.
+
+**Actividad del estudiante:** Identifica tres dimensiones que tengan una pista explícita y explica por qué no corresponde forzar las cinco en este caso. Después nombra las cinco del esquema, diferenciando el esquema completo de las pistas del caso.
+
+**Momento:** Intento individual breve antes del miniquiz, sin respuesta modelo visible. El recurso de consulta permanece disponible. No exigir memorizar.
+
+**Criterio privado del mentor, revelar solo después del intento:** Emocional: alegría; social: conversación; intelectual: convicción. El esquema completo añade física y espiritual, pero el caso no aporta pistas suficientes para esas dos. Una mirada integral relaciona dimensiones sin inventar evidencias.
+
+**Cómo valorar:** Comprobar cada elemento pedido y su evidencia; aceptar formulaciones equivalentes. Si falta una relación, pedir que señale la pista y explique qué demuestra; después ofrecer el modelo y un nuevo intento. Registrar respuesta, apoyos y criterio por reforzar.
+
+**Por qué transfiere:** Cambia el estímulo y exige aplicar el criterio de esta clase; no reproduce el caso ya resuelto.
 
 ## 9. Paso 7 — Miniquiz
 
@@ -316,9 +248,57 @@ Formato 16:9. Anime educativo moderno, limpio, luminoso e inclusivo. Mantener lo
 
 ### Recuperación formativa
 
-- **Si necesita apoyo en el reactivo 1:** Abrir página 116 y recorrer las cinco etiquetas; después seleccionar la lista que coincide.
-- **Si necesita apoyo en el reactivo 2:** Clasificar cuatro tarjetas: cuerpo, sentimientos, vínculos e ideas; explicar por qué la primera no basta.
-- **Si necesita apoyo en el reactivo 3:** Volver a la definición del libro y buscar las palabras “amigos” y “familia”; elegir la dimensión que las incluye.
+Con 0/3 o 1/3: explicación del error, apoyos graduados, nueva práctica y reintento. Con 2/3 o 3/3, avanzar y registrar cualquier criterio por reforzar. Las claves D–B–C del miniquiz se conservan privadas.
+
+#### Nueva práctica para el reactivo 1
+
+**Nueva práctica antes del reintento:**
+
+**Recurso visible de recuperación:** Caso nuevo de recuperación: Noa siente entusiasmo, conversa con su familia y reflexiona sobre sus convicciones. El esquema de consulta nombra física, intelectual, social, emocional y espiritual.
+
+**Tarea nueva del estudiante:** Escribe las cinco etiquetas del esquema sin sustituirlas por los tres aspectos del OA.
+
+**Apoyo 1, si no identifica información:** Buscar estas expresiones del recurso nuevo: «Física»; «intelectual»; «social»; «emocional». Señalar las palabras del caso que permiten responder, sin mostrar la solución.
+
+**Apoyo 2, si no relaciona las pistas:** Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.
+
+**Apoyo 3 y modelo privado, después de un intento con las pistas:** Física, intelectual, social, emocional y espiritual. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
+
+**Criterio de salida de esta práctica:** Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta.
+
+#### Nueva práctica para el reactivo 2
+
+**Nueva práctica antes del reintento:**
+
+**Recurso visible de recuperación:** Caso nuevo de recuperación: Noa siente entusiasmo, conversa con su familia y reflexiona sobre sus convicciones. El esquema de consulta nombra física, intelectual, social, emocional y espiritual.
+
+**Tarea nueva del estudiante:** Explica qué quedaría sin analizar si solo miráramos el cuerpo en este caso.
+
+**Apoyo 1, si no identifica información:** Buscar estas expresiones del recurso nuevo: «entusiasmo»; «convicciones»; «emocional»; «social». Señalar las palabras del caso que permiten responder, sin mostrar la solución.
+
+**Apoyo 2, si no relaciona las pistas:** Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.
+
+**Apoyo 3 y modelo privado, después de un intento con las pistas:** Quedarían fuera el entusiasmo, la conversación y la reflexión sobre convicciones; corresponden a dimensiones emocional, social e intelectual. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
+
+**Criterio de salida de esta práctica:** Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta.
+
+#### Nueva práctica para el reactivo 3
+
+**Nueva práctica antes del reintento:**
+
+**Recurso visible de recuperación:** Caso nuevo de recuperación: Noa siente entusiasmo, conversa con su familia y reflexiona sobre sus convicciones. El esquema de consulta nombra física, intelectual, social, emocional y espiritual.
+
+**Tarea nueva del estudiante:** ¿Qué pista permite reconocer la dimensión social y cuál corresponde a la intelectual?
+
+**Apoyo 1, si no identifica información:** Buscar estas expresiones del recurso nuevo: «familia»; «social»; «convicciones»; «intelectual». Señalar las palabras del caso que permiten responder, sin mostrar la solución.
+
+**Apoyo 2, si no relaciona las pistas:** Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.
+
+**Apoyo 3 y modelo privado, después de un intento con las pistas:** La conversación con la familia es social; la reflexión sobre convicciones es intelectual. No basta la palabra pensar por sí sola. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
+
+**Criterio de salida de esta práctica:** Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta.
+
+Después de completar la nueva práctica, reabrir el miniquiz y registrar aciertos, intento y apoyos. No sustituir la práctica por elegir una instrucción de ayuda.
 
 ## 10. Paso 8 — Síntesis y cierre
 
@@ -334,7 +314,7 @@ Formato 16:9. Anime educativo moderno, limpio, luminoso e inclusivo. Mantener lo
 
 **Celebración:** “¡Buen trabajo! Reconociste distintas dimensiones y explicaste por qué se relacionan.”
 
-**Puente a la siguiente clase:** “En la próxima clase estudiaremos los cambios físicos y emocionales durante la pubertad con información del texto.”
+**Puente a la siguiente clase:** “En la próxima clase estudiaremos los cambios físicos y sus distintos ritmos; después profundizaremos en emociones y afectividad.”
 
 ## 11. Trazabilidad y carga
 
@@ -345,4 +325,177 @@ Formato 16:9. Anime educativo moderno, limpio, luminoso e inclusivo. Mantener lo
 - **Regla de evaluación:** No pedir datos íntimos ni experiencias personales. Evaluar identificación y explicación a partir del recurso y del caso ficticio.
 - **Integración:** Curso 110-7; asignatura Ciencias_Naturales; OA01; Clase01; estado EN_REVISION / WORK_PRE_APROBACION.
 - **Verificación en la App:** Abrir la página original, comprobar que las cinco etiquetas se leen correctamente, probar las acciones interactivas y verificar que la retroalimentación acepta asociaciones justificadas.
-- **Rol de Antigravity:** Cargar este archivo en el editor y comprobar su visualización. Mantener el contenido curricular tal como está. Si algún campo no es compatible, informar cuál es y dónde aparece, sin reemplazarlo por contenido nuevo.
+- **Rol de Antigravity:** Cargar este archivo en el editor y comprobar su visualización. Conservar el contenido curricular de esta revisión; sustituye la clave invertida de intelectual y espiritual y las pautas audiovisuales antiguas. Mantener el miniquiz, las tres claves y su feedback sin cambios. Si algún campo no es compatible, informar cuál es y dónde aparece, sin reemplazarlo por contenido nuevo.
+
+
+
+## Recursos disponibles para esta entrega
+
+El esquema textual completo está incluido en la tabla de cinco dimensiones de esta fuente. Consulta opcional del original: [Texto Escolar, PDF físico 118 / página impresa 116](https://drive.google.com/file/d/1F_bd0rzd7VV_ZhttGuLRV9WlxJQzAvlD/view). No depender del archivo relativo CIE-OA01-ESQUEMA.png, que no se localizó en esta carpeta.
+
+
+## Trazabilidad de esta entrega
+
+**OA:** 7B-CNA-OA01. **Fuente curricular:** base curricular verificada de 7° Básico, temario de Exámenes Libres.
+
+**Texto Escolar:** https://drive.google.com/file/d/1F_bd0rzd7VV_ZhttGuLRV9WlxJQzAvlD/view. **Páginas físicas PDF:** 118. Las síntesis no se presentan como citas literales.
+
+**Integración pendiente:** Antigravity materializa esta entrega en la fuente canónica y comprueba su visualización. Este archivo no certifica por sí solo funcionamiento en la App.
+
+**Aprobación:** exclusivamente Walter.
+
+## Guiones audiovisuales vigentes — revisión de 17-10-2026
+
+Única pauta audiovisual de esta clase: siete láminas de MOTIVACION y siete de EXPLICACION. Sustituye las pautas anteriores de 48 pt, tiempos exactos y 7+17. El objetivo y el miniquiz se conservan.
+
+### MOTIVACION
+
+#### Diapositiva 01 — Un caso cotidiano
+
+**Título:** Un caso / cotidiano
+
+**Subtítulo:** ¿Qué aspectos / aparecen?
+
+**Locución:** En este caso ficticio, la estudiante prepara una presentación y conversa con un compañero de confianza. Observemos las pistas antes de explicar qué significan.
+
+#### Diapositiva 02 — Distintas pistas
+
+**Título:** Distintas / pistas
+
+**Subtítulo:** Observa sin / suponer
+
+**Locución:** En la historia, la estudiante dice que siente nervios y piensa qué idea valora expresar. Tenemos pistas distintas, pero todavía no las clasificaremos.
+
+#### Diapositiva 03 — Mirada parcial
+
+**Título:** Mirada / parcial
+
+**Subtítulo:** ¿Basta mirar / el cuerpo?
+
+**Locución:** Si miramos únicamente el cuerpo, ¿entendemos también sus emociones y su conversación? Pensemos qué detalles quedarían fuera al observar una sola parte.
+
+#### Diapositiva 04 — Busca pistas
+
+**Título:** Busca / pistas
+
+**Subtítulo:** ¿Qué podemos / describir?
+
+**Locución:** Revisemos sus apuntes y lo que cuenta el relato. ¿Qué hace, qué siente y con quién conversa? Describamos esas pistas sin añadir suposiciones.
+
+#### Diapositiva 05 — Ordena las pistas
+
+**Título:** Ordena / las pistas
+
+**Subtítulo:** ¿Qué recurso puede / ayudar?
+
+**Locución:** Para ordenar las pistas necesitamos un criterio. ¿Qué recurso podría ayudarnos a relacionarlas con cuidado y explicar mejor la situación?
+
+#### Diapositiva 06 — Mirada integral
+
+**Título:** Mirada / integral
+
+**Subtítulo:** ¿Qué significa mirar / integralmente?
+
+**Locución:** ¿Qué significa explicar la sexualidad de manera integral? Dejemos abierta la pregunta mientras buscamos una herramienta para reconocer y relacionar las pistas.
+
+#### Diapositiva 07 — Pregunta abierta
+
+**Título:** Pregunta / abierta
+
+**Subtítulo:** Revisemos ahora el / esquema original
+
+**Locución:** Ahora consultaremos el esquema del Texto Escolar. Buscaremos una explicación que considere la situación completa.
+
+### EXPLICACION
+
+#### Diapositiva 01 — Objetivo
+
+**Título:** Objetivo
+
+**Subtítulo:** Comprender una / visión integral
+
+**Locución:** Explicar que la sexualidad comprende más que el aspecto físico, identificando las cinco dimensiones que presenta el Texto Escolar y relacionándolas con los aspectos biológicos, afectivos y sociales señalados en el OA.
+
+#### Diapositiva 02 — El esquema
+
+**Título:** El esquema
+
+**Subtítulo:** Cinco dimensiones / del Texto Escolar
+
+**Modelo editable:** Física — cuerpo; Intelectual — valores; Social — entorno; Emocional — emociones; Espiritual — aceptación. Las pistas breves no sustituyen las descripciones completas de la narración y del esquema original.
+
+**Locución:** En el libro, física se refiere a caracteres sexuales primarios y secundarios; emocional, a emociones y sentimientos; social, a amistades y familia. Intelectual incluye personalidad, autoconocimiento, convicciones y valores. Espiritual considera aceptación de sí y sentido trascendente.
+
+#### Diapositiva 03 — Del libro al OA
+
+**Título:** Del libro / al OA
+
+**Subtítulo:** Relaciona ambos / marcos
+
+**Relaciones visibles:** Cuerpo: biológico; Emociones: afectivo; Vínculos: social.
+
+**Locución:** El cuerpo se relaciona con lo biológico, las emociones con lo afectivo y los vínculos con lo social. Las cinco dimensiones del libro conservan sus nombres; no son equivalencias exactas.
+
+#### Diapositiva 04 — Un caso ficticio
+
+**Título:** Un caso / ficticio
+
+**Subtítulo:** Nervios: / dimensión emocional
+
+**Locución:** Retomemos a la estudiante ficticia: prepara una presentación, siente nervios, conversa con alguien de confianza y reflexiona sobre sus valores. Los nervios son una emoción; por eso corresponden a la dimensión emocional.
+
+#### Diapositiva 05 — Valores y vínculos
+
+**Título:** Valores / y vínculos
+
+**Subtítulo:** Valores: intelectual / Conversación: social
+
+**Locución:** La conversación muestra un vínculo: dimensión social. Reflexionar sobre valores corresponde a intelectual según este esquema. Así, identificamos tres pistas y justificamos cada relación, sin atribuir otras dimensiones que el caso no demuestra.
+
+#### Diapositiva 06 — No es solo física
+
+**Título:** No es solo / física
+
+**Subtítulo:** Lo físico no explica / todas las pistas
+
+**Locución:** Decir que esta experiencia es solo física omite sus emociones, vínculos y valores. Esas pistas justifican una explicación integral.
+
+#### Diapositiva 07 — Una visión integral
+
+**Título:** Una visión / integral
+
+**Subtítulo:** Relaciona las pistas / y justifica
+
+**Locución:** Una explicación integral relaciona dimensiones con pistas del caso. En la práctica leeremos el esquema original y justificaremos nuestras asociaciones.
+
+## Control de esta revisión
+
+Autorización de reparación de Walter: 17-10-2026, 09:32 America/Santiago. Corrección de fuente y producción: Sol; esfuerzo Máximo confirmado por Walter en la interfaz. Se mantiene EN_REVISION / WORK_PRE_APROBACION. La revisión del PPTX no acredita integración en la app ni aprobación curricular.
+
+
+## Contrato de revisión y correspondencia pedagógica
+
+**Versión de fuente:** R1 · revisión autorizada 17-10-2026, 11:55 America/Santiago. Fecha de autorización, no certificación de publicación. SHA-256 completo en manifest de esta entrega; no incrustar una huella autorreferente. Estado: CORREGIDA PARA REVISIÓN · NO SINCRONIZADA · NO APROBADA.
+
+**Reglas aplicadas:** Manual Maestro v2.0, secciones 14–19; Global de Lecciones v1.2, U01–U14; plan vigente de la asignatura. Los códigos IE son identificadores internos: sus descriptores y cobertura están en la matriz del paquete, no se presentan como nomenclatura oficial MINEDUC. Se conservan los encabezados previos para no suponer compatibilidad del parser.
+
+**Autoría e integración:** Este CLASE[NN].md es la fuente editable del paquete revisado. TS/JSON/DOCX y manifest son derivados de esta misma versión, conforme a U03; no editar esos derivados por separado ni tratar el TS anterior como autoridad para revertir esta corrección. Actualizar Drive no acredita sincronización. Antigravity debe informar campos no representables y demostrar el mapeo antes de importar; no usar valores por defecto ni placeholders.
+
+| Función del Manual | Sección de esta fuente | Rol y momento |
+|---|---|---|
+| Conexión | Situación inicial / punto de partida | Estudiante: recurso y pregunta; respuesta de referencia privada |
+| Explicación y modelamiento | Explicación / formalización y modelo | Estudiante después del primer intento; conducción del adulto |
+| Práctica guiada | Conversación guiada y caso conjunto | Pregunta primero; pistas solo cuando se necesiten |
+| Práctica autónoma | Aplicación autónoma y transferencia | Estudiante intenta con menor ayuda; criterio privado |
+| Feedback y nuevo intento | Feedback de práctica y recuperación | Explicación según respuesta, nueva práctica, luego reintento |
+| Transferencia | Recurso nuevo de la aplicación autónoma | Estímulo distinto; no mostrar modelo antes del intento |
+| Comprobación final | Miniquiz y evidencia registrada | Tres preguntas; decisión 2/3 y recuperación con 0/1 |
+| Cierre | Síntesis y cierre | Recapitulación, reflexión y continuidad |
+
+**Privacidad y revelación obligatorias:** Respuestas de referencia del punto de partida, respuestas esperadas, claves, análisis de alternativas, modelos de práctica, criterios y apoyos del mentor son privados. El estudiante recibe inicialmente solo recurso, pregunta y alternativas sin marcas de corrección. Revelar feedback de su respuesta después de enviarla; no entregar todas las claves en el payload del rol estudiante. Los modelos explícitos de enseñanza se muestran en el momento de modelamiento. Cada intento autónomo dispone de su pausa antes de revelar criterios. Esta es una especificación: la privacidad efectiva de la App todavía requiere prueba.
+
+**Secuencia de uso:** Preparación del adulto antes de la sesión; conexión y primer intento; motivación; explicación/modelamiento; resolver de manera guiada; intento autónomo con recurso nuevo; feedback; miniquiz; recuperación si corresponde; cierre. La matriz documenta funciones, no renumera la navegación ni impone un nuevo diseño de interfaz.
+
+**Decisión formativa:** 2/3 o 3/3 permite avanzar en la clase según el Manual; con 0/3 o 1/3, explicar el error, ofrecer apoyos, resolver la nueva práctica correspondiente y reintentar. Si vuelve a necesitar ayuda, registrar el apoyo y reforzar el criterio sin aprobar automáticamente. El resultado se acompaña de la evidencia de práctica. El miniquiz no aprueba por sí solo todo el OA.
+
+**Control:** Cero hallazgos críticos o mayores; hasta tres menores enumerados y aceptados por clase. Los recursos audiovisuales pendientes y la integración se registran por separado; no se declara la clase publicada o el OA aprobado desde esta revisión documental. Matemática OA01 y las doce presentaciones terminadas de Lengua y Literatura OA03 permanecen excluidas de cambios.

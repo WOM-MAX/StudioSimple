@@ -61,14 +61,27 @@ export interface QuizQuestion {
   dileReview?: string;
 }
 
+export type RecoveryKind = 'multiple_choice' | 'open_response';
+
 export interface RecoveryItem {
   title: string;
   explain: string;
   q: string;
-  options: string[];
-  correct: string;
+  kind?: RecoveryKind;
+  options?: string[];
+  correct?: string;
   correctText: string;
   fixText: string;
+  support2?: string;
+  resource?: string;
+  exitCriteria?: string;
+  retest?: {
+    q: string;
+    options: string[];
+    correct: string;
+    successFeedback?: string;
+    supportFeedback?: string;
+  };
 }
 
 export interface LessonMetadata {
@@ -245,6 +258,8 @@ export interface LessonSessionState {
   recoveryIndex: number;
   recoveryVisible: boolean;
   recoveryAnswer: string;
+  recoveryPassed?: boolean;
+  attempts?: number;
   supportCount: number;
   reasoningIndependent: boolean;
   challengeCompleted: boolean;

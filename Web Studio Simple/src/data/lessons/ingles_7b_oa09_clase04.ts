@@ -1,529 +1,444 @@
-import { LessonData } from '../../types/lesson';
+import { LessonData } from '../../../src/types/lesson';
 
 export const INGLES_7B_OA09_CLASE04: LessonData = {
   "metadata": {
     "grade": "7° Básico",
-    "subject": "Inglés",
+    "subject": "Idioma Extranjero Inglés",
     "oaCode": "OA 9",
-    "oaTitle": "Comprensión de lectura",
+    "oaTitle": "Idioma Extranjero Inglés - OA 9",
     "lessonNumber": 4,
     "totalLessonsInOa": 6,
-    "lessonTitle": "Character Feelings, Dialogue, and Conflict",
+    "lessonTitle": "Una situación",
     "durationMinutes": 30,
-    "nextLessonTitle": "Práctica avanzada y modelamiento de OA 9 (Parte 1)"
+    "nextLessonTitle": ""
   },
   "prep": {
-    "adultObjective": "Acompañar al estudiante en la inmersión del idioma inglés para: Character Feelings, Dialogue, and Conflict. Las instrucciones del apoderado son en español, mientras los textos, vocabulario y miniquiz se practican en inglés con foco en 'textos audiovisuales'.",
-    "routeToday": "1. Inicio y activación · 2. Video de exploración · 3. Recorrido guiado · 4. Formalización y práctica en cuaderno · 5. Miniquiz y REVISAR · 6. Cierre metacognitivo",
-    "mentorReminder": "Sigue las indicaciones en pantalla paso a paso. Lee únicamente los recuadros DILE en voz alta y espera siempre la respuesta.",
+    "adultObjective": "Identify the main idea and explicit details in a short school email and answer questions with evidence.",
+    "routeToday": "Ruta guiada de la clase 4",
+    "mentorReminder": "Identify the main idea and explicit details in a short school email and answer questions with evidence.",
     "reminders": [
-      "Sigue el orden indicado.",
-      "Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.",
-      "No leas los recuadros SOLO PARA TI ni AYUDA DE LECTURA.",
-      "Haz cada pregunta y espera la respuesta antes de seleccionar una opción.",
-      "Considera correcta una respuesta si expresa la idea matemática, aunque use palabras distintas.",
-      "Si el estudiante necesita apoyo, usa únicamente la ayuda que aparecerá.",
-      "Si propone otra explicación o no está de acuerdo, escúchalo completo y valora su razonamiento antes de guiarlo."
+      "Acompaña al estudiante y valora su proceso."
     ],
-    "emotionalTip": "Fomenta la confianza comunicativa: 'Listen, read the clues, and focus on the general meaning before translating every single word'."
+    "emotionalTip": "Valora cada avance con paciencia y entusiasmo."
   },
   "route": {
     "blocks": [
       {
         "id": "b1",
         "number": "01",
-        "title": "Inglés",
-        "subtitle": "Character Feelings, Dialogue, and Conflict",
+        "title": "Punto de partida",
+        "subtitle": "Activación",
         "color": "teal"
       },
       {
         "id": "b2",
         "number": "02",
-        "title": "Exploración",
-        "subtitle": "Gancho y Recorrido Guiado",
+        "title": "Motivación y Explicación",
+        "subtitle": "14 láminas",
         "color": "orange"
       },
       {
         "id": "b3",
         "number": "03",
-        "title": "Práctica",
-        "subtitle": "Aplicación en situaciones reales",
+        "title": "Práctica guiada",
+        "subtitle": "Transferencia",
         "color": "yellow"
       },
       {
         "id": "b4",
         "number": "04",
-        "title": "Evaluación",
-        "subtitle": "Miniquiz formativo y síntesis",
-        "color": "teal"
+        "title": "Miniquiz",
+        "subtitle": "Evaluación y cierre",
+        "color": "navy"
       }
     ],
-    "keyQuestions": [
-      {
-        "label": "Exploración inicial",
-        "sub": "Character Feelings, Dialogue, and Conflict"
-      },
-      {
-        "label": "Idea clave",
-        "sub": "In Character Feelings, Dialogue, and Conflict, we communicat"
-      },
-      {
-        "label": "Práctica y aplicación",
-        "sub": "Resolución guiada paso a paso"
-      }
-    ],
-    "dileIntro": "Hoy comenzaremos la clase 4 de Inglés: \"Character Feelings, Dialogue, and Conflict\".",
-    "dileObjective": "Identifying emotions and the main obstacle in narrative texts"
+    "dileIntro": "Hoy avanzaremos en una nueva clase interactiva.",
+    "dileObjective": "Una situación"
   },
   "situation": {
-    "dilePrompt": "Hoy en nuestra sesión de English exploramos 'Character Feelings, Dialogue, and Conflict'. El foco comunicativo del currículum es 'textos audiovisuales'. El apoderado guía en español mientras que el estudiante lee y escucha en inglés. Lee la siguiente frase en voz alta sobre Identifying emotions and the main obstacle in narrative texts:",
-    "expectedAnswer": "Identificar en español o inglés los personajes (characters), la acción o el propósito comunicativo vinculado con textos audiovisuales.",
-    "socraticHint": "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general.",
-    "emotionalTip": "Fomenta la confianza comunicativa: 'Listen, read the clues, and focus on the general meaning before translating every single word'.",
+    "dilePrompt": "What do you expect from the title? Give a prediction, then check it by reading.",
+    "expectedAnswer": "It is mainly about a reading club meeting and how to take part.",
+    "socraticHint": "Fíjate en los detalles destacados.",
+    "emotionalTip": "Acompaña con calma.",
     "options": [
       {
-        "label": "Identificó a los personajes, la acción o el propósito en inglés vinculado con textos audiovisuales",
+        "label": "It is mainly about a reading club meeting and how to take part.",
         "kind": "correct",
-        "feedbackText": "¡Very good! Supo reconocer los elementos clave de la oración en inglés."
+        "feedbackText": "¡Muy bien observado!"
       },
       {
-        "label": "Tuvo dudas con el vocabulario o no identificó la acción ni los personajes",
+        "label": "Requiere apoyo adicional",
         "kind": "needs_support",
-        "feedbackText": "Busquen juntos palabras transparentes y guíalo para identificar el verbo principal de la acción."
+        "feedbackText": "Revisa nuevamente la situación inicial."
+      },
+      {
+        "label": "No sabe qué responder",
+        "kind": "no_answer",
+        "feedbackText": "Leamos juntos para descubrir la pista."
       }
     ]
   },
   "reference": {
-    "dilePrompt": "\"What is the main communicative situation described in this English sentence? (¿Cuál es la situación principal descrita en la oración?)\"",
-    "question": "\"What is the main communicative situation described in this English sentence? (¿Cuál es la situación principal descrita en la oración?)\"",
-    "expectedAnswer": "Identificar en español o inglés los personajes (characters), la acción o el propósito comunicativo vinculado con textos audiovisuales.",
-    "socraticHint": "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general.",
-    "feedbackSuccess": "Muy bien. Observaste el detalle central con precisión.",
-    "feedbackSupport": "Invítalo a identificar las palabras transparentes o cognados (palabras similares al español) para deducir el contexto general."
+    "dilePrompt": "What is the email mainly about?",
+    "question": "¿Qué información entrega el punto de partida?",
+    "expectedAnswer": "It is mainly about a reading club meeting and how to take part.",
+    "socraticHint": "Localiza las palabras clave.",
+    "feedbackSuccess": "¡Excelente fundamentación!",
+    "feedbackSupport": "Revisa la lectura para confirmar los datos."
   },
   "hook": {
-    "title": "Video Motivacional: El Desafío de Character Feelings, Dialogue, and Conflict",
-    "titulo": "Video Motivacional: El Desafío de Character Feelings, Dialogue, and Conflict",
+    "title": "Motivación",
+    "titulo": "Motivación",
     "focusPoints": [],
-    "dileIntro": "Antes de ver el video, observa con atención lo que descubren los dos exploradores y qué pregunta queda planteada.",
-    "hazInstruction": "Observa y reflexiona con las escenas del desafío visual.",
+    "dileIntro": "What do you expect from the title? Give a prediction, then check it by reading.",
+    "hazInstruction": "Observa y reflexiona con las escenas del video.",
     "videoSrc": "",
-    "videoUrl": "",
-    "posterSrc": "",
-    "dileAfterVideo": "Muy buena observación. Ahora conversaremos sobre lo que descubrieron en la expedición.",
-    "fullPrompt": "Actúa como Diseñador Instruccional Senior y Creador de Presentaciones en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de GANCHO MOTIVACIONAL (Paso 2) para:\n- Asignatura: Inglés\n- Objetivo de Aprendizaje: OA 9\n- Clase: 4 (\"Character Feelings, Dialogue, and Conflict\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS (PLAN MAESTRO ACTUALIZACIÓN 29-09-2026):\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Exactamente 7 diapositivas (slide1 a slide7).\n3. ESTILO ARTÍSTICO DE LAS IMÁGENES: Anime Moderno (Modern Anime Style, cinematográfico, iluminación dinámica, fondos limpios con espacio negativo real).\n4. PROTAGONISTAS FIJOS: Dúo co-protagónico de 13 años (la joven y el joven estudiantes-exploradores chilenos). ACTÚAN JUNTOS en cada escena, colaborando y resolviendo el desafío en equipo.\n5. REGLA VISUAL ANTI-MÁSCARAS Y FONDOS LIMPIOS: Imágenes Full-Bleed con espacio negativo para texto y vectores. Queda prohibido usar placas oscuras que tapen las caras de los personajes o la mitad de la lámina. PROHIBIDO dibujar números, letras o fórmulas dentro de la ilustración generada por IA.\n6. PRESUPUESTO TEMPORAL Y GUION CONTINUO (GANCHO - 60 SEGUNDOS / 130 PALABRAS TOTALES): Cada diapositiva DEBE incluir únicamente el texto de narración oral continua (8+8+8+9+9+9+9 segundos, totalizando exactamente ~130 palabras para 60 segundos de locución a 130 palabras por minuto en Google Vids/TTS), sin marcas técnicas, encabezados ni duraciones, listo para ser leído por voz en off.\n7. PROTOCOLO DE COMPROBACIÓN ACÚSTICA OBLIGATORIA (GOOGLE VIDS): Medir la duración real del archivo exportado con cronómetro o analizador de audio. El conteo de palabras no garantiza por sí solo 60 segundos exactos. Si la duración no es exacta, ajustar narración, pausas o ritmo, volver a exportar y registrar la duración comprobada oficial.\n8. ESTRUCTURA HEXAPARTITA POR DIAPOSITIVA:\n   • Toda diapositiva se define con: 1) Propósito, 2) Título en Pantalla (64 pt), 3) Subtítulo en Pantalla (36 pt), 4) Prompt de imagen IA sin texto, 5) Capa vectorial para PowerPoint, y 6) Notas al orador continuas.\n   • COLOR DE TEXTO: Un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes. Especificar color en cada prompt.\n   • LOCUCIÓN COHERENTE: Narra con precisión lo que se observa en la imagen y lo que se sintetiza en la pantalla.\n\nDETALLE DE LAS 7 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Apertura y Contexto) ---\n1. Propósito Didáctico: Apertura y Contexto\n2. Título en Pantalla (64 pt): Misión 4: Character Feelings, Dialogue, and Conflict\n3. Subtítulo en Pantalla (36 pt): Exploración inicial en Inglés\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Character Feelings, Dialogue, and Conflict (Inglés). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Communicative context: Story scenario of Character Feelings, Dialogue, and Conflict\n6. Notas al Orador (Locución Continua Google Vids): \"Comienza una nueva expedición de aprendizaje en Inglés. Nuestros dos exploradores analizan el desafío de Character Feelings, Dialogue, and Conflict para descubrir sus secretos.\"\n\n--- DIAPOSITIVA 2 (Presentación del Escenario) ---\n1. Propósito Didáctico: Presentación del Escenario\n2. Título en Pantalla (64 pt): Punto de partida\n3. Subtítulo en Pantalla (36 pt): Identifying emotions and the main obstacle in narrative texts\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Identifying emotions and the main obstacle in narrative texts. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Identifying emotions and the main obstacle in narrative texts\n6. Notas al Orador (Locución Continua Google Vids): \"Al observar los datos sobre Identifying emotions and the main obstacle in narrative texts, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor.\"\n\n--- DIAPOSITIVA 3 (Aparición del Conflicto / Misterio) ---\n1. Propósito Didáctico: Aparición del Conflicto / Misterio\n2. Título en Pantalla (64 pt): El enigma disciplinar\n3. Subtítulo en Pantalla (36 pt): Desafío en Character Feelings, Dialogue, and Conflict\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Identifying emotions and the main obstacle in narrative texts\n6. Notas al Orador (Locución Continua Google Vids): \"Surge un reto concreto sobre Character Feelings, Dialogue, and Conflict: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso.\"\n\n--- DIAPOSITIVA 4 (Exploración de Pistas) ---\n1. Propósito Didáctico: Exploración de Pistas\n2. Título en Pantalla (64 pt): Análisis de evidencias\n3. Subtítulo en Pantalla (36 pt): Identifying emotions and the main obstacle in narrative texts\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Identifying emotions and the main obstacle in narrative texts\n6. Notas al Orador (Locución Continua Google Vids): \"Ambos comparan las pistas disponibles sobre Identifying emotions and the main obstacle in narrative texts. Cada dato confirma cómo interactúan los elementos clave de la situación.\"\n\n--- DIAPOSITIVA 5 (El Momento Crítico) ---\n1. Propósito Didáctico: El Momento Crítico\n2. Título en Pantalla (64 pt): Criterio de decisión\n3. Subtítulo en Pantalla (36 pt): Aplicar el método riguroso\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Vocabulary tags: Key expressions and setting of Identifying emotions and the main obstacle in narrative texts\n6. Notas al Orador (Locución Continua Google Vids): \"Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Character Feelings, Dialogue, and Conflict con total precisión metodológica.\"\n\n--- DIAPOSITIVA 6 (La Antesala de la Pregunta) ---\n1. Propósito Didáctico: La Antesala de la Pregunta\n2. Título en Pantalla (64 pt): El dilema central\n3. Subtítulo en Pantalla (36 pt): ¿Cómo resolver Character Feelings, Dialogue, and Conflict?\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Language puzzle: Identifying narrative clues in English\n6. Notas al Orador (Locución Continua Google Vids): \"Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje.\"\n\n--- DIAPOSITIVA 7 (La Pregunta Detonante) ---\n1. Propósito Didáctico: La Pregunta Detonante\n2. Título en Pantalla (64 pt): Pregunta detonante\n3. Subtítulo en Pantalla (36 pt): Regla y método de Character Feelings, Dialogue, and Conflict\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Trigger question: How do we express Character Feelings, Dialogue, and Conflict accurately?\n6. Notas al Orador (Locución Continua Google Vids): \"Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!\"\n\n",
+    "dileAfterVideo": "¿Qué observaste en esta situación inicial?",
     "slides": [
       {
         "slideNumber": 1,
-        "tituloMomento": "Apertura y Contexto",
-        "didacticPurpose": "Apertura y Contexto",
-        "visualPrompt": "Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arriving at a captivating setting related to Character Feelings, Dialogue, and Conflict (Inglés). Cinematic lighting, warm morning atmosphere, wide negative space in top third. No text drawn by AI.",
-        "overlayTitle": "Misión 4: Character Feelings, Dialogue, and Conflict",
-        "overlaySubtitle": "Exploración inicial en Inglés",
-        "overlayText": "Misión 4: Character Feelings, Dialogue, and Conflict",
-        "vectorialOverlayPptx": "Communicative context: Story scenario of Character Feelings, Dialogue, and Conflict",
-        "mathOverlayPptx": "Communicative context: Story scenario of Character Feelings, Dialogue, and Conflict",
-        "speakerNotes": "Comienza una nueva expedición de aprendizaje en Inglés. Nuestros dos exploradores analizan el desafío de Character Feelings, Dialogue, and Conflict para descubrir sus secretos.",
-        "palabrasAprox": 21,
-        "duracionSeg": 9
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Una situación",
+        "visualPrompt": "",
+        "overlayText": "Una situación",
+        "overlayTitle": "Una situación",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Una situación",
+        "speakerNotes": "Today we will explore reading a school email. Use the reading to check ideas without inventing details.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 2,
-        "tituloMomento": "Presentación del Escenario",
-        "didacticPurpose": "Presentación del Escenario",
-        "visualPrompt": "Modern anime style. The two 13-year-old companions inspecting an interactive device, map, or artifact showing clear signs of Identifying emotions and the main obstacle in narrative texts. High detail, clean lineart, soft depth of field, clear space on the left side. No text drawn by AI.",
-        "overlayTitle": "Punto de partida",
-        "overlaySubtitle": "Identifying emotions and the main obstacle in narrative texts",
-        "overlayText": "Punto de partida: Identifying emotions and the main obstacle in narrative texts",
-        "vectorialOverlayPptx": "Vocabulary tags: Key expressions and setting of Identifying emotions and the main obstacle in narrative texts",
-        "mathOverlayPptx": "Vocabulary tags: Key expressions and setting of Identifying emotions and the main obstacle in narrative texts",
-        "speakerNotes": "Al observar los datos sobre Identifying emotions and the main obstacle in narrative texts, notan que necesitan un criterio disciplinar exacto y riguroso para interpretar cada valor.",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "La pregunta",
+        "visualPrompt": "",
+        "overlayText": "La pregunta",
+        "overlayTitle": "La pregunta",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "La pregunta",
+        "speakerNotes": "The email includes the meeting time, place, materials and activity. Keep the message in view and notice what information it actually gives.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 3,
-        "tituloMomento": "Aparición del Conflicto / Misterio",
-        "didacticPurpose": "Aparición del Conflicto / Misterio",
-        "visualPrompt": "Modern anime style. The boy pointing towards an unexpected discrepancy or challenge on a digital screen while the girl takes field notes in a physical notebook. Dramatic atmospheric lighting, expressive eyes. No text drawn by AI.",
-        "overlayTitle": "El enigma disciplinar",
-        "overlaySubtitle": "Desafío en Character Feelings, Dialogue, and Conflict",
-        "overlayText": "El enigma disciplinar: Character Feelings, Dialogue, and Conflict",
-        "vectorialOverlayPptx": "Vocabulary tags: Key expressions and setting of Identifying emotions and the main obstacle in narrative texts",
-        "mathOverlayPptx": "Vocabulary tags: Key expressions and setting of Identifying emotions and the main obstacle in narrative texts",
-        "speakerNotes": "Surge un reto concreto sobre Character Feelings, Dialogue, and Conflict: las evidencias plantean una pregunta fundamental que resolverán en equipo paso a paso.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Primera idea",
+        "visualPrompt": "",
+        "overlayText": "Primera idea",
+        "overlayTitle": "Primera idea",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Primera idea",
+        "speakerNotes": "What is the email mainly about? You can offer a first idea; we will check its support afterwards.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 4,
-        "tituloMomento": "Exploración de Pistas",
-        "didacticPurpose": "Exploración de Pistas",
-        "visualPrompt": "Modern anime style. The two young protagonists working together side by side, analyzing a concrete diagram or physical tool. Vibrant colors, focused determination, clean composition. No text drawn by AI.",
-        "overlayTitle": "Análisis de evidencias",
-        "overlaySubtitle": "Identifying emotions and the main obstacle in narrative texts",
-        "overlayText": "Análisis de evidencias: Identifying emotions and the main obstacle in narrative texts",
-        "vectorialOverlayPptx": "Vocabulary tags: Key expressions and setting of Identifying emotions and the main obstacle in narrative texts",
-        "mathOverlayPptx": "Vocabulary tags: Key expressions and setting of Identifying emotions and the main obstacle in narrative texts",
-        "speakerNotes": "Ambos comparan las pistas disponibles sobre Identifying emotions and the main obstacle in narrative texts. Cada dato confirma cómo interactúan los elementos clave de la situación.",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Busca pistas",
+        "visualPrompt": "",
+        "overlayText": "Busca pistas",
+        "overlayTitle": "Busca pistas",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Busca pistas",
+        "speakerNotes": "Look closely at the situation. Which detail would help you answer? A useful clue should answer the question we are trying to understand.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 5,
-        "tituloMomento": "El Momento Crítico",
-        "didacticPurpose": "El Momento Crítico",
-        "visualPrompt": "Modern anime style. Close-up on the two protagonists discussing with excitement as a glowing clue or measurement appears in the center. Dynamic lighting, high emotional impact. No text drawn by AI.",
-        "overlayTitle": "Criterio de decisión",
-        "overlaySubtitle": "Aplicar el método riguroso",
-        "overlayText": "Criterio de decisión riguroso",
-        "vectorialOverlayPptx": "Vocabulary tags: Key expressions and setting of Identifying emotions and the main obstacle in narrative texts",
-        "mathOverlayPptx": "Vocabulary tags: Key expressions and setting of Identifying emotions and the main obstacle in narrative texts",
-        "speakerNotes": "Para superar el desafío no basta con adivinar: es indispensable aplicar el procedimiento formal de Character Feelings, Dialogue, and Conflict con total precisión metodológica.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Compara posibilidades",
+        "visualPrompt": "",
+        "overlayText": "Compara posibilidades",
+        "overlayTitle": "Compara posibilidades",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Compara posibilidades",
+        "speakerNotes": "An answer needs information from the resource. We will look for evidence. Two answers may sound possible, so their support needs careful checking.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 6,
-        "tituloMomento": "La Antesala de la Pregunta",
-        "didacticPurpose": "La Antesala de la Pregunta",
-        "visualPrompt": "Modern anime style. Wide shot of the two 13-year-olds looking directly towards the horizon or viewer with confident curiosity. Beautiful sky with volumetric clouds, calm reflection. No text drawn by AI.",
-        "overlayTitle": "El dilema central",
-        "overlaySubtitle": "¿Cómo resolver Character Feelings, Dialogue, and Conflict?",
-        "overlayText": "¿Cómo resolver Character Feelings, Dialogue, and Conflict?",
-        "vectorialOverlayPptx": "Language puzzle: Identifying narrative clues in English",
-        "mathOverlayPptx": "Language puzzle: Identifying narrative clues in English",
-        "speakerNotes": "Llegan al punto de quiebre de la expedición. Todo lo observado hasta ahora los conduce a una incógnita que transformará su aprendizaje.",
-        "palabrasAprox": 20,
-        "duracionSeg": 9
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Una estrategia",
+        "visualPrompt": "",
+        "overlayText": "Una estrategia",
+        "overlayTitle": "Una estrategia",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Una estrategia",
+        "speakerNotes": "Read the resource and compare its details before choosing an explanation. The class will show a way to explain that connection step by step.",
+        "duracionSeg": 8
       },
       {
         "slideNumber": 7,
-        "tituloMomento": "La Pregunta Detonante",
-        "didacticPurpose": "La Pregunta Detonante",
-        "visualPrompt": "Modern anime style. Minimalist elegant graphic composition with StudioSimple emblem and an inspiring visual tool connecting to the upcoming lesson. Soft gradient background. No text drawn by AI.",
-        "overlayTitle": "Pregunta detonante",
-        "overlaySubtitle": "Regla y método de Character Feelings, Dialogue, and Conflict",
-        "overlayText": "Meta: Dominio de Character Feelings, Dialogue, and Conflict",
-        "vectorialOverlayPptx": "Trigger question: How do we express Character Feelings, Dialogue, and Conflict accurately?",
-        "mathOverlayPptx": "Trigger question: How do we express Character Feelings, Dialogue, and Conflict accurately?",
-        "speakerNotes": "Ahora surge la gran pregunta detonante: ¿qué regla nos permitirá encontrar la respuesta exacta sin equivocarnos? ¡Descubrámoslo en la lección!",
-        "palabrasAprox": 19,
-        "duracionSeg": 9
+        "tituloMomento": "Motivación",
+        "didacticPurpose": "Puente a la lectura",
+        "visualPrompt": "",
+        "overlayText": "Puente a la lectura",
+        "overlayTitle": "Puente a la lectura",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Puente a la lectura",
+        "speakerNotes": "Now we will discover how the evidence helps us understand this situation. Then you will apply the strategy to another short resource.",
+        "duracionSeg": 8
       }
     ]
   },
   "preQuestions": [
     {
-      "context": "Key Vocabulary & Context Clues (textos audiovisuales)",
-      "question": "Which English words in the text give you clear clues about the communicative goal and the action?",
-      "expected": "Identify key English nouns, action verbs or connectors related to the topic.",
-      "success": "Well done! You successfully identified the key English vocabulary from the context.",
-      "support": "Look for transparent words and descriptive adjectives: what words tell you what is happening?",
-      "reveal": "Context clues and key vocabulary help us understand the main message without needing an immediate dictionary translation.",
-      "studentReveal": "Key English words identified from the context of the communicative text."
+      "context": "The email includes the meeting time, place, materials and activity.",
+      "question": "What is the email mainly about?",
+      "expected": "It is mainly about a reading club meeting and how to take part.",
+      "success": "The details all concern preparing for and joining the meeting.",
+      "support": "Si no localiza información, releer esta pista del contexto: «The email includes the meeting time, place, materials and activity.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta.",
+      "reveal": "It is mainly about a reading club meeting and how to take part. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento.",
+      "studentReveal": "It is mainly about a reading club meeting and how to take part."
     },
     {
-      "context": "Grammar & Communicative Flow",
-      "question": "Notice the verb tense or structure used in the sentences. How does the grammatical form tell us when or how the action happens?",
-      "expected": "Recognize the verb form or structure indicating time, function, or modality.",
-      "success": "Excellent! You connected the grammatical structure with its real communicative meaning.",
-      "support": "Look at the ending of the verb or auxiliary words: does it talk about routine, past events or future plans?",
-      "reveal": "Grammatical structures and verb tenses provide the timeline and conditions for natural English communication.",
-      "studentReveal": "The verb tense and sentence structure that clarify the communicative intention."
+      "context": "The club meets on Wednesday at three in the school library.",
+      "question": "When and where does the club meet?",
+      "expected": "It meets on Wednesday at three o'clock in the school library.",
+      "success": "The first sentence provides the day, time and place.",
+      "support": "Si no localiza información, releer esta pista del contexto: «The club meets on Wednesday at three in the school library.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta.",
+      "reveal": "It meets on Wednesday at three o'clock in the school library. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento.",
+      "studentReveal": "It meets on Wednesday at three o'clock in the school library."
     }
   ],
+  "conversationContext": "Diálogo guiado para profundizar en los elementos clave.",
   "formalization": {
-    "title": "Video Explicativo: Formalización de Character Feelings, Dialogue, and Conflict",
-    "concept": "Video Explicativo: Formalización de Character Feelings, Dialogue, and Conflict",
-    "dileIntro": "Ahora veremos el video explicativo de Character Feelings, Dialogue, and Conflict. Fíjate en la pronunciación y en cómo se utiliza 'textos audiovisuales' en una conversación real.",
-    "hazInstruction": "Revisemos la explicación formal y la idea clave.",
-    "ideaClave": "In Character Feelings, Dialogue, and Conflict, we communicate effectively by using 'textos audiovisuales' in context, paying attention to verb tenses and avoiding word-for-word translation.",
-    "videoSrc": "",
-    "videoUrl": "",
+    "title": "Explicación",
+    "concept": "Una situación",
+    "summary": "Consolidación de las ideas clave.",
+    "ideaClave": "Una situación",
+    "dileIntro": "Ahora consolidaremos los aprendizajes esenciales.",
+    "hazInstruction": "Registra en tu cuaderno el concepto principal.",
     "graphicPoster": "",
-    "fullPrompt": "Actúa como Diseñador Pedagógico y Especialista en Didáctica Disciplinar en ChatGPT Work para EstudioSimple.\n\nOBJETIVO: Generar la presentación PPTX oficial de VIDEO EXPLICATIVO / FORMALIZACIÓN (Paso 4) para:\n- Asignatura: Inglés\n- Objetivo de Aprendizaje: OA 9\n- Clase: 4 (\"Character Feelings, Dialogue, and Conflict\")\n\nDIRECTIVAS DE DISEÑO OBLIGATORIAS (PLAN MAESTRO ACTUALIZACIÓN 29-09-2026):\n1. Formato Widescreen 16:9 estricto (1920x1080).\n2. Exactamente 7 diapositivas (slide1 a slide7) siguiendo el principio de un cambio visual por cada movimiento mental.\n3. DIAPOSITIVA 1 OBLIGATORIA CON OBJETIVO: La primera diapositiva declara como subtítulo (36 pt) el objetivo específico de la lección, sin repetir rótulos redundantes 'OA 01'.\n4. PROTAGONISTAS FIJOS EN EL 100% DE LAS ESCENAS: Los mismos 2 jóvenes de 13 años (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.\n5. REGLA VISUAL ANTI-MÁSCARAS Y FONDOS LIMPIOS: Imagen limpia con espacio negativo real. Prohibido que la IA intente dibujar números, rectas o letras. Todo elemento disciplinar se ensambla vectorialmente en PowerPoint.\n6. PRESUPUESTO TEMPORAL Y GUION PEDAGÓGICO (LECCIÓN EXPLICATIVA - 90 SEGUNDOS / 195 PALABRAS TOTALES): Guion explicativo continuo (12+13+13+13+13+13+13 segundos, totalizando exactamente ~195 palabras para 90 segundos a 130 palabras por minuto en Google Vids/TTS), sin marcas técnicas. Diapositiva 1 formula el objetivo; diapositivas 2 a 7 desarrollan el contenido sin repetirlo.\n7. PROTOCOLO DE COMPROBACIÓN ACÚSTICA OBLIGATORIA (GOOGLE VIDS): Medir la duración real del archivo exportado con cronómetro o analizador de audio. El conteo de palabras no garantiza por sí solo 90 segundos exactos. Si la duración no es exacta, ajustar narración, pausas o ritmo, volver a exportar y registrar la duración comprobada oficial.\n8. JERARQUÍA TIPOGRÁFICA Y COLOR DE TEXTO: Título en Pantalla (64 pt); Subtítulo en Pantalla (36 pt). Texto brillante de un solo color de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, contornos, resplandores ni recuadros flotantes o fondos detrás del texto. Especificar color en cada prompt.\n9. CIERRE SIN RETO EN EL VIDEO: La explicación concluye con la regla de oro y da el pase directo a la práctica en la plataforma web, sin proponer desafíos finales ni tareas en el cuaderno durante el video.\n10. ESTRUCTURA HEXAPARTITA POR DIAPOSITIVA (Propósito, Título 64 pt, Subtítulo 36 pt, Prompt Imagen IA, Capa Vectorial PPTX, Notas al Orador).\n\nDETALLE DE LAS 7 DIAPOSITIVAS A CONSTRUIR:\n\n--- DIAPOSITIVA 1 (Objetivo de la Lección) ---\n1. Propósito Didáctico: Objetivo de la Lección\n2. Título en Pantalla (64 pt): Objetivo de la lección\n3. Subtítulo en Pantalla (36 pt): Master Character Feelings, Dialogue, and Conflict: Identifying emotions and the main obstacle in narrative texts\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Identifying emotions and the main obstacle in narrative texts. High clarity, negative space for text. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Formal heading: OA 9 · Character Feelings, Dialogue, and Conflict\n6. Notas al Orador (Locución Continua Google Vids): \"Today our goal is to learn how to master identifying emotions and the main obstacle in narrative texts, applying clear disciplinary steps with total confidence.\"\n\n--- DIAPOSITIVA 2 (Definición del Concepto Central) ---\n1. Propósito Didáctico: Definición del Concepto Central\n2. Título en Pantalla (64 pt): Concepto fundamental\n3. Subtítulo en Pantalla (36 pt): Identifying emotions and the main obstacle in narrative texts\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Sentence formula: Structure of Identifying emotions and the main obstacle in narrative texts\n6. Notas al Orador (Locución Continua Google Vids): \"To understand Character Feelings, Dialogue, and Conflict, we establish a clean conceptual foundation connecting the core definition with verifiable concrete evidence.\"\n\n--- DIAPOSITIVA 3 (Demostración Modelada) ---\n1. Propósito Didáctico: Demostración Modelada\n2. Título en Pantalla (64 pt): Modelamiento paso a paso\n3. Subtítulo en Pantalla (36 pt): Procedimiento de Character Feelings, Dialogue, and Conflict\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Color-coded grammar blocks with modeled example\n6. Notas al Orador (Locución Continua Google Vids): \"Observe how the procedure unfolds in this guided demonstration: every single change responds to an explicit disciplinary rule.\"\n\n--- DIAPOSITIVA 4 (Prevención del Error Frecuente) ---\n1. Propósito Didáctico: Prevención del Error Frecuente\n2. Título en Pantalla (64 pt): Atención: Error habitual\n3. Subtítulo en Pantalla (36 pt): Confusión común que debemos evitar\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Error contrast: common grammar and punctuation pitfall\n6. Notas al Orador (Locución Continua Google Vids): \"A common pitfall happens when overlooking order or basic conventions. We always check each intermediate step before concluding.\"\n\n--- DIAPOSITIVA 5 (Comprobación del Resultado) ---\n1. Propósito Didáctico: Comprobación del Resultado\n2. Título en Pantalla (64 pt): Validación del resultado\n3. Subtítulo en Pantalla (36 pt): Comprobar que la respuesta es consistente\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Meaning validation: verifying sentence cohesion\n6. Notas al Orador (Locución Continua Google Vids): \"By contrasting the result with our initial scenario, we confirm that our solution is consistent, rigorous, and fully answers the question.\"\n\n--- DIAPOSITIVA 6 (Estrategia Mnemotécnica) ---\n1. Propósito Didáctico: Estrategia Mnemotécnica\n2. Título en Pantalla (64 pt): Estrategia de pensamiento\n3. Subtítulo en Pantalla (36 pt): 1. Identificar · 2. Aplicar · 3. Comprobar\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Memory strategy: Connector + Subject + Verb + Context\n6. Notas al Orador (Locución Continua Google Vids): \"Always remember the three-step thinking strategy: identify the key data, apply the formal rule in order, and verify the final result.\"\n\n--- DIAPOSITIVA 7 (Síntesis y Regla de Oro) ---\n1. Propósito Didáctico: Síntesis y Regla de Oro\n2. Título en Pantalla (64 pt): Regla de Oro: Character Feelings, Dialogue, and Conflict\n3. Subtítulo en Pantalla (36 pt): Método disciplinar validado\n4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.\n5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Summary infography: Golden rule of Character Feelings, Dialogue, and Conflict\n6. Notas al Orador (Locución Continua Google Vids): \"Now that you understand the golden rule and the procedure of Character Feelings, Dialogue, and Conflict, let us practice and prove our skills in the interactive platform!\"\n\n",
+    "videoSrc": "",
     "slides": [
       {
-        "slideNumber": 1,
-        "tituloMomento": "Objetivo de la Lección",
-        "didacticPurpose": "Objetivo de la Lección",
-        "visualPrompt": "Modern anime style 16:9. The girl and boy in a luminous study room, pointing at a clearly labeled scientific/mathematical diagram representing Identifying emotions and the main obstacle in narrative texts. High clarity, negative space for text. No text drawn by AI.",
-        "overlayTitle": "Objetivo de la lección",
-        "overlaySubtitle": "Master Character Feelings, Dialogue, and Conflict: Identifying emotions and the main obstacle in narrative texts",
-        "overlayText": "Concepto clave: Character Feelings, Dialogue, and Conflict",
-        "vectorialOverlayPptx": "Formal heading: OA 9 · Character Feelings, Dialogue, and Conflict",
-        "mathOverlayPptx": "Formal heading: OA 9 · Character Feelings, Dialogue, and Conflict",
-        "speakerNotes": "Today our goal is to learn how to master identifying emotions and the main obstacle in narrative texts, applying clear disciplinary steps with total confidence.",
-        "palabrasAprox": 25,
-        "duracionSeg": 12
+        "slideNumber": 8,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Una herramienta",
+        "visualPrompt": "",
+        "overlayText": "Una herramienta",
+        "overlayTitle": "Una herramienta",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Una herramienta",
+        "speakerNotes": "The email explains a reading club meeting and what to do there. The main idea covers that whole purpose.",
+        "duracionSeg": 8
       },
       {
-        "slideNumber": 2,
-        "tituloMomento": "Definición del Concepto Central",
-        "didacticPurpose": "Definición del Concepto Central",
-        "visualPrompt": "Modern anime style. The boy illustrating the step-by-step rule on a transparent lightboard, while the girl checks and confirms each step. Clean infographic elements, modern lighting. No text drawn by AI.",
-        "overlayTitle": "Concepto fundamental",
-        "overlaySubtitle": "Identifying emotions and the main obstacle in narrative texts",
-        "overlayText": "Regla formal: Identifying emotions and the main obstacle in narrative texts",
-        "vectorialOverlayPptx": "Sentence formula: Structure of Identifying emotions and the main obstacle in narrative texts",
-        "mathOverlayPptx": "Sentence formula: Structure of Identifying emotions and the main obstacle in narrative texts",
-        "speakerNotes": "To understand Character Feelings, Dialogue, and Conflict, we establish a clean conceptual foundation connecting the core definition with verifiable concrete evidence.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        "slideNumber": 9,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "El criterio",
+        "visualPrompt": "",
+        "overlayText": "El criterio",
+        "overlayTitle": "El criterio",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "El criterio",
+        "speakerNotes": "The meeting is on Wednesday at three o'clock. Its place is the school library. Mia asks Leo to bring a notebook and a pencil. These are explicit details.",
+        "duracionSeg": 8
       },
       {
-        "slideNumber": 3,
-        "tituloMomento": "Demostración Modelada",
-        "didacticPurpose": "Demostración Modelada",
-        "visualPrompt": "Modern anime style. Close-up on the model showing the transformation or relationship clearly executed with annotations and arrows. No text drawn by AI.",
-        "overlayTitle": "Modelamiento paso a paso",
-        "overlaySubtitle": "Procedimiento de Character Feelings, Dialogue, and Conflict",
-        "overlayText": "Modelamiento paso a paso de Character Feelings, Dialogue, and Conflict",
-        "vectorialOverlayPptx": "Color-coded grammar blocks with modeled example",
-        "mathOverlayPptx": "Color-coded grammar blocks with modeled example",
-        "speakerNotes": "Observe how the procedure unfolds in this guided demonstration: every single change responds to an explicit disciplinary rule.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        "slideNumber": 10,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Relación entre pistas",
+        "visualPrompt": "",
+        "overlayText": "Relación entre pistas",
+        "overlayTitle": "Relación entre pistas",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Relación entre pistas",
+        "speakerNotes": "The club will read a short story about friendship and discuss different ideas respectfully. Mia thinks sharing ideas helps understanding. A reader can agree or disagree and refer to the discussion described. The explanation connects the information with the question; it does not add a missing fact.",
+        "duracionSeg": 8
       },
       {
-        "slideNumber": 4,
-        "tituloMomento": "Prevención del Error Frecuente",
-        "didacticPurpose": "Prevención del Error Frecuente",
-        "visualPrompt": "Modern anime style. A visual contrast showing a common mistake with a subtle red outline and the correct method in glowing teal. No text drawn by AI.",
-        "overlayTitle": "Atención: Error habitual",
-        "overlaySubtitle": "Confusión común que debemos evitar",
-        "overlayText": "Atención: Error habitual a evitar",
-        "vectorialOverlayPptx": "Error contrast: common grammar and punctuation pitfall",
-        "mathOverlayPptx": "Error contrast: common grammar and punctuation pitfall",
-        "speakerNotes": "A common pitfall happens when overlooking order or basic conventions. We always check each intermediate step before concluding.",
-        "palabrasAprox": 27,
-        "duracionSeg": 13
+        "slideNumber": 11,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Modelo explicado",
+        "visualPrompt": "",
+        "overlayText": "Modelo explicado",
+        "overlayTitle": "Modelo explicado",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Modelo explicado",
+        "speakerNotes": "The email includes the meeting time, place, materials and activity. What is the email mainly about? It is mainly about a reading club meeting and how to take part. The details all concern preparing for and joining the meeting. Notice the clue, the answer, and the reason that links them.",
+        "duracionSeg": 8
       },
       {
-        "slideNumber": 5,
-        "tituloMomento": "Comprobación del Resultado",
-        "didacticPurpose": "Comprobación del Resultado",
-        "visualPrompt": "Modern anime style. The girl verifying the solution with a checkmark symbol and showing how the answer satisfies the original problem. No text drawn by AI.",
-        "overlayTitle": "Validación del resultado",
-        "overlaySubtitle": "Comprobar que la respuesta es consistente",
-        "overlayText": "Comprobación y validación del resultado",
-        "vectorialOverlayPptx": "Meaning validation: verifying sentence cohesion",
-        "mathOverlayPptx": "Meaning validation: verifying sentence cohesion",
-        "speakerNotes": "By contrasting the result with our initial scenario, we confirm that our solution is consistent, rigorous, and fully answers the question.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        "slideNumber": 12,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Comprobación",
+        "visualPrompt": "",
+        "overlayText": "Comprobación",
+        "overlayTitle": "Comprobación",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Comprobación",
+        "speakerNotes": "The club meets on Wednesday at three in the school library. When and where does the club meet? It meets on Wednesday at three o'clock in the school library. The first sentence provides the day, time and place. Check the second response against its own details before comparing.",
+        "duracionSeg": 8
       },
       {
-        "slideNumber": 6,
-        "tituloMomento": "Estrategia Mnemotécnica",
-        "didacticPurpose": "Estrategia Mnemotécnica",
-        "visualPrompt": "Modern anime style. An elegant three-step visual icon diagram showing the mental strategy to remember for future challenges. No text drawn by AI.",
-        "overlayTitle": "Estrategia de pensamiento",
-        "overlaySubtitle": "1. Identificar · 2. Aplicar · 3. Comprobar",
-        "overlayText": "Estrategia mental: Identificar, Aplicar y Verificar",
-        "vectorialOverlayPptx": "Memory strategy: Connector + Subject + Verb + Context",
-        "mathOverlayPptx": "Memory strategy: Connector + Subject + Verb + Context",
-        "speakerNotes": "Always remember the three-step thinking strategy: identify the key data, apply the formal rule in order, and verify the final result.",
-        "palabrasAprox": 26,
-        "duracionSeg": 12
+        "slideNumber": 13,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Error y corrección",
+        "visualPrompt": "",
+        "overlayText": "Error y corrección",
+        "overlayTitle": "Error y corrección",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Error y corrección",
+        "speakerNotes": "Avoid this mistake: Choosing one material as the main idea ignores the purpose of the whole email. If the answer adds information, return to the resource and revise it.",
+        "duracionSeg": 8
       },
       {
-        "slideNumber": 7,
-        "tituloMomento": "Síntesis y Regla de Oro",
-        "didacticPurpose": "Síntesis y Regla de Oro",
-        "visualPrompt": "Modern anime style. StudioSimple emblem alongside an inspiring summary infography, with the two 13-year-olds smiling confidently. No text drawn by AI.",
-        "overlayTitle": "Regla de Oro: Character Feelings, Dialogue, and Conflict",
-        "overlaySubtitle": "Método disciplinar validado",
-        "overlayText": "Síntesis: Character Feelings, Dialogue, and Conflict",
-        "vectorialOverlayPptx": "Summary infography: Golden rule of Character Feelings, Dialogue, and Conflict",
-        "mathOverlayPptx": "Summary infography: Golden rule of Character Feelings, Dialogue, and Conflict",
-        "speakerNotes": "Now that you understand the golden rule and the procedure of Character Feelings, Dialogue, and Conflict, let us practice and prove our skills in the interactive platform!",
-        "palabrasAprox": 25,
-        "duracionSeg": 12
+        "slideNumber": 14,
+        "tituloMomento": "Explicación",
+        "didacticPurpose": "Síntesis y práctica",
+        "visualPrompt": "",
+        "overlayText": "Síntesis y práctica",
+        "overlayTitle": "Síntesis y práctica",
+        "overlaySubtitle": "",
+        "vectorialOverlayPptx": "Síntesis y práctica",
+        "speakerNotes": "A main idea connects the email's details. Read, locate evidence, explain and check. Continue with the interactive practice.",
+        "duracionSeg": 8
       }
     ]
   },
   "postQuestions": [
     {
-      "context": "Key Vocabulary & Context Clues (textos audiovisuales)",
-      "question": "Which English words in the text give you clear clues about the communicative goal and the action?",
-      "expected": "Identify key English nouns, action verbs or connectors related to the topic.",
-      "success": "Well done! You successfully identified the key English vocabulary from the context.",
-      "support": "Look for transparent words and descriptive adjectives: what words tell you what is happening?",
-      "reveal": "Context clues and key vocabulary help us understand the main message without needing an immediate dictionary translation.",
-      "studentReveal": "Key English words identified from the context of the communicative text."
-    },
-    {
-      "context": "Grammar & Communicative Flow",
-      "question": "Notice the verb tense or structure used in the sentences. How does the grammatical form tell us when or how the action happens?",
-      "expected": "Recognize the verb form or structure indicating time, function, or modality.",
-      "success": "Excellent! You connected the grammatical structure with its real communicative meaning.",
-      "support": "Look at the ending of the verb or auxiliary words: does it talk about routine, past events or future plans?",
-      "reveal": "Grammatical structures and verb tenses provide the timeline and conditions for natural English communication.",
-      "studentReveal": "The verb tense and sentence structure that clarify the communicative intention."
+      "context": "Comprobación 1",
+      "question": "When and where does the club meet?",
+      "expected": "It meets on Wednesday at three o'clock in the school library.",
+      "success": "Respuesta precisa y fundamentada",
+      "support": "Revisa el concepto clave expuesto",
+      "reveal": "It meets on Wednesday at three o'clock in the school library.",
+      "studentReveal": "It meets on Wednesday at three o'clock in the school library."
     }
   ],
   "practice": [
     {
-      "context": "Practice 1 in Notebook: Vocabulary & Model Sentences",
-      "question": "Open your English notebook. Write as title: 'Character Feelings, Dialogue, and Conflict'. Copy the key vocabulary box, write 2 original sentences using 'textos audiovisuales', and translate their meaning into Spanish.",
-      "expected": "Accurate English sentences in the notebook with correct spelling, grammar agreement, and Spanish translation.",
-      "success": "Great notebook work! Your English sentences are well structured and meaningful.",
-      "support": "Check the slide model: Subject + Verb + Complement. Follow that pattern to write your sentences.",
-      "reveal": "Writing model sentences consolidates vocabulary and internalizes the English syntactic order.",
-      "studentReveal": "Original English sentences written and checked in the notebook."
+      "context": "The email includes the meeting time, place, materials and activity.",
+      "question": "What is the email mainly about? Write an answer and identify its support.",
+      "expected": "It is mainly about a reading club meeting and how to take part.",
+      "success": "The details all concern preparing for and joining the meeting.",
+      "support": "Revisa los datos del recurso",
+      "reveal": "It is mainly about a reading club meeting and how to take part.",
+      "studentReveal": "It is mainly about a reading club meeting and how to take part."
     },
     {
-      "context": "Practice 2 in Notebook: Short Dialogue or Message",
-      "question": "In your notebook, write a short 3-line dialogue or message applying today's communicative goal (Identifying emotions and the main obstacle in narrative texts). Then read it aloud with your mentor.",
-      "expected": "Short dialogue written in English and read aloud with proper pronunciation and natural intonation.",
-      "success": "Outstanding fluency! Writing and reading aloud activates both speaking and writing skills.",
-      "support": "Use simple, direct phrases: Greeting, main message or question, and friendly closing.",
-      "reveal": "Interactive dialogue practice is the cornerstone of foreign language fluency.",
-      "studentReveal": "Short English dialogue written and practiced aloud with the mentor."
+      "context": "The club meets on Wednesday at three in the school library.",
+      "question": "When and where does the club meet? Write an answer and identify its support.",
+      "expected": "It meets on Wednesday at three o'clock in the school library.",
+      "success": "The first sentence provides the day, time and place.",
+      "support": "Revisa los datos del recurso",
+      "reveal": "It meets on Wednesday at three o'clock in the school library.",
+      "studentReveal": "It meets on Wednesday at three o'clock in the school library."
+    },
+    {
+      "context": "New original email: Subject: Art club. Hi Eva, our art club meets on Thursday at two in Room 3. Bring coloured pencils. We will make a poster about caring for the school. We will share materials and listen to ideas. I think teamwork helps us. See you, Tom.",
+      "question": "State the main idea, give the day/place/material and write one opinion supported by an accurate detail. Separate the main idea from a single material.",
+      "expected": "Main idea: an art club meeting and participation. Thursday, Room 3, coloured pencils. Possible opinion: I agree that teamwork helps because members share materials and listen to ideas. Equivalent accurate wording is accepted.",
+      "success": "Aplica el criterio de la clase de manera autónoma en un recurso nuevo",
+      "support": "Comprobar cada elemento pedido y su evidencia; aceptar formulaciones equivalentes. Si falta una relación, pedir que señale la pista y explique qué demuestra; después ofrecer el modelo y un nuevo intento. Registrar respuesta, apoyos y criterio por reforzar.",
+      "reveal": "Main idea: an art club meeting and participation. Thursday, Room 3, coloured pencils. Possible opinion: I agree that teamwork helps because members share materials and listen to ideas. Equivalent accurate wording is accepted.",
+      "studentReveal": "Main idea: an art club meeting and participation. Thursday, Room 3, coloured pencils. Possible opinion: I agree that teamwork helps because members share materials and listen to ideas. Equivalent accurate wording is accepted."
     }
   ],
   "mini": [
     {
-      "id": "q_1",
-      "q": "Reading Comprehension: What is the main communicative purpose of 'textos audiovisuales' in today's English lesson?",
+      "id": "q1",
+      "q": "What is the email mainly about?",
       "options": [
-        "To express clear ideas, actions, or descriptions in English using context clues and accurate sentence structure",
-        "To translate words completely out of context without paying attention to meaning",
-        "To memorize isolated lists of English words without applying them in real sentences"
+        "A. A reading club meeting",
+        "B. How to repair a pencil",
+        "C. A birthday at home",
+        "D. A sports competition"
       ],
-      "correct": "To express clear ideas, actions, or descriptions in English using context clues and accurate sentence structure",
-      "fixExplain": "Context clues and functional structures allow English learners to communicate naturally and with confidence.",
-      "concept": "Character Feelings, Dialogue, and Conflict",
-      "explain": "Context clues and functional structures allow English learners to communicate naturally and with confidence.",
-      "dileReview": "Pídele que señale la palabra o verbo en inglés que justifica su elección."
+      "correct": "A. A reading club meeting",
+      "fixExplain": "The email explains a reading meeting and how to participate."
     },
     {
-      "id": "q_2",
-      "q": "To avoid the common mistake of 'Confundir las ideas generales con los detalles específicos en los textos orales.', what is the best strategy when reading an English text?",
+      "id": "q2",
+      "q": "What should Leo bring?",
       "options": [
-        "Identify the general meaning and key cognates first, instead of trying to translate every single word",
-        "Stop reading immediately whenever you find an unfamiliar English word",
-        "Assume that English sentences must follow the exact same word order as Spanish"
+        "A. A cake and flowers",
+        "B. A notebook and a pencil",
+        "C. A football and shoes",
+        "D. A map and a compass"
       ],
-      "correct": "Identify the general meaning and key cognates first, instead of trying to translate every single word",
-      "fixExplain": "Deducir el significado por contexto evita la frustración y construye fluidez en la comprensión lectora en inglés.",
-      "concept": "Character Feelings, Dialogue, and Conflict",
-      "explain": "Deducir el significado por contexto evita la frustración y construye fluidez en la comprensión lectora en inglés.",
-      "dileReview": "Pregúntale: ¿cómo te ayudaron los cognados a entender la idea general sin usar diccionario?"
+      "correct": "B. A notebook and a pencil",
+      "fixExplain": "The email explicitly asks for a notebook and a pencil."
     },
     {
-      "id": "q_3",
-      "q": "Language Structure: Which English sentence demonstrates the correct grammatical pattern for 'textos audiovisuales'?",
+      "id": "q3",
+      "q": "Which opinion uses an accurate detail?",
       "options": [
-        "The student carefully read the text and wrote a complete response in the notebook",
-        "The student carefully reading the text and write without agreement yesterday",
-        "Yesterday the student will read the text in the future tense by mistake"
+        "A. I agree because the club never discusses ideas",
+        "B. I disagree because the meeting is on Sunday",
+        "C. I agree because members discuss ideas and listen respectfully",
+        "D. I agree because the email describes a race"
       ],
-      "correct": "The student carefully read the text and wrote a complete response in the notebook",
-      "fixExplain": "A well-structured English sentence maintains proper subject-verb agreement and consistent tense usage.",
-      "concept": "Character Feelings, Dialogue, and Conflict",
-      "explain": "A well-structured English sentence maintains proper subject-verb agreement and consistent tense usage.",
-      "dileReview": "Pídele que identifique el sujeto y el verbo principal de la oración correcta."
+      "correct": "C. I agree because members discuss ideas and listen respectfully",
+      "fixExplain": "The response uses the discussion and respectful listening stated in the email."
     }
   ],
   "recovery": [
     {
-      "title": "English Recovery & Consolidation: Character Feelings, Dialogue, and Conflict",
-      "explain": "When reading and writing in English, always look for the main subject and the action verb in the correct tense, using context clues to guide your comprehension of 'textos audiovisuales'.",
-      "q": "Which sentence correctly demonstrates clear English communication for this lesson?",
-      "options": [
-        "The team explored the setting and recorded their findings in the notebook",
-        "The team explore yesterday without any past tense marker"
-      ],
-      "correct": "The team explored the setting and recorded their findings in the notebook",
-      "correctText": "Correct! The sentence uses the proper past tense marker (-ed) to express a completed action.",
-      "fixText": "Remember that in English, regular verbs in the past tense take the -ed ending to signal completed events."
+      "title": "Recuperación 1",
+      "explain": "The email explains a reading meeting and how to participate.",
+      "q": "State the main idea rather than naming one object.",
+      "kind": "open_response",
+      "options": [],
+      "correct": "",
+      "correctText": "A science club meeting and its observation activity. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
+      "fixText": "Buscar estas expresiones del recurso nuevo: «science»; «club». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
+      "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
+      "resource": "New original email for recovery: Hi Ben, the science club meets on Tuesday at four in the lab. Bring a notebook. We will observe leaves and compare our notes. I think comparing notes helps us notice details. Ana.",
+      "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
+    },
+    {
+      "title": "Recuperación 2",
+      "explain": "The email explicitly asks for a notebook and a pencil.",
+      "q": "What should Ben bring? Find the exact request.",
+      "kind": "open_response",
+      "options": [],
+      "correct": "",
+      "correctText": "A notebook. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
+      "fixText": "Buscar estas expresiones del recurso nuevo: «notebook». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
+      "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
+      "resource": "New original email for recovery: Hi Ben, the science club meets on Tuesday at four in the lab. Bring a notebook. We will observe leaves and compare our notes. I think comparing notes helps us notice details. Ana.",
+      "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
+    },
+    {
+      "title": "Recuperación 3",
+      "explain": "The response uses the discussion and respectful listening stated in the email.",
+      "q": "Give an opinion and support it with the activity described.",
+      "kind": "open_response",
+      "options": [],
+      "correct": "",
+      "correctText": "For example: I agree because members compare their notes about leaves. An alternative opinion needs an accurate detail and a connected reason. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
+      "fixText": "Buscar estas expresiones del recurso nuevo: «compare»; «notes»; «leaves»; «detail». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
+      "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
+      "resource": "New original email for recovery: Hi Ben, the science club meets on Tuesday at four in the lab. Bring a notebook. We will observe leaves and compare our notes. I think comparing notes helps us notice details. Ana.",
+      "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
     }
   ],
   "summaryIdeas": [
     [
-      "1 · Concepto central",
-      "Identificamos los elementos y el punto de partida del análisis."
+      "Idea central",
+      "Una situación"
     ],
     [
-      "2 · Interpretación del contexto",
-      "Identifying emotions and the main obstacle in narrative texts"
-    ],
-    [
-      "3 · Síntesis formal",
-      "In Character Feelings, Dialogue, and Conflict, we communicate effectively by using 'textos audiovisuales' in context, paying attention to verb tenses and avoiding word-for-word translation."
+      "Comprensión",
+      "Aplicación del criterio formal en el cuaderno físico."
     ]
   ],
   "interactive": {
-    "type": "story_arc",
-    "title": "English Narrative Story Arc & Time Connectors",
-    "description": "Organizador gráfico secuencial para comprensión lectora."
-  },
-  "summaryText": "Hoy dominaste Identifying emotions and the main obstacle in narrative texts en inglés con práctica activa de vocabulario y escritura en tu cuaderno.",
-  "reasoning": {
-    "title": "Comparemos dos situaciones",
-    "dileIntro": "Antes de resumir, comparemos dos situaciones. No necesitas repetir una frase exacta: lo importante es que expliques la idea con tus propias palabras.",
-    "question": "Al comparar dos situaciones de Character Feelings, Dialogue, and Conflict, ¿cómo influye el contexto en la interpretación de los datos?",
-    "expectedAnswer": "El significado o resultado depende de las condiciones del contexto y del propósito de la situación.",
-    "context1": {
-      "label": "SITUACIÓN 1",
-      "value": "Practice 1 in Notebook: Vocabulary & Model Sentences",
-      "desc": "Open your English notebook. Write as title: 'Character Feelings, Dialogue, and Conflict'. Copy the key vocabulary box, write 2 original sentences using 'textos audiovisuales', and translate their meaning into Spanish."
-    },
-    "context2": {
-      "label": "SITUACIÓN 2",
-      "value": "Practice 2 in Notebook: Short Dialogue or Message",
-      "desc": "In your notebook, write a short 3-line dialogue or message applying today's communicative goal (Identifying emotions and the main obstacle in narrative texts). Then read it aloud with your mentor."
-    },
-    "successFeedback": "¡Excelente razonamiento! Reconociste que el contexto orienta la interpretación de los datos.",
-    "supportFeedback": "Observa cada situación por separado y explica qué elementos las distinguen.",
-    "revealText": "Cada situación tiene un propósito particular y los datos se interpretan según las condiciones del problema."
-  },
-  "challenge": {
-    "title": "Desafío breve: Character Feelings, Dialogue, and Conflict",
-    "question": "En Inglés, ¿qué diferencia observas entre identificar los datos y aplicar el procedimiento? Explica tu razonamiento.",
-    "expectedAnswer": "Identificar los datos determina el punto de partida; aplicar el procedimiento permite construir la respuesta.",
-    "item1": {
-      "label": "Datos iniciales",
-      "tag": "Punto de partida"
-    },
-    "item2": {
-      "label": "Procedimiento",
-      "tag": "Aplicación"
-    },
-    "successFeedback": "¡Muy bien! Distinguiste claramente los momentos del análisis.",
-    "supportFeedback": "Revisémoslo juntos: primero identificamos la información disponible y luego aplicamos el método correspondiente."
-  },
-  "strategy": {
-    "title": "Cómo analizar una situación",
-    "dileIntro": "Cuando enfrentes un problema en Inglés, puedes seguir estos tres pasos clave:",
-    "steps": [
-      {
-        "number": 1,
-        "title": "Identifica",
-        "desc": "¿Cuáles son los datos clave y cuál es la pregunta central?"
-      },
-      {
-        "number": 2,
-        "title": "Aplica",
-        "desc": "¿Qué regla o método disciplinar corresponde utilizar?"
-      },
-      {
-        "number": 3,
-        "title": "Comprueba",
-        "desc": "¿La conclusión o resultado responde con coherencia al problema?"
-      }
-    ]
+    "type": "reading_resource",
+    "title": "Reading Resource & Vocabulary in Context",
+    "description": "Text comprehension and contextual vocabulary organizer."
   },
   "closure": {
-    "congratulations": "¡Felicitaciones! Hoy completaste con éxito la clase \"Character Feelings, Dialogue, and Conflict\". Has demostrado constancia y rigor en tu aprendizaje.",
-    "nextClassPreview": "En la próxima sesión continuaremos profundizando los aprendizajes de Inglés."
+    "congratulations": "Good work. You explained your answer with information from the resource.",
+    "nextClassPreview": "¡Nos vemos en la próxima lección!"
   },
   "paso8_cierre": {
-    "preguntaSintesis": "In your own words, what was the most useful English word or phrase you learned in today's lesson?",
-    "metacognicion": "¿Qué técnica te ayudó más a entender el texto en inglés: buscar cognados o identificar los verbos principales?",
-    "celebracion": "Great job today! You have successfully mastered Lesson 4. See you in the next English adventure!"
+    "preguntaSintesis": "What is the email mainly about?",
+    "metacognicion": "What helped you understand: the resource, its details or comparing answers? Explain why.",
+    "celebracion": "Good work. You explained your answer with information from the resource."
   }
 };

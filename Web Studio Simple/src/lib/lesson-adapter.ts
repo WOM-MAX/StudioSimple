@@ -73,10 +73,15 @@ export function adaptGeneratorLessonToPlayer(
     title: r.title || `Refuerzo ${idx + 1}`,
     explain: r.explain || 'Revisemos esta idea paso a paso.',
     q: r.q,
-    options: r.options,
-    correct: r.correct,
+    kind: (r as any).kind || ((r.options && r.options.length > 0) ? 'multiple_choice' : 'open_response'),
+    options: r.options || [],
+    correct: r.correct || '',
     correctText: r.correctText || '¡Eso es! Respuesta correcta.',
-    fixText: r.fixText || `La respuesta correcta es ${r.correct}.`
+    fixText: r.fixText || (r.correct ? `La respuesta correcta es ${r.correct}.` : 'Revisa las pistas del texto.'),
+    support2: (r as any).support2,
+    resource: (r as any).resource,
+    exitCriteria: (r as any).exitCriteria,
+    retest: (r as any).retest
   }));
 
   const subjectColorMap: Record<string, 'navy' | 'orange' | 'yellow' | 'teal'> = {
@@ -559,10 +564,15 @@ export function adaptPlayerLessonToGenerator(playerLesson: PlayerLessonData): Ge
       title: r.title,
       explain: r.explain,
       q: r.q,
+      kind: r.kind,
       options: r.options,
       correct: r.correct,
       correctText: r.correctText,
-      fixText: r.fixText
+      fixText: r.fixText,
+      support2: r.support2,
+      resource: r.resource,
+      exitCriteria: r.exitCriteria,
+      retest: r.retest
     })),
     paso8_cierre: playerLesson.paso8_cierre ? {
       preguntaSintesis: playerLesson.paso8_cierre.preguntaSintesis,
