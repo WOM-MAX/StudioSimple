@@ -1591,14 +1591,22 @@ export const AdultLessonView: React.FC = () => {
           {/* COMPLETED */}
           {session.stage === 'completed' && (
             <div className="text-center py-10 flex flex-col items-center justify-center min-h-[500px]">
-              <div className="w-16 h-16 rounded-full bg-[#eaf4e8] text-[#255e29] flex items-center justify-center mb-4">
-                <CheckCircle2 className="w-10 h-10" />
+              <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 ${
+                canAccreditLesson(session)
+                  ? 'bg-[#eaf4e8] text-[#255e29]'
+                  : 'bg-[#fff5ee] text-[#d96512]'
+              }`}>
+                {canAccreditLesson(session) ? <CheckCircle2 className="w-10 h-10" /> : <AlertTriangle className="w-10 h-10" />}
               </div>
               <h1 className="text-3xl font-extrabold text-[#1c3257] mb-2">
-                ¡Clase {lessonData.metadata.lessonNumber} completada con éxito!
+                {canAccreditLesson(session)
+                  ? `¡Clase ${lessonData.metadata.lessonNumber} completada con éxito!`
+                  : 'Sesión finalizada (sin acreditar logro)'}
               </h1>
               <p className="text-sm text-[#526177] max-w-md mx-auto mb-8 leading-relaxed">
-                Has finalizado la clase de {lessonData.metadata.subject} con tu estudiante. Los avances han quedado registrados.
+                {canAccreditLesson(session)
+                  ? `Has finalizado la clase de ${lessonData.metadata.subject} con tu estudiante. Los avances y el logro han quedado acreditados.`
+                  : `Has cerrado la sesión de la clase ${lessonData.metadata.lessonNumber} (${session.miniScore}/3 aciertos). La clase permanece pendiente de consolidación y no ha sido acreditada.`}
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                 <button

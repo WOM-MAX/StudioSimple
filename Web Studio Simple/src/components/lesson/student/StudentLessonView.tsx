@@ -1105,8 +1105,12 @@ export const StudentLessonView: React.FC = () => {
           <div className="max-w-md mx-auto w-full animate-fadeIn text-center my-auto py-6">
             <div className={`bg-white/95 backdrop-blur-md rounded-3xl p-8 shadow-xl shadow-slate-200/50 border ${theme.borderColor} text-center relative overflow-hidden transition-all duration-300`}>
               <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${theme.accentGradient}`} />
-              <div className="w-14 h-14 rounded-full bg-emerald-500 text-white flex items-center justify-center mx-auto mb-3 shadow-md shadow-emerald-500/20">
-                <Check className="w-8 h-8" />
+              <div className={`w-14 h-14 rounded-full text-white flex items-center justify-center mx-auto mb-3 shadow-md ${
+                canAccreditLesson(session)
+                  ? 'bg-emerald-500 shadow-emerald-500/20'
+                  : 'bg-amber-500 shadow-amber-500/20'
+              }`}>
+                {canAccreditLesson(session) ? <Check className="w-8 h-8" /> : <AlertCircle className="w-8 h-8" />}
               </div>
               <span className={`text-[11px] font-bold uppercase tracking-widest ${theme.badgeText} block mb-1`}>
                 Terminamos por hoy
@@ -1116,10 +1120,12 @@ export const StudentLessonView: React.FC = () => {
                   ? 'Excelente trabajo'
                   : session.miniScore >= 2
                   ? 'Muy bien'
-                  : 'Buen trabajo'}
+                  : 'Sesión finalizada'}
               </h1>
               <p className="text-xs text-slate-500 mb-6">
-                Completaste la clase de hoy con tu mentor.
+                {canAccreditLesson(session)
+                  ? 'Completaste y acreditaste la clase de hoy con tu mentor.'
+                  : 'Has terminado la sesión de hoy con tu mentor. Recuerda consolidar los temas pendientes.'}
               </p>
               <div className="bg-slate-50 text-[#1C3257] p-3.5 rounded-2xl text-xs font-bold border border-slate-200/70 mb-6">
                 Próxima clase: {lessonData.metadata.nextLessonTitle}
