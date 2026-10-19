@@ -110,18 +110,6 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
           return JSON.parse(saved);
         } catch {}
       }
-      // Autenticación sintética reservada exclusivamente para el entorno de pruebas mediante testAuth=true
-      const params = new URLSearchParams(window.location.search);
-      if (params.get('testAuth') === 'true' && params.get('view') === 'lesson') {
-        const mode = params.get('mode');
-        const role = mode === 'student' ? 'student' : 'parent';
-        return {
-          role,
-          userId: role === 'student' ? 'stu-101' : 'par-202',
-          enrolledGrades: ['7° Básico'],
-          isAuthenticated: true
-        };
-      }
     }
     return null;
   });

@@ -775,6 +775,11 @@ export default defineConfig({
               return res.end(JSON.stringify({
                 success: true,
                 roomCode,
+                targetKey: room?.targetKey,
+                grade: room?.grade,
+                subject: room?.subject,
+                oaCode: room?.oaCode,
+                lessonNumber: room?.lessonNumber,
                 session: room?.session || null,
                 lastUpdated: room?.lastUpdated || null,
                 activeClients: clientSet ? clientSet.size : 0,
@@ -792,6 +797,11 @@ export default defineConfig({
                   const parsed = JSON.parse(body || '{}');
                   const rCode = (parsed.roomCode || roomCode || 'room-estudiosimple').trim();
                   const patch = parsed.session || {};
+                  const targetKey = parsed.targetKey || patch.targetKey;
+                  const grade = parsed.grade || patch.grade;
+                  const subject = parsed.subject || patch.subject;
+                  const oaCode = parsed.oaCode || patch.activeOa || patch.oaCode;
+                  const lessonNumber = parsed.lessonNumber !== undefined ? parsed.lessonNumber : patch.activeLessonNum;
                   const clientId = (parsed.clientId || '').trim();
                   const role = (parsed.role || 'unknown').trim();
                   const isReset = Boolean(
@@ -801,10 +811,23 @@ export default defineConfig({
 
                   let room = activeClassroomsDev.get(rCode);
                   if (!room || isReset) {
-                    room = { session: patch, lastUpdated: Date.now() };
+                    room = {
+                      session: patch,
+                      targetKey,
+                      grade,
+                      subject,
+                      oaCode,
+                      lessonNumber,
+                      lastUpdated: Date.now()
+                    };
                     activeClassroomsDev.set(rCode, room);
                   } else {
                     room.session = { ...(room.session || {}), ...patch };
+                    if (targetKey) room.targetKey = targetKey;
+                    if (grade) room.grade = grade;
+                    if (subject) room.subject = subject;
+                    if (oaCode) room.oaCode = oaCode;
+                    if (lessonNumber !== undefined) room.lessonNumber = lessonNumber;
                     room.lastUpdated = Date.now();
                   }
 
@@ -818,6 +841,11 @@ export default defineConfig({
                     const eventPayload = JSON.stringify({
                       type: 'sync',
                       roomCode: rCode,
+                      targetKey: room.targetKey,
+                      grade: room.grade,
+                      subject: room.subject,
+                      oaCode: room.oaCode,
+                      lessonNumber: room.lessonNumber,
                       session: room.session,
                       isReset,
                       senderClientId: clientId,

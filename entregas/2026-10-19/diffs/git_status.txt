@@ -1,0 +1,28 @@
+ M "Web Studio Simple/src/context/AppContext.tsx"
+ M "Web Studio Simple/src/context/LessonSyncContext.tsx"
+ M "Web Studio Simple/vite.config.ts"
+ M entregas/2026-10-19/capturas/REC-01_01_Carga_Split_Ciencias_OA01_Clase02.png
+ M entregas/2026-10-19/capturas/REC-01_02_Vista_Adulto_Ciencias_OA01_Clase02.png
+ M entregas/2026-10-19/capturas/REC-01_03_Vista_Estudiante_Ciencias_OA01_Clase02.png
+ M entregas/2026-10-19/capturas/REC-02_01_Sin_Logro_0_de_3.png
+ M entregas/2026-10-19/capturas/REC-02_02_Sin_Logro_1_de_3.png
+ M entregas/2026-10-19/capturas/REC-02_03_Recarga_No_Acreditada.png
+ M entregas/2026-10-19/capturas/REC-03_01_Flujo_Recuperacion_Apoyo_Cuaderno.png
+ M entregas/2026-10-19/capturas/REC-03_02_Reintento_Acreditado_2_de_3.png
+ M entregas/2026-10-19/capturas/REC-03_03_Logro_Final_Ambos_Roles.png
+ M entregas/2026-10-19/capturas/REC-04_01_Estado_Antes_De_Pausar.png
+ M entregas/2026-10-19/capturas/REC-04_02_Estado_Despues_De_Reanudar.png
+ M entregas/2026-10-19/capturas/REC-05_01_Cambio_A_Lengua_OA03_Clase01.png
+ M entregas/2026-10-19/capturas/REC-05_02_Retorno_A_Ciencias_OA01_Clase02.png
+ M entregas/2026-10-19/codigo/execute_real_browser_recs.ts
+ M scripts/execute_real_browser_recs.ts
+ M scripts/verify_app_isolated_integration.ts
+?? entregas/2026-10-19/capturas/REC-06_01_Acceso_Sin_Sesion_Bloqueado.png
+?? entregas/2026-10-19/capturas/REC-06_02_Logout_Limpio_Sin_Restauracion.png
+?? entregas/2026-10-19/codigo/src/
+?? entregas/2026-10-19/codigo/verify_app_isolated_integration.ts
+?? entregas/2026-10-19/codigo/vite.config.ts
+?? entregas/2026-10-19/diffs/diff_AppContext.txt
+?? entregas/2026-10-19/diffs/diff_LessonSyncContext.txt
+?? entregas/2026-10-19/diffs/diff_vite_config.txt
+?? scripts/build_cierre_pendientes_package.ts

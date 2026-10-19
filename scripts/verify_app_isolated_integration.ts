@@ -15,6 +15,10 @@ import {
   findCanonicalFactoryLesson,
   getLessonCanonicalKey
 } from '../Web Studio Simple/src/lib/lesson-repository';
+import {
+  isAuthorizedLessonMessage,
+  getLessonSessionKey
+} from '../Web Studio Simple/src/context/LessonSyncContext';
 import { LessonSessionState } from '../Web Studio Simple/src/types/lesson';
 import { CIENCIAS_7B_OA01_CLASE02 } from '../Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase02';
 import { LENGUA_7B_OA03_CLASE01 } from '../Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase01';
@@ -558,6 +562,120 @@ record(
 );
 
 // ====================================================================
+// G. VALIDACIÓN ESTRICTA DE IDENTIDAD Y TRANSPORTE MULTICLASE (CORRECCIÓN A)
+// ====================================================================
+console.log('\n--- G. IDENTIDAD DE SESIONES Y AISLAMIENTO DE TRANSPORTE ---');
+
+const expectedCiencias = {
+  grade: '7° Básico',
+  subject: 'Ciencias Naturales',
+  oaCode: 'OA 1',
+  lessonNumber: 2,
+  roomCode: 'aula_110_7',
+  specificLessonKey: getLessonSessionKey('7° Básico', 'Ciencias Naturales', 'OA 1', 2),
+  currentClientId: 'client-student-test'
+};
+
+// 1. Mensaje de la misma clase y sala autorizada: DEBE ACEPTARSE
+const msgValidCiencias = {
+  roomCode: 'aula_110_7',
+  targetKey: expectedCiencias.specificLessonKey,
+  grade: '7° Básico',
+  subject: 'Ciencias Naturales',
+  oaCode: 'OA 1',
+  lessonNumber: 2,
+  senderClientId: 'client-mentor-test',
+  session: {
+    stage: 'practice',
+    activeOa: 'OA 1',
+    activeLessonNum: 2
+  }
+};
+const acceptedValid = isAuthorizedLessonMessage(msgValidCiencias, expectedCiencias);
+record(
+  'Identidad Multiclase',
+  'Mensaje legítimo con misma clase y contexto autorizado',
+  'isAuthorizedLessonMessage retorna true y permite procesar la actualización',
+  acceptedValid ? 'Mensaje aceptado correctamente' : 'Fallo: mensaje legítimo fue rechazado',
+  acceptedValid,
+  { msgValidCiencias }
+);
+
+// 2. Colisión: Mensaje de otra asignatura con IGUAL OA y número de clase (Historia OA1 Clase 2): DEBE RECHAZARSE
+const msgHistoriaColision = {
+  roomCode: 'aula_110_7',
+  targetKey: getLessonSessionKey('7° Básico', 'Historia, Geografía y Ciencias Sociales', 'OA 1', 2),
+  grade: '7° Básico',
+  subject: 'Historia, Geografía y Ciencias Sociales',
+  oaCode: 'OA 1',
+  lessonNumber: 2,
+  senderClientId: 'client-mentor-test',
+  session: {
+    stage: 'closing',
+    activeOa: 'OA 1',
+    activeLessonNum: 2,
+    miniScore: 3
+  }
+};
+const rejectedColision = !isAuthorizedLessonMessage(msgHistoriaColision, expectedCiencias);
+record(
+  'Identidad Multiclase',
+  'Colisión cruzada: Asignatura distinta con mismo OA y clase (Historia OA1 C2 vs Ciencias OA1 C2)',
+  'isAuthorizedLessonMessage retorna false y RECHAZA de plano el mensaje ajeno sin mutar la clave destino',
+  rejectedColision ? 'Mensaje ajeno de Historia rechazado correctamente sin contaminar Ciencias' : 'Fallo crítico: mensaje de Historia fue aceptado',
+  rejectedColision,
+  { msgHistoriaColision }
+);
+
+// 3. Mensaje proveniente de sala ajena: DEBE RECHAZARSE
+const msgForeignRoom = {
+  ...msgValidCiencias,
+  roomCode: 'room-otra-sala-desconocida'
+};
+const rejectedForeignRoom = !isAuthorizedLessonMessage(msgForeignRoom, expectedCiencias);
+record(
+  'Identidad Multiclase',
+  'Mensaje proveniente de sala ajena o no autorizada',
+  'isAuthorizedLessonMessage retorna false y rechaza el mensaje',
+  rejectedForeignRoom ? 'Mensaje de sala ajena rechazado' : 'Fallo: mensaje de sala ajena fue aceptado',
+  rejectedForeignRoom,
+  { msgForeignRoom }
+);
+
+// 4. Mensaje sin identidad suficiente (sin asignatura ni curso): DEBE RECHAZARSE
+const msgIncompleteIdentity = {
+  roomCode: 'aula_110_7',
+  senderClientId: 'client-mentor-test',
+  session: {
+    stage: 'closing',
+    activeOa: 'OA 1',
+    activeLessonNum: 2
+  }
+};
+const rejectedIncomplete = !isAuthorizedLessonMessage(msgIncompleteIdentity, expectedCiencias);
+record(
+  'Identidad Multiclase',
+  'Mensaje sin identidad suficiente (sin asignatura ni curso)',
+  'isAuthorizedLessonMessage retorna false y no mezcla automáticamente mensajes sin metadatos',
+  rejectedIncomplete ? 'Mensaje sin metadatos suficientes rechazado correctamente' : 'Fallo: mensaje incompleto fue aceptado',
+  rejectedIncomplete,
+  { msgIncompleteIdentity }
+);
+
+// 5. Descarte de eco propio: DEBE DESCARTARSE
+const msgOwnEcho = {
+  ...msgValidCiencias,
+  senderClientId: expectedCiencias.currentClientId
+};
+const rejectedEcho = !isAuthorizedLessonMessage(msgOwnEcho, expectedCiencias);
+record(
+  'Identidad Multiclase',
+  'Descarte de eco emitido por el propio cliente',
+  'isAuthorizedLessonMessage retorna false para evitar bucles locales de retroalimentación',
+  rejectedEcho ? 'Eco descartado correctamente' : 'Fallo: eco propio fue aceptado',
+  rejectedEcho,
+  { msgOwnEcho }
+);
 // RESUMEN FINAL Y EXPORTACIÓN DE EVIDENCIA
 // ====================================================================
 console.log('\n================================================================');

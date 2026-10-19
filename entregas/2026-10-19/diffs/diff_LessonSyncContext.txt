@@ -1,0 +1,236 @@
+diff --git a/Web Studio Simple/src/context/LessonSyncContext.tsx b/Web Studio Simple/src/context/LessonSyncContext.tsx
+index 25ff47e..4c0d67c 100644
+--- a/Web Studio Simple/src/context/LessonSyncContext.tsx	
++++ b/Web Studio Simple/src/context/LessonSyncContext.tsx	
+@@ -12,6 +12,73 @@ export function getLessonSessionKey(grade: string, subject: string, oaCode: stri
+   return `estudiosimple_lesson_session_${grade}_${normSubject}_${normOa}_${lessonNumber}`;
+ }
+ 
++export function isAuthorizedLessonMessage(
++  incoming: any,
++  expected: {
++    grade: string;
++    subject: string;
++    oaCode: string;
++    lessonNumber: number;
++    roomCode: string;
++    specificLessonKey: string;
++    currentClientId: string;
++  }
++): boolean {
++  if (!incoming || typeof incoming !== 'object') return false;
++
++  // 1. Descartar eco del propio cliente emisor
++  const senderId = incoming.senderClientId || incoming.clientId;
++  if (senderId && senderId === expected.currentClientId) return false;
++
++  // 2. Validación obligatoria de sala (roomCode)
++  const room = incoming.roomCode;
++  if (!room || typeof room !== 'string' || room.trim() !== expected.roomCode.trim()) {
++    return false;
++  }
++
++  // 3. Validación obligatoria de metadatos de lección (curso, asignatura, OA, número de clase)
++  const sessionObj = incoming.session || incoming.payload || incoming;
++
++  const msgTargetKey = incoming.targetKey || sessionObj.targetKey;
++  if (msgTargetKey && msgTargetKey !== expected.specificLessonKey) {
++    return false;
++  }
++
++  const msgGrade = incoming.grade || sessionObj.grade;
++  if (!msgGrade || msgGrade !== expected.grade) {
++    return false;
++  }
++
++  const msgSubject = incoming.subject || sessionObj.subject;
++  if (!msgSubject || typeof msgSubject !== 'string') {
++    return false;
++  }
++  const normMsgSubj = msgSubject.toLowerCase().replace(/[\s\-_]+/g, '_');
++  const normExpectedSubj = (expected.subject || '').toLowerCase().replace(/[\s\-_]+/g, '_');
++  if (normMsgSubj !== normExpectedSubj) {
++    return false;
++  }
++
++  const msgOa = incoming.oaCode || sessionObj.oaCode || sessionObj.activeOa;
++  if (!msgOa || typeof msgOa !== 'string') {
++    return false;
++  }
++  const normMsgOa = msgOa.toLowerCase().replace(/[\s\-_]+/g, '');
++  const normExpectedOa = (expected.oaCode || '').toLowerCase().replace(/[\s\-_]+/g, '');
++  if (normMsgOa !== normExpectedOa) {
++    return false;
++  }
++
++  const msgLessonNum = incoming.lessonNumber !== undefined
++    ? incoming.lessonNumber
++    : (sessionObj.lessonNumber !== undefined ? sessionObj.lessonNumber : sessionObj.activeLessonNum);
++  if (msgLessonNum === undefined || Number(msgLessonNum) !== expected.lessonNumber) {
++    return false;
++  }
++
++  return true;
++}
++
+ export const INITIAL_LESSON_SESSION: LessonSessionState = {
+   stage: 'cover',
+   activeOa: 'OA 1',
+@@ -88,7 +155,7 @@ export const LessonSyncProvider: React.FC<{
+   const effectiveRoomCode = useMemo(() => {
+     if (typeof window !== 'undefined') {
+       const urlParam = new URLSearchParams(window.location.search).get('room');
+-      if (urlParam && urlParam.trim()) return `room-${urlParam.trim()}`;
++      if (urlParam && urlParam.trim()) return urlParam.trim();
+       try {
+         const studentRaw = localStorage.getItem('estudio_simple_student');
+         if (studentRaw) {
+@@ -185,22 +252,19 @@ export const LessonSyncProvider: React.FC<{
+ 
+       channel.onmessage = (event) => {
+         const data = event.data;
+-        if (!data || typeof data !== 'object') return;
+-
+-        // Descartar eco de este mismo cliente
+-        if (data.senderClientId && data.senderClientId === clientIdRef.current) return;
+-
+-        // Descartar si pertenece a otra sala remota
+-        if (data.roomCode && data.roomCode !== effectiveRoomCode) return;
+-
+-        // Descartar si el mensaje pertenece a otra lección (aislamiento estricto multiclase)
+-        if (data.targetKey && data.targetKey !== specificLessonKey) return;
+-        if (data.grade && data.grade !== initialLesson.metadata.grade) return;
+-        if (data.subject && data.subject.toLowerCase() !== initialLesson.metadata.subject.toLowerCase()) return;
+-        if (data.oaCode && data.oaCode !== initialLesson.metadata.oaCode) return;
+-        if (data.lessonNumber !== undefined && data.lessonNumber !== initialLesson.metadata.lessonNumber) return;
++        if (!isAuthorizedLessonMessage(data, {
++          grade: initialLesson.metadata.grade,
++          subject: initialLesson.metadata.subject,
++          oaCode: initialLesson.metadata.oaCode,
++          lessonNumber: initialLesson.metadata.lessonNumber,
++          roomCode: effectiveRoomCode,
++          specificLessonKey,
++          currentClientId: clientIdRef.current
++        })) {
++          return;
++        }
+ 
+-        const payload = data.payload || data;
++        const payload = data.payload || data.session || data;
+         if (data.isReset || payload.isReset) {
+           setSessionState({ ...INITIAL_LESSON_SESSION, ...payload });
+         } else {
+@@ -223,12 +287,23 @@ export const LessonSyncProvider: React.FC<{
+     if (typeof fetch !== 'function') return;
+ 
+     const executePost = () => {
++      const sessionWithMeta = {
++        ...stateToSync,
++        grade: initialLesson.metadata.grade,
++        subject: initialLesson.metadata.subject,
++        targetKey: specificLessonKey
++      };
+       fetch('/api/classroom/sync', {
+         method: 'POST',
+         headers: { 'Content-Type': 'application/json' },
+         body: JSON.stringify({
+           roomCode: effectiveRoomCode,
+-          session: stateToSync,
++          targetKey: specificLessonKey,
++          grade: initialLesson.metadata.grade,
++          subject: initialLesson.metadata.subject,
++          oaCode: initialLesson.metadata.oaCode,
++          lessonNumber: initialLesson.metadata.lessonNumber,
++          session: sessionWithMeta,
+           clientId: clientIdRef.current,
+           role: currentRole,
+           isReset
+@@ -277,25 +352,30 @@ export const LessonSyncProvider: React.FC<{
+             } else {
+               setPeerRoleConnected(Boolean(json.hasStudent || viewMode === 'split'));
+             }
++            if (!isAuthorizedLessonMessage(json, {
++              grade: initialLesson.metadata.grade,
++              subject: initialLesson.metadata.subject,
++              oaCode: initialLesson.metadata.oaCode,
++              lessonNumber: initialLesson.metadata.lessonNumber,
++              roomCode: effectiveRoomCode,
++              specificLessonKey,
++              currentClientId: clientIdRef.current
++            })) {
++              return;
++            }
+             setSessionState((prev) => {
+               const incoming = json.session;
+-              if (
+-                incoming.activeOa === initialLesson.metadata.oaCode &&
+-                incoming.activeLessonNum === initialLesson.metadata.lessonNumber
+-              ) {
+-                try {
+-                  localStorage.setItem(specificLessonKey, JSON.stringify(incoming));
+-                } catch {}
+-                const isReset = Boolean(
+-                  json.isReset ||
+-                  (incoming.stage === 'cover' && incoming.attempt === 0 && (!incoming.studentTextAnswers || Object.keys(incoming.studentTextAnswers).length === 0))
+-                );
+-                if (isReset) {
+-                  return { ...INITIAL_LESSON_SESSION, ...incoming };
+-                }
+-                return { ...prev, ...incoming };
++              try {
++                localStorage.setItem(specificLessonKey, JSON.stringify(incoming));
++              } catch {}
++              const isReset = Boolean(
++                json.isReset ||
++                (incoming.stage === 'cover' && incoming.attempt === 0 && (!incoming.studentTextAnswers || Object.keys(incoming.studentTextAnswers).length === 0))
++              );
++              if (isReset) {
++                return { ...INITIAL_LESSON_SESSION, ...incoming };
+               }
+-              return prev;
++              return { ...prev, ...incoming };
+             });
+           }
+         }
+@@ -316,26 +396,27 @@ export const LessonSyncProvider: React.FC<{
+         try {
+           const data = JSON.parse(event.data);
+           if (data.type === 'init' || data.type === 'sync') {
+-            // Ignorar eco si vino de este mismo cliente
+-            if (data.senderClientId && data.senderClientId === clientIdRef.current) {
++            if (!isAuthorizedLessonMessage(data, {
++              grade: initialLesson.metadata.grade,
++              subject: initialLesson.metadata.subject,
++              oaCode: initialLesson.metadata.oaCode,
++              lessonNumber: initialLesson.metadata.lessonNumber,
++              roomCode: effectiveRoomCode,
++              specificLessonKey,
++              currentClientId: clientIdRef.current
++            })) {
+               return;
+             }
+             if (data.session) {
+               setSessionState((prev) => {
+                 const incoming = data.session;
+-                if (
+-                  incoming.activeOa === initialLesson.metadata.oaCode &&
+-                  incoming.activeLessonNum === initialLesson.metadata.lessonNumber
+-                ) {
+-                  try {
+-                    localStorage.setItem(specificLessonKey, JSON.stringify(incoming));
+-                  } catch {}
+-                  if (data.isReset) {
+-                    return { ...INITIAL_LESSON_SESSION, ...incoming };
+-                  }
+-                  return { ...prev, ...incoming };
++                try {
++                  localStorage.setItem(specificLessonKey, JSON.stringify(incoming));
++                } catch {}
++                if (data.isReset) {
++                  return { ...INITIAL_LESSON_SESSION, ...incoming };
+                 }
+-                return prev;
++                return { ...prev, ...incoming };
+               });
+             }
+           }

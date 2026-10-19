@@ -1,0 +1,402 @@
+{
+  "metadatos": {
+    "entrega": "ENTREGA_CIERRE_PENDIENTES_WORK_2026-10-19_17-25_CL",
+    "fecha_hora": "2026-10-19_17-25_CL",
+    "zona_horaria": "America/Santiago",
+    "estado": "EN_REVISION",
+    "resultado_global": "CIERRE_FUNCIONAL_PROPUESTO_PARA_REVISION_WORK",
+    "total_archivos_inventariados": 41,
+    "puerto_cdp": 9333,
+    "sala_sintetica": "aula_cierre_110_7"
+  },
+  "resumen_casos": [
+    {
+      "caso": "REC-01",
+      "nombre": "Aislamiento de roles de interfaz",
+      "estado": "PASS",
+      "capturas": 3
+    },
+    {
+      "caso": "CASO-A",
+      "nombre": "Salida sin logro (0/3 y 1/3)",
+      "estado": "PASS",
+      "capturas": 3
+    },
+    {
+      "caso": "CASO-B",
+      "nombre": "Recuperación abierta, reintento y logro (2/3)",
+      "estado": "PASS",
+      "capturas": 3
+    },
+    {
+      "caso": "CASO-C",
+      "nombre": "Respuesta escrita real y recarga",
+      "estado": "PASS",
+      "capturas": 2
+    },
+    {
+      "caso": "CASO-D",
+      "nombre": "Lectura y aislamiento entre clases (Misma sala)",
+      "estado": "PASS",
+      "capturas": 2
+    },
+    {
+      "caso": "CASO-E",
+      "nombre": "Protección de logros y acceso sintético aislado",
+      "estado": "PASS",
+      "capturas": 2
+    }
+  ],
+  "comprobaciones_tecnicas_colision_seccion_3": [
+    {
+      "prueba": "Misma clase y contexto autorizado",
+      "resultado": "ACEPTADA_Y_PERSISTIDA"
+    },
+    {
+      "prueba": "Colisión cruzada: Historia OA1 C2 vs Ciencias OA1 C2",
+      "resultado": "RECHAZADA_SIN_CONTAMINAR_DESTINO"
+    },
+    {
+      "prueba": "Sala ajena no autorizada",
+      "resultado": "RECHAZADA"
+    },
+    {
+      "prueba": "Mensaje sin identidad suficiente (sin metadatos)",
+      "resultado": "RECHAZADO"
+    },
+    {
+      "prueba": "Eco de propio cliente emisor",
+      "resultado": "DESCARTADO"
+    }
+  ],
+  "inventario_archivos": [
+    {
+      "categoria": "capturas",
+      "archivo": "capturas/REC-01_01_Carga_Split_Ciencias_OA01_Clase02.png",
+      "bytes": 387686,
+      "sha256": "44797fa718852b07f3149593830838833afae0d455c9a101de0d931a41dce72e",
+      "caso": "REC-01",
+      "descripcion": "Aislamiento de roles de interfaz (Split, Adulto, Estudiante)"
+    },
+    {
+      "categoria": "capturas",
+      "archivo": "capturas/REC-01_02_Vista_Adulto_Ciencias_OA01_Clase02.png",
+      "bytes": 140142,
+      "sha256": "f182b92587b9efcdca7a1f2d9d1dd177c138f35917b1052b3d44e974a18f7f7f",
+      "caso": "REC-01",
+      "descripcion": "Aislamiento de roles de interfaz (Split, Adulto, Estudiante)"
+    },
+    {
+      "categoria": "capturas",
+      "archivo": "capturas/REC-01_03_Vista_Estudiante_Ciencias_OA01_Clase02.png",
+      "bytes": 431244,
+      "sha256": "69e839b8439597c8893ac2f599fee34c936029c849f398f21e01f26fc5a378bb",
+      "caso": "REC-01",
+      "descripcion": "Aislamiento de roles de interfaz (Split, Adulto, Estudiante)"
+    },
+    {
+      "categoria": "capturas",
+      "archivo": "capturas/REC-02_01_Sin_Logro_0_de_3.png",
+      "bytes": 328069,
+      "sha256": "a757a24e90666de06b051d98534a31748cb827d7adc6fb96c08b92493567db5a",
+      "caso": "CASO-A",
+      "descripcion": "Salida sin logro (0/3, 1/3 y recarga no acreditada)"
+    },
+    {
+      "categoria": "capturas",
+      "archivo": "capturas/REC-02_02_Sin_Logro_1_de_3.png",
+      "bytes": 326812,
+      "sha256": "e778b6f7fc9074ab7f51923084c3e939a4364e2ff74654625d2e9e22cb7a6542",
+      "caso": "CASO-A",
+      "descripcion": "Salida sin logro (0/3, 1/3 y recarga no acreditada)"
+    },
+    {
+      "categoria": "capturas",
+      "archivo": "capturas/REC-02_03_Recarga_No_Acreditada.png",
+      "bytes": 306701,
+      "sha256": "dd7691ea7bd6e7a7327673d3fb61902043f59b25569ee75e7cf7f9fc5b455ae1",
+      "caso": "CASO-A",
+      "descripcion": "Salida sin logro (0/3, 1/3 y recarga no acreditada)"
+    },
+    {
+      "categoria": "capturas",
+      "archivo": "capturas/REC-03_01_Flujo_Recuperacion_Apoyo_Cuaderno.png",
+      "bytes": 288308,
+      "sha256": "b59fb39c9fefae766f6ea50dcea8007dfa66afea46690109ed59d30cf0ce4387",
+      "caso": "CASO-B",
+      "descripcion": "Recuperación abierta en cuaderno y reintento con logro (2/3)"
+    },
+    {
+      "categoria": "capturas",
+      "archivo": "capturas/REC-03_02_Reintento_Acreditado_2_de_3.png",
+      "bytes": 324875,
+      "sha256": "db549f8e4c447c55e69514707f6647ea61ddea79849c6b2187611c1f47e41fd2",
+      "caso": "CASO-B",
+      "descripcion": "Recuperación abierta en cuaderno y reintento con logro (2/3)"
+    },
+    {
+      "categoria": "capturas",
+      "archivo": "capturas/REC-03_03_Logro_Final_Ambos_Roles.png",
+      "bytes": 305530,
+      "sha256": "42396b856235dc11d57bd4849b16cc84b8df2fbd02c5bf763fb045e250dde3e7",
+      "caso": "CASO-B",
+      "descripcion": "Recuperación abierta en cuaderno y reintento con logro (2/3)"
+    },
+    {
+      "categoria": "capturas",
+      "archivo": "capturas/REC-04_01_Estado_Antes_De_Pausar.png",
+      "bytes": 365990,
+      "sha256": "01bc4394ade1b6031af8936cbfa179345866a4f29518bc3cbd108c2270c298f1",
+      "caso": "CASO-C",
+      "descripcion": "Respuesta escrita real en práctica y persistencia tras recarga"
+    },
+    {
+      "categoria": "capturas",
+      "archivo": "capturas/REC-04_02_Estado_Despues_De_Reanudar.png",
+      "bytes": 365983,
+      "sha256": "70b0a0441992ef26851d1d1807cf64467caec029aa69b660b72739fd5ad332b4",
+      "caso": "CASO-C",
+      "descripcion": "Respuesta escrita real en práctica y persistencia tras recarga"
+    },
+    {
+      "categoria": "capturas",
+      "archivo": "capturas/REC-05_01_Cambio_A_Lengua_OA03_Clase01.png",
+      "bytes": 262241,
+      "sha256": "c2a7f73d7a3c453cc91eba242c45073c0ffb4ffe0269c336be11efc447bfe6ce",
+      "caso": "CASO-D",
+      "descripcion": "Cambio real de clase (Ciencias -> Lengua -> Ciencias) en misma sala"
+    },
+    {
+      "categoria": "capturas",
+      "archivo": "capturas/REC-05_02_Retorno_A_Ciencias_OA01_Clase02.png",
+      "bytes": 365753,
+      "sha256": "27b5fba04e83f7544f69fbcda0e65ff7b6f83ee0840f607283c9aee40cdbb87e",
+      "caso": "CASO-D",
+      "descripcion": "Cambio real de clase (Ciencias -> Lengua -> Ciencias) en misma sala"
+    },
+    {
+      "categoria": "capturas",
+      "archivo": "capturas/REC-06_01_Acceso_Sin_Sesion_Bloqueado.png",
+      "bytes": 48241,
+      "sha256": "4e62e9edc411867a5094eecbd17147ea0be0c160f162e8bb74ae66c69b34161c",
+      "caso": "CASO-E",
+      "descripcion": "Protección de Matemática OA01 y bloqueo de acceso sin sesión"
+    },
+    {
+      "categoria": "capturas",
+      "archivo": "capturas/REC-06_02_Logout_Limpio_Sin_Restauracion.png",
+      "bytes": 48278,
+      "sha256": "c4f647f35b130abf2b002131ddb596b71cca878088c5b353f9508e760d8fd9f6",
+      "caso": "CASO-E",
+      "descripcion": "Protección de Matemática OA01 y bloqueo de acceso sin sesión"
+    },
+    {
+      "categoria": "codigo",
+      "archivo": "codigo/App.tsx",
+      "bytes": 3508,
+      "sha256": "c4754eaef135b1a8858810382fdb1647647f4b4cc2e2b05158cd4c7c99b6a427",
+      "caso": "INFRAESTRUCTURA_Y_PRUEBAS",
+      "descripcion": "Componentes modificados y scripts de validación"
+    },
+    {
+      "categoria": "codigo",
+      "archivo": "codigo/AppContext.tsx",
+      "bytes": 34700,
+      "sha256": "607b299961ccb6ead7f9b479b03192fd76c92604692de33e7794c22557841183",
+      "caso": "INFRAESTRUCTURA_Y_PRUEBAS",
+      "descripcion": "Componentes modificados y scripts de validación"
+    },
+    {
+      "categoria": "codigo",
+      "archivo": "codigo/execute_real_browser_recs.ts",
+      "bytes": 50045,
+      "sha256": "d0cbd4463b96fcdcdb03ad4510b662ef5a82496d4a7fa3a30421b92becb39138",
+      "caso": "INFRAESTRUCTURA_Y_PRUEBAS",
+      "descripcion": "Componentes modificados y scripts de validación"
+    },
+    {
+      "categoria": "codigo",
+      "archivo": "codigo/lesson-repository.ts",
+      "bytes": 17021,
+      "sha256": "3119c4bf033424243484c0eb5910e482df9ade29c42517f2126b2738613defa5",
+      "caso": "INFRAESTRUCTURA_Y_PRUEBAS",
+      "descripcion": "Componentes modificados y scripts de validación"
+    },
+    {
+      "categoria": "codigo",
+      "archivo": "codigo/lesson-session.ts",
+      "bytes": 3082,
+      "sha256": "f00462fadd380cd03d195e2af96ed256af89aca50a6a6c3cb3b80fcab740f42e",
+      "caso": "INFRAESTRUCTURA_Y_PRUEBAS",
+      "descripcion": "Componentes modificados y scripts de validación"
+    },
+    {
+      "categoria": "codigo",
+      "archivo": "codigo/LessonSyncContext.tsx",
+      "bytes": 22128,
+      "sha256": "75d3eb0d096a14158270cf35916f2027dcbf1be36547a85c280078006619aa26",
+      "caso": "INFRAESTRUCTURA_Y_PRUEBAS",
+      "descripcion": "Componentes modificados y scripts de validación"
+    },
+    {
+      "categoria": "codigo",
+      "archivo": "codigo/src/context/AppContext.tsx",
+      "bytes": 34136,
+      "sha256": "88fb4ebb8ec2e60f57f0b221188a123eb7e9ef5d01443d212078f0460873ca20",
+      "caso": "INFRAESTRUCTURA_Y_PRUEBAS",
+      "descripcion": "Componentes modificados y scripts de validación"
+    },
+    {
+      "categoria": "codigo",
+      "archivo": "codigo/src/context/LessonSyncContext.tsx",
+      "bytes": 24624,
+      "sha256": "053e4df3568e776b1e7d5fdeea1c029944f8b64e68df6001b055ede4ac4b0327",
+      "caso": "INFRAESTRUCTURA_Y_PRUEBAS",
+      "descripcion": "Componentes modificados y scripts de validación"
+    },
+    {
+      "categoria": "codigo",
+      "archivo": "codigo/src/data/lessons/ciencias_7b_oa01_clase02.ts",
+      "bytes": 25704,
+      "sha256": "7f27c2c58bb53fd1ac7ae3630e74ebb97383f9b2f6e2a902f01e2695d3c4161e",
+      "caso": "INFRAESTRUCTURA_Y_PRUEBAS",
+      "descripcion": "Componentes modificados y scripts de validación"
+    },
+    {
+      "categoria": "codigo",
+      "archivo": "codigo/src/data/lessons/lengua_7b_oa03_clase01.ts",
+      "bytes": 23453,
+      "sha256": "34d815663b8b521de8b964cd6f201ef85bf3c1ebb7aab6e4f4c13ed362016de4",
+      "caso": "INFRAESTRUCTURA_Y_PRUEBAS",
+      "descripcion": "Componentes modificados y scripts de validación"
+    },
+    {
+      "categoria": "codigo",
+      "archivo": "codigo/src/lib/lesson-session.ts",
+      "bytes": 3082,
+      "sha256": "f00462fadd380cd03d195e2af96ed256af89aca50a6a6c3cb3b80fcab740f42e",
+      "caso": "INFRAESTRUCTURA_Y_PRUEBAS",
+      "descripcion": "Componentes modificados y scripts de validación"
+    },
+    {
+      "categoria": "codigo",
+      "archivo": "codigo/SynchronizedLessonMaster.tsx",
+      "bytes": 5417,
+      "sha256": "c262f2b749dfb76d1b19bf15fdc979c78024f34a4da4dac9c04c02c044056599",
+      "caso": "INFRAESTRUCTURA_Y_PRUEBAS",
+      "descripcion": "Componentes modificados y scripts de validación"
+    },
+    {
+      "categoria": "codigo",
+      "archivo": "codigo/TesterBar.tsx",
+      "bytes": 21299,
+      "sha256": "ec9181765dcddce6ffbafe987900e8f3ccaa2e17e7330654907283dd8a55d257",
+      "caso": "INFRAESTRUCTURA_Y_PRUEBAS",
+      "descripcion": "Componentes modificados y scripts de validación"
+    },
+    {
+      "categoria": "codigo",
+      "archivo": "codigo/verify_app_isolated_integration.ts",
+      "bytes": 26640,
+      "sha256": "91217603fcde95ad6463a52f8b6d5c30f87c1f6b74e5f5b7d3d9a86ca0789d0e",
+      "caso": "INFRAESTRUCTURA_Y_PRUEBAS",
+      "descripcion": "Componentes modificados y scripts de validación"
+    },
+    {
+      "categoria": "codigo",
+      "archivo": "codigo/vite.config.ts",
+      "bytes": 42626,
+      "sha256": "38138b7e53f86a13acdf51d0a0ee473b5234919a46c6f932c1599bc2964ec29d",
+      "caso": "INFRAESTRUCTURA_Y_PRUEBAS",
+      "descripcion": "Componentes modificados y scripts de validación"
+    },
+    {
+      "categoria": "diffs",
+      "archivo": "diffs/App.tsx.diff",
+      "bytes": 1929,
+      "sha256": "7b83193a0662f44efddca0430891881c6a70ab16a299ba65f376169c7a0c7412",
+      "caso": "AUDITORIA_DIFFS",
+      "descripcion": "Diferencial Git de las modificaciones mínimas"
+    },
+    {
+      "categoria": "diffs",
+      "archivo": "diffs/AppContext.tsx.diff",
+      "bytes": 6910,
+      "sha256": "40ffd290ee13b1e4b056fc37094e8dd9150d975b98aafde3c2e7744d63f3a250",
+      "caso": "AUDITORIA_DIFFS",
+      "descripcion": "Diferencial Git de las modificaciones mínimas"
+    },
+    {
+      "categoria": "diffs",
+      "archivo": "diffs/diff_AppContext.txt",
+      "bytes": 1002,
+      "sha256": "e347dc2a655ad4a1e4225856504d0cd9b61db5ffc52dbb08a5eb1fa4852d86e3",
+      "caso": "AUDITORIA_DIFFS",
+      "descripcion": "Diferencial Git de las modificaciones mínimas"
+    },
+    {
+      "categoria": "diffs",
+      "archivo": "diffs/diff_LessonSyncContext.txt",
+      "bytes": 9957,
+      "sha256": "641ba81f1fc68b96ac70fac49ca754e1296ba5c1397c8e7dbc53a6bdf6c7c022",
+      "caso": "AUDITORIA_DIFFS",
+      "descripcion": "Diferencial Git de las modificaciones mínimas"
+    },
+    {
+      "categoria": "diffs",
+      "archivo": "diffs/diff_vite_config.txt",
+      "bytes": 3220,
+      "sha256": "6c1636e797dd8b1bbdb454783085e252546838a69fd1108dc5b147affc5b28ab",
+      "caso": "AUDITORIA_DIFFS",
+      "descripcion": "Diferencial Git de las modificaciones mínimas"
+    },
+    {
+      "categoria": "diffs",
+      "archivo": "diffs/git_status.txt",
+      "bytes": 1746,
+      "sha256": "eadda56f62215483289ac731d7b67880b7686ba4b7d50e3c5d9e5282befa5ec5",
+      "caso": "AUDITORIA_DIFFS",
+      "descripcion": "Diferencial Git de las modificaciones mínimas"
+    },
+    {
+      "categoria": "logs",
+      "archivo": "logs/domain_test.log",
+      "bytes": 5670,
+      "sha256": "0c6de89265faf85b8e93b23b7f22797aa8864a5046a2d2e676142c323636e6a1",
+      "caso": "EVIDENCIA_LOGS",
+      "descripcion": "Salida completa de ejecución y verificación técnica"
+    },
+    {
+      "categoria": "logs",
+      "archivo": "logs/execute_real_browser_recs.log",
+      "bytes": 3778,
+      "sha256": "5e0d5ef8265bdb1e5de435bfae0a7a87c1dacf14e3466ed43350fab9b01c9cdc",
+      "caso": "EVIDENCIA_LOGS",
+      "descripcion": "Salida completa de ejecución y verificación técnica"
+    },
+    {
+      "categoria": "logs",
+      "archivo": "logs/LOG_EJECUCION_CDP_EDGE_REAL.txt",
+      "bytes": 6560,
+      "sha256": "f230e4c32126b15fc509a79d3f02a28b3e6f3a90c3214e493122bc78fb6bdf14",
+      "caso": "EVIDENCIA_LOGS",
+      "descripcion": "Salida completa de ejecución y verificación técnica"
+    },
+    {
+      "categoria": "logs",
+      "archivo": "logs/LOG_RESUMEN_EJECUCION.txt",
+      "bytes": 877,
+      "sha256": "c6019656223670b482819a1745c650ab771ba93f4f899fcdea1d476e60b12ee2",
+      "caso": "EVIDENCIA_LOGS",
+      "descripcion": "Salida completa de ejecución y verificación técnica"
+    },
+    {
+      "categoria": "logs",
+      "archivo": "logs/LOG_VERIFICACION_COMPILACION_Y_UNIT_TESTS.txt",
+      "bytes": 7251,
+      "sha256": "1d3358388ff0d4dc8ec6472634103f469574372c797377fb154849855fdc2435",
+      "caso": "EVIDENCIA_LOGS",
+      "descripcion": "Salida completa de ejecución y verificación técnica"
+    }
+  ]
+}
