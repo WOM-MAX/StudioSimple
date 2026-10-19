@@ -120,6 +120,7 @@ const StudentAnswerSection: React.FC<StudentAnswerSectionProps> = ({
               rows={2}
               value={text}
               onChange={(e) => setText(e.target.value)}
+              onInput={(e) => setText((e.target as HTMLTextAreaElement).value)}
               placeholder="Escribe tu respuesta aquí para tu mentor..."
               className="w-full text-xs sm:text-sm font-semibold text-[#1C3257] bg-white border border-slate-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-[#EE751C]/40 focus:border-[#EE751C] transition-all resize-none shadow-2xs"
               autoFocus

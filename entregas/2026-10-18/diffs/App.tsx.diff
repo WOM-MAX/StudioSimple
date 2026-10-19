@@ -1,4 +1,4 @@
-diff --git a/Web Studio Simple/src/App.tsx b/Web Studio Simple/src/App.tsx
+﻿diff --git a/Web Studio Simple/src/App.tsx b/Web Studio Simple/src/App.tsx
 index 3e6510c..1bac8d0 100644
 --- a/Web Studio Simple/src/App.tsx	
 +++ b/Web Studio Simple/src/App.tsx	
@@ -25,7 +25,7 @@ index 3e6510c..1bac8d0 100644
 +      const urlView = params.get('view');
 +      if (urlView && ['lesson', 'student', 'parent', 'courses', 'admin'].includes(urlView)) {
 +        if (urlView === 'lesson') {
-+          const grade = params.get('grade') || '7° Básico';
++          const grade = params.get('grade') || '7┬░ B├ísico';
 +          const subject = params.get('subject') || 'Ciencias Naturales';
 +          const oa = params.get('oa') || 'OA 1';
 +          const lessonNum = parseInt(params.get('lesson') || '2', 10);

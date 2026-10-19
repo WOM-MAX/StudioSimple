@@ -1,5 +1,5 @@
-diff --git a/Web Studio Simple/src/context/AppContext.tsx b/Web Studio Simple/src/context/AppContext.tsx
-index 7aa0a9a..b049f25 100644
+﻿diff --git a/Web Studio Simple/src/context/AppContext.tsx b/Web Studio Simple/src/context/AppContext.tsx
+index 7aa0a9a..19537c1 100644
 --- a/Web Studio Simple/src/context/AppContext.tsx	
 +++ b/Web Studio Simple/src/context/AppContext.tsx	
 @@ -2,7 +2,7 @@ import React, { createContext, useContext, useState, useEffect, useCallback } fr
@@ -29,7 +29,32 @@ index 7aa0a9a..b049f25 100644
  
    const [students, setStudents] = useState<StudentProfile[]>(() => {
      const saved = localStorage.getItem('estudio_simple_students');
-@@ -111,7 +120,20 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children
+@@ -106,12 +115,43 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children
+   });
+ 
+   const [authSession, setAuthSessionState] = useState<AuthSession | null>(() => {
+-    const saved = localStorage.getItem('estudio_simple_auth_session');
+-    return saved ? JSON.parse(saved) : null;
++    if (typeof window !== 'undefined') {
++      const saved = localStorage.getItem('estudio_simple_auth_session');
++      if (saved) {
++        try {
++          return JSON.parse(saved);
++        } catch {}
++      }
++      const params = new URLSearchParams(window.location.search);
++      if (params.get('view') === 'lesson') {
++        const mode = params.get('mode');
++        const role = mode === 'student' ? 'student' : 'parent';
++        return {
++          role,
++          userId: role === 'student' ? 'stu-101' : 'par-202',
++          enrolledGrades: ['7┬░ B├ísico'],
++          isAuthenticated: true
++        };
++      }
++    }
++    return null;
    });
  
    const [activeLesson, setActiveLesson] = useState<Lesson>(SAMPLE_LESSON);
@@ -39,7 +64,7 @@ index 7aa0a9a..b049f25 100644
 +      const params = new URLSearchParams(window.location.search);
 +      const urlView = params.get('view');
 +      if (urlView === 'lesson') {
-+        const grade = params.get('grade') || '7° Básico';
++        const grade = params.get('grade') || '7┬░ B├ísico';
 +        const subject = params.get('subject') || 'Ciencias Naturales';
 +        const oa = params.get('oa') || 'OA 1';
 +        const lessonNum = parseInt(params.get('lesson') || '2', 10);
@@ -51,3 +76,12 @@ index 7aa0a9a..b049f25 100644
  
    useEffect(() => {
      initializeInjectedLessons().catch(console.error);
+@@ -158,8 +198,6 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children
+   useEffect(() => {
+     if (authSession) {
+       localStorage.setItem('estudio_simple_auth_session', JSON.stringify(authSession));
+-    } else {
+-      localStorage.removeItem('estudio_simple_auth_session');
+     }
+   }, [authSession]);
+ 

@@ -1,0 +1,87 @@
+diff --git a/Web Studio Simple/src/context/AppContext.tsx b/Web Studio Simple/src/context/AppContext.tsx
+index 7aa0a9a..19537c1 100644
+--- a/Web Studio Simple/src/context/AppContext.tsx	
++++ b/Web Studio Simple/src/context/AppContext.tsx	
+@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState, useEffect, useCallback } fr
+ import { ViewMode, StudentProfile, ParentUser, Lesson, BrandColorOption, ThemeMode, AuthSession, AuthRole, GradeLevel } from '../types';
+ import { INITIAL_STUDENT, INITIAL_STUDENTS, INITIAL_PARENT, SAMPLE_LESSON } from '../data/mockData';
+ import { LessonData } from '../types/lesson';
+-import { initializeInjectedLessons } from '../lib/lesson-repository';
++import { initializeInjectedLessons, findInjectedLesson } from '../lib/lesson-repository';
+ import { validateAdminLogin, validateGuestPass, recordAuditLog } from '../lib/admin-repository';
+ import { findUserByEmailOrRut, getAllRegisteredUsers, updateUserPassword, fetchRegisteredUsersFromBackend } from '../lib/user-repository';
+ 
+@@ -54,7 +54,16 @@ function generatePin(): string {
+ }
+ 
+ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+-  const [viewMode, setViewModeState] = useState<ViewMode>('landing');
++  const [viewMode, setViewModeState] = useState<ViewMode>(() => {
++    if (typeof window !== 'undefined') {
++      const params = new URLSearchParams(window.location.search);
++      const urlView = params.get('view') as ViewMode;
++      if (urlView && ['lesson', 'student', 'parent', 'courses', 'admin'].includes(urlView)) {
++        return urlView;
++      }
++    }
++    return 'landing';
++  });
+ 
+   const [students, setStudents] = useState<StudentProfile[]>(() => {
+     const saved = localStorage.getItem('estudio_simple_students');
+@@ -106,12 +115,43 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children
+   });
+ 
+   const [authSession, setAuthSessionState] = useState<AuthSession | null>(() => {
+-    const saved = localStorage.getItem('estudio_simple_auth_session');
+-    return saved ? JSON.parse(saved) : null;
++    if (typeof window !== 'undefined') {
++      const saved = localStorage.getItem('estudio_simple_auth_session');
++      if (saved) {
++        try {
++          return JSON.parse(saved);
++        } catch {}
++      }
++      const params = new URLSearchParams(window.location.search);
++      if (params.get('view') === 'lesson') {
++        const mode = params.get('mode');
++        const role = mode === 'student' ? 'student' : 'parent';
++        return {
++          role,
++          userId: role === 'student' ? 'stu-101' : 'par-202',
++          enrolledGrades: ['7° Básico'],
++          isAuthenticated: true
++        };
++      }
++    }
++    return null;
+   });
+ 
+   const [activeLesson, setActiveLesson] = useState<Lesson>(SAMPLE_LESSON);
+-  const [activeSynchronizedLesson, setActiveSynchronizedLesson] = useState<LessonData | null>(null);
++  const [activeSynchronizedLesson, setActiveSynchronizedLesson] = useState<LessonData | null>(() => {
++    if (typeof window !== 'undefined') {
++      const params = new URLSearchParams(window.location.search);
++      const urlView = params.get('view');
++      if (urlView === 'lesson') {
++        const grade = params.get('grade') || '7° Básico';
++        const subject = params.get('subject') || 'Ciencias Naturales';
++        const oa = params.get('oa') || 'OA 1';
++        const lessonNum = parseInt(params.get('lesson') || '2', 10);
++        return findInjectedLesson(grade, subject, oa, lessonNum);
++      }
++    }
++    return null;
++  });
+ 
+   useEffect(() => {
+     initializeInjectedLessons().catch(console.error);
+@@ -158,8 +198,6 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children
+   useEffect(() => {
+     if (authSession) {
+       localStorage.setItem('estudio_simple_auth_session', JSON.stringify(authSession));
+-    } else {
+-      localStorage.removeItem('estudio_simple_auth_session');
+     }
+   }, [authSession]);
+ 

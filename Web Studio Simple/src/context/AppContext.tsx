@@ -71,14 +71,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     try {
       const parsed = JSON.parse(saved);
       if (Array.isArray(parsed) && parsed.length > 0) {
-        return parsed.map((s: StudentProfile) => {
-          if (s.id !== 'stu-101' && s.name !== 'Mateo') {
-            const completed = Array.isArray(s.completedLessons) ? s.completedLessons : [];
-            const sanitized = completed.filter((id: string) => id !== '7_mat_oa1_1' && id !== '7_mat_oa1_2');
-            return { ...s, completedLessons: sanitized };
-          }
-          return s;
-        });
+        return parsed;
       }
       return INITIAL_STUDENTS;
     } catch {
@@ -96,12 +89,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     if (!saved) return INITIAL_STUDENT;
     try {
       const parsed = JSON.parse(saved);
-      const completed = Array.isArray(parsed.completedLessons) ? parsed.completedLessons : [];
-      // Sanear lecciones mock para usuarios reales
-      const sanitized = (parsed.id !== 'stu-101' && parsed.name !== 'Mateo')
-        ? completed.filter((id: string) => id !== '7_mat_oa1_1' && id !== '7_mat_oa1_2')
-        : completed;
-      return { ...parsed, completedLessons: sanitized, pin: parsed.pin || INITIAL_STUDENT.pin };
+      return { ...parsed, pin: parsed.pin || INITIAL_STUDENT.pin };
     } catch {
       return INITIAL_STUDENT;
     }
@@ -115,8 +103,27 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   });
 
   const [authSession, setAuthSessionState] = useState<AuthSession | null>(() => {
-    const saved = localStorage.getItem('estudio_simple_auth_session');
-    return saved ? JSON.parse(saved) : null;
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('estudio_simple_auth_session');
+      if (saved) {
+        try {
+          return JSON.parse(saved);
+        } catch {}
+      }
+      // Autenticación sintética reservada exclusivamente para el entorno de pruebas mediante testAuth=true
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('testAuth') === 'true' && params.get('view') === 'lesson') {
+        const mode = params.get('mode');
+        const role = mode === 'student' ? 'student' : 'parent';
+        return {
+          role,
+          userId: role === 'student' ? 'stu-101' : 'par-202',
+          enrolledGrades: ['7° Básico'],
+          isAuthenticated: true
+        };
+      }
+    }
+    return null;
   });
 
   const [activeLesson, setActiveLesson] = useState<Lesson>(SAMPLE_LESSON);
@@ -452,10 +459,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       setStudents((prev) => {
         const existing = prev.find((s) => s.id === targetStudentId);
         if (existing) {
-          const cleanCompleted = (existing.id !== 'stu-101' && existing.name !== 'Mateo')
-            ? existing.completedLessons.filter((id) => id !== '7_mat_oa1_1' && id !== '7_mat_oa1_2')
-            : existing.completedLessons;
-          const updated = { ...existing, name: targetStudentName, grade: targetGrade, completedLessons: cleanCompleted };
+          const updated = { ...existing, name: targetStudentName, grade: targetGrade };
           const nextList = prev.map((s) => (s.id === targetStudentId ? updated : s));
           localStorage.setItem('estudio_simple_students', JSON.stringify(nextList));
           setStudent(updated);
@@ -620,6 +624,16 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   const logout = () => {
     setAuthSessionState(null);
+    if (typeof window !== 'undefined') {
+      localStorage.removeItem('estudio_simple_auth_session');
+      sessionStorage.removeItem('estudiosimple_admin_auth');
+      sessionStorage.removeItem('estudiosimple_active_admin_id');
+      const url = new URL(window.location.href);
+      url.searchParams.delete('view');
+      url.searchParams.delete('mode');
+      url.searchParams.delete('testAuth');
+      window.history.replaceState({}, '', url.pathname + (url.search ? url.search : ''));
+    }
     setViewModeState('landing');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };

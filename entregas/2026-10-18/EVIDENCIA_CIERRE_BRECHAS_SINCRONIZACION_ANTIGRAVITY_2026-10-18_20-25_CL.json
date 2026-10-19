@@ -11,7 +11,12 @@
     "totalCapturas": 13,
     "totalArchivosCodigo": 8,
     "totalDiffs": 2,
-    "totalLogs": 2
+    "totalLogs": 2,
+    "zipPaquete": {
+      "nombre": "ARCHIVOS_CIERRE_BRECHAS_SINCRONIZACION_ANTIGRAVITY_2026-10-18_20-25_CL.zip",
+      "bytes": 4149975,
+      "sha256": "85204488d610452e2bb5199b974eeef1fe2954a4da87e835ee64c88b8f823a44"
+    }
   },
   "matrizRecorridos": [
     {
@@ -76,140 +81,152 @@
   "archivos": [
     {
       "ruta": "capturas/REC-01_01_Carga_Split_Ciencias_OA01_Clase02.png",
-      "bytes": 191359,
-      "sha256": "2074367d364ff5d5cd28b4c54c7ceeddf96b42f867e2a56a7b7b105f408a1882",
+      "bytes": 339094,
+      "sha256": "0f9fe781af7f6e7fc1acc13841a5def6977296337fec106ffed7152d04cf4a1c",
       "hito": "REC-01"
     },
     {
       "ruta": "capturas/REC-01_02_Vista_Adulto_Ciencias_OA01_Clase02.png",
-      "bytes": 68810,
-      "sha256": "a170fc569f3372e188e76d2a350936d917138d1e8d156e6d42deff582d169b5f",
+      "bytes": 102015,
+      "sha256": "c82e4787f7aae5070129326398bc16255f45716ca1cb27f479cbab9efa60f98f",
       "hito": "REC-01"
     },
     {
       "ruta": "capturas/REC-01_03_Vista_Estudiante_Ciencias_OA01_Clase02.png",
-      "bytes": 203729,
-      "sha256": "6cf31cff585a0a0642c5e07d81d483d3ef3643422f571ba9d0e26b8b23000c8c",
+      "bytes": 427971,
+      "sha256": "4352d6c0c489bbe00f9196466a5dbf06ec7378e7cc3e246c16473df596ef75e2",
       "hito": "REC-01"
     },
     {
       "ruta": "capturas/REC-02_01_Sin_Logro_0_de_3.png",
-      "bytes": 196241,
-      "sha256": "50a25951867cf7b7a6f2489a990de880ab1322e490ceda5bb0feee3a237051b3",
+      "bytes": 332178,
+      "sha256": "d5e855939c698457a0dbd70a1596f3d662f47bfb9fcaa46854d49d1d0315f320",
       "hito": "REC-02"
     },
     {
       "ruta": "capturas/REC-02_02_Sin_Logro_1_de_3.png",
-      "bytes": 195216,
-      "sha256": "4f3e8807895b4c4f6ef96dfe07f2ff98058d1ab25534fd35dc636065109134c6",
+      "bytes": 331109,
+      "sha256": "b2ee9347ad002270cd2a49b46c90481e5351a3e1853d57ae7cd5a372a8f5faeb",
       "hito": "REC-02"
     },
     {
       "ruta": "capturas/REC-02_03_Recarga_No_Acreditada.png",
-      "bytes": 178008,
-      "sha256": "b22b004d062aba9532e4251df3726eca058a67e32a40a3e7cf366166a410f005",
+      "bytes": 312002,
+      "sha256": "773f8bd63f02ef8de8259a149f792c61452d5576c702921e6dff208038488cf2",
       "hito": "REC-02"
     },
     {
       "ruta": "capturas/REC-03_01_Flujo_Recuperacion_Apoyo_Cuaderno.png",
-      "bytes": 189409,
-      "sha256": "d4b1d1cf53012869bffd6b769cd2cd838ffb8de939fb81092db38d04fb002b03",
+      "bytes": 291048,
+      "sha256": "471f5a7339377232151141e344851e61fac4dc4b20763f0a4fd951373406c320",
       "hito": "REC-03"
     },
     {
       "ruta": "capturas/REC-03_02_Reintento_Acreditado_2_de_3.png",
-      "bytes": 195665,
-      "sha256": "935f730e9e91b24d672269117c4dab8299d5efe7f734b05b606fa0b98d312912",
+      "bytes": 327620,
+      "sha256": "42dfccbf1130f26f8eda58dfe08d2ac776ae9bd7237384fa96f5760dd6e1e9a2",
       "hito": "REC-03"
     },
     {
       "ruta": "capturas/REC-03_03_Logro_Final_Ambos_Roles.png",
-      "bytes": 176955,
-      "sha256": "437a44fdebd0b96220550ffcb38a27672e92ac7ae9cc41941cb8a09494ff9d7e",
+      "bytes": 308969,
+      "sha256": "8195f901d4b1cfb026d8a8c41b3b409bfa5ad23b776bc24befc7c28d330be1d4",
       "hito": "REC-03"
     },
     {
       "ruta": "capturas/REC-04_01_Estado_Antes_De_Pausar.png",
-      "bytes": 234467,
-      "sha256": "e2396d3b0720ec52ce584120c6723df84a644b7d13cb0794e71a39e58c89b0be",
+      "bytes": 372591,
+      "sha256": "b9837b6aaa79264cf07e8c199df20297bc6beb4f1163f22c45d93c83f689842b",
       "hito": "REC-04"
     },
     {
       "ruta": "capturas/REC-04_02_Estado_Despues_De_Reanudar.png",
-      "bytes": 234500,
-      "sha256": "db611618ff855113254ace158b50e1442513214398e378d98ac05b13c619f727",
+      "bytes": 372471,
+      "sha256": "6e7b76fa8987302c101e16318e5d95128cd8ad97bfef1216f58ba579e3fb88c2",
       "hito": "REC-04"
     },
     {
       "ruta": "capturas/REC-05_01_Cambio_A_Lengua_OA03_Clase01.png",
-      "bytes": 163435,
-      "sha256": "be2d515d2d416566b709a640202fd792f09511d36acd7d7274ebc0e37794e8a6",
+      "bytes": 265039,
+      "sha256": "8cee6f6a52886777286e65c32dc58181d2a62ea2ac1d6d98a5b8545e196eb7ef",
       "hito": "REC-05"
     },
     {
       "ruta": "capturas/REC-05_02_Retorno_A_Ciencias_OA01_Clase02.png",
-      "bytes": 191627,
-      "sha256": "5665b033746b327fa3de3595a65e8a5f39b749d6be35f5335f7123bb5669fcb9",
+      "bytes": 372781,
+      "sha256": "8f18429410072db8063407560e3cf41a2f5da57905a30112324b4bd62642e971",
       "hito": "REC-05"
     },
     {
-      "ruta": "codigo/execute_real_browser_recs.ts",
-      "descripcion": "Script oficial de ejecución en Edge headless con CDP",
-      "hito": "TODOS"
-    },
-    {
       "ruta": "codigo/App.tsx",
-      "descripcion": "Enrutamiento reactivo por parámetros URL",
-      "hito": "TODOS"
+      "bytes": 3508,
+      "sha256": "c4754eaef135b1a8858810382fdb1647647f4b4cc2e2b05158cd4c7c99b6a427",
+      "hito": "CODIGO_SOPORTE"
     },
     {
       "ruta": "codigo/AppContext.tsx",
-      "descripcion": "Inicialización y restauración de lección activa por URL",
-      "hito": "TODOS"
+      "bytes": 35002,
+      "sha256": "58173bd445e784487d53f44044a27530c2e7ba7cf3f14a7451d1fe2865b5f6ec",
+      "hito": "CODIGO_SOPORTE"
     },
     {
       "ruta": "codigo/LessonSyncContext.tsx",
-      "descripcion": "Contexto de sincronización de aula y aislamiento de salas por room",
-      "hito": "REC-01 / REC-02 / REC-03"
+      "bytes": 20171,
+      "sha256": "0939425cd62f96a6382e705eb87307b63df12197b51172999dce0144f35c5938",
+      "hito": "CODIGO_SOPORTE"
     },
     {
       "ruta": "codigo/SynchronizedLessonMaster.tsx",
-      "descripcion": "Contenedor de pantallas y control bimodal de roles",
-      "hito": "REC-01"
+      "bytes": 5417,
+      "sha256": "c262f2b749dfb76d1b19bf15fdc979c78024f34a4da4dac9c04c02c044056599",
+      "hito": "CODIGO_SOPORTE"
     },
     {
       "ruta": "codigo/TesterBar.tsx",
-      "descripcion": "Barra técnica de alternancia y auditoría",
-      "hito": "REC-01"
+      "bytes": 21299,
+      "sha256": "ec9181765dcddce6ffbafe987900e8f3ccaa2e17e7330654907283dd8a55d257",
+      "hito": "CODIGO_SOPORTE"
+    },
+    {
+      "ruta": "codigo/execute_real_browser_recs.ts",
+      "bytes": 36455,
+      "sha256": "8f05bde70e7f7a1961197a7ae60a7d61789057f31ed2975eef79dd4fdd1deca5",
+      "hito": "CODIGO_SOPORTE"
     },
     {
       "ruta": "codigo/lesson-repository.ts",
-      "descripcion": "Repositorio de lecciones canónicas y prioridad de fábrica",
-      "hito": "REC-01 / REC-05"
+      "bytes": 17021,
+      "sha256": "3119c4bf033424243484c0eb5910e482df9ade29c42517f2126b2738613defa5",
+      "hito": "CODIGO_SOPORTE"
     },
     {
       "ruta": "codigo/lesson-session.ts",
-      "descripcion": "Lógica formal de acreditación (>= 2/3 aciertos) y máquina de estados",
-      "hito": "REC-02 / REC-03 / REC-04"
+      "bytes": 3082,
+      "sha256": "f00462fadd380cd03d195e2af96ed256af89aca50a6a6c3cb3b80fcab740f42e",
+      "hito": "CODIGO_SOPORTE"
     },
     {
       "ruta": "diffs/App.tsx.diff",
-      "descripcion": "Diff acotado de App.tsx contra base commit 71413f5",
-      "hito": "CARGA_URL"
+      "bytes": 1983,
+      "sha256": "ee3d81f0610583163b1440735f948ede1f7a90b18136500c8748ffa011b93ebc",
+      "hito": "DIFF_BOUNDED"
     },
     {
       "ruta": "diffs/AppContext.tsx.diff",
-      "descripcion": "Diff acotado de AppContext.tsx contra base commit 71413f5",
-      "hito": "RESTAURACION"
+      "bytes": 4109,
+      "sha256": "b9be0b5db04c9b8ee81e4f48268b9a18a1dc45dfe5b6c4a4814a01be65aac2d8",
+      "hito": "DIFF_BOUNDED"
     },
     {
       "ruta": "logs/execute_real_browser_recs.log",
-      "descripcion": "Registro íntegro de ejecución en Edge con CDP (Código de salida: 0, 100% PASS)",
+      "bytes": 7312,
+      "sha256": "6a24660027a79454c98e7eeaeaf99820e48676d517a8c629d2dd363b89e631b0",
       "hito": "EVIDENCIA_LOG"
     },
     {
       "ruta": "logs/domain_test.log",
-      "descripcion": "Registro íntegro de prueba lógica de dominio (17/17 PASS, Código de salida: 0)",
+      "bytes": 10912,
+      "sha256": "6372982f5e50bc1735bf89f07671be9c0b60e7f022c883df007acde62a705694",
       "hito": "EVIDENCIA_LOG"
     }
   ]

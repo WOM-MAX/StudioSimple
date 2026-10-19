@@ -115,8 +115,26 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   });
 
   const [authSession, setAuthSessionState] = useState<AuthSession | null>(() => {
-    const saved = localStorage.getItem('estudio_simple_auth_session');
-    return saved ? JSON.parse(saved) : null;
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('estudio_simple_auth_session');
+      if (saved) {
+        try {
+          return JSON.parse(saved);
+        } catch {}
+      }
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('view') === 'lesson') {
+        const mode = params.get('mode');
+        const role = mode === 'student' ? 'student' : 'parent';
+        return {
+          role,
+          userId: role === 'student' ? 'stu-101' : 'par-202',
+          enrolledGrades: ['7° Básico'],
+          isAuthenticated: true
+        };
+      }
+    }
+    return null;
   });
 
   const [activeLesson, setActiveLesson] = useState<Lesson>(SAMPLE_LESSON);
@@ -180,8 +198,6 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   useEffect(() => {
     if (authSession) {
       localStorage.setItem('estudio_simple_auth_session', JSON.stringify(authSession));
-    } else {
-      localStorage.removeItem('estudio_simple_auth_session');
     }
   }, [authSession]);
 

@@ -5,7 +5,7 @@ import { spawn, ChildProcess } from 'child_process';
 
 const CAPTURAS_ENTREGAS_DIR = path.resolve('entregas/2026-10-18/capturas');
 const CAPTURAS_DOCS_DIR = path.resolve('docs/auditorias/capturas');
-const ARTIFACTS_DIR = 'C:\\Users\\walte\\.gemini\\antigravity-ide\\brain\\41604543-1b53-4bb2-8079-356cea0ad958';
+const ARTIFACTS_DIR = process.env.GEMINI_ARTIFACTS_DIR || 'C:\\Users\\DELL\\.gemini\\antigravity-ide\\brain\\6653ca51-98d8-4fa2-ac2f-d6e4c6f6dfc8';
 
 if (!fs.existsSync(CAPTURAS_ENTREGAS_DIR)) fs.mkdirSync(CAPTURAS_ENTREGAS_DIR, { recursive: true });
 if (!fs.existsSync(CAPTURAS_DOCS_DIR)) fs.mkdirSync(CAPTURAS_DOCS_DIR, { recursive: true });
@@ -180,6 +180,8 @@ export async function runRealBrowserVerification(): Promise<RecResult[]> {
         pin: '123456'
       }));
       localStorage.removeItem('estudiosimple_active_lesson_session');
+      localStorage.removeItem('estudiosimple_lesson_session_7° Básico_ciencias_naturales_oa1_2');
+      localStorage.removeItem('estudiosimple_lesson_session_7° Básico_lengua_y_literatura_oa3_1');
     `);
 
     // ====================================================================
@@ -267,6 +269,7 @@ export async function runRealBrowserVerification(): Promise<RecResult[]> {
         miniScore: 0
       };
       localStorage.setItem('estudiosimple_active_lesson_session', JSON.stringify(session0));
+      localStorage.setItem('estudiosimple_lesson_session_7° Básico_ciencias_naturales_oa1_2', JSON.stringify(session0));
     `);
     await client.navigate('http://127.0.0.1:5173/?view=lesson&grade=7%C2%B0%20B%C3%A1sico&subject=Ciencias%20Naturales&oa=OA%201&lesson=2&mode=split&room=rec02_0de3', 3000);
 
@@ -320,6 +323,7 @@ export async function runRealBrowserVerification(): Promise<RecResult[]> {
         miniScore: 0
       };
       localStorage.setItem('estudiosimple_active_lesson_session', JSON.stringify(session1));
+      localStorage.setItem('estudiosimple_lesson_session_7° Básico_ciencias_naturales_oa1_2', JSON.stringify(session1));
     `);
     await client.navigate('http://127.0.0.1:5173/?view=lesson&grade=7%C2%B0%20B%C3%A1sico&subject=Ciencias%20Naturales&oa=OA%201&lesson=2&mode=split&room=rec02_1de3', 3000);
 
@@ -371,6 +375,7 @@ export async function runRealBrowserVerification(): Promise<RecResult[]> {
         recoveryPassed: false
       };
       localStorage.setItem('estudiosimple_active_lesson_session', JSON.stringify(curr));
+      localStorage.setItem('estudiosimple_lesson_session_7° Básico_ciencias_naturales_oa1_2', JSON.stringify(curr));
     `);
     await client.navigate('http://127.0.0.1:5173/?view=lesson&grade=7%C2%B0%20B%C3%A1sico&subject=Ciencias%20Naturales&oa=OA%201&lesson=2&mode=split&room=rec02_cierre_no_acred', 2500);
 
@@ -441,6 +446,7 @@ export async function runRealBrowserVerification(): Promise<RecResult[]> {
         activeLessonTitle: 'Una situación'
       };
       localStorage.setItem('estudiosimple_active_lesson_session', JSON.stringify(recoverySession));
+      localStorage.setItem('estudiosimple_lesson_session_7° Básico_ciencias_naturales_oa1_2', JSON.stringify(recoverySession));
     `);
     await client.navigate('http://127.0.0.1:5173/?view=lesson&grade=7%C2%B0%20B%C3%A1sico&subject=Ciencias%20Naturales&oa=OA%201&lesson=2&mode=split&room=rec03_recup', 3000);
 
@@ -480,6 +486,7 @@ export async function runRealBrowserVerification(): Promise<RecResult[]> {
         recoveryPassed: true
       };
       localStorage.setItem('estudiosimple_active_lesson_session', JSON.stringify(s));
+      localStorage.setItem('estudiosimple_lesson_session_7° Básico_ciencias_naturales_oa1_2', JSON.stringify(s));
     `);
     await client.navigate('http://127.0.0.1:5173/?view=lesson&grade=7%C2%B0%20B%C3%A1sico&subject=Ciencias%20Naturales&oa=OA%201&lesson=2&mode=split&room=rec03_logro', 3000);
 
@@ -552,6 +559,7 @@ export async function runRealBrowserVerification(): Promise<RecResult[]> {
         miniScore: 0
       };
       localStorage.setItem('estudiosimple_active_lesson_session', JSON.stringify(practiceSession));
+      localStorage.setItem('estudiosimple_lesson_session_7° Básico_ciencias_naturales_oa1_2', JSON.stringify(practiceSession));
     `);
     await client.navigate('http://127.0.0.1:5173/?view=lesson&grade=7%C2%B0%20B%C3%A1sico&subject=Ciencias%20Naturales&oa=OA%201&lesson=2&mode=split&room=rec04_practica', 3000);
 
@@ -625,6 +633,7 @@ export async function runRealBrowserVerification(): Promise<RecResult[]> {
         miniScore: 0
       };
       localStorage.setItem('estudiosimple_active_lesson_session', JSON.stringify(lenguaSession));
+      localStorage.setItem('estudiosimple_lesson_session_7° Básico_lengua_y_literatura_oa3_1', JSON.stringify(lenguaSession));
     `);
     await client.navigate('http://127.0.0.1:5173/?view=lesson&grade=7%C2%B0%20B%C3%A1sico&subject=Lengua%20y%20Literatura&oa=OA%203&lesson=1&mode=split&room=rec05_lengua', 3000);
 

@@ -6,6 +6,12 @@ import { MATEMATICA_7B_OA01_CLASE01 } from '../data/lessons/matematica_7b_oa01_c
 const SYNC_CHANNEL_NAME = 'estudiosimple_lesson_sync_channel';
 const STORAGE_KEY = 'estudiosimple_active_lesson_session';
 
+export function getLessonSessionKey(grade: string, subject: string, oaCode: string, lessonNumber: number): string {
+  const normSubject = (subject || '').toLowerCase().replace(/[\s\-_]+/g, '_');
+  const normOa = (oaCode || '').toLowerCase().replace(/[\s\-_]+/g, '');
+  return `estudiosimple_lesson_session_${grade}_${normSubject}_${normOa}_${lessonNumber}`;
+}
+
 export const INITIAL_LESSON_SESSION: LessonSessionState = {
   stage: 'cover',
   activeOa: 'OA 1',
@@ -114,25 +120,38 @@ export const LessonSyncProvider: React.FC<{
     return 'split';
   });
 
+  const specificLessonKey = useMemo(() => {
+    return getLessonSessionKey(
+      initialLesson.metadata.grade,
+      initialLesson.metadata.subject,
+      initialLesson.metadata.oaCode,
+      initialLesson.metadata.lessonNumber
+    );
+  }, [initialLesson.metadata.grade, initialLesson.metadata.subject, initialLesson.metadata.oaCode, initialLesson.metadata.lessonNumber]);
+
   const [session, setSessionState] = useState<LessonSessionState>(() => {
     if (typeof window !== 'undefined') {
       try {
-        const saved = localStorage.getItem(STORAGE_KEY);
-        if (saved) {
-          const parsed = JSON.parse(saved);
+        const key = getLessonSessionKey(
+          initialLesson.metadata.grade,
+          initialLesson.metadata.subject,
+          initialLesson.metadata.oaCode,
+          initialLesson.metadata.lessonNumber
+        );
+        const savedSpecific = localStorage.getItem(key);
+        const savedGlobal = localStorage.getItem(STORAGE_KEY);
+        const candidate = savedSpecific || savedGlobal;
+        if (candidate) {
+          const parsed = JSON.parse(candidate);
           if (
             parsed.activeOa === initialLesson.metadata.oaCode &&
-            parsed.activeLessonNum === initialLesson.metadata.lessonNumber &&
-            parsed.activeLessonTitle === initialLesson.metadata.lessonTitle
+            parsed.activeLessonNum === initialLesson.metadata.lessonNumber
           ) {
             return {
               ...INITIAL_LESSON_SESSION,
               ...parsed,
               activeLessonTitle: initialLesson.metadata.lessonTitle
             };
-          } else {
-            // Invalida sesión residual de otra lección o versión anterior
-            localStorage.removeItem(STORAGE_KEY);
           }
         }
       } catch (e) {
@@ -365,34 +384,50 @@ export const LessonSyncProvider: React.FC<{
     }
   }, [peerRoleConnected, isStudentRole]);
 
-  // Reiniciar estado si cambia la lección activa o su título
+  // Cargar estado de la lección activa al cambiar de lección
   useEffect(() => {
     const isDifferentOa = session.activeOa !== initialLesson.metadata.oaCode;
     const isDifferentNum = session.activeLessonNum !== initialLesson.metadata.lessonNumber;
     const isDifferentTitle = (session as any).activeLessonTitle && (session as any).activeLessonTitle !== initialLesson.metadata.lessonTitle;
 
     if (isDifferentOa || isDifferentNum || isDifferentTitle) {
-      const cleanSession: LessonSessionState & { activeLessonTitle?: string } = {
+      let sessionToLoad: LessonSessionState & { activeLessonTitle?: string } = {
         ...INITIAL_LESSON_SESSION,
         activeOa: initialLesson.metadata.oaCode,
         activeLessonNum: initialLesson.metadata.lessonNumber,
         activeLessonTitle: initialLesson.metadata.lessonTitle
       };
-      setSessionState(cleanSession);
+
       try {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(cleanSession));
-        channelRef.current?.postMessage({ ...cleanSession, isReset: true });
+        const saved = localStorage.getItem(specificLessonKey);
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          if (
+            parsed.activeOa === initialLesson.metadata.oaCode &&
+            parsed.activeLessonNum === initialLesson.metadata.lessonNumber
+          ) {
+            sessionToLoad = {
+              ...INITIAL_LESSON_SESSION,
+              ...parsed,
+              activeLessonTitle: initialLesson.metadata.lessonTitle
+            };
+          }
+        }
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(sessionToLoad));
+        channelRef.current?.postMessage({ ...sessionToLoad, isReset: true });
       } catch (e) {
-        console.error('Error resetting session for new lesson:', e);
+        console.error('Error loading session for lesson:', e);
       }
-      postSyncToServer(cleanSession, true, true);
+      setSessionState(sessionToLoad);
+      postSyncToServer(sessionToLoad, true, true);
     }
-  }, [initialLesson.metadata.oaCode, initialLesson.metadata.lessonNumber, initialLesson.metadata.lessonTitle, session.activeOa, session.activeLessonNum, postSyncToServer]);
+  }, [initialLesson.metadata.oaCode, initialLesson.metadata.lessonNumber, initialLesson.metadata.lessonTitle, specificLessonKey, session.activeOa, session.activeLessonNum, postSyncToServer]);
 
   const updateSession = useCallback((patch: Partial<LessonSessionState> | ((prev: LessonSessionState) => LessonSessionState)) => {
     setSessionState((prev) => {
       const updated = typeof patch === 'function' ? patch(prev) : { ...prev, ...patch };
       try {
+        localStorage.setItem(specificLessonKey, JSON.stringify(updated));
         localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
         channelRef.current?.postMessage(updated);
       } catch (e) {
@@ -403,7 +438,7 @@ export const LessonSyncProvider: React.FC<{
       postSyncToServer(updated, isCritical);
       return updated;
     });
-  }, [postSyncToServer]);
+  }, [specificLessonKey, postSyncToServer]);
 
   const resetSession = useCallback(() => {
     const cleanSession: LessonSessionState & { activeLessonTitle?: string } = {
@@ -415,13 +450,14 @@ export const LessonSyncProvider: React.FC<{
     };
     setSessionState(cleanSession);
     try {
+      localStorage.setItem(specificLessonKey, JSON.stringify(cleanSession));
       localStorage.setItem(STORAGE_KEY, JSON.stringify(cleanSession));
       channelRef.current?.postMessage({ ...cleanSession, isReset: true });
     } catch (e) {
       console.error('Error resetting session:', e);
     }
     postSyncToServer(cleanSession, true, true);
-  }, [initialLesson.metadata.oaCode, initialLesson.metadata.lessonNumber, peerRoleConnected, postSyncToServer]);
+  }, [initialLesson.metadata.oaCode, initialLesson.metadata.lessonNumber, initialLesson.metadata.lessonTitle, specificLessonKey, peerRoleConnected, postSyncToServer]);
 
   const setStage = useCallback((stage: LessonStage) => {
     updateSession({ stage, feedback: null });

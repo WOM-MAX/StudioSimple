@@ -12,7 +12,7 @@ import { ArrowLeft } from 'lucide-react';
 const SynchronizedLessonContainer: React.FC = () => {
   const { viewMode, peerRoleConnected } = useLessonSync();
   const { authSession, setViewMode: setAppViewMode } = useApp();
-  const isStudent = authSession?.role === 'student';
+  const isStudent = authSession?.role === 'student' || viewMode === 'student';
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#f8fafc] via-[#f1f5f9] to-[#e8edf2] p-3 sm:p-5 font-sans">
@@ -55,7 +55,7 @@ const SynchronizedLessonContainer: React.FC = () => {
         }`}
       >
         {/* ADULT / HOST VIEW (ESTRICTAMENTE PROHIBIDO PARA ESTUDIANTE) */}
-        {!isStudent && viewMode !== 'student' && (
+        {!isStudent && (
           <div className="w-full flex flex-col">
             {viewMode === 'split' && (
               <span className="text-[11px] font-bold tracking-wider text-[#6d7889] uppercase mb-1.5 ml-2">
@@ -67,7 +67,7 @@ const SynchronizedLessonContainer: React.FC = () => {
         )}
 
         {/* STUDENT / CLIENT VIEW */}
-        {(isStudent || viewMode !== 'adult') && (
+        {(isStudent || viewMode === 'split') && (
           <div className="w-full flex flex-col">
             {!isStudent && viewMode === 'split' && (
               <span className="text-[11px] font-bold tracking-wider text-[#6d7889] uppercase mb-1.5 ml-2">

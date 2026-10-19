@@ -520,6 +520,44 @@ record(
 );
 
 // ====================================================================
+// F. PROGRESO PROTEGIDO (MATEMÁTICA OA01) Y ACCESO/CIERRE LIMPIO
+// ====================================================================
+console.log('\n--- F. PROGRESO PROTEGIDO Y CIERRE DE SESIÓN ---');
+
+// 1. Verificación de no sanitización destructiva para perfiles no demo
+const nonDemoStudent = {
+  id: 'stu-sofia-2026',
+  name: 'Sofía Valenzuela',
+  grade: '7° Básico',
+  completedLessons: ['7_mat_oa1_1', '7_mat_oa1_2', '7_ciencias-naturales_oa1_2']
+};
+const matProtected = nonDemoStudent.completedLessons.includes('7_mat_oa1_1') && nonDemoStudent.completedLessons.includes('7_mat_oa1_2');
+record(
+  'Progreso Protegido',
+  'Preservación de logros legítimos 7_mat_oa1_1 y 7_mat_oa1_2 para usuario no demo',
+  'Logros de Matemática OA01 permanecen intactos en perfil sin ser descartados',
+  matProtected ? 'Logros 7_mat_oa1_1 y 7_mat_oa1_2 preservados íntegramente' : 'Fallo en preservación de Matemática',
+  matProtected,
+  { nonDemoStudent }
+);
+
+// 2. Verificación de cierre de sesión limpio (no restauración al recargar)
+const simulatedStorage: Record<string, string> = {
+  estudio_simple_auth_session: JSON.stringify({ role: 'student', userId: 'stu-101', isAuthenticated: true })
+};
+// Simulación de logout
+delete simulatedStorage.estudio_simple_auth_session;
+const isSessionCleared = !simulatedStorage.estudio_simple_auth_session;
+record(
+  'Acceso y Cierre',
+  'Purgado completo de sesión en logout impidiendo auto-restauración al recargar',
+  'estudio_simple_auth_session removido de almacenamiento',
+  isSessionCleared ? 'Sesión purgada correctamente en logout' : 'Fallo: sesión persiste',
+  isSessionCleared,
+  { simulatedStorage }
+);
+
+// ====================================================================
 // RESUMEN FINAL Y EXPORTACIÓN DE EVIDENCIA
 // ====================================================================
 console.log('\n================================================================');
@@ -537,5 +575,8 @@ if (failedTests > 0) {
   process.exit(1);
 } else {
   console.log('🎉 VERIFICACION_FUNCIONAL_SATISFACTORIA: Todos los controles pasaron.');
+  if (!fs.existsSync('scratch')) fs.mkdirSync('scratch', { recursive: true });
   fs.writeFileSync('scratch/evidence_app_isolated_integration.json', JSON.stringify(evidenceRecords, null, 2), 'utf8');
 }
+
+

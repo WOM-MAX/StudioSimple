@@ -1,0 +1,233 @@
+{
+  "entrega": "CIERRE_BRECHAS_SINCRONIZACION_ANTIGRAVITY_2026-10-19_10-25_CL",
+  "version": "110-7",
+  "fechaHora": "2026-10-19 10:25 [America/Santiago]",
+  "estadoNormativo": "EN_REVISION",
+  "categoriaEntrega": "CIERRE_FUNCIONAL_PROPUESTO_PARA_REVISION_WORK",
+  "resumen": {
+    "totalRecorridos": 5,
+    "recorridosAprobados": 5,
+    "recorridosFallidos": 0,
+    "totalCapturas": 13,
+    "totalArchivosCodigo": 8,
+    "totalDiffs": 2,
+    "totalLogs": 2,
+    "zipPaquete": {
+      "nombre": "ARCHIVOS_CIERRE_BRECHAS_SINCRONIZACION_ANTIGRAVITY_2026-10-19_10-25_CL.zip",
+      "bytes": 4149912,
+      "sha256": "7127a8870b26b664fee93e861f4a3af6df031d56b0089987dc369b2446c42032"
+    }
+  },
+  "matrizRecorridos": [
+    {
+      "id": "REC-01",
+      "nombre": "Carga de versión y roles de interfaz",
+      "estado": "PASS",
+      "claseProbada": "7_ciencias-naturales_oa1_2 (Ciencias Naturales 7B OA01 Clase 02)",
+      "loader": "findCanonicalFactoryLesson en src/lib/lesson-repository.ts resolviendo src/data/lessons/ciencias_7b_oa01_clase02.ts",
+      "capturas": [
+        "capturas/REC-01_01_Carga_Split_Ciencias_OA01_Clase02.png",
+        "capturas/REC-01_02_Vista_Adulto_Ciencias_OA01_Clase02.png",
+        "capturas/REC-01_03_Vista_Estudiante_Ciencias_OA01_Clase02.png"
+      ]
+    },
+    {
+      "id": "REC-02",
+      "nombre": "Salida sin logro y recarga no acreditada",
+      "estado": "PASS",
+      "claseProbada": "7_ciencias-naturales_oa1_2",
+      "detalles": "Miniquiz 0/3 y 1/3 respondidos en interfaz real; finalización sin logro; recarga forzada confirma ausencia en completedLessons",
+      "capturas": [
+        "capturas/REC-02_01_Sin_Logro_0_de_3.png",
+        "capturas/REC-02_02_Sin_Logro_1_de_3.png",
+        "capturas/REC-02_03_Recarga_No_Acreditada.png"
+      ]
+    },
+    {
+      "id": "REC-03",
+      "nombre": "Recuperación abierta, reintento y logro (2/3)",
+      "estado": "PASS",
+      "claseProbada": "7_ciencias-naturales_oa1_2",
+      "detalles": "Recuperación abierta en cuaderno físico sin reactivos inventados; valoración cualitativa no acredita sola; reintento formal 2/3 habilita finalización y persiste logro en completedLessons tras recarga",
+      "capturas": [
+        "capturas/REC-03_01_Flujo_Recuperacion_Apoyo_Cuaderno.png",
+        "capturas/REC-03_02_Reintento_Acreditado_2_de_3.png",
+        "capturas/REC-03_03_Logro_Final_Ambos_Roles.png"
+      ]
+    },
+    {
+      "id": "REC-04",
+      "nombre": "Restauración de una práctica activa",
+      "estado": "PASS",
+      "claseProbada": "7_ciencias-naturales_oa1_2",
+      "detalles": "Sesión en etapa practice Caso 1 de 3 con respuesta escrita en textarea enviada; recarga restaura exactamente la misma etapa practice, pregunta e insignia de respuesta registrada",
+      "capturas": [
+        "capturas/REC-04_01_Estado_Antes_De_Pausar.png",
+        "capturas/REC-04_02_Estado_Despues_De_Reanudar.png"
+      ]
+    },
+    {
+      "id": "REC-05",
+      "nombre": "Lectura y aislamiento entre clases",
+      "estado": "PASS",
+      "claseProbada": "Lengua y Literatura 7B OA03 Clase 01 -> Retorno a Ciencias Naturales 7B OA01 Clase 02",
+      "detalles": "Apertura interactiva del modal con relato de Isaac Asimov (Jimmy y Robutt); pureza absoluta de estado y retorno a Ciencias sin contaminación cruzada",
+      "capturas": [
+        "capturas/REC-05_01_Cambio_A_Lengua_OA03_Clase01.png",
+        "capturas/REC-05_02_Retorno_A_Ciencias_OA01_Clase02.png"
+      ]
+    }
+  ],
+  "archivos": [
+    {
+      "ruta": "capturas/REC-01_01_Carga_Split_Ciencias_OA01_Clase02.png",
+      "bytes": 339094,
+      "sha256": "0f9fe781af7f6e7fc1acc13841a5def6977296337fec106ffed7152d04cf4a1c",
+      "hito": "REC-01"
+    },
+    {
+      "ruta": "capturas/REC-01_02_Vista_Adulto_Ciencias_OA01_Clase02.png",
+      "bytes": 102015,
+      "sha256": "c82e4787f7aae5070129326398bc16255f45716ca1cb27f479cbab9efa60f98f",
+      "hito": "REC-01"
+    },
+    {
+      "ruta": "capturas/REC-01_03_Vista_Estudiante_Ciencias_OA01_Clase02.png",
+      "bytes": 427971,
+      "sha256": "4352d6c0c489bbe00f9196466a5dbf06ec7378e7cc3e246c16473df596ef75e2",
+      "hito": "REC-01"
+    },
+    {
+      "ruta": "capturas/REC-02_01_Sin_Logro_0_de_3.png",
+      "bytes": 332178,
+      "sha256": "d5e855939c698457a0dbd70a1596f3d662f47bfb9fcaa46854d49d1d0315f320",
+      "hito": "REC-02"
+    },
+    {
+      "ruta": "capturas/REC-02_02_Sin_Logro_1_de_3.png",
+      "bytes": 331109,
+      "sha256": "b2ee9347ad002270cd2a49b46c90481e5351a3e1853d57ae7cd5a372a8f5faeb",
+      "hito": "REC-02"
+    },
+    {
+      "ruta": "capturas/REC-02_03_Recarga_No_Acreditada.png",
+      "bytes": 312002,
+      "sha256": "773f8bd63f02ef8de8259a149f792c61452d5576c702921e6dff208038488cf2",
+      "hito": "REC-02"
+    },
+    {
+      "ruta": "capturas/REC-03_01_Flujo_Recuperacion_Apoyo_Cuaderno.png",
+      "bytes": 291048,
+      "sha256": "471f5a7339377232151141e344851e61fac4dc4b20763f0a4fd951373406c320",
+      "hito": "REC-03"
+    },
+    {
+      "ruta": "capturas/REC-03_02_Reintento_Acreditado_2_de_3.png",
+      "bytes": 327620,
+      "sha256": "42dfccbf1130f26f8eda58dfe08d2ac776ae9bd7237384fa96f5760dd6e1e9a2",
+      "hito": "REC-03"
+    },
+    {
+      "ruta": "capturas/REC-03_03_Logro_Final_Ambos_Roles.png",
+      "bytes": 308969,
+      "sha256": "8195f901d4b1cfb026d8a8c41b3b409bfa5ad23b776bc24befc7c28d330be1d4",
+      "hito": "REC-03"
+    },
+    {
+      "ruta": "capturas/REC-04_01_Estado_Antes_De_Pausar.png",
+      "bytes": 372591,
+      "sha256": "b9837b6aaa79264cf07e8c199df20297bc6beb4f1163f22c45d93c83f689842b",
+      "hito": "REC-04"
+    },
+    {
+      "ruta": "capturas/REC-04_02_Estado_Despues_De_Reanudar.png",
+      "bytes": 372471,
+      "sha256": "6e7b76fa8987302c101e16318e5d95128cd8ad97bfef1216f58ba579e3fb88c2",
+      "hito": "REC-04"
+    },
+    {
+      "ruta": "capturas/REC-05_01_Cambio_A_Lengua_OA03_Clase01.png",
+      "bytes": 265039,
+      "sha256": "8cee6f6a52886777286e65c32dc58181d2a62ea2ac1d6d98a5b8545e196eb7ef",
+      "hito": "REC-05"
+    },
+    {
+      "ruta": "capturas/REC-05_02_Retorno_A_Ciencias_OA01_Clase02.png",
+      "bytes": 372781,
+      "sha256": "8f18429410072db8063407560e3cf41a2f5da57905a30112324b4bd62642e971",
+      "hito": "REC-05"
+    },
+    {
+      "ruta": "codigo/App.tsx",
+      "bytes": 3508,
+      "sha256": "c4754eaef135b1a8858810382fdb1647647f4b4cc2e2b05158cd4c7c99b6a427",
+      "hito": "CODIGO_SOPORTE"
+    },
+    {
+      "ruta": "codigo/AppContext.tsx",
+      "bytes": 35002,
+      "sha256": "58173bd445e784487d53f44044a27530c2e7ba7cf3f14a7451d1fe2865b5f6ec",
+      "hito": "CODIGO_SOPORTE"
+    },
+    {
+      "ruta": "codigo/LessonSyncContext.tsx",
+      "bytes": 20171,
+      "sha256": "0939425cd62f96a6382e705eb87307b63df12197b51172999dce0144f35c5938",
+      "hito": "CODIGO_SOPORTE"
+    },
+    {
+      "ruta": "codigo/SynchronizedLessonMaster.tsx",
+      "bytes": 5417,
+      "sha256": "c262f2b749dfb76d1b19bf15fdc979c78024f34a4da4dac9c04c02c044056599",
+      "hito": "CODIGO_SOPORTE"
+    },
+    {
+      "ruta": "codigo/TesterBar.tsx",
+      "bytes": 21299,
+      "sha256": "ec9181765dcddce6ffbafe987900e8f3ccaa2e17e7330654907283dd8a55d257",
+      "hito": "CODIGO_SOPORTE"
+    },
+    {
+      "ruta": "codigo/execute_real_browser_recs.ts",
+      "bytes": 36455,
+      "sha256": "8f05bde70e7f7a1961197a7ae60a7d61789057f31ed2975eef79dd4fdd1deca5",
+      "hito": "CODIGO_SOPORTE"
+    },
+    {
+      "ruta": "codigo/lesson-repository.ts",
+      "bytes": 17021,
+      "sha256": "3119c4bf033424243484c0eb5910e482df9ade29c42517f2126b2738613defa5",
+      "hito": "CODIGO_SOPORTE"
+    },
+    {
+      "ruta": "codigo/lesson-session.ts",
+      "bytes": 3082,
+      "sha256": "f00462fadd380cd03d195e2af96ed256af89aca50a6a6c3cb3b80fcab740f42e",
+      "hito": "CODIGO_SOPORTE"
+    },
+    {
+      "ruta": "diffs/App.tsx.diff",
+      "bytes": 1929,
+      "sha256": "7b83193a0662f44efddca0430891881c6a70ab16a299ba65f376169c7a0c7412",
+      "hito": "DIFF_BOUNDED"
+    },
+    {
+      "ruta": "diffs/AppContext.tsx.diff",
+      "bytes": 4005,
+      "sha256": "b14d056842aaa98644298c6b44ccc668899f54547273474f5efda5bed12dcafb",
+      "hito": "DIFF_BOUNDED"
+    },
+    {
+      "ruta": "logs/execute_real_browser_recs.log",
+      "bytes": 7312,
+      "sha256": "6a24660027a79454c98e7eeaeaf99820e48676d517a8c629d2dd363b89e631b0",
+      "hito": "EVIDENCIA_LOG"
+    },
+    {
+      "ruta": "logs/domain_test.log",
+      "bytes": 10912,
+      "sha256": "6372982f5e50bc1735bf89f07671be9c0b60e7f022c883df007acde62a705694",
+      "hito": "EVIDENCIA_LOG"
+    }
+  ]
+}

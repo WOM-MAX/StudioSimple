@@ -14,28 +14,37 @@ export const StudentMiniquizView: React.FC = () => {
   const { session, lessonData, updateSession } = useLessonSync();
 
   const handleSelect = (questionIndex: number, option: string) => {
-    const updatedAnswers = [...session.miniAnswers];
-    updatedAnswers[questionIndex] = option;
-    updateSession({ miniAnswers: updatedAnswers });
+    updateSession((prev) => {
+      const current = Array.isArray(prev.miniAnswers) && prev.miniAnswers.length === 3
+        ? [...prev.miniAnswers]
+        : ['', '', ''];
+      current[questionIndex] = option;
+      return { ...prev, miniAnswers: current };
+    });
   };
 
-  const isAllAnswered = session.miniAnswers.length === 3 && session.miniAnswers.every((ans) => Boolean(ans));
+  const miniAnswers = Array.isArray(session.miniAnswers) ? session.miniAnswers : [];
+  const isAllAnswered = miniAnswers.length === 3 && miniAnswers.every((ans) => Boolean(ans && ans.trim()));
 
   const handleSubmit = () => {
-    const score = session.miniAnswers.filter((a, i) => a === lessonData.mini[i].correct).length;
-    const wrong = lessonData.mini
-      .map((_, i) => (session.miniAnswers[i] !== lessonData.mini[i].correct ? i : -1))
-      .filter((i) => i >= 0);
+    updateSession((prev) => {
+      const answers = Array.isArray(prev.miniAnswers) ? prev.miniAnswers : [];
+      const score = answers.filter((a, i) => a === lessonData.mini[i]?.correct).length;
+      const wrong = lessonData.mini
+        .map((_, i) => (answers[i] !== lessonData.mini[i]?.correct ? i : -1))
+        .filter((i) => i >= 0);
 
-    updateSession({
-      miniScore: score,
-      stage: 'results',
-      reviewQueue: score >= 2 ? [0, 1, 2] : wrong,
-      reviewIndex: 0,
-      recoveryItems: buildRecoveryItems(wrong),
-      recoveryIndex: 0,
-      recoveryVisible: false,
-      recoveryAnswer: ''
+      return {
+        ...prev,
+        miniScore: score,
+        stage: 'results',
+        reviewQueue: score >= 2 ? [0, 1, 2] : wrong,
+        reviewIndex: 0,
+        recoveryItems: buildRecoveryItems(wrong),
+        recoveryIndex: 0,
+        recoveryVisible: false,
+        recoveryAnswer: ''
+      };
     });
   };
 

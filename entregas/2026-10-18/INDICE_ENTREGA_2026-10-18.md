@@ -6,9 +6,9 @@
 
 | Archivo Entregable | Formato | Tipo de Contenido | SHA-256 |
 | :--- | :---: | :--- | :--- |
-| **[`INFORME_CIERRE_BRECHAS_SINCRONIZACION_ANTIGRAVITY_2026-10-18_20-25_CL.md`](file:///d:/StudioSimple%20-%20Antigravity/entregas/2026-10-18/INFORME_CIERRE_BRECHAS_SINCRONIZACION_ANTIGRAVITY_2026-10-18_20-25_CL.md)** | Markdown | **Informe Oficial Definitivo: Resolución Punto por Punto de las Discrepancias A a G y Matriz de 5 Recorridos** | `6528df2e9c3ac49f7dcab11eee072683a022702750be921ba6482ce057e00bff` |
-| **[`EVIDENCIA_CIERRE_BRECHAS_SINCRONIZACION_ANTIGRAVITY_2026-10-18_20-25_CL.json`](file:///d:/StudioSimple%20-%20Antigravity/entregas/2026-10-18/EVIDENCIA_CIERRE_BRECHAS_SINCRONIZACION_ANTIGRAVITY_2026-10-18_20-25_CL.json)** | JSON | **Inventario Completo y Estructurado: 13 Capturas, 8 Archivos de Código, 2 Diffs y 2 Logs con sus Hashes** | `40698169a7bfcce086f5a5b861d5ecfa8d6e1fd8a80010cb69290b722863691e` |
-| **[`ARCHIVOS_CIERRE_BRECHAS_SINCRONIZACION_ANTIGRAVITY_2026-10-18_20-25_CL.zip`](file:///d:/StudioSimple%20-%20Antigravity/entregas/2026-10-18/ARCHIVOS_CIERRE_BRECHAS_SINCRONIZACION_ANTIGRAVITY_2026-10-18_20-25_CL.zip)** | ZIP | **Paquete Completo de Evidencia e Integración (Carpetas `capturas/`, `codigo/`, `diffs/`, `logs/`)** | `68f261248d13890ff3cd6fc9c657518434341845ac1ea922ab01b2ff85bb7c13` |
+| **[`INFORME_CIERRE_BRECHAS_SINCRONIZACION_ANTIGRAVITY_2026-10-18_20-25_CL.md`](file:///d:/StudioSimple%20-%20Antigravity/entregas/2026-10-18/INFORME_CIERRE_BRECHAS_SINCRONIZACION_ANTIGRAVITY_2026-10-18_20-25_CL.md)** | Markdown | **Informe Oficial Definitivo: Resolución Punto por Punto de las Discrepancias A a G y Matriz de 5 Recorridos** | `46679b8e9e2fe430e9d8fb3095e6d1db9437bcf7ce812afd0394ff689170e1ee` |
+| **[`EVIDENCIA_CIERRE_BRECHAS_SINCRONIZACION_ANTIGRAVITY_2026-10-18_20-25_CL.json`](file:///d:/StudioSimple%20-%20Antigravity/entregas/2026-10-18/EVIDENCIA_CIERRE_BRECHAS_SINCRONIZACION_ANTIGRAVITY_2026-10-18_20-25_CL.json)** | JSON | **Inventario Completo y Estructurado: 13 Capturas, 8 Archivos de Código, 2 Diffs y 2 Logs con sus Hashes** | `be27947a02abe42a3fecab5b07df98363e128aea9bc6cd9722dcfbc75e28b1a0` |
+| **[`ARCHIVOS_CIERRE_BRECHAS_SINCRONIZACION_ANTIGRAVITY_2026-10-18_20-25_CL.zip`](file:///d:/StudioSimple%20-%20Antigravity/entregas/2026-10-18/ARCHIVOS_CIERRE_BRECHAS_SINCRONIZACION_ANTIGRAVITY_2026-10-18_20-25_CL.zip)** | ZIP | **Paquete Completo de Evidencia e Integración (Carpetas `capturas/`, `codigo/`, `diffs/`, `logs/`)** | `85204488d610452e2bb5199b974eeef1fe2954a4da87e835ee64c88b8f823a44` |
 
 ---
 
