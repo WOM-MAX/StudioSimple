@@ -42,19 +42,19 @@ Todas las capturas fueron tomadas en la resolución nativa de 1440x900 con Micro
 
 | N° | Nombre de Archivo | Tamaño (Bytes) | SHA-256 | Hito |
 |:---:|---|:---:|---|:---:|
-| 1 | `REC-01_01_Carga_Split_Ciencias_OA01_Clase02.png` | 339.094 | `0f9fe781af7f6e7fc1acc13841a5def6977296337fec106ffed7152d04cf4a1c` | REC-01 |
-| 2 | `REC-01_02_Vista_Adulto_Ciencias_OA01_Clase02.png` | 102.015 | `c82e4787f7aae5070129326398bc16255f45716ca1cb27f479cbab9efa60f98f` | REC-01 |
-| 3 | `REC-01_03_Vista_Estudiante_Ciencias_OA01_Clase02.png` | 427.971 | `4352d6c0c489bbe00f9196466a5dbf06ec7378e7cc3e246c16473df596ef75e2` | REC-01 |
-| 4 | `REC-02_01_Sin_Logro_0_de_3.png` | 332.178 | `d5e855939c698457a0dbd70a1596f3d662f47bfb9fcaa46854d49d1d0315f320` | REC-02 |
-| 5 | `REC-02_02_Sin_Logro_1_de_3.png` | 331.109 | `b2ee9347ad002270cd2a49b46c90481e5351a3e1853d57ae7cd5a372a8f5faeb` | REC-02 |
-| 6 | `REC-02_03_Recarga_No_Acreditada.png` | 312.002 | `773f8bd63f02ef8de8259a149f792c61452d5576c702921e6dff208038488cf2` | REC-02 |
-| 7 | `REC-03_01_Flujo_Recuperacion_Apoyo_Cuaderno.png` | 291.048 | `471f5a7339377232151141e344851e61fac4dc4b20763f0a4fd951373406c320` | REC-03 |
-| 8 | `REC-03_02_Reintento_Acreditado_2_de_3.png` | 327.620 | `42dfccbf1130f26f8eda58dfe08d2ac776ae9bd7237384fa96f5760dd6e1e9a2` | REC-03 |
-| 9 | `REC-03_03_Logro_Final_Ambos_Roles.png` | 308.969 | `8195f901d4b1cfb026d8a8c41b3b409bfa5ad23b776bc24befc7c28d330be1d4` | REC-03 |
-| 10 | `REC-04_01_Estado_Antes_De_Pausar.png` | 372.591 | `b9837b6aaa79264cf07e8c199df20297bc6beb4f1163f22c45d93c83f689842b` | REC-04 |
-| 11 | `REC-04_02_Estado_Despues_De_Reanudar.png` | 372.471 | `6e7b76fa8987302c101e16318e5d95128cd8ad97bfef1216f58ba579e3fb88c2` | REC-04 |
-| 12 | `REC-05_01_Cambio_A_Lengua_OA03_Clase01.png` | 265.039 | `8cee6f6a52886777286e65c32dc58181d2a62ea2ac1d6d98a5b8545e196eb7ef` | REC-05 |
-| 13 | `REC-05_02_Retorno_A_Ciencias_OA01_Clase02.png` | 372.781 | `8f18429410072db8063407560e3cf41a2f5da57905a30112324b4bd62642e971` | REC-05 |
+| 1 | `REC-01_01_Carga_Split_Ciencias_OA01_Clase02.png` | 331.986 | `aa3916d3ad3fb9bb9c81c3148af047fefe0b5c38491622638ddd980b6417e536` | REC-01 |
+| 2 | `REC-01_02_Vista_Adulto_Ciencias_OA01_Clase02.png` | 97.016 | `b3bef5f57e3fd53bdfbd5d43b837e08fad1902bd5abde0fc85390adb08017f66` | REC-01 |
+| 3 | `REC-01_03_Vista_Estudiante_Ciencias_OA01_Clase02.png` | 395.029 | `c0fbd53d659194c82f349bc151a8f0ade7532cd9376028b757a9b7321dacd3ca` | REC-01 |
+| 4 | `REC-02_01_Sin_Logro_0_de_3.png` | 331.982 | `c000b9dc4dc117963cc9af2edc07042a14bbd062de250e79e549a620e79262e7` | REC-02 |
+| 5 | `REC-02_02_Sin_Logro_1_de_3.png` | 332.405 | `f76cf8cef02d78c7cb05bd1c402e474e5dc3e42d6ffce28100da6e47406af0e4` | REC-02 |
+| 6 | `REC-02_03_Recarga_No_Acreditada.png` | 267.837 | `0e8ab96b68eced03810d54933c0d1bcfa923732a070ae7afdb1d17a1543abe52` | REC-02 |
+| 7 | `REC-03_01_Flujo_Recuperacion_Apoyo_Cuaderno.png` | 267.839 | `da194311c84f2bc157e65960445f5f11d2885f65673dca803e9ba9c8a8573ca3` | REC-03 |
+| 8 | `REC-03_02_Reintento_Acreditado_2_de_3.png` | 253.643 | `0654f46c21d384c17283b5ec04bce891b0c14a06aff2f399b6aee4d8875a6dca` | REC-03 |
+| 9 | `REC-03_03_Logro_Final_Ambos_Roles.png` | 253.250 | `b1616d833026417d33500d51a201a125dd878df0b4ea852794795aa773a79cf6` | REC-03 |
+| 10 | `REC-04_01_Estado_Antes_De_Pausar.png` | 253.245 | `3bd03e0acf0c813eeb17ec001059c3986dfa562d9761595e00ec1d41a2dcfd06` | REC-04 |
+| 11 | `REC-04_02_Estado_Despues_De_Reanudar.png` | 253.656 | `f160d74197cadcbbff948e454098aac83e81ac18f832b3808605393586dbbd23` | REC-04 |
+| 12 | `REC-05_01_Cambio_A_Lengua_OA03_Clase01.png` | 265.570 | `c4a64c639073340d7c087ff6ef4bd304e24ec91d7373b485c532bbbc1dde9291` | REC-05 |
+| 13 | `REC-05_02_Retorno_A_Ciencias_OA01_Clase02.png` | 253.454 | `808381fff887503960e3a5d7e82dc8bf934e7faa3d3f6c4d8513dbca210772f4` | REC-05 |
 
 ### B. Código Fuente y Soporte (8 archivos)
 - `codigo/execute_real_browser_recs.ts`: Script completo de automatización CDP en Edge.

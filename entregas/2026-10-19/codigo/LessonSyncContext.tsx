@@ -139,10 +139,8 @@ export const LessonSyncProvider: React.FC<{
           initialLesson.metadata.lessonNumber
         );
         const savedSpecific = localStorage.getItem(key);
-        const savedGlobal = localStorage.getItem(STORAGE_KEY);
-        const candidate = savedSpecific || savedGlobal;
-        if (candidate) {
-          const parsed = JSON.parse(candidate);
+        if (savedSpecific) {
+          const parsed = JSON.parse(savedSpecific);
           if (
             parsed.activeOa === initialLesson.metadata.oaCode &&
             parsed.activeLessonNum === initialLesson.metadata.lessonNumber
@@ -177,7 +175,7 @@ export const LessonSyncProvider: React.FC<{
 
   const currentRole = isStudentRole ? 'student' : (viewMode === 'adult' ? 'adult' : 'split');
 
-  // 1. Transporte Local: BroadcastChannel (0ms entre pestañas en el mismo PC)
+  // 1. Transporte Local: BroadcastChannel con validación estricta de firma de lección y sala
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
@@ -186,12 +184,27 @@ export const LessonSyncProvider: React.FC<{
       channelRef.current = channel;
 
       channel.onmessage = (event) => {
-        if (event.data && typeof event.data === 'object') {
-          if (event.data.isReset) {
-            setSessionState({ ...INITIAL_LESSON_SESSION, ...event.data });
-          } else {
-            setSessionState((prev) => ({ ...prev, ...event.data }));
-          }
+        const data = event.data;
+        if (!data || typeof data !== 'object') return;
+
+        // Descartar eco de este mismo cliente
+        if (data.senderClientId && data.senderClientId === clientIdRef.current) return;
+
+        // Descartar si pertenece a otra sala remota
+        if (data.roomCode && data.roomCode !== effectiveRoomCode) return;
+
+        // Descartar si el mensaje pertenece a otra lección (aislamiento estricto multiclase)
+        if (data.targetKey && data.targetKey !== specificLessonKey) return;
+        if (data.grade && data.grade !== initialLesson.metadata.grade) return;
+        if (data.subject && data.subject.toLowerCase() !== initialLesson.metadata.subject.toLowerCase()) return;
+        if (data.oaCode && data.oaCode !== initialLesson.metadata.oaCode) return;
+        if (data.lessonNumber !== undefined && data.lessonNumber !== initialLesson.metadata.lessonNumber) return;
+
+        const payload = data.payload || data;
+        if (data.isReset || payload.isReset) {
+          setSessionState({ ...INITIAL_LESSON_SESSION, ...payload });
+        } else {
+          setSessionState((prev) => ({ ...prev, ...payload }));
         }
       };
 
@@ -201,7 +214,7 @@ export const LessonSyncProvider: React.FC<{
     } catch (e) {
       console.warn('BroadcastChannel not supported in this environment:', e);
     }
-  }, []);
+  }, [effectiveRoomCode, specificLessonKey, initialLesson.metadata.grade, initialLesson.metadata.subject, initialLesson.metadata.oaCode, initialLesson.metadata.lessonNumber]);
 
   // 2. Transporte Remoto: Publicación HTTP hacia in-memory relay con debounce inteligente
   const debouncePostRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -271,7 +284,7 @@ export const LessonSyncProvider: React.FC<{
                 incoming.activeLessonNum === initialLesson.metadata.lessonNumber
               ) {
                 try {
-                  localStorage.setItem(STORAGE_KEY, JSON.stringify(incoming));
+                  localStorage.setItem(specificLessonKey, JSON.stringify(incoming));
                 } catch {}
                 const isReset = Boolean(
                   json.isReset ||
@@ -315,7 +328,7 @@ export const LessonSyncProvider: React.FC<{
                   incoming.activeLessonNum === initialLesson.metadata.lessonNumber
                 ) {
                   try {
-                    localStorage.setItem(STORAGE_KEY, JSON.stringify(incoming));
+                    localStorage.setItem(specificLessonKey, JSON.stringify(incoming));
                   } catch {}
                   if (data.isReset) {
                     return { ...INITIAL_LESSON_SESSION, ...incoming };
@@ -413,8 +426,18 @@ export const LessonSyncProvider: React.FC<{
             };
           }
         }
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(sessionToLoad));
-        channelRef.current?.postMessage({ ...sessionToLoad, isReset: true });
+        localStorage.setItem(specificLessonKey, JSON.stringify(sessionToLoad));
+        channelRef.current?.postMessage({
+          targetKey: specificLessonKey,
+          grade: initialLesson.metadata.grade,
+          subject: initialLesson.metadata.subject,
+          oaCode: initialLesson.metadata.oaCode,
+          lessonNumber: initialLesson.metadata.lessonNumber,
+          roomCode: effectiveRoomCode,
+          senderClientId: clientIdRef.current,
+          isReset: true,
+          payload: sessionToLoad
+        });
       } catch (e) {
         console.error('Error loading session for lesson:', e);
       }
@@ -428,8 +451,16 @@ export const LessonSyncProvider: React.FC<{
       const updated = typeof patch === 'function' ? patch(prev) : { ...prev, ...patch };
       try {
         localStorage.setItem(specificLessonKey, JSON.stringify(updated));
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
-        channelRef.current?.postMessage(updated);
+        channelRef.current?.postMessage({
+          targetKey: specificLessonKey,
+          grade: initialLesson.metadata.grade,
+          subject: initialLesson.metadata.subject,
+          oaCode: initialLesson.metadata.oaCode,
+          lessonNumber: initialLesson.metadata.lessonNumber,
+          roomCode: effectiveRoomCode,
+          senderClientId: clientIdRef.current,
+          payload: updated
+        });
       } catch (e) {
         console.error('Error broadcasting update:', e);
       }
@@ -451,8 +482,17 @@ export const LessonSyncProvider: React.FC<{
     setSessionState(cleanSession);
     try {
       localStorage.setItem(specificLessonKey, JSON.stringify(cleanSession));
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(cleanSession));
-      channelRef.current?.postMessage({ ...cleanSession, isReset: true });
+      channelRef.current?.postMessage({
+        targetKey: specificLessonKey,
+        grade: initialLesson.metadata.grade,
+        subject: initialLesson.metadata.subject,
+        oaCode: initialLesson.metadata.oaCode,
+        lessonNumber: initialLesson.metadata.lessonNumber,
+        roomCode: effectiveRoomCode,
+        senderClientId: clientIdRef.current,
+        isReset: true,
+        payload: cleanSession
+      });
     } catch (e) {
       console.error('Error resetting session:', e);
     }
