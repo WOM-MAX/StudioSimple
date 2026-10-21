@@ -10,7 +10,7 @@ export const CIENCIAS_7B_OA01_CLASE01: LessonData = {
     "totalLessonsInOa": 6,
     "lessonTitle": "La sexualidad integra distintas dimensiones",
     "durationMinutes": 30,
-    "nextLessonTitle": "Cambios físicos y emocionales durante la pubertad."
+    "nextLessonTitle": "Cambios físicos durante la pubertad"
   },
   "prep": {
     "adultObjective": "Explicar que la sexualidad comprende más que el aspecto físico, identificando las cinco dimensiones que presenta el Texto Escolar y relacionándolas con los aspectos biológicos, afectivos y sociales señalados en el OA.",

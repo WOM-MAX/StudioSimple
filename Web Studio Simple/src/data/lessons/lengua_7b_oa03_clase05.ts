@@ -10,7 +10,7 @@ export const LENGUA_7B_OA03_CLASE05: LessonData = {
     "totalLessonsInOa": 6,
     "lessonTitle": "El orden de los hechos y el recuerdo",
     "durationMinutes": 30,
-    "nextLessonTitle": ""
+    "nextLessonTitle": "Comparar relatos con evidencia"
   },
   "prep": {
     "adultObjective": "Distinguir el orden de los acontecimientos del orden en que se cuentan e interpretar la función de un recuerdo en la historia.",

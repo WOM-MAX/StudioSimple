@@ -10,7 +10,7 @@ export const HISTORIA_7B_OA02_CLASE01: LessonData = {
     "totalLessonsInOa": 6,
     "lessonTitle": "¿Dónde y cuándo comenzó la agricultura?",
     "durationMinutes": 30,
-    "nextLessonTitle": "Domesticación y sedentarización."
+    "nextLessonTitle": "Domesticación y sedentarización"
   },
   "prep": {
     "adultObjective": "Interpretar el mapa histórico de las páginas 18–19 para describir dónde y cuándo aparecen registros tempranos de agricultura y domesticación, y explicar qué permite concluir el mapa.",

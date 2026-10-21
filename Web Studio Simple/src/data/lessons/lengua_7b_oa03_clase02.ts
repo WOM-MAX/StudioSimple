@@ -10,7 +10,7 @@ export const LENGUA_7B_OA03_CLASE02: LessonData = {
     "totalLessonsInOa": 6,
     "lessonTitle": "Acciones que cambian el conflicto",
     "durationMinutes": 30,
-    "nextLessonTitle": ""
+    "nextLessonTitle": "Inferencias con evidencia del relato"
   },
   "prep": {
     "adultObjective": "Explicar cómo las acciones del padre, Jimmy y Robutt afectan a otros personajes y desarrollan el conflicto.",

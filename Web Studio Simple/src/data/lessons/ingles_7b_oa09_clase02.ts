@@ -8,9 +8,9 @@ export const INGLES_7B_OA09_CLASE02: LessonData = {
     "oaTitle": "Idioma Extranjero Inglés - OA 9",
     "lessonNumber": 2,
     "totalLessonsInOa": 6,
-    "lessonTitle": "Una situación",
+    "lessonTitle": "An opinion supported by the diary",
     "durationMinutes": 30,
-    "nextLessonTitle": ""
+    "nextLessonTitle": "Dates, times and explicit information"
   },
   "prep": {
     "adultObjective": "State agreement or disagreement about a reading and support the opinion with an accurate detail.",
@@ -53,7 +53,7 @@ export const INGLES_7B_OA09_CLASE02: LessonData = {
       }
     ],
     "dileIntro": "Hoy avanzaremos en una nueva clase interactiva.",
-    "dileObjective": "Una situación"
+    "dileObjective": "An opinion supported by the diary"
   },
   "situation": {
     "dilePrompt": "What do you expect from the title? Give a prediction, then check it by reading.",

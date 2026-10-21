@@ -89,6 +89,10 @@ Al intervenir pasarelas de pago (Mercado Pago, Webpay) o servicios cloud (Railwa
 - Debe auditar el codigo fuente (`server.js`, clientes API, `CheckoutFlow.tsx`) para identificar fallos como uso de endpoints de Sandbox en produccion o desalineacion de webhooks.
 - Si se requiere una variable de produccion alojada en Railway que no este en local, el agente debe implementar la lectura resiliente (`process.env.VARIABLE || fallbackSeguro`), documentar la variable exacta requerida y probar localmente mediante emulacion sintetica o tests unitarios sin bloquear la entrega.
 
+### 14. Clausula de Despliegue Autonomo y Consulta Activa a Work (Autorizado por Walter)
+- **Git Push Autónomo:** Antigravity está formalmente autorizado por Walter a ejecutar `git push` a Railway y GitHub de manera autónoma cuando decida que un avance o corrección es importante y cuenta con validación técnica limpia (`npm run build` con código 0), notificando el push a Walter en el informe final.
+- **Consulta Activa y Voz Crítica ante Work:** Si una especificación, formato o entrega de ChatGPT Work presenta incongruencias, vacíos pedagógicos o fricción técnica con la arquitectura de la App, Antigravity tiene la orden explícita de formular preguntas, dudas y contrapropuestas claras dirigidas a Work antes de asumir o alterar código a ciegas.
+
 ---
 
 ## Plantilla Canonica del Prompt /goal

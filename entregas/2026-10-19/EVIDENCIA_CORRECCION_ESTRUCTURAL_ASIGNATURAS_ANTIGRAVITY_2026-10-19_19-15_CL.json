@@ -1,0 +1,236 @@
+{
+  "metadatos": {
+    "proyecto": "EstudioSimple",
+    "curso": "7° Básico (110-7)",
+    "fecha_hora_chile": "2026-10-19 19:15 [America/Santiago]",
+    "version_etiqueta": "2026-10-19_19-15_CL",
+    "estado_global": "EN_REVISION",
+    "dictamen": "CORRECCION_ESTRUCTURAL_VALIDADA_EN_REVISION_WORK",
+    "autor": "Antigravity (AI Software Engineer A-SDLC)",
+    "aprobacion_requerida": "Exclusiva de Walter tras análisis con ChatGPT Work"
+  },
+  "paquete_zip": {
+    "nombre": "PARCHE_Y_CAPTURAS_CORRECCION_ESTRUCTURAL_ASIGNATURAS_2026-10-19_19-15_CL.zip",
+    "bytes": 893689,
+    "sha256": "0acff1597b65f85ce09900602ce52df00c43e1e3ea318b6360dc2a6b1a2630ec"
+  },
+  "resumen_hallazgos_walter": {
+    "caso_reproduccion": "Ciencias Naturales 7° Básico OA01 Clase 02 (Grabación 2026-10-19 182830.mp4)",
+    "hallazgo_1_conteo_desfasado": {
+      "descripcion": "Adulto mostraba \"Pregunta 2 de 2\" mientras Estudiante mostraba \"Pregunta 2 de 1\" debido a índices y totales cableados en AdultLessonView.tsx.",
+      "estado": "CORREGIDO_ESTRUCTURALMENTE"
+    },
+    "hallazgo_2_lectura_impropia": {
+      "descripcion": "Ciencias Naturales mostraba botón \"Consultar texto de lectura\" y modal con relato lunar de Jimmy y Robutt por fallback predeterminado DEFAULT_PARAGRAPHS.",
+      "estado": "CORREGIDO_ESTRUCTURALMENTE"
+    },
+    "hallazgo_3_ideas_desincronizadas": {
+      "descripcion": "Anunciaba \"Tres ideas importantes\" y mostraba dos, con botón requiriendo paso fantasma a idea 3.",
+      "estado": "CORREGIDO_ESTRUCTURALMENTE"
+    },
+    "hallazgo_4_titulos_placeholder": {
+      "descripcion": "Clases 02 a 06 en Ciencias, Historia e Inglés tenían título temático \"Una situación\" en vez de los títulos curriculares oficiales de Work.",
+      "estado": "CORREGIDO_ESTRUCTURALMENTE"
+    },
+    "hallazgo_5_continuidad_vacia": {
+      "descripcion": "nextLessonTitle vacío mostraba tarjeta \"Próxima clase: \" sin nombre o no diferenciaba la clase final de cierre de OA.",
+      "estado": "CORREGIDO_ESTRUCTURALMENTE"
+    }
+  },
+  "pruebas_navegador_cdp": {
+    "entorno": "Microsoft Edge CDP Headless (puerto 9223)",
+    "casos": [
+      {
+        "caso": "Ciencias 7B OA01 Clase 02",
+        "resultado": "PASS",
+        "verificaciones": [
+          "Título oficial \"Cambios físicos durante la pubertad\" verificado en DOM y captura",
+          "Botón \"Consultar texto de lectura\" erradicado en todas las etapas de Ciencias",
+          "Preguntas desacopladas dinámicamente",
+          "Ideas importantes sincronizadas con las 2 ideas reales y botón avanza directo al miniquiz",
+          "Cierre muestra \"Próxima clase: Emociones, afectividad e imagen personal\""
+        ]
+      },
+      {
+        "caso": "Lengua 7B OA03 Clase 01",
+        "resultado": "PASS",
+        "verificaciones": [
+          "Botón \"Consultar texto de lectura\" habilitado legítimamente",
+          "Texto de \"El mejor amigo de un muchacho\" (Jimmy y Robutt) alojado exclusivamente en sus datos"
+        ]
+      },
+      {
+        "caso": "Matemática 7B OA01 Clase 01",
+        "resultado": "PASS",
+        "verificaciones": [
+          "Lección canónica 100% blindada e intacta",
+          "Sin botón de lectura ni regresiones en navegación o sincronización"
+        ]
+      }
+    ]
+  },
+  "matriz_auditoria_36_lecciones": {
+    "total_lecciones": 36,
+    "regla_1_aislamiento_recursos": "36/36 PASS",
+    "regla_2_sincronia_contadores": "36/36 PASS",
+    "regla_4_titulo_tematico": "36/36 PASS",
+    "regla_5_continuidad_clases": "36/36 PASS",
+    "regla_3_integridad_resumen": {
+      "con_3_ideas_completas": 13,
+      "con_2_ideas_dinamizadas": 23,
+      "clasificacion_work": "PENDIENTE_CONTENIDO_WORK (redacción de 3ra idea para homogeneidad)"
+    }
+  },
+  "inventario_archivos_zip": [
+    {
+      "archivo": "auditoria/EVIDENCIA_VERIFICACION_NAVEGADOR_ESTRUCTURAL.json",
+      "categoria": "auditoria",
+      "bytes": 1433,
+      "sha256": "d5205102cc0983deb8b3f276681ba046f1d5a248afc3362c7e77695fe00c8cdc"
+    },
+    {
+      "archivo": "auditoria/MATRIZ_AUDITORIA_ESTRUCTURAL_36_LECCIONES.json",
+      "categoria": "auditoria",
+      "bytes": 23814,
+      "sha256": "f9a9269f08855e7c9fdde50d8133628bf4b5affe5b9108f45bedd9bb27d5b8ff"
+    },
+    {
+      "archivo": "capturas/CNA02_01_Split_Inicio_Titulo_Oficial.png",
+      "categoria": "capturas",
+      "bytes": 107222,
+      "sha256": "e2607b21d5b79d124582be3a4f90fd5c0b0688b5517ac06b523535dd725809ca"
+    },
+    {
+      "archivo": "capturas/CNA02_02_Recorrido_Sin_Texto_Lectura.png",
+      "categoria": "capturas",
+      "bytes": 150191,
+      "sha256": "4fb6ee82c41ac896b0f029ced84f9797947331277a7a0324574c3434bbb16c11"
+    },
+    {
+      "archivo": "capturas/CNA02_03_Ideas_Importantes_Dinamicas.png",
+      "categoria": "capturas",
+      "bytes": 108176,
+      "sha256": "c6f5ffa54597a1d36d735a70453737acdafde10956db06cf4a91368b130583a6"
+    },
+    {
+      "archivo": "capturas/CNA02_04_Cierre_Proxima_Clase_Oficial.png",
+      "categoria": "capturas",
+      "bytes": 107239,
+      "sha256": "47825d11c67dc94c5b6d852b23daf055c4bf8c0521bb65d02ec3eeec383c182c"
+    },
+    {
+      "archivo": "capturas/LYL01_01_Lectura_Legitima_Preservada.png",
+      "categoria": "capturas",
+      "bytes": 255265,
+      "sha256": "5266f318ad1471bf96c55fd0dd2b385bf3e3a5d4383dbcc9048e51f4d06dd1c7"
+    },
+    {
+      "archivo": "capturas/MAT01_01_Protegida_Sin_Regresiones.png",
+      "categoria": "capturas",
+      "bytes": 107304,
+      "sha256": "f720eb8698915b64f2754365d6e84ae0aa51c10341976f4dff4c88506fa71a4f"
+    },
+    {
+      "archivo": "codigo/scripts/audit_structural_rules.ts",
+      "categoria": "codigo",
+      "bytes": 7463,
+      "sha256": "d2712dba3efb6d7047589463875e553a29c978e1d5d664f3bfeae5f9d431f5cd"
+    },
+    {
+      "archivo": "codigo/scripts/restore_titles_and_continuity.ts",
+      "categoria": "codigo",
+      "bytes": 5218,
+      "sha256": "0c42f2c98e04ca3c0dad24390b272ca418f4954704bf749b81c6c2823142d75a"
+    },
+    {
+      "archivo": "codigo/scripts/verify_structural_fixes_browser.ts",
+      "categoria": "codigo",
+      "bytes": 13452,
+      "sha256": "734b616f4a773fa8d5f4dbaa9a70b4e3b7e5a41106160148e41c90c9ca4547d9"
+    },
+    {
+      "archivo": "codigo/src/components/lesson/adult/AdultLessonView.tsx",
+      "categoria": "codigo",
+      "bytes": 95067,
+      "sha256": "f01c48586c48f77a3d4e1be98d7980673f8d6f14cd19b555b2c2b28f13c9e50b"
+    },
+    {
+      "archivo": "codigo/src/components/lesson/student/StudentLessonView.tsx",
+      "categoria": "codigo",
+      "bytes": 70094,
+      "sha256": "d63f7016402881d78931b31ad32de680340a075d85aa177944be0c558d825a29"
+    },
+    {
+      "archivo": "codigo/src/components/lesson/student/StudentReadingResourceCard.tsx",
+      "categoria": "codigo",
+      "bytes": 4757,
+      "sha256": "1c46ff4f090cdaa0e7bffbaf69278e26b5f1bbcb3b6effa995ab59220c3aa985"
+    },
+    {
+      "archivo": "codigo/src/context/LessonSyncContext.tsx",
+      "categoria": "codigo",
+      "bytes": 24887,
+      "sha256": "17ac6ce7e6b26113f4ff8b690776f3f48049ac243d5289562f9f1854075ec03c"
+    },
+    {
+      "archivo": "codigo/src/data/lessons/ciencias_7b_oa01_clase02.ts",
+      "categoria": "codigo",
+      "bytes": 25881,
+      "sha256": "b40ddae3ac8a8a78e58cecfbf3e68ed213f84bbf1e4b8114d8d6f224e2973f5c"
+    },
+    {
+      "archivo": "codigo/src/data/lessons/lengua_7b_oa03_clase01.ts",
+      "categoria": "codigo",
+      "bytes": 24592,
+      "sha256": "483fac55edf4a39d15e8a97f2efcfc758e225fac12340af978ba7f603edc6011"
+    },
+    {
+      "archivo": "diffs/diff_AdultLessonView.txt",
+      "categoria": "diffs",
+      "bytes": 9547,
+      "sha256": "82a46c1997050a052848b7f5d645805d44f0ff08ada0b1d83cdb11618a0b8bda"
+    },
+    {
+      "archivo": "diffs/diff_ciencias_clase02.txt",
+      "categoria": "diffs",
+      "bytes": 1847,
+      "sha256": "569d1322afe689f64639f5896c9f520941a185b39e3e37e8baa2019d3aca4546"
+    },
+    {
+      "archivo": "diffs/diff_lengua_clase01.txt",
+      "categoria": "diffs",
+      "bytes": 2534,
+      "sha256": "e69367d169bf2b041d73e1fa61153ee1c521bcac10cfbaab54d8c90964235ca0"
+    },
+    {
+      "archivo": "diffs/diff_LessonSyncContext.txt",
+      "categoria": "diffs",
+      "bytes": 811,
+      "sha256": "c280847bfec4d86b5bb0802fdb69fac0a45429207d246793b2078d663617493e"
+    },
+    {
+      "archivo": "diffs/diff_StudentLessonView.txt",
+      "categoria": "diffs",
+      "bytes": 14234,
+      "sha256": "f640dd1a45a04c64007d5bff4e9072d6ce751be16aef196672b944da26ade138"
+    },
+    {
+      "archivo": "diffs/diff_StudentReadingResourceCard.txt",
+      "categoria": "diffs",
+      "bytes": 6648,
+      "sha256": "e40e44d8471e2e11cd23e217d47d4a25c4c0071dfec877269385f57412f387e8"
+    },
+    {
+      "archivo": "diffs/git_status.txt",
+      "categoria": "diffs",
+      "bytes": 2340,
+      "sha256": "6fb8f1fa41aee3370b3cb15135f0a4105761a6db36b7db03300df1c9c371a9f4"
+    },
+    {
+      "archivo": "logs/LOG_RESUMEN_EJECUCION.txt",
+      "categoria": "logs",
+      "bytes": 1538,
+      "sha256": "8ea9954d5468d4426a3cac8e1099938ea7431bbe365536f89f1bc4b14ffe7199"
+    }
+  ]
+}

@@ -8,7 +8,7 @@ export const HISTORIA_7B_OA02_CLASE06: LessonData = {
     "oaTitle": "Historia, Geografía y Ciencias Sociales - OA 2",
     "lessonNumber": 6,
     "totalLessonsInOa": 6,
-    "lessonTitle": "Una situación",
+    "lessonTitle": "Transformaciones agrícolas y huellas en el presente",
     "durationMinutes": 30,
     "nextLessonTitle": ""
   },
@@ -53,7 +53,7 @@ export const HISTORIA_7B_OA02_CLASE06: LessonData = {
       }
     ],
     "dileIntro": "Hoy avanzaremos en una nueva clase interactiva.",
-    "dileObjective": "Una situación"
+    "dileObjective": "Transformaciones agrícolas y huellas en el presente"
   },
   "situation": {
     "dilePrompt": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",

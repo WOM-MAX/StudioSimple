@@ -8,9 +8,9 @@ export const HISTORIA_7B_OA02_CLASE02: LessonData = {
     "oaTitle": "Historia, Geografía y Ciencias Sociales - OA 2",
     "lessonNumber": 2,
     "totalLessonsInOa": 6,
-    "lessonTitle": "Una situación",
+    "lessonTitle": "Domesticación y sedentarización",
     "durationMinutes": 30,
-    "nextLessonTitle": ""
+    "nextLessonTitle": "Explicar procesos mediante varias causas"
   },
   "prep": {
     "adultObjective": "Explicar cómo cultivar plantas y criar animales favoreció la sedentarización y transformó la vida en comunidad.",
@@ -53,7 +53,7 @@ export const HISTORIA_7B_OA02_CLASE02: LessonData = {
       }
     ],
     "dileIntro": "Hoy avanzaremos en una nueva clase interactiva.",
-    "dileObjective": "Una situación"
+    "dileObjective": "Domesticación y sedentarización"
   },
   "situation": {
     "dilePrompt": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",

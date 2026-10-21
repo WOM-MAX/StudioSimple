@@ -8,9 +8,9 @@ export const HISTORIA_7B_OA02_CLASE05: LessonData = {
     "oaTitle": "Historia, Geografía y Ciencias Sociales - OA 2",
     "lessonNumber": 5,
     "totalLessonsInOa": 6,
-    "lessonTitle": "Una situación",
+    "lessonTitle": "Excedentes, intercambio y evidencia",
     "durationMinutes": 30,
-    "nextLessonTitle": ""
+    "nextLessonTitle": "Transformaciones agrícolas y huellas en el presente"
   },
   "prep": {
     "adultObjective": "Relacionar la disponibilidad de excedentes con el intercambio de bienes e interpretar qué evidencias apoyan la existencia de comercio.",
@@ -53,7 +53,7 @@ export const HISTORIA_7B_OA02_CLASE05: LessonData = {
       }
     ],
     "dileIntro": "Hoy avanzaremos en una nueva clase interactiva.",
-    "dileObjective": "Una situación"
+    "dileObjective": "Excedentes, intercambio y evidencia"
   },
   "situation": {
     "dilePrompt": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",

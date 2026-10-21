@@ -8,7 +8,7 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
     "oaTitle": "Ciencias Naturales - OA 1",
     "lessonNumber": 6,
     "totalLessonsInOa": 6,
-    "lessonTitle": "Una situación",
+    "lessonTitle": "Decisiones responsables e integración",
     "durationMinutes": 30,
     "nextLessonTitle": ""
   },
@@ -53,7 +53,7 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
       }
     ],
     "dileIntro": "Hoy avanzaremos en una nueva clase interactiva.",
-    "dileObjective": "Una situación"
+    "dileObjective": "Decisiones responsables e integración"
   },
   "situation": {
     "dilePrompt": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",

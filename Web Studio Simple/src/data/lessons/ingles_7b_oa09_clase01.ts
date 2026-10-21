@@ -10,7 +10,7 @@ export const INGLES_7B_OA09_CLASE01: LessonData = {
     "totalLessonsInOa": 6,
     "lessonTitle": "Anne’s Birthday: Main Idea and Key Events",
     "durationMinutes": 30,
-    "nextLessonTitle": "Expressing an opinion about a text with evidence."
+    "nextLessonTitle": "An opinion supported by the diary"
   },
   "prep": {
     "adultObjective": "Identify the main idea of Anne Frank’s diary entry and use explicit details to describe the order of events in her birthday.",

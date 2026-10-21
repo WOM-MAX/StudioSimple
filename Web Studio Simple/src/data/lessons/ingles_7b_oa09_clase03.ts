@@ -8,9 +8,9 @@ export const INGLES_7B_OA09_CLASE03: LessonData = {
     "oaTitle": "Idioma Extranjero Inglés - OA 9",
     "lessonNumber": 3,
     "totalLessonsInOa": 6,
-    "lessonTitle": "Una situación",
+    "lessonTitle": "Dates, times and explicit information",
     "durationMinutes": 30,
-    "nextLessonTitle": ""
+    "nextLessonTitle": "Reading a school email"
   },
   "prep": {
     "adultObjective": "Answer reading questions about dates, times and people by locating explicit information and distinguishing similar details.",
@@ -53,7 +53,7 @@ export const INGLES_7B_OA09_CLASE03: LessonData = {
       }
     ],
     "dileIntro": "Hoy avanzaremos en una nueva clase interactiva.",
-    "dileObjective": "Una situación"
+    "dileObjective": "Dates, times and explicit information"
   },
   "situation": {
     "dilePrompt": "What do you expect from the title? Give a prediction, then check it by reading.",

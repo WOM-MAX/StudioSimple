@@ -8,9 +8,9 @@ export const INGLES_7B_OA09_CLASE04: LessonData = {
     "oaTitle": "Idioma Extranjero Inglés - OA 9",
     "lessonNumber": 4,
     "totalLessonsInOa": 6,
-    "lessonTitle": "Una situación",
+    "lessonTitle": "Reading a school email",
     "durationMinutes": 30,
-    "nextLessonTitle": ""
+    "nextLessonTitle": "Reading about a school garden"
   },
   "prep": {
     "adultObjective": "Identify the main idea and explicit details in a short school email and answer questions with evidence.",
@@ -53,7 +53,7 @@ export const INGLES_7B_OA09_CLASE04: LessonData = {
       }
     ],
     "dileIntro": "Hoy avanzaremos en una nueva clase interactiva.",
-    "dileObjective": "Una situación"
+    "dileObjective": "Reading a school email"
   },
   "situation": {
     "dilePrompt": "What do you expect from the title? Give a prediction, then check it by reading.",

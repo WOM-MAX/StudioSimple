@@ -8,9 +8,9 @@ export const INGLES_7B_OA09_CLASE05: LessonData = {
     "oaTitle": "Idioma Extranjero Inglés - OA 9",
     "lessonNumber": 5,
     "totalLessonsInOa": 6,
-    "lessonTitle": "Una situación",
+    "lessonTitle": "Reading about a school garden",
     "durationMinutes": 30,
-    "nextLessonTitle": ""
+    "nextLessonTitle": "Comparing messages and showing understanding"
   },
   "prep": {
     "adultObjective": "Understand the main idea, locate explicit information and explain a sequence in a short text about a school project.",
@@ -53,7 +53,7 @@ export const INGLES_7B_OA09_CLASE05: LessonData = {
       }
     ],
     "dileIntro": "Hoy avanzaremos en una nueva clase interactiva.",
-    "dileObjective": "Una situación"
+    "dileObjective": "Reading about a school garden"
   },
   "situation": {
     "dilePrompt": "What do you expect from the title? Give a prediction, then check it by reading.",

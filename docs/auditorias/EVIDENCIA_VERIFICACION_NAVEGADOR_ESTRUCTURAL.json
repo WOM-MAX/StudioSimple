@@ -1,0 +1,50 @@
+[
+  {
+    "case": "Ciencias 7B OA01 Clase 02",
+    "status": "PASS",
+    "capturas": [
+      {
+        "filename": "CNA02_01_Split_Inicio_Titulo_Oficial.png",
+        "sha256": "e2607b21d5b79d124582be3a4f90fd5c0b0688b5517ac06b523535dd725809ca",
+        "bytes": 107222
+      },
+      {
+        "filename": "CNA02_02_Recorrido_Sin_Texto_Lectura.png",
+        "sha256": "4fb6ee82c41ac896b0f029ced84f9797947331277a7a0324574c3434bbb16c11",
+        "bytes": 150191
+      },
+      {
+        "filename": "CNA02_03_Ideas_Importantes_Dinamicas.png",
+        "sha256": "c6f5ffa54597a1d36d735a70453737acdafde10956db06cf4a91368b130583a6",
+        "bytes": 108176
+      },
+      {
+        "filename": "CNA02_04_Cierre_Proxima_Clase_Oficial.png",
+        "sha256": "47825d11c67dc94c5b6d852b23daf055c4bf8c0521bb65d02ec3eeec383c182c",
+        "bytes": 107239
+      }
+    ]
+  },
+  {
+    "case": "Lengua 7B OA03 Clase 01",
+    "status": "PASS",
+    "capturas": [
+      {
+        "filename": "LYL01_01_Lectura_Legitima_Preservada.png",
+        "sha256": "5266f318ad1471bf96c55fd0dd2b385bf3e3a5d4383dbcc9048e51f4d06dd1c7",
+        "bytes": 255265
+      }
+    ]
+  },
+  {
+    "case": "Matemática 7B OA01 Clase 01",
+    "status": "PASS",
+    "capturas": [
+      {
+        "filename": "MAT01_01_Protegida_Sin_Regresiones.png",
+        "sha256": "f720eb8698915b64f2754365d6e84ae0aa51c10341976f4dff4c88506fa71a4f",
+        "bytes": 107304
+      }
+    ]
+  }
+]

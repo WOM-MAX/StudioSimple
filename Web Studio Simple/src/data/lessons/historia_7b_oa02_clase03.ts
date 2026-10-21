@@ -8,9 +8,9 @@ export const HISTORIA_7B_OA02_CLASE03: LessonData = {
     "oaTitle": "Historia, Geografía y Ciencias Sociales - OA 2",
     "lessonNumber": 3,
     "totalLessonsInOa": 6,
-    "lessonTitle": "Una situación",
+    "lessonTitle": "Explicar procesos mediante varias causas",
     "durationMinutes": 30,
-    "nextLessonTitle": ""
+    "nextLessonTitle": "Técnicas agrícolas y excedentes"
   },
   "prep": {
     "adultObjective": "Relacionar factores climáticos, disponibilidad de recursos y población en una explicación multicausal del surgimiento agrícola, distinguiendo teoría y certeza.",
@@ -53,7 +53,7 @@ export const HISTORIA_7B_OA02_CLASE03: LessonData = {
       }
     ],
     "dileIntro": "Hoy avanzaremos en una nueva clase interactiva.",
-    "dileObjective": "Una situación"
+    "dileObjective": "Explicar procesos mediante varias causas"
   },
   "situation": {
     "dilePrompt": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",

@@ -10,7 +10,7 @@ export const LENGUA_7B_OA03_CLASE04: LessonData = {
     "totalLessonsInOa": 6,
     "lessonTitle": "La voz del narrador y los personajes",
     "durationMinutes": 30,
-    "nextLessonTitle": ""
+    "nextLessonTitle": "El orden de los hechos y el recuerdo"
   },
   "prep": {
     "adultObjective": "Distinguir quién cuenta las acciones y quién habla en los diálogos del relato, usando señales del fragmento.",

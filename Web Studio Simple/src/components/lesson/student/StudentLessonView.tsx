@@ -259,9 +259,25 @@ export const StudentLessonView: React.FC = () => {
     }
   };
 
-  const currentPreItem = lessonData.preQuestions[session.conversationIndex] ?? lessonData.preQuestions[0];
-  const currentPostItem = lessonData.postQuestions[session.postIndex] ?? lessonData.postQuestions[0];
-  const currentPracticeItem = lessonData.practice[session.practiceIndex] ?? lessonData.practice[0];
+  const currentPreItem = (lessonData.preQuestions && lessonData.preQuestions[session.conversationIndex]) ?? lessonData.preQuestions?.[0] ?? ({} as any);
+  const currentPostItem = (lessonData.postQuestions && lessonData.postQuestions[session.postIndex]) ?? lessonData.postQuestions?.[0] ?? ({} as any);
+  const currentPracticeItem = (lessonData.practice && lessonData.practice[session.practiceIndex]) ?? lessonData.practice?.[0] ?? ({} as any);
+
+  // Regla estructural de asignatura y disponibilidad de recurso:
+  // Ciencias Naturales y Matemática no usan texto de lectura narrativo (usan organizadores y casos contextuales).
+  // Solo se habilita si la asignatura admite lectura Y la lección declara párrafos legítimos en sus datos.
+  const subjectLower = (lessonData.metadata.subject || '').toLowerCase();
+  const isCienciasOrMatematica =
+    subjectLower.includes('ciencias') ||
+    subjectLower.includes('matemática') ||
+    subjectLower.includes('matematica');
+
+  const declaredReadingParagraphs =
+    (lessonData as any)?.readingResource?.paragraphs ||
+    (lessonData?.interactive?.type === 'reading_resource' ? lessonData.interactive.paragraphs : undefined) ||
+    ((lessonData as any)?.readingText ? [(lessonData as any).readingText] : undefined);
+
+  const hasLegitimateReadingResource = !isCienciasOrMatematica && Boolean(declaredReadingParagraphs && declaredReadingParagraphs.length > 0);
 
   return (
     <div className="flex flex-col h-full min-h-[720px] bg-gradient-to-br from-slate-50 via-white to-slate-100/70 rounded-2xl overflow-hidden border border-slate-200/90 shadow-md shadow-slate-200/40 select-none relative">
@@ -485,7 +501,7 @@ export const StudentLessonView: React.FC = () => {
             <div className={`bg-white/95 backdrop-blur-md rounded-3xl p-8 shadow-xl shadow-slate-200/50 border ${theme.borderColor} text-center relative overflow-hidden transition-all duration-300`}>
               <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${theme.accentGradient}`} />
               <span className={`inline-flex px-3 py-1 rounded-full ${theme.badgeBg} ${theme.badgeText} border ${theme.badgeBorder} text-[11px] font-bold uppercase tracking-widest mb-3`}>
-                Pregunta {session.conversationIndex + 1} de {lessonData.preQuestions.length || 2}
+                Pregunta {session.conversationIndex + 1} de {lessonData.preQuestions?.length || 1}
               </span>
 
               {/* Enseñanza guiada visible antes de la actividad si está presente */}
@@ -518,17 +534,19 @@ export const StudentLessonView: React.FC = () => {
 
               {/* Controles de lectura y audio opcional */}
               <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setConsultParagraph(currentPreItem.relevantParagraph);
-                    setShowReadingConsult(true);
-                  }}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-orange-50 hover:bg-orange-100 text-[#C2540A] border border-orange-200/90 text-xs font-bold transition-all shadow-2xs cursor-pointer"
-                >
-                  <BookOpen className="w-3.5 h-3.5 text-[#EE751C]" />
-                  <span>Consultar texto de lectura {currentPreItem.relevantParagraph ? `(Párrafo ${currentPreItem.relevantParagraph})` : ''}</span>
-                </button>
+                {hasLegitimateReadingResource && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setConsultParagraph(currentPreItem.relevantParagraph);
+                      setShowReadingConsult(true);
+                    }}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-orange-50 hover:bg-orange-100 text-[#C2540A] border border-orange-200/90 text-xs font-bold transition-all shadow-2xs cursor-pointer"
+                  >
+                    <BookOpen className="w-3.5 h-3.5 text-[#EE751C]" />
+                    <span>Consultar texto de lectura {currentPreItem.relevantParagraph ? `(Párrafo ${currentPreItem.relevantParagraph})` : ''}</span>
+                  </button>
+                )}
 
                 <OptionalAudioPlayer
                   text={currentPreItem.question}
@@ -599,7 +617,7 @@ export const StudentLessonView: React.FC = () => {
                   {lessonData.formalization.concept || 'Concepto clave'}
                 </h1>
                 <p className="text-xs sm:text-sm text-slate-500 leading-relaxed mb-3">
-                  Ahora comprobaremos lo aprendido con dos preguntas.
+                  Ahora comprobaremos lo aprendido respondiendo a continuación.
                 </p>
                 <div className="flex justify-center">
                   <OptionalAudioPlayer
@@ -624,7 +642,7 @@ export const StudentLessonView: React.FC = () => {
                 {lessonData.formalization.concept || 'Ideas principales'}
               </h1>
               <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
-                Responderemos dos preguntas sobre lo aprendido en la explicación.
+                Responderemos {lessonData.postQuestions?.length === 1 ? 'una pregunta' : `${lessonData.postQuestions?.length || 2} preguntas`} sobre lo aprendido en la explicación.
               </p>
             </div>
           </div>
@@ -636,7 +654,7 @@ export const StudentLessonView: React.FC = () => {
             <div className={`bg-white/95 backdrop-blur-md rounded-3xl p-8 shadow-xl shadow-slate-200/50 border ${theme.borderColor} text-center relative overflow-hidden transition-all duration-300`}>
               <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${theme.accentGradient}`} />
               <span className={`inline-flex px-3 py-1 rounded-full ${theme.badgeBg} ${theme.badgeText} border ${theme.badgeBorder} text-[11px] font-bold uppercase tracking-widest mb-3`}>
-                Pregunta {session.postIndex + 1} de {lessonData.postQuestions.length || 2}
+                Pregunta {session.postIndex + 1} de {lessonData.postQuestions?.length || 1}
               </span>
 
               {/* Enseñanza guiada visible antes de la pregunta */}
@@ -669,17 +687,19 @@ export const StudentLessonView: React.FC = () => {
 
               {/* Botón para consultar lectura */}
               <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setConsultParagraph(undefined);
-                    setShowReadingConsult(true);
-                  }}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-orange-50 hover:bg-orange-100 text-[#C2540A] border border-orange-200/90 text-xs font-bold transition-all shadow-2xs cursor-pointer"
-                >
-                  <BookOpen className="w-3.5 h-3.5 text-[#EE751C]" />
-                  <span>Consultar texto de lectura</span>
-                </button>
+                {hasLegitimateReadingResource && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setConsultParagraph(undefined);
+                      setShowReadingConsult(true);
+                    }}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-orange-50 hover:bg-orange-100 text-[#C2540A] border border-orange-200/90 text-xs font-bold transition-all shadow-2xs cursor-pointer"
+                  >
+                    <BookOpen className="w-3.5 h-3.5 text-[#EE751C]" />
+                    <span>Consultar texto de lectura</span>
+                  </button>
+                )}
 
                 <OptionalAudioPlayer
                   text={currentPostItem.question}
@@ -749,11 +769,9 @@ export const StudentLessonView: React.FC = () => {
         )}
 
         {/* 12. STAGE: PRACTICE INTRO */}
-        {/* 12. STAGE: PRACTICE INTRO */}
         {session.stage === 'practiceIntro' && (() => {
-          const totalPractice = lessonData.practice?.length || 2;
-          const ordinals = ['Caso 1 de 2', 'Caso 2 de 2'];
-          const textOrdinal = ordinals[session.practiceIndex] ?? `Caso ${session.practiceIndex + 1} de ${totalPractice}`;
+          const totalPractice = lessonData.practice?.length || 1;
+          const textOrdinal = `Caso ${session.practiceIndex + 1} de ${totalPractice}`;
 
           return (
             <div className="max-w-xl mx-auto w-full animate-fadeIn text-center py-4">
@@ -807,17 +825,19 @@ export const StudentLessonView: React.FC = () => {
 
               {/* Botón para consultar lectura y audio opcional de instrucciones */}
               <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setConsultParagraph(currentPracticeItem.relevantParagraph);
-                    setShowReadingConsult(true);
-                  }}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-orange-50 hover:bg-orange-100 text-[#C2540A] border border-orange-200/90 text-xs font-bold transition-all shadow-2xs cursor-pointer"
-                >
-                  <BookOpen className="w-3.5 h-3.5 text-[#EE751C]" />
-                  <span>Consultar texto de lectura {currentPracticeItem.relevantParagraph ? `(Párrafo ${currentPracticeItem.relevantParagraph})` : ''}</span>
-                </button>
+                {hasLegitimateReadingResource && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setConsultParagraph(currentPracticeItem.relevantParagraph);
+                      setShowReadingConsult(true);
+                    }}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-orange-50 hover:bg-orange-100 text-[#C2540A] border border-orange-200/90 text-xs font-bold transition-all shadow-2xs cursor-pointer"
+                  >
+                    <BookOpen className="w-3.5 h-3.5 text-[#EE751C]" />
+                    <span>Consultar texto de lectura {currentPracticeItem.relevantParagraph ? `(Párrafo ${currentPracticeItem.relevantParagraph})` : ''}</span>
+                  </button>
+                )}
 
                 <OptionalAudioPlayer
                   text={currentPracticeItem.question}
@@ -1002,7 +1022,11 @@ export const StudentLessonView: React.FC = () => {
               Recordemos lo aprendido
             </span>
             <h1 className="text-2xl font-extrabold text-[#1c3257] mb-6">
-              Tres ideas importantes
+              {(lessonData.summaryIdeas?.length || 0) === 3
+                ? 'Tres ideas importantes'
+                : (lessonData.summaryIdeas?.length || 0) > 0
+                ? `${lessonData.summaryIdeas.length} ideas importantes`
+                : 'Ideas importantes'}
             </h1>
 
             <div className="space-y-3 text-left">
@@ -1128,9 +1152,15 @@ export const StudentLessonView: React.FC = () => {
                   ? 'Completaste y acreditaste la clase de hoy con tu mentor.'
                   : 'Has terminado la sesión de hoy con tu mentor. Recuerda consolidar los temas pendientes.'}
               </p>
-              <div className="bg-slate-50 text-[#1C3257] p-3.5 rounded-2xl text-xs font-bold border border-slate-200/70 mb-6">
-                Próxima clase: {lessonData.metadata.nextLessonTitle}
-              </div>
+              {lessonData.metadata.lessonNumber === lessonData.metadata.totalLessonsInOa ? (
+                <div className="bg-emerald-50 text-emerald-900 p-3.5 rounded-2xl text-xs font-bold border border-emerald-200/80 mb-6">
+                  🎉 ¡Felicitaciones! Has completado todas las clases de este objetivo de aprendizaje.
+                </div>
+              ) : lessonData.metadata.nextLessonTitle ? (
+                <div className="bg-slate-50 text-[#1C3257] p-3.5 rounded-2xl text-xs font-bold border border-slate-200/70 mb-6">
+                  Próxima clase: {lessonData.metadata.nextLessonTitle}
+                </div>
+              ) : null}
               {session.stage === 'completed' && (
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                   <button
@@ -1160,14 +1190,14 @@ export const StudentLessonView: React.FC = () => {
       </div>
 
       {/* Modal / Drawer para consultar lectura sin perder la pregunta ni reiniciar respuesta */}
-      {showReadingConsult && (
+      {showReadingConsult && hasLegitimateReadingResource && (
         <div className="fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-xs flex items-center justify-center p-4 animate-fadeIn">
           <div className="bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden">
             <div className="p-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/90 shrink-0">
               <div className="flex items-center gap-2">
                 <BookOpen className="w-4 h-4 text-[#EE751C]" />
                 <span className="text-xs font-black uppercase tracking-wider text-[#1C3257]">
-                  Consulta de Lectura · Relato en pantalla
+                  Consulta de Lectura · Recurso de la Lección
                 </span>
               </div>
               <button
@@ -1181,6 +1211,8 @@ export const StudentLessonView: React.FC = () => {
             <div className="p-6 overflow-y-auto">
               <StudentReadingResourceCard
                 activeParagraph={consultParagraph}
+                paragraphs={declaredReadingParagraphs}
+                title={(lessonData as any)?.readingResource?.title || (lessonData?.interactive?.type === 'reading_resource' ? lessonData.interactive.title : undefined)}
                 showImage={false}
               />
             </div>

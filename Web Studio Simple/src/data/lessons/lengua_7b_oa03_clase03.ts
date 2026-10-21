@@ -10,7 +10,7 @@ export const LENGUA_7B_OA03_CLASE03: LessonData = {
     "totalLessonsInOa": 6,
     "lessonTitle": "Inferencias con evidencia del relato",
     "durationMinutes": 30,
-    "nextLessonTitle": ""
+    "nextLessonTitle": "La voz del narrador y los personajes"
   },
   "prep": {
     "adultObjective": "Distinguir información explícita de inferencias y justificar interpretaciones sobre Jimmy y Robutt con acciones del relato.",

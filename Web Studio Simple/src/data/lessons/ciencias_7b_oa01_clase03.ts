@@ -8,9 +8,9 @@ export const CIENCIAS_7B_OA01_CLASE03: LessonData = {
     "oaTitle": "Ciencias Naturales - OA 1",
     "lessonNumber": 3,
     "totalLessonsInOa": 6,
-    "lessonTitle": "Una situación",
+    "lessonTitle": "Emociones, afectividad e imagen personal",
     "durationMinutes": 30,
-    "nextLessonTitle": ""
+    "nextLessonTitle": "Aspectos sociales y estereotipos"
   },
   "prep": {
     "adultObjective": "Distinguir cambios emocionales de cambios físicos y explicar respuestas de cuidado ante situaciones ficticias de inseguridad o comparación corporal.",
@@ -53,7 +53,7 @@ export const CIENCIAS_7B_OA01_CLASE03: LessonData = {
       }
     ],
     "dileIntro": "Hoy avanzaremos en una nueva clase interactiva.",
-    "dileObjective": "Una situación"
+    "dileObjective": "Emociones, afectividad e imagen personal"
   },
   "situation": {
     "dilePrompt": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",

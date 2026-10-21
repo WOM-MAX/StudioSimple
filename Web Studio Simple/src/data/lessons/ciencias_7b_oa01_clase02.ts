@@ -8,9 +8,9 @@ export const CIENCIAS_7B_OA01_CLASE02: LessonData = {
     "oaTitle": "Ciencias Naturales - OA 1",
     "lessonNumber": 2,
     "totalLessonsInOa": 6,
-    "lessonTitle": "Una situación",
+    "lessonTitle": "Cambios físicos durante la pubertad",
     "durationMinutes": 30,
-    "nextLessonTitle": ""
+    "nextLessonTitle": "Emociones, afectividad e imagen personal"
   },
   "prep": {
     "adultObjective": "Describir cambios físicos de la pubertad y distinguir los cambios corporales de las ideas sociales sobre la apariencia, respetando los ritmos individuales.",
@@ -53,7 +53,7 @@ export const CIENCIAS_7B_OA01_CLASE02: LessonData = {
       }
     ],
     "dileIntro": "Hoy avanzaremos en una nueva clase interactiva.",
-    "dileObjective": "Una situación"
+    "dileObjective": "Cambios físicos durante la pubertad"
   },
   "situation": {
     "dilePrompt": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",
@@ -419,12 +419,12 @@ export const CIENCIAS_7B_OA01_CLASE02: LessonData = {
   ],
   "summaryIdeas": [
     [
-      "Idea central",
-      "Una situación"
+      "Idea clave",
+      "Los cambios físicos tienen ritmos individuales."
     ],
     [
-      "Comprensión",
-      "Aplicación del criterio formal en el cuaderno físico."
+      "Concepto central",
+      "La pubertad es un proceso de cambios corporales que no determina el valor personal ni las capacidades escolares."
     ]
   ],
   "interactive": {

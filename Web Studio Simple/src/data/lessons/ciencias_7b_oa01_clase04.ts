@@ -8,9 +8,9 @@ export const CIENCIAS_7B_OA01_CLASE04: LessonData = {
     "oaTitle": "Ciencias Naturales - OA 1",
     "lessonNumber": 4,
     "totalLessonsInOa": 6,
-    "lessonTitle": "Una situación",
+    "lessonTitle": "Aspectos sociales y estereotipos",
     "durationMinutes": 30,
-    "nextLessonTitle": ""
+    "nextLessonTitle": "Vínculos afectivos y respeto mutuo"
   },
   "prep": {
     "adultObjective": "Identificar estereotipos de género en situaciones ficticias y explicar por qué no deben limitar talentos, emociones ni oportunidades.",
@@ -53,7 +53,7 @@ export const CIENCIAS_7B_OA01_CLASE04: LessonData = {
       }
     ],
     "dileIntro": "Hoy avanzaremos en una nueva clase interactiva.",
-    "dileObjective": "Una situación"
+    "dileObjective": "Aspectos sociales y estereotipos"
   },
   "situation": {
     "dilePrompt": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",

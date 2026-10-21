@@ -228,9 +228,9 @@ export const AdultLessonView: React.FC = () => {
     });
   };
 
-  const currentPreItem = lessonData.preQuestions[session.conversationIndex] ?? lessonData.preQuestions[0];
-  const currentPostItem = lessonData.postQuestions[session.postIndex] ?? lessonData.postQuestions[0];
-  const currentPracticeItem = lessonData.practice[session.practiceIndex] ?? lessonData.practice[0];
+  const currentPreItem = (lessonData.preQuestions && lessonData.preQuestions[session.conversationIndex]) ?? lessonData.preQuestions?.[0] ?? ({} as any);
+  const currentPostItem = (lessonData.postQuestions && lessonData.postQuestions[session.postIndex]) ?? lessonData.postQuestions?.[0] ?? ({} as any);
+  const currentPracticeItem = (lessonData.practice && lessonData.practice[session.practiceIndex]) ?? lessonData.practice?.[0] ?? ({} as any);
 
   return (
     <div className="flex h-full min-h-[720px] bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-md shadow-slate-200/40">
@@ -668,7 +668,7 @@ export const AdultLessonView: React.FC = () => {
             <div>
               <div className="flex items-center justify-between mb-3">
                 <span className="text-xs font-bold uppercase tracking-wider text-[#12a1a4] bg-[#e6f7f7] px-3 py-1 rounded-full">
-                  {currentPreItem.context} · Pregunta {session.conversationIndex + 1} de 2
+                  {currentPreItem.context} · Pregunta {session.conversationIndex + 1} de {lessonData.preQuestions?.length || 1}
                 </span>
               </div>
 
@@ -716,8 +716,9 @@ export const AdultLessonView: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => {
-                      if (session.conversationIndex === 0) {
-                        updateSession({ conversationIndex: 1, feedback: null, attempt: 0 });
+                      const totalPre = lessonData.preQuestions?.length || 1;
+                      if (session.conversationIndex < totalPre - 1) {
+                        updateSession({ conversationIndex: session.conversationIndex + 1, feedback: null, attempt: 0 });
                       } else {
                         updateSession({ stage: 'formalization', feedback: null, attempt: 0, formalStarted: false, formalEnded: false });
                       }
@@ -840,7 +841,7 @@ export const AdultLessonView: React.FC = () => {
             <div>
               <div className="flex items-center justify-between mb-3">
                 <span className="text-xs font-bold uppercase tracking-wider text-[#12a1a4] bg-[#e6f7f7] px-3 py-1 rounded-full">
-                  {currentPostItem.context} · Pregunta {session.postIndex + 1} de 2
+                  {currentPostItem.context} · Pregunta {session.postIndex + 1} de {lessonData.postQuestions?.length || 1}
                 </span>
               </div>
 
@@ -888,8 +889,9 @@ export const AdultLessonView: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => {
-                      if (session.postIndex === 0) {
-                        updateSession({ postIndex: 1, feedback: null, attempt: 0 });
+                      const totalPost = lessonData.postQuestions?.length || 1;
+                      if (session.postIndex < totalPost - 1) {
+                        updateSession({ postIndex: session.postIndex + 1, feedback: null, attempt: 0 });
                       } else {
                         updateSession({ stage: 'summary', feedback: null });
                       }
@@ -925,61 +927,68 @@ export const AdultLessonView: React.FC = () => {
           )}
 
           {/* 14. STAGE: PRACTICE INTRO */}
-          {session.stage === 'practiceIntro' && (
-            <div>
-              <h1 className="text-2xl font-bold text-[#1c3257] mb-4">Practiquemos juntos</h1>
-              <PromptBox label="DILE">
-                {session.practiceIndex === 0
-                  ? ((lessonData as any).practiceDileIntro ||
-                    `Ahora apliquemos lo que hemos aprendido sobre ${lessonData.metadata.lessonTitle || 'la clase'} en situaciones prácticas. Resolveremos cada caso paso a paso: primero ${currentPracticeItem?.context || 'el primer caso'}.`)
-                  : `Pasemos al caso ${session.practiceIndex + 1} de ${lessonData.practice.length || 2}: ${currentPracticeItem.context || 'siguiente caso'}.`}
-              </PromptBox>
-              <div className="flex justify-end mt-8 pt-4 border-t border-[#dce2e6]">
-                <button
-                  type="button"
-                  onClick={() => updateSession({ stage: 'practice', feedback: null, attempt: 0 })}
-                  className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
-                >
-                  <span>
-                    Mostrar {session.practiceIndex === 0 ? 'primer' : 'segundo'} caso ({session.practiceIndex + 1} de {lessonData.practice.length || 2})
-                  </span>
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
-          )}
+          {session.stage === 'practiceIntro' && (() => {
+            const totalPractice = lessonData.practice?.length || 1;
+            const ordinalWord = ['primer', 'segundo', 'tercer', 'cuarto', 'quinto', 'sexto'][session.practiceIndex] || `caso ${session.practiceIndex + 1}`;
 
-          {/* 15. STAGE: PRACTICE */}
-          {session.stage === 'practice' && (
-            <div>
-              <div className="flex items-center justify-between mb-3">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#12a1a4] bg-[#e6f7f7] px-3 py-1 rounded-full">
-                  {currentPracticeItem.context} · Caso {session.practiceIndex + 1} de {lessonData.practice.length || 2}
-                </span>
-              </div>
-              <PromptBox label="PREGÚNTALE">
-                {currentPracticeItem.question}
-              </PromptBox>
-              <ExpectedAnswerBox>
-                {currentPracticeItem.expected}
-              </ExpectedAnswerBox>
-
-              <AdultStudentAnswerAndEvaluationBox
-                questionKey={`practice_${session.practiceIndex}`}
-                studentAnswer={session.studentTextAnswers?.[`practice_${session.practiceIndex}`]}
-                feedback={session.feedback}
-                onSuccess={() => handleSuccess(currentPracticeItem.success)}
-                onSupport={() => handleSupport(currentPracticeItem.support)}
-                onReveal={() => handleReveal(currentPracticeItem.reveal)}
-              />
-
-              {(session.feedback?.kind === 'success' || session.feedback?.kind === 'reveal') && (
-                <div className="flex justify-end mt-6">
+            return (
+              <div>
+                <h1 className="text-2xl font-bold text-[#1c3257] mb-4">Practiquemos juntos</h1>
+                <PromptBox label="DILE">
+                  {session.practiceIndex === 0
+                    ? ((lessonData as any).practiceDileIntro ||
+                      `Ahora apliquemos lo que hemos aprendido sobre ${lessonData.metadata.lessonTitle || 'la clase'} en situaciones prácticas. Resolveremos cada caso paso a paso: primero ${currentPracticeItem?.context || 'el primer caso'}.`)
+                    : `Pasemos al caso ${session.practiceIndex + 1} de ${totalPractice}: ${currentPracticeItem.context || 'siguiente caso'}.`}
+                </PromptBox>
+                <div className="flex justify-end mt-8 pt-4 border-t border-[#dce2e6]">
                   <button
                     type="button"
-                    onClick={() => {
-                      const totalPractice = lessonData.practice?.length || 2;
-                      if (session.practiceIndex < totalPractice - 1) {
+                    onClick={() => updateSession({ stage: 'practice', feedback: null, attempt: 0 })}
+                    className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                  >
+                    <span>
+                      Mostrar {ordinalWord} caso ({session.practiceIndex + 1} de ${totalPractice})
+                    </span>
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+            );
+          })()}
+
+          {/* 15. STAGE: PRACTICE */}
+          {session.stage === 'practice' && (() => {
+            const totalPractice = lessonData.practice?.length || 1;
+
+            return (
+              <div>
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#12a1a4] bg-[#e6f7f7] px-3 py-1 rounded-full">
+                    {currentPracticeItem.context} · Caso {session.practiceIndex + 1} de {totalPractice}
+                  </span>
+                </div>
+                <PromptBox label="PREGÚNTALE">
+                  {currentPracticeItem.question}
+                </PromptBox>
+                <ExpectedAnswerBox>
+                  {currentPracticeItem.expected}
+                </ExpectedAnswerBox>
+
+                <AdultStudentAnswerAndEvaluationBox
+                  questionKey={`practice_${session.practiceIndex}`}
+                  studentAnswer={session.studentTextAnswers?.[`practice_${session.practiceIndex}`]}
+                  feedback={session.feedback}
+                  onSuccess={() => handleSuccess(currentPracticeItem.success)}
+                  onSupport={() => handleSupport(currentPracticeItem.support)}
+                  onReveal={() => handleReveal(currentPracticeItem.reveal)}
+                />
+
+                {(session.feedback?.kind === 'success' || session.feedback?.kind === 'reveal') && (
+                  <div className="flex justify-end mt-6">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        if (session.practiceIndex < totalPractice - 1) {
                         updateSession({
                           stage: 'practiceIntro',
                           practiceIndex: session.practiceIndex + 1,
@@ -1002,7 +1011,8 @@ export const AdultLessonView: React.FC = () => {
                 </div>
               )}
             </div>
-          )}
+          );
+        })()}
 
           {/* 16. STAGE: REASONING INTRO */}
           {session.stage === 'reasoningIntro' && (
@@ -1218,47 +1228,52 @@ export const AdultLessonView: React.FC = () => {
             </div>
           )}
 
-          {/* 20. STAGE: PRACTICE SUMMARY (3 Ideas) */}
-          {session.stage === 'practiceSummary' && (
-            <div>
-              <h1 className="text-2xl font-bold text-[#1c3257] mb-4">Recordemos lo aprendido</h1>
-              {session.summaryIdea === 0 && (
-                <PromptBox label="DILE">
-                  Antes de terminar, recordemos las tres ideas más importantes que aprendimos hoy.
-                </PromptBox>
-              )}
-
-              <div className="space-y-3 mt-4">
-                {lessonData.summaryIdeas.slice(0, session.summaryIdea).map(([title, text]) => (
-                  <PromptBox key={title} label={`DILE · ${title}`} tone="teal">
-                    {text}
+          {/* 20. STAGE: PRACTICE SUMMARY (Ideas importantes) */}
+          {session.stage === 'practiceSummary' && (() => {
+            const totalIdeas = lessonData.summaryIdeas?.length || 0;
+            return (
+              <div>
+                <h1 className="text-2xl font-bold text-[#1c3257] mb-4">Recordemos lo aprendido</h1>
+                {session.summaryIdea === 0 && (
+                  <PromptBox label="DILE">
+                    {totalIdeas > 0
+                      ? 'Antes de terminar, recordemos las ideas más importantes que aprendimos hoy.'
+                      : 'Antes de terminar, consolidemos lo aprendido hoy.'}
                   </PromptBox>
-                ))}
-              </div>
-
-              <div className="flex justify-end mt-8 pt-4 border-t border-[#dce2e6]">
-                {session.summaryIdea < 3 ? (
-                  <button
-                    type="button"
-                    onClick={() => updateSession({ summaryIdea: session.summaryIdea + 1 })}
-                    className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
-                  >
-                    <span>Mostrar idea {session.summaryIdea + 1}</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-                ) : (
-                  <button
-                    type="button"
-                    onClick={() => updateSession({ stage: 'miniquiz', quizVisible: false })}
-                    className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
-                  >
-                    <span>Continuar al miniquiz</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
                 )}
+
+                <div className="space-y-3 mt-4">
+                  {lessonData.summaryIdeas.slice(0, session.summaryIdea).map(([title, text]) => (
+                    <PromptBox key={title} label={`DILE · ${title}`} tone="teal">
+                      {text}
+                    </PromptBox>
+                  ))}
+                </div>
+
+                <div className="flex justify-end mt-8 pt-4 border-t border-[#dce2e6]">
+                  {session.summaryIdea < totalIdeas ? (
+                    <button
+                      type="button"
+                      onClick={() => updateSession({ summaryIdea: session.summaryIdea + 1 })}
+                      className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                    >
+                      <span>Mostrar idea {session.summaryIdea + 1} de {totalIdeas}</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => updateSession({ stage: 'miniquiz', quizVisible: false })}
+                      className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+                    >
+                      <span>Continuar al miniquiz</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
+                  )}
+                </div>
               </div>
-            </div>
-          )}
+            );
+          })()}
 
           {/* 21. STAGE: MINIQUIZ */}
           {session.stage === 'miniquiz' && (
@@ -1524,7 +1539,9 @@ export const AdultLessonView: React.FC = () => {
                 {lessonData.closure?.congratulations || `¡Felicitaciones! Hoy completaste con éxito la clase "${lessonData.metadata.lessonTitle}". Has demostrado gran curiosidad y constancia en tu aprendizaje.`}
               </PromptBox>
               <PromptBox label="DILE" tone="teal">
-                {lessonData.closure?.nextClassPreview || (lessonData.metadata.nextLessonTitle ? `En la próxima clase trabajaremos: "${lessonData.metadata.nextLessonTitle}".` : '¡Nos vemos en la próxima sesión!')}
+                {lessonData.metadata.lessonNumber === lessonData.metadata.totalLessonsInOa
+                  ? '¡Felicitaciones! Has completado todas las clases de este objetivo de aprendizaje.'
+                  : (lessonData.closure?.nextClassPreview || (lessonData.metadata.nextLessonTitle ? `En la próxima clase trabajaremos: "${lessonData.metadata.nextLessonTitle}".` : '¡Nos vemos en la próxima sesión!'))}
               </PromptBox>
 
               {/* Registro de la sesión */}

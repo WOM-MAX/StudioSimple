@@ -8,9 +8,9 @@ export const HISTORIA_7B_OA02_CLASE04: LessonData = {
     "oaTitle": "Historia, Geografía y Ciencias Sociales - OA 2",
     "lessonNumber": 4,
     "totalLessonsInOa": 6,
-    "lessonTitle": "Una situación",
+    "lessonTitle": "Técnicas agrícolas y excedentes",
     "durationMinutes": 30,
-    "nextLessonTitle": ""
+    "nextLessonTitle": "Excedentes, intercambio y evidencia"
   },
   "prep": {
     "adultObjective": "Explicar cómo el perfeccionamiento de técnicas y el trabajo colectivo favorecieron excedentes y almacenamiento, considerando su inestabilidad inicial.",
@@ -53,7 +53,7 @@ export const HISTORIA_7B_OA02_CLASE04: LessonData = {
       }
     ],
     "dileIntro": "Hoy avanzaremos en una nueva clase interactiva.",
-    "dileObjective": "Una situación"
+    "dileObjective": "Técnicas agrícolas y excedentes"
   },
   "situation": {
     "dilePrompt": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",

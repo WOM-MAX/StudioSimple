@@ -552,6 +552,15 @@ export const LessonSyncProvider: React.FC<{
     });
   }, [specificLessonKey, postSyncToServer]);
 
+  useEffect(() => {
+    if ((import.meta as any).env?.DEV && typeof window !== 'undefined') {
+      (window as any).__ESTUDIO_SIMPLE_TEST_UPDATE__ = updateSession;
+      return () => {
+        delete (window as any).__ESTUDIO_SIMPLE_TEST_UPDATE__;
+      };
+    }
+  }, [updateSession]);
+
   const resetSession = useCallback(() => {
     const cleanSession: LessonSessionState & { activeLessonTitle?: string } = {
       ...INITIAL_LESSON_SESSION,

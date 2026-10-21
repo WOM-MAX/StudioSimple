@@ -8,7 +8,7 @@ export const INGLES_7B_OA09_CLASE06: LessonData = {
     "oaTitle": "Idioma Extranjero Inglés - OA 9",
     "lessonNumber": 6,
     "totalLessonsInOa": 6,
-    "lessonTitle": "Una situación",
+    "lessonTitle": "Comparing messages and showing understanding",
     "durationMinutes": 30,
     "nextLessonTitle": ""
   },
@@ -53,7 +53,7 @@ export const INGLES_7B_OA09_CLASE06: LessonData = {
       }
     ],
     "dileIntro": "Hoy avanzaremos en una nueva clase interactiva.",
-    "dileObjective": "Una situación"
+    "dileObjective": "Comparing messages and showing understanding"
   },
   "situation": {
     "dilePrompt": "What do you expect from the title? Give a prediction, then check it by reading.",

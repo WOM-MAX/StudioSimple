@@ -8,9 +8,9 @@ export const CIENCIAS_7B_OA01_CLASE05: LessonData = {
     "oaTitle": "Ciencias Naturales - OA 1",
     "lessonNumber": 5,
     "totalLessonsInOa": 6,
-    "lessonTitle": "Una situación",
+    "lessonTitle": "Vínculos afectivos y respeto mutuo",
     "durationMinutes": 30,
-    "nextLessonTitle": ""
+    "nextLessonTitle": "Decisiones responsables e integración"
   },
   "prep": {
     "adultObjective": "Explicar cómo el respeto por límites y decisiones personales contribuye al cuidado mutuo en vínculos afectivos usando casos ficticios.",
@@ -53,7 +53,7 @@ export const CIENCIAS_7B_OA01_CLASE05: LessonData = {
       }
     ],
     "dileIntro": "Hoy avanzaremos en una nueva clase interactiva.",
-    "dileObjective": "Una situación"
+    "dileObjective": "Vínculos afectivos y respeto mutuo"
   },
   "situation": {
     "dilePrompt": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",
