@@ -1,0 +1,9 @@
+{
+  "check": "Purga de Hook __ESTUDIO_SIMPLE_TEST_UPDATE__ en Producción",
+  "staticBundleOccurrences": 0,
+  "deadCodeEliminationApplied": true,
+  "bundleAnalyzed": [
+    "index-Zup8TPOu.js"
+  ],
+  "status": "PASS"
+}

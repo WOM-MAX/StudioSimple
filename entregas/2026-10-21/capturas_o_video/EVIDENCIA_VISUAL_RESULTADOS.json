@@ -1,0 +1,38 @@
+[
+  {
+    "caso": "Caso 1 de 3",
+    "capture": {
+      "filename": "CASO_01_Practica_Sincronizada_1_de_3.png",
+      "sha256": "518d73d79cf8800a4e6c87af0eecb8370886f1163afb084e6ff75262147f4bbd",
+      "bytes": 419616
+    },
+    "coherent": true
+  },
+  {
+    "caso": "Caso 2 de 3",
+    "capture": {
+      "filename": "CASO_02_Practica_Sincronizada_2_de_3.png",
+      "sha256": "9f1ea2b97d58ef81866aa670e75f92278d8a9e2dac53aa497c7aaa21e36002c4",
+      "bytes": 416265
+    },
+    "coherent": true
+  },
+  {
+    "caso": "Caso 3 de 3",
+    "capture": {
+      "filename": "CASO_03_Practica_Sincronizada_3_de_3.png",
+      "sha256": "f2154167235bdb4de34f42009b0cab8882dc7495d8865ae08d48bdb420c7e3a4",
+      "bytes": 523668
+    },
+    "coherent": true
+  },
+  {
+    "caso": "Lectura Tres Párrafos",
+    "capture": {
+      "filename": "LECTURA_Lengua_OA03_Clase01_Tres_Parrafos.png",
+      "sha256": "c7d7d533c76dd6d98508a3736a471f301dea73e1e45067ff121cefd385d505bb",
+      "bytes": 370232
+    },
+    "complete": true
+  }
+]

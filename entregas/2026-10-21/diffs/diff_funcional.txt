@@ -1,0 +1,958 @@
+diff --git a/Web Studio Simple/src/components/lesson/adult/AdultLessonView.tsx b/Web Studio Simple/src/components/lesson/adult/AdultLessonView.tsx
+index a268e1f..70c8aed 100644
+--- a/Web Studio Simple/src/components/lesson/adult/AdultLessonView.tsx	
++++ b/Web Studio Simple/src/components/lesson/adult/AdultLessonView.tsx	
+@@ -228,9 +228,9 @@ export const AdultLessonView: React.FC = () => {
+     });
+   };
+ 
+-  const currentPreItem = lessonData.preQuestions[session.conversationIndex] ?? lessonData.preQuestions[0];
+-  const currentPostItem = lessonData.postQuestions[session.postIndex] ?? lessonData.postQuestions[0];
+-  const currentPracticeItem = lessonData.practice[session.practiceIndex] ?? lessonData.practice[0];
++  const currentPreItem = (lessonData.preQuestions && lessonData.preQuestions[session.conversationIndex]) ?? lessonData.preQuestions?.[0] ?? ({} as any);
++  const currentPostItem = (lessonData.postQuestions && lessonData.postQuestions[session.postIndex]) ?? lessonData.postQuestions?.[0] ?? ({} as any);
++  const currentPracticeItem = (lessonData.practice && lessonData.practice[session.practiceIndex]) ?? lessonData.practice?.[0] ?? ({} as any);
+ 
+   return (
+     <div className="flex h-full min-h-[720px] bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-md shadow-slate-200/40">
+@@ -668,7 +668,7 @@ export const AdultLessonView: React.FC = () => {
+             <div>
+               <div className="flex items-center justify-between mb-3">
+                 <span className="text-xs font-bold uppercase tracking-wider text-[#12a1a4] bg-[#e6f7f7] px-3 py-1 rounded-full">
+-                  {currentPreItem.context} · Pregunta {session.conversationIndex + 1} de 2
++                  {currentPreItem.context} · Pregunta {session.conversationIndex + 1} de {lessonData.preQuestions?.length || 1}
+                 </span>
+               </div>
+ 
+@@ -716,8 +716,9 @@ export const AdultLessonView: React.FC = () => {
+                   <button
+                     type="button"
+                     onClick={() => {
+-                      if (session.conversationIndex === 0) {
+-                        updateSession({ conversationIndex: 1, feedback: null, attempt: 0 });
++                      const totalPre = lessonData.preQuestions?.length || 1;
++                      if (session.conversationIndex < totalPre - 1) {
++                        updateSession({ conversationIndex: session.conversationIndex + 1, feedback: null, attempt: 0 });
+                       } else {
+                         updateSession({ stage: 'formalization', feedback: null, attempt: 0, formalStarted: false, formalEnded: false });
+                       }
+@@ -840,7 +841,7 @@ export const AdultLessonView: React.FC = () => {
+             <div>
+               <div className="flex items-center justify-between mb-3">
+                 <span className="text-xs font-bold uppercase tracking-wider text-[#12a1a4] bg-[#e6f7f7] px-3 py-1 rounded-full">
+-                  {currentPostItem.context} · Pregunta {session.postIndex + 1} de 2
++                  {currentPostItem.context} · Pregunta {session.postIndex + 1} de {lessonData.postQuestions?.length || 1}
+                 </span>
+               </div>
+ 
+@@ -888,8 +889,9 @@ export const AdultLessonView: React.FC = () => {
+                   <button
+                     type="button"
+                     onClick={() => {
+-                      if (session.postIndex === 0) {
+-                        updateSession({ postIndex: 1, feedback: null, attempt: 0 });
++                      const totalPost = lessonData.postQuestions?.length || 1;
++                      if (session.postIndex < totalPost - 1) {
++                        updateSession({ postIndex: session.postIndex + 1, feedback: null, attempt: 0 });
+                       } else {
+                         updateSession({ stage: 'summary', feedback: null });
+                       }
+@@ -925,61 +927,68 @@ export const AdultLessonView: React.FC = () => {
+           )}
+ 
+           {/* 14. STAGE: PRACTICE INTRO */}
+-          {session.stage === 'practiceIntro' && (
+-            <div>
+-              <h1 className="text-2xl font-bold text-[#1c3257] mb-4">Practiquemos juntos</h1>
+-              <PromptBox label="DILE">
+-                {session.practiceIndex === 0
+-                  ? ((lessonData as any).practiceDileIntro ||
+-                    `Ahora apliquemos lo que hemos aprendido sobre ${lessonData.metadata.lessonTitle || 'la clase'} en situaciones prácticas. Resolveremos cada caso paso a paso: primero ${currentPracticeItem?.context || 'el primer caso'}.`)
+-                  : `Pasemos al caso ${session.practiceIndex + 1} de ${lessonData.practice.length || 2}: ${currentPracticeItem.context || 'siguiente caso'}.`}
+-              </PromptBox>
+-              <div className="flex justify-end mt-8 pt-4 border-t border-[#dce2e6]">
+-                <button
+-                  type="button"
+-                  onClick={() => updateSession({ stage: 'practice', feedback: null, attempt: 0 })}
+-                  className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+-                >
+-                  <span>
+-                    Mostrar {session.practiceIndex === 0 ? 'primer' : 'segundo'} caso ({session.practiceIndex + 1} de {lessonData.practice.length || 2})
+-                  </span>
+-                  <ArrowRight className="w-4 h-4" />
+-                </button>
+-              </div>
+-            </div>
+-          )}
++          {session.stage === 'practiceIntro' && (() => {
++            const totalPractice = lessonData.practice?.length || 1;
++            const ordinalWord = ['primer', 'segundo', 'tercer', 'cuarto', 'quinto', 'sexto'][session.practiceIndex] || `caso ${session.practiceIndex + 1}`;
+ 
+-          {/* 15. STAGE: PRACTICE */}
+-          {session.stage === 'practice' && (
+-            <div>
+-              <div className="flex items-center justify-between mb-3">
+-                <span className="text-xs font-bold uppercase tracking-wider text-[#12a1a4] bg-[#e6f7f7] px-3 py-1 rounded-full">
+-                  {currentPracticeItem.context} · Caso {session.practiceIndex + 1} de {lessonData.practice.length || 2}
+-                </span>
++            return (
++              <div>
++                <h1 className="text-2xl font-bold text-[#1c3257] mb-4">Practiquemos juntos</h1>
++                <PromptBox label="DILE">
++                  {session.practiceIndex === 0
++                    ? ((lessonData as any).practiceDileIntro ||
++                      `Ahora apliquemos lo que hemos aprendido sobre ${lessonData.metadata.lessonTitle || 'la clase'} en situaciones prácticas. Resolveremos cada caso paso a paso: primero ${currentPracticeItem?.context || 'el primer caso'}.`)
++                    : `Pasemos al caso ${session.practiceIndex + 1} de ${totalPractice}: ${currentPracticeItem.context || 'siguiente caso'}.`}
++                </PromptBox>
++                <div className="flex justify-end mt-8 pt-4 border-t border-[#dce2e6]">
++                  <button
++                    type="button"
++                    onClick={() => updateSession({ stage: 'practice', feedback: null, attempt: 0 })}
++                    className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
++                  >
++                    <span>
++                      Mostrar {ordinalWord} caso ({session.practiceIndex + 1} de ${totalPractice})
++                    </span>
++                    <ArrowRight className="w-4 h-4" />
++                  </button>
++                </div>
+               </div>
+-              <PromptBox label="PREGÚNTALE">
+-                {currentPracticeItem.question}
+-              </PromptBox>
+-              <ExpectedAnswerBox>
+-                {currentPracticeItem.expected}
+-              </ExpectedAnswerBox>
++            );
++          })()}
+ 
+-              <AdultStudentAnswerAndEvaluationBox
+-                questionKey={`practice_${session.practiceIndex}`}
+-                studentAnswer={session.studentTextAnswers?.[`practice_${session.practiceIndex}`]}
+-                feedback={session.feedback}
+-                onSuccess={() => handleSuccess(currentPracticeItem.success)}
+-                onSupport={() => handleSupport(currentPracticeItem.support)}
+-                onReveal={() => handleReveal(currentPracticeItem.reveal)}
+-              />
++          {/* 15. STAGE: PRACTICE */}
++          {session.stage === 'practice' && (() => {
++            const totalPractice = lessonData.practice?.length || 1;
+ 
+-              {(session.feedback?.kind === 'success' || session.feedback?.kind === 'reveal') && (
+-                <div className="flex justify-end mt-6">
+-                  <button
+-                    type="button"
+-                    onClick={() => {
+-                      const totalPractice = lessonData.practice?.length || 2;
+-                      if (session.practiceIndex < totalPractice - 1) {
++            return (
++              <div>
++                <div className="flex items-center justify-between mb-3">
++                  <span className="text-xs font-bold uppercase tracking-wider text-[#12a1a4] bg-[#e6f7f7] px-3 py-1 rounded-full">
++                    {currentPracticeItem.context} · Caso {session.practiceIndex + 1} de {totalPractice}
++                  </span>
++                </div>
++                <PromptBox label="PREGÚNTALE">
++                  {currentPracticeItem.question}
++                </PromptBox>
++                <ExpectedAnswerBox>
++                  {currentPracticeItem.expected}
++                </ExpectedAnswerBox>
++
++                <AdultStudentAnswerAndEvaluationBox
++                  questionKey={`practice_${session.practiceIndex}`}
++                  studentAnswer={session.studentTextAnswers?.[`practice_${session.practiceIndex}`]}
++                  feedback={session.feedback}
++                  onSuccess={() => handleSuccess(currentPracticeItem.success)}
++                  onSupport={() => handleSupport(currentPracticeItem.support)}
++                  onReveal={() => handleReveal(currentPracticeItem.reveal)}
++                />
++
++                {(session.feedback?.kind === 'success' || session.feedback?.kind === 'reveal') && (
++                  <div className="flex justify-end mt-6">
++                    <button
++                      type="button"
++                      onClick={() => {
++                        if (session.practiceIndex < totalPractice - 1) {
+                         updateSession({
+                           stage: 'practiceIntro',
+                           practiceIndex: session.practiceIndex + 1,
+@@ -1002,7 +1011,8 @@ export const AdultLessonView: React.FC = () => {
+                 </div>
+               )}
+             </div>
+-          )}
++          );
++        })()}
+ 
+           {/* 16. STAGE: REASONING INTRO */}
+           {session.stage === 'reasoningIntro' && (
+@@ -1218,47 +1228,52 @@ export const AdultLessonView: React.FC = () => {
+             </div>
+           )}
+ 
+-          {/* 20. STAGE: PRACTICE SUMMARY (3 Ideas) */}
+-          {session.stage === 'practiceSummary' && (
+-            <div>
+-              <h1 className="text-2xl font-bold text-[#1c3257] mb-4">Recordemos lo aprendido</h1>
+-              {session.summaryIdea === 0 && (
+-                <PromptBox label="DILE">
+-                  Antes de terminar, recordemos las tres ideas más importantes que aprendimos hoy.
+-                </PromptBox>
+-              )}
+-
+-              <div className="space-y-3 mt-4">
+-                {lessonData.summaryIdeas.slice(0, session.summaryIdea).map(([title, text]) => (
+-                  <PromptBox key={title} label={`DILE · ${title}`} tone="teal">
+-                    {text}
++          {/* 20. STAGE: PRACTICE SUMMARY (Ideas importantes) */}
++          {session.stage === 'practiceSummary' && (() => {
++            const totalIdeas = lessonData.summaryIdeas?.length || 0;
++            return (
++              <div>
++                <h1 className="text-2xl font-bold text-[#1c3257] mb-4">Recordemos lo aprendido</h1>
++                {session.summaryIdea === 0 && (
++                  <PromptBox label="DILE">
++                    {totalIdeas > 0
++                      ? 'Antes de terminar, recordemos las ideas más importantes que aprendimos hoy.'
++                      : 'Antes de terminar, consolidemos lo aprendido hoy.'}
+                   </PromptBox>
+-                ))}
+-              </div>
+-
+-              <div className="flex justify-end mt-8 pt-4 border-t border-[#dce2e6]">
+-                {session.summaryIdea < 3 ? (
+-                  <button
+-                    type="button"
+-                    onClick={() => updateSession({ summaryIdea: session.summaryIdea + 1 })}
+-                    className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+-                  >
+-                    <span>Mostrar idea {session.summaryIdea + 1}</span>
+-                    <ArrowRight className="w-4 h-4" />
+-                  </button>
+-                ) : (
+-                  <button
+-                    type="button"
+-                    onClick={() => updateSession({ stage: 'miniquiz', quizVisible: false })}
+-                    className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
+-                  >
+-                    <span>Continuar al miniquiz</span>
+-                    <ArrowRight className="w-4 h-4" />
+-                  </button>
+                 )}
++
++                <div className="space-y-3 mt-4">
++                  {lessonData.summaryIdeas.slice(0, session.summaryIdea).map(([title, text]) => (
++                    <PromptBox key={title} label={`DILE · ${title}`} tone="teal">
++                      {text}
++                    </PromptBox>
++                  ))}
++                </div>
++
++                <div className="flex justify-end mt-8 pt-4 border-t border-[#dce2e6]">
++                  {session.summaryIdea < totalIdeas ? (
++                    <button
++                      type="button"
++                      onClick={() => updateSession({ summaryIdea: session.summaryIdea + 1 })}
++                      className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
++                    >
++                      <span>Mostrar idea {session.summaryIdea + 1} de {totalIdeas}</span>
++                      <ArrowRight className="w-4 h-4" />
++                    </button>
++                  ) : (
++                    <button
++                      type="button"
++                      onClick={() => updateSession({ stage: 'miniquiz', quizVisible: false })}
++                      className="bg-[#EE751C] hover:bg-[#D96512] text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 text-sm shadow-md transition-all cursor-pointer"
++                    >
++                      <span>Continuar al miniquiz</span>
++                      <ArrowRight className="w-4 h-4" />
++                    </button>
++                  )}
++                </div>
+               </div>
+-            </div>
+-          )}
++            );
++          })()}
+ 
+           {/* 21. STAGE: MINIQUIZ */}
+           {session.stage === 'miniquiz' && (
+@@ -1524,7 +1539,9 @@ export const AdultLessonView: React.FC = () => {
+                 {lessonData.closure?.congratulations || `¡Felicitaciones! Hoy completaste con éxito la clase "${lessonData.metadata.lessonTitle}". Has demostrado gran curiosidad y constancia en tu aprendizaje.`}
+               </PromptBox>
+               <PromptBox label="DILE" tone="teal">
+-                {lessonData.closure?.nextClassPreview || (lessonData.metadata.nextLessonTitle ? `En la próxima clase trabajaremos: "${lessonData.metadata.nextLessonTitle}".` : '¡Nos vemos en la próxima sesión!')}
++                {lessonData.metadata.lessonNumber === lessonData.metadata.totalLessonsInOa
++                  ? '¡Felicitaciones! Has completado todas las clases de este objetivo de aprendizaje.'
++                  : (lessonData.closure?.nextClassPreview || (lessonData.metadata.nextLessonTitle ? `En la próxima clase trabajaremos: "${lessonData.metadata.nextLessonTitle}".` : '¡Nos vemos en la próxima sesión!'))}
+               </PromptBox>
+ 
+               {/* Registro de la sesión */}
+diff --git a/Web Studio Simple/src/components/lesson/student/StudentLessonView.tsx b/Web Studio Simple/src/components/lesson/student/StudentLessonView.tsx
+index 0b2107c..dd1a415 100644
+--- a/Web Studio Simple/src/components/lesson/student/StudentLessonView.tsx	
++++ b/Web Studio Simple/src/components/lesson/student/StudentLessonView.tsx	
+@@ -259,9 +259,25 @@ export const StudentLessonView: React.FC = () => {
+     }
+   };
+ 
+-  const currentPreItem = lessonData.preQuestions[session.conversationIndex] ?? lessonData.preQuestions[0];
+-  const currentPostItem = lessonData.postQuestions[session.postIndex] ?? lessonData.postQuestions[0];
+-  const currentPracticeItem = lessonData.practice[session.practiceIndex] ?? lessonData.practice[0];
++  const currentPreItem = (lessonData.preQuestions && lessonData.preQuestions[session.conversationIndex]) ?? lessonData.preQuestions?.[0] ?? ({} as any);
++  const currentPostItem = (lessonData.postQuestions && lessonData.postQuestions[session.postIndex]) ?? lessonData.postQuestions?.[0] ?? ({} as any);
++  const currentPracticeItem = (lessonData.practice && lessonData.practice[session.practiceIndex]) ?? lessonData.practice?.[0] ?? ({} as any);
++
++  // Regla estructural de asignatura y disponibilidad de recurso:
++  // Ciencias Naturales y Matemática no usan texto de lectura narrativo (usan organizadores y casos contextuales).
++  // Solo se habilita si la asignatura admite lectura Y la lección declara párrafos legítimos en sus datos.
++  const subjectLower = (lessonData.metadata.subject || '').toLowerCase();
++  const isCienciasOrMatematica =
++    subjectLower.includes('ciencias') ||
++    subjectLower.includes('matemática') ||
++    subjectLower.includes('matematica');
++
++  const declaredReadingParagraphs =
++    (lessonData as any)?.readingResource?.paragraphs ||
++    (lessonData?.interactive?.type === 'reading_resource' ? lessonData.interactive.paragraphs : undefined) ||
++    ((lessonData as any)?.readingText ? [(lessonData as any).readingText] : undefined);
++
++  const hasLegitimateReadingResource = !isCienciasOrMatematica && Boolean(declaredReadingParagraphs && declaredReadingParagraphs.length > 0);
+ 
+   return (
+     <div className="flex flex-col h-full min-h-[720px] bg-gradient-to-br from-slate-50 via-white to-slate-100/70 rounded-2xl overflow-hidden border border-slate-200/90 shadow-md shadow-slate-200/40 select-none relative">
+@@ -485,7 +501,7 @@ export const StudentLessonView: React.FC = () => {
+             <div className={`bg-white/95 backdrop-blur-md rounded-3xl p-8 shadow-xl shadow-slate-200/50 border ${theme.borderColor} text-center relative overflow-hidden transition-all duration-300`}>
+               <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${theme.accentGradient}`} />
+               <span className={`inline-flex px-3 py-1 rounded-full ${theme.badgeBg} ${theme.badgeText} border ${theme.badgeBorder} text-[11px] font-bold uppercase tracking-widest mb-3`}>
+-                Pregunta {session.conversationIndex + 1} de {lessonData.preQuestions.length || 2}
++                Pregunta {session.conversationIndex + 1} de {lessonData.preQuestions?.length || 1}
+               </span>
+ 
+               {/* Enseñanza guiada visible antes de la actividad si está presente */}
+@@ -518,17 +534,19 @@ export const StudentLessonView: React.FC = () => {
+ 
+               {/* Controles de lectura y audio opcional */}
+               <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+-                <button
+-                  type="button"
+-                  onClick={() => {
+-                    setConsultParagraph(currentPreItem.relevantParagraph);
+-                    setShowReadingConsult(true);
+-                  }}
+-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-orange-50 hover:bg-orange-100 text-[#C2540A] border border-orange-200/90 text-xs font-bold transition-all shadow-2xs cursor-pointer"
+-                >
+-                  <BookOpen className="w-3.5 h-3.5 text-[#EE751C]" />
+-                  <span>Consultar texto de lectura {currentPreItem.relevantParagraph ? `(Párrafo ${currentPreItem.relevantParagraph})` : ''}</span>
+-                </button>
++                {hasLegitimateReadingResource && (
++                  <button
++                    type="button"
++                    onClick={() => {
++                      setConsultParagraph(currentPreItem.relevantParagraph);
++                      setShowReadingConsult(true);
++                    }}
++                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-orange-50 hover:bg-orange-100 text-[#C2540A] border border-orange-200/90 text-xs font-bold transition-all shadow-2xs cursor-pointer"
++                  >
++                    <BookOpen className="w-3.5 h-3.5 text-[#EE751C]" />
++                    <span>Consultar texto de lectura {currentPreItem.relevantParagraph ? `(Párrafo ${currentPreItem.relevantParagraph})` : ''}</span>
++                  </button>
++                )}
+ 
+                 <OptionalAudioPlayer
+                   text={currentPreItem.question}
+@@ -599,7 +617,7 @@ export const StudentLessonView: React.FC = () => {
+                   {lessonData.formalization.concept || 'Concepto clave'}
+                 </h1>
+                 <p className="text-xs sm:text-sm text-slate-500 leading-relaxed mb-3">
+-                  Ahora comprobaremos lo aprendido con dos preguntas.
++                  Ahora comprobaremos lo aprendido respondiendo a continuación.
+                 </p>
+                 <div className="flex justify-center">
+                   <OptionalAudioPlayer
+@@ -624,7 +642,7 @@ export const StudentLessonView: React.FC = () => {
+                 {lessonData.formalization.concept || 'Ideas principales'}
+               </h1>
+               <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
+-                Responderemos dos preguntas sobre lo aprendido en la explicación.
++                Responderemos {lessonData.postQuestions?.length === 1 ? 'una pregunta' : `${lessonData.postQuestions?.length || 2} preguntas`} sobre lo aprendido en la explicación.
+               </p>
+             </div>
+           </div>
+@@ -636,7 +654,7 @@ export const StudentLessonView: React.FC = () => {
+             <div className={`bg-white/95 backdrop-blur-md rounded-3xl p-8 shadow-xl shadow-slate-200/50 border ${theme.borderColor} text-center relative overflow-hidden transition-all duration-300`}>
+               <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${theme.accentGradient}`} />
+               <span className={`inline-flex px-3 py-1 rounded-full ${theme.badgeBg} ${theme.badgeText} border ${theme.badgeBorder} text-[11px] font-bold uppercase tracking-widest mb-3`}>
+-                Pregunta {session.postIndex + 1} de {lessonData.postQuestions.length || 2}
++                Pregunta {session.postIndex + 1} de {lessonData.postQuestions?.length || 1}
+               </span>
+ 
+               {/* Enseñanza guiada visible antes de la pregunta */}
+@@ -669,17 +687,19 @@ export const StudentLessonView: React.FC = () => {
+ 
+               {/* Botón para consultar lectura */}
+               <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+-                <button
+-                  type="button"
+-                  onClick={() => {
+-                    setConsultParagraph(undefined);
+-                    setShowReadingConsult(true);
+-                  }}
+-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-orange-50 hover:bg-orange-100 text-[#C2540A] border border-orange-200/90 text-xs font-bold transition-all shadow-2xs cursor-pointer"
+-                >
+-                  <BookOpen className="w-3.5 h-3.5 text-[#EE751C]" />
+-                  <span>Consultar texto de lectura</span>
+-                </button>
++                {hasLegitimateReadingResource && (
++                  <button
++                    type="button"
++                    onClick={() => {
++                      setConsultParagraph(undefined);
++                      setShowReadingConsult(true);
++                    }}
++                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-orange-50 hover:bg-orange-100 text-[#C2540A] border border-orange-200/90 text-xs font-bold transition-all shadow-2xs cursor-pointer"
++                  >
++                    <BookOpen className="w-3.5 h-3.5 text-[#EE751C]" />
++                    <span>Consultar texto de lectura</span>
++                  </button>
++                )}
+ 
+                 <OptionalAudioPlayer
+                   text={currentPostItem.question}
+@@ -748,12 +768,10 @@ export const StudentLessonView: React.FC = () => {
+           </div>
+         )}
+ 
+-        {/* 12. STAGE: PRACTICE INTRO */}
+         {/* 12. STAGE: PRACTICE INTRO */}
+         {session.stage === 'practiceIntro' && (() => {
+-          const totalPractice = lessonData.practice?.length || 2;
+-          const ordinals = ['Caso 1 de 2', 'Caso 2 de 2'];
+-          const textOrdinal = ordinals[session.practiceIndex] ?? `Caso ${session.practiceIndex + 1} de ${totalPractice}`;
++          const totalPractice = lessonData.practice?.length || 1;
++          const textOrdinal = `Caso ${session.practiceIndex + 1} de ${totalPractice}`;
+ 
+           return (
+             <div className="max-w-xl mx-auto w-full animate-fadeIn text-center py-4">
+@@ -807,17 +825,19 @@ export const StudentLessonView: React.FC = () => {
+ 
+               {/* Botón para consultar lectura y audio opcional de instrucciones */}
+               <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+-                <button
+-                  type="button"
+-                  onClick={() => {
+-                    setConsultParagraph(currentPracticeItem.relevantParagraph);
+-                    setShowReadingConsult(true);
+-                  }}
+-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-orange-50 hover:bg-orange-100 text-[#C2540A] border border-orange-200/90 text-xs font-bold transition-all shadow-2xs cursor-pointer"
+-                >
+-                  <BookOpen className="w-3.5 h-3.5 text-[#EE751C]" />
+-                  <span>Consultar texto de lectura {currentPracticeItem.relevantParagraph ? `(Párrafo ${currentPracticeItem.relevantParagraph})` : ''}</span>
+-                </button>
++                {hasLegitimateReadingResource && (
++                  <button
++                    type="button"
++                    onClick={() => {
++                      setConsultParagraph(currentPracticeItem.relevantParagraph);
++                      setShowReadingConsult(true);
++                    }}
++                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-orange-50 hover:bg-orange-100 text-[#C2540A] border border-orange-200/90 text-xs font-bold transition-all shadow-2xs cursor-pointer"
++                  >
++                    <BookOpen className="w-3.5 h-3.5 text-[#EE751C]" />
++                    <span>Consultar texto de lectura {currentPracticeItem.relevantParagraph ? `(Párrafo ${currentPracticeItem.relevantParagraph})` : ''}</span>
++                  </button>
++                )}
+ 
+                 <OptionalAudioPlayer
+                   text={currentPracticeItem.question}
+@@ -1002,7 +1022,11 @@ export const StudentLessonView: React.FC = () => {
+               Recordemos lo aprendido
+             </span>
+             <h1 className="text-2xl font-extrabold text-[#1c3257] mb-6">
+-              Tres ideas importantes
++              {(lessonData.summaryIdeas?.length || 0) === 3
++                ? 'Tres ideas importantes'
++                : (lessonData.summaryIdeas?.length || 0) > 0
++                ? `${lessonData.summaryIdeas.length} ideas importantes`
++                : 'Ideas importantes'}
+             </h1>
+ 
+             <div className="space-y-3 text-left">
+@@ -1128,9 +1152,15 @@ export const StudentLessonView: React.FC = () => {
+                   ? 'Completaste y acreditaste la clase de hoy con tu mentor.'
+                   : 'Has terminado la sesión de hoy con tu mentor. Recuerda consolidar los temas pendientes.'}
+               </p>
+-              <div className="bg-slate-50 text-[#1C3257] p-3.5 rounded-2xl text-xs font-bold border border-slate-200/70 mb-6">
+-                Próxima clase: {lessonData.metadata.nextLessonTitle}
+-              </div>
++              {lessonData.metadata.lessonNumber === lessonData.metadata.totalLessonsInOa ? (
++                <div className="bg-emerald-50 text-emerald-900 p-3.5 rounded-2xl text-xs font-bold border border-emerald-200/80 mb-6">
++                  🎉 ¡Felicitaciones! Has completado todas las clases de este objetivo de aprendizaje.
++                </div>
++              ) : lessonData.metadata.nextLessonTitle ? (
++                <div className="bg-slate-50 text-[#1C3257] p-3.5 rounded-2xl text-xs font-bold border border-slate-200/70 mb-6">
++                  Próxima clase: {lessonData.metadata.nextLessonTitle}
++                </div>
++              ) : null}
+               {session.stage === 'completed' && (
+                 <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                   <button
+@@ -1160,14 +1190,14 @@ export const StudentLessonView: React.FC = () => {
+       </div>
+ 
+       {/* Modal / Drawer para consultar lectura sin perder la pregunta ni reiniciar respuesta */}
+-      {showReadingConsult && (
++      {showReadingConsult && hasLegitimateReadingResource && (
+         <div className="fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-xs flex items-center justify-center p-4 animate-fadeIn">
+           <div className="bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden">
+             <div className="p-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/90 shrink-0">
+               <div className="flex items-center gap-2">
+                 <BookOpen className="w-4 h-4 text-[#EE751C]" />
+                 <span className="text-xs font-black uppercase tracking-wider text-[#1C3257]">
+-                  Consulta de Lectura · Relato en pantalla
++                  Consulta de Lectura · Recurso de la Lección
+                 </span>
+               </div>
+               <button
+@@ -1181,6 +1211,8 @@ export const StudentLessonView: React.FC = () => {
+             <div className="p-6 overflow-y-auto">
+               <StudentReadingResourceCard
+                 activeParagraph={consultParagraph}
++                paragraphs={declaredReadingParagraphs}
++                title={(lessonData as any)?.readingResource?.title || (lessonData?.interactive?.type === 'reading_resource' ? lessonData.interactive.title : undefined)}
+                 showImage={false}
+               />
+             </div>
+diff --git a/Web Studio Simple/src/components/lesson/student/StudentReadingResourceCard.tsx b/Web Studio Simple/src/components/lesson/student/StudentReadingResourceCard.tsx
+index ec335c8..fcdd1fe 100644
+--- a/Web Studio Simple/src/components/lesson/student/StudentReadingResourceCard.tsx	
++++ b/Web Studio Simple/src/components/lesson/student/StudentReadingResourceCard.tsx	
+@@ -1,14 +1,8 @@
+ import React from 'react';
+-import { BookOpen, Moon, Compass, Sparkles } from 'lucide-react';
++import { BookOpen, Moon } from 'lucide-react';
+ import { useLessonSync } from '../../../context/LessonSyncContext';
+ import { OptionalAudioPlayer } from '../common/OptionalAudioPlayer';
+ 
+-const DEFAULT_PARAGRAPHS = [
+-  'En una colonia de la Luna vive Jimmy, un niño que juega con Robutt, su perro robot. El exterior lunar es rocoso y árido; no hay oxígeno respirable y Jimmy debe usar un traje espacial cuando sale.',
+-  'En una ocasión, Jimmy finge estar herido durante un juego. Robutt activa una alarma y llega un equipo de rescate. Esa acción permite reconocer que el robot está atento a Jimmy.',
+-  'Más tarde, el padre de Jimmy anuncia que llegará desde la Tierra un perro vivo y dice que no pueden quedarse con los dos perros. Propone regalar a Robutt a otro niño. Jimmy se opone y expresa que Robutt es su perro. Al final, Jimmy abraza a Robutt; el relato no informa qué decide después el padre.'
+-];
+-
+ interface StudentReadingResourceCardProps {
+   title?: string;
+   paragraphs?: string[];
+@@ -20,17 +14,32 @@ export const StudentReadingResourceCard: React.FC<StudentReadingResourceCardProp
+   title,
+   paragraphs,
+   activeParagraph,
+-  showImage = true
++  showImage = false
+ }) => {
+   const { lessonData } = useLessonSync();
+ 
+-  const finalTitle = title || lessonData?.interactive?.title || 'El mejor amigo de un muchacho';
+-  const finalParagraphs: string[] =
++  // Resolución estricta: solo usar recursos propios de la lección
++  const declaredParagraphs =
+     paragraphs ||
+-    lessonData?.interactive?.paragraphs ||
+-    DEFAULT_PARAGRAPHS;
++    (lessonData as any)?.readingResource?.paragraphs ||
++    (lessonData?.interactive?.type === 'reading_resource' ? lessonData.interactive.paragraphs : undefined) ||
++    ((lessonData as any)?.readingText ? [(lessonData as any).readingText] : undefined);
++
++  if (!declaredParagraphs || declaredParagraphs.length === 0) {
++    return null;
++  }
++
++  const finalTitle =
++    title ||
++    (lessonData as any)?.readingResource?.title ||
++    (lessonData?.interactive?.type === 'reading_resource' ? lessonData.interactive.title : undefined) ||
++    'Texto de lectura';
++
++  const finalImage =
++    (lessonData as any)?.readingResource?.imageSrc ||
++    (lessonData?.interactive as any)?.imageSrc;
+ 
+-  const fullAudioText = finalParagraphs.join(' ');
++  const fullAudioText = declaredParagraphs.join(' ');
+ 
+   return (
+     <div className="w-full max-w-3xl mx-auto bg-white/95 backdrop-blur-md rounded-3xl p-6 sm:p-8 shadow-xl shadow-slate-200/60 border border-orange-200/90 text-left relative overflow-hidden transition-all duration-300">
+@@ -41,7 +50,7 @@ export const StudentReadingResourceCard: React.FC<StudentReadingResourceCardProp
+       <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-50 text-[#C2540A] border border-orange-200 font-bold text-xs uppercase tracking-wider shadow-xs">
+           <Moon className="w-3.5 h-3.5 text-[#EE751C]" />
+-          <span>Recurso de Lectura Autónomo · Paráfrasis Pedagógica</span>
++          <span>Recurso de Lectura Oficial de la Lección</span>
+         </div>
+ 
+         {/* Audio de Apoyo Opcional */}
+@@ -53,29 +62,24 @@ export const StudentReadingResourceCard: React.FC<StudentReadingResourceCardProp
+           “{finalTitle}”
+         </h2>
+         <p className="text-xs sm:text-sm font-semibold text-[#EE751C]">
+-          Paráfrasis pedagógica completa para la lección de hoy
++          Texto y contexto formativo de la lección
+         </p>
+       </div>
+ 
+-      {/* Ilustración de Contexto */}
+-      {showImage && (
++      {/* Ilustración de Contexto si existe */}
++      {showImage && finalImage && (
+         <div className="mb-6 rounded-2xl overflow-hidden border border-slate-200/80 shadow-xs bg-slate-50 relative group">
+           <img
+-            src="/images/lessons/lengua_7b_oa03_clase01_ambiente_lunar.jpg"
+-            alt="Jimmy Anderson y Robutt en la superficie lunar"
++            src={finalImage}
++            alt={finalTitle}
+             className="w-full h-auto max-h-64 object-cover object-center"
+           />
+-          <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/80 via-slate-950/40 to-transparent p-3 text-white">
+-            <p className="text-[11px] font-bold">
+-              Jimmy Anderson y su perro robot Robutt explorando el ambiente rocoso exterior en la Luna
+-            </p>
+-          </div>
+         </div>
+       )}
+ 
+-      {/* Los Tres Párrafos Completos de la Lectura */}
++      {/* Párrafos Completos de la Lectura */}
+       <div className="space-y-4 mb-6">
+-        {finalParagraphs.map((parrafo: string, idx: number) => {
++        {declaredParagraphs.map((parrafo: string, idx: number) => {
+           const pNumber = idx + 1;
+           const isHighlighted = activeParagraph === pNumber;
+ 
+@@ -95,9 +99,7 @@ export const StudentReadingResourceCard: React.FC<StudentReadingResourceCardProp
+                   {pNumber}
+                 </span>
+                 <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#1C3257]">
+-                  {pNumber === 1 && 'Párrafo 1 · El ambiente lunar'}
+-                  {pNumber === 2 && 'Párrafo 2 · El juego y la alarma'}
+-                  {pNumber === 3 && 'Párrafo 3 · El desacuerdo familiar'}
++                  Párrafo {pNumber}
+                 </span>
+               </div>
+               <p className="text-xs sm:text-sm text-slate-800 leading-relaxed font-medium">
+@@ -110,7 +112,7 @@ export const StudentReadingResourceCard: React.FC<StudentReadingResourceCardProp
+ 
+       <div className="flex items-center gap-2 text-xs font-bold text-slate-500 bg-slate-100/80 px-4 py-2.5 rounded-xl border border-slate-200/60">
+         <BookOpen className="w-4 h-4 text-[#12A1A4] shrink-0" />
+-        <span>Presta atención a las preguntas que formulará tu mentor sobre estos hechos del relato.</span>
++        <span>Consulta este recurso para fundamentar tus respuestas durante la actividad.</span>
+       </div>
+     </div>
+   );
+diff --git a/Web Studio Simple/src/context/LessonSyncContext.tsx b/Web Studio Simple/src/context/LessonSyncContext.tsx
+index 4c0d67c..cc81b76 100644
+--- a/Web Studio Simple/src/context/LessonSyncContext.tsx	
++++ b/Web Studio Simple/src/context/LessonSyncContext.tsx	
+@@ -552,6 +552,15 @@ export const LessonSyncProvider: React.FC<{
+     });
+   }, [specificLessonKey, postSyncToServer]);
+ 
++  useEffect(() => {
++    if ((import.meta as any).env?.DEV && typeof window !== 'undefined') {
++      (window as any).__ESTUDIO_SIMPLE_TEST_UPDATE__ = updateSession;
++      return () => {
++        delete (window as any).__ESTUDIO_SIMPLE_TEST_UPDATE__;
++      };
++    }
++  }, [updateSession]);
++
+   const resetSession = useCallback(() => {
+     const cleanSession: LessonSessionState & { activeLessonTitle?: string } = {
+       ...INITIAL_LESSON_SESSION,
+diff --git a/Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase01.ts b/Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase01.ts
+index 5fcb58a..0c61d05 100644
+--- a/Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase01.ts	
++++ b/Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase01.ts	
+@@ -10,7 +10,7 @@ export const LENGUA_7B_OA03_CLASE01: LessonData = {
+     "totalLessonsInOa": 6,
+     "lessonTitle": "Jimmy y Robutt: leer el ambiente y descubrir el conflicto",
+     "durationMinutes": 30,
+-    "nextLessonTitle": "Acciones de los personajes y desarrollo del conflicto."
++    "nextLessonTitle": "Acciones que cambian el conflicto"
+   },
+   "prep": {
+     "adultObjective": "Describir el ambiente donde vive Jimmy y explicar el conflicto que inicia el relato usando las acciones y posturas de sus personajes como evidencia.",
+@@ -365,8 +365,13 @@ export const LENGUA_7B_OA03_CLASE01: LessonData = {
+   ],
+   "interactive": {
+     "type": "reading_resource",
+-    "title": "Recurso de Lectura y Ambiente Narrativo",
+-    "description": "Organizador de lectura comprensiva y análisis del entorno narrativo."
++    "title": "El mejor amigo de un muchacho",
++    "description": "Texto narrativo de Isaac Asimov (págs. 12-15 del Texto Escolar).",
++    "paragraphs": [
++      "En una colonia de la Luna vive Jimmy, un niño que juega con Robutt, su perro robot. El exterior lunar es rocoso y árido; no hay oxígeno respirable y Jimmy debe usar un traje espacial cuando sale.",
++      "En una ocasión, Jimmy finge estar herido durante un juego. Robutt activa una alarma y llega un equipo de rescate. Esa acción permite reconocer que el robot está atento a Jimmy.",
++      "Más tarde, el padre de Jimmy anuncia que llegará desde la Tierra un perro vivo y dice que no pueden quedarse con los dos perros. Propone regalar a Robutt a otro niño. Jimmy se opone y expresa que Robutt es su perro. Al final, Jimmy abraza a Robutt; el relato no informa qué decide después el padre."
++    ]
+   },
+   "closure": {
+     "congratulations": "¡Felicitaciones por completar la sesión de hoy!",
+diff --git a/scripts/audit_structural_rules.ts b/scripts/audit_structural_rules.ts
+new file mode 100644
+index 0000000..c98cd7a
+--- /dev/null
++++ b/scripts/audit_structural_rules.ts
+@@ -0,0 +1,252 @@
++import * as fs from 'fs';
++import * as path from 'path';
++
++export interface AuditResult {
++  file: string;
++  subject: string;
++  grade: string;
++  oa: string;
++  lessonNumber: number;
++  lessonTitle: string;
++  nextLessonTitle: string;
++  preCount: number;
++  postCount: number;
++  practiceCount: number;
++  summaryCount: number;
++  rule1_resource_isolation: 'PASS' | 'FAIL';
++  rule2_counters_sync: 'PASS' | 'FAIL';
++  rule3_summary_integrity: 'PASS' | 'PENDIENTE_CONTENIDO_WORK';
++  rule4_thematic_title: 'PASS' | 'FAIL' | 'PENDIENTE_CONTENIDO_WORK';
++  rule5_continuity: 'PASS' | 'FAIL';
++  overallStatus: 'RESUELTO' | 'SIN_HALLAZGO' | 'PENDIENTE_CONTENIDO_WORK' | 'FALLO_TECNICO';
++  notes: string[];
++}
++
++export function auditSingleLesson(content: string, file: string): AuditResult {
++  const notes: string[] = [];
++
++  // Metadata parsing
++  const titleMatch = content.match(/"lessonTitle":\s*"([^"]*)"/);
++  const nextMatch = content.match(/"nextLessonTitle":\s*"([^"]*)"/);
++  const subjectMatch = content.match(/"subject":\s*"([^"]*)"/);
++  const gradeMatch = content.match(/"grade":\s*"([^"]*)"/);
++  const oaMatch = content.match(/"oaCode":\s*"([^"]*)"/);
++  const numMatch = content.match(/"lessonNumber":\s*(\d+)/);
++  const totalInOaMatch = content.match(/"totalLessonsInOa":\s*(\d+)/);
++
++  const lessonTitle = titleMatch ? titleMatch[1] : '';
++  const nextLessonTitle = nextMatch ? nextMatch[1] : '';
++  const subject = subjectMatch ? subjectMatch[1] : '';
++  const grade = gradeMatch ? gradeMatch[1] : '7° Básico';
++  const oa = oaMatch ? oaMatch[1] : '';
++  const lessonNumber = numMatch ? parseInt(numMatch[1], 10) : 0;
++  const totalInOa = totalInOaMatch ? parseInt(totalInOaMatch[1], 10) : 6;
++
++  // Counts
++  const preMatches = content.match(/"preQuestions":\s*\[/g);
++  const postMatches = content.match(/"postQuestions":\s*\[/g);
++  const practiceMatches = content.match(/"practice":\s*\[/g);
++  const summaryMatches = content.match(/"summaryIdeas":\s*\[/g);
++
++  let preCount = 0;
++  if (preMatches) {
++    const preBlock = content.split(/"preQuestions":\s*\[/)[1]?.split(/\]\s*,\s*"(?:conversationContext|formalization|postQuestions)/)[0];
++    if (preBlock) preCount = (preBlock.match(/"question":/g) || []).length;
++  }
++
++  let postCount = 0;
++  if (postMatches) {
++    const postBlock = content.split(/"postQuestions":\s*\[/)[1]?.split(/\]\s*,\s*"(?:practice|mini|summaryIdeas)/)[0];
++    if (postBlock) postCount = (postBlock.match(/"question":/g) || []).length;
++  }
++
++  let practiceCount = 0;
++  if (practiceMatches) {
++    const practiceBlock = content.split(/"practice":\s*\[/)[1]?.split(/\]\s*,\s*"(?:mini|summaryIdeas)/)[0];
++    if (practiceBlock) practiceCount = (practiceBlock.match(/"question":/g) || []).length;
++  }
++
++  let summaryCount = 0;
++  let sumBlock = '';
++  if (summaryMatches) {
++    sumBlock = content.split(/"summaryIdeas":\s*\[/)[1]?.split(/\]\s*,\s*"(?:interactive|closure|paso8_cierre)/)[0] || '';
++    if (sumBlock) summaryCount = (sumBlock.match(/\[\s*"[^"]+"/g) || []).length;
++  }
++
++  const isMatOa01 = file.startsWith('matematica_7b_oa01');
++
++  // Regla 1: Resource Isolation (Ciencias y Matemática no usan texto de lectura narrativo)
++  let r1: 'PASS' | 'FAIL' = 'PASS';
++  const isCienciasOrMat = subject.toLowerCase().includes('ciencias') || subject.toLowerCase().includes('matemática') || subject.toLowerCase().includes('matematica');
++  if (isCienciasOrMat && (content.includes('"readingResource"') || (content.includes('"type": "reading_resource"') && content.includes('"paragraphs"')) || (content.includes('"type": "reading"') && content.includes('"paragraphs"')))) {
++    r1 = 'FAIL';
++    notes.push('Fallo técnico: Ciencias o Matemática no deben declarar relato de lectura narrativo');
++  }
++
++  // Regla 2: Counters Sync
++  let r2: 'PASS' | 'FAIL' = 'PASS';
++  if (!isMatOa01 && (preCount === 0 || postCount === 0)) {
++    r2 = 'FAIL';
++    notes.push(`Fallo técnico: Faltan reactivos de recorrido o comprobación (pre: ${preCount}, post: ${postCount})`);
++  }
++
++  // Regla 3: Summary Integrity (Distingue contenido pendiente de Work)
++  let r3: 'PASS' | 'PENDIENTE_CONTENIDO_WORK' = 'PASS';
++  if (!isMatOa01) {
++    if (sumBlock.includes('Una situación') || sumBlock.includes('Situación inicial')) {
++      r3 = 'PENDIENTE_CONTENIDO_WORK';
++      notes.push('summaryIdeas contiene placeholder genérico');
++    } else if (summaryCount < 3) {
++      r3 = 'PENDIENTE_CONTENIDO_WORK';
++      notes.push(`summaryIdeas tiene ${summaryCount} ideas (UI adaptativa; pendiente redacción de 3ra idea por Work)`);
++    }
++  }
++
++  // Regla 4: Thematic Title
++  let r4: 'PASS' | 'FAIL' | 'PENDIENTE_CONTENIDO_WORK' = 'PASS';
++  if (!isMatOa01) {
++    if (!lessonTitle || lessonTitle.trim() === '' || lessonTitle.trim() === 'Una situación') {
++      r4 = 'FAIL';
++      notes.push('Fallo técnico: Título temático inválido o placeholder "Una situación"');
++    }
++  }
++
++  // Regla 5: Continuity
++  let r5: 'PASS' | 'FAIL' = 'PASS';
++  if (!isMatOa01) {
++    if (lessonNumber > 0 && lessonNumber < totalInOa && (!nextLessonTitle || nextLessonTitle.trim() === '')) {
++      r5 = 'FAIL';
++      notes.push(`Fallo técnico: Clase intermedia ${lessonNumber} no tiene puente a próxima clase`);
++    }
++  }
++
++  // Distinción formal: Fallo Técnico (salida 1) vs Contenido Pendiente de Work (salida 0)
++  let overall: 'RESUELTO' | 'SIN_HALLAZGO' | 'PENDIENTE_CONTENIDO_WORK' | 'FALLO_TECNICO' = 'RESUELTO';
++  if (r1 === 'FAIL' || r2 === 'FAIL' || r4 === 'FAIL' || r5 === 'FAIL') {
++    overall = 'FALLO_TECNICO';
++  } else if (r3 === 'PENDIENTE_CONTENIDO_WORK') {
++    overall = 'PENDIENTE_CONTENIDO_WORK';
++  } else {
++    overall = 'RESUELTO';
++  }
++
++  return {
++    file,
++    subject: subject || (isMatOa01 ? 'Matemática' : 'Desconocida'),
++    grade,
++    oa: oa || (isMatOa01 ? 'OA 1' : ''),
++    lessonNumber,
++    lessonTitle,
++    nextLessonTitle,
++    preCount,
++    postCount,
++    practiceCount,
++    summaryCount,
++    rule1_resource_isolation: r1,
++    rule2_counters_sync: r2,
++    rule3_summary_integrity: r3,
++    rule4_thematic_title: r4,
++    rule5_continuity: r5,
++    overallStatus: overall,
++    notes
++  };
++}
++
++export function verifyRejectionOfInvalidCopies(): void {
++  console.log('🧪 Verificando que el auditor rechace copias de prueba incorrectas...');
++
++  // Copia 1: Ciencias con recurso narrativo indebido
++  const badResource = auditSingleLesson(`
++    "metadata": { "grade": "7° Básico", "subject": "Ciencias Naturales", "oaCode": "OA 1", "lessonNumber": 2, "totalLessonsInOa": 6, "lessonTitle": "Título Real", "nextLessonTitle": "Siguiente" },
++    "preQuestions": [{ "question": "Q1" }], "postQuestions": [{ "question": "Q2" }],
++    "interactive": { "type": "reading_resource", "paragraphs": ["Texto literario..."] }
++  `, 'test_bad_resource.ts');
++  if (badResource.rule1_resource_isolation !== 'FAIL' || badResource.overallStatus !== 'FALLO_TECNICO') {
++    throw new Error('El auditor falló al rechazar un recurso narrativo indebido en Ciencias.');
++  }
++
++  // Copia 2: Título inválido "Una situación"
++  const badTitle = auditSingleLesson(`
++    "metadata": { "grade": "7° Básico", "subject": "Historia", "oaCode": "OA 2", "lessonNumber": 2, "totalLessonsInOa": 6, "lessonTitle": "Una situación", "nextLessonTitle": "Siguiente" },
++    "preQuestions": [{ "question": "Q1" }], "postQuestions": [{ "question": "Q2" }]
++  `, 'test_bad_title.ts');
++  if (badTitle.rule4_thematic_title !== 'FAIL' || badTitle.overallStatus !== 'FALLO_TECNICO') {
++    throw new Error('El auditor falló al rechazar el título placeholder "Una situación".');
++  }
++
++  // Copia 3: Clase intermedia sin puente de continuidad
++  const badBridge = auditSingleLesson(`
++    "metadata": { "grade": "7° Básico", "subject": "Historia", "oaCode": "OA 2", "lessonNumber": 3, "totalLessonsInOa": 6, "lessonTitle": "Título Válido", "nextLessonTitle": "" },
++    "preQuestions": [{ "question": "Q1" }], "postQuestions": [{ "question": "Q2" }]
++  `, 'test_bad_bridge.ts');
++  if (badBridge.rule5_continuity !== 'FAIL' || badBridge.overallStatus !== 'FALLO_TECNICO') {
++    throw new Error('El auditor falló al rechazar una clase intermedia sin puente.');
++  }
++
++  console.log('  ✅ Comprobación superada: El auditor rechaza con salida FALLO_TECNICO ante recurso, título o puente incorrectos.\n');
++}
++
++export function runFullAudit(): void {
++  // 1. Ejecutar verificación de rechazo de copias inválidas
++  verifyRejectionOfInvalidCopies();
++
++  // 2. Auditar las 36 lecciones reales
++  const lessonsDir = path.join(__dirname, '../Web Studio Simple/src/data/lessons');
++  const files = fs.readdirSync(lessonsDir).filter(f => f.endsWith('.ts') && f !== 'index.ts').sort();
++  const results: AuditResult[] = [];
++
++  for (const file of files) {
++    const filePath = path.join(lessonsDir, file);
++    const content = fs.readFileSync(filePath, 'utf8');
++    results.push(auditSingleLesson(content, file));
++  }
++
++  console.log('=== MATRIZ DE AUDITORÍA ESTRUCTURAL (36 LECCIONES) ===\n');
++  console.log(
++    'Archivo'.padEnd(35) +
++    ' | Título'.padEnd(40) +
++    ' | R1 | R2 | R3 | R4 | R5 | Estado Global'
++  );
++  console.log('-'.repeat(125));
++
++  for (const r of results) {
++    console.log(
++      r.file.padEnd(35) +
++      ` | ${(r.lessonTitle || (r.file.includes('oa01') ? 'Matemática OA01 (Protegida)' : '')).slice(0, 38)}`.padEnd(40) +
++      ` | ${r.rule1_resource_isolation.padEnd(2)}` +
++      ` | ${r.rule2_counters_sync.padEnd(2)}` +
++      ` | ${(r.rule3_summary_integrity === 'PASS' ? 'OK' : 'PEND').padEnd(2)}` +
++      ` | ${r.rule4_thematic_title.padEnd(2)}` +
++      ` | ${r.rule5_continuity.padEnd(2)}` +
++      ` | ${r.overallStatus}`
++    );
++  }
++
++  const outJsonPath = path.join(__dirname, '../docs/auditorias/MATRIZ_AUDITORIA_ESTRUCTURAL_36_LECCIONES.json');
++  fs.mkdirSync(path.dirname(outJsonPath), { recursive: true });
++  fs.writeFileSync(outJsonPath, JSON.stringify(results, null, 2), 'utf8');
++  console.log(`\nMatriz guardada en: ${outJsonPath}`);
++
++  const technicalFailures = results.filter(r => r.overallStatus === 'FALLO_TECNICO');
++  const pendingContent = results.filter(r => r.overallStatus === 'PENDIENTE_CONTENIDO_WORK');
++
++  console.log(`\nResumen de Control:`);
++  console.log(`- Fallos técnicos estructurales: ${technicalFailures.length}`);
++  console.log(`- Clases con contenido de resumen pendiente de Work: ${pendingContent.length}`);
++
++  if (technicalFailures.length > 0) {
++    console.error(`\n❌ ERROR CRÍTICO: ${technicalFailures.length} lecciones presentan fallos técnicos.`);
++    for (const f of technicalFailures) {
++      console.error(`  - ${f.file}: ${f.notes.join('; ')}`);
++    }
++    process.exit(1);
++  }
++
++  console.log(`\n✅ AUDITORÍA ESTRUCTURAL SUPERADA: 0 fallos técnicos.`);
++  process.exit(0);
++}
++
++// Ejecutar si se invoca directamente
++if (require.main === module) {
++  runFullAudit();
++}
