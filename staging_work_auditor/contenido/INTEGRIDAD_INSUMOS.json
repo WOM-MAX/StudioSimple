@@ -1,0 +1,11 @@
+{
+  "inputZipSha256": "e8d92f009d9f1937b901196357803352aa51ec72b4acc5ab13cb37c3f64bc26a",
+  "originalFiles": 95,
+  "changedOriginalFiles": [
+    "scripts/audit_structural_rules.ts",
+    "scripts/pipeline_sync_lessons.ts"
+  ],
+  "missingFiles": [],
+  "sourceHashesVerifiedAgainstMap": 30,
+  "frozenSourceAndModuleFilesChanged": []
+}

@@ -1,0 +1,1750 @@
+diff --git a/docs/auditorias/REFERENCIA_CANONICA_TITULOS_CONTINUIDAD.json b/docs/auditorias/REFERENCIA_CANONICA_TITULOS_CONTINUIDAD.json
+new file mode 100644
+index 0000000..dc46705
+--- /dev/null
++++ b/docs/auditorias/REFERENCIA_CANONICA_TITULOS_CONTINUIDAD.json
+@@ -0,0 +1,749 @@
++{
++  "schema": "estudiosimple.canonical-titles.v1",
++  "policy": "Título oficial de cabecera; continuidad al título oficial de la siguiente clase del mismo curso/asignatura/OA. Títulos de trabajo provisionales se informan; no sustituyen títulos oficiales. Cierre explícito conservado.",
++  "manifests": [
++    {
++      "path": "LECCIONES/110-7/Ciencias_Naturales/OA01/manifest.json",
++      "sha256": "c8a37de68f48aa675c2bb2dae5c745a2fa70cd3c20cccc52a3728327888a2e15"
++    },
++    {
++      "path": "LECCIONES/110-7/Historia_Geografia/OA02/manifest.json",
++      "sha256": "860f47ed209f35e4b1364b55148529a6516e09748a6f2e0a9fa869e7f6d3dc7a"
++    },
++    {
++      "path": "LECCIONES/110-7/Ingles/OA09/manifest.json",
++      "sha256": "aca685d61ef43c574a0574e7fa201509b4dd740f1cbfd542f21bff0e72789e40"
++    },
++    {
++      "path": "LECCIONES/110-7/Lengua_Literatura/OA03/manifest.json",
++      "sha256": "9d03337496b6a269e1c0bba108633ae70448c2c1000e6112fa2de8e62d77c6db"
++    },
++    {
++      "path": "LECCIONES/110-7/Matematica/OA01/manifest.json",
++      "sha256": "695a0bfe60167e7cabf38c267f7ca9979e4feb11da15590765508986ce27f87a"
++    },
++    {
++      "path": "LECCIONES/110-7/Matematica/OA04/manifest.json",
++      "sha256": "2da104379590bd7c44f68f0e6c0c242aeb08a7f519acee82e2bde925ae4be771"
++    }
++  ],
++  "lessons": [
++    {
++      "course": "110-7",
++      "subject": "cie",
++      "grade": 7,
++      "oa": 1,
++      "lesson": 1,
++      "total": 6,
++      "title": "La sexualidad integra distintas dimensiones",
++      "titleLocation": "línea 8",
++      "workingNext": "Cambios físicos y emocionales durante la pubertad.",
++      "explicitNext": "",
++      "version": "BORRADOR PARA REVISIÓN · EN_REVISION · WORK_PRE_APROBACION",
++      "source": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE01.md",
++      "sourceSha256": "1b941996222fbb9bbad01785cf5d76260958a0d57b13738c9bd2eb449daaae41",
++      "manifest": "LECCIONES/110-7/Ciencias_Naturales/OA01/manifest.json",
++      "module": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase01.ts",
++      "nextTitle": "Cambios físicos durante la pubertad",
++      "nextKind": "NEXT_CLASS",
++      "nextSource": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE02.md",
++      "nextSourceSha256": "5e575811240a5bc216334fc4454b9fa5211f8b4ea7bd4b47093c2edf8022025a",
++      "nextLocation": "línea 1",
++      "advisories": [
++        "Título provisional distinto del oficial: Cambios físicos y emocionales durante la pubertad."
++      ]
++    },
++    {
++      "course": "110-7",
++      "subject": "cie",
++      "grade": 7,
++      "oa": 1,
++      "lesson": 2,
++      "total": 6,
++      "title": "Cambios físicos durante la pubertad",
++      "titleLocation": "línea 1",
++      "workingNext": "",
++      "explicitNext": "",
++      "version": "2026-10-12 America/Santiago",
++      "source": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE02.md",
++      "sourceSha256": "5e575811240a5bc216334fc4454b9fa5211f8b4ea7bd4b47093c2edf8022025a",
++      "manifest": "LECCIONES/110-7/Ciencias_Naturales/OA01/manifest.json",
++      "module": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase02.ts",
++      "nextTitle": "Emociones, afectividad e imagen personal",
++      "nextKind": "NEXT_CLASS",
++      "nextSource": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE03.md",
++      "nextSourceSha256": "8813291cd483f2f5781aee3fd41760ae9c45b156b1eca879fc865a5deaded7c6",
++      "nextLocation": "línea 1",
++      "advisories": []
++    },
++    {
++      "course": "110-7",
++      "subject": "cie",
++      "grade": 7,
++      "oa": 1,
++      "lesson": 3,
++      "total": 6,
++      "title": "Emociones, afectividad e imagen personal",
++      "titleLocation": "línea 1",
++      "workingNext": "",
++      "explicitNext": "",
++      "version": "2026-10-12 America/Santiago",
++      "source": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE03.md",
++      "sourceSha256": "8813291cd483f2f5781aee3fd41760ae9c45b156b1eca879fc865a5deaded7c6",
++      "manifest": "LECCIONES/110-7/Ciencias_Naturales/OA01/manifest.json",
++      "module": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase03.ts",
++      "nextTitle": "Aspectos sociales y estereotipos",
++      "nextKind": "NEXT_CLASS",
++      "nextSource": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE04.md",
++      "nextSourceSha256": "6c57bbe7c44e9c7e42ff6dd10cb0341e8c7e33e4de4b5332ca9dde5f2a5b4562",
++      "nextLocation": "línea 1",
++      "advisories": []
++    },
++    {
++      "course": "110-7",
++      "subject": "cie",
++      "grade": 7,
++      "oa": 1,
++      "lesson": 4,
++      "total": 6,
++      "title": "Aspectos sociales y estereotipos",
++      "titleLocation": "línea 1",
++      "workingNext": "",
++      "explicitNext": "",
++      "version": "2026-10-12 America/Santiago",
++      "source": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE04.md",
++      "sourceSha256": "6c57bbe7c44e9c7e42ff6dd10cb0341e8c7e33e4de4b5332ca9dde5f2a5b4562",
++      "manifest": "LECCIONES/110-7/Ciencias_Naturales/OA01/manifest.json",
++      "module": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase04.ts",
++      "nextTitle": "Vínculos afectivos y respeto mutuo",
++      "nextKind": "NEXT_CLASS",
++      "nextSource": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE05.md",
++      "nextSourceSha256": "37b37f76f40fdaa6e25a88fb8bc9b7ac4ad708e65252988b3b04c63c912af149",
++      "nextLocation": "línea 1",
++      "advisories": []
++    },
++    {
++      "course": "110-7",
++      "subject": "cie",
++      "grade": 7,
++      "oa": 1,
++      "lesson": 5,
++      "total": 6,
++      "title": "Vínculos afectivos y respeto mutuo",
++      "titleLocation": "línea 1",
++      "workingNext": "",
++      "explicitNext": "",
++      "version": "2026-10-12 America/Santiago",
++      "source": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE05.md",
++      "sourceSha256": "37b37f76f40fdaa6e25a88fb8bc9b7ac4ad708e65252988b3b04c63c912af149",
++      "manifest": "LECCIONES/110-7/Ciencias_Naturales/OA01/manifest.json",
++      "module": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase05.ts",
++      "nextTitle": "Decisiones responsables e integración",
++      "nextKind": "NEXT_CLASS",
++      "nextSource": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE06.md",
++      "nextSourceSha256": "73e0d931873b826871643323155843fbaeb30f05f1cadee5c15cb4823b589e31",
++      "nextLocation": "línea 1",
++      "advisories": []
++    },
++    {
++      "course": "110-7",
++      "subject": "cie",
++      "grade": 7,
++      "oa": 1,
++      "lesson": 6,
++      "total": 6,
++      "title": "Decisiones responsables e integración",
++      "titleLocation": "línea 1",
++      "workingNext": "",
++      "explicitNext": "",
++      "version": "2026-10-12 America/Santiago",
++      "source": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE06.md",
++      "sourceSha256": "73e0d931873b826871643323155843fbaeb30f05f1cadee5c15cb4823b589e31",
++      "manifest": "LECCIONES/110-7/Ciencias_Naturales/OA01/manifest.json",
++      "module": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase06.ts",
++      "nextTitle": "",
++      "nextKind": "END_OR_TRANSITION",
++      "nextSource": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE06.md",
++      "nextSourceSha256": "73e0d931873b826871643323155843fbaeb30f05f1cadee5c15cb4823b589e31",
++      "nextLocation": "cierre explícito o fin del OA",
++      "advisories": []
++    },
++    {
++      "course": "110-7",
++      "subject": "his",
++      "grade": 7,
++      "oa": 2,
++      "lesson": 1,
++      "total": 6,
++      "title": "¿Dónde y cuándo comenzó la agricultura?",
++      "titleLocation": "línea 8",
++      "workingNext": "Domesticación y sedentarización.",
++      "explicitNext": "",
++      "version": "BORRADOR PARA REVISIÓN · EN_REVISION · WORK_PRE_APROBACION",
++      "source": "LECCIONES_POR_REVISAR/110-7/Historia_Geografia/OA02/CLASE01.md",
++      "sourceSha256": "0794b50f228bfb063408bd508d5cdaacb4e5e33ddc2465f2802792696fb23f0a",
++      "manifest": "LECCIONES/110-7/Historia_Geografia/OA02/manifest.json",
++      "module": "Web Studio Simple/src/data/lessons/historia_7b_oa02_clase01.ts",
++      "nextTitle": "Domesticación y sedentarización",
++      "nextKind": "NEXT_CLASS",
++      "nextSource": "LECCIONES_POR_REVISAR/110-7/Historia_Geografia/OA02/CLASE02.md",
++      "nextSourceSha256": "c7b767823d652c2c1e58e1de68f6204cca1c684f28f5283a69d3e0f53c67effb",
++      "nextLocation": "línea 1",
++      "advisories": [
++        "Título provisional distinto del oficial: Domesticación y sedentarización."
++      ]
++    },
++    {
++      "course": "110-7",
++      "subject": "his",
++      "grade": 7,
++      "oa": 2,
++      "lesson": 2,
++      "total": 6,
++      "title": "Domesticación y sedentarización",
++      "titleLocation": "línea 1",
++      "workingNext": "",
++      "explicitNext": "",
++      "version": "2026-10-12 America/Santiago",
++      "source": "LECCIONES_POR_REVISAR/110-7/Historia_Geografia/OA02/CLASE02.md",
++      "sourceSha256": "c7b767823d652c2c1e58e1de68f6204cca1c684f28f5283a69d3e0f53c67effb",
++      "manifest": "LECCIONES/110-7/Historia_Geografia/OA02/manifest.json",
++      "module": "Web Studio Simple/src/data/lessons/historia_7b_oa02_clase02.ts",
++      "nextTitle": "Explicar procesos mediante varias causas",
++      "nextKind": "NEXT_CLASS",
++      "nextSource": "LECCIONES_POR_REVISAR/110-7/Historia_Geografia/OA02/CLASE03.md",
++      "nextSourceSha256": "9c0f6cc5204bac5e87fb671cfc175bfb976a6a6cdfa95eb1c83db278da6dd8e4",
++      "nextLocation": "línea 1",
++      "advisories": []
++    },
++    {
++      "course": "110-7",
++      "subject": "his",
++      "grade": 7,
++      "oa": 2,
++      "lesson": 3,
++      "total": 6,
++      "title": "Explicar procesos mediante varias causas",
++      "titleLocation": "línea 1",
++      "workingNext": "",
++      "explicitNext": "",
++      "version": "2026-10-12 America/Santiago",
++      "source": "LECCIONES_POR_REVISAR/110-7/Historia_Geografia/OA02/CLASE03.md",
++      "sourceSha256": "9c0f6cc5204bac5e87fb671cfc175bfb976a6a6cdfa95eb1c83db278da6dd8e4",
++      "manifest": "LECCIONES/110-7/Historia_Geografia/OA02/manifest.json",
++      "module": "Web Studio Simple/src/data/lessons/historia_7b_oa02_clase03.ts",
++      "nextTitle": "Técnicas agrícolas y excedentes",
++      "nextKind": "NEXT_CLASS",
++      "nextSource": "LECCIONES_POR_REVISAR/110-7/Historia_Geografia/OA02/CLASE04.md",
++      "nextSourceSha256": "49db51ba7f8ba4f434e9505d46b33168171635a3c4941bff27c2f791fb341bd5",
++      "nextLocation": "línea 1",
++      "advisories": []
++    },
++    {
++      "course": "110-7",
++      "subject": "his",
++      "grade": 7,
++      "oa": 2,
++      "lesson": 4,
++      "total": 6,
++      "title": "Técnicas agrícolas y excedentes",
++      "titleLocation": "línea 1",
++      "workingNext": "",
++      "explicitNext": "",
++      "version": "2026-10-12 America/Santiago",
++      "source": "LECCIONES_POR_REVISAR/110-7/Historia_Geografia/OA02/CLASE04.md",
++      "sourceSha256": "49db51ba7f8ba4f434e9505d46b33168171635a3c4941bff27c2f791fb341bd5",
++      "manifest": "LECCIONES/110-7/Historia_Geografia/OA02/manifest.json",
++      "module": "Web Studio Simple/src/data/lessons/historia_7b_oa02_clase04.ts",
++      "nextTitle": "Excedentes, intercambio y evidencia",
++      "nextKind": "NEXT_CLASS",
++      "nextSource": "LECCIONES_POR_REVISAR/110-7/Historia_Geografia/OA02/CLASE05.md",
++      "nextSourceSha256": "f7a71351acf5c4a8edc287ca68afb10e91f6f3d535dd262d9e7ef3070ad1a4a4",
++      "nextLocation": "línea 1",
++      "advisories": []
++    },
++    {
++      "course": "110-7",
++      "subject": "his",
++      "grade": 7,
++      "oa": 2,
++      "lesson": 5,
++      "total": 6,
++      "title": "Excedentes, intercambio y evidencia",
++      "titleLocation": "línea 1",
++      "workingNext": "",
++      "explicitNext": "",
++      "version": "2026-10-12 America/Santiago",
++      "source": "LECCIONES_POR_REVISAR/110-7/Historia_Geografia/OA02/CLASE05.md",
++      "sourceSha256": "f7a71351acf5c4a8edc287ca68afb10e91f6f3d535dd262d9e7ef3070ad1a4a4",
++      "manifest": "LECCIONES/110-7/Historia_Geografia/OA02/manifest.json",
++      "module": "Web Studio Simple/src/data/lessons/historia_7b_oa02_clase05.ts",
++      "nextTitle": "Transformaciones agrícolas y huellas en el presente",
++      "nextKind": "NEXT_CLASS",
++      "nextSource": "LECCIONES_POR_REVISAR/110-7/Historia_Geografia/OA02/CLASE06.md",
++      "nextSourceSha256": "90df6a7f16c1a1c04268931beb027859031738ce994a7de958d0214a1b9da960",
++      "nextLocation": "línea 1",
++      "advisories": []
++    },
++    {
++      "course": "110-7",
++      "subject": "his",
++      "grade": 7,
++      "oa": 2,
++      "lesson": 6,
++      "total": 6,
++      "title": "Transformaciones agrícolas y huellas en el presente",
++      "titleLocation": "línea 1",
++      "workingNext": "",
++      "explicitNext": "",
++      "version": "2026-10-12 America/Santiago",
++      "source": "LECCIONES_POR_REVISAR/110-7/Historia_Geografia/OA02/CLASE06.md",
++      "sourceSha256": "90df6a7f16c1a1c04268931beb027859031738ce994a7de958d0214a1b9da960",
++      "manifest": "LECCIONES/110-7/Historia_Geografia/OA02/manifest.json",
++      "module": "Web Studio Simple/src/data/lessons/historia_7b_oa02_clase06.ts",
++      "nextTitle": "",
++      "nextKind": "END_OR_TRANSITION",
++      "nextSource": "LECCIONES_POR_REVISAR/110-7/Historia_Geografia/OA02/CLASE06.md",
++      "nextSourceSha256": "90df6a7f16c1a1c04268931beb027859031738ce994a7de958d0214a1b9da960",
++      "nextLocation": "cierre explícito o fin del OA",
++      "advisories": []
++    },
++    {
++      "course": "110-7",
++      "subject": "ing",
++      "grade": 7,
++      "oa": 9,
++      "lesson": 1,
++      "total": 6,
++      "title": "Anne’s Birthday: Main Idea and Key Events",
++      "titleLocation": "línea 8",
++      "workingNext": "Expressing an opinion about a text with evidence.",
++      "explicitNext": "",
++      "version": "DRAFT FOR REVIEW · EN_REVISION · WORK_PRE_APROBACION",
++      "source": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE01.md",
++      "sourceSha256": "9653ed07d2df5434b9034be80b6f10c110013c092f5164c359d9dc9c37af925d",
++      "manifest": "LECCIONES/110-7/Ingles/OA09/manifest.json",
++      "module": "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase01.ts",
++      "nextTitle": "An opinion supported by the diary",
++      "nextKind": "NEXT_CLASS",
++      "nextSource": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE02.md",
++      "nextSourceSha256": "909ed6e498572da36e8a4ba4bdb6f644d606e07ee8a675a0e09aef6193cfd8a8",
++      "nextLocation": "línea 1",
++      "advisories": [
++        "Título provisional distinto del oficial: Expressing an opinion about a text with evidence."
++      ]
++    },
++    {
++      "course": "110-7",
++      "subject": "ing",
++      "grade": 7,
++      "oa": 9,
++      "lesson": 2,
++      "total": 6,
++      "title": "An opinion supported by the diary",
++      "titleLocation": "línea 1",
++      "workingNext": "",
++      "explicitNext": "",
++      "version": "2026-10-12 America/Santiago",
++      "source": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE02.md",
++      "sourceSha256": "909ed6e498572da36e8a4ba4bdb6f644d606e07ee8a675a0e09aef6193cfd8a8",
++      "manifest": "LECCIONES/110-7/Ingles/OA09/manifest.json",
++      "module": "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase02.ts",
++      "nextTitle": "Dates, times and explicit information",
++      "nextKind": "NEXT_CLASS",
++      "nextSource": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE03.md",
++      "nextSourceSha256": "146914e9df8a7b83ce7a037271e3af6712e2b485564c4ea9e3dc1d356f246fbc",
++      "nextLocation": "línea 1",
++      "advisories": []
++    },
++    {
++      "course": "110-7",
++      "subject": "ing",
++      "grade": 7,
++      "oa": 9,
++      "lesson": 3,
++      "total": 6,
++      "title": "Dates, times and explicit information",
++      "titleLocation": "línea 1",
++      "workingNext": "",
++      "explicitNext": "",
++      "version": "2026-10-12 America/Santiago",
++      "source": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE03.md",
++      "sourceSha256": "146914e9df8a7b83ce7a037271e3af6712e2b485564c4ea9e3dc1d356f246fbc",
++      "manifest": "LECCIONES/110-7/Ingles/OA09/manifest.json",
++      "module": "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase03.ts",
++      "nextTitle": "Reading a school email",
++      "nextKind": "NEXT_CLASS",
++      "nextSource": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE04.md",
++      "nextSourceSha256": "3b25be754dcde47663539aa008bd48c1cef04567b74aceacaec5f8e0dd8208d1",
++      "nextLocation": "línea 1",
++      "advisories": []
++    },
++    {
++      "course": "110-7",
++      "subject": "ing",
++      "grade": 7,
++      "oa": 9,
++      "lesson": 4,
++      "total": 6,
++      "title": "Reading a school email",
++      "titleLocation": "línea 1",
++      "workingNext": "",
++      "explicitNext": "",
++      "version": "2026-10-12 America/Santiago",
++      "source": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE04.md",
++      "sourceSha256": "3b25be754dcde47663539aa008bd48c1cef04567b74aceacaec5f8e0dd8208d1",
++      "manifest": "LECCIONES/110-7/Ingles/OA09/manifest.json",
++      "module": "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase04.ts",
++      "nextTitle": "Reading about a school garden",
++      "nextKind": "NEXT_CLASS",
++      "nextSource": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE05.md",
++      "nextSourceSha256": "e2f6931c24bcad2dfa52b7ec55207f52812c75f77c865d56362bd86cbd719bc0",
++      "nextLocation": "línea 1",
++      "advisories": []
++    },
++    {
++      "course": "110-7",
++      "subject": "ing",
++      "grade": 7,
++      "oa": 9,
++      "lesson": 5,
++      "total": 6,
++      "title": "Reading about a school garden",
++      "titleLocation": "línea 1",
++      "workingNext": "",
++      "explicitNext": "",
++      "version": "2026-10-12 America/Santiago",
++      "source": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE05.md",
++      "sourceSha256": "e2f6931c24bcad2dfa52b7ec55207f52812c75f77c865d56362bd86cbd719bc0",
++      "manifest": "LECCIONES/110-7/Ingles/OA09/manifest.json",
++      "module": "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase05.ts",
++      "nextTitle": "Comparing messages and showing understanding",
++      "nextKind": "NEXT_CLASS",
++      "nextSource": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE06.md",
++      "nextSourceSha256": "88c7f1483914117288fad9fe6c8dcb0f1e6e6842011e870daa3ac1636d665d7f",
++      "nextLocation": "línea 1",
++      "advisories": []
++    },
++    {
++      "course": "110-7",
++      "subject": "ing",
++      "grade": 7,
++      "oa": 9,
++      "lesson": 6,
++      "total": 6,
++      "title": "Comparing messages and showing understanding",
++      "titleLocation": "línea 1",
++      "workingNext": "",
++      "explicitNext": "",
++      "version": "2026-10-12 America/Santiago",
++      "source": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE06.md",
++      "sourceSha256": "88c7f1483914117288fad9fe6c8dcb0f1e6e6842011e870daa3ac1636d665d7f",
++      "manifest": "LECCIONES/110-7/Ingles/OA09/manifest.json",
++      "module": "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase06.ts",
++      "nextTitle": "",
++      "nextKind": "END_OR_TRANSITION",
++      "nextSource": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE06.md",
++      "nextSourceSha256": "88c7f1483914117288fad9fe6c8dcb0f1e6e6842011e870daa3ac1636d665d7f",
++      "nextLocation": "cierre explícito o fin del OA",
++      "advisories": []
++    },
++    {
++      "course": "110-7",
++      "subject": "len",
++      "grade": 7,
++      "oa": 3,
++      "lesson": 1,
++      "total": 6,
++      "title": "Jimmy y Robutt: leer el ambiente y descubrir el conflicto",
++      "titleLocation": "línea 8",
++      "workingNext": "Acciones de los personajes y desarrollo del conflicto.",
++      "explicitNext": "",
++      "version": "2026-10-12 20:24 America/Santiago",
++      "source": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE01.md",
++      "sourceSha256": "4ac8fb014b8378aabe77fe00c0a95227429a5b8e59e874c61b871c8e6bdafe82",
++      "manifest": "LECCIONES/110-7/Lengua_Literatura/OA03/manifest.json",
++      "module": "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase01.ts",
++      "nextTitle": "Acciones que cambian el conflicto",
++      "nextKind": "NEXT_CLASS",
++      "nextSource": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE02.md",
++      "nextSourceSha256": "cf201dd7f63ed0019b8b3131dd95eefbe7867bec3bbc7aac61ff4bc191295bfa",
++      "nextLocation": "línea 1",
++      "advisories": [
++        "Título provisional distinto del oficial: Acciones de los personajes y desarrollo del conflicto."
++      ]
++    },
++    {
++      "course": "110-7",
++      "subject": "len",
++      "grade": 7,
++      "oa": 3,
++      "lesson": 2,
++      "total": 6,
++      "title": "Acciones que cambian el conflicto",
++      "titleLocation": "línea 1",
++      "workingNext": "",
++      "explicitNext": "",
++      "version": "2026-10-12 America/Santiago",
++      "source": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE02.md",
++      "sourceSha256": "cf201dd7f63ed0019b8b3131dd95eefbe7867bec3bbc7aac61ff4bc191295bfa",
++      "manifest": "LECCIONES/110-7/Lengua_Literatura/OA03/manifest.json",
++      "module": "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase02.ts",
++      "nextTitle": "Inferencias con evidencia del relato",
++      "nextKind": "NEXT_CLASS",
++      "nextSource": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE03.md",
++      "nextSourceSha256": "b21379e424f7b6c49a4799566859abf6656257b1c0ee4cc58ef40f02d553dab4",
++      "nextLocation": "línea 1",
++      "advisories": []
++    },
++    {
++      "course": "110-7",
++      "subject": "len",
++      "grade": 7,
++      "oa": 3,
++      "lesson": 3,
++      "total": 6,
++      "title": "Inferencias con evidencia del relato",
++      "titleLocation": "línea 1",
++      "workingNext": "",
++      "explicitNext": "",
++      "version": "2026-10-12 America/Santiago",
++      "source": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE03.md",
++      "sourceSha256": "b21379e424f7b6c49a4799566859abf6656257b1c0ee4cc58ef40f02d553dab4",
++      "manifest": "LECCIONES/110-7/Lengua_Literatura/OA03/manifest.json",
++      "module": "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase03.ts",
++      "nextTitle": "La voz del narrador y los personajes",
++      "nextKind": "NEXT_CLASS",
++      "nextSource": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE04.md",
++      "nextSourceSha256": "5566a6239c915a2a3e4c37f94c88475e22b6c86c2b665c84cb7643be4b1ffae6",
++      "nextLocation": "línea 1",
++      "advisories": []
++    },
++    {
++      "course": "110-7",
++      "subject": "len",
++      "grade": 7,
++      "oa": 3,
++      "lesson": 4,
++      "total": 6,
++      "title": "La voz del narrador y los personajes",
++      "titleLocation": "línea 1",
++      "workingNext": "",
++      "explicitNext": "",
++      "version": "2026-10-12 America/Santiago",
++      "source": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE04.md",
++      "sourceSha256": "5566a6239c915a2a3e4c37f94c88475e22b6c86c2b665c84cb7643be4b1ffae6",
++      "manifest": "LECCIONES/110-7/Lengua_Literatura/OA03/manifest.json",
++      "module": "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase04.ts",
++      "nextTitle": "El orden de los hechos y el recuerdo",
++      "nextKind": "NEXT_CLASS",
++      "nextSource": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE05.md",
++      "nextSourceSha256": "4bf1a94ff9a8c7e69c68e7762008d7586b10bc7b15b3fdc340449199885f9853",
++      "nextLocation": "línea 1",
++      "advisories": []
++    },
++    {
++      "course": "110-7",
++      "subject": "len",
++      "grade": 7,
++      "oa": 3,
++      "lesson": 5,
++      "total": 6,
++      "title": "El orden de los hechos y el recuerdo",
++      "titleLocation": "línea 1",
++      "workingNext": "",
++      "explicitNext": "",
++      "version": "2026-10-12 America/Santiago",
++      "source": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE05.md",
++      "sourceSha256": "4bf1a94ff9a8c7e69c68e7762008d7586b10bc7b15b3fdc340449199885f9853",
++      "manifest": "LECCIONES/110-7/Lengua_Literatura/OA03/manifest.json",
++      "module": "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase05.ts",
++      "nextTitle": "Comparar relatos con evidencia",
++      "nextKind": "NEXT_CLASS",
++      "nextSource": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE06.md",
++      "nextSourceSha256": "88291494345f91ac5f5be92dd9fb05f22d8e47d0412911fd143891755e04d517",
++      "nextLocation": "línea 1",
++      "advisories": []
++    },
++    {
++      "course": "110-7",
++      "subject": "len",
++      "grade": 7,
++      "oa": 3,
++      "lesson": 6,
++      "total": 6,
++      "title": "Comparar relatos con evidencia",
++      "titleLocation": "línea 1",
++      "workingNext": "",
++      "explicitNext": "",
++      "version": "2026-10-12 America/Santiago",
++      "source": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE06.md",
++      "sourceSha256": "88291494345f91ac5f5be92dd9fb05f22d8e47d0412911fd143891755e04d517",
++      "manifest": "LECCIONES/110-7/Lengua_Literatura/OA03/manifest.json",
++      "module": "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase06.ts",
++      "nextTitle": "",
++      "nextKind": "END_OR_TRANSITION",
++      "nextSource": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE06.md",
++      "nextSourceSha256": "88291494345f91ac5f5be92dd9fb05f22d8e47d0412911fd143891755e04d517",
++      "nextLocation": "cierre explícito o fin del OA",
++      "advisories": []
++    },
++    {
++      "course": "110-7",
++      "subject": "mat",
++      "grade": 7,
++      "oa": 4,
++      "lesson": 1,
++      "total": 6,
++      "title": "Concepto de Porcentaje y Representación en Cuadrículas de 100",
++      "titleLocation": "línea 8",
++      "workingNext": "Porcentajes como Fracción Irreductible y Número Decimal",
++      "explicitNext": "",
++      "version": "BORRADOR PARA REVISIÓN · EN_REVISION · WORK_PRE_APROBACION",
++      "source": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE01.md",
++      "sourceSha256": "ed8f555e7af38c046bce252e23617c715abf459fd6093ff8580d4c30f6321833",
++      "manifest": "LECCIONES/110-7/Matematica/OA04/manifest.json",
++      "module": "Web Studio Simple/src/data/lessons/matematica_7b_oa04_clase01.ts",
++      "nextTitle": "Porcentajes como Fracción Irreductible y Número Decimal",
++      "nextKind": "NEXT_CLASS",
++      "nextSource": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE02.md",
++      "nextSourceSha256": "2af4d3c954c647e10b5d446f3f4cdbe90ccd61d32aaaa4c2d3949046ecc682ce",
++      "nextLocation": "línea 8",
++      "advisories": []
++    },
++    {
++      "course": "110-7",
++      "subject": "mat",
++      "grade": 7,
++      "oa": 4,
++      "lesson": 2,
++      "total": 6,
++      "title": "Porcentajes como Fracción Irreductible y Número Decimal",
++      "titleLocation": "línea 8",
++      "workingNext": "Cálculo Mental y Estrategias Rápidas de Porcentajes Notables",
++      "explicitNext": "",
++      "version": "BORRADOR PARA REVISIÓN · EN_REVISION · WORK_PRE_APROBACION",
++      "source": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE02.md",
++      "sourceSha256": "2af4d3c954c647e10b5d446f3f4cdbe90ccd61d32aaaa4c2d3949046ecc682ce",
++      "manifest": "LECCIONES/110-7/Matematica/OA04/manifest.json",
++      "module": "Web Studio Simple/src/data/lessons/matematica_7b_oa04_clase02.ts",
++      "nextTitle": "Cálculo Mental y Estrategias Rápidas de Porcentajes Notables",
++      "nextKind": "NEXT_CLASS",
++      "nextSource": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE03.md",
++      "nextSourceSha256": "4a4f9187a02529da5708c3d9ef5e02306c8fbad2ffea6dcc3a084775396ef478",
++      "nextLocation": "línea 8",
++      "advisories": []
++    },
++    {
++      "course": "110-7",
++      "subject": "mat",
++      "grade": 7,
++      "oa": 4,
++      "lesson": 3,
++      "total": 6,
++      "title": "Cálculo Mental y Estrategias Rápidas de Porcentajes Notables",
++      "titleLocation": "línea 8",
++      "workingNext": "Estrategias de Cálculo de Cualquier Porcentaje: Decimales y Proporciones",
++      "explicitNext": "",
++      "version": "BORRADOR PARA REVISIÓN · EN_REVISION · WORK_PRE_APROBACION",
++      "source": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE03.md",
++      "sourceSha256": "4a4f9187a02529da5708c3d9ef5e02306c8fbad2ffea6dcc3a084775396ef478",
++      "manifest": "LECCIONES/110-7/Matematica/OA04/manifest.json",
++      "module": "Web Studio Simple/src/data/lessons/matematica_7b_oa04_clase03.ts",
++      "nextTitle": "Estrategias de Cálculo de Cualquier Porcentaje: Decimales y Proporciones",
++      "nextKind": "NEXT_CLASS",
++      "nextSource": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE04.md",
++      "nextSourceSha256": "cdaf44c229f43eaa23af47fd421a584c629ea6c882e7c103d28d07f51e3eedbe",
++      "nextLocation": "línea 8",
++      "advisories": []
++    },
++    {
++      "course": "110-7",
++      "subject": "mat",
++      "grade": 7,
++      "oa": 4,
++      "lesson": 4,
++      "total": 6,
++      "title": "Estrategias de Cálculo de Cualquier Porcentaje: Decimales y Proporciones",
++      "titleLocation": "línea 8",
++      "workingNext": "Resolución de Problemas Cotidianos: Descuentos Comerciales e IVA",
++      "explicitNext": "",
++      "version": "BORRADOR PARA REVISIÓN · EN_REVISION · WORK_PRE_APROBACION",
++      "source": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE04.md",
++      "sourceSha256": "cdaf44c229f43eaa23af47fd421a584c629ea6c882e7c103d28d07f51e3eedbe",
++      "manifest": "LECCIONES/110-7/Matematica/OA04/manifest.json",
++      "module": "Web Studio Simple/src/data/lessons/matematica_7b_oa04_clase04.ts",
++      "nextTitle": "Resolución de Problemas Cotidianos: Descuentos Comerciales e IVA",
++      "nextKind": "NEXT_CLASS",
++      "nextSource": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE05.md",
++      "nextSourceSha256": "702522cd0e0ad1f5884abefd0445be8d154996384a8188342393ee238fdc7565",
++      "nextLocation": "línea 8",
++      "advisories": []
++    },
++    {
++      "course": "110-7",
++      "subject": "mat",
++      "grade": 7,
++      "oa": 4,
++      "lesson": 5,
++      "total": 6,
++      "title": "Resolución de Problemas Cotidianos: Descuentos Comerciales e IVA",
++      "titleLocation": "línea 8",
++      "workingNext": "Clase 6: Síntesis Integradora y Ensayo de Evaluación Formativa",
++      "explicitNext": "",
++      "version": "BORRADOR PARA REVISIÓN · EN_REVISION · WORK_PRE_APROBACION",
++      "source": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE05.md",
++      "sourceSha256": "702522cd0e0ad1f5884abefd0445be8d154996384a8188342393ee238fdc7565",
++      "manifest": "LECCIONES/110-7/Matematica/OA04/manifest.json",
++      "module": "Web Studio Simple/src/data/lessons/matematica_7b_oa04_clase05.ts",
++      "nextTitle": "Síntesis Integradora y Ensayo de Evaluación Formativa: Porcentajes en Acción",
++      "nextKind": "NEXT_CLASS",
++      "nextSource": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE06.md",
++      "nextSourceSha256": "b8f5f06cc388df411e8311a92005b933a9abddb53142c1180c83445015fc0b98",
++      "nextLocation": "línea 8",
++      "advisories": [
++        "Título provisional distinto del oficial: Clase 6: Síntesis Integradora y Ensayo de Evaluación Formativa"
++      ]
++    },
++    {
++      "course": "110-7",
++      "subject": "mat",
++      "grade": 7,
++      "oa": 4,
++      "lesson": 6,
++      "total": 6,
++      "title": "Síntesis Integradora y Ensayo de Evaluación Formativa: Porcentajes en Acción",
++      "titleLocation": "línea 8",
++      "workingNext": "Fin de Unidad: Felicitaciones por completar Porcentajes",
++      "explicitNext": "",
++      "version": "BORRADOR PARA REVISIÓN · EN_REVISION · WORK_PRE_APROBACION",
++      "source": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE06.md",
++      "sourceSha256": "b8f5f06cc388df411e8311a92005b933a9abddb53142c1180c83445015fc0b98",
++      "manifest": "LECCIONES/110-7/Matematica/OA04/manifest.json",
++      "module": "Web Studio Simple/src/data/lessons/matematica_7b_oa04_clase06.ts",
++      "nextTitle": "Fin de Unidad: Felicitaciones por completar Porcentajes",
++      "nextKind": "END_OR_TRANSITION",
++      "nextSource": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE06.md",
++      "nextSourceSha256": "b8f5f06cc388df411e8311a92005b933a9abddb53142c1180c83445015fc0b98",
++      "nextLocation": "cierre explícito o fin del OA",
++      "advisories": []
++    }
++  ],
++  "protected": [
++    {
++      "course": "110-7",
++      "subject": "mat",
++      "oa": 1,
++      "total": 6,
++      "modules": [
++        "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase01.ts",
++        "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase02.ts",
++        "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase03.ts",
++        "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase04.ts",
++        "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase05.ts",
++        "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase06.ts"
++      ],
++      "status": "PROTEGIDO_NO_INTERVENIDO"
++    }
++  ]
++}
+diff --git a/scripts/audit_structural_rules.ts b/scripts/audit_structural_rules.ts
+index c98cd7a..a2b51de 100644
+--- a/scripts/audit_structural_rules.ts
++++ b/scripts/audit_structural_rules.ts
+@@ -1,252 +1,104 @@
+-import * as fs from 'fs';
+-import * as path from 'path';
++import fs from 'node:fs';
++import path from 'node:path';
++import { buildCanonicalReference, loadCanonicalReference, inside, filesUnder, MODULE_DIR, REFERENCE_PATH,
++  readLessonObject, compareMetadata, subjectKey, identityKey } from './canonical_lesson_reference';
++import type { CanonicalLesson, Difference } from './canonical_lesson_reference';
+ 
+ export interface AuditResult {
+   file: string;
+-  subject: string;
+-  grade: string;
+-  oa: string;
+-  lessonNumber: number;
+-  lessonTitle: string;
+-  nextLessonTitle: string;
+-  preCount: number;
+-  postCount: number;
+-  practiceCount: number;
+-  summaryCount: number;
+-  rule1_resource_isolation: 'PASS' | 'FAIL';
+-  rule2_counters_sync: 'PASS' | 'FAIL';
+-  rule3_summary_integrity: 'PASS' | 'PENDIENTE_CONTENIDO_WORK';
+-  rule4_thematic_title: 'PASS' | 'FAIL' | 'PENDIENTE_CONTENIDO_WORK';
+-  rule5_continuity: 'PASS' | 'FAIL';
+-  overallStatus: 'RESUELTO' | 'SIN_HALLAZGO' | 'PENDIENTE_CONTENIDO_WORK' | 'FALLO_TECNICO';
++  identity?: string;
++  status: 'VERIFICADO' | 'FALLO_CORRESPONDENCIA' | 'NO_VERIFICABLE';
++  differences: Difference[];
++  technicalFailures: string[];
++  pendingContent: string[];
+   notes: string[];
++  counts?: { pre: number; post: number; practice: number; summary: number };
++  source?: string;
++  sourceSha256?: string;
+ }
+-
+-export function auditSingleLesson(content: string, file: string): AuditResult {
+-  const notes: string[] = [];
+-
+-  // Metadata parsing
+-  const titleMatch = content.match(/"lessonTitle":\s*"([^"]*)"/);
+-  const nextMatch = content.match(/"nextLessonTitle":\s*"([^"]*)"/);
+-  const subjectMatch = content.match(/"subject":\s*"([^"]*)"/);
+-  const gradeMatch = content.match(/"grade":\s*"([^"]*)"/);
+-  const oaMatch = content.match(/"oaCode":\s*"([^"]*)"/);
+-  const numMatch = content.match(/"lessonNumber":\s*(\d+)/);
+-  const totalInOaMatch = content.match(/"totalLessonsInOa":\s*(\d+)/);
+-
+-  const lessonTitle = titleMatch ? titleMatch[1] : '';
+-  const nextLessonTitle = nextMatch ? nextMatch[1] : '';
+-  const subject = subjectMatch ? subjectMatch[1] : '';
+-  const grade = gradeMatch ? gradeMatch[1] : '7° Básico';
+-  const oa = oaMatch ? oaMatch[1] : '';
+-  const lessonNumber = numMatch ? parseInt(numMatch[1], 10) : 0;
+-  const totalInOa = totalInOaMatch ? parseInt(totalInOaMatch[1], 10) : 6;
+-
+-  // Counts
+-  const preMatches = content.match(/"preQuestions":\s*\[/g);
+-  const postMatches = content.match(/"postQuestions":\s*\[/g);
+-  const practiceMatches = content.match(/"practice":\s*\[/g);
+-  const summaryMatches = content.match(/"summaryIdeas":\s*\[/g);
+-
+-  let preCount = 0;
+-  if (preMatches) {
+-    const preBlock = content.split(/"preQuestions":\s*\[/)[1]?.split(/\]\s*,\s*"(?:conversationContext|formalization|postQuestions)/)[0];
+-    if (preBlock) preCount = (preBlock.match(/"question":/g) || []).length;
+-  }
+-
+-  let postCount = 0;
+-  if (postMatches) {
+-    const postBlock = content.split(/"postQuestions":\s*\[/)[1]?.split(/\]\s*,\s*"(?:practice|mini|summaryIdeas)/)[0];
+-    if (postBlock) postCount = (postBlock.match(/"question":/g) || []).length;
+-  }
+-
+-  let practiceCount = 0;
+-  if (practiceMatches) {
+-    const practiceBlock = content.split(/"practice":\s*\[/)[1]?.split(/\]\s*,\s*"(?:mini|summaryIdeas)/)[0];
+-    if (practiceBlock) practiceCount = (practiceBlock.match(/"question":/g) || []).length;
+-  }
+-
+-  let summaryCount = 0;
+-  let sumBlock = '';
+-  if (summaryMatches) {
+-    sumBlock = content.split(/"summaryIdeas":\s*\[/)[1]?.split(/\]\s*,\s*"(?:interactive|closure|paso8_cierre)/)[0] || '';
+-    if (sumBlock) summaryCount = (sumBlock.match(/\[\s*"[^"]+"/g) || []).length;
+-  }
+-
+-  const isMatOa01 = file.startsWith('matematica_7b_oa01');
+-
+-  // Regla 1: Resource Isolation (Ciencias y Matemática no usan texto de lectura narrativo)
+-  let r1: 'PASS' | 'FAIL' = 'PASS';
+-  const isCienciasOrMat = subject.toLowerCase().includes('ciencias') || subject.toLowerCase().includes('matemática') || subject.toLowerCase().includes('matematica');
+-  if (isCienciasOrMat && (content.includes('"readingResource"') || (content.includes('"type": "reading_resource"') && content.includes('"paragraphs"')) || (content.includes('"type": "reading"') && content.includes('"paragraphs"')))) {
+-    r1 = 'FAIL';
+-    notes.push('Fallo técnico: Ciencias o Matemática no deben declarar relato de lectura narrativo');
+-  }
+-
+-  // Regla 2: Counters Sync
+-  let r2: 'PASS' | 'FAIL' = 'PASS';
+-  if (!isMatOa01 && (preCount === 0 || postCount === 0)) {
+-    r2 = 'FAIL';
+-    notes.push(`Fallo técnico: Faltan reactivos de recorrido o comprobación (pre: ${preCount}, post: ${postCount})`);
+-  }
+-
+-  // Regla 3: Summary Integrity (Distingue contenido pendiente de Work)
+-  let r3: 'PASS' | 'PENDIENTE_CONTENIDO_WORK' = 'PASS';
+-  if (!isMatOa01) {
+-    if (sumBlock.includes('Una situación') || sumBlock.includes('Situación inicial')) {
+-      r3 = 'PENDIENTE_CONTENIDO_WORK';
+-      notes.push('summaryIdeas contiene placeholder genérico');
+-    } else if (summaryCount < 3) {
+-      r3 = 'PENDIENTE_CONTENIDO_WORK';
+-      notes.push(`summaryIdeas tiene ${summaryCount} ideas (UI adaptativa; pendiente redacción de 3ra idea por Work)`);
++export function auditSingleLesson(content: string, file: string, expected?: CanonicalLesson): AuditResult {
++  const result: AuditResult = { file, status: 'NO_VERIFICABLE', differences: [], technicalFailures: [], pendingContent: [], notes: [] };
++  try {
++    const lesson = readLessonObject(content, file);
++    const array = (name: string) => Array.isArray(lesson[name]) ? lesson[name] : [];
++    result.counts = { pre: array('preQuestions').length, post: array('postQuestions').length,
++      practice: array('practice').length, summary: array('summaryIdeas').length };
++    const subject = subjectKey(lesson.metadata.subject);
++    const hasNarrative = (node: any): boolean => {
++      if (!node || typeof node !== 'object') return false;
++      if (Object.hasOwn(node, 'readingResource') || (['reading', 'reading_resource'].includes(node.type) && Array.isArray(node.paragraphs))) return true;
++      return Object.values(node).some(hasNarrative);
++    };
++    if (['cie', 'mat'].includes(subject) && hasNarrative(lesson)) result.technicalFailures.push('R1: Recurso narrativo en Ciencias/Matemática');
++    if (!result.counts.pre || !result.counts.post) result.technicalFailures.push('R2: Faltan reactivos de recorrido/comprobación');
++    const summary = JSON.stringify(array('summaryIdeas'));
++    if (/Una situación|Situación inicial|Aplicación del criterio formal en el cuaderno físico/.test(summary)) {
++      result.pendingContent.push('Resumen genérico: requiere contraste pedagógico con la fuente; no implica redactar una tercera idea');
+     }
+-  }
++    if (!expected) { result.notes.push('Sin referencia canónica independiente: no se acredita título ni continuidad'); return result; }
++    result.identity = identityKey(expected); result.source = expected.source; result.sourceSha256 = expected.sourceSha256;
++    result.differences = compareMetadata(lesson.metadata, expected);
++    result.notes.push(...expected.advisories);
++    result.status = result.differences.length || result.technicalFailures.length ? 'FALLO_CORRESPONDENCIA' : 'VERIFICADO';
++  } catch (error) { result.notes.push(String(error)); }
++  return result;
++}
+ 
+-  // Regla 4: Thematic Title
+-  let r4: 'PASS' | 'FAIL' | 'PENDIENTE_CONTENIDO_WORK' = 'PASS';
+-  if (!isMatOa01) {
+-    if (!lessonTitle || lessonTitle.trim() === '' || lessonTitle.trim() === 'Una situación') {
+-      r4 = 'FAIL';
+-      notes.push('Fallo técnico: Título temático inválido o placeholder "Una situación"');
++export function runFullAudit(root = path.resolve(__dirname, '..'), referencePath = REFERENCE_PATH) {
++  const report = { schema: 'estudiosimple.audit.canonical.v1', normativeState: 'EN_REVISION',
++    scope: 'Títulos, identidad, continuidad y controles estructurales R1/R2; no acredita aprobación pedagógica, editor ni producción',
++    courseBinding: 'El curso del módulo se acredita por vínculo de manifiesto/ruta. Si metadata.courseId existe también se compara.',
++    exitCode: 2, results: [] as AuditResult[], protected: [] as unknown[], errors: [] as string[],
++    totals: { evaluated: 0, verified: 0, mismatches: 0, notVerifiable: 0, protected: 0, pendingSummaryReview: 0 } };
++  try {
++    const ref = loadCanonicalReference(root, referencePath);
++    report.protected = ref.protected;
++    report.totals.protected = ref.protected.reduce((count, item) => count + item.total, 0);
++    const mapped = new Set(ref.lessons.map(l => l.module));
++    const protectedModules = new Set(ref.protected.flatMap(p => p.modules.map(m => m.startsWith(MODULE_DIR + '/') ? m : `${MODULE_DIR}/${path.basename(m)}`)));
++    for (const filename of filesUnder(root, MODULE_DIR, '.ts')) {
++      if (filename === `${MODULE_DIR}/index.ts` || mapped.has(filename) || protectedModules.has(filename)) continue;
++      report.results.push({ file: filename, status: 'NO_VERIFICABLE', differences: [], technicalFailures: [], pendingContent: [], notes: ['Módulo sin vínculo canónico en los manifiestos'] });
+     }
+-  }
+-
+-  // Regla 5: Continuity
+-  let r5: 'PASS' | 'FAIL' = 'PASS';
+-  if (!isMatOa01) {
+-    if (lessonNumber > 0 && lessonNumber < totalInOa && (!nextLessonTitle || nextLessonTitle.trim() === '')) {
+-      r5 = 'FAIL';
+-      notes.push(`Fallo técnico: Clase intermedia ${lessonNumber} no tiene puente a próxima clase`);
++    for (const expected of ref.lessons) {
++      const filename = inside(root, expected.module);
++      if (!fs.existsSync(filename)) {
++        report.results.push({ file: expected.module, identity: identityKey(expected), status: 'NO_VERIFICABLE', differences: [], technicalFailures: [], pendingContent: [], notes: ['Falta módulo vinculado'], source: expected.source });
++      } else report.results.push(auditSingleLesson(fs.readFileSync(filename, 'utf8'), expected.module, expected));
+     }
+-  }
+-
+-  // Distinción formal: Fallo Técnico (salida 1) vs Contenido Pendiente de Work (salida 0)
+-  let overall: 'RESUELTO' | 'SIN_HALLAZGO' | 'PENDIENTE_CONTENIDO_WORK' | 'FALLO_TECNICO' = 'RESUELTO';
+-  if (r1 === 'FAIL' || r2 === 'FAIL' || r4 === 'FAIL' || r5 === 'FAIL') {
+-    overall = 'FALLO_TECNICO';
+-  } else if (r3 === 'PENDIENTE_CONTENIDO_WORK') {
+-    overall = 'PENDIENTE_CONTENIDO_WORK';
+-  } else {
+-    overall = 'RESUELTO';
+-  }
+-
+-  return {
+-    file,
+-    subject: subject || (isMatOa01 ? 'Matemática' : 'Desconocida'),
+-    grade,
+-    oa: oa || (isMatOa01 ? 'OA 1' : ''),
+-    lessonNumber,
+-    lessonTitle,
+-    nextLessonTitle,
+-    preCount,
+-    postCount,
+-    practiceCount,
+-    summaryCount,
+-    rule1_resource_isolation: r1,
+-    rule2_counters_sync: r2,
+-    rule3_summary_integrity: r3,
+-    rule4_thematic_title: r4,
+-    rule5_continuity: r5,
+-    overallStatus: overall,
+-    notes
+-  };
+-}
+-
+-export function verifyRejectionOfInvalidCopies(): void {
+-  console.log('🧪 Verificando que el auditor rechace copias de prueba incorrectas...');
+-
+-  // Copia 1: Ciencias con recurso narrativo indebido
+-  const badResource = auditSingleLesson(`
+-    "metadata": { "grade": "7° Básico", "subject": "Ciencias Naturales", "oaCode": "OA 1", "lessonNumber": 2, "totalLessonsInOa": 6, "lessonTitle": "Título Real", "nextLessonTitle": "Siguiente" },
+-    "preQuestions": [{ "question": "Q1" }], "postQuestions": [{ "question": "Q2" }],
+-    "interactive": { "type": "reading_resource", "paragraphs": ["Texto literario..."] }
+-  `, 'test_bad_resource.ts');
+-  if (badResource.rule1_resource_isolation !== 'FAIL' || badResource.overallStatus !== 'FALLO_TECNICO') {
+-    throw new Error('El auditor falló al rechazar un recurso narrativo indebido en Ciencias.');
+-  }
+-
+-  // Copia 2: Título inválido "Una situación"
+-  const badTitle = auditSingleLesson(`
+-    "metadata": { "grade": "7° Básico", "subject": "Historia", "oaCode": "OA 2", "lessonNumber": 2, "totalLessonsInOa": 6, "lessonTitle": "Una situación", "nextLessonTitle": "Siguiente" },
+-    "preQuestions": [{ "question": "Q1" }], "postQuestions": [{ "question": "Q2" }]
+-  `, 'test_bad_title.ts');
+-  if (badTitle.rule4_thematic_title !== 'FAIL' || badTitle.overallStatus !== 'FALLO_TECNICO') {
+-    throw new Error('El auditor falló al rechazar el título placeholder "Una situación".');
+-  }
+-
+-  // Copia 3: Clase intermedia sin puente de continuidad
+-  const badBridge = auditSingleLesson(`
+-    "metadata": { "grade": "7° Básico", "subject": "Historia", "oaCode": "OA 2", "lessonNumber": 3, "totalLessonsInOa": 6, "lessonTitle": "Título Válido", "nextLessonTitle": "" },
+-    "preQuestions": [{ "question": "Q1" }], "postQuestions": [{ "question": "Q2" }]
+-  `, 'test_bad_bridge.ts');
+-  if (badBridge.rule5_continuity !== 'FAIL' || badBridge.overallStatus !== 'FALLO_TECNICO') {
+-    throw new Error('El auditor falló al rechazar una clase intermedia sin puente.');
+-  }
+-
+-  console.log('  ✅ Comprobación superada: El auditor rechaza con salida FALLO_TECNICO ante recurso, título o puente incorrectos.\n');
++    report.totals.evaluated = report.results.length;
++    report.totals.verified = report.results.filter(r => r.status === 'VERIFICADO').length;
++    report.totals.mismatches = report.results.filter(r => r.status === 'FALLO_CORRESPONDENCIA').length;
++    report.totals.notVerifiable = report.results.filter(r => r.status === 'NO_VERIFICABLE').length;
++    report.totals.pendingSummaryReview = report.results.filter(r => r.pendingContent.length).length;
++    report.exitCode = report.totals.notVerifiable ? 2 : report.totals.mismatches ? 1 : 0;
++  } catch (error) { report.errors.push(String(error)); }
++  return report;
+ }
+ 
+-export function runFullAudit(): void {
+-  // 1. Ejecutar verificación de rechazo de copias inválidas
+-  verifyRejectionOfInvalidCopies();
+-
+-  // 2. Auditar las 36 lecciones reales
+-  const lessonsDir = path.join(__dirname, '../Web Studio Simple/src/data/lessons');
+-  const files = fs.readdirSync(lessonsDir).filter(f => f.endsWith('.ts') && f !== 'index.ts').sort();
+-  const results: AuditResult[] = [];
+-
+-  for (const file of files) {
+-    const filePath = path.join(lessonsDir, file);
+-    const content = fs.readFileSync(filePath, 'utf8');
+-    results.push(auditSingleLesson(content, file));
+-  }
+-
+-  console.log('=== MATRIZ DE AUDITORÍA ESTRUCTURAL (36 LECCIONES) ===\n');
+-  console.log(
+-    'Archivo'.padEnd(35) +
+-    ' | Título'.padEnd(40) +
+-    ' | R1 | R2 | R3 | R4 | R5 | Estado Global'
+-  );
+-  console.log('-'.repeat(125));
+-
+-  for (const r of results) {
+-    console.log(
+-      r.file.padEnd(35) +
+-      ` | ${(r.lessonTitle || (r.file.includes('oa01') ? 'Matemática OA01 (Protegida)' : '')).slice(0, 38)}`.padEnd(40) +
+-      ` | ${r.rule1_resource_isolation.padEnd(2)}` +
+-      ` | ${r.rule2_counters_sync.padEnd(2)}` +
+-      ` | ${(r.rule3_summary_integrity === 'PASS' ? 'OK' : 'PEND').padEnd(2)}` +
+-      ` | ${r.rule4_thematic_title.padEnd(2)}` +
+-      ` | ${r.rule5_continuity.padEnd(2)}` +
+-      ` | ${r.overallStatus}`
+-    );
+-  }
+-
+-  const outJsonPath = path.join(__dirname, '../docs/auditorias/MATRIZ_AUDITORIA_ESTRUCTURAL_36_LECCIONES.json');
+-  fs.mkdirSync(path.dirname(outJsonPath), { recursive: true });
+-  fs.writeFileSync(outJsonPath, JSON.stringify(results, null, 2), 'utf8');
+-  console.log(`\nMatriz guardada en: ${outJsonPath}`);
+-
+-  const technicalFailures = results.filter(r => r.overallStatus === 'FALLO_TECNICO');
+-  const pendingContent = results.filter(r => r.overallStatus === 'PENDIENTE_CONTENIDO_WORK');
+-
+-  console.log(`\nResumen de Control:`);
+-  console.log(`- Fallos técnicos estructurales: ${technicalFailures.length}`);
+-  console.log(`- Clases con contenido de resumen pendiente de Work: ${pendingContent.length}`);
+-
+-  if (technicalFailures.length > 0) {
+-    console.error(`\n❌ ERROR CRÍTICO: ${technicalFailures.length} lecciones presentan fallos técnicos.`);
+-    for (const f of technicalFailures) {
+-      console.error(`  - ${f.file}: ${f.notes.join('; ')}`);
++export function main(args = process.argv.slice(2)): number {
++  let root = path.resolve(__dirname, '..'), reference = REFERENCE_PATH, output = '', writeReference = false;
++  try {
++    for (let index = 0; index < args.length; index++) {
++      const arg = args[index];
++      if (arg === '--write-reference') writeReference = true;
++      else if (['--root', '--reference', '--report'].includes(arg) && args[index + 1] && !args[index + 1].startsWith('--')) {
++        const value = args[++index];
++        if (arg === '--root') root = path.resolve(value);
++        if (arg === '--reference') reference = value;
++        if (arg === '--report') output = path.resolve(value);
++      } else throw new Error(`Argumento inválido: ${arg}`);
+     }
+-    process.exit(1);
+-  }
+-
+-  console.log(`\n✅ AUDITORÍA ESTRUCTURAL SUPERADA: 0 fallos técnicos.`);
+-  process.exit(0);
+-}
+-
+-// Ejecutar si se invoca directamente
+-if (require.main === module) {
+-  runFullAudit();
++    if (writeReference) {
++      const ref = buildCanonicalReference(root), dest = inside(root, reference);
++      fs.mkdirSync(path.dirname(dest), { recursive: true }); fs.writeFileSync(dest, JSON.stringify(ref, null, 2) + '\n');
++      console.log(`REFERENCIA_GENERADA: ${ref.lessons.length} evaluables; ${ref.protected.reduce((n, p) => n + p.total, 0)} protegidas. No es un veredicto del lote.`);
++      return 0;
++    }
++    const report = runFullAudit(root, reference);
++    if (output) { fs.mkdirSync(path.dirname(output), { recursive: true }); fs.writeFileSync(output, JSON.stringify(report, null, 2) + '\n'); }
++    console.log(JSON.stringify(report, null, 2));
++    return report.exitCode;
++  } catch (error) { console.error(`NO_VERIFICABLE: ${String(error)}`); return 2; }
+ }
++if (require.main === module) process.exitCode = main();
+diff --git a/scripts/canonical_lesson_reference.ts b/scripts/canonical_lesson_reference.ts
+new file mode 100644
+index 0000000..817a0bb
+--- /dev/null
++++ b/scripts/canonical_lesson_reference.ts
+@@ -0,0 +1,277 @@
++import fs from 'node:fs';
++import path from 'node:path';
++import crypto from 'node:crypto';
++import ts from 'typescript';
++
++export class NotVerifiable extends Error { readonly exitCode = 2; }
++export const REFERENCE_PATH = 'docs/auditorias/REFERENCIA_CANONICA_TITULOS_CONTINUIDAD.json';
++export const MODULE_DIR = 'Web Studio Simple/src/data/lessons';
++export const text = (value: unknown): string => String(value ?? '').normalize('NFC').replace(/\s+/g, ' ').trim();
++const key = (value: unknown) => text(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
++export function subjectKey(value: unknown): string {
++  const aliases: Record<string, string> = {
++    mat: 'mat', matematica: 'mat', cna: 'cie', cie: 'cie', ciencias_naturales: 'cie', 'ciencias naturales': 'cie',
++    his: 'his', historia: 'his', historia_geografia: 'his', 'historia, geografia y ciencias sociales': 'his',
++    ing: 'ing', ingles: 'ing', english: 'ing', 'idioma extranjero ingles': 'ing',
++    lyl: 'len', len: 'len', lengua: 'len', lengua_literatura: 'len', 'lengua y literatura': 'len'
++  };
++  const result = aliases[key(value)];
++  if (!result) throw new NotVerifiable(`Asignatura no reconocida: ${value}`);
++  return result;
++}
++export function oaNumber(value: unknown): number {
++  const m = text(value).match(/\bOA\s*0*(\d+)\b/i);
++  if (!m) throw new NotVerifiable(`OA no reconocido: ${value}`);
++  return Number(m[1]);
++}
++export function gradeNumber(value: unknown): number {
++  const m = text(value).match(/^(\d+)(?:\D|$)/);
++  if (!m) throw new NotVerifiable(`Nivel no reconocido: ${value}`);
++  return Number(m[1]);
++}
++export function inside(root: string, relative: string): string {
++  const result = path.resolve(root, relative);
++  if (path.isAbsolute(relative) || path.relative(root, result).split(path.sep).includes('..')) {
++    throw new NotVerifiable(`Ruta fuera del repositorio: ${relative}`);
++  }
++  return result;
++}
++export function sha(root: string, file: string): string {
++  const p = inside(root, file);
++  if (!fs.existsSync(p)) throw new NotVerifiable(`Falta archivo: ${file}`);
++  return crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
++}
++export function filesUnder(root: string, directory: string, suffix: string): string[] {
++  const base = inside(root, directory);
++  if (!fs.existsSync(base)) return [];
++  return fs.readdirSync(base, { withFileTypes: true }).flatMap(entry => {
++    const rel = `${directory}/${entry.name}`;
++    return entry.isDirectory() ? filesUnder(root, rel, suffix) : entry.isFile() && entry.name.endsWith(suffix) ? [rel] : [];
++  }).sort();
++}
++export interface Identity { course: string; subject: string; oa: number; lesson: number; grade: number; }
++export interface CanonicalLesson extends Identity {
++  total: number; source: string; sourceSha256: string; manifest: string; module: string;
++  title: string; titleLocation: string; version: string;
++  workingNext: string; explicitNext: string; nextTitle: string; nextKind: 'NEXT_CLASS' | 'END_OR_TRANSITION';
++  nextSource: string; nextSourceSha256: string; nextLocation: string;
++  advisories: string[];
++}
++export interface CanonicalReference {
++  schema: 'estudiosimple.canonical-titles.v1';
++  policy: string;
++  manifests: Array<{ path: string; sha256: string }>;
++  lessons: CanonicalLesson[];
++  protected: Array<{ course: string; subject: string; oa: number; total: number; modules: string[]; status: 'PROTEGIDO_NO_INTERVENIDO' }>;
++}
++
++// Sólo la cabecera documental: nunca extraer un título de lámina dentro de la lección.
++export function parseSource(content: string, context: string) {
++  const lines = content.replace(/\r\n/g, '\n').split('\n');
++  const stop = lines.findIndex(line => /^###\s|^##\s+\d+\./.test(line));
++  const header = lines.slice(0, stop < 0 ? lines.length : stop);
++  const fields = new Map<string, Array<{ value: string; line: number }>>();
++  for (const [index, line] of header.entries()) {
++    const re = /\*\*([^*]+?):\*\*\s*(.*?)(?=(?:\s*·\s*)?\*\*[^*]+?:\*\*|$)/g;
++    for (const m of line.matchAll(re)) {
++      const label = key(m[1]); const list = fields.get(label) ?? [];
++      list.push({ value: text(m[2]), line: index + 1 }); fields.set(label, list);
++    }
++  }
++  const pick = (labels: string[], required = false) => {
++    const values = labels.flatMap(label => fields.get(label) ?? []);
++    const unique = [...new Set(values.map(v => v.value))];
++    if (unique.length > 1 || (required && (!unique.length || !unique[0]))) {
++      throw new NotVerifiable(`${context}: campo ausente o ambiguo (${labels.join('/')})`);
++    }
++    return values[0];
++  };
++  const titleField = pick(['titulo', 'titulo de la clase', 'lesson title', 'title']);
++  const h1 = header.flatMap((line, i) => {
++    const match = line.match(/^#\s+EstudioSimple\s*[·|]\s*(.+)$/i);
++    return match && !/^(?:lecci[oó]n|interactive lesson)\b/i.test(match[1]) ? [{ value: text(match[1]), line: i + 1 }] : [];
++  });
++  const titles = [...new Set([...(titleField ? [titleField.value] : []), ...h1.map(h => h.value)])];
++  if (titles.length !== 1 || !titles[0]) throw new NotVerifiable(`${context}: título oficial ausente o contradictorio`);
++  if (['una situacion', 'situacion inicial'].includes(key(titles[0]))) throw new NotVerifiable(`${context}: título oficial genérico pendiente de definición`);
++  const loc = titleField ?? h1[0];
++  const course = pick(['curso', 'curso app', 'app course id', 'identificador del curso'], true)!.value;
++  const subject = subjectKey(pick(['asignatura', 'asignatura app', 'app subject', 'nombre en la app'], true)!.value);
++  const curricular = pick(['oa', 'codigo curricular', 'curriculum id', 'identificador curricular'], true)!.value;
++  const count = pick(['clase', 'numero de clase', 'class number'], true)!.value.match(/^(\d+)\s+(?:de|of)\s+(\d+)$/i);
++  if (!count) throw new NotVerifiable(`${context}: número/total de clase ausente`);
++  const grade = Number(course.match(/-(\d+)$/)?.[1]);
++  if (!Number.isInteger(grade) || grade < 1) throw new NotVerifiable(`${context}: curso sin nivel identificable`);
++  for (const line of header.filter(l => /^##\s/.test(l))) {
++    const headingOa = line.match(/\bOA\s*0*(\d+)/i);
++    const headingClass = line.match(/\b(?:Clase|Class)\s*0*(\d+)/i);
++    const headingGrade = line.match(/^##\s+(\d+)(?:°|th)\s*(?:b[aá]sico|grade)/i);
++    if ((headingOa && Number(headingOa[1]) !== oaNumber(curricular)) || (headingClass && Number(headingClass[1]) !== Number(count[1])) || (headingGrade && Number(headingGrade[1]) !== grade)) {
++      throw new NotVerifiable(`${context}: encabezado curricular contradice los campos de identidad`);
++    }
++  }
++  const curriculumMatch = curricular.match(/^(\d+)B-([A-Z]+)-OA0*(\d+)$/i);
++  if (curriculumMatch && (Number(curriculumMatch[1]) !== grade || subjectKey(curriculumMatch[2]) !== subject)) {
++    throw new NotVerifiable(`${context}: identificador curricular contradice curso/asignatura`);
++  }
++  const workingNext = pick(['titulo de trabajo de la siguiente clase', 'next class working title'])?.value ?? '';
++  const explicitNext = pick(['proxima clase', 'next class title'])?.value ?? '';
++  const version = pick(['version de referencia'])?.value ?? pick(['fecha de preparacion'])?.value ?? pick(['fecha y hora de emision de esta propuesta'])?.value
++    ?? pick(['estado', 'status', 'estado de esta entrega'])?.value ?? 'version fijada por SHA-256';
++  return { course, subject, grade, oa: oaNumber(curricular), lesson: Number(count[1]), total: Number(count[2]),
++    title: titles[0], titleLocation: `línea ${loc.line}`, workingNext, explicitNext, version };
++}
++
++export function identityKey(x: Identity): string { return `${x.course}/${x.subject}/OA${x.oa}/C${x.lesson}`; }
++export function buildCanonicalReference(root: string): CanonicalReference {
++  const manifests = filesUnder(root, 'LECCIONES', 'manifest.json');
++  if (!manifests.length) throw new NotVerifiable('No hay manifiestos canónicos');
++  const ref: CanonicalReference = { schema: 'estudiosimple.canonical-titles.v1',
++    policy: 'Título oficial de cabecera; continuidad al título oficial de la siguiente clase del mismo curso/asignatura/OA. Títulos de trabajo provisionales se informan; no sustituyen títulos oficiales. Cierre explícito conservado.',
++    manifests: [], lessons: [], protected: [] };
++  for (const manifest of manifests) {
++    ref.manifests.push({ path: manifest, sha256: sha(root, manifest) });
++    const m = JSON.parse(fs.readFileSync(inside(root, manifest), 'utf8'));
++    const course = text(m.curso), subject = subjectKey(m.asignatura), oa = oaNumber(m.oa);
++    const total = Number(m.total_lecciones ?? m.total_clases);
++    const parts = manifest.split('/');
++    if (parts[1] !== course || subjectKey(parts[2]) !== subject || oaNumber(parts[3]) !== oa || !Number.isInteger(total) || total < 1) {
++      throw new NotVerifiable(`${manifest}: identidad/total contradictorios`);
++    }
++    if (course === '110-7' && subject === 'mat' && oa === 1) {
++      const modules = m.resolucion_rutas_typescript?.archivos_clases_ts ?? [];
++      ref.protected.push({ course, subject, oa, total, modules: modules.map((f: string) => f.replace(/\\/g, '/')), status: 'PROTEGIDO_NO_INTERVENIDO' });
++      continue;
++    }
++    if (!Array.isArray(m.lecciones_construidas) || m.lecciones_construidas.length !== total) {
++      throw new NotVerifiable(`${manifest}: cobertura incompleta`);
++    }
++    const group: CanonicalLesson[] = [];
++    for (const item of m.lecciones_construidas) {
++      const source = String(item.archivo_md).replace(/\\/g, '/');
++      const module = String(item.archivo_ts).replace(/\\/g, '/');
++      const sourceSha256 = sha(root, source);
++      const parsed = parseSource(fs.readFileSync(inside(root, source), 'utf8'), source);
++      const sourceParts = source.split('/');
++      const filenameClass = path.basename(source).match(/^CLASE0*(\d+)(?:_|\.)/i);
++      if (sourceParts[1] !== course || subjectKey(sourceParts[2]) !== subject || oaNumber(sourceParts[3]) !== oa || !filenameClass || Number(filenameClass[1]) !== parsed.lesson
++          || parsed.course !== course || parsed.subject !== subject || parsed.oa !== oa || parsed.lesson !== Number(item.clase) || parsed.total !== total
++          || (m.nivel && gradeNumber(m.nivel) !== parsed.grade)) {
++        throw new NotVerifiable(`${source}: identidad contradice manifiesto/ruta`);
++      }
++      inside(root, module);
++      if (!module.startsWith(MODULE_DIR + '/') || !module.endsWith('.ts')) throw new NotVerifiable(`${manifest}: ruta de módulo inválida`);
++      group.push({ ...parsed, source, sourceSha256, manifest, module, nextTitle: '', nextKind: 'END_OR_TRANSITION', nextSource: source, nextSourceSha256: sourceSha256, nextLocation: 'cierre explícito o fin del OA', advisories: [] });
++    }
++    group.sort((a, b) => a.lesson - b.lesson);
++    group.forEach((lesson, index) => {
++      if (lesson.lesson !== index + 1) throw new NotVerifiable(`${manifest}: orden duplicado o no contiguo`);
++      const next = group[index + 1];
++      lesson.nextKind = next ? 'NEXT_CLASS' : 'END_OR_TRANSITION';
++      lesson.nextTitle = next ? next.title : lesson.explicitNext || lesson.workingNext;
++      lesson.nextSource = next?.source ?? lesson.source;
++      lesson.nextSourceSha256 = next?.sourceSha256 ?? lesson.sourceSha256;
++      lesson.nextLocation = next?.titleLocation ?? 'cierre explícito o fin del OA';
++      if (next && lesson.explicitNext && lesson.explicitNext !== next.title) {
++        throw new NotVerifiable(`${lesson.source}: próximo título oficial contradice la siguiente fuente`);
++      }
++      if (next && lesson.workingNext && lesson.workingNext !== next.title) {
++        lesson.advisories.push(`Título provisional distinto del oficial: ${lesson.workingNext}`);
++      }
++    });
++    ref.lessons.push(...group);
++  }
++  if (!ref.lessons.length) throw new NotVerifiable('Alcance evaluable vacío');
++  const declaredSources = new Set(ref.lessons.map(l => l.source));
++  for (const source of filesUnder(root, 'LECCIONES_POR_REVISAR', '.md')) {
++    const parts = source.split('/');
++    if (parts[1] === '110-7' && key(parts[2]) === 'matematica' && /^OA0*1$/i.test(parts[3])) continue;
++    if (!declaredSources.has(source)) throw new NotVerifiable(`Fuente sin vínculo canónico: ${source}`);
++  }
++  for (const field of ['module', 'source'] as const) {
++    if (new Set(ref.lessons.map(l => l[field])).size !== ref.lessons.length) throw new NotVerifiable(`Vínculo duplicado: ${field}`);
++  }
++  if (new Set(ref.lessons.map(identityKey)).size !== ref.lessons.length) throw new NotVerifiable('Identidades duplicadas');
++  return ref;
++}
++
++export function loadCanonicalReference(root: string, referencePath = REFERENCE_PATH): CanonicalReference {
++  const current = buildCanonicalReference(root);
++  const cachedPath = inside(root, referencePath);
++  if (!fs.existsSync(cachedPath)) throw new NotVerifiable(`Falta referencia fijada: ${referencePath}. Generarla explícitamente con --write-reference tras revisar las fuentes.`);
++  const cached = JSON.parse(fs.readFileSync(cachedPath, 'utf8'));
++  if (JSON.stringify(cached) !== JSON.stringify(current)) throw new NotVerifiable('Referencia desactualizada o alterada: fuentes/manifiestos/inventario no coinciden');
++  return current;
++}
++
++// Lectura estática: no import(), eval(), require() ni ejecución de módulos de lecciones.
++export function readLessonObject(content: string, filename: string): Record<string, any> {
++  const sf = ts.createSourceFile(filename, content, ts.ScriptTarget.ES2020, true, ts.ScriptKind.TS);
++  const diagnostics = (sf as ts.SourceFile & { parseDiagnostics?: readonly ts.Diagnostic[] }).parseDiagnostics ?? [];
++  if (diagnostics.length) throw new NotVerifiable(`${filename}: TypeScript no parseable`);
++  function literal(node: ts.Expression): any {
++    if (ts.isAsExpression(node) || ts.isSatisfiesExpression(node) || ts.isParenthesizedExpression(node)) return literal(node.expression);
++    if (ts.isStringLiteral(node) || ts.isNoSubstitutionTemplateLiteral(node)) return node.text;
++    if (ts.isNumericLiteral(node)) return Number(node.text);
++    if (node.kind === ts.SyntaxKind.TrueKeyword) return true;
++    if (node.kind === ts.SyntaxKind.FalseKeyword) return false;
++    if (node.kind === ts.SyntaxKind.NullKeyword) return null;
++    if (ts.isPrefixUnaryExpression(node) && node.operator === ts.SyntaxKind.MinusToken && ts.isNumericLiteral(node.operand)) return -Number(node.operand.text);
++    if (ts.isArrayLiteralExpression(node)) return node.elements.map(n => literal(n as ts.Expression));
++    if (ts.isObjectLiteralExpression(node)) {
++      const result: Record<string, any> = Object.create(null);
++      for (const p of node.properties) {
++        if (!ts.isPropertyAssignment(p) || ts.isComputedPropertyName(p.name)) throw new NotVerifiable(`${filename}: propiedad dinámica no verificable`);
++        const name = ts.isIdentifier(p.name) || ts.isStringLiteral(p.name) || ts.isNumericLiteral(p.name) ? p.name.text : '';
++        if (!name || Object.hasOwn(result, name)) throw new NotVerifiable(`${filename}: propiedad duplicada o inválida`);
++        result[name] = literal(p.initializer);
++      }
++      return result;
++    }
++    throw new NotVerifiable(`${filename}: expresión dinámica no ejecutada (${ts.SyntaxKind[node.kind]})`);
++  }
++  const candidates: ts.Expression[] = [];
++  for (const statement of sf.statements) {
++    if (!ts.isVariableStatement(statement) || !statement.modifiers?.some(m => m.kind === ts.SyntaxKind.ExportKeyword)) continue;
++    for (const decl of statement.declarationList.declarations) {
++      if (decl.initializer && (decl.type?.getText(sf) === 'LessonData' || (ts.isObjectLiteralExpression(decl.initializer) && decl.initializer.properties.some(p => p.name?.getText(sf).replace(/["']/g, '') === 'metadata')))) candidates.push(decl.initializer);
++    }
++  }
++  if (candidates.length !== 1) throw new NotVerifiable(`${filename}: se esperaba un único objeto exportado LessonData`);
++  const result = literal(candidates[0]);
++  if (!result?.metadata || typeof result.metadata !== 'object') throw new NotVerifiable(`${filename}: metadata ausente`);
++  return result;
++}
++
++export interface Difference { field: string; expected: unknown; found: unknown; source: string; }
++export function compareMetadata(metadata: Record<string, any>, expected: CanonicalLesson): Difference[] {
++  const differences: Difference[] = [];
++  const check = (field: string, value: unknown, actual: unknown) => {
++    if (value !== actual) differences.push({ field, expected: value, found: actual ?? null, source: field === 'nextLessonTitle' ? expected.nextSource : expected.source });
++  };
++  const safe = (fn: () => unknown) => { try { return fn(); } catch { return null; } };
++  // El curso se vincula por manifiesto/ruta; si el módulo lo declara también, debe coincidir.
++  if (metadata.courseId !== undefined) check('courseId', expected.course, text(metadata.courseId));
++  check('grade', expected.grade, safe(() => gradeNumber(metadata.grade)));
++  check('subject', expected.subject, safe(() => subjectKey(metadata.subject)));
++  check('oaCode', expected.oa, safe(() => oaNumber(metadata.oaCode)));
++  check('lessonNumber', expected.lesson, metadata.lessonNumber);
++  check('totalLessonsInOa', expected.total, metadata.totalLessonsInOa);
++  check('lessonTitle', expected.title, text(metadata.lessonTitle));
++  if (typeof metadata.nextLessonTitle !== 'string') check('nextLessonTitle', expected.nextTitle, null);
++  else check('nextLessonTitle', expected.nextTitle, text(metadata.nextLessonTitle));
++  return differences;
++}
++
++export function validateBatch(root: string, ref: CanonicalReference, batch: Array<{ source: string; module: string; data: { metadata: Record<string, any> } }>) {
++  // Revalidar hashes e inventario justo antes de autorizar la primera escritura.
++  if (JSON.stringify(buildCanonicalReference(root)) !== JSON.stringify(ref)) throw new NotVerifiable('Las fuentes cambiaron durante el preflight');
++  if (batch.length !== ref.lessons.length || new Set(batch.map(b => b.source)).size !== batch.length) throw new NotVerifiable('Cobertura del lote incompleta o duplicada');
++  const differences: Difference[] = [];
++  for (const item of batch) {
++    const expected = ref.lessons.find(l => l.source === item.source && l.module === item.module);
++    if (!expected) throw new NotVerifiable(`Vínculo fuente/módulo no canónico: ${item.source} -> ${item.module}`);
++    differences.push(...compareMetadata(item.data.metadata, expected));
++  }
++  if (differences.length) throw Object.assign(new Error(`FALLO_CORRESPONDENCIA: ${JSON.stringify(differences)}`), { exitCode: 1 });
++}
+diff --git a/scripts/pipeline_sync_lessons.ts b/scripts/pipeline_sync_lessons.ts
+index 3fab51a..48a48aa 100644
+--- a/scripts/pipeline_sync_lessons.ts
++++ b/scripts/pipeline_sync_lessons.ts
+@@ -2,9 +2,9 @@ import fs from 'fs';
+ import path from 'path';
+ import crypto from 'crypto';
+ import { fileURLToPath } from 'url';
+-import { LessonData, SlidePrompt, GuidedItem, QuizQuestion, RecoveryItem } from '../Web Studio Simple/src/types/lesson';
+-import { adaptPlayerLessonToGenerator } from '../Web Studio Simple/src/lib/lesson-adapter';
++import type { LessonData, SlidePrompt, GuidedItem, QuizQuestion, RecoveryItem } from '../Web Studio Simple/src/types/lesson';
+ import { lintPedagogicalLesson } from './linter_contrato_pedagogico';
++import { loadCanonicalReference, validateBatch, parseSource, REFERENCE_PATH } from './canonical_lesson_reference';
+ 
+ const __filename = fileURLToPath(import.meta.url);
+ const __dirname = path.dirname(__filename);
+@@ -115,8 +115,8 @@ export interface FileMetadata {
+   courseId: string;
+ }
+ 
+-export function extractFileMetadata(filePath: string, content: string): FileMetadata {
+-  const relPath = path.relative(REVISAR_DIR, filePath).replace(/\\/g, '/');
++export function extractFileMetadata(filePath: string, content: string, sourceRoot = REVISAR_DIR): FileMetadata {
++  const relPath = path.relative(sourceRoot, filePath).replace(/\\/g, '/');
+   const pathParts = relPath.split('/');
+ 
+   const courseId = pathParts[0] || '110-7';
+@@ -146,20 +146,14 @@ export function extractFileMetadata(filePath: string, content: string): FileMeta
+     if (oMatch) detectedOaNum = parseInt(oMatch[1], 10);
+   }
+ 
+-  const titleMatch = content.match(/\*\*(?:Lesson title|T[íi]tulo de la clase|T[íi]tulo|Title):\*\*\s*(.+)/i);
++  const officialSource = parseSource(content, filePath);
+ 
+   const durationMatch = content.match(/\*\*Duraci[óo]n:\*\*\s*(.+)/i)
+     || content.match(/\*\*Duration:\*\*\s*(.+)/i);
+ 
+   const nextMatch = content.match(/\*\*(?:Next class working title|Next class title|T[íi]tulo de trabajo de la siguiente clase|Pr[óo]xima clase):\*\*\s*(.+)/i);
+ 
+-  let resolvedTitle = titleMatch ? titleMatch[1].trim() : '';
+-  if (!resolvedTitle) {
+-    const h1Match = content.match(/^#\s+EstudioSimple\s*[·|]\s*(.+)$/m);
+-    if (h1Match && !h1Match[1].toLowerCase().includes('interactive lesson')) {
+-      resolvedTitle = h1Match[1].trim();
+-    }
+-  }
++  const resolvedTitle = officialSource.title;
+ 
+   return {
+     grade: detectedGrade,
+@@ -541,7 +535,7 @@ export function parseLessonMarkdown(mdContent: string, meta: FileMetadata, fileP
+ 
+         const resourceText = resMatch ? resMatch[1].trim() : '';
+         if (!resourceText) {
+-          throw new Error(`[Pipeline Error] Ruta: ${filePathForContext || meta.fileName} | Campo: practice[${practice.length}].context | Causa: Estímulo indispensable ausente en la fuente ('Recurso nuevo visible para el estudiante' no encontrado o vacío; prohibido sustituir por rótulo genérico).`);
++          throw new Error(`[Pipeline Error] Ruta: ${filePathForContext || filePathForContext || meta.lessonTitle} | Campo: practice[${practice.length}].context | Causa: Estímulo indispensable ausente en la fuente ('Recurso nuevo visible para el estudiante' no encontrado o vacío; prohibido sustituir por rótulo genérico).`);
+         }
+ 
+         practice.push({
+@@ -737,15 +731,15 @@ export function parseLessonMarkdown(mdContent: string, meta: FileMetadata, fileP
+           }
+         }
+         if (!rLet) {
+-          throw new Error(`[Pipeline Error] Ruta: ${filePathForContext || meta.fileName} | Campo: recovery[${recIdx}].correct | Causa: Recuperación de selección múltiple carece de clave explícita [A-D] o marca inequívoca en la fuente (prohibido default a 'A').`);
++          throw new Error(`[Pipeline Error] Ruta: ${filePathForContext || filePathForContext || meta.lessonTitle} | Campo: recovery[${recIdx}].correct | Causa: Recuperación de selección múltiple carece de clave explícita [A-D] o marca inequívoca en la fuente (prohibido default a 'A').`);
+         }
+         const matchedOpt = recoveryOptions.find(o => o.startsWith(`${rLet}.`));
+         if (!matchedOpt) {
+-          throw new Error(`[Pipeline Error] Ruta: ${filePathForContext || meta.fileName} | Campo: recovery[${recIdx}].correct | Causa: La clave '${rLet}' no coincide con ninguna de las 4 opciones encontradas.`);
++          throw new Error(`[Pipeline Error] Ruta: ${filePathForContext || filePathForContext || meta.lessonTitle} | Campo: recovery[${recIdx}].correct | Causa: La clave '${rLet}' no coincide con ninguna de las 4 opciones encontradas.`);
+         }
+         recoveryCorrect = matchedOpt;
+       } else if (directOptLines.length > 0 && directOptLines.length < 4) {
+-        throw new Error(`[Pipeline Error] Ruta: ${filePathForContext || meta.fileName} | Campo: recovery[${recIdx}].options | Causa: Recuperación de selección múltiple incompleta: se encontraron ${directOptLines.length} opciones en lugar de 4.`);
++        throw new Error(`[Pipeline Error] Ruta: ${filePathForContext || filePathForContext || meta.lessonTitle} | Campo: recovery[${recIdx}].options | Causa: Recuperación de selección múltiple incompleta: se encontraron ${directOptLines.length} opciones en lugar de 4.`);
+       }
+     }
+ 
+@@ -940,23 +934,25 @@ export function parseLessonMarkdown(mdContent: string, meta: FileMetadata, fileP
+ export async function runUniversalPipeline(options: {
+   outputDir?: string;
+   isStaging?: boolean;
++  rootDir?: string;
++  referencePath?: string;
++  validateOnly?: boolean;
+ } = {}) {
+   const isStaging = options.isStaging ?? true;
+-  const targetLessonsDir = options.outputDir || STAGING_LESSONS_DIR;
+-  const targetManifestDir = isStaging ? STAGING_MANIFEST_DIR : path.resolve(ROOT, 'data');
++  if (!isStaging) throw new Error('Esta entrega sólo autoriza preparación aislada');
++  const root = path.resolve(options.rootDir || ROOT);
++  const sourceRoot = path.join(root, 'LECCIONES_POR_REVISAR');
++  const stagingRoot = path.join(root, 'staging_preparacion_aislada');
++  const targetLessonsDir = path.resolve(options.outputDir || path.join(stagingRoot, 'lessons'));
++  if (path.relative(stagingRoot, targetLessonsDir).split(path.sep).includes('..')) throw new Error('La salida debe permanecer en preparación aislada');
++  const targetManifestDir = path.join(stagingRoot, 'manifests');
++  const canonical = loadCanonicalReference(root, options.referencePath || REFERENCE_PATH);
+ 
+   console.log('\n================================================================');
+   console.log(`🚀 INICIANDO SINCRONIZACIÓN EN PREPARACIÓN AISLADA`);
+   console.log(`   Directorio de salida: ${targetLessonsDir}`);
+   console.log('================================================================\n');
+ 
+-  if (!fs.existsSync(targetLessonsDir)) {
+-    fs.mkdirSync(targetLessonsDir, { recursive: true });
+-  }
+-  if (!fs.existsSync(targetManifestDir)) {
+-    fs.mkdirSync(targetManifestDir, { recursive: true });
+-  }
+-
+   // Descubrir archivos Markdown en LECCIONES_POR_REVISAR y en candidatos OA04
+   const allMdFiles: string[] = [];
+ 
+@@ -973,7 +969,7 @@ export async function runUniversalPipeline(options: {
+     }
+   }
+ 
+-  scanDir(REVISAR_DIR);
++  scanDir(sourceRoot);
+ 
+   console.log(`[1/4] Descubiertos ${allMdFiles.length} archivos Markdown para procesar.`);
+ 
+@@ -987,6 +983,10 @@ export async function runUniversalPipeline(options: {
+     return true;
+   });
+ 
++  const discoveredSources = validFiles.map(f => path.relative(root, f).replace(/\\/g, '/')).sort();
++  const expectedSources = canonical.lessons.map(l => l.source).sort();
++  if (JSON.stringify(discoveredSources) !== JSON.stringify(expectedSources)) throw new Error('NO_VERIFICABLE: inventario Markdown distinto de los vínculos canónicos');
++
+   // Preflight de lectura y análisis antes de escribir nada
+   console.log(`\n[2/4] Ejecutando Preflight y análisis puro de ${validFiles.length} lecciones...`);
+   const parsedBatch: Array<{
+@@ -999,7 +999,12 @@ export async function runUniversalPipeline(options: {
+ 
+   for (const filePath of validFiles) {
+     const content = fs.readFileSync(filePath, 'utf8');
+-    const meta = extractFileMetadata(filePath, content);
++    const meta = extractFileMetadata(filePath, content, sourceRoot);
++    const source = path.relative(root, filePath).replace(/\\/g, '/');
++    const expected = canonical.lessons.find(l => l.source === source)!;
++    // Los títulos de lámina y los títulos provisionales no sustituyen metadatos oficiales.
++    meta.lessonTitle = expected.title;
++    meta.nextLessonTitle = expected.nextTitle;
+ 
+     // Validar previamente contra Contrato Pedagógico Universal (Grupo A3)
+     const lintReport = lintPedagogicalLesson(filePath, content);
+@@ -1032,8 +1037,22 @@ export async function runUniversalPipeline(options: {
+     });
+   }
+ 
++  validateBatch(root, canonical, parsedBatch.map(item => ({
++    source: path.relative(root, item.filePath).replace(/\\/g, '/'),
++    module: `Web Studio Simple/src/data/lessons/${item.tsFileName}`,
++    data: item.lessonData
++  })));
++  if (options.validateOnly) return { total: parsedBatch.length, manifestPath: '', validationOnly: true };
++
+   console.log(`  ✓ Preflight exitoso: ${parsedBatch.length} lecciones analizadas y validadas.`);
+ 
++  if (!fs.existsSync(targetLessonsDir)) {
++    fs.mkdirSync(targetLessonsDir, { recursive: true });
++  }
++  if (!fs.existsSync(targetManifestDir)) {
++    fs.mkdirSync(targetManifestDir, { recursive: true });
++  }
++
+   // Escritura en staging aislado
+   console.log(`\n[3/4] Generando módulos TypeScript en ${targetLessonsDir}...`);
+   const manifestItems: any[] = [];
+@@ -1052,8 +1071,8 @@ export async function runUniversalPipeline(options: {
+       oaCode: item.meta.oaCode,
+       classNumber: item.meta.lessonNumber,
+       title: item.lessonData.metadata.lessonTitle,
+-      sourceFile: path.relative(ROOT, item.filePath).replace(/\\/g, '/'),
+-      destModule: path.relative(ROOT, outTsPath).replace(/\\/g, '/'),
++      sourceFile: path.relative(root, item.filePath).replace(/\\/g, '/'),
++      destModule: path.relative(root, outTsPath).replace(/\\/g, '/'),
+       varName: item.varName,
+       hash: fileHash,
+       status: 'EN_REVISION'
+@@ -1084,7 +1103,7 @@ export async function runUniversalPipeline(options: {
+   return { total: manifestItems.length, manifestPath };
+ }
+ 
+-if (process.argv[1] && process.argv[1].includes('pipeline_sync_lessons')) {
++if (process.argv[1] && path.resolve(process.argv[1]) === __filename) {
+   runUniversalPipeline().catch(err => {
+     console.error('Error fatal en Pipeline Universal:', err);
+     process.exit(1);
+diff --git a/scripts/test_canonical_auditor.ts b/scripts/test_canonical_auditor.ts
+new file mode 100644
+index 0000000..6fe063d
+--- /dev/null
++++ b/scripts/test_canonical_auditor.ts
+@@ -0,0 +1,168 @@
++import test from 'node:test';
++import assert from 'node:assert/strict';
++import fs from 'node:fs';
++import os from 'node:os';
++import path from 'node:path';
++import { spawnSync } from 'node:child_process';
++import { buildCanonicalReference, loadCanonicalReference, parseSource, readLessonObject, validateBatch, MODULE_DIR, REFERENCE_PATH } from './canonical_lesson_reference';
++import { runUniversalPipeline } from './pipeline_sync_lessons';
++
++const root = path.resolve(__dirname, '..');
++const auditor = path.join(__dirname, 'audit_structural_rules.ts');
++function write(base: string, name: string, data: string) { const p = path.join(base, name); fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, data); }
++function metadata(n: number) {
++  return { courseId: '110-7', grade: '7° Básico', subject: 'Ciencias Naturales', oaCode: 'OA 1', lessonNumber: n,
++    totalLessonsInOa: 2, lessonTitle: n === 1 ? 'Primera clase' : 'Segunda clase', nextLessonTitle: n === 1 ? 'Segunda clase' : 'Fin del objetivo' };
++}
++function object(n: number) { return { metadata: metadata(n), preQuestions: [{ question: 'Pre' }], postQuestions: [{ question: 'Post' }], practice: [], summaryIdeas: [['Idea', 'Contenido'], ['Otra', 'Contenido 2']] }; }
++const moduleName = (n: number) => `${MODULE_DIR}/ciencias_7b_oa01_clase0${n}.ts`;
++function writeModule(base: string, n: number, change: (d: any) => void = () => {}) {
++  const data = object(n); change(data); write(base, moduleName(n), `export const LESSON: LessonData = ${JSON.stringify(data)};`);
++}
++function fixture(t: any) {
++  const base = fs.mkdtempSync(path.join(os.tmpdir(), 'work-auditor-')); t.after(() => fs.rmSync(base, { recursive: true, force: true }));
++  const manifest = { curso: '110-7', nivel: '7° Básico', asignatura: 'Ciencias_Naturales', oa: 'OA01', total_lecciones: 2,
++    lecciones_construidas: [1, 2].map(n => ({ clase: n, archivo_ts: moduleName(n), archivo_md: `LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE0${n}.md` })) };
++  write(base, 'LECCIONES/110-7/Ciencias_Naturales/OA01/manifest.json', JSON.stringify(manifest));
++  for (const item of manifest.lecciones_construidas) {
++    const n = item.clase;
++    write(base, item.archivo_md, `# EstudioSimple · ${n === 1 ? 'Primera clase' : 'Segunda clase'}\n\n**Curso:** 110-7 · **Asignatura:** Ciencias_Naturales · **OA:** OA01 · **Clase:** 0${n} de 02\n${n === 2 ? '**Próxima clase:** Fin del objetivo\n' : ''}\n## 1. Paso 1\n**Título:** Una situación\n`);
++    writeModule(base, n);
++  }
++  const ref = buildCanonicalReference(base); write(base, REFERENCE_PATH, JSON.stringify(ref, null, 2)); return base;
++}
++function cli(base: string) {
++  const result = spawnSync(process.execPath, ['--import', 'tsx', auditor, '--root', base], { cwd: root, encoding: 'utf8' });
++  assert.equal(result.signal, null, result.stderr);
++  assert.notEqual(result.status, null, result.stderr);
++  return { code: result.status, report: JSON.parse(result.stdout), stderr: result.stderr };
++}
++
++test('CLI real: caso válido, dos ideas aceptadas y cierre explícito, salida 0', t => {
++  const base = fixture(t), result = cli(base); assert.equal(result.code, 0, result.stderr); assert.equal(result.report.totals.verified, 2); assert.equal(result.report.totals.pendingSummaryReview, 0);
++});
++for (const [name, change, field] of [
++  ['título plausible ajeno', (d: any) => d.metadata.lessonTitle = 'La sociedad agrícola', 'lessonTitle'],
++  ['puente plausible ajeno', (d: any) => d.metadata.nextLessonTitle = 'El sistema solar', 'nextLessonTitle'],
++  ['puente vacío', (d: any) => d.metadata.nextLessonTitle = '', 'nextLessonTitle'],
++  ['asignatura ajena', (d: any) => d.metadata.subject = 'Historia', 'subject'],
++  ['curso ajeno', (d: any) => d.metadata.courseId = '110-8', 'courseId'],
++  ['OA ajeno', (d: any) => d.metadata.oaCode = 'OA 2', 'oaCode'],
++  ['clase ajena', (d: any) => d.metadata.lessonNumber = 2, 'lessonNumber'],
++  ['nivel ajeno', (d: any) => d.metadata.grade = '8° Básico', 'grade'],
++  ['total ajeno', (d: any) => d.metadata.totalLessonsInOa = 6, 'totalLessonsInOa']
++] as const) {
++  test(`CLI real: rechaza ${name}, salida 1`, t => {
++    const base = fixture(t); writeModule(base, 1, change); const result = cli(base); assert.equal(result.code, 1, result.stderr);
++    assert.ok(result.report.results[0].differences.some((d: any) => d.field === field));
++  });
++}
++test('CLI real: conserva control R1 narrativo en Ciencias', t => {
++  const base = fixture(t); writeModule(base, 1, d => d.interactive = { type: 'reading_resource', paragraphs: ['Ajeno'] });
++  assert.equal(cli(base).code, 1);
++});
++test('CLI real: conserva control R2 de reactivos ausentes', t => {
++  const base = fixture(t); writeModule(base, 1, d => d.preQuestions = []); assert.equal(cli(base).code, 1);
++});
++test('CLI real: fuente ausente, salida 2', t => {
++  const base = fixture(t); const ref = loadCanonicalReference(base); fs.unlinkSync(path.join(base, ref.lessons[0].source)); assert.equal(cli(base).code, 2);
++});
++test('CLI real: referencia ausente, salida 2', t => {
++  const base = fixture(t); fs.unlinkSync(path.join(base, REFERENCE_PATH)); assert.equal(cli(base).code, 2);
++});
++test('CLI real: fuente cambiada, salida 2 sin regeneración silenciosa', t => {
++  const base = fixture(t), ref = loadCanonicalReference(base); fs.appendFileSync(path.join(base, ref.lessons[0].source), '\nContenido cambiado');
++  assert.equal(cli(base).code, 2); assert.equal(JSON.parse(fs.readFileSync(path.join(base, REFERENCE_PATH), 'utf8')).lessons[0].sourceSha256, ref.lessons[0].sourceSha256);
++});
++test('CLI real: referencia alterada, salida 2', t => {
++  const base = fixture(t), ref = loadCanonicalReference(base); ref.lessons[0].title = 'Inventado'; write(base, REFERENCE_PATH, JSON.stringify(ref)); assert.equal(cli(base).code, 2);
++});
++test('CLI real: títulos oficiales contradictorios, salida 2', t => {
++  const base = fixture(t), ref = loadCanonicalReference(base), p = path.join(base, ref.lessons[0].source);
++  fs.writeFileSync(p, fs.readFileSync(p, 'utf8').replace('## 1.', '**Título:** Contradicción\n## 1.')); assert.equal(cli(base).code, 2);
++});
++test('CLI real: módulo o fuente nuevos sin vínculo no pueden pasar', t => {
++  const base = fixture(t); write(base, `${MODULE_DIR}/otro.ts`, 'export const x = {}'); assert.equal(cli(base).code, 2);
++  fs.unlinkSync(path.join(base, MODULE_DIR, 'otro.ts')); write(base, 'LECCIONES_POR_REVISAR/nueva.md', '# Nueva'); assert.equal(cli(base).code, 2);
++});
++test('CLI real: módulo vinculado ausente, salida 2', t => {
++  const base = fixture(t); fs.unlinkSync(path.join(base, moduleName(1))); assert.equal(cli(base).code, 2);
++});
++test('AST: rechaza expresión dinámica y no la ejecuta', t => {
++  const base = fixture(t), marker = path.join(base, 'no-debe-existir');
++  write(base, moduleName(1), `export const X: LessonData = { metadata: (() => {require('fs').writeFileSync(${JSON.stringify(marker)}, 'ejecutado');return {}})() };`);
++  assert.equal(cli(base).code, 2); assert.equal(fs.existsSync(marker), false);
++});
++test('AST: rechaza propiedades duplicadas y admite acentos/escapes/arrays anidados', () => {
++  assert.throws(() => readLessonObject('export const X: LessonData = { metadata: {}, metadata: {} };', 'duplicado.ts'));
++  const parsed = readLessonObject('export const X: LessonData = { metadata: {lessonTitle: "Él dijo \\"hola\\""}, a: [["ítem", {n: 1}]] };', 'ok.ts');
++  assert.equal(parsed.metadata.lessonTitle, 'Él dijo "hola"'); assert.equal(parsed.a[0][1].n, 1);
++});
++test('Cabecera: título H1 oficial prevalece sobre título de lámina posterior', t => {
++  const base = fixture(t); const ref = loadCanonicalReference(base); assert.equal(ref.lessons[0].title, 'Primera clase');
++});
++test('Cabecera: rechaza identidad contradictoria entre encabezado y campos', t => {
++  const base = fixture(t), ref = loadCanonicalReference(base), source = fs.readFileSync(path.join(base, ref.lessons[0].source), 'utf8');
++  assert.throws(() => parseSource(source.replace('\n\n**Curso:', '\n## 7° básico · Ciencias Naturales · OA02 · Clase 01\n\n**Curso:'), 'contradiccion.md'), /encabezado curricular/);
++});
++test('CLI real: normaliza sólo Unicode/espacios; rechaza una paráfrasis con puntuación distinta', t => {
++  const base = fixture(t); writeModule(base, 1, d => d.metadata.lessonTitle = ' Primera   clase '); assert.equal(cli(base).code, 0);
++  writeModule(base, 1, d => d.metadata.lessonTitle = 'Primera clase.'); assert.equal(cli(base).code, 1);
++});
++test('Provisional distinto se informa sin sustituir el oficial de la siguiente clase', t => {
++  const base = fixture(t), source = loadCanonicalReference(base).lessons[0].source;
++  fs.writeFileSync(path.join(base, source), fs.readFileSync(path.join(base, source), 'utf8').replace('## 1.', '**Título de trabajo de la siguiente clase:** Título provisional\n## 1.'));
++  const ref = buildCanonicalReference(base); write(base, REFERENCE_PATH, JSON.stringify(ref)); assert.equal(cli(base).code, 0); assert.equal(ref.lessons[0].advisories.length, 1);
++});
++test('Protegida: Matemática OA01 no se lee ni se cuenta como PASS', t => {
++  const base = fixture(t), protectedModule = `${MODULE_DIR}/matematica_7b_oa01_clase01.ts`;
++  write(base, 'LECCIONES/110-7/Matematica/OA01/manifest.json', JSON.stringify({ curso: '110-7', asignatura: 'Matematica', oa: 'OA01', total_clases: 6, resolucion_rutas_typescript: { archivos_clases_ts: [protectedModule] } }));
++  const sentinel = 'ESTE ARCHIVO NO ES TYPESCRIPT Y NO DEBE LEERSE'; write(base, protectedModule, sentinel);
++  write(base, REFERENCE_PATH, JSON.stringify(buildCanonicalReference(base)));
++  const result = cli(base); assert.equal(result.code, 0); assert.equal(result.report.totals.protected, 6); assert.equal(result.report.totals.verified, 2);
++  assert.equal(fs.readFileSync(path.join(base, protectedModule), 'utf8'), sentinel);
++});
++test('Preflight: metadatos incorrectos y cobertura incompleta son rechazados', t => {
++  const base = fixture(t), ref = loadCanonicalReference(base);
++  const batch = ref.lessons.map((l, i) => ({ source: l.source, module: l.module, data: object(i + 1) }));
++  assert.doesNotThrow(() => validateBatch(base, ref, batch)); batch[0].data.metadata.lessonTitle = 'Inventado'; assert.throws(() => validateBatch(base, ref, batch), /FALLO_CORRESPONDENCIA/);
++  assert.throws(() => validateBatch(base, ref, batch.slice(0, 1)), /Cobertura/);
++});
++test('Pipeline real: referencia ausente detiene antes de crear directorios/salidas', async t => {
++  const base = fixture(t); fs.unlinkSync(path.join(base, REFERENCE_PATH));
++  await assert.rejects(runUniversalPipeline({ rootDir: base }), /Falta referencia/); assert.equal(fs.existsSync(path.join(base, 'staging_preparacion_aislada')), false);
++});
++test('Pipeline real: vínculo no canónico detiene antes de escribir', async t => {
++  // Copia de insumos completos para que linter/parser recorran las fuentes reales, sin sustituirlos.
++  const base = fs.mkdtempSync(path.join(os.tmpdir(), 'work-pipeline-')); t.after(() => fs.rmSync(base, { recursive: true, force: true }));
++  fs.cpSync(path.join(root, 'LECCIONES'), path.join(base, 'LECCIONES'), { recursive: true });
++  fs.cpSync(path.join(root, 'LECCIONES_POR_REVISAR'), path.join(base, 'LECCIONES_POR_REVISAR'), { recursive: true });
++  const manifest = 'LECCIONES/110-7/Ciencias_Naturales/OA01/manifest.json';
++  const data = JSON.parse(fs.readFileSync(path.join(base, manifest), 'utf8')); data.lecciones_construidas[0].archivo_ts = `${MODULE_DIR}/nombre_ajeno.ts`; write(base, manifest, JSON.stringify(data));
++  write(base, REFERENCE_PATH, JSON.stringify(buildCanonicalReference(base)));
++  await assert.rejects(runUniversalPipeline({ rootDir: base }), /Vínculo fuente\/módulo no canónico/);
++  assert.equal(fs.existsSync(path.join(base, 'staging_preparacion_aislada')), false);
++});
++test('Pipeline recibido: valida treinta fuentes sin escribir ni exigir tres ideas', async () => {
++  const result = await runUniversalPipeline({ validateOnly: true }); assert.equal(result.total, buildCanonicalReference(root).lessons.length); assert.equal(result.manifestPath, '');
++});
++test('Pipeline real: genera treinta módulos sólo en copia aislada; auditor los verifica; fuentes y Matemática OA01 intactas', async t => {
++  const base = fs.mkdtempSync(path.join(os.tmpdir(), 'work-staging-')); t.after(() => fs.rmSync(base, { recursive: true, force: true }));
++  fs.cpSync(path.join(root, 'LECCIONES'), path.join(base, 'LECCIONES'), { recursive: true });
++  fs.cpSync(path.join(root, 'LECCIONES_POR_REVISAR'), path.join(base, 'LECCIONES_POR_REVISAR'), { recursive: true });
++  const protectedModule = `${MODULE_DIR}/matematica_7b_oa01_clase01.ts`;
++  const protectedSource = 'LECCIONES_POR_REVISAR/110-7/Matematica/OA01/CLASE01.md';
++  write(base, protectedModule, 'PROTEGIDO_TS_NO_PARSEAR'); write(base, protectedSource, 'PROTEGIDO_MD_NO_PARSEAR');
++  const ref = buildCanonicalReference(base); write(base, REFERENCE_PATH, JSON.stringify(ref));
++  const before = ref.lessons.map(l => fs.readFileSync(path.join(base, l.source)));
++  const result = await runUniversalPipeline({ rootDir: base }); assert.equal(result.total, ref.lessons.length);
++  assert.equal(fs.existsSync(path.join(base, 'staging_preparacion_aislada/lessons/matematica_7b_oa01_clase01.ts')), false);
++  for (const [index, lesson] of ref.lessons.entries()) {
++    assert.deepEqual(fs.readFileSync(path.join(base, lesson.source)), before[index]);
++    const generated = fs.readFileSync(path.join(base, 'staging_preparacion_aislada/lessons', path.basename(lesson.module)), 'utf8');
++    write(base, lesson.module, generated);
++  }
++  assert.equal(fs.readFileSync(path.join(base, protectedModule), 'utf8'), 'PROTEGIDO_TS_NO_PARSEAR');
++  assert.equal(fs.readFileSync(path.join(base, protectedSource), 'utf8'), 'PROTEGIDO_MD_NO_PARSEAR');
++  const audited = cli(base); assert.equal(audited.code, 0, JSON.stringify(audited.report)); assert.equal(audited.report.totals.verified, ref.lessons.length);
++});

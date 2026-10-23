@@ -1,0 +1,223 @@
+TAP version 13
+# ================================================================
+# 🚀 INICIANDO SINCRONIZACIÓN EN PREPARACIÓN AISLADA
+#    Directorio de salida: /tmp/work-pipeline-N8SIJM/staging_preparacion_aislada/lessons
+# ================================================================
+# [1/4] Descubiertos 30 archivos Markdown para procesar.
+# [2/4] Ejecutando Preflight y análisis puro de 30 lecciones...
+# ================================================================
+# 🚀 INICIANDO SINCRONIZACIÓN EN PREPARACIÓN AISLADA
+#    Directorio de salida: /workspace/scratch/92a8559b2c43/auditor_work_20261022/work/staging_preparacion_aislada/lessons
+# ================================================================
+# [1/4] Descubiertos 30 archivos Markdown para procesar.
+# [2/4] Ejecutando Preflight y análisis puro de 30 lecciones...
+# ================================================================
+# 🚀 INICIANDO SINCRONIZACIÓN EN PREPARACIÓN AISLADA
+#    Directorio de salida: /tmp/work-staging-0p5bYH/staging_preparacion_aislada/lessons
+# ================================================================
+# [1/4] Descubiertos 31 archivos Markdown para procesar.
+#   🔒 PROTECCIÓN ABSOLUTA: Omitiendo CLASE01.md (Matemática OA01 congelado).
+# [2/4] Ejecutando Preflight y análisis puro de 30 lecciones...
+#   ✓ Preflight exitoso: 30 lecciones analizadas y validadas.
+# [3/4] Generando módulos TypeScript en /tmp/work-staging-0p5bYH/staging_preparacion_aislada/lessons...
+#   ✓ Se generaron 30 módulos TypeScript en preparación aislada.
+# [4/4] Guardando manifiesto de preparación aislada...
+#   ✓ Manifiesto guardado en: /tmp/work-staging-0p5bYH/staging_preparacion_aislada/manifests/staging_sync_manifest.json
+# ================================================================
+# ✅ PREPARACIÓN AISLADA COMPLETADA CON ÉXITO (SIN TOCAR PRODUCCIÓN)
+# ================================================================
+# Subtest: CLI real: caso válido, dos ideas aceptadas y cierre explícito, salida 0
+ok 1 - CLI real: caso válido, dos ideas aceptadas y cierre explícito, salida 0
+  ---
+  duration_ms: 601.374472
+  type: 'test'
+  ...
+# Subtest: CLI real: rechaza título plausible ajeno, salida 1
+ok 2 - CLI real: rechaza título plausible ajeno, salida 1
+  ---
+  duration_ms: 607.326919
+  type: 'test'
+  ...
+# Subtest: CLI real: rechaza puente plausible ajeno, salida 1
+ok 3 - CLI real: rechaza puente plausible ajeno, salida 1
+  ---
+  duration_ms: 549.087159
+  type: 'test'
+  ...
+# Subtest: CLI real: rechaza puente vacío, salida 1
+ok 4 - CLI real: rechaza puente vacío, salida 1
+  ---
+  duration_ms: 521.347627
+  type: 'test'
+  ...
+# Subtest: CLI real: rechaza asignatura ajena, salida 1
+ok 5 - CLI real: rechaza asignatura ajena, salida 1
+  ---
+  duration_ms: 493.248985
+  type: 'test'
+  ...
+# Subtest: CLI real: rechaza curso ajeno, salida 1
+ok 6 - CLI real: rechaza curso ajeno, salida 1
+  ---
+  duration_ms: 485.020479
+  type: 'test'
+  ...
+# Subtest: CLI real: rechaza OA ajeno, salida 1
+ok 7 - CLI real: rechaza OA ajeno, salida 1
+  ---
+  duration_ms: 525.135527
+  type: 'test'
+  ...
+# Subtest: CLI real: rechaza clase ajena, salida 1
+ok 8 - CLI real: rechaza clase ajena, salida 1
+  ---
+  duration_ms: 544.261496
+  type: 'test'
+  ...
+# Subtest: CLI real: rechaza nivel ajeno, salida 1
+ok 9 - CLI real: rechaza nivel ajeno, salida 1
+  ---
+  duration_ms: 469.959154
+  type: 'test'
+  ...
+# Subtest: CLI real: rechaza total ajeno, salida 1
+ok 10 - CLI real: rechaza total ajeno, salida 1
+  ---
+  duration_ms: 451.346801
+  type: 'test'
+  ...
+# Subtest: CLI real: conserva control R1 narrativo en Ciencias
+ok 11 - CLI real: conserva control R1 narrativo en Ciencias
+  ---
+  duration_ms: 463.986032
+  type: 'test'
+  ...
+# Subtest: CLI real: conserva control R2 de reactivos ausentes
+ok 12 - CLI real: conserva control R2 de reactivos ausentes
+  ---
+  duration_ms: 472.659308
+  type: 'test'
+  ...
+# Subtest: CLI real: fuente ausente, salida 2
+ok 13 - CLI real: fuente ausente, salida 2
+  ---
+  duration_ms: 459.943777
+  type: 'test'
+  ...
+# Subtest: CLI real: referencia ausente, salida 2
+ok 14 - CLI real: referencia ausente, salida 2
+  ---
+  duration_ms: 473.157198
+  type: 'test'
+  ...
+# Subtest: CLI real: fuente cambiada, salida 2 sin regeneración silenciosa
+ok 15 - CLI real: fuente cambiada, salida 2 sin regeneración silenciosa
+  ---
+  duration_ms: 457.578116
+  type: 'test'
+  ...
+# Subtest: CLI real: referencia alterada, salida 2
+ok 16 - CLI real: referencia alterada, salida 2
+  ---
+  duration_ms: 485.314709
+  type: 'test'
+  ...
+# Subtest: CLI real: títulos oficiales contradictorios, salida 2
+ok 17 - CLI real: títulos oficiales contradictorios, salida 2
+  ---
+  duration_ms: 487.206
+  type: 'test'
+  ...
+# Subtest: CLI real: módulo o fuente nuevos sin vínculo no pueden pasar
+ok 18 - CLI real: módulo o fuente nuevos sin vínculo no pueden pasar
+  ---
+  duration_ms: 982.223448
+  type: 'test'
+  ...
+# Subtest: CLI real: módulo vinculado ausente, salida 2
+ok 19 - CLI real: módulo vinculado ausente, salida 2
+  ---
+  duration_ms: 457.721201
+  type: 'test'
+  ...
+# Subtest: AST: rechaza expresión dinámica y no la ejecuta
+ok 20 - AST: rechaza expresión dinámica y no la ejecuta
+  ---
+  duration_ms: 534.987215
+  type: 'test'
+  ...
+# Subtest: AST: rechaza propiedades duplicadas y admite acentos/escapes/arrays anidados
+ok 21 - AST: rechaza propiedades duplicadas y admite acentos/escapes/arrays anidados
+  ---
+  duration_ms: 7.319298
+  type: 'test'
+  ...
+# Subtest: Cabecera: título H1 oficial prevalece sobre título de lámina posterior
+ok 22 - Cabecera: título H1 oficial prevalece sobre título de lámina posterior
+  ---
+  duration_ms: 1.58772
+  type: 'test'
+  ...
+# Subtest: Cabecera: rechaza identidad contradictoria entre encabezado y campos
+ok 23 - Cabecera: rechaza identidad contradictoria entre encabezado y campos
+  ---
+  duration_ms: 1.759909
+  type: 'test'
+  ...
+# Subtest: CLI real: normaliza sólo Unicode/espacios; rechaza una paráfrasis con puntuación distinta
+ok 24 - CLI real: normaliza sólo Unicode/espacios; rechaza una paráfrasis con puntuación distinta
+  ---
+  duration_ms: 946.618146
+  type: 'test'
+  ...
+# Subtest: Provisional distinto se informa sin sustituir el oficial de la siguiente clase
+ok 25 - Provisional distinto se informa sin sustituir el oficial de la siguiente clase
+  ---
+  duration_ms: 504.143627
+  type: 'test'
+  ...
+# Subtest: Protegida: Matemática OA01 no se lee ni se cuenta como PASS
+ok 26 - Protegida: Matemática OA01 no se lee ni se cuenta como PASS
+  ---
+  duration_ms: 462.506554
+  type: 'test'
+  ...
+# Subtest: Preflight: metadatos incorrectos y cobertura incompleta son rechazados
+ok 27 - Preflight: metadatos incorrectos y cobertura incompleta son rechazados
+  ---
+  duration_ms: 4.907838
+  type: 'test'
+  ...
+# Subtest: Pipeline real: referencia ausente detiene antes de crear directorios/salidas
+ok 28 - Pipeline real: referencia ausente detiene antes de crear directorios/salidas
+  ---
+  duration_ms: 2.02012
+  type: 'test'
+  ...
+# Subtest: Pipeline real: vínculo no canónico detiene antes de escribir
+ok 29 - Pipeline real: vínculo no canónico detiene antes de escribir
+  ---
+  duration_ms: 91.897392
+  type: 'test'
+  ...
+# Subtest: Pipeline recibido: valida treinta fuentes sin escribir ni exigir tres ideas
+ok 30 - Pipeline recibido: valida treinta fuentes sin escribir ni exigir tres ideas
+  ---
+  duration_ms: 51.62161
+  type: 'test'
+  ...
+# Subtest: Pipeline real: genera treinta módulos sólo en copia aislada; auditor los verifica; fuentes y Matemática OA01 intactas
+ok 31 - Pipeline real: genera treinta módulos sólo en copia aislada; auditor los verifica; fuentes y Matemática OA01 intactas
+  ---
+  duration_ms: 603.317704
+  type: 'test'
+  ...
+1..31
+# tests 31
+# suites 0
+# pass 31
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 13957.721067

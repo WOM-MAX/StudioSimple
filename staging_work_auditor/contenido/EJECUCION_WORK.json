@@ -1,0 +1,32 @@
+{
+  "checkedAt": "2026-10-22T00:12:52.541831-03:00",
+  "baseCommit": "200d6507137de5808aa10bd81ade2cb7d0e7c099",
+  "branch": "main",
+  "environment": {
+    "node": "v24.19.0",
+    "typescript": "5.6.3",
+    "tsx": "4.20.6",
+    "nodeTypes": "22"
+  },
+  "checks": [
+    {
+      "command": "node --import tsx --test --test-reporter=tap scripts/test_canonical_auditor.ts",
+      "exitCode": 0,
+      "tests": 31,
+      "pass": 31,
+      "fail": 0
+    },
+    {
+      "command": "node node_modules/typescript/bin/tsc --noEmit --module esnext --moduleResolution node --target ES2022 --esModuleInterop --strict --skipLibCheck --types node scripts/audit_structural_rules.ts scripts/canonical_lesson_reference.ts scripts/pipeline_sync_lessons.ts scripts/test_canonical_auditor.ts",
+      "exitCode": 0
+    },
+    {
+      "command": "node --import tsx scripts/audit_structural_rules.ts --report RESULTADO_LOTE_REAL.json",
+      "exitCode": 1,
+      "reason": "Módulo Matemática OA04 Clase05: nextLessonTitle difiere del título oficial de Clase06"
+    }
+  ],
+  "normativeState": "EN_REVISION",
+  "deployed": false,
+  "sourceModulesModified": false
+}

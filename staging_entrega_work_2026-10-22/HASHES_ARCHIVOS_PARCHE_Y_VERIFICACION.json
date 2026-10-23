@@ -1,0 +1,61 @@
+{
+  "timestamp": "2026-10-22T09:25:00-03:00",
+  "baseCommit": "200d6507137de5808aa10bd81ade2cb7d0e7c099",
+  "isolatedBranch": "work-auditor-titulos-test",
+  "environment": {
+    "os": "Windows 11 (win32-x64)",
+    "node": "v24.20.0",
+    "typescript": "5.6.3",
+    "tsx": "4.20.6",
+    "typesNode": "22.13.1"
+  },
+  "patchVerification": {
+    "patchFile": "PARCHE_APLICAR_EN_REPOSITORIO.patch",
+    "patchSha256": "3a7163f2b762cc443ff2870048b276fe7b291b7592d3315069d533f25fd234b1",
+    "gitApplyCheckExitCode": 0,
+    "gitApplyExitCode": 0
+  },
+  "files": [
+    {
+      "path": "scripts/audit_structural_rules.ts",
+      "baseSha256": "f31439eb18f3d1657ecc55479860a08bb4d00e54a107c48a9215c3866934c817",
+      "expectedPatchedSha256": "c22b34a208331408a310e83de49652f67782c465cda9444769b354fc284873ce",
+      "actualPatchedSha256": "c22b34a208331408a310e83de49652f67782c465cda9444769b354fc284873ce",
+      "match": true,
+      "bytes": 6993
+    },
+    {
+      "path": "scripts/pipeline_sync_lessons.ts",
+      "baseSha256": "f9e849b4144a04f10cf1b2f3cd840a7a94c55bee2929ee3efdf7ab81897b9d02",
+      "expectedPatchedSha256": "f942414ca5b8a65187d1229cbc05af28e70aa081e82f4bf7fafd4d41abd5f6d7",
+      "actualPatchedSha256": "f942414ca5b8a65187d1229cbc05af28e70aa081e82f4bf7fafd4d41abd5f6d7",
+      "match": true,
+      "bytes": 54648
+    },
+    {
+      "path": "scripts/canonical_lesson_reference.ts",
+      "baseSha256": null,
+      "expectedPatchedSha256": "53259bd8ca48dd2dcdfdc7ccd75e4de48f3f829a9ba38caa3d08422e2c5987e3",
+      "actualPatchedSha256": "53259bd8ca48dd2dcdfdc7ccd75e4de48f3f829a9ba38caa3d08422e2c5987e3",
+      "match": true,
+      "bytes": 18579
+    },
+    {
+      "path": "scripts/test_canonical_auditor.ts",
+      "baseSha256": null,
+      "expectedPatchedSha256": "d362e984e31dc00db5970c22c6849aa2677567bae31273e3d4fdeef902185ab9",
+      "actualPatchedSha256": "d362e984e31dc00db5970c22c6849aa2677567bae31273e3d4fdeef902185ab9",
+      "match": true,
+      "bytes": 13965
+    },
+    {
+      "path": "docs/auditorias/REFERENCIA_CANONICA_TITULOS_CONTINUIDAD.json",
+      "baseSha256": null,
+      "expectedPatchedSha256": "da81744b35f8279f684726ca85561e753d5b68ce329131a6c83d39a8abd6d76c",
+      "actualPatchedSha256": "da81744b35f8279f684726ca85561e753d5b68ce329131a6c83d39a8abd6d76c",
+      "match": true,
+      "bytes": 32698
+    }
+  ],
+  "allFilesMatchExpected": true
+}

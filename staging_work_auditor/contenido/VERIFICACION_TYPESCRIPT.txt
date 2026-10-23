@@ -1,0 +1,2 @@
+Verificación TypeScript focalizada: salida 0. Sin diagnósticos.
+Comando completo en EJECUCION_WORK.json. No se ejecutó build completo de la App: sus componentes no están incluidos en los insumos.

@@ -1,0 +1,59 @@
+{
+  "timestamp": "2026-10-22T09:25:00-03:00",
+  "verifiedBy": "Antigravity (AI Software Engineer A-SDLC)",
+  "reviewedFrom": "ChatGPT Work (Auditor de Títulos y Continuidad)",
+  "protections": {
+    "matematicaOA01": {
+      "status": "PROTEGIDO_NO_INTERVENIDO",
+      "modulesIntact": 6,
+      "files": [
+        "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase01.ts",
+        "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase02.ts",
+        "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase03.ts",
+        "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase04.ts",
+        "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase05.ts",
+        "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase06.ts"
+      ],
+      "hashChanged": false
+    },
+    "markdownSources": {
+      "status": "CONGELADO_INTACTO",
+      "canonicalLessonsDir": "LECCIONES/110-7/",
+      "reviewStagingDir": "LECCIONES_POR_REVISAR/110-7/",
+      "filesChanged": []
+    },
+    "presentationsPPTX": {
+      "status": "CONGELADO_INTACTO",
+      "count": 14,
+      "dir": "PLANES MAESTROS PRESENTACIONES/",
+      "filesChanged": []
+    },
+    "audiovisual": {
+      "status": "CONGELADO_INTACTO",
+      "notes": "Videos y sincronización acústica bajo gestión de Walter"
+    },
+    "database": {
+      "status": "CONGELADO_INTACTO",
+      "neonPrisma": "Sin migraciones ni escrituras"
+    },
+    "editor": {
+      "status": "CONGELADO_INTACTO",
+      "notes": "Revisión de flujo guardar-exportar-cargar diferida para siguiente etapa"
+    },
+    "governance": {
+      "normativeState": "EN_REVISION",
+      "gitPush": false,
+      "railwayDeployment": false,
+      "approvalReservedTo": "Walter tras revisión con ChatGPT Work"
+    }
+  },
+  "authorizedSingleFix": {
+    "file": "Web Studio Simple/src/data/lessons/matematica_7b_oa04_clase05.ts",
+    "field": "metadata.nextLessonTitle",
+    "previousValue": "Clase 6: Síntesis Integradora y Ensayo de Evaluación Formativa",
+    "newValue": "Síntesis Integradora y Ensayo de Evaluación Formativa: Porcentajes en Acción",
+    "canonicalSource": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE06.md",
+    "diffLines": "+1 -1"
+  },
+  "remainingDiscrepancies": []
+}
