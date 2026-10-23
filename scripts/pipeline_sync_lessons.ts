@@ -2,9 +2,9 @@ import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
 import { fileURLToPath } from 'url';
-import { LessonData, SlidePrompt, GuidedItem, QuizQuestion, RecoveryItem } from '../Web Studio Simple/src/types/lesson';
-import { adaptPlayerLessonToGenerator } from '../Web Studio Simple/src/lib/lesson-adapter';
+import type { LessonData, SlidePrompt, GuidedItem, QuizQuestion, RecoveryItem } from '../Web Studio Simple/src/types/lesson';
 import { lintPedagogicalLesson } from './linter_contrato_pedagogico';
+import { loadCanonicalReference, validateBatch, parseSource, REFERENCE_PATH } from './canonical_lesson_reference';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -115,8 +115,8 @@ export interface FileMetadata {
   courseId: string;
 }
 
-export function extractFileMetadata(filePath: string, content: string): FileMetadata {
-  const relPath = path.relative(REVISAR_DIR, filePath).replace(/\\/g, '/');
+export function extractFileMetadata(filePath: string, content: string, sourceRoot = REVISAR_DIR): FileMetadata {
+  const relPath = path.relative(sourceRoot, filePath).replace(/\\/g, '/');
   const pathParts = relPath.split('/');
 
   const courseId = pathParts[0] || '110-7';
@@ -146,20 +146,14 @@ export function extractFileMetadata(filePath: string, content: string): FileMeta
     if (oMatch) detectedOaNum = parseInt(oMatch[1], 10);
   }
 
-  const titleMatch = content.match(/\*\*(?:Lesson title|T[íi]tulo de la clase|T[íi]tulo|Title):\*\*\s*(.+)/i);
+  const officialSource = parseSource(content, filePath);
 
   const durationMatch = content.match(/\*\*Duraci[óo]n:\*\*\s*(.+)/i)
     || content.match(/\*\*Duration:\*\*\s*(.+)/i);
 
   const nextMatch = content.match(/\*\*(?:Next class working title|Next class title|T[íi]tulo de trabajo de la siguiente clase|Pr[óo]xima clase):\*\*\s*(.+)/i);
 
-  let resolvedTitle = titleMatch ? titleMatch[1].trim() : '';
-  if (!resolvedTitle) {
-    const h1Match = content.match(/^#\s+EstudioSimple\s*[·|]\s*(.+)$/m);
-    if (h1Match && !h1Match[1].toLowerCase().includes('interactive lesson')) {
-      resolvedTitle = h1Match[1].trim();
-    }
-  }
+  const resolvedTitle = officialSource.title;
 
   return {
     grade: detectedGrade,
@@ -541,7 +535,7 @@ export function parseLessonMarkdown(mdContent: string, meta: FileMetadata, fileP
 
         const resourceText = resMatch ? resMatch[1].trim() : '';
         if (!resourceText) {
-          throw new Error(`[Pipeline Error] Ruta: ${filePathForContext || meta.fileName} | Campo: practice[${practice.length}].context | Causa: Estímulo indispensable ausente en la fuente ('Recurso nuevo visible para el estudiante' no encontrado o vacío; prohibido sustituir por rótulo genérico).`);
+          throw new Error(`[Pipeline Error] Ruta: ${filePathForContext || filePathForContext || meta.lessonTitle} | Campo: practice[${practice.length}].context | Causa: Estímulo indispensable ausente en la fuente ('Recurso nuevo visible para el estudiante' no encontrado o vacío; prohibido sustituir por rótulo genérico).`);
         }
 
         practice.push({
@@ -737,15 +731,15 @@ export function parseLessonMarkdown(mdContent: string, meta: FileMetadata, fileP
           }
         }
         if (!rLet) {
-          throw new Error(`[Pipeline Error] Ruta: ${filePathForContext || meta.fileName} | Campo: recovery[${recIdx}].correct | Causa: Recuperación de selección múltiple carece de clave explícita [A-D] o marca inequívoca en la fuente (prohibido default a 'A').`);
+          throw new Error(`[Pipeline Error] Ruta: ${filePathForContext || filePathForContext || meta.lessonTitle} | Campo: recovery[${recIdx}].correct | Causa: Recuperación de selección múltiple carece de clave explícita [A-D] o marca inequívoca en la fuente (prohibido default a 'A').`);
         }
         const matchedOpt = recoveryOptions.find(o => o.startsWith(`${rLet}.`));
         if (!matchedOpt) {
-          throw new Error(`[Pipeline Error] Ruta: ${filePathForContext || meta.fileName} | Campo: recovery[${recIdx}].correct | Causa: La clave '${rLet}' no coincide con ninguna de las 4 opciones encontradas.`);
+          throw new Error(`[Pipeline Error] Ruta: ${filePathForContext || filePathForContext || meta.lessonTitle} | Campo: recovery[${recIdx}].correct | Causa: La clave '${rLet}' no coincide con ninguna de las 4 opciones encontradas.`);
         }
         recoveryCorrect = matchedOpt;
       } else if (directOptLines.length > 0 && directOptLines.length < 4) {
-        throw new Error(`[Pipeline Error] Ruta: ${filePathForContext || meta.fileName} | Campo: recovery[${recIdx}].options | Causa: Recuperación de selección múltiple incompleta: se encontraron ${directOptLines.length} opciones en lugar de 4.`);
+        throw new Error(`[Pipeline Error] Ruta: ${filePathForContext || filePathForContext || meta.lessonTitle} | Campo: recovery[${recIdx}].options | Causa: Recuperación de selección múltiple incompleta: se encontraron ${directOptLines.length} opciones en lugar de 4.`);
       }
     }
 
@@ -940,22 +934,24 @@ export function parseLessonMarkdown(mdContent: string, meta: FileMetadata, fileP
 export async function runUniversalPipeline(options: {
   outputDir?: string;
   isStaging?: boolean;
+  rootDir?: string;
+  referencePath?: string;
+  validateOnly?: boolean;
 } = {}) {
   const isStaging = options.isStaging ?? true;
-  const targetLessonsDir = options.outputDir || STAGING_LESSONS_DIR;
-  const targetManifestDir = isStaging ? STAGING_MANIFEST_DIR : path.resolve(ROOT, 'data');
+  if (!isStaging) throw new Error('Esta entrega sólo autoriza preparación aislada');
+  const root = path.resolve(options.rootDir || ROOT);
+  const sourceRoot = path.join(root, 'LECCIONES_POR_REVISAR');
+  const stagingRoot = path.join(root, 'staging_preparacion_aislada');
+  const targetLessonsDir = path.resolve(options.outputDir || path.join(stagingRoot, 'lessons'));
+  if (path.relative(stagingRoot, targetLessonsDir).split(path.sep).includes('..')) throw new Error('La salida debe permanecer en preparación aislada');
+  const targetManifestDir = path.join(stagingRoot, 'manifests');
+  const canonical = loadCanonicalReference(root, options.referencePath || REFERENCE_PATH);
 
   console.log('\n================================================================');
   console.log(`🚀 INICIANDO SINCRONIZACIÓN EN PREPARACIÓN AISLADA`);
   console.log(`   Directorio de salida: ${targetLessonsDir}`);
   console.log('================================================================\n');
-
-  if (!fs.existsSync(targetLessonsDir)) {
-    fs.mkdirSync(targetLessonsDir, { recursive: true });
-  }
-  if (!fs.existsSync(targetManifestDir)) {
-    fs.mkdirSync(targetManifestDir, { recursive: true });
-  }
 
   // Descubrir archivos Markdown en LECCIONES_POR_REVISAR y en candidatos OA04
   const allMdFiles: string[] = [];
@@ -973,7 +969,7 @@ export async function runUniversalPipeline(options: {
     }
   }
 
-  scanDir(REVISAR_DIR);
+  scanDir(sourceRoot);
 
   console.log(`[1/4] Descubiertos ${allMdFiles.length} archivos Markdown para procesar.`);
 
@@ -987,6 +983,10 @@ export async function runUniversalPipeline(options: {
     return true;
   });
 
+  const discoveredSources = validFiles.map(f => path.relative(root, f).replace(/\\/g, '/')).sort();
+  const expectedSources = canonical.lessons.map(l => l.source).sort();
+  if (JSON.stringify(discoveredSources) !== JSON.stringify(expectedSources)) throw new Error('NO_VERIFICABLE: inventario Markdown distinto de los vínculos canónicos');
+
   // Preflight de lectura y análisis antes de escribir nada
   console.log(`\n[2/4] Ejecutando Preflight y análisis puro de ${validFiles.length} lecciones...`);
   const parsedBatch: Array<{
@@ -999,7 +999,12 @@ export async function runUniversalPipeline(options: {
 
   for (const filePath of validFiles) {
     const content = fs.readFileSync(filePath, 'utf8');
-    const meta = extractFileMetadata(filePath, content);
+    const meta = extractFileMetadata(filePath, content, sourceRoot);
+    const source = path.relative(root, filePath).replace(/\\/g, '/');
+    const expected = canonical.lessons.find(l => l.source === source)!;
+    // Los títulos de lámina y los títulos provisionales no sustituyen metadatos oficiales.
+    meta.lessonTitle = expected.title;
+    meta.nextLessonTitle = expected.nextTitle;
 
     // Validar previamente contra Contrato Pedagógico Universal (Grupo A3)
     const lintReport = lintPedagogicalLesson(filePath, content);
@@ -1032,7 +1037,21 @@ export async function runUniversalPipeline(options: {
     });
   }
 
+  validateBatch(root, canonical, parsedBatch.map(item => ({
+    source: path.relative(root, item.filePath).replace(/\\/g, '/'),
+    module: `Web Studio Simple/src/data/lessons/${item.tsFileName}`,
+    data: item.lessonData
+  })));
+  if (options.validateOnly) return { total: parsedBatch.length, manifestPath: '', validationOnly: true };
+
   console.log(`  ✓ Preflight exitoso: ${parsedBatch.length} lecciones analizadas y validadas.`);
+
+  if (!fs.existsSync(targetLessonsDir)) {
+    fs.mkdirSync(targetLessonsDir, { recursive: true });
+  }
+  if (!fs.existsSync(targetManifestDir)) {
+    fs.mkdirSync(targetManifestDir, { recursive: true });
+  }
 
   // Escritura en staging aislado
   console.log(`\n[3/4] Generando módulos TypeScript en ${targetLessonsDir}...`);
@@ -1052,8 +1071,8 @@ export async function runUniversalPipeline(options: {
       oaCode: item.meta.oaCode,
       classNumber: item.meta.lessonNumber,
       title: item.lessonData.metadata.lessonTitle,
-      sourceFile: path.relative(ROOT, item.filePath).replace(/\\/g, '/'),
-      destModule: path.relative(ROOT, outTsPath).replace(/\\/g, '/'),
+      sourceFile: path.relative(root, item.filePath).replace(/\\/g, '/'),
+      destModule: path.relative(root, outTsPath).replace(/\\/g, '/'),
       varName: item.varName,
       hash: fileHash,
       status: 'EN_REVISION'
@@ -1084,7 +1103,7 @@ export async function runUniversalPipeline(options: {
   return { total: manifestItems.length, manifestPath };
 }
 
-if (process.argv[1] && process.argv[1].includes('pipeline_sync_lessons')) {
+if (process.argv[1] && path.resolve(process.argv[1]) === __filename) {
   runUniversalPipeline().catch(err => {
     console.error('Error fatal en Pipeline Universal:', err);
     process.exit(1);

@@ -1,0 +1,38 @@
+{
+  "baseCommit": "200d6507137de5808aa10bd81ade2cb7d0e7c099",
+  "files": [
+    {
+      "path": "scripts/audit_structural_rules.ts",
+      "baseSha256": "f31439eb18f3d1657ecc55479860a08bb4d00e54a107c48a9215c3866934c817",
+      "patchedSha256": "c22b34a208331408a310e83de49652f67782c465cda9444769b354fc284873ce",
+      "bytes": 6993
+    },
+    {
+      "path": "scripts/pipeline_sync_lessons.ts",
+      "baseSha256": "f9e849b4144a04f10cf1b2f3cd840a7a94c55bee2929ee3efdf7ab81897b9d02",
+      "patchedSha256": "f942414ca5b8a65187d1229cbc05af28e70aa081e82f4bf7fafd4d41abd5f6d7",
+      "bytes": 54648
+    },
+    {
+      "path": "scripts/canonical_lesson_reference.ts",
+      "baseSha256": null,
+      "patchedSha256": "53259bd8ca48dd2dcdfdc7ccd75e4de48f3f829a9ba38caa3d08422e2c5987e3",
+      "bytes": 18579
+    },
+    {
+      "path": "scripts/test_canonical_auditor.ts",
+      "baseSha256": null,
+      "patchedSha256": "d362e984e31dc00db5970c22c6849aa2677567bae31273e3d4fdeef902185ab9",
+      "bytes": 13965
+    },
+    {
+      "path": "docs/auditorias/REFERENCIA_CANONICA_TITULOS_CONTINUIDAD.json",
+      "baseSha256": null,
+      "patchedSha256": "da81744b35f8279f684726ca85561e753d5b68ce329131a6c83d39a8abd6d76c",
+      "bytes": 32698
+    }
+  ],
+  "patchSha256": "3a7163f2b762cc443ff2870048b276fe7b291b7592d3315069d533f25fd234b1",
+  "gitApplyCheckExitCode": 0,
+  "appliedBytesMatch": true
+}

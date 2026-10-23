@@ -1,0 +1,597 @@
+{
+  "schema": "estudiosimple.audit.canonical.v1",
+  "normativeState": "EN_REVISION",
+  "scope": "Títulos, identidad, continuidad y controles estructurales R1/R2; no acredita aprobación pedagógica, editor ni producción",
+  "courseBinding": "El curso del módulo se acredita por vínculo de manifiesto/ruta. Si metadata.courseId existe también se compara.",
+  "exitCode": 0,
+  "results": [
+    {
+      "file": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase01.ts",
+      "status": "VERIFICADO",
+      "differences": [],
+      "technicalFailures": [],
+      "pendingContent": [],
+      "notes": [
+        "Título provisional distinto del oficial: Cambios físicos y emocionales durante la pubertad."
+      ],
+      "counts": {
+        "pre": 3,
+        "post": 2,
+        "practice": 3,
+        "summary": 3
+      },
+      "identity": "110-7/cie/OA1/C1",
+      "source": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE01.md",
+      "sourceSha256": "1b941996222fbb9bbad01785cf5d76260958a0d57b13738c9bd2eb449daaae41"
+    },
+    {
+      "file": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase02.ts",
+      "status": "VERIFICADO",
+      "differences": [],
+      "technicalFailures": [],
+      "pendingContent": [],
+      "notes": [],
+      "counts": {
+        "pre": 2,
+        "post": 1,
+        "practice": 3,
+        "summary": 2
+      },
+      "identity": "110-7/cie/OA1/C2",
+      "source": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE02.md",
+      "sourceSha256": "5e575811240a5bc216334fc4454b9fa5211f8b4ea7bd4b47093c2edf8022025a"
+    },
+    {
+      "file": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase03.ts",
+      "status": "VERIFICADO",
+      "differences": [],
+      "technicalFailures": [],
+      "pendingContent": [
+        "Resumen genérico: requiere contraste pedagógico con la fuente; no implica redactar una tercera idea"
+      ],
+      "notes": [],
+      "counts": {
+        "pre": 2,
+        "post": 1,
+        "practice": 3,
+        "summary": 2
+      },
+      "identity": "110-7/cie/OA1/C3",
+      "source": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE03.md",
+      "sourceSha256": "8813291cd483f2f5781aee3fd41760ae9c45b156b1eca879fc865a5deaded7c6"
+    },
+    {
+      "file": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase04.ts",
+      "status": "VERIFICADO",
+      "differences": [],
+      "technicalFailures": [],
+      "pendingContent": [
+        "Resumen genérico: requiere contraste pedagógico con la fuente; no implica redactar una tercera idea"
+      ],
+      "notes": [],
+      "counts": {
+        "pre": 2,
+        "post": 1,
+        "practice": 3,
+        "summary": 2
+      },
+      "identity": "110-7/cie/OA1/C4",
+      "source": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE04.md",
+      "sourceSha256": "6c57bbe7c44e9c7e42ff6dd10cb0341e8c7e33e4de4b5332ca9dde5f2a5b4562"
+    },
+    {
+      "file": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase05.ts",
+      "status": "VERIFICADO",
+      "differences": [],
+      "technicalFailures": [],
+      "pendingContent": [
+        "Resumen genérico: requiere contraste pedagógico con la fuente; no implica redactar una tercera idea"
+      ],
+      "notes": [],
+      "counts": {
+        "pre": 2,
+        "post": 1,
+        "practice": 3,
+        "summary": 2
+      },
+      "identity": "110-7/cie/OA1/C5",
+      "source": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE05.md",
+      "sourceSha256": "37b37f76f40fdaa6e25a88fb8bc9b7ac4ad708e65252988b3b04c63c912af149"
+    },
+    {
+      "file": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase06.ts",
+      "status": "VERIFICADO",
+      "differences": [],
+      "technicalFailures": [],
+      "pendingContent": [
+        "Resumen genérico: requiere contraste pedagógico con la fuente; no implica redactar una tercera idea"
+      ],
+      "notes": [],
+      "counts": {
+        "pre": 2,
+        "post": 1,
+        "practice": 3,
+        "summary": 2
+      },
+      "identity": "110-7/cie/OA1/C6",
+      "source": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE06.md",
+      "sourceSha256": "73e0d931873b826871643323155843fbaeb30f05f1cadee5c15cb4823b589e31"
+    },
+    {
+      "file": "Web Studio Simple/src/data/lessons/historia_7b_oa02_clase01.ts",
+      "status": "VERIFICADO",
+      "differences": [],
+      "technicalFailures": [],
+      "pendingContent": [],
+      "notes": [
+        "Título provisional distinto del oficial: Domesticación y sedentarización."
+      ],
+      "counts": {
+        "pre": 3,
+        "post": 2,
+        "practice": 2,
+        "summary": 3
+      },
+      "identity": "110-7/his/OA2/C1",
+      "source": "LECCIONES_POR_REVISAR/110-7/Historia_Geografia/OA02/CLASE01.md",
+      "sourceSha256": "0794b50f228bfb063408bd508d5cdaacb4e5e33ddc2465f2802792696fb23f0a"
+    },
+    {
+      "file": "Web Studio Simple/src/data/lessons/historia_7b_oa02_clase02.ts",
+      "status": "VERIFICADO",
+      "differences": [],
+      "technicalFailures": [],
+      "pendingContent": [
+        "Resumen genérico: requiere contraste pedagógico con la fuente; no implica redactar una tercera idea"
+      ],
+      "notes": [],
+      "counts": {
+        "pre": 2,
+        "post": 1,
+        "practice": 3,
+        "summary": 2
+      },
+      "identity": "110-7/his/OA2/C2",
+      "source": "LECCIONES_POR_REVISAR/110-7/Historia_Geografia/OA02/CLASE02.md",
+      "sourceSha256": "c7b767823d652c2c1e58e1de68f6204cca1c684f28f5283a69d3e0f53c67effb"
+    },
+    {
+      "file": "Web Studio Simple/src/data/lessons/historia_7b_oa02_clase03.ts",
+      "status": "VERIFICADO",
+      "differences": [],
+      "technicalFailures": [],
+      "pendingContent": [
+        "Resumen genérico: requiere contraste pedagógico con la fuente; no implica redactar una tercera idea"
+      ],
+      "notes": [],
+      "counts": {
+        "pre": 2,
+        "post": 1,
+        "practice": 3,
+        "summary": 2
+      },
+      "identity": "110-7/his/OA2/C3",
+      "source": "LECCIONES_POR_REVISAR/110-7/Historia_Geografia/OA02/CLASE03.md",
+      "sourceSha256": "9c0f6cc5204bac5e87fb671cfc175bfb976a6a6cdfa95eb1c83db278da6dd8e4"
+    },
+    {
+      "file": "Web Studio Simple/src/data/lessons/historia_7b_oa02_clase04.ts",
+      "status": "VERIFICADO",
+      "differences": [],
+      "technicalFailures": [],
+      "pendingContent": [
+        "Resumen genérico: requiere contraste pedagógico con la fuente; no implica redactar una tercera idea"
+      ],
+      "notes": [],
+      "counts": {
+        "pre": 2,
+        "post": 1,
+        "practice": 3,
+        "summary": 2
+      },
+      "identity": "110-7/his/OA2/C4",
+      "source": "LECCIONES_POR_REVISAR/110-7/Historia_Geografia/OA02/CLASE04.md",
+      "sourceSha256": "49db51ba7f8ba4f434e9505d46b33168171635a3c4941bff27c2f791fb341bd5"
+    },
+    {
+      "file": "Web Studio Simple/src/data/lessons/historia_7b_oa02_clase05.ts",
+      "status": "VERIFICADO",
+      "differences": [],
+      "technicalFailures": [],
+      "pendingContent": [
+        "Resumen genérico: requiere contraste pedagógico con la fuente; no implica redactar una tercera idea"
+      ],
+      "notes": [],
+      "counts": {
+        "pre": 2,
+        "post": 1,
+        "practice": 3,
+        "summary": 2
+      },
+      "identity": "110-7/his/OA2/C5",
+      "source": "LECCIONES_POR_REVISAR/110-7/Historia_Geografia/OA02/CLASE05.md",
+      "sourceSha256": "f7a71351acf5c4a8edc287ca68afb10e91f6f3d535dd262d9e7ef3070ad1a4a4"
+    },
+    {
+      "file": "Web Studio Simple/src/data/lessons/historia_7b_oa02_clase06.ts",
+      "status": "VERIFICADO",
+      "differences": [],
+      "technicalFailures": [],
+      "pendingContent": [
+        "Resumen genérico: requiere contraste pedagógico con la fuente; no implica redactar una tercera idea"
+      ],
+      "notes": [],
+      "counts": {
+        "pre": 2,
+        "post": 1,
+        "practice": 3,
+        "summary": 2
+      },
+      "identity": "110-7/his/OA2/C6",
+      "source": "LECCIONES_POR_REVISAR/110-7/Historia_Geografia/OA02/CLASE06.md",
+      "sourceSha256": "90df6a7f16c1a1c04268931beb027859031738ce994a7de958d0214a1b9da960"
+    },
+    {
+      "file": "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase01.ts",
+      "status": "VERIFICADO",
+      "differences": [],
+      "technicalFailures": [],
+      "pendingContent": [
+        "Resumen genérico: requiere contraste pedagógico con la fuente; no implica redactar una tercera idea"
+      ],
+      "notes": [
+        "Título provisional distinto del oficial: Expressing an opinion about a text with evidence."
+      ],
+      "counts": {
+        "pre": 4,
+        "post": 2,
+        "practice": 2,
+        "summary": 2
+      },
+      "identity": "110-7/ing/OA9/C1",
+      "source": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE01.md",
+      "sourceSha256": "9653ed07d2df5434b9034be80b6f10c110013c092f5164c359d9dc9c37af925d"
+    },
+    {
+      "file": "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase02.ts",
+      "status": "VERIFICADO",
+      "differences": [],
+      "technicalFailures": [],
+      "pendingContent": [
+        "Resumen genérico: requiere contraste pedagógico con la fuente; no implica redactar una tercera idea"
+      ],
+      "notes": [],
+      "counts": {
+        "pre": 2,
+        "post": 1,
+        "practice": 3,
+        "summary": 2
+      },
+      "identity": "110-7/ing/OA9/C2",
+      "source": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE02.md",
+      "sourceSha256": "909ed6e498572da36e8a4ba4bdb6f644d606e07ee8a675a0e09aef6193cfd8a8"
+    },
+    {
+      "file": "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase03.ts",
+      "status": "VERIFICADO",
+      "differences": [],
+      "technicalFailures": [],
+      "pendingContent": [
+        "Resumen genérico: requiere contraste pedagógico con la fuente; no implica redactar una tercera idea"
+      ],
+      "notes": [],
+      "counts": {
+        "pre": 2,
+        "post": 1,
+        "practice": 3,
+        "summary": 2
+      },
+      "identity": "110-7/ing/OA9/C3",
+      "source": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE03.md",
+      "sourceSha256": "146914e9df8a7b83ce7a037271e3af6712e2b485564c4ea9e3dc1d356f246fbc"
+    },
+    {
+      "file": "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase04.ts",
+      "status": "VERIFICADO",
+      "differences": [],
+      "technicalFailures": [],
+      "pendingContent": [
+        "Resumen genérico: requiere contraste pedagógico con la fuente; no implica redactar una tercera idea"
+      ],
+      "notes": [],
+      "counts": {
+        "pre": 2,
+        "post": 1,
+        "practice": 3,
+        "summary": 2
+      },
+      "identity": "110-7/ing/OA9/C4",
+      "source": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE04.md",
+      "sourceSha256": "3b25be754dcde47663539aa008bd48c1cef04567b74aceacaec5f8e0dd8208d1"
+    },
+    {
+      "file": "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase05.ts",
+      "status": "VERIFICADO",
+      "differences": [],
+      "technicalFailures": [],
+      "pendingContent": [
+        "Resumen genérico: requiere contraste pedagógico con la fuente; no implica redactar una tercera idea"
+      ],
+      "notes": [],
+      "counts": {
+        "pre": 2,
+        "post": 1,
+        "practice": 3,
+        "summary": 2
+      },
+      "identity": "110-7/ing/OA9/C5",
+      "source": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE05.md",
+      "sourceSha256": "e2f6931c24bcad2dfa52b7ec55207f52812c75f77c865d56362bd86cbd719bc0"
+    },
+    {
+      "file": "Web Studio Simple/src/data/lessons/ingles_7b_oa09_clase06.ts",
+      "status": "VERIFICADO",
+      "differences": [],
+      "technicalFailures": [],
+      "pendingContent": [
+        "Resumen genérico: requiere contraste pedagógico con la fuente; no implica redactar una tercera idea"
+      ],
+      "notes": [],
+      "counts": {
+        "pre": 2,
+        "post": 1,
+        "practice": 3,
+        "summary": 2
+      },
+      "identity": "110-7/ing/OA9/C6",
+      "source": "LECCIONES_POR_REVISAR/110-7/Ingles/OA09/CLASE06.md",
+      "sourceSha256": "88c7f1483914117288fad9fe6c8dcb0f1e6e6842011e870daa3ac1636d665d7f"
+    },
+    {
+      "file": "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase01.ts",
+      "status": "VERIFICADO",
+      "differences": [],
+      "technicalFailures": [],
+      "pendingContent": [
+        "Resumen genérico: requiere contraste pedagógico con la fuente; no implica redactar una tercera idea"
+      ],
+      "notes": [
+        "Título provisional distinto del oficial: Acciones de los personajes y desarrollo del conflicto."
+      ],
+      "counts": {
+        "pre": 3,
+        "post": 2,
+        "practice": 3,
+        "summary": 2
+      },
+      "identity": "110-7/len/OA3/C1",
+      "source": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE01.md",
+      "sourceSha256": "4ac8fb014b8378aabe77fe00c0a95227429a5b8e59e874c61b871c8e6bdafe82"
+    },
+    {
+      "file": "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase02.ts",
+      "status": "VERIFICADO",
+      "differences": [],
+      "technicalFailures": [],
+      "pendingContent": [
+        "Resumen genérico: requiere contraste pedagógico con la fuente; no implica redactar una tercera idea"
+      ],
+      "notes": [],
+      "counts": {
+        "pre": 2,
+        "post": 1,
+        "practice": 3,
+        "summary": 2
+      },
+      "identity": "110-7/len/OA3/C2",
+      "source": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE02.md",
+      "sourceSha256": "cf201dd7f63ed0019b8b3131dd95eefbe7867bec3bbc7aac61ff4bc191295bfa"
+    },
+    {
+      "file": "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase03.ts",
+      "status": "VERIFICADO",
+      "differences": [],
+      "technicalFailures": [],
+      "pendingContent": [
+        "Resumen genérico: requiere contraste pedagógico con la fuente; no implica redactar una tercera idea"
+      ],
+      "notes": [],
+      "counts": {
+        "pre": 2,
+        "post": 1,
+        "practice": 3,
+        "summary": 2
+      },
+      "identity": "110-7/len/OA3/C3",
+      "source": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE03.md",
+      "sourceSha256": "b21379e424f7b6c49a4799566859abf6656257b1c0ee4cc58ef40f02d553dab4"
+    },
+    {
+      "file": "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase04.ts",
+      "status": "VERIFICADO",
+      "differences": [],
+      "technicalFailures": [],
+      "pendingContent": [
+        "Resumen genérico: requiere contraste pedagógico con la fuente; no implica redactar una tercera idea"
+      ],
+      "notes": [],
+      "counts": {
+        "pre": 2,
+        "post": 1,
+        "practice": 3,
+        "summary": 2
+      },
+      "identity": "110-7/len/OA3/C4",
+      "source": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE04.md",
+      "sourceSha256": "5566a6239c915a2a3e4c37f94c88475e22b6c86c2b665c84cb7643be4b1ffae6"
+    },
+    {
+      "file": "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase05.ts",
+      "status": "VERIFICADO",
+      "differences": [],
+      "technicalFailures": [],
+      "pendingContent": [
+        "Resumen genérico: requiere contraste pedagógico con la fuente; no implica redactar una tercera idea"
+      ],
+      "notes": [],
+      "counts": {
+        "pre": 2,
+        "post": 1,
+        "practice": 3,
+        "summary": 2
+      },
+      "identity": "110-7/len/OA3/C5",
+      "source": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE05.md",
+      "sourceSha256": "4bf1a94ff9a8c7e69c68e7762008d7586b10bc7b15b3fdc340449199885f9853"
+    },
+    {
+      "file": "Web Studio Simple/src/data/lessons/lengua_7b_oa03_clase06.ts",
+      "status": "VERIFICADO",
+      "differences": [],
+      "technicalFailures": [],
+      "pendingContent": [
+        "Resumen genérico: requiere contraste pedagógico con la fuente; no implica redactar una tercera idea"
+      ],
+      "notes": [],
+      "counts": {
+        "pre": 2,
+        "post": 1,
+        "practice": 3,
+        "summary": 2
+      },
+      "identity": "110-7/len/OA3/C6",
+      "source": "LECCIONES_POR_REVISAR/110-7/Lengua_Literatura/OA03/CLASE06.md",
+      "sourceSha256": "88291494345f91ac5f5be92dd9fb05f22d8e47d0412911fd143891755e04d517"
+    },
+    {
+      "file": "Web Studio Simple/src/data/lessons/matematica_7b_oa04_clase01.ts",
+      "status": "VERIFICADO",
+      "differences": [],
+      "technicalFailures": [],
+      "pendingContent": [],
+      "notes": [],
+      "counts": {
+        "pre": 2,
+        "post": 2,
+        "practice": 3,
+        "summary": 3
+      },
+      "identity": "110-7/mat/OA4/C1",
+      "source": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE01.md",
+      "sourceSha256": "ed8f555e7af38c046bce252e23617c715abf459fd6093ff8580d4c30f6321833"
+    },
+    {
+      "file": "Web Studio Simple/src/data/lessons/matematica_7b_oa04_clase02.ts",
+      "status": "VERIFICADO",
+      "differences": [],
+      "technicalFailures": [],
+      "pendingContent": [],
+      "notes": [],
+      "counts": {
+        "pre": 2,
+        "post": 2,
+        "practice": 3,
+        "summary": 3
+      },
+      "identity": "110-7/mat/OA4/C2",
+      "source": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE02.md",
+      "sourceSha256": "2af4d3c954c647e10b5d446f3f4cdbe90ccd61d32aaaa4c2d3949046ecc682ce"
+    },
+    {
+      "file": "Web Studio Simple/src/data/lessons/matematica_7b_oa04_clase03.ts",
+      "status": "VERIFICADO",
+      "differences": [],
+      "technicalFailures": [],
+      "pendingContent": [],
+      "notes": [],
+      "counts": {
+        "pre": 2,
+        "post": 2,
+        "practice": 3,
+        "summary": 3
+      },
+      "identity": "110-7/mat/OA4/C3",
+      "source": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE03.md",
+      "sourceSha256": "4a4f9187a02529da5708c3d9ef5e02306c8fbad2ffea6dcc3a084775396ef478"
+    },
+    {
+      "file": "Web Studio Simple/src/data/lessons/matematica_7b_oa04_clase04.ts",
+      "status": "VERIFICADO",
+      "differences": [],
+      "technicalFailures": [],
+      "pendingContent": [],
+      "notes": [],
+      "counts": {
+        "pre": 2,
+        "post": 2,
+        "practice": 3,
+        "summary": 3
+      },
+      "identity": "110-7/mat/OA4/C4",
+      "source": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE04.md",
+      "sourceSha256": "cdaf44c229f43eaa23af47fd421a584c629ea6c882e7c103d28d07f51e3eedbe"
+    },
+    {
+      "file": "Web Studio Simple/src/data/lessons/matematica_7b_oa04_clase05.ts",
+      "status": "VERIFICADO",
+      "differences": [],
+      "technicalFailures": [],
+      "pendingContent": [],
+      "notes": [
+        "Título provisional distinto del oficial: Clase 6: Síntesis Integradora y Ensayo de Evaluación Formativa"
+      ],
+      "counts": {
+        "pre": 2,
+        "post": 2,
+        "practice": 3,
+        "summary": 3
+      },
+      "identity": "110-7/mat/OA4/C5",
+      "source": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE05.md",
+      "sourceSha256": "702522cd0e0ad1f5884abefd0445be8d154996384a8188342393ee238fdc7565"
+    },
+    {
+      "file": "Web Studio Simple/src/data/lessons/matematica_7b_oa04_clase06.ts",
+      "status": "VERIFICADO",
+      "differences": [],
+      "technicalFailures": [],
+      "pendingContent": [],
+      "notes": [],
+      "counts": {
+        "pre": 2,
+        "post": 2,
+        "practice": 3,
+        "summary": 4
+      },
+      "identity": "110-7/mat/OA4/C6",
+      "source": "LECCIONES_POR_REVISAR/110-7/Matematica/OA04/CLASE06.md",
+      "sourceSha256": "b8f5f06cc388df411e8311a92005b933a9abddb53142c1180c83445015fc0b98"
+    }
+  ],
+  "protected": [
+    {
+      "course": "110-7",
+      "subject": "mat",
+      "oa": 1,
+      "total": 6,
+      "modules": [
+        "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase01.ts",
+        "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase02.ts",
+        "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase03.ts",
+        "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase04.ts",
+        "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase05.ts",
+        "Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase06.ts"
+      ],
+      "status": "PROTEGIDO_NO_INTERVENIDO"
+    }
+  ],
+  "errors": [],
+  "totals": {
+    "evaluated": 30,
+    "verified": 30,
+    "mismatches": 0,
+    "notVerifiable": 0,
+    "protected": 6,
+    "pendingSummaryReview": 21
+  }
+}

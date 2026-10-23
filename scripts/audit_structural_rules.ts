@@ -1,252 +1,104 @@
-import * as fs from 'fs';
-import * as path from 'path';
+import fs from 'node:fs';
+import path from 'node:path';
+import { buildCanonicalReference, loadCanonicalReference, inside, filesUnder, MODULE_DIR, REFERENCE_PATH,
+  readLessonObject, compareMetadata, subjectKey, identityKey } from './canonical_lesson_reference';
+import type { CanonicalLesson, Difference } from './canonical_lesson_reference';
 
 export interface AuditResult {
   file: string;
-  subject: string;
-  grade: string;
-  oa: string;
-  lessonNumber: number;
-  lessonTitle: string;
-  nextLessonTitle: string;
-  preCount: number;
-  postCount: number;
-  practiceCount: number;
-  summaryCount: number;
-  rule1_resource_isolation: 'PASS' | 'FAIL';
-  rule2_counters_sync: 'PASS' | 'FAIL';
-  rule3_summary_integrity: 'PASS' | 'PENDIENTE_CONTENIDO_WORK';
-  rule4_thematic_title: 'PASS' | 'FAIL' | 'PENDIENTE_CONTENIDO_WORK';
-  rule5_continuity: 'PASS' | 'FAIL';
-  overallStatus: 'RESUELTO' | 'SIN_HALLAZGO' | 'PENDIENTE_CONTENIDO_WORK' | 'FALLO_TECNICO';
+  identity?: string;
+  status: 'VERIFICADO' | 'FALLO_CORRESPONDENCIA' | 'NO_VERIFICABLE';
+  differences: Difference[];
+  technicalFailures: string[];
+  pendingContent: string[];
   notes: string[];
+  counts?: { pre: number; post: number; practice: number; summary: number };
+  source?: string;
+  sourceSha256?: string;
 }
-
-export function auditSingleLesson(content: string, file: string): AuditResult {
-  const notes: string[] = [];
-
-  // Metadata parsing
-  const titleMatch = content.match(/"lessonTitle":\s*"([^"]*)"/);
-  const nextMatch = content.match(/"nextLessonTitle":\s*"([^"]*)"/);
-  const subjectMatch = content.match(/"subject":\s*"([^"]*)"/);
-  const gradeMatch = content.match(/"grade":\s*"([^"]*)"/);
-  const oaMatch = content.match(/"oaCode":\s*"([^"]*)"/);
-  const numMatch = content.match(/"lessonNumber":\s*(\d+)/);
-  const totalInOaMatch = content.match(/"totalLessonsInOa":\s*(\d+)/);
-
-  const lessonTitle = titleMatch ? titleMatch[1] : '';
-  const nextLessonTitle = nextMatch ? nextMatch[1] : '';
-  const subject = subjectMatch ? subjectMatch[1] : '';
-  const grade = gradeMatch ? gradeMatch[1] : '7° Básico';
-  const oa = oaMatch ? oaMatch[1] : '';
-  const lessonNumber = numMatch ? parseInt(numMatch[1], 10) : 0;
-  const totalInOa = totalInOaMatch ? parseInt(totalInOaMatch[1], 10) : 6;
-
-  // Counts
-  const preMatches = content.match(/"preQuestions":\s*\[/g);
-  const postMatches = content.match(/"postQuestions":\s*\[/g);
-  const practiceMatches = content.match(/"practice":\s*\[/g);
-  const summaryMatches = content.match(/"summaryIdeas":\s*\[/g);
-
-  let preCount = 0;
-  if (preMatches) {
-    const preBlock = content.split(/"preQuestions":\s*\[/)[1]?.split(/\]\s*,\s*"(?:conversationContext|formalization|postQuestions)/)[0];
-    if (preBlock) preCount = (preBlock.match(/"question":/g) || []).length;
-  }
-
-  let postCount = 0;
-  if (postMatches) {
-    const postBlock = content.split(/"postQuestions":\s*\[/)[1]?.split(/\]\s*,\s*"(?:practice|mini|summaryIdeas)/)[0];
-    if (postBlock) postCount = (postBlock.match(/"question":/g) || []).length;
-  }
-
-  let practiceCount = 0;
-  if (practiceMatches) {
-    const practiceBlock = content.split(/"practice":\s*\[/)[1]?.split(/\]\s*,\s*"(?:mini|summaryIdeas)/)[0];
-    if (practiceBlock) practiceCount = (practiceBlock.match(/"question":/g) || []).length;
-  }
-
-  let summaryCount = 0;
-  let sumBlock = '';
-  if (summaryMatches) {
-    sumBlock = content.split(/"summaryIdeas":\s*\[/)[1]?.split(/\]\s*,\s*"(?:interactive|closure|paso8_cierre)/)[0] || '';
-    if (sumBlock) summaryCount = (sumBlock.match(/\[\s*"[^"]+"/g) || []).length;
-  }
-
-  const isMatOa01 = file.startsWith('matematica_7b_oa01');
-
-  // Regla 1: Resource Isolation (Ciencias y Matemática no usan texto de lectura narrativo)
-  let r1: 'PASS' | 'FAIL' = 'PASS';
-  const isCienciasOrMat = subject.toLowerCase().includes('ciencias') || subject.toLowerCase().includes('matemática') || subject.toLowerCase().includes('matematica');
-  if (isCienciasOrMat && (content.includes('"readingResource"') || (content.includes('"type": "reading_resource"') && content.includes('"paragraphs"')) || (content.includes('"type": "reading"') && content.includes('"paragraphs"')))) {
-    r1 = 'FAIL';
-    notes.push('Fallo técnico: Ciencias o Matemática no deben declarar relato de lectura narrativo');
-  }
-
-  // Regla 2: Counters Sync
-  let r2: 'PASS' | 'FAIL' = 'PASS';
-  if (!isMatOa01 && (preCount === 0 || postCount === 0)) {
-    r2 = 'FAIL';
-    notes.push(`Fallo técnico: Faltan reactivos de recorrido o comprobación (pre: ${preCount}, post: ${postCount})`);
-  }
-
-  // Regla 3: Summary Integrity (Distingue contenido pendiente de Work)
-  let r3: 'PASS' | 'PENDIENTE_CONTENIDO_WORK' = 'PASS';
-  if (!isMatOa01) {
-    if (sumBlock.includes('Una situación') || sumBlock.includes('Situación inicial')) {
-      r3 = 'PENDIENTE_CONTENIDO_WORK';
-      notes.push('summaryIdeas contiene placeholder genérico');
-    } else if (summaryCount < 3) {
-      r3 = 'PENDIENTE_CONTENIDO_WORK';
-      notes.push(`summaryIdeas tiene ${summaryCount} ideas (UI adaptativa; pendiente redacción de 3ra idea por Work)`);
+export function auditSingleLesson(content: string, file: string, expected?: CanonicalLesson): AuditResult {
+  const result: AuditResult = { file, status: 'NO_VERIFICABLE', differences: [], technicalFailures: [], pendingContent: [], notes: [] };
+  try {
+    const lesson = readLessonObject(content, file);
+    const array = (name: string) => Array.isArray(lesson[name]) ? lesson[name] : [];
+    result.counts = { pre: array('preQuestions').length, post: array('postQuestions').length,
+      practice: array('practice').length, summary: array('summaryIdeas').length };
+    const subject = subjectKey(lesson.metadata.subject);
+    const hasNarrative = (node: any): boolean => {
+      if (!node || typeof node !== 'object') return false;
+      if (Object.hasOwn(node, 'readingResource') || (['reading', 'reading_resource'].includes(node.type) && Array.isArray(node.paragraphs))) return true;
+      return Object.values(node).some(hasNarrative);
+    };
+    if (['cie', 'mat'].includes(subject) && hasNarrative(lesson)) result.technicalFailures.push('R1: Recurso narrativo en Ciencias/Matemática');
+    if (!result.counts.pre || !result.counts.post) result.technicalFailures.push('R2: Faltan reactivos de recorrido/comprobación');
+    const summary = JSON.stringify(array('summaryIdeas'));
+    if (/Una situación|Situación inicial|Aplicación del criterio formal en el cuaderno físico/.test(summary)) {
+      result.pendingContent.push('Resumen genérico: requiere contraste pedagógico con la fuente; no implica redactar una tercera idea');
     }
-  }
+    if (!expected) { result.notes.push('Sin referencia canónica independiente: no se acredita título ni continuidad'); return result; }
+    result.identity = identityKey(expected); result.source = expected.source; result.sourceSha256 = expected.sourceSha256;
+    result.differences = compareMetadata(lesson.metadata, expected);
+    result.notes.push(...expected.advisories);
+    result.status = result.differences.length || result.technicalFailures.length ? 'FALLO_CORRESPONDENCIA' : 'VERIFICADO';
+  } catch (error) { result.notes.push(String(error)); }
+  return result;
+}
 
-  // Regla 4: Thematic Title
-  let r4: 'PASS' | 'FAIL' | 'PENDIENTE_CONTENIDO_WORK' = 'PASS';
-  if (!isMatOa01) {
-    if (!lessonTitle || lessonTitle.trim() === '' || lessonTitle.trim() === 'Una situación') {
-      r4 = 'FAIL';
-      notes.push('Fallo técnico: Título temático inválido o placeholder "Una situación"');
+export function runFullAudit(root = path.resolve(__dirname, '..'), referencePath = REFERENCE_PATH) {
+  const report = { schema: 'estudiosimple.audit.canonical.v1', normativeState: 'EN_REVISION',
+    scope: 'Títulos, identidad, continuidad y controles estructurales R1/R2; no acredita aprobación pedagógica, editor ni producción',
+    courseBinding: 'El curso del módulo se acredita por vínculo de manifiesto/ruta. Si metadata.courseId existe también se compara.',
+    exitCode: 2, results: [] as AuditResult[], protected: [] as unknown[], errors: [] as string[],
+    totals: { evaluated: 0, verified: 0, mismatches: 0, notVerifiable: 0, protected: 0, pendingSummaryReview: 0 } };
+  try {
+    const ref = loadCanonicalReference(root, referencePath);
+    report.protected = ref.protected;
+    report.totals.protected = ref.protected.reduce((count, item) => count + item.total, 0);
+    const mapped = new Set(ref.lessons.map(l => l.module));
+    const protectedModules = new Set(ref.protected.flatMap(p => p.modules.map(m => m.startsWith(MODULE_DIR + '/') ? m : `${MODULE_DIR}/${path.basename(m)}`)));
+    for (const filename of filesUnder(root, MODULE_DIR, '.ts')) {
+      if (filename === `${MODULE_DIR}/index.ts` || mapped.has(filename) || protectedModules.has(filename)) continue;
+      report.results.push({ file: filename, status: 'NO_VERIFICABLE', differences: [], technicalFailures: [], pendingContent: [], notes: ['Módulo sin vínculo canónico en los manifiestos'] });
     }
-  }
-
-  // Regla 5: Continuity
-  let r5: 'PASS' | 'FAIL' = 'PASS';
-  if (!isMatOa01) {
-    if (lessonNumber > 0 && lessonNumber < totalInOa && (!nextLessonTitle || nextLessonTitle.trim() === '')) {
-      r5 = 'FAIL';
-      notes.push(`Fallo técnico: Clase intermedia ${lessonNumber} no tiene puente a próxima clase`);
+    for (const expected of ref.lessons) {
+      const filename = inside(root, expected.module);
+      if (!fs.existsSync(filename)) {
+        report.results.push({ file: expected.module, identity: identityKey(expected), status: 'NO_VERIFICABLE', differences: [], technicalFailures: [], pendingContent: [], notes: ['Falta módulo vinculado'], source: expected.source });
+      } else report.results.push(auditSingleLesson(fs.readFileSync(filename, 'utf8'), expected.module, expected));
     }
-  }
-
-  // Distinción formal: Fallo Técnico (salida 1) vs Contenido Pendiente de Work (salida 0)
-  let overall: 'RESUELTO' | 'SIN_HALLAZGO' | 'PENDIENTE_CONTENIDO_WORK' | 'FALLO_TECNICO' = 'RESUELTO';
-  if (r1 === 'FAIL' || r2 === 'FAIL' || r4 === 'FAIL' || r5 === 'FAIL') {
-    overall = 'FALLO_TECNICO';
-  } else if (r3 === 'PENDIENTE_CONTENIDO_WORK') {
-    overall = 'PENDIENTE_CONTENIDO_WORK';
-  } else {
-    overall = 'RESUELTO';
-  }
-
-  return {
-    file,
-    subject: subject || (isMatOa01 ? 'Matemática' : 'Desconocida'),
-    grade,
-    oa: oa || (isMatOa01 ? 'OA 1' : ''),
-    lessonNumber,
-    lessonTitle,
-    nextLessonTitle,
-    preCount,
-    postCount,
-    practiceCount,
-    summaryCount,
-    rule1_resource_isolation: r1,
-    rule2_counters_sync: r2,
-    rule3_summary_integrity: r3,
-    rule4_thematic_title: r4,
-    rule5_continuity: r5,
-    overallStatus: overall,
-    notes
-  };
+    report.totals.evaluated = report.results.length;
+    report.totals.verified = report.results.filter(r => r.status === 'VERIFICADO').length;
+    report.totals.mismatches = report.results.filter(r => r.status === 'FALLO_CORRESPONDENCIA').length;
+    report.totals.notVerifiable = report.results.filter(r => r.status === 'NO_VERIFICABLE').length;
+    report.totals.pendingSummaryReview = report.results.filter(r => r.pendingContent.length).length;
+    report.exitCode = report.totals.notVerifiable ? 2 : report.totals.mismatches ? 1 : 0;
+  } catch (error) { report.errors.push(String(error)); }
+  return report;
 }
 
-export function verifyRejectionOfInvalidCopies(): void {
-  console.log('🧪 Verificando que el auditor rechace copias de prueba incorrectas...');
-
-  // Copia 1: Ciencias con recurso narrativo indebido
-  const badResource = auditSingleLesson(`
-    "metadata": { "grade": "7° Básico", "subject": "Ciencias Naturales", "oaCode": "OA 1", "lessonNumber": 2, "totalLessonsInOa": 6, "lessonTitle": "Título Real", "nextLessonTitle": "Siguiente" },
-    "preQuestions": [{ "question": "Q1" }], "postQuestions": [{ "question": "Q2" }],
-    "interactive": { "type": "reading_resource", "paragraphs": ["Texto literario..."] }
-  `, 'test_bad_resource.ts');
-  if (badResource.rule1_resource_isolation !== 'FAIL' || badResource.overallStatus !== 'FALLO_TECNICO') {
-    throw new Error('El auditor falló al rechazar un recurso narrativo indebido en Ciencias.');
-  }
-
-  // Copia 2: Título inválido "Una situación"
-  const badTitle = auditSingleLesson(`
-    "metadata": { "grade": "7° Básico", "subject": "Historia", "oaCode": "OA 2", "lessonNumber": 2, "totalLessonsInOa": 6, "lessonTitle": "Una situación", "nextLessonTitle": "Siguiente" },
-    "preQuestions": [{ "question": "Q1" }], "postQuestions": [{ "question": "Q2" }]
-  `, 'test_bad_title.ts');
-  if (badTitle.rule4_thematic_title !== 'FAIL' || badTitle.overallStatus !== 'FALLO_TECNICO') {
-    throw new Error('El auditor falló al rechazar el título placeholder "Una situación".');
-  }
-
-  // Copia 3: Clase intermedia sin puente de continuidad
-  const badBridge = auditSingleLesson(`
-    "metadata": { "grade": "7° Básico", "subject": "Historia", "oaCode": "OA 2", "lessonNumber": 3, "totalLessonsInOa": 6, "lessonTitle": "Título Válido", "nextLessonTitle": "" },
-    "preQuestions": [{ "question": "Q1" }], "postQuestions": [{ "question": "Q2" }]
-  `, 'test_bad_bridge.ts');
-  if (badBridge.rule5_continuity !== 'FAIL' || badBridge.overallStatus !== 'FALLO_TECNICO') {
-    throw new Error('El auditor falló al rechazar una clase intermedia sin puente.');
-  }
-
-  console.log('  ✅ Comprobación superada: El auditor rechaza con salida FALLO_TECNICO ante recurso, título o puente incorrectos.\n');
-}
-
-export function runFullAudit(): void {
-  // 1. Ejecutar verificación de rechazo de copias inválidas
-  verifyRejectionOfInvalidCopies();
-
-  // 2. Auditar las 36 lecciones reales
-  const lessonsDir = path.join(__dirname, '../Web Studio Simple/src/data/lessons');
-  const files = fs.readdirSync(lessonsDir).filter(f => f.endsWith('.ts') && f !== 'index.ts').sort();
-  const results: AuditResult[] = [];
-
-  for (const file of files) {
-    const filePath = path.join(lessonsDir, file);
-    const content = fs.readFileSync(filePath, 'utf8');
-    results.push(auditSingleLesson(content, file));
-  }
-
-  console.log('=== MATRIZ DE AUDITORÍA ESTRUCTURAL (36 LECCIONES) ===\n');
-  console.log(
-    'Archivo'.padEnd(35) +
-    ' | Título'.padEnd(40) +
-    ' | R1 | R2 | R3 | R4 | R5 | Estado Global'
-  );
-  console.log('-'.repeat(125));
-
-  for (const r of results) {
-    console.log(
-      r.file.padEnd(35) +
-      ` | ${(r.lessonTitle || (r.file.includes('oa01') ? 'Matemática OA01 (Protegida)' : '')).slice(0, 38)}`.padEnd(40) +
-      ` | ${r.rule1_resource_isolation.padEnd(2)}` +
-      ` | ${r.rule2_counters_sync.padEnd(2)}` +
-      ` | ${(r.rule3_summary_integrity === 'PASS' ? 'OK' : 'PEND').padEnd(2)}` +
-      ` | ${r.rule4_thematic_title.padEnd(2)}` +
-      ` | ${r.rule5_continuity.padEnd(2)}` +
-      ` | ${r.overallStatus}`
-    );
-  }
-
-  const outJsonPath = path.join(__dirname, '../docs/auditorias/MATRIZ_AUDITORIA_ESTRUCTURAL_36_LECCIONES.json');
-  fs.mkdirSync(path.dirname(outJsonPath), { recursive: true });
-  fs.writeFileSync(outJsonPath, JSON.stringify(results, null, 2), 'utf8');
-  console.log(`\nMatriz guardada en: ${outJsonPath}`);
-
-  const technicalFailures = results.filter(r => r.overallStatus === 'FALLO_TECNICO');
-  const pendingContent = results.filter(r => r.overallStatus === 'PENDIENTE_CONTENIDO_WORK');
-
-  console.log(`\nResumen de Control:`);
-  console.log(`- Fallos técnicos estructurales: ${technicalFailures.length}`);
-  console.log(`- Clases con contenido de resumen pendiente de Work: ${pendingContent.length}`);
-
-  if (technicalFailures.length > 0) {
-    console.error(`\n❌ ERROR CRÍTICO: ${technicalFailures.length} lecciones presentan fallos técnicos.`);
-    for (const f of technicalFailures) {
-      console.error(`  - ${f.file}: ${f.notes.join('; ')}`);
+export function main(args = process.argv.slice(2)): number {
+  let root = path.resolve(__dirname, '..'), reference = REFERENCE_PATH, output = '', writeReference = false;
+  try {
+    for (let index = 0; index < args.length; index++) {
+      const arg = args[index];
+      if (arg === '--write-reference') writeReference = true;
+      else if (['--root', '--reference', '--report'].includes(arg) && args[index + 1] && !args[index + 1].startsWith('--')) {
+        const value = args[++index];
+        if (arg === '--root') root = path.resolve(value);
+        if (arg === '--reference') reference = value;
+        if (arg === '--report') output = path.resolve(value);
+      } else throw new Error(`Argumento inválido: ${arg}`);
     }
-    process.exit(1);
-  }
-
-  console.log(`\n✅ AUDITORÍA ESTRUCTURAL SUPERADA: 0 fallos técnicos.`);
-  process.exit(0);
+    if (writeReference) {
+      const ref = buildCanonicalReference(root), dest = inside(root, reference);
+      fs.mkdirSync(path.dirname(dest), { recursive: true }); fs.writeFileSync(dest, JSON.stringify(ref, null, 2) + '\n');
+      console.log(`REFERENCIA_GENERADA: ${ref.lessons.length} evaluables; ${ref.protected.reduce((n, p) => n + p.total, 0)} protegidas. No es un veredicto del lote.`);
+      return 0;
+    }
+    const report = runFullAudit(root, reference);
+    if (output) { fs.mkdirSync(path.dirname(output), { recursive: true }); fs.writeFileSync(output, JSON.stringify(report, null, 2) + '\n'); }
+    console.log(JSON.stringify(report, null, 2));
+    return report.exitCode;
+  } catch (error) { console.error(`NO_VERIFICABLE: ${String(error)}`); return 2; }
 }
-
-// Ejecutar si se invoca directamente
-if (require.main === module) {
-  runFullAudit();
-}
+if (require.main === module) process.exitCode = main();

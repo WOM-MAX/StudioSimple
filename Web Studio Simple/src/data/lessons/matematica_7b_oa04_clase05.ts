@@ -10,7 +10,7 @@ export const MATEMATICA_7B_OA04_CLASE05: LessonData = {
     "totalLessonsInOa": 6,
     "lessonTitle": "Resolución de Problemas Cotidianos: Descuentos Comerciales e IVA",
     "durationMinutes": 30,
-    "nextLessonTitle": "Clase 6: Síntesis Integradora y Ensayo de Evaluación Formativa"
+    "nextLessonTitle": "Síntesis Integradora y Ensayo de Evaluación Formativa: Porcentajes en Acción"
   },
   "prep": {
     "adultObjective": "Guiar al estudiante en la aplicación de porcentajes a situaciones reales del comercio y la economía cotidiana, calculando rebajas comerciales mediante restas del precio original y recargos impositivos como el IVA chileno (19%) en operaciones afectas mediante adiciones al valor neto.",
