@@ -1,0 +1,26 @@
+{
+  "auditorReferencia": "scripts/canonical_lesson_reference.ts",
+  "auditorEstructural": "scripts/audit_structural_rules.ts",
+  "invocacionEnEditor": "NO_INVOCADO",
+  "puntosDeGuardadoAuditados": [
+    {
+      "archivo": "Web Studio Simple/src/components/admin/cms/LessonEditorView.tsx",
+      "funcion": "handleSaveLesson (Líneas 423-455)",
+      "invocaAuditor": false,
+      "detalle": "Guarda directamente llamando a saveCustomPlayerLesson() y saveCustomLessonData() sin pasar por validateCanonicalTitle() ni checkLessonContinuity()."
+    },
+    {
+      "archivo": "Web Studio Simple/src/components/admin/cms/LessonEditorView.tsx",
+      "funcion": "handleSaveVideoMetadata (Líneas 543-565)",
+      "invocaAuditor": false,
+      "detalle": "Actualiza enlaces y timestamps de video directamente en memoria y localStorage."
+    },
+    {
+      "archivo": "Web Studio Simple/src/lib/lesson-repository.ts",
+      "funcion": "saveCustomPlayerLesson (Líneas 283-300)",
+      "invocaAuditor": false,
+      "detalle": "Escribe en localStorage.setItem(CUSTOM_PLAYER_LESSONS_KEY, ...) sin validación contra REFERENCIA_CANONICA_TITULOS_CONTINUIDAD.json."
+    }
+  ],
+  "impactoTecnico": "El editor opera actualmente como una herramienta de autoría desacoplada del motor de validación canónico. Si un editor cambia un título o rompe la secuencia de puentes, el cambio se guarda en localStorage sin emitir advertencias hasta que se ejecuta externamente audit_structural_rules.ts desde la consola."
+}

@@ -1,0 +1,2 @@
+Validador: salida 0, sin diagnósticos. Repositorio: salida 0, sin diagnósticos.
+Alcance y comandos en EJECUCION_WORK.json. Esto no es un build completo de la App.

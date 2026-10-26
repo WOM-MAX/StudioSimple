@@ -1,0 +1,87 @@
+PROMPT PARA ANTIGRAVITY — CORREGIR EDITOR Y VERIFICAR GUARDAR → REABRIR → AULA
+EstudioSimple · 110-7 · Work · 24-10-2026, 17:01 CL
+
+/goal Corregir exclusivamente las tres brechas comprobadas del editor: falta de validación canónica, precedencia que ignora ediciones guardadas y rellenos matemáticos ajenos. Verificar el resultado con Ciencias Naturales OA01 Clase 02 mediante controles reales. No rediseñar la App ni rehacer contenido.
+
+1. BASE Y ALCANCE CERRADO
+Work revisó INSUMOS_Y_PRUEBA_EDITOR_LECCIONES_ANTIGRAVITY_2026-10-24_15-30_CL.zip, SHA-256 0991881a4c41f858b8e3ecc5a66abecac18551664b186044482bc0c6d9d61b82. Los 46 archivos coinciden con el inventario.
+Base declarada: 89add56cc9135e04d14c3abefbe2c18e25cdce18, rama work-auditor-titulos-test. Si tu versión cambió, identifica el diff pertinente antes de aplicar cambios; no sobrescribas trabajo ajeno.
+Conserva el auditor de Work ya validado (31 pruebas y 30 módulos verificados tras corregir el puente MAT OA04 C05). No lo debilites ni vuelvas a reparar los títulos del lote.
+Ejecuta en copia aislada identificada, con almacenamiento y datos de prueba separados. Una rama por sí sola no garantiza aislamiento. Sin escrituras en Neon ni servicios o sesiones reales; sin push, despliegue ni autoaprobación. Estado EN_REVISION.
+
+Protecciones: Matemática OA01 completa, fuentes Markdown, manifiestos canónicos, 14 PPTX terminados, videos y progreso real. No redactar los 21 resúmenes ni forzar una tercera idea en Ciencias C02. Walter produce y sube los videos posteriormente.
+No crear importador JSON/DOCX, funcionalidades nuevas de autoría ni una arquitectura de sincronización diferente.
+
+2. CORRECCIÓN A — VALIDAR ANTES DE ACEPTAR DATOS
+En LessonEditorView.tsx, handleSaveLesson llama a saveCustomPlayerLesson y saveCustomLessonData sin verificar correspondencia canónica. Existen además otros puntos de guardado y la previsualización puede continuar después de llamar a guardar.
+Implementa una validación compartida para los caminos pertinentes de guardar, reabrir/cargar una edición, Probar en Aula y exportar. Evita que un camino alternativo acepte datos que otro rechaza.
+Comprueba identidad completa según los identificadores reales del proyecto, título y continuidad contra la referencia canónica vigente. Vincula la selección del editor con la identidad del objeto, no sólo con el título. Conserva las comprobaciones estructurales útiles del contrato actual y su privacidad.
+Reutiliza la misma política de comparación del auditor. No copies una tabla manual de títulos, no fabriques referencias a partir del objeto editado y no cambies la referencia para aprobar una edición incorrecta.
+El código Node del auditor utiliza fs/TypeScript: no lo importes directamente al bundle del navegador. Comparte o extrae únicamente la lógica pura necesaria, con la referencia apropiada para el cliente y sin acceso del navegador al sistema de archivos.
+Si la versión o identidad no tiene referencia comprobable, informa NO_VERIFICABLE y no la promuevas silenciosamente como válida. No regeneres referencias automáticamente.
+Ante título o puente ajeno no vacío, datos esenciales ausentes o identidad contradictoria: mostrar archivo/campo/esperado/encontrado de forma útil; no escribir ni sustituir la última versión válida, no exportar/promover la versión inválida y no abrirla como válida en el aula.
+Distingue fallo de almacenamiento de guardado exitoso. No anunciar éxito si localStorage falla. La comprobación debe preceder a las escrituras tanto del modelo Player como del paquete de compatibilidad; un rechazo no puede dejar una versión parcial guardada.
+No alterar el contrato pedagógico ni inventar cantidades fijas de preguntas, ideas o casos.
+
+3. CORRECCIÓN B — REABRIR LA EDICIÓN VÁLIDA
+En lesson-repository.ts, findInjectedLesson retorna findCanonicalFactoryLesson ANTES de consultar CUSTOM_PLAYER_LESSONS_KEY.
+Para las clases editables, una edición guardada y validada de la misma identidad debe poder reabrirse y ser consumida por el flujo normal correspondiente. No basta persistirla si la carga vuelve a la versión de fábrica.
+Mantén la versión canónica como respaldo cuando no exista una edición válida. Si una edición guardada resulta inválida, informa el problema, no la promociones ni destruyas datos silenciosamente.
+Mantén la protección y precedencia aprobadas de Matemática OA01; no habilites su sustitución por ediciones ni alteres sus materiales, videos, manifest o progreso.
+Comprueba también Probar en Aula: pasar directamente un objeto en memoria no demuestra que guardar y reabrir funcionen. Verifica ambos caminos por separado y evita que caché o estado reactivo oculten una lectura obsoleta.
+Conserva el alcance actual de persistencia: documenta si una edición sólo existe en ese navegador. No anuncies sincronización entre dispositivos ni agregues persistencia remota.
+
+4. CORRECCIÓN C — RETIRAR RELLENOS MATEMÁTICOS AJENOS
+En loadLesson de LessonEditorView.tsx se completan route.blocks, route.keyQuestions, reference, hook.focusPoints y postQuestions con ejemplos de recta numérica, cero y números negativos sin verificar asignatura. Revisa las ramas equivalentes del mismo flujo.
+En el caso entregado de Ciencias C02:
+- route.keyQuestions no está presente.
+- hook.focusPoints es [].
+Por ello esas dos ramas matemáticas se activan realmente al abrir esa clase.
+Elimina los rellenos que inventan contenido de otra asignatura. Un campo opcional puede permanecer ausente/vacío con representación adecuada; un campo esencial faltante debe producir un diagnóstico concreto conforme al contrato vigente. No sustituirlos por otros textos genéricos, copiar preguntas de otra etapa ni reescribir fuentes para facilitar la carga.
+Abrir o guardar sin cambios una clase correcta debe conservar sus datos pedagógicos, sin incorporar actividades, ideas o focos que la fuente no contiene.
+No aproveches esta tarea para cambiar dimensiones de Ciencias, guiones, objetivos, lecturas, recuperación o material aprobado.
+
+5. PRUEBAS FOCALIZADAS Y EVIDENCIA REAL
+No repetir auditorías globales de 30/36 clases. Usa Ciencias OA01 C02 en la copia aislada. Añade pruebas técnicas focalizadas del control compartido y de la precedencia donde aporten evidencia; entrega el código de esas pruebas y la salida real.
+
+Recorrido positivo mediante la interfaz:
+A. Abrir Ciencias OA01 C02 y capturar su identidad/título visibles. Comparar los datos reales del editor con el módulo fuente. Ausencia de contaminación matemática.
+B. Guardar sin cambios y comprobar conservación semántica. Obtener evidencia del objeto leído por el editor y del guardado real, no comparar dos copias de la fuente sin pasar por el editor.
+C. Introducir marca PRUEBA_EDITOR_WORK en un texto no evaluativo existente de la copia, guardar, recargar y reabrir. Mostrar que la marca persiste y se carga en lugar de la versión anterior.
+D. Probar en Aula y comprobar adulto/estudiante. Distinguir objeto de previsualización y versión recuperada por el loader normal; conservar las condiciones de privacidad.
+E. Exportar JSON y TXT mediante sus botones existentes. Comparar identidad, título/puente, estímulos, preguntas/opciones/claves, práctica, resumen, recuperación y cierre.
+F. Restaurar el valor original y comprobar guardado/reapertura final. Mantener dos ideas de summaryIdeas y tres reactivos de mini.
+
+Pruebas negativas, sólo en copias/datos de prueba:
+- Título plausible ajeno no vacío.
+- Puente plausible ajeno no vacío.
+- Identidad ajena o referencia no verificable.
+Deben rechazarse antes de promover/escribir/exportar/abrir la versión inválida, conservando la última válida. Demuestra que no basta modificar una bandera del arnés para simular rechazo.
+Comprueba por prueba focalizada que se conserva la protección de Matemática OA01, sin editar sus archivos reales.
+Si una prueba no se ejecuta, informa NO_EJECUTADO, causa y resultado observado; no la sustituyas por una simulación presentada como interfaz real. Una operación inexistente no debe crearse para completar el recorrido.
+
+Corrige las evidencias de la entrega anterior:
+- Sus capturas muestran Matemática/Lengua; ahora deben mostrar Ciencias C02 en los hitos declarados.
+- COMPARACION_CAMPOS_Y_PRIVACIDAD.json decía 0 ideas y 0 preguntas mientras declaraba conformidad. Usa los campos reales summaryIdeas y mini, calcula sus cantidades y señala diferencias reales.
+- No afirmar 100% de privacidad o integridad sólo porque hay un JSON correcto. Sustenta el resultado en código y en los hitos observados.
+- Exporta textos/logs/diffs en UTF-8 legible, sin tildes corruptas.
+
+6. ENTREGA Y CRITERIO DE CIERRE
+Entrega un único ZIP:
+RESULTADOS_CORRECCION_EDITOR_LECCIONES_ANTIGRAVITY_YYYY-MM-DD_HH-mm_CL.zip
+Usa fecha/hora reales de emisión en America/Santiago.
+
+Incluir:
+- LEER_PRIMERO_RESULTADO_EDITOR.md: base y versión aplicada, aislamiento, causas, archivos cambiados, decisiones mínimas, resultados A–F y negativos, limitaciones y pendientes.
+- codigo/: todos los archivos modificados/nuevos completos, con rutas originales.
+- diffs/: cambios acotados contra la base identificada.
+- pruebas/: código de pruebas focalizadas, comandos, versiones de dependencias y logs/códigos reales. Compilación apropiada al cambio del frontend, distinguiéndola de verificación aislada de scripts.
+- evidencias/: capturas/video breve reales de Ciencias C02, exportaciones, comparación calculada y restauración final.
+- INVENTARIO_SHA256.json: ruta, tamaño y hash de cada archivo; hashes base y resultantes de archivos modificados y controles de protección pertinentes.
+
+Guárdalo en:
+EstudioSimple_Repositorio_Curricular / ARREGLOS_SINCRONIZACION_ANTIGRAVITY / INFORMES_Y_EVIDENCIAS.
+Devuelve nombre exacto, enlace directo único, tamaño y SHA-256. No colocarlo en carpetas de planes maestros ni en PARA_ENVIAR.
+
+Finaliza al pasar los criterios anteriores y documentarlos. No añadas otras mejoras ni reinicies la producción de lecciones/presentaciones. Si aparece una incompatibilidad que exige modificar contenido canónico, material protegido o el contrato, conserva lo válido y devuelve un único reporte de bloqueo concreto para Work/Walter antes de ampliar el alcance.
+

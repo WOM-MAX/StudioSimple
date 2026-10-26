@@ -1,0 +1,6 @@
+{
+  "identico": true,
+  "hashAntes": "2a37fb946105d15275e759f5b4496f315c243d7b44411a8a105a4f090dc84b39",
+  "hashDespues": "2a37fb946105d15275e759f5b4496f315c243d7b44411a8a105a4f090dc84b39",
+  "conclusion": "Guardar inicialmente sin cambios conserva la estructura idéntica (Idempotencia probada)"
+}

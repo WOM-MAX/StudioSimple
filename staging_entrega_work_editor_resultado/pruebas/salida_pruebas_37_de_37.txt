@@ -1,0 +1,52 @@
+================================================================
+INICIO DE PRUEBAS FOCALIZADAS: TRES BRECHAS DEL EDITOR
+================================================================
+
+--- SUITE 1: Validación Canónica Client-Side ---
+  ✓ [PASS] [Brecha 1: Validador Canónico] Ciencias 7B OA01 Clase 02 oficial es 100% válida canónicamente
+  ✓ [PASS] [Brecha 1: Validador Canónico (Negativa)] Rechazo estricto de título ajeno con campo/esperado/encontrado
+  ✓ [PASS] [Brecha 1: Validador Canónico (Negativa)] Rechazo estricto de puente de continuidad ajeno con campo/esperado/encontrado
+  ✓ [PASS] [Brecha 1: Validador Canónico (Blindaje)] Matemática 7B OA01 detectada con bandera isProtectedOa: true
+
+--- SUITE 2: Precedencia de Carga y Blindajes ---
+  ✓ [PASS] [Brecha 2: Precedencia] findInjectedLesson retorna fábrica canónica cuando no hay datos en localStorage
+  ✓ [PASS] [Brecha 2: Precedencia] findInjectedLesson PRIORIZA la versión editada de localStorage sobre la fábrica
+  ✓ [PASS] [Brecha 2: Precedencia] isPlayerLessonCustomized reporta estado personalizado en true
+  ✓ [PASS] [Brecha 2: Blindaje Matemática OA01] saveCustomPlayerLesson BLOQUEA escritura en Matemática OA01 (blindada de fábrica)
+  ✓ [PASS] [Brecha 2: Blindaje Matemática OA01] isPlayerLessonCustomized siempre es false para Matemática OA01
+  ✓ [PASS] [Brecha 2: Blindaje Matemática OA01] findInjectedLesson IGNORA cualquier payload forzado en localStorage para Matemática OA01
+  ✓ [PASS] [Brecha 2: Precedencia] findInjectedLesson descarta candidato de localStorage con identidad incongruente y cae a fábrica
+  ✓ [PASS] [Brecha 2: Restauración] resetCustomPlayerLesson restaura limpiamente la lección a versión de fábrica canónica
+
+--- SUITE 3: Erradicación de Fallbacks Matemáticos en Ciencias ---
+  ✓ [PASS] [Brecha 3: Erradicación Fallbacks Matemáticos] Cero contaminación matemática: ausencia del término "recta numerica"
+  ✓ [PASS] [Brecha 3: Erradicación Fallbacks Matemáticos] Cero contaminación matemática: ausencia del término "recta numérica"
+  ✓ [PASS] [Brecha 3: Erradicación Fallbacks Matemáticos] Cero contaminación matemática: ausencia del término "positivos y negativos"
+  ✓ [PASS] [Brecha 3: Erradicación Fallbacks Matemáticos] Cero contaminación matemática: ausencia del término "número cero"
+  ✓ [PASS] [Brecha 3: Erradicación Fallbacks Matemáticos] Cero contaminación matemática: ausencia del término "numero cero"
+  ✓ [PASS] [Brecha 3: Erradicación Fallbacks Matemáticos] Cero contaminación matemática: ausencia del término "el cero al centro"
+  ✓ [PASS] [Brecha 3: Erradicación Fallbacks Matemáticos] Cero contaminación matemática: ausencia del término "números enteros"
+  ✓ [PASS] [Brecha 3: Erradicación Fallbacks Matemáticos] Cero contaminación matemática: ausencia del término "numeros enteros"
+  ✓ [PASS] [Brecha 3: Erradicación Fallbacks Matemáticos] Cero contaminación matemática: ausencia del término "−5 y −2"
+  ✓ [PASS] [Brecha 3: Erradicación Fallbacks Matemáticos] Cero contaminación matemática: ausencia del término "regla de la derecha"
+  ✓ [PASS] [Brecha 3: Erradicación Fallbacks Matemáticos] Cero contaminación matemática: ausencia del término "álgebra"
+  ✓ [PASS] [Brecha 3: Erradicación Fallbacks Matemáticos] Cero contaminación matemática: ausencia del término "algebra"
+  ✓ [PASS] [Brecha 3: Erradicación Fallbacks Matemáticos] Cero contaminación matemática: ausencia del término "geometría"
+  ✓ [PASS] [Brecha 3: Erradicación Fallbacks Matemáticos] Cero contaminación matemática: ausencia del término "geometria"
+  ✓ [PASS] [Brecha 3: Erradicación Fallbacks Matemáticos] Cero contaminación matemática: ausencia del término "datos y azar"
+  ✓ [PASS] [Brecha 3: Integridad de Ciencias] Bloques de ruta de Ciencias legítimos conservados (Punto de partida, Motivación, etc.)
+  ✓ [PASS] [Brecha 3: Integridad de Ciencias] Las 2 ideas de síntesis originales de Ciencias se preservan íntegramente
+  ✓ [PASS] [Brecha 3: Integridad de Ciencias] hook.focusPoints se mantiene vacío ([]) sin forzar conceptos matemáticos
+  ✓ [PASS] [Brecha 3: Integridad de Ciencias] postQuestions preserva su pregunta biológica legítima (cambio físico) sin inyectar reactivos de números enteros
+
+--- SUITE 4: Recorrido Positivo A-F Completo ---
+  ✓ [PASS] [Recorrido A-F] Paso A: Carga limpia de fábrica de Ciencias 7B OA01 C02
+  ✓ [PASS] [Recorrido A-F] Paso B: Modificación válida con marca temporal agregada al objeto
+  ✓ [PASS] [Recorrido A-F] Paso C: Validación canónica exitosa (título y puente oficial coinciden)
+  ✓ [PASS] [Recorrido A-F] Paso D: Persistencia exitosa y recarga en findInjectedLesson recuperando la marca
+  ✓ [PASS] [Recorrido A-F] Paso E: Consistencia de exportación con títulos canónicos intactos
+  ✓ [PASS] [Recorrido A-F] Paso F: Restauración total al estado canónico de fábrica sin marcas residuales
+
+================================================================
+RESUMEN FINAL: 37/37 PRUEBAS EXITOSAS (0 FALLOS)
+================================================================

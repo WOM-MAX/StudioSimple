@@ -1,0 +1,51 @@
+{
+  "base": "ZIP Antigravity 2026-10-24_17-35_CL, commit declarado 89add56; package.json de insumos 15:30 de esa base",
+  "files": [
+    {
+      "path": "Web Studio Simple/src/lib/lesson-canonical-validator.ts",
+      "baseSha256": "ff1dfb591c838fb0c901b3e1272508ca651e9fb1929a10873dc74c566468ec36",
+      "resultSha256": "8482c14ec12c1e856a629b028a8bff9c492754586508410ceba78c11e6ee15f7",
+      "bytes": 7786
+    },
+    {
+      "path": "Web Studio Simple/src/lib/lesson-repository.ts",
+      "baseSha256": "e71b3af3b874577efc1a0917a1c46bc2b8729d1ee48333217a5de0e8fc6998ff",
+      "resultSha256": "10ecd8ba74c93d6ecae7aa5fbdc6b1d5391f0e82bbe8261d926c14a482bfd9b0",
+      "bytes": 19338
+    },
+    {
+      "path": "Web Studio Simple/src/components/admin/cms/LessonEditorView.tsx",
+      "baseSha256": "4665ec1ba15b225b2828ed4f2d126899d353b79f708911fb22bcc3a1d71eb27b",
+      "resultSha256": "da61e80db7a71740a5c7841b2c25bddcacb51a50fc33489713708e1cf8b3934a",
+      "bytes": 202783
+    },
+    {
+      "path": "Web Studio Simple/package.json",
+      "baseSha256": "9c717c6a0e2d1493077f34bfc2c3b20a86393131525305581d2bb8759031adc7",
+      "resultSha256": "604d7b094663f071ada1ab53a923ab9b5535e2d9ce1610c475318cd7a447690d",
+      "bytes": 860
+    },
+    {
+      "path": "scripts/verify_editor_reference.cjs",
+      "baseSha256": null,
+      "resultSha256": "0f53121a523d699da32681c23bcc234420235e1d6bd2c202a44dba35d34d41b2",
+      "bytes": 1443
+    },
+    {
+      "path": "scripts/test_editor_work.cjs",
+      "baseSha256": null,
+      "resultSha256": "b815d43eec2e233bfe6a843463dfed53f21f4100c8cf5034071159859d2ca56d",
+      "bytes": 14943
+    },
+    {
+      "path": "scripts/fixtures/CNA_OA01_C02.json",
+      "baseSha256": null,
+      "resultSha256": "a1cd256bb5e785071d90d4dbafb5a46b3ad3717178ddc2762faf54dabafbc4ce",
+      "bytes": 25326
+    }
+  ],
+  "patchSha256": "a3a21fdb8511173ee303ae58f7f93d94f0dddc7944b5989367f53f7b39236d86",
+  "gitApplyCheckExitCode": 0,
+  "appliedBytesMatch": true,
+  "referenceSha256Unchanged": "da81744b35f8279f684726ca85561e753d5b68ce329131a6c83d39a8abd6d76c"
+}

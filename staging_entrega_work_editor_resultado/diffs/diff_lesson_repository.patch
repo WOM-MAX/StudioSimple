@@ -1,0 +1,98 @@
+diff --git a/Web Studio Simple/src/lib/lesson-repository.ts b/Web Studio Simple/src/lib/lesson-repository.ts
+index 418d0b6..cb4e6c2 100644
+--- a/Web Studio Simple/src/lib/lesson-repository.ts	
++++ b/Web Studio Simple/src/lib/lesson-repository.ts	
+@@ -288,7 +288,17 @@ export function saveCustomPlayerLesson(
+   lessonData: PlayerLessonData
+ ): void {
+   if (typeof window === 'undefined') return;
+-  const key = `${normalizeGrade(grade)}_${normalizeSubject(subject)}_${normalizeOa(oaCode)}_${lessonNumber}`;
++  const keyGrade = normalizeGrade(grade);
++  const keySubj = normalizeSubject(subject);
++  const keyOa = normalizeOa(oaCode);
++
++  // Blindaje Matemática OA01 (PROTEGIDO_NO_INTERVENIDO)
++  if ((keySubj === 'mat' || keySubj === 'matematica') && (keyOa === 'oa01' || keyOa === 'oa1')) {
++    console.warn('Operación bloqueada: Matemática OA01 es un paquete blindado de fábrica (PROTEGIDO_NO_INTERVENIDO).');
++    return;
++  }
++
++  const key = `${keyGrade}_${keySubj}_${keyOa}_${lessonNumber}`;
+   try {
+     const raw = localStorage.getItem(CUSTOM_PLAYER_LESSONS_KEY);
+     const map = raw ? JSON.parse(raw) : {};
+@@ -326,7 +336,16 @@ export function isPlayerLessonCustomized(
+   lessonNumber: number
+ ): boolean {
+   if (typeof window === 'undefined') return false;
+-  const key = `${normalizeGrade(grade)}_${normalizeSubject(subject)}_${normalizeOa(oaCode)}_${lessonNumber}`;
++  const keyGrade = normalizeGrade(grade);
++  const keySubj = normalizeSubject(subject);
++  const keyOa = normalizeOa(oaCode);
++
++  // Blindaje Matemática OA01 (PROTEGIDO_NO_INTERVENIDO)
++  if ((keySubj === 'mat' || keySubj === 'matematica') && (keyOa === 'oa01' || keyOa === 'oa1')) {
++    return false;
++  }
++
++  const key = `${keyGrade}_${keySubj}_${keyOa}_${lessonNumber}`;
+   try {
+     const raw = localStorage.getItem(CUSTOM_PLAYER_LESSONS_KEY);
+     if (!raw) return false;
+@@ -375,18 +394,37 @@ export function findInjectedLesson(
+   const keyOa = normalizeOa(oaCode);
+   const customKey = `${keyGrade}_${keySubj}_${keyOa}_${lessonNumber}`;
+ 
+-  // 1. Sobrescrituras manuales curadas de alta fidelidad de fábrica (Prioridad oficial canónica)
+-  const canonical = findCanonicalFactoryLesson(grade, subject, oaCode, lessonNumber);
+-  if (canonical) return canonical;
++  // 1. Blindaje inmutable de fábrica para Matemática OA01 (PROTEGIDO_NO_INTERVENIDO)
++  const isProtectedMatOa01 =
++    (keySubj === 'mat' || keySubj === 'matematica') &&
++    (keyOa === 'oa01' || keyOa === 'oa1');
+ 
+-  // 2. Versión personalizada guardada por el usuario en localStorage
++  if (isProtectedMatOa01) {
++    return findCanonicalFactoryLesson(grade, subject, oaCode, lessonNumber);
++  }
++
++  // 2. Precedencia para lecciones editables: versión personalizada guardada en localStorage si es válida
+   if (typeof window !== 'undefined') {
+     try {
+       const raw = localStorage.getItem(CUSTOM_PLAYER_LESSONS_KEY);
+       if (raw) {
+         const map = JSON.parse(raw);
+-        if (map[customKey]) {
+-          return map[customKey];
++        const candidate = map[customKey];
++        if (candidate && typeof candidate === 'object' && candidate.metadata) {
++          const meta = candidate.metadata;
++          const candidateGrade = normalizeGrade(meta.grade || '');
++          const candidateSubj = normalizeSubject(meta.subject || '');
++          const candidateOa = normalizeOa(meta.oaCode || '');
++          const candidateNum = Number(meta.lessonNumber);
++
++          if (
++            (!candidateGrade || candidateGrade === keyGrade) &&
++            (!candidateSubj || candidateSubj === keySubj) &&
++            (!candidateOa || candidateOa === keyOa) &&
++            (candidateNum === lessonNumber)
++          ) {
++            return candidate as PlayerLessonData;
++          }
+         }
+       }
+     } catch (e) {
+@@ -394,7 +432,11 @@ export function findInjectedLesson(
+     }
+   }
+ 
+-  // 3. Compatibilidad con almacenamiento anterior
++  // 3. Respaldo oficial canónico de fábrica
++  const canonical = findCanonicalFactoryLesson(grade, subject, oaCode, lessonNumber);
++  if (canonical) return canonical;
++
++  // 4. Compatibilidad con almacenamiento anterior
+   const customPkg = cachedInjectedPackages.find((p) => {
+     if (!p.isCustomized) return false;
+     return (

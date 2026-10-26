@@ -1,0 +1,1403 @@
+import React, { useRef, useState, useEffect, useMemo } from 'react';
+import { useLessonSync } from '../../../context/LessonSyncContext';
+import { useApp } from '../../../context/AppContext';
+import { StudentHeader } from './StudentHeader';
+import { StudentDisciplineGraphic } from './StudentDisciplineGraphic';
+import { StudentMiniquizView } from './StudentMiniquizView';
+import { StudentQuizReviewView } from './StudentQuizReviewView';
+import { StudentRecoveryView } from './StudentRecoveryView';
+import { ConfettiEffect } from './ConfettiEffect';
+import { SupportHintCard } from './SupportHintCard';
+import { OptionalAudioPlayer } from '../common/OptionalAudioPlayer';
+import { StudentReadingResourceCard } from './StudentReadingResourceCard';
+import { getSubjectTheme } from '../../../lib/subject-theme';
+import { resolveVideoSource } from '../../../lib/video-utils';
+import { getLessonCanonicalKey } from '../../../lib/lesson-repository';
+import { canAccreditLesson } from '../../../lib/lesson-session';
+import {
+  Sparkles,
+  Check,
+  CircleHelp,
+  ArrowRight,
+  Play,
+  Home,
+  RotateCcw,
+  AlertCircle,
+  Send,
+  MessageSquare,
+  BookOpen
+} from 'lucide-react';
+
+function isAmbientActiveStage(
+  stage: string,
+  hookStarted: boolean,
+  hookEnded: boolean,
+  formalStarted: boolean,
+  formalEnded: boolean
+): boolean {
+  if (['cover', 'prep'].includes(stage)) return true;
+  if (['conversationIntro', 'preQuestions', 'postIntro', 'postQuestions', 'summary'].includes(stage)) return true;
+  if (stage === 'hook') return !hookStarted || hookEnded;
+  if (stage === 'formalization') return !formalStarted || formalEnded;
+  return false;
+}
+
+interface StudentAnswerSectionProps {
+  questionKey: string;
+  feedback: { kind: 'success' | 'support' | 'reveal' | 'info'; text: string } | null;
+  studentReveal: string;
+  onSubmitAnswer: (key: string, ans: string) => void;
+  savedAnswer?: string;
+  hintMessage?: string;
+}
+
+const StudentAnswerSection: React.FC<StudentAnswerSectionProps> = ({
+  questionKey,
+  feedback,
+  studentReveal,
+  onSubmitAnswer,
+  savedAnswer = '',
+  hintMessage = 'Presta atención a la pista que te dará tu mentor.'
+}) => {
+  const [text, setText] = useState(savedAnswer);
+  const [isEditing, setIsEditing] = useState(!savedAnswer);
+
+  useEffect(() => {
+    setText(savedAnswer);
+    if (!savedAnswer) {
+      setIsEditing(true);
+    }
+  }, [savedAnswer, questionKey]);
+
+  const handleSubmit = (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
+    if (text.trim()) {
+      onSubmitAnswer(questionKey, text.trim());
+      setIsEditing(false);
+    }
+  };
+
+  // No mostrar la solución modelo antes de que el estudiante responda
+  const studentHasAnswered = Boolean(savedAnswer && savedAnswer.trim().length > 0);
+  const isResolved = (feedback?.kind === 'success' || feedback?.kind === 'reveal') && studentHasAnswered;
+
+  return (
+    <div className="mt-4 text-left">
+      <SupportHintCard
+        visible={feedback?.kind === 'support'}
+        message={hintMessage}
+      />
+
+      {isResolved && (
+        <div className="bg-emerald-50 border border-emerald-200 text-emerald-800 p-4 rounded-2xl text-sm font-bold flex items-center justify-center gap-2 shadow-xs animate-fadeIn my-3">
+          <Sparkles className="w-5 h-5 text-emerald-600 shrink-0" />
+          <span>{studentReveal}</span>
+        </div>
+      )}
+
+      {/* Tarjeta de Respuesta Escrita del Estudiante (Una sola respuesta registrada por caso) */}
+      <div className="bg-slate-50 border border-slate-200/90 rounded-2xl p-4 transition-all mt-3">
+        <div className="flex items-center justify-between mb-2">
+          <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#1C3257] flex items-center gap-1.5">
+            <Send className="w-3.5 h-3.5 text-[#EE751C]" />
+            Tu respuesta para tu mentor:
+          </span>
+          {savedAnswer && !isEditing ? (
+            <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full flex items-center gap-1">
+              <Check className="w-3 h-3" />
+              Respuesta registrada
+            </span>
+          ) : (
+            <span className="text-[10px] font-bold text-slate-400">
+              {isResolved ? 'Completada' : 'Escribe y envía una sola respuesta'}
+            </span>
+          )}
+        </div>
+
+        {isEditing && !isResolved ? (
+          <form onSubmit={handleSubmit} className="space-y-2">
+            <textarea
+              rows={2}
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+              onInput={(e) => setText((e.target as HTMLTextAreaElement).value)}
+              placeholder="Escribe tu respuesta aquí para tu mentor..."
+              className="w-full text-xs sm:text-sm font-semibold text-[#1C3257] bg-white border border-slate-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-[#EE751C]/40 focus:border-[#EE751C] transition-all resize-none shadow-2xs"
+              autoFocus
+            />
+            <div className="flex items-center justify-between">
+              <span className="text-[10px] text-slate-400">
+                Tu mentor revisará tu respuesta.
+              </span>
+              <button
+                type="submit"
+                disabled={!text.trim()}
+                className="bg-[#EE751C] hover:bg-[#D96512] disabled:opacity-40 disabled:hover:bg-[#EE751C] text-white font-extrabold text-xs px-4 py-2 rounded-xl shadow-xs transition-all flex items-center gap-1.5 cursor-pointer disabled:cursor-not-allowed"
+              >
+                <span>Enviar respuesta</span>
+                <Send className="w-3.5 h-3.5" />
+              </button>
+            </div>
+          </form>
+        ) : (
+          <div>
+            <div className="p-3 bg-white border border-slate-200 rounded-xl text-xs sm:text-sm font-bold text-[#1C3257] whitespace-pre-wrap">
+              {savedAnswer || text || '(Sin respuesta escrita)'}
+            </div>
+            {!isResolved && (
+              <div className="flex items-center justify-between mt-2.5">
+                <span className="text-[10px] text-amber-700 font-semibold flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-ping" />
+                  Tu mentor está revisando tu respuesta...
+                </span>
+                {feedback?.kind === 'support' && (
+                  <button
+                    type="button"
+                    onClick={() => setIsEditing(true)}
+                    className="text-[11px] font-bold text-[#12A1A4] hover:underline cursor-pointer"
+                  >
+                    Ajustar con la pista
+                  </button>
+                )}
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export const StudentLessonView: React.FC = () => {
+  const { session, lessonData, setStage, peerRoleConnected, submitStudentAnswer, resetSession } = useLessonSync();
+  const { setViewMode, setActiveSynchronizedLesson, markLessonCompleted, authSession } = useApp();
+  const theme = getSubjectTheme(lessonData.metadata.subject);
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const [soundOn, setSoundOn] = useState(true);
+  const [blocked, setBlocked] = useState(false);
+  const [showConfetti, setShowConfetti] = useState(false);
+  const [showReadingConsult, setShowReadingConsult] = useState(false);
+  const [consultParagraph, setConsultParagraph] = useState<number | undefined>(undefined);
+  const prevFeedbackRef = useRef<string | null>(null);
+
+  useEffect(() => {
+    if (session.stage === 'completed' && canAccreditLesson(session) && lessonData?.metadata) {
+      const canonicalKey = getLessonCanonicalKey(
+        lessonData.metadata.grade,
+        lessonData.metadata.subject,
+        lessonData.metadata.oaCode,
+        lessonData.metadata.lessonNumber
+      );
+      markLessonCompleted(canonicalKey);
+    }
+  }, [session.stage, session.miniScore, lessonData?.metadata, markLessonCompleted]);
+
+  // Trigger confetti on success/reveal feedback transitions
+  useEffect(() => {
+    const currentKind = session.feedback?.kind || null;
+    if (
+      (currentKind === 'success' || currentKind === 'reveal') &&
+      prevFeedbackRef.current !== currentKind
+    ) {
+      setShowConfetti(true);
+      prevFeedbackRef.current = currentKind;
+      const timer = setTimeout(() => setShowConfetti(false), 3000);
+      return () => clearTimeout(timer);
+    }
+    // Always update ref so null->success->null->success triggers correctly
+    prevFeedbackRef.current = currentKind;
+  }, [session.feedback?.kind]);
+
+  // Reset feedback tracking ref when moving between stages or questions
+  useEffect(() => {
+    prevFeedbackRef.current = null;
+  }, [
+    session.stage,
+    session.conversationIndex,
+    session.postIndex,
+    session.practiceIndex,
+    session.reviewIndex,
+    session.recoveryIndex
+  ]);
+
+  const isAmbientActive = isAmbientActiveStage(
+    session.stage,
+    session.hookStarted,
+    session.hookEnded,
+    session.formalStarted,
+    session.formalEnded
+  );
+
+  useEffect(() => {
+    const player = audioRef.current;
+    if (!player) return;
+    player.volume = 0.12;
+    if (isAmbientActive && soundOn && lessonData.ambientAudioSrc) {
+      player
+        .play()
+        .then(() => setBlocked(false))
+        .catch(() => setBlocked(true));
+    } else {
+      player.pause();
+      if (!isAmbientActive) player.currentTime = 0;
+    }
+  }, [isAmbientActive, soundOn, lessonData.ambientAudioSrc]);
+
+  const toggleSound = () => {
+    if (soundOn && !blocked) {
+      setSoundOn(false);
+      return;
+    }
+    setSoundOn(true);
+    const player = audioRef.current;
+    if (player && lessonData.ambientAudioSrc) {
+      player.volume = 0.12;
+      player
+        .play()
+        .then(() => setBlocked(false))
+        .catch(() => setBlocked(true));
+    }
+  };
+
+  const currentPreItem = (lessonData.preQuestions && lessonData.preQuestions[session.conversationIndex]) ?? lessonData.preQuestions?.[0] ?? ({} as any);
+  const currentPostItem = (lessonData.postQuestions && lessonData.postQuestions[session.postIndex]) ?? lessonData.postQuestions?.[0] ?? ({} as any);
+  const currentPracticeItem = (lessonData.practice && lessonData.practice[session.practiceIndex]) ?? lessonData.practice?.[0] ?? ({} as any);
+
+  // Regla estructural de asignatura y disponibilidad de recurso:
+  // Ciencias Naturales y Matemática no usan texto de lectura narrativo (usan organizadores y casos contextuales).
+  // Solo se habilita si la asignatura admite lectura Y la lección declara párrafos legítimos en sus datos.
+  const subjectLower = (lessonData.metadata.subject || '').toLowerCase();
+  const isCienciasOrMatematica =
+    subjectLower.includes('ciencias') ||
+    subjectLower.includes('matemática') ||
+    subjectLower.includes('matematica');
+
+  const declaredReadingParagraphs =
+    (lessonData as any)?.readingResource?.paragraphs ||
+    (lessonData?.interactive?.type === 'reading_resource' ? lessonData.interactive.paragraphs : undefined) ||
+    ((lessonData as any)?.readingText ? [(lessonData as any).readingText] : undefined);
+
+  const hasLegitimateReadingResource = !isCienciasOrMatematica && Boolean(declaredReadingParagraphs && declaredReadingParagraphs.length > 0);
+
+  return (
+    <div className="flex flex-col h-full min-h-[720px] bg-gradient-to-br from-slate-50 via-white to-slate-100/70 rounded-2xl overflow-hidden border border-slate-200/90 shadow-md shadow-slate-200/40 select-none relative">
+      {/* Confetti on correct answers */}
+      <ConfettiEffect active={showConfetti} />
+
+      {/* Audio ambiental opcional */}
+      {lessonData.ambientAudioSrc && (
+        <audio ref={audioRef} src={lessonData.ambientAudioSrc} loop preload="auto" />
+      )}
+
+      {/* Dynamic Ambient Glow Auras for Visual Warmth and Vitality */}
+      <div className={`absolute -top-20 -right-20 w-80 h-80 rounded-full ${theme.glowColor} blur-3xl pointer-events-none transition-all duration-700`} />
+      <div className="absolute -bottom-20 -left-20 w-72 h-72 rounded-full bg-slate-200/30 blur-3xl pointer-events-none" />
+
+      <StudentHeader
+        soundActive={isAmbientActive && Boolean(lessonData.ambientAudioSrc)}
+        soundOn={soundOn && !blocked}
+        onToggleSound={toggleSound}
+      />
+
+      <div className="flex-1 p-6 md:p-8 overflow-y-auto flex flex-col justify-center max-w-4xl mx-auto w-full relative z-10">
+        {/* 1. STAGE: COVER & PREP (Waiting Room - Clean Single-Elevation Card) */}
+        {(session.stage === 'cover' || session.stage === 'prep') && (
+          <div className="max-w-md mx-auto w-full text-center animate-fadeIn my-auto py-6">
+            <div className={`bg-white/95 backdrop-blur-md rounded-3xl p-8 shadow-xl shadow-slate-200/60 border ${theme.borderColor} text-center relative overflow-hidden transition-all duration-300 hover:shadow-2xl`}>
+              {/* Decorative top accent border */}
+              <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${theme.accentGradient}`} />
+
+              <div className={`inline-flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-full ${theme.badgeBg} ${theme.badgeText} border ${theme.badgeBorder} font-bold text-xs uppercase tracking-wider mb-4 shadow-xs`}>
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className={`animate-ping absolute inline-flex h-full w-full rounded-full ${peerRoleConnected ? 'bg-emerald-400' : 'bg-amber-400'} opacity-75`}></span>
+                  <span className={`relative inline-flex rounded-full h-2.5 w-2.5 ${peerRoleConnected ? 'bg-emerald-500' : 'bg-amber-500'}`}></span>
+                </span>
+                <span>
+                  {peerRoleConnected
+                    ? (session.stage === 'prep' ? '🟢 Mentor revisando preparación · ¡Casi listos!' : '🟢 Mentor en línea · Sincronizado')
+                    : '🟡 Conectando con Mentor...'}
+                </span>
+              </div>
+
+              <h1 className="text-2xl font-black text-[#1C3257] mb-2 tracking-tight">
+                {session.stage === 'prep' ? 'Preparando la sesión de hoy' : 'La clase comenzará pronto'}
+              </h1>
+              <p className="text-xs text-slate-500 leading-relaxed mb-6">
+                {session.stage === 'prep'
+                  ? 'Tu mentor ya inició la clase y está revisando los objetivos pedagógicos. En breve dará el pase y tu pantalla avanzará automáticamente.'
+                  : (peerRoleConnected
+                    ? 'Tu mentor está conectado en su computador. Cuando inicie la clase, tu pantalla avanzará automáticamente.'
+                    : 'Esperando que tu mentor inicie la clase desde su computador. Tu pantalla se actualizará automáticamente.')}
+              </p>
+
+              <div className="pt-4 border-t border-slate-100 text-left bg-slate-50/70 -mx-8 -mb-8 p-6 rounded-b-3xl">
+                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">
+                  {lessonData.metadata.subject} · {lessonData.metadata.oaCode}
+                </span>
+                <strong className="text-sm text-[#1C3257] font-extrabold block mt-0.5">
+                  {lessonData.metadata.lessonTitle}
+                </strong>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* 2. STAGE: ROUTE OVERVIEW (Grandes bloques del curso) */}
+        {session.stage === 'routeOverview' && (
+          <div className="max-w-2xl mx-auto w-full animate-fadeIn py-4">
+            <span className="text-[#12a1a4] font-bold text-xs uppercase tracking-widest block mb-1 text-center">
+              Nuestra ruta de {lessonData.metadata.subject}
+            </span>
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-[#1c3257] mb-6 text-center">
+              {lessonData.route.blocks.length} grandes bloques
+            </h1>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {lessonData.route.blocks.map((block, idx) => {
+                const colors = [
+                  'bg-[#1c3257] text-white',
+                  'bg-[#ee751c] text-white',
+                  'bg-[#f8ad22] text-[#1c3257]',
+                  'bg-[#12a1a4] text-white'
+                ];
+                return (
+                  <article key={block.id || block.number} className={`${colors[idx % colors.length]} rounded-2xl p-5 shadow-sm min-h-[110px] flex flex-col justify-between`}>
+                    <span className="text-xs font-bold opacity-75">{block.number}</span>
+                    <div>
+                      <h2 className="text-lg font-bold leading-tight mb-1">{block.title}</h2>
+                      <p className="text-xs opacity-90 leading-snug">{block.subtitle}</p>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* 3. STAGE: ROUTE TODAY (La clase de hoy) */}
+        {session.stage === 'routeToday' && (
+          <div className="max-w-2xl mx-auto w-full animate-fadeIn text-center py-4">
+            <span className="text-[#12a1a4] font-bold text-xs uppercase tracking-widest block mb-1">
+              La clase de hoy
+            </span>
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-[#1c3257] mb-6">
+              {lessonData.metadata.lessonTitle}
+            </h1>
+
+            {lessonData.route.keyQuestions && lessonData.route.keyQuestions.length > 0 ? (
+              <>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+                  {lessonData.route.keyQuestions.map((q, idx) => {
+                    const iconColors = [
+                      'bg-[#e6f7f7] text-[#12a1a4]',
+                      'bg-[#e9f2f8] text-[#1c3257]',
+                      'bg-[#fff0e4] text-[#ee751c]'
+                    ];
+                    return (
+                      <div key={idx} className="bg-white border border-[#dce2e6] rounded-2xl p-5 shadow-sm flex flex-col items-center text-center">
+                        <div className={`w-10 h-10 rounded-full ${iconColors[idx % iconColors.length]} flex items-center justify-center mb-3 font-bold text-sm`}>
+                          {idx + 1}
+                        </div>
+                        <strong className="text-sm font-bold text-[#1c3257] block mb-1">{q.label}</strong>
+                        <span className="text-xs text-[#748093]">{q.sub}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+
+                <p className="text-xs sm:text-sm text-[#526177] max-w-lg mx-auto leading-relaxed bg-white border border-[#dce2e6] p-4 rounded-2xl">
+                  {lessonData.route.dileObjective}
+                </p>
+              </>
+            ) : (
+              <div className="max-w-lg mx-auto bg-white border border-[#dce2e6] rounded-2xl p-6 shadow-sm text-center">
+                <p className="text-sm sm:text-base text-[#1c3257] font-semibold leading-relaxed">
+                  {lessonData.route.dileObjective}
+                </p>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* 4. STAGE: INTERACTIVE DISCIPLINE GRAPHIC (CPA) */}
+        {(session.stage === 'thermo' || session.stage === 'thermoMeaning') && (
+          <div className="w-full flex flex-col items-center justify-center animate-fadeIn py-2">
+            <StudentDisciplineGraphic
+              interactiveType={lessonData.interactive?.type}
+              subject={lessonData.metadata.subject}
+              oaCode={lessonData.metadata.oaCode}
+              lessonNumber={lessonData.metadata.lessonNumber}
+            />
+          </div>
+        )}
+
+        {/* 5. STAGE: HOOK */}
+        {session.stage === 'hook' && (
+          <div className="max-w-3xl mx-auto w-full animate-fadeIn text-center">
+            {!session.hookStarted ? (
+              <div className={`bg-white/95 backdrop-blur-md rounded-3xl p-8 max-w-md mx-auto w-full shadow-xl shadow-slate-200/50 border ${theme.borderColor} text-left relative overflow-hidden transition-all duration-300`}>
+                <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${theme.accentGradient}`} />
+                <span className={`text-[11px] font-bold uppercase tracking-widest ${theme.badgeText} block mb-2`}>
+                  {lessonData.hook.title || 'Video de inicio'}
+                </span>
+                <h1 className="text-xl sm:text-2xl font-extrabold text-[#1C3257] mb-4">
+                  Mientras observas, fíjate en...
+                </h1>
+                {lessonData.hook.focusPoints && lessonData.hook.focusPoints.length > 0 ? (
+                  <ul className="space-y-2 text-xs sm:text-sm text-[#334157] font-semibold">
+                    {lessonData.hook.focusPoints.map((point, idx) => (
+                      <li key={idx} className="flex items-center gap-2">
+                        <span className={`w-5 h-5 rounded-full ${theme.badgeBg} ${theme.badgeText} border ${theme.badgeBorder} text-[11px] flex items-center justify-center font-bold`}>
+                          {idx + 1}
+                        </span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-xs text-[#526177]">
+                    Presta atención a los detalles principales que presentará el video.
+                  </p>
+                )}
+                <p className="text-[11px] text-slate-400 mt-6 pt-3 border-t border-slate-100">
+                  El video se reproducirá cuando tu mentor lo indique.
+                </p>
+              </div>
+            ) : !session.hookEnded ? (
+              <SyncedStudentVideo src={lessonData.hook.videoSrc} kind="hook" session={session} title={lessonData.hook.title} />
+            ) : (
+              <div className={`bg-white/95 backdrop-blur-md rounded-3xl p-8 max-w-md mx-auto w-full shadow-xl shadow-slate-200/50 border ${theme.borderColor} text-center relative overflow-hidden transition-all duration-300`}>
+                <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${theme.accentGradient}`} />
+                <h1 className="text-2xl font-extrabold text-[#1C3257] mb-2">
+                  {lessonData.hook.title || 'Observación completada'}
+                </h1>
+                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
+                  Ahora comprenderemos la información del video junto a tu mentor.
+                </p>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* 6. STAGE: CONVERSATION INTRO */}
+        {session.stage === 'conversationIntro' && (
+          <div className="max-w-md mx-auto w-full animate-fadeIn text-center my-auto py-6">
+            <div className={`bg-white/95 backdrop-blur-md rounded-3xl p-8 shadow-xl shadow-slate-200/50 border ${theme.borderColor} text-center relative overflow-hidden transition-all duration-300`}>
+              <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${theme.accentGradient}`} />
+              <span className={`text-[11px] font-bold uppercase tracking-widest ${theme.badgeText} block mb-2`}>
+                Conversemos sobre lo observado
+              </span>
+              <h1 className="text-2xl font-extrabold text-[#1C3257] mb-2">Pensemos juntos</h1>
+              <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
+                {lessonData.conversationContext || 'Responderemos algunas preguntas sobre la situación presentada.'}
+              </p>
+            </div>
+          </div>
+        )}
+
+        {/* 7. STAGE: PRE QUESTIONS */}
+        {session.stage === 'preQuestions' && (
+          <div className="max-w-lg mx-auto w-full animate-fadeIn text-center my-auto py-6">
+            <div className={`bg-white/95 backdrop-blur-md rounded-3xl p-8 shadow-xl shadow-slate-200/50 border ${theme.borderColor} text-center relative overflow-hidden transition-all duration-300`}>
+              <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${theme.accentGradient}`} />
+              <span className={`inline-flex px-3 py-1 rounded-full ${theme.badgeBg} ${theme.badgeText} border ${theme.badgeBorder} text-[11px] font-bold uppercase tracking-widest mb-3`}>
+                Pregunta {session.conversationIndex + 1} de {lessonData.preQuestions?.length || 1}
+              </span>
+
+              {/* Enseñanza guiada visible antes de la actividad si está presente */}
+              {currentPreItem.teachingBox && (
+                <div className="mb-5 text-left bg-blue-50/90 rounded-2xl p-4 sm:p-5 border border-blue-200/90 shadow-xs">
+                  <div className="flex items-center gap-2 text-blue-900 font-bold text-xs uppercase tracking-wide mb-2.5">
+                    <span className="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                    <span>{currentPreItem.teachingBox.title || 'Enseñanza guiada: Describir vs. Inferir'}</span>
+                  </div>
+                  <div className="space-y-2 text-xs sm:text-sm text-blue-950 font-medium mb-3">
+                    {currentPreItem.teachingBox.points.map((pt, i) => (
+                      <div key={i} className="flex items-start gap-2">
+                        <span className="text-blue-600 font-bold">•</span>
+                        <span>{pt}</span>
+                      </div>
+                    ))}
+                  </div>
+                  {currentPreItem.teachingBox.modelExample && (
+                    <div className="bg-white/95 rounded-xl p-3 border border-blue-100 text-xs text-slate-700 leading-relaxed shadow-2xs">
+                      <span className="font-bold text-blue-900 block mb-1">Ejemplo modelado:</span>
+                      <p className="italic text-slate-800">{currentPreItem.teachingBox.modelExample}</p>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              <h1 className="text-xl sm:text-2xl font-extrabold text-[#1C3257] mb-3">
+                {currentPreItem.question}
+              </h1>
+
+              {/* Controles de lectura y audio opcional */}
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+                {hasLegitimateReadingResource && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setConsultParagraph(currentPreItem.relevantParagraph);
+                      setShowReadingConsult(true);
+                    }}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-orange-50 hover:bg-orange-100 text-[#C2540A] border border-orange-200/90 text-xs font-bold transition-all shadow-2xs cursor-pointer"
+                  >
+                    <BookOpen className="w-3.5 h-3.5 text-[#EE751C]" />
+                    <span>Consultar texto de lectura {currentPreItem.relevantParagraph ? `(Párrafo ${currentPreItem.relevantParagraph})` : ''}</span>
+                  </button>
+                )}
+
+                <OptionalAudioPlayer
+                  text={currentPreItem.question}
+                  label="Escuchar pregunta"
+                  compact
+                />
+              </div>
+
+              {currentPreItem.studentImage && (
+                <div className="mb-4 max-w-sm mx-auto rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm bg-slate-50">
+                  <img
+                    src={currentPreItem.studentImage}
+                    alt={currentPreItem.context || 'Imagen explicativa'}
+                    className="w-full h-auto max-h-56 object-contain mx-auto"
+                  />
+                </div>
+              )}
+
+              <StudentAnswerSection
+                questionKey={`pre_${session.conversationIndex}`}
+                feedback={session.feedback}
+                studentReveal={currentPreItem.studentReveal}
+                onSubmitAnswer={submitStudentAnswer}
+                savedAnswer={session.studentTextAnswers?.[`pre_${session.conversationIndex}`]}
+                hintMessage="Presta atención a la pista que te dará tu mentor."
+              />
+            </div>
+          </div>
+        )}
+        {/* 8. STAGE: FORMALIZATION */}
+        {session.stage === 'formalization' && (
+          <div className="max-w-3xl mx-auto w-full animate-fadeIn text-center">
+            {!session.formalStarted ? (
+              <div className={`bg-white/95 backdrop-blur-md rounded-3xl p-8 max-w-md mx-auto w-full shadow-xl shadow-slate-200/50 border ${theme.borderColor} text-center relative overflow-hidden transition-all duration-300`}>
+                <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${theme.accentGradient}`} />
+                <span className={`text-[11px] font-bold uppercase tracking-widest ${theme.badgeText} block mb-2`}>
+                  Ahora aprenderemos
+                </span>
+                <h1 className="text-2xl font-extrabold text-[#1C3257] mb-2">
+                  {lessonData.formalization.concept || 'Concepto clave'}
+                </h1>
+                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed mb-4">
+                  {lessonData.formalization.summary || 'Explicación del concepto fundamental de la clase.'}
+                </p>
+
+                <div className="flex flex-col items-center gap-3 my-3">
+                  <OptionalAudioPlayer
+                    text={`${lessonData.formalization.concept || ''}. ${lessonData.formalization.summary || ''}`}
+                    label="Escuchar explicación conceptual"
+                  />
+                  {lessonData.formalization.graphicPoster && (
+                    <div className="max-w-sm w-full rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm bg-slate-50 mt-1">
+                      <img
+                        src={lessonData.formalization.graphicPoster}
+                        alt="Desacuerdo familiar"
+                        className="w-full h-auto max-h-52 object-contain mx-auto"
+                      />
+                    </div>
+                  )}
+                </div>
+              </div>
+            ) : !session.formalEnded ? (
+              <SyncedStudentVideo src={lessonData.formalization.videoSrc ?? ''} kind="formal" session={session} title={lessonData.formalization.concept} />
+            ) : (
+              <div className={`bg-white/95 backdrop-blur-md rounded-3xl p-8 max-w-md mx-auto w-full shadow-xl shadow-slate-200/50 border ${theme.borderColor} text-center relative overflow-hidden transition-all duration-300`}>
+                <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${theme.accentGradient}`} />
+                <h1 className="text-2xl font-extrabold text-[#1C3257] mb-2">
+                  {lessonData.formalization.concept || 'Concepto clave'}
+                </h1>
+                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed mb-3">
+                  Ahora comprobaremos lo aprendido respondiendo a continuación.
+                </p>
+                <div className="flex justify-center">
+                  <OptionalAudioPlayer
+                    text={`${lessonData.formalization.concept || ''}. ${lessonData.formalization.summary || ''}`}
+                    label="Escuchar explicación conceptual"
+                  />
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* 9. STAGE: POST INTRO */}
+        {session.stage === 'postIntro' && (
+          <div className="max-w-md mx-auto w-full animate-fadeIn text-center my-auto py-6">
+            <div className={`bg-white/95 backdrop-blur-md rounded-3xl p-8 shadow-xl shadow-slate-200/50 border ${theme.borderColor} text-center relative overflow-hidden transition-all duration-300`}>
+              <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${theme.accentGradient}`} />
+              <span className={`text-[11px] font-bold uppercase tracking-widest ${theme.badgeText} block mb-2`}>
+                Comprobemos lo aprendido
+              </span>
+              <h1 className="text-2xl font-extrabold text-[#1C3257] mb-2">
+                {lessonData.formalization.concept || 'Ideas principales'}
+              </h1>
+              <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
+                Responderemos {lessonData.postQuestions?.length === 1 ? 'una pregunta' : `${lessonData.postQuestions?.length || 2} preguntas`} sobre lo aprendido en la explicación.
+              </p>
+            </div>
+          </div>
+        )}
+
+        {/* 10. STAGE: POST QUESTIONS */}
+        {session.stage === 'postQuestions' && (
+          <div className="max-w-lg mx-auto w-full animate-fadeIn text-center my-auto py-6">
+            <div className={`bg-white/95 backdrop-blur-md rounded-3xl p-8 shadow-xl shadow-slate-200/50 border ${theme.borderColor} text-center relative overflow-hidden transition-all duration-300`}>
+              <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${theme.accentGradient}`} />
+              <span className={`inline-flex px-3 py-1 rounded-full ${theme.badgeBg} ${theme.badgeText} border ${theme.badgeBorder} text-[11px] font-bold uppercase tracking-widest mb-3`}>
+                Pregunta {session.postIndex + 1} de {lessonData.postQuestions?.length || 1}
+              </span>
+
+              {/* Enseñanza guiada visible antes de la pregunta */}
+              {currentPostItem.teachingBox && (
+                <div className="mb-5 text-left bg-blue-50/90 rounded-2xl p-4 sm:p-5 border border-blue-200/90 shadow-xs">
+                  <div className="flex items-center gap-2 text-blue-900 font-bold text-xs uppercase tracking-wide mb-2.5">
+                    <span className="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                    <span>{currentPostItem.teachingBox.title || 'Enseñanza guiada: Describir vs. Inferir'}</span>
+                  </div>
+                  <div className="space-y-2 text-xs sm:text-sm text-blue-950 font-medium mb-3">
+                    {currentPostItem.teachingBox.points.map((pt, i) => (
+                      <div key={i} className="flex items-start gap-2">
+                        <span className="text-blue-600 font-bold">•</span>
+                        <span>{pt}</span>
+                      </div>
+                    ))}
+                  </div>
+                  {currentPostItem.teachingBox.modelExample && (
+                    <div className="bg-white/95 rounded-xl p-3 border border-blue-100 text-xs text-slate-700 leading-relaxed shadow-2xs">
+                      <span className="font-bold text-blue-900 block mb-1">Ejemplo modelado:</span>
+                      <p className="italic text-slate-800">{currentPostItem.teachingBox.modelExample}</p>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              <h1 className="text-xl sm:text-2xl font-extrabold text-[#1C3257] mb-3">
+                {currentPostItem.question}
+              </h1>
+
+              {/* Botón para consultar lectura */}
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+                {hasLegitimateReadingResource && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setConsultParagraph(undefined);
+                      setShowReadingConsult(true);
+                    }}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-orange-50 hover:bg-orange-100 text-[#C2540A] border border-orange-200/90 text-xs font-bold transition-all shadow-2xs cursor-pointer"
+                  >
+                    <BookOpen className="w-3.5 h-3.5 text-[#EE751C]" />
+                    <span>Consultar texto de lectura</span>
+                  </button>
+                )}
+
+                <OptionalAudioPlayer
+                  text={currentPostItem.question}
+                  label="Escuchar pregunta"
+                  compact
+                />
+              </div>
+
+              {currentPostItem.studentImage && (
+                <div className="mb-4 max-w-sm mx-auto rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm bg-slate-50">
+                  <img
+                    src={currentPostItem.studentImage}
+                    alt={currentPostItem.context || 'Imagen explicativa'}
+                    className="w-full h-auto max-h-56 object-contain mx-auto"
+                  />
+                </div>
+              )}
+
+              <StudentAnswerSection
+                questionKey={`post_${session.postIndex}`}
+                feedback={session.feedback}
+                studentReveal={currentPostItem.studentReveal}
+                onSubmitAnswer={submitStudentAnswer}
+                savedAnswer={session.studentTextAnswers?.[`post_${session.postIndex}`]}
+                hintMessage="Presta atención a la pista que te dará tu mentor."
+              />
+            </div>
+          </div>
+        )}
+
+        {/* 11. STAGE: SUMMARY */}
+        {session.stage === 'summary' && (
+          <div className="max-w-2xl mx-auto w-full animate-fadeIn text-center py-4">
+            <span className="text-[#12a1a4] font-bold text-xs uppercase tracking-widest block mb-1">
+              En resumen
+            </span>
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-[#1c3257] mb-6">
+              {lessonData.formalization.concept || lessonData.formalization.title || lessonData.metadata.lessonTitle}
+            </h1>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {lessonData.summaryIdeas && lessonData.summaryIdeas.length > 0 ? (
+                lessonData.summaryIdeas.slice(0, 2).map(([title, desc], idx) => {
+                  const borderColors = ['border-[#1c3257]', 'border-[#ee751c]'];
+                  const tagColors = ['text-[#12a1a4]', 'text-[#ee751c]'];
+
+                  return (
+                    <article key={title} className={`bg-white border-2 ${borderColors[idx % 2]} rounded-3xl p-6 shadow-sm flex flex-col justify-between text-left`}>
+                      <div>
+                        <span className={`text-xs font-extrabold uppercase tracking-wider ${tagColors[idx % 2]} block mb-2`}>
+                          {title}
+                        </span>
+                        <b className="text-base sm:text-lg font-bold text-[#1c3257] block mb-2">
+                          {desc}
+                        </b>
+                      </div>
+                    </article>
+                  );
+                })
+              ) : (
+                <div className="col-span-full bg-white border border-[#dce2e6] rounded-3xl p-6 shadow-sm text-left">
+                  <p className="text-sm text-[#1c3257]">{lessonData.formalization.summary || lessonData.summaryText || 'Revisamos los conceptos clave de la clase.'}</p>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
+        {/* 12. STAGE: PRACTICE INTRO */}
+        {session.stage === 'practiceIntro' && (() => {
+          const totalPractice = lessonData.practice?.length || 1;
+          const textOrdinal = `Caso ${session.practiceIndex + 1} de ${totalPractice}`;
+
+          return (
+            <div className="max-w-xl mx-auto w-full animate-fadeIn text-center py-4">
+              <div className="bg-white border border-[#dce2e6] rounded-3xl p-8 shadow-sm flex flex-col items-center">
+                <div className="w-16 h-16 rounded-full bg-[#f8fafc] border border-[#e2e8f0] flex items-center justify-center mb-4 text-[#12a1a4] font-extrabold text-xl">
+                  {session.practiceIndex + 1}
+                </div>
+                <span className="text-xs font-bold uppercase tracking-wider text-[#12a1a4] block mb-1">
+                  {textOrdinal}
+                </span>
+                <h1 className="text-2xl sm:text-3xl font-extrabold text-[#1c3257] mb-3">
+                  {currentPracticeItem?.context || 'Práctica guiada'}
+                </h1>
+
+                {/* Audio opcional de instrucciones de práctica */}
+                <div className="my-3">
+                  <OptionalAudioPlayer
+                    text={currentPracticeItem?.question || currentPracticeItem?.context || 'Escucha la indicación para resolver este caso.'}
+                    label="Escuchar instrucciones del caso"
+                  />
+                </div>
+
+                {currentPracticeItem?.studentImage && (
+                  <div className="mb-4 max-w-sm mx-auto rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm bg-slate-50">
+                    <img
+                      src={currentPracticeItem.studentImage}
+                      alt={currentPracticeItem.context || 'Imagen de práctica'}
+                      className="w-full h-auto max-h-56 object-contain mx-auto"
+                    />
+                  </div>
+                )}
+                <p className="text-xs text-[#748093]">
+                  Escucha o lee la situación antes de responder.
+                </p>
+              </div>
+            </div>
+          );
+        })()}
+
+        {/* 13. STAGE: PRACTICE */}
+        {session.stage === 'practice' && (() => {
+          const totalPractice = lessonData.practice?.length || 2;
+          return (
+            <div className="max-w-xl mx-auto w-full animate-fadeIn text-center py-4">
+              <span className="text-[#12a1a4] font-bold text-xs uppercase tracking-widest block mb-1">
+                Caso {session.practiceIndex + 1} de {totalPractice} : {currentPracticeItem.context}
+              </span>
+              <h1 className="text-xl sm:text-2xl font-extrabold text-[#1c3257] mb-4">
+                {currentPracticeItem.question}
+              </h1>
+
+              {/* Botón para consultar lectura y audio opcional de instrucciones */}
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+                {hasLegitimateReadingResource && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setConsultParagraph(currentPracticeItem.relevantParagraph);
+                      setShowReadingConsult(true);
+                    }}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-orange-50 hover:bg-orange-100 text-[#C2540A] border border-orange-200/90 text-xs font-bold transition-all shadow-2xs cursor-pointer"
+                  >
+                    <BookOpen className="w-3.5 h-3.5 text-[#EE751C]" />
+                    <span>Consultar texto de lectura {currentPracticeItem.relevantParagraph ? `(Párrafo ${currentPracticeItem.relevantParagraph})` : ''}</span>
+                  </button>
+                )}
+
+                <OptionalAudioPlayer
+                  text={currentPracticeItem.question}
+                  label="Escuchar instrucciones de práctica"
+                  compact
+                />
+              </div>
+
+              {currentPracticeItem.studentImage && (
+                <div className="mb-6 max-w-sm mx-auto rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm bg-slate-50">
+                  <img
+                    src={currentPracticeItem.studentImage}
+                    alt={currentPracticeItem.context || 'Imagen de práctica'}
+                    className="w-full h-auto max-h-56 object-contain mx-auto"
+                  />
+                </div>
+              )}
+
+              <div className="bg-white border border-[#dce2e6] rounded-3xl p-8 shadow-sm">
+                <StudentAnswerSection
+                  questionKey={`practice_${session.practiceIndex}`}
+                  feedback={session.feedback}
+                  studentReveal={currentPracticeItem.studentReveal}
+                  onSubmitAnswer={submitStudentAnswer}
+                  savedAnswer={session.studentTextAnswers?.[`practice_${session.practiceIndex}`]}
+                  hintMessage="Presta atención a la pista que te dará tu mentor."
+                />
+              </div>
+            </div>
+          );
+        })()}
+
+        {/* 14. STAGE: REASONING INTRO & REASONING */}
+        {(session.stage === 'reasoningIntro' || session.stage === 'reasoning') && (
+          <div className="max-w-2xl mx-auto w-full animate-fadeIn text-center py-4">
+            <span className="text-[#12a1a4] font-bold text-xs uppercase tracking-widest block mb-1">
+              Pensemos y comparemos
+            </span>
+            <h1 className="text-xl sm:text-2xl font-extrabold text-[#1c3257] mb-6">
+              {session.stage === 'reasoningIntro'
+                ? (lessonData.reasoning?.title ?? 'Una misma idea puede comunicar sentidos distintos')
+                : (lessonData.reasoning?.question ?? 'Cómo interpretamos esta diferencia')}
+            </h1>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+              <article className="bg-white border border-[#dce2e6] rounded-3xl p-6 shadow-sm text-left">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-[#12a1a4] block mb-1">
+                  {lessonData.reasoning?.context1?.label ?? 'Caso 1'}
+                </span>
+                <strong className="text-2xl font-black text-[#1c3257] block mb-1">
+                  {lessonData.reasoning?.context1?.value ?? 'Ejemplo 1'}
+                </strong>
+                <p className="text-xs text-[#748093]">
+                  {lessonData.reasoning?.context1?.desc ?? ''}
+                </p>
+              </article>
+
+              <article className="bg-white border border-[#dce2e6] rounded-3xl p-6 shadow-sm text-left">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-[#ee751c] block mb-1">
+                  {lessonData.reasoning?.context2?.label ?? 'Caso 2'}
+                </span>
+                <strong className="text-2xl font-black text-[#1c3257] block mb-1">
+                  {lessonData.reasoning?.context2?.value ?? 'Ejemplo 2'}
+                </strong>
+                <p className="text-xs text-[#748093]">
+                  {lessonData.reasoning?.context2?.desc ?? ''}
+                </p>
+              </article>
+            </div>
+
+            {session.stage === 'reasoningIntro' ? (
+              <p className="text-xs text-[#748093] bg-white border border-[#dce2e6] p-4 rounded-2xl">
+                Escucha la indicación antes de responder.
+              </p>
+            ) : (
+              <div className="bg-white border border-[#dce2e6] rounded-3xl p-6 shadow-sm">
+                <p className="text-sm sm:text-base font-bold text-[#1c3257] mb-4">
+                  {lessonData.reasoning?.question ?? 'Explica con tus palabras la diferencia.'}
+                </p>
+
+                <SupportHintCard
+                  visible={session.feedback?.kind === 'support'}
+                  message="Presta atencion a la pista que te dara tu mentor."
+                />
+
+                {session.feedback?.kind === 'success' && (
+                  <div className="bg-[#eaf4e8] border border-[#badcb8] text-[#255e29] p-4 rounded-2xl text-sm font-bold flex items-center justify-center gap-2 animate-fadeIn">
+                    <Sparkles className="w-5 h-5 text-[#255e29]" />
+                    <span>{lessonData.reasoning?.successFeedback ?? 'Muy bien analizado.'}</span>
+                  </div>
+                )}
+
+                {session.feedback?.kind === 'reveal' && (
+                  <div className="bg-[#f8fafc] border border-[#dce2e6] text-[#334157] p-4 rounded-2xl text-xs sm:text-sm text-left animate-fadeIn">
+                    {lessonData.reasoning?.revealText ?? ''}
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* 15. STAGE: CHALLENGE */}
+        {session.stage === 'challenge' && (
+          <div className="max-w-xl mx-auto w-full animate-fadeIn text-center py-4">
+            <span className="text-[#12a1a4] font-bold text-xs uppercase tracking-widest block mb-1">
+              Desafío breve
+            </span>
+            <h1 className="text-2xl font-extrabold text-[#1c3257] mb-6">
+              {lessonData.challenge?.title ?? lessonData.metadata.lessonTitle}
+            </h1>
+
+            <div className="bg-white border border-[#dce2e6] rounded-3xl p-8 shadow-sm">
+              <div className="flex items-center justify-center gap-4 text-xl sm:text-2xl font-black text-[#1c3257] mb-6 flex-wrap">
+                <span className="bg-[#e6f7f7] px-4 py-2 rounded-xl text-[#12a1a4]">
+                  {lessonData.challenge?.item1?.label ?? 'Elemento A'}
+                </span>
+                <ArrowRight className="w-6 h-6 text-[#ee751c]" />
+                <span className="bg-[#fff0e4] px-4 py-2 rounded-xl text-[#ee751c]">
+                  {lessonData.challenge?.item2?.label ?? 'Elemento B'}
+                </span>
+              </div>
+
+              <p className="text-sm font-bold text-[#1c3257] mb-4">
+                {lessonData.challenge?.question ?? 'Identifica la diferencia entre ambos elementos.'}
+              </p>
+
+              {session.feedback?.kind === 'success' && (
+                <div className="bg-[#eaf4e8] border border-[#badcb8] text-[#255e29] p-4 rounded-2xl text-sm font-bold flex items-center justify-center gap-2 animate-fadeIn">
+                  <Sparkles className="w-5 h-5 text-[#255e29]" />
+                  <span>Muy bien explicado.</span>
+                </div>
+              )}
+
+              <SupportHintCard
+                visible={session.feedback?.kind === 'support'}
+                message={lessonData.challenge?.supportFeedback ?? 'Tu mentor te dara una pista para resolver este desafio.'}
+              />
+            </div>
+          </div>
+        )}
+
+        {/* 16. STAGE: STRATEGY */}
+        {session.stage === 'strategy' && (
+          <div className="max-w-xl mx-auto w-full animate-fadeIn text-center py-4">
+            <span className="text-[#12a1a4] font-bold text-xs uppercase tracking-widest block mb-1">
+              Una estrategia para pensar
+            </span>
+            <h1 className="text-2xl font-extrabold text-[#1c3257] mb-6">
+              {lessonData.strategy?.title ?? 'Cómo analizar esta situación'}
+            </h1>
+
+            <div className="space-y-3 text-left">
+              {lessonData.strategy?.steps && lessonData.strategy.steps.length > 0 ? (
+                lessonData.strategy.steps.map((st, idx) => {
+                  const circleColors = ['bg-[#12a1a4]', 'bg-[#ee751c]', 'bg-[#1c3257]'];
+                  return (
+                    <article key={idx} className="bg-white border border-[#dce2e6] rounded-2xl p-5 shadow-sm flex items-start gap-4">
+                      <span className={`w-7 h-7 rounded-full ${circleColors[idx % circleColors.length]} text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5`}>
+                        {st.number || idx + 1}
+                      </span>
+                      <div>
+                        <strong className="text-sm font-bold text-[#1c3257] block mb-0.5">{st.title}</strong>
+                        <p className="text-xs text-[#526177]">{st.desc}</p>
+                      </div>
+                    </article>
+                  );
+                })
+              ) : (
+                <div className="bg-white border border-[#dce2e6] rounded-2xl p-5 shadow-sm text-center">
+                  <p className="text-xs text-[#526177]">Sigue los pasos indicados por tu mentor.</p>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
+        {/* 17. STAGE: PRACTICE SUMMARY (3 Ideas) */}
+        {session.stage === 'practiceSummary' && (
+          <div className="max-w-2xl mx-auto w-full animate-fadeIn text-center py-4">
+            <span className="text-[#12a1a4] font-bold text-xs uppercase tracking-widest block mb-1">
+              Recordemos lo aprendido
+            </span>
+            <h1 className="text-2xl font-extrabold text-[#1c3257] mb-6">
+              {(lessonData.summaryIdeas?.length || 0) === 3
+                ? 'Tres ideas importantes'
+                : (lessonData.summaryIdeas?.length || 0) > 0
+                ? `${lessonData.summaryIdeas.length} ideas importantes`
+                : 'Ideas importantes'}
+            </h1>
+
+            <div className="space-y-3 text-left">
+              {lessonData.summaryIdeas.slice(0, session.summaryIdea).map(([title, text]) => (
+                <article key={title} className="bg-white border border-[#dce2e6] rounded-2xl p-5 shadow-sm animate-fadeIn">
+                  <strong className="text-sm font-bold text-[#1c3257] block mb-1">{title}</strong>
+                  <p className="text-xs text-[#526177] leading-relaxed">{text}</p>
+                </article>
+              ))}
+            </div>
+
+            {session.summaryIdea === 0 && (
+              <p className="text-xs text-[#748093] bg-white border border-[#dce2e6] p-4 rounded-2xl mt-4">
+                Comenzaremos el resumen en un momento.
+              </p>
+            )}
+          </div>
+        )}
+
+        {/* 18. STAGE: MINIQUIZ */}
+        {session.stage === 'miniquiz' && (
+          session.quizVisible ? (
+            <StudentMiniquizView />
+          ) : (
+            <div className="max-w-md mx-auto w-full animate-fadeIn text-center py-8">
+              <div className="bg-white border border-[#dce2e6] rounded-3xl p-8 shadow-sm">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#12a1a4] block mb-2">
+                  Miniquiz preparado
+                </span>
+                <h1 className="text-xl font-bold text-[#1c3257] mb-2">El miniquiz comenzará pronto</h1>
+                <p className="text-xs text-[#748093]">
+                  El miniquiz aparecerá cuando tu mentor lo indique.
+                </p>
+              </div>
+            </div>
+          )
+        )}
+
+        {/* 19. STAGE: RESULTS */}
+        {session.stage === 'results' && (
+          <div className="max-w-md mx-auto w-full animate-fadeIn text-center py-6">
+            <div
+              className={`p-8 rounded-3xl border shadow-sm ${
+                session.miniScore === 3
+                  ? 'bg-[#eaf4e8] border-[#badcb8] text-[#255e29]'
+                  : session.miniScore >= 2
+                  ? 'bg-[#eef9fa] border-[#b2e5e7] text-[#12a1a4]'
+                  : 'bg-[#fff5ee] border-[#f5c49d] text-[#924814]'
+              }`}
+            >
+              <div className="text-4xl font-black mb-2">
+                {session.miniScore} / 3
+              </div>
+              <h1 className="text-2xl font-black mb-2">
+                {session.miniScore === 3
+                  ? 'Excelente trabajo'
+                  : session.miniScore >= 2
+                  ? 'Muy bien, aprobaste la clase'
+                  : 'Sigamos aprendiendo'}
+              </h1>
+              <p className="text-xs sm:text-sm leading-relaxed">
+                {session.miniScore === 3
+                  ? 'Respondiste correctamente las tres preguntas.'
+                  : session.miniScore >= 2
+                  ? 'Ahora revisaremos juntos las respuestas.'
+                  : 'Revisaremos algunas ideas y después haremos una comprobación breve.'}
+              </p>
+            </div>
+          </div>
+        )}
+
+        {/* 20. STAGE: REVIEW */}
+        {session.stage === 'review' && (
+          <StudentQuizReviewView />
+        )}
+
+        {/* 21. STAGE: RECOVERY INTRO */}
+        {session.stage === 'recoveryIntro' && (
+          <div className="max-w-md mx-auto w-full animate-fadeIn text-center py-6">
+            <div className="bg-white border border-[#dce2e6] rounded-3xl p-8 shadow-sm">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#12a1a4] block mb-2">
+                Refuerzo breve
+              </span>
+              <h1 className="text-2xl font-extrabold text-[#1c3257] mb-2">
+                Volvamos a mirar estas ideas
+              </h1>
+              <p className="text-xs text-[#748093] leading-relaxed">
+                Primero veremos una explicación y después responderás una pregunta breve.
+              </p>
+            </div>
+          </div>
+        )}
+
+        {/* 22. STAGE: RECOVERY */}
+        {session.stage === 'recovery' && (
+          <StudentRecoveryView />
+        )}
+
+        {/* 23. STAGE: CLOSING & COMPLETED */}
+        {(session.stage === 'closing' || session.stage === 'completed') && (
+          <div className="max-w-md mx-auto w-full animate-fadeIn text-center my-auto py-6">
+            <div className={`bg-white/95 backdrop-blur-md rounded-3xl p-8 shadow-xl shadow-slate-200/50 border ${theme.borderColor} text-center relative overflow-hidden transition-all duration-300`}>
+              <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${theme.accentGradient}`} />
+              <div className={`w-14 h-14 rounded-full text-white flex items-center justify-center mx-auto mb-3 shadow-md ${
+                canAccreditLesson(session)
+                  ? 'bg-emerald-500 shadow-emerald-500/20'
+                  : 'bg-amber-500 shadow-amber-500/20'
+              }`}>
+                {canAccreditLesson(session) ? <Check className="w-8 h-8" /> : <AlertCircle className="w-8 h-8" />}
+              </div>
+              <span className={`text-[11px] font-bold uppercase tracking-widest ${theme.badgeText} block mb-1`}>
+                Terminamos por hoy
+              </span>
+              <h1 className="text-2xl font-black text-[#1C3257] mb-2 tracking-tight">
+                {session.miniScore === 3
+                  ? 'Excelente trabajo'
+                  : session.miniScore >= 2
+                  ? 'Muy bien'
+                  : 'Sesión finalizada'}
+              </h1>
+              <p className="text-xs text-slate-500 mb-6">
+                {canAccreditLesson(session)
+                  ? 'Completaste y acreditaste la clase de hoy con tu mentor.'
+                  : 'Has terminado la sesión de hoy con tu mentor. Recuerda consolidar los temas pendientes.'}
+              </p>
+              {lessonData.metadata.lessonNumber === lessonData.metadata.totalLessonsInOa ? (
+                <div className="bg-emerald-50 text-emerald-900 p-3.5 rounded-2xl text-xs font-bold border border-emerald-200/80 mb-6">
+                  🎉 ¡Felicitaciones! Has completado todas las clases de este objetivo de aprendizaje.
+                </div>
+              ) : lessonData.metadata.nextLessonTitle ? (
+                <div className="bg-slate-50 text-[#1C3257] p-3.5 rounded-2xl text-xs font-bold border border-slate-200/70 mb-6">
+                  Próxima clase: {lessonData.metadata.nextLessonTitle}
+                </div>
+              ) : null}
+              {session.stage === 'completed' && (
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const targetMode = authSession?.role === 'student' ? 'student' : 'parent';
+                      setViewMode(targetMode);
+                    }}
+                    className="w-full sm:w-auto bg-[#1C3257] hover:bg-[#284773] text-white font-bold px-5 py-2.5 rounded-xl flex items-center justify-center gap-2 text-xs shadow-md transition-all cursor-pointer"
+                  >
+                    <span>Volver a lecciones</span>
+                    <Home className="w-4 h-4" />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => resetSession()}
+                    className="w-full sm:w-auto bg-white hover:bg-slate-50 text-[#1C3257] border border-slate-300 font-bold px-5 py-2.5 rounded-xl flex items-center justify-center gap-2 text-xs shadow-sm transition-all cursor-pointer"
+                  >
+                    <span>Repetir esta clase</span>
+                    <RotateCcw className="w-4 h-4" />
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Modal / Drawer para consultar lectura sin perder la pregunta ni reiniciar respuesta */}
+      {showReadingConsult && hasLegitimateReadingResource && (
+        <div className="fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-xs flex items-center justify-center p-4 animate-fadeIn">
+          <div className="bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden">
+            <div className="p-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/90 shrink-0">
+              <div className="flex items-center gap-2">
+                <BookOpen className="w-4 h-4 text-[#EE751C]" />
+                <span className="text-xs font-black uppercase tracking-wider text-[#1C3257]">
+                  Consulta de Lectura · Recurso de la Lección
+                </span>
+              </div>
+              <button
+                type="button"
+                onClick={() => setShowReadingConsult(false)}
+                className="text-xs font-bold px-3 py-1.5 bg-slate-200 hover:bg-slate-300 text-slate-700 rounded-xl transition-all cursor-pointer"
+              >
+                Volver a la pregunta ✕
+              </button>
+            </div>
+            <div className="p-6 overflow-y-auto">
+              <StudentReadingResourceCard
+                activeParagraph={consultParagraph}
+                paragraphs={declaredReadingParagraphs}
+                title={(lessonData as any)?.readingResource?.title || (lessonData?.interactive?.type === 'reading_resource' ? lessonData.interactive.title : undefined)}
+                showImage={false}
+              />
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+interface SyncedStudentVideoProps {
+  src?: string;
+  kind: 'hook' | 'formal';
+  session: any;
+  title?: string;
+}
+
+const SyncedStudentVideo: React.FC<SyncedStudentVideoProps> = ({ src, kind, session, title }) => {
+  const ref = useRef<HTMLVideoElement>(null);
+  const [blocked, setBlocked] = useState(false);
+  const [hasError, setHasError] = useState(false);
+  const [isLocalPlaying, setIsLocalPlaying] = useState(false);
+
+  // Resolucion canonica y unificada de la fuente de video
+  const videoInfo = useMemo(() => resolveVideoSource(src), [src]);
+  const embedStreamUrl = videoInfo.isEmbed ? videoInfo.embedUrl : null;
+
+  useEffect(() => {
+    setHasError(false);
+  }, [src]);
+
+  useEffect(() => {
+    const v = ref.current;
+    if (!v || embedStreamUrl || session.video.kind !== kind) return;
+
+    if (Math.abs(v.currentTime - session.video.seek) > 1.2) {
+      v.currentTime = session.video.seek;
+    }
+
+    if (session.video.playing) {
+      v.play()
+        .then(() => {
+          setBlocked(false);
+          setIsLocalPlaying(true);
+        })
+        .catch(() => {
+          // Si el navegador bloquea el audio automático, reproducir silenciado y permitir desmutear con un clic
+          v.muted = true;
+          v.play()
+            .then(() => {
+              setBlocked(true);
+              setIsLocalPlaying(true);
+            })
+            .catch(() => {
+              setBlocked(true);
+              setIsLocalPlaying(false);
+            });
+        });
+    } else {
+      v.pause();
+      setIsLocalPlaying(false);
+    }
+  }, [kind, session.video, embedStreamUrl]);
+
+  if (!src || src.trim() === '' || !videoInfo.isValid || hasError) {
+    return (
+      <div className="w-full aspect-video rounded-3xl overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] border border-slate-800 shadow-2xl flex flex-col items-center justify-center p-8 text-center text-white relative">
+        <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4 text-[#12A1A4] ring-1 ring-white/20">
+          {hasError ? (
+            <AlertCircle className="w-8 h-8 text-amber-400" />
+          ) : (
+            <Play className="w-8 h-8 fill-current ml-1 opacity-80" />
+          )}
+        </div>
+        <h3 className="text-lg font-black tracking-tight mb-2">
+          {title || (kind === 'hook' ? 'Momento de observación' : 'Concepto explicativo')}
+        </h3>
+        <p className="text-xs text-slate-300 max-w-md leading-relaxed">
+          {hasError
+            ? 'La cápsula de video no está disponible en este momento. Tu mentor continuará guiando la actividad y las preguntas de comprensión.'
+            : 'Sigue las indicaciones de tu mentor para este momento de aprendizaje.'}
+        </p>
+        {hasError && (
+          <span className="mt-4 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-500/30">
+            Modo guiado por mentor
+          </span>
+        )}
+      </div>
+    );
+  }
+
+  if (embedStreamUrl) {
+    return (
+      <div className="w-full aspect-video rounded-3xl overflow-hidden bg-black shadow-2xl flex items-center justify-center relative">
+        <iframe
+          src={embedStreamUrl}
+          className="w-full h-full border-0"
+          allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+          allowFullScreen
+          title={title || 'Video de la lección'}
+        />
+      </div>
+    );
+  }
+
+  const handleManualToggle = () => {
+    const v = ref.current;
+    if (!v) return;
+    if (v.paused) {
+      v.muted = false;
+      v.play()
+        .then(() => {
+          setBlocked(false);
+          setIsLocalPlaying(true);
+        })
+        .catch(() => {
+          v.muted = true;
+          v.play()
+            .then(() => {
+              setBlocked(true);
+              setIsLocalPlaying(true);
+            })
+            .catch(() => setBlocked(true));
+        });
+    } else {
+      v.pause();
+      setIsLocalPlaying(false);
+    }
+  };
+
+  const handleUnmute = () => {
+    const v = ref.current;
+    if (v) {
+      v.muted = false;
+      v.play().catch(() => undefined);
+      setBlocked(false);
+      setIsLocalPlaying(true);
+    }
+  };
+
+  return (
+    <div className="w-full aspect-video rounded-3xl overflow-hidden bg-black shadow-2xl flex items-center justify-center relative group">
+      <video
+        ref={ref}
+        src={videoInfo.cleanUrl}
+        playsInline
+        preload="auto"
+        onClick={handleManualToggle}
+        className="w-full h-full object-contain cursor-pointer"
+        onError={(e) => {
+          console.warn('Error al reproducir video en vista de estudiante:', e);
+          setHasError(true);
+        }}
+      />
+
+      {/* Botón flotante para activar audio si el navegador bloqueó autoplay con sonido */}
+      {blocked && (
+        <button
+          type="button"
+          onClick={handleUnmute}
+          className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center gap-3 text-white cursor-pointer z-20 backdrop-blur-xs transition-all hover:bg-black/70"
+        >
+          <div className="w-16 h-16 rounded-full bg-[#ee751c] flex items-center justify-center shadow-xl animate-pulse">
+            <Play className="w-8 h-8 fill-white ml-1" />
+          </div>
+          <span className="text-xs font-bold bg-[#1c3257] px-4 py-2 rounded-xl border border-white/20 shadow-lg">
+            Presiona para escuchar el video
+          </span>
+        </button>
+      )}
+
+      {/* Controles de respaldo para pruebas individuales cuando el video no se está reproduciendo */}
+      {!isLocalPlaying && !session.video.playing && !blocked && (
+        <button
+          type="button"
+          onClick={handleManualToggle}
+          className="absolute inset-0 bg-black/30 flex items-center justify-center cursor-pointer z-10 opacity-70 hover:opacity-100 transition-opacity"
+          title="Reproducir video"
+        >
+          <div className="w-16 h-16 rounded-full bg-[#12a1a4] hover:bg-[#0e8284] text-white flex items-center justify-center shadow-2xl transition-transform hover:scale-110">
+            <Play className="w-8 h-8 fill-white ml-1" />
+          </div>
+        </button>
+      )}
+    </div>
+  );
+};
+

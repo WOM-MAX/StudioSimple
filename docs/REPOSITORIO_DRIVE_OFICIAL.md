@@ -26,3 +26,16 @@
 | **MANUAL MAESTRO** | `1iWtQWsawmGN7hHaLEyDLBiddOhi3s5Zu` | [Abrir Carpeta](https://drive.google.com/drive/folders/1iWtQWsawmGN7hHaLEyDLBiddOhi3s5Zu) |
 | **PERSONAJES SÉPTIMO BÁSICO** | `1eeqHu9vMGRfXbfQT6JRzLm2eRyrFrPuv` | [Abrir Carpeta](https://drive.google.com/drive/folders/1eeqHu9vMGRfXbfQT6JRzLm2eRyrFrPuv) |
 | **PLANES_MAESTROS_GLOBALES** | `15HDgzHQNHKnzGFf4tHSj2nDLNkZsWztU` | [Abrir Carpeta](https://drive.google.com/drive/folders/15HDgzHQNHKnzGFf4tHSj2nDLNkZsWztU) |
+
+---
+
+## 📬 Buzón Dedicado de Entregas a ChatGPT Work (Ventanilla Única)
+
+- **Nombre:** `ENTREGAS_WORK_ESTUDIOSIMPLE`
+- **ID de Carpeta:** `1d9-99Y2hiLMnRvHROI-3fehzVNwmEYnt`
+- **Enlace Directo:** [https://drive.google.com/drive/folders/1d9-99Y2hiLMnRvHROI-3fehzVNwmEYnt?usp=sharing](https://drive.google.com/drive/folders/1d9-99Y2hiLMnRvHROI-3fehzVNwmEYnt?usp=sharing)
+- **Convención de Organización:**
+  - Subcarpetas por fecha: `YYYY-MM-DD`
+  - Archivos con estampa temporal completa: `[NOMBRE]_[YYYY-MM-DD]_[HH-mm]_[ZONA].zip`
+  - Cada entrega contiene su respectivo `LEER_PRIMERO_*.md` e `INVENTARIO_SHA256.json`.
+

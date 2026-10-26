@@ -1,0 +1,5 @@
+{
+  "operacionReimportacion": "NO_DISPONIBLE_EN_INTERFAZ",
+  "explicacionTecnica": "El Editor de Lecciones (LessonEditorView.tsx) cuenta con botones de Guardar en LocalStorage y botones de Descarga (DOCX, Prompt TXT), pero NO posee un control de \"Cargar/Importar archivo JSON o DOCX desde el disco local\" hacia el estado reactivo del editor.",
+  "caminoRealDeCarga": "El editor lee únicamente de findInjectedLesson(grade, subject, oa, lessonNum), el cual consulta ALL_CANONICAL_LESSONS o la clave \"estudiosimple_custom_player_lessons\" en localStorage. No existe parser inverso de DOCX a LessonData."
+}

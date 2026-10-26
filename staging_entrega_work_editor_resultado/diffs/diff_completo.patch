@@ -1,0 +1,520 @@
+diff --git a/Web Studio Simple/src/components/admin/cms/LessonEditorView.tsx b/Web Studio Simple/src/components/admin/cms/LessonEditorView.tsx
+index 5f3d25f..8e57565 100644
+--- a/Web Studio Simple/src/components/admin/cms/LessonEditorView.tsx	
++++ b/Web Studio Simple/src/components/admin/cms/LessonEditorView.tsx	
+@@ -27,7 +27,8 @@ import {
+   ExternalLink,
+   ImageIcon,
+   ArrowDown,
+-  Info
++  Info,
++  AlertTriangle
+ } from 'lucide-react';
+ import { useApp } from '../../../context/AppContext';
+ import {
+@@ -60,6 +61,10 @@ import {
+ } from '../../../lib/lesson-repository';
+ import { downloadLessonPromptFile } from '../../../lib/prompt-export';
+ import { resolveVideoSource } from '../../../lib/video-utils';
++import {
++  validateLessonCanonical,
++  CanonicalValidationDetail
++} from '../../../lib/lesson-canonical-validator';
+ 
+ interface LessonEditorViewProps {
+   catalog?: OACatalogItem[];
+@@ -164,6 +169,8 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
+   const [copyFeedback, setCopyFeedback] = useState<string | null>(null);
+   const [isExportingDocx, setIsExportingDocx] = useState<boolean>(false);
+   const [videoSaveFeedback, setVideoSaveFeedback] = useState<'hook' | 'formalization' | null>(null);
++  const [validationErrors, setValidationErrors] = useState<CanonicalValidationDetail[] | null>(null);
++  const [validationErrorMsg, setValidationErrorMsg] = useState<string | null>(null);
+ 
+   // Referencias para auto-guardado e inmunidad contra reactividad destructiva
+   const lessonDataRef = useRef<LessonData | null>(lessonData);
+@@ -260,7 +267,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
+       'Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.',
+       'No leas los recuadros SOLO PARA TI ni AYUDA DE LECTURA.',
+       'Haz cada pregunta y espera la respuesta antes de seleccionar una opción.',
+-      'Considera correcta una respuesta si expresa la idea matemática, aunque use palabras distintas.',
++      'Considera correcta una respuesta si expresa la idea esperada o disciplinar, aunque use palabras distintas.',
+       'Si el estudiante necesita apoyo, usa únicamente la ayuda que aparecerá.',
+       'Si propone otra explicación o no está de acuerdo, escúchalo completo y valora su razonamiento antes de guiarlo.'
+     ],
+@@ -287,91 +294,65 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
+     if (playerLesson) {
+       const cloned: LessonData = JSON.parse(JSON.stringify(playerLesson));
+ 
+-      // Asegurar inicialización de los 4 bloques canónicos si estuviesen incompletos
+-      if (!cloned.route.blocks || cloned.route.blocks.length < 4) {
++      // Asegurar inicialización de los 4 bloques pedagógicos neutrales sólo si estuviesen ausentes
++      if (!cloned.route.blocks || cloned.route.blocks.length === 0) {
+         cloned.route.blocks = [
+-          { id: 'b1', number: '01', title: 'Números', subtitle: 'Enteros, fracciones y decimales', color: 'navy' },
+-          { id: 'b2', number: '02', title: 'Álgebra', subtitle: 'Patrones, relaciones y ecuaciones', color: 'orange' },
+-          { id: 'b3', number: '03', title: 'Geometría', subtitle: 'Formas, medidas y transformaciones', color: 'yellow' },
+-          { id: 'b4', number: '04', title: 'Datos y azar', subtitle: 'Información, gráficos y probabilidades', color: 'teal' }
++          { id: 'b1', number: '01', title: 'Punto de partida', subtitle: 'Activación', color: 'teal' },
++          { id: 'b2', number: '02', title: 'Motivación y Explicación', subtitle: 'Cápsula interactiva', color: 'orange' },
++          { id: 'b3', number: '03', title: 'Práctica guiada', subtitle: 'Transferencia', color: 'yellow' },
++          { id: 'b4', number: '04', title: 'Miniquiz', subtitle: 'Evaluación y cierre', color: 'navy' }
+         ];
+       }
+ 
+-      // Asegurar inicialización de las 3 tarjetas de foco de la clase de hoy
+-      if (!cloned.route.keyQuestions || cloned.route.keyQuestions.length < 3) {
+-        cloned.route.keyQuestions = [
+-          { label: 'Ubicación en la recta', sub: 'El cero al centro y signos opuestos' },
+-          { label: 'Criterio de orden', sub: 'Mayor hacia la derecha' },
+-          { label: 'Comparar negativos', sub: 'Distancia relativa al cero' }
+-        ];
++      // Preservar tarjetas de foco existentes; si no existen, inicializar como arreglo vacío sin contaminar con matemática
++      if (!cloned.route.keyQuestions) {
++        cloned.route.keyQuestions = [];
+       }
+ 
+-      // Asegurar etapa reference (Comprendamos la respuesta)
++      // Asegurar etapa reference (Comprendamos la respuesta) respetando la disciplina de la lección
+       if (!cloned.reference) {
+         cloned.reference = {
+-          dilePrompt: cloned.situation?.dilePrompt || 'En la recta numérica el número cero actúa como punto de referencia central.',
+-          question: 'Dime con tus palabras: ¿qué número divide la recta numérica entre positivos y negativos?',
+-          expectedAnswer: 'El número cero',
+-          socraticHint: 'Es el valor que separa las cantidades positivas de las negativas.',
+-          feedbackSuccess: '¡Exacto! El cero es el origen y punto de referencia central.',
+-          feedbackSupport: 'Observa el centro de la recta: el cero divide positivos y negativos.'
++          dilePrompt: cloned.situation?.dilePrompt || 'Observa la situación y responde la pregunta clave.',
++          question: 'Dime con tus palabras: ¿qué idea central explica esta situación?',
++          expectedAnswer: cloned.situation?.expectedAnswer || 'Idea central explicada con tus palabras.',
++          socraticHint: cloned.situation?.socraticHint || 'Fíjate en las palabras clave del caso.',
++          feedbackSuccess: '¡Exacto! Buen razonamiento.',
++          feedbackSupport: 'Revisa la situación planteada para encontrar la respuesta.'
+         };
+       }
+ 
+-      // Asegurar puntos de foco del video motivacional
+-      if (!cloned.hook.focusPoints || cloned.hook.focusPoints.length === 0) {
+-        cloned.hook.focusPoints = [
+-          'Dónde se ubica el número cero en la recta.',
+-          'Hacia qué lado se ordenan los números positivos y negativos.',
+-          'Qué regla define qué número es mayor que otro.'
+-        ];
++      // Puntos de foco del video motivacional (preservar los propios; no inyectar matemática)
++      if (!cloned.hook.focusPoints) {
++        cloned.hook.focusPoints = [];
+       }
+ 
+-      // Asegurar preguntas de comprobación post-video explicativo
++      // Preguntas de comprobación post-video explicativo (derivar de preQuestions si existen, o lista vacía)
+       if (!cloned.postQuestions || cloned.postQuestions.length === 0) {
+         cloned.postQuestions = cloned.preQuestions && cloned.preQuestions.length >= 2
+           ? JSON.parse(JSON.stringify(cloned.preQuestions.slice(0, 2)))
+-          : [
+-              {
+-                context: 'Regla de la derecha',
+-                question: 'Si un número A se encuentra a la derecha de un número B en la recta numérica, ¿cuál de los dos es mayor?',
+-                expected: 'El número A es mayor porque está a la derecha.',
+-                success: '¡Excelente! En la recta numérica, el número que está más a la derecha siempre es el mayor.',
+-                support: 'Hacia la derecha los valores aumentan. ¿Cuál es mayor?',
+-                reveal: 'El número A es mayor porque está situado más hacia la derecha.',
+-                studentReveal: 'El número A es mayor.'
+-              },
+-              {
+-                context: 'Comparación de negativos',
+-                question: 'Al comparar −5 y −2, ¿cuál de los dos números es mayor y por qué?',
+-                expected: 'El −2 es mayor porque está más a la derecha en la recta numérica.',
+-                success: '¡Exacto! El −2 está más a la derecha y por tanto es mayor.',
+-                support: 'Ubícalos mentalmente en la recta: ¿cuál está más cerca del cero?',
+-                reveal: 'El −2 es mayor que el −5 porque se encuentra más hacia la derecha.',
+-                studentReveal: 'El −2 es mayor porque está más a la derecha.'
+-              }
+-            ];
++          : [];
+       }
+ 
+-      // Asegurar estrategia para pensar
++      // Estrategia para pensar neutral si no está definida en la lección
+       if (!cloned.strategy) {
++        const titleContext = cloned.metadata?.lessonTitle || 'la clase';
+         cloned.strategy = {
+-          title: 'Cómo ordenar números enteros en 3 pasos',
+-          dileIntro: 'Cuando tengas que comparar o ordenar números enteros, puedes seguir esta estrategia de tres pasos:',
++          title: `Estrategia de resolución: ${titleContext}`,
++          dileIntro: 'Sigue estos tres pasos para analizar y fundamentar tu respuesta:',
+           steps: [
+-            { number: 1, title: 'Ubica', desc: 'Sitúa cada número en la recta numérica tomando el cero como centro.' },
+-            { number: 2, title: 'Compara', desc: 'Observa cuál de los números se encuentra ubicado más hacia la derecha.' },
+-            { number: 3, title: 'Concluye', desc: 'El número que está a la derecha siempre es el mayor, sin importar sus signos.' }
++            { number: 1, title: 'Identifica', desc: 'Lee con atención el caso o problema y localiza los datos clave.' },
++            { number: 2, title: 'Relaciona', desc: 'Conecta la evidencia del texto con los conceptos aprendidos.' },
++            { number: 3, title: 'Concluye', desc: 'Explica tu razonamiento con claridad antes de responder.' }
+           ]
+         };
+       }
+ 
+-      // Asegurar ideas de síntesis
++      // Ideas de síntesis (preservar existentes; si está vacía, derivar de objetivos sin forzar matemática)
+       if (!cloned.summaryIdeas || cloned.summaryIdeas.length === 0) {
+         cloned.summaryIdeas = [
+-          ['1 · El cero como origen', 'En la recta numérica, el cero se ubica en el centro y actúa como punto de referencia que separa positivos de negativos.'],
+-          ['2 · Orientación de los signos', 'Los números positivos se ordenan a la derecha aumentando su valor, y los negativos a la izquierda alejándose del cero.'],
+-          ['3 · Criterio de orden universal', 'Todo número ubicado a la derecha de otro en la recta numérica es mayor que él.']
++          ['1 · Concepto central', cloned.metadata?.lessonTitle || 'Idea fundamental de la lección.'],
++          ['2 · Aplicación guiada', 'Uso de la evidencia del recurso para fundamentar conclusiones.'],
++          ['3 · Criterio formativo', 'Distinguir hechos comprobables de opiniones sin evidencia.']
+         ];
+       }
+ 
+@@ -424,6 +405,32 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
+     const curData = lessonDataRef.current || lessonData;
+     if (!curData || !currentOA) return;
+ 
++    // Validación canónica preflight
++    const validation = validateLessonCanonical(curData);
++    if (!validation.isValid) {
++      setValidationErrorMsg(validation.error || 'La lección no cumple con la referencia canónica oficial.');
++      setValidationErrors(validation.details || []);
++      setSaveStatus(null);
++      return;
++    }
++
++    if (validation.isProtectedOa) {
++      setValidationErrorMsg('Matemática OA01 es un paquete blindado de fábrica (PROTEGIDO_NO_INTERVENIDO). Sus modificaciones no se persisten en almacenamiento.');
++      setValidationErrors([
++        {
++          field: 'metadata.oaCode',
++          expected: 'Matemática OA01 (Blindaje Inmutable de Fábrica)',
++          found: 'Intento de persistencia personalizada'
++        }
++      ]);
++      setSaveStatus(null);
++      return;
++    }
++
++    // Limpiar alertas de error si la validación fue exitosa
++    setValidationErrorMsg(null);
++    setValidationErrors(null);
++
+     saveCustomPlayerLesson(
+       selectedGrade,
+       selectedSubject,
+@@ -458,28 +465,31 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
+ 
+     const curData = lessonDataRef.current || lessonData;
+     if (curData && currentOA) {
+-      saveCustomPlayerLesson(
+-        selectedGrade,
+-        selectedSubject,
+-        currentOA.oa,
+-        selectedLessonNum,
+-        curData
+-      );
+-
+-      try {
+-        const genLesson = adaptPlayerLessonToGenerator(curData);
+-        saveCustomLessonData(
++      const validation = validateLessonCanonical(curData);
++      if (validation.isValid && !validation.isProtectedOa) {
++        saveCustomPlayerLesson(
+           selectedGrade,
+           selectedSubject,
+           currentOA.oa,
+-          currentOA.id,
+-          genLesson,
+-          totalLessons
++          selectedLessonNum,
++          curData
+         );
+-      } catch (e) {
+-        console.warn('Error sincronizando paquete generator:', e);
++
++        try {
++          const genLesson = adaptPlayerLessonToGenerator(curData);
++          saveCustomLessonData(
++            selectedGrade,
++            selectedSubject,
++            currentOA.oa,
++            currentOA.id,
++            genLesson,
++            totalLessons
++          );
++        } catch (e) {
++          console.warn('Error sincronizando paquete generator:', e);
++        }
++        setIsCustom(true);
+       }
+-      setIsCustom(true);
+     }
+ 
+     setSelectedLessonNum(targetNum);
+@@ -578,6 +588,8 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
+       resetCustomPlayerLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum);
+       resetCustomLessonData(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum);
+       setIsCustom(false);
++      setValidationErrorMsg(null);
++      setValidationErrors(null);
+       loadLesson(true);
+       setSaveStatus('Lección restablecida a su versión canónica original.');
+       setTimeout(() => setSaveStatus(null), 3500);
+@@ -587,7 +599,20 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
+   // Probar la lección en vivo en el aula sincronizada con paso directo de LessonData
+   const handleTestInLivePlayer = () => {
+     if (!lessonData || !currentOA) return;
+-    handleSaveLesson();
++
++    const validation = validateLessonCanonical(lessonData);
++    if (!validation.isValid) {
++      setValidationErrorMsg(validation.error || 'No es posible probar en aula: la lección contiene discrepancias canónicas.');
++      setValidationErrors(validation.details || []);
++      return;
++    }
++
++    if (!validation.isProtectedOa) {
++      handleSaveLesson();
++    } else {
++      setValidationErrorMsg(null);
++      setValidationErrors(null);
++    }
+ 
+     const freshClone = JSON.parse(JSON.stringify(lessonData));
+ 
+@@ -642,12 +667,32 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
+   // Descargar solo el prompt en archivo .txt
+   const handleDownloadPrompt = () => {
+     if (!lessonData || !currentOA) return;
++
++    const validation = validateLessonCanonical(lessonData);
++    if (!validation.isValid) {
++      setValidationErrorMsg(validation.error || 'Descarga de prompt bloqueada: la lección contiene discrepancias canónicas.');
++      setValidationErrors(validation.details || []);
++      return;
++    }
++
++    setValidationErrorMsg(null);
++    setValidationErrors(null);
+     downloadLessonPromptFile(lessonData);
+   };
+ 
+   // Generar y descargar DOCX en formato Cuadernillo Doble
+   const handleDownloadDocx = async () => {
+     if (!lessonData || !currentOA) return;
++
++    const validation = validateLessonCanonical(lessonData);
++    if (!validation.isValid) {
++      setValidationErrorMsg(validation.error || 'Exportación DOCX bloqueada: la lección contiene discrepancias canónicas.');
++      setValidationErrors(validation.details || []);
++      return;
++    }
++
++    setValidationErrorMsg(null);
++    setValidationErrors(null);
+     setIsExportingDocx(true);
+ 
+     try {
+@@ -671,6 +716,16 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
+   // Exportar JSON nativo de la lección
+   const handleExportJson = () => {
+     if (!lessonData || !currentOA) return;
++
++    const validation = validateLessonCanonical(lessonData);
++    if (!validation.isValid) {
++      setValidationErrorMsg(validation.error || 'Exportación JSON bloqueada: la lección contiene discrepancias canónicas.');
++      setValidationErrors(validation.details || []);
++      return;
++    }
++
++    setValidationErrorMsg(null);
++    setValidationErrors(null);
+     const jsonStr = JSON.stringify(lessonData, null, 2);
+     const blob = new Blob([jsonStr], { type: 'application/json' });
+     const url = URL.createObjectURL(blob);
+@@ -687,6 +742,16 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
+   const handleCopyPrompt = async (type: 'hook' | 'explicativo') => {
+     if (!lessonData || !currentOA) return;
+ 
++    const validation = validateLessonCanonical(lessonData);
++    if (!validation.isValid) {
++      setValidationErrorMsg(validation.error || 'Copia de prompts bloqueada: la lección contiene discrepancias canónicas.');
++      setValidationErrors(validation.details || []);
++      return;
++    }
++
++    setValidationErrorMsg(null);
++    setValidationErrors(null);
++
+     let text = '';
+     if (type === 'hook') {
+       text = buildHookPromptText(
+@@ -818,6 +883,53 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
+           </div>
+         </div>
+ 
++        {/* Notificación de Error Canónico */}
++        {validationErrorMsg && (
++          <div className="p-4 rounded-xl bg-rose-50 border-2 border-rose-300 text-rose-900 text-xs shadow-xs animate-fade-in">
++            <div className="flex items-start justify-between gap-3">
++              <div className="flex items-start gap-2.5">
++                <AlertTriangle size={18} className="text-rose-600 shrink-0 mt-0.5" />
++                <div>
++                  <h4 className="font-black text-rose-950 text-xs">Validación Canónica: Operación Bloqueada</h4>
++                  <p className="font-semibold text-rose-800 text-[11px] mt-0.5">{validationErrorMsg}</p>
++                  {validationErrors && validationErrors.length > 0 && (
++                    <div className="mt-2.5 overflow-hidden rounded-lg border border-rose-200 bg-white">
++                      <table className="min-w-full text-[11px]">
++                        <thead className="bg-rose-100/60 text-rose-900 font-bold border-b border-rose-200">
++                          <tr>
++                            <th className="py-1 px-2.5 text-left">Campo</th>
++                            <th className="py-1 px-2.5 text-left">Valor Esperado Oficial</th>
++                            <th className="py-1 px-2.5 text-left">Valor Encontrado</th>
++                          </tr>
++                        </thead>
++                        <tbody className="divide-y divide-rose-100 text-slate-700 font-medium">
++                          {validationErrors.map((err, idx) => (
++                            <tr key={idx} className="hover:bg-rose-50/40">
++                              <td className="py-1 px-2.5 font-bold text-rose-900">{err.field}</td>
++                              <td className="py-1 px-2.5 font-mono text-emerald-800 bg-emerald-50/40">{err.expected}</td>
++                              <td className="py-1 px-2.5 font-mono text-rose-700 bg-rose-50/40">{err.found}</td>
++                            </tr>
++                          ))}
++                        </tbody>
++                      </table>
++                    </div>
++                  )}
++                </div>
++              </div>
++              <button
++                type="button"
++                onClick={() => {
++                  setValidationErrorMsg(null);
++                  setValidationErrors(null);
++                }}
++                className="text-rose-600 hover:text-rose-900 text-[11px] font-bold px-2 py-0.5 rounded-md hover:bg-rose-200/50 transition-colors"
++              >
++                Cerrar
++              </button>
++            </div>
++          </div>
++        )}
++
+         {/* Notificación de Guardado */}
+         {saveStatus && (
+           <div className="p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold flex items-center gap-2 animate-fade-in">
+diff --git a/Web Studio Simple/src/lib/lesson-repository.ts b/Web Studio Simple/src/lib/lesson-repository.ts
+index 418d0b6..cb4e6c2 100644
+--- a/Web Studio Simple/src/lib/lesson-repository.ts	
++++ b/Web Studio Simple/src/lib/lesson-repository.ts	
+@@ -288,7 +288,17 @@ export function saveCustomPlayerLesson(
+   lessonData: PlayerLessonData
+ ): void {
+   if (typeof window === 'undefined') return;
+-  const key = `${normalizeGrade(grade)}_${normalizeSubject(subject)}_${normalizeOa(oaCode)}_${lessonNumber}`;
++  const keyGrade = normalizeGrade(grade);
++  const keySubj = normalizeSubject(subject);
++  const keyOa = normalizeOa(oaCode);
++
++  // Blindaje Matemática OA01 (PROTEGIDO_NO_INTERVENIDO)
++  if ((keySubj === 'mat' || keySubj === 'matematica') && (keyOa === 'oa01' || keyOa === 'oa1')) {
++    console.warn('Operación bloqueada: Matemática OA01 es un paquete blindado de fábrica (PROTEGIDO_NO_INTERVENIDO).');
++    return;
++  }
++
++  const key = `${keyGrade}_${keySubj}_${keyOa}_${lessonNumber}`;
+   try {
+     const raw = localStorage.getItem(CUSTOM_PLAYER_LESSONS_KEY);
+     const map = raw ? JSON.parse(raw) : {};
+@@ -326,7 +336,16 @@ export function isPlayerLessonCustomized(
+   lessonNumber: number
+ ): boolean {
+   if (typeof window === 'undefined') return false;
+-  const key = `${normalizeGrade(grade)}_${normalizeSubject(subject)}_${normalizeOa(oaCode)}_${lessonNumber}`;
++  const keyGrade = normalizeGrade(grade);
++  const keySubj = normalizeSubject(subject);
++  const keyOa = normalizeOa(oaCode);
++
++  // Blindaje Matemática OA01 (PROTEGIDO_NO_INTERVENIDO)
++  if ((keySubj === 'mat' || keySubj === 'matematica') && (keyOa === 'oa01' || keyOa === 'oa1')) {
++    return false;
++  }
++
++  const key = `${keyGrade}_${keySubj}_${keyOa}_${lessonNumber}`;
+   try {
+     const raw = localStorage.getItem(CUSTOM_PLAYER_LESSONS_KEY);
+     if (!raw) return false;
+@@ -375,18 +394,37 @@ export function findInjectedLesson(
+   const keyOa = normalizeOa(oaCode);
+   const customKey = `${keyGrade}_${keySubj}_${keyOa}_${lessonNumber}`;
+ 
+-  // 1. Sobrescrituras manuales curadas de alta fidelidad de fábrica (Prioridad oficial canónica)
+-  const canonical = findCanonicalFactoryLesson(grade, subject, oaCode, lessonNumber);
+-  if (canonical) return canonical;
++  // 1. Blindaje inmutable de fábrica para Matemática OA01 (PROTEGIDO_NO_INTERVENIDO)
++  const isProtectedMatOa01 =
++    (keySubj === 'mat' || keySubj === 'matematica') &&
++    (keyOa === 'oa01' || keyOa === 'oa1');
+ 
+-  // 2. Versión personalizada guardada por el usuario en localStorage
++  if (isProtectedMatOa01) {
++    return findCanonicalFactoryLesson(grade, subject, oaCode, lessonNumber);
++  }
++
++  // 2. Precedencia para lecciones editables: versión personalizada guardada en localStorage si es válida
+   if (typeof window !== 'undefined') {
+     try {
+       const raw = localStorage.getItem(CUSTOM_PLAYER_LESSONS_KEY);
+       if (raw) {
+         const map = JSON.parse(raw);
+-        if (map[customKey]) {
+-          return map[customKey];
++        const candidate = map[customKey];
++        if (candidate && typeof candidate === 'object' && candidate.metadata) {
++          const meta = candidate.metadata;
++          const candidateGrade = normalizeGrade(meta.grade || '');
++          const candidateSubj = normalizeSubject(meta.subject || '');
++          const candidateOa = normalizeOa(meta.oaCode || '');
++          const candidateNum = Number(meta.lessonNumber);
++
++          if (
++            (!candidateGrade || candidateGrade === keyGrade) &&
++            (!candidateSubj || candidateSubj === keySubj) &&
++            (!candidateOa || candidateOa === keyOa) &&
++            (candidateNum === lessonNumber)
++          ) {
++            return candidate as PlayerLessonData;
++          }
+         }
+       }
+     } catch (e) {
+@@ -394,7 +432,11 @@ export function findInjectedLesson(
+     }
+   }
+ 
+-  // 3. Compatibilidad con almacenamiento anterior
++  // 3. Respaldo oficial canónico de fábrica
++  const canonical = findCanonicalFactoryLesson(grade, subject, oaCode, lessonNumber);
++  if (canonical) return canonical;
++
++  // 4. Compatibilidad con almacenamiento anterior
+   const customPkg = cachedInjectedPackages.find((p) => {
+     if (!p.isCustomized) return false;
+     return (
+diff --git a/docs/REPOSITORIO_DRIVE_OFICIAL.md b/docs/REPOSITORIO_DRIVE_OFICIAL.md
+index 56080ef..003104d 100644
+--- a/docs/REPOSITORIO_DRIVE_OFICIAL.md
++++ b/docs/REPOSITORIO_DRIVE_OFICIAL.md
+@@ -26,3 +26,16 @@
+ | **MANUAL MAESTRO** | `1iWtQWsawmGN7hHaLEyDLBiddOhi3s5Zu` | [Abrir Carpeta](https://drive.google.com/drive/folders/1iWtQWsawmGN7hHaLEyDLBiddOhi3s5Zu) |
+ | **PERSONAJES SÉPTIMO BÁSICO** | `1eeqHu9vMGRfXbfQT6JRzLm2eRyrFrPuv` | [Abrir Carpeta](https://drive.google.com/drive/folders/1eeqHu9vMGRfXbfQT6JRzLm2eRyrFrPuv) |
+ | **PLANES_MAESTROS_GLOBALES** | `15HDgzHQNHKnzGFf4tHSj2nDLNkZsWztU` | [Abrir Carpeta](https://drive.google.com/drive/folders/15HDgzHQNHKnzGFf4tHSj2nDLNkZsWztU) |
++
++---
++
++## 📬 Buzón Dedicado de Entregas a ChatGPT Work (Ventanilla Única)
++
++- **Nombre:** `ENTREGAS_WORK_ESTUDIOSIMPLE`
++- **ID de Carpeta:** `1d9-99Y2hiLMnRvHROI-3fehzVNwmEYnt`
++- **Enlace Directo:** [https://drive.google.com/drive/folders/1d9-99Y2hiLMnRvHROI-3fehzVNwmEYnt?usp=sharing](https://drive.google.com/drive/folders/1d9-99Y2hiLMnRvHROI-3fehzVNwmEYnt?usp=sharing)
++- **Convención de Organización:**
++  - Subcarpetas por fecha: `YYYY-MM-DD`
++  - Archivos con estampa temporal completa: `[NOMBRE]_[YYYY-MM-DD]_[HH-mm]_[ZONA].zip`
++  - Cada entrega contiene su respectivo `LEER_PRIMERO_*.md` e `INVENTARIO_SHA256.json`.
++

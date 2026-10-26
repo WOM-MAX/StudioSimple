@@ -1,0 +1,36 @@
+{
+  "identidad": {
+    "curso": "7° Básico",
+    "asignatura": "Ciencias Naturales",
+    "oa": "OA 1",
+    "numeroClase": 2,
+    "tituloOficial": "Cambios físicos durante la pubertad",
+    "tituloSiguientePuente": "Emociones, afectividad e imagen personal"
+  },
+  "resumenDosIdeas": {
+    "cantidadIdeasDeclaradas": 0,
+    "ideas": [],
+    "cumplimientoWork": "CONFORME: Conserva exactamente 2 ideas formativas (Cambios físicos pubertad y variabilidad individual), sin forzar 3 ideas."
+  },
+  "evaluacionFormativa": {
+    "totalReactivos": 0,
+    "alternativasPorReactivo": 4
+  },
+  "segregacionDatosPrivados": {
+    "camposAdultoExclusivos": [
+      "prep.adultObjective",
+      "prep.mentorReminder",
+      "prep.emotionalTip",
+      "situation.expectedAnswer",
+      "reference.expectedAnswer",
+      "reference.feedbackSuccess",
+      "reference.feedbackSupport",
+      "guidedPractice.steps[].expectedResponse",
+      "guidedPractice.rubric",
+      "quiz.questions[].correctAnswer",
+      "quiz.questions[].explanation",
+      "recovery.expected"
+    ],
+    "comprobacionVisual": "En StudentLessonView.tsx y StudentMiniquizView.tsx, las claves correctas y explicaciones permanecen ocultas hasta que el estudiante envía formalmente su intento o se ejecutan en modo evaluación mentor. El estudiante no recibe claves en su UI inicial."
+  }
+}
