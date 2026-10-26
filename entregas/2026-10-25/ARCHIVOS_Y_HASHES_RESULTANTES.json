@@ -1,0 +1,42 @@
+{
+  "timestamp": "2026-10-25 09:00 [America/Santiago]",
+  "baseCommit": "89add56cc9135e04d14c3abefbe2c18e25cdce18",
+  "branch": "work-auditor-titulos-test",
+  "files": [
+    {
+      "path": "Web Studio Simple/src/lib/lesson-canonical-validator.ts",
+      "sha256": "8482c14ec12c1e856a629b028a8bff9c492754586508410ceba78c11e6ee15f7",
+      "bytes": 7786
+    },
+    {
+      "path": "Web Studio Simple/src/lib/lesson-repository.ts",
+      "sha256": "10ecd8ba74c93d6ecae7aa5fbdc6b1d5391f0e82bbe8261d926c14a482bfd9b0",
+      "bytes": 19338
+    },
+    {
+      "path": "Web Studio Simple/src/components/admin/cms/LessonEditorView.tsx",
+      "sha256": "e53afbe500c5c5b5a9abb2a1c83472926773376f21435aba85a268c880920f62",
+      "bytes": 202817
+    },
+    {
+      "path": "Web Studio Simple/package.json",
+      "sha256": "604d7b094663f071ada1ab53a923ab9b5535e2d9ce1610c475318cd7a447690d",
+      "bytes": 860
+    },
+    {
+      "path": "scripts/verify_editor_reference.cjs",
+      "sha256": "0f53121a523d699da32681c23bcc234420235e1d6bd2c202a44dba35d34d41b2",
+      "bytes": 1443
+    },
+    {
+      "path": "scripts/test_editor_work.cjs",
+      "sha256": "b815d43eec2e233bfe6a843463dfed53f21f4100c8cf5034071159859d2ca56d",
+      "bytes": 14943
+    },
+    {
+      "path": "scripts/fixtures/CNA_OA01_C02.json",
+      "sha256": "a1cd256bb5e785071d90d4dbafb5a46b3ad3717178ddc2762faf54dabafbc4ce",
+      "bytes": 25326
+    }
+  ]
+}

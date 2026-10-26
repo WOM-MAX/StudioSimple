@@ -1,0 +1,72 @@
+{
+  "timestamp": "2026-10-24 17:35 [America/Santiago]",
+  "package": "RESULTADOS_CORRECCION_EDITOR_LECCIONES_ANTIGRAVITY_2026-10-24_17-35_CL.zip",
+  "itemCount": 13,
+  "files": [
+    {
+      "path": "codigo/canonicalReference.json",
+      "size": 32698,
+      "sha256": "da81744b35f8279f684726ca85561e753d5b68ce329131a6c83d39a8abd6d76c"
+    },
+    {
+      "path": "codigo/lesson-canonical-validator.ts",
+      "size": 5199,
+      "sha256": "ff1dfb591c838fb0c901b3e1272508ca651e9fb1929a10873dc74c566468ec36"
+    },
+    {
+      "path": "codigo/lesson-repository.ts",
+      "size": 18683,
+      "sha256": "e71b3af3b874577efc1a0917a1c46bc2b8729d1ee48333217a5de0e8fc6998ff"
+    },
+    {
+      "path": "codigo/LessonEditorView.tsx",
+      "size": 207811,
+      "sha256": "4665ec1ba15b225b2828ed4f2d126899d353b79f708911fb22bcc3a1d71eb27b"
+    },
+    {
+      "path": "diffs/diff_completo.patch",
+      "size": 26125,
+      "sha256": "ae90ce74e5181c48c1119ae6d81998da04bd961f9ef12e68ddc698e60f530ccf"
+    },
+    {
+      "path": "diffs/diff_lesson_editor_view.patch",
+      "size": 20514,
+      "sha256": "77b4363631c14dbf92291c819b31dd637dcaff874d284d3fadbb19da1319849c"
+    },
+    {
+      "path": "diffs/diff_lesson_repository.patch",
+      "size": 4275,
+      "sha256": "ef6a5ceed7ea98d5848988b43dc305cb0d3ef093a6f24818d46db5b082d9b92a"
+    },
+    {
+      "path": "evidencias/editor_ciencias_limpio_01.png",
+      "size": 179606,
+      "sha256": "ee46f8aa4de58528db9ad78071ed24d51ef3fe30153317a542b781824bacf7fa"
+    },
+    {
+      "path": "evidencias/editor_ciencias_limpio_02.png",
+      "size": 179576,
+      "sha256": "f505dca348193f7de7932a64ae6e1216830124a0808b63ee8e6ee29cd719c78c"
+    },
+    {
+      "path": "evidencias/salida_build_produccion.txt",
+      "size": 414,
+      "sha256": "6b6ead776817863933f6c2e4845cfa4e556d63334beab5f34e15a6a2c797f4b0"
+    },
+    {
+      "path": "LEER_PRIMERO_RESULTADO_EDITOR.md",
+      "size": 6530,
+      "sha256": "4c08f8875e223bd36176341a65772a6d681d37fb9e5935bd6384e9ed4120749c"
+    },
+    {
+      "path": "pruebas/salida_pruebas_37_de_37.txt",
+      "size": 5214,
+      "sha256": "4bce212116371f665ff7654295edf2829f292c86b9de6183a98a16147fb1be8f"
+    },
+    {
+      "path": "pruebas/test_editor_breaches.ts",
+      "size": 17792,
+      "sha256": "853f3647518e1a0eec39d8c2969f755d3566218da66b401b6723e07f21316d0f"
+    }
+  ]
+}

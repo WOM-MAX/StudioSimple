@@ -1,0 +1,97 @@
+{
+  "timestamp": "2026-10-25 09:00 [America/Santiago]",
+  "package": "APLICACION_PLAN_B_EDITOR_WORK_2026-10-25_09-00_CL.zip",
+  "itemCount": 18,
+  "files": [
+    {
+      "path": "ARCHIVOS_Y_HASHES_RESULTANTES.json",
+      "size": 1414,
+      "sha256": "2410cbdd41cedf8ba3656c491527b9a405f74ce152d2166db0f3139d696e774c"
+    },
+    {
+      "path": "codigo/canonicalReference.json",
+      "size": 32698,
+      "sha256": "da81744b35f8279f684726ca85561e753d5b68ce329131a6c83d39a8abd6d76c"
+    },
+    {
+      "path": "codigo/CNA_OA01_C02.json",
+      "size": 25326,
+      "sha256": "a1cd256bb5e785071d90d4dbafb5a46b3ad3717178ddc2762faf54dabafbc4ce"
+    },
+    {
+      "path": "codigo/lesson-canonical-validator.ts",
+      "size": 7786,
+      "sha256": "8482c14ec12c1e856a629b028a8bff9c492754586508410ceba78c11e6ee15f7"
+    },
+    {
+      "path": "codigo/lesson-repository.ts",
+      "size": 19338,
+      "sha256": "10ecd8ba74c93d6ecae7aa5fbdc6b1d5391f0e82bbe8261d926c14a482bfd9b0"
+    },
+    {
+      "path": "codigo/LessonEditorView.tsx",
+      "size": 202817,
+      "sha256": "e53afbe500c5c5b5a9abb2a1c83472926773376f21435aba85a268c880920f62"
+    },
+    {
+      "path": "codigo/package.json",
+      "size": 860,
+      "sha256": "604d7b094663f071ada1ab53a923ab9b5535e2d9ce1610c475318cd7a447690d"
+    },
+    {
+      "path": "codigo/test_editor_work.cjs",
+      "size": 14943,
+      "sha256": "b815d43eec2e233bfe6a843463dfed53f21f4100c8cf5034071159859d2ca56d"
+    },
+    {
+      "path": "codigo/verify_editor_reference.cjs",
+      "size": 1443,
+      "sha256": "0f53121a523d699da32681c23bcc234420235e1d6bd2c202a44dba35d34d41b2"
+    },
+    {
+      "path": "diffs/diff_completo_plan_b.patch",
+      "size": 52335,
+      "sha256": "2642ba5663c0b15b5c56123649a4d5de2a101c345cdc00e1f5a26caa314e6ae5"
+    },
+    {
+      "path": "diffs/diff_lesson_editor_view.patch",
+      "size": 35266,
+      "sha256": "b037e0c8a56d9a6c2649eea277357e9ba9a856fdc2e9fba2753b4bdf5a95ba8e"
+    },
+    {
+      "path": "evidencias/demo_navegador_editor_work.webp",
+      "size": 11418,
+      "sha256": "f1b5ca2ac9daa972c5cd7e2adb839720857249805e329cdb59c06e7c3f1a8621"
+    },
+    {
+      "path": "evidencias/editor_ciencias_estado_final.png",
+      "size": 167693,
+      "sha256": "c6bf3a9788cc5fa0b018f5731c4b3d997c36d6f15ddc60edbeb1bc9d0417e987"
+    },
+    {
+      "path": "evidencias/editor_ciencias_seleccion_asignatura.png",
+      "size": 168219,
+      "sha256": "38e8824c6f5e960fb4db987aedec0aca60358726b92a873c55b44cd356d5d065"
+    },
+    {
+      "path": "exportaciones/CIENCIAS_7B_OA01_C02_EXPORTACION.json",
+      "size": 25326,
+      "sha256": "a1cd256bb5e785071d90d4dbafb5a46b3ad3717178ddc2762faf54dabafbc4ce"
+    },
+    {
+      "path": "LEER_PRIMERO_APLICACION_PLAN_B_ANTIGRAVITY.md",
+      "size": 7828,
+      "sha256": "dc4a17d19b53cb148edf67ad0df0ea70c33db18ad6bbf63d59a1c0073b9f3c8d"
+    },
+    {
+      "path": "pruebas/LOG_BUILD_PRODUCCION.txt",
+      "size": 523,
+      "sha256": "616d97a397f72199a7011177ed0c0f369dd8989d3eecb63d2a976025eead1a71"
+    },
+    {
+      "path": "pruebas/PRUEBAS_WORK_41_DE_41.tap",
+      "size": 8136,
+      "sha256": "00f7cdb0fbf9c6696a09cb66f5080290c472afab291eeafe5ea18796305c7f93"
+    }
+  ]
+}
