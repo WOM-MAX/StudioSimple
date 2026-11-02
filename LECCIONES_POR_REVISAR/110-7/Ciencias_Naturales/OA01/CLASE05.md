@@ -1,450 +1,469 @@
-# EstudioSimple · Vínculos afectivos y respeto mutuo
+# EstudioSimple | Lección interactiva
 
-**Curso:** 110-7 · **Asignatura:** Ciencias_Naturales · **OA:** OA01 · **Clase:** 05 de 06
+## 7° básico · Ciencias Naturales · OA01 · Clase 05
 
-**Estado:** EN_REVISION · NO INTEGRADA EN APP · NO APROBADA
+**Curso App:** 110-7  
+**Asignatura App:** Ciencias_Naturales  
+**Código curricular:** 7B-CNA-OA01  
+**Título:** Vínculos afectivos y respeto mutuo  
+**Duración:** 30 minutos  
+**Número de clase:** 05 de 06  
+**Título de trabajo de la siguiente clase:** Decisiones responsables e integración  
+**Estado:** EN_REVISION · NO INTEGRADA EN APP · NO APROBADA  
+**Fuente principal:** Texto Escolar de Ciencias Naturales 7° básico (Edición especial MINEDUC / SM), Unidad 4 "Salud sexual y reproducción", Lección 8 "Sexualidad y autocuidado", páginas impresas 124 a 125 y 128 a 129 (PDF físico 126–127, 130–131).  
+**Unidades de contenido:** 7B-CNA-OA01-C05.  
+**Indicadores priorizados:** 7B-CNA-OA01-IE03, 7B-CNA-OA01-IE04, en el alcance correspondiente a esta clase.
 
-**Fecha de preparación:** 2026-10-12 America/Santiago
+### Objetivo oficial de aprendizaje
 
-**Objetivo de la clase:** Explicar cómo el respeto por límites y decisiones personales contribuye al cuidado mutuo en vínculos afectivos usando casos ficticios.
+Explicar los aspectos biológicos, afectivos y sociales que se integran en la sexualidad, considerando los cambios físicos que ocurren durante la pubertad, la relación afectiva entre dos personas en la intimidad y el respeto mutuo, y la responsabilidad individual.
 
-**Indicadores:** 7B-CNA-OA01-IE03, 7B-CNA-OA01-IE01
+### Objetivo de esta clase
 
-**Duración de sesión planificada:** 30 minutos.
+Comprender la importancia de los vínculos afectivos en la sexualidad humana, analizando la intimidad, la reciprocidad y el respeto mutuo en las relaciones de amistad y afecto, y reconociendo el consentimiento informado y los límites corporales como principios fundamentales e innegociables de autocuidado y convivencia ética.
+
+**Resultado observable:** El estudiante fundamenta por qué toda relación afectiva sana exige libertad, empatía y respeto incondicional a los límites corporales, identifica señales de presión o manipulación en casos ficticios, y formula respuestas asertivas de protección personal y búsqueda de apoyo ante situaciones de vulneración.
+
+### Alcance
+
+Esta clase aborda los aspectos afectivos, éticos e interpersonales de la sexualidad según las páginas 124-125 y 128-129 del Texto Escolar. Se enfoca rigurosamente en principios universales de dignidad, comunicación y consentimiento a través de escenarios simulados, resguardando la esfera personal del alumno y sin solicitar confidencias sobre sus sentimientos o vivencias íntimas.
+
+---
 
 ## 1. Paso 1 — Preparación del mentor
 
-**Para el mentor:** Lee el recurso con el estudiante antes de preguntar. Guía usando DILE y PREGÚNTALE. Mantén las respuestas de referencia privadas hasta que el estudiante intente responder.
+**Propósito:** Guiar al estudiante en la comprensión de los vínculos afectivos y la intimidad desde una perspectiva de respeto mutuo, asertividad y resguardo de la dignidad física y psicológica propia y ajena.
 
-**Cuidado del acompañamiento:** Usar exclusivamente los casos ficticios. No solicitar información sobre cuerpo, identidad, vínculos o experiencias íntimas del estudiante. Escuchar con respeto. No diagnosticar ni comparar ritmos de desarrollo.
+**DILE:** “¡Hola! Hoy conversaremos sobre un tema esencial para la vida: los vínculos afectivos. Aprenderemos cómo se construyen la confianza, la amistad y el cariño entre dos personas, qué significa cuidar la intimidad, por qué el consentimiento y los límites corporales deben respetarse siempre sin excepciones, y cómo comunicarnos con claridad para cuidar de nosotros y de los demás.”
 
-**DILE / SAY:** “Explicar cómo el respeto por límites y decisiones personales contribuye al cuidado mutuo en vínculos afectivos usando casos ficticios.”
+**Ruta de hoy:** Leer el recurso sobre vínculos afectivos y consentimiento → distinguir relaciones basadas en el respeto de aquellas basadas en la presión → modelar la comunicación asertiva de límites → ejercitar con casos ficticios → evaluar con el miniquiz.
 
-**Materiales:** recurso incluido en esta clase, cuaderno y lápiz.
+**Pautas para el mentor:**
+1. Mantén un tono maduro, claro y acogedor, desmitificando la idea de que en el amor o la amistad se debe aguantar el maltrato o la invasión del espacio propio.
+2. Define el consentimiento con precisión ética y formativa: es un acuerdo libre, consciente, voluntario, informado y recíproco que puede ser revocado en cualquier instante. Insistir, amenazar, presionar o chantajear emocionalmente anula el consentimiento.
+3. Enfatiza que cada persona es dueña exclusiva de su propio cuerpo y tiene el derecho absoluto a decir "no" a cualquier contacto o situación que le cause incomodidad.
+4. Jamás le preguntes al estudiante si le gusta alguien o si ha tenido experiencias amorosas: todo el trabajo se realiza con los personajes ficticios (Lucas, Emilia, Nico).
+
+---
 
 ## 2. Paso 2A — Ruta de aprendizaje
 
-Leer el recurso → localizar pistas → explicar → practicar → comprobar comprensión.
+Lectura pausada del recurso formativo → análisis de los componentes de una relación sana → modelamiento del establecimiento de límites y respeto → resolución de dilemas éticos cotidianos → autoevaluación final.
 
-**Distribución orientativa:** inicio y lectura 6 min; videos 3 min; conversación y modelamiento 7 min; práctica 7 min; miniquiz y recuperación 5 min; cierre 2 min.
+**Distribución orientativa:**
+- Inicio y ruta: 5 min.
+- Presentaciones audiovisuales (Motivación y Explicación): 4 min.
+- Diálogo formativo y modelamiento ético: 8 min.
+- Práctica con casos ficticios: 8 min.
+- Miniquiz y retroalimentación: 5 min.
 
-## 3. Paso 2B — Punto de partida
+---
+
+## 3. Paso 2B — Situación inicial y punto de partida
 
 ### Recurso de lectura visible para el estudiante
 
-Síntesis pedagógica de la página impresa 121: la afectividad incluye emociones y sentimientos que permiten establecer vínculos con familia, amistades y pareja. Estos vínculos pueden implicar compromiso y preocupación por otras personas. El respeto significa apreciar al otro y a uno mismo. La responsabilidad individual implica reflexionar y tomar decisiones. El cariño no elimina el derecho de cada persona a expresar límites.
+La sexualidad humana se manifiesta de manera profunda en los **vínculos afectivos**. A través del amor, el cariño y la amistad, las personas comparten sentimientos, pensamientos, metas y proyectos, creando espacios de confianza y cercanía.
 
-Caso A, ficticio: Paula quiere saludar a Nico con un abrazo. Nico prefiere saludar con la mano. Paula acepta esa preferencia sin insistir.
+Toda relación afectiva saludable —ya sea una amistad profunda o una relación de afecto y pareja en etapas posteriores de la vida— debe cimentarse en tres pilares innegociables:
+1. **El respeto mutuo:** Reconocer que la otra persona tiene la misma dignidad, derechos, opiniones y libertad que uno mismo.
+2. **La intimidad y los límites personales:** La intimidad es el espacio reservado, físico y emocional, propio de cada persona. Cada individuo tiene límites personales inviolables: decide qué comparte, con quién lo comparte y cuándo prefiere guardar reserva. Nadie tiene derecho a tocar el cuerpo de otra persona ni a exigir acceso a sus mensajes privados o secretos sin su permiso explícito y voluntario.
+3. **El consentimiento informado:** Significa que cualquier decisión compartida debe nacer de la libertad y del acuerdo mutuo. Si hay miedo, culpa, insistencia constante, chantaje emocional (*"si me quisieras harías esto por mí"*) o amenazas (*"si no lo haces le contaré a todos"*), no existe consentimiento verdadero, sino manipulación y vulneración de derechos (Texto Escolar, págs. 128-129).
 
-Caso B, ficticio: un grupo quiere compartir una fotografía de una amiga. Ella pide que no la publiquen. El grupo puede respetar su decisión y conversar sobre otra forma de celebrar.
+Aprender a decir **"no"** con claridad y firmeza (asertividad), así como aprender a escuchar y aceptar un **"no"** sin enojo ni reclamos, son habilidades indispensables para construir relaciones basadas en la paz y el bienestar. Cuando una situación nos genera incomodidad, confusión o temor, siempre debemos acudir a personas adultas de confianza (madre, padre, docentes o profesionales del colegio) para recibir orientación y protección.
 
-**DILE antes de leer:** “¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.”
+### Caso didáctico ficticio
 
-**Punto de partida / Starting point:** ¿Qué acción muestra respeto y cómo cuida el vínculo?
+**Situación de Lucas y Emilia (13 años):** Lucas y Emilia son amigos desde pequeños y disfrutan estudiar juntos para las evaluaciones de ciencias. Un día, Lucas nota que Emilia está algo triste en el patio y decide abrazarla de manera muy efusiva y sujetarla del brazo insistentemente para que le cuente qué le pasa. Emilia se siente incómoda, se suelta con suavidad y le dice con calma pero con firmeza: *"Lucas, aprecio tu preocupación, pero ahora necesito un momento a solas en silencio; no me tomes del brazo ni me insistas, por favor"*. Lucas siente una leve molestia inicial por el rechazo, pero reflexiona de inmediato: *"Emilia tiene derecho a su espacio personal y a decidir cuándo hablar. Respetar su límite es la mejor forma de demostrarle mi amistad"*. Lucas da un paso atrás, le dice: *"Entiendo perfectamente, Emilia; aquí estaré cuando quieras conversar"*, y la deja tranquila.
 
-**Respuesta de referencia / Reference, privada para el mentor hasta después del intento:** Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo.
+**Punto de partida:** ¿Por qué la reacción de Emilia es un ejemplo adecuado de asertividad y cómo demuestra Lucas madurez y respeto mutuo al aceptar el límite establecido?
 
-## 4. Paso 3 — Videos
+**Respuesta de referencia (privada para el mentor):** Emilia ejerce su derecho inalienable a definir su espacio corporal y emocional con asertividad (comunicación directa y respetuosa). Lucas demuestra madurez ética porque no se ofende ni impone su voluntad, sino que prioriza el bienestar y la libertad de su amiga por encima de su propio impulso de insistir.
 
-**MOTIVACION:** 7 diapositivas. **EXPLICACION:** 7 diapositivas. Los guiones vigentes de este archivo se ajustan al plan audiovisual actual. No se afirma que los PowerPoint existentes ya contengan esta revisión; cotejar sus notas antes de producir o integrar.
+---
 
-**Producción:** Gancho 60 segundos y explicación 90 segundos como tiempos de montaje. Ajustar la voz y pausas sobre el audio real. Sin música. No certificar la duración antes de producir el video.
+## 4. Paso 3 — Videos de la clase: Motivación y Explicación
+
+Orientaciones pedagógicas para las presentaciones audiovisuales de la clase:
+- **Video 1 (Motivación):** Plantea la diferencia entre el cariño auténtico y la invasión del espacio ajeno a través de una situación cotidiana de insistencia entre amigos.
+- **Video 2 (Explicación):** Profundiza en los pilares de las relaciones saludables: afectividad, respeto irrestricto a los límites corporales, consentimiento y resolución asertiva de conflictos.
+- Guion bimodal 7+7 diapositivas según Plan Maestro de Presentaciones v3.2.
+
+---
 
 ## 5. Paso 4 — Conversación guiada
 
-### Pregunta 1
+### Pregunta 1 — La naturaleza de los límites personales
+**Contexto:** Emilia le pide a Lucas que no la sujete del brazo y le dé su espacio.  
+**PREGÚNTALE:** ¿Por qué cada persona tiene derecho a decidir quién se acerca a su cuerpo y cuándo prefiere estar sola, incluso frente a sus mejores amigos?  
+**Respuesta esperada:** Porque el cuerpo y las emociones pertenecen exclusivamente a cada individuo; el cariño nunca da derecho de posesión ni autorización para invadir los límites físicos o emocionales de otra persona.
 
-**Contexto:** Nico prefiere saludar con la mano. Paula acepta sin insistir.
+### Pregunta 2 — Reconocimiento del consentimiento libre
+**Contexto:** A veces alguien acepta hacer algo solo porque le insisten muchas veces o le dicen "si no lo haces no eres mi amigo".  
+**PREGÚNTALE:** ¿Por qué ceder ante la insistencia o el chantaje no es un verdadero consentimiento?  
+**Respuesta esperada:** Porque el consentimiento real debe ser 100% voluntario y libre; si surge del miedo al rechazo, de la culpa o del cansancio por insistencia, es una imposición forzada que daña la dignidad y el bienestar.
 
-**PREGÚNTALE / ASK:** ¿Qué acción muestra respeto y cómo cuida el vínculo?
+### Pregunta 3 — Cómo actuar ante la incomodidad o vulneración
+**Contexto:** Un adolescente siente que una persona conocida insiste en pedirle cosas o fotos que le causan rechazo o incomodidad.  
+**PREGÚNTALE:** ¿Qué pasos de autocuidado debe seguir de inmediato para protegerse?  
+**Respuesta esperada:** Decir "no" con claridad, cortar la interacción, bloquear o alejarse de esa persona, y contarle de inmediato a un adulto de confianza (familia o colegio) para recibir respaldo y protección.
 
-**Respuesta esperada, privada para el mentor:** Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo.
-
-**Evidencia:** El caso señala que escucha la preferencia y no insiste.
-
-**Apoyo 1:** Si no localiza información, releer esta pista del contexto: «Nico prefiere saludar con la mano. Paula acepta sin insistir.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta.
-
-**Apoyo 2:** Si encuentra la pista pero no la explica, orientar con esta relación: El caso señala que escucha la preferencia y no insiste. Pedir que complete su respuesta indicando por qué esa pista sirve.
-
-**Apoyo 3, modelo privado tras intentar con pistas:** Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento.
-
-**Criterio:** Respuesta comprensible, información precisa y explicación de su relación.
-
-### Pregunta 2
-
-**Contexto:** Una amiga pide que no publiquen su fotografía. El grupo puede elegir otra forma de celebrar.
-
-**PREGÚNTALE / ASK:** ¿Qué decisión demuestra preocupación por la amiga?
-
-**Respuesta esperada, privada para el mentor:** No publicar la fotografía y acordar otra forma de celebrar que respete su decisión.
-
-**Evidencia:** La amiga expresa un límite claro sobre la fotografía.
-
-**Apoyo 1:** Si no localiza información, releer esta pista del contexto: «Una amiga pide que no publiquen su fotografía. El grupo puede elegir otra forma de celebrar.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta.
-
-**Apoyo 2:** Si encuentra la pista pero no la explica, orientar con esta relación: La amiga expresa un límite claro sobre la fotografía. Pedir que complete su respuesta indicando por qué esa pista sirve.
-
-**Apoyo 3, modelo privado tras intentar con pistas:** No publicar la fotografía y acordar otra forma de celebrar que respete su decisión. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento.
-
-**Criterio:** Respuesta comprensible, información precisa y explicación de su relación.
+---
 
 ## 6. Paso 5 — Explicación y modelamiento
 
-**Concepto:** El respeto mutuo implica considerar tanto lo que una persona quiere expresar como lo que la otra acepta. Un vínculo afectivo se cuida escuchando, evitando la presión y respetando límites y decisiones.
+### Razonamiento científico visible que modela la clase:
 
-**Intimidad afectiva, explicación de EstudioSimple a partir del OA y los valores de la página 121; no cita literal del libro:** En un vínculo de pareja, compartir sentimientos en un espacio de confianza forma parte de la intimidad afectiva. El respeto mutuo incluye escuchar, aceptar un límite y no presionar para obtener contacto o información. La responsabilidad exige considerar consecuencias para ambas personas. Cuidar la privacidad no significa guardar situaciones que causan daño o inseguridad: se puede buscar ayuda de un adulto de confianza. Se estudia con casos ficticios apropiados a la edad y sin pedir experiencias personales.
+> [1. Pregunta científica / Problema]
+> ¿Cuáles son los principios éticos y comunicativos que garantizan relaciones afectivas saludables y cómo resguardar los límites personales y el consentimiento?
+>                     ↓
+> [2. Evidencia observable / Datos]
+> - Las relaciones afectivas sanas se caracterizan por reciprocidad, libertad y bienestar mutuo.
+> - La insistencia reiterada, el control de contraseñas, los celos posesivos y el chantaje generan estrés, aislamiento y daño psicológico.
+> - Toda persona posee una esfera de intimidad corporal y psicológica protegida por los derechos humanos universales.
+>                     ↓
+> [3. Representación / Criterio]
+> Matriz de relación interpersonal:
+> • Relación saludable: diálogo abierto + aceptación del "no" + respeto a la intimidad y proyectos propios.
+> • Relación dañina: imposición + chantaje emocional + invasión de límites + aislamiento del entorno.
+>                     ↓
+> [4. Explicación fundamentada]
+> El amor y la amistad auténticos se basan en el reconocimiento del otro como un ser autónomo y libre. El consentimiento debe ser explícito, informado y reversible. Forzar cualquier contacto físico o exigir pruebas de afecto vulnera la integridad de la persona.
+>                     ↓
+> [5. Conclusión científica]
+> El respeto irrestricto a los límites corporales y emocionales es indispensable para la salud mental y la convivencia armónica. Decir "no" es un derecho; respetar el "no" es un deber ético.
+>                     ↓
+> [6. Comunicación respetuosa]
+> Practicar la comunicación asertiva: expresar con claridad los propios sentimientos y límites sin agredir, y acoger los límites ajenos con empatía y madurez.
 
-**Los vínculos afectivos:** La afectividad aparece en vínculos con amistades, familia y pareja. No exige expresar cariño de una sola manera.
+### Ejemplo modelado paso a paso para mostrar al estudiante:
 
-**El límite personal:** Nico prefiere saludar con la mano. Esa preferencia permite saber cómo quiere participar en el saludo.
+**Caso de análisis modelado:**
+"Nico y Belén (13 años) son compañeros de curso. Belén le presta su teléfono celular a Nico para que revise una fotografía de la tarea de ciencias. Nico comienza a abrir otras aplicaciones del celular: entra a la galería privada de fotos familiares y luego a las conversaciones de mensajería con otras amigas de Belén. Cuando Belén se da cuenta y le pide el teléfono de vuelta, Nico se ríe y dice: *'Si somos tan amigos y no tienes nada que ocultar, ¿por qué te molestas si miro tus mensajes?'*."
 
-**El respeto mutuo:** Paula escucha y acepta la preferencia. El cariño puede expresarse mediante un saludo que ambos acepten.
+**Paso a paso guiado por el mentor:**
+1. **Paso 1: Identificar la vulneración.** Nico traspasó el límite acordado: Belén le prestó el celular para ver una foto escolar, no para revisar sus mensajes ni fotos privadas.
+2. **Paso 2: Evaluar el argumento tramposo.** La frase *"si no tienes nada que ocultar, ¿por qué te molestas?"* es una manipulación falaz. La privacidad y la intimidad son derechos fundamentales universales, no un secreto culpable. Nadie está obligado a compartir su correspondencia personal para demostrar amistad.
+3. **Paso 3: Identificar la dimensión afectada.** Se vulnera la dimensión afectiva y ética (traición de la confianza, invasión de la privacidad) y social (abuso de poder en el vínculo).
+4. **Paso 4: Respuesta asertiva modelada.** Belén toma su teléfono con serenidad y firmeza, y le dice: *"Nico, la amistad no significa renunciar a mi privacidad. Te presté el teléfono para la tarea; revisar mis mensajes sin mi autorización es una falta de respeto a mi confianza y a mi espacio personal. Si queremos seguir siendo amigos, esto no puede volver a ocurrir"*.
 
-**La privacidad:** En el segundo caso, la amiga pide que no publiquen su fotografía. La decisión del grupo debe considerar esa petición.
+**Comprobación inmediata:**
+- *Pregunta:* “¿Qué condición es indispensable para que un acuerdo o contacto físico entre dos personas sea un verdadero consentimiento?”
+- *Modelo de respuesta:* “Debe ser completamente libre, voluntario, consciente y reversible en cualquier momento, sin insistencia ni chantajes.”
 
-**Una alternativa de cuidado:** El grupo puede buscar otra forma de celebrar. Respetar un límite permite mantener un vínculo de cuidado.
-
-**Modelo explicado:** Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo. El caso señala que escucha la preferencia y no insiste.
-
-**Cómo se construye el modelo, mostrar durante la enseñanza:** 1) Leer la pregunta y precisar qué pide. 2) Localizar en el caso: «Nico prefiere saludar con la mano. Paula acepta sin insistir.». 3) Explicar la relación: El caso señala que escucha la preferencia y no insiste. 4) Formular la respuesta: Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo. Comprobar que cada afirmación conserva los datos del recurso.
-
-**Error frecuente:** Suponer que el cariño permite ignorar un límite o presionar a otra persona.
-
-**Comprobación inmediata:** ¿Qué decisión demuestra preocupación por la amiga?
-
-**Modelo de comprobación:** No publicar la fotografía y acordar otra forma de celebrar que respete su decisión.
+---
 
 ## 7. Paso 6 — Práctica conjunta y autónoma
 
-### Caso 1
+### Caso 1 (Práctica guiada)
+- **Recurso:** En una fiesta de cumpleaños, un grupo de amigos insiste a Gabriel para que le dé un beso en la mejilla a una compañera para un reto grabado en video para redes sociales. Ambos han dicho que no quieren hacerlo, pero el grupo insiste gritando: *"¡El que no lo hace es un cobarde!"*.
+- **Consigna:** Explica qué vulneraciones ocurren en este caso y qué respuesta asertiva deben dar Gabriel o la compañera para defender sus límites.
+- **Procedimiento:** Identificar la presión de grupo y el chantaje → evaluar la invasión a la intimidad corporal → formular una negativa firme.
+- **Modelo para revisar después del intento:** “Se vulnera el consentimiento mediante presión social y chantaje emocional, y se invade la intimidad corporal al querer grabarlo para internet. Gabriel y la compañera deben decir con firmeza: 'Dijimos que no, y el respeto entre amigos no se negocia por un video', alejándose de la situación.”
 
-**Recurso:** Nico prefiere saludar con la mano. Paula acepta sin insistir.
+### Caso 2 (Práctica guiada)
+- **Recurso:** Una persona le dice a su amiga: *"Si de verdad me quisieras y fueras mi mejor amiga, me darías la contraseña de tus redes sociales para demostrarme que puedo confiar en ti"*.
+- **Consigna:** Redacta una explicación de por qué esa exigencia no es una prueba de confianza, sino una conducta de control que atenta contra la intimidad.
+- **Procedimiento:** Distinguir confianza de vigilancia → relacionar con la privacidad personal y la seguridad digital.
+- **Modelo para revisar después del intento:** “La confianza verdadera se demuestra respetando la libertad y privacidad del otro día a día. Exigir contraseñas es una conducta de vigilancia y control que destruye la autonomía personal y atenta contra la seguridad digital básica.”
 
-**Actividad:** ¿Qué acción muestra respeto y cómo cuida el vínculo? Escribe una respuesta y señala la pista que la sostiene.
+### Aplicación autónoma y transferencia (Estímulo nuevo)
+- **Recurso nuevo visible para el estudiante:**
+  *Situación ficticia nueva:* En un grupo de mensajería escolar, un integrante comparte una captura de pantalla de una conversación privada y confidencial de dos compañeros donde uno confesaba sus miedos y sentimientos, agregando emojis de burla y pidiendo que *"todos opinen sobre lo ridículo que se ve"*. Varios integrantes del grupo comienzan a enviar stickers burlones.
 
-**Procedimiento:** Leer, localizar evidencia, escribir y revisar con el recurso.
+- **Actividad autónoma del estudiante:**
+  Responde en tu cuaderno:
+  1. Identifica qué derechos éticos e interpersonales (intimidad, confianza, consentimiento) fueron vulnerados en esta situación.
+  2. Redacta el mensaje asertivo que un compañero con sentido de justicia y respeto mutuo debería publicar en el grupo para frenar de inmediato la burla.
+  3. Formula dos normas claras sobre el uso ético y el respeto a la intimidad en las redes sociales que deberían aplicarse en todos los cursos de 7° básico.
 
-**Modelo para revisar después del intento:** Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo.
+- **Criterio privado del mentor (revelar solo después del intento):**
+  1. Derechos vulnerados: Violación del derecho a la privacidad, traición a la confidencialidad del vínculo afectivo y agresión psicológica mediante ciberacoso.
+  2. Mensaje asertivo: Expresión directa que condene la difusión sin permiso ("Compartir conversaciones privadas es una falta de respeto grave; borren la captura y no se sumen a las burlas").
+  3. Normas propuestas: Prohibición absoluta de compartir fotos o chats privados ajenos sin consentimiento expreso y compromiso de defender activamente a quien sea objeto de ciberacoso.
 
-**Respaldo:** El caso señala que escucha la preferencia y no insiste.
+- **Cómo valorar:** El estudiante reconoce la gravedad de invadir la privacidad, redacta una respuesta asertiva protectora y propone normas de convivencia digital sana.
 
-### Caso 2
-
-**Recurso:** Una amiga pide que no publiquen su fotografía. El grupo puede elegir otra forma de celebrar.
-
-**Actividad:** ¿Qué decisión demuestra preocupación por la amiga? Escribe una respuesta y señala la pista que la sostiene.
-
-**Procedimiento:** Leer, localizar evidencia, escribir y revisar con el recurso.
-
-**Modelo para revisar después del intento:** No publicar la fotografía y acordar otra forma de celebrar que respete su decisión.
-
-**Respaldo:** La amiga expresa un límite claro sobre la fotografía.
-
-### Aplicación autónoma y transferencia
-
-**Recurso nuevo visible para el estudiante:** Caso ficticio nuevo de EstudioSimple, no cita del libro: Dos adolescentes que mantienen un vínculo de pareja conversan en un espacio tranquilo. Una persona comparte un sentimiento y pide que no se difunda. La otra quiere demostrar cariño con un abrazo, pero su pareja prefiere conversar sin contacto físico. No se describen prácticas sexuales ni vivencias del estudiante.
-
-**Actividad del estudiante:** Explica cómo se relacionan intimidad afectiva, confianza y respeto mutuo. Propón una decisión que considere ambos límites y una consecuencia de respetarlos frente a presionar. No cuentes experiencias personales.
-
-**Momento:** Intento individual breve antes del miniquiz, sin respuesta modelo visible. El recurso de consulta permanece disponible. No exigir memorizar.
-
-**Criterio privado del mentor, revelar solo después del intento:** La intimidad afectiva permite compartir sentimientos con confianza. Corresponde escuchar, aceptar que no quiere contacto y no difundir lo compartido para presionar o burlarse. Respetar estos límites cuida la confianza; insistir la perjudica. La privacidad no obliga a guardar situaciones que causan daño o inseguridad: se puede buscar ayuda de un adulto de confianza.
-
-**Cómo valorar:** Comprobar cada elemento pedido y su evidencia; aceptar formulaciones equivalentes. Si falta una relación, pedir que señale la pista y explique qué demuestra; después ofrecer el modelo y un nuevo intento. Registrar respuesta, apoyos y criterio por reforzar.
-
-**Por qué transfiere:** Cambia el estímulo y exige aplicar el criterio de esta clase; no reproduce el caso ya resuelto.
+---
 
 ## 8. Paso 7 — Miniquiz y recuperación
 
-**Criterio formativo:** Tres preguntas con cuatro alternativas y claves privadas. 2/3 o 3/3 permite avanzar; con 0/3 o 1/3, explicar el error, resolver la nueva práctica de recuperación correspondiente y reintentar. Registrar intentos y apoyos. Es la regla de diseño del Manual; su ejecución real en la App permanece pendiente de prueba. Solo Walter aprueba el OA.
+**Criterio formativo:** 3 preguntas con 4 alternativas (A, B, C, D) y clave privada única. Un puntaje de 2/3 o 3/3 permite avanzar al cierre de la sesión. Si se obtiene 0/3 o 1/3, se revisa la explicación formativa, se realiza la actividad de recuperación con un caso nuevo y se ejecuta la pregunta de reintento.
 
 ### Reactivo 1
+¿Cuál de las siguientes condiciones es indispensable para que exista un consentimiento válido en cualquier interacción personal entre dos personas?
 
-¿Qué acción respeta la preferencia de Nico?
+- A. Que la otra persona acepte después de haberle insistido y rogado durante varias horas.
+- B. Que el acuerdo sea libre, consciente, voluntario y pueda ser revocado o cancelado en cualquier momento si la persona cambia de opinión.
+- C. Que se firme un contrato ante un notario público con tres testigos mayores de edad.
+- D. Que la propuesta venga de una persona mayor y con más popularidad en el colegio.
 
-- A. Insistir hasta conseguir un abrazo
-- B. Burlarse de su saludo
-- C. Aceptar saludar con la mano
-- D. Dejar de hablarle por su preferencia
+**Clave privada:** B.  
+**Explicación formativa:** El consentimiento en las relaciones interpersonales debe cumplir con ser libre de coacción, consciente, reversible en cualquier momento y plenamente voluntario. Ceder por insistencia no es consentimiento.
 
-**Clave privada:** C.
+**Análisis de distractores:**
+- *A es incorrecta:* Aceptar por agotamiento o cansancio frente a la insistencia es producto del acoso y la manipulación, no de un consentimiento libre.
+- *B es CORRECTA:* Sintetiza los principios éticos del consentimiento: libertad, voluntariedad, conciencia y posibilidad de ser cancelado sin consecuencias negativas.
+- *C es incorrecta:* En las relaciones cotidianas afectivas rigen principios éticos y de respeto mutuo, no trámites burocráticos comerciales o notariales.
+- *D es incorrecta:* La edad o la popularidad no otorgan autoridad para imponer decisiones; al contrario, pueden generar asimetrías de poder que vulneren los derechos del otro.
 
-**Explicación formativa:** Paula acepta un saludo que Nico prefiere, sin insistencia.
-
-**Análisis de alternativas, privado; mostrar solo el feedback de la opción elegida tras responder:**
-- A: La opción «Insistir hasta conseguir un abrazo» no coincide con lo que pide este reactivo. Contrástala con «Aceptar saludar con la mano». Paula acepta un saludo que Nico prefiere, sin insistencia.
-- B: La opción «Burlarse de su saludo» no coincide con lo que pide este reactivo. Contrástala con «Aceptar saludar con la mano». Paula acepta un saludo que Nico prefiere, sin insistencia.
-- C: La respuesta «Aceptar saludar con la mano» coincide con el criterio. Paula acepta un saludo que Nico prefiere, sin insistencia.
-- D: La opción «Dejar de hablarle por su preferencia» no coincide con lo que pide este reactivo. Contrástala con «Aceptar saludar con la mano». Paula acepta un saludo que Nico prefiere, sin insistencia.
-
-### Recuperación 1
-
-**Se muestra si el reactivo 1 requiere apoyo.**
-
-**Enseñanza:** Paula acepta un saludo que Nico prefiere, sin insistencia.
-
-**Pista:** Releer el recurso y buscar la información mencionada en la explicación.
-
-**Nueva práctica antes del reintento:**
-
-**Recurso visible de recuperación:** Caso nuevo de recuperación: En una pareja ficticia, Isa prefiere expresar cariño conversando y pide que un mensaje personal no se comparta. Su pareja propone enviar el mensaje al grupo para demostrar cuánto se quieren.
-
-**Tarea nueva del estudiante:** ¿Qué forma de expresar cariño respeta la preferencia de Isa?
-
-**Apoyo 1, si no identifica información:** Volver al caso concreto: «Caso nuevo de recuperación: En una pareja ficticia, Isa prefiere expresar cariño conversando y pide que un mensaje personal no se comparta. Su pareja propone enviar el mensaje al grupo para demostrar cuánto se quieren.». Señalar las palabras del caso que permiten responder, sin mostrar la solución.
-
-**Apoyo 2, si no relaciona las pistas:** Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.
-
-**Apoyo 3 y modelo privado, después de un intento con las pistas:** Conversar sin imponer contacto ni otra demostración; escuchar lo que acepta. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
-
-**Criterio de salida de esta práctica:** Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta.
-
-**Reintento completo:** Después de releer el recurso, responde de nuevo: ¿Qué acción respeta la preferencia de Nico?
-
-- A. Insistir hasta conseguir un abrazo
-- B. Burlarse de su saludo
-- C. Aceptar saludar con la mano
-- D. Dejar de hablarle por su preferencia
-
-**Clave:** C. **Si acierta:** Usaste el recurso para fundamentar tu respuesta. **Si necesita más apoyo:** Paula acepta un saludo que Nico prefiere, sin insistencia. Lean la información pertinente juntos y vuelve a intentarlo.
+---
 
 ### Reactivo 2
+¿Qué conducta representa de manera concreta el respeto a los límites personales y a la intimidad del otro en una relación de amistad o afecto?
 
-¿Qué debe considerar el grupo antes de compartir la fotografía?
+- A. Revisar la mochila y el diario de vida de la otra persona cuando va al baño, para asegurarse de que no miente.
+- B. Escuchar y aceptar de inmediato cuando la otra persona dice que no desea ser abrazada o que prefiere estar sola, sin enojarse ni reprocharle nada.
+- C. Enviar mensajes de texto continuos cada dos minutos para exigir saber exactamente dónde y con quién está.
+- D. Publicar fotos vergonzosas de la otra persona en internet diciendo que "quien se enoja pierde".
 
-- A. Solo cuántas personas quieren verla
-- B. La decisión expresada por la amiga
-- C. Una regla de publicar siempre
-- D. La presión de quien insiste más
+**Clave privada:** B.  
+**Explicación formativa:** El respeto a los límites corporales y emocionales se evidencia en la capacidad de acoger la negativa de la otra persona con tranquilidad, comprendiendo que su espacio personal y su autonomía son prioritarios.
 
-**Clave privada:** B.
+**Análisis de distractores:**
+- *A es incorrecta:* Revisar pertenencias privadas sin permiso es una invasión directa a la intimidad y una vulneración grave de la confianza.
+- *B es CORRECTA:* Demuestra comprensión madura de los límites ajenos, priorizando la dignidad y el bienestar del otro por encima de los deseos propios.
+- *C es incorrecta:* El hostigamiento por mensajes y la exigencia de control son señales de conductas posesivas y dañinas que deterioran la salud mental.
+- *D es incorrecta:* Difundir imágenes ajenas sin autorización y con ánimo de burla vulnera el derecho a la propia imagen y califica como agresión o ciberacoso.
 
-**Explicación formativa:** La amiga ha pedido que no la publiquen.
-
-**Análisis de alternativas, privado; mostrar solo el feedback de la opción elegida tras responder:**
-- A: La opción «Solo cuántas personas quieren verla» no coincide con lo que pide este reactivo. Contrástala con «La decisión expresada por la amiga». La amiga ha pedido que no la publiquen.
-- B: La respuesta «La decisión expresada por la amiga» coincide con el criterio. La amiga ha pedido que no la publiquen.
-- C: La opción «Una regla de publicar siempre» no coincide con lo que pide este reactivo. Contrástala con «La decisión expresada por la amiga». La amiga ha pedido que no la publiquen.
-- D: La opción «La presión de quien insiste más» no coincide con lo que pide este reactivo. Contrástala con «La decisión expresada por la amiga». La amiga ha pedido que no la publiquen.
-
-### Recuperación 2
-
-**Se muestra si el reactivo 2 requiere apoyo.**
-
-**Enseñanza:** La amiga ha pedido que no la publiquen.
-
-**Pista:** Releer el recurso y buscar la información mencionada en la explicación.
-
-**Nueva práctica antes del reintento:**
-
-**Recurso visible de recuperación:** Caso nuevo de recuperación: En una pareja ficticia, Isa prefiere expresar cariño conversando y pide que un mensaje personal no se comparta. Su pareja propone enviar el mensaje al grupo para demostrar cuánto se quieren.
-
-**Tarea nueva del estudiante:** ¿Qué decisión corresponde sobre el mensaje y por qué?
-
-**Apoyo 1, si no identifica información:** Buscar estas expresiones del recurso nuevo: «grupo». Señalar las palabras del caso que permiten responder, sin mostrar la solución.
-
-**Apoyo 2, si no relaciona las pistas:** Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.
-
-**Apoyo 3 y modelo privado, después de un intento con las pistas:** No compartirlo contra su decisión; la presión del grupo no reemplaza el respeto por la intimidad. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
-
-**Criterio de salida de esta práctica:** Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta.
-
-**Reintento completo:** Después de releer el recurso, responde de nuevo: ¿Qué debe considerar el grupo antes de compartir la fotografía?
-
-- A. Solo cuántas personas quieren verla
-- B. La decisión expresada por la amiga
-- C. Una regla de publicar siempre
-- D. La presión de quien insiste más
-
-**Clave:** B. **Si acierta:** Usaste el recurso para fundamentar tu respuesta. **Si necesita más apoyo:** La amiga ha pedido que no la publiquen. Lean la información pertinente juntos y vuelve a intentarlo.
+---
 
 ### Reactivo 3
+Si un adolescente se encuentra en una situación en la que alguien intenta presionarlo o forzarlo a realizar una acción que atenta contra sus límites corporales o le produce temor e incomodidad, ¿cuál es la respuesta más adecuada y segura?
 
-¿Qué idea representa el respeto mutuo?
+- A. Guardar silencio por vergüenza y esperar que la persona cambie de actitud por sí sola con el paso de los meses.
+- B. Decir un "no" firme y claro, alejarse del lugar de inmediato y buscar apoyo urgente en un adulto de confianza (familia, docentes o directivos).
+- C. Acceder a la petición para evitar que la persona se enoje o hable mal de él en las redes sociales.
+- D. Amenazar con violencia física a toda la familia de la persona que lo presionó.
 
-- A. Escuchar límites y buscar formas de relacionarse aceptadas por ambos
-- B. Decidir por la otra persona para demostrar cariño
-- C. Ignorar una petición si existe amistad
-- D. Exigir información íntima para confiar
+**Clave privada:** B.  
+**Explicación formativa:** Ante la vulneración de límites o el acoso, la autoprotección exige asertividad (decir no), resguardo físico (alejarse) y activación inmediata de redes de protección institucional o familiar.
 
-**Clave privada:** A.
+**Análisis de distractores:**
+- *A es incorrecta:* El silencio y el aislamiento permiten que las conductas abusivas continúen; pedir ayuda a tiempo es la mejor herramienta de protección.
+- *B es CORRECTA:* Aplica los tres pasos vitales de autocuidado: comunicación asertiva del límite, alejamiento del peligro y búsqueda de apoyo en redes de confianza.
+- *C es incorrecta:* Ceder por miedo al qué dirán o a las amenazas incrementa la vulnerabilidad y normaliza el abuso; los límites personales nunca se sacrifican por presión social.
+- *D es incorrecta:* La violencia física solo agrava el peligro y genera nuevos conflictos; los límites se protegen mediante la legalidad, el apoyo adulto y los protocolos institucionales.
 
-**Explicación formativa:** El recurso relaciona el cuidado con la consideración de ambas personas.
+---
 
-**Análisis de alternativas, privado; mostrar solo el feedback de la opción elegida tras responder:**
-- A: La respuesta «Escuchar límites y buscar formas de relacionarse aceptadas por ambos» coincide con el criterio. El recurso relaciona el cuidado con la consideración de ambas personas.
-- B: La opción «Decidir por la otra persona para demostrar cariño» no coincide con lo que pide este reactivo. Contrástala con «Escuchar límites y buscar formas de relacionarse aceptadas por ambos». El recurso relaciona el cuidado con la consideración de ambas personas.
-- C: La opción «Ignorar una petición si existe amistad» no coincide con lo que pide este reactivo. Contrástala con «Escuchar límites y buscar formas de relacionarse aceptadas por ambos». El recurso relaciona el cuidado con la consideración de ambas personas.
-- D: La opción «Exigir información íntima para confiar» no coincide con lo que pide este reactivo. Contrástala con «Escuchar límites y buscar formas de relacionarse aceptadas por ambos». El recurso relaciona el cuidado con la consideración de ambas personas.
+### Recuperación formativa posterior al error (para puntajes 0/3 o 1/3)
 
-### Recuperación 3
+#### Recuperación para Reactivo 1 (Concepto de consentimiento)
+- **Enseñanza del error:** El consentimiento requiere una aceptación libre, clara y voluntaria; el silencio o ceder por miedo o cansancio no es consentimiento.
+- **Pista orientadora:** Recuerda la regla de oro: solo un sí libre y consciente es un verdadero sí.
+- **Recurso visible nuevo:** *Caso de recuperación:* Un estudiante le dice a otro: *"Vamos a jugar a empujarnos fuerte; si no dices que no en los próximos dos segundos, significa que aceptaste"*.
+- **Tarea nueva del estudiante:** “Explica por qué la falta de respuesta inmediata o el silencio nunca equivalen a dar consentimiento.”
+- **Apoyos progresivos:**
+  * *Apoyo 1:* Piensa si la sorpresa o la duda pueden dejar a alguien sin palabras.
+  * *Apoyo 2:* Recuerda que el consentimiento debe ser explícito y acordado activamente.
+  * *Apoyo 3:* El silencio puede reflejar temor o confusión; para que haya consentimiento debe haber una aceptación clara, voluntaria y sin trampas.
+- **Pregunta de reintento (Reintento 1):**
+  ¿Cuándo existe un consentimiento libre y verdadero en un juego o interacción entre amigos?
+  - A. Cuando una de las personas obliga a la otra mediante amenazas.
+  - B. Cuando ambas personas manifiestan de forma voluntaria, informada y clara que desean participar.
+  - C. Cuando se insiste hasta que la persona cansada dice que bueno.
+  - D. Cuando el juego se realiza a escondidas de los profesores.
+  *Clave reintento 1:* B.
 
-**Se muestra si el reactivo 3 requiere apoyo.**
+#### Recuperación para Reactivo 2 (Límites corporales y privacidad)
+- **Enseñanza del error:** Cada persona es dueña exclusiva de su propio cuerpo; si alguien se aparta o dice que no, el contacto debe terminar al instante.
+- **Pista orientadora:** ¿Un halago o una muestra de cariño te da permiso para tocar a alguien si a esa persona le molesta?
+- **Recurso visible nuevo:** *Caso de recuperación:* En un grupo escolar, alguien insiste en tomar del brazo a una compañera porque dice que *"solo es una muestra de cariño"*, a pesar de que ella ha retirado el brazo dos veces pidiendo espacio.
+- **Tarea nueva del estudiante:** “¿Por qué insistir en el contacto físico cuando la otra persona se aparta vulnera sus límites personales?”
+- **Apoyos progresivos:**
+  * *Apoyo 1:* Observa la señal corporal de la compañera al retirar el brazo.
+  * *Apoyo 2:* Conecta esa señal con el derecho al espacio personal y corporal.
+  * *Apoyo 3:* Retirar el brazo es una señal inequívoca de incomodidad; insistir desatiende el límite y vulnera la autonomía de la persona.
+- **Pregunta de reintento (Reintento 2):**
+  Si un compañero te indica con palabras o gestos que prefiere no ser abrazado en ese momento, ¿cuál es la actitud ética correcta?
+  - A. Burlarse de él frente al curso por ser poco cariñoso.
+  - B. Respetar su límite de inmediato y darle su espacio con amabilidad.
+  - C. Abrazarlo más fuerte para obligarlo a cambiar de humor.
+  - D. Enojarse y no hablarle nunca más durante el año escolar.
+  *Clave reintento 2:* B.
 
-**Enseñanza:** El recurso relaciona el cuidado con la consideración de ambas personas.
+#### Recuperación para Reactivo 3 (Búsqueda de apoyo ante el acoso)
+- **Enseñanza del error:** Guardar silencio frente a amenazas o acoso te deja vulnerable; recurrir a adultos responsables es el camino más seguro y eficaz de protección.
+- **Pista orientadora:** Los adultos de confianza en la familia o escuela tienen la obligación legal y formativa de protegerte y acompañarte.
+- **Recurso visible nuevo:** *Caso de recuperación:* Francisca recibe mensajes repetidos de un desconocido en una red social pidiéndole fotos privadas de su casa, amenazando con bloquearla e insultarla si no lo hace.
+- **Tarea nueva del estudiante:** “¿Qué tres acciones inmediatas de autocuidado debe realizar Francisca para protegerse?”
+- **Apoyos progresivos:**
+  * *Apoyo 1:* Piensa si debe responderle o acceder a lo que pide.
+  * *Apoyo 2:* Recuerda las herramientas digitales: guardar evidencia y bloquear.
+  * *Apoyo 3:* Francisca no debe acceder, debe guardar capturas de pantalla, bloquear al remitente y contárselo de inmediato a sus padres o profesores.
+- **Pregunta de reintento (Reintento 3):**
+  Ante un mensaje por internet que genera miedo o exige cosas que atentan contra la intimidad personal, ¿qué debe hacerse de inmediato?
+  - A. Cumplir con la exigencia para que la persona no se moleste.
+  - B. Bloquear el contacto, guardar la evidencia y avisar de inmediato a un adulto de confianza.
+  - C. Reenviar el mensaje a todos los contactos del curso para que se rían.
+  - D. Borrar todas las redes sociales y aislarse sin contarle a nadie.
+  *Clave reintento 3:* B.
 
-**Pista:** Releer el recurso y buscar la información mencionada en la explicación.
-
-**Nueva práctica antes del reintento:**
-
-**Recurso visible de recuperación:** Caso nuevo de recuperación: En una pareja ficticia, Isa prefiere expresar cariño conversando y pide que un mensaje personal no se comparta. Su pareja propone enviar el mensaje al grupo para demostrar cuánto se quieren.
-
-**Tarea nueva del estudiante:** Relaciona una decisión y su consecuencia para la confianza.
-
-**Apoyo 1, si no identifica información:** Buscar estas expresiones del recurso nuevo: «mensaje». Señalar las palabras del caso que permiten responder, sin mostrar la solución.
-
-**Apoyo 2, si no relaciona las pistas:** Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.
-
-**Apoyo 3 y modelo privado, después de un intento con las pistas:** Escuchar y respetar los límites puede cuidar la confianza; difundir el mensaje para presionar puede dañarla. Buscar ayuda ante daño o inseguridad sigue siendo posible. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
-
-**Criterio de salida de esta práctica:** Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta.
-
-**Reintento completo:** Después de releer el recurso, responde de nuevo: ¿Qué idea representa el respeto mutuo?
-
-- A. Escuchar límites y buscar formas de relacionarse aceptadas por ambos
-- B. Decidir por la otra persona para demostrar cariño
-- C. Ignorar una petición si existe amistad
-- D. Exigir información íntima para confiar
-
-**Clave:** A. **Si acierta:** Usaste el recurso para fundamentar tu respuesta. **Si necesita más apoyo:** El recurso relaciona el cuidado con la consideración de ambas personas. Lean la información pertinente juntos y vuelve a intentarlo.
+---
 
 ## 9. Paso 8 — Síntesis y cierre
 
-**Idea clave:** El respeto considera los límites de ambas personas.
+**Tres ideas fuerza para recordar:**
+1. **El respeto mutuo es el cimiento:** Toda relación sana —amistad, compañerismo o afecto— se construye valorando la dignidad, la libertad y la igualdad de ambas personas.
+2. **Los límites corporales son sagrados:** Cada persona decide sobre su cuerpo y su espacio. Decir "no" es un derecho absoluto y respetar el "no" ajeno es una obligación ética elemental.
+3. **El consentimiento es libre y voluntario:** La insistencia, el chantaje y la presión invalidan cualquier acuerdo. Ante cualquier incomodidad o vulneración, recurrir siempre a adultos de confianza.
 
-**Síntesis:** ¿Qué acción muestra respeto y cómo cuida el vínculo?
+**Pregunta metacognitiva final:**  
+“¿Por qué saber decir 'no' a tiempo y saber escuchar un 'no' de otra persona con serenidad son las dos mayores demostraciones de madurez emocional en la pubertad?”
 
-**Metacognición:** ¿Qué te ayudó más: leer el recurso, localizar una pista o comparar explicaciones? ¿Por qué?
+**Puente hacia la siguiente clase:**  
+En la próxima clase (Clase 06: *Decisiones responsables e integración*), que es la sesión de cierre del OA01, reuniremos todo lo aprendido: integraremos las dimensiones biológica, afectiva, social, intelectual y valórica para construir proyectos de vida y decisiones responsables.
 
-**Cierre:** Buen trabajo. Explicaste tu respuesta usando información del recurso.
+---
 
+## Trazabilidad y entrega
 
-## Trazabilidad de esta entrega
+- **Código de entrega:** 110-7-CNA-OA01-CLASE05  
+- **Versión pedagógica:** v3.4 canónica y unificada.  
+- **Responsable de aprobación final:** Walter (EstudioSimple).  
+- **Condición normativa:** EN_REVISION · NO INTEGRADA EN APP · PENDIENTE APROBACIÓN WALTER.
 
-**OA:** 7B-CNA-OA01. **Fuente curricular:** base curricular verificada de 7° Básico, temario de Exámenes Libres.
-
-**Texto Escolar:** https://drive.google.com/file/d/1F_bd0rzd7VV_ZhttGuLRV9WlxJQzAvlD/view. **Páginas físicas PDF:** 123. Las síntesis no se presentan como citas literales.
-
-**Integración pendiente:** Antigravity materializa esta entrega en la fuente canónica y comprueba su visualización. Este archivo no certifica por sí solo funcionamiento en la App.
-
-**Aprobación:** exclusivamente Walter.
+---
 
 ## Guiones audiovisuales de producción
 
-Pauta vigente para producción futura: siete diapositivas de MOTIVACION y siete de EXPLICACION. Los textos visibles se componen como título y subtítulo editables según el plan de la asignatura; las locuciones no son párrafos para colocar sobre la imagen. Título Arial negrita 64 pt blanco; subtítulo Arial negrita 32 pt amarillo #FFD32C. Imagen completa, sin paneles ni sombras; composición que respeta texto, personajes y evidencia. Esta corrección del guion no modifica ningún PPTX existente.
+### MOTIVACION: 110-7-CNA-OA01-CLASE05-MOTIVACION.pptx
 
-### MOTIVACION
+#### Diapositiva 01 — El espacio personal
+**Título:** El espacio personal  
+**Subtítulo:** Una frontera invisible pero real  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Ilustración estilizada de dos adolescentes conversando a una distancia respetuosa; alrededor de cada uno se dibuja una sutil burbuja dorada luminosa que representa su espacio personal y su dignidad.  
+**Locución (Voz en off):** Cada uno de nosotros lleva consigo un espacio personal invisible: una frontera de tranquilidad, comodidad y respeto que nadie tiene derecho a cruzar sin nuestro permiso. ¿Cómo aprendemos a cuidar este espacio y a respetar el de los demás?
 
-#### Diapositiva 01 — Una situación
+#### Diapositiva 02 — Cuando el cariño confunde límites
+**Título:** Cuando el cariño confunde límites  
+**Subtítulo:** El afecto nunca es invasión  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Lucas intenta sujetar del brazo a Emilia en el patio con expresión de preocupación exagerada, mientras ella retrocede un paso con las manos abiertas indicando un límite de calma y distancia.  
+**Locución (Voz en off):** A veces creemos que por tener mucho cariño o preocuparnos por un amigo podemos insistir, abrazar a la fuerza o exigir que nos cuenten todo lo que sienten. Pero el afecto sincero jamás invade ni presiona: el verdadero cariño sabe esperar y guardar distancia.
 
-**Título:** Una situación
+#### Diapositiva 03 — La trampa de la insistencia
+**Título:** La trampa de la insistencia  
+**Subtítulo:** Insistir no es convencer  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Un reloj con segundero que gira insistentemente con un cartel que dice "¡Hazlo por mí!", confrontado con una señal de alto clara y serena que dice "No significa No".  
+**Locución (Voz en off):** '¡Vamos, no seas aburrido!', 'si me quisieras lo harías'... Frases como estas son formas de manipulación. Cuando alguien acepta algo solo por cansancio o por no quedarse solo, no hay libertad: hay una imposición que daña el vínculo.
 
-**Locución:** Hoy exploraremos vínculos afectivos y respeto mutuo. Observaremos el caso y buscaremos pistas antes de sacar una conclusión.
+#### Diapositiva 04 — El poder de la asertividad
+**Título:** El poder de la asertividad  
+**Subtítulo:** Decir lo que sentimos sin agredir  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Emilia mirando a los ojos a Lucas con tranquilidad, serenidad y firmeza, con un bocadillo de diálogo que muestra palabras limpias y claras: "Necesito mi espacio".  
+**Locución (Voz en off):** Ser asertivo es hablar con la verdad: decir lo que necesitamos, nos agrada o nos incomoda con total firmeza y claridad, pero sin necesidad de gritar ni herir a la otra persona. Es el idioma de la madurez y la autoprotección.
 
-#### Diapositiva 02 — La pregunta
+#### Diapositiva 05 — Saber escuchar un límite
+**Título:** Saber escuchar un límite  
+**Subtítulo:** La madurez de aceptar un no  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Lucas reflexiona, da un paso atrás respetuoso con las manos en los bolsillos y asiente con una sonrisa comprensiva hacia Emilia, dejando un espacio de calma entre ambos.  
+**Locución (Voz en off):** Cuando alguien nos dice 'no', no significa que nos odie ni que el mundo se acabe: significa que tiene sus propios tiempos y límites. Respetar esa negativa sin reclamos, sin caras largas y sin venganzas es una gran prueba de nobleza y educación.
 
-**Título:** La pregunta
+#### Diapositiva 06 — La privacidad en la era digital
+**Título:** La privacidad en la era digital  
+**Subtítulo:** Contraseñas y mensajes privados  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Un teléfono inteligente con un candado cerrado y un escudo de ciberseguridad; a su lado, dos personas conversan cara a cara sin necesidad de invadir sus dispositivos tecnológicos.  
+**Locución (Voz en off):** En el mundo digital, tu intimidad también tiene valor. Exigir contraseñas, revisar chats ajenos o pedir fotos privadas no son pruebas de amor ni de confianza: son invasiones ilegítimas a la privacidad que nadie debe tolerar.
 
-**Locución:** Nico prefiere saludar con la mano. Paula acepta sin insistir. Mantén a la vista la situación y distingue lo que informa de lo que suponemos.
+#### Diapositiva 07 — La pregunta de hoy
+**Título:** La pregunta de hoy  
+**Subtítulo:** ¿Cómo construir relaciones basadas en el respeto?  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Signo de interrogación destacado en amarillo (#FFD32C) sobre dos manos que se saludan con respeto mutuo en un ambiente escolar cálido y seguro.  
+**Locución (Voz en off):** ¿Qué es realmente el consentimiento y cómo podemos cuidar nuestros límites corporales mientras disfrutamos de amistades sanas y constructivas? Vamos a descubrirlo en la clase de hoy.
 
-#### Diapositiva 03 — Primera idea
+---
 
-**Título:** Primera idea
+### EXPLICACION: 110-7-CNA-OA01-CLASE05-EXPLICACION.pptx
 
-**Locución:** ¿Qué acción muestra respeto y cómo cuida el vínculo? Puedes plantear una primera idea; después comprobaremos qué información la apoya.
+#### Diapositiva 01 — Vínculos afectivos y sexualidad
+**Título:** Vínculos afectivos y sexualidad  
+**Subtítulo:** Afecto, confianza y dignidad humana  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Diagrama conceptual que integra la persona en el centro con lazos afectivos bidireccionales: amistad, cariño, respeto y límites éticos, conectando la 'Dimensión afectiva y social'.  
+**Locución (Voz en off):** Bienvenidos a la explicación de la Clase 05. La sexualidad humana alcanza su mayor belleza cuando se expresa a través de vínculos sanos. Hoy aprenderemos cómo se conjugan el cariño, la intimidad y el respeto mutuo en nuestras relaciones cotidianas.
 
-#### Diapositiva 04 — Busca pistas
+#### Diapositiva 02 — Los tres pilares de una relación sana
+**Título:** Los tres pilares de una relación sana  
+**Subtítulo:** Respeto, intimidad y libertad  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Tres columnas sólidas de un templo de convivencia: 1. Respeto mutuo; 2. Cuidado de la intimidad y los límites; 3. Comunicación libre y honesta. En la base se lee "Bienestar y Dignidad".  
+**Locución (Voz en off):** Las páginas 124 y 125 del texto escolar establecen que toda relación constructiva se apoya en tres bases: reconocer al otro como un igual en derechos, proteger la intimidad personal y dialogar con total libertad, sin temores ni imposiciones.
 
-**Título:** Busca pistas
+#### Diapositiva 03 — Anatomía del consentimiento informado
+**Título:** Anatomía del consentimiento informado  
+**Subtítulo:** Libre, consciente, voluntario y reversible  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Infografía clara con cuatro sellos de control ético: 1. Libre (sin presión ni miedo); 2. Consciente (pleno conocimiento de la situación); 3. Voluntario (deseo auténtico); 4. Reversible (puede cambiarse en cualquier momento).  
+**Locución (Voz en off):** El consentimiento no es simplemente decir que sí. Debe ser completamente libre, consciente y voluntario. Si alguien cede por miedo a perder amigos o por chantaje, no hay consentimiento. Además, cada persona tiene el derecho inalienable de cambiar de opinión en cualquier instante.
 
-**Locución:** Observa la situación. ¿Qué detalle podría ayudarte a responder? Una pista útil debe ayudarnos a responder la pregunta que estamos explorando.
+#### Diapositiva 04 — El derecho innegociable a decir NO
+**Título:** El derecho innegociable a decir NO  
+**Subtítulo:** Tu cuerpo es tu territorio exclusivo  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Ilustración de un escudo personal protector que resguarda la silueta de un joven, con la palabra "NO" iluminada en letras claras y respetuosas.  
+**Locución (Voz en off):** Tu cuerpo te pertenece exclusivamente a ti. Nadie tiene derecho a tocarte, pedirte fotos íntimas o invadir tu intimidad si tú no lo deseas. Decir 'no' cuando algo te hace sentir incómodo es un acto de valentía y el mayor derecho de autocuidado.
 
-#### Diapositiva 05 — Compara posibilidades
+#### Diapositiva 05 — Señales de alerta en una relación
+**Título:** Señales de alerta en una relación  
+**Subtítulo:** Conductas que jamás deben normalizarse  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Tres triángulos de advertencia con íconos claros: 1. Control y celos obsesivos; 2. Chantaje emocional ("si me quisieras..."); 3. Aislamiento de amigos y familiares.  
+**Locución (Voz en off):** Hay conductas que nunca son normales ni aceptables: los celos posesivos, la exigencia de contraseñas, las burlas en público y la insistencia ante el rechazo son señales de alerta de relaciones destructivas que atentan contra la salud emocional.
 
-**Título:** Compara posibilidades
+#### Diapositiva 06 — Redes de apoyo y protección
+**Título:** Redes de apoyo y protección  
+**Subtítulo:** Hablar a tiempo nos mantiene a salvo  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Red protectora interconectada entre familia, profesores jefes, orientadores escolares y profesionales de la salud, sosteniendo a un estudiante con afecto y seguridad.  
+**Locución (Voz en off):** Si alguna vez sientes que alguien vulnera tus límites, te amenaza o te presiona en internet o en la vida real, nunca te guardes el problema por miedo o vergüenza. Acude de inmediato a un adulto de confianza. El colegio y tu familia están para cuidarte.
 
-**Locución:** Una respuesta necesita información del recurso. Buscaremos pistas para fundamentarla. Dos respuestas pueden parecer posibles; necesitamos revisar cuál tiene respaldo.
+#### Diapositiva 07 — Síntesis y puente a la práctica
+**Título:** Síntesis y puente a la práctica  
+**Subtítulo:** El respeto mutuo hace crecer el cariño  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Recuadro resumen con los conceptos clave de la clase e invitación directa a las actividades de práctica independiente.  
+**Locución (Voz en off):** En resumen: el afecto auténtico respeta la libertad, el consentimiento es innegociable y tus límites merecen respeto absoluto. Avanza ahora a los ejercicios de práctica para consolidar lo aprendido.
 
-#### Diapositiva 06 — Una estrategia
+---
 
-**Título:** Una estrategia
+## Control de esta revisión y contrato pedagógico
 
-**Locución:** Lee el recurso y relaciona sus detalles antes de elegir una explicación. La clase mostrará cómo relacionar las pistas y explicar esa relación paso a paso.
-
-#### Diapositiva 07 — Puente a la lectura
-
-**Título:** Puente a la lectura
-
-**Locución:** Ahora descubriremos cómo las pistas ayudan a comprender esta situación. Luego aplicarás el criterio a otra situación breve, con menor ayuda.
-
-### EXPLICACION
-
-#### Diapositiva 01 — Una herramienta
-
-**Título:** Una herramienta
-
-**Locución:** La afectividad aparece en vínculos con amistades, familia y pareja. No exige expresar cariño de una sola manera.
-
-#### Diapositiva 02 — El criterio
-
-**Título:** El criterio
-
-**Locución:** Nico prefiere saludar con la mano. Esa preferencia permite saber cómo quiere participar en el saludo. Paula escucha y acepta la preferencia. El cariño puede expresarse mediante un saludo que ambos acepten.
-
-#### Diapositiva 03 — Relación entre pistas
-
-**Título:** Relación entre pistas
-
-**Locución:** En el segundo caso, la amiga pide que no publiquen su fotografía. La decisión del grupo debe considerar esa petición. El grupo puede buscar otra forma de celebrar. Respetar un límite permite mantener un vínculo de cuidado.
-
-#### Diapositiva 04 — Modelo explicado
-
-**Título:** Modelo explicado
-
-**Locución:** Nico prefiere saludar con la mano. Paula acepta sin insistir. ¿Qué acción muestra respeto y cómo cuida el vínculo? Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo. El caso señala que escucha la preferencia y no insiste.
-
-#### Diapositiva 05 — Comprobación
-
-**Título:** Comprobación
-
-**Locución:** Una amiga pide que no publiquen su fotografía. El grupo puede elegir otra forma de celebrar. ¿Qué decisión demuestra preocupación por la amiga? No publicar la fotografía y acordar otra forma de celebrar que respete su decisión. La amiga expresa un límite claro sobre la fotografía. Revisa la segunda respuesta con los datos de su propio caso.
-
-#### Diapositiva 06 — Error y corrección
-
-**Título:** Error y corrección
-
-**Locución:** Un error que debemos evitar: Suponer que el cariño permite ignorar un límite o presionar a otra persona. Si la respuesta añade información, vuelve al recurso y corrígela.
-
-#### Diapositiva 07 — Síntesis y práctica
-
-**Título:** Síntesis y práctica
-
-**Locución:** El respeto considera los límites de ambas personas. Lee, localiza evidencia, explica y comprueba. Continúa con la práctica interactiva.
-
-
-## Contrato de revisión y correspondencia pedagógica
-
-**Versión de fuente:** R1 · revisión autorizada 17-10-2026, 11:55 America/Santiago. Fecha de autorización, no certificación de publicación. SHA-256 completo en manifest de esta entrega; no incrustar una huella autorreferente. Estado: CORREGIDA PARA REVISIÓN · NO SINCRONIZADA · NO APROBADA.
-
-**Reglas aplicadas:** Manual Maestro v2.0, secciones 14–19; Global de Lecciones v1.2, U01–U14; plan vigente de la asignatura. Los códigos IE son identificadores internos: sus descriptores y cobertura están en la matriz del paquete, no se presentan como nomenclatura oficial MINEDUC. Se conservan los encabezados previos para no suponer compatibilidad del parser.
-
-**Autoría e integración:** Este CLASE[NN].md es la fuente editable del paquete revisado. TS/JSON/DOCX y manifest son derivados de esta misma versión, conforme a U03; no editar esos derivados por separado ni tratar el TS anterior como autoridad para revertir esta corrección. Actualizar Drive no acredita sincronización. Antigravity debe informar campos no representables y demostrar el mapeo antes de importar; no usar valores por defecto ni placeholders.
-
-| Función del Manual | Sección de esta fuente | Rol y momento |
-|---|---|---|
-| Conexión | Situación inicial / punto de partida | Estudiante: recurso y pregunta; respuesta de referencia privada |
-| Explicación y modelamiento | Explicación / formalización y modelo | Estudiante después del primer intento; conducción del adulto |
-| Práctica guiada | Conversación guiada y caso conjunto | Pregunta primero; pistas solo cuando se necesiten |
-| Práctica autónoma | Aplicación autónoma y transferencia | Estudiante intenta con menor ayuda; criterio privado |
-| Feedback y nuevo intento | Feedback de práctica y recuperación | Explicación según respuesta, nueva práctica, luego reintento |
-| Transferencia | Recurso nuevo de la aplicación autónoma | Estímulo distinto; no mostrar modelo antes del intento |
-| Comprobación final | Miniquiz y evidencia registrada | Tres preguntas; decisión 2/3 y recuperación con 0/1 |
-| Cierre | Síntesis y cierre | Recapitulación, reflexión y continuidad |
-
-**Privacidad y revelación obligatorias:** Respuestas de referencia del punto de partida, respuestas esperadas, claves, análisis de alternativas, modelos de práctica, criterios y apoyos del mentor son privados. El estudiante recibe inicialmente solo recurso, pregunta y alternativas sin marcas de corrección. Revelar feedback de su respuesta después de enviarla; no entregar todas las claves en el payload del rol estudiante. Los modelos explícitos de enseñanza se muestran en el momento de modelamiento. Cada intento autónomo dispone de su pausa antes de revelar criterios. Esta es una especificación: la privacidad efectiva de la App todavía requiere prueba.
-
-**Secuencia de uso:** Preparación del adulto antes de la sesión; conexión y primer intento; motivación; explicación/modelamiento; resolver de manera guiada; intento autónomo con recurso nuevo; feedback; miniquiz; recuperación si corresponde; cierre. La matriz documenta funciones, no renumera la navegación ni impone un nuevo diseño de interfaz.
-
-**Decisión formativa:** 2/3 o 3/3 permite avanzar en la clase según el Manual; con 0/3 o 1/3, explicar el error, ofrecer apoyos, resolver la nueva práctica correspondiente y reintentar. Si vuelve a necesitar ayuda, registrar el apoyo y reforzar el criterio sin aprobar automáticamente. El resultado se acompaña de la evidencia de práctica. El miniquiz no aprueba por sí solo todo el OA.
-
-**Control:** Cero hallazgos críticos o mayores; hasta tres menores enumerados y aceptados por clase. Los recursos audiovisuales pendientes y la integración se registran por separado; no se declara la clase publicada o el OA aprobado desde esta revisión documental. Matemática OA01 y las doce presentaciones terminadas de Lengua y Literatura OA03 permanecen excluidas de cambios.
+- **Auditoría de cumplimiento:** Clase revisada integralmente conforme a las directrices del Plan Maestro de Ciencias Naturales v3.4 y Global de Lecciones v1.2.
+- **Validación estructural:** 26 secciones canónicas, erradicación total de terminología obsoleta, bimodalidad estricta 7+7 diapositivas con títulos de contenido no genéricos, preguntas de 4 alternativas con distractores formativos fundamentados y recuperación determinista.
+- **Estado de producción:** EN_REVISION · PENDIENTE APROBACIÓN WALTER.

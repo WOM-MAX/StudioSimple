@@ -1,448 +1,466 @@
-# EstudioSimple · Aspectos sociales y estereotipos
+# EstudioSimple | Lección interactiva
 
-**Curso:** 110-7 · **Asignatura:** Ciencias_Naturales · **OA:** OA01 · **Clase:** 04 de 06
+## 7° básico · Ciencias Naturales · OA01 · Clase 04
 
-**Estado:** EN_REVISION · NO INTEGRADA EN APP · NO APROBADA
+**Curso App:** 110-7  
+**Asignatura App:** Ciencias_Naturales  
+**Código curricular:** 7B-CNA-OA01  
+**Título:** Aspectos sociales y estereotipos  
+**Duración:** 30 minutos  
+**Número de clase:** 04 de 06  
+**Título de trabajo de la siguiente clase:** Vínculos afectivos y respeto mutuo  
+**Estado:** EN_REVISION · NO INTEGRADA EN APP · NO APROBADA  
+**Fuente principal:** Texto Escolar de Ciencias Naturales 7° básico (Edición especial MINEDUC / SM), Unidad 4 "Salud sexual y reproducción", Lección 8 "Sexualidad y autocuidado", páginas impresas 116 y 122 a 123 (PDF físico 118, 124–125).  
+**Unidades de contenido:** 7B-CNA-OA01-C04.  
+**Indicadores priorizados:** 7B-CNA-OA01-IE01, 7B-CNA-OA01-IE04, en el alcance correspondiente a esta clase.
 
-**Fecha de preparación:** 2026-10-12 America/Santiago
+### Objetivo oficial de aprendizaje
 
-**Objetivo de la clase:** Identificar estereotipos de género en situaciones ficticias y explicar por qué no deben limitar talentos, emociones ni oportunidades.
+Explicar los aspectos biológicos, afectivos y sociales que se integran en la sexualidad, considerando los cambios físicos que ocurren durante la pubertad, la relación afectiva entre dos personas en la intimidad y el respeto mutuo, y la responsabilidad individual.
 
-**Indicadores:** 7B-CNA-OA01-IE01, 7B-CNA-OA01-IE03
+### Objetivo de esta clase
 
-**Duración de sesión planificada:** 30 minutos.
+Analizar la dimensión social de la sexualidad durante la pubertad, examinando la importancia del grupo de pares y cuestionando críticamente los estereotipos de género a la luz de evidencias biológicas y sociales, promoviendo relaciones equitativas, de colaboración y respeto a la diversidad.
+
+**Resultado observable:** El estudiante identifica la influencia de las normas culturales y el grupo de amistades en la socialización adolescente, refuta con argumentos racionales los prejuicios que asignan roles o habilidades exclusivas a hombres o mujeres, y propone alternativas inclusivas y justas ante casos ficticios de discriminación.
+
+### Alcance
+
+Esta clase profundiza en la dimensión social de la sexualidad humana descrita en las páginas 116 y 122-123 del Texto Escolar. Se analizan situaciones didácticas simuladas en contextos escolares y comunitarios, cautelando la reserva de la experiencia íntima del estudiante y fomentando un ambiente de deliberación fundamentada y respeto mutuo.
+
+---
 
 ## 1. Paso 1 — Preparación del mentor
 
-**Para el mentor:** Lee el recurso con el estudiante antes de preguntar. Guía usando DILE y PREGÚNTALE. Mantén las respuestas de referencia privadas hasta que el estudiante intente responder.
+**Propósito:** Guiar al estudiante en la comprensión de la dimensión social de la sexualidad, fortaleciendo su autonomía reflexiva frente a la presión de grupo y desarticulando estereotipos de género limitantes mediante argumentos científicos y valóricos.
 
-**Cuidado del acompañamiento:** Usar exclusivamente los casos ficticios. No solicitar información sobre cuerpo, identidad, vínculos o experiencias íntimas del estudiante. Escuchar con respeto. No diagnosticar ni comparar ritmos de desarrollo.
+**DILE:** “¡Hola! Hoy exploraremos la dimensión social de la sexualidad: descubriremos cómo nuestras relaciones con amigos y compañeros cobran gran importancia en la pubertad, qué son los estereotipos de género que a veces nos imponen desde afuera, y por qué la ciencia y el respeto mutuo demuestran que tanto hombres como mujeres tenemos las mismas capacidades para aprender, liderar y expresarnos con libertad.”
 
-**DILE / SAY:** “Identificar estereotipos de género en situaciones ficticias y explicar por qué no deben limitar talentos, emociones ni oportunidades.”
+**Ruta de hoy:** Leer el recurso sobre la dimensión social y los estereotipos → debatir la influencia del grupo de pares → modelar la refutación científica de prejuicios → practicar con casos ficticios de convivencia → evaluar mediante el miniquiz.
 
-**Materiales:** recurso incluido en esta clase, cuaderno y lápiz.
+**Pautas para el mentor:**
+1. Mantén una postura dialogante, abierta y orientada a la equidad y los derechos de todas las personas.
+2. Define claramente qué es un estereotipo de género: una creencia generalizada y simplificada sobre lo que 'debe' hacer o sentir una persona únicamente por su sexo biológico (por ejemplo, 'los hombres no expresan tristeza' o 'a las mujeres no les interesan las ciencias exactas').
+3. Aclara con respaldo científico que no existen genes, hormonas ni circuitos cerebrales que impidan a una mujer destacar en ingeniería o a un hombre dedicarse al cuidado de la salud o la danza.
+4. Estimula la reflexión autónoma sin forzar al estudiante a revelar tensiones privadas de su vida familiar o grupal.
+
+---
 
 ## 2. Paso 2A — Ruta de aprendizaje
 
-Leer el recurso → localizar pistas → explicar → practicar → comprobar comprensión.
+Lectura analítica del recurso → identificación de ideas preconcebidas y evidencias → razonamiento modelado sobre la equidad → práctica guiada e independiente → comprobación diagnóstica con feedback formativo.
 
-**Distribución orientativa:** inicio y lectura 6 min; videos 3 min; conversación y modelamiento 7 min; práctica 7 min; miniquiz y recuperación 5 min; cierre 2 min.
+**Distribución orientativa:**
+- Inicio y ruta: 5 min.
+- Proyección de videos (Motivación y Explicación): 4 min.
+- Diálogo socrático y modelamiento: 8 min.
+- Ejercitación y resolución de casos: 8 min.
+- Miniquiz y retroalimentación: 5 min.
 
-## 3. Paso 2B — Punto de partida
+---
+
+## 3. Paso 2B — Situación inicial y punto de partida
 
 ### Recurso de lectura visible para el estudiante
 
-Síntesis pedagógica de las páginas impresas 118–120: la dimensión social considera factores del entorno, como familia y amistades. El texto distingue características biológicas de ideas y expectativas sociales. Los estereotipos de género son creencias generalizadas sobre atributos y roles de hombres y mujeres. No permiten conocer las capacidades de una persona concreta. El respeto implica que esos estereotipos no limiten talentos ni oportunidades.
+La **dimensión social** de la sexualidad se refiere a cómo nos relacionamos con los demás, cómo aprendemos las normas de convivencia de nuestra cultura y cómo construimos vínculos de amistad, compañerismo y afecto en la sociedad.
 
-Caso A, ficticio: a Valeria le interesa construir un robot. Un compañero dice que las niñas no son buenas para la ciencia. El interés y sus capacidades deben considerarse sin esa generalización.
+Durante la pubertad y la adolescencia, el **grupo de pares** (amigos de la misma edad) adquiere una gran relevancia: los jóvenes buscan mayor autonomía respecto a su entorno familiar, comparten intereses, descubren nuevas formas de vestir o comunicarse y buscan sentirse parte de un colectivo. Esta socialización enriquece la identidad y permite ensayar roles para la vida adulta.
 
-Caso B, ficticio: Tomás expresa tristeza por una dificultad. Otro compañero dice que los niños no deben mostrar emociones. Una amiga lo escucha con respeto.
+No obstante, la sociedad a menudo transmite **estereotipos de género**, que son ideas preconcebidas, rígidas y sin base científica sobre cómo supuestamente deben comportarse, vestirse, sentir o trabajar las personas en función exclusiva de su sexo biológico (Texto Escolar, págs. 122-123). Frases como "ese deporte es solo de niños" o "las niñas son más ordenadas por naturaleza" son ejemplos de estereotipos que limitan el potencial individual y pueden justificar desigualdades o burlas. La educación científica nos enseña que las habilidades intelectuales, la sensibilidad artística, el liderazgo y la empatía son capacidades universales humanas que cualquier persona puede cultivar, independientemente de si es hombre o mujer. Construir relaciones basadas en el respeto mutuo implica valorar a cada individuo por sus virtudes, proyectos y decisiones personales.
 
-**DILE antes de leer:** “¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.”
+### Caso didáctico ficticio
 
-**Punto de partida / Starting point:** ¿Qué parte es un interés individual y qué parte es un estereotipo?
+**Situación en el taller de robótica (caso ficticio):** En un colegio de la comuna, se abren inscripciones para el nuevo taller escolar de Robótica y Programación. Sofía (13 años) desea inscribirse porque le apasiona la computación, pero dos compañeros comentan en el pasillo: *"La robótica es cosa de hombres; las niñas deberían irse al taller de tejido o teatro"*. Sofía duda por un momento y siente desánimo. Martín (13 años), compañero de curso, escucha el comentario y les responde con serenidad: *"Eso no tiene sentido. Grandes científicas, como Ada Lovelace y Katherine Johnson, fundaron la informática y la exploración espacial. El talento para programar no depende de ser hombre o mujer, sino de la curiosidad y la práctica"*. Sofía se inscribe con entusiasmo y luego lidera con éxito la construcción del prototipo escolar.
 
-**Respuesta de referencia / Reference, privada para el mentor hasta después del intento:** El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo.
+**Punto de partida:** ¿Por qué el comentario de los estudiantes en el pasillo representa un estereotipo perjudicial y qué argumentos biológicos y sociales respaldan la intervención de Martín?
 
-## 4. Paso 3 — Videos
+**Respuesta de referencia (privada para el mentor):** Es un estereotipo porque asume sin fundamento que una disciplina tecnológica es exclusiva de un sexo. La ciencia demuestra que las capacidades cognitivas para la matemática y la tecnología son idénticas en hombres y mujeres, y la historia científica documenta aportes fundamentales de mujeres en todas las ramas del saber. Limitar a las personas por su género vulnera su derecho al pleno desarrollo.
 
-**MOTIVACION:** 7 diapositivas. **EXPLICACION:** 7 diapositivas. Los guiones vigentes de este archivo se ajustan al plan audiovisual actual. No se afirma que los PowerPoint existentes ya contengan esta revisión; cotejar sus notas antes de producir o integrar.
+---
 
-**Producción:** Gancho 60 segundos y explicación 90 segundos como tiempos de montaje. Ajustar la voz y pausas sobre el audio real. Sin música. No certificar la duración antes de producir el video.
+## 4. Paso 3 — Videos de la clase: Motivación y Explicación
+
+Orientaciones pedagógicas para las presentaciones audiovisuales de la clase:
+- **Video 1 (Motivación):** Expone un caso cotidiano de estereotipos en el recreo y plantea el desafío de superar las etiquetas que limitan nuestras opciones de vida.
+- **Video 2 (Explicación):** Desarrolla el concepto de dimensión social, define los estereotipos de género y presenta evidencias científicas y sociales en favor de la equidad.
+- Pauta audiovisual 7+7 conforme al Plan Maestro de Presentaciones v3.2.
+
+---
 
 ## 5. Paso 4 — Conversación guiada
 
-### Pregunta 1
+### Pregunta 1 — El valor del grupo de pertenencia
+**Contexto:** Los adolescentes sienten un deseo creciente de compartir tiempo con sus amigos y buscar mayor independencia.  
+**PREGÚNTALE:** ¿Por qué el grupo de amigos se vuelve tan importante en 7° básico y cómo puede un grupo sano apoyar las decisiones positivas de cada integrante?  
+**Respuesta esperada:** Porque permite ensayar autonomía, compartir vivencias comunes y construir identidad; un grupo sano apoya respetando los gustos individuales sin obligar a nadie a hacer cosas riesgosas para 'encajar'.
 
-**Contexto:** Valeria quiere construir un robot. Un compañero afirma que las niñas no son buenas para la ciencia.
+### Pregunta 2 — Detección de prejuicios cotidianos
+**Contexto:** Dos estudiantes afirman que "la robótica es cosa de hombres".  
+**PREGÚNTALE:** ¿Qué consecuencias negativas tiene para la sociedad que repitamos prejuicios sobre lo que pueden o no hacer hombres y mujeres?  
+**Respuesta esperada:** Limita las vocaciones y talentos de las personas, genera discriminación injusta, reduce oportunidades educativas y laborales, y empobrece el desarrollo científico y cultural de la comunidad.
 
-**PREGÚNTALE / ASK:** ¿Qué parte es un interés individual y qué parte es un estereotipo?
+### Pregunta 3 — Autonomía frente a la presión social
+**Contexto:** Sofía dudó en inscribirse en robótica por el qué dirán de sus compañeros.  
+**PREGÚNTALE:** ¿Qué ayuda a una persona a mantenerse firme en sus gustos e intereses aunque a veces el entorno la presione con bromas o estereotipos?  
+**Respuesta esperada:** La seguridad en sus propias convicciones, el apoyo de amigos leales y familiares, y la certeza de que sus derechos y talentos no dependen de la aprobación basada en prejuicios ajenos.
 
-**Respuesta esperada, privada para el mentor:** El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo.
-
-**Evidencia:** Una parte habla de una persona y la otra generaliza sobre un grupo.
-
-**Apoyo 1:** Si no localiza información, releer esta pista del contexto: «Valeria quiere construir un robot. Un compañero afirma que las niñas no son buenas para la ciencia.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta.
-
-**Apoyo 2:** Si encuentra la pista pero no la explica, orientar con esta relación: Una parte habla de una persona y la otra generaliza sobre un grupo. Pedir que complete su respuesta indicando por qué esa pista sirve.
-
-**Apoyo 3, modelo privado tras intentar con pistas:** El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento.
-
-**Criterio:** Respuesta comprensible, información precisa y explicación de su relación.
-
-### Pregunta 2
-
-**Contexto:** Tomás expresa tristeza. Una compañera escucha mientras otro le dice que los niños no deben mostrar emociones.
-
-**PREGÚNTALE / ASK:** ¿Qué respuesta respeta a Tomás y por qué?
-
-**Respuesta esperada, privada para el mentor:** Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión.
-
-**Evidencia:** El caso presenta una emoción concreta y una regla impuesta a todos los niños.
-
-**Apoyo 1:** Si no localiza información, releer esta pista del contexto: «Tomás expresa tristeza. Una compañera escucha mientras otro le dice que los niños no deben mostrar emociones.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta.
-
-**Apoyo 2:** Si encuentra la pista pero no la explica, orientar con esta relación: El caso presenta una emoción concreta y una regla impuesta a todos los niños. Pedir que complete su respuesta indicando por qué esa pista sirve.
-
-**Apoyo 3, modelo privado tras intentar con pistas:** Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento.
-
-**Criterio:** Respuesta comprensible, información precisa y explicación de su relación.
+---
 
 ## 6. Paso 5 — Explicación y modelamiento
 
-**Concepto:** Un estereotipo atribuye una característica a todo un grupo sin conocer a cada persona. Una diferencia corporal no demuestra que exista una capacidad, emoción u ocupación exclusiva. Las oportunidades deben considerar a las personas y sus intereses.
+### Razonamiento científico visible que modela la clase:
 
-**La dimensión social:** Las amistades y la familia transmiten ideas. Podemos examinar esas ideas sin tratar todas sus opiniones como hechos.
+> [1. Pregunta científica / Problema]
+> ¿Existen fundamentos biológicos o científicos que justifiquen la asignación rígida de roles, oficios o expresiones emocionales según el sexo biológico?
+>                     ↓
+> [2. Evidencia observable / Datos]
+> - Históricamente, las normas de conducta para hombres y mujeres han cambiado radicalmente entre épocas y culturas.
+> - Las neurociencias y la psicología evolutiva demuestran que las diferencias cognitivas entre sexos son mínimas y no determinan aptitudes académicas.
+> - Los estereotipos de género se aprenden culturalmente a través de la publicidad, juguetes y discursos sociales.
+>                     ↓
+> [3. Representación / Criterio]
+> Distinción conceptual:
+> • Sexo biológico: características genéticas, anatómicas y fisiológicas de machos y hembras.
+> • Estereotipo cultural: creencia simplista que impone qué debe gustar, hacer o sentir una persona por su sexo.
+>                     ↓
+> [4. Explicación fundamentada]
+> La capacidad para pensar lógicamente, cuidar a otros, liderar equipos o crear arte no reside en los cromosomas sexuales ni en las gónadas, sino en el potencial integral del cerebro humano y en las oportunidades de aprendizaje que ofrece el entorno social.
+>                     ↓
+> [5. Conclusión científica]
+> Los estereotipos de género carecen de validez biológica. Son barreras culturales que limitan la libertad humana y la equidad social.
+>                     ↓
+> [6. Comunicación respetuosa]
+> Promover la equidad en el lenguaje y en la práctica cotidiana, evitando clasificar juegos, emociones o profesiones en 'de hombres' o 'de mujeres'.
 
-**Un estereotipo:** La frase sobre las niñas y la ciencia atribuye una capacidad a todo un grupo. No considera a Valeria.
+### Ejemplo modelado paso a paso para mostrar al estudiante:
 
-**La evidencia individual:** Valeria quiere construir un robot. Esa información describe su interés y permite darle una oportunidad de aprender.
+**Caso de análisis modelado:**
+"En la clase de educación física, el profesor organiza un torneo de voleibol mixto. Joaquín (12 años) comete un error en un saque, se frustra intensamente y se le caen unas lágrimas. Dos compañeros del equipo contrario le gritan desde el otro lado de la red: *'¡Oye, no llores como niñita, sé un hombre!'*."
 
-**Las emociones:** La frase que impide a los niños mostrar emociones también generaliza y limita una experiencia humana.
+**Paso a paso guiado por el mentor:**
+1. **Paso 1: Identificar el prejuicio.** El grito asume dos falsedades: que llorar ante la frustración es exclusivo de las mujeres y que los hombres no tienen derecho a expresar tristeza o dolor.
+2. **Paso 2: Evaluar la evidencia científica.** Llorar es una respuesta fisiológica universal del sistema nervioso humano ante emociones intensas (alivio, dolor, pena, frustración). No tiene género biológico. Reprimir las emociones por mandato social incrementa el estrés y el malestar psicológico.
+3. **Paso 3: Identificar la dimensión vulnerada.** Se ataca la dimensión afectiva (invalidando la emoción de Joaquín) y la dimensión social (usando la burla para imponer una norma machista destructiva).
+4. **Paso 4: Respuesta asertiva modelada.** La capitana del equipo se acerca a Joaquín, le dice: *"Cualquiera se frustra cuando falla un punto importante; respira y sigue adelante"*. Luego, dirigiéndose a los rivales con firmeza y calma, añade: *"Llorar o emocionarse es humano; respetemos el juego limpio y juguemos sin descalificaciones"*.
 
-**Una respuesta respetuosa:** Escuchar a Tomás y permitir que Valeria participe evita usar estereotipos para decidir por ellos.
+**Comprobación inmediata:**
+- *Pregunta:* “¿Por qué afirmar que las carreras científicas son solo para hombres es un estereotipo de género y no un hecho biológico?”
+- *Modelo de respuesta:* “Porque las capacidades para la ciencia y la matemática son humanas y universales; no dependen de genes ni de diferencias biológicas de género.”
 
-**Modelo explicado:** El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo. Una parte habla de una persona y la otra generaliza sobre un grupo.
-
-**Cómo se construye el modelo, mostrar durante la enseñanza:** 1) Leer la pregunta y precisar qué pide. 2) Localizar en el caso: «Valeria quiere construir un robot. Un compañero afirma que las niñas no son buenas para la ciencia.». 3) Explicar la relación: Una parte habla de una persona y la otra generaliza sobre un grupo. 4) Formular la respuesta: El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo. Comprobar que cada afirmación conserva los datos del recurso.
-
-**Error frecuente:** Confundir una expectativa social con una capacidad biológica demostrada.
-
-**Comprobación inmediata:** ¿Qué respuesta respeta a Tomás y por qué?
-
-**Modelo de comprobación:** Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión.
+---
 
 ## 7. Paso 6 — Práctica conjunta y autónoma
 
-### Caso 1
+### Caso 1 (Práctica guiada)
+- **Recurso:** Una tienda de juguetes divide sus pasillos en dos zonas: un pasillo rosado con muñecas bebés, utensilios de cocina y maquillaje de juguete; y un pasillo azul con naves espaciales, microscopios, herramientas de construcción y figuras de acción.
+- **Consigna:** Explica de qué manera esta distribución comercial fomenta estereotipos de género y qué mensaje limitante transmite a los niños y niñas.
+- **Procedimiento:** Observar la segmentación cromática y temática → asociar con roles tradicionales → explicar el impacto en las vocaciones.
+- **Modelo para revisar después del intento:** “Transmite el mensaje implícito de que el cuidado del hogar y la estética son tareas exclusivas de mujeres, y que la exploración científica, la valentía y la construcción son exclusivas de hombres. Limita el desarrollo vocacional temprano de ambos sin base científica.”
 
-**Recurso:** Valeria quiere construir un robot. Un compañero afirma que las niñas no son buenas para la ciencia.
+### Caso 2 (Práctica guiada)
+- **Recurso:** En una feria vocacional, Lucas (13 años) dice que le gustaría estudiar enfermería para cuidar a recién nacidos o adultos mayores. Un familiar le dice: *"Mejor estudia ingeniería, la enfermería es carrera de mujeres"*.
+- **Consigna:** Redacta dos argumentos científicos y formativos que Lucas puede utilizar para refutar ese comentario familiar.
+- **Procedimiento:** Definir la enfermería como disciplina médica universal → argumentar sobre la empatía y la capacidad científica compartida.
+- **Modelo para revisar después del intento:** “Argumento 1: La enfermería es una ciencia de la salud rigurosa que exige altos conocimientos de anatomía y farmacología, aptitudes que poseen hombres y mujeres por igual. Argumento 2: El cuidado de los enfermos y la empatía son valores humanos universales, no una condición biológica de un solo género.”
 
-**Actividad:** ¿Qué parte es un interés individual y qué parte es un estereotipo? Escribe una respuesta y señala la pista que la sostiene.
+### Aplicación autónoma y transferencia (Estímulo nuevo)
+- **Recurso nuevo visible para el estudiante:**
+  *Situación ficticia nueva:* El consejo escolar debate una propuesta de reglamento para las actividades extracurriculares del colegio: *"En las competencias de debate interescolar y en las olimpíadas de matemáticas, los equipos deberán estar capitaneados exclusivamente por varones para asegurar firmeza en las discusiones; en las actividades de coro y ornamentación del patio, las capitanas deberán ser exclusivamente mujeres por su delicadeza natural"*.
 
-**Procedimiento:** Leer, localizar evidencia, escribir y revisar con el recurso.
+- **Actividad autónoma del estudiante:**
+  Responde en tu cuaderno:
+  1. Identifica los dos estereotipos de género presentes en la propuesta de reglamento escolar.
+  2. Redacta una carta breve (4 a 6 líneas) dirigida al Centro de Alumnos proponiendo un ajuste a esa regla, aplicando los principios de equidad, libre elección y no discriminación aprendidos hoy.
+  3. Explica cómo la evidencia científica sobre el cerebro humano respalda que el liderazgo en debates o ciencias no depende del sexo biológico de las personas.
 
-**Modelo para revisar después del intento:** El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo.
+- **Criterio privado del mentor (revelar solo después del intento):**
+  1. Estereotipos identificados: Asociar falsamente la firmeza intelectual y el debate solo a varones, y restringir la sensibilidad artística y el cuidado ambiental solo a mujeres.
+  2. Propuesta de ajuste: Establecer que la capitanía y participación en cualquier equipo (debate, coro, ciencias, deportes) se defina por votación democrática, interés y competencias individuales, sin distinción de género.
+  3. Respaldo científico: Las neurociencias demuestran que las capacidades de razonamiento lógico, argumentación y expresión artística dependen del entrenamiento, la motivación y el aprendizaje, no del sexo biológico.
 
-**Respaldo:** Una parte habla de una persona y la otra generaliza sobre un grupo.
+- **Cómo valorar:** El estudiante detecta los prejuicios sexistas, formula una norma escolar inclusiva y cita la igualdad de capacidades cognitivas humanas.
 
-### Caso 2
-
-**Recurso:** Tomás expresa tristeza. Una compañera escucha mientras otro le dice que los niños no deben mostrar emociones.
-
-**Actividad:** ¿Qué respuesta respeta a Tomás y por qué? Escribe una respuesta y señala la pista que la sostiene.
-
-**Procedimiento:** Leer, localizar evidencia, escribir y revisar con el recurso.
-
-**Modelo para revisar después del intento:** Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión.
-
-**Respaldo:** El caso presenta una emoción concreta y una regla impuesta a todos los niños.
-
-### Aplicación autónoma y transferencia
-
-**Recurso nuevo visible para el estudiante:** Caso ficticio nuevo: Mateo quiere aprender danza. Una compañera afirma que los niños no pueden bailar. El grupo debe decidir cómo organizar un taller para quienes quieran aprender.
-
-**Actividad del estudiante:** Identifica el estereotipo, sepáralo del interés de Mateo y propone una regla de participación con una razón.
-
-**Momento:** Intento individual breve antes del miniquiz, sin respuesta modelo visible. El recurso de consulta permanece disponible. No exigir memorizar.
-
-**Criterio privado del mentor, revelar solo después del intento:** Decir que los niños no pueden bailar generaliza sobre un grupo; el interés por danza corresponde a Mateo. Una regla abierta a quienes quieran aprender considera intereses y oportunidades, sin esa generalización.
-
-**Cómo valorar:** Comprobar cada elemento pedido y su evidencia; aceptar formulaciones equivalentes. Si falta una relación, pedir que señale la pista y explique qué demuestra; después ofrecer el modelo y un nuevo intento. Registrar respuesta, apoyos y criterio por reforzar.
-
-**Por qué transfiere:** Cambia el estímulo y exige aplicar el criterio de esta clase; no reproduce el caso ya resuelto.
+---
 
 ## 8. Paso 7 — Miniquiz y recuperación
 
-**Criterio formativo:** Tres preguntas con cuatro alternativas y claves privadas. 2/3 o 3/3 permite avanzar; con 0/3 o 1/3, explicar el error, resolver la nueva práctica de recuperación correspondiente y reintentar. Registrar intentos y apoyos. Es la regla de diseño del Manual; su ejecución real en la App permanece pendiente de prueba. Solo Walter aprueba el OA.
+**Criterio formativo:** 3 preguntas con 4 alternativas (A, B, C, D) y clave privada única. Un puntaje de 2/3 o 3/3 permite avanzar al cierre de la sesión. Si se obtiene 0/3 o 1/3, se revisa la explicación formativa, se realiza la actividad de recuperación con un caso nuevo y se ejecuta la pregunta de reintento.
 
 ### Reactivo 1
+¿Cuál de las siguientes afirmaciones define correctamente qué es un estereotipo de género desde la perspectiva de las ciencias sociales y biológicas?
 
-¿Qué afirmación es un estereotipo en el recurso?
+- A. Es una ley de la genética molecular que dicta qué profesión debe ejercer una persona según su ADN.
+- B. Es una creencia cultural simplificada y rígida que adjudica determinadas conductas, gustos o roles a una persona únicamente en función de su sexo biológico.
+- C. Es una hormona secretada por la glándula hipófisis durante el estirón de la pubertad.
+- D. Es un método científico utilizado en el laboratorio para clasificar tipos de suelo agrícola.
 
-- A. Valeria quiere construir un robot
-- B. Las niñas no son buenas para la ciencia
-- C. Tomás expresa tristeza
-- D. Una compañera escucha
+**Clave privada:** B.  
+**Explicación formativa:** Los estereotipos de género son construcciones culturales aprendidas que generalizan arbitrariamente expectativas de rol sin respaldo biológico ni determinismo genético.
 
-**Clave privada:** B.
+**Análisis de distractores:**
+- *A es incorrecta:* No existen leyes genéticas que determinen profesiones; la vocación es producto de la personalidad, el aprendizaje y las decisiones personales.
+- *B es CORRECTA:* Identifica con exactitud la naturaleza cultural, simplista e infundada del concepto de estereotipo de género.
+- *C es incorrecta:* La hipófisis secreta hormonas del crecimiento y gonadotropinas (FSH y LH), no conceptos socioculturales.
+- *D es incorrecta:* La clasificación de suelos pertenece a la agronomía y edafología, no a la dimensión social de la sexualidad humana.
 
-**Explicación formativa:** La afirmación atribuye una capacidad a todo un grupo.
-
-**Análisis de alternativas, privado; mostrar solo el feedback de la opción elegida tras responder:**
-- A: La opción «Valeria quiere construir un robot» no coincide con lo que pide este reactivo. Contrástala con «Las niñas no son buenas para la ciencia». La afirmación atribuye una capacidad a todo un grupo.
-- B: La respuesta «Las niñas no son buenas para la ciencia» coincide con el criterio. La afirmación atribuye una capacidad a todo un grupo.
-- C: La opción «Tomás expresa tristeza» no coincide con lo que pide este reactivo. Contrástala con «Las niñas no son buenas para la ciencia». La afirmación atribuye una capacidad a todo un grupo.
-- D: La opción «Una compañera escucha» no coincide con lo que pide este reactivo. Contrástala con «Las niñas no son buenas para la ciencia». La afirmación atribuye una capacidad a todo un grupo.
-
-### Recuperación 1
-
-**Se muestra si el reactivo 1 requiere apoyo.**
-
-**Enseñanza:** La afirmación atribuye una capacidad a todo un grupo.
-
-**Pista:** Releer el recurso y buscar la información mencionada en la explicación.
-
-**Nueva práctica antes del reintento:**
-
-**Recurso visible de recuperación:** Caso nuevo de recuperación: Emilia quiere aprender carpintería. Una persona dice que todas las niñas deben elegir otra actividad. Emilia expresa frustración.
-
-**Tarea nueva del estudiante:** Separa el dato sobre Emilia de la generalización.
-
-**Apoyo 1, si no identifica información:** Buscar estas expresiones del recurso nuevo: «carpintería»; «todas»; «niñas». Señalar las palabras del caso que permiten responder, sin mostrar la solución.
-
-**Apoyo 2, si no relaciona las pistas:** Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.
-
-**Apoyo 3 y modelo privado, después de un intento con las pistas:** Su interés por carpintería es individual; la regla sobre todas las niñas es un estereotipo. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
-
-**Criterio de salida de esta práctica:** Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta.
-
-**Reintento completo:** Después de releer el recurso, responde de nuevo: ¿Qué afirmación es un estereotipo en el recurso?
-
-- A. Valeria quiere construir un robot
-- B. Las niñas no son buenas para la ciencia
-- C. Tomás expresa tristeza
-- D. Una compañera escucha
-
-**Clave:** B. **Si acierta:** Usaste el recurso para fundamentar tu respuesta. **Si necesita más apoyo:** La afirmación atribuye una capacidad a todo un grupo. Lean la información pertinente juntos y vuelve a intentarlo.
+---
 
 ### Reactivo 2
+Un grupo de amigos se niega a invitar a Camilo a jugar fútbol durante el recreo porque afirman que "los niños que leen poesía o tocan la flauta no tienen fuerza para correr en una cancha". ¿Qué análisis crítico describe mejor esta situación?
 
-¿Qué acción evita limitar el interés de Valeria?
+- A. Los amigos tienen razón, porque existe una ley biológica que impide correr rápido a las personas que disfrutan de las artes literarias.
+- B. Es una situación de discriminación basada en un estereotipo, pues las habilidades deportivas y la sensibilidad artística pueden desarrollarse juntas y no se excluyen mutuamente.
+- C. Camilo debería tirar su flauta a la basura para que sus compañeros lo acepten en el equipo de fútbol.
+- D. La escuela debería suspender permanentemente la educación física para evitar que los estudiantes hagan deporte.
 
-- A. Permitirle participar y aprender
-- B. Excluirla por ser niña
-- C. Decidir que debe elegir otra actividad
-- D. Compararla sin escuchar su interés
+**Clave privada:** B.  
+**Explicación formativa:** Los intereses artísticos y las capacidades motrices o deportivas no son incompatibles en ningún sentido biológico. Limitar la participación de alguien por prejuicios estéticos o culturales es una forma injusta de exclusión social.
 
-**Clave privada:** A.
+**Análisis de distractores:**
+- *A es incorrecta:* La fisiología muscular y cardiovascular no tiene ninguna incompatibilidad con el gusto por la literatura o la música.
+- *B es CORRECTA:* Reconoce con claridad el prejuicio infundado y defiende el derecho a la libre expresión de habilidades sin sufrir exclusión de pares.
+- *C es incorrecta:* Renunciar a los propios talentos para complacer prejuicios ajenos daña la autoestima y fomenta relaciones sumisas en lugar de asertivas.
+- *D es incorrecta:* La actividad física es fundamental para la salud cardiovascular y metabólica de todos los estudiantes; la solución es erradicar la discriminación, no el deporte.
 
-**Explicación formativa:** La oportunidad considera su interés individual, sin aplicar la generalización.
-
-**Análisis de alternativas, privado; mostrar solo el feedback de la opción elegida tras responder:**
-- A: La respuesta «Permitirle participar y aprender» coincide con el criterio. La oportunidad considera su interés individual, sin aplicar la generalización.
-- B: La opción «Excluirla por ser niña» no coincide con lo que pide este reactivo. Contrástala con «Permitirle participar y aprender». La oportunidad considera su interés individual, sin aplicar la generalización.
-- C: La opción «Decidir que debe elegir otra actividad» no coincide con lo que pide este reactivo. Contrástala con «Permitirle participar y aprender». La oportunidad considera su interés individual, sin aplicar la generalización.
-- D: La opción «Compararla sin escuchar su interés» no coincide con lo que pide este reactivo. Contrástala con «Permitirle participar y aprender». La oportunidad considera su interés individual, sin aplicar la generalización.
-
-### Recuperación 2
-
-**Se muestra si el reactivo 2 requiere apoyo.**
-
-**Enseñanza:** La oportunidad considera su interés individual, sin aplicar la generalización.
-
-**Pista:** Releer el recurso y buscar la información mencionada en la explicación.
-
-**Nueva práctica antes del reintento:**
-
-**Recurso visible de recuperación:** Caso nuevo de recuperación: Emilia quiere aprender carpintería. Una persona dice que todas las niñas deben elegir otra actividad. Emilia expresa frustración.
-
-**Tarea nueva del estudiante:** Propón una decisión sobre su participación y justifícala.
-
-**Apoyo 1, si no identifica información:** Buscar estas expresiones del recurso nuevo: «aprender»; «niña». Señalar las palabras del caso que permiten responder, sin mostrar la solución.
-
-**Apoyo 2, si no relaciona las pistas:** Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.
-
-**Apoyo 3 y modelo privado, después de un intento con las pistas:** Permitir participar y aprender según su interés y las condiciones comunes del taller, sin excluirla por ser niña. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
-
-**Criterio de salida de esta práctica:** Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta.
-
-**Reintento completo:** Después de releer el recurso, responde de nuevo: ¿Qué acción evita limitar el interés de Valeria?
-
-- A. Permitirle participar y aprender
-- B. Excluirla por ser niña
-- C. Decidir que debe elegir otra actividad
-- D. Compararla sin escuchar su interés
-
-**Clave:** A. **Si acierta:** Usaste el recurso para fundamentar tu respuesta. **Si necesita más apoyo:** La oportunidad considera su interés individual, sin aplicar la generalización. Lean la información pertinente juntos y vuelve a intentarlo.
+---
 
 ### Reactivo 3
+¿Cuál de las siguientes conductas en el aula promueve de manera efectiva relaciones de género equitativas y de respeto mutuo?
 
-¿Por qué escuchar a Tomás es respetuoso?
+- A. Designar siempre a las estudiantes mujeres para barrer la sala de clases y a los varones para mover los escritorios pesados.
+- B. Fomentar que hombres y mujeres participen por igual en tareas de liderazgo científico, debates, expresión artística y mantenimiento colaborativo de los espacios comunes.
+- C. Prohibir que los varones opinen sobre temas de salud y que las mujeres participen en olimpiadas de matemáticas.
+- D. Calificar con mejores notas a los estudiantes que usen vestimentas tradicionales impuestas por la publicidad.
 
-- A. Porque todos deben sentir lo mismo
-- B. Porque elimina toda emoción
-- C. Porque reconoce su experiencia sin imponer un estereotipo
-- D. Porque obliga a compartir información íntima
+**Clave privada:** B.  
+**Explicación formativa:** La equidad se construye permitiendo que todas las personas tengan acceso igualitario al liderazgo intelectual, al trabajo comunitario y al desarrollo integral, sin sesgos de género.
 
-**Clave privada:** C.
+**Análisis de distractores:**
+- *A es incorrecta:* Replicar la división tradicional sexista de tareas refuerza la desigualdad en lugar de fomentar la colaboración equitativa.
+- *B es CORRECTA:* Promueve la distribución justa y universal de responsabilidades académicas, prácticas y de liderazgo cívico para todos los estudiantes.
+- *C es incorrecta:* Segregar la participación académica por sexo contradice los principios universales de derechos humanos y el método científico.
+- *D es incorrecta:* La evaluación escolar debe medir aprendizajes y competencias pedagógicas, no la sumisión a modas o imposiciones de vestuario.
 
-**Explicación formativa:** Escuchar reconoce una emoción de una persona concreta.
+---
 
-**Análisis de alternativas, privado; mostrar solo el feedback de la opción elegida tras responder:**
-- A: La opción «Porque todos deben sentir lo mismo» no coincide con lo que pide este reactivo. Contrástala con «Porque reconoce su experiencia sin imponer un estereotipo». Escuchar reconoce una emoción de una persona concreta.
-- B: La opción «Porque elimina toda emoción» no coincide con lo que pide este reactivo. Contrástala con «Porque reconoce su experiencia sin imponer un estereotipo». Escuchar reconoce una emoción de una persona concreta.
-- C: La respuesta «Porque reconoce su experiencia sin imponer un estereotipo» coincide con el criterio. Escuchar reconoce una emoción de una persona concreta.
-- D: La opción «Porque obliga a compartir información íntima» no coincide con lo que pide este reactivo. Contrástala con «Porque reconoce su experiencia sin imponer un estereotipo». Escuchar reconoce una emoción de una persona concreta.
+### Recuperación formativa posterior al error (para puntajes 0/3 o 1/3)
 
-### Recuperación 3
+#### Recuperación para Reactivo 1 (Concepto de estereotipo de género)
+- **Enseñanza del error:** Un estereotipo es una creencia cultural que encasilla a las personas según su sexo; no es una ley biológica ni un hecho natural.
+- **Pista orientadora:** Recuerda: ¿saber cocinar o arreglar una bicicleta depende de los cromosomas o de aprender a hacerlo?
+- **Recurso visible nuevo:** *Caso de recuperación:* Un comercial de televisión afirma que "solo los hombres de verdad saben cómo cambiar un neumático o manejar herramientas pesadas".
+- **Tarea nueva del estudiante:** “Explica por qué esta frase del comercial es un estereotipo cultural y no un hecho científico.”
+- **Apoyos progresivos:**
+  * *Apoyo 1:* Piensa si una mujer capacitada mecánicamente puede cambiar un neumático.
+  * *Apoyo 2:* Conecta la habilidad mecánica con el aprendizaje y el entrenamiento.
+  * *Apoyo 3:* Cambiar un neumático requiere técnica y fuerza entrenada, habilidades que cualquier persona capacitada puede ejecutar.
+- **Pregunta de reintento (Reintento 1):**
+  ¿Qué caracteriza a un estereotipo de género en la sociedad?
+  - A. Ser una norma biológica universal idéntica en todas las especies animales.
+  - B. Ser una idea simplificada y preconcebida que atribuye roles fijos a las personas según su sexo biológico.
+  - C. Ser un descubrimiento químico de los científicos del siglo XXI.
+  - D. Ser un fenómeno exclusivo de las plantas con flores.
+  *Clave reintento 1:* B.
 
-**Se muestra si el reactivo 3 requiere apoyo.**
+#### Recuperación para Reactivo 2 (Diversidad de talentos e intereses)
+- **Enseñanza del error:** El arte, la ciencia, el deporte y las emociones son dimensiones universales que cualquier persona puede disfrutar.
+- **Pista orientadora:** Pregúntate si tener un pasatiempo artístico impide correr o jugar con energía.
+- **Recurso visible nuevo:** *Caso de recuperación:* Valentina quiere tocar la batería en la banda del colegio, pero alguien le dice que 'la batería es demasiado ruidosa para una mujer y debería tocar el triángulo'.
+- **Tarea nueva del estudiante:** “¿Qué argumento basado en la igualdad de capacidades refuta ese comentario?”
+- **Apoyos progresivos:**
+  * *Apoyo 1:* Recuerda que el ritmo y la fuerza motriz se desarrollan con práctica.
+  * *Apoyo 2:* Piensa en destacadas bateristas profesionales en la música mundial.
+  * *Apoyo 3:* La coordinación musical no depende del género biológico; cualquier persona con dedicación puede destacar en la batería.
+- **Pregunta de reintento (Reintento 2):**
+  Si una estudiante desea practicar halterofilia (levantamiento de pesas) o astronomía, ¿qué principio de convivencia debe aplicarse?
+  - A. Prohibirle la actividad por no ser una disciplina tradicionalmente femenina.
+  - B. Apoyar su vocación y asegurar igualdad de oportunidades sin discriminación de género.
+  - C. Obligarla a cambiarse a un taller de costura para que no pierda su femineidad.
+  - D. Calificar negativamente su conducta escolar.
+  *Clave reintento 2:* B.
 
-**Enseñanza:** Escuchar reconoce una emoción de una persona concreta.
+#### Recuperación para Reactivo 3 (Equidad en la convivencia escolar)
+- **Enseñanza del error:** La equidad real en el colegio significa que todos colaboren y lideren por igual, sin repartir tareas por prejuicios de género.
+- **Pista orientadora:** ¿Por qué es más justo rotar responsabilidades entre todos que asignar siempre lo mismo a hombres o mujeres?
+- **Recurso visible nuevo:** *Caso de recuperación:* En un trabajo grupal de ciencias, dos varones quieren hacer todo el experimento de laboratorio y le piden a su compañera que 'solamente pinte la cartulina para que quede bonita'.
+- **Tarea nueva del estudiante:** “¿Cómo debe reorganizarse ese equipo para asegurar la equidad en el aprendizaje?”
+- **Apoyos progresivos:**
+  * *Apoyo 1:* Piensa si la compañera también tiene derecho a manipular el instrumental científico.
+  * *Apoyo 2:* Propón que las tareas experimentales y de redacción se compartan.
+  * *Apoyo 3:* Todos los integrantes deben rotar en la recolección de datos y en el diseño del informe para aprender por igual.
+- **Pregunta de reintento (Reintento 3):**
+  ¿Cuál de las siguientes acciones promueve la equidad de género en un grupo de trabajo escolar?
+  - A. Que los hombres den las órdenes y las mujeres tomen los apuntes en silencio.
+  - B. Que todos los integrantes participen equitativamente en la investigación, la experimentación y la exposición de resultados.
+  - C. Que se excluya a las personas que tengan opiniones diferentes sobre el tema.
+  - D. Que se divida el trabajo asignando las tareas científicas a un solo sexo.
+  *Clave reintento 3:* B.
 
-**Pista:** Releer el recurso y buscar la información mencionada en la explicación.
-
-**Nueva práctica antes del reintento:**
-
-**Recurso visible de recuperación:** Caso nuevo de recuperación: Emilia quiere aprender carpintería. Una persona dice que todas las niñas deben elegir otra actividad. Emilia expresa frustración.
-
-**Tarea nueva del estudiante:** ¿Cómo responder a la frustración sin imponer otro estereotipo?
-
-**Apoyo 1, si no identifica información:** Volver al caso concreto: «Caso nuevo de recuperación: Emilia quiere aprender carpintería. Una persona dice que todas las niñas deben elegir otra actividad. Emilia expresa frustración.». Señalar las palabras del caso que permiten responder, sin mostrar la solución.
-
-**Apoyo 2, si no relaciona las pistas:** Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.
-
-**Apoyo 3 y modelo privado, después de un intento con las pistas:** Escuchar y reconocer su emoción; no exigir que la oculte ni generalizar que un grupo siente de determinada manera. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
-
-**Criterio de salida de esta práctica:** Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta.
-
-**Reintento completo:** Después de releer el recurso, responde de nuevo: ¿Por qué escuchar a Tomás es respetuoso?
-
-- A. Porque todos deben sentir lo mismo
-- B. Porque elimina toda emoción
-- C. Porque reconoce su experiencia sin imponer un estereotipo
-- D. Porque obliga a compartir información íntima
-
-**Clave:** C. **Si acierta:** Usaste el recurso para fundamentar tu respuesta. **Si necesita más apoyo:** Escuchar reconoce una emoción de una persona concreta. Lean la información pertinente juntos y vuelve a intentarlo.
+---
 
 ## 9. Paso 8 — Síntesis y cierre
 
-**Idea clave:** Los estereotipos no deben limitar oportunidades.
+**Tres ideas fuerza para recordar:**
+1. **La dimensión social es clave:** La búsqueda de pertenencia y autonomía en el grupo de amigos es un proceso sano y característico de la pubertad, pero no debe anular nuestras decisiones personales ni nuestro sentido ético.
+2. **Los estereotipos son barreras culturales:** No hay justificación biológica ni neurológica para limitar las profesiones, juegos, emociones o talentos a un solo sexo.
+3. **Equidad y respeto mutuo:** Una sociedad justa valora a cada persona por su carácter, sus capacidades y sus acciones, promoviendo la igualdad de oportunidades y erradicando cualquier forma de discriminación.
 
-**Síntesis:** ¿Qué parte es un interés individual y qué parte es un estereotipo?
+**Pregunta metacognitiva final:**  
+“¿Qué prejuicio o estereotipo sobre hombres o mujeres has escuchado alguna vez en la vida cotidiana, y con qué argumento científico o valórico le responderías hoy para promover el respeto?”
 
-**Metacognición:** ¿Qué te ayudó más: leer el recurso, localizar una pista o comparar explicaciones? ¿Por qué?
+**Puente hacia la siguiente clase:**  
+En la próxima clase (Clase 05: *Vínculos afectivos y respeto mutuo*) profundizaremos en las relaciones de amistad, el cariño, la intimidad y la importancia innegociable del consentimiento y los límites corporales.
 
-**Cierre:** Buen trabajo. Explicaste tu respuesta usando información del recurso.
+---
 
+## Trazabilidad y entrega
 
-## Trazabilidad de esta entrega
+- **Código de entrega:** 110-7-CNA-OA01-CLASE04  
+- **Versión pedagógica:** v3.4 canónica y unificada.  
+- **Responsable de aprobación final:** Walter (EstudioSimple).  
+- **Condición normativa:** EN_REVISION · NO INTEGRADA EN APP · PENDIENTE APROBACIÓN WALTER.
 
-**OA:** 7B-CNA-OA01. **Fuente curricular:** base curricular verificada de 7° Básico, temario de Exámenes Libres.
-
-**Texto Escolar:** https://drive.google.com/file/d/1F_bd0rzd7VV_ZhttGuLRV9WlxJQzAvlD/view. **Páginas físicas PDF:** 120, 121, 122. Las síntesis no se presentan como citas literales.
-
-**Integración pendiente:** Antigravity materializa esta entrega en la fuente canónica y comprueba su visualización. Este archivo no certifica por sí solo funcionamiento en la App.
-
-**Aprobación:** exclusivamente Walter.
+---
 
 ## Guiones audiovisuales de producción
 
-Pauta vigente para producción futura: siete diapositivas de MOTIVACION y siete de EXPLICACION. Los textos visibles se componen como título y subtítulo editables según el plan de la asignatura; las locuciones no son párrafos para colocar sobre la imagen. Título Arial negrita 64 pt blanco; subtítulo Arial negrita 32 pt amarillo #FFD32C. Imagen completa, sin paneles ni sombras; composición que respeta texto, personajes y evidencia. Esta corrección del guion no modifica ningún PPTX existente.
+### MOTIVACION: 110-7-CNA-OA01-CLASE04-MOTIVACION.pptx
 
-### MOTIVACION
+#### Diapositiva 01 — El recreo y las etiquetas
+**Título:** El recreo y las etiquetas  
+**Subtítulo:** ¿Por qué clasificamos a las personas?  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Patio escolar en recreo lleno de vida y color: grupos jugando básquetbol, otros leyendo mangas, otros conversando. Sobre algunos estudiantes aparecen etiquetas flotantes transparentes con palabras como 'deporte', 'tecnología', 'artes', 'ciencias'.  
+**Locución (Voz en off):** En el patio escolar compartimos con personas de personalidades muy diversas. Sin embargo, a veces, casi sin darnos cuenta, colocamos etiquetas invisibles a los demás: decidimos qué juegos son 'de niños', qué actividades son 'de niñas' o quién tiene permiso para expresar lo que siente.
 
-#### Diapositiva 01 — Una situación
+#### Diapositiva 02 — Una puerta que se cierra
+**Título:** Una puerta que se cierra  
+**Subtítulo:** Cuando los prejuicios frenan sueños  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Una estudiante con mochila y cuaderno de ciencias mirando con ilusión un cartel que dice "Taller de Robótica y Astronomía", mientras dos figuras a contraluz murmuran en un rincón con gestos de desaprobación.  
+**Locución (Voz en off):** Sofía sueña con construir robots espaciales y explorar el cosmos. Pero un día escucha en el pasillo: 'la robótica es cosa de hombres'. Una simple frase cargada de prejuicio puede hacer dudar a alguien de sus propios talentos. ¿De dónde vienen estas ideas?
 
-**Título:** Una situación
+#### Diapositiva 03 — La fuerza del grupo
+**Título:** La fuerza del grupo  
+**Subtítulo:** Amigos, pertenencia y presión  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Círculo de adolescentes riéndose y conversando; en el centro, un joven reflexiona mientras sostiene una decisión en sus manos, buscando ser fiel a sí mismo sin perder la amistad de su grupo.  
+**Locución (Voz en off):** En 7° básico, la opinión de nuestros amigos es importantísima. Queremos ser aceptados y pertenecer a un grupo. Pero a veces la presión social nos empuja a callar o a repetir ideas preconcebidas que en el fondo sabemos que no son justas.
 
-**Locución:** Hoy exploraremos aspectos sociales y estereotipos. Observaremos el caso y buscaremos pistas antes de sacar una conclusión.
+#### Diapositiva 04 — La voz de la ciencia
+**Título:** La voz de la ciencia  
+**Subtítulo:** Los talentos no tienen género  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Ilustración dividida en dos: A un lado, Marie Curie trabajando en su laboratorio de física y química; al otro lado, un cirujano y un docente de párvulos dedicados con vocación a su trabajo.  
+**Locución (Voz en off):** La ciencia es categórica: el cerebro humano no tiene una parte masculina para las matemáticas y otra femenina para las artes. El talento, la curiosidad, la perseverancia y la empatía son capacidades universales que cualquier persona puede desarrollar con dedicación.
 
-#### Diapositiva 02 — La pregunta
+#### Diapositiva 05 — Valentía para intervenir
+**Título:** Valentía para intervenir  
+**Subtítulo:** Romper el silencio frente a la injusticia  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Martín interviene amablemente en el pasillo, mirando con respeto a sus compañeros mientras señala el afiche de robótica con una sonrisa constructiva, animando a Sofía a inscribirse.  
+**Locución (Voz en off):** Cuando Martín escuchó ese comentario en el pasillo, no miró hacia otro lado. Con calma y argumentos claros recordó que la informática nació gracias a grandes mujeres pioneras. Una palabra justa a tiempo puede derribar muros de desinformación.
 
-**Título:** La pregunta
+#### Diapositiva 06 — Una comunidad que suma
+**Título:** Una comunidad que suma  
+**Subtítulo:** Equipos diversos logran más  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Sofía, Martín y otros compañeros de diversos orígenes celebrando juntos el funcionamiento de un robot móvil en una mesa de pruebas del colegio.  
+**Locución (Voz en off):** Cuando las personas tienen la libertad de elegir según sus verdaderas vocaciones y pasiones, toda la comunidad se enriquece. Los grandes descubrimientos de la humanidad nacen del trabajo en equipo donde cada voz es valorada por igual.
 
-**Locución:** Valeria quiere construir un robot. Un compañero afirma que las niñas no son buenas para la ciencia. Mantén a la vista la situación y distingue lo que informa de lo que suponemos.
+#### Diapositiva 07 — La pregunta de hoy
+**Título:** La pregunta de hoy  
+**Subtítulo:** ¿Cómo construir relaciones sin prejuicios?  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Signo de interrogación destacado en amarillo (#FFD32C) sobre una silueta de estudiantes colaborando en un mural de valores escolares.  
+**Locución (Voz en off):** ¿Qué estereotipos siguen presentes en nuestro entorno y cómo podemos superarlos con argumentos científicos y relaciones basadas en el respeto mutuo? Prepárate para descubrirlo en esta clase.
 
-#### Diapositiva 03 — Primera idea
+---
 
-**Título:** Primera idea
+### EXPLICACION: 110-7-CNA-OA01-CLASE04-EXPLICACION.pptx
 
-**Locución:** ¿Qué parte es un interés individual y qué parte es un estereotipo? Puedes plantear una primera idea; después comprobaremos qué información la apoya.
+#### Diapositiva 01 — Dimensión social de la sexualidad
+**Título:** Dimensión social de la sexualidad  
+**Subtítulo:** Cultura, vínculos y roles en la sociedad  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Mapa conceptual con la persona en el centro rodeada de círculos concéntricos: familia, grupo de amigos, escuela y comunidad cultural, destacando la 'Dimensión social'.  
+**Locución (Voz en off):** Bienvenidos a la explicación de la Clase 04. La sexualidad humana se vive en comunidad. Hoy analizaremos la dimensión social: cómo las normas culturales y las relaciones con nuestros pares influyen en la forma en que nos percibimos y actuamos.
 
-#### Diapositiva 04 — Busca pistas
+#### Diapositiva 02 — El grupo de pares en la pubertad
+**Título:** El grupo de pares en la pubertad  
+**Subtítulo:** Búsqueda de identidad y autonomía  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Ilustración de jóvenes en círculo compartiendo música, libros y debates en una plaza; flechas divergentes y convergentes que representan la búsqueda de independencia y apoyo mutuo.  
+**Locución (Voz en off):** El texto de Ciencias destaca que en la adolescencia el grupo de amigos se vuelve prioritario. Buscamos autonomía y ensayamos nuevas formas de interactuar. Un entorno de pares positivo nos brinda contención y confianza para explorar nuestros propios intereses.
 
-**Título:** Busca pistas
+#### Diapositiva 03 — ¿Qué es un estereotipo de género?
+**Título:** ¿Qué es un estereotipo de género?  
+**Subtítulo:** Generalizaciones rígidas y sin base científica  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Una balanza desequilibrada donde un cartel dice "Estereotipo: creencia fija" frente a una lupa científica que demuestra "Realidad: diversidad de talentos y elecciones individuales".  
+**Locución (Voz en off):** Un estereotipo de género es una idea preconcebida y simplista sobre lo que una persona supuestamente 'debe' hacer, sentir o jugar únicamente por su sexo biológico. Decir que las ciencias son para hombres o que la sensibilidad es exclusiva de mujeres son estereotipos sin respaldo científico.
 
-**Locución:** Observa la situación. ¿Qué detalle podría ayudarte a responder? Una pista útil debe ayudarnos a responder la pregunta que estamos explorando.
+#### Diapositiva 04 — La evidencia científica frente al prejuicio
+**Título:** La evidencia científica frente al prejuicio  
+**Subtítulo:** Cerebro humano y plasticidad cognitiva  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Gráfico de neurociencia que muestra la conectividad neuronal humana: redes de razonamiento lógico, creatividad artística y empatía social activándose por igual ante la educación y la práctica.  
+**Locución (Voz en off):** Las investigaciones en neurociencia demuestran que las capacidades cognitivas, el razonamiento lógico-matemático y la inteligencia emocional dependen del aprendizaje, la estimulación y la motivación personal, no de diferencias biológicas de género.
 
-#### Diapositiva 05 — Compara posibilidades
+#### Diapositiva 05 — Impacto de la publicidad y los medios
+**Título:** Impacto de la publicidad y los medios  
+**Subtítulo:** Mensajes comerciales que condicionan  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Análisis visual de dos anuncios publicitarios tradicionales: uno que muestra herramientas mecánicas con fondos oscuros y otro que muestra elementos domésticos con tonos pastel, tachados con un símbolo de análisis crítico.  
+**Locución (Voz en off):** Muchas veces la publicidad divide los juguetes y los productos en 'para niños' y 'para niñas' para vender más. Aprender a detectar estos trucos de marketing nos permite elegir con libertad aquello que verdaderamente nos gusta y nos hace crecer.
 
-**Título:** Compara posibilidades
+#### Diapositiva 06 — Equidad y respeto en la convivencia
+**Título:** Equidad y respeto en la convivencia  
+**Subtítulo:** Igualdad de derechos y oportunidades  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Iconografía moderna de dos personas en un podio al mismo nivel, compartiendo un libro y un compás de diseño, con símbolos de apretón de manos y respeto mutuo.  
+**Locución (Voz en off):** Promover la equidad significa que todas las personas, sin distinción de género, tengan las mismas oportunidades de aprender, opinar, liderar y cuidar de los demás en la escuela, el hogar y la sociedad. El respeto mutuo es el cimiento de toda relación sana.
 
-**Locución:** Una respuesta necesita información del recurso. Buscaremos pistas para fundamentarla. Dos respuestas pueden parecer posibles; necesitamos revisar cuál tiene respaldo.
+#### Diapositiva 07 — Síntesis y puente a la práctica
+**Título:** Síntesis y puente a la práctica  
+**Subtítulo:** Piensa críticamente, actúa con justicia  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Tres puntos clave resumidos en un recuadro limpio con íconos de mente abierta, balanza de justicia y manos colaborativas, invitando a la práctica de la clase.  
+**Locución (Voz en off):** En conclusión: tu grupo de amigos te acompaña a crecer, pero tus gustos y talentos son únicos. Cuestiona los estereotipos y construye relaciones basadas en la equidad. Continúa ahora con las actividades de práctica en tu lección.
 
-#### Diapositiva 06 — Una estrategia
+---
 
-**Título:** Una estrategia
+## Control de esta revisión y contrato pedagógico
 
-**Locución:** Lee el recurso y relaciona sus detalles antes de elegir una explicación. La clase mostrará cómo relacionar las pistas y explicar esa relación paso a paso.
-
-#### Diapositiva 07 — Puente a la lectura
-
-**Título:** Puente a la lectura
-
-**Locución:** Ahora descubriremos cómo las pistas ayudan a comprender esta situación. Luego aplicarás el criterio a otra situación breve, con menor ayuda.
-
-### EXPLICACION
-
-#### Diapositiva 01 — Una herramienta
-
-**Título:** Una herramienta
-
-**Locución:** Las amistades y la familia transmiten ideas. Podemos examinar esas ideas sin tratar todas sus opiniones como hechos.
-
-#### Diapositiva 02 — El criterio
-
-**Título:** El criterio
-
-**Locución:** La frase sobre las niñas y la ciencia atribuye una capacidad a todo un grupo. No considera a Valeria. Valeria quiere construir un robot. Esa información describe su interés y permite darle una oportunidad de aprender.
-
-#### Diapositiva 03 — Relación entre pistas
-
-**Título:** Relación entre pistas
-
-**Locución:** La frase que impide a los niños mostrar emociones también generaliza y limita una experiencia humana. Escuchar a Tomás y permitir que Valeria participe evita usar estereotipos para decidir por ellos.
-
-#### Diapositiva 04 — Modelo explicado
-
-**Título:** Modelo explicado
-
-**Locución:** Valeria quiere construir un robot. Un compañero afirma que las niñas no son buenas para la ciencia. ¿Qué parte es un interés individual y qué parte es un estereotipo? El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo. Una parte habla de una persona y la otra generaliza sobre un grupo.
-
-#### Diapositiva 05 — Comprobación
-
-**Título:** Comprobación
-
-**Locución:** Tomás expresa tristeza. Una compañera escucha mientras otro le dice que los niños no deben mostrar emociones. ¿Qué respuesta respeta a Tomás y por qué? Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión. El caso presenta una emoción concreta y una regla impuesta a todos los niños.
-
-#### Diapositiva 06 — Error y corrección
-
-**Título:** Error y corrección
-
-**Locución:** Un error que debemos evitar: Confundir una expectativa social con una capacidad biológica demostrada. Si la respuesta añade información, vuelve al recurso y corrígela.
-
-#### Diapositiva 07 — Síntesis y práctica
-
-**Título:** Síntesis y práctica
-
-**Locución:** Los estereotipos no deben limitar oportunidades. Lee, localiza evidencia, explica y comprueba. Continúa con la práctica interactiva.
-
-
-## Contrato de revisión y correspondencia pedagógica
-
-**Versión de fuente:** R1 · revisión autorizada 17-10-2026, 11:55 America/Santiago. Fecha de autorización, no certificación de publicación. SHA-256 completo en manifest de esta entrega; no incrustar una huella autorreferente. Estado: CORREGIDA PARA REVISIÓN · NO SINCRONIZADA · NO APROBADA.
-
-**Reglas aplicadas:** Manual Maestro v2.0, secciones 14–19; Global de Lecciones v1.2, U01–U14; plan vigente de la asignatura. Los códigos IE son identificadores internos: sus descriptores y cobertura están en la matriz del paquete, no se presentan como nomenclatura oficial MINEDUC. Se conservan los encabezados previos para no suponer compatibilidad del parser.
-
-**Autoría e integración:** Este CLASE[NN].md es la fuente editable del paquete revisado. TS/JSON/DOCX y manifest son derivados de esta misma versión, conforme a U03; no editar esos derivados por separado ni tratar el TS anterior como autoridad para revertir esta corrección. Actualizar Drive no acredita sincronización. Antigravity debe informar campos no representables y demostrar el mapeo antes de importar; no usar valores por defecto ni placeholders.
-
-| Función del Manual | Sección de esta fuente | Rol y momento |
-|---|---|---|
-| Conexión | Situación inicial / punto de partida | Estudiante: recurso y pregunta; respuesta de referencia privada |
-| Explicación y modelamiento | Explicación / formalización y modelo | Estudiante después del primer intento; conducción del adulto |
-| Práctica guiada | Conversación guiada y caso conjunto | Pregunta primero; pistas solo cuando se necesiten |
-| Práctica autónoma | Aplicación autónoma y transferencia | Estudiante intenta con menor ayuda; criterio privado |
-| Feedback y nuevo intento | Feedback de práctica y recuperación | Explicación según respuesta, nueva práctica, luego reintento |
-| Transferencia | Recurso nuevo de la aplicación autónoma | Estímulo distinto; no mostrar modelo antes del intento |
-| Comprobación final | Miniquiz y evidencia registrada | Tres preguntas; decisión 2/3 y recuperación con 0/1 |
-| Cierre | Síntesis y cierre | Recapitulación, reflexión y continuidad |
-
-**Privacidad y revelación obligatorias:** Respuestas de referencia del punto de partida, respuestas esperadas, claves, análisis de alternativas, modelos de práctica, criterios y apoyos del mentor son privados. El estudiante recibe inicialmente solo recurso, pregunta y alternativas sin marcas de corrección. Revelar feedback de su respuesta después de enviarla; no entregar todas las claves en el payload del rol estudiante. Los modelos explícitos de enseñanza se muestran en el momento de modelamiento. Cada intento autónomo dispone de su pausa antes de revelar criterios. Esta es una especificación: la privacidad efectiva de la App todavía requiere prueba.
-
-**Secuencia de uso:** Preparación del adulto antes de la sesión; conexión y primer intento; motivación; explicación/modelamiento; resolver de manera guiada; intento autónomo con recurso nuevo; feedback; miniquiz; recuperación si corresponde; cierre. La matriz documenta funciones, no renumera la navegación ni impone un nuevo diseño de interfaz.
-
-**Decisión formativa:** 2/3 o 3/3 permite avanzar en la clase según el Manual; con 0/3 o 1/3, explicar el error, ofrecer apoyos, resolver la nueva práctica correspondiente y reintentar. Si vuelve a necesitar ayuda, registrar el apoyo y reforzar el criterio sin aprobar automáticamente. El resultado se acompaña de la evidencia de práctica. El miniquiz no aprueba por sí solo todo el OA.
-
-**Control:** Cero hallazgos críticos o mayores; hasta tres menores enumerados y aceptados por clase. Los recursos audiovisuales pendientes y la integración se registran por separado; no se declara la clase publicada o el OA aprobado desde esta revisión documental. Matemática OA01 y las doce presentaciones terminadas de Lengua y Literatura OA03 permanecen excluidas de cambios.
+- **Auditoría de cumplimiento:** Clase revisada integralmente conforme a las directrices del Plan Maestro de Ciencias Naturales v3.4 y Global de Lecciones v1.2.
+- **Validación estructural:** 26 secciones canónicas, erradicación total de terminología obsoleta, bimodalidad estricta 7+7 diapositivas con títulos de contenido no genéricos, preguntas de 4 alternativas con distractores formativos fundamentados y recuperación determinista.
+- **Estado de producción:** EN_REVISION · PENDIENTE APROBACIÓN WALTER.

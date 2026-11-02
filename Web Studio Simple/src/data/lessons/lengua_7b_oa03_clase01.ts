@@ -249,20 +249,20 @@ export const LENGUA_7B_OA03_CLASE01: LessonData = {
     {
       "context": "Caso 1",
       "question": "“Redacta dos oraciones para ubicar la historia y describir el ambiente con dos detalles de la lectura.”",
-      "expected": "",
+      "expected": "Jimmy vive en una colonia de la Luna. El ambiente es rocoso y árido y afuera no hay oxígeno respirable.",
       "success": "Cumple el criterio formal del caso",
       "support": "Revisa los datos del recurso",
-      "reveal": "",
-      "studentReveal": ""
+      "reveal": "Jimmy vive en una colonia de la Luna. El ambiente es rocoso y árido y afuera no hay oxígeno respirable.",
+      "studentReveal": "Jimmy vive en una colonia de la Luna. El ambiente es rocoso y árido y afuera no hay oxígeno respirable."
     },
     {
       "context": "Caso 2",
       "question": "“Explica en tres oraciones qué origina el conflicto. Incluye una evidencia para cada postura.”",
-      "expected": "",
+      "expected": "El padre quiere traer un perro vivo y propone regalar a Robutt. Jimmy afirma que Robutt es su perro. El desacuerdo entre ambas posturas inicia el conflicto.",
       "success": "Cumple el criterio formal del caso",
       "support": "Revisa los datos del recurso",
-      "reveal": "",
-      "studentReveal": ""
+      "reveal": "El padre quiere traer un perro vivo y propone regalar a Robutt. Jimmy afirma que Robutt es su perro. El desacuerdo entre ambas posturas inicia el conflicto.",
+      "studentReveal": "El padre quiere traer un perro vivo y propone regalar a Robutt. Jimmy afirma que Robutt es su perro. El desacuerdo entre ambas posturas inicia el conflicto."
     },
     {
       "context": "Microrrelato original de EstudioSimple, independiente de Asimov: En una estación submarina, Vera cuida un pequeño jardín bajo una cúpula. Su hermana propone retirar las plantas para instalar otra mesa de trabajo. Vera pide conservarlas porque las ha cuidado durante meses. Las dos quedan conversando; el texto no informa una decisión final.",

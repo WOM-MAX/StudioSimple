@@ -1,0 +1,2037 @@
+================================================================================
+STUDIOSIMPLE - PAQUETE DE PROMPTS Y GUIONES OFICIALES PARA CHATGPT WORK
+ASIGNATURA: CIENCIAS NATURALES | CURSO: 7° BÁSICO | OBJETIVO: OA 01
+ARCHIVO: Prompts_Work_Ciencias_7B_OA01_2026-10-28_09-14.txt
+PAQUETE COMPLETO: 6 LECCIONES CANÓNICAS (14 LÁMINAS POR LECCIÓN = 84 LÁMINAS)
+FECHA Y HORA DE ACTUALIZACIÓN OFICIAL: 2026-10-28 09:14:21 [America/Santiago]
+================================================================================
+
+################################################################################
+LECCIÓN 1 DE 6: LA SEXUALIDAD INTEGRA DISTINTAS DIMENSIONES
+################################################################################
+
+================================================================================
+STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 28-10-2026, 9:14:21 a. m. (America/Santiago)
+================================================================================
+
+FICHA CURRICULAR:
+• Asignatura: Ciencias Naturales
+• Nivel / Curso: 7° Básico
+• Objetivo de Aprendizaje: OA 1 - Ciencias Naturales - OA 1
+• Clase: 1 de 6 ("La sexualidad integra distintas dimensiones")
+• Duracion Estimada: 30 Minutos
+
+DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
+1. Proporcion Widescreen 16:9 estricto (1920x1080).
+2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
+3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
+4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
+5. Duraciones Planificadas de Producción Audiovisual:
+   • Video Gancho: 60 segundos de duración planificada distribuidos en 7 diapositivas.
+   • Video Explicativo: 90 segundos de duración planificada distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (48 pt, maximo 8 palabras); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (48 pt, maximo 8 palabras). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes.
+7. Logotipo Oficial: Codex/Work incorpora el logo blanco de EstudioSimple en la esquina inferior derecha del PPTX al tamano del video de referencia. No pedir a la IA que dibuje el logo dentro de la imagen; dejar espacio negativo.
+8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. No se exige medir con cronómetro, contar palabras ni reexportar por unos segundos adicionales.
+
+================================================================================
+MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Motivación
+• DILE ANTES DEL VIDEO: "Hoy estudiaremos cómo se relacionan distintas dimensiones de la sexualidad. Trabajaremos con ejemplos ficticios; no es necesario contar experiencias personales."
+• INSTRUCCION AL ESTUDIANTE: "Observa y reflexiona con las escenas del video."
+• DILE DESPUES DEL VIDEO: "¿Qué observaste en esta situación inicial?"
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Un caso / cotidiano
+3. Subtítulo en Pantalla (48 pt): ¿Qué aspectos / aparecen?
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Un caso / cotidiano
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "En este caso ficticio, la estudiante prepara una presentación y conversa con un compañero de confianza. Observemos las pistas antes de explicar qué significan."
+
+--- DIAPOSITIVA 2: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Distintas / pistas
+3. Subtítulo en Pantalla (48 pt): Observa sin / suponer
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Distintas / pistas
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "En la historia, la estudiante dice que siente nervios y piensa qué idea valora expresar. Tenemos pistas distintas, pero todavía no las clasificaremos."
+
+--- DIAPOSITIVA 3: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Mirada / parcial
+3. Subtítulo en Pantalla (48 pt): ¿Basta mirar / el cuerpo?
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Mirada / parcial
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Si miramos únicamente el cuerpo, ¿entendemos también sus emociones y su conversación? Pensemos qué detalles quedarían fuera al observar una sola parte."
+
+--- DIAPOSITIVA 4: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Busca / pistas
+3. Subtítulo en Pantalla (48 pt): ¿Qué podemos / describir?
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Busca / pistas
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Revisemos sus apuntes y lo que cuenta el relato. ¿Qué hace, qué siente y con quién conversa? Describamos esas pistas sin añadir suposiciones."
+
+--- DIAPOSITIVA 5: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Ordena / las pistas
+3. Subtítulo en Pantalla (48 pt): ¿Qué recurso puede / ayudar?
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Ordena / las pistas
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Para ordenar las pistas necesitamos un criterio. ¿Qué recurso podría ayudarnos a relacionarlas con cuidado y explicar mejor la situación?"
+
+--- DIAPOSITIVA 6: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Mirada / integral
+3. Subtítulo en Pantalla (48 pt): ¿Qué significa mirar / integralmente?
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Mirada / integral
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "¿Qué significa explicar la sexualidad de manera integral? Dejemos abierta la pregunta mientras buscamos una herramienta para reconocer y relacionar las pistas."
+
+--- DIAPOSITIVA 7: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Pregunta / abierta
+3. Subtítulo en Pantalla (48 pt): Revisemos ahora el / esquema original
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Pregunta / abierta
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Ahora consultaremos el esquema del Texto Escolar. Buscaremos una explicación que considere la situación completa."
+
+================================================================================
+MODULO 2: PROMPT VIDEO EXPLICATIVO CONCEPTUAL (PASO 4 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: La sexualidad es un componente esencial de cada ser humano. El texto escolar la explica mediante cinco dimensiones relacionadas: física, intelectual, social, emocional y espiritual.
+• Idea Clave: "Las dimensiones ayudan a mirar diferentes aspectos de una persona. En experiencias reales se relacionan; no siempre aparece una sola dimensión aislada."
+• DILE ANTES DEL VIDEO: "Completa: una visión integral incluye ___, ___ y ___, además de considerar otras dimensiones del esquema."
+• INSTRUCCION: "Clasifica el caso ficticio: “Una persona se siente nerviosa, conversa con una amiga y piensa qué decisión coincide con sus valores.”"
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 8: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Objetivo
+3. Subtítulo en Pantalla (48 pt): Comprender una / visión integral
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Objetivo
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Explicar que la sexualidad comprende más que el aspecto físico, identificando las cinco dimensiones que presenta el Texto Escolar y relacionándolas con los aspectos biológicos, afectivos y sociales señalados en el OA."
+
+--- DIAPOSITIVA 9: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): El esquema
+3. Subtítulo en Pantalla (48 pt): Cinco dimensiones / del Texto Escolar
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): El esquema
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "En el libro, física se refiere a caracteres sexuales primarios y secundarios; emocional, a emociones y sentimientos; social, a amistades y familia. Intelectual incluye personalidad, autoconocimiento, convicciones y valores. Espiritual considera aceptación de sí y sentido trascendente."
+
+--- DIAPOSITIVA 10: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Del libro / al OA
+3. Subtítulo en Pantalla (48 pt): Relaciona ambos / marcos
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Del libro / al OA
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "El cuerpo se relaciona con lo biológico, las emociones con lo afectivo y los vínculos con lo social. Las cinco dimensiones del libro conservan sus nombres; no son equivalencias exactas."
+
+--- DIAPOSITIVA 11: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Un caso / ficticio
+3. Subtítulo en Pantalla (48 pt): Nervios: / dimensión emocional
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Un caso / ficticio
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Retomemos a la estudiante ficticia: prepara una presentación, siente nervios, conversa con alguien de confianza y reflexiona sobre sus valores. Los nervios son una emoción; por eso corresponden a la dimensión emocional."
+
+--- DIAPOSITIVA 12: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Valores / y vínculos
+3. Subtítulo en Pantalla (48 pt): Valores: intelectual / Conversación: social
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Valores / y vínculos
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "La conversación muestra un vínculo: dimensión social. Reflexionar sobre valores corresponde a intelectual según este esquema. Así, identificamos tres pistas y justificamos cada relación, sin atribuir otras dimensiones que el caso no demuestra."
+
+--- DIAPOSITIVA 13: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): No es solo / física
+3. Subtítulo en Pantalla (48 pt): Lo físico no explica / todas las pistas
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): No es solo / física
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Decir que esta experiencia es solo física omite sus emociones, vínculos y valores. Esas pistas justifican una explicación integral."
+
+--- DIAPOSITIVA 14: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Una visión / integral
+3. Subtítulo en Pantalla (48 pt): Relaciona las pistas / y justifica
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Una visión / integral
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Una explicación integral relaciona dimensiones con pistas del caso. En la práctica leeremos el esquema original y justificaremos nuestras asociaciones."
+
+================================================================================
+MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
+================================================================================
+
+[PREPARACION DEL ADULTO / MENTOR]
+• Objetivo del Adulto: Explicar que la sexualidad comprende más que el aspecto físico, identificando las cinco dimensiones que presenta el Texto Escolar y relacionándolas con los aspectos biológicos, afectivos y sociales señalados en el OA.
+• Ruta de Hoy: Observar el esquema → distinguir sus dimensiones → relacionarlas → explicar por qué se integran.
+• Recordatorios Pedagogicos del Mentor:
+  1. Presenta la tabla textual de cinco dimensiones incluida en esta clase; puedes consultar también la página original impresa 116 / PDF físico 118.
+  2. Explica los términos con calma y usa los ejemplos de esta lección.
+  3. La página organiza el tema en cinco dimensiones: física, intelectual, social, emocional y espiritual.
+  4. El OA expresa su aprendizaje mediante tres aspectos integrados: biológico, afectivo y social. Son dos marcos de organización relacionados; no reemplaces las cinco etiquetas del libro por una lista distinta.
+• Clima Emocional y Acogida: "Permite que el estudiante responda usando los casos ficticios. No pidas que describa su cuerpo, identidad, relaciones, creencias ni experiencias íntimas."
+
+--------------------------------------------------------------------------------
+[PASO 1: INICIO (4 SUB-ETAPAS CANONICAS)]
+--------------------------------------------------------------------------------
+Sub-etapa 1: Nuestra Ruta de la Asignatura
+• DILE AL ESTUDIANTE (Apertura de la ruta): "Hoy avanzaremos en una nueva clase interactiva."
+• 4 Bloques Tematicos de la Asignatura:
+  Bloque 01: Abrimos la pregunta (¿La sexualidad se limita a lo físico?)
+  Bloque 02: Leemos el esquema (Cinco dimensiones del libro)
+  Bloque 03: Conectamos aspectos (Biológico, afectivo y social)
+  Bloque 04: Explicamos con ejemplos (Situaciones ficticias y síntesis)
+
+Sub-etapa 2: La Clase de Hoy
+• DILE AL ESTUDIANTE (Foco didactico): "Hoy estudiaremos cómo se relacionan distintas dimensiones de la sexualidad. Trabajaremos con ejemplos ficticios; no es necesario contar experiencias personales."
+
+Sub-etapa 3: Situacion Inicial de Exploracion (Detonante)
+• DILE AL ESTUDIANTE (Situacion detonante): "Hoy estudiaremos cómo se relacionan distintas dimensiones de la sexualidad. Trabajaremos con ejemplos ficticios; no es necesario contar experiencias personales."
+• RESPUESTA ESPERADA: Puede señalar que no; se aceptan explicaciones propias.
+• PISTA SOCRATICA (SOLO PARA TI): "¿Qué elementos aparecen además del cuerpo?"
+• CLIMA EMOCIONAL: "Permite que el estudiante responda usando los casos ficticios. No pidas que describa su cuerpo, identidad, relaciones, creencias ni experiencias íntimas."
+• Pautas de Evaluacion Formativa del Mentor:
+  - [Acierto] Puede señalar que no; se aceptan explicaciones propias. -> Feedback: "¡Muy bien observado!"
+  - [Requiere Apoyo] Requiere apoyo adicional -> Feedback: "Revisa nuevamente la situación inicial."
+  - [Requiere Apoyo] No sabe qué responder -> Feedback: "Leamos juntos para descubrir la pista."
+
+Sub-etapa 4: Comprendamos la Respuesta (Punto de Referencia)
+• DILE AL ESTUDIANTE (Formalizacion de referencia): "¿El esquema del libro nombra cuatro o cinco dimensiones? Di cuáles."
+• PREGUNTALE AL ESTUDIANTE: "¿Qué información entrega el punto de partida?"
+• RESPUESTA ESPERADA: Puede señalar que no; se aceptan explicaciones propias.
+• PISTA SOCRATICA: "Localiza las palabras clave."
+• FEEDBACK SI ACIERTA: "¡Excelente fundamentación!"
+• FEEDBACK SI NECESITA APOYO: "¿Qué elementos aparecen además del cuerpo?"
+
+--------------------------------------------------------------------------------
+[PASO 3: RECORRIDO - CONVERSACION GUIADA Y PREGUNTAS SOCRATICAS]
+--------------------------------------------------------------------------------
+• Contexto de Apertura Socratica: "Diálogo guiado para profundizar en los elementos clave."
+
+Item 1 (Página impresa 116.):
+• Pregunta Socratica: "¿Qué cinco dimensiones nombra el libro?"
+• Respuesta Esperada: Física, intelectual, social, emocional y espiritual.
+• Feedback de Exito: "Nombra las cinco con apoyo visual disponible."
+• Pista de Apoyo Socratica: "Recorre las etiquetas alrededor del concepto central."
+• Revelacion: "La página nombra esas cinco dimensiones; no sustituirlas por los tres aspectos que enuncia el OA."
+
+Item 2 (Caso ficticio del personaje que prepara una presentación y conversa con alguien de confianza.):
+• Pregunta Socratica: "¿Qué dimensiones aparecen cuando siente nervios, reflexiona sobre una idea que valora expresar y conversa con una persona cercana?"
+• Respuesta Esperada: Emocional (nervios), intelectual (reflexionar sobre una idea que valora expresar) y social (interacción con otra persona). Puede haber más de una dimensión relacionada con un mismo hecho si lo explica.
+• Feedback de Exito: "Señala dos dimensiones y vincula cada una con una pista."
+• Pista de Apoyo Socratica: "¿Qué siente? ¿Qué idea valora expresar? ¿Con quién interactúa?"
+• Revelacion: "La clasificación depende de la pista: nervios corresponde a lo emocional, reflexionar sobre valores a lo intelectual, según la descripción de este libro y conversar con alguien a lo social."
+
+Item 3 (Objetivo oficial y esquema del libro.):
+• Pregunta Socratica: "¿Por qué el libro ofrece una visión más completa que decir que la sexualidad es solo física?"
+• Respuesta Esperada: Porque considera varias dimensiones de la persona, como emociones, ideas, relaciones y valores, además del cuerpo. Debe aceptarse una explicación equivalente.
+• Feedback de Exito: "Explica que el fenómeno es multidimensional y ofrece un ejemplo."
+• Pista de Apoyo Socratica: "¿Qué elementos del esquema quedarían fuera si miráramos solo el cuerpo?"
+• Revelacion: "La respuesta debe mostrar que el enfoque físico no abarca las otras dimensiones; aceptar formulaciones equivalentes basadas en el esquema."
+
+--------------------------------------------------------------------------------
+[PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
+--------------------------------------------------------------------------------
+Comprobacion 1 (Comprobación 1):
+• Pregunta: "¿El esquema del libro nombra cuatro o cinco dimensiones? Di cuáles."
+• Respuesta Esperada: Cinco: física, intelectual, social, emocional y espiritual.
+• Pista de Apoyo: "Revisa el concepto clave expuesto"
+• Revelacion: "Cinco: física, intelectual, social, emocional y espiritual."
+
+Comprobacion 2 (Comprobación 2):
+• Pregunta: "¿Por qué una experiencia puede relacionarse con más de una dimensión?"
+• Respuesta Esperada: Porque una persona puede sentir, pensar, relacionarse y vivir aspectos corporales en una misma situación; las dimensiones se conectan.
+• Pista de Apoyo: "Revisa el concepto clave expuesto"
+• Revelacion: "Porque una persona puede sentir, pensar, relacionarse y vivir aspectos corporales en una misma situación; las dimensiones se conectan."
+
+--------------------------------------------------------------------------------
+[PASO 5: PRACTICA EN EL CUADERNO FISICO]
+--------------------------------------------------------------------------------
+Ejercicio 1 (Texto Escolar, página impresa 116.
+- **Datos:** El libro presenta cinco dimensiones y una breve descripción de cada una.):
+• Enunciado de Aplicacion: "“Copia los cinco nombres y escribe junto a cada uno una palabra o frase clave del esquema.”"
+• Respuesta Esperada: Física–cuerpo; intelectual–personalidad/autoconocimiento/convicciones/valores; social–amigos/familia; emocional–sentimientos; espiritual–aceptación de sí/sentido trascendente, respetando las etiquetas impresas en el esquema original.
+• Feedback de Exito: "Las cinco categorías son correctas y cada frase representa la descripción de la página."
+• Pista de Apoyo Socratica: "Usar las cinco filas de la tabla textual de dimensiones incluida en esta clase. Los íconos son opcionales; no dependen de un recurso de cuatro categorías."
+
+Ejercicio 2 (Una estudiante ficticia prepara una presentación, se siente nerviosa, conversa con su hermana y reflexiona sobre sus valores.
+- **Datos:** Hay emociones, interacción social, ideas y reflexión personal.):
+• Enunciado de Aplicacion: "“Identifica tres dimensiones presentes y explica qué pista corresponde a cada una.”"
+• Respuesta Esperada: Emocional (nervios), social (conversación) e intelectual (reflexión sobre valores). Las etiquetas y descripciones de intelectual y espiritual se verifican directamente en el esquema original; aceptar una asociación justificada sin inferirla solo por una palabra aislada.
+• Feedback de Exito: "Relaciona pistas concretas con dimensiones correctamente."
+• Pista de Apoyo Socratica: "Preguntar: “¿Qué siente? ¿Con quién interactúa? ¿Qué piensa o valora?"
+
+Ejercicio 3 (Caso ficticio nuevo: Luz participa en un taller. Siente alegría al colaborar, conversa con sus compañeros y decide expresar una convicción que considera importante. El caso no describe cambios corporales ni una búsqueda de sentido trascendente.):
+• Enunciado de Aplicacion: "Identifica tres dimensiones que tengan una pista explícita y explica por qué no corresponde forzar las cinco en este caso. Después nombra las cinco del esquema, diferenciando el esquema completo de las pistas del caso."
+• Respuesta Esperada: Emocional: alegría; social: conversación; intelectual: convicción. El esquema completo añade física y espiritual, pero el caso no aporta pistas suficientes para esas dos. Una mirada integral relaciona dimensiones sin inventar evidencias.
+• Feedback de Exito: "Aplica el criterio de la clase de manera autónoma en un recurso nuevo"
+• Pista de Apoyo Socratica: "Comprobar cada elemento pedido y su evidencia; aceptar formulaciones equivalentes. Si falta una relación, pedir que señale la pista y explique qué demuestra; después ofrecer el modelo y un nuevo intento. Registrar respuesta, apoyos y criterio por reforzar."
+
+--------------------------------------------------------------------------------
+[PASO 6: RESUMEN Y ESTRATEGIA DE PENSAMIENTO]
+--------------------------------------------------------------------------------
+• Idea Clave: "Las dimensiones ayudan a mirar diferentes aspectos de una persona. En experiencias reales se relacionan; no siempre aparece una sola dimensión aislada."
+• 3 Ideas Clave Estructuradas de Sintesis:
+  - Idea clave: **Cinco dimensiones del libro:** física, intelectual, social, emocional y espiritual.
+  - Idea clave: **Aspectos que integra el OA:** biológicos, afectivos y sociales.
+  - Idea clave: **Visión integral:** una situación puede implicar varias dimensiones; mirar solo el cuerpo deja fuera otros aspectos.
+
+--------------------------------------------------------------------------------
+[PASO 7: MINIQUIZ FORMATIVO Y FASE REVISAR]
+--------------------------------------------------------------------------------
+Pregunta 1: ¿Cuántas dimensiones presenta el esquema de la página 116?
+  A) A. Tres: biológica, afectiva y social. 
+  B) B. Cuatro: corporal, familiar, escolar y cultural. 
+  C) C. Seis: física, biológica, afectiva, social, escolar y familiar. 
+  D) D. Cinco: física, intelectual, social, emocional y espiritual. [CORRECTA]
+• Explicacion Formativa del Error: "El OA destaca tres aspectos, mientras el esquema del libro presenta cinco dimensiones. Revisa los rótulos de la página."
+
+Pregunta 2: ¿Qué explicación refleja mejor una visión integral de la sexualidad?
+  A) A. Solo considera los cambios visibles del cuerpo. 
+  B) B. Considera aspectos corporales, emocionales, sociales y otros de la persona que se relacionan. [CORRECTA]
+  C) C. Se refiere exclusivamente a las opiniones de la familia. 
+  D) D. Solo aparece durante la pubertad. 
+• Explicacion Formativa del Error: "El libro describe un concepto que abarca diferentes dimensiones; no lo limita al cuerpo ni a una sola etapa."
+
+Pregunta 3: En el ejemplo ficticio, una persona conversa con su familia y sus amistades, que influyen en cómo se siente. ¿Qué dimensión del esquema permite analizar principalmente esa influencia?
+  A) A. Física. 
+  B) B. Espiritual. 
+  C) C. Social. [CORRECTA]
+  D) D. Intelectual. 
+• Explicacion Formativa del Error: "La dimensión social considera factores del entorno, incluidas amistades y familia."
+
+--------------------------------------------------------------------------------
+[PASO 7B: MODULO DE RECUPERACION FORMATIVA]
+--------------------------------------------------------------------------------
+Refuerzo 1 (Nueva práctica para el reactivo 1):
+• Explicacion Previa: "Revisa los conceptos clave del reactivo 1."
+• Pregunta: "Escribe las cinco etiquetas del esquema sin sustituirlas por los tres aspectos del OA."
+• Opciones: [Práctica abierta en cuaderno]
+• Respuesta esperada / Criterio: Física, intelectual, social, emocional y espiritual. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
+• Refuerzo si falla: "Buscar estas expresiones del recurso nuevo: «Física»; «intelectual»; «social»; «emocional». Señalar las palabras del caso que permiten responder, sin mostrar la solución."
+
+Refuerzo 2 (Nueva práctica para el reactivo 2):
+• Explicacion Previa: "Revisa los conceptos clave del reactivo 2."
+• Pregunta: "Explica qué quedaría sin analizar si solo miráramos el cuerpo en este caso."
+• Opciones: [Práctica abierta en cuaderno]
+• Respuesta esperada / Criterio: Quedarían fuera el entusiasmo, la conversación y la reflexión sobre convicciones; corresponden a dimensiones emocional, social e intelectual. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
+• Refuerzo si falla: "Buscar estas expresiones del recurso nuevo: «entusiasmo»; «convicciones»; «emocional»; «social». Señalar las palabras del caso que permiten responder, sin mostrar la solución."
+
+Refuerzo 3 (Nueva práctica para el reactivo 3):
+• Explicacion Previa: "Revisa los conceptos clave del reactivo 3."
+• Pregunta: "¿Qué pista permite reconocer la dimensión social y cuál corresponde a la intelectual?"
+• Opciones: [Práctica abierta en cuaderno]
+• Respuesta esperada / Criterio: La conversación con la familia es social; la reflexión sobre convicciones es intelectual. No basta la palabra pensar por sí sola. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
+• Refuerzo si falla: "Buscar estas expresiones del recurso nuevo: «familia»; «social»; «convicciones»; «intelectual». Señalar las palabras del caso que permiten responder, sin mostrar la solución."
+
+--------------------------------------------------------------------------------
+[PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
+--------------------------------------------------------------------------------
+• Pregunta de Sintesis: "“¿Qué tres dimensiones usarías para analizar la situación ficticia de hoy y qué pistas te ayudarían?”"
+• Reflexion Metacognitiva: "“¿Qué te ayudó a comprender las dimensiones: los nombres, sus definiciones o el caso ficticio?”"
+• Celebracion del Logro: "“¡Buen trabajo! Reconociste distintas dimensiones y explicaste por qué se relacionan.”"
+• Felicitacion Final: "“¡Buen trabajo! Reconociste distintas dimensiones y explicaste por qué se relacionan.”"
+• Vista Previa Proxima Clase: "Próxima clase: Cambios físicos y emocionales durante la pubertad."
+
+
+################################################################################
+LECCIÓN 2 DE 6: CAMBIOS FÍSICOS DURANTE LA PUBERTAD
+################################################################################
+
+================================================================================
+STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 28-10-2026, 9:14:21 a. m. (America/Santiago)
+================================================================================
+
+FICHA CURRICULAR:
+• Asignatura: Ciencias Naturales
+• Nivel / Curso: 7° Básico
+• Objetivo de Aprendizaje: OA 1 - Ciencias Naturales - OA 1
+• Clase: 2 de 6 ("Cambios físicos durante la pubertad")
+• Duracion Estimada: 30 Minutos
+
+DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
+1. Proporcion Widescreen 16:9 estricto (1920x1080).
+2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
+3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
+4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
+5. Duraciones Planificadas de Producción Audiovisual:
+   • Video Gancho: 60 segundos de duración planificada distribuidos en 7 diapositivas.
+   • Video Explicativo: 90 segundos de duración planificada distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (48 pt, maximo 8 palabras); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (48 pt, maximo 8 palabras). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes.
+7. Logotipo Oficial: Codex/Work incorpora el logo blanco de EstudioSimple en la esquina inferior derecha del PPTX al tamano del video de referencia. No pedir a la IA que dibuje el logo dentro de la imagen; dejar espacio negativo.
+8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. No se exige medir con cronómetro, contar palabras ni reexportar por unos segundos adicionales.
+
+================================================================================
+MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Motivación
+• DILE ANTES DEL VIDEO: "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso."
+• INSTRUCCION AL ESTUDIANTE: "Observa y reflexiona con las escenas del video."
+• DILE DESPUES DEL VIDEO: "¿Qué observaste en esta situación inicial?"
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Una situación
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Una situación
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Hoy exploraremos cambios físicos durante la pubertad. Observaremos el caso y buscaremos pistas antes de sacar una conclusión."
+
+--- DIAPOSITIVA 2: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): La pregunta
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): La pregunta
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Alex nota un aumento de estatura. Otra persona de su edad aún no nota ese mismo cambio. Mantén a la vista la situación y distingue lo que informa de lo que suponemos."
+
+--- DIAPOSITIVA 3: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Primera idea
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Primera idea
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "¿Qué cambio físico aparece y qué conclusión prudente permite el caso? Puedes plantear una primera idea; después comprobaremos qué información la apoya."
+
+--- DIAPOSITIVA 4: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Busca pistas
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Busca pistas
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Observa la situación. ¿Qué detalle podría ayudarte a responder? Una pista útil debe ayudarnos a responder la pregunta que estamos explorando."
+
+--- DIAPOSITIVA 5: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Compara posibilidades
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Compara posibilidades
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Una respuesta necesita información del recurso. Buscaremos pistas para fundamentarla. Dos respuestas pueden parecer posibles; necesitamos revisar cuál tiene respaldo."
+
+--- DIAPOSITIVA 6: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Una estrategia
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Una estrategia
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Lee el recurso y relaciona sus detalles antes de elegir una explicación. La clase mostrará cómo relacionar las pistas y explicar esa relación paso a paso."
+
+--- DIAPOSITIVA 7: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Puente a la lectura
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Puente a la lectura
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Ahora descubriremos cómo las pistas ayudan a comprender esta situación. Luego aplicarás el criterio a otra situación breve, con menor ayuda."
+
+================================================================================
+MODULO 2: PROMPT VIDEO EXPLICATIVO CONCEPTUAL (PASO 4 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: La pubertad es un proceso de cambios corporales vinculados con la maduración sexual. Los caracteres secundarios, como el vello corporal, se distinguen de los órganos reproductores. Un cambio físico no determina el valor personal ni una capacidad escolar.
+• Idea Clave: "La pubertad es un proceso de cambios corporales vinculados con la maduración sexual. Los caracteres secundarios, como el vello corporal, se distinguen de los órganos reproductores. Un cambio físico no determina el valor personal ni una capacidad escolar."
+• DILE ANTES DEL VIDEO: "Ahora consolidaremos los aprendizajes esenciales."
+• INSTRUCCION: "Registra en tu cuaderno el concepto principal."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 8: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Una herramienta
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Una herramienta
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "El aumento de estatura, el vello corporal y el acné son ejemplos de cambios físicos descritos en el texto."
+
+--- DIAPOSITIVA 9: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): El criterio
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): El criterio
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Los órganos reproductores y los caracteres secundarios pertenecen a la dimensión física, pero son categorías diferentes. El libro describe cambios compartidos y otros que suelen presentarse de manera diferente. No exige que ocurran simultáneamente."
+
+--- DIAPOSITIVA 10: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Relación entre pistas
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Relación entre pistas
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Dos personas de la misma edad pueden mostrar ritmos distintos. La comparación del caso no permite juzgar su valor. Comprender los cambios ayuda a describirlos con respeto. La apariencia no define talentos ni oportunidades."
+
+--- DIAPOSITIVA 11: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Modelo explicado
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo explicado
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Alex nota un aumento de estatura. Otra persona de su edad aún no nota ese mismo cambio. ¿Qué cambio físico aparece y qué conclusión prudente permite el caso? El cambio es el aumento de estatura. El caso permite reconocer que el ritmo de desarrollo puede variar. El recurso nombra el aumento de estatura y señala que los cambios no comienzan al mismo tiempo."
+
+--- DIAPOSITIVA 12: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Comprobación
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Comprobación
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Un compañero dice que quien cambia antes vale más o será mejor estudiante. ¿Por qué esa afirmación no está respaldada por el recurso? Porque un cambio físico no determina el valor personal ni las capacidades escolares. El recurso distingue los cambios corporales de las capacidades y del valor de las personas."
+
+--- DIAPOSITIVA 13: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Error y corrección
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Error y corrección
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Un error que debemos evitar: Usar una edad, estatura o cambio corporal como ranking de valor o madurez emocional."
+
+--- DIAPOSITIVA 14: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Síntesis y práctica
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Síntesis y práctica
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Los cambios físicos tienen ritmos individuales. Lee, localiza evidencia, explica y comprueba. Continúa con la práctica interactiva."
+
+================================================================================
+MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
+================================================================================
+
+[PREPARACION DEL ADULTO / MENTOR]
+• Objetivo del Adulto: Describir cambios físicos de la pubertad y distinguir los cambios corporales de las ideas sociales sobre la apariencia, respetando los ritmos individuales.
+• Ruta de Hoy: Ruta guiada de la clase 2
+• Recordatorios Pedagogicos del Mentor:
+  1. Acompaña al estudiante y valora su proceso.
+• Clima Emocional y Acogida: "Usar exclusivamente los casos ficticios. No solicitar información sobre cuerpo, identidad, vínculos o experiencias íntimas del estudiante. Escuchar con respeto. No diagnosticar ni comparar ritmos de desarrollo."
+
+--------------------------------------------------------------------------------
+[PASO 1: INICIO (4 SUB-ETAPAS CANONICAS)]
+--------------------------------------------------------------------------------
+Sub-etapa 1: Nuestra Ruta de la Asignatura
+• DILE AL ESTUDIANTE (Apertura de la ruta): "Hoy avanzaremos en una nueva clase interactiva."
+• 4 Bloques Tematicos de la Asignatura:
+  Bloque 01: Punto de partida (Activación)
+  Bloque 02: Motivación y Explicación (14 láminas)
+  Bloque 03: Práctica guiada (Transferencia)
+  Bloque 04: Miniquiz (Evaluación y cierre)
+
+Sub-etapa 2: La Clase de Hoy
+• DILE AL ESTUDIANTE (Foco didactico): "Cambios físicos durante la pubertad"
+
+Sub-etapa 3: Situacion Inicial de Exploracion (Detonante)
+• DILE AL ESTUDIANTE (Situacion detonante): "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso."
+• RESPUESTA ESPERADA: El cambio es el aumento de estatura. El caso permite reconocer que el ritmo de desarrollo puede variar.
+• PISTA SOCRATICA (SOLO PARA TI): "Fíjate en los detalles destacados."
+• CLIMA EMOCIONAL: "Usar exclusivamente los casos ficticios. No solicitar información sobre cuerpo, identidad, vínculos o experiencias íntimas del estudiante. Escuchar con respeto. No diagnosticar ni comparar ritmos de desarrollo."
+• Pautas de Evaluacion Formativa del Mentor:
+  - [Acierto] El cambio es el aumento de estatura. El caso permite reconocer que el ritmo de desarrollo puede variar. -> Feedback: "¡Muy bien observado!"
+  - [Requiere Apoyo] Requiere apoyo adicional -> Feedback: "Revisa nuevamente la situación inicial."
+  - [Requiere Apoyo] No sabe qué responder -> Feedback: "Leamos juntos para descubrir la pista."
+
+Sub-etapa 4: Comprendamos la Respuesta (Punto de Referencia)
+• DILE AL ESTUDIANTE (Formalizacion de referencia): "¿Qué cambio físico aparece y qué conclusión prudente permite el caso?"
+• PREGUNTALE AL ESTUDIANTE: "¿Qué información entrega el punto de partida?"
+• RESPUESTA ESPERADA: El cambio es el aumento de estatura. El caso permite reconocer que el ritmo de desarrollo puede variar.
+• PISTA SOCRATICA: "Localiza las palabras clave."
+• FEEDBACK SI ACIERTA: "¡Excelente fundamentación!"
+• FEEDBACK SI NECESITA APOYO: "Revisa la lectura para confirmar los datos."
+
+--------------------------------------------------------------------------------
+[PASO 3: RECORRIDO - CONVERSACION GUIADA Y PREGUNTAS SOCRATICAS]
+--------------------------------------------------------------------------------
+• Contexto de Apertura Socratica: "Diálogo guiado para profundizar en los elementos clave."
+
+Item 1 (Alex nota un aumento de estatura. Otra persona de su edad aún no nota ese mismo cambio.):
+• Pregunta Socratica: "¿Qué cambio físico aparece y qué conclusión prudente permite el caso?"
+• Respuesta Esperada: El cambio es el aumento de estatura. El caso permite reconocer que el ritmo de desarrollo puede variar.
+• Feedback de Exito: "El recurso nombra el aumento de estatura y señala que los cambios no comienzan al mismo tiempo."
+• Pista de Apoyo Socratica: "Si no localiza información, releer esta pista del contexto: «Alex nota un aumento de estatura. Otra persona de su edad aún no nota ese mismo cambio.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta."
+• Revelacion: "El cambio es el aumento de estatura. El caso permite reconocer que el ritmo de desarrollo puede variar. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento."
+
+Item 2 (Un compañero dice que quien cambia antes vale más o será mejor estudiante.):
+• Pregunta Socratica: "¿Por qué esa afirmación no está respaldada por el recurso?"
+• Respuesta Esperada: Porque un cambio físico no determina el valor personal ni las capacidades escolares.
+• Feedback de Exito: "El recurso distingue los cambios corporales de las capacidades y del valor de las personas."
+• Pista de Apoyo Socratica: "Si no localiza información, releer esta pista del contexto: «Un compañero dice que quien cambia antes vale más o será mejor estudiante.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta."
+• Revelacion: "Porque un cambio físico no determina el valor personal ni las capacidades escolares. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento."
+
+--------------------------------------------------------------------------------
+[PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
+--------------------------------------------------------------------------------
+Comprobacion 1 (Comprobación 1):
+• Pregunta: "¿Por qué esa afirmación no está respaldada por el recurso?"
+• Respuesta Esperada: Porque un cambio físico no determina el valor personal ni las capacidades escolares.
+• Pista de Apoyo: "Revisa el concepto clave expuesto"
+• Revelacion: "Porque un cambio físico no determina el valor personal ni las capacidades escolares."
+
+--------------------------------------------------------------------------------
+[PASO 5: PRACTICA EN EL CUADERNO FISICO]
+--------------------------------------------------------------------------------
+Ejercicio 1 (Alex nota un aumento de estatura. Otra persona de su edad aún no nota ese mismo cambio.):
+• Enunciado de Aplicacion: "¿Qué cambio físico aparece y qué conclusión prudente permite el caso? Escribe una respuesta y señala la pista que la sostiene."
+• Respuesta Esperada: El cambio es el aumento de estatura. El caso permite reconocer que el ritmo de desarrollo puede variar.
+• Feedback de Exito: "El recurso nombra el aumento de estatura y señala que los cambios no comienzan al mismo tiempo."
+• Pista de Apoyo Socratica: "Revisa los datos del recurso"
+
+Ejercicio 2 (Un compañero dice que quien cambia antes vale más o será mejor estudiante.):
+• Enunciado de Aplicacion: "¿Por qué esa afirmación no está respaldada por el recurso? Escribe una respuesta y señala la pista que la sostiene."
+• Respuesta Esperada: Porque un cambio físico no determina el valor personal ni las capacidades escolares.
+• Feedback de Exito: "El recurso distingue los cambios corporales de las capacidades y del valor de las personas."
+• Pista de Apoyo Socratica: "Revisa los datos del recurso"
+
+Ejercicio 3 (Caso ficticio nuevo: Ren nota aparición de vello axilar. Su compañero de la misma edad aún no lo nota. Alguien afirma que Ren será mejor estudiante por ese cambio.):
+• Enunciado de Aplicacion: "Distingue el cambio físico, explica qué permiten concluir los ritmos diferentes y rechaza o acepta la afirmación sobre el rendimiento escolar con una razón."
+• Respuesta Esperada: El vello axilar es un carácter sexual secundario. Las personas pueden cambiar en momentos distintos. Este cambio no demuestra capacidad escolar ni mayor valor personal.
+• Feedback de Exito: "Aplica el criterio de la clase de manera autónoma en un recurso nuevo"
+• Pista de Apoyo Socratica: "Comprobar cada elemento pedido y su evidencia; aceptar formulaciones equivalentes. Si falta una relación, pedir que señale la pista y explique qué demuestra; después ofrecer el modelo y un nuevo intento. Registrar respuesta, apoyos y criterio por reforzar."
+
+--------------------------------------------------------------------------------
+[PASO 6: RESUMEN Y ESTRATEGIA DE PENSAMIENTO]
+--------------------------------------------------------------------------------
+• Idea Clave: "La pubertad es un proceso de cambios corporales vinculados con la maduración sexual. Los caracteres secundarios, como el vello corporal, se distinguen de los órganos reproductores. Un cambio físico no determina el valor personal ni una capacidad escolar."
+• 3 Ideas Clave Estructuradas de Sintesis:
+  - Idea clave: Los cambios físicos tienen ritmos individuales.
+  - Concepto central: La pubertad es un proceso de cambios corporales que no determina el valor personal ni las capacidades escolares.
+
+--------------------------------------------------------------------------------
+[PASO 7: MINIQUIZ FORMATIVO Y FASE REVISAR]
+--------------------------------------------------------------------------------
+Pregunta 1: ¿Cuál es un cambio físico descrito en el recurso?
+  A) A. Aumento de estatura [CORRECTA]
+  B) B. Elegir un libro favorito 
+  C) C. Cambiar una opinión sobre una película 
+  D) D. Recibir una invitación 
+• Explicacion Formativa del Error: "El aumento de estatura aparece entre los cambios físicos."
+
+Pregunta 2: ¿Qué distingue el recurso?
+  A) A. La estatura de la inteligencia mediante una fórmula 
+  B) B. Los órganos reproductores de los caracteres sexuales secundarios [CORRECTA]
+  C) C. El valor de las personas según su voz 
+  D) D. Un desarrollo idéntico para todas las personas 
+• Explicacion Formativa del Error: "Ambas categorías se relacionan con el cuerpo, pero no significan lo mismo."
+
+Pregunta 3: ¿Qué conclusión respeta los ritmos individuales?
+  A) A. Todas las personas cambian el mismo día 
+  B) B. Quien cambia antes es más responsable 
+  C) C. Las diferencias de ritmo permiten burlarse 
+  D) D. Las personas pueden mostrar cambios en momentos distintos [CORRECTA]
+• Explicacion Formativa del Error: "El recurso indica que los cambios no comienzan al mismo tiempo ni tienen ritmo idéntico."
+
+--------------------------------------------------------------------------------
+[PASO 7B: MODULO DE RECUPERACION FORMATIVA]
+--------------------------------------------------------------------------------
+Refuerzo 1 (Recuperación 1):
+• Explicacion Previa: "El aumento de estatura aparece entre los cambios físicos."
+• Pregunta: "Nombra el cambio corporal del caso y explica por qué es físico."
+• Opciones: [Práctica abierta en cuaderno]
+• Respuesta esperada / Criterio: El cambio de voz afecta una característica del cuerpo. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
+• Refuerzo si falla: "Buscar estas expresiones del recurso nuevo: «cambio». Señalar las palabras del caso que permiten responder, sin mostrar la solución."
+
+Refuerzo 2 (Recuperación 2):
+• Explicacion Previa: "Ambas categorías se relacionan con el cuerpo, pero no significan lo mismo."
+• Pregunta: "¿El cambio de voz es un órgano reproductor o un carácter secundario? Explica la diferencia."
+• Opciones: [Práctica abierta en cuaderno]
+• Respuesta esperada / Criterio: Es un carácter secundario, no un órgano reproductor. Que ambos se relacionen con la pubertad no los vuelve la misma categoría. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
+• Refuerzo si falla: "Buscar estas expresiones del recurso nuevo: «secundario»; «órgano»; «reproductor». Señalar las palabras del caso que permiten responder, sin mostrar la solución."
+
+Refuerzo 3 (Recuperación 3):
+• Explicacion Previa: "El recurso indica que los cambios no comienzan al mismo tiempo ni tienen ritmo idéntico."
+• Pregunta: "¿Los distintos momentos permiten decidir quién es más responsable? Justifica."
+• Opciones: [Práctica abierta en cuaderno]
+• Respuesta esperada / Criterio: No; los ritmos de cambio no determinan responsabilidad ni valor personal. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
+• Refuerzo si falla: "Buscar estas expresiones del recurso nuevo: «cambio». Señalar las palabras del caso que permiten responder, sin mostrar la solución."
+
+--------------------------------------------------------------------------------
+[PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
+--------------------------------------------------------------------------------
+• Pregunta de Sintesis: "¿Qué cambio físico aparece y qué conclusión prudente permite el caso?"
+• Reflexion Metacognitiva: "¿Qué te ayudó más: leer el recurso, localizar una pista o comparar explicaciones? ¿Por qué?"
+• Celebracion del Logro: "Buen trabajo. Explicaste tu respuesta usando información del recurso."
+• Felicitacion Final: "Buen trabajo. Explicaste tu respuesta usando información del recurso."
+• Vista Previa Proxima Clase: "¡Nos vemos en la próxima lección!"
+
+
+################################################################################
+LECCIÓN 3 DE 6: EMOCIONES, AFECTIVIDAD E IMAGEN PERSONAL
+################################################################################
+
+================================================================================
+STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 28-10-2026, 9:14:21 a. m. (America/Santiago)
+================================================================================
+
+FICHA CURRICULAR:
+• Asignatura: Ciencias Naturales
+• Nivel / Curso: 7° Básico
+• Objetivo de Aprendizaje: OA 1 - Ciencias Naturales - OA 1
+• Clase: 3 de 6 ("Emociones, afectividad e imagen personal")
+• Duracion Estimada: 30 Minutos
+
+DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
+1. Proporcion Widescreen 16:9 estricto (1920x1080).
+2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
+3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
+4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
+5. Duraciones Planificadas de Producción Audiovisual:
+   • Video Gancho: 60 segundos de duración planificada distribuidos en 7 diapositivas.
+   • Video Explicativo: 90 segundos de duración planificada distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (48 pt, maximo 8 palabras); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (48 pt, maximo 8 palabras). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes.
+7. Logotipo Oficial: Codex/Work incorpora el logo blanco de EstudioSimple en la esquina inferior derecha del PPTX al tamano del video de referencia. No pedir a la IA que dibuje el logo dentro de la imagen; dejar espacio negativo.
+8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. No se exige medir con cronómetro, contar palabras ni reexportar por unos segundos adicionales.
+
+================================================================================
+MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Motivación
+• DILE ANTES DEL VIDEO: "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso."
+• INSTRUCCION AL ESTUDIANTE: "Observa y reflexiona con las escenas del video."
+• DILE DESPUES DEL VIDEO: "¿Qué observaste en esta situación inicial?"
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Una situación
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Una situación
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Hoy exploraremos emociones, afectividad e imagen personal. Observaremos el caso y buscaremos pistas antes de sacar una conclusión."
+
+--- DIAPOSITIVA 2: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): La pregunta
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): La pregunta
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Sam se siente inseguro al compararse con una imagen con filtros. Mantén a la vista la situación y distingue lo que informa de lo que suponemos."
+
+--- DIAPOSITIVA 3: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Primera idea
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Primera idea
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "¿Qué aspecto emocional aparece y qué información ayuda a revisar la comparación? Puedes plantear una primera idea; después comprobaremos qué información la apoya."
+
+--- DIAPOSITIVA 4: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Busca pistas
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Busca pistas
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Observa la situación. ¿Qué detalle podría ayudarte a responder? Una pista útil debe ayudarnos a responder la pregunta que estamos explorando."
+
+--- DIAPOSITIVA 5: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Compara posibilidades
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Compara posibilidades
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Una respuesta necesita información del recurso. Buscaremos pistas para fundamentarla. Dos respuestas pueden parecer posibles; necesitamos revisar cuál tiene respaldo."
+
+--- DIAPOSITIVA 6: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Una estrategia
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Una estrategia
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Lee el recurso y relaciona sus detalles antes de elegir una explicación. La clase mostrará cómo relacionar las pistas y explicar esa relación paso a paso."
+
+--- DIAPOSITIVA 7: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Puente a la lectura
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Puente a la lectura
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Ahora descubriremos cómo las pistas ayudan a comprender esta situación. Luego aplicarás el criterio a otra situación breve, con menor ayuda."
+
+================================================================================
+MODULO 2: PROMPT VIDEO EXPLICATIVO CONCEPTUAL (PASO 4 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Un cambio físico afecta el cuerpo. Una emoción o estado de ánimo corresponde a la experiencia afectiva. Reconocer lo que se siente y elegir una respuesta respetuosa permite cuidar los vínculos y pedir apoyo.
+• Idea Clave: "Un cambio físico afecta el cuerpo. Una emoción o estado de ánimo corresponde a la experiencia afectiva. Reconocer lo que se siente y elegir una respuesta respetuosa permite cuidar los vínculos y pedir apoyo."
+• DILE ANTES DEL VIDEO: "Ahora consolidaremos los aprendizajes esenciales."
+• INSTRUCCION: "Registra en tu cuaderno el concepto principal."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 8: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Una herramienta
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Una herramienta
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Un aumento de estatura es físico. Sentir nervios corresponde a la dimensión emocional. Podemos distinguirlos sin separarlos de la persona."
+
+--- DIAPOSITIVA 9: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): El criterio
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): El criterio
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Los sentimientos y estados de ánimo pueden influir en cómo pensamos y nos relacionamos con otros. Una imagen con filtros no representa cómo deben verse todas las personas. El caso invita a revisar esa comparación."
+
+--- DIAPOSITIVA 10: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Relación entre pistas
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Relación entre pistas
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "La amiga escucha a Sam y propone apoyo. Esa acción muestra preocupación por otra persona. Dani siente nervios y elige preparar su presentación y pedir ayuda. La emoción no determina una única conducta."
+
+--- DIAPOSITIVA 11: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Modelo explicado
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo explicado
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Sam se siente inseguro al compararse con una imagen con filtros. ¿Qué aspecto emocional aparece y qué información ayuda a revisar la comparación? Aparece la inseguridad. La comparación puede revisarse porque el filtro modifica la imagen y no establece un modelo obligatorio. El caso menciona el filtro y la emoción de Sam."
+
+--- DIAPOSITIVA 12: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Comprobación
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Comprobación
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Dani siente nervios, prepara una idea y pide ayuda para ensayar. ¿Cómo diferencia el caso emoción y acción? Los nervios son una emoción. Preparar y pedir ayuda son acciones elegidas para enfrentar la situación. El recurso presenta por separado lo que siente Dani y las acciones que realiza."
+
+--- DIAPOSITIVA 13: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Error y corrección
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Error y corrección
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Un error que debemos evitar: Tratar una emoción como una orden inevitable o una imagen con filtros como un estándar obligatorio. Si la respuesta añade información, vuelve al recurso y corrígela."
+
+--- DIAPOSITIVA 14: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Síntesis y práctica
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Síntesis y práctica
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Reconocer emociones ayuda a elegir respuestas de cuidado. Lee, localiza evidencia, explica y comprueba. Continúa con la práctica interactiva."
+
+================================================================================
+MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
+================================================================================
+
+[PREPARACION DEL ADULTO / MENTOR]
+• Objetivo del Adulto: Distinguir cambios emocionales de cambios físicos y explicar respuestas de cuidado ante situaciones ficticias de inseguridad o comparación corporal.
+• Ruta de Hoy: Ruta guiada de la clase 3
+• Recordatorios Pedagogicos del Mentor:
+  1. Acompaña al estudiante y valora su proceso.
+• Clima Emocional y Acogida: "Usar exclusivamente los casos ficticios. No solicitar información sobre cuerpo, identidad, vínculos o experiencias íntimas del estudiante. Escuchar con respeto. No diagnosticar ni comparar ritmos de desarrollo."
+
+--------------------------------------------------------------------------------
+[PASO 1: INICIO (4 SUB-ETAPAS CANONICAS)]
+--------------------------------------------------------------------------------
+Sub-etapa 1: Nuestra Ruta de la Asignatura
+• DILE AL ESTUDIANTE (Apertura de la ruta): "Hoy avanzaremos en una nueva clase interactiva."
+• 4 Bloques Tematicos de la Asignatura:
+  Bloque 01: Punto de partida (Activación)
+  Bloque 02: Motivación y Explicación (14 láminas)
+  Bloque 03: Práctica guiada (Transferencia)
+  Bloque 04: Miniquiz (Evaluación y cierre)
+
+Sub-etapa 2: La Clase de Hoy
+• DILE AL ESTUDIANTE (Foco didactico): "Emociones, afectividad e imagen personal"
+
+Sub-etapa 3: Situacion Inicial de Exploracion (Detonante)
+• DILE AL ESTUDIANTE (Situacion detonante): "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso."
+• RESPUESTA ESPERADA: Aparece la inseguridad. La comparación puede revisarse porque el filtro modifica la imagen y no establece un modelo obligatorio.
+• PISTA SOCRATICA (SOLO PARA TI): "Fíjate en los detalles destacados."
+• CLIMA EMOCIONAL: "Usar exclusivamente los casos ficticios. No solicitar información sobre cuerpo, identidad, vínculos o experiencias íntimas del estudiante. Escuchar con respeto. No diagnosticar ni comparar ritmos de desarrollo."
+• Pautas de Evaluacion Formativa del Mentor:
+  - [Acierto] Aparece la inseguridad. La comparación puede revisarse porque el filtro modifica la imagen y no establece un modelo obligatorio. -> Feedback: "¡Muy bien observado!"
+  - [Requiere Apoyo] Requiere apoyo adicional -> Feedback: "Revisa nuevamente la situación inicial."
+  - [Requiere Apoyo] No sabe qué responder -> Feedback: "Leamos juntos para descubrir la pista."
+
+Sub-etapa 4: Comprendamos la Respuesta (Punto de Referencia)
+• DILE AL ESTUDIANTE (Formalizacion de referencia): "¿Qué aspecto emocional aparece y qué información ayuda a revisar la comparación?"
+• PREGUNTALE AL ESTUDIANTE: "¿Qué información entrega el punto de partida?"
+• RESPUESTA ESPERADA: Aparece la inseguridad. La comparación puede revisarse porque el filtro modifica la imagen y no establece un modelo obligatorio.
+• PISTA SOCRATICA: "Localiza las palabras clave."
+• FEEDBACK SI ACIERTA: "¡Excelente fundamentación!"
+• FEEDBACK SI NECESITA APOYO: "Revisa la lectura para confirmar los datos."
+
+--------------------------------------------------------------------------------
+[PASO 3: RECORRIDO - CONVERSACION GUIADA Y PREGUNTAS SOCRATICAS]
+--------------------------------------------------------------------------------
+• Contexto de Apertura Socratica: "Diálogo guiado para profundizar en los elementos clave."
+
+Item 1 (Sam se siente inseguro al compararse con una imagen con filtros.):
+• Pregunta Socratica: "¿Qué aspecto emocional aparece y qué información ayuda a revisar la comparación?"
+• Respuesta Esperada: Aparece la inseguridad. La comparación puede revisarse porque el filtro modifica la imagen y no establece un modelo obligatorio.
+• Feedback de Exito: "El caso menciona el filtro y la emoción de Sam."
+• Pista de Apoyo Socratica: "Si no localiza información, releer esta pista del contexto: «Sam se siente inseguro al compararse con una imagen con filtros.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta."
+• Revelacion: "Aparece la inseguridad. La comparación puede revisarse porque el filtro modifica la imagen y no establece un modelo obligatorio. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento."
+
+Item 2 (Dani siente nervios, prepara una idea y pide ayuda para ensayar.):
+• Pregunta Socratica: "¿Cómo diferencia el caso emoción y acción?"
+• Respuesta Esperada: Los nervios son una emoción. Preparar y pedir ayuda son acciones elegidas para enfrentar la situación.
+• Feedback de Exito: "El recurso presenta por separado lo que siente Dani y las acciones que realiza."
+• Pista de Apoyo Socratica: "Si no localiza información, releer esta pista del contexto: «Dani siente nervios, prepara una idea y pide ayuda para ensayar.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta."
+• Revelacion: "Los nervios son una emoción. Preparar y pedir ayuda son acciones elegidas para enfrentar la situación. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento."
+
+--------------------------------------------------------------------------------
+[PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
+--------------------------------------------------------------------------------
+Comprobacion 1 (Comprobación 1):
+• Pregunta: "¿Cómo diferencia el caso emoción y acción?"
+• Respuesta Esperada: Los nervios son una emoción. Preparar y pedir ayuda son acciones elegidas para enfrentar la situación.
+• Pista de Apoyo: "Revisa el concepto clave expuesto"
+• Revelacion: "Los nervios son una emoción. Preparar y pedir ayuda son acciones elegidas para enfrentar la situación."
+
+--------------------------------------------------------------------------------
+[PASO 5: PRACTICA EN EL CUADERNO FISICO]
+--------------------------------------------------------------------------------
+Ejercicio 1 (Sam se siente inseguro al compararse con una imagen con filtros.):
+• Enunciado de Aplicacion: "¿Qué aspecto emocional aparece y qué información ayuda a revisar la comparación? Escribe una respuesta y señala la pista que la sostiene."
+• Respuesta Esperada: Aparece la inseguridad. La comparación puede revisarse porque el filtro modifica la imagen y no establece un modelo obligatorio.
+• Feedback de Exito: "El caso menciona el filtro y la emoción de Sam."
+• Pista de Apoyo Socratica: "Revisa los datos del recurso"
+
+Ejercicio 2 (Dani siente nervios, prepara una idea y pide ayuda para ensayar.):
+• Enunciado de Aplicacion: "¿Cómo diferencia el caso emoción y acción? Escribe una respuesta y señala la pista que la sostiene."
+• Respuesta Esperada: Los nervios son una emoción. Preparar y pedir ayuda son acciones elegidas para enfrentar la situación.
+• Feedback de Exito: "El recurso presenta por separado lo que siente Dani y las acciones que realiza."
+• Pista de Apoyo Socratica: "Revisa los datos del recurso"
+
+Ejercicio 3 (Caso ficticio nuevo: Ari siente tristeza al comparar su imagen con una fotografía retocada. Un compañero propone escuchar sin difundir la situación y consultar a una persona de confianza si necesita apoyo.):
+• Enunciado de Aplicacion: "Distingue emoción, imagen modificada y acción de cuidado. Explica qué podría cambiar si el compañero compartiera la situación para burlarse."
+• Respuesta Esperada: La tristeza es emocional; el retoque impide usar la foto como estándar obligatorio; escuchar y buscar apoyo cuida el vínculo. Difundir para burlarse podría aumentar el malestar y vulnerar la privacidad.
+• Feedback de Exito: "Aplica el criterio de la clase de manera autónoma en un recurso nuevo"
+• Pista de Apoyo Socratica: "Comprobar cada elemento pedido y su evidencia; aceptar formulaciones equivalentes. Si falta una relación, pedir que señale la pista y explique qué demuestra; después ofrecer el modelo y un nuevo intento. Registrar respuesta, apoyos y criterio por reforzar."
+
+--------------------------------------------------------------------------------
+[PASO 6: RESUMEN Y ESTRATEGIA DE PENSAMIENTO]
+--------------------------------------------------------------------------------
+• Idea Clave: "Un cambio físico afecta el cuerpo. Una emoción o estado de ánimo corresponde a la experiencia afectiva. Reconocer lo que se siente y elegir una respuesta respetuosa permite cuidar los vínculos y pedir apoyo."
+• 3 Ideas Clave Estructuradas de Sintesis:
+  - Idea clave: Reconocer emociones ayuda a elegir respuestas de cuidado.
+  - Comprensión: Diferenciar las emociones de los cambios corporales permite comprender la afectividad sin reducirla a lo biológico.
+
+--------------------------------------------------------------------------------
+[PASO 7: MINIQUIZ FORMATIVO Y FASE REVISAR]
+--------------------------------------------------------------------------------
+Pregunta 1: ¿Qué corresponde a la dimensión emocional?
+  A) A. La aparición de vello axilar 
+  B) B. El aumento de estatura 
+  C) C. Sentir nervios antes de una presentación [CORRECTA]
+  D) D. La maduración de órganos 
+• Explicacion Formativa del Error: "Los nervios son una emoción; los otros ejemplos corresponden al cuerpo."
+
+Pregunta 2: ¿Qué respuesta demuestra cuidado en el caso de Sam?
+  A) A. Burlarse de su apariencia 
+  B) B. Escuchar y proponer conversar con alguien de confianza [CORRECTA]
+  C) C. Exigir que se vea igual a la imagen 
+  D) D. Difundir su inseguridad entre compañeros 
+• Explicacion Formativa del Error: "La amiga escucha sin burlarse y propone apoyo."
+
+Pregunta 3: ¿Qué muestra el caso de Dani?
+  A) A. Que los nervios obligan a dejar toda actividad 
+  B) B. Que pedir ayuda impide aprender 
+  C) C. Que todas las emociones son iguales 
+  D) D. Que una persona puede reconocer su emoción y elegir cómo actuar [CORRECTA]
+• Explicacion Formativa del Error: "Dani siente nervios y elige acciones para prepararse."
+
+--------------------------------------------------------------------------------
+[PASO 7B: MODULO DE RECUPERACION FORMATIVA]
+--------------------------------------------------------------------------------
+Refuerzo 1 (Recuperación 1):
+• Explicacion Previa: "Los nervios son una emoción; los otros ejemplos corresponden al cuerpo."
+• Pregunta: "¿Qué es emoción y qué es acción elegida?"
+• Opciones: [Práctica abierta en cuaderno]
+• Respuesta esperada / Criterio: Los nervios son emoción; ensayar es una acción elegida. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
+• Refuerzo si falla: "Buscar estas expresiones del recurso nuevo: «nervios»; «ensayar». Señalar las palabras del caso que permiten responder, sin mostrar la solución."
+
+Refuerzo 2 (Recuperación 2):
+• Explicacion Previa: "La amiga escucha sin burlarse y propone apoyo."
+• Pregunta: "Elige entre escuchar en privado o publicar para burlarse y explica el efecto de tu elección."
+• Opciones: [Práctica abierta en cuaderno]
+• Respuesta esperada / Criterio: Escuchar en privado respeta y ofrece apoyo; publicar para burlarse puede aumentar el malestar. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
+• Refuerzo si falla: "Buscar estas expresiones del recurso nuevo: «publicar». Señalar las palabras del caso que permiten responder, sin mostrar la solución."
+
+Refuerzo 3 (Recuperación 3):
+• Explicacion Previa: "Dani siente nervios y elige acciones para prepararse."
+• Pregunta: "¿Sentir nervios obliga a abandonar la lectura? Propón una respuesta de cuidado."
+• Opciones: [Práctica abierta en cuaderno]
+• Respuesta esperada / Criterio: No; puede ensayar, pedir apoyo o acordar una pausa. Se acepta una acción respetuosa justificada. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
+• Refuerzo si falla: "Buscar estas expresiones del recurso nuevo: «ensayar». Señalar las palabras del caso que permiten responder, sin mostrar la solución."
+
+--------------------------------------------------------------------------------
+[PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
+--------------------------------------------------------------------------------
+• Pregunta de Sintesis: "¿Qué aspecto emocional aparece y qué información ayuda a revisar la comparación?"
+• Reflexion Metacognitiva: "¿Qué te ayudó más: leer el recurso, localizar una pista o comparar explicaciones? ¿Por qué?"
+• Celebracion del Logro: "Buen trabajo. Explicaste tu respuesta usando información del recurso."
+• Felicitacion Final: "Buen trabajo. Explicaste tu respuesta usando información del recurso."
+• Vista Previa Proxima Clase: "¡Nos vemos en la próxima lección!"
+
+
+################################################################################
+LECCIÓN 4 DE 6: ASPECTOS SOCIALES Y ESTEREOTIPOS
+################################################################################
+
+================================================================================
+STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 28-10-2026, 9:14:21 a. m. (America/Santiago)
+================================================================================
+
+FICHA CURRICULAR:
+• Asignatura: Ciencias Naturales
+• Nivel / Curso: 7° Básico
+• Objetivo de Aprendizaje: OA 1 - Ciencias Naturales - OA 1
+• Clase: 4 de 6 ("Aspectos sociales y estereotipos")
+• Duracion Estimada: 30 Minutos
+
+DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
+1. Proporcion Widescreen 16:9 estricto (1920x1080).
+2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
+3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
+4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
+5. Duraciones Planificadas de Producción Audiovisual:
+   • Video Gancho: 60 segundos de duración planificada distribuidos en 7 diapositivas.
+   • Video Explicativo: 90 segundos de duración planificada distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (48 pt, maximo 8 palabras); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (48 pt, maximo 8 palabras). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes.
+7. Logotipo Oficial: Codex/Work incorpora el logo blanco de EstudioSimple en la esquina inferior derecha del PPTX al tamano del video de referencia. No pedir a la IA que dibuje el logo dentro de la imagen; dejar espacio negativo.
+8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. No se exige medir con cronómetro, contar palabras ni reexportar por unos segundos adicionales.
+
+================================================================================
+MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Motivación
+• DILE ANTES DEL VIDEO: "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso."
+• INSTRUCCION AL ESTUDIANTE: "Observa y reflexiona con las escenas del video."
+• DILE DESPUES DEL VIDEO: "¿Qué observaste en esta situación inicial?"
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Una situación
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Una situación
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Hoy exploraremos aspectos sociales y estereotipos. Observaremos el caso y buscaremos pistas antes de sacar una conclusión."
+
+--- DIAPOSITIVA 2: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): La pregunta
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): La pregunta
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Valeria quiere construir un robot. Un compañero afirma que las niñas no son buenas para la ciencia. Mantén a la vista la situación y distingue lo que informa de lo que suponemos."
+
+--- DIAPOSITIVA 3: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Primera idea
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Primera idea
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "¿Qué parte es un interés individual y qué parte es un estereotipo? Puedes plantear una primera idea; después comprobaremos qué información la apoya."
+
+--- DIAPOSITIVA 4: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Busca pistas
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Busca pistas
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Observa la situación. ¿Qué detalle podría ayudarte a responder? Una pista útil debe ayudarnos a responder la pregunta que estamos explorando."
+
+--- DIAPOSITIVA 5: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Compara posibilidades
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Compara posibilidades
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Una respuesta necesita información del recurso. Buscaremos pistas para fundamentarla. Dos respuestas pueden parecer posibles; necesitamos revisar cuál tiene respaldo."
+
+--- DIAPOSITIVA 6: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Una estrategia
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Una estrategia
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Lee el recurso y relaciona sus detalles antes de elegir una explicación. La clase mostrará cómo relacionar las pistas y explicar esa relación paso a paso."
+
+--- DIAPOSITIVA 7: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Puente a la lectura
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Puente a la lectura
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Ahora descubriremos cómo las pistas ayudan a comprender esta situación. Luego aplicarás el criterio a otra situación breve, con menor ayuda."
+
+================================================================================
+MODULO 2: PROMPT VIDEO EXPLICATIVO CONCEPTUAL (PASO 4 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Un estereotipo atribuye una característica a todo un grupo sin conocer a cada persona. Una diferencia corporal no demuestra que exista una capacidad, emoción u ocupación exclusiva. Las oportunidades deben considerar a las personas y sus intereses.
+• Idea Clave: "Un estereotipo atribuye una característica a todo un grupo sin conocer a cada persona. Una diferencia corporal no demuestra que exista una capacidad, emoción u ocupación exclusiva. Las oportunidades deben considerar a las personas y sus intereses."
+• DILE ANTES DEL VIDEO: "Ahora consolidaremos los aprendizajes esenciales."
+• INSTRUCCION: "Registra en tu cuaderno el concepto principal."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 8: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Una herramienta
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Una herramienta
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Las amistades y la familia transmiten ideas. Podemos examinar esas ideas sin tratar todas sus opiniones como hechos."
+
+--- DIAPOSITIVA 9: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): El criterio
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): El criterio
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "La frase sobre las niñas y la ciencia atribuye una capacidad a todo un grupo. No considera a Valeria. Valeria quiere construir un robot. Esa información describe su interés y permite darle una oportunidad de aprender."
+
+--- DIAPOSITIVA 10: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Relación entre pistas
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Relación entre pistas
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "La frase que impide a los niños mostrar emociones también generaliza y limita una experiencia humana. Escuchar a Tomás y permitir que Valeria participe evita usar estereotipos para decidir por ellos."
+
+--- DIAPOSITIVA 11: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Modelo explicado
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo explicado
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Valeria quiere construir un robot. Un compañero afirma que las niñas no son buenas para la ciencia. ¿Qué parte es un interés individual y qué parte es un estereotipo? El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo. Una parte habla de una persona y la otra generaliza sobre un grupo."
+
+--- DIAPOSITIVA 12: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Comprobación
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Comprobación
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Tomás expresa tristeza. Una compañera escucha mientras otro le dice que los niños no deben mostrar emociones. ¿Qué respuesta respeta a Tomás y por qué? Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión. El caso presenta una emoción concreta y una regla impuesta a todos los niños."
+
+--- DIAPOSITIVA 13: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Error y corrección
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Error y corrección
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Un error que debemos evitar: Confundir una expectativa social con una capacidad biológica demostrada. Si la respuesta añade información, vuelve al recurso y corrígela."
+
+--- DIAPOSITIVA 14: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Síntesis y práctica
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Síntesis y práctica
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Los estereotipos no deben limitar oportunidades. Lee, localiza evidencia, explica y comprueba. Continúa con la práctica interactiva."
+
+================================================================================
+MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
+================================================================================
+
+[PREPARACION DEL ADULTO / MENTOR]
+• Objetivo del Adulto: Identificar estereotipos de género en situaciones ficticias y explicar por qué no deben limitar talentos, emociones ni oportunidades.
+• Ruta de Hoy: Ruta guiada de la clase 4
+• Recordatorios Pedagogicos del Mentor:
+  1. Acompaña al estudiante y valora su proceso.
+• Clima Emocional y Acogida: "Usar exclusivamente los casos ficticios. No solicitar información sobre cuerpo, identidad, vínculos o experiencias íntimas del estudiante. Escuchar con respeto. No diagnosticar ni comparar ritmos de desarrollo."
+
+--------------------------------------------------------------------------------
+[PASO 1: INICIO (4 SUB-ETAPAS CANONICAS)]
+--------------------------------------------------------------------------------
+Sub-etapa 1: Nuestra Ruta de la Asignatura
+• DILE AL ESTUDIANTE (Apertura de la ruta): "Hoy avanzaremos en una nueva clase interactiva."
+• 4 Bloques Tematicos de la Asignatura:
+  Bloque 01: Punto de partida (Activación)
+  Bloque 02: Motivación y Explicación (14 láminas)
+  Bloque 03: Práctica guiada (Transferencia)
+  Bloque 04: Miniquiz (Evaluación y cierre)
+
+Sub-etapa 2: La Clase de Hoy
+• DILE AL ESTUDIANTE (Foco didactico): "Aspectos sociales y estereotipos"
+
+Sub-etapa 3: Situacion Inicial de Exploracion (Detonante)
+• DILE AL ESTUDIANTE (Situacion detonante): "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso."
+• RESPUESTA ESPERADA: El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo.
+• PISTA SOCRATICA (SOLO PARA TI): "Fíjate en los detalles destacados."
+• CLIMA EMOCIONAL: "Usar exclusivamente los casos ficticios. No solicitar información sobre cuerpo, identidad, vínculos o experiencias íntimas del estudiante. Escuchar con respeto. No diagnosticar ni comparar ritmos de desarrollo."
+• Pautas de Evaluacion Formativa del Mentor:
+  - [Acierto] El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo. -> Feedback: "¡Muy bien observado!"
+  - [Requiere Apoyo] Requiere apoyo adicional -> Feedback: "Revisa nuevamente la situación inicial."
+  - [Requiere Apoyo] No sabe qué responder -> Feedback: "Leamos juntos para descubrir la pista."
+
+Sub-etapa 4: Comprendamos la Respuesta (Punto de Referencia)
+• DILE AL ESTUDIANTE (Formalizacion de referencia): "¿Qué parte es un interés individual y qué parte es un estereotipo?"
+• PREGUNTALE AL ESTUDIANTE: "¿Qué información entrega el punto de partida?"
+• RESPUESTA ESPERADA: El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo.
+• PISTA SOCRATICA: "Localiza las palabras clave."
+• FEEDBACK SI ACIERTA: "¡Excelente fundamentación!"
+• FEEDBACK SI NECESITA APOYO: "Revisa la lectura para confirmar los datos."
+
+--------------------------------------------------------------------------------
+[PASO 3: RECORRIDO - CONVERSACION GUIADA Y PREGUNTAS SOCRATICAS]
+--------------------------------------------------------------------------------
+• Contexto de Apertura Socratica: "Diálogo guiado para profundizar en los elementos clave."
+
+Item 1 (Valeria quiere construir un robot. Un compañero afirma que las niñas no son buenas para la ciencia.):
+• Pregunta Socratica: "¿Qué parte es un interés individual y qué parte es un estereotipo?"
+• Respuesta Esperada: El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo.
+• Feedback de Exito: "Una parte habla de una persona y la otra generaliza sobre un grupo."
+• Pista de Apoyo Socratica: "Si no localiza información, releer esta pista del contexto: «Valeria quiere construir un robot. Un compañero afirma que las niñas no son buenas para la ciencia.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta."
+• Revelacion: "El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento."
+
+Item 2 (Tomás expresa tristeza. Una compañera escucha mientras otro le dice que los niños no deben mostrar emociones.):
+• Pregunta Socratica: "¿Qué respuesta respeta a Tomás y por qué?"
+• Respuesta Esperada: Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión.
+• Feedback de Exito: "El caso presenta una emoción concreta y una regla impuesta a todos los niños."
+• Pista de Apoyo Socratica: "Si no localiza información, releer esta pista del contexto: «Tomás expresa tristeza. Una compañera escucha mientras otro le dice que los niños no deben mostrar emociones.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta."
+• Revelacion: "Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento."
+
+--------------------------------------------------------------------------------
+[PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
+--------------------------------------------------------------------------------
+Comprobacion 1 (Comprobación 1):
+• Pregunta: "¿Qué respuesta respeta a Tomás y por qué?"
+• Respuesta Esperada: Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión.
+• Pista de Apoyo: "Revisa el concepto clave expuesto"
+• Revelacion: "Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión."
+
+--------------------------------------------------------------------------------
+[PASO 5: PRACTICA EN EL CUADERNO FISICO]
+--------------------------------------------------------------------------------
+Ejercicio 1 (Valeria quiere construir un robot. Un compañero afirma que las niñas no son buenas para la ciencia.):
+• Enunciado de Aplicacion: "¿Qué parte es un interés individual y qué parte es un estereotipo? Escribe una respuesta y señala la pista que la sostiene."
+• Respuesta Esperada: El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo.
+• Feedback de Exito: "Una parte habla de una persona y la otra generaliza sobre un grupo."
+• Pista de Apoyo Socratica: "Revisa los datos del recurso"
+
+Ejercicio 2 (Tomás expresa tristeza. Una compañera escucha mientras otro le dice que los niños no deben mostrar emociones.):
+• Enunciado de Aplicacion: "¿Qué respuesta respeta a Tomás y por qué? Escribe una respuesta y señala la pista que la sostiene."
+• Respuesta Esperada: Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión.
+• Feedback de Exito: "El caso presenta una emoción concreta y una regla impuesta a todos los niños."
+• Pista de Apoyo Socratica: "Revisa los datos del recurso"
+
+Ejercicio 3 (Caso ficticio nuevo: Mateo quiere aprender danza. Una compañera afirma que los niños no pueden bailar. El grupo debe decidir cómo organizar un taller para quienes quieran aprender.):
+• Enunciado de Aplicacion: "Identifica el estereotipo, sepáralo del interés de Mateo y propone una regla de participación con una razón."
+• Respuesta Esperada: Decir que los niños no pueden bailar generaliza sobre un grupo; el interés por danza corresponde a Mateo. Una regla abierta a quienes quieran aprender considera intereses y oportunidades, sin esa generalización.
+• Feedback de Exito: "Aplica el criterio de la clase de manera autónoma en un recurso nuevo"
+• Pista de Apoyo Socratica: "Comprobar cada elemento pedido y su evidencia; aceptar formulaciones equivalentes. Si falta una relación, pedir que señale la pista y explique qué demuestra; después ofrecer el modelo y un nuevo intento. Registrar respuesta, apoyos y criterio por reforzar."
+
+--------------------------------------------------------------------------------
+[PASO 6: RESUMEN Y ESTRATEGIA DE PENSAMIENTO]
+--------------------------------------------------------------------------------
+• Idea Clave: "Un estereotipo atribuye una característica a todo un grupo sin conocer a cada persona. Una diferencia corporal no demuestra que exista una capacidad, emoción u ocupación exclusiva. Las oportunidades deben considerar a las personas y sus intereses."
+• 3 Ideas Clave Estructuradas de Sintesis:
+  - Idea clave: Los estereotipos no deben limitar oportunidades.
+  - Comprensión: Distinguir los intereses personales de las expectativas impuestas favorece relaciones sociales basadas en el respeto mutuo.
+
+--------------------------------------------------------------------------------
+[PASO 7: MINIQUIZ FORMATIVO Y FASE REVISAR]
+--------------------------------------------------------------------------------
+Pregunta 1: ¿Qué afirmación es un estereotipo en el recurso?
+  A) A. Valeria quiere construir un robot 
+  B) B. Las niñas no son buenas para la ciencia [CORRECTA]
+  C) C. Tomás expresa tristeza 
+  D) D. Una compañera escucha 
+• Explicacion Formativa del Error: "La afirmación atribuye una capacidad a todo un grupo."
+
+Pregunta 2: ¿Qué acción evita limitar el interés de Valeria?
+  A) A. Permitirle participar y aprender [CORRECTA]
+  B) B. Excluirla por ser niña 
+  C) C. Decidir que debe elegir otra actividad 
+  D) D. Compararla sin escuchar su interés 
+• Explicacion Formativa del Error: "La oportunidad considera su interés individual, sin aplicar la generalización."
+
+Pregunta 3: ¿Por qué escuchar a Tomás es respetuoso?
+  A) A. Porque todos deben sentir lo mismo 
+  B) B. Porque elimina toda emoción 
+  C) C. Porque reconoce su experiencia sin imponer un estereotipo [CORRECTA]
+  D) D. Porque obliga a compartir información íntima 
+• Explicacion Formativa del Error: "Escuchar reconoce una emoción de una persona concreta."
+
+--------------------------------------------------------------------------------
+[PASO 7B: MODULO DE RECUPERACION FORMATIVA]
+--------------------------------------------------------------------------------
+Refuerzo 1 (Recuperación 1):
+• Explicacion Previa: "La afirmación atribuye una capacidad a todo un grupo."
+• Pregunta: "Separa el dato sobre Emilia de la generalización."
+• Opciones: [Práctica abierta en cuaderno]
+• Respuesta esperada / Criterio: Su interés por carpintería es individual; la regla sobre todas las niñas es un estereotipo. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
+• Refuerzo si falla: "Buscar estas expresiones del recurso nuevo: «carpintería»; «todas»; «niñas». Señalar las palabras del caso que permiten responder, sin mostrar la solución."
+
+Refuerzo 2 (Recuperación 2):
+• Explicacion Previa: "La oportunidad considera su interés individual, sin aplicar la generalización."
+• Pregunta: "Propón una decisión sobre su participación y justifícala."
+• Opciones: [Práctica abierta en cuaderno]
+• Respuesta esperada / Criterio: Permitir participar y aprender según su interés y las condiciones comunes del taller, sin excluirla por ser niña. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
+• Refuerzo si falla: "Buscar estas expresiones del recurso nuevo: «aprender»; «niña». Señalar las palabras del caso que permiten responder, sin mostrar la solución."
+
+Refuerzo 3 (Recuperación 3):
+• Explicacion Previa: "Escuchar reconoce una emoción de una persona concreta."
+• Pregunta: "¿Cómo responder a la frustración sin imponer otro estereotipo?"
+• Opciones: [Práctica abierta en cuaderno]
+• Respuesta esperada / Criterio: Escuchar y reconocer su emoción; no exigir que la oculte ni generalizar que un grupo siente de determinada manera. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
+• Refuerzo si falla: "Volver al caso concreto: «Caso nuevo de recuperación: Emilia quiere aprender carpintería. Una persona dice que todas las niñas deben elegir otra actividad. Emilia expresa frustración.». Señalar las palabras del caso que permiten responder, sin mostrar la solución."
+
+--------------------------------------------------------------------------------
+[PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
+--------------------------------------------------------------------------------
+• Pregunta de Sintesis: "¿Qué parte es un interés individual y qué parte es un estereotipo?"
+• Reflexion Metacognitiva: "¿Qué te ayudó más: leer el recurso, localizar una pista o comparar explicaciones? ¿Por qué?"
+• Celebracion del Logro: "Buen trabajo. Explicaste tu respuesta usando información del recurso."
+• Felicitacion Final: "Buen trabajo. Explicaste tu respuesta usando información del recurso."
+• Vista Previa Proxima Clase: "¡Nos vemos en la próxima lección!"
+
+
+################################################################################
+LECCIÓN 5 DE 6: VÍNCULOS AFECTIVOS Y RESPETO MUTUO
+################################################################################
+
+================================================================================
+STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 28-10-2026, 9:14:21 a. m. (America/Santiago)
+================================================================================
+
+FICHA CURRICULAR:
+• Asignatura: Ciencias Naturales
+• Nivel / Curso: 7° Básico
+• Objetivo de Aprendizaje: OA 1 - Ciencias Naturales - OA 1
+• Clase: 5 de 6 ("Vínculos afectivos y respeto mutuo")
+• Duracion Estimada: 30 Minutos
+
+DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
+1. Proporcion Widescreen 16:9 estricto (1920x1080).
+2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
+3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
+4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
+5. Duraciones Planificadas de Producción Audiovisual:
+   • Video Gancho: 60 segundos de duración planificada distribuidos en 7 diapositivas.
+   • Video Explicativo: 90 segundos de duración planificada distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (48 pt, maximo 8 palabras); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (48 pt, maximo 8 palabras). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes.
+7. Logotipo Oficial: Codex/Work incorpora el logo blanco de EstudioSimple en la esquina inferior derecha del PPTX al tamano del video de referencia. No pedir a la IA que dibuje el logo dentro de la imagen; dejar espacio negativo.
+8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. No se exige medir con cronómetro, contar palabras ni reexportar por unos segundos adicionales.
+
+================================================================================
+MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Motivación
+• DILE ANTES DEL VIDEO: "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso."
+• INSTRUCCION AL ESTUDIANTE: "Observa y reflexiona con las escenas del video."
+• DILE DESPUES DEL VIDEO: "¿Qué observaste en esta situación inicial?"
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Una situación
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Una situación
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Hoy exploraremos vínculos afectivos y respeto mutuo. Observaremos el caso y buscaremos pistas antes de sacar una conclusión."
+
+--- DIAPOSITIVA 2: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): La pregunta
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): La pregunta
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Nico prefiere saludar con la mano. Paula acepta sin insistir. Mantén a la vista la situación y distingue lo que informa de lo que suponemos."
+
+--- DIAPOSITIVA 3: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Primera idea
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Primera idea
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "¿Qué acción muestra respeto y cómo cuida el vínculo? Puedes plantear una primera idea; después comprobaremos qué información la apoya."
+
+--- DIAPOSITIVA 4: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Busca pistas
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Busca pistas
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Observa la situación. ¿Qué detalle podría ayudarte a responder? Una pista útil debe ayudarnos a responder la pregunta que estamos explorando."
+
+--- DIAPOSITIVA 5: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Compara posibilidades
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Compara posibilidades
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Una respuesta necesita información del recurso. Buscaremos pistas para fundamentarla. Dos respuestas pueden parecer posibles; necesitamos revisar cuál tiene respaldo."
+
+--- DIAPOSITIVA 6: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Una estrategia
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Una estrategia
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Lee el recurso y relaciona sus detalles antes de elegir una explicación. La clase mostrará cómo relacionar las pistas y explicar esa relación paso a paso."
+
+--- DIAPOSITIVA 7: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Puente a la lectura
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Puente a la lectura
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Ahora descubriremos cómo las pistas ayudan a comprender esta situación. Luego aplicarás el criterio a otra situación breve, con menor ayuda."
+
+================================================================================
+MODULO 2: PROMPT VIDEO EXPLICATIVO CONCEPTUAL (PASO 4 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: El respeto mutuo implica considerar tanto lo que una persona quiere expresar como lo que la otra acepta. Un vínculo afectivo se cuida escuchando, evitando la presión y respetando límites y decisiones.
+• Idea Clave: "El respeto mutuo implica considerar tanto lo que una persona quiere expresar como lo que la otra acepta. Un vínculo afectivo se cuida escuchando, evitando la presión y respetando límites y decisiones."
+• DILE ANTES DEL VIDEO: "Ahora consolidaremos los aprendizajes esenciales."
+• INSTRUCCION: "Registra en tu cuaderno el concepto principal."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 8: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Una herramienta
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Una herramienta
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "La afectividad aparece en vínculos con amistades, familia y pareja. No exige expresar cariño de una sola manera."
+
+--- DIAPOSITIVA 9: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): El criterio
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): El criterio
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Nico prefiere saludar con la mano. Esa preferencia permite saber cómo quiere participar en el saludo. Paula escucha y acepta la preferencia. El cariño puede expresarse mediante un saludo que ambos acepten."
+
+--- DIAPOSITIVA 10: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Relación entre pistas
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Relación entre pistas
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "En el segundo caso, la amiga pide que no publiquen su fotografía. La decisión del grupo debe considerar esa petición. El grupo puede buscar otra forma de celebrar. Respetar un límite permite mantener un vínculo de cuidado."
+
+--- DIAPOSITIVA 11: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Modelo explicado
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo explicado
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Nico prefiere saludar con la mano. Paula acepta sin insistir. ¿Qué acción muestra respeto y cómo cuida el vínculo? Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo. El caso señala que escucha la preferencia y no insiste."
+
+--- DIAPOSITIVA 12: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Comprobación
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Comprobación
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Una amiga pide que no publiquen su fotografía. El grupo puede elegir otra forma de celebrar. ¿Qué decisión demuestra preocupación por la amiga? No publicar la fotografía y acordar otra forma de celebrar que respete su decisión. La amiga expresa un límite claro sobre la fotografía. Revisa la segunda respuesta con los datos de su propio caso."
+
+--- DIAPOSITIVA 13: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Error y corrección
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Error y corrección
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Un error que debemos evitar: Suponer que el cariño permite ignorar un límite o presionar a otra persona. Si la respuesta añade información, vuelve al recurso y corrígela."
+
+--- DIAPOSITIVA 14: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Síntesis y práctica
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Síntesis y práctica
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "El respeto considera los límites de ambas personas. Lee, localiza evidencia, explica y comprueba. Continúa con la práctica interactiva."
+
+================================================================================
+MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
+================================================================================
+
+[PREPARACION DEL ADULTO / MENTOR]
+• Objetivo del Adulto: Explicar cómo el respeto por límites y decisiones personales contribuye al cuidado mutuo en vínculos afectivos usando casos ficticios.
+• Ruta de Hoy: Ruta guiada de la clase 5
+• Recordatorios Pedagogicos del Mentor:
+  1. Acompaña al estudiante y valora su proceso.
+• Clima Emocional y Acogida: "Usar exclusivamente los casos ficticios. No solicitar información sobre cuerpo, identidad, vínculos o experiencias íntimas del estudiante. Escuchar con respeto. No diagnosticar ni comparar ritmos de desarrollo."
+
+--------------------------------------------------------------------------------
+[PASO 1: INICIO (4 SUB-ETAPAS CANONICAS)]
+--------------------------------------------------------------------------------
+Sub-etapa 1: Nuestra Ruta de la Asignatura
+• DILE AL ESTUDIANTE (Apertura de la ruta): "Hoy avanzaremos en una nueva clase interactiva."
+• 4 Bloques Tematicos de la Asignatura:
+  Bloque 01: Punto de partida (Activación)
+  Bloque 02: Motivación y Explicación (14 láminas)
+  Bloque 03: Práctica guiada (Transferencia)
+  Bloque 04: Miniquiz (Evaluación y cierre)
+
+Sub-etapa 2: La Clase de Hoy
+• DILE AL ESTUDIANTE (Foco didactico): "Vínculos afectivos y respeto mutuo"
+
+Sub-etapa 3: Situacion Inicial de Exploracion (Detonante)
+• DILE AL ESTUDIANTE (Situacion detonante): "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso."
+• RESPUESTA ESPERADA: Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo.
+• PISTA SOCRATICA (SOLO PARA TI): "Fíjate en los detalles destacados."
+• CLIMA EMOCIONAL: "Usar exclusivamente los casos ficticios. No solicitar información sobre cuerpo, identidad, vínculos o experiencias íntimas del estudiante. Escuchar con respeto. No diagnosticar ni comparar ritmos de desarrollo."
+• Pautas de Evaluacion Formativa del Mentor:
+  - [Acierto] Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo. -> Feedback: "¡Muy bien observado!"
+  - [Requiere Apoyo] Requiere apoyo adicional -> Feedback: "Revisa nuevamente la situación inicial."
+  - [Requiere Apoyo] No sabe qué responder -> Feedback: "Leamos juntos para descubrir la pista."
+
+Sub-etapa 4: Comprendamos la Respuesta (Punto de Referencia)
+• DILE AL ESTUDIANTE (Formalizacion de referencia): "¿Qué acción muestra respeto y cómo cuida el vínculo?"
+• PREGUNTALE AL ESTUDIANTE: "¿Qué información entrega el punto de partida?"
+• RESPUESTA ESPERADA: Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo.
+• PISTA SOCRATICA: "Localiza las palabras clave."
+• FEEDBACK SI ACIERTA: "¡Excelente fundamentación!"
+• FEEDBACK SI NECESITA APOYO: "Revisa la lectura para confirmar los datos."
+
+--------------------------------------------------------------------------------
+[PASO 3: RECORRIDO - CONVERSACION GUIADA Y PREGUNTAS SOCRATICAS]
+--------------------------------------------------------------------------------
+• Contexto de Apertura Socratica: "Diálogo guiado para profundizar en los elementos clave."
+
+Item 1 (Nico prefiere saludar con la mano. Paula acepta sin insistir.):
+• Pregunta Socratica: "¿Qué acción muestra respeto y cómo cuida el vínculo?"
+• Respuesta Esperada: Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo.
+• Feedback de Exito: "El caso señala que escucha la preferencia y no insiste."
+• Pista de Apoyo Socratica: "Si no localiza información, releer esta pista del contexto: «Nico prefiere saludar con la mano. Paula acepta sin insistir.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta."
+• Revelacion: "Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento."
+
+Item 2 (Una amiga pide que no publiquen su fotografía. El grupo puede elegir otra forma de celebrar.):
+• Pregunta Socratica: "¿Qué decisión demuestra preocupación por la amiga?"
+• Respuesta Esperada: No publicar la fotografía y acordar otra forma de celebrar que respete su decisión.
+• Feedback de Exito: "La amiga expresa un límite claro sobre la fotografía."
+• Pista de Apoyo Socratica: "Si no localiza información, releer esta pista del contexto: «Una amiga pide que no publiquen su fotografía. El grupo puede elegir otra forma de celebrar.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta."
+• Revelacion: "No publicar la fotografía y acordar otra forma de celebrar que respete su decisión. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento."
+
+--------------------------------------------------------------------------------
+[PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
+--------------------------------------------------------------------------------
+Comprobacion 1 (Comprobación 1):
+• Pregunta: "¿Qué decisión demuestra preocupación por la amiga?"
+• Respuesta Esperada: No publicar la fotografía y acordar otra forma de celebrar que respete su decisión.
+• Pista de Apoyo: "Revisa el concepto clave expuesto"
+• Revelacion: "No publicar la fotografía y acordar otra forma de celebrar que respete su decisión."
+
+--------------------------------------------------------------------------------
+[PASO 5: PRACTICA EN EL CUADERNO FISICO]
+--------------------------------------------------------------------------------
+Ejercicio 1 (Nico prefiere saludar con la mano. Paula acepta sin insistir.):
+• Enunciado de Aplicacion: "¿Qué acción muestra respeto y cómo cuida el vínculo? Escribe una respuesta y señala la pista que la sostiene."
+• Respuesta Esperada: Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo.
+• Feedback de Exito: "El caso señala que escucha la preferencia y no insiste."
+• Pista de Apoyo Socratica: "Revisa los datos del recurso"
+
+Ejercicio 2 (Una amiga pide que no publiquen su fotografía. El grupo puede elegir otra forma de celebrar.):
+• Enunciado de Aplicacion: "¿Qué decisión demuestra preocupación por la amiga? Escribe una respuesta y señala la pista que la sostiene."
+• Respuesta Esperada: No publicar la fotografía y acordar otra forma de celebrar que respete su decisión.
+• Feedback de Exito: "La amiga expresa un límite claro sobre la fotografía."
+• Pista de Apoyo Socratica: "Revisa los datos del recurso"
+
+Ejercicio 3 (Caso ficticio nuevo de EstudioSimple, no cita del libro: Dos adolescentes que mantienen un vínculo de pareja conversan en un espacio tranquilo. Una persona comparte un sentimiento y pide que no se difunda. La otra quiere demostrar cariño con un abrazo, pero su pareja prefiere conversar sin contacto físico. No se describen prácticas sexuales ni vivencias del estudiante.):
+• Enunciado de Aplicacion: "Explica cómo se relacionan intimidad afectiva, confianza y respeto mutuo. Propón una decisión que considere ambos límites y una consecuencia de respetarlos frente a presionar. No cuentes experiencias personales."
+• Respuesta Esperada: La intimidad afectiva permite compartir sentimientos con confianza. Corresponde escuchar, aceptar que no quiere contacto y no difundir lo compartido para presionar o burlarse. Respetar estos límites cuida la confianza; insistir la perjudica. La privacidad no obliga a guardar situaciones que causan daño o inseguridad: se puede buscar ayuda de un adulto de confianza.
+• Feedback de Exito: "Aplica el criterio de la clase de manera autónoma en un recurso nuevo"
+• Pista de Apoyo Socratica: "Comprobar cada elemento pedido y su evidencia; aceptar formulaciones equivalentes. Si falta una relación, pedir que señale la pista y explique qué demuestra; después ofrecer el modelo y un nuevo intento. Registrar respuesta, apoyos y criterio por reforzar."
+
+--------------------------------------------------------------------------------
+[PASO 6: RESUMEN Y ESTRATEGIA DE PENSAMIENTO]
+--------------------------------------------------------------------------------
+• Idea Clave: "El respeto mutuo implica considerar tanto lo que una persona quiere expresar como lo que la otra acepta. Un vínculo afectivo se cuida escuchando, evitando la presión y respetando límites y decisiones."
+• 3 Ideas Clave Estructuradas de Sintesis:
+  - Idea clave: El respeto considera los límites de ambas personas.
+  - Comprensión: Cuidar los vínculos afectivos exige atender las decisiones del otro y mantener una comunicación basada en el consentimiento.
+
+--------------------------------------------------------------------------------
+[PASO 7: MINIQUIZ FORMATIVO Y FASE REVISAR]
+--------------------------------------------------------------------------------
+Pregunta 1: ¿Qué acción respeta la preferencia de Nico?
+  A) A. Insistir hasta conseguir un abrazo 
+  B) B. Burlarse de su saludo 
+  C) C. Aceptar saludar con la mano [CORRECTA]
+  D) D. Dejar de hablarle por su preferencia 
+• Explicacion Formativa del Error: "Paula acepta un saludo que Nico prefiere, sin insistencia."
+
+Pregunta 2: ¿Qué debe considerar el grupo antes de compartir la fotografía?
+  A) A. Solo cuántas personas quieren verla 
+  B) B. La decisión expresada por la amiga [CORRECTA]
+  C) C. Una regla de publicar siempre 
+  D) D. La presión de quien insiste más 
+• Explicacion Formativa del Error: "La amiga ha pedido que no la publiquen."
+
+Pregunta 3: ¿Qué idea representa el respeto mutuo?
+  A) A. Escuchar límites y buscar formas de relacionarse aceptadas por ambos [CORRECTA]
+  B) B. Decidir por la otra persona para demostrar cariño 
+  C) C. Ignorar una petición si existe amistad 
+  D) D. Exigir información íntima para confiar 
+• Explicacion Formativa del Error: "El recurso relaciona el cuidado con la consideración de ambas personas."
+
+--------------------------------------------------------------------------------
+[PASO 7B: MODULO DE RECUPERACION FORMATIVA]
+--------------------------------------------------------------------------------
+Refuerzo 1 (Recuperación 1):
+• Explicacion Previa: "Paula acepta un saludo que Nico prefiere, sin insistencia."
+• Pregunta: "¿Qué forma de expresar cariño respeta la preferencia de Isa?"
+• Opciones: [Práctica abierta en cuaderno]
+• Respuesta esperada / Criterio: Conversar sin imponer contacto ni otra demostración; escuchar lo que acepta. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
+• Refuerzo si falla: "Volver al caso concreto: «Caso nuevo de recuperación: En una pareja ficticia, Isa prefiere expresar cariño conversando y pide que un mensaje personal no se comparta. Su pareja propone enviar el mensaje al grupo para demostrar cuánto se quieren.». Señalar las palabras del caso que permiten responder, sin mostrar la solución."
+
+Refuerzo 2 (Recuperación 2):
+• Explicacion Previa: "La amiga ha pedido que no la publiquen."
+• Pregunta: "¿Qué decisión corresponde sobre el mensaje y por qué?"
+• Opciones: [Práctica abierta en cuaderno]
+• Respuesta esperada / Criterio: No compartirlo contra su decisión; la presión del grupo no reemplaza el respeto por la intimidad. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
+• Refuerzo si falla: "Buscar estas expresiones del recurso nuevo: «grupo». Señalar las palabras del caso que permiten responder, sin mostrar la solución."
+
+Refuerzo 3 (Recuperación 3):
+• Explicacion Previa: "El recurso relaciona el cuidado con la consideración de ambas personas."
+• Pregunta: "Relaciona una decisión y su consecuencia para la confianza."
+• Opciones: [Práctica abierta en cuaderno]
+• Respuesta esperada / Criterio: Escuchar y respetar los límites puede cuidar la confianza; difundir el mensaje para presionar puede dañarla. Buscar ayuda ante daño o inseguridad sigue siendo posible. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
+• Refuerzo si falla: "Buscar estas expresiones del recurso nuevo: «mensaje». Señalar las palabras del caso que permiten responder, sin mostrar la solución."
+
+--------------------------------------------------------------------------------
+[PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
+--------------------------------------------------------------------------------
+• Pregunta de Sintesis: "¿Qué acción muestra respeto y cómo cuida el vínculo?"
+• Reflexion Metacognitiva: "¿Qué te ayudó más: leer el recurso, localizar una pista o comparar explicaciones? ¿Por qué?"
+• Celebracion del Logro: "Buen trabajo. Explicaste tu respuesta usando información del recurso."
+• Felicitacion Final: "Buen trabajo. Explicaste tu respuesta usando información del recurso."
+• Vista Previa Proxima Clase: "¡Nos vemos en la próxima lección!"
+
+
+################################################################################
+LECCIÓN 6 DE 6: DECISIONES RESPONSABLES E INTEGRACIÓN
+################################################################################
+
+================================================================================
+STUDIOSIMPLE - GUION MAESTRO Y PROMPTS DE PRODUCCION CON IA
+FECHA DE GENERACION: 28-10-2026, 9:14:21 a. m. (America/Santiago)
+================================================================================
+
+FICHA CURRICULAR:
+• Asignatura: Ciencias Naturales
+• Nivel / Curso: 7° Básico
+• Objetivo de Aprendizaje: OA 1 - Ciencias Naturales - OA 1
+• Clase: 6 de 6 ("Decisiones responsables e integración")
+• Duracion Estimada: 30 Minutos
+
+DIRECTIVAS TECNICAS DE PRODUCCION AUDIOVISUAL:
+1. Proporcion Widescreen 16:9 estricto (1920x1080).
+2. Estetica Visual: Anime Moderno (Modern Anime Style, iluminacion cinematografica, fondos detallados, estilo Makoto Shinkai / CoMix Wave).
+3. Protagonistas en el 100% de las Escenas: Duo co-protagonico de 13 anos (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles e interactuando en cada escena.
+4. Regla Visual Anti-Mascaras: Imagen limpia Full-Bleed con espacio negativo real. Prohibido usar sombras, contornos, resplandores o recuadros flotantes detras del texto.
+5. Duraciones Planificadas de Producción Audiovisual:
+   • Video Gancho: 60 segundos de duración planificada distribuidos en 7 diapositivas.
+   • Video Explicativo: 90 segundos de duración planificada distribuidos en 7 diapositivas (incluida la diapositiva 1 del Objetivo).
+   • Diapositiva 1 del Explicativo declara el objetivo de aprendizaje como subtitulo (48 pt, maximo 8 palabras); las diapositivas 2 a 7 desarrollan el contenido sin repetirlo ni mostrar rotulos redundantes 'OA 01'.
+6. Tipografia y Color de Texto: Titulo en Pantalla (64 pt). Subtitulo en Pantalla (48 pt, maximo 8 palabras). Texto de un solo color brillante de alto contraste (ej. Blanco Brillante #FFFFFF), plano, sin sombras, sin contornos ni recuadros flotantes.
+7. Logotipo Oficial: Codex/Work incorpora el logo blanco de EstudioSimple en la esquina inferior derecha del PPTX al tamano del video de referencia. No pedir a la IA que dibuje el logo dentro de la imagen; dejar espacio negativo.
+8. Flexibilidad de Locución y Cierre: La explicacion finaliza con la regla de oro y da el pase directo a la plataforma interactiva sin desafios finales. En Google Vids, la locución puede enriquecerse y extenderse unos segundos de forma natural; ese excedente se acepta plenamente. No se exige medir con cronómetro, contar palabras ni reexportar por unos segundos adicionales.
+
+================================================================================
+MODULO 1: PROMPT VIDEO GANCHO MOTIVACIONAL (PASO 2 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Motivación
+• DILE ANTES DEL VIDEO: "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso."
+• INSTRUCCION AL ESTUDIANTE: "Observa y reflexiona con las escenas del video."
+• DILE DESPUES DEL VIDEO: "¿Qué observaste en esta situación inicial?"
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 1: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Una situación
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Una situación
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Hoy exploraremos decisiones responsables e integración. Observaremos el caso y buscaremos pistas antes de sacar una conclusión."
+
+--- DIAPOSITIVA 2: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): La pregunta
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): La pregunta
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Cambio de voz, vergüenza y burlas aparecen en el caso de Alex. Mantén a la vista la situación y distingue lo que informa de lo que suponemos."
+
+--- DIAPOSITIVA 3: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Primera idea
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Primera idea
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "¿Cómo relacionas los tres aspectos sin confundirlos? Puedes plantear una primera idea; después comprobaremos qué información la apoya."
+
+--- DIAPOSITIVA 4: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Busca pistas
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Busca pistas
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Observa la situación. ¿Qué detalle podría ayudarte a responder? Una pista útil debe ayudarnos a responder la pregunta que estamos explorando."
+
+--- DIAPOSITIVA 5: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Compara posibilidades
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Compara posibilidades
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Una respuesta necesita información del recurso. Buscaremos pistas para fundamentarla. Dos respuestas pueden parecer posibles; necesitamos revisar cuál tiene respaldo."
+
+--- DIAPOSITIVA 6: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Una estrategia
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Una estrategia
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Lee el recurso y relaciona sus detalles antes de elegir una explicación. La clase mostrará cómo relacionar las pistas y explicar esa relación paso a paso."
+
+--- DIAPOSITIVA 7: Motivación (8 segundos) ---
+1. Propósito Didáctico: Motivación
+2. Título en Pantalla (64 pt): Puente a la lectura
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Puente a la lectura
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Ahora descubriremos cómo las pistas ayudan a comprender esta situación. Luego aplicarás el criterio a otra situación breve, con menor ayuda."
+
+================================================================================
+MODULO 2: PROMPT VIDEO EXPLICATIVO CONCEPTUAL (PASO 4 - 7 DIAPOSITIVAS)
+================================================================================
+
+Titulo: Una decisión responsable identifica qué ocurre, considera a las personas afectadas y sus límites, examina las consecuencias y elige una acción respetuosa. Integrar aspectos no significa confundir sus nombres.
+• Idea Clave: "Una decisión responsable identifica qué ocurre, considera a las personas afectadas y sus límites, examina las consecuencias y elige una acción respetuosa. Integrar aspectos no significa confundir sus nombres."
+• DILE ANTES DEL VIDEO: "Ahora consolidaremos los aprendizajes esenciales."
+• INSTRUCCION: "Registra en tu cuaderno el concepto principal."
+
+SECUENCIA DE 7 DIAPOSITIVAS CANONICAS (ESTRUCTURA HEXAPARTITA PLAN MAESTRO):
+
+--- DIAPOSITIVA 8: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Una herramienta
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Una herramienta
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "El cambio de voz, la vergüenza y las burlas pertenecen a aspectos distintos presentes en una misma situación."
+
+--- DIAPOSITIVA 9: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): El criterio
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): El criterio
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Identificamos el cambio de voz como una pista del ámbito biológico sin usarlo para juzgar a Alex. Reconocer lo que siente Alex permite comprender el efecto de la situación y acompañarlo con respeto."
+
+--- DIAPOSITIVA 10: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Relación entre pistas
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Relación entre pistas
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Las burlas y la intervención de una compañera pertenecen a las formas de convivencia. Detener las burlas y buscar apoyo considera el bienestar de Alex. En el otro caso, respetar la fotografía protege la decisión expresada."
+
+--- DIAPOSITIVA 11: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Modelo explicado
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Modelo explicado
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Cambio de voz, vergüenza y burlas aparecen en el caso de Alex. ¿Cómo relacionas los tres aspectos sin confundirlos? El cambio de voz es biológico; la vergüenza es afectiva; las burlas y el apoyo son sociales. Se relacionan porque ocurren en una misma situación. El caso presenta una pista para cada aspecto."
+
+--- DIAPOSITIVA 12: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Comprobación
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Comprobación
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Una persona no quiere que publiquen su fotografía. El grupo acuerda otra celebración. ¿Por qué es responsable esa decisión? Considera la petición de la persona y elige una alternativa que respeta su límite sin impedir compartir afecto. El grupo conserva el propósito de celebrar y respeta la decisión sobre la fotografía."
+
+--- DIAPOSITIVA 13: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Error y corrección
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Error y corrección
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Un error que debemos evitar: Elegir una acción solo por presión del grupo, sin considerar a la persona afectada. Si la respuesta añade información, vuelve al recurso y corrígela."
+
+--- DIAPOSITIVA 14: Explicación (8 segundos) ---
+1. Propósito Didáctico: Explicación
+2. Título en Pantalla (64 pt): Síntesis y práctica
+3. Subtítulo en Pantalla (48 pt): 
+4. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): 
+5. Capa Vectorial PPTX (Gráfica / Conceptual / Matemática): Síntesis y práctica
+   • Logotipo Oficial: Logo blanco de EstudioSimple en la esquina inferior derecha, con el tamaño del video de referencia.
+6. Notas al Orador (Locución Google Vids): "Una decisión responsable considera respeto y consecuencias. Lee, localiza evidencia, explica y comprueba. Continúa con la práctica interactiva."
+
+================================================================================
+MODULO 3: GUION PEDAGOGICO COMPLETO DEL MENTOR (ETAPA POR ETAPA)
+================================================================================
+
+[PREPARACION DEL ADULTO / MENTOR]
+• Objetivo del Adulto: Relacionar aspectos biológicos, afectivos y sociales al explicar una decisión responsable que considere consecuencias y respeto mutuo.
+• Ruta de Hoy: Ruta guiada de la clase 6
+• Recordatorios Pedagogicos del Mentor:
+  1. Acompaña al estudiante y valora su proceso.
+• Clima Emocional y Acogida: "Usar exclusivamente los casos ficticios. No solicitar información sobre cuerpo, identidad, vínculos o experiencias íntimas del estudiante. Escuchar con respeto. No diagnosticar ni comparar ritmos de desarrollo."
+
+--------------------------------------------------------------------------------
+[PASO 1: INICIO (4 SUB-ETAPAS CANONICAS)]
+--------------------------------------------------------------------------------
+Sub-etapa 1: Nuestra Ruta de la Asignatura
+• DILE AL ESTUDIANTE (Apertura de la ruta): "Hoy avanzaremos en una nueva clase interactiva."
+• 4 Bloques Tematicos de la Asignatura:
+  Bloque 01: Punto de partida (Activación)
+  Bloque 02: Motivación y Explicación (14 láminas)
+  Bloque 03: Práctica guiada (Transferencia)
+  Bloque 04: Miniquiz (Evaluación y cierre)
+
+Sub-etapa 2: La Clase de Hoy
+• DILE AL ESTUDIANTE (Foco didactico): "Decisiones responsables e integración"
+
+Sub-etapa 3: Situacion Inicial de Exploracion (Detonante)
+• DILE AL ESTUDIANTE (Situacion detonante): "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso."
+• RESPUESTA ESPERADA: El cambio de voz es biológico; la vergüenza es afectiva; las burlas y el apoyo son sociales. Se relacionan porque ocurren en una misma situación.
+• PISTA SOCRATICA (SOLO PARA TI): "Fíjate en los detalles destacados."
+• CLIMA EMOCIONAL: "Usar exclusivamente los casos ficticios. No solicitar información sobre cuerpo, identidad, vínculos o experiencias íntimas del estudiante. Escuchar con respeto. No diagnosticar ni comparar ritmos de desarrollo."
+• Pautas de Evaluacion Formativa del Mentor:
+  - [Acierto] El cambio de voz es biológico; la vergüenza es afectiva; las burlas y el apoyo son sociales. Se relacionan porque ocurren en una misma situación. -> Feedback: "¡Muy bien observado!"
+  - [Requiere Apoyo] Requiere apoyo adicional -> Feedback: "Revisa nuevamente la situación inicial."
+  - [Requiere Apoyo] No sabe qué responder -> Feedback: "Leamos juntos para descubrir la pista."
+
+Sub-etapa 4: Comprendamos la Respuesta (Punto de Referencia)
+• DILE AL ESTUDIANTE (Formalizacion de referencia): "¿Cómo relacionas los tres aspectos sin confundirlos?"
+• PREGUNTALE AL ESTUDIANTE: "¿Qué información entrega el punto de partida?"
+• RESPUESTA ESPERADA: El cambio de voz es biológico; la vergüenza es afectiva; las burlas y el apoyo son sociales. Se relacionan porque ocurren en una misma situación.
+• PISTA SOCRATICA: "Localiza las palabras clave."
+• FEEDBACK SI ACIERTA: "¡Excelente fundamentación!"
+• FEEDBACK SI NECESITA APOYO: "Revisa la lectura para confirmar los datos."
+
+--------------------------------------------------------------------------------
+[PASO 3: RECORRIDO - CONVERSACION GUIADA Y PREGUNTAS SOCRATICAS]
+--------------------------------------------------------------------------------
+• Contexto de Apertura Socratica: "Diálogo guiado para profundizar en los elementos clave."
+
+Item 1 (Cambio de voz, vergüenza y burlas aparecen en el caso de Alex.):
+• Pregunta Socratica: "¿Cómo relacionas los tres aspectos sin confundirlos?"
+• Respuesta Esperada: El cambio de voz es biológico; la vergüenza es afectiva; las burlas y el apoyo son sociales. Se relacionan porque ocurren en una misma situación.
+• Feedback de Exito: "El caso presenta una pista para cada aspecto."
+• Pista de Apoyo Socratica: "Si no localiza información, releer esta pista del contexto: «Cambio de voz, vergüenza y burlas aparecen en el caso de Alex.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta."
+• Revelacion: "El cambio de voz es biológico; la vergüenza es afectiva; las burlas y el apoyo son sociales. Se relacionan porque ocurren en una misma situación. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento."
+
+Item 2 (Una persona no quiere que publiquen su fotografía. El grupo acuerda otra celebración.):
+• Pregunta Socratica: "¿Por qué es responsable esa decisión?"
+• Respuesta Esperada: Considera la petición de la persona y elige una alternativa que respeta su límite sin impedir compartir afecto.
+• Feedback de Exito: "El grupo conserva el propósito de celebrar y respeta la decisión sobre la fotografía."
+• Pista de Apoyo Socratica: "Si no localiza información, releer esta pista del contexto: «Una persona no quiere que publiquen su fotografía. El grupo acuerda otra celebración.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta."
+• Revelacion: "Considera la petición de la persona y elige una alternativa que respeta su límite sin impedir compartir afecto. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento."
+
+--------------------------------------------------------------------------------
+[PASO 4B: COMPROBEMOS LO APRENDIDO (POST-VIDEO EXPLICATIVO)]
+--------------------------------------------------------------------------------
+Comprobacion 1 (Comprobación 1):
+• Pregunta: "¿Por qué es responsable esa decisión?"
+• Respuesta Esperada: Considera la petición de la persona y elige una alternativa que respeta su límite sin impedir compartir afecto.
+• Pista de Apoyo: "Revisa el concepto clave expuesto"
+• Revelacion: "Considera la petición de la persona y elige una alternativa que respeta su límite sin impedir compartir afecto."
+
+--------------------------------------------------------------------------------
+[PASO 5: PRACTICA EN EL CUADERNO FISICO]
+--------------------------------------------------------------------------------
+Ejercicio 1 (Cambio de voz, vergüenza y burlas aparecen en el caso de Alex.):
+• Enunciado de Aplicacion: "¿Cómo relacionas los tres aspectos sin confundirlos? Escribe una respuesta y señala la pista que la sostiene."
+• Respuesta Esperada: El cambio de voz es biológico; la vergüenza es afectiva; las burlas y el apoyo son sociales. Se relacionan porque ocurren en una misma situación.
+• Feedback de Exito: "El caso presenta una pista para cada aspecto."
+• Pista de Apoyo Socratica: "Revisa los datos del recurso"
+
+Ejercicio 2 (Una persona no quiere que publiquen su fotografía. El grupo acuerda otra celebración.):
+• Enunciado de Aplicacion: "¿Por qué es responsable esa decisión? Escribe una respuesta y señala la pista que la sostiene."
+• Respuesta Esperada: Considera la petición de la persona y elige una alternativa que respeta su límite sin impedir compartir afecto.
+• Feedback de Exito: "El grupo conserva el propósito de celebrar y respeta la decisión sobre la fotografía."
+• Pista de Apoyo Socratica: "Revisa los datos del recurso"
+
+Ejercicio 3 (Caso integrado ficticio nuevo: Cris nota aparición de acné y siente vergüenza. Un grupo quiere publicar una fotografía para hacer bromas y afirma que los niños no deben expresar vergüenza. Cris pide que no la publiquen; una amistad propone detener la difusión y buscar apoyo de un adulto de confianza. En otra situación ficticia, dos personas que son pareja conversan sobre un sentimiento en privado y acuerdan respetar si una no desea un abrazo.):
+• Enunciado de Aplicacion: "Sin copiar los modelos anteriores: 1) clasifica una pista biológica, una afectiva y una social; 2) explica cómo se relacionan; 3) compara publicar y no publicar, indicando una consecuencia de cada decisión; 4) explica qué muestran confianza, intimidad y respeto en el segundo caso; 5) identifica y revisa el estereotipo del primer caso; 6) relaciona el primer caso con dos dimensiones del esquema del libro, sin confundir sus cinco etiquetas con los tres aspectos del OA."
+• Respuesta Esperada: Biológico: acné; afectivo: vergüenza; social: presión y apoyo. La reacción social puede influir en lo que siente ante un cambio corporal. Publicar contra la petición puede dañar la privacidad y aumentar malestar; no publicar y apoyar respeta y cuida. En el segundo caso, conversar con confianza y aceptar no abrazarse respeta la intimidad afectiva. Impedir que los niños expresen vergüenza impone un estereotipo y no describe a cada persona. En el esquema: física por el cambio corporal, emocional por la vergüenza y social por la convivencia; basta fundamentar dos.
+• Feedback de Exito: "Aplica el criterio de la clase de manera autónoma en un recurso nuevo"
+• Pista de Apoyo Socratica: "Comprobar cada elemento pedido y su evidencia; aceptar formulaciones equivalentes. Si falta una relación, pedir que señale la pista y explique qué demuestra; después ofrecer el modelo y un nuevo intento. Registrar respuesta, apoyos y criterio por reforzar."
+
+--------------------------------------------------------------------------------
+[PASO 6: RESUMEN Y ESTRATEGIA DE PENSAMIENTO]
+--------------------------------------------------------------------------------
+• Idea Clave: "Una decisión responsable identifica qué ocurre, considera a las personas afectadas y sus límites, examina las consecuencias y elige una acción respetuosa. Integrar aspectos no significa confundir sus nombres."
+• 3 Ideas Clave Estructuradas de Sintesis:
+  - Idea clave: Una decisión responsable considera respeto y consecuencias.
+  - Comprensión: Integrar los aspectos biológicos, afectivos y sociales orienta conductas de autocuidado y compromiso con el bienestar común.
+
+--------------------------------------------------------------------------------
+[PASO 7: MINIQUIZ FORMATIVO Y FASE REVISAR]
+--------------------------------------------------------------------------------
+Pregunta 1: ¿Qué relación clasifica correctamente el caso de Alex?
+  A) A. Voz: social; vergüenza: biológica; burlas: afectivas 
+  B) B. Todo corresponde solo a lo biológico 
+  C) C. Todo corresponde solo a una opinión 
+  D) D. Voz: biológica; vergüenza: afectiva; convivencia: social [CORRECTA]
+• Explicacion Formativa del Error: "La clasificación distingue pistas corporales, emocionales y de convivencia."
+
+Pregunta 2: ¿Qué decisión cuida a Alex en el caso?
+  A) A. Difundir las burlas 
+  B) B. Detener las burlas y buscar apoyo [CORRECTA]
+  C) C. Juzgarlo por su voz 
+  D) D. Obligarlo a contar experiencias íntimas 
+• Explicacion Formativa del Error: "La respuesta considera su bienestar y evita continuar las burlas."
+
+Pregunta 3: ¿Qué demuestra responsabilidad en el caso de la fotografía?
+  A) A. Publicarla para evitar que el grupo se moleste 
+  B) B. Insistir hasta que la persona ceda 
+  C) C. Respetar su petición y acordar otra celebración [CORRECTA]
+  D) D. Decidir que su opinión no importa 
+• Explicacion Formativa del Error: "La alternativa considera la decisión expresada y evita presionar."
+
+--------------------------------------------------------------------------------
+[PASO 7B: MODULO DE RECUPERACION FORMATIVA]
+--------------------------------------------------------------------------------
+Refuerzo 1 (Recuperación 1):
+• Explicacion Previa: "La clasificación distingue pistas corporales, emocionales y de convivencia."
+• Pregunta: "Clasifica tres pistas sin intercambiar los nombres de los aspectos."
+• Opciones: [Práctica abierta en cuaderno]
+• Respuesta esperada / Criterio: Voz: biológico; incomodidad: afectivo; burlas y apoyo: social. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
+• Refuerzo si falla: "Buscar estas expresiones del recurso nuevo: «incomodidad». Señalar las palabras del caso que permiten responder, sin mostrar la solución."
+
+Refuerzo 2 (Recuperación 2):
+• Explicacion Previa: "La respuesta considera su bienestar y evita continuar las burlas."
+• Pregunta: "Compara grabar para burlarse con detener la grabación: acción y consecuencia."
+• Opciones: [Práctica abierta en cuaderno]
+• Respuesta esperada / Criterio: Grabar puede aumentar el malestar y vulnerar privacidad; detener y apoyar protege el límite expresado. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
+• Refuerzo si falla: "Buscar estas expresiones del recurso nuevo: «Grabar»; «detener». Señalar las palabras del caso que permiten responder, sin mostrar la solución."
+
+Refuerzo 3 (Recuperación 3):
+• Explicacion Previa: "La alternativa considera la decisión expresada y evita presionar."
+• Pregunta: "Explica cómo respetar el límite permite una decisión responsable."
+• Opciones: [Práctica abierta en cuaderno]
+• Respuesta esperada / Criterio: Considera la petición y sus consecuencias para la persona; elige apoyo y evita presión. No exige relatar experiencias íntimas. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
+• Refuerzo si falla: "Volver al caso concreto: «Caso nuevo de recuperación: Paz nota un cambio de voz y siente incomodidad cuando otras personas quieren grabarlo para burlarse. Pide que no lo hagan. Una compañera propone detener la grabación y conversar con un adulto de confianza.». Señalar las palabras del caso que permiten responder, sin mostrar la solución."
+
+--------------------------------------------------------------------------------
+[PASO 8: CIERRE METACOGNITIVO Y CELEBRACION]
+--------------------------------------------------------------------------------
+• Pregunta de Sintesis: "¿Cómo relacionas los tres aspectos sin confundirlos?"
+• Reflexion Metacognitiva: "¿Qué te ayudó más: leer el recurso, localizar una pista o comparar explicaciones? ¿Por qué?"
+• Celebracion del Logro: "Buen trabajo. Explicaste tu respuesta usando información del recurso."
+• Felicitacion Final: "Buen trabajo. Explicaste tu respuesta usando información del recurso."
+• Vista Previa Proxima Clase: "¡Nos vemos en la próxima lección!"
+
+

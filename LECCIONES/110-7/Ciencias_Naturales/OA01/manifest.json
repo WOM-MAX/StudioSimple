@@ -4,16 +4,35 @@
   "asignatura": "Ciencias Naturales",
   "oa": "OA01",
   "titulo_oa": "Sexualidad y Afectividad",
-  "fecha_generacion": "2026-10-17 16:58 [America/Santiago]",
+  "identificador_paquete": "110-7-CIE-OA01",
+  "version": "2.0.0",
+  "fecha_actualizacion": "2026-10-28 09:14:21 [America/Santiago]",
   "status": "EN_REVISION",
   "etapa_revision": "WORK_PRE_APROBACION",
   "total_lecciones": 6,
+  "fuente_oficial_unica_docx": {
+    "archivo": "Plan_Maestro_7Básico_110-7-CIE-OA01_6Lecciones_2026-10-28_09-14.docx",
+    "rol": "Unica fuente oficial de produccion de lecciones y prompts",
+    "sha256": "d36bf616f97354d7a36db602b8f1773f74d6ae10b5e133a80112395272b4fce2",
+    "bytes": 50928
+  },
+  "prompts_asociados": {
+    "archivo": "Prompts_Work_Ciencias_7B_OA01_2026-10-28_09-14.txt",
+    "total_laminas": 84,
+    "laminas_por_clase": 14,
+    "sha256": "1ef4ebfc446c16c8b6e567d784ff656092451758672f0a7712a2904996615278",
+    "bytes": 166963,
+    "perfil_evaluacion": "Perfil 7° Básico (14 láminas bimodales: 7 Gancho + 7 Explicación; 4 alternativas A-D en todas las preguntas)"
+  },
   "lecciones_construidas": [
     {
       "clase": 1,
+      "titulo": "La sexualidad integra distintas dimensiones",
       "archivo_ts": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase01.ts",
       "archivo_md": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE01.md",
-      "estado": "EN_REVISION",
+      "archivo_md_staging": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE01.md",
+      "sha256_ts": "ae38afa777deccbb7f19fd2ed8a54ca9fed88aeb76b3649a95b6cbed6df1f081",
+      "estado": "VERIFICADO",
       "secciones_completas": 12,
       "laminas_bimodales": 14,
       "reactivos_miniquiz": 3,
@@ -21,9 +40,12 @@
     },
     {
       "clase": 2,
+      "titulo": "Cambios físicos durante la pubertad",
       "archivo_ts": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase02.ts",
       "archivo_md": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE02.md",
-      "estado": "EN_REVISION",
+      "archivo_md_staging": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE02.md",
+      "sha256_ts": "b40ddae3ac8a8a78e58cecfbf3e68ed213f84bbf1e4b8114d8d6f224e2973f5c",
+      "estado": "VERIFICADO",
       "secciones_completas": 12,
       "laminas_bimodales": 14,
       "reactivos_miniquiz": 3,
@@ -31,9 +53,12 @@
     },
     {
       "clase": 3,
+      "titulo": "Emociones, afectividad e imagen personal",
       "archivo_ts": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase03.ts",
       "archivo_md": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE03.md",
-      "estado": "EN_REVISION",
+      "archivo_md_staging": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE03.md",
+      "sha256_ts": "f191bb037bed7c5270a15edb95bea8390e04a52148480f85adc9dee91a7bcc46",
+      "estado": "VERIFICADO",
       "secciones_completas": 12,
       "laminas_bimodales": 14,
       "reactivos_miniquiz": 3,
@@ -41,9 +66,12 @@
     },
     {
       "clase": 4,
+      "titulo": "Aspectos sociales y estereotipos",
       "archivo_ts": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase04.ts",
       "archivo_md": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE04.md",
-      "estado": "EN_REVISION",
+      "archivo_md_staging": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE04.md",
+      "sha256_ts": "a8b013a54a375897957e578c4d49fd2dc845a95b9d82f738e5e23102c55385e3",
+      "estado": "VERIFICADO",
       "secciones_completas": 12,
       "laminas_bimodales": 14,
       "reactivos_miniquiz": 3,
@@ -51,9 +79,12 @@
     },
     {
       "clase": 5,
+      "titulo": "Vínculos afectivos y respeto mutuo",
       "archivo_ts": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase05.ts",
       "archivo_md": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE05.md",
-      "estado": "EN_REVISION",
+      "archivo_md_staging": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE05.md",
+      "sha256_ts": "322acdffc33f80e74c81155fba7db1e52a891b73e0a73250988e4d904fb61f25",
+      "estado": "VERIFICADO",
       "secciones_completas": 12,
       "laminas_bimodales": 14,
       "reactivos_miniquiz": 3,
@@ -61,9 +92,12 @@
     },
     {
       "clase": 6,
+      "titulo": "Decisiones responsables e integración",
       "archivo_ts": "Web Studio Simple/src/data/lessons/ciencias_7b_oa01_clase06.ts",
       "archivo_md": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE06.md",
-      "estado": "EN_REVISION",
+      "archivo_md_staging": "LECCIONES_POR_REVISAR/110-7/Ciencias_Naturales/OA01/CLASE06.md",
+      "sha256_ts": "511fd5336710a807fa71abca66427d228ccb418b5baafbb735e80a3cbaaa5221",
+      "estado": "VERIFICADO",
       "secciones_completas": 12,
       "laminas_bimodales": 14,
       "reactivos_miniquiz": 3,
@@ -71,13 +105,21 @@
     }
   ],
   "auditoria_interna": {
-    "fecha": "2026-10-17 16:58 [America/Santiago]",
+    "fecha": "2026-10-28 09:14:21 [America/Santiago]",
     "hallazgos": 0,
-    "resultado": "CONFORME"
+    "resultado": "CONFORME",
+    "auditor_estructural": "scripts/audit_structural_rules.ts: 30/30 VERIFICADOS",
+    "auditor_titulos": "scripts/test_canonical_auditor.ts: 31/31 PASS"
   },
-  "fuentes_utilizadas": [
-    "INSUMOS/BASE_CURRICULAR/EstudioSimple_Base_Curricular_7B_4Asignaturas_v1.json",
-    "TEMARIOS EELL 7° Básico MINEDUC",
-    "DATOS_PARA_ANTIGRAVITY_22_LECCIONES_CORREGIDAS_2026-10-17.json (Work R1)"
-  ]
+  "fundamentacion_curricular": {
+    "temario_eell": {
+      "archivo": "INSUMOS/TEMARIOS EELL/temario 7° basico.pdf",
+      "pagina": 7,
+      "seccion": "Eje Biología - Objetivo de Aprendizaje N° 1: Explicar los aspectos biológicos, afectivos y sociales que se integran en la sexualidad humana."
+    },
+    "insumos_mineduc": {
+      "texto_estudiante_pdf": "INSUMOS/LIBROS DIGITALES Y GUÍAS/110-7/Ciencias Naturales.pdf",
+      "unidad_y_paginas": "Unidad 4: Salud sexual y reproducción, Lección 8: Sexualidad y autocuidado (págs. 114 a 137)"
+    }
+  }
 }

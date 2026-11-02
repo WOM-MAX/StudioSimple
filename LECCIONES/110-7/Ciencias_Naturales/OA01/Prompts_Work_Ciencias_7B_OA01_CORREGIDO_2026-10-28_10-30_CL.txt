@@ -1,0 +1,1380 @@
+================================================================================
+STUDIOSIMPLE - PAQUETE OFICIAL CORREGIDO DE PROMPTS VISUALES Y GUIONES PARA WORK
+ASIGNATURA: CIENCIAS NATURALES | CURSO: 7° BÁSICO | OBJETIVO: OA 01
+ARCHIVO CANÓNICO: Prompts_Work_Ciencias_7B_OA01_CORREGIDO_2026-10-28_10-30_CL.txt
+FECHA Y HORA OFICIAL: 2026-10-28 10:30:00 [America/Santiago]
+ESTÁNDAR: 6 LECCIONES | 12 PRESENTACIONES PPTX | 84 LÁMINAS COMPLETAS (0 VACÍAS)
+NOMENCLATURA VIGENTE: MOTIVACION Y EXPLICACION (CERO TERMINOLOGÍA 'GANCHO')
+================================================================================
+
+REGLAS GLOBALES DE PRODUCCIÓN AUDIOVISUAL (OBLIGATORIAS PARA CHATGPT WORK):
+1. Proporción y Formato: Widescreen 16:9 estricto (1920x1080), full-bleed, imagen única integrada.
+2. Estética Visual: Anime educativo premium, moderno, cinematográfico, iluminación inspiradora, estilo Makoto Shinkai / CoMix Wave.
+3. Protagonistas Universales en 100% de las Escenas: Dúo co-protagónico de 13 años (la joven con trenzas y el joven con chaqueta cerceta) siempre presentes, visibles y alternando posición dinámica entre izquierda, centro y derecha.
+4. Regla Visual Anti-Máscaras: Imagen limpia con espacio negativo real. PROHIBIDO usar paneles, cortinas, tarjetas, sombras detrás del texto, rectángulos oscuros, bloques flotantes, máscaras u overlays globales. La imagen debe ser visible completa.
+5. Regla Fundamental de Imagen IA (Sin Texto): La IA NUNCA debe dibujar títulos, subtítulos, letras, números, fórmulas ni logotipos ('No text drawn by AI'). Toda rotulación y elemento conceptual se ensambla vectorialmente en PowerPoint.
+6. Jerarquía Tipográfica y Color Oficial:
+   • Título en Pantalla: 64 pt, Amarillo Oro (#FFD700), plano, sin borde, sin sombra.
+   • Subtítulo en Pantalla: 48 pt, Blanco (#FFFFFF), plano, sin borde, sin sombra.
+   • PROHIBIDO usar título blanco o unificar ambos con una regla ambigua de un solo color.
+7. Primera Diapositiva de Explicación: En las 6 presentaciones de EXPLICACIÓN, la Diapositiva 1 declara obligatoriamente el 'Objetivo de la lección' procedente de la fuente curricular canónica.
+8. Logotipo Oficial EstudioSimple: Dejar espacio libre despejado en la esquina inferior derecha. ChatGPT Work inserta el logo vectorial blanco oficial de EstudioSimple en PowerPoint.
+9. Locución TTS (Google Vids): Notas al orador en español latino pedagógico y fluido, sin marcas de tiempo técnicas ni conteo de palabras visible.
+10. Nomenclatura de Archivos PPTX Proyectados (12 presentaciones):
+    • 110-7-CNA-OA01-CLASE01-MOTIVACION.pptx (7 diapositivas, ~60 segundos)
+    • 110-7-CNA-OA01-CLASE01-EXPLICACION.pptx (7 diapositivas, ~90 segundos)
+    • 110-7-CNA-OA01-CLASE02-MOTIVACION.pptx (7 diapositivas, ~60 segundos)
+    • 110-7-CNA-OA01-CLASE02-EXPLICACION.pptx (7 diapositivas, ~90 segundos)
+    • 110-7-CNA-OA01-CLASE03-MOTIVACION.pptx (7 diapositivas, ~60 segundos)
+    • 110-7-CNA-OA01-CLASE03-EXPLICACION.pptx (7 diapositivas, ~90 segundos)
+    • 110-7-CNA-OA01-CLASE04-MOTIVACION.pptx (7 diapositivas, ~60 segundos)
+    • 110-7-CNA-OA01-CLASE04-EXPLICACION.pptx (7 diapositivas, ~90 segundos)
+    • 110-7-CNA-OA01-CLASE05-MOTIVACION.pptx (7 diapositivas, ~60 segundos)
+    • 110-7-CNA-OA01-CLASE05-EXPLICACION.pptx (7 diapositivas, ~90 segundos)
+    • 110-7-CNA-OA01-CLASE06-MOTIVACION.pptx (7 diapositivas, ~60 segundos)
+    • 110-7-CNA-OA01-CLASE06-EXPLICACION.pptx (7 diapositivas, ~90 segundos)
+
+################################################################################
+CLASE 1 DE 6: LA SEXUALIDAD INTEGRA DISTINTAS DIMENSIONES
+################################################################################
+
+================================================================================
+PRESENTACIÓN MOTIVACION: 110-7-CNA-OA01-CLASE01-MOTIVACION.pptx
+PROPÓSITO: Despertar interés, presentar una situación cotidiana y activar conocimientos previos (7 diapositivas / ~60 s)
+================================================================================
+
+--- DIAPOSITIVA 1 DE 7: MOTIVACIÓN (Clase 1) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 1 ("La sexualidad integra distintas dimensiones")
+3. Número de diapositiva: Diapositiva 1 de 7 (Archivo: 110-7-CNA-OA01-CLASE01-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 1: Un caso  cotidiano — Desarrollar el concepto de integral dimensions of sexuality (physical, intellectual, social, emotional, spiritual).
+5. Título visible (64 pt, Amarillo Oro #FFD700): Un caso / cotidiano
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): ¿Qué aspectos / aparecen?
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, sitting at a school library table with colorful flashcards, preparing an oral presentation with focused expressions. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con trenzas a la derecha y joven con chaqueta cerceta en el centro-izquierda conversando con atención.
+10. Espacio negativo destinado al texto: Cuadrante superior izquierdo completamente libre de elementos visuales distractores para alojar el título de 64 pt y subtítulo de 48 pt.
+11. Notas al orador (Locución Google Vids): "En este caso ficticio, la estudiante prepara una presentación y conversa con un compañero de confianza. Observemos las pistas antes de explicar qué significan."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 2 DE 7: MOTIVACIÓN (Clase 1) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 1 ("La sexualidad integra distintas dimensiones")
+3. Número de diapositiva: Diapositiva 2 de 7 (Archivo: 110-7-CNA-OA01-CLASE01-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 2: Distintas  pistas — Desarrollar el concepto de integral dimensions of sexuality (physical, intellectual, social, emotional, spiritual).
+5. Título visible (64 pt, Amarillo Oro #FFD700): Distintas / pistas
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): Observa sin / suponer
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, reviewing study notes together while observing distinct sticky notes representing feelings, thoughts, and friendships. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos protagonistas en el centro interactuando con curiosidad frente a la situación presentada.
+10. Espacio negativo destinado al texto: Tercio superior y franja izquierda despejados con cielo o pared desenfocada de tono neutro para garantizar lectura sin máscaras.
+11. Notas al orador (Locución Google Vids): "En la historia, la estudiante dice que siente nervios y piensa qué idea valora expresar. Tenemos pistas distintas, pero todavía no las clasificaremos."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 3 DE 7: MOTIVACIÓN (Clase 1) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 1 ("La sexualidad integra distintas dimensiones")
+3. Número de diapositiva: Diapositiva 3 de 7 (Archivo: 110-7-CNA-OA01-CLASE01-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 3: Mirada  parcial — Desarrollar el concepto de integral dimensions of sexuality (physical, intellectual, social, emotional, spiritual).
+5. Título visible (64 pt, Amarillo Oro #FFD700): Mirada / parcial
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): ¿Basta mirar / el cuerpo?
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, looking thoughtfully at a human anatomical mannequin in a science room, discussing that biology alone does not explain all emotions. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con chaqueta cerceta a la derecha examinando el caso; joven con trenzas a la izquierda tomando notas analíticas.
+10. Espacio negativo destinado al texto: Cuadrante superior derecho con iluminación suave y sin objetos para contraste limpio del texto sobre el fondo.
+11. Notas al orador (Locución Google Vids): "Si miramos únicamente el cuerpo, ¿entendemos también sus emociones y su conversación? Pensemos qué detalles quedarían fuera al observar una sola parte."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 4 DE 7: MOTIVACIÓN (Clase 1) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 1 ("La sexualidad integra distintas dimensiones")
+3. Número de diapositiva: Diapositiva 4 de 7 (Archivo: 110-7-CNA-OA01-CLASE01-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 4: Busca  pistas — Desarrollar el concepto de integral dimensions of sexuality (physical, intellectual, social, emotional, spiritual).
+5. Título visible (64 pt, Amarillo Oro #FFD700): Busca / pistas
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): ¿Qué podemos / describir?
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, reading a fictional case study in a student notebook, highlighting clues about nervousness and conversation with peers. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con trenzas en primer plano a la izquierda reflexionando; joven con chaqueta cerceta en plano medio a la derecha prestando apoyo.
+10. Espacio negativo destinado al texto: Franja superior horizontal abierta y limpia, permitiendo colocar el título amarillo oro y subtítulo blanco en dos líneas nítidas.
+11. Notas al orador (Locución Google Vids): "Revisemos sus apuntes y lo que cuenta el relato. ¿Qué hace, qué siente y con quién conversa? Describamos esas pistas sin añadir suposiciones."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 5 DE 7: MOTIVACIÓN (Clase 1) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 1 ("La sexualidad integra distintas dimensiones")
+3. Número de diapositiva: Diapositiva 5 de 7 (Archivo: 110-7-CNA-OA01-CLASE01-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 5: Ordena  las pistas — Desarrollar el concepto de integral dimensions of sexuality (physical, intellectual, social, emotional, spiritual).
+5. Título visible (64 pt, Amarillo Oro #FFD700): Ordena / las pistas
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): ¿Qué recurso puede / ayudar?
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, arranging concept cards on a clean wooden desk, seeking an organized criteria to categorize personal experiences. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con chaqueta cerceta en primer plano a la derecha; joven con trenzas en plano medio a la izquierda observando con empatía.
+10. Espacio negativo destinado al texto: Sector lateral izquierdo amplio y despejado para visualización directa del texto sin sombras ni recuadros.
+11. Notas al orador (Locución Google Vids): "Para ordenar las pistas necesitamos un criterio. ¿Qué recurso podría ayudarnos a relacionarlas con cuidado y explicar mejor la situación?"
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 6 DE 7: MOTIVACIÓN (Clase 1) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 1 ("La sexualidad integra distintas dimensiones")
+3. Número de diapositiva: Diapositiva 6 de 7 (Archivo: 110-7-CNA-OA01-CLASE01-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 6: Mirada  integral — Desarrollar el concepto de integral dimensions of sexuality (physical, intellectual, social, emotional, spiritual).
+5. Título visible (64 pt, Amarillo Oro #FFD700): Mirada / integral
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): ¿Qué significa mirar / integralmente?
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, reflecting in a bright hallway beside a bulletin board, wondering what it truly means to understand a person holistically. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos protagonistas ubicados en el centro-derecha, dirigiendo la mirada hacia el espacio conceptual izquierdo.
+10. Espacio negativo destinado al texto: Mitad superior izquierda despejada, creando una zona de descanso visual para los textos principales de la presentación.
+11. Notas al orador (Locución Google Vids): "¿Qué significa explicar la sexualidad de manera integral? Dejemos abierta la pregunta mientras buscamos una herramienta para reconocer y relacionar las pistas."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 7 DE 7: MOTIVACIÓN (Clase 1) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 1 ("La sexualidad integra distintas dimensiones")
+3. Número de diapositiva: Diapositiva 7 de 7 (Archivo: 110-7-CNA-OA01-CLASE01-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 7: Pregunta  abierta — Desarrollar el concepto de integral dimensions of sexuality (physical, intellectual, social, emotional, spiritual).
+5. Título visible (64 pt, Amarillo Oro #FFD700): Pregunta / abierta
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): Revisemos ahora el / esquema original
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, holding the official school science textbook, opening to the chapter on human development with eager anticipation. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos estudiantes en el centro sonriendo con seguridad y confianza, mirando hacia el espectador listos para avanzar.
+10. Espacio negativo destinado al texto: Tercio superior central y lateral izquierdo despejados con iluminación uniforme de aula para texto de alto impacto.
+11. Notas al orador (Locución Google Vids): "Ahora consultaremos el esquema del Texto Escolar. Buscaremos una explicación que considere la situación completa."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+================================================================================
+PRESENTACIÓN EXPLICACION: 110-7-CNA-OA01-CLASE01-EXPLICACION.pptx
+PROPÓSITO: Enseñar, modelar, aplicar y sintetizar el concepto disciplinar (7 diapositivas / ~90 s)
+================================================================================
+
+--- DIAPOSITIVA 1 DE 7: EXPLICACIÓN (Clase 1) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 1 ("La sexualidad integra distintas dimensiones")
+3. Número de diapositiva: Diapositiva 1 de 7 (Archivo: 110-7-CNA-OA01-CLASE01-EXPLICACION.pptx)
+4. Propósito pedagógico: Declarar el objetivo de aprendizaje de la lección: comprender que la sexualidad humana integra cinco dimensiones (física, intelectual, emocional, social y espiritual) según el Texto Escolar.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Objetivo de la lección
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): Comprender una / visión integral
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing in front of an inspiring illuminated conceptual board representing the human dimensions. The girl gestures toward an elegant circular diagram showing physical, emotional, and social harmony, while the boy holds an open notebook. Bright morning light entering from high classroom windows, clean modern anime aesthetic, spacious negative space in upper-left for yellow and white text. No text drawn by AI.
+8. Composición visual: Plano medio general, perspectiva frontal con ligero dinamismo, iluminación matutina clara y fondo escolar estilizado con profundidad de campo suave.
+9. Posición de los protagonistas: Joven con chaqueta cerceta a la izquierda con libreta en mano; joven con trenzas en el centro-derecha señalando el diagrama con expresión de descubrimiento.
+10. Espacio negativo destinado al texto: Cuadrante superior izquierdo y tercio superior totalmente despejados para ubicar el título de 64 pt y subtítulo de 48 pt.
+11. Notas al orador (Locución Google Vids): "Comprenderemos que la sexualidad humana integra distintas dimensiones: física, intelectual, emocional, social y espiritual, superando la mirada exclusivamente biológica señalada en el marco curricular."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 12 segundos (Apertura del video Explicativo de 90 segundos)
+
+--- DIAPOSITIVA 2 DE 7: EXPLICACIÓN (Clase 1) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 1 ("La sexualidad integra distintas dimensiones")
+3. Número de diapositiva: Diapositiva 2 de 7 (Archivo: 110-7-CNA-OA01-CLASE01-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 2: El esquema — Desarrollar el concepto de integral dimensions of sexuality (physical, intellectual, social, emotional, spiritual).
+5. Título visible (64 pt, Amarillo Oro #FFD700): El esquema
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): Cinco dimensiones / del Texto Escolar
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining an illustrated school diagram displaying the five interrelated petals: physical, intellectual, emotional, social, and spiritual. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos protagonistas en el centro interactuando con curiosidad frente a la situación presentada.
+10. Espacio negativo destinado al texto: Tercio superior y franja izquierda despejados con cielo o pared desenfocada de tono neutro para garantizar lectura sin máscaras.
+11. Notas al orador (Locución Google Vids): "En el libro, física se refiere a caracteres sexuales primarios y secundarios; emocional, a emociones y sentimientos; social, a amistades y familia. Intelectual incluye personalidad, autoconocimiento, convicciones y valores. Espiritual considera aceptación de sí y sentido trascendente."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+--- DIAPOSITIVA 3 DE 7: EXPLICACIÓN (Clase 1) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 1 ("La sexualidad integra distintas dimensiones")
+3. Número de diapositiva: Diapositiva 3 de 7 (Archivo: 110-7-CNA-OA01-CLASE01-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 3: Del libro  al OA — Desarrollar el concepto de integral dimensions of sexuality (physical, intellectual, social, emotional, spiritual).
+5. Título visible (64 pt, Amarillo Oro #FFD700): Del libro / al OA
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): Relaciona ambos / marcos
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, comparing two scientific columns on an interactive tablet, linking physical traits to biology, emotions to affectivity, and bonds to society. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con chaqueta cerceta a la derecha examinando el caso; joven con trenzas a la izquierda tomando notas analíticas.
+10. Espacio negativo destinado al texto: Cuadrante superior derecho con iluminación suave y sin objetos para contraste limpio del texto sobre el fondo.
+11. Notas al orador (Locución Google Vids): "El cuerpo se relaciona con lo biológico, las emociones con lo afectivo y los vínculos con lo social. Las cinco dimensiones del libro conservan sus nombres; no son equivalencias exactas."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+--- DIAPOSITIVA 4 DE 7: EXPLICACIÓN (Clase 1) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 1 ("La sexualidad integra distintas dimensiones")
+3. Número de diapositiva: Diapositiva 4 de 7 (Archivo: 110-7-CNA-OA01-CLASE01-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 4: Un caso  ficticio — Desarrollar el concepto de integral dimensions of sexuality (physical, intellectual, social, emotional, spiritual).
+5. Título visible (64 pt, Amarillo Oro #FFD700): Un caso / ficticio
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): Nervios: / dimensión emocional
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing the fictional student scenario on a blackboard, identifying that feeling nervous corresponds strictly to the emotional dimension. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con trenzas en primer plano a la izquierda reflexionando; joven con chaqueta cerceta en plano medio a la derecha prestando apoyo.
+10. Espacio negativo destinado al texto: Franja superior horizontal abierta y limpia, permitiendo colocar el título amarillo oro y subtítulo blanco en dos líneas nítidas.
+11. Notas al orador (Locución Google Vids): "Retomemos a la estudiante ficticia: prepara una presentación, siente nervios, conversa con alguien de confianza y reflexiona sobre sus valores. Los nervios son una emoción; por eso corresponden a la dimensión emocional."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+--- DIAPOSITIVA 5 DE 7: EXPLICACIÓN (Clase 1) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 1 ("La sexualidad integra distintas dimensiones")
+3. Número de diapositiva: Diapositiva 5 de 7 (Archivo: 110-7-CNA-OA01-CLASE01-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 5: Valores  y vínculos — Desarrollar el concepto de integral dimensions of sexuality (physical, intellectual, social, emotional, spiritual).
+5. Título visible (64 pt, Amarillo Oro #FFD700): Valores / y vínculos
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): Valores: intelectual / Conversación: social
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, highlighting personal values and honest conversation on a study chart, recognizing intellectual and social dimensions at work. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con chaqueta cerceta en primer plano a la derecha; joven con trenzas en plano medio a la izquierda observando con empatía.
+10. Espacio negativo destinado al texto: Sector lateral izquierdo amplio y despejado para visualización directa del texto sin sombras ni recuadros.
+11. Notas al orador (Locución Google Vids): "La conversación muestra un vínculo: dimensión social. Reflexionar sobre valores corresponde a intelectual según este esquema. Así, identificamos tres pistas y justificamos cada relación, sin atribuir otras dimensiones que el caso no demuestra."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+--- DIAPOSITIVA 6 DE 7: EXPLICACIÓN (Clase 1) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 1 ("La sexualidad integra distintas dimensiones")
+3. Número de diapositiva: Diapositiva 6 de 7 (Archivo: 110-7-CNA-OA01-CLASE01-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 6: No es solo  física — Desarrollar el concepto de integral dimensions of sexuality (physical, intellectual, social, emotional, spiritual).
+5. Título visible (64 pt, Amarillo Oro #FFD700): No es solo / física
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): Lo físico no explica / todas las pistas
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, discussing why reducing human sexuality to physical traits misses feelings and values, looking at a comprehensive diagram. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos protagonistas ubicados en el centro-derecha, dirigiendo la mirada hacia el espacio conceptual izquierdo.
+10. Espacio negativo destinado al texto: Mitad superior izquierda despejada, creando una zona de descanso visual para los textos principales de la presentación.
+11. Notas al orador (Locución Google Vids): "Decir que esta experiencia es solo física omite sus emociones, vínculos y valores. Esas pistas justifican una explicación integral."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+--- DIAPOSITIVA 7 DE 7: EXPLICACIÓN (Clase 1) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 1 ("La sexualidad integra distintas dimensiones")
+3. Número de diapositiva: Diapositiva 7 de 7 (Archivo: 110-7-CNA-OA01-CLASE01-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 7: Una visión  integral — Desarrollar el concepto de integral dimensions of sexuality (physical, intellectual, social, emotional, spiritual).
+5. Título visible (64 pt, Amarillo Oro #FFD700): Una visión / integral
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): Relaciona las pistas / y justifica
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, smiling together with notebooks open, ready to begin interactive practice on integral dimensions in the digital platform. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos estudiantes en el centro sonriendo con seguridad y confianza, mirando hacia el espectador listos para avanzar.
+10. Espacio negativo destinado al texto: Tercio superior central y lateral izquierdo despejados con iluminación uniforme de aula para texto de alto impacto.
+11. Notas al orador (Locución Google Vids): "Una explicación integral relaciona dimensiones con pistas del caso. En la práctica leeremos el esquema original y justificaremos nuestras asociaciones."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+################################################################################
+CLASE 2 DE 6: CAMBIOS FÍSICOS DURANTE LA PUBERTAD
+################################################################################
+
+================================================================================
+PRESENTACIÓN MOTIVACION: 110-7-CNA-OA01-CLASE02-MOTIVACION.pptx
+PROPÓSITO: Despertar interés, presentar una situación cotidiana y activar conocimientos previos (7 diapositivas / ~60 s)
+================================================================================
+
+--- DIAPOSITIVA 1 DE 7: MOTIVACIÓN (Clase 2) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 2 ("Cambios físicos durante la pubertad")
+3. Número de diapositiva: Diapositiva 1 de 7 (Archivo: 110-7-CNA-OA01-CLASE02-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 1: Una situación — Desarrollar el concepto de physical changes during puberty, primary and secondary sex characteristics, individual biological rhythms.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Una situación
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing beside a school growth chart on a bright corridor wall, observing height markings with friendly curiosity. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con trenzas a la derecha y joven con chaqueta cerceta en el centro-izquierda conversando con atención.
+10. Espacio negativo destinado al texto: Cuadrante superior izquierdo completamente libre de elementos visuales distractores para alojar el título de 64 pt y subtítulo de 48 pt.
+11. Notas al orador (Locución Google Vids): "Hoy exploraremos cambios físicos durante la pubertad. Observaremos el caso y buscaremos pistas antes de sacar una conclusión."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 2 DE 7: MOTIVACIÓN (Clase 2) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 2 ("Cambios físicos durante la pubertad")
+3. Número de diapositiva: Diapositiva 2 de 7 (Archivo: 110-7-CNA-OA01-CLASE02-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 2: La pregunta — Desarrollar el concepto de physical changes during puberty, primary and secondary sex characteristics, individual biological rhythms.
+5. Título visible (64 pt, Amarillo Oro #FFD700): La pregunta
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, comparing growth milestones on a medical infographic without judgment, noting that two peers of same age develop differently. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos protagonistas en el centro interactuando con curiosidad frente a la situación presentada.
+10. Espacio negativo destinado al texto: Tercio superior y franja izquierda despejados con cielo o pared desenfocada de tono neutro para garantizar lectura sin máscaras.
+11. Notas al orador (Locución Google Vids): "Alex nota un aumento de estatura. Otra persona de su edad aún no nota ese mismo cambio. Mantén a la vista la situación y distingue lo que informa de lo que suponemos."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 3 DE 7: MOTIVACIÓN (Clase 2) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 2 ("Cambios físicos durante la pubertad")
+3. Número de diapositiva: Diapositiva 3 de 7 (Archivo: 110-7-CNA-OA01-CLASE02-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 3: Primera idea — Desarrollar el concepto de physical changes during puberty, primary and secondary sex characteristics, individual biological rhythms.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Primera idea
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, discussing how to distinguish real biological facts from assumptions, examining health education booklets. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con chaqueta cerceta a la derecha examinando el caso; joven con trenzas a la izquierda tomando notas analíticas.
+10. Espacio negativo destinado al texto: Cuadrante superior derecho con iluminación suave y sin objetos para contraste limpio del texto sobre el fondo.
+11. Notas al orador (Locución Google Vids): "¿Qué cambio físico aparece y qué conclusión prudente permite el caso? Puedes plantear una primera idea; después comprobaremos qué información la apoya."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 4 DE 7: MOTIVACIÓN (Clase 2) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 2 ("Cambios físicos durante la pubertad")
+3. Número de diapositiva: Diapositiva 4 de 7 (Archivo: 110-7-CNA-OA01-CLASE02-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 4: Busca pistas — Desarrollar el concepto de physical changes during puberty, primary and secondary sex characteristics, individual biological rhythms.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Busca pistas
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, taking notes near a school athletic field, noting that physical growth varies naturally between individuals. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con trenzas en primer plano a la izquierda reflexionando; joven con chaqueta cerceta en plano medio a la derecha prestando apoyo.
+10. Espacio negativo destinado al texto: Franja superior horizontal abierta y limpia, permitiendo colocar el título amarillo oro y subtítulo blanco en dos líneas nítidas.
+11. Notas al orador (Locución Google Vids): "Observa la situación. ¿Qué detalle podría ayudarte a responder? Una pista útil debe ayudarnos a responder la pregunta que estamos explorando."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 5 DE 7: MOTIVACIÓN (Clase 2) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 2 ("Cambios físicos durante la pubertad")
+3. Número de diapositiva: Diapositiva 5 de 7 (Archivo: 110-7-CNA-OA01-CLASE02-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 5: Compara posibilidades — Desarrollar el concepto de physical changes during puberty, primary and secondary sex characteristics, individual biological rhythms.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Compara posibilidades
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, looking at a clinical textbook illustration showing natural stages of adolescent growth spurts. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con chaqueta cerceta en primer plano a la derecha; joven con trenzas en plano medio a la izquierda observando con empatía.
+10. Espacio negativo destinado al texto: Sector lateral izquierdo amplio y despejado para visualización directa del texto sin sombras ni recuadros.
+11. Notas al orador (Locución Google Vids): "Una respuesta necesita información del recurso. Buscaremos pistas para fundamentarla. Dos respuestas pueden parecer posibles; necesitamos revisar cuál tiene respaldo."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 6 DE 7: MOTIVACIÓN (Clase 2) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 2 ("Cambios físicos durante la pubertad")
+3. Número de diapositiva: Diapositiva 6 de 7 (Archivo: 110-7-CNA-OA01-CLASE02-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 6: Una estrategia — Desarrollar el concepto de physical changes during puberty, primary and secondary sex characteristics, individual biological rhythms.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Una estrategia
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, debating respectfully in the biology lab about why height or physical timing never determines personal value or intelligence. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos protagonistas ubicados en el centro-derecha, dirigiendo la mirada hacia el espacio conceptual izquierdo.
+10. Espacio negativo destinado al texto: Mitad superior izquierda despejada, creando una zona de descanso visual para los textos principales de la presentación.
+11. Notas al orador (Locución Google Vids): "Lee el recurso y relaciona sus detalles antes de elegir una explicación. La clase mostrará cómo relacionar las pistas y explicar esa relación paso a paso."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 7 DE 7: MOTIVACIÓN (Clase 2) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 2 ("Cambios físicos durante la pubertad")
+3. Número de diapositiva: Diapositiva 7 de 7 (Archivo: 110-7-CNA-OA01-CLASE02-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 7: Puente a la lectura — Desarrollar el concepto de physical changes during puberty, primary and secondary sex characteristics, individual biological rhythms.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Puente a la lectura
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, closing their notebooks with cheerful expressions, ready to understand the scientific facts behind bodily changes. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos estudiantes en el centro sonriendo con seguridad y confianza, mirando hacia el espectador listos para avanzar.
+10. Espacio negativo destinado al texto: Tercio superior central y lateral izquierdo despejados con iluminación uniforme de aula para texto de alto impacto.
+11. Notas al orador (Locución Google Vids): "Ahora descubriremos cómo las pistas ayudan a comprender esta situación. Luego aplicarás el criterio a otra situación breve, con menor ayuda."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+================================================================================
+PRESENTACIÓN EXPLICACION: 110-7-CNA-OA01-CLASE02-EXPLICACION.pptx
+PROPÓSITO: Enseñar, modelar, aplicar y sintetizar el concepto disciplinar (7 diapositivas / ~90 s)
+================================================================================
+
+--- DIAPOSITIVA 1 DE 7: EXPLICACIÓN (Clase 2) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 2 ("Cambios físicos durante la pubertad")
+3. Número de diapositiva: Diapositiva 1 de 7 (Archivo: 110-7-CNA-OA01-CLASE02-EXPLICACION.pptx)
+4. Propósito pedagógico: Declarar el objetivo de aprendizaje de la lección: reconocer los cambios físicos de la pubertad (caracteres primarios y secundarios) y comprender que ocurren a ritmos individuales respetando las diferencias.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Objetivo de la lección
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): Ritmos individuales / en la pubertad
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old students, a girl with braided hair and a boy in a teal jacket, standing beside a clean infographic board comparing stages of biological growth. The boy looks thoughtfully at an illustrated timeline of growth spurts, while the girl takes scientific notes with a friendly smile. Bright natural daylight, soft laboratory background, crisp lines, ample negative space in upper-left. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico, iluminación balanceada y cálida, atmósfera de respeto y empatía científica en aula moderna.
+9. Posición de los protagonistas: Joven con trenzas a la izquierda sosteniendo una libreta; joven con chaqueta cerceta a la derecha observando la línea de tiempo con curiosidad respetuosa.
+10. Espacio negativo destinado al texto: Sector superior y cuadrante izquierdo despejados de líneas y objetos para dar máximo contraste al título 64 pt y subtítulo 48 pt.
+11. Notas al orador (Locución Google Vids): "El objetivo de esta lección es reconocer que los cambios físicos durante la pubertad, tanto primarios como secundarios, son naturales y ocurren a ritmos individuales que debemos comprender y respetar."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 12 segundos (Apertura del video Explicativo de 90 segundos)
+
+--- DIAPOSITIVA 2 DE 7: EXPLICACIÓN (Clase 2) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 2 ("Cambios físicos durante la pubertad")
+3. Número de diapositiva: Diapositiva 2 de 7 (Archivo: 110-7-CNA-OA01-CLASE02-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 2: El criterio — Desarrollar el concepto de physical changes during puberty, primary and secondary sex characteristics, individual biological rhythms.
+5. Título visible (64 pt, Amarillo Oro #FFD700): El criterio
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining an anatomical textbook page clearly distinguishing primary reproductive organs from secondary sex characteristics. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos protagonistas en el centro interactuando con curiosidad frente a la situación presentada.
+10. Espacio negativo destinado al texto: Tercio superior y franja izquierda despejados con cielo o pared desenfocada de tono neutro para garantizar lectura sin máscaras.
+11. Notas al orador (Locución Google Vids): "Los órganos reproductores y los caracteres secundarios pertenecen a la dimensión física, pero son categorías diferentes. El libro describe cambios compartidos y otros que suelen presentarse de manera diferente. No exige que ocurran simultáneamente."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+--- DIAPOSITIVA 3 DE 7: EXPLICACIÓN (Clase 2) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 2 ("Cambios físicos durante la pubertad")
+3. Número de diapositiva: Diapositiva 3 de 7 (Archivo: 110-7-CNA-OA01-CLASE02-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 3: Relación entre pistas — Desarrollar el concepto de physical changes during puberty, primary and secondary sex characteristics, individual biological rhythms.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Relación entre pistas
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, pointing to a comparative graph showing that boys and girls experience physical changes at diverse, healthy biological times. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con chaqueta cerceta a la derecha examinando el caso; joven con trenzas a la izquierda tomando notas analíticas.
+10. Espacio negativo destinado al texto: Cuadrante superior derecho con iluminación suave y sin objetos para contraste limpio del texto sobre el fondo.
+11. Notas al orador (Locución Google Vids): "Dos personas de la misma edad pueden mostrar ritmos distintos. La comparación del caso no permite juzgar su valor. Comprender los cambios ayuda a describirlos con respeto. La apariencia no define talentos ni oportunidades."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+--- DIAPOSITIVA 4 DE 7: EXPLICACIÓN (Clase 2) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 2 ("Cambios físicos durante la pubertad")
+3. Número de diapositiva: Diapositiva 4 de 7 (Archivo: 110-7-CNA-OA01-CLASE02-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 4: Modelo explicado — Desarrollar el concepto de physical changes during puberty, primary and secondary sex characteristics, individual biological rhythms.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Modelo explicado
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing the case of Alex noticing a height spurt while a classmate has not yet, formulating a prudent scientific conclusion. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con trenzas en primer plano a la izquierda reflexionando; joven con chaqueta cerceta en plano medio a la derecha prestando apoyo.
+10. Espacio negativo destinado al texto: Franja superior horizontal abierta y limpia, permitiendo colocar el título amarillo oro y subtítulo blanco en dos líneas nítidas.
+11. Notas al orador (Locución Google Vids): "Alex nota un aumento de estatura. Otra persona de su edad aún no nota ese mismo cambio. ¿Qué cambio físico aparece y qué conclusión prudente permite el caso? El cambio es el aumento de estatura. El caso permite reconocer que el ritmo de desarrollo puede variar. El recurso nombra el aumento de estatura y señala que los cambios no comienzan al mismo tiempo."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+--- DIAPOSITIVA 5 DE 7: EXPLICACIÓN (Clase 2) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 2 ("Cambios físicos durante la pubertad")
+3. Número de diapositiva: Diapositiva 5 de 7 (Archivo: 110-7-CNA-OA01-CLASE02-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 5: Comprobación — Desarrollar el concepto de physical changes during puberty, primary and secondary sex characteristics, individual biological rhythms.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Comprobación
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, reviewing a chart demonstrating that physical development has zero correlation with academic talents or moral character. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con chaqueta cerceta en primer plano a la derecha; joven con trenzas en plano medio a la izquierda observando con empatía.
+10. Espacio negativo destinado al texto: Sector lateral izquierdo amplio y despejado para visualización directa del texto sin sombras ni recuadros.
+11. Notas al orador (Locución Google Vids): "Un compañero dice que quien cambia antes vale más o será mejor estudiante. ¿Por qué esa afirmación no está respaldada por el recurso? Porque un cambio físico no determina el valor personal ni las capacidades escolares. El recurso distingue los cambios corporales de las capacidades y del valor de las personas."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+--- DIAPOSITIVA 6 DE 7: EXPLICACIÓN (Clase 2) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 2 ("Cambios físicos durante la pubertad")
+3. Número de diapositiva: Diapositiva 6 de 7 (Archivo: 110-7-CNA-OA01-CLASE02-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 6: Error y corrección — Desarrollar el concepto de physical changes during puberty, primary and secondary sex characteristics, individual biological rhythms.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Error y corrección
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, identifying a common error: using physical appearance to rank popularity or maturity, crossing out the misconception on a board. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos protagonistas ubicados en el centro-derecha, dirigiendo la mirada hacia el espacio conceptual izquierdo.
+10. Espacio negativo destinado al texto: Mitad superior izquierda despejada, creando una zona de descanso visual para los textos principales de la presentación.
+11. Notas al orador (Locución Google Vids): "Un error que debemos evitar: Usar una edad, estatura o cambio corporal como ranking de valor o madurez emocional."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+--- DIAPOSITIVA 7 DE 7: EXPLICACIÓN (Clase 2) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 2 ("Cambios físicos durante la pubertad")
+3. Número de diapositiva: Diapositiva 7 de 7 (Archivo: 110-7-CNA-OA01-CLASE02-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 7: Síntesis y práctica — Desarrollar el concepto de physical changes during puberty, primary and secondary sex characteristics, individual biological rhythms.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Síntesis y práctica
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, holding their biology notebooks with confidence, ready to apply evidence-based criteria in the interactive exercises. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos estudiantes en el centro sonriendo con seguridad y confianza, mirando hacia el espectador listos para avanzar.
+10. Espacio negativo destinado al texto: Tercio superior central y lateral izquierdo despejados con iluminación uniforme de aula para texto de alto impacto.
+11. Notas al orador (Locución Google Vids): "Los cambios físicos tienen ritmos individuales. Lee, localiza evidencia, explica y comprueba. Continúa con la práctica interactiva."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+################################################################################
+CLASE 3 DE 6: EMOCIONES, AFECTIVIDAD E IMAGEN PERSONAL
+################################################################################
+
+================================================================================
+PRESENTACIÓN MOTIVACION: 110-7-CNA-OA01-CLASE03-MOTIVACION.pptx
+PROPÓSITO: Despertar interés, presentar una situación cotidiana y activar conocimientos previos (7 diapositivas / ~60 s)
+================================================================================
+
+--- DIAPOSITIVA 1 DE 7: MOTIVACIÓN (Clase 3) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 3 ("Emociones, afectividad e imagen personal")
+3. Número de diapositiva: Diapositiva 1 de 7 (Archivo: 110-7-CNA-OA01-CLASE03-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 1: Una situación — Desarrollar el concepto de emotions, affectivity, self-image, social media filters, distinguishing feeling from acting.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Una situación
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, looking at a smart tablet displaying a photo with artificial beauty filters, discussing the difference between reality and digital edits. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con trenzas a la derecha y joven con chaqueta cerceta en el centro-izquierda conversando con atención.
+10. Espacio negativo destinado al texto: Cuadrante superior izquierdo completamente libre de elementos visuales distractores para alojar el título de 64 pt y subtítulo de 48 pt.
+11. Notas al orador (Locución Google Vids): "Hoy exploraremos emociones, afectividad e imagen personal. Observaremos el caso y buscaremos pistas antes de sacar una conclusión."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 2 DE 7: MOTIVACIÓN (Clase 3) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 3 ("Emociones, afectividad e imagen personal")
+3. Número de diapositiva: Diapositiva 2 de 7 (Archivo: 110-7-CNA-OA01-CLASE03-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 2: La pregunta — Desarrollar el concepto de emotions, affectivity, self-image, social media filters, distinguishing feeling from acting.
+5. Título visible (64 pt, Amarillo Oro #FFD700): La pregunta
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, talking empathetically on a bench in the school patio, observing that digital filters distort realistic expectations. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos protagonistas en el centro interactuando con curiosidad frente a la situación presentada.
+10. Espacio negativo destinado al texto: Tercio superior y franja izquierda despejados con cielo o pared desenfocada de tono neutro para garantizar lectura sin máscaras.
+11. Notas al orador (Locución Google Vids): "Sam se siente inseguro al compararse con una imagen con filtros. Mantén a la vista la situación y distingue lo que informa de lo que suponemos."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 3 DE 7: MOTIVACIÓN (Clase 3) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 3 ("Emociones, afectividad e imagen personal")
+3. Número de diapositiva: Diapositiva 3 de 7 (Archivo: 110-7-CNA-OA01-CLASE03-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 3: Primera idea — Desarrollar el concepto de emotions, affectivity, self-image, social media filters, distinguishing feeling from acting.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Primera idea
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, discussing in a study nook how intense emotions like nervousness or insecurity can arise during adolescent changes. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con chaqueta cerceta a la derecha examinando el caso; joven con trenzas a la izquierda tomando notas analíticas.
+10. Espacio negativo destinado al texto: Cuadrante superior derecho con iluminación suave y sin objetos para contraste limpio del texto sobre el fondo.
+11. Notas al orador (Locución Google Vids): "¿Qué aspecto emocional aparece y qué información ayuda a revisar la comparación? Puedes plantear una primera idea; después comprobaremos qué información la apoya."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 4 DE 7: MOTIVACIÓN (Clase 3) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 3 ("Emociones, afectividad e imagen personal")
+3. Número de diapositiva: Diapositiva 4 de 7 (Archivo: 110-7-CNA-OA01-CLASE03-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 4: Busca pistas — Desarrollar el concepto de emotions, affectivity, self-image, social media filters, distinguishing feeling from acting.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Busca pistas
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining journal notes about choosing positive coping strategies when feeling anxious about class presentations. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con trenzas en primer plano a la izquierda reflexionando; joven con chaqueta cerceta en plano medio a la derecha prestando apoyo.
+10. Espacio negativo destinado al texto: Franja superior horizontal abierta y limpia, permitiendo colocar el título amarillo oro y subtítulo blanco en dos líneas nítidas.
+11. Notas al orador (Locución Google Vids): "Observa la situación. ¿Qué detalle podría ayudarte a responder? Una pista útil debe ayudarnos a responder la pregunta que estamos explorando."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 5 DE 7: MOTIVACIÓN (Clase 3) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 3 ("Emociones, afectividad e imagen personal")
+3. Número de diapositiva: Diapositiva 5 de 7 (Archivo: 110-7-CNA-OA01-CLASE03-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 5: Compara posibilidades — Desarrollar el concepto de emotions, affectivity, self-image, social media filters, distinguishing feeling from acting.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Compara posibilidades
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, looking at a poster about emotional regulation and supportive friendships in an inspiring school wellness corner. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con chaqueta cerceta en primer plano a la derecha; joven con trenzas en plano medio a la izquierda observando con empatía.
+10. Espacio negativo destinado al texto: Sector lateral izquierdo amplio y despejado para visualización directa del texto sin sombras ni recuadros.
+11. Notas al orador (Locución Google Vids): "Una respuesta necesita información del recurso. Buscaremos pistas para fundamentarla. Dos respuestas pueden parecer posibles; necesitamos revisar cuál tiene respaldo."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 6 DE 7: MOTIVACIÓN (Clase 3) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 3 ("Emociones, afectividad e imagen personal")
+3. Número de diapositiva: Diapositiva 6 de 7 (Archivo: 110-7-CNA-OA01-CLASE03-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 6: Una estrategia — Desarrollar el concepto de emotions, affectivity, self-image, social media filters, distinguishing feeling from acting.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Una estrategia
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, reflecting on how self-worth is rooted in authentic identity rather than superficial online beauty standards. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos protagonistas ubicados en el centro-derecha, dirigiendo la mirada hacia el espacio conceptual izquierdo.
+10. Espacio negativo destinado al texto: Mitad superior izquierda despejada, creando una zona de descanso visual para los textos principales de la presentación.
+11. Notas al orador (Locución Google Vids): "Lee el recurso y relaciona sus detalles antes de elegir una explicación. La clase mostrará cómo relacionar las pistas y explicar esa relación paso a paso."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 7 DE 7: MOTIVACIÓN (Clase 3) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 3 ("Emociones, afectividad e imagen personal")
+3. Número de diapositiva: Diapositiva 7 de 7 (Archivo: 110-7-CNA-OA01-CLASE03-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 7: Puente a la lectura — Desarrollar el concepto de emotions, affectivity, self-image, social media filters, distinguishing feeling from acting.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Puente a la lectura
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, preparing to discover scientific guidance in the health textbook about affective balance and mental health. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos estudiantes en el centro sonriendo con seguridad y confianza, mirando hacia el espectador listos para avanzar.
+10. Espacio negativo destinado al texto: Tercio superior central y lateral izquierdo despejados con iluminación uniforme de aula para texto de alto impacto.
+11. Notas al orador (Locución Google Vids): "Ahora descubriremos cómo las pistas ayudan a comprender esta situación. Luego aplicarás el criterio a otra situación breve, con menor ayuda."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+================================================================================
+PRESENTACIÓN EXPLICACION: 110-7-CNA-OA01-CLASE03-EXPLICACION.pptx
+PROPÓSITO: Enseñar, modelar, aplicar y sintetizar el concepto disciplinar (7 diapositivas / ~90 s)
+================================================================================
+
+--- DIAPOSITIVA 1 DE 7: EXPLICACIÓN (Clase 3) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 3 ("Emociones, afectividad e imagen personal")
+3. Número de diapositiva: Diapositiva 1 de 7 (Archivo: 110-7-CNA-OA01-CLASE03-EXPLICACION.pptx)
+4. Propósito pedagógico: Declarar el objetivo de aprendizaje de la lección: comprender la dimensión afectiva y emocional en la pubertad, diferenciando lo que sentimos de las acciones que elegimos, sin someterse a filtros corporales.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Objetivo de la lección
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): Emociones, afecto / e imagen personal
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old students, a girl with braided hair and a boy in a teal jacket, in a serene school courtyard under blooming cherry trees. The girl holds an authentic printed photograph while the boy smiles reassuringly, encouraging positive self-acceptance and emotional well-being. Gentle ambient sunlight, soft pastel foliage, expansive negative space in upper-left. No text drawn by AI.
+8. Composición visual: Plano medio abierto, atmósfera pacífica y reflexiva con suave desenfoque de fondo botánico, iluminación solar matutina.
+9. Posición de los protagonistas: Joven con trenzas en el centro-izquierda observando con serenidad; joven con chaqueta cerceta a la derecha con postura de apoyo y escucha activa.
+10. Espacio negativo destinado al texto: Cuadrante superior izquierdo limpio con fondo de cielo suave para permitir perfecta legibilidad del texto sin paneles ni sombras.
+11. Notas al orador (Locución Google Vids): "El objetivo de esta lección es comprender la dimensión afectiva y emocional en la pubertad, diferenciando lo que sentimos de las acciones que elegimos, sin guiarnos por estándares irreales o filtros."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 12 segundos (Apertura del video Explicativo de 90 segundos)
+
+--- DIAPOSITIVA 2 DE 7: EXPLICACIÓN (Clase 3) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 3 ("Emociones, afectividad e imagen personal")
+3. Número de diapositiva: Diapositiva 2 de 7 (Archivo: 110-7-CNA-OA01-CLASE03-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 2: El criterio — Desarrollar el concepto de emotions, affectivity, self-image, social media filters, distinguishing feeling from acting.
+5. Título visible (64 pt, Amarillo Oro #FFD700): El criterio
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing a conceptual diagram distinguishing physical traits from affective feelings and emotional states. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos protagonistas en el centro interactuando con curiosidad frente a la situación presentada.
+10. Espacio negativo destinado al texto: Tercio superior y franja izquierda despejados con cielo o pared desenfocada de tono neutro para garantizar lectura sin máscaras.
+11. Notas al orador (Locución Google Vids): "Los sentimientos y estados de ánimo pueden influir en cómo pensamos y nos relacionamos con otros. Una imagen con filtros no representa cómo deben verse todas las personas. El caso invita a revisar esa comparación."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+--- DIAPOSITIVA 3 DE 7: EXPLICACIÓN (Clase 3) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 3 ("Emociones, afectividad e imagen personal")
+3. Número de diapositiva: Diapositiva 3 de 7 (Archivo: 110-7-CNA-OA01-CLASE03-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 3: Relación entre pistas — Desarrollar el concepto de emotions, affectivity, self-image, social media filters, distinguishing feeling from acting.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Relación entre pistas
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, reviewing a chart showing that feeling an emotion is natural, while choosing helpful actions is a conscious personal decision. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con chaqueta cerceta a la derecha examinando el caso; joven con trenzas a la izquierda tomando notas analíticas.
+10. Espacio negativo destinado al texto: Cuadrante superior derecho con iluminación suave y sin objetos para contraste limpio del texto sobre el fondo.
+11. Notas al orador (Locución Google Vids): "La amiga escucha a Sam y propone apoyo. Esa acción muestra preocupación por otra persona. Dani siente nervios y elige preparar su presentación y pedir ayuda. La emoción no determina una única conducta."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+--- DIAPOSITIVA 4 DE 7: EXPLICACIÓN (Clase 3) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 3 ("Emociones, afectividad e imagen personal")
+3. Número de diapositiva: Diapositiva 4 de 7 (Archivo: 110-7-CNA-OA01-CLASE03-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 4: Modelo explicado — Desarrollar el concepto de emotions, affectivity, self-image, social media filters, distinguishing feeling from acting.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Modelo explicado
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining Sam's case of feeling insecure over filtered images, explaining how media literacy restores realistic self-perception. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con trenzas en primer plano a la izquierda reflexionando; joven con chaqueta cerceta en plano medio a la derecha prestando apoyo.
+10. Espacio negativo destinado al texto: Franja superior horizontal abierta y limpia, permitiendo colocar el título amarillo oro y subtítulo blanco en dos líneas nítidas.
+11. Notas al orador (Locución Google Vids): "Sam se siente inseguro al compararse con una imagen con filtros. ¿Qué aspecto emocional aparece y qué información ayuda a revisar la comparación? Aparece la inseguridad. La comparación puede revisarse porque el filtro modifica la imagen y no establece un modelo obligatorio. El caso menciona el filtro y la emoción de Sam."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+--- DIAPOSITIVA 5 DE 7: EXPLICACIÓN (Clase 3) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 3 ("Emociones, afectividad e imagen personal")
+3. Número de diapositiva: Diapositiva 5 de 7 (Archivo: 110-7-CNA-OA01-CLASE03-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 5: Comprobación — Desarrollar el concepto de emotions, affectivity, self-image, social media filters, distinguishing feeling from acting.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Comprobación
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, observing Dani's case where nervousness is acknowledged, then addressed through practice and asking a teacher for guidance. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con chaqueta cerceta en primer plano a la derecha; joven con trenzas en plano medio a la izquierda observando con empatía.
+10. Espacio negativo destinado al texto: Sector lateral izquierdo amplio y despejado para visualización directa del texto sin sombras ni recuadros.
+11. Notas al orador (Locución Google Vids): "Dani siente nervios, prepara una idea y pide ayuda para ensayar. ¿Cómo diferencia el caso emoción y acción? Los nervios son una emoción. Preparar y pedir ayuda son acciones elegidas para enfrentar la situación. El recurso presenta por separado lo que siente Dani y las acciones que realiza."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+--- DIAPOSITIVA 6 DE 7: EXPLICACIÓN (Clase 3) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 3 ("Emociones, afectividad e imagen personal")
+3. Número de diapositiva: Diapositiva 6 de 7 (Archivo: 110-7-CNA-OA01-CLASE03-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 6: Error y corrección — Desarrollar el concepto de emotions, affectivity, self-image, social media filters, distinguishing feeling from acting.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Error y corrección
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, refuting the false belief that emotions dictate uncontrollable behavior, highlighting constructive emotional management. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos protagonistas ubicados en el centro-derecha, dirigiendo la mirada hacia el espacio conceptual izquierdo.
+10. Espacio negativo destinado al texto: Mitad superior izquierda despejada, creando una zona de descanso visual para los textos principales de la presentación.
+11. Notas al orador (Locución Google Vids): "Un error que debemos evitar: Tratar una emoción como una orden inevitable o una imagen con filtros como un estándar obligatorio. Si la respuesta añade información, vuelve al recurso y corrígela."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+--- DIAPOSITIVA 7 DE 7: EXPLICACIÓN (Clase 3) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 3 ("Emociones, afectividad e imagen personal")
+3. Número de diapositiva: Diapositiva 7 de 7 (Archivo: 110-7-CNA-OA01-CLASE03-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 7: Síntesis y práctica — Desarrollar el concepto de emotions, affectivity, self-image, social media filters, distinguishing feeling from acting.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Síntesis y práctica
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, smiling together with calm expressions, ready to solve interactive dilemmas regarding emotional awareness on the platform. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos estudiantes en el centro sonriendo con seguridad y confianza, mirando hacia el espectador listos para avanzar.
+10. Espacio negativo destinado al texto: Tercio superior central y lateral izquierdo despejados con iluminación uniforme de aula para texto de alto impacto.
+11. Notas al orador (Locución Google Vids): "Reconocer emociones ayuda a elegir respuestas de cuidado. Lee, localiza evidencia, explica y comprueba. Continúa con la práctica interactiva."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+################################################################################
+CLASE 4 DE 6: ASPECTOS SOCIALES Y ESTEREOTIPOS
+################################################################################
+
+================================================================================
+PRESENTACIÓN MOTIVACION: 110-7-CNA-OA01-CLASE04-MOTIVACION.pptx
+PROPÓSITO: Despertar interés, presentar una situación cotidiana y activar conocimientos previos (7 diapositivas / ~60 s)
+================================================================================
+
+--- DIAPOSITIVA 1 DE 7: MOTIVACIÓN (Clase 4) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 4 ("Aspectos sociales y estereotipos")
+3. Número de diapositiva: Diapositiva 1 de 7 (Archivo: 110-7-CNA-OA01-CLASE04-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 1: Una situación — Desarrollar el concepto de social aspects of sexuality, gender stereotypes, cultural expectations versus individual potential.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Una situación
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, walking through a school club fair, noticing posters for robotics, literature, and athletics, questioning gendered labels. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con trenzas a la derecha y joven con chaqueta cerceta en el centro-izquierda conversando con atención.
+10. Espacio negativo destinado al texto: Cuadrante superior izquierdo completamente libre de elementos visuales distractores para alojar el título de 64 pt y subtítulo de 48 pt.
+11. Notas al orador (Locución Google Vids): "Hoy exploraremos aspectos sociales y estereotipos. Observaremos el caso y buscaremos pistas antes de sacar una conclusión."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 2 DE 7: MOTIVACIÓN (Clase 4) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 4 ("Aspectos sociales y estereotipos")
+3. Número de diapositiva: Diapositiva 2 de 7 (Archivo: 110-7-CNA-OA01-CLASE04-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 2: La pregunta — Desarrollar el concepto de social aspects of sexuality, gender stereotypes, cultural expectations versus individual potential.
+5. Título visible (64 pt, Amarillo Oro #FFD700): La pregunta
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, discussing a classmate's comment that certain hobbies belong to boys or girls, questioning that cultural assumption. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos protagonistas en el centro interactuando con curiosidad frente a la situación presentada.
+10. Espacio negativo destinado al texto: Tercio superior y franja izquierda despejados con cielo o pared desenfocada de tono neutro para garantizar lectura sin máscaras.
+11. Notas al orador (Locución Google Vids): "Valeria quiere construir un robot. Un compañero afirma que las niñas no son buenas para la ciencia. Mantén a la vista la situación y distingue lo que informa de lo que suponemos."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 3 DE 7: MOTIVACIÓN (Clase 4) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 4 ("Aspectos sociales y estereotipos")
+3. Número de diapositiva: Diapositiva 3 de 7 (Archivo: 110-7-CNA-OA01-CLASE04-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 3: Primera idea — Desarrollar el concepto de social aspects of sexuality, gender stereotypes, cultural expectations versus individual potential.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Primera idea
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, observing diverse student projects in a science lab where both girls and boys lead innovative experiments. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con chaqueta cerceta a la derecha examinando el caso; joven con trenzas a la izquierda tomando notas analíticas.
+10. Espacio negativo destinado al texto: Cuadrante superior derecho con iluminación suave y sin objetos para contraste limpio del texto sobre el fondo.
+11. Notas al orador (Locución Google Vids): "¿Qué parte es un interés individual y qué parte es un estereotipo? Puedes plantear una primera idea; después comprobaremos qué información la apoya."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 4 DE 7: MOTIVACIÓN (Clase 4) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 4 ("Aspectos sociales y estereotipos")
+3. Número de diapositiva: Diapositiva 4 de 7 (Archivo: 110-7-CNA-OA01-CLASE04-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 4: Busca pistas — Desarrollar el concepto de social aspects of sexuality, gender stereotypes, cultural expectations versus individual potential.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Busca pistas
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, listening to an interview excerpt about professional equality in engineering and healthcare careers. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con trenzas en primer plano a la izquierda reflexionando; joven con chaqueta cerceta en plano medio a la derecha prestando apoyo.
+10. Espacio negativo destinado al texto: Franja superior horizontal abierta y limpia, permitiendo colocar el título amarillo oro y subtítulo blanco en dos líneas nítidas.
+11. Notas al orador (Locución Google Vids): "Observa la situación. ¿Qué detalle podría ayudarte a responder? Una pista útil debe ayudarnos a responder la pregunta que estamos explorando."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 5 DE 7: MOTIVACIÓN (Clase 4) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 4 ("Aspectos sociales y estereotipos")
+3. Número de diapositiva: Diapositiva 5 de 7 (Archivo: 110-7-CNA-OA01-CLASE04-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 5: Compara posibilidades — Desarrollar el concepto de social aspects of sexuality, gender stereotypes, cultural expectations versus individual potential.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Compara posibilidades
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing magazine clippings on a whiteboard to identify cultural messages that limit personal aspirations. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con chaqueta cerceta en primer plano a la derecha; joven con trenzas en plano medio a la izquierda observando con empatía.
+10. Espacio negativo destinado al texto: Sector lateral izquierdo amplio y despejado para visualización directa del texto sin sombras ni recuadros.
+11. Notas al orador (Locución Google Vids): "Una respuesta necesita información del recurso. Buscaremos pistas para fundamentarla. Dos respuestas pueden parecer posibles; necesitamos revisar cuál tiene respaldo."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 6 DE 7: MOTIVACIÓN (Clase 4) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 4 ("Aspectos sociales y estereotipos")
+3. Número de diapositiva: Diapositiva 6 de 7 (Archivo: 110-7-CNA-OA01-CLASE04-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 6: Una estrategia — Desarrollar el concepto de social aspects of sexuality, gender stereotypes, cultural expectations versus individual potential.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Una estrategia
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, reflecting in a bright classroom on how stereotypes restrict genuine talent and emotional expression. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos protagonistas ubicados en el centro-derecha, dirigiendo la mirada hacia el espacio conceptual izquierdo.
+10. Espacio negativo destinado al texto: Mitad superior izquierda despejada, creando una zona de descanso visual para los textos principales de la presentación.
+11. Notas al orador (Locución Google Vids): "Lee el recurso y relaciona sus detalles antes de elegir una explicación. La clase mostrará cómo relacionar las pistas y explicar esa relación paso a paso."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 7 DE 7: MOTIVACIÓN (Clase 4) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 4 ("Aspectos sociales y estereotipos")
+3. Número de diapositiva: Diapositiva 7 de 7 (Archivo: 110-7-CNA-OA01-CLASE04-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 7: Puente a la lectura — Desarrollar el concepto de social aspects of sexuality, gender stereotypes, cultural expectations versus individual potential.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Puente a la lectura
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, opening the textbook section on social influences and cultural heritage with analytical curiosity. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos estudiantes en el centro sonriendo con seguridad y confianza, mirando hacia el espectador listos para avanzar.
+10. Espacio negativo destinado al texto: Tercio superior central y lateral izquierdo despejados con iluminación uniforme de aula para texto de alto impacto.
+11. Notas al orador (Locución Google Vids): "Ahora descubriremos cómo las pistas ayudan a comprender esta situación. Luego aplicarás el criterio a otra situación breve, con menor ayuda."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+================================================================================
+PRESENTACIÓN EXPLICACION: 110-7-CNA-OA01-CLASE04-EXPLICACION.pptx
+PROPÓSITO: Enseñar, modelar, aplicar y sintetizar el concepto disciplinar (7 diapositivas / ~90 s)
+================================================================================
+
+--- DIAPOSITIVA 1 DE 7: EXPLICACIÓN (Clase 4) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 4 ("Aspectos sociales y estereotipos")
+3. Número de diapositiva: Diapositiva 1 de 7 (Archivo: 110-7-CNA-OA01-CLASE04-EXPLICACION.pptx)
+4. Propósito pedagógico: Declarar el objetivo de aprendizaje de la lección: analizar la dimensión social de la sexualidad, reconociendo cómo los estereotipos de género imponen expectativas injustas que no deben limitar las oportunidades.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Objetivo de la lección
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): Cuestionar estereotipos / y limitaciones
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, in a vibrant science workshop. The girl is enthusiastically assembling an educational robotics kit with gears and sensors, while the boy cheers her on and offers tools from a craft kit. Clean modern lines, warm workshop light, wide negative space in upper-left. No text drawn by AI.
+8. Composición visual: Plano medio dinámico, enfoque nítido sobre la mesa de robótica y los personajes, iluminación de taller de ciencias luminosa.
+9. Posición de los protagonistas: Joven con trenzas en el centro trabajando con cables y engranajes; joven con chaqueta cerceta a la derecha celebrando su avance con una sonrisa genuina.
+10. Espacio negativo destinado al texto: Tercio superior izquierdo libre de estanterías y objetos colgantes para ubicar el título y subtítulo en tipografía oficial.
+11. Notas al orador (Locución Google Vids): "El objetivo de esta lección es analizar la dimensión social de la sexualidad, reconociendo cómo los estereotipos de género imponen expectativas injustas que no deben limitar los talentos ni las decisiones personales."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 12 segundos (Apertura del video Explicativo de 90 segundos)
+
+--- DIAPOSITIVA 2 DE 7: EXPLICACIÓN (Clase 4) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 4 ("Aspectos sociales y estereotipos")
+3. Número de diapositiva: Diapositiva 2 de 7 (Archivo: 110-7-CNA-OA01-CLASE04-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 2: El criterio — Desarrollar el concepto de social aspects of sexuality, gender stereotypes, cultural expectations versus individual potential.
+5. Título visible (64 pt, Amarillo Oro #FFD700): El criterio
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining a sociological diagram illustrating how family, media, and school transmit ideas that must be critically evaluated. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos protagonistas en el centro interactuando con curiosidad frente a la situación presentada.
+10. Espacio negativo destinado al texto: Tercio superior y franja izquierda despejados con cielo o pared desenfocada de tono neutro para garantizar lectura sin máscaras.
+11. Notas al orador (Locución Google Vids): "La frase sobre las niñas y la ciencia atribuye una capacidad a todo un grupo. No considera a Valeria. Valeria quiere construir un robot. Esa información describe su interés y permite darle una oportunidad de aprender."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+--- DIAPOSITIVA 3 DE 7: EXPLICACIÓN (Clase 4) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 4 ("Aspectos sociales y estereotipos")
+3. Número de diapositiva: Diapositiva 3 de 7 (Archivo: 110-7-CNA-OA01-CLASE04-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 3: Relación entre pistas — Desarrollar el concepto de social aspects of sexuality, gender stereotypes, cultural expectations versus individual potential.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Relación entre pistas
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing Valeria's case who loves building robots despite a classmate saying science is not for girls, defending her right to learn. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con chaqueta cerceta a la derecha examinando el caso; joven con trenzas a la izquierda tomando notas analíticas.
+10. Espacio negativo destinado al texto: Cuadrante superior derecho con iluminación suave y sin objetos para contraste limpio del texto sobre el fondo.
+11. Notas al orador (Locución Google Vids): "La frase que impide a los niños mostrar emociones también generaliza y limita una experiencia humana. Escuchar a Tomás y permitir que Valeria participe evita usar estereotipos para decidir por ellos."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+--- DIAPOSITIVA 4 DE 7: EXPLICACIÓN (Clase 4) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 4 ("Aspectos sociales y estereotipos")
+3. Número de diapositiva: Diapositiva 4 de 7 (Archivo: 110-7-CNA-OA01-CLASE04-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 4: Modelo explicado — Desarrollar el concepto de social aspects of sexuality, gender stereotypes, cultural expectations versus individual potential.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Modelo explicado
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing Tomás's case who expresses sadness and is told boys should not cry, defending his right to full emotional expression. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con trenzas en primer plano a la izquierda reflexionando; joven con chaqueta cerceta en plano medio a la derecha prestando apoyo.
+10. Espacio negativo destinado al texto: Franja superior horizontal abierta y limpia, permitiendo colocar el título amarillo oro y subtítulo blanco en dos líneas nítidas.
+11. Notas al orador (Locución Google Vids): "Valeria quiere construir un robot. Un compañero afirma que las niñas no son buenas para la ciencia. ¿Qué parte es un interés individual y qué parte es un estereotipo? El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo. Una parte habla de una persona y la otra generaliza sobre un grupo."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+--- DIAPOSITIVA 5 DE 7: EXPLICACIÓN (Clase 4) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 4 ("Aspectos sociales y estereotipos")
+3. Número de diapositiva: Diapositiva 5 de 7 (Archivo: 110-7-CNA-OA01-CLASE04-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 5: Comprobación — Desarrollar el concepto de social aspects of sexuality, gender stereotypes, cultural expectations versus individual potential.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Comprobación
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, comparing individual interests against group generalizations on an interactive tablet, showing stereotypes lack factual basis. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con chaqueta cerceta en primer plano a la derecha; joven con trenzas en plano medio a la izquierda observando con empatía.
+10. Espacio negativo destinado al texto: Sector lateral izquierdo amplio y despejado para visualización directa del texto sin sombras ni recuadros.
+11. Notas al orador (Locución Google Vids): "Tomás expresa tristeza. Una compañera escucha mientras otro le dice que los niños no deben mostrar emociones. ¿Qué respuesta respeta a Tomás y por qué? Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión. El caso presenta una emoción concreta y una regla impuesta a todos los niños."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+--- DIAPOSITIVA 6 DE 7: EXPLICACIÓN (Clase 4) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 4 ("Aspectos sociales y estereotipos")
+3. Número de diapositiva: Diapositiva 6 de 7 (Archivo: 110-7-CNA-OA01-CLASE04-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 6: Error y corrección — Desarrollar el concepto de social aspects of sexuality, gender stereotypes, cultural expectations versus individual potential.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Error y corrección
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, identifying the error of confusing traditional social expectations with biological capabilities, refuting false barriers. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos protagonistas ubicados en el centro-derecha, dirigiendo la mirada hacia el espacio conceptual izquierdo.
+10. Espacio negativo destinado al texto: Mitad superior izquierda despejada, creando una zona de descanso visual para los textos principales de la presentación.
+11. Notas al orador (Locución Google Vids): "Un error que debemos evitar: Confundir una expectativa social con una capacidad biológica demostrada. Si la respuesta añade información, vuelve al recurso y corrígela."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+--- DIAPOSITIVA 7 DE 7: EXPLICACIÓN (Clase 4) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 4 ("Aspectos sociales y estereotipos")
+3. Número de diapositiva: Diapositiva 7 de 7 (Archivo: 110-7-CNA-OA01-CLASE04-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 7: Síntesis y práctica — Desarrollar el concepto de social aspects of sexuality, gender stereotypes, cultural expectations versus individual potential.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Síntesis y práctica
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, smiling proudly beside a completed scientific model, inviting peers to embrace freedom of choice in the online practice. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos estudiantes en el centro sonriendo con seguridad y confianza, mirando hacia el espectador listos para avanzar.
+10. Espacio negativo destinado al texto: Tercio superior central y lateral izquierdo despejados con iluminación uniforme de aula para texto de alto impacto.
+11. Notas al orador (Locución Google Vids): "Los estereotipos no deben limitar oportunidades. Lee, localiza evidencia, explica y comprueba. Continúa con la práctica interactiva."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+################################################################################
+CLASE 5 DE 6: VÍNCULOS AFECTIVOS Y RESPETO MUTUO
+################################################################################
+
+================================================================================
+PRESENTACIÓN MOTIVACION: 110-7-CNA-OA01-CLASE05-MOTIVACION.pptx
+PROPÓSITO: Despertar interés, presentar una situación cotidiana y activar conocimientos previos (7 diapositivas / ~60 s)
+================================================================================
+
+--- DIAPOSITIVA 1 DE 7: MOTIVACIÓN (Clase 5) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 5 ("Vínculos afectivos y respeto mutuo")
+3. Número de diapositiva: Diapositiva 1 de 7 (Archivo: 110-7-CNA-OA01-CLASE05-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 1: Una situación — Desarrollar el concepto de affective bonds, mutual respect, healthy boundaries, consent and empathy in friendships and relationships.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Una situación
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, sitting together in a bright school cafeteria, observing how different friends express affection comfortably and politely. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con trenzas a la derecha y joven con chaqueta cerceta en el centro-izquierda conversando con atención.
+10. Espacio negativo destinado al texto: Cuadrante superior izquierdo completamente libre de elementos visuales distractores para alojar el título de 64 pt y subtítulo de 48 pt.
+11. Notas al orador (Locución Google Vids): "Hoy exploraremos vínculos afectivos y respeto mutuo. Observaremos el caso y buscaremos pistas antes de sacar una conclusión."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 2 DE 7: MOTIVACIÓN (Clase 5) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 5 ("Vínculos afectivos y respeto mutuo")
+3. Número de diapositiva: Diapositiva 2 de 7 (Archivo: 110-7-CNA-OA01-CLASE05-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 2: La pregunta — Desarrollar el concepto de affective bonds, mutual respect, healthy boundaries, consent and empathy in friendships and relationships.
+5. Título visible (64 pt, Amarillo Oro #FFD700): La pregunta
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, discussing a situation where a student prefers a verbal greeting rather than physical contact, respecting that preference. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos protagonistas en el centro interactuando con curiosidad frente a la situación presentada.
+10. Espacio negativo destinado al texto: Tercio superior y franja izquierda despejados con cielo o pared desenfocada de tono neutro para garantizar lectura sin máscaras.
+11. Notas al orador (Locución Google Vids): "Nico prefiere saludar con la mano. Paula acepta sin insistir. Mantén a la vista la situación y distingue lo que informa de lo que suponemos."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 3 DE 7: MOTIVACIÓN (Clase 5) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 5 ("Vínculos afectivos y respeto mutuo")
+3. Número de diapositiva: Diapositiva 3 de 7 (Archivo: 110-7-CNA-OA01-CLASE05-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 3: Primera idea — Desarrollar el concepto de affective bonds, mutual respect, healthy boundaries, consent and empathy in friendships and relationships.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Primera idea
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, talking about digital privacy in a hallway, discussing why photos should never be shared without explicit permission. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con chaqueta cerceta a la derecha examinando el caso; joven con trenzas a la izquierda tomando notas analíticas.
+10. Espacio negativo destinado al texto: Cuadrante superior derecho con iluminación suave y sin objetos para contraste limpio del texto sobre el fondo.
+11. Notas al orador (Locución Google Vids): "¿Qué acción muestra respeto y cómo cuida el vínculo? Puedes plantear una primera idea; después comprobaremos qué información la apoya."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 4 DE 7: MOTIVACIÓN (Clase 5) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 5 ("Vínculos afectivos y respeto mutuo")
+3. Número de diapositiva: Diapositiva 4 de 7 (Archivo: 110-7-CNA-OA01-CLASE05-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 4: Busca pistas — Desarrollar el concepto de affective bonds, mutual respect, healthy boundaries, consent and empathy in friendships and relationships.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Busca pistas
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, looking at a peer conflict resolution poster that emphasizes active listening and mutual consideration. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con trenzas en primer plano a la izquierda reflexionando; joven con chaqueta cerceta en plano medio a la derecha prestando apoyo.
+10. Espacio negativo destinado al texto: Franja superior horizontal abierta y limpia, permitiendo colocar el título amarillo oro y subtítulo blanco en dos líneas nítidas.
+11. Notas al orador (Locución Google Vids): "Observa la situación. ¿Qué detalle podría ayudarte a responder? Una pista útil debe ayudarnos a responder la pregunta que estamos explorando."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 5 DE 7: MOTIVACIÓN (Clase 5) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 5 ("Vínculos afectivos y respeto mutuo")
+3. Número de diapositiva: Diapositiva 5 de 7 (Archivo: 110-7-CNA-OA01-CLASE05-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 5: Compara posibilidades — Desarrollar el concepto de affective bonds, mutual respect, healthy boundaries, consent and empathy in friendships and relationships.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Compara posibilidades
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, reviewing case notes about balancing group enthusiasm with an individual friend's comfort and personal boundaries. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con chaqueta cerceta en primer plano a la derecha; joven con trenzas en plano medio a la izquierda observando con empatía.
+10. Espacio negativo destinado al texto: Sector lateral izquierdo amplio y despejado para visualización directa del texto sin sombras ni recuadros.
+11. Notas al orador (Locución Google Vids): "Una respuesta necesita información del recurso. Buscaremos pistas para fundamentarla. Dos respuestas pueden parecer posibles; necesitamos revisar cuál tiene respaldo."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 6 DE 7: MOTIVACIÓN (Clase 5) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 5 ("Vínculos afectivos y respeto mutuo")
+3. Número de diapositiva: Diapositiva 6 de 7 (Archivo: 110-7-CNA-OA01-CLASE05-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 6: Una estrategia — Desarrollar el concepto de affective bonds, mutual respect, healthy boundaries, consent and empathy in friendships and relationships.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Una estrategia
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, reflecting on why true affection always respects limits and never uses peer pressure to force agreement. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos protagonistas ubicados en el centro-derecha, dirigiendo la mirada hacia el espacio conceptual izquierdo.
+10. Espacio negativo destinado al texto: Mitad superior izquierda despejada, creando una zona de descanso visual para los textos principales de la presentación.
+11. Notas al orador (Locución Google Vids): "Lee el recurso y relaciona sus detalles antes de elegir una explicación. La clase mostrará cómo relacionar las pistas y explicar esa relación paso a paso."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 7 DE 7: MOTIVACIÓN (Clase 5) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 5 ("Vínculos afectivos y respeto mutuo")
+3. Número de diapositiva: Diapositiva 7 de 7 (Archivo: 110-7-CNA-OA01-CLASE05-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 7: Puente a la lectura — Desarrollar el concepto de affective bonds, mutual respect, healthy boundaries, consent and empathy in friendships and relationships.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Puente a la lectura
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, opening the textbook chapter on interpersonal relationships and respectful communication with serious focus. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos estudiantes en el centro sonriendo con seguridad y confianza, mirando hacia el espectador listos para avanzar.
+10. Espacio negativo destinado al texto: Tercio superior central y lateral izquierdo despejados con iluminación uniforme de aula para texto de alto impacto.
+11. Notas al orador (Locución Google Vids): "Ahora descubriremos cómo las pistas ayudan a comprender esta situación. Luego aplicarás el criterio a otra situación breve, con menor ayuda."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+================================================================================
+PRESENTACIÓN EXPLICACION: 110-7-CNA-OA01-CLASE05-EXPLICACION.pptx
+PROPÓSITO: Enseñar, modelar, aplicar y sintetizar el concepto disciplinar (7 diapositivas / ~90 s)
+================================================================================
+
+--- DIAPOSITIVA 1 DE 7: EXPLICACIÓN (Clase 5) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 5 ("Vínculos afectivos y respeto mutuo")
+3. Número de diapositiva: Diapositiva 1 de 7 (Archivo: 110-7-CNA-OA01-CLASE05-EXPLICACION.pptx)
+4. Propósito pedagógico: Declarar el objetivo de aprendizaje de la lección: reflexionar sobre los vínculos afectivos, comprendiendo que el cariño y la cercanía siempre deben fundarse en el respeto mutuo, los límites claros y el consentimiento.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Objetivo de la lección
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): Respeto mutuo / y consentimiento
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old students, a girl with braided hair and a boy in a teal jacket, greeting each other with a cheerful fist bump at the entrance of a sunlit school library. Both display expressions of mutual trust, comfort, and camaraderie. Crisp architectural lines, soft ambient afternoon glow, large negative space across upper-left. No text drawn by AI.
+8. Composición visual: Plano medio frontal a nivel de ojos, composición simétrica armónica, iluminación natural cálida filtrada por vitrales altos.
+9. Posición de los protagonistas: Joven con chaqueta cerceta a la izquierda y joven con trenzas a la derecha, extendiendo sus manos en un saludo respetuoso acordado mutuamente.
+10. Espacio negativo destinado al texto: Franja superior limpia con tonos neutros de pared de biblioteca para contrastar con el título amarillo oro y subtítulo blanco.
+11. Notas al orador (Locución Google Vids): "El objetivo de esta lección es reflexionar sobre los vínculos afectivos, comprendiendo que el cariño y la cercanía siempre deben fundarse en el respeto mutuo, los límites claros y el consentimiento."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 12 segundos (Apertura del video Explicativo de 90 segundos)
+
+--- DIAPOSITIVA 2 DE 7: EXPLICACIÓN (Clase 5) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 5 ("Vínculos afectivos y respeto mutuo")
+3. Número de diapositiva: Diapositiva 2 de 7 (Archivo: 110-7-CNA-OA01-CLASE05-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 2: El criterio — Desarrollar el concepto de affective bonds, mutual respect, healthy boundaries, consent and empathy in friendships and relationships.
+5. Título visible (64 pt, Amarillo Oro #FFD700): El criterio
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining a relationship diagram showing that affection thrives in friendships, family, and couples through reciprocal care. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos protagonistas en el centro interactuando con curiosidad frente a la situación presentada.
+10. Espacio negativo destinado al texto: Tercio superior y franja izquierda despejados con cielo o pared desenfocada de tono neutro para garantizar lectura sin máscaras.
+11. Notas al orador (Locución Google Vids): "Nico prefiere saludar con la mano. Esa preferencia permite saber cómo quiere participar en el saludo. Paula escucha y acepta la preferencia. El cariño puede expresarse mediante un saludo que ambos acepten."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+--- DIAPOSITIVA 3 DE 7: EXPLICACIÓN (Clase 5) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 5 ("Vínculos afectivos y respeto mutuo")
+3. Número de diapositiva: Diapositiva 3 de 7 (Archivo: 110-7-CNA-OA01-CLASE05-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 3: Relación entre pistas — Desarrollar el concepto de affective bonds, mutual respect, healthy boundaries, consent and empathy in friendships and relationships.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Relación entre pistas
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing Nico's preference for a handshake greeting, highlighting Paula's respectful acceptance without insistence. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con chaqueta cerceta a la derecha examinando el caso; joven con trenzas a la izquierda tomando notas analíticas.
+10. Espacio negativo destinado al texto: Cuadrante superior derecho con iluminación suave y sin objetos para contraste limpio del texto sobre el fondo.
+11. Notas al orador (Locución Google Vids): "En el segundo caso, la amiga pide que no publiquen su fotografía. La decisión del grupo debe considerar esa petición. El grupo puede buscar otra forma de celebrar. Respetar un límite permite mantener un vínculo de cuidado."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+--- DIAPOSITIVA 4 DE 7: EXPLICACIÓN (Clase 5) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 5 ("Vínculos afectivos y respeto mutuo")
+3. Número de diapositiva: Diapositiva 4 de 7 (Archivo: 110-7-CNA-OA01-CLASE05-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 4: Modelo explicado — Desarrollar el concepto de affective bonds, mutual respect, healthy boundaries, consent and empathy in friendships and relationships.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Modelo explicado
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing the case where a friend asks not to post a group photo online, explaining why the group must honor her boundary. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con trenzas en primer plano a la izquierda reflexionando; joven con chaqueta cerceta en plano medio a la derecha prestando apoyo.
+10. Espacio negativo destinado al texto: Franja superior horizontal abierta y limpia, permitiendo colocar el título amarillo oro y subtítulo blanco en dos líneas nítidas.
+11. Notas al orador (Locución Google Vids): "Nico prefiere saludar con la mano. Paula acepta sin insistir. ¿Qué acción muestra respeto y cómo cuida el vínculo? Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo. El caso señala que escucha la preferencia y no insiste."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+--- DIAPOSITIVA 5 DE 7: EXPLICACIÓN (Clase 5) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 5 ("Vínculos afectivos y respeto mutuo")
+3. Número de diapositiva: Diapositiva 5 de 7 (Archivo: 110-7-CNA-OA01-CLASE05-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 5: Comprobación — Desarrollar el concepto de affective bonds, mutual respect, healthy boundaries, consent and empathy in friendships and relationships.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Comprobación
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, modeling on a digital whiteboard how to communicate personal boundaries kindly and how to listen when a peer sets a limit. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con chaqueta cerceta en primer plano a la derecha; joven con trenzas en plano medio a la izquierda observando con empatía.
+10. Espacio negativo destinado al texto: Sector lateral izquierdo amplio y despejado para visualización directa del texto sin sombras ni recuadros.
+11. Notas al orador (Locución Google Vids): "Una amiga pide que no publiquen su fotografía. El grupo puede elegir otra forma de celebrar. ¿Qué decisión demuestra preocupación por la amiga? No publicar la fotografía y acordar otra forma de celebrar que respete su decisión. La amiga expresa un límite claro sobre la fotografía. Revisa la segunda respuesta con los datos de su propio caso."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+--- DIAPOSITIVA 6 DE 7: EXPLICACIÓN (Clase 5) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 5 ("Vínculos afectivos y respeto mutuo")
+3. Número de diapositiva: Diapositiva 6 de 7 (Archivo: 110-7-CNA-OA01-CLASE05-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 6: Error y corrección — Desarrollar el concepto de affective bonds, mutual respect, healthy boundaries, consent and empathy in friendships and relationships.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Error y corrección
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, correcting the misconception that affection gives permission to ignore boundaries, reinforcing that respect is unconditional. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos protagonistas ubicados en el centro-derecha, dirigiendo la mirada hacia el espacio conceptual izquierdo.
+10. Espacio negativo destinado al texto: Mitad superior izquierda despejada, creando una zona de descanso visual para los textos principales de la presentación.
+11. Notas al orador (Locución Google Vids): "Un error que debemos evitar: Suponer que el cariño permite ignorar un límite o presionar a otra persona. Si la respuesta añade información, vuelve al recurso y corrígela."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+--- DIAPOSITIVA 7 DE 7: EXPLICACIÓN (Clase 5) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 5 ("Vínculos afectivos y respeto mutuo")
+3. Número de diapositiva: Diapositiva 7 de 7 (Archivo: 110-7-CNA-OA01-CLASE05-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 7: Síntesis y práctica — Desarrollar el concepto de affective bonds, mutual respect, healthy boundaries, consent and empathy in friendships and relationships.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Síntesis y práctica
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, giving a friendly thumbs up in a peaceful library room, ready to apply principles of mutual respect in the interactive module. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos estudiantes en el centro sonriendo con seguridad y confianza, mirando hacia el espectador listos para avanzar.
+10. Espacio negativo destinado al texto: Tercio superior central y lateral izquierdo despejados con iluminación uniforme de aula para texto de alto impacto.
+11. Notas al orador (Locución Google Vids): "El respeto considera los límites de ambas personas. Lee, localiza evidencia, explica y comprueba. Continúa con la práctica interactiva."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+################################################################################
+CLASE 6 DE 6: DECISIONES RESPONSABLES E INTEGRACIÓN
+################################################################################
+
+================================================================================
+PRESENTACIÓN MOTIVACION: 110-7-CNA-OA01-CLASE06-MOTIVACION.pptx
+PROPÓSITO: Despertar interés, presentar una situación cotidiana y activar conocimientos previos (7 diapositivas / ~60 s)
+================================================================================
+
+--- DIAPOSITIVA 1 DE 7: MOTIVACIÓN (Clase 6) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 6 ("Decisiones responsables e integración")
+3. Número de diapositiva: Diapositiva 1 de 7 (Archivo: 110-7-CNA-OA01-CLASE06-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 1: Una situación — Desarrollar el concepto de responsible decision making, integrating biological, affective, and social dimensions for mutual care.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Una situación
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, standing near a school courtyard notice board displaying community health and youth wellness workshops. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con trenzas a la derecha y joven con chaqueta cerceta en el centro-izquierda conversando con atención.
+10. Espacio negativo destinado al texto: Cuadrante superior izquierdo completamente libre de elementos visuales distractores para alojar el título de 64 pt y subtítulo de 48 pt.
+11. Notas al orador (Locución Google Vids): "Hoy exploraremos decisiones responsables e integración. Observaremos el caso y buscaremos pistas antes de sacar una conclusión."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 2 DE 7: MOTIVACIÓN (Clase 6) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 6 ("Decisiones responsables e integración")
+3. Número de diapositiva: Diapositiva 2 de 7 (Archivo: 110-7-CNA-OA01-CLASE06-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 2: La pregunta — Desarrollar el concepto de responsible decision making, integrating biological, affective, and social dimensions for mutual care.
+5. Título visible (64 pt, Amarillo Oro #FFD700): La pregunta
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing a multi-layered case involving bodily changes, emotional reactions, and peer group pressure. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos protagonistas en el centro interactuando con curiosidad frente a la situación presentada.
+10. Espacio negativo destinado al texto: Tercio superior y franja izquierda despejados con cielo o pared desenfocada de tono neutro para garantizar lectura sin máscaras.
+11. Notas al orador (Locución Google Vids): "Cambio de voz, vergüenza y burlas aparecen en el caso de Alex. Mantén a la vista la situación y distingue lo que informa de lo que suponemos."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 3 DE 7: MOTIVACIÓN (Clase 6) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 6 ("Decisiones responsables e integración")
+3. Número de diapositiva: Diapositiva 3 de 7 (Archivo: 110-7-CNA-OA01-CLASE06-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 3: Primera idea — Desarrollar el concepto de responsible decision making, integrating biological, affective, and social dimensions for mutual care.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Primera idea
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, discussing how teasing affects someone going through voice breaks, and how a bystander can intervene positively. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con chaqueta cerceta a la derecha examinando el caso; joven con trenzas a la izquierda tomando notas analíticas.
+10. Espacio negativo destinado al texto: Cuadrante superior derecho con iluminación suave y sin objetos para contraste limpio del texto sobre el fondo.
+11. Notas al orador (Locución Google Vids): "¿Cómo relacionas los tres aspectos sin confundirlos? Puedes plantear una primera idea; después comprobaremos qué información la apoya."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 4 DE 7: MOTIVACIÓN (Clase 6) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 6 ("Decisiones responsables e integración")
+3. Número de diapositiva: Diapositiva 4 de 7 (Archivo: 110-7-CNA-OA01-CLASE06-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 4: Busca pistas — Desarrollar el concepto de responsible decision making, integrating biological, affective, and social dimensions for mutual care.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Busca pistas
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, reviewing notes that trace the biological, affective, and social aspects of a single complex school situation. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con trenzas en primer plano a la izquierda reflexionando; joven con chaqueta cerceta en plano medio a la derecha prestando apoyo.
+10. Espacio negativo destinado al texto: Franja superior horizontal abierta y limpia, permitiendo colocar el título amarillo oro y subtítulo blanco en dos líneas nítidas.
+11. Notas al orador (Locución Google Vids): "Observa la situación. ¿Qué detalle podría ayudarte a responder? Una pista útil debe ayudarnos a responder la pregunta que estamos explorando."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 5 DE 7: MOTIVACIÓN (Clase 6) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 6 ("Decisiones responsables e integración")
+3. Número de diapositiva: Diapositiva 5 de 7 (Archivo: 110-7-CNA-OA01-CLASE06-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 5: Compara posibilidades — Desarrollar el concepto de responsible decision making, integrating biological, affective, and social dimensions for mutual care.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Compara posibilidades
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, observing a decision tree graphic showing consequences of impulsive versus well-considered, empathetic choices. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con chaqueta cerceta en primer plano a la derecha; joven con trenzas en plano medio a la izquierda observando con empatía.
+10. Espacio negativo destinado al texto: Sector lateral izquierdo amplio y despejado para visualización directa del texto sin sombras ni recuadros.
+11. Notas al orador (Locución Google Vids): "Una respuesta necesita información del recurso. Buscaremos pistas para fundamentarla. Dos respuestas pueden parecer posibles; necesitamos revisar cuál tiene respaldo."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 6 DE 7: MOTIVACIÓN (Clase 6) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 6 ("Decisiones responsables e integración")
+3. Número de diapositiva: Diapositiva 6 de 7 (Archivo: 110-7-CNA-OA01-CLASE06-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 6: Una estrategia — Desarrollar el concepto de responsible decision making, integrating biological, affective, and social dimensions for mutual care.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Una estrategia
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, reflecting in a quiet classroom on the courage required to stand up for a peer and respect personal dignity. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos protagonistas ubicados en el centro-derecha, dirigiendo la mirada hacia el espacio conceptual izquierdo.
+10. Espacio negativo destinado al texto: Mitad superior izquierda despejada, creando una zona de descanso visual para los textos principales de la presentación.
+11. Notas al orador (Locución Google Vids): "Lee el recurso y relaciona sus detalles antes de elegir una explicación. La clase mostrará cómo relacionar las pistas y explicar esa relación paso a paso."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+--- DIAPOSITIVA 7 DE 7: MOTIVACIÓN (Clase 6) ---
+1. Tipo de presentación: MOTIVACION
+2. Clase: Clase 6 ("Decisiones responsables e integración")
+3. Número de diapositiva: Diapositiva 7 de 7 (Archivo: 110-7-CNA-OA01-CLASE06-MOTIVACION.pptx)
+4. Propósito pedagógico: Motivación Lámina 7: Puente a la lectura — Desarrollar el concepto de responsible decision making, integrating biological, affective, and social dimensions for mutual care.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Puente a la lectura
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, holding their study binders proudly, ready to synthesize all dimensions of sexuality into ethical decision-making. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos estudiantes en el centro sonriendo con seguridad y confianza, mirando hacia el espectador listos para avanzar.
+10. Espacio negativo destinado al texto: Tercio superior central y lateral izquierdo despejados con iluminación uniforme de aula para texto de alto impacto.
+11. Notas al orador (Locución Google Vids): "Ahora descubriremos cómo las pistas ayudan a comprender esta situación. Luego aplicarás el criterio a otra situación breve, con menor ayuda."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 8 segundos (Parte del video de Motivación de 60 segundos)
+
+================================================================================
+PRESENTACIÓN EXPLICACION: 110-7-CNA-OA01-CLASE06-EXPLICACION.pptx
+PROPÓSITO: Enseñar, modelar, aplicar y sintetizar el concepto disciplinar (7 diapositivas / ~90 s)
+================================================================================
+
+--- DIAPOSITIVA 1 DE 7: EXPLICACIÓN (Clase 6) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 6 ("Decisiones responsables e integración")
+3. Número de diapositiva: Diapositiva 1 de 7 (Archivo: 110-7-CNA-OA01-CLASE06-EXPLICACION.pptx)
+4. Propósito pedagógico: Declarar el objetivo de aprendizaje de la lección: integrar las dimensiones biológica, afectiva y social de la sexualidad para analizar situaciones reales y aprender a tomar decisiones informadas y de mutuo cuidado.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Objetivo de la lección
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): Decisiones responsables / e integración
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old students, a girl with braided hair and a boy in a teal jacket, standing together looking towards an open horizon from a school observatory terrace. A digital table displays interconnected holistic icons of biology, emotions, and society. Inspiring golden hour lighting, cinematic sky, generous negative space in upper-left. No text drawn by AI.
+8. Composición visual: Plano general medio cinematográfico con vista a la terraza y el cielo crepuscular limpio, sensación de madurez y proyección futura.
+9. Posición de los protagonistas: Joven con trenzas a la derecha y joven con chaqueta cerceta en el centro-izquierda, ambos con postura firme y reflexiva mirando hacia el horizonte.
+10. Espacio negativo destinado al texto: Cuadrante superior izquierdo con cielo despejado en degradé suave para máxima nitidez de títulos de 64 pt y subtítulos de 48 pt.
+11. Notas al orador (Locución Google Vids): "El objetivo de esta lección es integrar las dimensiones biológica, afectiva y social de la sexualidad para analizar situaciones reales y aprender a tomar decisiones informadas, responsables y de mutuo cuidado."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 12 segundos (Apertura del video Explicativo de 90 segundos)
+
+--- DIAPOSITIVA 2 DE 7: EXPLICACIÓN (Clase 6) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 6 ("Decisiones responsables e integración")
+3. Número de diapositiva: Diapositiva 2 de 7 (Archivo: 110-7-CNA-OA01-CLASE06-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 2: El criterio — Desarrollar el concepto de responsible decision making, integrating biological, affective, and social dimensions for mutual care.
+5. Título visible (64 pt, Amarillo Oro #FFD700): El criterio
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, examining an integrated matrix showing how biological events (voice change), feelings (shyness), and social acts (support) connect. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos protagonistas en el centro interactuando con curiosidad frente a la situación presentada.
+10. Espacio negativo destinado al texto: Tercio superior y franja izquierda despejados con cielo o pared desenfocada de tono neutro para garantizar lectura sin máscaras.
+11. Notas al orador (Locución Google Vids): "Identificamos el cambio de voz como una pista del ámbito biológico sin usarlo para juzgar a Alex. Reconocer lo que siente Alex permite comprender el efecto de la situación y acompañarlo con respeto."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+--- DIAPOSITIVA 3 DE 7: EXPLICACIÓN (Clase 6) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 6 ("Decisiones responsables e integración")
+3. Número de diapositiva: Diapositiva 3 de 7 (Archivo: 110-7-CNA-OA01-CLASE06-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 3: Relación entre pistas — Desarrollar el concepto de responsible decision making, integrating biological, affective, and social dimensions for mutual care.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Relación entre pistas
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, analyzing Alex's voice change and the classmates' teasing, highlighting the courageous classmate who stopped the mockery. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con chaqueta cerceta a la derecha examinando el caso; joven con trenzas a la izquierda tomando notas analíticas.
+10. Espacio negativo destinado al texto: Cuadrante superior derecho con iluminación suave y sin objetos para contraste limpio del texto sobre el fondo.
+11. Notas al orador (Locución Google Vids): "Las burlas y la intervención de una compañera pertenecen a las formas de convivencia. Detener las burlas y buscar apoyo considera el bienestar de Alex. En el otro caso, respetar la fotografía protege la decisión expresada."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+--- DIAPOSITIVA 4 DE 7: EXPLICACIÓN (Clase 6) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 6 ("Decisiones responsables e integración")
+3. Número de diapositiva: Diapositiva 4 de 7 (Archivo: 110-7-CNA-OA01-CLASE06-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 4: Modelo explicado — Desarrollar el concepto de responsible decision making, integrating biological, affective, and social dimensions for mutual care.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Modelo explicado
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, reviewing a case of group celebration where an individual limit regarding social media photos was protected responsibly. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con trenzas en primer plano a la izquierda reflexionando; joven con chaqueta cerceta en plano medio a la derecha prestando apoyo.
+10. Espacio negativo destinado al texto: Franja superior horizontal abierta y limpia, permitiendo colocar el título amarillo oro y subtítulo blanco en dos líneas nítidas.
+11. Notas al orador (Locución Google Vids): "Cambio de voz, vergüenza y burlas aparecen en el caso de Alex. ¿Cómo relacionas los tres aspectos sin confundirlos? El cambio de voz es biológico; la vergüenza es afectiva; las burlas y el apoyo son sociales. Se relacionan porque ocurren en una misma situación. El caso presenta una pista para cada aspecto."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+--- DIAPOSITIVA 5 DE 7: EXPLICACIÓN (Clase 6) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 6 ("Decisiones responsables e integración")
+3. Número de diapositiva: Diapositiva 5 de 7 (Archivo: 110-7-CNA-OA01-CLASE06-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 5: Comprobación — Desarrollar el concepto de responsible decision making, integrating biological, affective, and social dimensions for mutual care.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Comprobación
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, demonstrating step-by-step how to evaluate consequences before acting, combining scientific evidence and ethical empathy. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Joven con chaqueta cerceta en primer plano a la derecha; joven con trenzas en plano medio a la izquierda observando con empatía.
+10. Espacio negativo destinado al texto: Sector lateral izquierdo amplio y despejado para visualización directa del texto sin sombras ni recuadros.
+11. Notas al orador (Locución Google Vids): "Una persona no quiere que publiquen su fotografía. El grupo acuerda otra celebración. ¿Por qué es responsable esa decisión? Considera la petición de la persona y elige una alternativa que respeta su límite sin impedir compartir afecto. El grupo conserva el propósito de celebrar y respeta la decisión sobre la fotografía."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+--- DIAPOSITIVA 6 DE 7: EXPLICACIÓN (Clase 6) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 6 ("Decisiones responsables e integración")
+3. Número de diapositiva: Diapositiva 6 de 7 (Archivo: 110-7-CNA-OA01-CLASE06-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 6: Error y corrección — Desarrollar el concepto de responsible decision making, integrating biological, affective, and social dimensions for mutual care.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Error y corrección
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, identifying the error of yielding to peer pressure against one's conscience, reinforcing autonomy and mutual care. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos protagonistas ubicados en el centro-derecha, dirigiendo la mirada hacia el espacio conceptual izquierdo.
+10. Espacio negativo destinado al texto: Mitad superior izquierda despejada, creando una zona de descanso visual para los textos principales de la presentación.
+11. Notas al orador (Locución Google Vids): "Un error que debemos evitar: Elegir una acción solo por presión del grupo, sin considerar a la persona afectada. Si la respuesta añade información, vuelve al recurso y corrígela."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+
+--- DIAPOSITIVA 7 DE 7: EXPLICACIÓN (Clase 6) ---
+1. Tipo de presentación: EXPLICACION
+2. Clase: Clase 6 ("Decisiones responsables e integración")
+3. Número de diapositiva: Diapositiva 7 de 7 (Archivo: 110-7-CNA-OA01-CLASE06-EXPLICACION.pptx)
+4. Propósito pedagógico: Explicación Lámina 7: Síntesis y práctica — Desarrollar el concepto de responsible decision making, integrating biological, affective, and social dimensions for mutual care.
+5. Título visible (64 pt, Amarillo Oro #FFD700): Síntesis y práctica
+6. Subtítulo visible (48 pt, Blanco #FFFFFF): 
+7. Prompt de Imagen para IA (16:9 Anime Moderno Limpio sin texto): Modern anime style 16:9 widescreen illustration. Two 13-year-old student explorers, a girl with braided hair and a boy in a teal jacket, smiling with mature confidence on the sunlit school steps, inviting all students to master responsible decision-making. Clean modern anime aesthetic, inspiring atmosphere, detailed educational setting, cinematic lighting. Full-bleed background with spacious clean negative space for presentation typography. No panels, no dark rectangles, no overlays. No text drawn by AI.
+8. Composición visual: Plano medio cinematográfico en proporción 16:9, iluminación natural suave y nítida, fondo detallado en desenfoque sutil y atmósfera de aprendizaje respetuoso.
+9. Posición de los protagonistas: Ambos estudiantes en el centro sonriendo con seguridad y confianza, mirando hacia el espectador listos para avanzar.
+10. Espacio negativo destinado al texto: Tercio superior central y lateral izquierdo despejados con iluminación uniforme de aula para texto de alto impacto.
+11. Notas al orador (Locución Google Vids): "Una decisión responsable considera respeto y consecuencias. Lee, localiza evidencia, explica y comprueba. Continúa con la práctica interactiva."
+12. Regla de logo: Espacio despejado en esquina inferior derecha reservado para la inserción en PowerPoint del logo blanco oficial de EstudioSimple por ChatGPT Work.
+13. Duración aproximada: 13 segundos (Parte del video de Explicación de 90 segundos)
+

@@ -13,13 +13,17 @@ export const CIENCIAS_7B_OA01_CLASE04: LessonData = {
     "nextLessonTitle": "Vínculos afectivos y respeto mutuo"
   },
   "prep": {
-    "adultObjective": "Identificar estereotipos de género en situaciones ficticias y explicar por qué no deben limitar talentos, emociones ni oportunidades.",
-    "routeToday": "Ruta guiada de la clase 4",
-    "mentorReminder": "Identificar estereotipos de género en situaciones ficticias y explicar por qué no deben limitar talentos, emociones ni oportunidades.",
+    "adultObjective": "Guiar al estudiante en la comprensión de la dimensión social de la sexualidad, fortaleciendo su autonomía reflexiva frente a la presión de grupo y desarticulando estereotipos de género limitantes mediante argumentos científicos y valóricos.",
+    "routeToday": "Leer el recurso sobre la dimensión social y los estereotipos → debatir la influencia del grupo de pares → modelar la refutación científica de prejuicios → practicar con casos ficticios de convivencia → evaluar mediante el miniquiz.",
+    "mentorReminder": "¡Hola! Hoy exploraremos la dimensión social de la sexualidad: descubriremos cómo nuestras relaciones con amigos y compañeros cobran gran importancia en la pubertad, qué son los estereotipos de género que a veces nos imponen desde afuera, y por qué la ciencia y el respeto mutuo demuestran que tanto hombres como mujeres tenemos las mismas capacidades para aprender, liderar y expresarnos con libertad.",
     "reminders": [
-      "Acompaña al estudiante y valora su proceso."
+      "Mantén una postura dialogante, abierta y orientada a la equidad y los derechos de todas las personas.",
+      "Define claramente qué es un estereotipo de género: una creencia generalizada y simplificada sobre lo que 'debe' hacer o sentir una persona únicamente por su sexo biológico (por ejemplo, 'los hombres no expresan tristeza' o 'a las mujeres no les interesan las ciencias exactas').",
+      "Aclara con respaldo científico que no existen genes, hormonas ni circuitos cerebrales que impidan a una mujer destacar en ingeniería o a un hombre dedicarse al cuidado de la salud o la danza.",
+      "Estimula la reflexión autónoma sin forzar al estudiante a revelar tensiones privadas de su vida familiar o grupal.",
+      "--"
     ],
-    "emotionalTip": "Usar exclusivamente los casos ficticios. No solicitar información sobre cuerpo, identidad, vínculos o experiencias íntimas del estudiante. Escuchar con respeto. No diagnosticar ni comparar ritmos de desarrollo."
+    "emotionalTip": "Valora cada avance con paciencia y entusiasmo."
   },
   "route": {
     "blocks": [
@@ -53,16 +57,16 @@ export const CIENCIAS_7B_OA01_CLASE04: LessonData = {
       }
     ],
     "dileIntro": "Hoy avanzaremos en una nueva clase interactiva.",
-    "dileObjective": "Aspectos sociales y estereotipos"
+    "dileObjective": "¡Hola! Hoy exploraremos la dimensión social de la sexualidad: descubriremos cómo nuestras relaciones con amigos y compañeros cobran gran importancia en la pubertad, qué son los estereotipos de género que a veces nos imponen desde afuera, y por qué la ciencia y el respeto mutuo demuestran que tanto hombres como mujeres tenemos las mismas capacidades para aprender, liderar y expresarnos con libertad."
   },
   "situation": {
-    "dilePrompt": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",
-    "expectedAnswer": "El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo.",
+    "dilePrompt": "¡Hola! Hoy exploraremos la dimensión social de la sexualidad: descubriremos cómo nuestras relaciones con amigos y compañeros cobran gran importancia en la pubertad, qué son los estereotipos de género que a veces nos imponen desde afuera, y por qué la ciencia y el respeto mutuo demuestran que tanto hombres como mujeres tenemos las mismas capacidades para aprender, liderar y expresarnos con libertad.",
+    "expectedAnswer": "Es un estereotipo porque asume sin fundamento que una disciplina tecnológica es exclusiva de un sexo. La ciencia demuestra que las capacidades cognitivas para la matemática y la tecnología son idénticas en hombres y mujeres, y la historia científica documenta aportes fundamentales de mujeres en todas las ramas del saber. Limitar a las personas por su género vulnera su derecho al pleno desarrollo.",
     "socraticHint": "Fíjate en los detalles destacados.",
-    "emotionalTip": "Usar exclusivamente los casos ficticios. No solicitar información sobre cuerpo, identidad, vínculos o experiencias íntimas del estudiante. Escuchar con respeto. No diagnosticar ni comparar ritmos de desarrollo.",
+    "emotionalTip": "Acompaña con calma.",
     "options": [
       {
-        "label": "El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo.",
+        "label": "Es un estereotipo porque asume sin fundamento que una disciplina tecnológica es exclusiva de un sexo. La ciencia demuestra que las capacidades cognitivas para la matemática y la tecnología son idénticas en hombres y mujeres, y la historia científica documenta aportes fundamentales de mujeres en todas las ramas del saber. Limitar a las personas por su género vulnera su derecho al pleno desarrollo.",
         "kind": "correct",
         "feedbackText": "¡Muy bien observado!"
       },
@@ -79,9 +83,9 @@ export const CIENCIAS_7B_OA01_CLASE04: LessonData = {
     ]
   },
   "reference": {
-    "dilePrompt": "¿Qué parte es un interés individual y qué parte es un estereotipo?",
+    "dilePrompt": "Revisemos el punto de partida.",
     "question": "¿Qué información entrega el punto de partida?",
-    "expectedAnswer": "El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo.",
+    "expectedAnswer": "Es un estereotipo porque asume sin fundamento que una disciplina tecnológica es exclusiva de un sexo. La ciencia demuestra que las capacidades cognitivas para la matemática y la tecnología son idénticas en hombres y mujeres, y la historia científica documenta aportes fundamentales de mujeres en todas las ramas del saber. Limitar a las personas por su género vulnera su derecho al pleno desarrollo.",
     "socraticHint": "Localiza las palabras clave.",
     "feedbackSuccess": "¡Excelente fundamentación!",
     "feedbackSupport": "Revisa la lectura para confirmar los datos."
@@ -90,7 +94,7 @@ export const CIENCIAS_7B_OA01_CLASE04: LessonData = {
     "title": "Motivación",
     "titulo": "Motivación",
     "focusPoints": [],
-    "dileIntro": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",
+    "dileIntro": "¡Hola! Hoy exploraremos la dimensión social de la sexualidad: descubriremos cómo nuestras relaciones con amigos y compañeros cobran gran importancia en la pubertad, qué son los estereotipos de género que a veces nos imponen desde afuera, y por qué la ciencia y el respeto mutuo demuestran que tanto hombres como mujeres tenemos las mismas capacidades para aprender, liderar y expresarnos con libertad.",
     "hazInstruction": "Observa y reflexiona con las escenas del video.",
     "videoSrc": "",
     "dileAfterVideo": "¿Qué observaste en esta situación inicial?",
@@ -98,115 +102,124 @@ export const CIENCIAS_7B_OA01_CLASE04: LessonData = {
       {
         "slideNumber": 1,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "Una situación",
+        "didacticPurpose": "El recreo y las etiquetas",
         "visualPrompt": "",
-        "overlayText": "Una situación",
-        "overlayTitle": "Una situación",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Una situación",
-        "speakerNotes": "Hoy exploraremos aspectos sociales y estereotipos. Observaremos el caso y buscaremos pistas antes de sacar una conclusión.",
+        "overlayText": "El recreo y las etiquetas",
+        "overlayTitle": "El recreo y las etiquetas",
+        "overlaySubtitle": "¿Por qué clasificamos a las personas?",
+        "vectorialOverlayPptx": "El recreo y las etiquetas",
+        "speakerNotes": "",
         "duracionSeg": 8
       },
       {
         "slideNumber": 2,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "La pregunta",
+        "didacticPurpose": "Una puerta que se cierra",
         "visualPrompt": "",
-        "overlayText": "La pregunta",
-        "overlayTitle": "La pregunta",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "La pregunta",
-        "speakerNotes": "Valeria quiere construir un robot. Un compañero afirma que las niñas no son buenas para la ciencia. Mantén a la vista la situación y distingue lo que informa de lo que suponemos.",
+        "overlayText": "Una puerta que se cierra",
+        "overlayTitle": "Una puerta que se cierra",
+        "overlaySubtitle": "Cuando los prejuicios frenan sueños",
+        "vectorialOverlayPptx": "Una puerta que se cierra",
+        "speakerNotes": "",
         "duracionSeg": 8
       },
       {
         "slideNumber": 3,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "Primera idea",
+        "didacticPurpose": "La fuerza del grupo",
         "visualPrompt": "",
-        "overlayText": "Primera idea",
-        "overlayTitle": "Primera idea",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Primera idea",
-        "speakerNotes": "¿Qué parte es un interés individual y qué parte es un estereotipo? Puedes plantear una primera idea; después comprobaremos qué información la apoya.",
+        "overlayText": "La fuerza del grupo",
+        "overlayTitle": "La fuerza del grupo",
+        "overlaySubtitle": "Amigos, pertenencia y presión",
+        "vectorialOverlayPptx": "La fuerza del grupo",
+        "speakerNotes": "",
         "duracionSeg": 8
       },
       {
         "slideNumber": 4,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "Busca pistas",
+        "didacticPurpose": "La voz de la ciencia",
         "visualPrompt": "",
-        "overlayText": "Busca pistas",
-        "overlayTitle": "Busca pistas",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Busca pistas",
-        "speakerNotes": "Observa la situación. ¿Qué detalle podría ayudarte a responder? Una pista útil debe ayudarnos a responder la pregunta que estamos explorando.",
+        "overlayText": "La voz de la ciencia",
+        "overlayTitle": "La voz de la ciencia",
+        "overlaySubtitle": "Los talentos no tienen género",
+        "vectorialOverlayPptx": "La voz de la ciencia",
+        "speakerNotes": "",
         "duracionSeg": 8
       },
       {
         "slideNumber": 5,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "Compara posibilidades",
+        "didacticPurpose": "Valentía para intervenir",
         "visualPrompt": "",
-        "overlayText": "Compara posibilidades",
-        "overlayTitle": "Compara posibilidades",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Compara posibilidades",
-        "speakerNotes": "Una respuesta necesita información del recurso. Buscaremos pistas para fundamentarla. Dos respuestas pueden parecer posibles; necesitamos revisar cuál tiene respaldo.",
+        "overlayText": "Valentía para intervenir",
+        "overlayTitle": "Valentía para intervenir",
+        "overlaySubtitle": "Romper el silencio frente a la injusticia",
+        "vectorialOverlayPptx": "Valentía para intervenir",
+        "speakerNotes": "",
         "duracionSeg": 8
       },
       {
         "slideNumber": 6,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "Una estrategia",
+        "didacticPurpose": "Una comunidad que suma",
         "visualPrompt": "",
-        "overlayText": "Una estrategia",
-        "overlayTitle": "Una estrategia",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Una estrategia",
-        "speakerNotes": "Lee el recurso y relaciona sus detalles antes de elegir una explicación. La clase mostrará cómo relacionar las pistas y explicar esa relación paso a paso.",
+        "overlayText": "Una comunidad que suma",
+        "overlayTitle": "Una comunidad que suma",
+        "overlaySubtitle": "Equipos diversos logran más",
+        "vectorialOverlayPptx": "Una comunidad que suma",
+        "speakerNotes": "",
         "duracionSeg": 8
       },
       {
         "slideNumber": 7,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "Puente a la lectura",
+        "didacticPurpose": "La pregunta de hoy",
         "visualPrompt": "",
-        "overlayText": "Puente a la lectura",
-        "overlayTitle": "Puente a la lectura",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Puente a la lectura",
-        "speakerNotes": "Ahora descubriremos cómo las pistas ayudan a comprender esta situación. Luego aplicarás el criterio a otra situación breve, con menor ayuda.",
+        "overlayText": "La pregunta de hoy",
+        "overlayTitle": "La pregunta de hoy",
+        "overlaySubtitle": "¿Cómo construir relaciones sin prejuicios?",
+        "vectorialOverlayPptx": "La pregunta de hoy",
+        "speakerNotes": "",
         "duracionSeg": 8
       }
     ]
   },
   "preQuestions": [
     {
-      "context": "Valeria quiere construir un robot. Un compañero afirma que las niñas no son buenas para la ciencia.",
-      "question": "¿Qué parte es un interés individual y qué parte es un estereotipo?",
-      "expected": "El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo.",
-      "success": "Una parte habla de una persona y la otra generaliza sobre un grupo.",
-      "support": "Si no localiza información, releer esta pista del contexto: «Valeria quiere construir un robot. Un compañero afirma que las niñas no son buenas para la ciencia.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta.",
-      "reveal": "El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento.",
-      "studentReveal": "El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo."
+      "context": "Los adolescentes sienten un deseo creciente de compartir tiempo con sus amigos y buscar mayor independencia.",
+      "question": "¿Por qué el grupo de amigos se vuelve tan importante en 7° básico y cómo puede un grupo sano apoyar las decisiones positivas de cada integrante?",
+      "expected": "Porque permite ensayar autonomía, compartir vivencias comunes y construir identidad; un grupo sano apoya respetando los gustos individuales sin obligar a nadie a hacer cosas riesgosas para 'encajar'.",
+      "success": "",
+      "support": "",
+      "reveal": "Porque permite ensayar autonomía, compartir vivencias comunes y construir identidad; un grupo sano apoya respetando los gustos individuales sin obligar a nadie a hacer cosas riesgosas para 'encajar'.",
+      "studentReveal": "Porque permite ensayar autonomía, compartir vivencias comunes y construir identidad; un grupo sano apoya respetando los gustos individuales sin obligar a nadie a hacer cosas riesgosas para 'encajar'."
     },
     {
-      "context": "Tomás expresa tristeza. Una compañera escucha mientras otro le dice que los niños no deben mostrar emociones.",
-      "question": "¿Qué respuesta respeta a Tomás y por qué?",
-      "expected": "Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión.",
-      "success": "El caso presenta una emoción concreta y una regla impuesta a todos los niños.",
-      "support": "Si no localiza información, releer esta pista del contexto: «Tomás expresa tristeza. Una compañera escucha mientras otro le dice que los niños no deben mostrar emociones.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta.",
-      "reveal": "Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento.",
-      "studentReveal": "Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión."
+      "context": "Dos estudiantes afirman que \"la robótica es cosa de hombres\".",
+      "question": "¿Qué consecuencias negativas tiene para la sociedad que repitamos prejuicios sobre lo que pueden o no hacer hombres y mujeres?",
+      "expected": "Limita las vocaciones y talentos de las personas, genera discriminación injusta, reduce oportunidades educativas y laborales, y empobrece el desarrollo científico y cultural de la comunidad.",
+      "success": "",
+      "support": "",
+      "reveal": "Limita las vocaciones y talentos de las personas, genera discriminación injusta, reduce oportunidades educativas y laborales, y empobrece el desarrollo científico y cultural de la comunidad.",
+      "studentReveal": "Limita las vocaciones y talentos de las personas, genera discriminación injusta, reduce oportunidades educativas y laborales, y empobrece el desarrollo científico y cultural de la comunidad."
+    },
+    {
+      "context": "Sofía dudó en inscribirse en robótica por el qué dirán de sus compañeros.",
+      "question": "¿Qué ayuda a una persona a mantenerse firme en sus gustos e intereses aunque a veces el entorno la presione con bromas o estereotipos?",
+      "expected": "La seguridad en sus propias convicciones, el apoyo de amigos leales y familiares, y la certeza de que sus derechos y talentos no dependen de la aprobación basada en prejuicios ajenos.",
+      "success": "",
+      "support": "",
+      "reveal": "La seguridad en sus propias convicciones, el apoyo de amigos leales y familiares, y la certeza de que sus derechos y talentos no dependen de la aprobación basada en prejuicios ajenos.",
+      "studentReveal": "La seguridad en sus propias convicciones, el apoyo de amigos leales y familiares, y la certeza de que sus derechos y talentos no dependen de la aprobación basada en prejuicios ajenos."
     }
   ],
   "conversationContext": "Diálogo guiado para profundizar en los elementos clave.",
   "formalization": {
-    "title": "Un estereotipo atribuye una característica a todo un grupo sin conocer a cada persona. Una diferencia corporal no demuestra que exista una capacidad, emoción u ocupación exclusiva. Las oportunidades deben considerar a las personas y sus intereses.",
-    "concept": "Un estereotipo atribuye una característica a todo un grupo sin conocer a cada persona. Una diferencia corporal no demuestra que exista una capacidad, emoción u ocupación exclusiva. Las oportunidades deben considerar a las personas y sus intereses.",
+    "title": "Explicación",
+    "concept": "Aspectos sociales y estereotipos",
     "summary": "Consolidación de las ideas clave.",
-    "ideaClave": "Un estereotipo atribuye una característica a todo un grupo sin conocer a cada persona. Una diferencia corporal no demuestra que exista una capacidad, emoción u ocupación exclusiva. Las oportunidades deben considerar a las personas y sus intereses.",
+    "ideaClave": "Aspectos sociales y estereotipos",
     "dileIntro": "Ahora consolidaremos los aprendizajes esenciales.",
     "hazInstruction": "Registra en tu cuaderno el concepto principal.",
     "graphicPoster": "",
@@ -215,85 +228,85 @@ export const CIENCIAS_7B_OA01_CLASE04: LessonData = {
       {
         "slideNumber": 8,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "Una herramienta",
+        "didacticPurpose": "Dimensión social de la sexualidad",
         "visualPrompt": "",
-        "overlayText": "Una herramienta",
-        "overlayTitle": "Una herramienta",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Una herramienta",
-        "speakerNotes": "Las amistades y la familia transmiten ideas. Podemos examinar esas ideas sin tratar todas sus opiniones como hechos.",
+        "overlayText": "Dimensión social de la sexualidad",
+        "overlayTitle": "Dimensión social de la sexualidad",
+        "overlaySubtitle": "Cultura, vínculos y roles en la sociedad",
+        "vectorialOverlayPptx": "Dimensión social de la sexualidad",
+        "speakerNotes": "",
         "duracionSeg": 8
       },
       {
         "slideNumber": 9,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "El criterio",
+        "didacticPurpose": "El grupo de pares en la pubertad",
         "visualPrompt": "",
-        "overlayText": "El criterio",
-        "overlayTitle": "El criterio",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "El criterio",
-        "speakerNotes": "La frase sobre las niñas y la ciencia atribuye una capacidad a todo un grupo. No considera a Valeria. Valeria quiere construir un robot. Esa información describe su interés y permite darle una oportunidad de aprender.",
+        "overlayText": "El grupo de pares en la pubertad",
+        "overlayTitle": "El grupo de pares en la pubertad",
+        "overlaySubtitle": "Búsqueda de identidad y autonomía",
+        "vectorialOverlayPptx": "El grupo de pares en la pubertad",
+        "speakerNotes": "",
         "duracionSeg": 8
       },
       {
         "slideNumber": 10,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "Relación entre pistas",
+        "didacticPurpose": "¿Qué es un estereotipo de género?",
         "visualPrompt": "",
-        "overlayText": "Relación entre pistas",
-        "overlayTitle": "Relación entre pistas",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Relación entre pistas",
-        "speakerNotes": "La frase que impide a los niños mostrar emociones también generaliza y limita una experiencia humana. Escuchar a Tomás y permitir que Valeria participe evita usar estereotipos para decidir por ellos.",
+        "overlayText": "¿Qué es un estereotipo de género?",
+        "overlayTitle": "¿Qué es un estereotipo de género?",
+        "overlaySubtitle": "Generalizaciones rígidas y sin base científica",
+        "vectorialOverlayPptx": "¿Qué es un estereotipo de género?",
+        "speakerNotes": "",
         "duracionSeg": 8
       },
       {
         "slideNumber": 11,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "Modelo explicado",
+        "didacticPurpose": "La evidencia científica frente al prejuicio",
         "visualPrompt": "",
-        "overlayText": "Modelo explicado",
-        "overlayTitle": "Modelo explicado",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Modelo explicado",
-        "speakerNotes": "Valeria quiere construir un robot. Un compañero afirma que las niñas no son buenas para la ciencia. ¿Qué parte es un interés individual y qué parte es un estereotipo? El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo. Una parte habla de una persona y la otra generaliza sobre un grupo.",
+        "overlayText": "La evidencia científica frente al prejuicio",
+        "overlayTitle": "La evidencia científica frente al prejuicio",
+        "overlaySubtitle": "Cerebro humano y plasticidad cognitiva",
+        "vectorialOverlayPptx": "La evidencia científica frente al prejuicio",
+        "speakerNotes": "",
         "duracionSeg": 8
       },
       {
         "slideNumber": 12,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "Comprobación",
+        "didacticPurpose": "Impacto de la publicidad y los medios",
         "visualPrompt": "",
-        "overlayText": "Comprobación",
-        "overlayTitle": "Comprobación",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Comprobación",
-        "speakerNotes": "Tomás expresa tristeza. Una compañera escucha mientras otro le dice que los niños no deben mostrar emociones. ¿Qué respuesta respeta a Tomás y por qué? Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión. El caso presenta una emoción concreta y una regla impuesta a todos los niños.",
+        "overlayText": "Impacto de la publicidad y los medios",
+        "overlayTitle": "Impacto de la publicidad y los medios",
+        "overlaySubtitle": "Mensajes comerciales que condicionan",
+        "vectorialOverlayPptx": "Impacto de la publicidad y los medios",
+        "speakerNotes": "",
         "duracionSeg": 8
       },
       {
         "slideNumber": 13,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "Error y corrección",
+        "didacticPurpose": "Equidad y respeto en la convivencia",
         "visualPrompt": "",
-        "overlayText": "Error y corrección",
-        "overlayTitle": "Error y corrección",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Error y corrección",
-        "speakerNotes": "Un error que debemos evitar: Confundir una expectativa social con una capacidad biológica demostrada. Si la respuesta añade información, vuelve al recurso y corrígela.",
+        "overlayText": "Equidad y respeto en la convivencia",
+        "overlayTitle": "Equidad y respeto en la convivencia",
+        "overlaySubtitle": "Igualdad de derechos y oportunidades",
+        "vectorialOverlayPptx": "Equidad y respeto en la convivencia",
+        "speakerNotes": "",
         "duracionSeg": 8
       },
       {
         "slideNumber": 14,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "Síntesis y práctica",
+        "didacticPurpose": "Síntesis y puente a la práctica",
         "visualPrompt": "",
-        "overlayText": "Síntesis y práctica",
-        "overlayTitle": "Síntesis y práctica",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Síntesis y práctica",
-        "speakerNotes": "Los estereotipos no deben limitar oportunidades. Lee, localiza evidencia, explica y comprueba. Continúa con la práctica interactiva.",
+        "overlayText": "Síntesis y puente a la práctica",
+        "overlayTitle": "Síntesis y puente a la práctica",
+        "overlaySubtitle": "Piensa críticamente, actúa con justicia",
+        "vectorialOverlayPptx": "Síntesis y puente a la práctica",
+        "speakerNotes": "",
         "duracionSeg": 8
       }
     ]
@@ -301,126 +314,86 @@ export const CIENCIAS_7B_OA01_CLASE04: LessonData = {
   "postQuestions": [
     {
       "context": "Comprobación 1",
-      "question": "¿Qué respuesta respeta a Tomás y por qué?",
-      "expected": "Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión.",
+      "question": "- *Pregunta:* “¿Por qué afirmar que las carreras científicas son solo para hombres es un estereotipo de género y no un hecho biológico?",
+      "expected": "",
       "success": "Respuesta precisa y fundamentada",
       "support": "Revisa el concepto clave expuesto",
-      "reveal": "Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión.",
-      "studentReveal": "Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión."
+      "reveal": "",
+      "studentReveal": ""
     }
   ],
   "practice": [
     {
-      "context": "Valeria quiere construir un robot. Un compañero afirma que las niñas no son buenas para la ciencia.",
-      "question": "¿Qué parte es un interés individual y qué parte es un estereotipo? Escribe una respuesta y señala la pista que la sostiene.",
-      "expected": "El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo.",
-      "success": "Una parte habla de una persona y la otra generaliza sobre un grupo.",
+      "context": "Una tienda de juguetes divide sus pasillos en dos zonas: un pasillo rosado con muñecas bebés, utensilios de cocina y maquillaje de juguete; y un pasillo azul con naves espaciales, microscopios, herramientas de construcción y figuras de acción.\n- **Consigna:** Explica de qué manera esta distribución comercial fomenta estereotipos de género y qué mensaje limitante transmite a los niños y niñas.",
+      "question": "Resuelve la actividad en tu cuaderno.",
+      "expected": "“Transmite el mensaje implícito de que el cuidado del hogar y la estética son tareas exclusivas de mujeres, y que la exploración científica, la valentía y la construcción son exclusivas de hombres. Limita el desarrollo vocacional temprano de ambos sin base científica.”",
+      "success": "Cumple el criterio formal del caso",
       "support": "Revisa los datos del recurso",
-      "reveal": "El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo.",
-      "studentReveal": "El interés por construir un robot corresponde a Valeria. La afirmación sobre todas las niñas es un estereotipo."
+      "reveal": "“Transmite el mensaje implícito de que el cuidado del hogar y la estética son tareas exclusivas de mujeres, y que la exploración científica, la valentía y la construcción son exclusivas de hombres. Limita el desarrollo vocacional temprano de ambos sin base científica.”",
+      "studentReveal": "“Transmite el mensaje implícito de que el cuidado del hogar y la estética son tareas exclusivas de mujeres, y que la exploración científica, la valentía y la construcción son exclusivas de hombres. Limita el desarrollo vocacional temprano de ambos sin base científica.”"
     },
     {
-      "context": "Tomás expresa tristeza. Una compañera escucha mientras otro le dice que los niños no deben mostrar emociones.",
-      "question": "¿Qué respuesta respeta a Tomás y por qué? Escribe una respuesta y señala la pista que la sostiene.",
-      "expected": "Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión.",
-      "success": "El caso presenta una emoción concreta y una regla impuesta a todos los niños.",
+      "context": "En una feria vocacional, Lucas (13 años) dice que le gustaría estudiar enfermería para cuidar a recién nacidos o adultos mayores. Un familiar le dice: *\"Mejor estudia ingeniería, la enfermería es carrera de mujeres\"*.\n- **Consigna:** Redacta dos argumentos científicos y formativos que Lucas puede utilizar para refutar ese comentario familiar.",
+      "question": "Resuelve la actividad en tu cuaderno.",
+      "expected": "“Argumento 1: La enfermería es una ciencia de la salud rigurosa que exige altos conocimientos de anatomía y farmacología, aptitudes que poseen hombres y mujeres por igual. Argumento 2: El cuidado de los enfermos y la empatía son valores humanos universales, no una condición biológica de un solo género.”",
+      "success": "Cumple el criterio formal del caso",
       "support": "Revisa los datos del recurso",
-      "reveal": "Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión.",
-      "studentReveal": "Escucharlo respeta su expresión emocional. La generalización del otro compañero limita injustificadamente esa expresión."
+      "reveal": "“Argumento 1: La enfermería es una ciencia de la salud rigurosa que exige altos conocimientos de anatomía y farmacología, aptitudes que poseen hombres y mujeres por igual. Argumento 2: El cuidado de los enfermos y la empatía son valores humanos universales, no una condición biológica de un solo género.”",
+      "studentReveal": "“Argumento 1: La enfermería es una ciencia de la salud rigurosa que exige altos conocimientos de anatomía y farmacología, aptitudes que poseen hombres y mujeres por igual. Argumento 2: El cuidado de los enfermos y la empatía son valores humanos universales, no una condición biológica de un solo género.”"
     },
     {
-      "context": "Caso ficticio nuevo: Mateo quiere aprender danza. Una compañera afirma que los niños no pueden bailar. El grupo debe decidir cómo organizar un taller para quienes quieran aprender.",
-      "question": "Identifica el estereotipo, sepáralo del interés de Mateo y propone una regla de participación con una razón.",
-      "expected": "Decir que los niños no pueden bailar generaliza sobre un grupo; el interés por danza corresponde a Mateo. Una regla abierta a quienes quieran aprender considera intereses y oportunidades, sin esa generalización.",
+      "context": "*Situación ficticia nueva:* El consejo escolar debate una propuesta de reglamento para las actividades extracurriculares del colegio: *\"En las competencias de debate interescolar y en las olimpíadas de matemáticas, los equipos deberán estar capitaneados exclusivamente por varones para asegurar firmeza en las discusiones; en las actividades de coro y ornamentación del patio, las capitanas deberán ser exclusivamente mujeres por su delicadeza natural\"*.\n\n- **Actividad autónoma del estudiante:**\n  Responde en tu cuaderno:\n  1. Identifica los dos estereotipos de género presentes en la propuesta de reglamento escolar.\n  2. Redacta una carta breve (4 a 6 líneas) dirigida al Centro de Alumnos proponiendo un ajuste a esa regla, aplicando los principios de equidad, libre elección y no discriminación aprendidos hoy.\n  3. Explica cómo la evidencia científica sobre el cerebro humano respalda que el liderazgo en debates o ciencias no depende del sexo biológico de las personas.\n\n- **Criterio privado del mentor (revelar solo después del intento):**\n  1. Estereotipos identificados: Asociar falsamente la firmeza intelectual y el debate solo a varones, y restringir la sensibilidad artística y el cuidado ambiental solo a mujeres.\n  2. Propuesta de ajuste: Establecer que la capitanía y participación en cualquier equipo (debate, coro, ciencias, deportes) se defina por votación democrática, interés y competencias individuales, sin distinción de género.\n  3. Respaldo científico: Las neurociencias demuestran que las capacidades de razonamiento lógico, argumentación y expresión artística dependen del entrenamiento, la motivación y el aprendizaje, no del sexo biológico.\n\n- **Cómo valorar:** El estudiante detecta los prejuicios sexistas, formula una norma escolar inclusiva y cita la igualdad de capacidades cognitivas humanas.\n\n---",
+      "question": "Realiza la transferencia autónoma con el nuevo recurso.",
+      "expected": "1. Estereotipos identificados: Asociar falsamente la firmeza intelectual y el debate solo a varones, y restringir la sensibilidad artística y el cuidado ambiental solo a mujeres.",
       "success": "Aplica el criterio de la clase de manera autónoma en un recurso nuevo",
-      "support": "Comprobar cada elemento pedido y su evidencia; aceptar formulaciones equivalentes. Si falta una relación, pedir que señale la pista y explique qué demuestra; después ofrecer el modelo y un nuevo intento. Registrar respuesta, apoyos y criterio por reforzar.",
-      "reveal": "Decir que los niños no pueden bailar generaliza sobre un grupo; el interés por danza corresponde a Mateo. Una regla abierta a quienes quieran aprender considera intereses y oportunidades, sin esa generalización.",
-      "studentReveal": "Decir que los niños no pueden bailar generaliza sobre un grupo; el interés por danza corresponde a Mateo. Una regla abierta a quienes quieran aprender considera intereses y oportunidades, sin esa generalización."
+      "support": "El estudiante detecta los prejuicios sexistas, formula una norma escolar inclusiva y cita la igualdad de capacidades cognitivas humanas.",
+      "reveal": "1. Estereotipos identificados: Asociar falsamente la firmeza intelectual y el debate solo a varones, y restringir la sensibilidad artística y el cuidado ambiental solo a mujeres.",
+      "studentReveal": "1. Estereotipos identificados: Asociar falsamente la firmeza intelectual y el debate solo a varones, y restringir la sensibilidad artística y el cuidado ambiental solo a mujeres."
     }
   ],
   "mini": [
     {
       "id": "q1",
-      "q": "¿Qué afirmación es un estereotipo en el recurso?",
+      "q": "¿Cuál de las siguientes afirmaciones define correctamente qué es un estereotipo de género desde la perspectiva de las ciencias sociales y biológicas?",
       "options": [
-        "A. Valeria quiere construir un robot",
-        "B. Las niñas no son buenas para la ciencia",
-        "C. Tomás expresa tristeza",
-        "D. Una compañera escucha"
+        "A. Es una ley de la genética molecular que dicta qué profesión debe ejercer una persona según su ADN.",
+        "B. Es una creencia cultural simplificada y rígida que adjudica determinadas conductas, gustos o roles a una persona únicamente en función de su sexo biológico.",
+        "C. Es una hormona secretada por la glándula hipófisis durante el estirón de la pubertad.",
+        "D. Es un método científico utilizado en el laboratorio para clasificar tipos de suelo agrícola."
       ],
-      "correct": "B. Las niñas no son buenas para la ciencia",
-      "fixExplain": "La afirmación atribuye una capacidad a todo un grupo."
+      "correct": "B. Es una creencia cultural simplificada y rígida que adjudica determinadas conductas, gustos o roles a una persona únicamente en función de su sexo biológico.",
+      "fixExplain": "Los estereotipos de género son construcciones culturales aprendidas que generalizan arbitrariamente expectativas de rol sin respaldo biológico ni determinismo genético."
     },
     {
       "id": "q2",
-      "q": "¿Qué acción evita limitar el interés de Valeria?",
+      "q": "Un grupo de amigos se niega a invitar a Camilo a jugar fútbol durante el recreo porque afirman que \"los niños que leen poesía o tocan la flauta no tienen fuerza para correr en una cancha\". ¿Qué análisis crítico describe mejor esta situación?",
       "options": [
-        "A. Permitirle participar y aprender",
-        "B. Excluirla por ser niña",
-        "C. Decidir que debe elegir otra actividad",
-        "D. Compararla sin escuchar su interés"
+        "A. Los amigos tienen razón, porque existe una ley biológica que impide correr rápido a las personas que disfrutan de las artes literarias.",
+        "B. Es una situación de discriminación basada en un estereotipo, pues las habilidades deportivas y la sensibilidad artística pueden desarrollarse juntas y no se excluyen mutuamente.",
+        "C. Camilo debería tirar su flauta a la basura para que sus compañeros lo acepten en el equipo de fútbol.",
+        "D. La escuela debería suspender permanentemente la educación física para evitar que los estudiantes hagan deporte."
       ],
-      "correct": "A. Permitirle participar y aprender",
-      "fixExplain": "La oportunidad considera su interés individual, sin aplicar la generalización."
+      "correct": "B. Es una situación de discriminación basada en un estereotipo, pues las habilidades deportivas y la sensibilidad artística pueden desarrollarse juntas y no se excluyen mutuamente.",
+      "fixExplain": "Los intereses artísticos y las capacidades motrices o deportivas no son incompatibles en ningún sentido biológico. Limitar la participación de alguien por prejuicios estéticos o culturales es una forma injusta de exclusión social."
     },
     {
       "id": "q3",
-      "q": "¿Por qué escuchar a Tomás es respetuoso?",
+      "q": "¿Cuál de las siguientes conductas en el aula promueve de manera efectiva relaciones de género equitativas y de respeto mutuo?",
       "options": [
-        "A. Porque todos deben sentir lo mismo",
-        "B. Porque elimina toda emoción",
-        "C. Porque reconoce su experiencia sin imponer un estereotipo",
-        "D. Porque obliga a compartir información íntima"
+        "A. Designar siempre a las estudiantes mujeres para barrer la sala de clases y a los varones para mover los escritorios pesados.",
+        "B. Fomentar que hombres y mujeres participen por igual en tareas de liderazgo científico, debates, expresión artística y mantenimiento colaborativo de los espacios comunes.",
+        "C. Prohibir que los varones opinen sobre temas de salud y que las mujeres participen en olimpiadas de matemáticas.",
+        "D. Calificar con mejores notas a los estudiantes que usen vestimentas tradicionales impuestas por la publicidad."
       ],
-      "correct": "C. Porque reconoce su experiencia sin imponer un estereotipo",
-      "fixExplain": "Escuchar reconoce una emoción de una persona concreta."
+      "correct": "B. Fomentar que hombres y mujeres participen por igual en tareas de liderazgo científico, debates, expresión artística y mantenimiento colaborativo de los espacios comunes.",
+      "fixExplain": "La equidad se construye permitiendo que todas las personas tengan acceso igualitario al liderazgo intelectual, al trabajo comunitario y al desarrollo integral, sin sesgos de género."
     }
   ],
-  "recovery": [
-    {
-      "title": "Recuperación 1",
-      "explain": "La afirmación atribuye una capacidad a todo un grupo.",
-      "q": "Separa el dato sobre Emilia de la generalización.",
-      "kind": "open_response",
-      "options": [],
-      "correct": "",
-      "correctText": "Su interés por carpintería es individual; la regla sobre todas las niñas es un estereotipo. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
-      "fixText": "Buscar estas expresiones del recurso nuevo: «carpintería»; «todas»; «niñas». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
-      "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
-      "resource": "Caso nuevo de recuperación: Emilia quiere aprender carpintería. Una persona dice que todas las niñas deben elegir otra actividad. Emilia expresa frustración.",
-      "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
-    },
-    {
-      "title": "Recuperación 2",
-      "explain": "La oportunidad considera su interés individual, sin aplicar la generalización.",
-      "q": "Propón una decisión sobre su participación y justifícala.",
-      "kind": "open_response",
-      "options": [],
-      "correct": "",
-      "correctText": "Permitir participar y aprender según su interés y las condiciones comunes del taller, sin excluirla por ser niña. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
-      "fixText": "Buscar estas expresiones del recurso nuevo: «aprender»; «niña». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
-      "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
-      "resource": "Caso nuevo de recuperación: Emilia quiere aprender carpintería. Una persona dice que todas las niñas deben elegir otra actividad. Emilia expresa frustración.",
-      "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
-    },
-    {
-      "title": "Recuperación 3",
-      "explain": "Escuchar reconoce una emoción de una persona concreta.",
-      "q": "¿Cómo responder a la frustración sin imponer otro estereotipo?",
-      "kind": "open_response",
-      "options": [],
-      "correct": "",
-      "correctText": "Escuchar y reconocer su emoción; no exigir que la oculte ni generalizar que un grupo siente de determinada manera. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
-      "fixText": "Volver al caso concreto: «Caso nuevo de recuperación: Emilia quiere aprender carpintería. Una persona dice que todas las niñas deben elegir otra actividad. Emilia expresa frustración.». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
-      "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
-      "resource": "Caso nuevo de recuperación: Emilia quiere aprender carpintería. Una persona dice que todas las niñas deben elegir otra actividad. Emilia expresa frustración.",
-      "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
-    }
-  ],
+  "recovery": [],
   "summaryIdeas": [
     [
       "Idea central",
-      "Una situación"
+      "Aspectos sociales y estereotipos"
     ],
     [
       "Comprensión",
@@ -433,12 +406,12 @@ export const CIENCIAS_7B_OA01_CLASE04: LessonData = {
     "description": "Organizador de las cinco dimensiones biopsicosociales."
   },
   "closure": {
-    "congratulations": "Buen trabajo. Explicaste tu respuesta usando información del recurso.",
-    "nextClassPreview": "¡Nos vemos en la próxima lección!"
+    "congratulations": "¡Felicitaciones por completar la sesión de hoy!",
+    "nextClassPreview": "Próxima clase: Vínculos afectivos y respeto mutuo"
   },
   "paso8_cierre": {
-    "preguntaSintesis": "¿Qué parte es un interés individual y qué parte es un estereotipo?",
-    "metacognicion": "¿Qué te ayudó más: leer el recurso, localizar una pista o comparar explicaciones? ¿Por qué?",
-    "celebracion": "Buen trabajo. Explicaste tu respuesta usando información del recurso."
+    "preguntaSintesis": "¿Qué aprendiste hoy?",
+    "metacognicion": "¿Qué estrategia te ayudó más?",
+    "celebracion": "¡Buen trabajo hoy!"
   }
 };
