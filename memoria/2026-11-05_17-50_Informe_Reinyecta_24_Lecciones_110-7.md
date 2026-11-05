@@ -85,3 +85,4 @@ Cada leccion servida cuenta con las ocho etapas funcionales:
 6. **Resumen:** ideas clave contrastadas con la fuente canonica.
 7. **Miniquiz / Evaluacion Integradora:** 3 preguntas de alternativas A-D con feedback especifico, o evaluacion integradora formal en clases 06 sin desvirtuar el instrumento.
 8. **Cierre:** sintesis, metacognicion y avance continuo a la siguiente sesion.
+
