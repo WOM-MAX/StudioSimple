@@ -39,7 +39,8 @@ export function inside(root: string, relative: string): string {
 export function sha(root: string, file: string): string {
   const p = inside(root, file);
   if (!fs.existsSync(p)) throw new NotVerifiable(`Falta archivo: ${file}`);
-  return crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+  const content = fs.readFileSync(p, 'utf8').replace(/\r\n/g, '\n');
+  return crypto.createHash('sha256').update(content, 'utf8').digest('hex');
 }
 export function filesUnder(root: string, directory: string, suffix: string): string[] {
   const base = inside(root, directory);
