@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-10-24T19:29:21.103747-03:00",
+  "state": "EN_REVISION",
+  "inputZipSha256": "81a4a33e42c56b82227cfed3584794403d76e0c0a7bcd58f433691f40939a952",
+  "node": "v24.22.1",
+  "typescript": "5.6.3",
+  "tests": {
+    "command": "node --test --test-reporter=tap scripts/test_editor_work.cjs",
+    "pass": 41,
+    "fail": 0,
+    "exitCode": 0,
+    "scope": "Módulos/handlers reales extraídos por AST, almacenamiento controlado; NO navegador"
+  },
+  "types": {
+    "validatorExitCode": 0,
+    "repositoryExitCode": 0,
+    "scope": "Repositorio y adaptador con tipos entregados; declaraciones del generador extraídas de sus interfaces; registro de fábrica sólo declarado para tipos",
+    "command": "tsc --noEmit --strict --skipLibCheck --target ES2020 --module ESNext --moduleResolution bundler --resolveJsonModule --allowSyntheticDefaultImports src/lib/lesson-repository.ts"
+  },
+  "tsxSyntaxExitCode": 0,
+  "fullAppBuildExecuted": false,
+  "realBrowserExecuted": false,
+  "push": false,
+  "deployed": false,
+  "canonicalSourcesChanged": false,
+  "protectedMaterialsChanged": false
+}

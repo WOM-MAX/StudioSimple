@@ -1,0 +1,75 @@
+{
+  "createdAt": "2026-10-24T19:29:21.103747-03:00",
+  "files": [
+    {
+      "file": "ANTES_DESPUES_VALIDACION.json",
+      "bytes": 859,
+      "sha256": "d1c725e0597cfeb426e2d45ebace7606accb301db27efecd2588eabcc52034b9"
+    },
+    {
+      "file": "APLICAR_CAMBIO_EDITOR_WORK.patch",
+      "bytes": 102605,
+      "sha256": "a3a21fdb8511173ee303ae58f7f93d94f0dddc7944b5989367f53f7b39236d86"
+    },
+    {
+      "file": "ARCHIVOS_Y_HASHES.json",
+      "bytes": 2091,
+      "sha256": "bb6ec4949b71a803543184d15597582e4c6846f51b07f3e34508e34bc2f15216"
+    },
+    {
+      "file": "EJECUCION_WORK.json",
+      "bytes": 1100,
+      "sha256": "5d82a9b0fd52f625bafacbccc0e8dc888bd5823ea53571c5ad48a3faae0c58a1"
+    },
+    {
+      "file": "LEER_PRIMERO_APLICACION_PLAN_B.md",
+      "bytes": 9963,
+      "sha256": "2727570f5fed33dbef086b87da4d84fe1e34513a09e122760f04dddb124c6d7a"
+    },
+    {
+      "file": "PRUEBAS_WORK.tap",
+      "bytes": 8215,
+      "sha256": "561bfee06be3c2ac9c65b8ee31d326e435af788182a3d617392b036277e64df6"
+    },
+    {
+      "file": "VERIFICACION_TIPOS.txt",
+      "bytes": 165,
+      "sha256": "b3b1029b9222d61ee4cdd50610744e0184a0f9d4a78a244a0552003cc1a41c0b"
+    },
+    {
+      "file": "codigo/Web Studio Simple/package.json",
+      "bytes": 860,
+      "sha256": "604d7b094663f071ada1ab53a923ab9b5535e2d9ce1610c475318cd7a447690d"
+    },
+    {
+      "file": "codigo/Web Studio Simple/src/components/admin/cms/LessonEditorView.tsx",
+      "bytes": 202783,
+      "sha256": "da61e80db7a71740a5c7841b2c25bddcacb51a50fc33489713708e1cf8b3934a"
+    },
+    {
+      "file": "codigo/Web Studio Simple/src/lib/lesson-canonical-validator.ts",
+      "bytes": 7786,
+      "sha256": "8482c14ec12c1e856a629b028a8bff9c492754586508410ceba78c11e6ee15f7"
+    },
+    {
+      "file": "codigo/Web Studio Simple/src/lib/lesson-repository.ts",
+      "bytes": 19338,
+      "sha256": "10ecd8ba74c93d6ecae7aa5fbdc6b1d5391f0e82bbe8261d926c14a482bfd9b0"
+    },
+    {
+      "file": "codigo/scripts/fixtures/CNA_OA01_C02.json",
+      "bytes": 25326,
+      "sha256": "a1cd256bb5e785071d90d4dbafb5a46b3ad3717178ddc2762faf54dabafbc4ce"
+    },
+    {
+      "file": "codigo/scripts/test_editor_work.cjs",
+      "bytes": 14943,
+      "sha256": "b815d43eec2e233bfe6a843463dfed53f21f4100c8cf5034071159859d2ca56d"
+    },
+    {
+      "file": "codigo/scripts/verify_editor_reference.cjs",
+      "bytes": 1443,
+      "sha256": "0f53121a523d699da32681c23bcc234420235e1d6bd2c202a44dba35d34d41b2"
+    }
+  ]
+}

@@ -27,7 +27,8 @@ import {
   ExternalLink,
   ImageIcon,
   ArrowDown,
-  Info
+  Info,
+  AlertTriangle
 } from 'lucide-react';
 import { useApp } from '../../../context/AppContext';
 import {
@@ -54,12 +55,17 @@ import {
   saveCustomPlayerLesson,
   resetCustomPlayerLesson,
   isPlayerLessonCustomized,
+  getLastLessonLoadIssue,
   normalizeGrade,
   normalizeSubject,
   normalizeOa
 } from '../../../lib/lesson-repository';
 import { downloadLessonPromptFile } from '../../../lib/prompt-export';
 import { resolveVideoSource } from '../../../lib/video-utils';
+import {
+  validateLessonCanonical,
+  CanonicalValidationDetail
+} from '../../../lib/lesson-canonical-validator';
 
 interface LessonEditorViewProps {
   catalog?: OACatalogItem[];
@@ -164,6 +170,8 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
   const [copyFeedback, setCopyFeedback] = useState<string | null>(null);
   const [isExportingDocx, setIsExportingDocx] = useState<boolean>(false);
   const [videoSaveFeedback, setVideoSaveFeedback] = useState<'hook' | 'formalization' | null>(null);
+  const [validationErrors, setValidationErrors] = useState<CanonicalValidationDetail[] | null>(null);
+  const [validationErrorMsg, setValidationErrorMsg] = useState<string | null>(null);
 
   // Referencias para auto-guardado e inmunidad contra reactividad destructiva
   const lessonDataRef = useRef<LessonData | null>(lessonData);
@@ -171,7 +179,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
     lessonDataRef.current = lessonData;
   }, [lessonData]);
 
-  const loadedLessonKeyRef = useRef<string>('');
+  const loadedLessonKeyRef = useRef<string | null>('');
 
   // Persistir estado de navegación del editor en sessionStorage
   useEffect(() => {
@@ -236,20 +244,13 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
     }
   }, [availableOAs, selectedOAId]);
 
-  // Auto-guardado de seguridad al desmontar el editor
-  useEffect(() => {
-    return () => {
-      const curData = lessonDataRef.current;
-      if (curData && currentOA) {
-        saveCustomPlayerLesson(
-          selectedGrade,
-          selectedSubject,
-          currentOA.oa,
-          selectedLessonNum,
-          curData
-        );
-      }
-    };
+  // El guardado al salir también pasa por la puerta del repositorio.
+  useEffect(() => () => {
+    const candidate = lessonDataRef.current;
+    if (candidate && currentOA) {
+      const result = saveCustomPlayerLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum, candidate, { oaId: currentOA.id });
+      if (!result.ok && !result.validation?.isProtectedOa) console.warn(result.error);
+    }
   }, [selectedGrade, selectedSubject, currentOA, selectedLessonNum]);
 
   const totalLessons = currentOA?.leccionesSugeridas || 5;
@@ -260,153 +261,57 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
       'Lee en voz alta únicamente los recuadros DILE y PREGÚNTALE.',
       'No leas los recuadros SOLO PARA TI ni AYUDA DE LECTURA.',
       'Haz cada pregunta y espera la respuesta antes de seleccionar una opción.',
-      'Considera correcta una respuesta si expresa la idea matemática, aunque use palabras distintas.',
+      'Considera correcta una respuesta si expresa la idea esperada o disciplinar, aunque use palabras distintas.',
       'Si el estudiante necesita apoyo, usa únicamente la ayuda que aparecerá.',
       'Si propone otra explicación o no está de acuerdo, escúchalo completo y valora su razonamiento antes de guiarlo.'
     ],
     []
   );
 
+
+  const getEditorSelectionKey = () => `${normalizeGrade(selectedGrade)}_${normalizeSubject(selectedSubject)}_${normalizeOa(currentOA?.oa || "")}_${selectedLessonNum}`;
+  const persistEditorLesson = (candidate: LessonData): boolean => {
+    if (!currentOA) return false;
+    const result = saveCustomPlayerLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum, candidate, { oaId: currentOA.id });
+    if (!result.ok) {
+      setValidationErrorMsg(result.error || 'No se guardó la edición.');
+      setValidationErrors(result.validation?.details || []);
+      setSaveStatus(null);
+      return false;
+    }
+    setValidationErrorMsg(null); setValidationErrors(null); setIsCustom(true);
+    return true;
+  };
+  const canLeaveCurrentLesson = (): boolean => {
+    const candidate = lessonDataRef.current || lessonData;
+    if (!candidate || !currentOA) return true;
+    const validation = validateLessonCanonical(candidate, { grade: selectedGrade, subject: selectedSubject, oaCode: currentOA.oa, lessonNumber: selectedLessonNum });
+    if (validation.isValid && validation.isProtectedOa) return true;
+    return persistEditorLesson(candidate);
+  };
+
   // Cargar lección nativa directamente sin conversiones degradantes
   const loadLesson = useCallback((forceReload: boolean = false) => {
     if (!currentOA) return;
-
-    const currentKey = `${normalizeGrade(selectedGrade)}_${normalizeSubject(selectedSubject)}_${normalizeOa(currentOA.oa)}_${selectedLessonNum}`;
-    if (!forceReload && loadedLessonKeyRef.current === currentKey && lessonDataRef.current !== null) {
-      // Lección ya cargada en memoria; proteger contra sobreescritura reactiva del catálogo
+    const currentKey = getEditorSelectionKey();
+    if (!forceReload && loadedLessonKeyRef.current === currentKey && lessonDataRef.current !== null) return;
+    const player = findInjectedLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum);
+    const validation = validateLessonCanonical(player, { grade: selectedGrade, subject: selectedSubject, oaCode: currentOA.oa, lessonNumber: selectedLessonNum });
+    if (!player || !validation.isValid) {
+      loadedLessonKeyRef.current = null;
+      setLessonData(null);
+      setValidationErrorMsg(validation.error || 'NO_VERIFICABLE: no hay una lección válida para esta selección. No se generó contenido de reemplazo.');
+      setValidationErrors(validation.details || []);
       return;
     }
+    const loadIssue = getLastLessonLoadIssue();
+    setValidationErrorMsg(loadIssue?.error || null);
+    setValidationErrors(loadIssue?.details || null);
     loadedLessonKeyRef.current = currentKey;
-
-    // 1. Cargar directamente desde findInjectedLesson (revisa localStorage unificado, fábrica canónica curada)
-    const playerLesson = findInjectedLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum);
-    const customized = isPlayerLessonCustomized(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum) ||
-                       isLessonCustomized(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum);
-    setIsCustom(customized);
-
-    if (playerLesson) {
-      const cloned: LessonData = JSON.parse(JSON.stringify(playerLesson));
-
-      // Asegurar inicialización de los 4 bloques canónicos si estuviesen incompletos
-      if (!cloned.route.blocks || cloned.route.blocks.length < 4) {
-        cloned.route.blocks = [
-          { id: 'b1', number: '01', title: 'Números', subtitle: 'Enteros, fracciones y decimales', color: 'navy' },
-          { id: 'b2', number: '02', title: 'Álgebra', subtitle: 'Patrones, relaciones y ecuaciones', color: 'orange' },
-          { id: 'b3', number: '03', title: 'Geometría', subtitle: 'Formas, medidas y transformaciones', color: 'yellow' },
-          { id: 'b4', number: '04', title: 'Datos y azar', subtitle: 'Información, gráficos y probabilidades', color: 'teal' }
-        ];
-      }
-
-      // Asegurar inicialización de las 3 tarjetas de foco de la clase de hoy
-      if (!cloned.route.keyQuestions || cloned.route.keyQuestions.length < 3) {
-        cloned.route.keyQuestions = [
-          { label: 'Ubicación en la recta', sub: 'El cero al centro y signos opuestos' },
-          { label: 'Criterio de orden', sub: 'Mayor hacia la derecha' },
-          { label: 'Comparar negativos', sub: 'Distancia relativa al cero' }
-        ];
-      }
-
-      // Asegurar etapa reference (Comprendamos la respuesta)
-      if (!cloned.reference) {
-        cloned.reference = {
-          dilePrompt: cloned.situation?.dilePrompt || 'En la recta numérica el número cero actúa como punto de referencia central.',
-          question: 'Dime con tus palabras: ¿qué número divide la recta numérica entre positivos y negativos?',
-          expectedAnswer: 'El número cero',
-          socraticHint: 'Es el valor que separa las cantidades positivas de las negativas.',
-          feedbackSuccess: '¡Exacto! El cero es el origen y punto de referencia central.',
-          feedbackSupport: 'Observa el centro de la recta: el cero divide positivos y negativos.'
-        };
-      }
-
-      // Asegurar puntos de foco del video motivacional
-      if (!cloned.hook.focusPoints || cloned.hook.focusPoints.length === 0) {
-        cloned.hook.focusPoints = [
-          'Dónde se ubica el número cero en la recta.',
-          'Hacia qué lado se ordenan los números positivos y negativos.',
-          'Qué regla define qué número es mayor que otro.'
-        ];
-      }
-
-      // Asegurar preguntas de comprobación post-video explicativo
-      if (!cloned.postQuestions || cloned.postQuestions.length === 0) {
-        cloned.postQuestions = cloned.preQuestions && cloned.preQuestions.length >= 2
-          ? JSON.parse(JSON.stringify(cloned.preQuestions.slice(0, 2)))
-          : [
-              {
-                context: 'Regla de la derecha',
-                question: 'Si un número A se encuentra a la derecha de un número B en la recta numérica, ¿cuál de los dos es mayor?',
-                expected: 'El número A es mayor porque está a la derecha.',
-                success: '¡Excelente! En la recta numérica, el número que está más a la derecha siempre es el mayor.',
-                support: 'Hacia la derecha los valores aumentan. ¿Cuál es mayor?',
-                reveal: 'El número A es mayor porque está situado más hacia la derecha.',
-                studentReveal: 'El número A es mayor.'
-              },
-              {
-                context: 'Comparación de negativos',
-                question: 'Al comparar −5 y −2, ¿cuál de los dos números es mayor y por qué?',
-                expected: 'El −2 es mayor porque está más a la derecha en la recta numérica.',
-                success: '¡Exacto! El −2 está más a la derecha y por tanto es mayor.',
-                support: 'Ubícalos mentalmente en la recta: ¿cuál está más cerca del cero?',
-                reveal: 'El −2 es mayor que el −5 porque se encuentra más hacia la derecha.',
-                studentReveal: 'El −2 es mayor porque está más a la derecha.'
-              }
-            ];
-      }
-
-      // Asegurar estrategia para pensar
-      if (!cloned.strategy) {
-        cloned.strategy = {
-          title: 'Cómo ordenar números enteros en 3 pasos',
-          dileIntro: 'Cuando tengas que comparar o ordenar números enteros, puedes seguir esta estrategia de tres pasos:',
-          steps: [
-            { number: 1, title: 'Ubica', desc: 'Sitúa cada número en la recta numérica tomando el cero como centro.' },
-            { number: 2, title: 'Compara', desc: 'Observa cuál de los números se encuentra ubicado más hacia la derecha.' },
-            { number: 3, title: 'Concluye', desc: 'El número que está a la derecha siempre es el mayor, sin importar sus signos.' }
-          ]
-        };
-      }
-
-      // Asegurar ideas de síntesis
-      if (!cloned.summaryIdeas || cloned.summaryIdeas.length === 0) {
-        cloned.summaryIdeas = [
-          ['1 · El cero como origen', 'En la recta numérica, el cero se ubica en el centro y actúa como punto de referencia que separa positivos de negativos.'],
-          ['2 · Orientación de los signos', 'Los números positivos se ordenan a la derecha aumentando su valor, y los negativos a la izquierda alejándose del cero.'],
-          ['3 · Criterio de orden universal', 'Todo número ubicado a la derecha de otro en la recta numérica es mayor que él.']
-        ];
-      }
-
-      setLessonData(cloned);
-      return;
-    }
-
-    // 2. Fallback: Paquete inyectado o generado dinámicamente
-    const pkg = getInjectedPackage(selectedGrade, selectedSubject, currentOA.oa);
-    if (pkg) {
-      const foundLesson = pkg.lessons.find((l) => l.num === selectedLessonNum);
-      if (foundLesson) {
-        const adapted = adaptGeneratorLessonToPlayer(
-          foundLesson,
-          { curso: selectedGrade, asignatura: selectedSubject, oa: currentOA.oa, titulo: currentOA.descripcion },
-          totalLessons
-        );
-        setLessonData(JSON.parse(JSON.stringify(adapted)));
-        return;
-      }
-    }
-
-    const generatedPkg = generateOAPackage(currentOA, totalLessons);
-    const targetLesson =
-      generatedPkg.lessons.find((l) => l.num === selectedLessonNum) || generatedPkg.lessons[0];
-
-    if (targetLesson) {
-      const adapted = adaptGeneratorLessonToPlayer(
-        targetLesson,
-        { curso: selectedGrade, asignatura: selectedSubject, oa: currentOA.oa, titulo: currentOA.descripcion },
-        totalLessons
-      );
-      setLessonData(JSON.parse(JSON.stringify(adapted)));
-    }
-  }, [currentOA, selectedGrade, selectedSubject, selectedLessonNum, totalLessons]);
+    setIsCustom(isPlayerLessonCustomized(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum));
+    // Abrir conserva los datos; los opcionales ausentes no se completan con contenido.
+    setLessonData(JSON.parse(JSON.stringify(player)));
+  }, [currentOA, selectedGrade, selectedSubject, selectedLessonNum]);
 
   useEffect(() => {
     initializeInjectedLessons()
@@ -420,72 +325,22 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
   }, [loadLesson]);
 
   // Guardar cambios directamente en el almacenamiento unificado de aula
-  const handleSaveLesson = () => {
-    const curData = lessonDataRef.current || lessonData;
-    if (!curData || !currentOA) return;
-
-    saveCustomPlayerLesson(
-      selectedGrade,
-      selectedSubject,
-      currentOA.oa,
-      selectedLessonNum,
-      curData
-    );
-
-    // Sincronizar en paralelo paquete para compatibilidad retroactiva
-    try {
-      const genLesson = adaptPlayerLessonToGenerator(curData);
-      saveCustomLessonData(
-        selectedGrade,
-        selectedSubject,
-        currentOA.oa,
-        currentOA.id,
-        genLesson,
-        totalLessons
-      );
-    } catch (e) {
-      console.warn('Error sincronizando paquete generator:', e);
+  const handleSaveLesson = (): boolean => {
+    const candidate = lessonDataRef.current || lessonData;
+    if (!candidate || !currentOA) return false;
+    const ok = persistEditorLesson(candidate);
+    if (ok) {
+      setSaveStatus('Lección guardada con éxito en este navegador.');
+      setTimeout(() => setSaveStatus(null), 3500);
     }
-
-    setIsCustom(true);
-    setSaveStatus('Lección guardada con éxito en almacenamiento persistente.');
-    setTimeout(() => setSaveStatus(null), 3500);
+    return ok;
   };
 
   // Auto-guardado centralizado al conmutar entre clases / lecciones
   const handleSwitchLesson = (targetNum: number) => {
-    if (targetNum === selectedLessonNum) return;
-
-    const curData = lessonDataRef.current || lessonData;
-    if (curData && currentOA) {
-      saveCustomPlayerLesson(
-        selectedGrade,
-        selectedSubject,
-        currentOA.oa,
-        selectedLessonNum,
-        curData
-      );
-
-      try {
-        const genLesson = adaptPlayerLessonToGenerator(curData);
-        saveCustomLessonData(
-          selectedGrade,
-          selectedSubject,
-          currentOA.oa,
-          currentOA.id,
-          genLesson,
-          totalLessons
-        );
-      } catch (e) {
-        console.warn('Error sincronizando paquete generator:', e);
-      }
-      setIsCustom(true);
-    }
-
+    if (targetNum === selectedLessonNum || !canLeaveCurrentLesson()) return;
     setSelectedLessonNum(targetNum);
-    if (typeof window !== 'undefined') {
-      sessionStorage.setItem('estudiosimple_editor_lesson_num', String(targetNum));
-    }
+    if (typeof window !== 'undefined') sessionStorage.setItem('estudiosimple_editor_lesson_num', String(targetNum));
   };
 
   const handleSelectStep = (stepId: EditorStepId) => {
@@ -496,79 +351,29 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
   };
 
   const handleGradeChange = (newGrade: string) => {
-    if (newGrade === selectedGrade) return;
-    const curData = lessonDataRef.current || lessonData;
-    if (curData && currentOA) {
-      saveCustomPlayerLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum, curData);
-    }
-    setSelectedGrade(newGrade);
-    setSelectedLessonNum(1);
-    if (typeof window !== 'undefined') {
-      sessionStorage.setItem('estudiosimple_editor_grade', newGrade);
-      sessionStorage.setItem('estudiosimple_editor_lesson_num', '1');
-    }
+    if (newGrade === selectedGrade || !canLeaveCurrentLesson()) return;
+    setSelectedGrade(newGrade); setSelectedLessonNum(1);
+    if (typeof window !== 'undefined') { sessionStorage.setItem('estudiosimple_editor_grade', newGrade); sessionStorage.setItem('estudiosimple_editor_lesson_num', '1'); }
   };
 
   const handleSubjectChange = (newSubject: string) => {
-    if (newSubject === selectedSubject) return;
-    const curData = lessonDataRef.current || lessonData;
-    if (curData && currentOA) {
-      saveCustomPlayerLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum, curData);
-    }
-    setSelectedSubject(newSubject);
-    setSelectedLessonNum(1);
-    if (typeof window !== 'undefined') {
-      sessionStorage.setItem('estudiosimple_editor_subject', newSubject);
-      sessionStorage.setItem('estudiosimple_editor_lesson_num', '1');
-    }
+    if (newSubject === selectedSubject || !canLeaveCurrentLesson()) return;
+    setSelectedSubject(newSubject); setSelectedLessonNum(1);
+    if (typeof window !== 'undefined') { sessionStorage.setItem('estudiosimple_editor_subject', newSubject); sessionStorage.setItem('estudiosimple_editor_lesson_num', '1'); }
   };
 
   const handleOAChange = (newOAId: string) => {
-    if (newOAId === selectedOAId) return;
-    const curData = lessonDataRef.current || lessonData;
-    if (curData && currentOA) {
-      saveCustomPlayerLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum, curData);
-    }
-    setSelectedOAId(newOAId);
-    setSelectedLessonNum(1);
-    if (typeof window !== 'undefined') {
-      sessionStorage.setItem('estudiosimple_editor_oa_id', newOAId);
-      sessionStorage.setItem('estudiosimple_editor_lesson_num', '1');
-    }
+    if (newOAId === selectedOAId || !canLeaveCurrentLesson()) return;
+    setSelectedOAId(newOAId); setSelectedLessonNum(1);
+    if (typeof window !== 'undefined') { sessionStorage.setItem('estudiosimple_editor_oa_id', newOAId); sessionStorage.setItem('estudiosimple_editor_lesson_num', '1'); }
   };
 
   // Guardado contextual directo para bloques audiovisuales
   const handlePersistCurrentVideo = (stage: 'hook' | 'formalization') => {
-    const curData = lessonDataRef.current || lessonData;
-    if (!curData || !currentOA) return;
-
-    saveCustomPlayerLesson(
-      selectedGrade,
-      selectedSubject,
-      currentOA.oa,
-      selectedLessonNum,
-      curData
-    );
-
-    try {
-      const genLesson = adaptPlayerLessonToGenerator(curData);
-      saveCustomLessonData(
-        selectedGrade,
-        selectedSubject,
-        currentOA.oa,
-        currentOA.id,
-        genLesson,
-        totalLessons
-      );
-    } catch (e) {
-      console.warn('Error auto-sincronizando generador:', e);
-    }
-
-    setIsCustom(true);
+    const candidate = lessonDataRef.current || lessonData;
+    if (!candidate || !currentOA || !persistEditorLesson(candidate)) return;
     setVideoSaveFeedback(stage);
-    setTimeout(() => {
-      setVideoSaveFeedback((prev) => (prev === stage ? null : prev));
-    }, 3000);
+    setTimeout(() => setVideoSaveFeedback(prev => prev === stage ? null : prev), 3000);
   };
 
   // Restablecer a versión oficial canónica
@@ -578,6 +383,8 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
       resetCustomPlayerLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum);
       resetCustomLessonData(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum);
       setIsCustom(false);
+      setValidationErrorMsg(null);
+      setValidationErrors(null);
       loadLesson(true);
       setSaveStatus('Lección restablecida a su versión canónica original.');
       setTimeout(() => setSaveStatus(null), 3500);
@@ -587,9 +394,25 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
   // Probar la lección en vivo en el aula sincronizada con paso directo de LessonData
   const handleTestInLivePlayer = () => {
     if (!lessonData || !currentOA) return;
-    handleSaveLesson();
 
-    const freshClone = JSON.parse(JSON.stringify(lessonData));
+    const validation = validateLessonCanonical(lessonData, { grade: selectedGrade, subject: selectedSubject, oaCode: currentOA.oa, lessonNumber: selectedLessonNum });
+    if (!validation.isValid) {
+      setValidationErrorMsg(validation.error || 'No es posible probar en aula: la lección contiene discrepancias canónicas.');
+      setValidationErrors(validation.details || []);
+      return;
+    }
+
+    if (!validation.isProtectedOa) {
+      if (!handleSaveLesson()) return;
+    } else {
+      setValidationErrorMsg(null);
+      setValidationErrors(null);
+    }
+
+    const candidate = lessonDataRef.current || lessonData;
+    const freshClone = JSON.parse(JSON.stringify(validation.isProtectedOa
+      ? findInjectedLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum)
+      : candidate));
 
     // Reiniciar estado de sesión residual en localStorage para que los videos e interacciones comiencen frescos
     if (typeof window !== 'undefined') {
@@ -642,12 +465,32 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
   // Descargar solo el prompt en archivo .txt
   const handleDownloadPrompt = () => {
     if (!lessonData || !currentOA) return;
+
+    const validation = validateLessonCanonical(lessonData, { grade: selectedGrade, subject: selectedSubject, oaCode: currentOA.oa, lessonNumber: selectedLessonNum });
+    if (!validation.isValid) {
+      setValidationErrorMsg(validation.error || 'Descarga de prompt bloqueada: la lección contiene discrepancias canónicas.');
+      setValidationErrors(validation.details || []);
+      return;
+    }
+
+    setValidationErrorMsg(null);
+    setValidationErrors(null);
     downloadLessonPromptFile(lessonData);
   };
 
   // Generar y descargar DOCX en formato Cuadernillo Doble
   const handleDownloadDocx = async () => {
     if (!lessonData || !currentOA) return;
+
+    const validation = validateLessonCanonical(lessonData, { grade: selectedGrade, subject: selectedSubject, oaCode: currentOA.oa, lessonNumber: selectedLessonNum });
+    if (!validation.isValid) {
+      setValidationErrorMsg(validation.error || 'Exportación DOCX bloqueada: la lección contiene discrepancias canónicas.');
+      setValidationErrors(validation.details || []);
+      return;
+    }
+
+    setValidationErrorMsg(null);
+    setValidationErrors(null);
     setIsExportingDocx(true);
 
     try {
@@ -671,6 +514,16 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
   // Exportar JSON nativo de la lección
   const handleExportJson = () => {
     if (!lessonData || !currentOA) return;
+
+    const validation = validateLessonCanonical(lessonData, { grade: selectedGrade, subject: selectedSubject, oaCode: currentOA.oa, lessonNumber: selectedLessonNum });
+    if (!validation.isValid) {
+      setValidationErrorMsg(validation.error || 'Exportación JSON bloqueada: la lección contiene discrepancias canónicas.');
+      setValidationErrors(validation.details || []);
+      return;
+    }
+
+    setValidationErrorMsg(null);
+    setValidationErrors(null);
     const jsonStr = JSON.stringify(lessonData, null, 2);
     const blob = new Blob([jsonStr], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
@@ -686,6 +539,16 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
   // Copiar Prompts de ChatGPT Work al portapapeles
   const handleCopyPrompt = async (type: 'hook' | 'explicativo') => {
     if (!lessonData || !currentOA) return;
+
+    const validation = validateLessonCanonical(lessonData, { grade: selectedGrade, subject: selectedSubject, oaCode: currentOA.oa, lessonNumber: selectedLessonNum });
+    if (!validation.isValid) {
+      setValidationErrorMsg(validation.error || 'Copia de prompts bloqueada: la lección contiene discrepancias canónicas.');
+      setValidationErrors(validation.details || []);
+      return;
+    }
+
+    setValidationErrorMsg(null);
+    setValidationErrors(null);
 
     let text = '';
     if (type === 'hook') {
@@ -719,7 +582,13 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
     return (
       <div className="p-8 text-center bg-white rounded-3xl border border-slate-200 shadow-sm space-y-4">
         <Clock className="w-8 h-8 text-[#12A1A4] mx-auto animate-spin" />
-        <p className="text-sm font-bold text-slate-700">Cargando editor de lección...</p>
+        <p className="text-sm font-bold text-slate-700" role={validationErrorMsg ? 'alert' : 'status'}>{validationErrorMsg || 'Cargando editor de lección...'}</p>
+        {validationErrorMsg && <div className="flex flex-wrap gap-2">
+          <select aria-label="Nivel" value={selectedGrade} onChange={e => handleGradeChange(e.target.value)}>{ALL_GRADE_LEVELS.map(g => <option key={g}>{g}</option>)}</select>
+          <select aria-label="Asignatura" value={selectedSubject} onChange={e => handleSubjectChange(e.target.value)}>{ALL_SUBJECTS.map(subject => <option key={subject}>{subject}</option>)}</select>
+          <select aria-label="Objetivo" value={currentOA?.id || ''} onChange={e => handleOAChange(e.target.value)}>{availableOAs.map(oa => <option key={oa.id} value={oa.id}>{oa.oa}</option>)}</select>
+          <input aria-label="Clase" type="number" min="1" max={totalLessons} value={selectedLessonNum} onChange={e => { const n = Number(e.target.value); if (Number.isInteger(n) && n > 0 && n <= totalLessons) handleSwitchLesson(n); }} />
+        </div>}
       </div>
     );
   }
@@ -817,6 +686,53 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
             )}
           </div>
         </div>
+
+        {/* Notificación de Error Canónico */}
+        {validationErrorMsg && (
+          <div className="p-4 rounded-xl bg-rose-50 border-2 border-rose-300 text-rose-900 text-xs shadow-xs animate-fade-in">
+            <div className="flex items-start justify-between gap-3">
+              <div className="flex items-start gap-2.5">
+                <AlertTriangle size={18} className="text-rose-600 shrink-0 mt-0.5" />
+                <div>
+                  <h4 className="font-black text-rose-950 text-xs">Validación Canónica: Operación Bloqueada</h4>
+                  <p className="font-semibold text-rose-800 text-[11px] mt-0.5">{validationErrorMsg}</p>
+                  {validationErrors && validationErrors.length > 0 && (
+                    <div className="mt-2.5 overflow-hidden rounded-lg border border-rose-200 bg-white">
+                      <table className="min-w-full text-[11px]">
+                        <thead className="bg-rose-100/60 text-rose-900 font-bold border-b border-rose-200">
+                          <tr>
+                            <th className="py-1 px-2.5 text-left">Campo</th>
+                            <th className="py-1 px-2.5 text-left">Valor Esperado Oficial</th>
+                            <th className="py-1 px-2.5 text-left">Valor Encontrado</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-rose-100 text-slate-700 font-medium">
+                          {validationErrors.map((err, idx) => (
+                            <tr key={idx} className="hover:bg-rose-50/40">
+                              <td className="py-1 px-2.5 font-bold text-rose-900">{err.field}</td>
+                              <td className="py-1 px-2.5 font-mono text-emerald-800 bg-emerald-50/40">{err.expected}</td>
+                              <td className="py-1 px-2.5 font-mono text-rose-700 bg-rose-50/40">{err.found}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  )}
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => {
+                  setValidationErrorMsg(null);
+                  setValidationErrors(null);
+                }}
+                className="text-rose-600 hover:text-rose-900 text-[11px] font-bold px-2 py-0.5 rounded-md hover:bg-rose-200/50 transition-colors"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        )}
 
         {/* Notificación de Guardado */}
         {saveStatus && (
@@ -1846,7 +1762,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
                               };
                               setLessonData(updatedLesson);
                               if (currentOA) {
-                                saveCustomPlayerLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum, updatedLesson);
+                                if (!persistEditorLesson(updatedLesson)) return;
                                 setIsCustom(true);
                                 setVideoSaveFeedback('hook');
                                 setTimeout(() => setVideoSaveFeedback(null), 3000);
@@ -1868,7 +1784,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
                               };
                               setLessonData(updatedLesson);
                               if (currentOA) {
-                                saveCustomPlayerLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum, updatedLesson);
+                                if (!persistEditorLesson(updatedLesson)) return;
                                 setIsCustom(true);
                                 setVideoSaveFeedback('hook');
                                 setTimeout(() => setVideoSaveFeedback(null), 3000);
@@ -1984,7 +1900,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
                   <div className="flex items-center justify-between">
                     <div>
                       <strong className="text-[#8B5CF6] text-xs uppercase tracking-wider font-bold block">
-                        3 PUNTOS DE FOCO VISUAL DEL ALUMNO (hook.focusPoints)
+                        {(lessonData.hook.focusPoints || []).length} PUNTOS DE FOCO VISUAL DEL ALUMNO (hook.focusPoints)
                       </strong>
                       <p className="text-[11px] text-slate-500">
                         Los 3 elementos clave que el estudiante ve en su pantalla antes de iniciar la reproducción: "Mientras observas, fíjate en..."
@@ -2529,7 +2445,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
                               };
                               setLessonData(updatedLesson);
                               if (currentOA) {
-                                saveCustomPlayerLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum, updatedLesson);
+                                if (!persistEditorLesson(updatedLesson)) return;
                                 setIsCustom(true);
                                 setVideoSaveFeedback('formalization');
                                 setTimeout(() => setVideoSaveFeedback(null), 3000);
@@ -2551,7 +2467,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
                               };
                               setLessonData(updatedLesson);
                               if (currentOA) {
-                                saveCustomPlayerLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum, updatedLesson);
+                                if (!persistEditorLesson(updatedLesson)) return;
                                 setIsCustom(true);
                                 setVideoSaveFeedback('formalization');
                                 setTimeout(() => setVideoSaveFeedback(null), 3000);
@@ -2733,7 +2649,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
                   <div>
                     <h3 className="text-xs font-black uppercase text-amber-800 tracking-wider flex items-center gap-2">
                       <CheckCircle2 size={16} className="text-amber-600" />
-                      <span>Comprobemos lo aprendido (2 Preguntas Guiadas Post-Video - postQuestions)</span>
+                      <span>Comprobemos lo aprendido ({(lessonData.postQuestions || []).length} preguntas post-video)</span>
                     </h3>
                     <p className="text-[11px] text-slate-500">
                       Preguntas de comprobación inmediata que el mentor formula al terminar el video explicativo.
@@ -3634,7 +3550,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
                 <div className="flex items-center justify-between">
                   <div>
                     <strong className="text-[#12a1a4] text-xs uppercase tracking-wider font-bold block">
-                      3 IDEAS CLAVE ESTRUCTURADAS (Recordemos lo aprendido - lessonData.summaryIdeas)
+                      {(lessonData.summaryIdeas || []).length} IDEAS CLAVE ESTRUCTURADAS (Recordemos lo aprendido - lessonData.summaryIdeas)
                     </strong>
                     <p className="text-[11px] text-slate-500">
                       Las 3 ideas clave que el mentor muestra secuencialmente en la etapa "Recordemos lo aprendido".

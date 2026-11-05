@@ -13,13 +13,17 @@ export const CIENCIAS_7B_OA01_CLASE05: LessonData = {
     "nextLessonTitle": "Decisiones responsables e integración"
   },
   "prep": {
-    "adultObjective": "Explicar cómo el respeto por límites y decisiones personales contribuye al cuidado mutuo en vínculos afectivos usando casos ficticios.",
-    "routeToday": "Ruta guiada de la clase 5",
-    "mentorReminder": "Explicar cómo el respeto por límites y decisiones personales contribuye al cuidado mutuo en vínculos afectivos usando casos ficticios.",
+    "adultObjective": "Guiar al estudiante en la comprensión de los vínculos afectivos y la intimidad desde una perspectiva de respeto mutuo, asertividad y resguardo de la dignidad física y psicológica propia y ajena.",
+    "routeToday": "Leer el recurso sobre vínculos afectivos y consentimiento → distinguir relaciones basadas en el respeto de aquellas basadas en la presión → modelar la comunicación asertiva de límites → ejercitar con casos ficticios → evaluar con el miniquiz.",
+    "mentorReminder": "¡Hola! Hoy conversaremos sobre un tema esencial para la vida: los vínculos afectivos. Aprenderemos cómo se construyen la confianza, la amistad y el cariño entre dos personas, qué significa cuidar la intimidad, por qué el consentimiento y los límites corporales deben respetarse siempre sin excepciones, y cómo comunicarnos con claridad para cuidar de nosotros y de los demás.",
     "reminders": [
-      "Acompaña al estudiante y valora su proceso."
+      "Mantén un tono maduro, claro y acogedor, desmitificando la idea de que en el amor o la amistad se debe aguantar el maltrato o la invasión del espacio propio.",
+      "Define el consentimiento con precisión ética y formativa: es un acuerdo libre, consciente, voluntario, informado y recíproco que puede ser revocado en cualquier instante. Insistir, amenazar, presionar o chantajear emocionalmente anula el consentimiento.",
+      "Enfatiza que cada persona es dueña exclusiva de su propio cuerpo y tiene el derecho absoluto a decir \"no\" a cualquier contacto o situación que le cause incomodidad.",
+      "Jamás le preguntes al estudiante si le gusta alguien o si ha tenido experiencias amorosas: todo el trabajo se realiza con los personajes ficticios (Lucas, Emilia, Nico).",
+      "--"
     ],
-    "emotionalTip": "Usar exclusivamente los casos ficticios. No solicitar información sobre cuerpo, identidad, vínculos o experiencias íntimas del estudiante. Escuchar con respeto. No diagnosticar ni comparar ritmos de desarrollo."
+    "emotionalTip": "Valora cada avance con paciencia y entusiasmo."
   },
   "route": {
     "blocks": [
@@ -53,16 +57,16 @@ export const CIENCIAS_7B_OA01_CLASE05: LessonData = {
       }
     ],
     "dileIntro": "Hoy avanzaremos en una nueva clase interactiva.",
-    "dileObjective": "Vínculos afectivos y respeto mutuo"
+    "dileObjective": "¡Hola! Hoy conversaremos sobre un tema esencial para la vida: los vínculos afectivos. Aprenderemos cómo se construyen la confianza, la amistad y el cariño entre dos personas, qué significa cuidar la intimidad, por qué el consentimiento y los límites corporales deben respetarse siempre sin excepciones, y cómo comunicarnos con claridad para cuidar de nosotros y de los demás."
   },
   "situation": {
-    "dilePrompt": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",
-    "expectedAnswer": "Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo.",
+    "dilePrompt": "¡Hola! Hoy conversaremos sobre un tema esencial para la vida: los vínculos afectivos. Aprenderemos cómo se construyen la confianza, la amistad y el cariño entre dos personas, qué significa cuidar la intimidad, por qué el consentimiento y los límites corporales deben respetarse siempre sin excepciones, y cómo comunicarnos con claridad para cuidar de nosotros y de los demás.",
+    "expectedAnswer": "Emilia ejerce su derecho inalienable a definir su espacio corporal y emocional con asertividad (comunicación directa y respetuosa). Lucas demuestra madurez ética porque no se ofende ni impone su voluntad, sino que prioriza el bienestar y la libertad de su amiga por encima de su propio impulso de insistir.",
     "socraticHint": "Fíjate en los detalles destacados.",
-    "emotionalTip": "Usar exclusivamente los casos ficticios. No solicitar información sobre cuerpo, identidad, vínculos o experiencias íntimas del estudiante. Escuchar con respeto. No diagnosticar ni comparar ritmos de desarrollo.",
+    "emotionalTip": "Acompaña con calma.",
     "options": [
       {
-        "label": "Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo.",
+        "label": "Emilia ejerce su derecho inalienable a definir su espacio corporal y emocional con asertividad (comunicación directa y respetuosa). Lucas demuestra madurez ética porque no se ofende ni impone su voluntad, sino que prioriza el bienestar y la libertad de su amiga por encima de su propio impulso de insistir.",
         "kind": "correct",
         "feedbackText": "¡Muy bien observado!"
       },
@@ -79,9 +83,9 @@ export const CIENCIAS_7B_OA01_CLASE05: LessonData = {
     ]
   },
   "reference": {
-    "dilePrompt": "¿Qué acción muestra respeto y cómo cuida el vínculo?",
+    "dilePrompt": "Revisemos el punto de partida.",
     "question": "¿Qué información entrega el punto de partida?",
-    "expectedAnswer": "Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo.",
+    "expectedAnswer": "Emilia ejerce su derecho inalienable a definir su espacio corporal y emocional con asertividad (comunicación directa y respetuosa). Lucas demuestra madurez ética porque no se ofende ni impone su voluntad, sino que prioriza el bienestar y la libertad de su amiga por encima de su propio impulso de insistir.",
     "socraticHint": "Localiza las palabras clave.",
     "feedbackSuccess": "¡Excelente fundamentación!",
     "feedbackSupport": "Revisa la lectura para confirmar los datos."
@@ -90,7 +94,7 @@ export const CIENCIAS_7B_OA01_CLASE05: LessonData = {
     "title": "Motivación",
     "titulo": "Motivación",
     "focusPoints": [],
-    "dileIntro": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",
+    "dileIntro": "¡Hola! Hoy conversaremos sobre un tema esencial para la vida: los vínculos afectivos. Aprenderemos cómo se construyen la confianza, la amistad y el cariño entre dos personas, qué significa cuidar la intimidad, por qué el consentimiento y los límites corporales deben respetarse siempre sin excepciones, y cómo comunicarnos con claridad para cuidar de nosotros y de los demás.",
     "hazInstruction": "Observa y reflexiona con las escenas del video.",
     "videoSrc": "",
     "dileAfterVideo": "¿Qué observaste en esta situación inicial?",
@@ -98,115 +102,124 @@ export const CIENCIAS_7B_OA01_CLASE05: LessonData = {
       {
         "slideNumber": 1,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "Una situación",
+        "didacticPurpose": "El espacio personal",
         "visualPrompt": "",
-        "overlayText": "Una situación",
-        "overlayTitle": "Una situación",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Una situación",
-        "speakerNotes": "Hoy exploraremos vínculos afectivos y respeto mutuo. Observaremos el caso y buscaremos pistas antes de sacar una conclusión.",
+        "overlayText": "El espacio personal",
+        "overlayTitle": "El espacio personal",
+        "overlaySubtitle": "Una frontera invisible pero real",
+        "vectorialOverlayPptx": "El espacio personal",
+        "speakerNotes": "",
         "duracionSeg": 8
       },
       {
         "slideNumber": 2,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "La pregunta",
+        "didacticPurpose": "Cuando el cariño confunde límites",
         "visualPrompt": "",
-        "overlayText": "La pregunta",
-        "overlayTitle": "La pregunta",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "La pregunta",
-        "speakerNotes": "Nico prefiere saludar con la mano. Paula acepta sin insistir. Mantén a la vista la situación y distingue lo que informa de lo que suponemos.",
+        "overlayText": "Cuando el cariño confunde límites",
+        "overlayTitle": "Cuando el cariño confunde límites",
+        "overlaySubtitle": "El afecto nunca es invasión",
+        "vectorialOverlayPptx": "Cuando el cariño confunde límites",
+        "speakerNotes": "",
         "duracionSeg": 8
       },
       {
         "slideNumber": 3,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "Primera idea",
+        "didacticPurpose": "La trampa de la insistencia",
         "visualPrompt": "",
-        "overlayText": "Primera idea",
-        "overlayTitle": "Primera idea",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Primera idea",
-        "speakerNotes": "¿Qué acción muestra respeto y cómo cuida el vínculo? Puedes plantear una primera idea; después comprobaremos qué información la apoya.",
+        "overlayText": "La trampa de la insistencia",
+        "overlayTitle": "La trampa de la insistencia",
+        "overlaySubtitle": "Insistir no es convencer",
+        "vectorialOverlayPptx": "La trampa de la insistencia",
+        "speakerNotes": "",
         "duracionSeg": 8
       },
       {
         "slideNumber": 4,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "Busca pistas",
+        "didacticPurpose": "El poder de la asertividad",
         "visualPrompt": "",
-        "overlayText": "Busca pistas",
-        "overlayTitle": "Busca pistas",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Busca pistas",
-        "speakerNotes": "Observa la situación. ¿Qué detalle podría ayudarte a responder? Una pista útil debe ayudarnos a responder la pregunta que estamos explorando.",
+        "overlayText": "El poder de la asertividad",
+        "overlayTitle": "El poder de la asertividad",
+        "overlaySubtitle": "Decir lo que sentimos sin agredir",
+        "vectorialOverlayPptx": "El poder de la asertividad",
+        "speakerNotes": "",
         "duracionSeg": 8
       },
       {
         "slideNumber": 5,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "Compara posibilidades",
+        "didacticPurpose": "Saber escuchar un límite",
         "visualPrompt": "",
-        "overlayText": "Compara posibilidades",
-        "overlayTitle": "Compara posibilidades",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Compara posibilidades",
-        "speakerNotes": "Una respuesta necesita información del recurso. Buscaremos pistas para fundamentarla. Dos respuestas pueden parecer posibles; necesitamos revisar cuál tiene respaldo.",
+        "overlayText": "Saber escuchar un límite",
+        "overlayTitle": "Saber escuchar un límite",
+        "overlaySubtitle": "La madurez de aceptar un no",
+        "vectorialOverlayPptx": "Saber escuchar un límite",
+        "speakerNotes": "",
         "duracionSeg": 8
       },
       {
         "slideNumber": 6,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "Una estrategia",
+        "didacticPurpose": "La privacidad en la era digital",
         "visualPrompt": "",
-        "overlayText": "Una estrategia",
-        "overlayTitle": "Una estrategia",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Una estrategia",
-        "speakerNotes": "Lee el recurso y relaciona sus detalles antes de elegir una explicación. La clase mostrará cómo relacionar las pistas y explicar esa relación paso a paso.",
+        "overlayText": "La privacidad en la era digital",
+        "overlayTitle": "La privacidad en la era digital",
+        "overlaySubtitle": "Contraseñas y mensajes privados",
+        "vectorialOverlayPptx": "La privacidad en la era digital",
+        "speakerNotes": "",
         "duracionSeg": 8
       },
       {
         "slideNumber": 7,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "Puente a la lectura",
+        "didacticPurpose": "La pregunta de hoy",
         "visualPrompt": "",
-        "overlayText": "Puente a la lectura",
-        "overlayTitle": "Puente a la lectura",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Puente a la lectura",
-        "speakerNotes": "Ahora descubriremos cómo las pistas ayudan a comprender esta situación. Luego aplicarás el criterio a otra situación breve, con menor ayuda.",
+        "overlayText": "La pregunta de hoy",
+        "overlayTitle": "La pregunta de hoy",
+        "overlaySubtitle": "¿Cómo construir relaciones basadas en el respeto?",
+        "vectorialOverlayPptx": "La pregunta de hoy",
+        "speakerNotes": "",
         "duracionSeg": 8
       }
     ]
   },
   "preQuestions": [
     {
-      "context": "Nico prefiere saludar con la mano. Paula acepta sin insistir.",
-      "question": "¿Qué acción muestra respeto y cómo cuida el vínculo?",
-      "expected": "Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo.",
-      "success": "El caso señala que escucha la preferencia y no insiste.",
-      "support": "Si no localiza información, releer esta pista del contexto: «Nico prefiere saludar con la mano. Paula acepta sin insistir.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta.",
-      "reveal": "Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento.",
-      "studentReveal": "Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo."
+      "context": "Emilia le pide a Lucas que no la sujete del brazo y le dé su espacio.",
+      "question": "¿Por qué cada persona tiene derecho a decidir quién se acerca a su cuerpo y cuándo prefiere estar sola, incluso frente a sus mejores amigos?",
+      "expected": "Porque el cuerpo y las emociones pertenecen exclusivamente a cada individuo; el cariño nunca da derecho de posesión ni autorización para invadir los límites físicos o emocionales de otra persona.",
+      "success": "",
+      "support": "",
+      "reveal": "Porque el cuerpo y las emociones pertenecen exclusivamente a cada individuo; el cariño nunca da derecho de posesión ni autorización para invadir los límites físicos o emocionales de otra persona.",
+      "studentReveal": "Porque el cuerpo y las emociones pertenecen exclusivamente a cada individuo; el cariño nunca da derecho de posesión ni autorización para invadir los límites físicos o emocionales de otra persona."
     },
     {
-      "context": "Una amiga pide que no publiquen su fotografía. El grupo puede elegir otra forma de celebrar.",
-      "question": "¿Qué decisión demuestra preocupación por la amiga?",
-      "expected": "No publicar la fotografía y acordar otra forma de celebrar que respete su decisión.",
-      "success": "La amiga expresa un límite claro sobre la fotografía.",
-      "support": "Si no localiza información, releer esta pista del contexto: «Una amiga pide que no publiquen su fotografía. El grupo puede elegir otra forma de celebrar.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta.",
-      "reveal": "No publicar la fotografía y acordar otra forma de celebrar que respete su decisión. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento.",
-      "studentReveal": "No publicar la fotografía y acordar otra forma de celebrar que respete su decisión."
+      "context": "A veces alguien acepta hacer algo solo porque le insisten muchas veces o le dicen \"si no lo haces no eres mi amigo\".",
+      "question": "¿Por qué ceder ante la insistencia o el chantaje no es un verdadero consentimiento?",
+      "expected": "Porque el consentimiento real debe ser 100% voluntario y libre; si surge del miedo al rechazo, de la culpa o del cansancio por insistencia, es una imposición forzada que daña la dignidad y el bienestar.",
+      "success": "",
+      "support": "",
+      "reveal": "Porque el consentimiento real debe ser 100% voluntario y libre; si surge del miedo al rechazo, de la culpa o del cansancio por insistencia, es una imposición forzada que daña la dignidad y el bienestar.",
+      "studentReveal": "Porque el consentimiento real debe ser 100% voluntario y libre; si surge del miedo al rechazo, de la culpa o del cansancio por insistencia, es una imposición forzada que daña la dignidad y el bienestar."
+    },
+    {
+      "context": "Un adolescente siente que una persona conocida insiste en pedirle cosas o fotos que le causan rechazo o incomodidad.",
+      "question": "¿Qué pasos de autocuidado debe seguir de inmediato para protegerse?",
+      "expected": "Decir \"no\" con claridad, cortar la interacción, bloquear o alejarse de esa persona, y contarle de inmediato a un adulto de confianza (familia o colegio) para recibir respaldo y protección.",
+      "success": "",
+      "support": "",
+      "reveal": "Decir \"no\" con claridad, cortar la interacción, bloquear o alejarse de esa persona, y contarle de inmediato a un adulto de confianza (familia o colegio) para recibir respaldo y protección.",
+      "studentReveal": "Decir \"no\" con claridad, cortar la interacción, bloquear o alejarse de esa persona, y contarle de inmediato a un adulto de confianza (familia o colegio) para recibir respaldo y protección."
     }
   ],
   "conversationContext": "Diálogo guiado para profundizar en los elementos clave.",
   "formalization": {
-    "title": "El respeto mutuo implica considerar tanto lo que una persona quiere expresar como lo que la otra acepta. Un vínculo afectivo se cuida escuchando, evitando la presión y respetando límites y decisiones.",
-    "concept": "El respeto mutuo implica considerar tanto lo que una persona quiere expresar como lo que la otra acepta. Un vínculo afectivo se cuida escuchando, evitando la presión y respetando límites y decisiones.",
+    "title": "Explicación",
+    "concept": "Vínculos afectivos y respeto mutuo",
     "summary": "Consolidación de las ideas clave.",
-    "ideaClave": "El respeto mutuo implica considerar tanto lo que una persona quiere expresar como lo que la otra acepta. Un vínculo afectivo se cuida escuchando, evitando la presión y respetando límites y decisiones.",
+    "ideaClave": "Vínculos afectivos y respeto mutuo",
     "dileIntro": "Ahora consolidaremos los aprendizajes esenciales.",
     "hazInstruction": "Registra en tu cuaderno el concepto principal.",
     "graphicPoster": "",
@@ -215,85 +228,85 @@ export const CIENCIAS_7B_OA01_CLASE05: LessonData = {
       {
         "slideNumber": 8,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "Una herramienta",
+        "didacticPurpose": "Vínculos afectivos y sexualidad",
         "visualPrompt": "",
-        "overlayText": "Una herramienta",
-        "overlayTitle": "Una herramienta",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Una herramienta",
-        "speakerNotes": "La afectividad aparece en vínculos con amistades, familia y pareja. No exige expresar cariño de una sola manera.",
+        "overlayText": "Vínculos afectivos y sexualidad",
+        "overlayTitle": "Vínculos afectivos y sexualidad",
+        "overlaySubtitle": "Afecto, confianza y dignidad humana",
+        "vectorialOverlayPptx": "Vínculos afectivos y sexualidad",
+        "speakerNotes": "",
         "duracionSeg": 8
       },
       {
         "slideNumber": 9,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "El criterio",
+        "didacticPurpose": "Los tres pilares de una relación sana",
         "visualPrompt": "",
-        "overlayText": "El criterio",
-        "overlayTitle": "El criterio",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "El criterio",
-        "speakerNotes": "Nico prefiere saludar con la mano. Esa preferencia permite saber cómo quiere participar en el saludo. Paula escucha y acepta la preferencia. El cariño puede expresarse mediante un saludo que ambos acepten.",
+        "overlayText": "Los tres pilares de una relación sana",
+        "overlayTitle": "Los tres pilares de una relación sana",
+        "overlaySubtitle": "Respeto, intimidad y libertad",
+        "vectorialOverlayPptx": "Los tres pilares de una relación sana",
+        "speakerNotes": "",
         "duracionSeg": 8
       },
       {
         "slideNumber": 10,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "Relación entre pistas",
+        "didacticPurpose": "Anatomía del consentimiento informado",
         "visualPrompt": "",
-        "overlayText": "Relación entre pistas",
-        "overlayTitle": "Relación entre pistas",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Relación entre pistas",
-        "speakerNotes": "En el segundo caso, la amiga pide que no publiquen su fotografía. La decisión del grupo debe considerar esa petición. El grupo puede buscar otra forma de celebrar. Respetar un límite permite mantener un vínculo de cuidado.",
+        "overlayText": "Anatomía del consentimiento informado",
+        "overlayTitle": "Anatomía del consentimiento informado",
+        "overlaySubtitle": "Libre, consciente, voluntario y reversible",
+        "vectorialOverlayPptx": "Anatomía del consentimiento informado",
+        "speakerNotes": "",
         "duracionSeg": 8
       },
       {
         "slideNumber": 11,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "Modelo explicado",
+        "didacticPurpose": "El derecho innegociable a decir NO",
         "visualPrompt": "",
-        "overlayText": "Modelo explicado",
-        "overlayTitle": "Modelo explicado",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Modelo explicado",
-        "speakerNotes": "Nico prefiere saludar con la mano. Paula acepta sin insistir. ¿Qué acción muestra respeto y cómo cuida el vínculo? Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo. El caso señala que escucha la preferencia y no insiste.",
+        "overlayText": "El derecho innegociable a decir NO",
+        "overlayTitle": "El derecho innegociable a decir NO",
+        "overlaySubtitle": "Tu cuerpo es tu territorio exclusivo",
+        "vectorialOverlayPptx": "El derecho innegociable a decir NO",
+        "speakerNotes": "",
         "duracionSeg": 8
       },
       {
         "slideNumber": 12,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "Comprobación",
+        "didacticPurpose": "Señales de alerta en una relación",
         "visualPrompt": "",
-        "overlayText": "Comprobación",
-        "overlayTitle": "Comprobación",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Comprobación",
-        "speakerNotes": "Una amiga pide que no publiquen su fotografía. El grupo puede elegir otra forma de celebrar. ¿Qué decisión demuestra preocupación por la amiga? No publicar la fotografía y acordar otra forma de celebrar que respete su decisión. La amiga expresa un límite claro sobre la fotografía. Revisa la segunda respuesta con los datos de su propio caso.",
+        "overlayText": "Señales de alerta en una relación",
+        "overlayTitle": "Señales de alerta en una relación",
+        "overlaySubtitle": "Conductas que jamás deben normalizarse",
+        "vectorialOverlayPptx": "Señales de alerta en una relación",
+        "speakerNotes": "",
         "duracionSeg": 8
       },
       {
         "slideNumber": 13,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "Error y corrección",
+        "didacticPurpose": "Redes de apoyo y protección",
         "visualPrompt": "",
-        "overlayText": "Error y corrección",
-        "overlayTitle": "Error y corrección",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Error y corrección",
-        "speakerNotes": "Un error que debemos evitar: Suponer que el cariño permite ignorar un límite o presionar a otra persona. Si la respuesta añade información, vuelve al recurso y corrígela.",
+        "overlayText": "Redes de apoyo y protección",
+        "overlayTitle": "Redes de apoyo y protección",
+        "overlaySubtitle": "Hablar a tiempo nos mantiene a salvo",
+        "vectorialOverlayPptx": "Redes de apoyo y protección",
+        "speakerNotes": "",
         "duracionSeg": 8
       },
       {
         "slideNumber": 14,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "Síntesis y práctica",
+        "didacticPurpose": "Síntesis y puente a la práctica",
         "visualPrompt": "",
-        "overlayText": "Síntesis y práctica",
-        "overlayTitle": "Síntesis y práctica",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Síntesis y práctica",
-        "speakerNotes": "El respeto considera los límites de ambas personas. Lee, localiza evidencia, explica y comprueba. Continúa con la práctica interactiva.",
+        "overlayText": "Síntesis y puente a la práctica",
+        "overlayTitle": "Síntesis y puente a la práctica",
+        "overlaySubtitle": "El respeto mutuo hace crecer el cariño",
+        "vectorialOverlayPptx": "Síntesis y puente a la práctica",
+        "speakerNotes": "",
         "duracionSeg": 8
       }
     ]
@@ -301,126 +314,86 @@ export const CIENCIAS_7B_OA01_CLASE05: LessonData = {
   "postQuestions": [
     {
       "context": "Comprobación 1",
-      "question": "¿Qué decisión demuestra preocupación por la amiga?",
-      "expected": "No publicar la fotografía y acordar otra forma de celebrar que respete su decisión.",
+      "question": "- *Pregunta:* “¿Qué condición es indispensable para que un acuerdo o contacto físico entre dos personas sea un verdadero consentimiento?",
+      "expected": "",
       "success": "Respuesta precisa y fundamentada",
       "support": "Revisa el concepto clave expuesto",
-      "reveal": "No publicar la fotografía y acordar otra forma de celebrar que respete su decisión.",
-      "studentReveal": "No publicar la fotografía y acordar otra forma de celebrar que respete su decisión."
+      "reveal": "",
+      "studentReveal": ""
     }
   ],
   "practice": [
     {
-      "context": "Nico prefiere saludar con la mano. Paula acepta sin insistir.",
-      "question": "¿Qué acción muestra respeto y cómo cuida el vínculo? Escribe una respuesta y señala la pista que la sostiene.",
-      "expected": "Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo.",
-      "success": "El caso señala que escucha la preferencia y no insiste.",
+      "context": "En una fiesta de cumpleaños, un grupo de amigos insiste a Gabriel para que le dé un beso en la mejilla a una compañera para un reto grabado en video para redes sociales. Ambos han dicho que no quieren hacerlo, pero el grupo insiste gritando: *\"¡El que no lo hace es un cobarde!\"*.\n- **Consigna:** Explica qué vulneraciones ocurren en este caso y qué respuesta asertiva deben dar Gabriel o la compañera para defender sus límites.",
+      "question": "Resuelve la actividad en tu cuaderno.",
+      "expected": "“Se vulnera el consentimiento mediante presión social y chantaje emocional, y se invade la intimidad corporal al querer grabarlo para internet. Gabriel y la compañera deben decir con firmeza: 'Dijimos que no, y el respeto entre amigos no se negocia por un video', alejándose de la situación.”",
+      "success": "Cumple el criterio formal del caso",
       "support": "Revisa los datos del recurso",
-      "reveal": "Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo.",
-      "studentReveal": "Paula acepta la preferencia de Nico y permite un saludo que él acepta, sin presionarlo."
+      "reveal": "“Se vulnera el consentimiento mediante presión social y chantaje emocional, y se invade la intimidad corporal al querer grabarlo para internet. Gabriel y la compañera deben decir con firmeza: 'Dijimos que no, y el respeto entre amigos no se negocia por un video', alejándose de la situación.”",
+      "studentReveal": "“Se vulnera el consentimiento mediante presión social y chantaje emocional, y se invade la intimidad corporal al querer grabarlo para internet. Gabriel y la compañera deben decir con firmeza: 'Dijimos que no, y el respeto entre amigos no se negocia por un video', alejándose de la situación.”"
     },
     {
-      "context": "Una amiga pide que no publiquen su fotografía. El grupo puede elegir otra forma de celebrar.",
-      "question": "¿Qué decisión demuestra preocupación por la amiga? Escribe una respuesta y señala la pista que la sostiene.",
-      "expected": "No publicar la fotografía y acordar otra forma de celebrar que respete su decisión.",
-      "success": "La amiga expresa un límite claro sobre la fotografía.",
+      "context": "Una persona le dice a su amiga: *\"Si de verdad me quisieras y fueras mi mejor amiga, me darías la contraseña de tus redes sociales para demostrarme que puedo confiar en ti\"*.\n- **Consigna:** Redacta una explicación de por qué esa exigencia no es una prueba de confianza, sino una conducta de control que atenta contra la intimidad.",
+      "question": "Resuelve la actividad en tu cuaderno.",
+      "expected": "“La confianza verdadera se demuestra respetando la libertad y privacidad del otro día a día. Exigir contraseñas es una conducta de vigilancia y control que destruye la autonomía personal y atenta contra la seguridad digital básica.”",
+      "success": "Cumple el criterio formal del caso",
       "support": "Revisa los datos del recurso",
-      "reveal": "No publicar la fotografía y acordar otra forma de celebrar que respete su decisión.",
-      "studentReveal": "No publicar la fotografía y acordar otra forma de celebrar que respete su decisión."
+      "reveal": "“La confianza verdadera se demuestra respetando la libertad y privacidad del otro día a día. Exigir contraseñas es una conducta de vigilancia y control que destruye la autonomía personal y atenta contra la seguridad digital básica.”",
+      "studentReveal": "“La confianza verdadera se demuestra respetando la libertad y privacidad del otro día a día. Exigir contraseñas es una conducta de vigilancia y control que destruye la autonomía personal y atenta contra la seguridad digital básica.”"
     },
     {
-      "context": "Caso ficticio nuevo de EstudioSimple, no cita del libro: Dos adolescentes que mantienen un vínculo de pareja conversan en un espacio tranquilo. Una persona comparte un sentimiento y pide que no se difunda. La otra quiere demostrar cariño con un abrazo, pero su pareja prefiere conversar sin contacto físico. No se describen prácticas sexuales ni vivencias del estudiante.",
-      "question": "Explica cómo se relacionan intimidad afectiva, confianza y respeto mutuo. Propón una decisión que considere ambos límites y una consecuencia de respetarlos frente a presionar. No cuentes experiencias personales.",
-      "expected": "La intimidad afectiva permite compartir sentimientos con confianza. Corresponde escuchar, aceptar que no quiere contacto y no difundir lo compartido para presionar o burlarse. Respetar estos límites cuida la confianza; insistir la perjudica. La privacidad no obliga a guardar situaciones que causan daño o inseguridad: se puede buscar ayuda de un adulto de confianza.",
+      "context": "*Situación ficticia nueva:* En un grupo de mensajería escolar, un integrante comparte una captura de pantalla de una conversación privada y confidencial de dos compañeros donde uno confesaba sus miedos y sentimientos, agregando emojis de burla y pidiendo que *\"todos opinen sobre lo ridículo que se ve\"*. Varios integrantes del grupo comienzan a enviar stickers burlones.\n\n- **Actividad autónoma del estudiante:**\n  Responde en tu cuaderno:\n  1. Identifica qué derechos éticos e interpersonales (intimidad, confianza, consentimiento) fueron vulnerados en esta situación.\n  2. Redacta el mensaje asertivo que un compañero con sentido de justicia y respeto mutuo debería publicar en el grupo para frenar de inmediato la burla.\n  3. Formula dos normas claras sobre el uso ético y el respeto a la intimidad en las redes sociales que deberían aplicarse en todos los cursos de 7° básico.\n\n- **Criterio privado del mentor (revelar solo después del intento):**\n  1. Derechos vulnerados: Violación del derecho a la privacidad, traición a la confidencialidad del vínculo afectivo y agresión psicológica mediante ciberacoso.\n  2. Mensaje asertivo: Expresión directa que condene la difusión sin permiso (\"Compartir conversaciones privadas es una falta de respeto grave; borren la captura y no se sumen a las burlas\").\n  3. Normas propuestas: Prohibición absoluta de compartir fotos o chats privados ajenos sin consentimiento expreso y compromiso de defender activamente a quien sea objeto de ciberacoso.\n\n- **Cómo valorar:** El estudiante reconoce la gravedad de invadir la privacidad, redacta una respuesta asertiva protectora y propone normas de convivencia digital sana.\n\n---",
+      "question": "Realiza la transferencia autónoma con el nuevo recurso.",
+      "expected": "1. Derechos vulnerados: Violación del derecho a la privacidad, traición a la confidencialidad del vínculo afectivo y agresión psicológica mediante ciberacoso.",
       "success": "Aplica el criterio de la clase de manera autónoma en un recurso nuevo",
-      "support": "Comprobar cada elemento pedido y su evidencia; aceptar formulaciones equivalentes. Si falta una relación, pedir que señale la pista y explique qué demuestra; después ofrecer el modelo y un nuevo intento. Registrar respuesta, apoyos y criterio por reforzar.",
-      "reveal": "La intimidad afectiva permite compartir sentimientos con confianza. Corresponde escuchar, aceptar que no quiere contacto y no difundir lo compartido para presionar o burlarse. Respetar estos límites cuida la confianza; insistir la perjudica. La privacidad no obliga a guardar situaciones que causan daño o inseguridad: se puede buscar ayuda de un adulto de confianza.",
-      "studentReveal": "La intimidad afectiva permite compartir sentimientos con confianza. Corresponde escuchar, aceptar que no quiere contacto y no difundir lo compartido para presionar o burlarse. Respetar estos límites cuida la confianza; insistir la perjudica. La privacidad no obliga a guardar situaciones que causan daño o inseguridad: se puede buscar ayuda de un adulto de confianza."
+      "support": "El estudiante reconoce la gravedad de invadir la privacidad, redacta una respuesta asertiva protectora y propone normas de convivencia digital sana.",
+      "reveal": "1. Derechos vulnerados: Violación del derecho a la privacidad, traición a la confidencialidad del vínculo afectivo y agresión psicológica mediante ciberacoso.",
+      "studentReveal": "1. Derechos vulnerados: Violación del derecho a la privacidad, traición a la confidencialidad del vínculo afectivo y agresión psicológica mediante ciberacoso."
     }
   ],
   "mini": [
     {
       "id": "q1",
-      "q": "¿Qué acción respeta la preferencia de Nico?",
+      "q": "¿Cuál de las siguientes condiciones es indispensable para que exista un consentimiento válido en cualquier interacción personal entre dos personas?",
       "options": [
-        "A. Insistir hasta conseguir un abrazo",
-        "B. Burlarse de su saludo",
-        "C. Aceptar saludar con la mano",
-        "D. Dejar de hablarle por su preferencia"
+        "A. Que la otra persona acepte después de haberle insistido y rogado durante varias horas.",
+        "B. Que el acuerdo sea libre, consciente, voluntario y pueda ser revocado o cancelado en cualquier momento si la persona cambia de opinión.",
+        "C. Que se firme un contrato ante un notario público con tres testigos mayores de edad.",
+        "D. Que la propuesta venga de una persona mayor y con más popularidad en el colegio."
       ],
-      "correct": "C. Aceptar saludar con la mano",
-      "fixExplain": "Paula acepta un saludo que Nico prefiere, sin insistencia."
+      "correct": "B. Que el acuerdo sea libre, consciente, voluntario y pueda ser revocado o cancelado en cualquier momento si la persona cambia de opinión.",
+      "fixExplain": "El consentimiento en las relaciones interpersonales debe cumplir con ser libre de coacción, consciente, reversible en cualquier momento y plenamente voluntario. Ceder por insistencia no es consentimiento."
     },
     {
       "id": "q2",
-      "q": "¿Qué debe considerar el grupo antes de compartir la fotografía?",
+      "q": "¿Qué conducta representa de manera concreta el respeto a los límites personales y a la intimidad del otro en una relación de amistad o afecto?",
       "options": [
-        "A. Solo cuántas personas quieren verla",
-        "B. La decisión expresada por la amiga",
-        "C. Una regla de publicar siempre",
-        "D. La presión de quien insiste más"
+        "A. Revisar la mochila y el diario de vida de la otra persona cuando va al baño, para asegurarse de que no miente.",
+        "B. Escuchar y aceptar de inmediato cuando la otra persona dice que no desea ser abrazada o que prefiere estar sola, sin enojarse ni reprocharle nada.",
+        "C. Enviar mensajes de texto continuos cada dos minutos para exigir saber exactamente dónde y con quién está.",
+        "D. Publicar fotos vergonzosas de la otra persona en internet diciendo que \"quien se enoja pierde\"."
       ],
-      "correct": "B. La decisión expresada por la amiga",
-      "fixExplain": "La amiga ha pedido que no la publiquen."
+      "correct": "B. Escuchar y aceptar de inmediato cuando la otra persona dice que no desea ser abrazada o que prefiere estar sola, sin enojarse ni reprocharle nada.",
+      "fixExplain": "El respeto a los límites corporales y emocionales se evidencia en la capacidad de acoger la negativa de la otra persona con tranquilidad, comprendiendo que su espacio personal y su autonomía son prioritarios."
     },
     {
       "id": "q3",
-      "q": "¿Qué idea representa el respeto mutuo?",
+      "q": "Si un adolescente se encuentra en una situación en la que alguien intenta presionarlo o forzarlo a realizar una acción que atenta contra sus límites corporales o le produce temor e incomodidad, ¿cuál es la respuesta más adecuada y segura?",
       "options": [
-        "A. Escuchar límites y buscar formas de relacionarse aceptadas por ambos",
-        "B. Decidir por la otra persona para demostrar cariño",
-        "C. Ignorar una petición si existe amistad",
-        "D. Exigir información íntima para confiar"
+        "A. Guardar silencio por vergüenza y esperar que la persona cambie de actitud por sí sola con el paso de los meses.",
+        "B. Decir un \"no\" firme y claro, alejarse del lugar de inmediato y buscar apoyo urgente en un adulto de confianza (familia, docentes o directivos).",
+        "C. Acceder a la petición para evitar que la persona se enoje o hable mal de él en las redes sociales.",
+        "D. Amenazar con violencia física a toda la familia de la persona que lo presionó."
       ],
-      "correct": "A. Escuchar límites y buscar formas de relacionarse aceptadas por ambos",
-      "fixExplain": "El recurso relaciona el cuidado con la consideración de ambas personas."
+      "correct": "B. Decir un \"no\" firme y claro, alejarse del lugar de inmediato y buscar apoyo urgente en un adulto de confianza (familia, docentes o directivos).",
+      "fixExplain": "Ante la vulneración de límites o el acoso, la autoprotección exige asertividad (decir no), resguardo físico (alejarse) y activación inmediata de redes de protección institucional o familiar."
     }
   ],
-  "recovery": [
-    {
-      "title": "Recuperación 1",
-      "explain": "Paula acepta un saludo que Nico prefiere, sin insistencia.",
-      "q": "¿Qué forma de expresar cariño respeta la preferencia de Isa?",
-      "kind": "open_response",
-      "options": [],
-      "correct": "",
-      "correctText": "Conversar sin imponer contacto ni otra demostración; escuchar lo que acepta. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
-      "fixText": "Volver al caso concreto: «Caso nuevo de recuperación: En una pareja ficticia, Isa prefiere expresar cariño conversando y pide que un mensaje personal no se comparta. Su pareja propone enviar el mensaje al grupo para demostrar cuánto se quieren.». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
-      "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
-      "resource": "Caso nuevo de recuperación: En una pareja ficticia, Isa prefiere expresar cariño conversando y pide que un mensaje personal no se comparta. Su pareja propone enviar el mensaje al grupo para demostrar cuánto se quieren.",
-      "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
-    },
-    {
-      "title": "Recuperación 2",
-      "explain": "La amiga ha pedido que no la publiquen.",
-      "q": "¿Qué decisión corresponde sobre el mensaje y por qué?",
-      "kind": "open_response",
-      "options": [],
-      "correct": "",
-      "correctText": "No compartirlo contra su decisión; la presión del grupo no reemplaza el respeto por la intimidad. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
-      "fixText": "Buscar estas expresiones del recurso nuevo: «grupo». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
-      "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
-      "resource": "Caso nuevo de recuperación: En una pareja ficticia, Isa prefiere expresar cariño conversando y pide que un mensaje personal no se comparta. Su pareja propone enviar el mensaje al grupo para demostrar cuánto se quieren.",
-      "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
-    },
-    {
-      "title": "Recuperación 3",
-      "explain": "El recurso relaciona el cuidado con la consideración de ambas personas.",
-      "q": "Relaciona una decisión y su consecuencia para la confianza.",
-      "kind": "open_response",
-      "options": [],
-      "correct": "",
-      "correctText": "Escuchar y respetar los límites puede cuidar la confianza; difundir el mensaje para presionar puede dañarla. Buscar ayuda ante daño o inseguridad sigue siendo posible. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
-      "fixText": "Buscar estas expresiones del recurso nuevo: «mensaje». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
-      "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
-      "resource": "Caso nuevo de recuperación: En una pareja ficticia, Isa prefiere expresar cariño conversando y pide que un mensaje personal no se comparta. Su pareja propone enviar el mensaje al grupo para demostrar cuánto se quieren.",
-      "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
-    }
-  ],
+  "recovery": [],
   "summaryIdeas": [
     [
       "Idea central",
-      "Una situación"
+      "Vínculos afectivos y respeto mutuo"
     ],
     [
       "Comprensión",
@@ -433,12 +406,12 @@ export const CIENCIAS_7B_OA01_CLASE05: LessonData = {
     "description": "Organizador de las cinco dimensiones biopsicosociales."
   },
   "closure": {
-    "congratulations": "Buen trabajo. Explicaste tu respuesta usando información del recurso.",
-    "nextClassPreview": "¡Nos vemos en la próxima lección!"
+    "congratulations": "¡Felicitaciones por completar la sesión de hoy!",
+    "nextClassPreview": "Próxima clase: Decisiones responsables e integración"
   },
   "paso8_cierre": {
-    "preguntaSintesis": "¿Qué acción muestra respeto y cómo cuida el vínculo?",
-    "metacognicion": "¿Qué te ayudó más: leer el recurso, localizar una pista o comparar explicaciones? ¿Por qué?",
-    "celebracion": "Buen trabajo. Explicaste tu respuesta usando información del recurso."
+    "preguntaSintesis": "¿Qué aprendiste hoy?",
+    "metacognicion": "¿Qué estrategia te ayudó más?",
+    "celebracion": "¡Buen trabajo hoy!"
   }
 };

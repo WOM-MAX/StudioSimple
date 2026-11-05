@@ -1,0 +1,256 @@
+TAP version 13
+# Subtest: Ciencias fuente válida, dos ideas y videos pendientes permitidos
+ok 1 - Ciencias fuente válida, dos ideas y videos pendientes permitidos
+  ---
+  duration_ms: 3.234906
+  type: 'test'
+  ...
+# Subtest: Rechaza título ajeno antes de escribir y cargar
+ok 2 - Rechaza título ajeno antes de escribir y cargar
+  ---
+  duration_ms: 107.277535
+  type: 'test'
+  ...
+# Subtest: Rechaza puente ajeno antes de escribir y cargar
+ok 3 - Rechaza puente ajeno antes de escribir y cargar
+  ---
+  duration_ms: 85.309158
+  type: 'test'
+  ...
+# Subtest: Rechaza OA sin referencia antes de escribir y cargar
+ok 4 - Rechaza OA sin referencia antes de escribir y cargar
+  ---
+  duration_ms: 47.825847
+  type: 'test'
+  ...
+# Subtest: Rechaza curso ajeno antes de escribir y cargar
+ok 5 - Rechaza curso ajeno antes de escribir y cargar
+  ---
+  duration_ms: 52.268667
+  type: 'test'
+  ...
+# Subtest: Rechaza total incorrecto antes de escribir y cargar
+ok 6 - Rechaza total incorrecto antes de escribir y cargar
+  ---
+  duration_ms: 38.483797
+  type: 'test'
+  ...
+# Subtest: Rechaza asignatura ajena antes de escribir y cargar
+ok 7 - Rechaza asignatura ajena antes de escribir y cargar
+  ---
+  duration_ms: 53.684376
+  type: 'test'
+  ...
+# Subtest: Rechaza clase ajena antes de escribir y cargar
+ok 8 - Rechaza clase ajena antes de escribir y cargar
+  ---
+  duration_ms: 44.410754
+  type: 'test'
+  ...
+# Subtest: Rechaza metadata sin actividades antes de escribir y cargar
+ok 9 - Rechaza metadata sin actividades antes de escribir y cargar
+  ---
+  duration_ms: 42.420996
+  type: 'test'
+  ...
+# Subtest: Rechaza preguntas vacías antes de escribir y cargar
+ok 10 - Rechaza preguntas vacías antes de escribir y cargar
+  ---
+  duration_ms: 56.163888
+  type: 'test'
+  ...
+# Subtest: Rechaza alternativa vacía antes de escribir y cargar
+ok 11 - Rechaza alternativa vacía antes de escribir y cargar
+  ---
+  duration_ms: 43.794856
+  type: 'test'
+  ...
+# Subtest: Rechaza clave vacía antes de escribir y cargar
+ok 12 - Rechaza clave vacía antes de escribir y cargar
+  ---
+  duration_ms: 49.095831
+  type: 'test'
+  ...
+# Subtest: Rechaza clave ajena antes de escribir y cargar
+ok 13 - Rechaza clave ajena antes de escribir y cargar
+  ---
+  duration_ms: 52.491313
+  type: 'test'
+  ...
+# Subtest: Rechaza resumen vacío antes de escribir y cargar
+ok 14 - Rechaza resumen vacío antes de escribir y cargar
+  ---
+  duration_ms: 43.241263
+  type: 'test'
+  ...
+# Subtest: Rechaza referencia ausente antes de escribir y cargar
+ok 15 - Rechaza referencia ausente antes de escribir y cargar
+  ---
+  duration_ms: 30.930064
+  type: 'test'
+  ...
+# Subtest: Rechaza tarea abierta con alternativas inventadas antes de escribir y cargar
+ok 16 - Rechaza tarea abierta con alternativas inventadas antes de escribir y cargar
+  ---
+  duration_ms: 65.967323
+  type: 'test'
+  ...
+# Subtest: Rechaza título sin tildes antes de escribir y cargar
+ok 17 - Rechaza título sin tildes antes de escribir y cargar
+  ---
+  duration_ms: 32.825188
+  type: 'test'
+  ...
+# Subtest: Sin referencia es NO_VERIFICABLE, no un permiso implícito
+ok 18 - Sin referencia es NO_VERIFICABLE, no un permiso implícito
+  ---
+  duration_ms: 0.308549
+  type: 'test'
+  ...
+# Subtest: Comparación admite sólo espacios inocuos y Unicode equivalente
+ok 19 - Comparación admite sólo espacios inocuos y Unicode equivalente
+  ---
+  duration_ms: 0.425746
+  type: 'test'
+  ...
+# Subtest: Cierre de última clase incorrecto rechazado
+ok 20 - Cierre de última clase incorrecto rechazado
+  ---
+  duration_ms: 0.754309
+  type: 'test'
+  ...
+# Subtest: Edición válida se guarda, reabre y conserva todos los datos
+ok 21 - Edición válida se guarda, reabre y conserva todos los datos
+  ---
+  duration_ms: 36.058003
+  type: 'test'
+  ...
+# Subtest: Error en estudiosimple_custom_player_lessons conserva la última versión y no anuncia éxito
+ok 22 - Error en estudiosimple_custom_player_lessons conserva la última versión y no anuncia éxito
+  ---
+  duration_ms: 51.541261
+  type: 'test'
+  ...
+# Subtest: Error en estudiosimple_custom_lessons conserva la última versión y no anuncia éxito
+ok 23 - Error en estudiosimple_custom_lessons conserva la última versión y no anuncia éxito
+  ---
+  duration_ms: 38.699612
+  type: 'test'
+  ...
+# Subtest: Error en estudiosimple_injected_lessons conserva la última versión y no anuncia éxito
+ok 24 - Error en estudiosimple_injected_lessons conserva la última versión y no anuncia éxito
+  ---
+  duration_ms: 43.336751
+  type: 'test'
+  ...
+# Subtest: Matemática OA01 permanece exclusivamente de fábrica y no se escribe
+ok 25 - Matemática OA01 permanece exclusivamente de fábrica y no se escribe
+  ---
+  duration_ms: 35.877604
+  type: 'test'
+  ...
+# Subtest: Guardar no sobrescribe paquetes de otros OAs todavía no inicializados
+ok 26 - Guardar no sobrescribe paquetes de otros OAs todavía no inicializados
+  ---
+  duration_ms: 47.358987
+  type: 'test'
+  ...
+# Subtest: Datos de almacenamiento corruptos no se destruyen
+ok 27 - Datos de almacenamiento corruptos no se destruyen
+  ---
+  duration_ms: 40.098837
+  type: 'test'
+  ...
+# Subtest: Guardar legado no permite saltar la validación Player
+ok 28 - Guardar legado no permite saltar la validación Player
+  ---
+  duration_ms: 34.619907
+  type: 'test'
+  ...
+# Subtest: Handler real de carga conserva exactamente la lección, sin strategy ni focos inventados
+ok 29 - Handler real de carga conserva exactamente la lección, sin strategy ni focos inventados
+  ---
+  duration_ms: 99.407009
+  type: 'test'
+  ...
+# Subtest: Handler real de carga rechaza datos esenciales ausentes sin fabricarlos
+ok 30 - Handler real de carga rechaza datos esenciales ausentes sin fabricarlos
+  ---
+  duration_ms: 88.361964
+  type: 'test'
+  ...
+# Subtest: Handler real de guardar/probar/exportar bloquea título ajeno y no escribe
+ok 31 - Handler real de guardar/probar/exportar bloquea título ajeno y no escribe
+  ---
+  duration_ms: 92.4299
+  type: 'test'
+  ...
+# Subtest: Handler real de probar detiene el aula cuando falla el almacenamiento
+ok 32 - Handler real de probar detiene el aula cuando falla el almacenamiento
+  ---
+  duration_ms: 71.912676
+  type: 'test'
+  ...
+# Subtest: Handlers reales: guardar, reabrir, probar y exportar conservan la marca y dos ideas
+ok 33 - Handlers reales: guardar, reabrir, probar y exportar conservan la marca y dos ideas
+  ---
+  duration_ms: 73.30564
+  type: 'test'
+  ...
+# Subtest: Cambio de asignatura no persiste una edición inválida ni abandona su revisión
+ok 34 - Cambio de asignatura no persiste una edición inválida ni abandona su revisión
+  ---
+  duration_ms: 86.089218
+  type: 'test'
+  ...
+# Subtest: Todos los archivos modificados son TypeScript/TSX sintácticamente válidos
+ok 35 - Todos los archivos modificados son TypeScript/TSX sintácticamente válidos
+  ---
+  duration_ms: 24.870106
+  type: 'test'
+  ...
+# Subtest: Matemática de otro curso no hereda la excepción de OA01 aprobado
+ok 36 - Matemática de otro curso no hereda la excepción de OA01 aprobado
+  ---
+  duration_ms: 0.379352
+  type: 'test'
+  ...
+# Subtest: Ruta de acompañamiento mal formada no se acepta como estructura completa
+ok 37 - Ruta de acompañamiento mal formada no se acepta como estructura completa
+  ---
+  duration_ms: 0.390742
+  type: 'test'
+  ...
+# Subtest: Inicialización no muta el objeto fuente congelado
+ok 38 - Inicialización no muta el objeto fuente congelado
+  ---
+  duration_ms: 66.352211
+  type: 'test'
+  ...
+# Subtest: Handler audiovisual no muestra éxito si falla el guardado
+ok 39 - Handler audiovisual no muestra éxito si falla el guardado
+  ---
+  duration_ms: 69.292779
+  type: 'test'
+  ...
+# Subtest: Exportar una lección no verificable no produce archivo
+ok 40 - Exportar una lección no verificable no produce archivo
+  ---
+  duration_ms: 99.239647
+  type: 'test'
+  ...
+# Subtest: Control de referencia del build: acepta misma versión y rechaza cambios sin reescribir
+ok 41 - Control de referencia del build: acepta misma versión y rechaza cambios sin reescribir
+  ---
+  duration_ms: 7.74444
+  type: 'test'
+  ...
+1..41
+# tests 41
+# suites 0
+# pass 41
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2699.586607

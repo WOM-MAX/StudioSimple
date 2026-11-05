@@ -1,0 +1,285 @@
+{
+  "fechaEmision": "2026-10-24 15:30 [America/Santiago]",
+  "commitBase": "89add56cc9135e04d14c3abefbe2c18e25cdce18",
+  "rama": "work-auditor-titulos-test",
+  "estadoGit": "working tree clean",
+  "totalArchivosIncluidos": 46,
+  "archivos": [
+    {
+      "archivo": "codigo/Web Studio Simple/src/components/admin/cms/LessonEditorView.tsx",
+      "categoria": "CODIGO_FUENTE_COMPLETO",
+      "tamanoBytes": 203519,
+      "sha256": "583c06c20446f99e30f099e7bf7145c00f3678bdd30e5fafd4ed02df00c25350"
+    },
+    {
+      "archivo": "codigo/Web Studio Simple/src/components/admin/AdminDashboard.tsx",
+      "categoria": "CODIGO_FUENTE_COMPLETO",
+      "tamanoBytes": 80987,
+      "sha256": "2ad9783d6125804702a3adbca231db99f7a48e3185e4d4cc1301120476608ec5"
+    },
+    {
+      "archivo": "codigo/Web Studio Simple/src/components/lesson/SynchronizedLessonMaster.tsx",
+      "categoria": "CODIGO_FUENTE_COMPLETO",
+      "tamanoBytes": 5417,
+      "sha256": "c262f2b749dfb76d1b19bf15fdc979c78024f34a4da4dac9c04c02c044056599"
+    },
+    {
+      "archivo": "codigo/Web Studio Simple/src/components/lesson/adult/AdultLessonView.tsx",
+      "categoria": "CODIGO_FUENTE_COMPLETO",
+      "tamanoBytes": 95381,
+      "sha256": "3c12698db2a9468e559316392fe756a43af35f5982c12f566ee19eb63fd73708"
+    },
+    {
+      "archivo": "codigo/Web Studio Simple/src/components/lesson/adult/AdultHeader.tsx",
+      "categoria": "CODIGO_FUENTE_COMPLETO",
+      "tamanoBytes": 2584,
+      "sha256": "33d9a305ebbc34ecca70b03a46f6958b49c68ae0bbc5cd0db3294b106769d198"
+    },
+    {
+      "archivo": "codigo/Web Studio Simple/src/components/lesson/adult/AdultSidebar.tsx",
+      "categoria": "CODIGO_FUENTE_COMPLETO",
+      "tamanoBytes": 5366,
+      "sha256": "d005dc6292778669a9ec53cf71e2fbce6f2f555afd4121f9a413c941f9ff4356"
+    },
+    {
+      "archivo": "codigo/Web Studio Simple/src/components/lesson/student/StudentLessonView.tsx",
+      "categoria": "CODIGO_FUENTE_COMPLETO",
+      "tamanoBytes": 69956,
+      "sha256": "4c971e50758f1f096c0130e3df3652f7d05809537373cd789432413c88ed7a8a"
+    },
+    {
+      "archivo": "codigo/Web Studio Simple/src/components/lesson/student/StudentHeader.tsx",
+      "categoria": "CODIGO_FUENTE_COMPLETO",
+      "tamanoBytes": 3635,
+      "sha256": "44f9d75726e81419993e3544ce15f404874c7b5d6db9ee54f86cbc95a35030ae"
+    },
+    {
+      "archivo": "codigo/Web Studio Simple/src/components/lesson/student/StudentMiniquizView.tsx",
+      "categoria": "CODIGO_FUENTE_COMPLETO",
+      "tamanoBytes": 5503,
+      "sha256": "e7aa632ffaa745a6d8f5b65629fba362ab7e96f70c518a1cd9ef2b9b79c01993"
+    },
+    {
+      "archivo": "codigo/Web Studio Simple/src/components/lesson/student/StudentRecoveryView.tsx",
+      "categoria": "CODIGO_FUENTE_COMPLETO",
+      "tamanoBytes": 4339,
+      "sha256": "c8e1e3b0d43c978dcf932abbf1d9dbc37c8603ce8d46606ec589e7f472b0a3d6"
+    },
+    {
+      "archivo": "codigo/Web Studio Simple/src/lib/lesson-repository.ts",
+      "categoria": "CODIGO_FUENTE_COMPLETO",
+      "tamanoBytes": 17021,
+      "sha256": "3119c4bf033424243484c0eb5910e482df9ade29c42517f2126b2738613defa5"
+    },
+    {
+      "archivo": "codigo/Web Studio Simple/src/lib/lesson-adapter.ts",
+      "categoria": "CODIGO_FUENTE_COMPLETO",
+      "tamanoBytes": 30420,
+      "sha256": "6ea4ec23a986fb209be19c32553ae713a6fadb0191f53eeec1da3f7187439274"
+    },
+    {
+      "archivo": "codigo/Web Studio Simple/src/lib/lesson-generator.ts",
+      "categoria": "CODIGO_FUENTE_COMPLETO",
+      "tamanoBytes": 140047,
+      "sha256": "7d930d1c517d0bba004f2951dce3229e0754d80318a4e1443b2e9654e4ef7ffe"
+    },
+    {
+      "archivo": "codigo/Web Studio Simple/src/lib/docx-export.ts",
+      "categoria": "CODIGO_FUENTE_COMPLETO",
+      "tamanoBytes": 52971,
+      "sha256": "00b1aa04355381d68e8fe9302c19519afe2230445012eda62e222bdaaafc2214"
+    },
+    {
+      "archivo": "codigo/Web Studio Simple/src/lib/prompt-export.ts",
+      "categoria": "CODIGO_FUENTE_COMPLETO",
+      "tamanoBytes": 19520,
+      "sha256": "f037eb1445bb9aae3e4f7771f535cb4c5ef067aa67fb346275e782e9b7cff5df"
+    },
+    {
+      "archivo": "codigo/Web Studio Simple/src/lib/video-utils.ts",
+      "categoria": "CODIGO_FUENTE_COMPLETO",
+      "tamanoBytes": 5375,
+      "sha256": "62ac4a29ec6a6bb07de8b3eae2999ac1725a3ebe9f5d225957b54f964c169431"
+    },
+    {
+      "archivo": "codigo/Web Studio Simple/src/data/lessons/index.ts",
+      "categoria": "CODIGO_FUENTE_COMPLETO",
+      "tamanoBytes": 2556,
+      "sha256": "6d8622cc39ae0c5f3b6eca1e769567ee79b8513c63cb000020670ee368179da3"
+    },
+    {
+      "archivo": "codigo/Web Studio Simple/src/types/lesson.ts",
+      "categoria": "CODIGO_FUENTE_COMPLETO",
+      "tamanoBytes": 6968,
+      "sha256": "f5c7dd295b244666acb910d60a5b024cb3aee8cb5ff6de5d3d3e9bc7a99f88bc"
+    },
+    {
+      "archivo": "codigo/server.js",
+      "categoria": "CODIGO_FUENTE_COMPLETO",
+      "tamanoBytes": 111832,
+      "sha256": "5c07a845df709ec2f8144a78c05ce7823af79b3f51b6692c57c88dc48e9c74ee"
+    },
+    {
+      "archivo": "codigo/scripts/canonical_lesson_reference.ts",
+      "categoria": "CODIGO_FUENTE_COMPLETO",
+      "tamanoBytes": 18579,
+      "sha256": "53259bd8ca48dd2dcdfdc7ccd75e4de48f3f829a9ba38caa3d08422e2c5987e3"
+    },
+    {
+      "archivo": "codigo/scripts/audit_structural_rules.ts",
+      "categoria": "CODIGO_FUENTE_COMPLETO",
+      "tamanoBytes": 6993,
+      "sha256": "c22b34a208331408a310e83de49652f67782c465cda9444769b354fc284873ce"
+    },
+    {
+      "archivo": "codigo/scripts/pipeline_sync_lessons.ts",
+      "categoria": "CODIGO_FUENTE_COMPLETO",
+      "tamanoBytes": 54648,
+      "sha256": "f942414ca5b8a65187d1229cbc05af28e70aa081e82f4bf7fafd4d41abd5f6d7"
+    },
+    {
+      "archivo": "codigo/scripts/test_canonical_auditor.ts",
+      "categoria": "CODIGO_FUENTE_COMPLETO",
+      "tamanoBytes": 13965,
+      "sha256": "d362e984e31dc00db5970c22c6849aa2677567bae31273e3d4fdeef902185ab9"
+    },
+    {
+      "archivo": "codigo/docs/auditorias/REFERENCIA_CANONICA_TITULOS_CONTINUIDAD.json",
+      "categoria": "CODIGO_FUENTE_COMPLETO",
+      "tamanoBytes": 32698,
+      "sha256": "da81744b35f8279f684726ca85561e753d5b68ce329131a6c83d39a8abd6d76c"
+    },
+    {
+      "archivo": "codigo/package.json",
+      "categoria": "CODIGO_FUENTE_COMPLETO",
+      "tamanoBytes": 914,
+      "sha256": "0f57186b82437ebbe92971fc9d61810c489ce8fb597cab92ee0722eeef74e707"
+    },
+    {
+      "archivo": "codigo/package-lock.json",
+      "categoria": "CODIGO_FUENTE_COMPLETO",
+      "tamanoBytes": 68834,
+      "sha256": "171ceeadac6464a5fac87043adcd66f2ba60206d37a9e44153d3dce636c3aa40"
+    },
+    {
+      "archivo": "codigo/Web Studio Simple/package.json",
+      "categoria": "CODIGO_FUENTE_COMPLETO",
+      "tamanoBytes": 813,
+      "sha256": "9c717c6a0e2d1493077f34bfc2c3b20a86393131525305581d2bb8759031adc7"
+    },
+    {
+      "archivo": "codigo/Web Studio Simple/package-lock.json",
+      "categoria": "CODIGO_FUENTE_COMPLETO",
+      "tamanoBytes": 104825,
+      "sha256": "2fbebdcc7ad01d6c4e1c95b031bcffa651b2529541aad3ee19780f9ad567fa93"
+    },
+    {
+      "archivo": "codigo/Web Studio Simple/tsconfig.json",
+      "categoria": "CODIGO_FUENTE_COMPLETO",
+      "tamanoBytes": 601,
+      "sha256": "c055f44edf2febd1e2101a49c33d775644a967b65ab00b5e6ed63893ee940aa9"
+    },
+    {
+      "archivo": "codigo/Web Studio Simple/vite.config.ts",
+      "categoria": "CODIGO_FUENTE_COMPLETO",
+      "tamanoBytes": 42626,
+      "sha256": "38138b7e53f86a13acdf51d0a0ee473b5234919a46c6f932c1599bc2964ec29d"
+    },
+    {
+      "archivo": "codigo/Web Studio Simple/tailwind.config.js",
+      "categoria": "CODIGO_FUENTE_COMPLETO",
+      "tamanoBytes": 1325,
+      "sha256": "73b0c11c441ffb2d1fc6e8723cb301e5d617ecd74789c07e72de57c643c3b9ce"
+    },
+    {
+      "archivo": "caso_CNA_OA01_C02/fuentes/CLASE02_CANONICA.md",
+      "categoria": "CASO_CNA_FUENTE_MD",
+      "tamanoBytes": 31597,
+      "sha256": "5e575811240a5bc216334fc4454b9fa5211f8b4ea7bd4b47093c2edf8022025a"
+    },
+    {
+      "archivo": "caso_CNA_OA01_C02/fuentes/ciencias_7b_oa01_clase02.ts",
+      "categoria": "CASO_CNA_MODULO_TS",
+      "tamanoBytes": 25881,
+      "sha256": "b40ddae3ac8a8a78e58cecfbf3e68ed213f84bbf1e4b8114d8d6f224e2973f5c"
+    },
+    {
+      "archivo": "caso_CNA_OA01_C02/fuentes/manifest.json",
+      "categoria": "CASO_CNA_MANIFEST",
+      "tamanoBytes": 2977,
+      "sha256": "c8a37de68f48aa675c2bb2dae5c745a2fa70cd3c20cccc52a3728327888a2e15"
+    },
+    {
+      "archivo": "caso_CNA_OA01_C02/exportaciones/CIENCIAS_7B_OA01_CLASE02_EXPORTADA.json",
+      "categoria": "EXPORTACION_JSON",
+      "tamanoBytes": 25326,
+      "sha256": "a1cd256bb5e785071d90d4dbafb5a46b3ad3717178ddc2762faf54dabafbc4ce"
+    },
+    {
+      "archivo": "caso_CNA_OA01_C02/exportaciones/CIENCIAS_7B_OA01_CLASE02_PROMPTS_EXPORTADOS.txt",
+      "categoria": "EXPORTACION_PROMPTS_TXT",
+      "tamanoBytes": 26820,
+      "sha256": "bc134040f7e8b8f86a861bc66747b8c8b3ca275bfe2c2a48f7f3494f788fb08b"
+    },
+    {
+      "archivo": "caso_CNA_OA01_C02/comparacion/COMPARACION_CAMPOS_Y_PRIVACIDAD.json",
+      "categoria": "COMPARACION_CAMPOS",
+      "tamanoBytes": 1349,
+      "sha256": "699775d1c4bdb544aaf1f501f079c8ec306887df3910cf3479359549f3142352"
+    },
+    {
+      "archivo": "evidencias/editor_lecciones_1792865644397.png",
+      "categoria": "EVIDENCIA_SCREENSHOT_REAL",
+      "tamanoBytes": 171729,
+      "sha256": "4d76fd92d9819d56a4092534881511233c7cfde78845a244cd1a45da085f0da7"
+    },
+    {
+      "archivo": "evidencias/final_cms_view_1792866041277.png",
+      "categoria": "EVIDENCIA_SCREENSHOT_REAL",
+      "tamanoBytes": 162450,
+      "sha256": "d9ac985322a53d9bcaec426eebe1a4668e3aaad7f915492cefb4f4bfc39c311d"
+    },
+    {
+      "archivo": "evidencias/admin_initial_1792865471983.png",
+      "categoria": "EVIDENCIA_SCREENSHOT_REAL",
+      "tamanoBytes": 13396,
+      "sha256": "a4c79d50d78dda23845bef837add87bed8c01f901bc8bdfee7141ab99d0c0f19"
+    },
+    {
+      "archivo": "evidencias/DIAGNOSTICO_ENLACE_AUDITOR_WORK.json",
+      "categoria": "EVIDENCIA_TEST_FUNCIONAL",
+      "tamanoBytes": 1497,
+      "sha256": "986111d2690b64b9689ff7a4238e7afe410c1444e0e63427bd1484e975c722c9"
+    },
+    {
+      "archivo": "evidencias/HITO_A_DATOS_CARGADOS_INICIALES.json",
+      "categoria": "EVIDENCIA_TEST_FUNCIONAL",
+      "tamanoBytes": 25326,
+      "sha256": "a1cd256bb5e785071d90d4dbafb5a46b3ad3717178ddc2762faf54dabafbc4ce"
+    },
+    {
+      "archivo": "evidencias/HITO_B_COMPARACION_GUARDADO_SIN_CAMBIOS.json",
+      "categoria": "EVIDENCIA_TEST_FUNCIONAL",
+      "tamanoBytes": 298,
+      "sha256": "08e91cf3ed050e31218846143dd8e4156a62316bf8a34632d84f78ff9d40c5ea"
+    },
+    {
+      "archivo": "evidencias/HITO_C_PERSISTENCIA_MARCA_Y_PRECEDENCIA.json",
+      "categoria": "EVIDENCIA_TEST_FUNCIONAL",
+      "tamanoBytes": 1307,
+      "sha256": "1796a9f7c60b078dcaf287dfcbdf67ba9b7626b98ae7867e1eb6dfdbe3867d2f"
+    },
+    {
+      "archivo": "evidencias/HITO_E_REIMPORTACION_Y_LIMITACIONES.json",
+      "categoria": "EVIDENCIA_TEST_FUNCIONAL",
+      "tamanoBytes": 606,
+      "sha256": "13319dae89f8151813ee5751dbc3dccdc84a8590c1c4af145a7241d62cb22485"
+    },
+    {
+      "archivo": "LEER_PRIMERO_INFORME_EDITOR.md",
+      "categoria": "INFORME_MAESTRO_ENTREGA",
+      "tamanoBytes": 9672,
+      "sha256": "ff3241dd0bded6fdd86602207cca2e83bbe2ef44d5e042a1417b5d64b53acf84"
+    }
+  ]
+}

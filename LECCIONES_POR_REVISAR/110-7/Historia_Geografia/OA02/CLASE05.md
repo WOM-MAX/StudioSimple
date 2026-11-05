@@ -4,7 +4,7 @@
 
 **Estado:** EN_REVISION · NO INTEGRADA EN APP · NO APROBADA
 
-**Fecha de preparación:** 2026-10-12 America/Santiago
+**Fecha de preparación:** 2026-10-30 America/Santiago
 
 **Objetivo de la clase:** Relacionar la disponibilidad de excedentes con el intercambio de bienes e interpretar qué evidencias apoyan la existencia de comercio.
 
@@ -14,9 +14,9 @@
 
 ## 1. Paso 1 — Preparación del mentor
 
-**Para el mentor:** Lee el recurso con el estudiante antes de preguntar. Guía usando DILE y PREGÚNTALE. Mantén las respuestas de referencia privadas hasta que el estudiante intente responder.
+**Para el mentor:** Lee el recurso con el estudiante antes de preguntar. Guía usando DILE y PREGÚNTALE. Mantén las respuestas de referencia privadas hasta que el estudiante intente responder. Orienta la discusión hacia la metodología arqueológica: en la prehistoria no existen registros escritos ni monedas, por lo que la existencia de redes de intercambio y comercio se demuestra mediante evidencias materiales (objetos y minerales hallados a cientos o miles de kilómetros de sus yacimientos de origen).
 
-**DILE / SAY:** “Relacionar la disponibilidad de excedentes con el intercambio de bienes e interpretar qué evidencias apoyan la existencia de comercio.”
+**DILE / SAY:** “Hoy investigaremos cómo la acumulación de excedentes impulsó el comercio entre distintas comunidades y qué huellas materiales permiten a los arqueólogos comprobar esos intercambios a larga distancia.”
 
 **Materiales:** recurso incluido en esta clase, cuaderno y lápiz.
 
@@ -30,298 +30,318 @@ Leer el recurso → localizar pistas → explicar → practicar → comprobar co
 
 ### Recurso de lectura visible para el estudiante
 
-Síntesis pedagógica de la página impresa 22: la disponibilidad de excedentes impulsó de manera progresiva intercambios entre comunidades. El comercio consiste en intercambiar bienes y servicios. Los objetos y materiales hallados lejos de sus zonas de origen constituyen pistas para investigar esos intercambios. La fuente escrita de Fagan y Durrani menciona obsidiana de Anatolia, turquesa de Siria y conchas del Mediterráneo y del mar Rojo encontradas en asentamientos del sudoeste asiático. El intercambio también podía facilitar la circulación de ideas, técnicas y prácticas. Una pista material no cuenta por sí sola cada detalle del viaje ni identifica a todas las personas que participaron.
+Síntesis pedagógica de la página impresa 22 del Texto Escolar de Historia, Geografía y Ciencias Sociales de 7° Básico (investigación de Brian Fagan y Nadia Durrani):
 
-Caso didáctico ficticio: una comunidad dispone de cereal adicional y otra de recipientes. Intercambian parte de sus bienes.
+A medida que las técnicas agrícolas se consolidaron y los silos aseguraron el alimento básico de la comunidad, ocurrió una profunda transformación económica y social:
+1. **La especialización del trabajo:** Al no tener que dedicarse todos los habitantes al cultivo directo de la tierra, algunas personas pudieron especializarse a tiempo completo en oficios artesanales: fabricar cerámica fina, tejer telas de lino y lana, tallar madera o trabajar piedras semipreciosas.
+2. **El surgimiento del comercio:** El comercio es el intercambio sistemático de bienes entre comunidades. Las aldeas que disponían de excedentes agrícolas (granos, aceites, animales) o artesanales los intercambiaban por recursos de los que carecían en su entorno inmediato (madera resistente, sal, minerales o conchas marinas).
+3. **La evidencia arqueológica material:** Dado que no existía la escritura ni monedas acuñadas, los arqueólogos comprueban estas redes de intercambio a través del hallazgo de **materiales alóctonos**, es decir, minerales y objetos encontrados muy lejos de sus yacimientos geológicos naturales:
+   - **Obsidiana:** Vidrio volcánico negro de filo cortante originario de los volcanes de Anatolia (actual Turquía), desenterrado en poblados del valle del Jordán y Mesopotamia, a más de 800 kilómetros de distancia.
+   - **Turquesa:** Piedra semipreciosa azul verdosa procedente de las minas del Sinaí y Siria hallada en sepulturas de aldeas distantes.
+   - **Conchas marinas:** Conchas ornamentales del mar Rojo y del mar Mediterráneo halladas en poblados del interior montañoso continental.
 
-**DILE antes de leer:** “¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.”
+Para los historiadores, la presencia de estos objetos lejos de su fuente geográfica es la prueba material directa de que las comunidades neolíticas mantenían contactos e intercambios comerciales a larga distancia.
 
-**Punto de partida / Starting point:** ¿Cómo relacionas excedente y comercio en el caso?
+Caso didáctico: En una aldea neolítica del interior árido donde no hay volcanes ni costas marinas, los arqueólogos excavan una tumba y encuentran puntas de flecha de obsidiana negra y collares de conchas de caracol marino. Un investigador afirma que los habitantes de la aldea eran magos; otra investigadora afirma que comerciaban con pueblos de la costa y de las zonas volcánicas.
 
-**Respuesta de referencia / Reference, privada para el mentor hasta después del intento:** La disponibilidad de cereal adicional permite destinar una parte al intercambio por recipientes.
+**DILE antes de leer:** “¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con los datos del recurso.”
+
+**Punto de partida / Starting point:** ¿Cómo puede la presencia de una roca volcánica o una concha marina en medio del desierto demostrar que existía comercio en el Neolítico?
+
+**Respuesta de referencia / Reference, privada para el mentor hasta después del intento:** Porque esos materiales no se forman de manera natural en ese territorio; su presencia demuestra que tuvieron que ser transportados por seres humanos a través de redes de trueque e intercambio desde sus zonas de origen geográfico.
 
 ## 4. Paso 3 — Videos
 
 **MOTIVACION:** 7 diapositivas. **EXPLICACION:** 7 diapositivas. Los guiones vigentes de este archivo se ajustan al plan audiovisual actual. No se afirma que los PowerPoint existentes ya contengan esta revisión; cotejar sus notas antes de producir o integrar.
 
-**Producción:** Gancho 60 segundos y explicación 90 segundos como tiempos de montaje. Ajustar la voz y pausas sobre el audio real. Sin música. No certificar la duración antes de producir el video.
+**Producción:** Motivación 60 segundos y explicación 90 segundos como tiempos de montaje. Ajustar la voz y pausas sobre el audio real. Sin música. No certificar la duración antes de producir el video.
 
 ## 5. Paso 4 — Conversación guiada
 
 ### Pregunta 1
 
-**Contexto:** Una comunidad tiene cereal adicional y otra recipientes. Intercambian una parte.
+**Contexto:** Una aldea produce trigo adicional que guarda en sus silos y cuenta con artesanos que elaboran vasijas decoradas. En las montañas cercanas hay un pueblo con vetas de cobre y madera, pero con tierras rocosas donde no crece el trigo.
 
-**PREGÚNTALE / ASK:** ¿Cómo relacionas excedente y comercio en el caso?
+**PREGÚNTALE / ASK:** ¿Cómo permite la disponibilidad de excedentes agrícolas que estas dos comunidades inicien un intercambio comercial?
 
-**Respuesta esperada, privada para el mentor:** La disponibilidad de cereal adicional permite destinar una parte al intercambio por recipientes.
+**Respuesta esperada, privada para el mentor:** La aldea agrícola puede ofrecer su trigo o vasijas sobrantes a cambio del cobre y la madera que necesita, satisfaciendo ambas comunidades sus carencias sin recurrir a la violencia.
 
-**Evidencia:** El caso presenta bienes disponibles y una acción de intercambio.
+**Evidencia:** El texto relaciona el excedente productivo y la especialización artesanal con la capacidad de realizar trueque de bienes complementarios.
 
-**Apoyo 1:** Si no localiza información, releer esta pista del contexto: «Una comunidad tiene cereal adicional y otra recipientes. Intercambian una parte.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta.
+**Apoyo 1:** Si no localiza información, releer esta pista del contexto: «Una aldea produce trigo adicional que guarda en sus silos... En las montañas cercanas hay un pueblo con cobre y madera, pero sin trigo.». Pedir que señale qué tiene uno que le falte al otro.
 
-**Apoyo 2:** Si encuentra la pista pero no la explica, orientar con esta relación: El caso presenta bienes disponibles y una acción de intercambio. Pedir que complete su respuesta indicando por qué esa pista sirve.
+**Apoyo 2:** Si encuentra la pista pero no la explica, orientar con esta relación: Si una aldea solo tiene lo justo para comer no puede regalar ni cambiar comida; solo cuando sobra trigo puede ofrecerlo por madera. Pedir que explique por qué se requiere excedente.
 
-**Apoyo 3, modelo privado tras intentar con pistas:** La disponibilidad de cereal adicional permite destinar una parte al intercambio por recipientes. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento.
+**Apoyo 3, modelo privado tras intentar con pistas:** Para comerciar se necesita tener algo valioso que sobre; al contar con excedente de trigo, la aldea agrícola puede intercambiarlo por la madera y el cobre del pueblo montañés mediante trueque pacífico. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento.
 
-**Criterio:** Respuesta comprensible, información precisa y explicación de su relación.
+**Criterio:** Respuesta comprensible, identificación de bienes complementarios y justificación del papel del excedente como base del intercambio.
 
 ### Pregunta 2
 
-**Contexto:** En un asentamiento aparece un material cuya zona de origen está lejos.
+**Contexto:** Los arqueólogos descubren obsidiana de Anatolia y conchas del mar Rojo en yacimientos del interior del valle del Jordán.
 
-**PREGÚNTALE / ASK:** ¿Qué interpretación puede apoyar esa pista y qué no permite asegurar por sí sola?
+**PREGÚNTALE / ASK:** ¿Qué método de razonamiento emplean los historiadores para afirmar que existió comercio a larga distancia a partir de estos hallazgos materiales?
 
-**Respuesta esperada, privada para el mentor:** Puede apoyar una interpretación de circulación o contacto. No permite reconstruir por sí sola la ruta exacta ni identificar a todos los participantes.
+**Respuesta esperada, privada para el mentor:** Relacionan la afirmación (existencia de redes comerciales) con la evidencia material (minerales y conchas fuera de su entorno natural) y el razonamiento lógico de que solo el traslado humano mediante trueque explica su presencia a cientos de kilómetros.
 
-**Evidencia:** El recurso explica tanto el valor como el límite de la pista material.
+**Evidencia:** Fagan y Durrani explican que la presencia de materiales alóctonos prueba el contacto y circulación de bienes entre regiones geográficas distantes.
 
-**Apoyo 1:** Si no localiza información, releer esta pista del contexto: «En un asentamiento aparece un material cuya zona de origen está lejos.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta.
+**Apoyo 1:** Si no localiza información, releer esta pista del contexto: «Los arqueólogos descubren obsidiana de Anatolia y conchas del mar Rojo en yacimientos del interior del valle del Jordán.». Pedir que revise si en el valle del Jordán hay volcanes de obsidiana o agua marina.
 
-**Apoyo 2:** Si encuentra la pista pero no la explica, orientar con esta relación: El recurso explica tanto el valor como el límite de la pista material. Pedir que complete su respuesta indicando por qué esa pista sirve.
+**Apoyo 2:** Si encuentra la pista pero no la explica, orientar con esta relación: La obsidiana no camina sola; si está a 800 kilómetros de su volcán, alguien tuvo que llevarla de mano en mano a través de intercambios. Pedir que explique cómo razona el arqueólogo.
 
-**Apoyo 3, modelo privado tras intentar con pistas:** Puede apoyar una interpretación de circulación o contacto. No permite reconstruir por sí sola la ruta exacta ni identificar a todos los participantes. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento.
+**Apoyo 3, modelo privado tras intentar con pistas:** Los arqueólogos contrastan el lugar de origen geológico del material con el sitio de excavación: si una piedra solo existe en Anatolia y aparece en Jordania, la única explicación científica razonable es el intercambio comercial entre pueblos. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento.
 
-**Criterio:** Respuesta comprensible, información precisa y explicación de su relación.
+**Criterio:** Respuesta comprensible, uso de la tríada Afirmación + Evidencia + Razonamiento y explicación del significado de los materiales alóctonos.
 
 ## 6. Paso 5 — Explicación y modelamiento
 
-**Concepto:** El intercambio relaciona comunidades que disponen de bienes distintos. La evidencia material permite formular interpretaciones sobre contacto y circulación, con límites. No hace falta suponer monedas para reconocer un intercambio de bienes.
+**Concepto:** El comercio en el Neolítico temprano no se realizaba con monedas ni mercados monetarios, sino a través del trueque: el intercambio recíproco de bienes materiales. Este intercambio dependía de la generación sostenida de excedentes y de la especialización del trabajo, y su existencia se verifica hoy mediante el análisis arqueológico de la procedencia de materias primas.
 
-**Los excedentes:** La disponibilidad de bienes adicionales favoreció intercambios progresivos entre comunidades.
+**De la subsistencia a la especialización:** Cuando la agricultura produce más de lo que se come al día, la sociedad puede alimentar a miembros que no trabajan en el campo: alfareros, tejedores, canteros y metalúrgicos tempranos.
 
-**El comercio:** En el caso, cereal y recipientes se intercambian. El recurso no requiere imaginar monedas para explicar esa acción.
+**El trueque complementario:** Ningún ecosistema posee todos los recursos necesarios. Las comunidades agrícolas intercambiaban alimentos duraderos (granos secos, legumbres, quesos) o manufacturas por piedras duras para hachas, sal para conservar carnes o pigmentos minerales.
 
-**Una evidencia material:** Encontrar materiales de otra región constituye una pista de circulación. Esa pista necesita interpretarse en contexto.
+**La evidencia material alóctona:** En arqueología, un material «alóctono» o foráneo es aquel que no pertenece a la geología o biología local del yacimiento.
+- Si en un valle calizo aparecen herramientas de basalto u obsidiana, provienen del comercio.
+- Si en una aldea de montaña aparecen adornos de conchas de moluscos marinos, provienen de contactos con las costas.
 
-**Las ideas y técnicas:** Los intercambios podían facilitar la circulación de prácticas y tecnologías además de bienes.
+**El rigor del razonamiento histórico:** Construir una afirmación histórica válida requiere conectar tres elementos inseparables:
+1. **Afirmación:** Las comunidades del Levante comerciaban a larga distancia con los pueblos de Anatolia y el mar Rojo.
+2. **Evidencia:** Se hallaron cuchillos de obsidiana anatolia y collares de conchas marinas en estratos habitacionales de Jericó y Ain Ghazal.
+3. **Razonamiento:** La obsidiana solo se forma en zonas volcánicas de Anatolia (a cientos de kilómetros al norte) y las conchas provienen de aguas saladas marinas; su concentración en el valle del Jordán prueba el traslado intencional mediante redes de intercambio interregional.
 
-**Los límites de la evidencia:** Un objeto no revela por sí solo la ruta exacta, la fecha de cada etapa ni todas las personas que participaron.
+**Modelo explicado:** Para demostrar comercio neolítico sin textos escritos, el arqueólogo no adivina: toma una muestra de la roca, analiza químicamente sus minerales para determinar su "huella geológica" (por ejemplo, canteras de Anatolia central), mide la distancia geográfica hasta el poblado excavado y concluye que existió una ruta de intercambio que transportó ese bien de aldea en aldea.
 
-**Modelo explicado:** La disponibilidad de cereal adicional permite destinar una parte al intercambio por recipientes. El caso presenta bienes disponibles y una acción de intercambio.
+**Cómo se construye el modelo, mostrar durante la enseñanza:** 1) Precisar qué objeto material se encontró y cuál es su yacimiento de origen geográfico. 2) Medir la distancia entre la fuente natural y el sitio del hallazgo. 3) Descartar que el objeto haya llegado por fenómenos naturales espontáneos. 4) Relacionar el hallazgo con la capacidad de la aldea de entregar bienes a cambio (excedentes). 5) Formular la conclusión sobre redes comerciales. 6) Comprobar que no se inventen detalles ficticios no respaldados por la evidencia física.
 
-**Cómo se construye el modelo, mostrar durante la enseñanza:** 1) Leer la pregunta y precisar qué pide. 2) Localizar en el caso: «Una comunidad tiene cereal adicional y otra recipientes. Intercambian una parte.». 3) Explicar la relación: El caso presenta bienes disponibles y una acción de intercambio. 4) Formular la respuesta: La disponibilidad de cereal adicional permite destinar una parte al intercambio por recipientes. Comprobar que cada afirmación conserva los datos del recurso.
+**Error frecuente:** Suponer que comerciaban con monedas de oro o plata (el dinero acuñado nació miles de años después) o creer que los objetos exóticos se encontraban por casualidad tirados en el suelo local.
 
-**Error frecuente:** Inventar una ruta exacta o monedas a partir de un objeto hallado lejos de su origen.
+**Comprobación inmediata:** Si un arqueólogo encuentra en una aldea del interior de Chile una piedra pómez volcánica traída de la cordillera y collares de conchas de choromytilus de la costa, ¿qué demuestra esa evidencia sobre la relación entre esas comunidades?
 
-**Comprobación inmediata:** ¿Qué interpretación puede apoyar esa pista y qué no permite asegurar por sí sola?
-
-**Modelo de comprobación:** Puede apoyar una interpretación de circulación o contacto. No permite reconstruir por sí sola la ruta exacta ni identificar a todos los participantes.
+**Modelo de comprobación:** Demuestra la existencia de circuitos de intercambio y trueque entre los pueblos del interior, los de la cordillera y los de la costa pacífica para compartir recursos que no existían en sus propios territorios.
 
 ## 7. Paso 6 — Práctica conjunta y autónoma
 
 ### Caso 1
 
-**Recurso:** Una comunidad tiene cereal adicional y otra recipientes. Intercambian una parte.
+**Recurso:** Una aldea agrícola del valle tiene silos repletos de cebada y rebaños de ovejas con abundante lana, pero no dispone de piedras duras para fabricar hachas de tala. A 100 kilómetros, en la sierra, otra comunidad extrae pedernal de gran dureza, pero sus tierras altas son frías y con frecuencia sufren escasez de granos y abrigo en invierno.
 
-**Actividad:** ¿Cómo relacionas excedente y comercio en el caso? Escribe una respuesta y señala la pista que la sostiene.
+**Actividad:** Explica cómo los excedentes de cebada y lana de la aldea del valle hicieron posible un intercambio comercial con la sierra. Señala qué bienes intercambiaron y qué beneficio mutuo obtuvieron.
 
-**Procedimiento:** Leer, localizar evidencia, escribir y revisar con el recurso.
+**Procedimiento:** Identificar los excedentes y las necesidades de cada comunidad, describir la transacción de trueque y explicar el beneficio complementario.
 
-**Modelo para revisar después del intento:** La disponibilidad de cereal adicional permite destinar una parte al intercambio por recipientes.
+**Modelo para revisar después del intento:** La aldea del valle utilizó su excedente de cebada y lana para ofrecerlo a la comunidad serrana, que a cambio entregó bloques de pedernal duro. Ambas comunidades se beneficiaron sin enfrentarse: la aldea agrícola obtuvo piedras indispensables para fabricar hachas resistentes y los pobladores de la sierra obtuvieron alimento seguro y abrigo de lana para superar el invierno.
 
-**Respaldo:** El caso presenta bienes disponibles y una acción de intercambio.
+**Respaldo:** El excedente agrícola permite financiar la adquisición de bienes indispensables que el medioambiente local no produce.
 
 ### Caso 2
 
-**Recurso:** En un asentamiento aparece un material cuya zona de origen está lejos.
+**Recurso:** En las excavaciones de la aldea de Jericó (Neolítico precerámico, Cercano Oriente), los arqueólogos no hallaron ningún volcán en 500 kilómetros a la redonda. Sin embargo, encontraron más de 300 hojas de cuchillo talladas en obsidiana negra translúcida, cuya composición química coincide con los volcanes de la cordillera de Göllü Dağ en el centro de Turquía.
 
-**Actividad:** ¿Qué interpretación puede apoyar esa pista y qué no permite asegurar por sí sola? Escribe una respuesta y señala la pista que la sostiene.
+**Actividad:** Aplica la tríada histórica (Afirmación + Evidencia + Razonamiento) para explicar qué prueba este hallazgo sobre las relaciones entre Jericó y los pueblos de Anatolia.
 
-**Procedimiento:** Leer, localizar evidencia, escribir y revisar con el recurso.
+**Procedimiento:** Redactar la afirmación histórica, citar la evidencia material de Göllü Dağ y Jericó, y formular el razonamiento que demuestra el comercio a larga distancia.
 
-**Modelo para revisar después del intento:** Puede apoyar una interpretación de circulación o contacto. No permite reconstruir por sí sola la ruta exacta ni identificar a todos los participantes.
+**Modelo para revisar después del intento:**
+- **Afirmación:** Existió una red de comercio e intercambio a larga distancia entre Jericó y las comunidades del centro de Anatolia.
+- **Evidencia:** Se descubrieron más de 300 hojas de obsidiana en Jericó con huella química idéntica a los volcanes de Göllü Dağ, situados a más de 500 kilómetros de distancia.
+- **Razonamiento:** La ausencia de volcanes en Jericó y la enorme distancia geográfica descartan que el mineral se encontrara localmente; la única explicación rigurosa es que las hojas o núcleos de obsidiana fueron trasladados intencionalmente mediante trueque a lo largo de rutas interregionales neolíticas.
 
-**Respaldo:** El recurso explica tanto el valor como el límite de la pista material.
+**Respaldo:** El análisis químico de procedencia de la obsidiana es una de las pruebas arqueológicas más sólidas de comercio prehistórico a larga distancia.
 
 ### Aplicación autónoma y transferencia
 
-**Recurso nuevo visible para el estudiante:** Registro arqueológico ficticio para aprender a interpretar: En un asentamiento se encuentran objetos hechos con una piedra cuyo origen está en otra región. El registro no indica ruta, personas ni forma exacta del intercambio. Una nota didáctica informa que el asentamiento disponía de cereal adicional.
+**Recurso nuevo visible para el estudiante:** Caso arqueológico nuevo de investigación: En el asentamiento neolítico fortificado de Los Millares (Almería, sur de la Península Ibérica, hace unos 4.800 años), los arqueólogos hallaron talleres metalúrgicos donde se fundía cobre extraído de minas locales situadas a 5 kilómetros. Junto a los crisoles y tumbas colectivas, descubrieron botones y punzones tallados en marfil de colmillo de elefante africano, cuentas de ámbar fósil originario del mar Báltico (norte de Europa, a más de 2.500 kilómetros de distancia) y cáscaras de huevos de avestruz norteafricano decoradas.
 
-**Actividad del estudiante:** Relaciona excedente e intercambio como posibilidad. Formula una conclusión apoyada por el material y señala dos datos que el hallazgo no permite asegurar. Distingue la nota didáctica de la evidencia del objeto.
+**Actividad del estudiante:** Analiza las evidencias de Los Millares y responde en tu cuaderno: 1) Distingue cuáles materiales eran de origen local y cuáles eran materiales foráneos (alóctonos). 2) Formula una conclusión histórica fundamentada sobre el alcance geográfico de los intercambios comerciales de Los Millares, utilizando la tríada: Afirmación + Evidencia + Razonamiento.
 
-**Momento:** Intento individual breve antes del miniquiz, sin respuesta modelo visible. El recurso de consulta permanece disponible. No exigir memorizar.
+**Momento:** Intento individual en el cuaderno antes del miniquiz, sin modelo visible. El recurso permanece a la vista.
 
-**Criterio privado del mentor, revelar solo después del intento:** El cereal adicional pudo destinarse a intercambio. La piedra de otro origen apoya circulación/contacto; no demuestra por sí sola quién viajó, la ruta exacta ni que ese objeto se intercambiara precisamente por ese cereal.
+**Criterio privado del mentor, revelar solo después del intento:** El estudiante debe clasificar el cobre como local y el marfil, ámbar y huevo de avestruz como alóctonos/importados, y concluir que Los Millares estaba conectada a redes comerciales de enorme alcance geográfico continental y transmediterráneo (África y norte de Europa).
 
-**Cómo valorar:** Comprobar cada elemento pedido y su evidencia; aceptar formulaciones equivalentes. Si falta una relación, pedir que señale la pista y explique qué demuestra; después ofrecer el modelo y un nuevo intento. Registrar respuesta, apoyos y criterio por reforzar.
+**Cómo valorar:** Verificar que clasifique con precisión los materiales locales y foráneos, y que construya la conclusión citando las distancias de procedencia del marfil y del ámbar como evidencia del comercio de larga distancia.
 
-**Por qué transfiere:** Cambia el estímulo y exige aplicar el criterio de esta clase; no reproduce el caso ya resuelto.
+**Por qué transfiere:** Presenta un caso completamente inédito de la Península Ibérica con materiales exóticos diversos (marfil, ámbar, avestruz) y distancias continentales de miles de kilómetros, obligando a aplicar los criterios de identificación de materiales alóctonos y argumentación histórica.
 
 ## 8. Paso 7 — Miniquiz y recuperación
 
-**Criterio formativo:** Tres preguntas con cuatro alternativas y claves privadas. 2/3 o 3/3 permite avanzar; con 0/3 o 1/3, explicar el error, resolver la nueva práctica de recuperación correspondiente y reintentar. Registrar intentos y apoyos. Es la regla de diseño del Manual; su ejecución real en la App permanece pendiente de prueba. Solo Walter aprueba el OA.
+**Criterio formativo:** Tres preguntas con cuatro alternativas y claves privadas. 2/3 o 3/3 permite avanzar; con 0/3 o 1/3, explicar el error, resolver la nueva práctica de recuperación correspondiente y reintentar. Registrar intentos y apoyos. Solo Walter aprueba el OA.
 
 ### Reactivo 1
 
-¿Qué relación presenta el caso del cereal?
+¿Cómo se relaciona la generación de excedentes agrícolas con el desarrollo del comercio en las primeras sociedades neolíticas?
 
-- A. Toda producción impide el intercambio
-- B. Un excedente permite destinar bienes al intercambio
-- C. El comercio exige siempre monedas
-- D. Los recipientes producen cereal
+- A. Los excedentes provocaron que las aldeas se destruyeran entre sí y olvidaran cómo hablar
+- B. La disponibilidad de alimentos sobrantes permitió alimentar a artesanos especializados e intercambiar productos con comunidades que tenían otros recursos
+- C. Los excedentes obligaron a las personas a quemar todos los caminos para no recibir a ningún viajero
+- D. La agricultura impidió el comercio porque estaba prohibido compartir o cambiar alimentos fuera de la familia
 
 **Clave privada:** B.
 
-**Explicación formativa:** Una parte del cereal adicional puede intercambiarse por otros bienes.
+**Explicación formativa:** El excedente liberó mano de obra para tareas artesanales especializadas y proporcionó los bienes materiales necesarios para realizar intercambios y trueques recíprocos con otras comunidades.
 
 **Análisis de alternativas, privado; mostrar solo el feedback de la opción elegida tras responder:**
-- A: La opción «Toda producción impide el intercambio» no coincide con lo que pide este reactivo. Contrástala con «Un excedente permite destinar bienes al intercambio». Una parte del cereal adicional puede intercambiarse por otros bienes.
-- B: La respuesta «Un excedente permite destinar bienes al intercambio» coincide con el criterio. Una parte del cereal adicional puede intercambiarse por otros bienes.
-- C: La opción «El comercio exige siempre monedas» no coincide con lo que pide este reactivo. Contrástala con «Un excedente permite destinar bienes al intercambio». Una parte del cereal adicional puede intercambiarse por otros bienes.
-- D: La opción «Los recipientes producen cereal» no coincide con lo que pide este reactivo. Contrástala con «Un excedente permite destinar bienes al intercambio». Una parte del cereal adicional puede intercambiarse por otros bienes.
+- A: Incorrecta. Los excedentes fortalecieron la cohesión comunitaria y fomentaron redes de contacto pacífico de intercambio.
+- B: Correcta. Explica con exactitud la doble función del excedente: sostener la especialización laboral y servir como bien de trueque comercial.
+- C: Incorrecta. Al contrario, las aldeas abrieron y mantuvieron activas rutas de contacto para intercambiar bienes.
+- D: Incorrecta. El trueque interaldeano fue una práctica habitual y vital para obtener materias primas ausentes en el territorio propio.
 
 ### Recuperación 1
 
 **Se muestra si el reactivo 1 requiere apoyo.**
 
-**Enseñanza:** Una parte del cereal adicional puede intercambiarse por otros bienes.
+**Enseñanza:** Si una aldea solo tiene la comida justa para el día, no puede arriesgarse a entregarle grano a nadie. Pero si sus silos están llenos de excedente, puede alimentar a tejedores y ceramistas, y usar el trigo que sobra para hacer trueque con otras aldeas a cambio de maderas, piedras finas o sal.
 
-**Pista:** Releer el recurso y buscar la información mencionada en la explicación.
+**Pista:** Piensa qué necesitas tener en el bolsillo antes de poder comprar o cambiar algo con un vecino.
 
 **Nueva práctica antes del reintento:**
 
-**Recurso visible de recuperación:** Caso didáctico ficticio de recuperación: Una comunidad tiene recipientes adicionales y otra dispone de grano que supera su necesidad de alimentación. En un yacimiento se encuentra también una concha de origen lejano, sin registro de su ruta.
+**Recurso visible de recuperación:** Caso breve de producción: En una aldea de alfareros, los hornos producen 100 ollas al mes. La aldea solo necesita 10 ollas para su uso interno; las 90 restantes se cargan en burros y se llevan a un poblado pesquero costero a cambio de pescado seco y sal.
 
-**Tarea nueva del estudiante:** Explica cómo disponer de bienes adicionales puede favorecer un intercambio.
+**Tarea nueva del estudiante:** ¿Cuál era el excedente de la aldea de alfareros y cómo lo utilizaron para hacer comercio?
 
-**Apoyo 1, si no identifica información:** Buscar estas expresiones del recurso nuevo: «recipientes»; «grano». Señalar las palabras del caso que permiten responder, sin mostrar la solución.
+**Apoyo 1, si no identifica información:** Mira cuántas ollas hicieron y cuántas necesitaban ellos mismos.
 
-**Apoyo 2, si no relaciona las pistas:** Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.
+**Apoyo 2, si no relaciona las pistas:** Recuerda que las ollas que sobran se entregan a cambio de pescado seco.
 
-**Apoyo 3 y modelo privado, después de un intento con las pistas:** Permite destinar una parte de recipientes y grano a obtener otros bienes; no exige suponer monedas. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
+**Apoyo 3 y modelo privado, después de un intento con las pistas:** El excedente eran las 90 ollas sobrantes; las utilizaron como mercancía de trueque para comerciar con los pescadores y obtener sal y pescado seco que ellos no podían producir.
 
-**Criterio de salida de esta práctica:** Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta.
+**Criterio de salida de esta práctica:** Explicar cómo el excedente de producción sustenta el intercambio comercial complementario.
 
-**Reintento completo:** Después de releer el recurso, responde de nuevo: ¿Qué relación presenta el caso del cereal?
+**Reintento completo:** Después de revisar el recurso, responde de nuevo: ¿Cómo se relaciona la generación de excedentes con el desarrollo del comercio neolítico?
 
-- A. Toda producción impide el intercambio
-- B. Un excedente permite destinar bienes al intercambio
-- C. El comercio exige siempre monedas
-- D. Los recipientes producen cereal
+- A. Los excedentes provocaron que las aldeas se destruyeran entre sí y olvidaran cómo hablar
+- B. La disponibilidad de alimentos sobrantes permitió alimentar a artesanos especializados e intercambiar productos con comunidades que tenían otros recursos
+- C. Los excedentes obligaron a las personas a quemar todos los caminos para no recibir a ningún viajero
+- D. La agricultura impidió el comercio porque estaba prohibido compartir o cambiar alimentos fuera de la familia
 
-**Clave:** B. **Si acierta:** Usaste el recurso para fundamentar tu respuesta. **Si necesita más apoyo:** Una parte del cereal adicional puede intercambiarse por otros bienes. Lean la información pertinente juntos y vuelve a intentarlo.
+**Clave:** B. **Si acierta:** ¡Muy bien! Relacionaste con éxito excedente, especialización y comercio. **Si necesita más apoyo:** Recuerda que solo se puede comerciar con lo que sobra tras satisfacer el consumo básico.
 
 ### Reactivo 2
 
-¿Qué puede ser evidencia de circulación entre regiones?
+¿Qué evidencia arqueológica material demuestra de forma directa la existencia de redes comerciales a larga distancia durante el Neolítico?
 
-- A. Un material de origen lejano encontrado en un asentamiento
-- B. Un deseo sin ninguna fuente
-- C. Una ruta inventada sobre un mapa
-- D. Una opinión sin objeto ni texto
+- A. La aparición de billetes de banco de papel impresos con retratos de gobernantes neolíticos
+- B. El hallazgo de minerales y objetos alóctonos (como obsidiana, turquesa o conchas marinas) a cientos de kilómetros de sus yacimientos naturales
+- C. El descubrimiento de cables telefónicos subterráneos que unían los continentes
+- D. La ausencia total de cualquier tipo de herramienta o piedra en los yacimientos antiguos
 
-**Clave privada:** A.
+**Clave privada:** B.
 
-**Explicación formativa:** El material de otra región constituye una pista de circulación.
+**Explicación formativa:** Dado que en el Neolítico no existía la escritura ni las monedas, la prueba arqueológica del comercio reside en los materiales alóctonos: minerales y restos biológicos encontrados en lugares muy lejanos a sus fuentes geológicas o biológicas naturales.
 
 **Análisis de alternativas, privado; mostrar solo el feedback de la opción elegida tras responder:**
-- A: La respuesta «Un material de origen lejano encontrado en un asentamiento» coincide con el criterio. El material de otra región constituye una pista de circulación.
-- B: La opción «Un deseo sin ninguna fuente» no coincide con lo que pide este reactivo. Contrástala con «Un material de origen lejano encontrado en un asentamiento». El material de otra región constituye una pista de circulación.
-- C: La opción «Una ruta inventada sobre un mapa» no coincide con lo que pide este reactivo. Contrástala con «Un material de origen lejano encontrado en un asentamiento». El material de otra región constituye una pista de circulación.
-- D: La opción «Una opinión sin objeto ni texto» no coincide con lo que pide este reactivo. Contrástala con «Un material de origen lejano encontrado en un asentamiento». El material de otra región constituye una pista de circulación.
+- A: Incorrecta. Los billetes de papel moneda nacieron miles de años después en la China medieval; en el Neolítico el comercio era por trueque de bienes físicos.
+- B: Correcta. La presencia de materias primas fuera de su procedencia geológica natural (obsidiana, turquesa, conchas) prueba el transporte intencional humano mediante trueque.
+- C: Incorrecta. Es un anacronismo tecnológico contemporáneo absurdo.
+- D: Incorrecta. Los yacimientos neolíticos destacan por una gran riqueza y abundancia de restos materiales líticos, cerámicos y óseos.
 
 ### Recuperación 2
 
 **Se muestra si el reactivo 2 requiere apoyo.**
 
-**Enseñanza:** El material de otra región constituye una pista de circulación.
+**Enseñanza:** Si vas a la cumbre de una montaña en la Cordillera de los Andes y excavas un campamento de hace 5.000 años y encuentras conchas marinas del Océano Pacífico, sabes que los caracoles no volaron hasta la cumbre: los seres humanos tuvieron que viajar a la costa o intercambiarlos con comunidades costeras. Eso es una evidencia material de comercio.
 
-**Pista:** Releer el recurso y buscar la información mencionada en la explicación.
+**Pista:** Piensa cómo llegó un producto de la playa a la mitad de una cordillera nevada.
 
 **Nueva práctica antes del reintento:**
 
-**Recurso visible de recuperación:** Caso didáctico ficticio de recuperación: Una comunidad tiene recipientes adicionales y otra dispone de grano que supera su necesidad de alimentación. En un yacimiento se encuentra también una concha de origen lejano, sin registro de su ruta.
+**Recurso visible de recuperación:** Caso arqueológico simple: En una aldea neolítica ubicada en una meseta de piedra caliza blanca, los arqueólogos descubren 50 hachas fabricadas en jade verde brillante. Las minas de jade más cercanas están en unas montañas ubicadas a 600 kilómetros de distancia.
 
-**Tarea nueva del estudiante:** ¿Qué interpretación prudente permite la concha de origen lejano?
+**Tarea nueva del estudiante:** Explica por qué el hallazgo de las hachas de jade verde en la meseta caliza demuestra que existían rutas de comercio con las montañas lejanas.
 
-**Apoyo 1, si no identifica información:** Volver al caso concreto: «Caso didáctico ficticio de recuperación: Una comunidad tiene recipientes adicionales y otra dispone de grano que supera su necesidad de alimentación. En un yacimiento se encuentra también una concha de origen lejano, sin registro de su ruta.». Señalar las palabras del caso que permiten responder, sin mostrar la solución.
+**Apoyo 1, si no identifica información:** Fíjate de qué color es la piedra local (caliza blanca) y de qué color son las hachas (jade verde de 600 km).
 
-**Apoyo 2, si no relaciona las pistas:** Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.
+**Apoyo 2, si no relaciona las pistas:** Si el jade no existe en la meseta, ¿cómo llegaron 50 hachas hasta allí?
 
-**Apoyo 3 y modelo privado, después de un intento con las pistas:** Apoya circulación o contacto entre regiones; necesita contexto. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
+**Apoyo 3 y modelo privado, después de un intento con las pistas:** Demuestra comercio porque el jade no se produce de forma natural en la meseta; la única forma de que aparezcan 50 hachas allí es que los pobladores las hayan adquirido mediante intercambio o trueque con las gentes de las montañas lejanas.
 
-**Criterio de salida de esta práctica:** Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta.
+**Criterio de salida de esta práctica:** Aplicar el concepto de material alóctono para fundamentar el comercio prehistórico.
 
-**Reintento completo:** Después de releer el recurso, responde de nuevo: ¿Qué puede ser evidencia de circulación entre regiones?
+**Reintento completo:** Después de revisar el recurso, responde de nuevo: ¿Qué evidencia arqueológica material demuestra de forma directa las redes comerciales del Neolítico?
 
-- A. Un material de origen lejano encontrado en un asentamiento
-- B. Un deseo sin ninguna fuente
-- C. Una ruta inventada sobre un mapa
-- D. Una opinión sin objeto ni texto
+- A. La aparición de billetes de banco de papel impresos con retratos de gobernantes neolíticos
+- B. El hallazgo de minerales y objetos alóctonos (como obsidiana, turquesa o conchas marinas) a cientos de kilómetros de sus yacimientos naturales
+- C. El descubrimiento de cables telefónicos subterráneos que unían los continentes
+- D. La ausencia total de cualquier tipo de herramienta o piedra en los yacimientos antiguos
 
-**Clave:** A. **Si acierta:** Usaste el recurso para fundamentar tu respuesta. **Si necesita más apoyo:** El material de otra región constituye una pista de circulación. Lean la información pertinente juntos y vuelve a intentarlo.
+**Clave:** B. **Si acierta:** ¡Excelente! Identificaste la prueba material del comercio en la arqueología. **Si necesita más apoyo:** Recuerda que los objetos que no existen en la zona tuvieron que llegar por trueque.
 
 ### Reactivo 3
 
-¿Qué límite debe mantener la interpretación?
+En la investigación histórica, ¿por qué es indispensable aplicar la estructura «Afirmación + Evidencia + Razonamiento» al formular conclusiones sobre el pasado?
 
-- A. Negar todo contacto posible
-- B. Afirmar que todos usaron la misma ruta
-- C. No deducir por un solo objeto cada detalle del viaje
-- D. Tratar una pista como una fotografía completa
+- A. Porque asegura que las conclusiones no sean simples inventos o suposiciones, sino afirmaciones respaldadas por pruebas materiales y explicaciones lógicas rigurosas
+- B. Porque es una fórmula mágica que permite adivinar el futuro sin mirar el pasado
+- C. Porque está prohibido usar la lógica y la razón en las investigaciones científicas
+- D. Porque los historiadores solo pueden repetir de memoria lo que dicen los cuentos de ficción
 
-**Clave privada:** C.
+**Clave privada:** A.
 
-**Explicación formativa:** El objeto no informa por sí solo todos los detalles del desplazamiento.
+**Explicación formativa:** La tríada histórica garantiza la validez epistemológica del conocimiento social, conectando una afirmación interpretativa con la evidencia empírica que la respalda y el razonamiento lógico que demuestra esa relación.
 
 **Análisis de alternativas, privado; mostrar solo el feedback de la opción elegida tras responder:**
-- A: La opción «Negar todo contacto posible» no coincide con lo que pide este reactivo. Contrástala con «No deducir por un solo objeto cada detalle del viaje». El objeto no informa por sí solo todos los detalles del desplazamiento.
-- B: La opción «Afirmar que todos usaron la misma ruta» no coincide con lo que pide este reactivo. Contrástala con «No deducir por un solo objeto cada detalle del viaje». El objeto no informa por sí solo todos los detalles del desplazamiento.
-- C: La respuesta «No deducir por un solo objeto cada detalle del viaje» coincide con el criterio. El objeto no informa por sí solo todos los detalles del desplazamiento.
-- D: La opción «Tratar una pista como una fotografía completa» no coincide con lo que pide este reactivo. Contrástala con «No deducir por un solo objeto cada detalle del viaje». El objeto no informa por sí solo todos los detalles del desplazamiento.
+- A: Correcta. Resume con exactitud el estándar del método histórico: sostener conclusiones fundamentadas en pruebas concretas y lógica rigurosa.
+- B: Incorrecta. El método histórico estudia e interpreta el pasado humano con evidencias, no busca adivinaciones ni predicciones mágicas.
+- C: Incorrecta. La lógica y la razón son el corazón del método científico en todas las disciplinas.
+- D: Incorrecta. La historia se distingue de la literatura de ficción precisamente porque exige verificación empírica constante en fuentes y vestigios.
 
 ### Recuperación 3
 
 **Se muestra si el reactivo 3 requiere apoyo.**
 
-**Enseñanza:** El objeto no informa por sí solo todos los detalles del desplazamiento.
+**Enseñanza:** Cuando decimos algo importante en Historia, no basta con decir «yo creo que pasó esto»: 1) Hacemos una Afirmación clara. 2) Mostramos la Evidencia (el objeto, el fósil o el documento real). 3) Explicamos el Razonamiento (por qué esa prueba demuestra lo que afirmamos). Así trabaja la mente científica.
 
-**Pista:** Releer el recurso y buscar la información mencionada en la explicación.
+**Pista:** Pregúntate: ¿qué te convence más, alguien que solo opina o alguien que te muestra la prueba y te explica la razón?
 
 **Nueva práctica antes del reintento:**
 
-**Recurso visible de recuperación:** Caso didáctico ficticio de recuperación: Una comunidad tiene recipientes adicionales y otra dispone de grano que supera su necesidad de alimentación. En un yacimiento se encuentra también una concha de origen lejano, sin registro de su ruta.
+**Recurso visible de recuperación:** Tres frases de un estudiante:
+- Frase 1: «Los pueblos de Jericó tenían contacto con el mar Mediterráneo».
+- Frase 2: «Se encontraron 40 conchas de caracol marino en las casas de Jericó».
+- Frase 3: «Como Jericó está a decenas de kilómetros del mar, la presencia de esas conchas solo se explica porque las personas las transportaron mediante trueque».
 
-**Tarea nueva del estudiante:** Nombra dos afirmaciones que no puedes asegurar solo con esa concha.
+**Tarea nueva del estudiante:** Identifica cuál de las tres frases es la Afirmación, cuál es la Evidencia y cuál es el Razonamiento.
 
-**Apoyo 1, si no identifica información:** Buscar estas expresiones del recurso nuevo: «ruta». Señalar las palabras del caso que permiten responder, sin mostrar la solución.
+**Apoyo 1, si no identifica información:** Busca cuál es la prueba física que encontraron (las 40 conchas).
 
-**Apoyo 2, si no relaciona las pistas:** Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.
+**Apoyo 2, si no relaciona las pistas:** Busca cuál es la idea que se quiere demostrar (Frase 1) y cuál es la explicación que las conecta (Frase 3).
 
-**Apoyo 3 y modelo privado, después de un intento con las pistas:** No se conocen ruta exacta, todas las personas ni la operación concreta; aceptar dos límites pertinentes. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
+**Apoyo 3 y modelo privado, después de un intento con las pistas:** La Frase 1 es la Afirmación (la conclusión que se defiende); la Frase 2 es la Evidencia (la prueba física real); y la Frase 3 es el Razonamiento (la explicación lógica que une la prueba con la conclusión).
 
-**Criterio de salida de esta práctica:** Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta.
+**Criterio de salida de esta práctica:** Reconocer y aplicar las tres partes de la argumentación histórica rigurosa.
 
-**Reintento completo:** Después de releer el recurso, responde de nuevo: ¿Qué límite debe mantener la interpretación?
+**Reintento completo:** Después de revisar el recurso, responde de nuevo: ¿Por qué es indispensable aplicar la estructura «Afirmación + Evidencia + Razonamiento» en historia?
 
-- A. Negar todo contacto posible
-- B. Afirmar que todos usaron la misma ruta
-- C. No deducir por un solo objeto cada detalle del viaje
-- D. Tratar una pista como una fotografía completa
+- A. Porque asegura que las conclusiones no sean simples inventos o suposiciones, sino afirmaciones respaldadas por pruebas materiales y explicaciones lógicas rigurosas
+- B. Porque es una fórmula mágica que permite adivinar el futuro sin mirar el pasado
+- C. Porque está prohibido usar la lógica y la razón en las investigaciones científicas
+- D. Porque los historiadores solo pueden repetir de memoria lo que dicen los cuentos de ficción
 
-**Clave:** C. **Si acierta:** Usaste el recurso para fundamentar tu respuesta. **Si necesita más apoyo:** El objeto no informa por sí solo todos los detalles del desplazamiento. Lean la información pertinente juntos y vuelve a intentarlo.
+**Clave:** A. **Si acierta:** ¡Brillante dominio del método y la argumentación histórica! **Si necesita más apoyo:** Recuerda que toda afirmación seria necesita una prueba y una razón que la conecte.
 
 ## 9. Paso 8 — Síntesis y cierre
 
-**Idea clave:** Los bienes circulan y las evidencias tienen límites.
+**Idea clave:** La acumulación de excedentes agrícolas y la especialización artesanal hicieron posible el surgimiento del comercio neolítico por trueque; la arqueología comprueba estas redes a larga distancia a través de materiales foráneos (obsidiana, turquesa y conchas) mediante el método riguroso de Afirmación, Evidencia y Razonamiento.
 
-**Síntesis:** ¿Cómo relacionas excedente y comercio en el caso?
+**Síntesis:** ¿Cómo explicarías la diferencia entre una aldea que vive solo para subsistir y una aldea que comercia gracias a sus excedentes?
 
-**Metacognición:** ¿Qué te ayudó más: leer el recurso, localizar una pista o comparar explicaciones? ¿Por qué?
+**Metacognición:** ¿Qué habilidad de investigación histórica sentiste que mejoraste hoy al analizar los materiales alóctonos y la tríada de argumentación?
 
-**Cierre:** Buen trabajo. Explicaste tu respuesta usando información del recurso.
+**Cierre:** ¡Felicitaciones! Hoy pensaste como un arqueólogo profesional, leyendo en las rocas y en los minerales mudos las rutas de contacto de nuestros antepasados.
 
+**Puente a la siguiente clase:** En nuestra sexta y última clase integraremos todos los aprendizajes de la Revolución Neolítica para evaluar sus transformaciones globales en el espacio geográfico y descubrir qué huellas de ese pasado siguen vivas en nuestro presente.
 
 ## Trazabilidad de esta entrega
 
-**OA:** 7B-HIS-OA02. **Fuente curricular:** base curricular verificada de 7° Básico, temario de Exámenes Libres.
+**OA:** 7B-HIS-OA02. **Fuente curricular:** Base Curricular de 7° Básico, Programa de Estudio MINEDUC y Temario de Exámenes Libres.
 
-**Texto Escolar:** https://drive.google.com/file/d/11lf-eMujw8La3qGWym-0NBtrn1N7BcJq/view. **Páginas físicas PDF:** 24, 25. Las síntesis no se presentan como citas literales.
+**Texto Escolar:** Historia, Geografía y Ciencias Sociales 7° Básico, página impresa 22 («Excedentes, división del trabajo y comercio a larga distancia»). Referencia a investigaciones de Brian Fagan y Nadia Durrani sobre obsidiana de Anatolia, turquesas de Siria y conchas marinas.
 
 **Integración pendiente:** Antigravity materializa esta entrega en la fuente canónica y comprueba su visualización. Este archivo no certifica por sí solo funcionamiento en la App.
 
-**Aprobación:** exclusivamente Walter.
+**Aprobación:** Exclusivamente Walter.
 
 ## Guiones audiovisuales de producción
 
@@ -329,100 +349,71 @@ Pauta vigente para producción futura: siete diapositivas de MOTIVACION y siete 
 
 ### MOTIVACION
 
-#### Diapositiva 01 — Una situación
+#### Diapositiva 01 — El nacimiento del intercambio
+**Título:** Cuando el alimento alcanza y sobra
+**Locución:** ¿Qué sucede cuando una aldea tiene sus silos completamente llenos de grano? Se abre la puerta al contacto y al comercio con el mundo exterior.
 
-**Título:** Una situación
+#### Diapositiva 02 — Nuevos oficios en la aldea
+**Título:** Ceramistas, tejedores y canteros
+**Locución:** Al haber comida asegurada, no todos debían arar la tierra. Nacieron los primeros artesanos especializados en tallar piedras, hilar lana y moldear vasijas.
 
-**Locución:** Hoy exploraremos excedentes, intercambio y evidencia. Observaremos el caso y buscaremos pistas antes de sacar una conclusión.
+#### Diapositiva 03 — Lo que no tenemos en casa
+**Título:** La necesidad del trueque
+**Locución:** Ninguna aldea lo tiene todo: en el valle falta madera dura y en la montaña falta sal. El trueque pacífico permitió compartir lo que a cada uno le sobraba.
 
-#### Diapositiva 02 — La pregunta
+#### Diapositiva 04 — Viajes a tierras lejanas
+**Título:** Caminos de intercambio
+**Locución:** Caravanas de personas y animales cargados con tinajas y telas comenzaron a recorrer cientos de kilómetros para intercambiar bienes valiosos.
 
-**Título:** La pregunta
+#### Diapositiva 05 — Rocas negras en el desierto
+**Título:** Objetos fuera de su lugar
+**Locución:** Si cavas en medio del desierto y encuentras una roca de vidrio volcánico o un collar de conchas marinas, ¿cómo explicas su presencia allí?
 
-**Locución:** Una comunidad tiene cereal adicional y otra recipientes. Intercambian una parte. Mantén a la vista la situación y distingue lo que informa de lo que suponemos.
+#### Diapositiva 06 — La arqueología como detective
+**Título:** Huellas que hablan
+**Locución:** Los arqueólogos no necesitan documentos escritos para saber que hubo comercio: las piedras foráneas son la prueba material irrefutable del intercambio.
 
-#### Diapositiva 03 — Primera idea
-
-**Título:** Primera idea
-
-**Locución:** ¿Cómo relacionas excedente y comercio en el caso? Puedes plantear una primera idea; después comprobaremos qué información la apoya.
-
-#### Diapositiva 04 — Busca pistas
-
-**Título:** Busca pistas
-
-**Locución:** Observa la situación. ¿Qué detalle podría ayudarte a responder? Una pista útil debe ayudarnos a responder la pregunta que estamos explorando.
-
-#### Diapositiva 05 — Compara posibilidades
-
-**Título:** Compara posibilidades
-
-**Locución:** Una respuesta necesita información del recurso. Buscaremos pistas para fundamentarla. Dos respuestas pueden parecer posibles; necesitamos revisar cuál tiene respaldo.
-
-#### Diapositiva 06 — Una estrategia
-
-**Título:** Una estrategia
-
-**Locución:** Lee el recurso y relaciona sus detalles antes de elegir una explicación. La clase mostrará cómo relacionar las pistas y explicar esa relación paso a paso.
-
-#### Diapositiva 07 — Puente a la lectura
-
-**Título:** Puente a la lectura
-
-**Locución:** Ahora descubriremos cómo las pistas ayudan a comprender esta situación. Luego aplicarás el criterio a otra situación breve, con menor ayuda.
+#### Diapositiva 07 — Descubramos las rutas
+**Título:** Rutas del Neolítico
+**Locución:** Sigamos las huellas de la obsidiana y las conchas marinas para reconstruir los primeros lazos comerciales de la historia humana.
 
 ### EXPLICACION
 
-#### Diapositiva 01 — Una herramienta
+#### Diapositiva 01 — De los excedentes al trueque
+**Título:** La base económica del comercio
+**Locución:** El excedente agrícola liberó a parte de la comunidad para la artesanía especializada y generó los productos sobrantes necesarios para iniciar el trueque.
 
-**Título:** Una herramienta
+#### Diapositiva 02 — ¿Qué es el trueque neolítico?
+**Título:** Intercambio sin dinero
+**Locución:** En el Neolítico no existían monedas ni billetes: las transacciones eran intercambios directos de bienes complementarios entre aldeas vecinas y distantes.
 
-**Locución:** La disponibilidad de bienes adicionales favoreció intercambios progresivos entre comunidades.
+#### Diapositiva 03 — La evidencia arqueológica material
+**Título:** Objetos alóctonos o foráneos
+**Locución:** Llamamos materiales alóctonos a aquellos minerales y fósiles que no se originan en la geología local y que fueron transportados desde yacimientos lejanos.
 
-#### Diapositiva 02 — El criterio
+#### Diapositiva 04 — La obsidiana de Anatolia
+**Título:** Cuchillos de vidrio volcánico
+**Locución:** La obsidiana de los volcanes de Anatolia se ha hallado en poblados del valle del Jordán a más de 800 kilómetros, demostrando rutas comerciales estables.
 
-**Título:** El criterio
+#### Diapositiva 05 — Turquesas y conchas marinas
+**Título:** Bienes de prestigio y adorno
+**Locución:** El hallazgo de turquesas del Sinaí y conchas del mar Rojo en aldeas del interior continental confirma el intercambio de adornos a larga distancia.
 
-**Locución:** En el caso, cereal y recipientes se intercambian. El recurso no requiere imaginar monedas para explicar esa acción. Encontrar materiales de otra región constituye una pista de circulación. Esa pista necesita interpretarse en contexto.
+#### Diapositiva 06 — La tríada de la argumentación
+**Título:** Afirmación, Evidencia y Razonamiento
+**Locución:** Concluimos que hubo comercio porque sostenemos una afirmación apoyada en evidencias físicas reales y fundamentada en un razonamiento lógico impecable.
 
-#### Diapositiva 03 — Relación entre pistas
-
-**Título:** Relación entre pistas
-
-**Locución:** Los intercambios podían facilitar la circulación de prácticas y tecnologías además de bienes. Un objeto no revela por sí solo la ruta exacta, la fecha de cada etapa ni todas las personas que participaron.
-
-#### Diapositiva 04 — Modelo explicado
-
-**Título:** Modelo explicado
-
-**Locución:** Una comunidad tiene cereal adicional y otra recipientes. Intercambian una parte. ¿Cómo relacionas excedente y comercio en el caso? La disponibilidad de cereal adicional permite destinar una parte al intercambio por recipientes. El caso presenta bienes disponibles y una acción de intercambio.
-
-#### Diapositiva 05 — Comprobación
-
-**Título:** Comprobación
-
-**Locución:** En un asentamiento aparece un material cuya zona de origen está lejos. ¿Qué interpretación puede apoyar esa pista y qué no permite asegurar por sí sola? Puede apoyar una interpretación de circulación o contacto. No permite reconstruir por sí sola la ruta exacta ni identificar a todos los participantes. El recurso explica tanto el valor como el límite de la pista material.
-
-#### Diapositiva 06 — Error y corrección
-
-**Título:** Error y corrección
-
-**Locución:** Un error que debemos evitar: Inventar una ruta exacta o monedas a partir de un objeto hallado lejos de su origen. Si la respuesta añade información, vuelve al recurso y corrígela.
-
-#### Diapositiva 07 — Síntesis y práctica
-
-**Título:** Síntesis y práctica
-
-**Locución:** Los bienes circulan y las evidencias tienen límites. Lee, localiza evidencia, explica y comprueba. Continúa con la práctica interactiva.
-
+#### Diapositiva 07 — Síntesis de las redes comerciales
+**Título:** Un mundo interconectado
+**Locución:** Gracias a los excedentes y al comercio, las aldeas del Neolítico dejaron de estar aisladas y comenzaron a tejer redes culturales y económicas duraderas.
 
 ## Contrato de revisión y correspondencia pedagógica
 
-**Versión de fuente:** R1 · revisión autorizada 17-10-2026, 11:55 America/Santiago. Fecha de autorización, no certificación de publicación. SHA-256 completo en manifest de esta entrega; no incrustar una huella autorreferente. Estado: CORREGIDA PARA REVISIÓN · NO SINCRONIZADA · NO APROBADA.
+**Versión de fuente:** R2 · revisión canónica regenerada 30-10-2026, 17:30 America/Santiago. Fecha de autorización, no certificación de publicación. SHA-256 completo en manifest de esta entrega; no incrustar una huella autorreferente. Estado: CORREGIDA PARA REVISIÓN · NO SINCRONIZADA · NO APROBADA.
 
 **Reglas aplicadas:** Manual Maestro v2.0, secciones 14–19; Global de Lecciones v1.2, U01–U14; plan vigente de la asignatura. Los códigos IE son identificadores internos: sus descriptores y cobertura están en la matriz del paquete, no se presentan como nomenclatura oficial MINEDUC. Se conservan los encabezados previos para no suponer compatibilidad del parser.
 
-**Autoría e integración:** Este CLASE[NN].md es la fuente editable del paquete revisado. TS/JSON/DOCX y manifest son derivados de esta misma versión, conforme a U03; no editar esos derivados por separado ni tratar el TS anterior como autoridad para revertir esta corrección. Actualizar Drive no acredita sincronización. Antigravity debe informar campos no representables y demostrar el mapeo antes de importar; no usar valores por defecto ni placeholders.
+**Autoría e integración:** Este CLASE05.md es la fuente editable del paquete revisado. TS/JSON/DOCX y manifest son derivados de esta misma versión, conforme a U03; no editar esos derivados por separado ni tratar el TS anterior como autoridad para revertir esta corrección. Actualizar Drive no acredita sincronización. Antigravity debe informar campos no representables y demostrar el mapeo antes de importar; no usar valores por defecto ni placeholders.
 
 | Función del Manual | Sección de esta fuente | Rol y momento |
 |---|---|---|

@@ -1,0 +1,19 @@
+{
+  "marcaIntroducida": "PRUEBA_EDITOR_WORK_2026-10-24_15-30_CL",
+  "campoModificado": "prep.routeToday (texto no evaluativo de ruta para el mentor)",
+  "valorOriginal": "Ruta guiada de la clase 2",
+  "valorModificado": "Ruta guiada de la clase 2 [PRUEBA_EDITOR_WORK_2026-10-24_15-30_CL]",
+  "persistenciaStorage": {
+    "claveLocalStorage": "estudiosimple_custom_player_lessons",
+    "subclaveCustomKey": "7b_cie_oa1_2",
+    "conservadaEnStorage": true
+  },
+  "analisisPrecedenciaLoader": {
+    "archivo": "Web Studio Simple/src/lib/lesson-repository.ts",
+    "funcion": "findInjectedLesson",
+    "lineas": "378-380",
+    "hallazgoCritico": "findCanonicalFactoryLesson se consulta ANTES de leer localStorage.getItem(CUSTOM_PLAYER_LESSONS_KEY). Por tanto, si la clase existe en el bundle estático ALL_CANONICAL_LESSONS, el loader de la App prioriza la versión canónica de fábrica a menos que se fuerce la lectura personalizada o se reestructure la precedencia.",
+    "impacto": "La edición queda efectivamente persistida en el navegador (localStorage), pero la vista interactiva estándar del estudiante puede ignorar la versión guardada si no se selecciona explícitamente el paquete personalizado."
+  },
+  "restauracionFinalizada": "El valor original fue restaurado al 100% tras la comprobación."
+}

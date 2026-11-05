@@ -1,0 +1,41 @@
+{
+  "scope": "Ejecución de ambos validadores recibidos/preparados; no equivale a prueba de navegador",
+  "cases": [
+    {
+      "name": "valid",
+      "before": true,
+      "after": true,
+      "status": "VERIFICADO"
+    },
+    {
+      "name": "unknownOA",
+      "before": true,
+      "after": false,
+      "status": "NO_VERIFICABLE"
+    },
+    {
+      "name": "foreignCourse",
+      "before": true,
+      "after": false,
+      "status": "NO_VERIFICABLE"
+    },
+    {
+      "name": "wrongTotal",
+      "before": true,
+      "after": false,
+      "status": "FALLO_CORRESPONDENCIA"
+    },
+    {
+      "name": "missingActivities",
+      "before": true,
+      "after": false,
+      "status": "FALLO_CORRESPONDENCIA"
+    },
+    {
+      "name": "titleWithoutAccents",
+      "before": true,
+      "after": false,
+      "status": "FALLO_CORRESPONDENCIA"
+    }
+  ]
+}

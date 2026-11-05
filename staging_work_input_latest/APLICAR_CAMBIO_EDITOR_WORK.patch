@@ -1,0 +1,1725 @@
+diff --git a/Web Studio Simple/package.json b/Web Studio Simple/package.json
+index 92290c2..02d1724 100644
+--- a/Web Studio Simple/package.json	
++++ b/Web Studio Simple/package.json	
+@@ -5,7 +5,7 @@
+   "type": "module",
+   "scripts": {
+     "dev": "vite",
+-    "build": "tsc && vite build",
++    "build": "node ../scripts/verify_editor_reference.cjs && tsc && vite build",
+     "lint": "eslint .",
+     "preview": "vite preview",
+     "sync:lessons": "npx tsx ../scripts/pipeline_sync_lessons.ts"
+diff --git a/Web Studio Simple/src/components/admin/cms/LessonEditorView.tsx b/Web Studio Simple/src/components/admin/cms/LessonEditorView.tsx
+index b80f865..7218484 100644
+--- a/Web Studio Simple/src/components/admin/cms/LessonEditorView.tsx	
++++ b/Web Studio Simple/src/components/admin/cms/LessonEditorView.tsx	
+@@ -243,20 +243,13 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
+     }
+   }, [availableOAs, selectedOAId]);
+ 
+-  // Auto-guardado de seguridad al desmontar el editor
+-  useEffect(() => {
+-    return () => {
+-      const curData = lessonDataRef.current;
+-      if (curData && currentOA) {
+-        saveCustomPlayerLesson(
+-          selectedGrade,
+-          selectedSubject,
+-          currentOA.oa,
+-          selectedLessonNum,
+-          curData
+-        );
+-      }
+-    };
++  // El guardado al salir también pasa por la puerta del repositorio.
++  useEffect(() => () => {
++    const candidate = lessonDataRef.current;
++    if (candidate && currentOA) {
++      const result = saveCustomPlayerLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum, candidate, { oaId: currentOA.id });
++      if (!result.ok && !result.validation?.isProtectedOa) console.warn(result.error);
++    }
+   }, [selectedGrade, selectedSubject, currentOA, selectedLessonNum]);
+ 
+   const totalLessons = currentOA?.leccionesSugeridas || 5;
+@@ -274,120 +267,50 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
+     []
+   );
+ 
++
++  const getEditorSelectionKey = () => `${normalizeGrade(selectedGrade)}_${normalizeSubject(selectedSubject)}_${normalizeOa(currentOA?.oa || "")}_${selectedLessonNum}`;
++  const persistEditorLesson = (candidate: LessonData): boolean => {
++    if (!currentOA) return false;
++    const result = saveCustomPlayerLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum, candidate, { oaId: currentOA.id });
++    if (!result.ok) {
++      setValidationErrorMsg(result.error || 'No se guardó la edición.');
++      setValidationErrors(result.validation?.details || []);
++      setSaveStatus(null);
++      return false;
++    }
++    setValidationErrorMsg(null); setValidationErrors(null); setIsCustom(true);
++    return true;
++  };
++  const canLeaveCurrentLesson = (): boolean => {
++    const candidate = lessonDataRef.current || lessonData;
++    if (!candidate || !currentOA) return true;
++    const validation = validateLessonCanonical(candidate, { grade: selectedGrade, subject: selectedSubject, oaCode: currentOA.oa, lessonNumber: selectedLessonNum });
++    if (validation.isValid && validation.isProtectedOa) return true;
++    return persistEditorLesson(candidate);
++  };
++
+   // Cargar lección nativa directamente sin conversiones degradantes
+   const loadLesson = useCallback((forceReload: boolean = false) => {
+     if (!currentOA) return;
+-
+-    const currentKey = `${normalizeGrade(selectedGrade)}_${normalizeSubject(selectedSubject)}_${normalizeOa(currentOA.oa)}_${selectedLessonNum}`;
+-    if (!forceReload && loadedLessonKeyRef.current === currentKey && lessonDataRef.current !== null) {
+-      // Lección ya cargada en memoria; proteger contra sobreescritura reactiva del catálogo
++    const currentKey = getEditorSelectionKey();
++    if (!forceReload && loadedLessonKeyRef.current === currentKey && lessonDataRef.current !== null) return;
++    const player = findInjectedLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum);
++    const validation = validateLessonCanonical(player, { grade: selectedGrade, subject: selectedSubject, oaCode: currentOA.oa, lessonNumber: selectedLessonNum });
++    if (!player || !validation.isValid) {
++      loadedLessonKeyRef.current = null;
++      setLessonData(null);
++      setValidationErrorMsg(validation.error || 'NO_VERIFICABLE: no hay una lección válida para esta selección. No se generó contenido de reemplazo.');
++      setValidationErrors(validation.details || []);
+       return;
+     }
++    const loadIssue = getLastLessonLoadIssue();
++    setValidationErrorMsg(loadIssue?.error || null);
++    setValidationErrors(loadIssue?.details || null);
+     loadedLessonKeyRef.current = currentKey;
+-
+-    // 1. Cargar directamente desde findInjectedLesson (revisa localStorage unificado, fábrica canónica curada)
+-    const playerLesson = findInjectedLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum);
+-    const customized = isPlayerLessonCustomized(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum) ||
+-                       isLessonCustomized(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum);
+-    setIsCustom(customized);
+-
+-    if (playerLesson) {
+-      const cloned: LessonData = JSON.parse(JSON.stringify(playerLesson));
+-
+-      // Asegurar inicialización de los 4 bloques pedagógicos neutrales sólo si estuviesen ausentes
+-      if (!cloned.route.blocks || cloned.route.blocks.length === 0) {
+-        cloned.route.blocks = [
+-          { id: 'b1', number: '01', title: 'Punto de partida', subtitle: 'Activación', color: 'teal' },
+-          { id: 'b2', number: '02', title: 'Motivación y Explicación', subtitle: 'Cápsula interactiva', color: 'orange' },
+-          { id: 'b3', number: '03', title: 'Práctica guiada', subtitle: 'Transferencia', color: 'yellow' },
+-          { id: 'b4', number: '04', title: 'Miniquiz', subtitle: 'Evaluación y cierre', color: 'navy' }
+-        ];
+-      }
+-
+-      // Preservar tarjetas de foco existentes; si no existen, inicializar como arreglo vacío sin contaminar con matemática
+-      if (!cloned.route.keyQuestions) {
+-        cloned.route.keyQuestions = [];
+-      }
+-
+-      // Asegurar etapa reference (Comprendamos la respuesta) respetando la disciplina de la lección
+-      if (!cloned.reference) {
+-        cloned.reference = {
+-          dilePrompt: cloned.situation?.dilePrompt || 'Observa la situación y responde la pregunta clave.',
+-          question: 'Dime con tus palabras: ¿qué idea central explica esta situación?',
+-          expectedAnswer: cloned.situation?.expectedAnswer || 'Idea central explicada con tus palabras.',
+-          socraticHint: cloned.situation?.socraticHint || 'Fíjate en las palabras clave del caso.',
+-          feedbackSuccess: '¡Exacto! Buen razonamiento.',
+-          feedbackSupport: 'Revisa la situación planteada para encontrar la respuesta.'
+-        };
+-      }
+-
+-      // Puntos de foco del video motivacional (preservar los propios; no inyectar matemática)
+-      if (!cloned.hook.focusPoints) {
+-        cloned.hook.focusPoints = [];
+-      }
+-
+-      // Preguntas de comprobación post-video explicativo (derivar de preQuestions si existen, o lista vacía)
+-      if (!cloned.postQuestions || cloned.postQuestions.length === 0) {
+-        cloned.postQuestions = cloned.preQuestions && cloned.preQuestions.length >= 2
+-          ? JSON.parse(JSON.stringify(cloned.preQuestions.slice(0, 2)))
+-          : [];
+-      }
+-
+-      // Estrategia para pensar neutral si no está definida en la lección
+-      if (!cloned.strategy) {
+-        const titleContext = cloned.metadata?.lessonTitle || 'la clase';
+-        cloned.strategy = {
+-          title: `Estrategia de resolución: ${titleContext}`,
+-          dileIntro: 'Sigue estos tres pasos para analizar y fundamentar tu respuesta:',
+-          steps: [
+-            { number: 1, title: 'Identifica', desc: 'Lee con atención el caso o problema y localiza los datos clave.' },
+-            { number: 2, title: 'Relaciona', desc: 'Conecta la evidencia del texto con los conceptos aprendidos.' },
+-            { number: 3, title: 'Concluye', desc: 'Explica tu razonamiento con claridad antes de responder.' }
+-          ]
+-        };
+-      }
+-
+-      // Ideas de síntesis (preservar existentes; si está vacía, derivar de objetivos sin forzar matemática)
+-      if (!cloned.summaryIdeas || cloned.summaryIdeas.length === 0) {
+-        cloned.summaryIdeas = [
+-          ['1 · Concepto central', cloned.metadata?.lessonTitle || 'Idea fundamental de la lección.'],
+-          ['2 · Aplicación guiada', 'Uso de la evidencia del recurso para fundamentar conclusiones.'],
+-          ['3 · Criterio formativo', 'Distinguir hechos comprobables de opiniones sin evidencia.']
+-        ];
+-      }
+-
+-      setLessonData(cloned);
+-      return;
+-    }
+-
+-    // 2. Fallback: Paquete inyectado o generado dinámicamente
+-    const pkg = getInjectedPackage(selectedGrade, selectedSubject, currentOA.oa);
+-    if (pkg) {
+-      const foundLesson = pkg.lessons.find((l) => l.num === selectedLessonNum);
+-      if (foundLesson) {
+-        const adapted = adaptGeneratorLessonToPlayer(
+-          foundLesson,
+-          { curso: selectedGrade, asignatura: selectedSubject, oa: currentOA.oa, titulo: currentOA.descripcion },
+-          totalLessons
+-        );
+-        setLessonData(JSON.parse(JSON.stringify(adapted)));
+-        return;
+-      }
+-    }
+-
+-    const generatedPkg = generateOAPackage(currentOA, totalLessons);
+-    const targetLesson =
+-      generatedPkg.lessons.find((l) => l.num === selectedLessonNum) || generatedPkg.lessons[0];
+-
+-    if (targetLesson) {
+-      const adapted = adaptGeneratorLessonToPlayer(
+-        targetLesson,
+-        { curso: selectedGrade, asignatura: selectedSubject, oa: currentOA.oa, titulo: currentOA.descripcion },
+-        totalLessons
+-      );
+-      setLessonData(JSON.parse(JSON.stringify(adapted)));
+-    }
+-  }, [currentOA, selectedGrade, selectedSubject, selectedLessonNum, totalLessons]);
++    setIsCustom(isPlayerLessonCustomized(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum));
++    // Abrir conserva los datos; los opcionales ausentes no se completan con contenido.
++    setLessonData(JSON.parse(JSON.stringify(player)));
++  }, [currentOA, selectedGrade, selectedSubject, selectedLessonNum]);
+ 
+   useEffect(() => {
+     initializeInjectedLessons()
+@@ -401,101 +324,22 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
+   }, [loadLesson]);
+ 
+   // Guardar cambios directamente en el almacenamiento unificado de aula
+-  const handleSaveLesson = () => {
+-    const curData = lessonDataRef.current || lessonData;
+-    if (!curData || !currentOA) return;
+-
+-    // Validación canónica preflight
+-    const validation = validateLessonCanonical(curData);
+-    if (!validation.isValid) {
+-      setValidationErrorMsg(validation.error || 'La lección no cumple con la referencia canónica oficial.');
+-      setValidationErrors(validation.details || []);
+-      setSaveStatus(null);
+-      return;
+-    }
+-
+-    if (validation.isProtectedOa) {
+-      setValidationErrorMsg('Matemática OA01 es un paquete blindado de fábrica (PROTEGIDO_NO_INTERVENIDO). Sus modificaciones no se persisten en almacenamiento.');
+-      setValidationErrors([
+-        {
+-          field: 'metadata.oaCode',
+-          expected: 'Matemática OA01 (Blindaje Inmutable de Fábrica)',
+-          found: 'Intento de persistencia personalizada'
+-        }
+-      ]);
+-      setSaveStatus(null);
+-      return;
+-    }
+-
+-    // Limpiar alertas de error si la validación fue exitosa
+-    setValidationErrorMsg(null);
+-    setValidationErrors(null);
+-
+-    saveCustomPlayerLesson(
+-      selectedGrade,
+-      selectedSubject,
+-      currentOA.oa,
+-      selectedLessonNum,
+-      curData
+-    );
+-
+-    // Sincronizar en paralelo paquete para compatibilidad retroactiva
+-    try {
+-      const genLesson = adaptPlayerLessonToGenerator(curData);
+-      saveCustomLessonData(
+-        selectedGrade,
+-        selectedSubject,
+-        currentOA.oa,
+-        currentOA.id,
+-        genLesson,
+-        totalLessons
+-      );
+-    } catch (e) {
+-      console.warn('Error sincronizando paquete generator:', e);
++  const handleSaveLesson = (): boolean => {
++    const candidate = lessonDataRef.current || lessonData;
++    if (!candidate || !currentOA) return false;
++    const ok = persistEditorLesson(candidate);
++    if (ok) {
++      setSaveStatus('Lección guardada con éxito en este navegador.');
++      setTimeout(() => setSaveStatus(null), 3500);
+     }
+-
+-    setIsCustom(true);
+-    setSaveStatus('Lección guardada con éxito en almacenamiento persistente.');
+-    setTimeout(() => setSaveStatus(null), 3500);
++    return ok;
+   };
+ 
+   // Auto-guardado centralizado al conmutar entre clases / lecciones
+   const handleSwitchLesson = (targetNum: number) => {
+-    if (targetNum === selectedLessonNum) return;
+-
+-    const curData = lessonDataRef.current || lessonData;
+-    if (curData && currentOA) {
+-      const validation = validateLessonCanonical(curData);
+-      if (validation.isValid && !validation.isProtectedOa) {
+-        saveCustomPlayerLesson(
+-          selectedGrade,
+-          selectedSubject,
+-          currentOA.oa,
+-          selectedLessonNum,
+-          curData
+-        );
+-
+-        try {
+-          const genLesson = adaptPlayerLessonToGenerator(curData);
+-          saveCustomLessonData(
+-            selectedGrade,
+-            selectedSubject,
+-            currentOA.oa,
+-            currentOA.id,
+-            genLesson,
+-            totalLessons
+-          );
+-        } catch (e) {
+-          console.warn('Error sincronizando paquete generator:', e);
+-        }
+-        setIsCustom(true);
+-      }
+-    }
+-
++    if (targetNum === selectedLessonNum || !canLeaveCurrentLesson()) return;
+     setSelectedLessonNum(targetNum);
+-    if (typeof window !== 'undefined') {
+-      sessionStorage.setItem('estudiosimple_editor_lesson_num', String(targetNum));
+-    }
++    if (typeof window !== 'undefined') sessionStorage.setItem('estudiosimple_editor_lesson_num', String(targetNum));
+   };
+ 
+   const handleSelectStep = (stepId: EditorStepId) => {
+@@ -506,79 +350,29 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
+   };
+ 
+   const handleGradeChange = (newGrade: string) => {
+-    if (newGrade === selectedGrade) return;
+-    const curData = lessonDataRef.current || lessonData;
+-    if (curData && currentOA) {
+-      saveCustomPlayerLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum, curData);
+-    }
+-    setSelectedGrade(newGrade);
+-    setSelectedLessonNum(1);
+-    if (typeof window !== 'undefined') {
+-      sessionStorage.setItem('estudiosimple_editor_grade', newGrade);
+-      sessionStorage.setItem('estudiosimple_editor_lesson_num', '1');
+-    }
++    if (newGrade === selectedGrade || !canLeaveCurrentLesson()) return;
++    setSelectedGrade(newGrade); setSelectedLessonNum(1);
++    if (typeof window !== 'undefined') { sessionStorage.setItem('estudiosimple_editor_grade', newGrade); sessionStorage.setItem('estudiosimple_editor_lesson_num', '1'); }
+   };
+ 
+   const handleSubjectChange = (newSubject: string) => {
+-    if (newSubject === selectedSubject) return;
+-    const curData = lessonDataRef.current || lessonData;
+-    if (curData && currentOA) {
+-      saveCustomPlayerLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum, curData);
+-    }
+-    setSelectedSubject(newSubject);
+-    setSelectedLessonNum(1);
+-    if (typeof window !== 'undefined') {
+-      sessionStorage.setItem('estudiosimple_editor_subject', newSubject);
+-      sessionStorage.setItem('estudiosimple_editor_lesson_num', '1');
+-    }
++    if (newSubject === selectedSubject || !canLeaveCurrentLesson()) return;
++    setSelectedSubject(newSubject); setSelectedLessonNum(1);
++    if (typeof window !== 'undefined') { sessionStorage.setItem('estudiosimple_editor_subject', newSubject); sessionStorage.setItem('estudiosimple_editor_lesson_num', '1'); }
+   };
+ 
+   const handleOAChange = (newOAId: string) => {
+-    if (newOAId === selectedOAId) return;
+-    const curData = lessonDataRef.current || lessonData;
+-    if (curData && currentOA) {
+-      saveCustomPlayerLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum, curData);
+-    }
+-    setSelectedOAId(newOAId);
+-    setSelectedLessonNum(1);
+-    if (typeof window !== 'undefined') {
+-      sessionStorage.setItem('estudiosimple_editor_oa_id', newOAId);
+-      sessionStorage.setItem('estudiosimple_editor_lesson_num', '1');
+-    }
++    if (newOAId === selectedOAId || !canLeaveCurrentLesson()) return;
++    setSelectedOAId(newOAId); setSelectedLessonNum(1);
++    if (typeof window !== 'undefined') { sessionStorage.setItem('estudiosimple_editor_oa_id', newOAId); sessionStorage.setItem('estudiosimple_editor_lesson_num', '1'); }
+   };
+ 
+   // Guardado contextual directo para bloques audiovisuales
+   const handlePersistCurrentVideo = (stage: 'hook' | 'formalization') => {
+-    const curData = lessonDataRef.current || lessonData;
+-    if (!curData || !currentOA) return;
+-
+-    saveCustomPlayerLesson(
+-      selectedGrade,
+-      selectedSubject,
+-      currentOA.oa,
+-      selectedLessonNum,
+-      curData
+-    );
+-
+-    try {
+-      const genLesson = adaptPlayerLessonToGenerator(curData);
+-      saveCustomLessonData(
+-        selectedGrade,
+-        selectedSubject,
+-        currentOA.oa,
+-        currentOA.id,
+-        genLesson,
+-        totalLessons
+-      );
+-    } catch (e) {
+-      console.warn('Error auto-sincronizando generador:', e);
+-    }
+-
+-    setIsCustom(true);
++    const candidate = lessonDataRef.current || lessonData;
++    if (!candidate || !currentOA || !persistEditorLesson(candidate)) return;
+     setVideoSaveFeedback(stage);
+-    setTimeout(() => {
+-      setVideoSaveFeedback((prev) => (prev === stage ? null : prev));
+-    }, 3000);
++    setTimeout(() => setVideoSaveFeedback(prev => prev === stage ? null : prev), 3000);
+   };
+ 
+   // Restablecer a versión oficial canónica
+@@ -600,7 +394,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
+   const handleTestInLivePlayer = () => {
+     if (!lessonData || !currentOA) return;
+ 
+-    const validation = validateLessonCanonical(lessonData);
++    const validation = validateLessonCanonical(lessonData, { grade: selectedGrade, subject: selectedSubject, oaCode: currentOA.oa, lessonNumber: selectedLessonNum });
+     if (!validation.isValid) {
+       setValidationErrorMsg(validation.error || 'No es posible probar en aula: la lección contiene discrepancias canónicas.');
+       setValidationErrors(validation.details || []);
+@@ -608,13 +402,16 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
+     }
+ 
+     if (!validation.isProtectedOa) {
+-      handleSaveLesson();
++      if (!handleSaveLesson()) return;
+     } else {
+       setValidationErrorMsg(null);
+       setValidationErrors(null);
+     }
+ 
+-    const freshClone = JSON.parse(JSON.stringify(lessonData));
++    const candidate = lessonDataRef.current || lessonData;
++    const freshClone = JSON.parse(JSON.stringify(validation.isProtectedOa
++      ? findInjectedLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum)
++      : candidate));
+ 
+     // Reiniciar estado de sesión residual en localStorage para que los videos e interacciones comiencen frescos
+     if (typeof window !== 'undefined') {
+@@ -668,7 +465,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
+   const handleDownloadPrompt = () => {
+     if (!lessonData || !currentOA) return;
+ 
+-    const validation = validateLessonCanonical(lessonData);
++    const validation = validateLessonCanonical(lessonData, { grade: selectedGrade, subject: selectedSubject, oaCode: currentOA.oa, lessonNumber: selectedLessonNum });
+     if (!validation.isValid) {
+       setValidationErrorMsg(validation.error || 'Descarga de prompt bloqueada: la lección contiene discrepancias canónicas.');
+       setValidationErrors(validation.details || []);
+@@ -684,7 +481,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
+   const handleDownloadDocx = async () => {
+     if (!lessonData || !currentOA) return;
+ 
+-    const validation = validateLessonCanonical(lessonData);
++    const validation = validateLessonCanonical(lessonData, { grade: selectedGrade, subject: selectedSubject, oaCode: currentOA.oa, lessonNumber: selectedLessonNum });
+     if (!validation.isValid) {
+       setValidationErrorMsg(validation.error || 'Exportación DOCX bloqueada: la lección contiene discrepancias canónicas.');
+       setValidationErrors(validation.details || []);
+@@ -717,7 +514,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
+   const handleExportJson = () => {
+     if (!lessonData || !currentOA) return;
+ 
+-    const validation = validateLessonCanonical(lessonData);
++    const validation = validateLessonCanonical(lessonData, { grade: selectedGrade, subject: selectedSubject, oaCode: currentOA.oa, lessonNumber: selectedLessonNum });
+     if (!validation.isValid) {
+       setValidationErrorMsg(validation.error || 'Exportación JSON bloqueada: la lección contiene discrepancias canónicas.');
+       setValidationErrors(validation.details || []);
+@@ -742,7 +539,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
+   const handleCopyPrompt = async (type: 'hook' | 'explicativo') => {
+     if (!lessonData || !currentOA) return;
+ 
+-    const validation = validateLessonCanonical(lessonData);
++    const validation = validateLessonCanonical(lessonData, { grade: selectedGrade, subject: selectedSubject, oaCode: currentOA.oa, lessonNumber: selectedLessonNum });
+     if (!validation.isValid) {
+       setValidationErrorMsg(validation.error || 'Copia de prompts bloqueada: la lección contiene discrepancias canónicas.');
+       setValidationErrors(validation.details || []);
+@@ -784,7 +581,13 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
+     return (
+       <div className="p-8 text-center bg-white rounded-3xl border border-slate-200 shadow-sm space-y-4">
+         <Clock className="w-8 h-8 text-[#12A1A4] mx-auto animate-spin" />
+-        <p className="text-sm font-bold text-slate-700">Cargando editor de lección...</p>
++        <p className="text-sm font-bold text-slate-700" role={validationErrorMsg ? 'alert' : 'status'}>{validationErrorMsg || 'Cargando editor de lección...'}</p>
++        {validationErrorMsg && <div className="flex flex-wrap gap-2">
++          <select aria-label="Nivel" value={selectedGrade} onChange={e => handleGradeChange(e.target.value)}>{ALL_GRADE_LEVELS.map(g => <option key={g}>{g}</option>)}</select>
++          <select aria-label="Asignatura" value={selectedSubject} onChange={e => handleSubjectChange(e.target.value)}>{ALL_SUBJECTS.map(subject => <option key={subject}>{subject}</option>)}</select>
++          <select aria-label="Objetivo" value={currentOA?.id || ''} onChange={e => handleOAChange(e.target.value)}>{availableOAs.map(oa => <option key={oa.id} value={oa.id}>{oa.oa}</option>)}</select>
++          <input aria-label="Clase" type="number" min="1" max={totalLessons} value={selectedLessonNum} onChange={e => { const n = Number(e.target.value); if (Number.isInteger(n) && n > 0 && n <= totalLessons) handleSwitchLesson(n); }} />
++        </div>}
+       </div>
+     );
+   }
+@@ -1958,7 +1761,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
+                               };
+                               setLessonData(updatedLesson);
+                               if (currentOA) {
+-                                saveCustomPlayerLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum, updatedLesson);
++                                if (!persistEditorLesson(updatedLesson)) return;
+                                 setIsCustom(true);
+                                 setVideoSaveFeedback('hook');
+                                 setTimeout(() => setVideoSaveFeedback(null), 3000);
+@@ -1980,7 +1783,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
+                               };
+                               setLessonData(updatedLesson);
+                               if (currentOA) {
+-                                saveCustomPlayerLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum, updatedLesson);
++                                if (!persistEditorLesson(updatedLesson)) return;
+                                 setIsCustom(true);
+                                 setVideoSaveFeedback('hook');
+                                 setTimeout(() => setVideoSaveFeedback(null), 3000);
+@@ -2096,7 +1899,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
+                   <div className="flex items-center justify-between">
+                     <div>
+                       <strong className="text-[#8B5CF6] text-xs uppercase tracking-wider font-bold block">
+-                        3 PUNTOS DE FOCO VISUAL DEL ALUMNO (hook.focusPoints)
++                        {(lessonData.hook.focusPoints || []).length} PUNTOS DE FOCO VISUAL DEL ALUMNO (hook.focusPoints)
+                       </strong>
+                       <p className="text-[11px] text-slate-500">
+                         Los 3 elementos clave que el estudiante ve en su pantalla antes de iniciar la reproducción: "Mientras observas, fíjate en..."
+@@ -2641,7 +2444,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
+                               };
+                               setLessonData(updatedLesson);
+                               if (currentOA) {
+-                                saveCustomPlayerLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum, updatedLesson);
++                                if (!persistEditorLesson(updatedLesson)) return;
+                                 setIsCustom(true);
+                                 setVideoSaveFeedback('formalization');
+                                 setTimeout(() => setVideoSaveFeedback(null), 3000);
+@@ -2663,7 +2466,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
+                               };
+                               setLessonData(updatedLesson);
+                               if (currentOA) {
+-                                saveCustomPlayerLesson(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum, updatedLesson);
++                                if (!persistEditorLesson(updatedLesson)) return;
+                                 setIsCustom(true);
+                                 setVideoSaveFeedback('formalization');
+                                 setTimeout(() => setVideoSaveFeedback(null), 3000);
+@@ -2845,7 +2648,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
+                   <div>
+                     <h3 className="text-xs font-black uppercase text-amber-800 tracking-wider flex items-center gap-2">
+                       <CheckCircle2 size={16} className="text-amber-600" />
+-                      <span>Comprobemos lo aprendido (2 Preguntas Guiadas Post-Video - postQuestions)</span>
++                      <span>Comprobemos lo aprendido ({(lessonData.postQuestions || []).length} preguntas post-video)</span>
+                     </h3>
+                     <p className="text-[11px] text-slate-500">
+                       Preguntas de comprobación inmediata que el mentor formula al terminar el video explicativo.
+@@ -3746,7 +3549,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
+                 <div className="flex items-center justify-between">
+                   <div>
+                     <strong className="text-[#12a1a4] text-xs uppercase tracking-wider font-bold block">
+-                      3 IDEAS CLAVE ESTRUCTURADAS (Recordemos lo aprendido - lessonData.summaryIdeas)
++                      {(lessonData.summaryIdeas || []).length} IDEAS CLAVE ESTRUCTURADAS (Recordemos lo aprendido - lessonData.summaryIdeas)
+                     </strong>
+                     <p className="text-[11px] text-slate-500">
+                       Las 3 ideas clave que el mentor muestra secuencialmente en la etapa "Recordemos lo aprendido".
+diff --git a/Web Studio Simple/src/lib/lesson-canonical-validator.ts b/Web Studio Simple/src/lib/lesson-canonical-validator.ts
+index ae1f132..9a8c95c 100644
+--- a/Web Studio Simple/src/lib/lesson-canonical-validator.ts	
++++ b/Web Studio Simple/src/lib/lesson-canonical-validator.ts	
+@@ -1,181 +1,68 @@
+-/**
+- * Validador canónico client-side de lecciones (puro navegador).
+- * Consume el JSON de referencia canónica sin dependencias de Node.js (fs, path, crypto).
+- * Valida correspondencia de identidad, título oficial y puente de continuidad.
+- */
+-
++/** Política canónica compartida por editor y repositorio; no fabrica contenido. */
+ import canonicalData from '../data/canonicalReference.json';
+-
+-export interface CanonicalValidationDetail {
+-  field: string;
+-  expected: string;
+-  found: string;
+-}
+-
++export interface LessonSelection { grade: string | number; subject: string; oaCode: string | number; lessonNumber: number; courseId?: string; }
++export interface CanonicalValidationDetail { field: string; expected: string; found: string; }
+ export interface CanonicalValidationResult {
+-  isValid: boolean;
+-  error?: string;
+-  details?: CanonicalValidationDetail[];
+-  canonicalEntry?: {
+-    course: string;
+-    subject: string;
+-    grade: number;
+-    oa: number;
+-    lesson: number;
+-    total: number;
+-    title: string;
+-    nextTitle: string;
+-    nextKind: string;
+-    [key: string]: any;
+-  };
+-  isProtectedOa?: boolean;
+-}
+-
+-export function text(value: unknown): string {
+-  return String(value ?? '').normalize('NFC').replace(/\s+/g, ' ').trim();
+-}
+-
+-export function key(value: unknown): string {
+-  return text(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+-}
+-
+-export function subjectKey(value: unknown): string {
+-  const aliases: Record<string, string> = {
+-    mat: 'mat',
+-    matematica: 'mat',
+-    cna: 'cie',
+-    cie: 'cie',
+-    ciencias_naturales: 'cie',
+-    'ciencias naturales': 'cie',
+-    his: 'his',
+-    historia: 'his',
+-    historia_geografia: 'his',
+-    'historia, geografia y ciencias sociales': 'his',
+-    ing: 'ing',
+-    ingles: 'ing',
+-    english: 'ing',
+-    'idioma extranjero ingles': 'ing',
+-    lyl: 'len',
+-    len: 'len',
+-    lengua: 'len',
+-    lengua_literatura: 'len',
+-    'lengua y literatura': 'len'
+-  };
+-  const normalized = key(value);
+-  return aliases[normalized] || normalized;
++  isValid: boolean; status: 'VERIFICADO' | 'NO_VERIFICABLE' | 'FALLO_CORRESPONDENCIA' | 'PROTEGIDO_NO_INTERVENIDO';
++  error?: string; details: CanonicalValidationDetail[]; canonicalEntry?: any; isProtectedOa?: boolean;
+ }
+-
+-export function oaNumber(value: unknown): number {
+-  const m = text(value).match(/\bOA\s*0*(\d+)\b/i);
+-  if (m) return Number(m[1]);
+-  const num = Number(value);
+-  return Number.isInteger(num) && num > 0 ? num : 0;
++export const text = (v: unknown): string => String(v ?? '').normalize('NFC').replace(/\s+/g, ' ').trim();
++export const key = (v: unknown): string => text(v).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
++export function subjectKey(v: unknown): string {
++  const aliases: Record<string,string> = {mat:'mat',matematica:'mat',cna:'cie',cie:'cie',ciencias_naturales:'cie','ciencias naturales':'cie',his:'his',historia:'his',historia_geografia:'his','historia, geografia y ciencias sociales':'his',ing:'ing',ingles:'ing',english:'ing','idioma extranjero ingles':'ing',lyl:'len',len:'len',lengua:'len',lengua_literatura:'len','lengua y literatura':'len'};
++  return aliases[key(v)] ?? '';
+ }
+-
+-export function gradeNumber(value: unknown): number {
+-  const m = text(value).match(/^(\d+)(?:\D|$)/);
+-  if (m) return Number(m[1]);
+-  const num = Number(value);
+-  return Number.isInteger(num) && num > 0 ? num : 0;
++export function oaNumber(v: unknown): number { const m=text(v).match(/^OA\s*0*(\d+)$/i); return m?Number(m[1]):typeof v==='number'&&Number.isInteger(v)?v:0; }
++export function gradeNumber(v: unknown): number { const m=text(v).match(/^(\d+)(?:\D|$)/); return m?Number(m[1]):0; }
++const obj=(v:any): v is Record<string,any> => Boolean(v)&&typeof v==='object'&&!Array.isArray(v);
++const filled=(v:any)=>typeof v==='string'&&text(v).length>0;
++export function findCanonicalReferenceEntry(grade:string|number,subject:string,oa:string|number,lesson:number,courseId?:string) {
++  const list=canonicalData.lessons.filter(x=>x.grade===gradeNumber(grade)&&x.subject===subjectKey(subject)&&x.oa===oaNumber(oa)&&x.lesson===lesson&&(!courseId||x.course===courseId));
++  return list.length===1?list[0]:undefined;
+ }
+-
+-/**
+- * Busca una lección en el catálogo de referencia canónica oficial.
+- */
+-export function findCanonicalReferenceEntry(
+-  grade: string | number,
+-  subject: string,
+-  oa: string | number,
+-  lessonNumber: number
+-) {
+-  const g = gradeNumber(grade);
+-  const s = subjectKey(subject);
+-  const o = oaNumber(oa);
+-  const l = Number(lessonNumber);
+-
+-  const lessons = (canonicalData as any).lessons || [];
+-  return lessons.find(
+-    (item: any) =>
+-      item.grade === g &&
+-      item.subject === s &&
+-      item.oa === o &&
+-      item.lesson === l
+-  );
+-}
+-
+-/**
+- * Valida una lección contra la referencia canónica oficial.
+- * Retorna si es válida, los detalles de discrepancia (campo, esperado, encontrado)
+- * y el estado de protección (ej. Matemática OA01 blindada de fábrica).
+- */
+-export function validateLessonCanonical(lesson: any): CanonicalValidationResult {
+-  if (!lesson || typeof lesson !== 'object' || !lesson.metadata) {
+-    return {
+-      isValid: false,
+-      error: 'La lección no contiene metadatos válidos.',
+-      details: [{ field: 'metadata', expected: 'Objeto metadata válido', found: String(lesson) }]
+-    };
+-  }
+-
+-  const meta = lesson.metadata;
+-  const grade = gradeNumber(meta.grade);
+-  const subject = subjectKey(meta.subject);
+-  const oa = oaNumber(meta.oaCode);
+-  const lessonNum = Number(meta.lessonNumber);
+-
+-  // Matemática OA01 está blindada de fábrica: PROTEGIDO_NO_INTERVENIDO
+-  const isProtectedOa = subject === 'mat' && oa === 1;
+-
+-  const canonical = findCanonicalReferenceEntry(grade, subject, oa, lessonNum);
+-
+-  // Si la lección no forma parte de los OAs auditados canónicamente, permitir pero reportar
+-  if (!canonical) {
+-    return {
+-      isValid: true,
+-      canonicalEntry: undefined,
+-      isProtectedOa
+-    };
+-  }
+-
+-  const details: CanonicalValidationDetail[] = [];
+-
+-  // 1. Validar correspondencia de título oficial de cabecera
+-  const foundTitle = text(meta.lessonTitle);
+-  const expectedTitle = text(canonical.title);
+-  if (key(foundTitle) !== key(expectedTitle)) {
+-    details.push({
+-      field: 'lessonTitle (Título Oficial)',
+-      expected: expectedTitle,
+-      found: foundTitle || '(vacío)'
+-    });
+-  }
+-
+-  // 2. Validar puente de continuidad (nextLessonTitle) cuando existe siguiente clase en el mismo OA
+-  if (canonical.nextKind === 'NEXT_CLASS' && canonical.nextTitle) {
+-    const foundNextTitle = text(meta.nextLessonTitle);
+-    const expectedNextTitle = text(canonical.nextTitle);
+-    if (key(foundNextTitle) !== key(expectedNextTitle)) {
+-      details.push({
+-        field: 'nextLessonTitle (Puente de Continuidad)',
+-        expected: expectedNextTitle,
+-        found: foundNextTitle || '(vacío)'
+-      });
+-    }
++export function validateLessonCanonical(lesson:any,selection?:LessonSelection):CanonicalValidationResult {
++  const details:CanonicalValidationDetail[]=[];
++  const add=(field:string,expected:unknown,found:unknown)=>details.push({field,expected:String(expected),found:found===undefined?'(ausente)':typeof found==='string'?found:JSON.stringify(found)});
++  const result=(status:CanonicalValidationResult['status'],error?:string,canonicalEntry?:any):CanonicalValidationResult=>({isValid:status==='VERIFICADO'||status==='PROTEGIDO_NO_INTERVENIDO',status,error,details,canonicalEntry,isProtectedOa:status==='PROTEGIDO_NO_INTERVENIDO'});
++  if(!obj(lesson)||!obj(lesson.metadata))return result('NO_VERIFICABLE','Faltan metadatos verificables.');
++  if(canonicalData.schema!=='estudiosimple.canonical-titles.v1'||!Array.isArray(canonicalData.lessons))return result('NO_VERIFICABLE','Referencia canónica no compatible.');
++  const m=lesson.metadata;
++  const s=selection??{grade:m.grade,subject:m.subject,oaCode:m.oaCode,lessonNumber:m.lessonNumber,courseId:m.courseId};
++  const g=gradeNumber(s.grade),sub=subjectKey(s.subject),oa=oaNumber(s.oaCode),num=s.lessonNumber;
++  if(!g||!sub||!oa||!Number.isInteger(num)||num<1)return result('NO_VERIFICABLE','Identidad seleccionada incompleta o desconocida.');
++  for(const [field,wanted,actual] of [['grade',g,gradeNumber(m.grade)],['subject',sub,subjectKey(m.subject)],['oaCode',oa,oaNumber(m.oaCode)],['lessonNumber',num,m.lessonNumber]] as Array<[string,unknown,unknown]>)if(wanted!==actual)add(field,wanted,actual);
++  const protectedGroup=canonicalData.protected.find(p=>p.subject===sub&&p.oa===oa&&Number(p.course.match(/-(\d+)$/)?.[1])===g&&(!s.courseId||p.course===s.courseId));
++  if(protectedGroup){
++    if(m.courseId!==undefined&&m.courseId!==protectedGroup.course)add('courseId',protectedGroup.course,m.courseId);
++    if(num>protectedGroup.total)add('lessonNumber',`1–${protectedGroup.total}`,num);
++    if(details.length)return result('FALLO_CORRESPONDENCIA','Identidad contradictoria con el paquete protegido.');
++    return result('PROTEGIDO_NO_INTERVENIDO');
+   }
+-
+-  if (details.length > 0) {
+-    return {
+-      isValid: false,
+-      error: `Discrepancia con la referencia canónica oficial (${canonical.course}/${canonical.subject}/OA${canonical.oa}/C${canonical.lesson})`,
+-      details,
+-      canonicalEntry: canonical,
+-      isProtectedOa
+-    };
++  const c=findCanonicalReferenceEntry(s.grade,s.subject,s.oaCode,num,s.courseId);
++  if(!c)return result('NO_VERIFICABLE','No existe referencia única para esta selección. No se puede promover la edición.');
++  if(m.courseId!==undefined&&m.courseId!==c.course)add('courseId',c.course,m.courseId);
++  if(m.totalLessonsInOa!==c.total)add('totalLessonsInOa',c.total,m.totalLessonsInOa);
++  if(typeof m.lessonTitle!=='string'||text(m.lessonTitle)!==text(c.title))add('lessonTitle',c.title,m.lessonTitle);
++  if(typeof m.nextLessonTitle!=='string'||text(m.nextLessonTitle)!==text(c.nextTitle))add('nextLessonTitle',c.nextTitle,m.nextLessonTitle);
++  for(const name of ['prep','route','situation','reference','hook','formalization'])if(!obj(lesson[name]))add(name,'Objeto requerido por LessonData',lesson[name]);
++  for(const [parent,field] of [['prep','adultObjective'],['prep','routeToday'],['situation','dilePrompt'],['reference','question'],['reference','expectedAnswer']])if(!filled(lesson[parent]?.[field]))add(`${parent}.${field}`,'Texto no vacío',lesson[parent]?.[field]);
++  if(!Array.isArray(lesson.route?.blocks)||!lesson.route.blocks.length||lesson.route.blocks.some((b:any)=>!obj(b)||!filled(b.title)||typeof b.id!=='string'))add('route.blocks','Bloques pedagógicos de la fuente',lesson.route?.blocks);
++  if(!Array.isArray(lesson.situation?.options))add('situation.options','Opciones de acompañamiento de la fuente',lesson.situation?.options);
++  for(const name of ['preQuestions','postQuestions','practice']){
++    const list=lesson[name];
++    if(!Array.isArray(list)||!list.length)add(name,'Actividades de la fuente, sin copiar otra etapa',list);
++    else list.forEach((item:any,i:number)=>{if(!obj(item)||!filled(item.question)||!filled(item.expected))add(`${name}[${i}]`,'Consigna y respuesta privada',item);});
+   }
+-
+-  return {
+-    isValid: true,
+-    canonicalEntry: canonical,
+-    isProtectedOa
+-  };
++  const optionsValid=(q:any)=>Array.isArray(q?.options)&&q.options.length===4&&q.options.every(filled)&&new Set(q.options).size===4&&filled(q.correct)&&(q.options.includes(q.correct)||/^[A-D]$/.test(q.correct));
++  if(!Array.isArray(lesson.mini)||lesson.mini.length!==3)add('mini','Tres reactivos del contrato vigente',lesson.mini?.length);
++  if(Array.isArray(lesson.mini))lesson.mini.forEach((q:any,i:number)=>{if(!filled(q?.q)||!optionsValid(q))add(`mini[${i}]`,'Enunciado, cuatro alternativas y clave válida',q);});
++  if(!Array.isArray(lesson.summaryIdeas)||!lesson.summaryIdeas.length||lesson.summaryIdeas.some((p:any)=>!Array.isArray(p)||p.length!==2||!p.every(filled)))add('summaryIdeas','Ideas de la fuente en pares, sin exigir tres',lesson.summaryIdeas);
++  if(!Array.isArray(lesson.recovery)||!lesson.recovery.length)add('recovery','Recuperación de la fuente',lesson.recovery);
++  else lesson.recovery.forEach((q:any,i:number)=>{
++    if(!filled(q?.q)||!filled(q?.correctText)||!filled(q?.fixText))add(`recovery[${i}]`,'Consigna, criterio privado y apoyo',q);
++    if(q?.kind==='multiple_choice'&&!optionsValid(q))add(`recovery[${i}].options`,'Cuatro alternativas y clave de la fuente',q.options);
++    if(['open_response','open_task'].includes(q?.kind)&&Array.isArray(q.options)&&q.options.length)add(`recovery[${i}].options`,'Sin alternativas artificiales en tarea abierta',q.options);
++  });
++  if(!filled(lesson.closure?.congratulations)&&!filled(lesson.paso8_cierre?.preguntaSintesis))add('closure','Cierre de la fuente',undefined);
++  return details.length?result('FALLO_CORRESPONDENCIA','La edición no coincide con la referencia o faltan elementos esenciales.',c):result('VERIFICADO',undefined,c);
+ }
+diff --git a/Web Studio Simple/src/lib/lesson-repository.ts b/Web Studio Simple/src/lib/lesson-repository.ts
+index b7d27ac..055c352 100644
+--- a/Web Studio Simple/src/lib/lesson-repository.ts	
++++ b/Web Studio Simple/src/lib/lesson-repository.ts	
+@@ -1,3 +1,4 @@
++import { validateLessonCanonical, CanonicalValidationResult } from './lesson-canonical-validator';
+ import { LessonData as PlayerLessonData } from '../types/lesson';
+ import { GeneratedOAPackage, LessonData as GeneratorLessonData } from './lesson-generator';
+ import { adaptGeneratorLessonToPlayer, adaptPlayerLessonToGenerator } from './lesson-adapter';
+@@ -163,59 +164,19 @@ export function isLessonCompleted(
+ }
+ 
+ export function saveCustomLessonData(
+-  curso: string,
+-  asignatura: string,
+-  oaCodigo: string,
+-  oaId: string,
+-  lesson: GeneratorLessonData,
+-  totalLessons: number
+-): void {
+-  const keyGrade = normalizeGrade(curso);
+-  const keySubj = normalizeSubject(asignatura);
+-  const keyOa = normalizeOa(oaCodigo);
+-
+-  let targetPkg = cachedInjectedPackages.find((p) => {
+-    return (
+-      (p.oaId && p.oaId === oaId) ||
+-      (normalizeGrade(p.curso) === keyGrade &&
+-        normalizeSubject(p.asignatura) === keySubj &&
+-        normalizeOa(p.oaCodigo) === keyOa)
+-    );
+-  });
+-
+-  if (!targetPkg) {
+-    targetPkg = {
+-      oaId: oaId || `${curso}_${asignatura}_${oaCodigo}`,
+-      curso,
+-      asignatura,
+-      oaCodigo,
+-      totalLecciones: totalLessons,
+-      lessons: [lesson],
+-      isCustomized: true
+-    };
+-    cachedInjectedPackages.push(targetPkg);
+-  } else {
+-    targetPkg.isCustomized = true;
+-    targetPkg.totalLecciones = Math.max(targetPkg.totalLecciones, totalLessons);
+-    const existingIndex = targetPkg.lessons.findIndex((l) => l.num === lesson.num);
+-    if (existingIndex >= 0) {
+-      targetPkg.lessons[existingIndex] = lesson;
+-    } else {
+-      targetPkg.lessons.push(lesson);
+-    }
+-  }
+-
+-  // Persistir en CUSTOM_STORAGE_KEY
+-  if (typeof window !== 'undefined') {
+-    try {
+-      const customizedOnly = cachedInjectedPackages.filter((p) => p.isCustomized);
+-      localStorage.setItem(CUSTOM_STORAGE_KEY, JSON.stringify(customizedOnly));
+-      // También respaldar en LOCAL_STORAGE_KEY
+-      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(cachedInjectedPackages));
+-    } catch (e) {
+-      console.error('Error al persistir lección personalizada:', e);
+-    }
+-  }
++  curso: string, asignatura: string, oaCodigo: string, oaId: string,
++  lesson: GeneratorLessonData, totalLessons: number
++): LessonSaveResult {
++  // Compatibilidad sólo para una versión Player ya validada. No reconstruir contenido perdido.
++  try {
++    const key = getLessonCanonicalKey(curso, asignatura, oaCodigo, lesson.num);
++    const map = JSON.parse(localStorage.getItem(CUSTOM_PLAYER_LESSONS_KEY) || '{}');
++    const player = map[key];
++    const validation = validateLessonCanonical(player, { grade: curso, subject: asignatura, oaCode: oaCodigo, lessonNumber: lesson.num });
++    if (!validation.isValid || validation.isProtectedOa) return { ok: false, error: validation.error || 'Paquete protegido.', validation };
++    if (JSON.stringify(adaptPlayerLessonToGenerator(player)) !== JSON.stringify(lesson)) return { ok: false, error: 'El paquete de compatibilidad no corresponde a la versión Player validada.' };
++    return saveCustomPlayerLesson(curso, asignatura, oaCodigo, lesson.num, player, { oaId });
++  } catch (error) { return { ok: false, error: String(error) }; }
+ }
+ 
+ export function resetCustomLessonData(
+@@ -224,6 +185,7 @@ export function resetCustomLessonData(
+   oaCodigo: string,
+   lessonNum?: number
+ ): void {
++  if (isProtectedSelection(curso, asignatura, oaCodigo)) return;
+   const keyGrade = normalizeGrade(curso);
+   const keySubj = normalizeSubject(asignatura);
+   const keyOa = normalizeOa(oaCodigo);
+@@ -280,32 +242,59 @@ export function findCanonicalFactoryLesson(
+   return null;
+ }
+ 
+-export function saveCustomPlayerLesson(
+-  grade: string,
+-  subject: string,
+-  oaCode: string,
+-  lessonNumber: number,
+-  lessonData: PlayerLessonData
+-): void {
+-  if (typeof window === 'undefined') return;
+-  const keyGrade = normalizeGrade(grade);
+-  const keySubj = normalizeSubject(subject);
+-  const keyOa = normalizeOa(oaCode);
+-
+-  // Blindaje Matemática OA01 (PROTEGIDO_NO_INTERVENIDO)
+-  if ((keySubj === 'mat' || keySubj === 'matematica') && (keyOa === 'oa01' || keyOa === 'oa1')) {
+-    console.warn('Operación bloqueada: Matemática OA01 es un paquete blindado de fábrica (PROTEGIDO_NO_INTERVENIDO).');
+-    return;
+-  }
++export interface LessonSaveResult { ok: boolean; error?: string; validation?: CanonicalValidationResult; }
++let lastLessonLoadIssue: CanonicalValidationResult | null = null;
++export function getLastLessonLoadIssue() { return lastLessonLoadIssue; }
++function isProtectedSelection(grade: string, subject: string, oa: string): boolean {
++  return normalizeGrade(grade) === '7' && normalizeSubject(subject) === 'mat' && normalizeOa(oa) === 'oa1';
++}
+ 
+-  const key = `${keyGrade}_${keySubj}_${keyOa}_${lessonNumber}`;
++export function saveCustomPlayerLesson(
++  grade: string, subject: string, oaCode: string, lessonNumber: number,
++  lessonData: PlayerLessonData, options: { oaId?: string } = {}
++): LessonSaveResult {
++  const validation = validateLessonCanonical(lessonData, { grade, subject, oaCode, lessonNumber });
++  if (!validation.isValid || validation.isProtectedOa) return { ok: false, error: validation.error || 'Matemática OA01 permanece protegida; no se guardó la edición.', validation };
++  if (typeof window === 'undefined') return { ok: false, error: 'Almacenamiento del navegador no disponible.' };
++  const key = getLessonCanonicalKey(grade, subject, oaCode, lessonNumber);
++  const written: string[] = [];
++  const previous = new Map<string, string | null>();
+   try {
+-    const raw = localStorage.getItem(CUSTOM_PLAYER_LESSONS_KEY);
+-    const map = raw ? JSON.parse(raw) : {};
+-    map[key] = lessonData;
+-    localStorage.setItem(CUSTOM_PLAYER_LESSONS_KEY, JSON.stringify(map));
+-  } catch (e) {
+-    console.error('Error al guardar lección personalizada en localStorage:', e);
++    for (const name of [CUSTOM_PLAYER_LESSONS_KEY, CUSTOM_STORAGE_KEY, LOCAL_STORAGE_KEY]) previous.set(name, localStorage.getItem(name));
++    const playerMap = JSON.parse(previous.get(CUSTOM_PLAYER_LESSONS_KEY) || '{}');
++    if (!playerMap || typeof playerMap !== 'object' || Array.isArray(playerMap)) return { ok: false, error: 'Almacenamiento Player no interpretable; se conserva sin sobrescribir.' };
++    const storedPackages = JSON.parse(previous.get(CUSTOM_STORAGE_KEY) || '[]');
++    if (!Array.isArray(storedPackages)) return { ok: false, error: 'Paquetes guardados no interpretables; se conservan sin sobrescribir.' };
++    const sameOa = (p: InjectedOAPackage) => normalizeGrade(p.curso) === normalizeGrade(grade) && normalizeSubject(p.asignatura) === normalizeSubject(subject) && normalizeOa(p.oaCodigo) === normalizeOa(oaCode);
++    // Conservar personalizaciones todavía no inicializadas en memoria, incluidas las de otros OAs.
++    const next: InjectedOAPackage[] = JSON.parse(JSON.stringify(cachedInjectedPackages));
++    for (const pkg of storedPackages) { const index = next.findIndex(same => same.oaId === pkg.oaId); if (index >= 0) next[index] = pkg; else next.push(pkg); }
++    let target = next.find(sameOa);
++    if (!target) {
++      target = { oaId: options.oaId || `${grade}_${subject}_${oaCode}`, curso: grade, asignatura: subject, oaCodigo: oaCode, totalLecciones: lessonData.metadata.totalLessonsInOa, lessons: [], isCustomized: true };
++      next.push(target);
++    }
++    const gen = adaptPlayerLessonToGenerator(lessonData);
++    const index = target.lessons.findIndex(l => l.num === lessonNumber);
++    if (index >= 0) target.lessons[index] = gen; else target.lessons.push(gen);
++    target.isCustomized = true;
++    target.totalLecciones = lessonData.metadata.totalLessonsInOa;
++    playerMap[key] = lessonData;
++    const values: Array<[string,string]> = [
++      [CUSTOM_PLAYER_LESSONS_KEY, JSON.stringify(playerMap)],
++      [CUSTOM_STORAGE_KEY, JSON.stringify(next.filter(pkg => pkg.isCustomized))],
++      [LOCAL_STORAGE_KEY, JSON.stringify(next)]
++    ];
++    for (const [name, value] of values) { localStorage.setItem(name, value); written.push(name); }
++    cachedInjectedPackages = next;
++    return { ok: true, validation };
++  } catch (error) {
++    let rollbackFailed = false;
++    for (const name of written.reverse()) {
++      try { const old = previous.get(name); if (old === null) localStorage.removeItem(name); else if (old !== undefined) localStorage.setItem(name, old); }
++      catch { rollbackFailed = true; }
++    }
++    return { ok: false, error: rollbackFailed ? `Falló el guardado y no pudo completarse la restauración: ${String(error)}` : `No se guardó la edición; se conserva la última versión válida. ${String(error)}` };
+   }
+ }
+ 
+@@ -315,6 +304,7 @@ export function resetCustomPlayerLesson(
+   oaCode: string,
+   lessonNumber: number
+ ): void {
++  if (isProtectedSelection(grade, subject, oaCode)) return;
+   if (typeof window === 'undefined') return;
+   const key = `${normalizeGrade(grade)}_${normalizeSubject(subject)}_${normalizeOa(oaCode)}_${lessonNumber}`;
+   try {
+@@ -329,31 +319,12 @@ export function resetCustomPlayerLesson(
+   }
+ }
+ 
+-export function isPlayerLessonCustomized(
+-  grade: string,
+-  subject: string,
+-  oaCode: string,
+-  lessonNumber: number
+-): boolean {
+-  if (typeof window === 'undefined') return false;
+-  const keyGrade = normalizeGrade(grade);
+-  const keySubj = normalizeSubject(subject);
+-  const keyOa = normalizeOa(oaCode);
+-
+-  // Blindaje Matemática OA01 (PROTEGIDO_NO_INTERVENIDO)
+-  if ((keySubj === 'mat' || keySubj === 'matematica') && (keyOa === 'oa01' || keyOa === 'oa1')) {
+-    return false;
+-  }
+-
+-  const key = `${keyGrade}_${keySubj}_${keyOa}_${lessonNumber}`;
++export function isPlayerLessonCustomized(grade: string, subject: string, oaCode: string, lessonNumber: number): boolean {
++  if (typeof window === 'undefined' || isProtectedSelection(grade, subject, oaCode)) return false;
+   try {
+-    const raw = localStorage.getItem(CUSTOM_PLAYER_LESSONS_KEY);
+-    if (!raw) return false;
+-    const map = JSON.parse(raw);
+-    return Boolean(map[key]);
+-  } catch {
+-    return false;
+-  }
++    const candidate = JSON.parse(localStorage.getItem(CUSTOM_PLAYER_LESSONS_KEY) || '{}')[getLessonCanonicalKey(grade, subject, oaCode, lessonNumber)];
++    return Boolean(candidate && validateLessonCanonical(candidate, { grade, subject, oaCode, lessonNumber }).isValid);
++  } catch { return false; }
+ }
+ 
+ export function isLessonCustomized(
+@@ -383,113 +354,39 @@ export function isLessonCustomized(
+   return targetPkg.lessons.some((l) => l.num === lessonNum);
+ }
+ 
+-export function findInjectedLesson(
+-  grade: string,
+-  subject: string,
+-  oaCode: string,
+-  lessonNumber: number
+-): PlayerLessonData | null {
+-  const keyGrade = normalizeGrade(grade);
+-  const keySubj = normalizeSubject(subject);
+-  const keyOa = normalizeOa(oaCode);
+-  const customKey = `${keyGrade}_${keySubj}_${keyOa}_${lessonNumber}`;
+-
+-  // 1. Blindaje inmutable de fábrica para Matemática OA01 (PROTEGIDO_NO_INTERVENIDO)
+-  const isProtectedMatOa01 =
+-    (keySubj === 'mat' || keySubj === 'matematica') &&
+-    (keyOa === 'oa01' || keyOa === 'oa1');
+-
+-  if (isProtectedMatOa01) {
+-    return findCanonicalFactoryLesson(grade, subject, oaCode, lessonNumber);
+-  }
+-
+-  // 2. Precedencia para lecciones editables: versión personalizada guardada en localStorage si es válida
++export function findInjectedLesson(grade: string, subject: string, oaCode: string, lessonNumber: number): PlayerLessonData | null {
++  lastLessonLoadIssue = null;
++  // El paquete aprobado se lee exclusivamente de fábrica, sin reauditar su pedagogía.
++  if (isProtectedSelection(grade, subject, oaCode)) return findCanonicalFactoryLesson(grade, subject, oaCode, lessonNumber);
++  const selection = { grade, subject, oaCode, lessonNumber };
++  const accept = (candidate: any): PlayerLessonData | null => {
++    const validation = validateLessonCanonical(candidate, selection);
++    if (validation.isValid && !validation.isProtectedOa) return candidate;
++    lastLessonLoadIssue = validation;
++    console.warn('Lección no promovida:', validation.error, validation.details);
++    return null;
++  };
+   if (typeof window !== 'undefined') {
+     try {
+-      const raw = localStorage.getItem(CUSTOM_PLAYER_LESSONS_KEY);
+-      if (raw) {
+-        const map = JSON.parse(raw);
+-        const candidate = map[customKey];
+-        if (candidate && typeof candidate === 'object' && candidate.metadata) {
+-          const meta = candidate.metadata;
+-          const candidateGrade = normalizeGrade(meta.grade || '');
+-          const candidateSubj = normalizeSubject(meta.subject || '');
+-          const candidateOa = normalizeOa(meta.oaCode || '');
+-          const candidateNum = Number(meta.lessonNumber);
+-
+-          if (
+-            (!candidateGrade || candidateGrade === keyGrade) &&
+-            (!candidateSubj || candidateSubj === keySubj) &&
+-            (!candidateOa || candidateOa === keyOa) &&
+-            (candidateNum === lessonNumber)
+-          ) {
+-            return candidate as PlayerLessonData;
+-          }
+-        }
+-      }
+-    } catch (e) {
+-      console.error('Error al leer custom player lesson:', e);
++      const map = JSON.parse(localStorage.getItem(CUSTOM_PLAYER_LESSONS_KEY) || '{}');
++      const candidate = map[getLessonCanonicalKey(grade, subject, oaCode, lessonNumber)];
++      if (candidate) { const valid = accept(candidate); if (valid) return valid; }
++    } catch (error) {
++      lastLessonLoadIssue = { isValid: false, status: 'NO_VERIFICABLE', error: `No se pudo leer la edición guardada: ${String(error)}`, details: [] };
+     }
+   }
+-
+-  // 3. Respaldo oficial canónico de fábrica
+   const canonical = findCanonicalFactoryLesson(grade, subject, oaCode, lessonNumber);
+-  if (canonical) return canonical;
+-
+-  // 4. Compatibilidad con almacenamiento anterior
+-  const customPkg = cachedInjectedPackages.find((p) => {
+-    if (!p.isCustomized) return false;
+-    return (
+-      normalizeGrade(p.curso) === keyGrade &&
+-      normalizeSubject(p.asignatura) === keySubj &&
+-      normalizeOa(p.oaCodigo) === keyOa
+-    );
+-  });
+-  if (customPkg) {
+-    const customLesson = customPkg.lessons.find((l) => l.num === lessonNumber);
+-    if (customLesson) {
+-      if ((customLesson as any).metadata && (customLesson as any).prep && (customLesson as any).route) {
+-        return customLesson as unknown as PlayerLessonData;
+-      }
+-      return adaptGeneratorLessonToPlayer(
+-        customLesson,
+-        {
+-          curso: customPkg.curso,
+-          asignatura: customPkg.asignatura,
+-          oa: customPkg.oaCodigo
+-        },
+-        customPkg.totalLecciones
+-      );
+-    }
+-  }
+-
+-  // 3. Fallback canónico en los paquetes inyectados o generados
+-  const foundPkg = cachedInjectedPackages.find((p) => {
+-    const pkgGrade = normalizeGrade(p.curso);
+-    const pkgSubj = normalizeSubject(p.asignatura);
+-    const pkgOa = normalizeOa(p.oaCodigo);
+-    return pkgGrade === keyGrade && pkgSubj === keySubj && pkgOa === keyOa;
+-  });
+-
+-  if (!foundPkg) return null;
+-
+-  const genLesson = foundPkg.lessons.find((l) => l.num === lessonNumber);
+-  if (!genLesson) return null;
+-
+-  // Preservación estricta: Si la lección ya es una lección canónica completa PlayerLessonData, devolverla directamente sin degradación
+-  if ((genLesson as any).metadata && (genLesson as any).prep && (genLesson as any).route) {
+-    return genLesson as unknown as PlayerLessonData;
++  if (canonical) return accept(canonical);
++  const pkg = cachedInjectedPackages.find(p => normalizeGrade(p.curso) === normalizeGrade(grade) && normalizeSubject(p.asignatura) === normalizeSubject(subject) && normalizeOa(p.oaCodigo) === normalizeOa(oaCode));
++  const candidate: any = pkg?.lessons.find(l => l.num === lessonNumber);
++  if (!candidate || !pkg) return null;
++  try {
++    const player = candidate.metadata ? candidate : adaptGeneratorLessonToPlayer(candidate, { curso: pkg.curso, asignatura: pkg.asignatura, oa: pkg.oaCodigo }, pkg.totalLecciones);
++    return accept(player);
++  } catch (error) {
++    lastLessonLoadIssue = { isValid: false, status: 'NO_VERIFICABLE', error: `No se pudo interpretar la versión anterior: ${String(error)}`, details: [] };
++    return null;
+   }
+-
+-  return adaptGeneratorLessonToPlayer(
+-    genLesson,
+-    {
+-      curso: foundPkg.curso,
+-      asignatura: foundPkg.asignatura,
+-      oa: foundPkg.oaCodigo
+-    },
+-    foundPkg.totalLecciones
+-  );
+ }
+ 
+ export function getInjectedPackage(
+diff --git a/scripts/fixtures/CNA_OA01_C02.json b/scripts/fixtures/CNA_OA01_C02.json
+new file mode 100644
+index 0000000..3d73640
+--- /dev/null
++++ b/scripts/fixtures/CNA_OA01_C02.json
+@@ -0,0 +1,442 @@
++{
++  "metadata": {
++    "grade": "7° Básico",
++    "subject": "Ciencias Naturales",
++    "oaCode": "OA 1",
++    "oaTitle": "Ciencias Naturales - OA 1",
++    "lessonNumber": 2,
++    "totalLessonsInOa": 6,
++    "lessonTitle": "Cambios físicos durante la pubertad",
++    "durationMinutes": 30,
++    "nextLessonTitle": "Emociones, afectividad e imagen personal"
++  },
++  "prep": {
++    "adultObjective": "Describir cambios físicos de la pubertad y distinguir los cambios corporales de las ideas sociales sobre la apariencia, respetando los ritmos individuales.",
++    "routeToday": "Ruta guiada de la clase 2",
++    "mentorReminder": "Describir cambios físicos de la pubertad y distinguir los cambios corporales de las ideas sociales sobre la apariencia, respetando los ritmos individuales.",
++    "reminders": [
++      "Acompaña al estudiante y valora su proceso."
++    ],
++    "emotionalTip": "Usar exclusivamente los casos ficticios. No solicitar información sobre cuerpo, identidad, vínculos o experiencias íntimas del estudiante. Escuchar con respeto. No diagnosticar ni comparar ritmos de desarrollo."
++  },
++  "route": {
++    "blocks": [
++      {
++        "id": "b1",
++        "number": "01",
++        "title": "Punto de partida",
++        "subtitle": "Activación",
++        "color": "teal"
++      },
++      {
++        "id": "b2",
++        "number": "02",
++        "title": "Motivación y Explicación",
++        "subtitle": "14 láminas",
++        "color": "orange"
++      },
++      {
++        "id": "b3",
++        "number": "03",
++        "title": "Práctica guiada",
++        "subtitle": "Transferencia",
++        "color": "yellow"
++      },
++      {
++        "id": "b4",
++        "number": "04",
++        "title": "Miniquiz",
++        "subtitle": "Evaluación y cierre",
++        "color": "navy"
++      }
++    ],
++    "dileIntro": "Hoy avanzaremos en una nueva clase interactiva.",
++    "dileObjective": "Cambios físicos durante la pubertad"
++  },
++  "situation": {
++    "dilePrompt": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",
++    "expectedAnswer": "El cambio es el aumento de estatura. El caso permite reconocer que el ritmo de desarrollo puede variar.",
++    "socraticHint": "Fíjate en los detalles destacados.",
++    "emotionalTip": "Usar exclusivamente los casos ficticios. No solicitar información sobre cuerpo, identidad, vínculos o experiencias íntimas del estudiante. Escuchar con respeto. No diagnosticar ni comparar ritmos de desarrollo.",
++    "options": [
++      {
++        "label": "El cambio es el aumento de estatura. El caso permite reconocer que el ritmo de desarrollo puede variar.",
++        "kind": "correct",
++        "feedbackText": "¡Muy bien observado!"
++      },
++      {
++        "label": "Requiere apoyo adicional",
++        "kind": "needs_support",
++        "feedbackText": "Revisa nuevamente la situación inicial."
++      },
++      {
++        "label": "No sabe qué responder",
++        "kind": "no_answer",
++        "feedbackText": "Leamos juntos para descubrir la pista."
++      }
++    ]
++  },
++  "reference": {
++    "dilePrompt": "¿Qué cambio físico aparece y qué conclusión prudente permite el caso?",
++    "question": "¿Qué información entrega el punto de partida?",
++    "expectedAnswer": "El cambio es el aumento de estatura. El caso permite reconocer que el ritmo de desarrollo puede variar.",
++    "socraticHint": "Localiza las palabras clave.",
++    "feedbackSuccess": "¡Excelente fundamentación!",
++    "feedbackSupport": "Revisa la lectura para confirmar los datos."
++  },
++  "hook": {
++    "title": "Motivación",
++    "titulo": "Motivación",
++    "focusPoints": [],
++    "dileIntro": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",
++    "hazInstruction": "Observa y reflexiona con las escenas del video.",
++    "videoSrc": "",
++    "dileAfterVideo": "¿Qué observaste en esta situación inicial?",
++    "slides": [
++      {
++        "slideNumber": 1,
++        "tituloMomento": "Motivación",
++        "didacticPurpose": "Una situación",
++        "visualPrompt": "",
++        "overlayText": "Una situación",
++        "overlayTitle": "Una situación",
++        "overlaySubtitle": "",
++        "vectorialOverlayPptx": "Una situación",
++        "speakerNotes": "Hoy exploraremos cambios físicos durante la pubertad. Observaremos el caso y buscaremos pistas antes de sacar una conclusión.",
++        "duracionSeg": 8
++      },
++      {
++        "slideNumber": 2,
++        "tituloMomento": "Motivación",
++        "didacticPurpose": "La pregunta",
++        "visualPrompt": "",
++        "overlayText": "La pregunta",
++        "overlayTitle": "La pregunta",
++        "overlaySubtitle": "",
++        "vectorialOverlayPptx": "La pregunta",
++        "speakerNotes": "Alex nota un aumento de estatura. Otra persona de su edad aún no nota ese mismo cambio. Mantén a la vista la situación y distingue lo que informa de lo que suponemos.",
++        "duracionSeg": 8
++      },
++      {
++        "slideNumber": 3,
++        "tituloMomento": "Motivación",
++        "didacticPurpose": "Primera idea",
++        "visualPrompt": "",
++        "overlayText": "Primera idea",
++        "overlayTitle": "Primera idea",
++        "overlaySubtitle": "",
++        "vectorialOverlayPptx": "Primera idea",
++        "speakerNotes": "¿Qué cambio físico aparece y qué conclusión prudente permite el caso? Puedes plantear una primera idea; después comprobaremos qué información la apoya.",
++        "duracionSeg": 8
++      },
++      {
++        "slideNumber": 4,
++        "tituloMomento": "Motivación",
++        "didacticPurpose": "Busca pistas",
++        "visualPrompt": "",
++        "overlayText": "Busca pistas",
++        "overlayTitle": "Busca pistas",
++        "overlaySubtitle": "",
++        "vectorialOverlayPptx": "Busca pistas",
++        "speakerNotes": "Observa la situación. ¿Qué detalle podría ayudarte a responder? Una pista útil debe ayudarnos a responder la pregunta que estamos explorando.",
++        "duracionSeg": 8
++      },
++      {
++        "slideNumber": 5,
++        "tituloMomento": "Motivación",
++        "didacticPurpose": "Compara posibilidades",
++        "visualPrompt": "",
++        "overlayText": "Compara posibilidades",
++        "overlayTitle": "Compara posibilidades",
++        "overlaySubtitle": "",
++        "vectorialOverlayPptx": "Compara posibilidades",
++        "speakerNotes": "Una respuesta necesita información del recurso. Buscaremos pistas para fundamentarla. Dos respuestas pueden parecer posibles; necesitamos revisar cuál tiene respaldo.",
++        "duracionSeg": 8
++      },
++      {
++        "slideNumber": 6,
++        "tituloMomento": "Motivación",
++        "didacticPurpose": "Una estrategia",
++        "visualPrompt": "",
++        "overlayText": "Una estrategia",
++        "overlayTitle": "Una estrategia",
++        "overlaySubtitle": "",
++        "vectorialOverlayPptx": "Una estrategia",
++        "speakerNotes": "Lee el recurso y relaciona sus detalles antes de elegir una explicación. La clase mostrará cómo relacionar las pistas y explicar esa relación paso a paso.",
++        "duracionSeg": 8
++      },
++      {
++        "slideNumber": 7,
++        "tituloMomento": "Motivación",
++        "didacticPurpose": "Puente a la lectura",
++        "visualPrompt": "",
++        "overlayText": "Puente a la lectura",
++        "overlayTitle": "Puente a la lectura",
++        "overlaySubtitle": "",
++        "vectorialOverlayPptx": "Puente a la lectura",
++        "speakerNotes": "Ahora descubriremos cómo las pistas ayudan a comprender esta situación. Luego aplicarás el criterio a otra situación breve, con menor ayuda.",
++        "duracionSeg": 8
++      }
++    ]
++  },
++  "preQuestions": [
++    {
++      "context": "Alex nota un aumento de estatura. Otra persona de su edad aún no nota ese mismo cambio.",
++      "question": "¿Qué cambio físico aparece y qué conclusión prudente permite el caso?",
++      "expected": "El cambio es el aumento de estatura. El caso permite reconocer que el ritmo de desarrollo puede variar.",
++      "success": "El recurso nombra el aumento de estatura y señala que los cambios no comienzan al mismo tiempo.",
++      "support": "Si no localiza información, releer esta pista del contexto: «Alex nota un aumento de estatura. Otra persona de su edad aún no nota ese mismo cambio.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta.",
++      "reveal": "El cambio es el aumento de estatura. El caso permite reconocer que el ritmo de desarrollo puede variar. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento.",
++      "studentReveal": "El cambio es el aumento de estatura. El caso permite reconocer que el ritmo de desarrollo puede variar."
++    },
++    {
++      "context": "Un compañero dice que quien cambia antes vale más o será mejor estudiante.",
++      "question": "¿Por qué esa afirmación no está respaldada por el recurso?",
++      "expected": "Porque un cambio físico no determina el valor personal ni las capacidades escolares.",
++      "success": "El recurso distingue los cambios corporales de las capacidades y del valor de las personas.",
++      "support": "Si no localiza información, releer esta pista del contexto: «Un compañero dice que quien cambia antes vale más o será mejor estudiante.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta.",
++      "reveal": "Porque un cambio físico no determina el valor personal ni las capacidades escolares. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento.",
++      "studentReveal": "Porque un cambio físico no determina el valor personal ni las capacidades escolares."
++    }
++  ],
++  "conversationContext": "Diálogo guiado para profundizar en los elementos clave.",
++  "formalization": {
++    "title": "La pubertad es un proceso de cambios corporales vinculados con la maduración sexual. Los caracteres secundarios, como el vello corporal, se distinguen de los órganos reproductores. Un cambio físico no determina el valor personal ni una capacidad escolar.",
++    "concept": "La pubertad es un proceso de cambios corporales vinculados con la maduración sexual. Los caracteres secundarios, como el vello corporal, se distinguen de los órganos reproductores. Un cambio físico no determina el valor personal ni una capacidad escolar.",
++    "summary": "Consolidación de las ideas clave.",
++    "ideaClave": "La pubertad es un proceso de cambios corporales vinculados con la maduración sexual. Los caracteres secundarios, como el vello corporal, se distinguen de los órganos reproductores. Un cambio físico no determina el valor personal ni una capacidad escolar.",
++    "dileIntro": "Ahora consolidaremos los aprendizajes esenciales.",
++    "hazInstruction": "Registra en tu cuaderno el concepto principal.",
++    "graphicPoster": "",
++    "videoSrc": "",
++    "slides": [
++      {
++        "slideNumber": 8,
++        "tituloMomento": "Explicación",
++        "didacticPurpose": "Una herramienta",
++        "visualPrompt": "",
++        "overlayText": "Una herramienta",
++        "overlayTitle": "Una herramienta",
++        "overlaySubtitle": "",
++        "vectorialOverlayPptx": "Una herramienta",
++        "speakerNotes": "El aumento de estatura, el vello corporal y el acné son ejemplos de cambios físicos descritos en el texto.",
++        "duracionSeg": 8
++      },
++      {
++        "slideNumber": 9,
++        "tituloMomento": "Explicación",
++        "didacticPurpose": "El criterio",
++        "visualPrompt": "",
++        "overlayText": "El criterio",
++        "overlayTitle": "El criterio",
++        "overlaySubtitle": "",
++        "vectorialOverlayPptx": "El criterio",
++        "speakerNotes": "Los órganos reproductores y los caracteres secundarios pertenecen a la dimensión física, pero son categorías diferentes. El libro describe cambios compartidos y otros que suelen presentarse de manera diferente. No exige que ocurran simultáneamente.",
++        "duracionSeg": 8
++      },
++      {
++        "slideNumber": 10,
++        "tituloMomento": "Explicación",
++        "didacticPurpose": "Relación entre pistas",
++        "visualPrompt": "",
++        "overlayText": "Relación entre pistas",
++        "overlayTitle": "Relación entre pistas",
++        "overlaySubtitle": "",
++        "vectorialOverlayPptx": "Relación entre pistas",
++        "speakerNotes": "Dos personas de la misma edad pueden mostrar ritmos distintos. La comparación del caso no permite juzgar su valor. Comprender los cambios ayuda a describirlos con respeto. La apariencia no define talentos ni oportunidades.",
++        "duracionSeg": 8
++      },
++      {
++        "slideNumber": 11,
++        "tituloMomento": "Explicación",
++        "didacticPurpose": "Modelo explicado",
++        "visualPrompt": "",
++        "overlayText": "Modelo explicado",
++        "overlayTitle": "Modelo explicado",
++        "overlaySubtitle": "",
++        "vectorialOverlayPptx": "Modelo explicado",
++        "speakerNotes": "Alex nota un aumento de estatura. Otra persona de su edad aún no nota ese mismo cambio. ¿Qué cambio físico aparece y qué conclusión prudente permite el caso? El cambio es el aumento de estatura. El caso permite reconocer que el ritmo de desarrollo puede variar. El recurso nombra el aumento de estatura y señala que los cambios no comienzan al mismo tiempo.",
++        "duracionSeg": 8
++      },
++      {
++        "slideNumber": 12,
++        "tituloMomento": "Explicación",
++        "didacticPurpose": "Comprobación",
++        "visualPrompt": "",
++        "overlayText": "Comprobación",
++        "overlayTitle": "Comprobación",
++        "overlaySubtitle": "",
++        "vectorialOverlayPptx": "Comprobación",
++        "speakerNotes": "Un compañero dice que quien cambia antes vale más o será mejor estudiante. ¿Por qué esa afirmación no está respaldada por el recurso? Porque un cambio físico no determina el valor personal ni las capacidades escolares. El recurso distingue los cambios corporales de las capacidades y del valor de las personas.",
++        "duracionSeg": 8
++      },
++      {
++        "slideNumber": 13,
++        "tituloMomento": "Explicación",
++        "didacticPurpose": "Error y corrección",
++        "visualPrompt": "",
++        "overlayText": "Error y corrección",
++        "overlayTitle": "Error y corrección",
++        "overlaySubtitle": "",
++        "vectorialOverlayPptx": "Error y corrección",
++        "speakerNotes": "Un error que debemos evitar: Usar una edad, estatura o cambio corporal como ranking de valor o madurez emocional.",
++        "duracionSeg": 8
++      },
++      {
++        "slideNumber": 14,
++        "tituloMomento": "Explicación",
++        "didacticPurpose": "Síntesis y práctica",
++        "visualPrompt": "",
++        "overlayText": "Síntesis y práctica",
++        "overlayTitle": "Síntesis y práctica",
++        "overlaySubtitle": "",
++        "vectorialOverlayPptx": "Síntesis y práctica",
++        "speakerNotes": "Los cambios físicos tienen ritmos individuales. Lee, localiza evidencia, explica y comprueba. Continúa con la práctica interactiva.",
++        "duracionSeg": 8
++      }
++    ]
++  },
++  "postQuestions": [
++    {
++      "context": "Comprobación 1",
++      "question": "¿Por qué esa afirmación no está respaldada por el recurso?",
++      "expected": "Porque un cambio físico no determina el valor personal ni las capacidades escolares.",
++      "success": "Respuesta precisa y fundamentada",
++      "support": "Revisa el concepto clave expuesto",
++      "reveal": "Porque un cambio físico no determina el valor personal ni las capacidades escolares.",
++      "studentReveal": "Porque un cambio físico no determina el valor personal ni las capacidades escolares."
++    }
++  ],
++  "practice": [
++    {
++      "context": "Alex nota un aumento de estatura. Otra persona de su edad aún no nota ese mismo cambio.",
++      "question": "¿Qué cambio físico aparece y qué conclusión prudente permite el caso? Escribe una respuesta y señala la pista que la sostiene.",
++      "expected": "El cambio es el aumento de estatura. El caso permite reconocer que el ritmo de desarrollo puede variar.",
++      "success": "El recurso nombra el aumento de estatura y señala que los cambios no comienzan al mismo tiempo.",
++      "support": "Revisa los datos del recurso",
++      "reveal": "El cambio es el aumento de estatura. El caso permite reconocer que el ritmo de desarrollo puede variar.",
++      "studentReveal": "El cambio es el aumento de estatura. El caso permite reconocer que el ritmo de desarrollo puede variar."
++    },
++    {
++      "context": "Un compañero dice que quien cambia antes vale más o será mejor estudiante.",
++      "question": "¿Por qué esa afirmación no está respaldada por el recurso? Escribe una respuesta y señala la pista que la sostiene.",
++      "expected": "Porque un cambio físico no determina el valor personal ni las capacidades escolares.",
++      "success": "El recurso distingue los cambios corporales de las capacidades y del valor de las personas.",
++      "support": "Revisa los datos del recurso",
++      "reveal": "Porque un cambio físico no determina el valor personal ni las capacidades escolares.",
++      "studentReveal": "Porque un cambio físico no determina el valor personal ni las capacidades escolares."
++    },
++    {
++      "context": "Caso ficticio nuevo: Ren nota aparición de vello axilar. Su compañero de la misma edad aún no lo nota. Alguien afirma que Ren será mejor estudiante por ese cambio.",
++      "question": "Distingue el cambio físico, explica qué permiten concluir los ritmos diferentes y rechaza o acepta la afirmación sobre el rendimiento escolar con una razón.",
++      "expected": "El vello axilar es un carácter sexual secundario. Las personas pueden cambiar en momentos distintos. Este cambio no demuestra capacidad escolar ni mayor valor personal.",
++      "success": "Aplica el criterio de la clase de manera autónoma en un recurso nuevo",
++      "support": "Comprobar cada elemento pedido y su evidencia; aceptar formulaciones equivalentes. Si falta una relación, pedir que señale la pista y explique qué demuestra; después ofrecer el modelo y un nuevo intento. Registrar respuesta, apoyos y criterio por reforzar.",
++      "reveal": "El vello axilar es un carácter sexual secundario. Las personas pueden cambiar en momentos distintos. Este cambio no demuestra capacidad escolar ni mayor valor personal.",
++      "studentReveal": "El vello axilar es un carácter sexual secundario. Las personas pueden cambiar en momentos distintos. Este cambio no demuestra capacidad escolar ni mayor valor personal."
++    }
++  ],
++  "mini": [
++    {
++      "id": "q1",
++      "q": "¿Cuál es un cambio físico descrito en el recurso?",
++      "options": [
++        "A. Aumento de estatura",
++        "B. Elegir un libro favorito",
++        "C. Cambiar una opinión sobre una película",
++        "D. Recibir una invitación"
++      ],
++      "correct": "A. Aumento de estatura",
++      "fixExplain": "El aumento de estatura aparece entre los cambios físicos."
++    },
++    {
++      "id": "q2",
++      "q": "¿Qué distingue el recurso?",
++      "options": [
++        "A. La estatura de la inteligencia mediante una fórmula",
++        "B. Los órganos reproductores de los caracteres sexuales secundarios",
++        "C. El valor de las personas según su voz",
++        "D. Un desarrollo idéntico para todas las personas"
++      ],
++      "correct": "B. Los órganos reproductores de los caracteres sexuales secundarios",
++      "fixExplain": "Ambas categorías se relacionan con el cuerpo, pero no significan lo mismo."
++    },
++    {
++      "id": "q3",
++      "q": "¿Qué conclusión respeta los ritmos individuales?",
++      "options": [
++        "A. Todas las personas cambian el mismo día",
++        "B. Quien cambia antes es más responsable",
++        "C. Las diferencias de ritmo permiten burlarse",
++        "D. Las personas pueden mostrar cambios en momentos distintos"
++      ],
++      "correct": "D. Las personas pueden mostrar cambios en momentos distintos",
++      "fixExplain": "El recurso indica que los cambios no comienzan al mismo tiempo ni tienen ritmo idéntico."
++    }
++  ],
++  "recovery": [
++    {
++      "title": "Recuperación 1",
++      "explain": "El aumento de estatura aparece entre los cambios físicos.",
++      "q": "Nombra el cambio corporal del caso y explica por qué es físico.",
++      "kind": "open_response",
++      "options": [],
++      "correct": "",
++      "correctText": "El cambio de voz afecta una característica del cuerpo. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
++      "fixText": "Buscar estas expresiones del recurso nuevo: «cambio». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
++      "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
++      "resource": "Caso nuevo de recuperación: Dos estudiantes ficticios de la misma edad comienzan a notar cambios de voz en momentos distintos. El recurso distingue órganos reproductores y caracteres secundarios, y señala que el ritmo varía.",
++      "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
++    },
++    {
++      "title": "Recuperación 2",
++      "explain": "Ambas categorías se relacionan con el cuerpo, pero no significan lo mismo.",
++      "q": "¿El cambio de voz es un órgano reproductor o un carácter secundario? Explica la diferencia.",
++      "kind": "open_response",
++      "options": [],
++      "correct": "",
++      "correctText": "Es un carácter secundario, no un órgano reproductor. Que ambos se relacionen con la pubertad no los vuelve la misma categoría. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
++      "fixText": "Buscar estas expresiones del recurso nuevo: «secundario»; «órgano»; «reproductor». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
++      "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
++      "resource": "Caso nuevo de recuperación: Dos estudiantes ficticios de la misma edad comienzan a notar cambios de voz en momentos distintos. El recurso distingue órganos reproductores y caracteres secundarios, y señala que el ritmo varía.",
++      "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
++    },
++    {
++      "title": "Recuperación 3",
++      "explain": "El recurso indica que los cambios no comienzan al mismo tiempo ni tienen ritmo idéntico.",
++      "q": "¿Los distintos momentos permiten decidir quién es más responsable? Justifica.",
++      "kind": "open_response",
++      "options": [],
++      "correct": "",
++      "correctText": "No; los ritmos de cambio no determinan responsabilidad ni valor personal. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.",
++      "fixText": "Buscar estas expresiones del recurso nuevo: «cambio». Señalar las palabras del caso que permiten responder, sin mostrar la solución.",
++      "support2": "Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.",
++      "resource": "Caso nuevo de recuperación: Dos estudiantes ficticios de la misma edad comienzan a notar cambios de voz en momentos distintos. El recurso distingue órganos reproductores y caracteres secundarios, y señala que el ritmo varía.",
++      "exitCriteria": "Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta."
++    }
++  ],
++  "summaryIdeas": [
++    [
++      "Idea clave",
++      "Los cambios físicos tienen ritmos individuales."
++    ],
++    [
++      "Concepto central",
++      "La pubertad es un proceso de cambios corporales que no determina el valor personal ni las capacidades escolares."
++    ]
++  ],
++  "interactive": {
++    "type": "dimensions",
++    "title": "Dimensiones Integrales de la Sexualidad",
++    "description": "Organizador de las cinco dimensiones biopsicosociales."
++  },
++  "closure": {
++    "congratulations": "Buen trabajo. Explicaste tu respuesta usando información del recurso.",
++    "nextClassPreview": "¡Nos vemos en la próxima lección!"
++  },
++  "paso8_cierre": {
++    "preguntaSintesis": "¿Qué cambio físico aparece y qué conclusión prudente permite el caso?",
++    "metacognicion": "¿Qué te ayudó más: leer el recurso, localizar una pista o comparar explicaciones? ¿Por qué?",
++    "celebracion": "Buen trabajo. Explicaste tu respuesta usando información del recurso."
++  }
++}
+\ No newline at end of file
+diff --git a/scripts/test_editor_work.cjs b/scripts/test_editor_work.cjs
+new file mode 100644
+index 0000000..5847c3c
+--- /dev/null
++++ b/scripts/test_editor_work.cjs
+@@ -0,0 +1,92 @@
++/** Pruebas de Work sobre los módulos y handlers REALES. No simula una sesión de navegador. */
++const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict'),test=require('node:test');
++const ts=require(process.env.WORK_TYPESCRIPT||'typescript');
++const root=process.env.WORK_EDITOR_ROOT||path.resolve(__dirname,'..');
++const lib=path.join(root,'Web Studio Simple/src/lib'),editorFile=path.join(root,'Web Studio Simple/src/components/admin/cms/LessonEditorView.tsx');
++const fixtureFile=path.join(__dirname,'fixtures/CNA_OA01_C02.json');
++const original=JSON.parse(fs.readFileSync(fixtureFile,'utf8'));
++const ref=JSON.parse(fs.readFileSync(path.join(root,'Web Studio Simple/src/data/canonicalReference.json'),'utf8'));
++const clone=v=>JSON.parse(JSON.stringify(v));
++function compile(source,name){const out=ts.transpileModule(source,{fileName:name,reportDiagnostics:true,compilerOptions:{module:ts.ModuleKind.CommonJS,esModuleInterop:true,target:ts.ScriptTarget.ES2020,jsx:ts.JsxEmit.React}});assert.equal((out.diagnostics||[]).filter(d=>d.category===ts.DiagnosticCategory.Error).length,0);return out.outputText;}
++function evalModule(file,imports,globals={}){const sandbox={exports:{},...globals};sandbox.require=n=>{if(Object.hasOwn(imports,n))return imports[n];throw Error('Import no proporcionado: '+n);};vm.createContext(sandbox);vm.runInContext(compile(fs.readFileSync(file,'utf8'),file),sandbox,{filename:file});return sandbox.exports;}
++const validator=evalModule(path.join(lib,'lesson-canonical-validator.ts'),{'../data/canonicalReference.json':ref});
++const selected={grade:'7° Básico',subject:'Ciencias Naturales',oaCode:'OA 1',lessonNumber:2};
++function storage(){const data=new Map();return{data,failKey:null,getItem:k=>data.get(k)??null,setItem(k,v){if(this.failKey===k)throw Error('Fallo de almacenamiento de prueba');data.set(k,String(v));},removeItem:k=>data.delete(k)};}
++function setup(){
++ const localStorage=storage(),warnings=[];
++ const mat={metadata:{grade:'7° Básico',subject:'Matemática',oaCode:'OA 1',lessonNumber:1},approvedSentinel:'NO_MODIFICAR'};
++ const adapters=evalModule(path.join(lib,'lesson-adapter.ts'),{'./lesson-generator':{buildHookPromptText:()=>'',buildExplicativoPromptText:()=>''}});
++ const factory={CNA:clone(original),MAT:clone(mat)};
++ const repo=evalModule(path.join(lib,'lesson-repository.ts'),{'./lesson-canonical-validator':validator,'./lesson-adapter':adapters,'../data/lessons':factory},{window:{},localStorage,console:{warn:(...x)=>warnings.push(x),error:(...x)=>warnings.push(x),log(){}},fetch:async()=>({ok:false})});
++ return{repo,localStorage,warnings,mat,adapters};
++}
++const savedKey='7_cie_oa1_2',playerKey='estudiosimple_custom_player_lessons';
++function save(env,data){return env.repo.saveCustomPlayerLesson(selected.grade,selected.subject,selected.oaCode,2,data);}
++function load(env){return env.repo.findInjectedLesson(selected.grade,selected.subject,selected.oaCode,2);}
++const editorSource=fs.readFileSync(editorFile,'utf8'),editorAst=ts.createSourceFile(editorFile,editorSource,ts.ScriptTarget.Latest,true,ts.ScriptKind.TSX);
++function initializer(name){let found;function visit(n){if(ts.isVariableDeclaration(n)&&n.name.getText(editorAst)===name)found=n.initializer;ts.forEachChild(n,visit);}visit(editorAst);assert.ok(found,'Handler ausente '+name);return found.getText(editorAst);}
++function makeEditor(env,data=clone(original)){
++ const shell=editorContext(env,data);
++ for(const name of ['getEditorSelectionKey','persistEditorLesson','canLeaveCurrentLesson','loadLesson','handleSaveLesson','handleSwitchLesson','handleGradeChange','handleSubjectChange','handleOAChange','handlePersistCurrentVideo','handleTestInLivePlayer','handleDownloadPrompt']){
++  vm.runInContext(compile(`globalThis.${name} = ${initializer(name)};`,name+'.tsx'),shell.ctx);
++ }
++ return shell;
++}
++function editorContext(env,data){
++ const state={active:null,exported:null,status:null,error:null};
++ const ctx={...env.repo,...validator,selectedGrade:selected.grade,selectedSubject:selected.subject,selectedLessonNum:2,currentOA:{oa:'OA 1',id:'CNA-OA01'},lessonData:data,lessonDataRef:{current:data},loadedLessonKeyRef:{current:null},activeStepId:'prep',totalLessons:6,
++ setSaveStatus:x=>state.status=x,setValidationErrorMsg:x=>state.error=x,setValidationErrors:x=>state.details=x,setIsCustom:x=>state.isCustom=x,setLessonData:x=>state.loaded=x,setActiveSynchronizedLesson:x=>state.active=x,setViewMode:x=>state.view=x,
++ setSelectedGrade:x=>state.selectedGrade=x,setSelectedSubject:x=>state.selectedSubject=x,setSelectedLessonNum:x=>state.selectedNum=x,setSelectedOAId:x=>state.selectedOA=x,
++ setVideoSaveFeedback:x=>state.video=x,setTimeout:()=>{},useCallback:fn=>fn,window:{},localStorage:env.localStorage,sessionStorage:storage(),console:{warn(){},error(){}},downloadLessonPromptFile:x=>state.exported=x};
++ vm.createContext(ctx);return{ctx,state};
++}
++test('Ciencias fuente válida, dos ideas y videos pendientes permitidos',()=>{const d=clone(original);d.hook.videoSrc='';d.formalization.videoSrc='';assert.equal(validator.validateLessonCanonical(d,selected).isValid,true);});
++const mutations={
++ 'título ajeno':d=>d.metadata.lessonTitle='Álgebra', 'puente ajeno':d=>d.metadata.nextLessonTitle='Otra clase',
++ 'OA sin referencia':d=>d.metadata.oaCode='OA 99','curso ajeno':d=>d.metadata.courseId='110-8',
++ 'total incorrecto':d=>d.metadata.totalLessonsInOa=99,'asignatura ajena':d=>d.metadata.subject='Historia',
++ 'clase ajena':d=>d.metadata.lessonNumber=3,'metadata sin actividades':d=>{for(const k of Object.keys(d))if(k!=='metadata')delete d[k];},
++ 'preguntas vacías':d=>d.preQuestions=[], 'alternativa vacía':d=>d.mini[0].options[1]='',
++ 'clave vacía':d=>d.mini[0].correct='', 'clave ajena':d=>d.mini[0].correct='Z',
++ 'resumen vacío':d=>d.summaryIdeas=[], 'referencia ausente':d=>delete d.reference,
++ 'tarea abierta con alternativas inventadas':d=>d.recovery[0].options=['A','B','C','D'],
++ 'título sin tildes':d=>d.metadata.lessonTitle=d.metadata.lessonTitle.normalize('NFD').replace(/[\u0300-\u036f]/g,'')
++};
++for(const [name,mutate]of Object.entries(mutations))test('Rechaza '+name+' antes de escribir y cargar',()=>{
++ const env=setup();assert.equal(save(env,clone(original)).ok,true);const before=[...env.localStorage.data];const d=clone(original);mutate(d);
++ assert.equal(validator.validateLessonCanonical(d,selected).isValid,false);assert.equal(save(env,d).ok,false);assert.deepEqual([...env.localStorage.data],before);
++ env.localStorage.setItem(playerKey,JSON.stringify({[savedKey]:d}));assert.equal(load(env).metadata.lessonTitle,original.metadata.lessonTitle);assert.ok(env.repo.getLastLessonLoadIssue());
++});
++test('Sin referencia es NO_VERIFICABLE, no un permiso implícito',()=>{const d=clone(original);d.metadata.oaCode='OA 99';assert.equal(validator.validateLessonCanonical(d).status,'NO_VERIFICABLE');});
++test('Comparación admite sólo espacios inocuos y Unicode equivalente',()=>{const d=clone(original);d.metadata.lessonTitle=' '+d.metadata.lessonTitle.normalize('NFD')+'  ';assert.equal(validator.validateLessonCanonical(d,selected).isValid,true);});
++test('Cierre de última clase incorrecto rechazado',()=>{const c=ref.lessons.find(l=>l.subject==='cie'&&l.lesson===6),d=clone(original);Object.assign(d.metadata,{lessonNumber:6,lessonTitle:c.title,nextLessonTitle:'Clase inventada'});assert.equal(validator.validateLessonCanonical(d).isValid,false);});
++test('Edición válida se guarda, reabre y conserva todos los datos',()=>{const env=setup(),d=clone(original);d.prep.routeToday+=' PRUEBA_EDITOR_WORK';assert.equal(save(env,d).ok,true);assert.deepEqual(JSON.parse(JSON.stringify(load(env))),d);assert.equal(env.repo.isPlayerLessonCustomized(selected.grade,selected.subject,selected.oaCode,2),true);});
++for(const key of [playerKey,'estudiosimple_custom_lessons','estudiosimple_injected_lessons'])test('Error en '+key+' conserva la última versión y no anuncia éxito',()=>{const env=setup();assert.equal(save(env,clone(original)).ok,true);const before=[...env.localStorage.data];env.localStorage.failKey=key;const d=clone(original);d.prep.routeToday+=' marca';const saved=save(env,d);assert.equal(saved.ok,false);assert.deepEqual([...env.localStorage.data],before);assert.equal(load(env).prep.routeToday,original.prep.routeToday);});
++test('Matemática OA01 permanece exclusivamente de fábrica y no se escribe',()=>{const env=setup(),before=[...env.localStorage.data];const d=clone(env.mat);assert.equal(env.repo.saveCustomPlayerLesson('7° Básico','Matemática','OA 1',1,d).ok,false);assert.deepEqual([...env.localStorage.data],before);assert.equal(env.repo.findInjectedLesson('7° Básico','Matemática','OA 1',1).approvedSentinel,'NO_MODIFICAR');});
++test('Guardar no sobrescribe paquetes de otros OAs todavía no inicializados',()=>{const env=setup();const other={oaId:'otro',curso:'8° Básico',asignatura:'Inglés',oaCodigo:'OA 9',lessons:[],isCustomized:true,totalLecciones:6};env.localStorage.setItem('estudiosimple_custom_lessons',JSON.stringify([other]));assert.equal(save(env,clone(original)).ok,true);assert.deepEqual(JSON.parse(env.localStorage.getItem('estudiosimple_custom_lessons'))[0],other);});
++test('Datos de almacenamiento corruptos no se destruyen',()=>{const env=setup();env.localStorage.setItem(playerKey,'no JSON');const before=[...env.localStorage.data];assert.equal(save(env,clone(original)).ok,false);assert.deepEqual([...env.localStorage.data],before);assert.ok(load(env));assert.ok(env.repo.getLastLessonLoadIssue());});
++test('Guardar legado no permite saltar la validación Player',()=>{const env=setup();assert.equal(env.repo.saveCustomLessonData(selected.grade,selected.subject,selected.oaCode,'CNA',{num:2,title:'inventada'},6).ok,false);assert.equal(env.localStorage.data.size,0);});
++test('Handler real de carga conserva exactamente la lección, sin strategy ni focos inventados',()=>{const e=makeEditor(setup());e.ctx.loadLesson(true);assert.deepEqual(JSON.parse(JSON.stringify(e.state.loaded)),original);});
++test('Handler real de carga rechaza datos esenciales ausentes sin fabricarlos',()=>{const env=setup();env.repo.findInjectedLesson=()=>({metadata:clone(original.metadata)});const e=makeEditor(env);e.ctx.loadLesson(true);assert.equal(e.state.loaded,null);assert.ok(e.state.error);});
++test('Handler real de guardar/probar/exportar bloquea título ajeno y no escribe',()=>{const env=setup(),d=clone(original);d.metadata.lessonTitle='Ajeno';const e=makeEditor(env,d);assert.equal(e.ctx.handleSaveLesson(),false);e.ctx.handleTestInLivePlayer();e.ctx.handleDownloadPrompt();assert.equal(e.state.active,null);assert.equal(e.state.exported,null);assert.equal(env.localStorage.data.size,0);assert.ok(e.state.error);});
++test('Handler real de probar detiene el aula cuando falla el almacenamiento',()=>{const env=setup();env.localStorage.failKey=playerKey;const e=makeEditor(env);e.ctx.handleTestInLivePlayer();assert.equal(e.state.active,null);assert.ok(e.state.error);assert.equal(e.state.status,null);});
++test('Handlers reales: guardar, reabrir, probar y exportar conservan la marca y dos ideas',()=>{const env=setup(),d=clone(original);d.prep.routeToday+=' PRUEBA_EDITOR_WORK';const e=makeEditor(env,d);assert.equal(e.ctx.handleSaveLesson(),true);e.ctx.loadLesson(true);assert.equal(e.state.loaded.prep.routeToday,d.prep.routeToday);e.ctx.handleTestInLivePlayer();e.ctx.handleDownloadPrompt();assert.equal(e.state.active.prep.routeToday,d.prep.routeToday);assert.equal(e.state.exported.summaryIdeas.length,2);});
++test('Cambio de asignatura no persiste una edición inválida ni abandona su revisión',()=>{const env=setup(),d=clone(original);d.metadata.nextLessonTitle='Ajeno';const e=makeEditor(env,d);e.ctx.handleSubjectChange('Historia');assert.equal(e.state.selectedSubject,undefined);assert.equal(env.localStorage.data.size,0);});
++test('Todos los archivos modificados son TypeScript/TSX sintácticamente válidos',()=>{for(const p of [path.join(lib,'lesson-canonical-validator.ts'),path.join(lib,'lesson-repository.ts'),editorFile]){const sf=ts.createSourceFile(p,fs.readFileSync(p,'utf8'),ts.ScriptTarget.Latest,true,p.endsWith('.tsx')?ts.ScriptKind.TSX:ts.ScriptKind.TS);assert.equal(sf.parseDiagnostics.length,0,p);}});
++test('Matemática de otro curso no hereda la excepción de OA01 aprobado',()=>{const d=clone(original);Object.assign(d.metadata,{grade:'8° Básico',subject:'Matemática'});const r=validator.validateLessonCanonical(d);assert.equal(r.isProtectedOa,false);assert.equal(r.isValid,false);});
++test('Ruta de acompañamiento mal formada no se acepta como estructura completa',()=>{const d=clone(original);d.route.blocks=[null];assert.equal(validator.validateLessonCanonical(d,selected).isValid,false);});
++test('Inicialización no muta el objeto fuente congelado',()=>{const env=setup();const originalJson=JSON.stringify(original);makeEditor(env).ctx.loadLesson(true);assert.equal(JSON.stringify(original),originalJson);});
++test('Handler audiovisual no muestra éxito si falla el guardado',()=>{const env=setup();env.localStorage.failKey=playerKey;const e=makeEditor(env);e.ctx.handlePersistCurrentVideo('hook');assert.equal(e.state.video,undefined);assert.ok(e.state.error);});
++test('Exportar una lección no verificable no produce archivo',()=>{const d=clone(original);d.metadata.oaCode='OA 99';const e=makeEditor(setup(),d);e.ctx.handleDownloadPrompt();assert.equal(e.state.exported,null);assert.ok(e.state.error);});
++test('Control de referencia del build: acepta misma versión y rechaza cambios sin reescribir',()=>{
++ const os=require('node:os'),crypto=require('node:crypto');const base=fs.mkdtempSync(path.join(os.tmpdir(),'ref-work-'));
++ const verifier=require(path.join(root,'scripts/verify_editor_reference.cjs'));const sha=v=>crypto.createHash('sha256').update(v).digest('hex');
++ const put=(p,v)=>{fs.mkdirSync(path.dirname(path.join(base,p)),{recursive:true});fs.writeFileSync(path.join(base,p),v);};
++ try{
++  put('fuente.md','contenido');put('manifest.json','{}');const reference={schema:'estudiosimple.canonical-titles.v1',lessons:[{source:'fuente.md',sourceSha256:sha('contenido')}],manifests:[{path:'manifest.json',sha256:sha('{}')}]};
++  const a='docs/auditorias/REFERENCIA_CANONICA_TITULOS_CONTINUIDAD.json',b='Web Studio Simple/src/data/canonicalReference.json';put(a,JSON.stringify(reference));put(b,JSON.stringify(reference));assert.equal(verifier.verify(base).unchanged,true);
++  put('fuente.md','cambio');assert.throws(()=>verifier.verify(base),/Fuente cambiada/);put('fuente.md','contenido');
++  put('manifest.json','cambio');assert.throws(()=>verifier.verify(base),/Manifiesto cambiado/);put('manifest.json','{}');
++  put(b,JSON.stringify({...reference,lessons:[]}));assert.throws(()=>verifier.verify(base),/no son idénticas/);assert.equal(fs.readFileSync(path.join(base,a),'utf8'),JSON.stringify(reference));
++ }finally{fs.rmSync(base,{recursive:true,force:true});}
++});
+diff --git a/scripts/verify_editor_reference.cjs b/scripts/verify_editor_reference.cjs
+new file mode 100644
+index 0000000..c20d58c
+--- /dev/null
++++ b/scripts/verify_editor_reference.cjs
+@@ -0,0 +1,16 @@
++/** Sólo lectura: evita compilar un cliente con una referencia distinta o desactualizada. */
++const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
++function verify(root){
++ const bytes=rel=>{const p=path.resolve(root,rel);if(path.relative(root,p).split(path.sep).includes('..'))throw Error('Ruta fuera del repositorio');return fs.readFileSync(p);};
++ const server=bytes('docs/auditorias/REFERENCIA_CANONICA_TITULOS_CONTINUIDAD.json');
++ const client=bytes('Web Studio Simple/src/data/canonicalReference.json');
++ if(!server.equals(client))throw Error('Las referencias del auditor y del editor no son idénticas. No se modificó ninguna.');
++ const ref=JSON.parse(server.toString('utf8'));
++ if(ref.schema!=='estudiosimple.canonical-titles.v1'||!Array.isArray(ref.lessons)||!ref.lessons.length||!Array.isArray(ref.manifests))throw Error('Referencia no interpretable');
++ const sha=rel=>crypto.createHash('sha256').update(bytes(rel)).digest('hex');
++ for(const m of ref.manifests)if(sha(m.path)!==m.sha256)throw Error('Manifiesto cambiado: '+m.path);
++ for(const l of ref.lessons)if(sha(l.source)!==l.sourceSha256)throw Error('Fuente cambiada: '+l.source);
++ return {lessons:ref.lessons.length,unchanged:true};
++}
++module.exports={verify};
++if(require.main===module){try{console.log('REFERENCIA_EDITOR_VERIFICADA',verify(path.resolve(__dirname,'..')));}catch(e){console.error('NO_VERIFICABLE:',e.message);process.exitCode=2;}}

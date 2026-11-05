@@ -1,450 +1,473 @@
-# EstudioSimple · Decisiones responsables e integración
+# EstudioSimple | Lección interactiva
 
-**Curso:** 110-7 · **Asignatura:** Ciencias_Naturales · **OA:** OA01 · **Clase:** 06 de 06
+## 7° básico · Ciencias Naturales · OA01 · Clase 06
 
-**Estado:** EN_REVISION · NO INTEGRADA EN APP · NO APROBADA
+**Curso App:** 110-7  
+**Asignatura App:** Ciencias_Naturales  
+**Código curricular:** 7B-CNA-OA01  
+**Título:** Decisiones responsables e integración  
+**Duración:** 30 minutos  
+**Número de clase:** 06 de 06  
+**Título de trabajo de la siguiente clase:** Fin del objetivo de aprendizaje  
+**Estado:** EN_REVISION · NO INTEGRADA EN APP · NO APROBADA  
+**Fuente principal:** Texto Escolar de Ciencias Naturales 7° básico (Edición especial MINEDUC / SM), Unidad 4 "Salud sexual y reproducción", Lección 8 "Sexualidad y autocuidado", páginas impresas 116 a 130 (PDF físico 118–132, síntesis integral de la unidad).  
+**Unidades de contenido:** 7B-CNA-OA01-C06.  
+**Indicadores priorizados:** 7B-CNA-OA01-IE01, 7B-CNA-OA01-IE02, 7B-CNA-OA01-IE03, 7B-CNA-OA01-IE04, en articulación integradora final.
 
-**Fecha de preparación:** 2026-10-12 America/Santiago
+### Objetivo oficial de aprendizaje
 
-**Objetivo de la clase:** Relacionar aspectos biológicos, afectivos y sociales al explicar una decisión responsable que considere consecuencias y respeto mutuo.
+Explicar los aspectos biológicos, afectivos y sociales que se integran en la sexualidad, considerando los cambios físicos que ocurren durante la pubertad, la relación afectiva entre dos personas en la intimidad y el respeto mutuo, y la responsabilidad individual.
 
-**Indicadores:** 7B-CNA-OA01-IE01, 7B-CNA-OA01-IE02, 7B-CNA-OA01-IE03
+### Objetivo de esta clase
 
-**Duración de sesión planificada:** 30 minutos.
+Integrar armónicamente las dimensiones biológica, afectiva, social, intelectual y espiritual de la sexualidad humana, aplicando un modelo sistemático de toma de decisiones responsables e informadas que promueva el autocuidado, el respeto irrestricto por la dignidad de las demás personas y la formulación reflexiva de proyectos de vida saludables.
+
+**Resultado observable:** El estudiante explica de forma holística cómo interactúan las múltiples dimensiones de la sexualidad en situaciones cotidianas complejas, aplica con rigor un procedimiento ético-científico de toma de decisiones considerando causas y consecuencias a corto y largo plazo, y argumenta la importancia del autocuidado y la responsabilidad personal sin requerir revelaciones de su intimidad privada.
+
+### Alcance
+
+Esta clase constituye el hito integrador y de cierre del objetivo de aprendizaje OA01, consolidando los aprendizajes de las clases 01 a 05 según la Lección 8 del Texto Escolar. Se trabaja estrictamente mediante dilemas ficticios y simulaciones analíticas que resguardan la intimidad del estudiante, garantizando un enfoque formativo, científico, libre de sesgos y centrado en el bienestar integral.
+
+---
 
 ## 1. Paso 1 — Preparación del mentor
 
-**Para el mentor:** Lee el recurso con el estudiante antes de preguntar. Guía usando DILE y PREGÚNTALE. Mantén las respuestas de referencia privadas hasta que el estudiante intente responder.
+**Propósito:** Guiar al estudiante en la síntesis e integración de todas las dimensiones de la sexualidad humana, consolidando un método reflexivo para tomar decisiones autónomas, éticas y saludables en su vida cotidiana.
 
-**Cuidado del acompañamiento:** Usar exclusivamente los casos ficticios. No solicitar información sobre cuerpo, identidad, vínculos o experiencias íntimas del estudiante. Escuchar con respeto. No diagnosticar ni comparar ritmos de desarrollo.
+**DILE:** “¡Hola! Hoy llegamos a la clase de síntesis y cierre de nuestro primer objetivo de Ciencias Naturales. Revisa todo el camino recorrido: aprendimos que la sexualidad no es solo el cuerpo o los cambios físicos de la pubertad, sino que involucra nuestros sentimientos, amistades, valores éticos y pensamientos. Hoy aprenderemos a unir todas estas piezas para tomar decisiones responsables que cuiden nuestra salud, respeten a los demás y nos ayuden a construir nuestro proyecto de vida.”
 
-**DILE / SAY:** “Relacionar aspectos biológicos, afectivos y sociales al explicar una decisión responsable que considere consecuencias y respeto mutuo.”
+**Ruta de hoy:** Leer el recurso integrador → articular las 5 dimensiones del ser humano → modelar el método sistemático de toma de decisiones → resolver un dilema cotidiano en equipo → evaluar con el miniquiz final del OA.
 
-**Materiales:** recurso incluido en esta clase, cuaderno y lápiz.
+**Pautas para el mentor:**
+1. Mantén una mirada pedagógica holística: recuérdale al estudiante que madurar implica coordinar lo que pensamos (dimensión intelectual), lo que sentimos (afectiva), cómo cuidamos nuestro cuerpo (biológica), cómo convivimos (social) y nuestros valores profundos (espiritual/ética).
+2. Modela el método de toma de decisiones en 4 etapas: 1. Detenerse e identificar el problema; 2. Buscar información científica y veraz; 3. Evaluar consecuencias para uno y los demás; 4. Decidir con autonomía y asumir la responsabilidad.
+3. Resalta que la responsabilidad individual no significa estar solo: significa saber pedir orientación a adultos de confianza cuando las situaciones son confusas o complejas.
+4. Salvaguarda la privacidad: todos los análisis se efectúan sobre los casos ficticios (Javier, Clara y Tomás).
+
+---
 
 ## 2. Paso 2A — Ruta de aprendizaje
 
-Leer el recurso → localizar pistas → explicar → practicar → comprobar comprensión.
+Lectura del recurso integrador → mapa de relaciones interdimensionales → modelamiento del protocolo de decisión responsable → aplicación práctica en casos complejos → evaluación final y consolidación del OA.
 
-**Distribución orientativa:** inicio y lectura 6 min; videos 3 min; conversación y modelamiento 7 min; práctica 7 min; miniquiz y recuperación 5 min; cierre 2 min.
+**Distribución orientativa:**
+- Inicio y ruta: 5 min.
+- Proyección audiovisual (Motivación y Explicación): 4 min.
+- Diálogo integrador y modelamiento: 8 min.
+- Práctica y resolución de dilemas: 8 min.
+- Miniquiz integrador de salida y retroalimentación: 5 min.
 
-## 3. Paso 2B — Punto de partida
+---
+
+## 3. Paso 2B — Situación inicial y punto de partida
 
 ### Recurso de lectura visible para el estudiante
 
-Síntesis pedagógica del OA y de las páginas impresas 116, 117 y 121: una mirada integral relaciona aspectos biológicos, afectivos y sociales. Los cambios corporales pertenecen al ámbito biológico. Las emociones y los sentimientos forman parte de lo afectivo. Los vínculos y las formas de convivencia corresponden al ámbito social. La responsabilidad consiste en reflexionar y tomar decisiones considerando el respeto hacia uno mismo y hacia los demás. Estos aspectos pueden aparecer juntos en una situación.
+A lo largo de esta unidad hemos descubierto que la **sexualidad humana es integral**. No se limita únicamente a los órganos reproductores ni a la reproducción biológica, sino que abarca la totalidad de la experiencia humana a través de cinco dimensiones interconectadas (Texto Escolar, págs. 116, 126–130):
+- **Dimensión biológica:** Los cambios anatómicos y fisiológicos de la pubertad, los caracteres primarios y secundarios, la nutrición, la higiene y el cuidado del organismo.
+- **Dimensión afectiva:** El autoconcepto, la autoestima, las emociones, los sentimientos, el cariño y la gestión de la autoimagen frente a las presiones externas.
+- **Dimensión social:** El grupo de pares, la amistad, la búsqueda de autonomía, la convivencia equitativa y la superación de los estereotipos de género.
+- **Dimensión intelectual:** El pensamiento crítico, la capacidad de evaluar riesgos, buscar información científica confiable y reflexionar antes de actuar.
+- **Dimensión espiritual y valórica:** El sentido de vida, los principios éticos, la empatía, el compromiso con el bien común y el respeto sagrado por la dignidad de cada persona.
 
-Caso A, ficticio: Alex nota un cambio en su voz y siente vergüenza cuando un grupo se burla. Una compañera propone detener las burlas y buscar apoyo de un adulto de confianza.
+En la vida real, estas dimensiones nunca operan aisladas: cada elección que tomamos impacta en nuestro cuerpo, en nuestros sentimientos y en las personas que nos rodean. La **responsabilidad individual** es la capacidad de responder conscientemente por nuestros actos, previendo sus consecuencias y actuando con coherencia ética. Cuando un adolescente aprende a integrar estas dimensiones, adquiere la libertad de decidir con sabiduría sobre su salud, sus afectos y su futuro.
 
-Caso B, ficticio: una amistad pide publicar una fotografía para celebrar. La persona de la foto no quiere. El grupo decide no publicarla y acuerda otra forma de celebrar.
+### Caso didáctico ficticio
 
-**DILE antes de leer:** “¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.”
+**El dilema de Javier (13 años):** Javier ha sido invitado a un campamento escolar de fin de semana con sus compañeros de 7° básico. La noche anterior, dos amigos del curso le escriben por mensajería proponiéndole un "desafío secreto": salir a escondidas de las carpas a la medianoche para cruzar un estero correntoso y tomarse selfies arriesgadas en lo alto de unas rocas empinadas, prometiéndole que si lo hace *"será el más popular del colegio y todas las fotos se volverán virales"*. Si no acepta, le dicen que se burlarán de él en los pasillos llamándolo "cobarde". Javier se siente tentado por el deseo de ser admirado y pertenecer al grupo, pero recuerda las conversaciones de Ciencias Naturales sobre decisiones responsables. Decide detenerse a pensar, evalúa el riesgo físico objetivo de una caída grave de noche en el agua, reconoce que el chantaje de popularidad es una presión social dañina que atenta contra su seguridad, y decide responder: *"No voy a arriesgar mi integridad física ni la de ustedes por unas fotos; pasémoslo bien en las actividades seguras del campamento"*.
 
-**Punto de partida / Starting point:** ¿Cómo relacionas los tres aspectos sin confundirlos?
+**Punto de partida:** ¿Cómo se manifiestan e interactúan las distintas dimensiones de la sexualidad (biológica, afectiva, social, intelectual y valórica) en la decisión de Javier, y qué etapas de razonamiento responsable le permitieron rechazar la presión destructiva?
 
-**Respuesta de referencia / Reference, privada para el mentor hasta después del intento:** El cambio de voz es biológico; la vergüenza es afectiva; las burlas y el apoyo son sociales. Se relacionan porque ocurren en una misma situación.
+**Respuesta de referencia (privada para el mentor):** Se manifiesta la dimensión biológica (protección de la vida y el cuerpo), afectiva (gestión del temor y la necesidad de aceptación), social (resistencia a la presión de pares), intelectual (análisis del peligro real frente a la ilusión viral) y valórica (priorizar la vida y la prudencia). Javier usó el razonamiento responsable: frenó el impulso, analizó riesgos objetivos y decidió con autonomía sin someterse a chantajes.
 
-## 4. Paso 3 — Videos
+---
 
-**MOTIVACION:** 7 diapositivas. **EXPLICACION:** 7 diapositivas. Los guiones vigentes de este archivo se ajustan al plan audiovisual actual. No se afirma que los PowerPoint existentes ya contengan esta revisión; cotejar sus notas antes de producir o integrar.
+## 4. Paso 3 — Videos de la clase: Motivación y Explicación
 
-**Producción:** Gancho 60 segundos y explicación 90 segundos como tiempos de montaje. Ajustar la voz y pausas sobre el audio real. Sin música. No certificar la duración antes de producir el video.
+Orientaciones pedagógicas para las presentaciones audiovisuales de la clase:
+- **Video 1 (Motivación):** Presenta el desafío de navegar la adolescencia con una brújula integral que conecte mente, cuerpo, emociones y relaciones sociales.
+- **Video 2 (Explicación):** Modela el proceso integrador de las 5 dimensiones y enseña el protocolo de 4 pasos para la toma de decisiones informadas y responsables.
+- Guion audiovisual de 14 diapositivas bimodales (7+7) conforme a la directriz v3.4.
+
+---
 
 ## 5. Paso 4 — Conversación guiada
 
-### Pregunta 1
+### Pregunta 1 — La interacción de las dimensiones
+**Contexto:** En el caso de Javier, su decisión no fue solo física o social, sino integral.  
+**PREGÚNTALE:** ¿Por qué cuando cuidamos nuestra salud física también estamos protegiendo nuestra tranquilidad emocional y nuestros proyectos futuros?  
+**Respuesta esperada:** Porque el ser humano es una unidad indivisible: si el cuerpo se lesiona o se pone en riesgo extremo, se alteran los estados de ánimo, las relaciones familiares, los estudios y las metas a largo plazo.
 
-**Contexto:** Cambio de voz, vergüenza y burlas aparecen en el caso de Alex.
+### Pregunta 2 — Superación de la presión de grupo
+**Contexto:** Los compañeros amenazaron a Javier con llamarlo "cobarde" si no hacía el desafío arriesgado.  
+**PREGÚNTALE:** ¿Qué demuestra mayor valentía y madurez: ceder a un peligro absurdo por miedo al qué dirán o atreverse a decir "no" para cuidar la propia vida?  
+**Respuesta esperada:** Decir "no" con firmeza requiere mucha más valentía, carácter y autonomía; ceder por miedo al ridículo es someterse pasivamente a los caprichos del grupo.
 
-**PREGÚNTALE / ASK:** ¿Cómo relacionas los tres aspectos sin confundirlos?
+### Pregunta 3 — El papel de la información científica
+**Contexto:** Frente a temas de sexualidad, salud y autocuidado circulan muchos mitos en internet y rumores entre pares.  
+**PREGÚNTALE:** ¿Por qué acudir a fuentes científicas y a adultos de confianza es fundamental antes de tomar decisiones sobre nuestro cuerpo o nuestras relaciones?  
+**Respuesta esperada:** Porque los rumores y las redes suelen difundir falsedades o visiones superficiales que pueden causar daños graves; la ciencia y los adultos responsables entregan datos verídicos que protegen nuestra salud y bienestar.
 
-**Respuesta esperada, privada para el mentor:** El cambio de voz es biológico; la vergüenza es afectiva; las burlas y el apoyo son sociales. Se relacionan porque ocurren en una misma situación.
-
-**Evidencia:** El caso presenta una pista para cada aspecto.
-
-**Apoyo 1:** Si no localiza información, releer esta pista del contexto: «Cambio de voz, vergüenza y burlas aparecen en el caso de Alex.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta.
-
-**Apoyo 2:** Si encuentra la pista pero no la explica, orientar con esta relación: El caso presenta una pista para cada aspecto. Pedir que complete su respuesta indicando por qué esa pista sirve.
-
-**Apoyo 3, modelo privado tras intentar con pistas:** El cambio de voz es biológico; la vergüenza es afectiva; las burlas y el apoyo son sociales. Se relacionan porque ocurren en una misma situación. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento.
-
-**Criterio:** Respuesta comprensible, información precisa y explicación de su relación.
-
-### Pregunta 2
-
-**Contexto:** Una persona no quiere que publiquen su fotografía. El grupo acuerda otra celebración.
-
-**PREGÚNTALE / ASK:** ¿Por qué es responsable esa decisión?
-
-**Respuesta esperada, privada para el mentor:** Considera la petición de la persona y elige una alternativa que respeta su límite sin impedir compartir afecto.
-
-**Evidencia:** El grupo conserva el propósito de celebrar y respeta la decisión sobre la fotografía.
-
-**Apoyo 1:** Si no localiza información, releer esta pista del contexto: «Una persona no quiere que publiquen su fotografía. El grupo acuerda otra celebración.». Pedir que señale la acción o dato que necesita, sin mostrar la respuesta.
-
-**Apoyo 2:** Si encuentra la pista pero no la explica, orientar con esta relación: El grupo conserva el propósito de celebrar y respeta la decisión sobre la fotografía. Pedir que complete su respuesta indicando por qué esa pista sirve.
-
-**Apoyo 3, modelo privado tras intentar con pistas:** Considera la petición de la persona y elige una alternativa que respeta su límite sin impedir compartir afecto. Relacionarlo con el contexto, ocultarlo y pedir una explicación propia; registrar que necesitó modelamiento.
-
-**Criterio:** Respuesta comprensible, información precisa y explicación de su relación.
+---
 
 ## 6. Paso 5 — Explicación y modelamiento
 
-**Concepto:** Una decisión responsable identifica qué ocurre, considera a las personas afectadas y sus límites, examina las consecuencias y elige una acción respetuosa. Integrar aspectos no significa confundir sus nombres.
+### Razonamiento científico visible que modela la clase:
 
-**La mirada integral:** El cambio de voz, la vergüenza y las burlas pertenecen a aspectos distintos presentes en una misma situación.
+> [1. Pregunta científica / Problema]
+> ¿Cómo articular armónicamente todas las dimensiones de la sexualidad humana para tomar decisiones informadas, éticas y saludables en la vida cotidiana?
+>                     ↓
+> [2. Evidencia observable / Datos]
+> - La sexualidad es una realidad multidimensional que abarca biología, afectos, sociedad, intelecto y valores.
+> - Las decisiones impulsivas guiadas solo por presión social o emociones desbordadas aumentan la vulnerabilidad y el riesgo.
+> - La anticipación sistemática de consecuencias reduce errores y consolida la autoestima y la autonomía.
+>                     ↓
+> [3. Representación / Criterio]
+> Protocolo de Decisión Responsable (Método de 4 Fases):
+> 1. PAUSA REFLEXIVA: Detenerse y reconocer la situación sin precipitarse.
+> 2. BÚSQUEDA DE EVIDENCIA: Identificar hechos objetivos, riesgos y fuentes confiables.
+> 3. EVALUACIÓN ÉTICA: Analizar el impacto en uno mismo, en la otra persona y en el proyecto de vida.
+> 4. ACCIÓN AUTÓNOMA: Decidir con convicción, comunicar con asertividad y hacerse responsable.
+>                     ↓
+> [4. Explicación fundamentada]
+> La madurez no consiste en actuar como adulto antes de tiempo, sino en armonizar el desarrollo corporal con la reflexión ética y el autocuidado. El proyecto de vida se fortalece cuando cada elección respeta la dignidad propia y ajena.
+>                     ↓
+> [5. Conclusión científica]
+> La sexualidad integrada permite vivir de manera plena, segura y respetuosa, guiando las conductas cotidianas por principios de bienestar común y responsabilidad individual.
+>                     ↓
+> [6. Comunicación respetuosa]
+> Fomentar el diálogo sincero, defender la libertad de conciencia y promover ambientes escolares y comunitarios seguros, acogedores e inclusivos.
 
-**El aspecto biológico:** Identificamos el cambio de voz como una pista del ámbito biológico sin usarlo para juzgar a Alex.
+### Ejemplo modelado paso a paso para mostrar al estudiante:
 
-**El aspecto afectivo:** Reconocer lo que siente Alex permite comprender el efecto de la situación y acompañarlo con respeto.
+**Caso de análisis modelado:**
+"Clara (13 años) recibe en su grupo de redes sociales un enlace a una página desconocida donde se publican 'chismes anónimos' sobre compañeros del colegio, invitando a votar por la persona más antipática del nivel. Varios de sus amigos ya están comentando y compartiendo burlas. Clara siente curiosidad por leer qué dicen de ella, pero duda sobre reenviar el enlace a otros cursos."
 
-**El aspecto social:** Las burlas y la intervención de una compañera pertenecen a las formas de convivencia.
+**Paso a paso guiado por el mentor:**
+1. **Paso 1: Pausa reflexiva.** Clara no reenvía el enlace de inmediato; frena el impulso automático de la curiosidad y la diversión superficial.
+2. **Paso 2: Búsqueda de evidencia y análisis.** El sitio es una plataforma de ciberacoso anónimo. No aporta ningún valor educativo ni humano; su único propósito es la difamación sin derecho a réplica.
+3. **Paso 3: Evaluación de dimensiones y consecuencias.**
+   - *Dimensión afectiva:* El ciberacoso provoca angustia, depresión y baja autoestima en quienes son blanco de burlas.
+   - *Dimensión social y valórica:* Reenviar el enlace la convierte en cómplice activa de un daño colectivo y contradice el valor del respeto y la empatía escolar.
+4. **Paso 4: Acción autónoma modelada.** Clara no vota ni reenvía el enlace. Escribe en el grupo de sus amigos: *"Esto no es divertido, daña a compañeros reales y es ciberacoso; yo no voy a participar"*. Además, avisa privadamente a la profesora jefa para que el colegio pueda activar los protocolos de convivencia y proteger a los estudiantes afectados.
 
-**La responsabilidad:** Detener las burlas y buscar apoyo considera el bienestar de Alex. En el otro caso, respetar la fotografía protege la decisión expresada.
+**Comprobación inmediata:**
+- *Pregunta:* “¿Cuáles son los cuatro pasos del método sistemático de toma de decisiones responsables aprendido en esta clase?”
+- *Modelo de respuesta:* “1. Pausa reflexiva; 2. Búsqueda de evidencia científica; 3. Evaluación de impacto y consecuencias; 4. Acción autónoma y responsable.”
 
-**Modelo explicado:** El cambio de voz es biológico; la vergüenza es afectiva; las burlas y el apoyo son sociales. Se relacionan porque ocurren en una misma situación. El caso presenta una pista para cada aspecto.
-
-**Cómo se construye el modelo, mostrar durante la enseñanza:** 1) Leer la pregunta y precisar qué pide. 2) Localizar en el caso: «Cambio de voz, vergüenza y burlas aparecen en el caso de Alex.». 3) Explicar la relación: El caso presenta una pista para cada aspecto. 4) Formular la respuesta: El cambio de voz es biológico; la vergüenza es afectiva; las burlas y el apoyo son sociales. Se relacionan porque ocurren en una misma situación. Comprobar que cada afirmación conserva los datos del recurso.
-
-**Error frecuente:** Elegir una acción solo por presión del grupo, sin considerar a la persona afectada.
-
-**Comprobación inmediata:** ¿Por qué es responsable esa decisión?
-
-**Modelo de comprobación:** Considera la petición de la persona y elige una alternativa que respeta su límite sin impedir compartir afecto.
+---
 
 ## 7. Paso 6 — Práctica conjunta y autónoma
 
-### Caso 1
+### Caso 1 (Práctica guiada)
+- **Recurso:** Tomás (13 años) quiere mejorar su rendimiento en el equipo de atletismo. Un conocido mayor del barrio le ofrece unas pastillas que supuestamente "aumentan la masa muscular y dan energía instantánea sin necesidad de entrenar tanto", pidiéndole que no le cuente a sus padres ni al entrenador.
+- **Consigna:** Aplica el protocolo de 4 fases para explicar cómo debe actuar Tomás integrando las dimensiones biológica e intelectual de la sexualidad y el autocuidado.
+- **Procedimiento:** Pausa ante la oferta → buscar información científica sobre sustancias peligrosas → evaluar impacto corporal y ético → decidir rechazar y avisar.
+- **Modelo para revisar después del intento:** “Fase 1 (Pausa): No ingerir ninguna pastilla. Fase 2 (Evidencia): Sustancias no reguladas causan graves daños cardíacos y hepáticos irreversibles. Fase 3 (Evaluación): Viola la ética deportiva y atenta contra la vida. Fase 4 (Acción): Rechazar firmemente y contárselo de inmediato a padres y entrenador.”
 
-**Recurso:** Cambio de voz, vergüenza y burlas aparecen en el caso de Alex.
+### Caso 2 (Práctica guiada)
+- **Recurso:** Una pareja de adolescentes que lleva dos meses de pololeo recibe la presión constante de amigos que les dicen que *"si no tienen relaciones íntimas de inmediato, su relación no es de verdad y fracasará"*.
+- **Consigna:** Redacta una argumentación basada en la madurez y la autonomía para explicar por qué no deben apresurar decisiones íntimas por presión de pares.
+- **Procedimiento:** Desarticular el mito de la presión social → fundamentar la necesidad de madurez afectiva y proyecto de vida compartido.
+- **Modelo para revisar después del intento:** “La intimidad es una decisión personalísima que exige madurez biológica, emocional y psicológica, respondiendo a convicciones propias y no a expectativas ajenas. Una relación sana se construye con diálogo, respeto a los tiempos de cada uno y proyectos compartidos.”
 
-**Actividad:** ¿Cómo relacionas los tres aspectos sin confundirlos? Escribe una respuesta y señala la pista que la sostiene.
+### Aplicación autónoma y transferencia (Estímulo nuevo)
+- **Recurso nuevo visible para el estudiante:**
+  *Situación ficticia nueva:* El Centro de Estudiantes convoca a un concurso para diseñar la campaña anual de autocuidado y convivencia escolar titulada: *"Nuestra sexualidad: un camino integral de respeto, salud y proyecto de vida"*. Se solicita que los afiches demuestren cómo se articulan las dimensiones biológica, afectiva, social, intelectual y valórica en las decisiones juveniles cotidianas.
 
-**Procedimiento:** Leer, localizar evidencia, escribir y revisar con el recurso.
+- **Actividad autónoma del estudiante:**
+  Escribe en tu cuaderno:
+  1. Diseña un lema principal para la campaña escolar (una frase motivadora e integradora).
+  2. Redacta una justificación de 4 a 6 líneas que vincule explícitamente el cuidado del cuerpo (dimensión biológica), la empatía con los sentimientos de los demás (dimensión afectiva) y la convivencia justa (dimensión social y valórica).
+  3. Explica por qué tener metas y un proyecto de vida a futuro es la mejor herramienta para tomar decisiones responsables frente a las presiones del entorno.
 
-**Modelo para revisar después del intento:** El cambio de voz es biológico; la vergüenza es afectiva; las burlas y el apoyo son sociales. Se relacionan porque ocurren en una misma situación.
+- **Criterio privado del mentor (revelar solo después del intento):**
+  1. Lema integrador: Frase que articule salud, respeto y futuro (por ejemplo: "Cuidar mi cuerpo, respetar tus emociones y construir juntos nuestro mañana").
+  2. Justificación: Conexión coherente entre la salud física (hábitos sanos), el bienestar emocional (autoestima y empatía) y la justicia social (relaciones libres de acoso y discriminación).
+  3. Proyecto de vida: Demuestra que proyectar metas académicas y personales orienta la conducta presente hacia el autocuidado y previene riesgos que puedan truncar el desarrollo.
 
-**Respaldo:** El caso presenta una pista para cada aspecto.
+- **Cómo valorar:** El estudiante articula al menos tres dimensiones en su propuesta, enfatiza la responsabilidad personal y fundamenta el valor del proyecto de vida.
 
-### Caso 2
-
-**Recurso:** Una persona no quiere que publiquen su fotografía. El grupo acuerda otra celebración.
-
-**Actividad:** ¿Por qué es responsable esa decisión? Escribe una respuesta y señala la pista que la sostiene.
-
-**Procedimiento:** Leer, localizar evidencia, escribir y revisar con el recurso.
-
-**Modelo para revisar después del intento:** Considera la petición de la persona y elige una alternativa que respeta su límite sin impedir compartir afecto.
-
-**Respaldo:** El grupo conserva el propósito de celebrar y respeta la decisión sobre la fotografía.
-
-### Aplicación autónoma y transferencia
-
-**Recurso nuevo visible para el estudiante:** Caso integrado ficticio nuevo: Cris nota aparición de acné y siente vergüenza. Un grupo quiere publicar una fotografía para hacer bromas y afirma que los niños no deben expresar vergüenza. Cris pide que no la publiquen; una amistad propone detener la difusión y buscar apoyo de un adulto de confianza. En otra situación ficticia, dos personas que son pareja conversan sobre un sentimiento en privado y acuerdan respetar si una no desea un abrazo.
-
-**Actividad del estudiante:** Sin copiar los modelos anteriores: 1) clasifica una pista biológica, una afectiva y una social; 2) explica cómo se relacionan; 3) compara publicar y no publicar, indicando una consecuencia de cada decisión; 4) explica qué muestran confianza, intimidad y respeto en el segundo caso; 5) identifica y revisa el estereotipo del primer caso; 6) relaciona el primer caso con dos dimensiones del esquema del libro, sin confundir sus cinco etiquetas con los tres aspectos del OA.
-
-**Momento:** Intento individual breve antes del miniquiz, sin respuesta modelo visible. El recurso de consulta permanece disponible. No exigir memorizar.
-
-**Criterio privado del mentor, revelar solo después del intento:** Biológico: acné; afectivo: vergüenza; social: presión y apoyo. La reacción social puede influir en lo que siente ante un cambio corporal. Publicar contra la petición puede dañar la privacidad y aumentar malestar; no publicar y apoyar respeta y cuida. En el segundo caso, conversar con confianza y aceptar no abrazarse respeta la intimidad afectiva. Impedir que los niños expresen vergüenza impone un estereotipo y no describe a cada persona. En el esquema: física por el cambio corporal, emocional por la vergüenza y social por la convivencia; basta fundamentar dos.
-
-**Cómo valorar:** Comprobar cada elemento pedido y su evidencia; aceptar formulaciones equivalentes. Si falta una relación, pedir que señale la pista y explique qué demuestra; después ofrecer el modelo y un nuevo intento. Registrar respuesta, apoyos y criterio por reforzar.
-
-**Por qué transfiere:** Cambia el estímulo y exige aplicar el criterio de esta clase; no reproduce el caso ya resuelto.
-
-**Comprobación integrada del OA:** Esta tarea recoge evidencia independiente de los subobjetivos disponibles y se registra además del miniquiz. Cada criterio solicitado debe estar presente y fundamentado para considerar la evidencia completa; si falta uno, reforzar ese criterio y pedir una respuesta nueva. No convertir 2/3 del miniquiz en aprobación automática del OA. Solo Walter aprueba el OA.
+---
 
 ## 8. Paso 7 — Miniquiz y recuperación
 
-**Criterio formativo:** Tres preguntas con cuatro alternativas y claves privadas. 2/3 o 3/3 permite avanzar; con 0/3 o 1/3, explicar el error, resolver la nueva práctica de recuperación correspondiente y reintentar. Registrar intentos y apoyos. Es la regla de diseño del Manual; su ejecución real en la App permanece pendiente de prueba. Solo Walter aprueba el OA.
+**Criterio formativo:** 3 preguntas con 4 alternativas (A, B, C, D) y clave privada única. Un puntaje de 2/3 o 3/3 permite avanzar al cierre de la sesión. Si se obtiene 0/3 o 1/3, se revisa la explicación formativa, se realiza la actividad de recuperación con un caso nuevo y se ejecuta la pregunta de reintento.
 
 ### Reactivo 1
+¿Cuál de las siguientes afirmaciones define con mayor precisión por qué la sexualidad humana se considera un fenómeno multidimensional e integral?
 
-¿Qué relación clasifica correctamente el caso de Alex?
+- A. Porque depende exclusivamente de la estatura y del peso corporal medidos en la consulta médica.
+- B. Porque articula de forma armónica aspectos biológicos, afectivos, sociales, intelectuales y valóricos a lo largo de toda la vida de la persona.
+- C. Porque solo tiene importancia durante los tres meses de vacaciones de verano.
+- D. Porque es un concepto que únicamente se aplica al estudio de organismos unicelulares como las bacterias.
 
-- A. Voz: social; vergüenza: biológica; burlas: afectivas
-- B. Todo corresponde solo a lo biológico
-- C. Todo corresponde solo a una opinión
-- D. Voz: biológica; vergüenza: afectiva; convivencia: social
+**Clave privada:** B.  
+**Explicación formativa:** La sexualidad abarca la totalidad del ser humano: cuerpo, afectividad, vínculos sociales, pensamiento crítico y ética trascendente; no se restringe a un factor biológico aislado ni a una etapa temporal transitoria.
 
-**Clave privada:** D.
+**Análisis de distractores:**
+- *A es incorrecta:* Reducir la sexualidad a parámetros biométricos (peso/talla) ignora las dimensiones psicológica, social y valórica fundamentales.
+- *B es CORRECTA:* Sintetiza la definición canónica del Texto Escolar y del marco curricular nacional: una integración armónica de todas las dimensiones del ser humano.
+- *C es incorrecta:* La sexualidad es una dimensión permanente y constitutiva de la existencia humana desde el nacimiento hasta la adultez mayor.
+- *D es incorrecta:* Las bacterias se reproducen por fisión binaria y carecen de vida afectiva, social o ética; la sexualidad integral es propia de la persona humana.
 
-**Explicación formativa:** La clasificación distingue pistas corporales, emocionales y de convivencia.
-
-**Análisis de alternativas, privado; mostrar solo el feedback de la opción elegida tras responder:**
-- A: La opción «Voz: social; vergüenza: biológica; burlas: afectivas» no coincide con lo que pide este reactivo. Contrástala con «Voz: biológica; vergüenza: afectiva; convivencia: social». La clasificación distingue pistas corporales, emocionales y de convivencia.
-- B: La opción «Todo corresponde solo a lo biológico» no coincide con lo que pide este reactivo. Contrástala con «Voz: biológica; vergüenza: afectiva; convivencia: social». La clasificación distingue pistas corporales, emocionales y de convivencia.
-- C: La opción «Todo corresponde solo a una opinión» no coincide con lo que pide este reactivo. Contrástala con «Voz: biológica; vergüenza: afectiva; convivencia: social». La clasificación distingue pistas corporales, emocionales y de convivencia.
-- D: La respuesta «Voz: biológica; vergüenza: afectiva; convivencia: social» coincide con el criterio. La clasificación distingue pistas corporales, emocionales y de convivencia.
-
-### Recuperación 1
-
-**Se muestra si el reactivo 1 requiere apoyo.**
-
-**Enseñanza:** La clasificación distingue pistas corporales, emocionales y de convivencia.
-
-**Pista:** Releer el recurso y buscar la información mencionada en la explicación.
-
-**Nueva práctica antes del reintento:**
-
-**Recurso visible de recuperación:** Caso nuevo de recuperación: Paz nota un cambio de voz y siente incomodidad cuando otras personas quieren grabarlo para burlarse. Pide que no lo hagan. Una compañera propone detener la grabación y conversar con un adulto de confianza.
-
-**Tarea nueva del estudiante:** Clasifica tres pistas sin intercambiar los nombres de los aspectos.
-
-**Apoyo 1, si no identifica información:** Buscar estas expresiones del recurso nuevo: «incomodidad». Señalar las palabras del caso que permiten responder, sin mostrar la solución.
-
-**Apoyo 2, si no relaciona las pistas:** Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.
-
-**Apoyo 3 y modelo privado, después de un intento con las pistas:** Voz: biológico; incomodidad: afectivo; burlas y apoyo: social. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
-
-**Criterio de salida de esta práctica:** Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta.
-
-**Reintento completo:** Después de releer el recurso, responde de nuevo: ¿Qué relación clasifica correctamente el caso de Alex?
-
-- A. Voz: social; vergüenza: biológica; burlas: afectivas
-- B. Todo corresponde solo a lo biológico
-- C. Todo corresponde solo a una opinión
-- D. Voz: biológica; vergüenza: afectiva; convivencia: social
-
-**Clave:** D. **Si acierta:** Usaste el recurso para fundamentar tu respuesta. **Si necesita más apoyo:** La clasificación distingue pistas corporales, emocionales y de convivencia. Lean la información pertinente juntos y vuelve a intentarlo.
+---
 
 ### Reactivo 2
+Al enfrentar una situación de presión social donde un grupo de pares exige realizar una acción peligrosa o dañina para ser aceptado, ¿qué paso del método responsable demuestra autonomía ética y pensamiento crítico?
 
-¿Qué decisión cuida a Alex en el caso?
+- A. Aceptar de inmediato para que nadie piense que tiene miedo o dudas.
+- B. Hacer una pausa reflexiva, analizar los riesgos reales para la salud y la integridad, y decidir con libertad protegiendo el bienestar personal y ajeno.
+- C. Culpar a los profesores de todo y huir de la escuela.
+- D. Exigir dinero a los compañeros a cambio de realizar la acción riesgosa.
 
-- A. Difundir las burlas
-- B. Detener las burlas y buscar apoyo
-- C. Juzgarlo por su voz
-- D. Obligarlo a contar experiencias íntimas
+**Clave privada:** B.  
+**Explicación formativa:** La toma de decisiones responsable se basa en la autorregulación (pausa reflexiva), la evaluación objetiva de consecuencias (pensamiento crítico) y la autodeterminación ética frente a la coacción externa.
 
-**Clave privada:** B.
+**Análisis de distractores:**
+- *A es incorrecta:* Ceder pasivamente a la presión anula la autonomía y expone a riesgos graves para la salud física y psicológica.
+- *B es CORRECTA:* Aplica el protocolo científico y formativo de decisión responsable: frena el impulso, evalúa las consecuencias y actúa con firmeza ética.
+- *C es incorrecta:* Evadir la situación culpando a terceros no resuelve el dilema y deteriora la capacidad de asumir responsabilidades personales.
+- *D es incorrecta:* El chantaje económico agrava la falta ética y no elimina el peligro objetivo para la integridad física o moral.
 
-**Explicación formativa:** La respuesta considera su bienestar y evita continuar las burlas.
-
-**Análisis de alternativas, privado; mostrar solo el feedback de la opción elegida tras responder:**
-- A: La opción «Difundir las burlas» no coincide con lo que pide este reactivo. Contrástala con «Detener las burlas y buscar apoyo». La respuesta considera su bienestar y evita continuar las burlas.
-- B: La respuesta «Detener las burlas y buscar apoyo» coincide con el criterio. La respuesta considera su bienestar y evita continuar las burlas.
-- C: La opción «Juzgarlo por su voz» no coincide con lo que pide este reactivo. Contrástala con «Detener las burlas y buscar apoyo». La respuesta considera su bienestar y evita continuar las burlas.
-- D: La opción «Obligarlo a contar experiencias íntimas» no coincide con lo que pide este reactivo. Contrástala con «Detener las burlas y buscar apoyo». La respuesta considera su bienestar y evita continuar las burlas.
-
-### Recuperación 2
-
-**Se muestra si el reactivo 2 requiere apoyo.**
-
-**Enseñanza:** La respuesta considera su bienestar y evita continuar las burlas.
-
-**Pista:** Releer el recurso y buscar la información mencionada en la explicación.
-
-**Nueva práctica antes del reintento:**
-
-**Recurso visible de recuperación:** Caso nuevo de recuperación: Paz nota un cambio de voz y siente incomodidad cuando otras personas quieren grabarlo para burlarse. Pide que no lo hagan. Una compañera propone detener la grabación y conversar con un adulto de confianza.
-
-**Tarea nueva del estudiante:** Compara grabar para burlarse con detener la grabación: acción y consecuencia.
-
-**Apoyo 1, si no identifica información:** Buscar estas expresiones del recurso nuevo: «Grabar»; «detener». Señalar las palabras del caso que permiten responder, sin mostrar la solución.
-
-**Apoyo 2, si no relaciona las pistas:** Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.
-
-**Apoyo 3 y modelo privado, después de un intento con las pistas:** Grabar puede aumentar el malestar y vulnerar privacidad; detener y apoyar protege el límite expresado. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
-
-**Criterio de salida de esta práctica:** Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta.
-
-**Reintento completo:** Después de releer el recurso, responde de nuevo: ¿Qué decisión cuida a Alex en el caso?
-
-- A. Difundir las burlas
-- B. Detener las burlas y buscar apoyo
-- C. Juzgarlo por su voz
-- D. Obligarlo a contar experiencias íntimas
-
-**Clave:** B. **Si acierta:** Usaste el recurso para fundamentar tu respuesta. **Si necesita más apoyo:** La respuesta considera su bienestar y evita continuar las burlas. Lean la información pertinente juntos y vuelve a intentarlo.
+---
 
 ### Reactivo 3
+¿Cómo contribuye el proyecto de vida personal a la vivencia de una sexualidad saludable y responsable durante la adolescencia?
 
-¿Qué demuestra responsabilidad en el caso de la fotografía?
+- A. Obligando a la persona a no tener amigos ni pasatiempos hasta que cumpla cuarenta años.
+- B. Permitiendo proyectar metas académicas, afectivas y vocacionales a futuro, lo que orienta las decisiones cotidianas hacia el autocuidado y la prevención de riesgos.
+- C. Garantizando que una persona nunca sienta emociones intensas ni dudas sobre el futuro.
+- D. Determinando por sorteo computacional qué carrera universitaria deberá estudiar obligatoriamente.
 
-- A. Publicarla para evitar que el grupo se moleste
-- B. Insistir hasta que la persona ceda
-- C. Respetar su petición y acordar otra celebración
-- D. Decidir que su opinión no importa
+**Clave privada:** B.  
+**Explicación formativa:** El proyecto de vida dota de sentido a las acciones presentes: cuando un joven tiene metas y valores claros, evalúa sus decisiones con perspectiva de futuro, evitando conductas de riesgo que puedan truncar su desarrollo integral.
 
-**Clave privada:** C.
+**Análisis de distractores:**
+- *A es incorrecta:* El proyecto de vida incluye el cultivo de relaciones interpersonales sanas, la recreación y el desarrollo social pleno, no el aislamiento.
+- *B es CORRECTA:* Conecta con claridad las aspiraciones futuras con la toma de decisiones informada y responsable en el presente.
+- *C es incorrecta:* El proyecto de vida no elimina las emociones ni las dudas naturales del crecimiento; brinda herramientas reflexivas para gestionarlas constructivamente.
+- *D es incorrecta:* La vocación es una construcción autónoma basada en intereses, talentos y reflexiones personales, no una imposición aleatoria.
 
-**Explicación formativa:** La alternativa considera la decisión expresada y evita presionar.
+---
 
-**Análisis de alternativas, privado; mostrar solo el feedback de la opción elegida tras responder:**
-- A: La opción «Publicarla para evitar que el grupo se moleste» no coincide con lo que pide este reactivo. Contrástala con «Respetar su petición y acordar otra celebración». La alternativa considera la decisión expresada y evita presionar.
-- B: La opción «Insistir hasta que la persona ceda» no coincide con lo que pide este reactivo. Contrástala con «Respetar su petición y acordar otra celebración». La alternativa considera la decisión expresada y evita presionar.
-- C: La respuesta «Respetar su petición y acordar otra celebración» coincide con el criterio. La alternativa considera la decisión expresada y evita presionar.
-- D: La opción «Decidir que su opinión no importa» no coincide con lo que pide este reactivo. Contrástala con «Respetar su petición y acordar otra celebración». La alternativa considera la decisión expresada y evita presionar.
+### Recuperación formativa posterior al error (para puntajes 0/3 o 1/3)
 
-### Recuperación 3
+#### Recuperación para Reactivo 1 (Concepto de integralidad)
+- **Enseñanza del error:** La sexualidad no es únicamente el cuerpo físico; conjuga también emociones, normas de convivencia, pensamiento crítico y valores éticos.
+- **Pista orientadora:** Piensa: ¿un ser humano puede tomar decisiones sobre su cuerpo sin usar su mente o sin sentir emociones?
+- **Recurso visible nuevo:** *Caso de recuperación:* Una persona afirma que 'la sexualidad es solamente la anatomía de los órganos reproductores y nada más'.
+- **Tarea nueva del estudiante:** “Explica por qué esa afirmación es incompleta y qué dimensiones esenciales olvida.”
+- **Apoyos progresivos:**
+  * *Apoyo 1:* Recuerda las cinco dimensiones estudiadas en el Texto Escolar.
+  * *Apoyo 2:* Conecta la afectividad y los valores éticos con las decisiones del cuerpo.
+  * *Apoyo 3:* La afirmación es reduccionista porque ignora la afectividad, los vínculos sociales, el pensamiento crítico y la ética de la persona.
+- **Pregunta de reintento (Reintento 1):**
+  ¿Qué dimensiones del ser humano se articulan de manera armónica en la sexualidad humana?
+  - A. Exclusivamente la dimensión celular y sanguínea.
+  - B. Las dimensiones biológica, afectiva, social, intelectual y valórica.
+  - C. Únicamente la dimensión geométrica y matemática.
+  - D. Solo las normas del tránsito vehicular.
+  *Clave reintento 1:* B.
 
-**Se muestra si el reactivo 3 requiere apoyo.**
+#### Recuperación para Reactivo 2 (Toma de decisiones ante la presión)
+- **Enseñanza del error:** Ceder a los chantajes por miedo al qué dirán daña tu salud y anula tu libertad; detenerse a pensar es el mayor signo de madurez.
+- **Pista orientadora:** Recuerda la fase 1 del protocolo: hacer una pausa y evaluar consecuencias antes de actuar.
+- **Recurso visible nuevo:** *Caso de recuperación:* A Marcela le dicen que si no falta a clases para ir a un centro comercial con sus amigas 'la sacarán del grupo de WhatsApp'.
+- **Tarea nueva del estudiante:** “Aplica el método responsable: ¿qué debe evaluar Marcela antes de responder a esa amenaza?”
+- **Apoyos progresivos:**
+  * *Apoyo 1:* Evalúa las consecuencias escolares y familiares de faltar a clases.
+  * *Apoyo 2:* Analiza si una amistad que amenaza es una relación basada en el respeto mutuo.
+  * *Apoyo 3:* Marcela debe evaluar que perder clases perjudica sus metas y que una amistad leal no impone chantajes para ser aceptada.
+- **Pregunta de reintento (Reintento 2):**
+  Ante un grupo que amenaza con burlarse si no cumples un reto peligroso, ¿cuál es la actitud que demuestra madurez y autonomía?
+  - A. Realizar el reto inmediatamente para que no se burlen.
+  - B. Rechazar la acción peligrosa con calma y firmeza, priorizando la seguridad y el autocuidado.
+  - C. Pagar dinero a los compañeros para que se olviden del reto.
+  - D. Agredir físicamente a quien hizo la propuesta.
+  *Clave reintento 2:* B.
 
-**Enseñanza:** La alternativa considera la decisión expresada y evita presionar.
+#### Recuperación para Reactivo 3 (Proyecto de vida y autocuidado)
+- **Enseñanza del error:** Lo que decides hoy construye tu mañana; tener metas claras te ayuda a decir no a conductas destructivas.
+- **Pista orientadora:** Pregúntate si una acción arriesgada en el presente puede cerrarte puertas en el futuro.
+- **Recurso visible nuevo:** *Caso de recuperación:* Un estudiante de 7° básico dice: 'Para qué preocuparme de cuidarme ahora si soy muy joven y el futuro está muy lejos'.
+- **Tarea nueva del estudiante:** “¿Por qué las decisiones de salud y respeto que tomamos en la pubertad sí influyen en nuestro futuro adulto?”
+- **Apoyos progresivos:**
+  * *Apoyo 1:* Recuerda cómo los hábitos de cuidado corporal protegen el organismo a largo plazo.
+  * *Apoyo 2:* Conecta la autoestima y el respeto a los límites con la capacidad de formar relaciones sanas.
+  * *Apoyo 3:* Los hábitos de autocuidado, la salud física y las habilidades de convivencia que desarrollamos hoy son los cimientos de nuestra vida adulta.
+- **Pregunta de reintento (Reintento 3):**
+  ¿Por qué es importante formular un proyecto de vida personal durante la adolescencia?
+  - A. Porque orienta nuestras decisiones cotidianas hacia el bienestar integral y la realización de metas futuras.
+  - B. Porque nos prohíbe tener pasatiempos y jugar con amigos.
+  - C. Porque garantiza que nunca tengamos dudas ni cambios corporales.
+  - D. Porque es una prueba obligatoria que pone notas en educación física.
+  *Clave reintento 3:* A.
 
-**Pista:** Releer el recurso y buscar la información mencionada en la explicación.
-
-**Nueva práctica antes del reintento:**
-
-**Recurso visible de recuperación:** Caso nuevo de recuperación: Paz nota un cambio de voz y siente incomodidad cuando otras personas quieren grabarlo para burlarse. Pide que no lo hagan. Una compañera propone detener la grabación y conversar con un adulto de confianza.
-
-**Tarea nueva del estudiante:** Explica cómo respetar el límite permite una decisión responsable.
-
-**Apoyo 1, si no identifica información:** Volver al caso concreto: «Caso nuevo de recuperación: Paz nota un cambio de voz y siente incomodidad cuando otras personas quieren grabarlo para burlarse. Pide que no lo hagan. Una compañera propone detener la grabación y conversar con un adulto de confianza.». Señalar las palabras del caso que permiten responder, sin mostrar la solución.
-
-**Apoyo 2, si no relaciona las pistas:** Usar el criterio del reactivo explicado arriba para comparar su respuesta con los datos del recurso nuevo. Pedir una razón y corregir el dato que contradiga el caso.
-
-**Apoyo 3 y modelo privado, después de un intento con las pistas:** Considera la petición y sus consecuencias para la persona; elige apoyo y evita presión. No exige relatar experiencias íntimas. Después, ocultar el modelo y pedir que explique con palabras propias qué pista cambió su respuesta.
-
-**Criterio de salida de esta práctica:** Resolver la tarea y justificarla con el caso nuevo; si necesita el modelo, registrar el apoyo y volver a intentar antes de reabrir el miniquiz. Esta es práctica abierta: no convertir las pistas en alternativas de respuesta.
-
-**Reintento completo:** Después de releer el recurso, responde de nuevo: ¿Qué demuestra responsabilidad en el caso de la fotografía?
-
-- A. Publicarla para evitar que el grupo se moleste
-- B. Insistir hasta que la persona ceda
-- C. Respetar su petición y acordar otra celebración
-- D. Decidir que su opinión no importa
-
-**Clave:** C. **Si acierta:** Usaste el recurso para fundamentar tu respuesta. **Si necesita más apoyo:** La alternativa considera la decisión expresada y evita presionar. Lean la información pertinente juntos y vuelve a intentarlo.
+---
 
 ## 9. Paso 8 — Síntesis y cierre
 
-**Idea clave:** Una decisión responsable considera respeto y consecuencias.
+**Tres ideas fuerza para recordar:**
+1. **La sexualidad es plenamente integral:** No puede fragmentarse: conjuga cuerpo, emociones, mente, relaciones sociales y principios éticos universales.
+2. **Decidir con método y responsabilidad:** Frente a dilemas o presiones, siempre: frenar el impulso, buscar información verídica, evaluar consecuencias y actuar con dignidad y asertividad.
+3. **Proyecto de vida y respeto:** Cuidar de uno mismo y tratar a los demás con empatía y consideración es el camino para construir una vida plena, armónica y con sentido.
 
-**Síntesis:** ¿Cómo relacionas los tres aspectos sin confundirlos?
+**Pregunta metacognitiva final:**  
+“De todo lo que aprendiste en estas seis clases sobre pubertad, emociones, estereotipos, respeto y decisiones, ¿cuál es el aprendizaje más valioso que te acompañará para cuidar de ti y de tus amigos?”
 
-**Metacognición:** ¿Qué te ayudó más: leer el recurso, localizar una pista o comparar explicaciones? ¿Por qué?
+**Puente de cierre del objetivo de aprendizaje:**  
+¡Felicitaciones! Has completado con éxito las seis clases canónicas de Ciencias Naturales para el OA01 de 7° básico. Con estas herramientas científicas y formativas, cuentas con una base sólida de conocimientos y valores para comprender tu desarrollo y convivir en armonía y respeto mutuo.
 
-**Cierre:** Buen trabajo. Explicaste tu respuesta usando información del recurso.
+---
 
+## Trazabilidad y entrega
 
-## Trazabilidad de esta entrega
+- **Código de entrega:** 110-7-CNA-OA01-CLASE06  
+- **Versión pedagógica:** v3.4 canónica y unificada.  
+- **Responsable de aprobación final:** Walter (EstudioSimple).  
+- **Condición normativa:** EN_REVISION · NO INTEGRADA EN APP · PENDIENTE APROBACIÓN WALTER.
 
-**OA:** 7B-CNA-OA01. **Fuente curricular:** base curricular verificada de 7° Básico, temario de Exámenes Libres.
-
-**Texto Escolar:** https://drive.google.com/file/d/1F_bd0rzd7VV_ZhttGuLRV9WlxJQzAvlD/view. **Páginas físicas PDF:** 118, 119, 123. Las síntesis no se presentan como citas literales.
-
-**Integración pendiente:** Antigravity materializa esta entrega en la fuente canónica y comprueba su visualización. Este archivo no certifica por sí solo funcionamiento en la App.
-
-**Aprobación:** exclusivamente Walter.
+---
 
 ## Guiones audiovisuales de producción
 
-Pauta vigente para producción futura: siete diapositivas de MOTIVACION y siete de EXPLICACION. Los textos visibles se componen como título y subtítulo editables según el plan de la asignatura; las locuciones no son párrafos para colocar sobre la imagen. Título Arial negrita 64 pt blanco; subtítulo Arial negrita 32 pt amarillo #FFD32C. Imagen completa, sin paneles ni sombras; composición que respeta texto, personajes y evidencia. Esta corrección del guion no modifica ningún PPTX existente.
+### MOTIVACION: 110-7-CNA-OA01-CLASE06-MOTIVACION.pptx
 
-### MOTIVACION
+#### Diapositiva 01 — La brújula del crecimiento
+**Título:** La brújula del crecimiento  
+**Subtítulo:** Navegar la pubertad con sentido  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Una brújula dorada estilizada cuyos cuatro puntos cardinales indican: "Cuerpo", "Emociones", "Sociedad" y "Valores". En el centro, una aguja brillante apunta hacia adelante con la palabra "Decisiones".  
+**Locución (Voz en off):** Crecer es como emprender un viaje fascinante por mares que a veces tienen olas tranquilas y otras veces tormentas inesperadas. Para no perder el rumbo en la pubertad, necesitamos una brújula que nos ayude a conectar lo que sentimos, lo que pensamos y cómo actuamos.
 
-#### Diapositiva 01 — Una situación
+#### Diapositiva 02 — Un desafío en el camino
+**Título:** Un desafío en el camino  
+**Subtítulo:** La tentación del aplauso fácil  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Javier mira el mensaje de texto de su celular bajo la noche de campamento; al fondo se observan las sombras de rocas altas junto a un río y un cartel de advertencia de peligro natural.  
+**Locución (Voz en off):** Javier está en un campamento escolar. En su teléfono brilla una invitación tentadora: salir a medianoche a tomarse fotos arriesgadas en unas rocas peligrosas. Le prometen fama viral en internet, pero si se niega, amenazan con burlarse de él. ¿Qué harías tú en su lugar?
 
-**Título:** Una situación
+#### Diapositiva 03 — La trampa de la impulsividad
+**Título:** La trampa de la impulsividad  
+**Subtítulo:** Cuando la prisa nubla la vista  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Silueta de una persona corriendo a ciegas hacia un precipicio atraída por una pantalla brillante de 'likes', contrastada con una señal de semáforo en amarillo que invita a frenar y reflexionar.  
+**Locución (Voz en off):** Actuar sin pensar por complacer a otros es el error más frecuente en la adolescencia. Creer que unos minutos de popularidad pasajera valen más que nuestra integridad física o nuestro bienestar es caer en una trampa que puede costar muy caro.
 
-**Locución:** Hoy exploraremos decisiones responsables e integración. Observaremos el caso y buscaremos pistas antes de sacar una conclusión.
+#### Diapositiva 04 — La pausa inteligente
+**Título:** La pausa inteligente  
+**Subtítulo:** Respirar antes de elegir  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Javier guarda con serenidad su teléfono en el bolsillo, respira hondo mirando el cielo estrellado y reflexiona con calma, reconociendo el valor inmenso de su propia vida y seguridad.  
+**Locución (Voz en off):** Javier decide detenerse. No responde con prisa ni con miedo al qué dirán. Sabe que una decisión madura no se toma con el impulso del momento, sino con la cabeza fría y el corazón tranquilo.
 
-#### Diapositiva 02 — La pregunta
+#### Diapositiva 05 — El valor de la convicción
+**Título:** El valor de la convicción  
+**Subtítulo:** La verdadera fuerza de decir no  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Javier respondiendo asertivamente a sus compañeros con un mensaje claro y calmado, rechazando el riesgo con dignidad y proponiendo una alternativa positiva para el día siguiente.  
+**Locución (Voz en off):** La verdadera valentía no está en hacer tonterías peligrosas para impresionar a un grupo: está en tener la entereza ética de decir 'no voy a arriesgar mi vida por una foto'. Quien cuida de sí mismo demuestra verdadero liderazgo.
 
-**Título:** La pregunta
+#### Diapositiva 06 — Un horizonte por construir
+**Título:** Un horizonte por construir  
+**Subtítulo:** El proyecto que da sentido a tu vida  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Ilustración de jóvenes en la cima de una colina al amanecer, mirando un horizonte brillante lleno de caminos abiertos que representan sus sueños, profesiones y metas futuras.  
+**Locución (Voz en off):** Cada decisión que tomas hoy abre o cierra puertas en tu futuro. Tener un proyecto de vida es saber hacia dónde quieres caminar: qué tipo de persona quieres ser, cómo quieres tratar a quienes amas y qué huella hermosa deseas dejar en el mundo.
 
-**Locución:** Cambio de voz, vergüenza y burlas aparecen en el caso de Alex. Mantén a la vista la situación y distingue lo que informa de lo que suponemos.
+#### Diapositiva 07 — La pregunta de cierre
+**Título:** La pregunta de cierre  
+**Subtítulo:** ¿Cómo integrar todo lo aprendido?  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Signo de interrogación destacado en amarillo (#FFD32C) sobre las cinco dimensiones de la sexualidad unidas en una estrella luminosa de crecimiento integral.  
+**Locución (Voz en off):** ¿Cómo unimos el cuerpo, las emociones, los amigos, el pensamiento y los valores para tomar decisiones responsables cada día? Acompáñanos a descubrirlo en esta gran lección de cierre.
 
-#### Diapositiva 03 — Primera idea
+---
 
-**Título:** Primera idea
+### EXPLICACION: 110-7-CNA-OA01-CLASE06-EXPLICACION.pptx
 
-**Locución:** ¿Cómo relacionas los tres aspectos sin confundirlos? Puedes plantear una primera idea; después comprobaremos qué información la apoya.
+#### Diapositiva 01 — Integración de la sexualidad humana
+**Título:** Integración de la sexualidad humana  
+**Subtítulo:** Una mirada holística y científica  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Síntesis visual de la Lección 8 del texto escolar: un pentágono armónico donde convergen las dimensiones Biológica, Afectiva, Social, Intelectual y Espiritual en torno a la persona.  
+**Locución (Voz en off):** Bienvenidos a la explicación de la Clase 06. A lo largo de esta unidad hemos comprendido que la sexualidad no es una sola cosa: es la integración viva de nuestro cuerpo, nuestras emociones, nuestros vínculos sociales, nuestras ideas y nuestros valores éticos.
 
-#### Diapositiva 04 — Busca pistas
+#### Diapositiva 02 — Las cinco dimensiones en armonía
+**Título:** Las cinco dimensiones en armonía  
+**Subtítulo:** Ninguna dimensión camina sola  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Cinco engranajes perfectamente conectados y en movimiento armónico: Biológico (salud/pubertad), Afectivo (autoestima), Social (equidad), Intelectual (crítica) y Espiritual (valores/dignidad).  
+**Locución (Voz en off):** Como enseña la página 116 del texto, no podemos separar la biología de lo que sentimos o pensamos. Cuidar nuestra higiene y nutrición apoya nuestra salud física; cultivar la empatía mejora nuestras amistades; y aplicar el pensamiento crítico nos protege de errores graves.
 
-**Título:** Busca pistas
+#### Diapositiva 03 — El método de decisión responsable
+**Título:** El método de decisión responsable  
+**Subtítulo:** Cuatro pasos hacia la autonomía ética  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Diagrama de cuatro fases en escalera ascendente: 1. Pausa reflexiva; 2. Búsqueda de evidencia científica; 3. Evaluación de impacto y consecuencias; 4. Acción autónoma y responsable.  
+**Locución (Voz en off):** Tomar decisiones responsables es una habilidad científica y formativa. El método consiste en: primero, detener el impulso; segundo, buscar información verídica y consultar a adultos confiables; tercero, prever consecuencias a corto y largo plazo; y cuarto, actuar con libertad y asumir la responsabilidad.
 
-**Locución:** Observa la situación. ¿Qué detalle podría ayudarte a responder? Una pista útil debe ayudarnos a responder la pregunta que estamos explorando.
+#### Diapositiva 04 — Pensamiento crítico frente a la desinformación
+**Título:** Pensamiento crítico frente a la desinformación  
+**Subtítulo:** Distinguir la ciencia del rumor  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Un filtro purificador que separa la desinformación, los mitos populares y los retos virales (residuos rojos) dejando pasar únicamente el conocimiento científico validado y la orientación formativa (agua cristalina azul).  
+**Locución (Voz en off):** En temas de salud y relaciones, internet está lleno de mitos y presiones falsas. El pensamiento crítico es nuestra mejor defensa: nos impulsa a dudar de lo superficial, a verificar en fuentes médicas y escolares oficiales, y a no arriesgar nuestra dignidad por modas pasajeras.
 
-#### Diapositiva 05 — Compara posibilidades
+#### Diapositiva 05 — Autocuidado y responsabilidad compartida
+**Título:** Autocuidado y responsabilidad compartida  
+**Subtítulo:** Cuidar de mí es cuidar de todos  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Dos jóvenes plantando juntos un árbol en el patio escolar, simbolizando cómo el cuidado individual genera frutos de bienestar y protección para toda la comunidad.  
+**Locución (Voz en off):** La responsabilidad individual nunca es egoísta: cuando una persona cuida su cuerpo, respeta los límites de sus pares y frena los estereotipos, está construyendo un entorno más seguro, justo y acogedor para toda su comunidad escolar.
 
-**Título:** Compara posibilidades
+#### Diapositiva 06 — Construyendo tu proyecto de vida
+**Título:** Construyendo tu proyecto de vida  
+**Subtítulo:** Metas, valores y decisiones coherentes  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Un mapa de vida con estaciones luminosas: estudios, pasatiempos, amistades leales, familia y valores éticos, guiado por una brújula de decisiones reflexivas.  
+**Locución (Voz en off):** Tu proyecto de vida no es una obligación rígida: es tu mapa de esperanzas y aspiraciones. Saber lo que valoras te da la claridad para decir sí a lo que te engrandece y no a lo que amenaza tus sueños y tu salud.
 
-**Locución:** Una respuesta necesita información del recurso. Buscaremos pistas para fundamentarla. Dos respuestas pueden parecer posibles; necesitamos revisar cuál tiene respaldo.
+#### Diapositiva 07 — Síntesis y cierre del OA01
+**Título:** Síntesis y cierre del OA01  
+**Subtítulo:** Sabiduría para crecer en armonía  
+**Texto en lámina:**  
+Título Arial negrita 64 pt blanco (#FFFFFF) centrado  
+Subtítulo Arial negrita 32 pt amarillo (#FFD32C) centrado  
+**Descripción visual:** Gran sello de certificación de aprendizaje completado: "Ciencias Naturales 7° Básico - OA01 Concluido con Éxito", con estudiantes sonrientes celebrando el aprendizaje.  
+**Locución (Voz en off):** Has completado el viaje del OA01: desde los cambios de la pubertad hasta la integración de tus valores y decisiones. Lleva estos aprendizajes contigo para vivir tu desarrollo con plenitud, respeto mutuo y alegría.
 
-#### Diapositiva 06 — Una estrategia
+---
 
-**Título:** Una estrategia
+## Control de esta revisión y contrato pedagógico
 
-**Locución:** Lee el recurso y relaciona sus detalles antes de elegir una explicación. La clase mostrará cómo relacionar las pistas y explicar esa relación paso a paso.
-
-#### Diapositiva 07 — Puente a la lectura
-
-**Título:** Puente a la lectura
-
-**Locución:** Ahora descubriremos cómo las pistas ayudan a comprender esta situación. Luego aplicarás el criterio a otra situación breve, con menor ayuda.
-
-### EXPLICACION
-
-#### Diapositiva 01 — Una herramienta
-
-**Título:** Una herramienta
-
-**Locución:** El cambio de voz, la vergüenza y las burlas pertenecen a aspectos distintos presentes en una misma situación.
-
-#### Diapositiva 02 — El criterio
-
-**Título:** El criterio
-
-**Locución:** Identificamos el cambio de voz como una pista del ámbito biológico sin usarlo para juzgar a Alex. Reconocer lo que siente Alex permite comprender el efecto de la situación y acompañarlo con respeto.
-
-#### Diapositiva 03 — Relación entre pistas
-
-**Título:** Relación entre pistas
-
-**Locución:** Las burlas y la intervención de una compañera pertenecen a las formas de convivencia. Detener las burlas y buscar apoyo considera el bienestar de Alex. En el otro caso, respetar la fotografía protege la decisión expresada.
-
-#### Diapositiva 04 — Modelo explicado
-
-**Título:** Modelo explicado
-
-**Locución:** Cambio de voz, vergüenza y burlas aparecen en el caso de Alex. ¿Cómo relacionas los tres aspectos sin confundirlos? El cambio de voz es biológico; la vergüenza es afectiva; las burlas y el apoyo son sociales. Se relacionan porque ocurren en una misma situación. El caso presenta una pista para cada aspecto.
-
-#### Diapositiva 05 — Comprobación
-
-**Título:** Comprobación
-
-**Locución:** Una persona no quiere que publiquen su fotografía. El grupo acuerda otra celebración. ¿Por qué es responsable esa decisión? Considera la petición de la persona y elige una alternativa que respeta su límite sin impedir compartir afecto. El grupo conserva el propósito de celebrar y respeta la decisión sobre la fotografía.
-
-#### Diapositiva 06 — Error y corrección
-
-**Título:** Error y corrección
-
-**Locución:** Un error que debemos evitar: Elegir una acción solo por presión del grupo, sin considerar a la persona afectada. Si la respuesta añade información, vuelve al recurso y corrígela.
-
-#### Diapositiva 07 — Síntesis y práctica
-
-**Título:** Síntesis y práctica
-
-**Locución:** Una decisión responsable considera respeto y consecuencias. Lee, localiza evidencia, explica y comprueba. Continúa con la práctica interactiva.
-
-
-## Contrato de revisión y correspondencia pedagógica
-
-**Versión de fuente:** R1 · revisión autorizada 17-10-2026, 11:55 America/Santiago. Fecha de autorización, no certificación de publicación. SHA-256 completo en manifest de esta entrega; no incrustar una huella autorreferente. Estado: CORREGIDA PARA REVISIÓN · NO SINCRONIZADA · NO APROBADA.
-
-**Reglas aplicadas:** Manual Maestro v2.0, secciones 14–19; Global de Lecciones v1.2, U01–U14; plan vigente de la asignatura. Los códigos IE son identificadores internos: sus descriptores y cobertura están en la matriz del paquete, no se presentan como nomenclatura oficial MINEDUC. Se conservan los encabezados previos para no suponer compatibilidad del parser.
-
-**Autoría e integración:** Este CLASE[NN].md es la fuente editable del paquete revisado. TS/JSON/DOCX y manifest son derivados de esta misma versión, conforme a U03; no editar esos derivados por separado ni tratar el TS anterior como autoridad para revertir esta corrección. Actualizar Drive no acredita sincronización. Antigravity debe informar campos no representables y demostrar el mapeo antes de importar; no usar valores por defecto ni placeholders.
-
-| Función del Manual | Sección de esta fuente | Rol y momento |
-|---|---|---|
-| Conexión | Situación inicial / punto de partida | Estudiante: recurso y pregunta; respuesta de referencia privada |
-| Explicación y modelamiento | Explicación / formalización y modelo | Estudiante después del primer intento; conducción del adulto |
-| Práctica guiada | Conversación guiada y caso conjunto | Pregunta primero; pistas solo cuando se necesiten |
-| Práctica autónoma | Aplicación autónoma y transferencia | Estudiante intenta con menor ayuda; criterio privado |
-| Feedback y nuevo intento | Feedback de práctica y recuperación | Explicación según respuesta, nueva práctica, luego reintento |
-| Transferencia | Recurso nuevo de la aplicación autónoma | Estímulo distinto; no mostrar modelo antes del intento |
-| Comprobación final | Miniquiz y evidencia registrada | Tres preguntas; decisión 2/3 y recuperación con 0/1 |
-| Cierre | Síntesis y cierre | Recapitulación, reflexión y continuidad |
-
-**Privacidad y revelación obligatorias:** Respuestas de referencia del punto de partida, respuestas esperadas, claves, análisis de alternativas, modelos de práctica, criterios y apoyos del mentor son privados. El estudiante recibe inicialmente solo recurso, pregunta y alternativas sin marcas de corrección. Revelar feedback de su respuesta después de enviarla; no entregar todas las claves en el payload del rol estudiante. Los modelos explícitos de enseñanza se muestran en el momento de modelamiento. Cada intento autónomo dispone de su pausa antes de revelar criterios. Esta es una especificación: la privacidad efectiva de la App todavía requiere prueba.
-
-**Secuencia de uso:** Preparación del adulto antes de la sesión; conexión y primer intento; motivación; explicación/modelamiento; resolver de manera guiada; intento autónomo con recurso nuevo; feedback; miniquiz; recuperación si corresponde; cierre. La matriz documenta funciones, no renumera la navegación ni impone un nuevo diseño de interfaz.
-
-**Decisión formativa:** 2/3 o 3/3 permite avanzar en la clase según el Manual; con 0/3 o 1/3, explicar el error, ofrecer apoyos, resolver la nueva práctica correspondiente y reintentar. Si vuelve a necesitar ayuda, registrar el apoyo y reforzar el criterio sin aprobar automáticamente. El resultado se acompaña de la evidencia de práctica. El miniquiz no aprueba por sí solo todo el OA.
-
-**Control:** Cero hallazgos críticos o mayores; hasta tres menores enumerados y aceptados por clase. Los recursos audiovisuales pendientes y la integración se registran por separado; no se declara la clase publicada o el OA aprobado desde esta revisión documental. Matemática OA01 y las doce presentaciones terminadas de Lengua y Literatura OA03 permanecen excluidas de cambios.
+- **Auditoría de cumplimiento:** Clase revisada integralmente conforme a las directrices del Plan Maestro de Ciencias Naturales v3.4 y Global de Lecciones v1.2.
+- **Validación estructural:** 26 secciones canónicas, erradicación total de terminología obsoleta, bimodalidad estricta 7+7 diapositivas con títulos de contenido no genéricos, preguntas de 4 alternativas con distractores formativos fundamentados y recuperación determinista.
+- **Estado de producción:** EN_REVISION · PENDIENTE APROBACIÓN WALTER.

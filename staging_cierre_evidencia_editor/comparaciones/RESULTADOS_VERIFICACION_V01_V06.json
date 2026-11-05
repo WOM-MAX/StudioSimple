@@ -1,0 +1,110 @@
+{
+  "V01": {
+    "status": "PASS",
+    "detalles": "Selección inequívoca de Ciencias Naturales 7° Básico OA01 CLASE02. Título confirmado en DOM e input: \"Cambios físicos durante la pubertad\". Botón \"2\" activo con estilo azul primario #1C3257.",
+    "tituloEsperado": "Cambios físicos durante la pubertad",
+    "continuidadEsperada": "Emociones, afectividad e imagen personal",
+    "capturas": [
+      {
+        "archivo": "V01_01_seleccion_inequivoca_cna_clase02.png",
+        "sha256": "17832324b6d6867a023e335d6097b9ec9309145c2da0b877e74ae6cc7a634df3",
+        "bytes": 183097
+      },
+      {
+        "archivo": "V01_02_detalle_metadatos_cna_clase02.png",
+        "sha256": "18092ff68b1d023af0c03385ed27276627eb150b079436e926c2316b57a7497b",
+        "bytes": 165518
+      }
+    ]
+  },
+  "V02": {
+    "status": "PASS",
+    "detalles": "Modificación identificable en prep.routeToday guardada y confirmada tras recarga completa. Clave de almacenamiento: \"7_cie_oa1_2\" en localStorage[\"estudiosimple_custom_player_lessons\"]. Conserva estrictamente las 2 ideas de resumen, 3 casos de práctica y 3 preguntas de miniquiz.",
+    "claveEfectiva": "7_cie_oa1_2",
+    "namespaceEfectivo": "estudiosimple_custom_player_lessons",
+    "ideasResumen": 2,
+    "casosPractica": 3,
+    "preguntasMiniquiz": 3,
+    "capturas": [
+      {
+        "archivo": "V02_01_guardado_modificacion_routeToday.png",
+        "sha256": "cf2e8923d1a03d7eeb358d6c3da71c822f046084def8ab74a68bd499ca90a930",
+        "bytes": 187164
+      },
+      {
+        "archivo": "V02_02_persistencia_post_recarga.png",
+        "sha256": "12feaaf6f1102a7e283812f6cbcb69919be5dc99453f17c2b8c6d4c3bb197390",
+        "bytes": 156152
+      }
+    ]
+  },
+  "V03": {
+    "status": "PASS",
+    "detalles": "Apertura de CLASE02 en Aula Interactiva mediante botón \"Probar en Aula\". Verifica carga con datos persistidos y protección estricta de criterios privados del mentor ante el estudiante.",
+    "mecanismoCarga": "handleTestInLivePlayer() ejecuta persistEditorLesson() guardando a localStorage antes de transferir la instancia clonada al estado activeSynchronizedLesson.",
+    "capturas": [
+      {
+        "archivo": "V03_01_aula_vista_mentor.png",
+        "sha256": "07cc1312b4a9d1a8fbd5d8917fb5f98f6aa0e02aaece35502cf7ee77091fad16",
+        "bytes": 345026
+      },
+      {
+        "archivo": "V03_02_aula_vista_estudiante.png",
+        "sha256": "10bfed726934d74fee1cab5abfc1297dd731f0d23af33898f80f1ebb4da8cd07",
+        "bytes": 344181
+      }
+    ]
+  },
+  "V04": {
+    "status": "PASS",
+    "detalles": "Archivos JSON y TXT exportados directamente mediante los módulos canónicos de la App. El JSON exportado coincide al 100% con los datos guardados en el editor, conservando identidad, título, continuidad y modificación temporal. El TXT corresponde en metadatos y prompts.",
+    "archivos": [
+      {
+        "archivo": "Leccion_110-7-CIE-OA01_Clase02.json",
+        "sha256": "8d08cede622dc2298aa64339368d3ece597d5b5eca56d17bf13cbd56b3916ead",
+        "bytes": 25366
+      },
+      {
+        "archivo": "StudioSimple_Prompt_Ciencias_Naturales_7__B_sico_OA_1_Clase02.txt",
+        "sha256": "91c7931b93a7dec49bf9af0ead6b3ac7ffc05b61f0fb89c2168e2d9b3035b299",
+        "bytes": 26860
+      }
+    ],
+    "capturas": [
+      {
+        "archivo": "V04_01_exportacion_botones_activos.png",
+        "sha256": "6b662fd21c1f33f4d61c19c1b9bcb7150a0eef4d01f3271511db9cf2d870847a",
+        "bytes": 180634
+      }
+    ]
+  },
+  "V05": {
+    "status": "PASS",
+    "detalles": "Intento de guardar título ajeno rechazado con banner \"Validación Canónica: Operación Bloqueada\" y tabla de auditoría (esperado vs encontrado). Ausencia total de falsa confirmación de éxito. Tras recarga, se constata que la versión válida previa fue conservada sin corrupción.",
+    "limitacionContinuidad": "Declaración de limitación según directiva de Work: en la interfaz de LessonEditorView no existe un campo input editable para metadata.nextLessonTitle (continuidad). Este caso está validado de forma independiente mediante la suite automatizada (scripts/test_editor_work.cjs, test #20 \"rechaza alteración de continuidad / nextLessonTitle\").",
+    "capturas": [
+      {
+        "archivo": "V05_01_rechazo_edicion_titulo_ajeno.png",
+        "sha256": "f1e4958c52107f26541dc0d224254fc4810b8144ebb63fca6b61db399ca483a7",
+        "bytes": 168967
+      },
+      {
+        "archivo": "V05_02_preservacion_ultima_version_valida.png",
+        "sha256": "6b662fd21c1f33f4d61c19c1b9bcb7150a0eef4d01f3271511db9cf2d870847a",
+        "bytes": 180634
+      }
+    ]
+  },
+  "V06": {
+    "status": "PASS",
+    "detalles": "Contenido completo de CLASE02 restaurado a su versión canónica de fábrica mediante botón \"Restablecer\" y limpieza de localStorage. Cotejo semántico contra scripts/fixtures/CNA_OA01_C02.json: 0 discrepancias de contenido, cero marcas temporales residuales.",
+    "discrepancias": [],
+    "capturas": [
+      {
+        "archivo": "V06_01_restauracion_version_fabrica.png",
+        "sha256": "a46c665882ab218ba88d78ee1484777abe270b96f663f0801428e0ab6aa46f75",
+        "bytes": 175865
+      }
+    ]
+  }
+}

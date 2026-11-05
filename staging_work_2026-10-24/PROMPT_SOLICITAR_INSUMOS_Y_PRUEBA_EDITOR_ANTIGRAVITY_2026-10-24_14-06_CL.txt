@@ -1,0 +1,71 @@
+SOLICITUD A ANTIGRAVITY — INSUMOS Y PRUEBA ACOTADA DEL EDITOR DE LECCIONES
+EstudioSimple · Curso 110-7 · Emitida por Work: 24-10-2026, 14:06 CL
+
+OBJETIVO
+Entregar a Work el código vigente y evidencia suficiente para revisar si el editor conserva la estructura de las lecciones y utiliza los controles del auditor de títulos, identidad y continuidad. Esta fase es de diagnóstico y recopilación: NO corregir, refactorizar ni crear funciones.
+
+ANTECEDENTE
+Work revisó RESULTADOS_AUDITOR_WORK_TITULOS_CONTINUIDAD_2026-10-22_09-25_CL.zip: los hashes declarados coinciden con nuestro parche, el log contiene 31 pruebas correctas, el auditor pasa de 29 a 30 módulos verificados tras la corrección puntual de Matemática OA04 Clase 05. Conserva ese trabajo. No reinicies las auditorías anteriores.
+Los 21 avisos de resumen se revisarán pedagógicamente después. No redactes resúmenes ni impongas tres ideas: Ciencias OA01 Clase 02 conserva sus dos ideas.
+
+1. ENTORNO Y VERSIÓN
+Identifica commit actual, rama, estado de cambios locales y relación con la versión del auditor aplicada. Una rama local por sí sola no demuestra aislamiento.
+Obtén el código por lectura. Para la prueba funcional utiliza una copia aislada, almacenamiento y datos de prueba separados, sin escritura en servicios ni sesiones de producción. Registra ruta, comando y URL local; no incluyas secretos.
+Mantén EN_REVISION, sin push ni despliegue. Protege Matemática OA01 completa, fuentes canónicas, 14 PPTX terminados, videos, base de datos, progreso real y reglas de aprobación. Walter produce y sube los videos después; no son requisito de esta prueba.
+
+2. CÓDIGO QUE NECESITA WORK
+Incluye archivos completos vigentes, conservando rutas originales; no sólo fragmentos, nombres o hashes:
+- Entrada/página y componentes del editor; formularios, estado y validaciones.
+- Funciones y adaptadores que cargan, guardan, exportan e importan/reabren las lecciones, cuando existan.
+- Repositorio/loader y selección de prioridad entre fuente canónica, módulo, JSON, edición guardada y caché.
+- Tipos y esquemas compartidos de lecciones.
+- Endpoints o funciones del servidor realmente usados para persistir. Si usa sólo navegador, documentarlo.
+- Parser, adaptadores y controles del auditor que intervienen efectivamente en ese recorrido, incluida la referencia canónica vigente.
+- Dependencias locales necesarias para seguir estos caminos. Incluye los imports locales transitivos pertinentes; no envíes todo el repositorio sin selección.
+- package.json, configuración TypeScript y de rutas/build necesaria para comprender o ejecutar ese código. Incluye lockfiles pertinentes para reproducir versiones.
+Si un archivo cumple varios roles, inclúyelo una sola vez. No incluyas node_modules, dist, .git, credenciales, .env reales, datos de usuarios ni archivos ajenos al flujo.
+
+3. CASO ÚNICO: CIENCIAS NATURALES OA01 CLASE 02
+Usa la copia de Ciencias OA01 Clase 02 del curso 110-7. No uses Matemática OA01.
+Incluye su Markdown canónico, módulo vigente y manifiesto de vinculación, con rutas y SHA-256.
+Explica paso a paso el recorrido efectivo: fuente → editor → guardado → exportación → loader → vista de adulto/estudiante. Para cada paso indica archivo/función, formato, identidad y ubicación de persistencia.
+
+4. PRUEBA FUNCIONAL ACOTADA EN LA COPIA AISLADA
+Utiliza controles reales de la interfaz, sin fabricar pantallas ni reemplazar pasos por asignaciones de estado:
+A. Abrir la clase en el editor y registrar título, identidad, secciones y datos cargados.
+B. Guardar inicialmente sin cambios y comparar los datos esenciales antes/después.
+C. Si el editor permite editar un texto no evaluativo, introducir una marca temporal inequívoca PRUEBA_EDITOR_WORK en ese texto de la copia, guardar y recargar. Comprobar dónde quedó persistida y si la clase reabierta la conserva. No modificar títulos, claves, preguntas ni condiciones de acreditación. Restaurar el valor original al finalizar.
+D. Exportar con los controles realmente disponibles. Adjuntar el JSON exportado y el texto/prompt exportado si existe. No crear un exportador nuevo para cumplir la solicitud.
+E. Reimportar o cargar ese resultado usando el mecanismo existente y comprobar la clase resultante en adulto/estudiante. Si no existe reimportación, explicar la limitación y probar sólo el camino real de carga; no inventar uno.
+F. Comparar identidad, título, puente, estímulos, preguntas/opciones/claves, casos de práctica, dos ideas de resumen, recuperación abierta y cierre. Verificar que los datos privados mantengan su condición de visibilidad.
+No exigir igualdad byte a byte entre formatos diferentes: mostrar correspondencias de campos y diferencias semánticas. Un campo ausente debe informarse, no rellenarse para aprobar.
+
+Adjunta capturas o un video breve de los hitos de esta única prueba y registros pertinentes. Identifica acciones, resultados y versión. Los archivos exportados que contengan claves privadas son evidencia técnica, no material para publicar al estudiante.
+Si una operación no existe, falla o no puede ejecutarse con el aislamiento indicado, conserva evidencia y marca NO_DISPONIBLE/FALLO/NO_EJECUTADO con causa; continúa recopilando los otros insumos. No repitas el intento indefinidamente ni arregles código en esta fase.
+
+5. ENLACE CON EL AUDITOR
+Identifica si las operaciones del editor invocan realmente el auditor o una validación equivalente antes de guardar/exportar/cargar. Cita funciones y puntos de llamada. Si una operación lo evita, informa exactamente cuál y su impacto; no la repares todavía.
+Distingue validación de tipos, presencia de campos, correspondencia canónica y compatibilidad pedagógica. Compilar no demuestra fidelidad.
+No basta ejecutar el auditor como comando externo y afirmar por eso que el editor está integrado. No regeneres la referencia para hacer coincidir un cambio de prueba.
+Reutiliza la evidencia anterior del auditor; no ejecutes otra batería de 30/36 clases ni una auditoría general de la App para preparar esta entrega.
+
+6. ENTREGA ÚNICA
+Entrega:
+INSUMOS_Y_PRUEBA_EDITOR_LECCIONES_ANTIGRAVITY_YYYY-MM-DD_HH-mm_CL.zip
+Usa fecha/hora reales de emisión en America/Santiago, con nombres iguales en Drive y referencias.
+
+Contenido:
+- LEER_PRIMERO_INFORME_EDITOR.md: versión, entorno, recorrido, resultados A–F, validación previa, hallazgos y limitaciones.
+- codigo/: archivos completos con sus rutas originales.
+- caso_CNA_OA01_C02/: fuente, módulo, manifiesto, exportaciones y comparación de campos.
+- evidencias/: capturas/video breve y logs reales, con sus hitos identificados.
+- INVENTARIO_SHA256.json: ruta, tamaño y huella de cada archivo incluido; identificación del commit y cambios locales relevantes.
+- Declaración de protecciones y restauración de la marca temporal; diff acotado si hubiera cambios locales relevantes. No incluir una reparación nueva.
+
+Guarda el ZIP en:
+EstudioSimple_Repositorio_Curricular / ARREGLOS_SINCRONIZACION_ANTIGRAVITY / INFORMES_Y_EVIDENCIAS.
+Devuelve su único enlace directo, nombre exacto, tamaño y SHA-256. No dejes esta respuesta en PARA_ENVIAR ni en carpetas de planes maestros.
+
+CRITERIO DE TÉRMINO
+Finaliza cuando Work pueda seguir el código y contrastarlo con el recorrido observado. Una brecha del editor documentada no es motivo para seguir corrigiendo autónomamente: Work revisará primero y definirá cualquier cambio necesario.
+
