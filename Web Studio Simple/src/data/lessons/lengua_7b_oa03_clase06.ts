@@ -56,7 +56,7 @@ export const LENGUA_7B_OA03_CLASE06: LessonData = {
     "dileObjective": "Comparar relatos con evidencia"
   },
   "situation": {
-    "dilePrompt": "Observa la situación de partida para comenzar.",
+    "dilePrompt": "Lee las dos síntesis. En A, Jimmy abraza a Robutt y expresa cariño; en B, Kitagaki se presenta como viejo amigo y el monje lo recibe. ¿Qué semejanza puedes sostener con ambos hechos?",
     "expectedAnswer": "En ambos relatos, un vínculo personal adquiere importancia: Jimmy defiende su afecto y Kitagaki reconoce una amistad compartida.",
     "socraticHint": "Busca un hecho de cada texto que muestre la importancia de un vínculo. No confundas una semejanza con tener el mismo final.",
     "emotionalTip": "Acompaña con calma.",
@@ -90,7 +90,7 @@ export const LENGUA_7B_OA03_CLASE06: LessonData = {
     "title": "Motivación",
     "titulo": "Motivación",
     "focusPoints": [],
-    "dileIntro": "Hoy exploraremos una nueva situación motivadora.",
+    "dileIntro": "Lee las dos síntesis. En A, Jimmy abraza a Robutt y expresa cariño; en B, Kitagaki se presenta como viejo amigo y el monje lo recibe. ¿Qué semejanza puedes sostener con ambos hechos?",
     "hazInstruction": "Observa y reflexiona con las escenas del video.",
     "videoSrc": "https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/LENGUAJE/OA03/110-7-LYL-OA03-CLASE06-MOTIVACION.pptx.mp4",
     "dileAfterVideo": "¿Qué observaste en esta situación inicial?",

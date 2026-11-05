@@ -56,7 +56,7 @@ export const LENGUA_7B_OA03_CLASE03: LessonData = {
     "dileObjective": "Inferencias con evidencia del relato"
   },
   "situation": {
-    "dilePrompt": "Observa la situación de partida para comenzar.",
+    "dilePrompt": "Lee el recurso y fíjate en el abrazo de Jimmy y sus palabras de cariño. ¿Cuál es el hecho y qué puedes inferir de él?",
     "expectedAnswer": "El hecho es que Jimmy lo abraza y expresa cariño. Puedo inferir que valora su vínculo con Robutt.",
     "socraticHint": "Separa lo que el recurso cuenta directamente de lo que interpretas a partir del abrazo y las palabras de Jimmy.",
     "emotionalTip": "Acompaña con calma.",
@@ -90,7 +90,7 @@ export const LENGUA_7B_OA03_CLASE03: LessonData = {
     "title": "Motivación",
     "titulo": "Motivación",
     "focusPoints": [],
-    "dileIntro": "Hoy exploraremos una nueva situación motivadora.",
+    "dileIntro": "Lee el recurso y fíjate en el abrazo de Jimmy y sus palabras de cariño. ¿Cuál es el hecho y qué puedes inferir de él?",
     "hazInstruction": "Observa y reflexiona con las escenas del video.",
     "videoSrc": "https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/LENGUAJE/OA03/110-7-LYL-OA03-CLASE03-MOTIVACION.pptx.mp4",
     "dileAfterVideo": "¿Qué observaste en esta situación inicial?",

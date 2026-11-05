@@ -59,7 +59,7 @@ export const LENGUA_7B_OA03_CLASE01: LessonData = {
     "dileObjective": "Jimmy y Robutt: leer el ambiente y descubrir el conflicto"
   },
   "situation": {
-    "dilePrompt": "Observa la situación de partida para comenzar.",
+    "dilePrompt": "Lee el primer párrafo del recurso que aparece en pantalla. ¿Dónde vive Jimmy? Cuéntame dos detalles de ese lugar.",
     "expectedAnswer": "Por ejemplo: «Vive en la Luna. Hay rocas y no se puede respirar afuera».",
     "socraticHint": "Relee el primer párrafo. Busca dónde vive Jimmy, cómo es el suelo y qué dice sobre el aire.",
     "emotionalTip": "La historia presenta un vínculo de amistad y un desacuerdo familiar. El objetivo es comprender cómo se construye el relato, no decidir qué personaje tiene la única opinión válida.",
@@ -82,7 +82,7 @@ export const LENGUA_7B_OA03_CLASE01: LessonData = {
     ]
   },
   "reference": {
-    "dilePrompt": "¿Dónde ocurre la historia y qué detalles permiten imaginar ese lugar?",
+    "dilePrompt": "Revisemos el punto de partida.",
     "question": "¿Qué información entrega el punto de partida?",
     "expectedAnswer": "Por ejemplo: «Vive en la Luna. Hay rocas y no se puede respirar afuera».",
     "socraticHint": "Localiza las palabras clave.",
@@ -93,7 +93,7 @@ export const LENGUA_7B_OA03_CLASE01: LessonData = {
     "title": "Motivación",
     "titulo": "Motivación",
     "focusPoints": [],
-    "dileIntro": "Hoy exploraremos una nueva situación motivadora.",
+    "dileIntro": "Lee el primer párrafo del recurso que aparece en pantalla. ¿Dónde vive Jimmy? Cuéntame dos detalles de ese lugar.",
     "hazInstruction": "Observa y reflexiona con las escenas del video.",
     "videoSrc": "https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/LENGUAJE/OA03/110-7-LYL-OA03-CLASE01-MOTIVACION.pptx.mp4",
     "dileAfterVideo": "¿Qué observaste en esta situación inicial?",

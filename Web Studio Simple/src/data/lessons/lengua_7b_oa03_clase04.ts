@@ -56,7 +56,7 @@ export const LENGUA_7B_OA03_CLASE04: LessonData = {
     "dileObjective": "La voz del narrador y los personajes"
   },
   "situation": {
-    "dilePrompt": "Observa la situación de partida para comenzar.",
+    "dilePrompt": "Lee el fragmento que comienza con «Jimmy frunció el ceño» y continúa con las palabras sobre Robutt. ¿Qué parte corresponde al narrador y qué parte a Jimmy?",
     "expectedAnswer": "Jimmy frunció el ceño corresponde al narrador. La intervención que comienza con Robutt no es una imitación corresponde a Jimmy.",
     "socraticHint": "¿Qué palabras cuentan una acción y cuáles pronuncia Jimmy al dirigirse a su padre?",
     "emotionalTip": "Acompaña con calma.",
@@ -90,7 +90,7 @@ export const LENGUA_7B_OA03_CLASE04: LessonData = {
     "title": "Motivación",
     "titulo": "Motivación",
     "focusPoints": [],
-    "dileIntro": "Hoy exploraremos una nueva situación motivadora.",
+    "dileIntro": "Lee el fragmento que comienza con «Jimmy frunció el ceño» y continúa con las palabras sobre Robutt. ¿Qué parte corresponde al narrador y qué parte a Jimmy?",
     "hazInstruction": "Observa y reflexiona con las escenas del video.",
     "videoSrc": "https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/LENGUAJE/OA03/110-7-LYL-OA03-CLASE04-MOTIVACION.pptx.mp4",
     "dileAfterVideo": "¿Qué observaste en esta situación inicial?",

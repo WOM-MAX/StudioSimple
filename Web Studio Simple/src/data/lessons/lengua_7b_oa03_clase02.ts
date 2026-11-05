@@ -56,7 +56,7 @@ export const LENGUA_7B_OA03_CLASE02: LessonData = {
     "dileObjective": "Acciones que cambian el conflicto"
   },
   "situation": {
-    "dilePrompt": "Observa la situación de partida para comenzar.",
+    "dilePrompt": "Lee la propuesta del padre y la respuesta de Jimmy en el recurso. ¿Qué efecto tiene la propuesta del padre sobre Jimmy?",
     "expectedAnswer": "La propuesta provoca la oposición de Jimmy y hace visible el desacuerdo entre ambos.",
     "socraticHint": "¿Qué propone el padre y qué responde Jimmy? Relaciona ambas acciones sin añadir una decisión posterior del padre.",
     "emotionalTip": "Acompaña con calma.",
@@ -90,7 +90,7 @@ export const LENGUA_7B_OA03_CLASE02: LessonData = {
     "title": "Motivación",
     "titulo": "Motivación",
     "focusPoints": [],
-    "dileIntro": "Hoy exploraremos una nueva situación motivadora.",
+    "dileIntro": "Lee la propuesta del padre y la respuesta de Jimmy en el recurso. ¿Qué efecto tiene la propuesta del padre sobre Jimmy?",
     "hazInstruction": "Observa y reflexiona con las escenas del video.",
     "videoSrc": "https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/LENGUAJE/OA03/110-7-LYL-OA03-CLASE02-MOTIVACION.pptx.mp4",
     "dileAfterVideo": "¿Qué observaste en esta situación inicial?",

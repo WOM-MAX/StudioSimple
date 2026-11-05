@@ -7933,8 +7933,8 @@
         "objetivoAdulto": "Describir el ambiente donde vive Jimmy y explicar el conflicto que inicia el relato usando las acciones y posturas de sus personajes como evidencia.",
         "climaEmocional": "La historia presenta un vínculo de amistad y un desacuerdo familiar. El objetivo es comprender cómo se construye el relato, no decidir qué personaje tiene la única opinión válida.",
         "situacionIntro": {
-          "dialogo": "Observa la situación de partida para comenzar.",
-          "pregunta": "Observa la situación de partida para comenzar.",
+          "dialogo": "Lee el primer párrafo del recurso que aparece en pantalla. ¿Dónde vive Jimmy? Cuéntame dos detalles de ese lugar.",
+          "pregunta": "Lee el primer párrafo del recurso que aparece en pantalla. ¿Dónde vive Jimmy? Cuéntame dos detalles de ese lugar.",
           "respEsperada": "Por ejemplo: «Vive en la Luna. Hay rocas y no se puede respirar afuera».",
           "pistaSocratica": "Relee el primer párrafo. Busca dónde vive Jimmy, cómo es el suelo y qué dice sobre el aire.",
           "options": [
@@ -7956,7 +7956,7 @@
           ]
         },
         "reference": {
-          "dilePrompt": "¿Dónde ocurre la historia y qué detalles permiten imaginar ese lugar?",
+          "dilePrompt": "Revisemos el punto de partida.",
           "question": "¿Qué información entrega el punto de partida?",
           "expectedAnswer": "Por ejemplo: «Vive en la Luna. Hay rocas y no se puede respirar afuera».",
           "socraticHint": "Localiza las palabras clave.",
@@ -7964,7 +7964,7 @@
           "feedbackSupport": "Relee el primer párrafo. Busca dónde vive Jimmy, cómo es el suelo y qué dice sobre el aire."
         },
         "referencia": {
-          "dilePrompt": "¿Dónde ocurre la historia y qué detalles permiten imaginar ese lugar?",
+          "dilePrompt": "Revisemos el punto de partida.",
           "question": "¿Qué información entrega el punto de partida?",
           "expectedAnswer": "Por ejemplo: «Vive en la Luna. Hay rocas y no se puede respirar afuera».",
           "socraticHint": "Localiza las palabras clave.",
@@ -8062,7 +8062,7 @@
           ],
           "focusPoints": [],
           "hazInstruction": "Observa y reflexiona con las escenas del video.",
-          "dileAntes": "Hoy exploraremos una nueva situación motivadora.",
+          "dileAntes": "Lee el primer párrafo del recurso que aparece en pantalla. ¿Dónde vive Jimmy? Cuéntame dos detalles de ese lugar.",
           "dileDespues": "¿Qué observaste en esta situación inicial?",
           "videoSrc": "https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/LENGUAJE/OA03/110-7-LYL-OA03-CLASE01-MOTIVACION.pptx.mp4",
           "videoUrl": "https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/LENGUAJE/OA03/110-7-LYL-OA03-CLASE01-MOTIVACION.pptx.mp4"
@@ -8318,8 +8318,8 @@
         "objetivoAdulto": "Explicar cómo las acciones del padre, Jimmy y Robutt afectan a otros personajes y desarrollan el conflicto.",
         "climaEmocional": "Acompaña con calma.",
         "situacionIntro": {
-          "dialogo": "Observa la situación de partida para comenzar.",
-          "pregunta": "Observa la situación de partida para comenzar.",
+          "dialogo": "Lee la propuesta del padre y la respuesta de Jimmy en el recurso. ¿Qué efecto tiene la propuesta del padre sobre Jimmy?",
+          "pregunta": "Lee la propuesta del padre y la respuesta de Jimmy en el recurso. ¿Qué efecto tiene la propuesta del padre sobre Jimmy?",
           "respEsperada": "La propuesta provoca la oposición de Jimmy y hace visible el desacuerdo entre ambos.",
           "pistaSocratica": "¿Qué propone el padre y qué responde Jimmy? Relaciona ambas acciones sin añadir una decisión posterior del padre.",
           "options": [
@@ -8447,7 +8447,7 @@
           ],
           "focusPoints": [],
           "hazInstruction": "Observa y reflexiona con las escenas del video.",
-          "dileAntes": "Hoy exploraremos una nueva situación motivadora.",
+          "dileAntes": "Lee la propuesta del padre y la respuesta de Jimmy en el recurso. ¿Qué efecto tiene la propuesta del padre sobre Jimmy?",
           "dileDespues": "¿Qué observaste en esta situación inicial?",
           "videoSrc": "https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/LENGUAJE/OA03/110-7-LYL-OA03-CLASE02-MOTIVACION.pptx.mp4",
           "videoUrl": "https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/LENGUAJE/OA03/110-7-LYL-OA03-CLASE02-MOTIVACION.pptx.mp4"
@@ -8768,8 +8768,8 @@
         "objetivoAdulto": "Distinguir información explícita de inferencias y justificar interpretaciones sobre Jimmy y Robutt con acciones del relato.",
         "climaEmocional": "Acompaña con calma.",
         "situacionIntro": {
-          "dialogo": "Observa la situación de partida para comenzar.",
-          "pregunta": "Observa la situación de partida para comenzar.",
+          "dialogo": "Lee el recurso y fíjate en el abrazo de Jimmy y sus palabras de cariño. ¿Cuál es el hecho y qué puedes inferir de él?",
+          "pregunta": "Lee el recurso y fíjate en el abrazo de Jimmy y sus palabras de cariño. ¿Cuál es el hecho y qué puedes inferir de él?",
           "respEsperada": "El hecho es que Jimmy lo abraza y expresa cariño. Puedo inferir que valora su vínculo con Robutt.",
           "pistaSocratica": "Separa lo que el recurso cuenta directamente de lo que interpretas a partir del abrazo y las palabras de Jimmy.",
           "options": [
@@ -8897,7 +8897,7 @@
           ],
           "focusPoints": [],
           "hazInstruction": "Observa y reflexiona con las escenas del video.",
-          "dileAntes": "Hoy exploraremos una nueva situación motivadora.",
+          "dileAntes": "Lee el recurso y fíjate en el abrazo de Jimmy y sus palabras de cariño. ¿Cuál es el hecho y qué puedes inferir de él?",
           "dileDespues": "¿Qué observaste en esta situación inicial?",
           "videoSrc": "https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/LENGUAJE/OA03/110-7-LYL-OA03-CLASE03-MOTIVACION.pptx.mp4",
           "videoUrl": "https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/LENGUAJE/OA03/110-7-LYL-OA03-CLASE03-MOTIVACION.pptx.mp4"
@@ -9218,8 +9218,8 @@
         "objetivoAdulto": "Distinguir quién cuenta las acciones y quién habla en los diálogos del relato, usando señales del fragmento.",
         "climaEmocional": "Acompaña con calma.",
         "situacionIntro": {
-          "dialogo": "Observa la situación de partida para comenzar.",
-          "pregunta": "Observa la situación de partida para comenzar.",
+          "dialogo": "Lee el fragmento que comienza con «Jimmy frunció el ceño» y continúa con las palabras sobre Robutt. ¿Qué parte corresponde al narrador y qué parte a Jimmy?",
+          "pregunta": "Lee el fragmento que comienza con «Jimmy frunció el ceño» y continúa con las palabras sobre Robutt. ¿Qué parte corresponde al narrador y qué parte a Jimmy?",
           "respEsperada": "Jimmy frunció el ceño corresponde al narrador. La intervención que comienza con Robutt no es una imitación corresponde a Jimmy.",
           "pistaSocratica": "¿Qué palabras cuentan una acción y cuáles pronuncia Jimmy al dirigirse a su padre?",
           "options": [
@@ -9347,7 +9347,7 @@
           ],
           "focusPoints": [],
           "hazInstruction": "Observa y reflexiona con las escenas del video.",
-          "dileAntes": "Hoy exploraremos una nueva situación motivadora.",
+          "dileAntes": "Lee el fragmento que comienza con «Jimmy frunció el ceño» y continúa con las palabras sobre Robutt. ¿Qué parte corresponde al narrador y qué parte a Jimmy?",
           "dileDespues": "¿Qué observaste en esta situación inicial?",
           "videoSrc": "https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/LENGUAJE/OA03/110-7-LYL-OA03-CLASE04-MOTIVACION.pptx.mp4",
           "videoUrl": "https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/LENGUAJE/OA03/110-7-LYL-OA03-CLASE04-MOTIVACION.pptx.mp4"
@@ -9671,8 +9671,8 @@
         "objetivoAdulto": "Distinguir el orden de los acontecimientos del orden en que se cuentan e interpretar la función de un recuerdo en la historia.",
         "climaEmocional": "Acompaña con calma.",
         "situacionIntro": {
-          "dialogo": "Observa la situación de partida para comenzar.",
-          "pregunta": "Observa la situación de partida para comenzar.",
+          "dialogo": "Lee el recurso y localiza la travesura anterior y la llamada del padre. ¿La travesura ocurre al mismo tiempo que la llamada?",
+          "pregunta": "Lee el recurso y localiza la travesura anterior y la llamada del padre. ¿La travesura ocurre al mismo tiempo que la llamada?",
           "respEsperada": "No. La travesura ocurrió en una ocasión anterior; Jimmy la recuerda cuando recibe la llamada.",
           "pistaSocratica": "Busca «En una ocasión» y distingue cuándo ocurrió la travesura de cuándo Jimmy la recuerda.",
           "options": [
@@ -9800,7 +9800,7 @@
           ],
           "focusPoints": [],
           "hazInstruction": "Observa y reflexiona con las escenas del video.",
-          "dileAntes": "Hoy exploraremos una nueva situación motivadora.",
+          "dileAntes": "Lee el recurso y localiza la travesura anterior y la llamada del padre. ¿La travesura ocurre al mismo tiempo que la llamada?",
           "dileDespues": "¿Qué observaste en esta situación inicial?",
           "videoSrc": "https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/LENGUAJE/OA03/110-7-LYL-OA03-CLASE05-MOTIVACION.pptx.mp4",
           "videoUrl": "https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/LENGUAJE/OA03/110-7-LYL-OA03-CLASE05-MOTIVACION.pptx.mp4"
@@ -10121,8 +10121,8 @@
         "objetivoAdulto": "Comparar el valor de los vínculos personales en dos relatos mediante una semejanza y una diferencia apoyadas en hechos de cada texto.",
         "climaEmocional": "Acompaña con calma.",
         "situacionIntro": {
-          "dialogo": "Observa la situación de partida para comenzar.",
-          "pregunta": "Observa la situación de partida para comenzar.",
+          "dialogo": "Lee las dos síntesis. En A, Jimmy abraza a Robutt y expresa cariño; en B, Kitagaki se presenta como viejo amigo y el monje lo recibe. ¿Qué semejanza puedes sostener con ambos hechos?",
+          "pregunta": "Lee las dos síntesis. En A, Jimmy abraza a Robutt y expresa cariño; en B, Kitagaki se presenta como viejo amigo y el monje lo recibe. ¿Qué semejanza puedes sostener con ambos hechos?",
           "respEsperada": "En ambos relatos, un vínculo personal adquiere importancia: Jimmy defiende su afecto y Kitagaki reconoce una amistad compartida.",
           "pistaSocratica": "Busca un hecho de cada texto que muestre la importancia de un vínculo. No confundas una semejanza con tener el mismo final.",
           "options": [
@@ -10250,7 +10250,7 @@
           ],
           "focusPoints": [],
           "hazInstruction": "Observa y reflexiona con las escenas del video.",
-          "dileAntes": "Hoy exploraremos una nueva situación motivadora.",
+          "dileAntes": "Lee las dos síntesis. En A, Jimmy abraza a Robutt y expresa cariño; en B, Kitagaki se presenta como viejo amigo y el monje lo recibe. ¿Qué semejanza puedes sostener con ambos hechos?",
           "dileDespues": "¿Qué observaste en esta situación inicial?",
           "videoSrc": "https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/LENGUAJE/OA03/110-7-LYL-OA03-CLASE06-MOTIVACION.pptx.mp4",
           "videoUrl": "https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/LENGUAJE/OA03/110-7-LYL-OA03-CLASE06-MOTIVACION.pptx.mp4"

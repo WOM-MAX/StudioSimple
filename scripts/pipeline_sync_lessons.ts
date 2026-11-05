@@ -252,21 +252,25 @@ export function parseLessonMarkdown(mdContent: string, meta: FileMetadata, fileP
   const dileObjMatch = fullText.match(/\*\*(?:DILE — Objetivo del estudiante|DILE — Student objective|DILE):\*\*\s*[“"]?([^”"\n]+)[”"]?/i);
   if (dileObjMatch) dileObjective = dileObjMatch[1].trim();
 
-  // 3. Paso 2B — Punto de partida
+  // 3. Paso 2B / Step 2B — Punto de partida
+  let step2BText = '';
+  const step2BMatch = fullText.match(/##\s*3\.\s*(?:Paso 2B|Step 2B)[\s\S]*?(?=\n##\s*4\.|$)/i);
+  step2BText = step2BMatch ? step2BMatch[0] : fullText;
+
   let sitDile = '';
-  const sitDileMatch = fullText.match(/(?:### (?:Activación|Situación ficticia|Before reading|Recurso de lectura visible)[\s\S]*?)?\*\*(?:DILE antes de leer|DILE|SAY|Before reading):\*\*\s*[“"]?([^”"\n]+)[”"]?/i);
+  const sitDileMatch = step2BText.match(/\*\*(?:DILE al estudiante|DILE antes de leer|Before reading|DILE|SAY):\*\*\s*[“"]?([^”"\n]+)[”"]?/i);
   if (sitDileMatch) sitDile = sitDileMatch[1].trim();
 
   let sitExpected = '';
-  const sitExpMatch = fullText.match(/\*\*(?:Respuestas aceptables|Respuesta esperada[^*]*|Expected responses[^*]*|Respuesta de referencia[^*]*):\*\*\s*([^\n]+)/i);
+  const sitExpMatch = step2BText.match(/\*\*(?:Respuestas aceptables|Respuesta esperada[^*]*|Expected responses[^*]*|Respuesta de referencia[^*]*):\*\*\s*([^\n]+)/i);
   if (sitExpMatch) sitExpected = sitExpMatch[1].trim();
 
   let sitHint = '';
-  const sitHintMatch = fullText.match(/\*\*(?:Pista socrática|Hint):\*\*\s*[“"]?([^”"\n]+)[”"]?/i);
+  const sitHintMatch = step2BText.match(/\*\*(?:Pista socrática|Hint):\*\*\s*[“"]?([^”"\n]+)[”"]?/i);
   if (sitHintMatch) sitHint = sitHintMatch[1].trim();
 
   let refDile = '';
-  const refDileMatch = fullText.match(/(?:### (?:Lectura de partida|Punto de partida|Starting-point check)[\s\S]*?)?\*\*(?:Punto de partida \/ Starting point|Pregunta|Question):\*\*\s*[“"]?([^”"\n]+)[”"]?/i);
+  const refDileMatch = step2BText.match(/(?:### (?:Lectura de partida|Punto de partida|Starting-point check)[\s\S]*?)?\*\*(?:Punto de partida \/ Starting point|Pregunta|Question):\*\*\s*[“"]?([^”"\n]+)[”"]?/i);
   if (refDileMatch) refDile = refDileMatch[1].trim();
 
   let refExpected = sitExpected;
