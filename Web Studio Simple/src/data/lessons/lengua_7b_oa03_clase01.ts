@@ -95,7 +95,7 @@ export const LENGUA_7B_OA03_CLASE01: LessonData = {
     "focusPoints": [],
     "dileIntro": "Hoy exploraremos una nueva situación motivadora.",
     "hazInstruction": "Observa y reflexiona con las escenas del video.",
-    "videoSrc": "",
+    "videoSrc": "https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/LENGUAJE/OA03/110-7-LYL-OA03-CLASE01-MOTIVACION.pptx.mp4",
     "dileAfterVideo": "¿Qué observaste en esta situación inicial?",
     "slides": [
       {
@@ -222,7 +222,7 @@ export const LENGUA_7B_OA03_CLASE01: LessonData = {
     "dileIntro": "Ahora consolidaremos los aprendizajes esenciales.",
     "hazInstruction": "Registra en tu cuaderno el concepto principal.",
     "graphicPoster": "",
-    "videoSrc": "",
+    "videoSrc": "https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/LENGUAJE/OA03/110-7-LYL-OA03-CLASE01-EXPLICACION.pptx.mp4",
     "slides": []
   },
   "postQuestions": [
