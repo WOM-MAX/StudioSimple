@@ -365,8 +365,13 @@ export const LENGUA_7B_OA03_CLASE01: LessonData = {
   ],
   "interactive": {
     "type": "reading_resource",
-    "title": "Recurso de Lectura y Ambiente Narrativo",
-    "description": "Organizador de lectura comprensiva y análisis del entorno narrativo."
+    "title": "El mejor amigo de un muchacho",
+    "description": "Organizador de lectura comprensiva y análisis del entorno narrativo.",
+    "paragraphs": [
+      "**Párrafo 1:** En una colonia de la Luna vive Jimmy, un niño que juega con Robutt, su perro robot. El exterior lunar es rocoso y árido; no hay oxígeno respirable y Jimmy debe usar un traje espacial cuando sale.",
+      "**Párrafo 2:** En una ocasión, Jimmy finge estar herido durante un juego. Robutt activa una alarma y llega un equipo de rescate. Esa acción permite reconocer que el robot está atento a Jimmy.",
+      "**Párrafo 3:** Más tarde, el padre de Jimmy anuncia que llegará desde la Tierra un perro vivo y dice que no pueden quedarse con los dos perros. Propone regalar a Robutt a otro niño. Jimmy se opone y expresa que Robutt es su perro. Al final, Jimmy abraza a Robutt; el relato no informa qué decide después el padre."
+    ]
   },
   "closure": {
     "congratulations": "¡Felicitaciones por completar la sesión de hoy!",

@@ -901,7 +901,38 @@ export function parseLessonMarkdown(mdContent: string, meta: FileMetadata, fileP
       ['Idea central', meta.lessonTitle],
       ['Comprensión', 'Aplicación del criterio formal en el cuaderno físico.']
     ],
-    interactive: getInteractiveConfig(normSubject, meta.lessonTitle),
+    interactive: (() => {
+      const baseCfg = getInteractiveConfig(normSubject, meta.lessonTitle);
+      if (normSubject === 'len') {
+        const readingResourceMatch = fullText.match(/### Recurso de Lectura Autónomo en Pantalla[\s\S]*?(?=\n---|\n## |\n### Pregunta|$)/i);
+        let title = '';
+        const paras: string[] = [];
+        if (readingResourceMatch) {
+          const rSection = readingResourceMatch[0];
+          const tMatch = rSection.match(/\*\*Título:\*\*\s*([^\n]+)/i);
+          if (tMatch) title = tMatch[1].trim();
+          const rawQuotes = rSection.split('\n').filter(l => l.trim().startsWith('>')).map(l => l.replace(/^>\s*/, '').trim());
+          let current = '';
+          for (const q of rawQuotes) {
+            if (!q) {
+              if (current.trim()) { paras.push(current.trim()); current = ''; }
+            } else if (q.startsWith('**Párrafo') || q.startsWith('Texto A') || q.startsWith('Texto B')) {
+              if (current.trim()) { paras.push(current.trim()); current = ''; }
+              current = q;
+            } else {
+              current = current ? current + ' ' + q : q;
+            }
+          }
+          if (current.trim()) paras.push(current.trim());
+        }
+        return {
+          ...baseCfg,
+          ...(title ? { title } : {}),
+          ...(paras.length > 0 ? { paragraphs: paras } : {})
+        };
+      }
+      return baseCfg;
+    })(),
     closure: {
       congratulations: celMatch ? celMatch[1].trim() : '¡Felicitaciones por completar la sesión de hoy!',
       nextClassPreview: meta.nextLessonTitle ? `Próxima clase: ${meta.nextLessonTitle}` : '¡Nos vemos en la próxima lección!'

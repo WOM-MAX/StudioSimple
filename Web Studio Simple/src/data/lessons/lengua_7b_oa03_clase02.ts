@@ -429,8 +429,11 @@ export const LENGUA_7B_OA03_CLASE02: LessonData = {
   ],
   "interactive": {
     "type": "reading_resource",
-    "title": "Recurso de Lectura y Ambiente Narrativo",
-    "description": "Organizador de lectura comprensiva y análisis del entorno narrativo."
+    "title": "El mejor amigo de un muchacho · acciones y efectos",
+    "description": "Organizador de lectura comprensiva y análisis del entorno narrativo.",
+    "paragraphs": [
+      "Jimmy comparte juegos con Robutt y se siente acompañado por él. En una travesura anterior, Jimmy finge estar herido: Robutt activa una alarma, llega un equipo de rescate y el padre reprende a Jimmy. Más tarde, el padre anuncia que llegará un perro vivo y propone regalar a Robutt. Jimmy responde que Robutt es su perro. Cuando Robutt emite gemidos, Jimmy extiende los brazos y el robot salta hacia él. Jimmy lo abraza y expresa que lo quiere. El relato no cuenta una decisión posterior del padre."
+    ]
   },
   "closure": {
     "congratulations": "Buen trabajo. Explicaste tu respuesta usando información del recurso.",

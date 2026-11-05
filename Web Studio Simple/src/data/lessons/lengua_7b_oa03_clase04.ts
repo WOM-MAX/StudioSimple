@@ -429,8 +429,14 @@ export const LENGUA_7B_OA03_CLASE04: LessonData = {
   ],
   "interactive": {
     "type": "reading_resource",
-    "title": "Recurso de Lectura y Ambiente Narrativo",
-    "description": "Organizador de lectura comprensiva y análisis del entorno narrativo."
+    "title": "El mejor amigo de un muchacho · narración y diálogo",
+    "description": "Organizador de lectura comprensiva y análisis del entorno narrativo.",
+    "paragraphs": [
+      "Fragmento del cuento de Isaac Asimov:",
+      "Jimmy frunció el ceño. —Robutt no es una imitación, papi. Es mi perro. —No es un perro de verdad, Jimmy. Robutt tiene un cerebro positrónico muy sencillo y está hecho de acero y circuitos. No está vivo.",
+      "En otro momento del diálogo: —¿Y qué diferencia hay entre Robutt y el perro? —preguntó Jimmy. —Es difícil de explicar —dijo el señor Anderson—, pero lo comprenderás en cuanto lo veas.",
+      "El fragmento alterna la narración de acciones con las intervenciones de Jimmy y de su padre."
+    ]
   },
   "closure": {
     "congratulations": "Buen trabajo. Explicaste tu respuesta usando información del recurso.",

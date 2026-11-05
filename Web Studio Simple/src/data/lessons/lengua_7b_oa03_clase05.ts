@@ -429,8 +429,11 @@ export const LENGUA_7B_OA03_CLASE05: LessonData = {
   ],
   "interactive": {
     "type": "reading_resource",
-    "title": "Recurso de Lectura y Ambiente Narrativo",
-    "description": "Organizador de lectura comprensiva y análisis del entorno narrativo."
+    "title": "El mejor amigo de un muchacho · el recuerdo y la llamada",
+    "description": "Organizador de lectura comprensiva y análisis del entorno narrativo.",
+    "paragraphs": [
+      "En el presente del relato, Jimmy juega con Robutt fuera de casa. Mientras juega, recuerda una ocasión anterior en que fingió estar herido: Robutt activó una alarma, llegó un equipo de rescate y el padre lo reprendió. La voz del padre le llega por radio justo cuando está recordando aquello y le pide volver a casa. Jimmy vuelve, se quita el traje y escucha el anuncio sobre el perro de la Tierra. Después discute la propuesta de regalar a Robutt y termina abrazándolo. El narrador introduce el episodio anterior con la expresión «En una ocasión» y luego vuelve al presente del diálogo."
+    ]
   },
   "closure": {
     "congratulations": "Buen trabajo. Explicaste tu respuesta usando información del recurso.",

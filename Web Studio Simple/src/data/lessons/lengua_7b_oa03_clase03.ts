@@ -429,8 +429,11 @@ export const LENGUA_7B_OA03_CLASE03: LessonData = {
   ],
   "interactive": {
     "type": "reading_resource",
-    "title": "Recurso de Lectura y Ambiente Narrativo",
-    "description": "Organizador de lectura comprensiva y análisis del entorno narrativo."
+    "title": "El mejor amigo de un muchacho · hechos e inferencias",
+    "description": "Organizador de lectura comprensiva y análisis del entorno narrativo.",
+    "paragraphs": [
+      "Robutt acompaña a Jimmy en sus juegos y utiliza su radar para localizarlo y advertirle de las rocas. Cuando Jimmy finge estar herido en una travesura anterior, Robutt activa una alarma y llega un grupo de rescate. Durante la conversación con su padre, Jimmy afirma que Robutt es su perro, lo abraza y expresa que lo quiere. El narrador describe que Jimmy frunce el ceño y no está dispuesto a cambiar de opinión. Estos hechos permiten interpretar el vínculo entre Jimmy y Robutt. No describen lo que el padre decide después del final."
+    ]
   },
   "closure": {
     "congratulations": "Buen trabajo. Explicaste tu respuesta usando información del recurso.",

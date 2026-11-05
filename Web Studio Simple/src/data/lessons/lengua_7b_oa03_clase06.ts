@@ -429,8 +429,13 @@ export const LENGUA_7B_OA03_CLASE06: LessonData = {
   ],
   "interactive": {
     "type": "reading_resource",
-    "title": "Recurso de Lectura y Ambiente Narrativo",
-    "description": "Organizador de lectura comprensiva y análisis del entorno narrativo."
+    "title": "Dos relatos · vínculos personales",
+    "description": "Organizador de lectura comprensiva y análisis del entorno narrativo.",
+    "paragraphs": [
+      "Texto A. Síntesis de El mejor amigo de un muchacho, de Isaac Asimov: el padre propone regalar a Robutt cuando llegue un perro vivo. Jimmy se opone porque Robutt es su perro, lo abraza y expresa que lo quiere. El final no informa la decisión posterior del padre.",
+      "Texto B. Síntesis de El cuento del monje y el general, de Jorge Bucay: Kitagaki visita a su amigo de la infancia, un monje, y se anuncia como general. El monje responde que no conoce a ningún general. Tras varios intentos, le envía un pequeño caballo de madera. Kitagaki recuerda los juegos de infancia, pide disculpas y se presenta como su viejo amigo. Entonces el monje sale a recibirlo con los brazos abiertos.",
+      "Estas son síntesis pedagógicas, no citas literales. Ambos relatos completos se encuentran en el Texto Escolar."
+    ]
   },
   "closure": {
     "congratulations": "Buen trabajo. Explicaste tu respuesta usando información del recurso.",
