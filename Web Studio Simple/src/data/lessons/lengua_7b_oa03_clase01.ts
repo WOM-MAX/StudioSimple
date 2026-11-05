@@ -60,12 +60,12 @@ export const LENGUA_7B_OA03_CLASE01: LessonData = {
   },
   "situation": {
     "dilePrompt": "Observa la situación de partida para comenzar.",
-    "expectedAnswer": "Anticipaciones variadas expresadas como hipótesis. No se evalúan como verdaderas o falsas antes de leer.",
-    "socraticHint": "¿Eso aparece en el recurso o lo estás imaginando a partir del título?",
+    "expectedAnswer": "Por ejemplo: «Vive en la Luna. Hay rocas y no se puede respirar afuera».",
+    "socraticHint": "Relee el primer párrafo. Busca dónde vive Jimmy, cómo es el suelo y qué dice sobre el aire.",
     "emotionalTip": "La historia presenta un vínculo de amistad y un desacuerdo familiar. El objetivo es comprender cómo se construye el relato, no decidir qué personaje tiene la única opinión válida.",
     "options": [
       {
-        "label": "Anticipaciones variadas expresadas como hipótesis. No se evalúan como verdaderas o falsas antes de leer.",
+        "label": "Por ejemplo: «Vive en la Luna. Hay rocas y no se puede respirar afuera».",
         "kind": "correct",
         "feedbackText": "¡Muy bien observado!"
       },
@@ -84,10 +84,10 @@ export const LENGUA_7B_OA03_CLASE01: LessonData = {
   "reference": {
     "dilePrompt": "¿Dónde ocurre la historia y qué detalles permiten imaginar ese lugar?",
     "question": "¿Qué información entrega el punto de partida?",
-    "expectedAnswer": "Anticipaciones variadas expresadas como hipótesis. No se evalúan como verdaderas o falsas antes de leer.",
+    "expectedAnswer": "Por ejemplo: «Vive en la Luna. Hay rocas y no se puede respirar afuera».",
     "socraticHint": "Localiza las palabras clave.",
     "feedbackSuccess": "¡Excelente fundamentación!",
-    "feedbackSupport": "¿Eso aparece en el recurso o lo estás imaginando a partir del título?"
+    "feedbackSupport": "Relee el primer párrafo. Busca dónde vive Jimmy, cómo es el suelo y qué dice sobre el aire."
   },
   "hook": {
     "title": "Motivación",
@@ -249,20 +249,20 @@ export const LENGUA_7B_OA03_CLASE01: LessonData = {
     {
       "context": "Caso 1",
       "question": "“Redacta dos oraciones para ubicar la historia y describir el ambiente con dos detalles de la lectura.”",
-      "expected": "Jimmy vive en una colonia de la Luna. El ambiente es rocoso y árido y afuera no hay oxígeno respirable.",
+      "expected": "",
       "success": "Cumple el criterio formal del caso",
       "support": "Revisa los datos del recurso",
-      "reveal": "Jimmy vive en una colonia de la Luna. El ambiente es rocoso y árido y afuera no hay oxígeno respirable.",
-      "studentReveal": "Jimmy vive en una colonia de la Luna. El ambiente es rocoso y árido y afuera no hay oxígeno respirable."
+      "reveal": "",
+      "studentReveal": ""
     },
     {
       "context": "Caso 2",
       "question": "“Explica en tres oraciones qué origina el conflicto. Incluye una evidencia para cada postura.”",
-      "expected": "El padre quiere traer un perro vivo y propone regalar a Robutt. Jimmy afirma que Robutt es su perro. El desacuerdo entre ambas posturas inicia el conflicto.",
+      "expected": "",
       "success": "Cumple el criterio formal del caso",
       "support": "Revisa los datos del recurso",
-      "reveal": "El padre quiere traer un perro vivo y propone regalar a Robutt. Jimmy afirma que Robutt es su perro. El desacuerdo entre ambas posturas inicia el conflicto.",
-      "studentReveal": "El padre quiere traer un perro vivo y propone regalar a Robutt. Jimmy afirma que Robutt es su perro. El desacuerdo entre ambas posturas inicia el conflicto."
+      "reveal": "",
+      "studentReveal": ""
     },
     {
       "context": "Microrrelato original de EstudioSimple, independiente de Asimov: En una estación submarina, Vera cuida un pequeño jardín bajo una cúpula. Su hermana propone retirar las plantas para instalar otra mesa de trabajo. Vera pide conservarlas porque las ha cuidado durante meses. Las dos quedan conversando; el texto no informa una decisión final.",
@@ -365,17 +365,12 @@ export const LENGUA_7B_OA03_CLASE01: LessonData = {
   ],
   "interactive": {
     "type": "reading_resource",
-    "title": "El mejor amigo de un muchacho",
-    "description": "Texto narrativo de Isaac Asimov (págs. 12-15 del Texto Escolar).",
-    "paragraphs": [
-      "En una colonia de la Luna vive Jimmy, un niño que juega con Robutt, su perro robot. El exterior lunar es rocoso y árido; no hay oxígeno respirable y Jimmy debe usar un traje espacial cuando sale.",
-      "En una ocasión, Jimmy finge estar herido durante un juego. Robutt activa una alarma y llega un equipo de rescate. Esa acción permite reconocer que el robot está atento a Jimmy.",
-      "Más tarde, el padre de Jimmy anuncia que llegará desde la Tierra un perro vivo y dice que no pueden quedarse con los dos perros. Propone regalar a Robutt a otro niño. Jimmy se opone y expresa que Robutt es su perro. Al final, Jimmy abraza a Robutt; el relato no informa qué decide después el padre."
-    ]
+    "title": "Recurso de Lectura y Ambiente Narrativo",
+    "description": "Organizador de lectura comprensiva y análisis del entorno narrativo."
   },
   "closure": {
     "congratulations": "¡Felicitaciones por completar la sesión de hoy!",
-    "nextClassPreview": "Próxima clase: Acciones de los personajes y desarrollo del conflicto."
+    "nextClassPreview": "Próxima clase: Acciones que cambian el conflicto"
   },
   "paso8_cierre": {
     "preguntaSintesis": "¿Qué dos pistas del cuento usarías para explicar el conflicto entre Jimmy y su padre?",

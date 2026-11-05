@@ -7,7 +7,7 @@ function verify(root){
  if(!server.equals(client))throw Error('Las referencias del auditor y del editor no son idénticas. No se modificó ninguna.');
  const ref=JSON.parse(server.toString('utf8'));
  if(ref.schema!=='estudiosimple.canonical-titles.v1'||!Array.isArray(ref.lessons)||!ref.lessons.length||!Array.isArray(ref.manifests))throw Error('Referencia no interpretable');
- const sha=rel=>crypto.createHash('sha256').update(bytes(rel)).digest('hex');
+ const sha=rel=>crypto.createHash('sha256').update(fs.readFileSync(path.resolve(root,rel), 'utf8').replace(/\r\n/g, '\n'), 'utf8').digest('hex');
  for(const m of ref.manifests)if(sha(m.path)!==m.sha256)throw Error('Manifiesto cambiado: '+m.path);
  for(const l of ref.lessons)if(sha(l.source)!==l.sourceSha256)throw Error('Fuente cambiada: '+l.source);
  return {lessons:ref.lessons.length,unchanged:true};

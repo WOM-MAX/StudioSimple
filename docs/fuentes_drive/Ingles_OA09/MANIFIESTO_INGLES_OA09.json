@@ -1,0 +1,316 @@
+{
+  "project": "EstudioSimple 110-7 ING OA09",
+  "version": "1.0",
+  "date": "2026-11-04",
+  "canonical": "CLASE01.md–CLASE06.md",
+  "status": {
+    "content": "REVISADO",
+    "presentations": "LISTAS_PARA_VIDS",
+    "videos": "PENDIENTE_WALTER_VIDS",
+    "integration": "PENDIENTE_PRUEBA_APP",
+    "approval": "PENDIENTE_WALTER"
+  },
+  "files": [
+    {
+      "class": 1,
+      "file": "110-7-ING-OA09-CLASE01-EXPLICACION.pptx",
+      "relative_path": "CLASE01/110-7-ING-OA09-CLASE01-EXPLICACION.pptx",
+      "drive_id": "1gE7U-1q-6wrQpa3CGuzso0_DYKP2OvOw",
+      "drive_url": "https://docs.google.com/presentation/d/1gE7U-1q-6wrQpa3CGuzso0_DYKP2OvOw/edit?usp=drivesdk&ouid=108565582874939297141&rtpof=true&sd=true",
+      "bytes": 14219305,
+      "sha256": "5f2c4fdefad9c313f134de48b660816e7161e72471ab346e45515f5ea0b1a2d1",
+      "served_bytes_match": true
+    },
+    {
+      "class": 1,
+      "file": "110-7-ING-OA09-CLASE01-MOTIVACION.pptx",
+      "relative_path": "CLASE01/110-7-ING-OA09-CLASE01-MOTIVACION.pptx",
+      "drive_id": "15BPq93OPG_HA-3oIoee75E6lsmVHYhnd",
+      "drive_url": "https://docs.google.com/presentation/d/15BPq93OPG_HA-3oIoee75E6lsmVHYhnd/edit?usp=drivesdk&ouid=108565582874939297141&rtpof=true&sd=true",
+      "bytes": 14473449,
+      "sha256": "ad7fb7addc116d4355ee16078c6f71c80556a37ffe5241bc67f2e3d182103d75",
+      "served_bytes_match": true
+    },
+    {
+      "class": 1,
+      "file": "CLASE01.md",
+      "relative_path": "CLASE01/CLASE01.md",
+      "drive_id": "1JZOs8eVDmt4oRF4GDbkv4TYiG8nQni6J",
+      "drive_url": "https://drive.google.com/file/d/1JZOs8eVDmt4oRF4GDbkv4TYiG8nQni6J/view?usp=drivesdk",
+      "bytes": 17138,
+      "sha256": "7414dad487bf6a1a802150267951975b656932fb00ebdbac75b18d624aada8ec",
+      "served_bytes_match": true
+    },
+    {
+      "class": 2,
+      "file": "110-7-ING-OA09-CLASE02-EXPLICACION.pptx",
+      "relative_path": "CLASE02/110-7-ING-OA09-CLASE02-EXPLICACION.pptx",
+      "drive_id": "1IafM8jRSNsM2TMLFzJoRlVoyL7erqXA2",
+      "drive_url": "https://docs.google.com/presentation/d/1IafM8jRSNsM2TMLFzJoRlVoyL7erqXA2/edit?usp=drivesdk&ouid=108565582874939297141&rtpof=true&sd=true",
+      "bytes": 15802533,
+      "sha256": "91368cc29d556ba44763fab65fdfad8b5ac3ad0d10148ef4b2f9493557025e1f",
+      "served_bytes_match": true
+    },
+    {
+      "class": 2,
+      "file": "110-7-ING-OA09-CLASE02-MOTIVACION.pptx",
+      "relative_path": "CLASE02/110-7-ING-OA09-CLASE02-MOTIVACION.pptx",
+      "drive_id": "19AcTAUk9v__aLZKGlBjhZ7-KON53nrHd",
+      "drive_url": "https://docs.google.com/presentation/d/19AcTAUk9v__aLZKGlBjhZ7-KON53nrHd/edit?usp=drivesdk&ouid=108565582874939297141&rtpof=true&sd=true",
+      "bytes": 15966204,
+      "sha256": "253b8e84b6f4ed81476a2a1857bb4d1d49678ac52480e536ab446baf5d92c5ac",
+      "served_bytes_match": true
+    },
+    {
+      "class": 2,
+      "file": "CLASE02.md",
+      "relative_path": "CLASE02/CLASE02.md",
+      "drive_id": "15XnXm53uRpH1J_-JhBeeUIunsfZ8UIRT",
+      "drive_url": "https://drive.google.com/file/d/15XnXm53uRpH1J_-JhBeeUIunsfZ8UIRT/view?usp=drivesdk",
+      "bytes": 15901,
+      "sha256": "a2212322d1175e25bb5bc792fdf32a5ba5cdf989dad57dc7a54495c0f08b8347",
+      "served_bytes_match": true
+    },
+    {
+      "class": 3,
+      "file": "110-7-ING-OA09-CLASE03-EXPLICACION.pptx",
+      "relative_path": "CLASE03/110-7-ING-OA09-CLASE03-EXPLICACION.pptx",
+      "drive_id": "1W9s_eif3UnJEzkdaOxMoJA5z8MQQpZ6p",
+      "drive_url": "https://docs.google.com/presentation/d/1W9s_eif3UnJEzkdaOxMoJA5z8MQQpZ6p/edit?usp=drivesdk&ouid=108565582874939297141&rtpof=true&sd=true",
+      "bytes": 13467058,
+      "sha256": "7723c33231a843ceece407412d189c86c636bb62079537e717c9ca0a37cf5649",
+      "served_bytes_match": true
+    },
+    {
+      "class": 3,
+      "file": "110-7-ING-OA09-CLASE03-MOTIVACION.pptx",
+      "relative_path": "CLASE03/110-7-ING-OA09-CLASE03-MOTIVACION.pptx",
+      "drive_id": "1zSIo3Zjw_vVcsJ6u00CB-C0Y_-n0wIG2",
+      "drive_url": "https://docs.google.com/presentation/d/1zSIo3Zjw_vVcsJ6u00CB-C0Y_-n0wIG2/edit?usp=drivesdk&ouid=108565582874939297141&rtpof=true&sd=true",
+      "bytes": 13531247,
+      "sha256": "5da8e52e76e464522243d351c17b3dd975e39032c81b14f28758228e2efdcf1f",
+      "served_bytes_match": true
+    },
+    {
+      "class": 3,
+      "file": "CLASE03.md",
+      "relative_path": "CLASE03/CLASE03.md",
+      "drive_id": "1BALBb_CTY9pVwvJV_dnqZm1ae0ZOsWGB",
+      "drive_url": "https://drive.google.com/file/d/1BALBb_CTY9pVwvJV_dnqZm1ae0ZOsWGB/view?usp=drivesdk",
+      "bytes": 16876,
+      "sha256": "25c008ae3e6139a8447c1bf0728f9943d03d700b80dce22d8ba25f03f9e1feed",
+      "served_bytes_match": true
+    },
+    {
+      "class": 4,
+      "file": "110-7-ING-OA09-CLASE04-EXPLICACION.pptx",
+      "relative_path": "CLASE04/110-7-ING-OA09-CLASE04-EXPLICACION.pptx",
+      "drive_id": "1yaxN9k4NNI4IXInnJA-Mh0NZSSXUpi6_",
+      "drive_url": "https://docs.google.com/presentation/d/1yaxN9k4NNI4IXInnJA-Mh0NZSSXUpi6_/edit?usp=drivesdk&ouid=108565582874939297141&rtpof=true&sd=true",
+      "bytes": 15281072,
+      "sha256": "daa422447af0a13ea29951b2da4db29565e7256e55f23afb5216f73720d1819b",
+      "served_bytes_match": true
+    },
+    {
+      "class": 4,
+      "file": "110-7-ING-OA09-CLASE04-MOTIVACION.pptx",
+      "relative_path": "CLASE04/110-7-ING-OA09-CLASE04-MOTIVACION.pptx",
+      "drive_id": "1p3lq1mol4AN-mH3AUVndvU5ekFkn4rTW",
+      "drive_url": "https://docs.google.com/presentation/d/1p3lq1mol4AN-mH3AUVndvU5ekFkn4rTW/edit?usp=drivesdk&ouid=108565582874939297141&rtpof=true&sd=true",
+      "bytes": 15731134,
+      "sha256": "fc083e043d2bb960582a37235711055d5be5fc645d9a30e938586cf18d34a3b6",
+      "served_bytes_match": true
+    },
+    {
+      "class": 4,
+      "file": "CLASE04.md",
+      "relative_path": "CLASE04/CLASE04.md",
+      "drive_id": "1QsvmhkkoEYL-AVoL23SES_R-9Mxj_98T",
+      "drive_url": "https://drive.google.com/file/d/1QsvmhkkoEYL-AVoL23SES_R-9Mxj_98T/view?usp=drivesdk",
+      "bytes": 18351,
+      "sha256": "922e90722f420ad89a6285b4b61361552913d873309d349cef0774d148794755",
+      "served_bytes_match": true
+    },
+    {
+      "class": 5,
+      "file": "110-7-ING-OA09-CLASE05-EXPLICACION.pptx",
+      "relative_path": "CLASE05/110-7-ING-OA09-CLASE05-EXPLICACION.pptx",
+      "drive_id": "1d4vwVIgy5gHDopr9zaKPh8Q6LsI_r1Qc",
+      "drive_url": "https://docs.google.com/presentation/d/1d4vwVIgy5gHDopr9zaKPh8Q6LsI_r1Qc/edit?usp=drivesdk&ouid=108565582874939297141&rtpof=true&sd=true",
+      "bytes": 12910064,
+      "sha256": "933604fb8c1042f73eead35944edd32b32cce4cac5e52aee340c748e74d12525",
+      "served_bytes_match": true
+    },
+    {
+      "class": 5,
+      "file": "110-7-ING-OA09-CLASE05-MOTIVACION.pptx",
+      "relative_path": "CLASE05/110-7-ING-OA09-CLASE05-MOTIVACION.pptx",
+      "drive_id": "1jtuxBkRJrkNq3KhWg3FyK0NPD74Rpoi4",
+      "drive_url": "https://docs.google.com/presentation/d/1jtuxBkRJrkNq3KhWg3FyK0NPD74Rpoi4/edit?usp=drivesdk&ouid=108565582874939297141&rtpof=true&sd=true",
+      "bytes": 12726901,
+      "sha256": "e21847ba357af80cd90c12628f8b9885f9876118b84b078d1d7258a26f95239b",
+      "served_bytes_match": true
+    },
+    {
+      "class": 5,
+      "file": "CLASE05.md",
+      "relative_path": "CLASE05/CLASE05.md",
+      "drive_id": "1VloTSZdlLgfV-tGA6aU5WOn1kgZ98W24",
+      "drive_url": "https://drive.google.com/file/d/1VloTSZdlLgfV-tGA6aU5WOn1kgZ98W24/view?usp=drivesdk",
+      "bytes": 17549,
+      "sha256": "6df3d2cdd64194f07d41ece35fcf7777a147aca08e683dcdfd2196c6f96e4fb1",
+      "served_bytes_match": true
+    },
+    {
+      "class": 6,
+      "file": "110-7-ING-OA09-CLASE06-EXPLICACION.pptx",
+      "relative_path": "CLASE06/110-7-ING-OA09-CLASE06-EXPLICACION.pptx",
+      "drive_id": "1R5hfcxaVdLCWziE_CVgu8j8Ga6LhW0_o",
+      "drive_url": "https://docs.google.com/presentation/d/1R5hfcxaVdLCWziE_CVgu8j8Ga6LhW0_o/edit?usp=drivesdk&ouid=108565582874939297141&rtpof=true&sd=true",
+      "bytes": 13589328,
+      "sha256": "028898f42b582c6aaa063faa996a1f5df2ae5c00ce25c438cdcb2e6a5836ef38",
+      "served_bytes_match": true
+    },
+    {
+      "class": 6,
+      "file": "110-7-ING-OA09-CLASE06-MOTIVACION.pptx",
+      "relative_path": "CLASE06/110-7-ING-OA09-CLASE06-MOTIVACION.pptx",
+      "drive_id": "1Ew874_syHCh5SVimWWtQcvaBUewZsaVO",
+      "drive_url": "https://docs.google.com/presentation/d/1Ew874_syHCh5SVimWWtQcvaBUewZsaVO/edit?usp=drivesdk&ouid=108565582874939297141&rtpof=true&sd=true",
+      "bytes": 13571466,
+      "sha256": "f187027027457a9dc97a25b9dbcd6c3af6a4799d477206e6254fd12e81ef8889",
+      "served_bytes_match": true
+    },
+    {
+      "class": 6,
+      "file": "CLASE06.md",
+      "relative_path": "CLASE06/CLASE06.md",
+      "drive_id": "1ansLcIGgT0wxbqEnaQ1FYJ7uBgaE5xAB",
+      "drive_url": "https://drive.google.com/file/d/1ansLcIGgT0wxbqEnaQ1FYJ7uBgaE5xAB/view?usp=drivesdk",
+      "bytes": 19836,
+      "sha256": "c381d163bcfbd52eba5b78ce96c56506477ef0e3d6a0e144512d56328be21083",
+      "served_bytes_match": true
+    }
+  ],
+  "presentations": [
+    {
+      "file": "110-7-ING-OA09-CLASE01-MOTIVACION.pptx",
+      "slides": 7,
+      "notes_exact": true,
+      "Arial_64_32": true,
+      "words": 159,
+      "sha256": "ad7fb7addc116d4355ee16078c6f71c80556a37ffe5241bc67f2e3d182103d75",
+      "bytes": 14473449
+    },
+    {
+      "file": "110-7-ING-OA09-CLASE01-EXPLICACION.pptx",
+      "slides": 7,
+      "notes_exact": true,
+      "Arial_64_32": true,
+      "words": 236,
+      "sha256": "5f2c4fdefad9c313f134de48b660816e7161e72471ab346e45515f5ea0b1a2d1",
+      "bytes": 14219305
+    },
+    {
+      "file": "110-7-ING-OA09-CLASE02-MOTIVACION.pptx",
+      "slides": 7,
+      "notes_exact": true,
+      "Arial_64_32": true,
+      "words": 159,
+      "sha256": "253b8e84b6f4ed81476a2a1857bb4d1d49678ac52480e536ab446baf5d92c5ac",
+      "bytes": 15966204
+    },
+    {
+      "file": "110-7-ING-OA09-CLASE02-EXPLICACION.pptx",
+      "slides": 7,
+      "notes_exact": true,
+      "Arial_64_32": true,
+      "words": 235,
+      "sha256": "91368cc29d556ba44763fab65fdfad8b5ac3ad0d10148ef4b2f9493557025e1f",
+      "bytes": 15802533
+    },
+    {
+      "file": "110-7-ING-OA09-CLASE03-MOTIVACION.pptx",
+      "slides": 7,
+      "notes_exact": true,
+      "Arial_64_32": true,
+      "words": 160,
+      "sha256": "5da8e52e76e464522243d351c17b3dd975e39032c81b14f28758228e2efdcf1f",
+      "bytes": 13531247
+    },
+    {
+      "file": "110-7-ING-OA09-CLASE03-EXPLICACION.pptx",
+      "slides": 7,
+      "notes_exact": true,
+      "Arial_64_32": true,
+      "words": 239,
+      "sha256": "7723c33231a843ceece407412d189c86c636bb62079537e717c9ca0a37cf5649",
+      "bytes": 13467058
+    },
+    {
+      "file": "110-7-ING-OA09-CLASE04-MOTIVACION.pptx",
+      "slides": 7,
+      "notes_exact": true,
+      "Arial_64_32": true,
+      "words": 160,
+      "sha256": "fc083e043d2bb960582a37235711055d5be5fc645d9a30e938586cf18d34a3b6",
+      "bytes": 15731134
+    },
+    {
+      "file": "110-7-ING-OA09-CLASE04-EXPLICACION.pptx",
+      "slides": 7,
+      "notes_exact": true,
+      "Arial_64_32": true,
+      "words": 238,
+      "sha256": "daa422447af0a13ea29951b2da4db29565e7256e55f23afb5216f73720d1819b",
+      "bytes": 15281072
+    },
+    {
+      "file": "110-7-ING-OA09-CLASE05-MOTIVACION.pptx",
+      "slides": 7,
+      "notes_exact": true,
+      "Arial_64_32": true,
+      "words": 160,
+      "sha256": "e21847ba357af80cd90c12628f8b9885f9876118b84b078d1d7258a26f95239b",
+      "bytes": 12726901
+    },
+    {
+      "file": "110-7-ING-OA09-CLASE05-EXPLICACION.pptx",
+      "slides": 7,
+      "notes_exact": true,
+      "Arial_64_32": true,
+      "words": 240,
+      "sha256": "933604fb8c1042f73eead35944edd32b32cce4cac5e52aee340c748e74d12525",
+      "bytes": 12910064
+    },
+    {
+      "file": "110-7-ING-OA09-CLASE06-MOTIVACION.pptx",
+      "slides": 7,
+      "notes_exact": true,
+      "Arial_64_32": true,
+      "words": 160,
+      "sha256": "f187027027457a9dc97a25b9dbcd6c3af6a4799d477206e6254fd12e81ef8889",
+      "bytes": 13571466
+    },
+    {
+      "file": "110-7-ING-OA09-CLASE06-EXPLICACION.pptx",
+      "slides": 7,
+      "notes_exact": true,
+      "Arial_64_32": true,
+      "words": 239,
+      "sha256": "028898f42b582c6aaa063faa996a1f5df2ae5c00ce25c438cdcb2e6a5836ef38",
+      "bytes": 13589328
+    }
+  ],
+  "illustrations": {
+    "total": 84,
+    "unique_sha256": 84,
+    "reuse_detected": 0
+  },
+  "external_dependencies": [
+    "12 videos Vids y revisión de pronunciación",
+    "URLs finales, permisos y reproducción",
+    "Parser/build real de Antigravity y prueba por rol",
+    "Aprobación pedagógica de Walter"
+  ]
+}

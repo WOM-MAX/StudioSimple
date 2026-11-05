@@ -57,6 +57,7 @@ data/audit_logs.json
 # Scratch & Diagnostic Scripts with Live Fixtures
 scratch/
 staging_preparacion_aislada/
+respaldos/
 scripts/check_env_files.ts
 scripts/inspect_neon_db.ts
 scripts/inspect_orders.ts

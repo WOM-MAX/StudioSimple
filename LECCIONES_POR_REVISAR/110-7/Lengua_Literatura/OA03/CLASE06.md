@@ -2,9 +2,13 @@
 
 **Curso:** 110-7 · **Asignatura:** Lengua_Literatura · **OA:** OA03 · **Clase:** 06 de 06
 
+**Título:** Comparar relatos con evidencia
+
 **Estado:** EN_REVISION · NO INTEGRADA EN APP · NO APROBADA
 
 **Fecha de preparación:** 2026-10-12 America/Santiago
+
+**Revisión de fuente:** LYL-OA03-R20261105 · 2026-11-05T17:18-03:00 · corrección del punto de partida y delimitación del recurso de lectura.
 
 **Objetivo de la clase:** Comparar el valor de los vínculos personales en dos relatos mediante una semejanza y una diferencia apoyadas en hechos de cada texto.
 
@@ -26,21 +30,32 @@ Leer el recurso → localizar pistas → explicar → practicar → comprobar co
 
 **Distribución orientativa:** inicio y lectura 6 min; videos 3 min; conversación y modelamiento 7 min; práctica 7 min; miniquiz y recuperación 5 min; cierre 2 min.
 
-## 3. Paso 2B — Punto de partida
+## 3. Paso 2B — Situación inicial y Punto de Partida
 
-### Recurso de lectura visible para el estudiante
+**DILE al estudiante:** “Lee las dos síntesis. En A, Jimmy abraza a Robutt y expresa cariño; en B, Kitagaki se presenta como viejo amigo y el monje lo recibe. ¿Qué semejanza puedes sostener con ambos hechos?”
 
-Texto A. Síntesis de El mejor amigo de un muchacho, de Isaac Asimov: el padre propone regalar a Robutt cuando llegue un perro vivo. Jimmy se opone porque Robutt es su perro, lo abraza y expresa que lo quiere. El final no informa la decisión posterior del padre.
+**Respuesta esperada:** En ambos relatos, un vínculo personal adquiere importancia: Jimmy defiende su afecto y Kitagaki reconoce una amistad compartida.
 
-Texto B. Síntesis de El cuento del monje y el general, de Jorge Bucay: Kitagaki visita a su amigo de la infancia, un monje, y se anuncia como general. El monje responde que no conoce a ningún general. Tras varios intentos, le envía un pequeño caballo de madera. Kitagaki recuerda los juegos de infancia, pide disculpas y se presenta como su viejo amigo. Entonces el monje sale a recibirlo con los brazos abiertos.
+**Pista socrática:** Busca un hecho de cada texto que muestre la importancia de un vínculo. No confundas una semejanza con tener el mismo final.
 
-Estas son síntesis pedagógicas, no citas literales. Ambos relatos completos se encuentran en el Texto Escolar.
+**Pregunta de referencia:** “¿Qué semejanza puedes sostener con ambos hechos?”
+**Criterio de éxito:** Propones una semejanza sobre los vínculos y la fundamentas con un hecho de cada síntesis, conservando sus diferencias.
 
-**DILE antes de leer:** “¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.”
+### Recurso de Lectura Autónomo en Pantalla
 
-**Punto de partida / Starting point:** ¿Qué semejanza puedes sostener con ambos hechos?
+**Título:** Dos relatos · vínculos personales
 
-**Respuesta de referencia / Reference, privada para el mentor hasta después del intento:** En ambos relatos, un vínculo personal adquiere importancia: Jimmy defiende su afecto y Kitagaki reconoce una amistad compartida.
+**Tipo de recurso:** Síntesis pedagógicas de los dos relatos; no son citas literales.
+
+> Texto A. Síntesis de El mejor amigo de un muchacho, de Isaac Asimov: el padre propone regalar a Robutt cuando llegue un perro vivo. Jimmy se opone porque Robutt es su perro, lo abraza y expresa que lo quiere. El final no informa la decisión posterior del padre.
+>
+> Texto B. Síntesis de El cuento del monje y el general, de Jorge Bucay: Kitagaki visita a su amigo de la infancia, un monje, y se anuncia como general. El monje responde que no conoce a ningún general. Tras varios intentos, le envía un pequeño caballo de madera. Kitagaki recuerda los juegos de infancia, pide disculpas y se presenta como su viejo amigo. Entonces el monje sale a recibirlo con los brazos abiertos.
+>
+> Estas son síntesis pedagógicas, no citas literales. Ambos relatos completos se encuentran en el Texto Escolar.
+
+**Para el mentor, privado:** La respuesta esperada corresponde a la pregunta sobre este recurso, después de leerlo. Acepta formulaciones equivalentes con evidencia. No usar esa respuesta como respuesta del estudiante ni como modelo de una anticipación anterior a la lectura.
+
+---
 
 ## 4. Paso 3 — Videos
 
@@ -444,3 +459,4 @@ Estas son síntesis pedagógicas, no citas literales. Ambos relatos completos se
 **Decisión formativa:** 2/3 o 3/3 permite avanzar en la clase según el Manual; con 0/3 o 1/3, explicar el error, ofrecer apoyos, resolver la nueva práctica correspondiente y reintentar. Si vuelve a necesitar ayuda, registrar el apoyo y reforzar el criterio sin aprobar automáticamente. El resultado se acompaña de la evidencia de práctica. El miniquiz no aprueba por sí solo todo el OA.
 
 **Control:** Cero hallazgos críticos o mayores; hasta tres menores enumerados y aceptados por clase. Los recursos audiovisuales pendientes y la integración se registran por separado; no se declara la clase publicada o el OA aprobado desde esta revisión documental. Matemática OA01 y las doce presentaciones terminadas de Lengua y Literatura OA03 permanecen excluidas de cambios.
+

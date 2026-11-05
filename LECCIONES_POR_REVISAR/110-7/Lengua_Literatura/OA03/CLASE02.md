@@ -2,9 +2,13 @@
 
 **Curso:** 110-7 · **Asignatura:** Lengua_Literatura · **OA:** OA03 · **Clase:** 02 de 06
 
+**Título:** Acciones que cambian el conflicto
+
 **Estado:** EN_REVISION · NO INTEGRADA EN APP · NO APROBADA
 
 **Fecha de preparación:** 2026-10-12 America/Santiago
+
+**Revisión de fuente:** LYL-OA03-R20261105 · 2026-11-05T17:18-03:00 · corrección del punto de partida y delimitación del recurso de lectura.
 
 **Objetivo de la clase:** Explicar cómo las acciones del padre, Jimmy y Robutt afectan a otros personajes y desarrollan el conflicto.
 
@@ -26,17 +30,28 @@ Leer el recurso → localizar pistas → explicar → practicar → comprobar co
 
 **Distribución orientativa:** inicio y lectura 6 min; videos 3 min; conversación y modelamiento 7 min; práctica 7 min; miniquiz y recuperación 5 min; cierre 2 min.
 
-## 3. Paso 2B — Punto de partida
+## 3. Paso 2B — Situación inicial y Punto de Partida
 
-### Recurso de lectura visible para el estudiante
+**DILE al estudiante:** “Lee la propuesta del padre y la respuesta de Jimmy en el recurso. ¿Qué efecto tiene la propuesta del padre sobre Jimmy?”
 
-Jimmy comparte juegos con Robutt y se siente acompañado por él. En una travesura anterior, Jimmy finge estar herido: Robutt activa una alarma, llega un equipo de rescate y el padre reprende a Jimmy. Más tarde, el padre anuncia que llegará un perro vivo y propone regalar a Robutt. Jimmy responde que Robutt es su perro. Cuando Robutt emite gemidos, Jimmy extiende los brazos y el robot salta hacia él. Jimmy lo abraza y expresa que lo quiere. El relato no cuenta una decisión posterior del padre.
+**Respuesta esperada:** La propuesta provoca la oposición de Jimmy y hace visible el desacuerdo entre ambos.
 
-**DILE antes de leer:** “¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.”
+**Pista socrática:** ¿Qué propone el padre y qué responde Jimmy? Relaciona ambas acciones sin añadir una decisión posterior del padre.
 
-**Punto de partida / Starting point:** ¿Qué efecto tiene la propuesta del padre sobre Jimmy?
+**Pregunta de referencia:** “¿Qué efecto tiene la propuesta del padre sobre Jimmy?”
+**Criterio de éxito:** Relacionas la propuesta de regalar a Robutt con la oposición de Jimmy y señalas la pista del recurso.
 
-**Respuesta de referencia / Reference, privada para el mentor hasta después del intento:** La propuesta provoca la oposición de Jimmy y hace visible el desacuerdo entre ambos.
+### Recurso de Lectura Autónomo en Pantalla
+
+**Título:** El mejor amigo de un muchacho · acciones y efectos
+
+**Tipo de recurso:** Síntesis pedagógica de EstudioSimple basada en el cuento de Isaac Asimov; no es una cita literal.
+
+> Jimmy comparte juegos con Robutt y se siente acompañado por él. En una travesura anterior, Jimmy finge estar herido: Robutt activa una alarma, llega un equipo de rescate y el padre reprende a Jimmy. Más tarde, el padre anuncia que llegará un perro vivo y propone regalar a Robutt. Jimmy responde que Robutt es su perro. Cuando Robutt emite gemidos, Jimmy extiende los brazos y el robot salta hacia él. Jimmy lo abraza y expresa que lo quiere. El relato no cuenta una decisión posterior del padre.
+
+**Para el mentor, privado:** La respuesta esperada corresponde a la pregunta sobre este recurso, después de leerlo. Acepta formulaciones equivalentes con evidencia. No usar esa respuesta como respuesta del estudiante ni como modelo de una anticipación anterior a la lectura.
+
+---
 
 ## 4. Paso 3 — Videos
 
@@ -102,7 +117,7 @@ Jimmy comparte juegos con Robutt y se siente acompañado por él. En una travesu
 
 **Error frecuente:** Afirmar que el padre cambia de opinión añade un hecho que el final no cuenta.
 
-**Comprobación inmediata:** ¿Cómo ayuda esta acción a comprender la postura de Jimmy?
+**Comprobación inmediata:** Cuando Robutt gime, Jimmy lo abraza y expresa que lo quiere. ¿Cómo ayuda el abrazo a comprender la postura de Jimmy?
 
 **Modelo de comprobación:** El abrazo y su expresión de cariño permiten explicar que desea conservar su vínculo con Robutt.
 
@@ -440,3 +455,4 @@ Jimmy comparte juegos con Robutt y se siente acompañado por él. En una travesu
 **Decisión formativa:** 2/3 o 3/3 permite avanzar en la clase según el Manual; con 0/3 o 1/3, explicar el error, ofrecer apoyos, resolver la nueva práctica correspondiente y reintentar. Si vuelve a necesitar ayuda, registrar el apoyo y reforzar el criterio sin aprobar automáticamente. El resultado se acompaña de la evidencia de práctica. El miniquiz no aprueba por sí solo todo el OA.
 
 **Control:** Cero hallazgos críticos o mayores; hasta tres menores enumerados y aceptados por clase. Los recursos audiovisuales pendientes y la integración se registran por separado; no se declara la clase publicada o el OA aprobado desde esta revisión documental. Matemática OA01 y las doce presentaciones terminadas de Lengua y Literatura OA03 permanecen excluidas de cambios.
+

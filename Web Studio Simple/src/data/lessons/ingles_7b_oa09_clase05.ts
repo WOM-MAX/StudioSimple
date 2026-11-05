@@ -204,9 +204,9 @@ export const INGLES_7B_OA09_CLASE05: LessonData = {
   "conversationContext": "Diálogo guiado para profundizar en los elementos clave.",
   "formalization": {
     "title": "Explicación",
-    "concept": "Una situación",
+    "concept": "Reading about a school garden",
     "summary": "Consolidación de las ideas clave.",
-    "ideaClave": "Una situación",
+    "ideaClave": "Reading about a school garden",
     "dileIntro": "Ahora consolidaremos los aprendizajes esenciales.",
     "hazInstruction": "Registra en tu cuaderno el concepto principal.",
     "graphicPoster": "",
@@ -420,7 +420,7 @@ export const INGLES_7B_OA09_CLASE05: LessonData = {
   "summaryIdeas": [
     [
       "Idea central",
-      "Una situación"
+      "Reading about a school garden"
     ],
     [
       "Comprensión",
@@ -434,7 +434,7 @@ export const INGLES_7B_OA09_CLASE05: LessonData = {
   },
   "closure": {
     "congratulations": "Good work. You explained your answer with information from the resource.",
-    "nextClassPreview": "¡Nos vemos en la próxima lección!"
+    "nextClassPreview": "Próxima clase: Comparing messages and showing understanding"
   },
   "paso8_cierre": {
     "preguntaSintesis": "Which actions are completed and which is a plan?",

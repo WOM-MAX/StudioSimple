@@ -56,9 +56,9 @@ export const LENGUA_7B_OA03_CLASE04: LessonData = {
     "dileObjective": "La voz del narrador y los personajes"
   },
   "situation": {
-    "dilePrompt": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",
+    "dilePrompt": "Observa la situación de partida para comenzar.",
     "expectedAnswer": "Jimmy frunció el ceño corresponde al narrador. La intervención que comienza con Robutt no es una imitación corresponde a Jimmy.",
-    "socraticHint": "Fíjate en los detalles destacados.",
+    "socraticHint": "¿Qué palabras cuentan una acción y cuáles pronuncia Jimmy al dirigirse a su padre?",
     "emotionalTip": "Acompaña con calma.",
     "options": [
       {
@@ -79,18 +79,18 @@ export const LENGUA_7B_OA03_CLASE04: LessonData = {
     ]
   },
   "reference": {
-    "dilePrompt": "¿Qué parte corresponde al narrador y qué parte a Jimmy?",
+    "dilePrompt": "Revisemos el punto de partida.",
     "question": "¿Qué información entrega el punto de partida?",
     "expectedAnswer": "Jimmy frunció el ceño corresponde al narrador. La intervención que comienza con Robutt no es una imitación corresponde a Jimmy.",
     "socraticHint": "Localiza las palabras clave.",
     "feedbackSuccess": "¡Excelente fundamentación!",
-    "feedbackSupport": "Revisa la lectura para confirmar los datos."
+    "feedbackSupport": "¿Qué palabras cuentan una acción y cuáles pronuncia Jimmy al dirigirse a su padre?"
   },
   "hook": {
     "title": "Motivación",
     "titulo": "Motivación",
     "focusPoints": [],
-    "dileIntro": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",
+    "dileIntro": "Hoy exploraremos una nueva situación motivadora.",
     "hazInstruction": "Observa y reflexiona con las escenas del video.",
     "videoSrc": "https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/LENGUAJE/OA03/110-7-LYL-OA03-CLASE04-MOTIVACION.pptx.mp4",
     "dileAfterVideo": "¿Qué observaste en esta situación inicial?",
@@ -301,7 +301,7 @@ export const LENGUA_7B_OA03_CLASE04: LessonData = {
   "postQuestions": [
     {
       "context": "Comprobación 1",
-      "question": "¿Toda la línea pertenece a Jimmy? Explica.",
+      "question": "Relee «—¿Y qué diferencia hay entre Robutt y el perro? —preguntó Jimmy». ¿Toda la línea pertenece a las palabras pronunciadas por Jimmy? Explica.",
       "expected": "La pregunta pertenece a Jimmy. La aclaración preguntó Jimmy pertenece al narrador.",
       "success": "Respuesta precisa y fundamentada",
       "support": "Revisa el concepto clave expuesto",
@@ -434,7 +434,7 @@ export const LENGUA_7B_OA03_CLASE04: LessonData = {
   },
   "closure": {
     "congratulations": "Buen trabajo. Explicaste tu respuesta usando información del recurso.",
-    "nextClassPreview": "¡Nos vemos en la próxima lección!"
+    "nextClassPreview": "Próxima clase: El orden de los hechos y el recuerdo"
   },
   "paso8_cierre": {
     "preguntaSintesis": "¿Qué parte corresponde al narrador y qué parte a Jimmy?",

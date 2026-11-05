@@ -2,9 +2,13 @@
 
 **Curso:** 110-7 · **Asignatura:** Lengua_Literatura · **OA:** OA03 · **Clase:** 03 de 06
 
+**Título:** Inferencias con evidencia del relato
+
 **Estado:** EN_REVISION · NO INTEGRADA EN APP · NO APROBADA
 
 **Fecha de preparación:** 2026-10-12 America/Santiago
+
+**Revisión de fuente:** LYL-OA03-R20261105 · 2026-11-05T17:18-03:00 · corrección del punto de partida y delimitación del recurso de lectura.
 
 **Objetivo de la clase:** Distinguir información explícita de inferencias y justificar interpretaciones sobre Jimmy y Robutt con acciones del relato.
 
@@ -26,17 +30,28 @@ Leer el recurso → localizar pistas → explicar → practicar → comprobar co
 
 **Distribución orientativa:** inicio y lectura 6 min; videos 3 min; conversación y modelamiento 7 min; práctica 7 min; miniquiz y recuperación 5 min; cierre 2 min.
 
-## 3. Paso 2B — Punto de partida
+## 3. Paso 2B — Situación inicial y Punto de Partida
 
-### Recurso de lectura visible para el estudiante
+**DILE al estudiante:** “Lee el recurso y fíjate en el abrazo de Jimmy y sus palabras de cariño. ¿Cuál es el hecho y qué puedes inferir de él?”
 
-Robutt acompaña a Jimmy en sus juegos y utiliza su radar para localizarlo y advertirle de las rocas. Cuando Jimmy finge estar herido en una travesura anterior, Robutt activa una alarma y llega un grupo de rescate. Durante la conversación con su padre, Jimmy afirma que Robutt es su perro, lo abraza y expresa que lo quiere. El narrador describe que Jimmy frunce el ceño y no está dispuesto a cambiar de opinión. Estos hechos permiten interpretar el vínculo entre Jimmy y Robutt. No describen lo que el padre decide después del final.
+**Respuesta esperada:** El hecho es que Jimmy lo abraza y expresa cariño. Puedo inferir que valora su vínculo con Robutt.
 
-**DILE antes de leer:** “¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.”
+**Pista socrática:** Separa lo que el recurso cuenta directamente de lo que interpretas a partir del abrazo y las palabras de Jimmy.
 
-**Punto de partida / Starting point:** ¿Cuál es el hecho y qué puedes inferir de él?
+**Pregunta de referencia:** “¿Cuál es el hecho y qué puedes inferir de él?”
+**Criterio de éxito:** Distingues el hecho del abrazo y las palabras de cariño de una inferencia sobre el vínculo; justificas la interpretación con esa pista.
 
-**Respuesta de referencia / Reference, privada para el mentor hasta después del intento:** El hecho es que Jimmy lo abraza y expresa cariño. Puedo inferir que valora su vínculo con Robutt.
+### Recurso de Lectura Autónomo en Pantalla
+
+**Título:** El mejor amigo de un muchacho · hechos e inferencias
+
+**Tipo de recurso:** Síntesis pedagógica de EstudioSimple basada en el cuento de Isaac Asimov; no es una cita literal.
+
+> Robutt acompaña a Jimmy en sus juegos y utiliza su radar para localizarlo y advertirle de las rocas. Cuando Jimmy finge estar herido en una travesura anterior, Robutt activa una alarma y llega un grupo de rescate. Durante la conversación con su padre, Jimmy afirma que Robutt es su perro, lo abraza y expresa que lo quiere. El narrador describe que Jimmy frunce el ceño y no está dispuesto a cambiar de opinión. Estos hechos permiten interpretar el vínculo entre Jimmy y Robutt. No describen lo que el padre decide después del final.
+
+**Para el mentor, privado:** La respuesta esperada corresponde a la pregunta sobre este recurso, después de leerlo. Acepta formulaciones equivalentes con evidencia. No usar esa respuesta como respuesta del estudiante ni como modelo de una anticipación anterior a la lectura.
+
+---
 
 ## 4. Paso 3 — Videos
 
@@ -102,7 +117,7 @@ Robutt acompaña a Jimmy en sus juegos y utiliza su radar para localizarlo y adv
 
 **Error frecuente:** Imaginar una decisión posterior del padre no equivale a inferir con una pista suficiente.
 
-**Comprobación inmediata:** ¿Qué interpretación puedes justificar con esta acción?
+**Comprobación inmediata:** Robutt usa su radar para localizar a Jimmy y advertirle de las rocas. ¿Qué interpretación puedes justificar con esa acción?
 
 **Modelo de comprobación:** Puedo inferir que Robutt ayuda a Jimmy a orientarse y evitar acercarse a las rocas.
 
@@ -438,3 +453,4 @@ Robutt acompaña a Jimmy en sus juegos y utiliza su radar para localizarlo y adv
 **Decisión formativa:** 2/3 o 3/3 permite avanzar en la clase según el Manual; con 0/3 o 1/3, explicar el error, ofrecer apoyos, resolver la nueva práctica correspondiente y reintentar. Si vuelve a necesitar ayuda, registrar el apoyo y reforzar el criterio sin aprobar automáticamente. El resultado se acompaña de la evidencia de práctica. El miniquiz no aprueba por sí solo todo el OA.
 
 **Control:** Cero hallazgos críticos o mayores; hasta tres menores enumerados y aceptados por clase. Los recursos audiovisuales pendientes y la integración se registran por separado; no se declara la clase publicada o el OA aprobado desde esta revisión documental. Matemática OA01 y las doce presentaciones terminadas de Lengua y Literatura OA03 permanecen excluidas de cambios.
+

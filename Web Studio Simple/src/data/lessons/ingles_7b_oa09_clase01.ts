@@ -446,7 +446,7 @@ export const INGLES_7B_OA09_CLASE01: LessonData = {
   },
   "closure": {
     "congratulations": "“Great reading! You used the whole passage and its details to explain Anne’s day.”",
-    "nextClassPreview": "Próxima clase: Expressing an opinion about a text with evidence."
+    "nextClassPreview": "Próxima clase: An opinion supported by the diary"
   },
   "paso8_cierre": {
     "preguntaSintesis": "“Which two details show that Anne’s entry describes both home and school?”",

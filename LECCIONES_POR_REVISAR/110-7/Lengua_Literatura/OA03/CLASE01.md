@@ -60,11 +60,13 @@ Observar → leer el recurso en pantalla → reunir pistas → explicar el confl
 
 ## 3. Paso 2B — Situación inicial y Punto de Partida
 
-**DILE al estudiante:** “Mira el título «El mejor amigo de un muchacho» y la ilustración de la Luna. ¿Qué imaginas sobre el lugar de la historia? ¿Qué pista podríamos buscar para comprobarlo?”
+**DILE al estudiante:** “Lee el primer párrafo del recurso que aparece en pantalla. ¿Dónde vive Jimmy? Cuéntame dos detalles de ese lugar.”
 
-**Respuesta esperada:** Anticipaciones variadas expresadas como hipótesis. No se evalúan como verdaderas o falsas antes de leer.
+**Respuesta esperada:** Por ejemplo: «Vive en la Luna. Hay rocas y no se puede respirar afuera».
 
-**Pista socrática:** ¿Eso aparece en el recurso o lo estás imaginando a partir del título?
+**Pista socrática:** Relee el primer párrafo. Busca dónde vive Jimmy, cómo es el suelo y qué dice sobre el aire.
+
+**Orientación privada para el mentor:** Es un ejemplo, no una frase para memorizar. Acepta otras palabras que indiquen la colonia lunar y dos detalles del texto, como suelo rocoso, aridez o falta de oxígeno respirable. Si menciona el traje, pídele relacionarlo con la falta de aire respirable. No dictes el modelo ni lo registres como respuesta del estudiante.
 
 **Pregunta de referencia:** “Lee el recurso que aparece en pantalla. ¿Dónde vive Jimmy? Elige dos detalles que nos ayuden a describir el ambiente.”
 **Criterio de éxito:** Encontraste el lugar y usaste detalles de la lectura en pantalla para describirlo.
@@ -463,3 +465,4 @@ Observar → leer el recurso en pantalla → reunir pistas → explicar el confl
 **Decisión formativa:** 2/3 o 3/3 permite avanzar en la clase según el Manual; con 0/3 o 1/3, explicar el error, ofrecer apoyos, resolver la nueva práctica correspondiente y reintentar. Si vuelve a necesitar ayuda, registrar el apoyo y reforzar el criterio sin aprobar automáticamente. El resultado se acompaña de la evidencia de práctica. El miniquiz no aprueba por sí solo todo el OA.
 
 **Control:** Cero hallazgos críticos o mayores; hasta tres menores enumerados y aceptados por clase. Los recursos audiovisuales pendientes y la integración se registran por separado; no se declara la clase publicada o el OA aprobado desde esta revisión documental. Matemática OA01 y las doce presentaciones terminadas de Lengua y Literatura OA03 permanecen excluidas de cambios.
+

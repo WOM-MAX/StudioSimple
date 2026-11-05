@@ -56,9 +56,9 @@ export const LENGUA_7B_OA03_CLASE06: LessonData = {
     "dileObjective": "Comparar relatos con evidencia"
   },
   "situation": {
-    "dilePrompt": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",
+    "dilePrompt": "Observa la situación de partida para comenzar.",
     "expectedAnswer": "En ambos relatos, un vínculo personal adquiere importancia: Jimmy defiende su afecto y Kitagaki reconoce una amistad compartida.",
-    "socraticHint": "Fíjate en los detalles destacados.",
+    "socraticHint": "Busca un hecho de cada texto que muestre la importancia de un vínculo. No confundas una semejanza con tener el mismo final.",
     "emotionalTip": "Acompaña con calma.",
     "options": [
       {
@@ -79,18 +79,18 @@ export const LENGUA_7B_OA03_CLASE06: LessonData = {
     ]
   },
   "reference": {
-    "dilePrompt": "¿Qué semejanza puedes sostener con ambos hechos?",
+    "dilePrompt": "Revisemos el punto de partida.",
     "question": "¿Qué información entrega el punto de partida?",
     "expectedAnswer": "En ambos relatos, un vínculo personal adquiere importancia: Jimmy defiende su afecto y Kitagaki reconoce una amistad compartida.",
     "socraticHint": "Localiza las palabras clave.",
     "feedbackSuccess": "¡Excelente fundamentación!",
-    "feedbackSupport": "Revisa la lectura para confirmar los datos."
+    "feedbackSupport": "Busca un hecho de cada texto que muestre la importancia de un vínculo. No confundas una semejanza con tener el mismo final."
   },
   "hook": {
     "title": "Motivación",
     "titulo": "Motivación",
     "focusPoints": [],
-    "dileIntro": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",
+    "dileIntro": "Hoy exploraremos una nueva situación motivadora.",
     "hazInstruction": "Observa y reflexiona con las escenas del video.",
     "videoSrc": "https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/LENGUAJE/OA03/110-7-LYL-OA03-CLASE06-MOTIVACION.pptx.mp4",
     "dileAfterVideo": "¿Qué observaste en esta situación inicial?",

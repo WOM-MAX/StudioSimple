@@ -2,9 +2,13 @@
 
 **Curso:** 110-7 · **Asignatura:** Lengua_Literatura · **OA:** OA03 · **Clase:** 04 de 06
 
+**Título:** La voz del narrador y los personajes
+
 **Estado:** EN_REVISION · NO INTEGRADA EN APP · NO APROBADA
 
 **Fecha de preparación:** 2026-10-12 America/Santiago
+
+**Revisión de fuente:** LYL-OA03-R20261105 · 2026-11-05T17:18-03:00 · corrección del punto de partida y delimitación del recurso de lectura.
 
 **Objetivo de la clase:** Distinguir quién cuenta las acciones y quién habla en los diálogos del relato, usando señales del fragmento.
 
@@ -26,27 +30,38 @@ Leer el recurso → localizar pistas → explicar → practicar → comprobar co
 
 **Distribución orientativa:** inicio y lectura 6 min; videos 3 min; conversación y modelamiento 7 min; práctica 7 min; miniquiz y recuperación 5 min; cierre 2 min.
 
-## 3. Paso 2B — Punto de partida
+## 3. Paso 2B — Situación inicial y Punto de Partida
 
-### Recurso de lectura visible para el estudiante
+**DILE al estudiante:** “Lee el fragmento que comienza con «Jimmy frunció el ceño» y continúa con las palabras sobre Robutt. ¿Qué parte corresponde al narrador y qué parte a Jimmy?”
 
-Fragmento del cuento de Isaac Asimov:
+**Respuesta esperada:** Jimmy frunció el ceño corresponde al narrador. La intervención que comienza con Robutt no es una imitación corresponde a Jimmy.
 
-Jimmy frunció el ceño.
-—Robutt no es una imitación, papi. Es mi perro.
-—No es un perro de verdad, Jimmy. Robutt tiene un cerebro positrónico muy sencillo y está hecho de acero y circuitos. No está vivo.
+**Pista socrática:** ¿Qué palabras cuentan una acción y cuáles pronuncia Jimmy al dirigirse a su padre?
 
-En otro momento del diálogo:
-—¿Y qué diferencia hay entre Robutt y el perro? —preguntó Jimmy.
-—Es difícil de explicar —dijo el señor Anderson—, pero lo comprenderás en cuanto lo veas.
+**Pregunta de referencia:** “¿Qué parte corresponde al narrador y qué parte a Jimmy?”
+**Criterio de éxito:** Distingues la acción contada por el narrador de la intervención de Jimmy y señalas las marcas del fragmento.
 
-El fragmento alterna la narración de acciones con las intervenciones de Jimmy y de su padre.
+### Recurso de Lectura Autónomo en Pantalla
 
-**DILE antes de leer:** “¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.”
+**Título:** El mejor amigo de un muchacho · narración y diálogo
 
-**Punto de partida / Starting point:** ¿Qué parte corresponde al narrador y qué parte a Jimmy?
+**Tipo de recurso:** Fragmentos del cuento de Isaac Asimov para distinguir narración y diálogo. Se conservan sus palabras y marcas.
 
-**Respuesta de referencia / Reference, privada para el mentor hasta después del intento:** Jimmy frunció el ceño corresponde al narrador. La intervención que comienza con Robutt no es una imitación corresponde a Jimmy.
+> Fragmento del cuento de Isaac Asimov:
+>
+> Jimmy frunció el ceño.
+> —Robutt no es una imitación, papi. Es mi perro.
+> —No es un perro de verdad, Jimmy. Robutt tiene un cerebro positrónico muy sencillo y está hecho de acero y circuitos. No está vivo.
+>
+> En otro momento del diálogo:
+> —¿Y qué diferencia hay entre Robutt y el perro? —preguntó Jimmy.
+> —Es difícil de explicar —dijo el señor Anderson—, pero lo comprenderás en cuanto lo veas.
+>
+> El fragmento alterna la narración de acciones con las intervenciones de Jimmy y de su padre.
+
+**Para el mentor, privado:** La respuesta esperada corresponde a la pregunta sobre este recurso, después de leerlo. Acepta formulaciones equivalentes con evidencia. No usar esa respuesta como respuesta del estudiante ni como modelo de una anticipación anterior a la lectura.
+
+---
 
 ## 4. Paso 3 — Videos
 
@@ -113,7 +128,7 @@ El fragmento alterna la narración de acciones con las intervenciones de Jimmy y
 
 **Error frecuente:** La presencia de una raya no convierte las aclaraciones del narrador en palabras del personaje.
 
-**Comprobación inmediata:** ¿Toda la línea pertenece a Jimmy? Explica.
+**Comprobación inmediata:** Relee «—¿Y qué diferencia hay entre Robutt y el perro? —preguntó Jimmy». ¿Toda la línea pertenece a las palabras pronunciadas por Jimmy? Explica.
 
 **Modelo de comprobación:** La pregunta pertenece a Jimmy. La aclaración preguntó Jimmy pertenece al narrador.
 
@@ -449,3 +464,4 @@ En preguntó Jimmy, ¿qué función cumple el narrador?
 **Decisión formativa:** 2/3 o 3/3 permite avanzar en la clase según el Manual; con 0/3 o 1/3, explicar el error, ofrecer apoyos, resolver la nueva práctica correspondiente y reintentar. Si vuelve a necesitar ayuda, registrar el apoyo y reforzar el criterio sin aprobar automáticamente. El resultado se acompaña de la evidencia de práctica. El miniquiz no aprueba por sí solo todo el OA.
 
 **Control:** Cero hallazgos críticos o mayores; hasta tres menores enumerados y aceptados por clase. Los recursos audiovisuales pendientes y la integración se registran por separado; no se declara la clase publicada o el OA aprobado desde esta revisión documental. Matemática OA01 y las doce presentaciones terminadas de Lengua y Literatura OA03 permanecen excluidas de cambios.
+

@@ -56,9 +56,9 @@ export const LENGUA_7B_OA03_CLASE03: LessonData = {
     "dileObjective": "Inferencias con evidencia del relato"
   },
   "situation": {
-    "dilePrompt": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",
+    "dilePrompt": "Observa la situación de partida para comenzar.",
     "expectedAnswer": "El hecho es que Jimmy lo abraza y expresa cariño. Puedo inferir que valora su vínculo con Robutt.",
-    "socraticHint": "Fíjate en los detalles destacados.",
+    "socraticHint": "Separa lo que el recurso cuenta directamente de lo que interpretas a partir del abrazo y las palabras de Jimmy.",
     "emotionalTip": "Acompaña con calma.",
     "options": [
       {
@@ -79,18 +79,18 @@ export const LENGUA_7B_OA03_CLASE03: LessonData = {
     ]
   },
   "reference": {
-    "dilePrompt": "¿Cuál es el hecho y qué puedes inferir de él?",
+    "dilePrompt": "Revisemos el punto de partida.",
     "question": "¿Qué información entrega el punto de partida?",
     "expectedAnswer": "El hecho es que Jimmy lo abraza y expresa cariño. Puedo inferir que valora su vínculo con Robutt.",
     "socraticHint": "Localiza las palabras clave.",
     "feedbackSuccess": "¡Excelente fundamentación!",
-    "feedbackSupport": "Revisa la lectura para confirmar los datos."
+    "feedbackSupport": "Separa lo que el recurso cuenta directamente de lo que interpretas a partir del abrazo y las palabras de Jimmy."
   },
   "hook": {
     "title": "Motivación",
     "titulo": "Motivación",
     "focusPoints": [],
-    "dileIntro": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",
+    "dileIntro": "Hoy exploraremos una nueva situación motivadora.",
     "hazInstruction": "Observa y reflexiona con las escenas del video.",
     "videoSrc": "https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/LENGUAJE/OA03/110-7-LYL-OA03-CLASE03-MOTIVACION.pptx.mp4",
     "dileAfterVideo": "¿Qué observaste en esta situación inicial?",
@@ -301,7 +301,7 @@ export const LENGUA_7B_OA03_CLASE03: LessonData = {
   "postQuestions": [
     {
       "context": "Comprobación 1",
-      "question": "¿Qué interpretación puedes justificar con esta acción?",
+      "question": "Robutt usa su radar para localizar a Jimmy y advertirle de las rocas. ¿Qué interpretación puedes justificar con esa acción?",
       "expected": "Puedo inferir que Robutt ayuda a Jimmy a orientarse y evitar acercarse a las rocas.",
       "success": "Respuesta precisa y fundamentada",
       "support": "Revisa el concepto clave expuesto",
@@ -434,7 +434,7 @@ export const LENGUA_7B_OA03_CLASE03: LessonData = {
   },
   "closure": {
     "congratulations": "Buen trabajo. Explicaste tu respuesta usando información del recurso.",
-    "nextClassPreview": "¡Nos vemos en la próxima lección!"
+    "nextClassPreview": "Próxima clase: La voz del narrador y los personajes"
   },
   "paso8_cierre": {
     "preguntaSintesis": "¿Cuál es el hecho y qué puedes inferir de él?",

@@ -9,10 +9,11 @@
 **Duración:** 30 minutos  
 **Número de clase:** 02 de 06  
 **Título de trabajo de la siguiente clase:** Emociones, afectividad e imagen personal  
-**Estado:** EN_REVISION · NO INTEGRADA EN APP · NO APROBADA  
-**Fuente principal:** Texto Escolar de Ciencias Naturales 7° básico (Edición especial MINEDUC / SM), Unidad 4 "Salud sexual y reproducción", Lección 8 "Sexualidad y autocuidado", páginas impresas 117 a 119 (PDF físico 119–121).  
-**Unidades de contenido:** 7B-CNA-OA01-C02.  
-**Indicadores priorizados:** 7B-CNA-OA01-IE01, 7B-CNA-OA01-IE02, en el alcance correspondiente a esta clase.
+**Estado:** REVISADA_DOCUMENTALMENTE · INTEGRACIÓN APP PENDIENTE · APROBACIÓN FINAL NO ACREDITADA  
+**Versión:** v3.5 · 2026-11-03 20:44 -03  
+**Fuente principal:** Texto Escolar Ciencias Naturales 7° básico, Edición especial MINEDUC/SM, Unidad 4, Lección 8. Páginas impresas 117 (página PDF 119).  
+**Archivo fuente:** https://drive.google.com/file/d/1F_bd0rzd7VV_ZhttGuLRV9WlxJQzAvlD/view  
+**Unidades de contenido:** 7B-CNA-OA01-C02.
 
 ### Objetivo oficial de aprendizaje
 
@@ -20,47 +21,46 @@ Explicar los aspectos biológicos, afectivos y sociales que se integran en la se
 
 ### Objetivo de esta clase
 
-Describir los principales cambios físicos que ocurren durante la pubertad, diferenciando los caracteres sexuales primarios de los secundarios y comprendiendo que la variabilidad en los ritmos de desarrollo biológico es un proceso natural que debe ser respetado sin asociarlo a juicios de valor o apariencia.
+Describir cambios físicos de la pubertad, distinguir caracteres sexuales primarios y secundarios y explicar por qué los ritmos individuales merecen respeto sin deducir capacidades a partir de la apariencia.
 
-**Resultado observable:** El estudiante clasifica correctamente caracteres primarios y secundarios a partir de evidencias biológicas, explica con argumentos científicos por qué dos personas de la misma edad pueden tener ritmos puberales diferentes y refuta prejuicios basados en la apariencia corporal.
+**Resultado observable:** El estudiante aplica el criterio del ejemplo a un caso nuevo y fundamenta su respuesta con pistas del recurso, sin añadir datos ausentes.
 
 ### Alcance
 
-Esta clase aborda la dimensión física de la sexualidad humana, centrándose en los cambios corporales de la pubertad según las páginas 117 a 119 del Texto Escolar. Se utilizan situaciones didácticas ficticias para salvaguardar la intimidad de los estudiantes, evitando indagaciones sobre su propio cuerpo o desarrollo personal.
+Cambios puberales y clasificación de caracteres. Las referencias de edad provienen del NICHD, no de una página del libro. No se diagnostica desarrollo individual.
+
+**Indicadores priorizados:** Referencias internas de planificación, vinculadas al listado oficial de CN07 OA01; no son códigos oficiales del MINEDUC.
+
+- 7B-CNA-OA01-IE01: Diferenciar aspectos físicos, biológicos, afectivos y sociales usando pistas de casos.
+- 7B-CNA-OA01-IE02: Interpretar la pubertad mediante cambios físicos y emocionales.
 
 ---
 
 ## 1. Paso 1 — Preparación del mentor
 
-**Propósito:** Acompañar al estudiante en la comprensión de los cambios físicos de la pubertad desde una perspectiva biológica rigurosa, formativa y respetuosa, promoviendo la aceptación de la variabilidad biológica individual y rechazando cualquier forma de discriminación o burla corporal.
+**Ubicación funcional:** Preparación adulta fuera de las ocho etapas de navegación. Se conservan los encabezados heredados para no asumir compatibilidad de parser.
 
-**DILE:** “¡Hola! Hoy estudiaremos en profundidad la dimensión física de la sexualidad: aprenderemos qué transformaciones ocurren en nuestro cuerpo durante la pubertad, cómo distinguir los caracteres sexuales primarios de los secundarios, y por qué cada ser humano vive estos cambios a su propio ritmo biológico sin que eso determine su valor, su inteligencia ni sus capacidades.”
+**Propósito:** Acompañar la comprensión y aplicación del objetivo focal.
 
-**Ruta de hoy:** Leer el recurso biológico → distinguir caracteres primarios y secundarios → comprender la variabilidad de ritmos → practicar con casos ficticios → comprobar con el miniquiz.
+**DILE:** “Hoy trabajaremos con un caso ficticio. Primero buscaremos pistas, después aprenderemos un criterio y finalmente lo aplicarás con tus propias razones. Puedes pedir ayuda sin contar experiencias personales.”
 
-**Pautas para el mentor:**
-1. Mantén un tono científico sereno, claro y desprovisto de dramatismo o tabúes.
-2. Recuerda que los caracteres sexuales primarios son los órganos reproductores presentes desde el nacimiento; los secundarios son las transformaciones corporales que maduran en la pubertad por estímulo hormonal.
-3. Subraya con firmeza que la pubertad no es una carrera: empezar antes o después es biológicamente normal y no hace a nadie 'mejor' ni 'más maduro'.
-4. Emplea exclusivamente los ejemplos de personajes ficticios provistos en la clase.
+**Qué observar:** Si distingue información del caso y suposiciones, aplica el criterio y explica su decisión. Aceptar formulaciones equivalentes fundamentadas.
 
-**Clima emocional y privacidad:** Garantizar estricto respeto. No realizar preguntas al estudiante sobre su cuerpo, estatura, cambios de voz, vello o desarrollo íntimo.
+**Privacidad:** No pedir detalles sobre cuerpo, intimidad, relaciones o experiencias personales. Las respuestas del mentor, modelos y claves son privadas y se muestran solo después del intento correspondiente. Si aparece una revelación espontánea de daño, escuchar sin interrogar y activar el apoyo adulto o institucional pertinente.
+
+**Cómo ayudar:** Primero localizar la pista indicada, luego relacionarla con el criterio, después modelar una parte y pedir un nuevo intento. Evitar entregar la solución antes de que el estudiante piense.
 
 ---
 
 ## 2. Paso 2A — Ruta de aprendizaje
 
-| N.° | Momento | Foco de aprendizaje | Indicador visual |
-|---|---|---|---|
-| 1 | Punto de partida | Observamos el crecimiento en la pubertad | Verde |
-| 2 | Distinción científica | Caracteres primarios vs. secundarios | Azul |
-| 3 | Variabilidad biológica | Ritmos individuales de maduración | Amarillo |
-| 4 | Modelamiento y práctica | Análisis de situaciones y respeto mutuo | Morado |
+**DILE — Objetivo del estudiante:** “Describir cambios físicos de la pubertad, distinguir caracteres sexuales primarios y secundarios y explicar por qué los ritmos individuales merecen respeto sin deducir capacidades a partir de la apariencia.”
 
-**Pregunta clave 1:** ¿En qué se diferencian los caracteres sexuales primarios de los secundarios?  
-**Pregunta clave 2:** ¿Por qué dos compañeros de la misma edad pueden presentar estaturas y voces distintas sin que ninguno tenga un problema de salud?
+**Inicio:** Presentar meta y caso, y preguntar qué información convendría observar.
 
-**DILE — Objetivo del estudiante:** “Al finalizar la clase, sabrás identificar con exactitud los caracteres sexuales primarios y secundarios, y podrás fundamentar científicamente por qué cada cuerpo tiene su propio tiempo de maduración biológica.”
+**Ruta:** Inicio → Video Motivación → Recorrido → Video Explicación → Práctica → Resumen → Miniquiz → Cierre.
+
+**Tiempo orientativo:** inicio y motivación 4 min; recorrido 5 min; explicación audiovisual y ejemplo 7 min; práctica y transferencia 8 min; resumen, miniquiz y cierre 6 min. Las pausas y apoyos pueden requerir ampliar la sesión.
 
 ---
 
@@ -68,399 +68,525 @@ Esta clase aborda la dimensión física de la sexualidad humana, centrándose en
 
 ### Recurso de lectura visible para el estudiante
 
-El Texto Escolar de Ciencias Naturales (páginas 117 a 119) explica que la pubertad es una etapa de transición biológica entre la niñez y la adultez, impulsada por la activación del sistema endocrino (eje hipotálamo-hipófisis y la acción de hormonas sexuales producidas en las gónadas: testosterona en los testículos; estrógenos y progesterona en los ovarios).
+La pubertad comprende cambios de maduración corporal en los que participan hormonas. El texto escolar describe aumento de estatura, vello axilar y púbico, acné, maduración de genitales y cambios en la voz, entre otros. No todos los cambios aparecen igual ni al mismo tiempo.
 
-En este proceso se distinguen dos categorías biológicas fundamentales:
-1. **Caracteres sexuales primarios:** Son los órganos reproductores internos y externos con los que nace cada persona (útero, ovarios, vulva y vagina en mujeres; testículos, pene y conductos asociados en hombres). Durante la pubertad, estos órganos maduran y alcanzan su capacidad reproductiva biológica.
-2. **Caracteres sexuales secundarios:** Son las transformaciones físicas corporales visibles o fisiológicas que aparecen durante la pubertad, diferenciando a hombres y mujeres sin ser órganos reproductores directos.
-   - *Cambios compartidos:* Crecimiento acelerado en estatura y masa muscular (el estirón puberal), aparición de vello axilar y púbico, aumento de sudoración y secreción de glándulas sebáceas (que puede originar acné).
-   - *Cambios con mayor prevalencia en mujeres:* Desarrollo de las glándulas mamarias, ensanchamiento de las caderas y redistribución de tejido adiposo, y aparición de la primera menstruación (menarquia).
-   - *Cambios con mayor prevalencia en hombres:* Cambio y engrosamiento en el tono de la voz (desarrollo de la laringe), ensanchamiento de los hombros y tórax, crecimiento de vello facial y corporal, y primeras emisiones nocturnas.
+Los caracteres sexuales primarios son los órganos reproductores, como ovarios o testículos. Los secundarios son otras características que se desarrollan durante la pubertad, como desarrollo mamario, vello o cambio de voz. El criterio principal es la naturaleza de la característica: el crecimiento de un órgano reproductor durante la pubertad no lo convierte en secundario. La menstruación es un proceso de la función reproductiva, no un órgano ni un ejemplo para clasificar automáticamente por su fecha de aparición.
 
-**Variabilidad biológica de los ritmos:**
-La ciencia médica confirma que la pubertad comienza generalmente entre los 9 y 14 años, pero no existe una fecha fija ni un orden idéntico para todas las personas. El ritmo de inicio y velocidad depende de factores genéticos, ambientales y nutricionales. Por lo tanto, la estatura, la voz o el vello no permiten medir el valor humano, la inteligencia ni la madurez emocional de un estudiante.
+Según el NICHD, el inicio suele situarse entre 8 y 13 años en niñas y entre 9 y 14 en niños. Son orientaciones poblacionales, no diagnósticos. Una diferencia de apariencia no demuestra por sí sola una enfermedad ni garantiza ausencia de problemas. Ante dudas corresponde apoyo adulto y consulta profesional. El desarrollo corporal no mide dignidad ni madurez emocional.
 
 ### Caso didáctico ficticio
 
-Alex y Daniel tienen 13 años y van en el mismo curso. Durante las vacaciones, Alex experimentó un notorio estirón de estatura y comenzaron a salirle espinillas en el rostro. Daniel, en cambio, mantiene su estatura de sexto básico y aún tiene voz infantil. En el recreo, un compañero de curso propone hacer una fila para comparar quiénes "ya son grandes" y burlarse de quienes no han crecido, diciendo que *“los que no han cambiado son más débiles”*.
+Alex y Daniel tienen trece años. Alex creció y tiene acné; Daniel no observa los mismos cambios. En el recreo, un compañero propone ordenar al curso por apariencia y dice que cambiar antes demuestra mayor valor personal.
 
-**DILE antes de leer:** “Leamos el caso con mirada científica. ¿Es biológicamente correcto juzgar o clasificar a las personas según la velocidad con que cambia su cuerpo? Veamos qué nos enseña la evidencia.”
+**Punto de partida:** ¿Qué pistas entrega el caso y qué necesitas aprender para explicarlo?
+
+**DILE antes de leer:** “Observa primero lo que el relato dice. Mantén abierta tu respuesta hasta comparar las pistas con el criterio de la explicación.”
+
+**Uso en la navegación:** El caso introduce Inicio y Motivación; el recurso de lectura formaliza durante Recorrido y Explicación. No se muestran lectura completa ni soluciones antes de la motivación.
 
 ---
 
 ## 4. Paso 3 — Videos de la clase: Motivación y Explicación
 
-Esta clase cuenta con dos herramientas audiovisuales específicas:
-
-1. **Video de Motivación (7 diapositivas, ~60 segundos):** Plantea el escenario cotidiano de Alex y Daniel en el colegio, mostrando la diversidad de ritmos de crecimiento y formulando la pregunta orientadora: *¿Por qué no todos cambiamos al mismo tiempo y qué nos dice la ciencia sobre la diversidad corporal?*
-2. **Video de Explicación (7 diapositivas, ~90 segundos):** Detalla la distinción entre caracteres primarios y secundarios, explica de manera sencilla la acción hormonal de la pubertad y modela por qué los ritmos individuales son naturales y deben ser respetados en la convivencia escolar.
-
-*Orientación para el mentor:* Observen juntos los videos y dialoguen brevemente sobre las ideas destacadas antes de iniciar la conversación guiada.
+- **MOTIVACION:** 110-7-CNA-OA01-CLASE02-MOTIVACION.pptx, siete láminas, pregunta abierta, guion hablado 130–160 palabras.
+- **EXPLICACION:** 110-7-CNA-OA01-CLASE02-EXPLICACION.pptx, siete láminas, objetivo, criterio, ejemplo, comprobación, error y puente a práctica; guion hablado 195–240 palabras.
+- La pauta audiovisual de este archivo es la única fuente de texto y locución para ambos PPTX.
+- Video Motivación se vincula en etapa 2 y Video Explicación en etapa 4. URLs finales: PENDIENTES DE VIDS/INTEGRACIÓN. No se inventan vínculos.
 
 ---
 
 ## 5. Paso 4 — Conversación guiada
 
-### Pregunta 1 · Identificación de cambios
-- **Contexto:** En el recurso del libro se mencionan cambios corporales que aparecen durante la pubertad.
-- **PREGÚNTALE / ASK:** “En el caso de Alex, ¿qué transformaciones físicas se mencionan y a qué tipo de caracteres sexuales corresponden?”
-- **Respuesta esperada, privada para el mentor:** Se menciona el estirón de estatura y la aparición de acné/espinillas. Corresponden a caracteres sexuales secundarios compartidos.
-- **Evidencia de la fuente:** Páginas 117 y 118 del Texto Escolar.
-- **Apoyo 1:** Si duda, pregúntale: “¿Alex nació con esa estatura y esas espinillas, o le aparecieron ahora en la pubertad?”.
-- **Apoyo 2:** “Como aparecieron en la pubertad y no son órganos reproductores, ¿son caracteres primarios o secundarios?”.
-- **Apoyo 3 y modelo privado tras intentar:** “Alex experimentó aumento de estatura y acné. Ambos son caracteres sexuales secundarios porque surgen en la pubertad como resultado del desarrollo corporal.”
-- **Criterio:** Identifica el aumento de estatura y el acné, clasificándolos correctamente como caracteres secundarios.
 
-### Pregunta 2 · Comprensión de los ritmos individuales
-- **Contexto:** Alex creció mucho en pocos meses, mientras que Daniel aún no ha experimentado ese cambio corporal a la misma edad.
-- **PREGÚNTALE / ASK:** “Científicamente, ¿por qué es perfectamente normal que Daniel y Alex tengan estaturas y voces diferentes teniendo ambos 13 años?”
-- **Respuesta esperada, privada para el mentor:** Porque cada persona tiene su propio ritmo biológico de desarrollo puberal, influenciado por su genética y nutrición, comenzando en momentos distintos entre los 9 y 14 años.
-- **Evidencia de la fuente:** El texto escolar señala que la pubertad presenta variabilidad individual y que los cambios no ocurren al mismo tiempo para todos.
-- **Apoyo 1:** Recuerda el rango de edades del libro: “¿Empieza la pubertad exactamente el mismo día para todos los niños de 13 años?”.
-- **Apoyo 2:** Guía la respuesta hacia la idea de *variabilidad biológica* y *ritmos propios*.
-- **Apoyo 3 y modelo privado tras intentar:** “Es normal porque la pubertad no sigue un cronómetro idéntico: cada organismo responde a factores genéticos propios, por lo que es natural que unos comiencen antes y otros después.”
-- **Criterio:** Argumenta la normalidad de la diferencia basándose en la variabilidad biológica de los ritmos individuales.
+### Pregunta 1
+**Contexto visible:** Alex y Daniel tienen trece años. Alex creció y tiene acné; Daniel no observa los mismos cambios. En el recreo, un compañero propone ordenar al curso por apariencia y dice que cambiar antes demuestra mayor valor personal.
 
-### Pregunta 3 · Refutación de prejuicios
-- **Contexto:** Un compañero afirmó que *“los que no han cambiado son más débiles”*.
-- **PREGÚNTALE / ASK:** “A partir de lo aprendido, ¿por qué la afirmación del compañero es un prejuicio falso que confunde la biología con el valor de las personas?”
-- **Respuesta esperada, privada para el mentor:** Porque el momento en que inicia la pubertad no tiene relación con la fuerza, el valor humano ni las capacidades de una persona; es solo una diferencia temporal en el ritmo biológico.
-- **Evidencia de la fuente:** El Texto Escolar enfatiza que los cambios corporales no determinan los talentos, la madurez emocional ni la dignidad de las personas.
-- **Apoyo 1:** Pregunta: “¿Crecer de estatura te hace automáticamente más inteligente o mejor amigo?”.
-- **Apoyo 2:** Invita a diferenciar entre un proceso biológico involuntario y las cualidades éticas y personales.
-- **Apoyo 3 y modelo privado tras intentar:** “Es un prejuicio falso porque el ritmo de crecimiento es biológico e involuntario. No define la valentía, la inteligencia ni el valor de Daniel; juzgar a alguien por su ritmo corporal es un error que vulnera el respeto mutuo.”
-- **Criterio:** Distingue con claridad el proceso biológico de las valoraciones sociales o prejuicios sobre la apariencia.
+**PREGÚNTALE:** ¿Qué características de Alex menciona el relato?
+
+**Respuesta esperada, privada tras intento:** Aumento de estatura y acné: cambios físicos descritos en la pubertad.
+
+**Apoyo 1 — Localizar:** Localiza las dos observaciones corporales de Alex.
+
+**Apoyo 2 — Relacionar:** Separa una característica corporal de un juicio sobre la persona.
+
+**Apoyo 3 — Modelar y reintentar:** Explica una relación usando la respuesta de referencia, ocúltala y pide al estudiante formular otra vez su respuesta con la pista correspondiente.
+
+**Criterio privado:** Usa la pista y el criterio de la clase; no exige palabras idénticas.
+
+
+### Pregunta 2
+**Contexto visible:** Alex y Daniel tienen trece años. Alex creció y tiene acné; Daniel no observa los mismos cambios. En el recreo, un compañero propone ordenar al curso por apariencia y dice que cambiar antes demuestra mayor valor personal.
+
+**PREGÚNTALE:** ¿La diferencia entre Alex y Daniel permite diagnosticar su salud?
+
+**Respuesta esperada, privada tras intento:** No. Puede haber ritmos diferentes y faltan datos para diagnosticar.
+
+**Apoyo 1 — Localizar:** Observa que solo conocemos edad y algunos cambios visibles.
+
+**Apoyo 2 — Relacionar:** Distingue una orientación general de una evaluación individual.
+
+**Apoyo 3 — Modelar y reintentar:** Explica una relación usando la respuesta de referencia, ocúltala y pide al estudiante formular otra vez su respuesta con la pista correspondiente.
+
+**Criterio privado:** Usa la pista y el criterio de la clase; no exige palabras idénticas.
+
+
+### Pregunta 3
+**Contexto visible:** Alex y Daniel tienen trece años. Alex creció y tiene acné; Daniel no observa los mismos cambios. En el recreo, un compañero propone ordenar al curso por apariencia y dice que cambiar antes demuestra mayor valor personal.
+
+**PREGÚNTALE:** ¿Qué problema tiene ordenar el valor de las personas por su apariencia?
+
+**Respuesta esperada, privada tras intento:** La dignidad y la madurez emocional no se deducen del ritmo corporal.
+
+**Apoyo 1 — Localizar:** Busca el salto desde cambiar antes a valer más.
+
+**Apoyo 2 — Relacionar:** Una observación física no justifica ese juicio personal.
+
+**Apoyo 3 — Modelar y reintentar:** Explica una relación usando la respuesta de referencia, ocúltala y pide al estudiante formular otra vez su respuesta con la pista correspondiente.
+
+**Criterio privado:** Usa la pista y el criterio de la clase; no exige palabras idénticas.
+
 
 ---
 
 ## 6. Paso 5 — Explicación y modelamiento
 
-**Concepto focal disciplinar:** La pubertad comprende transformaciones biológicas universales desencadenadas por la maduración del eje hipotálamo-hipófisis-gónadas. Este proceso culmina con la maduración de los caracteres sexuales primarios (órganos reproductores) y la aparición de caracteres sexuales secundarios (cambios corporales somáticos). La variabilidad individual es la regla biológica: ningún ritmo es superior a otro.
+**Concepto focal disciplinar:** Describir cambios físicos de la pubertad, distinguir caracteres sexuales primarios y secundarios y explicar por qué los ritmos individuales merecen respeto sin deducir capacidades a partir de la apariencia.
 
-### Razonamiento científico visible que modela la clase:
-1. **Pregunta científica:** ¿Cómo clasificar un cambio biológico observado y cómo interpretar la diferencia de ritmos entre personas de la misma edad?
-2. **Evidencia empírica:** Observamos en fuentes médicas y en el texto escolar que los órganos reproductores existen desde el nacimiento (primarios), mientras que la voz grave, el ensanchamiento de hombros o caderas y el vello corporal aparecen años después (secundarios). Además, los registros de crecimiento muestran que la edad de inicio varía ampliamente entre personas sanas.
-3. **Representación:** Construimos una matriz analítica:
-   - *Criterio de tiempo:* ¿Está presente al nacer? → Primario. ¿Aparece en la pubertad? → Secundario.
-   - *Criterio de función:* ¿Es órgano reproductor directo? → Primario. ¿Es cambio corporal somático? → Secundario.
-   - *Criterio de desarrollo:* ¿Todas las personas maduran a la misma edad? → No, existe variabilidad natural en los ritmos.
-4. **Explicación del modelo:**
-   - La señal química (hormonal) se activa en momentos distintos según el reloj biológico de cada individuo.
-   - Quien comienza antes no es más fuerte ni más maduro emocionalmente; quien comienza después no tiene ninguna deficiencia biológica.
-5. **Conclusión científica:** El desarrollo puberal es un proceso fisiológico natural con ritmos diversos. Confundir la apariencia corporal con el valor personal es un error sociológico sin respaldo biológico.
+### Razonamiento visible que modela la clase
 
-### Ejemplo modelado paso a paso para mostrar al estudiante:
-- **Información inicial:** En una ficha médica escolar se registran dos datos sobre un estudiante: Dato A: presencia de testículos; Dato B: aparición de vello en las axilas y cambio en el timbre de la voz.
-- **Paso 1 (Identificar la naturaleza del dato):** El Dato A nombra un órgano reproductor presente desde el nacimiento. El Dato B describe cambios somáticos que no estaban en la niñez.
-- **Paso 2 (Aplicar el criterio científico):**
-  * Órgano reproductor de nacimiento = Carácter sexual primario.
-  * Cambios somáticos aparecidos en la pubertad = Caracteres sexuales secundarios.
-- **Paso 3 (Formular la justificación):** El vello axilar y el cambio de voz son secundarios porque son inducidos por hormonas durante la pubertad y no son órganos reproductores directos.
-- **Paso 4 (Respuesta comprobable y conclusión):** El Dato A corresponde a un carácter sexual primario y el Dato B a caracteres sexuales secundarios. Ambos forman parte de la maduración física normal.
+1. **Pregunta:** ¿Cómo explicar este caso usando el criterio de la lectura?
+2. **Evidencia:** Las pistas textuales del caso y las definiciones del recurso. Los relatos son simulaciones didácticas, no observaciones de una investigación.
+3. **Representación:** Organizar pista → criterio → justificación → respuesta.
+4. **Explicación:** Desarrollar el ejemplo siguiente sin saltar desde una pista a una conclusión que no permite.
+5. **Conclusión:** Responder con la evidencia disponible y reconocer límites cuando corresponda.
+6. **Comunicación:** Expresar la relación con vocabulario comprensible y respeto.
 
-**Error conceptual frecuente y cómo corregirlo:**
-- *Error:* Creer que si una persona no ha tenido el estirón a los 13 años significa que “se quedó pequeña” o tiene una enfermedad.
-- *Corrección científica:* El rango de inicio puberal abarca de los 9 a los 14 años; un inicio más tardío dentro de este rango es perfectamente saludable y no anticipa la estatura final ni el desarrollo adulto.
+### Ejemplo modelado paso a paso para mostrar al estudiante
 
-**Comprobación inmediata:**
-- *Pregunta:* “El ensanchamiento de hombros en los hombres y de caderas en las mujeres, ¿a qué categoría de caracteres corresponde?”
-- *Modelo de respuesta:* “Corresponde a caracteres sexuales secundarios, porque son cambios corporales de la pubertad y no órganos reproductores.”
+**Información inicial:** Una ficha ficticia menciona ovarios, maduración de testículos, aparición de vello axilar y cambio del timbre de voz.
+
+
+1. **Paso 1:** Identificamos qué describe cada término: órganos reproductores o características corporales distintas.
+
+2. **Paso 2:** Ovarios y testículos corresponden a caracteres primarios; su maduración puberal no cambia la categoría.
+
+3. **Paso 3:** Vello axilar y cambio de voz corresponden a caracteres secundarios. Justificamos que no son órganos reproductores.
+
+4. **Paso 4:** Concluimos la clasificación sin inferir salud, valor personal ni madurez afectiva a partir de esos datos.
+
+
+**Error frecuente:** Clasificar todo lo que cambia durante la pubertad como secundario.
+
+**Cómo detectarlo y corregirlo:** Preguntar primero si el dato corresponde a un órgano reproductor. El momento del cambio no basta para decidir.
+
+**Comprobación inmediata:** Pide explicar el último paso del ejemplo.
+
+**Referencia privada tras intento:** Concluimos la clasificación sin inferir salud, valor personal ni madurez afectiva a partir de esos datos.
 
 ---
 
 ## 7. Paso 6 — Práctica conjunta y autónoma
 
+
 ### Caso 1 (Práctica guiada)
-- **Recurso:** Observa la siguiente lista de características corporales:
-  1. Presencia de ovarios.
-  2. Aparición de vello púbico.
-  3. Presencia de pene.
-  4. Desarrollo del tejido mamario.
-  5. Engrosamiento de la voz.
-- **Consigna:** Clasifica cada una de las 5 características como carácter sexual primario o secundario, fundamentando tu elección en una frase para cada grupo.
-- **Procedimiento:** Revisar si el elemento es órgano reproductor de nacimiento o cambio corporal de la pubertad.
-- **Modelo para revisar después del intento:** “Primarios: 1 (ovarios) y 3 (pene), porque son órganos reproductores presentes desde el nacimiento. Secundarios: 2 (vello púbico), 4 (tejido mamario) y 5 (voz gruesa), porque son transformaciones corporales que maduran durante la pubertad.”
+**Recurso visible:** Lista: ovarios, vello púbico, testículos, desarrollo mamario y cambio de voz.
+
+**Consigna:** Clasifica los ejemplos y fundamenta el criterio.
+
+**Decisión del estudiante:** Responder antes de acceder al modelo. El adulto puede señalar una pista, pero no escoger la respuesta.
+
+**Modelo privado para revisar después del intento:** Primarios: ovarios y testículos. Secundarios: vello, desarrollo mamario y cambio de voz.
+
+**Feedback:** Si falta fundamento, pedir que relacione una frase del caso con el criterio del ejemplo. Si está fundamentado, explicar qué relación hizo correctamente.
+
 
 ### Caso 2 (Práctica guiada)
-- **Recurso:** En una clase de educación física, Matías se niega a sacarse la polera para cambiarse porque siente vergüenza de que le hayan salido vellos en las axilas antes que a sus compañeros, temiendo que se burlen de él.
-- **Consigna:** Redacta una explicación de dos puntos que un mentor o amigo comprensivo podría decirle a Matías para tranquilizarlo con fundamentos de las Ciencias Naturales.
-- **Modelo para revisar después del intento:** “Punto 1: El vello axilar es un carácter sexual secundario totalmente natural y saludable que indica que su cuerpo está creciendo. Punto 2: Que sus compañeros aún no lo tengan solo refleja que cada cuerpo tiene su propio ritmo biológico, por lo que nadie tiene derecho a burlarse de una etapa natural del desarrollo.”
+**Recurso visible:** Una publicidad afirma que una apariencia corporal determinada demuestra madurez y éxito.
+
+**Consigna:** Distingue observación corporal y conclusión sin respaldo.
+
+**Decisión del estudiante:** Responder antes de acceder al modelo. El adulto puede señalar una pista, pero no escoger la respuesta.
+
+**Modelo privado para revisar después del intento:** La forma corporal no demuestra madurez afectiva ni éxito. La publicidad no aporta evidencia suficiente de esa relación.
+
+**Feedback:** Si falta fundamento, pedir que relacione una frase del caso con el criterio del ejemplo. Si está fundamentado, explicar qué relación hizo correctamente.
+
 
 ### Aplicación autónoma y transferencia (Estímulo nuevo)
-- **Recurso nuevo visible para el estudiante:**
-  *Situación ficticia nueva:* Valentina y Camila son dos amigas de 12 años y medio. En los últimos seis meses:
-  1. Valentina creció 8 centímetros, comenzó a usar sostén por el desarrollo de sus mamas y le salieron espinillas en la frente.
-  2. Camila mantiene su estatura infantil, no tiene acné y su cuerpo no ha presentado cambios visibles aún.
-  3. En redes sociales, un grupo de compañeras comenta fotos diciendo que Valentina *“ya es una mujer madura”* y que Camila *“parece una niñita chica que no encaja en el grupo”*.
-  4. Valentina se siente abrumada por los comentarios sobre su cuerpo y Camila se siente triste y excluida por no haber cambiado todavía.
 
-- **Actividad autónoma del estudiante:**
-  Responde en tu cuaderno:
-  1. Identifica los caracteres sexuales secundarios que ha experimentado Valentina y explica qué causa hormonal general los produce.
-  2. Utilizando la evidencia científica de la página 118 del Texto Escolar, explica por qué la situación de Camila es biológicamente normal y saludable a sus 12 años y medio.
-  3. Evalúa críticamente los comentarios de las redes sociales: ¿por qué es un error científico y social equiparar los cambios corporales de Valentina con 'madurez emocional' y juzgar a Camila como 'no encajar'?
-  4. Propón una actitud de autocuidado y respeto mutuo que ambas amigas puedan adoptar para proteger su bienestar y amistad.
+**Recurso nuevo visible para el estudiante:** Valentina y Camila tienen doce años y medio. Valentina ha crecido y presenta desarrollo mamario y acné. Camila no observa los mismos cambios. En redes alguien afirma que la primera es más madura y que la segunda tiene necesariamente un problema de salud.
 
-- **Criterio privado del mentor (revelar solo después del intento):**
-  1. Caracteres secundarios de Valentina: estirón de estatura, desarrollo mamario y acné. Causa: activación hormonal de la pubertad (estrógenos y hormonas del crecimiento).
-  2. Normalidad de Camila: La pubertad tiene un rango amplio (9 a 14 años). Estar en una etapa previa a los 12 años y medio es biológicamente esperable y no constituye ninguna anomalía.
-  3. Crítica a estereotipos: Los cambios físicos son procesos biológicos automáticos, no indican madurez de juicio ni madurez afectiva. Descalificar a alguien por su ritmo biológico es un prejuicio que vulnera la dignidad.
-  4. Propuesta: Dialogar con empatía, recordar que los ritmos son individuales, apoyarse mutuamente y no validar burlas ni comentarios invasivos sobre el cuerpo.
+**Actividad autónoma:**
 
-- **Apoyos progresivos para la transferencia:**
-  * *Apoyo 1 (localizar):* “En el punto 1 busca qué cambios aparecieron en Valentina que no estaban en la niñez. En el punto 2, recuerda el rango de edades del libro”.
-  * *Apoyo 2 (relacionar):* “Para la pregunta 3, piensa: ¿tener senos o crecer de golpe te enseña automáticamente a resolver problemas o a ser más prudente?”.
-  * *Apoyo 3 (modelar):* Explicar cómo la biología describe el cuerpo y la ética orienta el trato respetuoso, pedir al estudiante que complete su redacción autónoma.
+1. Identifica cambios corporales y clasifica un carácter secundario con una justificación.
 
-- **Por qué transfiere:** Cambia el contexto hacia el desarrollo puberal femenino y la influencia de las opiniones sociales en redes, obligando al estudiante a aplicar la distinción científica de caracteres y la variabilidad de ritmos para desarmar estereotipos reales.
+2. Explica por qué el relato no permite diagnosticar la salud de Camila.
+
+3. Refuta la equivalencia entre apariencia y madurez afectiva y propone una respuesta respetuosa.
+
+
+**Criterio privado del mentor — revelar solo después del intento:** El desarrollo mamario es secundario. Puede existir variabilidad en los ritmos; la información no acredita una enfermedad ni permite asegurar salud individual. La madurez afectiva no se deduce de la apariencia. Una respuesta posible es detener comparaciones y buscar orientación adulta si hay inquietudes.
+
+**Apoyos progresivos — solo si se necesitan:**
+
+1. Separa los cambios observables de las opiniones publicadas.
+
+2. Usa órgano reproductor frente a otra característica y distingue variabilidad de diagnóstico.
+
+3. Modela desarrollo mamario → no es órgano reproductor → secundario; pide después una conclusión prudente sobre Camila.
+
+
+**Cómo valorar:** Respuesta lograda si aplica el criterio, usa pistas y justifica sin inventar información. Parcial si identifica pistas pero no explica; ofrecer apoyo y nueva respuesta. Pendiente si la conclusión contradice el criterio; volver al ejemplo y usar la recuperación.
+
+**Por qué transfiere:** Cambia el estímulo y las condiciones del caso; exige aplicar el criterio aprendido y justificar una respuesta propia. Las ayudas se ofrecen después del intento y se registra cuáles necesitó.
 
 ---
 
 ## 8. Paso 7 — Miniquiz y recuperación
 
-**Criterio formativo:** 3 preguntas con 4 alternativas (A, B, C, D) y clave privada única. Se requiere 2/3 o 3/3 para aprobar. Con 0/3 o 1/3 se activa la explicación pedagógica del error, el trabajo de recuperación con un estímulo nuevo y la pregunta de reintento.
+**Criterio formativo:** Tres preguntas, cuatro alternativas A–D y una clave privada por reactivo. Dos o tres aciertos permiten avanzar. Con cero o uno: explicar errores, realizar la práctica nueva de recuperación para los conceptos fallados y aplicar los tres reintentos. Salida: al menos dos de tres reintentos correctos y corrección explicada de los errores trabajados. Si aún no alcanza, acompañamiento del adulto y un nuevo ciclo con casos equivalentes; no aprobación automática.
+
+**Privacidad:** Mostrar pregunta y alternativas al estudiante; mantener clave, fundamentos y análisis de distractores en el rol mentor hasta después del intento. La prueba de separación efectiva queda pendiente de integración.
+
 
 ### Reactivo 1
-¿Cuál de las siguientes opciones corresponde con exactitud a un **carácter sexual secundario** que se manifiesta durante la pubertad?
+Una ficha menciona maduración de testículos y aparición de vello axilar. ¿Qué clasificación aplica el criterio?
 
-- A. La presencia de ovarios y trompas uterinas en el aparato reproductor femenino.
-- B. La presencia de testículos en la anatomía del recién nacido.
-- C. La aparición de vello axilar y el cambio en el timbre de la voz.
-- D. La determinación cromosómica del sexo biológico en la fecundación.
+- A. Ambos secundarios porque cambian en la pubertad.
+- B. Testículos secundarios y vello primario porque es visible.
+- C. Ambos primarios porque pertenecen al cuerpo.
+- D. Testículos primarios y vello axilar secundario.
 
-**Clave privada:** C.  
-**Explicación formativa:** Los caracteres sexuales secundarios son los cambios corporales que aparecen durante la pubertad (como el vello corporal y el cambio de voz), a diferencia de los órganos reproductores primarios que ya están presentes desde el nacimiento.
+**Clave privada:** D.
 
-**Análisis de distractores:**
-- *A es incorrecta:* Los ovarios y trompas uterinas son órganos reproductores internos presentes desde el nacimiento; por definición son caracteres sexuales primarios.
-- *B es incorrecta:* Los testículos son órganos reproductores primarios presentes al nacer, no secundarios.
-- *C es CORRECTA:* El vello axilar y el engrosamiento del tono de voz son caracteres secundarios típicos inducidos por hormonas en la pubertad.
-- *D es incorrecta:* La combinación cromosómica (XX o XY) es un hecho genético celular que ocurre en la fecundación, no un cambio somático puberal.
+**Explicación formativa privada:** Distingue órgano reproductor y característica secundaria.
 
----
+**Análisis privado de alternativas:**
+- A: Incorrecta. El tiempo no sustituye la naturaleza del órgano.
+- B: Incorrecta. La visibilidad no determina la categoría.
+- C: Incorrecta. No todo rasgo corporal es un órgano reproductor.
+- D: Correcta. Distingue órgano reproductor y característica secundaria.
+
 
 ### Reactivo 2
-Dos estudiantes de 13 años comparan su desarrollo: uno ya ha crecido 10 cm y tiene vello facial, mientras que el otro no ha cambiado de estatura perceptiblemente. Desde el conocimiento científico de la pubertad, ¿cómo debe interpretarse esta diferencia?
+Dos estudiantes de igual edad muestran cambios en momentos distintos. ¿Qué conclusión es prudente?
 
-- A. Como una anomalía biológica en el estudiante que aún no ha crecido, que requiere tratamiento inmediato.
-- B. Como una manifestación natural de la variabilidad biológica, ya que cada organismo tiene su propio ritmo de maduración.
-- C. Como una prueba de que el estudiante que creció primero posee mayor inteligencia y madurez afectiva.
-- D. Como una señal de que el desarrollo puberal debe completarse obligatoriamente antes de cumplir los 13 años.
+- A. Puede haber ritmos diversos; esos datos no permiten diagnosticar su salud.
+- B. El que cambia primero tiene necesariamente más madurez afectiva.
+- C. El que cambia después tiene necesariamente una enfermedad.
+- D. La diferencia garantiza que ninguno necesita orientación.
 
-**Clave privada:** B.  
-**Explicación formativa:** La ciencia médica demuestra que el inicio y la velocidad del desarrollo puberal varían ampliamente entre individuos sanos (entre los 9 y 14 años). No hay un ritmo superior ni inferior; la variabilidad es la norma biológica.
+**Clave privada:** A.
 
-**Análisis de distractores:**
-- *A es incorrecta:* Distractor común basado en el temor infundado; no haber pegado el estirón a los 13 años está dentro del rango completamente normal de la pubertad.
-- *B es CORRECTA:* Refleja el principio científico de variabilidad biológica individual gobernada por factores genéticos y ambientales.
-- *C es incorrecta:* Confunde desarrollo físico biológico con madurez intelectual o psicológica, lo cual es científicamente falso.
-- *D es incorrecta:* Falso; la pubertad no termina a los 13 años, sino que se extiende fisiológicamente durante la adolescencia.
+**Explicación formativa privada:** Reconoce variabilidad y límites de evidencia.
 
----
+**Análisis privado de alternativas:**
+- A: Correcta. Reconoce variabilidad y límites de evidencia.
+- B: Incorrecta. Confunde maduración corporal y afectiva.
+- C: Incorrecta. No hay datos suficientes para diagnosticar.
+- D: Incorrecta. Tampoco se puede garantizar ausencia de problemas.
+
 
 ### Reactivo 3
-Un aviso publicitario sugiere que para ser respetado y tener éxito en la adolescencia es indispensable tener una musculatura muy marcada o una silueta corporal específica. ¿Qué argumento fundamentado en Ciencias Naturales refuta este mensaje?
+¿Qué respuesta cuestiona una publicidad que asocia apariencia con valor personal?
 
-- A. La ciencia médica afirma que todos los adolescentes tienen exactamente la misma forma corporal si hacen deporte.
-- B. Los cambios físicos puberales son procesos biológicos diversos y la apariencia corporal no define las capacidades, el valor ni la dignidad de las personas.
-- C. La publicidad tiene base científica porque los caracteres secundarios determinan directamente la personalidad de los jóvenes.
-- D. El cuerpo humano deja de cambiar a los 12 años, por lo que la apariencia ya es definitiva.
+- A. Todos deben alcanzar la misma apariencia para ser respetados.
+- B. La dignidad no depende de la apariencia y los cuerpos pueden desarrollarse a ritmos distintos.
+- C. Solo quienes cambian antes pueden comprender emociones.
+- D. Basta comparar fotografías para conocer la salud de una persona.
 
-**Clave privada:** B.  
-**Explicación formativa:** El Texto Escolar enseña que los cambios corporales son biológicos y diversos. Confundir la apariencia estética con el valor o éxito de las personas es un estereotipo social infundado que contradice la dignidad y la variabilidad humana.
+**Clave privada:** B.
 
-**Análisis de distractores:**
-- *A es incorrecta:* Científicamente falso; la contextura y biotipo dependen de la genética y son naturalmente diversos.
-- *B es CORRECTA:* Argumenta con rigor que la diversidad corporal es natural y que la apariencia física no determina el valor ético ni las competencias de la persona.
-- *C es incorrecta:* Error conceptual grave; la publicidad promueve estereotipos comerciales, no verdades científicas sobre la personalidad.
-- *D es incorrecta:* Falso; el cuerpo continúa transformándose y madurando a lo largo de toda la adolescencia y adultez temprana.
+**Explicación formativa privada:** Separa dignidad y diversidad corporal.
 
----
+**Análisis privado de alternativas:**
+- A: Incorrecta. Condiciona injustificadamente el respeto.
+- B: Correcta. Separa dignidad y diversidad corporal.
+- C: Incorrecta. No existe ese criterio en lo enseñado.
+- D: Incorrecta. Una imagen no sustituye una evaluación individual.
+
 
 ### Recuperación formativa posterior al error (para puntajes 0/3 o 1/3)
 
-#### Recuperación para Reactivo 1 (Caracteres primarios vs. secundarios)
-- **Enseñanza del error:** Recuerda el criterio fundamental: los caracteres primarios son los órganos reproductores que ya tenemos al nacer; los secundarios son los cambios corporales que aparecen recién en la pubertad.
-- **Pista orientadora:** Pregúntate: ¿un bebé recién nacido tiene barba o mamas desarrolladas? No, esas características aparecen después, por eso son secundarias.
-- **Recurso visible nuevo:** *Caso de recuperación:* En un libro de biología se describe que un bebé nace con sus órganos genitales formados, y que al cumplir 13 años nota aumento de vello corporal y ensanchamiento de hombros.
-- **Tarea nueva del estudiante:** “Indica cuál de las características del caso es primaria y cuál es secundaria, justificando tu respuesta.”
-- **Apoyos progresivos:**
-  * *Apoyo 1:* Identifica qué tenía el bebé al nacer y qué le apareció a los 13 años.
-  * *Apoyo 2:* Asocia: nacer = primario; pubertad = secundario.
-  * *Apoyo 3:* Los órganos genitales del nacimiento son primarios; el vello y ensanchamiento de hombros son secundarios.
-- **Pregunta de reintento (Reintento 1):**
-  ¿Cuál de las siguientes transformaciones corporales es un carácter sexual secundario?
-  - A. La presencia de útero desde el nacimiento.
-  - B. El desarrollo de las mamas durante la pubertad.
-  - C. La presencia de testículos en un recién nacido.
-  - D. La formación de los pulmones antes de nacer.
-  *Clave reintento 1:* B.
 
-#### Recuperación para Reactivo 2 (Variabilidad de ritmos puberales)
-- **Enseñanza del error:** El desarrollo corporal no ocurre el mismo día ni al mismo ritmo para todas las personas. Tener ritmos diferentes no significa estar enfermo ni ser inferior.
-- **Pista orientadora:** La pubertad tiene una ventana amplia de tiempo (entre los 9 y 14 años). Los ritmos varían según la genética de cada familia.
-- **Recurso visible nuevo:** *Caso de recuperación:* Tres hermanos de la misma familia comenzaron a cambiar de voz a edades distintas: uno a los 11 años, otro a los 13 y el menor a los 14 años. Todos crecieron sanos y fuertes.
-- **Tarea nueva del estudiante:** “¿Qué demuestra este caso sobre los ritmos del desarrollo corporal en seres humanos?”
-- **Apoyos progresivos:**
-  * *Apoyo 1:* Fíjate en las tres edades distintas: 11, 13 y 14.
-  * *Apoyo 2:* Conecta esas edades con la idea de ritmos biológicos individuales.
-  * *Apoyo 3:* Demuestra que incluso en una misma familia el ritmo puberal varía naturalmente sin que signifique un problema.
-- **Pregunta de reintento (Reintento 2):**
-  Si en un curso de 7° básico algunos estudiantes ya han cambiado de voz y otros todavía no, ¿cuál es la explicación científica correcta?
-  - A. Que los que no han cambiado de voz tienen una deficiencia alimentaria grave.
-  - B. Que existe una variabilidad biológica natural donde cada cuerpo sigue su propio ritmo puberal.
-  - C. Que el cambio de voz es una decisión voluntaria de cada estudiante.
-  - D. Que la pubertad solo ocurre en quienes hacen ejercicio físico.
-  *Clave reintento 2:* B.
+#### Recuperación para Reactivo 1
+**Enseñanza del error:** Revisa el fundamento del reactivo fallado y contrástalo con la respuesta elegida, sin limitarte a nombrar la letra correcta.
 
-#### Recuperación para Reactivo 3 (Prejuicios y apariencia física)
-- **Enseñanza del error:** Los cambios corporales son biológicos; el valor de una persona reside en su dignidad, sus acciones y sus afectos. La apariencia física no define quién eres.
-- **Pista orientadora:** Distingue entre un hecho natural (cómo crece el cuerpo) y una opinión o burla social (estereotipo).
-- **Recurso visible nuevo:** *Caso de recuperación:* En una serie juvenil, un personaje no es elegido capitán del equipo de debates porque es más bajo de estatura que sus compañeros.
-- **Tarea nueva del estudiante:** “Explica por qué esa decisión es un prejuicio injusto que no tiene relación con las capacidades de la persona.”
-- **Apoyos progresivos:**
-  * *Apoyo 1:* ¿La estatura influye en la capacidad de razonar o debatir ideas?
-  * *Apoyo 2:* Explica por qué medir el talento por la apariencia es un error.
-  * *Apoyo 3:* La estatura es un rasgo físico en desarrollo; no tiene ninguna relación con la inteligencia ni con la capacidad de liderar un debate.
-- **Pregunta de reintento (Reintento 3):**
-  ¿Por qué es biológica y éticamente incorrecto juzgar el valor o talento de un compañero a partir de su estatura o cambios puberales?
-  - A. Porque los cambios puberales son temporales y no determinan las capacidades intelectuales, morales ni humanas.
-  - B. Porque la ciencia dice que la apariencia es lo único que importa en el colegio.
-  - C. Porque todos los estudiantes deben tener exactamente la misma estatura a los 13 años.
-  - D. Porque los cambios biológicos dependen de la conducta moral de la persona.
-  *Clave reintento 3:* A.
+**Recurso visible nuevo:** Una ficha describe crecimiento de ovarios y aparición de vello.
+
+**Tarea nueva del estudiante:** Clasifica sin usar solamente la edad del cambio.
+
+**Apoyo 1 — Localizar:** Localiza ovarios y aparición de vello.
+
+**Apoyo 2 — Relacionar:** ¿Cuál es un órgano reproductor y cuál otra característica?
+
+**Apoyo 3 — Modelar:** Explica la relación anterior, ocúltala y pide un nuevo intento con las propias palabras del estudiante.
+
+**Modelo privado posterior a la tarea:** Ovarios: primarios, porque son órganos reproductores. Vello: secundario.
+
+
+**Pregunta de reintento 1:**
+Un órgano reproductor crece en la pubertad. ¿Cambia por eso a secundario?
+
+- A. Sí, por aparecer un cambio.
+- B. No, sigue siendo un carácter primario por su naturaleza.
+- C. Sí, cuando se hace visible.
+- D. No puede clasificarse ningún órgano.
+
+**Clave privada reintento 1:** B.
+
+**Explicación formativa privada:** Mantiene el criterio enseñado.
+
+**Análisis privado de alternativas:**
+- A: Incorrecta. Confunde momento y naturaleza.
+- B: Correcta. Mantiene el criterio enseñado.
+- C: Incorrecta. La visibilidad no determina la categoría.
+- D: Incorrecta. Sí existe un criterio.
+
+
+#### Recuperación para Reactivo 2
+**Enseñanza del error:** Revisa el fundamento del reactivo fallado y contrástalo con la respuesta elegida, sin limitarte a nombrar la letra correcta.
+
+**Recurso visible nuevo:** Dos compañeros de doce años muestran estaturas diferentes; no hay más antecedentes.
+
+**Tarea nueva del estudiante:** Formula qué se puede y no se puede concluir.
+
+**Apoyo 1 — Localizar:** Busca edad y estatura; comprueba qué más sabemos.
+
+**Apoyo 2 — Relacionar:** ¿Una diferencia de estatura equivale a un diagnóstico?
+
+**Apoyo 3 — Modelar:** Explica la relación anterior, ocúltala y pide un nuevo intento con las propias palabras del estudiante.
+
+**Modelo privado posterior a la tarea:** La diferencia puede tener varias explicaciones; no permite diagnosticar salud o enfermedad.
+
+
+**Pregunta de reintento 2:**
+¿Qué permite afirmar una diferencia de estatura aislada?
+
+- A. Que hay necesariamente una enfermedad.
+- B. Que se conoce la madurez afectiva.
+- C. Que se garantiza salud completa.
+- D. Que existe una diferencia observable y faltan datos para diagnosticar.
+
+**Clave privada reintento 2:** D.
+
+**Explicación formativa privada:** Reconoce el límite de la información.
+
+**Análisis privado de alternativas:**
+- A: Incorrecta. No basta esa evidencia.
+- B: Incorrecta. No se deduce de la estatura.
+- C: Incorrecta. No se puede garantizar.
+- D: Correcta. Reconoce el límite de la información.
+
+
+#### Recuperación para Reactivo 3
+**Enseñanza del error:** Revisa el fundamento del reactivo fallado y contrástalo con la respuesta elegida, sin limitarte a nombrar la letra correcta.
+
+**Recurso visible nuevo:** Un afiche afirma que una voz más grave demuestra mayor responsabilidad.
+
+**Tarea nueva del estudiante:** Explica por qué la conclusión no se deriva de la pista.
+
+**Apoyo 1 — Localizar:** Subraya voz grave y responsabilidad.
+
+**Apoyo 2 — Relacionar:** ¿La voz permite observar cómo cumple acuerdos?
+
+**Apoyo 3 — Modelar:** Explica la relación anterior, ocúltala y pide un nuevo intento con las propias palabras del estudiante.
+
+**Modelo privado posterior a la tarea:** El cambio de voz es corporal; responsabilidad exige observar decisiones, no el timbre de voz.
+
+
+**Pregunta de reintento 3:**
+¿Qué evidencia sería pertinente para valorar responsabilidad?
+
+- A. Cómo cumple un acuerdo y considera consecuencias.
+- B. Su cantidad de vello.
+- C. El tono de su voz.
+- D. Su rapidez de crecimiento.
+
+**Clave privada reintento 3:** A.
+
+**Explicación formativa privada:** Son acciones relacionadas con responsabilidad.
+
+**Análisis privado de alternativas:**
+- A: Correcta. Son acciones relacionadas con responsabilidad.
+- B: Incorrecta. Es una característica corporal.
+- C: Incorrecta. Es una característica corporal.
+- D: Incorrecta. Es un ritmo corporal.
+
 
 ---
 
 ## 9. Paso 8 — Síntesis y cierre
 
-**Tres ideas fuerza de la clase:**
-1. **Diferenciación científica precisa:** Los caracteres sexuales primarios corresponden a los órganos reproductores presentes desde el nacimiento; los caracteres secundarios son las transformaciones corporales que maduran en la pubertad por estímulo hormonal.
-2. **Variabilidad biológica como norma:** La pubertad se inicia y progresa a ritmos individuales diversos y saludables (entre los 9 y 14 años aproximadamente), condicionados por factores genéticos y ambientales propios de cada organismo.
-3. **Respeto a la diversidad corporal:** La apariencia corporal o el ritmo de maduración física no determinan el valor personal, la inteligencia ni la dignidad de un ser humano; juzgar a otros por su ritmo corporal es un prejuicio sin base científica.
+**Resumen — etapa 6, antes del Miniquiz:**
 
-**Preguntas de metacognición para el estudiante:**
-- *¿Por qué saber que los ritmos puberales son individuales puede darte tranquilidad a ti y a tus compañeros frente a los cambios corporales?*
-- *¿De qué manera puedes contribuir en tu escuela a que nadie sea juzgado ni burlado por su apariencia física?*
+1. Los caracteres primarios y secundarios se distinguen por qué característica describen.
 
-**Puente a la siguiente clase:**
-“En la próxima sesión exploraremos cómo estos cambios corporales se conectan con la **dimensión afectiva y emocional**: analizaremos por qué en la pubertad las emociones se sienten más intensas, cómo influye la imagen personal en nuestra autoestima y qué estrategias nos ayudan a expresar lo que sentimos con respeto y autocuidado.”
+2. Los ritmos pueden variar y los relatos breves no permiten diagnosticar.
+
+3. La apariencia no determina dignidad ni madurez afectiva.
+
+
+**Cierre — etapa 8, después de comprobación y recuperación cuando corresponda:**
+
+**Pregunta metacognitiva:** ¿Qué pregunta te permitió clasificar sin confundir el momento del cambio con la naturaleza de la característica?
+
+**Puente:** En la siguiente clase trabajaremos Emociones, afectividad e imagen personal.
 
 ---
 
 ## Trazabilidad y entrega
 
-- **Curso:** 110-7 (7° Básico)
-- **Asignatura:** Ciencias Naturales (CNA)
-- **Objetivo de Aprendizaje:** 7B-CNA-OA01
-- **Clase:** CLASE02 de 06
-- **Fuente curricular:** Texto Escolar Ciencias Naturales 7° Básico (MINEDUC/SM), Unidad 4, págs. 117–119.
-- **Referencia visual maestra:** 'DUPLA_MAESTRA_ESTUDIOSIMPLE_7B_v1.0_2026-10-14.png' (Carpeta PERSONAJES SÉPTIMO BÁSICO).
-- **Ubicación de entrega oficial:** '03_PRODUCCION_EDUCATIVA / 110-7 / Ciencias_Naturales / OA01 / CLASE02 / CLASE02.md'.
+- **Código de entrega:** 110-7-CNA-OA01-CLASE02.
+- **Versión pedagógica:** v3.5, revisión del 2026-11-03 20:44 -03.
+- **Fuentes curriculares:** CN07 OA01 e indicadores del programa, https://www.curriculumnacional.cl/614/w3-article-70157.html . Las referencias IE son internas.
+- **Fuente escolar:** https://drive.google.com/file/d/1F_bd0rzd7VV_ZhttGuLRV9WlxJQzAvlD/view, páginas impresas 117 (página PDF 119), comprobadas contra el PDF original.
+- **Procedencia de recursos:** casos ficticios, preguntas, herramienta y ejemplos son elaboración didáctica de EstudioSimple. No atribuirlos como citas o experimentos del libro.
+- **Referencia de personajes:** DUPLA_MAESTRA_ESTUDIOSIMPLE_7B_v1.0_2026-10-14.png, https://drive.google.com/file/d/1CjeL0fY9LSjwH-ecxBgToRU8O6sgn4fq/view .
+- **Planes:** Global de Lecciones v1.2; Global de Presentaciones v3.2; planes separados CNA restaurados 31-10-2026. Se conservan funciones y encabezados; no se certifica el parser por inspección documental.
+
+- **Fuente complementaria de desarrollo:** NICHD, https://espanol.nichd.nih.gov/espanol/salud/temas/puberty/informacion/Pages/default.aspx . Rangos orientativos, no diagnóstico individual.
+
+- **Estado de integración:** PENDIENTE. No se han ejecutado inyector, App ni Vids en esta revisión.
+- **Control de versión:** El SHA-256 de este archivo se registra fuera de él, en el manifiesto del paquete; incluir su propia huella dentro del archivo produciría una referencia circular.
+
+### Equivalencia funcional para integración
+
+| Navegación prevista | Contenido fuente | Rol y revelación |
+|---|---|---|
+| Inicio | Paso 2A, objetivo y presentación breve del caso | Estudiante |
+| Video Motivación | Paso 3, MOTIVACION | Estudiante, antes de soluciones |
+| Recorrido | Paso 2B y Paso 4 | Estudiante; ayudas privadas del mentor tras intento |
+| Video Explicación | Paso 3, EXPLICACION | Estudiante |
+| Práctica | Paso 5 y Paso 6: ejemplo, guiada, autonomía y transferencia | Ejemplo visible; modelos de práctica después del intento |
+| Resumen | Paso 8, bloque Resumen | Estudiante, antes del miniquiz |
+| Miniquiz | Paso 7: evaluación, recuperación y reintento | Preguntas visibles; claves privadas |
+| Cierre | Paso 8, metacognición y puente | Estudiante, después de la comprobación |
+
+Antigravity debe completar campo real y evidencia de ejecución para cada fila. No se presume compatibilidad por conservar nombres.
 
 ---
 
 ## Guiones audiovisuales de producción
 
+
 ### MOTIVACION: 110-7-CNA-OA01-CLASE02-MOTIVACION.pptx
-*Especificaciones técnicas:* 7 diapositivas, formato 16:9 widescreen, duración estimada 60 segundos (~130 a 160 palabras habladas).
 
-#### Diapositiva 01 — El estirón y las dudas
-- **Propósito:** Presentar el caso de dos amigos de la misma edad con estaturas y desarrollos distintos.
-- **Título (64 pt, blanco):** Cuerpos en cambio
-- **Subtítulo (32 pt, amarillo oro):** El ritmo de la pubertad
-- **Locución y notas (~22 palabras):** Alex creció varios centímetros y tiene acné, mientras Daniel mantiene su estatura infantil. Ambos tienen trece años pero sus cuerpos se ven diferentes.
+**Especificaciones técnicas:** siete láminas, 16:9, título Arial negrita 64 pt y subtítulo 32 pt; colores adaptativos; imagen completa y espacio negativo real; sin paneles, sombras ni oscurecimientos. **Palabras habladas:** 159.
 
-#### Diapositiva 02 — La pregunta en el patio
-- **Propósito:** Mostrar la confusión común al comparar ritmos de crecimiento.
-- **Título (64 pt, blanco):** ¿Por qué no al mismo tiempo?
-- **Subtítulo (32 pt, amarillo oro):** La duda sobre el crecimiento
-- **Locución y notas (~20 palabras):** Un compañero propone compararlos para ver quién es más grande. ¿Por qué el crecimiento no ocurre al mismo tiempo para todos?
 
-#### Diapositiva 03 — Pistas biológicas
-- **Propósito:** Focalizar la atención en las señales corporales de la pubertad.
-- **Título (64 pt, blanco):** Observa las pistas
-- **Subtítulo (32 pt, amarillo oro):** Cambios que se notan
-- **Locución y notas (~21 palabras):** Estatura, voz, vello y piel cambian durante la pubertad. Son señales naturales de que el organismo está madurando paso a paso.
+#### Diapositiva 01 — Ritmos distintos
+**Título:** Ritmos / distintos  
+**Subtítulo:** ¿Por qué cambian
+distinto?  
+**Descripción visual:** Escena contextual identificada en la matriz por lámina; dupla maestra visible, texto al lado izquierdo en espacio negativo real. Imagen conservada o reparada según registro de cambios.  
+**Locución:** Alex y Daniel tienen trece años. Alex nota que creció y le apareció acné. Daniel todavía no observa los mismos cambios en su cuerpo.
 
-#### Diapositiva 04 — La trampa del prejuicio
-- **Propósito:** Cuestionar la idea de que crecer antes hace a alguien mejor.
-- **Título (64 pt, blanco):** Un mito común
-- **Subtítulo (32 pt, amarillo oro):** La estatura no define el valor
-- **Locución y notas (~22 palabras):** Pensar que quien cambia antes es más maduro o mejor estudiante es un error. El cuerpo sigue su propio ritmo biológico.
 
-#### Diapositiva 05 — El reloj biológico interno
-- **Propósito:** Introducir el concepto de factores genéticos y ritmos propios.
-- **Título (64 pt, blanco):** Ritmos individuales
-- **Subtítulo (32 pt, amarillo oro):** La naturaleza tiene sus tiempos
-- **Locución y notas (~21 palabras):** La genética y la nutrición marcan un calendario único para cada persona. En la pubertad no hay retrasos ni competencias.
+#### Diapositiva 02 — Una pista visible
+**Título:** Una pista / visible  
+**Subtítulo:** Alex nota un cambio  
+**Descripción visual:** Escena contextual identificada en la matriz por lámina; dupla maestra visible, texto al lado derecho en espacio negativo real. Imagen conservada o reparada según registro de cambios.  
+**Locución:** En el recreo, alguien propone ordenar al curso según quién parece mayor. Alex y Daniel dudan: ¿qué información permite realmente esa comparación?
 
-#### Diapositiva 06 — Convivencia con empatía
-- **Propósito:** Resaltar el respeto a la diversidad corporal.
-- **Título (64 pt, blanco):** Respeto mutuo
-- **Subtítulo (32 pt, amarillo oro):** Valorar nuestras diferencias
-- **Locución y notas (~20 palabras):** Comprender que cada cuerpo crece a su tiempo nos enseña a cuidarnos y a desarmar burlas o comparaciones absurdas.
 
-#### Diapositiva 07 — Puente a la explicación científica
-- **Propósito:** Invitar a conocer la distinción de caracteres primarios y secundarios.
-- **Título (64 pt, blanco):** Descubre la ciencia
-- **Subtítulo (32 pt, amarillo oro):** Caracteres primarios y secundarios
-- **Locución y notas (~21 palabras):** Acompáñanos a revisar qué transformaciones son caracteres primarios y cuáles secundarios, descubriendo cómo madura nuestro organismo de forma saludable.
+#### Diapositiva 03 — Comparar
+**Título:** Comparar  
+**Subtítulo:** ¿Qué demuestra la
+apariencia?  
+**Descripción visual:** Escena contextual identificada en la matriz por lámina; dupla maestra visible, texto al lado izquierdo en espacio negativo real. Imagen conservada o reparada según registro de cambios.  
+**Locución:** Un compañero dice que cambiar antes significa mayor capacidad. Otros discrepan. Necesitamos distinguir las observaciones corporales de las interpretaciones que se agregan.
 
----
+
+#### Diapositiva 04 — Cambios físicos
+**Título:** Cambios / físicos  
+**Subtítulo:** ¿Cómo podemos
+clasificarlos?  
+**Descripción visual:** Escena contextual identificada en la matriz por lámina; dupla maestra visible, texto al lado derecho en espacio negativo real. Imagen conservada o reparada según registro de cambios.  
+**Locución:** El libro reúne distintos cambios de la pubertad. Algunos términos pueden parecer similares, pero necesitamos un criterio para comprender qué describe cada uno y explicarlo con precisión.
+
+
+#### Diapositiva 05 — Ritmos personales
+**Título:** Ritmos / personales  
+**Subtítulo:** ¿Qué podemos
+concluir?  
+**Descripción visual:** Escena contextual identificada en la matriz por lámina; dupla maestra visible, texto al lado izquierdo en espacio negativo real. Imagen conservada o reparada según registro de cambios.  
+**Locución:** Al mirar diferencias entre compañeros, ¿podemos conocer por completo su desarrollo? ¿Qué cosas faltan para sostener una conclusión sobre una persona concreta?
+
+
+#### Diapositiva 06 — Una pregunta
+**Título:** Una / pregunta  
+**Subtítulo:** ¿Qué respalda tu
+respuesta?  
+**Descripción visual:** Escena contextual identificada en la matriz por lámina; dupla maestra visible, texto al lado derecho en espacio negativo real. Imagen conservada o reparada según registro de cambios.  
+**Locución:** Vamos a investigar qué permite afirmar el texto y qué no podemos deducir solamente de la estatura, la voz o la apariencia de alguien.
+
+
+#### Diapositiva 07 — Respeto
+**Título:** Respeto  
+**Subtítulo:** ¿Qué falta saber?  
+**Descripción visual:** Escena contextual identificada en la matriz por lámina; dupla maestra visible, texto al lado izquierdo en espacio negativo real. Imagen conservada o reparada según registro de cambios.  
+**Locución:** La explicación nos dará criterios para clasificar cambios y evaluar la afirmación del compañero con razones y respeto.
+
 
 ### EXPLICACION: 110-7-CNA-OA01-CLASE02-EXPLICACION.pptx
-*Especificaciones técnicas:* 7 diapositivas, formato 16:9 widescreen, duración estimada 90 segundos (~195 a 240 palabras habladas).
+
+**Especificaciones técnicas:** siete láminas, 16:9, título Arial negrita 64 pt y subtítulo 32 pt; colores adaptativos; imagen completa y espacio negativo real; sin paneles, sombras ni oscurecimientos. **Palabras habladas:** 231.
+
 
 #### Diapositiva 01 — Objetivo de la lección
-- **Propósito:** Declarar la meta formativa de la clase.
-- **Título (64 pt, blanco):** Cambios en la pubertad
-- **Subtítulo (32 pt, amarillo oro):** Primarios, secundarios y ritmos propios
-- **Locución y notas (~31 palabras):** Nuestro objetivo es reconocer los cambios físicos de la pubertad, distinguir los caracteres sexuales primarios de los secundarios y comprender que los ritmos individuales son naturales y dignos de respeto.
+**Título:** Objetivo de / la lección  
+**Subtítulo:** Cambios y ritmos  
+**Descripción visual:** Escena contextual identificada en la matriz por lámina; dupla maestra visible, texto al lado izquierdo en espacio negativo real. Imagen conservada o reparada según registro de cambios.  
+**Locución:** Nuestro objetivo es describir cambios físicos de la pubertad, distinguir caracteres sexuales primarios y secundarios y explicar por qué los ritmos individuales merecen respeto sin deducir capacidades a partir de la apariencia.
 
-#### Diapositiva 02 — Caracteres primarios
-- **Propósito:** Explicar los órganos reproductores presentes desde el nacimiento.
-- **Título (64 pt, blanco):** Caracteres primarios
-- **Subtítulo (32 pt, amarillo oro):** Presentes desde el nacimiento
-- **Locución y notas (~33 palabras):** Los caracteres sexuales primarios son los órganos reproductores con los que nacemos, como ovarios y testículos. Durante la pubertad maduran y se activan biológicamente por primera vez gracias a las hormonas.
 
-#### Diapositiva 03 — Caracteres secundarios
-- **Propósito:** Definir los cambios somáticos puberales inducidos por hormonas.
-- **Título (64 pt, blanco):** Caracteres secundarios
-- **Subtítulo (32 pt, amarillo oro):** Transformaciones de la pubertad
-- **Locución y notas (~34 palabras):** Los caracteres secundarios son los cambios corporales que aparecen en la pubertad: estirón de estatura, vello corporal, cambio de tono en la voz, desarrollo mamario y acné, generados por las hormonas sexuales.
+#### Diapositiva 02 — La pubertad
+**Título:** La / pubertad  
+**Subtítulo:** Un proceso de
+maduración corporal  
+**Descripción visual:** Escena contextual identificada en la matriz por lámina; dupla maestra visible, texto al lado derecho en espacio negativo real. Imagen conservada o reparada según registro de cambios.  
+**Locución:** Durante la pubertad maduran los órganos reproductores y aparecen otros cambios corporales. Las hormonas participan en este proceso. El texto muestra ejemplos de cambios compartidos y otros que suelen ser más notorios en un sexo.
 
-#### Diapositiva 04 — La variabilidad biológica
-- **Propósito:** Explicar el rango de edad y la normalidad de las diferencias.
-- **Título (64 pt, blanco):** Ritmos diversos
-- **Subtítulo (32 pt, amarillo oro):** Entre los nueve y catorce años
-- **Locución y notas (~33 palabras):** La pubertad no comienza a la misma edad para todos. Iniciar a los diez, a los doce o a los catorce años es biológicamente normal y depende de la genética de cada organismo.
 
-#### Diapositiva 05 — Biología versus estereotipos
-- **Propósito:** Refutar la asociación entre desarrollo físico y valor personal.
-- **Título (64 pt, blanco):** La apariencia no define
-- **Subtítulo (32 pt, amarillo oro):** Ni madurez ni superioridad
-- **Locución y notas (~34 palabras):** Crecer más rápido no significa ser más inteligente, valiente ni maduro. Los cambios corporales son procesos físicos involuntarios que no determinan las capacidades ni la dignidad de ninguna persona en la escuela.
+#### Diapositiva 03 — Cambios físicos
+**Título:** Cambios / físicos  
+**Subtítulo:** Observa qué
+característica describe  
+**Descripción visual:** Escena contextual identificada en la matriz por lámina; dupla maestra visible, texto al lado izquierdo en espacio negativo real. Imagen conservada o reparada según registro de cambios.  
+**Locución:** Para clasificar, preguntamos qué se describe: un órgano reproductor corresponde a un carácter primario; el vello axilar o el cambio de voz corresponden a secundarios. No basta preguntar cuándo notamos una característica.
 
-#### Diapositiva 06 — Modelo de clasificación
-- **Propósito:** Modelar cómo analizar un caso concreto.
-- **Título (64 pt, blanco):** Aplica el criterio
-- **Subtítulo (32 pt, amarillo oro):** Identifica y clasifica con rigor
-- **Locución y notas (~32 palabras):** Para clasificar un cambio pregúntate: ¿estaba presente al nacer o apareció en la pubertad? Esta distinción permite ordenar los datos biológicos con exactitud y evitar confusiones en tus respuestas.
 
-#### Diapositiva 07 — Resumen y aplicación guiada
-- **Propósito:** Resumir los conceptos y dar paso a la actividad en el cuaderno.
-- **Título (64 pt, blanco):** Síntesis de la clase
-- **Subtítulo (32 pt, amarillo oro):** Respeto a cada ritmo corporal
-- **Locución y notas (~30 palabras):** Recuerda: los caracteres primarios nacen con nosotros y los secundarios florecen en la pubertad a ritmos diversos. Ahora resolverás las actividades de práctica clasificando nuevos casos en tu cuaderno.
+#### Diapositiva 04 — Ritmos distintos
+**Título:** Ritmos / distintos  
+**Subtítulo:** Una diferencia no
+explica todo  
+**Descripción visual:** Escena contextual identificada en la matriz por lámina; dupla maestra visible, texto al lado izquierdo en espacio negativo real. Imagen conservada o reparada según registro de cambios.  
+**Locución:** En el caso, Alex creció antes que Daniel. Esa diferencia puede relacionarse con ritmos diversos, pero el relato no permite diagnosticar su salud. Tampoco permite establecer quién tiene mayor valor o madurez emocional.
 
----
+
+#### Diapositiva 05 — Dos grupos
+**Título:** Dos grupos  
+**Subtítulo:** Órgano o cambio  
+**Descripción visual:** Escena contextual identificada en la matriz por lámina; dupla maestra visible, texto al lado izquierdo en espacio negativo real. Imagen conservada o reparada según registro de cambios.  
+**Locución:** Resolvamos una ficha: ovarios, órganos reproductores, se clasifican como primarios. Vello axilar, cambio corporal puberal que no es órgano reproductor, se clasifica como secundario. La justificación explica la naturaleza de cada dato.
+
+
+#### Diapositiva 06 — Valor personal
+**Título:** Valor / personal  
+**Subtítulo:** La apariencia no
+mide la dignidad  
+**Descripción visual:** Escena contextual identificada en la matriz por lámina; dupla maestra visible, texto al lado derecho en espacio negativo real. Imagen conservada o reparada según registro de cambios.  
+**Locución:** Un error frecuente es convertir una diferencia corporal en un juicio sobre la persona. La apariencia no demuestra inteligencia ni dignidad. Si existen dudas sobre el desarrollo, corresponde conversar con un adulto y consultar a profesionales.
+
+
+#### Diapositiva 07 — Idea clave
+**Título:** Idea clave  
+**Subtítulo:** Clasificar con respeto  
+**Descripción visual:** Escena contextual identificada en la matriz por lámina; dupla maestra visible, texto al lado izquierdo en espacio negativo real. Imagen conservada o reparada según registro de cambios.  
+**Locución:** En síntesis, describe la característica, aplica el criterio y reconoce los límites de la información. En la práctica clasificarás nuevos ejemplos y formularás una conclusión prudente sobre los ritmos del desarrollo.
+
 
 ## Control de esta revisión y contrato pedagógico
 
-- **Norma rectora:** Plan Maestro Global de Lecciones 7° v1.2 y Plan Maestro Unificado de Ciencias Naturales 7° v3.4.
-- **Conteo de láminas:** Exactamente 14 diapositivas bimodales (7 Motivación + 7 Explicación).
-- **Control terminológico:** 0 apariciones de términos obsoletos (terminología bimodal estricta).
-- **Evaluación psicométrica:** 3 preguntas de opción múltiple (A-D), distractores con análisis pedagógico fundado en concepciones erróneas reales de 7° básico, aprobación mínima 2/3 y sistema completo de recuperación posterior al error con estímulos y reintentos independientes.
-- **Estado normativo:** 'EN_REVISION · NO INTEGRADA EN APP · NO APROBADA'.
-- **Aprobación final:** Pendiente exclusivamente de Walter.
+Revisión documental y audiovisual según el informe asociado. La comprobación de versiones, campos, privacidad y reproducción dentro de la App corresponde a la fase de integración. No confundir control documental con aprobación curricular final o prueba funcional.

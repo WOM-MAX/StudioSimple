@@ -204,9 +204,9 @@ export const INGLES_7B_OA09_CLASE04: LessonData = {
   "conversationContext": "Diálogo guiado para profundizar en los elementos clave.",
   "formalization": {
     "title": "Explicación",
-    "concept": "Una situación",
+    "concept": "Reading a school email",
     "summary": "Consolidación de las ideas clave.",
-    "ideaClave": "Una situación",
+    "ideaClave": "Reading a school email",
     "dileIntro": "Ahora consolidaremos los aprendizajes esenciales.",
     "hazInstruction": "Registra en tu cuaderno el concepto principal.",
     "graphicPoster": "",
@@ -420,7 +420,7 @@ export const INGLES_7B_OA09_CLASE04: LessonData = {
   "summaryIdeas": [
     [
       "Idea central",
-      "Una situación"
+      "Reading a school email"
     ],
     [
       "Comprensión",
@@ -434,7 +434,7 @@ export const INGLES_7B_OA09_CLASE04: LessonData = {
   },
   "closure": {
     "congratulations": "Good work. You explained your answer with information from the resource.",
-    "nextClassPreview": "¡Nos vemos en la próxima lección!"
+    "nextClassPreview": "Próxima clase: Reading about a school garden"
   },
   "paso8_cierre": {
     "preguntaSintesis": "What is the email mainly about?",

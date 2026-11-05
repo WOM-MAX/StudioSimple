@@ -204,9 +204,9 @@ export const INGLES_7B_OA09_CLASE03: LessonData = {
   "conversationContext": "Diálogo guiado para profundizar en los elementos clave.",
   "formalization": {
     "title": "Explicación",
-    "concept": "Una situación",
+    "concept": "Dates, times and explicit information",
     "summary": "Consolidación de las ideas clave.",
-    "ideaClave": "Una situación",
+    "ideaClave": "Dates, times and explicit information",
     "dileIntro": "Ahora consolidaremos los aprendizajes esenciales.",
     "hazInstruction": "Registra en tu cuaderno el concepto principal.",
     "graphicPoster": "",
@@ -420,7 +420,7 @@ export const INGLES_7B_OA09_CLASE03: LessonData = {
   "summaryIdeas": [
     [
       "Idea central",
-      "Una situación"
+      "Dates, times and explicit information"
     ],
     [
       "Comprensión",
@@ -434,7 +434,7 @@ export const INGLES_7B_OA09_CLASE03: LessonData = {
   },
   "closure": {
     "congratulations": "Good work. You explained your answer with information from the resource.",
-    "nextClassPreview": "¡Nos vemos en la próxima lección!"
+    "nextClassPreview": "Próxima clase: Reading a school email"
   },
   "paso8_cierre": {
     "preguntaSintesis": "When was the birthday, and when was the entry dated?",

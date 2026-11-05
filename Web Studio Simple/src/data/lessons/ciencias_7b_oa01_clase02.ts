@@ -13,14 +13,11 @@ export const CIENCIAS_7B_OA01_CLASE02: LessonData = {
     "nextLessonTitle": "Emociones, afectividad e imagen personal"
   },
   "prep": {
-    "adultObjective": "7B-CNA-OA01",
-    "routeToday": "Leer el recurso biológico → distinguir caracteres primarios y secundarios → comprender la variabilidad de ritmos → practicar con casos ficticios → comprobar con el miniquiz.",
-    "mentorReminder": "¡Hola! Hoy estudiaremos en profundidad la dimensión física de la sexualidad: aprenderemos qué transformaciones ocurren en nuestro cuerpo durante la pubertad, cómo distinguir los caracteres sexuales primarios de los secundarios, y por qué cada ser humano vive estos cambios a su propio ritmo biológico sin que eso determine su valor, su inteligencia ni sus capacidades.",
+    "adultObjective": "Acompañar la comprensión y aplicación del objetivo focal.",
+    "routeToday": "Inicio → Video Motivación → Recorrido → Video Explicación → Práctica → Resumen → Miniquiz → Cierre.",
+    "mentorReminder": "Hoy trabajaremos con un caso ficticio. Primero buscaremos pistas, después aprenderemos un criterio y finalmente lo aplicarás con tus propias razones. Puedes pedir ayuda sin contar experiencias personales.",
     "reminders": [
-      "Mantén un tono científico sereno, claro y desprovisto de dramatismo o tabúes.",
-      "Recuerda que los caracteres sexuales primarios son los órganos reproductores presentes desde el nacimiento; los secundarios son las transformaciones corporales que maduran en la pubertad por estímulo hormonal.",
-      "Subraya con firmeza que la pubertad no es una carrera: empezar antes o después es biológicamente normal y no hace a nadie 'mejor' ni 'más maduro'.",
-      "Emplea exclusivamente los ejemplos de personajes ficticios provistos en la clase."
+      "Acompaña al estudiante y valora su proceso."
     ],
     "emotionalTip": "Valora cada avance con paciencia y entusiasmo."
   },
@@ -56,16 +53,16 @@ export const CIENCIAS_7B_OA01_CLASE02: LessonData = {
       }
     ],
     "dileIntro": "Hoy avanzaremos en una nueva clase interactiva.",
-    "dileObjective": "¡Hola! Hoy estudiaremos en profundidad la dimensión física de la sexualidad: aprenderemos qué transformaciones ocurren en nuestro cuerpo durante la pubertad, cómo distinguir los caracteres sexuales primarios de los secundarios, y por qué cada ser humano vive estos cambios a su propio ritmo biológico sin que eso determine su valor, su inteligencia ni sus capacidades."
+    "dileObjective": "Hoy trabajaremos con un caso ficticio. Primero buscaremos pistas, después aprenderemos un criterio y finalmente lo aplicarás con tus propias razones. Puedes pedir ayuda sin contar experiencias personales."
   },
   "situation": {
-    "dilePrompt": "¡Hola! Hoy estudiaremos en profundidad la dimensión física de la sexualidad: aprenderemos qué transformaciones ocurren en nuestro cuerpo durante la pubertad, cómo distinguir los caracteres sexuales primarios de los secundarios, y por qué cada ser humano vive estos cambios a su propio ritmo biológico sin que eso determine su valor, su inteligencia ni sus capacidades.",
-    "expectedAnswer": "Se menciona el estirón de estatura y la aparición de acné/espinillas. Corresponden a caracteres sexuales secundarios compartidos.",
+    "dilePrompt": "Hoy trabajaremos con un caso ficticio. Primero buscaremos pistas, después aprenderemos un criterio y finalmente lo aplicarás con tus propias razones. Puedes pedir ayuda sin contar experiencias personales.",
+    "expectedAnswer": "Aumento de estatura y acné: cambios físicos descritos en la pubertad.",
     "socraticHint": "Fíjate en los detalles destacados.",
     "emotionalTip": "Acompaña con calma.",
     "options": [
       {
-        "label": "Se menciona el estirón de estatura y la aparición de acné/espinillas. Corresponden a caracteres sexuales secundarios compartidos.",
+        "label": "Aumento de estatura y acné: cambios físicos descritos en la pubertad.",
         "kind": "correct",
         "feedbackText": "¡Muy bien observado!"
       },
@@ -82,9 +79,9 @@ export const CIENCIAS_7B_OA01_CLASE02: LessonData = {
     ]
   },
   "reference": {
-    "dilePrompt": "Revisemos el punto de partida.",
+    "dilePrompt": "¿Cómo explicar este caso usando el criterio de la lectura?",
     "question": "¿Qué información entrega el punto de partida?",
-    "expectedAnswer": "Se menciona el estirón de estatura y la aparición de acné/espinillas. Corresponden a caracteres sexuales secundarios compartidos.",
+    "expectedAnswer": "Aumento de estatura y acné: cambios físicos descritos en la pubertad.",
     "socraticHint": "Localiza las palabras clave.",
     "feedbackSuccess": "¡Excelente fundamentación!",
     "feedbackSupport": "Revisa la lectura para confirmar los datos."
@@ -93,7 +90,7 @@ export const CIENCIAS_7B_OA01_CLASE02: LessonData = {
     "title": "Motivación",
     "titulo": "Motivación",
     "focusPoints": [],
-    "dileIntro": "¡Hola! Hoy estudiaremos en profundidad la dimensión física de la sexualidad: aprenderemos qué transformaciones ocurren en nuestro cuerpo durante la pubertad, cómo distinguir los caracteres sexuales primarios de los secundarios, y por qué cada ser humano vive estos cambios a su propio ritmo biológico sin que eso determine su valor, su inteligencia ni sus capacidades.",
+    "dileIntro": "Hoy trabajaremos con un caso ficticio. Primero buscaremos pistas, después aprenderemos un criterio y finalmente lo aplicarás con tus propias razones. Puedes pedir ayuda sin contar experiencias personales.",
     "hazInstruction": "Observa y reflexiona con las escenas del video.",
     "videoSrc": "",
     "dileAfterVideo": "¿Qué observaste en esta situación inicial?",
@@ -101,116 +98,116 @@ export const CIENCIAS_7B_OA01_CLASE02: LessonData = {
       {
         "slideNumber": 1,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "Diapositiva 01 — El estirón y las dudas",
+        "didacticPurpose": "Ritmos / distintos",
         "visualPrompt": "",
-        "overlayText": "Diapositiva 01 — El estirón y las dudas",
-        "overlayTitle": "Diapositiva 01 — El estirón y las dudas",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Diapositiva 01 — El estirón y las dudas",
-        "speakerNotes": "",
+        "overlayText": "Ritmos / distintos",
+        "overlayTitle": "Ritmos / distintos",
+        "overlaySubtitle": "¿Por qué cambian",
+        "vectorialOverlayPptx": "Ritmos / distintos",
+        "speakerNotes": "Alex y Daniel tienen trece años. Alex nota que creció y le apareció acné. Daniel todavía no observa los mismos cambios en su cuerpo.",
         "duracionSeg": 8
       },
       {
         "slideNumber": 2,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "Diapositiva 02 — La pregunta en el patio",
+        "didacticPurpose": "Una pista / visible",
         "visualPrompt": "",
-        "overlayText": "Diapositiva 02 — La pregunta en el patio",
-        "overlayTitle": "Diapositiva 02 — La pregunta en el patio",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Diapositiva 02 — La pregunta en el patio",
-        "speakerNotes": "",
+        "overlayText": "Una pista / visible",
+        "overlayTitle": "Una pista / visible",
+        "overlaySubtitle": "Alex nota un cambio",
+        "vectorialOverlayPptx": "Una pista / visible",
+        "speakerNotes": "En el recreo, alguien propone ordenar al curso según quién parece mayor. Alex y Daniel dudan: ¿qué información permite realmente esa comparación?",
         "duracionSeg": 8
       },
       {
         "slideNumber": 3,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "Diapositiva 03 — Pistas biológicas",
+        "didacticPurpose": "Comparar",
         "visualPrompt": "",
-        "overlayText": "Diapositiva 03 — Pistas biológicas",
-        "overlayTitle": "Diapositiva 03 — Pistas biológicas",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Diapositiva 03 — Pistas biológicas",
-        "speakerNotes": "",
+        "overlayText": "Comparar",
+        "overlayTitle": "Comparar",
+        "overlaySubtitle": "¿Qué demuestra la",
+        "vectorialOverlayPptx": "Comparar",
+        "speakerNotes": "Un compañero dice que cambiar antes significa mayor capacidad. Otros discrepan. Necesitamos distinguir las observaciones corporales de las interpretaciones que se agregan.",
         "duracionSeg": 8
       },
       {
         "slideNumber": 4,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "Diapositiva 04 — La trampa del prejuicio",
+        "didacticPurpose": "Cambios / físicos",
         "visualPrompt": "",
-        "overlayText": "Diapositiva 04 — La trampa del prejuicio",
-        "overlayTitle": "Diapositiva 04 — La trampa del prejuicio",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Diapositiva 04 — La trampa del prejuicio",
-        "speakerNotes": "",
+        "overlayText": "Cambios / físicos",
+        "overlayTitle": "Cambios / físicos",
+        "overlaySubtitle": "¿Cómo podemos",
+        "vectorialOverlayPptx": "Cambios / físicos",
+        "speakerNotes": "El libro reúne distintos cambios de la pubertad. Algunos términos pueden parecer similares, pero necesitamos un criterio para comprender qué describe cada uno y explicarlo con precisión.",
         "duracionSeg": 8
       },
       {
         "slideNumber": 5,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "Diapositiva 05 — El reloj biológico interno",
+        "didacticPurpose": "Ritmos / personales",
         "visualPrompt": "",
-        "overlayText": "Diapositiva 05 — El reloj biológico interno",
-        "overlayTitle": "Diapositiva 05 — El reloj biológico interno",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Diapositiva 05 — El reloj biológico interno",
-        "speakerNotes": "",
+        "overlayText": "Ritmos / personales",
+        "overlayTitle": "Ritmos / personales",
+        "overlaySubtitle": "¿Qué podemos",
+        "vectorialOverlayPptx": "Ritmos / personales",
+        "speakerNotes": "Al mirar diferencias entre compañeros, ¿podemos conocer por completo su desarrollo? ¿Qué cosas faltan para sostener una conclusión sobre una persona concreta?",
         "duracionSeg": 8
       },
       {
         "slideNumber": 6,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "Diapositiva 06 — Convivencia con empatía",
+        "didacticPurpose": "Una / pregunta",
         "visualPrompt": "",
-        "overlayText": "Diapositiva 06 — Convivencia con empatía",
-        "overlayTitle": "Diapositiva 06 — Convivencia con empatía",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Diapositiva 06 — Convivencia con empatía",
-        "speakerNotes": "",
+        "overlayText": "Una / pregunta",
+        "overlayTitle": "Una / pregunta",
+        "overlaySubtitle": "¿Qué respalda tu",
+        "vectorialOverlayPptx": "Una / pregunta",
+        "speakerNotes": "Vamos a investigar qué permite afirmar el texto y qué no podemos deducir solamente de la estatura, la voz o la apariencia de alguien.",
         "duracionSeg": 8
       },
       {
         "slideNumber": 7,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "Diapositiva 07 — Puente a la explicación científica",
+        "didacticPurpose": "Respeto",
         "visualPrompt": "",
-        "overlayText": "Diapositiva 07 — Puente a la explicación científica",
-        "overlayTitle": "Diapositiva 07 — Puente a la explicación científica",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Diapositiva 07 — Puente a la explicación científica",
-        "speakerNotes": "",
+        "overlayText": "Respeto",
+        "overlayTitle": "Respeto",
+        "overlaySubtitle": "¿Qué falta saber?",
+        "vectorialOverlayPptx": "Respeto",
+        "speakerNotes": "La explicación nos dará criterios para clasificar cambios y evaluar la afirmación del compañero con razones y respeto.",
         "duracionSeg": 8
       }
     ]
   },
   "preQuestions": [
     {
-      "context": "En el recurso del libro se mencionan cambios corporales que aparecen durante la pubertad.",
-      "question": "En el caso de Alex, ¿qué transformaciones físicas se mencionan y a qué tipo de caracteres sexuales corresponden?",
-      "expected": "Se menciona el estirón de estatura y la aparición de acné/espinillas. Corresponden a caracteres sexuales secundarios compartidos.",
-      "success": "Identifica el aumento de estatura y el acné, clasificándolos correctamente como caracteres secundarios.",
-      "support": "Si duda, pregúntale: “¿Alex nació con esa estatura y esas espinillas, o le aparecieron ahora en la pubertad?",
-      "reveal": "“Alex experimentó aumento de estatura y acné. Ambos son caracteres sexuales secundarios porque surgen en la pubertad como resultado del desarrollo corporal.”",
-      "studentReveal": "Se menciona el estirón de estatura y la aparición de acné/espinillas. Corresponden a caracteres sexuales secundarios compartidos."
+      "context": "Conversación guiada",
+      "question": "¿Qué características de Alex menciona el relato?",
+      "expected": "Aumento de estatura y acné: cambios físicos descritos en la pubertad.",
+      "success": "",
+      "support": "",
+      "reveal": "Explica una relación usando la respuesta de referencia, ocúltala y pide al estudiante formular otra vez su respuesta con la pista correspondiente.",
+      "studentReveal": "Aumento de estatura y acné: cambios físicos descritos en la pubertad."
     },
     {
-      "context": "Alex creció mucho en pocos meses, mientras que Daniel aún no ha experimentado ese cambio corporal a la misma edad.",
-      "question": "Científicamente, ¿por qué es perfectamente normal que Daniel y Alex tengan estaturas y voces diferentes teniendo ambos 13 años?",
-      "expected": "Porque cada persona tiene su propio ritmo biológico de desarrollo puberal, influenciado por su genética y nutrición, comenzando en momentos distintos entre los 9 y 14 años.",
-      "success": "Argumenta la normalidad de la diferencia basándose en la variabilidad biológica de los ritmos individuales.",
-      "support": "Recuerda el rango de edades del libro: “¿Empieza la pubertad exactamente el mismo día para todos los niños de 13 años?",
-      "reveal": "“Es normal porque la pubertad no sigue un cronómetro idéntico: cada organismo responde a factores genéticos propios, por lo que es natural que unos comiencen antes y otros después.”",
-      "studentReveal": "Porque cada persona tiene su propio ritmo biológico de desarrollo puberal, influenciado por su genética y nutrición, comenzando en momentos distintos entre los 9 y 14 años."
+      "context": "Conversación guiada",
+      "question": "¿La diferencia entre Alex y Daniel permite diagnosticar su salud?",
+      "expected": "No. Puede haber ritmos diferentes y faltan datos para diagnosticar.",
+      "success": "",
+      "support": "",
+      "reveal": "Explica una relación usando la respuesta de referencia, ocúltala y pide al estudiante formular otra vez su respuesta con la pista correspondiente.",
+      "studentReveal": "No. Puede haber ritmos diferentes y faltan datos para diagnosticar."
     },
     {
-      "context": "Un compañero afirmó que *“los que no han cambiado son más débiles”*.",
-      "question": "A partir de lo aprendido, ¿por qué la afirmación del compañero es un prejuicio falso que confunde la biología con el valor de las personas?",
-      "expected": "Porque el momento en que inicia la pubertad no tiene relación con la fuerza, el valor humano ni las capacidades de una persona; es solo una diferencia temporal en el ritmo biológico.",
-      "success": "Distingue con claridad el proceso biológico de las valoraciones sociales o prejuicios sobre la apariencia.",
-      "support": "Pregunta: “¿Crecer de estatura te hace automáticamente más inteligente o mejor amigo?",
-      "reveal": "“Es un prejuicio falso porque el ritmo de crecimiento es biológico e involuntario. No define la valentía, la inteligencia ni el valor de Daniel; juzgar a alguien por su ritmo corporal es un error que vulnera el respeto mutuo.”",
-      "studentReveal": "Porque el momento en que inicia la pubertad no tiene relación con la fuerza, el valor humano ni las capacidades de una persona; es solo una diferencia temporal en el ritmo biológico."
+      "context": "Conversación guiada",
+      "question": "¿Qué problema tiene ordenar el valor de las personas por su apariencia?",
+      "expected": "La dignidad y la madurez emocional no se deducen del ritmo corporal.",
+      "success": "",
+      "support": "",
+      "reveal": "Explica una relación usando la respuesta de referencia, ocúltala y pide al estudiante formular otra vez su respuesta con la pista correspondiente.",
+      "studentReveal": "La dignidad y la madurez emocional no se deducen del ritmo corporal."
     }
   ],
   "conversationContext": "Diálogo guiado para profundizar en los elementos clave.",
@@ -227,85 +224,85 @@ export const CIENCIAS_7B_OA01_CLASE02: LessonData = {
       {
         "slideNumber": 8,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "Diapositiva 01 — Objetivo de la lección",
+        "didacticPurpose": "Objetivo de / la lección",
         "visualPrompt": "",
-        "overlayText": "Diapositiva 01 — Objetivo de la lección",
-        "overlayTitle": "Diapositiva 01 — Objetivo de la lección",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Diapositiva 01 — Objetivo de la lección",
-        "speakerNotes": "",
+        "overlayText": "Objetivo de / la lección",
+        "overlayTitle": "Objetivo de / la lección",
+        "overlaySubtitle": "Cambios y ritmos",
+        "vectorialOverlayPptx": "Objetivo de / la lección",
+        "speakerNotes": "Nuestro objetivo es describir cambios físicos de la pubertad, distinguir caracteres sexuales primarios y secundarios y explicar por qué los ritmos individuales merecen respeto sin deducir capacidades a partir de la apariencia.",
         "duracionSeg": 8
       },
       {
         "slideNumber": 9,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "Diapositiva 02 — Caracteres primarios",
+        "didacticPurpose": "La / pubertad",
         "visualPrompt": "",
-        "overlayText": "Diapositiva 02 — Caracteres primarios",
-        "overlayTitle": "Diapositiva 02 — Caracteres primarios",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Diapositiva 02 — Caracteres primarios",
-        "speakerNotes": "",
+        "overlayText": "La / pubertad",
+        "overlayTitle": "La / pubertad",
+        "overlaySubtitle": "Un proceso de",
+        "vectorialOverlayPptx": "La / pubertad",
+        "speakerNotes": "Durante la pubertad maduran los órganos reproductores y aparecen otros cambios corporales. Las hormonas participan en este proceso. El texto muestra ejemplos de cambios compartidos y otros que suelen ser más notorios en un sexo.",
         "duracionSeg": 8
       },
       {
         "slideNumber": 10,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "Diapositiva 03 — Caracteres secundarios",
+        "didacticPurpose": "Cambios / físicos",
         "visualPrompt": "",
-        "overlayText": "Diapositiva 03 — Caracteres secundarios",
-        "overlayTitle": "Diapositiva 03 — Caracteres secundarios",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Diapositiva 03 — Caracteres secundarios",
-        "speakerNotes": "",
+        "overlayText": "Cambios / físicos",
+        "overlayTitle": "Cambios / físicos",
+        "overlaySubtitle": "Observa qué",
+        "vectorialOverlayPptx": "Cambios / físicos",
+        "speakerNotes": "Para clasificar, preguntamos qué se describe: un órgano reproductor corresponde a un carácter primario; el vello axilar o el cambio de voz corresponden a secundarios. No basta preguntar cuándo notamos una característica.",
         "duracionSeg": 8
       },
       {
         "slideNumber": 11,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "Diapositiva 04 — La variabilidad biológica",
+        "didacticPurpose": "Ritmos / distintos",
         "visualPrompt": "",
-        "overlayText": "Diapositiva 04 — La variabilidad biológica",
-        "overlayTitle": "Diapositiva 04 — La variabilidad biológica",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Diapositiva 04 — La variabilidad biológica",
-        "speakerNotes": "",
+        "overlayText": "Ritmos / distintos",
+        "overlayTitle": "Ritmos / distintos",
+        "overlaySubtitle": "Una diferencia no",
+        "vectorialOverlayPptx": "Ritmos / distintos",
+        "speakerNotes": "En el caso, Alex creció antes que Daniel. Esa diferencia puede relacionarse con ritmos diversos, pero el relato no permite diagnosticar su salud. Tampoco permite establecer quién tiene mayor valor o madurez emocional.",
         "duracionSeg": 8
       },
       {
         "slideNumber": 12,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "Diapositiva 05 — Biología versus estereotipos",
+        "didacticPurpose": "Dos grupos",
         "visualPrompt": "",
-        "overlayText": "Diapositiva 05 — Biología versus estereotipos",
-        "overlayTitle": "Diapositiva 05 — Biología versus estereotipos",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Diapositiva 05 — Biología versus estereotipos",
-        "speakerNotes": "",
+        "overlayText": "Dos grupos",
+        "overlayTitle": "Dos grupos",
+        "overlaySubtitle": "Órgano o cambio",
+        "vectorialOverlayPptx": "Dos grupos",
+        "speakerNotes": "Resolvamos una ficha: ovarios, órganos reproductores, se clasifican como primarios. Vello axilar, cambio corporal puberal que no es órgano reproductor, se clasifica como secundario. La justificación explica la naturaleza de cada dato.",
         "duracionSeg": 8
       },
       {
         "slideNumber": 13,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "Diapositiva 06 — Modelo de clasificación",
+        "didacticPurpose": "Valor / personal",
         "visualPrompt": "",
-        "overlayText": "Diapositiva 06 — Modelo de clasificación",
-        "overlayTitle": "Diapositiva 06 — Modelo de clasificación",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Diapositiva 06 — Modelo de clasificación",
-        "speakerNotes": "",
+        "overlayText": "Valor / personal",
+        "overlayTitle": "Valor / personal",
+        "overlaySubtitle": "La apariencia no",
+        "vectorialOverlayPptx": "Valor / personal",
+        "speakerNotes": "Un error frecuente es convertir una diferencia corporal en un juicio sobre la persona. La apariencia no demuestra inteligencia ni dignidad. Si existen dudas sobre el desarrollo, corresponde conversar con un adulto y consultar a profesionales.",
         "duracionSeg": 8
       },
       {
         "slideNumber": 14,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "Diapositiva 07 — Resumen y aplicación guiada",
+        "didacticPurpose": "Idea clave",
         "visualPrompt": "",
-        "overlayText": "Diapositiva 07 — Resumen y aplicación guiada",
-        "overlayTitle": "Diapositiva 07 — Resumen y aplicación guiada",
-        "overlaySubtitle": "",
-        "vectorialOverlayPptx": "Diapositiva 07 — Resumen y aplicación guiada",
-        "speakerNotes": "",
+        "overlayText": "Idea clave",
+        "overlayTitle": "Idea clave",
+        "overlaySubtitle": "Clasificar con respeto",
+        "vectorialOverlayPptx": "Idea clave",
+        "speakerNotes": "En síntesis, describe la característica, aplica el criterio y reconoce los límites de la información. En la práctica clasificarás nuevos ejemplos y formularás una conclusión prudente sobre los ritmos del desarrollo.",
         "duracionSeg": 8
       }
     ]
@@ -313,7 +310,7 @@ export const CIENCIAS_7B_OA01_CLASE02: LessonData = {
   "postQuestions": [
     {
       "context": "Comprobación 1",
-      "question": "- *Pregunta:* “El ensanchamiento de hombros en los hombres y de caderas en las mujeres, ¿a qué categoría de caracteres corresponde?",
+      "question": "Pide explicar el último paso del ejemplo.",
       "expected": "",
       "success": "Respuesta precisa y fundamentada",
       "support": "Revisa el concepto clave expuesto",
@@ -323,69 +320,51 @@ export const CIENCIAS_7B_OA01_CLASE02: LessonData = {
   ],
   "practice": [
     {
-      "context": "Observa la siguiente lista de características corporales:\n  1. Presencia de ovarios.\n  2. Aparición de vello púbico.\n  3. Presencia de pene.\n  4. Desarrollo del tejido mamario.\n  5. Engrosamiento de la voz.\n- **Consigna:** Clasifica cada una de las 5 características como carácter sexual primario o secundario, fundamentando tu elección en una frase para cada grupo.",
-      "question": "Resuelve la actividad en tu cuaderno.",
-      "expected": "“Primarios: 1 (ovarios) y 3 (pene), porque son órganos reproductores presentes desde el nacimiento. Secundarios: 2 (vello púbico), 4 (tejido mamario) y 5 (voz gruesa), porque son transformaciones corporales que maduran durante la pubertad.”",
-      "success": "Cumple el criterio formal del caso",
-      "support": "Revisa los datos del recurso",
-      "reveal": "“Primarios: 1 (ovarios) y 3 (pene), porque son órganos reproductores presentes desde el nacimiento. Secundarios: 2 (vello púbico), 4 (tejido mamario) y 5 (voz gruesa), porque son transformaciones corporales que maduran durante la pubertad.”",
-      "studentReveal": "“Primarios: 1 (ovarios) y 3 (pene), porque son órganos reproductores presentes desde el nacimiento. Secundarios: 2 (vello púbico), 4 (tejido mamario) y 5 (voz gruesa), porque son transformaciones corporales que maduran durante la pubertad.”"
-    },
-    {
-      "context": "En una clase de educación física, Matías se niega a sacarse la polera para cambiarse porque siente vergüenza de que le hayan salido vellos en las axilas antes que a sus compañeros, temiendo que se burlen de él.\n- **Consigna:** Redacta una explicación de dos puntos que un mentor o amigo comprensivo podría decirle a Matías para tranquilizarlo con fundamentos de las Ciencias Naturales.\n- **Modelo para revisar después del intento:** “Punto 1: El vello axilar es un carácter sexual secundario totalmente natural y saludable que indica que su cuerpo está creciendo. Punto 2: Que sus compañeros aún no lo tengan solo refleja que cada cuerpo tiene su propio ritmo biológico, por lo que nadie tiene derecho a burlarse de una etapa natural del desarrollo.”",
-      "question": "Resuelve la actividad en tu cuaderno.",
-      "expected": "“Punto 1: El vello axilar es un carácter sexual secundario totalmente natural y saludable que indica que su cuerpo está creciendo. Punto 2: Que sus compañeros aún no lo tengan solo refleja que cada cuerpo tiene su propio ritmo biológico, por lo que nadie tiene derecho a burlarse de una etapa natural del desarrollo.”",
-      "success": "Cumple el criterio formal del caso",
-      "support": "Revisa los datos del recurso",
-      "reveal": "“Punto 1: El vello axilar es un carácter sexual secundario totalmente natural y saludable que indica que su cuerpo está creciendo. Punto 2: Que sus compañeros aún no lo tengan solo refleja que cada cuerpo tiene su propio ritmo biológico, por lo que nadie tiene derecho a burlarse de una etapa natural del desarrollo.”",
-      "studentReveal": "“Punto 1: El vello axilar es un carácter sexual secundario totalmente natural y saludable que indica que su cuerpo está creciendo. Punto 2: Que sus compañeros aún no lo tengan solo refleja que cada cuerpo tiene su propio ritmo biológico, por lo que nadie tiene derecho a burlarse de una etapa natural del desarrollo.”"
-    },
-    {
-      "context": "*Situación ficticia nueva:* Valentina y Camila son dos amigas de 12 años y medio. En los últimos seis meses:\n  1. Valentina creció 8 centímetros, comenzó a usar sostén por el desarrollo de sus mamas y le salieron espinillas en la frente.\n  2. Camila mantiene su estatura infantil, no tiene acné y su cuerpo no ha presentado cambios visibles aún.\n  3. En redes sociales, un grupo de compañeras comenta fotos diciendo que Valentina *“ya es una mujer madura”* y que Camila *“parece una niñita chica que no encaja en el grupo”*.\n  4. Valentina se siente abrumada por los comentarios sobre su cuerpo y Camila se siente triste y excluida por no haber cambiado todavía.\n\n- **Actividad autónoma del estudiante:**\n  Responde en tu cuaderno:\n  1. Identifica los caracteres sexuales secundarios que ha experimentado Valentina y explica qué causa hormonal general los produce.\n  2. Utilizando la evidencia científica de la página 118 del Texto Escolar, explica por qué la situación de Camila es biológicamente normal y saludable a sus 12 años y medio.\n  3. Evalúa críticamente los comentarios de las redes sociales: ¿por qué es un error científico y social equiparar los cambios corporales de Valentina con 'madurez emocional' y juzgar a Camila como 'no encajar'?\n  4. Propón una actitud de autocuidado y respeto mutuo que ambas amigas puedan adoptar para proteger su bienestar y amistad.\n\n- **Criterio privado del mentor (revelar solo después del intento):**\n  1. Caracteres secundarios de Valentina: estirón de estatura, desarrollo mamario y acné. Causa: activación hormonal de la pubertad (estrógenos y hormonas del crecimiento).\n  2. Normalidad de Camila: La pubertad tiene un rango amplio (9 a 14 años). Estar en una etapa previa a los 12 años y medio es biológicamente esperable y no constituye ninguna anomalía.\n  3. Crítica a estereotipos: Los cambios físicos son procesos biológicos automáticos, no indican madurez de juicio ni madurez afectiva. Descalificar a alguien por su ritmo biológico es un prejuicio que vulnera la dignidad.\n  4. Propuesta: Dialogar con empatía, recordar que los ritmos son individuales, apoyarse mutuamente y no validar burlas ni comentarios invasivos sobre el cuerpo.\n\n- **Apoyos progresivos para la transferencia:**\n  * *Apoyo 1 (localizar):* “En el punto 1 busca qué cambios aparecieron en Valentina que no estaban en la niñez. En el punto 2, recuerda el rango de edades del libro”.\n  * *Apoyo 2 (relacionar):* “Para la pregunta 3, piensa: ¿tener senos o crecer de golpe te enseña automáticamente a resolver problemas o a ser más prudente?”.\n  * *Apoyo 3 (modelar):* Explicar cómo la biología describe el cuerpo y la ética orienta el trato respetuoso, pedir al estudiante que complete su redacción autónoma.\n\n- **Por qué transfiere:** Cambia el contexto hacia el desarrollo puberal femenino y la influencia de las opiniones sociales en redes, obligando al estudiante a aplicar la distinción científica de caracteres y la variabilidad de ritmos para desarmar estereotipos reales.\n\n---",
+      "context": "Valentina y Camila tienen doce años y medio. Valentina ha crecido y presenta desarrollo mamario y acné. Camila no observa los mismos cambios. En redes alguien afirma que la primera es más madura y que la segunda tiene necesariamente un problema de salud.",
       "question": "Realiza la transferencia autónoma con el nuevo recurso.",
-      "expected": "1. Caracteres secundarios de Valentina: estirón de estatura, desarrollo mamario y acné. Causa: activación hormonal de la pubertad (estrógenos y hormonas del crecimiento).",
+      "expected": "El desarrollo mamario es secundario. Puede existir variabilidad en los ritmos; la información no acredita una enfermedad ni permite asegurar salud individual. La madurez afectiva no se deduce de la apariencia. Una respuesta posible es detener comparaciones y buscar orientación adulta si hay inquietudes.",
       "success": "Aplica el criterio de la clase de manera autónoma en un recurso nuevo",
-      "support": "Revisa el recurso y aplica los criterios aprendidos.",
-      "reveal": "1. Caracteres secundarios de Valentina: estirón de estatura, desarrollo mamario y acné. Causa: activación hormonal de la pubertad (estrógenos y hormonas del crecimiento).",
-      "studentReveal": "1. Caracteres secundarios de Valentina: estirón de estatura, desarrollo mamario y acné. Causa: activación hormonal de la pubertad (estrógenos y hormonas del crecimiento)."
+      "support": "Respuesta lograda si aplica el criterio, usa pistas y justifica sin inventar información. Parcial si identifica pistas pero no explica; ofrecer apoyo y nueva respuesta. Pendiente si la conclusión contradice el criterio; volver al ejemplo y usar la recuperación.",
+      "reveal": "El desarrollo mamario es secundario. Puede existir variabilidad en los ritmos; la información no acredita una enfermedad ni permite asegurar salud individual. La madurez afectiva no se deduce de la apariencia. Una respuesta posible es detener comparaciones y buscar orientación adulta si hay inquietudes.",
+      "studentReveal": "El desarrollo mamario es secundario. Puede existir variabilidad en los ritmos; la información no acredita una enfermedad ni permite asegurar salud individual. La madurez afectiva no se deduce de la apariencia. Una respuesta posible es detener comparaciones y buscar orientación adulta si hay inquietudes."
     }
   ],
   "mini": [
     {
       "id": "q1",
-      "q": "¿Cuál de las siguientes opciones corresponde con exactitud a un **carácter sexual secundario** que se manifiesta durante la pubertad?",
+      "q": "Una ficha menciona maduración de testículos y aparición de vello axilar. ¿Qué clasificación aplica el criterio?",
       "options": [
-        "A. La presencia de ovarios y trompas uterinas en el aparato reproductor femenino.",
-        "B. La presencia de testículos en la anatomía del recién nacido.",
-        "C. La aparición de vello axilar y el cambio en el timbre de la voz.",
-        "D. La determinación cromosómica del sexo biológico en la fecundación."
+        "A. Ambos secundarios porque cambian en la pubertad.",
+        "B. Testículos secundarios y vello primario porque es visible.",
+        "C. Ambos primarios porque pertenecen al cuerpo.",
+        "D. Testículos primarios y vello axilar secundario."
       ],
-      "correct": "C. La aparición de vello axilar y el cambio en el timbre de la voz.",
-      "fixExplain": "Los caracteres sexuales secundarios son los cambios corporales que aparecen durante la pubertad (como el vello corporal y el cambio de voz), a diferencia de los órganos reproductores primarios que ya están presentes desde el nacimiento."
+      "correct": "D. Testículos primarios y vello axilar secundario.",
+      "fixExplain": "Revisa la lectura y las evidencias del texto para fundamentar tu respuesta."
     },
     {
       "id": "q2",
-      "q": "Dos estudiantes de 13 años comparan su desarrollo: uno ya ha crecido 10 cm y tiene vello facial, mientras que el otro no ha cambiado de estatura perceptiblemente. Desde el conocimiento científico de la pubertad, ¿cómo debe interpretarse esta diferencia?",
+      "q": "Dos estudiantes de igual edad muestran cambios en momentos distintos. ¿Qué conclusión es prudente?",
       "options": [
-        "A. Como una anomalía biológica en el estudiante que aún no ha crecido, que requiere tratamiento inmediato.",
-        "B. Como una manifestación natural de la variabilidad biológica, ya que cada organismo tiene su propio ritmo de maduración.",
-        "C. Como una prueba de que el estudiante que creció primero posee mayor inteligencia y madurez afectiva.",
-        "D. Como una señal de que el desarrollo puberal debe completarse obligatoriamente antes de cumplir los 13 años."
+        "A. Puede haber ritmos diversos; esos datos no permiten diagnosticar su salud.",
+        "B. El que cambia primero tiene necesariamente más madurez afectiva.",
+        "C. El que cambia después tiene necesariamente una enfermedad.",
+        "D. La diferencia garantiza que ninguno necesita orientación."
       ],
-      "correct": "B. Como una manifestación natural de la variabilidad biológica, ya que cada organismo tiene su propio ritmo de maduración.",
-      "fixExplain": "La ciencia médica demuestra que el inicio y la velocidad del desarrollo puberal varían ampliamente entre individuos sanos (entre los 9 y 14 años). No hay un ritmo superior ni inferior; la variabilidad es la norma biológica."
+      "correct": "A. Puede haber ritmos diversos; esos datos no permiten diagnosticar su salud.",
+      "fixExplain": "Revisa la lectura y las evidencias del texto para fundamentar tu respuesta."
     },
     {
       "id": "q3",
-      "q": "Un aviso publicitario sugiere que para ser respetado y tener éxito en la adolescencia es indispensable tener una musculatura muy marcada o una silueta corporal específica. ¿Qué argumento fundamentado en Ciencias Naturales refuta este mensaje?",
+      "q": "¿Qué respuesta cuestiona una publicidad que asocia apariencia con valor personal?",
       "options": [
-        "A. La ciencia médica afirma que todos los adolescentes tienen exactamente la misma forma corporal si hacen deporte.",
-        "B. Los cambios físicos puberales son procesos biológicos diversos y la apariencia corporal no define las capacidades, el valor ni la dignidad de las personas.",
-        "C. La publicidad tiene base científica porque los caracteres secundarios determinan directamente la personalidad de los jóvenes.",
-        "D. El cuerpo humano deja de cambiar a los 12 años, por lo que la apariencia ya es definitiva."
+        "A. Todos deben alcanzar la misma apariencia para ser respetados.",
+        "B. La dignidad no depende de la apariencia y los cuerpos pueden desarrollarse a ritmos distintos.",
+        "C. Solo quienes cambian antes pueden comprender emociones.",
+        "D. Basta comparar fotografías para conocer la salud de una persona."
       ],
-      "correct": "B. Los cambios físicos puberales son procesos biológicos diversos y la apariencia corporal no define las capacidades, el valor ni la dignidad de las personas.",
-      "fixExplain": "El Texto Escolar enseña que los cambios corporales son biológicos y diversos. Confundir la apariencia estética con el valor o éxito de las personas es un estereotipo social infundado que contradice la dignidad y la variabilidad humana."
+      "correct": "B. La dignidad no depende de la apariencia y los cuerpos pueden desarrollarse a ritmos distintos.",
+      "fixExplain": "Revisa la lectura y las evidencias del texto para fundamentar tu respuesta."
     }
   ],
   "recovery": [],

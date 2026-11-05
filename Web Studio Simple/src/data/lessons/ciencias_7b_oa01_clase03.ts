@@ -13,15 +13,11 @@ export const CIENCIAS_7B_OA01_CLASE03: LessonData = {
     "nextLessonTitle": "Aspectos sociales y estereotipos"
   },
   "prep": {
-    "adultObjective": "Guiar al estudiante en la comprensión de las emociones, la afectividad y la construcción del autoconcepto durante la pubertad, fomentando una mirada crítica frente a los estereotipos estéticos de internet y afianzando redes de confianza sin exponer su privacidad.",
-    "routeToday": "Leer el recurso sobre afectividad e imagen corporal → analizar la influencia de los filtros digitales → modelar respuestas de cuidado frente a la comparación → practicar con casos ficticios → evaluar con el miniquiz.",
-    "mentorReminder": "¡Hola! Hoy nos sumergiremos en la dimensión afectiva de la sexualidad. Exploraremos por qué durante la pubertad nuestras emociones se sienten más intensas, cómo se construye nuestra imagen personal frente a las imágenes retocadas de las redes sociales, y qué herramientas de autocuidado y diálogo nos ayudan a sentirnos seguros y acompañados.",
+    "adultObjective": "Acompañar la comprensión y aplicación del objetivo focal.",
+    "routeToday": "Inicio → Video Motivación → Recorrido → Video Explicación → Práctica → Resumen → Miniquiz → Cierre.",
+    "mentorReminder": "Hoy trabajaremos con un caso ficticio. Primero buscaremos pistas, después aprenderemos un criterio y finalmente lo aplicarás con tus propias razones. Puedes pedir ayuda sin contar experiencias personales.",
     "reminders": [
-      "Mantén un clima de confianza, calma y escucha empática, evitando juicios sobre gustos personales o modas.",
-      "Recuerda la diferencia conceptual: la emoción es una reacción psicofisiológica inmediata y breve; el sentimiento es una experiencia afectiva más duradera y consciente; el estado de ánimo es una disposición emocional de fondo más prolongada.",
-      "Resalta que una imagen en redes sociales con filtros o retoques fotográficos es una ficción construida, no un modelo real ni obligatorio de belleza.",
-      "Jamás le pidas al estudiante que comparta inseguridades íntimas sobre su propio cuerpo: enfoca siempre el análisis en los personajes ficticios (Sam y Dani).",
-      "--"
+      "Acompaña al estudiante y valora su proceso."
     ],
     "emotionalTip": "Valora cada avance con paciencia y entusiasmo."
   },
@@ -57,16 +53,16 @@ export const CIENCIAS_7B_OA01_CLASE03: LessonData = {
       }
     ],
     "dileIntro": "Hoy avanzaremos en una nueva clase interactiva.",
-    "dileObjective": "¡Hola! Hoy nos sumergiremos en la dimensión afectiva de la sexualidad. Exploraremos por qué durante la pubertad nuestras emociones se sienten más intensas, cómo se construye nuestra imagen personal frente a las imágenes retocadas de las redes sociales, y qué herramientas de autocuidado y diálogo nos ayudan a sentirnos seguros y acompañados."
+    "dileObjective": "Hoy trabajaremos con un caso ficticio. Primero buscaremos pistas, después aprenderemos un criterio y finalmente lo aplicarás con tus propias razones. Puedes pedir ayuda sin contar experiencias personales."
   },
   "situation": {
-    "dilePrompt": "¡Hola! Hoy nos sumergiremos en la dimensión afectiva de la sexualidad. Exploraremos por qué durante la pubertad nuestras emociones se sienten más intensas, cómo se construye nuestra imagen personal frente a las imágenes retocadas de las redes sociales, y qué herramientas de autocuidado y diálogo nos ayudan a sentirnos seguros y acompañados.",
-    "expectedAnswer": "Comparar el cuerpo real con imágenes editadas genera expectativas falsas y frustración, porque los filtros eliminan rasgos humanos naturales. Las respuestas saludables incluyen: identificar la emoción sin negarla, dialogar con amistades respetuosas, recordar que la imagen digital no es la realidad, y apoyarse en personas adultas de confianza y técnicas de autorregulación.",
+    "dilePrompt": "Hoy trabajaremos con un caso ficticio. Primero buscaremos pistas, después aprenderemos un criterio y finalmente lo aplicarás con tus propias razones. Puedes pedir ayuda sin contar experiencias personales.",
+    "expectedAnswer": "Los nervios son una vivencia afectiva y crecer es un cambio físico; pueden ocurrir en la misma persona.",
     "socraticHint": "Fíjate en los detalles destacados.",
     "emotionalTip": "Acompaña con calma.",
     "options": [
       {
-        "label": "Comparar el cuerpo real con imágenes editadas genera expectativas falsas y frustración, porque los filtros eliminan rasgos humanos naturales. Las respuestas saludables incluyen: identificar la emoción sin negarla, dialogar con amistades respetuosas, recordar que la imagen digital no es la realidad, y apoyarse en personas adultas de confianza y técnicas de autorregulación.",
+        "label": "Los nervios son una vivencia afectiva y crecer es un cambio físico; pueden ocurrir en la misma persona.",
         "kind": "correct",
         "feedbackText": "¡Muy bien observado!"
       },
@@ -83,9 +79,9 @@ export const CIENCIAS_7B_OA01_CLASE03: LessonData = {
     ]
   },
   "reference": {
-    "dilePrompt": "Revisemos el punto de partida.",
+    "dilePrompt": "¿Cómo explicar este caso usando el criterio de la lectura?",
     "question": "¿Qué información entrega el punto de partida?",
-    "expectedAnswer": "Comparar el cuerpo real con imágenes editadas genera expectativas falsas y frustración, porque los filtros eliminan rasgos humanos naturales. Las respuestas saludables incluyen: identificar la emoción sin negarla, dialogar con amistades respetuosas, recordar que la imagen digital no es la realidad, y apoyarse en personas adultas de confianza y técnicas de autorregulación.",
+    "expectedAnswer": "Los nervios son una vivencia afectiva y crecer es un cambio físico; pueden ocurrir en la misma persona.",
     "socraticHint": "Localiza las palabras clave.",
     "feedbackSuccess": "¡Excelente fundamentación!",
     "feedbackSupport": "Revisa la lectura para confirmar los datos."
@@ -94,7 +90,7 @@ export const CIENCIAS_7B_OA01_CLASE03: LessonData = {
     "title": "Motivación",
     "titulo": "Motivación",
     "focusPoints": [],
-    "dileIntro": "¡Hola! Hoy nos sumergiremos en la dimensión afectiva de la sexualidad. Exploraremos por qué durante la pubertad nuestras emociones se sienten más intensas, cómo se construye nuestra imagen personal frente a las imágenes retocadas de las redes sociales, y qué herramientas de autocuidado y diálogo nos ayudan a sentirnos seguros y acompañados.",
+    "dileIntro": "Hoy trabajaremos con un caso ficticio. Primero buscaremos pistas, después aprenderemos un criterio y finalmente lo aplicarás con tus propias razones. Puedes pedir ayuda sin contar experiencias personales.",
     "hazInstruction": "Observa y reflexiona con las escenas del video.",
     "videoSrc": "",
     "dileAfterVideo": "¿Qué observaste en esta situación inicial?",
@@ -102,116 +98,116 @@ export const CIENCIAS_7B_OA01_CLASE03: LessonData = {
       {
         "slideNumber": 1,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "La pantalla y el espejo",
+        "didacticPurpose": "Antes de / hablar",
         "visualPrompt": "",
-        "overlayText": "La pantalla y el espejo",
-        "overlayTitle": "La pantalla y el espejo",
-        "overlaySubtitle": "¿Qué vemos realmente en redes sociales?",
-        "vectorialOverlayPptx": "La pantalla y el espejo",
-        "speakerNotes": "",
+        "overlayText": "Antes de / hablar",
+        "overlayTitle": "Antes de / hablar",
+        "overlaySubtitle": "¿Qué le ocurre a Sofía?",
+        "vectorialOverlayPptx": "Antes de / hablar",
+        "speakerNotes": "Sofía debe presentar un trabajo frente al curso. Tiene sus tarjetas preparadas, pero siente nervios. ¿Qué está ocurriendo y qué necesitaría para decidir cómo actuar?",
         "duracionSeg": 8
       },
       {
         "slideNumber": 2,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "Una emoción que aparece",
+        "didacticPurpose": "¿Imagen / real?",
         "visualPrompt": "",
-        "overlayText": "Una emoción que aparece",
-        "overlayTitle": "Una emoción que aparece",
-        "overlaySubtitle": "La inseguridad ante la comparación",
-        "vectorialOverlayPptx": "Una emoción que aparece",
-        "speakerNotes": "",
+        "overlayText": "¿Imagen / real?",
+        "overlayTitle": "¿Imagen / real?",
+        "overlaySubtitle": "Alex observa una",
+        "vectorialOverlayPptx": "¿Imagen / real?",
+        "speakerNotes": "Alex mira una imagen publicada en una red social y se compara con ella. No sabe si fue editada. Empieza a sentirse inseguro con su apariencia.",
         "duracionSeg": 8
       },
       {
         "slideNumber": 3,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "El truco detrás del brillo",
+        "didacticPurpose": "Escuchar",
         "visualPrompt": "",
-        "overlayText": "El truco detrás del brillo",
-        "overlayTitle": "El truco detrás del brillo",
-        "overlaySubtitle": "Iluminación, poses y algoritmos",
-        "vectorialOverlayPptx": "El truco detrás del brillo",
-        "speakerNotes": "",
+        "overlayText": "Escuchar",
+        "overlayTitle": "Escuchar",
+        "overlaySubtitle": "Ofrecer apoyo",
+        "vectorialOverlayPptx": "Escuchar",
+        "speakerNotes": "Sofía nota que Alex evita participar. Quiere acercarse, aunque duda sobre qué decir. ¿Qué información le ayudaría a comprender la situación antes de aconsejarlo?",
         "duracionSeg": 8
       },
       {
         "slideNumber": 4,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "La pubertad por dentro",
+        "didacticPurpose": "Sentir y / actuar",
         "visualPrompt": "",
-        "overlayText": "La pubertad por dentro",
-        "overlayTitle": "La pubertad por dentro",
-        "overlaySubtitle": "Las emociones también maduran",
-        "vectorialOverlayPptx": "La pubertad por dentro",
-        "speakerNotes": "",
+        "overlayText": "Sentir y / actuar",
+        "overlayTitle": "Sentir y / actuar",
+        "overlaySubtitle": "¿Son lo mismo?",
+        "vectorialOverlayPptx": "Sentir y / actuar",
+        "speakerNotes": "Sofía piensa en varias opciones antes de exponer. ¿Sentir nervios determina necesariamente una sola respuesta? Conservemos esta pregunta mientras observamos las acciones posibles.",
         "duracionSeg": 8
       },
       {
         "slideNumber": 5,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "El valor de la escucha",
+        "didacticPurpose": "Muchas / pistas",
         "visualPrompt": "",
-        "overlayText": "El valor de la escucha",
-        "overlayTitle": "El valor de la escucha",
-        "overlaySubtitle": "Amistades que suman seguridad",
-        "vectorialOverlayPptx": "El valor de la escucha",
-        "speakerNotes": "",
+        "overlayText": "Muchas / pistas",
+        "overlayTitle": "Muchas / pistas",
+        "overlaySubtitle": "¿Cómo ordenar lo que",
+        "vectorialOverlayPptx": "Muchas / pistas",
+        "speakerNotes": "En estos relatos aparecen características del cuerpo, vivencias emocionales y relaciones. Necesitamos un criterio para distinguirlas y explicar cómo se conectan.",
         "duracionSeg": 8
       },
       {
         "slideNumber": 6,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "Una mirada con criterio",
+        "didacticPurpose": "Mira con / cuidado",
         "visualPrompt": "",
-        "overlayText": "Una mirada con criterio",
-        "overlayTitle": "Una mirada con criterio",
-        "overlaySubtitle": "Pensamiento crítico para el bienestar",
-        "vectorialOverlayPptx": "Una mirada con criterio",
-        "speakerNotes": "",
+        "overlayText": "Mira con / cuidado",
+        "overlayTitle": "Mira con / cuidado",
+        "overlaySubtitle": "¿Qué permite afirmar",
+        "vectorialOverlayPptx": "Mira con / cuidado",
+        "speakerNotes": "Una fotografía muestra un instante. ¿Qué tendríamos que averiguar antes de usarla como referencia para juzgar el cuerpo de otra persona?",
         "duracionSeg": 8
       },
       {
         "slideNumber": 7,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "La pregunta de hoy",
+        "didacticPurpose": "Dos / preguntas",
         "visualPrompt": "",
-        "overlayText": "La pregunta de hoy",
-        "overlayTitle": "La pregunta de hoy",
-        "overlaySubtitle": "¿Cómo cuidamos nuestra imagen personal?",
-        "vectorialOverlayPptx": "La pregunta de hoy",
-        "speakerNotes": "",
+        "overlayText": "Dos / preguntas",
+        "overlayTitle": "Dos / preguntas",
+        "overlaySubtitle": "Comprender antes de",
+        "vectorialOverlayPptx": "Dos / preguntas",
+        "speakerNotes": "La explicación nos ayudará a interpretar pistas y posibles respuestas de cuidado, usando casos ficticios y resguardando la privacidad.",
         "duracionSeg": 8
       }
     ]
   },
   "preQuestions": [
     {
-      "context": "Dani siente nervios intensos antes de hablar en público y Sam experimenta inseguridad frente a las redes sociales.",
-      "question": "¿Qué diferencia existe entre sentir una emoción difícil (como nervios o inseguridad) y dejarse dominar por ella al punto de dañarse o aislarse?",
-      "expected": "Sentir la emoción es una reacción automática y válida del organismo; lo que podemos elegir conscientemente es qué hacer con ella, como respirar, buscar apoyo, reflexionar y comunicarnos sin herirnos.",
+      "context": "Conversación guiada",
+      "question": "¿Qué diferencia existe entre los nervios de Sofía y un aumento de estatura?",
+      "expected": "Los nervios son una vivencia afectiva y crecer es un cambio físico; pueden ocurrir en la misma persona.",
       "success": "",
       "support": "",
-      "reveal": "Sentir la emoción es una reacción automática y válida del organismo; lo que podemos elegir conscientemente es qué hacer con ella, como respirar, buscar apoyo, reflexionar y comunicarnos sin herirnos.",
-      "studentReveal": "Sentir la emoción es una reacción automática y válida del organismo; lo que podemos elegir conscientemente es qué hacer con ella, como respirar, buscar apoyo, reflexionar y comunicarnos sin herirnos."
+      "reveal": "Explica una relación usando la respuesta de referencia, ocúltala y pide al estudiante formular otra vez su respuesta con la pista correspondiente.",
+      "studentReveal": "Los nervios son una vivencia afectiva y crecer es un cambio físico; pueden ocurrir en la misma persona."
     },
     {
-      "context": "Sam nota que en redes todos parecen tener pieles impecables y cuerpos estandarizados.",
-      "question": "¿Por qué un filtro digital o un retoque publicitario no puede considerarse un modelo científico ni realista del cuerpo humano?",
-      "expected": "Porque es una alteración computacional diseñada comercialmente para vender o llamar la atención; biológicamente, los cuerpos humanos son diversos, tienen texturas, ritmos de crecimiento propios y no siguen patrones estandarizados de laboratorio.",
+      "context": "Conversación guiada",
+      "question": "¿Podemos afirmar que todas las imágenes que vio Alex están retocadas?",
+      "expected": "No. Faltan datos. Pueden existir edición, selección de poses o iluminación.",
       "success": "",
       "support": "",
-      "reveal": "Porque es una alteración computacional diseñada comercialmente para vender o llamar la atención; biológicamente, los cuerpos humanos son diversos, tienen texturas, ritmos de crecimiento propios y no siguen patrones estandarizados de laboratorio.",
-      "studentReveal": "Porque es una alteración computacional diseñada comercialmente para vender o llamar la atención; biológicamente, los cuerpos humanos son diversos, tienen texturas, ritmos de crecimiento propios y no siguen patrones estandarizados de laboratorio."
+      "reveal": "Explica una relación usando la respuesta de referencia, ocúltala y pide al estudiante formular otra vez su respuesta con la pista correspondiente.",
+      "studentReveal": "No. Faltan datos. Pueden existir edición, selección de poses o iluminación."
     },
     {
-      "context": "Maya nota que su amigo Sam se aísla y decide conversar con él sin burlarse.",
-      "question": "¿Qué valor tiene que las amistades escuchen sin juzgar en lugar de hacer bromas sobre la apariencia física de los demás?",
-      "expected": "Crea un espacio seguro que protege la autoestima y la salud emocional de la persona, frenando los comentarios hirientes y fortaleciendo lazos de confianza basados en el respeto mutuo.",
+      "context": "Conversación guiada",
+      "question": "¿Cómo justificas la respuesta de Sofía?",
+      "expected": "Escucha sin burlarse y facilita apoyo; no usa la apariencia para juzgar a Alex.",
       "success": "",
       "support": "",
-      "reveal": "Crea un espacio seguro que protege la autoestima y la salud emocional de la persona, frenando los comentarios hirientes y fortaleciendo lazos de confianza basados en el respeto mutuo.",
-      "studentReveal": "Crea un espacio seguro que protege la autoestima y la salud emocional de la persona, frenando los comentarios hirientes y fortaleciendo lazos de confianza basados en el respeto mutuo."
+      "reveal": "Explica una relación usando la respuesta de referencia, ocúltala y pide al estudiante formular otra vez su respuesta con la pista correspondiente.",
+      "studentReveal": "Escucha sin burlarse y facilita apoyo; no usa la apariencia para juzgar a Alex."
     }
   ],
   "conversationContext": "Diálogo guiado para profundizar en los elementos clave.",
@@ -228,85 +224,85 @@ export const CIENCIAS_7B_OA01_CLASE03: LessonData = {
       {
         "slideNumber": 8,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "Dimensión afectiva de la sexualidad",
+        "didacticPurpose": "Objetivo de / la lección",
         "visualPrompt": "",
-        "overlayText": "Dimensión afectiva de la sexualidad",
-        "overlayTitle": "Dimensión afectiva de la sexualidad",
-        "overlaySubtitle": "Emociones, sentimientos y autoconcepto",
-        "vectorialOverlayPptx": "Dimensión afectiva de la sexualidad",
-        "speakerNotes": "",
+        "overlayText": "Objetivo de / la lección",
+        "overlayTitle": "Objetivo de / la lección",
+        "overlaySubtitle": "Emociones y cuidado",
+        "vectorialOverlayPptx": "Objetivo de / la lección",
+        "speakerNotes": "Nuestro objetivo es distinguir cambios físicos y vivencias afectivas, examinar la comparación con imágenes digitales y justificar respuestas de cuidado usando pistas de casos ficticios, sin solicitar experiencias íntimas personales.",
         "duracionSeg": 8
       },
       {
         "slideNumber": 9,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "Emoción, sentimiento y estado de ánimo",
+        "didacticPurpose": "Emoción y / acción",
         "visualPrompt": "",
-        "overlayText": "Emoción, sentimiento y estado de ánimo",
-        "overlayTitle": "Emoción, sentimiento y estado de ánimo",
-        "overlaySubtitle": "Tres niveles de la experiencia afectiva",
-        "vectorialOverlayPptx": "Emoción, sentimiento y estado de ánimo",
-        "speakerNotes": "",
+        "overlayText": "Emoción y / acción",
+        "overlayTitle": "Emoción y / acción",
+        "overlaySubtitle": "Sentir permite distintas",
+        "vectorialOverlayPptx": "Emoción y / acción",
+        "speakerNotes": "Una emoción es una respuesta ante una situación; un sentimiento es una vivencia afectiva que puede mantenerse, y el estado de ánimo describe un tono emocional más general. Son distinciones didácticas, no diagnósticos.",
         "duracionSeg": 8
       },
       {
         "slideNumber": 10,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "La trampa de los filtros digitales",
+        "didacticPurpose": "La / afectividad",
         "visualPrompt": "",
-        "overlayText": "La trampa de los filtros digitales",
-        "overlayTitle": "La trampa de los filtros digitales",
-        "overlaySubtitle": "Deformación de la realidad corporal",
-        "vectorialOverlayPptx": "La trampa de los filtros digitales",
-        "speakerNotes": "",
+        "overlayText": "La / afectividad",
+        "overlayTitle": "La / afectividad",
+        "overlaySubtitle": "Emociones,",
+        "vectorialOverlayPptx": "La / afectividad",
+        "speakerNotes": "El libro reúne emociones, sentimientos y estados de ánimo dentro de la afectividad y explica su relación con pensamientos y vínculos. Sentir nervios antes de exponer no obliga a actuar de una única manera.",
         "duracionSeg": 8
       },
       {
         "slideNumber": 11,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "Construir la imagen corporal",
+        "didacticPurpose": "Cuerpo y / emoción",
         "visualPrompt": "",
-        "overlayText": "Construir la imagen corporal",
-        "overlayTitle": "Construir la imagen corporal",
-        "overlaySubtitle": "Valorar el cuerpo real y en desarrollo",
-        "vectorialOverlayPptx": "Construir la imagen corporal",
-        "speakerNotes": "",
+        "overlayText": "Cuerpo y / emoción",
+        "overlayTitle": "Cuerpo y / emoción",
+        "overlaySubtitle": "Localiza y clasifica una",
+        "vectorialOverlayPptx": "Cuerpo y / emoción",
+        "speakerNotes": "Modelemos el caso de Sofía. Identificamos los nervios, los clasificamos como vivencia afectiva y buscamos una respuesta: ensayar y pedir apoyo. Un aumento de estatura sería un cambio físico, aunque ambos puedan coincidir.",
         "duracionSeg": 8
       },
       {
         "slideNumber": 12,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "Estrategias de autorregulación",
+        "didacticPurpose": "Dar apoyo",
         "visualPrompt": "",
-        "overlayText": "Estrategias de autorregulación",
-        "overlayTitle": "Estrategias de autorregulación",
-        "overlaySubtitle": "Reconocer, respirar y comunicar",
-        "vectorialOverlayPptx": "Estrategias de autorregulación",
-        "speakerNotes": "",
+        "overlayText": "Dar apoyo",
+        "overlayTitle": "Dar apoyo",
+        "overlaySubtitle": "Escuchar y buscar",
+        "vectorialOverlayPptx": "Dar apoyo",
+        "speakerNotes": "En el caso de Alex, Sofía escucha sin burlarse y propone hablar con una persona de confianza. Justificamos esa respuesta porque ofrece apoyo y evita aumentar la comparación o el aislamiento.",
         "duracionSeg": 8
       },
       {
         "slideNumber": 13,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "Empatía en la convivencia diaria",
+        "didacticPurpose": "Imágenes / digitales",
         "visualPrompt": "",
-        "overlayText": "Empatía en la convivencia diaria",
-        "overlayTitle": "Empatía en la convivencia diaria",
-        "overlaySubtitle": "Cuidar nuestras palabras con los demás",
-        "vectorialOverlayPptx": "Empatía en la convivencia diaria",
-        "speakerNotes": "",
+        "overlayText": "Imágenes / digitales",
+        "overlayTitle": "Imágenes / digitales",
+        "overlaySubtitle": "No todas las fotos están",
+        "vectorialOverlayPptx": "Imágenes / digitales",
+        "speakerNotes": "Un error sería afirmar que toda fotografía está retocada. Algunas lo están y otras seleccionan poses o iluminación. Ninguna imagen aislada demuestra cómo deberían ser todos los cuerpos ni mide el valor personal.",
         "duracionSeg": 8
       },
       {
         "slideNumber": 14,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "Síntesis y puente a la práctica",
+        "didacticPurpose": "Reconocer / y elegir",
         "visualPrompt": "",
-        "overlayText": "Síntesis y puente a la práctica",
-        "overlayTitle": "Síntesis y puente a la práctica",
-        "overlaySubtitle": "Tu bienestar vale más que cualquier pantalla",
-        "vectorialOverlayPptx": "Síntesis y puente a la práctica",
-        "speakerNotes": "",
+        "overlayText": "Reconocer / y elegir",
+        "overlayTitle": "Reconocer / y elegir",
+        "overlaySubtitle": "Una pista y una",
+        "vectorialOverlayPptx": "Reconocer / y elegir",
+        "speakerNotes": "Sintetizamos: distinguir lo corporal y lo afectivo, revisar qué sabemos de la imagen y elegir una respuesta respetuosa. En la práctica explicarás esas relaciones en una situación nueva y comprobarás tus razones.",
         "duracionSeg": 8
       }
     ]
@@ -314,7 +310,7 @@ export const CIENCIAS_7B_OA01_CLASE03: LessonData = {
   "postQuestions": [
     {
       "context": "Comprobación 1",
-      "question": "- *Pregunta:* “¿Por qué un filtro digital que modifica los rasgos del rostro no puede considerarse un modelo de belleza real ni obligatorio?",
+      "question": "Pide explicar el último paso del ejemplo.",
       "expected": "",
       "success": "Respuesta precisa y fundamentada",
       "support": "Revisa el concepto clave expuesto",
@@ -324,69 +320,51 @@ export const CIENCIAS_7B_OA01_CLASE03: LessonData = {
   ],
   "practice": [
     {
-      "context": "Claudia (13 años) siente tristeza porque ve que en una red social muy popular se ha vuelto viral un desafío en el que los usuarios califican con estrellas del 1 al 10 la apariencia del rostro de sus contactos. Algunas personas le pusieron puntaje bajo.\n- **Consigna:** Explica cómo puede Claudia interpretar esta situación utilizando el pensamiento crítico frente a los medios digitales y qué respuesta de autocuidado puede aplicar.",
-      "question": "Resuelve la actividad en tu cuaderno.",
-      "expected": "“Claudia debe recordar que una calificación numérica en internet es una opinión superficial basada en modas efímeras, no una evaluación médica, humana ni ética de su persona. Puede silenciar o desinstalar temporalmente la aplicación y conversar de cómo se siente con su mamá o profesora jefe.”",
-      "success": "Cumple el criterio formal del caso",
-      "support": "Revisa los datos del recurso",
-      "reveal": "“Claudia debe recordar que una calificación numérica en internet es una opinión superficial basada en modas efímeras, no una evaluación médica, humana ni ética de su persona. Puede silenciar o desinstalar temporalmente la aplicación y conversar de cómo se siente con su mamá o profesora jefe.”",
-      "studentReveal": "“Claudia debe recordar que una calificación numérica en internet es una opinión superficial basada en modas efímeras, no una evaluación médica, humana ni ética de su persona. Puede silenciar o desinstalar temporalmente la aplicación y conversar de cómo se siente con su mamá o profesora jefe.”"
-    },
-    {
-      "context": "Tomás (12 años) se mira al espejo y se siente frustrado porque le han salido algunos granitos de acné en la frente, mientras que un cantante famoso de su edad se ve con la piel completamente tersa en una publicidad de televisión.\n- **Consigna:** Redacta un dato biológico y un conocimiento sobre la publicidad que le ayuden a Tomás a entender su situación con serenidad.",
-      "question": "Resuelve la actividad en tu cuaderno.",
-      "expected": "“Punto biológico: El acné es una respuesta biológica frecuente provocada por la mayor actividad de las glándulas sebáceas estimuladas por hormonas en la pubertad. Punto publicitario: En televisión la piel de los modelos es maquillada profesionalmente e iluminada con reflectores de alta tecnología para vender productos comerciales.”",
-      "success": "Cumple el criterio formal del caso",
-      "support": "Revisa los datos del recurso",
-      "reveal": "“Punto biológico: El acné es una respuesta biológica frecuente provocada por la mayor actividad de las glándulas sebáceas estimuladas por hormonas en la pubertad. Punto publicitario: En televisión la piel de los modelos es maquillada profesionalmente e iluminada con reflectores de alta tecnología para vender productos comerciales.”",
-      "studentReveal": "“Punto biológico: El acné es una respuesta biológica frecuente provocada por la mayor actividad de las glándulas sebáceas estimuladas por hormonas en la pubertad. Punto publicitario: En televisión la piel de los modelos es maquillada profesionalmente e iluminada con reflectores de alta tecnología para vender productos comerciales.”"
-    },
-    {
-      "context": "*Situación ficticia nueva:* En el mural de un colegio colocaron un afiche comercial de moda que dice en letras gigantes: *\"El éxito depende de cómo te ves\"*. Debajo se muestra la silueta de un cuerpo atlético retocado digitalmente junto a ropa de marcas costosas. Varios estudiantes de 7° básico comentan que se sienten presionados y desanimados al ver ese afiche todos los días al entrar a clases.\n\n- **Actividad autónoma del estudiante:**\n  Escribe en tu cuaderno:\n  1. Identifica al menos dos dimensiones de la sexualidad (según el esquema del Texto Escolar) que este afiche comercial está ignorando por completo.\n  2. Redacta dos argumentos fundamentados para refutar la frase del afiche, demostrando por qué el bienestar y el valor de una persona no radican en su silueta ni en su vestimenta.\n  3. Propón un nuevo lema alternativo y saludable que promueva el desarrollo integral y la aceptación de la diversidad corporal para reemplazar ese afiche en el colegio.\n\n- **Criterio privado del mentor (revelar solo después del intento):**\n  1. Dimensiones ignoradas: Intelectual (capacidades, valores, pensamiento reflexivo), Afectiva (sentimientos genuinos, autoaceptación), Social (vínculos leales, solidaridad) o Espiritual (sentido de vida).\n  2. Argumentos de refutación: La apariencia física no determina el talento, la bondad ni la inteligencia de un ser humano. Además, las siluetas publicitarias son montajes artificiales que generan frustración innecesaria.\n  3. Lema alternativo: Mensaje centrado en las capacidades, valores o diversidad de los estudiantes (por ejemplo: \"El verdadero éxito es aprender, respetarnos y crecer juntos\").\n\n- **Cómo valorar:** El estudiante nombra dimensiones no físicas, explica que el valor humano trasciende la imagen comercial y formula un lema pro-salud integral.\n\n---",
+      "context": "Martina observa una fotografía con piel muy lisa y cree que todas las personas deberían verse así. No sabe si fue editada. Siente desánimo y evita aparecer en una foto grupal. Su amiga puede escucharla o insistir en que se tome otra foto para demostrar que no debe importarle.",
       "question": "Realiza la transferencia autónoma con el nuevo recurso.",
-      "expected": "1. Dimensiones ignoradas: Intelectual (capacidades, valores, pensamiento reflexivo), Afectiva (sentimientos genuinos, autoaceptación), Social (vínculos leales, solidaridad) o Espiritual (sentido de vida).",
+      "expected": "Hecho: Martina observa la imagen; suposición: todos deberían verse así o que la foto está necesariamente editada; emoción: desánimo. Una imagen no establece un cuerpo obligatorio. Escuchar y ofrecer apoyo respeta su decisión; forzar otra foto no resuelve la inseguridad.",
       "success": "Aplica el criterio de la clase de manera autónoma en un recurso nuevo",
-      "support": "El estudiante nombra dimensiones no físicas, explica que el valor humano trasciende la imagen comercial y formula un lema pro-salud integral.",
-      "reveal": "1. Dimensiones ignoradas: Intelectual (capacidades, valores, pensamiento reflexivo), Afectiva (sentimientos genuinos, autoaceptación), Social (vínculos leales, solidaridad) o Espiritual (sentido de vida).",
-      "studentReveal": "1. Dimensiones ignoradas: Intelectual (capacidades, valores, pensamiento reflexivo), Afectiva (sentimientos genuinos, autoaceptación), Social (vínculos leales, solidaridad) o Espiritual (sentido de vida)."
+      "support": "Respuesta lograda si aplica el criterio, usa pistas y justifica sin inventar información. Parcial si identifica pistas pero no explica; ofrecer apoyo y nueva respuesta. Pendiente si la conclusión contradice el criterio; volver al ejemplo y usar la recuperación.",
+      "reveal": "Hecho: Martina observa la imagen; suposición: todos deberían verse así o que la foto está necesariamente editada; emoción: desánimo. Una imagen no establece un cuerpo obligatorio. Escuchar y ofrecer apoyo respeta su decisión; forzar otra foto no resuelve la inseguridad.",
+      "studentReveal": "Hecho: Martina observa la imagen; suposición: todos deberían verse así o que la foto está necesariamente editada; emoción: desánimo. Una imagen no establece un cuerpo obligatorio. Escuchar y ofrecer apoyo respeta su decisión; forzar otra foto no resuelve la inseguridad."
     }
   ],
   "mini": [
     {
       "id": "q1",
-      "q": "¿Cuál de las siguientes afirmaciones describe con mayor precisión la diferencia entre un cambio físico de la pubertad y una vivencia de la dimensión afectiva?",
+      "q": "¿Qué pareja distingue un cambio físico y una vivencia afectiva?",
       "options": [
-        "A. Los cambios físicos ocurren únicamente durante la noche, mientras que las emociones solo se sienten durante la jornada escolar.",
-        "B. Los cambios físicos modifican la estructura y función corporal, mientras que la afectividad abarca la vivencia consciente de emociones, estados de ánimo y sentimientos.",
-        "C. La dimensión afectiva puede ser controlada al 100% mediante pastillas farmacológicas, mientras que los cambios físicos no dependen de sustancias químicas.",
-        "D. Los cambios físicos desaparecen al cumplir los quince años, mientras que las emociones permanecen inmutables durante toda la vida."
+        "A. Aumento de estatura y nervios antes de exponer.",
+        "B. Nervios y frustración por una discusión.",
+        "C. Cambio de voz y aparición de vello.",
+        "D. Alegría y cariño hacia una amistad."
       ],
-      "correct": "B. Los cambios físicos modifican la estructura y función corporal, mientras que la afectividad abarca la vivencia consciente de emociones, estados de ánimo y sentimientos.",
-      "fixExplain": "Los cambios físicos corresponden a la maduración anatómica y fisiológica (estirón, vello, caracteres secundarios), mientras que la afectividad incluye el procesamiento psicológico de emociones y sentimientos vinculados al autoconcepto y los vínculos."
+      "correct": "A. Aumento de estatura y nervios antes de exponer.",
+      "fixExplain": "Revisa la lectura y las evidencias del texto para fundamentar tu respuesta."
     },
     {
       "id": "q2",
-      "q": "Un estudiante de 7° básico se siente desanimado y con baja autoestima porque al compararse con perfiles de redes sociales siente que su estatura y apariencia no coinciden con los estándares que ve en internet. Desde una perspectiva científica y formativa, ¿cuál es la mejor recomendación para apoyarlo?",
+      "q": "Alex ve una foto y no sabe si fue editada. ¿Qué conclusión está respaldada?",
       "options": [
-        "A. Sugerirle que deje de comer alimentos nutritivos para asemejarse rápidamente a las siluetas delgadas que observa en las pantallas.",
-        "B. Aconsejarle que compre programas informáticos de retoque fotográfico para modificar todas sus fotos antes de mostrárselas a sus amigos.",
-        "C. Recordarle que las imágenes digitales suelen estar retocadas y seleccionadas artificialmente, y que el desarrollo físico tiene ritmos individuales que no definen el valor de la persona.",
-        "D. Indicarle que se aísle de sus amigos hasta que complete el crecimiento físico esperado por la publicidad."
+        "A. La foto demuestra cómo deben verse todos los cuerpos.",
+        "B. Todas las fotos de esa red fueron modificadas.",
+        "C. El aspecto de la foto demuestra el valor personal.",
+        "D. Faltan datos sobre su edición y no es una medida obligatoria de apariencia."
       ],
-      "correct": "C. Recordarle que las imágenes digitales suelen estar retocadas y seleccionadas artificialmente, y que el desarrollo físico tiene ritmos individuales que no definen el valor de la persona.",
-      "fixExplain": "La educación para la salud promueve el pensamiento crítico frente a los medios digitales: las imágenes mediáticas son construcciones comerciales artificiales. La autoestima debe fundamentarse en la diversidad corporal y el desarrollo integral, no en ideales inalcanzables."
+      "correct": "D. Faltan datos sobre su edición y no es una medida obligatoria de apariencia.",
+      "fixExplain": "Revisa la lectura y las evidencias del texto para fundamentar tu respuesta."
     },
     {
       "id": "q3",
-      "q": "Durante una discusión de curso sobre una tarea grupal, dos estudiantes experimentan enojo e impaciencia. ¿Qué actitud demuestra una adecuada autorregulación emocional y respeto mutuo?",
+      "q": "Sofía siente nervios y quiere prepararse. ¿Qué respuesta aplica lo aprendido?",
       "options": [
-        "A. Levantar la voz e insultar al compañero para demostrar liderazgo y obligarlo a cambiar de opinión.",
-        "B. Reconocer el enojo, hacer una pausa para respirar calmadamente y expresar los desacuerdos mediante argumentos claros y sin descalificaciones personales.",
-        "C. Ignorar por completo el trabajo escolar y retirarse de la sala sin avisar al profesor.",
-        "D. Publicar comentarios burlones en redes sociales sobre las dificultades académicas del otro estudiante."
+        "A. Esperar que la emoción desaparezca por completo antes de pedir ayuda.",
+        "B. Ensayar, reconocer los nervios y solicitar apoyo sin descalificarse.",
+        "C. Concluir que los nervios le impiden siempre hablar.",
+        "D. Exigir que otros decidan por él cada vez que sienta nervios."
       ],
-      "correct": "B. Reconocer el enojo, hacer una pausa para respirar calmadamente y expresar los desacuerdos mediante argumentos claros y sin descalificaciones personales.",
-      "fixExplain": "La madurez socioemocional consiste en identificar la emoción (enojo) sin reprimirla, pero canalizándola mediante conductas asertivas que resguarden la convivencia y la dignidad de todas las personas involucradas."
+      "correct": "B. Ensayar, reconocer los nervios y solicitar apoyo sin descalificarse.",
+      "fixExplain": "Revisa la lectura y las evidencias del texto para fundamentar tu respuesta."
     }
   ],
   "recovery": [],

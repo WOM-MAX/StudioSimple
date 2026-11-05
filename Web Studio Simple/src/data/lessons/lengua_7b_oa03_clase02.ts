@@ -56,9 +56,9 @@ export const LENGUA_7B_OA03_CLASE02: LessonData = {
     "dileObjective": "Acciones que cambian el conflicto"
   },
   "situation": {
-    "dilePrompt": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",
+    "dilePrompt": "Observa la situación de partida para comenzar.",
     "expectedAnswer": "La propuesta provoca la oposición de Jimmy y hace visible el desacuerdo entre ambos.",
-    "socraticHint": "Fíjate en los detalles destacados.",
+    "socraticHint": "¿Qué propone el padre y qué responde Jimmy? Relaciona ambas acciones sin añadir una decisión posterior del padre.",
     "emotionalTip": "Acompaña con calma.",
     "options": [
       {
@@ -79,18 +79,18 @@ export const LENGUA_7B_OA03_CLASE02: LessonData = {
     ]
   },
   "reference": {
-    "dilePrompt": "¿Qué efecto tiene la propuesta del padre sobre Jimmy?",
+    "dilePrompt": "Revisemos el punto de partida.",
     "question": "¿Qué información entrega el punto de partida?",
     "expectedAnswer": "La propuesta provoca la oposición de Jimmy y hace visible el desacuerdo entre ambos.",
     "socraticHint": "Localiza las palabras clave.",
     "feedbackSuccess": "¡Excelente fundamentación!",
-    "feedbackSupport": "Revisa la lectura para confirmar los datos."
+    "feedbackSupport": "¿Qué propone el padre y qué responde Jimmy? Relaciona ambas acciones sin añadir una decisión posterior del padre."
   },
   "hook": {
     "title": "Motivación",
     "titulo": "Motivación",
     "focusPoints": [],
-    "dileIntro": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",
+    "dileIntro": "Hoy exploraremos una nueva situación motivadora.",
     "hazInstruction": "Observa y reflexiona con las escenas del video.",
     "videoSrc": "https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/LENGUAJE/OA03/110-7-LYL-OA03-CLASE02-MOTIVACION.pptx.mp4",
     "dileAfterVideo": "¿Qué observaste en esta situación inicial?",
@@ -301,7 +301,7 @@ export const LENGUA_7B_OA03_CLASE02: LessonData = {
   "postQuestions": [
     {
       "context": "Comprobación 1",
-      "question": "¿Cómo ayuda esta acción a comprender la postura de Jimmy?",
+      "question": "Cuando Robutt gime, Jimmy lo abraza y expresa que lo quiere. ¿Cómo ayuda el abrazo a comprender la postura de Jimmy?",
       "expected": "El abrazo y su expresión de cariño permiten explicar que desea conservar su vínculo con Robutt.",
       "success": "Respuesta precisa y fundamentada",
       "support": "Revisa el concepto clave expuesto",
@@ -434,7 +434,7 @@ export const LENGUA_7B_OA03_CLASE02: LessonData = {
   },
   "closure": {
     "congratulations": "Buen trabajo. Explicaste tu respuesta usando información del recurso.",
-    "nextClassPreview": "¡Nos vemos en la próxima lección!"
+    "nextClassPreview": "Próxima clase: Inferencias con evidencia del relato"
   },
   "paso8_cierre": {
     "preguntaSintesis": "¿Qué efecto tiene la propuesta del padre sobre Jimmy?",

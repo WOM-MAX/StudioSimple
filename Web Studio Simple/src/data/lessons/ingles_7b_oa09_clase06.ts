@@ -204,9 +204,9 @@ export const INGLES_7B_OA09_CLASE06: LessonData = {
   "conversationContext": "Diálogo guiado para profundizar en los elementos clave.",
   "formalization": {
     "title": "Explicación",
-    "concept": "Una situación",
+    "concept": "Comparing messages and showing understanding",
     "summary": "Consolidación de las ideas clave.",
-    "ideaClave": "Una situación",
+    "ideaClave": "Comparing messages and showing understanding",
     "dileIntro": "Ahora consolidaremos los aprendizajes esenciales.",
     "hazInstruction": "Registra en tu cuaderno el concepto principal.",
     "graphicPoster": "",
@@ -420,7 +420,7 @@ export const INGLES_7B_OA09_CLASE06: LessonData = {
   "summaryIdeas": [
     [
       "Idea central",
-      "Una situación"
+      "Comparing messages and showing understanding"
     ],
     [
       "Comprensión",

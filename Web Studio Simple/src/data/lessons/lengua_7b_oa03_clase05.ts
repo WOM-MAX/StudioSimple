@@ -56,9 +56,9 @@ export const LENGUA_7B_OA03_CLASE05: LessonData = {
     "dileObjective": "El orden de los hechos y el recuerdo"
   },
   "situation": {
-    "dilePrompt": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",
+    "dilePrompt": "Observa la situación de partida para comenzar.",
     "expectedAnswer": "No. La travesura ocurrió en una ocasión anterior; Jimmy la recuerda cuando recibe la llamada.",
-    "socraticHint": "Fíjate en los detalles destacados.",
+    "socraticHint": "Busca «En una ocasión» y distingue cuándo ocurrió la travesura de cuándo Jimmy la recuerda.",
     "emotionalTip": "Acompaña con calma.",
     "options": [
       {
@@ -79,18 +79,18 @@ export const LENGUA_7B_OA03_CLASE05: LessonData = {
     ]
   },
   "reference": {
-    "dilePrompt": "¿La travesura ocurre al mismo tiempo que la llamada?",
+    "dilePrompt": "Revisemos el punto de partida.",
     "question": "¿Qué información entrega el punto de partida?",
     "expectedAnswer": "No. La travesura ocurrió en una ocasión anterior; Jimmy la recuerda cuando recibe la llamada.",
     "socraticHint": "Localiza las palabras clave.",
     "feedbackSuccess": "¡Excelente fundamentación!",
-    "feedbackSupport": "Revisa la lectura para confirmar los datos."
+    "feedbackSupport": "Busca «En una ocasión» y distingue cuándo ocurrió la travesura de cuándo Jimmy la recuerda."
   },
   "hook": {
     "title": "Motivación",
     "titulo": "Motivación",
     "focusPoints": [],
-    "dileIntro": "¿Qué imaginas a partir del título? Presenta tu idea como una anticipación; después la contrastaremos con el recurso.",
+    "dileIntro": "Hoy exploraremos una nueva situación motivadora.",
     "hazInstruction": "Observa y reflexiona con las escenas del video.",
     "videoSrc": "https://pub-8f9429cd99194355a2cf0bc7c5794833.r2.dev/110-7/LENGUAJE/OA03/110-7-LYL-OA03-CLASE05-MOTIVACION.pptx.mp4",
     "dileAfterVideo": "¿Qué observaste en esta situación inicial?",
@@ -301,7 +301,7 @@ export const LENGUA_7B_OA03_CLASE05: LessonData = {
   "postQuestions": [
     {
       "context": "Comprobación 1",
-      "question": "¿Cómo ordenarías estos acontecimientos según cuándo sucedieron?",
+      "question": "Ordena según cuándo sucedieron: la travesura y la alarma; el juego actual; la llamada del padre; la conversación en casa y el abrazo. ¿Qué hecho ocurrió antes del presente narrado?",
       "expected": "Primero ocurrió la travesura y la alarma. Más tarde, el juego actual, la llamada, la conversación y el abrazo.",
       "success": "Respuesta precisa y fundamentada",
       "support": "Revisa el concepto clave expuesto",
@@ -434,7 +434,7 @@ export const LENGUA_7B_OA03_CLASE05: LessonData = {
   },
   "closure": {
     "congratulations": "Buen trabajo. Explicaste tu respuesta usando información del recurso.",
-    "nextClassPreview": "¡Nos vemos en la próxima lección!"
+    "nextClassPreview": "Próxima clase: Comparar relatos con evidencia"
   },
   "paso8_cierre": {
     "preguntaSintesis": "¿La travesura ocurre al mismo tiempo que la llamada?",

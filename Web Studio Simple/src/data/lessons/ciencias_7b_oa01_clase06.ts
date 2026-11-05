@@ -13,15 +13,11 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
     "nextLessonTitle": "Fin del objetivo de aprendizaje"
   },
   "prep": {
-    "adultObjective": "Guiar al estudiante en la síntesis e integración de todas las dimensiones de la sexualidad humana, consolidando un método reflexivo para tomar decisiones autónomas, éticas y saludables en su vida cotidiana.",
-    "routeToday": "Leer el recurso integrador → articular las 5 dimensiones del ser humano → modelar el método sistemático de toma de decisiones → resolver un dilema cotidiano en equipo → evaluar con el miniquiz final del OA.",
-    "mentorReminder": "¡Hola! Hoy llegamos a la clase de síntesis y cierre de nuestro primer objetivo de Ciencias Naturales. Revisa todo el camino recorrido: aprendimos que la sexualidad no es solo el cuerpo o los cambios físicos de la pubertad, sino que involucra nuestros sentimientos, amistades, valores éticos y pensamientos. Hoy aprenderemos a unir todas estas piezas para tomar decisiones responsables que cuiden nuestra salud, respeten a los demás y nos ayuden a construir nuestro proyecto de vida.",
+    "adultObjective": "Acompañar la comprensión y aplicación del objetivo focal.",
+    "routeToday": "Inicio → Video Motivación → Recorrido → Video Explicación → Práctica → Resumen → Miniquiz → Cierre.",
+    "mentorReminder": "Hoy trabajaremos con un caso ficticio. Primero buscaremos pistas, después aprenderemos un criterio y finalmente lo aplicarás con tus propias razones. Puedes pedir ayuda sin contar experiencias personales.",
     "reminders": [
-      "Mantén una mirada pedagógica holística: recuérdale al estudiante que madurar implica coordinar lo que pensamos (dimensión intelectual), lo que sentimos (afectiva), cómo cuidamos nuestro cuerpo (biológica), cómo convivimos (social) y nuestros valores profundos (espiritual/ética).",
-      "Modela el método de toma de decisiones en 4 etapas: 1. Detenerse e identificar el problema; 2. Buscar información científica y veraz; 3. Evaluar consecuencias para uno y los demás; 4. Decidir con autonomía y asumir la responsabilidad.",
-      "Resalta que la responsabilidad individual no significa estar solo: significa saber pedir orientación a adultos de confianza cuando las situaciones son confusas o complejas.",
-      "Salvaguarda la privacidad: todos los análisis se efectúan sobre los casos ficticios (Javier, Clara y Tomás).",
-      "--"
+      "Acompaña al estudiante y valora su proceso."
     ],
     "emotionalTip": "Valora cada avance con paciencia y entusiasmo."
   },
@@ -57,16 +53,16 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
       }
     ],
     "dileIntro": "Hoy avanzaremos en una nueva clase interactiva.",
-    "dileObjective": "¡Hola! Hoy llegamos a la clase de síntesis y cierre de nuestro primer objetivo de Ciencias Naturales. Revisa todo el camino recorrido: aprendimos que la sexualidad no es solo el cuerpo o los cambios físicos de la pubertad, sino que involucra nuestros sentimientos, amistades, valores éticos y pensamientos. Hoy aprenderemos a unir todas estas piezas para tomar decisiones responsables que cuiden nuestra salud, respeten a los demás y nos ayuden a construir nuestro proyecto de vida."
+    "dileObjective": "Hoy trabajaremos con un caso ficticio. Primero buscaremos pistas, después aprenderemos un criterio y finalmente lo aplicarás con tus propias razones. Puedes pedir ayuda sin contar experiencias personales."
   },
   "situation": {
-    "dilePrompt": "¡Hola! Hoy llegamos a la clase de síntesis y cierre de nuestro primer objetivo de Ciencias Naturales. Revisa todo el camino recorrido: aprendimos que la sexualidad no es solo el cuerpo o los cambios físicos de la pubertad, sino que involucra nuestros sentimientos, amistades, valores éticos y pensamientos. Hoy aprenderemos a unir todas estas piezas para tomar decisiones responsables que cuiden nuestra salud, respeten a los demás y nos ayuden a construir nuestro proyecto de vida.",
-    "expectedAnswer": "Se manifiesta la dimensión biológica (protección de la vida y el cuerpo), afectiva (gestión del temor y la necesidad de aceptación), social (resistencia a la presión de pares), intelectual (análisis del peligro real frente a la ilusión viral) y valórica (priorizar la vida y la prudencia). Javier usó el razonamiento responsable: frenó el impulso, analizó riesgos objetivos y decidió con autonomía sin someterse a chantajes.",
+    "dilePrompt": "Hoy trabajaremos con un caso ficticio. Primero buscaremos pistas, después aprenderemos un criterio y finalmente lo aplicarás con tus propias razones. Puedes pedir ayuda sin contar experiencias personales.",
+    "expectedAnswer": "Cambio de voz: biológica; vergüenza expresada: afectiva; burlas y apoyo: social.",
     "socraticHint": "Fíjate en los detalles destacados.",
     "emotionalTip": "Acompaña con calma.",
     "options": [
       {
-        "label": "Se manifiesta la dimensión biológica (protección de la vida y el cuerpo), afectiva (gestión del temor y la necesidad de aceptación), social (resistencia a la presión de pares), intelectual (análisis del peligro real frente a la ilusión viral) y valórica (priorizar la vida y la prudencia). Javier usó el razonamiento responsable: frenó el impulso, analizó riesgos objetivos y decidió con autonomía sin someterse a chantajes.",
+        "label": "Cambio de voz: biológica; vergüenza expresada: afectiva; burlas y apoyo: social.",
         "kind": "correct",
         "feedbackText": "¡Muy bien observado!"
       },
@@ -83,9 +79,9 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
     ]
   },
   "reference": {
-    "dilePrompt": "Revisemos el punto de partida.",
+    "dilePrompt": "¿Cómo explicar este caso usando el criterio de la lectura?",
     "question": "¿Qué información entrega el punto de partida?",
-    "expectedAnswer": "Se manifiesta la dimensión biológica (protección de la vida y el cuerpo), afectiva (gestión del temor y la necesidad de aceptación), social (resistencia a la presión de pares), intelectual (análisis del peligro real frente a la ilusión viral) y valórica (priorizar la vida y la prudencia). Javier usó el razonamiento responsable: frenó el impulso, analizó riesgos objetivos y decidió con autonomía sin someterse a chantajes.",
+    "expectedAnswer": "Cambio de voz: biológica; vergüenza expresada: afectiva; burlas y apoyo: social.",
     "socraticHint": "Localiza las palabras clave.",
     "feedbackSuccess": "¡Excelente fundamentación!",
     "feedbackSupport": "Revisa la lectura para confirmar los datos."
@@ -94,7 +90,7 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
     "title": "Motivación",
     "titulo": "Motivación",
     "focusPoints": [],
-    "dileIntro": "¡Hola! Hoy llegamos a la clase de síntesis y cierre de nuestro primer objetivo de Ciencias Naturales. Revisa todo el camino recorrido: aprendimos que la sexualidad no es solo el cuerpo o los cambios físicos de la pubertad, sino que involucra nuestros sentimientos, amistades, valores éticos y pensamientos. Hoy aprenderemos a unir todas estas piezas para tomar decisiones responsables que cuiden nuestra salud, respeten a los demás y nos ayuden a construir nuestro proyecto de vida.",
+    "dileIntro": "Hoy trabajaremos con un caso ficticio. Primero buscaremos pistas, después aprenderemos un criterio y finalmente lo aplicarás con tus propias razones. Puedes pedir ayuda sin contar experiencias personales.",
     "hazInstruction": "Observa y reflexiona con las escenas del video.",
     "videoSrc": "",
     "dileAfterVideo": "¿Qué observaste en esta situación inicial?",
@@ -102,116 +98,116 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
       {
         "slideNumber": 1,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "La brújula del crecimiento",
+        "didacticPurpose": "Un caso",
         "visualPrompt": "",
-        "overlayText": "La brújula del crecimiento",
-        "overlayTitle": "La brújula del crecimiento",
-        "overlaySubtitle": "Navegar la pubertad con sentido",
-        "vectorialOverlayPptx": "La brújula del crecimiento",
-        "speakerNotes": "",
+        "overlayText": "Un caso",
+        "overlayTitle": "Un caso",
+        "overlaySubtitle": "¿Cómo se",
+        "vectorialOverlayPptx": "Un caso",
+        "speakerNotes": "Alex nota que su voz está cambiando. Durante una actividad, algunos compañeros se ríen. Alex siente vergüenza y una amiga piensa en cómo acompañarlo.",
         "duracionSeg": 8
       },
       {
         "slideNumber": 2,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "Un desafío en el camino",
+        "didacticPurpose": "Un cambio / en la voz",
         "visualPrompt": "",
-        "overlayText": "Un desafío en el camino",
-        "overlayTitle": "Un desafío en el camino",
-        "overlaySubtitle": "La tentación del aplauso fácil",
-        "vectorialOverlayPptx": "Un desafío en el camino",
-        "speakerNotes": "",
+        "overlayText": "Un cambio / en la voz",
+        "overlayTitle": "Un cambio / en la voz",
+        "overlaySubtitle": "¿Qué observamos en el",
+        "vectorialOverlayPptx": "Un cambio / en la voz",
+        "speakerNotes": "El relato entrega un dato sobre el cuerpo y otras pistas sobre lo que ocurre alrededor. Antes de explicar, necesitamos identificar con precisión cada una de ellas.",
         "duracionSeg": 8
       },
       {
         "slideNumber": 3,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "La trampa de la impulsividad",
+        "didacticPurpose": "Sentir / vergüenza",
         "visualPrompt": "",
-        "overlayText": "La trampa de la impulsividad",
-        "overlayTitle": "La trampa de la impulsividad",
-        "overlaySubtitle": "Cuando la prisa nubla la vista",
-        "vectorialOverlayPptx": "La trampa de la impulsividad",
-        "speakerNotes": "",
+        "overlayText": "Sentir / vergüenza",
+        "overlayTitle": "Sentir / vergüenza",
+        "overlaySubtitle": "¿Qué nos dice esa",
+        "vectorialOverlayPptx": "Sentir / vergüenza",
+        "speakerNotes": "Alex no quiere continuar la actividad. ¿Qué información añade su emoción a lo que sabemos del cambio de voz? ¿Qué preguntas permitirían comprender el caso?",
         "duracionSeg": 8
       },
       {
         "slideNumber": 4,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "La pausa inteligente",
+        "didacticPurpose": "El entorno",
         "visualPrompt": "",
-        "overlayText": "La pausa inteligente",
-        "overlayTitle": "La pausa inteligente",
-        "overlaySubtitle": "Respirar antes de elegir",
-        "vectorialOverlayPptx": "La pausa inteligente",
-        "speakerNotes": "",
+        "overlayText": "El entorno",
+        "overlayTitle": "El entorno",
+        "overlaySubtitle": "¿Cómo influyen las",
+        "vectorialOverlayPptx": "El entorno",
+        "speakerNotes": "Algunas personas se ríen y otras quieren ayudar. ¿Cómo podría cambiar la situación según lo que decidan hacer los compañeros presentes?",
         "duracionSeg": 8
       },
       {
         "slideNumber": 5,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "El valor de la convicción",
+        "didacticPurpose": "Intervenir",
         "visualPrompt": "",
-        "overlayText": "El valor de la convicción",
-        "overlayTitle": "El valor de la convicción",
-        "overlaySubtitle": "La verdadera fuerza de decir no",
-        "vectorialOverlayPptx": "El valor de la convicción",
-        "speakerNotes": "",
+        "overlayText": "Intervenir",
+        "overlayTitle": "Intervenir",
+        "overlaySubtitle": "¿Qué opciones tienen?",
+        "vectorialOverlayPptx": "Intervenir",
+        "speakerNotes": "La amiga considera varias respuestas. Necesita pensar en sus consecuencias y en el bienestar de Alex antes de elegir. ¿Qué criterio le ayudaría a justificar su decisión?",
         "duracionSeg": 8
       },
       {
         "slideNumber": 6,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "Un horizonte por construir",
+        "didacticPurpose": "Una foto",
         "visualPrompt": "",
-        "overlayText": "Un horizonte por construir",
-        "overlayTitle": "Un horizonte por construir",
-        "overlaySubtitle": "El proyecto que da sentido a tu vida",
-        "vectorialOverlayPptx": "Un horizonte por construir",
-        "speakerNotes": "",
+        "overlayText": "Una foto",
+        "overlayTitle": "Una foto",
+        "overlaySubtitle": "Otro caso para",
+        "vectorialOverlayPptx": "Una foto",
+        "speakerNotes": "Alguien pide que no publiquen su foto. ¿Podríamos usar una misma herramienta para pensar decisiones responsables en ambos casos?",
         "duracionSeg": 8
       },
       {
         "slideNumber": 7,
         "tituloMomento": "Motivación",
-        "didacticPurpose": "La pregunta de cierre",
+        "didacticPurpose": "Antes de / actuar",
         "visualPrompt": "",
-        "overlayText": "La pregunta de cierre",
-        "overlayTitle": "La pregunta de cierre",
-        "overlaySubtitle": "¿Cómo integrar todo lo aprendido?",
-        "vectorialOverlayPptx": "La pregunta de cierre",
-        "speakerNotes": "",
+        "overlayText": "Antes de / actuar",
+        "overlayTitle": "Antes de / actuar",
+        "overlaySubtitle": "Una explicación que",
+        "vectorialOverlayPptx": "Antes de / actuar",
+        "speakerNotes": "La explicación relacionará cuerpo, emociones y convivencia. Aplicaremos una herramienta para justificar decisiones respetuosas en otro caso.",
         "duracionSeg": 8
       }
     ]
   },
   "preQuestions": [
     {
-      "context": "En el caso de Javier, su decisión no fue solo física o social, sino integral.",
-      "question": "¿Por qué cuando cuidamos nuestra salud física también estamos protegiendo nuestra tranquilidad emocional y nuestros proyectos futuros?",
-      "expected": "Porque el ser humano es una unidad indivisible: si el cuerpo se lesiona o se pone en riesgo extremo, se alteran los estados de ánimo, las relaciones familiares, los estudios y las metas a largo plazo.",
+      "context": "Conversación guiada",
+      "question": "¿Qué pistas biológica, afectiva y social aparecen en el caso de Alex?",
+      "expected": "Cambio de voz: biológica; vergüenza expresada: afectiva; burlas y apoyo: social.",
       "success": "",
       "support": "",
-      "reveal": "Porque el ser humano es una unidad indivisible: si el cuerpo se lesiona o se pone en riesgo extremo, se alteran los estados de ánimo, las relaciones familiares, los estudios y las metas a largo plazo.",
-      "studentReveal": "Porque el ser humano es una unidad indivisible: si el cuerpo se lesiona o se pone en riesgo extremo, se alteran los estados de ánimo, las relaciones familiares, los estudios y las metas a largo plazo."
+      "reveal": "Explica una relación usando la respuesta de referencia, ocúltala y pide al estudiante formular otra vez su respuesta con la pista correspondiente.",
+      "studentReveal": "Cambio de voz: biológica; vergüenza expresada: afectiva; burlas y apoyo: social."
     },
     {
-      "context": "Los compañeros amenazaron a Javier con llamarlo \"cobarde\" si no hacía el desafío arriesgado.",
-      "question": "¿Qué demuestra mayor valentía y madurez: ceder a un peligro absurdo por miedo al qué dirán o atreverse a decir",
-      "expected": "Decir \"no\" con firmeza requiere mucha más valentía, carácter y autonomía; ceder por miedo al ridículo es someterse pasivamente a los caprichos del grupo.",
+      "context": "Conversación guiada",
+      "question": "¿Qué relación hay entre la acción del grupo y lo que siente Alex?",
+      "expected": "Las burlas pueden aumentar el malestar y el apoyo puede ofrecer cuidado; se considera lo que Alex expresa.",
       "success": "",
       "support": "",
-      "reveal": "Decir \"no\" con firmeza requiere mucha más valentía, carácter y autonomía; ceder por miedo al ridículo es someterse pasivamente a los caprichos del grupo.",
-      "studentReveal": "Decir \"no\" con firmeza requiere mucha más valentía, carácter y autonomía; ceder por miedo al ridículo es someterse pasivamente a los caprichos del grupo."
+      "reveal": "Explica una relación usando la respuesta de referencia, ocúltala y pide al estudiante formular otra vez su respuesta con la pista correspondiente.",
+      "studentReveal": "Las burlas pueden aumentar el malestar y el apoyo puede ofrecer cuidado; se considera lo que Alex expresa."
     },
     {
-      "context": "Frente a temas de sexualidad, salud y autocuidado circulan muchos mitos en internet y rumores entre pares.",
-      "question": "¿Por qué acudir a fuentes científicas y a adultos de confianza es fundamental antes de tomar decisiones sobre nuestro cuerpo o nuestras relaciones?",
-      "expected": "Porque los rumores y las redes suelen difundir falsedades o visiones superficiales que pueden causar daños graves; la ciencia y los adultos responsables entregan datos verídicos que protegen nuestra salud y bienestar.",
+      "context": "Conversación guiada",
+      "question": "¿Cómo usarías los cuatro pasos en el caso de la foto?",
+      "expected": "Identificar petición, reunir información, evaluar difusión y alternativas, decidir no publicar sin acuerdo y revisar la respuesta.",
       "success": "",
       "support": "",
-      "reveal": "Porque los rumores y las redes suelen difundir falsedades o visiones superficiales que pueden causar daños graves; la ciencia y los adultos responsables entregan datos verídicos que protegen nuestra salud y bienestar.",
-      "studentReveal": "Porque los rumores y las redes suelen difundir falsedades o visiones superficiales que pueden causar daños graves; la ciencia y los adultos responsables entregan datos verídicos que protegen nuestra salud y bienestar."
+      "reveal": "Explica una relación usando la respuesta de referencia, ocúltala y pide al estudiante formular otra vez su respuesta con la pista correspondiente.",
+      "studentReveal": "Identificar petición, reunir información, evaluar difusión y alternativas, decidir no publicar sin acuerdo y revisar la respuesta."
     }
   ],
   "conversationContext": "Diálogo guiado para profundizar en los elementos clave.",
@@ -228,85 +224,85 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
       {
         "slideNumber": 8,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "Integración de la sexualidad humana",
+        "didacticPurpose": "Objetivo de / la lección",
         "visualPrompt": "",
-        "overlayText": "Integración de la sexualidad humana",
-        "overlayTitle": "Integración de la sexualidad humana",
-        "overlaySubtitle": "Una mirada holística y científica",
-        "vectorialOverlayPptx": "Integración de la sexualidad humana",
-        "speakerNotes": "",
+        "overlayText": "Objetivo de / la lección",
+        "overlayTitle": "Objetivo de / la lección",
+        "overlaySubtitle": "Aspectos y decisiones",
+        "vectorialOverlayPptx": "Objetivo de / la lección",
+        "speakerNotes": "Nuestro objetivo es relacionar aspectos biológicos, afectivos y sociales y aplicar cuatro pasos para justificar una decisión responsable que considere consecuencias y respeto mutuo. Trabajaremos con situaciones ficticias de convivencia y afecto.",
         "duracionSeg": 8
       },
       {
         "slideNumber": 9,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "Las cinco dimensiones en armonía",
+        "didacticPurpose": "Mirada / integral",
         "visualPrompt": "",
-        "overlayText": "Las cinco dimensiones en armonía",
-        "overlayTitle": "Las cinco dimensiones en armonía",
-        "overlaySubtitle": "Ninguna dimensión camina sola",
-        "vectorialOverlayPptx": "Las cinco dimensiones en armonía",
-        "speakerNotes": "",
+        "overlayText": "Mirada / integral",
+        "overlayTitle": "Mirada / integral",
+        "overlaySubtitle": "Relacionar sin",
+        "vectorialOverlayPptx": "Mirada / integral",
+        "speakerNotes": "El objetivo curricular integra tres aspectos. El libro presenta cinco dimensiones complementarias. Usaremos cada marco con sus nombres y sin sustituirlos por una mezcla. Una situación puede mostrar varios aspectos con pistas diferentes.",
         "duracionSeg": 8
       },
       {
         "slideNumber": 10,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "El método de decisión responsable",
+        "didacticPurpose": "Lo / biológico",
         "visualPrompt": "",
-        "overlayText": "El método de decisión responsable",
-        "overlayTitle": "El método de decisión responsable",
-        "overlaySubtitle": "Cuatro pasos hacia la autonomía ética",
-        "vectorialOverlayPptx": "El método de decisión responsable",
-        "speakerNotes": "",
+        "overlayText": "Lo / biológico",
+        "overlayTitle": "Lo / biológico",
+        "overlaySubtitle": "1. Identificar la",
+        "vectorialOverlayPptx": "Lo / biológico",
+        "speakerNotes": "Nuestra herramienta didáctica tiene cuatro pasos. Primero, detenerse e identificar la situación. En el caso de Alex localizamos el cambio de voz, una pista biológica, y reconocemos que las burlas generan un problema de convivencia.",
         "duracionSeg": 8
       },
       {
         "slideNumber": 11,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "Pensamiento crítico frente a la desinformación",
+        "didacticPurpose": "Aspecto / afectivo",
         "visualPrompt": "",
-        "overlayText": "Pensamiento crítico frente a la desinformación",
-        "overlayTitle": "Pensamiento crítico frente a la desinformación",
-        "overlaySubtitle": "Distinguir la ciencia del rumor",
-        "vectorialOverlayPptx": "Pensamiento crítico frente a la desinformación",
-        "speakerNotes": "",
+        "overlayText": "Aspecto / afectivo",
+        "overlayTitle": "Aspecto / afectivo",
+        "overlaySubtitle": "2. Reunir",
+        "vectorialOverlayPptx": "Aspecto / afectivo",
+        "speakerNotes": "Segundo, reunir información: Alex siente vergüenza, algunos compañeros se ríen y otros quieren ayudar. Separamos lo observado de lo supuesto. No atribuimos emociones ni decisiones a alguien sin escuchar lo que expresa.",
         "duracionSeg": 8
       },
       {
         "slideNumber": 12,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "Autocuidado y responsabilidad compartida",
+        "didacticPurpose": "Lo social",
         "visualPrompt": "",
-        "overlayText": "Autocuidado y responsabilidad compartida",
-        "overlayTitle": "Autocuidado y responsabilidad compartida",
-        "overlaySubtitle": "Cuidar de mí es cuidar de todos",
-        "vectorialOverlayPptx": "Autocuidado y responsabilidad compartida",
-        "speakerNotes": "",
+        "overlayText": "Lo social",
+        "overlayTitle": "Lo social",
+        "overlaySubtitle": "3. Evaluar",
+        "vectorialOverlayPptx": "Lo social",
+        "speakerNotes": "Tercero, evaluar consecuencias y límites. Continuar las burlas puede aumentar el malestar; detenerlas y buscar apoyo ofrece cuidado. La convivencia relaciona las decisiones del grupo con el bienestar afectivo de Alex.",
         "duracionSeg": 8
       },
       {
         "slideNumber": 13,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "Construyendo tu proyecto de vida",
+        "didacticPurpose": "Decidir / bien",
         "visualPrompt": "",
-        "overlayText": "Construyendo tu proyecto de vida",
-        "overlayTitle": "Construyendo tu proyecto de vida",
-        "overlaySubtitle": "Metas, valores y decisiones coherentes",
-        "vectorialOverlayPptx": "Construyendo tu proyecto de vida",
-        "speakerNotes": "",
+        "overlayText": "Decidir / bien",
+        "overlayTitle": "Decidir / bien",
+        "overlaySubtitle": "4. Actuar y revisar",
+        "vectorialOverlayPptx": "Decidir / bien",
+        "speakerNotes": "Cuarto, elegir, comunicar y revisar la acción: la amiga interviene sin burlas y solicita apoyo adulto. El error sería enumerar aspectos sin explicar sus relaciones o decidir solo para obtener aprobación del grupo.",
         "duracionSeg": 8
       },
       {
         "slideNumber": 14,
         "tituloMomento": "Explicación",
-        "didacticPurpose": "Síntesis y cierre del OA01",
+        "didacticPurpose": "Integrar sin / confundir",
         "visualPrompt": "",
-        "overlayText": "Síntesis y cierre del OA01",
-        "overlayTitle": "Síntesis y cierre del OA01",
-        "overlaySubtitle": "Sabiduría para crecer en armonía",
-        "vectorialOverlayPptx": "Síntesis y cierre del OA01",
-        "speakerNotes": "",
+        "overlayText": "Integrar sin / confundir",
+        "overlayTitle": "Integrar sin / confundir",
+        "overlaySubtitle": "Una decisión",
+        "vectorialOverlayPptx": "Integrar sin / confundir",
+        "speakerNotes": "En síntesis: detenerse, reunir información, evaluar consecuencias y actuar revisando. En la práctica aplicarás estos pasos a un caso distinto y explicarás cómo se conectan cuerpo, afectos y convivencia, sin forzar pistas ausentes.",
         "duracionSeg": 8
       }
     ]
@@ -314,7 +310,7 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
   "postQuestions": [
     {
       "context": "Comprobación 1",
-      "question": "- *Pregunta:* “¿Cuáles son los cuatro pasos del método sistemático de toma de decisiones responsables aprendido en esta clase?",
+      "question": "Pide explicar el último paso del ejemplo.",
       "expected": "",
       "success": "Respuesta precisa y fundamentada",
       "support": "Revisa el concepto clave expuesto",
@@ -324,69 +320,51 @@ export const CIENCIAS_7B_OA01_CLASE06: LessonData = {
   ],
   "practice": [
     {
-      "context": "Tomás (13 años) quiere mejorar su rendimiento en el equipo de atletismo. Un conocido mayor del barrio le ofrece unas pastillas que supuestamente \"aumentan la masa muscular y dan energía instantánea sin necesidad de entrenar tanto\", pidiéndole que no le cuente a sus padres ni al entrenador.\n- **Consigna:** Aplica el protocolo de 4 fases para explicar cómo debe actuar Tomás integrando las dimensiones biológica e intelectual de la sexualidad y el autocuidado.",
-      "question": "Resuelve la actividad en tu cuaderno.",
-      "expected": "“Fase 1 (Pausa): No ingerir ninguna pastilla. Fase 2 (Evidencia): Sustancias no reguladas causan graves daños cardíacos y hepáticos irreversibles. Fase 3 (Evaluación): Viola la ética deportiva y atenta contra la vida. Fase 4 (Acción): Rechazar firmemente y contárselo de inmediato a padres y entrenador.”",
-      "success": "Cumple el criterio formal del caso",
-      "support": "Revisa los datos del recurso",
-      "reveal": "“Fase 1 (Pausa): No ingerir ninguna pastilla. Fase 2 (Evidencia): Sustancias no reguladas causan graves daños cardíacos y hepáticos irreversibles. Fase 3 (Evaluación): Viola la ética deportiva y atenta contra la vida. Fase 4 (Acción): Rechazar firmemente y contárselo de inmediato a padres y entrenador.”",
-      "studentReveal": "“Fase 1 (Pausa): No ingerir ninguna pastilla. Fase 2 (Evidencia): Sustancias no reguladas causan graves daños cardíacos y hepáticos irreversibles. Fase 3 (Evaluación): Viola la ética deportiva y atenta contra la vida. Fase 4 (Acción): Rechazar firmemente y contárselo de inmediato a padres y entrenador.”"
-    },
-    {
-      "context": "Una pareja de adolescentes que lleva dos meses de pololeo recibe la presión constante de amigos que les dicen que *\"si no tienen relaciones íntimas de inmediato, su relación no es de verdad y fracasará\"*.\n- **Consigna:** Redacta una argumentación basada en la madurez y la autonomía para explicar por qué no deben apresurar decisiones íntimas por presión de pares.",
-      "question": "Resuelve la actividad en tu cuaderno.",
-      "expected": "“La intimidad es una decisión personalísima que exige madurez biológica, emocional y psicológica, respondiendo a convicciones propias y no a expectativas ajenas. Una relación sana se construye con diálogo, respeto a los tiempos de cada uno y proyectos compartidos.”",
-      "success": "Cumple el criterio formal del caso",
-      "support": "Revisa los datos del recurso",
-      "reveal": "“La intimidad es una decisión personalísima que exige madurez biológica, emocional y psicológica, respondiendo a convicciones propias y no a expectativas ajenas. Una relación sana se construye con diálogo, respeto a los tiempos de cada uno y proyectos compartidos.”",
-      "studentReveal": "“La intimidad es una decisión personalísima que exige madurez biológica, emocional y psicológica, respondiendo a convicciones propias y no a expectativas ajenas. Una relación sana se construye con diálogo, respeto a los tiempos de cada uno y proyectos compartidos.”"
-    },
-    {
-      "context": "*Situación ficticia nueva:* El Centro de Estudiantes convoca a un concurso para diseñar la campaña anual de autocuidado y convivencia escolar titulada: *\"Nuestra sexualidad: un camino integral de respeto, salud y proyecto de vida\"*. Se solicita que los afiches demuestren cómo se articulan las dimensiones biológica, afectiva, social, intelectual y valórica en las decisiones juveniles cotidianas.\n\n- **Actividad autónoma del estudiante:**\n  Escribe en tu cuaderno:\n  1. Diseña un lema principal para la campaña escolar (una frase motivadora e integradora).\n  2. Redacta una justificación de 4 a 6 líneas que vincule explícitamente el cuidado del cuerpo (dimensión biológica), la empatía con los sentimientos de los demás (dimensión afectiva) y la convivencia justa (dimensión social y valórica).\n  3. Explica por qué tener metas y un proyecto de vida a futuro es la mejor herramienta para tomar decisiones responsables frente a las presiones del entorno.\n\n- **Criterio privado del mentor (revelar solo después del intento):**\n  1. Lema integrador: Frase que articule salud, respeto y futuro (por ejemplo: \"Cuidar mi cuerpo, respetar tus emociones y construir juntos nuestro mañana\").\n  2. Justificación: Conexión coherente entre la salud física (hábitos sanos), el bienestar emocional (autoestima y empatía) y la justicia social (relaciones libres de acoso y discriminación).\n  3. Proyecto de vida: Demuestra que proyectar metas académicas y personales orienta la conducta presente hacia el autocuidado y previene riesgos que puedan truncar el desarrollo.\n\n- **Cómo valorar:** El estudiante articula al menos tres dimensiones en su propuesta, enfatiza la responsabilidad personal y fundamenta el valor del proyecto de vida.\n\n---",
+      "context": "En un campamento escolar, Javier nota que su cuerpo está cambiando y se siente inseguro con su apariencia. Sus amigos le ofrecen aceptación si posa sin polera para una foto que quieren publicar. Él dice que no quiere y teme quedar excluido. Una compañera quiere ayudar sin exponerlo más.",
       "question": "Realiza la transferencia autónoma con el nuevo recurso.",
-      "expected": "1. Lema integrador: Frase que articule salud, respeto y futuro (por ejemplo: \"Cuidar mi cuerpo, respetar tus emociones y construir juntos nuestro mañana\").",
+      "expected": "Biológico: cambios corporales; afectivo: inseguridad y temor; social: presión y amenaza de exclusión. La presión utiliza el deseo de pertenecer para ignorar el límite. Se identifica el problema, escucha la decisión, evalúa consecuencias y elige no tomar ni difundir la foto, acompañar y buscar apoyo adulto si continúa la presión. Se acepta otra respuesta segura y fundamentada.",
       "success": "Aplica el criterio de la clase de manera autónoma en un recurso nuevo",
-      "support": "El estudiante articula al menos tres dimensiones en su propuesta, enfatiza la responsabilidad personal y fundamenta el valor del proyecto de vida.",
-      "reveal": "1. Lema integrador: Frase que articule salud, respeto y futuro (por ejemplo: \"Cuidar mi cuerpo, respetar tus emociones y construir juntos nuestro mañana\").",
-      "studentReveal": "1. Lema integrador: Frase que articule salud, respeto y futuro (por ejemplo: \"Cuidar mi cuerpo, respetar tus emociones y construir juntos nuestro mañana\")."
+      "support": "Respuesta lograda si aplica el criterio, usa pistas y justifica sin inventar información. Parcial si identifica pistas pero no explica; ofrecer apoyo y nueva respuesta. Pendiente si la conclusión contradice el criterio; volver al ejemplo y usar la recuperación.",
+      "reveal": "Biológico: cambios corporales; afectivo: inseguridad y temor; social: presión y amenaza de exclusión. La presión utiliza el deseo de pertenecer para ignorar el límite. Se identifica el problema, escucha la decisión, evalúa consecuencias y elige no tomar ni difundir la foto, acompañar y buscar apoyo adulto si continúa la presión. Se acepta otra respuesta segura y fundamentada.",
+      "studentReveal": "Biológico: cambios corporales; afectivo: inseguridad y temor; social: presión y amenaza de exclusión. La presión utiliza el deseo de pertenecer para ignorar el límite. Se identifica el problema, escucha la decisión, evalúa consecuencias y elige no tomar ni difundir la foto, acompañar y buscar apoyo adulto si continúa la presión. Se acepta otra respuesta segura y fundamentada."
     }
   ],
   "mini": [
     {
       "id": "q1",
-      "q": "¿Cuál de las siguientes afirmaciones define con mayor precisión por qué la sexualidad humana se considera un fenómeno multidimensional e integral?",
+      "q": "Alex cambia de voz, siente vergüenza y recibe apoyo. ¿Qué explicación integra los aspectos?",
       "options": [
-        "A. Porque depende exclusivamente de la estatura y del peso corporal medidos en la consulta médica.",
-        "B. Porque articula de forma armónica aspectos biológicos, afectivos, sociales, intelectuales y valóricos a lo largo de toda la vida de la persona.",
-        "C. Porque solo tiene importancia durante los tres meses de vacaciones de verano.",
-        "D. Porque es un concepto que únicamente se aplica al estudio de organismos unicelulares como las bacterias."
+        "A. Todo corresponde a lo físico porque ocurrió durante la pubertad.",
+        "B. La voz es biológica, la vergüenza afectiva y el apoyo social; las acciones del grupo se relacionan con su bienestar.",
+        "C. La emoción permite conocer sin preguntar todo lo que Alex piensa.",
+        "D. Los aspectos no se relacionan porque tienen nombres distintos."
       ],
-      "correct": "B. Porque articula de forma armónica aspectos biológicos, afectivos, sociales, intelectuales y valóricos a lo largo de toda la vida de la persona.",
-      "fixExplain": "La sexualidad abarca la totalidad del ser humano: cuerpo, afectividad, vínculos sociales, pensamiento crítico y ética trascendente; no se restringe a un factor biológico aislado ni a una etapa temporal transitoria."
+      "correct": "B. La voz es biológica, la vergüenza afectiva y el apoyo social; las acciones del grupo se relacionan con su bienestar.",
+      "fixExplain": "Revisa la lectura y las evidencias del texto para fundamentar tu respuesta."
     },
     {
       "id": "q2",
-      "q": "Al enfrentar una situación de presión social donde un grupo de pares exige realizar una acción peligrosa o dañina para ser aceptado, ¿qué paso del método responsable demuestra autonomía ética y pensamiento crítico?",
+      "q": "¿Qué aplicación muestra los cuatro pasos de la herramienta?",
       "options": [
-        "A. Aceptar de inmediato para que nadie piense que tiene miedo o dudas.",
-        "B. Hacer una pausa reflexiva, analizar los riesgos reales para la salud y la integridad, y decidir con libertad protegiendo el bienestar personal y ajeno.",
-        "C. Culpar a los profesores de todo y huir de la escuela.",
-        "D. Exigir dinero a los compañeros a cambio de realizar la acción riesgosa."
+        "A. Actuar para conseguir aprobación y justificar después.",
+        "B. Pedir que el grupo decida sin considerar el límite personal.",
+        "C. Identificar la situación, reunir información, evaluar consecuencias y elegir revisando la acción.",
+        "D. Enumerar dimensiones y repetirlas sin comparar alternativas."
       ],
-      "correct": "B. Hacer una pausa reflexiva, analizar los riesgos reales para la salud y la integridad, y decidir con libertad protegiendo el bienestar personal y ajeno.",
-      "fixExplain": "La toma de decisiones responsable se basa en la autorregulación (pausa reflexiva), la evaluación objetiva de consecuencias (pensamiento crítico) y la autodeterminación ética frente a la coacción externa."
+      "correct": "C. Identificar la situación, reunir información, evaluar consecuencias y elegir revisando la acción.",
+      "fixExplain": "Revisa la lectura y las evidencias del texto para fundamentar tu respuesta."
     },
     {
       "id": "q3",
-      "q": "¿Cómo contribuye el proyecto de vida personal a la vivencia de una sexualidad saludable y responsable durante la adolescencia?",
+      "q": "En el campamento, Javier rechaza la foto y teme quedar fuera. ¿Qué respuesta está fundamentada?",
       "options": [
-        "A. Obligando a la persona a no tener amigos ni pasatiempos hasta que cumpla cuarenta años.",
-        "B. Permitiendo proyectar metas académicas, afectivas y vocacionales a futuro, lo que orienta las decisiones cotidianas hacia el autocuidado y la prevención de riesgos.",
-        "C. Garantizando que una persona nunca sienta emociones intensas ni dudas sobre el futuro.",
-        "D. Determinando por sorteo computacional qué carrera universitaria deberá estudiar obligatoriamente."
+        "A. Respetar la negativa, no difundir la foto y ofrecer apoyo sin culparlo.",
+        "B. Insistir porque la foto fortalecería su autoestima.",
+        "C. Publicar solo para el curso porque parece un grupo cercano.",
+        "D. Exigir que no sienta temor antes de ofrecerle ayuda."
       ],
-      "correct": "B. Permitiendo proyectar metas académicas, afectivas y vocacionales a futuro, lo que orienta las decisiones cotidianas hacia el autocuidado y la prevención de riesgos.",
-      "fixExplain": "El proyecto de vida dota de sentido a las acciones presentes: cuando un joven tiene metas y valores claros, evalúa sus decisiones con perspectiva de futuro, evitando conductas de riesgo que puedan truncar su desarrollo integral."
+      "correct": "A. Respetar la negativa, no difundir la foto y ofrecer apoyo sin culparlo.",
+      "fixExplain": "Revisa la lectura y las evidencias del texto para fundamentar tu respuesta."
     }
   ],
   "recovery": [],

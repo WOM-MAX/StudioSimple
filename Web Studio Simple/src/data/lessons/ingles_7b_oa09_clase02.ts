@@ -204,9 +204,9 @@ export const INGLES_7B_OA09_CLASE02: LessonData = {
   "conversationContext": "Diálogo guiado para profundizar en los elementos clave.",
   "formalization": {
     "title": "Explicación",
-    "concept": "Una situación",
+    "concept": "An opinion supported by the diary",
     "summary": "Consolidación de las ideas clave.",
-    "ideaClave": "Una situación",
+    "ideaClave": "An opinion supported by the diary",
     "dileIntro": "Ahora consolidaremos los aprendizajes esenciales.",
     "hazInstruction": "Registra en tu cuaderno el concepto principal.",
     "graphicPoster": "",
@@ -420,7 +420,7 @@ export const INGLES_7B_OA09_CLASE02: LessonData = {
   "summaryIdeas": [
     [
       "Idea central",
-      "Una situación"
+      "An opinion supported by the diary"
     ],
     [
       "Comprensión",
@@ -434,7 +434,7 @@ export const INGLES_7B_OA09_CLASE02: LessonData = {
   },
   "closure": {
     "congratulations": "Good work. You explained your answer with information from the resource.",
-    "nextClassPreview": "¡Nos vemos en la próxima lección!"
+    "nextClassPreview": "Próxima clase: Dates, times and explicit information"
   },
   "paso8_cierre": {
     "preguntaSintesis": "How can a reader agree and give support?",
