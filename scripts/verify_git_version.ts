@@ -9,6 +9,7 @@
  *  2: Error de conectividad o configuracion de Git.
  */
 import { execSync } from 'child_process';
+import * as path from 'path';
 
 interface GitStatusResult {
   branch: string;
@@ -23,14 +24,15 @@ interface GitStatusResult {
   stateDescription: string;
 }
 
-function getGitStatus(): GitStatusResult {
+function getGitStatus(targetDir: string = path.resolve(__dirname, '..')): GitStatusResult {
+  const execOptions = { encoding: 'utf8' as const, cwd: targetDir };
   try {
     // 1. Obtener rama actual
-    const branch = execSync('git rev-parse --abbrev-ref HEAD', { encoding: 'utf8' }).trim();
+    const branch = execSync('git rev-parse --abbrev-ref HEAD', execOptions).trim();
 
     // 2. Traer novedades remotas sin alterar working tree
     try {
-      execSync('git fetch origin', { stdio: 'pipe' });
+      execSync('git fetch origin', { stdio: 'pipe', cwd: targetDir });
     } catch {
       // Continuar si fetch remoto tiene advertencias menores pero registrar estado
     }
@@ -38,16 +40,16 @@ function getGitStatus(): GitStatusResult {
     // 3. Obtener tracking branch
     let trackingBranch = '';
     try {
-      trackingBranch = execSync('git rev-parse --abbrev-ref --symbolic-full-name @{u}', { encoding: 'utf8' }).trim();
+      trackingBranch = execSync('git rev-parse --abbrev-ref --symbolic-full-name @{u}', execOptions).trim();
     } catch {
       trackingBranch = `origin/${branch}`;
     }
 
     // 4. Hashes de commit
-    const localHash = execSync('git rev-parse --short HEAD', { encoding: 'utf8' }).trim();
+    const localHash = execSync('git rev-parse --short HEAD', execOptions).trim();
     let remoteHash = 'DESCONOCIDO';
     try {
-      remoteHash = execSync(`git rev-parse --short ${trackingBranch}`, { encoding: 'utf8' }).trim();
+      remoteHash = execSync(`git rev-parse --short ${trackingBranch}`, execOptions).trim();
     } catch {
       remoteHash = 'NO_EXISTE_EN_ORIGIN';
     }
@@ -57,7 +59,7 @@ function getGitStatus(): GitStatusResult {
     let behind = 0;
     if (remoteHash !== 'NO_EXISTE_EN_ORIGIN' && remoteHash !== 'DESCONOCIDO') {
       try {
-        const counts = execSync(`git rev-list --left-right --count HEAD...${trackingBranch}`, { encoding: 'utf8' }).trim();
+        const counts = execSync(`git rev-list --left-right --count HEAD...${trackingBranch}`, execOptions).trim();
         const parts = counts.split(/\s+/);
         ahead = parseInt(parts[0], 10) || 0;
         behind = parseInt(parts[1], 10) || 0;
@@ -67,7 +69,7 @@ function getGitStatus(): GitStatusResult {
     }
 
     // 6. Cambios en working tree
-    const porcelain = execSync('git status --porcelain', { encoding: 'utf8' }).trim();
+    const porcelain = execSync('git status --porcelain', execOptions).trim();
     const uncommittedFiles = porcelain ? porcelain.split('\n').filter(Boolean) : [];
     const hasUncommittedChanges = uncommittedFiles.length > 0;
 
@@ -111,7 +113,7 @@ function main() {
   const status = getGitStatus();
 
   console.log('================================================================');
-  console.log('🔍 VERIFICACION DE PARIDAD DE VERSIONES: PC vs GITHUB');
+  console.log('VERIFICACION DE PARIDAD DE VERSIONES: PC vs GITHUB');
   console.log('================================================================\n');
 
   console.log(`- Rama activa:          ${status.branch}`);
@@ -125,14 +127,14 @@ function main() {
 
   if (status.isSynchronized) {
     console.log('================================================================');
-    console.log('✅ ESTADO: 100% SINCRONIZADO — MISMA VERSION EN PC Y GITHUB');
-    console.log('   Puedes comenzar el trabajo de la sesion con total seguridad.');
+    console.log('ESTADO: 100% SINCRONIZADO: MISMA VERSION EN PC Y GITHUB');
+    console.log('Puedes comenzar el trabajo de la sesion con seguridad.');
     console.log('================================================================\n');
     process.exit(0);
   }
 
   console.log('================================================================');
-  console.log('⚠️  ALERTA DE DESALINEACION: PC Y GITHUB NO TIENEN LA MISMA VERSION');
+  console.log('ALERTA DE DESALINEACION: PC Y GITHUB NO TIENEN LA MISMA VERSION');
   console.log('================================================================\n');
 
   if (status.hasUncommittedChanges) {
@@ -145,7 +147,7 @@ function main() {
   }
 
   console.log('----------------------------------------------------------------');
-  console.log('📋 PROMPT AUTONOMO: OPCION 1 — ACTUALIZAR PC DESDE GITHUB (PULL)');
+  console.log('PROMPT AUTONOMO: OPCION 1: ACTUALIZAR PC DESDE GITHUB (PULL)');
   console.log('   (Usar si GitHub tiene la version mas reciente o de produccion)');
   console.log('----------------------------------------------------------------\n');
   console.log(`\`\`\`text
@@ -162,7 +164,7 @@ Haz todo con total autonomía.
 \`\`\`\n`);
 
   console.log('----------------------------------------------------------------');
-  console.log('📋 PROMPT AUTONOMO: OPCION 2 — ACTUALIZAR GITHUB DESDE PC (PUSH)');
+  console.log('PROMPT AUTONOMO: OPCION 2: ACTUALIZAR GITHUB DESDE PC (PUSH)');
   console.log('   (Usar si el trabajo relevante fue realizado en el PC local)');
   console.log('----------------------------------------------------------------\n');
   console.log(`\`\`\`text
@@ -180,7 +182,7 @@ Haz todo con total autonomía.
 
   if (status.ahead > 0 && status.behind > 0) {
     console.log('----------------------------------------------------------------');
-    console.log('📋 PROMPT AUTONOMO: OPCION 3 — RECONCILIACION BIDIRECCIONAL (REBASE/MERGE)');
+    console.log('PROMPT AUTONOMO: OPCION 3: RECONCILIACION BIDIRECCIONAL (REBASE/MERGE)');
     console.log('   (Usar cuando ambas ramas tienen commits diferentes que fusionar)');
     console.log('----------------------------------------------------------------\n');
     console.log(`\`\`\`text

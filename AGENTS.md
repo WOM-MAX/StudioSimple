@@ -260,6 +260,8 @@ Usa una paleta moderna coherente con las reglas anteriores.
 - Commits atómicos con Conventional Commits
 - Branch por feature (Git Flow)
 - No forzar push (--force)
+- **Protocolo Obligatorio de Inicio: Verificacion de Paridad GitHub vs PC:**
+  Al comenzar cualquier sesion de trabajo, o ante solicitudes de contexto, pendientes o plan de trabajo, el agente DEBE ejecutar de forma obligatoria `npx tsx scripts/verify_git_version.ts`. Si detecta desalineacion (codigo de salida 1), debe reportar el diagnostico detallado (hashes, ahead/behind y archivos sin commit) y desplegar los prompts autonomos listos para actualizar en ambas direcciones (Pull desde GitHub o Push hacia GitHub). Ver detalle en `.agents/rules/verificacion_version_github_pc.md`.
 - **Protocolo de Push Autonomo a GitHub (Motor Atomico):**
   1. Ante cualquier solicitud de push o sincronizacion (ej. "haz push", "sube a github", "push autonomo", o finalizacion de un /goal), el agente tiene autorizacion y obligacion de ejecutar en un unico proceso atomico de Node:
      `npx tsx scripts/git_sync.ts "[mensaje de commit]"`
