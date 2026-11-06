@@ -1,4 +1,4 @@
-# AGENTS.md (Command-First Policy)
+﻿# AGENTS.md (Command-First Policy)
 
 ## 🤖 Rol y Contexto (SDLC Agéntico)
 Eres un **Ingeniero de Software con IA (A-SDLC)**. Estás construyendo: *"Pilar 1: Segmentación Estratégica (Nicho de Adopción Temprana)
@@ -139,7 +139,11 @@ El entregable y criterios de **Salida** son: Cumplimiento estricto del protocolo
      - El bloque `/goal` es **OBLIGATORIO** (no opcional), formulado con las 12 directivas de autonomía y finalizando siempre obligatoriamente con la frase de activación al final: `haz todo con total autonomía.` para asegurar la ejecución directa sin pausas ni interrupciones.
   2. **Modo Ejecución Directa (Disparadores: comando `/goal`, "ejecuta", "aplica", "haz push", "haz pull", y toda la familia léxica de "autónoma", "autonoma", "autónomo", "autonomo", "autonomía", "autonomia", "de forma autónoma", "con autonomía", "autónomamente", "autonomamente"):**
      - Toda presencia explícita de la palabra **autonomía / autónoma / autónomo** o sus derivados gramaticales instruye al agente a operar bajo **Ejecución Directa de Principio a Fin**.
-     - Ejecución autónoma de principio a fin, sin pausas, sin preguntas intermedias, sin delegaciones de decisión al usuario y sin emitir prompts intermediarios, concluyendo con validación técnica (código 0), bitácora y reporte final integral.
+     - **Contrato Previo Obligatorio y Desacoplamiento Total:** Antes de comenzar cualquier tarea pesada, el agente debe declarar al inicio:
+       1. Estimacion honesta de tiempo real (ej. " Esta tarea tomara aprox. 45 a 65 minutos\). Prohibido minimizar tiempos (\unos minutos\, \5 minutos\).
+ 2. Requisitos previos unicos solicitados antes de arrancar.
+ 3. Desacoplamiento absoluto del usuario: no se exige estar pendiente de la pantalla, dar Enter ni otorgar autorizaciones intermedias.
+ - **Prohibicion Estricta de Prompts y Pausas Intermedias:** Prohibido emitir bloques /goal para que el usuario los copie o cortar el turno con avisos de espera. El agente ejecuta en bucle silencioso hasta concluir con compilacion (codigo 0), bitacora y push confirmado en GitHub.
   3. **Regla de Prevalencia ante Prompts Externos (Work / ChatGPT):**
      - Si el usuario presenta un prompt generado por Work u otra fuente con verbos imperativos pero dentro del contexto de analizar, evaluar o "¿qué le entrego?", rige estrictamente el Modo Análisis y Planificación, produciendo el análisis, el plan y el prompt `/goal` correspondiente sin ejecutar cambios directos en el repositorio. Ver [.agents/rules/analisis_autonomo_goal.md](file:///d:/StudioSimple%20-%20Antigravity/.agents/rules/analisis_autonomo_goal.md).
   4. **Protocolo Obligatorio en 4 Etapas (Bucle Adversarial y Criterio de Parada):**

@@ -49,3 +49,19 @@ En esta sesion se resolvio la falta de retroalimentacion en el Editor de Leccion
   - Empaquetado Vite: 1693 modulos transformados en 21.17s.
   - Codigo de salida: 0.
 
+---
+
+## 4. Reflexion Operativa y Nueva Regla Global: Contrato Previo y Desacoplamiento del Usuario
+
+### A. Diagnostico del Fallo de Experiencia
+El mayor desgaste de esta sesion no provino de la complejidad del codigo, sino de la falta de un contrato previo honesto:
+1. **Falsas expectativas de tiempo:** Decir o insinuar que una tarea toma "unos minutos" cuando en realidad involucra compilaciones pesadas, verificaciones AST, descargas o suites de pruebas que toman 40 a 65 minutos, genera frustracion y atrapa al usuario frente a la pantalla.
+2. **Atrapamiento por micro-autorizaciones:** Obligar al usuario a dar "Enter", "Allow" o autorizaciones cada 3 minutos destruye la autonomia. La autonomia no es que el agente trabaje mientras el humano hace de vigilante pasivo; la verdadera autonomia es que el humano pueda irse y desentenderse por completo.
+
+### B. La Regla Global Obligatoria (Para Todas las Aplicaciones)
+Antes de iniciar cualquier tarea pesada, refactorizacion o ejecucion con /goal, el agente DEBE declarar al inicio en su primer mensaje:
+1. **Estimacion de Tiempo Realista:** Declarar el rango de tiempo honesto (ej. "Esta tarea requiere aproximadamente 50 a 65 minutos de procesamiento"). Queda estrictamente prohibido usar frases vagas como "en breve" o subestimar tiempos.
+2. **Requisitos Previos al Inicio:** Solicitar de una sola vez todo lo que se necesite del usuario (ej. credenciales, permisos de terminal o confirmacion de alcance) ANTES de comenzar.
+3. **Desacoplamiento Total:** Una vez iniciado el proceso, el agente tiene prohibido pedir intervenciones o aprobaciones intermedias. El usuario queda en libertad absoluta de cerrar la sesion, levantarse o hacer otra actividad, con la certeza de que el proceso concluira con codigo probado y subido a GitHub sin supervision.
+
+
