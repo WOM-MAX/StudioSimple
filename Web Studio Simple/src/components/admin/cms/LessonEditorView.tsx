@@ -61,7 +61,8 @@ import {
   getLastLessonLoadIssue,
   normalizeGrade,
   normalizeSubject,
-  normalizeOa
+  normalizeOa,
+  saveCustomLessonToNeon
 } from '../../../lib/lesson-repository';
 import { downloadLessonPromptFile } from '../../../lib/prompt-export';
 import { resolveVideoSource } from '../../../lib/video-utils';
@@ -348,6 +349,15 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
     const ok = persistEditorLesson(candidate);
     if (ok) {
       setSaveStatus('Lección guardada con éxito en este navegador.');
+      if (typeof window !== 'undefined' && typeof fetch === 'function' && typeof saveCustomLessonToNeon === 'function') {
+        saveCustomLessonToNeon(selectedGrade, selectedSubject, currentOA.oa, selectedLessonNum, candidate)
+          .then((cloudRes) => {
+            if (cloudRes.ok) {
+              setSaveStatus('Lección guardada con éxito en la nube (Neon DB) y en este navegador.');
+            }
+          })
+          .catch(() => {});
+      }
       setTimeout(() => setSaveStatus(null), 3500);
     }
     return ok;

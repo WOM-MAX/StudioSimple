@@ -813,7 +813,218 @@ const server = http.createServer(async (req, res) => {
       }
     }
 
-    // 1b-2. Familias Registradas y Suscripciones (Neon DB + Fallback disco + Fusion Inteligente)
+    // -------------------------------------------------------------------------
+    // 1b-2. LECCIONES PERSONALIZADAS (Persistencia Centralizada en Neon DB)
+    // -------------------------------------------------------------------------
+    if (pathname.startsWith('/api/lessons')) {
+      const normalizeGrade = (g) => String(g || '').trim();
+      const normalizeSubject = (s) => String(s || '').trim();
+      const normalizeOa = (o) => String(o || '').trim().toUpperCase();
+      const isProtected = (g, s, o) => {
+        const gradeKey = String(g || '').trim();
+        const subjKey = String(s || '').toLowerCase().trim();
+        const oaKey = String(o || '').toLowerCase().trim();
+        return (gradeKey === '110-7' || gradeKey === '7') && 
+               (subjKey === 'matematica' || subjKey === 'matemática' || subjKey === 'mat') && 
+               oaKey === 'oa01';
+      };
+
+      // POST /api/lessons: Guardar o actualizar leccion personalizada en Neon
+      if (method === 'POST') {
+        try {
+          const body = await readJsonBody(req);
+          const { grade, subject, oaCode, lessonNumber, title, payload, authorEmail } = body;
+
+          if (!grade || !subject || !oaCode || !lessonNumber || !payload) {
+            res.writeHead(400);
+            res.end(JSON.stringify({ 
+              success: false, 
+              message: 'Campos obligatorios faltantes: grade, subject, oaCode, lessonNumber, payload' 
+            }));
+            return;
+          }
+
+          if (isProtected(grade, subject, oaCode)) {
+            res.writeHead(403);
+            res.end(JSON.stringify({ 
+              success: false, 
+              message: 'Matemática 7° OA01 es el Patrón de Oro inmutable y está protegido contra modificaciones en base de datos.' 
+            }));
+            return;
+          }
+
+          const numLesson = parseInt(lessonNumber, 10);
+          const savedLesson = await withPrismaRetry(async (prisma) => {
+            return await prisma.customLesson.upsert({
+              where: {
+                grade_subject_oaCode_lessonNumber: {
+                  grade: normalizeGrade(grade),
+                  subject: normalizeSubject(subject),
+                  oaCode: normalizeOa(oaCode),
+                  lessonNumber: numLesson
+                }
+              },
+              update: {
+                title: String(title || payload.title || payload.metadata?.lessonTitle || `Clase ${numLesson}`).trim(),
+                payload: payload,
+                authorEmail: authorEmail ? String(authorEmail).trim() : null
+              },
+              create: {
+                grade: normalizeGrade(grade),
+                subject: normalizeSubject(subject),
+                oaCode: normalizeOa(oaCode),
+                lessonNumber: numLesson,
+                title: String(title || payload.title || payload.metadata?.lessonTitle || `Clase ${numLesson}`).trim(),
+                payload: payload,
+                authorEmail: authorEmail ? String(authorEmail).trim() : null
+              }
+            });
+          });
+
+          res.writeHead(200);
+          res.end(JSON.stringify({ 
+            success: true, 
+            message: 'Lección guardada exitosamente en Neon PostgreSQL',
+            id: savedLesson.id,
+            updatedAt: savedLesson.updatedAt 
+          }));
+        } catch (err) {
+          console.error('[API /api/lessons POST] Error:', err);
+          res.writeHead(500);
+          res.end(JSON.stringify({ success: false, error: err.message }));
+        }
+        return;
+      }
+
+      // GET /api/lessons: Obtener leccion especifica o listar lecciones guardadas
+      if (method === 'GET') {
+        try {
+          let grade = url.searchParams.get('grade');
+          let subject = url.searchParams.get('subject');
+          let oaCode = url.searchParams.get('oaCode') || url.searchParams.get('oa');
+          let lessonNumber = url.searchParams.get('lessonNumber') || url.searchParams.get('lesson');
+
+          const pathSegments = pathname.replace(/^\/api\/lessons\/?/, '').split('/').filter(Boolean);
+          if (pathSegments.length >= 4) {
+            grade = decodeURIComponent(pathSegments[0]);
+            subject = decodeURIComponent(pathSegments[1]);
+            oaCode = decodeURIComponent(pathSegments[2]);
+            lessonNumber = decodeURIComponent(pathSegments[3]);
+          }
+
+          if (grade && subject && oaCode && lessonNumber) {
+            const numLesson = parseInt(lessonNumber, 10);
+            const found = await withPrismaRetry(async (prisma) => {
+              return await prisma.customLesson.findUnique({
+                where: {
+                  grade_subject_oaCode_lessonNumber: {
+                    grade: normalizeGrade(grade),
+                    subject: normalizeSubject(subject),
+                    oaCode: normalizeOa(oaCode),
+                    lessonNumber: numLesson
+                  }
+                }
+              });
+            });
+
+            if (!found) {
+              res.writeHead(404);
+              res.end(JSON.stringify({ 
+                success: false, 
+                message: 'No existe lección personalizada en Neon para estos parámetros.' 
+              }));
+              return;
+            }
+
+            res.writeHead(200);
+            res.end(JSON.stringify({ 
+              success: true, 
+              lesson: found.payload,
+              title: found.title,
+              updatedAt: found.updatedAt,
+              authorEmail: found.authorEmail
+            }));
+            return;
+          }
+
+          const list = await withPrismaRetry(async (prisma) => {
+            return await prisma.customLesson.findMany({
+              select: {
+                id: true,
+                grade: true,
+                subject: true,
+                oaCode: true,
+                lessonNumber: true,
+                title: true,
+                authorEmail: true,
+                updatedAt: true
+              },
+              orderBy: { updatedAt: 'desc' }
+            });
+          });
+
+          res.writeHead(200);
+          res.end(JSON.stringify({ success: true, count: list.length, lessons: list }));
+        } catch (err) {
+          console.error('[API /api/lessons GET] Error:', err);
+          res.writeHead(500);
+          res.end(JSON.stringify({ success: false, error: err.message }));
+        }
+        return;
+      }
+
+      // DELETE /api/lessons: Eliminar leccion de Neon (restaurar a fabrica)
+      if (method === 'DELETE') {
+        try {
+          let grade = url.searchParams.get('grade');
+          let subject = url.searchParams.get('subject');
+          let oaCode = url.searchParams.get('oaCode') || url.searchParams.get('oa');
+          let lessonNumber = url.searchParams.get('lessonNumber') || url.searchParams.get('lesson');
+
+          const pathSegments = pathname.replace(/^\/api\/lessons\/?/, '').split('/').filter(Boolean);
+          if (pathSegments.length >= 4) {
+            grade = decodeURIComponent(pathSegments[0]);
+            subject = decodeURIComponent(pathSegments[1]);
+            oaCode = decodeURIComponent(pathSegments[2]);
+            lessonNumber = decodeURIComponent(pathSegments[3]);
+          }
+
+          if (!grade || !subject || !oaCode || !lessonNumber) {
+            res.writeHead(400);
+            res.end(JSON.stringify({ 
+              success: false, 
+              message: 'Parámetros insuficientes para eliminar. Se requiere grade, subject, oaCode, lessonNumber.' 
+            }));
+            return;
+          }
+
+          const numLesson = parseInt(lessonNumber, 10);
+          const deleteResult = await withPrismaRetry(async (prisma) => {
+            return await prisma.customLesson.deleteMany({
+              where: {
+                grade: normalizeGrade(grade),
+                subject: normalizeSubject(subject),
+                oaCode: normalizeOa(oaCode),
+                lessonNumber: numLesson
+              }
+            });
+          });
+
+          res.writeHead(200);
+          res.end(JSON.stringify({ 
+            success: true, 
+            message: `Lección personalizada eliminada de Neon (${deleteResult.count} registros eliminados). Restaurada a fábrica.` 
+          }));
+        } catch (err) {
+          console.error('[API /api/lessons DELETE] Error:', err);
+          res.writeHead(500);
+          res.end(JSON.stringify({ success: false, error: err.message }));
+        }
+        return;
+      }
+    }
+
+    // 1b-3. Familias Registradas y Suscripciones (Neon DB + Fallback disco + Fusion Inteligente)
     if (pathname === '/api/admin/families' && method === 'GET') {
       try {
         let dbFamilies = [];

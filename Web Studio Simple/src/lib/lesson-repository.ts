@@ -85,6 +85,41 @@ export async function initializeInjectedLessons(): Promise<InjectedOAPackage[]> 
     cachedInjectedPackages = [...localPackages, ...customPackages];
   }
 
+  // Sincronizacion transparente de lecciones editadas desde Neon DB
+  if (typeof window !== 'undefined' && typeof fetch === 'function') {
+    try {
+      const neonRes = await fetch('/api/lessons');
+      if (neonRes.ok) {
+        const neonData = await neonRes.json();
+        if (neonData.success && Array.isArray(neonData.lessons) && neonData.lessons.length > 0) {
+          const raw = localStorage.getItem(CUSTOM_PLAYER_LESSONS_KEY);
+          const playerMap = raw ? JSON.parse(raw) : {};
+          let updatedAny = false;
+          for (const item of neonData.lessons) {
+            const key = getLessonCanonicalKey(item.grade, item.subject, item.oaCode, item.lessonNumber);
+            if (!playerMap[key]) {
+              try {
+                const oneRes = await fetch(`/api/lessons?grade=${encodeURIComponent(item.grade)}&subject=${encodeURIComponent(item.subject)}&oa=${encodeURIComponent(item.oaCode)}&lesson=${item.lessonNumber}`);
+                if (oneRes.ok) {
+                  const oneData = await oneRes.json();
+                  if (oneData.success && oneData.lesson) {
+                    playerMap[key] = oneData.lesson;
+                    updatedAny = true;
+                  }
+                }
+              } catch {}
+            }
+          }
+          if (updatedAny) {
+            localStorage.setItem(CUSTOM_PLAYER_LESSONS_KEY, JSON.stringify(playerMap));
+          }
+        }
+      }
+    } catch {
+      // Continuar con almacenamiento local si la red no responde
+    }
+  }
+
   return cachedInjectedPackages;
 }
 
@@ -316,6 +351,70 @@ export function resetCustomPlayerLesson(
     }
   } catch (e) {
     console.error('Error al restablecer lección personalizada:', e);
+  }
+
+  // Eliminar en paralelo de Neon DB si hay conexion disponible
+  if (typeof window !== 'undefined' && typeof fetch === 'function') {
+    deleteCustomLessonFromNeon(grade, subject, oaCode, lessonNumber).catch(() => {});
+  }
+}
+
+export async function saveCustomLessonToNeon(
+  grade: string,
+  subject: string,
+  oaCode: string,
+  lessonNumber: number,
+  lessonData: PlayerLessonData,
+  authorEmail?: string
+): Promise<{ ok: boolean; error?: string }> {
+  if (isProtectedSelection(grade, subject, oaCode)) {
+    return { ok: false, error: 'Matemática 7° OA01 es un patrón de oro inmutable protegido.' };
+  }
+  if (typeof window === 'undefined' || typeof fetch !== 'function') {
+    return { ok: false, error: 'Entorno de red no disponible' };
+  }
+  try {
+    const res = await fetch('/api/lessons', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        grade,
+        subject,
+        oaCode,
+        lessonNumber,
+        title: lessonData.metadata?.lessonTitle || (lessonData as any).title || `Clase ${lessonNumber}`,
+        payload: lessonData,
+        authorEmail
+      })
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) {
+      return { ok: false, error: data.message || `Error HTTP ${res.status}` };
+    }
+    return { ok: Boolean(data.success), error: data.error };
+  } catch (err: any) {
+    return { ok: false, error: err.message || 'Error de red al conectar con Neon DB' };
+  }
+}
+
+export async function deleteCustomLessonFromNeon(
+  grade: string,
+  subject: string,
+  oaCode: string,
+  lessonNumber: number
+): Promise<{ ok: boolean; error?: string }> {
+  if (isProtectedSelection(grade, subject, oaCode)) return { ok: false, error: 'Protegido' };
+  if (typeof window === 'undefined' || typeof fetch !== 'function') {
+    return { ok: false, error: 'Entorno de red no disponible' };
+  }
+  try {
+    const res = await fetch(`/api/lessons?grade=${encodeURIComponent(grade)}&subject=${encodeURIComponent(subject)}&oa=${encodeURIComponent(oaCode)}&lesson=${lessonNumber}`, {
+      method: 'DELETE'
+    });
+    const data = await res.json().catch(() => ({}));
+    return { ok: res.ok && Boolean(data.success), error: data.message || data.error };
+  } catch (err: any) {
+    return { ok: false, error: err.message };
   }
 }
 

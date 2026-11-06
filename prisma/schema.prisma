@@ -106,3 +106,19 @@ model SystemSetting {
   value     Json
   updatedAt DateTime @updatedAt
 }
+
+model CustomLesson {
+  id           String   @id @default(uuid())
+  grade        String
+  subject      String
+  oaCode       String
+  lessonNumber Int
+  title        String
+  payload      Json
+  authorEmail  String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@unique([grade, subject, oaCode, lessonNumber])
+  @@index([grade, subject, oaCode])
+}
