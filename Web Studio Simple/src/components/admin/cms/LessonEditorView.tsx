@@ -28,7 +28,9 @@ import {
   ImageIcon,
   ArrowDown,
   Info,
-  AlertTriangle
+  AlertTriangle,
+  Lock,
+  X
 } from 'lucide-react';
 import { useApp } from '../../../context/AppContext';
 import {
@@ -55,6 +57,7 @@ import {
   saveCustomPlayerLesson,
   resetCustomPlayerLesson,
   isPlayerLessonCustomized,
+  isProtectedSelection,
   getLastLessonLoadIssue,
   normalizeGrade,
   normalizeSubject,
@@ -172,6 +175,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
   const [videoSaveFeedback, setVideoSaveFeedback] = useState<'hook' | 'formalization' | null>(null);
   const [validationErrors, setValidationErrors] = useState<CanonicalValidationDetail[] | null>(null);
   const [validationErrorMsg, setValidationErrorMsg] = useState<string | null>(null);
+  const [showValidationModal, setShowValidationModal] = useState<boolean>(false);
 
   // Referencias para auto-guardado e inmunidad contra reactividad destructiva
   const lessonDataRef = useRef<LessonData | null>(lessonData);
@@ -237,6 +241,9 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
     return availableOAs.find((c) => c.id === selectedOAId) || availableOAs[0];
   }, [availableOAs, selectedOAId]);
 
+  // Identificar si la lección actual pertenece a un paquete normativo protegido (patrón de oro)
+  const isProtected = isProtectedSelection(selectedGrade, selectedSubject, currentOA?.oa || '');
+
   // Actualizar selectedOAId si cambia la lista
   useEffect(() => {
     if (availableOAs.length > 0 && (!selectedOAId || !availableOAs.some((o) => o.id === selectedOAId))) {
@@ -277,9 +284,13 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
       setValidationErrorMsg(result.error || 'No se guardó la edición.');
       setValidationErrors(result.validation?.details || []);
       setSaveStatus(null);
+      setShowValidationModal(true);
       return false;
     }
-    setValidationErrorMsg(null); setValidationErrors(null); setIsCustom(true);
+    setValidationErrorMsg(null);
+    setValidationErrors(null);
+    setShowValidationModal(false);
+    setIsCustom(true);
     return true;
   };
   const canLeaveCurrentLesson = (): boolean => {
@@ -326,6 +337,11 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
 
   // Guardar cambios directamente en el almacenamiento unificado de aula
   const handleSaveLesson = (): boolean => {
+    if (isProtected) {
+      setValidationErrorMsg('Matemática 7° Básico OA 01 es un patrón de oro canónico protegido. Las ediciones en el navegador están deshabilitadas por diseño normativo.');
+      setShowValidationModal(true);
+      return false;
+    }
     const candidate = lessonDataRef.current || lessonData;
     if (!candidate || !currentOA) return false;
     const ok = persistEditorLesson(candidate);
@@ -399,6 +415,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
     if (!validation.isValid) {
       setValidationErrorMsg(validation.error || 'No es posible probar en aula: la lección contiene discrepancias canónicas.');
       setValidationErrors(validation.details || []);
+      setShowValidationModal(true);
       return;
     }
 
@@ -608,7 +625,12 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
               <h1 className="text-xl font-black text-slate-900 tracking-tight">
                 Editor Canónico de Lecciones
               </h1>
-              {isCustom ? (
+              {isProtected ? (
+                <span className="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase bg-amber-100 text-amber-900 border border-amber-300 flex items-center gap-1 shadow-xs">
+                  <Lock size={11} className="text-amber-800" />
+                  Patrón de Oro Protegido (Solo Lectura)
+                </span>
+              ) : isCustom ? (
                 <span className="px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase bg-amber-50 text-amber-800 border border-amber-300">
                   Modificada por Mentor
                 </span>
@@ -627,11 +649,17 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
           <div className="flex flex-wrap items-center gap-2">
             <button
               type="button"
+              disabled={isProtected}
               onClick={handleSaveLesson}
-              className="px-4 py-2.5 rounded-xl bg-[#EE751C] hover:bg-[#d96512] text-white text-xs font-black flex items-center gap-1.5 shadow-md shadow-[#EE751C]/20 transition-all cursor-pointer"
+              className={`px-4 py-2.5 rounded-xl text-xs font-black flex items-center gap-1.5 transition-all ${
+                isProtected
+                  ? 'bg-slate-100 text-slate-400 border border-slate-300/80 cursor-not-allowed shadow-none'
+                  : 'bg-[#EE751C] hover:bg-[#d96512] text-white shadow-md shadow-[#EE751C]/20 cursor-pointer'
+              }`}
+              title={isProtected ? 'Matemática OA01 es un patrón de oro inmutable: protegida contra edición en la web' : 'Guardar Cambios'}
             >
-              <Save size={15} />
-              <span>Guardar Cambios</span>
+              {isProtected ? <Lock size={15} /> : <Save size={15} />}
+              <span>{isProtected ? 'Protegido (Solo Lectura)' : 'Guardar Cambios'}</span>
             </button>
 
             <button
@@ -686,6 +714,33 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
             )}
           </div>
         </div>
+
+        {/* Banner Informativo de Lección Protegida (Patrón de Oro Canónico) */}
+        {isProtected && (
+          <div className="p-4 rounded-2xl bg-gradient-to-r from-amber-50 via-amber-50/90 to-amber-100/50 border border-amber-300 text-amber-950 text-xs shadow-xs animate-fade-in">
+            <div className="flex items-start gap-3">
+              <div className="p-2 rounded-xl bg-amber-200 text-amber-900 shrink-0 mt-0.5 shadow-xs">
+                <Lock size={18} />
+              </div>
+              <div className="space-y-1">
+                <div className="flex items-center gap-2">
+                  <h4 className="font-black text-amber-950 text-xs uppercase tracking-wide">
+                    Lección Protegida (Patrón de Oro Canónico · Solo Lectura)
+                  </h4>
+                  <span className="px-2 py-0.5 rounded-md text-[10px] font-bold bg-amber-200 text-amber-900 border border-amber-300">
+                    PROTEGIDO_NO_INTERVENIDO
+                  </span>
+                </div>
+                <p className="text-amber-900 text-[11px] leading-relaxed">
+                  <strong>Matemática 7° Básico OA 01</strong> es la referencia matriz inmutable del proyecto. El guardado en navegador está deshabilitado por diseño normativo para evitar descalibraciones en la calibración curricular.
+                </p>
+                <p className="text-amber-800 text-[11px] leading-relaxed">
+                  Para aplicar modificaciones oficiales a esta lección, edita directamente su archivo fuente TypeScript (<code className="font-mono text-amber-950 font-bold bg-amber-200/60 px-1.5 py-0.5 rounded">Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase{String(selectedLessonNum).padStart(2, '0')}.ts</code>) con revisión y commit en Git.
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Notificación de Error Canónico */}
         {validationErrorMsg && (
@@ -3963,6 +4018,104 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
           )}
         </div>
       </div>
+
+      {/* Modal de Validación Canónica y Estado Protegido */}
+      {showValidationModal && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-fade-in"
+          role="dialog"
+          aria-modal="true"
+        >
+          <div className="bg-white rounded-3xl border-2 border-rose-300 shadow-2xl max-w-2xl w-full max-h-[85vh] flex flex-col overflow-hidden animate-scale-up">
+            {/* Modal Header */}
+            <div className="p-5 bg-rose-50 border-b border-rose-200 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="p-2.5 rounded-xl bg-rose-200 text-rose-800 shrink-0">
+                  <AlertTriangle size={20} />
+                </div>
+                <div>
+                  <h3 className="text-sm font-black text-rose-950 uppercase tracking-wide">
+                    {isProtected ? 'Lección Protegida: Guardado Bloqueado' : 'Validación Canónica: Operación Bloqueada'}
+                  </h3>
+                  <p className="text-xs text-rose-800 font-semibold mt-0.5">
+                    {validationErrorMsg || 'La lección no cumple con los requisitos canónicos vigentes.'}
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setShowValidationModal(false)}
+                className="text-slate-400 hover:text-slate-700 p-1.5 rounded-xl hover:bg-white/80 transition-colors cursor-pointer"
+                title="Cerrar ventana"
+              >
+                <X size={18} />
+              </button>
+            </div>
+
+            {/* Modal Body */}
+            <div className="p-6 overflow-y-auto space-y-4 text-xs text-slate-700">
+              {isProtected ? (
+                <div className="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-amber-900 space-y-2">
+                  <div className="flex items-center gap-2 font-bold text-amber-950">
+                    <Lock size={16} />
+                    <span>Patrón de Oro Normativo (PROTEGIDO_NO_INTERVENIDO)</span>
+                  </div>
+                  <p className="leading-relaxed text-[11px]">
+                    <strong>Matemática 7° Básico OA 01</strong> es la lección de referencia matriz con la que se contrastan y auditan todas las demás asignaturas. Para evitar alteraciones involuntarias en el navegador, la persistencia en el almacenamiento web está deshabilitada.
+                  </p>
+                  <p className="leading-relaxed text-[11px]">
+                    Si requieres actualizar su contenido legítimamente, modifica de manera directa su archivo fuente en <code className="bg-amber-100 font-mono text-amber-950 px-1 py-0.5 rounded font-bold">Web Studio Simple/src/data/lessons/matematica_7b_oa01_clase{String(selectedLessonNum).padStart(2, '0')}.ts</code>.
+                  </p>
+                </div>
+              ) : (
+                <>
+                  <p className="text-slate-600 leading-relaxed">
+                    Para que el aula interactiva, el generador DOCX y los guiones de video funcionen de forma consistente, cada lección editada debe respetar la estructura canónica oficial. Se detectaron las siguientes discrepancias que impiden guardar:
+                  </p>
+
+                  {validationErrors && validationErrors.length > 0 ? (
+                    <div className="rounded-2xl border border-rose-200 overflow-hidden shadow-xs">
+                      <table className="w-full text-left text-xs">
+                        <thead className="bg-rose-100/70 text-rose-950 font-bold border-b border-rose-200">
+                          <tr>
+                            <th className="py-2.5 px-3">Campo Afectado</th>
+                            <th className="py-2.5 px-3">Requisito Oficial</th>
+                            <th className="py-2.5 px-3">Valor Actual en Editor</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-rose-100">
+                          {validationErrors.map((err, idx) => (
+                            <tr key={idx} className="hover:bg-rose-50/50">
+                              <td className="py-2 px-3 font-bold text-rose-900 font-mono text-[11px]">{err.field}</td>
+                              <td className="py-2 px-3 text-emerald-800 bg-emerald-50/40 font-mono text-[11px]">{err.expected}</td>
+                              <td className="py-2 px-3 text-rose-700 bg-rose-50/40 font-mono text-[11px]">{err.found}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  ) : (
+                    <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-600">
+                      Revisa los metadatos de la lección para asegurar que los títulos oficiales, la cantidad de preguntas o las alternativas correspondan al estándar canónico.
+                    </div>
+                  )}
+                </>
+              )}
+            </div>
+
+            {/* Modal Footer */}
+            <div className="p-4 bg-slate-50 border-t border-slate-200 flex items-center justify-end gap-2">
+              <button
+                type="button"
+                onClick={() => setShowValidationModal(false)}
+                className="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-900 text-white text-xs font-bold transition-all cursor-pointer shadow-xs"
+              >
+                Entendido, Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

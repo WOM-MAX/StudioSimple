@@ -245,7 +245,7 @@ export function findCanonicalFactoryLesson(
 export interface LessonSaveResult { ok: boolean; error?: string; validation?: CanonicalValidationResult; }
 let lastLessonLoadIssue: CanonicalValidationResult | null = null;
 export function getLastLessonLoadIssue() { return lastLessonLoadIssue; }
-function isProtectedSelection(grade: string, subject: string, oa: string): boolean {
+export function isProtectedSelection(grade: string, subject: string, oa: string): boolean {
   return normalizeGrade(grade) === '7' && normalizeSubject(subject) === 'mat' && normalizeOa(oa) === 'oa1';
 }
 

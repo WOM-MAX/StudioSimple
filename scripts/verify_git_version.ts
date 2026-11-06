@@ -10,6 +10,26 @@
  */
 import { execSync } from 'child_process';
 import * as path from 'path';
+import * as fs from 'fs';
+
+function getGitBin(): string {
+  const candidates = [
+    'git',
+    'C:\\Program Files\\Git\\cmd\\git.exe',
+    'C:\\Program Files\\Git\\mingw64\\bin\\git.exe'
+  ];
+  for (const c of candidates) {
+    if (c === 'git') {
+      try {
+        execSync('git --version', { stdio: 'ignore' });
+        return 'git';
+      } catch {}
+    } else if (fs.existsSync(c)) {
+      return `"${c}"`;
+    }
+  }
+  return 'git';
+}
 
 interface GitStatusResult {
   branch: string;
@@ -26,13 +46,14 @@ interface GitStatusResult {
 
 function getGitStatus(targetDir: string = path.resolve(__dirname, '..')): GitStatusResult {
   const execOptions = { encoding: 'utf8' as const, cwd: targetDir };
+  const git = getGitBin();
   try {
     // 1. Obtener rama actual
-    const branch = execSync('git rev-parse --abbrev-ref HEAD', execOptions).trim();
+    const branch = execSync(`${git} rev-parse --abbrev-ref HEAD`, execOptions).trim();
 
     // 2. Traer novedades remotas sin alterar working tree
     try {
-      execSync('git fetch origin', { stdio: 'pipe', cwd: targetDir });
+      execSync(`${git} fetch origin`, { stdio: 'pipe', cwd: targetDir });
     } catch {
       // Continuar si fetch remoto tiene advertencias menores pero registrar estado
     }
@@ -40,16 +61,16 @@ function getGitStatus(targetDir: string = path.resolve(__dirname, '..')): GitSta
     // 3. Obtener tracking branch
     let trackingBranch = '';
     try {
-      trackingBranch = execSync('git rev-parse --abbrev-ref --symbolic-full-name @{u}', execOptions).trim();
+      trackingBranch = execSync(`${git} rev-parse --abbrev-ref --symbolic-full-name @{u}`, execOptions).trim();
     } catch {
       trackingBranch = `origin/${branch}`;
     }
 
     // 4. Hashes de commit
-    const localHash = execSync('git rev-parse --short HEAD', execOptions).trim();
+    const localHash = execSync(`${git} rev-parse --short HEAD`, execOptions).trim();
     let remoteHash = 'DESCONOCIDO';
     try {
-      remoteHash = execSync(`git rev-parse --short ${trackingBranch}`, execOptions).trim();
+      remoteHash = execSync(`${git} rev-parse --short ${trackingBranch}`, execOptions).trim();
     } catch {
       remoteHash = 'NO_EXISTE_EN_ORIGIN';
     }
@@ -59,7 +80,7 @@ function getGitStatus(targetDir: string = path.resolve(__dirname, '..')): GitSta
     let behind = 0;
     if (remoteHash !== 'NO_EXISTE_EN_ORIGIN' && remoteHash !== 'DESCONOCIDO') {
       try {
-        const counts = execSync(`git rev-list --left-right --count HEAD...${trackingBranch}`, execOptions).trim();
+        const counts = execSync(`${git} rev-list --left-right --count HEAD...${trackingBranch}`, execOptions).trim();
         const parts = counts.split(/\s+/);
         ahead = parseInt(parts[0], 10) || 0;
         behind = parseInt(parts[1], 10) || 0;
@@ -69,7 +90,7 @@ function getGitStatus(targetDir: string = path.resolve(__dirname, '..')): GitSta
     }
 
     // 6. Cambios en working tree
-    const porcelain = execSync('git status --porcelain', execOptions).trim();
+    const porcelain = execSync(`${git} status --porcelain`, execOptions).trim();
     const uncommittedFiles = porcelain ? porcelain.split('\n').filter(Boolean) : [];
     const hasUncommittedChanges = uncommittedFiles.length > 0;
 

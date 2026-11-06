@@ -1,7 +1,21 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
-import ts from 'typescript';
+import { createRequire } from 'node:module';
+
+const require = createRequire(import.meta.url);
+function loadTypeScript(): any {
+  try {
+    const ts = require('typescript');
+    if (ts?.ScriptTarget) return ts;
+  } catch {}
+  try {
+    const ts = require(path.resolve(__dirname, '../Web Studio Simple/node_modules/typescript'));
+    if (ts?.ScriptTarget) return ts;
+  } catch {}
+  return require('typescript');
+}
+const ts = loadTypeScript();
 
 export class NotVerifiable extends Error { readonly exitCode = 2; }
 export const REFERENCE_PATH = 'docs/auditorias/REFERENCIA_CANONICA_TITULOS_CONTINUIDAD.json';
@@ -208,9 +222,9 @@ export function loadCanonicalReference(root: string, referencePath = REFERENCE_P
 // Lectura estática: no import(), eval(), require() ni ejecución de módulos de lecciones.
 export function readLessonObject(content: string, filename: string): Record<string, any> {
   const sf = ts.createSourceFile(filename, content, ts.ScriptTarget.ES2020, true, ts.ScriptKind.TS);
-  const diagnostics = (sf as ts.SourceFile & { parseDiagnostics?: readonly ts.Diagnostic[] }).parseDiagnostics ?? [];
+  const diagnostics = (sf as any & { parseDiagnostics?: readonly any[] }).parseDiagnostics ?? [];
   if (diagnostics.length) throw new NotVerifiable(`${filename}: TypeScript no parseable`);
-  function literal(node: ts.Expression): any {
+  function literal(node: any): any {
     if (ts.isAsExpression(node) || ts.isSatisfiesExpression(node) || ts.isParenthesizedExpression(node)) return literal(node.expression);
     if (ts.isStringLiteral(node) || ts.isNoSubstitutionTemplateLiteral(node)) return node.text;
     if (ts.isNumericLiteral(node)) return Number(node.text);
@@ -218,7 +232,7 @@ export function readLessonObject(content: string, filename: string): Record<stri
     if (node.kind === ts.SyntaxKind.FalseKeyword) return false;
     if (node.kind === ts.SyntaxKind.NullKeyword) return null;
     if (ts.isPrefixUnaryExpression(node) && node.operator === ts.SyntaxKind.MinusToken && ts.isNumericLiteral(node.operand)) return -Number(node.operand.text);
-    if (ts.isArrayLiteralExpression(node)) return node.elements.map(n => literal(n as ts.Expression));
+    if (ts.isArrayLiteralExpression(node)) return node.elements.map((n: any) => literal(n));
     if (ts.isObjectLiteralExpression(node)) {
       const result: Record<string, any> = Object.create(null);
       for (const p of node.properties) {
@@ -231,11 +245,11 @@ export function readLessonObject(content: string, filename: string): Record<stri
     }
     throw new NotVerifiable(`${filename}: expresión dinámica no ejecutada (${ts.SyntaxKind[node.kind]})`);
   }
-  const candidates: ts.Expression[] = [];
+  const candidates: any[] = [];
   for (const statement of sf.statements) {
-    if (!ts.isVariableStatement(statement) || !statement.modifiers?.some(m => m.kind === ts.SyntaxKind.ExportKeyword)) continue;
+    if (!ts.isVariableStatement(statement) || !statement.modifiers?.some((m: any) => m.kind === ts.SyntaxKind.ExportKeyword)) continue;
     for (const decl of statement.declarationList.declarations) {
-      if (decl.initializer && (decl.type?.getText(sf) === 'LessonData' || (ts.isObjectLiteralExpression(decl.initializer) && decl.initializer.properties.some(p => p.name?.getText(sf).replace(/["']/g, '') === 'metadata')))) candidates.push(decl.initializer);
+      if (decl.initializer && (decl.type?.getText(sf) === 'LessonData' || (ts.isObjectLiteralExpression(decl.initializer) && decl.initializer.properties.some((p: any) => p.name?.getText(sf).replace(/["']/g, '') === 'metadata')))) candidates.push(decl.initializer);
     }
   }
   if (candidates.length !== 1) throw new NotVerifiable(`${filename}: se esperaba un único objeto exportado LessonData`);
