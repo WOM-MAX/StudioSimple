@@ -284,12 +284,12 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
       setValidationErrorMsg(result.error || 'No se guardó la edición.');
       setValidationErrors(result.validation?.details || []);
       setSaveStatus(null);
-      setShowValidationModal(true);
+      if (typeof setShowValidationModal === 'function') setShowValidationModal(true);
       return false;
     }
     setValidationErrorMsg(null);
     setValidationErrors(null);
-    setShowValidationModal(false);
+    if (typeof setShowValidationModal === 'function') setShowValidationModal(false);
     setIsCustom(true);
     return true;
   };
@@ -337,9 +337,10 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
 
   // Guardar cambios directamente en el almacenamiento unificado de aula
   const handleSaveLesson = (): boolean => {
-    if (isProtected) {
+    const isCurrentProtected = isProtectedSelection(selectedGrade, selectedSubject, currentOA?.oa || '');
+    if (isCurrentProtected) {
       setValidationErrorMsg('Matemática 7° Básico OA 01 es un patrón de oro canónico protegido. Las ediciones en el navegador están deshabilitadas por diseño normativo.');
-      setShowValidationModal(true);
+      if (typeof setShowValidationModal === 'function') setShowValidationModal(true);
       return false;
     }
     const candidate = lessonDataRef.current || lessonData;
@@ -415,7 +416,7 @@ export const LessonEditorView: React.FC<LessonEditorViewProps> = ({ catalog: pro
     if (!validation.isValid) {
       setValidationErrorMsg(validation.error || 'No es posible probar en aula: la lección contiene discrepancias canónicas.');
       setValidationErrors(validation.details || []);
-      setShowValidationModal(true);
+      if (typeof setShowValidationModal === 'function') setShowValidationModal(true);
       return;
     }
 
